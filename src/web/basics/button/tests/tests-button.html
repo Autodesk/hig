@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../../../../../dist/style.css">
+        <script type="text/javascript" src="../../../../../dist/main.js"></script>
+    </head>
+    <body>
+
+        <script>
+        
+            var Button = new Hig.Button("body", {
+                "title": "test button",
+                "link": "abc"
+            });
+
+            Button.addHigEventListener('click', function(){ 
+                console.log("BUTTON CLICK")
+            });
+
+            Button.addHigEventListener('hover', function(){ 
+                console.log("BUTTON HOVER")
+            });
+
+        </script>
+
+    </body>
+</html>

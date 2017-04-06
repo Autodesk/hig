@@ -1,0 +1,19 @@
+{
+    "basics": {
+        "button": {
+            "methods": {
+                "setTitle": "Sets the title of a button",
+                "setLink": "Sets the link of a button"
+            },
+            "events": {
+                "click": "Button has been clicked",
+                "hover": "Button has been clicked"
+            },
+            "defaults": {
+                "title": "define default title",
+                "link": "define link"
+            }
+        }
+    },
+    "components": {}
+}
