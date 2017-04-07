@@ -56,18 +56,17 @@ class Core {
      * @param {String} eventType - event type, for example "click"
      * @param {String} targetClass - query selector for target class
      * @param {HTMLElement} scopeElement - element that defines the scope in which this takes place
-     * @param {String} eventTitle - Event title that will be dispatched
+     * @param {String} eventFunction - function that will be executed on event
      * @returns null
      */
 
-    _attachListener(eventType, targetClass, scopeElement, eventTitle ){
+    _attachListener(eventType, targetClass, scopeElement, eventFunction ){
 
         function childOf(/*child node*/c, /*parent node*/p){ //returns boolean
             while( (c=c.parentNode) && c!==p ); 
             return !!c; 
         }
 
-        var e = new Event(eventTitle);
         var q;
 
         if(typeof targetClass == 'object'){
@@ -80,7 +79,8 @@ class Core {
         if(eventType == 'hover'){
             q.addEventListener('mouseenter', function(event){
                 event.preventDefault();
-                scopeElement.dispatchEvent(e);
+                // scopeElement.dispatchEvent(e);
+                eventFunction(event);
             });
         }else{
             document.addEventListener(eventType, function(event){
@@ -88,16 +88,15 @@ class Core {
                 
                 if(q && (childOf(element, q) || element === q)){
                     event.preventDefault();
-                    scopeElement.dispatchEvent(e);
+                    // scopeElement.dispatchEvent(e);
+                    eventFunction(event);
                 }
             });
         }
     }
 
     addHigEventListener(event, fn){
-        for(var key in this._events){
-            
-        }
+        console.error("NO EVENTS DEFINED FOR THIS COMPONENT");
     }
 
     /**

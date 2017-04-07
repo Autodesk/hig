@@ -19,11 +19,15 @@ class Button extends Core {
 
     _render(target, options){
         // RENDER TO DOM
-        this.el = super.render(target, options, Template);
+        this.el = super._render(target, options, Template);       
+    }
 
-        // ATTACH EVENTS
-        this._attachListener("click", this.el, this.el, 'click');
-        this._attachListener("mouseenter", this.el, this.el, 'hover');
+    addHigEventListener(event, fn){
+        if(event == 'click'){
+            this._attachListener("click", this.el, this.el, fn);
+        }else if(event == 'hover'){
+            this._attachListener("hover", this.el, this.el, fn);
+        }
     }
 
     setTitle(title){
