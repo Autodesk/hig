@@ -4,8 +4,10 @@ var path = require('path');
 r = {
     entry: './src/web/index.js',
     output: {
-        filename: '[name].js',
-        path: path.resolve(__dirname, 'dist')
+        filename: 'hig.js',
+        path: path.resolve(__dirname, 'dist'),
+        library: 'Hig',
+        libraryTarget: 'var'
     },
     module: {
         rules: [{
@@ -30,7 +32,7 @@ r = {
         }]
     },
     plugins: [
-        new ExtractTextPlugin('style.css'),
+        new ExtractTextPlugin('hig.css'),
     ]
 }
 
