@@ -62,6 +62,8 @@ class Core {
 
     _attachListener(eventType, targetClass, scopeElement, eventFunction ){
 
+        // #TODO: dont attach event listeners twice if _attachListener is called by second item, save events in local this._events object and loop through before attaching a new event
+        
         function childOf(/*child node*/c, /*parent node*/p){ //returns boolean
             while( (c=c.parentNode) && c!==p ); 
             return !!c; 
