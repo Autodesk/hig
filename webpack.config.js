@@ -17,7 +17,8 @@ r = {
                 presets: [
                     'es2015'
                 ],
-                plugins: []
+                plugins: [],
+                babelrc: false,
             },
             exclude: [/node_modules/]
         },{
