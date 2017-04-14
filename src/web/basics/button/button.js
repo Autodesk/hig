@@ -19,7 +19,7 @@ class Button extends Core {
 
     _render(target, options){
         // RENDER TO DOM
-        this.el = super._render(target, options, Template);       
+        this.el = super._render(target, options, Template);
     }
 
     addHigEventListener(event, fn){
@@ -31,11 +31,11 @@ class Button extends Core {
     }
 
     setTitle(title){
-        this.el.querySelectorAll("a")[0].textContent = title;
+        this.el.textContent = title;
     }
 
     setLink(link){
-        this.el.querySelectorAll("a")[0].setAttribute("href", link);
+        this.el.setAttribute("href", link);
     }
 
 }
