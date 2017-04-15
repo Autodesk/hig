@@ -6,20 +6,24 @@
     <body>
 
         <script>
-        
+
             var Button = new Hig.Button("body", {
                 "title": "test button",
                 "link": "abc"
             });
 
-            Button.addHigEventListener('click', function(){ 
+            Button.addHigEventListener('click', function(){
                 console.log("BUTTON CLICK")
             });
 
-            Button.addHigEventListener('hover', function(){ 
+            Button.addHigEventListener('hover', function(){
                 console.log("BUTTON HOVER")
             });
 
+            var Button2 = new Hig.Button("body");
+
+            Button2.setTitle('New Title');
+            Button2.setLink('http://google.com');
         </script>
 
     </body>

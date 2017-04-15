@@ -7,7 +7,7 @@ r = {
         filename: 'hig.js',
         path: path.resolve(__dirname, 'dist'),
         library: 'Hig',
-        libraryTarget: 'var'
+        libraryTarget: 'umd'
     },
     module: {
         rules: [{
@@ -17,11 +17,12 @@ r = {
                 presets: [
                     'es2015'
                 ],
-                plugins: []
+                plugins: [],
+                babelrc: false,
             },
             exclude: [/node_modules/]
         },{
-            test: /\.scss$/, 
+            test: /\.scss$/,
             loader: ExtractTextPlugin.extract({
                 fallbackLoader: "style-loader",
                 loader: "css-loader!sass-loader"
