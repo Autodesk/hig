@@ -9,6 +9,23 @@ webpack --watch
 
 ## Documentation
 
+### Basic Example: Button
+```
+var Button = new Hig.Button({
+    "title": "just a button",
+    "link": "http://autodesk.com"
+});
+
+Button.mount("body");
+
+Button.onClick(function(e){
+    e.preventDefault();
+    console.log("Button CLICK")
+});
+```
+
+more advanced button examples can be found in [the components tests dir](src/web/basics/button/tests/tests-button.html)
+
 ### Goal
 
 *Increase quality across Autodesk user experiences by providing a simple and constrained framework of experiences designed by HIG design team.*
