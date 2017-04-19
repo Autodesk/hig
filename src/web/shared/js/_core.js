@@ -16,12 +16,21 @@ class Core {
         if(!this._interface){
             console.warn("NO INTERFACE SET FOR CLASS, PLEASE DEFINE INTERFACE IN _interface PROPERTY OF YOUR CLASS");
         }else{
+
             var methodArray = Object.getOwnPropertyNames( Object.getPrototypeOf( this ) );
+            // CHECK IF ALL METHODS IN COMPONENT ARE DEFINED IN INTERFACE
             methodArray.forEach(function(v, i){
-                if(v != "constructor" && v != "render" && v != "defaults" && v != "events" && v.indexOf('add') != 0 && v[0] != "_" && !this._interface["methods"][v]){
+                if(v != "constructor" && v != "defaults" && v[0] != "_" && !this._interface["methods"][v]){
                     console.error("METHOD: \"" + v + "\" IS NOT DEFINED AS INTERFACE OR IS NOT A VALID INTERFACE METHOD");
                 }
             }, this);
+            
+            // CHECK IF ALL METHODS IN INTERFACE ARE IMPLEMENTED
+            for(var k in this._interface["methods"]){
+                if(methodArray.indexOf(k) === -1){
+                    console.error("METHOD: \"" + k + "\" IS NOT IMPLEMENTED BY THIS COMPONENT YET AND NEEDS AN IMPLEMENTATION");
+                }
+            };
         }
 
         // CHECK DEFAULTS ARE DEFINED
@@ -52,15 +61,53 @@ class Core {
     }
 
     /**
+     * Creation of the DOM element and mustache template rendering
+     * @param {String} template - template string
+     * @param {Object} [data] - default values on render
+     * @param {Object} [partials] - object with potential partials
+     * @returns null
+     */
+
+    _render(template, data, partials){
+        if(!this.el){
+            var elWrapper = document.createElement('div');
+            elWrapper.innerHTML = Mustache.render(
+                template, 
+                (data || {}),
+                (partials || {})
+            );
+            this.el = elWrapper.firstChild;
+        }else{
+            console.error("RENDER ALREADY CALLED ON THIS COMPONENT, USE PROPER METHODS TO UPDATE CONTENT");
+        }
+        
+    }
+
+    /**
+     * Inserts the HIG Element into the DOM using mountNode. If beforeChild is specified the HIG Element should be inserted before that.
+     * If string, this is a CSS selector if more than one element matches it takes the first
+     * @param {String | HTMLElement} mountNode - CSS selector or HTMLElement where to mount
+     * @param {String | HTMLElement | null} beforeChild - if defined will use beforeChild instead of appendChild
+     * @returns null
+     */
+
+    mount(mountNode, beforeChild){
+        var parentNode = this._findDOMEl(mountNode);
+        var refNode = this._findDOMEl(beforeChild);
+
+        parentNode.insertBefore(this.el, refNode);
+    }   
+
+    /**
      * Attach a document event listener
      * @param {String} eventType - event type, for example "click"
      * @param {String} targetClass - query selector for target class
      * @param {HTMLElement} scopeElement - element that defines the scope in which this takes place
-     * @param {String} eventFunction - function that will be executed on event
-     * @returns null
+     * @param {String} executeOnEventFunction - function that will be executed on event
+     * @returns {Function} disposeFunction - function to call to remove event listener
      */
 
-    _attachListener(eventType, targetClass, scopeElement, eventFunction ){
+    _attachListener(eventType, targetClass, scopeElement, executeOnEventFunction ){
 
         // #TODO: dont attach event listeners twice if _attachListener is called by second item, save events in local this._events object and loop through before attaching a new event
         
@@ -78,59 +125,54 @@ class Core {
             q = (q) ? q[0] : false;
         }
 
-        if(eventType == 'hover'){
-            q.addEventListener('mouseenter', function(event){
-                event.preventDefault();
-                // scopeElement.dispatchEvent(e);
-                eventFunction(event);
-            });
+        var eventTarget, eventFn;
+
+        if(eventType == 'hover' || eventType == 'mouseenter'){
+            eventFn = executeOnEventFunction;
+            eventTarget = q;
+            eventType = 'mouseenter';
+            // e = q.addEventListener('mouseenter', eventFn);
         }else{
-            document.addEventListener(eventType, function(event){
+            eventFn = function(event){
                 var element = event.target;
                 
                 if(q && (childOf(element, q) || element === q)){
                     event.preventDefault();
-                    // scopeElement.dispatchEvent(e);
-                    eventFunction(event);
+                    executeOnEventFunction(event);
                 }
-            });
+            };
+            eventTarget = document;
+            // e = document.addEventListener(eventType, clickEventFunction);
         }
-    }
 
-    addHigEventListener(event, fn){
-        console.error("NO EVENTS DEFINED FOR THIS COMPONENT");
+        eventTarget.addEventListener(eventType, eventFn);
+
+        var dispose = function(){
+            eventTarget.removeEventListener(eventType, eventFn);
+        };
+
+        return dispose;
     }
 
     /**
-     * Does the actual rendering for the template and references the result in the $el var of the class
-     * @param {String} target - query selector target string
-     * @param {Object} data - query selector target string
-     * @param {String} template - template string
-     * @param {Object} partials - object with potential partials
-     * @returns {Object} el - DOM object with the rendered result
+     * Determines search type and returns the DOM element occordingly
+     * @param {String | HTMLElement} f - input to search
+     * @returns {HTMLElement} object that was found
      */
-
-    _render(target, data, template, partials){
-        var DOMTarget = target;
-        
-        if(typeof target != "object") {
-            DOMTarget = document.querySelectorAll(target);
-            if(!DOMTarget && !DOMTarget[0]){
-                console.error("TARGET NOT FOUND ", target);
+    
+    _findDOMEl(f){
+        if(typeof f === "string"){
+            // do our selection
+            var domEl = document.querySelectorAll(f);
+            if(!domEl || domEl.length === 0){
+                return console.error("TARGET NOT FOUND ", f);
+            }else{
+                return domEl[0];
             }
-            DOMTarget = DOMTarget[0];
+        }else{
+            return f; // already a HTMLElement, no need to search
         }
-        
-        var elWrapper = document.createElement('div');
-        elWrapper.innerHTML = Mustache.render(
-            template, 
-            (data || {}),
-            (partials || {})
-        );
-        var el = elWrapper.firstChild;
-        DOMTarget.appendChild(el);
-        return el
-    }   
+    }
 
     /**
      * Returns valid interface methods
