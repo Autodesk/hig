@@ -1,19 +1,11 @@
 {
     "abstract": {
         "eventObject": {
-            "desc": "set event listener",
+            "desc": "listen to events",
             "params": [
                 "{Function} fn - function to be called on event, function will get native event as input"
             ],
-            "returns": {
-                "methods": {
-                    "dispose": {
-                        "desc": "removes the event listener",
-                        "params": null,
-                        "returns": null
-                    }
-                }
-            }
+            "returns": "{Function} disposeFunction - function you can call directly to remove event listener"
         }
     },
     "basics": {
