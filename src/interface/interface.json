@@ -1,17 +1,44 @@
 {
+    "abstract": {
+        "eventObject": {
+            "desc": "set event listener",
+            "params": [
+                "{Function} fn - function to be called on event, function will get native event as input"
+            ],
+            "returns": {
+                "methods": {
+                    "dispose": {
+                        "desc": "removes the event listener",
+                        "params": null,
+                        "returns": null
+                    }
+                }
+            }
+        }
+    },
     "basics": {
         "button": {
             "methods": {
-                "setTitle": "Sets the title of a button",
-                "setLink": "Sets the link of a button"
-            },
-            "events": {
-                "click": "Button has been clicked",
-                "hover": "Button has been clicked"
+                "setTitle": {
+                    "desc": "sets the title of a button",
+                    "params": [ 
+                        "{String} title - new title for the button" 
+                    ],
+                    "returns": null
+                },
+                "setLink": {
+                    "desc": "sets the link of a button",
+                    "params": [ 
+                        "{String} link - new link for the button" 
+                    ],
+                    "returns": null
+                },
+                "onClick": "eventObject",
+                "onHover": "eventObject"
             },
             "defaults": {
-                "title": "define default title",
-                "link": "define link"
+                "title": "{String} title of the button",
+                "link": "{String} link of the button"
             }
         }
     },
