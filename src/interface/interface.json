@@ -25,8 +25,8 @@
                     ],
                     "returns": null
                 },
-                "onClick": "eventObject",
-                "onHover": "eventObject"
+                "onClick": "HIG.abstract.eventObject",
+                "onHover": "HIG.abstract.eventObject"
             },
             "defaults": {
                 "title": "{String} title of the button",
