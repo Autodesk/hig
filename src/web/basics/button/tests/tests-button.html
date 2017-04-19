@@ -2,28 +2,75 @@
     <head>
         <link rel="stylesheet" href="../../../../../dist/hig.css">
         <script type="text/javascript" src="../../../../../dist/hig.js"></script>
+
+        <style>
+            .buttonHolder{
+                margin: 30px;
+            }
+        </style>
     </head>
     <body>
 
+        <div class='regular-button buttonHolder'></div>
+        <div class='dispose-button buttonHolder'></div>
+        <div class='updated-button buttonHolder'></div>
+
         <script>
 
-            var Button = new Hig.Button("body", {
-                "title": "test button",
-                "link": "abc"
+            // Regular Button
+
+            var RegularButton = new Hig.Button({
+                "title": "regular button",
+                "link": "http://autodesk.com"
             });
 
-            Button.addHigEventListener('click', function(){
-                console.log("BUTTON CLICK")
+            RegularButton.mount(".regular-button");
+
+            RegularButton.onClick(function(e){
+                e.preventDefault();
+                console.log("RegularButton CLICK")
             });
 
-            Button.addHigEventListener('hover', function(){
-                console.log("BUTTON HOVER")
+            RegularButton.onHover(function(e){
+                console.log("RegularButton HOVER")
             });
 
-            var Button2 = new Hig.Button("body");
+            // Event Disposing Button
+            // Hover or Click should not register
 
-            Button2.setTitle('New Title');
-            Button2.setLink('http://google.com');
+            var EventDisposeButton = new Hig.Button({
+                "title": "events disposed button",
+                "link": "#"
+            });
+
+            EventDisposeButton.mount(".dispose-button");
+
+            var clickDispose = EventDisposeButton.onClick(function(e){
+                e.preventDefault();
+                console.log("EventDisposeButton CLICK")
+            });
+            clickDispose();
+
+            var hoverDispose = EventDisposeButton.onHover(function(e){
+                console.log("EventDisposeButton HOVER")
+            });
+            hoverDispose();
+
+
+            // Updated Button
+            // Update the title and link of the button after creation
+
+            var UpdateButton = new Hig.Button({
+                "title": "NOT the correct title",
+                "link": "#"
+            });
+
+            UpdateButton.mount(".updated-button");
+
+            UpdateButton.setTitle("correct title");
+            UpdateButton.setLink("http://autodesk.com");
+
+
         </script>
 
     </body>
