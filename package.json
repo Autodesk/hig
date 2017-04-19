@@ -1,0 +1,22 @@
+{
+  "name": "custom-fiber-renderer",
+  "version": "0.1.0",
+  "private": true,
+  "author": "Autodesk Inc.",
+  "homepage": ".",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "ionicons": "^2.0.1",
+    "react": "16.0.0-alpha.5",
+    "react-dom": "16.0.0-alpha.5"
+  },
+  "devDependencies": {
+    "react-devtools-core": "^2.0.12",
+    "react-scripts": "0.9.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "echo 'No tests configured'"
+  }
+}
