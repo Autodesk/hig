@@ -2,7 +2,7 @@
 
 ## Getting Started
 
-```
+```bash
 npm install
 webpack --watch
 ```
@@ -10,7 +10,7 @@ webpack --watch
 ## Documentation
 
 ### Basic Example: Button
-```
+```javascript
 var Button = new Hig.Button({
     "title": "just a button",
     "link": "http://autodesk.com"
