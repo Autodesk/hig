@@ -96,6 +96,15 @@ class Core {
         var refNode = this._findDOMEl(beforeChild);
 
         parentNode.insertBefore(this.el, refNode);
+    }
+
+    /**
+     * Remove the HTMLElement from the DOM, does NOT destroy the component, lifecyclemanagement is handled by the adapter or implementation layer!
+     * @returns null
+     */
+
+    unmount(){
+        this.el.remove();
     }   
 
     /**

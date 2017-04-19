@@ -14,6 +14,7 @@
         <div class='regular-button buttonHolder'></div>
         <div class='dispose-button buttonHolder'></div>
         <div class='updated-button buttonHolder'></div>
+        <div class='destroy-button buttonHolder'></div>
 
         <script>
 
@@ -69,6 +70,18 @@
 
             UpdateButton.setTitle("correct title");
             UpdateButton.setLink("http://autodesk.com");
+
+            // Unmount a Button
+            // Remove a button from the DOM after creation, this button should not render
+
+            var UnmountButton = new Hig.Button({
+                "title": "You should not see this button!",
+                "link": "#"
+            });
+
+            UnmountButton.mount(".destroy-button");
+
+            UnmountButton.unmount();
 
 
         </script>
