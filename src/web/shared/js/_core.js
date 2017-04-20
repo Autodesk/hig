@@ -69,14 +69,14 @@ class Core {
      */
 
     _render(template, data, partials){
-        if(!this.el){
+        if(!this._rendered){
             var elWrapper = document.createElement('div');
             elWrapper.innerHTML = Mustache.render(
                 template, 
                 (data || {}),
                 (partials || {})
             );
-            this.el = elWrapper.firstChild;
+            this._rendered = elWrapper.firstChild;
         }else{
             console.error("RENDER ALREADY CALLED ON THIS COMPONENT, USE PROPER METHODS TO UPDATE CONTENT");
         }
@@ -95,7 +95,7 @@ class Core {
         var parentNode = this._findDOMEl(mountNode);
         var refNode = this._findDOMEl(beforeChild);
 
-        parentNode.insertBefore(this.el, refNode);
+        this.el = parentNode.insertBefore(this._rendered, refNode);
     }
 
     /**

@@ -36,7 +36,7 @@ class Menu extends Core {
 
     addSidebarGroup(){
         var sidebarGroup = new SidebarGroup();
-        sidebarGroup.mount();
+        sidebarGroup.mount('.js-hig__menu__sidebar');
         return sidebarGroup;
     }
 

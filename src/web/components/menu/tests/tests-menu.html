@@ -9,7 +9,7 @@
 
         <script>
 
-            // Regular Button
+            // Menu
 
             var Menu = new Hig.Menu({
                 "logo": "http://www.aie.edu.au/Images/news/2015/Autodesk-logo.png",
@@ -29,6 +29,53 @@
                 menu_open = !menu_open;
             });
             
+            // Adding sidebar group 1
+
+            var SidebarGroup1 = Menu.addSidebarGroup();
+
+            // Adding items in group 1
+
+            var Group1Item1 = SidebarGroup1.addSidebarGroupItem({
+                "title": "item 1",
+                "link": "#"
+            });
+
+            Group1Item1.onClick(function(e){
+                alert("group 1 item 1 clicked");
+            });
+
+            SidebarGroup1.addSidebarGroupItem({
+                "title": "item 2",
+                "link": "#"
+            });
+
+
+            SidebarGroup1.addSidebarGroupItem({
+                "title": "item 3",
+                "link": "#"
+            });
+
+            // Adding sidebar group 2
+
+            var SidebarGroup2 = Menu.addSidebarGroup();
+
+            // Adding items in group 2
+
+            SidebarGroup2.addSidebarGroupItem({
+                "title": "item 1",
+                "link": "#"
+            });
+
+            SidebarGroup2.addSidebarGroupItem({
+                "title": "item 2",
+                "link": "#"
+            });
+
+
+            SidebarGroup2.addSidebarGroupItem({
+                "title": "item 3",
+                "link": "#"
+            });
 
 
         </script>
