@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../../../../../dist/hig.css">
+        <script type="text/javascript" src="../../../../../dist/hig.js"></script>
+    </head>
+    <body>
+
+        <div class='mount-menu'></div>
+
+        <script>
+
+            // Regular Button
+
+            var Menu = new Hig.Menu({
+                "logo": "http://www.aie.edu.au/Images/news/2015/Autodesk-logo.png",
+                "logo_link": "http://autodesk.com"
+            });
+
+            Menu.mount(".mount-menu");
+
+            var menu_open = false;
+
+            Menu.onHamburgerClick(function(e){
+                if(menu_open){
+                    Menu.hideSidebar();
+                }else{
+                    Menu.showSidebar();    
+                }
+                menu_open = !menu_open;
+            });
+            
+
+
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,39 @@
+@import '../../shared/css/_normalize.scss';
+@import '../../shared/css/_helpers.scss';
+
+.hig__menu{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+
+    &__sidebar{
+        background: red;
+        display: none;
+
+        &--open{
+            display: block;
+        }
+    }
+    &__content{
+        background: green;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+                
+        &__top{
+            background: yellow;
+            height: 50px;
+
+            &__hamburger{
+                float: left;
+            }
+            &__logo{
+                float: left;
+                & img{
+                    max-height: 50px;
+                }
+            }
+        }
+    }
+}

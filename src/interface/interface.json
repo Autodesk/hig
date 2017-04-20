@@ -15,15 +15,13 @@
                     "desc": "sets the title of a button",
                     "params": [ 
                         "{String} title - new title for the button" 
-                    ],
-                    "returns": null
+                    ]
                 },
                 "setLink": {
                     "desc": "sets the link of a button",
                     "params": [ 
                         "{String} link - new link for the button" 
-                    ],
-                    "returns": null
+                    ]
                 },
                 "onClick": "HIG.abstract.eventObject",
                 "onHover": "HIG.abstract.eventObject"
@@ -34,5 +32,46 @@
             }
         }
     },
-    "components": {}
+    "components": {
+        "menu": {
+            "methods": {
+                "showSidebar": {
+                    "desc": "show the sidebar"
+                },
+                "hideSidebar":{
+                    "desc": "hide the sidebar"
+                },
+                "addSidebarGroup": {
+                    "desc": "add a group of items to the sidebar",
+                    "returns": {
+                        "sidebarGroup": {
+                            "methods": {
+                                "addSidebarGroupItem": {
+                                    "desc": "add an item to the sidebar group",
+                                    "returns": {
+                                        "sidebarGroupItem": {
+                                            "methods": {
+                                                "onClick": "HIG.abstract.eventObject",
+                                                "onHover": "HIG.abstract.eventObject"
+                                            },
+                                            "defaults": {
+                                                "title": "{String} the string of our sidebar item",
+                                                "link": "{String} link behind the item"
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "defaults": {}
+                        }
+                    }
+                },
+                "onHamburgerClick": "HIG.abstract.eventObject"
+            },
+            "defaults": {
+                "logo": "{String} link to the logo",
+                "logo_link": "{String} url behind the logo"
+            }
+        }
+    }
 }
