@@ -20,8 +20,8 @@ export class Button {
   constructor(props) {
     this.hig = new HIGWeb.Button();
 
-    if (props.children) {
-      this.hig.setLabel(props.children);
+    if (props.title) {
+      this.hig.setTitle(props.title);
     }
 
     if (props.onClick) {

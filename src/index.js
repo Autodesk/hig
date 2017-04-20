@@ -16,8 +16,11 @@ limitations under the License.
 */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HIG, { Slot } from './react-hig-fiber';
+// import HIG, { Slot } from './react-hig-fiber'; -- todo switch to 16.0.0-alpha.5 of react and react-dom
 import { Button, Menu, Slot as Slot2 } from './react-hig';
+
+import './hig-web.css';
+import 'ionicons/css/ionicons.min.css';
 
 class App extends React.Component {
   constructor() {

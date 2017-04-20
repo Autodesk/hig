@@ -1,22 +1,41 @@
 {
-  "name": "custom-fiber-renderer",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@orion-ui/react-hig",
+  "version": "1.0.3",
+  "description": "hig components in react",
+  "module": "lib/react-hig.es.js",
+  "main": "lib/react-hig.js",
+  "umd:main": "lib/react-hig.umd.js",
+  "css": "lib/react-hig.css",
   "author": "Autodesk Inc.",
   "homepage": ".",
   "license": "Apache-2.0",
   "dependencies": {
-    "ionicons": "^2.0.1",
-    "react": "16.0.0-alpha.5",
-    "react-dom": "16.0.0-alpha.5"
+    "hig.web": "^1.0.0"
+  },
+  "peerDependencies": {
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
   },
   "devDependencies": {
+    "babel-plugin-object-rest-spread": "0.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "ionicons": "^2.0.1",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
     "react-devtools-core": "^2.0.12",
-    "react-scripts": "0.9.5"
+    "react-scripts": "0.9.5",
+    "rollup": "^0.41.6",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-css-only": "^0.2.0",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-watch": "^3.2.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "npm run lib",
+    "lib": "rollup -c",
+    "playground": "react-scripts start",
+    "start": "npm run lib -- --watch",
     "test": "echo 'No tests configured'"
   }
 }

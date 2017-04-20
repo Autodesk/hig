@@ -20,9 +20,41 @@ import ReactDOM from 'react-dom';
 import { createElement } from './react-hig-elements';
 import prepareUpdate from './prepareUpdate';
 
-export default function createComponent(type) {
+// TODO change for hig.web css
+import './hig-web.css';
+
+class ResetContext extends React.Component {
+  render() {
+    // renderSubtreeIntoContainer needs a single React Element instead of a collection
+    // wrap in a div if we have to. Fix this once Fiber is released since we can
+    // render fragments
+
+    const element = React.isValidElement(this.props.children)
+      ? this.props.children
+      : <div>{this.props.children}</div>;
+
+    return element;
+  }
+  getChildContext() {
+    return {
+      parent: null
+    };
+  }
+}
+
+ResetContext.childContextTypes = {
+  parent: PropTypes.shape({
+    appendChild: PropTypes.func
+  })
+};
+
+function createComponent(type) {
   const Adapter = class extends React.Component {
     static HIG_COMPONENT = true;
+
+    static defaultProps = {
+      root: false
+    };
 
     constructor(props) {
       super(props);
@@ -66,9 +98,15 @@ export default function createComponent(type) {
     }
 
     getChildContext() {
-      return {
-        parent: this.instance
-      };
+      if (this.instance.appendChild) {
+        return {
+          parent: this.instance
+        };
+      } else {
+        return {
+          parent: null
+        };
+      }
     }
 
     getDOMNode() {
@@ -106,16 +144,9 @@ function createSlotComponent(type) {
     }
 
     renderSlot(props) {
-      // renderSubtreeIntoContainer needs a single React Element instead of a collection
-      // wrap in a div if we have to. Fix this once Fiber is released since we can
-      // render fragments
-      const element = React.isValidElement(props.children)
-        ? props.children
-        : <div>{props.children}</div>;
-
       ReactDOM.unstable_renderSubtreeIntoContainer(
         this,
-        element,
+        <ResetContext>{props.children}</ResetContext>,
         this.instance.getDOMNode()
       );
     }

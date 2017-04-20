@@ -14,8 +14,6 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 */
-import './hig-web.css';
-import 'ionicons/css/ionicons.min.css';
 
 export class Button {
   root = true;
@@ -41,8 +39,8 @@ export class Button {
     return this._el;
   }
 
-  setLabel(label) {
-    this._el.textContent = label;
+  setTitle(title) {
+    this._el.textContent = title;
   }
 
   onClick(listener) {
