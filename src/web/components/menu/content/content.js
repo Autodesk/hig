@@ -20,20 +20,20 @@ class Content extends Core {
     }
 
     addTop(topInstance){
-        if(itemInstance instanceof Item){
-            itemInstance.mount(this.el);
+        if(topInstance instanceof Top){
+            this.mountToComment('TOP', topInstance);
         }
     }
 
     addSlot(slotElement){
-
+        this.mountToComment('SLOT', slotElement);
     }
     
 }
 
 Content._interface = Interface['Components']['Menu']['partials']['Content'];
 Content._defaults = {};
-Content._parials = {
+Content._partials = {
     Top: Top
 }
 

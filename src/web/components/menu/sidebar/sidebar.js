@@ -32,7 +32,7 @@ class Sidebar extends Core {
 
     addGroup(groupInstance){
         if(groupInstance instanceof Group){
-            groupInstance.mount('.js-hig__menu__sidebar__group--mount');
+            this.mountToComment('GROUP', groupInstance);
         }
     }
 

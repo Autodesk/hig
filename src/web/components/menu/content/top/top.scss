@@ -1,0 +1,14 @@
+.hig__menu__content__top{
+    background: yellow;
+    height: 50px;
+
+    &__hamburger{
+        float: left;
+    }
+    &__logo{
+        float: left;
+        & img{
+            max-height: 50px;
+        }
+    }
+}

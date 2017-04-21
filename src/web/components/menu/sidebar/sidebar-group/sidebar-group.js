@@ -21,7 +21,7 @@ class SidebarGroup extends Core {
 
     addItem(itemInstance){
         if(itemInstance instanceof Item){
-            itemInstance.mount(this.el);
+            this.mountToComment('ITEM', itemInstance);
         }
     }
 

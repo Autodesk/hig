@@ -9,77 +9,53 @@
 
         <script>
 
-            // Menu
-
             var Menu = new Hig.Menu();
             Menu.mount("body");
 
-            var Sidebar = new Menu.partials.Sidebar;
-            var Content = new Menu.partials.Content;
-
+            var Sidebar = new Menu.partials.Sidebar();
             Menu.addSidebar(Sidebar);
+            
+            var Group1 = new Sidebar.partials.Group();
+            Sidebar.addGroup(Group1);
+
+            var Group1_Item1 = new Group1.partials.Item({
+                "title": "Item 1",
+                "link": "#"
+            });
+            Group1.addItem(Group1_Item1);
+
+            var Group1_Item2 = new Group1.partials.Item({
+                "title": "Item 2",
+                "link": "#"
+            });
+            Group1.addItem(Group1_Item2);
+
+            var Group1_Item3 = new Group1.partials.Item({
+                "title": "Item 3",
+                "link": "#"
+            });
+            Group1.addItem(Group1_Item3);
+
+            var Content = new Menu.partials.Content();
             Menu.addContent(Content);
 
-            // var menu_open = false;
+            var Top = new Content.partials.Top({
+                "logo": "http://cdn1.digitalartsonline.co.uk/cmsdata/features/3437213/autodesk-logo-cmyk-color-logo-white-text-large-big-512.jpg",
+                "logo_link": "#"
+            });
+            Content.addTop(Top);
 
-            // Menu.onHamburgerClick(function(e){
-            //     if(menu_open){
-            //         Menu.hideSidebar();
-            //     }else{
-            //         Menu.showSidebar();    
-            //     }
-            //     menu_open = !menu_open;
-            // });
+            var menu_open = false;
+
+            Top.onHamburgerClick(function(e){
+                if(menu_open){
+                    Sidebar.hideSidebar();
+                }else{
+                    Sidebar.showSidebar();    
+                }
+                menu_open = !menu_open;
+            });
             
-            // // Adding sidebar group 1
-
-            // var SidebarGroup1 = Menu.addSidebarGroup();
-
-            // // Adding items in group 1
-
-            // var Group1Item1 = SidebarGroup1.addSidebarGroupItem({
-            //     "title": "item 1",
-            //     "link": "#"
-            // });
-
-            // Group1Item1.onClick(function(e){
-            //     alert("group 1 item 1 clicked");
-            // });
-
-            // SidebarGroup1.addSidebarGroupItem({
-            //     "title": "item 2",
-            //     "link": "#"
-            // });
-
-
-            // SidebarGroup1.addSidebarGroupItem({
-            //     "title": "item 3",
-            //     "link": "#"
-            // });
-
-            // // Adding sidebar group 2
-
-            // var SidebarGroup2 = Menu.addSidebarGroup();
-
-            // // Adding items in group 2
-
-            // SidebarGroup2.addSidebarGroupItem({
-            //     "title": "item 1",
-            //     "link": "#"
-            // });
-
-            // SidebarGroup2.addSidebarGroupItem({
-            //     "title": "item 2",
-            //     "link": "#"
-            // });
-
-
-            // SidebarGroup2.addSidebarGroupItem({
-            //     "title": "item 3",
-            //     "link": "#"
-            // });
-
-
         </script>
 
     </body>
