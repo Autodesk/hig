@@ -1,8 +1,8 @@
 import './sidebar-group-item.scss';
 
 var Template = require('./sidebar-group-item.html');
-var Interface = require('../../../../../interface/interface.json');
-var Core = require('../../../../shared/js/_core.js');
+var Interface = require('../../../../../../interface/interface.json');
+var Core = require('../../../../../shared/js/_core.js');
 
 
 /**
@@ -28,7 +28,7 @@ class SidebarGroupItem extends Core {
 
 }
 
-SidebarGroupItem._interface = Interface['components']['menu']['methods']['addSidebarGroup']['returns']['sidebarGroup']['methods']['addSidebarGroupItem']['returns']['sidebarGroupItem'];
+SidebarGroupItem._interface = Interface['Components']['Menu']['partials']['Sidebar']['partials']['Group']['partials']['Item'];
 SidebarGroupItem._defaults = {
     "title": "title",
     "link": "#"

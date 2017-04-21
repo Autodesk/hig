@@ -35,7 +35,7 @@ class Button extends Core {
 
 }
 
-Button._interface = Interface['basics']['button'];
+Button._interface = Interface['Basics']['Button'];
 Button._defaults = {
     title: "link",
     link: "#"

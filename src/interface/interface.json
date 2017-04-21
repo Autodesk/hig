@@ -1,6 +1,6 @@
 {
-    "abstract": {
-        "eventObject": {
+    "Abstract": {
+        "EventObject": {
             "desc": "listen to events",
             "params": [
                 "{Function} fn - function to be called on event, function will get native event as input"
@@ -8,8 +8,8 @@
             "returns": "{Function} disposeFunction - function you can call directly to remove event listener"
         }
     },
-    "basics": {
-        "button": {
+    "Basics": {
+        "Button": {
             "methods": {
                 "setTitle": {
                     "desc": "sets the title of a button",
@@ -23,8 +23,8 @@
                         "{String} link - new link for the button" 
                     ]
                 },
-                "onClick": "HIG.abstract.eventObject",
-                "onHover": "HIG.abstract.eventObject"
+                "onClick": "HIG.Abstract.EventObject",
+                "onHover": "HIG.Abstract.EventObject"
             },
             "defaults": {
                 "title": "{String} title of the button",
@@ -32,45 +32,91 @@
             }
         }
     },
-    "components": {
-        "menu": {
+    "Components": {
+        "Menu": {
             "methods": {
-                "showSidebar": {
-                    "desc": "show the sidebar"
+                "addSidebar": {
+                    "desc": "Pass in an instance of a Sidebar partial to mount it to the Menu",
+                    "params": [ 
+                        "{Sidebar} Sidebar - instance of a Sidebar partial" 
+                    ],
+                    "returns": "{Sidebar}"
                 },
-                "hideSidebar":{
-                    "desc": "hide the sidebar"
-                },
-                "addSidebarGroup": {
-                    "desc": "add a group of items to the sidebar",
-                    "returns": {
-                        "sidebarGroup": {
+                "addContent": {
+                    "desc": "Pass in an instance of a Content partial to mount it to the Menu",
+                    "params": [ 
+                        "{Content} Content - instance of a Content partial" 
+                    ]
+                }
+            },
+            "partials": {
+                "Sidebar": {
+                    "methods": {
+                        "showSidebar": {
+                            "desc": "show the sidebar"
+                        },
+                        "hideSidebar":{
+                            "desc": "hide the sidebar"
+                        },
+                        "addGroup": {
+                            "desc": "Pass in an instance of a sidebar Group partial",
+                            "params": [ 
+                                "{Group} Group - instance of a Group partial" 
+                            ]
+                        }
+                    },
+                    "partials": {
+                        "Group": {
                             "methods": {
-                                "addSidebarGroupItem": {
-                                    "desc": "add an item to the sidebar group",
-                                    "returns": {
-                                        "sidebarGroupItem": {
-                                            "methods": {
-                                                "onClick": "HIG.abstract.eventObject",
-                                                "onHover": "HIG.abstract.eventObject"
-                                            },
-                                            "defaults": {
-                                                "title": "{String} the string of our sidebar item",
-                                                "link": "{String} link behind the item"
-                                            }
-                                        }
-                                    }
+                                "addItem": {
+                                    "desc": "Pass in an instance of a sidebar group Item partial",
+                                    "params": [ 
+                                        "{Item} Item - instance of a Item partial" 
+                                    ]
                                 }
                             },
-                            "defaults": {}
+                            "partials": {
+                                "Item": {
+                                    "methods": {
+                                        "onClick": "HIG.Abstract.EventObject",
+                                        "onHover": "HIG.Abstract.EventObject"
+                                    },
+                                    "defaults": {
+                                        "title": "{String} the string of our sidebar item",
+                                        "link": "{String} link behind the item"
+                                    }
+                                }
+                            }
                         }
                     }
                 },
-                "onHamburgerClick": "HIG.abstract.eventObject"
-            },
-            "defaults": {
-                "logo": "{String} link to the logo",
-                "logo_link": "{String} url behind the logo"
+                "Content": {
+                    "methods": {
+                        "addTop": {
+                            "desc": "Pass in an instance of a menu content top partial",
+                            "params": [ 
+                                "{Top} Top - instance of a Top partial" 
+                            ]
+                        },
+                        "addSlot": {
+                            "desc": "Pass in any HTMLElement you want",
+                            "params": [ 
+                                "{HTMLElement} HTMLElement" 
+                            ]
+                        }
+                    },
+                    "partials": {
+                        "Top": {
+                            "methods": {
+                                "onHamburgerClick": "HIG.Abstract.EventObject"
+                            },
+                            "defaults": {
+                                "logo": "{String} link to the logo",
+                                "logo_link": "{String} url behind the logo"
+                            }
+                        }
+                    }
+                }
             }
         }
     }

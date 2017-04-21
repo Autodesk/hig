@@ -4,7 +4,8 @@ var Template = require('./menu.html');
 var Interface = require('../../../interface/interface.json');
 var Core = require('../../shared/js/_core.js');
 
-var SidebarGroup = require('./sidebar-group/sidebar-group.js');
+var Sidebar = require('./sidebar/sidebar.js');
+var Content = require('./content/content.js');
 
 /**
  * Creates an Menu
@@ -19,33 +20,25 @@ class Menu extends Core {
         this._render(Template, options);
     }
 
-    showSidebar(){
-        this._findDOMEl('.js-hig__menu__sidebar').className += " hig__menu__sidebar--open";
-    }
-
-    hideSidebar(){
-        var sidebar = this._findDOMEl('.js-hig__menu__sidebar');
-        if(sidebar.className.indexOf(' hig__menu__sidebar--open') > -1){
-            sidebar.className = sidebar.className.replace(' hig__menu__sidebar--open', '');
+    addSidebar(sidebarInstance){
+        if(sidebarInstance instanceof Sidebar){
+            this.mountToComment('SIDEBAR', sidebarInstance)
         }
     }
 
-    onHamburgerClick(fn){
-        return this._attachListener("click", '.js-hig__menu__content__top__hamburger', this.el, fn);
-    }
-
-    addSidebarGroup(){
-        var sidebarGroup = new SidebarGroup();
-        sidebarGroup.mount('.js-hig__menu__sidebar');
-        return sidebarGroup;
+    addContent(contentInstance){
+        if(contentInstance instanceof Content){
+            this.mountToComment('CONTENT', contentInstance);
+        }
     }
 
 }
 
-Menu._interface = Interface['components']['menu'];
-Menu._defaults = {
-    logo: "link",
-    logo_link: "#"
-};
+Menu._interface = Interface['Components']['Menu'];
+Menu._defaults = {};
+Menu._partials = {
+    Sidebar: Sidebar,
+    Content: Content
+}
 
 module.exports = Menu;

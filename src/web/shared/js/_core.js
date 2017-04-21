@@ -58,6 +58,11 @@ class Core {
         }else{
             options = this._defaults;
         }
+
+        // SET PARTIALS IF ANY
+        if(this._partials){
+            this.partials = this.constructor._partials;
+        }
     }
 
     /**
@@ -88,14 +93,38 @@ class Core {
      * If string, this is a CSS selector if more than one element matches it takes the first
      * @param {String | HTMLElement} mountNode - CSS selector or HTMLElement where to mount
      * @param {String | HTMLElement | null} beforeChild - if defined will use beforeChild instead of appendChild
-     * @returns null
+     * @param {String | HTMLElement | null} scopeNode - if defined will limit search inside of this element
+     * @returns {HTMLElement} el - HTMLElement that is mounted to DOM
      */
 
-    mount(mountNode, beforeChild){
-        var parentNode = this._findDOMEl(mountNode);
-        var refNode = this._findDOMEl(beforeChild);
+    mount(mountNode, beforeChild, scopeNode){
+        var parentNode = this._findDOMEl(mountNode, scopeNode);
+        var refNode = this._findDOMEl(beforeChild, scopeNode);
 
         this.el = parentNode.insertBefore(this._rendered, refNode);
+        return this.el;
+    }
+
+    mountToComment(searchComment, mountNode){
+        function filterNone() {
+            return NodeFilter.FILTER_ACCEPT;
+        }
+
+        var comment = null;
+
+        var iterator = document.createNodeIterator((this.el || document), NodeFilter.SHOW_COMMENT, filterNone, false); // Fourth argument, which is actually obsolete according to the DOM4 standard, is required in IE 11
+        var curNode;
+        while (curNode = iterator.nextNode()){
+            if(curNode.nodeValue == searchComment){
+                comment = curNode;
+            }
+        }
+
+        if(comment){
+            comment.parentNode.insertBefore(mountNode._rendered, comment.nextSibling);
+        }else{
+            console.error("NO COMMENT TO MOUNT TO FOUND");
+        }
     }
 
     /**
@@ -125,14 +154,14 @@ class Core {
             return !!c; 
         }
 
-        var q;
+        var q = this._findDOMEl(targetClass, scopeElement);
 
-        if(typeof targetClass == 'object'){
-            q = targetClass;
-        }else{
-            q = scopeElement.querySelectorAll(targetClass);
-            q = (q) ? q[0] : false;
-        }
+        // if(typeof targetClass == 'object'){
+        //     q = targetClass;
+        // }else{
+        //     q = scopeElement.querySelectorAll(targetClass);
+        //     q = (q) ? q[0] : false;
+        // }
 
         var eventTarget, eventFn;
 
@@ -166,13 +195,14 @@ class Core {
     /**
      * Determines search type and returns the DOM element occordingly
      * @param {String | HTMLElement} f - input to search
+     * @param {String | HTMLElement} [s] - optional scope for search
      * @returns {HTMLElement} object that was found
      */
     
-    _findDOMEl(f){
+    _findDOMEl(f, s){
         if(typeof f === "string"){
             // do our selection
-            var domEl = document.querySelectorAll(f);
+            var domEl = (s || document).querySelectorAll(f);
             if(!domEl || domEl.length === 0){
                 return console.error("TARGET NOT FOUND ", f);
             }else{
@@ -195,13 +225,17 @@ class Core {
     defaults(){
         return this._defaults;
     }
-    
+
     get _interface() {
         return this.constructor._interface;
     }
 
     get _defaults() {
         return this.constructor._defaults;
+    }
+
+    get _partials() {
+        return this.constructor._partials;
     }
 
 }

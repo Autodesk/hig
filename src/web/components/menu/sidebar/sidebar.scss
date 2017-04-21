@@ -1,0 +1,8 @@
+.hig__menu__sidebar{
+    background: red;
+    display: none;
+
+    &--open{
+        display: block;
+    }
+}
