@@ -21,12 +21,12 @@ class Content extends Core {
 
     addTop(topInstance){
         if(topInstance instanceof Top){
-            this.mountToComment('TOP', topInstance);
+            this.mountPartialToComment('TOP', topInstance);
         }
     }
 
     addSlot(slotElement){
-        this.mountToComment('SLOT', slotElement);
+        this.mountPartialToComment('SLOT', slotElement);
     }
     
 }

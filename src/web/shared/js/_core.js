@@ -102,10 +102,19 @@ class Core {
         var refNode = this._findDOMEl(beforeChild, scopeNode);
 
         this.el = parentNode.insertBefore(this._rendered, refNode);
-        return this.el;
+        return mountNode.el;
     }
 
-    mountToComment(searchComment, mountNode){
+    /**
+     * Inserts a partial child into the DOM at a specified comment. If beforeChild is specified the HIG Element should be inserted before that.
+     * If string, this is a CSS selector if more than one element matches it takes the first
+     * @param {String | HTMLElement | null} scopeNode - if defined will limit search inside of this element
+     * @param {String | HTMLElement} mountNode - CSS selector or HTMLElement where to mount
+     * @param {String | HTMLElement | null} beforeChild - if defined will use beforeChild instead of appendChild
+     * @returns {HTMLElement} el - HTMLElement that is mounted to DOM
+     */
+
+    mountPartialToComment(searchComment, mountNode, scopeNode){
         function filterNone() {
             return NodeFilter.FILTER_ACCEPT;
         }
@@ -121,7 +130,9 @@ class Core {
         }
 
         if(comment){
-            mountNode.el = comment.parentNode.insertBefore(mountNode._rendered, comment);
+            var refNode = (scopeNode) ? scopeNode.el : comment;
+            mountNode.el = comment.parentNode.insertBefore(mountNode._rendered, refNode);
+            return mountNode.el;
         }else{
             console.error("NO COMMENT TO MOUNT TO FOUND");
         }

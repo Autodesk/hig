@@ -19,9 +19,9 @@ class SidebarGroup extends Core {
         this._render(Template, options);
     }
 
-    addItem(itemInstance){
+    addItem(itemInstance, referenceItem){
         if(itemInstance instanceof Item){
-            this.mountToComment('ITEM', itemInstance);
+            this.mountPartialToComment('ITEM', itemInstance, referenceItem);
         }
     }
 

@@ -30,9 +30,9 @@ class Sidebar extends Core {
         }
     }
 
-    addGroup(groupInstance){
+    addGroup(groupInstance, referenceInstance){
         if(groupInstance instanceof Group){
-            this.mountToComment('GROUP', groupInstance);
+            this.mountPartialToComment('GROUP', groupInstance, referenceInstance);
         }
     }
 

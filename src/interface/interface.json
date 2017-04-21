@@ -55,13 +55,14 @@
                         "showSidebar": {
                             "desc": "show the sidebar"
                         },
-                        "hideSidebar":{
+                        "hideSidebar": {
                             "desc": "hide the sidebar"
                         },
                         "addGroup": {
                             "desc": "Pass in an instance of a sidebar Group partial",
                             "params": [ 
-                                "{Group} Group - instance of a Group partial" 
+                                "{Group} Group - instance of a Group partial",
+                                "{Group} [ReferenceGroup] - (Optional) reference node for insertBefore"
                             ]
                         }
                     },
@@ -71,7 +72,8 @@
                                 "addItem": {
                                     "desc": "Pass in an instance of a sidebar group Item partial",
                                     "params": [ 
-                                        "{Item} Item - instance of a Item partial" 
+                                        "{Item} Item - instance of a Item partial",
+                                        "{Item} [ReferenceItem] - (Optional) reference node for insertBefore"
                                     ]
                                 }
                             },

@@ -22,13 +22,13 @@ class Menu extends Core {
 
     addSidebar(sidebarInstance){
         if(sidebarInstance instanceof Sidebar){
-            this.mountToComment('SIDEBAR', sidebarInstance)
+            this.mountPartialToComment('SIDEBAR', sidebarInstance)
         }
     }
 
     addContent(contentInstance){
         if(contentInstance instanceof Content){
-            this.mountToComment('CONTENT', contentInstance);
+            this.mountPartialToComment('CONTENT', contentInstance);
         }
     }
 
