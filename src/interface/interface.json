@@ -126,7 +126,7 @@
                             },
                             "defaults": {
                                 "logo": "{String} link to the logo",
-                                "logo_link": "{String} url behind the logo"
+                                "logoLink": "{String} url behind the logo"
                             }
                         }
                     }

@@ -27,7 +27,7 @@ class Top extends Core {
 Top._interface = Interface['Components']['Menu']['partials']['Content']['partials']['Top'];
 Top._defaults = {
     logo: "link",
-    logo_link: "#"
+    logoLink: "#"
 };
 
 
