@@ -131,7 +131,12 @@ class Core {
 
         if(comment){
             var refNode = (scopeNode) ? scopeNode.el : comment;
-            mountNode.el = comment.parentNode.insertBefore(mountNode._rendered, refNode);
+            if(mountNode._rendered){
+                mountNode.el = comment.parentNode.insertBefore(mountNode._rendered, refNode);
+            }else{
+                mountNode.el = comment.parentNode.insertBefore(mountNode, refNode);
+            }
+            
             return mountNode.el;
         }else{
             console.error("NO COMMENT TO MOUNT TO FOUND");

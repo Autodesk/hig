@@ -48,6 +48,10 @@
             });
             Content.addTop(Top);
 
+            var SlotEl = document.createElement('div');
+            SlotEl.innerHTML = "<h1>Some Slot Content</h1>";
+            var Slot = Content.addSlot(SlotEl);
+
             var menu_open = false;
 
             Top.onHamburgerClick(function(e){
