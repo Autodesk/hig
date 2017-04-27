@@ -19,6 +19,9 @@ Then with a module bundler like [rollup](http://rollupjs.org/) or [webpack](http
 // using ES6 modules
 import { Button } from '@orion-ui/react-hig';
 
+// Styles
+import '@orion-ui/react-hig/react-hig.css';
+
 // using CommonJS modules
 var ReactHIG = require('@orion-ui/react-hig');
 var Button = ReactHIG.Button;

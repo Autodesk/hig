@@ -16,20 +16,19 @@ limitations under the License.
 */
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import HIG, { Slot } from './react-hig-fiber'; -- todo switch to 16.0.0-alpha.5 of react and react-dom
-import { Button, Menu, Slot as Slot2 } from './react-hig';
+import { Button, Menu } from './react-hig';
 
-import './hig-web.css';
-import 'ionicons/css/ionicons.min.css';
+import 'hig.web/dist/hig.css';
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      buttonLabel: 'Hello HIG',
+      buttonLabel: 'Toggle HIG Menu',
       fn: false,
       group1: true,
-      group3: true
+      group3: true,
+      open: true
     };
   }
 
@@ -40,6 +39,10 @@ class App extends React.Component {
     });
   };
 
+  handleClick = event => {
+    this.setState({ open: !this.state.open });
+  };
+
   fn1 = () => this.setState({ fn: true });
 
   fn2 = () => this.setState({ fn: false });
@@ -48,74 +51,39 @@ class App extends React.Component {
   toggleGroup3 = () => this.setState({ group3: !this.state.group3 });
 
   render() {
-    const actualFn = this.state.fn ? this.fn2 : this.fn1;
-
     return (
       <div>
+        <h1>React Components Adapter</h1>
 
-        <div>
-          <h1>React Components Adapter</h1>
-
-          <Button>Hello World</Button>
-          <Menu>
-            <Menu.Top />
-            <Menu.Sidebar open={true}>
-              <Menu.Sidebar.Group small>
-                <Menu.Sidebar.Item>Item 1.1</Menu.Sidebar.Item>
-                <Menu.Sidebar.Item>Item 1.2</Menu.Sidebar.Item>
-              </Menu.Sidebar.Group>
-              <Menu.Sidebar.Group>
-                <Menu.Sidebar.Item>Item 2.1</Menu.Sidebar.Item>
-                <Menu.Sidebar.Item>Item 2.2</Menu.Sidebar.Item>
-              </Menu.Sidebar.Group>
-            </Menu.Sidebar>
-
-            <Slot2>
-              <p>Some DOM Content! {this.state.buttonLabel}</p>
-            </Slot2>
-          </Menu>
-        </div>
-
-        <div>
-          <h1>React Fiber Custom Renderer</h1>
-
-          <HIG>
-            <hig-button>{this.state.buttonLabel}</hig-button>
-            <hig-menu>
-              <hig-menu-top onToggle={actualFn} />
+        <Button title={this.state.buttonLabel} onClick={this.handleClick} />
+        <Menu>
+          <Menu.Sidebar open={this.state.open}>
+            <Menu.Sidebar.Group>
+              {this.state.group1 &&
+                <Menu.Sidebar.Item title="Group 1 Item 1" />}
+              <Menu.Sidebar.Item title="Group 1 Item 2" />
 
               {this.state.group1 &&
-                <Slot>
-                  <p>Some DOM Content! {this.state.buttonLabel}</p>
-                </Slot>}
+                <Menu.Sidebar.Item title="Group 1 Item 3" />}
+            </Menu.Sidebar.Group>
 
-              <hig-sidebar open={this.state.fn}>
-                {this.state.group1 &&
-                  <hig-sidebar-group>
-                    <hig-sidebar-item>Group Above</hig-sidebar-item>
-                  </hig-sidebar-group>}
+            <Menu.Sidebar.Group>
+              <Menu.Sidebar.Item title={this.state.buttonLabel} />
+              <Menu.Sidebar.Item
+                title="Toggle Group 1"
+                onClick={this.toggleGroup1}
+              />
+            </Menu.Sidebar.Group>
+          </Menu.Sidebar>
 
-                <hig-sidebar-group small>
-                  <hig-sidebar-item onClick={this.toggleGroup1}>
-                    Toggle Group Above
-                  </hig-sidebar-item>
-                  <hig-sidebar-item onClick={this.toggleGroup3}>
-                    Toggle Group Below
-                  </hig-sidebar-item>
-                  <hig-sidebar-item onClick={actualFn}>
-                    {this.state.buttonLabel}
-                  </hig-sidebar-item>
-                </hig-sidebar-group>
-
-                {this.state.group3 &&
-                  <hig-sidebar-group>
-                    <hig-sidebar-item>Group Below</hig-sidebar-item>
-                  </hig-sidebar-group>}
-              </hig-sidebar>
-
-            </hig-menu>
-          </HIG>
-        </div>
+          <Menu.Content>
+            <Menu.Content.Top
+              logo="http://cdn1.digitalartsonline.co.uk/cmsdata/features/3437213/autodesk-logo-cmyk-color-logo-white-text-large-big-512.jpg"
+              logo_link="http://google.com"
+              onHamburgerClick={this.handleClick}
+            />
+          </Menu.Content>
+        </Menu>
 
         <input
           type="text"

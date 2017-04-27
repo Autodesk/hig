@@ -14,26 +14,29 @@
   },
   "peerDependencies": {
     "react": "^15.4.1",
-    "react-dom": "^15.4.1"
+    "react-dom": "^15.4.1",
+    "prop-types": "^15.5.8"
   },
   "devDependencies": {
     "babel-plugin-object-rest-spread": "0.0.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-es2015-rollup": "^3.0.0",
     "ionicons": "^2.0.1",
+    "prop-types": "^15.5.8",
     "react": "^15.4.1",
-    "react-dom": "^15.4.1",
     "react-devtools-core": "^2.0.12",
+    "react-dom": "^15.4.1",
     "react-scripts": "0.9.5",
     "rollup": "^0.41.6",
     "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-commonjs": "^8.0.2",
     "rollup-plugin-css-only": "^0.2.0",
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-watch": "^3.2.2"
   },
   "scripts": {
     "build": "npm run lib",
-    "lib": "rollup -c",
+    "lib": "rollup -c && cp node_modules/hig.web/dist/hig.css lib/react-hig.css",
     "playground": "react-scripts start",
     "start": "npm run lib -- --watch",
     "test": "echo 'No tests configured'"

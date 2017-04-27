@@ -14,51 +14,50 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 */
-import React, { PropTypes } from 'react';
+import * as PropTypes from 'prop-types';
+import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { createElement } from './react-hig-elements';
+import { createElement, types } from './react-hig-elements';
 import prepareUpdate from './prepareUpdate';
 
-// TODO change for hig.web css
-import './hig-web.css';
+// class ResetContext extends React.Component {
+//   render() {
+//     // renderSubtreeIntoContainer needs a single React Element instead of a collection
+//     // wrap in a div if we have to. Fix this once Fiber is released since we can
+//     // render fragments
 
-class ResetContext extends React.Component {
-  render() {
-    // renderSubtreeIntoContainer needs a single React Element instead of a collection
-    // wrap in a div if we have to. Fix this once Fiber is released since we can
-    // render fragments
+//     const element = React.isValidElement(this.props.children)
+//       ? this.props.children
+//       : <div>{this.props.children}</div>;
 
-    const element = React.isValidElement(this.props.children)
-      ? this.props.children
-      : <div>{this.props.children}</div>;
+//     return element;
+//   }
+//   getChildContext() {
+//     return {
+//       parent: null
+//     };
+//   }
+// }
 
-    return element;
-  }
-  getChildContext() {
-    return {
-      parent: null
-    };
-  }
-}
-
-ResetContext.childContextTypes = {
-  parent: PropTypes.shape({
-    appendChild: PropTypes.func
-  })
-};
+// ResetContext.childContextTypes = {
+//   parent: PropTypes.shape({
+//     appendChild: PropTypes.func
+//   })
+// };
 
 function createComponent(type) {
   const Adapter = class extends React.Component {
     static HIG_COMPONENT = true;
 
-    static defaultProps = {
-      root: false
-    };
-
-    constructor(props) {
+    constructor(props, context) {
       super(props);
-      this.instance = createElement(type, props);
+
+      if (context.parent) {
+        this.instance = context.parent.createElement(type, props);
+      } else {
+        this.instance = createElement(type, props);
+      }
     }
 
     componentDidMount() {
@@ -76,13 +75,30 @@ function createComponent(type) {
       if (!this.context.parent) {
         this.instance.mount(this._mount, this._anchor);
       } else {
-        this.context.parent.appendChild(this.instance);
+        const insertBeforeIndex = Array.from(
+          this._anchor.parentNode.childNodes
+        ).indexOf(this._anchor);
+
+        if (
+          this._anchor.nextSibling &&
+          this._anchor.nextSibling.nodeType ===
+            this._anchor.nextSibling.COMMENT_NODE
+        ) {
+          this.context.parent.insertBefore(this.instance, insertBeforeIndex);
+        } else {
+          this.context.parent.appendChild(this.instance);
+        }
       }
     }
 
     componentWillUnmount() {
       this._mount.replaceChild(this._el, this._anchor);
-      this.instance.unmount();
+
+      if (this.context.parent) {
+        this.context.parent.removeChild(this.instance);
+      } else {
+        this.instance.unmount();
+      }
     }
 
     componentWillReceiveProps(nextProps) {
@@ -94,7 +110,7 @@ function createComponent(type) {
     }
 
     render() {
-      return <hig-component>{this.props.children}</hig-component>;
+      return React.createElement(type, {}, this.props.children);
     }
 
     getChildContext() {
@@ -131,41 +147,42 @@ function createComponent(type) {
   return Adapter;
 }
 
-function createSlotComponent(type) {
-  const BaseComponent = createComponent(type);
+// function createSlotComponent(type) {
+//   const BaseComponent = createComponent(type);
 
-  const Adapter = class extends React.Component {
-    componentDidMount() {
-      this.renderSlot(this.props);
-    }
+//   const Adapter = class extends React.Component {
+//     componentDidMount() {
+//       this.renderSlot(this.props);
+//     }
 
-    componentWillReceiveProps(nextProps) {
-      this.renderSlot(nextProps);
-    }
+//     componentWillReceiveProps(nextProps) {
+//       this.renderSlot(nextProps);
+//     }
 
-    renderSlot(props) {
-      ReactDOM.unstable_renderSubtreeIntoContainer(
-        this,
-        <ResetContext>{props.children}</ResetContext>,
-        this.instance.getDOMNode()
-      );
-    }
+//     renderSlot(props) {
+//       ReactDOM.unstable_renderSubtreeIntoContainer(
+//         this,
+//         <ResetContext>{props.children}</ResetContext>,
+//         this.instance.getDOMNode()
+//       );
+//     }
 
-    render() {
-      return <BaseComponent ref={r => this.instance = r} {...this.props} />;
-    }
-  };
+//     render() {
+//       return <BaseComponent ref={r => this.instance = r} {...this.props} />;
+//     }
+//   };
 
-  Adapter.displayName = `${type}-container`;
+//   Adapter.displayName = `${type}-container`;
 
-  return Adapter;
-}
+//   return Adapter;
+// }
 
-export const Button = createComponent('hig-button');
-export const Menu = createComponent('hig-menu');
-Menu.Top = createComponent('hig-menu-top');
-Menu.Sidebar = createComponent('hig-sidebar');
-Menu.Sidebar.Group = createComponent('hig-sidebar-group');
-Menu.Sidebar.Item = createComponent('hig-sidebar-item');
+export const Button = createComponent(types.BUTTON);
+export const Menu = createComponent(types.MENU);
+Menu.Content = createComponent(types.MENU_CONTENT);
+Menu.Content.Top = createComponent(types.MENU_TOP);
+Menu.Sidebar = createComponent(types.MENU_SIDEBAR);
+Menu.Sidebar.Group = createComponent(types.MENU_SIDEBAR_GROUP);
+Menu.Sidebar.Item = createComponent(types.MENU_SIDEBAR_ITEM);
 
-export const Slot = createSlotComponent('hig-slot');
+// export const Slot = createSlotComponent('hig-slot');
