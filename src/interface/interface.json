@@ -80,6 +80,18 @@
                             "partials": {
                                 "Item": {
                                     "methods": {
+                                        "setTitle": {
+                                            "desc": "sets the title of a menu item",
+                                            "params": [ 
+                                                "{String} title - new title" 
+                                            ]
+                                        },
+                                        "setLink": {
+                                            "desc": "sets the link of a menu item",
+                                            "params": [ 
+                                                "{String} link - new link" 
+                                            ]
+                                        },
                                         "onClick": "HIG.Abstract.EventObject",
                                         "onHover": "HIG.Abstract.EventObject"
                                     },

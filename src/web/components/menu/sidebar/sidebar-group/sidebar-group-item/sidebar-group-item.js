@@ -26,6 +26,14 @@ class SidebarGroupItem extends Core {
         return this._attachListener("hover", this.el, this.el, fn);
     }
 
+    setTitle(title){
+        this._findDOMEl("a", this.el).textContent = title;
+    }
+
+    setLink(link){
+        this._findDOMEl("a", this.el).setAttribute("href", link);
+    }
+
 }
 
 SidebarGroupItem._interface = Interface['Components']['Menu']['partials']['Sidebar']['partials']['Group']['partials']['Item'];

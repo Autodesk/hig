@@ -204,7 +204,7 @@ class Core {
     }
 
     /**
-     * Determines search type and returns the DOM element occordingly
+     * Determines search type and returns the first DOM element found
      * @param {String | HTMLElement} f - input to search
      * @param {String | HTMLElement} [s] - optional scope for search
      * @returns {HTMLElement} object that was found
