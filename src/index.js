@@ -16,7 +16,7 @@ limitations under the License.
 */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Button, Menu } from './react-hig';
+import { Button, Menu, Slot } from './react-hig';
 
 import 'hig.web/dist/hig.css';
 
@@ -79,9 +79,14 @@ class App extends React.Component {
           <Menu.Content>
             <Menu.Content.Top
               logo="http://cdn1.digitalartsonline.co.uk/cmsdata/features/3437213/autodesk-logo-cmyk-color-logo-white-text-large-big-512.jpg"
-              logo_link="http://google.com"
+              logoLink="http://google.com"
               onHamburgerClick={this.handleClick}
             />
+
+            <Slot>
+              <p>MY OWN CONTENT!</p>
+              <Button title="Another HIG Button" />
+            </Slot>
           </Menu.Content>
         </Menu>
 

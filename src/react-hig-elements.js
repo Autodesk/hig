@@ -131,14 +131,10 @@ export class MenuTop {
 
       switch (propKey) {
         case 'logo':
-          console.error(
-            'setLogo is not implemented on hig.web Menu.Content.Top'
-          );
+          this.hig.setLogo(propValue);
           break;
-        case 'logo_link':
-          console.error(
-            'setLogoLink is not implemented on hig.web Menu.Content.Top'
-          );
+        case 'logoLink':
+          this.hig.setLogoLink(propValue);
           break;
         case 'onHamburgerClick': {
           const dispose = this._disposeFunctions.get('onHamburgerClickDispose');
@@ -202,18 +198,12 @@ export class SidebarItem {
       const propValue = updatePayload[i + 1];
 
       switch (propKey) {
-        case 'title': {
-          console.error(
-            'setTitle is not implemented on hig.web SidebarGroupItem'
-          );
+        case 'title':
+          this.hig.setTitle(propValue);
           break;
-        }
-        case 'link': {
-          console.error(
-            'setLink is not implemented on hig.web SidebarGroupItem'
-          );
+        case 'link':
+          this.hig.setLink(propValue);
           break;
-        }
         case 'onClick': {
           const dispose = this._disposeFunctions.get('onClickDispose');
 
@@ -330,6 +320,8 @@ export class SidebarGroup {
 
 export class MenuContent {
   constructor(HIGContent, initialProps) {
+    this.mounted = false;
+
     const { defaults, events } = partitionProps(
       initialProps,
       HIGContent._interface
@@ -360,8 +352,9 @@ export class MenuContent {
       this.top.componentDidMount();
     }
 
-    // Cleanup
-    this.top = null;
+    if (this.slot) {
+      this.hig.addSlot(this.slot);
+    }
   }
 
   unmount() {
@@ -387,6 +380,14 @@ export class MenuContent {
       } else {
         this.top = instance;
       }
+    }
+  }
+
+  addSlot(element) {
+    if (this.mounted) {
+      this.hig.addSlot(element);
+    } else {
+      this.slot = element;
     }
   }
 
@@ -505,28 +506,6 @@ export class Sidebar {
     instance.unmount();
   }
 }
-
-// export class Slot {
-//   constructor() {
-//     this.hig = new HIGWeb.Slot();
-//   }
-
-//   getDOMNode() {
-//     return this.hig.getDOMNode();
-//   }
-
-//   mount(mountNode, anchorNode) {
-//     this.hig.mount(mountNode, anchorNode);
-//   }
-
-//   commitUpdate() {
-//     /* no-op */
-//   }
-
-//   unmount() {
-//     this.hig.unmount();
-//   }
-// }
 
 export class Menu {
   constructor(initialProps) {

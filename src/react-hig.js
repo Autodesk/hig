@@ -21,31 +21,6 @@ import ReactDOM from 'react-dom';
 import { createElement, types } from './react-hig-elements';
 import prepareUpdate from './prepareUpdate';
 
-// class ResetContext extends React.Component {
-//   render() {
-//     // renderSubtreeIntoContainer needs a single React Element instead of a collection
-//     // wrap in a div if we have to. Fix this once Fiber is released since we can
-//     // render fragments
-
-//     const element = React.isValidElement(this.props.children)
-//       ? this.props.children
-//       : <div>{this.props.children}</div>;
-
-//     return element;
-//   }
-//   getChildContext() {
-//     return {
-//       parent: null
-//     };
-//   }
-// }
-
-// ResetContext.childContextTypes = {
-//   parent: PropTypes.shape({
-//     appendChild: PropTypes.func
-//   })
-// };
-
 function createComponent(type) {
   const Adapter = class extends React.Component {
     static HIG_COMPONENT = true;
@@ -124,10 +99,6 @@ function createComponent(type) {
         };
       }
     }
-
-    getDOMNode() {
-      return this.instance.getDOMNode();
-    }
   };
 
   Adapter.displayName = type;
@@ -147,42 +118,50 @@ function createComponent(type) {
   return Adapter;
 }
 
-// function createSlotComponent(type) {
-//   const BaseComponent = createComponent(type);
+function createSlotComponent() {
+  const Adapter = class extends React.Component {
+    componentDidMount() {
+      if (this.context.parent) {
+        this.context.parent.addSlot(this.container);
+      }
+    }
 
-//   const Adapter = class extends React.Component {
-//     componentDidMount() {
-//       this.renderSlot(this.props);
-//     }
+    render() {
+      const { children, ...rest } = this.props;
+      return <div ref={r => this.container = r} {...rest}>{children}</div>;
+    }
 
-//     componentWillReceiveProps(nextProps) {
-//       this.renderSlot(nextProps);
-//     }
+    getChildContext() {
+      return {
+        parent: null
+      };
+    }
+  };
 
-//     renderSlot(props) {
-//       ReactDOM.unstable_renderSubtreeIntoContainer(
-//         this,
-//         <ResetContext>{props.children}</ResetContext>,
-//         this.instance.getDOMNode()
-//       );
-//     }
+  Adapter.displayName = `hig-slot`;
 
-//     render() {
-//       return <BaseComponent ref={r => this.instance = r} {...this.props} />;
-//     }
-//   };
+  // Reset all the context for any children of the slot
+  // In case we go back to the HIG context
+  Adapter.childContextTypes = {
+    parent: PropTypes.shape({
+      appendChild: PropTypes.func
+    })
+  };
 
-//   Adapter.displayName = `${type}-container`;
+  Adapter.contextTypes = {
+    parent: PropTypes.shape({
+      addSlot: PropTypes.func
+    })
+  };
 
-//   return Adapter;
-// }
+  return Adapter;
+}
 
 export const Button = createComponent(types.BUTTON);
+export const Slot = createSlotComponent();
 export const Menu = createComponent(types.MENU);
 Menu.Content = createComponent(types.MENU_CONTENT);
 Menu.Content.Top = createComponent(types.MENU_TOP);
 Menu.Sidebar = createComponent(types.MENU_SIDEBAR);
 Menu.Sidebar.Group = createComponent(types.MENU_SIDEBAR_GROUP);
 Menu.Sidebar.Item = createComponent(types.MENU_SIDEBAR_ITEM);
-
-// export const Slot = createSlotComponent('hig-slot');
