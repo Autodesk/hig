@@ -33,6 +33,16 @@
         }
     },
     "Components": {
+        "Slot": {
+            "methods": {
+                "setSlotContent": {
+                    "desc": "fill up the slot with given HTML code",
+                    "params": [ 
+                        "{String} link - new link for the button" 
+                    ]
+                }
+            }
+        },
         "Menu": {
             "methods": {
                 "addSidebar": {
@@ -122,10 +132,22 @@
                     "partials": {
                         "Top": {
                             "methods": {
+                                "setLogo": {
+                                    "desc": "sets the logo",
+                                    "params": [ 
+                                        "{String} logo - url to svg or other image object" 
+                                    ]
+                                },
+                                "setLogoLink": {
+                                    "desc": "sets the link of the logo",
+                                    "params": [ 
+                                        "{String} link - new link" 
+                                    ]
+                                },
                                 "onHamburgerClick": "HIG.Abstract.EventObject"
                             },
                             "defaults": {
-                                "logo": "{String} link to the logo",
+                                "logo": "{String} url to svg or other image object",
                                 "logoLink": "{String} url behind the logo"
                             }
                         }
