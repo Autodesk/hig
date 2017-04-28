@@ -19,6 +19,7 @@ import ReactDOM from 'react-dom';
 import { Button, Menu, Slot } from './react-hig';
 
 import 'hig.web/dist/hig.css';
+import './index.css';
 
 class App extends React.Component {
   constructor() {
@@ -52,10 +53,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>React Components Adapter</h1>
-
-        <Button title={this.state.buttonLabel} onClick={this.handleClick} />
+      <div style={{ width: '100%', height: '100%' }}>
         <Menu>
           <Menu.Sidebar open={this.state.open}>
             <Menu.Sidebar.Group>

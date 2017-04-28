@@ -35,7 +35,7 @@
     "rollup-watch": "^3.2.2"
   },
   "scripts": {
-    "build": "npm run lib",
+    "build": "npm run lib && react-scripts build",
     "lib": "rollup -c && cp node_modules/hig.web/dist/hig.css lib/react-hig.css",
     "playground": "react-scripts start",
     "start": "npm run lib -- --watch",
