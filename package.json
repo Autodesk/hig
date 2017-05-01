@@ -26,6 +26,7 @@
     "raw-loader": "^0.5.1",
     "sass-loader": "^6.0.0",
     "style-loader": "^0.13.1",
+    "svgo": "^0.7.2",
     "webpack": "^2.2.1"
   }
 }
