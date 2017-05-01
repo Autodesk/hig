@@ -5,7 +5,8 @@
   "main": "dist/hig.js",
   "scripts": {
     "build": "webpack",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "build-icons": "node src/web/basics/icons/build/build.js"
   },
   "repository": {
     "type": "git",

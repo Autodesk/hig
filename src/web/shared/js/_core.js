@@ -1,3 +1,4 @@
+var Icons = require('../../basics/icons/release/hig-icons-bundle.js');
 var Mustache = require('mustache');
 
 class Core {
@@ -76,6 +77,20 @@ class Core {
     _render(template, data, partials){
         if(!this._rendered){
             var elWrapper = document.createElement('div');
+            data = (data || {});
+
+            // ICON MIXIN
+            data.icon = function(){
+                return function (text, render) {
+                    var i = Icons[text];
+                    if(!i){
+                        console.error("NO HIG ICON FOUND WITH THE NAME: "+text);
+                        return false;
+                    }else{
+                        return "<div class='hig__icon'>" + Icons[text] + "</div>";
+                    }
+                }
+            }
             elWrapper.innerHTML = Mustache.render(
                 template, 
                 (data || {}),

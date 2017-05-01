@@ -1,6 +1,9 @@
+@import '../../../../basics/colors/colors.scss';
+
 .hig__menu__content__top{
-    background: yellow;
-    height: 50px;
+    background: $background-1;
+    height: 55px;
+    box-shadow: 0 1px 4px 0 $box-shadow-1;
 
     &__hamburger{
         float: left;
