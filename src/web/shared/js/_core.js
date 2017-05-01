@@ -1,4 +1,4 @@
-var Icons = require('../../basics/icons/release/hig-icons-bundle.js');
+var Icons = require('../../basics/icons/icons.js');
 var Mustache = require('mustache');
 
 class Core {

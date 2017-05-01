@@ -1,2 +1,2 @@
 var HIGIcons = {}; module.exports = HIGIcons; 
-HIGIcons['hamburger'] = "<svg width=\"20\" height=\"15\" viewBox=\"0 0 20 15\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" title=\"hamburger\"><path d=\"M0,0 L20,0 L20,3 L0,3 L0,0 Z M0,6 L20,6 L20,9 L0,9 L0,6 Z M0,12 L20,12 L20,15 L0,15 L0,12 Z\" fill=\"#000\" fill-rule=\"evenodd\"/></svg>";
+HIGIcons['hamburger'] = "<svg width=\"15\" height=\"12\" viewBox=\"0 0 15 12\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" title=\"hamburger\"><path d=\"M20,22 L35,22 L35,24 L20,24 L20,22 Z M20,27 L35,27 L35,29 L20,29 L20,27 Z M20,32 L35,32 L35,34 L20,34 L20,32 Z\" transform=\"translate(-20 -22)\" fill=\"#34495E\" fill-rule=\"evenodd\"/></svg>";
