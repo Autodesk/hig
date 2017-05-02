@@ -4,6 +4,7 @@
     background: $background-1;
     border-right: 1px solid $base-4;
     box-shadow: inset 2px 0 7px 0 $box-shadow-2;
+    
     display: none; // Hide by default
 
     &--open{

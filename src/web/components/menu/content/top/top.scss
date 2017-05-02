@@ -3,15 +3,40 @@
 .hig__menu__content__top{
     background: $background-1;
     height: 55px;
+    line-height: 55px;
     box-shadow: 0 1px 4px 0 $box-shadow-1;
 
-    &__hamburger{
-        float: left;
+    display: flex;
+    align-items: center;
+
+    &__group{
+        height: 55px;
+        display: flex;
+        align-items: center;
+
+        &--right{
+            border-left: 1px solid $base-3;
+        }
+        &--left{
+            padding-right: 20px;
+            border-right: 1px solid $base-3;
+        }
+
     }
+
+    &__hamburger{
+        margin: 0 13px;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
     &__logo{
-        float: left;
+        height: 24px;
+
         & img{
-            max-height: 50px;
+            height: 100%;
         }
     }
 }
