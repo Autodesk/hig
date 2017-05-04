@@ -3,4 +3,8 @@
 .hig__global-nav__side-nav__section__group{
     border-bottom: 1px solid $base-2;
     padding: 10px 0;
+
+    &:last-child{
+        border: none;
+    }
 }

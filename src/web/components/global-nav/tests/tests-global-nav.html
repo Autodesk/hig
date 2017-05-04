@@ -16,15 +16,15 @@
             GlobalNav.addSideNav(SideNav);
             
             // ADD A SECTION IN OUR SIDENAV
-            var Section = new SideNav.partials.Section({
+            var Section1 = new SideNav.partials.Section({
                 "headerLabel": "Project",
                 "headerName": "Thunderstorm"
             });
-            SideNav.addSection(Section);
+            SideNav.addSection(Section1);
 
             // ADD A GROUP TO OUR SECTION
-            var Group1 = new Section.partials.Group();
-            Section.addGroup(Group1);
+            var Group1 = new Section1.partials.Group();
+            Section1.addGroup(Group1);
             
             // ADD SOME ITEMS TO OUR GROUP
             var Group1_Item1 = new Group1.partials.Item({
@@ -58,8 +58,8 @@
             }); // Test click action
 
             // ADD ANOTHER GROUP TO OUR SECTION
-            var Group2 = new Section.partials.Group();
-            Section.addGroup(Group2);
+            var Group2 = new Section1.partials.Group();
+            Section1.addGroup(Group2);
             
             // ADD SOME ITEMS TO OUR GROUP
             var Group2_Item1 = new Group2.partials.Item({
@@ -68,6 +68,32 @@
                 "link": "#"
             });
             Group2.addItem(Group2_Item1);
+
+            // ADD ANOTHER SECTION IN OUR SIDENAV
+            var Section2 = new SideNav.partials.Section({
+                "headerLabel": "Project",
+                "headerName": "Thunderstorm"
+            });
+            SideNav.addSection(Section2);
+
+            // ADD A GROUP TO OUR OTHER SECTION
+            var Group1 = new Section2.partials.Group();
+            Section2.addGroup(Group1);
+            
+            // ADD SOME ITEMS TO OUR GROUP
+            var Group1_Item1 = new Group1.partials.Item({
+                "icon": "project-management",
+                "title": "Item 1",
+                "link": "#"
+            });
+            Group1.addItem(Group1_Item1);
+
+            var Group1_Item2 = new Group1.partials.Item({
+                "icon": "project-management",
+                "title": "Item 2",
+                "link": "#"
+            });
+            Group1.addItem(Group1_Item2);
 
             // CONTAINER AREA
             var Container = new GlobalNav.partials.Container();
