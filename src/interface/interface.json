@@ -171,7 +171,7 @@
                 },
                 "Container": {
                     "methods": {
-                        "addTop": {
+                        "addTopNav": {
                             "desc": "Pass in an instance of a GlobalNav Container top partial",
                             "params": [ 
                                 "{Top} Top - instance of a Top partial" 
@@ -185,7 +185,7 @@
                         }
                     },
                     "partials": {
-                        "Top": {
+                        "TopNav": {
                             "methods": {
                                 "setLogo": {
                                     "desc": "sets the logo",

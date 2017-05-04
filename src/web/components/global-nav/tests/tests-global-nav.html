@@ -14,8 +14,6 @@
             // ADD A SIDENAV
             var SideNav = new GlobalNav.partials.SideNav();
             GlobalNav.addSideNav(SideNav);
-
-            SideNav.showSideNav();
             
             // ADD A SECTION IN OUR SIDENAV
             var Section = new SideNav.partials.Section({
@@ -71,38 +69,38 @@
             });
             Group2.addItem(Group2_Item1);
 
-            // // CONTENT AREA
-            // var Content = new GlobalNav.partials.Content();
-            // GlobalNav.addContent(Content);
+            // CONTAINER AREA
+            var Container = new GlobalNav.partials.Container();
+            GlobalNav.addContainer(Container);
 
-            // // ADD TOP GlobalNav IN CONTENT AREA
-            // var Top = new Content.partials.Top({
-            //     "logo": "https://www.dexigner.com/images/news/xw/22856.jpg",
-            //     "logo_link": "#"
-            // });
-            // Content.addTop(Top);
+            // ADD TOP GlobalNav IN CONTENT AREA
+            var TopNav = new Container.partials.TopNav({
+                "logo": "https://www.dexigner.com/images/news/xw/22856.jpg",
+                "logo_link": "#"
+            });
+            Container.addTopNav(TopNav);
 
-            // Top.setLogo("bim-logo.png"); // Update logo
-            // Top.setLogoLink("http://autodesk.com"); // update logo link
+            TopNav.setLogo("bim-logo.png"); // Update logo
+            TopNav.setLogoLink("http://autodesk.com"); // update logo link
 
-            // // HAMBURGER OPENS/CLOSES SideNav
-            // var menu_open = false;
-            // Top.onHamburgerClick(function(e){
-            //     if(menu_open){
-            //         SideNav.hideSideNav();
-            //     }else{
-            //         SideNav.showSideNav();    
-            //     }
-            //     menu_open = !menu_open;
-            // });
+            // HAMBURGER OPENS/CLOSES SideNav
+            var menu_open = false;
+            TopNav.onHamburgerClick(function(e){
+                if(menu_open){
+                    SideNav.hideSideNav();
+                }else{
+                    SideNav.showSideNav();    
+                }
+                menu_open = !menu_open;
+            });
 
-            // // ADD SUB TOP MENU
+            // ADD SUB TOP MENU
 
 
-            // // SLOT IN SOME APP SPECIFIC CONTENT
-            // var SlotEl = document.createElement('div');
-            // SlotEl.innerHTML = "<h1>Some Slot Content</h1>";
-            // var Slot = Content.addSlot(SlotEl);
+            // SLOT IN SOME APP SPECIFIC Container
+            var SlotEl = document.createElement('div');
+            SlotEl.innerHTML = "<h1>Some Slot Container</h1>";
+            var Slot = Container.addSlot(SlotEl);
 
             
         </script>

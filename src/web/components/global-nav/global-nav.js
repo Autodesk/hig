@@ -5,7 +5,7 @@ var Interface = require('../../../interface/interface.json');
 var Core = require('../../shared/js/_core.js');
 
 var SideNav = require('./side-nav/side-nav.js');
-// var Container = require('./Container/Container.js');
+var Container = require('./container/container.js');
 
 /**
  * Creates an GlobalNav
@@ -26,20 +26,19 @@ class GlobalNav extends Core {
         }
     }
 
-    addContainer(containerInstance){}
-
-    // addContainer(containerInstance){
-    //     if(containerInstance instanceof Container){
-    //         this.mountPartialToComment('CONTAINER', containerInstance);
-    //     }
-    // }
+    addContainer(containerInstance){
+        if(containerInstance instanceof Container){
+            this.mountPartialToComment('CONTAINER', containerInstance);
+        }
+    }
 
 }
 
 GlobalNav._interface = Interface['components']['GlobalNav'];
 GlobalNav._defaults = {};
 GlobalNav._partials = {
-    SideNav: SideNav
+    SideNav: SideNav,
+    Container: Container
 }
 
 module.exports = GlobalNav;
