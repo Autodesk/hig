@@ -1,8 +1,8 @@
 import './sub-nav.scss';
 
 var Template = require('./sub-nav.html');
-var Interface = require('../../../../../interface/interface.json');
-var Core = require('../../../../shared/js/_core.js');
+var Interface = require('interface.json');
+var Core = require('_core.js');
 
 
 /**

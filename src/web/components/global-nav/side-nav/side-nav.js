@@ -1,8 +1,8 @@
 import './side-nav.scss';
 
 var Template = require('./side-nav.html');
-var Interface = require('../../../../interface/interface.json');
-var Core = require('../../../shared/js/_core.js');
+var Interface = require('interface.json');
+var Core = require('_core.js');
 
 var Section = require('./section/section.js');
 var Link = require('./link/link.js');
@@ -42,7 +42,6 @@ class SideNav extends Core {
             this.mountPartialToComment('LINK', linkInstance, referenceInstance);
         }
     }
-
 
 }
 

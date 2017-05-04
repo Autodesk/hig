@@ -32,6 +32,13 @@ r = {
             use: 'raw-loader'
         }]
     },
+    resolve: {
+        alias: {
+            "interface.json": path.resolve( __dirname, 'src/interface/interface.json' ),
+            "_core.js": path.resolve( __dirname, 'src/web/helpers/js/_core.js' )
+        },
+        extensions: [ '.js', '.json' ]
+    },
     plugins: [
         new ExtractTextPlugin('hig.css'),
     ]

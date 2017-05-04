@@ -1,8 +1,8 @@
 import './group.scss';
 
 var Template = require('./group.html');
-var Interface = require('../../../../../../interface/interface.json');
-var Core = require('../../../../../shared/js/_core.js');
+var Interface = require('interface.json');
+var Core = require('_core.js');
 
 var Item = require('./item/item.js');
 

@@ -2,7 +2,7 @@ import './button.scss';
 
 var Template = require('./button.html');
 var Interface = require('../../../interface/interface.json');
-var Core = require('../../shared/js/_core.js');
+var Core = require('../../helpers/js/_core.js');
 
 /**
  * Creates an button

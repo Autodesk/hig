@@ -1,8 +1,8 @@
 import './global-nav.scss';
 
 var Template = require('./global-nav.html');
-var Interface = require('../../../interface/interface.json');
-var Core = require('../../shared/js/_core.js');
+var Interface = require('interface.json');
+var Core = require('_core.js');
 
 var SideNav = require('./side-nav/side-nav.js');
 var Container = require('./container/container.js');

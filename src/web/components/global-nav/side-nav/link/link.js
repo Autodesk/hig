@@ -2,7 +2,7 @@ import './link.scss';
 
 var Template = require('./link.html');
 var Interface = require('../../../../../interface/interface.json');
-var Core = require('../../../../shared/js/_core.js');
+var Core = require('../../../../helpers/js/_core.js');
 
 /**
  * Creates an Link
