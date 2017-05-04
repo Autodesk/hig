@@ -13,7 +13,7 @@
     "url": "git@github.com:adsk-hig/hig.web.git"
   },
   "author": "Thijs Bernolet",
-  "license": "ISC",
+  "license": "Apache 2.0",
   "devDependencies": {
     "babel-core": "^6.23.1",
     "babel-loader": "^6.3.0",
