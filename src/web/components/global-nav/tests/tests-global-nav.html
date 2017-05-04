@@ -30,21 +30,21 @@
             
             // ADD SOME ITEMS TO OUR GROUP
             var Group1_Item1 = new Group1.partials.Item({
-                "icon": "hamburger",
+                "icon": "project-management",
                 "title": "Item 1",
                 "link": "#"
             });
             Group1.addItem(Group1_Item1);
 
             var Group1_Item2 = new Group1.partials.Item({
-                "icon": "hamburger",
+                "icon": "project-management",
                 "title": "Item 2",
                 "link": "#"
             });
             Group1.addItem(Group1_Item2);
 
             var Group1_Item3 = new Group1.partials.Item({
-                "icon": "hamburger",
+                "icon": "project-management",
                 "title": "Item 3",
                 "link": "#"
             });
@@ -52,6 +52,12 @@
 
             Group1_Item3.setTitle("Different Title 3");
             Group1_Item3.setLink("http://autodesk.com");
+            Group1_Item3.setIcon("hamburger");
+
+            Group1_Item1.onClick(function(e){
+                e.preventDefault();
+                alert('Item 1 clicked');
+            }); // Test click action
 
             // ADD ANOTHER GROUP TO OUR SECTION
             var Group2 = new Section.partials.Group();
@@ -59,7 +65,7 @@
             
             // ADD SOME ITEMS TO OUR GROUP
             var Group2_Item1 = new Group2.partials.Item({
-                "icon": "hamburger",
+                "icon": "project-management",
                 "title": "Item 1",
                 "link": "#"
             });

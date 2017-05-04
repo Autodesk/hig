@@ -27,7 +27,7 @@ class Item extends Core {
     }
 
     setIcon(icon){
-        this._findDOMEl(".hig__global-nav__side-nav__section__group__item__icon", this.el).textContent = this._getIconString(icon);
+        this._findDOMEl(".hig__global-nav__side-nav__section__group__item__icon", this.el).innerHTML = this._getIconString(icon);
     }
 
     setTitle(title){

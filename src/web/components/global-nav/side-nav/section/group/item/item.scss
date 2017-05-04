@@ -4,6 +4,11 @@
     
     padding: 10px 0;
 
+    & a{
+        color: $base-1;
+        text-decoration: none;
+    }
+
     &__icon{
         float: left;
     }
