@@ -80,20 +80,21 @@ class Core {
             data = (data || {});
 
             // ICON MIXIN
-            data.icon = function(){
+            data.renderIcon = function(){
                 return function (text, render) {
-                    var i = Icons[text];
+                    var k = Mustache.render(text, data);
+                    var i = Icons[k];
                     if(!i){
-                        console.error("NO HIG ICON FOUND WITH THE NAME: "+text);
+                        console.error("NO HIG ICON FOUND WITH THE NAME: "+k);
                         return false;
                     }else{
-                        return "<div class='hig__icon'>" + Icons[text] + "</div>";
+                        return "<div class='hig__icon'>" + i + "</div>";
                     }
                 }
             }
             elWrapper.innerHTML = Mustache.render(
                 template, 
-                (data || {}),
+                data,
                 (partials || {})
             );
             this._rendered = elWrapper.firstChild;
@@ -242,6 +243,16 @@ class Core {
         }else{
             return f; // already a HTMLElement, no need to search
         }
+    }
+
+    /**
+     * Get the Icon SVG String
+     * @param {String} icon - icon ID
+     * @returns {String} String with SVG of the icon
+     */
+    
+    _getIconString(icon){
+        return Icons[icon];
     }
 
     /**

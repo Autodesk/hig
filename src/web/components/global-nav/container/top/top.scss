@@ -2,15 +2,15 @@
 
 .hig__menu__content__top{
     background: $background-1;
-    height: 55px;
-    line-height: 55px;
+    height: 50px;
+    line-height: 50px;
     box-shadow: 0 1px 4px 0 $box-shadow-1;
 
     display: flex;
     align-items: center;
 
     &__group{
-        height: 55px;
+        height: 50px;
         display: flex;
         align-items: center;
 
@@ -25,7 +25,7 @@
     }
 
     &__hamburger{
-        margin: 0 13px;
+        margin: 0 10px 0 12px;
 
         &:hover{
             cursor: pointer;

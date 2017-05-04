@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../../../../../dist/hig.css">
+        <script type="text/javascript" src="../../../../../dist/hig.js"></script>
+    </head>
+    <body>
+
+        <script>
+
+            // CREATE GLOBALNAV COMPONENT
+            var GlobalNav = new Hig.GlobalNav();
+            GlobalNav.mount("body");
+
+            // ADD A SIDENAV
+            var SideNav = new GlobalNav.partials.SideNav();
+            GlobalNav.addSideNav(SideNav);
+
+            SideNav.showSideNav();
+            
+            // ADD A SECTION IN OUR SIDENAV
+            var Section = new SideNav.partials.Section({
+                "headerLabel": "Project",
+                "headerName": "Thunderstorm"
+            });
+            SideNav.addSection(Section);
+
+            // ADD A GROUP TO OUR SECTION
+            var Group1 = new Section.partials.Group();
+            Section.addGroup(Group1);
+            
+            // ADD SOME ITEMS TO OUR GROUP
+            var Group1_Item1 = new Group1.partials.Item({
+                "icon": "hamburger",
+                "title": "Item 1",
+                "link": "#"
+            });
+            Group1.addItem(Group1_Item1);
+
+            var Group1_Item2 = new Group1.partials.Item({
+                "icon": "hamburger",
+                "title": "Item 2",
+                "link": "#"
+            });
+            Group1.addItem(Group1_Item2);
+
+            var Group1_Item3 = new Group1.partials.Item({
+                "icon": "hamburger",
+                "title": "Item 3",
+                "link": "#"
+            });
+            Group1.addItem(Group1_Item3, Group1_Item2); // Test insert with custom reference node
+
+            Group1_Item3.setTitle("Different Title 3");
+            Group1_Item3.setLink("http://autodesk.com");
+
+            // ADD ANOTHER GROUP TO OUR SECTION
+            var Group2 = new Section.partials.Group();
+            Section.addGroup(Group2);
+            
+            // ADD SOME ITEMS TO OUR GROUP
+            var Group2_Item1 = new Group2.partials.Item({
+                "icon": "hamburger",
+                "title": "Item 1",
+                "link": "#"
+            });
+            Group2.addItem(Group2_Item1);
+
+            // // CONTENT AREA
+            // var Content = new GlobalNav.partials.Content();
+            // GlobalNav.addContent(Content);
+
+            // // ADD TOP GlobalNav IN CONTENT AREA
+            // var Top = new Content.partials.Top({
+            //     "logo": "https://www.dexigner.com/images/news/xw/22856.jpg",
+            //     "logo_link": "#"
+            // });
+            // Content.addTop(Top);
+
+            // Top.setLogo("bim-logo.png"); // Update logo
+            // Top.setLogoLink("http://autodesk.com"); // update logo link
+
+            // // HAMBURGER OPENS/CLOSES SideNav
+            // var menu_open = false;
+            // Top.onHamburgerClick(function(e){
+            //     if(menu_open){
+            //         SideNav.hideSideNav();
+            //     }else{
+            //         SideNav.showSideNav();    
+            //     }
+            //     menu_open = !menu_open;
+            // });
+
+            // // ADD SUB TOP MENU
+
+
+            // // SLOT IN SOME APP SPECIFIC CONTENT
+            // var SlotEl = document.createElement('div');
+            // SlotEl.innerHTML = "<h1>Some Slot Content</h1>";
+            // var Slot = Content.addSlot(SlotEl);
+
+            
+        </script>
+
+    </body>
+</html>

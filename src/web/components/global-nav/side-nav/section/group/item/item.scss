@@ -1,0 +1,16 @@
+@import '../../../../../../basics/colors/colors.scss';
+
+.hig__global-nav__side-nav__section__group__item{
+    
+    padding: 10px 0;
+
+    &__icon{
+        float: left;
+    }
+
+    &__title{
+        font-size: 15px;
+        float: left;
+        line-height: 30px;
+    }
+}

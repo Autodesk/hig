@@ -1,16 +1,16 @@
-import './button.scss';
+import './link.scss';
 
-var Template = require('./button.html');
-var Interface = require('../../../interface/interface.json');
-var Core = require('../../shared/js/_core.js');
+var Template = require('./link.html');
+var Interface = require('../../../../../interface/interface.json');
+var Core = require('../../../../shared/js/_core.js');
 
 /**
- * Creates an button
+ * Creates an Link
  *
  * @class
  */
 
-class Button extends Core {
+class Link extends Core {
 
     constructor(options){
         super(options);
@@ -33,12 +33,13 @@ class Button extends Core {
         this.el.setAttribute("href", link);
     }
 
+
 }
 
-Button._interface = Interface['basics']['Button'];
-Button._defaults = {
+Link._interface = Interface['components']['GlobalNav']['partials']['SideNav']['partials']['Link'];
+Link._defaults = {
     title: "link",
     link: "#"
 };
 
-module.exports = Button;
+module.exports = Link;

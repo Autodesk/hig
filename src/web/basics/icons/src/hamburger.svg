@@ -1,13 +1,12 @@
-<svg width="15px" height="12px" viewBox="0 0 15 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Explorations---Structure" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="DL1---1680" transform="translate(-100.000000, -197.000000)" fill="#34495E">
-            <g id="main-menu-oakwood" transform="translate(80.000000, 175.000000)">
-                <g id="menubar+create">
-                    <path d="M20,22 L35,22 L35,24 L20,24 L20,22 Z M20,27 L35,27 L35,29 L20,29 L20,27 Z M20,32 L35,32 L35,34 L20,34 L20,32 Z" id="icon-hamburger-58px"></path>
-                </g>
-            </g>
+    <g id="BIM-Navigation" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="BIM---1680" transform="translate(-92.000000, -185.000000)">
+            <rect id="Rectangle-5" x="92" y="185" width="30" height="30"></rect>
+            <path d="M100,195 L115,195 L115,196 L100,196 L100,195 Z M100,200 L115,200 L115,201 L100,201 L100,200 Z M100,205 L115,205 L115,206 L100,206 L100,205 Z" id="icon-hamburger-58px" fill="#34495E"></path>
         </g>
     </g>
 </svg>

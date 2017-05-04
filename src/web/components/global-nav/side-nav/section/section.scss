@@ -1,0 +1,19 @@
+@import '../../../../basics/colors/colors.scss';
+
+.hig__global-nav__side-nav__section{
+
+    
+    &__header{
+
+        font-size: 12px;
+
+        &__label{
+            color: $base-1;
+            font-weight: 500;
+        }
+
+        &__name{
+            color: $base-5;
+        }
+    }
+}
