@@ -4,7 +4,6 @@ var Template = require('./sub-nav.html');
 var Interface = require('interface.json');
 var Core = require('_core.js');
 
-
 /**
  * Creates an SubNav
  *
@@ -22,11 +21,8 @@ class SubNav extends Core {
 
 }
 
-SubNav._interface = Interface['components']['GlobalNav']['partials']['Container']['partials']['SubNav'];
-SubNav._defaults = {
-    logo: "link",
-    logoLink: "#"
-};
-
+SubNav._interface = Interface['components']['GlobalNav']['partials']['Container']['partials']['SubNav']['partials'];
+SubNav._defaults = {};
+SubNav._partials = {};
 
 module.exports = SubNav;

@@ -34,6 +34,7 @@ r = {
     },
     resolve: {
         alias: {
+            "basics": path.resolve(__dirname, "src", "web", "basics"),
             "interface.json": path.resolve( __dirname, 'src/interface/interface.json' ),
             "_core.js": path.resolve( __dirname, 'src/web/helpers/js/_core.js' )
         },
