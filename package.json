@@ -23,6 +23,7 @@
     "extract-text-webpack-plugin": "^2.0.0-rc.3",
     "mustache": "^2.3.0",
     "node-sass": "^4.5.0",
+    "plop": "^1.7.4",
     "raw-loader": "^0.5.1",
     "sass-loader": "^6.0.0",
     "style-loader": "^0.13.1",
