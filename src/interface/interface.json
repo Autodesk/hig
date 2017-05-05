@@ -172,9 +172,15 @@
                 "Container": {
                     "methods": {
                         "addTopNav": {
-                            "desc": "Pass in an instance of a GlobalNav Container top partial",
+                            "desc": "Pass in an instance of a TopNav",
                             "params": [ 
-                                "{Top} Top - instance of a Top partial" 
+                                "{TopNav} TopNav - instance of a TopNav partial" 
+                            ]
+                        },
+                        "addSubNav": {
+                            "desc": "Pass in an instance of a SubNav",
+                            "params": [ 
+                                "{SubNav} SubNav - instance of a SubNav partial" 
                             ]
                         },
                         "addSlot": {
@@ -204,6 +210,15 @@
                             "defaults": {
                                 "logo": "{String} url to svg or other image object",
                                 "logoLink": "{String} url behind the logo"
+                            }
+                        },
+                        "SubNav": {
+                            "methods": {
+
+                            },
+                            "defaults": {
+                                "moduleIndicatorName": "{String} Name of the module",
+                                "moduleIndicatorIcon": "{String} icon identifier"
                             }
                         }
                     }

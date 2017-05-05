@@ -121,7 +121,11 @@
             });
 
             // ADD SUB TOP MENU
-
+            var SubNav = new Container.partials.SubNav({
+                "moduleIndicatorName": "Insight",
+                "moduleIndicatorIcon": "project-management"
+            });
+            Container.addSubNav(SubNav);
 
             // SLOT IN SOME APP SPECIFIC Container
             var SlotEl = document.createElement('div');
