@@ -20,7 +20,6 @@ module.exports = function (plop) {
         a.push(properCasedName);
         var new_a = [];
         a.forEach(function(element) {
-            console.log(element);
             if(element != "src" && element != "web"){
                 if(element == "components"){
                     new_a.push(element);
@@ -33,7 +32,7 @@ module.exports = function (plop) {
             }
         }, this);
 
-        new_a.slice(-1); // remove last "partials"
+        new_a.pop(); // remove last "partials"
         
         var s = "['";
         s += new_a.join("']['");
