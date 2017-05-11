@@ -9,10 +9,16 @@
     display: flex;
     align-items: center;
 
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+
     &__left{
         height: 50px;
         display: flex;
         align-items: center;
+        font-size: 18px;
+        padding-left: 17px;
     }
 
 }
