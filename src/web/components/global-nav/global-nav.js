@@ -32,6 +32,17 @@ class GlobalNav extends Core {
         }
     }
 
+    showSideNav(){
+        this.el.className += " hig__global-nav--open";
+    }
+
+    hideSideNav(){
+        var sidebar = this.el;
+        if(sidebar.className.indexOf(' hig__global-nav--open') > -1){
+            sidebar.className = sidebar.className.replace(' hig__global-nav--open', '');
+        }
+    }
+
 }
 
 GlobalNav._interface = Interface['components']['GlobalNav'];

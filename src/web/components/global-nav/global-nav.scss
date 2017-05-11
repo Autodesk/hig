@@ -3,8 +3,5 @@
 @import '../../helpers/css/_helpers.scss';
 
 .hig__global-nav{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
+    position: relative;
 }

@@ -48,17 +48,17 @@
                     "params": [ 
                         "{Container} Container - instance of a Container partial" 
                     ]
+                },
+                "showSideNav": {
+                    "desc": "show the SideNav"
+                },
+                "hideSideNav": {
+                    "desc": "hide the SideNav"
                 }
             },
             "partials": {
                 "SideNav": {
                     "methods": {
-                        "showSideNav": {
-                            "desc": "show the SideNav"
-                        },
-                        "hideSideNav": {
-                            "desc": "hide the SideNav"
-                        },
                         "addSection": {
                             "desc": "Pass in an instance of a SideNav Section partial",
                             "params": [ 

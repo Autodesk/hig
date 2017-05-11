@@ -20,17 +20,6 @@ class SideNav extends Core {
         this._render(Template, options);
     }
 
-    showSideNav(){
-        this.el.className += " hig__global-nav__sidenav--open";
-    }
-
-    hideSideNav(){
-        var sidebar = this.el;
-        if(sidebar.className.indexOf(' hig__global-nav__sidenav--open') > -1){
-            sidebar.className = sidebar.className.replace(' hig__global-nav__sidenav--open', '');
-        }
-    }
-
     addSection(sectionInstance, referenceInstance){
         if(sectionInstance instanceof Section){
             this.mountPartialToComment('SECTION', sectionInstance, referenceInstance);

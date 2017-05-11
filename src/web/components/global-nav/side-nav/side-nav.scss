@@ -1,18 +1,21 @@
 @import '~basics/colors/colors.scss';
 
+$hig__global-nav__sidenav--width: 280px;
+
 .hig__global-nav__sidenav{
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
     background: $background-1;
     border-right: 1px solid $base-4;
     box-shadow: inset -2px 0 7px -2px $box-shadow-2;
-    width: 280px - (2*16px);
+
+    box-sizing: border-box;
+    width: $hig__global-nav__sidenav--width;
     padding: 16px;
 
     display: none; // Hide by default
-
-    &--open{
-        display: block;
-    }
 
     &__copywright{
         position: absolute;
@@ -21,3 +24,6 @@
         color: $base-5;
     }
 }
+    .hig__global-nav--open .hig__global-nav__sidenav{
+        display: block;
+    }

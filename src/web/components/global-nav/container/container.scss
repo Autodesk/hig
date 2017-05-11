@@ -1,8 +1,10 @@
 @import '~basics/colors/colors.scss';
+@import '../side-nav/side-nav.scss';
 
 .hig__global-nav__container{
+    position: relative;
     background: $background-2;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
 }
+    .hig__global-nav--open .hig__global-nav__container{
+        margin-left: $hig__global-nav__sidenav--width;
+    }
