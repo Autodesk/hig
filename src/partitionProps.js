@@ -57,7 +57,7 @@ export default function partitionProps(reactProps, _interface) {
 
   // set up events
   const eventKeys = Object.keys(_interface.methods).filter(methodName => {
-    return _interface.methods[methodName] === 'HIG.Abstract.EventObject';
+    return _interface.methods[methodName] === 'HIG.abstract.EventObject';
   });
 
   // Narrow props down to just events

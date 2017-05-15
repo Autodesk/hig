@@ -90,11 +90,11 @@ export class Button {
   }
 }
 
-export class MenuTop {
-  constructor(HIGTop, initialProps) {
+class TopNav {
+  constructor(HIGConstructor, initialProps) {
     const { defaults, events } = partitionProps(
       initialProps,
-      HIGTop._interface
+      HIGConstructor._interface
     );
 
     // Store the events until we mount
@@ -103,7 +103,7 @@ export class MenuTop {
     // Where we store event handler dispose functions
     this._disposeFunctions = new Map();
 
-    this.hig = new HIGTop(defaults);
+    this.hig = new HIGConstructor(defaults);
   }
 
   componentDidMount() {
@@ -117,10 +117,6 @@ export class MenuTop {
   }
 
   unmount() {
-    if (this._toggleListener) {
-      this._toggleListener.dispose();
-    }
-
     this.hig.unmount();
   }
 
@@ -157,13 +153,11 @@ export class MenuTop {
   }
 }
 
-export class SidebarItem {
-  constructor(HIGSidebarItem, initialProps) {
-    this.initialProps = initialProps;
-
+class SubNav {
+  constructor(HIGConstructor, initialProps) {
     const { defaults, events } = partitionProps(
       initialProps,
-      HIGSidebarItem._interface
+      HIGConstructor._interface
     );
 
     // Store the events until we mount
@@ -172,7 +166,153 @@ export class SidebarItem {
     // Where we store event handler dispose functions
     this._disposeFunctions = new Map();
 
-    this.hig = new HIGSidebarItem(defaults);
+    this.hig = new HIGConstructor(defaults);
+  }
+
+  componentDidMount() {
+    Object.keys(this.events).forEach(eventName => {
+      // Send function to the hig instance to be registered
+      const dispose = this.hig[eventName](this.events[eventName]);
+
+      // Save the dispose function as a field in case it needs to be updated
+      this._disposeFunctions.set(`${eventName}Dispose`, dispose);
+    });
+  }
+
+  unmount() {
+    this.hig.unmount();
+  }
+
+  commitUpdate(updatePayload, oldProps, newProp) {
+    for (let i = 0; i < updatePayload.length; i += 2) {
+      const propKey = updatePayload[i];
+      const propValue = updatePayload[i + 1];
+
+      switch (propKey) {
+        case 'moduleIndicatorName':
+          console.warn('moduleIndicatorName has no method in interface.json');
+          break;
+        case 'moduleIndicatorIcon':
+          console.warn('moduleIndicatorName has no method in interface.json');
+          break;
+        default: {
+          console.warn(`${propKey} is unknown`);
+        }
+      }
+    }
+  }
+}
+
+class MenuContainer {
+  constructor(HIGConstructor, initialProps) {
+    this.mounted = false;
+
+    const { defaults, events } = partitionProps(
+      initialProps,
+      HIGConstructor._interface
+    );
+
+    // Store the events until we mount
+    this.events = events;
+
+    // Where we store event handler dispose functions
+    this._disposeFunctions = new Map();
+
+    this.hig = new HIGConstructor(defaults);
+  }
+
+  componentDidMount() {
+    this.mounted = true;
+
+    Object.keys(this.events).forEach(eventName => {
+      // Send function to the hig instance to be registered
+      const dispose = this.hig[eventName](this.events[eventName]);
+
+      // Save the dispose function as a field in case it needs to be updated
+      this._disposeFunctions.set(`${eventName}Dispose`, dispose);
+    });
+
+    if (this.topNav) {
+      this.hig.addTopNav(this.topNav.hig);
+      this.topNav.componentDidMount();
+    }
+
+    if (this.subNav) {
+      this.hig.addSubNav(this.subNav.hig);
+      this.subNav.componentDidMount();
+    }
+
+    if (this.slot) {
+      this.hig.addSlot(this.slot);
+    }
+  }
+
+  unmount() {
+    // Dispose of any functions registered here
+    Array.from(this._disposeFunctions).forEach(([_, dispose]) => dispose());
+    this._disposeFunctions.clear();
+    this.hig.unmount();
+  }
+
+  commitUpdate(updatePayload, oldProps, newProp) {
+    /* no-op */
+  }
+
+  createElement(type, props) {
+    return createPrivateElement(this.hig, type, props);
+  }
+
+  appendChild(instance) {
+    if (instance instanceof TopNav) {
+      if (this.mounted) {
+        this.hig.addTopNav(instance.hig);
+        instance.componentDidMount();
+      } else {
+        this.topNav = instance;
+      }
+    } else if (instance instanceof SubNav) {
+      if (this.mounted) {
+        this.hig.addSubNav(instance.hig);
+        instance.componentDidMount();
+      } else {
+        this.subNav = instance;
+      }
+    }
+  }
+
+  addSlot(element) {
+    if (this.mounted) {
+      this.hig.addSlot(element);
+    } else {
+      this.slot = element;
+    }
+  }
+
+  insertBefore(instance) {
+    this.appendChild(instance);
+  }
+
+  removeChild(instance) {
+    instance.unmount();
+  }
+}
+
+class SideNavItem {
+  constructor(HIGConstructor, initialProps) {
+    this.initialProps = initialProps;
+
+    const { defaults, events } = partitionProps(
+      initialProps,
+      HIGConstructor._interface
+    );
+
+    // Store the events until we mount
+    this.events = events;
+
+    // Where we store event handler dispose functions
+    this._disposeFunctions = new Map();
+
+    this.hig = new HIGConstructor(defaults);
   }
 
   componentDidMount() {
@@ -198,6 +338,9 @@ export class SidebarItem {
       const propValue = updatePayload[i + 1];
 
       switch (propKey) {
+        case 'icon':
+          this.hig.setIcon(propValue);
+          break;
         case 'title':
           this.hig.setTitle(propValue);
           break;
@@ -239,8 +382,8 @@ export class SidebarItem {
   }
 }
 
-export class SidebarGroup {
-  constructor(HIGSidebarGroup, initialProps) {
+class SideNavGroup {
+  constructor(HIGConstructor, initialProps) {
     // items that get appended before mounting
     this.items = new HIGNodeList();
 
@@ -248,7 +391,7 @@ export class SidebarGroup {
 
     const { defaults, events } = partitionProps(
       initialProps,
-      HIGSidebarGroup._interface
+      HIGConstructor._interface
     );
 
     // Store the events until we mount
@@ -257,7 +400,7 @@ export class SidebarGroup {
     // Where we store event handler dispose functions
     this._disposeFunctions = new Map();
 
-    this.hig = new HIGSidebarGroup(defaults);
+    this.hig = new HIGConstructor(defaults);
   }
 
   componentDidMount() {
@@ -289,7 +432,7 @@ export class SidebarGroup {
   }
 
   appendChild(instance) {
-    if (instance instanceof SidebarItem) {
+    if (instance instanceof SideNavItem) {
       this.items.appendChild(instance);
 
       if (this.mounted) {
@@ -318,13 +461,13 @@ export class SidebarGroup {
   }
 }
 
-export class MenuContent {
-  constructor(HIGContent, initialProps) {
-    this.mounted = false;
+class SideNavSection {
+  constructor(HIGConstructor, initialProps) {
+    this.groups = new HIGNodeList();
 
     const { defaults, events } = partitionProps(
       initialProps,
-      HIGContent._interface
+      HIGConstructor._interface
     );
 
     // Store the events until we mount
@@ -333,7 +476,7 @@ export class MenuContent {
     // Where we store event handler dispose functions
     this._disposeFunctions = new Map();
 
-    this.hig = new HIGContent(defaults);
+    this.hig = new HIGConstructor(defaults);
   }
 
   componentDidMount() {
@@ -347,25 +490,36 @@ export class MenuContent {
       this._disposeFunctions.set(`${eventName}Dispose`, dispose);
     });
 
-    if (this.top) {
-      this.hig.addTop(this.top.hig);
-      this.top.componentDidMount();
-    }
-
-    if (this.slot) {
-      this.hig.addSlot(this.slot);
+    for (let instance of this.groups) {
+      this.hig.addGroup(instance.hig);
+      instance.componentDidMount();
     }
   }
 
   unmount() {
-    // Dispose of any functions registered here
-    Array.from(this._disposeFunctions).forEach(([_, dispose]) => dispose());
-    this._disposeFunctions.clear();
     this.hig.unmount();
   }
 
   commitUpdate(updatePayload, oldProps, newProp) {
-    /* no-op */
+    for (let i = 0; i < updatePayload.length; i += 2) {
+      const propKey = updatePayload[i];
+      const propValue = updatePayload[i + 1];
+
+      switch (propKey) {
+        case 'headerLabel':
+          this.hig.setHeaderLabel(propValue);
+          break;
+        case 'headerName':
+          this.hig.setHeaderName(propValue);
+          break;
+        case 'children':
+          /* no-op */
+          break;
+        default: {
+          console.warn(`${propKey} is unknown`);
+        }
+      }
+    }
   }
 
   createElement(type, props) {
@@ -373,40 +527,219 @@ export class MenuContent {
   }
 
   appendChild(instance) {
-    if (instance instanceof MenuTop) {
+    if (instance instanceof SideNavGroup) {
+      this.groups.appendChild(instance);
+
       if (this.mounted) {
-        this.hig.addTop(instance.hig);
+        this.hig.addGroup(instance.hig);
         instance.componentDidMount();
-      } else {
-        this.top = instance;
       }
-    }
-  }
-
-  addSlot(element) {
-    if (this.mounted) {
-      this.hig.addSlot(element);
     } else {
-      this.slot = element;
+      throw new Error(`unknown type ${instance}`);
     }
   }
 
-  insertBefore(instance) {
-    this.appendChild(instance);
+  insertBefore(instance, insertBeforeIndex) {
+    const beforeChild = this.groups.item(insertBeforeIndex);
+    this.groups.insertBefore(instance, beforeChild);
+    this.hig.addGroup(instance.hig, beforeChild.hig);
+    instance.componentDidMount();
   }
 
   removeChild(instance) {
+    const index = this.groups.indexOf(instance);
+    this.groups.splice(index, 1);
     instance.unmount();
   }
 }
 
-export class Sidebar {
+class SideNavSections {
+  constructor(higInstance) {
+    this.hig = higInstance;
+    this.sections = new HIGNodeList();
+  }
+
+  componentDidMount() {
+    this.mounted = true;
+
+    for (let instance of this.sections) {
+      this.hig.addSection(instance.hig);
+      instance.componentDidMount();
+    }
+  }
+
+  unmount() {
+    // no-op
+  }
+
+  commitUpdate(updatePayload, oldProps, newProps) {
+    // no-op
+  }
+
+  createElement(type, props) {
+    return createPrivateElement(this.hig, type, props);
+  }
+
+  appendChild(instance) {
+    if (instance instanceof SideNavSection) {
+      this.sections.appendChild(instance);
+
+      if (this.mounted) {
+        this.hig.addSection(instance.hig);
+        instance.componentDidMount();
+      }
+    } else {
+      throw new Error(`unknown type ${instance}`);
+    }
+  }
+
+  insertBefore(instance, insertBeforeIndex) {
+    const beforeChild = this.sections.item(insertBeforeIndex);
+    this.sections.insertBefore(instance, beforeChild);
+    this.hig.addSection(instance.hig, beforeChild.hig);
+    instance.componentDidMount();
+  }
+
+  removeChild(instance) {
+    const index = this.sections.indexOf(instance);
+    this.sections.splice(index, 1);
+    instance.unmount();
+  }
+}
+
+class SideNavLink {
+  constructor(HIGConstructor, initialProps) {
+    const { defaults, events } = partitionProps(
+      initialProps,
+      HIGConstructor._interface
+    );
+
+    // Store the events until we mount
+    this.events = events;
+
+    // Where we store event handler dispose functions
+    this._disposeFunctions = new Map();
+
+    this.hig = new HIGConstructor(defaults);
+  }
+
+  componentDidMount() {
+    Object.keys(this.events).forEach(eventName => {
+      // Send function to the hig instance to be registered
+      const dispose = this.hig[eventName](this.events[eventName]);
+
+      // Save the dispose function as a field in case it needs to be updated
+      this._disposeFunctions.set(`${eventName}Dispose`, dispose);
+    });
+  }
+
+  unmount() {
+    this.hig.unmount();
+  }
+
+  commitUpdate(updatePayload, oldProps, newProp) {
+    for (let i = 0; i < updatePayload.length; i += 2) {
+      const propKey = updatePayload[i];
+      const propValue = updatePayload[i + 1];
+
+      switch (propKey) {
+        case 'title':
+          this.hig.setTitle(propValue);
+          break;
+        case 'link':
+          this.hig.setLink(propValue);
+          break;
+        case 'onClick': {
+          const dispose = this._disposeFunctions.get('onClickDispose');
+
+          if (dispose) {
+            dispose();
+          }
+
+          this._disposeFunctions.set(
+            'onClickDispose',
+            this.hig.onClick(propValue)
+          );
+          break;
+        }
+        case 'onHover': {
+          const dispose = this._disposeFunctions.get('onHoverDispose');
+
+          if (dispose) {
+            dispose();
+          }
+
+          this._disposeFunctions.set(
+            'onHoverDispose',
+            this.hig.onClick(propValue)
+          );
+          break;
+        }
+
+        default: {
+          console.warn(`${propKey} is unknown`);
+        }
+      }
+    }
+  }
+}
+
+class SideNavLinks {
+  constructor(higInstance) {
+    this.hig = higInstance;
+    this.links = new HIGNodeList();
+  }
+
+  componentDidMount() {
+    this.mounted = true;
+
+    for (let instance of this.links) {
+      this.hig.addSection(instance.hig);
+      instance.componentDidMount();
+    }
+  }
+
+  unmount() {
+    // no-op
+  }
+
+  commitUpdate(updatePayload, oldProps, newProps) {
+    // no-op
+  }
+
+  createElement(type, props) {
+    return createPrivateElement(this.hig, type, props);
+  }
+
+  appendChild(instance) {
+    if (instance instanceof SideNavLink) {
+      this.links.appendChild(instance);
+
+      if (this.mounted) {
+        this.hig.addLink(instance.hig);
+        instance.componentDidMount();
+      }
+    } else {
+      throw new Error(`unknown type ${instance}`);
+    }
+  }
+
+  insertBefore(instance, insertBeforeIndex) {
+    const beforeChild = this.links.item(insertBeforeIndex);
+    this.links.insertBefore(instance, beforeChild);
+    this.hig.addLink(instance.hig, beforeChild.hig);
+    instance.componentDidMount();
+  }
+
+  removeChild(instance) {
+    const index = this.links.indexOf(instance);
+    this.links.splice(index, 1);
+    instance.unmount();
+  }
+}
+
+class SideNav {
   constructor(HIGSidebar, initialProps) {
-    // Groups that get appended before mounting
-    this.groups = new HIGNodeList();
-
-    this.initialProps = initialProps;
-
     const { defaults, events } = partitionProps(
       initialProps,
       HIGSidebar._interface
@@ -432,15 +765,12 @@ export class Sidebar {
       this._disposeFunctions.set(`${eventName}Dispose`, dispose);
     });
 
-    if (this.initialProps.open) {
-      this.hig.showSidebar();
-    } else {
-      this.hig.hideSidebar();
+    if (this.sections) {
+      this.sections.componentDidMount();
     }
 
-    for (let instance of this.groups) {
-      this.hig.addGroup(instance.hig);
-      instance.componentDidMount();
+    if (this.links) {
+      this.links.componentDidMount();
     }
   }
 
@@ -452,28 +782,7 @@ export class Sidebar {
   }
 
   commitUpdate(updatePayload, oldProps, newProp) {
-    for (let i = 0; i < updatePayload.length; i += 2) {
-      const propKey = updatePayload[i];
-      const propValue = updatePayload[i + 1];
-
-      switch (propKey) {
-        case 'open': {
-          if (propValue) {
-            this.hig.showSidebar();
-          } else {
-            this.hig.hideSidebar();
-          }
-          break;
-        }
-        case 'children': {
-          /* no-op */
-          break;
-        }
-        default: {
-          console.warn(`${propKey} is unknown`);
-        }
-      }
-    }
+    // no-op
   }
 
   createElement(type, props) {
@@ -481,12 +790,25 @@ export class Sidebar {
   }
 
   appendChild(instance) {
-    if (instance instanceof SidebarGroup) {
-      this.groups.appendChild(instance);
+    if (instance instanceof SideNavSections) {
+      if (this.sections) {
+        throw new Error('only one sections is allowed');
+      } else {
+        this.sections = instance;
 
-      if (this.mounted) {
-        this.hig.addGroup(instance.hig);
-        instance.componentDidMount();
+        if (this.mounted) {
+          instance.componentDidMount();
+        }
+      }
+    } else if (instance instanceof SideNavLinks) {
+      if (this.links) {
+        throw new Error('only one links is allowed');
+      } else {
+        this.links = instance;
+
+        if (this.mounted) {
+          instance.componentDidMount();
+        }
       }
     } else {
       throw new Error('unknown type');
@@ -494,24 +816,29 @@ export class Sidebar {
   }
 
   insertBefore(instance, insertBeforeIndex) {
-    const beforeChild = this.groups.item(insertBeforeIndex);
-    this.items.insertBefore(instance, beforeChild);
-    this.hig.addGroup(instance.hig, beforeChild.hig);
-    instance.componentDidMount();
+    this.appendChild(instance);
   }
 
   removeChild(instance) {
-    const index = this.groups.indexOf(instance);
-    this.groups.splice(index, 1);
+    if (instance instanceof SideNavSections) {
+      this.sections = null;
+    }
+
+    if (instance instanceof SideNavLinks) {
+      this.links = null;
+    }
+
     instance.unmount();
   }
 }
 
-export class Menu {
+class GlobalNav {
   constructor(initialProps) {
+    this.initialProps = initialProps;
+
     const { defaults, events } = partitionProps(
       initialProps,
-      HIG.Menu._interface
+      HIG.GlobalNav._interface
     );
 
     this.mounted = false;
@@ -523,7 +850,7 @@ export class Menu {
     this._disposeFunctions = new Map();
 
     // Create the hig instance with the defaults as per the interface
-    this.hig = new HIG.Menu(defaults);
+    this.hig = new HIG.GlobalNav(defaults);
   }
 
   mount(mountNode, anchorNode) {
@@ -540,21 +867,21 @@ export class Menu {
     });
 
     // Add any children
-    if (this.sidebar) {
-      this.hig.addSidebar(this.sidebar.hig);
-      this.sidebar.componentDidMount();
+    if (this.sideNav) {
+      this.hig.addSideNav(this.sideNav.hig);
+      this.sideNav.componentDidMount();
     }
 
-    // Cleanup
-    this.sidebar = null;
-
-    if (this.content) {
-      this.hig.addContent(this.content.hig);
-      this.content.componentDidMount();
+    if (this.container) {
+      this.hig.addContainer(this.container.hig);
+      this.container.componentDidMount();
     }
 
-    // Cleanup
-    this.content = null;
+    if (this.initialProps.sideNavOpen) {
+      this.hig.showSideNav();
+    } else {
+      this.hig.hideSideNav();
+    }
   }
 
   unmount() {
@@ -569,19 +896,19 @@ export class Menu {
   }
 
   appendChild(instance, beforeChild = {}) {
-    if (instance instanceof Sidebar) {
+    if (instance instanceof SideNav) {
       if (this.mounted) {
-        this.hig.addSidebar(instance.hig);
+        this.hig.addSideNav(instance.hig);
         instance.componentDidMount();
       } else {
-        this.sidebar = instance;
+        this.sideNav = instance;
       }
-    } else if (instance instanceof MenuContent) {
+    } else if (instance instanceof MenuContainer) {
       if (this.mounted) {
-        this.hig.addContent(instance.hig);
+        this.hig.addContainer(instance.hig);
         instance.componentDidMount();
       } else {
-        this.content = instance;
+        this.container = instance;
       }
     } else {
       throw new Error('unknown type');
@@ -596,19 +923,45 @@ export class Menu {
     instance.unmount();
   }
 
-  commitUpdate(updatePayload, oldProps, newProps) {
-    /* no-op */
+  commitUpdate(updatePayload, oldProps, newProp) {
+    for (let i = 0; i < updatePayload.length; i += 2) {
+      const propKey = updatePayload[i];
+      const propValue = updatePayload[i + 1];
+
+      switch (propKey) {
+        case 'sideNavOpen': {
+          if (propValue) {
+            this.hig.showSideNav();
+          } else {
+            this.hig.hideSideNav();
+          }
+          break;
+        }
+        case 'children': {
+          /* no-op */
+          break;
+        }
+        default: {
+          console.warn(`${propKey} is unknown`);
+        }
+      }
+    }
   }
 }
 
 export const types = {
   BUTTON: 'hig-button',
-  MENU: 'hig-menu',
-  MENU_CONTENT: 'hig-menu-content',
-  MENU_TOP: 'hig-menu-top',
-  MENU_SIDEBAR: 'hig-menu-sidebar',
-  MENU_SIDEBAR_GROUP: 'hig-menu-sidebar-group',
-  MENU_SIDEBAR_ITEM: 'hig-menu-sidebar-item'
+  GLOBAL_NAV: 'hig-global-nav',
+  CONTAINER: 'hig-container',
+  TOP_NAV: 'hig-top-nav',
+  SUB_NAV: 'hig-sub-nav',
+  SIDE_NAV: 'hig-side-nav',
+  SIDE_NAV_SECTIONS: 'hig-side-nav-sections',
+  SIDE_NAV_LINKS: 'hig-side-nav-links',
+  SIDE_NAV_SECTION: 'hig-side-nav-section',
+  SIDE_NAV_LINK: 'hig-side-nav-link',
+  SIDE_NAV_GROUP: 'hig-side-nav-group',
+  SIDE_NAV_ITEM: 'hig-side-nav-item'
 };
 
 /**
@@ -616,16 +969,26 @@ export const types = {
  */
 function createPrivateElement(parent, type, props) {
   switch (type) {
-    case types.MENU_SIDEBAR_ITEM:
-      return new SidebarItem(parent.partials.Item, props);
-    case types.MENU_SIDEBAR_GROUP:
-      return new SidebarGroup(parent.partials.Group, props);
-    case types.MENU_SIDEBAR:
-      return new Sidebar(parent.partials.Sidebar, props);
-    case types.MENU_CONTENT:
-      return new MenuContent(parent.partials.Content, props);
-    case types.MENU_TOP:
-      return new MenuTop(parent.partials.Top, props);
+    case types.CONTAINER:
+      return new MenuContainer(parent.partials.Container, props);
+    case types.TOP_NAV:
+      return new TopNav(parent.partials.TopNav, props);
+    case types.SUB_NAV:
+      return new SubNav(parent.partials.SubNav, props);
+    case types.SIDE_NAV:
+      return new SideNav(parent.partials.SideNav, props);
+    case types.SIDE_NAV_SECTIONS:
+      return new SideNavSections(parent);
+    case types.SIDE_NAV_SECTION:
+      return new SideNavSection(parent.partials.Section, props);
+    case types.SIDE_NAV_LINKS:
+      return new SideNavLinks(parent);
+    case types.SIDE_NAV_LINK:
+      return new SideNavLink(parent.partials.Link, props);
+    case types.SIDE_NAV_GROUP:
+      return new SideNavGroup(parent.partials.Group, props);
+    case types.SIDE_NAV_ITEM:
+      return new SideNavItem(parent.partials.Item, props);
     default:
       throw new Error(`Unknown type ${type}`);
   }
@@ -638,8 +1001,8 @@ export function createElement(type, props) {
   switch (type) {
     case types.BUTTON:
       return new Button(props);
-    case types.MENU:
-      return new Menu(props);
+    case types.GLOBAL_NAV:
+      return new GlobalNav(props);
     default:
       throw new Error(`Unknown type ${type}`);
   }

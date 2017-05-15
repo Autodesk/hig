@@ -159,9 +159,15 @@ function createSlotComponent() {
 
 export const Button = createComponent(types.BUTTON);
 export const Slot = createSlotComponent();
-export const Menu = createComponent(types.MENU);
-Menu.Content = createComponent(types.MENU_CONTENT);
-Menu.Content.Top = createComponent(types.MENU_TOP);
-Menu.Sidebar = createComponent(types.MENU_SIDEBAR);
-Menu.Sidebar.Group = createComponent(types.MENU_SIDEBAR_GROUP);
-Menu.Sidebar.Item = createComponent(types.MENU_SIDEBAR_ITEM);
+export const GlobalNav = createComponent(types.GLOBAL_NAV);
+
+GlobalNav.Container = createComponent(types.CONTAINER);
+GlobalNav.Container.TopNav = createComponent(types.TOP_NAV);
+GlobalNav.Container.SubNav = createComponent(types.SUB_NAV);
+GlobalNav.SideNav = createComponent(types.SIDE_NAV);
+GlobalNav.SideNav.Sections = createComponent(types.SIDE_NAV_SECTIONS);
+GlobalNav.SideNav.Sections.Item = createComponent(types.SIDE_NAV_SECTION);
+GlobalNav.SideNav.Links = createComponent(types.SIDE_NAV_LINKS);
+GlobalNav.SideNav.Links.Item = createComponent(types.SIDE_NAV_LINK);
+GlobalNav.SideNav.Sections.Group = createComponent(types.SIDE_NAV_GROUP);
+GlobalNav.SideNav.Sections.Group.Item = createComponent(types.SIDE_NAV_ITEM);
