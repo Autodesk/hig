@@ -17,7 +17,13 @@ class SubNav extends Core {
         this._render(Template, options);
     }
 
-    
+    setModuleIndicatorName(name){
+        this._findDOMEl('.hig__global-nav__container__sub-nav__left', this.el).textContent = name;
+    }
+
+    setModuleIndicatorIcon(icon){
+        this._findDOMEl('.hig__global-nav__container__sub-nav__left__icon', this.el).innerHTML = this._getIconString(icon);
+    }
 
 }
 

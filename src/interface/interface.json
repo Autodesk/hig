@@ -215,7 +215,18 @@
                         },
                         "SubNav": {
                             "methods": {
-
+                                "setModuleIndicatorName": {
+                                    "desc": "sets the moduleIndicatorName",
+                                    "params": [ 
+                                        "{String} moduleIndicatorName - new moduleIndicatorName" 
+                                    ]
+                                },
+                                "setModuleIndicatorIcon": {
+                                    "desc": "sets the moduleIndicatorIcon",
+                                    "params": [ 
+                                        "{String} moduleIndicatorIcon - new moduleIndicatorIcon" 
+                                    ]
+                                }
                             },
                             "defaults": {
                                 "moduleIndicatorName": "{String} Name of the module",
