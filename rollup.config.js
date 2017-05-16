@@ -30,7 +30,7 @@ export default {
 
     commonjs({
       namedExports: {
-        '../hig.web/dist/hig.js': ['Button', 'Menu']
+        '../hig.web/dist/hig.js': ['Button', 'GlobalNav']
       }
     }),
 
