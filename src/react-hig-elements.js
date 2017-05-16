@@ -186,7 +186,7 @@ class SubNav {
   commitUpdate(updatePayload, oldProps, newProp) {
     for (let i = 0; i < updatePayload.length; i += 2) {
       const propKey = updatePayload[i];
-      const propValue = updatePayload[i + 1];
+      // const propValue = updatePayload[i + 1];
 
       switch (propKey) {
         case 'moduleIndicatorName':
