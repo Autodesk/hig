@@ -74,6 +74,20 @@ class HIGElement {
     /* no-op */
     // sub-classes should implement if they need to
   }
+
+  replaceEvent(eventKey, eventFn) {
+    const disposeKey = `${eventKey}Dispose`;
+
+    // Find the old dispose function
+    const dispose = this._disposeFunctions.get(disposeKey);
+
+    // If found, dispose of it
+    if (dispose) {
+      dispose();
+    }
+
+    this._disposeFunctions.set(disposeKey, this.hig[eventKey](eventFn));
+  }
 }
 
 export class Button extends HIGElement {
@@ -96,16 +110,7 @@ export class Button extends HIGElement {
           break;
         }
         case 'onClick': {
-          const dispose = this._disposeFunctions.get('onClickDispose');
-
-          if (dispose) {
-            dispose();
-          }
-
-          this._disposeFunctions.set(
-            'onClickDispose',
-            this.hig.onClick(propValue)
-          );
+          this.replaceEvent(propKey, propValue);
           break;
         }
         default: {
@@ -189,7 +194,14 @@ class MenuContainer extends HIGElement {
   }
 
   createElement(type, props) {
-    return createPrivateElement(this.hig, type, props);
+    switch (type) {
+      case types.TOP_NAV:
+        return new TopNav(this.hig.partials.TopNav, props);
+      case types.SUB_NAV:
+        return new SubNav(this.hig.partials.SubNav, props);
+      default:
+        throw new Error(`Unknown type ${type}`);
+    }
   }
 
   appendChild(instance) {
@@ -293,7 +305,12 @@ class SideNavGroup extends HIGElement {
   }
 
   createElement(type, props) {
-    return createPrivateElement(this.hig, type, props);
+    switch (type) {
+      case types.SIDE_NAV_ITEM:
+        return new SideNavItem(this.hig.partials.Item, props);
+      default:
+        throw new Error(`Unknown type ${type}`);
+    }
   }
 
   appendChild(instance) {
@@ -358,7 +375,12 @@ class SideNavSection extends HIGElement {
   }
 
   createElement(type, props) {
-    return createPrivateElement(this.hig, type, props);
+    switch (type) {
+      case types.SIDE_NAV_GROUP:
+        return new SideNavGroup(this.hig.partials.Group, props);
+      default:
+        throw new Error(`Unknown type ${type}`);
+    }
   }
 
   appendChild(instance) {
@@ -413,7 +435,12 @@ class SideNavSections {
   }
 
   createElement(type, props) {
-    return createPrivateElement(this.hig, type, props);
+    switch (type) {
+      case types.SIDE_NAV_SECTION:
+        return new SideNavSection(this.hig.partials.Section, props);
+      default:
+        throw new Error(`Unknown type ${type}`);
+    }
   }
 
   appendChild(instance) {
@@ -516,7 +543,12 @@ class SideNavLinks {
   }
 
   createElement(type, props) {
-    return createPrivateElement(this.hig, type, props);
+    switch (type) {
+      case types.SIDE_NAV_LINK:
+        return new SideNavLink(this.hig.partials.Link, props);
+      default:
+        throw new Error(`Unknown type ${type}`);
+    }
   }
 
   appendChild(instance) {
@@ -558,7 +590,14 @@ class SideNav extends HIGElement {
   }
 
   createElement(type, props) {
-    return createPrivateElement(this.hig, type, props);
+    switch (type) {
+      case types.SIDE_NAV_SECTIONS:
+        return new SideNavSections(this.hig); // special case hand over the hig instance
+      case types.SIDE_NAV_LINKS:
+        return new SideNavLinks(this.hig); // special case hand over the hig instance
+      default:
+        throw new Error(`Unknown type ${type}`);
+    }
   }
 
   appendChild(instance) {
@@ -629,7 +668,14 @@ class GlobalNav extends HIGElement {
   }
 
   createElement(type, props) {
-    return createPrivateElement(this.hig, type, props);
+    switch (type) {
+      case types.CONTAINER:
+        return new MenuContainer(this.hig.partials.Container, props);
+      case types.SIDE_NAV:
+        return new SideNav(this.hig.partials.SideNav, props);
+      default:
+        throw new Error(`Unknown type ${type}`);
+    }
   }
 
   appendChild(instance, beforeChild = {}) {
@@ -700,36 +746,6 @@ export const types = {
   SIDE_NAV_GROUP: 'hig-side-nav-group',
   SIDE_NAV_ITEM: 'hig-side-nav-item'
 };
-
-/**
- * Creates a hig element which requires a parent node reference
- */
-function createPrivateElement(parent, type, props) {
-  switch (type) {
-    case types.CONTAINER:
-      return new MenuContainer(parent.partials.Container, props);
-    case types.TOP_NAV:
-      return new TopNav(parent.partials.TopNav, props);
-    case types.SUB_NAV:
-      return new SubNav(parent.partials.SubNav, props);
-    case types.SIDE_NAV:
-      return new SideNav(parent.partials.SideNav, props);
-    case types.SIDE_NAV_SECTIONS:
-      return new SideNavSections(parent);
-    case types.SIDE_NAV_SECTION:
-      return new SideNavSection(parent.partials.Section, props);
-    case types.SIDE_NAV_LINKS:
-      return new SideNavLinks(parent);
-    case types.SIDE_NAV_LINK:
-      return new SideNavLink(parent.partials.Link, props);
-    case types.SIDE_NAV_GROUP:
-      return new SideNavGroup(parent.partials.Group, props);
-    case types.SIDE_NAV_ITEM:
-      return new SideNavItem(parent.partials.Item, props);
-    default:
-      throw new Error(`Unknown type ${type}`);
-  }
-}
 
 /**
  * Creates a publicly accessible element
