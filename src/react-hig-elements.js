@@ -90,7 +90,7 @@ class HIGElement {
   }
 }
 
-export class Button extends HIGElement {
+class Button extends HIGElement {
   constructor(initialProps) {
     super(HIG.Button, initialProps);
   }
