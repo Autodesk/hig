@@ -24,10 +24,10 @@ import './index.css';
 import logo from './bim-logo.png';
 
 const SideNav = GlobalNav.SideNav;
-const Sections = GlobalNav.SideNav.Sections;
-const Section = GlobalNav.SideNav.Sections.Item;
-const Group = GlobalNav.SideNav.Sections.Group;
-const Item = GlobalNav.SideNav.Sections.Group.Item;
+const SectionList = GlobalNav.SideNav.SectionList;
+const Section = GlobalNav.SideNav.SectionList.Item;
+const Group = GlobalNav.SideNav.SectionList.Item.Group;
+const Item = GlobalNav.SideNav.SectionList.Item.Group.Item;
 const Container = GlobalNav.Container;
 const TopNav = GlobalNav.Container.TopNav;
 const SubNav = GlobalNav.Container.SubNav;
@@ -67,7 +67,7 @@ class App extends React.Component {
       <div>
         <GlobalNav sideNavOpen={this.state.open}>
           <SideNav>
-            <Sections>
+            <SectionList>
               <Section headerLabel="Project" headerName="ThunderStorm">
                 <Group>
                   {this.state.group1 &&
@@ -102,9 +102,8 @@ class App extends React.Component {
                   <Item icon="project-management" title="Item 2" link="#" />
                 </Group>
               </Section>
-            </Sections>
+            </SectionList>
           </SideNav>
-
           <Container>
             <TopNav
               logo={logo}
@@ -124,7 +123,10 @@ class App extends React.Component {
                 onChange={this.handleChange}
               />
 
-              <Button title="regular button" link="http://autodesk.com" />
+              <Button
+                title={this.state.buttonLabel}
+                link="http://autodesk.com"
+              />
 
               Raw denim flexitarian green juice kinfolk. Umami hammock trust fund everyday carry, woke wolf viral sriracha austin. Fingerstache affogato messenger bag salvia, cray iPhone bushwick blue bottle marfa gentrify dreamcatcher pop-up. Slow-carb etsy enamel pin cronut, raclette post-ironic hashtag. Hoodie dreamcatcher enamel pin lumbersexual before they sold out, authentic selvage tumblr vinyl. Hot chicken chillwave coloring book fixie vice venmo echo park portland. Tote bag master cleanse cronut banjo banh mi pitchfork, celiac photo booth.
 
@@ -148,6 +150,7 @@ class App extends React.Component {
             </Slot>
           </Container>
         </GlobalNav>
+
       </div>
     );
   }
