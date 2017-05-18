@@ -226,6 +226,48 @@
                                     "params": [ 
                                         "{String} moduleIndicatorIcon - new moduleIndicatorIcon" 
                                     ]
+                                },
+                                "addTabs": {
+                                  "desc": "Pass in an instance of Tabs",
+                                  "params": [
+                                    "{Tabs} Tabs - instance of a Tabs partial"
+                                  ]
+                                }
+                            },
+                            "partials": {
+                                "Tabs": {
+                                    "methods": {
+                                        "addTab": {
+                                            "desc": "Pass in an instance of a SubNav Tab partial",
+                                            "params": [
+                                                "{Tab} Tab - instance of a Tab partial",
+                                                "{Tab} [ReferenceTab] - (Optional) reference node for insertBefore"
+                                            ]
+                                        }
+                                    },
+                                    "partials": {
+                                        "Tab": {
+                                            "methods": {
+                                                "setLabel": {
+                                                    "desc": "sets the label",
+                                                    "params": [
+                                                      "{String} label - new label"
+                                                    ]
+                                                },
+                                                "setActive": {
+                                                    "desc": "sets active property",
+                                                    "params": [
+                                                      "{Boolean} active - new active state"
+                                                    ]
+                                                },
+                                                "onClick": "HIG.abstract.EventObject"
+                                            },
+                                            "defaults": {
+                                                "label": "{String} Label of the tab",
+                                                "active": "{Boolean} Indication of wether the tab is active",
+                                            }
+                                        }
+                                    }
                                 }
                             },
                             "defaults": {
