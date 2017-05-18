@@ -1,0 +1,7 @@
+exports[`react-hig <Button> removes the title if it is no longer specified 1`] = `"<a href=\"#\" class=\"hig__button\" title=\"some title\"></a>"`;
+
+exports[`react-hig <Button> renders the standard button 1`] = `"<a href="http://example.com" class="hig__button" title="regular button">regular button</a>"`;
+
+exports[`react-hig <Button> updates the link the same as setLink 1`] = `"<a href="http://example.com/2" class="hig__button" title="link">link</a>"`;
+
+exports[`react-hig <Button> updates the title the same as setTitle 1`] = `"<a href="#" class="hig__button" title="link">correct title</a>"`;

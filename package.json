@@ -39,6 +39,7 @@
     "lib": "rollup -c && cp node_modules/hig.web/dist/hig.css lib/react-hig.css",
     "playground": "react-scripts start",
     "start": "npm run lib -- --watch",
-    "test": "echo 'No tests configured'"
+    "test": "react-scripts test --env=jsdom",
+    "test-ci": "react-scripts test --env=jsdom --coverage --collectCoverageFrom=src/**/*.{ts,tsx}"
   }
 }

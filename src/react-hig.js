@@ -16,7 +16,6 @@ limitations under the License.
 */
 import * as PropTypes from 'prop-types';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import { createElement, types } from './react-hig-elements';
 import prepareUpdate from './prepareUpdate';
@@ -36,7 +35,6 @@ function createComponent(type) {
     }
 
     componentDidMount() {
-      this._el = ReactDOM.findDOMNode(this);
       this._mount = this._el.parentNode;
 
       this._anchor = document.createComment(`${type}-anchor`);
@@ -85,7 +83,13 @@ function createComponent(type) {
     }
 
     render() {
-      return React.createElement(type, {}, this.props.children);
+      return React.createElement(
+        type,
+        {
+          ref: r => this._el = r
+        },
+        this.props.children
+      );
     }
 
     getChildContext() {

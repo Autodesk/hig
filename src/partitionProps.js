@@ -20,7 +20,7 @@ limitations under the License.
  * @param {React.Properties} reactProps
  * @param {HIG.Web.Interface} _interface
  *
- * - Returns an object which has a defaults and events keys
+ * - Returns an object which has a defaults, events and possibleEvent keys
  *
  * @example
  *
@@ -31,14 +31,16 @@ limitations under the License.
  *    },
  *
  *    methods: {
- *      onClick: 'HIG.Abstract.EventObject'
+ *      onClick: 'HIG.abstract.EventObject',
+ *      onHover: 'HIG.abstract.EventObject'
  *    }
  *  }
  *
- * const { defaults, events } = inspectProps(reactProps, _interface)
+ * const { defaults, events, possibleEvents } = inspectProps(reactProps, _interface)
  *
  * > defaults === { title: 'Hello' }
  * > events === { onClick: Function }
+ * > possibleEvents ==== ['onClick', 'onHover']
  */
 export default function partitionProps(reactProps, _interface) {
   // sometimes defaults is undefined
@@ -56,13 +58,13 @@ export default function partitionProps(reactProps, _interface) {
     );
 
   // set up events
-  const eventKeys = Object.keys(_interface.methods).filter(methodName => {
+  const possibleEvents = Object.keys(_interface.methods).filter(methodName => {
     return _interface.methods[methodName] === 'HIG.abstract.EventObject';
   });
 
   // Narrow props down to just events
   const events = Object.keys(reactProps)
-    .filter(prop => eventKeys.indexOf(prop) !== -1)
+    .filter(prop => possibleEvents.indexOf(prop) !== -1)
     .reduce(
       (acc, memo) => {
         acc[memo] = reactProps[memo];
@@ -71,5 +73,5 @@ export default function partitionProps(reactProps, _interface) {
       {}
     );
 
-  return { defaults, events };
+  return { defaults, events, possibleEvents };
 }
