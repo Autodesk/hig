@@ -27,6 +27,7 @@ class Button extends Core {
 
     setTitle(title){
         this.el.textContent = title;
+        this.el.setAttribute("title", title);
     }
 
     setLink(link){
