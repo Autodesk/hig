@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/hig.js",
+  "private": true,
   "scripts": {
     "build": "webpack",
     "watch": "webpack --watch",
