@@ -629,7 +629,7 @@ class SideNav extends HIGElement {
   appendChild(instance) {
     if (instance instanceof SideNavSections) {
       if (this.sections) {
-        throw new Error('only one sections is allowed');
+        throw new Error('only one Sections is allowed');
       } else {
         this.sections = instance;
 
@@ -706,18 +706,26 @@ class GlobalNav extends HIGElement {
 
   appendChild(instance, beforeChild = {}) {
     if (instance instanceof SideNav) {
-      if (this.mounted) {
-        this.hig.addSideNav(instance.hig);
-        instance.componentDidMount();
+      if (this.sideNav) {
+        throw new Error('only one SideNav is allowed');
       } else {
         this.sideNav = instance;
+
+        if (this.mounted) {
+          this.hig.addSideNav(instance.hig);
+          instance.componentDidMount();
+        }
       }
     } else if (instance instanceof MenuContainer) {
-      if (this.mounted) {
-        this.hig.addContainer(instance.hig);
-        instance.componentDidMount();
+      if (this.container) {
+        throw new Error('only one Container is allowed');
       } else {
         this.container = instance;
+
+        if (this.mounted) {
+          this.hig.addContainer(instance.hig);
+          instance.componentDidMount();
+        }
       }
     } else {
       throw new Error('unknown type');
@@ -729,6 +737,14 @@ class GlobalNav extends HIGElement {
   }
 
   removeChild(instance) {
+    if (instance instanceof SideNav) {
+      this.sideNav = null;
+    }
+
+    if (instance instanceof MenuContainer) {
+      this.container = null;
+    }
+
     instance.unmount();
   }
 

@@ -14,11 +14,12 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 */
-import { Button } from './react-hig';
-import React from 'react';
-import renderer from 'react-test-renderer';
+import { mount } from 'enzyme';
 
 import * as HIG from 'hig.web';
+import React from 'react';
+
+import { Button, GlobalNav } from './react-hig';
 
 describe('react-hig', () => {
   describe('<Button>', () => {
@@ -38,48 +39,18 @@ describe('react-hig', () => {
       return { higButton, higContainer };
     }
 
-    /**
-     * Creates a React Button using the test renderer and returns the component tree
-     * as well as the div (reacContainer) that the tree is mounted in
-     *
-     * @param {object} props the props for <Button>
-     */
-    function createReactButton(props = {}) {
-      const reactContainer = document.createElement('div');
-      const buttonNode = document.createElement('hig-button');
-
-      reactContainer.appendChild(buttonNode);
-
-      function createNodeMock(element) {
-        return buttonNode;
-      }
-
-      const tree = renderer.create(<Button {...props} />, {
-        createNodeMock
-      });
-
-      return { tree, reactContainer };
-    }
-
-    /**
-     * Returns the instance of react-hig-element from a ReactTestInstance
-     *
-     * @param {ReactTestInstance} tree an instance that has rendered an Adapted react-hig-element.
-     */
-    function getReactHIGElementInstance(tree) {
-      return tree._component._renderedComponent._instance.instance;
-    }
-
     it('renders the standard button', () => {
       const defaults = { title: 'regular button', link: 'http://example.com' };
 
       const { higButton, higContainer } = createHigButton(defaults);
 
-      const { tree, reactContainer } = createReactButton(defaults);
+      const container = document.createElement('div');
 
-      expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
+      const wrapper = mount(<Button {...defaults} />, { attachTo: container });
 
-      expect(reactContainer.firstChild.outerHTML).toEqual(
+      expect(container.firstChild.outerHTML).toMatchSnapshot();
+
+      expect(container.firstChild.outerHTML).toEqual(
         higContainer.firstChild.outerHTML
       );
     });
@@ -92,14 +63,16 @@ describe('react-hig', () => {
       // update via hig API
       higButton.setTitle(newTitle);
 
+      const container = document.createElement('div');
+
       // update via React API
-      const { tree, reactContainer } = createReactButton();
+      const wrapper = mount(<Button />, { attachTo: container });
 
-      tree.update(<Button title={newTitle} />);
+      wrapper.setProps({ title: newTitle });
 
-      expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
+      expect(container.firstChild.outerHTML).toMatchSnapshot();
 
-      expect(reactContainer.firstChild.outerHTML).toEqual(
+      expect(container.firstChild.outerHTML).toEqual(
         higContainer.firstChild.outerHTML
       );
     });
@@ -108,12 +81,17 @@ describe('react-hig', () => {
       const defaults = { title: 'some title' };
 
       const { higButton, higContainer } = createHigButton(defaults);
-      const { tree, reactContainer } = createReactButton(defaults);
+
+      const reactContainer = document.createElement('div');
+
+      const wrapper = mount(<Button {...defaults} />, {
+        attachTo: reactContainer
+      });
 
       higButton.setTitle(null);
 
       // update to remove the title prop
-      tree.update(<Button />);
+      wrapper.setProps({ title: undefined });
 
       expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
 
@@ -128,9 +106,11 @@ describe('react-hig', () => {
 
       higButton.setLink(newLink);
 
-      const { tree, reactContainer } = createReactButton();
+      const reactContainer = document.createElement('div');
 
-      tree.update(<Button link={newLink} />);
+      const wrapper = mount(<Button />, { attachTo: reactContainer });
+
+      wrapper.setProps({ link: newLink });
 
       expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
 
@@ -143,12 +123,14 @@ describe('react-hig', () => {
       it(`sets up ${eventName} initially`, () => {
         const eventSpy = jest.fn();
 
-        const { tree, reactContainer } = createReactButton({
-          [eventName]: eventSpy
+        const reactContainer = document.createElement('div');
+
+        const wrapper = mount(<Button {...{ [eventName]: eventSpy }} />, {
+          attachTo: reactContainer
         });
 
         // click on the rendered button
-        const instance = getReactHIGElementInstance(tree);
+        const instance = wrapper.instance().instance;
 
         // This is the same fn we pass to hig.web
         instance.events[eventName]();
@@ -161,14 +143,16 @@ describe('react-hig', () => {
         const eventSpy1 = jest.fn();
         const eventSpy2 = jest.fn();
 
-        const { tree, reactContainer } = createReactButton({
-          [eventName]: eventSpy1
+        const reactContainer = document.createElement('div');
+
+        const wrapper = mount(<Button {...{ [eventName]: eventSpy1 }} />, {
+          attachTo: reactContainer
         });
 
-        // update to eventSpy2
-        tree.update(<Button {...{ [eventName]: eventSpy2 }} />);
+        wrapper.setProps({ [eventName]: eventSpy2 });
 
-        const instance = getReactHIGElementInstance(tree);
+        // click on the rendered button
+        const instance = wrapper.instance().instance;
 
         // This is the same fn we pass to hig.web
         instance.events[eventName]();
@@ -180,11 +164,15 @@ describe('react-hig', () => {
       it(`updates ${eventName} when it wasn't specified to begin with`, () => {
         const eventSpy1 = jest.fn();
 
-        const { tree, reactContainer } = createReactButton();
+        const reactContainer = document.createElement('div');
 
-        tree.update(<Button {...{ [eventName]: eventSpy1 }} />);
+        const wrapper = mount(<Button />, {
+          attachTo: reactContainer
+        });
 
-        const instance = getReactHIGElementInstance(tree);
+        wrapper.setProps({ [eventName]: eventSpy1 });
+
+        const instance = wrapper.instance().instance;
 
         // This is the same fn we pass to hig.web
         instance.events[eventName]();
@@ -196,16 +184,324 @@ describe('react-hig', () => {
       it(`removes ${eventName} if it is no longer specified`, () => {
         const eventSpy1 = jest.fn();
 
-        const { tree, reactContainer } = createReactButton({
-          [eventName]: eventSpy1
+        const reactContainer = document.createElement('div');
+
+        const wrapper = mount(<Button {...{ [eventName]: eventSpy1 }} />, {
+          attachTo: reactContainer
         });
 
-        // update without the event property
-        tree.update(<Button />);
+        wrapper.setProps({ [eventName]: undefined });
 
-        const instance = getReactHIGElementInstance(tree);
+        const instance = wrapper.instance().instance;
 
         expect(instance.events[eventName]).toBeUndefined();
+      });
+    });
+  });
+
+  describe('<GlobalNav>', () => {
+    /**
+     * Creates a hig.web GlobalNav and returns the instance and it's container
+     */
+    function createHigNav() {
+      const higContainer = document.createElement('div');
+
+      // use spread here to clone defaults since HIG.Button mutates this object
+      const higNav = new HIG.GlobalNav();
+
+      higNav.mount(higContainer);
+
+      return { higNav, higContainer };
+    }
+
+    it('renders the global nav', () => {
+      const { higNav, higContainer } = createHigNav();
+
+      const reactContainer = document.createElement('div');
+      const wrapper = mount(<GlobalNav />, { attachTo: reactContainer });
+
+      expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
+
+      expect(reactContainer.firstChild.outerHTML).toEqual(
+        higContainer.firstChild.outerHTML
+      );
+    });
+
+    describe('sideNavOpen prop', () => {
+      it('is equal to showSideNav', () => {
+        const { higNav, higContainer } = createHigNav();
+        const reactContainer = document.createElement('div');
+        const wrapper = mount(<GlobalNav />, { attachTo: reactContainer });
+
+        higNav.showSideNav();
+
+        wrapper.setProps({ sideNavOpen: true });
+
+        expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
+
+        expect(reactContainer.firstChild.outerHTML).toEqual(
+          higContainer.firstChild.outerHTML
+        );
+
+        higNav.hideSideNav();
+        wrapper.setProps({ sideNavOpen: false });
+
+        expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
+
+        expect(reactContainer.firstChild.outerHTML).toEqual(
+          higContainer.firstChild.outerHTML
+        );
+      });
+
+      it('can showSideNav by default', () => {
+        const { higNav, higContainer } = createHigNav();
+        const reactContainer = document.createElement('div');
+        const wrapper = mount(<GlobalNav sideNavOpen={true} />, {
+          attachTo: reactContainer
+        });
+
+        higNav.showSideNav();
+
+        expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
+
+        expect(reactContainer.firstChild.outerHTML).toEqual(
+          higContainer.firstChild.outerHTML
+        );
+      });
+    });
+
+    describe('<SideNav>', () => {
+      it('can render the SideNav by default', () => {
+        const { higNav, higContainer } = createHigNav();
+
+        const sideNav = new higNav.partials.SideNav();
+        higNav.addSideNav(sideNav);
+
+        const reactContainer = document.createElement('div');
+        const wrapper = mount(
+          <GlobalNav>
+            <GlobalNav.SideNav />
+          </GlobalNav>,
+          {
+            attachTo: reactContainer
+          }
+        );
+
+        expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
+
+        expect(reactContainer.firstChild.outerHTML).toEqual(
+          higContainer.firstChild.outerHTML
+        );
+      });
+
+      it('can only render a single SideNav', () => {
+        expect(() => {
+          mount(
+            <GlobalNav>
+              <GlobalNav.SideNav />
+              <GlobalNav.SideNav />
+            </GlobalNav>
+          );
+        }).toThrowError(/only one SideNav is allowed/);
+      });
+
+      describe('<Sections>', () => {
+        it('can render a <Sections> by default', () => {
+          const { higNav, higContainer } = createHigNav();
+
+          const sideNav = new higNav.partials.SideNav();
+          higNav.addSideNav(sideNav);
+
+          const reactContainer = document.createElement('div');
+          const wrapper = mount(
+            <GlobalNav>
+              <GlobalNav.SideNav>
+                <GlobalNav.SideNav.Sections />
+              </GlobalNav.SideNav>
+            </GlobalNav>,
+            {
+              attachTo: reactContainer
+            }
+          );
+
+          expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
+
+          expect(reactContainer.firstChild.outerHTML).toEqual(
+            higContainer.firstChild.outerHTML
+          );
+        });
+
+        it('can only render a single <Sections>', () => {
+          expect(() => {
+            mount(
+              <GlobalNav>
+                <GlobalNav.SideNav>
+                  <GlobalNav.SideNav.Sections />
+                  <GlobalNav.SideNav.Sections />
+                </GlobalNav.SideNav>
+              </GlobalNav>
+            );
+          }).toThrowError(/only one Sections is allowed/);
+        });
+
+        describe('<Section>', () => {
+          it('can render a <Section> by default', () => {
+            const { higNav, higContainer } = createHigNav();
+
+            const sideNav = new higNav.partials.SideNav();
+            higNav.addSideNav(sideNav);
+
+            const sectionDefaults = {
+              headerLabel: 'Project',
+              headerName: 'Thunderstorm'
+            };
+
+            const section1 = new sideNav.partials.Section(sectionDefaults);
+
+            sideNav.addSection(section1);
+
+            const reactContainer = document.createElement('div');
+            const wrapper = mount(
+              <GlobalNav>
+                <GlobalNav.SideNav>
+                  <GlobalNav.SideNav.Sections>
+                    <GlobalNav.SideNav.Sections.Item {...sectionDefaults} />
+                  </GlobalNav.SideNav.Sections>
+
+                </GlobalNav.SideNav>
+              </GlobalNav>,
+              {
+                attachTo: reactContainer
+              }
+            );
+
+            expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
+
+            expect(reactContainer.firstChild.outerHTML).toEqual(
+              higContainer.firstChild.outerHTML
+            );
+          });
+
+          it('can render multiple sections', () => {
+            const { higNav, higContainer } = createHigNav();
+
+            const sideNav = new higNav.partials.SideNav();
+            higNav.addSideNav(sideNav);
+
+            const section1Defaults = {
+              headerLabel: 'Project',
+              headerName: 'Thunderstorm'
+            };
+
+            const section1 = new sideNav.partials.Section(section1Defaults);
+
+            sideNav.addSection(section1);
+
+            const section2Defaults = {
+              headerLabel: 'Project',
+              headerName: 'Boo Ya'
+            };
+
+            const section2 = new sideNav.partials.Section(section2Defaults);
+
+            sideNav.addSection(section2);
+
+            const reactContainer = document.createElement('div');
+            const wrapper = mount(
+              <GlobalNav>
+                <GlobalNav.SideNav>
+                  <GlobalNav.SideNav.Sections>
+                    <GlobalNav.SideNav.Sections.Item {...section1Defaults} />
+                    <GlobalNav.SideNav.Sections.Item {...section2Defaults} />
+                  </GlobalNav.SideNav.Sections>
+                </GlobalNav.SideNav>
+              </GlobalNav>,
+              {
+                attachTo: reactContainer
+              }
+            );
+
+            expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
+
+            expect(reactContainer.firstChild.outerHTML).toEqual(
+              higContainer.firstChild.outerHTML
+            );
+          });
+
+          it('can update to have a section before the other section', () => {
+            const { higNav, higContainer } = createHigNav();
+
+            const sideNav = new higNav.partials.SideNav();
+            higNav.addSideNav(sideNav);
+
+            const section1Defaults = {
+              headerLabel: 'Label 1',
+              headerName: 'Name 1'
+            };
+
+            const section1 = new sideNav.partials.Section(section1Defaults);
+
+            // DELIBERATELY DON'T ADD SECTION 1
+
+            const section2Defaults = {
+              headerLabel: 'Label 2',
+              headerName: 'Name 2'
+            };
+
+            const section2 = new sideNav.partials.Section(section2Defaults);
+
+            sideNav.addSection(section2);
+
+            // ADD SECTION 1 before SECTION 2
+
+            sideNav.addSection(section1, section2);
+
+            class CustomComponent extends React.Component {
+              constructor(props) {
+                super(props);
+                this.state = { showingItem: false };
+              }
+
+              render() {
+                return (
+                  <GlobalNav>
+                    <GlobalNav.SideNav>
+                      <GlobalNav.SideNav.Sections>
+                        {this.state.showingItem &&
+                          <GlobalNav.SideNav.Sections.Item
+                            {...section1Defaults}
+                          />}
+                        <GlobalNav.SideNav.Sections.Item
+                          {...section2Defaults}
+                        />
+                      </GlobalNav.SideNav.Sections>
+                    </GlobalNav.SideNav>
+
+                  </GlobalNav>
+                );
+              }
+            }
+
+            const reactContainer = document.createElement('div');
+            const wrapper = mount(<CustomComponent />, {
+              attachTo: reactContainer
+            });
+
+            expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
+
+            wrapper.setState({ showingItem: true });
+
+            expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
+
+            expect(reactContainer.firstChild.outerHTML).toEqual(
+              higContainer.firstChild.outerHTML
+            );
+          });
+
+          it('can update the section headerLabel');
+
+          it('can update the section headerName');
+        });
       });
     });
   });

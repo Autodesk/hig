@@ -1,7 +1,149 @@
 exports[`react-hig <Button> removes the title if it is no longer specified 1`] = `"<a href=\"#\" class=\"hig__button\" title=\"some title\"></a>"`;
 
-exports[`react-hig <Button> renders the standard button 1`] = `"<a href="http://example.com" class="hig__button" title="regular button">regular button</a>"`;
+exports[`react-hig <Button> renders the standard button 1`] = `"<a href=\"http://example.com\" class=\"hig__button\" title=\"regular button\">regular button</a>"`;
 
-exports[`react-hig <Button> updates the link the same as setLink 1`] = `"<a href="http://example.com/2" class="hig__button" title="link">link</a>"`;
+exports[`react-hig <Button> updates the link the same as setLink 1`] = `"<a href=\"http://example.com/2\" class=\"hig__button\" title=\"link\">link</a>"`;
 
-exports[`react-hig <Button> updates the title the same as setTitle 1`] = `"<a href="#" class="hig__button" title="link">correct title</a>"`;
+exports[`react-hig <Button> updates the title the same as setTitle 1`] = `"<a href=\"#\" class=\"hig__button\" title=\"link\">correct title</a>"`;
+
+exports[`react-hig <GlobalNav> <SideNav> <Sections> <Section> can render a <Section> by default 1`] = `
+"<div class=\"hig__global-nav\">
+    <div class=\"hig__global-nav__sidenav\">
+    <div class=\"hig__global-nav__side-nav__section\">
+    <div class=\"hig__global-nav__side-nav__section__header\">
+        <span class=\"hig__global-nav__side-nav__section__header__label\">Project</span>
+        <span class=\"hig__global-nav__side-nav__section__header__name\">Thunderstorm</span>
+    </div>
+    <!--GROUP-->
+</div><!--SECTION-->
+    <div class=\"hig__global-nav__sidenav__links\">
+        <!--LINK-->
+    </div>
+    <div class=\"hig__global-nav__sidenav__copywright\">© 2017 Autodesk, Inc. </div>
+</div><!--SIDENAV-->
+    <!--CONTAINER-->
+</div>"
+`;
+
+exports[`react-hig <GlobalNav> <SideNav> <Sections> <Section> can render multiple sections 1`] = `
+"<div class=\"hig__global-nav\">
+    <div class=\"hig__global-nav__sidenav\">
+    <div class=\"hig__global-nav__side-nav__section\">
+    <div class=\"hig__global-nav__side-nav__section__header\">
+        <span class=\"hig__global-nav__side-nav__section__header__label\">Project</span>
+        <span class=\"hig__global-nav__side-nav__section__header__name\">Thunderstorm</span>
+    </div>
+    <!--GROUP-->
+</div><div class=\"hig__global-nav__side-nav__section\">
+    <div class=\"hig__global-nav__side-nav__section__header\">
+        <span class=\"hig__global-nav__side-nav__section__header__label\">Project</span>
+        <span class=\"hig__global-nav__side-nav__section__header__name\">Boo Ya</span>
+    </div>
+    <!--GROUP-->
+</div><!--SECTION-->
+    <div class=\"hig__global-nav__sidenav__links\">
+        <!--LINK-->
+    </div>
+    <div class=\"hig__global-nav__sidenav__copywright\">© 2017 Autodesk, Inc. </div>
+</div><!--SIDENAV-->
+    <!--CONTAINER-->
+</div>"
+`;
+
+exports[`react-hig <GlobalNav> <SideNav> <Sections> <Section> can update to have a section before the other section 1`] = `
+"<div class=\"hig__global-nav\">
+    <div class=\"hig__global-nav__sidenav\">
+    <div class=\"hig__global-nav__side-nav__section\">
+    <div class=\"hig__global-nav__side-nav__section__header\">
+        <span class=\"hig__global-nav__side-nav__section__header__label\">Label 2</span>
+        <span class=\"hig__global-nav__side-nav__section__header__name\">Name 2</span>
+    </div>
+    <!--GROUP-->
+</div><!--SECTION-->
+    <div class=\"hig__global-nav__sidenav__links\">
+        <!--LINK-->
+    </div>
+    <div class=\"hig__global-nav__sidenav__copywright\">© 2017 Autodesk, Inc. </div>
+</div><!--SIDENAV-->
+    <!--CONTAINER-->
+</div>"
+`;
+
+exports[`react-hig <GlobalNav> <SideNav> <Sections> <Section> can update to have a section before the other section 2`] = `
+"<div class=\"hig__global-nav\">
+    <div class=\"hig__global-nav__sidenav\">
+    <div class=\"hig__global-nav__side-nav__section\">
+    <div class=\"hig__global-nav__side-nav__section__header\">
+        <span class=\"hig__global-nav__side-nav__section__header__label\">Label 1</span>
+        <span class=\"hig__global-nav__side-nav__section__header__name\">Name 1</span>
+    </div>
+    <!--GROUP-->
+</div><div class=\"hig__global-nav__side-nav__section\">
+    <div class=\"hig__global-nav__side-nav__section__header\">
+        <span class=\"hig__global-nav__side-nav__section__header__label\">Label 2</span>
+        <span class=\"hig__global-nav__side-nav__section__header__name\">Name 2</span>
+    </div>
+    <!--GROUP-->
+</div><!--SECTION-->
+    <div class=\"hig__global-nav__sidenav__links\">
+        <!--LINK-->
+    </div>
+    <div class=\"hig__global-nav__sidenav__copywright\">© 2017 Autodesk, Inc. </div>
+</div><!--SIDENAV-->
+    <!--CONTAINER-->
+</div>"
+`;
+
+exports[`react-hig <GlobalNav> <SideNav> <Sections> can render a <Sections> by default 1`] = `
+"<div class=\"hig__global-nav\">
+    <div class=\"hig__global-nav__sidenav\">
+    <!--SECTION-->
+    <div class=\"hig__global-nav__sidenav__links\">
+        <!--LINK-->
+    </div>
+    <div class=\"hig__global-nav__sidenav__copywright\">© 2017 Autodesk, Inc. </div>
+</div><!--SIDENAV-->
+    <!--CONTAINER-->
+</div>"
+`;
+
+exports[`react-hig <GlobalNav> <SideNav> can render the SideNav by default 1`] = `
+"<div class=\"hig__global-nav\">
+    <div class=\"hig__global-nav__sidenav\">
+    <!--SECTION-->
+    <div class=\"hig__global-nav__sidenav__links\">
+        <!--LINK-->
+    </div>
+    <div class=\"hig__global-nav__sidenav__copywright\">© 2017 Autodesk, Inc. </div>
+</div><!--SIDENAV-->
+    <!--CONTAINER-->
+</div>"
+`;
+
+exports[`react-hig <GlobalNav> renders the global nav 1`] = `
+"<div class=\"hig__global-nav\">
+    <!--SIDENAV-->
+    <!--CONTAINER-->
+</div>"
+`;
+
+exports[`react-hig <GlobalNav> sideNavOpen prop can showSideNav by default 1`] = `
+"<div class=\"hig__global-nav hig__global-nav--open\">
+    <!--SIDENAV-->
+    <!--CONTAINER-->
+</div>"
+`;
+
+exports[`react-hig <GlobalNav> sideNavOpen prop is equal to showSideNav 1`] = `
+"<div class=\"hig__global-nav hig__global-nav--open\">
+    <!--SIDENAV-->
+    <!--CONTAINER-->
+</div>"
+`;
+
+exports[`react-hig <GlobalNav> sideNavOpen prop is equal to showSideNav 2`] = `
+"<div class=\"hig__global-nav\">
+    <!--SIDENAV-->
+    <!--CONTAINER-->
+</div>"
+`;

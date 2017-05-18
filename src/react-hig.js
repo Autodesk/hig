@@ -40,7 +40,7 @@ function createComponent(type) {
       this._anchor = document.createComment(`${type}-anchor`);
 
       if (!this._mount) {
-        throw new Error('can only mount if there is a parentNode');
+        throw new Error(`can only mount if there is a parentNode: ${type}`);
       }
 
       this._mount.replaceChild(this._anchor, this._el);
