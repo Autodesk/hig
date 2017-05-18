@@ -49,6 +49,12 @@
                         "{Container} Container - instance of a Container partial" 
                     ]
                 },
+                "addAvatar": {
+                    "desc": "Pass in an instance of an Avatar partial to mount it to the GlobalNav",
+                    "params": [ 
+                        "{Avatar} Avatar - instance of a Avatar partial" 
+                    ]
+                },
                 "showSideNav": {
                     "desc": "show the SideNav"
                 },
@@ -57,6 +63,17 @@
                 }
             },
             "partials": {
+                "Avatar": {
+                    "methods": {
+                        "onClick": "HIG.abstract.EventObject",
+                        "setImage": {
+                            "desc": "sets the image",
+                            "params": [ 
+                                "{String} image - url to svg or other image object"
+                            ]
+                        }
+                    }
+                },
                 "SideNav": {
                     "methods": {
                         "addSection": {
