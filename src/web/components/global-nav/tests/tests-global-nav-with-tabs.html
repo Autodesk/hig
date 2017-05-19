@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../../../../../dist/hig.css">
+        <script type="text/javascript" src="../../../../../dist/hig.js"></script>
+    </head>
+    <body>
+
+        <script>
+
+            // CREATE GLOBALNAV COMPONENT
+            var GlobalNav = new Hig.GlobalNav();
+            GlobalNav.mount("body");
+
+            // CONTAINER AREA
+            var Container = new GlobalNav.partials.Container();
+            GlobalNav.addContainer(Container);
+
+            // ADD TOP GlobalNav IN CONTENT AREA
+            var TopNav = new Container.partials.TopNav({
+                "logo": "https://www.dexigner.com/images/news/xw/22856.jpg",
+                "logo_link": "#"
+            });
+            Container.addTopNav(TopNav);
+
+            TopNav.setLogo("bim-logo.png"); // Update logo
+            TopNav.setLogoLink("http://autodesk.com"); // update logo link
+
+            // ADD SUB TOP MENU
+            var SubNav = new Container.partials.SubNav({
+                "moduleIndicatorName": "Insight",
+                "moduleIndicatorIcon": "project-management"
+            });
+            Container.addSubNav(SubNav);
+
+            SubNav.setModuleIndicatorName("Documents Library");
+            SubNav.setModuleIndicatorIcon("hamburger");
+
+            // ADD Tabs IN SubNav
+            var Tabs = new SubNav.partials.Tabs();
+            SubNav.addTabs(Tabs);
+
+            var Tab2 = new Tabs.partials.Tab({
+                "label": "Two"
+            });
+            Tabs.addTab(Tab2);
+            Tab2.onClick(() => {
+                Tab1.setActive(false);
+                Tab2.setActive(true);
+            });
+
+            var Tab1 = new Tabs.partials.Tab({
+                "label": "One",
+                "active": false
+            });
+            Tabs.addTab(Tab1, Tab2);
+            Tab1.setActive(true);
+            Tab1.onClick(() => {
+                Tab1.setActive(true);
+                Tab2.setActive(false);
+            });
+
+        </script>
+
+    </body>
+</html>

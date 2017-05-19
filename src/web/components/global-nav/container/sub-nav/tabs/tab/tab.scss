@@ -1,0 +1,21 @@
+@import '~basics/colors/colors.scss';
+
+.hig__global-nav__sub-nav__tabs__tab {
+    display: flex;
+    align-content: center;
+    border-bottom: 4px solid transparent;
+    border-top: 4px solid transparent;
+    color: $gray-darker;
+    padding: 0 10px;
+    margin-left: 10px;
+    cursor: pointer;
+
+    &:first-child {
+        margin-left: 0;
+    }
+
+    &.hig__global-nav__sub-nav__tabs__tab--active {
+        color: $autodesk-blue;
+        border-bottom-color: $autodesk-blue;
+    }
+}

@@ -283,8 +283,7 @@
                                                 "onClick": "HIG.abstract.EventObject"
                                             },
                                             "defaults": {
-                                                "label": "{String} Label of the tab",
-                                                "active": "{Boolean} Indication of wether the tab is active"
+                                                "label": "{String} Label of the tab"
                                             }
                                         }
                                     }

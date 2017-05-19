@@ -17,12 +17,19 @@
         height: 50px;
         display: flex;
         align-items: center;
+        flex-shrink: 0;
         font-size: 18px;
-        padding-left: 17px;
+        padding: 0 17px;
+        white-space: nowrap;
 
         &__icon{
             margin-left: 15px;
         }
     }
 
+}
+
+.hig__global-nav__container__sub-nav__spacer {
+    visibility: hidden;
+    flex-shrink: 100;
 }
