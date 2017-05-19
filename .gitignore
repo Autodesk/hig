@@ -38,3 +38,9 @@ jspm_packages
 
 # Distribution files
 dist
+
+# Gemini Report
+/gemini-report
+
+# Environment Variables
+.env
