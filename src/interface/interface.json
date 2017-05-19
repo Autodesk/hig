@@ -72,6 +72,9 @@
                                 "{String} image - url to svg or other image object"
                             ]
                         }
+                    },
+                    "defaults": {
+                        "image": "{String} url src of the image"
                     }
                 },
                 "SideNav": {
