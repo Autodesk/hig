@@ -1,140 +1,52 @@
-exports[`<GlobalNav> <SideNav> <Sections> <Section> can render a <Section> by default 1`] = `
-"<div class=\"hig__global-nav\">
-    <div class=\"hig__global-nav__sidenav\">
-    <div class=\"hig__global-nav__side-nav__section\">
-    <div class=\"hig__global-nav__side-nav__section__header\">
-        <span class=\"hig__global-nav__side-nav__section__header__label\">Project</span>
-        <span class=\"hig__global-nav__side-nav__section__header__name\">Thunderstorm</span>
-    </div>
-    <!--GROUP-->
-</div><!--SECTION-->
-    <div class=\"hig__global-nav__sidenav__links\">
-        <!--LINK-->
-    </div>
-    <div class=\"hig__global-nav__sidenav__copywright\">© 2017 Autodesk, Inc. </div>
-</div><!--SIDENAV-->
-    <!--CONTAINER-->
-</div>"
-`;
+// Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<GlobalNav> <SideNav> <Sections> <Section> can render multiple sections 1`] = `
-"<div class=\"hig__global-nav\">
-    <div class=\"hig__global-nav__sidenav\">
-    <div class=\"hig__global-nav__side-nav__section\">
-    <div class=\"hig__global-nav__side-nav__section__header\">
-        <span class=\"hig__global-nav__side-nav__section__header__label\">Project</span>
-        <span class=\"hig__global-nav__side-nav__section__header__name\">Thunderstorm</span>
-    </div>
-    <!--GROUP-->
-</div><div class=\"hig__global-nav__side-nav__section\">
-    <div class=\"hig__global-nav__side-nav__section__header\">
-        <span class=\"hig__global-nav__side-nav__section__header__label\">Project</span>
-        <span class=\"hig__global-nav__side-nav__section__header__name\">Boo Ya</span>
-    </div>
-    <!--GROUP-->
-</div><!--SECTION-->
-    <div class=\"hig__global-nav__sidenav__links\">
-        <!--LINK-->
-    </div>
-    <div class=\"hig__global-nav__sidenav__copywright\">© 2017 Autodesk, Inc. </div>
-</div><!--SIDENAV-->
-    <!--CONTAINER-->
-</div>"
-`;
-
-exports[`<GlobalNav> <SideNav> <Sections> <Section> can update to have a section before the other section 1`] = `
-"<div class=\"hig__global-nav\">
-    <div class=\"hig__global-nav__sidenav\">
-    <div class=\"hig__global-nav__side-nav__section\">
-    <div class=\"hig__global-nav__side-nav__section__header\">
-        <span class=\"hig__global-nav__side-nav__section__header__label\">Label 2</span>
-        <span class=\"hig__global-nav__side-nav__section__header__name\">Name 2</span>
-    </div>
-    <!--GROUP-->
-</div><!--SECTION-->
-    <div class=\"hig__global-nav__sidenav__links\">
-        <!--LINK-->
-    </div>
-    <div class=\"hig__global-nav__sidenav__copywright\">© 2017 Autodesk, Inc. </div>
-</div><!--SIDENAV-->
-    <!--CONTAINER-->
-</div>"
-`;
-
-exports[`<GlobalNav> <SideNav> <Sections> <Section> can update to have a section before the other section 2`] = `
-"<div class=\"hig__global-nav\">
-    <div class=\"hig__global-nav__sidenav\">
-    <div class=\"hig__global-nav__side-nav__section\">
-    <div class=\"hig__global-nav__side-nav__section__header\">
-        <span class=\"hig__global-nav__side-nav__section__header__label\">Label 1</span>
-        <span class=\"hig__global-nav__side-nav__section__header__name\">Name 1</span>
-    </div>
-    <!--GROUP-->
-</div><div class=\"hig__global-nav__side-nav__section\">
-    <div class=\"hig__global-nav__side-nav__section__header\">
-        <span class=\"hig__global-nav__side-nav__section__header__label\">Label 2</span>
-        <span class=\"hig__global-nav__side-nav__section__header__name\">Name 2</span>
-    </div>
-    <!--GROUP-->
-</div><!--SECTION-->
-    <div class=\"hig__global-nav__sidenav__links\">
-        <!--LINK-->
-    </div>
-    <div class=\"hig__global-nav__sidenav__copywright\">© 2017 Autodesk, Inc. </div>
-</div><!--SIDENAV-->
-    <!--CONTAINER-->
-</div>"
-`;
-
-exports[`<GlobalNav> <SideNav> <Sections> can render a <Sections> by default 1`] = `
-"<div class=\"hig__global-nav\">
-    <div class=\"hig__global-nav__sidenav\">
-    <!--SECTION-->
-    <div class=\"hig__global-nav__sidenav__links\">
-        <!--LINK-->
-    </div>
-    <div class=\"hig__global-nav__sidenav__copywright\">© 2017 Autodesk, Inc. </div>
-</div><!--SIDENAV-->
-    <!--CONTAINER-->
-</div>"
-`;
-
-exports[`<GlobalNav> <SideNav> can render the SideNav by default 1`] = `
-"<div class=\"hig__global-nav\">
-    <div class=\"hig__global-nav__sidenav\">
-    <!--SECTION-->
-    <div class=\"hig__global-nav__sidenav__links\">
-        <!--LINK-->
-    </div>
-    <div class=\"hig__global-nav__sidenav__copywright\">© 2017 Autodesk, Inc. </div>
-</div><!--SIDENAV-->
-    <!--CONTAINER-->
+exports[`<GlobalNav> can render the Container as a child 1`] = `
+"<div class=\\"hig__global-nav\\">
+    <!--SIDENAV-->
+    <div class=\\"hig__global-nav__container\\">
+    <!--TOPNAV-->
+    <!--SUBNAV-->
+    <!--SLOT-->
+</div><!--CONTAINER-->
 </div>"
 `;
 
 exports[`<GlobalNav> renders the global nav 1`] = `
-"<div class=\"hig__global-nav\">
+"<div class=\\"hig__global-nav\\">
     <!--SIDENAV-->
     <!--CONTAINER-->
 </div>"
 `;
 
+exports[`<GlobalNav> sideNavOpen prop can render the SideNav as a child 1`] = `
+"<div class=\\"hig__global-nav\\">
+    <div class=\\"hig__global-nav__sidenav\\">
+    <!--SECTION-->
+    <div class=\\"hig__global-nav__sidenav__links\\">
+        <!--LINK-->
+    </div>
+    <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
+</div><!--SIDENAV-->
+    <!--CONTAINER-->
+</div>"
+`;
+
 exports[`<GlobalNav> sideNavOpen prop can showSideNav by default 1`] = `
-"<div class=\"hig__global-nav hig__global-nav--open\">
+"<div class=\\"hig__global-nav hig__global-nav--open\\">
     <!--SIDENAV-->
     <!--CONTAINER-->
 </div>"
 `;
 
 exports[`<GlobalNav> sideNavOpen prop is equal to showSideNav 1`] = `
-"<div class=\"hig__global-nav hig__global-nav--open\">
+"<div class=\\"hig__global-nav hig__global-nav--open\\">
     <!--SIDENAV-->
     <!--CONTAINER-->
 </div>"
 `;
 
 exports[`<GlobalNav> sideNavOpen prop is equal to showSideNav 2`] = `
-"<div class=\"hig__global-nav\">
+"<div class=\\"hig__global-nav\\">
     <!--SIDENAV-->
     <!--CONTAINER-->
 </div>"

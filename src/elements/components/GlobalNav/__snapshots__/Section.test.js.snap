@@ -1,0 +1,209 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Section> children: <Group> can insert <Group> elements before and after another <Group> 1`] = `
+"<div class=\\"hig__global-nav\\">
+    <div class=\\"hig__global-nav__sidenav\\">
+    <div class=\\"hig__global-nav__side-nav__section\\">
+    <div class=\\"hig__global-nav__side-nav__section__header\\">
+        <span class=\\"hig__global-nav__side-nav__section__header__label\\">some label</span>
+        <span class=\\"hig__global-nav__side-nav__section__header__name\\">X</span>
+    </div>
+    <div class=\\"hig__global-nav__side-nav__section__group\\">
+    <!--ITEM-->
+</div><!--GROUP-->
+</div><!--SECTION-->
+    <div class=\\"hig__global-nav__sidenav__links\\">
+        <!--LINK-->
+    </div>
+    <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
+</div><!--SIDENAV-->
+    <!--CONTAINER-->
+</div>"
+`;
+
+exports[`<Section> children: <Group> can insert <Group> elements before and after another <Group> 2`] = `
+"<div class=\\"hig__global-nav\\">
+    <div class=\\"hig__global-nav__sidenav\\">
+    <div class=\\"hig__global-nav__side-nav__section\\">
+    <div class=\\"hig__global-nav__side-nav__section__header\\">
+        <span class=\\"hig__global-nav__side-nav__section__header__label\\">some label</span>
+        <span class=\\"hig__global-nav__side-nav__section__header__name\\">X</span>
+    </div>
+    <div class=\\"hig__global-nav__side-nav__section__group\\">
+    <!--ITEM-->
+</div><div class=\\"hig__global-nav__side-nav__section__group\\">
+    <!--ITEM-->
+</div><!--GROUP-->
+</div><!--SECTION-->
+    <div class=\\"hig__global-nav__sidenav__links\\">
+        <!--LINK-->
+    </div>
+    <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
+</div><!--SIDENAV-->
+    <!--CONTAINER-->
+</div>"
+`;
+
+exports[`<Section> children: <Group> can insert <Group> elements before and after another <Group> 3`] = `
+"<div class=\\"hig__global-nav\\">
+    <div class=\\"hig__global-nav__sidenav\\">
+    <div class=\\"hig__global-nav__side-nav__section\\">
+    <div class=\\"hig__global-nav__side-nav__section__header\\">
+        <span class=\\"hig__global-nav__side-nav__section__header__label\\">some label</span>
+        <span class=\\"hig__global-nav__side-nav__section__header__name\\">X</span>
+    </div>
+    <div class=\\"hig__global-nav__side-nav__section__group\\">
+    <!--ITEM-->
+</div><!--GROUP-->
+</div><!--SECTION-->
+    <div class=\\"hig__global-nav__sidenav__links\\">
+        <!--LINK-->
+    </div>
+    <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
+</div><!--SIDENAV-->
+    <!--CONTAINER-->
+</div>"
+`;
+
+exports[`<Section> children: <Group> can insert <Group> elements before and after another <Group> 4`] = `
+"<div class=\\"hig__global-nav\\">
+    <div class=\\"hig__global-nav__sidenav\\">
+    <div class=\\"hig__global-nav__side-nav__section\\">
+    <div class=\\"hig__global-nav__side-nav__section__header\\">
+        <span class=\\"hig__global-nav__side-nav__section__header__label\\">some label</span>
+        <span class=\\"hig__global-nav__side-nav__section__header__name\\">X</span>
+    </div>
+    <div class=\\"hig__global-nav__side-nav__section__group\\">
+    <!--ITEM-->
+</div><div class=\\"hig__global-nav__side-nav__section__group\\">
+    <!--ITEM-->
+</div><!--GROUP-->
+</div><!--SECTION-->
+    <div class=\\"hig__global-nav__sidenav__links\\">
+        <!--LINK-->
+    </div>
+    <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
+</div><!--SIDENAV-->
+    <!--CONTAINER-->
+</div>"
+`;
+
+exports[`<Section> children: <Group> can insert <Group> elements before and after another <Group> 5`] = `
+"<div class=\\"hig__global-nav\\">
+    <div class=\\"hig__global-nav__sidenav\\">
+    <div class=\\"hig__global-nav__side-nav__section\\">
+    <div class=\\"hig__global-nav__side-nav__section__header\\">
+        <span class=\\"hig__global-nav__side-nav__section__header__label\\">some label</span>
+        <span class=\\"hig__global-nav__side-nav__section__header__name\\">X</span>
+    </div>
+    <div class=\\"hig__global-nav__side-nav__section__group\\">
+    <!--ITEM-->
+</div><!--GROUP-->
+</div><!--SECTION-->
+    <div class=\\"hig__global-nav__sidenav__links\\">
+        <!--LINK-->
+    </div>
+    <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
+</div><!--SIDENAV-->
+    <!--CONTAINER-->
+</div>"
+`;
+
+exports[`<Section> children: <Group> can render a list of <Group> elements 1`] = `
+"<div class=\\"hig__global-nav\\">
+    <div class=\\"hig__global-nav__sidenav\\">
+    <div class=\\"hig__global-nav__side-nav__section\\">
+    <div class=\\"hig__global-nav__side-nav__section__header\\">
+        <span class=\\"hig__global-nav__side-nav__section__header__label\\">some label</span>
+        <span class=\\"hig__global-nav__side-nav__section__header__name\\">X</span>
+    </div>
+    <div class=\\"hig__global-nav__side-nav__section__group\\">
+    <!--ITEM-->
+</div><div class=\\"hig__global-nav__side-nav__section__group\\">
+    <!--ITEM-->
+</div><!--GROUP-->
+</div><!--SECTION-->
+    <div class=\\"hig__global-nav__sidenav__links\\">
+        <!--LINK-->
+    </div>
+    <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
+</div><!--SIDENAV-->
+    <!--CONTAINER-->
+</div>"
+`;
+
+exports[`<Section> headerLabel sets the headerLabel default 1`] = `
+"<div class=\\"hig__global-nav\\">
+    <div class=\\"hig__global-nav__sidenav\\">
+    <div class=\\"hig__global-nav__side-nav__section\\">
+    <div class=\\"hig__global-nav__side-nav__section__header\\">
+        <span class=\\"hig__global-nav__side-nav__section__header__label\\">some label</span>
+        <span class=\\"hig__global-nav__side-nav__section__header__name\\">X</span>
+    </div>
+    <!--GROUP-->
+</div><!--SECTION-->
+    <div class=\\"hig__global-nav__sidenav__links\\">
+        <!--LINK-->
+    </div>
+    <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
+</div><!--SIDENAV-->
+    <!--CONTAINER-->
+</div>"
+`;
+
+exports[`<Section> headerLabel updates the headerLabel 1`] = `
+"<div class=\\"hig__global-nav\\">
+    <div class=\\"hig__global-nav__sidenav\\">
+    <div class=\\"hig__global-nav__side-nav__section\\">
+    <div class=\\"hig__global-nav__side-nav__section__header\\">
+        <span class=\\"hig__global-nav__side-nav__section__header__label\\">new header label</span>
+        <span class=\\"hig__global-nav__side-nav__section__header__name\\">X</span>
+    </div>
+    <!--GROUP-->
+</div><!--SECTION-->
+    <div class=\\"hig__global-nav__sidenav__links\\">
+        <!--LINK-->
+    </div>
+    <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
+</div><!--SIDENAV-->
+    <!--CONTAINER-->
+</div>"
+`;
+
+exports[`<Section> headerName sets the headerName default 1`] = `
+"<div class=\\"hig__global-nav\\">
+    <div class=\\"hig__global-nav__sidenav\\">
+    <div class=\\"hig__global-nav__side-nav__section\\">
+    <div class=\\"hig__global-nav__side-nav__section__header\\">
+        <span class=\\"hig__global-nav__side-nav__section__header__label\\">Project</span>
+        <span class=\\"hig__global-nav__side-nav__section__header__name\\">some label</span>
+    </div>
+    <!--GROUP-->
+</div><!--SECTION-->
+    <div class=\\"hig__global-nav__sidenav__links\\">
+        <!--LINK-->
+    </div>
+    <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
+</div><!--SIDENAV-->
+    <!--CONTAINER-->
+</div>"
+`;
+
+exports[`<Section> headerName updates the headerName 1`] = `
+"<div class=\\"hig__global-nav\\">
+    <div class=\\"hig__global-nav__sidenav\\">
+    <div class=\\"hig__global-nav__side-nav__section\\">
+    <div class=\\"hig__global-nav__side-nav__section__header\\">
+        <span class=\\"hig__global-nav__side-nav__section__header__label\\">Project</span>
+        <span class=\\"hig__global-nav__side-nav__section__header__name\\">new header name</span>
+    </div>
+    <!--GROUP-->
+</div><!--SECTION-->
+    <div class=\\"hig__global-nav__sidenav__links\\">
+        <!--LINK-->
+    </div>
+    <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
+</div><!--SIDENAV-->
+    <!--CONTAINER-->
+</div>"
+`;

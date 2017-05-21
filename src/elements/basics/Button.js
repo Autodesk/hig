@@ -17,6 +17,7 @@ limitations under the License.
 import * as HIG from 'hig.web';
 
 import HIGElement from '../HIGElement';
+import * as PropTypes from 'prop-types';
 import createComponent from '../../adapters/createComponent';
 
 class Button extends HIGElement {
@@ -44,5 +45,32 @@ class Button extends HIGElement {
 }
 
 const ButtonComponent = createComponent(Button);
+
+ButtonComponent.propTypes = {
+  title: PropTypes.string,
+  link: PropTypes.string,
+  onClick: PropTypes.func,
+  onHover: PropTypes.func
+};
+
+ButtonComponent.__docgenInfo = {
+  props: {
+    title: {
+      description: 'sets the title of a button'
+    },
+
+    link: {
+      description: 'sets the link of a button'
+    },
+
+    onClick: {
+      description: 'triggers when you click the button'
+    },
+
+    onHover: {
+      description: 'triggers when you hover over the button'
+    }
+  }
+};
 
 export default ButtonComponent;

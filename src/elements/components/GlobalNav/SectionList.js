@@ -16,6 +16,7 @@ limitations under the License.
 */
 import createComponent from '../../../adapters/createComponent';
 import HIGNodeList from '../../HIGNodeList';
+import HIGChildValidator from '../../HIGChildValidator';
 
 import SectionComponent, { Section } from './Section';
 
@@ -73,13 +74,24 @@ export class SectionList {
   }
 
   removeChild(instance) {
-    const index = this.sections.indexOf(instance);
-    this.sections.splice(index, 1);
+    this.sections.removeChild(instance);
     instance.unmount();
   }
 }
 
 const SectionListComponent = createComponent(SectionList);
+
+SectionListComponent.propTypes = {
+  children: HIGChildValidator([SectionComponent])
+};
+
+SectionListComponent.__docgenInfo = {
+  props: {
+    children: {
+      description: 'support adding Section'
+    }
+  }
+};
 
 SectionListComponent.Item = SectionComponent;
 

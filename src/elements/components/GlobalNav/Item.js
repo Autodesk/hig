@@ -14,6 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 */
+import * as PropTypes from 'prop-types';
 import createComponent from '../../../adapters/createComponent';
 import HIGElement from '../../HIGElement';
 
@@ -69,5 +70,37 @@ export class Item extends HIGElement {
 }
 
 const ItemComponent = createComponent(Item);
+
+ItemComponent.propTypes = {
+  icon: PropTypes.string,
+  title: PropTypes.string,
+  link: PropTypes.string,
+  onClick: PropTypes.func,
+  onHover: PropTypes.func
+};
+
+ItemComponent.__docgenInfo = {
+  props: {
+    icon: {
+      description: 'sets the icon of an item'
+    },
+
+    title: {
+      description: 'sets the title of an item'
+    },
+
+    link: {
+      description: 'sets the link of an item'
+    },
+
+    onClick: {
+      description: 'triggered when a link is clicked on'
+    },
+
+    onHover: {
+      description: 'triggered when a link is hovered over'
+    }
+  }
+};
 
 export default ItemComponent;

@@ -23,6 +23,9 @@ import prepareUpdate from './prepareUpdate';
 export default function createComponent(ElementConstructor) {
   const displayName = ElementConstructor.name;
 
+  /**
+   * @augments {React.Component<*, *>}
+   */
   const Adapter = class extends React.Component {
     constructor(props, context) {
       super(props);
@@ -106,6 +109,16 @@ export default function createComponent(ElementConstructor) {
       }
     }
   };
+
+  /**
+   * React prop-types
+   */
+  Adapter.propTypes = {};
+
+  /**
+   * Empty __docgenInfo for storybook reflection
+   */
+  Adapter.__docgenInfo = {};
 
   Adapter.displayName = displayName;
 

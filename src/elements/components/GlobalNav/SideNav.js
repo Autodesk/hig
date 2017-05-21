@@ -16,6 +16,7 @@ limitations under the License.
 */
 import createComponent from '../../../adapters/createComponent';
 import HIGElement from '../../HIGElement';
+import HIGChildValidator from '../../HIGChildValidator';
 
 import SectionListComponent, { SectionList } from './SectionList';
 import LinkListComponent, { LinkList } from './LinkList';
@@ -45,7 +46,7 @@ export class SideNav extends HIGElement {
   appendChild(instance) {
     if (instance instanceof SectionList) {
       if (this.sections) {
-        throw new Error('only one Sections is allowed');
+        throw new Error('only one SectionList is allowed');
       } else {
         this.sections = instance;
 
@@ -55,7 +56,7 @@ export class SideNav extends HIGElement {
       }
     } else if (instance instanceof LinkList) {
       if (this.links) {
-        throw new Error('only one links is allowed');
+        throw new Error('only one LinkList is allowed');
       } else {
         this.links = instance;
 
@@ -86,6 +87,18 @@ export class SideNav extends HIGElement {
 }
 
 const SideNavComponent = createComponent(SideNav);
+
+SideNavComponent.propTypes = {
+  children: HIGChildValidator([SectionListComponent, LinkListComponent])
+};
+
+SideNavComponent.__docgenInfo = {
+  props: {
+    children: {
+      description: 'support adding SectionList, and LinkList'
+    }
+  }
+};
 
 SideNavComponent.SectionList = SectionListComponent;
 SideNavComponent.LinkList = LinkListComponent;

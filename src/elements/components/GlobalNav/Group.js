@@ -17,6 +17,7 @@ limitations under the License.
 import createComponent from '../../../adapters/createComponent';
 import HIGElement from '../../HIGElement';
 import HIGNodeList from '../../HIGNodeList';
+import HIGChildValidator from '../../HIGChildValidator';
 import ItemComponent, { Item } from './Item';
 
 export class Group extends HIGElement {
@@ -69,6 +70,18 @@ export class Group extends HIGElement {
 }
 
 const GroupComponent = createComponent(Group);
+
+GroupComponent.propTypes = {
+  children: HIGChildValidator([ItemComponent])
+};
+
+GroupComponent.__docgenInfo = {
+  props: {
+    children: {
+      description: 'support adding Item'
+    }
+  }
+};
 
 GroupComponent.Item = ItemComponent;
 

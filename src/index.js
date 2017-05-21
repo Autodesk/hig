@@ -16,7 +16,7 @@ limitations under the License.
 */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Button, GlobalNav, Slot } from './react-hig';
+import { Button, GlobalNav } from './react-hig';
 
 import 'hig.web/dist/hig.css';
 import './index.css';
@@ -31,6 +31,7 @@ const Item = GlobalNav.SideNav.SectionList.Item.Group.Item;
 const Container = GlobalNav.Container;
 const TopNav = GlobalNav.Container.TopNav;
 const SubNav = GlobalNav.Container.SubNav;
+const Slot = GlobalNav.Container.Slot;
 
 class App extends React.Component {
   constructor() {

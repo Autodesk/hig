@@ -14,6 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 */
+import * as PropTypes from 'prop-types';
 import createComponent from '../../../adapters/createComponent';
 import HIGElement from '../../HIGElement';
 
@@ -39,5 +40,22 @@ export class SubNav extends HIGElement {
 }
 
 const SubNavComponent = createComponent(SubNav);
+
+SubNavComponent.propTypes = {
+  moduleIndicatorName: PropTypes.string,
+  moduleIndicatorIcon: PropTypes.string
+};
+
+SubNavComponent.__docgenInfo = {
+  props: {
+    moduleIndicatorName: {
+      description: 'sets the moduleIndicatorName'
+    },
+
+    moduleIndicatorIcon: {
+      description: 'sets the moduleIndicatorIcon'
+    }
+  }
+};
 
 export default SubNavComponent;

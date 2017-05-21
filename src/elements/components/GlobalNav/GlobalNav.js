@@ -15,8 +15,10 @@ limitations under the License.
 
 */
 import * as HIG from 'hig.web';
+import * as PropTypes from 'prop-types';
 
 import HIGElement from '../../HIGElement';
+import HIGChildValidator from '../../HIGChildValidator';
 import createComponent from '../../../adapters/createComponent';
 
 import ContainerComponent, { Container } from './Container';
@@ -125,6 +127,23 @@ class GlobalNav extends HIGElement {
 }
 
 const GlobalNavComponent = createComponent(GlobalNav);
+
+GlobalNavComponent.propTypes = {
+  sideNavOpen: PropTypes.bool,
+  children: HIGChildValidator([SideNavComponent, ContainerComponent])
+};
+
+GlobalNavComponent.__docgenInfo = {
+  props: {
+    sideNavOpen: {
+      description: 'show or hide the SideNav'
+    },
+
+    children: {
+      description: 'support adding SideNav or Container'
+    }
+  }
+};
 
 GlobalNavComponent.Container = ContainerComponent;
 GlobalNavComponent.SideNav = SideNavComponent;

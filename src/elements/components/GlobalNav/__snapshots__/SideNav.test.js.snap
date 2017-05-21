@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SideNav> can render a LinksList as a child 1`] = `
+"<div class=\\"hig__global-nav\\">
+    <div class=\\"hig__global-nav__sidenav\\">
+    <!--SECTION-->
+    <div class=\\"hig__global-nav__sidenav__links\\">
+        <!--LINK-->
+    </div>
+    <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
+</div><!--SIDENAV-->
+    <!--CONTAINER-->
+</div>"
+`;
+
+exports[`<SideNav> can render a SectionList as a child 1`] = `
+"<div class=\\"hig__global-nav\\">
+    <div class=\\"hig__global-nav__sidenav\\">
+    <!--SECTION-->
+    <div class=\\"hig__global-nav__sidenav__links\\">
+        <!--LINK-->
+    </div>
+    <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
+</div><!--SIDENAV-->
+    <!--CONTAINER-->
+</div>"
+`;

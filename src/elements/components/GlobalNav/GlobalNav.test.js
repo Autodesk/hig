@@ -49,6 +49,18 @@ describe('<GlobalNav>', () => {
   });
 
   describe('sideNavOpen prop', () => {
+    it('shows an error if it is not a boolean', () => {
+      global.console.error = jest.fn();
+
+      mount(<GlobalNav sideNavOpen="foo" />);
+
+      expect(console.error).toBeCalledWith(
+        expect.stringMatching(
+          /Invalid prop `sideNavOpen` of type `string` supplied to `GlobalNav`, expected `boolean`./
+        )
+      );
+    });
+
     it('is equal to showSideNav', () => {
       const { higNav, higContainer } = createHigNav();
       const reactContainer = document.createElement('div');
@@ -89,10 +101,8 @@ describe('<GlobalNav>', () => {
         higContainer.firstChild.outerHTML
       );
     });
-  });
 
-  describe('<SideNav>', () => {
-    it('can render the SideNav by default', () => {
+    it('can render the SideNav as a child', () => {
       const { higNav, higContainer } = createHigNav();
 
       const sideNav = new higNav.partials.SideNav();
@@ -125,204 +135,72 @@ describe('<GlobalNav>', () => {
         );
       }).toThrowError(/only one SideNav is allowed/);
     });
+  });
 
-    describe('<Sections>', () => {
-      it('can render a <Sections> by default', () => {
-        const { higNav, higContainer } = createHigNav();
+  it('can render the Container as a child', () => {
+    const { higNav, higContainer } = createHigNav();
 
-        const sideNav = new higNav.partials.SideNav();
-        higNav.addSideNav(sideNav);
+    const container = new higNav.partials.Container();
+    higNav.addContainer(container);
 
-        const reactContainer = document.createElement('div');
-        const wrapper = mount(
-          <GlobalNav>
-            <GlobalNav.SideNav>
-              <GlobalNav.SideNav.SectionList />
-            </GlobalNav.SideNav>
-          </GlobalNav>,
-          {
-            attachTo: reactContainer
-          }
-        );
+    const reactContainer = document.createElement('div');
+    const wrapper = mount(
+      <GlobalNav>
+        <GlobalNav.Container />
+      </GlobalNav>,
+      {
+        attachTo: reactContainer
+      }
+    );
 
-        expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
+    expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
 
-        expect(reactContainer.firstChild.outerHTML).toEqual(
-          higContainer.firstChild.outerHTML
-        );
-      });
+    expect(reactContainer.firstChild.outerHTML).toEqual(
+      higContainer.firstChild.outerHTML
+    );
+  });
 
-      it('can only render a single <Sections>', () => {
-        expect(() => {
-          mount(
-            <GlobalNav>
-              <GlobalNav.SideNav>
-                <GlobalNav.SideNav.SectionList />
-                <GlobalNav.SideNav.SectionList />
-              </GlobalNav.SideNav>
-            </GlobalNav>
-          );
-        }).toThrowError(/only one Sections is allowed/);
-      });
+  it('can only render a single Container', () => {
+    expect(() => {
+      mount(
+        <GlobalNav>
+          <GlobalNav.Container />
+          <GlobalNav.Container />
+        </GlobalNav>
+      );
+    }).toThrowError(/only one Container is allowed/);
+  });
 
-      describe('<Section>', () => {
-        it('can render a <Section> by default', () => {
-          const { higNav, higContainer } = createHigNav();
+  it('can not render arbitrary HTML elements as children', () => {
+    global.console.error = jest.fn();
 
-          const sideNav = new higNav.partials.SideNav();
-          higNav.addSideNav(sideNav);
+    mount(
+      <GlobalNav>
+        <GlobalNav.Container />
+        <div>Hello world!</div>
+      </GlobalNav>
+    );
 
-          const sectionDefaults = {
-            headerLabel: 'Project',
-            headerName: 'Thunderstorm'
-          };
+    expect(console.error).toBeCalledWith(
+      expect.stringMatching(
+        /'div' is not a valid child of GlobalNav. Children should be of type 'SideNav, Container'/
+      )
+    );
+  });
 
-          const section1 = new sideNav.partials.Section(sectionDefaults);
+  it('can not render text elements as children', () => {
+    global.console.error = jest.fn();
 
-          sideNav.addSection(section1);
+    mount(
+      <GlobalNav>
+        some random child text
+      </GlobalNav>
+    );
 
-          const reactContainer = document.createElement('div');
-          const wrapper = mount(
-            <GlobalNav>
-              <GlobalNav.SideNav>
-                <GlobalNav.SideNav.SectionList>
-                  <GlobalNav.SideNav.SectionList.Item {...sectionDefaults} />
-                </GlobalNav.SideNav.SectionList>
-
-              </GlobalNav.SideNav>
-            </GlobalNav>,
-            {
-              attachTo: reactContainer
-            }
-          );
-
-          expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
-
-          expect(reactContainer.firstChild.outerHTML).toEqual(
-            higContainer.firstChild.outerHTML
-          );
-        });
-
-        it('can render multiple sections', () => {
-          const { higNav, higContainer } = createHigNav();
-
-          const sideNav = new higNav.partials.SideNav();
-          higNav.addSideNav(sideNav);
-
-          const section1Defaults = {
-            headerLabel: 'Project',
-            headerName: 'Thunderstorm'
-          };
-
-          const section1 = new sideNav.partials.Section(section1Defaults);
-
-          sideNav.addSection(section1);
-
-          const section2Defaults = {
-            headerLabel: 'Project',
-            headerName: 'Boo Ya'
-          };
-
-          const section2 = new sideNav.partials.Section(section2Defaults);
-
-          sideNav.addSection(section2);
-
-          const reactContainer = document.createElement('div');
-          const wrapper = mount(
-            <GlobalNav>
-              <GlobalNav.SideNav>
-                <GlobalNav.SideNav.SectionList>
-                  <GlobalNav.SideNav.SectionList.Item {...section1Defaults} />
-                  <GlobalNav.SideNav.SectionList.Item {...section2Defaults} />
-                </GlobalNav.SideNav.SectionList>
-              </GlobalNav.SideNav>
-            </GlobalNav>,
-            {
-              attachTo: reactContainer
-            }
-          );
-
-          expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
-
-          expect(reactContainer.firstChild.outerHTML).toEqual(
-            higContainer.firstChild.outerHTML
-          );
-        });
-
-        it('can update to have a section before the other section', () => {
-          const { higNav, higContainer } = createHigNav();
-
-          const sideNav = new higNav.partials.SideNav();
-          higNav.addSideNav(sideNav);
-
-          const section1Defaults = {
-            headerLabel: 'Label 1',
-            headerName: 'Name 1'
-          };
-
-          const section1 = new sideNav.partials.Section(section1Defaults);
-
-          // DELIBERATELY DON'T ADD SECTION 1
-
-          const section2Defaults = {
-            headerLabel: 'Label 2',
-            headerName: 'Name 2'
-          };
-
-          const section2 = new sideNav.partials.Section(section2Defaults);
-
-          sideNav.addSection(section2);
-
-          // ADD SECTION 1 before SECTION 2
-
-          sideNav.addSection(section1, section2);
-
-          class CustomComponent extends React.Component {
-            constructor(props) {
-              super(props);
-              this.state = { showingItem: false };
-            }
-
-            render() {
-              return (
-                <GlobalNav>
-                  <GlobalNav.SideNav>
-                    <GlobalNav.SideNav.SectionList>
-                      {this.state.showingItem &&
-                        <GlobalNav.SideNav.SectionList.Item
-                          {...section1Defaults}
-                        />}
-                      <GlobalNav.SideNav.SectionList.Item
-                        {...section2Defaults}
-                      />
-                    </GlobalNav.SideNav.SectionList>
-                  </GlobalNav.SideNav>
-
-                </GlobalNav>
-              );
-            }
-          }
-
-          const reactContainer = document.createElement('div');
-          const wrapper = mount(<CustomComponent />, {
-            attachTo: reactContainer
-          });
-
-          expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
-
-          wrapper.setState({ showingItem: true });
-
-          expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
-
-          expect(reactContainer.firstChild.outerHTML).toEqual(
-            higContainer.firstChild.outerHTML
-          );
-        });
-
-        it('can update the section headerLabel');
-
-        it('can update the section headerName');
-      });
-    });
+    expect(console.error).toBeCalledWith(
+      expect.stringMatching(
+        /'some random child text' is not a valid child of GlobalNav. Children should be of type 'SideNav, Container'/
+      )
+    );
   });
 });

@@ -16,6 +16,12 @@ limitations under the License.
 */
 import partitionProps from '../interface/partitionProps';
 
+/**
+ * The base class for all React-Hig Elements. These elements hook into the
+ * adapters/createComponent adapter, store low level state like event listeners
+ * and call the appropriate methods on hig.web instance when needed
+ *
+ */
 export default class HIGElement {
   constructor(HIGConstructor, initialProps) {
     this.initialProps = initialProps;
@@ -48,9 +54,15 @@ export default class HIGElement {
       this.setupEvent(eventName, this.events[eventName]);
     });
 
-    if (this.componentDidMount) {
-      this.componentDidMount();
-    }
+    this.componentDidMount();
+  }
+
+  componentDidMount() {
+    // sub-classes should override this class
+  }
+
+  componentDidUnmount() {
+    // sub-classes should override this class
   }
 
   unmount() {
@@ -58,10 +70,7 @@ export default class HIGElement {
     Array.from(this._disposeFunctions).forEach(([_, dispose]) => dispose());
     this._disposeFunctions.clear();
     this.hig.unmount();
-
-    if (this.componentDidUnmount) {
-      this.componentDidUnmount();
-    }
+    this.componentDidUnmount();
   }
 
   commitUpdate(updatePayload, oldProps, newProps) {

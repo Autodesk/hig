@@ -46,10 +46,12 @@ describe('<Button>', () => {
 
     const wrapper = mount(<Button {...defaults} />, { attachTo: container });
 
-    expect(container.firstChild.outerHTML).toMatchSnapshot();
+    // expect(container.innerHTML).toMatchSnapshot();
 
-    expect(container.firstChild.outerHTML).toEqual(
-      higContainer.firstChild.outerHTML
+    expect(container.firstElementChild.outerHTML).toMatchSnapshot();
+
+    expect(container.firstElementChild.outerHTML).toEqual(
+      higContainer.firstElementChild.outerHTML
     );
   });
 
@@ -68,10 +70,10 @@ describe('<Button>', () => {
 
     wrapper.setProps({ title: newTitle });
 
-    expect(container.firstChild.outerHTML).toMatchSnapshot();
+    expect(container.firstElementChild.outerHTML).toMatchSnapshot();
 
-    expect(container.firstChild.outerHTML).toEqual(
-      higContainer.firstChild.outerHTML
+    expect(container.firstElementChild.outerHTML).toEqual(
+      higContainer.firstElementChild.outerHTML
     );
   });
 
@@ -91,10 +93,10 @@ describe('<Button>', () => {
     // update to remove the title prop
     wrapper.setProps({ title: undefined });
 
-    expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
+    expect(reactContainer.firstElementChild.outerHTML).toMatchSnapshot();
 
-    expect(reactContainer.firstChild.outerHTML).toEqual(
-      higContainer.firstChild.outerHTML
+    expect(reactContainer.firstElementChild.outerHTML).toEqual(
+      higContainer.firstElementChild.outerHTML
     );
   });
 
@@ -110,10 +112,10 @@ describe('<Button>', () => {
 
     wrapper.setProps({ link: newLink });
 
-    expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
+    expect(reactContainer.firstElementChild.outerHTML).toMatchSnapshot();
 
-    expect(reactContainer.firstChild.outerHTML).toEqual(
-      higContainer.firstChild.outerHTML
+    expect(reactContainer.firstElementChild.outerHTML).toEqual(
+      higContainer.firstElementChild.outerHTML
     );
   });
 

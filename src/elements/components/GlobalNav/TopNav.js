@@ -14,6 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 */
+import * as PropTypes from 'prop-types';
 import createComponent from '../../../adapters/createComponent';
 import HIGElement from '../../HIGElement';
 
@@ -52,5 +53,27 @@ export class TopNav extends HIGElement {
 }
 
 const TopNavComponent = createComponent(TopNav);
+
+TopNavComponent.propTypes = {
+  logo: PropTypes.string,
+  logoLink: PropTypes.string,
+  onHamburgerClick: PropTypes.func
+};
+
+TopNavComponent.__docgenInfo = {
+  props: {
+    logo: {
+      description: 'sets the logo'
+    },
+
+    logoLink: {
+      description: 'sets the link of the logo'
+    },
+
+    onHamburgerClick: {
+      description: 'trigged when hamburger icon is clicked'
+    }
+  }
+};
 
 export default TopNavComponent;
