@@ -19,12 +19,7 @@ module.exports = {
         platform: 'macOs 10.12',
         name: 'gemini visual regression tests'
       }
-    }, //#  firefox:
-    //#    desiredCapabilities:
-    //#      browserName: 'firefox'
-    //#      version: '46.0'
-    //#      platform: 'macOs 10.12'
-    //#      name: 'gemini visual regression tests'
+    }, 
     edge:   {
       desiredCapabilities: {
         browserName: 'MicrosoftEdge',
