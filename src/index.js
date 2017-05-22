@@ -31,6 +31,8 @@ const Item = GlobalNav.SideNav.SectionList.Item.Group.Item;
 const Container = GlobalNav.Container;
 const TopNav = GlobalNav.Container.TopNav;
 const SubNav = GlobalNav.Container.SubNav;
+const Tabs = GlobalNav.Container.SubNav.Tabs;
+const Tab = GlobalNav.Container.SubNav.Tabs.Tab;
 const Slot = GlobalNav.Container.Slot;
 
 class App extends React.Component {
@@ -41,7 +43,12 @@ class App extends React.Component {
       fn: false,
       group1: true,
       group3: true,
-      open: false
+      open: false,
+      activeTab: 0,
+      tabs: [
+        { label: "One", id: 0 },
+        { label: "Two", id: 1 }
+      ]
     };
   }
 
@@ -62,6 +69,30 @@ class App extends React.Component {
   toggleGroup1 = () => this.setState({ group1: !this.state.group1 });
 
   toggleGroup3 = () => this.setState({ group3: !this.state.group3 });
+
+  addTabBefore = () => {
+    const nextLabel = Math.floor((Math.random() * 100000), 5);
+    const nextTabs = Array.from(this.state.tabs);
+    nextTabs.unshift({ label: nextLabel, id: nextLabel });
+    this.setState({ tabs: nextTabs })
+  }
+
+  addTabAfter = () => {
+    const nextLabel = Math.floor((Math.random() * 100000), 5);
+    const nextTabs = Array.from(this.state.tabs);
+    nextTabs.push({ label: nextLabel, id: nextLabel });
+    this.setState({ tabs: nextTabs })
+  }
+
+  removeTab = () => {
+    const nextTabs = Array.from(this.state.tabs);
+    nextTabs.pop();
+    this.setState({ tabs: nextTabs })
+  }
+
+  setActiveTab = (activeTabIndex) => {
+    this.setState({ activeTab: activeTabIndex });
+  }
 
   render() {
     return (
@@ -114,7 +145,13 @@ class App extends React.Component {
             <SubNav
               moduleIndicatorName="Documents Library"
               moduleIndicatorIcon="hamburger"
-            />
+            >
+              <Tabs>
+                {this.state.tabs.map((tab, i) => {
+                  return <Tab key={tab.id} label={tab.label} active={this.state.activeTab === tab.id} onClick={this.setActiveTab.bind(this, tab.id)} />
+                })}
+              </Tabs>
+            </SubNav>
 
             <Slot>
 
@@ -125,8 +162,16 @@ class App extends React.Component {
               />
 
               <Button
-                title={this.state.buttonLabel}
-                link="http://autodesk.com"
+                title="Add tab before"
+                onClick={this.addTabBefore}
+              />
+              <Button
+                title="Add tab after"
+                onClick={this.addTabAfter}
+              />
+              <Button
+                title="Remove tab"
+                onClick={this.removeTab}
               />
 
               Raw denim flexitarian green juice kinfolk. Umami hammock trust fund everyday carry, woke wolf viral sriracha austin. Fingerstache affogato messenger bag salvia, cray iPhone bushwick blue bottle marfa gentrify dreamcatcher pop-up. Slow-carb etsy enamel pin cronut, raclette post-ironic hashtag. Hoodie dreamcatcher enamel pin lumbersexual before they sold out, authentic selvage tumblr vinyl. Hot chicken chillwave coloring book fixie vice venmo echo park portland. Tote bag master cleanse cronut banjo banh mi pitchfork, celiac photo booth.
