@@ -206,10 +206,10 @@
                                         "{String} link - new link" 
                                     ]
                                 },
-                                "addAvatar": {
-                                    "desc": "Pass in an instance of an Avatar partial to mount it to the GlobalNav",
+                                "addProfile": {
+                                    "desc": "Pass in an instance of an Profile partial to mount it to the GlobalNav",
                                     "params": [
-                                        "{Avatar} Avatar - instance of a Avatar partial"
+                                        "{Profile} Profile - instance of a Profile partial"
                                     ]
                                 },
                                 "onHamburgerClick": "HIG.abstract.EventObject"
@@ -219,7 +219,7 @@
                                 "logoLink": "{String} url behind the logo"
                             },
                             "partials":{
-                                "Avatar": {
+                                "Profile": {
                                     "methods": {
                                         "onClick": "HIG.abstract.EventObject",
                                         "setImage": {

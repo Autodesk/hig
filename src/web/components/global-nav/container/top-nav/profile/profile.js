@@ -1,16 +1,16 @@
-import './avatar.scss';
+import './profile.scss';
 
-var Template = require ('./avatar.html');
+var Template = require ('./profile.html');
 var Interface = require('interface.json');
 var Core = require('_core.js');
 /**
- * Creates an Avatar
+ * Creates an Profile
  *
  * @class
  *
  */
 
-class Avatar extends Core {
+class Profile extends Core {
 
   constructor(options){
     super(options);
@@ -31,12 +31,12 @@ class Avatar extends Core {
 
 }
 
-Avatar._interface = Interface['components']['GlobalNav']['partials']['Container']['partials']['TopNav']['partials']['Avatar'];
-Avatar._defaults = {
+Profile._interface = Interface['components']['GlobalNav']['partials']['Container']['partials']['TopNav']['partials']['Profile'];
+Profile._defaults = {
   image: 'foo.png'
 };
-Avatar._partials = {
-  Avatar: Avatar
+Profile._partials = {
+  Profile: Profile
 };
 
-module.exports = Avatar;
+module.exports = Profile;
