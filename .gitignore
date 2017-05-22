@@ -39,5 +39,8 @@ jspm_packages
 # Distribution files
 dist
 
-# Dotenv main .env
+# Gemini Report
+/gemini-report
+
+# Environment Variables
 .env
