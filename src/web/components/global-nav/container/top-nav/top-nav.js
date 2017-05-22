@@ -4,6 +4,7 @@ var Template = require('./top-nav.html');
 var Interface = require('interface.json');
 var Core = require('_core.js');
 
+var Profile = require('./profile/profile.js');
 
 /**
  * Creates an TopNav
@@ -32,6 +33,12 @@ class TopNav extends Core {
         this._findDOMEl("a", scope).setAttribute("href", link);
     }
 
+    addProfile(profileInstance){
+        if (profileInstance instanceof Profile){
+            this.mountPartialToComment('PROFILE', profileInstance);
+        }
+    }
+
 }
 
 TopNav._interface = Interface['components']['GlobalNav']['partials']['Container']['partials']['TopNav'];
@@ -39,6 +46,10 @@ TopNav._defaults = {
     logo: "link",
     logoLink: "#"
 };
+
+TopNav._partials = {
+    Profile: Profile
+}
 
 
 module.exports = TopNav;

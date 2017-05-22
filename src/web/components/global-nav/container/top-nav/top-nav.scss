@@ -1,17 +1,20 @@
 @import '~basics/colors/colors.scss';
 
+$group-height: 56px;
+
 .hig__global-nav__container__top-nav{
     background: $background-1;
-    height: 50px;
-    line-height: 50px;
+    height: $group-height;
+    line-height: $group-height;
     box-shadow: 0 1px 4px 0 $box-shadow-1;
     z-index: 2;
 
     display: flex;
+    justify-content: space-between;
     align-items: center;
 
     &__group{
-        height: 50px;
+        height: $group-height;
         display: flex;
         align-items: center;
 
