@@ -274,11 +274,11 @@
                                                       "{String} label - new label"
                                                     ]
                                                 },
-                                                "setActive": {
-                                                    "desc": "sets active property",
-                                                    "params": [
-                                                      "{Boolean} active - new active state"
-                                                    ]
+                                                "activate": {
+                                                    "desc": "activates the tab"
+                                                },
+                                                "deactivate": {
+                                                    "desc": "deactivates the tab"
                                                 },
                                                 "onClick": "HIG.abstract.EventObject"
                                             },

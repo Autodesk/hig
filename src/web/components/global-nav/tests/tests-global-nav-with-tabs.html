@@ -44,8 +44,8 @@
             });
             Tabs.addTab(Tab2);
             Tab2.onClick(() => {
-                Tab1.setActive(false);
-                Tab2.setActive(true);
+                Tab1.deactivate();
+                Tab2.activate();
             });
 
             var Tab1 = new Tabs.partials.Tab({
@@ -53,10 +53,10 @@
                 "active": false
             });
             Tabs.addTab(Tab1, Tab2);
-            Tab1.setActive(true);
+            Tab1.activate();
             Tab1.onClick(() => {
-                Tab1.setActive(true);
-                Tab2.setActive(false);
+                Tab1.activate();
+                Tab2.deactivate();
             });
 
         </script>

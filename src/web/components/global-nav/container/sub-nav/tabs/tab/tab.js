@@ -26,14 +26,13 @@ class Tab extends Core {
         this.el.setAttr('label', label);
     }
 
-    setActive(active) {
-        if (active) {
-            this.el.classList.add("hig__global-nav__sub-nav__tabs__tab--active");
-        } else {
-            this.el.classList.remove("hig__global-nav__sub-nav__tabs__tab--active");
-        }
+    activate() {
+        this.el.classList.add("hig__global-nav__sub-nav__tabs__tab--active");
     }
 
+    deactivate() {
+        this.el.classList.remove("hig__global-nav__sub-nav__tabs__tab--active");
+    }
 }
 
 Tab._interface = Interface['components']['GlobalNav']['partials']['Container']['partials']['SubNav']['partials']['Tabs']['partials']['Tab'];
