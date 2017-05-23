@@ -121,6 +121,6 @@ TopNavComponent.__docgenInfo = {
   }
 };
 
-// TopNavComponent.Profile = Profile;
+TopNavComponent.Profile = ProfileComponent;
 
 export default TopNavComponent;

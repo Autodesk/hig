@@ -6,7 +6,7 @@ import HIGChildValidator from '../../HIGChildValidator';
 import createComponent from '../../../adapters/createComponent';
 
 
-class Profile extends HIGElement{
+export class Profile extends HIGElement{
   constructor(initialProps) {
     super(HIG.Profile, initialProps);
   }
