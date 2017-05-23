@@ -127,7 +127,7 @@
                 menu_open = !menu_open;
             });
 
-            // ADD SUB TOP MENU
+            // ADD SUBNAV
             var SubNav = new Container.partials.SubNav({
                 "moduleIndicatorName": "Insight",
                 "moduleIndicatorIcon": "project-management"
@@ -136,6 +136,43 @@
 
             SubNav.setModuleIndicatorName("Documents Library");
             SubNav.setModuleIndicatorIcon("hamburger");
+
+            // ADD TABS IN SUBNAV
+            var Tabs = new SubNav.partials.Tabs();
+            SubNav.addTabs(Tabs);
+
+            var Tab1 = new Tabs.partials.Tab({
+                "label": "One"
+            });
+            Tabs.addTab(Tab1);
+            Tab1.activate();
+            Tab1.onClick(() => {
+                Tab1.activate();
+                Tab2.deactivate();
+                Tab3.deactivate();
+            });
+
+            var Tab2 = new Tabs.partials.Tab({
+                "label": "Two"
+            });
+            Tabs.addTab(Tab2);
+            Tab2.onClick(() => {
+                Tab1.deactivate();
+                Tab2.activate();
+                Tab3.deactivate();
+            });
+
+            var Tab3 = new Tabs.partials.Tab({
+                "label": "Three"
+            });
+            Tabs.addTab(Tab3, Tab2);
+            
+            Tab3.onClick(() => {
+                Tab1.deactivate();
+                Tab2.deactivate();
+                Tab3.activate();
+            });
+
 
             // SLOT IN SOME APP SPECIFIC Container
             var SlotEl = document.createElement('div');
