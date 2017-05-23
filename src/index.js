@@ -45,10 +45,7 @@ class App extends React.Component {
       group3: true,
       open: false,
       activeTab: 0,
-      tabs: [
-        { label: "One", id: 0 },
-        { label: "Two", id: 1 }
-      ]
+      tabs: [{ label: 'One', id: 0 }, { label: 'Two', id: 1 }]
     };
   }
 
@@ -71,28 +68,28 @@ class App extends React.Component {
   toggleGroup3 = () => this.setState({ group3: !this.state.group3 });
 
   addTabBefore = () => {
-    const nextLabel = Math.floor((Math.random() * 100000), 5);
+    const nextLabel = Math.floor(Math.random() * 100000, 5);
     const nextTabs = Array.from(this.state.tabs);
     nextTabs.unshift({ label: nextLabel, id: nextLabel });
-    this.setState({ tabs: nextTabs })
-  }
+    this.setState({ tabs: nextTabs });
+  };
 
   addTabAfter = () => {
-    const nextLabel = Math.floor((Math.random() * 100000), 5);
+    const nextLabel = Math.floor(Math.random() * 100000, 5);
     const nextTabs = Array.from(this.state.tabs);
     nextTabs.push({ label: nextLabel, id: nextLabel });
-    this.setState({ tabs: nextTabs })
-  }
+    this.setState({ tabs: nextTabs });
+  };
 
   removeTab = () => {
     const nextTabs = Array.from(this.state.tabs);
     nextTabs.pop();
-    this.setState({ tabs: nextTabs })
-  }
+    this.setState({ tabs: nextTabs });
+  };
 
-  setActiveTab = (activeTabIndex) => {
+  setActiveTab = activeTabIndex => {
     this.setState({ activeTab: activeTabIndex });
-  }
+  };
 
   render() {
     return (
@@ -148,7 +145,14 @@ class App extends React.Component {
             >
               <Tabs>
                 {this.state.tabs.map((tab, i) => {
-                  return <Tab key={tab.id} label={tab.label} active={this.state.activeTab === tab.id} onClick={this.setActiveTab.bind(this, tab.id)} />
+                  return (
+                    <Tab
+                      key={tab.id}
+                      label={tab.label}
+                      active={this.state.activeTab === tab.id}
+                      onClick={this.setActiveTab.bind(this, tab.id)}
+                    />
+                  );
                 })}
               </Tabs>
             </SubNav>
@@ -161,18 +165,9 @@ class App extends React.Component {
                 onChange={this.handleChange}
               />
 
-              <Button
-                title="Add tab before"
-                onClick={this.addTabBefore}
-              />
-              <Button
-                title="Add tab after"
-                onClick={this.addTabAfter}
-              />
-              <Button
-                title="Remove tab"
-                onClick={this.removeTab}
-              />
+              <Button title="Add tab before" onClick={this.addTabBefore} />
+              <Button title="Add tab after" onClick={this.addTabAfter} />
+              <Button title="Remove tab" onClick={this.removeTab} />
 
               Raw denim flexitarian green juice kinfolk. Umami hammock trust fund everyday carry, woke wolf viral sriracha austin. Fingerstache affogato messenger bag salvia, cray iPhone bushwick blue bottle marfa gentrify dreamcatcher pop-up. Slow-carb etsy enamel pin cronut, raclette post-ironic hashtag. Hoodie dreamcatcher enamel pin lumbersexual before they sold out, authentic selvage tumblr vinyl. Hot chicken chillwave coloring book fixie vice venmo echo park portland. Tote bag master cleanse cronut banjo banh mi pitchfork, celiac photo booth.
 
