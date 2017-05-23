@@ -34,14 +34,6 @@ export class Tabs extends HIGElement {
     }
   }
 
-  unmount() {
-    // no-op
-  }
-
-  commitUpdate(updatePayload, oldProps, newProps) {
-    // no-op
-  }
-
   createElement(ElementConstructor, props) {
     switch (ElementConstructor) {
       case Tab:

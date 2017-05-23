@@ -54,17 +54,25 @@ export class SubNav extends HIGElement {
     }
   }
 
+  removeChild(instance) {
+    if (instance instanceof Tabs) {
+      this.tabs = null;
+    }
+
+    instance.unmount();
+  }
+
   commitUpdate(updatePayload, oldProps, newProp) {
     for (let i = 0; i < updatePayload.length; i += 2) {
       const propKey = updatePayload[i];
-      // const propValue = updatePayload[i + 1];
+      const propValue = updatePayload[i + 1];
 
       switch (propKey) {
         case 'moduleIndicatorName':
-          console.warn('moduleIndicatorName has no method in interface.json');
+          this.hig.setModuleIndicatorName(propValue);
           break;
         case 'moduleIndicatorIcon':
-          console.warn('moduleIndicatorName has no method in interface.json');
+          this.hig.setModuleIndicatorIcon(propValue);
           break;
         case 'children':
           // No-op

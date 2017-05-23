@@ -37,8 +37,7 @@ const Context = props => {
 };
 
 describe('<Tab>', () => {
-
-  it('renders taba', () => {
+  it('renders a tab', () => {
     const initialProps = { label: 'Such Tab', active: false };
     const reactContainer = document.createElement('div');
     const wrapper = mount(<Context {...initialProps} />, { attachTo: reactContainer });
