@@ -39,8 +39,6 @@ Tab._interface = Interface['components']['GlobalNav']['partials']['Container']['
 Tab._defaults = {
     label: 'Tab'
 };
-Tab._partials = {
-    Tab: Tab
-};
+Tab._partials = {};
 
 module.exports = Tab;
