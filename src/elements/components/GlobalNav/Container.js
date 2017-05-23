@@ -90,7 +90,7 @@ export class Container extends HIGElement {
 const ContainerComponent = createComponent(Container);
 
 ContainerComponent.propTypes = {
-  children: HIGChildValidator([TopNav, SubNav, Slot])
+  children: HIGChildValidator([TopNavComponent, SubNavComponent, Slot])
 };
 
 ContainerComponent.__docgenInfo = {

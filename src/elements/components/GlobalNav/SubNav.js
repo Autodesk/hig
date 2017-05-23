@@ -66,6 +66,9 @@ export class SubNav extends HIGElement {
         case 'moduleIndicatorIcon':
           console.warn('moduleIndicatorName has no method in interface.json');
           break;
+        case 'children':
+          // No-op
+          break;
         default: {
           console.warn(`${propKey} is unknown`);
         }

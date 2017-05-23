@@ -68,7 +68,7 @@ function higContext(defaults) {
 describe('<Item>', () => {
   function doStandardChecks(config) {
     it(`sets ${config.key} by default`, () => {
-      const defaults = { [config.key]: [config.sampleValue] };
+      const defaults = { [config.key]: config.sampleValue };
       const { higContainer } = higContext(defaults);
 
       const reactContainer = document.createElement('div');
@@ -85,7 +85,7 @@ describe('<Item>', () => {
     });
 
     it(`updates ${config.key}`, () => {
-      const defaults = { [config.key]: [config.sampleValue] };
+      const defaults = { [config.key]: config.sampleValue };
       const { higItem, higContainer } = higContext(defaults);
 
       const reactContainer = document.createElement('div');
@@ -119,17 +119,17 @@ describe('<Item>', () => {
 
     doStandardChecks(config);
 
-    xit('logs an error if the icon is not a string', () => {
-      global.console.error = jest.fn();
+    // xit('logs an error if the icon is not a string', () => {
+    //   global.console.error = jest.fn();
 
-      mount(<Context icon={[]} />);
+    //   mount(<Context icon={[]} />);
 
-      expect(console.error).toBeCalledWith(
-        expect.stringMatching(
-          /Invalid prop `icon` of type `array` supplied to `Item`, expected `string`./
-        )
-      );
-    });
+    //   expect(console.error).toBeCalledWith(
+    //     expect.stringMatching(
+    //       /Invalid prop `icon` of type `array` supplied to `Item`, expected `string`./
+    //     )
+    //   );
+    // });
   });
 
   describe('title', () => {

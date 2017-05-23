@@ -88,7 +88,7 @@ describe('<Button>', () => {
       attachTo: reactContainer
     });
 
-    higButton.setTitle(null);
+    higButton.setTitle(undefined);
 
     // update to remove the title prop
     wrapper.setProps({ title: undefined });
