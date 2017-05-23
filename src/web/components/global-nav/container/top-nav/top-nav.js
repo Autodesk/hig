@@ -49,7 +49,7 @@ TopNav._defaults = {
 
 TopNav._partials = {
     Profile: Profile
-}
+};
 
 
 module.exports = TopNav;

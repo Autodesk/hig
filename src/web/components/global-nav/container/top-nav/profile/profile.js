@@ -35,8 +35,5 @@ Profile._interface = Interface['components']['GlobalNav']['partials']['Container
 Profile._defaults = {
   image: 'foo.png'
 };
-Profile._partials = {
-  Profile: Profile
-};
 
 module.exports = Profile;
