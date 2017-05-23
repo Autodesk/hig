@@ -6,7 +6,9 @@ exports[`<GlobalNav> can render the Container as a child 1`] = `
     <div class=\\"hig__global-nav__container\\">
     <!--TOPNAV-->
     <!--SUBNAV-->
-    <!--SLOT-->
+    <div class=\\"hig__global-nav__container__slot\\">
+        <!--SLOT-->
+    </div>
 </div><!--CONTAINER-->
 </div>"
 `;

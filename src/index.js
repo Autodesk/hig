@@ -21,7 +21,8 @@ import { Button, GlobalNav } from './react-hig';
 import 'hig.web/dist/hig.css';
 import './index.css';
 
-import logo from './bim-logo.png';
+import logo from './images/bim-logo.png';
+import profileImage from './images/profileImage.png';
 
 const SideNav = GlobalNav.SideNav;
 const SectionList = GlobalNav.SideNav.SectionList;
@@ -30,6 +31,7 @@ const Group = GlobalNav.SideNav.SectionList.Item.Group;
 const Item = GlobalNav.SideNav.SectionList.Item.Group.Item;
 const Container = GlobalNav.Container;
 const TopNav = GlobalNav.Container.TopNav;
+const Profile = GlobalNav.Container.TopNav.Profile;
 const SubNav = GlobalNav.Container.SubNav;
 const Tabs = GlobalNav.Container.SubNav.Tabs;
 const Tab = GlobalNav.Container.SubNav.Tabs.Tab;
@@ -58,6 +60,10 @@ class App extends React.Component {
 
   handleClick = event => {
     this.setState({ open: !this.state.open });
+  };
+
+  profileImageClick = event => {
+    console.log('Profile Image clicked!');
   };
 
   fn1 = () => this.setState({ fn: true });
@@ -138,7 +144,12 @@ class App extends React.Component {
               logo={logo}
               logoLink="http://autodesk.com"
               onHamburgerClick={this.handleClick}
-            />
+            >
+              <Profile
+                image={profileImage}
+                onProfileImageClick={this.profileImageClick}
+              />
+            </TopNav>
             <SubNav
               moduleIndicatorName="Documents Library"
               moduleIndicatorIcon="hamburger"

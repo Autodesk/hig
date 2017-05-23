@@ -55,7 +55,7 @@ const LONG_COPY = (
   </div>
 );
 
-import logo from '../../../bim-logo.png';
+import logo from '../../../images/bim-logo.png';
 
 storiesOf('GlobalNav', module)
   .addWithInfo(

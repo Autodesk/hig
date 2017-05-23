@@ -1,19 +1,19 @@
 /**
- Copyright 2017 Autodesk,Inc.
+Copyright 2016 Autodesk,Inc.
 
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
- http://www.apache.org/licenses/LICENSE-2.0
+    http://www.apache.org/licenses/LICENSE-2.0
 
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 
- */
+*/
 
 import { mount } from 'enzyme';
 import * as HIG from 'hig.web';
@@ -21,65 +21,67 @@ import React from 'react';
 
 import GlobalNav from './GlobalNav';
 import Container from './Container';
-import TopNav from './TopNav'
+import TopNav from './TopNav';
+import Profile from './Profile';
 
 describe('<TopNav>', () => {
+  function createHigNavWithContainer() {
+    const domContainer = document.createElement('div');
+    const higNav = new HIG.GlobalNav();
+    higNav.mount(domContainer);
 
-    //function createHigNavWithContainer() {
-    //  const domContainer = document.createElement('div');
-    //  const higNav = new HIG.GlobalNav();
-    //  higNav.mount(domContainer);
-    //
-    //  const container = new higNav.partials.Container();
-    //  higNav.addContainer(container);
-    //  return { domContainer, container };
-    //}
-    //
-    //// Create the GlobalNav context for the TopNav to be attached to
-    //let Context = props => <GlobalNav>{props.children}</GlobalNav>;
+    const container = new higNav.partials.Container();
+    higNav.addContainer(container);
 
-  //it('renders a topnav', () => {
-  //  const {domContainer, container}  = createHigNavWithContainer();
-  //
-  //  const defaults = { logo: "../../../bim-logo.png", logoLink: "http://www.autodesk.com" }
-  //
-  //  const topNav = new container.partials.TopNav({ ...defaults });
-  //  container.addTopNav(topNav);
-  //
-  //  const reactContainer = document.createElement('div');
-  //  mount(
-  //    <GlobalNav>
-  //      <GlobalNav.Container>
-  //        <TopNav { ...defaults} />
-  //      </GlobalNav.Container>
-  //    </GlobalNav>,
-  //    { attachTo: reactContainer }
-  //  );
-  //
-  //  expect(container.firstElementChild.outerHTML).toMatchSnapshot();
-  //
-  //  expect(container.firstElementChild.outerHTML).toEqual(
-  //    topNavContainer.firstElementChild.outerHTML
-  //  );
-  //
-  //});
+    return { container, domContainer };
+  }
 
-  it('can render the elements', () => {
-    //global.console.error = jest.fn();
+  // Create the GlobalNav context for the TopNav to be attached to
+  let defaults = {
+    logo: '../../../bim-logo.png',
+    logoLink: 'http://www.autodesk.com'
+  };
+  let profileDefaults = { image: '../../../bim-logo.png' };
+
+  it('renders a topnav', () => {
+    const reactContainer = document.createElement('div');
+
     mount(
       <GlobalNav>
         <GlobalNav.Container>
-          <GlobalNav.Container.TopNav>
-          </GlobalNav.Container.TopNav>
+          <TopNav {...defaults}>
+            <Profile {...profileDefaults} />
+          </TopNav>
         </GlobalNav.Container>
-      </GlobalNav>
-    )
+      </GlobalNav>,
+      { attachTo: reactContainer }
+    );
+    expect(reactContainer.firstElementChild.outerHTML).toMatchSnapshot();
+  });
 
-    //expect(console.error).not.toBeCalledWith(
-    //  expect.stringMatching(
-    //    "Warning: Failed prop type: 'TopNav' is not a valid child of Container. Children should be of type ', , Slot'"
-    //  )
-    //);
+  it('contains the correct chidren', () => {
+    const { container, domContainer } = createHigNavWithContainer();
 
-  })
+    const topNav = new container.partials.TopNav({ ...defaults });
+    container.addTopNav(topNav);
+
+    const profile = new topNav.partials.Profile({ ...profileDefaults });
+    topNav.addProfile(profile);
+
+    const reactContainer = document.createElement('div');
+    mount(
+      <GlobalNav>
+        <GlobalNav.Container>
+          <TopNav {...defaults}>
+            <Profile {...profileDefaults} />
+          </TopNav>
+        </GlobalNav.Container>
+      </GlobalNav>,
+      { attachTo: reactContainer }
+    );
+
+    expect(reactContainer.firstElementChild.outerHTML).toEqual(
+      domContainer.firstElementChild.outerHTML
+    );
+  });
 });

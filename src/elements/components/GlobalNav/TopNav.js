@@ -15,13 +15,21 @@ limitations under the License.
 
 */
 import * as PropTypes from 'prop-types';
-import createComponent from '../../../adapters/createComponent';
 import HIGElement from '../../HIGElement';
-
+import HIGChildValidator from '../../HIGChildValidator';
+import createComponent from '../../../adapters/createComponent';
 
 import ProfileComponent, { Profile } from './Profile';
 
 export class TopNav extends HIGElement {
+  componentDidMount() {
+    // Add any children
+    if (this.profile) {
+      this.hig.addProfile(this.profile.hig);
+      this.profile.mount();
+    }
+  }
+
   commitUpdate(updatePayload, oldProps, newProp) {
     for (let i = 0; i < updatePayload.length; i += 2) {
       const propKey = updatePayload[i];
@@ -71,7 +79,7 @@ export class TopNav extends HIGElement {
         this.profile = instance;
         if (this.mounted) {
           this.hig.addProfile(instance.hig);
-          instance.componentDidMount();
+          instance.mount();
         }
       }
     } else {
@@ -99,6 +107,7 @@ TopNavComponent.propTypes = {
   logoLink: PropTypes.string,
   onHamburgerClick: PropTypes.func,
   addProfile: PropTypes.func,
+  children: HIGChildValidator([ProfileComponent])
 };
 
 TopNavComponent.__docgenInfo = {
