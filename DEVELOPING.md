@@ -24,6 +24,14 @@ src/web/components/component123_parent/component123/component123.sass
 src/web/components/component123_parent/component123/component123.js
 ```
 
+## Adding a new icon
+To add a new svg icon to our stack, simply add the `svg` file to the [src/web/basics/icons/src](src/web/basics/icons/src) directory.
+Next run the following command:
+```bash
+npm run build-icons
+```
+which will trigger our build script to create an updated release file in [src/web/basics/icons/release](src/web/basics/icons/release). The build script in itself simply does a `SVGO` optimize of the svg, and stores the optimized svg as a string in a key-value object in our release file, read more about the script here: [src/web/basics/icons/build/build.js](src/web/basics/icons/build/build.js).
+
 ## Running visual regression tests
 
 - Make sure `SAUCE_USERNAME` and `SAUCE_ACCESS_KEY` are set in `/.env`.
