@@ -18,7 +18,7 @@ class Profile extends Core {
   }
 
   // bind the supplied fn to click events on this element.
-  onClick(fn) {
+  onProfileImageClick(fn) {
     return this._attachListener("click", this.el, this.el, fn);
   }
 
@@ -33,7 +33,7 @@ class Profile extends Core {
 
 Profile._interface = Interface['components']['GlobalNav']['partials']['Container']['partials']['TopNav']['partials']['Profile'];
 Profile._defaults = {
-  image: 'foo.png'
+  image: 'https://placekitten.com/g/50/50'
 };
 
 module.exports = Profile;
