@@ -33,7 +33,7 @@ export class Tab extends HIGElement {
 
       switch (propKey) {
         case 'label':
-          this.hig.setTabel(propValue);
+          this.hig.setLabel(propValue);
           break;
         case 'active':
           if (propValue) {
