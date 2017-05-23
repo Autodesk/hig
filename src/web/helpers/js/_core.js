@@ -122,11 +122,10 @@ class Core {
     }
 
     /**
-     * Inserts a partial child into the DOM at a specified comment. If beforeChild is specified the HIG Element should be inserted before that.
-     * If string, this is a CSS selector if more than one element matches it takes the first
+     * Inserts a partial child into the DOM at a specified comment. 
+     * @param {String} searchComment - HTML comment to target
+     * @param {HIGComponent} mountNode - HIG Component to attach to DOM
      * @param {String | HTMLElement | null} scopeNode - if defined will limit search inside of this element
-     * @param {String | HTMLElement} mountNode - CSS selector or HTMLElement where to mount
-     * @param {String | HTMLElement | null} beforeChild - if defined will use beforeChild instead of appendChild
      * @returns {HTMLElement} el - HTMLElement that is mounted to DOM
      */
 
