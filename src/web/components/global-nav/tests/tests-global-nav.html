@@ -109,6 +109,13 @@
             TopNav.setLogo("bim-logo.png"); // Update logo
             TopNav.setLogoLink("http://autodesk.com"); // update logo link
 
+            // CREATE PROFILE
+            var MyProfile1 = new TopNav.partials.Profile({
+                image: "egg.jpg"
+            });
+
+            TopNav.addProfile(MyProfile1);
+
             // HAMBURGER OPENS/CLOSES SideNav
             var menu_open = false;
             TopNav.onHamburgerClick(function(e){
