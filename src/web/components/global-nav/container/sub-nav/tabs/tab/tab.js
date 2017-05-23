@@ -23,7 +23,7 @@ class Tab extends Core {
 
     setLabel(label) {
         this.el.textContent = label;
-        this.el.setAttr('label', label);
+        this.el.setAttribute("title", label);
     }
 
     activate() {
