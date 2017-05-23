@@ -40,29 +40,54 @@ const Context = props => {
 
 describe('<SubNav>', () => {
   it('renders with props', () => {
-    const defaultProps = { moduleIndicatorName: 'Documents Library', moduleIndicatorIcon: 'hamburger', Tabs: null };
+    const defaultProps = {
+      moduleIndicatorName: 'Documents Library',
+      moduleIndicatorIcon: 'hamburger',
+      Tabs: null
+    };
     const reactContainer = document.createElement('div');
-    const wrapper = mount(<Context {...defaultProps} />, { attachTo: reactContainer });
+    const wrapper = mount(<Context {...defaultProps} />, {
+      attachTo: reactContainer
+    });
 
     expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
   });
 
   it('updates props', () => {
-    const defaultProps = { moduleIndicatorName: 'Documents Library', moduleIndicatorIcon: 'hamburger', Tabs: null };
-    const updatedProps = { ...defaultProps, moduleIndicatorName: 'Projects Library', moduleIndicatorIcon: 'project-management' };
+    const defaultProps = {
+      moduleIndicatorName: 'Documents Library',
+      moduleIndicatorIcon: 'hamburger',
+      Tabs: null
+    };
+    const updatedProps = {
+      ...defaultProps,
+      moduleIndicatorName: 'Projects Library',
+      moduleIndicatorIcon: 'project-management'
+    };
     const reactContainer = document.createElement('div');
-    const wrapper = mount(<Context {...defaultProps} />, { attachTo: reactContainer });
+    const wrapper = mount(<Context {...defaultProps} />, {
+      attachTo: reactContainer
+    });
 
     wrapper.setProps(updatedProps);
     expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
   });
 
   it('adds and removes tabs', () => {
-    const defaultProps = { moduleIndicatorName: 'Documents Library', moduleIndicatorIcon: 'hamburger', Tabs: null };
-    const updatedProps1 = { ...defaultProps, Tabs: <Tabs><Tab label="Things" /></Tabs> };
+    const defaultProps = {
+      moduleIndicatorName: 'Documents Library',
+      moduleIndicatorIcon: 'hamburger',
+      Tabs: null
+    };
+    const updatedProps1 = {
+      ...defaultProps,
+      Tabs: <Tabs><Tab label="Things" /></Tabs>
+    };
     const updatedProps2 = { ...defaultProps, Tabs: null };
     const reactContainer = document.createElement('div');
-    const wrapper = mount(<Context {...defaultProps} />, { attachTo: reactContainer });
+    const wrapper = mount(<Context {...defaultProps} />, {
+      attachTo: reactContainer
+    });
 
     wrapper.setProps(updatedProps1);
     expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
@@ -70,5 +95,4 @@ describe('<SubNav>', () => {
     wrapper.setProps(updatedProps2);
     expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
   });
-
 });

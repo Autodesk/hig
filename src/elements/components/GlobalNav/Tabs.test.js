@@ -28,7 +28,7 @@ const Context = props => {
       <GlobalNav.Container>
         <GlobalNav.Container.SubNav>
           <Tabs>
-            {props.tabs.map(label => <Tab key={label} label={label}></Tab>)}
+            {props.tabs.map(label => <Tab key={label} label={label} />)}
           </Tabs>
         </GlobalNav.Container.SubNav>
       </GlobalNav.Container>
@@ -37,11 +37,12 @@ const Context = props => {
 };
 
 describe('<Tabs>', () => {
-
   it('renders tabs', () => {
     const tabs = ['Hello', 'World'];
     const reactContainer = document.createElement('div');
-    const wrapper = mount(<Context tabs={tabs} />, { attachTo: reactContainer });
+    const wrapper = mount(<Context tabs={tabs} />, {
+      attachTo: reactContainer
+    });
 
     expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
   });
@@ -50,9 +51,11 @@ describe('<Tabs>', () => {
     const initialTabs = ['Hello', 'World'];
     const updatedTabs = ['Well', 'Hello', 'World', '!'];
     const reactContainer = document.createElement('div');
-    const wrapper = mount(<Context tabs={initialTabs} />, { attachTo: reactContainer });
+    const wrapper = mount(<Context tabs={initialTabs} />, {
+      attachTo: reactContainer
+    });
 
-    wrapper.setProps({ tabs: updatedTabs })
+    wrapper.setProps({ tabs: updatedTabs });
 
     expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
   });
@@ -61,9 +64,11 @@ describe('<Tabs>', () => {
     const initialTabs = ['Hello', 'World'];
     const updatedTabs = ['World'];
     const reactContainer = document.createElement('div');
-    const wrapper = mount(<Context tabs={initialTabs} />, { attachTo: reactContainer });
+    const wrapper = mount(<Context tabs={initialTabs} />, {
+      attachTo: reactContainer
+    });
 
-    wrapper.setProps({ tabs: updatedTabs })
+    wrapper.setProps({ tabs: updatedTabs });
 
     expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
   });

@@ -28,7 +28,7 @@ const Context = props => {
       <GlobalNav.Container>
         <GlobalNav.Container.SubNav>
           <Tabs>
-            <Tab active={props.active} label={props.label}></Tab>
+            <Tab active={props.active} label={props.label} />
           </Tabs>
         </GlobalNav.Container.SubNav>
       </GlobalNav.Container>
@@ -40,7 +40,9 @@ describe('<Tab>', () => {
   it('renders a tab', () => {
     const initialProps = { label: 'Such Tab', active: false };
     const reactContainer = document.createElement('div');
-    const wrapper = mount(<Context {...initialProps} />, { attachTo: reactContainer });
+    const wrapper = mount(<Context {...initialProps} />, {
+      attachTo: reactContainer
+    });
 
     expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
   });
@@ -49,9 +51,11 @@ describe('<Tab>', () => {
     const initialProps = { label: 'Such Tab', active: false };
     const updatedProps = { label: 'Many Tab', active: true };
     const reactContainer = document.createElement('div');
-    const wrapper = mount(<Context {...initialProps} />, { attachTo: reactContainer });
+    const wrapper = mount(<Context {...initialProps} />, {
+      attachTo: reactContainer
+    });
 
-    wrapper.setProps(updatedProps)
+    wrapper.setProps(updatedProps);
 
     expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
   });
