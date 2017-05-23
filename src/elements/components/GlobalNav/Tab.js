@@ -42,22 +42,8 @@ export class Tab extends HIGElement {
             this.hig.deactivate();
           }
           break;
-        case 'onClick': {
-          const dispose = this._disposeFunctions.get('onClickDispose');
-
-          if (dispose) {
-            dispose();
-          }
-
-          this._disposeFunctions.set(
-            'onClickDispose',
-            this.hig.onClick(propValue)
-          );
-          break;
-        }
-
         default: {
-          console.warn(`${propKey} is unknown`);
+          this.commitPropChange(propKey, propValue);
         }
       }
     }
