@@ -11,8 +11,9 @@
     "gemini": "concurrently 'http-server' 'gemini test gemini/*' --kill-others",
     "gemini-report": "concurrently 'http-server' 'gemini test gemini/* --reporter html --reporter flat' --kill-others",
     "gemini-update": "concurrently 'http-server' 'gemini update gemini/*' --kill-others",
+    "gemini-ci": "gemini test gemini/*",
     "test": "npm run gemini",
-    "test-ci": "npm run gemini"
+    "test-ci": "npm run gemini-ci"
   },
   "repository": {
     "type": "git",

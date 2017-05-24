@@ -4,5 +4,7 @@ machine:
 test:
   pre:
     - npm run build
+    - http-server:
+        background: true
   override:
     - npm run test-ci
