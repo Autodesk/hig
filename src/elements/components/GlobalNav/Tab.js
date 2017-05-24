@@ -16,7 +16,6 @@ limitations under the License.
 */
 import createComponent from '../../../adapters/createComponent';
 import HIGElement from '../../HIGElement';
-import HIGChildValidator from '../../HIGChildValidator';
 import PropTypes from 'prop-types';
 
 export class Tab extends HIGElement {
