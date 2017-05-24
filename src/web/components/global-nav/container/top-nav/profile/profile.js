@@ -19,7 +19,7 @@ class Profile extends Core {
 
   // bind the supplied fn to click events on this element.
   onProfileImageClick(fn) {
-    return this._attachListener("click", '.hig__global-nav__profile', this.el, fn);
+    return this._attachListener("click", '.hig__global-nav__profile__image-wrapper', this.el, fn);
   }
 
   setImage(imageURL) {
