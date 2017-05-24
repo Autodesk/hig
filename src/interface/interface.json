@@ -221,7 +221,7 @@
                             "partials":{
                                 "Profile": {
                                     "methods": {
-                                        "onClick": "HIG.abstract.EventObject",
+                                        "onProfileImageClick": "HIG.abstract.EventObject",
                                         "setImage": {
                                             "desc": "sets the image",
                                             "params": [

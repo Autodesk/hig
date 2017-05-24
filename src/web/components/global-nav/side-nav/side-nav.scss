@@ -1,8 +1,10 @@
 @import '~basics/colors/colors.scss';
+@import '../../../helpers/css/mixins.scss';
 
 $hig__global-nav__sidenav--width: 280px;
 
 .hig__global-nav__sidenav{
+    @include reset;
     position: absolute;
     top: 0;
     left: 0;

@@ -4,6 +4,11 @@
         <script type="text/javascript" src="../../../../../dist/hig.js"></script>
     </head>
     <body>
+        <style>
+            .hig__global-nav__container__slot > div {
+                font-family: 'ArtifaktElement';
+            }
+        </style>
 
         <script>
 
@@ -115,6 +120,8 @@
             });
 
             TopNav.addProfile(MyProfile1);
+
+            MyProfile1.onProfileImageClick(function(e){ alert('testing')});
 
             // HAMBURGER OPENS/CLOSES SideNav
             var menu_open = false;
