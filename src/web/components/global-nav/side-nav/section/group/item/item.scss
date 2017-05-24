@@ -1,6 +1,8 @@
 @import '../../../../../../basics/colors/colors.scss';
+@import '../../../../../../helpers/css/mixins.scss';
 
 .hig__global-nav__side-nav__section__group__item{
+    @include clearfix;
     
     padding: 10px 0;
 

@@ -1,6 +1,9 @@
 @import '~basics/colors/colors.scss';
+@import '../../../../helpers/css/mixins.scss';
 
 .hig__global-nav__container__sub-nav{
+    @include reset;
+
     background: $background-2;
     height: 54px;
     line-height: 54px;

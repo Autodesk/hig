@@ -1,5 +1,5 @@
 gemini.suite('tabs', (parent) => {
-  parent.setUrl('src/web/components/global-nav/tests/tests-global-nav-with-tabs.html');
+  parent.setUrl('src/web/components/global-nav/tests/tests-global-nav.html');
 
   gemini.suite('tabs', (suite) => {
     suite.setCaptureElements('.hig__global-nav__sub-nav__tabs')

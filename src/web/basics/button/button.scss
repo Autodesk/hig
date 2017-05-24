@@ -1,8 +1,8 @@
-@import '../../helpers/css/_normalize.scss';
-@import '../../helpers/css/_helpers.scss';
+@import '../../helpers/css/mixins.scss';
 
 .hig__button{
     padding: 5px;
     color: #fff;
     background: #000;
+    @include reset;
 }

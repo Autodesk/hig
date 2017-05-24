@@ -1,4 +1,7 @@
+@import '../../../../../helpers/css/mixins';
+
 .hig__global-nav__sub-nav__tabs {
+    @include reset;
     flex-grow: 1;
     display: flex;
     justify-content: center;
