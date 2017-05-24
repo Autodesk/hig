@@ -1,0 +1,8 @@
+machine:
+  node:
+    version: 7.8.0
+test:
+  pre:
+    - npm run build
+  override:
+    - npm run test-ci
