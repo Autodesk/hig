@@ -19,15 +19,65 @@ limitations under the License.
  * Makes it simple to manage a list of child nodes within a react-hig element
  */
 export default class HIGNodeList {
-  constructor() {
+  constructor({ type, HIGConstructor, onAdd }) {
+    if (!type) {
+      throw new Error('type is required');
+    }
+
+    if (!HIGConstructor) {
+      throw new Error('HIGConstructor is required');
+    }
+
+    if (!onAdd) {
+      throw new Error('onInsert is required');
+    }
+
+    /**
+     * This is the constructor function for the HIGElement
+     */
+    this.type = type;
+
+    /**
+     * This is the constructor function for the hig.web partial
+     */
+    this.HIGConstructor = HIGConstructor;
+
+    /**
+     * This is a function which calls the hig add* method. It takes two hig instances
+     */
+    this.onAdd = onAdd;
+
     this.nodes = [];
+    this.mounted = false;
   }
 
-  appendChild(node) {
+  insertBefore(instance, insertBeforeIndex) {
+    if (!(instance instanceof this.type)) {
+      throw new Error(`unknown type ${instance}`);
+    }
+
+    // Update the model
+    const beforeChild = this._item(insertBeforeIndex);
+
+    if (beforeChild) {
+      this._insertBefore(instance, beforeChild);
+    } else {
+      this._appendChild(instance);
+    }
+
+    if (this.mounted) {
+      if (beforeChild) {
+        this.onAdd(instance.hig, beforeChild.hig);
+      } else {
+        this.onAdd(instance.hig);
+      }
+    }
+  }
+  _appendChild(node) {
     this.nodes.push(node);
   }
 
-  insertBefore(node, beforeNode) {
+  _insertBefore(node, beforeNode) {
     const index = this.nodes.indexOf(beforeNode);
     this.nodes.splice(index, 0, node);
   }
@@ -35,21 +85,28 @@ export default class HIGNodeList {
   removeChild(node) {
     const index = this.nodes.indexOf(node);
     this.nodes.splice(index, 1);
+    node.unmount();
   }
 
-  item(index) {
+  _item(index) {
     return this.nodes[index];
   }
 
-  [Symbol.iterator]() {
-    var nextIndex = 0;
+  componentDidMount() {
+    this.nodes.forEach(node => {
+      this.onAdd(node.hig);
+      node.mount();
+    });
 
-    return {
-      next: () => {
-        return nextIndex < this.nodes.length
-          ? { value: this.nodes[nextIndex++], done: false }
-          : { done: true };
-      }
-    };
+    this.mounted = true;
+  }
+
+  createElement(ElementConstructor, props) {
+    switch (ElementConstructor) {
+      case this.type:
+        return new this.type(this.HIGConstructor, props);
+      default:
+        throw new Error(`Unknown type ${ElementConstructor.name}`);
+    }
   }
 }

@@ -24,16 +24,17 @@ import SectionComponent, { Section } from './Section';
 export class SectionList {
   constructor(higInstance) {
     this.hig = higInstance;
-    this.sections = new HIGNodeList();
+    this.sections = new HIGNodeList({
+      type: Section,
+      HIGConstructor: this.hig.partials.Section,
+      onAdd: (instance, beforeInstance) => {
+        this.hig.addSection(instance, beforeInstance);
+      }
+    });
   }
 
   mount() {
-    this.mounted = true;
-
-    for (let instance of this.sections) {
-      this.hig.addSection(instance.hig);
-      instance.mount();
-    }
+    this.sections.componentDidMount();
   }
 
   unmount() {
@@ -45,37 +46,15 @@ export class SectionList {
   }
 
   createElement(ElementConstructor, props) {
-    switch (ElementConstructor) {
-      case Section:
-        return new Section(this.hig.partials.Section, props);
-      default:
-        throw new Error(`Unknown type ${ElementConstructor.name}`);
-    }
-  }
-
-  appendChild(instance) {
-    if (instance instanceof Section) {
-      this.sections.appendChild(instance);
-
-      if (this.mounted) {
-        this.hig.addSection(instance.hig);
-        instance.mount();
-      }
-    } else {
-      throw new Error(`unknown type ${instance}`);
-    }
+    return this.sections.createElement(ElementConstructor, props);
   }
 
   insertBefore(instance, insertBeforeIndex) {
-    const beforeChild = this.sections.item(insertBeforeIndex);
-    this.sections.insertBefore(instance, beforeChild);
-    this.hig.addSection(instance.hig, beforeChild.hig);
-    instance.mount();
+    this.sections.insertBefore(instance, insertBeforeIndex);
   }
 
   removeChild(instance) {
     this.sections.removeChild(instance);
-    instance.unmount();
   }
 }
 

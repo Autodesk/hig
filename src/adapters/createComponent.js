@@ -40,28 +40,23 @@ export default function createComponent(ElementConstructor) {
     componentDidMount() {
       this._mount = this._el.parentNode;
 
-      this._anchor = document.createComment(`${displayName}-anchor`);
-
       if (!this._mount) {
         throw new Error(
           `can only mount if there is a parentNode: ${displayName}`
         );
       }
 
-      this._mount.replaceChild(this._anchor, this._el);
-
       if (!this.context.parent) {
+        // Top level component
+        this._anchor = document.createComment(`${displayName}-anchor`);
+        this._mount.replaceChild(this._anchor, this._el);
         this.instance.mount(this._mount, this._anchor);
       } else {
         const insertBeforeIndex = Array.from(
-          this._anchor.parentNode.childNodes
-        ).indexOf(this._anchor);
+          this._el.parentNode.childNodes
+        ).indexOf(this._el);
 
-        if (
-          this._anchor.nextSibling &&
-          this._anchor.nextSibling.nodeType ===
-            this._anchor.nextSibling.COMMENT_NODE
-        ) {
+        if (this.context.parent.insertBefore) {
           this.context.parent.insertBefore(this.instance, insertBeforeIndex);
         } else {
           this.context.parent.appendChild(this.instance);
@@ -70,12 +65,11 @@ export default function createComponent(ElementConstructor) {
     }
 
     componentWillUnmount() {
-      this._mount.replaceChild(this._el, this._anchor);
-
-      if (this.context.parent) {
-        this.context.parent.removeChild(this.instance);
-      } else {
+      if (!this.context.parent) {
+        this._mount.replaceChild(this._el, this._anchor);
         this.instance.unmount();
+      } else {
+        this.context.parent.removeChild(this.instance);
       }
     }
 
@@ -98,7 +92,7 @@ export default function createComponent(ElementConstructor) {
     }
 
     getChildContext() {
-      if (this.instance.appendChild) {
+      if (this.instance) {
         return {
           parent: this.instance
         };
@@ -123,15 +117,11 @@ export default function createComponent(ElementConstructor) {
   Adapter.displayName = displayName;
 
   Adapter.contextTypes = {
-    parent: PropTypes.shape({
-      appendChild: PropTypes.func
-    })
+    parent: PropTypes.object
   };
 
   Adapter.childContextTypes = {
-    parent: PropTypes.shape({
-      appendChild: PropTypes.func
-    })
+    parent: PropTypes.object
   };
 
   return Adapter;

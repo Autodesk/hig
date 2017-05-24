@@ -49,7 +49,7 @@ describe('<Tabs>', () => {
 
   it('adds tabs', () => {
     const initialTabs = ['Hello', 'World'];
-    const updatedTabs = ['Well', 'Hello', 'World', '!'];
+    const updatedTabs = ['Hello', 'There', 'World', '!'];
     const reactContainer = document.createElement('div');
     const wrapper = mount(<Context tabs={initialTabs} />, {
       attachTo: reactContainer

@@ -25,14 +25,17 @@ import GroupComponent, { Group } from './Group';
 export class Section extends HIGElement {
   constructor(HIGConstructor, initialProps) {
     super(HIGConstructor, initialProps);
-    this.groups = new HIGNodeList();
+    this.groups = new HIGNodeList({
+      type: Group,
+      HIGConstructor: this.hig.partials.Group,
+      onAdd: (instance, beforeInstance) => {
+        this.hig.addGroup(instance, beforeInstance);
+      }
+    });
   }
 
   componentDidMount() {
-    for (let instance of this.groups) {
-      this.hig.addGroup(instance.hig);
-      instance.mount();
-    }
+    this.groups.componentDidMount();
   }
 
   commitUpdate(updatePayload, oldProps, newProp) {
@@ -58,37 +61,15 @@ export class Section extends HIGElement {
   }
 
   createElement(ElementConstructor, props) {
-    switch (ElementConstructor) {
-      case Group:
-        return new Group(this.hig.partials.Group, props);
-      default:
-        throw new Error(`Unknown type ${ElementConstructor.name}`);
-    }
-  }
-
-  appendChild(instance) {
-    if (instance instanceof Group) {
-      this.groups.appendChild(instance);
-
-      if (this.mounted) {
-        this.hig.addGroup(instance.hig);
-        instance.mount();
-      }
-    } else {
-      throw new Error(`unknown type ${instance}`);
-    }
+    return this.groups.createElement(ElementConstructor, props);
   }
 
   insertBefore(instance, insertBeforeIndex) {
-    const beforeChild = this.groups.item(insertBeforeIndex);
-    this.groups.insertBefore(instance, beforeChild);
-    this.hig.addGroup(instance.hig, beforeChild.hig);
-    instance.mount();
+    this.groups.insertBefore(instance, insertBeforeIndex);
   }
 
   removeChild(instance) {
     this.groups.removeChild(instance);
-    instance.unmount();
   }
 }
 

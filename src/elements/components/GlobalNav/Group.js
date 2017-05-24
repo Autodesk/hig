@@ -23,49 +23,29 @@ import ItemComponent, { Item } from './Item';
 export class Group extends HIGElement {
   constructor(HIGConstructor, initialProps) {
     super(HIGConstructor, initialProps);
-    // items that get appended before mounting
-    this.items = new HIGNodeList();
+    this.items = new HIGNodeList({
+      type: Item,
+      HIGConstructor: this.hig.partials.Item,
+      onAdd: (instance, beforeInstance) => {
+        this.hig.addItem(instance, beforeInstance);
+      }
+    });
   }
 
   componentDidMount() {
-    for (let instance of this.items) {
-      this.hig.addItem(instance.hig);
-      instance.mount();
-    }
+    this.items.componentDidMount();
   }
 
   createElement(ElementConstructor, props) {
-    switch (ElementConstructor) {
-      case Item:
-        return new Item(this.hig.partials.Item, props);
-      default:
-        throw new Error(`Unknown type ${ElementConstructor.name}`);
-    }
-  }
-
-  appendChild(instance) {
-    if (instance instanceof Item) {
-      this.items.appendChild(instance);
-
-      if (this.mounted) {
-        this.hig.addItem(instance.hig);
-        instance.mount();
-      }
-    } else {
-      throw new Error('unknown type');
-    }
+    return this.items.createElement(ElementConstructor, props);
   }
 
   insertBefore(instance, insertBeforeIndex) {
-    const beforeChild = this.items.item(insertBeforeIndex);
-    this.items.insertBefore(instance, beforeChild);
-    this.hig.addItem(instance.hig, beforeChild.hig);
-    instance.mount();
+    this.items.insertBefore(instance, insertBeforeIndex);
   }
 
   removeChild(instance) {
     this.items.removeChild(instance);
-    instance.unmount();
   }
 }
 

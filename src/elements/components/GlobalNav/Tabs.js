@@ -25,51 +25,29 @@ import TabComponent, { Tab } from './Tab';
 export class Tabs extends HIGElement {
   constructor(HigContructor, initialProps) {
     super(HigContructor, initialProps);
-    this.tabs = new HIGNodeList();
+    this.tabs = new HIGNodeList({
+      type: Tab,
+      HIGConstructor: this.hig.partials.Tab,
+      onAdd: (instance, beforeInstance) => {
+        this.hig.addTab(instance, beforeInstance);
+      }
+    });
   }
 
   componentDidMount() {
-    for (let instance of this.tabs) {
-      this.hig.addTab(instance.hig);
-      instance.mount();
-    }
+    this.tabs.componentDidMount();
   }
 
   createElement(ElementConstructor, props) {
-    switch (ElementConstructor) {
-      case Tab:
-        return new Tab(this.hig.partials.Tab, props);
-      case 'children':
-        /* no-op */
-        break;
-      default:
-        throw new Error(`Unknown type ${ElementConstructor.name}`);
-    }
-  }
-
-  appendChild(instance) {
-    if (instance instanceof Tab) {
-      this.tabs.appendChild(instance);
-
-      if (this.mounted) {
-        this.hig.addTab(instance.hig);
-        instance.mount();
-      }
-    } else {
-      throw new Error(`unknown type ${instance}`);
-    }
+    return this.tabs.createElement(ElementConstructor, props);
   }
 
   insertBefore(instance, insertBeforeIndex) {
-    const beforeChild = this.tabs.item(insertBeforeIndex);
-    this.tabs.insertBefore(instance, beforeChild);
-    this.hig.addTab(instance.hig, beforeChild.hig);
-    instance.mount();
+    this.tabs.insertBefore(instance, insertBeforeIndex);
   }
 
   removeChild(instance) {
     this.tabs.removeChild(instance);
-    instance.unmount();
   }
 }
 

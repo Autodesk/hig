@@ -23,16 +23,17 @@ import LinkComponent, { Link } from './Link';
 export class LinkList {
   constructor(higInstance) {
     this.hig = higInstance;
-    this.links = new HIGNodeList();
+    this.links = new HIGNodeList({
+      type: Link,
+      HIGConstructor: this.hig.partials.Link,
+      onAdd: (instance, beforeInstance) => {
+        this.hig.addLink(instance, beforeInstance);
+      }
+    });
   }
 
   mount() {
-    this.mounted = true;
-
-    for (let instance of this.links) {
-      this.hig.addSection(instance.hig);
-      instance.mount();
-    }
+    this.links.componentDidMount();
   }
 
   unmount() {
@@ -44,38 +45,15 @@ export class LinkList {
   }
 
   createElement(ElementConstructor, props) {
-    switch (ElementConstructor) {
-      case Link:
-        return new Link(this.hig.partials.Link, props);
-      default:
-        throw new Error(`Unknown type ${ElementConstructor.name}`);
-    }
-  }
-
-  appendChild(instance) {
-    if (instance instanceof Link) {
-      this.links.appendChild(instance);
-
-      if (this.mounted) {
-        this.hig.addLink(instance.hig);
-        instance.mount();
-      }
-    } else {
-      throw new Error(`unknown type ${instance}`);
-    }
+    return this.links.createElement(ElementConstructor, props);
   }
 
   insertBefore(instance, insertBeforeIndex) {
-    const beforeChild = this.links.item(insertBeforeIndex);
-    this.links.insertBefore(instance, beforeChild);
-    this.hig.addLink(instance.hig, beforeChild.hig);
-    instance.mount();
+    this.links.insertBefore(instance, insertBeforeIndex);
   }
 
   removeChild(instance) {
-    const index = this.links.indexOf(instance);
-    this.links.splice(index, 1);
-    instance.unmount();
+    this.links.removeChild(instance);
   }
 }
 
