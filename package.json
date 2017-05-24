@@ -47,10 +47,26 @@
     "playground": "react-scripts start",
     "start": "npm run lib -- --watch",
     "test": "react-scripts test --env=jsdom",
-    "test-ci": "react-scripts test --env=jsdom --coverage --collectCoverageFrom=src/**/*.{ts,tsx}",
+    "test-ci": "react-scripts test --env=jsdom --coverage",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public -o build/storybook",
     "type-check": "tsc"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "jest": {
+    "collectCoverageFrom": [
+      "!src/index.js",
+      "src/**/*.{js,jsx}",
+      "!src/**/*.story.{js,jsx}",
+      "!**/node_modules/**"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 60,
+        "functions": 60,
+        "lines": 60,
+        "statements": 60
+      }
+    }
+  }
 }
