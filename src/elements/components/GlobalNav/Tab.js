@@ -16,6 +16,8 @@ limitations under the License.
 */
 import createComponent from '../../../adapters/createComponent';
 import HIGElement from '../../HIGElement';
+import HIGChildValidator from '../../HIGChildValidator';
+import PropTypes from 'prop-types';
 
 export class Tab extends HIGElement {
   componentDidMount() {
@@ -51,5 +53,18 @@ export class Tab extends HIGElement {
 }
 
 const TabComponent = createComponent(Tab);
+
+TabComponent.propTypes = {
+  active: PropTypes.bool,
+  label: PropTypes.string
+};
+
+TabComponent.__docgenInfo = {
+  props: {
+    children: {
+      description: 'support adding Tab components'
+    }
+  }
+};
 
 export default TabComponent;

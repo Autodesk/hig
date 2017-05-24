@@ -17,6 +17,7 @@ limitations under the License.
 import createComponent from '../../../adapters/createComponent';
 import HIGElement from '../../HIGElement';
 import HIGNodeList from '../../HIGNodeList';
+import HIGChildValidator from '../../HIGChildValidator';
 
 import TabComponent, { Tab } from './Tab';
 
@@ -48,11 +49,11 @@ export class Tabs extends HIGElement {
 
   appendChild(instance) {
     if (instance instanceof Tab) {
+      this.tabs.appendChild(instance);
+
       if (this.mounted) {
         this.hig.addTab(instance.hig);
         instance.mount();
-      } else {
-        this.tabs.appendChild(instance);
       }
     } else {
       throw new Error(`unknown type ${instance}`);
@@ -67,11 +68,24 @@ export class Tabs extends HIGElement {
   }
 
   removeChild(instance) {
+    this.tabs.removeChild(instance);
     instance.unmount();
   }
 }
 
 const TabsComponent = createComponent(Tabs);
+
+TabsComponent.propTypes = {
+  children: HIGChildValidator([TabComponent])
+};
+
+TabsComponent.__docgenInfo = {
+  props: {
+    children: {
+      description: 'support adding Tab components'
+    }
+  }
+};
 
 TabsComponent.Tab = TabComponent;
 
