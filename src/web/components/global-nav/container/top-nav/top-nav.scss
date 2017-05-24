@@ -1,8 +1,11 @@
 @import '~basics/colors/colors.scss';
+@import '~helpers/css/mixins.scss';
 
 $group-height: 56px;
 
 .hig__global-nav__container__top-nav{
+    @include reset;
+
     position: relative;
     background: $background-1;
     height: $group-height;
