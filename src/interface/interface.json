@@ -42,7 +42,13 @@
                 },
                 "onClickOutside": "HIG.abstract.EventObject",
                 "addSlot": {
-                    "desc": "Pass in any HTMLElement you want",
+                    "desc": "Content for the flyout",
+                    "params": [
+                        "{HTMLElement} HTMLElement"
+                    ]
+                },
+                "addTarget": {
+                    "desc": "Flyout will be positioned relative to this element",
                     "params": [
                         "{HTMLElement} HTMLElement"
                     ]

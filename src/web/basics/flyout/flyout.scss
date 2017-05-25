@@ -1,22 +1,48 @@
-@import '../../helpers/css/mixins.scss';
 @import '../../basics/colors/colors.scss';
 
 .hig__flyout {
-    @include reset;
-    position: absolute;
-    display: none;
-    right: 0;
-
-    &.hig__flyout--open {
-        display: block;
-    }
+    position: relative;
+    display: inline-block;
 }
 
 .hig__flyout__container {
-    width: 280px;
+    position: absolute;
+    display: none;
+    right: 0;
+    max-width: 280px;
+    padding: 20px;
+    margin-top: 6px;
+
     background-color: $background-1;
     border: 1px solid $gray-c;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-    padding: 20px;
+
+    .hig__flyout--open > & {
+        display: block;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: -10px;
+        right: 20px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 10px 10px 10px;
+        border-color: transparent transparent white transparent;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -12px;
+        right: 19px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 11px 11px 11px;
+        border-color: transparent transparent $gray-c transparent;
+    }
 }

@@ -34,6 +34,10 @@ class Flyout extends Core {
         this.mountPartialToComment('SLOT', slotElement);
     }
 
+    addTarget(targetElement){
+        this.mountPartialToComment('TARGET', targetElement);
+    }
+
     _callbackIfClickOutside(callback, event) {
         if (this.el.contains(event.target) || this.el === event.target) { return }
         if (this.el.classList.contains(OPEN_CLASS)) {

@@ -4,27 +4,29 @@
         <script type="text/javascript" src="/dist/hig.js"></script>
     </head>
     <body>
-        <div class='testContainer' style="padding: 40px; margin: 0;">
-            <div class="wrapper" style="display: inline-block; position: relative;"></div>
-        </div>
+        <div class='testContainer' style="padding: 40px; margin: 0; display: flex; justify-content: flex-end;"></div>
         <script>
-            var button = new Hig.Button({
-                "title": "Open flyout"
-            });
-            button.mount(".wrapper");
 
             var flyout = new Hig.Flyout();
-            flyout.mount(".wrapper");
+            flyout.mount('.testContainer');
+
             var flyoutContent = document.createElement('div');
             flyoutContent.textContent = "Hello, world!";
             flyout.addSlot(flyoutContent);
+
             flyout.onClickOutside(() => {
                 flyout.close();
             });
 
+            var button = new Hig.Button({
+                "title": "Open flyout"
+            });
+
+            flyout.addTarget(button);
             button.onClick(function(e){
                 flyout.open();
             });
+
         </script>
     </body>
 </html>
