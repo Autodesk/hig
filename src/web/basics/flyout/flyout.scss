@@ -1,0 +1,11 @@
+@import '../../helpers/css/mixins.scss';
+
+.hig__flyout {
+    @include reset;
+    position: absolute;
+    display: none;
+
+    &.hig__flyout--open {
+        display: block;
+    }
+}

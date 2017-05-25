@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/dist/hig.css">
+        <script type="text/javascript" src="/dist/hig.js"></script>
+    </head>
+    <body>
+        <div class='testContainer' style="padding: 40px; margin: 0;"></div>
+
+        <script>
+            var button = new Hig.Button({
+                "title": "Open flyout"
+            });
+            button.mount(".testContainer");
+
+            var flyout = new Hig.Flyout();
+            flyout.mount(".testContainer");
+            var flyoutContent = document.createElement('div');
+            flyoutContent.textContent = "Hello, world!";
+            flyout.addSlot(flyoutContent);
+
+            button.onClick(function(e){
+                flyout.open();
+            });
+        </script>
+    </body>
+</html>
