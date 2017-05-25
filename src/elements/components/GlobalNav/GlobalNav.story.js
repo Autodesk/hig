@@ -343,4 +343,28 @@ storiesOf('GlobalNav', module)
         </Slot>
       </GlobalNav>
     );
+  })
+  .addWithInfo('w Tabs', ``, () => {
+    const options = {
+      Audience: 'Audience',
+      Acquisition: 'Acquisition',
+      Behavior: 'Behavior'
+    };
+    const activeTab = select('Active Tab', options, 'Audience');
+
+    return (
+      <GlobalNav>
+        <Container>
+          <TopNav logo={logo} />
+          <SubNav moduleIndicatorName="Insight" moduleIndicatorIcon="hamburger">
+            <Tabs>
+              <Tab label="Audience" active={activeTab === 'Audience'} />
+              <Tab label="Acquisition" active={activeTab === 'Acquisition'} />
+              <Tab label="Behavior" active={activeTab === 'Behavior'} />
+            </Tabs>
+          </SubNav>
+          <Slot>{LONG_COPY}</Slot>
+        </Container>
+      </GlobalNav>
+    );
   });

@@ -60,8 +60,11 @@ TabComponent.propTypes = {
 
 TabComponent.__docgenInfo = {
   props: {
-    children: {
-      description: 'support adding Tab components'
+    active: {
+      description: 'activates or deactivates the tab'
+    },
+    label: {
+      description: 'sets the text of a tab'
     }
   }
 };
