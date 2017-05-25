@@ -31,6 +31,23 @@
                 "title": "{String} title of the button",
                 "link": "{String} link of the button"
             }
+        },
+        "Flyout": {
+            "methods": {
+                "open": {
+                    "desc": "opens the flyout"
+                },
+                "close": {
+                    "desc": "closes the flyout"
+                },
+                "onClickOutside": "HIG.abstract.EventObject",
+                "addSlot": {
+                    "desc": "Pass in any HTMLElement you want",
+                    "params": [
+                        "{HTMLElement} HTMLElement"
+                    ]
+                }
+            }
         }
     },
     "components": {
@@ -98,14 +115,6 @@
                     "partials":{
                         "Profile": {
                             "methods": {
-                                "close": {
-                                    "desc": "closes the profile"
-                                },
-                                "onProfileImageClick": "HIG.abstract.EventObject",
-                                "onSignOutClick": "HIG.abstract.EventObject",
-                                "open": {
-                                    "desc": "opens the profile"
-                                },
                                 "setEmail": {
                                     "desc": "sets the email",
                                     "params": [
@@ -141,7 +150,15 @@
                                     "params": [
                                         "{String} settingsLink - label for the settings link button"
                                     ]
-                                }
+                                },
+                                "open": {
+                                    "desc": "opens the profile"
+                                },
+                                "close": {
+                                    "desc": "closes the profile"
+                                },
+                                "onProfileImageClick": "HIG.abstract.EventObject",
+                                "onSignOutClick": "HIG.abstract.EventObject",
                             },
                             "defaults": {
                                 "email": "{String} email",
