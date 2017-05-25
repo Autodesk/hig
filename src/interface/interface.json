@@ -14,14 +14,14 @@
             "methods": {
                 "setTitle": {
                     "desc": "sets the title of a button",
-                    "params": [ 
-                        "{String} title - new title for the button" 
+                    "params": [
+                        "{String} title - new title for the button"
                     ]
                 },
                 "setLink": {
                     "desc": "sets the link of a button",
-                    "params": [ 
-                        "{String} link - new link for the button" 
+                    "params": [
+                        "{String} link - new link for the button"
                     ]
                 },
                 "onClick": "HIG.abstract.EventObject",
@@ -38,27 +38,27 @@
             "methods": {
                 "addSideNav": {
                     "desc": "Pass in an instance of a SideNav partial to mount it to the GlobalNav",
-                    "params": [ 
-                        "{SideNav} SideNav - instance of a SideNav partial" 
+                    "params": [
+                        "{SideNav} SideNav - instance of a SideNav partial"
                     ],
                     "returns": "{SideNav}"
                 },
                 "addTopNav": {
                     "desc": "Pass in an instance of a TopNav",
-                    "params": [ 
-                        "{TopNav} TopNav - instance of a TopNav partial" 
+                    "params": [
+                        "{TopNav} TopNav - instance of a TopNav partial"
                     ]
                 },
                 "addSubNav": {
                     "desc": "Pass in an instance of a SubNav",
-                    "params": [ 
-                        "{SubNav} SubNav - instance of a SubNav partial" 
+                    "params": [
+                        "{SubNav} SubNav - instance of a SubNav partial"
                     ]
                 },
                 "addSlot": {
                     "desc": "Pass in any HTMLElement you want",
-                    "params": [ 
-                        "{HTMLElement} HTMLElement" 
+                    "params": [
+                        "{HTMLElement} HTMLElement"
                     ]
                 },
                 "showSideNav": {
@@ -73,14 +73,14 @@
                     "methods": {
                         "setLogo": {
                             "desc": "sets the logo",
-                            "params": [ 
-                                "{String} logo - url to svg or other image object" 
+                            "params": [
+                                "{String} logo - url to svg or other image object"
                             ]
                         },
                         "setLogoLink": {
                             "desc": "sets the link of the logo",
-                            "params": [ 
-                                "{String} link - new link" 
+                            "params": [
+                                "{String} link - new link"
                             ]
                         },
                         "addProfile": {
@@ -98,16 +98,58 @@
                     "partials":{
                         "Profile": {
                             "methods": {
+                                "close": {
+                                    "desc": "closes the profile"
+                                },
                                 "onProfileImageClick": "HIG.abstract.EventObject",
+                                "onSignOutClick": "HIG.abstract.EventObject",
+                                "open": {
+                                    "desc": "opens the profile"
+                                },
+                                "setEmail": {
+                                    "desc": "sets the email",
+                                    "params": [
+                                        "{String} email - email of the signed in user"
+                                    ]
+                                },
                                 "setImage": {
                                     "desc": "sets the image",
                                     "params": [
                                         "{String} image - url to svg or other image object"
                                     ]
+                                },
+                                "setName": {
+                                    "desc": "sets the name",
+                                    "params": [
+                                        "{String} name - name of the signed in user"
+                                    ]
+                                },
+                                "setSignOutLabel": {
+                                    "desc": "sets the sign out label",
+                                    "params": [
+                                        "{String} signOutLabel - label for the sign out button"
+                                    ]
+                                },
+                                "setSettingsLabel": {
+                                    "desc": "sets the settings label",
+                                    "params": [
+                                        "{String} settings label - label for the settings button"
+                                    ]
+                                },
+                                "setSettingsLink": {
+                                    "desc": "sets the settings link",
+                                    "params": [
+                                        "{String} settingsLink - label for the settings link button"
+                                    ]
                                 }
                             },
                             "defaults": {
-                                "image": "{String} url src of the image"
+                                "email": "{String} email",
+                                "image": "{String} url src of the image",
+                                "name": "{String} name",
+                                "profileSettingsLabel": "{String} profileSettingsLabel",
+                                "profileSettingsLink": "{String} profileSettingsLink",
+                                "signOutLabel": "{String} signOutLabel"
                             }
                         }
                     }
@@ -116,14 +158,14 @@
                     "methods": {
                         "setModuleIndicatorName": {
                             "desc": "sets the moduleIndicatorName",
-                            "params": [ 
-                                "{String} moduleIndicatorName - new moduleIndicatorName" 
+                            "params": [
+                                "{String} moduleIndicatorName - new moduleIndicatorName"
                             ]
                         },
                         "setModuleIndicatorIcon": {
                             "desc": "sets the moduleIndicatorIcon",
-                            "params": [ 
-                                "{String} moduleIndicatorIcon - new moduleIndicatorIcon" 
+                            "params": [
+                                "{String} moduleIndicatorIcon - new moduleIndicatorIcon"
                             ]
                         },
                         "addTabs": {
@@ -177,14 +219,14 @@
                     "methods": {
                         "addSection": {
                             "desc": "Pass in an instance of a SideNav Section partial",
-                            "params": [ 
+                            "params": [
                                 "{Section} Section - instance of a Section partial",
                                 "{Section} [ReferenceSection] - (Optional) reference node for insertBefore"
                             ]
                         },
                         "addLink": {
                             "desc": "Pass in an instance of a SideNav Link partial",
-                            "params": [ 
+                            "params": [
                                 "{Link} Link - instance of a Link partial",
                                 "{Link} [ReferenceLink] - (Optional) reference node for insertBefore"
                             ]
@@ -195,19 +237,19 @@
                             "methods": {
                                 "setHeaderLabel": {
                                     "desc": "sets the label",
-                                    "params": [ 
-                                        "{String} label - new label" 
+                                    "params": [
+                                        "{String} label - new label"
                                     ]
                                 },
                                 "setHeaderName": {
                                     "desc": "sets the name",
-                                    "params": [ 
-                                        "{String} name - new name" 
+                                    "params": [
+                                        "{String} name - new name"
                                     ]
                                 },
                                 "addGroup": {
                                     "desc": "Pass in an instance of a SideNav Section Group partial",
-                                    "params": [ 
+                                    "params": [
                                         "{Group} Group - instance of a Group partial",
                                         "{Group} [ReferenceGroup] - (Optional) reference node for insertBefore"
                                     ]
@@ -222,7 +264,7 @@
                                     "methods": {
                                         "addItem": {
                                             "desc": "Pass in an instance of a SideNav group Item partial",
-                                            "params": [ 
+                                            "params": [
                                                 "{Item} Item - instance of a Item partial",
                                                 "{Item} [ReferenceItem] - (Optional) reference node for insertBefore"
                                             ]
@@ -233,20 +275,20 @@
                                             "methods": {
                                                 "setIcon": {
                                                     "desc": "sets the icon of an item",
-                                                    "params": [ 
-                                                        "{String} title - new icon ID" 
+                                                    "params": [
+                                                        "{String} title - new icon ID"
                                                     ]
                                                 },
                                                 "setTitle": {
                                                     "desc": "sets the title of an item",
-                                                    "params": [ 
-                                                        "{String} title - new title" 
+                                                    "params": [
+                                                        "{String} title - new title"
                                                     ]
                                                 },
                                                 "setLink": {
                                                     "desc": "sets the link of an item",
-                                                    "params": [ 
-                                                        "{String} link - new link" 
+                                                    "params": [
+                                                        "{String} link - new link"
                                                     ]
                                                 },
                                                 "onClick": "HIG.abstract.EventObject",
@@ -266,14 +308,14 @@
                             "methods": {
                                 "setTitle": {
                                     "desc": "sets the title",
-                                    "params": [ 
-                                        "{String} title - new title" 
+                                    "params": [
+                                        "{String} title - new title"
                                     ]
                                 },
                                 "setLink": {
                                     "desc": "sets the link",
-                                    "params": [ 
-                                        "{String} link - new link" 
+                                    "params": [
+                                        "{String} link - new link"
                                     ]
                                 },
                                 "onClick": "HIG.abstract.EventObject",
