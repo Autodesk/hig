@@ -8,3 +8,8 @@ test:
         background: true
   override:
     - npm run test-ci
+deployment:
+  production:
+      branch: master
+      commands:
+      - ./scripts/deploy-gh-pages.sh build
