@@ -1,11 +1,22 @@
 @import '../../helpers/css/mixins.scss';
+@import '../../basics/colors/colors.scss';
 
 .hig__flyout {
     @include reset;
     position: absolute;
     display: none;
+    right: 0;
 
     &.hig__flyout--open {
         display: block;
     }
+}
+
+.hig__flyout__container {
+    width: 280px;
+    background-color: $background-1;
+    border: 1px solid $gray-c;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    padding: 20px;
 }
