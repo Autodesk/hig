@@ -27,6 +27,7 @@ const Section = GlobalNav.SideNav.SectionList.Item;
 const Group = GlobalNav.SideNav.SectionList.Item.Group;
 const Item = GlobalNav.SideNav.SectionList.Item.Group.Item;
 const TopNav = GlobalNav.Container.TopNav;
+const Profile = TopNav.Profile;
 const SubNav = GlobalNav.Container.SubNav;
 const Slot = GlobalNav.Container.Slot;
 const Container = GlobalNav.Container;
@@ -56,6 +57,7 @@ const LONG_COPY = (
 );
 
 import logo from '../../../images/bim-logo.png';
+import profileImage from '../../../images/profileImage.png';
 
 storiesOf('GlobalNav', module)
   .addWithInfo(
@@ -102,7 +104,12 @@ storiesOf('GlobalNav', module)
             </SectionList>
           </SideNav>
           <Container>
-            <TopNav logo={logo} />
+            <TopNav logo={logo}>
+              <Profile
+                image={profileImage}
+                onProfileImageClick={action('clicked')}
+              />
+            </TopNav>
             <SubNav
               moduleIndicatorName="Insight"
               moduleIndicatorIcon="hamburger"

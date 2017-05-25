@@ -42,6 +42,9 @@ export class TopNav extends HIGElement {
         case 'logoLink':
           this.hig.setLogoLink(propValue);
           break;
+        case 'children':
+          // No-op
+          break;
         case 'onHamburgerClick': {
           const dispose = this._disposeFunctions.get('onHamburgerClickDispose');
 
