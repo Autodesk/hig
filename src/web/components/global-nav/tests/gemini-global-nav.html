@@ -16,16 +16,12 @@
             var GlobalNav = new Hig.GlobalNav();
             GlobalNav.mount("body");
 
-            // CONTAINER AREA
-            var Container = new GlobalNav.partials.Container();
-            GlobalNav.addContainer(Container);
-
-            // ADD TOP GlobalNav IN CONTENT AREA
-            var TopNav = new Container.partials.TopNav({
+            // ADD TOPNAV
+            var TopNav = new GlobalNav.partials.TopNav({
                 "logo": "https://www.dexigner.com/images/news/xw/22856.jpg",
                 "logo_link": "#"
             });
-            Container.addTopNav(TopNav);
+            GlobalNav.addTopNav(TopNav);
 
             TopNav.setLogo("bim-logo.png"); // Update logo
             TopNav.setLogoLink("http://autodesk.com"); // update logo link

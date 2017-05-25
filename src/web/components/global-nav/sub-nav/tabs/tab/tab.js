@@ -35,7 +35,7 @@ class Tab extends Core {
     }
 }
 
-Tab._interface = Interface['components']['GlobalNav']['partials']['Container']['partials']['SubNav']['partials']['Tabs']['partials']['Tab'];
+Tab._interface = Interface['components']['GlobalNav']['partials']['SubNav']['partials']['Tabs']['partials']['Tab'];
 Tab._defaults = {
     label: 'Tab'
 };

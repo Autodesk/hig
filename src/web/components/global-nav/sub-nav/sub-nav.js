@@ -37,7 +37,7 @@ class SubNav extends Core {
 
 }
 
-SubNav._interface = Interface['components']['GlobalNav']['partials']['Container']['partials']['SubNav'];
+SubNav._interface = Interface['components']['GlobalNav']['partials']['SubNav'];
 SubNav._defaults = {
     "moduleIndicatorName": "Module Name",
     "moduleIndicatorIcon": "#"

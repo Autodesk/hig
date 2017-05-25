@@ -41,7 +41,7 @@ class TopNav extends Core {
 
 }
 
-TopNav._interface = Interface['components']['GlobalNav']['partials']['Container']['partials']['TopNav'];
+TopNav._interface = Interface['components']['GlobalNav']['partials']['TopNav'];
 TopNav._defaults = {
     logo: "link",
     logoLink: "#"
