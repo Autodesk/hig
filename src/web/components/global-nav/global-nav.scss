@@ -1,5 +1,20 @@
 @import '~basics/typography/typography.scss';
+@import '~basics/colors/colors.scss';
+@import 'side-nav/side-nav.scss';
 
 .hig__global-nav{
     position: relative;
+
+    &__container{
+        position: relative;
+        min-height: 100%;
+        background: $background-2;
+
+        &__slot{
+            padding: 20px;
+        }
+    }
+}
+.hig__global-nav--open .hig__global-nav__container{
+    margin-left: $hig__global-nav__sidenav--width;
 }

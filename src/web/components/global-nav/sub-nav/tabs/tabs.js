@@ -27,10 +27,8 @@ class Tabs extends Core {
 
 }
 
-Tabs._interface = Interface['components']['GlobalNav']['partials']['Container']['partials']['SubNav']['partials']['Tabs'];
-Tabs._defaults = {
-    "label": "Undefined Tab"
-};
+Tabs._interface = Interface['components']['GlobalNav']['partials']['SubNav']['partials']['Tabs'];
+Tabs._defaults = {};
 Tabs._partials = {
     Tab: Tab
 };

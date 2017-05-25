@@ -43,10 +43,22 @@
                     ],
                     "returns": "{SideNav}"
                 },
-                "addContainer": {
-                    "desc": "Pass in an instance of a Container partial to mount it to the GlobalNav",
+                "addTopNav": {
+                    "desc": "Pass in an instance of a TopNav",
                     "params": [ 
-                        "{Container} Container - instance of a Container partial" 
+                        "{TopNav} TopNav - instance of a TopNav partial" 
+                    ]
+                },
+                "addSubNav": {
+                    "desc": "Pass in an instance of a SubNav",
+                    "params": [ 
+                        "{SubNav} SubNav - instance of a SubNav partial" 
+                    ]
+                },
+                "addSlot": {
+                    "desc": "Pass in any HTMLElement you want",
+                    "params": [ 
+                        "{HTMLElement} HTMLElement" 
                     ]
                 },
                 "showSideNav": {
@@ -57,6 +69,110 @@
                 }
             },
             "partials": {
+                "TopNav": {
+                    "methods": {
+                        "setLogo": {
+                            "desc": "sets the logo",
+                            "params": [ 
+                                "{String} logo - url to svg or other image object" 
+                            ]
+                        },
+                        "setLogoLink": {
+                            "desc": "sets the link of the logo",
+                            "params": [ 
+                                "{String} link - new link" 
+                            ]
+                        },
+                        "addProfile": {
+                            "desc": "Pass in an instance of an Profile partial to mount it to the GlobalNav",
+                            "params": [
+                                "{Profile} Profile - instance of a Profile partial"
+                            ]
+                        },
+                        "onHamburgerClick": "HIG.abstract.EventObject"
+                    },
+                    "defaults": {
+                        "logo": "{String} url to svg or other image object",
+                        "logoLink": "{String} url behind the logo"
+                    },
+                    "partials":{
+                        "Profile": {
+                            "methods": {
+                                "onProfileImageClick": "HIG.abstract.EventObject",
+                                "setImage": {
+                                    "desc": "sets the image",
+                                    "params": [
+                                        "{String} image - url to svg or other image object"
+                                    ]
+                                }
+                            },
+                            "defaults": {
+                                "image": "{String} url src of the image"
+                            }
+                        }
+                    }
+                },
+                "SubNav": {
+                    "methods": {
+                        "setModuleIndicatorName": {
+                            "desc": "sets the moduleIndicatorName",
+                            "params": [ 
+                                "{String} moduleIndicatorName - new moduleIndicatorName" 
+                            ]
+                        },
+                        "setModuleIndicatorIcon": {
+                            "desc": "sets the moduleIndicatorIcon",
+                            "params": [ 
+                                "{String} moduleIndicatorIcon - new moduleIndicatorIcon" 
+                            ]
+                        },
+                        "addTabs": {
+                            "desc": "Pass in an instance of Tabs",
+                            "params": [
+                            "{Tabs} Tabs - instance of a Tabs partial"
+                            ]
+                        }
+                    },
+                    "partials": {
+                        "Tabs": {
+                            "methods": {
+                                "addTab": {
+                                    "desc": "Pass in an instance of a SubNav Tab partial",
+                                    "params": [
+                                        "{Tab} Tab - instance of a Tab partial",
+                                        "{Tab} [ReferenceTab] - (Optional) reference node for insertBefore"
+                                    ]
+                                }
+                            },
+                            "partials": {
+                                "Tab": {
+                                    "methods": {
+                                        "setLabel": {
+                                            "desc": "sets the label",
+                                            "params": [
+                                                "{String} label - new label"
+                                            ]
+                                        },
+                                        "activate": {
+                                            "desc": "activates the tab"
+                                        },
+                                        "deactivate": {
+                                            "desc": "deactivates the tab"
+                                        },
+                                        "onClick": "HIG.abstract.EventObject"
+                                    },
+                                    "defaults": {
+                                        "label": "{String} Label of the tab"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "defaults": {
+                        "moduleIndicatorName": "{String} Name of the module",
+                        "moduleIndicatorIcon": "{String} icon identifier"
+                    }
+                },
                 "SideNav": {
                     "methods": {
                         "addSection": {
@@ -166,134 +282,6 @@
                             "defaults": {
                                 "title": "{String} title",
                                 "link": "{String} link"
-                            }
-                        }
-                    }
-                },
-                "Container": {
-                    "methods": {
-                        "addTopNav": {
-                            "desc": "Pass in an instance of a TopNav",
-                            "params": [ 
-                                "{TopNav} TopNav - instance of a TopNav partial" 
-                            ]
-                        },
-                        "addSubNav": {
-                            "desc": "Pass in an instance of a SubNav",
-                            "params": [ 
-                                "{SubNav} SubNav - instance of a SubNav partial" 
-                            ]
-                        },
-                        "addSlot": {
-                            "desc": "Pass in any HTMLElement you want",
-                            "params": [ 
-                                "{HTMLElement} HTMLElement" 
-                            ]
-                        }
-                    },
-                    "partials": {
-                        "TopNav": {
-                            "methods": {
-                                "setLogo": {
-                                    "desc": "sets the logo",
-                                    "params": [ 
-                                        "{String} logo - url to svg or other image object" 
-                                    ]
-                                },
-                                "setLogoLink": {
-                                    "desc": "sets the link of the logo",
-                                    "params": [ 
-                                        "{String} link - new link" 
-                                    ]
-                                },
-                                "addProfile": {
-                                    "desc": "Pass in an instance of an Profile partial to mount it to the GlobalNav",
-                                    "params": [
-                                        "{Profile} Profile - instance of a Profile partial"
-                                    ]
-                                },
-                                "onHamburgerClick": "HIG.abstract.EventObject"
-                            },
-                            "defaults": {
-                                "logo": "{String} url to svg or other image object",
-                                "logoLink": "{String} url behind the logo"
-                            },
-                            "partials":{
-                                "Profile": {
-                                    "methods": {
-                                        "onProfileImageClick": "HIG.abstract.EventObject",
-                                        "setImage": {
-                                            "desc": "sets the image",
-                                            "params": [
-                                                "{String} image - url to svg or other image object"
-                                            ]
-                                        }
-                                    },
-                                    "defaults": {
-                                        "image": "{String} url src of the image"
-                                    }
-                                }
-                            }
-                        },
-                        "SubNav": {
-                            "methods": {
-                                "setModuleIndicatorName": {
-                                    "desc": "sets the moduleIndicatorName",
-                                    "params": [ 
-                                        "{String} moduleIndicatorName - new moduleIndicatorName" 
-                                    ]
-                                },
-                                "setModuleIndicatorIcon": {
-                                    "desc": "sets the moduleIndicatorIcon",
-                                    "params": [ 
-                                        "{String} moduleIndicatorIcon - new moduleIndicatorIcon" 
-                                    ]
-                                },
-                                "addTabs": {
-                                  "desc": "Pass in an instance of Tabs",
-                                  "params": [
-                                    "{Tabs} Tabs - instance of a Tabs partial"
-                                  ]
-                                }
-                            },
-                            "partials": {
-                                "Tabs": {
-                                    "methods": {
-                                        "addTab": {
-                                            "desc": "Pass in an instance of a SubNav Tab partial",
-                                            "params": [
-                                                "{Tab} Tab - instance of a Tab partial",
-                                                "{Tab} [ReferenceTab] - (Optional) reference node for insertBefore"
-                                            ]
-                                        }
-                                    },
-                                    "partials": {
-                                        "Tab": {
-                                            "methods": {
-                                                "setLabel": {
-                                                    "desc": "sets the label",
-                                                    "params": [
-                                                      "{String} label - new label"
-                                                    ]
-                                                },
-                                                "activate": {
-                                                    "desc": "activates the tab"
-                                                },
-                                                "deactivate": {
-                                                    "desc": "deactivates the tab"
-                                                },
-                                                "onClick": "HIG.abstract.EventObject"
-                                            },
-                                            "defaults": {
-                                                "label": "{String} Label of the tab"
-                                            }
-                                        }
-                                    }
-                                }
-                            },
-                            "defaults": {
-                                "moduleIndicatorName": "{String} Name of the module",
-                                "moduleIndicatorIcon": "{String} icon identifier"
                             }
                         }
                     }

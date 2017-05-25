@@ -31,7 +31,7 @@ class Profile extends Core {
 
 }
 
-Profile._interface = Interface['components']['GlobalNav']['partials']['Container']['partials']['TopNav']['partials']['Profile'];
+Profile._interface = Interface['components']['GlobalNav']['partials']['TopNav']['partials']['Profile'];
 Profile._defaults = {
   image: 'https://placekitten.com/g/50/50'
 };
