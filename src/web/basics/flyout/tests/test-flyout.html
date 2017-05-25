@@ -17,6 +17,9 @@
             var flyoutContent = document.createElement('div');
             flyoutContent.textContent = "Hello, world!";
             flyout.addSlot(flyoutContent);
+            flyout.onClickOutside(() => {
+                flyout.close();
+            });
 
             button.onClick(function(e){
                 flyout.open();
