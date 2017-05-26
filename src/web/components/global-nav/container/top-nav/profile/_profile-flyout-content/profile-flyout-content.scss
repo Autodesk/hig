@@ -6,14 +6,21 @@
 }
 
 .src__components__global-nav__container__top-nav__profile__profile-flyout-content__name {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
     font-size: 16px;
 }
 
 .src__components__global-nav__container__top-nav__profile__profile-flyout-content__email {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
     font-size: 12px;
     color: $gray-6;
 }
 
 .src__components__global-nav__container__top-nav__profile__profile-flyout-content__links {
+    display: flex;
     margin-top: 20px;
 }

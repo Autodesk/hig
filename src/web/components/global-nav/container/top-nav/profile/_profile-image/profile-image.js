@@ -21,13 +21,21 @@ class ProfileImage extends Core {
         return this._attachListener("click", this.el, this.el, fn);
     }
 
-    setImage(imageURL) {
-        if (imageURL) {
-            this.image = imageURL;
-            this.el.children.first().setAttribute("src", this.image);
-        }
+    setImage(imageUrl) {
+        this.el
+            .querySelector('.hig__global-nav__container__top-nav__profile__profile-image__image')
+            .setAttribute("src", imageUrl);
     }
 
 }
+
+ProfileImage._interface = {
+    methods: {
+        "onClick": {},
+        "setImage": {}
+    },
+    defaults: {}
+};
+ProfileImage._defaults = {};
 
 module.exports = ProfileImage;

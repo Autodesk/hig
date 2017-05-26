@@ -24,12 +24,19 @@
                         "{String} link - new link for the button"
                     ]
                 },
+                "setStyle": {
+                    "desc": "sets the style of a button",
+                    "params": [
+                        "{String} style - style for the button"
+                    ]
+                },
                 "onClick": "HIG.abstract.EventObject",
                 "onHover": "HIG.abstract.EventObject"
             },
             "defaults": {
                 "title": "{String} title of the button",
-                "link": "{String} link of the button"
+                "link": "{String} link of the button",
+                "style": "{String} style of the button"
             }
         },
         "Flyout": {
@@ -139,19 +146,25 @@
                                         "{String} name - name of the signed in user"
                                     ]
                                 },
+                                "setProfileSettingsLabel": {
+                                    "desc": "sets the settings label",
+                                    "params": [
+                                        "{String} settings label - label for the settings button"
+                                    ]
+                                },
+                                "setProfileSettingsLink": {
+                                    "desc": "sets the settings link",
+                                    "params": [
+                                        "{String} settingsLink - label for the settings link button"
+                                    ]
+                                },
                                 "setSignOutLabel": {
                                     "desc": "sets the sign out label",
                                     "params": [
                                         "{String} signOutLabel - label for the sign out button"
                                     ]
                                 },
-                                "setSettingsLabel": {
-                                    "desc": "sets the settings label",
-                                    "params": [
-                                        "{String} settings label - label for the settings button"
-                                    ]
-                                },
-                                "setSettingsLink": {
+                                "setSignOutLink": {
                                     "desc": "sets the settings link",
                                     "params": [
                                         "{String} settingsLink - label for the settings link button"
@@ -163,16 +176,14 @@
                                 "close": {
                                     "desc": "closes the profile"
                                 },
-                                "onClickOutside": "HIG.abstract.EventObject",
+                                "onProfileClickOutside": "HIG.abstract.EventObject",
                                 "onProfileImageClick": "HIG.abstract.EventObject",
+                                "onProfileSettingsClick": "HIG.abstract.EventObject",
                                 "onSignOutClick": "HIG.abstract.EventObject"
                             },
                             "defaults": {
-                                "email": "{String} email",
                                 "image": "{String} url src of the image",
-                                "name": "{String} name",
                                 "profileSettingsLabel": "{String} profileSettingsLabel",
-                                "profileSettingsLink": "{String} profileSettingsLink",
                                 "signOutLabel": "{String} signOutLabel"
                             }
                         }

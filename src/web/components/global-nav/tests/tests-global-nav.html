@@ -113,12 +113,14 @@
             // CREATE PROFILE
             var MyProfile1 = new TopNav.partials.Profile({
                 image: "egg.jpg",
-                name: "Lois	Hawkins",
-                email: "lois.hawkins@autodesk.com",
-                profileSettingsLink: "http://autodesk.com",
+                name: "Jenny Eishingdrelo",
+                email: "jenny.eishingdrelo@autodesk.com"
             });
 
             TopNav.addProfile(MyProfile1);
+
+            MyProfile1.setProfileSettingsLink('http://apple.com');
+            MyProfile1.setSignOutLink('http://google.com');
 
             MyProfile1.onProfileImageClick(function(e){ MyProfile1.open() });
             MyProfile1.onProfileClickOutside(function(e){ MyProfile1.close() });

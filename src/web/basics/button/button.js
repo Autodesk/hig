@@ -34,12 +34,19 @@ class Button extends Core {
         this.el.setAttribute("href", link);
     }
 
+    setStyle(style){
+        this.el.classList = [];
+        this.el.classList = ['hig__button', `hig__button--${style}`]
+        this.el.setAttribute("href", link);
+    }
+
 }
 
 Button._interface = Interface['basics']['Button'];
 Button._defaults = {
     title: "link",
-    link: "#"
+    link: "#",
+    style: "default"
 };
 
 module.exports = Button;

@@ -36,11 +36,11 @@ class Core {
 
         // CHECK DEFAULTS ARE DEFINED
         if(!this._defaults){
-            console.warn("NO DEFAULTS SET FOR CLASS, PLEASE DEFINE DEFAULTS IN _defaults PROPERTY OF YOUR CLASS");
+            console.warn(`NO DEFAULTS SET FOR ${this.constructor.name}, PLEASE DEFINE DEFAULTS IN _defaults PROPERTY OF YOUR CLASS`);
         }else{
             for(var v in this._interface['defaults']){
                 if(!this._defaults[v]){
-                    console.error("DEFAULT VALUE: \"" + v + "\" IS DEFINED IN THE INTERFACE BUT NOT IN YOUR CLASS",this);
+                    console.error(`DEFAULT VALUE: \"${v}\" IS DEFINED IN THE INTERFACE BUT NOT IN ${this.constructor.name}`, this);
                 }
             };
         }
@@ -160,7 +160,7 @@ class Core {
 
             return mountNode.el;
         }else{
-            console.error(this.constructor.name + " HAS NO COMMENT \"" + searchComment + "\" TO MOUNT TO");
+            console.error(`MOUNT PARTIAL TO COMMENT: ${this.constructor.name} has no comment \"${searchComment}\" to mount to.`);
         }
     }
 
@@ -192,21 +192,12 @@ class Core {
         }
 
         var q = this._findDOMEl(targetClass, scopeElement);
-
-        // if(typeof targetClass == 'object'){
-        //     q = targetClass;
-        // }else{
-        //     q = scopeElement.querySelectorAll(targetClass);
-        //     q = (q) ? q[0] : false;
-        // }
-
         var eventTarget, eventFn;
 
         if(eventType == 'hover' || eventType == 'mouseenter'){
             eventFn = executeOnEventFunction;
             eventTarget = q;
             eventType = 'mouseenter';
-            // e = q.addEventListener('mouseenter', eventFn);
         }else{
             eventFn = function(event){
                 var element = event.target;
@@ -217,7 +208,6 @@ class Core {
                 }
             };
             eventTarget = document;
-            // e = document.addEventListener(eventType, clickEventFunction);
         }
 
         eventTarget.addEventListener(eventType, eventFn);

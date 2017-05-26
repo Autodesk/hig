@@ -27,27 +27,53 @@ class ProfileFlyoutContent extends Core {
         this.mountPartialToComment('SIGN_OUT_BUTTON', this.signOutButton);
 
         this.settingsLink = new Button({
-            title: this.options.profileSettingsLabel
+            title: this.options.profileSettingsLabel,
+            style: 'link'
         });
         this.mountPartialToComment('SETTINGS_LINK', this.settingsLink);
     }
 
     setEmail(email) {
-        // this.el.children.first().setAttribute("src", this.image);
+        const el = this.el.querySelector('.src__components__global-nav__container__top-nav__profile__profile-flyout-content__email');
+        el.textContent = email;
+        el.setAttribute('title', email);
     }
 
     setName(name) {
+        const el = this.el.querySelector('.src__components__global-nav__container__top-nav__profile__profile-flyout-content__name')
+        el.textContent = name;
+        el.setAttribute('title', name);
+    }
 
+    setProfileSettingsLabel(label) {
+        this.settingsLink.setTitle(label);
     }
 
     setSignOutLabel(label) {
+        this.signOutButton.setTitle(label);
+    }
 
+    setProfileSettingsLink(link) {
+        this.settingsLink.setLink(link);
     }
 
     setSignOutLink(link) {
-
+        this.signOutButton.setLink(link);
     }
 
 }
+
+ProfileFlyoutContent._interface = {
+    methods: {
+        "setEmail": {},
+        "setName": {},
+        "setProfileSettingsLabel": {},
+        "setSignOutLabel": {},
+        "setProfileSettingsLink": {},
+        "setSignOutLink": {}
+    },
+    defaults: {}
+};
+ProfileFlyoutContent._defaults = {};
 
 module.exports = ProfileFlyoutContent;

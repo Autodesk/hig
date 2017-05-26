@@ -48,7 +48,7 @@ class Profile extends Core {
     return this.flyout.onClickOutside(fn);
   }
 
-  setImage(imageURL) {
+  setImage(imageUrl) {
     this.profileImage.setImage(imageUrl);
   }
 
@@ -60,12 +60,20 @@ class Profile extends Core {
     this.flyoutContent.setName(name);
   }
 
+  setProfileSettingsLabel(label) {
+    this.flyoutContent.setProfileSettingsLabel(label);
+  }
+
   setSignOutLabel(label) {
-    this.flyoutContent.setLabel(label);
+    this.flyoutContent.setSignOutLabel(label);
+  }
+
+  setProfileSettingsLink(link) {
+    this.flyoutContent.setProfileSettingsLink(link);
   }
 
   setSignOutLink(link) {
-    this.flyoutContent.setLink(link);
+    this.flyoutContent.setSignOutLink(link);
   }
 
 }
@@ -74,7 +82,7 @@ Profile._interface = Interface['components']['GlobalNav']['partials']['TopNav'][
 Profile._defaults = {
   image: 'https://placekitten.com/g/50/50',
   profileSettingsLabel: "Profile Settings",
-  signOutLabel: "Sign Out"
+  signOutLabel: "Sign Out",
 };
 
 module.exports = Profile;

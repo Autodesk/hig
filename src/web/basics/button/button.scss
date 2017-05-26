@@ -1,9 +1,41 @@
+@import '../../basics/colors/colors.scss';
 @import '../../helpers/css/mixins.scss';
 
-.hig__button{
-    display: inline-block;
-    padding: 5px;
-    color: #fff;
-    background: #000;
+.hig__button {
     @include reset;
+    display: inline-block;
+    padding: 5px 10px;
+    min-width: 82px;
+
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+
+    &.hig__button--default {
+        background: white;
+        border: 1px solid $gray-d;
+        border-radius: 2px;
+
+        color: $gray-3;
+
+        &:hover {
+            box-shadow: 0 2px 6px $box-shadow-1;
+            border: 1px solid $gray-6;
+        }
+
+        &:active {
+            background: $gray-c;
+            border: 1px solid $gray-6;
+            box-shadow: none;
+            color: $gray-0;
+        }
+    }
+
+    &.hig__button--link {
+        color: $autodesk-blue;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
