@@ -104,6 +104,10 @@ class Core {
 
     }
 
+    _componentDidMount() {
+        // Subclass should implement this if needed
+    }
+
     /**
      * Inserts the HIG Element into the DOM using mountNode. If beforeChild is specified the HIG Element should be inserted before that.
      * If string, this is a CSS selector if more than one element matches it takes the first
@@ -118,6 +122,7 @@ class Core {
         var refNode = this._findDOMEl(beforeChild, scopeNode);
 
         this.el = parentNode.insertBefore(this._rendered, refNode);
+        this._componentDidMount();
         return mountNode.el;
     }
 
@@ -148,13 +153,14 @@ class Core {
             var refNode = (scopeNode) ? scopeNode.el : comment;
             if(mountNode._rendered){
                 mountNode.el = comment.parentNode.insertBefore(mountNode._rendered, refNode);
+                mountNode._componentDidMount();
             }else{
                 mountNode.el = comment.parentNode.insertBefore(mountNode, refNode);
             }
 
             return mountNode.el;
         }else{
-            console.error("NO COMMENT \"" + comment + "\" TO MOUNT TO FOUND");
+            console.error(this.constructor.name + " HAS NO COMMENT \"" + searchComment + "\" TO MOUNT TO");
         }
     }
 

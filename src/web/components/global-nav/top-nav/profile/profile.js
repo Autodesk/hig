@@ -5,6 +5,8 @@ var Interface = require('interface.json');
 var Core = require('_core.js');
 
 var Flyout = require('./../../../../../basics/flyout/flyout.js');
+var ProfileImage = require('./_profile-image/profile-image.js');
+var ProfileFlyoutContent = require('./_profile-flyout-content/profile-flyout-content.js');
 /**
  * Creates an Profile
  *
@@ -16,41 +18,63 @@ class Profile extends Core {
 
   constructor(options){
     super(options);
+    this.options = options;
     this._render(Template, options);
+  }
+
+  _componentDidMount() {
+    this.flyout = new Flyout();
+    this.mountPartialToComment('FLYOUT', this.flyout, this.el);
+    this.flyoutContent = new ProfileFlyoutContent(this.options);
+    this.profileImage = new ProfileImage({ image: this.options.image });
+    this.flyout.addSlot(this.flyoutContent);
+    this.flyout.addTarget(this.profileImage);
   }
 
   // bind the supplied fn to click events on this element.
   onProfileImageClick(fn) {
-    return this._attachListener("click", '.hig__global-nav__profile__image-wrapper', this.el, fn);
+    return this.profileImage.onClick(fn);
   }
 
   open() {
-    const flyout = new Flyout();
-    const flyoutContent = document.createElement('div');
-    flyoutContent.textContent = 'oh hey world, sup?';
-    this.mountPartialToComment('FLYOUT', flyout, this.el);
-    // flyout.addTarget(this.el.find('.hig__global-nav__profile__image-wrapper'));
-    flyout.addSlot(flyoutContent);
-    flyout.open();
-    flyout.onClickOutside(() => { flyout.close(); })
+    this.flyout.open();
   }
 
   close() {
+    this.flyout.close();
+  }
 
+  onProfileClickOutside(fn) {
+    return this.flyout.onClickOutside(fn);
   }
 
   setImage(imageURL) {
-    if (imageURL) {
-      this.image = imageURL;
-      this.el.children.first().setAttribute("src", this.image);
-    }
+    this.profileImage.setImage(imageUrl);
+  }
+
+  setEmail(email) {
+    this.flyoutContent.setEmail(email);
+  }
+
+  setName(name) {
+    this.flyoutContent.setName(name);
+  }
+
+  setSignOutLabel(label) {
+    this.flyoutContent.setLabel(label);
+  }
+
+  setSignOutLink(link) {
+    this.flyoutContent.setLink(link);
   }
 
 }
 
 Profile._interface = Interface['components']['GlobalNav']['partials']['TopNav']['partials']['Profile'];
 Profile._defaults = {
-  image: 'https://placekitten.com/g/50/50'
+  image: 'https://placekitten.com/g/50/50',
+  profileSettingsLabel: "Profile Settings",
+  signOutLabel: "Sign Out"
 };
 
 module.exports = Profile;

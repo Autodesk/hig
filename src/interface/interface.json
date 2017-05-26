@@ -163,6 +163,7 @@
                                 "close": {
                                     "desc": "closes the profile"
                                 },
+                                "onClickOutside": "HIG.abstract.EventObject",
                                 "onProfileImageClick": "HIG.abstract.EventObject",
                                 "onSignOutClick": "HIG.abstract.EventObject"
                             },

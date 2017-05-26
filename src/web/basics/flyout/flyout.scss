@@ -12,6 +12,7 @@
     max-width: 280px;
     padding: 20px;
     margin-top: 6px;
+    margin-right: 5px;
 
     background-color: $background-1;
     border: 1px solid $gray-c;
@@ -26,7 +27,7 @@
         content: '';
         position: absolute;
         top: -10px;
-        right: 20px;
+        right: 15px;
         width: 0;
         height: 0;
         border-style: solid;
@@ -38,7 +39,7 @@
         content: '';
         position: absolute;
         top: -12px;
-        right: 19px;
+        right: 14px;
         width: 0;
         height: 0;
         border-style: solid;

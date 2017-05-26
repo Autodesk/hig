@@ -31,11 +31,11 @@ class Flyout extends Core {
     }
 
     addSlot(slotElement){
-        this.mountPartialToComment('SLOT', slotElement, this.el);
+        this.mountPartialToComment('SLOT', slotElement);
     }
 
     addTarget(targetElement){
-        this.mountPartialToComment('TARGET', targetElement, this.el);
+        this.mountPartialToComment('TARGET', targetElement);
     }
 
     _callbackIfClickOutside(callback, event) {
