@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "build": "webpack",
+    "compile-gh": "node deploy/compile-gh-pages.js",
     "watch": "webpack --watch",
     "build-icons": "node src/web/basics/icons/build/build.js",
     "gemini": "concurrently 'http-server' 'gemini test gemini/*' --kill-others",

@@ -13,15 +13,7 @@ git init
 git checkout gh-pages
 
 # rebuild index pages
-cat > docs/index.html <<EOF
-<!DOCTYPE html>
-<html>
-  <head><title>HIG Example pages </title>
-  <body>
-    <h1>HIG Example pages</h1>
-  </body>
-</html>
-EOF
+npm run compile-gh
 
 # stage any changes and new files
 git add docs/*
