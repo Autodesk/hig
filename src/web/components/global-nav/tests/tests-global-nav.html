@@ -117,7 +117,7 @@
 
             TopNav.addProfile(MyProfile1);
 
-            MyProfile1.onProfileImageClick(function(e){ alert('testing')});
+            MyProfile1.onProfileImageClick(function(e){ MyProfile1.open() });
 
             // HAMBURGER OPENS/CLOSES SideNav
             var menu_open = false;
@@ -125,7 +125,7 @@
                 if(menu_open){
                     GlobalNav.hideSideNav();
                 }else{
-                    GlobalNav.showSideNav();    
+                    GlobalNav.showSideNav();
                 }
                 menu_open = !menu_open;
             });
