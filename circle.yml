@@ -12,4 +12,4 @@ deployment:
   production:
       branch: master
       commands:
-      - ./scripts/deploy-gh-pages.sh build
+      - ./deploy/deploy-gh-pages.sh build
