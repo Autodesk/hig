@@ -203,7 +203,6 @@ class Core {
                 var element = event.target;
 
                 if(q && (childOf(element, q) || element === q)){
-                    event.preventDefault();
                     executeOnEventFunction(event);
                 }
             };

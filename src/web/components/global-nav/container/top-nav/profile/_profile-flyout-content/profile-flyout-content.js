@@ -61,6 +61,14 @@ class ProfileFlyoutContent extends Core {
         this.signOutButton.setLink(link);
     }
 
+    onProfileSettingsClick(fn){
+        return this.settingsLink.onClick(fn);
+    }
+
+    onSignOutClick(fn){
+        return this.signOutButton.onClick(fn);
+    }
+
 }
 
 ProfileFlyoutContent._interface = {
@@ -70,7 +78,9 @@ ProfileFlyoutContent._interface = {
         "setProfileSettingsLabel": {},
         "setSignOutLabel": {},
         "setProfileSettingsLink": {},
-        "setSignOutLink": {}
+        "setSignOutLink": {},
+        "onProfileSettingsClick": {},
+        "onSignOutClick": {},
     },
     defaults: {}
 };
