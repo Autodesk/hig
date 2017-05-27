@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../../../../../dist/hig.css">
+        <script type="text/javascript" src="../../../../../dist/hig.js"></script>
+
+        <style>
+            .buttonHolder {
+                display: inline-block;
+                padding: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class='test-container' style="padding: 40px; margin: 0;">
+            <div class='regular-button buttonHolder'></div>
+            <div class='link-button buttonHolder'></div>
+        </div>
+
+        <script>
+
+            var RegularButton = new Hig.Button({
+                title: "Regular button"
+            });
+            RegularButton.mount(".regular-button");
+
+            var LinkButton = new Hig.Button({
+                title: "Link button",
+                style: "link"
+            });
+            LinkButton.mount(".link-button");
+
+        </script>
+
+    </body>
+</html>
