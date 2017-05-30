@@ -1,7 +1,7 @@
 <html>
     <head>
-        <link rel="stylesheet" href="../../../../../../../../dist/hig.css">
-        <script type="text/javascript" src="../../../../../../../../dist/hig.js"></script>
+        <link rel="stylesheet" href="../../../../../../../dist/hig.css">
+        <script type="text/javascript" src="../../../../../../../dist/hig.js"></script>
     </head>
     <body>
         <style>
@@ -16,23 +16,19 @@
             var GlobalNav = new Hig.GlobalNav();
             GlobalNav.mount("body");
 
-            // CONTAINER AREA
-            var Container = new GlobalNav.partials.Container();
-            GlobalNav.addContainer(Container);
-
-            // ADD TOP GlobalNav IN CONTENT AREA
-            var TopNav = new Container.partials.TopNav({
+            // ADD TOP GlobalNav
+            var TopNav = new GlobalNav.partials.TopNav({
                 "logo": "https://www.dexigner.com/images/news/xw/22856.jpg",
                 "logo_link": "#"
             });
-            Container.addTopNav(TopNav);
+            GlobalNav.addTopNav(TopNav);
 
-            TopNav.setLogo("../../../../tests/bim-logo.png"); // Update logo
+            TopNav.setLogo("../../../tests/bim-logo.png"); // Update logo
             TopNav.setLogoLink("http://autodesk.com"); // update logo link
 
             // CREATE PROFILE
             var MyProfile1 = new TopNav.partials.Profile({
-                image: "../../../../tests/egg.jpg",
+                image: "../../../tests/egg.jpg",
                 name: "Jenny Eishingdrelo",
                 email: "jenny.eishingdrelo@autodesk.com"
             });
