@@ -52,7 +52,7 @@ glob(testsGlob, (er, files) => {
 
   fs.closeSync(fd);
 
-  // the deploy script will finish up if it is running this script.
+  console.log("Finished generating test index.html")
 });
 
 
