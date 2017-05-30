@@ -4,7 +4,7 @@ var Template = require('./profile-flyout-content.html');
 var Interface = require('interface.json');
 var Core = require('_core.js');
 
-var Button = require('../../../../../../basics/button/button.js');
+var Button = require('../../../../../basics/button/button.js');
 
 /**
  * Creates an ProfileFlyoutContent

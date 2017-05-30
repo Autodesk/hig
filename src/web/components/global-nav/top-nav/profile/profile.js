@@ -4,7 +4,7 @@ var Template = require ('./profile.html');
 var Interface = require('interface.json');
 var Core = require('_core.js');
 
-var Flyout = require('./../../../../../basics/flyout/flyout.js');
+var Flyout = require('./../../../../basics/flyout/flyout.js');
 var ProfileImage = require('./_profile-image/profile-image.js');
 var ProfileFlyoutContent = require('./_profile-flyout-content/profile-flyout-content.js');
 /**
