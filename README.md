@@ -39,3 +39,7 @@ HIG identifies 4 levels of detail in a UI:
 - `Components`: These are distinct pieces of the product experience, things like dialog boxes, navigation bars, toolbars, and inspectors.
 - `Page Types`: Think of these as specific types of views or screens within our products. This includes canvas views, list or grid indexes, dashboards, and item details.
 - `Mini-Experiences`: These are collections of components or pages that create a small, discrete experience within our products: sign-in, trial, sharing, in-product learning.
+
+## [Test Examples for HIG Components](/index.html).
+
+
