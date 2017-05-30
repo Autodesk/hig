@@ -1,26 +1,24 @@
-#!/bin/bash -x
-# ideas used from https://gist.github.com/motemen/8595451
+#!/bin/bash
 
-# abort the script if there is a non-zero error
-set -e
+npm run build > /dev/null 2>&1
+npm run compile-gh > /dev/null 2>&1
 
-pwd
+CLEAN_STATUS=`git status --porcelain`
 
-remote=$(git config remote.origin.url)
-git config --global user.email "$GH_EMAIL" > /dev/null 2>&1
-git config --global user.name "$GH_NAME" > /dev/null 2>&1
-git init
-git checkout gh-pages
+if [ "$CLEAN_STATUS" == "" ] ; then
+    exit 0
+else
 
-# rebuild index pages
-npm run compile-gh
-
-# stage any changes and new files
-git add docs/*
-
-# now commit, ignoring branch gh-pages doesn't seem to work, so trying skip
-git commit --allow-empty -m "Automated deploy to GitHub pages [ci skip]"
-# and push, but send any output to /dev/null to hide anything sensitive
-git push --force origin gh-pages
-
-echo "Finished Deployment!"
+    echo "        "
+    echo "        Generated files differed from what is checked in."
+    echo "        You may need to re-run 'build' and/or 'compile-gh' npm scripts."
+    echo "        Differing files:"
+    echo "        ---------------------------------"
+    echo "        "
+    git status --porcelain
+    echo "        ---------------------------------"
+    echo "        "
+    echo "        Please regenerate and commit the necessary files."
+    echo "        "
+    exit 1
+fi
