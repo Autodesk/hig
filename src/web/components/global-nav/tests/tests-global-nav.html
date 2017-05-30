@@ -19,7 +19,7 @@
             // ADD A SIDENAV
             var SideNav = new GlobalNav.partials.SideNav();
             GlobalNav.addSideNav(SideNav);
-            
+
             // ADD A SECTION IN OUR SIDENAV
             var Section1 = new SideNav.partials.Section({
                 "headerLabel": "Project",
@@ -30,7 +30,7 @@
             // ADD A GROUP TO OUR SECTION
             var Group1 = new Section1.partials.Group();
             Section1.addGroup(Group1);
-            
+
             // ADD SOME ITEMS TO OUR GROUP
             var Group1_Item1 = new Group1.partials.Item({
                 "icon": "project-management",
@@ -65,7 +65,7 @@
             // ADD ANOTHER GROUP TO OUR SECTION
             var Group2 = new Section1.partials.Group();
             Section1.addGroup(Group2);
-            
+
             // ADD SOME ITEMS TO OUR GROUP
             var Group2_Item1 = new Group2.partials.Item({
                 "icon": "project-management",
@@ -84,7 +84,7 @@
             // ADD A GROUP TO OUR OTHER SECTION
             var Group1 = new Section2.partials.Group();
             Section2.addGroup(Group1);
-            
+
             // ADD SOME ITEMS TO OUR GROUP
             var Group1_Item1 = new Group1.partials.Item({
                 "icon": "project-management",
@@ -112,12 +112,18 @@
 
             // CREATE PROFILE
             var MyProfile1 = new TopNav.partials.Profile({
-                image: "egg.jpg"
+                image: "egg.jpg",
+                name: "Jenny Eishingdrelo",
+                email: "jenny.eishingdrelo@autodesk.com"
             });
 
             TopNav.addProfile(MyProfile1);
 
-            MyProfile1.onProfileImageClick(function(e){ alert('testing')});
+            MyProfile1.setProfileSettingsLink('http://apple.com');
+            MyProfile1.setSignOutLink('http://google.com');
+
+            MyProfile1.onProfileImageClick(function(e){ MyProfile1.open() });
+            MyProfile1.onProfileClickOutside(function(e){ MyProfile1.close() });
 
             // HAMBURGER OPENS/CLOSES SideNav
             var menu_open = false;
@@ -125,7 +131,7 @@
                 if(menu_open){
                     GlobalNav.hideSideNav();
                 }else{
-                    GlobalNav.showSideNav();    
+                    GlobalNav.showSideNav();
                 }
                 menu_open = !menu_open;
             });
@@ -169,7 +175,7 @@
                 "label": "Three"
             });
             Tabs.addTab(Tab3, Tab2);
-            
+
             Tab3.onClick(() => {
                 Tab1.deactivate();
                 Tab2.deactivate();
@@ -200,7 +206,7 @@ Messenger bag cardigan schlitz meggings pinterest, ramps whatever keytar taxider
 Scenester fingerstache kitsch post-ironic snackwave, plaid microdosing gastropub whatever. Next level truffaut swag, offal health goth franzen craft beer tousled 90's retro cardigan man bun keffiyeh ugh. Vegan offal tumblr, distillery prism venmo iPhone 90's vaporware 8-bit cronut semiotics. Prism distillery leggings austin selvage mustache. Venmo gentrify schlitz, ennui cred master cleanse umami sustainable freegan. Chartreuse yuccie freegan, poke four dollar toast echo park messenger bag shabby chic bespoke waistcoat glossier. Offal intelligentsia keffiyeh, XOXO waistcoat neutra squid brunch pug tumeric man braid knausgaard.`;
             var Slot = GlobalNav.addSlot(SlotEl);
 
-            
+
         </script>
 
     </body>

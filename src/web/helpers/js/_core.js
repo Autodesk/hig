@@ -25,7 +25,7 @@ class Core {
                     console.error("METHOD: \"" + v + "\" IS NOT DEFINED AS INTERFACE OR IS NOT A VALID INTERFACE METHOD");
                 }
             }, this);
-            
+
             // CHECK IF ALL METHODS IN INTERFACE ARE IMPLEMENTED
             for(var k in this._interface["methods"]){
                 if(methodArray.indexOf(k) === -1){
@@ -36,11 +36,11 @@ class Core {
 
         // CHECK DEFAULTS ARE DEFINED
         if(!this._defaults){
-            console.warn("NO DEFAULTS SET FOR CLASS, PLEASE DEFINE DEFAULTS IN _defaults PROPERTY OF YOUR CLASS");
+            console.warn(`NO DEFAULTS SET FOR ${this.constructor.name}, PLEASE DEFINE DEFAULTS IN _defaults PROPERTY OF YOUR CLASS`);
         }else{
             for(var v in this._interface['defaults']){
                 if(!this._defaults[v]){
-                    console.error("DEFAULT VALUE: \"" + v + "\" IS DEFINED IN THE INTERFACE BUT NOT IN YOUR CLASS",this);
+                    console.error(`DEFAULT VALUE: \"${v}\" IS DEFINED IN THE INTERFACE BUT NOT IN ${this.constructor.name}`, this);
                 }
             };
         }
@@ -93,7 +93,7 @@ class Core {
                 }
             }
             elWrapper.innerHTML = Mustache.render(
-                template, 
+                template,
                 data,
                 (partials || {})
             );
@@ -101,7 +101,11 @@ class Core {
         }else{
             console.error("RENDER ALREADY CALLED ON THIS COMPONENT, USE PROPER METHODS TO UPDATE CONTENT");
         }
-        
+
+    }
+
+    _componentDidMount() {
+        // Subclass should implement this if needed
     }
 
     /**
@@ -118,11 +122,12 @@ class Core {
         var refNode = this._findDOMEl(beforeChild, scopeNode);
 
         this.el = parentNode.insertBefore(this._rendered, refNode);
+        this._componentDidMount();
         return mountNode.el;
     }
 
     /**
-     * Inserts a partial child into the DOM at a specified comment. 
+     * Inserts a partial child into the DOM at a specified comment.
      * @param {String} searchComment - HTML comment to target
      * @param {HIGComponent} mountNode - HIG Component to attach to DOM
      * @param {String | HTMLElement | null} scopeNode - if defined will limit search inside of this element
@@ -148,13 +153,14 @@ class Core {
             var refNode = (scopeNode) ? scopeNode.el : comment;
             if(mountNode._rendered){
                 mountNode.el = comment.parentNode.insertBefore(mountNode._rendered, refNode);
+                mountNode._componentDidMount();
             }else{
                 mountNode.el = comment.parentNode.insertBefore(mountNode, refNode);
             }
-            
+
             return mountNode.el;
         }else{
-            console.error("NO COMMENT TO MOUNT TO FOUND");
+            console.error(`MOUNT PARTIAL TO COMMENT: ${this.constructor.name} has no comment \"${searchComment}\" to mount to.`);
         }
     }
 
@@ -165,7 +171,7 @@ class Core {
 
     unmount(){
         this.el.remove();
-    }   
+    }
 
     /**
      * Attach a document event listener
@@ -179,39 +185,28 @@ class Core {
     _attachListener(eventType, targetClass, scopeElement, executeOnEventFunction ){
 
         // #TODO: dont attach event listeners twice if _attachListener is called by second item, save events in local this._events object and loop through before attaching a new event
-        
+
         function childOf(/*child node*/c, /*parent node*/p){ //returns boolean
-            while( (c=c.parentNode) && c!==p ); 
-            return !!c; 
+            while( (c=c.parentNode) && c!==p );
+            return !!c;
         }
 
         var q = this._findDOMEl(targetClass, scopeElement);
-
-        // if(typeof targetClass == 'object'){
-        //     q = targetClass;
-        // }else{
-        //     q = scopeElement.querySelectorAll(targetClass);
-        //     q = (q) ? q[0] : false;
-        // }
-
         var eventTarget, eventFn;
 
         if(eventType == 'hover' || eventType == 'mouseenter'){
             eventFn = executeOnEventFunction;
             eventTarget = q;
             eventType = 'mouseenter';
-            // e = q.addEventListener('mouseenter', eventFn);
         }else{
             eventFn = function(event){
                 var element = event.target;
-                
+
                 if(q && (childOf(element, q) || element === q)){
-                    event.preventDefault();
                     executeOnEventFunction(event);
                 }
             };
             eventTarget = document;
-            // e = document.addEventListener(eventType, clickEventFunction);
         }
 
         eventTarget.addEventListener(eventType, eventFn);
@@ -229,7 +224,7 @@ class Core {
      * @param {String | HTMLElement} [s] - optional scope for search
      * @returns {HTMLElement} object that was found
      */
-    
+
     _findDOMEl(f, s){
         if(typeof f === "string"){
             // do our selection
@@ -249,7 +244,7 @@ class Core {
      * @param {String} icon - icon ID
      * @returns {String} String with SVG of the icon
      */
-    
+
     _getIconString(icon){
         return Icons[icon];
     }

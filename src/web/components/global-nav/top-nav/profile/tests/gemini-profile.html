@@ -1,7 +1,7 @@
 <html>
     <head>
-        <link rel="stylesheet" href="../../../../../dist/hig.css">
-        <script type="text/javascript" src="../../../../../dist/hig.js"></script>
+        <link rel="stylesheet" href="../../../../../../../dist/hig.css">
+        <script type="text/javascript" src="../../../../../../../dist/hig.js"></script>
     </head>
     <body>
         <style>
@@ -16,22 +16,26 @@
             var GlobalNav = new Hig.GlobalNav();
             GlobalNav.mount("body");
 
-            // ADD TOPNAV
+            // ADD TOP GlobalNav
             var TopNav = new GlobalNav.partials.TopNav({
                 "logo": "https://www.dexigner.com/images/news/xw/22856.jpg",
                 "logo_link": "#"
             });
             GlobalNav.addTopNav(TopNav);
 
-            TopNav.setLogo("bim-logo.png"); // Update logo
+            TopNav.setLogo("../../../tests/bim-logo.png"); // Update logo
             TopNav.setLogoLink("http://autodesk.com"); // update logo link
 
             // CREATE PROFILE
             var MyProfile1 = new TopNav.partials.Profile({
-                image: "egg.jpg"
+                image: "../../../tests/egg.jpg",
+                name: "Jenny Eishingdrelo",
+                email: "jenny.eishingdrelo@autodesk.com"
             });
 
             TopNav.addProfile(MyProfile1);
+
+            MyProfile1.open();
 
         </script>
 
