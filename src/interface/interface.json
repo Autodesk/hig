@@ -186,6 +186,85 @@
                                 "profileSettingsLabel": "{String} profileSettingsLabel",
                                 "signOutLabel": "{String} signOutLabel"
                             }
+                        },
+                        "ProjectAccountSwitcher": {
+                            "methods": {
+                                "addAccount": {
+                                    "desc": "Pass in an instance of a ProjectAccountSwitcher Account",
+                                    "params": [
+                                        "{Account} [ReferenceAccount]",
+                                        "{Account} [ReferenceAccount] - (Optional) reference node for insertBefore"
+                                    ]
+                                },
+                                "addProject": {
+                                    "desc": "Pass in an instance of a ProjectAccountSwitcher Project",
+                                    "params": [
+                                        "{Project} [ReferenceProject]",
+                                        "{Project} [ReferenceProject] - (Optional) reference node for insertBefore"
+                                    ]
+                                },
+                                "open": {
+                                    "desc": "opens the profile"
+                                },
+                                "close": {
+                                    "desc": "closes the profile"
+                                },
+                                "setActive": {
+                                    "desc": "Pass an instance of either Account or Project",
+                                    "params": [
+                                        "{Account or Project} - The account or project currently chosen"
+                                    ]
+                                },
+                                "onClickOutside": "HIG.abstract.EventObject",
+                                "onClick": "HIG.abstract.EventObject"
+                            },
+                            "partials": {
+                                "Account": {
+                                    "methods": {
+                                        "setLabel": {
+                                            "desc": "sets the label",
+                                            "params": [
+                                                "{String} label - new label"
+                                            ]
+                                        },
+                                        "setImage": {},
+                                        "activate": {
+                                            "desc": "activates the account"
+                                        },
+                                        "deactivate": {
+                                            "desc": "deactivates the account"
+                                        },
+                                        "onClick": "HIG.abstract.EventObject"
+                                    },
+                                    "defaults": {
+                                        "image": "{String} url src of the image"
+                                    }
+                                },
+                                "Project": {
+                                    "methods": {
+                                        "setLabel": {
+                                            "desc": "sets the label",
+                                            "params": [
+                                                "{String} label - new label"
+                                            ]
+                                        },
+                                        "setImage": {},
+                                        "activate": {
+                                            "desc": "activates the project"
+                                        },
+                                        "deactivate": {
+                                            "desc": "deactivates the project"
+                                        },
+                                        "onClick": "HIG.abstract.EventObject"
+                                    },
+                                    "defaults": {
+                                        "image": "{String} url src of the image"
+                                    }
+                                }
+                            },
+                            "defaults": {
+                                "placeholder": "{String} placeholder text shown when no project or account is active"
+                            }
                         }
                     }
                 },
