@@ -80,10 +80,32 @@
   font-style: normal; }
 
 .hig__button {
-  padding: 5px;
-  color: #fff;
-  background: #000;
-  font-family: 'ArtifaktElement'; }
+  font-family: 'ArtifaktElement';
+  line-height: 1.6;
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 5px 10px;
+  min-width: 82px;
+  font-size: 14px;
+  text-decoration: none;
+  text-align: center; }
+  .hig__button.hig__button--default {
+    background: white;
+    border: 1px solid #DFE3E8;
+    border-radius: 2px;
+    color: #34495E; }
+    .hig__button.hig__button--default:hover {
+      box-shadow: 0 2px 6px rgba(52, 73, 94, 0.15);
+      border: 1px solid #6C7A80; }
+    .hig__button.hig__button--default:active {
+      background: #C5CFD9;
+      border: 1px solid #6C7A80;
+      box-shadow: none;
+      color: #0A131C; }
+  .hig__button.hig__button--link {
+    color: #0696D7; }
+    .hig__button.hig__button--link:hover {
+      text-decoration: underline; }
 @font-face {
   font-family: 'ArtifaktElement';
   src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot");
@@ -178,6 +200,44 @@
     position: absolute;
     top: 50%;
     left: 50%; }
+.hig__flyout {
+  position: relative;
+  display: inline-block; }
+
+.hig__flyout__container {
+  position: absolute;
+  display: none;
+  right: 0;
+  width: 280px;
+  padding: 20px;
+  margin-top: 6px;
+  margin-right: 5px;
+  background-color: #FFFFFF;
+  border: 1px solid #C5CFD9;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); }
+  .hig__flyout--open > .hig__flyout__container {
+    display: block; }
+  .hig__flyout__container::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: 15px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent white transparent; }
+  .hig__flyout__container::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    right: 14px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 11px 11px 11px;
+    border-color: transparent transparent #C5CFD9 transparent; }
 @font-face {
   font-family: 'ArtifaktElement';
   src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot");
@@ -342,6 +402,8 @@
 
 .hig__global-nav__sidenav {
   font-family: 'ArtifaktElement';
+  line-height: 1.6;
+  box-sizing: border-box;
   position: absolute;
   top: 0;
   left: 0;
@@ -456,6 +518,8 @@
 
 .hig__global-nav__sidenav {
   font-family: 'ArtifaktElement';
+  line-height: 1.6;
+  box-sizing: border-box;
   position: absolute;
   top: 0;
   left: 0;
@@ -670,6 +734,8 @@
 
 .hig__global-nav__container__top-nav {
   font-family: 'ArtifaktElement';
+  line-height: 1.6;
+  box-sizing: border-box;
   position: relative;
   background: #FFFFFF;
   height: 56px;
@@ -700,17 +766,119 @@
   height: 100%;
   display: flex;
   align-items: center; }
-
-.hig__global-nav__profile__image {
-  height: 30px;
-  width: 30px;
-  border-radius: 50%; }
-
-.hig__global-nav__profile__image-wrapper {
+.hig__global-nav__container__top-nav__profile__profile-image {
   height: 100%;
   padding: 0px 16px;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  cursor: pointer; }
+
+.hig__global-nav__container__top-nav__profile__profile-image__image {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%; }
+@font-face {
+  font-family: 'ArtifaktElement';
+  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot");
+  /* IE9 Compat Modes */
+  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Hair.woff2") format("woff2"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Hair.woff") format("woff"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Hair.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  font-weight: 100;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ArtifaktElement';
+  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot");
+  /* IE9 Compat Modes */
+  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Thin.woff2") format("woff2"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Thin.woff") format("woff"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Thin.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  font-weight: 200;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ArtifaktElement';
+  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot");
+  /* IE9 Compat Modes */
+  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Light.woff2") format("woff2"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Light.woff") format("woff"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Light.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ArtifaktElement';
+  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot");
+  /* IE9 Compat Modes */
+  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Regular.woff2") format("woff2"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Regular.woff") format("woff"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Regular.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ArtifaktElement';
+  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot");
+  /* IE9 Compat Modes */
+  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Bold.woff2") format("woff2"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Bold.woff") format("woff"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Bold.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ArtifaktElement';
+  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot");
+  /* IE9 Compat Modes */
+  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Book.woff2") format("woff2"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Book.woff") format("woff"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Book.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ArtifaktElement';
+  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot");
+  /* IE9 Compat Modes */
+  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Medium.woff2") format("woff2"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Medium.woff") format("woff"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Medium.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ArtifaktElement';
+  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot");
+  /* IE9 Compat Modes */
+  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Black.woff2") format("woff2"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Black.woff") format("woff"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Black.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  font-weight: 800;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ArtifaktElement';
+  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot");
+  /* IE9 Compat Modes */
+  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Heavy.woff2") format("woff2"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Heavy.woff") format("woff"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Heavy.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  font-weight: 900;
+  font-style: normal; }
+
+.src__components__global-nav__container__top-nav__profile__profile-flyout-content {
+  font-family: 'ArtifaktElement';
+  line-height: 1.6;
+  box-sizing: border-box; }
+
+.src__components__global-nav__container__top-nav__profile__profile-flyout-content__name {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  font-size: 16px; }
+
+.src__components__global-nav__container__top-nav__profile__profile-flyout-content__email {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  font-size: 12px;
+  color: #6C7A80; }
+
+.src__components__global-nav__container__top-nav__profile__profile-flyout-content__links {
+  display: flex;
+  margin-top: 20px; }
 @font-face {
   font-family: 'ArtifaktElement';
   src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot");
@@ -794,6 +962,8 @@
 
 .hig__global-nav__container__sub-nav {
   font-family: 'ArtifaktElement';
+  line-height: 1.6;
+  box-sizing: border-box;
   background: #F4F5F6;
   height: 54px;
   line-height: 54px;
@@ -900,6 +1070,8 @@
 
 .hig__global-nav__sub-nav__tabs {
   font-family: 'ArtifaktElement';
+  line-height: 1.6;
+  box-sizing: border-box;
   flex-grow: 1;
   display: flex;
   justify-content: center;
