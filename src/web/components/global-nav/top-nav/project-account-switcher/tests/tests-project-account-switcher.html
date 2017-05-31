@@ -50,6 +50,7 @@
             });
             projectComponents.forEach((projectComponent) => {
                 ProjectAccountSwitcher.addProject(projectComponent);
+                projectComponent.onClick(() => { projectComponent.activate(); });
             });
             ProjectAccountSwitcher.open();
         </script>

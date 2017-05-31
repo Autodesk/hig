@@ -23,18 +23,18 @@
 }
 
 .hig__global-nav__top-nav__project-account-switcher__project__image-wrapper {
-    position: relative;
-    border-radius: 2px;
-    border: 1px solid $gray-c;
     display: inline-block;
+    position: relative;
     flex: 0 0 auto;
-    margin-right: 10px;
     height: 32px;
     width: 32px;
     overflow: hidden;
 
-    font-size: 13px;
+    border-radius: 2px;
+    border: 1px solid $gray-c;
+
     color: $gray-5;
+    font-size: 13px;
     line-height: 32px;
     text-align: center;
     background-color: $gray-e;
@@ -45,6 +45,7 @@
     top: 0;
     left: 0;
     border: none;
+    cursor: pointer;
 
     color: transparent;
 }
@@ -55,4 +56,10 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow-x: hidden;
+    cursor: pointer;
+    padding-left: 10px;
+
+    .hig__global-nav__top-nav__project-account-switcher__project--active > & {
+        color: $autodesk-blue;
+    }
 }
