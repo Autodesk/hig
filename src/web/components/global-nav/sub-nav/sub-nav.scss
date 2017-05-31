@@ -1,5 +1,6 @@
 @import '~basics/colors/colors.scss';
-@import '~helpers/css/mixins.scss';
+@import '~helpers/css/mixins/base.scss';
+@import '~helpers/css/mixins/breakpoints.scss';
 
 .hig__global-nav__sub-nav{
     @include reset;
@@ -30,6 +31,13 @@
         }
     }
 
+}
+
+.hig__global-nav__sub-nav__left {
+    display: none;
+    @include thirteen-inch-laptop-breakpoint {
+     display: block;
+    }
 }
 
 .hig__global-nav__sub-nav__spacer {

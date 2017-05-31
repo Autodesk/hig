@@ -984,6 +984,12 @@
     .hig__global-nav__sub-nav__left__icon {
       margin-left: 15px; }
 
+.hig__global-nav__sub-nav__left {
+  display: none; }
+  @media screen and (min-width: 1280px) {
+    .hig__global-nav__sub-nav__left {
+      display: block; } }
+
 .hig__global-nav__sub-nav__spacer {
   visibility: hidden;
   flex-shrink: 100; }
