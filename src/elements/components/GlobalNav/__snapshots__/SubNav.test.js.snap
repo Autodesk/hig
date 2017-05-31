@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<GlobalNav.SubNav> adds and removes tabs 1`] = `
+exports[`<SubNav> adds and removes tabs 1`] = `
 "<div class=\\"hig__global-nav\\">
     <!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
@@ -19,7 +19,7 @@ exports[`<GlobalNav.SubNav> adds and removes tabs 1`] = `
 </div>"
 `;
 
-exports[`<GlobalNav.SubNav> adds and removes tabs 2`] = `
+exports[`<SubNav> adds and removes tabs 2`] = `
 "<div class=\\"hig__global-nav\\">
     <!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
@@ -38,7 +38,7 @@ exports[`<GlobalNav.SubNav> adds and removes tabs 2`] = `
 </div>"
 `;
 
-exports[`<GlobalNav.SubNav> renders with props 1`] = `
+exports[`<SubNav> renders with props 1`] = `
 "<div class=\\"hig__global-nav\\">
     <!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
@@ -57,7 +57,7 @@ exports[`<GlobalNav.SubNav> renders with props 1`] = `
 </div>"
 `;
 
-exports[`<GlobalNav.SubNav> updates props 1`] = `
+exports[`<SubNav> updates props 1`] = `
 "<div class=\\"hig__global-nav\\">
     <!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">

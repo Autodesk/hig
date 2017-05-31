@@ -44,9 +44,9 @@ describe('<TopNav>', () => {
 
     mount(
       <GlobalNav>
-          <GlobalNav.TopNav {...defaults}>
-            <Profile {...profileDefaults} />
-          </GlobalNav.TopNav>
+        <TopNav {...defaults}>
+          <Profile {...profileDefaults} />
+        </TopNav>
       </GlobalNav>,
       { attachTo: reactContainer }
     );
@@ -65,9 +65,9 @@ describe('<TopNav>', () => {
     const reactContainer = document.createElement('div');
     mount(
       <GlobalNav>
-          <GlobalNav.TopNav {...defaults}>
-            <Profile {...profileDefaults} />
-          </GlobalNav.TopNav>
+        <GlobalNav.TopNav {...defaults}>
+          <Profile {...profileDefaults} />
+        </GlobalNav.TopNav>
       </GlobalNav>,
       { attachTo: reactContainer }
     );

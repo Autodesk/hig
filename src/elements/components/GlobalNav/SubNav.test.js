@@ -26,17 +26,17 @@ import Tab from './Tab';
 const Context = props => {
   return (
     <GlobalNav>
-        <SubNav
-          moduleIndicatorName={props.moduleIndicatorName}
-          moduleIndicatorIcon={props.moduleIndicatorIcon}
-        >
-          {props.Tabs}
-        </SubNav>
+      <SubNav
+        moduleIndicatorName={props.moduleIndicatorName}
+        moduleIndicatorIcon={props.moduleIndicatorIcon}
+      >
+        {props.Tabs}
+      </SubNav>
     </GlobalNav>
   );
 };
 
-describe('<GlobalNav.SubNav>', () => {
+describe('<SubNav>', () => {
   it('renders with props', () => {
     const defaultProps = {
       moduleIndicatorName: 'Documents Library',

@@ -184,12 +184,9 @@ storiesOf('GlobalNav', module)
     const sideNavOpen = boolean('sideNavOpen', true);
     return (
       <GlobalNav sideNavOpen={sideNavOpen}>
-          <TopNav logo={logo} />
-          <SubNav
-            moduleIndicatorName="Insight"
-            moduleIndicatorIcon="hamburger"
-          />
-          <Slot>{LONG_COPY}</Slot>
+        <TopNav logo={logo} />
+        <SubNav moduleIndicatorName="Insight" moduleIndicatorIcon="hamburger" />
+        <Slot>{LONG_COPY}</Slot>
       </GlobalNav>
     );
   })
@@ -233,12 +230,8 @@ storiesOf('GlobalNav', module)
             </Section>
           </SectionList>
         </SideNav>
-
-          <SubNav
-            moduleIndicatorName="Insight"
-            moduleIndicatorIcon="hamburger"
-          />
-          <Slot>{LONG_COPY}</Slot>
+        <SubNav moduleIndicatorName="Insight" moduleIndicatorIcon="hamburger" />
+        <Slot>{LONG_COPY}</Slot>
       </GlobalNav>
     );
   })
@@ -282,9 +275,8 @@ storiesOf('GlobalNav', module)
             </Section>
           </SectionList>
         </SideNav>
-
-          <TopNav logo={logo} />
-          <Slot>{LONG_COPY}</Slot>
+        <TopNav logo={logo} />
+        <Slot>{LONG_COPY}</Slot>
       </GlobalNav>
     );
   })
@@ -309,9 +301,8 @@ storiesOf('GlobalNav', module)
             </Section>
           </SectionList>
         </SideNav>
-
-          <TopNav logo={logo} />
-          <Slot>{LONG_COPY}</Slot>
+        <TopNav logo={logo} />
+        <Slot>{LONG_COPY}</Slot>
       </GlobalNav>
     );
   })
@@ -334,11 +325,10 @@ storiesOf('GlobalNav', module)
             </Section>
           </SectionList>
         </SideNav>
-
-          <TopNav logo={logo} />
-          <Slot>
-            {LONG_COPY}
-          </Slot>
+        <TopNav logo={logo} />
+        <Slot>
+          {LONG_COPY}
+        </Slot>
       </GlobalNav>
     );
   })
@@ -347,11 +337,10 @@ storiesOf('GlobalNav', module)
     return (
       <GlobalNav sideNavOpen={sideNavOpen}>
         <SideNav />
-
-          <TopNav logo={logo} />
-          <Slot>
-            {LONG_COPY}
-          </Slot>
+        <TopNav logo={logo} />
+        <Slot>
+          {LONG_COPY}
+        </Slot>
       </GlobalNav>
     );
   });

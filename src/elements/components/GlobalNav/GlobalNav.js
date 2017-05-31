@@ -44,7 +44,7 @@ class GlobalNav extends HIGElement {
     }
 
     if (this.subNav) {
-      this.hig.addSubNav(this.subNav.hig)
+      this.hig.addSubNav(this.subNav.hig);
       this.subNav.componentDidMount();
     }
 
@@ -161,7 +161,12 @@ const GlobalNavComponent = createComponent(GlobalNav);
 
 GlobalNavComponent.propTypes = {
   sideNavOpen: PropTypes.bool,
-  children: HIGChildValidator([SideNavComponent, TopNavComponent, SubNavComponent, Slot])
+  children: HIGChildValidator([
+    SideNavComponent,
+    TopNavComponent,
+    SubNavComponent,
+    Slot
+  ])
 };
 
 GlobalNavComponent.__docgenInfo = {

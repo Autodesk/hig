@@ -141,13 +141,7 @@ describe('<GlobalNav>', () => {
     const { higNav, higContainer } = createHigNav();
 
     const reactContainer = document.createElement('div');
-    const wrapper = mount(
-      <GlobalNav>
-      </GlobalNav>,
-      {
-        attachTo: reactContainer
-      }
-    );
+    const wrapper = mount(<GlobalNav />, { attachTo: reactContainer });
 
     expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
 
