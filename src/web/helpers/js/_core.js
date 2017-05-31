@@ -170,6 +170,7 @@ class Core {
      */
 
     unmount(){
+        if (!this.el) { return }
         this.el.remove();
     }
 
