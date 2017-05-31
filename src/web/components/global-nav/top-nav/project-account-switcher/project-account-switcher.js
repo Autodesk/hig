@@ -7,6 +7,7 @@ var Core = require('_core.js');
 var Button = require('../../../../basics/button/button.js');
 var Flyout = require('../../../../basics/flyout/flyout.js');
 var Project = require('./project/project.js');
+var Account = require('./account/account.js');
 var Lists = require('./_lists/lists.js');
 
 /**
@@ -37,6 +38,10 @@ class ProjectAccountSwitcher extends Core {
         this.flyoutContent.addProject(newInstance, referenceInstance);
     }
 
+    addAccount(newInstance, referenceInstance) {
+        this.flyoutContent.addAccount(newInstance, referenceInstance);
+    }
+
     onClick(fn) {
         return this.target.onClick(fn);
     }
@@ -50,6 +55,7 @@ class ProjectAccountSwitcher extends Core {
 ProjectAccountSwitcher._interface = Interface['components']['GlobalNav']['partials']['TopNav']['partials']['ProjectAccountSwitcher'];
 ProjectAccountSwitcher._defaults = {};
 ProjectAccountSwitcher._partials = {
+    Account: Account,
     Project: Project
 };
 

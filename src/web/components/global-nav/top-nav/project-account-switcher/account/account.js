@@ -1,8 +1,4 @@
-import './account.scss';
-
-var Template = require('./account.html');
-var Interface = require('interface.json');
-var Core = require('_core.js');
+var Item = require('../_item/item.js');
 
 /**
  * Creates an Account
@@ -10,19 +6,13 @@ var Core = require('_core.js');
  * @class
  */
 
-class Account extends Core {
+class Account {
 
     constructor(options){
-        super(options);
-        this._render(Template, options);
+        options._type = 'account';
+        return new Item(options);
     }
 
-    
-
 }
-
-Account._interface = Interface['components']['GlobalNav']['partials']['TopNav']['partials']['ProjectAccountSwitcher']['partials']['']['partials']['Account'];
-Account._defaults = {};
-Account._partials = {};
 
 module.exports = Account;
