@@ -9,7 +9,13 @@ exports[`<SideNav> can render a LinksList as a child 1`] = `
     </div>
     <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
 </div><!--SIDENAV-->
-    <!--CONTAINER-->
+    <div class=\\"hig__global-nav__container\\">
+        <!--TOPNAV-->
+        <!--SUBNAV-->
+        <div class=\\"hig__global-nav__container__slot\\">
+            <!--SLOT-->
+        </div>
+    </div>
 </div>"
 `;
 
@@ -22,6 +28,12 @@ exports[`<SideNav> can render a SectionList as a child 1`] = `
     </div>
     <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
 </div><!--SIDENAV-->
-    <!--CONTAINER-->
+    <div class=\\"hig__global-nav__container\\">
+        <!--TOPNAV-->
+        <!--SUBNAV-->
+        <div class=\\"hig__global-nav__container__slot\\">
+            <!--SLOT-->
+        </div>
+    </div>
 </div>"
 `;

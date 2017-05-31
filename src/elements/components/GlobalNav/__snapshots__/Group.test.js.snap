@@ -22,7 +22,13 @@ exports[`<Group> children: <Item> can insert <Item> elements before and after an
     </div>
     <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
 </div><!--SIDENAV-->
-    <!--CONTAINER-->
+    <div class=\\"hig__global-nav__container\\">
+        <!--TOPNAV-->
+        <!--SUBNAV-->
+        <div class=\\"hig__global-nav__container__slot\\">
+            <!--SLOT-->
+        </div>
+    </div>
 </div>"
 `;
 
@@ -53,7 +59,13 @@ exports[`<Group> children: <Item> can insert <Item> elements before and after an
     </div>
     <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
 </div><!--SIDENAV-->
-    <!--CONTAINER-->
+    <div class=\\"hig__global-nav__container\\">
+        <!--TOPNAV-->
+        <!--SUBNAV-->
+        <div class=\\"hig__global-nav__container__slot\\">
+            <!--SLOT-->
+        </div>
+    </div>
 </div>"
 `;
 
@@ -79,7 +91,13 @@ exports[`<Group> children: <Item> can insert <Item> elements before and after an
     </div>
     <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
 </div><!--SIDENAV-->
-    <!--CONTAINER-->
+    <div class=\\"hig__global-nav__container\\">
+        <!--TOPNAV-->
+        <!--SUBNAV-->
+        <div class=\\"hig__global-nav__container__slot\\">
+            <!--SLOT-->
+        </div>
+    </div>
 </div>"
 `;
 
@@ -110,7 +128,13 @@ exports[`<Group> children: <Item> can insert <Item> elements before and after an
     </div>
     <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
 </div><!--SIDENAV-->
-    <!--CONTAINER-->
+    <div class=\\"hig__global-nav__container\\">
+        <!--TOPNAV-->
+        <!--SUBNAV-->
+        <div class=\\"hig__global-nav__container__slot\\">
+            <!--SLOT-->
+        </div>
+    </div>
 </div>"
 `;
 
@@ -136,7 +160,13 @@ exports[`<Group> children: <Item> can insert <Item> elements before and after an
     </div>
     <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
 </div><!--SIDENAV-->
-    <!--CONTAINER-->
+    <div class=\\"hig__global-nav__container\\">
+        <!--TOPNAV-->
+        <!--SUBNAV-->
+        <div class=\\"hig__global-nav__container__slot\\">
+            <!--SLOT-->
+        </div>
+    </div>
 </div>"
 `;
 
@@ -167,6 +197,12 @@ exports[`<Group> children: <Item> can render a list of <Item> elements 1`] = `
     </div>
     <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
 </div><!--SIDENAV-->
-    <!--CONTAINER-->
+    <div class=\\"hig__global-nav__container\\">
+        <!--TOPNAV-->
+        <!--SUBNAV-->
+        <div class=\\"hig__global-nav__container__slot\\">
+            <!--SLOT-->
+        </div>
+    </div>
 </div>"
 `;

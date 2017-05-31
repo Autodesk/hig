@@ -20,20 +20,16 @@ import * as HIG from 'hig.web';
 import React from 'react';
 
 import GlobalNav from './GlobalNav';
-import Container from './Container';
 import TopNav from './TopNav';
 import Profile from './Profile';
 
 describe('<TopNav>', () => {
-  function createHigNavWithContainer() {
+  function createHigNav() {
     const domContainer = document.createElement('div');
     const higNav = new HIG.GlobalNav();
     higNav.mount(domContainer);
 
-    const container = new higNav.partials.Container();
-    higNav.addContainer(container);
-
-    return { container, domContainer };
+    return { higNav, domContainer };
   }
 
   // Create the GlobalNav context for the TopNav to be attached to
@@ -48,11 +44,9 @@ describe('<TopNav>', () => {
 
     mount(
       <GlobalNav>
-        <GlobalNav.Container>
-          <TopNav {...defaults}>
+          <GlobalNav.TopNav {...defaults}>
             <Profile {...profileDefaults} />
-          </TopNav>
-        </GlobalNav.Container>
+          </GlobalNav.TopNav>
       </GlobalNav>,
       { attachTo: reactContainer }
     );
@@ -60,10 +54,10 @@ describe('<TopNav>', () => {
   });
 
   it('contains the correct chidren', () => {
-    const { container, domContainer } = createHigNavWithContainer();
+    const { higNav, domContainer } = createHigNav();
 
-    const topNav = new container.partials.TopNav({ ...defaults });
-    container.addTopNav(topNav);
+    const topNav = new higNav.partials.TopNav({ ...defaults });
+    higNav.addTopNav(topNav);
 
     const profile = new topNav.partials.Profile({ ...profileDefaults });
     topNav.addProfile(profile);
@@ -71,11 +65,9 @@ describe('<TopNav>', () => {
     const reactContainer = document.createElement('div');
     mount(
       <GlobalNav>
-        <GlobalNav.Container>
-          <TopNav {...defaults}>
+          <GlobalNav.TopNav {...defaults}>
             <Profile {...profileDefaults} />
-          </TopNav>
-        </GlobalNav.Container>
+          </GlobalNav.TopNav>
       </GlobalNav>,
       { attachTo: reactContainer }
     );

@@ -140,13 +140,12 @@ describe('<GlobalNav>', () => {
   it('can render the Container as a child', () => {
     const { higNav, higContainer } = createHigNav();
 
-    const container = new higNav.partials.Container();
-    higNav.addContainer(container);
+    //const container = new higNav.partials.Container();
+    //higNav.addContainer(container);
 
     const reactContainer = document.createElement('div');
     const wrapper = mount(
       <GlobalNav>
-        <GlobalNav.Container />
       </GlobalNav>,
       {
         attachTo: reactContainer
@@ -160,30 +159,19 @@ describe('<GlobalNav>', () => {
     );
   });
 
-  it('can only render a single Container', () => {
-    expect(() => {
-      mount(
-        <GlobalNav>
-          <GlobalNav.Container />
-          <GlobalNav.Container />
-        </GlobalNav>
-      );
-    }).toThrowError(/only one Container is allowed/);
-  });
-
   it('can not render arbitrary HTML elements as children', () => {
     global.console.error = jest.fn();
 
     mount(
       <GlobalNav>
-        <GlobalNav.Container />
+        <GlobalNav.TopNav />
         <div>Hello world!</div>
       </GlobalNav>
     );
 
     expect(console.error).toBeCalledWith(
       expect.stringMatching(
-        /'div' is not a valid child of GlobalNav. Children should be of type 'SideNav, Container'/
+        /'div' is not a valid child of GlobalNav. Children should be of type 'SideNav, TopNav, SubNav, Slot'/
       )
     );
   });
@@ -199,7 +187,7 @@ describe('<GlobalNav>', () => {
 
     expect(console.error).toBeCalledWith(
       expect.stringMatching(
-        /'some random child text' is not a valid child of GlobalNav. Children should be of type 'SideNav, Container'/
+        /'some random child text' is not a valid child of GlobalNav. Children should be of type 'SideNav, TopNav, SubNav, Slot'/
       )
     );
   });

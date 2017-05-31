@@ -36,7 +36,7 @@ const getDisplayName = Component =>
  * @example
  *
  * GlobalNav.propTypes = {
- *  children: HIGChildValidator([SideNav, Container])
+ *  children: HIGChildValidator([SideNav, TopNav, SubNav])
  * }
  *
  */

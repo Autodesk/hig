@@ -1,19 +1,19 @@
 /**
-Copyright 2016 Autodesk,Inc.
+ Copyright 2016 Autodesk,Inc.
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0
+ http://www.apache.org/licenses/LICENSE-2.0
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
 
-*/
+ */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Button, GlobalNav } from './react-hig';
@@ -29,13 +29,12 @@ const SectionList = GlobalNav.SideNav.SectionList;
 const Section = GlobalNav.SideNav.SectionList.Item;
 const Group = GlobalNav.SideNav.SectionList.Item.Group;
 const Item = GlobalNav.SideNav.SectionList.Item.Group.Item;
-const Container = GlobalNav.Container;
-const TopNav = GlobalNav.Container.TopNav;
-const Profile = GlobalNav.Container.TopNav.Profile;
-const SubNav = GlobalNav.Container.SubNav;
-const Tabs = GlobalNav.Container.SubNav.Tabs;
-const Tab = GlobalNav.Container.SubNav.Tabs.Tab;
-const Slot = GlobalNav.Container.Slot;
+const TopNav = GlobalNav.TopNav;
+const Profile = GlobalNav.TopNav.Profile;
+const SubNav = GlobalNav.SubNav;
+const Tabs = GlobalNav.SubNav.Tabs;
+const Tab = GlobalNav.SubNav.Tabs.Tab;
+const Slot = GlobalNav.Slot;
 
 class App extends React.Component {
   constructor() {
@@ -139,7 +138,6 @@ class App extends React.Component {
               </Section>
             </SectionList>
           </SideNav>
-          <Container>
             <TopNav
               logo={logo}
               logoLink="http://autodesk.com"
@@ -200,9 +198,7 @@ class App extends React.Component {
 
               Scenester fingerstache kitsch post-ironic snackwave, plaid microdosing gastropub whatever. Next level truffaut swag, offal health goth franzen craft beer tousled 90's retro cardigan man bun keffiyeh ugh. Vegan offal tumblr, distillery prism venmo iPhone 90's vaporware 8-bit cronut semiotics. Prism distillery leggings austin selvage mustache. Venmo gentrify schlitz, ennui cred master cleanse umami sustainable freegan. Chartreuse yuccie freegan, poke four dollar toast echo park messenger bag shabby chic bespoke waistcoat glossier. Offal intelligentsia keffiyeh, XOXO waistcoat neutra squid brunch pug tumeric man braid knausgaard.
             </Slot>
-          </Container>
         </GlobalNav>
-
       </div>
     );
   }

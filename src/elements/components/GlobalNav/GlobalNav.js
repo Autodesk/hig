@@ -21,8 +21,10 @@ import HIGElement from '../../HIGElement';
 import HIGChildValidator from '../../HIGChildValidator';
 import createComponent from '../../../adapters/createComponent';
 
-import ContainerComponent, { Container } from './Container';
 import SideNavComponent, { SideNav } from './SideNav';
+import TopNavComponent, { TopNav } from './TopNav';
+import SubNavComponent, { SubNav } from './SubNav';
+import Slot from './Slot';
 
 class GlobalNav extends HIGElement {
   constructor(initialProps) {
@@ -36,9 +38,14 @@ class GlobalNav extends HIGElement {
       this.sideNav.componentDidMount();
     }
 
-    if (this.container) {
-      this.hig.addContainer(this.container.hig);
-      this.container.componentDidMount();
+    if (this.topNav) {
+      this.hig.addTopNav(this.topNav.hig);
+      this.topNav.componentDidMount();
+    }
+
+    if (this.subNav) {
+      this.hig.addSubNav(this.subNav.hig)
+      this.subNav.componentDidMount();
     }
 
     if (this.initialProps.sideNavOpen) {
@@ -50,8 +57,10 @@ class GlobalNav extends HIGElement {
 
   createElement(ElementConstructor, props) {
     switch (ElementConstructor) {
-      case Container:
-        return new Container(this.hig.partials.Container, props);
+      case TopNav:
+        return new TopNav(this.hig.partials.TopNav, props);
+      case SubNav:
+        return new SubNav(this.hig.partials.SubNav, props);
       case SideNav:
         return new SideNav(this.hig.partials.SideNav, props);
       default:
@@ -70,15 +79,31 @@ class GlobalNav extends HIGElement {
           instance.componentDidMount();
         }
       }
-    } else if (instance instanceof Container) {
-      if (this.container) {
-        throw new Error('only one Container is allowed');
+    } else if (instance instanceof TopNav) {
+      if (this.topNav) {
+        throw new Error('only one TopNav is allowed');
       } else {
-        this.container = instance;
+        this.topNav = instance;
         if (this.mounted) {
-          this.hig.addContainer(instance.hig);
+          this.hig.addTopNav(instance.hig);
           instance.componentDidMount();
         }
+      }
+    } else if (instance instanceof SubNav) {
+      if (this.SubNav) {
+        throw new Error('only one SubNav is allowed');
+      } else {
+        this.subNav = instance;
+        if (this.mounted) {
+          this.hig.addSubNav(instance.hig);
+          instance.componentDidMount();
+        }
+      }
+    } else if (instance instanceof Slot) {
+      this.subNav = instance;
+      if (this.mounted) {
+        this.hig.addSubNav(instance.hig);
+        instance.componentDidMount();
       }
     } else {
       throw new Error('unknown type');
@@ -92,10 +117,10 @@ class GlobalNav extends HIGElement {
   removeChild(instance) {
     if (instance instanceof SideNav) {
       this.sideNav = null;
-    }
-
-    if (instance instanceof Container) {
-      this.container = null;
+    } else if (instance instanceof TopNav) {
+      this.topNav = null;
+    } else if (instance instanceof SubNav) {
+      this.subNav = null;
     }
     instance.unmount();
   }
@@ -130,7 +155,7 @@ const GlobalNavComponent = createComponent(GlobalNav);
 
 GlobalNavComponent.propTypes = {
   sideNavOpen: PropTypes.bool,
-  children: HIGChildValidator([SideNavComponent, ContainerComponent])
+  children: HIGChildValidator([SideNavComponent, TopNavComponent, SubNavComponent, Slot])
 };
 
 GlobalNavComponent.__docgenInfo = {
@@ -140,12 +165,14 @@ GlobalNavComponent.__docgenInfo = {
     },
 
     children: {
-      description: 'support adding SideNav or Container'
+      description: 'support adding SideNav, SubNav, or TopNav'
     }
   }
 };
 
-GlobalNavComponent.Container = ContainerComponent;
 GlobalNavComponent.SideNav = SideNavComponent;
+GlobalNavComponent.TopNav = TopNavComponent;
+GlobalNavComponent.SubNav = SubNavComponent;
+GlobalNavComponent.Slot = Slot;
 
 export default GlobalNavComponent;

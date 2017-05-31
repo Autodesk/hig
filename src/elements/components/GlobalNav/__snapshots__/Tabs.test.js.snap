@@ -4,8 +4,8 @@ exports[`<Tabs> adds tabs 1`] = `
 "<div class=\\"hig__global-nav\\">
     <!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
-    <!--TOPNAV-->
-    <div class=\\"hig__global-nav__container__sub-nav\\">
+        <!--TOPNAV-->
+        <div class=\\"hig__global-nav__container__sub-nav\\">
     <div class=\\"hig__global-nav__container__sub-nav__left__icon\\">#</div>
     <div class=\\"hig__global-nav__container__sub-nav__left\\">Module Name</div>
     <div class=\\"hig__global-nav__sub-nav__tabs\\">
@@ -14,10 +14,10 @@ exports[`<Tabs> adds tabs 1`] = `
     <div class=\\"hig__global-nav__container__sub-nav__left__icon hig__global-nav__container__sub-nav__spacer\\">#</div>
     <div class=\\"hig__global-nav__container__sub-nav__left hig__global-nav__container__sub-nav__spacer\\">Module Name</div>
 </div><!--SUBNAV-->
-    <div class=\\"hig__global-nav__container__slot\\">
-        <!--SLOT-->
+        <div class=\\"hig__global-nav__container__slot\\">
+            <!--SLOT-->
+        </div>
     </div>
-</div><!--CONTAINER-->
 </div>"
 `;
 
@@ -25,8 +25,8 @@ exports[`<Tabs> removes tabs 1`] = `
 "<div class=\\"hig__global-nav\\">
     <!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
-    <!--TOPNAV-->
-    <div class=\\"hig__global-nav__container__sub-nav\\">
+        <!--TOPNAV-->
+        <div class=\\"hig__global-nav__container__sub-nav\\">
     <div class=\\"hig__global-nav__container__sub-nav__left__icon\\">#</div>
     <div class=\\"hig__global-nav__container__sub-nav__left\\">Module Name</div>
     <div class=\\"hig__global-nav__sub-nav__tabs\\">
@@ -35,10 +35,10 @@ exports[`<Tabs> removes tabs 1`] = `
     <div class=\\"hig__global-nav__container__sub-nav__left__icon hig__global-nav__container__sub-nav__spacer\\">#</div>
     <div class=\\"hig__global-nav__container__sub-nav__left hig__global-nav__container__sub-nav__spacer\\">Module Name</div>
 </div><!--SUBNAV-->
-    <div class=\\"hig__global-nav__container__slot\\">
-        <!--SLOT-->
+        <div class=\\"hig__global-nav__container__slot\\">
+            <!--SLOT-->
+        </div>
     </div>
-</div><!--CONTAINER-->
 </div>"
 `;
 
@@ -46,8 +46,8 @@ exports[`<Tabs> renders tabs 1`] = `
 "<div class=\\"hig__global-nav\\">
     <!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
-    <!--TOPNAV-->
-    <div class=\\"hig__global-nav__container__sub-nav\\">
+        <!--TOPNAV-->
+        <div class=\\"hig__global-nav__container__sub-nav\\">
     <div class=\\"hig__global-nav__container__sub-nav__left__icon\\">#</div>
     <div class=\\"hig__global-nav__container__sub-nav__left\\">Module Name</div>
     <div class=\\"hig__global-nav__sub-nav__tabs\\">
@@ -56,9 +56,9 @@ exports[`<Tabs> renders tabs 1`] = `
     <div class=\\"hig__global-nav__container__sub-nav__left__icon hig__global-nav__container__sub-nav__spacer\\">#</div>
     <div class=\\"hig__global-nav__container__sub-nav__left hig__global-nav__container__sub-nav__spacer\\">Module Name</div>
 </div><!--SUBNAV-->
-    <div class=\\"hig__global-nav__container__slot\\">
-        <!--SLOT-->
+        <div class=\\"hig__global-nav__container__slot\\">
+            <!--SLOT-->
+        </div>
     </div>
-</div><!--CONTAINER-->
 </div>"
 `;

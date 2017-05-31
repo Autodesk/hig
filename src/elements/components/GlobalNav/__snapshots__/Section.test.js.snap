@@ -17,7 +17,13 @@ exports[`<Section> children: <Group> can insert <Group> elements before and afte
     </div>
     <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
 </div><!--SIDENAV-->
-    <!--CONTAINER-->
+    <div class=\\"hig__global-nav__container\\">
+        <!--TOPNAV-->
+        <!--SUBNAV-->
+        <div class=\\"hig__global-nav__container__slot\\">
+            <!--SLOT-->
+        </div>
+    </div>
 </div>"
 `;
 
@@ -40,7 +46,13 @@ exports[`<Section> children: <Group> can insert <Group> elements before and afte
     </div>
     <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
 </div><!--SIDENAV-->
-    <!--CONTAINER-->
+    <div class=\\"hig__global-nav__container\\">
+        <!--TOPNAV-->
+        <!--SUBNAV-->
+        <div class=\\"hig__global-nav__container__slot\\">
+            <!--SLOT-->
+        </div>
+    </div>
 </div>"
 `;
 
@@ -61,7 +73,13 @@ exports[`<Section> children: <Group> can insert <Group> elements before and afte
     </div>
     <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
 </div><!--SIDENAV-->
-    <!--CONTAINER-->
+    <div class=\\"hig__global-nav__container\\">
+        <!--TOPNAV-->
+        <!--SUBNAV-->
+        <div class=\\"hig__global-nav__container__slot\\">
+            <!--SLOT-->
+        </div>
+    </div>
 </div>"
 `;
 
@@ -84,7 +102,13 @@ exports[`<Section> children: <Group> can insert <Group> elements before and afte
     </div>
     <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
 </div><!--SIDENAV-->
-    <!--CONTAINER-->
+    <div class=\\"hig__global-nav__container\\">
+        <!--TOPNAV-->
+        <!--SUBNAV-->
+        <div class=\\"hig__global-nav__container__slot\\">
+            <!--SLOT-->
+        </div>
+    </div>
 </div>"
 `;
 
@@ -105,7 +129,13 @@ exports[`<Section> children: <Group> can insert <Group> elements before and afte
     </div>
     <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
 </div><!--SIDENAV-->
-    <!--CONTAINER-->
+    <div class=\\"hig__global-nav__container\\">
+        <!--TOPNAV-->
+        <!--SUBNAV-->
+        <div class=\\"hig__global-nav__container__slot\\">
+            <!--SLOT-->
+        </div>
+    </div>
 </div>"
 `;
 
@@ -128,7 +158,13 @@ exports[`<Section> children: <Group> can render a list of <Group> elements 1`] =
     </div>
     <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
 </div><!--SIDENAV-->
-    <!--CONTAINER-->
+    <div class=\\"hig__global-nav__container\\">
+        <!--TOPNAV-->
+        <!--SUBNAV-->
+        <div class=\\"hig__global-nav__container__slot\\">
+            <!--SLOT-->
+        </div>
+    </div>
 </div>"
 `;
 
@@ -147,7 +183,13 @@ exports[`<Section> headerLabel sets the headerLabel default 1`] = `
     </div>
     <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
 </div><!--SIDENAV-->
-    <!--CONTAINER-->
+    <div class=\\"hig__global-nav__container\\">
+        <!--TOPNAV-->
+        <!--SUBNAV-->
+        <div class=\\"hig__global-nav__container__slot\\">
+            <!--SLOT-->
+        </div>
+    </div>
 </div>"
 `;
 
@@ -166,7 +208,13 @@ exports[`<Section> headerLabel updates the headerLabel 1`] = `
     </div>
     <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
 </div><!--SIDENAV-->
-    <!--CONTAINER-->
+    <div class=\\"hig__global-nav__container\\">
+        <!--TOPNAV-->
+        <!--SUBNAV-->
+        <div class=\\"hig__global-nav__container__slot\\">
+            <!--SLOT-->
+        </div>
+    </div>
 </div>"
 `;
 
@@ -185,7 +233,13 @@ exports[`<Section> headerName sets the headerName default 1`] = `
     </div>
     <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
 </div><!--SIDENAV-->
-    <!--CONTAINER-->
+    <div class=\\"hig__global-nav__container\\">
+        <!--TOPNAV-->
+        <!--SUBNAV-->
+        <div class=\\"hig__global-nav__container__slot\\">
+            <!--SLOT-->
+        </div>
+    </div>
 </div>"
 `;
 
@@ -204,6 +258,12 @@ exports[`<Section> headerName updates the headerName 1`] = `
     </div>
     <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
 </div><!--SIDENAV-->
-    <!--CONTAINER-->
+    <div class=\\"hig__global-nav__container\\">
+        <!--TOPNAV-->
+        <!--SUBNAV-->
+        <div class=\\"hig__global-nav__container__slot\\">
+            <!--SLOT-->
+        </div>
+    </div>
 </div>"
 `;
