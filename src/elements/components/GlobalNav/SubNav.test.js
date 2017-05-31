@@ -26,12 +26,12 @@ import Tab from './Tab';
 const Context = props => {
   return (
     <GlobalNav>
-        <GlobalNav.SubNav
+        <SubNav
           moduleIndicatorName={props.moduleIndicatorName}
           moduleIndicatorIcon={props.moduleIndicatorIcon}
         >
           {props.Tabs}
-        </GlobalNav.SubNav>
+        </SubNav>
     </GlobalNav>
   );
 };

@@ -140,9 +140,6 @@ describe('<GlobalNav>', () => {
   it('can render the Container as a child', () => {
     const { higNav, higContainer } = createHigNav();
 
-    //const container = new higNav.partials.Container();
-    //higNav.addContainer(container);
-
     const reactContainer = document.createElement('div');
     const wrapper = mount(
       <GlobalNav>

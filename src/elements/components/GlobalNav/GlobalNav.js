@@ -53,6 +53,10 @@ class GlobalNav extends HIGElement {
     } else {
       this.hig.hideSideNav();
     }
+
+    if (this.slot) {
+      this.hig.addSlot(this.slot);
+    }
   }
 
   createElement(ElementConstructor, props) {
@@ -99,14 +103,16 @@ class GlobalNav extends HIGElement {
           instance.componentDidMount();
         }
       }
-    } else if (instance instanceof Slot) {
-      this.subNav = instance;
-      if (this.mounted) {
-        this.hig.addSubNav(instance.hig);
-        instance.componentDidMount();
-      }
     } else {
       throw new Error('unknown type');
+    }
+  }
+
+  addSlot(element) {
+    if (this.mounted) {
+      this.hig.addSlot(element);
+    } else {
+      this.slot = element;
     }
   }
 

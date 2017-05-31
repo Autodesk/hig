@@ -75,14 +75,14 @@ class App extends React.Component {
   addTabBefore = () => {
     const nextLabel = Math.floor(Math.random() * 100000, 5);
     const nextTabs = Array.from(this.state.tabs);
-    nextTabs.unshift({ label: nextLabel, id: nextLabel });
+    nextTabs.unshift({ label: nextLabel.toString(), id: nextLabel });
     this.setState({ tabs: nextTabs });
   };
 
   addTabAfter = () => {
     const nextLabel = Math.floor(Math.random() * 100000, 5);
     const nextTabs = Array.from(this.state.tabs);
-    nextTabs.push({ label: nextLabel, id: nextLabel });
+    nextTabs.push({ label: nextLabel.toString(), id: nextLabel });
     this.setState({ tabs: nextTabs });
   };
 
