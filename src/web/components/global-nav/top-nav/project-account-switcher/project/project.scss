@@ -1,5 +1,58 @@
 @import '~basics/colors/colors.scss';
 
-.hig__global-nav__top-nav__project-account-switcher____project{
+.hig__global-nav__top-nav__project-account-switcher__project {
+    display: flex;
+    height: 42px;
+    align-items: center;
+    font-size: 13px;
 
+    &:first-child {
+        padding-top: 20px;
+    }
+
+    &:first-child::before {
+        position: absolute;
+        top: 0;
+        pointer-events: none;
+
+        content: 'Projects';
+        font-size: 11px;
+        text-transform: uppercase;
+        color: $gray-6;
+    }
+}
+
+.hig__global-nav__top-nav__project-account-switcher__project__image-wrapper {
+    position: relative;
+    border-radius: 2px;
+    border: 1px solid $gray-c;
+    display: inline-block;
+    flex: 0 0 auto;
+    margin-right: 10px;
+    height: 32px;
+    width: 32px;
+    overflow: hidden;
+
+    font-size: 13px;
+    color: $gray-5;
+    line-height: 32px;
+    text-align: center;
+    background-color: $gray-e;
+}
+
+.hig__global-nav__top-nav__project-account-switcher__project__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none;
+
+    color: transparent;
+}
+
+.hig__global-nav__top-nav__project-account-switcher__project__label {
+    flex: 1 1 auto;
+    min-width: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
 }

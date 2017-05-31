@@ -119,6 +119,12 @@
                                 "{Profile} Profile - instance of a Profile partial"
                             ]
                         },
+                        "addProjectAccountSwitcher": {
+                            "desc": "Pass in an instance of a ProjectAccountSwitcher partial to mount it to the TopNav",
+                            "params": [
+                                "{ProjectAccountSwitcher} ProjectAccountSwitcher - instance of a ProjectAccountSwitcher partial"
+                            ]
+                        },
                         "onHamburgerClick": "HIG.abstract.EventObject"
                     },
                     "defaults": {
@@ -235,9 +241,6 @@
                                             "desc": "deactivates the account"
                                         },
                                         "onClick": "HIG.abstract.EventObject"
-                                    },
-                                    "defaults": {
-                                        "image": "{String} url src of the image"
                                     }
                                 },
                                 "Project": {
@@ -256,14 +259,8 @@
                                             "desc": "deactivates the project"
                                         },
                                         "onClick": "HIG.abstract.EventObject"
-                                    },
-                                    "defaults": {
-                                        "image": "{String} url src of the image"
                                     }
                                 }
-                            },
-                            "defaults": {
-                                "placeholder": "{String} placeholder text shown when no project or account is active"
                             }
                         }
                     }

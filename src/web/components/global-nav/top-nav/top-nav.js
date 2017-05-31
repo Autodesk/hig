@@ -5,6 +5,7 @@ var Interface = require('interface.json');
 var Core = require('_core.js');
 
 var Profile = require('./profile/profile.js');
+var ProjectAccountSwitcher = require('./project-account-switcher/project-account-switcher.js');
 
 /**
  * Creates an TopNav
@@ -39,6 +40,12 @@ class TopNav extends Core {
         }
     }
 
+    addProjectAccountSwitcher(instance){
+        if (instance instanceof ProjectAccountSwitcher){
+            this.mountPartialToComment('PROJECT_ACCOUNT_SWITCHER', instance);
+        }
+    }
+
 }
 
 TopNav._interface = Interface['components']['GlobalNav']['partials']['TopNav'];
@@ -48,7 +55,8 @@ TopNav._defaults = {
 };
 
 TopNav._partials = {
-    Profile: Profile
+    Profile: Profile,
+    ProjectAccountSwitcher: ProjectAccountSwitcher
 };
 
 
