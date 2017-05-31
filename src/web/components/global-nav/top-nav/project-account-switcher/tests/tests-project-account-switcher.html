@@ -38,6 +38,7 @@
 
             TopNav.addProjectAccountSwitcher(ProjectAccountSwitcher);
 
+            // ADD PROJECTS
             var projectsData = [
                 { label: 'Oakwood Medical Center', image: '../../../tests/project-1.png' },
                 { label: 'Colorado Myrtle Shield Apartments', image: '../../../tests/project-2.png' },
@@ -52,6 +53,23 @@
                 ProjectAccountSwitcher.addProject(projectComponent);
                 projectComponent.onClick(() => { projectComponent.activate(); });
             });
+
+            // ADD ACCOUNT
+            var accountsData = [
+                { label: 'Oakwood Medical Center', image: '../../../tests/project-1.png' },
+                { label: 'Colorado Myrtle Shield Apartments', image: '../../../tests/project-2.png' },
+                { label: 'Grey Pillars', image: '../../../tests/project-3.png' },
+                { label: 'Keystone Apartments' },
+                { label: 'Pleasant Park', image: '../../../tests/project-4.png' }
+            ];
+            var accountComponents = accountsData.map((account) => {
+                return new ProjectAccountSwitcher.partials.Account(account);
+            });
+            accountComponents.forEach((accountComponent) => {
+                ProjectAccountSwitcher.addAccount(accountComponent);
+                accountComponent.onClick(() => { accountComponent.activate(); });
+            });
+
             ProjectAccountSwitcher.open();
         </script>
 

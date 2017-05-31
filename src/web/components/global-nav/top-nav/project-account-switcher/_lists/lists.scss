@@ -1,5 +1,7 @@
-@import '~basics/colors/colors.scss';
+.hig__global-nav__top-nav__project-account-switcher__lists__list {
+    margin-top: 20px;
 
-.hig__global-nav__top-nav__project-account-switcher__lists{
-
+    &:first-child {
+        margin-top: 0;
+    }
 }

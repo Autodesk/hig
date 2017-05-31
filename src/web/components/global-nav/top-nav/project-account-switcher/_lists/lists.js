@@ -21,6 +21,10 @@ class Lists extends Core {
         this.mountPartialToComment('PROJECTS', newInstance, referenceInstance);
     }
 
+    addAccount(newInstance, referenceInstance) {
+        this.mountPartialToComment('ACCOUNTS', newInstance, referenceInstance);
+    }
+
 }
 
 Lists._interface = {
