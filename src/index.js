@@ -57,7 +57,7 @@ class App extends React.Component {
     });
   };
 
-  handleClick = event => {
+  toggleSideNav = event => {
     this.setState({ open: !this.state.open });
   };
 
@@ -141,7 +141,7 @@ class App extends React.Component {
           <TopNav
             logo={logo}
             logoLink="http://autodesk.com"
-            onHamburgerClick={this.handleClick}
+            onHamburgerClick={this.toggleSideNav}
           >
             <Profile
               image={profileImage}

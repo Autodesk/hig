@@ -31,36 +31,21 @@ export class TopNav extends HIGElement {
   }
 
   commitUpdate(updatePayload, oldProps, newProp) {
+    const mapping = {
+      logo: 'setLogo',
+      logoLink: 'setLogoLink'
+    }
+
     for (let i = 0; i < updatePayload.length; i += 2) {
       const propKey = updatePayload[i];
       const propValue = updatePayload[i + 1];
 
-      switch (propKey) {
-        case 'logo':
-          this.hig.setLogo(propValue);
-          break;
-        case 'logoLink':
-          this.hig.setLogoLink(propValue);
-          break;
-        case 'children':
-          // No-op
-          break;
-        case 'onHamburgerClick': {
-          const dispose = this._disposeFunctions.get('onHamburgerClickDispose');
+      if (propKey === 'children') { break }
 
-          if (dispose) {
-            dispose();
-          }
-
-          this._disposeFunctions.set(
-            'onHamburgerClickDispose',
-            this.hig.onHamburgerClick(propValue)
-          );
-          break;
-        }
-        default: {
-          console.warn(`${propKey} is unknown`);
-        }
+      if (mapping[propKey]) {
+        this.hig[mapping[propKey]](propValue);
+      } else {
+        this.commitPropChange(propKey, propValue);
       }
     }
   }
