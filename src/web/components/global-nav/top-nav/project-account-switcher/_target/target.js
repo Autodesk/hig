@@ -25,6 +25,7 @@ class Target extends Core {
 
     _componentDidMount() {
         this.mountPartialToComment('ITEM', this.item);
+        this._findDOMEl('.hig__global-nav__top-nav__project-account-switcher__target__caret', this.el).innerHTML = this._getIconString('caret');
     }
 
 }

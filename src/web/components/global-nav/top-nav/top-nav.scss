@@ -18,7 +18,7 @@ $group-height: 56px;
     justify-content: space-between;
     align-items: center;
 
-    &__group{
+    &__group {
         height: $group-height;
         display: flex;
         align-items: center;
@@ -33,7 +33,7 @@ $group-height: 56px;
 
     }
 
-    &__hamburger{
+    &__hamburger {
         margin: 0 10px 0 12px;
 
         &:hover{
@@ -41,11 +41,15 @@ $group-height: 56px;
         }
     }
 
-    &__logo{
+    &__logo {
         height: 24px;
 
         & img{
             height: 100%;
         }
+    }
+
+    &__spacer {
+        flex: 1 1 0;
     }
 }
