@@ -5,31 +5,6 @@
     height: 42px;
     align-items: center;
     font-size: 13px;
-    position: relative;
-
-    &:first-child {
-        padding-top: 15px;
-    }
-
-    &:first-child::before {
-        position: absolute;
-        top: 0px;
-        pointer-events: none;
-
-        content: 'Projects';
-        font-size: 11px;
-        line-height: 15px;
-        text-transform: uppercase;
-        color: $gray-6;
-    }
-}
-
-.hig__global-nav__top-nav__project-account-switcher__item--project:first-child::before {
-    content: 'Projects';
-}
-
-.hig__global-nav__top-nav__project-account-switcher__item--account:first-child::before {
-    content: 'Accounts';
 }
 
 .hig__global-nav__top-nav__project-account-switcher__item__image-wrapper {
