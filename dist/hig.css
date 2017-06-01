@@ -430,10 +430,10 @@
     position: relative;
     min-height: 100%;
     background: #F4F5F6; }
-    .hig__global-nav__container__slot {
-      padding: 20px; }
+  .hig__global-nav__slot {
+    padding: 20px; }
 
-.hig__global-nav--open .hig__global-nav {
+.hig__global-nav--open .hig__global-nav__container {
   margin-left: 280px; }
 @font-face {
   font-family: 'ArtifaktElement';
