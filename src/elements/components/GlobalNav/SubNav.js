@@ -63,25 +63,8 @@ export class SubNav extends HIGElement {
   }
 
   commitUpdate(updatePayload, oldProps, newProp) {
-    for (let i = 0; i < updatePayload.length; i += 2) {
-      const propKey = updatePayload[i];
-      const propValue = updatePayload[i + 1];
-
-      switch (propKey) {
-        case 'moduleIndicatorName':
-          this.hig.setModuleIndicatorName(propValue);
-          break;
-        case 'moduleIndicatorIcon':
-          this.hig.setModuleIndicatorIcon(propValue);
-          break;
-        case 'children':
-          // No-op
-          break;
-        default: {
-          console.warn(`${propKey} is unknown`);
-        }
-      }
-    }
+    const mapping = { moduleIndicatorName: 'setModuleIndicatorName', moduleIndicatorIcon: 'setModuleIndicatorIcon' };
+    this.commitUpdateWithMapping(updatePayload, mapping);
   }
 }
 

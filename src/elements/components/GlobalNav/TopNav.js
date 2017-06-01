@@ -31,25 +31,8 @@ export class TopNav extends HIGElement {
   }
 
   commitUpdate(updatePayload, oldProps, newProp) {
-    const mapping = {
-      logo: 'setLogo',
-      logoLink: 'setLogoLink'
-    };
-
-    for (let i = 0; i < updatePayload.length; i += 2) {
-      const propKey = updatePayload[i];
-      const propValue = updatePayload[i + 1];
-
-      if (propKey === 'children') {
-        break;
-      }
-
-      if (mapping[propKey]) {
-        this.hig[mapping[propKey]](propValue);
-      } else {
-        this.commitPropChange(propKey, propValue);
-      }
-    }
+    const mapping = { logo: 'setLogo',  logoLink: 'setLogoLink' };
+    this.commitUpdateWithMapping(updatePayload, mapping)
   }
 
   createElement(ElementConstructor, props) {
@@ -111,7 +94,7 @@ TopNavComponent.__docgenInfo = {
     },
 
     onHamburgerClick: {
-      description: 'trigged when hamburger icon is clicked'
+      description: 'triggered when hamburger icon is clicked'
     },
 
     addProfile: {

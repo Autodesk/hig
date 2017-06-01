@@ -78,6 +78,25 @@ export default class HIGElement {
     // sub-classes should implement if they need to
   }
 
+  // Abstracts a common way of updating property changes.
+  // Children will be seen and not heard, i.e. ignored
+  commitUpdateWithMapping(updatePayload, mapping) {
+    for (let i = 0; i < updatePayload.length; i += 2) {
+      const propKey = updatePayload[i];
+      const propValue = updatePayload[i + 1];
+
+      if (propKey === 'children') {
+        break;
+      }
+
+      if (mapping[propKey]) {
+        this.hig[mapping[propKey]](propValue);
+      } else {
+        this.commitPropChange(propKey, propValue);
+      }
+    }
+  }
+
   commitPropChange(propKey, propValue) {
     if (this.events[propKey]) {
       this.replaceEvent(propKey, propValue);

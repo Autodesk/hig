@@ -39,25 +39,8 @@ export class Section extends HIGElement {
   }
 
   commitUpdate(updatePayload, oldProps, newProp) {
-    for (let i = 0; i < updatePayload.length; i += 2) {
-      const propKey = updatePayload[i];
-      const propValue = updatePayload[i + 1];
-
-      switch (propKey) {
-        case 'headerLabel':
-          this.hig.setHeaderLabel(propValue);
-          break;
-        case 'headerName':
-          this.hig.setHeaderName(propValue);
-          break;
-        case 'children':
-          /* no-op */
-          break;
-        default: {
-          console.warn(`${propKey} is unknown`);
-        }
-      }
-    }
+    const mapping = { headerLabel: 'setHeaderLabel', headerName: 'setHeaderName' };
+    this.commitUpdateWithMapping(updatePayload, mapping);
   }
 
   createElement(ElementConstructor, props) {

@@ -20,52 +20,13 @@ import HIGElement from '../../HIGElement';
 
 export class Item extends HIGElement {
   commitUpdate(updatePayload, oldProps, newProps) {
-    for (let i = 0; i < updatePayload.length; i += 2) {
-      const propKey = updatePayload[i];
-      const propValue = updatePayload[i + 1];
+    const mapping = {
+      icon: 'setIcon',
+      title: 'setTitle',
+      link: 'setLink'
+    };
 
-      switch (propKey) {
-        case 'icon':
-          this.hig.setIcon(propValue);
-          break;
-        case 'title':
-          this.hig.setTitle(propValue);
-          break;
-        case 'link':
-          this.hig.setLink(propValue);
-          break;
-        case 'onClick': {
-          const dispose = this._disposeFunctions.get('onClickDispose');
-
-          if (dispose) {
-            dispose();
-          }
-
-          this._disposeFunctions.set(
-            'onClickDispose',
-            this.hig.onClick(propValue)
-          );
-          break;
-        }
-
-        case 'onHover': {
-          const dispose = this._disposeFunctions.get('onHoverDispose');
-
-          if (dispose) {
-            dispose();
-          }
-
-          this._disposeFunctions.set(
-            'onHoverDispose',
-            this.hig.onHover(propValue)
-          );
-          break;
-        }
-        default: {
-          console.warn(`${propKey} is unknown`);
-        }
-      }
-    }
+    this.commitUpdateWithMapping(updatePayload, mapping)
   }
 }
 

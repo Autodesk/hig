@@ -20,39 +20,63 @@ import HIGElement from '../../HIGElement';
 import createComponent from '../../../adapters/createComponent';
 
 export class Profile extends HIGElement {
+
   commitUpdate(updatePayload, oldProps, newProp) {
-    const mapping = {
-      image: 'setImage'
+    const mapping =       {
+      image: 'setImage',
+      name: 'setName',
+      email: 'setEmail',
+      profileSettingsLabel: 'setProfileSettingsLabel',
+      signOutLabel: 'setSignOutLabel',
+      profileSettingsLink: 'setProfileSettingsLink'
     };
 
-    for (let i = 0; i < updatePayload.length; i += 2) {
-      const propKey = updatePayload[i];
-      const propValue = updatePayload[i + 1];
-
-      if (mapping[propKey]) {
-        this.hig[mapping[propKey]](propValue);
-      } else {
-        this.commitPropChange(propKey, propValue);
-      }
-    }
+    this.commitUpdateWithMapping(updatePayload, mapping);
   }
 }
 
 const ProfileComponent = createComponent(Profile);
 
-ProfileComponent.propTypes = {
+Profile.propTypes = {
+  open: PropTypes.bool,
   image: PropTypes.string,
+  name: PropTypes.string,
+  email: PropTypes.string,
+  signOutLabel: PropTypes.string,
+  profileSettingsLabel: PropTypes.string,
+  profileSettingsLink: PropTypes.string,
+  onSignOutClick: PropTypes.func,
   onProfileImageClick: PropTypes.func
 };
 
 ProfileComponent.__docgenInfo = {
   props: {
-    onProfileImageClick: {
-      description: 'triggers when you click the profile'
+    open: {
+      description: '{bool} sets whether flyout is open by default (?)'
     },
-
+    name: {
+      description: 'sets {String} display name'
+    },
+    email: {
+      description: 'sets {String} email'
+    },
     image: {
       description: 'sets {String} image - url to svg or other image object'
+    },
+    signOutLabel: {
+      description: 'sets {String} label for sign out button'
+    },
+    profileSettingsLabel: {
+      description: 'sets {String} label for settings button'
+    },
+    profileSettingsLink: {
+      description: 'sets {String} url to settings page'
+    },
+    onSignOutClick: {
+      description: '{function} Triggered when user clicks sign out button'
+    },
+    onProfileImageClick: {
+      description: '{function} triggers when you click the profile'
     }
   }
 };

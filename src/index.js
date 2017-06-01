@@ -64,6 +64,9 @@ class App extends React.Component {
   profileImageClick = event => {
     console.log('Profile Image clicked!');
   };
+  profileSignOutClick = event => {
+    console.log('Profile Sign Out button clicked!');
+  };
 
   fn1 = () => this.setState({ fn: true });
 
@@ -144,8 +147,13 @@ class App extends React.Component {
             onHamburgerClick={this.toggleSideNav}
           >
             <Profile
+              open={true}
               image={profileImage}
+              signOutLabel="Logout"
               onProfileImageClick={this.profileImageClick}
+              onSignOutClick={this.profileSignOutClick}
+              name="Jane Doe"
+              email="jane.doe@example.com"
             />
           </TopNav>
           <SubNav
