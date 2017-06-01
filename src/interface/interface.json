@@ -215,10 +215,16 @@
                                 "close": {
                                     "desc": "closes the profile"
                                 },
-                                "setActive": {
-                                    "desc": "Pass an instance of either Account or Project",
+                                "setActivelabel": {
+                                    "desc": "Sets the label displayed in the top nav",
                                     "params": [
-                                        "{Account or Project} - The account or project currently chosen"
+                                        "{String} - Label of the active project or account"
+                                    ]
+                                },
+                                "setActiveImage": {
+                                    "desc": "Sets the image displayed in the top nav",
+                                    "params": [
+                                        "{String} - url of the image of the active project or account"
                                     ]
                                 },
                                 "onClickOutside": "HIG.abstract.EventObject",
