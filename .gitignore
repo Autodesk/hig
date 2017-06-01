@@ -39,5 +39,8 @@ jspm_packages
 # Gemini Report
 /gemini-report
 
+# Files created by CircleCI
+nohup.out
+
 # Environment Variables
 .env
