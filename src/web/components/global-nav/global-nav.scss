@@ -8,13 +8,13 @@
     &__container{
         position: relative;
         min-height: 100%;
-        background: $background-2;
+        background: $background-2;    
+    }
 
-        &__slot{
-            padding: 20px;
-        }
+    &__slot{
+        padding: 20px;
     }
 }
-.hig__global-nav--open .hig__global-nav{
+.hig__global-nav--open .hig__global-nav__container{
     margin-left: $hig__global-nav__sidenav--width;
 }
