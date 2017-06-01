@@ -20,13 +20,13 @@ class SubNav extends Core {
     }
 
     setModuleIndicatorName(name){
-        this._findDOMEl('.hig__global-nav__container__sub-nav__left', this.el).textContent = name;
-        this._findDOMEl('.hig__global-nav__container__sub-nav__left.hig__global-nav__container__sub-nav__spacer', this.el).textContent = name;
+        this._findDOMEl('.hig__global-nav__sub-nav__left', this.el).textContent = name;
+        this._findDOMEl('.hig__global-nav__sub-nav__left.hig__global-nav__sub-nav__spacer', this.el).textContent = name;
     }
 
     setModuleIndicatorIcon(icon){
-        this._findDOMEl('.hig__global-nav__container__sub-nav__left__icon', this.el).innerHTML = this._getIconString(icon);
-        this._findDOMEl('.hig__global-nav__container__sub-nav__left__icon.hig__global-nav__container__sub-nav__spacer', this.el).innerHTML = this._getIconString(icon);
+        this._findDOMEl('.hig__global-nav__sub-nav__left__icon', this.el).innerHTML = this._getIconString(icon);
+        this._findDOMEl('.hig__global-nav__sub-nav__left__icon.hig__global-nav__sub-nav__spacer', this.el).innerHTML = this._getIconString(icon);
     }
 
     addTabs(tabsInstance){
