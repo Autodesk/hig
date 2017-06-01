@@ -34,7 +34,10 @@
             TopNav.addProfile(MyProfile1);
 
             // CREATE PROJECT ACCOUNT SWITCHER
-            var ProjectAccountSwitcher = new TopNav.partials.ProjectAccountSwitcher();
+            var ProjectAccountSwitcher = new TopNav.partials.ProjectAccountSwitcher({
+                activeLabel: 'Global Construction / West Oakwood Medical Center',
+                activeImage: '../../../tests/project-1.png'
+            });
 
             TopNav.addProjectAccountSwitcher(ProjectAccountSwitcher);
 
