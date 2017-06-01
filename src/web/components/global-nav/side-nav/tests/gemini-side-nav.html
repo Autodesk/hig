@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../../../../../../dist/hig.css">
+        <script type="text/javascript" src="../../../../../../dist/hig.js"></script>
+    </head>
+    <body>
+        <style>
+            body, html{
+                margin: 0; padding: 0;
+            }
+        </style>
+
+        <script>
+
+            // CREATE GLOBALNAV COMPONENT
+            var GlobalNav = new Hig.GlobalNav();
+            GlobalNav.mount("body");
+
+            // ADD TOPNAV
+            var TopNav = new GlobalNav.partials.TopNav({
+                "logo": "https://www.dexigner.com/images/news/xw/22856.jpg",
+                "logo_link": "#"
+            });
+            GlobalNav.addTopNav(TopNav);
+
+            TopNav.setLogo("../../../global-nav/tests/bim-logo.png"); // Update logo
+            TopNav.setLogoLink("http://autodesk.com"); // update logo link
+
+            // CREATE PROFILE
+            var MyProfile1 = new TopNav.partials.Profile({
+                image: "../../../global-nav/tests/egg.jpg"
+            });
+
+            TopNav.addProfile(MyProfile1);
+
+            // ADD A SIDENAV
+            var SideNav = new GlobalNav.partials.SideNav();
+            GlobalNav.addSideNav(SideNav);
+
+            // ADD A SECTION IN OUR SIDENAV
+            var Section1 = new SideNav.partials.Section({
+                "headerLabel": "Project",
+                "headerName": "Thunderstorm"
+            });
+            SideNav.addSection(Section1);
+
+            // ADD A GROUP TO OUR SECTION
+            var Group1 = new Section1.partials.Group();
+            Section1.addGroup(Group1);
+
+            // ADD SOME ITEMS TO OUR GROUP
+            var Group1_Item1 = new Group1.partials.Item({
+                "icon": "project-management",
+                "title": "Item 1",
+                "link": "#"
+            });
+            Group1.addItem(Group1_Item1);
+
+            var Group1_Item2 = new Group1.partials.Item({
+                "icon": "project-management",
+                "title": "Item 2",
+                "link": "#"
+            });
+            Group1.addItem(Group1_Item2);
+
+            var Group1_Item3 = new Group1.partials.Item({
+                "icon": "project-management",
+                "title": "Item 3",
+                "link": "#"
+            });
+            Group1.addItem(Group1_Item3);
+
+            // ADD ANOTHER GROUP TO OUR SECTION
+            var Group2 = new Section1.partials.Group();
+            Section1.addGroup(Group2);
+
+            // ADD SOME ITEMS TO OUR GROUP
+            var Group2_Item1 = new Group2.partials.Item({
+                "icon": "project-management",
+                "title": "Item 1",
+                "link": "#"
+            });
+            Group2.addItem(Group2_Item1);
+
+            // ADD ANOTHER SECTION IN OUR SIDENAV
+            var Section2 = new SideNav.partials.Section({
+                "headerLabel": "Project",
+                "headerName": "Thunderstorm"
+            });
+            SideNav.addSection(Section2);
+
+            // ADD A GROUP TO OUR OTHER SECTION
+            var Group1 = new Section2.partials.Group();
+            Section2.addGroup(Group1);
+
+            // ADD SOME ITEMS TO OUR GROUP
+            var Group1_Item1 = new Group1.partials.Item({
+                "icon": "project-management",
+                "title": "Item 1",
+                "link": "#"
+            });
+            Group1.addItem(Group1_Item1);
+
+            var Group1_Item2 = new Group1.partials.Item({
+                "icon": "project-management",
+                "title": "Item 2",
+                "link": "#"
+            });
+            Group1.addItem(Group1_Item2);
+
+           // OPEN THE SIDENAV
+           GlobalNav.showSideNav();
+
+        </script>
+
+    </body>
+</html>
