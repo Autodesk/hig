@@ -6,7 +6,7 @@ exports[`<GlobalNav> can render the Container as a child 1`] = `
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
         <!--SUBNAV-->
-        <div class=\\"hig__global-nav__container__slot\\">
+        <div class=\\"hig__global-nav__slot\\">
             <!--SLOT-->
         </div>
     </div>
@@ -19,7 +19,7 @@ exports[`<GlobalNav> renders the global nav 1`] = `
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
         <!--SUBNAV-->
-        <div class=\\"hig__global-nav__container__slot\\">
+        <div class=\\"hig__global-nav__slot\\">
             <!--SLOT-->
         </div>
     </div>
@@ -38,7 +38,7 @@ exports[`<GlobalNav> sideNavOpen prop can render the SideNav as a child 1`] = `
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
         <!--SUBNAV-->
-        <div class=\\"hig__global-nav__container__slot\\">
+        <div class=\\"hig__global-nav__slot\\">
             <!--SLOT-->
         </div>
     </div>
@@ -51,7 +51,7 @@ exports[`<GlobalNav> sideNavOpen prop can showSideNav by default 1`] = `
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
         <!--SUBNAV-->
-        <div class=\\"hig__global-nav__container__slot\\">
+        <div class=\\"hig__global-nav__slot\\">
             <!--SLOT-->
         </div>
     </div>
@@ -64,7 +64,7 @@ exports[`<GlobalNav> sideNavOpen prop is equal to showSideNav 1`] = `
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
         <!--SUBNAV-->
-        <div class=\\"hig__global-nav__container__slot\\">
+        <div class=\\"hig__global-nav__slot\\">
             <!--SLOT-->
         </div>
     </div>
@@ -77,7 +77,7 @@ exports[`<GlobalNav> sideNavOpen prop is equal to showSideNav 2`] = `
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
         <!--SUBNAV-->
-        <div class=\\"hig__global-nav__container__slot\\">
+        <div class=\\"hig__global-nav__slot\\">
             <!--SLOT-->
         </div>
     </div>

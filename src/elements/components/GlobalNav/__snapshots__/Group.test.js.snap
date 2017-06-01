@@ -25,7 +25,7 @@ exports[`<Group> children: <Item> can insert <Item> elements before and after an
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
         <!--SUBNAV-->
-        <div class=\\"hig__global-nav__container__slot\\">
+        <div class=\\"hig__global-nav__slot\\">
             <!--SLOT-->
         </div>
     </div>
@@ -62,7 +62,7 @@ exports[`<Group> children: <Item> can insert <Item> elements before and after an
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
         <!--SUBNAV-->
-        <div class=\\"hig__global-nav__container__slot\\">
+        <div class=\\"hig__global-nav__slot\\">
             <!--SLOT-->
         </div>
     </div>
@@ -94,7 +94,7 @@ exports[`<Group> children: <Item> can insert <Item> elements before and after an
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
         <!--SUBNAV-->
-        <div class=\\"hig__global-nav__container__slot\\">
+        <div class=\\"hig__global-nav__slot\\">
             <!--SLOT-->
         </div>
     </div>
@@ -131,7 +131,7 @@ exports[`<Group> children: <Item> can insert <Item> elements before and after an
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
         <!--SUBNAV-->
-        <div class=\\"hig__global-nav__container__slot\\">
+        <div class=\\"hig__global-nav__slot\\">
             <!--SLOT-->
         </div>
     </div>
@@ -163,7 +163,7 @@ exports[`<Group> children: <Item> can insert <Item> elements before and after an
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
         <!--SUBNAV-->
-        <div class=\\"hig__global-nav__container__slot\\">
+        <div class=\\"hig__global-nav__slot\\">
             <!--SLOT-->
         </div>
     </div>
@@ -200,7 +200,7 @@ exports[`<Group> children: <Item> can render a list of <Item> elements 1`] = `
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
         <!--SUBNAV-->
-        <div class=\\"hig__global-nav__container__slot\\">
+        <div class=\\"hig__global-nav__slot\\">
             <!--SLOT-->
         </div>
     </div>

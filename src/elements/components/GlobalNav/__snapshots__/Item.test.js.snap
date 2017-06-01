@@ -25,7 +25,7 @@ exports[`<Item> icon sets icon by default 1`] = `
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
         <!--SUBNAV-->
-        <div class=\\"hig__global-nav__container__slot\\">
+        <div class=\\"hig__global-nav__slot\\">
             <!--SLOT-->
         </div>
     </div>
@@ -57,7 +57,7 @@ exports[`<Item> icon updates icon 1`] = `
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
         <!--SUBNAV-->
-        <div class=\\"hig__global-nav__container__slot\\">
+        <div class=\\"hig__global-nav__slot\\">
             <!--SLOT-->
         </div>
     </div>
@@ -89,7 +89,7 @@ exports[`<Item> link sets link by default 1`] = `
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
         <!--SUBNAV-->
-        <div class=\\"hig__global-nav__container__slot\\">
+        <div class=\\"hig__global-nav__slot\\">
             <!--SLOT-->
         </div>
     </div>
@@ -121,7 +121,7 @@ exports[`<Item> link updates link 1`] = `
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
         <!--SUBNAV-->
-        <div class=\\"hig__global-nav__container__slot\\">
+        <div class=\\"hig__global-nav__slot\\">
             <!--SLOT-->
         </div>
     </div>
@@ -153,7 +153,7 @@ exports[`<Item> title sets title by default 1`] = `
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
         <!--SUBNAV-->
-        <div class=\\"hig__global-nav__container__slot\\">
+        <div class=\\"hig__global-nav__slot\\">
             <!--SLOT-->
         </div>
     </div>
@@ -185,7 +185,7 @@ exports[`<Item> title updates title 1`] = `
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
         <!--SUBNAV-->
-        <div class=\\"hig__global-nav__container__slot\\">
+        <div class=\\"hig__global-nav__slot\\">
             <!--SLOT-->
         </div>
     </div>

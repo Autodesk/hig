@@ -12,7 +12,7 @@ exports[`<SideNav> can render a LinksList as a child 1`] = `
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
         <!--SUBNAV-->
-        <div class=\\"hig__global-nav__container__slot\\">
+        <div class=\\"hig__global-nav__slot\\">
             <!--SLOT-->
         </div>
     </div>
@@ -31,7 +31,7 @@ exports[`<SideNav> can render a SectionList as a child 1`] = `
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
         <!--SUBNAV-->
-        <div class=\\"hig__global-nav__container__slot\\">
+        <div class=\\"hig__global-nav__slot\\">
             <!--SLOT-->
         </div>
     </div>
