@@ -7,7 +7,7 @@ HIG aims to provide implementations for the mayor platforms (web/native ios/nati
 The HIG Web implementation consists of `html`, `css` and `js`. You can opt to only consume the `html` and `css` part and write the wrapper against the `interface.json` yourself (hard) or opt to use our `js` wrapper directly (easy). 
 
 ### Developing / Contributing
-read our developing docs here: [DEVELOPING.md](DEVELOPING.md)
+read our developing docs here: [DEVELOPING.md](DEVELOPING.md) and contribution guidelines here: [CONTRIBUTING.md](CONTRIBUTING.md) 
 
 ### Consuming the HIG Basic Example: Button
 ```javascript
@@ -41,5 +41,3 @@ HIG identifies 4 levels of detail in a UI:
 - `Mini-Experiences`: These are collections of components or pages that create a small, discrete experience within our products: sign-in, trial, sharing, in-product learning.
 
 ## [Test Examples for HIG Components](/index.html).
-
-
