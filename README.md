@@ -40,4 +40,5 @@ HIG identifies 4 levels of detail in a UI:
 - `Page Types`: Think of these as specific types of views or screens within our products. This includes canvas views, list or grid indexes, dashboards, and item details.
 - `Mini-Experiences`: These are collections of components or pages that create a small, discrete experience within our products: sign-in, trial, sharing, in-product learning.
 
-## [Test Examples for HIG Components](/index.html).
+## Test Examples for HIG Components
+[adsk-hig.github.io/hig/](https://adsk-hig.github.io/hig/).
