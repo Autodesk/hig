@@ -34,13 +34,13 @@ class ProfileFlyoutContent extends Core {
     }
 
     setEmail(email) {
-        const el = this.el.querySelector('.src__components__global-nav__container__top-nav__profile__profile-flyout-content__email');
+        const el = this.el.querySelector('.src__components__global-nav__top-nav__profile__profile-flyout-content__email');
         el.textContent = email;
         el.setAttribute('title', email);
     }
 
     setName(name) {
-        const el = this.el.querySelector('.src__components__global-nav__container__top-nav__profile__profile-flyout-content__name')
+        const el = this.el.querySelector('.src__components__global-nav__top-nav__profile__profile-flyout-content__name')
         el.textContent = name;
         el.setAttribute('title', name);
     }

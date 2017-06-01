@@ -23,7 +23,7 @@ class ProfileImage extends Core {
 
     setImage(imageUrl) {
         this.el
-            .querySelector('.hig__global-nav__container__top-nav__profile__profile-image__image')
+            .querySelector('.hig__global-nav__top-nav__profile__profile-image__image')
             .setAttribute("src", imageUrl);
     }
 

@@ -20,16 +20,16 @@ class TopNav extends Core {
     }
 
     onHamburgerClick(fn){
-        return this._attachListener("click", '.js-hig__global-nav__container__top-nav__hamburger', this.el, fn);
+        return this._attachListener("click", '.js-hig__global-nav__top-nav__hamburger', this.el, fn);
     }
 
     setLogo(logo){
-        var scope = this._findDOMEl('.hig__global-nav__container__top-nav__logo', this.el);
+        var scope = this._findDOMEl('.hig__global-nav__top-nav__logo', this.el);
         this._findDOMEl("img", scope).setAttribute("src", logo);
     }
 
     setLogoLink(link){
-        var scope = this._findDOMEl('.hig__global-nav__container__top-nav__logo', this.el);
+        var scope = this._findDOMEl('.hig__global-nav__top-nav__logo', this.el);
         this._findDOMEl("a", scope).setAttribute("href", link);
     }
 
