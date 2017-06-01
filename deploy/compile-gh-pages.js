@@ -16,7 +16,7 @@ const mustache = require('mustache');
 const thisDir = __dirname;
 const rootDir = path.resolve(__dirname + "/../");
 
-const testsGlob = rootDir + "/src/**/tests/*.html"
+const testsGlob = rootDir + "/src/**/tests/test*.html"
 const templatePath = thisDir + "/index.template.html"
 
 const indexMustacheTemplate = fs.readFileSync(templatePath, {encoding: 'utf8'});
@@ -32,11 +32,9 @@ glob(testsGlob, (er, files) => {
   var testList = { testLinks: [] };
 
   files.forEach(function(filePath) {
-    var newFilePath = "/" + path.relative(rootDir, filePath);
+    var newFilePath = "/hig/" + path.relative(rootDir, filePath);
     var title = path.parse(filePath).base.replace("test-", "");
-    testList.testLinks.push(
-      { href: newFilePath, title: title }
-    )
+    testList.testLinks.push({ href: newFilePath, title: title });
   });
 
   const rendered = mustache.render(indexMustacheTemplate, testList);
