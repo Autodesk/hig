@@ -9,6 +9,7 @@ var Flyout = require('../../../../basics/flyout/flyout.js');
 var Project = require('./project/project.js');
 var Account = require('./account/account.js');
 var Lists = require('./_lists/lists.js');
+var Target = require('./_target/target.js');
 
 /**
  * Creates an ProjectAccountSwitcher
@@ -22,7 +23,7 @@ class ProjectAccountSwitcher extends Core {
         super(options);
 
         this.flyout = new Flyout();
-        this.target = new Button({ title: 'Switcher' });
+        this.target = new Target({ label: options.activeLabel, image: options.activeImage });
         this.flyoutContent = new Lists();
 
         this._render(Template, options);
@@ -47,7 +48,9 @@ class ProjectAccountSwitcher extends Core {
     }
 
     open() { this.flyout.open(); }
+
     close() { this.flyout.close(); }
+
     onClickOutside() { this.flyout.onClickOutside(); }
 
 }
