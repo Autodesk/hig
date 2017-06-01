@@ -1,7 +1,7 @@
 @import '~basics/colors/colors.scss';
 @import '~helpers/css/mixins.scss';
 
-.hig__global-nav__container__sub-nav{
+.hig__global-nav__sub-nav{
     @include reset;
 
     background: $background-2;
@@ -32,7 +32,7 @@
 
 }
 
-.hig__global-nav__container__sub-nav__spacer {
+.hig__global-nav__sub-nav__spacer {
     visibility: hidden;
     flex-shrink: 100;
 }

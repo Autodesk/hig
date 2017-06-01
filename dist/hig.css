@@ -433,7 +433,7 @@
     .hig__global-nav__container__slot {
       padding: 20px; }
 
-.hig__global-nav--open .hig__global-nav__container {
+.hig__global-nav--open .hig__global-nav {
   margin-left: 280px; }
 @font-face {
   font-family: 'ArtifaktElement';
@@ -732,7 +732,7 @@
   font-weight: 900;
   font-style: normal; }
 
-.hig__global-nav__container__top-nav {
+.hig__global-nav__top-nav {
   font-family: 'ArtifaktElement';
   line-height: 1.6;
   box-sizing: border-box;
@@ -745,35 +745,35 @@
   display: flex;
   justify-content: space-between;
   align-items: center; }
-  .hig__global-nav__container__top-nav__group {
+  .hig__global-nav__top-nav__group {
     height: 56px;
     display: flex;
     align-items: center; }
-    .hig__global-nav__container__top-nav__group--right {
+    .hig__global-nav__top-nav__group--right {
       border-left: 1px solid #DFE3E8; }
-    .hig__global-nav__container__top-nav__group--left {
+    .hig__global-nav__top-nav__group--left {
       padding-right: 20px;
       border-right: 1px solid #DFE3E8; }
-  .hig__global-nav__container__top-nav__hamburger {
+  .hig__global-nav__top-nav__hamburger {
     margin: 0 10px 0 12px; }
-    .hig__global-nav__container__top-nav__hamburger:hover {
+    .hig__global-nav__top-nav__hamburger:hover {
       cursor: pointer; }
-  .hig__global-nav__container__top-nav__logo {
+  .hig__global-nav__top-nav__logo {
     height: 24px; }
-    .hig__global-nav__container__top-nav__logo img {
+    .hig__global-nav__top-nav__logo img {
       height: 100%; }
 .hig__global-nav__profile {
   height: 100%;
   display: flex;
   align-items: center; }
-.hig__global-nav__container__top-nav__profile__profile-image {
+.hig__global-nav__top-nav__profile__profile-image {
   height: 100%;
   padding: 0px 16px;
   display: flex;
   align-items: center;
   cursor: pointer; }
 
-.hig__global-nav__container__top-nav__profile__profile-image__image {
+.hig__global-nav__top-nav__profile__profile-image__image {
   height: 30px;
   width: 30px;
   border-radius: 50%; }
@@ -858,25 +858,25 @@
   font-weight: 900;
   font-style: normal; }
 
-.src__components__global-nav__container__top-nav__profile__profile-flyout-content {
+.src__components__global-nav__top-nav__profile__profile-flyout-content {
   font-family: 'ArtifaktElement';
   line-height: 1.6;
   box-sizing: border-box; }
 
-.src__components__global-nav__container__top-nav__profile__profile-flyout-content__name {
+.src__components__global-nav__top-nav__profile__profile-flyout-content__name {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow-x: hidden;
   font-size: 16px; }
 
-.src__components__global-nav__container__top-nav__profile__profile-flyout-content__email {
+.src__components__global-nav__top-nav__profile__profile-flyout-content__email {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow-x: hidden;
   font-size: 12px;
   color: #6C7A80; }
 
-.src__components__global-nav__container__top-nav__profile__profile-flyout-content__links {
+.src__components__global-nav__top-nav__profile__profile-flyout-content__links {
   display: flex;
   margin-top: 20px; }
 @font-face {
@@ -960,7 +960,7 @@
   font-weight: 900;
   font-style: normal; }
 
-.hig__global-nav__container__sub-nav {
+.hig__global-nav__sub-nav {
   font-family: 'ArtifaktElement';
   line-height: 1.6;
   box-sizing: border-box;
@@ -973,7 +973,7 @@
   position: -webkit-sticky;
   position: sticky;
   top: 0; }
-  .hig__global-nav__container__sub-nav__left {
+  .hig__global-nav__sub-nav__left {
     height: 50px;
     display: flex;
     align-items: center;
@@ -981,10 +981,10 @@
     font-size: 18px;
     padding: 0 17px;
     white-space: nowrap; }
-    .hig__global-nav__container__sub-nav__left__icon {
+    .hig__global-nav__sub-nav__left__icon {
       margin-left: 15px; }
 
-.hig__global-nav__container__sub-nav__spacer {
+.hig__global-nav__sub-nav__spacer {
   visibility: hidden;
   flex-shrink: 100; }
 @font-face {
