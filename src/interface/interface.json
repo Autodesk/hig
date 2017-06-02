@@ -108,7 +108,8 @@
                 },
                 "hideSideNav": {
                     "desc": "hide the SideNav"
-                }
+                },
+                "onHoverOutside": "HIG.abstract.EventObject"
             },
             "partials": {
                 "TopNav": {

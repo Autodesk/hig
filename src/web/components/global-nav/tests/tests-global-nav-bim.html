@@ -344,7 +344,9 @@
             
             SideNavSearch.onInput(function(e){
                 // do example filter of sidenav
-                console.log(e);
+                var q = e.target.value;
+                console.log(q);
+                fillSidenav(default_menu);
             });
 
             SideNavSearch.onFocusIn(function(e){
@@ -394,6 +396,13 @@
                 }
                 menu_open = !menu_open;
             });
+            
+            GlobalNav.onHoverOutside(function(e){
+                if(menu_open){
+                    GlobalNav.hideSideNav();
+                    menu_open = !menu_open;
+                }
+            })
 
             // ADD SUBNAV
             var SubNav = new GlobalNav.partials.SubNav();
@@ -411,7 +420,14 @@
             SlotEl.innerHTML = `Some example default content`;
             GlobalNav.addSlot(SlotEl);
 
+            var sections = [];
+
             function fillSidenav(menu){
+                for (var index in sections){
+                    sections[index].unmount();
+                }
+                sections = [];
+
                 // CONSTRUCT OUR SIDENAV
                 for (var section in menu){
                     // ADD A SECTION IN OUR SIDENAV
@@ -420,6 +436,7 @@
                         "headerName": menu[section]["headerName"]
                     });
                     SideNav.addSection(generated_section);
+                    sections.push(generated_section);
 
                     for (var group in menu[section]["groups"]){
                         // ADD A GROUP TO OUR SECTION
