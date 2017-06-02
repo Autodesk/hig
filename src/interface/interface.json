@@ -282,7 +282,11 @@
                                     "params": [
                                         "{String} placeholder - new placeholder"
                                     ]
-                                }
+                                },
+                                "onClearClick": "HIG.abstract.EventObject",
+                                "onInput": "HIG.abstract.EventObject"
+
+
                             },
                             "defaults": {
                                 "placeholder": "{String} A placeholder text when nothing is searched"
