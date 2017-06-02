@@ -1,5 +1,6 @@
 @import '~basics/typography/typography.scss';
 @import '~basics/colors/colors.scss';
+@import '~helpers/css/mixins/breakpoints.scss';
 @import 'side-nav/side-nav.scss';
 
 .hig__global-nav{
@@ -14,6 +15,12 @@
     &__slot{
         padding: 20px;
     }
+
+    @include tablet-breakpoint {
+        
+    }
+
+
 }
 .hig__global-nav--open .hig__global-nav__container{
     margin-left: $hig__global-nav__sidenav--width;

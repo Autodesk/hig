@@ -1,0 +1,73 @@
+@import '~basics/colors/colors.scss';
+
+.hig__global-nav__top-nav__project-account-switcher__item {
+    display: flex;
+    height: 42px;
+    align-items: center;
+    font-size: 13px;
+    width: 100%;
+}
+
+.hig__global-nav__top-nav__project-account-switcher__item__image-wrapper {
+    display: inline-block;
+    position: relative;
+    flex: 0 0 auto;
+    overflow: hidden;
+
+    border-radius: 2px;
+    border: 1px solid $gray-c;
+
+    color: $gray-5;
+    font-size: 13px;
+    line-height: 32px;
+    text-align: center;
+    background-color: $gray-e;
+
+    .hig__global-nav__top-nav__project-account-switcher__item--project & {
+        width: 32px;
+        height: 32px;
+    }
+
+    .hig__global-nav__top-nav__project-account-switcher__item--account & {
+        width: 60px;
+        height: 30px;
+    }
+}
+
+.hig__global-nav__top-nav__project-account-switcher__item__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none;
+    cursor: pointer;
+
+    color: transparent;
+
+    &[src=""] {
+        display: none;
+    }
+
+    .hig__global-nav__top-nav__project-account-switcher__item--project & {
+        width: 32px;
+        height: 32px;
+    }
+
+    .hig__global-nav__top-nav__project-account-switcher__item--account & {
+        width: 60px;
+        height: 30px;
+    }
+}
+
+.hig__global-nav__top-nav__project-account-switcher__item__label {
+    flex: 1 1 auto;
+    min-width: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    cursor: pointer;
+    padding-left: 10px;
+
+    .hig__global-nav__top-nav__project-account-switcher__item--active > & {
+        color: $autodesk-blue;
+    }
+}

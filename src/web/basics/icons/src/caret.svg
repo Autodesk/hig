@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="6px" viewBox="0 0 10 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>hig/icon/caret</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="hig-light/globalnav/project-and-account-switcher/account" transform="translate(-284.000000, -26.000000)" stroke-width="1.5" stroke="#979797">
+            <g id="hig/icon/caret" transform="translate(277.184932, 16.000000)">
+                <polyline id="Path-2" points="8 11 12 15 16 11"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>
