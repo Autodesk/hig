@@ -16,12 +16,12 @@ $hig__global-nav__sidenav--width: 280px;
     box-sizing: border-box;
     width: $hig__global-nav__sidenav--width;
     padding: 16px;
+    overflow-y: auto;
 
     display: none; // Hide by default
 
-    &__copywright{
-        position: absolute;
-        bottom: 40px;
+    &__copyright{
+        margin-bottom: 40px;
         font-size: 12px;
         color: $base-5;
     }
