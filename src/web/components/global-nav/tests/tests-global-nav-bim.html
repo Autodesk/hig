@@ -334,6 +334,12 @@
             var SideNav = new GlobalNav.partials.SideNav();
             GlobalNav.addSideNav(SideNav);
 
+            // ADD SEARCH IN SIDENAV
+            var SideNavSearch = new SideNav.partials.Search({
+                "placeholder": "Find module or submodule"
+            });
+            SideNav.addSearch(SideNavSearch);
+
             // ADD TOPNAV
             var TopNav = new GlobalNav.partials.TopNav({
                 "logo": "https://www.dexigner.com/images/news/xw/22856.jpg",

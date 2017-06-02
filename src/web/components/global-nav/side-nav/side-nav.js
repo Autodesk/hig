@@ -6,6 +6,7 @@ var Core = require('_core.js');
 
 var Section = require('./section/section.js');
 var Link = require('./link/link.js');
+var Search = require('./search/search.js');
 
 /**
  * Creates an SideNav
@@ -27,8 +28,14 @@ class SideNav extends Core {
     }
 
     addLink(linkInstance, referenceInstance){
-        if(linkInstance instanceof Section){
+        if(linkInstance instanceof Link){
             this.mountPartialToComment('LINK', linkInstance, referenceInstance);
+        }
+    }
+
+    addSearch(searchInstance, referenceInstance){
+        if(searchInstance instanceof Search){
+            this.mountPartialToComment('SEARCH', searchInstance, referenceInstance);
         }
     }
 
@@ -38,7 +45,8 @@ SideNav._interface = Interface['components']['GlobalNav']['partials']['SideNav']
 SideNav._defaults = {};
 SideNav._partials = {
     Section: Section,
-    Link: Link
+    Link: Link,
+    Search: Search
 };
 
 module.exports = SideNav;
