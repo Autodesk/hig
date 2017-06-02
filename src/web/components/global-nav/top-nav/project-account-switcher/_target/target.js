@@ -18,8 +18,6 @@ class Target extends Core {
         super(options);
         this._render(Template, options);
 
-        options._type = "project";
-
         this.item = new Item(options);
     }
 
@@ -28,12 +26,25 @@ class Target extends Core {
         this._findDOMEl('.hig__global-nav__top-nav__project-account-switcher__target__caret', this.el).innerHTML = this._getIconString('caret');
     }
 
+    setLabel(label) {
+        this.item.setLabel(label);
+    }
+
+    setImage(imageUrl) {
+        this.item.setImage(imageUrl);
+    }
+
+    setType(type) {
+        this.item._setType(type);
+    }
+
 }
 
 Target._interface = {
     "methods": {
         "setLabel": {},
-        "setImage": {}
+        "setImage": {},
+        "setType": {}
     }
 };
 Target._defaults = {};

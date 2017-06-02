@@ -23,7 +23,11 @@ class ProjectAccountSwitcher extends Core {
         super(options);
 
         this.flyout = new Flyout();
-        this.target = new Target({ label: options.activeLabel, image: options.activeImage });
+        this.target = new Target({
+            label: options.activeLabel,
+            image: options.activeImage,
+            _type: options.activeType
+        });
         this.flyoutContent = new Lists();
 
         this._render(Template, options);
@@ -52,6 +56,18 @@ class ProjectAccountSwitcher extends Core {
     close() { this.flyout.close(); }
 
     onClickOutside() { this.flyout.onClickOutside(); }
+
+    setActiveLabel(label) {
+        this.target.setLabel(label);
+    }
+
+    setActiveImage(imageUrl) {
+        this.target.setImage(imageUrl);
+    }
+
+    setActiveType(type) {
+        this.target.setType(type);
+    }
 
 }
 

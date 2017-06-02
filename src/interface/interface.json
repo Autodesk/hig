@@ -215,7 +215,7 @@
                                 "close": {
                                     "desc": "closes the profile"
                                 },
-                                "setActivelabel": {
+                                "setActiveLabel": {
                                     "desc": "Sets the label displayed in the top nav",
                                     "params": [
                                         "{String} - Label of the active project or account"
@@ -225,6 +225,12 @@
                                     "desc": "Sets the image displayed in the top nav",
                                     "params": [
                                         "{String} - url of the image of the active project or account"
+                                    ]
+                                },
+                                "setActiveType": {
+                                    "desc": "Sets the type of the item displayed in the top nav",
+                                    "params": [
+                                        "{String} - ['account' or 'project']"
                                     ]
                                 },
                                 "onClickOutside": "HIG.abstract.EventObject",
