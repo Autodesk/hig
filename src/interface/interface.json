@@ -494,14 +494,28 @@
                                 "{Link} [ReferenceLink] - (Optional) reference node for insertBefore"
                             ]
                         },
-                        "setCopyright": {
-                            "desc": "Change the copyright notice at bottom of side nav",
+                        "addSearch": {
+                            "desc": "Pass in an instance of a Search partial",
                             "params": [
-                                "{String} Copyright notice"
+                                "{Link} Search - instance of a Search partial",
+                                "{Search} [ReferenceSearch] - (Optional) reference node for insertBefore"
                             ]
                         }
                     },
                     "partials": {
+                        "Search": {
+                            "methods": {
+                                "setPlaceholder": {
+                                    "desc": "sets the placeholder",
+                                    "params": [
+                                        "{String} placeholder - new placeholder"
+                                    ]
+                                }
+                            },
+                            "defaults": {
+                                "placeholder": "{String} A placeholder text when nothing is searched"
+                            }
+                        },
                         "Section": {
                             "methods": {
                                 "setHeaderLabel": {
