@@ -265,9 +265,29 @@
                                 "{Link} Link - instance of a Link partial",
                                 "{Link} [ReferenceLink] - (Optional) reference node for insertBefore"
                             ]
+                        },
+                        "addSearch": {
+                            "desc": "Pass in an instance of a Search partial",
+                            "params": [
+                                "{Link} Search - instance of a Search partial",
+                                "{Search} [ReferenceSearch] - (Optional) reference node for insertBefore"
+                            ]
                         }
                     },
                     "partials": {
+                        "Search": {
+                            "methods": {
+                                "setPlaceholder": {
+                                    "desc": "sets the placeholder",
+                                    "params": [
+                                        "{String} placeholder - new placeholder"
+                                    ]
+                                }
+                            },
+                            "defaults": {
+                                "placeholder": "{String} A placeholder text when nothing is searched"
+                            }
+                        },
                         "Section": {
                             "methods": {
                                 "setHeaderLabel": {
