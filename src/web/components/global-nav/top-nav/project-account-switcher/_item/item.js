@@ -5,6 +5,8 @@ var Interface = require('interface.json');
 var Core = require('_core.js');
 var initials = require('../../../../../helpers/js/_initials.js');
 
+const TYPES = ['account', 'project'];
+
 /**
  * Creates an Project
  *
@@ -22,7 +24,7 @@ class Item extends Core {
     }
 
     _componentDidMount() {
-        this.el.classList.add(`hig__global-nav__top-nav__project-account-switcher__item--${this.options._type}`);
+        this._setType(this.options._type);
     }
 
     setImage(imageUrl) {
@@ -44,6 +46,16 @@ class Item extends Core {
         this.el
             .querySelector('.hig__global-nav__top-nav__project-account-switcher__item__image-placeholder')
             .innerText = initials(label);
+    }
+
+    _setType(type) {
+        if (!TYPES.includes(type)) { return }
+
+        TYPES.forEach((t) => {
+            this.el.classList.remove(`hig__global-nav__top-nav__project-account-switcher__item--${t}`);
+        });
+
+        this.el.classList.add(`hig__global-nav__top-nav__project-account-switcher__item--${type}`);
     }
 
     activate() {
