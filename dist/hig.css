@@ -922,6 +922,8 @@
   border: none;
   cursor: pointer;
   color: transparent; }
+  .hig__global-nav__top-nav__project-account-switcher__item__image[src=""] {
+    display: none; }
   .hig__global-nav__top-nav__project-account-switcher__item--project .hig__global-nav__top-nav__project-account-switcher__item__image {
     width: 32px;
     height: 32px; }
@@ -1064,22 +1066,25 @@
   position: -webkit-sticky;
   position: sticky;
   top: 0; }
-  .hig__global-nav__sub-nav__left {
-    height: 50px;
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
-    font-size: 18px;
-    padding: 0 17px;
-    white-space: nowrap; }
-    .hig__global-nav__sub-nav__left__icon {
-      margin-left: 15px; }
 
-.hig__global-nav__sub-nav__left {
-  display: none; }
+.hig__global-nav__sub-nav__module-indicator-name {
+  display: none;
+  height: 50px;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 0 17px;
+  font-size: 18px;
+  white-space: nowrap; }
   @media screen and (min-width: 1280px) {
-    .hig__global-nav__sub-nav__left {
-      display: block; } }
+    .hig__global-nav__sub-nav__module-indicator-name {
+      display: flex; } }
+
+.hig__global-nav__sub-nav__module-indicator-icon {
+  display: block;
+  margin-left: 15px; }
+  @media screen and (min-width: 1280px) {
+    .hig__global-nav__sub-nav__module-indicator-icon {
+      display: none; } }
 
 .hig__global-nav__sub-nav__spacer {
   visibility: hidden;
