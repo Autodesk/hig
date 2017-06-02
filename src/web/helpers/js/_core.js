@@ -39,7 +39,7 @@ class Core {
             console.warn(`NO DEFAULTS SET FOR ${this.constructor.name}, PLEASE DEFINE DEFAULTS IN _defaults PROPERTY OF YOUR CLASS`);
         }else{
             for(var v in this._interface['defaults']){
-                if(!this._defaults[v]){
+                if(this._defaults[v] === undefined){
                     console.error(`DEFAULT VALUE: \"${this.constructor.name}.${v}\" IS DEFINED IN THE INTERFACE BUT NOT IMPLIMENTED`, this);
                 }
             };

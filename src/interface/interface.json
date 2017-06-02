@@ -253,6 +253,10 @@
                                             "desc": "deactivates the account"
                                         },
                                         "onClick": "HIG.abstract.EventObject"
+                                    },
+                                    "defaults": {
+                                        "image": "{String} - url of the account image",
+                                        "label": "{String} - label of the account"
                                     }
                                 },
                                 "Project": {
@@ -271,8 +275,17 @@
                                             "desc": "deactivates the project"
                                         },
                                         "onClick": "HIG.abstract.EventObject"
+                                    },
+                                    "defaults": {
+                                        "image": "{String} - url of the project image",
+                                        "label": "{String} - label of the project"
                                     }
                                 }
+                            },
+                            "defaults": {
+                                "activeImage": "{String} - url of the image of the active project or account",
+                                "activeType": "{String} ['account' or 'project']",
+                                "activeLabel": "{String} - Label of the active project or account"
                             }
                         }
                     }
