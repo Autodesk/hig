@@ -12,7 +12,7 @@
 
         <script>
 
-            var menu = {
+            var default_menu = {
                 "section1": {
                     "headerLabel": "Project",
                     "headerName": "Oakwood Medical Center",
@@ -341,6 +341,23 @@
                 "placeholder": "Find module or submodule"
             });
             SideNav.addSearch(SideNavSearch);
+            
+            SideNavSearch.onInput(function(e){
+                // do example filter of sidenav
+                console.log(e);
+            });
+
+            SideNavSearch.onFocusIn(function(e){
+                SideNavSearch.showClearIcon();
+            });
+
+            SideNavSearch.onFocusOut(function(e){
+                SideNavSearch.hideClearIcon();
+            });
+
+            SideNavSearch.onClearIconClick(function(e){
+                SideNavSearch.setQuery(''); // set input to empty
+            });
 
             // ADD TOPNAV
             var TopNav = new GlobalNav.partials.TopNav({
@@ -394,44 +411,45 @@
             SlotEl.innerHTML = `Some example default content`;
             GlobalNav.addSlot(SlotEl);
 
-            // CONSTRUCT OUR SIDENAV
-            for (var section in menu){
-                // ADD A SECTION IN OUR SIDENAV
-                var generated_section = new SideNav.partials.Section({
-                    "headerLabel": menu[section]["headerLabel"],
-                    "headerName": menu[section]["headerName"]
-                });
-                SideNav.addSection(generated_section);
+            function fillSidenav(menu){
+                // CONSTRUCT OUR SIDENAV
+                for (var section in menu){
+                    // ADD A SECTION IN OUR SIDENAV
+                    var generated_section = new SideNav.partials.Section({
+                        "headerLabel": menu[section]["headerLabel"],
+                        "headerName": menu[section]["headerName"]
+                    });
+                    SideNav.addSection(generated_section);
 
-                for (var group in menu[section]["groups"]){
-                    // ADD A GROUP TO OUR SECTION
-                    var generated_group = new generated_section.partials.Group();
-                    generated_section.addGroup(generated_group);
+                    for (var group in menu[section]["groups"]){
+                        // ADD A GROUP TO OUR SECTION
+                        var generated_group = new generated_section.partials.Group();
+                        generated_section.addGroup(generated_group);
 
-                    var current_group = menu[section]["groups"][group];
-                    current_group.forEach((item) => {
-                        // ADD SOME ITEMS TO OUR GROUP
+                        var current_group = menu[section]["groups"][group];
+                        current_group.forEach((item) => {
+                            // ADD SOME ITEMS TO OUR GROUP
 
-                        var generated_item = new generated_group.partials.Item({
-                            "icon": item["icon"],
-                            "title": item["title"],
-                            "link": item["link"]
-                        });
-                        generated_group.addItem(generated_item);
+                            var generated_item = new generated_group.partials.Item({
+                                "icon": item["icon"],
+                                "title": item["title"],
+                                "link": item["link"]
+                            });
+                            generated_group.addItem(generated_item);
 
-                        generated_item.onClick((e) => {
-                            e.preventDefault();
-                            console.log('Item '+item["title"]+' clicked');
+                            generated_item.onClick((e) => {
+                                e.preventDefault();
+                                console.log('Item '+item["title"]+' clicked');
 
-                            SubNav.setModuleIndicatorName(item["title"]);
-                            SubNav.setModuleIndicatorIcon(item["icon"]);
+                                SubNav.setModuleIndicatorName(item["title"]);
+                                SubNav.setModuleIndicatorIcon(item["icon"]);
 
-                            // CLEAR TABS
-                            Tabs.unmount();
+                                // CLEAR TABS
+                                Tabs.unmount();
 
-                            // ADD TABS IN SUBNAV
-                            Tabs = new SubNav.partials.Tabs();
-                            SubNav.addTabs(Tabs);
+                                // ADD TABS IN SUBNAV
+                                Tabs = new SubNav.partials.Tabs();
+                                SubNav.addTabs(Tabs);
 
                             var generated_tabs = [];
                             item["tabs"].forEach((tab) => {
@@ -448,10 +466,10 @@
                                     }
                                     generated_tab.activate();
 
-                                // SLOT IN SOME EXAMPLE IMAGE CONTENT
-                                var contentImage = tab["contentImage"];
-                                SlotEl.innerHTML = `<img src='${contentImage}'>`;
-                            }
+                                    // SLOT IN SOME EXAMPLE IMAGE CONTENT
+                                    var contentImage = tab["contentImage"];
+                                    SlotEl.innerHTML = `<img src='${contentImage}'>`;
+                                }
 
                             item["tabs"].forEach((tab) => {
                                 var generated_tab = new Tabs.partials.Tab({
