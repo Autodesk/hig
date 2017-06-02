@@ -1,7 +1,53 @@
 @import '~basics/colors/colors.scss';
+@import '~helpers/css/mixins.scss';
 
 .hig__global-nav__side-nav__search{
+    position: relative;
     border-bottom: 1px solid $base-2;
     padding: 10px 0;
     margin-bottom: 15px;
+
+    &__icon{
+        display: inline-block;
+        vertical-align: middle;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    &__input{
+        display: inline-block;
+        vertical-align: middle;
+
+        & input{
+            @include reset;
+            margin-left: -5px;
+            border: none;
+            font-size: 14px;
+            padding: 5px;
+            width: 190px;
+            font-weight: 500;
+
+            &::placeholder{
+                font-weight: normal;
+                color: $gray-8;
+            }
+
+            &:focus{
+                border: none;
+                outline: none;
+            }
+        }
+    }
+
+    &__clear{
+        position: absolute;
+        right: 0;
+        top: 12px;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
 }

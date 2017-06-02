@@ -257,7 +257,9 @@
             GlobalNav.addSideNav(SideNav);
 
             // ADD SEARCH IN SIDENAV
-            var SideNavSearch = new SideNav.partials.Search();
+            var SideNavSearch = new SideNav.partials.Search({
+                "placeholder": "Find module or submodule"
+            });
             SideNav.addSearch(SideNavSearch);
 
             // ADD TOPNAV
