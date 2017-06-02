@@ -886,7 +886,8 @@
   display: flex;
   height: 42px;
   align-items: center;
-  font-size: 13px; }
+  font-size: 13px;
+  width: 100%; }
 
 .hig__global-nav__top-nav__project-account-switcher__item__image-wrapper {
   display: inline-block;
@@ -955,12 +956,13 @@
 .hig__global-nav__top-nav__project-account-switcher__target {
   display: flex;
   align-items: center;
-  padding: 0 10px;
+  padding: 0 35px 0 10px;
+  box-sizing: border-box;
   cursor: pointer; }
 
 .hig__global-nav__top-nav__project-account-switcher__target__caret {
-  margin-left: 5px;
-  padding: 0 5px; }
+  position: absolute;
+  right: 15px; }
 @font-face {
   font-family: 'ArtifaktElement';
   src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot");
