@@ -74,7 +74,13 @@
                 accountComponent.onClick(() => { accountComponent.activate(); });
             });
 
-            ProjectAccountSwitcher.open();
+            ProjectAccountSwitcher.onClick(() => {
+                ProjectAccountSwitcher.open();
+            });
+
+            ProjectAccountSwitcher.onClickOutside(() => {
+                ProjectAccountSwitcher.close();
+            })
         </script>
 
     </body>
