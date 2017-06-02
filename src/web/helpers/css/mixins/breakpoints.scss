@@ -1,0 +1,36 @@
+
+$tablet-width: 768px;
+$thirteen-inch-laptop-width: 1280px;
+$fifteeen-inch-laptop-width: 1680px;
+$large-desktop-width: 1920px;
+
+@mixin breakpoint($screen-width) {
+  @media screen and (min-width: $screen-width) {
+    @content;
+  }
+}
+
+@mixin tablet-breakpoint {
+  @include breakpoint($tablet-width) {
+    @content;
+  }
+}
+
+
+@mixin thirteen-inch-laptop-breakpoint {
+  @include breakpoint($thirteen-inch-laptop-width) {
+    @content;
+  }
+}
+
+@mixin fifteen-inch-laptop-breakpoint {
+  @include breakpoint($fifteeen-inch-laptop-width) {
+    @content;
+  }
+}
+
+@mixin large-desktop-breakpoint {
+  @include breakpoint($desktop-width) {
+    @content;
+  }
+}

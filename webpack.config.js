@@ -1,4 +1,5 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 var path = require('path');
 
 r = {
@@ -44,6 +45,7 @@ r = {
     },
     plugins: [
         new ExtractTextPlugin('hig.css'),
+        new OptimizeCssAssetsPlugin()
     ]
 }
 

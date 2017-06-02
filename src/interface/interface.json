@@ -119,6 +119,12 @@
                                 "{Profile} Profile - instance of a Profile partial"
                             ]
                         },
+                        "addProjectAccountSwitcher": {
+                            "desc": "Pass in an instance of a ProjectAccountSwitcher partial to mount it to the TopNav",
+                            "params": [
+                                "{ProjectAccountSwitcher} ProjectAccountSwitcher - instance of a ProjectAccountSwitcher partial"
+                            ]
+                        },
                         "onHamburgerClick": "HIG.abstract.EventObject"
                     },
                     "defaults": {
@@ -185,6 +191,101 @@
                                 "image": "{String} url src of the image",
                                 "profileSettingsLabel": "{String} profileSettingsLabel",
                                 "signOutLabel": "{String} signOutLabel"
+                            }
+                        },
+                        "ProjectAccountSwitcher": {
+                            "methods": {
+                                "addAccount": {
+                                    "desc": "Pass in an instance of a ProjectAccountSwitcher Account",
+                                    "params": [
+                                        "{Account} [ReferenceAccount]",
+                                        "{Account} [ReferenceAccount] - (Optional) reference node for insertBefore"
+                                    ]
+                                },
+                                "addProject": {
+                                    "desc": "Pass in an instance of a ProjectAccountSwitcher Project",
+                                    "params": [
+                                        "{Project} [ReferenceProject]",
+                                        "{Project} [ReferenceProject] - (Optional) reference node for insertBefore"
+                                    ]
+                                },
+                                "open": {
+                                    "desc": "opens the project/account switcher"
+                                },
+                                "close": {
+                                    "desc": "closes the project/account switcher"
+                                },
+                                "setActiveLabel": {
+                                    "desc": "Sets the label displayed in the top nav",
+                                    "params": [
+                                        "{String} - Label of the active project or account"
+                                    ]
+                                },
+                                "setActiveImage": {
+                                    "desc": "Sets the image displayed in the top nav",
+                                    "params": [
+                                        "{String} - url of the image of the active project or account"
+                                    ]
+                                },
+                                "setActiveType": {
+                                    "desc": "Sets the type of the item displayed in the top nav",
+                                    "params": [
+                                        "{String} - ['account' or 'project']"
+                                    ]
+                                },
+                                "onClickOutside": "HIG.abstract.EventObject",
+                                "onClick": "HIG.abstract.EventObject"
+                            },
+                            "partials": {
+                                "Account": {
+                                    "methods": {
+                                        "setLabel": {
+                                            "desc": "sets the label",
+                                            "params": [
+                                                "{String} label - new label"
+                                            ]
+                                        },
+                                        "setImage": {},
+                                        "activate": {
+                                            "desc": "activates the account"
+                                        },
+                                        "deactivate": {
+                                            "desc": "deactivates the account"
+                                        },
+                                        "onClick": "HIG.abstract.EventObject"
+                                    },
+                                    "defaults": {
+                                        "image": "{String} - url of the account image",
+                                        "label": "{String} - label of the account"
+                                    }
+                                },
+                                "Project": {
+                                    "methods": {
+                                        "setLabel": {
+                                            "desc": "sets the label",
+                                            "params": [
+                                                "{String} label - new label"
+                                            ]
+                                        },
+                                        "setImage": {},
+                                        "activate": {
+                                            "desc": "activates the project"
+                                        },
+                                        "deactivate": {
+                                            "desc": "deactivates the project"
+                                        },
+                                        "onClick": "HIG.abstract.EventObject"
+                                    },
+                                    "defaults": {
+                                        "image": "{String} - url of the project image",
+                                        "label": "{String} - label of the project"
+                                    }
+                                }
+                            },
+                            "defaults": {
+                                "activeImage": "{String} - url of the image of the active project or account",
+                                "activeType": "{String} ['account' or 'project']",
+                                "activeLabel": "{String} - Label of the active project or account"
                             }
                         }
                     }

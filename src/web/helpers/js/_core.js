@@ -22,14 +22,14 @@ class Core {
             // CHECK IF ALL METHODS IN COMPONENT ARE DEFINED IN INTERFACE
             methodArray.forEach(function(v, i){
                 if(v != "constructor" && v != "defaults" && v[0] != "_" && !this._interface["methods"][v]){
-                    console.error("METHOD: \"" + v + "\" IS NOT DEFINED AS INTERFACE OR IS NOT A VALID INTERFACE METHOD");
+                    console.error("METHOD: \"" + this.constructor.name + '.' + v + "\" IS NOT DEFINED AS INTERFACE OR IS NOT A VALID INTERFACE METHOD");
                 }
             }, this);
 
             // CHECK IF ALL METHODS IN INTERFACE ARE IMPLEMENTED
             for(var k in this._interface["methods"]){
                 if(methodArray.indexOf(k) === -1){
-                    console.error("METHOD: \"" + k + "\" IS NOT IMPLEMENTED BY THIS COMPONENT YET AND NEEDS AN IMPLEMENTATION");
+                    console.error(`METHOD: \"${this.constructor.name}.${k}\" IS NOT IMPLEMENTED BY THIS COMPONENT YET AND NEEDS AN IMPLEMENTATION`);
                 }
             };
         }
@@ -39,8 +39,8 @@ class Core {
             console.warn(`NO DEFAULTS SET FOR ${this.constructor.name}, PLEASE DEFINE DEFAULTS IN _defaults PROPERTY OF YOUR CLASS`);
         }else{
             for(var v in this._interface['defaults']){
-                if(typeof this._defaults[v] === 'undefined'){
-                    console.error(`DEFAULT VALUE: \"${v}\" IS DEFINED IN THE INTERFACE BUT NOT IN ${this.constructor.name}`, this);
+                if(this._defaults[v] === undefined){
+                    console.error(`DEFAULT VALUE: \"${this.constructor.name}.${v}\" IS DEFINED IN THE INTERFACE BUT NOT IMPLIMENTED`, this);
                 }
             };
         }
