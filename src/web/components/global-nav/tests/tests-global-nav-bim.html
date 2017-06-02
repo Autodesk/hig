@@ -307,6 +307,19 @@
                             SubNav.addTabs(Tabs);
 
                             var generated_tabs = [];
+
+                            function tabClicked(generated_tab, tab){
+                                console.log('Tab '+tab["label"]+' clicked');
+                                for (var k = 0; k < generated_tabs.length; k++){
+                                    generated_tabs[k].deactivate();
+                                }
+                                generated_tab.activate();
+
+                                // SLOT IN SOME EXAMPLE IMAGE CONTENT
+                                var contentImage = tab["contentImage"];
+                                SlotEl.innerHTML = `<img src='${contentImage}'>`;
+                            }
+
                             item["tabs"].forEach((tab) => {
                                 var generated_tab = new Tabs.partials.Tab({
                                     "label": tab["label"]
@@ -315,24 +328,25 @@
                                 generated_tabs.push(generated_tab);
                                 
                                 generated_tab.onClick(() => {
-                                    console.log('Tab '+tab["label"]+' clicked');
-                                    for (var k = 0; k < generated_tabs.length; k++){
-                                        generated_tabs[k].deactivate();
-                                    }
-                                    generated_tab.activate();
-
-                                    // SLOT IN SOME EXAMPLE IMAGE CONTENT
-                                    var contentImage = tab["contentImage"];
-                                    SlotEl.innerHTML = `<img src='${contentImage}'>`;
+                                    tabClicked(generated_tab, tab);
                                 });
-                            })
+                            });
+
+                            // SELECT FIRST TAB BY DEFAULT
+                            tabClicked(generated_tabs[0], item["tabs"][0]);
                             
                         });
+
+                        // LETS CLICK ON FIRST SIDENAV AND TAB FOR DEFAULT VALUES;
+                        if(!window.firstClicked){
+                            generated_item.el.click();
+                            window.firstClicked = true;
+                        }
                     });
                 }
             }
 
-            // LETS CLICK ON FIRST SIDENAV AND TAB FOR DEFAULT VALUES;
+            
             
 
         </script>
