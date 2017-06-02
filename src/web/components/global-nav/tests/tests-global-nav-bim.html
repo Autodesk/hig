@@ -21,63 +21,104 @@
                             {
                                 "icon": "insight",
                                 "title": "Insight",
-                                "link": "#"
+                                "link": "#",
+                                "tabs": [
+                                    {
+                                        "label": "Overview",
+                                        "contentImage": "egg.jpg"
+                                    },
+                                    {
+                                        "label": "Risk",
+                                        "contentImage": "egg.jpg"
+                                    },
+                                    {
+                                        "label": "Quality",
+                                        "contentImage": "egg.jpg"
+                                    },
+                                    {
+                                        "label": "Reports",
+                                        "contentImage": "egg.jpg"
+                                    }
+                                ]
                             }
                         ],
                         "group2": [
                             {
-                                "icon": "construction-management",
+                                "icon": "authoring-collaboration",
                                 "title": "Authoring Collaboration",
-                                "link": "#"
+                                "link": "#",
+                                "tabs": [
+                                    {
+                                        "label": "Cloud Work Sharing",
+                                        "contentImage": "egg.jpg"
+                                    },
+                                    {
+                                        "label": "Fluent",
+                                        "contentImage": "egg.jpg"
+                                    },
+                                    {
+                                        "label": "Approvals",
+                                        "contentImage": "egg.jpg"
+                                    }
+                                ]
                             },
                             {
                                 "icon": "document-management",
                                 "title": "Document Management",
-                                "link": "#"
+                                "link": "#",
+                                "tabs": [
+                                    {
+                                        "label": "Document Workflow",
+                                        "contentImage": "egg.jpg"
+                                    }
+                                ]
                             },
                             {
                                 "icon": "model-coordination",
                                 "title": "Model Coordination",
-                                "link": "#"
-                            },
-                            {
-                                "icon": "project-management",
-                                "title": "Item 1.2",
                                 "link": "#",
                                 "tabs": [
                                     {
-                                        "label": "Two One",
+                                        "label": "Overview",
                                         "contentImage": "egg.jpg"
                                     },
                                     {
-                                        "label": "Two Two",
+                                        "label": "Models",
                                         "contentImage": "egg.jpg"
                                     },
                                     {
-                                        "label": "Two Three",
+                                        "label": "Checklists",
+                                        "contentImage": "egg.jpg"
+                                    },
+                                    {
+                                        "label": "Clashes",
+                                        "contentImage": "egg.jpg"
+                                    },
+                                    {
+                                        "label": "Issues",
                                         "contentImage": "egg.jpg"
                                     }
                                 ]
                             },
                             {
                                 "icon": "project-management",
-                                "title": "Item 1.3",
+                                "title": "Project Management",
                                 "link": "#",
                                 "tabs": [
                                     {
-                                        "label": "Three One",
+                                        "label": "RFIs",
                                         "contentImage": "egg.jpg"
                                     },
                                     {
-                                        "label": "Three Two",
+                                        "label": "Submittals",
                                         "contentImage": "egg.jpg"
                                     },
                                     {
-                                        "label": "Three Three",
+                                        "label": "Daily Log",
                                         "contentImage": "egg.jpg"
-                                    }
+                                    },
                                 ]
-                            }
+                            },
                         ],
                         "group2": [
                             {
@@ -282,7 +323,7 @@
                     generated_section.addGroup(generated_group);
 
                     var current_group = menu[section]["groups"][group];
-                    current_group.forEach((item) => {              
+                    current_group.forEach((item) => {
                         // ADD SOME ITEMS TO OUR GROUP
 
                         var generated_item = new generated_group.partials.Item({
@@ -307,13 +348,19 @@
                             SubNav.addTabs(Tabs);
 
                             var generated_tabs = [];
+                            item["tabs"].forEach((tab) => {
+                                var generated_tab = new Tabs.partials.Tab({
+                                    "label": tab["label"]
+                                });
+                                Tabs.addTab(generated_tab);
+                                generated_tabs.push(generated_tab);
 
-                            function tabClicked(generated_tab, tab){
-                                console.log('Tab '+tab["label"]+' clicked');
-                                for (var k = 0; k < generated_tabs.length; k++){
-                                    generated_tabs[k].deactivate();
-                                }
-                                generated_tab.activate();
+                                generated_tab.onClick(() => {
+                                    console.log('Tab '+tab["label"]+' clicked');
+                                    for (var k = 0; k < generated_tabs.length; k++){
+                                        generated_tabs[k].deactivate();
+                                    }
+                                    generated_tab.activate();
 
                                 // SLOT IN SOME EXAMPLE IMAGE CONTENT
                                 var contentImage = tab["contentImage"];
@@ -324,30 +371,15 @@
                                 var generated_tab = new Tabs.partials.Tab({
                                     "label": tab["label"]
                                 });
-                                Tabs.addTab(generated_tab);
-                                generated_tabs.push(generated_tab);
-                                
-                                generated_tab.onClick(() => {
-                                    tabClicked(generated_tab, tab);
-                                });
-                            });
+                            })
 
-                            // SELECT FIRST TAB BY DEFAULT
-                            tabClicked(generated_tabs[0], item["tabs"][0]);
-                            
                         });
-
-                        // LETS CLICK ON FIRST SIDENAV AND TAB FOR DEFAULT VALUES;
-                        if(!window.firstClicked){
-                            generated_item.el.click();
-                            window.firstClicked = true;
-                        }
                     });
                 }
             }
 
-            
-            
+            // LETS CLICK ON FIRST SIDENAV AND TAB FOR DEFAULT VALUES;
+
 
         </script>
 
