@@ -43,6 +43,10 @@
 
     color: transparent;
 
+    &[src=""] {
+        display: none;
+    }
+
     .hig__global-nav__top-nav__project-account-switcher__item--project & {
         width: 32px;
         height: 32px;
