@@ -30,8 +30,16 @@
                         "{String} style - style for the button"
                     ]
                 },
-                "onClick": "HIG.abstract.EventObject",
-                "onHover": "HIG.abstract.EventObject"
+                "onClick": {
+                    "desc": "Calls the provided callback when user clicks on the button",
+                    "params": "HIG.abstract.EventObject.params",
+                    "returns": "HIG.abstract.EventObject.returns"
+                },
+                "onHover": {
+                    "desc": "Calls the provided callback when user moves the mouse over the button",
+                    "params": "HIG.abstract.EventObject.params",
+                    "returns": "HIG.abstract.EventObject.returns"
+                }
             },
             "defaults": {
                 "title": "{String} title of the button",
@@ -47,7 +55,11 @@
                 "close": {
                     "desc": "closes the flyout"
                 },
-                "onClickOutside": "HIG.abstract.EventObject",
+                "onClickOutside": {
+                    "desc": "Calls the provided callback when the flyout is open and the user clicks outside of the flyout",
+                    "params": "HIG.abstract.EventObject.params",
+                    "returns": "HIG.abstract.EventObject.returns"
+                },
                 "addSlot": {
                     "desc": "Content for the flyout",
                     "params": [
@@ -125,7 +137,11 @@
                                 "{ProjectAccountSwitcher} ProjectAccountSwitcher - instance of a ProjectAccountSwitcher partial"
                             ]
                         },
-                        "onHamburgerClick": "HIG.abstract.EventObject"
+                        "onHamburgerClick": {
+                            "desc": "Calls the provided callback when user clicks on the hamburger icon",
+                            "params": "HIG.abstract.EventObject.params",
+                            "returns": "HIG.abstract.EventObject.returns"
+                        }
                     },
                     "defaults": {
                         "logo": "{String} url to svg or other image object",
@@ -182,10 +198,26 @@
                                 "close": {
                                     "desc": "closes the profile"
                                 },
-                                "onProfileClickOutside": "HIG.abstract.EventObject",
-                                "onProfileImageClick": "HIG.abstract.EventObject",
-                                "onProfileSettingsClick": "HIG.abstract.EventObject",
-                                "onSignOutClick": "HIG.abstract.EventObject"
+                                "onProfileClickOutside": {
+                                    "desc": "Calls the provided callback when the profile is open and the user clicks outside of the profile",
+                                    "params": "HIG.abstract.EventObject.params",
+                                    "returns": "HIG.abstract.EventObject.returns"
+                                },
+                                "onProfileImageClick": {
+                                    "desc": "Calls the provided callback when user clicks on the profile image",
+                                    "params": "HIG.abstract.EventObject.params",
+                                    "returns": "HIG.abstract.EventObject.returns"
+                                },
+                                "onProfileSettingsClick": {
+                                    "desc": "Calls the provided callback when user clicks on the profile settings link",
+                                    "params": "HIG.abstract.EventObject.params",
+                                    "returns": "HIG.abstract.EventObject.returns"
+                                },
+                                "onSignOutClick": {
+                                    "desc": "Calls the provided callback when user clicks on the sign out button",
+                                    "params": "HIG.abstract.EventObject.params",
+                                    "returns": "HIG.abstract.EventObject.returns"
+                                }
                             },
                             "defaults": {
                                 "image": "{String} url src of the image",
@@ -233,8 +265,16 @@
                                         "{String} - ['account' or 'project']"
                                     ]
                                 },
-                                "onClickOutside": "HIG.abstract.EventObject",
-                                "onClick": "HIG.abstract.EventObject"
+                                "onClickOutside": {
+                                    "desc": "Calls the provided callback when the switcher is open and the user clicks outside the switcher",
+                                    "params": "HIG.abstract.EventObject.params",
+                                    "returns": "HIG.abstract.EventObject.returns"
+                                },
+                                "onClick": {
+                                    "desc": "Calls the provided callback when user clicks on the switcher in the top nav",
+                                    "params": "HIG.abstract.EventObject.params",
+                                    "returns": "HIG.abstract.EventObject.returns"
+                                }
                             },
                             "partials": {
                                 "Account": {
@@ -252,7 +292,11 @@
                                         "deactivate": {
                                             "desc": "deactivates the account"
                                         },
-                                        "onClick": "HIG.abstract.EventObject"
+                                        "onClick": {
+                                            "desc": "Calls the provided callback when user clicks on the account",
+                                            "params": "HIG.abstract.EventObject.params",
+                                            "returns": "HIG.abstract.EventObject.returns"
+                                        }
                                     },
                                     "defaults": {
                                         "image": "{String} - url of the account image",
@@ -274,7 +318,11 @@
                                         "deactivate": {
                                             "desc": "deactivates the project"
                                         },
-                                        "onClick": "HIG.abstract.EventObject"
+                                        "onClick": {
+                                            "desc": "Calls the provided callback when user clicks on the project",
+                                            "params": "HIG.abstract.EventObject.params",
+                                            "returns": "HIG.abstract.EventObject.returns"
+                                        }
                                     },
                                     "defaults": {
                                         "image": "{String} - url of the project image",
@@ -337,7 +385,11 @@
                                         "deactivate": {
                                             "desc": "deactivates the tab"
                                         },
-                                        "onClick": "HIG.abstract.EventObject"
+                                        "onClick": {
+                                            "desc": "Calls the provided callback when user clicks on the tab",
+                                            "params": "HIG.abstract.EventObject.params",
+                                            "returns": "HIG.abstract.EventObject.returns"
+                                        }
                                     },
                                     "defaults": {
                                         "label": "{String} Label of the tab"
@@ -427,8 +479,16 @@
                                                         "{String} link - new link"
                                                     ]
                                                 },
-                                                "onClick": "HIG.abstract.EventObject",
-                                                "onHover": "HIG.abstract.EventObject"
+                                                "onClick": {
+                                                    "desc": "Calls the provided callback when user clicks on the item",
+                                                    "params": "HIG.abstract.EventObject.params",
+                                                    "returns": "HIG.abstract.EventObject.returns"
+                                                },
+                                                "onHover": {
+                                                    "desc": "Calls the provided callback when user moves the mouse over the item",
+                                                    "params": "HIG.abstract.EventObject.params",
+                                                    "returns": "HIG.abstract.EventObject.returns"
+                                                }
                                             },
                                             "defaults": {
                                                 "icon": "{String} icon identifier",
@@ -454,8 +514,16 @@
                                         "{String} link - new link"
                                     ]
                                 },
-                                "onClick": "HIG.abstract.EventObject",
-                                "onHover": "HIG.abstract.EventObject"
+                                "onClick": {
+                                    "desc": "Calls the provided callback when user clicks on the link",
+                                    "params": "HIG.abstract.EventObject.params",
+                                    "returns": "HIG.abstract.EventObject.returns"
+                                },
+                                "onHover": {
+                                    "desc": "Calls the provided callback when user moves the mouse over the link",
+                                    "params": "HIG.abstract.EventObject.params",
+                                    "returns": "HIG.abstract.EventObject.returns"
+                                }
                             },
                             "defaults": {
                                 "title": "{String} title",
