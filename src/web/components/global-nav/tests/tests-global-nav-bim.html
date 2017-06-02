@@ -120,7 +120,7 @@
                                 ]
                             },
                         ],
-                        "group2": [
+                        "group3": [
                             {
                                 "icon": "project-management",
                                 "title": "Item 2.1",
@@ -255,6 +255,10 @@
             // ADD SIDENAV
             var SideNav = new GlobalNav.partials.SideNav();
             GlobalNav.addSideNav(SideNav);
+
+            // ADD SEARCH IN SIDENAV
+            var SideNavSearch = new SideNav.partials.Search();
+            SideNav.addSearch(SideNavSearch);
 
             // ADD TOPNAV
             var TopNav = new GlobalNav.partials.TopNav({

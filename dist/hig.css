@@ -651,6 +651,10 @@
     font-size: 15px;
     float: left;
     line-height: 30px; }
+.hig__global-nav__side-nav__search {
+  border-bottom: 1px solid #EDEFF0;
+  padding: 10px 0;
+  margin-bottom: 15px; }
 @font-face {
   font-family: 'ArtifaktElement';
   src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot");
