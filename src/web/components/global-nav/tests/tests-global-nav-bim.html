@@ -15,66 +15,110 @@
             var menu = {
                 "section1": {
                     "headerLabel": "Project",
-                    "headerName": "Thunderstorm",
+                    "headerName": "Oakwood Medical Center",
                     "groups": {
                         "group1": [
                             {
-                                "icon": "project-management",
-                                "title": "Item 1.1",
+                                "icon": "insight",
+                                "title": "Insight",
                                 "link": "#",
                                 "tabs": [
                                     {
-                                        "label": "One One",
+                                        "label": "Overview",
                                         "contentImage": "egg.jpg"
                                     },
                                     {
-                                        "label": "One Two",
+                                        "label": "Risk",
                                         "contentImage": "egg.jpg"
                                     },
                                     {
-                                        "label": "One Three",
-                                        "contentImage": "egg.jpg"
-                                    }
-                                ]
-                            },
-                            {
-                                "icon": "project-management",
-                                "title": "Item 1.2",
-                                "link": "#",
-                                "tabs": [
-                                    {
-                                        "label": "Two One",
+                                        "label": "Quality",
                                         "contentImage": "egg.jpg"
                                     },
                                     {
-                                        "label": "Two Two",
-                                        "contentImage": "egg.jpg"
-                                    },
-                                    {
-                                        "label": "Two Three",
-                                        "contentImage": "egg.jpg"
-                                    }
-                                ]
-                            },
-                            {
-                                "icon": "project-management",
-                                "title": "Item 1.3",
-                                "link": "#",
-                                "tabs": [
-                                    {
-                                        "label": "Three One",
-                                        "contentImage": "egg.jpg"
-                                    },
-                                    {
-                                        "label": "Three Two",
-                                        "contentImage": "egg.jpg"
-                                    },
-                                    {
-                                        "label": "Three Three",
+                                        "label": "Reports",
                                         "contentImage": "egg.jpg"
                                     }
                                 ]
                             }
+                        ],
+                        "group2": [
+                            {
+                                "icon": "authoring-collaboration",
+                                "title": "Authoring Collaboration",
+                                "link": "#",
+                                "tabs": [
+                                    {
+                                        "label": "Cloud Work Sharing",
+                                        "contentImage": "egg.jpg"
+                                    },
+                                    {
+                                        "label": "Fluent",
+                                        "contentImage": "egg.jpg"
+                                    },
+                                    {
+                                        "label": "Approvals",
+                                        "contentImage": "egg.jpg"
+                                    }
+                                ]
+                            },
+                            {
+                                "icon": "document-management",
+                                "title": "Document Management",
+                                "link": "#",
+                                "tabs": [
+                                    {
+                                        "label": "Document Workflow",
+                                        "contentImage": "egg.jpg"
+                                    }
+                                ]
+                            },
+                            {
+                                "icon": "model-coordination",
+                                "title": "Model Coordination",
+                                "link": "#",
+                                "tabs": [
+                                    {
+                                        "label": "Overview",
+                                        "contentImage": "egg.jpg"
+                                    },
+                                    {
+                                        "label": "Models",
+                                        "contentImage": "egg.jpg"
+                                    },
+                                    {
+                                        "label": "Checklists",
+                                        "contentImage": "egg.jpg"
+                                    },
+                                    {
+                                        "label": "Clashes",
+                                        "contentImage": "egg.jpg"
+                                    },
+                                    {
+                                        "label": "Issues",
+                                        "contentImage": "egg.jpg"
+                                    }
+                                ]
+                            },
+                            {
+                                "icon": "project-management",
+                                "title": "Project Management",
+                                "link": "#",
+                                "tabs": [
+                                    {
+                                        "label": "RFIs",
+                                        "contentImage": "egg.jpg"
+                                    },
+                                    {
+                                        "label": "Submittals",
+                                        "contentImage": "egg.jpg"
+                                    },
+                                    {
+                                        "label": "Daily Log",
+                                        "contentImage": "egg.jpg"
+                                    },
+                                ]
+                            },
                         ],
                         "group2": [
                             {
@@ -279,7 +323,7 @@
                     generated_section.addGroup(generated_group);
 
                     var current_group = menu[section]["groups"][group];
-                    current_group.forEach((item) => {              
+                    current_group.forEach((item) => {
                         // ADD SOME ITEMS TO OUR GROUP
 
                         var generated_item = new generated_group.partials.Item({
@@ -310,7 +354,7 @@
                                 });
                                 Tabs.addTab(generated_tab);
                                 generated_tabs.push(generated_tab);
-                                
+
                                 generated_tab.onClick(() => {
                                     console.log('Tab '+tab["label"]+' clicked');
                                     for (var k = 0; k < generated_tabs.length; k++){
@@ -323,14 +367,14 @@
                                     SlotEl.innerHTML = `<img src='${contentImage}'>`;
                                 });
                             })
-                            
+
                         });
                     });
                 }
             }
 
             // LETS CLICK ON FIRST SIDENAV AND TAB FOR DEFAULT VALUES;
-            
+
 
         </script>
 
