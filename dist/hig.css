@@ -208,37 +208,44 @@
   position: absolute;
   display: none;
   right: 0;
-  width: 280px;
-  padding: 20px;
   margin-top: 6px;
-  margin-right: 5px;
+  margin-right: 5px; }
+  .hig__flyout--open > .hig__flyout__container {
+    display: block; }
+
+.hig__flyout__chevron::after {
+  content: '';
+  position: absolute;
+  top: -9px;
+  right: 15px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent white transparent; }
+
+.hig__flyout__chevron::before {
+  content: '';
+  position: absolute;
+  top: -11px;
+  right: 14px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 11px 11px 11px;
+  border-color: transparent transparent #C5CFD9 transparent; }
+
+.hig__flyout__panel {
+  padding: 10px;
+  overflow-y: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
   box-sizing: border-box;
+  max-height: 360px;
+  width: 270px;
   background-color: #FFFFFF;
   border: 1px solid #C5CFD9;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); }
-  .hig__flyout--open > .hig__flyout__container {
-    display: block; }
-  .hig__flyout__container::after {
-    content: '';
-    position: absolute;
-    top: -10px;
-    right: 15px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 10px 10px 10px;
-    border-color: transparent transparent white transparent; }
-  .hig__flyout__container::before {
-    content: '';
-    position: absolute;
-    top: -12px;
-    right: 14px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 11px 11px 11px;
-    border-color: transparent transparent #C5CFD9 transparent; }
 @font-face {
   font-family: 'ArtifaktElement';
   src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot");
