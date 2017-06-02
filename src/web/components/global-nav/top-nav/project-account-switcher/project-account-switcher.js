@@ -72,7 +72,11 @@ class ProjectAccountSwitcher extends Core {
 }
 
 ProjectAccountSwitcher._interface = Interface['components']['GlobalNav']['partials']['TopNav']['partials']['ProjectAccountSwitcher'];
-ProjectAccountSwitcher._defaults = {};
+ProjectAccountSwitcher._defaults = {
+    "activeImage": "",
+    "activeLabel": "",
+    "activeType": "project"
+};
 ProjectAccountSwitcher._partials = {
     Account: Account,
     Project: Project
