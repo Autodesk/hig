@@ -55,7 +55,7 @@ class ProjectAccountSwitcher extends Core {
 
     close() { this.flyout.close(); }
 
-    onClickOutside() { this.flyout.onClickOutside(); }
+    onClickOutside(fn) { return this.flyout.onClickOutside(fn); }
 
     setActiveLabel(label) {
         this.target.setLabel(label);

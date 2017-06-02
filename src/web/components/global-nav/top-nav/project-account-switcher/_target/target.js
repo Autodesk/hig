@@ -38,13 +38,18 @@ class Target extends Core {
         this.item._setType(type);
     }
 
+    onClick(fn) {
+        return this._attachListener("click", this.el, this.el, fn);
+    }
+
 }
 
 Target._interface = {
     "methods": {
         "setLabel": {},
         "setImage": {},
-        "setType": {}
+        "setType": {},
+        "onClick": {}
     }
 };
 Target._defaults = {};
