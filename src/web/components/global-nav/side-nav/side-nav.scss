@@ -3,7 +3,7 @@
 
 $hig__global-nav__sidenav--width: 280px;
 
-.hig__global-nav__sidenav{
+.hig__global-nav__sidenav {
     @include reset;
     position: absolute;
     top: 0;
@@ -18,14 +18,15 @@ $hig__global-nav__sidenav--width: 280px;
     padding: 16px;
 
     display: none; // Hide by default
-
-    &__copywright{
-        position: absolute;
-        bottom: 40px;
-        font-size: 12px;
-        color: $base-5;
-    }
 }
-    .hig__global-nav--open .hig__global-nav__sidenav{
-        display: block;
-    }
+
+.hig__global-nav__sidenav__copyright {
+    position: absolute;
+    bottom: 40px;
+    font-size: 12px;
+    color: $base-5;
+}
+
+.hig__global-nav--open .hig__global-nav__sidenav {
+    display: block;
+}
