@@ -2,7 +2,7 @@
 @import '~helpers/css/mixins/base.scss';
 @import '~helpers/css/mixins/breakpoints.scss';
 
-.hig__global-nav__sub-nav{
+.hig__global-nav__sub-nav {
     @include reset;
 
     background: $background-2;
@@ -16,27 +16,29 @@
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-
-    &__left{
-        height: 50px;
-        display: flex;
-        align-items: center;
-        flex-shrink: 0;
-        font-size: 18px;
-        padding: 0 17px;
-        white-space: nowrap;
-
-        &__icon{
-            margin-left: 15px;
-        }
-    }
-
 }
 
-.hig__global-nav__sub-nav__left {
+.hig__global-nav__sub-nav__module-indicator-name {
     display: none;
+    height: 50px;
+    align-items: center;
+    flex-shrink: 0;
+    padding: 0 17px;
+
+    font-size: 18px;
+    white-space: nowrap;
+
     @include thirteen-inch-laptop-breakpoint {
-     display: block;
+        display: flex;
+    }
+}
+
+.hig__global-nav__sub-nav__module-indicator-icon {
+    display: block;
+    margin-left: 15px;
+
+    @include thirteen-inch-laptop-breakpoint {
+        display: none;
     }
 }
 
