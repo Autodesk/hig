@@ -16,11 +16,11 @@
         }
     }
 
-    &__input{
+    &__inputholder{
         display: inline-block;
         vertical-align: middle;
 
-        & input{
+        &__input{
             @include reset;
             margin-left: -5px;
             border: none;
@@ -45,6 +45,11 @@
         position: absolute;
         right: 0;
         top: 12px;
+        opacity: 0; // hide by opacity to enable event propagation with focusin/focusout events
+
+        &--show{
+            opacity: 1;
+        }
 
         &:hover{
             cursor: pointer;

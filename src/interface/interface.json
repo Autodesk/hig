@@ -283,12 +283,25 @@
                                         "{String} placeholder - new placeholder"
                                     ]
                                 },
-                                "onClearClick": "HIG.abstract.EventObject",
-                                "onInput": "HIG.abstract.EventObject"
-
-
+                                "setQuery": {
+                                    "desc": "sets the search query",
+                                    "params": [
+                                        "{String} query - new query"
+                                    ]
+                                },
+                                "showClearIcon": {
+                                    "desc": "show the clear input icon"
+                                },
+                                "hideClearIcon": {
+                                    "desc": "hide the clear input icon"
+                                },
+                                "onClearIconClick": "HIG.abstract.EventObject",
+                                "onInput": "HIG.abstract.EventObject",
+                                "onFocusIn": "HIG.abstract.EventObject",
+                                "onFocusOut": "HIG.abstract.EventObject"
                             },
                             "defaults": {
+                                "query": "{String} Set a search query in the input",
                                 "placeholder": "{String} A placeholder text when nothing is searched"
                             }
                         },
