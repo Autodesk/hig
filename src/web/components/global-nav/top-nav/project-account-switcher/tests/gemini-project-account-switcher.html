@@ -36,19 +36,19 @@
             // CREATE PROJECT ACCOUNT SWITCHER
             var ProjectAccountSwitcher = new TopNav.partials.ProjectAccountSwitcher({
                 activeLabel: 'Global Construction / West Oakwood Medical Center',
-                activeImage: '../../../tests/project-1.png',
-                activeType: 'account'
+                activeImage: '../../../tests/egg.jpg',
+                activeType: 'project'
             });
 
             TopNav.addProjectAccountSwitcher(ProjectAccountSwitcher);
 
             // ADD PROJECTS
             var projectsData = [
-                { label: 'Oakwood Medical Center', image: '../../../tests/project-1.png' },
-                { label: 'Colorado Myrtle Shield Apartments', image: '../../../tests/project-2.png' },
-                { label: 'Grey Pillars', image: '../../../tests/project-3.png' },
+                { label: 'Oakwood Medical Center' },
+                { label: 'Colorado Myrtle Shield Apartments', image: '../../../tests/egg.jpg' },
+                { label: 'Grey Pillars', image: '../../../tests/egg.jpg' },
                 { label: 'Keystone Apartments' },
-                { label: 'Pleasant Park', image: '../../../tests/project-4.png' }
+                { label: 'Pleasant Park', image: '../../../tests/egg.jpg' }
             ];
             var projectComponents = projectsData.map((project) => {
                 return new ProjectAccountSwitcher.partials.Project(project);
@@ -59,11 +59,11 @@
 
             // ADD ACCOUNT
             var accountsData = [
-                { label: 'Oakwood Medical Center', image: '../../../tests/project-1.png' },
-                { label: 'Colorado Myrtle Shield Apartments', image: '../../../tests/project-2.png' },
-                { label: 'Grey Pillars', image: '../../../tests/project-3.png' },
+                { label: 'Oakwood Medical Center', image: '../../../tests/egg.jpg' },
+                { label: 'Colorado Myrtle Shield Apartments', image: '../../../tests/egg.jpg' },
+                { label: 'Grey Pillars', image: '../../../tests/egg.jpg' },
                 { label: 'Keystone Apartments' },
-                { label: 'Pleasant Park', image: '../../../tests/project-4.png' }
+                { label: 'Pleasant Park', image: '../../../tests/egg.jpg' }
             ];
             var accountComponents = accountsData.map((account) => {
                 return new ProjectAccountSwitcher.partials.Account(account);

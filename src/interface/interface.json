@@ -210,10 +210,10 @@
                                     ]
                                 },
                                 "open": {
-                                    "desc": "opens the profile"
+                                    "desc": "opens the project/account switcher"
                                 },
                                 "close": {
-                                    "desc": "closes the profile"
+                                    "desc": "closes the project/account switcher"
                                 },
                                 "setActiveLabel": {
                                     "desc": "Sets the label displayed in the top nav",
