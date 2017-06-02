@@ -1,0 +1,14 @@
+@import '~basics/colors/colors.scss';
+
+.hig__global-nav__top-nav__project-account-switcher__target {
+    display: flex;
+    align-items: center;
+    padding: 0 35px 0 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.hig__global-nav__top-nav__project-account-switcher__target__caret {
+    position: absolute;
+    right: 15px;
+}

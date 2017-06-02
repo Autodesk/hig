@@ -208,36 +208,44 @@
   position: absolute;
   display: none;
   right: 0;
-  width: 280px;
-  padding: 20px;
   margin-top: 6px;
-  margin-right: 5px;
+  margin-right: 5px; }
+  .hig__flyout--open > .hig__flyout__container {
+    display: block; }
+
+.hig__flyout__chevron::after {
+  content: '';
+  position: absolute;
+  top: -9px;
+  right: 15px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent white transparent; }
+
+.hig__flyout__chevron::before {
+  content: '';
+  position: absolute;
+  top: -11px;
+  right: 14px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 11px 11px 11px;
+  border-color: transparent transparent #C5CFD9 transparent; }
+
+.hig__flyout__panel {
+  padding: 10px;
+  overflow-y: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  box-sizing: border-box;
+  max-height: 360px;
+  width: 270px;
   background-color: #FFFFFF;
   border: 1px solid #C5CFD9;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); }
-  .hig__flyout--open > .hig__flyout__container {
-    display: block; }
-  .hig__flyout__container::after {
-    content: '';
-    position: absolute;
-    top: -10px;
-    right: 15px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 10px 10px 10px;
-    border-color: transparent transparent white transparent; }
-  .hig__flyout__container::before {
-    content: '';
-    position: absolute;
-    top: -12px;
-    right: 14px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 11px 11px 11px;
-    border-color: transparent transparent #C5CFD9 transparent; }
 @font-face {
   font-family: 'ArtifaktElement';
   src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot");
@@ -762,6 +770,8 @@
     height: 24px; }
     .hig__global-nav__top-nav__logo img {
       height: 100%; }
+  .hig__global-nav__top-nav__spacer {
+    flex: 1 1 0; }
 .hig__global-nav__profile {
   height: 100%;
   display: flex;
@@ -879,6 +889,89 @@
 .src__components__global-nav__top-nav__profile__profile-flyout-content__links {
   display: flex;
   margin-top: 20px; }
+.hig__global-nav__top-nav__project-account-switcher__item {
+  display: flex;
+  height: 42px;
+  align-items: center;
+  font-size: 13px;
+  width: 100%; }
+
+.hig__global-nav__top-nav__project-account-switcher__item__image-wrapper {
+  display: inline-block;
+  position: relative;
+  flex: 0 0 auto;
+  overflow: hidden;
+  border-radius: 2px;
+  border: 1px solid #C5CFD9;
+  color: #565C5F;
+  font-size: 13px;
+  line-height: 32px;
+  text-align: center;
+  background-color: #E3E9EE; }
+  .hig__global-nav__top-nav__project-account-switcher__item--project .hig__global-nav__top-nav__project-account-switcher__item__image-wrapper {
+    width: 32px;
+    height: 32px; }
+  .hig__global-nav__top-nav__project-account-switcher__item--account .hig__global-nav__top-nav__project-account-switcher__item__image-wrapper {
+    width: 60px;
+    height: 30px; }
+
+.hig__global-nav__top-nav__project-account-switcher__item__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+  cursor: pointer;
+  color: transparent; }
+  .hig__global-nav__top-nav__project-account-switcher__item__image[src=""] {
+    display: none; }
+  .hig__global-nav__top-nav__project-account-switcher__item--project .hig__global-nav__top-nav__project-account-switcher__item__image {
+    width: 32px;
+    height: 32px; }
+  .hig__global-nav__top-nav__project-account-switcher__item--account .hig__global-nav__top-nav__project-account-switcher__item__image {
+    width: 60px;
+    height: 30px; }
+
+.hig__global-nav__top-nav__project-account-switcher__item__label {
+  flex: 1 1 auto;
+  min-width: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  cursor: pointer;
+  padding-left: 10px; }
+  .hig__global-nav__top-nav__project-account-switcher__item--active > .hig__global-nav__top-nav__project-account-switcher__item__label {
+    color: #0696D7; }
+.hig__global-nav__top-nav__project-account-switcher__lists__list {
+  margin-top: 20px; }
+  .hig__global-nav__top-nav__project-account-switcher__lists__list:first-child {
+    margin-top: 0; }
+  .hig__global-nav__top-nav__project-account-switcher__lists__list > .hig__global-nav__top-nav__project-account-switcher__item {
+    position: relative; }
+    .hig__global-nav__top-nav__project-account-switcher__lists__list > .hig__global-nav__top-nav__project-account-switcher__item:first-child {
+      padding-top: 15px; }
+    .hig__global-nav__top-nav__project-account-switcher__lists__list > .hig__global-nav__top-nav__project-account-switcher__item:first-child::before {
+      position: absolute;
+      top: 0px;
+      pointer-events: none;
+      content: 'Projects';
+      font-size: 11px;
+      line-height: 15px;
+      text-transform: uppercase;
+      color: #6C7A80; }
+  .hig__global-nav__top-nav__project-account-switcher__lists__list .hig__global-nav__top-nav__project-account-switcher__item--project:first-child::before {
+    content: 'Projects'; }
+  .hig__global-nav__top-nav__project-account-switcher__lists__list .hig__global-nav__top-nav__project-account-switcher__item--account:first-child::before {
+    content: 'Accounts'; }
+.hig__global-nav__top-nav__project-account-switcher__target {
+  display: flex;
+  align-items: center;
+  padding: 0 35px 0 10px;
+  box-sizing: border-box;
+  cursor: pointer; }
+
+.hig__global-nav__top-nav__project-account-switcher__target__caret {
+  position: absolute;
+  right: 15px; }
 @font-face {
   font-family: 'ArtifaktElement';
   src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot");
@@ -973,16 +1066,25 @@
   position: -webkit-sticky;
   position: sticky;
   top: 0; }
-  .hig__global-nav__sub-nav__left {
-    height: 50px;
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
-    font-size: 18px;
-    padding: 0 17px;
-    white-space: nowrap; }
-    .hig__global-nav__sub-nav__left__icon {
-      margin-left: 15px; }
+
+.hig__global-nav__sub-nav__module-indicator-name {
+  display: none;
+  height: 50px;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 0 17px;
+  font-size: 18px;
+  white-space: nowrap; }
+  @media screen and (min-width: 1280px) {
+    .hig__global-nav__sub-nav__module-indicator-name {
+      display: flex; } }
+
+.hig__global-nav__sub-nav__module-indicator-icon {
+  display: block;
+  margin-left: 15px; }
+  @media screen and (min-width: 1280px) {
+    .hig__global-nav__sub-nav__module-indicator-icon {
+      display: none; } }
 
 .hig__global-nav__sub-nav__spacer {
   visibility: hidden;
