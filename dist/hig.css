@@ -411,11 +411,12 @@
   background: #FFFFFF;
   border-right: 1px solid #D8D8D8;
   box-shadow: inset -2px 0 7px -2px rgba(87, 91, 94, 0.65);
+  overflow-y: auto;
   box-sizing: border-box;
   width: 280px;
   padding: 16px;
   display: none; }
-  .hig__global-nav__sidenav__copywright {
+  .hig__global-nav__sidenav__copyright {
     position: absolute;
     bottom: 40px;
     font-size: 12px;
@@ -527,11 +528,12 @@
   background: #FFFFFF;
   border-right: 1px solid #D8D8D8;
   box-shadow: inset -2px 0 7px -2px rgba(87, 91, 94, 0.65);
+  overflow-y: auto;
   box-sizing: border-box;
   width: 280px;
   padding: 16px;
   display: none; }
-  .hig__global-nav__sidenav__copywright {
+  .hig__global-nav__sidenav__copyright {
     position: absolute;
     bottom: 40px;
     font-size: 12px;
