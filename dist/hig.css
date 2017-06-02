@@ -742,10 +742,10 @@
     vertical-align: middle; }
     .hig__global-nav__side-nav__search__icon:hover {
       cursor: pointer; }
-  .hig__global-nav__side-nav__search__input {
+  .hig__global-nav__side-nav__search__inputholder {
     display: inline-block;
     vertical-align: middle; }
-    .hig__global-nav__side-nav__search__input input {
+    .hig__global-nav__side-nav__search__inputholder__input {
       font-family: 'ArtifaktElement';
       line-height: 1.6;
       box-sizing: border-box;
@@ -755,16 +755,19 @@
       padding: 5px;
       width: 190px;
       font-weight: 500; }
-      .hig__global-nav__side-nav__search__input input::placeholder {
+      .hig__global-nav__side-nav__search__inputholder__input::placeholder {
         font-weight: normal;
         color: #819099; }
-      .hig__global-nav__side-nav__search__input input:focus {
+      .hig__global-nav__side-nav__search__inputholder__input:focus {
         border: none;
         outline: none; }
   .hig__global-nav__side-nav__search__clear {
     position: absolute;
     right: 0;
-    top: 12px; }
+    top: 12px;
+    opacity: 0; }
+    .hig__global-nav__side-nav__search__clear--show {
+      opacity: 1; }
     .hig__global-nav__side-nav__search__clear:hover {
       cursor: pointer; }
 @font-face {
