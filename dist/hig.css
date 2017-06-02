@@ -1,80 +1,80 @@
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Hair.woff2") format("woff2"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Hair.woff") format("woff"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Hair.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Hair.woff2") format("woff2"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Hair.woff") format("woff"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Hair.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 100;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Thin.woff2") format("woff2"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Thin.woff") format("woff"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Thin.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Thin.woff2") format("woff2"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Thin.woff") format("woff"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Thin.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 200;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Light.woff2") format("woff2"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Light.woff") format("woff"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Light.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Light.woff2") format("woff2"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Light.woff") format("woff"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Light.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Regular.woff2") format("woff2"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Regular.woff") format("woff"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Regular.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Regular.woff2") format("woff2"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Regular.woff") format("woff"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Regular.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Bold.woff2") format("woff2"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Bold.woff") format("woff"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Bold.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Bold.woff2") format("woff2"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Bold.woff") format("woff"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Bold.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 500;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Book.woff2") format("woff2"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Book.woff") format("woff"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Book.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Book.woff2") format("woff2"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Book.woff") format("woff"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Book.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 600;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Medium.woff2") format("woff2"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Medium.woff") format("woff"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Medium.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Medium.woff2") format("woff2"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Medium.woff") format("woff"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Medium.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 700;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Black.woff2") format("woff2"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Black.woff") format("woff"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Black.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Black.woff2") format("woff2"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Black.woff") format("woff"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Black.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 800;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Heavy.woff2") format("woff2"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Heavy.woff") format("woff"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Heavy.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Heavy.woff2") format("woff2"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Heavy.woff") format("woff"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Heavy.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 900;
   font-style: normal; }
@@ -108,81 +108,81 @@
       text-decoration: underline; }
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Hair.woff2") format("woff2"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Hair.woff") format("woff"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Hair.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Hair.woff2") format("woff2"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Hair.woff") format("woff"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Hair.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 100;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Thin.woff2") format("woff2"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Thin.woff") format("woff"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Thin.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Thin.woff2") format("woff2"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Thin.woff") format("woff"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Thin.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 200;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Light.woff2") format("woff2"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Light.woff") format("woff"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Light.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Light.woff2") format("woff2"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Light.woff") format("woff"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Light.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Regular.woff2") format("woff2"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Regular.woff") format("woff"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Regular.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Regular.woff2") format("woff2"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Regular.woff") format("woff"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Regular.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Bold.woff2") format("woff2"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Bold.woff") format("woff"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Bold.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Bold.woff2") format("woff2"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Bold.woff") format("woff"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Bold.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 500;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Book.woff2") format("woff2"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Book.woff") format("woff"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Book.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Book.woff2") format("woff2"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Book.woff") format("woff"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Book.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 600;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Medium.woff2") format("woff2"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Medium.woff") format("woff"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Medium.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Medium.woff2") format("woff2"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Medium.woff") format("woff"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Medium.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 700;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Black.woff2") format("woff2"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Black.woff") format("woff"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Black.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Black.woff2") format("woff2"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Black.woff") format("woff"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Black.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 800;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Heavy.woff2") format("woff2"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Heavy.woff") format("woff"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Heavy.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Heavy.woff2") format("woff2"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Heavy.woff") format("woff"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Heavy.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 900;
   font-style: normal; }
@@ -240,162 +240,162 @@
     border-color: transparent transparent #C5CFD9 transparent; }
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Hair.woff2") format("woff2"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Hair.woff") format("woff"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Hair.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Hair.woff2") format("woff2"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Hair.woff") format("woff"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Hair.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 100;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Thin.woff2") format("woff2"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Thin.woff") format("woff"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Thin.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Thin.woff2") format("woff2"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Thin.woff") format("woff"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Thin.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 200;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Light.woff2") format("woff2"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Light.woff") format("woff"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Light.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Light.woff2") format("woff2"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Light.woff") format("woff"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Light.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Regular.woff2") format("woff2"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Regular.woff") format("woff"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Regular.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Regular.woff2") format("woff2"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Regular.woff") format("woff"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Regular.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Bold.woff2") format("woff2"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Bold.woff") format("woff"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Bold.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Bold.woff2") format("woff2"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Bold.woff") format("woff"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Bold.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 500;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Book.woff2") format("woff2"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Book.woff") format("woff"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Book.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Book.woff2") format("woff2"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Book.woff") format("woff"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Book.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 600;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Medium.woff2") format("woff2"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Medium.woff") format("woff"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Medium.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Medium.woff2") format("woff2"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Medium.woff") format("woff"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Medium.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 700;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Black.woff2") format("woff2"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Black.woff") format("woff"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Black.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Black.woff2") format("woff2"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Black.woff") format("woff"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Black.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 800;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Heavy.woff2") format("woff2"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Heavy.woff") format("woff"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Heavy.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Heavy.woff2") format("woff2"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Heavy.woff") format("woff"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Heavy.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 900;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Hair.woff2") format("woff2"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Hair.woff") format("woff"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Hair.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Hair.woff2") format("woff2"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Hair.woff") format("woff"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Hair.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 100;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Thin.woff2") format("woff2"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Thin.woff") format("woff"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Thin.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Thin.woff2") format("woff2"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Thin.woff") format("woff"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Thin.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 200;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Light.woff2") format("woff2"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Light.woff") format("woff"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Light.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Light.woff2") format("woff2"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Light.woff") format("woff"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Light.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Regular.woff2") format("woff2"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Regular.woff") format("woff"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Regular.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Regular.woff2") format("woff2"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Regular.woff") format("woff"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Regular.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Bold.woff2") format("woff2"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Bold.woff") format("woff"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Bold.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Bold.woff2") format("woff2"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Bold.woff") format("woff"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Bold.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 500;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Book.woff2") format("woff2"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Book.woff") format("woff"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Book.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Book.woff2") format("woff2"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Book.woff") format("woff"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Book.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 600;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Medium.woff2") format("woff2"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Medium.woff") format("woff"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Medium.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Medium.woff2") format("woff2"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Medium.woff") format("woff"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Medium.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 700;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Black.woff2") format("woff2"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Black.woff") format("woff"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Black.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Black.woff2") format("woff2"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Black.woff") format("woff"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Black.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 800;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Heavy.woff2") format("woff2"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Heavy.woff") format("woff"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Heavy.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Heavy.woff2") format("woff2"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Heavy.woff") format("woff"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Heavy.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 900;
   font-style: normal; }
@@ -437,81 +437,81 @@
   margin-left: 280px; }
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Hair.woff2") format("woff2"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Hair.woff") format("woff"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Hair.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Hair.woff2") format("woff2"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Hair.woff") format("woff"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Hair.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 100;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Thin.woff2") format("woff2"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Thin.woff") format("woff"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Thin.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Thin.woff2") format("woff2"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Thin.woff") format("woff"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Thin.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 200;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Light.woff2") format("woff2"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Light.woff") format("woff"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Light.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Light.woff2") format("woff2"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Light.woff") format("woff"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Light.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Regular.woff2") format("woff2"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Regular.woff") format("woff"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Regular.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Regular.woff2") format("woff2"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Regular.woff") format("woff"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Regular.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Bold.woff2") format("woff2"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Bold.woff") format("woff"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Bold.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Bold.woff2") format("woff2"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Bold.woff") format("woff"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Bold.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 500;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Book.woff2") format("woff2"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Book.woff") format("woff"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Book.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Book.woff2") format("woff2"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Book.woff") format("woff"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Book.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 600;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Medium.woff2") format("woff2"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Medium.woff") format("woff"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Medium.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Medium.woff2") format("woff2"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Medium.woff") format("woff"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Medium.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 700;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Black.woff2") format("woff2"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Black.woff") format("woff"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Black.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Black.woff2") format("woff2"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Black.woff") format("woff"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Black.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 800;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Heavy.woff2") format("woff2"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Heavy.woff") format("woff"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Heavy.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Heavy.woff2") format("woff2"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Heavy.woff") format("woff"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Heavy.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 900;
   font-style: normal; }
@@ -555,81 +555,81 @@
     border: none; }
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Hair.woff2") format("woff2"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Hair.woff") format("woff"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Hair.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Hair.woff2") format("woff2"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Hair.woff") format("woff"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Hair.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 100;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Thin.woff2") format("woff2"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Thin.woff") format("woff"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Thin.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Thin.woff2") format("woff2"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Thin.woff") format("woff"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Thin.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 200;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Light.woff2") format("woff2"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Light.woff") format("woff"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Light.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Light.woff2") format("woff2"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Light.woff") format("woff"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Light.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Regular.woff2") format("woff2"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Regular.woff") format("woff"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Regular.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Regular.woff2") format("woff2"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Regular.woff") format("woff"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Regular.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Bold.woff2") format("woff2"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Bold.woff") format("woff"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Bold.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Bold.woff2") format("woff2"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Bold.woff") format("woff"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Bold.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 500;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Book.woff2") format("woff2"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Book.woff") format("woff"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Book.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Book.woff2") format("woff2"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Book.woff") format("woff"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Book.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 600;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Medium.woff2") format("woff2"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Medium.woff") format("woff"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Medium.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Medium.woff2") format("woff2"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Medium.woff") format("woff"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Medium.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 700;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Black.woff2") format("woff2"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Black.woff") format("woff"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Black.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Black.woff2") format("woff2"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Black.woff") format("woff"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Black.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 800;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Heavy.woff2") format("woff2"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Heavy.woff") format("woff"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Heavy.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Heavy.woff2") format("woff2"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Heavy.woff") format("woff"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Heavy.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 900;
   font-style: normal; }
@@ -653,81 +653,81 @@
     line-height: 30px; }
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Hair.woff2") format("woff2"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Hair.woff") format("woff"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Hair.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Hair.woff2") format("woff2"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Hair.woff") format("woff"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Hair.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 100;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Thin.woff2") format("woff2"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Thin.woff") format("woff"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Thin.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Thin.woff2") format("woff2"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Thin.woff") format("woff"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Thin.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 200;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Light.woff2") format("woff2"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Light.woff") format("woff"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Light.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Light.woff2") format("woff2"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Light.woff") format("woff"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Light.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Regular.woff2") format("woff2"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Regular.woff") format("woff"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Regular.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Regular.woff2") format("woff2"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Regular.woff") format("woff"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Regular.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Bold.woff2") format("woff2"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Bold.woff") format("woff"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Bold.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Bold.woff2") format("woff2"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Bold.woff") format("woff"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Bold.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 500;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Book.woff2") format("woff2"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Book.woff") format("woff"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Book.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Book.woff2") format("woff2"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Book.woff") format("woff"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Book.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 600;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Medium.woff2") format("woff2"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Medium.woff") format("woff"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Medium.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Medium.woff2") format("woff2"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Medium.woff") format("woff"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Medium.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 700;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Black.woff2") format("woff2"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Black.woff") format("woff"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Black.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Black.woff2") format("woff2"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Black.woff") format("woff"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Black.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 800;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Heavy.woff2") format("woff2"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Heavy.woff") format("woff"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Heavy.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Heavy.woff2") format("woff2"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Heavy.woff") format("woff"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Heavy.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 900;
   font-style: normal; }
@@ -779,81 +779,81 @@
   border-radius: 50%; }
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Hair.woff2") format("woff2"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Hair.woff") format("woff"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Hair.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Hair.woff2") format("woff2"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Hair.woff") format("woff"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Hair.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 100;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Thin.woff2") format("woff2"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Thin.woff") format("woff"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Thin.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Thin.woff2") format("woff2"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Thin.woff") format("woff"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Thin.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 200;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Light.woff2") format("woff2"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Light.woff") format("woff"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Light.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Light.woff2") format("woff2"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Light.woff") format("woff"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Light.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Regular.woff2") format("woff2"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Regular.woff") format("woff"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Regular.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Regular.woff2") format("woff2"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Regular.woff") format("woff"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Regular.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Bold.woff2") format("woff2"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Bold.woff") format("woff"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Bold.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Bold.woff2") format("woff2"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Bold.woff") format("woff"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Bold.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 500;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Book.woff2") format("woff2"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Book.woff") format("woff"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Book.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Book.woff2") format("woff2"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Book.woff") format("woff"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Book.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 600;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Medium.woff2") format("woff2"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Medium.woff") format("woff"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Medium.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Medium.woff2") format("woff2"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Medium.woff") format("woff"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Medium.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 700;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Black.woff2") format("woff2"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Black.woff") format("woff"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Black.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Black.woff2") format("woff2"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Black.woff") format("woff"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Black.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 800;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Heavy.woff2") format("woff2"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Heavy.woff") format("woff"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Heavy.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Heavy.woff2") format("woff2"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Heavy.woff") format("woff"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Heavy.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 900;
   font-style: normal; }
@@ -881,81 +881,81 @@
   margin-top: 20px; }
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Hair.woff2") format("woff2"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Hair.woff") format("woff"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Hair.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Hair.woff2") format("woff2"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Hair.woff") format("woff"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Hair.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 100;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Thin.woff2") format("woff2"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Thin.woff") format("woff"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Thin.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Thin.woff2") format("woff2"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Thin.woff") format("woff"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Thin.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 200;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Light.woff2") format("woff2"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Light.woff") format("woff"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Light.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Light.woff2") format("woff2"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Light.woff") format("woff"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Light.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Regular.woff2") format("woff2"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Regular.woff") format("woff"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Regular.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Regular.woff2") format("woff2"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Regular.woff") format("woff"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Regular.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Bold.woff2") format("woff2"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Bold.woff") format("woff"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Bold.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Bold.woff2") format("woff2"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Bold.woff") format("woff"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Bold.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 500;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Book.woff2") format("woff2"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Book.woff") format("woff"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Book.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Book.woff2") format("woff2"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Book.woff") format("woff"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Book.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 600;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Medium.woff2") format("woff2"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Medium.woff") format("woff"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Medium.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Medium.woff2") format("woff2"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Medium.woff") format("woff"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Medium.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 700;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Black.woff2") format("woff2"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Black.woff") format("woff"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Black.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Black.woff2") format("woff2"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Black.woff") format("woff"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Black.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 800;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Heavy.woff2") format("woff2"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Heavy.woff") format("woff"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Heavy.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Heavy.woff2") format("woff2"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Heavy.woff") format("woff"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Heavy.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 900;
   font-style: normal; }
@@ -989,81 +989,81 @@
   flex-shrink: 100; }
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Hair.woff2") format("woff2"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Hair.woff") format("woff"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Hair.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Hair.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Hair.woff2") format("woff2"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Hair.woff") format("woff"), local("Artifakt Element Hair"), local("ArtifaktElement-Hair"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Hair.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 100;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Thin.woff2") format("woff2"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Thin.woff") format("woff"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Thin.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Thin.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Thin.woff2") format("woff2"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Thin.woff") format("woff"), local("Artifakt Element Thin"), local("ArtifaktElement-Thin"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Thin.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 200;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Light.woff2") format("woff2"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Light.woff") format("woff"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Light.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Light.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Light.woff2") format("woff2"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Light.woff") format("woff"), local("Artifakt Element Light"), local("ArtifaktElement-Light"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Light.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Regular.woff2") format("woff2"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Regular.woff") format("woff"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Regular.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Regular.woff2") format("woff2"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Regular.woff") format("woff"), local("Artifakt Element Regular"), local("ArtifaktElement-Regular"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Regular.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Bold.woff2") format("woff2"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Bold.woff") format("woff"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Bold.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Bold.woff2") format("woff2"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Bold.woff") format("woff"), local("Artifakt Element Bold"), local("ArtifaktElement-Bold"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Bold.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 500;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Book.woff2") format("woff2"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Book.woff") format("woff"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Book.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Book.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Book.woff2") format("woff2"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Book.woff") format("woff"), local("Artifakt Element Book"), local("ArtifaktElement-Book"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Book.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 600;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Medium.woff2") format("woff2"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Medium.woff") format("woff"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Medium.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Medium.woff2") format("woff2"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Medium.woff") format("woff"), local("Artifakt Element Medium"), local("ArtifaktElement-Medium"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Medium.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 700;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Black.woff2") format("woff2"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Black.woff") format("woff"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Black.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Black.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Black.woff2") format("woff2"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Black.woff") format("woff"), local("Artifakt Element Black"), local("ArtifaktElement-Black"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Black.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 800;
   font-style: normal; }
 
 @font-face {
   font-family: 'ArtifaktElement';
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot");
   /* IE9 Compat Modes */
-  src: url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Heavy.woff2") format("woff2"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Heavy.woff") format("woff"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://s3.amazonaws.com/fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Heavy.ttf") format("truetype");
+  src: url("https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Heavy.eot?#iefix") format("embedded-opentype"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Heavy.woff2") format("woff2"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Heavy.woff") format("woff"), local("Artifakt Element Heavy"), local("ArtifaktElement-Heavy"), url("https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Heavy.ttf") format("truetype");
   /* Safari, Android, iOS */
   font-weight: 900;
   font-style: normal; }
