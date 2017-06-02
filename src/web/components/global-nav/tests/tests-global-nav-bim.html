@@ -42,90 +42,141 @@
                             },
                             {
                                 "icon": "project-management",
-                                "title": "Project Management",
-                                "link": "#"
+                                "title": "Item 1.2",
+                                "link": "#",
+                                "tabs": [
+                                    {
+                                        "label": "Two One"
+                                    },
+                                    {
+                                        "label": "Two Two"
+                                    },
+                                    {
+                                        "label": "Two Three"
+                                    }
+                                ]
                             },
                             {
                                 "icon": "project-management",
-                                "title": "Quantities",
-                                "link": "#"
-                            },
-                            {
-                                "icon": "project-management",
-                                "title": "Cost Control",
-                                "link": "#"
-                            },
-                            {
-                                "icon": "project-management",
-                                "title": "Schedule",
-                                "link": "#"
-                            },
-                            {
-                                "icon": "project-management",
-                                "title": "Field",
-                                "link": "#"
-                            },
-                            {
-                                "icon": "project-management",
-                                "title": "Layout",
-                                "link": "#"
-                            },
-                            {
-                                "icon": "project-management",
-                                "title": "Building Ops",
-                                "link": "#"
+                                "title": "Item 1.3",
+                                "link": "#",
+                                "tabs": [
+                                    {
+                                        "label": "Three One"
+                                    },
+                                    {
+                                        "label": "Three Two"
+                                    },
+                                    {
+                                        "label": "Three Three"
+                                    }
+                                ]
                             }
                         ],
-                        "group3": [
+                        "group2": [
                             {
-                                "icon": "library",
-                                "title": "Library",
-                                "link": "#"
+                                "icon": "project-management",
+                                "title": "Item 2.1",
+                                "link": "#",
+                                "tabs": [
+                                    {
+                                        "label": "One One"
+                                    },
+                                    {
+                                        "label": "One Two"
+                                    },
+                                    {
+                                        "label": "One Three"
+                                    }
+                                ]
                             },
                             {
-                                "icon": "photos",
-                                "title": "Photos",
-                                "link": "#"
+                                "icon": "project-management",
+                                "title": "Item 2.2",
+                                "link": "#",
+                                "tabs": [
+                                    {
+                                        "label": "Two One"
+                                    },
+                                    {
+                                        "label": "Two Two"
+                                    },
+                                    {
+                                        "label": "Two Three"
+                                    }
+                                ]
                             },
                             {
-                                "icon": "assets",
-                                "title": "Assets",
-                                "link": "#"
-                            },
-                            {
-                                "icon": "locations",
-                                "title": "Locations",
-                                "link": "#"
+                                "icon": "project-management",
+                                "title": "Item 2.3",
+                                "link": "#",
+                                "tabs": [
+                                    {
+                                        "label": "Three One"
+                                    },
+                                    {
+                                        "label": "Three Two"
+                                    },
+                                    {
+                                        "label": "Three Three"
+                                    }
+                                ]
                             }
-                        ],
-                        "group4": [
-                            {
-                                "icon": "settings",
-                                "title": "Project Admin",
-                                "link": "#"
-                            },
                         ]
                     }
                 },
                 "section2": {
                     "headerLabel": "Project",
-                    "headerName": "Global Construction",
+                    "headerName": "Kevlar",
                     "groups": {
                         "group1": [
                             {
-                                "icon": "insight",
-                                "title": "Insight",
-                                "link": "#"
+                                "icon": "project-management",
+                                "title": "Item 1.1",
+                                "link": "#",
+                                "tabs": [
+                                    {
+                                        "label": "Kavlar One One"
+                                    },
+                                    {
+                                        "label": "Kavlar One Two"
+                                    },
+                                    {
+                                        "label": "Kavlar One Three"
+                                    }
+                                ]
                             },
                             {
-                                "icon": "field",
-                                "title": "Field",
-                                "link": "#"
+                                "icon": "project-management",
+                                "title": "Item 1.2",
+                                "link": "#",
+                                "tabs": [
+                                    {
+                                        "label": "Kavlar Two One"
+                                    },
+                                    {
+                                        "label": "Kavlar Two Two"
+                                    },
+                                    {
+                                        "label": "Kavlar Two Three"
+                                    }
+                                ]
                             },
                             {
-                                "icon": "settings",
-                                "title": "Account Admin",
-                                "link": "#"
+                                "icon": "project-management",
+                                "title": "Item 1.3",
+                                "link": "#",
+                                "tabs": [
+                                    {
+                                        "label": "Kavlar Three One"
+                                    },
+                                    {
+                                        "label": "Kavlar Three Two"
+                                    },
+                                    {
+                                        "label": "Kavlar Three Three"
+                                    }
+                                ]
                             }
                         ]
                     }
@@ -136,42 +187,9 @@
             var GlobalNav = new Hig.GlobalNav();
             GlobalNav.mount("body");
 
-            // ADD A SIDENAV
+            // ADD SIDENAV
             var SideNav = new GlobalNav.partials.SideNav();
             GlobalNav.addSideNav(SideNav);
-
-            // CONSTRUCT OUR SIDENAV
-            for (var section in menu){
-                // ADD A SECTION IN OUR SIDENAV
-                var generated_section = new SideNav.partials.Section({
-                    "headerLabel": menu[section]["headerLabel"],
-                    "headerName": menu[section]["headerName"]
-                });
-                SideNav.addSection(generated_section);
-
-                for (var group in menu[section]["groups"]){
-                    // ADD A GROUP TO OUR SECTION
-                    var generated_group = new generated_section.partials.Group();
-                    generated_section.addGroup(generated_group);
-
-                    var current_group = menu[section]["groups"][group];
-                    for (var i = 0; i < current_group.length; i++) {
-                        // ADD SOME ITEMS TO OUR GROUP
-                        var generated_item = new generated_group.partials.Item({
-                            "icon": current_group[i]["icon"],
-                            "title": current_group[i]["title"],
-                            "link": current_group[i]["link"]
-                        });
-                        generated_group.addItem(generated_item);
-
-                        generated_item.onClick(function(e){
-                            e.preventDefault();
-                            alert('Item '+current_group[i]["title"]+' clicked');
-                        }); // Test click action
-                    }
-                }
-
-            }
 
             // ADD TOPNAV
             var TopNav = new GlobalNav.partials.TopNav({
@@ -210,10 +228,7 @@
             });
 
             // ADD SUBNAV
-            var SubNav = new GlobalNav.partials.SubNav({
-                "moduleIndicatorName": "Insight",
-                "moduleIndicatorIcon": "project-management"
-            });
+            var SubNav = new GlobalNav.partials.SubNav();
             GlobalNav.addSubNav(SubNav);
 
             SubNav.setModuleIndicatorName("Documents Library");
@@ -223,37 +238,70 @@
             var Tabs = new SubNav.partials.Tabs();
             SubNav.addTabs(Tabs);
 
-            var Tab1 = new Tabs.partials.Tab({
-                "label": "One"
-            });
-            Tabs.addTab(Tab1);
-            Tab1.activate();
-            Tab1.onClick(() => {
-                Tab1.activate();
-                Tab2.deactivate();
-                Tab3.deactivate();
-            });
+            // CONSTRUCT OUR SIDENAV
+            for (var section in menu){
+                // ADD A SECTION IN OUR SIDENAV
+                var generated_section = new SideNav.partials.Section({
+                    "headerLabel": menu[section]["headerLabel"],
+                    "headerName": menu[section]["headerName"]
+                });
+                SideNav.addSection(generated_section);
 
-            var Tab2 = new Tabs.partials.Tab({
-                "label": "Two"
-            });
-            Tabs.addTab(Tab2);
-            Tab2.onClick(() => {
-                Tab1.deactivate();
-                Tab2.activate();
-                Tab3.deactivate();
-            });
+                for (var group in menu[section]["groups"]){
+                    // ADD A GROUP TO OUR SECTION
+                    var generated_group = new generated_section.partials.Group();
+                    generated_section.addGroup(generated_group);
 
-            var Tab3 = new Tabs.partials.Tab({
-                "label": "Three"
-            });
-            Tabs.addTab(Tab3, Tab2);
+                    var current_group = menu[section]["groups"][group];
+                    current_group.forEach(function(item){                    
+                        // ADD SOME ITEMS TO OUR GROUP
 
-            Tab3.onClick(() => {
-                Tab1.deactivate();
-                Tab2.deactivate();
-                Tab3.activate();
-            });
+                        var generated_item = new generated_group.partials.Item({
+                            "icon": item["icon"],
+                            "title": item["title"],
+                            "link": item["link"]
+                        });
+                        generated_group.addItem(generated_item);
+
+                        generated_item.onClick(function(e){
+                            e.preventDefault();
+                            console.log('Item '+item["title"]+' clicked');
+
+                            SubNav.setModuleIndicatorName(item["title"]);
+                            SubNav.setModuleIndicatorIcon(item["icon"]);
+
+                            // CLEAR TABS
+                            Tabs.unmount();
+
+                            // ADD TABS IN SUBNAV
+                            Tabs = new SubNav.partials.Tabs();
+                            SubNav.addTabs(Tabs);
+
+                            var generated_tabs = [];
+                            item["tabs"].forEach(function(tab){
+                                var generated_tab = new Tabs.partials.Tab({
+                                    "label": tab["label"]
+                                });
+                                Tabs.addTab(generated_tab);
+                                generated_tabs.push(generated_tab);
+                                
+                                generated_tab.onClick(() => {
+                                    console.log('Tab '+tab["label"]+' clicked');
+                                    for (var k = 0; k < generated_tabs.length; k++){
+                                        generated_tabs[k].deactivate();
+                                    }
+                                    generated_tab.activate();
+                                });
+                            })
+                            
+                        });
+                    });
+                }
+            }
+
+            
+
+            
 
 
             // SLOT IN SOME APP SPECIFIC Container
