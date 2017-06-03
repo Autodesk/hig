@@ -344,9 +344,7 @@
             
             SideNavSearch.onInput(function(e){
                 // do example filter of sidenav
-                var q = e.target.value;
-                console.log(q);
-                fillSidenav(default_menu);
+                fillSidenav(getFilteredMenuObject(e.target.value), false);
             });
 
             SideNavSearch.onFocusIn(function(e){
@@ -422,7 +420,9 @@
 
             var sections = [];
 
-            function fillSidenav(menu){
+            function fillSidenav(menu, default_menu){
+                console.log(menu);
+
                 for (var index in sections){
                     sections[index].unmount();
                 }
@@ -437,36 +437,51 @@
                     });
                     SideNav.addSection(generated_section);
                     sections.push(generated_section);
-
+                    
                     for (var group in menu[section]["groups"]){
-                        // ADD A GROUP TO OUR SECTION
-                        var generated_group = new generated_section.partials.Group();
-                        generated_section.addGroup(generated_group);
+                        if(!menu[section]["groups"][group]["hide_in_menu"]){
+                            // ADD A GROUP TO OUR SECTION
+                            var generated_group = new generated_section.partials.Group();
+                            generated_section.addGroup(generated_group);
 
-                        var current_group = menu[section]["groups"][group];
-                        current_group.forEach((item) => {
-                            // ADD SOME ITEMS TO OUR GROUP
+                            var current_group = menu[section]["groups"][group];
+                            current_group.forEach((item) => {
+                                // ADD SOME ITEMS TO OUR GROUP
 
-                            var generated_item = new generated_group.partials.Item({
-                                "icon": item["icon"],
-                                "title": item["title"],
-                                "link": item["link"]
-                            });
-                            generated_group.addItem(generated_item);
+                                if(!item["hide_in_menu"]){
+                                    var generated_item = new generated_group.partials.Item({
+                                        "icon": item["icon"],
+                                        "title": item["title"],
+                                        "link": item["link"]
+                                    });
+                                    generated_group.addItem(generated_item);
 
-                            generated_item.onClick((e) => {
-                                e.preventDefault();
-                                console.log('Item '+item["title"]+' clicked');
+                                    // render subitems for search
+                                    if(!default_menu){
+                                        item["tabs"].forEach((tab) => {
+                                            if(!tab['hide_in_menu']){
+                                                var generated_item = new generated_group.partials.Item({
+                                                    "icon": "",
+                                                    "title": tab["label"]
+                                                });
+                                                generated_group.addItem(generated_item);
+                                            }
+                                        });
+                                    }
 
-                                SubNav.setModuleIndicatorName(item["title"]);
-                                SubNav.setModuleIndicatorIcon(item["icon"]);
+                                    generated_item.onClick((e) => {
+                                        e.preventDefault();
+                                        console.log('Item '+item["title"]+' clicked');
 
-                                // CLEAR TABS
-                                Tabs.unmount();
+                                        SubNav.setModuleIndicatorName(item["title"]);
+                                        SubNav.setModuleIndicatorIcon(item["icon"]);
 
-                                // ADD TABS IN SUBNAV
-                                Tabs = new SubNav.partials.Tabs();
-                                SubNav.addTabs(Tabs);
+                                        // CLEAR TABS
+                                        Tabs.unmount();
+
+                                        // ADD TABS IN SUBNAV
+                                        Tabs = new SubNav.partials.Tabs();
+                                        SubNav.addTabs(Tabs);
 
                             var generated_tabs = [];
                             item["tabs"].forEach((tab) => {
@@ -483,10 +498,10 @@
                                     }
                                     generated_tab.activate();
 
-                                    // SLOT IN SOME EXAMPLE IMAGE CONTENT
-                                    var contentImage = tab["contentImage"];
-                                    SlotEl.innerHTML = `<img src='${contentImage}'>`;
-                                }
+                                            // SLOT IN SOME EXAMPLE IMAGE CONTENT
+                                            var contentImage = tab["contentImage"];
+                                            SlotEl.innerHTML = `<img src='${contentImage}'>`;
+                                        }
 
                             item["tabs"].forEach((tab) => {
                                 var generated_tab = new Tabs.partials.Tab({
