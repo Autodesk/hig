@@ -418,6 +418,12 @@
                                 "{Link} Link - instance of a Link partial",
                                 "{Link} [ReferenceLink] - (Optional) reference node for insertBefore"
                             ]
+                        },
+                        "setCopyright": {
+                            "desc": "Change the copyright notice at bottom of side nav",
+                            "params": [
+                                "{String} Copyright notice"
+                            ]
                         }
                     },
                     "partials": {
@@ -530,6 +536,9 @@
                                 "link": "{String} link"
                             }
                         }
+                    },
+                    "defaults": {
+                        "copyright": "{String} Copyright notice at bottom of side nav"
                     }
                 }
             }

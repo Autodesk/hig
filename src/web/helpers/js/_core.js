@@ -66,6 +66,16 @@ class Core {
         }
     }
 
+    get el() {
+        if(this._el) { return this._el }
+
+        throw `ELEMENT: You cannot access ${this.constructor.name}'s \`el\` property before it is mounted.`;
+    }
+
+    set el(element) {
+        this._el = element;
+    }
+
     /**
      * Creation of the DOM element and mustache template rendering
      * @param {String} template - template string
