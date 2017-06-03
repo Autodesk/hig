@@ -22,14 +22,28 @@ import createComponent from '../../../adapters/createComponent';
 export class Profile extends HIGElement {
 
   commitUpdate(updatePayload, oldProps, newProp) {
+    console.log("HERE with props: ", updatePayload);
     const mapping =       {
       image: 'setImage',
       name: 'setName',
       email: 'setEmail',
       profileSettingsLabel: 'setProfileSettingsLabel',
       signOutLabel: 'setSignOutLabel',
-      profileSettingsLink: 'setProfileSettingsLink'
+      profileSettingsLink: 'setProfileSettingsLink',
     };
+
+    const openIndex = updatePayload.indexOf('open');
+    if (openIndex >= 0 ) {
+      const {openKey, openSetting} = updatePayload.splice(openIndex, 2);
+      if (openKey) {
+        if (openSetting === true ) {
+          this.hig.ProfileFlyout.open();
+        } else {
+          this.hig.ProfileFlyout.close();
+        }
+
+      }
+    }
 
     this.commitUpdateWithMapping(updatePayload, mapping);
   }
@@ -52,7 +66,7 @@ Profile.propTypes = {
 ProfileComponent.__docgenInfo = {
   props: {
     open: {
-      description: '{bool} sets whether flyout is open by default (?)'
+      description: '{bool} sets whether flyout is open or closed'
     },
     name: {
       description: 'sets {String} display name'

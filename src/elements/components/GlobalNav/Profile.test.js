@@ -21,58 +21,109 @@ import React from 'react';
 import GlobalNav from './GlobalNav';
 import TopNav from './TopNav';
 import Profile from './Profile';
+import SharedExamples from './SharedExamples';
 
 const onImageClick = function() { return 'onImageClick'; };
 const onSignoutClick = function() { return 'onSignoutClick'; };
 
 const Context = props => {
-  const { chidren, ...rest } = props;
   return (
     <GlobalNav>
-      <GlobalNav.TopNav>
+      <TopNav>
         <Profile
           open={true}
           image={props.image}
           onProfileImageClick={ onImageClick }
           name={props.name}
           email={props.email}
-          signOutLabel="Something"
+          signOutLabel={props.signOutLabel}
           onSignOutClick={ onSignoutClick }
-          profileSettingsLabel="Something Else"
-          profileSettingsLink="http://example.com"
+          profileSettingsLabel={props.profileSettingsLabel}
+          profileSettingsLink={props.profileSettingsLink}
         />
-      </GlobalNav.TopNav>
+      </TopNav>
     </GlobalNav>
 
   );
 };
 
-function higContext(defaults) {
-  const higcontainer = document.createElement('div');
+function createHigContext(defaults) {
+  const higContainer = document.createElement('div');
+
   const higNav = new HIG.GlobalNav();
-
   higNav.mount(higContainer);
-  const higTopNav = new higNav.partials.TopNav();
-  higNav.addSideNav(higTopNav);
 
-  const higProfile = new higTopNav.partials.Profile();
-  higTopNav.addProfile(higProfile);
+  const higTopNav = new higNav.partials.TopNav({});
+  higNav.addTopNav(higTopNav);
 
-  return { higContainer, higNav, higProfile };
+  const higItem = new higTopNav.partials.Profile(defaults);
+  higTopNav.addProfile(higItem);
+
+  return { higContainer, higItem };
 }
 
 function setupProfile() {
-  const defaults = { image: "something.jpg", name: "Foo Bears", email: "charuvenki@example.com" }
+  const defaults = { image: "something.jpg", name: "Foo Bears", email: "charuvenki@example.com" };
   const reactContainer = document.createElement('div');
   mount(<Context {...defaults} />, {attachTo: reactContainer});
   return { reactContainer };
 }
 
+
 describe('<Profile>', () => {
+
   describe('constructor', () => {
     it('has a good snapshot', () => {
       const { reactContainer } = setupProfile();
       expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
     });
+  });
+
+  describe("setting and updating props", () => {
+    const shex = new SharedExamples(Context, createHigContext);
+
+    const configSets = [
+      { key: 'email', sampleValue: 'foo@bar.baz', updateValue: 'hellokitty@example.com', mutator: 'setEmail' },
+      { key: 'name', sampleValue: 'Hello Kitty', updateValue: 'Dear Daniel', mutator: 'setName' },
+      { key: 'image', sampleValue: '/images/foo.jpg', updateValue: '/images/bar.jpg', mutator: 'setImage' },
+      //{ key: 'open', sampleValue: 'false', updateValue: 'true', mutator: 'open'},
+
+    ];
+
+    configSets.forEach(function(config) {
+      it(`can set props for ${config.key}`, () => {
+        shex.verifyPropsSet(config);
+      });
+      it(`can update props for ${config.key}`, () => {
+        shex.verifyPropsUpdate(config)
+      });
+    });
+  });
+
+  describe("open and close profile flyout", () => {
+
+    const newContext = props => {
+      return (
+        <GlobalNav>
+          <TopNav>
+            <Profile open={props.open}/>
+          </TopNav>
+        </GlobalNav>
+      );
+    };
+
+    it("works", () => {
+      const reactContainer = document.createElement('div');
+      const wrapper = mount(<Context { ...{open: false}} />, { attachTo: reactContainer });
+
+      expect(reactContainer.getElementsByClassName("hig__flyout").length).toEqual(1);
+
+      //console.log("the container: ", reactContainer.outerHTML);
+
+      wrapper.setProps({open: true});
+      console.log("log: ", wrapper.props());
+      expect(reactContainer.getElementsByClassName("hig__flyout hig__flyout--open").length).toEqual(1);
+    });
+
   });
 });

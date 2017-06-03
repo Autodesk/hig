@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Item> icon sets icon by default 1`] = `
+exports[`<Item> Item props can set props for icon 1`] = `
 "<div class=\\"hig__global-nav\\">
     <div class=\\"hig__global-nav__sidenav\\">
     <div class=\\"hig__global-nav__side-nav__section\\">
@@ -32,39 +32,7 @@ exports[`<Item> icon sets icon by default 1`] = `
 </div>"
 `;
 
-exports[`<Item> icon updates icon 1`] = `
-"<div class=\\"hig__global-nav\\">
-    <div class=\\"hig__global-nav__sidenav\\">
-    <div class=\\"hig__global-nav__side-nav__section\\">
-    <div class=\\"hig__global-nav__side-nav__section__header\\">
-        <span class=\\"hig__global-nav__side-nav__section__header__label\\">Project</span>
-        <span class=\\"hig__global-nav__side-nav__section__header__name\\">X</span>
-    </div>
-    <div class=\\"hig__global-nav__side-nav__section__group\\">
-    <div class=\\"hig__global-nav__side-nav__section__group__item\\">
-    <a href=\\"#\\">
-        <div class=\\"hig__global-nav__side-nav__section__group__item__icon\\"><svg width=\\"30\\" height=\\"30\\" viewBox=\\"0 0 30 30\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-92 -185)\\" fill=\\"none\\" fill-rule=\\"evenodd\\"><rect x=\\"92\\" y=\\"185\\" width=\\"30\\" height=\\"30\\"></rect><path d=\\"M100,195 L115,195 L115,196 L100,196 L100,195 Z M100,200 L115,200 L115,201 L100,201 L100,200 Z M100,205 L115,205 L115,206 L100,206 L100,205 Z\\" fill=\\"#34495E\\"></path></g></svg></div>
-        <div class=\\"hig__global-nav__side-nav__section__group__item__title\\">title</div>
-    </a>
-</div><!--ITEM-->
-</div><!--GROUP-->
-</div><!--SECTION-->
-    <div class=\\"hig__global-nav__sidenav__links\\">
-        <!--LINK-->
-    </div>
-    <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
-</div><!--SIDENAV-->
-    <div class=\\"hig__global-nav__container\\">
-        <!--TOPNAV-->
-        <!--SUBNAV-->
-        <div class=\\"hig__global-nav__slot\\">
-            <!--SLOT-->
-        </div>
-    </div>
-</div>"
-`;
-
-exports[`<Item> link sets link by default 1`] = `
+exports[`<Item> Item props can set props for link 1`] = `
 "<div class=\\"hig__global-nav\\">
     <div class=\\"hig__global-nav__sidenav\\">
     <div class=\\"hig__global-nav__side-nav__section\\">
@@ -96,39 +64,7 @@ exports[`<Item> link sets link by default 1`] = `
 </div>"
 `;
 
-exports[`<Item> link updates link 1`] = `
-"<div class=\\"hig__global-nav\\">
-    <div class=\\"hig__global-nav__sidenav\\">
-    <div class=\\"hig__global-nav__side-nav__section\\">
-    <div class=\\"hig__global-nav__side-nav__section__header\\">
-        <span class=\\"hig__global-nav__side-nav__section__header__label\\">Project</span>
-        <span class=\\"hig__global-nav__side-nav__section__header__name\\">X</span>
-    </div>
-    <div class=\\"hig__global-nav__side-nav__section__group\\">
-    <div class=\\"hig__global-nav__side-nav__section__group__item\\">
-    <a href=\\"http://example.com/2\\">
-        <div class=\\"hig__global-nav__side-nav__section__group__item__icon\\"><div class=\\"hig__icon\\"><svg width=\\"30\\" height=\\"30\\" viewBox=\\"0 0 30 30\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-92 -185)\\" fill=\\"none\\" fill-rule=\\"evenodd\\"><rect x=\\"92\\" y=\\"185\\" width=\\"30\\" height=\\"30\\"></rect><path d=\\"M100,195 L115,195 L115,196 L100,196 L100,195 Z M100,200 L115,200 L115,201 L100,201 L100,200 Z M100,205 L115,205 L115,206 L100,206 L100,205 Z\\" fill=\\"#34495E\\"></path></g></svg></div></div>
-        <div class=\\"hig__global-nav__side-nav__section__group__item__title\\">title</div>
-    </a>
-</div><!--ITEM-->
-</div><!--GROUP-->
-</div><!--SECTION-->
-    <div class=\\"hig__global-nav__sidenav__links\\">
-        <!--LINK-->
-    </div>
-    <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
-</div><!--SIDENAV-->
-    <div class=\\"hig__global-nav__container\\">
-        <!--TOPNAV-->
-        <!--SUBNAV-->
-        <div class=\\"hig__global-nav__slot\\">
-            <!--SLOT-->
-        </div>
-    </div>
-</div>"
-`;
-
-exports[`<Item> title sets title by default 1`] = `
+exports[`<Item> Item props can set props for title 1`] = `
 "<div class=\\"hig__global-nav\\">
     <div class=\\"hig__global-nav__sidenav\\">
     <div class=\\"hig__global-nav__side-nav__section\\">
@@ -160,7 +96,71 @@ exports[`<Item> title sets title by default 1`] = `
 </div>"
 `;
 
-exports[`<Item> title updates title 1`] = `
+exports[`<Item> Item props can update props for icon 1`] = `
+"<div class=\\"hig__global-nav\\">
+    <div class=\\"hig__global-nav__sidenav\\">
+    <div class=\\"hig__global-nav__side-nav__section\\">
+    <div class=\\"hig__global-nav__side-nav__section__header\\">
+        <span class=\\"hig__global-nav__side-nav__section__header__label\\">Project</span>
+        <span class=\\"hig__global-nav__side-nav__section__header__name\\">X</span>
+    </div>
+    <div class=\\"hig__global-nav__side-nav__section__group\\">
+    <div class=\\"hig__global-nav__side-nav__section__group__item\\">
+    <a href=\\"#\\">
+        <div class=\\"hig__global-nav__side-nav__section__group__item__icon\\"><svg width=\\"30\\" height=\\"30\\" viewBox=\\"0 0 30 30\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-92 -185)\\" fill=\\"none\\" fill-rule=\\"evenodd\\"><rect x=\\"92\\" y=\\"185\\" width=\\"30\\" height=\\"30\\"></rect><path d=\\"M100,195 L115,195 L115,196 L100,196 L100,195 Z M100,200 L115,200 L115,201 L100,201 L100,200 Z M100,205 L115,205 L115,206 L100,206 L100,205 Z\\" fill=\\"#34495E\\"></path></g></svg></div>
+        <div class=\\"hig__global-nav__side-nav__section__group__item__title\\">title</div>
+    </a>
+</div><!--ITEM-->
+</div><!--GROUP-->
+</div><!--SECTION-->
+    <div class=\\"hig__global-nav__sidenav__links\\">
+        <!--LINK-->
+    </div>
+    <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
+</div><!--SIDENAV-->
+    <div class=\\"hig__global-nav__container\\">
+        <!--TOPNAV-->
+        <!--SUBNAV-->
+        <div class=\\"hig__global-nav__slot\\">
+            <!--SLOT-->
+        </div>
+    </div>
+</div>"
+`;
+
+exports[`<Item> Item props can update props for link 1`] = `
+"<div class=\\"hig__global-nav\\">
+    <div class=\\"hig__global-nav__sidenav\\">
+    <div class=\\"hig__global-nav__side-nav__section\\">
+    <div class=\\"hig__global-nav__side-nav__section__header\\">
+        <span class=\\"hig__global-nav__side-nav__section__header__label\\">Project</span>
+        <span class=\\"hig__global-nav__side-nav__section__header__name\\">X</span>
+    </div>
+    <div class=\\"hig__global-nav__side-nav__section__group\\">
+    <div class=\\"hig__global-nav__side-nav__section__group__item\\">
+    <a href=\\"http://example.com/2\\">
+        <div class=\\"hig__global-nav__side-nav__section__group__item__icon\\"><div class=\\"hig__icon\\"><svg width=\\"30\\" height=\\"30\\" viewBox=\\"0 0 30 30\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-92 -185)\\" fill=\\"none\\" fill-rule=\\"evenodd\\"><rect x=\\"92\\" y=\\"185\\" width=\\"30\\" height=\\"30\\"></rect><path d=\\"M100,195 L115,195 L115,196 L100,196 L100,195 Z M100,200 L115,200 L115,201 L100,201 L100,200 Z M100,205 L115,205 L115,206 L100,206 L100,205 Z\\" fill=\\"#34495E\\"></path></g></svg></div></div>
+        <div class=\\"hig__global-nav__side-nav__section__group__item__title\\">title</div>
+    </a>
+</div><!--ITEM-->
+</div><!--GROUP-->
+</div><!--SECTION-->
+    <div class=\\"hig__global-nav__sidenav__links\\">
+        <!--LINK-->
+    </div>
+    <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
+</div><!--SIDENAV-->
+    <div class=\\"hig__global-nav__container\\">
+        <!--TOPNAV-->
+        <!--SUBNAV-->
+        <div class=\\"hig__global-nav__slot\\">
+            <!--SLOT-->
+        </div>
+    </div>
+</div>"
+`;
+
+exports[`<Item> Item props can update props for title 1`] = `
 "<div class=\\"hig__global-nav\\">
     <div class=\\"hig__global-nav__sidenav\\">
     <div class=\\"hig__global-nav__side-nav__section\\">

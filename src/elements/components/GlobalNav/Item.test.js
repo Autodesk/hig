@@ -20,6 +20,7 @@ import React from 'react';
 
 import GlobalNav from './GlobalNav';
 import Item from './Item';
+import SharedExamples from './SharedExamples';
 
 const Context = props => {
   const { children, ...rest } = props;
@@ -39,7 +40,7 @@ const Context = props => {
   );
 };
 
-function higContext(defaults) {
+function createHigContext(defaults) {
   const higContainer = document.createElement('div');
 
   // use spread here to clone defaults since HIG.Button mutates this object
@@ -51,74 +52,43 @@ function higContext(defaults) {
   higNav.addSideNav(higSideNav);
 
   const higSection = new higSideNav.partials.Section({});
-
   higSideNav.addSection(higSection);
 
   const higGroup = new higSection.partials.Group();
-
   higSection.addGroup(higGroup);
 
   const higItem = new higGroup.partials.Item(defaults);
-
   higGroup.addItem(higItem);
 
   return { higNav, higSideNav, higSection, higGroup, higItem, higContainer };
 }
 
 describe('<Item>', () => {
-  function doStandardChecks(config) {
-    it(`sets ${config.key} by default`, () => {
-      const defaults = { [config.key]: config.sampleValue };
-      const { higContainer } = higContext(defaults);
 
-      const reactContainer = document.createElement('div');
-
-      const wrapper = mount(<Context {...defaults} />, {
-        attachTo: reactContainer
+  describe("Item props", () => {
+    const shex = new SharedExamples(Context, createHigContext);
+    const configSets = [
+      {
+        key: 'icon', sampleValue: 'project-management', updateValue: 'hamburger', mutator: 'setIcon'
+      },
+      {
+        key: 'title', sampleValue: 'Item 1', updateValue: 'Item 2', mutator: 'setTitle'
+      },
+      {
+        key: 'link', sampleValue: 'http://example.com', updateValue: 'http://example.com/2', mutator: 'setLink'
+      }
+    ];
+    configSets.forEach(function(config) {
+      it(`can set props for ${config.key}`, () => {
+        shex.verifyPropsSet(config);
       });
-
-      expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
-
-      expect(reactContainer.firstChild.outerHTML).toEqual(
-        higContainer.firstChild.outerHTML
-      );
-    });
-
-    it(`updates ${config.key}`, () => {
-      const defaults = { [config.key]: config.sampleValue };
-      const { higItem, higContainer } = higContext(defaults);
-
-      const reactContainer = document.createElement('div');
-
-      const wrapper = mount(<Context {...defaults} />, {
-        attachTo: reactContainer
+      it(`can update props for ${config.key}`, () => {
+        shex.verifyPropsUpdate(config)
       });
-
-      // Update hig.web instance
-      higItem[config.mutator](config.updateValue);
-
-      // Update React Instance
-      wrapper.setProps({ [config.key]: config.updateValue });
-
-      expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
-
-      // Check them against each other
-      expect(reactContainer.firstChild.outerHTML).toEqual(
-        higContainer.firstChild.outerHTML
-      );
     });
-  }
+  });
 
   describe('icon', () => {
-    const config = {
-      key: 'icon',
-      sampleValue: 'project-management',
-      updateValue: 'hamburger',
-      mutator: 'setIcon'
-    };
-
-    doStandardChecks(config);
-
     it('logs an error if the icon is not a string', () => {
       global.console.error = jest.fn();
 
@@ -130,28 +100,6 @@ describe('<Item>', () => {
         )
       );
     });
-  });
-
-  describe('title', () => {
-    const config = {
-      key: 'title',
-      sampleValue: 'Item 1',
-      updateValue: 'Item 2',
-      mutator: 'setTitle'
-    };
-
-    doStandardChecks(config);
-  });
-
-  describe('link', () => {
-    const config = {
-      key: 'link',
-      sampleValue: 'http://example.com',
-      updateValue: 'http://example.com/2',
-      mutator: 'setLink'
-    };
-
-    doStandardChecks(config);
   });
 
   describe('onHover', () => {});

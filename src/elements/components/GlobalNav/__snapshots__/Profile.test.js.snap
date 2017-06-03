@@ -24,8 +24,242 @@ exports[`<Profile> constructor has a good snapshot 1`] = `
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__name\\">Foo Bears</div>
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__email\\">charuvenki@example.com</div>
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__links\\">
-        <a href=\\"#\\" class=\\"hig__button hig__button--default\\" title=\\"Something\\">Something</a><!--SIGN_OUT_BUTTON-->
-        <a href=\\"#\\" class=\\"hig__button hig__button--link\\" title=\\"Something Else\\">Something Else</a><!--SETTINGS_LINK-->
+        <a href=\\"#\\" class=\\"hig__button hig__button--default\\" title=\\"Sign Out\\">Sign Out</a><!--SIGN_OUT_BUTTON-->
+        <a href=\\"#\\" class=\\"hig__button hig__button--link\\" title=\\"Profile Settings\\">Profile Settings</a><!--SETTINGS_LINK-->
+    </div>
+</div><!--SLOT-->
+    </div>
+</div></div><!--PROFILE-->
+</div><!--TOPNAV-->
+        <!--SUBNAV-->
+        <div class=\\"hig__global-nav__slot\\">
+            <!--SLOT-->
+        </div>
+    </div>
+</div>"
+`;
+
+exports[`<Profile> setting and updating props can set props for email 1`] = `
+"<div class=\\"hig__global-nav\\">
+    <!--SIDENAV-->
+    <div class=\\"hig__global-nav__container\\">
+        <div class=\\"hig__global-nav__top-nav\\">
+    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
+        <div class=\\"hig__global-nav__top-nav__hamburger js-hig__global-nav__top-nav__hamburger\\"><div class=\\"hig__icon\\"><svg width=\\"30\\" height=\\"30\\" viewBox=\\"0 0 30 30\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-92 -185)\\" fill=\\"none\\" fill-rule=\\"evenodd\\"><rect x=\\"92\\" y=\\"185\\" width=\\"30\\" height=\\"30\\"></rect><path d=\\"M100,195 L115,195 L115,196 L100,196 L100,195 Z M100,200 L115,200 L115,201 L100,201 L100,200 Z M100,205 L115,205 L115,206 L100,206 L100,205 Z\\" fill=\\"#34495E\\"></path></g></svg></div></div>
+        <div class=\\"hig__global-nav__top-nav__logo\\">
+            <a href=\\"#\\">
+                <img src=\\"link\\">
+            </a>
+        </div>
+    </div>
+    <div class=\\"hig__global-nav__profile hig__global-nav__top-nav__group--right\\">
+    <!--FLYOUT-->
+<div class=\\"hig__flyout\\">
+    <div class=\\"hig__global-nav__top-nav__profile__profile-image\\">
+    <img class=\\"hig__global-nav__top-nav__profile__profile-image__image\\" src=\\"https://placekitten.com/g/50/50\\">
+</div><!--TARGET-->
+    <div class=\\"hig__flyout__container\\">
+        <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content\\">
+    <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__name\\">name</div>
+    <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__email\\">foo@bar.baz</div>
+    <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__links\\">
+        <a href=\\"#\\" class=\\"hig__button hig__button--default\\" title=\\"Sign Out\\">Sign Out</a><!--SIGN_OUT_BUTTON-->
+        <a href=\\"#\\" class=\\"hig__button hig__button--link\\" title=\\"Profile Settings\\">Profile Settings</a><!--SETTINGS_LINK-->
+    </div>
+</div><!--SLOT-->
+    </div>
+</div></div><!--PROFILE-->
+</div><!--TOPNAV-->
+        <!--SUBNAV-->
+        <div class=\\"hig__global-nav__slot\\">
+            <!--SLOT-->
+        </div>
+    </div>
+</div>"
+`;
+
+exports[`<Profile> setting and updating props can set props for image 1`] = `
+"<div class=\\"hig__global-nav\\">
+    <!--SIDENAV-->
+    <div class=\\"hig__global-nav__container\\">
+        <div class=\\"hig__global-nav__top-nav\\">
+    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
+        <div class=\\"hig__global-nav__top-nav__hamburger js-hig__global-nav__top-nav__hamburger\\"><div class=\\"hig__icon\\"><svg width=\\"30\\" height=\\"30\\" viewBox=\\"0 0 30 30\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-92 -185)\\" fill=\\"none\\" fill-rule=\\"evenodd\\"><rect x=\\"92\\" y=\\"185\\" width=\\"30\\" height=\\"30\\"></rect><path d=\\"M100,195 L115,195 L115,196 L100,196 L100,195 Z M100,200 L115,200 L115,201 L100,201 L100,200 Z M100,205 L115,205 L115,206 L100,206 L100,205 Z\\" fill=\\"#34495E\\"></path></g></svg></div></div>
+        <div class=\\"hig__global-nav__top-nav__logo\\">
+            <a href=\\"#\\">
+                <img src=\\"link\\">
+            </a>
+        </div>
+    </div>
+    <div class=\\"hig__global-nav__profile hig__global-nav__top-nav__group--right\\">
+    <!--FLYOUT-->
+<div class=\\"hig__flyout\\">
+    <div class=\\"hig__global-nav__top-nav__profile__profile-image\\">
+    <img class=\\"hig__global-nav__top-nav__profile__profile-image__image\\" src=\\"/images/foo.jpg\\">
+</div><!--TARGET-->
+    <div class=\\"hig__flyout__container\\">
+        <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content\\">
+    <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__name\\">name</div>
+    <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__email\\">email@example.com</div>
+    <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__links\\">
+        <a href=\\"#\\" class=\\"hig__button hig__button--default\\" title=\\"Sign Out\\">Sign Out</a><!--SIGN_OUT_BUTTON-->
+        <a href=\\"#\\" class=\\"hig__button hig__button--link\\" title=\\"Profile Settings\\">Profile Settings</a><!--SETTINGS_LINK-->
+    </div>
+</div><!--SLOT-->
+    </div>
+</div></div><!--PROFILE-->
+</div><!--TOPNAV-->
+        <!--SUBNAV-->
+        <div class=\\"hig__global-nav__slot\\">
+            <!--SLOT-->
+        </div>
+    </div>
+</div>"
+`;
+
+exports[`<Profile> setting and updating props can set props for name 1`] = `
+"<div class=\\"hig__global-nav\\">
+    <!--SIDENAV-->
+    <div class=\\"hig__global-nav__container\\">
+        <div class=\\"hig__global-nav__top-nav\\">
+    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
+        <div class=\\"hig__global-nav__top-nav__hamburger js-hig__global-nav__top-nav__hamburger\\"><div class=\\"hig__icon\\"><svg width=\\"30\\" height=\\"30\\" viewBox=\\"0 0 30 30\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-92 -185)\\" fill=\\"none\\" fill-rule=\\"evenodd\\"><rect x=\\"92\\" y=\\"185\\" width=\\"30\\" height=\\"30\\"></rect><path d=\\"M100,195 L115,195 L115,196 L100,196 L100,195 Z M100,200 L115,200 L115,201 L100,201 L100,200 Z M100,205 L115,205 L115,206 L100,206 L100,205 Z\\" fill=\\"#34495E\\"></path></g></svg></div></div>
+        <div class=\\"hig__global-nav__top-nav__logo\\">
+            <a href=\\"#\\">
+                <img src=\\"link\\">
+            </a>
+        </div>
+    </div>
+    <div class=\\"hig__global-nav__profile hig__global-nav__top-nav__group--right\\">
+    <!--FLYOUT-->
+<div class=\\"hig__flyout\\">
+    <div class=\\"hig__global-nav__top-nav__profile__profile-image\\">
+    <img class=\\"hig__global-nav__top-nav__profile__profile-image__image\\" src=\\"https://placekitten.com/g/50/50\\">
+</div><!--TARGET-->
+    <div class=\\"hig__flyout__container\\">
+        <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content\\">
+    <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__name\\">Hello Kitty</div>
+    <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__email\\">email@example.com</div>
+    <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__links\\">
+        <a href=\\"#\\" class=\\"hig__button hig__button--default\\" title=\\"Sign Out\\">Sign Out</a><!--SIGN_OUT_BUTTON-->
+        <a href=\\"#\\" class=\\"hig__button hig__button--link\\" title=\\"Profile Settings\\">Profile Settings</a><!--SETTINGS_LINK-->
+    </div>
+</div><!--SLOT-->
+    </div>
+</div></div><!--PROFILE-->
+</div><!--TOPNAV-->
+        <!--SUBNAV-->
+        <div class=\\"hig__global-nav__slot\\">
+            <!--SLOT-->
+        </div>
+    </div>
+</div>"
+`;
+
+exports[`<Profile> setting and updating props can update props for email 1`] = `
+"<div class=\\"hig__global-nav\\">
+    <!--SIDENAV-->
+    <div class=\\"hig__global-nav__container\\">
+        <div class=\\"hig__global-nav__top-nav\\">
+    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
+        <div class=\\"hig__global-nav__top-nav__hamburger js-hig__global-nav__top-nav__hamburger\\"><div class=\\"hig__icon\\"><svg width=\\"30\\" height=\\"30\\" viewBox=\\"0 0 30 30\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-92 -185)\\" fill=\\"none\\" fill-rule=\\"evenodd\\"><rect x=\\"92\\" y=\\"185\\" width=\\"30\\" height=\\"30\\"></rect><path d=\\"M100,195 L115,195 L115,196 L100,196 L100,195 Z M100,200 L115,200 L115,201 L100,201 L100,200 Z M100,205 L115,205 L115,206 L100,206 L100,205 Z\\" fill=\\"#34495E\\"></path></g></svg></div></div>
+        <div class=\\"hig__global-nav__top-nav__logo\\">
+            <a href=\\"#\\">
+                <img src=\\"link\\">
+            </a>
+        </div>
+    </div>
+    <div class=\\"hig__global-nav__profile hig__global-nav__top-nav__group--right\\">
+    <!--FLYOUT-->
+<div class=\\"hig__flyout\\">
+    <div class=\\"hig__global-nav__top-nav__profile__profile-image\\">
+    <img class=\\"hig__global-nav__top-nav__profile__profile-image__image\\" src=\\"https://placekitten.com/g/50/50\\">
+</div><!--TARGET-->
+    <div class=\\"hig__flyout__container\\">
+        <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content\\">
+    <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__name\\">name</div>
+    <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__email\\" title=\\"hellokitty@example.com\\">hellokitty@example.com</div>
+    <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__links\\">
+        <a href=\\"#\\" class=\\"hig__button hig__button--default\\" title=\\"Sign Out\\">Sign Out</a><!--SIGN_OUT_BUTTON-->
+        <a href=\\"#\\" class=\\"hig__button hig__button--link\\" title=\\"Profile Settings\\">Profile Settings</a><!--SETTINGS_LINK-->
+    </div>
+</div><!--SLOT-->
+    </div>
+</div></div><!--PROFILE-->
+</div><!--TOPNAV-->
+        <!--SUBNAV-->
+        <div class=\\"hig__global-nav__slot\\">
+            <!--SLOT-->
+        </div>
+    </div>
+</div>"
+`;
+
+exports[`<Profile> setting and updating props can update props for image 1`] = `
+"<div class=\\"hig__global-nav\\">
+    <!--SIDENAV-->
+    <div class=\\"hig__global-nav__container\\">
+        <div class=\\"hig__global-nav__top-nav\\">
+    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
+        <div class=\\"hig__global-nav__top-nav__hamburger js-hig__global-nav__top-nav__hamburger\\"><div class=\\"hig__icon\\"><svg width=\\"30\\" height=\\"30\\" viewBox=\\"0 0 30 30\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-92 -185)\\" fill=\\"none\\" fill-rule=\\"evenodd\\"><rect x=\\"92\\" y=\\"185\\" width=\\"30\\" height=\\"30\\"></rect><path d=\\"M100,195 L115,195 L115,196 L100,196 L100,195 Z M100,200 L115,200 L115,201 L100,201 L100,200 Z M100,205 L115,205 L115,206 L100,206 L100,205 Z\\" fill=\\"#34495E\\"></path></g></svg></div></div>
+        <div class=\\"hig__global-nav__top-nav__logo\\">
+            <a href=\\"#\\">
+                <img src=\\"link\\">
+            </a>
+        </div>
+    </div>
+    <div class=\\"hig__global-nav__profile hig__global-nav__top-nav__group--right\\">
+    <!--FLYOUT-->
+<div class=\\"hig__flyout\\">
+    <div class=\\"hig__global-nav__top-nav__profile__profile-image\\">
+    <img class=\\"hig__global-nav__top-nav__profile__profile-image__image\\" src=\\"/images/bar.jpg\\">
+</div><!--TARGET-->
+    <div class=\\"hig__flyout__container\\">
+        <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content\\">
+    <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__name\\">name</div>
+    <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__email\\">email@example.com</div>
+    <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__links\\">
+        <a href=\\"#\\" class=\\"hig__button hig__button--default\\" title=\\"Sign Out\\">Sign Out</a><!--SIGN_OUT_BUTTON-->
+        <a href=\\"#\\" class=\\"hig__button hig__button--link\\" title=\\"Profile Settings\\">Profile Settings</a><!--SETTINGS_LINK-->
+    </div>
+</div><!--SLOT-->
+    </div>
+</div></div><!--PROFILE-->
+</div><!--TOPNAV-->
+        <!--SUBNAV-->
+        <div class=\\"hig__global-nav__slot\\">
+            <!--SLOT-->
+        </div>
+    </div>
+</div>"
+`;
+
+exports[`<Profile> setting and updating props can update props for name 1`] = `
+"<div class=\\"hig__global-nav\\">
+    <!--SIDENAV-->
+    <div class=\\"hig__global-nav__container\\">
+        <div class=\\"hig__global-nav__top-nav\\">
+    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
+        <div class=\\"hig__global-nav__top-nav__hamburger js-hig__global-nav__top-nav__hamburger\\"><div class=\\"hig__icon\\"><svg width=\\"30\\" height=\\"30\\" viewBox=\\"0 0 30 30\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-92 -185)\\" fill=\\"none\\" fill-rule=\\"evenodd\\"><rect x=\\"92\\" y=\\"185\\" width=\\"30\\" height=\\"30\\"></rect><path d=\\"M100,195 L115,195 L115,196 L100,196 L100,195 Z M100,200 L115,200 L115,201 L100,201 L100,200 Z M100,205 L115,205 L115,206 L100,206 L100,205 Z\\" fill=\\"#34495E\\"></path></g></svg></div></div>
+        <div class=\\"hig__global-nav__top-nav__logo\\">
+            <a href=\\"#\\">
+                <img src=\\"link\\">
+            </a>
+        </div>
+    </div>
+    <div class=\\"hig__global-nav__profile hig__global-nav__top-nav__group--right\\">
+    <!--FLYOUT-->
+<div class=\\"hig__flyout\\">
+    <div class=\\"hig__global-nav__top-nav__profile__profile-image\\">
+    <img class=\\"hig__global-nav__top-nav__profile__profile-image__image\\" src=\\"https://placekitten.com/g/50/50\\">
+</div><!--TARGET-->
+    <div class=\\"hig__flyout__container\\">
+        <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content\\">
+    <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__name\\" title=\\"Dear Daniel\\">Dear Daniel</div>
+    <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__email\\">email@example.com</div>
+    <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__links\\">
+        <a href=\\"#\\" class=\\"hig__button hig__button--default\\" title=\\"Sign Out\\">Sign Out</a><!--SIGN_OUT_BUTTON-->
+        <a href=\\"#\\" class=\\"hig__button hig__button--link\\" title=\\"Profile Settings\\">Profile Settings</a><!--SETTINGS_LINK-->
     </div>
 </div><!--SLOT-->
     </div>
