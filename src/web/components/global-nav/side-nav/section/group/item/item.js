@@ -42,7 +42,7 @@ class Item extends Core {
 
 Item._interface = Interface['components']['GlobalNav']['partials']['SideNav']['partials']['Section']['partials']['Group']['partials']['Item'];
 Item._defaults = {
-    "icon": "hamburger",
+    "icon": "",
     "title": "title",
     "link": "#"
 };
