@@ -342,9 +342,7 @@
             
             SideNavSearch.onInput(function(e){
                 // do example filter of sidenav
-                var q = e.target.value;
-                console.log(q);
-                fillSidenav(default_menu);
+                fillSidenav(getFilteredMenuObject(e.target.value), false);
             });
 
             SideNavSearch.onFocusIn(function(e){
@@ -420,7 +418,9 @@
 
             var sections = [];
 
-            function fillSidenav(menu){
+            function fillSidenav(menu, default_menu){
+                console.log(menu);
+
                 for (var index in sections){
                     sections[index].unmount();
                 }
@@ -435,80 +435,154 @@
                     });
                     SideNav.addSection(generated_section);
                     sections.push(generated_section);
-
+                    
                     for (var group in menu[section]["groups"]){
-                        // ADD A GROUP TO OUR SECTION
-                        var generated_group = new generated_section.partials.Group();
-                        generated_section.addGroup(generated_group);
+                        if(!menu[section]["groups"][group]["hide_in_menu"]){
+                            // ADD A GROUP TO OUR SECTION
+                            var generated_group = new generated_section.partials.Group();
+                            generated_section.addGroup(generated_group);
 
-                        var current_group = menu[section]["groups"][group];
-                        current_group.forEach((item) => {
-                            // ADD SOME ITEMS TO OUR GROUP
+                            var current_group = menu[section]["groups"][group];
+                            current_group.forEach((item) => {
+                                // ADD SOME ITEMS TO OUR GROUP
 
-                            var generated_item = new generated_group.partials.Item({
-                                "icon": item["icon"],
-                                "title": item["title"],
-                                "link": item["link"]
-                            });
-                            generated_group.addItem(generated_item);
+                                if(!item["hide_in_menu"]){
+                                    var generated_item = new generated_group.partials.Item({
+                                        "icon": item["icon"],
+                                        "title": item["title"],
+                                        "link": item["link"]
+                                    });
+                                    generated_group.addItem(generated_item);
 
-                            generated_item.onClick((e) => {
-                                e.preventDefault();
-                                console.log('Item '+item["title"]+' clicked');
-
-                                SubNav.setModuleIndicatorName(item["title"]);
-                                SubNav.setModuleIndicatorIcon(item["icon"]);
-
-                                // CLEAR TABS
-                                Tabs.unmount();
-
-                                // ADD TABS IN SUBNAV
-                                Tabs = new SubNav.partials.Tabs();
-                                SubNav.addTabs(Tabs);
-
-                                var generated_tabs = [];
-
-                                function tabClicked(generated_tab, tab){
-                                    console.log('Tab '+tab["label"]+' clicked');
-                                    for (var k = 0; k < generated_tabs.length; k++){
-                                        generated_tabs[k].deactivate();
+                                    // render subitems for search
+                                    if(!default_menu){
+                                        item["tabs"].forEach((tab) => {
+                                            if(!tab['hide_in_menu']){
+                                                var generated_item = new generated_group.partials.Item({
+                                                    "icon": "",
+                                                    "title": tab["label"]
+                                                });
+                                                generated_group.addItem(generated_item);
+                                            }
+                                        });
                                     }
-                                    generated_tab.activate();
 
-                                    // SLOT IN SOME EXAMPLE IMAGE CONTENT
-                                    var contentImage = tab["contentImage"];
-                                    SlotEl.innerHTML = `<img src='${contentImage}'>`;
+                                    generated_item.onClick((e) => {
+                                        e.preventDefault();
+                                        console.log('Item '+item["title"]+' clicked');
+
+                                        SubNav.setModuleIndicatorName(item["title"]);
+                                        SubNav.setModuleIndicatorIcon(item["icon"]);
+
+                                        // CLEAR TABS
+                                        Tabs.unmount();
+
+                                        // ADD TABS IN SUBNAV
+                                        Tabs = new SubNav.partials.Tabs();
+                                        SubNav.addTabs(Tabs);
+
+                                        var generated_tabs = [];
+
+                                        function tabClicked(generated_tab, tab){
+                                            console.log('Tab '+tab["label"]+' clicked');
+                                            for (var k = 0; k < generated_tabs.length; k++){
+                                                generated_tabs[k].deactivate();
+                                            }
+                                            generated_tab.activate();
+
+                                            // SLOT IN SOME EXAMPLE IMAGE CONTENT
+                                            var contentImage = tab["contentImage"];
+                                            SlotEl.innerHTML = `<img src='${contentImage}'>`;
+                                        }
+
+                                        item["tabs"].forEach((tab) => {
+                                            var generated_tab = new Tabs.partials.Tab({
+                                                "label": tab["label"]
+                                            });
+                                            Tabs.addTab(generated_tab);
+                                            generated_tabs.push(generated_tab);
+
+                                            generated_tab.onClick(() => {
+                                                tabClicked(generated_tab, tab);
+                                            });
+
+                                        });
+
+                                        // SELECT FIRST TAB BY DEFAULT
+                                        tabClicked(generated_tabs[0], item["tabs"][0]);
+
+                                    });
+
+                                    // LETS CLICK ON FIRST SIDENAV AND TAB FOR DEFAULT VALUES;
+                                    if(!window.firstClicked){
+                                        generated_item.el.click();
+                                        window.firstClicked = true;
+                                    }
                                 }
-
-                                item["tabs"].forEach((tab) => {
-                                    var generated_tab = new Tabs.partials.Tab({
-                                        "label": tab["label"]
-                                    });
-                                    Tabs.addTab(generated_tab);
-                                    generated_tabs.push(generated_tab);
-
-                                    generated_tab.onClick(() => {
-                                        tabClicked(generated_tab, tab);
-                                    });
-
-                                });
-
-                                // SELECT FIRST TAB BY DEFAULT
-                                tabClicked(generated_tabs[0], item["tabs"][0]);
-
                             });
-
-                            // LETS CLICK ON FIRST SIDENAV AND TAB FOR DEFAULT VALUES;
-                            if(!window.firstClicked){
-                                generated_item.el.click();
-                                window.firstClicked = true;
-                            }
-                        });
+                        }
                     }
                 }
             }
 
-            fillSidenav(default_menu);
+            function getFilteredMenuObject(q){
+                q = q.toLowerCase();
+                var ro = JSON.parse(JSON.stringify(default_menu));
+                
+                if(q == ""){
+                    for (var section in ro){
+                        for (var groupIndex in ro[section]["groups"]){
+                            for(var itemIndex in ro[section]["groups"][groupIndex]){
+                                for(var tabIndex in ro[section]["groups"][groupIndex][itemIndex]["tabs"]){
+                                    ro[section]["groups"][groupIndex][itemIndex]["tabs"][tabIndex]['hide_in_menu'] = true;
+                                }
+                            }
+                        }
+                    }
+                }else{
+                    for (var section in ro){
+                        for (var groupIndex in ro[section]["groups"]){
+                            for(var itemIndex in ro[section]["groups"][groupIndex]){
+                                for(var tabIndex in ro[section]["groups"][groupIndex][itemIndex]["tabs"]){
+                                    if(ro[section]["groups"][groupIndex][itemIndex]["tabs"][tabIndex]["label"].toLowerCase().indexOf(q) == -1){
+                                        ro[section]["groups"][groupIndex][itemIndex]["tabs"][tabIndex]['hide_in_menu'] = true;
+                                    }else{
+                                        ro[section]["groups"][groupIndex][itemIndex]["tabs"][tabIndex]['hide_in_menu'] = false;
+                                        console.log(ro[section]["groups"][groupIndex][itemIndex]["tabs"][tabIndex]["label"].toLowerCase())
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    // clear all sections without any match
+                    for (var section in ro){
+                        for (var groupIndex in ro[section]["groups"]){
+                            var itemsHiddenCounter = 0;
+                            for(var itemIndex in ro[section]["groups"][groupIndex]){
+                                var tabsHiddenCounter = 0;
+                                for(var tabIndex in ro[section]["groups"][groupIndex][itemIndex]["tabs"]){
+                                    if(ro[section]["groups"][groupIndex][itemIndex]["tabs"][tabIndex]['hide_in_menu']){
+                                        tabsHiddenCounter += 1;
+                                    }
+                                }
+                                if(ro[section]["groups"][groupIndex][itemIndex]["tabs"].length == tabsHiddenCounter && ro[section]["groups"][groupIndex][itemIndex]["title"].toLowerCase().indexOf(q) == -1){
+                                    ro[section]["groups"][groupIndex][itemIndex]['hide_in_menu'] = true;
+                                    itemsHiddenCounter += 1;
+                                }
+                            }
+                            if(Object.keys(ro[section]["groups"][groupIndex]).length == itemsHiddenCounter){
+                                ro[section]["groups"][groupIndex]['hide_in_menu'] = true;
+                            }
+                        }
+                    }
+
+                }
+
+                return ro;
+            }
+
+            fillSidenav(getFilteredMenuObject(""), true);
             
 
         </script>
