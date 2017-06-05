@@ -447,22 +447,22 @@
                                 // ADD SOME ITEMS TO OUR GROUP
 
                                 if(!item["hide_in_menu"]){
-                                    var generated_item = new generated_group.partials.Item({
+                                    var generated_item = new generated_group.partials.Module({
                                         "icon": item["icon"],
                                         "title": item["title"],
                                         "link": item["link"]
                                     });
-                                    generated_group.addItem(generated_item);
+                                    generated_group.addModule(generated_item);
 
                                     // render subitems for search
                                     if(!default_menu){
                                         item["tabs"].forEach((tab) => {
                                             if(!tab['hide_in_menu']){
-                                                var generated_item = new generated_group.partials.Item({
+                                                var generated_item = new generated_group.partials.Module({
                                                     "icon": "",
                                                     "title": tab["label"]
                                                 });
-                                                generated_group.addItem(generated_item);
+                                                generated_group.addModule(generated_item);
                                             }
                                         });
                                     }
