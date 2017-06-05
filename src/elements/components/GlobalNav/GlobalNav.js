@@ -94,7 +94,7 @@ class GlobalNav extends HIGElement {
         }
       }
     } else if (instance instanceof SubNav) {
-      if (this.SubNav) {
+      if (this.subNav) {
         throw new Error('only one SubNav is allowed');
       } else {
         this.subNav = instance;
