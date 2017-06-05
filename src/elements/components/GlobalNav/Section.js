@@ -39,7 +39,10 @@ export class Section extends HIGElement {
   }
 
   commitUpdate(updatePayload, oldProps, newProp) {
-    const mapping = { headerLabel: 'setHeaderLabel', headerName: 'setHeaderName' };
+    const mapping = {
+      headerLabel: 'setHeaderLabel',
+      headerName: 'setHeaderName'
+    };
     this.commitUpdateWithMapping(updatePayload, mapping);
   }
 

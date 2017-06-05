@@ -63,7 +63,10 @@ export class SubNav extends HIGElement {
   }
 
   commitUpdate(updatePayload, oldProps, newProp) {
-    const mapping = { moduleIndicatorName: 'setModuleIndicatorName', moduleIndicatorIcon: 'setModuleIndicatorIcon' };
+    const mapping = {
+      moduleIndicatorName: 'setModuleIndicatorName',
+      moduleIndicatorIcon: 'setModuleIndicatorIcon'
+    };
     this.commitUpdateWithMapping(updatePayload, mapping);
   }
 }

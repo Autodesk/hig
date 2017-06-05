@@ -20,7 +20,6 @@ import HIGElement from '../../HIGElement';
 import createComponent from '../../../adapters/createComponent';
 
 export class Profile extends HIGElement {
-
   componentDidMount() {
     if (this.initialProps.open === true) {
       this.hig.open();
@@ -28,20 +27,20 @@ export class Profile extends HIGElement {
   }
 
   commitUpdate(updatePayload, oldProps, newProp) {
-    const mapping =       {
+    const mapping = {
       image: 'setImage',
       name: 'setName',
       email: 'setEmail',
       profileSettingsLabel: 'setProfileSettingsLabel',
       signOutLabel: 'setSignOutLabel',
-      profileSettingsLink: 'setProfileSettingsLink',
+      profileSettingsLink: 'setProfileSettingsLink'
     };
 
     const openIndex = updatePayload.indexOf('open');
-    if (openIndex >= 0 ) {
+    if (openIndex >= 0) {
       const [openKey, openSetting] = updatePayload.splice(openIndex, 2);
       if (openKey) {
-        if (openSetting === true ) {
+        if (openSetting === true) {
           this.hig.open();
         } else {
           this.hig.close();

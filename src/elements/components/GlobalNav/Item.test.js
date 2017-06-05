@@ -64,18 +64,26 @@ function createHigContext(defaults) {
 }
 
 describe('<Item>', () => {
-
-  describe("Item props", () => {
+  describe('Item props', () => {
     const shex = new SharedExamples(Context, createHigContext);
     const configSets = [
       {
-        key: 'icon', sampleValue: 'project-management', updateValue: 'hamburger', mutator: 'setIcon'
+        key: 'icon',
+        sampleValue: 'project-management',
+        updateValue: 'hamburger',
+        mutator: 'setIcon'
       },
       {
-        key: 'title', sampleValue: 'Item 1', updateValue: 'Item 2', mutator: 'setTitle'
+        key: 'title',
+        sampleValue: 'Item 1',
+        updateValue: 'Item 2',
+        mutator: 'setTitle'
       },
       {
-        key: 'link', sampleValue: 'http://example.com', updateValue: 'http://example.com/2', mutator: 'setLink'
+        key: 'link',
+        sampleValue: 'http://example.com',
+        updateValue: 'http://example.com/2',
+        mutator: 'setLink'
       }
     ];
     configSets.forEach(function(config) {
@@ -83,7 +91,7 @@ describe('<Item>', () => {
         shex.verifyPropsSet(config);
       });
       it(`can update props for ${config.key}`, () => {
-        shex.verifyPropsUpdate(config)
+        shex.verifyPropsUpdate(config);
       });
     });
   });

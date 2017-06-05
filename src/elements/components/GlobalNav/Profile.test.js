@@ -23,8 +23,12 @@ import TopNav from './TopNav';
 import Profile from './Profile';
 import SharedExamples from './SharedExamples';
 
-const onImageClick = function() { return 'onImageClick'; };
-const onSignoutClick = function() { return 'onSignoutClick'; };
+const onImageClick = function() {
+  return 'onImageClick';
+};
+const onSignoutClick = function() {
+  return 'onSignoutClick';
+};
 
 const Context = props => {
   return (
@@ -33,17 +37,16 @@ const Context = props => {
         <Profile
           open={props.open}
           image={props.image}
-          onProfileImageClick={ onImageClick }
+          onProfileImageClick={onImageClick}
           name={props.name}
           email={props.email}
           signOutLabel={props.signOutLabel}
-          onSignOutClick={ onSignoutClick }
+          onSignOutClick={onSignoutClick}
           profileSettingsLabel={props.profileSettingsLabel}
           profileSettingsLink={props.profileSettingsLink}
         />
       </TopNav>
     </GlobalNav>
-
   );
 };
 
@@ -63,15 +66,17 @@ function createHigContext(defaults) {
 }
 
 function setupProfile() {
-  const defaults = { image: "something.jpg", name: "Foo Bears", email: "charuvenki@example.com" };
+  const defaults = {
+    image: 'something.jpg',
+    name: 'Foo Bears',
+    email: 'charuvenki@example.com'
+  };
   const reactContainer = document.createElement('div');
-  mount(<Context {...defaults} />, {attachTo: reactContainer});
+  mount(<Context {...defaults} />, { attachTo: reactContainer });
   return { reactContainer };
 }
 
-
 describe('<Profile>', () => {
-
   describe('constructor', () => {
     it('has a good snapshot', () => {
       const { reactContainer } = setupProfile();
@@ -79,15 +84,28 @@ describe('<Profile>', () => {
     });
   });
 
-  describe("setting and updating props", () => {
+  describe('setting and updating props', () => {
     const shex = new SharedExamples(Context, createHigContext);
 
     const configSets = [
-      { key: 'email', sampleValue: 'foo@bar.baz', updateValue: 'hellokitty@example.com', mutator: 'setEmail' },
-      { key: 'name', sampleValue: 'Hello Kitty', updateValue: 'Dear Daniel', mutator: 'setName' },
-      { key: 'image', sampleValue: '/images/foo.jpg', updateValue: '/images/bar.jpg', mutator: 'setImage' },
-      //{ key: 'open', sampleValue: 'false', updateValue: 'true', mutator: 'open'},
-
+      {
+        key: 'email',
+        sampleValue: 'foo@bar.baz',
+        updateValue: 'hellokitty@example.com',
+        mutator: 'setEmail'
+      },
+      {
+        key: 'name',
+        sampleValue: 'Hello Kitty',
+        updateValue: 'Dear Daniel',
+        mutator: 'setName'
+      },
+      {
+        key: 'image',
+        sampleValue: '/images/foo.jpg',
+        updateValue: '/images/bar.jpg',
+        mutator: 'setImage'
+      }
     ];
 
     configSets.forEach(function(config) {
@@ -95,38 +113,46 @@ describe('<Profile>', () => {
         shex.verifyPropsSet(config);
       });
       it(`can update props for ${config.key}`, () => {
-        shex.verifyPropsUpdate(config)
+        shex.verifyPropsUpdate(config);
       });
     });
   });
 
-  describe("open and close profile flyout", () => {
-
+  describe('open and close profile flyout', () => {
     const newContext = props => {
       return (
         <GlobalNav>
           <TopNav>
-            <Profile open={props.open}/>
+            <Profile open={props.open} />
           </TopNav>
         </GlobalNav>
       );
     };
 
-    it("sets the flyout as open if initialized as open", () => {
+    it('sets the flyout as open if initialized as open', () => {
       const reactContainer = document.createElement('div');
-      const wrapper = mount(<Context { ...{open: true}} />, { attachTo: reactContainer });
-      expect(reactContainer.getElementsByClassName("hig__flyout hig__flyout--open").length).toEqual(1);
+      const wrapper = mount(<Context {...{ open: true }} />, {
+        attachTo: reactContainer
+      });
+      const elem = reactContainer.getElementsByClassName(
+        'hig__flyout hig__flyout--open'
+      );
+      expect(elem.length).toEqual(1);
     });
 
-    it("opens the flyout on prop change", () => {
+    it('opens the flyout on prop change', () => {
       const reactContainer = document.createElement('div');
-      const wrapper = mount(<Context { ...{open: false}} />, { attachTo: reactContainer });
+      const wrapper = mount(<Context {...{ open: false }} />, {
+        attachTo: reactContainer
+      });
+      var elem = reactContainer.getElementsByClassName('hig__flyout');
+      expect(elem.length).toEqual(1);
 
-      expect(reactContainer.getElementsByClassName("hig__flyout").length).toEqual(1);
-
-      wrapper.setProps({open: true});
-      expect(reactContainer.getElementsByClassName("hig__flyout hig__flyout--open").length).toEqual(1);
+      wrapper.setProps({ open: true });
+      elem = reactContainer.getElementsByClassName(
+        'hig__flyout hig__flyout--open'
+      );
+      expect(elem.length).toEqual(1);
     });
-
   });
 });

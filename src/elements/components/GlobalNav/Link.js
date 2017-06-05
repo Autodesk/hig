@@ -19,7 +19,7 @@ import HIGElement from '../../HIGElement';
 
 export class Link extends HIGElement {
   commitUpdate(updatePayload, oldProps, newProp) {
-    const mapping = { title: 'setTitle', link: 'setLink' }
+    const mapping = { title: 'setTitle', link: 'setLink' };
     this.commitUpdateWithMapping(updatePayload, mapping);
   }
 }

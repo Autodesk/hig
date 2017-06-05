@@ -102,42 +102,15 @@ storiesOf('GlobalNav', module)
               </Section>
             </SectionList>
           </SideNav>
-          <Container>
-            <TopNav logo={logo}>
-              <Profile
-                image={profileImage}
-                onProfileImageClick={action('clicked')}
-              />
-            </TopNav>
-            <SubNav
-              moduleIndicatorName="Insight"
-              moduleIndicatorIcon="hamburger"
-            />
-            <Slot>{LONG_COPY}</Slot>
-          </Container>
-        </GlobalNav>
-      );
-    },
-    { propTables: [GlobalNav] }
-  )
-  .addWithInfo(
-    'w profileFlyoutOpen',
-    ``,
-    () => {
-      const sideNavOpen = boolean('sideNavOpen', false);
-      const profileFlyoutOpen = boolean('profileFlyoutOpen', true);
-      return (
-        <GlobalNav sideNavOpen={sideNavOpen}>
-          <SideNav />
           <TopNav logo={logo}>
             <Profile
               name="Jane Designer"
               email="jane.designer@example.com"
               signOutLabel="Sign Out"
-              open={profileFlyoutOpen}
+              open={false}
               image={profileImage}
               onProfileImageClick={action('clicked')}
-              onProfileImageClick={action('clicked')}
+              onSignOutClick={action('clicked')}
             />
           </TopNav>
           <SubNav
@@ -148,7 +121,29 @@ storiesOf('GlobalNav', module)
         </GlobalNav>
       );
     },
+    { propTables: [GlobalNav] }
   )
+  .addWithInfo('w profileFlyoutOpen', ``, () => {
+    const profileFlyoutOpen = boolean('profileFlyoutOpen', true);
+    return (
+      <GlobalNav>
+        <SideNav />
+        <TopNav logo={logo}>
+          <Profile
+            name="Jane Designer"
+            email="jane.designer@example.com"
+            signOutLabel="Sign Out"
+            open={profileFlyoutOpen}
+            image={profileImage}
+            onProfileImageClick={action('clicked')}
+            onProfileImageClick={action('clicked')}
+          />
+        </TopNav>
+        <SubNav moduleIndicatorName="Insight" moduleIndicatorIcon="hamburger" />
+        <Slot>{LONG_COPY}</Slot>
+      </GlobalNav>
+    );
+  })
   .addWithInfo(
     'w sideNavOpen',
     ``,

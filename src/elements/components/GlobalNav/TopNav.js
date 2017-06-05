@@ -31,8 +31,8 @@ export class TopNav extends HIGElement {
   }
 
   commitUpdate(updatePayload, oldProps, newProp) {
-    const mapping = { logo: 'setLogo',  logoLink: 'setLogoLink' };
-    this.commitUpdateWithMapping(updatePayload, mapping)
+    const mapping = { logo: 'setLogo', logoLink: 'setLogoLink' };
+    this.commitUpdateWithMapping(updatePayload, mapping);
   }
 
   createElement(ElementConstructor, props) {

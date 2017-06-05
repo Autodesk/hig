@@ -26,7 +26,7 @@ export class Item extends HIGElement {
       link: 'setLink'
     };
 
-    this.commitUpdateWithMapping(updatePayload, mapping)
+    this.commitUpdateWithMapping(updatePayload, mapping);
   }
 }
 
