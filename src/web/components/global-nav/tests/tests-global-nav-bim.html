@@ -12,12 +12,12 @@
 
         <script>
 
-            var default_menu = {
-                "section1": {
+            var default_menu = [
+                {
                     "headerLabel": "Project",
                     "headerName": "Oakwood Medical Center",
-                    "groups": {
-                        "group1": [
+                    "groups": [
+                        [
                             {
                                 "icon": "insight",
                                 "title": "Insight",
@@ -42,7 +42,7 @@
                                 ]
                             }
                         ],
-                        "group2": [
+                        [
                             {
                                 "icon": "construction-management",
                                 "title": "Authoring Collaboration",
@@ -224,7 +224,7 @@
                                 ]
                             },
                         ],
-                        "group3": [
+                        [
                             {
                                 "icon": "library",
                                 "title": "Library",
@@ -254,7 +254,7 @@
                                 ]
                             }
                         ],
-                        "group4": [
+                        [
                             {
                                 "icon": "project-admin",
                                 "title": "Project Admin",
@@ -263,13 +263,13 @@
                                 ]
                             }
                         ]
-                    }
+                    ]
                 },
-                "section2": {
+                {
                     "headerLabel": "Account",
                     "headerName": "Global Construction",
-                    "groups": {
-                        "group1": [
+                    "groups": [
+                        [
                             {
                                 "icon": "insight",
                                 "title": "Insight",
@@ -324,9 +324,9 @@
                                 ]
                             }
                         ]
-                    }
+                    ]
                 }
-            }
+            ]
 
             // CREATE GLOBALNAV COMPONENT
             var GlobalNav = new Hig.GlobalNav();
@@ -514,8 +514,65 @@
                 }
             }
 
-            // LETS CLICK ON FIRST SIDENAV AND TAB FOR DEFAULT VALUES;
+            function getFilteredMenuObject(q){
+                q = q.toLowerCase();
+                var ro = JSON.parse(JSON.stringify(default_menu));
+                
+                if(q == ""){
+                    for (var sectionIndex in ro){
+                        for (var groupIndex in ro[sectionIndex]["groups"]){
+                            for(var itemIndex in ro[sectionIndex]["groups"][groupIndex]){
+                                for(var tabIndex in ro[sectionIndex]["groups"][groupIndex][itemIndex]["tabs"]){
+                                    ro[sectionIndex]["groups"][groupIndex][itemIndex]["tabs"][tabIndex]['hide_in_menu'] = true;
+                                }
+                            }
+                        }
+                    }
+                }else{
+                    for (var sectionIndex in ro){
+                        for (var groupIndex in ro[sectionIndex]["groups"]){
+                            for(var itemIndex in ro[sectionIndex]["groups"][groupIndex]){
+                                for(var tabIndex in ro[sectionIndex]["groups"][groupIndex][itemIndex]["tabs"]){
+                                    if(ro[sectionIndex]["groups"][groupIndex][itemIndex]["tabs"][tabIndex]["label"].toLowerCase().indexOf(q) == -1){
+                                        ro[sectionIndex]["groups"][groupIndex][itemIndex]["tabs"][tabIndex]['hide_in_menu'] = true;
+                                    }else{
+                                        ro[sectionIndex]["groups"][groupIndex][itemIndex]["tabs"][tabIndex]['hide_in_menu'] = false;
+                                        console.log(ro[sectionIndex]["groups"][groupIndex][itemIndex]["tabs"][tabIndex]["label"].toLowerCase())
+                                    }
+                                }
+                            }
+                        }
+                    }
 
+                    // clear all sections without any match
+                    for (var sectionIndex in ro){
+                        for (var groupIndex in ro[sectionIndex]["groups"]){
+                            var itemsHiddenCounter = 0;
+                            for(var itemIndex in ro[sectionIndex]["groups"][groupIndex]){
+                                var tabsHiddenCounter = 0;
+                                for(var tabIndex in ro[sectionIndex]["groups"][groupIndex][itemIndex]["tabs"]){
+                                    if(ro[sectionIndex]["groups"][groupIndex][itemIndex]["tabs"][tabIndex]['hide_in_menu']){
+                                        tabsHiddenCounter += 1;
+                                    }
+                                }
+                                if(ro[sectionIndex]["groups"][groupIndex][itemIndex]["tabs"].length == tabsHiddenCounter && ro[sectionIndex]["groups"][groupIndex][itemIndex]["title"].toLowerCase().indexOf(q) == -1){
+                                    ro[sectionIndex]["groups"][groupIndex][itemIndex]['hide_in_menu'] = true;
+                                    itemsHiddenCounter += 1;
+                                }
+                            }
+                            if(Object.keys(ro[sectionIndex]["groups"][groupIndex]).length == itemsHiddenCounter){
+                                ro[sectionIndex]["groups"][groupIndex]['hide_in_menu'] = true;
+                            }
+                        }
+                    }
+
+                }
+
+                return ro;
+            }
+
+            fillSidenav(getFilteredMenuObject(""), true);
+            
 
         </script>
 
