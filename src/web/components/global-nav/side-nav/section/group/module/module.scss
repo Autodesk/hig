@@ -2,11 +2,11 @@
 @import '../../../../../../helpers/css/mixins/base.scss';
 
 .hig__global-nav__side-nav__section__group__module{
-    @include clearfix;
     
-    padding: 10px 0;
+    padding: 5px 0;
 
     & a{
+        @include clearfix;
         color: $base-1;
         text-decoration: none;
     }
@@ -16,8 +16,18 @@
     }
 
     &__title{
+        font-weight: 500;
         font-size: 15px;
         float: left;
+        padding-left: 10px;
         line-height: 30px;
+    }
+
+    &__submodules{
+        display: none; // hide by default
+
+        &--show{
+            display: block;
+        }
     }
 }

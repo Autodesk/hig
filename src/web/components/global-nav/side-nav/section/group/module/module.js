@@ -4,6 +4,7 @@ var Template = require('./module.html');
 var Interface = require('interface.json');
 var Core = require('_core.js');
 
+var Submodule = require('./submodule/submodule.js');
 
 /**
  * Creates an Module
@@ -38,6 +39,20 @@ class Module extends Core {
         this._findDOMEl("a", this.el).setAttribute("href", link);
     }
 
+    addSubmodule(SubmoduleInstance, referenceSubmodule){
+        if(SubmoduleInstance instanceof Submodule){
+            this.mountPartialToComment('SUBMODULE', SubmoduleInstance, referenceSubmodule);
+        }
+    }
+
+    showSubmodules(){
+        this._findDOMEl(".hig__global-nav__side-nav__section__group__module__submodules", this.el).classList.add("hig__global-nav__side-nav__section__group__module__submodules--show");
+    }
+
+    hideSubmodules(){
+        this._findDOMEl(".hig__global-nav__side-nav__section__group__module__submodules", this.el).classList.remove("hig__global-nav__side-nav__section__group__module__submodules--show");
+    }
+
 }
 
 Module._interface = Interface['components']['GlobalNav']['partials']['SideNav']['partials']['Section']['partials']['Group']['partials']['Module'];
@@ -46,5 +61,8 @@ Module._defaults = {
     "title": "title",
     "link": "#"
 };
+Module._partials = {
+    Submodule: Submodule
+}
 
 module.exports = Module;

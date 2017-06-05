@@ -17,12 +17,29 @@ class Submodule extends Core {
         this._render(Template, options);
     }
 
-    
+    onClick(fn){
+        return this._attachListener("click", this.el, this.el, fn);
+    }
+
+    onHover(fn){
+        return this._attachListener("hover", this.el, this.el, fn);
+    }
+
+    setTitle(title){
+        this._findDOMEl(".hig__global-nav__side-nav__section__group__module__title", this.el).textContent = title;
+    }
+
+    setLink(link){
+        this._findDOMEl("a", this.el).setAttribute("href", link);
+    }
 
 }
 
 Submodule._interface = Interface['components']['GlobalNav']['partials']['SideNav']['partials']['Section']['partials']['Group']['partials']['Module']['partials']['Submodule'];
-Submodule._defaults = {};
+Submodule._defaults = {
+    "title": "Submodule",
+    "link": "#"
+};
 Submodule._partials = {};
 
 module.exports = Submodule;
