@@ -111,7 +111,7 @@
                                     },
                                     {
                                         "label": "Submittals",
-                                        "contentImage": "egg.jpg"
+                                        "contentImage": "projectmanagement__submittals-1280.png"
                                     },
                                     {
                                         "label": "Daily Log",
@@ -341,7 +341,7 @@
                 "placeholder": "Find module or submodule"
             });
             SideNav.addSearch(SideNavSearch);
-            
+
             SideNavSearch.onInput(function(e){
                 // do example filter of sidenav
                 fillSidenav(getFilteredMenuObject(e.target.value), false);
@@ -394,7 +394,7 @@
                 }
                 menu_open = !menu_open;
             });
-            
+
             GlobalNav.onHoverOutside(function(e){
                 if(menu_open){
                     GlobalNav.hideSideNav();
@@ -437,7 +437,7 @@
                     });
                     SideNav.addSection(generated_section);
                     sections.push(generated_section);
-                    
+
                     for (var group in menu[section]["groups"]){
                         if(!menu[section]["groups"][group]["hide_in_menu"]){
                             // ADD A GROUP TO OUR SECTION
@@ -500,7 +500,7 @@
 
                                             // SLOT IN SOME EXAMPLE IMAGE CONTENT
                                             var contentImage = tab["contentImage"];
-                                            SlotEl.innerHTML = `<img src='${contentImage}'>`;
+                                            SlotEl.innerHTML = `<img src='${contentImage}' width="1280">`;
                                         }
 
                             item["tabs"].forEach((tab) => {
@@ -517,7 +517,7 @@
             function getFilteredMenuObject(q){
                 q = q.toLowerCase();
                 var ro = JSON.parse(JSON.stringify(default_menu));
-                
+
                 if(q == ""){
                     for (var sectionIndex in ro){
                         for (var groupIndex in ro[sectionIndex]["groups"]){
@@ -572,7 +572,7 @@
             }
 
             fillSidenav(getFilteredMenuObject(""), true);
-            
+
 
         </script>
 
