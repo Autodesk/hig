@@ -463,18 +463,6 @@
                                     generated_group.addModule(generated_module);
 
                                     // render subitems for search
-                                    // if(!default_menu){
-                                    //     item["tabs"].forEach((tab) => {
-                                    //         if(!tab['hide_in_menu']){
-                                    //             var generated_module = new generated_group.partials.Module({
-                                    //                 "icon": "",
-                                    //                 "title": tab["label"]
-                                    //             });
-                                    //             generated_group.addModule(generated_module);
-                                    //         }
-                                    //     });
-                                    // }
-
                                     item["tabs"].forEach((tab) => {
                                         var generated_submodule = new generated_module.partials.Submodule({
                                             "title": tab["label"],
