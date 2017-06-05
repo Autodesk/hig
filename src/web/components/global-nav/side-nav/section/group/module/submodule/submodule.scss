@@ -1,5 +1,12 @@
 @import '~basics/colors/colors.scss';
 
-.hig__global-nav__side-nav__section__group__module__submodule{
+.hig__global-nav__side-nav__section__group__module__submodule{    
+    padding-left: 40px;
 
+    & a{
+        color: $gray-5;
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 30px;
+    }
 }
