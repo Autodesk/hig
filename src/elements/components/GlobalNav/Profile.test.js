@@ -31,7 +31,7 @@ const Context = props => {
     <GlobalNav>
       <TopNav>
         <Profile
-          open={true}
+          open={props.open}
           image={props.image}
           onProfileImageClick={ onImageClick }
           name={props.name}
@@ -112,16 +112,19 @@ describe('<Profile>', () => {
       );
     };
 
-    it("works", () => {
+    it("sets the flyout as open if initialized as open", () => {
+      const reactContainer = document.createElement('div');
+      const wrapper = mount(<Context { ...{open: true}} />, { attachTo: reactContainer });
+      expect(reactContainer.getElementsByClassName("hig__flyout hig__flyout--open").length).toEqual(1);
+    });
+
+    it("opens the flyout on prop change", () => {
       const reactContainer = document.createElement('div');
       const wrapper = mount(<Context { ...{open: false}} />, { attachTo: reactContainer });
 
       expect(reactContainer.getElementsByClassName("hig__flyout").length).toEqual(1);
 
-      //console.log("the container: ", reactContainer.outerHTML);
-
       wrapper.setProps({open: true});
-      console.log("log: ", wrapper.props());
       expect(reactContainer.getElementsByClassName("hig__flyout hig__flyout--open").length).toEqual(1);
     });
 

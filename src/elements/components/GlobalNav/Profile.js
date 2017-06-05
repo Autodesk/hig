@@ -21,8 +21,13 @@ import createComponent from '../../../adapters/createComponent';
 
 export class Profile extends HIGElement {
 
+  componentDidMount() {
+    if (this.initialProps.open === true) {
+      this.hig.open();
+    }
+  }
+
   commitUpdate(updatePayload, oldProps, newProp) {
-    console.log("HERE with props: ", updatePayload);
     const mapping =       {
       image: 'setImage',
       name: 'setName',
@@ -34,14 +39,13 @@ export class Profile extends HIGElement {
 
     const openIndex = updatePayload.indexOf('open');
     if (openIndex >= 0 ) {
-      const {openKey, openSetting} = updatePayload.splice(openIndex, 2);
+      const [openKey, openSetting] = updatePayload.splice(openIndex, 2);
       if (openKey) {
         if (openSetting === true ) {
-          this.hig.ProfileFlyout.open();
+          this.hig.open();
         } else {
-          this.hig.ProfileFlyout.close();
+          this.hig.close();
         }
-
       }
     }
 
@@ -51,7 +55,7 @@ export class Profile extends HIGElement {
 
 const ProfileComponent = createComponent(Profile);
 
-Profile.propTypes = {
+ProfileComponent.propTypes = {
   open: PropTypes.bool,
   image: PropTypes.string,
   name: PropTypes.string,

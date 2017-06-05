@@ -13,6 +13,8 @@ exports[`<Profile> constructor has a good snapshot 1`] = `
             </a>
         </div>
     </div>
+    <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
+    <!--PROJECT_ACCOUNT_SWITCHER-->
     <div class=\\"hig__global-nav__profile hig__global-nav__top-nav__group--right\\">
     <!--FLYOUT-->
 <div class=\\"hig__flyout\\">
@@ -20,7 +22,9 @@ exports[`<Profile> constructor has a good snapshot 1`] = `
     <img class=\\"hig__global-nav__top-nav__profile__profile-image__image\\" src=\\"something.jpg\\">
 </div><!--TARGET-->
     <div class=\\"hig__flyout__container\\">
-        <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content\\">
+        <div class=\\"hig__flyout__chevron\\"></div>
+        <div class=\\"hig__flyout__panel\\">
+            <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content\\">
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__name\\">Foo Bears</div>
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__email\\">charuvenki@example.com</div>
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__links\\">
@@ -28,6 +32,7 @@ exports[`<Profile> constructor has a good snapshot 1`] = `
         <a href=\\"#\\" class=\\"hig__button hig__button--link\\" title=\\"Profile Settings\\">Profile Settings</a><!--SETTINGS_LINK-->
     </div>
 </div><!--SLOT-->
+        </div>
     </div>
 </div></div><!--PROFILE-->
 </div><!--TOPNAV-->
@@ -52,6 +57,8 @@ exports[`<Profile> setting and updating props can set props for email 1`] = `
             </a>
         </div>
     </div>
+    <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
+    <!--PROJECT_ACCOUNT_SWITCHER-->
     <div class=\\"hig__global-nav__profile hig__global-nav__top-nav__group--right\\">
     <!--FLYOUT-->
 <div class=\\"hig__flyout\\">
@@ -59,7 +66,9 @@ exports[`<Profile> setting and updating props can set props for email 1`] = `
     <img class=\\"hig__global-nav__top-nav__profile__profile-image__image\\" src=\\"https://placekitten.com/g/50/50\\">
 </div><!--TARGET-->
     <div class=\\"hig__flyout__container\\">
-        <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content\\">
+        <div class=\\"hig__flyout__chevron\\"></div>
+        <div class=\\"hig__flyout__panel\\">
+            <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content\\">
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__name\\">name</div>
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__email\\">foo@bar.baz</div>
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__links\\">
@@ -67,6 +76,7 @@ exports[`<Profile> setting and updating props can set props for email 1`] = `
         <a href=\\"#\\" class=\\"hig__button hig__button--link\\" title=\\"Profile Settings\\">Profile Settings</a><!--SETTINGS_LINK-->
     </div>
 </div><!--SLOT-->
+        </div>
     </div>
 </div></div><!--PROFILE-->
 </div><!--TOPNAV-->
@@ -91,6 +101,8 @@ exports[`<Profile> setting and updating props can set props for image 1`] = `
             </a>
         </div>
     </div>
+    <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
+    <!--PROJECT_ACCOUNT_SWITCHER-->
     <div class=\\"hig__global-nav__profile hig__global-nav__top-nav__group--right\\">
     <!--FLYOUT-->
 <div class=\\"hig__flyout\\">
@@ -98,7 +110,9 @@ exports[`<Profile> setting and updating props can set props for image 1`] = `
     <img class=\\"hig__global-nav__top-nav__profile__profile-image__image\\" src=\\"/images/foo.jpg\\">
 </div><!--TARGET-->
     <div class=\\"hig__flyout__container\\">
-        <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content\\">
+        <div class=\\"hig__flyout__chevron\\"></div>
+        <div class=\\"hig__flyout__panel\\">
+            <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content\\">
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__name\\">name</div>
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__email\\">email@example.com</div>
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__links\\">
@@ -106,6 +120,7 @@ exports[`<Profile> setting and updating props can set props for image 1`] = `
         <a href=\\"#\\" class=\\"hig__button hig__button--link\\" title=\\"Profile Settings\\">Profile Settings</a><!--SETTINGS_LINK-->
     </div>
 </div><!--SLOT-->
+        </div>
     </div>
 </div></div><!--PROFILE-->
 </div><!--TOPNAV-->
@@ -130,6 +145,8 @@ exports[`<Profile> setting and updating props can set props for name 1`] = `
             </a>
         </div>
     </div>
+    <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
+    <!--PROJECT_ACCOUNT_SWITCHER-->
     <div class=\\"hig__global-nav__profile hig__global-nav__top-nav__group--right\\">
     <!--FLYOUT-->
 <div class=\\"hig__flyout\\">
@@ -137,7 +154,9 @@ exports[`<Profile> setting and updating props can set props for name 1`] = `
     <img class=\\"hig__global-nav__top-nav__profile__profile-image__image\\" src=\\"https://placekitten.com/g/50/50\\">
 </div><!--TARGET-->
     <div class=\\"hig__flyout__container\\">
-        <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content\\">
+        <div class=\\"hig__flyout__chevron\\"></div>
+        <div class=\\"hig__flyout__panel\\">
+            <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content\\">
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__name\\">Hello Kitty</div>
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__email\\">email@example.com</div>
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__links\\">
@@ -145,6 +164,7 @@ exports[`<Profile> setting and updating props can set props for name 1`] = `
         <a href=\\"#\\" class=\\"hig__button hig__button--link\\" title=\\"Profile Settings\\">Profile Settings</a><!--SETTINGS_LINK-->
     </div>
 </div><!--SLOT-->
+        </div>
     </div>
 </div></div><!--PROFILE-->
 </div><!--TOPNAV-->
@@ -169,6 +189,8 @@ exports[`<Profile> setting and updating props can update props for email 1`] = `
             </a>
         </div>
     </div>
+    <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
+    <!--PROJECT_ACCOUNT_SWITCHER-->
     <div class=\\"hig__global-nav__profile hig__global-nav__top-nav__group--right\\">
     <!--FLYOUT-->
 <div class=\\"hig__flyout\\">
@@ -176,7 +198,9 @@ exports[`<Profile> setting and updating props can update props for email 1`] = `
     <img class=\\"hig__global-nav__top-nav__profile__profile-image__image\\" src=\\"https://placekitten.com/g/50/50\\">
 </div><!--TARGET-->
     <div class=\\"hig__flyout__container\\">
-        <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content\\">
+        <div class=\\"hig__flyout__chevron\\"></div>
+        <div class=\\"hig__flyout__panel\\">
+            <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content\\">
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__name\\">name</div>
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__email\\" title=\\"hellokitty@example.com\\">hellokitty@example.com</div>
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__links\\">
@@ -184,6 +208,7 @@ exports[`<Profile> setting and updating props can update props for email 1`] = `
         <a href=\\"#\\" class=\\"hig__button hig__button--link\\" title=\\"Profile Settings\\">Profile Settings</a><!--SETTINGS_LINK-->
     </div>
 </div><!--SLOT-->
+        </div>
     </div>
 </div></div><!--PROFILE-->
 </div><!--TOPNAV-->
@@ -208,6 +233,8 @@ exports[`<Profile> setting and updating props can update props for image 1`] = `
             </a>
         </div>
     </div>
+    <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
+    <!--PROJECT_ACCOUNT_SWITCHER-->
     <div class=\\"hig__global-nav__profile hig__global-nav__top-nav__group--right\\">
     <!--FLYOUT-->
 <div class=\\"hig__flyout\\">
@@ -215,7 +242,9 @@ exports[`<Profile> setting and updating props can update props for image 1`] = `
     <img class=\\"hig__global-nav__top-nav__profile__profile-image__image\\" src=\\"/images/bar.jpg\\">
 </div><!--TARGET-->
     <div class=\\"hig__flyout__container\\">
-        <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content\\">
+        <div class=\\"hig__flyout__chevron\\"></div>
+        <div class=\\"hig__flyout__panel\\">
+            <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content\\">
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__name\\">name</div>
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__email\\">email@example.com</div>
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__links\\">
@@ -223,6 +252,7 @@ exports[`<Profile> setting and updating props can update props for image 1`] = `
         <a href=\\"#\\" class=\\"hig__button hig__button--link\\" title=\\"Profile Settings\\">Profile Settings</a><!--SETTINGS_LINK-->
     </div>
 </div><!--SLOT-->
+        </div>
     </div>
 </div></div><!--PROFILE-->
 </div><!--TOPNAV-->
@@ -247,6 +277,8 @@ exports[`<Profile> setting and updating props can update props for name 1`] = `
             </a>
         </div>
     </div>
+    <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
+    <!--PROJECT_ACCOUNT_SWITCHER-->
     <div class=\\"hig__global-nav__profile hig__global-nav__top-nav__group--right\\">
     <!--FLYOUT-->
 <div class=\\"hig__flyout\\">
@@ -254,7 +286,9 @@ exports[`<Profile> setting and updating props can update props for name 1`] = `
     <img class=\\"hig__global-nav__top-nav__profile__profile-image__image\\" src=\\"https://placekitten.com/g/50/50\\">
 </div><!--TARGET-->
     <div class=\\"hig__flyout__container\\">
-        <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content\\">
+        <div class=\\"hig__flyout__chevron\\"></div>
+        <div class=\\"hig__flyout__panel\\">
+            <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content\\">
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__name\\" title=\\"Dear Daniel\\">Dear Daniel</div>
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__email\\">email@example.com</div>
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__links\\">
@@ -262,6 +296,7 @@ exports[`<Profile> setting and updating props can update props for name 1`] = `
         <a href=\\"#\\" class=\\"hig__button hig__button--link\\" title=\\"Profile Settings\\">Profile Settings</a><!--SETTINGS_LINK-->
     </div>
 </div><!--SLOT-->
+        </div>
     </div>
 </div></div><!--PROFILE-->
 </div><!--TOPNAV-->
