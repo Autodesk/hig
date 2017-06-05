@@ -20,7 +20,7 @@ exports[`<Item> icon sets icon by default 1`] = `
     <div class=\\"hig__global-nav__sidenav__links\\">
         <!--LINK-->
     </div>
-    <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
+    <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
@@ -52,7 +52,7 @@ exports[`<Item> icon updates icon 1`] = `
     <div class=\\"hig__global-nav__sidenav__links\\">
         <!--LINK-->
     </div>
-    <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
+    <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
@@ -84,7 +84,7 @@ exports[`<Item> link sets link by default 1`] = `
     <div class=\\"hig__global-nav__sidenav__links\\">
         <!--LINK-->
     </div>
-    <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
+    <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
@@ -116,7 +116,7 @@ exports[`<Item> link updates link 1`] = `
     <div class=\\"hig__global-nav__sidenav__links\\">
         <!--LINK-->
     </div>
-    <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
+    <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
@@ -148,7 +148,7 @@ exports[`<Item> title sets title by default 1`] = `
     <div class=\\"hig__global-nav__sidenav__links\\">
         <!--LINK-->
     </div>
-    <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
+    <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
@@ -180,7 +180,7 @@ exports[`<Item> title updates title 1`] = `
     <div class=\\"hig__global-nav__sidenav__links\\">
         <!--LINK-->
     </div>
-    <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
+    <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->

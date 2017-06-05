@@ -6,13 +6,13 @@ exports[`<Tab> renders a tab 1`] = `
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
         <div class=\\"hig__global-nav__sub-nav\\">
-    <div class=\\"hig__global-nav__sub-nav__left__icon\\">#</div>
-    <div class=\\"hig__global-nav__sub-nav__left\\">Module Name</div>
+    <div class=\\"hig__global-nav__sub-nav__module-indicator-icon\\">#</div>
+    <div class=\\"hig__global-nav__sub-nav__module-indicator-name\\">Module Name</div>
     <div class=\\"hig__global-nav__sub-nav__tabs\\">
     <div class=\\"hig__global-nav__sub-nav__tabs__tab\\">Such Tab</div><!--TAB-->
 </div><!--TABS-->
-    <div class=\\"hig__global-nav__sub-nav__left__icon hig__global-nav__sub-nav__spacer\\">#</div>
-    <div class=\\"hig__global-nav__sub-nav__left hig__global-nav__sub-nav__spacer\\">Module Name</div>
+    <div class=\\"hig__global-nav__sub-nav__module-indicator-icon hig__global-nav__sub-nav__spacer\\">#</div>
+    <div class=\\"hig__global-nav__sub-nav__module-indicator-name hig__global-nav__sub-nav__spacer\\">Module Name</div>
 </div><!--SUBNAV-->
         <div class=\\"hig__global-nav__slot\\">
             <!--SLOT-->
@@ -27,13 +27,13 @@ exports[`<Tab> updates props 1`] = `
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
         <div class=\\"hig__global-nav__sub-nav\\">
-    <div class=\\"hig__global-nav__sub-nav__left__icon\\">#</div>
-    <div class=\\"hig__global-nav__sub-nav__left\\">Module Name</div>
+    <div class=\\"hig__global-nav__sub-nav__module-indicator-icon\\">#</div>
+    <div class=\\"hig__global-nav__sub-nav__module-indicator-name\\">Module Name</div>
     <div class=\\"hig__global-nav__sub-nav__tabs\\">
     <div class=\\"hig__global-nav__sub-nav__tabs__tab hig__global-nav__sub-nav__tabs__tab--active\\" title=\\"Many Tab\\">Many Tab</div><!--TAB-->
 </div><!--TABS-->
-    <div class=\\"hig__global-nav__sub-nav__left__icon hig__global-nav__sub-nav__spacer\\">#</div>
-    <div class=\\"hig__global-nav__sub-nav__left hig__global-nav__sub-nav__spacer\\">Module Name</div>
+    <div class=\\"hig__global-nav__sub-nav__module-indicator-icon hig__global-nav__sub-nav__spacer\\">#</div>
+    <div class=\\"hig__global-nav__sub-nav__module-indicator-name hig__global-nav__sub-nav__spacer\\">Module Name</div>
 </div><!--SUBNAV-->
         <div class=\\"hig__global-nav__slot\\">
             <!--SLOT-->

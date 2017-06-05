@@ -33,7 +33,7 @@ exports[`<GlobalNav> sideNavOpen prop can render the SideNav as a child 1`] = `
     <div class=\\"hig__global-nav__sidenav__links\\">
         <!--LINK-->
     </div>
-    <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
+    <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->

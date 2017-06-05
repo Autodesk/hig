@@ -15,7 +15,7 @@ exports[`<Section> children: <Group> can insert <Group> elements before and afte
     <div class=\\"hig__global-nav__sidenav__links\\">
         <!--LINK-->
     </div>
-    <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
+    <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
@@ -44,7 +44,7 @@ exports[`<Section> children: <Group> can insert <Group> elements before and afte
     <div class=\\"hig__global-nav__sidenav__links\\">
         <!--LINK-->
     </div>
-    <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
+    <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
@@ -71,7 +71,7 @@ exports[`<Section> children: <Group> can insert <Group> elements before and afte
     <div class=\\"hig__global-nav__sidenav__links\\">
         <!--LINK-->
     </div>
-    <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
+    <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
@@ -100,7 +100,7 @@ exports[`<Section> children: <Group> can insert <Group> elements before and afte
     <div class=\\"hig__global-nav__sidenav__links\\">
         <!--LINK-->
     </div>
-    <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
+    <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
@@ -127,7 +127,7 @@ exports[`<Section> children: <Group> can insert <Group> elements before and afte
     <div class=\\"hig__global-nav__sidenav__links\\">
         <!--LINK-->
     </div>
-    <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
+    <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
@@ -156,7 +156,7 @@ exports[`<Section> children: <Group> can render a list of <Group> elements 1`] =
     <div class=\\"hig__global-nav__sidenav__links\\">
         <!--LINK-->
     </div>
-    <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
+    <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
@@ -181,7 +181,7 @@ exports[`<Section> headerLabel sets the headerLabel default 1`] = `
     <div class=\\"hig__global-nav__sidenav__links\\">
         <!--LINK-->
     </div>
-    <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
+    <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
@@ -206,7 +206,7 @@ exports[`<Section> headerLabel updates the headerLabel 1`] = `
     <div class=\\"hig__global-nav__sidenav__links\\">
         <!--LINK-->
     </div>
-    <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
+    <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
@@ -231,7 +231,7 @@ exports[`<Section> headerName sets the headerName default 1`] = `
     <div class=\\"hig__global-nav__sidenav__links\\">
         <!--LINK-->
     </div>
-    <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
+    <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
@@ -256,7 +256,7 @@ exports[`<Section> headerName updates the headerName 1`] = `
     <div class=\\"hig__global-nav__sidenav__links\\">
         <!--LINK-->
     </div>
-    <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
+    <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->

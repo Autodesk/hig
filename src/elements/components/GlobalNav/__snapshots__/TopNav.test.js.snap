@@ -13,6 +13,8 @@ exports[`<TopNav> renders a topnav 1`] = `
             </a>
         </div>
     </div>
+    <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
+    <!--PROJECT_ACCOUNT_SWITCHER-->
     <div class=\\"hig__global-nav__profile hig__global-nav__top-nav__group--right\\">
     <!--FLYOUT-->
 <div class=\\"hig__flyout\\">
@@ -20,7 +22,9 @@ exports[`<TopNav> renders a topnav 1`] = `
     <img class=\\"hig__global-nav__top-nav__profile__profile-image__image\\" src=\\"../../../bim-logo.png\\">
 </div><!--TARGET-->
     <div class=\\"hig__flyout__container\\">
-        <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content\\">
+        <div class=\\"hig__flyout__chevron\\"></div>
+        <div class=\\"hig__flyout__panel\\">
+            <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content\\">
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__name\\"></div>
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__email\\"></div>
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__links\\">
@@ -28,6 +32,7 @@ exports[`<TopNav> renders a topnav 1`] = `
         <a href=\\"#\\" class=\\"hig__button hig__button--link\\" title=\\"Profile Settings\\">Profile Settings</a><!--SETTINGS_LINK-->
     </div>
 </div><!--SLOT-->
+        </div>
     </div>
 </div></div><!--PROFILE-->
 </div><!--TOPNAV-->

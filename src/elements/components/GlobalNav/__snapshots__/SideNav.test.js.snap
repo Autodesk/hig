@@ -7,7 +7,7 @@ exports[`<SideNav> can render a LinksList as a child 1`] = `
     <div class=\\"hig__global-nav__sidenav__links\\">
         <!--LINK-->
     </div>
-    <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
+    <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
@@ -26,7 +26,7 @@ exports[`<SideNav> can render a SectionList as a child 1`] = `
     <div class=\\"hig__global-nav__sidenav__links\\">
         <!--LINK-->
     </div>
-    <div class=\\"hig__global-nav__sidenav__copywright\\">© 2017 Autodesk, Inc. </div>
+    <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
