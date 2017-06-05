@@ -563,31 +563,31 @@
                             "partials": {
                                 "Group": {
                                     "methods": {
-                                        "addItem": {
-                                            "desc": "Pass in an instance of a SideNav group Item partial",
+                                        "addModule": {
+                                            "desc": "Pass in an instance of a SideNav group Module partial",
                                             "params": [
-                                                "{Item} Item - instance of a Item partial",
-                                                "{Item} [ReferenceItem] - (Optional) reference node for insertBefore"
+                                                "{Module} Module - instance of a Module partial",
+                                                "{Module} [ReferenceModule] - (Optional) reference node for insertBefore"
                                             ]
                                         }
                                     },
                                     "partials": {
-                                        "Item": {
+                                        "Module": {
                                             "methods": {
                                                 "setIcon": {
-                                                    "desc": "sets the icon of an item",
+                                                    "desc": "sets the icon of an module",
                                                     "params": [
                                                         "{String} title - new icon ID"
                                                     ]
                                                 },
                                                 "setTitle": {
-                                                    "desc": "sets the title of an item",
+                                                    "desc": "sets the title of an module",
                                                     "params": [
                                                         "{String} title - new title"
                                                     ]
                                                 },
                                                 "setLink": {
-                                                    "desc": "sets the link of an item",
+                                                    "desc": "sets the link of an module",
                                                     "params": [
                                                         "{String} link - new link"
                                                     ]
@@ -605,8 +605,8 @@
                                             },
                                             "defaults": {
                                                 "icon": "{String} icon identifier",
-                                                "title": "{String} the string of our SideNav item",
-                                                "link": "{String} link behind the item"
+                                                "title": "{String} the string of our SideNav module",
+                                                "link": "{String} link behind the module"
                                             }
                                         }
                                     }
