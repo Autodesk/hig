@@ -1,17 +1,17 @@
-import './item.scss';
+import './module.scss';
 
-var Template = require('./item.html');
+var Template = require('./module.html');
 var Interface = require('interface.json');
 var Core = require('_core.js');
 
 
 /**
- * Creates an Item
+ * Creates an Module
  *
  * @class
  */
 
-class Item extends Core {
+class Module extends Core {
 
     constructor(options){
         super(options);
@@ -27,11 +27,11 @@ class Item extends Core {
     }
 
     setIcon(icon){
-        this._findDOMEl(".hig__global-nav__side-nav__section__group__item__icon", this.el).innerHTML = this._getIconString(icon);
+        this._findDOMEl(".hig__global-nav__side-nav__section__group__module__icon", this.el).innerHTML = this._getIconString(icon);
     }
 
     setTitle(title){
-        this._findDOMEl(".hig__global-nav__side-nav__section__group__item__title", this.el).textContent = title;
+        this._findDOMEl(".hig__global-nav__side-nav__section__group__module__title", this.el).textContent = title;
     }
 
     setLink(link){
@@ -40,11 +40,11 @@ class Item extends Core {
 
 }
 
-Item._interface = Interface['components']['GlobalNav']['partials']['SideNav']['partials']['Section']['partials']['Group']['partials']['Item'];
-Item._defaults = {
+Module._interface = Interface['components']['GlobalNav']['partials']['SideNav']['partials']['Section']['partials']['Group']['partials']['Module'];
+Module._defaults = {
     "icon": "",
     "title": "title",
     "link": "#"
 };
 
-module.exports = Item;
+module.exports = Module;
