@@ -479,6 +479,12 @@
                                                         "{Submodule} [ReferenceSubmodule] - (Optional) reference node for insertBefore"
                                                     ]
                                                 },
+                                                "show":{
+                                                    "desc": "show (used for filtering)"
+                                                },
+                                                "hide":{
+                                                    "desc": "hide (used for filtering)"
+                                                },
                                                 "showSubmodules": {
                                                     "desc": "show the submodules"
                                                 },
@@ -507,6 +513,12 @@
                                                             "params": [
                                                                 "{String} link - new link"
                                                             ]
+                                                        },
+                                                        "show":{
+                                                            "desc": "show (used for filtering)"
+                                                        },
+                                                        "hide":{
+                                                            "desc": "hide (used for filtering)"
                                                         },
                                                         "onClick": "HIG.abstract.EventObject",
                                                         "onHover": "HIG.abstract.EventObject"
