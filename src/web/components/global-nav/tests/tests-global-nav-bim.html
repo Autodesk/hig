@@ -497,7 +497,11 @@
 
                             generated_module.onClick((e) => {
                                 e.preventDefault();
-                                buildTabs(item, item["tabs"][0]);
+                                if(item["tabs"]){
+                                    buildTabs(item, item["tabs"][0]);
+                                }else{
+                                    buildTabs(item);
+                                }
                             });
 
                             // LETS CLICK ON FIRST SIDENAV AND TAB FOR DEFAULT VALUES;
