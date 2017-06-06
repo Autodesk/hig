@@ -434,6 +434,12 @@
                                         "{Collapse} Collapse - instance of a Collapse partial",
                                         "{Collapse} [ReferenceCollapse] - (Optional) reference node for insertBefore"
                                     ]
+                                },
+                                "show":{
+                                    "desc": "show (used for filtering)"
+                                },
+                                "hide":{
+                                    "desc": "hide (used for filtering)"
                                 }
                             },
                             "defaults": {
@@ -449,6 +455,12 @@
                                                 "{Module} Module - instance of a Module partial",
                                                 "{Module} [ReferenceModule] - (Optional) reference node for insertBefore"
                                             ]
+                                        },
+                                        "show":{
+                                            "desc": "show (used for filtering)"
+                                        },
+                                        "hide":{
+                                            "desc": "hide (used for filtering)"
                                         }
                                     },
                                     "partials": {
