@@ -40,6 +40,14 @@ class Section extends Core {
         }
     }
 
+    show(){
+        this.el.classList.remove("hig__global-nav__side-nav__section--hide");
+    }
+
+    hide(){
+        this.el.classList.add("hig__global-nav__side-nav__section--hide");
+    }
+
 
 }
 

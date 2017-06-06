@@ -442,7 +442,7 @@
 
                     // INTERNAL HELPER ARRAYS TO KEEP STATE
                     var sectionState = {
-                        "modules": {},
+                        "groups": [],
                         "collapse": generated_collapseIcon,
                         "section": generated_section
                     };
@@ -453,13 +453,17 @@
                     generated_collapseIcon.onClick((e) => {
                         if(collapse_submodules){
                             generated_collapseIcon.minimize();
-                            for (var module in sectionState["modules"]){
-                                sectionState["modules"][module]["module"].showSubmodules();
+                            for (var groupIndex in sectionState["groups"]){
+                                for (var module in sectionState["groups"][groupIndex]["modules"]){
+                                    sectionState["groups"][groupIndex]["modules"][module]["module"].showSubmodules();
+                                }
                             }
                         }else{
                             generated_collapseIcon.maximize();
-                            for (var module in sectionState["modules"]){
-                                sectionState["modules"][module]["module"].hideSubmodules();
+                            for (var groupIndex in sectionState["groups"]){
+                                for (var module in sectionState["groups"][groupIndex]["modules"]){
+                                    sectionState["groups"][groupIndex]["modules"][module]["module"].hideSubmodules();
+                                }
                             }
                         }
                         collapse_submodules = !collapse_submodules;
@@ -470,6 +474,13 @@
                         // ADD A GROUP TO OUR SECTION
                         var generated_group = new generated_section.partials.Group();
                         generated_section.addGroup(generated_group);
+
+                        // INTERNAL HELPER ARRAYS TO KEEP STATE
+                        var groupState = {
+                            "group": generated_group,
+                            "modules": {}
+                        };
+                        sectionState["groups"].push(groupState);
 
                         var current_group = default_menu[section]["groups"][group];
                         current_group.forEach((item) => {
@@ -487,7 +498,7 @@
                                 "module": generated_module,
                                 "submodules": {}
                             }
-                            sectionState["modules"][item["label"]] = moduleObj;
+                            groupState["modules"][item["label"]] = moduleObj;
 
                             // render subitems for search
                             item["tabs"].forEach((tab) => {
@@ -498,7 +509,7 @@
                                 generated_module.addSubmodule(generated_submodule);
 
                                 // save to our array for state mngmt
-                                sectionState["modules"][item["label"]]["submodules"][tab["label"]] = generated_submodule;
+                                groupState["modules"][item["label"]]["submodules"][tab["label"]] = generated_submodule;
                             });
 
                             generated_module.onClick((e) => {
@@ -563,37 +574,89 @@
                 q = q.toLowerCase();
 
                 for(var sectionIndex in sections){
-                    var sectionCollapseIcon = sections[sectionIndex]["collapse"];
-                    var modules = sections[sectionIndex]["modules"];
-
-                    sectionCollapseIcon.hide(); // always hide collapse icon
-
-                    for(var moduleKey in modules){
+                    (function(sections, sectionIndex){
                         
-                        var found = false;
-                        var module = modules[moduleKey]["module"];
+                        var sectionCollapseIcon = sections[sectionIndex]["collapse"];
+                        var groups = sections[sectionIndex]["groups"];
+                        var anythingfound = false;
 
-                        module.showSubmodules(); // always show submodules
+                        sectionCollapseIcon.hide(); // always hide collapse icon
 
-                        for(var submoduleKey in modules[moduleKey]["submodules"]){
-                            var submodule = modules[moduleKey]["submodules"][submoduleKey];
-                            if(submoduleKey.toLowerCase().indexOf(q) == -1){
-                                submodule.hide();
-                            }else{
-                                submodule.show();
-                                found = true;
-                            }
+                        for(var groupIndex in groups){
+                            
+                            (function(groups, groupIndex){
+                                var modules = groups[groupIndex]["modules"];
+                                var moduleFound = false;
+
+                                for(var moduleKey in modules){
+                                    
+                                    var module = modules[moduleKey]["module"];
+
+                                    module.showSubmodules(); // always show submodules
+
+                                    for(var submoduleKey in modules[moduleKey]["submodules"]){
+                                        var submodule = modules[moduleKey]["submodules"][submoduleKey];
+                                        if(submoduleKey.toLowerCase().indexOf(q) == -1){
+                                            submodule.hide();
+                                        }else{
+                                            submodule.show();
+                                            moduleFound = true;
+                                        }
+                                    }
+
+                                    if(moduleKey.toLowerCase().indexOf(q) == -1){
+                                        if(!moduleFound){
+                                            module.hide();
+                                        }else{
+                                            module.show();
+                                        }
+                                    }else{
+                                        module.show();
+                                    }
+                                }
+
+                                if(!moduleFound){
+                                    groups[groupIndex]["group"].hide();
+                                }else{
+                                    groups[groupIndex]["group"].show();
+                                    anythingfound = true;
+                                }
+                            })(groups, groupIndex);
+                            
+
                         }
 
-                        if(moduleKey.toLowerCase().indexOf(q) == -1){
-                            if(!found){
-                                module.hide();
-                            }else{
-                                module.show();
-                            }
+                        if(!anythingfound){
+                            sections[sectionIndex]["section"].hide();
                         }else{
-                            module.show();
+                            sections[sectionIndex]["section"].show();
                         }
+                    })(sections, sectionIndex);
+                    
+                }
+
+                if(q == ""){
+                    // reset show/hide
+                    for(var sectionIndex in sections){
+                        var sectionCollapseIcon = sections[sectionIndex]["collapse"];
+                        var groups = sections[sectionIndex]["groups"];
+
+                        sectionCollapseIcon.show(); // show collapse icon
+                        sectionCollapseIcon.maximize(); // show [ + ]
+
+                        for(var groupIndex in groups){
+                            var group = groups[groupIndex];
+                            var modules = group["modules"];
+                            
+                            group["group"].show(); // reset show
+
+                            for(var moduleKey in modules){
+                                var module = modules[moduleKey]["module"];
+                                module.hideSubmodules(); // hide submodules
+                            }
+                        }
+
+                        sections[sectionIndex]["section"].show(); // reset show
                     }
                 }
             }
