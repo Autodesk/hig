@@ -68,7 +68,7 @@ class App extends React.Component {
 
   closeProfileFlyout = event => {
     this.setState({ profileFlyoutOpen: false });
-  }
+  };
 
   profileSignOutClick = event => {
     console.log('Profile Sign Out button clicked!');
