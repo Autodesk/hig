@@ -5,6 +5,7 @@ var Interface = require('interface.json');
 var Core = require('_core.js');
 
 var Group = require('./group/group.js');
+var Collapse = require('./collapse/collapse.js');
 
 /**
  * Creates an Section in the SideNav
@@ -33,6 +34,13 @@ class Section extends Core {
         }
     }
 
+    addCollapse(CollapseInstance, referenceInstance){
+        if(CollapseInstance instanceof Collapse){
+            this.mountPartialToComment('COLLAPSE', CollapseInstance, referenceInstance);
+        }
+    }
+
+
 }
 
 Section._interface = Interface['components']['GlobalNav']['partials']['SideNav']['partials']['Section'];
@@ -41,7 +49,8 @@ Section._defaults = {
     "headerName": "X"
 };
 Section._partials = {
-    Group: Group
+    Group: Group,
+    Collapse: Collapse
 };
 
 module.exports = Section;
