@@ -23,13 +23,6 @@ class Search extends Core {
 
     setQuery(query){
         this._findDOMEl(".hig__global-nav__side-nav__search__inputholder__input", this.el).value = query;
-
-        // trigger event manually to make sure event bubble works on all browsers
-        var e = new Event('input', {
-            'bubbles': true
-        });
-
-        this._findDOMEl(".hig__global-nav__side-nav__search__inputholder__input", this.el).dispatchEvent(e);
     }
 
     showClearIcon(){
