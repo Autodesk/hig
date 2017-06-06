@@ -221,7 +221,10 @@
                             },
                             "defaults": {
                                 "image": "{String} url src of the image",
+                                "email": "{String} email for profile",
+                                "name": "{String} display name for profile",
                                 "profileSettingsLabel": "{String} profileSettingsLabel",
+                                "profileSettingsLink": "{String} profileSettingsLink",
                                 "signOutLabel": "{String} signOutLabel"
                             }
                         },
