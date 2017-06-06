@@ -394,6 +394,7 @@
                 if(menu_open){
                     GlobalNav.hideSideNav();
                 }else{
+                    SideNavSearch.setQuery(""); // reset any search
                     GlobalNav.showSideNav();
                 }
                 menu_open = !menu_open;
