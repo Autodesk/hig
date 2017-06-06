@@ -63,7 +63,8 @@ ProfileComponent.propTypes = {
   profileSettingsLabel: PropTypes.string,
   profileSettingsLink: PropTypes.string,
   onSignOutClick: PropTypes.func,
-  onProfileImageClick: PropTypes.func
+  onProfileImageClick: PropTypes.func,
+  onProfileClickOutside: PropTypes.func
 };
 
 ProfileComponent.__docgenInfo = {
@@ -94,6 +95,9 @@ ProfileComponent.__docgenInfo = {
     },
     onProfileImageClick: {
       description: '{function} triggers when you click the profile'
+    },
+    onProfileClickOutside: {
+      description: '{function} triggers when you click anywhere but the profile flyout'
     }
   }
 };

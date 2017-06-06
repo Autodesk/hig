@@ -62,9 +62,13 @@ class App extends React.Component {
     this.setState({ open: !this.state.open });
   };
 
-  toggleProfileFlyout = event => {
-    this.setState({ profileFlyoutOpen: !this.state.profileFlyoutOpen });
+  openProfileFlyout = event => {
+    this.setState({ profileFlyoutOpen: true });
   };
+
+  closeProfileFlyout = event => {
+    this.setState({ profileFlyoutOpen: false });
+  }
 
   profileSignOutClick = event => {
     console.log('Profile Sign Out button clicked!');
@@ -152,7 +156,8 @@ class App extends React.Component {
               open={this.state.profileFlyoutOpen}
               image={profileImage}
               signOutLabel="Logout"
-              onProfileImageClick={this.toggleProfileFlyout}
+              onProfileImageClick={this.openProfileFlyout}
+              onProfileClickOutside={this.closeProfileFlyout}
               onSignOutClick={this.profileSignOutClick}
               name="Jane Doe"
               email="jane.doe@example.com"
