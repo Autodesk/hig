@@ -554,6 +554,13 @@
                                         "{Group} Group - instance of a Group partial",
                                         "{Group} [ReferenceGroup] - (Optional) reference node for insertBefore"
                                     ]
+                                },
+                                "addCollapse": {
+                                    "desc": "Pass in an instance of a Collapse partial",
+                                    "params": [
+                                        "{Collapse} Collapse - instance of a Collapse partial",
+                                        "{Collapse} [ReferenceCollapse] - (Optional) reference node for insertBefore"
+                                    ]
                                 }
                             },
                             "defaults": {
@@ -638,6 +645,17 @@
                                                 }
                                             }
                                         }
+                                    }
+                                },
+                                "Collapse": {
+                                    "methods": {
+                                        "minimize": {
+                                            "desc": "show [ - ]"
+                                        },
+                                        "maximize": {
+                                            "desc": "show [ + ]"
+                                        },
+                                        "onClick": "HIG.abstract.EventObject"
                                     }
                                 }
                             }
