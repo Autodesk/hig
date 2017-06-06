@@ -540,6 +540,12 @@
                                         "maximize": {
                                             "desc": "show [ + ]"
                                         },
+                                        "show":{
+                                            "desc": "show (used for filtering)"
+                                        },
+                                        "hide":{
+                                            "desc": "hide (used for filtering)"
+                                        },
                                         "onClick": "HIG.abstract.EventObject"
                                     }
                                 }

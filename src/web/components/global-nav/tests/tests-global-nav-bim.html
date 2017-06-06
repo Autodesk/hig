@@ -429,33 +429,37 @@
 
                 // SCOPE SCOPE SCOPE
                 (function(section){
-                    // INTERNAL HELPER ARRAYS TO KEEP STATE
-                    var modules = {};
-                    sections.push(modules);
-                    
                     // ADD A SECTION IN OUR SIDENAV
                     var generated_section = new SideNav.partials.Section({
                         "headerLabel": default_menu[section]["headerLabel"],
                         "headerName": default_menu[section]["headerName"]
                     });
-                    SideNav.addSection(generated_section);
+                    SideNav.addSection(generated_section);                    
 
                     // ADD A COLLAPSE ICON TO OUR SIDENAV SECTION HEADER
                     var generated_collapseIcon = new generated_section.partials.Collapse();
                     generated_section.addCollapse(generated_collapseIcon);
+
+                    // INTERNAL HELPER ARRAYS TO KEEP STATE
+                    var sectionState = {
+                        "modules": {},
+                        "collapse": generated_collapseIcon,
+                        "section": generated_section
+                    };
+                    sections.push(sectionState);
                     
                     // HANDLE SHOW/HIDE SUBMODULES ON [ + ] or [ - ] CLICK
                     var collapse_submodules = true;
                     generated_collapseIcon.onClick((e) => {
                         if(collapse_submodules){
                             generated_collapseIcon.minimize();
-                            for (var module in modules){
-                                modules[module]["module"].showSubmodules();
+                            for (var module in sectionState["modules"]){
+                                sectionState["modules"][module]["module"].showSubmodules();
                             }
                         }else{
                             generated_collapseIcon.maximize();
-                            for (var module in modules){
-                                modules[module]["module"].hideSubmodules();
+                            for (var module in sectionState["modules"]){
+                                sectionState["modules"][module]["module"].hideSubmodules();
                             }
                         }
                         collapse_submodules = !collapse_submodules;
@@ -483,7 +487,7 @@
                                 "module": generated_module,
                                 "submodules": {}
                             }
-                            modules[item["label"]] = moduleObj;
+                            sectionState["modules"][item["label"]] = moduleObj;
 
                             // render subitems for search
                             item["tabs"].forEach((tab) => {
@@ -494,7 +498,7 @@
                                 generated_module.addSubmodule(generated_submodule);
 
                                 // save to our array for state mngmt
-                                modules[item["label"]]["submodules"][tab["label"]] = generated_submodule;
+                                sectionState["modules"][item["label"]]["submodules"][tab["label"]] = generated_submodule;
                             });
 
                             generated_module.onClick((e) => {
@@ -559,17 +563,20 @@
                 q = q.toLowerCase();
 
                 for(var sectionIndex in sections){
-                    var section = sections[sectionIndex];
-                    
-                    for(var moduleKey in section){
+                    var sectionCollapseIcon = sections[sectionIndex]["collapse"];
+                    var modules = sections[sectionIndex]["modules"];
+
+                    sectionCollapseIcon.hide(); // always hide collapse icon
+
+                    for(var moduleKey in modules){
                         
                         var found = false;
-                        var module = section[moduleKey]["module"];
+                        var module = modules[moduleKey]["module"];
 
                         module.showSubmodules(); // always show submodules
 
-                        for(var submoduleKey in section[moduleKey]["submodules"]){
-                            var submodule = section[moduleKey]["submodules"][submoduleKey];
+                        for(var submoduleKey in modules[moduleKey]["submodules"]){
+                            var submodule = modules[moduleKey]["submodules"][submoduleKey];
                             if(submoduleKey.toLowerCase().indexOf(q) == -1){
                                 submodule.hide();
                             }else{
