@@ -217,14 +217,13 @@
                                 "icon": "layout",
                                 "label": "Layout",
                                 "link": "#",
-                                "contentImage": "content/GlobalConstruction__Field__ChecklistsTemplates@2x.png"
+                                "contentImage": "content/Oakwood__Layout@2x.png"
                             },
                             {
                                 "icon": "buildingops",
                                 "label": "Building Ops",
                                 "link": "#",
-                                "tabs": [
-                                ]
+                                "contentImage": "content/Oakwood__BuildingOps@2x.png"
                             },
                         ],
                         [
@@ -232,29 +231,25 @@
                                 "icon": "library",
                                 "label": "Library",
                                 "link": "#",
-                                "tabs": [
-                                ]
+                                "contentImage": "content/Oakwood__Library@2x.png"
                             },
                             {
                                 "icon": "photos",
                                 "label": "Photos",
                                 "link": "#",
-                                "tabs": [
-                                ]
+                                "contentImage": "content/Oakwood__Photos@2x.png"
                             },
                             {
                                 "icon": "assets",
                                 "label": "Assets",
                                 "link": "#",
-                                "tabs": [
-                                ]
+                                "contentImage": "content/Oakwood__Assets@2x.png"
                             },
                             {
                                 "icon": "locations",
                                 "label": "Location",
                                 "link": "#",
-                                "tabs": [
-                                ]
+                                "contentImage": "content/Oakwood__Locations@2x.png"
                             }
                         ],
                         [
@@ -262,8 +257,7 @@
                                 "icon": "project-admin",
                                 "label": "Project Admin",
                                 "link": "#",
-                                "tabs": [
-                                ]
+                                "contentImage": "content/Oakwood__ProjectAdmin@2x.png"
                             }
                         ]
                     ]
@@ -277,8 +271,7 @@
                                 "icon": "insight",
                                 "label": "Insight",
                                 "link": "#",
-                                "tabs": [
-                                ]
+                                "contentImage": "content/GlobalConstruction__Insight@2x.png"
                             },
                             {
                                 "icon": "field",
@@ -423,7 +416,7 @@
             GlobalNav.addSlot(SlotEl);
 
             var sections = [];
-            
+
             // CONSTRUCT OUR SIDENAV
             for (var section in default_menu){
 
@@ -434,7 +427,7 @@
                         "headerLabel": default_menu[section]["headerLabel"],
                         "headerName": default_menu[section]["headerName"]
                     });
-                    SideNav.addSection(generated_section);                    
+                    SideNav.addSection(generated_section);
 
                     // ADD A COLLAPSE ICON TO OUR SIDENAV SECTION HEADER
                     var generated_collapseIcon = new generated_section.partials.Collapse();
@@ -447,7 +440,7 @@
                         "section": generated_section
                     };
                     sections.push(sectionState);
-                    
+
                     // HANDLE SHOW/HIDE SUBMODULES ON [ + ] or [ - ] CLICK
                     var collapse_submodules = true;
                     generated_collapseIcon.onClick((e) => {
@@ -485,7 +478,7 @@
                         var current_group = default_menu[section]["groups"][group];
                         current_group.forEach((item) => {
 
-                            // ADD SOME MODULES TO OUR GROUP                               
+                            // ADD SOME MODULES TO OUR GROUP
                             var generated_module = new generated_group.partials.Module({
                                 "icon": item["icon"],
                                 "title": item["label"],
@@ -561,14 +554,14 @@
 
                                     // SELECT FIRST TAB BY DEFAULT
                                     tabClicked(generated_tabs[0], item["tabs"][0]);
-                                    
+
                                 }else{
                                     // SLOT IN SOME EXAMPLE IMAGE CONTENT
                                     var contentImage = item["contentImage"];
                                     SlotEl.innerHTML = `<img src='${contentImage}' width="1280">`;
                                 }
 
-                                
+
 
                             });
 
@@ -577,20 +570,20 @@
                                 generated_module.el.click();
                                 window.firstClicked = true;
                             }
-                            
+
                         });
-                        
+
                     }
                 })(section);
             }
-        
+
 
             function filterMenu(q){
                 q = q.toLowerCase();
 
                 for(var sectionIndex in sections){
                     (function(sections, sectionIndex){
-                        
+
                         var sectionCollapseIcon = sections[sectionIndex]["collapse"];
                         var groups = sections[sectionIndex]["groups"];
                         var anythingfound = false;
@@ -598,7 +591,7 @@
                         sectionCollapseIcon.hide(); // always hide collapse icon
 
                         for(var groupIndex in groups){
-                            
+
                             (function(groups, groupIndex){
                                 var modules = groups[groupIndex]["modules"];
                                 var groupFound = false;
@@ -652,7 +645,7 @@
                             sections[sectionIndex]["section"].show();
                         }
                     })(sections, sectionIndex);
-                    
+
                 }
 
                 if(q == ""){
@@ -667,7 +660,7 @@
                         for(var groupIndex in groups){
                             var group = groups[groupIndex];
                             var modules = group["modules"];
-                            
+
                             group["group"].show(); // reset show
 
                             for(var moduleKey in modules){
