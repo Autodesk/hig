@@ -587,10 +587,11 @@
                             
                             (function(groups, groupIndex){
                                 var modules = groups[groupIndex]["modules"];
-                                var moduleFound = false;
+                                var groupFound = false;
 
                                 for(var moduleKey in modules){
-                                    
+                                    var moduleFound = false;
+                                    var subModuleFound = false;
                                     var module = modules[moduleKey]["module"];
 
                                     module.showSubmodules(); // always show submodules
@@ -601,22 +602,28 @@
                                             submodule.hide();
                                         }else{
                                             submodule.show();
-                                            moduleFound = true;
+                                            subModuleFound = true;
                                         }
                                     }
 
                                     if(moduleKey.toLowerCase().indexOf(q) == -1){
-                                        if(!moduleFound){
+                                        if(!subModuleFound){
                                             module.hide();
                                         }else{
                                             module.show();
+                                            moduleFound = true;
                                         }
                                     }else{
                                         module.show();
+                                        moduleFound = true;
+                                    }
+
+                                    if(moduleFound){
+                                        groupFound = true;
                                     }
                                 }
 
-                                if(!moduleFound){
+                                if(!groupFound){
                                     groups[groupIndex]["group"].hide();
                                 }else{
                                     groups[groupIndex]["group"].show();
