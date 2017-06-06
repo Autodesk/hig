@@ -44,12 +44,12 @@ const Context = props => {
     <GlobalNav>
       <TopNav>
         <ProjectAccountSwitcher
-          activeLabel={props.label}
-          activeImage={props.image}
-          activeType={props.type}
+          activeLabel={props.activeLabel}
+          activeImage={props.activeImage}
+          activeType={props.activeType}
           addAccount={onAddAccount}
           addProject={onAddProject}
-          isOpen={props.open}
+          isOpen={props.isOpen}
           onClick={onItemClick}
           onClickOutside={onClickOutside}
         />
@@ -68,7 +68,7 @@ function createHigContext(defaults) {
   higNav.addTopNav(higTopNav);
 
   const higItem = new higTopNav.partials.ProjectAccountSwitcher(defaults);
-  higTopNav.addProfile(higItem);
+  higTopNav.addProjectAccountSwitcher(higItem);
 
   return { higContainer, higItem };
 }
@@ -91,6 +91,85 @@ describe('<ProjectAccountSwitcher>', () => {
       const { reactContainer } = setupProjectAccountSwitcher();
       expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
     });
+  }); 
+
+  describe('setting and updating props', () => {
+    const shex = new SharedExamples(Context, createHigContext);
+
+    const configSets = [
+      {
+        key: 'activeLabel',
+        sampleValue: 'test label',
+        updateValue: 'new label',
+        mutator: 'setActiveLabel'
+      },
+      {
+        key: 'activeImage',
+        sampleValue: '/images/foo.jpg',
+        updateValue: '/images/bar.jpg',
+        mutator: 'setActiveImage'
+      },
+      {
+        key: 'activeType',
+        sampleValue: 'project',
+        updateValue: 'new project',
+        mutator: 'setActiveType'
+      }
+    ];
+
+    configSets.forEach(function(config) {
+      it(`can set props for ${config.key}`, () => {
+        shex.verifyPropsSet(config);
+      });
+      it(`can update props for ${config.key}`, () => {
+        shex.verifyPropsUpdate(config);
+      });
+    });
   });
+
+  describe('open and close profile flyout', () => {
+    /*const newContext = props => {
+      return (
+        <GlobalNav>
+          <TopNav>
+            <ProjectAccountSwitcher 
+              isOpen={props.isOpen}
+              activeLabel='someLabel'
+            />
+          </TopNav>
+        </GlobalNav>
+      );
+    };*/
+
+
+    it('sets the flyout as open if initialized as open', () => {
+      const reactContainer = document.createElement('div');
+      const wrapper = mount(<Context {...{ isOpen: true, activeLabel: "someLabel" }} />, {
+        attachTo: reactContainer
+      });
+      const elem = reactContainer.getElementsByClassName(
+        'hig__flyout hig__flyout--open'
+      );
+
+      expect(elem.length).toEqual(1);
+    });
+
+    it('opens the flyout on prop change', () => {
+      const reactContainer = document.createElement('div');
+      const wrapper = mount(<Context {...{ isOpen: false }} />, {
+        attachTo: reactContainer
+      });
+      var elem = reactContainer.getElementsByClassName('hig__flyout');
+      expect(elem.length).toEqual(1);
+
+      wrapper.setProps({ isOpen: true });
+      elem = reactContainer.getElementsByClassName(
+        'hig__flyout hig__flyout--open'
+      );
+      expect(elem.length).toEqual(1);
+    });
+
+
+  });    
 });
 

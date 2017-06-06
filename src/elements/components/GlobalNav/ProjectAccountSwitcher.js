@@ -25,22 +25,67 @@ import ProjectComponent, { Project } from './Project';
 
 
 export class ProjectAccountSwitcher extends HIGElement {
+  componentDidMount() {
+    if (this.initialProps.isOpen === true) {
+      this.hig.open();
+    }
+  }
+
   commitUpdate(updatePayload, oldProps, newProp) {
     const mapping = {
-      activeLabel: 'setActiveLabel',
       activeImage: 'setActiveImage',
-      activeType: 'setActiveType'
+      activeLabel: 'setActiveLabel',
+      activeType: 'setActiveType',
     };
 
-    for (let i = 0; i < updatePayload.length; i += 2) {
-      const propKey = updatePayload[i];
-      const propValue = updatePayload[i + 1];
-
-      if (mapping[propKey]) {
-        this.hig[mapping[propKey]](propValue);
-      } else {
-        this.commitPropChange(propKey, propValue);
+    const openIndex = updatePayload.indexOf('isOpen');
+    if (openIndex >= 0) {
+      const [openKey, openSetting] = updatePayload.splice(openIndex, 2);
+      if (openKey) {
+        if (openSetting === true) {
+          this.hig.open();
+        } else {
+          this.hig.close();
+        }
       }
+    }
+    this.commitUpdateWithMapping(updatePayload, mapping);
+  }
+
+   createElement(ElementConstructor, props) {
+    switch (ElementConstructor) {
+      case Project:
+        return new Project(this.hig.partials.Project, props);
+      case Account:
+        return new Account(this.hig.partials.Account, props);
+      default:
+        throw new Error(`Unknown type ${ElementConstructor.name}`);
+    }
+  }
+
+  appendChild(instance, beforeChild = {}) {
+    if (instance instanceof Project) {
+      if (this.sideNav) {
+        throw new Error('only one SideNav is allowed');
+      } else {
+        this.sideNav = instance;
+        if (this.mounted) {
+          this.hig.addSideNav(instance.hig);
+          instance.mount();
+        }
+      }
+    } else if (instance instanceof Account) {
+      if (this.topNav) {
+        throw new Error('only one TopNav is allowed');
+      } else {
+        this.topNav = instance;
+        if (this.mounted) {
+          this.hig.addTopNav(instance.hig);
+          instance.mount();
+        }
+      }
+    }  else {
+      throw new Error('unknown type');
     }
   }
 }
@@ -48,13 +93,10 @@ export class ProjectAccountSwitcher extends HIGElement {
 const ProjectAccountSwitcherComponent = createComponent(ProjectAccountSwitcher);
 
 ProjectAccountSwitcherComponent.propTypes = {
+  isOpen: PropTypes.bool,
   activeLabel: PropTypes.string,
   activeImage: PropTypes.string,
   activeType: PropTypes.string,
-  addAccount: PropTypes.func,
-  addProject: PropTypes.func,
-  open: PropTypes.func,
-  close: PropTypes.func,
   onClickOutside: PropTypes.func,
   onClick: PropTypes.func,
   children: HIGChildValidator([
