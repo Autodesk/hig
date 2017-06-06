@@ -29,6 +29,14 @@ class Collapse extends Core {
         return this._attachListener("click", this.el, this.el, fn);
     }
 
+    show(){
+        this.el.classList.remove("hig__global-nav__side-nav__section__collapse--hide");
+    }
+
+    hide(){
+        this.el.classList.add("hig__global-nav__side-nav__section__collapse--hide");
+    }
+
 }
 
 Collapse._interface = Interface['components']['GlobalNav']['partials']['SideNav']['partials']['Section']['partials']['Collapse'];
