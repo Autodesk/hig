@@ -26,7 +26,7 @@
                         [
                             {
                                 "icon": "insight",
-                                "title": "Insight",
+                                "label": "Insight",
                                 "link": "#",
                                 "tabs": [
                                     {
@@ -51,7 +51,7 @@
                         [
                             {
                                 "icon": "construction-management",
-                                "title": "Authoring Collaboration",
+                                "label": "Authoring Collaboration",
                                 "link": "#",
                                 "tabs": [
                                     {
@@ -70,7 +70,7 @@
                             },
                             {
                                 "icon": "document-management",
-                                "title": "Document Management",
+                                "label": "Document Management",
                                 "link": "#",
                                 "tabs": [
                                     {
@@ -81,7 +81,7 @@
                             },
                             {
                                 "icon": "placeholder",
-                                "title": "Model Coordination",
+                                "label": "Model Coordination",
                                 "link": "#",
                                 "tabs": [
                                     {
@@ -108,7 +108,7 @@
                             },
                             {
                                 "icon": "project-management",
-                                "title": "Project Management",
+                                "label": "Project Management",
                                 "link": "#",
                                 "tabs": [
                                     {
@@ -127,7 +127,7 @@
                             },
                             {
                                 "icon": "quantities",
-                                "title": "Quantities",
+                                "label": "Quantities",
                                 "link": "#",
                                 "tabs": [
                                     {
@@ -142,7 +142,7 @@
                             },
                             {
                                 "icon": "cost-control",
-                                "title": "Cost Control",
+                                "label": "Cost Control",
                                 "link": "#",
                                 "tabs": [
                                     {
@@ -169,7 +169,7 @@
                             },
                             {
                                 "icon": "schedule",
-                                "title": "Schedule",
+                                "label": "Schedule",
                                 "link": "#",
                                 "tabs": [
                                     {
@@ -184,7 +184,7 @@
                             },
                             {
                                 "icon": "field",
-                                "title": "Field",
+                                "label": "Field",
                                 "link": "#",
                                 "tabs": [
                                     {
@@ -215,14 +215,14 @@
                             },
                             {
                                 "icon": "layout",
-                                "title": "Layout",
+                                "label": "Layout",
                                 "link": "#",
                                 "tabs": [
                                 ]
                             },
                             {
                                 "icon": "buildingops",
-                                "title": "Building Ops",
+                                "label": "Building Ops",
                                 "link": "#",
                                 "tabs": [
                                 ]
@@ -231,28 +231,28 @@
                         [
                             {
                                 "icon": "library",
-                                "title": "Library",
+                                "label": "Library",
                                 "link": "#",
                                 "tabs": [
                                 ]
                             },
                             {
                                 "icon": "photos",
-                                "title": "Photos",
+                                "label": "Photos",
                                 "link": "#",
                                 "tabs": [
                                 ]
                             },
                             {
                                 "icon": "assets",
-                                "title": "Assets",
+                                "label": "Assets",
                                 "link": "#",
                                 "tabs": [
                                 ]
                             },
                             {
                                 "icon": "locations",
-                                "title": "Location",
+                                "label": "Location",
                                 "link": "#",
                                 "tabs": [
                                 ]
@@ -261,7 +261,7 @@
                         [
                             {
                                 "icon": "project-admin",
-                                "title": "Project Admin",
+                                "label": "Project Admin",
                                 "link": "#",
                                 "tabs": [
                                 ]
@@ -276,14 +276,14 @@
                         [
                             {
                                 "icon": "insight",
-                                "title": "Insight",
+                                "label": "Insight",
                                 "link": "#",
                                 "tabs": [
                                 ]
                             },
                             {
                                 "icon": "field",
-                                "title": "Field",
+                                "label": "Field",
                                 "link": "#",
                                 "tabs": [
                                     {
@@ -298,7 +298,7 @@
                             },
                             {
                                 "icon": "account-admin",
-                                "title": "Account Admin",
+                                "label": "Account Admin",
                                 "link": "#",
                                 "tabs": [
                                     {
@@ -348,7 +348,7 @@
 
             SideNavSearch.onInput(function(e){
                 // do example filter of sidenav
-                fillSidenav(getFilteredMenuObject(e.target.value), false);
+                filterMenu(e.target.value);
             });
 
             SideNavSearch.onFocusIn(function(e){
@@ -422,189 +422,174 @@
             SlotEl.innerHTML = `Some example default content`;
             GlobalNav.addSlot(SlotEl);
 
-            var fillSidenav = function(menu, default_menu){
+            var sections = [];
+            
+            // CONSTRUCT OUR SIDENAV
+            for (var section in default_menu){
 
-                // CONSTRUCT OUR SIDENAV
-                for (var section in menu){
+                // SCOPE SCOPE SCOPE
+                (function(section){
+                    // INTERNAL HELPER ARRAYS TO KEEP STATE
+                    var modules = {};
+                    sections.push(modules);
+                    
+                    // ADD A SECTION IN OUR SIDENAV
+                    var generated_section = new SideNav.partials.Section({
+                        "headerLabel": default_menu[section]["headerLabel"],
+                        "headerName": default_menu[section]["headerName"]
+                    });
+                    SideNav.addSection(generated_section);
 
-                    (function(section){
-                        // INTERNAL HELPER ARRAYS TO KEEP STATE
-                        var modules = [];
-                        
-                        // ADD A SECTION IN OUR SIDENAV
-                        var generated_section = new SideNav.partials.Section({
-                            "headerLabel": menu[section]["headerLabel"],
-                            "headerName": menu[section]["headerName"]
-                        });
-                        SideNav.addSection(generated_section);
-
-                        // ADD A COLLAPSE ICON TO OUR SIDENAV SECTION HEADER
-                        var generated_collapseIcon = new generated_section.partials.Collapse();
-                        generated_section.addCollapse(generated_collapseIcon);
-                        
-                        var collapse_submodules = true;
-                        generated_collapseIcon.onClick((e) => {
-                            if(collapse_submodules){
-                                generated_collapseIcon.minimize();
-                                for (var module in modules){
-                                    modules[module].showSubmodules();
-                                }
-                            }else{
-                                generated_collapseIcon.maximize();
-                                for (var module in modules){
-                                    modules[module].hideSubmodules();
-                                }
+                    // ADD A COLLAPSE ICON TO OUR SIDENAV SECTION HEADER
+                    var generated_collapseIcon = new generated_section.partials.Collapse();
+                    generated_section.addCollapse(generated_collapseIcon);
+                    
+                    // HANDLE SHOW/HIDE SUBMODULES ON [ + ] or [ - ] CLICK
+                    var collapse_submodules = true;
+                    generated_collapseIcon.onClick((e) => {
+                        if(collapse_submodules){
+                            generated_collapseIcon.minimize();
+                            for (var module in modules){
+                                modules[module]["module"].showSubmodules();
                             }
-                            collapse_submodules = !collapse_submodules;
-                        });
+                        }else{
+                            generated_collapseIcon.maximize();
+                            for (var module in modules){
+                                modules[module]["module"].hideSubmodules();
+                            }
+                        }
+                        collapse_submodules = !collapse_submodules;
+                    });
 
-                        for (var group in menu[section]["groups"]){
+                    for (var group in default_menu[section]["groups"]){
 
-                            // ADD A GROUP TO OUR SECTION
-                            var generated_group = new generated_section.partials.Group();
-                            generated_section.addGroup(generated_group);
+                        // ADD A GROUP TO OUR SECTION
+                        var generated_group = new generated_section.partials.Group();
+                        generated_section.addGroup(generated_group);
 
-                            var current_group = menu[section]["groups"][group];
-                            current_group.forEach((item) => {
+                        var current_group = default_menu[section]["groups"][group];
+                        current_group.forEach((item) => {
 
-                                // ADD SOME MODULES TO OUR GROUP                               
-                                var generated_module = new generated_group.partials.Module({
-                                    "icon": item["icon"],
-                                    "title": item["title"],
-                                    "link": item["link"]
+                            // ADD SOME MODULES TO OUR GROUP                               
+                            var generated_module = new generated_group.partials.Module({
+                                "icon": item["icon"],
+                                "title": item["label"],
+                                "link": item["link"]
+                            });
+                            generated_group.addModule(generated_module);
+
+                            // save to our array for state mngmt
+                            var moduleObj = {
+                                "module": generated_module,
+                                "submodules": {}
+                            }
+                            modules[item["label"]] = moduleObj;
+
+                            // render subitems for search
+                            item["tabs"].forEach((tab) => {
+                                var generated_submodule = new generated_module.partials.Submodule({
+                                    "title": tab["label"],
+                                    "link": "#"
                                 });
-                                generated_group.addModule(generated_module);
+                                generated_module.addSubmodule(generated_submodule);
 
                                 // save to our array for state mngmt
-                                modules.push(generated_module);
-
-                                // render subitems for search
-                                item["tabs"].forEach((tab) => {
-                                    var generated_submodule = new generated_module.partials.Submodule({
-                                        "title": tab["label"],
-                                        "link": "#"
-                                    });
-                                    generated_module.addSubmodule(generated_submodule);
-                                });
-
-                                generated_module.onClick((e) => {
-                                    e.preventDefault();
-                                    console.log('Item '+item["title"]+' clicked');
-
-                                    SubNav.setModuleIndicatorName(item["title"]);
-                                    SubNav.setModuleIndicatorIcon(item["icon"]);
-
-                                    // CLEAR TABS
-                                    Tabs.unmount();
-
-                                    // ADD TABS IN SUBNAV
-                                    Tabs = new SubNav.partials.Tabs();
-                                    SubNav.addTabs(Tabs);
-
-                                    var generated_tabs = [];
-
-                                    function tabClicked(generated_tab, tab){
-                                        console.log('Tab '+tab["label"]+' clicked');
-                                        for (var k = 0; k < generated_tabs.length; k++){
-                                            generated_tabs[k].deactivate();
-                                        }
-                                        generated_tab.activate();
-
-                                        // SLOT IN SOME EXAMPLE IMAGE CONTENT
-                                        var contentImage = tab["contentImage"];
-                                        SlotEl.innerHTML = `<img src='${contentImage}' width="1280">`;
-                                    }
-
-                                    item["tabs"].forEach((tab) => {
-                                        var generated_tab = new Tabs.partials.Tab({
-                                            "label": tab["label"]
-                                        });
-                                        Tabs.addTab(generated_tab);
-                                        generated_tabs.push(generated_tab);
-
-                                        generated_tab.onClick(() => {
-                                            tabClicked(generated_tab, tab);
-                                        });
-
-                                    });
-
-                                    // SELECT FIRST TAB BY DEFAULT
-                                    tabClicked(generated_tabs[0], item["tabs"][0]);
-
-                                });
-
-                                // LETS CLICK ON FIRST SIDENAV AND TAB FOR DEFAULT VALUES;
-                                if(!window.firstClicked){
-                                    generated_module.el.click();
-                                    window.firstClicked = true;
-                                }
-                                
+                                modules[item["label"]]["submodules"][tab["label"]] = generated_submodule;
                             });
+
+                            generated_module.onClick((e) => {
+                                e.preventDefault();
+
+                                SubNav.setModuleIndicatorName(item["label"]);
+                                SubNav.setModuleIndicatorIcon(item["icon"]);
+
+                                // CLEAR TABS
+                                Tabs.unmount();
+
+                                // ADD TABS IN SUBNAV
+                                Tabs = new SubNav.partials.Tabs();
+                                SubNav.addTabs(Tabs);
+
+                                var generated_tabs = [];
+
+                                function tabClicked(generated_tab, tab){
+                                    console.log('Tab '+tab["label"]+' clicked');
+                                    for (var k = 0; k < generated_tabs.length; k++){
+                                        generated_tabs[k].deactivate();
+                                    }
+                                    generated_tab.activate();
+
+                                    // SLOT IN SOME EXAMPLE IMAGE CONTENT
+                                    var contentImage = tab["contentImage"];
+                                    SlotEl.innerHTML = `<img src='${contentImage}' width="1280">`;
+                                }
+
+                                item["tabs"].forEach((tab) => {
+                                    var generated_tab = new Tabs.partials.Tab({
+                                        "label": tab["label"]
+                                    });
+                                    Tabs.addTab(generated_tab);
+                                    generated_tabs.push(generated_tab);
+
+                                    generated_tab.onClick(() => {
+                                        tabClicked(generated_tab, tab);
+                                    });
+
+                                });
+
+                                // SELECT FIRST TAB BY DEFAULT
+                                tabClicked(generated_tabs[0], item["tabs"][0]);
+
+                            });
+
+                            // LETS CLICK ON FIRST SIDENAV AND TAB FOR DEFAULT VALUES;
+                            if(!window.firstClicked){
+                                generated_module.el.click();
+                                window.firstClicked = true;
+                            }
                             
-                        }
-                    })(section);
-                }
+                        });
+                        
+                    }
+                })(section);
             }
+        
 
-            function getFilteredMenuObject(q){
+            function filterMenu(q){
                 q = q.toLowerCase();
-                var ro = JSON.parse(JSON.stringify(default_menu));
 
-                if(q == ""){
-                    for (var sectionIndex in ro){
-                        for (var groupIndex in ro[sectionIndex]["groups"]){
-                            for(var itemIndex in ro[sectionIndex]["groups"][groupIndex]){
-                                for(var tabIndex in ro[sectionIndex]["groups"][groupIndex][itemIndex]["tabs"]){
-                                    ro[sectionIndex]["groups"][groupIndex][itemIndex]["tabs"][tabIndex]['hide_in_menu'] = true;
-                                }
+                for(var sectionIndex in sections){
+                    var section = sections[sectionIndex];
+                    
+                    for(var moduleKey in section){
+                        
+                        var found = false;
+                        var module = section[moduleKey]["module"];
+
+                        module.showSubmodules(); // always show submodules
+
+                        for(var submoduleKey in section[moduleKey]["submodules"]){
+                            var submodule = section[moduleKey]["submodules"][submoduleKey];
+                            if(submoduleKey.toLowerCase().indexOf(q) == -1){
+                                submodule.hide();
+                            }else{
+                                submodule.show();
+                                found = true;
                             }
                         }
-                    }
-                }else{
-                    for (var sectionIndex in ro){
-                        for (var groupIndex in ro[sectionIndex]["groups"]){
-                            for(var itemIndex in ro[sectionIndex]["groups"][groupIndex]){
-                                for(var tabIndex in ro[sectionIndex]["groups"][groupIndex][itemIndex]["tabs"]){
-                                    if(ro[sectionIndex]["groups"][groupIndex][itemIndex]["tabs"][tabIndex]["label"].toLowerCase().indexOf(q) == -1){
-                                        ro[sectionIndex]["groups"][groupIndex][itemIndex]["tabs"][tabIndex]['hide_in_menu'] = true;
-                                    }else{
-                                        ro[sectionIndex]["groups"][groupIndex][itemIndex]["tabs"][tabIndex]['hide_in_menu'] = false;
-                                        console.log(ro[sectionIndex]["groups"][groupIndex][itemIndex]["tabs"][tabIndex]["label"].toLowerCase())
-                                    }
-                                }
+
+                        if(moduleKey.toLowerCase().indexOf(q) == -1){
+                            if(!found){
+                                module.hide();
+                            }else{
+                                module.show();
                             }
+                        }else{
+                            module.show();
                         }
                     }
-
-                    // clear all sections without any match
-                    for (var sectionIndex in ro){
-                        for (var groupIndex in ro[sectionIndex]["groups"]){
-                            var itemsHiddenCounter = 0;
-                            for(var itemIndex in ro[sectionIndex]["groups"][groupIndex]){
-                                var tabsHiddenCounter = 0;
-                                for(var tabIndex in ro[sectionIndex]["groups"][groupIndex][itemIndex]["tabs"]){
-                                    if(ro[sectionIndex]["groups"][groupIndex][itemIndex]["tabs"][tabIndex]['hide_in_menu']){
-                                        tabsHiddenCounter += 1;
-                                    }
-                                }
-                                if(ro[sectionIndex]["groups"][groupIndex][itemIndex]["tabs"].length == tabsHiddenCounter && ro[sectionIndex]["groups"][groupIndex][itemIndex]["title"].toLowerCase().indexOf(q) == -1){
-                                    ro[sectionIndex]["groups"][groupIndex][itemIndex]['hide_in_menu'] = true;
-                                    itemsHiddenCounter += 1;
-                                }
-                            }
-                            if(Object.keys(ro[sectionIndex]["groups"][groupIndex]).length == itemsHiddenCounter){
-                                ro[sectionIndex]["groups"][groupIndex]['hide_in_menu'] = true;
-                            }
-                        }
-                    }
-
                 }
-
-                return ro;
             }
-
-            fillSidenav(getFilteredMenuObject(""), true);
-
 
         </script>
 

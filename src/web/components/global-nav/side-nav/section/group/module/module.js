@@ -53,6 +53,14 @@ class Module extends Core {
         this._findDOMEl(".hig__global-nav__side-nav__section__group__module__submodules", this.el).classList.remove("hig__global-nav__side-nav__section__group__module__submodules--show");
     }
 
+    show(){
+        this.el.classList.remove("hig__global-nav__side-nav__section__group__module--hide");
+    }
+
+    hide(){
+        this.el.classList.add("hig__global-nav__side-nav__section__group__module--hide");
+    }
+
 }
 
 Module._interface = Interface['components']['GlobalNav']['partials']['SideNav']['partials']['Section']['partials']['Group']['partials']['Module'];
