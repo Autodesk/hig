@@ -217,8 +217,7 @@
                                 "icon": "layout",
                                 "label": "Layout",
                                 "link": "#",
-                                "tabs": [
-                                ]
+                                "contentImage": "content/GlobalConstruction__Field__ChecklistsTemplates@2x.png"
                             },
                             {
                                 "icon": "buildingops",
@@ -501,23 +500,29 @@
                             }
                             groupState["modules"][item["label"]] = moduleObj;
 
-                            // render subitems for search
-                            item["tabs"].forEach((tab) => {
-                                var generated_submodule = new generated_module.partials.Submodule({
-                                    "title": tab["label"],
-                                    "link": "#"
-                                });
-                                generated_module.addSubmodule(generated_submodule);
+                            if(item["tabs"]){
+                                // render subitems for search
+                                item["tabs"].forEach((tab) => {
+                                    var generated_submodule = new generated_module.partials.Submodule({
+                                        "title": tab["label"],
+                                        "link": "#"
+                                    });
+                                    generated_module.addSubmodule(generated_submodule);
 
-                                // save to our array for state mngmt
-                                groupState["modules"][item["label"]]["submodules"][tab["label"]] = generated_submodule;
-                            });
+                                    // save to our array for state mngmt
+                                    groupState["modules"][item["label"]]["submodules"][tab["label"]] = generated_submodule;
+                                });
+                            }
 
                             generated_module.onClick((e) => {
                                 e.preventDefault();
 
+                                // SET SUBNAV LABEL AND ICON
                                 SubNav.setModuleIndicatorName(item["label"]);
                                 SubNav.setModuleIndicatorIcon(item["icon"]);
+
+                                // CLOSE SIDENAV
+                                GlobalNav.hideSideNav();
 
                                 // CLEAR TABS
                                 Tabs.unmount();
@@ -540,21 +545,30 @@
                                     SlotEl.innerHTML = `<img src='${contentImage}' width="1280">`;
                                 }
 
-                                item["tabs"].forEach((tab) => {
-                                    var generated_tab = new Tabs.partials.Tab({
-                                        "label": tab["label"]
+                                if(item["tabs"]){
+                                    item["tabs"].forEach((tab) => {
+                                        var generated_tab = new Tabs.partials.Tab({
+                                            "label": tab["label"]
+                                        });
+                                        Tabs.addTab(generated_tab);
+                                        generated_tabs.push(generated_tab);
+
+                                        generated_tab.onClick(() => {
+                                            tabClicked(generated_tab, tab);
+                                        });
+
                                     });
-                                    Tabs.addTab(generated_tab);
-                                    generated_tabs.push(generated_tab);
 
-                                    generated_tab.onClick(() => {
-                                        tabClicked(generated_tab, tab);
-                                    });
+                                    // SELECT FIRST TAB BY DEFAULT
+                                    tabClicked(generated_tabs[0], item["tabs"][0]);
+                                    
+                                }else{
+                                    // SLOT IN SOME EXAMPLE IMAGE CONTENT
+                                    var contentImage = item["contentImage"];
+                                    SlotEl.innerHTML = `<img src='${contentImage}' width="1280">`;
+                                }
 
-                                });
-
-                                // SELECT FIRST TAB BY DEFAULT
-                                tabClicked(generated_tabs[0], item["tabs"][0]);
+                                
 
                             });
 
@@ -630,8 +644,6 @@
                                     anythingfound = true;
                                 }
                             })(groups, groupIndex);
-                            
-
                         }
 
                         if(!anythingfound){
