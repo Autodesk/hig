@@ -422,110 +422,127 @@
             SlotEl.innerHTML = `Some example default content`;
             GlobalNav.addSlot(SlotEl);
 
-            var sections = [];
-
-            function fillSidenav(menu, default_menu){
-                console.log(menu);
-
-                for (var index in sections){
-                    sections[index].unmount();
-                }
-                sections = [];
+            var fillSidenav = function(menu, default_menu){
 
                 // CONSTRUCT OUR SIDENAV
                 for (var section in menu){
-                    // ADD A SECTION IN OUR SIDENAV
-                    var generated_section = new SideNav.partials.Section({
-                        "headerLabel": menu[section]["headerLabel"],
-                        "headerName": menu[section]["headerName"]
-                    });
-                    SideNav.addSection(generated_section);
-                    sections.push(generated_section);
 
-                    for (var group in menu[section]["groups"]){
-                        if(!menu[section]["groups"][group]["hide_in_menu"]){
+                    (function(section){
+                        // INTERNAL HELPER ARRAYS TO KEEP STATE
+                        var modules = [];
+                        
+                        // ADD A SECTION IN OUR SIDENAV
+                        var generated_section = new SideNav.partials.Section({
+                            "headerLabel": menu[section]["headerLabel"],
+                            "headerName": menu[section]["headerName"]
+                        });
+                        SideNav.addSection(generated_section);
+
+                        // ADD A COLLAPSE ICON TO OUR SIDENAV SECTION HEADER
+                        var generated_collapseIcon = new generated_section.partials.Collapse();
+                        generated_section.addCollapse(generated_collapseIcon);
+                        
+                        var collapse_submodules = true;
+                        generated_collapseIcon.onClick((e) => {
+                            if(collapse_submodules){
+                                generated_collapseIcon.minimize();
+                                for (var module in modules){
+                                    modules[module].showSubmodules();
+                                }
+                            }else{
+                                generated_collapseIcon.maximize();
+                                for (var module in modules){
+                                    modules[module].hideSubmodules();
+                                }
+                            }
+                            collapse_submodules = !collapse_submodules;
+                        });
+
+                        for (var group in menu[section]["groups"]){
+
                             // ADD A GROUP TO OUR SECTION
                             var generated_group = new generated_section.partials.Group();
                             generated_section.addGroup(generated_group);
 
                             var current_group = menu[section]["groups"][group];
                             current_group.forEach((item) => {
-                                // ADD SOME ITEMS TO OUR GROUP
 
-                                if(!item["hide_in_menu"]){
-                                    var generated_module = new generated_group.partials.Module({
-                                        "icon": item["icon"],
-                                        "title": item["title"],
-                                        "link": item["link"]
+                                // ADD SOME MODULES TO OUR GROUP                               
+                                var generated_module = new generated_group.partials.Module({
+                                    "icon": item["icon"],
+                                    "title": item["title"],
+                                    "link": item["link"]
+                                });
+                                generated_group.addModule(generated_module);
+
+                                // save to our array for state mngmt
+                                modules.push(generated_module);
+
+                                // render subitems for search
+                                item["tabs"].forEach((tab) => {
+                                    var generated_submodule = new generated_module.partials.Submodule({
+                                        "title": tab["label"],
+                                        "link": "#"
                                     });
-                                    generated_group.addModule(generated_module);
+                                    generated_module.addSubmodule(generated_submodule);
+                                });
 
-                                    // render subitems for search
-                                    item["tabs"].forEach((tab) => {
-                                        var generated_submodule = new generated_module.partials.Submodule({
-                                            "title": tab["label"],
-                                            "link": "#"
-                                        });
-                                        generated_module.addSubmodule(generated_submodule);
-                                    });
+                                generated_module.onClick((e) => {
+                                    e.preventDefault();
+                                    console.log('Item '+item["title"]+' clicked');
 
-                                    generated_module.showSubmodules();
+                                    SubNav.setModuleIndicatorName(item["title"]);
+                                    SubNav.setModuleIndicatorIcon(item["icon"]);
 
-                                    generated_module.onClick((e) => {
-                                        e.preventDefault();
-                                        console.log('Item '+item["title"]+' clicked');
+                                    // CLEAR TABS
+                                    Tabs.unmount();
 
-                                        SubNav.setModuleIndicatorName(item["title"]);
-                                        SubNav.setModuleIndicatorIcon(item["icon"]);
+                                    // ADD TABS IN SUBNAV
+                                    Tabs = new SubNav.partials.Tabs();
+                                    SubNav.addTabs(Tabs);
 
-                                        // CLEAR TABS
-                                        Tabs.unmount();
+                                    var generated_tabs = [];
 
-                                        // ADD TABS IN SUBNAV
-                                        Tabs = new SubNav.partials.Tabs();
-                                        SubNav.addTabs(Tabs);
-
-                                        var generated_tabs = [];
-
-                                        function tabClicked(generated_tab, tab){
-                                            console.log('Tab '+tab["label"]+' clicked');
-                                            for (var k = 0; k < generated_tabs.length; k++){
-                                                generated_tabs[k].deactivate();
-                                            }
-                                            generated_tab.activate();
-
-                                            // SLOT IN SOME EXAMPLE IMAGE CONTENT
-                                            var contentImage = tab["contentImage"];
-                                            SlotEl.innerHTML = `<img src='${contentImage}' width="1280">`;
+                                    function tabClicked(generated_tab, tab){
+                                        console.log('Tab '+tab["label"]+' clicked');
+                                        for (var k = 0; k < generated_tabs.length; k++){
+                                            generated_tabs[k].deactivate();
                                         }
+                                        generated_tab.activate();
 
-                                        item["tabs"].forEach((tab) => {
-                                            var generated_tab = new Tabs.partials.Tab({
-                                                "label": tab["label"]
-                                            });
-                                            Tabs.addTab(generated_tab);
-                                            generated_tabs.push(generated_tab);
+                                        // SLOT IN SOME EXAMPLE IMAGE CONTENT
+                                        var contentImage = tab["contentImage"];
+                                        SlotEl.innerHTML = `<img src='${contentImage}' width="1280">`;
+                                    }
 
-                                            generated_tab.onClick(() => {
-                                                tabClicked(generated_tab, tab);
-                                            });
-
+                                    item["tabs"].forEach((tab) => {
+                                        var generated_tab = new Tabs.partials.Tab({
+                                            "label": tab["label"]
                                         });
+                                        Tabs.addTab(generated_tab);
+                                        generated_tabs.push(generated_tab);
 
-                                        // SELECT FIRST TAB BY DEFAULT
-                                        tabClicked(generated_tabs[0], item["tabs"][0]);
+                                        generated_tab.onClick(() => {
+                                            tabClicked(generated_tab, tab);
+                                        });
 
                                     });
 
-                                    // LETS CLICK ON FIRST SIDENAV AND TAB FOR DEFAULT VALUES;
-                                    if(!window.firstClicked){
-                                        generated_module.el.click();
-                                        window.firstClicked = true;
-                                    }
+                                    // SELECT FIRST TAB BY DEFAULT
+                                    tabClicked(generated_tabs[0], item["tabs"][0]);
+
+                                });
+
+                                // LETS CLICK ON FIRST SIDENAV AND TAB FOR DEFAULT VALUES;
+                                if(!window.firstClicked){
+                                    generated_module.el.click();
+                                    window.firstClicked = true;
                                 }
+                                
                             });
+                            
                         }
-                    }
+                    })(section);
                 }
             }
 
