@@ -33,6 +33,14 @@ class Submodule extends Core {
         this._findDOMEl("a", this.el).setAttribute("href", link);
     }
 
+    show(){
+        this.el.classList.remove("hig__global-nav__side-nav__section__group__module__submodule--hide");
+    }
+
+    hide(){
+        this.el.classList.add("hig__global-nav__side-nav__section__group__module__submodule--hide");
+    }
+
 }
 
 Submodule._interface = Interface['components']['GlobalNav']['partials']['SideNav']['partials']['Section']['partials']['Group']['partials']['Module']['partials']['Submodule'];
