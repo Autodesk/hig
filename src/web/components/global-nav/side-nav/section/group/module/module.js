@@ -20,7 +20,7 @@ class Module extends Core {
     }
 
     onClick(fn){
-        return this._attachListener("click", this.el, this.el, fn);
+        return this._attachListener("click", ".hig__global-nav__side-nav__section__group__module--link", this.el, fn);
     }
 
     onHover(fn){

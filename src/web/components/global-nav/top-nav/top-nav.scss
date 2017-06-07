@@ -19,7 +19,8 @@ $group-height: 56px;
     align-items: center;
 
     &__group {
-        height: $group-height;
+        height: 32px;
+        line-height: 32px;
         display: flex;
         align-items: center;
 
