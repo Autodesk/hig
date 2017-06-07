@@ -8,6 +8,7 @@
     color: $gray-darker;
     margin-left: 20px;
     cursor: pointer;
+    user-select: none;
 
     &:first-child {
         margin-left: 0;
