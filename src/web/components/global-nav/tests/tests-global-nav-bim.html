@@ -387,8 +387,8 @@
                 if(menu_open){
                     GlobalNav.hideSideNav();
                 }else{
-                    SideNavSearch.setQuery(""); // reset any search
-                    filterMenu("");
+                    // SideNavSearch.setQuery(""); // reset any search
+                    // filterMenu("");
                     GlobalNav.showSideNav();
                 }
                 menu_open = !menu_open;
@@ -539,47 +539,48 @@
             function buildTabs(item, selectedTab){
                 var generated_tabs = [];
 
-                                // SET SUBNAV LABEL AND ICON
-                                SubNav.setModuleIndicatorName(item["label"]);
-                                SubNav.setModuleIndicatorIcon(item["icon"]);
+                // SET SUBNAV LABEL AND ICON
+                SubNav.setModuleIndicatorName(item["label"]);
+                SubNav.setModuleIndicatorIcon(item["icon"]);
 
-                                // CLOSE SIDENAV
-                                GlobalNav.hideSideNav();
+                // CLOSE SIDENAV
+                GlobalNav.hideSideNav();
 
-                                // CLEAR TABS
-                                Tabs.unmount();
+                // CLEAR TABS
+                Tabs.unmount();
 
-                                // ADD TABS IN SUBNAV
-                                Tabs = new SubNav.partials.Tabs();
-                                SubNav.addTabs(Tabs);
+                // ADD TABS IN SUBNAV
+                Tabs = new SubNav.partials.Tabs();
+                SubNav.addTabs(Tabs);
 
                 function tabClicked(generated_tab, tabContentImage){
-                                    for (var k = 0; k < generated_tabs.length; k++){
+                    for (var k = 0; k < generated_tabs.length; k++){
                         generated_tabs[k]["tab"].deactivate();
-                                    }
-                                    generated_tab.activate();
+                    }
+                    generated_tab.activate();
 
-                                    // SLOT IN SOME EXAMPLE IMAGE CONTENT
+                    // SLOT IN SOME EXAMPLE IMAGE CONTENT
                     SlotEl.innerHTML = `<img src='${tabContentImage}' width="1280">`;
-                                }
+                }
 
-                                if(item["tabs"]){
-                                    item["tabs"].forEach((tab) => {
-                                        var generated_tab = new Tabs.partials.Tab({
-                                            "label": tab["label"]
-                                        });
-                                        Tabs.addTab(generated_tab);
+                if(item["tabs"]){
+                    item["tabs"].forEach((tab) => {
+                        var generated_tab = new Tabs.partials.Tab({
+                            "label": tab["label"]
+                        });
+                        Tabs.addTab(generated_tab);
                         generated_tabs.push({
                             "label": tab["label"],
-                            "tab": generated_tab});
+                            "tab": generated_tab
+                        });
 
-                                        generated_tab.onClick(() => {
+                        generated_tab.onClick(() => {
                             tabClicked(generated_tab, tab["contentImage"]);
-                                        });
+                        });
 
-                                    });
+                    });
 
-                                    // SELECT FIRST TAB BY DEFAULT
+                    // SELECT FIRST TAB BY DEFAULT
                     if(!selectedTab){
                         tabClicked(generated_tabs[0]["tab"], item["tabs"][0]["contentImage"]);
                     }else{
@@ -591,12 +592,12 @@
                         tabClicked(foundTab["tab"], selectedTab["contentImage"]);
                     }
 
-                                }else{
-                                    // SLOT IN SOME EXAMPLE IMAGE CONTENT
-                                    var contentImage = item["contentImage"];
-                                    SlotEl.innerHTML = `<img src='${contentImage}' width="1280">`;
-                                }
-                            }
+                }else{
+                    // SLOT IN SOME EXAMPLE IMAGE CONTENT
+                    var contentImage = item["contentImage"];
+                    SlotEl.innerHTML = `<img src='${contentImage}' width="1280">`;
+                }
+            }
 
 
             function filterMenu(q, closeSubmodules){
