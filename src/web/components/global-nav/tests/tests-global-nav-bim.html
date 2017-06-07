@@ -5,6 +5,7 @@
     </head>
     <body>
         <style>
+            /* CUSTOM STYLES FOR THIS DEMO */
             body, html{
                 margin: 0; padding: 0;
             }
@@ -17,316 +18,106 @@
         </style>
 
         <script>
+            var menuModel = [
+                { type: "section", label: "Project", name: "Oakwood Medical Center", groups: [
+                    { type: "group", modules: [
+                        { type: "module", icon: "insight", label: "Insight", submodules: [
+                            { type: "submodule", label: "Overview", contentImage: "content/Oakwood__Insight__Overview@2x.png" },
+                            { type: "submodule", label: "Risk", contentImage: "content/Oakwood__Insight__Risk@2x.png" },
+                            { type: "submodule", label: "Quality", contentImage: "content/Oakwood__Insight__Quality@2x.png" },
+                            { type: "submodule", label: "Reports", contentImage: "content/Oakwood__Insight__Reports@2x.png" }
+                        ]}
+                    ]},
+                    { type: "group", modules: [
+                        { type: "module", icon: "construction-management", label: "Authoring Collaboration", submodules: [
+                            { type: "submodule", label: "Cloud Work Sharing", contentImage: "content/Oakwood__AuthoringCollaboration__CloudWorkSharing@2x.png" },
+                            { type: "submodule", label: "Fluent", contentImage: "content/Oakwood__AuthoringCollaboration__Fluent@2x.png" },
+                            { type: "submodule", label: "Approvals", contentImage: "content/Oakwood__AuthoringCollaboration__Approvals@2x.png" }
+                        ]},
+                        { type: "module", icon: "document-management", label: "Document Management", submodules: [
+                            { type: "submodule", label: "Document Workflow", contentImage: "content/Oakwood__DocumentManagement__DocumentWorkflow@2x.png" }
+                        ]},
+                        { type: "module", icon: "placeholder", label: "Model Coordination", submodules: [
+                            { type: "submodule", label: "Overview", contentImage: "content/Oakwood__ModelCoordination__Overview@2x.png" },
+                            { type: "submodule", label: "Models", contentImage: "content/Oakwood__ModelCoordination__Models@2x.png" },
+                            { type: "submodule", label: "Checklists", contentImage: "content/Oakwood__ModelCoordination__Checklists@2x.png" },
+                            { type: "submodule", label: "Clashes", contentImage: "content/Oakwood__ModelCoordination__Clashes@2x.png" },
+                            { type: "submodule", label: "Issues", contentImage: "content/Oakwood__ModelCoordination__Issues@2x.png" }
+                        ]},
+                        { type: "module", icon: "project-management", label: "Project Management", submodules: [
+                            { type: "submodule", label: "RFIs", contentImage: "content/Oakwood__ProjectManagement__RFIs@2x.png" },
+                            { type: "submodule", label: "Submittals", contentImage: "content/Oakwood__ProjectManagement__Submittals@2x.png" },
+                            { type: "submodule", label: "Daily Log", contentImage: "content/Oakwood__ProjectManagement__DailyLog@2x.png" },
+                        ]},
+                        { type: "module", icon: "quantities", label: "Quantities", submodules: [
+                            { type: "submodule", label: "2D", contentImage: "content/Oakwood__Quantities__2D@2x.png" },
+                            { type: "submodule", label: "3D", contentImage: "content/Oakwood__Quantities__3D@2x.png" },
+                        ]},
+                        { type: "module", icon: "cost-control", label: "Cost Control", submodules: [
+                            { type: "submodule", label: "Bid Management", contentImage: "content/Oakwood__CostControl__BidManagement@2x.png" },
+                            { type: "submodule", label: "Estimating", contentImage: "content/Oakwood__CostControl__Estimating@2x.png" },
+                            { type: "submodule", label: "Budget", contentImage: "content/Oakwood__CostControl__Budget@2x.png" },
+                            { type: "submodule", label: "Change Orders", contentImage: "content/Oakwood__CostControl__ChangeOrders@2x.png" },
+                            { type: "submodule", label: "Pay Applications", contentImage: "content/Oakwood__CostControl__PayApplications@2x.png" },
+                        ]},
+                        { type: "module", icon: "schedule", label: "Schedule", submodules: [
+                            { type: "submodule", label: "Master Schedule", contentImage: "content/Oakwood__Schedule__MasterSchedule@2x.png" },
+                            { type: "submodule", label: "Production Plan", contentImage: "content/Oakwood__Schedule__ProductionPlan@2x.png" }
+                        ]},
+                        { type: "module", icon: "field", label: "Field", submodules: [
+                            { type: "submodule", label: "Quality", contentImage: "content/Oakwood__Field__Quality@2x.png" },
+                            { type: "submodule", label: "Safety", contentImage: "content/Oakwood__Field__Safety@2x.png" },
+                            { type: "submodule", label: "Commissioning", contentImage: "content/Oakwood__Field__Commissioning@2x.png" },
+                            { type: "submodule", label: "Checklists", contentImage: "content/Oakwood__Field__Checklists@2x.png" },
+                            { type: "submodule", label: "Issues", contentImage: "content/Oakwood__Field__Issues@2x.png" },
+                            { type: "submodule", label: "Activities", contentImage: "content/Oakwood__Field__Activities@2x.png" },
+                        ]},
+                        { type: "module", icon: "layout", label: "Layout", contentImage: "content/Oakwood__Layout@2x.png" },
+                        { type: "module", icon: "buildingops", label: "Building Ops", contentImage: "content/Oakwood__BuildingOps@2x.png" },
+                    ]},
+                    { type: "group", modules: [
+                        { type: "module", icon: "library", label: "Library", contentImage: "content/Oakwood__Library@2x.png" },
+                        { type: "module", icon: "photos", label: "Photos", contentImage: "content/Oakwood__Photos@2x.png" },
+                        { type: "module", icon: "assets", label: "Assets", contentImage: "content/Oakwood__Assets@2x.png" },
+                        { type: "module", icon: "locations", label: "Location", contentImage: "content/Oakwood__Locations@2x.png" }
+                    ]},
+                    { type: "group", modules: [
+                        { type: "module", icon: "project-admin", label: "Project Admin", contentImage: "content/Oakwood__ProjectAdmin@2x.png" }
+                    ]}
+                ]},
+                { type: "section", label: "Account", name: "Global Construction", groups: [
+                    { type: "group", modules: [
+                        { type: "module", icon: "insight", label: "Insight", contentImage: "content/GlobalConstruction__Insight@2x.png" },
+                        { type: "module", icon: "field", label: "Field", submodules: [
+                            { type: "submodule", label: "Checklists Templates", contentImage: "content/GlobalConstruction__Field__ChecklistsTemplates@2x.png" },
+                            { type: "submodule", label: "Issues Templates", contentImage: "content/GlobalConstruction__Field__IssuesTemplates@2x.png" }
+                        ]},
+                        { type: "module", icon: "account-admin", label: "Account Admin", submodules: [
+                            { type: "submodule", label: "Projects", contentImage: "content/GlobalConstruction__AccountAdmin__Projects@2x.png" },
+                            { type: "submodule", label: "Members", contentImage: "content/GlobalConstruction__AccountAdmin__Members@2x.png" },
+                            { type: "submodule", label: "Companies", contentImage: "content/GlobalConstruction__AccountAdmin__Companies@2x.png" },
+                            { type: "submodule", label: "Services", contentImage: "content/GlobalConstruction__AccountAdmin__Services@2x.png" },
+                            { type: "submodule", label: "Analytics", contentImage: "content/GlobalConstruction__AccountAdmin__Analytics@2x.png" },
+                            { type: "submodule", label: "Settings", contentImage: "content/GlobalConstruction__AccountAdmin__Settings@2x.png" }
+                        ]}
+                    ]}
+                ]}
+            ];
 
-            var default_menu = [
-                {
-                    "headerLabel": "Project",
-                    "headerName": "Oakwood Medical Center",
-                    "groups": [
-                        [
-                            {
-                                "icon": "insight",
-                                "label": "Insight",
-                                "link": "#",
-                                "tabs": [
-                                    {
-                                        "label": "Overview",
-                                        "contentImage": "content/Oakwood__Insight__Overview@2x.png"
-                                    },
-                                    {
-                                        "label": "Risk",
-                                        "contentImage": "content/Oakwood__Insight__Risk@2x.png"
-                                    },
-                                    {
-                                        "label": "Quality",
-                                        "contentImage": "content/Oakwood__Insight__Quality@2x.png"
-                                    },
-                                    {
-                                        "label": "Reports",
-                                        "contentImage": "content/Oakwood__Insight__Reports@2x.png"
-                                    }
-                                ]
-                            }
-                        ],
-                        [
-                            {
-                                "icon": "construction-management",
-                                "label": "Authoring Collaboration",
-                                "link": "#",
-                                "tabs": [
-                                    {
-                                        "label": "Cloud Work Sharing",
-                                        "contentImage": "content/Oakwood__AuthoringCollaboration__CloudWorkSharing@2x.png"
-                                    },
-                                    {
-                                        "label": "Fluent",
-                                        "contentImage": "content/Oakwood__AuthoringCollaboration__Fluent@2x.png"
-                                    },
-                                    {
-                                        "label": "Approvals",
-                                        "contentImage": "content/Oakwood__AuthoringCollaboration__Approvals@2x.png"
-                                    }
-                                ]
-                            },
-                            {
-                                "icon": "document-management",
-                                "label": "Document Management",
-                                "link": "#",
-                                "tabs": [
-                                    {
-                                        "label": "Document Workflow",
-                                        "contentImage": "content/Oakwood__DocumentManagement__DocumentWorkflow@2x.png"
-                                    }
-                                ]
-                            },
-                            {
-                                "icon": "placeholder",
-                                "label": "Model Coordination",
-                                "link": "#",
-                                "tabs": [
-                                    {
-                                        "label": "Overview",
-                                        "contentImage": "content/Oakwood__ModelCoordination__Overview@2x.png"
-                                    },
-                                    {
-                                        "label": "Models",
-                                        "contentImage": "content/Oakwood__ModelCoordination__Models@2x.png"
-                                    },
-                                    {
-                                        "label": "Checklists",
-                                        "contentImage": "content/Oakwood__ModelCoordination__Checklists@2x.png"
-                                    },
-                                    {
-                                        "label": "Clashes",
-                                        "contentImage": "content/Oakwood__ModelCoordination__Clashes@2x.png"
-                                    },
-                                    {
-                                        "label": "Issues",
-                                        "contentImage": "content/Oakwood__ModelCoordination__Issues@2x.png"
-                                    }
-                                ]
-                            },
-                            {
-                                "icon": "project-management",
-                                "label": "Project Management",
-                                "link": "#",
-                                "tabs": [
-                                    {
-                                        "label": "RFIs",
-                                        "contentImage": "content/Oakwood__ProjectManagement__RFIs@2x.png"
-                                    },
-                                    {
-                                        "label": "Submittals",
-                                        "contentImage": "content/Oakwood__ProjectManagement__Submittals@2x.png"
-                                    },
-                                    {
-                                        "label": "Daily Log",
-                                        "contentImage": "content/Oakwood__ProjectManagement__DailyLog@2x.png"
-                                    },
-                                ]
-                            },
-                            {
-                                "icon": "quantities",
-                                "label": "Quantities",
-                                "link": "#",
-                                "tabs": [
-                                    {
-                                        "label": "2D",
-                                        "contentImage": "content/Oakwood__Quantities__2D@2x.png"
-                                    },
-                                    {
-                                        "label": "3D",
-                                        "contentImage": "content/Oakwood__Quantities__3D@2x.png"
-                                    },
-                                ]
-                            },
-                            {
-                                "icon": "cost-control",
-                                "label": "Cost Control",
-                                "link": "#",
-                                "tabs": [
-                                    {
-                                        "label": "Bid Management",
-                                        "contentImage": "content/Oakwood__CostControl__BidManagement@2x.png"
-                                    },
-                                    {
-                                        "label": "Estimating",
-                                        "contentImage": "content/Oakwood__CostControl__Estimating@2x.png"
-                                    },
-                                    {
-                                        "label": "Budget",
-                                        "contentImage": "content/Oakwood__CostControl__Budget@2x.png"
-                                    },
-                                    {
-                                        "label": "Change Orders",
-                                        "contentImage": "content/Oakwood__CostControl__ChangeOrders@2x.png"
-                                    },
-                                    {
-                                        "label": "Pay Applications",
-                                        "contentImage": "content/Oakwood__CostControl__PayApplications@2x.png"
-                                    },
-                                ]
-                            },
-                            {
-                                "icon": "schedule",
-                                "label": "Schedule",
-                                "link": "#",
-                                "tabs": [
-                                    {
-                                        "label": "Master Schedule",
-                                        "contentImage": "content/Oakwood__Schedule__MasterSchedule@2x.png"
-                                    },
-                                    {
-                                        "label": "Production Plan",
-                                        "contentImage": "content/Oakwood__Schedule__ProductionPlan@2x.png"
-                                    }
-                                ]
-                            },
-                            {
-                                "icon": "field",
-                                "label": "Field",
-                                "link": "#",
-                                "tabs": [
-                                    {
-                                        "label": "Quality",
-                                        "contentImage": "content/Oakwood__Field__Quality@2x.png"
-                                    },
-                                    {
-                                        "label": "Safety",
-                                        "contentImage": "content/Oakwood__Field__Safety@2x.png"
-                                    },
-                                    {
-                                        "label": "Commissioning",
-                                        "contentImage": "content/Oakwood__Field__Commissioning@2x.png"
-                                    },
-                                    {
-                                        "label": "Checklists",
-                                        "contentImage": "content/Oakwood__Field__Checklists@2x.png"
-                                    },
-                                    {
-                                        "label": "Issues",
-                                        "contentImage": "content/Oakwood__Field__Issues@2x.png"
-                                    },
-                                    {
-                                        "label": "Activities",
-                                        "contentImage": "content/Oakwood__Field__Activities@2x.png"
-                                    },
-                                ]
-                            },
-                            {
-                                "icon": "layout",
-                                "label": "Layout",
-                                "link": "#",
-                                "contentImage": "content/Oakwood__Layout@2x.png"
-                            },
-                            {
-                                "icon": "buildingops",
-                                "label": "Building Ops",
-                                "link": "#",
-                                "contentImage": "content/Oakwood__BuildingOps@2x.png"
-                            },
-                        ],
-                        [
-                            {
-                                "icon": "library",
-                                "label": "Library",
-                                "link": "#",
-                                "contentImage": "content/Oakwood__Library@2x.png"
-                            },
-                            {
-                                "icon": "photos",
-                                "label": "Photos",
-                                "link": "#",
-                                "contentImage": "content/Oakwood__Photos@2x.png"
-                            },
-                            {
-                                "icon": "assets",
-                                "label": "Assets",
-                                "link": "#",
-                                "contentImage": "content/Oakwood__Assets@2x.png"
-                            },
-                            {
-                                "icon": "locations",
-                                "label": "Location",
-                                "link": "#",
-                                "contentImage": "content/Oakwood__Locations@2x.png"
-                            }
-                        ],
-                        [
-                            {
-                                "icon": "project-admin",
-                                "label": "Project Admin",
-                                "link": "#",
-                                "contentImage": "content/Oakwood__ProjectAdmin@2x.png"
-                            }
-                        ]
-                    ]
-                },
-                {
-                    "headerLabel": "Account",
-                    "headerName": "Global Construction",
-                    "groups": [
-                        [
-                            {
-                                "icon": "insight",
-                                "label": "Insight",
-                                "link": "#",
-                                "contentImage": "content/GlobalConstruction__Insight@2x.png"
-                            },
-                            {
-                                "icon": "field",
-                                "label": "Field",
-                                "link": "#",
-                                "tabs": [
-                                    {
-                                        "label": "Checklists Templates",
-                                        "contentImage": "content/GlobalConstruction__Field__ChecklistsTemplates@2x.png"
-                                    },
-                                    {
-                                        "label": "Issues Templates",
-                                        "contentImage": "content/GlobalConstruction__Field__IssuesTemplates@2x.png"
-                                    }
-                                ]
-                            },
-                            {
-                                "icon": "account-admin",
-                                "label": "Account Admin",
-                                "link": "#",
-                                "tabs": [
-                                    {
-                                        "label": "Projects",
-                                        "contentImage": "content/GlobalConstruction__AccountAdmin__Projects@2x.png"
-                                    },
-                                    {
-                                        "label": "Members",
-                                        "contentImage": "content/GlobalConstruction__AccountAdmin__Members@2x.png"
-                                    },
-                                    {
-                                        "label": "Companies",
-                                        "contentImage": "content/GlobalConstruction__AccountAdmin__Companies@2x.png"
-                                    },
-                                    {
-                                        "label": "Services",
-                                        "contentImage": "content/GlobalConstruction__AccountAdmin__Services@2x.png"
-                                    },
-                                    {
-                                        "label": "Analytics",
-                                        "contentImage": "content/GlobalConstruction__AccountAdmin__Analytics@2x.png"
-                                    },
-                                    {
-                                        "label": "Settings",
-                                        "contentImage": "content/GlobalConstruction__AccountAdmin__Settings@2x.png"
-                                    }
-                                ]
-                            }
-                        ]
-                    ]
-                }
-            ]
+            // DEMO STATE VARS
+            menuModel["_menu_open"] = false;
 
             // CREATE GLOBALNAV COMPONENT
             var GlobalNav = new Hig.GlobalNav();
             GlobalNav.mount("body");
+
+            // EVENTS GLOBALNAV
+            GlobalNav.onHoverOutside(function(e){
+                if(menuModel["_menu_open"]){
+                    GlobalNav.hideSideNav();
+                    menuModel["_menu_open"] = !menuModel["_menu_open"];
+                }
+            })
 
             // ADD SIDENAV
             var SideNav = new GlobalNav.partials.SideNav();
@@ -338,6 +129,7 @@
             });
             SideNav.addSearch(SideNavSearch);
 
+            // EVENTS SIDENAV
             SideNavSearch.onInput(function(e){
                 // do example filter of sidenav
                 filterMenu(e.target.value);
@@ -358,53 +150,45 @@
 
             // ADD TOPNAV
             var TopNav = new GlobalNav.partials.TopNav({
-                "logo": "https://www.dexigner.com/images/news/xw/22856.jpg",
-                "logo_link": "#"
+                "logo": "bim-logo.png",
+                "logo_link": "http://autodesk.com"
             });
             GlobalNav.addTopNav(TopNav);
 
-            TopNav.setLogo("bim-logo.png"); // Update logo
-            TopNav.setLogoLink("http://autodesk.com"); // update logo link
-
-            // CREATE PROFILE
-            var MyProfile1 = new TopNav.partials.Profile({
-                image: "avatar/david-construction-project-manager.png",
-                name: "David Rogers",
-                email: "david.rogers@autodesk.com"
-            });
-
-            TopNav.addProfile(MyProfile1);
-
-            MyProfile1.setProfileSettingsLink('http://apple.com');
-            MyProfile1.setSignOutLink('http://google.com');
-
-            MyProfile1.onProfileImageClick(function(e){ MyProfile1.open() });
-            MyProfile1.onProfileClickOutside(function(e){ MyProfile1.close() });
-
-            // HAMBURGER OPENS/CLOSES SideNav
-            var menu_open = false;
+            // EVENTS TOPNAV
             TopNav.onHamburgerClick(function(e){
-                if(menu_open){
+                if(menuModel["_menu_open"]){
                     GlobalNav.hideSideNav();
                 }else{
                     GlobalNav.showSideNav();
                 }
-                menu_open = !menu_open;
+                menuModel["_menu_open"] = !menuModel["_menu_open"];
             });
 
-            GlobalNav.onHoverOutside(function(e){
-                if(menu_open){
-                    GlobalNav.hideSideNav();
-                    menu_open = !menu_open;
-                }
-            })
+            // ADD SEARCH TO TOPNAV
+            var TopNavSearch = new TopNav.partials.Search({
+                "placeholder": "Find anything"
+            });
+            TopNav.addSearch(TopNavSearch);
+
+            // ADD PROFILE
+            var MyProfile1 = new TopNav.partials.Profile({
+                image: "avatar/david-construction-project-manager.png",
+                name: "David Rogers",
+                email: "david.rogers@autodesk.com",
+                profileSettingsLink: "http://autodesk.com",
+                signOutLink: "http://autodesk.com"
+            });
+
+            TopNav.addProfile(MyProfile1);
+
+            // EVENTS PROFILE
+            MyProfile1.onProfileImageClick(function(e){ MyProfile1.open() });
+            MyProfile1.onProfileClickOutside(function(e){ MyProfile1.close() });
 
             // ADD SUBNAV
             var SubNav = new GlobalNav.partials.SubNav();
             GlobalNav.addSubNav(SubNav);
-
-            SubNav.setModuleIndicatorName("Documents Library");
-            SubNav.setModuleIndicatorIcon("hamburger");
 
             // ADD TABS IN SUBNAV
             var Tabs = new SubNav.partials.Tabs();
@@ -412,12 +196,12 @@
 
             // LISTEN TO MODULE INDICATOR CLICK IN SUBNAV
             SubNav.onModuleIndicatorClick(function(e){
-                if(menu_open){
+                if(menuModel["_menu_open"]){
                     GlobalNav.hideSideNav();
                 }else{
                     GlobalNav.showSideNav();
                 }
-                menu_open = !menu_open;
+                menuModel["_menu_open"] = !menuModel["_menu_open"];
             });
 
             // ADD SOME CONTENT
@@ -425,131 +209,112 @@
             SlotEl.innerHTML = "Some example default content";
             GlobalNav.addSlot(SlotEl);
 
-            var sections = [];
+            // LOOP OVER SECTIONS
+            menuModel.forEach(function(sectionModel){
 
-            // CONSTRUCT OUR SIDENAV
-            for (var section in default_menu){
+                // ADD A SECTION IN OUR SIDENAV
+                var generated_section = new SideNav.partials.Section({
+                    "headerLabel": sectionModel["label"],
+                    "headerName": sectionModel["name"]
+                });
+                SideNav.addSection(generated_section);
 
-                // SCOPE SCOPE SCOPE
-                (function(section){
-                    // ADD A SECTION IN OUR SIDENAV
-                    var generated_section = new SideNav.partials.Section({
-                        "headerLabel": default_menu[section]["headerLabel"],
-                        "headerName": default_menu[section]["headerName"]
-                    });
-                    SideNav.addSection(generated_section);
+                // ADD A COLLAPSE ICON TO OUR SIDENAV SECTION HEADER
+                var generated_collapseIcon = new generated_section.partials.Collapse();
+                generated_section.addCollapse(generated_collapseIcon);
 
-                    // ADD A COLLAPSE ICON TO OUR SIDENAV SECTION HEADER
-                    var generated_collapseIcon = new generated_section.partials.Collapse();
-                    generated_section.addCollapse(generated_collapseIcon);
+                // STORE IN MODEL FOR INTERNAL STATE
+                sectionModel['_generated_section'] = generated_section;
+                sectionModel['_generated_collapseIcon'] = generated_collapseIcon;
+                sectionModel['_collapsed'] = true;
 
-                    // INTERNAL HELPER ARRAYS TO KEEP STATE
-                    var sectionState = {
-                        "groups": [],
-                        "collapseIcon": generated_collapseIcon,
-                        "collapsed": true,
-                        "section": generated_section
-                    };
-                    sections.push(sectionState);
+                // LOOP OVER GROUPS
+                sectionModel["groups"].forEach(function(groupModel){
 
-                    // HANDLE SHOW/HIDE SUBMODULES ON [ + ] or [ - ] CLICK
-                    generated_collapseIcon.onClick(function(e){
-                        if(sectionState["collapsed"]){
-                            generated_collapseIcon.minimize();
-                            for (var groupIndex in sectionState["groups"]){
-                                for (var module in sectionState["groups"][groupIndex]["modules"]){
-                                    sectionState["groups"][groupIndex]["modules"][module]["module"].showSubmodules();
-                                }
-                            }
-                        }else{
-                            generated_collapseIcon.maximize();
-                            for (var groupIndex in sectionState["groups"]){
-                                for (var module in sectionState["groups"][groupIndex]["modules"]){
-                                    sectionState["groups"][groupIndex]["modules"][module]["module"].hideSubmodules();
-                                }
-                            }
-                        }
-                        sectionState["collapsed"] = !sectionState["collapsed"];
-                    });
+                    // ADD A GROUP TO OUR SECTION
+                    var generated_group = new generated_section.partials.Group();
+                    generated_section.addGroup(generated_group);
 
-                    for (var group in default_menu[section]["groups"]){
+                    // STORE IN MODEL FOR INTERNAL STATE
+                    groupModel["_generated_group"] = generated_group;
 
-                        // ADD A GROUP TO OUR SECTION
-                        var generated_group = new generated_section.partials.Group();
-                        generated_section.addGroup(generated_group);
+                    // LOOP OVER MODULES
+                    groupModel["modules"].forEach(function(moduleModel){
 
-                        // INTERNAL HELPER ARRAYS TO KEEP STATE
-                        var groupState = {
-                            "group": generated_group,
-                            "modules": {}
-                        };
-                        sectionState["groups"].push(groupState);
+                        // ADD SOME MODULES TO OUR GROUP
+                        var generated_module = new generated_group.partials.Module({
+                            "icon": moduleModel["icon"],
+                            "title": moduleModel["label"],
+                            "link": moduleModel["link"]
+                        });
+                        generated_group.addModule(generated_module);
 
-                        var current_group = default_menu[section]["groups"][group];
-                        current_group.forEach(function(item){
-
-                            // ADD SOME MODULES TO OUR GROUP
-                            var generated_module = new generated_group.partials.Module({
-                                "icon": item["icon"],
-                                "title": item["label"],
-                                "link": item["link"]
-                            });
-                            generated_group.addModule(generated_module);
-
-                            // save to our array for state mngmt
-                            var moduleObj = {
-                                "module": generated_module,
-                                "submodules": {}
-                            }
-                            groupState["modules"][item["label"]] = moduleObj;
-
-                            generated_module.onClick(function(e){
-                                e.preventDefault();
-                                if(item["tabs"]){
-                                    buildTabs(item, item["tabs"][0]);
-                                }else{
-                                    buildTabs(item);
-                                }
-                            });
-
-                            // LETS CLICK ON FIRST SIDENAV AND TAB FOR DEFAULT VALUES;
-                            if(!window.firstClicked){
-                                generated_module.el.click();
-                                window.firstClicked = true;
-                            }
-
-                            if(item["tabs"]){
-                                // render subitems for search
-                                item["tabs"].forEach(function(tab){
-                                    var generated_submodule = new generated_module.partials.Submodule({
-                                        "title": tab["label"],
-                                        "link": "#"
-                                    });
-                                    generated_module.addSubmodule(generated_submodule);
-
-                                    generated_submodule.onClick(function(e){
-                                        e.preventDefault();
-                                        buildTabs(item, tab);
-                                    });
-
-                                    // save to our array for state mngmt
-                                    groupState["modules"][item["label"]]["submodules"][tab["label"]] = generated_submodule;
+                        // STORE IN MODEL FOR INTERNAL STATE
+                        moduleModel["_generated_module"] = generated_module;
+                        
+                        // LOOP OVER SUBMODULES IF ANY
+                        if(moduleModel["submodules"]){
+                            moduleModel["submodules"].forEach(function(submoduleModel){
+                                var generated_submodule = new generated_module.partials.Submodule({
+                                    "title": submoduleModel["label"],
+                                    "link": "#"
                                 });
-                            }
+                                generated_module.addSubmodule(generated_submodule);                                
+
+                                // STORE IN MODEL FOR INTERNAL STATE
+                                submoduleModel["_generated_submodule"] = generated_submodule;
+
+                                // SUBMODULE EVENTS
+                                generated_submodule.onClick(function(e){
+                                    e.preventDefault();
+                                    buildTabs(moduleModel, submoduleModel);
+                                });
+                            });
+                        }
+
+                        // MODULE EVENTS
+                        generated_module.onClick(function(e){
+                            e.preventDefault();
+                            buildTabs(moduleModel);
                         });
 
+                        // HACKY: LETS CLICK ON FIRST SIDENAV AND TAB FOR DEFAULT VALUES;
+                        if(!window.firstClicked){
+                            generated_module.el.firstElementChild.click();
+                            window.firstClicked = true;
+                        }
+                    });
+
+                });
+
+                // SECTION EVENTS
+                generated_collapseIcon.onClick(function(e){
+                    if(sectionModel["_collapsed"]){
+                        generated_collapseIcon.minimize();
+                        sectionModel["groups"].map(function(groupModel){
+                            groupModel["modules"].map(function(moduleModel){
+                                moduleModel["_generated_module"].showSubmodules();
+                            });
+                        });
+                    }else{
+                        generated_collapseIcon.maximize();
+                        sectionModel["groups"].map(function(groupModel){
+                            groupModel["modules"].map(function(moduleModel){
+                                moduleModel["_generated_module"].hideSubmodules();
+                            });
+                        });
                     }
+                    sectionModel["_collapsed"] = !sectionModel["_collapsed"];
+                });
 
-                    
-                })(section);
-            }
+            });
 
-            function buildTabs(item, selectedTab){
-                var generated_tabs = [];
+            // BUILD OUR TABS IN THE SUBNAV
+            function buildTabs(moduleModel, selectedSubmoduleModel){
 
                 // SET SUBNAV LABEL AND ICON
-                SubNav.setModuleIndicatorName(item["label"]);
-                SubNav.setModuleIndicatorIcon(item["icon"]);
+                SubNav.setModuleIndicatorName(moduleModel["label"]);
+                SubNav.setModuleIndicatorIcon(moduleModel["icon"]);
 
                 // CLOSE SIDENAV
                 GlobalNav.hideSideNav();
@@ -561,49 +326,41 @@
                 Tabs = new SubNav.partials.Tabs();
                 SubNav.addTabs(Tabs);
 
-                function tabClicked(generated_tab, tabContentImage){
-                    for (var k = 0; k < generated_tabs.length; k++){
-                        generated_tabs[k]["tab"].deactivate();
-                    }
-                    generated_tab.activate();
-
-                    // SLOT IN SOME EXAMPLE IMAGE CONTENT
-                    SlotEl.innerHTML = "<img src='"+tabContentImage+"' width='1280'>";
-                }
-
-                if(item["tabs"]){
-                    item["tabs"].forEach(function(tab){
+                // LOOP OVER SUBMODULES IF ANY
+                if(moduleModel["submodules"]){
+                    moduleModel["submodules"].forEach(function(submoduleModel){
                         var generated_tab = new Tabs.partials.Tab({
-                            "label": tab["label"]
+                            "label": submoduleModel["label"]
                         });
                         Tabs.addTab(generated_tab);
-                        generated_tabs.push({
-                            "label": tab["label"],
-                            "tab": generated_tab
-                        });
 
+                        // STORE IN MODEL FOR INTERNAL STATE
+                        submoduleModel["_generated_tab"] = generated_tab;
+
+                        // TAB EVENTS
                         generated_tab.onClick(function(){
-                            tabClicked(generated_tab, tab["contentImage"]);
-                        });
+                            
+                            // LOOP OVER SUBMODULE TABS AND DEACTIVATE THEM ALL
+                            moduleModel["submodules"].forEach(function(submoduleModel){ submoduleModel["_generated_tab"].deactivate(); });
 
+                            // MAKE OUR SELECTED TAB ACTIVE
+                            submoduleModel["_generated_tab"].activate();
+
+                            // SLOT IN SOME EXAMPLE IMAGE CONTENT
+                            SlotEl.innerHTML = "<img src='"+submoduleModel["contentImage"]+"' width='1280'>";
+                        });
                     });
 
-                    // SELECT FIRST TAB BY DEFAULT
-                    if(!selectedTab){
-                        tabClicked(generated_tabs[0]["tab"], item["tabs"][0]["contentImage"]);
+                    // SELECT SUBMODULE IF DEFINED ELSE SELECT FIRST TAB BY DEFAULT
+                    if(selectedSubmoduleModel){
+                        selectedSubmoduleModel["_generated_tab"].el.click();
                     }else{
-                        // #TODO
-                        var foundTab = generated_tabs.find(function(i){
-                            return i["label"] === selectedTab["label"];
-                        });
-
-                        tabClicked(foundTab["tab"], selectedTab["contentImage"]);
+                        moduleModel["submodules"][0]["_generated_tab"].el.click();
                     }
 
                 }else{
                     // SLOT IN SOME EXAMPLE IMAGE CONTENT
-                    var contentImage = item["contentImage"];
-                    SlotEl.innerHTML = "<img src='"+contentImage+"' width='1280'>";
+                    SlotEl.innerHTML = "<img src='"+moduleModel["contentImage"]+"' width='1280'>";
                 }
             }
 
@@ -611,101 +368,81 @@
             function filterMenu(q, closeSubmodules){
                 q = q.toLowerCase();
 
-                for(var sectionIndex in sections){
-                    (function(sections, sectionIndex){
+                // LOOP OVER SECTIONS
+                menuModel.forEach(function(sectionModel){
 
-                        var sectionCollapseIcon = sections[sectionIndex]["collapseIcon"];
-                        var groups = sections[sectionIndex]["groups"];
-                        var anythingfound = false;
+                    var anythingfound = false;
 
-                        sectionCollapseIcon.hide(); // always hide collapse icon
-
-                        for(var groupIndex in groups){
-
-                            (function(groups, groupIndex){
-                                var modules = groups[groupIndex]["modules"];
-                                var groupFound = false;
-
-                                for(var moduleKey in modules){
-                                    var moduleFound = false;
-                                    var subModuleFound = false;
-                                    var module = modules[moduleKey]["module"];
-
-                                    if(q != ""){
-                                    module.showSubmodules(); // always show submodules
-                                    }
-
-                                    for(var submoduleKey in modules[moduleKey]["submodules"]){
-                                        var submodule = modules[moduleKey]["submodules"][submoduleKey];
-                                        if(submoduleKey.toLowerCase().indexOf(q) == -1){
-                                            submodule.hide();
-                                        }else{
-                                            submodule.show();
-                                            subModuleFound = true;
-                                        }
-                                    }
-
-                                    if(moduleKey.toLowerCase().indexOf(q) == -1){
-                                        if(!subModuleFound){
-                                            module.hide();
-                                        }else{
-                                            module.show();
-                                            moduleFound = true;
-                                        }
-                                    }else{
-                                        module.show();
-                                        moduleFound = true;
-                                    }
-
-                                    if(moduleFound){
-                                        groupFound = true;
-                                    }
-                                }
-
-                                if(!groupFound){
-                                    groups[groupIndex]["group"].hide();
-                                }else{
-                                    groups[groupIndex]["group"].show();
-                                    anythingfound = true;
-                                }
-                            })(groups, groupIndex);
-                        }
-
-                        if(!anythingfound){
-                            sections[sectionIndex]["section"].hide();
-                        }else{
-                            sections[sectionIndex]["section"].show();
-                        }
-                    })(sections, sectionIndex);
-
-                }
-
-                if(q == ""){
-                    // reset show/hide
-                    for(var sectionIndex in sections){
-                        var groups = sections[sectionIndex]["groups"];
-
-                        sections[sectionIndex]["collapseIcon"].show(); // show collapse icon
-
-                        for(var groupIndex in groups){
-                            var group = groups[groupIndex];
-                            var modules = group["modules"];
-
-                            group["group"].show(); // reset show
-
-                            for(var moduleKey in modules){
-                                var module = modules[moduleKey]["module"];
-                                if(closeSubmodules){
-                                module.hideSubmodules(); // hide submodules
-                                    sections[sectionIndex]["collapsed"] = true;
-                                    sections[sectionIndex]["collapseIcon"].maximize();
-                            }
-                        }
-                        }
-
-                        sections[sectionIndex]["section"].show(); // reset show
+                    // HIDE COLLAPSE ICON IN SECTION, NO COLLAPSING IS POSSIBLE WHILE FILTERING
+                    if(q == ""){
+                        sectionModel['_generated_collapseIcon'].show();
+                    }else{
+                        sectionModel['_generated_collapseIcon'].hide();
                     }
-                }
+
+                    // LOOP OVER GROUPS
+                    sectionModel["groups"].forEach(function(groupModel){
+
+                        var groupFound = false;
+
+                        // LOOP OVER MODULES
+                        groupModel["modules"].forEach(function(moduleModel){
+
+                            var moduleFound = false;
+                            var subModuleFound = false;
+
+                            if(closeSubmodules){
+                                moduleModel["_generated_module"].hideSubmodules();
+                                // SAVE NEW STATE TO MODEL
+                                sectionModel["_collapsed"] = true;
+                                sectionModel["_generated_collapseIcon"].maximize();
+                            }else if(q != ""){
+                                moduleModel["_generated_module"].showSubmodules();
+                            }
+
+                            // LOOP OVER SUBMODULES
+                            if(moduleModel["submodules"]){
+                                moduleModel["submodules"].forEach( function(submoduleModel){
+                                    if(submoduleModel["label"].toLowerCase().indexOf(q) > -1){
+                                        submoduleModel["_generated_submodule"].show();
+                                        subModuleFound = true;
+                                    }else{
+                                        submoduleModel["_generated_submodule"].hide();
+                                    }
+                                });
+                            }
+
+                            if(moduleModel["label"].toLowerCase().indexOf(q) == -1){
+                                if(!subModuleFound){
+                                    moduleModel["_generated_module"].hide();
+                                }else{
+                                    moduleModel["_generated_module"].show();
+                                    moduleFound = true;
+                                }
+                            }else{
+                                moduleModel["_generated_module"].show();
+                                moduleFound = true;
+                            }
+
+                            if(moduleFound){
+                                groupFound = true;
+                            }
+                        });
+
+                        if(!groupFound && q != ""){
+                            groupModel["_generated_group"].hide();
+                        }else{
+                            groupModel["_generated_group"].show();
+                            anythingfound = true;
+                        }
+                    });
+
+                    if(!anythingfound){
+                        sectionModel["_generated_section"].hide();
+                    }else{
+                        sectionModel["_generated_section"].show();
+                    }
+                });
             }
 
             // CREATE PROJECT ACCOUNT SWITCHER
