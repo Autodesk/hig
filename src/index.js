@@ -31,6 +31,9 @@ const Group = GlobalNav.SideNav.SectionList.Item.Group;
 const Item = GlobalNav.SideNav.SectionList.Item.Group.Item;
 const TopNav = GlobalNav.TopNav;
 const Profile = GlobalNav.TopNav.Profile;
+const ProjectAccountSwitcher = GlobalNav.TopNav.ProjectAccountSwitcher
+const Account = GlobalNav.TopNav.ProjectAccountSwitcher.Account
+const Project = GlobalNav.TopNav.ProjectAccountSwitcher.Project
 const SubNav = GlobalNav.SubNav;
 const Tabs = GlobalNav.SubNav.Tabs;
 const Tab = GlobalNav.SubNav.Tabs.Tab;
@@ -46,6 +49,7 @@ class App extends React.Component {
       group3: true,
       open: false,
       profileFlyoutOpen: false,
+      isOpen: false,
       activeTab: 0,
       tabs: [{ label: 'One', id: 0 }, { label: 'Two', id: 1 }]
     };
@@ -62,6 +66,14 @@ class App extends React.Component {
     this.setState({ open: !this.state.open });
   };
 
+  openProjectAccountSwitcher = event => {
+    this.setState({ isOpen: true });
+  };
+
+  closeProjectAccountSwitcher = event => {
+    this.setState({ isOpen: false });
+  };
+
   openProfileFlyout = event => {
     this.setState({ profileFlyoutOpen: true });
   };
@@ -73,6 +85,26 @@ class App extends React.Component {
   profileSignOutClick = event => {
     console.log('Profile Sign Out button clicked!');
   };
+
+  projectsData = () => {
+    return [
+              { label: 'Oakwood Medical Center', image: '../../../tests/project-1.png', key: 1 },
+              { label: 'Colorado Myrtle Shield Apartments', image: '../../../tests/project-2.png', key: 2  },
+              { label: 'Grey Pillars', image: '../../../tests/project-3.png', key: 3 },
+              { label: 'Keystone Apartments', key: 4 },
+              { label: 'Pleasant Park', image: '../../../tests/project-4.png', key: 5 }
+            ];
+  }
+
+  accountsData = () => {
+    return [
+              { label: 'Oakwood Medical Center', image: '../../../tests/project-1.png', key: "1"},
+              { label: 'Colorado Myrtle Shield Apartments', image: '../../../tests/project-2.png', key: 2 },
+              { label: 'Grey Pillars', image: '../../../tests/project-3.png', key: 3 },
+              { label: 'Keystone Apartments', key: 4 },
+              { label: 'Pleasant Park', image: '../../../tests/project-4.png', key: 5 }
+            ];
+  }
 
   fn1 = () => this.setState({ fn: true });
 
@@ -152,6 +184,18 @@ class App extends React.Component {
             logoLink="http://autodesk.com"
             onHamburgerClick={this.toggleSideNav}
           >
+            <ProjectAccountSwitcher
+              activeLabel="Oakwood Medical Center"
+              activeImage={profileImage}
+              activeType="account"
+              isOpen={this.state.isOpen}
+              onClickOutside={this.closeProjectAccountSwitcher}
+              onClick={this.openProjectAccountSwitcher}
+            >
+             {this.projectsData().map((project) => { return <Project image={project.image} label={project.label} key={project.key}/> })}
+             {this.accountsData().map((account) => { return <Account image={account.image} label={account.label} key={account.key} /> })}  
+
+            </ProjectAccountSwitcher>  
             <Profile
               open={this.state.profileFlyoutOpen}
               image={profileImage}

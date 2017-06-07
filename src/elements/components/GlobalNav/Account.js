@@ -20,6 +20,8 @@ import HIGElement from '../../HIGElement';
 import createComponent from '../../../adapters/createComponent';
 
 export class Account extends HIGElement {
+
+  
   commitUpdate(updatePayload, oldProps, newProp) {
     const mapping = {
       image: 'setImage',

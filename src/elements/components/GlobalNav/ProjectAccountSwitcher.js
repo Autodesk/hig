@@ -17,6 +17,7 @@ limitations under the License.
 
 import * as PropTypes from 'prop-types';
 import HIGElement from '../../HIGElement';
+import HIGNodeList from '../../HIGNodeList';
 import HIGChildValidator from '../../HIGChildValidator';
 import createComponent from '../../../adapters/createComponent';
 import AccountComponent, { Account } from './Account';
@@ -25,7 +26,29 @@ import ProjectComponent, { Project } from './Project';
 
 
 export class ProjectAccountSwitcher extends HIGElement {
+  constructor(HIGConstructor, initialProps) {
+    super(HIGConstructor, initialProps)
+    this.accounts = new HIGNodeList({
+      type: Account,
+      HIGConstructor: this.hig.partials.Account,
+      onAdd: (instance, beforeInstance) => {
+        this.hig.addAccount(instance, beforeInstance);
+      }
+    });
+
+    this.projects = new HIGNodeList({
+      type: Project,
+      HIGConstructor: this.hig.partials.Project,
+      onAdd: (instance, beforeInstance) => {
+        this.hig.addProject(instance, beforeInstance);
+      }
+    });
+  }
+
   componentDidMount() {
+    this.accounts.componentDidMount();
+    this.projects.componentDidMount();
+
     if (this.initialProps.isOpen === true) {
       this.hig.open();
     }
@@ -52,42 +75,26 @@ export class ProjectAccountSwitcher extends HIGElement {
     this.commitUpdateWithMapping(updatePayload, mapping);
   }
 
-   createElement(ElementConstructor, props) {
+  createElement(ElementConstructor, props) {
     switch (ElementConstructor) {
       case Project:
-        return new Project(this.hig.partials.Project, props);
+        return this.projects.createElement(ElementConstructor, props);
       case Account:
-        return new Account(this.hig.partials.Account, props);
+        return this.accounts.createElement(ElementConstructor, props);
       default:
         throw new Error(`Unknown type ${ElementConstructor.name}`);
     }
   }
 
-  appendChild(instance, beforeChild = {}) {
-    if (instance instanceof Project) {
-      if (this.sideNav) {
-        throw new Error('only one SideNav is allowed');
-      } else {
-        this.sideNav = instance;
-        if (this.mounted) {
-          this.hig.addSideNav(instance.hig);
-          instance.mount();
-        }
-      }
-    } else if (instance instanceof Account) {
-      if (this.topNav) {
-        throw new Error('only one TopNav is allowed');
-      } else {
-        this.topNav = instance;
-        if (this.mounted) {
-          this.hig.addTopNav(instance.hig);
-          instance.mount();
-        }
-      }
+  insertBefore(instance, beforeChild = {}) {
+    if(instance instanceof Account) {
+      this.accounts.insertBefore(instance);
+    } else if (instance instanceof Project) {
+      this.projects.insertBefore(instance);
     }  else {
       throw new Error('unknown type');
     }
-  }
+  }  
 }
 
 const ProjectAccountSwitcherComponent = createComponent(ProjectAccountSwitcher);
@@ -139,5 +146,8 @@ ProjectAccountSwitcherComponent.__docgenInfo = {
     }
   }  
 }; 
+
+ProjectAccountSwitcherComponent.Account = AccountComponent;
+ProjectAccountSwitcherComponent.Project = ProjectComponent;
 
 export default ProjectAccountSwitcherComponent;

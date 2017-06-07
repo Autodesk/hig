@@ -47,8 +47,6 @@ const Context = props => {
           activeLabel={props.activeLabel}
           activeImage={props.activeImage}
           activeType={props.activeType}
-          addAccount={onAddAccount}
-          addProject={onAddProject}
           isOpen={props.isOpen}
           onClick={onItemClick}
           onClickOutside={onClickOutside}
@@ -128,20 +126,6 @@ describe('<ProjectAccountSwitcher>', () => {
   });
 
   describe('open and close profile flyout', () => {
-    /*const newContext = props => {
-      return (
-        <GlobalNav>
-          <TopNav>
-            <ProjectAccountSwitcher 
-              isOpen={props.isOpen}
-              activeLabel='someLabel'
-            />
-          </TopNav>
-        </GlobalNav>
-      );
-    };*/
-
-
     it('sets the flyout as open if initialized as open', () => {
       const reactContainer = document.createElement('div');
       const wrapper = mount(<Context {...{ isOpen: true, activeLabel: "someLabel" }} />, {
@@ -159,8 +143,8 @@ describe('<ProjectAccountSwitcher>', () => {
       const wrapper = mount(<Context {...{ isOpen: false }} />, {
         attachTo: reactContainer
       });
-      var elem = reactContainer.getElementsByClassName('hig__flyout');
-      expect(elem.length).toEqual(1);
+      var elem = reactContainer.getElementsByClassName('hig__flyout--open');
+      expect(elem.length).toEqual(0);
 
       wrapper.setProps({ isOpen: true });
       elem = reactContainer.getElementsByClassName(
