@@ -422,7 +422,7 @@
 
             // ADD SOME CONTENT
             var SlotEl = document.createElement('div');
-            SlotEl.innerHTML = `Some example default content`;
+            SlotEl.innerHTML = "Some example default content";
             GlobalNav.addSlot(SlotEl);
 
             var sections = [];
@@ -568,7 +568,7 @@
                     generated_tab.activate();
 
                     // SLOT IN SOME EXAMPLE IMAGE CONTENT
-                    SlotEl.innerHTML = `<img src='${tabContentImage}' width="1280">`;
+                    SlotEl.innerHTML = "<img src='"+tabContentImage+"' width='1280'>";
                 }
 
                 if(item["tabs"]){
@@ -603,7 +603,7 @@
                 }else{
                     // SLOT IN SOME EXAMPLE IMAGE CONTENT
                     var contentImage = item["contentImage"];
-                    SlotEl.innerHTML = `<img src='${contentImage}' width="1280">`;
+                    SlotEl.innerHTML = "<img src='"+contentImage+"' width='1280'>";
                 }
             }
 
@@ -725,12 +725,12 @@
                 { label: 'Keystone Apartments' },
                 { label: 'Pleasant Park', image: './project-4.png' }
             ];
-            var projectComponents = projectsData.map((project) => {
+            var projectComponents = projectsData.map(function(project){
                 return new ProjectAccountSwitcher.partials.Project(project);
             });
-            projectComponents.forEach((projectComponent) => {
+            projectComponents.forEach(function(projectComponent){
                 ProjectAccountSwitcher.addProject(projectComponent);
-                projectComponent.onClick(() => { projectComponent.activate(); });
+                projectComponent.onClick(function(){ projectComponent.activate(); });
             });
 
             // ADD ACCOUNT
@@ -741,19 +741,19 @@
                 { label: 'Keystone Apartments' },
                 { label: 'Pleasant Park', image: './project-4.png' }
             ];
-            var accountComponents = accountsData.map((account) => {
+            var accountComponents = accountsData.map(function(account){
                 return new ProjectAccountSwitcher.partials.Account(account);
             });
-            accountComponents.forEach((accountComponent) => {
+            accountComponents.forEach(function(accountComponent){
                 ProjectAccountSwitcher.addAccount(accountComponent);
-                accountComponent.onClick(() => { accountComponent.activate(); });
+                accountComponent.onClick(function(){ accountComponent.activate(); });
             });
 
-            ProjectAccountSwitcher.onClick(() => {
+            ProjectAccountSwitcher.onClick(function(){
                 ProjectAccountSwitcher.open();
             });
 
-            ProjectAccountSwitcher.onClickOutside(() => {
+            ProjectAccountSwitcher.onClickOutside(function(){
                 ProjectAccountSwitcher.close();
             })
 
