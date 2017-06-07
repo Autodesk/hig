@@ -123,8 +123,7 @@ describe('<Profile>', () => {
         sampleValue: 'http://www.google.com',
         updateValue: 'http://www.sanrio.com',
         mutator: 'setProfileSettingsLink'
-      },
-
+      }
     ];
 
     configSets.forEach(function(config) {
