@@ -599,6 +599,11 @@
                                                         "{String} link - new link"
                                                     ]
                                                 },
+                                                "onClick": {
+                                                    "desc": "Calls the provided callback when user clicks on the item",
+                                                    "params": "HIG.abstract.EventObject.params",
+                                                    "returns": "HIG.abstract.EventObject.returns"
+                                                },
                                                 "addSubmodule": {
                                                     "desc": "Pass in an instance of a SideNav submodule partial",
                                                     "params": [
