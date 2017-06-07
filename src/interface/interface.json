@@ -138,6 +138,13 @@
                                 "{ProjectAccountSwitcher} ProjectAccountSwitcher - instance of a ProjectAccountSwitcher partial"
                             ]
                         },
+                        "addSearch": {
+                            "desc": "Pass in an instance of a Search partial",
+                            "params": [
+                                "{Link} Search - instance of a Search partial",
+                                "{Search} [ReferenceSearch] - (Optional) reference node for insertBefore"
+                            ]
+                        },
                         "onHamburgerClick": {
                             "desc": "Calls the provided callback when user clicks on the hamburger icon",
                             "params": "HIG.abstract.EventObject.params",
@@ -149,6 +156,36 @@
                         "logoLink": "{String} url behind the logo"
                     },
                     "partials":{
+                        "Search": {
+                            "methods": {
+                                "setPlaceholder": {
+                                    "desc": "sets the placeholder",
+                                    "params": [
+                                        "{String} placeholder - new placeholder"
+                                    ]
+                                },
+                                "setQuery": {
+                                    "desc": "sets the search query",
+                                    "params": [
+                                        "{String} query - new query"
+                                    ]
+                                },
+                                "showClearIcon": {
+                                    "desc": "show the clear input icon"
+                                },
+                                "hideClearIcon": {
+                                    "desc": "hide the clear input icon"
+                                },
+                                "onClearIconClick": "HIG.abstract.EventObject",
+                                "onInput": "HIG.abstract.EventObject",
+                                "onFocusIn": "HIG.abstract.EventObject",
+                                "onFocusOut": "HIG.abstract.EventObject"
+                            },
+                            "defaults": {
+                                "query": "{String} Set a search query in the input",
+                                "placeholder": "{String} A placeholder text when nothing is searched"
+                            }
+                        },
                         "Profile": {
                             "methods": {
                                 "setEmail": {

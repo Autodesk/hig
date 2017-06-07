@@ -6,6 +6,7 @@ var Core = require('_core.js');
 
 var Profile = require('./profile/profile.js');
 var ProjectAccountSwitcher = require('./project-account-switcher/project-account-switcher.js');
+var Search = require('./search/search.js');
 
 /**
  * Creates an TopNav
@@ -46,6 +47,12 @@ class TopNav extends Core {
         }
     }
 
+    addSearch(searchInstance, referenceInstance){
+        if(searchInstance instanceof Search){
+            this.mountPartialToComment('SEARCH', searchInstance, referenceInstance);
+        }
+    }
+
 }
 
 TopNav._interface = Interface['components']['GlobalNav']['partials']['TopNav'];
@@ -56,7 +63,8 @@ TopNav._defaults = {
 
 TopNav._partials = {
     Profile: Profile,
-    ProjectAccountSwitcher: ProjectAccountSwitcher
+    ProjectAccountSwitcher: ProjectAccountSwitcher,
+    Search: Search
 };
 
 
