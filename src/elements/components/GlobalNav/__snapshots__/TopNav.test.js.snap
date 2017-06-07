@@ -29,7 +29,7 @@ exports[`<TopNav> renders a topnav 1`] = `
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__email\\">email@example.com</div>
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__links\\">
         <a href=\\"#\\" class=\\"hig__button hig__button--default\\" title=\\"Sign Out\\">Sign Out</a><!--SIGN_OUT_BUTTON-->
-        <a href=\\"#\\" class=\\"hig__button hig__button--link\\" title=\\"Profile Settings\\">Profile Settings</a><!--SETTINGS_LINK-->
+        <a href=\\"https://www.autodesk.com\\" class=\\"hig__button hig__button--link\\" title=\\"Profile Settings\\">Profile Settings</a><!--SETTINGS_LINK-->
     </div>
 </div><!--SLOT-->
         </div>

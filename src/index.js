@@ -155,7 +155,9 @@ class App extends React.Component {
             <Profile
               open={this.state.profileFlyoutOpen}
               image={profileImage}
-              signOutLabel="Logout"
+              signOutLabel="Sign Off"
+              profileSettingsLabel="Preferences"
+              profileSettingsLink="http://www.autodesk.com"
               onProfileImageClick={this.openProfileFlyout}
               onProfileClickOutside={this.closeProfileFlyout}
               onSignOutClick={this.profileSignOutClick}

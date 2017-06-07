@@ -90,7 +90,7 @@ describe('<Profile>', () => {
     const configSets = [
       {
         key: 'email',
-        sampleValue: 'foo@bar.baz',
+        sampleValue: 'foo@example.com',
         updateValue: 'hellokitty@example.com',
         mutator: 'setEmail'
       },
@@ -103,9 +103,28 @@ describe('<Profile>', () => {
       {
         key: 'image',
         sampleValue: '/images/foo.jpg',
-        updateValue: '/images/bar.jpg',
+        updateValue: '/images/BAR.PNG',
         mutator: 'setImage'
-      }
+      },
+      {
+        key: 'signOutLabel',
+        sampleValue: 'Logout',
+        updateValue: 'Sign Out',
+        mutator: 'setSignOutLabel'
+      },
+      {
+        key: 'profileSettingsLabel',
+        sampleValue: 'Settings',
+        updateValue: 'Preferences',
+        mutator: 'setProfileSettingsLabel'
+      },
+      {
+        key: 'profileSettingsLink',
+        sampleValue: 'http://www.google.com',
+        updateValue: 'http://www.sanrio.com',
+        mutator: 'setProfileSettingsLink'
+      },
+
     ];
 
     configSets.forEach(function(config) {

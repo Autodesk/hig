@@ -33,6 +33,7 @@ class SharedExamples {
       attachTo: reactContainer
     });
 
+    expect(reactContainer.firstChild.outerHTML).toMatch(config.sampleValue);
     expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
     expect(reactContainer.firstChild.outerHTML).toEqual(
       higContainer.firstChild.outerHTML
