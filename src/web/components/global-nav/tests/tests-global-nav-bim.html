@@ -392,7 +392,7 @@
 
             // HAMBURGER OPENS/CLOSES SideNav
             var menu_open = false;
-            TopNav.onHamburgerClick((e) => {
+            TopNav.onHamburgerClick(function(e){
                 if(menu_open){
                     GlobalNav.hideSideNav();
                 }else{
@@ -420,6 +420,16 @@
             // ADD TABS IN SUBNAV
             var Tabs = new SubNav.partials.Tabs();
             SubNav.addTabs(Tabs);
+
+            // LISTEN TO MODULE INDICATOR CLICK IN SUBNAV
+            SubNav.onModuleIndicatorClick(function(e){
+                if(menu_open){
+                    GlobalNav.hideSideNav();
+                }else{
+                    GlobalNav.showSideNav();
+                }
+                menu_open = !menu_open;
+            });
 
             // ADD SOME CONTENT
             var SlotEl = document.createElement('div');
@@ -472,7 +482,7 @@
                         generated_section.addGroup(generated_group);
 
                         var current_group = default_menu[section]["groups"][group];
-                        current_group.forEach((item) => {
+                        current_group.forEach(function(item){
 
                             // ADD SOME MODULES TO OUR GROUP                               
                             var generated_module = new generated_group.partials.Module({
@@ -489,17 +499,40 @@
                             }
                             modules[item["label"]] = moduleObj;
 
-                            // render subitems for search
-                            item["tabs"].forEach((tab) => {
-                                var generated_submodule = new generated_module.partials.Submodule({
-                                    "title": tab["label"],
-                                    "link": "#"
-                                });
-                                generated_module.addSubmodule(generated_submodule);
-
-                                // save to our array for state mngmt
-                                modules[item["label"]]["submodules"][tab["label"]] = generated_submodule;
+                            generated_module.onClick(function(e){
+                                e.preventDefault();
+                                if(item["tabs"]){
+                                    buildTabs(item, item["tabs"][0]);
+                                }else{
+                                    buildTabs(item);
+                                }
                             });
+
+                            // LETS CLICK ON FIRST SIDENAV AND TAB FOR DEFAULT VALUES;
+                            if(!window.firstClicked){
+                                generated_module.el.click();
+                                window.firstClicked = true;
+                            }
+
+                            if(item["tabs"]){
+                                // render subitems for search
+                                item["tabs"].forEach(function(tab){
+                                    var generated_submodule = new generated_module.partials.Submodule({
+                                        "title": tab["label"],
+                                        "link": "#"
+                                    });
+                                    generated_module.addSubmodule(generated_submodule);
+
+                                    generated_submodule.onClick(function(e){
+                                        e.preventDefault();
+                                        buildTabs(item, tab);
+                                    });
+
+                                    // save to our array for state mngmt
+                                    groupState["modules"][item["label"]]["submodules"][tab["label"]] = generated_submodule;
+                                });
+                            }
+                        });
 
                             generated_module.onClick((e) => {
                                 e.preventDefault();
@@ -536,7 +569,7 @@
                 }
 
                 if(item["tabs"]){
-                    item["tabs"].forEach((tab) => {
+                    item["tabs"].forEach(function(tab){
                         var generated_tab = new Tabs.partials.Tab({
                             "label": tab["label"]
                         });
@@ -546,7 +579,7 @@
                             "tab": generated_tab
                         });
 
-                        generated_tab.onClick(() => {
+                        generated_tab.onClick(function(){
                             tabClicked(generated_tab, tab["contentImage"]);
                         });
 
@@ -606,6 +639,55 @@
                     }
                 }
             }
+
+            // CREATE PROJECT ACCOUNT SWITCHER
+            var ProjectAccountSwitcher = new TopNav.partials.ProjectAccountSwitcher({
+                activeLabel: 'Global Construction / West Oakwood Medical Center',
+                activeImage: './project-1.png',
+                activeType: 'account'
+            });
+
+            TopNav.addProjectAccountSwitcher(ProjectAccountSwitcher);
+
+            // ADD PROJECTS
+            var projectsData = [
+                { label: 'Oakwood Medical Center', image: './project-1.png' },
+                { label: 'Colorado Myrtle Shield Apartments', image: './project-2.png' },
+                { label: 'Grey Pillars', image: './project-3.png' },
+                { label: 'Keystone Apartments' },
+                { label: 'Pleasant Park', image: './project-4.png' }
+            ];
+            var projectComponents = projectsData.map((project) => {
+                return new ProjectAccountSwitcher.partials.Project(project);
+            });
+            projectComponents.forEach((projectComponent) => {
+                ProjectAccountSwitcher.addProject(projectComponent);
+                projectComponent.onClick(() => { projectComponent.activate(); });
+            });
+
+            // ADD ACCOUNT
+            var accountsData = [
+                { label: 'Oakwood Medical Center', image: './project-1.png' },
+                { label: 'Colorado Myrtle Shield Apartments', image: './project-2.png' },
+                { label: 'Grey Pillars', image: './project-3.png' },
+                { label: 'Keystone Apartments' },
+                { label: 'Pleasant Park', image: './project-4.png' }
+            ];
+            var accountComponents = accountsData.map((account) => {
+                return new ProjectAccountSwitcher.partials.Account(account);
+            });
+            accountComponents.forEach((accountComponent) => {
+                ProjectAccountSwitcher.addAccount(accountComponent);
+                accountComponent.onClick(() => { accountComponent.activate(); });
+            });
+
+            ProjectAccountSwitcher.onClick(() => {
+                ProjectAccountSwitcher.open();
+            });
+
+            ProjectAccountSwitcher.onClickOutside(() => {
+                ProjectAccountSwitcher.close();
+            })
 
         </script>
 
