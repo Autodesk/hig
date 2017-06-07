@@ -545,6 +545,25 @@
                                                         "{String} link - new link"
                                                     ]
                                                 },
+                                                "show":{
+                                                    "desc": "show (used for filtering)"
+                                                },
+                                                "hide":{
+                                                    "desc": "hide (used for filtering)"
+                                                },
+                                                "showSubmodules" :{
+                                                    "desc": "show the submodules"
+                                                },
+                                                "hideSubmodules" :{
+                                                    "desc": "hide the submodules"
+                                                },
+                                                "addSubmodule": {
+                                                    "desc": "Pass in an instance of a Submodule partial",
+                                                    "params": [
+                                                        "{Submodule} Submodule - instance of a Submodule partial",
+                                                        "{Submodule} [ReferenceSubmodule] - (Optional) reference node for insertBefore"
+                                                    ]
+                                                },
                                                 "onClick": {
                                                     "desc": "Calls the provided callback when user clicks on the item",
                                                     "params": "HIG.abstract.EventObject.params",
@@ -588,12 +607,12 @@
                                                     "defaults": {
                                                         "title": "{String} the string of our SideNav submodule",
                                                         "link": "{String} link behind the submodule"
+                                                    }
+                                                }
                                             }
                                         }
                                     }
-                                }
-                            }
-                        },
+                                },
                                 "Collapse": {
                                     "methods": {
                                         "minimize": {
