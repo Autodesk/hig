@@ -179,7 +179,7 @@ class Core {
 
     unmount(){
         if (!this.el) { return }
-        this.el.remove();
+        this.el.parentNode.removeChild(this.el); // use removeChild for IE11 support
     }
 
     /**
