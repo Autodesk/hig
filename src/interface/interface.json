@@ -433,6 +433,11 @@
                             "params": [
                             "{Tabs} Tabs - instance of a Tabs partial"
                             ]
+                        },
+                        "onModuleIndicatorClick": {
+                            "desc": "Calls the provided callback when the module indicator (name or icon) is clicked",
+                            "params": "HIG.abstract.EventObject.params",
+                            "returns": "HIG.abstract.EventObject.returns"
                         }
                     },
                     "partials": {

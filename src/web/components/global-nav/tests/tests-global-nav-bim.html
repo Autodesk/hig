@@ -397,6 +397,7 @@
                     GlobalNav.hideSideNav();
                 }else{
                     SideNavSearch.setQuery(""); // reset any search
+                    filterMenu("");
                     GlobalNav.showSideNav();
                 }
                 menu_open = !menu_open;
@@ -503,62 +504,70 @@
                             generated_module.onClick((e) => {
                                 e.preventDefault();
 
-                                SubNav.setModuleIndicatorName(item["label"]);
-                                SubNav.setModuleIndicatorIcon(item["icon"]);
+                    
+                })(section);
+            }
 
-                                // CLEAR TABS
-                                Tabs.unmount();
+            function buildTabs(item, selectedTab){
+                var generated_tabs = [];
 
-                                // ADD TABS IN SUBNAV
-                                Tabs = new SubNav.partials.Tabs();
-                                SubNav.addTabs(Tabs);
+                // SET SUBNAV LABEL AND ICON
+                SubNav.setModuleIndicatorName(item["label"]);
+                SubNav.setModuleIndicatorIcon(item["icon"]);
 
-                            var generated_tabs = [];
-                            item["tabs"].forEach((tab) => {
-                                var generated_tab = new Tabs.partials.Tab({
-                                    "label": tab["label"]
-                                });
-                                Tabs.addTab(generated_tab);
-                                generated_tabs.push(generated_tab);
+                // CLOSE SIDENAV
+                GlobalNav.hideSideNav();
 
-                                generated_tab.onClick(() => {
-                                    console.log('Tab '+tab["label"]+' clicked');
-                                    for (var k = 0; k < generated_tabs.length; k++){
-                                        generated_tabs[k].deactivate();
-                                    }
-                                    generated_tab.activate();
+                // CLEAR TABS
+                Tabs.unmount();
 
-                                            // SLOT IN SOME EXAMPLE IMAGE CONTENT
-                                            var contentImage = tab["contentImage"];
-                                            SlotEl.innerHTML = `<img src='${contentImage}' width="1280">`;
-                                        }
+                // ADD TABS IN SUBNAV
+                Tabs = new SubNav.partials.Tabs();
+                SubNav.addTabs(Tabs);
 
-                            item["tabs"].forEach((tab) => {
-                                var generated_tab = new Tabs.partials.Tab({
-                                    "label": tab["label"]
-                                });
-                            })
-
-                                            generated_tab.onClick(() => {
-                                                tabClicked(generated_tab, tab);
-                                            });
-
-                                        });
-
-                                        // SELECT FIRST TAB BY DEFAULT
-                                        tabClicked(generated_tabs[0], item["tabs"][0]);
-
-                                    });
-
-                                    // LETS CLICK ON FIRST SIDENAV AND TAB FOR DEFAULT VALUES;
-                                    if(!window.firstClicked){
-                                        generated_module.el.click();
-                                        window.firstClicked = true;
-                                    }
-                                }
-                            });
-                        }
+                function tabClicked(generated_tab, tabContentImage){
+                    for (var k = 0; k < generated_tabs.length; k++){
+                        generated_tabs[k]["tab"].deactivate();
                     }
+                    generated_tab.activate();
+
+                    // SLOT IN SOME EXAMPLE IMAGE CONTENT
+                    SlotEl.innerHTML = `<img src='${tabContentImage}' width="1280">`;
+                }
+
+                if(item["tabs"]){
+                    item["tabs"].forEach((tab) => {
+                        var generated_tab = new Tabs.partials.Tab({
+                            "label": tab["label"]
+                        });
+                        Tabs.addTab(generated_tab);
+                        generated_tabs.push({
+                            "label": tab["label"],
+                            "tab": generated_tab
+                        });
+
+                        generated_tab.onClick(() => {
+                            tabClicked(generated_tab, tab["contentImage"]);
+                        });
+
+                    });
+
+                    // SELECT FIRST TAB BY DEFAULT
+                    if(!selectedTab){
+                        tabClicked(generated_tabs[0]["tab"], item["tabs"][0]["contentImage"]);
+                    }else{
+                        // #TODO
+                        var foundTab = generated_tabs.find(function(i){
+                            return i["label"] === selectedTab["label"];
+                        });
+
+                        tabClicked(foundTab["tab"], selectedTab["contentImage"]);
+                    }
+
+                }else{
+                    // SLOT IN SOME EXAMPLE IMAGE CONTENT
+                    var contentImage = item["contentImage"];
+                    SlotEl.innerHTML = `<img src='${contentImage}' width="1280">`;
                 }
             }
 
