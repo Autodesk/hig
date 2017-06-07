@@ -41,4 +41,4 @@ HIG identifies 4 levels of detail in a UI:
 - `Mini-Experiences`: These are collections of components or pages that create a small, discrete experience within our products: sign-in, trial, sharing, in-product learning.
 
 ## Test Examples for HIG Components
-see the list at: [adsk-hig.github.io/hig/](https://adsk-hig.github.io/hig/)
+see the list at: [autodesk.github.io/hig/](https://autodesk.github.io/hig/)
