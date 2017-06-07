@@ -1,3 +1,4 @@
+var Interface = require('interface.json');
 var Item = require('../_item/item.js');
 
 /**
@@ -14,5 +15,12 @@ class Account {
     }
 
 }
+
+Account._interface = Interface['components']['GlobalNav']['partials']['TopNav']['partials']['ProjectAccountSwitcher']['partials']['Account'];
+Account._defaults = {
+    "image": "",
+    "label": "",
+};
+
 
 module.exports = Account;
