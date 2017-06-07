@@ -28,6 +28,7 @@ class ProfileFlyoutContent extends Core {
 
         this.settingsLink = new Button({
             title: this.options.profileSettingsLabel,
+            link: this.options.profileSettingsLink,
             style: 'link'
         });
         this.mountPartialToComment('SETTINGS_LINK', this.settingsLink);
