@@ -22,6 +22,11 @@ import 'hig.web/dist/hig.css';
 import './index.css';
 
 import logo from './images/bim-logo.png';
+import project1 from './images/project-1.png';
+import project2 from './images/project-2.png';
+import project3 from './images/project-3.png';
+import project4 from './images/project-4.png';
+
 import profileImage from './images/profileImage.png';
 
 const SideNav = GlobalNav.SideNav;
@@ -52,21 +57,21 @@ class App extends React.Component {
       isOpen: false,
       activeTab: 0,
       activeProjectOrAccount: 0,
-      projectOrAcccountTarget: { label: 'Oakwood Medical Center', image: '../../../tests/project-1.png', id: 0, type: 'project'},
+      projectOrAcccountTarget: { label: 'Oakwood Medical Center', image: project1, id: 0, type: 'project'},
       tabs: [{ label: 'One', id: 0 }, { label: 'Two', id: 1 }],
       projects: [
-        { label: 'Oakwood Medical Center', image: '../../../tests/project-1.png', id: 0, type: 'project'},
-        { label: 'Colorado Myrtle Shield Apartments', image: '../../../tests/project-2.png', id: 2 , type: 'project'},
-        { label: 'Grey Pillars', image: '../../../tests/project-3.png', id: 4, type: 'project'},
+        { label: 'Oakwood Medical Center', image: project2, id: 0, type: 'project'},
+        { label: 'Colorado Myrtle Shield Apartments', image: project3, id: 2 , type: 'project'},
+        { label: 'Grey Pillars', image: project4, id: 4, type: 'project'},
         { label: 'Keystone Apartments', id: 6, type: 'project' },
-        { label: 'Pleasant Park', image: '../../../tests/project-4.png', id: 8, type: 'project' }
+        { label: 'Pleasant Park', image: project1, id: 8, type: 'project' }
       ],
       accounts: [
-        { label: 'Oakwood Medical Center', image: '../../../tests/project-1.png', id: 1, type: 'account'},
-        { label: 'Colorado Myrtle Shield Apartments', image: '../../../tests/project-2.png', id: 3, type: 'account' },
-        { label: 'Grey Pillars', image: '../../../tests/project-3.png', id: 5, type: 'account' },
+        { label: 'Oakwood Medical Center', image: project1, id: 1, type: 'account'},
+        { label: 'Colorado Myrtle Shield Apartments', image: project2, id: 3, type: 'account' },
+        { label: 'Grey Pillars', image: project3, id: 5, type: 'account' },
         { label: 'Keystone Apartments', id: 7, type: 'account' },
-        { label: 'Pleasant Park', image: '../../../tests/project-4.png', id: 9, type: 'account' }
+        { label: 'Pleasant Park', image: project4, id: 9, type: 'account' }
       ]
 
     };

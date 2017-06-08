@@ -60,6 +60,10 @@ const LONG_COPY = (
 
 import logo from '../../../images/bim-logo.png';
 import profileImage from '../../../images/profileImage.png';
+import project1 from '../../../images/project-1.png';
+import project2 from '../../../images/project-2.png';
+import project3 from '../../../images/project-3.png';
+import project4 from '../../../images/project-4.png';
 
 storiesOf('GlobalNav', module)
   .addWithInfo(
@@ -109,21 +113,21 @@ storiesOf('GlobalNav', module)
 
              <ProjectAccountSwitcher
               activeLabel="Oakland Medical Center"
-              activeImage={profileImage}
+              activeImage={project1}
               activeType="account" 
               isOpen={false}
               onClickOutside={action('clicked')}
               onClick={action('clicked')}
             >
               <Account 
-                image={profileImage}
+                image={project2}
                 label="Stanford hospital"
                 key='1'
                 active={false}
                 onClick={action('clicked')}
               />
               <Account 
-                image={profileImage}
+                image=""
                 label="Oakland Medical Center"
                 key='2'
                 active={true}
@@ -131,7 +135,7 @@ storiesOf('GlobalNav', module)
               />
 
               <Project
-                image={profileImage}
+                image={project4}
                 label=""
                 key='3'
                 active={false}
@@ -139,7 +143,7 @@ storiesOf('GlobalNav', module)
               />
               
               <Project
-                image={profileImage}
+                image={project1}
                 label="Stanford hospital"
                 key='4'
                 active={false}
@@ -195,21 +199,21 @@ storiesOf('GlobalNav', module)
         <TopNav logo={logo}>
           <ProjectAccountSwitcher
             activeLabel="Oakland Medical Center"
-            activeImage={profileImage}
+            activeImage={project1}
             activeType="account" 
             isOpen={isOpen}
             onClickOutside={action('clicked')}
             onClick={action('clicked')}
           >
             <Account 
-              image={profileImage}
+              image={project2}
               label="Stanford hospital"
               key='1'
               active={false}
               onClick={action('clicked')}
             />
             <Account 
-              image={profileImage}
+              image={project1}
               label="Oakland Medical Center"
               key='2'
               active={true}
@@ -217,7 +221,7 @@ storiesOf('GlobalNav', module)
             />
 
             <Project
-              image={profileImage}
+              image=""
               label="California Pacific"
               key='3'
               active={true}
@@ -225,7 +229,7 @@ storiesOf('GlobalNav', module)
             />
             
             <Project
-              image={profileImage}
+              image={project3}
               label="Stanford hospital"
               key='4'
               active={false}
