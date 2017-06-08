@@ -1,10 +1,10 @@
 @import '~basics/colors/colors.scss';
 
 .hig__global-nav__top-nav__project-account-switcher__lists__list {
-    margin-top: 20px;
+   padding-top: 10px;
 
     &:first-child {
-        margin-top: 0;
+       padding-bottom: 10px;
     }
 
     > .hig__global-nav__top-nav__project-account-switcher__item {
