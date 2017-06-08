@@ -59,6 +59,16 @@ module.exports = function (plop) {
         }],
 		actions: [{
             type: 'add',
+            path: '{{absPath path}}/{{ dashCase name }}/tests/tests-{{ dashCase name }}.html',
+            templateFile: 'src/web/helpers/skeletons/skeleton-template.html',
+            abortOnFail: true
+        },{
+            type: 'add',
+            path: '{{absPath path}}/{{ dashCase name }}/tests/gemini-{{ dashCase name }}.html',
+            templateFile: 'src/web/helpers/skeletons/skeleton-template.html',
+            abortOnFail: true
+        },{
+            type: 'add',
             path: '{{absPath path}}/{{ dashCase name }}/{{ dashCase name }}.html',
             templateFile: 'src/web/helpers/skeletons/skeleton-template.html',
             abortOnFail: true
