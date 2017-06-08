@@ -16,27 +16,27 @@ limitations under the License.
 */
 import { mount } from 'enzyme';
 import * as HIG from 'hig.web';
-import React from 'react'; 
+import React from 'react';
 
 import GlobalNav from './GlobalNav';
 import TopNav from './TopNav';
 import ProjectAccountSwitcher from './ProjectAccountSwitcher';
 import SharedExamples from './SharedExamples';
 
-const onAddAccount = function(){
-  return 'onAddAcount'
+const onAddAccount = function() {
+  return 'onAddAcount';
 };
 
-const onAddProject = function(){
-  return 'onAddProject'
+const onAddProject = function() {
+  return 'onAddProject';
 };
 
-const onItemClick = function(){
-  return 'onItemClick'
+const onItemClick = function() {
+  return 'onItemClick';
 };
 
-const onClickOutside = function(){
-  return 'onClickOutside'
+const onClickOutside = function() {
+  return 'onClickOutside';
 };
 
 const Context = props => {
@@ -82,14 +82,13 @@ function setupProjectAccountSwitcher() {
   return { reactContainer };
 }
 
-
 describe('<ProjectAccountSwitcher>', () => {
   describe('constructor', () => {
     it('has a good snapshot', () => {
       const { reactContainer } = setupProjectAccountSwitcher();
       expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
     });
-  }); 
+  });
 
   describe('setting and updating props', () => {
     const shex = new SharedExamples(Context, createHigContext);
@@ -128,9 +127,12 @@ describe('<ProjectAccountSwitcher>', () => {
   describe('open and close profile flyout', () => {
     it('sets the flyout as open if initialized as open', () => {
       const reactContainer = document.createElement('div');
-      const wrapper = mount(<Context {...{ isOpen: true, activeLabel: "someLabel" }} />, {
-        attachTo: reactContainer
-      });
+      const wrapper = mount(
+        <Context {...{ isOpen: true, activeLabel: 'someLabel' }} />,
+        {
+          attachTo: reactContainer
+        }
+      );
       const elem = reactContainer.getElementsByClassName(
         'hig__flyout hig__flyout--open'
       );
@@ -152,8 +154,5 @@ describe('<ProjectAccountSwitcher>', () => {
       );
       expect(elem.length).toEqual(1);
     });
-
-
-  });    
+  });
 });
-

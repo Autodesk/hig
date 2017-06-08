@@ -30,10 +30,19 @@ export class Project extends HIGElement {
       const propKey = updatePayload[i];
       const propValue = updatePayload[i + 1];
 
-      if (mapping[propKey]) {
-        this.hig[mapping[propKey]](propValue);
-      } else {
-        this.commitPropChange(propKey, propValue);
+     switch (propKey) {
+        case mapping[propKey]:
+          this.hig[mapping[propKey]](propValue);
+          break;
+        case 'active':
+          if (propValue) {
+            this.hig.activate();
+          } else {
+            this.hig.deactivate();
+          }
+          break;          
+        default:
+          this.commitPropChange(propKey, propValue);
       }
     }
   }
@@ -46,7 +55,7 @@ ProjectComponent.propTypes = {
   label: PropTypes.string,
   activate: PropTypes.func,
   deactivate: PropTypes.func,
-  onClick: PropTypes.func,
+  onClick: PropTypes.func
 };
 
 ProjectComponent.__docgenInfo = {
@@ -54,17 +63,17 @@ ProjectComponent.__docgenInfo = {
     label: {
       description: 'sets {String} the label displayed for a project in project/account switcher'
     },
-     image: {
+    image: {
       description: 'sets {String} the image displayed for a project in project/account switcher'
-    },   
+    },
     activate: {
       description: '{func} activates the project'
     },
     deactivate: {
-      description: '{func} deactivates the project'   
+      description: '{func} deactivates the project'
     },
-    onclick:{
-      description: '{func} calls the provided callback when user clicks on the project'  
+    onclick: {
+      description: '{func} calls the provided callback when user clicks on the project'
     }
   }
 };

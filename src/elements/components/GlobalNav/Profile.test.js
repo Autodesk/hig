@@ -16,7 +16,7 @@ limitations under the License.
 */
 import { mount } from 'enzyme';
 import * as HIG from 'hig.web';
-import React from 'react'; 
+import React from 'react';
 
 import GlobalNav from './GlobalNav';
 import TopNav from './TopNav';

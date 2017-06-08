@@ -16,7 +16,7 @@ limitations under the License.
 */
 import { mount } from 'enzyme';
 import * as HIG from 'hig.web';
-import React from 'react'; 
+import React from 'react';
 
 import GlobalNav from './GlobalNav';
 import TopNav from './TopNav';
@@ -24,15 +24,13 @@ import ProjectAccountSwitcher from './ProjectAccountSwitcher';
 import Account from './Account';
 import SharedExamples from './SharedExamples';
 
-
-const onItemClick = function(){
-  return 'onItemClick'
+const onItemClick = function() {
+  return 'onItemClick';
 };
 
-const onClickOutside = function(){
-  return 'onClickOutside'
+const onClickOutside = function() {
+  return 'onClickOutside';
 };
-
 
 const Context = props => {
   return (
@@ -46,7 +44,15 @@ const Context = props => {
           onClick={onItemClick}
           onClickOutside={onClickOutside}
         >
-       {props.accounts.map((account) => { return <Account image={account.image} label={account.label} key={account.key} /> })}  
+          {props.accounts.map(account => {
+            return (
+              <Account
+                image={account.image}
+                label={account.label}
+                key={account.key}
+              />
+            );
+          })}
         </ProjectAccountSwitcher>
       </TopNav>
     </GlobalNav>
@@ -56,9 +62,9 @@ const Context = props => {
 function setupAccounts() {
   const defaults = {
     accounts: [
-      {    image: 'something.jpg', label: 'Oakland Medical Center', key: 1},
-      {    image: 'foo.jpg', label: 'Berkeley Medical Center',  key: 2},
-      {    image: 'bar.jpg', label: 'UCSF Medical Center',  key: 3},
+      { image: 'something.jpg', label: 'Oakland Medical Center', key: 1 },
+      { image: 'foo.jpg', label: 'Berkeley Medical Center', key: 2 },
+      { image: 'bar.jpg', label: 'UCSF Medical Center', key: 3 }
     ]
   };
   const reactContainer = document.createElement('div');
@@ -71,9 +77,12 @@ describe('<Account>', () => {
     it('has a good snapshot', () => {
       const { reactContainer } = setupAccounts();
       expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
-      var elems = reactContainer.getElementsByClassName("hig__flyout__panel")[0].getElementsByClassName("hig__global-nav__top-nav__project-account-switcher__item");
+      var elems = reactContainer
+        .getElementsByClassName('hig__flyout__panel')[0]
+        .getElementsByClassName(
+          'hig__global-nav__top-nav__project-account-switcher__item'
+        );
       expect(elems.length).toEqual(3);
     });
   });
-});  
-
+});

@@ -20,8 +20,6 @@ import HIGElement from '../../HIGElement';
 import createComponent from '../../../adapters/createComponent';
 
 export class Account extends HIGElement {
-
-  
   commitUpdate(updatePayload, oldProps, newProp) {
     const mapping = {
       image: 'setImage',
@@ -32,11 +30,26 @@ export class Account extends HIGElement {
       const propKey = updatePayload[i];
       const propValue = updatePayload[i + 1];
 
-      if (mapping[propKey]) {
-        this.hig[mapping[propKey]](propValue);
-      } else {
-        this.commitPropChange(propKey, propValue);
+      switch (propKey) {
+        case mapping[propKey]:
+          this.hig[mapping[propKey]](propValue);
+          break;
+        case 'active':
+          if (propValue) {
+            this.hig.activate();
+          } else {
+            this.hig.deactivate();
+          }
+          break;          
+        default:
+          this.commitPropChange(propKey, propValue);
       }
+    }
+  }
+
+  componentDidMount(){
+    if (this.initialProps.activatedAccount == true ) {
+      
     }
   }
 }
@@ -48,7 +61,7 @@ AccountComponent.propTypes = {
   label: PropTypes.string,
   activate: PropTypes.func,
   deactivate: PropTypes.func,
-  onClick: PropTypes.func,
+  onClick: PropTypes.func
 };
 
 AccountComponent.__docgenInfo = {
@@ -56,17 +69,17 @@ AccountComponent.__docgenInfo = {
     label: {
       description: 'sets {String} the label displayed for an account in Account/account switcher'
     },
-     image: {
+    image: {
       description: 'sets {String} the image displayed for an account in Account/account switcher'
-    },   
+    },
     activate: {
       description: '{func} activates the Account'
     },
     deactivate: {
-      description: '{func} deactivates the Account'   
+      description: '{func} deactivates the Account'
     },
-    onclick:{
-      description: '{func} calls the provided callback when user clicks on the Account'  
+    onclick: {
+      description: '{func} calls the provided callback when user clicks on the Account'
     }
   }
 };

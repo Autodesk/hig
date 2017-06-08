@@ -23,11 +23,9 @@ import createComponent from '../../../adapters/createComponent';
 import AccountComponent, { Account } from './Account';
 import ProjectComponent, { Project } from './Project';
 
-
-
 export class ProjectAccountSwitcher extends HIGElement {
   constructor(HIGConstructor, initialProps) {
-    super(HIGConstructor, initialProps)
+    super(HIGConstructor, initialProps);
     this.accounts = new HIGNodeList({
       type: Account,
       HIGConstructor: this.hig.partials.Account,
@@ -58,7 +56,7 @@ export class ProjectAccountSwitcher extends HIGElement {
     const mapping = {
       activeImage: 'setActiveImage',
       activeLabel: 'setActiveLabel',
-      activeType: 'setActiveType',
+      activeType: 'setActiveType'
     };
 
     const openIndex = updatePayload.indexOf('isOpen');
@@ -87,14 +85,14 @@ export class ProjectAccountSwitcher extends HIGElement {
   }
 
   insertBefore(instance, beforeChild = {}) {
-    if(instance instanceof Account) {
+    if (instance instanceof Account) {
       this.accounts.insertBefore(instance);
     } else if (instance instanceof Project) {
       this.projects.insertBefore(instance);
-    }  else {
+    } else {
       throw new Error('unknown type');
     }
-  }  
+  }
 }
 
 const ProjectAccountSwitcherComponent = createComponent(ProjectAccountSwitcher);
@@ -106,10 +104,7 @@ ProjectAccountSwitcherComponent.propTypes = {
   activeType: PropTypes.string,
   onClickOutside: PropTypes.func,
   onClick: PropTypes.func,
-  children: HIGChildValidator([
-    AccountComponent, 
-    ProjectComponent 
-  ])
+  children: HIGChildValidator([AccountComponent, ProjectComponent])
 };
 
 ProjectAccountSwitcherComponent.__docgenInfo = {
@@ -117,14 +112,14 @@ ProjectAccountSwitcherComponent.__docgenInfo = {
     activeLabel: {
       description: 'sets {String} the label displayed in the top nav'
     },
-     activeImage: {
+    activeImage: {
       description: 'sets {String} the image displayed in the top nav'
     },
     activeType: {
       description: 'sets the {String} type of the item displayed in the top nav'
     },
     addAccount: {
-      description: '{func} pass in an instance of a ProjectAccountSwitcher Account'  
+      description: '{func} pass in an instance of a ProjectAccountSwitcher Account'
     },
     addProject: {
       description: '{func} pass in an instance of a ProjectAccountSwitcher Project'
@@ -136,7 +131,7 @@ ProjectAccountSwitcherComponent.__docgenInfo = {
       description: '{func} closes the project/account switcher'
     },
     onClickOutside: {
-      description:  '{func} calls the provided callback when the switcher is open and the user clicks outside the switcher'
+      description: '{func} calls the provided callback when the switcher is open and the user clicks outside the switcher'
     },
     onClick: {
       description: '{func} calls the provided callback when user clicks on the switcher in the top nav'
@@ -144,8 +139,8 @@ ProjectAccountSwitcherComponent.__docgenInfo = {
     children: {
       description: 'support adding Project and Account'
     }
-  }  
-}; 
+  }
+};
 
 ProjectAccountSwitcherComponent.Account = AccountComponent;
 ProjectAccountSwitcherComponent.Project = ProjectComponent;

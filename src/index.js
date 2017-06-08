@@ -31,9 +31,9 @@ const Group = GlobalNav.SideNav.SectionList.Item.Group;
 const Item = GlobalNav.SideNav.SectionList.Item.Group.Item;
 const TopNav = GlobalNav.TopNav;
 const Profile = GlobalNav.TopNav.Profile;
-const ProjectAccountSwitcher = GlobalNav.TopNav.ProjectAccountSwitcher
-const Account = GlobalNav.TopNav.ProjectAccountSwitcher.Account
-const Project = GlobalNav.TopNav.ProjectAccountSwitcher.Project
+const ProjectAccountSwitcher = GlobalNav.TopNav.ProjectAccountSwitcher;
+const Account = GlobalNav.TopNav.ProjectAccountSwitcher.Account;
+const Project = GlobalNav.TopNav.ProjectAccountSwitcher.Project;
 const SubNav = GlobalNav.SubNav;
 const Tabs = GlobalNav.SubNav.Tabs;
 const Tab = GlobalNav.SubNav.Tabs.Tab;
@@ -51,7 +51,24 @@ class App extends React.Component {
       profileFlyoutOpen: false,
       isOpen: false,
       activeTab: 0,
-      tabs: [{ label: 'One', id: 0 }, { label: 'Two', id: 1 }]
+      activeProjectOrAccount: 0,
+      projectOrAcccountTarget: { label: 'Oakwood Medical Center', image: '../../../tests/project-1.png', id: 0, type: 'project'},
+      tabs: [{ label: 'One', id: 0 }, { label: 'Two', id: 1 }],
+      projects: [
+        { label: 'Oakwood Medical Center', image: '../../../tests/project-1.png', id: 0, type: 'project'},
+        { label: 'Colorado Myrtle Shield Apartments', image: '../../../tests/project-2.png', id: 2 , type: 'project'},
+        { label: 'Grey Pillars', image: '../../../tests/project-3.png', id: 4, type: 'project'},
+        { label: 'Keystone Apartments', id: 6, type: 'project' },
+        { label: 'Pleasant Park', image: '../../../tests/project-4.png', id: 8, type: 'project' }
+      ],
+      accounts: [
+        { label: 'Oakwood Medical Center', image: '../../../tests/project-1.png', id: 1, type: 'account'},
+        { label: 'Colorado Myrtle Shield Apartments', image: '../../../tests/project-2.png', id: 3, type: 'account' },
+        { label: 'Grey Pillars', image: '../../../tests/project-3.png', id: 5, type: 'account' },
+        { label: 'Keystone Apartments', id: 7, type: 'account' },
+        { label: 'Pleasant Park', image: '../../../tests/project-4.png', id: 9, type: 'account' }
+      ]
+
     };
   }
 
@@ -86,25 +103,6 @@ class App extends React.Component {
     console.log('Profile Sign Out button clicked!');
   };
 
-  projectsData = () => {
-    return [
-              { label: 'Oakwood Medical Center', image: '../../../tests/project-1.png', key: 1 },
-              { label: 'Colorado Myrtle Shield Apartments', image: '../../../tests/project-2.png', key: 2  },
-              { label: 'Grey Pillars', image: '../../../tests/project-3.png', key: 3 },
-              { label: 'Keystone Apartments', key: 4 },
-              { label: 'Pleasant Park', image: '../../../tests/project-4.png', key: 5 }
-            ];
-  }
-
-  accountsData = () => {
-    return [
-              { label: 'Oakwood Medical Center', image: '../../../tests/project-1.png', key: "1"},
-              { label: 'Colorado Myrtle Shield Apartments', image: '../../../tests/project-2.png', key: 2 },
-              { label: 'Grey Pillars', image: '../../../tests/project-3.png', key: 3 },
-              { label: 'Keystone Apartments', key: 4 },
-              { label: 'Pleasant Park', image: '../../../tests/project-4.png', key: 5 }
-            ];
-  }
 
   fn1 = () => this.setState({ fn: true });
 
@@ -137,6 +135,30 @@ class App extends React.Component {
     this.setState({ activeTab: activeTabIndex });
   };
 
+  setActiveProjectOrAccount = activeProjectOrAccountItem => {
+    this.setState({ activeProjectOrAccount: activeProjectOrAccountItem.id })
+    this.setProjectOrAccountTarget(activeProjectOrAccountItem);
+  }
+
+  setProjectOrAccountTarget = targetItem => {
+    if (targetItem.type === 'account') {
+      this.state.accounts.forEach(function(account){
+        if (account.id === targetItem.id) {
+          this.setState({projectOrAcccountTarget: account})
+        }
+      }.bind(this))
+    }
+
+    if (targetItem.type === 'project') {
+      this.state.projects.forEach(function(project){
+        if (project.id === targetItem.id) {
+          this.setState({projectOrAcccountTarget: project})
+        }
+      }.bind(this))
+    }
+  }
+
+    
   render() {
     return (
       <div>
@@ -185,17 +207,37 @@ class App extends React.Component {
             onHamburgerClick={this.toggleSideNav}
           >
             <ProjectAccountSwitcher
-              activeLabel="Oakwood Medical Center"
-              activeImage={profileImage}
+              activeLabel={this.state.projectOrAcccountTarget.label}
+              activeImage={this.state.projectOrAcccountTarget.image}
               activeType="account"
               isOpen={this.state.isOpen}
               onClickOutside={this.closeProjectAccountSwitcher}
               onClick={this.openProjectAccountSwitcher}
             >
-             {this.projectsData().map((project) => { return <Project image={project.image} label={project.label} key={project.key}/> })}
-             {this.accountsData().map((account) => { return <Account image={account.image} label={account.label} key={account.key} /> })}  
+              {this.state.projects.map((project, i) => {
+                return (
+                  <Project
+                    image={project.image}
+                    label={project.label}
+                    key={project.id}
+                    active={this.state.activeProjectOrAccount === project.id}
+                    onClick={this.setActiveProjectOrAccount.bind(this, {id: project.id, type: project.type} )}
+                  />
+                );
+              })}
+              {this.state.accounts.map((account, i) => {
+                return (
+                  <Account
+                    image={account.image}
+                    label={account.label}
+                    key={account.id}
+                    active={this.state.activeProjectOrAccount === account.id}
+                    onClick={this.setActiveProjectOrAccount.bind(this, {id: account.id, type: account.type})}
+                  />
+                );
+              })}
 
-            </ProjectAccountSwitcher>  
+            </ProjectAccountSwitcher>
             <Profile
               open={this.state.profileFlyoutOpen}
               image={profileImage}

@@ -18,9 +18,10 @@ import * as PropTypes from 'prop-types';
 import HIGElement from '../../HIGElement';
 import HIGChildValidator from '../../HIGChildValidator';
 import createComponent from '../../../adapters/createComponent';
-import ProjectAccountSwitcherComponent, { ProjectAccountSwitcher } from './ProjectAccountSwitcher'
+import ProjectAccountSwitcherComponent, {
+  ProjectAccountSwitcher
+} from './ProjectAccountSwitcher';
 import ProfileComponent, { Profile } from './Profile';
-
 
 export class TopNav extends HIGElement {
   componentDidMount() {
@@ -31,7 +32,7 @@ export class TopNav extends HIGElement {
     }
 
     if (this.projectAccountSwitcher) {
-      this.hig.addProjectAccountSwitcher(this.projectAccountSwitcher.hig)
+      this.hig.addProjectAccountSwitcher(this.projectAccountSwitcher.hig);
       this.projectAccountSwitcher.mount();
     }
   }
@@ -46,7 +47,10 @@ export class TopNav extends HIGElement {
       case Profile:
         return new Profile(this.hig.partials.Profile, props);
       case ProjectAccountSwitcher:
-        return new ProjectAccountSwitcher(this.hig.partials.ProjectAccountSwitcher, props);  
+        return new ProjectAccountSwitcher(
+          this.hig.partials.ProjectAccountSwitcher,
+          props
+        );
       default:
         throw new Error(`Unknown type ${ElementConstructor.name}`);
     }
@@ -99,12 +103,10 @@ TopNavComponent.propTypes = {
   onHamburgerClick: PropTypes.func,
   addProfile: PropTypes.func,
   addProjectAccountSwitcher: PropTypes.func,
-  children: HIGChildValidator(
-    [
-      ProfileComponent,
-      ProjectAccountSwitcherComponent
-    ]
-  )
+  children: HIGChildValidator([
+    ProfileComponent,
+    ProjectAccountSwitcherComponent
+  ])
 };
 
 TopNavComponent.__docgenInfo = {
