@@ -209,7 +209,7 @@ class App extends React.Component {
             <ProjectAccountSwitcher
               activeLabel={this.state.projectOrAcccountTarget.label}
               activeImage={this.state.projectOrAcccountTarget.image}
-              activeType="account"
+              activeType={this.state.projectOrAcccountTarget.type}
               isOpen={this.state.isOpen}
               onClickOutside={this.closeProjectAccountSwitcher}
               onClick={this.openProjectAccountSwitcher}

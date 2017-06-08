@@ -125,7 +125,11 @@ TopNavComponent.__docgenInfo = {
 
     addProfile: {
       description: 'adds Profile to the top nav'
-    }
+    },
+
+    addProjectAccountSwitcher: {
+      description: 'Pass in an instance of a ProjectAccountSwitcher partial to mount it to the TopNav'
+    },
   }
 };
 

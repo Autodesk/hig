@@ -72,7 +72,7 @@ ProjectComponent.__docgenInfo = {
     deactivate: {
       description: '{func} deactivates the project'
     },
-    onclick: {
+    onClick: {
       description: '{func} calls the provided callback when user clicks on the project'
     }
   }

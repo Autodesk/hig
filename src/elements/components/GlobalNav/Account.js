@@ -61,7 +61,7 @@ AccountComponent.propTypes = {
   label: PropTypes.string,
   activate: PropTypes.func,
   deactivate: PropTypes.func,
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
 };
 
 AccountComponent.__docgenInfo = {
@@ -78,7 +78,7 @@ AccountComponent.__docgenInfo = {
     deactivate: {
       description: '{func} deactivates the Account'
     },
-    onclick: {
+    onClick: {
       description: '{func} calls the provided callback when user clicks on the Account'
     }
   }

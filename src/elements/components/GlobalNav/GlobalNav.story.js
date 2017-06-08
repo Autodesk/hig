@@ -28,6 +28,9 @@ const Group = GlobalNav.SideNav.SectionList.Item.Group;
 const Item = GlobalNav.SideNav.SectionList.Item.Group.Item;
 const TopNav = GlobalNav.TopNav;
 const Profile = TopNav.Profile;
+const ProjectAccountSwitcher = GlobalNav.TopNav.ProjectAccountSwitcher;
+const Account = GlobalNav.TopNav.ProjectAccountSwitcher.Account;
+const Project = GlobalNav.TopNav.ProjectAccountSwitcher.Project;
 const SubNav = GlobalNav.SubNav;
 const Slot = GlobalNav.Slot;
 
@@ -103,6 +106,46 @@ storiesOf('GlobalNav', module)
             </SectionList>
           </SideNav>
           <TopNav logo={logo}>
+
+             <ProjectAccountSwitcher
+              activeLabel="Oakland Medical Center"
+              activeImage={profileImage}
+              activeType="account" 
+              isOpen={false}
+              onClickOutside={action('clicked')}
+              onClick={action('clicked')}
+            >
+              <Account 
+                image={profileImage}
+                label="Stanford hospital"
+                key='1'
+                active={false}
+                onClick={action('clicked')}
+              />
+              <Account 
+                image={profileImage}
+                label="Oakland Medical Center"
+                key='2'
+                active={true}
+                onClick={action('clicked')}
+              />
+
+              <Project
+                image={profileImage}
+                label=""
+                key='3'
+                active={false}
+                onClick={action('clicked')}
+              />
+              
+              <Project
+                image={profileImage}
+                label="Stanford hospital"
+                key='4'
+                active={false}
+                onClick={action('clicked')}
+              />  
+           </ProjectAccountSwitcher>   
             <Profile
               name="Jane Designer"
               email="jane.designer@example.com"
@@ -139,6 +182,57 @@ storiesOf('GlobalNav', module)
             onProfileImageClick={action('clicked')}
           />
         </TopNav>
+        <SubNav moduleIndicatorName="Insight" moduleIndicatorIcon="hamburger" />
+        <Slot>{LONG_COPY}</Slot>
+      </GlobalNav>
+    );
+  })
+  .addWithInfo('w projectAccountSwitcherOpen', ``, () => {
+    const isOpen = boolean('isOpen', true);
+    return (
+      <GlobalNav>
+        <SideNav />
+        <TopNav logo={logo}>
+          <ProjectAccountSwitcher
+            activeLabel="Oakland Medical Center"
+            activeImage={profileImage}
+            activeType="account" 
+            isOpen={isOpen}
+            onClickOutside={action('clicked')}
+            onClick={action('clicked')}
+          >
+            <Account 
+              image={profileImage}
+              label="Stanford hospital"
+              key='1'
+              active={false}
+              onClick={action('clicked')}
+            />
+            <Account 
+              image={profileImage}
+              label="Oakland Medical Center"
+              key='2'
+              active={true}
+              onClick={action('clicked')}
+            />
+
+            <Project
+              image={profileImage}
+              label="California Pacific"
+              key='3'
+              active={true}
+              onClick={action('clicked')}
+            />
+            
+            <Project
+              image={profileImage}
+              label="Stanford hospital"
+              key='4'
+              active={false}
+              onClick={action('clicked')}
+            />  
+          </ProjectAccountSwitcher>   
+      </TopNav>
         <SubNav moduleIndicatorName="Insight" moduleIndicatorIcon="hamburger" />
         <Slot>{LONG_COPY}</Slot>
       </GlobalNav>
