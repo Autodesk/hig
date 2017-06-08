@@ -1,12 +1,17 @@
 @import '~basics/colors/colors.scss';
 
 .hig__global-nav__top-nav____project-account-switcher {
+  .hig__flyout__panel {
+    padding: 0px 10px 10px 10px
+
+    .hig__global-nav__top-nav__project-account-switcher__item__label {
+      &:hover {
+        color: $autodesk-blue;
+        text-decoration: none;
+      }
+    } 
+}
  
 }
 
-.hig__global-nav__top-nav__project-account-switcher__item__label {
-   &:hover {
-     color: $autodesk-blue;
-     text-decoration: none;
-  }
-}
+
