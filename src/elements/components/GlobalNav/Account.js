@@ -46,11 +46,6 @@ export class Account extends HIGElement {
       }
     }
   }
-
-  componentDidMount() {
-    if (this.initialProps.activatedAccount == true) {
-    }
-  }
 }
 
 const AccountComponent = createComponent(Account);
