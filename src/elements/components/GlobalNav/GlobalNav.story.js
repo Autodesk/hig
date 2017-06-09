@@ -111,25 +111,25 @@ storiesOf('GlobalNav', module)
           </SideNav>
           <TopNav logo={logo}>
 
-             <ProjectAccountSwitcher
+            <ProjectAccountSwitcher
               activeLabel="Oakland Medical Center"
               activeImage={project1}
-              activeType="account" 
+              activeType="account"
               isOpen={false}
               onClickOutside={action('clicked')}
               onClick={action('clicked')}
             >
-              <Account 
+              <Account
                 image={project2}
                 label="Stanford hospital"
-                key='1'
+                key="1"
                 active={false}
                 onClick={action('clicked')}
               />
-              <Account 
+              <Account
                 image=""
                 label="Oakland Medical Center"
-                key='2'
+                key="2"
                 active={true}
                 onClick={action('clicked')}
               />
@@ -137,19 +137,19 @@ storiesOf('GlobalNav', module)
               <Project
                 image={project4}
                 label=""
-                key='3'
+                key="3"
                 active={false}
                 onClick={action('clicked')}
               />
-              
+
               <Project
                 image={project1}
                 label="Stanford hospital"
-                key='4'
+                key="4"
                 active={false}
                 onClick={action('clicked')}
-              />  
-           </ProjectAccountSwitcher>   
+              />
+            </ProjectAccountSwitcher>
             <Profile
               name="Jane Designer"
               email="jane.designer@example.com"
@@ -200,22 +200,22 @@ storiesOf('GlobalNav', module)
           <ProjectAccountSwitcher
             activeLabel="Oakland Medical Center"
             activeImage={project1}
-            activeType="account" 
+            activeType="account"
             isOpen={isOpen}
             onClickOutside={action('clicked')}
             onClick={action('clicked')}
           >
-            <Account 
+            <Account
               image={project2}
               label="Stanford hospital"
-              key='1'
+              key="1"
               active={false}
               onClick={action('clicked')}
             />
-            <Account 
+            <Account
               image={project1}
               label="Oakland Medical Center"
-              key='2'
+              key="2"
               active={true}
               onClick={action('clicked')}
             />
@@ -223,20 +223,20 @@ storiesOf('GlobalNav', module)
             <Project
               image=""
               label="California Pacific"
-              key='3'
+              key="3"
               active={true}
               onClick={action('clicked')}
             />
-            
+
             <Project
               image={project3}
               label="Stanford hospital"
-              key='4'
+              key="4"
               active={false}
               onClick={action('clicked')}
-            />  
-          </ProjectAccountSwitcher>   
-      </TopNav>
+            />
+          </ProjectAccountSwitcher>
+        </TopNav>
         <SubNav moduleIndicatorName="Insight" moduleIndicatorIcon="hamburger" />
         <Slot>{LONG_COPY}</Slot>
       </GlobalNav>

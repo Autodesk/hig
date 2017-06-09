@@ -30,7 +30,7 @@ export class Project extends HIGElement {
       const propKey = updatePayload[i];
       const propValue = updatePayload[i + 1];
 
-     switch (propKey) {
+      switch (propKey) {
         case mapping[propKey]:
           this.hig[mapping[propKey]](propValue);
           break;
@@ -40,7 +40,7 @@ export class Project extends HIGElement {
           } else {
             this.hig.deactivate();
           }
-          break;          
+          break;
         default:
           this.commitPropChange(propKey, propValue);
       }

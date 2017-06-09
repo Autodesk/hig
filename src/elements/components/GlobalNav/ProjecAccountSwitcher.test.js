@@ -124,7 +124,7 @@ describe('<ProjectAccountSwitcher>', () => {
     });
   });
 
-  describe('open and close profile flyout', () => {
+  describe('open and close Project Account Switcher flyout', () => {
     it('sets the flyout as open if initialized as open', () => {
       const reactContainer = document.createElement('div');
       const wrapper = mount(
@@ -140,7 +140,7 @@ describe('<ProjectAccountSwitcher>', () => {
       expect(elem.length).toEqual(1);
     });
 
-    it('opens the flyout on prop change', () => {
+    it('opens the Project Account Switcher on prop change', () => {
       const reactContainer = document.createElement('div');
       const wrapper = mount(<Context {...{ isOpen: false }} />, {
         attachTo: reactContainer

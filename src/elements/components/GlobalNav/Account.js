@@ -40,16 +40,15 @@ export class Account extends HIGElement {
           } else {
             this.hig.deactivate();
           }
-          break;          
+          break;
         default:
           this.commitPropChange(propKey, propValue);
       }
     }
   }
 
-  componentDidMount(){
-    if (this.initialProps.activatedAccount == true ) {
-      
+  componentDidMount() {
+    if (this.initialProps.activatedAccount == true) {
     }
   }
 }
@@ -61,7 +60,7 @@ AccountComponent.propTypes = {
   label: PropTypes.string,
   activate: PropTypes.func,
   deactivate: PropTypes.func,
-  onClick: PropTypes.func,
+  onClick: PropTypes.func
 };
 
 AccountComponent.__docgenInfo = {

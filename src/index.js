@@ -57,23 +57,47 @@ class App extends React.Component {
       isOpen: false,
       activeTab: 0,
       activeProjectOrAccount: 0,
-      projectOrAcccountTarget: { label: 'Oakwood Medical Center', image: project1, id: 0, type: 'project'},
+      projectOrAcccountTarget: {
+        label: 'Oakwood Medical Center',
+        image: project1,
+        id: 0,
+        type: 'project'
+      },
       tabs: [{ label: 'One', id: 0 }, { label: 'Two', id: 1 }],
       projects: [
-        { label: 'Oakwood Medical Center', image: project2, id: 0, type: 'project'},
-        { label: 'Colorado Myrtle Shield Apartments', image: project3, id: 2 , type: 'project'},
-        { label: 'Grey Pillars', image: project4, id: 4, type: 'project'},
+        {
+          label: 'Oakwood Medical Center',
+          image: project2,
+          id: 0,
+          type: 'project'
+        },
+        {
+          label: 'Colorado Myrtle Shield Apartments',
+          image: project3,
+          id: 2,
+          type: 'project'
+        },
+        { label: 'Grey Pillars', image: project4, id: 4, type: 'project' },
         { label: 'Keystone Apartments', id: 6, type: 'project' },
         { label: 'Pleasant Park', image: project1, id: 8, type: 'project' }
       ],
       accounts: [
-        { label: 'Oakwood Medical Center', image: project1, id: 1, type: 'account'},
-        { label: 'Colorado Myrtle Shield Apartments', image: project2, id: 3, type: 'account' },
+        {
+          label: 'Oakwood Medical Center',
+          image: project1,
+          id: 1,
+          type: 'account'
+        },
+        {
+          label: 'Colorado Myrtle Shield Apartments',
+          image: project2,
+          id: 3,
+          type: 'account'
+        },
         { label: 'Grey Pillars', image: project3, id: 5, type: 'account' },
         { label: 'Keystone Apartments', id: 7, type: 'account' },
         { label: 'Pleasant Park', image: project4, id: 9, type: 'account' }
       ]
-
     };
   }
 
@@ -108,7 +132,6 @@ class App extends React.Component {
     console.log('Profile Sign Out button clicked!');
   };
 
-
   fn1 = () => this.setState({ fn: true });
 
   fn2 = () => this.setState({ fn: false });
@@ -141,30 +164,33 @@ class App extends React.Component {
   };
 
   setActiveProjectOrAccount = activeProjectOrAccountItem => {
-    this.setState({ activeProjectOrAccount: activeProjectOrAccountItem.id })
+    this.setState({ activeProjectOrAccount: activeProjectOrAccountItem.id });
     this.setProjectOrAccountTarget(activeProjectOrAccountItem);
-    this.setState({isOpen: false});
-  }
+    this.setState({ isOpen: false });
+  };
 
   setProjectOrAccountTarget = targetItem => {
     if (targetItem.type === 'account') {
-      this.state.accounts.forEach(function(account){
-        if (account.id === targetItem.id) {
-          this.setState({projectOrAcccountTarget: account})
-        }
-      }.bind(this))
+      this.state.accounts.forEach(
+        function(account) {
+          if (account.id === targetItem.id) {
+            this.setState({ projectOrAcccountTarget: account });
+          }
+        }.bind(this)
+      );
     }
 
     if (targetItem.type === 'project') {
-      this.state.projects.forEach(function(project){
-        if (project.id === targetItem.id) {
-          this.setState({projectOrAcccountTarget: project})
-        }
-      }.bind(this))
+      this.state.projects.forEach(
+        function(project) {
+          if (project.id === targetItem.id) {
+            this.setState({ projectOrAcccountTarget: project });
+          }
+        }.bind(this)
+      );
     }
-  }
+  };
 
-    
   render() {
     return (
       <div>
@@ -227,7 +253,10 @@ class App extends React.Component {
                     label={project.label}
                     key={project.id}
                     active={this.state.activeProjectOrAccount === project.id}
-                    onClick={this.setActiveProjectOrAccount.bind(this, {id: project.id, type: project.type} )}
+                    onClick={this.setActiveProjectOrAccount.bind(this, {
+                      id: project.id,
+                      type: project.type
+                    })}
                   />
                 );
               })}
@@ -238,7 +267,10 @@ class App extends React.Component {
                     label={account.label}
                     key={account.id}
                     active={this.state.activeProjectOrAccount === account.id}
-                    onClick={this.setActiveProjectOrAccount.bind(this, {id: account.id, type: account.type})}
+                    onClick={this.setActiveProjectOrAccount.bind(this, {
+                      id: account.id,
+                      type: account.type
+                    })}
                   />
                 );
               })}

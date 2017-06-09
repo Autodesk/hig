@@ -129,7 +129,7 @@ TopNavComponent.__docgenInfo = {
 
     addProjectAccountSwitcher: {
       description: 'Pass in an instance of a ProjectAccountSwitcher partial to mount it to the TopNav'
-    },
+    }
   }
 };
 
