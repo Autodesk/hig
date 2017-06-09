@@ -20,7 +20,7 @@ class Module extends Core {
     }
 
     onClick(fn){
-        return this._attachListener("click", ".hig__global-nav__side-nav__section__group__module--link", this.el, fn);
+        return this._attachListener("click", ".hig__global-nav__side-nav__section__group__module__link", this.el, fn);
     }
 
     onHover(fn){
@@ -28,11 +28,11 @@ class Module extends Core {
     }
 
     setIcon(icon){
-        this._findDOMEl(".hig__global-nav__side-nav__section__group__module__icon", this.el).innerHTML = this._getIconString(icon);
+        this._findDOMEl(".hig__global-nav__side-nav__section__group__module__link__icon", this.el).innerHTML = this._getIconString(icon);
     }
 
     setTitle(title){
-        this._findDOMEl(".hig__global-nav__side-nav__section__group__module__title", this.el).textContent = title;
+        this._findDOMEl(".hig__global-nav__side-nav__section__group__module__link__title", this.el).textContent = title;
     }
 
     setLink(link){
@@ -59,6 +59,14 @@ class Module extends Core {
 
     hide(){
         this.el.classList.add("hig__global-nav__side-nav__section__group__module--hide");
+    }
+
+    activate() {
+        this._findDOMEl(".hig__global-nav__side-nav__section__group__module__link", this.el).classList.add("hig__global-nav__side-nav__section__group__module__link--active");
+    }
+
+    deactivate() {
+        this._findDOMEl(".hig__global-nav__side-nav__section__group__module__link", this.el).classList.remove("hig__global-nav__side-nav__section__group__module__link--active");
     }
 
 }
