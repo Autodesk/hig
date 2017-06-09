@@ -41,6 +41,14 @@ class Submodule extends Core {
         this.el.classList.add("hig__global-nav__side-nav__section__group__module__submodule--hide");
     }
 
+    activate() {
+        this._findDOMEl(".hig__global-nav__side-nav__section__group__module__submodule__link", this.el).classList.add("hig__global-nav__side-nav__section__group__module__submodule__link--active");
+    }
+
+    deactivate() {
+        this._findDOMEl(".hig__global-nav__side-nav__section__group__module__submodule__link", this.el).classList.remove("hig__global-nav__side-nav__section__group__module__submodule__link--active");
+    }
+
 }
 
 Submodule._interface = Interface['components']['GlobalNav']['partials']['SideNav']['partials']['Section']['partials']['Group']['partials']['Module']['partials']['Submodule'];

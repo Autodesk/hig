@@ -326,6 +326,17 @@
                 Tabs = new SubNav.partials.Tabs();
                 SubNav.addTabs(Tabs);
 
+                // SELECT OUR MODULE
+                // CLEAR ALL ACTIVE
+                menuModel.forEach(function(sectionModel){
+                    sectionModel["groups"].forEach(function(groupModel){
+                        groupModel["modules"].forEach(function(moduleModel){
+                            if(moduleModel["_generated_module"]) moduleModel["_generated_module"].deactivate();
+                        });
+                    });
+                });
+                moduleModel["_generated_module"].activate();
+
                 // LOOP OVER SUBMODULES IF ANY
                 if(moduleModel["submodules"]){
                     moduleModel["submodules"].forEach(function(submoduleModel){
@@ -341,10 +352,24 @@
                         generated_tab.onClick(function(){
                             
                             // LOOP OVER SUBMODULE TABS AND DEACTIVATE THEM ALL
-                            moduleModel["submodules"].forEach(function(submoduleModel){ submoduleModel["_generated_tab"].deactivate(); });
+                            menuModel.forEach(function(sectionModel){
+                                sectionModel["groups"].forEach(function(groupModel){
+                                    groupModel["modules"].forEach(function(moduleModel){
+                                        if(moduleModel["submodules"]){
+                                            moduleModel["submodules"].forEach(function(submoduleModel){ 
+                                                if(submoduleModel["_generated_tab"]) submoduleModel["_generated_tab"].deactivate(); 
+                                                if(submoduleModel["_generated_submodule"]) submoduleModel["_generated_submodule"].deactivate(); 
+                                            });
+                                        }
+                                    });
+                                });
+                            });
 
                             // MAKE OUR SELECTED TAB ACTIVE
                             submoduleModel["_generated_tab"].activate();
+
+                            // SELECT OUR SUBMODULE
+                            submoduleModel["_generated_submodule"].activate();
 
                             // SLOT IN SOME EXAMPLE IMAGE CONTENT
                             SlotEl.innerHTML = "<img src='"+submoduleModel["contentImage"]+"' width='1280'>";

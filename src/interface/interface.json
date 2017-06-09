@@ -593,6 +593,12 @@
                                                 "hide":{
                                                     "desc": "hide (used for filtering)"
                                                 },
+                                                "activate": {
+                                                    "desc": "activates the module"
+                                                },
+                                                "deactivate": {
+                                                    "desc": "deactivates the module"
+                                                },
                                                 "showSubmodules" :{
                                                     "desc": "show the submodules"
                                                 },
@@ -642,6 +648,12 @@
                                                         },
                                                         "hide":{
                                                             "desc": "hide (used for filtering)"
+                                                        },
+                                                        "activate": {
+                                                            "desc": "activates the submodule"
+                                                        },
+                                                        "deactivate": {
+                                                            "desc": "deactivates the submodule"
                                                         },
                                                         "onClick": "HIG.abstract.EventObject",
                                                         "onHover": "HIG.abstract.EventObject"
