@@ -145,7 +145,7 @@
 
             SideNavSearch.onClearIconClick(function(e){
                 SideNavSearch.setQuery(''); // set input to empty
-                filterMenu("", true);
+                filterMenu("");
             });
 
             // ADD TOPNAV
@@ -390,7 +390,7 @@
             }
 
 
-            function filterMenu(q, closeSubmodules){
+            function filterMenu(q){
                 q = q.toLowerCase();
 
                 // LOOP OVER SECTIONS
@@ -416,14 +416,19 @@
                             var moduleFound = false;
                             var subModuleFound = false;
 
-                            if(closeSubmodules){
-                                moduleModel["_generated_module"].hideSubmodules();
-                                // SAVE NEW STATE TO MODEL
-                                sectionModel["_collapsed"] = true;
-                                sectionModel["_generated_collapseIcon"].maximize();
-                            }else if(q != ""){
+                            if(q == ""){
+                                if(sectionModel["_collapsed"]){
+                                    moduleModel["_generated_module"].hideSubmodules();
+                                    sectionModel["_generated_collapseIcon"].maximize();
+                                }else{
+                                    moduleModel["_generated_module"].showSubmodules();
+                                    sectionModel["_generated_collapseIcon"].minimize();
+                                }
+                            }else{
+                                // ALWAYS SHOW SUBMODULES
                                 moduleModel["_generated_module"].showSubmodules();
                             }
+                            
 
                             // LOOP OVER SUBMODULES
                             if(moduleModel["submodules"]){
