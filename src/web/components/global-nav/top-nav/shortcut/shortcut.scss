@@ -1,0 +1,21 @@
+@import '~basics/colors/colors.scss';
+
+.hig__global-nav__top-nav__shortcut {
+  padding: 0 5px;
+}
+.hig__global-nav__top-nav__shortcut__link {
+  display: block;
+  height: 18px;
+  width: 18px;
+  border: 1px solid $gray-darker;
+  border-radius: 50%;
+}
+.hig__global-nav__top-nav__shortcut__link__icon {
+  margin: auto;
+  vertical-align: middle;
+  .hig__icon {
+    height: 24px;
+    width: 24px;
+    color: $gray-darker;
+  }
+}
