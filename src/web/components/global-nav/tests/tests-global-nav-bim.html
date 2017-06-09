@@ -111,14 +111,6 @@
             var GlobalNav = new Hig.GlobalNav();
             GlobalNav.mount("body");
 
-            // EVENTS GLOBALNAV
-            GlobalNav.onHoverOutside(function(e){
-                if(menuModel["_menu_open"]){
-                    GlobalNav.hideSideNav();
-                    menuModel["_menu_open"] = !menuModel["_menu_open"];
-                }
-            })
-
             // ADD SIDENAV
             var SideNav = new GlobalNav.partials.SideNav();
             GlobalNav.addSideNav(SideNav);
@@ -159,8 +151,10 @@
             TopNav.onHamburgerClick(function(e){
                 if(menuModel["_menu_open"]){
                     GlobalNav.hideSideNav();
+                    TopNav.sidenavClosed();
                 }else{
                     GlobalNav.showSideNav();
+                    TopNav.sidenavOpen();
                 }
                 menuModel["_menu_open"] = !menuModel["_menu_open"];
             });

@@ -126,6 +126,12 @@
                                 "{String} link - new link"
                             ]
                         },
+                        "sidenavOpen": {
+                            "desc": "changes the hamburger icon to a close icon"
+                        },
+                        "sidenavClosed": {
+                            "desc": "changes the close icon to a hamburger icon"
+                        },
                         "addProfile": {
                             "desc": "Pass in an instance of an Profile partial to mount it to the GlobalNav",
                             "params": [
