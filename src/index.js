@@ -143,6 +143,7 @@ class App extends React.Component {
   setActiveProjectOrAccount = activeProjectOrAccountItem => {
     this.setState({ activeProjectOrAccount: activeProjectOrAccountItem.id })
     this.setProjectOrAccountTarget(activeProjectOrAccountItem);
+    this.setState({isOpen: false});
   }
 
   setProjectOrAccountTarget = targetItem => {
