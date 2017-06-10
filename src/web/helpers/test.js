@@ -1,7 +1,3 @@
-/**
- * Created by shannon on 6/9/17.
- */
-
 class TestHelpers {
   createFullNav() {
     // CREATE GLOBALNAV COMPONENT
