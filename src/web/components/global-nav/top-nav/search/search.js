@@ -18,35 +18,35 @@ class Search extends Core {
     }
 
     setPlaceholder(placeholder){
-        this._findDOMEl(".hig__global-nav__side-nav__search__inputholder__input", this.el).setAttribute('placeholder', placeholder);
+        this._findDOMEl(".hig__global-nav__top-nav__search__inputholder__input", this.el).setAttribute('placeholder', placeholder);
     }
 
     setQuery(query){
-        this._findDOMEl(".hig__global-nav__side-nav__search__inputholder__input", this.el).value = query;
+        this._findDOMEl(".hig__global-nav__top-nav__search__inputholder__input", this.el).value = query;
     }
 
     showClearIcon(){
-        this._findDOMEl(".hig__global-nav__side-nav__search__clear", this.el).classList.add("hig__global-nav__side-nav__search__clear--show");
+        this._findDOMEl(".hig__global-nav__top-nav__search__clear", this.el).classList.add("hig__global-nav__top-nav__search__clear--show");
     }
 
     hideClearIcon(){
-        this._findDOMEl(".hig__global-nav__side-nav__search__clear", this.el).classList.remove("hig__global-nav__side-nav__search__clear--show");
+        this._findDOMEl(".hig__global-nav__top-nav__search__clear", this.el).classList.remove("hig__global-nav__top-nav__search__clear--show");
     }
 
     onClearIconClick(fn){
-        return this._attachListener("click", '.hig__global-nav__side-nav__search__clear', this.el, fn);
+        return this._attachListener("click", '.hig__global-nav__top-nav__search__clear', this.el, fn);
     }
 
     onInput(fn){
-        return this._attachListener("input", '.hig__global-nav__side-nav__search__inputholder__input', this.el, fn);
+        return this._attachListener("input", '.hig__global-nav__top-nav__search__inputholder__input', this.el, fn);
     }
 
     onFocusIn(fn){
-        return this._attachListener("focusin", '.hig__global-nav__side-nav__search__inputholder__input', this.el, fn);
+        return this._attachListener("focusin", '.hig__global-nav__top-nav__search__inputholder__input', this.el, fn);
     }
 
     onFocusOut(fn){
-        return this._attachListener("focusout", '.hig__global-nav__side-nav__search__inputholder__input', this.el, fn);
+        return this._attachListener("focusout", '.hig__global-nav__top-nav__search__inputholder__input', this.el, fn);
     }
 
 }
