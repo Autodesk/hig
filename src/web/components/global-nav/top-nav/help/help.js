@@ -1,5 +1,3 @@
-import './help.scss';
-
 //var Interface = require('interface.json');
 //var Template = require('../shortcut/shortcut.html');
 var Shortcut = require('../shortcut/shortcut.js')
