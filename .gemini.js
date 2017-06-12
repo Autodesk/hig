@@ -20,15 +20,15 @@ module.exports = {
         name: 'gemini visual regression tests'
       }
     }, 
-    edge:   {
-      tolerance: 4.0,
-      calibrate: true,
-      desiredCapabilities: {
-        browserName: 'MicrosoftEdge',
-        version:     '14.14393',
-        platform:    'Windows 10',
-        name:        'gemini visual regression tests'
-      }
-    }
+    //edge:   {
+    //  tolerance: 4.0,
+    //  calibrate: true,
+    //  desiredCapabilities: {
+    //    browserName: 'MicrosoftEdge',
+    //    version:     '14.14393',
+    //    platform:    'Windows 10',
+    //    name:        'gemini visual regression tests'
+    //  }
+    //}
   }
 }
