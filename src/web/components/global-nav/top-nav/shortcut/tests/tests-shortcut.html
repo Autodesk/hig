@@ -8,20 +8,21 @@
   </style>
 </head>
 <body style="padding: 0; margin: 0;">
-<div class='test-container' style="padding: 0; margin: 0;"></div>
-  <script>
+<script>
+  const testHelper = new TestHelpers();
+  const imagesPath = "../../../../../../../src/web/components/global-nav/tests"
+  var {TopNav,GlobalNav} = testHelper.createFullNav();
 
-    const testHelper = new TestHelpers();
-    const imagesPath = "../../../../../../../src/web/components/global-nav/tests"
-    var {TopNav,GlobalNav} = testHelper.createFullNav();
+  var shortcut = new TopNav.partials.Shortcut({
+    onClick: function() { alert('foo')}, title: "GEARZ", link: "http://www.autodesk.com", icon: "gear"
+  });
+  TopNav.addShortcut(shortcut, TopNav.ProjectAccountSwitcher);
 
-    var shortcut = new TopNav.partials.Shortcut({
-      onClick: function() { alert('foo')},
-      title: "GEARZ",
-      link: "http://www.autodesk.com",
-      icon: "gear"
-    });
-    TopNav.addShortcut(shortcut, TopNav.ProjectAccountSwitcher);
-  </script>
+  var help = new TopNav.partials.Help({
+    onClick: function() { alert('foo')}, title: "HELP HELP!", link: "http://www.autodesk.com", icon: "gear"
+  });
+  TopNav.addShortcut(help, TopNav.ProjectAccountSwitcher);
+</script>
+
 </body>
 </html>
