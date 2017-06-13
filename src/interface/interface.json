@@ -256,6 +256,9 @@
                                         "{Project} [ReferenceProject] - (Optional) reference node for insertBefore"
                                     ]
                                 },
+                                "removeCaretFromTarget": {
+                                    "desc": "removes caret from target in Project Account Switcher"
+                                },
                                 "open": {
                                     "desc": "opens the project/account switcher"
                                 },

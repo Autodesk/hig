@@ -84,6 +84,8 @@ class Profile extends Core {
     return this.flyoutContent.onSignOutClick(fn);
   }
 
+  
+
 
 
 }

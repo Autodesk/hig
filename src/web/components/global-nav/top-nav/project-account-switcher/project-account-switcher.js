@@ -26,7 +26,8 @@ class ProjectAccountSwitcher extends Core {
         this.target = new Target({
             label: options.activeLabel,
             image: options.activeImage,
-            _type: options.activeType
+            _type: options.activeType,
+            hideAccountSwitcher: options.hideAccountSwitcher
         });
         this.flyoutContent = new Lists();
 
@@ -49,6 +50,10 @@ class ProjectAccountSwitcher extends Core {
 
     onClick(fn) {
         return this.target.onClick(fn);
+    }
+
+    removeCaretFromTarget() {
+        this.target.removeCaret();
     }
 
     open() { this.flyout.open(); }
