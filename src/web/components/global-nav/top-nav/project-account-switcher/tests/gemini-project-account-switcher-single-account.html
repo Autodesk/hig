@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../../../../../../../dist/hig.css">
+        <script type="text/javascript" src="../../../../../../../dist/hig.js"></script>
+    </head>
+    <body>
+        <style>
+            body, html{
+                margin: 0; padding: 0;
+            }
+        </style>
+
+        <script>
+
+            // CREATE GLOBALNAV COMPONENT
+            var GlobalNav = new Hig.GlobalNav();
+            GlobalNav.mount("body");
+
+            // ADD TOP GlobalNav
+            var TopNav = new GlobalNav.partials.TopNav({
+                "logo": "https://www.dexigner.com/images/news/xw/22856.jpg",
+                "logo_link": "#"
+            });
+            GlobalNav.addTopNav(TopNav);
+
+            TopNav.setLogo("../../../tests/bim-logo.png"); // Update logo
+            TopNav.setLogoLink("http://autodesk.com"); // update logo link
+
+            // CREATE PROFILE
+            var MyProfile1 = new TopNav.partials.Profile({});
+
+            TopNav.addProfile(MyProfile1);
+
+            // CREATE PROJECT ACCOUNT SWITCHER
+            var ProjectAccountSwitcher = new TopNav.partials.ProjectAccountSwitcher({
+                activeLabel: 'Global Construction / West Oakwood Medical Center',
+                activeType: 'project'
+            });
+
+            TopNav.addProjectAccountSwitcher(ProjectAccountSwitcher);
+        </script>
+
+    </body>
+</html>
