@@ -25,6 +25,7 @@ import partitionProps from '../interface/partitionProps';
 export default class HIGElement {
   constructor(HIGConstructor, initialProps) {
     this.initialProps = initialProps;
+
     const { defaults, events, possibleEvents } = partitionProps(
       initialProps,
       HIGConstructor._interface

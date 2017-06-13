@@ -14,16 +14,33 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 */
+import * as HIG from 'hig.web';
 import * as PropTypes from 'prop-types';
+
 import HIGElement from '../../HIGElement';
 import HIGChildValidator from '../../HIGChildValidator';
 import createComponent from '../../../adapters/createComponent';
+
+import HIGNodeList from '../../HIGNodeList';
 import ProjectAccountSwitcherComponent, {
   ProjectAccountSwitcher
 } from './ProjectAccountSwitcher';
 import ProfileComponent, { Profile } from './Profile';
+import ShortcutComponent, { Shortcut } from './Shortcut';
 
 export class TopNav extends HIGElement {
+  constructor(HIGConstructor, initialProps) {
+    super(HIGConstructor, initialProps);
+
+    this.shortcuts = new HIGNodeList({
+      type: Shortcut,
+      HIGConstructor: this.hig.partials.Shortcut,
+      onAdd: (instance, beforeInstance) => {
+        this.hig.addShortcut(instance, beforeInstance);
+      }
+    });
+  }
+
   componentDidMount() {
     // Add any children
     if (this.profile) {
@@ -35,6 +52,8 @@ export class TopNav extends HIGElement {
       this.hig.addProjectAccountSwitcher(this.projectAccountSwitcher.hig);
       this.projectAccountSwitcher.mount();
     }
+
+    this.shortcuts.componentDidMount();
   }
 
   commitUpdate(updatePayload, oldProps, newProp) {
@@ -51,6 +70,8 @@ export class TopNav extends HIGElement {
           this.hig.partials.ProjectAccountSwitcher,
           props
         );
+      case Shortcut:
+        return this.shortcuts.createElement(ElementConstructor, props);
       default:
         throw new Error(`Unknown type ${ElementConstructor.name}`);
     }
@@ -77,6 +98,8 @@ export class TopNav extends HIGElement {
           instance.mount();
         }
       }
+    } else if (instance instanceof Shortcut) {
+      this.shortcuts.insertBefore(instance);
     } else {
       throw new Error('unknown type');
     }
@@ -105,7 +128,8 @@ TopNavComponent.propTypes = {
   addProjectAccountSwitcher: PropTypes.func,
   children: HIGChildValidator([
     ProfileComponent,
-    ProjectAccountSwitcherComponent
+    ProjectAccountSwitcherComponent,
+    ShortcutComponent
   ])
 };
 
@@ -134,6 +158,7 @@ TopNavComponent.__docgenInfo = {
 };
 
 TopNavComponent.Profile = ProfileComponent;
+TopNavComponent.Shortcut = ShortcutComponent;
 TopNavComponent.ProjectAccountSwitcher = ProjectAccountSwitcherComponent;
 
 export default TopNavComponent;

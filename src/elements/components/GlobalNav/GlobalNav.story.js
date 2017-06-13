@@ -28,6 +28,7 @@ const Group = GlobalNav.SideNav.SectionList.Item.Group;
 const Item = GlobalNav.SideNav.SectionList.Item.Group.Item;
 const TopNav = GlobalNav.TopNav;
 const Profile = TopNav.Profile;
+const Shortcut = TopNav.Shortcut;
 const ProjectAccountSwitcher = GlobalNav.TopNav.ProjectAccountSwitcher;
 const Account = GlobalNav.TopNav.ProjectAccountSwitcher.Account;
 const Project = GlobalNav.TopNav.ProjectAccountSwitcher.Project;
@@ -150,6 +151,12 @@ storiesOf('GlobalNav', module)
                 onClick={action('clicked')}
               />
             </ProjectAccountSwitcher>
+            <Shortcut
+              icon="gear"
+              onclick={function() {
+                alert('hello!');
+              }}
+            />
             <Profile
               name="Jane Designer"
               email="jane.designer@example.com"
