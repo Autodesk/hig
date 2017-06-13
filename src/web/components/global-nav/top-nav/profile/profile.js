@@ -83,9 +83,6 @@ class Profile extends Core {
   onSignOutClick(fn) {
     return this.flyoutContent.onSignOutClick(fn);
   }
-
-
-
 }
 
 Profile._interface = Interface['components']['GlobalNav']['partials']['TopNav']['partials']['Profile'];
