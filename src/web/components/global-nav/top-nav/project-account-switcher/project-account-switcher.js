@@ -51,6 +51,10 @@ class ProjectAccountSwitcher extends Core {
         return this.target.onClick(fn);
     }
 
+    removeCaretFromTarget() {
+        this.target.removeCaret();
+    }
+
     open() { this.flyout.open(); }
 
     close() { this.flyout.close(); }
