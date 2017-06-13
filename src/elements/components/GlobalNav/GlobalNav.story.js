@@ -204,6 +204,7 @@ storiesOf('GlobalNav', module)
             isOpen={isOpen}
             onClickOutside={action('clicked')}
             onClick={action('clicked')}
+            hideProjectAccountFlyout={false}
           >
             <Account
               image={project2}
@@ -236,6 +237,23 @@ storiesOf('GlobalNav', module)
               onClick={action('clicked')}
             />
           </ProjectAccountSwitcher>
+        </TopNav>
+        <SubNav moduleIndicatorName="Insight" moduleIndicatorIcon="hamburger" />
+        <Slot>{LONG_COPY}</Slot>
+      </GlobalNav>
+    );
+  })
+  .addWithInfo('w projectAccountSwitcher Single Account', ``, () => {
+    const isOpen = boolean('isOpen', true);
+    return (
+      <GlobalNav>
+        <SideNav />
+        <TopNav logo={logo}>
+          <ProjectAccountSwitcher
+            activeLabel="Oakland Medical Center"
+            activeImage={project1}
+            activeType="account"
+            hideProjectAccountFlyout={true}/>
         </TopNav>
         <SubNav moduleIndicatorName="Insight" moduleIndicatorIcon="hamburger" />
         <Slot>{LONG_COPY}</Slot>

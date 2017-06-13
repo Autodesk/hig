@@ -56,6 +56,21 @@ const Context = props => {
   );
 };
 
+const SingleAccountContext = props => {
+  return (
+    <GlobalNav>
+      <TopNav>
+        <ProjectAccountSwitcher
+          activeLabel={props.activeLabel}
+          activeImage={props.activeImage}
+          activeType={props.activeType}
+          hideProjectAccountFlyout={true}
+        />
+      </TopNav>
+    </GlobalNav>
+  );
+};
+
 function createHigContext(defaults) {
   const higContainer = document.createElement('div');
 
@@ -153,6 +168,28 @@ describe('<ProjectAccountSwitcher>', () => {
         'hig__flyout hig__flyout--open'
       );
       expect(elem.length).toEqual(1);
+    });
+  });
+
+   describe('Project Account Switcher flyout', () => {
+    it('is not visible when only 1 project or account exists', () => {
+      const reactContainer = document.createElement('div');
+      const wrapper = mount(
+        <SingleAccountContext {...{activeLabel: 'someLabel' }} />,
+        {
+          attachTo: reactContainer
+        }
+      );
+      const elem = reactContainer.getElementsByClassName(
+        'hig__flyout hig__flyout--open'
+      );
+
+      const caretElem = reactContainer.getElementsByClassName(
+        'hig__global-nav__top-nav__project-account-switcher__target__caret'
+      );
+
+      expect(caretElem.length).toEqual(0);
+      expect(elem.length).toEqual(0)
     });
   });
 });

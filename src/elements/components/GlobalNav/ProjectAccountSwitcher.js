@@ -50,6 +50,10 @@ export class ProjectAccountSwitcher extends HIGElement {
     if (this.initialProps.isOpen === true) {
       this.hig.open();
     }
+
+     if(this.initialProps.hideProjectAccountFlyout) {
+       this.hig.removeCaretFromTarget();
+    }
   }
 
   commitUpdate(updatePayload, oldProps, newProp) {
@@ -99,6 +103,8 @@ const ProjectAccountSwitcherComponent = createComponent(ProjectAccountSwitcher);
 
 ProjectAccountSwitcherComponent.propTypes = {
   isOpen: PropTypes.bool,
+  hideProjectAccountFlyout: PropTypes.bool,
+  removeCaretFromTarget: PropTypes.func,
   activeLabel: PropTypes.string,
   activeImage: PropTypes.string,
   activeType: PropTypes.string,
@@ -129,6 +135,9 @@ ProjectAccountSwitcherComponent.__docgenInfo = {
     },
     close: {
       description: '{func} closes the project/account switcher'
+    },
+    removeCaretFromTarget: {
+       description: '{func} closes the project/account switcher'
     },
     onClickOutside: {
       description: '{func} calls the provided callback when the switcher is open and the user clicks outside the switcher'

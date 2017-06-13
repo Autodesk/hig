@@ -57,47 +57,10 @@ class App extends React.Component {
       isOpen: false,
       activeTab: 0,
       activeProjectOrAccount: 0,
-      projectOrAcccountTarget: {
-        label: 'Oakwood Medical Center',
-        image: project1,
-        id: 0,
-        type: 'project'
-      },
+      projectOrAcccountTarget: this.accountList()[0],
       tabs: [{ label: 'One', id: 0 }, { label: 'Two', id: 1 }],
-      projects: [
-        {
-          label: 'Oakwood Medical Center',
-          image: project2,
-          id: 0,
-          type: 'project'
-        },
-        {
-          label: 'Colorado Myrtle Shield Apartments',
-          image: project3,
-          id: 2,
-          type: 'project'
-        },
-        { label: 'Grey Pillars', image: project4, id: 4, type: 'project' },
-        { label: 'Keystone Apartments', id: 6, type: 'project' },
-        { label: 'Pleasant Park', image: project1, id: 8, type: 'project' }
-      ],
-      accounts: [
-        {
-          label: 'Oakwood Medical Center',
-          image: project1,
-          id: 1,
-          type: 'account'
-        },
-        {
-          label: 'Colorado Myrtle Shield Apartments',
-          image: project2,
-          id: 3,
-          type: 'account'
-        },
-        { label: 'Grey Pillars', image: project3, id: 5, type: 'account' },
-        { label: 'Keystone Apartments', id: 7, type: 'account' },
-        { label: 'Pleasant Park', image: project4, id: 9, type: 'account' }
-      ]
+      projects: this.projectList(),
+      accounts: this.accountList(), 
     };
   }
 
@@ -191,6 +154,44 @@ class App extends React.Component {
     }
   };
 
+  singleProjectOrAccount = () => {
+    // one of these is empty/undefined and the other has only one item
+    var projectsIsEmpty = this.state.projects === undefined || this.state.projects.length === 0;
+    var accountsIsEmpty = this.state.accounts === undefined || this.state.accounts.length === 0;
+    if (projectsIsEmpty && !accountsIsEmpty) {
+      var accountsHasOneItem = this.state.accounts.length === 1;      
+    } else if (!projectsIsEmpty && accountsIsEmpty) {
+      var projectsHasOneItem = this.state.projects.length === 1;      
+    } else {
+      accountsHasOneItem = projectsHasOneItem = false;
+    }
+    if (accountsHasOneItem || projectsHasOneItem) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  
+  projectList = () => {
+    return  [
+      { label: 'Oakwood Medical Center', image: project2, id: 0, type: 'project'},
+      { label: 'Colorado Myrtle Shield Apartments', image: project3, id: 2, type: 'project'},
+      { label: 'Grey Pillars', image: project4, id: 4, type: 'project' },
+      { label: 'Keystone Apartments', id: 6, type: 'project' },
+      { label: 'Pleasant Park', image: project1, id: 8, type: 'project' }
+    ];
+  }
+
+  accountList = () => {
+    return [
+      { label: 'Oakwood Medical Center', image: project1, id: 1, type: 'account'},
+      { label: 'Colorado Myrtle Shield Apartments', image: project2, id: 3, type: 'account'},
+      { label: 'Grey Pillars', image: project3, id: 5, type: 'account' },
+      { label: 'Keystone Apartments', id: 7, type: 'account' },
+      { label: 'Pleasant Park', image: project4, id: 9, type: 'account' }
+    ];
+  }
+
   render() {
     return (
       <div>
@@ -236,15 +237,24 @@ class App extends React.Component {
           <TopNav
             logo={logo}
             logoLink="http://autodesk.com"
-            onHamburgerClick={this.toggleSideNav}
+            onHamburgerClick={this.toggleSideNav}            
           >
+          { this.singleProjectOrAccount() ? (
+             <ProjectAccountSwitcher
+              activeLabel={this.state.projectOrAcccountTarget.label}
+              activeImage={this.state.projectOrAcccountTarget.image}
+              activeType={this.state.projectOrAcccountTarget.type}
+              hideProjectAccountFlyout={true}
+               />
+            ): (
             <ProjectAccountSwitcher
               activeLabel={this.state.projectOrAcccountTarget.label}
               activeImage={this.state.projectOrAcccountTarget.image}
               activeType={this.state.projectOrAcccountTarget.type}
-              isOpen={this.state.isOpen}
+              isOpen={this.state.isOpen} 
               onClickOutside={this.closeProjectAccountSwitcher}
               onClick={this.openProjectAccountSwitcher}
+              hideProjectAccountFlyout={false}
             >
               {this.state.projects.map((project, i) => {
                 return (
@@ -276,6 +286,7 @@ class App extends React.Component {
               })}
 
             </ProjectAccountSwitcher>
+          )}
             <Profile
               open={this.state.profileFlyoutOpen}
               image={profileImage}
