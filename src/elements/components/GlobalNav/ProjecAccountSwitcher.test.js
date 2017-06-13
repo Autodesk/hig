@@ -171,11 +171,11 @@ describe('<ProjectAccountSwitcher>', () => {
     });
   });
 
-   describe('Project Account Switcher flyout', () => {
+  describe('Project Account Switcher flyout', () => {
     it('is not visible when only 1 project or account exists', () => {
       const reactContainer = document.createElement('div');
       const wrapper = mount(
-        <SingleAccountContext {...{activeLabel: 'someLabel' }} />,
+        <SingleAccountContext {...{ activeLabel: 'someLabel' }} />,
         {
           attachTo: reactContainer
         }
@@ -189,7 +189,7 @@ describe('<ProjectAccountSwitcher>', () => {
       );
 
       expect(caretElem.length).toEqual(0);
-      expect(elem.length).toEqual(0)
+      expect(elem.length).toEqual(0);
     });
   });
 });

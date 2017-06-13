@@ -60,7 +60,7 @@ class App extends React.Component {
       projectOrAcccountTarget: this.accountList()[0],
       tabs: [{ label: 'One', id: 0 }, { label: 'Two', id: 1 }],
       projects: this.projectList(),
-      accounts: this.accountList(), 
+      accounts: this.accountList()
     };
   }
 
@@ -156,41 +156,91 @@ class App extends React.Component {
 
   singleProjectOrAccount = () => {
     // one of these is empty/undefined and the other has only one item
-    var projectsIsEmpty = this.state.projects === undefined || this.state.projects.length === 0;
-    var accountsIsEmpty = this.state.accounts === undefined || this.state.accounts.length === 0;
+    var projectsIsEmpty = this.state.projects === undefined ||
+      this.state.projects.length === 0;
+    var accountsIsEmpty = this.state.accounts === undefined ||
+      this.state.accounts.length === 0;
     if (projectsIsEmpty && !accountsIsEmpty) {
-      var accountsHasOneItem = this.state.accounts.length === 1;      
+      var accountsHasOneItem = this.state.accounts.length === 1;
     } else if (!projectsIsEmpty && accountsIsEmpty) {
-      var projectsHasOneItem = this.state.projects.length === 1;      
+      var projectsHasOneItem = this.state.projects.length === 1;
     } else {
-      accountsHasOneItem = projectsHasOneItem = false;
+      accountsHasOneItem = (projectsHasOneItem = false);
     }
     if (accountsHasOneItem || projectsHasOneItem) {
       return true;
     } else {
       return false;
     }
-  }
-  
+  };
+
   projectList = () => {
-    return  [
-      { label: 'Oakwood Medical Center', image: project2, id: 0, type: 'project'},
-      { label: 'Colorado Myrtle Shield Apartments', image: project3, id: 2, type: 'project'},
-      { label: 'Grey Pillars', image: project4, id: 4, type: 'project' },
-      { label: 'Keystone Apartments', id: 6, type: 'project' },
-      { label: 'Pleasant Park', image: project1, id: 8, type: 'project' }
+    return [
+      {
+        label: 'Oakwood Medical Center',
+        image: project2,
+        id: 0,
+        type: 'project'
+      },
+      {
+        label: 'Colorado Myrtle Shield Apartments',
+        image: project3,
+        id: 2,
+        type: 'project'
+      },
+      {
+        label: 'Grey Pillars',
+        image: project4,
+        id: 4,
+        type: 'project'
+      },
+      {
+        label: 'Keystone Apartments',
+        id: 6,
+        type: 'project'
+      },
+      {
+        label: 'Pleasant Park',
+        image: project1,
+        id: 8,
+        type: 'project'
+      }
     ];
-  }
+  };
 
   accountList = () => {
     return [
-      { label: 'Oakwood Medical Center', image: project1, id: 1, type: 'account'},
-      { label: 'Colorado Myrtle Shield Apartments', image: project2, id: 3, type: 'account'},
-      { label: 'Grey Pillars', image: project3, id: 5, type: 'account' },
-      { label: 'Keystone Apartments', id: 7, type: 'account' },
-      { label: 'Pleasant Park', image: project4, id: 9, type: 'account' }
+      {
+        label: 'Oakwood Medical Center',
+        image: project1,
+        id: 1,
+        type: 'account'
+      },
+      {
+        label: 'Colorado Myrtle Shield Apartments',
+        image: project2,
+        id: 3,
+        type: 'account'
+      },
+      {
+        label: 'Grey Pillars',
+        image: project3,
+        id: 5,
+        type: 'account'
+      },
+      {
+        label: 'Keystone Apartments',
+        id: 7,
+        type: 'account'
+      },
+      {
+        label: 'Pleasant Park',
+        image: project4,
+        id: 9,
+        type: 'account'
+      }
     ];
-  }
+  };
 
   render() {
     return (
@@ -239,54 +289,56 @@ class App extends React.Component {
             logoLink="http://autodesk.com"
             onHamburgerClick={this.toggleSideNav}
           >
-          { this.singleProjectOrAccount() ? (
-             <ProjectAccountSwitcher
-              activeLabel={this.state.projectOrAcccountTarget.label}
-              activeImage={this.state.projectOrAcccountTarget.image}
-              activeType={this.state.projectOrAcccountTarget.type}
-              hideProjectAccountFlyout={true}
-               />
-            ): (
-            <ProjectAccountSwitcher
-              activeLabel={this.state.projectOrAcccountTarget.label}
-              activeImage={this.state.projectOrAcccountTarget.image}
-              activeType={this.state.projectOrAcccountTarget.type}
-              isOpen={this.state.isOpen}
-              onClickOutside={this.closeProjectAccountSwitcher}
-              onClick={this.openProjectAccountSwitcher}
-              hideProjectAccountFlyout={false}
-            >
-              {this.state.projects.map((project, i) => {
-                return (
-                  <Project
-                    image={project.image}
-                    label={project.label}
-                    key={project.id}
-                    active={this.state.activeProjectOrAccount === project.id}
-                    onClick={this.setActiveProjectOrAccount.bind(this, {
-                      id: project.id,
-                      type: project.type
-                    })}
-                  />
-                );
-              })}
-              {this.state.accounts.map((account, i) => {
-                return (
-                  <Account
-                    image={account.image}
-                    label={account.label}
-                    key={account.id}
-                    active={this.state.activeProjectOrAccount === account.id}
-                    onClick={this.setActiveProjectOrAccount.bind(this, {
-                      id: account.id,
-                      type: account.type
-                    })}
-                  />
-                );
-              })}
+            {this.singleProjectOrAccount()
+              ? <ProjectAccountSwitcher
+                  activeLabel={this.state.projectOrAcccountTarget.label}
+                  activeImage={this.state.projectOrAcccountTarget.image}
+                  activeType={this.state.projectOrAcccountTarget.type}
+                  hideProjectAccountFlyout={true}
+                />
+              : <ProjectAccountSwitcher
+                  activeLabel={this.state.projectOrAcccountTarget.label}
+                  activeImage={this.state.projectOrAcccountTarget.image}
+                  activeType={this.state.projectOrAcccountTarget.type}
+                  isOpen={this.state.isOpen}
+                  onClickOutside={this.closeProjectAccountSwitcher}
+                  onClick={this.openProjectAccountSwitcher}
+                  hideProjectAccountFlyout={false}
+                >
+                  {this.state.projects.map((project, i) => {
+                    return (
+                      <Project
+                        image={project.image}
+                        label={project.label}
+                        key={project.id}
+                        active={
+                          this.state.activeProjectOrAccount === project.id
+                        }
+                        onClick={this.setActiveProjectOrAccount.bind(this, {
+                          id: project.id,
+                          type: project.type
+                        })}
+                      />
+                    );
+                  })}
+                  {this.state.accounts.map((account, i) => {
+                    return (
+                      <Account
+                        image={account.image}
+                        label={account.label}
+                        key={account.id}
+                        active={
+                          this.state.activeProjectOrAccount === account.id
+                        }
+                        onClick={this.setActiveProjectOrAccount.bind(this, {
+                          id: account.id,
+                          type: account.type
+                        })}
+                      />
+                    );
+                  })}
 
-            </ProjectAccountSwitcher>
-          )}
+                </ProjectAccountSwitcher>}
             <Profile
               open={this.state.profileFlyoutOpen}
               image={profileImage}

@@ -253,7 +253,8 @@ storiesOf('GlobalNav', module)
             activeLabel="Oakland Medical Center"
             activeImage={project1}
             activeType="account"
-            hideProjectAccountFlyout={true}/>
+            hideProjectAccountFlyout={true}
+          />
         </TopNav>
         <SubNav moduleIndicatorName="Insight" moduleIndicatorIcon="hamburger" />
         <Slot>{LONG_COPY}</Slot>
