@@ -42,8 +42,7 @@ class Target extends Core {
     }
 
     removeCaret(){
-        this._findDOMEl('.hig__global-nav__top-nav__project-account-switcher__target__caret', this.el).remove();
-        
+        this._findDOMEl('.hig__global-nav__top-nav__project-account-switcher__target__caret', this.el).remove(); 
     }
 }
 

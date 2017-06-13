@@ -26,8 +26,7 @@ class ProjectAccountSwitcher extends Core {
         this.target = new Target({
             label: options.activeLabel,
             image: options.activeImage,
-            _type: options.activeType,
-            hideAccountSwitcher: options.hideAccountSwitcher
+            _type: options.activeType
         });
         this.flyoutContent = new Lists();
 
