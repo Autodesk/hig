@@ -237,7 +237,7 @@ class App extends React.Component {
           <TopNav
             logo={logo}
             logoLink="http://autodesk.com"
-            onHamburgerClick={this.toggleSideNav}            
+            onHamburgerClick={this.toggleSideNav}
           >
           { this.singleProjectOrAccount() ? (
              <ProjectAccountSwitcher
@@ -251,7 +251,7 @@ class App extends React.Component {
               activeLabel={this.state.projectOrAcccountTarget.label}
               activeImage={this.state.projectOrAcccountTarget.image}
               activeType={this.state.projectOrAcccountTarget.type}
-              isOpen={this.state.isOpen} 
+              isOpen={this.state.isOpen}
               onClickOutside={this.closeProjectAccountSwitcher}
               onClick={this.openProjectAccountSwitcher}
               hideProjectAccountFlyout={false}

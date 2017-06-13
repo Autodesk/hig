@@ -15,6 +15,9 @@ exports[`<TopNav> renders a topnav 1`] = `
     </div>
     <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
     <!--PROJECT_ACCOUNT_SWITCHER-->
+    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
+        <!--SHORTCUT-->
+    </div>
     <div class=\\"hig__global-nav__profile hig__global-nav__top-nav__group--right\\">
     <!--FLYOUT-->
 <div class=\\"hig__flyout\\">

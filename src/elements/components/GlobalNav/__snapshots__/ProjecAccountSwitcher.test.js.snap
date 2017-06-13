@@ -24,7 +24,7 @@ exports[`<ProjectAccountSwitcher> constructor has a good snapshot 1`] = `
     </span>
     <span class=\\"hig__global-nav__top-nav__project-account-switcher__item__label\\">somethingLabel</span>
 </div><!--ITEM-->
-    <span class=\\"hig__global-nav__top-nav__project-account-switcher__target__caret\\"><svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret\\"><title>hig/icon/caret</title><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.815 -10)\\" stroke-width=\\"1.5\\" stroke=\\"#979797\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"></polyline></svg></span>    
+    <span class=\\"hig__global-nav__top-nav__project-account-switcher__target__caret\\"><svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret\\"><title>hig/icon/caret</title><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.815 -10)\\" stroke-width=\\"1.5\\" stroke=\\"#979797\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"></polyline></svg></span>
 </div><!--TARGET-->
     <div class=\\"hig__flyout__container\\">
         <div class=\\"hig__flyout__chevron\\"></div>
@@ -78,7 +78,7 @@ exports[`<ProjectAccountSwitcher> setting and updating props can set props for a
     </span>
     <span class=\\"hig__global-nav__top-nav__project-account-switcher__item__label\\"></span>
 </div><!--ITEM-->
-    <span class=\\"hig__global-nav__top-nav__project-account-switcher__target__caret\\"><svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret\\"><title>hig/icon/caret</title><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.815 -10)\\" stroke-width=\\"1.5\\" stroke=\\"#979797\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"></polyline></svg></span>    
+    <span class=\\"hig__global-nav__top-nav__project-account-switcher__target__caret\\"><svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret\\"><title>hig/icon/caret</title><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.815 -10)\\" stroke-width=\\"1.5\\" stroke=\\"#979797\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"></polyline></svg></span>
 </div><!--TARGET-->
     <div class=\\"hig__flyout__container\\">
         <div class=\\"hig__flyout__chevron\\"></div>
@@ -132,7 +132,7 @@ exports[`<ProjectAccountSwitcher> setting and updating props can set props for a
     </span>
     <span class=\\"hig__global-nav__top-nav__project-account-switcher__item__label\\">test label</span>
 </div><!--ITEM-->
-    <span class=\\"hig__global-nav__top-nav__project-account-switcher__target__caret\\"><svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret\\"><title>hig/icon/caret</title><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.815 -10)\\" stroke-width=\\"1.5\\" stroke=\\"#979797\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"></polyline></svg></span>    
+    <span class=\\"hig__global-nav__top-nav__project-account-switcher__target__caret\\"><svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret\\"><title>hig/icon/caret</title><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.815 -10)\\" stroke-width=\\"1.5\\" stroke=\\"#979797\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"></polyline></svg></span>
 </div><!--TARGET-->
     <div class=\\"hig__flyout__container\\">
         <div class=\\"hig__flyout__chevron\\"></div>
@@ -186,7 +186,7 @@ exports[`<ProjectAccountSwitcher> setting and updating props can set props for a
     </span>
     <span class=\\"hig__global-nav__top-nav__project-account-switcher__item__label\\"></span>
 </div><!--ITEM-->
-    <span class=\\"hig__global-nav__top-nav__project-account-switcher__target__caret\\"><svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret\\"><title>hig/icon/caret</title><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.815 -10)\\" stroke-width=\\"1.5\\" stroke=\\"#979797\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"></polyline></svg></span>    
+    <span class=\\"hig__global-nav__top-nav__project-account-switcher__target__caret\\"><svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret\\"><title>hig/icon/caret</title><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.815 -10)\\" stroke-width=\\"1.5\\" stroke=\\"#979797\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"></polyline></svg></span>
 </div><!--TARGET-->
     <div class=\\"hig__flyout__container\\">
         <div class=\\"hig__flyout__chevron\\"></div>
@@ -240,7 +240,7 @@ exports[`<ProjectAccountSwitcher> setting and updating props can update props fo
     </span>
     <span class=\\"hig__global-nav__top-nav__project-account-switcher__item__label\\"></span>
 </div><!--ITEM-->
-    <span class=\\"hig__global-nav__top-nav__project-account-switcher__target__caret\\"><svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret\\"><title>hig/icon/caret</title><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.815 -10)\\" stroke-width=\\"1.5\\" stroke=\\"#979797\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"></polyline></svg></span>    
+    <span class=\\"hig__global-nav__top-nav__project-account-switcher__target__caret\\"><svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret\\"><title>hig/icon/caret</title><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.815 -10)\\" stroke-width=\\"1.5\\" stroke=\\"#979797\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"></polyline></svg></span>
 </div><!--TARGET-->
     <div class=\\"hig__flyout__container\\">
         <div class=\\"hig__flyout__chevron\\"></div>
@@ -294,7 +294,7 @@ exports[`<ProjectAccountSwitcher> setting and updating props can update props fo
     </span>
     <span class=\\"hig__global-nav__top-nav__project-account-switcher__item__label\\">test label</span>
 </div><!--ITEM-->
-    <span class=\\"hig__global-nav__top-nav__project-account-switcher__target__caret\\"><svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret\\"><title>hig/icon/caret</title><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.815 -10)\\" stroke-width=\\"1.5\\" stroke=\\"#979797\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"></polyline></svg></span>    
+    <span class=\\"hig__global-nav__top-nav__project-account-switcher__target__caret\\"><svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret\\"><title>hig/icon/caret</title><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.815 -10)\\" stroke-width=\\"1.5\\" stroke=\\"#979797\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"></polyline></svg></span>
 </div><!--TARGET-->
     <div class=\\"hig__flyout__container\\">
         <div class=\\"hig__flyout__chevron\\"></div>
@@ -348,7 +348,7 @@ exports[`<ProjectAccountSwitcher> setting and updating props can update props fo
     </span>
     <span class=\\"hig__global-nav__top-nav__project-account-switcher__item__label\\"></span>
 </div><!--ITEM-->
-    <span class=\\"hig__global-nav__top-nav__project-account-switcher__target__caret\\"><svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret\\"><title>hig/icon/caret</title><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.815 -10)\\" stroke-width=\\"1.5\\" stroke=\\"#979797\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"></polyline></svg></span>    
+    <span class=\\"hig__global-nav__top-nav__project-account-switcher__target__caret\\"><svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret\\"><title>hig/icon/caret</title><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.815 -10)\\" stroke-width=\\"1.5\\" stroke=\\"#979797\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"></polyline></svg></span>
 </div><!--TARGET-->
     <div class=\\"hig__flyout__container\\">
         <div class=\\"hig__flyout__chevron\\"></div>

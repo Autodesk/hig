@@ -137,7 +137,7 @@ ProjectAccountSwitcherComponent.__docgenInfo = {
       description: '{func} closes the project/account switcher'
     },
     removeCaretFromTarget: {
-       description: '{func} closes the project/account switcher'
+       description: '{func} removes caret from Target in the project/account switcher'
     },
     onClickOutside: {
       description: '{func} calls the provided callback when the switcher is open and the user clicks outside the switcher'

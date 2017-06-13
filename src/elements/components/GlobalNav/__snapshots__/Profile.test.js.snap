@@ -15,6 +15,9 @@ exports[`<Profile> constructor has a good snapshot 1`] = `
     </div>
     <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
     <!--PROJECT_ACCOUNT_SWITCHER-->
+    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
+        <!--SHORTCUT-->
+    </div>
     <div class=\\"hig__global-nav__profile hig__global-nav__top-nav__group--right\\">
     <!--FLYOUT-->
 <div class=\\"hig__flyout\\">
@@ -59,6 +62,9 @@ exports[`<Profile> setting and updating props can set props for email 1`] = `
     </div>
     <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
     <!--PROJECT_ACCOUNT_SWITCHER-->
+    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
+        <!--SHORTCUT-->
+    </div>
     <div class=\\"hig__global-nav__profile hig__global-nav__top-nav__group--right\\">
     <!--FLYOUT-->
 <div class=\\"hig__flyout\\">
@@ -103,6 +109,9 @@ exports[`<Profile> setting and updating props can set props for image 1`] = `
     </div>
     <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
     <!--PROJECT_ACCOUNT_SWITCHER-->
+    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
+        <!--SHORTCUT-->
+    </div>
     <div class=\\"hig__global-nav__profile hig__global-nav__top-nav__group--right\\">
     <!--FLYOUT-->
 <div class=\\"hig__flyout\\">
@@ -147,6 +156,9 @@ exports[`<Profile> setting and updating props can set props for name 1`] = `
     </div>
     <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
     <!--PROJECT_ACCOUNT_SWITCHER-->
+    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
+        <!--SHORTCUT-->
+    </div>
     <div class=\\"hig__global-nav__profile hig__global-nav__top-nav__group--right\\">
     <!--FLYOUT-->
 <div class=\\"hig__flyout\\">
@@ -191,6 +203,9 @@ exports[`<Profile> setting and updating props can set props for profileSettingsL
     </div>
     <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
     <!--PROJECT_ACCOUNT_SWITCHER-->
+    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
+        <!--SHORTCUT-->
+    </div>
     <div class=\\"hig__global-nav__profile hig__global-nav__top-nav__group--right\\">
     <!--FLYOUT-->
 <div class=\\"hig__flyout\\">
@@ -235,6 +250,9 @@ exports[`<Profile> setting and updating props can set props for profileSettingsL
     </div>
     <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
     <!--PROJECT_ACCOUNT_SWITCHER-->
+    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
+        <!--SHORTCUT-->
+    </div>
     <div class=\\"hig__global-nav__profile hig__global-nav__top-nav__group--right\\">
     <!--FLYOUT-->
 <div class=\\"hig__flyout\\">
@@ -279,6 +297,9 @@ exports[`<Profile> setting and updating props can set props for signOutLabel 1`]
     </div>
     <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
     <!--PROJECT_ACCOUNT_SWITCHER-->
+    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
+        <!--SHORTCUT-->
+    </div>
     <div class=\\"hig__global-nav__profile hig__global-nav__top-nav__group--right\\">
     <!--FLYOUT-->
 <div class=\\"hig__flyout\\">
@@ -323,6 +344,9 @@ exports[`<Profile> setting and updating props can update props for email 1`] = `
     </div>
     <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
     <!--PROJECT_ACCOUNT_SWITCHER-->
+    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
+        <!--SHORTCUT-->
+    </div>
     <div class=\\"hig__global-nav__profile hig__global-nav__top-nav__group--right\\">
     <!--FLYOUT-->
 <div class=\\"hig__flyout\\">
@@ -367,6 +391,9 @@ exports[`<Profile> setting and updating props can update props for image 1`] = `
     </div>
     <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
     <!--PROJECT_ACCOUNT_SWITCHER-->
+    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
+        <!--SHORTCUT-->
+    </div>
     <div class=\\"hig__global-nav__profile hig__global-nav__top-nav__group--right\\">
     <!--FLYOUT-->
 <div class=\\"hig__flyout\\">
@@ -411,6 +438,9 @@ exports[`<Profile> setting and updating props can update props for name 1`] = `
     </div>
     <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
     <!--PROJECT_ACCOUNT_SWITCHER-->
+    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
+        <!--SHORTCUT-->
+    </div>
     <div class=\\"hig__global-nav__profile hig__global-nav__top-nav__group--right\\">
     <!--FLYOUT-->
 <div class=\\"hig__flyout\\">
@@ -455,6 +485,9 @@ exports[`<Profile> setting and updating props can update props for profileSettin
     </div>
     <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
     <!--PROJECT_ACCOUNT_SWITCHER-->
+    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
+        <!--SHORTCUT-->
+    </div>
     <div class=\\"hig__global-nav__profile hig__global-nav__top-nav__group--right\\">
     <!--FLYOUT-->
 <div class=\\"hig__flyout\\">
@@ -499,6 +532,9 @@ exports[`<Profile> setting and updating props can update props for profileSettin
     </div>
     <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
     <!--PROJECT_ACCOUNT_SWITCHER-->
+    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
+        <!--SHORTCUT-->
+    </div>
     <div class=\\"hig__global-nav__profile hig__global-nav__top-nav__group--right\\">
     <!--FLYOUT-->
 <div class=\\"hig__flyout\\">
@@ -543,6 +579,9 @@ exports[`<Profile> setting and updating props can update props for signOutLabel 
     </div>
     <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
     <!--PROJECT_ACCOUNT_SWITCHER-->
+    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
+        <!--SHORTCUT-->
+    </div>
     <div class=\\"hig__global-nav__profile hig__global-nav__top-nav__group--right\\">
     <!--FLYOUT-->
 <div class=\\"hig__flyout\\">
