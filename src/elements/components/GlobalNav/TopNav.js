@@ -118,16 +118,21 @@ export class TopNav extends HIGElement {
   }
 
   checkValidInstance(instance) {
-    const validInstances = ['Profile', 'ProjectAccountSwitcher', 'Shortcut', 'Help'];
+    const validInstances = [
+      'Profile',
+      'ProjectAccountSwitcher',
+      'Shortcut',
+      'Help'
+    ];
     super.checkValidInstance(instance, validInstances);
   }
   getPropertyNameFor(instance) {
-    const initial = instance.constructor.name.charAt(0).toLowerCase()
+    const initial = instance.constructor.name.charAt(0).toLowerCase();
     const rest = instance.constructor.name.slice(1);
-    return initial+rest;
+    return initial + rest;
   }
   getFunctionNameFor(instance) {
-    return "add" + instance.constructor.name;
+    return 'add' + instance.constructor.name;
   }
 }
 

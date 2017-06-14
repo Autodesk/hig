@@ -143,7 +143,7 @@ export default class HIGElement {
   checkValidInstance(instance, validChildrenList) {
     const name = instance.constructor.name;
     if (!validChildrenList.includes(name)) {
-       throw new Error(name + ' is not a valid child element of this parent.');
+      throw new Error(name + ' is not a valid child element of this parent.');
     }
   }
 }

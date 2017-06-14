@@ -152,15 +152,8 @@ storiesOf('GlobalNav', module)
                 onClick={action('clicked')}
               />
             </ProjectAccountSwitcher>
-            <Shortcut
-              icon="gear"
-              title="GEAR"
-              link="/settings"
-            />
-            <Help
-              title="HELLLP MEEEE!!!!"
-              link="/help"
-            />
+            <Shortcut icon="gear" title="GEAR" link="/settings" />
+            <Help title="HELLLP MEEEE!!!!" link="/help" />
             <Profile
               name="Jane Designer"
               email="jane.designer@example.com"

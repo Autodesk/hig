@@ -341,16 +341,9 @@ class App extends React.Component {
                   })}
 
             </ProjectAccountSwitcher>
-            <Shortcut
-              icon="gear"
-              title="Gears for Fears"
-              link="/gears"
-            />
+            <Shortcut icon="gear" title="Gears for Fears" link="/gears" />
 
-            <Help
-              title="HELLLP MEEEE!!!!"
-              link="/help"
-            />
+            <Help title="HELLLP MEEEE!!!!" link="/help" />
 
             <Profile
               open={this.state.profileFlyoutOpen}
