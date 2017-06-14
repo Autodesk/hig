@@ -1,10 +1,16 @@
 @import '~basics/colors/colors.scss';
 
 .hig__global-nav__top-nav__project-account-switcher__lists__list {
-    margin-top: 10px;
+   margin-top: 10px;
 
-    &:first-child {
-        margin-bottom: 10px;
+    &:first-child{ 
+        padding-top: 0px;
+
+        .hig__global-nav__top-nav__project-account-switcher__item {
+            &:last-child {
+                margin-bottom: 20px
+            }   
+        }
     }
 
     > .hig__global-nav__top-nav__project-account-switcher__item {
@@ -33,6 +39,5 @@
 
     .hig__global-nav__top-nav__project-account-switcher__item--account:first-child::before {
         content: 'Accounts';
-    }
+    }     
 }
-
