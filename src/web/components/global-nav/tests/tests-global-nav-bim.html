@@ -192,8 +192,10 @@
             SubNav.onModuleIndicatorClick(function(e){
                 if(menuModel["_menu_open"]){
                     GlobalNav.hideSideNav();
+                    TopNav.sidenavClosed();
                 }else{
                     GlobalNav.showSideNav();
+                    TopNav.sidenavOpen();
                 }
                 menuModel["_menu_open"] = !menuModel["_menu_open"];
             });
@@ -311,7 +313,9 @@
                 SubNav.setModuleIndicatorIcon(moduleModel["icon"]);
 
                 // CLOSE SIDENAV
-                GlobalNav.hideSideNav();
+                // GlobalNav.hideSideNav();
+                // TopNav.sidenavClosed();
+                // menuModel["_menu_open"] = false;
 
                 // CLEAR TABS
                 Tabs.unmount();
