@@ -91,7 +91,8 @@ TopNav._partials = {
     Profile: Profile,
     ProjectAccountSwitcher: ProjectAccountSwitcher,
     Shortcut: Shortcut,
-    Help: Help
+    Help: Help,
+    Search: Search
 };
 
 module.exports = TopNav;
