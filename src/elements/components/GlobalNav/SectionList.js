@@ -72,6 +72,6 @@ SectionListComponent.__docgenInfo = {
   }
 };
 
-SectionListComponent.Item = SectionComponent;
+SectionListComponent.Section = SectionComponent;
 
 export default SectionListComponent;

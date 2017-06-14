@@ -31,9 +31,12 @@ import profileImage from './images/profileImage.png';
 
 const SideNav = GlobalNav.SideNav;
 const SectionList = GlobalNav.SideNav.SectionList;
-const Section = GlobalNav.SideNav.SectionList.Item;
-const Group = GlobalNav.SideNav.SectionList.Item.Group;
-const Item = GlobalNav.SideNav.SectionList.Item.Group.Item;
+const Section = GlobalNav.SideNav.SectionList.Section;
+const Collapse = GlobalNav.SideNav.SectionList.Section.Collapse;
+const Group = GlobalNav.SideNav.SectionList.Section.Group;
+// const Item = GlobalNav.SideNav.SectionList.Item.Group.Item;
+const Module = GlobalNav.SideNav.SectionList.Section.Group.Module;
+const Submodule = GlobalNav.SideNav.SectionList.Section.Group.Module.Submodule;
 const TopNav = GlobalNav.TopNav;
 const Profile = GlobalNav.TopNav.Profile;
 const Shortcut = GlobalNav.TopNav.Shortcut;
@@ -54,6 +57,8 @@ class App extends React.Component {
       fn: false,
       group1: true,
       group3: true,
+      section1Collapsed: true,
+      section2Collapsed: true,
       open: false,
       profileFlyoutOpen: false,
       isOpen: false,
@@ -65,7 +70,7 @@ class App extends React.Component {
       accounts: this.accountList()
     };
   }
-
+  
   handleChange = event => {
     const buttonLabel = event.target.value;
     this.setState(() => {
@@ -103,6 +108,10 @@ class App extends React.Component {
   toggleGroup1 = () => this.setState({ group1: !this.state.group1 });
 
   toggleGroup3 = () => this.setState({ group3: !this.state.group3 });
+
+  toggleSection1 = () => this.setState({section1Collapsed: !this.state.section1Collapsed });
+
+  toggleSection2 = () => this.setState({section2Collapsed: !this.state.section2Collapsed });
 
   addTabBefore = () => {
     const nextLabel = Math.floor(Math.random() * 100000, 5);
@@ -251,38 +260,63 @@ class App extends React.Component {
           <SideNav>
             <SectionList>
               <Section headerLabel="Project" headerName="ThunderStorm">
+                <Collapse onClick={this.toggleSection1} isCollapsed={this.state.section1Collapsed}/>
                 <Group>
-                  {this.state.group1 &&
-                    <Item
+                
+                    <Module
                       icon="project-management"
                       title="Item 1"
                       link="#"
                       onClick={() => alert('item 1 clicked')}
-                    />}
-                  <Item icon="project-management" title="Item 2" link="#" />
-
-                  {this.state.group1 &&
-                    <Item icon="project-management" title="Item 3" link="#" />}
+                      submodulesClosed={this.state.section1Collapsed}
+                    >
+                      <Submodule 
+                        icon="project-management"
+                        title="Item 1"
+                        link="#"
+                        onClick={() => alert('item 1 clicked')}/>
+                    </Module>      
+                  {/*{this.state.group1 &&
+                    <Item icon="project-management" title="Item 3" link="#" />}*/}
                 </Group>
 
-                <Group>
+                {/*<Group>
                   <Item
                     icon="project-management"
                     title={this.state.buttonLabel}
                     link="#"
                   />
-                </Group>
+                </Group>*/}
               </Section>
 
-              <Section headerLabel="Project" headerName="Thunderstorm">
+              <Section headerLabel="Project" headerName="ThunderStorm">
+                <Collapse isCollapsed={this.state.section2Collapsed} onClick={this.toggleSection2}/>
                 <Group>
+                    <Module
+                      icon="project-management"
+                      title="Item 1"
+                      link="#"
+                      onClick={() => alert('item 1 clicked')}
+                      submodulesClosed={this.state.section2Collapsed}
+
+                    >
+                      <Submodule 
+                        icon="project-management"
+                        title="Item 1"
+                        link="#"
+                        onClick={() => alert('item 1 clicked')}/>
+                    </Module>      
+                  {/*{this.state.group1 &&
+                    <Item icon="project-management" title="Item 3" link="#" />}*/}
+                </Group>
+
+                {/*<Group>
                   <Item
                     icon="project-management"
-                    title="Toggle Group 1"
-                    onClick={this.toggleGroup1}
+                    title={this.state.buttonLabel}
+                    link="#"
                   />
-                  <Item icon="project-management" title="Item 2" link="#" />
-                </Group>
+                </Group>*/}
               </Section>
             </SectionList>
           </SideNav>

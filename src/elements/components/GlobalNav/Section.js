@@ -21,6 +21,7 @@ import HIGElement from '../../HIGElement';
 import HIGNodeList from '../../HIGNodeList';
 import HIGChildValidator from '../../HIGChildValidator';
 import GroupComponent, { Group } from './Group';
+import CollapseComponent, { Collapse } from './Collapse';
 
 export class Section extends HIGElement {
   constructor(HIGConstructor, initialProps) {
@@ -36,6 +37,10 @@ export class Section extends HIGElement {
 
   componentDidMount() {
     this.groups.componentDidMount();
+    if (this.collapse) {
+      this.hig.addCollapse(this.collapse.hig);
+      this.collapse.mount();
+    }
   }
 
   commitUpdate(updatePayload, oldProps, newProp) {
@@ -47,11 +52,34 @@ export class Section extends HIGElement {
   }
 
   createElement(ElementConstructor, props) {
-    return this.groups.createElement(ElementConstructor, props);
+    switch (ElementConstructor) {
+      case Group:
+        return this.groups.createElement(ElementConstructor, props);
+      case Collapse:
+        return new Collapse(this.hig.partials.Collapse, props);
+      default:
+        throw new Error(`Unknown type ${ElementConstructor.name}`);
+    }
   }
 
   insertBefore(instance, insertBeforeIndex) {
-    this.groups.insertBefore(instance, insertBeforeIndex);
+    this.appendChild(instance);
+  }
+
+  appendChild(instance) {
+    if (instance instanceof Group) {
+      this.groups.insertBefore(instance); // calls internal _appendChild if no "before" component
+    } else if (instance instanceof Collapse) {
+      if (this.collapse) {
+        throw new Error('only one Collapse is allowed');
+      } else {
+        this.collapse = instance;
+        if (this.mounted) {
+          this.hig.addCollapse(instance.hig)
+          instance.mount();
+        }
+      }
+    }
   }
 
   removeChild(instance) {
@@ -64,7 +92,11 @@ const SectionComponent = createComponent(Section);
 SectionComponent.propTypes = {
   headerLabel: PropTypes.string,
   headerName: PropTypes.string,
-  children: HIGChildValidator([GroupComponent])
+  children: HIGChildValidator([
+      GroupComponent,
+      CollapseComponent
+    ]
+  )
 };
 
 SectionComponent.__docgenInfo = {
@@ -78,11 +110,12 @@ SectionComponent.__docgenInfo = {
     },
 
     children: {
-      description: 'support adding Group'
+      description: 'support adding Group and Collapse'
     }
   }
 };
 
 SectionComponent.Group = GroupComponent;
+SectionComponent.Collapse = CollapseComponent;
 
 export default SectionComponent;

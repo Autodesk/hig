@@ -18,51 +18,52 @@ import createComponent from '../../../adapters/createComponent';
 import HIGElement from '../../HIGElement';
 import HIGNodeList from '../../HIGNodeList';
 import HIGChildValidator from '../../HIGChildValidator';
-import ItemComponent, { Item } from './Item';
+import ModuleComponent, { Module } from './Module';
 
 export class Group extends HIGElement {
   constructor(HIGConstructor, initialProps) {
+
     super(HIGConstructor, initialProps);
-    this.items = new HIGNodeList({
-      type: Item,
-      HIGConstructor: this.hig.partials.Item,
+    this.modules = new HIGNodeList({
+      type: Module,
+      HIGConstructor: this.hig.partials.Module,
       onAdd: (instance, beforeInstance) => {
-        this.hig.addItem(instance, beforeInstance);
+        this.hig.addModule(instance, beforeInstance);
       }
     });
   }
 
   componentDidMount() {
-    this.items.componentDidMount();
+    this.modules.componentDidMount();
   }
 
   createElement(ElementConstructor, props) {
-    return this.items.createElement(ElementConstructor, props);
+    return this.modules.createElement(ElementConstructor, props);
   }
 
   insertBefore(instance, insertBeforeIndex) {
-    this.items.insertBefore(instance, insertBeforeIndex);
+    this.modules.insertBefore(instance, insertBeforeIndex);
   }
 
   removeChild(instance) {
-    this.items.removeChild(instance);
+    this.modules.removeChild(instance);
   }
 }
 
 const GroupComponent = createComponent(Group);
 
 GroupComponent.propTypes = {
-  children: HIGChildValidator([ItemComponent])
+  children: HIGChildValidator([ModuleComponent])
 };
 
 GroupComponent.__docgenInfo = {
   props: {
     children: {
-      description: 'support adding Item'
+      description: 'support adding Module'
     }
   }
 };
 
-GroupComponent.Item = ItemComponent;
+GroupComponent.Module = ModuleComponent;
 
 export default GroupComponent;
