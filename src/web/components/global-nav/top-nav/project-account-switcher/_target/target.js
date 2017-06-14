@@ -17,7 +17,6 @@ class Target extends Core {
     constructor(options){
         super(options);
         this._render(Template, options);
-
         this.item = new Item(options);
     }
 
@@ -42,14 +41,20 @@ class Target extends Core {
         return this._attachListener("click", this.el, this.el, fn);
     }
 
+    removeCaret(){
+        this._findDOMEl('.hig__global-nav__top-nav__project-account-switcher__target__caret', this.el).remove(); 
+    }
 }
+
+
 
 Target._interface = {
     "methods": {
         "setLabel": {},
         "setImage": {},
         "setType": {},
-        "onClick": {}
+        "onClick": {},
+        "removeCaret": {}
     }
 };
 Target._defaults = {};

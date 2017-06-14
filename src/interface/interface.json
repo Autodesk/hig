@@ -151,6 +151,18 @@
                                 "{Search} [ReferenceSearch] - (Optional) reference node for insertBefore"
                             ]
                         },
+                        "addShortcut": {
+                            "desc": "Pass in an instance of a Shortcut partial to mount it to the TopNav",
+                            "params": [
+                                "{Shortcut} Shortcut - instance of a Shortcut partial"
+                            ]
+                        },
+                        "addHelp": {
+                            "desc": "Pass in an instance of a Help partial to mount it to the TopNav",
+                            "params": [
+                                "{Help} Help - instance of a Help partial"
+                            ]
+                        },
                         "onHamburgerClick": {
                             "desc": "Calls the provided callback when user clicks on the hamburger icon",
                             "params": "HIG.abstract.EventObject.params",
@@ -288,6 +300,9 @@
                                         "{Project} [ReferenceProject] - (Optional) reference node for insertBefore"
                                     ]
                                 },
+                                "removeCaretFromTarget": {
+                                    "desc": "removes caret from target in Project Account Switcher"
+                                },
                                 "open": {
                                     "desc": "opens the project/account switcher"
                                 },
@@ -382,6 +397,63 @@
                                 "activeType": "{String} ['account' or 'project']",
                                 "activeLabel": "{String} - Label of the active project or account"
                             }
+                        },
+                        "Shortcut": {
+                            "methods": {
+                                "setIcon": {
+                                    "desc": "sets the icon of the Shortcut",
+                                    "params": [
+                                        "{String} title - new icon ID"
+                                    ]
+                                },
+                                "setTitle": {
+                                    "desc": "sets the hover title of the Shortcut",
+                                    "params": [
+                                        "{String} title - new hover title"
+                                    ]
+                                },
+                                "setLink": {
+                                    "desc": "sets the link of the Shortcut",
+                                    "params": [
+                                        "{String} link - new link"
+                                    ]
+                                },
+                                "onClick": {
+                                    "desc": "Calls the provided callback when user clicks on the Shortcut",
+                                    "params": "HIG.abstract.EventObject.params",
+                                    "returns": "HIG.abstract.EventObject.returns"
+                                }
+                            },
+                            "defaults": {
+                                "icon": "{String} icon identifier",
+                                "title": "{String} the title of the Shortcut to be shown on hover",
+                                "link": "{String} link behind the Shortcut"
+                            }
+                        },
+                        "Help": {
+                          "methods": {
+                            "setTitle": {
+                              "desc": "sets the hover title of the Help",
+                              "params": [
+                                "{String} title - new hover title"
+                              ]
+                            },
+                            "setLink": {
+                              "desc": "sets the link of the Help",
+                              "params": [
+                                "{String} link - new link"
+                              ]
+                            },
+                            "onClick": {
+                              "desc": "Calls the provided callback when user clicks on the Help",
+                              "params": "HIG.abstract.EventObject.params",
+                              "returns": "HIG.abstract.EventObject.returns"
+                            }
+                          },
+                          "defaults": {
+                            "title": "{String} the title of the Help icon to be shown on hover",
+                            "link": "{String} link behind the Help icon"
+                          }
                         }
                     }
                 },
@@ -667,12 +739,12 @@
                                                     "defaults": {
                                                         "title": "{String} the string of our SideNav submodule",
                                                         "link": "{String} link behind the submodule"
-                                                    }
-                                                }
                                             }
                                         }
                                     }
-                                },
+                                }
+                            }
+                        },
                                 "Collapse": {
                                     "methods": {
                                         "minimize": {
