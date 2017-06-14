@@ -382,34 +382,34 @@
                             },
                             "defaults": {
                                 "icon": "{String} icon identifier",
-                                "title": "{String} the title of the shortcut to be shown on hover",
-                                "link": "{String} link behind the shortcut"
-                            },
-                            "Help": {
-                                "methods": {
-                                    "setTitle": {
-                                        "desc": "sets the hover title of the Shortcut",
-                                        "params": [
-                                            "{String} title - new hover title"
-                                        ]
-                                    },
-                                    "setLink": {
-                                        "desc": "sets the link of the Shortcut",
-                                        "params": [
-                                            "{String} link - new link"
-                                        ]
-                                    },
-                                    "onClick": {
-                                        "desc": "Calls the provided callback when user clicks on the Shortcut",
-                                        "params": "HIG.abstract.EventObject.params",
-                                        "returns": "HIG.abstract.EventObject.returns"
-                                    }
-                                },
-                                "defaults": {
-                                    "title": "{String} the title of the shortcut to be shown on hover",
-                                    "link": "{String} link behind the shortcut"
-                                }
+                                "title": "{String} the title of the Shortcut to be shown on hover",
+                                "link": "{String} link behind the Shortcut"
                             }
+                        },
+                        "Help": {
+                          "methods": {
+                            "setTitle": {
+                              "desc": "sets the hover title of the Help",
+                              "params": [
+                                "{String} title - new hover title"
+                              ]
+                            },
+                            "setLink": {
+                              "desc": "sets the link of the Help",
+                              "params": [
+                                "{String} link - new link"
+                              ]
+                            },
+                            "onClick": {
+                              "desc": "Calls the provided callback when user clicks on the Help",
+                              "params": "HIG.abstract.EventObject.params",
+                              "returns": "HIG.abstract.EventObject.returns"
+                            }
+                          },
+                          "defaults": {
+                            "title": "{String} the title of the Help icon to be shown on hover",
+                            "link": "{String} link behind the Help icon"
+                          }
                         }
                     }
                 },
