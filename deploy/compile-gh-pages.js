@@ -32,7 +32,7 @@ glob(testsGlob, (er, files) => {
   var testList = { testLinks: [] };
 
   files.forEach(function(filePath) {
-    var newFilePath = "/hig/" + path.relative(rootDir, filePath);
+    var newFilePath = path.relative(rootDir, filePath);
     var title = path.parse(filePath).base.replace("test-", "");
     testList.testLinks.push({ href: newFilePath, title: title });
   });
