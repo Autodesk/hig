@@ -87,7 +87,7 @@ export class TopNav extends HIGElement {
 
   appendChild(instance, beforeChild = {}) {
     this.requireSingleInstance(instance);
-    this.checkValidInstance(instance);
+    this.checkValidChild(instance);
 
     if (instance instanceof Shortcut) {
       this.shortcuts.insertBefore(instance);
@@ -117,14 +117,14 @@ export class TopNav extends HIGElement {
     super.requireSingleInstance(instance, requiredSingle);
   }
 
-  checkValidInstance(instance) {
+  checkValidChild(instance) {
     const validInstances = [
       'Profile',
       'ProjectAccountSwitcher',
       'Shortcut',
       'Help'
     ];
-    super.checkValidInstance(instance, validInstances);
+    super.checkValidChild(instance, validInstances);
   }
   getPropertyNameFor(instance) {
     const initial = instance.constructor.name.charAt(0).toLowerCase();
