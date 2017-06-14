@@ -165,6 +165,21 @@
             });
             TopNav.addSearch(TopNavSearch);
 
+            TopNavSearch.onFocusIn(function(e){
+                TopNavSearch.showClearIcon();
+            });
+
+            TopNavSearch.onFocusOut(function(e){
+                TopNavSearch.hideClearIcon();
+            });
+
+            TopNavSearch.onClearIconClick(function(e){
+                TopNavSearch.setQuery(''); // set input to empty
+        
+            });
+
+
+
             // ADD PROFILE
             var MyProfile1 = new TopNav.partials.Profile({
                 image: "avatar/david-construction-project-manager.png",
