@@ -29,6 +29,7 @@ const Item = GlobalNav.SideNav.SectionList.Item.Group.Item;
 const TopNav = GlobalNav.TopNav;
 const Profile = TopNav.Profile;
 const Shortcut = TopNav.Shortcut;
+const Help = TopNav.Help;
 const ProjectAccountSwitcher = GlobalNav.TopNav.ProjectAccountSwitcher;
 const Account = GlobalNav.TopNav.ProjectAccountSwitcher.Account;
 const Project = GlobalNav.TopNav.ProjectAccountSwitcher.Project;
@@ -153,9 +154,12 @@ storiesOf('GlobalNav', module)
             </ProjectAccountSwitcher>
             <Shortcut
               icon="gear"
-              onclick={function() {
-                alert('hello!');
-              }}
+              title="GEAR"
+              link="/settings"
+            />
+            <Help
+              title="HELLLP MEEEE!!!!"
+              link="/help"
             />
             <Profile
               name="Jane Designer"

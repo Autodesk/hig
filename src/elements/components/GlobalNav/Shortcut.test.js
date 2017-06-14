@@ -45,6 +45,7 @@ describe('Shortcut', () => {
     it('has a good snapshot', () => {
       const { reactContainer } = setupReactContext();
       expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
+
       var elems = reactContainer.getElementsByClassName(
         'hig__global-nav__top-nav__shortcut'
       );

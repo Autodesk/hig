@@ -132,4 +132,18 @@ export default class HIGElement {
       delete this.events[eventName];
     }
   }
+
+  requireSingleInstance(instance, requiredSinglesList) {
+    const name = instance.constructor.name;
+    if (requiredSinglesList.includes(name) && this[name.toLowerCase()]) {
+      throw new Error('only one ' + name + ' is allowed');
+    }
+  }
+
+  checkValidInstance(instance, validChildrenList) {
+    const name = instance.constructor.name;
+    if (!validChildrenList.includes(name)) {
+       throw new Error(name + ' is not a valid child element of this parent.');
+    }
+  }
 }

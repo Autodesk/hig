@@ -37,6 +37,7 @@ const Item = GlobalNav.SideNav.SectionList.Item.Group.Item;
 const TopNav = GlobalNav.TopNav;
 const Profile = GlobalNav.TopNav.Profile;
 const Shortcut = TopNav.Shortcut;
+const Help = TopNav.Help;
 const ProjectAccountSwitcher = GlobalNav.TopNav.ProjectAccountSwitcher;
 const Account = GlobalNav.TopNav.ProjectAccountSwitcher.Account;
 const Project = GlobalNav.TopNav.ProjectAccountSwitcher.Project;
@@ -345,6 +346,12 @@ class App extends React.Component {
               title="Gears for Fears"
               link="/gears"
             />
+
+            <Help
+              title="HELLLP MEEEE!!!!"
+              link="/help"
+            />
+
             <Profile
               open={this.state.profileFlyoutOpen}
               image={profileImage}

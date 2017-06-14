@@ -1,7 +1,4 @@
 /**
- * Created by shannon on 6/12/17.
- */
-/**
  Copyright 2016 Autodesk,Inc.
 
  Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,16 +14,17 @@
  limitations under the License.
 
  */
+//import * as HIG from 'hig.web';
+
 import HIGElement from '../../HIGElement';
 import * as PropTypes from 'prop-types';
 import createComponent from '../../../adapters/createComponent';
 
-export class Shortcut extends HIGElement {
+export class Help extends HIGElement {
   commitUpdate(updatePayload, oldProps, newProps) {
     const mapping = {
       title: 'setTitle',
-      link: 'setLink',
-      icon: 'setIcon'
+      link: 'setLink'
     };
 
     for (let i = 0; i < updatePayload.length; i += 2) {
@@ -42,28 +40,23 @@ export class Shortcut extends HIGElement {
   }
 }
 
-const ShortcutComponent = createComponent(Shortcut);
+const HelpComponent = createComponent(Help);
 
-ShortcutComponent.propTypes = {
+HelpComponent.propTypes = {
   title: PropTypes.string,
-  link: PropTypes.string,
-  icon: PropTypes.string
+  link: PropTypes.string
 };
 
-ShortcutComponent.__docgenInfo = {
+HelpComponent.__docgenInfo = {
   props: {
     title: {
-      description: 'sets the title of a shortcut'
+      description: 'sets the title of a Help shortcut'
     },
 
     link: {
-      description: 'sets the link of a shortcut'
-    },
-
-    icon: {
-      description: 'sets the shortcut icon to one of a set of pre-defined icons'
+      description: 'sets the link of a Help shortcut'
     }
   }
 };
 
-export default ShortcutComponent;
+export default HelpComponent;
