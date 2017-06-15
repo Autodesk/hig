@@ -59,7 +59,7 @@ class App extends React.Component {
       isOpen: false,
       activeTab: 0,
       activeProjectOrAccount: 0,
-      projectOrAcccountTarget: this.accountList()[0],
+      projectOrAcccountTarget: this.accountList()[0] || this.projectList()[0],
       tabs: [{ label: 'One', id: 0 }, { label: 'Two', id: 1 }],
       projects: this.projectList(),
       accounts: this.accountList()
