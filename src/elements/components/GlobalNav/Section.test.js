@@ -21,10 +21,32 @@ import React from 'react';
 import GlobalNav from './GlobalNav';
 import Section from './Section';
 import Group from './Group';
+import Module from './Module';
+import Submodule from './Submodule';
+import Collapse from './Collapse'
+
+const SubmoduleContext = props => {;
+  return (
+    <GlobalNav>
+      <GlobalNav.SideNav>
+        <GlobalNav.SideNav.SectionList>
+          <Section headerLabel='Project' headerName="ThunderStorm" >
+             <Collapse isCollapsed={props.isCollapsed} />
+             <Group>
+              <Module icon="gear" title="Contractor" submodulesClosed={props.isCollapsed} >
+                <Submodule title="Library" link='#' />  
+              </Module>   
+            </Group>  
+            
+          </Section>
+        </GlobalNav.SideNav.SectionList>
+      </GlobalNav.SideNav>
+    </GlobalNav>
+  );
+};
 
 const Context = props => {
   const { children, ...rest } = props;
-
   return (
     <GlobalNav>
       <GlobalNav.SideNav>
@@ -275,7 +297,7 @@ describe('<Section>', () => {
 
       expect(console.error).toBeCalledWith(
         expect.stringMatching(
-          /'div' is not a valid child of Section. Children should be of type 'Group'/
+          /'div' is not a valid child of Section. Children should be of type 'Group, Collapse'/
         )
       );
     });
@@ -291,9 +313,46 @@ describe('<Section>', () => {
 
       expect(console.error).toBeCalledWith(
         expect.stringMatching(
-          /'Hello world!' is not a valid child of Section. Children should be of type 'Group'/
+          /'Hello world!' is not a valid child of Section. Children should be of type 'Group, Collapse'/
         )
       );
+    });
+  });
+
+  describe('submodules', () => {
+    it('can show submodules when submodulesCollapsed is false', () => {
+      var props = {isCollapsed: false}
+
+      const reactContainer = document.createElement('div');
+
+      const wrapper = mount(<SubmoduleContext {...props} />, {
+        attachTo: reactContainer
+      });
+
+      expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
+
+      expect(reactContainer.getElementsByClassName('hig__global-nav__side-nav__section__collapse--collapsed').length).toEqual(1)
+      expect(reactContainer.getElementsByClassName('hig__global-nav__side-nav__section__group__module__submodules--hide').length).toEqual(0)
+
+
+    });
+
+
+     it('can show submodules when submodulesCollapsed is true', () => {
+      var props = {isCollapsed: true}
+
+      const reactContainer = document.createElement('div');
+
+      const wrapper = mount(<SubmoduleContext {...props} />, {
+        attachTo: reactContainer
+      });
+
+      expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
+
+      expect(reactContainer.getElementsByClassName('hig__global-nav__side-nav__section__collapse--collapsed').length).toEqual(0)
+      expect(reactContainer.getElementsByClassName('hig__global-nav__side-nav__section__group__module__submodules--hide').length).toEqual(1)
+
+
     });
   });
 });
