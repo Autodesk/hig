@@ -31,10 +31,8 @@
     
 
     &__submodules{
-        display: none; // hide by default
-
-        &--show{
-            display: block;
+        &--hide{
+            display: none;
         }
     }
 

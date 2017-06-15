@@ -25,6 +25,15 @@ class Group extends Core {
         }
     }
 
+    // For filtering / search
+    show(){
+        this.el.classList.remove("hig__global-nav__side-nav__section__group--hide");
+    }
+
+    hide(){
+        this.el.classList.add("hig__global-nav__side-nav__section__group--hide");
+    }
+
 }
 
 Group._interface = Interface['components']['GlobalNav']['partials']['SideNav']['partials']['Section']['partials']['Group'];

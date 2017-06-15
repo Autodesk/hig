@@ -24,7 +24,7 @@ class TopNav extends Core {
     }
 
     onHamburgerClick(fn){
-        return this._attachListener("click", '.hig__global-nav__top-nav__hamburger', this.el, fn);
+        return this._attachListener("click", '.js-hig__global-nav__top-nav__hamburger', this.el, fn);
     }
 
     setLogo(logo){
