@@ -332,19 +332,21 @@ class App extends React.Component {
                             { label: "Activities", contentImage: "content/Oakwood__Field__Activities@2x.png" }
                   ]
               },
-              { icon: "layout", label: "Layout", contentImage: "content/Oakwood__Layout@2x.png" },
-              { icon: "buildingops", label: "Building Ops", contentImage: "content/Oakwood__BuildingOps@2x.png" },
+              { icon: "layout", label: "Layout", contentImage: "content/Oakwood__Layout@2x.png", submodules: []},
+              { icon: "buildingops", label: "Building Ops", contentImage: "content/Oakwood__BuildingOps@2x.png", submodules: []},
              ]                      
            },{ // end group 2
             modules: [
-              { icon: "library", label: "Library", contentImage: "content/Oakwood__Library@2x.png" },
-              { icon: "photos", label: "Photos", contentImage: "content/Oakwood__Photos@2x.png" },
-              { icon: "assets", label: "Assets", contentImage: "content/Oakwood__Assets@2x.png" },
-              { icon: "locations", label: "Location", contentImage: "content/Oakwood__Locations@2x.png" }
+              { icon: "library", label: "Library", contentImage: "content/Oakwood__Library@2x.png", submodules: [] },
+              { icon: "photos", label: "Photos", contentImage: "content/Oakwood__Photos@2x.png", submodules: [] },
+              { icon: "assets", label: "Assets", contentImage: "content/Oakwood__Assets@2x.png", submodules: [] },
+              { icon: "locations", label: "Location", contentImage: "content/Oakwood__Locations@2x.png", submodules: [] }
             ]
           },{ // end group 3
             modules: [
-              { icon: "project-admin", label: "Project Admin", contentImage: "content/Oakwood__ProjectAdmin@2x.png" }
+              { icon: "project-admin", label: "Project Admin", contentImage: "content/Oakwood__ProjectAdmin@2x.png", 
+                submodules: []
+              }
             ]
           }
         ]
@@ -353,7 +355,7 @@ class App extends React.Component {
        groups: [
          { 
            modules: [
-              { icon: "insight", label: "Insight", contentImage: "content/GlobalConstruction__Insight@2x.png"},
+              { icon: "insight", label: "Insight", contentImage: "content/GlobalConstruction__Insight@2x.png", submodules: []},
               {
                  icon: "field", label: "Field", 
                  submodules: [
@@ -385,67 +387,41 @@ class App extends React.Component {
         <GlobalNav sideNavOpen={this.state.open}>
           <SideNav>
             <SectionList>
-              {
-                this.menu()
-              }
-              <Section headerLabel="Project" headerName="ThunderStorm">
-                <Collapse onClick={this.toggleSection1} isCollapsed={this.state.section1Collapsed}/>
-                <Group>
-                
-                    <Module
-                      icon="insight"
-                      title="Insight"
-                      link="#"
-                      onClick={() => alert('item 1 clicked')}
-                      submodulesClosed={this.state.section1Collapsed}
-                    >
-                      <Submodule 
-                        title="Overview"
-                        link="#"
-                        onClick={() => alert('item 1 clicked')}/>  
-                    </Module>      
-                  {/*{this.state.group1 &&
-                    <Item icon="project-management" title="Item 3" link="#" />}*/}
-                </Group>
+                  <Section headerLabel="Project" headerName="ThunderStorm">
+                    <Collapse onClick={this.toggleSection1} isCollapsed={this.state.section1Collapsed} /> {
+                      this.menu().sections[0].groups.map(function(group) {
+                        return <Group> { 
+                          group.modules.map(function(module) {
+                            return  <Module icon={module.icon} contentImage={module.contentImage} title={module.label} submodulesClosed={this.state.section1Collapsed} key={module.label}>
+                              { module.submodules.map(function(submodule) {
+                                return <Submodule title={submodule.label} link='#' key={submodule.label}/>                          
+                                })
+                              }
+                            </Module>                            
+                          }.bind(this)) 
+                        }
+                        </Group>
+                      }.bind(this))
+                    }
+                  </Section>  
+                  <Section headerLabel="Account" headerName="GlobalConstruction">
+                    <Collapse isCollapsed={this.state.section2Collapsed} onClick={this.toggleSection2}/>
+                      { 
+                        this.menu().sections[1].groups.map(function(group) {
+                        return <Group> { 
+                          group.modules.map(function(module) {
+                            return  <Module icon={module.icon} contentImage={module.contentImage} title={module.label} submodulesClosed={this.state.section2Collapsed} key={module.label}>
+                              { module.submodules.map(function(submodule) {
+                                return <Submodule title={submodule.label} link='#' key={submodule.label}/>                          
+                                })
+                              }
+                            </Module>                            
+                          }.bind(this)) 
+                        }
+                        </Group>
+                      }.bind(this))}
+                  </Section>  
 
-                {/*<Group>
-                  <Item
-                    icon="project-management"
-                    title={this.state.buttonLabel}
-                    link="#"
-                  />
-                </Group>*/}
-              </Section>
-
-              <Section headerLabel="Project" headerName="ThunderStorm">
-                <Collapse isCollapsed={this.state.section2Collapsed} onClick={this.toggleSection2}/>
-                <Group>
-                    <Module
-                      icon="project-management"
-                      title="Item 1"
-                      link="#"
-                      onClick={() => alert('item 1 clicked')}
-                      submodulesClosed={this.state.section2Collapsed}
-
-                    >
-                      <Submodule 
-                        icon="project-management"
-                        title="Item 1"
-                        link="#"
-                        onClick={() => alert('item 1 clicked')}/>
-                    </Module>      
-                  {/*{this.state.group1 &&
-                    <Item icon="project-management" title="Item 3" link="#" />}*/}
-                </Group>
-
-                {/*<Group>
-                  <Item
-                    icon="project-management"
-                    title={this.state.buttonLabel}
-                    link="#"
-                  />
-                </Group>*/}
-              </Section>
             </SectionList>
           </SideNav>
           <TopNav
