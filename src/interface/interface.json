@@ -108,7 +108,8 @@
                 },
                 "hideSideNav": {
                     "desc": "hide the SideNav"
-                }
+                },
+                "onHoverOutside": "HIG.abstract.EventObject"
             },
             "partials": {
                 "TopNav": {
@@ -125,6 +126,12 @@
                                 "{String} link - new link"
                             ]
                         },
+                        "sidenavOpen": {
+                            "desc": "changes the hamburger icon to a close icon"
+                        },
+                        "sidenavClosed": {
+                            "desc": "changes the close icon to a hamburger icon"
+                        },
                         "addProfile": {
                             "desc": "Pass in an instance of an Profile partial to mount it to the GlobalNav",
                             "params": [
@@ -135,6 +142,13 @@
                             "desc": "Pass in an instance of a ProjectAccountSwitcher partial to mount it to the TopNav",
                             "params": [
                                 "{ProjectAccountSwitcher} ProjectAccountSwitcher - instance of a ProjectAccountSwitcher partial"
+                            ]
+                        },
+                        "addSearch": {
+                            "desc": "Pass in an instance of a Search partial",
+                            "params": [
+                                "{Link} Search - instance of a Search partial",
+                                "{Search} [ReferenceSearch] - (Optional) reference node for insertBefore"
                             ]
                         },
                         "addShortcut": {
@@ -149,7 +163,13 @@
                                 "{Help} Help - instance of a Help partial"
                             ]
                         },
-                        "onHamburgerClick": {
+                        "addSearch": {
+                            "desc": "Pass in an instance of a Search partial",
+                            "params": [
+                                "{Link} Search - instance of a Search partial",
+                                "{Search} [ReferenceSearch] - (Optional) reference node for insertBefore"
+                            ]
+                        },                        "onHamburgerClick": {
                             "desc": "Calls the provided callback when user clicks on the hamburger icon",
                             "params": "HIG.abstract.EventObject.params",
                             "returns": "HIG.abstract.EventObject.returns"
@@ -160,6 +180,36 @@
                         "logoLink": "{String} url behind the logo"
                     },
                     "partials":{
+                        "Search": {
+                            "methods": {
+                                "setPlaceholder": {
+                                    "desc": "sets the placeholder",
+                                    "params": [
+                                        "{String} placeholder - new placeholder"
+                                    ]
+                                },
+                                "setQuery": {
+                                    "desc": "sets the search query",
+                                    "params": [
+                                        "{String} query - new query"
+                                    ]
+                                },
+                                "showClearIcon": {
+                                    "desc": "show the clear input icon"
+                                },
+                                "hideClearIcon": {
+                                    "desc": "hide the clear input icon"
+                                },
+                                "onClearIconClick": "HIG.abstract.EventObject",
+                                "onInput": "HIG.abstract.EventObject",
+                                "onFocusIn": "HIG.abstract.EventObject",
+                                "onFocusOut": "HIG.abstract.EventObject"
+                            },
+                            "defaults": {
+                                "query": "{String} Set a search query in the input",
+                                "placeholder": "{String} A placeholder text when nothing is searched"
+                            }
+                        },
                         "Profile": {
                             "methods": {
                                 "setEmail": {
@@ -432,6 +482,11 @@
                             "params": [
                             "{Tabs} Tabs - instance of a Tabs partial"
                             ]
+                        },
+                        "onModuleIndicatorClick": {
+                            "desc": "Calls the provided callback when the module indicator (name or icon) is clicked",
+                            "params": "HIG.abstract.EventObject.params",
+                            "returns": "HIG.abstract.EventObject.returns"
                         }
                     },
                     "partials": {
@@ -497,11 +552,49 @@
                         "setCopyright": {
                             "desc": "Change the copyright notice at bottom of side nav",
                             "params": [
-                                "{String} Copyright notice"
+                                "{Link} Search - instance of a Search partial",
+                                "{Search} [ReferenceSearch] - (Optional) reference node for insertBefore"
+                            ]
+                        },
+                        "addSearch": {
+                            "desc": "Pass in an instance of a Search partial",
+                            "params": [
+                                "{Link} Search - instance of a Search partial",
+                                "{Search} [ReferenceSearch] - (Optional) reference node for insertBefore"
                             ]
                         }
                     },
                     "partials": {
+                        "Search": {
+                            "methods": {
+                                "setPlaceholder": {
+                                    "desc": "sets the placeholder",
+                                    "params": [
+                                        "{String} placeholder - new placeholder"
+                                    ]
+                                },
+                                "setQuery": {
+                                    "desc": "sets the search query",
+                                    "params": [
+                                        "{String} query - new query"
+                                    ]
+                                },
+                                "showClearIcon": {
+                                    "desc": "show the clear input icon"
+                                },
+                                "hideClearIcon": {
+                                    "desc": "hide the clear input icon"
+                                },
+                                "onClearIconClick": "HIG.abstract.EventObject",
+                                "onInput": "HIG.abstract.EventObject",
+                                "onFocusIn": "HIG.abstract.EventObject",
+                                "onFocusOut": "HIG.abstract.EventObject"
+                            },
+                            "defaults": {
+                                "query": "{String} Set a search query in the input",
+                                "placeholder": "{String} A placeholder text when nothing is searched"
+                            }
+                        },
                         "Section": {
                             "methods": {
                                 "setHeaderLabel": {
@@ -522,6 +615,19 @@
                                         "{Group} Group - instance of a Group partial",
                                         "{Group} [ReferenceGroup] - (Optional) reference node for insertBefore"
                                     ]
+                                },
+                                "addCollapse": {
+                                    "desc": "Pass in an instance of a Collapse partial",
+                                    "params": [
+                                        "{Collapse} Collapse - instance of a Collapse partial",
+                                        "{Collapse} [ReferenceCollapse] - (Optional) reference node for insertBefore"
+                                    ]
+                                },
+                                "show":{
+                                    "desc": "show (used for filtering)"
+                                },
+                                "hide":{
+                                    "desc": "hide (used for filtering)"
                                 }
                             },
                             "defaults": {
@@ -531,34 +637,70 @@
                             "partials": {
                                 "Group": {
                                     "methods": {
-                                        "addItem": {
-                                            "desc": "Pass in an instance of a SideNav group Item partial",
+                                        "addModule": {
+                                            "desc": "Pass in an instance of a SideNav group Module partial",
                                             "params": [
-                                                "{Item} Item - instance of a Item partial",
-                                                "{Item} [ReferenceItem] - (Optional) reference node for insertBefore"
+                                                "{Module} Module - instance of a Module partial",
+                                                "{Module} [ReferenceModule] - (Optional) reference node for insertBefore"
                                             ]
+                                        },
+                                        "show":{
+                                            "desc": "show (used for filtering)"
+                                        },
+                                        "hide":{
+                                            "desc": "hide (used for filtering)"
                                         }
                                     },
                                     "partials": {
-                                        "Item": {
+                                        "Module": {
                                             "methods": {
                                                 "setIcon": {
-                                                    "desc": "sets the icon of an item",
+                                                    "desc": "sets the icon of an module",
                                                     "params": [
                                                         "{String} title - new icon ID"
                                                     ]
                                                 },
                                                 "setTitle": {
-                                                    "desc": "sets the title of an item",
+                                                    "desc": "sets the title of an module",
                                                     "params": [
                                                         "{String} title - new title"
                                                     ]
                                                 },
                                                 "setLink": {
-                                                    "desc": "sets the link of an item",
+                                                    "desc": "sets the link of an module",
                                                     "params": [
                                                         "{String} link - new link"
                                                     ]
+                                                },
+                                                "onClick": {
+                                                    "desc": "Calls the provided callback when user clicks on the item",
+                                                    "params": "HIG.abstract.EventObject.params",
+                                                    "returns": "HIG.abstract.EventObject.returns"
+                                                },
+                                                "addSubmodule": {
+                                                    "desc": "Pass in an instance of a Submodule partial",
+                                                    "params": [
+                                                        "{Submodule} Submodule - instance of a Submodule partial",
+                                                        "{Submodule} [ReferenceSubmodule] - (Optional) reference node for insertBefore"
+                                                    ]
+                                                },
+                                                "show":{
+                                                    "desc": "show (used for filtering)"
+                                                },
+                                                "hide":{
+                                                    "desc": "hide (used for filtering)"
+                                                },
+                                                "activate": {
+                                                    "desc": "activates the module"
+                                                },
+                                                "deactivate": {
+                                                    "desc": "deactivates the module"
+                                                },
+                                                "showSubmodules" :{
+                                                    "desc": "show the submodules"
+                                                },
+                                                "hideSubmodules": {
+                                                    "desc": "hide the submodules"
                                                 },
                                                 "onClick": {
                                                     "desc": "Calls the provided callback when user clicks on the item",
@@ -573,10 +715,63 @@
                                             },
                                             "defaults": {
                                                 "icon": "{String} icon identifier",
-                                                "title": "{String} the string of our SideNav item",
-                                                "link": "{String} link behind the item"
+                                                "title": "{String} the string of our SideNav module",
+                                                "link": "{String} link behind the module"
+                                            },
+                                            "partials": {
+                                                "Submodule": {
+                                                    "methods": {
+                                                        "setTitle": {
+                                                            "desc": "sets the title of an module",
+                                                            "params": [
+                                                                "{String} title - new title"
+                                                            ]
+                                                        },
+                                                        "setLink": {
+                                                            "desc": "sets the link of an module",
+                                                            "params": [
+                                                                "{String} link - new link"
+                                                            ]
+                                                        },
+                                                        "show":{
+                                                            "desc": "show (used for filtering)"
+                                                        },
+                                                        "hide":{
+                                                            "desc": "hide (used for filtering)"
+                                                        },
+                                                        "activate": {
+                                                            "desc": "activates the submodule"
+                                                        },
+                                                        "deactivate": {
+                                                            "desc": "deactivates the submodule"
+                                                        },
+                                                        "onClick": "HIG.abstract.EventObject",
+                                                        "onHover": "HIG.abstract.EventObject"
+                                                    },
+                                                    "defaults": {
+                                                        "title": "{String} the string of our SideNav submodule",
+                                                        "link": "{String} link behind the submodule"
                                             }
                                         }
+                                    }
+                                }
+                            }
+                        },
+                                "Collapse": {
+                                    "methods": {
+                                        "minimize": {
+                                            "desc": "show [ - ]"
+                                        },
+                                        "maximize": {
+                                            "desc": "show [ + ]"
+                                        },
+                                        "show":{
+                                            "desc": "show (used for filtering)"
+                                        },
+                                        "hide":{
+                                            "desc": "hide (used for filtering)"
+                                        },
+                                        "onClick": "HIG.abstract.EventObject"
                                     }
                                 }
                             }

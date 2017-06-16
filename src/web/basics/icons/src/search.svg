@@ -1,0 +1,13 @@
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="hig-light/globalnav/topnav/search" transform="translate(-14.000000, -17.000000)">
+            <g id="hig/icon/search" transform="translate(13.000000, 16.000000)">
+                <rect id="Rectangle-2" fill="#353636" fill-rule="evenodd" transform="translate(19.195909, 18.891324) rotate(-45.000000) translate(-19.195909, -18.891324) " x="18.1952941" y="13.8913235" width="2.00122984" height="10" rx="1"></rect>
+                <circle id="Oval-3" stroke="#353636" stroke-width="1.5" cx="10" cy="10" r="8"></circle>
+            </g>
+        </g>
+    </g>
+</svg>
