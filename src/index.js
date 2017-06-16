@@ -26,6 +26,7 @@ import profileImage from './images/profileImage.png';
 import TopNavFixtures from './fixtures/topNavFixtures';
 
 const SideNav = GlobalNav.SideNav;
+const Search = GlobalNav.SideNav.Search;
 const SectionList = GlobalNav.SideNav.SectionList;
 const Section = GlobalNav.SideNav.SectionList.Section;
 const Collapse = GlobalNav.SideNav.SectionList.Section.Collapse;
@@ -186,6 +187,7 @@ class App extends React.Component {
       <div>
         <GlobalNav sideNavOpen={this.state.open}>
           <SideNav>
+            <Search placeholder="Find module or submodule" />
             <SectionList>
               <Section headerLabel="Project" headerName="ThunderStorm">
                 <Collapse
