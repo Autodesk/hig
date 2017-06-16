@@ -733,8 +733,16 @@
                                                         "deactivate": {
                                                             "desc": "deactivates the submodule"
                                                         },
-                                                        "onClick": "HIG.abstract.EventObject",
-                                                        "onHover": "HIG.abstract.EventObject"
+                                                        "onClick": {
+                                                            "desc": "Calls the provided callback when user clicks on the item",
+                                                            "params": "HIG.abstract.EventObject.params",
+                                                            "returns": "HIG.abstract.EventObject.returns"
+                                                        },
+                                                        "onHover": {
+                                                            "desc": "Calls the provided callback when user clicks on the item",
+                                                            "params": "HIG.abstract.EventObject.params",
+                                                            "returns": "HIG.abstract.EventObject.returns"
+                                                        }
                                                     },
                                                     "defaults": {
                                                         "title": "{String} the string of our SideNav submodule",
@@ -759,7 +767,11 @@
                                         "hide":{
                                             "desc": "hide (used for filtering)"
                                         },
-                                        "onClick": "HIG.abstract.EventObject"
+                                        "onClick": {
+                                            "desc": "Calls the provided callback when user clicks on the item",
+                                            "params": "HIG.abstract.EventObject.params",
+                                            "returns": "HIG.abstract.EventObject.returns"
+                                        }
                                     }
                                 }
                             }
