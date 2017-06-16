@@ -93,13 +93,11 @@ class Core {
             data.renderIcon = function(){
                 return function (text, render) {
                     var k = Mustache.render(text, data);
-                    var i = Icons[k];
-                    if(!i){
-                        console.error("NO HIG ICON FOUND WITH THE NAME: "+k);
-                        return false;
-                    }else{
-                        return "<div class='hig__icon'>" + i + "</div>";
+                    var i = (k == "") ? "" : Icons[k];
+                    if(i == undefined){
+                        console.warn("NO HIG ICON FOUND WITH THE NAME: "+k);
                     }
+                    return "<div class='hig__icon'>" + i + "</div>";
                 }
             }
             elWrapper.innerHTML = Mustache.render(
@@ -181,7 +179,7 @@ class Core {
 
     unmount(){
         if (!this.el) { return }
-        this.el.remove();
+        this.el.parentNode.removeChild(this.el); // use removeChild for IE11 support
     }
 
     /**

@@ -8,6 +8,7 @@ var Profile = require('./profile/profile.js');
 var Shortcut = require('./shortcut/shortcut.js');
 var Help = require('./help/help.js');
 var ProjectAccountSwitcher = require('./project-account-switcher/project-account-switcher.js');
+var Search = require('./search/search.js');
 
 /**
  * Creates an TopNav
@@ -23,7 +24,7 @@ class TopNav extends Core {
     }
 
     onHamburgerClick(fn){
-        return this._attachListener("click", '.js-hig__global-nav__top-nav__hamburger', this.el, fn);
+        return this._attachListener("click", '.hig__global-nav__top-nav__hamburger', this.el, fn);
     }
 
     setLogo(logo){
@@ -46,8 +47,21 @@ class TopNav extends Core {
         this.mountPartialToComment(this._comment(instance), instance);
     }
 
+    addSearch(searchInstance, referenceInstance){
+        if(searchInstance instanceof Search){
+            this.mountPartialToComment('SEARCH', searchInstance, referenceInstance);
+        }
+    }
     addHelp(instance) {
       this.mountPartialToComment(this._comment(instance), instance);
+    }
+
+    sidenavOpen() {
+        this._findDOMEl(".hig__global-nav__top-nav__hamburger", this.el).classList.add("hig__global-nav__top-nav__hamburger--menuopen");
+    }
+
+    sidenavClosed() {
+        this._findDOMEl(".hig__global-nav__top-nav__hamburger", this.el).classList.remove("hig__global-nav__top-nav__hamburger--menuopen");
     }
 
     _setLogoAttributeForTag(tag,attr,val) {
@@ -77,7 +91,8 @@ TopNav._partials = {
     Profile: Profile,
     ProjectAccountSwitcher: ProjectAccountSwitcher,
     Shortcut: Shortcut,
-    Help: Help
+    Help: Help,
+    Search: Search
 };
 
 module.exports = TopNav;

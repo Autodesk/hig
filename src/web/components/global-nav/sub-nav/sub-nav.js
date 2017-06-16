@@ -20,19 +20,23 @@ class SubNav extends Core {
     }
 
     setModuleIndicatorName(name){
-        this._findDOMEl('.hig__global-nav__sub-nav__module-indicator-name', this.el).textContent = name;
-        this._findDOMEl('.hig__global-nav__sub-nav__module-indicator-name.hig__global-nav__sub-nav__spacer', this.el).textContent = name;
+        this._findDOMEl('.hig__global-nav__sub-nav__module-indicator__name', this.el).textContent = name;
+        this._findDOMEl('.hig__global-nav__sub-nav__module-indicator__name.hig__global-nav__sub-nav__spacer', this.el).textContent = name;
     }
 
     setModuleIndicatorIcon(icon){
-        this._findDOMEl('.hig__global-nav__sub-nav__module-indicator-icon', this.el).innerHTML = this._getIconString(icon);
-        this._findDOMEl('.hig__global-nav__sub-nav__module-indicator-icon.hig__global-nav__sub-nav__spacer', this.el).innerHTML = this._getIconString(icon);
+        this._findDOMEl('.hig__global-nav__sub-nav__module-indicator__icon', this.el).innerHTML = this._getIconString(icon);
+        this._findDOMEl('.hig__global-nav__sub-nav__module-indicator__icon.hig__global-nav__sub-nav__spacer', this.el).innerHTML = this._getIconString(icon);
     }
 
     addTabs(tabsInstance){
         if(tabsInstance instanceof Tabs) {
             this.mountPartialToComment('TABS', tabsInstance)
         }
+    }
+
+    onModuleIndicatorClick(fn){
+        return this._attachListener("click", '.hig__global-nav__sub-nav__module-indicator', this.el, fn);
     }
 
 }

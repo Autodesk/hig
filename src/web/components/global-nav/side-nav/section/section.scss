@@ -1,7 +1,7 @@
 @import '~basics/colors/colors.scss';
 
 .hig__global-nav__side-nav__section{
-
+    position: relative;
     margin-bottom: 60px;
     
     &__header{
@@ -16,5 +16,10 @@
         &__name{
             color: $base-5;
         }
+
+    }
+
+    &--hide{
+        display: none;
     }
 }

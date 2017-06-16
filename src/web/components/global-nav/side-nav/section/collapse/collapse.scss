@@ -1,0 +1,27 @@
+@import '~basics/colors/colors.scss';
+
+.hig__global-nav__side-nav__section__collapse{
+    position: absolute;
+    top: -5px;
+    right: 0;
+
+    &--minimize{
+        display: none;
+    }
+
+    &--collapsed &--minimize{
+        display: block;
+    }
+
+    &--collapsed &--maximize{
+        display: none;
+    }
+
+    &--hide{
+        display: none;
+    }
+
+    &:hover{
+        cursor: pointer;
+    }
+}

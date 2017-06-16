@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>hig-light/globalnav/sidenav/icon/library</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Sidenav" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="hig-light/globalnav/sidenav/icon/library" fill="#353636">
+            <polygon id="Shape" points="7.58193901 6.5 7 7.5 16.3014843 7.5 15.7500732 6.5"></polygon>
+            <polygon id="Shape" points="6.58193901 8.5 6 9.5 17.3439948 9.5 16.7773198 8.5"></polygon>
+            <path d="M4.55407715,9.69706003 L7.6802593,4.71765137 L16.4136577,4.71765137 C16.4136577,4.71765137 19.2730768,9.47439263 19.4934082,9.69706003 C19.7137396,9.91972744 21,9.69706003 21,9.69706003 L17.2605766,3.92594903 C17.1081482,3.69070388 16.7569278,3.5 16.4749311,3.5 L7.49423011,3.5 C7.21275845,3.5 6.86096067,3.69226116 6.71070423,3.92594903 L3,9.69706003 L4.55407715,9.69706003 Z" id="Shape"></path>
+            <path d="M3,10.5 L3,19.5 C3,20.052 3.448,20.5 4,20.5 L20,20.5 C20.552,20.5 21,20.052 21,19.5 L21,10.5 L3,10.5 L3,10.5 Z M16,14.5 L8,14.5 L8,13.5 L16,13.5 L16,14.5 L16,14.5 Z" id="icon-assets"></path>
+        </g>
+    </g>
+</svg>
