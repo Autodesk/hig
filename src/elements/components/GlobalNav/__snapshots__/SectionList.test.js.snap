@@ -3,17 +3,21 @@
 exports[`<SectionList> can insert a <Section> before and after another <Section> one 1`] = `
 "<div class=\\"hig__global-nav\\">
     <div class=\\"hig__global-nav__sidenav\\">
-    <div class=\\"hig__global-nav__side-nav__section\\">
+    <div class=\\"hig__global-nav__sidenav__scroll\\">
+        <!--SEARCH-->
+        <div class=\\"hig__global-nav__side-nav__section\\">
     <div class=\\"hig__global-nav__side-nav__section__header\\">
         <span class=\\"hig__global-nav__side-nav__section__header__label\\">Label 2</span>
         <span class=\\"hig__global-nav__side-nav__section__header__name\\">Name 2</span>
+        <!--COLLAPSE-->
     </div>
     <!--GROUP-->
 </div><!--SECTION-->
-    <div class=\\"hig__global-nav__sidenav__links\\">
-        <!--LINK-->
+        <div class=\\"hig__global-nav__sidenav__links\\">
+            <!--LINK-->
+        </div>
+        <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
     </div>
-    <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
@@ -28,23 +32,28 @@ exports[`<SectionList> can insert a <Section> before and after another <Section>
 exports[`<SectionList> can insert a <Section> before and after another <Section> one 2`] = `
 "<div class=\\"hig__global-nav\\">
     <div class=\\"hig__global-nav__sidenav\\">
-    <div class=\\"hig__global-nav__side-nav__section\\">
+    <div class=\\"hig__global-nav__sidenav__scroll\\">
+        <!--SEARCH-->
+        <div class=\\"hig__global-nav__side-nav__section\\">
     <div class=\\"hig__global-nav__side-nav__section__header\\">
         <span class=\\"hig__global-nav__side-nav__section__header__label\\">Label 1</span>
         <span class=\\"hig__global-nav__side-nav__section__header__name\\">Name 1</span>
+        <!--COLLAPSE-->
     </div>
     <!--GROUP-->
 </div><div class=\\"hig__global-nav__side-nav__section\\">
     <div class=\\"hig__global-nav__side-nav__section__header\\">
         <span class=\\"hig__global-nav__side-nav__section__header__label\\">Label 2</span>
         <span class=\\"hig__global-nav__side-nav__section__header__name\\">Name 2</span>
+        <!--COLLAPSE-->
     </div>
     <!--GROUP-->
 </div><!--SECTION-->
-    <div class=\\"hig__global-nav__sidenav__links\\">
-        <!--LINK-->
+        <div class=\\"hig__global-nav__sidenav__links\\">
+            <!--LINK-->
+        </div>
+        <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
     </div>
-    <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
@@ -59,17 +68,21 @@ exports[`<SectionList> can insert a <Section> before and after another <Section>
 exports[`<SectionList> can insert a <Section> before and after another <Section> one 3`] = `
 "<div class=\\"hig__global-nav\\">
     <div class=\\"hig__global-nav__sidenav\\">
-    <div class=\\"hig__global-nav__side-nav__section\\">
+    <div class=\\"hig__global-nav__sidenav__scroll\\">
+        <!--SEARCH-->
+        <div class=\\"hig__global-nav__side-nav__section\\">
     <div class=\\"hig__global-nav__side-nav__section__header\\">
         <span class=\\"hig__global-nav__side-nav__section__header__label\\">Label 2</span>
         <span class=\\"hig__global-nav__side-nav__section__header__name\\">Name 2</span>
+        <!--COLLAPSE-->
     </div>
     <!--GROUP-->
 </div><!--SECTION-->
-    <div class=\\"hig__global-nav__sidenav__links\\">
-        <!--LINK-->
+        <div class=\\"hig__global-nav__sidenav__links\\">
+            <!--LINK-->
+        </div>
+        <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
     </div>
-    <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
@@ -84,23 +97,28 @@ exports[`<SectionList> can insert a <Section> before and after another <Section>
 exports[`<SectionList> can insert a <Section> before and after another <Section> one 4`] = `
 "<div class=\\"hig__global-nav\\">
     <div class=\\"hig__global-nav__sidenav\\">
-    <div class=\\"hig__global-nav__side-nav__section\\">
+    <div class=\\"hig__global-nav__sidenav__scroll\\">
+        <!--SEARCH-->
+        <div class=\\"hig__global-nav__side-nav__section\\">
     <div class=\\"hig__global-nav__side-nav__section__header\\">
         <span class=\\"hig__global-nav__side-nav__section__header__label\\">Label 2</span>
         <span class=\\"hig__global-nav__side-nav__section__header__name\\">Name 2</span>
+        <!--COLLAPSE-->
     </div>
     <!--GROUP-->
 </div><div class=\\"hig__global-nav__side-nav__section\\">
     <div class=\\"hig__global-nav__side-nav__section__header\\">
         <span class=\\"hig__global-nav__side-nav__section__header__label\\">last label</span>
         <span class=\\"hig__global-nav__side-nav__section__header__name\\">last name</span>
+        <!--COLLAPSE-->
     </div>
     <!--GROUP-->
 </div><!--SECTION-->
-    <div class=\\"hig__global-nav__sidenav__links\\">
-        <!--LINK-->
+        <div class=\\"hig__global-nav__sidenav__links\\">
+            <!--LINK-->
+        </div>
+        <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
     </div>
-    <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
@@ -115,17 +133,21 @@ exports[`<SectionList> can insert a <Section> before and after another <Section>
 exports[`<SectionList> can insert a <Section> before and after another <Section> one 5`] = `
 "<div class=\\"hig__global-nav\\">
     <div class=\\"hig__global-nav__sidenav\\">
-    <div class=\\"hig__global-nav__side-nav__section\\">
+    <div class=\\"hig__global-nav__sidenav__scroll\\">
+        <!--SEARCH-->
+        <div class=\\"hig__global-nav__side-nav__section\\">
     <div class=\\"hig__global-nav__side-nav__section__header\\">
         <span class=\\"hig__global-nav__side-nav__section__header__label\\">Label 2</span>
         <span class=\\"hig__global-nav__side-nav__section__header__name\\">Name 2</span>
+        <!--COLLAPSE-->
     </div>
     <!--GROUP-->
 </div><!--SECTION-->
-    <div class=\\"hig__global-nav__sidenav__links\\">
-        <!--LINK-->
+        <div class=\\"hig__global-nav__sidenav__links\\">
+            <!--LINK-->
+        </div>
+        <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
     </div>
-    <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
@@ -140,23 +162,28 @@ exports[`<SectionList> can insert a <Section> before and after another <Section>
 exports[`<SectionList> can render a list of <Section> elements 1`] = `
 "<div class=\\"hig__global-nav\\">
     <div class=\\"hig__global-nav__sidenav\\">
-    <div class=\\"hig__global-nav__side-nav__section\\">
+    <div class=\\"hig__global-nav__sidenav__scroll\\">
+        <!--SEARCH-->
+        <div class=\\"hig__global-nav__side-nav__section\\">
     <div class=\\"hig__global-nav__side-nav__section__header\\">
         <span class=\\"hig__global-nav__side-nav__section__header__label\\">Project</span>
         <span class=\\"hig__global-nav__side-nav__section__header__name\\">Thunderstorm</span>
+        <!--COLLAPSE-->
     </div>
     <!--GROUP-->
 </div><div class=\\"hig__global-nav__side-nav__section\\">
     <div class=\\"hig__global-nav__side-nav__section__header\\">
         <span class=\\"hig__global-nav__side-nav__section__header__label\\">Project</span>
         <span class=\\"hig__global-nav__side-nav__section__header__name\\">Boo Ya</span>
+        <!--COLLAPSE-->
     </div>
     <!--GROUP-->
 </div><!--SECTION-->
-    <div class=\\"hig__global-nav__sidenav__links\\">
-        <!--LINK-->
+        <div class=\\"hig__global-nav__sidenav__links\\">
+            <!--LINK-->
+        </div>
+        <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
     </div>
-    <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->

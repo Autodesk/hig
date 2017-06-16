@@ -19,8 +19,11 @@ import * as HIG from 'hig.web';
 import React from 'react';
 
 import GlobalNav from './GlobalNav';
+import Section from './Section';
+import SectionList from './SectionList';
 import Group from './Group';
-import Item from './Item';
+import Module from './Module'
+
 
 const Context = props => {
   const { children, ...rest } = props;
@@ -29,9 +32,9 @@ const Context = props => {
     <GlobalNav>
       <GlobalNav.SideNav>
         <GlobalNav.SideNav.SectionList>
-          <GlobalNav.SideNav.SectionList.Item>
+          <GlobalNav.SideNav.SectionList.Section>
             <Group>{props.children}</Group>
-          </GlobalNav.SideNav.SectionList.Item>
+          </GlobalNav.SideNav.SectionList.Section>
         </GlobalNav.SideNav.SectionList>
       </GlobalNav.SideNav>
     </GlobalNav>
@@ -61,32 +64,32 @@ function higContext() {
 }
 
 describe('<Group>', () => {
-  describe('children: <Item>', () => {
-    it('can render a list of <Item> elements', () => {
+  describe('children: <Module>', () => {
+    it('can render a list of <Module> elements', () => {
       const { higGroup, higContainer } = higContext();
 
-      const item1Defaults = {
+      const module1Defaults = {
         icon: 'project-management',
-        title: 'Item 1',
+        title: 'Module 1',
         link: '#'
       };
-      const item1 = new higGroup.partials.Item(item1Defaults);
-      higGroup.addItem(item1);
+      const module1 = new higGroup.partials.Module(module1Defaults);
+      higGroup.addModule(module1);
 
-      const item2Defaults = {
+      const module2Defaults = {
         icon: 'project-management',
-        title: 'Item 2',
+        title: 'Module 2',
         link: '#'
       };
-      const item2 = new higGroup.partials.Item(item2Defaults);
-      higGroup.addItem(item2);
+      const module2 = new higGroup.partials.Module(module2Defaults);
+      higGroup.addModule(module2);
 
       const reactContainer = document.createElement('div');
 
       const wrapper = mount(
         <Context>
-          <Item {...item1Defaults} />
-          <Item {...item2Defaults} />
+          <Module {...module1Defaults} />
+          <Module {...module2Defaults} />
         </Context>,
         {
           attachTo: reactContainer
@@ -100,28 +103,28 @@ describe('<Group>', () => {
       );
     });
 
-    it('can insert <Item> elements before and after another <Item>', () => {
+    it('can insert <Module> elements before and after another <Module>', () => {
       const { higGroup, higContainer } = higContext();
 
-      const item1Defaults = {
+      const module1Defaults = {
         icon: 'project-management',
-        title: 'Item 1',
+        title: 'Module 1',
         link: '#'
       };
-      const item1 = new higGroup.partials.Item(item1Defaults);
+      const module1 = new higGroup.partials.Module(module1Defaults);
 
       // Do not add yet
 
-      const item2Defaults = {
+      const module2Defaults = {
         icon: 'project-management',
-        title: 'Item 2',
+        title: 'Module 2',
         link: '#'
       };
-      const item2 = new higGroup.partials.Item(item2Defaults);
-      higGroup.addItem(item2);
+      const module2 = new higGroup.partials.Module(module2Defaults);
+      higGroup.addModule(module2);
 
       // Add before item 2
-      higGroup.addItem(item1, item2);
+      higGroup.addModule(module1, module2);
 
       class CustomComponent extends React.Component {
         constructor(props) {
@@ -132,9 +135,9 @@ describe('<Group>', () => {
         render() {
           return (
             <Context>
-              {this.state.showingItemBefore && <Item {...item1Defaults} />}
-              <Item {...item2Defaults} />
-              {this.state.showingItemAfter && <Item />}
+              {this.state.showingItemBefore && <Module {...module1Defaults} />}
+              <Module {...module2Defaults} />
+              {this.state.showingItemAfter && <Module />}
             </Context>
           );
         }
@@ -179,7 +182,7 @@ describe('<Group>', () => {
 
       expect(console.error).toBeCalledWith(
         expect.stringMatching(
-          /'div' is not a valid child of Group. Children should be of type 'Item'/
+          /'div' is not a valid child of Group. Children should be of type 'Module'/
         )
       );
     });
@@ -195,7 +198,7 @@ describe('<Group>', () => {
 
       expect(console.error).toBeCalledWith(
         expect.stringMatching(
-          /'Hello world!' is not a valid child of Group. Children should be of type 'Item'/
+          /'Hello world!' is not a valid child of Group. Children should be of type 'Module'/
         )
       );
     });

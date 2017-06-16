@@ -6,13 +6,17 @@ exports[`Shortcut constructor has a good snapshot 1`] = `
     <div class=\\"hig__global-nav__container\\">
         <div class=\\"hig__global-nav__top-nav\\">
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
-        <div class=\\"hig__global-nav__top-nav__hamburger js-hig__global-nav__top-nav__hamburger\\"><div class=\\"hig__icon\\"><svg width=\\"30\\" height=\\"30\\" viewBox=\\"0 0 30 30\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-92 -185)\\" fill=\\"none\\" fill-rule=\\"evenodd\\"><rect x=\\"92\\" y=\\"185\\" width=\\"30\\" height=\\"30\\"></rect><path d=\\"M100,195 L115,195 L115,196 L100,196 L100,195 Z M100,200 L115,200 L115,201 L100,201 L100,200 Z M100,205 L115,205 L115,206 L100,206 L100,205 Z\\" fill=\\"#34495E\\"></path></g></svg></div></div>
+        <div class=\\"hig__global-nav__top-nav__hamburger\\">
+            <div class=\\"hig__global-nav__top-nav__hamburger__hamburgericon\\"><div class=\\"hig__icon\\"><svg width=\\"30\\" height=\\"30\\" viewBox=\\"0 0 30 30\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-92 -185)\\" fill=\\"none\\" fill-rule=\\"evenodd\\"><rect x=\\"92\\" y=\\"185\\" width=\\"30\\" height=\\"30\\"></rect><path d=\\"M100,195 L115,195 L115,196 L100,196 L100,195 Z M100,200 L115,200 L115,201 L100,201 L100,200 Z M100,205 L115,205 L115,206 L100,206 L100,205 Z\\" fill=\\"#34495E\\"></path></g></svg></div></div>
+            <div class=\\"hig__global-nav__top-nav__hamburger__closeicon\\"><div class=\\"hig__icon\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-hamburger\\"><title>hig_icon_xclose</title><g fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect transform=\\"rotate(45 12 12)\\" x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect transform=\\"rotate(-45 12 12)\\" x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
+        </div>
         <div class=\\"hig__global-nav__top-nav__logo\\">
             <a href=\\"#\\">
                 <img src=\\"link\\">
             </a>
         </div>
     </div>
+    <!--SEARCH-->
     <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
     <!--PROJECT_ACCOUNT_SWITCHER-->
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">

@@ -3,8 +3,9 @@
 exports[`<Section> children: <Group> can insert <Group> elements before and after another <Group> 1`] = `
 "<div class=\\"hig__global-nav\\">
     <div class=\\"hig__global-nav__sidenav\\">
-    <!--SEARCH-->
-    <div class=\\"hig__global-nav__side-nav__section\\">
+    <div class=\\"hig__global-nav__sidenav__scroll\\">
+        <!--SEARCH-->
+        <div class=\\"hig__global-nav__side-nav__section\\">
     <div class=\\"hig__global-nav__side-nav__section__header\\">
         <span class=\\"hig__global-nav__side-nav__section__header__label\\">some label</span>
         <span class=\\"hig__global-nav__side-nav__section__header__name\\">X</span>
@@ -14,10 +15,11 @@ exports[`<Section> children: <Group> can insert <Group> elements before and afte
     <!--MODULE-->
 </div><!--GROUP-->
 </div><!--SECTION-->
-    <div class=\\"hig__global-nav__sidenav__links\\">
-        <!--LINK-->
+        <div class=\\"hig__global-nav__sidenav__links\\">
+            <!--LINK-->
+        </div>
+        <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
     </div>
-    <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
@@ -32,8 +34,9 @@ exports[`<Section> children: <Group> can insert <Group> elements before and afte
 exports[`<Section> children: <Group> can insert <Group> elements before and after another <Group> 2`] = `
 "<div class=\\"hig__global-nav\\">
     <div class=\\"hig__global-nav__sidenav\\">
-    <!--SEARCH-->
-    <div class=\\"hig__global-nav__side-nav__section\\">
+    <div class=\\"hig__global-nav__sidenav__scroll\\">
+        <!--SEARCH-->
+        <div class=\\"hig__global-nav__side-nav__section\\">
     <div class=\\"hig__global-nav__side-nav__section__header\\">
         <span class=\\"hig__global-nav__side-nav__section__header__label\\">some label</span>
         <span class=\\"hig__global-nav__side-nav__section__header__name\\">X</span>
@@ -45,10 +48,11 @@ exports[`<Section> children: <Group> can insert <Group> elements before and afte
     <!--MODULE-->
 </div><!--GROUP-->
 </div><!--SECTION-->
-    <div class=\\"hig__global-nav__sidenav__links\\">
-        <!--LINK-->
+        <div class=\\"hig__global-nav__sidenav__links\\">
+            <!--LINK-->
+        </div>
+        <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
     </div>
-    <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
@@ -63,8 +67,9 @@ exports[`<Section> children: <Group> can insert <Group> elements before and afte
 exports[`<Section> children: <Group> can insert <Group> elements before and after another <Group> 3`] = `
 "<div class=\\"hig__global-nav\\">
     <div class=\\"hig__global-nav__sidenav\\">
-    <!--SEARCH-->
-    <div class=\\"hig__global-nav__side-nav__section\\">
+    <div class=\\"hig__global-nav__sidenav__scroll\\">
+        <!--SEARCH-->
+        <div class=\\"hig__global-nav__side-nav__section\\">
     <div class=\\"hig__global-nav__side-nav__section__header\\">
         <span class=\\"hig__global-nav__side-nav__section__header__label\\">some label</span>
         <span class=\\"hig__global-nav__side-nav__section__header__name\\">X</span>
@@ -74,10 +79,11 @@ exports[`<Section> children: <Group> can insert <Group> elements before and afte
     <!--MODULE-->
 </div><!--GROUP-->
 </div><!--SECTION-->
-    <div class=\\"hig__global-nav__sidenav__links\\">
-        <!--LINK-->
+        <div class=\\"hig__global-nav__sidenav__links\\">
+            <!--LINK-->
+        </div>
+        <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
     </div>
-    <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
@@ -92,8 +98,9 @@ exports[`<Section> children: <Group> can insert <Group> elements before and afte
 exports[`<Section> children: <Group> can insert <Group> elements before and after another <Group> 4`] = `
 "<div class=\\"hig__global-nav\\">
     <div class=\\"hig__global-nav__sidenav\\">
-    <!--SEARCH-->
-    <div class=\\"hig__global-nav__side-nav__section\\">
+    <div class=\\"hig__global-nav__sidenav__scroll\\">
+        <!--SEARCH-->
+        <div class=\\"hig__global-nav__side-nav__section\\">
     <div class=\\"hig__global-nav__side-nav__section__header\\">
         <span class=\\"hig__global-nav__side-nav__section__header__label\\">some label</span>
         <span class=\\"hig__global-nav__side-nav__section__header__name\\">X</span>
@@ -105,10 +112,11 @@ exports[`<Section> children: <Group> can insert <Group> elements before and afte
     <!--MODULE-->
 </div><!--GROUP-->
 </div><!--SECTION-->
-    <div class=\\"hig__global-nav__sidenav__links\\">
-        <!--LINK-->
+        <div class=\\"hig__global-nav__sidenav__links\\">
+            <!--LINK-->
+        </div>
+        <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
     </div>
-    <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
@@ -123,8 +131,9 @@ exports[`<Section> children: <Group> can insert <Group> elements before and afte
 exports[`<Section> children: <Group> can insert <Group> elements before and after another <Group> 5`] = `
 "<div class=\\"hig__global-nav\\">
     <div class=\\"hig__global-nav__sidenav\\">
-    <!--SEARCH-->
-    <div class=\\"hig__global-nav__side-nav__section\\">
+    <div class=\\"hig__global-nav__sidenav__scroll\\">
+        <!--SEARCH-->
+        <div class=\\"hig__global-nav__side-nav__section\\">
     <div class=\\"hig__global-nav__side-nav__section__header\\">
         <span class=\\"hig__global-nav__side-nav__section__header__label\\">some label</span>
         <span class=\\"hig__global-nav__side-nav__section__header__name\\">X</span>
@@ -134,10 +143,11 @@ exports[`<Section> children: <Group> can insert <Group> elements before and afte
     <!--MODULE-->
 </div><!--GROUP-->
 </div><!--SECTION-->
-    <div class=\\"hig__global-nav__sidenav__links\\">
-        <!--LINK-->
+        <div class=\\"hig__global-nav__sidenav__links\\">
+            <!--LINK-->
+        </div>
+        <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
     </div>
-    <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
@@ -152,8 +162,9 @@ exports[`<Section> children: <Group> can insert <Group> elements before and afte
 exports[`<Section> children: <Group> can render a list of <Group> elements 1`] = `
 "<div class=\\"hig__global-nav\\">
     <div class=\\"hig__global-nav__sidenav\\">
-    <!--SEARCH-->
-    <div class=\\"hig__global-nav__side-nav__section\\">
+    <div class=\\"hig__global-nav__sidenav__scroll\\">
+        <!--SEARCH-->
+        <div class=\\"hig__global-nav__side-nav__section\\">
     <div class=\\"hig__global-nav__side-nav__section__header\\">
         <span class=\\"hig__global-nav__side-nav__section__header__label\\">some label</span>
         <span class=\\"hig__global-nav__side-nav__section__header__name\\">X</span>
@@ -165,10 +176,11 @@ exports[`<Section> children: <Group> can render a list of <Group> elements 1`] =
     <!--MODULE-->
 </div><!--GROUP-->
 </div><!--SECTION-->
-    <div class=\\"hig__global-nav__sidenav__links\\">
-        <!--LINK-->
+        <div class=\\"hig__global-nav__sidenav__links\\">
+            <!--LINK-->
+        </div>
+        <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
     </div>
-    <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
@@ -183,8 +195,9 @@ exports[`<Section> children: <Group> can render a list of <Group> elements 1`] =
 exports[`<Section> headerLabel sets the headerLabel default 1`] = `
 "<div class=\\"hig__global-nav\\">
     <div class=\\"hig__global-nav__sidenav\\">
-    <!--SEARCH-->
-    <div class=\\"hig__global-nav__side-nav__section\\">
+    <div class=\\"hig__global-nav__sidenav__scroll\\">
+        <!--SEARCH-->
+        <div class=\\"hig__global-nav__side-nav__section\\">
     <div class=\\"hig__global-nav__side-nav__section__header\\">
         <span class=\\"hig__global-nav__side-nav__section__header__label\\">some label</span>
         <span class=\\"hig__global-nav__side-nav__section__header__name\\">X</span>
@@ -192,10 +205,11 @@ exports[`<Section> headerLabel sets the headerLabel default 1`] = `
     </div>
     <!--GROUP-->
 </div><!--SECTION-->
-    <div class=\\"hig__global-nav__sidenav__links\\">
-        <!--LINK-->
+        <div class=\\"hig__global-nav__sidenav__links\\">
+            <!--LINK-->
+        </div>
+        <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
     </div>
-    <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
@@ -210,8 +224,9 @@ exports[`<Section> headerLabel sets the headerLabel default 1`] = `
 exports[`<Section> headerLabel updates the headerLabel 1`] = `
 "<div class=\\"hig__global-nav\\">
     <div class=\\"hig__global-nav__sidenav\\">
-    <!--SEARCH-->
-    <div class=\\"hig__global-nav__side-nav__section\\">
+    <div class=\\"hig__global-nav__sidenav__scroll\\">
+        <!--SEARCH-->
+        <div class=\\"hig__global-nav__side-nav__section\\">
     <div class=\\"hig__global-nav__side-nav__section__header\\">
         <span class=\\"hig__global-nav__side-nav__section__header__label\\">new header label</span>
         <span class=\\"hig__global-nav__side-nav__section__header__name\\">X</span>
@@ -219,10 +234,11 @@ exports[`<Section> headerLabel updates the headerLabel 1`] = `
     </div>
     <!--GROUP-->
 </div><!--SECTION-->
-    <div class=\\"hig__global-nav__sidenav__links\\">
-        <!--LINK-->
+        <div class=\\"hig__global-nav__sidenav__links\\">
+            <!--LINK-->
+        </div>
+        <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
     </div>
-    <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
@@ -237,8 +253,9 @@ exports[`<Section> headerLabel updates the headerLabel 1`] = `
 exports[`<Section> headerName sets the headerName default 1`] = `
 "<div class=\\"hig__global-nav\\">
     <div class=\\"hig__global-nav__sidenav\\">
-    <!--SEARCH-->
-    <div class=\\"hig__global-nav__side-nav__section\\">
+    <div class=\\"hig__global-nav__sidenav__scroll\\">
+        <!--SEARCH-->
+        <div class=\\"hig__global-nav__side-nav__section\\">
     <div class=\\"hig__global-nav__side-nav__section__header\\">
         <span class=\\"hig__global-nav__side-nav__section__header__label\\">Project</span>
         <span class=\\"hig__global-nav__side-nav__section__header__name\\">some label</span>
@@ -246,10 +263,11 @@ exports[`<Section> headerName sets the headerName default 1`] = `
     </div>
     <!--GROUP-->
 </div><!--SECTION-->
-    <div class=\\"hig__global-nav__sidenav__links\\">
-        <!--LINK-->
+        <div class=\\"hig__global-nav__sidenav__links\\">
+            <!--LINK-->
+        </div>
+        <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
     </div>
-    <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
@@ -264,8 +282,9 @@ exports[`<Section> headerName sets the headerName default 1`] = `
 exports[`<Section> headerName updates the headerName 1`] = `
 "<div class=\\"hig__global-nav\\">
     <div class=\\"hig__global-nav__sidenav\\">
-    <!--SEARCH-->
-    <div class=\\"hig__global-nav__side-nav__section\\">
+    <div class=\\"hig__global-nav__sidenav__scroll\\">
+        <!--SEARCH-->
+        <div class=\\"hig__global-nav__side-nav__section\\">
     <div class=\\"hig__global-nav__side-nav__section__header\\">
         <span class=\\"hig__global-nav__side-nav__section__header__label\\">Project</span>
         <span class=\\"hig__global-nav__side-nav__section__header__name\\">new header name</span>
@@ -273,10 +292,11 @@ exports[`<Section> headerName updates the headerName 1`] = `
     </div>
     <!--GROUP-->
 </div><!--SECTION-->
-    <div class=\\"hig__global-nav__sidenav__links\\">
-        <!--LINK-->
+        <div class=\\"hig__global-nav__sidenav__links\\">
+            <!--LINK-->
+        </div>
+        <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
     </div>
-    <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
@@ -291,8 +311,9 @@ exports[`<Section> headerName updates the headerName 1`] = `
 exports[`<Section> submodules can show submodules when submodulesCollapsed is false 1`] = `
 "<div class=\\"hig__global-nav\\">
     <div class=\\"hig__global-nav__sidenav\\">
-    <!--SEARCH-->
-    <div class=\\"hig__global-nav__side-nav__section\\">
+    <div class=\\"hig__global-nav__sidenav__scroll\\">
+        <!--SEARCH-->
+        <div class=\\"hig__global-nav__side-nav__section\\">
     <div class=\\"hig__global-nav__side-nav__section__header\\">
         <span class=\\"hig__global-nav__side-nav__section__header__label\\">Project</span>
         <span class=\\"hig__global-nav__side-nav__section__header__name\\">ThunderStorm</span>
@@ -315,10 +336,11 @@ exports[`<Section> submodules can show submodules when submodulesCollapsed is fa
 </div><!--MODULE-->
 </div><!--GROUP-->
 </div><!--SECTION-->
-    <div class=\\"hig__global-nav__sidenav__links\\">
-        <!--LINK-->
+        <div class=\\"hig__global-nav__sidenav__links\\">
+            <!--LINK-->
+        </div>
+        <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
     </div>
-    <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
@@ -333,8 +355,9 @@ exports[`<Section> submodules can show submodules when submodulesCollapsed is fa
 exports[`<Section> submodules can show submodules when submodulesCollapsed is true 1`] = `
 "<div class=\\"hig__global-nav\\">
     <div class=\\"hig__global-nav__sidenav\\">
-    <!--SEARCH-->
-    <div class=\\"hig__global-nav__side-nav__section\\">
+    <div class=\\"hig__global-nav__sidenav__scroll\\">
+        <!--SEARCH-->
+        <div class=\\"hig__global-nav__side-nav__section\\">
     <div class=\\"hig__global-nav__side-nav__section__header\\">
         <span class=\\"hig__global-nav__side-nav__section__header__label\\">Project</span>
         <span class=\\"hig__global-nav__side-nav__section__header__name\\">ThunderStorm</span>
@@ -357,10 +380,11 @@ exports[`<Section> submodules can show submodules when submodulesCollapsed is tr
 </div><!--MODULE-->
 </div><!--GROUP-->
 </div><!--SECTION-->
-    <div class=\\"hig__global-nav__sidenav__links\\">
-        <!--LINK-->
+        <div class=\\"hig__global-nav__sidenav__links\\">
+            <!--LINK-->
+        </div>
+        <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
     </div>
-    <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
