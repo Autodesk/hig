@@ -22,8 +22,7 @@ import GlobalNav from './GlobalNav';
 import Section from './Section';
 import SectionList from './SectionList';
 import Group from './Group';
-import Module from './Module'
-
+import Module from './Module';
 
 const Context = props => {
   const { children, ...rest } = props;
