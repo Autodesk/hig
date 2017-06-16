@@ -19,16 +19,15 @@ import createComponent from '../../../adapters/createComponent';
 import HIGElement from '../../HIGElement';
 
 export class Collapse extends HIGElement {
-  
   commitUpdate(updatePayload, oldProps, newProp) {
     for (let i = 0; i < updatePayload.length; i += 2) {
       const propKey = updatePayload[i];
       const propValue = updatePayload[i + 1];
 
       switch (propKey) {
-        case 'isCollapsed': 
+        case 'isCollapsed':
           if (propValue) {
-           this.hig.maximize();   
+            this.hig.maximize();
           } else {
             this.hig.minimize();
           }
@@ -49,7 +48,6 @@ export class Collapse extends HIGElement {
   }
 }
 
-  
 const CollapseComponent = createComponent(Collapse);
 
 CollapseComponent.propTypes = {
@@ -63,19 +61,19 @@ CollapseComponent.propTypes = {
 CollapseComponent.__docgenInfo = {
   props: {
     minimize: {
-      description: "show [-] icon"
+      description: 'show [-] icon'
     },
 
     maximize: {
-      description: "show [ + ] icon"
+      description: 'show [ + ] icon'
     },
 
     show: {
-      description: "show (used for filtering)"
+      description: 'show (used for filtering)'
     },
 
     hide: {
-      description: "hide (used for filtering)"
+      description: 'hide (used for filtering)'
     },
 
     onClick: {

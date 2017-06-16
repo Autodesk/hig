@@ -22,7 +22,6 @@ import ModuleComponent, { Module } from './Module';
 
 export class Group extends HIGElement {
   constructor(HIGConstructor, initialProps) {
-
     super(HIGConstructor, initialProps);
     this.modules = new HIGNodeList({
       type: Module,

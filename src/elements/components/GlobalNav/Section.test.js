@@ -23,21 +23,25 @@ import Section from './Section';
 import Group from './Group';
 import Module from './Module';
 import Submodule from './Submodule';
-import Collapse from './Collapse'
+import Collapse from './Collapse';
 
-const SubmoduleContext = props => {;
+const SubmoduleContext = props => {
   return (
     <GlobalNav>
       <GlobalNav.SideNav>
         <GlobalNav.SideNav.SectionList>
-          <Section headerLabel='Project' headerName="ThunderStorm" >
-             <Collapse isCollapsed={props.isCollapsed} />
-             <Group>
-              <Module icon="gear" title="Contractor" submodulesClosed={props.isCollapsed} >
-                <Submodule title="Library" link='#' />  
-              </Module>   
-            </Group>  
-            
+          <Section headerLabel="Project" headerName="ThunderStorm">
+            <Collapse isCollapsed={props.isCollapsed} />
+            <Group>
+              <Module
+                icon="gear"
+                title="Contractor"
+                submodulesClosed={props.isCollapsed}
+              >
+                <Submodule title="Library" link="#" />
+              </Module>
+            </Group>
+
           </Section>
         </GlobalNav.SideNav.SectionList>
       </GlobalNav.SideNav>
@@ -321,7 +325,7 @@ describe('<Section>', () => {
 
   describe('submodules', () => {
     it('can show submodules when submodulesCollapsed is false', () => {
-      var props = {isCollapsed: false}
+      var props = { isCollapsed: false };
 
       const reactContainer = document.createElement('div');
 
@@ -331,15 +335,20 @@ describe('<Section>', () => {
 
       expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
 
-      expect(reactContainer.getElementsByClassName('hig__global-nav__side-nav__section__collapse--collapsed').length).toEqual(1)
-      expect(reactContainer.getElementsByClassName('hig__global-nav__side-nav__section__group__module__submodules--hide').length).toEqual(0)
-
-
+      expect(
+        reactContainer.getElementsByClassName(
+          'hig__global-nav__side-nav__section__collapse--collapsed'
+        ).length
+      ).toEqual(1);
+      expect(
+        reactContainer.getElementsByClassName(
+          'hig__global-nav__side-nav__section__group__module__submodules--hide'
+        ).length
+      ).toEqual(0);
     });
 
-
-     it('can show submodules when submodulesCollapsed is true', () => {
-      var props = {isCollapsed: true}
+    it('can show submodules when submodulesCollapsed is true', () => {
+      var props = { isCollapsed: true };
 
       const reactContainer = document.createElement('div');
 
@@ -349,10 +358,16 @@ describe('<Section>', () => {
 
       expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
 
-      expect(reactContainer.getElementsByClassName('hig__global-nav__side-nav__section__collapse--collapsed').length).toEqual(0)
-      expect(reactContainer.getElementsByClassName('hig__global-nav__side-nav__section__group__module__submodules--hide').length).toEqual(1)
-
-
+      expect(
+        reactContainer.getElementsByClassName(
+          'hig__global-nav__side-nav__section__collapse--collapsed'
+        ).length
+      ).toEqual(0);
+      expect(
+        reactContainer.getElementsByClassName(
+          'hig__global-nav__side-nav__section__group__module__submodules--hide'
+        ).length
+      ).toEqual(1);
     });
   });
 });

@@ -33,8 +33,6 @@ export class Module extends HIGElement {
     });
   }
 
-
-
   commitUpdate(updatePayload, oldProps, newProps) {
     const mapping = {
       icon: 'setIcon',
@@ -43,16 +41,16 @@ export class Module extends HIGElement {
     };
 
     const submodulesClosed = updatePayload.indexOf('submodulesClosed');
-        if (submodulesClosed >= 0) {
-          const [areClosed, value] = updatePayload.splice(submodulesClosed, 2);
-          if (areClosed) {
-            if (value === false) {
-              this.hig.showSubmodules();
-            } else {
-              this.hig.hideSubmodules();
-            }
-          }
+    if (submodulesClosed >= 0) {
+      const [areClosed, value] = updatePayload.splice(submodulesClosed, 2);
+      if (areClosed) {
+        if (value === false) {
+          this.hig.showSubmodules();
+        } else {
+          this.hig.hideSubmodules();
         }
+      }
+    }
 
     this.commitUpdateWithMapping(updatePayload, mapping);
   }
@@ -60,7 +58,7 @@ export class Module extends HIGElement {
   componentDidMount() {
     this.modules.componentDidMount();
 
-    if (this.initialProps.submodulesClosed === false){
+    if (this.initialProps.submodulesClosed === false) {
       this.hig.showSubmodules();
     }
   }
@@ -150,8 +148,6 @@ ModuleComponent.__docgenInfo = {
     children: {
       description: 'support adding SubModule'
     }
-
-    
   }
 };
 

@@ -75,7 +75,7 @@ export class Section extends HIGElement {
       } else {
         this.collapse = instance;
         if (this.mounted) {
-          this.hig.addCollapse(instance.hig)
+          this.hig.addCollapse(instance.hig);
           instance.mount();
         }
       }
@@ -92,11 +92,7 @@ const SectionComponent = createComponent(Section);
 SectionComponent.propTypes = {
   headerLabel: PropTypes.string,
   headerName: PropTypes.string,
-  children: HIGChildValidator([
-      GroupComponent,
-      CollapseComponent
-    ]
-  )
+  children: HIGChildValidator([GroupComponent, CollapseComponent])
 };
 
 SectionComponent.__docgenInfo = {
