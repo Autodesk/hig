@@ -139,5 +139,4 @@ export default class HIGElement {
       throw new Error('only one ' + name + ' is allowed');
     }
   }
-
 }
