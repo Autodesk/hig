@@ -22,7 +22,7 @@ r = {
                 babelrc: false,
                 compact: false
             },
-            exclude: [/node_modules/]
+            exclude: [/node_modules/, /orion-ui\/packages\/hig\.web\/dist/]
         },{
             test: /\.scss$/,
             loader: ExtractTextPlugin.extract({
