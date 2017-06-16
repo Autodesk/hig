@@ -7,4 +7,8 @@
     &:last-child{
         border: none;
     }
+
+    &--hide{
+        display: none;
+    }
 }

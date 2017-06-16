@@ -1,0 +1,20 @@
+@import '~basics/colors/colors.scss';
+
+.hig__global-nav__side-nav__section__group__module__submodule{    
+    padding-left: 40px;
+
+    &__link{
+        color: $gray-5;
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 30px;
+
+        &:hover, &--active{
+            color: $autodesk-blue;
+        }
+    }
+
+    &--hide{
+        display: none;
+    }
+}

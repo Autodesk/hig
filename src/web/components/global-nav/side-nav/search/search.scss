@@ -1,0 +1,58 @@
+@import '~basics/colors/colors.scss';
+@import '~helpers/css/mixins/base.scss';
+
+.hig__global-nav__side-nav__search{
+    position: relative;
+    // border-bottom: 1px solid $base-2;
+    padding: 10px 0;
+    margin-bottom: 42px;
+
+    &__icon{
+        position: absolute;
+        top: 13px;
+        left: 5px;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    &__inputholder{
+        width: 100%;
+
+        &__input{
+            @include reset;
+            border: 1px solid $gray-c;
+            border-radius: 4px;
+            font-size: 14px;
+            padding: 6px 6px 6px 35px;
+            width: 100%;
+            font-weight: 500;
+
+            &::placeholder{
+                font-weight: normal;
+                color: $gray-8;
+            }
+
+            &:focus{
+                // border: none;
+                outline: none;
+            }
+        }
+    }
+
+    &__clear{
+        position: absolute;
+        right: 0;
+        top: 13px;
+        opacity: 0; // hide by opacity to enable event propagation with focusin/focusout events
+
+        &--show{
+            opacity: 1;
+        }
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}

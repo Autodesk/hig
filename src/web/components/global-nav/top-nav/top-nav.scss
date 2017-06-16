@@ -19,7 +19,8 @@ $group-height: 56px;
     align-items: center;
 
     &__group {
-        height: $group-height;
+        height: 32px;
+        line-height: 32px;
         display: flex;
         align-items: center;
 
@@ -33,15 +34,29 @@ $group-height: 56px;
 
     }
 
-    &__hamburger {
+    &__hamburger{
         margin: 0 10px 0 12px;
 
         &:hover{
             cursor: pointer;
         }
+
+        &__closeicon{
+            display: none;
+        }
+
+        &--menuopen &__hamburgericon{
+            display: none;
+        }
+
+        &--menuopen &__closeicon{
+            display: block;
+            
+        }
     }
 
     &__logo {
+        line-height: 0;
         height: 24px;
         line-height: 0;
 

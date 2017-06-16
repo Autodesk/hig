@@ -51,6 +51,10 @@ class GlobalNav extends Core {
         this.el.classList.remove("hig__global-nav--open");
     }
 
+    onHoverOutside(fn) {
+        return this._attachListener("hover", ".hig__global-nav__container", this.el, fn);
+    }
+
 }
 
 GlobalNav._interface = Interface['components']['GlobalNav'];

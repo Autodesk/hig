@@ -1,0 +1,42 @@
+@import '~basics/colors/colors.scss';
+@import '~helpers/css/mixins/base.scss';
+
+.hig__global-nav__side-nav__section__group__module{
+    
+    padding: 5px 0;
+
+    &__link{
+        @include clearfix;
+        color: $base-1;
+        text-decoration: none;
+
+        &__icon{
+            float: left;
+        }
+
+        &__title{
+            font-weight: 500;
+            font-size: 15px;
+            float: left;
+            padding-left: 10px;
+            line-height: 30px;
+        }
+
+        &:hover, &--active{
+            color: $autodesk-blue;
+        }
+
+    }
+
+    
+
+    &__submodules{
+        &--hide{
+            display: none;
+        }
+    }
+
+    &--hide{
+        display: none;
+    }
+}
