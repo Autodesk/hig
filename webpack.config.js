@@ -20,6 +20,7 @@ r = {
                 ],
                 plugins: [],
                 babelrc: false,
+                compact: false
             },
             exclude: [/node_modules/]
         },{
