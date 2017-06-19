@@ -64,7 +64,7 @@ exports[`<Account> constructor has a good snapshot 1`] = `
 </div><!--FLYOUT-->
 </div><!--PROJECT_ACCOUNT_SWITCHER-->
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
-        <!--SHORTCUT-->
+    <!--SHORTCUT-->
     </div>
     <!--PROFILE-->
 </div><!--TOPNAV-->
