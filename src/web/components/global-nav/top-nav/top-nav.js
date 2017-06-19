@@ -48,9 +48,7 @@ class TopNav extends Core {
     }
 
     addSearch(searchInstance, referenceInstance){
-        if(searchInstance instanceof Search){
-            this.mountPartialToComment('SEARCH', searchInstance, referenceInstance);
-        }
+        this.mountPartialToComment(this._comment(instance), searchInstance, referenceInstance);
     }
     addHelp(instance) {
       this.mountPartialToComment(this._comment(instance), instance);
@@ -70,13 +68,12 @@ class TopNav extends Core {
     }
 
     _comment(instance) {
-        const lookup = {
-            Profile: "PROFILE",
-            ProjectAccountSwitcher: 'PROJECT_ACCOUNT_SWITCHER',
-            Shortcut: "SHORTCUT",
-            Help: "SHORTCUT"
-        };
-        return lookup[instance.constructor.name];
+        // Doing this based on name (as String) will break in production due to obfuscation/name mangling.
+        if (instance instanceof Profile) { return "PROFILE" }
+        if (instance instanceof ProjectAccountSwitcher) { return "PROJECT_ACCOUNT_SWITCHER" }
+        if (instance instanceof Shortcut) { console.log("SHORTCUT"); return "SHORTCUT" }
+        if (instance instanceof Search) { return "SEARCH" }
+        return "COMMENTNOTFOUND"
     }
 
 }
