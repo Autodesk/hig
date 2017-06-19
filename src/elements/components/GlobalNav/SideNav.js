@@ -25,6 +25,8 @@ import SearchComponent, { Search } from './Search';
 
 export class SideNav extends HIGElement {
   componentDidMount() {
+    this.filter = this.filter.bind(this);
+
     if (this.sections) {
       this.sections.mount();
     }
@@ -35,6 +37,7 @@ export class SideNav extends HIGElement {
 
     if (this.search) {
       this.search.mount();
+      this.search.hig.onInput(this.filter);
     }
   }
 
@@ -44,8 +47,8 @@ export class SideNav extends HIGElement {
         return new SectionList(this.hig); // special case hand over the hig instance
       case LinkList:
         return new LinkList(this.hig); // special case hand over the hig instance
-      case Search: 
-        return new Search(this.hig, props)  
+      case Search:
+        return new Search(this.hig.partials.Search, props);
       default:
         throw new Error(`Unknown type ${ElementConstructor.name}`);
     }
@@ -80,6 +83,7 @@ export class SideNav extends HIGElement {
 
         if (this.mounted) {
           instance.componentDidMount();
+          instance.hig.onInput(this.filter);
         }
       }
     } else {
@@ -106,6 +110,13 @@ export class SideNav extends HIGElement {
 
     instance.unmount();
   }
+
+  filter(event) {
+    const query = event.target.value;
+    this.sections.forEach(section => {
+      section.filter(query);
+    });
+  }
 }
 
 const SideNavComponent = createComponent(SideNav);
@@ -113,7 +124,7 @@ const SideNavComponent = createComponent(SideNav);
 SideNavComponent.propTypes = {
   addSection: PropTypes.func,
   addLink: PropTypes.func,
-  addSearch: PropTypes.func, 
+  addSearch: PropTypes.func,
   setCopyright: PropTypes.func,
   children: HIGChildValidator([SectionListComponent, LinkListComponent, SearchComponent])
 };

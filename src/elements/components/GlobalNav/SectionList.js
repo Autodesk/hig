@@ -56,6 +56,10 @@ export class SectionList {
   removeChild(instance) {
     this.sections.removeChild(instance);
   }
+
+  forEach(handler) {
+    this.sections.forEach(handler);
+  }
 }
 
 const SectionListComponent = createComponent(SectionList);

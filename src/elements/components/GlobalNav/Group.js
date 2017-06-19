@@ -47,6 +47,20 @@ export class Group extends HIGElement {
   removeChild(instance) {
     this.modules.removeChild(instance);
   }
+
+  filter(query) {
+    const matches = this.modules.map(module => {
+      return module.filter(query)
+    });
+
+    if (matches.some(m => m)) {
+      this.hig.show();
+      return true;
+    } else {
+      this.hig.hide();
+      return false;
+    }
+  }
 }
 
 const GroupComponent = createComponent(Group);

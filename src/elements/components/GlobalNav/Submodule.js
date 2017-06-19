@@ -19,6 +19,11 @@ import createComponent from '../../../adapters/createComponent';
 import HIGElement from '../../HIGElement';
 
 export class Submodule extends HIGElement {
+  constructor(HIGConstructor, initialProps) {
+    super(HIGConstructor, initialProps);
+    this.state = { title: initialProps.title };
+  }
+
   commitUpdate(updatePayload, oldProps, newProps) {
     const mapping = {
       title: 'setTitle',
@@ -26,6 +31,24 @@ export class Submodule extends HIGElement {
     };
 
     this.commitUpdateWithMapping(updatePayload, mapping);
+
+    if (Object.keys(updatePayload).includes('title')) {
+      this.state.title = updatePayload.title;
+    }
+  }
+
+  matches(query) {
+    return this.state.title.toLowerCase().match(query.toLowerCase());
+  }
+
+  filter(query) {
+    if (this.matches(query)) {
+      this.hig.show();
+      return true;
+    } else {
+      this.hig.hide();
+      return false;
+    }
   }
 }
 

@@ -24,13 +24,16 @@ import SubmoduleComponent, { Submodule } from './Submodule';
 export class Module extends HIGElement {
   constructor(HIGConstructor, initialProps) {
     super(HIGConstructor, initialProps);
-    this.modules = new HIGNodeList({
+    this.submodules = new HIGNodeList({
       type: Submodule,
       HIGConstructor: this.hig.partials.Submodule,
       onAdd: (instance, beforeInstance) => {
         this.hig.addSubmodule(instance, beforeInstance);
       }
     });
+    this.state = {
+      title: initialProps.title
+    };
   }
 
   commitUpdate(updatePayload, oldProps, newProps) {
@@ -41,22 +44,44 @@ export class Module extends HIGElement {
     };
 
     this.commitUpdateWithMapping(updatePayload, mapping);
+
+    if (Object.keys(updatePayload).includes('title')) {
+      this.state.title = updatePayload.title;
+    }
   }
 
   componentDidMount() {
-    this.modules.componentDidMount();
+    this.submodules.componentDidMount();
   }
 
   createElement(ElementConstructor, props) {
-    return this.modules.createElement(ElementConstructor, props);
+    return this.submodules.createElement(ElementConstructor, props);
   }
 
   insertBefore(instance, insertBeforeIndex) {
-    this.modules.insertBefore(instance, insertBeforeIndex);
+    this.submodules.insertBefore(instance, insertBeforeIndex);
   }
 
   removeChild(instance) {
-    this.modules.removeChild(instance);
+    this.submodules.removeChild(instance);
+  }
+
+  matches(query) {
+    return this.state.title.toLowerCase().match(query.toLowerCase());
+  }
+
+  filter(query) {
+    const childMatches = this.submodules.map(submodule => {
+      return submodule.filter(query);
+    });
+
+    if (childMatches.some(m => m) || this.matches(query)) {
+      this.hig.show();
+      return true;
+    } else {
+      this.hig.hide();
+      return false;
+    }
   }
 }
 

@@ -85,6 +85,20 @@ export class Section extends HIGElement {
   removeChild(instance) {
     this.groups.removeChild(instance);
   }
+
+  filter(query) {
+    const childVisibility = this.groups.map(group => {
+      return group.filter(query);
+    });
+
+    if (childVisibility.some(v => v)) {
+      this.hig.show();
+      return true;
+    } else {
+      this.hig.hide();
+      return false;
+    }
+  }
 }
 
 const SectionComponent = createComponent(Section);
@@ -113,6 +127,5 @@ SectionComponent.__docgenInfo = {
 
 SectionComponent.Group = GroupComponent;
 SectionComponent.Collapse = CollapseComponent;
-
 
 export default SectionComponent;

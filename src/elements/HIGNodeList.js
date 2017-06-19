@@ -109,4 +109,12 @@ export default class HIGNodeList {
         throw new Error(`Unknown type ${ElementConstructor.name}`);
     }
   }
+
+  forEach(handler) {
+    this.nodes.forEach(handler);
+  }
+
+  map(handler) {
+    return this.nodes.map(handler);
+  }
 }

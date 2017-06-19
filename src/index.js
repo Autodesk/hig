@@ -225,12 +225,14 @@ class App extends React.Component {
                     );
                   }.bind(this)
                 )}
+
               </Section>
               <Section headerLabel="Account" headerName="GlobalConstruction">
                 <Collapse
                   isCollapsed={this.state.section2Collapsed}
                   onClick={this.toggleSection2}
                 />
+
                 {topNavFixtures.menu().sections[1].groups.map(
                   function(group, i) {
                     return (
@@ -262,6 +264,7 @@ class App extends React.Component {
                     );
                   }.bind(this)
                 )}
+
               </Section>
 
             </SectionList>
