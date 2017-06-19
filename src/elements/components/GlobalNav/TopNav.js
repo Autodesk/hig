@@ -125,14 +125,24 @@ export class TopNav extends HIGElement {
           ' is not a valid child element of this parent.'
       );
     }
+  }
 
-    //super.checkValidChild(instance, validInstances);
-  }
   getPropertyNameFor(instance) {
-    const initial = instance.constructor.name.charAt(0).toLowerCase();
-    const rest = instance.constructor.name.slice(1);
-    return initial + rest;
+    if (instance instanceof Profile) {
+      return 'profile';
+    }
+    if (instance instanceof ProjectAccountSwitcher) {
+      return 'projectAccountSwitcher';
+    }
+    if (instance instanceof Shortcut) {
+      return 'shortcut';
+    }
+    if (instance instanceof Help) {
+      return 'help';
+    }
+    return null;
   }
+
   getFunctionNameFor(instance) {
     return 'add' + instance.constructor.name;
   }
