@@ -40,27 +40,11 @@ export class Module extends HIGElement {
       link: 'setLink'
     };
 
-    const submodulesClosed = updatePayload.indexOf('submodulesClosed');
-    if (submodulesClosed >= 0) {
-      const [areClosed, value] = updatePayload.splice(submodulesClosed, 2);
-      if (areClosed) {
-        if (value === false) {
-          //this.hig.showSubmodules();
-        } else {
-          //this.hig.hideSubmodules();
-        }
-      }
-    }
-
     this.commitUpdateWithMapping(updatePayload, mapping);
   }
 
   componentDidMount() {
     this.modules.componentDidMount();
-
-    if (this.initialProps.submodulesClosed === false) {
-      //this.hig.showSubmodules();
-    }
   }
 
   createElement(ElementConstructor, props) {
