@@ -17,7 +17,7 @@ exports[`<Group> children: <Module> can insert <Module> elements before and afte
         <div class=\\"hig__global-nav__side-nav__section__group__module__link__icon\\"><div class=\\"hig__icon\\"><svg width=\\"20\\" height=\\"21\\" viewBox=\\"0 0 20 21\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"project-management\\"><g transform=\\"translate(.242)\\" fill=\\"#34495E\\" fill-rule=\\"evenodd\\"><path d=\\"M15,8.15002717 C14.6738533,8.08382289 14.3400214,8.03878262 14,8.01640228 L14,1 L1,1 L1,17 L6.15002717,17 C6.21952655,17.3423796 6.31234911,17.6762897 6.42676427,18 L0,18 L0,0 L15,0 L15,8.15002717 Z M8.40093151,10 C8.07157864,10.3054873 7.76971094,10.6401947 7.49945072,11 L3,11 L3,10 L8.40093151,10 Z M6.42676427,13 C6.31234911,13.3237103 6.21952655,13.6576204 6.15002717,14 L3,14 L3,13 L6.42676427,13 Z M3,4 L12,4 L12,5 L3,5 L3,4 Z M3,7 L12,7 L12,8 L3,8 L3,7 Z\\" fill-rule=\\"nonzero\\"></path><path d=\\"M13.5,20 C15.9852814,20 18,17.9852814 18,15.5 C18,13.0147186 15.9852814,11 13.5,11 C11.0147186,11 9,13.0147186 9,15.5 C9,17.9852814 11.0147186,20 13.5,20 Z M13.5,21 C10.4624339,21 8,18.5375661 8,15.5 C8,12.4624339 10.4624339,10 13.5,10 C16.5375661,10 19,12.4624339 19,15.5 C19,18.5375661 16.5375661,21 13.5,21 Z\\" fill-rule=\\"nonzero\\"></path><rect x=\\"13\\" y=\\"12\\" width=\\"1\\" height=\\"4\\"></rect><rect x=\\"13\\" y=\\"15\\" width=\\"4\\" height=\\"1\\"></rect></g></svg></div></div>
         <div class=\\"hig__global-nav__side-nav__section__group__module__link__title\\">Module 2</div>
     </a>
-    <div class=\\"hig__global-nav__side-nav__section__group__module__submodules hig__global-nav__side-nav__section__group__module__submodules--hide\\">
+    <div class=\\"hig__global-nav__side-nav__section__group__module__submodules\\">
         <!--SUBMODULE-->
     </div>
 </div><!--MODULE-->
@@ -56,7 +56,7 @@ exports[`<Group> children: <Module> can insert <Module> elements before and afte
         <div class=\\"hig__global-nav__side-nav__section__group__module__link__icon\\"><div class=\\"hig__icon\\"><svg width=\\"20\\" height=\\"21\\" viewBox=\\"0 0 20 21\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"project-management\\"><g transform=\\"translate(.242)\\" fill=\\"#34495E\\" fill-rule=\\"evenodd\\"><path d=\\"M15,8.15002717 C14.6738533,8.08382289 14.3400214,8.03878262 14,8.01640228 L14,1 L1,1 L1,17 L6.15002717,17 C6.21952655,17.3423796 6.31234911,17.6762897 6.42676427,18 L0,18 L0,0 L15,0 L15,8.15002717 Z M8.40093151,10 C8.07157864,10.3054873 7.76971094,10.6401947 7.49945072,11 L3,11 L3,10 L8.40093151,10 Z M6.42676427,13 C6.31234911,13.3237103 6.21952655,13.6576204 6.15002717,14 L3,14 L3,13 L6.42676427,13 Z M3,4 L12,4 L12,5 L3,5 L3,4 Z M3,7 L12,7 L12,8 L3,8 L3,7 Z\\" fill-rule=\\"nonzero\\"></path><path d=\\"M13.5,20 C15.9852814,20 18,17.9852814 18,15.5 C18,13.0147186 15.9852814,11 13.5,11 C11.0147186,11 9,13.0147186 9,15.5 C9,17.9852814 11.0147186,20 13.5,20 Z M13.5,21 C10.4624339,21 8,18.5375661 8,15.5 C8,12.4624339 10.4624339,10 13.5,10 C16.5375661,10 19,12.4624339 19,15.5 C19,18.5375661 16.5375661,21 13.5,21 Z\\" fill-rule=\\"nonzero\\"></path><rect x=\\"13\\" y=\\"12\\" width=\\"1\\" height=\\"4\\"></rect><rect x=\\"13\\" y=\\"15\\" width=\\"4\\" height=\\"1\\"></rect></g></svg></div></div>
         <div class=\\"hig__global-nav__side-nav__section__group__module__link__title\\">Module 1</div>
     </a>
-    <div class=\\"hig__global-nav__side-nav__section__group__module__submodules hig__global-nav__side-nav__section__group__module__submodules--hide\\">
+    <div class=\\"hig__global-nav__side-nav__section__group__module__submodules\\">
         <!--SUBMODULE-->
     </div>
 </div><div class=\\"hig__global-nav__side-nav__section__group__module\\">
@@ -64,7 +64,7 @@ exports[`<Group> children: <Module> can insert <Module> elements before and afte
         <div class=\\"hig__global-nav__side-nav__section__group__module__link__icon\\"><div class=\\"hig__icon\\"><svg width=\\"20\\" height=\\"21\\" viewBox=\\"0 0 20 21\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"project-management\\"><g transform=\\"translate(.242)\\" fill=\\"#34495E\\" fill-rule=\\"evenodd\\"><path d=\\"M15,8.15002717 C14.6738533,8.08382289 14.3400214,8.03878262 14,8.01640228 L14,1 L1,1 L1,17 L6.15002717,17 C6.21952655,17.3423796 6.31234911,17.6762897 6.42676427,18 L0,18 L0,0 L15,0 L15,8.15002717 Z M8.40093151,10 C8.07157864,10.3054873 7.76971094,10.6401947 7.49945072,11 L3,11 L3,10 L8.40093151,10 Z M6.42676427,13 C6.31234911,13.3237103 6.21952655,13.6576204 6.15002717,14 L3,14 L3,13 L6.42676427,13 Z M3,4 L12,4 L12,5 L3,5 L3,4 Z M3,7 L12,7 L12,8 L3,8 L3,7 Z\\" fill-rule=\\"nonzero\\"></path><path d=\\"M13.5,20 C15.9852814,20 18,17.9852814 18,15.5 C18,13.0147186 15.9852814,11 13.5,11 C11.0147186,11 9,13.0147186 9,15.5 C9,17.9852814 11.0147186,20 13.5,20 Z M13.5,21 C10.4624339,21 8,18.5375661 8,15.5 C8,12.4624339 10.4624339,10 13.5,10 C16.5375661,10 19,12.4624339 19,15.5 C19,18.5375661 16.5375661,21 13.5,21 Z\\" fill-rule=\\"nonzero\\"></path><rect x=\\"13\\" y=\\"12\\" width=\\"1\\" height=\\"4\\"></rect><rect x=\\"13\\" y=\\"15\\" width=\\"4\\" height=\\"1\\"></rect></g></svg></div></div>
         <div class=\\"hig__global-nav__side-nav__section__group__module__link__title\\">Module 2</div>
     </a>
-    <div class=\\"hig__global-nav__side-nav__section__group__module__submodules hig__global-nav__side-nav__section__group__module__submodules--hide\\">
+    <div class=\\"hig__global-nav__side-nav__section__group__module__submodules\\">
         <!--SUBMODULE-->
     </div>
 </div><!--MODULE-->
@@ -103,7 +103,7 @@ exports[`<Group> children: <Module> can insert <Module> elements before and afte
         <div class=\\"hig__global-nav__side-nav__section__group__module__link__icon\\"><div class=\\"hig__icon\\"><svg width=\\"20\\" height=\\"21\\" viewBox=\\"0 0 20 21\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"project-management\\"><g transform=\\"translate(.242)\\" fill=\\"#34495E\\" fill-rule=\\"evenodd\\"><path d=\\"M15,8.15002717 C14.6738533,8.08382289 14.3400214,8.03878262 14,8.01640228 L14,1 L1,1 L1,17 L6.15002717,17 C6.21952655,17.3423796 6.31234911,17.6762897 6.42676427,18 L0,18 L0,0 L15,0 L15,8.15002717 Z M8.40093151,10 C8.07157864,10.3054873 7.76971094,10.6401947 7.49945072,11 L3,11 L3,10 L8.40093151,10 Z M6.42676427,13 C6.31234911,13.3237103 6.21952655,13.6576204 6.15002717,14 L3,14 L3,13 L6.42676427,13 Z M3,4 L12,4 L12,5 L3,5 L3,4 Z M3,7 L12,7 L12,8 L3,8 L3,7 Z\\" fill-rule=\\"nonzero\\"></path><path d=\\"M13.5,20 C15.9852814,20 18,17.9852814 18,15.5 C18,13.0147186 15.9852814,11 13.5,11 C11.0147186,11 9,13.0147186 9,15.5 C9,17.9852814 11.0147186,20 13.5,20 Z M13.5,21 C10.4624339,21 8,18.5375661 8,15.5 C8,12.4624339 10.4624339,10 13.5,10 C16.5375661,10 19,12.4624339 19,15.5 C19,18.5375661 16.5375661,21 13.5,21 Z\\" fill-rule=\\"nonzero\\"></path><rect x=\\"13\\" y=\\"12\\" width=\\"1\\" height=\\"4\\"></rect><rect x=\\"13\\" y=\\"15\\" width=\\"4\\" height=\\"1\\"></rect></g></svg></div></div>
         <div class=\\"hig__global-nav__side-nav__section__group__module__link__title\\">Module 2</div>
     </a>
-    <div class=\\"hig__global-nav__side-nav__section__group__module__submodules hig__global-nav__side-nav__section__group__module__submodules--hide\\">
+    <div class=\\"hig__global-nav__side-nav__section__group__module__submodules\\">
         <!--SUBMODULE-->
     </div>
 </div><!--MODULE-->
@@ -142,7 +142,7 @@ exports[`<Group> children: <Module> can insert <Module> elements before and afte
         <div class=\\"hig__global-nav__side-nav__section__group__module__link__icon\\"><div class=\\"hig__icon\\"><svg width=\\"20\\" height=\\"21\\" viewBox=\\"0 0 20 21\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"project-management\\"><g transform=\\"translate(.242)\\" fill=\\"#34495E\\" fill-rule=\\"evenodd\\"><path d=\\"M15,8.15002717 C14.6738533,8.08382289 14.3400214,8.03878262 14,8.01640228 L14,1 L1,1 L1,17 L6.15002717,17 C6.21952655,17.3423796 6.31234911,17.6762897 6.42676427,18 L0,18 L0,0 L15,0 L15,8.15002717 Z M8.40093151,10 C8.07157864,10.3054873 7.76971094,10.6401947 7.49945072,11 L3,11 L3,10 L8.40093151,10 Z M6.42676427,13 C6.31234911,13.3237103 6.21952655,13.6576204 6.15002717,14 L3,14 L3,13 L6.42676427,13 Z M3,4 L12,4 L12,5 L3,5 L3,4 Z M3,7 L12,7 L12,8 L3,8 L3,7 Z\\" fill-rule=\\"nonzero\\"></path><path d=\\"M13.5,20 C15.9852814,20 18,17.9852814 18,15.5 C18,13.0147186 15.9852814,11 13.5,11 C11.0147186,11 9,13.0147186 9,15.5 C9,17.9852814 11.0147186,20 13.5,20 Z M13.5,21 C10.4624339,21 8,18.5375661 8,15.5 C8,12.4624339 10.4624339,10 13.5,10 C16.5375661,10 19,12.4624339 19,15.5 C19,18.5375661 16.5375661,21 13.5,21 Z\\" fill-rule=\\"nonzero\\"></path><rect x=\\"13\\" y=\\"12\\" width=\\"1\\" height=\\"4\\"></rect><rect x=\\"13\\" y=\\"15\\" width=\\"4\\" height=\\"1\\"></rect></g></svg></div></div>
         <div class=\\"hig__global-nav__side-nav__section__group__module__link__title\\">Module 2</div>
     </a>
-    <div class=\\"hig__global-nav__side-nav__section__group__module__submodules hig__global-nav__side-nav__section__group__module__submodules--hide\\">
+    <div class=\\"hig__global-nav__side-nav__section__group__module__submodules\\">
         <!--SUBMODULE-->
     </div>
 </div><div class=\\"hig__global-nav__side-nav__section__group__module\\">
@@ -150,7 +150,7 @@ exports[`<Group> children: <Module> can insert <Module> elements before and afte
         <div class=\\"hig__global-nav__side-nav__section__group__module__link__icon\\"><div class=\\"hig__icon\\"></div></div>
         <div class=\\"hig__global-nav__side-nav__section__group__module__link__title\\">title</div>
     </a>
-    <div class=\\"hig__global-nav__side-nav__section__group__module__submodules hig__global-nav__side-nav__section__group__module__submodules--hide\\">
+    <div class=\\"hig__global-nav__side-nav__section__group__module__submodules\\">
         <!--SUBMODULE-->
     </div>
 </div><!--MODULE-->
@@ -189,7 +189,7 @@ exports[`<Group> children: <Module> can insert <Module> elements before and afte
         <div class=\\"hig__global-nav__side-nav__section__group__module__link__icon\\"><div class=\\"hig__icon\\"><svg width=\\"20\\" height=\\"21\\" viewBox=\\"0 0 20 21\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"project-management\\"><g transform=\\"translate(.242)\\" fill=\\"#34495E\\" fill-rule=\\"evenodd\\"><path d=\\"M15,8.15002717 C14.6738533,8.08382289 14.3400214,8.03878262 14,8.01640228 L14,1 L1,1 L1,17 L6.15002717,17 C6.21952655,17.3423796 6.31234911,17.6762897 6.42676427,18 L0,18 L0,0 L15,0 L15,8.15002717 Z M8.40093151,10 C8.07157864,10.3054873 7.76971094,10.6401947 7.49945072,11 L3,11 L3,10 L8.40093151,10 Z M6.42676427,13 C6.31234911,13.3237103 6.21952655,13.6576204 6.15002717,14 L3,14 L3,13 L6.42676427,13 Z M3,4 L12,4 L12,5 L3,5 L3,4 Z M3,7 L12,7 L12,8 L3,8 L3,7 Z\\" fill-rule=\\"nonzero\\"></path><path d=\\"M13.5,20 C15.9852814,20 18,17.9852814 18,15.5 C18,13.0147186 15.9852814,11 13.5,11 C11.0147186,11 9,13.0147186 9,15.5 C9,17.9852814 11.0147186,20 13.5,20 Z M13.5,21 C10.4624339,21 8,18.5375661 8,15.5 C8,12.4624339 10.4624339,10 13.5,10 C16.5375661,10 19,12.4624339 19,15.5 C19,18.5375661 16.5375661,21 13.5,21 Z\\" fill-rule=\\"nonzero\\"></path><rect x=\\"13\\" y=\\"12\\" width=\\"1\\" height=\\"4\\"></rect><rect x=\\"13\\" y=\\"15\\" width=\\"4\\" height=\\"1\\"></rect></g></svg></div></div>
         <div class=\\"hig__global-nav__side-nav__section__group__module__link__title\\">Module 2</div>
     </a>
-    <div class=\\"hig__global-nav__side-nav__section__group__module__submodules hig__global-nav__side-nav__section__group__module__submodules--hide\\">
+    <div class=\\"hig__global-nav__side-nav__section__group__module__submodules\\">
         <!--SUBMODULE-->
     </div>
 </div><!--MODULE-->
@@ -228,7 +228,7 @@ exports[`<Group> children: <Module> can render a list of <Module> elements 1`] =
         <div class=\\"hig__global-nav__side-nav__section__group__module__link__icon\\"><div class=\\"hig__icon\\"><svg width=\\"20\\" height=\\"21\\" viewBox=\\"0 0 20 21\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"project-management\\"><g transform=\\"translate(.242)\\" fill=\\"#34495E\\" fill-rule=\\"evenodd\\"><path d=\\"M15,8.15002717 C14.6738533,8.08382289 14.3400214,8.03878262 14,8.01640228 L14,1 L1,1 L1,17 L6.15002717,17 C6.21952655,17.3423796 6.31234911,17.6762897 6.42676427,18 L0,18 L0,0 L15,0 L15,8.15002717 Z M8.40093151,10 C8.07157864,10.3054873 7.76971094,10.6401947 7.49945072,11 L3,11 L3,10 L8.40093151,10 Z M6.42676427,13 C6.31234911,13.3237103 6.21952655,13.6576204 6.15002717,14 L3,14 L3,13 L6.42676427,13 Z M3,4 L12,4 L12,5 L3,5 L3,4 Z M3,7 L12,7 L12,8 L3,8 L3,7 Z\\" fill-rule=\\"nonzero\\"></path><path d=\\"M13.5,20 C15.9852814,20 18,17.9852814 18,15.5 C18,13.0147186 15.9852814,11 13.5,11 C11.0147186,11 9,13.0147186 9,15.5 C9,17.9852814 11.0147186,20 13.5,20 Z M13.5,21 C10.4624339,21 8,18.5375661 8,15.5 C8,12.4624339 10.4624339,10 13.5,10 C16.5375661,10 19,12.4624339 19,15.5 C19,18.5375661 16.5375661,21 13.5,21 Z\\" fill-rule=\\"nonzero\\"></path><rect x=\\"13\\" y=\\"12\\" width=\\"1\\" height=\\"4\\"></rect><rect x=\\"13\\" y=\\"15\\" width=\\"4\\" height=\\"1\\"></rect></g></svg></div></div>
         <div class=\\"hig__global-nav__side-nav__section__group__module__link__title\\">Module 1</div>
     </a>
-    <div class=\\"hig__global-nav__side-nav__section__group__module__submodules hig__global-nav__side-nav__section__group__module__submodules--hide\\">
+    <div class=\\"hig__global-nav__side-nav__section__group__module__submodules\\">
         <!--SUBMODULE-->
     </div>
 </div><div class=\\"hig__global-nav__side-nav__section__group__module\\">
@@ -236,7 +236,7 @@ exports[`<Group> children: <Module> can render a list of <Module> elements 1`] =
         <div class=\\"hig__global-nav__side-nav__section__group__module__link__icon\\"><div class=\\"hig__icon\\"><svg width=\\"20\\" height=\\"21\\" viewBox=\\"0 0 20 21\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"project-management\\"><g transform=\\"translate(.242)\\" fill=\\"#34495E\\" fill-rule=\\"evenodd\\"><path d=\\"M15,8.15002717 C14.6738533,8.08382289 14.3400214,8.03878262 14,8.01640228 L14,1 L1,1 L1,17 L6.15002717,17 C6.21952655,17.3423796 6.31234911,17.6762897 6.42676427,18 L0,18 L0,0 L15,0 L15,8.15002717 Z M8.40093151,10 C8.07157864,10.3054873 7.76971094,10.6401947 7.49945072,11 L3,11 L3,10 L8.40093151,10 Z M6.42676427,13 C6.31234911,13.3237103 6.21952655,13.6576204 6.15002717,14 L3,14 L3,13 L6.42676427,13 Z M3,4 L12,4 L12,5 L3,5 L3,4 Z M3,7 L12,7 L12,8 L3,8 L3,7 Z\\" fill-rule=\\"nonzero\\"></path><path d=\\"M13.5,20 C15.9852814,20 18,17.9852814 18,15.5 C18,13.0147186 15.9852814,11 13.5,11 C11.0147186,11 9,13.0147186 9,15.5 C9,17.9852814 11.0147186,20 13.5,20 Z M13.5,21 C10.4624339,21 8,18.5375661 8,15.5 C8,12.4624339 10.4624339,10 13.5,10 C16.5375661,10 19,12.4624339 19,15.5 C19,18.5375661 16.5375661,21 13.5,21 Z\\" fill-rule=\\"nonzero\\"></path><rect x=\\"13\\" y=\\"12\\" width=\\"1\\" height=\\"4\\"></rect><rect x=\\"13\\" y=\\"15\\" width=\\"4\\" height=\\"1\\"></rect></g></svg></div></div>
         <div class=\\"hig__global-nav__side-nav__section__group__module__link__title\\">Module 2</div>
     </a>
-    <div class=\\"hig__global-nav__side-nav__section__group__module__submodules hig__global-nav__side-nav__section__group__module__submodules--hide\\">
+    <div class=\\"hig__global-nav__side-nav__section__group__module__submodules\\">
         <!--SUBMODULE-->
     </div>
 </div><!--MODULE-->

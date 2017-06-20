@@ -45,9 +45,9 @@ export class Module extends HIGElement {
       const [areClosed, value] = updatePayload.splice(submodulesClosed, 2);
       if (areClosed) {
         if (value === false) {
-          this.hig.showSubmodules();
+          //this.hig.showSubmodules();
         } else {
-          this.hig.hideSubmodules();
+          //this.hig.hideSubmodules();
         }
       }
     }
