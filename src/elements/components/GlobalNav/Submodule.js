@@ -21,7 +21,11 @@ import HIGElement from '../../HIGElement';
 export class Submodule extends HIGElement {
   constructor(HIGConstructor, initialProps) {
     super(HIGConstructor, initialProps);
-    this.state = { title: initialProps.title };
+    this.state = {
+      title: initialProps.title,
+      expand: initialProps.expand,
+      query: initialProps.query,
+    };
   }
 
   commitUpdate(updatePayload, oldProps, newProps) {
@@ -35,19 +39,34 @@ export class Submodule extends HIGElement {
     if (Object.keys(updatePayload).includes('title')) {
       this.state.title = updatePayload.title;
     }
+
+    if (Object.keys(updatePayload).includes('query')) {
+      this.state.query = updatePayload.query;
+      this._filter();
+    }
+
+    if (Object.keys(updatePayload).includes('expand')) {
+      this.state.expand = updatePayload.expand;
+      this._filter();
+    }
   }
 
   matches(query) {
+    if (!query) { return false };
     return this.state.title.toLowerCase().match(query.toLowerCase());
   }
 
-  filter(query) {
-    if (this.matches(query)) {
+  isVisible() {
+    return this.state.isVisible;
+  }
+
+  _filter() {
+    if (this.matches(this.state.query) || (!this.state.query && this.state.expand)) {
       this.hig.show();
-      return true;
+      this.state.isVisible = true;
     } else {
       this.hig.hide();
-      return false;
+      this.state.isVisible = false;
     }
   }
 }
@@ -56,11 +75,10 @@ const SubmoduleComponent = createComponent(Submodule);
 
 SubmoduleComponent.propTypes = {
   title: PropTypes.string,
+  query: PropTypes.string,
   link: PropTypes.string,
-  show: PropTypes.func,
-  hide: PropTypes.func,
-  activate: PropTypes.func,
-  deactivate: PropTypes.func,
+  show: PropTypes.bool,
+  active: PropTypes.bool,
   onClick: PropTypes.func,
   onHover: PropTypes.func
 };
@@ -68,27 +86,23 @@ SubmoduleComponent.propTypes = {
 SubmoduleComponent.__docgenInfo = {
   props: {
     title: {
-      description: 'sets the title of an Submodule'
+      description: 'sets the title of a submodule'
     },
 
     link: {
-      description: 'sets the link of an Submodule'
+      description: 'sets the link of a submodule'
     },
 
     show: {
       description: 'show (used for filtering)'
     },
 
-    hide: {
-      description: 'hide (used for filtering)'
+    active: {
+      description: 'activates the submodule'
     },
 
-    activate: {
-      description: 'activates the Submodule'
-    },
-
-    deactivate: {
-      description: 'deactivates the submodule'
+    query: {
+      description: 'search text to filter against'
     },
 
     onClick: {

@@ -30,6 +30,8 @@ export class Group extends HIGElement {
         this.hig.addModule(instance, beforeInstance);
       }
     });
+
+    this.state = {};
   }
 
   componentDidMount() {
@@ -48,17 +50,38 @@ export class Group extends HIGElement {
     this.modules.removeChild(instance);
   }
 
-  filter(query) {
+  commitUpdate(updatePayload, oldProps, newProps) {
+    if (Object.keys(updatePayload).includes('query')) {
+      this.state.query = updatePayload.query;
+      this._render();
+    }
+
+    if (Object.keys(updatePayload).includes('expand')) {
+      this.state.expand = updatePayload.expand;
+      this._render();
+    }
+  }
+
+  isVisible() {
+    return this.state.isVisible;
+  }
+
+  _render() {
     const matches = this.modules.map(module => {
-      return module.filter(query)
+      module.commitUpdate({
+        query: this.state.query,
+        expanded: this.state.expanded
+      });
+
+      return module.isVisible();
     });
 
     if (matches.some(m => m)) {
       this.hig.show();
-      return true;
+      this.state.isVisible = true;
     } else {
       this.hig.hide();
-      return false;
+      this.state.isVisible = false;
     }
   }
 }

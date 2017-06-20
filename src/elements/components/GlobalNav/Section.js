@@ -33,6 +33,7 @@ export class Section extends HIGElement {
         this.hig.addGroup(instance, beforeInstance);
       }
     });
+    this.state = {};
   }
 
   componentDidMount() {
@@ -48,7 +49,18 @@ export class Section extends HIGElement {
       headerLabel: 'setHeaderLabel',
       headerName: 'setHeaderName'
     };
+
     this.commitUpdateWithMapping(updatePayload, mapping);
+
+    if (Object.keys(updatePayload).includes('query')) {
+      this.state.query = updatePayload.query;
+      this._render();
+    }
+
+    if (Object.keys(updatePayload).includes('expand')) {
+      this.state.expand = updatePayload.expand;
+      this._render();
+    }
   }
 
   createElement(ElementConstructor, props) {
@@ -86,17 +98,20 @@ export class Section extends HIGElement {
     this.groups.removeChild(instance);
   }
 
-  filter(query) {
+  _render() {
     const childVisibility = this.groups.map(group => {
-      return group.filter(query);
+      group.commitUpdate({
+        query: this.state.query,
+        expanded: this.state.expanded
+      });
+
+      return group.isVisible();
     });
 
     if (childVisibility.some(v => v)) {
       this.hig.show();
-      return true;
     } else {
       this.hig.hide();
-      return false;
     }
   }
 }

@@ -124,7 +124,7 @@ describe('<SideNav>', () => {
 
     expect(console.error).toBeCalledWith(
       expect.stringMatching(
-        /'div' is not a valid child of SideNav. Children should be of type 'SectionList, LinkList'/
+        /'div' is not a valid child of SideNav./
       )
     );
   });
@@ -142,7 +142,7 @@ describe('<SideNav>', () => {
 
     expect(console.error).toBeCalledWith(
       expect.stringMatching(
-        /'Hello World!' is not a valid child of SideNav. Children should be of type 'SectionList, LinkList'/
+        /'Hello World!' is not a valid child of SideNav./
       )
     );
   });

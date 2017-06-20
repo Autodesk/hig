@@ -19,6 +19,11 @@ import createComponent from '../../../adapters/createComponent';
 import HIGElement from '../../HIGElement';
 
 export class Search extends HIGElement {
+  constructor(HIGConstructor, initialProps) {
+    super(HIGConstructor, initialProps);
+
+    ['showClearIcon', 'hideClearIcon'].forEach(fn => { this[fn] = this[fn].bind(this) });
+  }
   commitUpdate(updatePayload, oldProps, newProps) {
     const mapping = {
       placeholder: 'setPlaceholder',
@@ -26,6 +31,19 @@ export class Search extends HIGElement {
     };
 
     this.commitUpdateWithMapping(updatePayload, mapping);
+  }
+
+  componentDidMount() {
+    this.hig.onFocusIn(this.showClearIcon);
+    this.hig.onFocusOut(this.hideClearIcon);
+  }
+
+  showClearIcon() {
+    this.hig.showClearIcon();
+  }
+
+  hideClearIcon() {
+    this.hig.hideClearIcon();
   }
 }
 

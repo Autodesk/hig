@@ -32,7 +32,8 @@ export class Module extends HIGElement {
       }
     });
     this.state = {
-      title: initialProps.title
+      title: initialProps.title,
+      query: initialProps.query
     };
   }
 
@@ -47,6 +48,16 @@ export class Module extends HIGElement {
 
     if (Object.keys(updatePayload).includes('title')) {
       this.state.title = updatePayload.title;
+    }
+
+    if (Object.keys(updatePayload).includes('query')) {
+      this.state.query = updatePayload.query;
+      this._render();
+    }
+
+    if (Object.keys(updatePayload).includes('expand')) {
+      this.state.expand = updatePayload.expand;
+      this._render();
     }
   }
 
@@ -67,20 +78,30 @@ export class Module extends HIGElement {
   }
 
   matches(query) {
+    if (!query) { return true }
     return this.state.title.toLowerCase().match(query.toLowerCase());
   }
 
-  filter(query) {
+  isVisible() {
+    return this.state.isVisible;
+  }
+
+  _render() {
     const childMatches = this.submodules.map(submodule => {
-      return submodule.filter(query);
+      submodule.commitUpdate({
+        query: this.state.query,
+        expand: this.state.expand
+      });
+
+      return submodule.isVisible();
     });
 
-    if (childMatches.some(m => m) || this.matches(query)) {
+    if (childMatches.some(m => m) || this.matches(this.state.query) || this.state.expand) {
       this.hig.show();
-      return true;
+      this.state.isVisible = true;
     } else {
       this.hig.hide();
-      return false;
+      this.state.isVisible = false;
     }
   }
 }
@@ -91,14 +112,9 @@ ModuleComponent.propTypes = {
   icon: PropTypes.string,
   title: PropTypes.string,
   link: PropTypes.string,
-  show: PropTypes.func,
-  hide: PropTypes.func,
-  activate: PropTypes.func,
-  deactivate: PropTypes.func,
-  showSubmodules: PropTypes.func,
-  hideSubmodules: PropTypes.func,
-  submodulesClosed: PropTypes.bool,
-  addSubmodule: PropTypes.func,
+  active: PropTypes.bool,
+  query: PropTypes.string,
+  expand: PropTypes.bool,
   onClick: PropTypes.func,
   onHover: PropTypes.func,
   children: HIGChildValidator([SubmoduleComponent])
@@ -126,24 +142,12 @@ ModuleComponent.__docgenInfo = {
       description: 'hide (used for filtering)'
     },
 
-    activate: {
-      description: 'activates the module'
+    active: {
+      description: '[Boolean] Designates that the module is active'
     },
 
-    deactivate: {
-      description: 'deactivates the module'
-    },
-
-    showSubmodules: {
-      description: 'show the submodules'
-    },
-
-    hideSubmodules: {
-      description: 'hide the submodules'
-    },
-
-    addSubmodule: {
-      description: 'add submodule'
+    expand: {
+      description: '[Boolean] When true shows submodules, when false hides them'
     },
 
     onClick: {
