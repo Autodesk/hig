@@ -60,7 +60,7 @@ class TopNav extends Core {
     }
 
     addHelp(instance, referenceInstance){
-        if(instance instanceof Search){
+        if(instance instanceof Help){
             this.mountPartialToComment('SHORTCUT', instance, referenceInstance);
         }
     }
