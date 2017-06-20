@@ -35,23 +35,34 @@ class TopNav extends Core {
         this._setLogoAttributeForTag("a","href",link);
     }
 
-    addProfile(instance){
-        this.mountPartialToComment(this._comment(instance), instance);
+    addProfile(profileInstance){
+        if (profileInstance instanceof Profile){
+            this.mountPartialToComment('PROFILE', profileInstance);
+        }
     }
 
     addProjectAccountSwitcher(instance){
-        this.mountPartialToComment(this._comment(instance), instance);
-    }
-
-    addShortcut(instance) {
-        this.mountPartialToComment(this._comment(instance), instance);
+        if (instance instanceof ProjectAccountSwitcher){
+            this.mountPartialToComment('PROJECT_ACCOUNT_SWITCHER', instance);
+        }
     }
 
     addSearch(searchInstance, referenceInstance){
-        this.mountPartialToComment(this._comment(searchInstance), searchInstance, referenceInstance);
+        if(searchInstance instanceof Search){
+            this.mountPartialToComment('SEARCH', searchInstance, referenceInstance);
+        }
     }
-    addHelp(instance) {
-      this.mountPartialToComment(this._comment(instance), instance);
+
+    addShortcut(instance, referenceInstance){
+        if(instance instanceof Shortcut){
+            this.mountPartialToComment('SHORTCUT', instance, referenceInstance);
+        }
+    }
+
+    addHelp(instance, referenceInstance){
+        if(instance instanceof Search){
+            this.mountPartialToComment('SHORTCUT', instance, referenceInstance);
+        }
     }
 
     sidenavOpen() {
@@ -66,16 +77,6 @@ class TopNav extends Core {
         const scope = this._findDOMEl('.hig__global-nav__top-nav__logo', this.el);
         this._findDOMEl(tag, scope).setAttribute(attr, val);
     }
-
-    _comment(instance) {
-        // Doing this based on name (as String) will break in production due to obfuscation/name mangling.
-        if (instance instanceof Profile) { return "PROFILE" }
-        if (instance instanceof ProjectAccountSwitcher) { return "PROJECT_ACCOUNT_SWITCHER" }
-        if (instance instanceof Shortcut) { console.log("SHORTCUT"); return "SHORTCUT" }
-        if (instance instanceof Search) { return "SEARCH" }
-        return "COMMENTNOTFOUND"
-    }
-
 }
 
 TopNav._interface = Interface['components']['GlobalNav']['partials']['TopNav'];
