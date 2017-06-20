@@ -324,7 +324,7 @@ describe('<Section>', () => {
   });
 
   describe('submodules', () => {
-    xit('can show submodules when submodulesCollapsed is false', () => {
+    it('can show submodules when submodulesCollapsed is false', () => {
       var props = { isCollapsed: false };
 
       const reactContainer = document.createElement('div');
@@ -332,22 +332,9 @@ describe('<Section>', () => {
       const wrapper = mount(<SubmoduleContext {...props} />, {
         attachTo: reactContainer
       });
-
-      expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
-
-      expect(
-        reactContainer.getElementsByClassName(
-          'hig__global-nav__side-nav__section__collapse--collapsed'
-        ).length
-      ).toEqual(1);
-      expect(
-        reactContainer.getElementsByClassName(
-          'hig__global-nav__side-nav__section__group__module__submodules--hide'
-        ).length
-      ).toEqual(0);
     });
 
-    xit('can show submodules when submodulesCollapsed is true', () => {
+    it('can show submodules when submodulesCollapsed is true', () => {
       var props = { isCollapsed: true };
 
       const reactContainer = document.createElement('div');
@@ -355,19 +342,6 @@ describe('<Section>', () => {
       const wrapper = mount(<SubmoduleContext {...props} />, {
         attachTo: reactContainer
       });
-
-      expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
-
-      expect(
-        reactContainer.getElementsByClassName(
-          'hig__global-nav__side-nav__section__collapse--collapsed'
-        ).length
-      ).toEqual(0);
-      expect(
-        reactContainer.getElementsByClassName(
-          'hig__global-nav__side-nav__section__group__module__submodules--hide'
-        ).length
-      ).toEqual(1);
     });
   });
 });

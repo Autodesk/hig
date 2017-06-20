@@ -59,7 +59,7 @@ export class Module extends HIGElement {
     this.modules.componentDidMount();
 
     if (this.initialProps.submodulesClosed === false) {
-      this.hig.showSubmodules();
+      //this.hig.showSubmodules();
     }
   }
 
