@@ -55,13 +55,13 @@ class TopNav extends Core {
 
     addShortcut(instance, referenceInstance){
         if(instance instanceof Shortcut){
-            this.mountPartialToComment('SEARCH', instance, referenceInstance);
+            this.mountPartialToComment('SHORTCUT', instance, referenceInstance);
         }
     }
 
     addHelp(instance, referenceInstance){
         if(instance instanceof Search){
-            this.mountPartialToComment('SEARCH', instance, referenceInstance);
+            this.mountPartialToComment('SHORTCUT', instance, referenceInstance);
         }
     }
 
