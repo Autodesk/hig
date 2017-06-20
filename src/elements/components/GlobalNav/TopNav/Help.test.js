@@ -13,41 +13,41 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-*/
+ */
 import { mount } from 'enzyme';
 import * as HIG from 'hig.web';
 import React from 'react';
 
-import GlobalNav from './GlobalNav';
+import GlobalNav from './../GlobalNav';
 import TopNav from './TopNav';
-import Shortcut from './Shortcut';
-import SharedExamples from './SharedExamples';
+import Profile from './Profile';
+import Help from './Help';
+import SharedExamples from './../SharedExamples';
 
 const Context = props => {
   return (
     <GlobalNav>
       <TopNav>
-        <Shortcut title={props.title} link={props.link} icon={props.icon} />
+        <Help title={props.title} link={props.link} />
       </TopNav>
     </GlobalNav>
   );
 };
 
-function setupReactContext() {
-  const props = { title: 'GEARS', link: '/settings', icon: 'gear' };
+function setupReactContext(props) {
   const reactContainer = document.createElement('div');
   mount(<Context {...props} />, { attachTo: reactContainer });
   return { reactContainer };
 }
 
-describe('Shortcut', () => {
+describe('Help', () => {
   describe('constructor', () => {
     it('has a good snapshot', () => {
-      const { reactContainer } = setupReactContext();
+      const props = { title: 'HELP', link: '/help' };
+      const { reactContainer } = setupReactContext(props);
       expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
-
       var elems = reactContainer.getElementsByClassName(
-        'hig__global-nav__top-nav__shortcut'
+        'hig__global-nav__top-nav__shortcut__link__icon--help'
       );
       expect(elems.length).toEqual(1);
     });

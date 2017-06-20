@@ -14,9 +14,9 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
  */
-import HIGElement from '../../HIGElement';
+import HIGElement from '../../../HIGElement';
 import * as PropTypes from 'prop-types';
-import createComponent from '../../../adapters/createComponent';
+import createComponent from '../../../../adapters/createComponent';
 
 export class Help extends HIGElement {
   commitUpdate(updatePayload, oldProps, newProps) {

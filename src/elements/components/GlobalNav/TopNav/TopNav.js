@@ -17,11 +17,11 @@ limitations under the License.
 //import * as HIG from 'hig.web';
 import * as PropTypes from 'prop-types';
 
-import HIGElement from '../../HIGElement';
-import HIGChildValidator from '../../HIGChildValidator';
-import createComponent from '../../../adapters/createComponent';
+import HIGElement from '../../../HIGElement';
+import HIGChildValidator from '../../../HIGChildValidator';
+import createComponent from '../../../../adapters/createComponent';
 
-import HIGNodeList from '../../HIGNodeList';
+import HIGNodeList from '../../../HIGNodeList';
 import ProjectAccountSwitcherComponent, {
   ProjectAccountSwitcher
 } from './ProjectAccountSwitcher';

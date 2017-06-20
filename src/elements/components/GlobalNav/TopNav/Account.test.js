@@ -18,11 +18,11 @@ import { mount } from 'enzyme';
 import * as HIG from 'hig.web';
 import React from 'react';
 
-import GlobalNav from './GlobalNav';
+import GlobalNav from './../GlobalNav';
 import TopNav from './TopNav';
 import ProjectAccountSwitcher from './ProjectAccountSwitcher';
 import Account from './Account';
-import SharedExamples from './SharedExamples';
+import SharedExamples from './../SharedExamples';
 
 const onItemClick = function() {
   return 'onItemClick';

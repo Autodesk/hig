@@ -22,7 +22,7 @@ import HIGChildValidator from '../../HIGChildValidator';
 import createComponent from '../../../adapters/createComponent';
 
 import SideNavComponent, { SideNav } from './SideNav';
-import TopNavComponent, { TopNav } from './TopNav';
+import TopNavComponent, { TopNav } from './TopNav/TopNav';
 import SubNavComponent, { SubNav } from './SubNav';
 import Slot from './Slot';
 

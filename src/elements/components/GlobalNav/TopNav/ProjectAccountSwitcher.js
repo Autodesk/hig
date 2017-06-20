@@ -16,10 +16,10 @@ limitations under the License.
 */
 
 import * as PropTypes from 'prop-types';
-import HIGElement from '../../HIGElement';
-import HIGNodeList from '../../HIGNodeList';
-import HIGChildValidator from '../../HIGChildValidator';
-import createComponent from '../../../adapters/createComponent';
+import HIGElement from '../../../HIGElement';
+import HIGNodeList from '../../../HIGNodeList';
+import HIGChildValidator from '../../../HIGChildValidator';
+import createComponent from '../../../../adapters/createComponent';
 import AccountComponent, { Account } from './Account';
 import ProjectComponent, { Project } from './Project';
 

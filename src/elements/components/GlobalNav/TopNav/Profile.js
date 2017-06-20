@@ -16,8 +16,8 @@ limitations under the License.
 */
 
 import * as PropTypes from 'prop-types';
-import HIGElement from '../../HIGElement';
-import createComponent from '../../../adapters/createComponent';
+import HIGElement from '../../../HIGElement';
+import createComponent from '../../../../adapters/createComponent';
 
 export class Profile extends HIGElement {
   componentDidMount() {
