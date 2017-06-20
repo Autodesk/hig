@@ -1,8 +1,4 @@
-/**
- * Created by shannon on 6/12/17.
- */
-/**
-Copyright 2016 Autodesk,Inc.
+/* Copyright 2016 Autodesk,Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -30,16 +26,7 @@ export class Shortcut extends HIGElement {
       icon: 'setIcon'
     };
 
-    for (let i = 0; i < updatePayload.length; i += 2) {
-      const propKey = updatePayload[i];
-      const propValue = updatePayload[i + 1];
-
-      if (mapping[propKey]) {
-        this.hig[mapping[propKey]](propValue);
-      } else {
-        this.commitPropChange(propKey, propValue);
-      }
-    }
+    super.commitUpdateWithMapping(updatePayload, mapping);
   }
 }
 

@@ -22,6 +22,23 @@ import React from 'react';
 import GlobalNav from './../GlobalNav';
 import TopNav from './TopNav';
 import Profile from './Profile';
+import Search from './Search';
+
+const Context = props => {
+  return (
+    <GlobalNav>
+      <TopNav>
+        <Search
+          placeholder={props.placeholder}
+          query={props.query}
+          onInput={props.onInput}
+          onFocusIn={props.onFocusIn}
+          onFocusOut={props.onFocusOut}
+        />
+      </TopNav>
+    </GlobalNav>
+  );
+};
 
 describe('<TopNav>', () => {
   function createHigNav() {
@@ -30,6 +47,13 @@ describe('<TopNav>', () => {
     higNav.mount(domContainer);
 
     return { higNav, domContainer };
+  }
+
+  function createTopNav() {
+    const { higNav, domContainer } = createHigNav();
+    const topNav = new higNav.partials.TopNav({ ...defaults });
+    higNav.addTopNav(topNav);
+    return { topNav, higNav, domContainer }
   }
 
   // Create the GlobalNav context for the TopNav to be attached to
@@ -53,11 +77,8 @@ describe('<TopNav>', () => {
     expect(reactContainer.firstElementChild.outerHTML).toMatchSnapshot();
   });
 
-  it('contains the correct chidren', () => {
-    const { higNav, domContainer } = createHigNav();
-
-    const topNav = new higNav.partials.TopNav({ ...defaults });
-    higNav.addTopNav(topNav);
+  it('can render a Profile', () => {
+    const { topNav, higNav, domContainer } = createTopNav();
 
     const profile = new topNav.partials.Profile({ ...profileDefaults });
     topNav.addProfile(profile);
@@ -75,5 +96,43 @@ describe('<TopNav>', () => {
     expect(reactContainer.firstElementChild.outerHTML).toEqual(
       domContainer.firstElementChild.outerHTML
     );
+  });
+
+  function anyHandler() {
+    return true;
+  }
+
+  it('can render Search programmatically', () => {
+    const  { topNav, higNav, domContainer } = createTopNav();
+    const props = {
+      placeholder: "enter some text",
+      query: "foobar",
+      onInput: anyHandler,
+      onFocusIn: anyHandler,
+      onFocusOut: anyHandler
+    };
+    const tnsearch = new topNav.partials.Search(props);
+    topNav.addSearch(tnsearch);
+
+    expect(domContainer.firstChild.outerHTML).toMatchSnapshot();
+    const elems = domContainer.getElementsByClassName('hig__global-nav__top-nav__search__inputholder__input');
+    expect(elems.length).toEqual(1);
+  });
+
+  it('can render Search through React-like components', () => {
+    const reactContainer = document.createElement('div');
+    const props = {
+      placeholder: "enter some text",
+      query: "foobar",
+      onInput: anyHandler,
+      onFocusIn: anyHandler,
+      onFocusOut: anyHandler
+    };
+
+    mount( Context(props), {attachTo: reactContainer});
+    expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
+
+    const elems = reactContainer.getElementsByClassName('hig__global-nav__top-nav__search__inputholder__input');
+    expect(elems.length).toEqual(1);
   });
 });

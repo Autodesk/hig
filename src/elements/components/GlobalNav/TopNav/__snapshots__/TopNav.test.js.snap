@@ -1,5 +1,77 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<TopNav> can render Search programmatically 1`] = `
+"<div class=\\"hig__global-nav\\">
+    <!--SIDENAV-->
+    <div class=\\"hig__global-nav__container\\">
+        <div class=\\"hig__global-nav__top-nav\\">
+    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
+        <div class=\\"hig__global-nav__top-nav__hamburger\\">
+            <div class=\\"hig__global-nav__top-nav__hamburger__hamburgericon\\"><div class=\\"hig__icon\\"><svg width=\\"30\\" height=\\"30\\" viewBox=\\"0 0 30 30\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-92 -185)\\" fill=\\"none\\" fill-rule=\\"evenodd\\"><rect x=\\"92\\" y=\\"185\\" width=\\"30\\" height=\\"30\\"></rect><path d=\\"M100,195 L115,195 L115,196 L100,196 L100,195 Z M100,200 L115,200 L115,201 L100,201 L100,200 Z M100,205 L115,205 L115,206 L100,206 L100,205 Z\\" fill=\\"#34495E\\"></path></g></svg></div></div>
+            <div class=\\"hig__global-nav__top-nav__hamburger__closeicon\\"><div class=\\"hig__icon\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-hamburger\\"><title>hig_icon_xclose</title><g fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect transform=\\"rotate(45 12 12)\\" x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect transform=\\"rotate(-45 12 12)\\" x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
+        </div>
+        <div class=\\"hig__global-nav__top-nav__logo\\">
+            <a href=\\"http://www.autodesk.com\\">
+                <img src=\\"../../../bim-logo.png\\">
+            </a>
+        </div>
+    </div>
+    <div class=\\"hig__global-nav__top-nav__search\\">
+    <div class=\\"hig__global-nav__top-nav__search__icon\\"><div class=\\"hig__icon\\"><svg width=\\"22\\" height=\\"22\\" viewBox=\\"0 0 22 22\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"search\\"><g transform=\\"translate(-1 -1)\\" fill=\\"none\\" fill-rule=\\"evenodd\\"><rect fill=\\"#353636\\" transform=\\"rotate(-45 19.196 18.891)\\" x=\\"18.195\\" y=\\"13.891\\" width=\\"2.001\\" height=\\"10\\" rx=\\"1\\"></rect><circle stroke=\\"#353636\\" stroke-width=\\"1.5\\" cx=\\"10\\" cy=\\"10\\" r=\\"8\\"></circle></g></svg></div></div>
+    <div class=\\"hig__global-nav__top-nav__search__inputholder\\"><input class=\\"hig__global-nav__top-nav__search__inputholder__input\\" type=\\"text\\" placeholder=\\"enter some text\\" value=\\"foobar\\"></div>
+    <div class=\\"hig__global-nav__top-nav__search__clear\\"><div class=\\"hig__icon\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-small\\"><title>hig/icon/close-small</title><g fill=\\"none\\" fill-rule=\\"evenodd\\"><circle stroke=\\"#353636\\" cx=\\"12\\" cy=\\"12\\" r=\\"8\\"></circle><polygon fill=\\"#353636\\" transform=\\"rotate(45 12 12)\\" points=\\"16.5 11.4518414 12.5847458 11.4518414 12.5847458 7.5 11.4152542 7.5 11.4152542 11.4518414 7.5 11.4518414 7.5 12.5226629 11.4152542 12.5226629 11.4152542 16.5 12.5847458 16.5 12.5847458 12.5226629 16.5 12.5226629\\"></polygon></g></svg></div></div>
+</div><!--SEARCH-->
+    <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
+    <!--PROJECT_ACCOUNT_SWITCHER-->
+    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
+    <!--SHORTCUT-->
+    </div>
+    <!--PROFILE-->
+</div><!--TOPNAV-->
+        <!--SUBNAV-->
+        <div class=\\"hig__global-nav__slot\\">
+            <!--SLOT-->
+        </div>
+    </div>
+</div>"
+`;
+
+exports[`<TopNav> can render Search through React-like components 1`] = `
+"<div class=\\"hig__global-nav\\">
+    <!--SIDENAV-->
+    <div class=\\"hig__global-nav__container\\">
+        <div class=\\"hig__global-nav__top-nav\\">
+    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
+        <div class=\\"hig__global-nav__top-nav__hamburger\\">
+            <div class=\\"hig__global-nav__top-nav__hamburger__hamburgericon\\"><div class=\\"hig__icon\\"><svg width=\\"30\\" height=\\"30\\" viewBox=\\"0 0 30 30\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-92 -185)\\" fill=\\"none\\" fill-rule=\\"evenodd\\"><rect x=\\"92\\" y=\\"185\\" width=\\"30\\" height=\\"30\\"></rect><path d=\\"M100,195 L115,195 L115,196 L100,196 L100,195 Z M100,200 L115,200 L115,201 L100,201 L100,200 Z M100,205 L115,205 L115,206 L100,206 L100,205 Z\\" fill=\\"#34495E\\"></path></g></svg></div></div>
+            <div class=\\"hig__global-nav__top-nav__hamburger__closeicon\\"><div class=\\"hig__icon\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-hamburger\\"><title>hig_icon_xclose</title><g fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect transform=\\"rotate(45 12 12)\\" x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect transform=\\"rotate(-45 12 12)\\" x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
+        </div>
+        <div class=\\"hig__global-nav__top-nav__logo\\">
+            <a href=\\"#\\">
+                <img src=\\"link\\">
+            </a>
+        </div>
+    </div>
+    <div class=\\"hig__global-nav__top-nav__search\\">
+    <div class=\\"hig__global-nav__top-nav__search__icon\\"><div class=\\"hig__icon\\"><svg width=\\"22\\" height=\\"22\\" viewBox=\\"0 0 22 22\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"search\\"><g transform=\\"translate(-1 -1)\\" fill=\\"none\\" fill-rule=\\"evenodd\\"><rect fill=\\"#353636\\" transform=\\"rotate(-45 19.196 18.891)\\" x=\\"18.195\\" y=\\"13.891\\" width=\\"2.001\\" height=\\"10\\" rx=\\"1\\"></rect><circle stroke=\\"#353636\\" stroke-width=\\"1.5\\" cx=\\"10\\" cy=\\"10\\" r=\\"8\\"></circle></g></svg></div></div>
+    <div class=\\"hig__global-nav__top-nav__search__inputholder\\"><input class=\\"hig__global-nav__top-nav__search__inputholder__input\\" type=\\"text\\" placeholder=\\"enter some text\\" value=\\"foobar\\"></div>
+    <div class=\\"hig__global-nav__top-nav__search__clear\\"><div class=\\"hig__icon\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-small\\"><title>hig/icon/close-small</title><g fill=\\"none\\" fill-rule=\\"evenodd\\"><circle stroke=\\"#353636\\" cx=\\"12\\" cy=\\"12\\" r=\\"8\\"></circle><polygon fill=\\"#353636\\" transform=\\"rotate(45 12 12)\\" points=\\"16.5 11.4518414 12.5847458 11.4518414 12.5847458 7.5 11.4152542 7.5 11.4152542 11.4518414 7.5 11.4518414 7.5 12.5226629 11.4152542 12.5226629 11.4152542 16.5 12.5847458 16.5 12.5847458 12.5226629 16.5 12.5226629\\"></polygon></g></svg></div></div>
+</div><!--SEARCH-->
+    <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
+    <!--PROJECT_ACCOUNT_SWITCHER-->
+    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
+    <!--SHORTCUT-->
+    </div>
+    <!--PROFILE-->
+</div><!--TOPNAV-->
+        <!--SUBNAV-->
+        <div class=\\"hig__global-nav__slot\\">
+            <!--SLOT-->
+        </div>
+    </div>
+</div>"
+`;
+
 exports[`<TopNav> renders a topnav 1`] = `
 "<div class=\\"hig__global-nav\\">
     <!--SIDENAV-->

@@ -28,6 +28,7 @@ import ProjectAccountSwitcherComponent, {
 import ProfileComponent, { Profile } from './Profile';
 import ShortcutComponent, { Shortcut } from './Shortcut';
 import HelpComponent, { Help } from './Help';
+import SearchComponent, { Search } from './Search';
 
 export class TopNav extends HIGElement {
   constructor(HIGConstructor, initialProps) {
@@ -60,6 +61,11 @@ export class TopNav extends HIGElement {
       this.hig.addHelp(this.help.hig);
       this.help.mount();
     }
+
+    if (this.search) {
+      this.hig.addSearch(this.search.hig);
+      this.search.mount();
+    }
   }
 
   commitUpdate(updatePayload, oldProps, newProp) {
@@ -80,6 +86,8 @@ export class TopNav extends HIGElement {
         return new Help(this.hig.partials.Help, props);
       case Shortcut:
         return this.shortcuts.createElement(ElementConstructor, props);
+      case Search:
+        return new Search(this.hig.partials.Search, props);
       default:
         throw new Error(`Unknown type ${ElementConstructor.name}`);
     }
@@ -94,6 +102,9 @@ export class TopNav extends HIGElement {
     } else {
       this[this.getPropertyNameFor(instance)] = instance;
       if (this.mounted) {
+        if (instance instanceof Search) {
+          console.log("I'm foo");
+        }
         this.hig[this.getFunctionNameFor(instance)](instance.hig);
         instance.mount();
       }
@@ -113,16 +124,14 @@ export class TopNav extends HIGElement {
   }
 
   requireSingleInstance(instance) {
-    const requiredSingle = ['Profile', 'ProjectAccountSwitcher', 'Help'];
+    const requiredSingle = ['Profile', 'ProjectAccountSwitcher', 'Help', 'Search'];
     super.requireSingleInstance(instance, requiredSingle);
   }
 
   checkValidChild(instance) {
-    const validInstances = [Profile, ProjectAccountSwitcher, Shortcut, Help];
+    const validInstances = [Profile, ProjectAccountSwitcher, Shortcut, Help, Search];
     if (!validInstances.includes(instance.constructor)) {
-      throw new Error(
-        instance.constructor.name +
-          ' is not a valid child element of this parent.'
+      throw new Error(`${instance.constructor.name} is not a valid child element of this parent.`
       );
     }
   }
@@ -140,6 +149,9 @@ export class TopNav extends HIGElement {
     if (instance instanceof Help) {
       return 'help';
     }
+    if (instance instanceof Search) {
+      return 'search'
+    }
     return null;
   }
 
@@ -156,11 +168,13 @@ TopNavComponent.propTypes = {
   onHamburgerClick: PropTypes.func,
   addProfile: PropTypes.func,
   addProjectAccountSwitcher: PropTypes.func,
+  addSearch: PropTypes.func,
   children: HIGChildValidator([
     ProfileComponent,
     ProjectAccountSwitcherComponent,
     ShortcutComponent,
-    HelpComponent
+    HelpComponent,
+    SearchComponent
   ])
 };
 
@@ -184,6 +198,10 @@ TopNavComponent.__docgenInfo = {
 
     addProjectAccountSwitcher: {
       description: 'Pass in an instance of a ProjectAccountSwitcher partial to mount it to the TopNav'
+    },
+
+    addSearch: {
+      description: 'Pass in an instance of a topNavSearch partial to mount to TopNav'
     }
   }
 };
@@ -192,5 +210,6 @@ TopNavComponent.Profile = ProfileComponent;
 TopNavComponent.Shortcut = ShortcutComponent;
 TopNavComponent.Help = HelpComponent;
 TopNavComponent.ProjectAccountSwitcher = ProjectAccountSwitcherComponent;
+TopNavComponent.Search = SearchComponent;
 
 export default TopNavComponent;
