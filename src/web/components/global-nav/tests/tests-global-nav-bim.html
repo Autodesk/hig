@@ -178,8 +178,6 @@
         
             });
 
-
-
             // ADD PROFILE
             var MyProfile1 = new TopNav.partials.Profile({
                 image: "avatar/david-construction-project-manager.png",
@@ -270,7 +268,10 @@
                                     "title": submoduleModel["label"],
                                     "link": "#"
                                 });
-                                generated_module.addSubmodule(generated_submodule);                                
+                                generated_module.addSubmodule(generated_submodule);
+                                
+                                // HIDE SUBMODULE BY DEFAULT
+                                generated_submodule.hide();
 
                                 // STORE IN MODEL FOR INTERNAL STATE
                                 submoduleModel["_generated_submodule"] = generated_submodule;
@@ -304,14 +305,14 @@
                         generated_collapseIcon.minimize();
                         sectionModel["groups"].map(function(groupModel){
                             groupModel["modules"].map(function(moduleModel){
-                                moduleModel["_generated_module"].showSubmodules();
+                                showSubmodules(moduleModel);
                             });
                         });
                     }else{
                         generated_collapseIcon.maximize();
                         sectionModel["groups"].map(function(groupModel){
                             groupModel["modules"].map(function(moduleModel){
-                                moduleModel["_generated_module"].hideSubmodules();
+                                hideSubmodules(moduleModel);
                             });
                         });
                     }
@@ -402,6 +403,21 @@
                 }
             }
 
+            function showSubmodules(moduleModel){
+                if(moduleModel["submodules"]){
+                    moduleModel["submodules"].forEach(function(submoduleModel){ 
+                        if(submoduleModel["_generated_submodule"]) submoduleModel["_generated_submodule"].show();
+                    });
+                }
+            }
+
+            function hideSubmodules(moduleModel){
+                if(moduleModel["submodules"]){
+                    moduleModel["submodules"].forEach(function(submoduleModel){ 
+                        if(submoduleModel["_generated_submodule"]) submoduleModel["_generated_submodule"].hide();
+                    });
+                }
+            }
 
             function filterMenu(q){
                 q = q.toLowerCase();
@@ -431,29 +447,28 @@
 
                             if(q == ""){
                                 if(sectionModel["_collapsed"]){
-                                    moduleModel["_generated_module"].hideSubmodules();
+                                    hideSubmodules(moduleModel);
                                     sectionModel["_generated_collapseIcon"].maximize();
                                 }else{
-                                    moduleModel["_generated_module"].showSubmodules();
+                                    showSubmodules(moduleModel);
                                     sectionModel["_generated_collapseIcon"].minimize();
                                 }
                             }else{
                                 // ALWAYS SHOW SUBMODULES
-                                moduleModel["_generated_module"].showSubmodules();
-                            }
-                            
+                                showSubmodules(moduleModel);
 
-                            // LOOP OVER SUBMODULES
-                            if(moduleModel["submodules"]){
-                                moduleModel["submodules"].forEach( function(submoduleModel){
-                                    if(submoduleModel["label"].toLowerCase().indexOf(q) > -1){
-                                        submoduleModel["_generated_submodule"].show();
-                                        subModuleFound = true;
-                                    }else{
-                                        submoduleModel["_generated_submodule"].hide();
-                                    }
-                                });
-                            }
+                                // LOOP OVER SUBMODULES
+                                if(moduleModel["submodules"]){
+                                    moduleModel["submodules"].forEach( function(submoduleModel){
+                                        if(submoduleModel["label"].toLowerCase().indexOf(q) > -1){
+                                            submoduleModel["_generated_submodule"].show();
+                                            subModuleFound = true;
+                                        }else{
+                                            submoduleModel["_generated_submodule"].hide();
+                                        }
+                                    });
+                                }
+                            }                            
 
                             if(moduleModel["label"].toLowerCase().indexOf(q) == -1){
                                 if(!subModuleFound){

@@ -693,12 +693,6 @@
                                                 "deactivate": {
                                                     "desc": "deactivates the module"
                                                 },
-                                                "showSubmodules" :{
-                                                    "desc": "show the submodules"
-                                                },
-                                                "hideSubmodules" :{
-                                                    "desc": "hide the submodules"
-                                                },
                                                 "addSubmodule": {
                                                     "desc": "Pass in an instance of a Submodule partial",
                                                     "params": [

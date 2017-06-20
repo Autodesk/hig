@@ -48,7 +48,7 @@ class TopNav extends Core {
     }
 
     addSearch(searchInstance, referenceInstance){
-        this.mountPartialToComment(this._comment(instance), searchInstance, referenceInstance);
+        this.mountPartialToComment(this._comment(searchInstance), searchInstance, referenceInstance);
     }
     addHelp(instance) {
       this.mountPartialToComment(this._comment(instance), instance);

@@ -45,14 +45,6 @@ class Module extends Core {
         }
     }
 
-    showSubmodules(){
-        this._findDOMEl(".hig__global-nav__side-nav__section__group__module__submodules", this.el).classList.remove("hig__global-nav__side-nav__section__group__module__submodules--hide");
-    }
-
-    hideSubmodules(){
-        this._findDOMEl(".hig__global-nav__side-nav__section__group__module__submodules", this.el).classList.add("hig__global-nav__side-nav__section__group__module__submodules--hide");
-    }
-
     show(){
         this.el.classList.remove("hig__global-nav__side-nav__section__group__module--hide");
     }
