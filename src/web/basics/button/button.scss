@@ -27,12 +27,12 @@
             background: $gray-c;
             border: 1px solid $gray-6;
             box-shadow: none;
-            color: $gray-0;
+            color: $hig-gray-1;
         }
     }
 
     &.hig__button--link {
-        color: $autodesk-blue;
+        color: $adsk-blue;
 
         &:hover {
             text-decoration: underline;
