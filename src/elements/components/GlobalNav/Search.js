@@ -22,8 +22,11 @@ export class Search extends HIGElement {
   constructor(HIGConstructor, initialProps) {
     super(HIGConstructor, initialProps);
 
-    ['showClearIcon', 'hideClearIcon'].forEach(fn => { this[fn] = this[fn].bind(this) });
+    ['showClearIcon', 'hideClearIcon', 'clear'].forEach(fn => {
+      this[fn] = this[fn].bind(this);
+    });
   }
+
   commitUpdate(updatePayload, oldProps, newProps) {
     const mapping = {
       placeholder: 'setPlaceholder',
@@ -36,6 +39,11 @@ export class Search extends HIGElement {
   componentDidMount() {
     this.hig.onFocusIn(this.showClearIcon);
     this.hig.onFocusOut(this.hideClearIcon);
+    this.hig.onClearIconClick(this.clear);
+  }
+
+  clear() {
+    this.hig.setQuery('');
   }
 
   showClearIcon() {
