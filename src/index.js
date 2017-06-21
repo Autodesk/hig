@@ -63,7 +63,7 @@ class App extends React.Component {
       activeProjectOrAccount: 0,
       projectOrAcccountTarget: topNavFixtures.accountList()[0] || topNavFixtures.projectList()[0],
       tabs: [{ label: 'One', id: 0 }, { label: 'Two', id: 1 }],
-      showClearIcon: true,
+      showClearIcon: false,
       projects: topNavFixtures.projectList(),
       accounts: topNavFixtures.accountList()
     };
@@ -137,6 +137,16 @@ class App extends React.Component {
   toggleClearIcon = event => {
     this.setState({ showClearIcon: !this.state.showClearIcon } )
   };
+
+  topNavSearchOnInput = event => {
+    console.log("foo")
+    this.setState( { showClearIcon: true} )
+  }
+  topNavClearInput = event => {
+    this.setState({ topNavQuery: "" })
+    this.setState({ showClearIcon: false })
+  }
+
   setProjectOrAccountTarget = targetItem => {
     if (targetItem.type === 'account') {
       this.state.accounts.forEach(
@@ -333,11 +343,12 @@ class App extends React.Component {
 
           <TopNavSearch
             placeholder="type something"
+            query={this.state.topNavQuery}
             isClearIconShown={ this.state.showClearIcon }
-            onClearIconClick={function() { this.toggleClearIcon() }}
-            onInput={function() {console.log("typing detected")}}
-            onFocusIn={function() { console.log("I'm listening.")}}
-            onFocusOut={function() { console.log("never mind.")}}
+            onClearIconClick={ this.topNavClearInput }
+            onInput={ this.topNavSearchOnInput  }
+            onFocusIn={ function() { console.log("focus in.")} }
+            onFocusOut={ function() { console.log("never mind.")} }
           />
 
 

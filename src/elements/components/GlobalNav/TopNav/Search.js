@@ -19,6 +19,12 @@ import * as PropTypes from 'prop-types';
 import createComponent from '../../../../adapters/createComponent';
 
 export class Search extends HIGElement {
+  componentDidMount() {
+    if (this.initialProps.isClearIconShown === true) {
+      this.hig.showClearIcon();
+    }
+  }
+
   commitUpdate(updatePayload, oldProps, newProps) {
     const mapping = {
       placeholder: 'setPlaceholder',
