@@ -117,9 +117,7 @@ import project4 from '../../../images/project-4.png';
 storiesOf('GlobalNav', module)
   .addWithInfo(
     'default',
-    <div>
-      <p>GlobalNav can have a number of different children</p>
-    </div>,
+    <div><p>Global Nav basic usage</p></div>,
     () => {
       const sideNavOpen = boolean('sideNavOpen', false);
       return (
@@ -190,29 +188,7 @@ storiesOf('GlobalNav', module)
           <Slot>{LONG_COPY}</Slot>
         </GlobalNav>
       );
-    },
-    { propTables: [GlobalNav] }
-  )
-  .addWithInfo('w TopNav Search', '', () => {
-    return (
-      <GlobalNav>
-        <SideNav />
-        <TopNav logo={logo}>
-          <Profile
-            name="Jane Designer"
-            email="jane.designer@example.com"
-            signOutLabel="Sign Out"
-            image={profileImage}
-            onProfileImageClick={action('clicked')}
-            onProfileImageClick={action('clicked')}
-          />
-        <TopNavSearch placeholder="in search of..." onInput={action('Typing detected')}/>
-        </TopNav>
-        <SubNav moduleIndicatorName="Insight" moduleIndicatorIcon="hamburger" />
-        <Slot>{LONG_COPY}</Slot>
-      </GlobalNav>
-
-    )}
+    }
   )
   .addWithInfo('w profileFlyoutOpen', ``, () => {
     const profileFlyoutOpenKnob = boolean('profileFlyoutOpen', true);
@@ -359,8 +335,7 @@ storiesOf('GlobalNav', module)
           <Slot>{LONG_COPY}</Slot>
         </GlobalNav>
       );
-    },
-    { propTables: [GlobalNav] }
+    }
   )
   .addWithInfo('? no children', ``, () => {
     const sideNavOpen = boolean('sideNavOpen', true);

@@ -17,4 +17,5 @@ limitations under the License.
 import 'hig.web/dist/hig.css';
 
 import '../elements/basics/Button.story';
+import '../elements/components/GlobalNav/TopNav/TopNav.story';
 import '../elements/components/GlobalNav/GlobalNav.story';
