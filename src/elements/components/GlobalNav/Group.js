@@ -51,13 +51,13 @@ export class Group extends HIGElement {
   }
 
   commitUpdate(updatePayload, oldProps, newProps) {
-    if (Object.keys(updatePayload).includes('query')) {
-      this.state.query = updatePayload.query;
+    if (updatePayload.includes('query')) {
+      this.state.query = updatePayload[updatePayload.indexOf('query') + 1];
       this._render();
     }
 
-    if (Object.keys(updatePayload).includes('expand')) {
-      this.state.expand = updatePayload.expand;
+    if (updatePayload.includes('expanded')) {
+      this.state.expanded = updatePayload[updatePayload.indexOf('expanded') + 1];
       this._render();
     }
   }

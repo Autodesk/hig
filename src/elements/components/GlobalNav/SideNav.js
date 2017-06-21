@@ -114,7 +114,7 @@ export class SideNav extends HIGElement {
   filter(event) {
     const query = event.target.value;
     this.sections.forEach(section => {
-      section.commitUpdate({ query });
+      section.commitUpdate(['query', query]);
     });
   }
 }

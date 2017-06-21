@@ -55,8 +55,8 @@ export class Module extends HIGElement {
       this._render();
     }
 
-    if (Object.keys(updatePayload).includes('expand')) {
-      this.state.expand = updatePayload.expand;
+    if (Object.keys(updatePayload).includes('expanded')) {
+      this.state.expanded = updatePayload.expanded;
       this._render();
     }
   }
@@ -90,13 +90,17 @@ export class Module extends HIGElement {
     const childMatches = this.submodules.map(submodule => {
       submodule.commitUpdate({
         query: this.state.query,
-        expand: this.state.expand
+        expanded: this.state.expanded
       });
 
       return submodule.isVisible();
     });
 
-    if (childMatches.some(m => m) || this.matches(this.state.query) || this.state.expand) {
+    if (
+      childMatches.some(m => m) ||
+      this.matches(this.state.query) ||
+      !this.state.query
+    ) {
       this.hig.show();
       this.state.isVisible = true;
     } else {
@@ -114,7 +118,7 @@ ModuleComponent.propTypes = {
   link: PropTypes.string,
   active: PropTypes.bool,
   query: PropTypes.string,
-  expand: PropTypes.bool,
+  expanded: PropTypes.bool,
   onClick: PropTypes.func,
   onHover: PropTypes.func,
   children: HIGChildValidator([SubmoduleComponent])
@@ -146,7 +150,7 @@ ModuleComponent.__docgenInfo = {
       description: '[Boolean] Designates that the module is active'
     },
 
-    expand: {
+    expanded: {
       description: '[Boolean] When true shows submodules, when false hides them'
     },
 

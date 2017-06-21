@@ -23,7 +23,7 @@ export class Submodule extends HIGElement {
     super(HIGConstructor, initialProps);
     this.state = {
       title: initialProps.title,
-      expand: initialProps.expand,
+      expanded: initialProps.expanded,
       query: initialProps.query,
     };
   }
@@ -42,12 +42,12 @@ export class Submodule extends HIGElement {
 
     if (Object.keys(updatePayload).includes('query')) {
       this.state.query = updatePayload.query;
-      this._filter();
+      this._render();
     }
 
-    if (Object.keys(updatePayload).includes('expand')) {
-      this.state.expand = updatePayload.expand;
-      this._filter();
+    if (Object.keys(updatePayload).includes('expanded')) {
+      this.state.expanded = updatePayload.expanded;
+      this._render();
     }
   }
 
@@ -60,8 +60,11 @@ export class Submodule extends HIGElement {
     return this.state.isVisible;
   }
 
-  _filter() {
-    if (this.matches(this.state.query) || (!this.state.query && this.state.expand)) {
+  _render() {
+    if (
+      this.matches(this.state.query) ||
+      (!this.state.query && this.state.expanded)
+    ) {
       this.hig.show();
       this.state.isVisible = true;
     } else {

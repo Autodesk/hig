@@ -29,7 +29,6 @@ const SideNav = GlobalNav.SideNav;
 const Search = GlobalNav.SideNav.Search;
 const SectionList = GlobalNav.SideNav.SectionList;
 const Section = GlobalNav.SideNav.SectionList.Section;
-const Collapse = GlobalNav.SideNav.SectionList.Section.Collapse;
 const Group = GlobalNav.SideNav.SectionList.Section.Group;
 const Module = GlobalNav.SideNav.SectionList.Section.Group.Module;
 const Submodule = GlobalNav.SideNav.SectionList.Section.Group.Module.Submodule;
@@ -56,8 +55,6 @@ class App extends React.Component {
       fn: false,
       group1: true,
       group3: true,
-      section1Collapsed: true,
-      section2Collapsed: true,
       open: false,
       profileFlyoutOpen: false,
       activeTab: 0,
@@ -97,19 +94,6 @@ class App extends React.Component {
   profileSignOutClick = event => {
     console.log('Profile Sign Out button clicked!');
   };
-
-  fn1 = () => this.setState({ fn: true });
-
-  fn2 = () => this.setState({ fn: false });
-  toggleGroup1 = () => this.setState({ group1: !this.state.group1 });
-
-  toggleGroup3 = () => this.setState({ group3: !this.state.group3 });
-
-  toggleSection1 = () =>
-    this.setState({ section1Collapsed: !this.state.section1Collapsed });
-
-  toggleSection2 = () =>
-    this.setState({ section2Collapsed: !this.state.section2Collapsed });
 
   addTabBefore = () => {
     const nextLabel = Math.floor(Math.random() * 100000, 5);
@@ -190,81 +174,50 @@ class App extends React.Component {
             <Search placeholder="Find module or submodule" />
             <SectionList>
               <Section headerLabel="Project" headerName="ThunderStorm">
-                <Collapse
-                  onClick={this.toggleSection1}
-                  isCollapsed={this.state.section1Collapsed}
-                />
-                {topNavFixtures.menu().sections[0].groups.map(
-                  function(group, i) {
-                    return (
-                      <Group key={i}>
-                        {group.modules.map(
-                          function(module) {
-                            return (
-                              <Module
-                                icon={module.icon}
-                                contentImage={module.contentImage}
-                                title={module.label}
-                                submodulesClosed={this.state.section1Collapsed}
-                                key={module.label}
-                              >
-                                {module.submodules.map(function(submodule) {
-                                  return (
-                                    <Submodule
-                                      title={submodule.label}
-                                      link="#"
-                                      key={submodule.label}
-                                    />
-                                  );
-                                })}
-                              </Module>
-                            );
-                          }.bind(this)
-                        )}
-                      </Group>
-                    );
-                  }.bind(this)
-                )}
-
+                {topNavFixtures.menu().sections[0].groups.map((group, i) => {
+                  return <Group key={i}>
+                    {group.modules.map(module => {
+                      return <Module
+                        icon={module.icon}
+                        contentImage={module.contentImage}
+                        title={module.label}
+                        submodulesClosed={this.state.section1Collapsed}
+                        key={module.label}
+                      >
+                        {module.submodules.map(submodule => {
+                          return <Submodule
+                            title={submodule.label}
+                            link="#"
+                            key={submodule.label}
+                          />
+                        })}
+                      </Module>
+                    })}
+                  </Group>
+                })}
               </Section>
               <Section headerLabel="Account" headerName="GlobalConstruction">
-                <Collapse
-                  isCollapsed={this.state.section2Collapsed}
-                  onClick={this.toggleSection2}
-                />
-
-                {topNavFixtures.menu().sections[1].groups.map(
-                  function(group, i) {
-                    return (
-                      <Group key={i}>
-                        {group.modules.map(
-                          function(module) {
-                            return (
-                              <Module
-                                icon={module.icon}
-                                contentImage={module.contentImage}
-                                title={module.label}
-                                submodulesClosed={this.state.section2Collapsed}
-                                key={module.label}
-                              >
-                                {module.submodules.map(function(submodule) {
-                                  return (
-                                    <Submodule
-                                      title={submodule.label}
-                                      link="#"
-                                      key={submodule.label}
-                                    />
-                                  );
-                                })}
-                              </Module>
-                            );
-                          }.bind(this)
-                        )}
-                      </Group>
-                    );
-                  }.bind(this)
-                )}
-
+                {topNavFixtures.menu().sections[1].groups.map((group, i) => {
+                  return <Group key={i}>
+                    {group.modules.map(module => {
+                      return <Module
+                        icon={module.icon}
+                        contentImage={module.contentImage}
+                        title={module.label}
+                        submodulesClosed={this.state.section2Collapsed}
+                        key={module.label}
+                      >
+                        {module.submodules.map(submodule => {
+                          return <Submodule
+                            title={submodule.label}
+                            link="#"
+                            key={submodule.label}
+                          />
+                        })}
+                      </Module>
+                    })}
+                  </Group>
+                })}
               </Section>
 
             </SectionList>

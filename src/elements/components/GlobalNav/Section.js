@@ -33,15 +33,23 @@ export class Section extends HIGElement {
         this.hig.addGroup(instance, beforeInstance);
       }
     });
-    this.state = {};
+
+    this.state = {
+      expanded: false,
+    };
+
+    this.toggleCollapsed = this.toggleCollapsed.bind(this);
   }
 
   componentDidMount() {
     this.groups.componentDidMount();
-    if (this.collapse) {
-      this.hig.addCollapse(this.collapse.hig);
-      this.collapse.mount();
-    }
+
+    this.collapse = new Collapse(this.hig.partials.Collapse, {
+      isCollapsed: !this.state.expanded
+    });
+    this.hig.addCollapse(this.collapse.hig);
+    this.collapse.mount();
+    this.collapse.hig.onClick(this.toggleCollapsed);
   }
 
   commitUpdate(updatePayload, oldProps, newProp) {
@@ -50,17 +58,28 @@ export class Section extends HIGElement {
       headerName: 'setHeaderName'
     };
 
+    const queryIndex = updatePayload.indexOf('query');
+    if (queryIndex >= 0) {
+      const value = updatePayload.splice(queryIndex, 2)[1];
+      this.state.query = value;
+    }
+
+    const expandedIndex = updatePayload.indexOf('expanded');
+    if (expandedIndex >= 0) {
+      const value = updatePayload.splice(expandedIndex, 2)[1];
+      this.state.expanded = value;
+    }
+
+    if (expandedIndex >= 0 || queryIndex >= 0) {
+      this._render();
+    }
+
     this.commitUpdateWithMapping(updatePayload, mapping);
+  }
 
-    if (Object.keys(updatePayload).includes('query')) {
-      this.state.query = updatePayload.query;
-      this._render();
-    }
-
-    if (Object.keys(updatePayload).includes('expand')) {
-      this.state.expand = updatePayload.expand;
-      this._render();
-    }
+  toggleCollapsed() {
+    this.state.expanded = !this.state.expanded;
+    this._render();
   }
 
   createElement(ElementConstructor, props) {
@@ -81,16 +100,6 @@ export class Section extends HIGElement {
   appendChild(instance) {
     if (instance instanceof Group) {
       this.groups.insertBefore(instance); // calls internal _appendChild if no "before" component
-    } else if (instance instanceof Collapse) {
-      if (this.collapse) {
-        throw new Error('only one Collapse is allowed');
-      } else {
-        this.collapse = instance;
-        if (this.mounted) {
-          this.hig.addCollapse(instance.hig);
-          instance.mount();
-        }
-      }
     }
   }
 
@@ -99,20 +108,25 @@ export class Section extends HIGElement {
   }
 
   _render() {
+    this.collapse.commitUpdate(['isCollapsed', !this.state.expanded]);
     const childVisibility = this.groups.map(group => {
-      group.commitUpdate({
-        query: this.state.query,
-        expanded: this.state.expanded
-      });
+      group.commitUpdate([
+        'query',
+        this.state.query,
+        'expanded',
+        this.state.expanded
+      ]);
 
       return group.isVisible();
     });
 
-    if (childVisibility.some(v => v)) {
+    if (childVisibility.some(v => v) || !this.state.query) {
       this.hig.show();
     } else {
       this.hig.hide();
     }
+
+    this.state.query ? this.collapse.hig.hide() : this.collapse.hig.show();
   }
 }
 
@@ -121,7 +135,8 @@ const SectionComponent = createComponent(Section);
 SectionComponent.propTypes = {
   headerLabel: PropTypes.string,
   headerName: PropTypes.string,
-  children: HIGChildValidator([GroupComponent, CollapseComponent])
+  query: PropTypes.string,
+  children: HIGChildValidator([GroupComponent, CollapseComponent]),
 };
 
 SectionComponent.__docgenInfo = {
@@ -132,6 +147,10 @@ SectionComponent.__docgenInfo = {
 
     headerName: {
       description: 'sets the name'
+    },
+
+    query: {
+      description: 'query to filter children against'
     },
 
     children: {
