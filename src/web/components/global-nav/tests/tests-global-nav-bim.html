@@ -229,12 +229,12 @@
                 SideNav.addSection(generated_section);
 
                 // ADD A COLLAPSE ICON TO OUR SIDENAV SECTION HEADER
-                var generated_collapseIcon = new generated_section.partials.Collapse();
-                generated_section.addCollapse(generated_collapseIcon);
+                var generated_section_collapse_icon = new generated_section.partials.Collapse();
+                generated_section.addCollapse(generated_section_collapse_icon);
 
                 // STORE IN MODEL FOR INTERNAL STATE
                 sectionModel['_generated_section'] = generated_section;
-                sectionModel['_generated_collapseIcon'] = generated_collapseIcon;
+                sectionModel['_generated_section_collapse_icon'] = generated_section_collapse_icon;
                 sectionModel['_collapsed'] = true;
 
                 // LOOP OVER GROUPS
@@ -257,12 +257,20 @@
                             "link": moduleModel["link"]
                         });
                         generated_group.addModule(generated_module);
-
-                        // STORE IN MODEL FOR INTERNAL STATE
-                        moduleModel["_generated_module"] = generated_module;
                         
-                        // LOOP OVER SUBMODULES IF ANY
+                        // DO WE HAVE SUBMODULES?
                         if(moduleModel["submodules"]){
+
+                            // ADD COLLAPSE ICON TO MODULE
+                            var generated_module_collapse_icon = new generated_module.partials.Collapse();
+                            generated_module.addCollapse(generated_module_collapse_icon);
+
+                            // STORE IN MODEL FOR INTERNAL STATE
+                            moduleModel["_generated_module"] = generated_module;
+                            moduleModel["_generated_module_collapse_icon"] = generated_module_collapse_icon;
+                            moduleModel["_collapsed"] = true;
+                            
+                            // LOOP OVER SUBMODULES
                             moduleModel["submodules"].forEach(function(submoduleModel){
                                 var generated_submodule = new generated_module.partials.Submodule({
                                     "title": submoduleModel["label"],
@@ -300,16 +308,16 @@
                 });
 
                 // SECTION EVENTS
-                generated_collapseIcon.onClick(function(e){
+                generated_section_collapse_icon.onClick(function(e){
                     if(sectionModel["_collapsed"]){
-                        generated_collapseIcon.minimize();
+                        generated_section_collapse_icon.minimize();
                         sectionModel["groups"].map(function(groupModel){
                             groupModel["modules"].map(function(moduleModel){
                                 showSubmodules(moduleModel);
                             });
                         });
                     }else{
-                        generated_collapseIcon.maximize();
+                        generated_section_collapse_icon.maximize();
                         sectionModel["groups"].map(function(groupModel){
                             groupModel["modules"].map(function(moduleModel){
                                 hideSubmodules(moduleModel);
@@ -429,9 +437,9 @@
 
                     // HIDE COLLAPSE ICON IN SECTION, NO COLLAPSING IS POSSIBLE WHILE FILTERING
                     if(q == ""){
-                        sectionModel['_generated_collapseIcon'].show();
+                        sectionModel['_generated_section_collapse_icon'].show();
                     }else{
-                        sectionModel['_generated_collapseIcon'].hide();
+                        sectionModel['_generated_section_collapse_icon'].hide();
                     }
 
                     // LOOP OVER GROUPS
@@ -448,10 +456,10 @@
                             if(q == ""){
                                 if(sectionModel["_collapsed"]){
                                     hideSubmodules(moduleModel);
-                                    sectionModel["_generated_collapseIcon"].maximize();
+                                    sectionModel["_generated_section_collapse_icon"].maximize();
                                 }else{
                                     showSubmodules(moduleModel);
-                                    sectionModel["_generated_collapseIcon"].minimize();
+                                    sectionModel["_generated_section_collapse_icon"].minimize();
                                 }
                             }else{
                                 // ALWAYS SHOW SUBMODULES

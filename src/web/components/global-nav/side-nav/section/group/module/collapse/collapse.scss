@@ -1,13 +1,15 @@
 @import '~basics/colors/colors.scss';
 @import '~helpers/css/mixins/base.scss';
 
-.hig__global-nav__side-nav__section__collapse{
+.hig__global-nav__side-nav__section__group__module__collapse{
     position: absolute;
-    top: -4px;
+    top: 6px;
     right: -10px;
 
+    @include vendor-prefix('transform', 'rotate(90deg)');
+
     &--collapsed{
-        @include vendor-prefix('transform', 'rotate(90deg)');
+        @include vendor-prefix('transform', 'rotate(0deg)');
     }
 
     &--hide{

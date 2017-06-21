@@ -23,7 +23,7 @@ $hig__global-nav__sidenav--width: 280px;
         position: absolute;
         top: 0;
         left: 0;
-        right: 5px;
+        right: 4px;
         bottom: 0;
         box-sizing: border-box;
         padding: 4px 16px;
@@ -34,10 +34,9 @@ $hig__global-nav__sidenav--width: 280px;
         } 
 
         &::-webkit-scrollbar-thumb {
-            padding: 2px;
-            width: 4px;
+            width: 5px;
             height: 200px;
-            background-color: #c8d1d7;
+            background-color: $hig-gray-4;
             border-radius: 2px;
         }
     }
