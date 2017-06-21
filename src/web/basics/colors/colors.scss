@@ -1,5 +1,73 @@
-$background-1: #FFFFFF;
-$background-2: #F4F5F6;
+// Background colors
+
+$hig-white: #FFFFFF;
+// $hig-gray-5
+// $hig-slate-dark
+
+// Grays
+
+$hig-gray-1: #0A131C;
+$hig-gray-2: #565C5F;
+$hig-gray-3: #949DA2;
+$hig-gray-4: #D5DBE1;
+$hig-gray-5: #E6EBEF;
+$hig-gray-6: #F2F4F6;
+
+// Accent Colors
+
+$adsk-blue: #0696D7;
+$adsk-blue-dark: #087AAD;
+$adsk-blue-light: #67B1E6;
+$adsk-blue-lightest: #D9EFFF;
+
+$adsk-green: #87BC40;
+$adsk-green-dark: #87BC40;
+$adsk-green-light: #AFDB77;
+$adsk-green-lightest: #E3FAC7;
+
+$adsk-turquoise: #0ED3BE;
+$adsk-turquoise-dark: #0C9E90;
+$adsk-turquoise-light: #8BDCD4;
+$adsk-turquoise-lightest: #E4F8F8;
+
+$adsk-indigo: #1858A8;
+$adsk-indigo-dark: #083B7E;
+$adsk-indigo-light: #5F8ECB;
+$adsk-indigo-lightest: #BFD4F0;
+
+$adsk-gold: #EE8822;
+$adsk-gold-dark: #BB7A14;
+$adsk-gold-light: #FCC776;
+$adsk-gold-lightest: #FEECD1;
+
+// Notification Colors
+
+$good-green: #7CCC13;
+$alert-red: #D7332A;
+$warning-yellow: #F6A623;
+
+
+// Data Visualization
+
+$hig-slate: #4B6B8F;
+$hig-slate-dark: #2E4258;
+$hig-slate-light: #627C99;
+$hig-slate-lightest: #A4B5C7;
+$hig-purple: #9166CC;
+$hig-purple-dark: #7447B3;
+$hig-purple-light: #A87EE6;
+$hig-purple-lightest: #E9D9FF;
+$hig-pink: #CB2A7A;
+$hig-pink-dark: #98446F;
+$hig-pink-light: #EA8DBC;
+$hig-pink-lightest: #FFD9EC;
+$hig-salmon: #FF7B65;
+$hig-salmon-dark: #DA462D;
+$hig-salmon-light: #F7A395;
+$hig-salmon-lightest: #FACAC2;
+
+
+// OLD
 
 $base-1: #34495E;
 $base-2: #EDEFF0;
@@ -23,5 +91,3 @@ $box-shadow-2: rgba(87,91,94,0.65);
 
 $autodesk-blue: #0696D7;
 $gray-darker: #353636;
-
-$hig-gray-4: #D5DBE1;
