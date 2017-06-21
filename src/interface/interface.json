@@ -194,10 +194,26 @@
                                 "hideClearIcon": {
                                     "desc": "hide the clear input icon"
                                 },
-                                "onClearIconClick": "HIG.abstract.EventObject",
-                                "onInput": "HIG.abstract.EventObject",
-                                "onFocusIn": "HIG.abstract.EventObject",
-                                "onFocusOut": "HIG.abstract.EventObject"
+                                "onClearIconClick": {
+                                    "desc": "something",
+                                    "params": "HIG.abstract.EventObject.params",
+                                    "returns": "HIG.abstract.EventObject.returns"
+                                },
+                                "onInput": {
+                                    "desc": "something",
+                                    "params": "HIG.abstract.EventObject.params",
+                                    "returns": "HIG.abstract.EventObject.returns"
+                                },
+                                "onFocusIn": {
+                                    "desc": "something",
+                                    "params": "HIG.abstract.EventObject.params",
+                                    "returns": "HIG.abstract.EventObject.returns"
+                                },
+                                "onFocusOut": {
+                                    "desc": "something",
+                                    "params": "HIG.abstract.EventObject.params",
+                                    "returns": "HIG.abstract.EventObject.returns"
+                                }
                             },
                             "defaults": {
                                 "query": "{String} Set a search query in the input",
