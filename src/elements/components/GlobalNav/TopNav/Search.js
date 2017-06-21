@@ -20,34 +20,30 @@ import createComponent from '../../../../adapters/createComponent';
 
 export class Search extends HIGElement {
   componentDidMount() {
-    if (this.initialProps.isClearIconShown === true) {
-      this.hig.showClearIcon();
-    }
+    this.hig.onInput(this.topNavSearchOnInput.bind(this));
+    this.hig.onClearIconClick(this.topNavClearInput.bind(this));
   }
 
   commitUpdate(updatePayload, oldProps, newProps) {
     const mapping = {
       placeholder: 'setPlaceholder',
-      query: 'setQuery'
     };
-
-    const openIndex = updatePayload.indexOf('isClearIconShown');
-    if (openIndex >= 0) {
-      const [openKey, openSetting] = updatePayload.splice(openIndex, 2);
-      if (openKey) {
-        if (openSetting === true) {
-          this.hig.showClearIcon();
-        } else {
-          this.hig.hideClearIcon();
-        }
-      }
-    }
-
     super.commitUpdateWithMapping(updatePayload, mapping);
   }
+
+  topNavSearchOnInput(event) {
+    this.hig.showClearIcon();
+    this.hig.setQuery(event.target.value);
+  };
+
+  topNavClearInput(event) {
+    this.hig.setQuery("");
+    this.hig.hideClearIcon();
+  };
+
 }
 
-const SearchComponent = createComponent(Search)
+const SearchComponent = createComponent(Search);
 
 SearchComponent.propTypes = {
   placeholder: PropTypes.string,

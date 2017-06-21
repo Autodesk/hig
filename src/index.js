@@ -63,9 +63,9 @@ class App extends React.Component {
       activeProjectOrAccount: 0,
       projectOrAcccountTarget: topNavFixtures.accountList()[0] || topNavFixtures.projectList()[0],
       tabs: [{ label: 'One', id: 0 }, { label: 'Two', id: 1 }],
-      showClearIcon: false,
+      searchPlaceholder: "search for...",
       projects: topNavFixtures.projectList(),
-      accounts: topNavFixtures.accountList()
+      accounts: topNavFixtures.accountList(),
     };
   }
 
@@ -76,9 +76,22 @@ class App extends React.Component {
     });
   };
 
+  handleInputChange = event => {
+    console.log("I'm listening to an input change")
+  };
+
   toggleSideNav = event => {
     this.setState({ open: !this.state.open });
   };
+
+  topNavSearchOnInput = event => {
+    console.log("foo")
+    this.setState( { showClearIcon: true} )
+  }
+  topNavClearInput = event => {
+    this.setState({ topNavQuery: "" })
+    this.setState({ showClearIcon: false })
+  }
 
   openProfileFlyout = event => {
     this.setState({ profileFlyoutOpen: true });
@@ -340,16 +353,7 @@ class App extends React.Component {
               email="jane.doe@example.com"
             />
 
-
-          <TopNavSearch
-            placeholder="type something"
-            query={this.state.topNavQuery}
-            isClearIconShown={ this.state.showClearIcon }
-            onClearIconClick={ this.topNavClearInput }
-            onInput={ this.topNavSearchOnInput  }
-            onFocusIn={ function() { console.log("focus in.")} }
-            onFocusOut={ function() { console.log("never mind.")} }
-          />
+          <TopNavSearch placeholder={this.state.searchPlaceholder} onInput={this.handleInputChange}/>
 
 
           </TopNav>

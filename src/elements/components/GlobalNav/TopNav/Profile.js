@@ -55,7 +55,6 @@ export class Profile extends HIGElement {
 const ProfileComponent = createComponent(Profile);
 
 ProfileComponent.propTypes = {
-  open: PropTypes.bool,
   image: PropTypes.string,
   name: PropTypes.string,
   email: PropTypes.string,
