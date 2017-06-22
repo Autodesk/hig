@@ -85,15 +85,6 @@ class App extends React.Component {
     this.setState({ open: !this.state.open });
   };
 
-  topNavSearchOnInput = event => {
-    console.log("foo")
-    this.setState( { showClearIcon: true} )
-  }
-  topNavClearInput = event => {
-    this.setState({ topNavQuery: "" })
-    this.setState({ showClearIcon: false })
-  }
-
   openProfileFlyout = event => {
     this.setState({ profileFlyoutOpen: true });
   };
@@ -147,19 +138,6 @@ class App extends React.Component {
     this.setState({ activeProjectOrAccount: activeProjectOrAccountItem.id });
     this.setProjectOrAccountTarget(activeProjectOrAccountItem);
   };
-
-  toggleClearIcon = event => {
-    this.setState({ showClearIcon: !this.state.showClearIcon } )
-  };
-
-  topNavSearchOnInput = event => {
-    console.log("foo")
-    this.setState( { showClearIcon: true} )
-  }
-  topNavClearInput = event => {
-    this.setState({ topNavQuery: "" })
-    this.setState({ showClearIcon: false })
-  }
 
   setProjectOrAccountTarget = targetItem => {
     if (targetItem.type === 'account') {
@@ -225,6 +203,7 @@ class App extends React.Component {
                                 icon={module.icon}
                                 contentImage={module.contentImage}
                                 title={module.label}
+                                submodulesClosed={this.state.section1Collapsed}
                                 key={module.label}
                               >
                                 {module.submodules.map(function(submodule) {
@@ -238,11 +217,11 @@ class App extends React.Component {
                                 })}
                               </Module>
                             );
-                          }
+                          }.bind(this)
                         )}
                       </Group>
                     );
-                  }
+                  }.bind(this)
                 )}
               </Section>
               <Section headerLabel="Account" headerName="GlobalConstruction">
@@ -251,7 +230,7 @@ class App extends React.Component {
                   onClick={this.toggleSection2}
                 />
                 {topNavFixtures.menu().sections[1].groups.map(
-                  function(group) {
+                  function(group, i) {
                     return (
                       <Group key={i}>
                         {group.modules.map(
