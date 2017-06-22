@@ -10,8 +10,8 @@ $hig__global-nav__sidenav--width: 280px;
     left: 0;
     bottom: 0;
     background: $hig-white;
-    border-right: 1px solid $base-4;
-    box-shadow: inset -2px 0 7px -2px $box-shadow-2;
+    border-right: 1px solid $hig-gray-50;
+    box-shadow: inset -2px 0 7px -2px $box-shadow-20;
     width: $hig__global-nav__sidenav--width;    
 
     display: none; // Hide by default
@@ -47,7 +47,7 @@ $hig__global-nav__sidenav--width: 280px;
     &__copyright{
         margin-bottom: 40px;
         font-size: 12px;
-        color: $base-5;
+        color: $hig-gray-30;
     }
 }
     .hig__global-nav--open .hig__global-nav__sidenav{

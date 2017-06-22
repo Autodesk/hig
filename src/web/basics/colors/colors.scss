@@ -1,11 +1,10 @@
 // Background colors
-
 $hig-white: #FFFFFF;
-// $hig-gray-5
+// $hig-gray-60
 // $hig-slate-dark
 
-// Grays
 
+// Grays
 $hig-gray-10: #0A131C;
 $hig-gray-20: #565C5F;
 $hig-gray-30: #939CA5;
@@ -14,8 +13,13 @@ $hig-gray-50: #D5DBE1;
 $hig-gray-60: #ECF0F3;
 $hig-gray-70: #F3F7FB;
 
-// Accent Colors
 
+// Box Schadows
+$box-shadow-10: rgba(52,73,94,0.15);
+$box-shadow-20: rgba(87,91,94,0.65);
+
+
+// Accent Colors
 $adsk-blue: #0696D7;
 $adsk-blue-dark: #087AAD;
 $adsk-blue-light: #4EB4E3;
@@ -41,15 +45,14 @@ $adsk-gold-dark: #D98C16;
 $adsk-gold-light: #FBBD5F;
 $adsk-gold-lightest: #FDE3BA;
 
-// Notification Colors
 
+// Notification Colors
 $good-green: #7CCC13;
 $alert-red: #D7332A;
 $warning-yellow: #F6A623;
 
 
 // Data Visualization
-
 $hig-slate: #4B6B8F;
 $hig-slate-dark: #2E4258;
 $hig-slate-light: #7D93AC;
@@ -66,29 +69,3 @@ $hig-salmon: #FF7B65;
 $hig-salmon-dark: #CB604E;
 $hig-salmon-light: #FFA293;
 $hig-salmon-lightest: #FFD7D0;
-
-
-// OLD
-
-$base-1: #34495E;
-$base-2: #EDEFF0;
-$base-3: #DFE3E8;
-$base-4: #D8D8D8;
-$base-5: #8D9EB0;
-
-$gray-f: #F2F3F7;
-$gray-a: #A4B5C7;
-$gray-c: #C5CFD9;
-$gray-d: #DFE3E8;
-$gray-e: #E3E9EE;
-$gray-5: #565C5F;
-$gray-6: #6C7A80;
-$gray-3: #34495E;
-$gray-0: #0A131C;
-$gray-8: #819099;
-
-$box-shadow-1: rgba(52,73,94,0.15);
-$box-shadow-2: rgba(87,91,94,0.65);
-
-$autodesk-blue: #0696D7;
-$gray-darker: #353636;

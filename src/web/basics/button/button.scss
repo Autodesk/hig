@@ -13,19 +13,19 @@
 
     &.hig__button--default {
         background: white;
-        border: 1px solid $gray-d;
+        border: 1px solid $hig-gray-50;
         border-radius: 2px;
 
-        color: $gray-3;
+        color: $hig-slate-dark;
 
         &:hover {
-            box-shadow: 0 2px 6px $box-shadow-1;
-            border: 1px solid $gray-6;
+            box-shadow: 0 2px 6px $box-shadow-10;
+            border: 1px solid $hig-gray-20;
         }
 
         &:active {
             background: $hig-gray-40;
-            border: 1px solid $gray-6;
+            border: 1px solid $hig-gray-20;
             box-shadow: none;
             color: $hig-gray-10;
         }
