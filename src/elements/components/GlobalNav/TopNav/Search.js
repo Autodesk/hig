@@ -47,8 +47,6 @@ const SearchComponent = createComponent(Search);
 SearchComponent.propTypes = {
   placeholder: PropTypes.string,
   query: PropTypes.string,
-  showClearIcon: PropTypes.func,
-  hideClearIcon: PropTypes.func,
   onClearIconClick: PropTypes.func,
   onInput: PropTypes.func,
   onFocusIn: PropTypes.func,
@@ -57,10 +55,8 @@ SearchComponent.propTypes = {
 
 SearchComponent.__docgenInfo = {
   props: {
-    setPlaceholder: { description: '{String} sets the placeholder text' },
-    setQuery: { description: '{String} sets the search query text' },
-    showClearIcon: { description: '{function} shows the clear input icon' },
-    hideClearIcon: { description: '{function} hides the clear input icon' },
+    placeholder: { description: '{String} sets the placeholder text' },
+    query: { description: '{String} sets the search query text' },
     onClearIconClick: {
       description: '{function} Triggers when user clicks clear icon'
     },

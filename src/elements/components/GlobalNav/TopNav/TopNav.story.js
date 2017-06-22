@@ -17,7 +17,7 @@ limitations under the License.
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { select, boolean } from '@storybook/addon-knobs';
+import { text } from '@storybook/addon-knobs';
 import GlobalNav from '../GlobalNav';
 import logo from '../../../../images/bim-logo.png';
 
@@ -51,7 +51,8 @@ storiesOf('TopNav Search', module)
         <GlobalNav>
           <TopNav logo={logo}>
             <TopNavSearch
-              placeholder="in search of..."
+              placeholder={text('Placeholder', 'in search of...')}
+              query={text('Query', '')}
               onInput={action('Typing detected')}
               onFocusIn={action('Focus in')}
               onFocusOut={action('Focus out')}
