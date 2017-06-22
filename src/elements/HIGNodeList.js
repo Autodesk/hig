@@ -68,15 +68,17 @@ export default class HIGNodeList {
     if (this.mounted) {
       if (beforeChild) {
         this.onAdd(instance.hig, beforeChild.hig);
+        instance.mount();
       } else {
         this.onAdd(instance.hig);
+        instance.mount();
       }
     }
   }
   _appendChild(node) {
     this.nodes.push(node);
   }
-
+  
   _insertBefore(node, beforeNode) {
     const index = this.nodes.indexOf(beforeNode);
     this.nodes.splice(index, 0, node);

@@ -11,7 +11,7 @@ exports[`<Tabs> adds tabs 1`] = `
         <div class=\\"hig__global-nav__sub-nav__module-indicator__name\\">Module Name</div>
     </div>
     <div class=\\"hig__global-nav__sub-nav__tabs\\">
-    <div class=\\"hig__global-nav__sub-nav__tabs__tab\\">Hello</div><div class=\\"hig__global-nav__sub-nav__tabs__tab \\">There</div><div class=\\"hig__global-nav__sub-nav__tabs__tab\\">World</div><div class=\\"hig__global-nav__sub-nav__tabs__tab \\">!</div><!--TAB-->
+    <div class=\\"hig__global-nav__sub-nav__tabs__tab\\">Hello</div><div class=\\"hig__global-nav__sub-nav__tabs__tab\\">There</div><div class=\\"hig__global-nav__sub-nav__tabs__tab\\">World</div><div class=\\"hig__global-nav__sub-nav__tabs__tab\\">!</div><!--TAB-->
 </div><!--TABS-->
     <div class=\\"hig__global-nav__sub-nav__module-indicator\\">
         <div class=\\"hig__global-nav__sub-nav__module-indicator__icon hig__global-nav__sub-nav__spacer\\">#</div>

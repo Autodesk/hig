@@ -63,6 +63,7 @@ export class Module extends HIGElement {
 
   componentDidMount() {
     this.submodules.componentDidMount();
+    this._render();
   }
 
   createElement(ElementConstructor, props) {

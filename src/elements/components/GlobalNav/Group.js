@@ -36,6 +36,7 @@ export class Group extends HIGElement {
 
   componentDidMount() {
     this.modules.componentDidMount();
+    this._render()
   }
 
   createElement(ElementConstructor, props) {

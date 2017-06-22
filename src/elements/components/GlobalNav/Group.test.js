@@ -55,6 +55,10 @@ function higContext() {
 
   higSideNav.addSection(higSection);
 
+  const collapse1 = new higSection.partials.Collapse({});
+
+  higSection.addCollapse(collapse1);
+
   const higGroup = new higSection.partials.Group();
 
   higSection.addGroup(higGroup);

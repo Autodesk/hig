@@ -20,7 +20,13 @@ import React from 'react';
 
 import GlobalNav from './GlobalNav';
 import SideNav from './SideNav';
+import Search from './Search';
 import SectionList from './SectionList';
+import Section from './Section';
+import Group from './Group';
+import Module from './Module';
+import Submodule from './Submodule';
+
 import LinkList from './LinkList';
 
 describe('<SideNav>', () => {
@@ -145,5 +151,52 @@ describe('<SideNav>', () => {
         /'Hello World!' is not a valid child of SideNav./
       )
     );
+  });
+
+  describe('<SideNav> with search', () => {
+    const Context = props => {
+      return (
+        <GlobalNav>
+          <SideNav>
+            <Search query={props.query}/>
+            <SectionList>
+              <Section headerLabel="Project" headerName="Thunderstor">
+                <Group>
+                  <Module title={props.moduleTitle}>
+                    <Submodule title={props.submoduleTitle1}/>
+                    <Submodule title={props.submoduleTitle2 } />
+                  </Module>  
+                </Group>  
+              </Section>  
+
+            </SectionList>  
+          </SideNav>  
+          
+        </GlobalNav>
+      );
+    };
+
+    
+
+    function setupReactContext(props) {
+      const reactContainer = document.createElement('div');
+      mount(<Context {...props} />, { attachTo: reactContainer });
+      return { reactContainer };
+    }
+
+    it('renders children correctly', () => {
+      const props = { 
+        placeholder: 'Search Here', 
+        headerLabel: 'Oakland Medical Center',
+        headerName: 'Thunderstorm',
+        moduleTitle: 'Document Workflow',
+        submoduleTitle1: 'Document', 
+        submoduleTitle2: 'Workflow'
+      };
+      const {reactContainer} = setupReactContext(props);
+      expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
+    });
+
+    
   });
 });

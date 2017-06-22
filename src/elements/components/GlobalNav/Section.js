@@ -36,6 +36,7 @@ export class Section extends HIGElement {
 
     this.state = {
       expanded: false,
+      query: initialProps.query
     };
 
     this.toggleCollapsed = this.toggleCollapsed.bind(this);
@@ -50,6 +51,7 @@ export class Section extends HIGElement {
     this.hig.addCollapse(this.collapse.hig);
     this.collapse.mount();
     this.collapse.hig.onClick(this.toggleCollapsed);
+    this._render()
   }
 
   commitUpdate(updatePayload, oldProps, newProp) {

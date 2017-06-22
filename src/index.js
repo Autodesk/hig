@@ -181,7 +181,6 @@ class App extends React.Component {
                         icon={module.icon}
                         contentImage={module.contentImage}
                         title={module.label}
-                        submodulesClosed={this.state.section1Collapsed}
                         key={module.label}
                       >
                         {module.submodules.map(submodule => {
@@ -204,7 +203,6 @@ class App extends React.Component {
                         icon={module.icon}
                         contentImage={module.contentImage}
                         title={module.label}
-                        submodulesClosed={this.state.section2Collapsed}
                         key={module.label}
                       >
                         {module.submodules.map(submodule => {
