@@ -69,3 +69,13 @@ $hig-salmon: #FF7B65;
 $hig-salmon-dark: #CB604E;
 $hig-salmon-light: #FFA293;
 $hig-salmon-lightest: #FFD7D0;
+
+
+// Create class styles based on variable names
+$colors: $hig-gray-10, $hig-gray-20, $hig-gray-30, $hig-gray-40, $hig-gray-50, $hig-gray-60, $hig-gray-70;
+
+@for $i from 1 through length($colors) {
+    .hig__colors__background__#{$i} {
+        background-color: nth($colors, $i);
+    }
+}
