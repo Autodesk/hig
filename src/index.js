@@ -60,7 +60,6 @@ class App extends React.Component {
       section2Collapsed: true,
       open: false,
       profileFlyoutOpen: false,
-      isOpen: false,
       activeTab: 0,
       activeProjectOrAccount: 0,
       projectOrAcccountTarget: this.accountList()[0] || this.projectList()[0],
@@ -79,14 +78,6 @@ class App extends React.Component {
 
   toggleSideNav = event => {
     this.setState({ open: !this.state.open });
-  };
-
-  openProjectAccountSwitcher = event => {
-    this.setState({ isOpen: true });
-  };
-
-  closeProjectAccountSwitcher = event => {
-    this.setState({ isOpen: false });
   };
 
   openProfileFlyout = event => {
@@ -141,7 +132,6 @@ class App extends React.Component {
   setActiveProjectOrAccount = activeProjectOrAccountItem => {
     this.setState({ activeProjectOrAccount: activeProjectOrAccountItem.id });
     this.setProjectOrAccountTarget(activeProjectOrAccountItem);
-    this.setState({ isOpen: false });
   };
 
   setProjectOrAccountTarget = targetItem => {
@@ -580,9 +570,9 @@ class App extends React.Component {
                   isCollapsed={this.state.section1Collapsed}
                 />
                 {this.menu().sections[0].groups.map(
-                  function(group) {
+                  function(group, i) {
                     return (
-                      <Group>
+                      <Group key={i}>
                         {group.modules.map(
                           function(module) {
                             return (
@@ -617,9 +607,9 @@ class App extends React.Component {
                   onClick={this.toggleSection2}
                 />
                 {this.menu().sections[1].groups.map(
-                  function(group) {
+                  function(group, i) {
                     return (
-                      <Group>
+                      <Group key={i}>
                         {group.modules.map(
                           function(module) {
                             return (
@@ -667,9 +657,6 @@ class App extends React.Component {
                   activeLabel={this.state.projectOrAcccountTarget.label}
                   activeImage={this.state.projectOrAcccountTarget.image}
                   activeType={this.state.projectOrAcccountTarget.type}
-                  isOpen={this.state.isOpen}
-                  onClickOutside={this.closeProjectAccountSwitcher}
-                  onClick={this.openProjectAccountSwitcher}
                   hideProjectAccountFlyout={false}
                 >
                   {this.state.projects.map((project, i) => {

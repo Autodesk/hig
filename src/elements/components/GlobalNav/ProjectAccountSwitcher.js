@@ -26,6 +26,7 @@ import ProjectComponent, { Project } from './Project';
 export class ProjectAccountSwitcher extends HIGElement {
   constructor(HIGConstructor, initialProps) {
     super(HIGConstructor, initialProps);
+
     this.accounts = new HIGNodeList({
       type: Account,
       HIGConstructor: this.hig.partials.Account,
@@ -41,6 +42,10 @@ export class ProjectAccountSwitcher extends HIGElement {
         this.hig.addProject(instance, beforeInstance);
       }
     });
+
+    ['openFlyout', 'closeFlyout'].forEach(fn => {
+      this[fn] = this[fn].bind(this);
+    });
   }
 
   componentDidMount() {
@@ -54,6 +59,17 @@ export class ProjectAccountSwitcher extends HIGElement {
     if (this.initialProps.hideProjectAccountFlyout) {
       this.hig.removeCaretFromTarget();
     }
+
+    this.hig.onClick(this.openFlyout);
+    this.hig.onClickOutside(this.closeFlyout);
+  }
+
+  openFlyout() {
+    this.hig.open();
+  }
+
+  closeFlyout() {
+    this.hig.close();
   }
 
   commitUpdate(updatePayload, oldProps, newProp) {
