@@ -9,7 +9,7 @@
     left: 0;
     right: 0;
     height: 52px;
-    border-top: 1px solid $hig-gray-4;  
+    border-top: 1px solid $hig-gray-40;  
 
     &__icon{
         position: absolute;
@@ -27,7 +27,7 @@
 
         &__input{
             @include reset;
-            border: 1px solid $hig-gray-4;
+            border: 1px solid $hig-gray-40;
             border-radius: 4px;
             font-size: 14px;
             padding: 6px 6px 6px 35px;

@@ -6,12 +6,13 @@ $hig-white: #FFFFFF;
 
 // Grays
 
-$hig-gray-1: #0A131C;
-$hig-gray-2: #565C5F;
-$hig-gray-3: #949DA2;
-$hig-gray-4: #D5DBE1;
-$hig-gray-5: #E6EBEF;
-$hig-gray-6: #F2F4F6;
+$hig-gray-10: #0A131C;
+$hig-gray-20: #565C5F;
+$hig-gray-30: #939CA5;
+$hig-gray-40: #BEC8D2;
+$hig-gray-50: #D5DBE1;
+$hig-gray-60: #ECF0F3;
+$hig-gray-70: #F3F7FB;
 
 // Accent Colors
 
@@ -51,23 +52,23 @@ $warning-yellow: #F6A623;
 
 $hig-slate: #4B6B8F;
 $hig-slate-dark: #2E4258;
-$hig-slate-light: #627C99;
-$hig-slate-lightest: #A4B5C7;
-$hig-purple: #9166CC;
-$hig-purple-dark: #7447B3;
-$hig-purple-light: #A87EE6;
-$hig-purple-lightest: #E9D9FF;
-$hig-pink: #CB2A7A;
-$hig-pink-dark: #98446F;
-$hig-pink-light: #EA8DBC;
-$hig-pink-lightest: #FFD9EC;
+$hig-slate-light: #7D93AC;
+$hig-slate-lightest: #C0C9D4;
+$hig-purple: #A76EF5;
+$hig-purple-dark: #794FB2;
+$hig-purple-light: #C199F8;
+$hig-purple-lightest: #E4D3FC;
+$hig-pink: #F73595;
+$hig-pink-dark: #B5236B;
+$hig-pink-light: #F871B4;
+$hig-pink-lightest: #FCC2DF;
 $hig-salmon: #FF7B65;
-$hig-salmon-dark: #DA462D;
-$hig-salmon-light: #F7A395;
-$hig-salmon-lightest: #FACAC2;
+$hig-salmon-dark: #CB604E;
+$hig-salmon-light: #FFA293;
+$hig-salmon-lightest: #FFD7D0;
 
 
-// OLD, TO BE CONSOLIDATED, DO NOT USE!
+// OLD
 
 $base-1: #34495E;
 $base-2: #EDEFF0;
@@ -77,15 +78,17 @@ $base-5: #8D9EB0;
 
 $gray-f: #F2F3F7;
 $gray-a: #A4B5C7;
+$gray-c: #C5CFD9;
 $gray-d: #DFE3E8;
 $gray-e: #E3E9EE;
-
+$gray-5: #565C5F;
 $gray-6: #6C7A80;
 $gray-3: #34495E;
-
+$gray-0: #0A131C;
 $gray-8: #819099;
 
 $box-shadow-1: rgba(52,73,94,0.15);
 $box-shadow-2: rgba(87,91,94,0.65);
 
+$autodesk-blue: #0696D7;
 $gray-darker: #353636;
