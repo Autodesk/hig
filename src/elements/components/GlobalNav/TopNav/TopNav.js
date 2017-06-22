@@ -102,9 +102,6 @@ export class TopNav extends HIGElement {
     } else {
       this[this.getPropertyNameFor(instance)] = instance;
       if (this.mounted) {
-        if (instance instanceof Search) {
-          console.log("I'm foo");
-        }
         this.hig[this.getFunctionNameFor(instance)](instance.hig);
         instance.mount();
       }

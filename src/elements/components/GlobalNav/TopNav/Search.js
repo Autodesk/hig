@@ -26,7 +26,8 @@ export class Search extends HIGElement {
 
   commitUpdate(updatePayload, oldProps, newProps) {
     const mapping = {
-      placeholder: 'setPlaceholder'
+      placeholder: 'setPlaceholder',
+      query: 'setQuery'
     };
     super.commitUpdateWithMapping(updatePayload, mapping);
   }
