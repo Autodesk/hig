@@ -5,7 +5,7 @@ $hig__global-nav__sidenav--width: 280px;
 
 .hig__global-nav__sidenav {
     @include reset;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
