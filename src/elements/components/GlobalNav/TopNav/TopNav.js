@@ -124,14 +124,26 @@ export class TopNav extends HIGElement {
   }
 
   requireSingleInstance(instance) {
-    const requiredSingle = ['Profile', 'ProjectAccountSwitcher', 'Help', 'Search'];
+    const requiredSingle = [
+      'Profile',
+      'ProjectAccountSwitcher',
+      'Help',
+      'Search'
+    ];
     super.requireSingleInstance(instance, requiredSingle);
   }
 
   checkValidChild(instance) {
-    const validInstances = [Profile, ProjectAccountSwitcher, Shortcut, Help, Search];
+    const validInstances = [
+      Profile,
+      ProjectAccountSwitcher,
+      Shortcut,
+      Help,
+      Search
+    ];
     if (!validInstances.includes(instance.constructor)) {
-      throw new Error(`${instance.constructor.name} is not a valid child element of this parent.`
+      throw new Error(
+        `${instance.constructor.name} is not a valid child element of this parent.`
       );
     }
   }
@@ -150,7 +162,7 @@ export class TopNav extends HIGElement {
       return 'help';
     }
     if (instance instanceof Search) {
-      return 'search'
+      return 'search';
     }
     return null;
   }

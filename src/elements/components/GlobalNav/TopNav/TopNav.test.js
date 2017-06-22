@@ -53,7 +53,7 @@ describe('<TopNav>', () => {
     const { higNav, domContainer } = createHigNav();
     const topNav = new higNav.partials.TopNav({ ...defaults });
     higNav.addTopNav(topNav);
-    return { topNav, higNav, domContainer }
+    return { topNav, higNav, domContainer };
   }
 
   // Create the GlobalNav context for the TopNav to be attached to
@@ -103,10 +103,10 @@ describe('<TopNav>', () => {
   }
 
   it('can render Search programmatically', () => {
-    const  { topNav, higNav, domContainer } = createTopNav();
+    const { topNav, higNav, domContainer } = createTopNav();
     const props = {
-      placeholder: "enter some text",
-      query: "foobar",
+      placeholder: 'enter some text',
+      query: 'foobar',
       onInput: anyHandler,
       onFocusIn: anyHandler,
       onFocusOut: anyHandler
@@ -115,24 +115,28 @@ describe('<TopNav>', () => {
     topNav.addSearch(tnsearch);
 
     expect(domContainer.firstChild.outerHTML).toMatchSnapshot();
-    const elems = domContainer.getElementsByClassName('hig__global-nav__top-nav__search__inputholder__input');
+    const elems = domContainer.getElementsByClassName(
+      'hig__global-nav__top-nav__search__inputholder__input'
+    );
     expect(elems.length).toEqual(1);
   });
 
   it('can render Search through React-like components', () => {
     const reactContainer = document.createElement('div');
     const props = {
-      placeholder: "enter some text",
-      query: "foobar",
+      placeholder: 'enter some text',
+      query: 'foobar',
       onInput: anyHandler,
       onFocusIn: anyHandler,
       onFocusOut: anyHandler
     };
 
-    mount( Context(props), {attachTo: reactContainer});
+    mount(Context(props), { attachTo: reactContainer });
     expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
 
-    const elems = reactContainer.getElementsByClassName('hig__global-nav__top-nav__search__inputholder__input');
+    const elems = reactContainer.getElementsByClassName(
+      'hig__global-nav__top-nav__search__inputholder__input'
+    );
     expect(elems.length).toEqual(1);
   });
 });

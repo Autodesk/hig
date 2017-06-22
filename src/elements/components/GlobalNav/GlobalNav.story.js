@@ -115,81 +115,74 @@ import project3 from '../../../images/project-3.png';
 import project4 from '../../../images/project-4.png';
 
 storiesOf('GlobalNav', module)
-  .addWithInfo(
-    'default',
-    <div><p>Global Nav basic usage</p></div>,
-    () => {
-      const sideNavOpen = boolean('sideNavOpen', false);
-      return (
-        <GlobalNav sideNavOpen={sideNavOpen}>
-          <SideNav>
-            <SectionList>
-              <Section headerLabel="Project" headerName="ThunderStorm">
-                <Group />
-              </Section>
-              <Section headerLabel="Project" headerName="Thunderstorm">
-                <Group />
-              </Section>
-            </SectionList>
-          </SideNav>
-          <TopNav logo={logo}>
+  .addWithInfo('default', <div><p>Global Nav basic usage</p></div>, () => {
+    const sideNavOpen = boolean('sideNavOpen', false);
+    return (
+      <GlobalNav sideNavOpen={sideNavOpen}>
+        <SideNav>
+          <SectionList>
+            <Section headerLabel="Project" headerName="ThunderStorm">
+              <Group />
+            </Section>
+            <Section headerLabel="Project" headerName="Thunderstorm">
+              <Group />
+            </Section>
+          </SectionList>
+        </SideNav>
+        <TopNav logo={logo}>
 
-            <ProjectAccountSwitcher
-              activeLabel="Oakland Medical Center"
-              activeImage={project1}
-              activeType="account"
-              isOpen={false}
-              onClickOutside={action('clicked')}
+          <ProjectAccountSwitcher
+            activeLabel="Oakland Medical Center"
+            activeImage={project1}
+            activeType="account"
+            isOpen={false}
+            onClickOutside={action('clicked')}
+            onClick={action('clicked')}
+          >
+            <Account
+              image={project2}
+              label="Stanford hospital"
+              active={false}
               onClick={action('clicked')}
-            >
-              <Account
-                image={project2}
-                label="Stanford hospital"
-                active={false}
-                onClick={action('clicked')}
-              />
-              <Account
-                image=""
-                label="Oakland Medical Center"
-                active={true}
-                onClick={action('clicked')}
-              />
-
-              <Project
-                image={project4}
-                label=""
-                active={false}
-                onClick={action('clicked')}
-              />
-
-              <Project
-                image={project1}
-                label="Stanford hospital"
-                active={false}
-                onClick={action('clicked')}
-              />
-            </ProjectAccountSwitcher>
-            <Shortcut icon="gear" title="GEAR" link="#" />
-            <Help title="HELLLP MEEEE!!!!" link="#`" />
-            <Profile
-              name="Jane Designer"
-              email="jane.designer@example.com"
-              signOutLabel="Sign Out"
-              open={false}
-              image={profileImage}
-              onProfileImageClick={action('clicked')}
-              onSignOutClick={action('clicked')}
             />
-          </TopNav>
-          <SubNav
-            moduleIndicatorName="Insight"
-            moduleIndicatorIcon="hamburger"
+            <Account
+              image=""
+              label="Oakland Medical Center"
+              active={true}
+              onClick={action('clicked')}
+            />
+
+            <Project
+              image={project4}
+              label=""
+              active={false}
+              onClick={action('clicked')}
+            />
+
+            <Project
+              image={project1}
+              label="Stanford hospital"
+              active={false}
+              onClick={action('clicked')}
+            />
+          </ProjectAccountSwitcher>
+          <Shortcut icon="gear" title="GEAR" link="#" />
+          <Help title="HELLLP MEEEE!!!!" link="#`" />
+          <Profile
+            name="Jane Designer"
+            email="jane.designer@example.com"
+            signOutLabel="Sign Out"
+            open={false}
+            image={profileImage}
+            onProfileImageClick={action('clicked')}
+            onSignOutClick={action('clicked')}
           />
-          <Slot>{LONG_COPY}</Slot>
-        </GlobalNav>
-      );
-    }
-  )
+        </TopNav>
+        <SubNav moduleIndicatorName="Insight" moduleIndicatorIcon="hamburger" />
+        <Slot>{LONG_COPY}</Slot>
+      </GlobalNav>
+    );
+  })
   .addWithInfo('w profileFlyoutOpen', ``, () => {
     const profileFlyoutOpenKnob = boolean('profileFlyoutOpen', true);
     return (
@@ -201,7 +194,7 @@ storiesOf('GlobalNav', module)
             email="jane.designer@example.com"
             signOutLabel="Sign Out"
             open={profileFlyoutOpenKnob}
-            image={profileImage}k
+            image={profileImage}
             onProfileImageClick={action('clicked')}
             onProfileImageClick={action('clicked')}
           />
@@ -277,66 +270,59 @@ storiesOf('GlobalNav', module)
       </GlobalNav>
     );
   })
-  .addWithInfo(
-    'w sideNavOpen',
-    ``,
-    () => {
-      const sideNavOpen = boolean('sideNavOpen', true);
-      return (
-        <GlobalNav sideNavOpen={sideNavOpen}>
-          <SideNav>
-            <SectionList>
-              <Section headerLabel="Project" headerName="ThunderStorm">
-                <Collapse onClick={action('clicked')} isCollapsed={true} />
-                <Group>
-                  <Module
-                    icon="project-management"
-                    title="Item 1"
+  .addWithInfo('w sideNavOpen', ``, () => {
+    const sideNavOpen = boolean('sideNavOpen', true);
+    return (
+      <GlobalNav sideNavOpen={sideNavOpen}>
+        <SideNav>
+          <SectionList>
+            <Section headerLabel="Project" headerName="ThunderStorm">
+              <Collapse onClick={action('clicked')} isCollapsed={true} />
+              <Group>
+                <Module
+                  icon="project-management"
+                  title="Item 1"
+                  link="#"
+                  onClick={action('clicked')}
+                  submodulesClosed={true}
+                >
+                  <Submodule
+                    title="Item 2"
                     link="#"
                     onClick={action('clicked')}
-                    submodulesClosed={true}
-                  >
-                    <Submodule
-                      title="Item 2"
-                      link="#"
-                      onClick={action('clicked')}
-                    />
-                  </Module>
-                </Group>
-              </Section>
-              <Section
-                headerLabel="Contractor"
-                headerName="Oakland Medical Center"
-              >
-                <Collapse onClick={action('clicked')} isCollapsed={false} />
-                <Group>
-                  <Module
-                    icon="project-management"
-                    title="Item 1"
+                  />
+                </Module>
+              </Group>
+            </Section>
+            <Section
+              headerLabel="Contractor"
+              headerName="Oakland Medical Center"
+            >
+              <Collapse onClick={action('clicked')} isCollapsed={false} />
+              <Group>
+                <Module
+                  icon="project-management"
+                  title="Item 1"
+                  link="#"
+                  onClick={action('clicked')}
+                  submodulesClosed={false}
+                >
+                  <Submodule
+                    title="Item 2"
                     link="#"
                     onClick={action('clicked')}
-                    submodulesClosed={false}
-                  >
-                    <Submodule
-                      title="Item 2"
-                      link="#"
-                      onClick={action('clicked')}
-                    />
-                  </Module>
-                </Group>
-              </Section>
-            </SectionList>
-          </SideNav>
-          <TopNav logo={logo} />
-          <SubNav
-            moduleIndicatorName="Insight"
-            moduleIndicatorIcon="hamburger"
-          />
-          <Slot>{LONG_COPY}</Slot>
-        </GlobalNav>
-      );
-    }
-  )
+                  />
+                </Module>
+              </Group>
+            </Section>
+          </SectionList>
+        </SideNav>
+        <TopNav logo={logo} />
+        <SubNav moduleIndicatorName="Insight" moduleIndicatorIcon="hamburger" />
+        <Slot>{LONG_COPY}</Slot>
+      </GlobalNav>
+    );
+  })
   .addWithInfo('? no children', ``, () => {
     const sideNavOpen = boolean('sideNavOpen', true);
     return <GlobalNav sideNavOpen={sideNavOpen} />;

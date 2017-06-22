@@ -26,7 +26,7 @@ export class Search extends HIGElement {
 
   commitUpdate(updatePayload, oldProps, newProps) {
     const mapping = {
-      placeholder: 'setPlaceholder',
+      placeholder: 'setPlaceholder'
     };
     super.commitUpdateWithMapping(updatePayload, mapping);
   }
@@ -34,13 +34,12 @@ export class Search extends HIGElement {
   topNavSearchOnInput(event) {
     this.hig.showClearIcon();
     this.hig.setQuery(event.target.value);
-  };
+  }
 
   topNavClearInput(event) {
-    this.hig.setQuery("");
+    this.hig.setQuery('');
     this.hig.hideClearIcon();
-  };
-
+  }
 }
 
 const SearchComponent = createComponent(Search);
@@ -58,14 +57,18 @@ SearchComponent.propTypes = {
 
 SearchComponent.__docgenInfo = {
   props: {
-    setPlaceholder: { description: "{String} sets the placeholder text" },
-    setQuery: { description: "{String} sets the search query text" },
-    showClearIcon: { description: "{function} shows the clear input icon" },
-    hideClearIcon: { description: "{function} hides the clear input icon" },
-    onClearIconClick: { description: "{function} Triggers when user clicks clear icon" },
-    onInput: { description: "{function} Triggers when user enters text into search field"},
-    onFocusIn: { description: "{function} Triggers when input has focus"},
-    onFocusOut: { description: "{function} Triggers when input loses focus"}
+    setPlaceholder: { description: '{String} sets the placeholder text' },
+    setQuery: { description: '{String} sets the search query text' },
+    showClearIcon: { description: '{function} shows the clear input icon' },
+    hideClearIcon: { description: '{function} hides the clear input icon' },
+    onClearIconClick: {
+      description: '{function} Triggers when user clicks clear icon'
+    },
+    onInput: {
+      description: '{function} Triggers when user enters text into search field'
+    },
+    onFocusIn: { description: '{function} Triggers when input has focus' },
+    onFocusOut: { description: '{function} Triggers when input loses focus' }
   }
 };
 export default SearchComponent;

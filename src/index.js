@@ -61,11 +61,12 @@ class App extends React.Component {
       profileFlyoutOpen: false,
       activeTab: 0,
       activeProjectOrAccount: 0,
-      projectOrAcccountTarget: topNavFixtures.accountList()[0] || topNavFixtures.projectList()[0],
+      projectOrAcccountTarget: topNavFixtures.accountList()[0] ||
+        topNavFixtures.projectList()[0],
       tabs: [{ label: 'One', id: 0 }, { label: 'Two', id: 1 }],
-      searchPlaceholder: "search for...",
+      searchPlaceholder: 'search for...',
       projects: topNavFixtures.projectList(),
-      accounts: topNavFixtures.accountList(),
+      accounts: topNavFixtures.accountList()
     };
   }
 
@@ -77,7 +78,7 @@ class App extends React.Component {
   };
 
   handleInputChange = event => {
-    console.log("I'm listening to an input change")
+    console.log("I'm listening to an input change");
   };
 
   toggleSideNav = event => {
@@ -353,8 +354,10 @@ class App extends React.Component {
               email="jane.doe@example.com"
             />
 
-          <TopNavSearch placeholder={this.state.searchPlaceholder} onInput={this.handleInputChange}/>
-
+            <TopNavSearch
+              placeholder={this.state.searchPlaceholder}
+              onInput={this.handleInputChange}
+            />
 
           </TopNav>
           <SubNav
@@ -387,8 +390,8 @@ class App extends React.Component {
             <Button title="Add tab after" onClick={this.addTabAfter} />
             <Button title="Remove tab" onClick={this.removeTab} />
 
-            {topNavFixtures.hipsterContent().map((paragraph) => {
-              return (<p>{paragraph}</p>);
+            {topNavFixtures.hipsterContent().map(paragraph => {
+              return <p>{paragraph}</p>;
             })}
           </Slot>
         </GlobalNav>
