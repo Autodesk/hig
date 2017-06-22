@@ -32,34 +32,34 @@
             Section1.addGroup(Group1);
 
             // ADD SOME ITEMS TO OUR GROUP
-            var Group1_Item1 = new Group1.partials.Item({
+            var Group1_Module1 = new Group1.partials.Module({
                 "icon": "project-management",
-                "title": "Item 1",
+                "title": "Module 1",
                 "link": "#"
             });
-            Group1.addItem(Group1_Item1);
+            Group1.addModule(Group1_Module1);
 
-            var Group1_Item2 = new Group1.partials.Item({
+            var Group1_Module2 = new Group1.partials.Module({
                 "icon": "project-management",
-                "title": "Item 2",
+                "title": "Module 2",
                 "link": "#"
             });
-            Group1.addItem(Group1_Item2);
+            Group1.addModule(Group1_Module2);
 
-            var Group1_Item3 = new Group1.partials.Item({
+            var Group1_Module3 = new Group1.partials.Module({
                 "icon": "project-management",
-                "title": "Item 3",
+                "title": "Module 3",
                 "link": "#"
             });
-            Group1.addItem(Group1_Item3, Group1_Item2); // Test insert with custom reference node
+            Group1.addModule(Group1_Module3, Group1_Module2); // Test insert with custom reference node
 
-            Group1_Item3.setTitle("Different Title 3");
-            Group1_Item3.setLink("http://autodesk.com");
-            Group1_Item3.setIcon("hamburger");
+            Group1_Module3.setTitle("Different Title 3");
+            Group1_Module3.setLink("http://autodesk.com");
+            Group1_Module3.setIcon("hamburger");
 
-            Group1_Item1.onClick(function(e){
+            Group1_Module1.onClick(function(e){
                 e.preventDefault();
-                alert('Item 1 clicked');
+                alert('Module 1 clicked');
             }); // Test click action
 
             // ADD ANOTHER GROUP TO OUR SECTION
@@ -67,12 +67,12 @@
             Section1.addGroup(Group2);
 
             // ADD SOME ITEMS TO OUR GROUP
-            var Group2_Item1 = new Group2.partials.Item({
+            var Group2_Module1 = new Group2.partials.Module({
                 "icon": "project-management",
-                "title": "Item 1",
+                "title": "Module 1",
                 "link": "#"
             });
-            Group2.addItem(Group2_Item1);
+            Group2.addModule(Group2_Module1);
 
             // ADD ANOTHER SECTION IN OUR SIDENAV
             var Section2 = new SideNav.partials.Section({
@@ -86,19 +86,19 @@
             Section2.addGroup(Group1);
 
             // ADD SOME ITEMS TO OUR GROUP
-            var Group1_Item1 = new Group1.partials.Item({
+            var Group1_Module1 = new Group1.partials.Module({
                 "icon": "project-management",
-                "title": "Item 1",
+                "title": "Module 1",
                 "link": "#"
             });
-            Group1.addItem(Group1_Item1);
+            Group1.addModule(Group1_Module1);
 
-            var Group1_Item2 = new Group1.partials.Item({
+            var Group1_Module2 = new Group1.partials.Module({
                 "icon": "project-management",
-                "title": "Item 2",
+                "title": "Module 2",
                 "link": "#"
             });
-            Group1.addItem(Group1_Item2);
+            Group1.addModule(Group1_Module2);
 
             // ADD TOPNAV
             var TopNav = new GlobalNav.partials.TopNav({
@@ -123,7 +123,18 @@
             MyProfile1.setSignOutLink('http://google.com');
 
             MyProfile1.onProfileImageClick(function(e){ MyProfile1.open() });
-            MyProfile1.onProfileClickOutside(function(e){ MyProfile1.close() });
+            MyProfile1.onProfileClickOutside(function(e){ MyProfile1.close() });]
+
+            // TOPNAV SEARCH
+            TopnavSearch = new TopNav.partials.Search({
+                placeholder: "search for stuff"
+            });
+
+            TopNav.addSearch(TopnavSearch);
+
+            TopnavSearch.onInput(function() { console.log("typing detected") });
+            TopnavSearch.onFocusIn(function() { console.log("focus gained") });
+            TopnavSearch.onFocusOut(function() { console.log("focus lost") });
 
             // HAMBURGER OPENS/CLOSES SideNav
             var menu_open = false;

@@ -194,10 +194,26 @@
                                 "hideClearIcon": {
                                     "desc": "hide the clear input icon"
                                 },
-                                "onClearIconClick": "HIG.abstract.EventObject",
-                                "onInput": "HIG.abstract.EventObject",
-                                "onFocusIn": "HIG.abstract.EventObject",
-                                "onFocusOut": "HIG.abstract.EventObject"
+                                "onClearIconClick": {
+                                    "desc": "Calls the provided callback when the Clear Icon is clicked",
+                                    "params": "HIG.abstract.EventObject.params",
+                                    "returns": "HIG.abstract.EventObject.returns"
+                                },
+                                "onInput": {
+                                    "desc": "Calls the provided callback when user enters text in Search input",
+                                    "params": "HIG.abstract.EventObject.params",
+                                    "returns": "HIG.abstract.EventObject.returns"
+                                },
+                                "onFocusIn": {
+                                    "desc": "Calls the provided callback when Search input gains focus",
+                                    "params": "HIG.abstract.EventObject.params",
+                                    "returns": "HIG.abstract.EventObject.returns"
+                                },
+                                "onFocusOut": {
+                                    "desc": "Calls the provided callback when the Search input loses focus",
+                                    "params": "HIG.abstract.EventObject.params",
+                                    "returns": "HIG.abstract.EventObject.returns"
+                                }
                             },
                             "defaults": {
                                 "query": "{String} Set a search query in the input",
