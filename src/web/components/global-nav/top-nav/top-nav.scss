@@ -8,7 +8,7 @@ $group-height: 56px;
     @include reset;
 
     position: relative;
-    background: $background-1;
+    background: $hig-white;
     height: $group-height;
     line-height: $group-height;
     box-shadow: 0 1px 4px 0 $box-shadow-1;

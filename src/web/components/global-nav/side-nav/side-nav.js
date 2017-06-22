@@ -36,6 +36,7 @@ class SideNav extends Core {
     addSearch(searchInstance, referenceInstance){
         if(searchInstance instanceof Search){
             this.mountPartialToComment('SEARCH', searchInstance, referenceInstance);
+            this.el.querySelector('.hig__global-nav__sidenav__scroll').classList.add("hig__global-nav__sidenav__scroll--search");
         }
     }
     

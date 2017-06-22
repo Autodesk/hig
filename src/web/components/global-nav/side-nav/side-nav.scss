@@ -9,42 +9,41 @@ $hig__global-nav__sidenav--width: 280px;
     top: 0;
     left: 0;
     bottom: 0;
-    background: $background-1;
+    background: $hig-white;
     border-right: 1px solid $base-4;
     box-shadow: inset -2px 0 7px -2px $box-shadow-2;
+    width: $hig__global-nav__sidenav--width;    
 
-    
-    width: $hig__global-nav__sidenav--width;
-    
+    display: none; // Hide by default
 
-    // scroll
-
+    // Sidenav Scroll
     &__scroll{
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 5px;
-        bottom: 0;
-        box-sizing: border-box;
-        padding: 4px 16px;
+        top: 4px;
+        left: 4px;
+        right: 4px;
+        bottom: 4px;
+        @include vendor-prefix('box-sizing', 'border-box');
+        padding: 14px 12px;
 
         overflow-y: scroll;
+        
         &::-webkit-scrollbar {
             width: 4px;
         } 
 
         &::-webkit-scrollbar-thumb {
-            padding: 2px;
-            width: 4px;
+            width: 5px;
             height: 200px;
-            background-color: #c8d1d7;
+            background-color: $hig-gray-3;
             border-radius: 2px;
+        }
+
+        &--search{
+            bottom: 4px + 52px; // search at the bottom
         }
     }
     
-
-    display: none; // Hide by default
-
     &__copyright{
         margin-bottom: 40px;
         font-size: 12px;

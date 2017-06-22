@@ -3,6 +3,7 @@
 
 .hig__global-nav__side-nav__section__group__module{
     
+    position: relative;
     padding: 5px 0;
 
     &__link{
@@ -23,7 +24,7 @@
         }
 
         &:hover, &--active{
-            color: $autodesk-blue;
+            color: $adsk-blue;
         }
 
     }

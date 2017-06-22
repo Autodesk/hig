@@ -15,9 +15,9 @@
     overflow: hidden;
 
     border-radius: 2px;
-    border: 1px solid $gray-c;
+    border: 1px solid $hig-gray-4;
 
-    color: $gray-5;
+    color: $hig-gray-2;
     font-size: 13px;
     line-height: 32px;
     text-align: center;
@@ -68,6 +68,6 @@
     padding-left: 10px;
 
     .hig__global-nav__top-nav__project-account-switcher__item--active > & {
-        color: $autodesk-blue;
+        color: $adsk-blue;
     }
 }

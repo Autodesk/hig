@@ -716,6 +716,13 @@
                                                         "{Submodule} [ReferenceSubmodule] - (Optional) reference node for insertBefore"
                                                     ]
                                                 },
+                                                "addCollapse": {
+                                                    "desc": "Pass in an instance of a Collapse partial",
+                                                    "params": [
+                                                        "{Collapse} Collapse - instance of a Collapse partial",
+                                                        "{Collapse} [ReferenceCollapse] - (Optional) reference node for insertBefore"
+                                                    ]
+                                                },
                                                 "onClick": {
                                                     "desc": "Calls the provided callback when user clicks on the item",
                                                     "params": "HIG.abstract.EventObject.params",
@@ -773,12 +780,33 @@
                                                     "defaults": {
                                                         "title": "{String} the string of our SideNav submodule",
                                                         "link": "{String} link behind the submodule"
+                                                    }
+                                                },
+                                                "Collapse": {
+                                                    "methods": {
+                                                        "minimize": {
+                                                            "desc": "show [ - ]"
+                                                        },
+                                                        "maximize": {
+                                                            "desc": "show [ + ]"
+                                                        },
+                                                        "show":{
+                                                            "desc": "show (used for filtering)"
+                                                        },
+                                                        "hide":{
+                                                            "desc": "hide (used for filtering)"
+                                                        },
+                                                        "onClick": {
+                                                            "desc": "Calls the provided callback when user clicks on the item",
+                                                            "params": "HIG.abstract.EventObject.params",
+                                                            "returns": "HIG.abstract.EventObject.returns"
+                                                        }
+                                                    }
+                                                }
                                             }
                                         }
                                     }
-                                }
-                            }
-                        },
+                                },
                                 "Collapse": {
                                     "methods": {
                                         "minimize": {

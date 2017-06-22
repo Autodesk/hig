@@ -5,6 +5,7 @@ var Interface = require('interface.json');
 var Core = require('_core.js');
 
 var Submodule = require('./submodule/submodule.js');
+var Collapse = require('./collapse/collapse.js');
 
 /**
  * Creates an Module
@@ -45,6 +46,12 @@ class Module extends Core {
         }
     }
 
+    addCollapse(CollapseInstance, referenceInstance){
+        if(CollapseInstance instanceof Collapse){
+            this.mountPartialToComment('COLLAPSE', CollapseInstance, referenceInstance);
+        }
+    }
+
     show(){
         this.el.classList.remove("hig__global-nav__side-nav__section__group__module--hide");
     }
@@ -60,7 +67,7 @@ class Module extends Core {
     deactivate() {
         this._findDOMEl(".hig__global-nav__side-nav__section__group__module__link", this.el).classList.remove("hig__global-nav__side-nav__section__group__module__link--active");
     }
-
+    
 }
 
 Module._interface = Interface['components']['GlobalNav']['partials']['SideNav']['partials']['Section']['partials']['Group']['partials']['Module'];
@@ -70,7 +77,8 @@ Module._defaults = {
     "link": "#"
 };
 Module._partials = {
-    Submodule: Submodule
+    Submodule: Submodule,
+    Collapse: Collapse
 }
 
 module.exports = Module;

@@ -39,7 +39,7 @@
         height: 0;
         border-style: solid;
         border-width: 0 11px 11px 11px;
-        border-color: transparent transparent $gray-c transparent;
+        border-color: transparent transparent $hig-gray-4 transparent;
     }
 }
 
@@ -51,8 +51,8 @@
     max-height: 360px;
     width: 270px;
 
-    background-color: $background-1;
-    border: 1px solid $gray-c;
+    background-color: $hig-white;
+    border: 1px solid $hig-gray-4;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
