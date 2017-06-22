@@ -14,18 +14,20 @@ $hig__global-nav__sidenav--width: 280px;
     box-shadow: inset -2px 0 7px -2px $box-shadow-2;
     width: $hig__global-nav__sidenav--width;    
 
-    // Sidenav Scroll
+    display: none; // Hide by default
 
+    // Sidenav Scroll
     &__scroll{
         position: absolute;
         top: 4px;
         left: 4px;
         right: 4px;
         bottom: 4px;
-        box-sizing: border-box;
-        padding: 0 16px;
+        @include vendor-prefix('box-sizing', 'border-box');
+        padding: 14px 12px;
 
         overflow-y: scroll;
+        
         &::-webkit-scrollbar {
             width: 4px;
         } 
@@ -36,11 +38,12 @@ $hig__global-nav__sidenav--width: 280px;
             background-color: $hig-gray-3;
             border-radius: 2px;
         }
+
+        &--search{
+            bottom: 4px + 52px; // search at the bottom
+        }
     }
     
-
-    display: none; // Hide by default
-
     &__copyright{
         margin-bottom: 40px;
         font-size: 12px;

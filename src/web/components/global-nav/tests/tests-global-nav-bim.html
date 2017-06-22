@@ -257,6 +257,9 @@
                             "link": moduleModel["link"]
                         });
                         generated_group.addModule(generated_module);
+
+                        // STORE IN MODEL FOR INTERNAL STATE
+                        moduleModel["_generated_module"] = generated_module;
                         
                         // DO WE HAVE SUBMODULES?
                         if(moduleModel["submodules"]){
@@ -266,7 +269,6 @@
                             generated_module.addCollapse(generated_module_collapse_icon);
 
                             // STORE IN MODEL FOR INTERNAL STATE
-                            moduleModel["_generated_module"] = generated_module;
                             moduleModel["_generated_module_collapse_icon"] = generated_module_collapse_icon;
                             moduleModel["_collapsed"] = true;
                             
@@ -289,6 +291,15 @@
                                     e.preventDefault();
                                     buildTabs(moduleModel, submoduleModel);
                                 });
+                            });
+
+                            // MODULE COLLAPSED CLICK
+                            generated_module_collapse_icon.onClick(function(e){
+                                if(moduleModel["_collapsed"]){
+                                    showSubmodules(moduleModel, true);
+                                }else{
+                                    hideSubmodules(moduleModel, true);
+                                }
                             });
                         }
 
@@ -313,14 +324,14 @@
                         generated_section_collapse_icon.minimize();
                         sectionModel["groups"].map(function(groupModel){
                             groupModel["modules"].map(function(moduleModel){
-                                showSubmodules(moduleModel);
+                                showSubmodules(moduleModel, true);
                             });
                         });
                     }else{
                         generated_section_collapse_icon.maximize();
                         sectionModel["groups"].map(function(groupModel){
                             groupModel["modules"].map(function(moduleModel){
-                                hideSubmodules(moduleModel);
+                                hideSubmodules(moduleModel, true);
                             });
                         });
                     }
@@ -411,19 +422,23 @@
                 }
             }
 
-            function showSubmodules(moduleModel){
+            function showSubmodules(moduleModel, saveState){
                 if(moduleModel["submodules"]){
                     moduleModel["submodules"].forEach(function(submoduleModel){ 
                         if(submoduleModel["_generated_submodule"]) submoduleModel["_generated_submodule"].show();
                     });
+                    moduleModel["_generated_module_collapse_icon"].minimize();
+                    if(saveState) moduleModel["_collapsed"] = false;
                 }
             }
 
-            function hideSubmodules(moduleModel){
+            function hideSubmodules(moduleModel, saveState){
                 if(moduleModel["submodules"]){
                     moduleModel["submodules"].forEach(function(submoduleModel){ 
                         if(submoduleModel["_generated_submodule"]) submoduleModel["_generated_submodule"].hide();
                     });
+                    moduleModel["_generated_module_collapse_icon"].maximize();
+                    if(saveState) moduleModel["_collapsed"] = true;
                 }
             }
 
@@ -455,11 +470,14 @@
 
                             if(q == ""){
                                 if(sectionModel["_collapsed"]){
-                                    hideSubmodules(moduleModel);
                                     sectionModel["_generated_section_collapse_icon"].maximize();
                                 }else{
-                                    showSubmodules(moduleModel);
                                     sectionModel["_generated_section_collapse_icon"].minimize();
+                                }
+                                if(moduleModel["_collapsed"]){
+                                    hideSubmodules(moduleModel);
+                                }else{
+                                    showSubmodules(moduleModel);
                                 }
                             }else{
                                 // ALWAYS SHOW SUBMODULES
