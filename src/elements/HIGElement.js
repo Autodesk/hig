@@ -15,6 +15,7 @@ limitations under the License.
 
 */
 import partitionProps from '../interface/partitionProps';
+import PropMapper from '../utils/PropMapper';
 
 /**
  * The base class for all React-Hig Elements. These elements hook into the
@@ -109,6 +110,10 @@ export default class HIGElement {
   }
 
   setupEvent(eventName, eventFn) {
+    if (!eventFn) {
+      return;
+    }
+
     // in this case we are setting up a new event
     const dispose = this.hig[eventName](eventFn);
     this._disposeFunctions.set(eventName, dispose);
@@ -138,5 +143,9 @@ export default class HIGElement {
     if (requiredSinglesList.includes(name) && this[name.toLowerCase()]) {
       throw new Error('only one ' + name + ' is allowed');
     }
+  }
+
+  processUpdateProps(updatePayload) {
+    return new PropMapper(updatePayload, this);
   }
 }

@@ -132,35 +132,26 @@ storiesOf('GlobalNav', module)
           </SectionList>
         </SideNav>
         <TopNav logo={logo}>
-
           <ProjectAccountSwitcher
             activeLabel="Oakland Medical Center"
             activeImage={project1}
             activeType="account"
-            isOpen={false}
+            open={boolean(false)}
             onClickOutside={action('clicked')}
             onClick={action('clicked')}
           >
-            <Account
-              image={project2}
-              label="Stanford hospital"
-              active={false}
-              onClick={action('clicked')}
-            />
             <Account
               image=""
               label="Oakland Medical Center"
               active={true}
               onClick={action('clicked')}
             />
-
             <Project
               image={project4}
               label=""
               active={false}
               onClick={action('clicked')}
             />
-
             <Project
               image={project1}
               label="Stanford hospital"

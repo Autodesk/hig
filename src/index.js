@@ -236,52 +236,28 @@ class App extends React.Component {
             logoLink="http://autodesk.com"
             onHamburgerClick={this.toggleSideNav}
           >
-            {this.singleProjectOrAccount()
-              ? <ProjectAccountSwitcher
-                  activeLabel={this.state.projectOrAcccountTarget.label}
-                  activeImage={this.state.projectOrAcccountTarget.image}
-                  activeType={this.state.projectOrAcccountTarget.type}
-                  hideProjectAccountFlyout={true}
-                />
-              : <ProjectAccountSwitcher
-                  activeLabel={this.state.projectOrAcccountTarget.label}
-                  activeImage={this.state.projectOrAcccountTarget.image}
-                  activeType={this.state.projectOrAcccountTarget.type}
-                  hideProjectAccountFlyout={false}
-                >
-                  {this.state.projects.map((project, i) => {
-                    return (
-                      <Project
-                        image={project.image}
-                        label={project.label}
-                        key={project.id}
-                        active={
-                          this.state.activeProjectOrAccount === project.id
-                        }
-                        onClick={this.setActiveProjectOrAccount.bind(this, {
-                          id: project.id,
-                          type: project.type
-                        })}
-                      />
-                    );
-                  })}
-                  {this.state.accounts.map((account, i) => {
-                    return (
-                      <Account
-                        image={account.image}
-                        label={account.label}
-                        key={account.id}
-                        active={
-                          this.state.activeProjectOrAccount === account.id
-                        }
-                        onClick={this.setActiveProjectOrAccount.bind(this, {
-                          id: account.id,
-                          type: account.type
-                        })}
-                      />
-                    );
-                  })}
-                </ProjectAccountSwitcher>}
+            <ProjectAccountSwitcher
+              onClick={() => console.log('clicked')}
+            >
+              {this.state.projects.map((project, i) => {
+                return (
+                  <Project
+                    image={project.image}
+                    label={project.label}
+                    key={project.id}
+                  />
+                );
+              })}
+              {this.state.accounts.map((account, i) => {
+                return (
+                  <Account
+                    image={account.image}
+                    label={account.label}
+                    key={account.id}
+                  />
+                );
+              })}
+            </ProjectAccountSwitcher>
 
             <Shortcut icon="gear" title="Gears for Fears" link="/gears" />
 

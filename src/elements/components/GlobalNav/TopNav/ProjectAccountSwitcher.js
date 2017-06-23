@@ -43,54 +43,42 @@ export class ProjectAccountSwitcher extends HIGElement {
       }
     });
 
-    ['openFlyout', 'closeFlyout'].forEach(fn => {
+    ['_render'].forEach(fn => {
       this[fn] = this[fn].bind(this);
     });
+
+    this.props = { ...initialProps };
+    this.state = {};
   }
 
   componentDidMount() {
     this.accounts.componentDidMount();
     this.projects.componentDidMount();
 
-    if (this.initialProps.isOpen === true) {
-      this.hig.open();
-    }
+    this.hig.onClick(() => {
+      this.state.open = true;
+      this._render();
+    });
+    this.hig.onClickOutside(() => {
+      this.state.open = false;
+      this._render();
+    });
 
-    if (this.initialProps.hideProjectAccountFlyout) {
-      this.hig.hideCaret();
-    }
-
-    this.hig.onClick(this.openFlyout);
-    this.hig.onClickOutside(this.closeFlyout);
-  }
-
-  openFlyout() {
-    this.hig.open();
-  }
-
-  closeFlyout() {
-    this.hig.close();
+    this.commitUpdate(this.props);
   }
 
   commitUpdate(updatePayload, oldProps, newProp) {
-    const mapping = {
-      activeImage: 'setActiveImage',
-      activeLabel: 'setActiveLabel',
-      activeType: 'setActiveType'
-    };
-
-    const openIndex = updatePayload.indexOf('isOpen');
-    if (openIndex >= 0) {
-      const [openKey, openSetting] = updatePayload.splice(openIndex, 2);
-      if (openKey) {
-        if (openSetting === true) {
-          this.hig.open();
-        } else {
-          this.hig.close();
-        }
-      }
-    }
-    this.commitUpdateWithMapping(updatePayload, mapping);
+    this.processUpdateProps(updatePayload)
+      .mapToHIGFunctions({
+        activeImage: 'setActiveImage',
+        activeLabel: 'setActiveLabel',
+        activeType: 'setActiveType'
+      })
+      .mapToHIGEventListeners(['onClick', 'onClickOutside'])
+      .handle('open', value => {
+        this.props.open = value;
+      })
+      .then(this._render);
   }
 
   createElement(ElementConstructor, props) {
@@ -113,24 +101,33 @@ export class ProjectAccountSwitcher extends HIGElement {
       throw new Error('unknown type');
     }
   }
+
+  _render() {
+    let open = this.props.open;
+    if (open === undefined) {
+      open = this.state.open;
+    }
+    open ? this.hig.open() : this.hig.close();
+  }
 }
 
 const ProjectAccountSwitcherComponent = createComponent(ProjectAccountSwitcher);
 
 ProjectAccountSwitcherComponent.propTypes = {
-  isOpen: PropTypes.bool,
-  hideProjectAccountFlyout: PropTypes.bool,
-  hideCaret: PropTypes.func,
+  open: PropTypes.bool,
   activeLabel: PropTypes.string,
   activeImage: PropTypes.string,
   activeType: PropTypes.string,
-  onClickOutside: PropTypes.func,
   onClick: PropTypes.func,
+  onClickOutside: PropTypes.func,
   children: HIGChildValidator([AccountComponent, ProjectComponent])
 };
 
 ProjectAccountSwitcherComponent.__docgenInfo = {
   props: {
+    open: {
+      description: '{bool} opens the project/account switcher'
+    },
     activeLabel: {
       description: 'sets {String} the label displayed in the top nav'
     },
@@ -140,26 +137,11 @@ ProjectAccountSwitcherComponent.__docgenInfo = {
     activeType: {
       description: 'sets the {String} type of the item displayed in the top nav'
     },
-    addAccount: {
-      description: '{func} pass in an instance of a ProjectAccountSwitcher Account'
-    },
-    addProject: {
-      description: '{func} pass in an instance of a ProjectAccountSwitcher Project'
-    },
-    open: {
-      description: '{func} opens the project/account switcher'
-    },
-    close: {
-      description: '{func} closes the project/account switcher'
-    },
-    removeCaretFromTarget: {
-      description: '{func} removes caret from Target in the project/account switcher'
+    onClick: {
+      description: '{func} calls the provided callback when user clicks on the switcher in the top nav'
     },
     onClickOutside: {
       description: '{func} calls the provided callback when the switcher is open and the user clicks outside the switcher'
-    },
-    onClick: {
-      description: '{func} calls the provided callback when user clicks on the switcher in the top nav'
     },
     children: {
       description: 'support adding Project and Account'
