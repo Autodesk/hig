@@ -20,31 +20,24 @@ import HIGElement from '../../../HIGElement';
 import createComponent from '../../../../adapters/createComponent';
 
 export class Account extends HIGElement {
+  constructor(HIGConstructor, initialProps) {
+    super(HIGConstructor, initialProps);
+
+    this.props = {...initialProps};
+  }
+
   commitUpdate(updatePayload, oldProps, newProp) {
-    const mapping = {
-      image: 'setImage',
-      label: 'setLabel'
-    };
+    this.props = {...this.props, ...updatePayload};
 
-    for (let i = 0; i < updatePayload.length; i += 2) {
-      const propKey = updatePayload[i];
-      const propValue = updatePayload[i + 1];
-
-      switch (propKey) {
-        case mapping[propKey]:
-          this.hig[mapping[propKey]](propValue);
-          break;
-        case 'active':
-          if (propValue) {
-            this.hig.activate();
-          } else {
-            this.hig.deactivate();
-          }
-          break;
-        default:
-          this.commitPropChange(propKey, propValue);
-      }
-    }
+    this.processUpdateProps(updatePayload)
+      .mapToHIGFunctions({
+        image: 'setImage',
+        label: 'setLabel'
+      })
+      .mapToHIGEventListeners(['onClick'])
+      .handle('active', value => {
+        value ? this.hig.activate() : this.hig.deactivate()
+      });
   }
 }
 

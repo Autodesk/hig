@@ -43,7 +43,13 @@ export class ProjectAccountSwitcher extends HIGElement {
       }
     });
 
-    ['_render', 'openFlyout', 'closeFlyout'].forEach(fn => {
+    [
+      '_render',
+      'openFlyout',
+      'closeFlyout',
+      'setActiveAccount',
+      'setActiveProject',
+    ].forEach(fn => {
       this[fn] = this[fn].bind(this);
     });
 
@@ -86,8 +92,14 @@ export class ProjectAccountSwitcher extends HIGElement {
   insertBefore(instance, beforeChild = {}) {
     if (instance instanceof Account) {
       this.accounts.insertBefore(instance);
+      if (this.state.activeAccount === undefined) {
+        this.state.activeAccount = instance;
+      }
     } else if (instance instanceof Project) {
       this.projects.insertBefore(instance);
+      if (this.state.activeProject === undefined) {
+        this.state.activeProject = instance;
+      }
     } else {
       throw new Error(`${this.constructor.name} cannot have a child of type ${instance.constructor.name}`);
     }
@@ -100,6 +112,16 @@ export class ProjectAccountSwitcher extends HIGElement {
 
   closeFlyout() {
     this.state.open = false;
+    this._render();
+  }
+
+  setActiveAccount(event, higElement) {
+    this.state.activeAccount = this.accounts.find(a => a.hig === higElement);
+    this._render();
+  }
+
+  setActiveProject(event, higElement) {
+    this.state.activeProject = this.projects.find(p => p.hig === higElement);
     this._render();
   }
 
@@ -118,6 +140,35 @@ export class ProjectAccountSwitcher extends HIGElement {
       this.hig.removeCaret();
       this.configureHIGEventListener('onClick', undefined);
       this.configureHIGEventListener('onClickOutside', undefined);
+    }
+
+    this.accounts.forEach(account => {
+      account.configureHIGEventListener('onClick', this.setActiveAccount);
+      account === this.state.activeAccount
+        ? account.hig.activate()
+        : account.hig.deactivate();
+    });
+    this.projects.forEach(project => {
+      project.configureHIGEventListener('onClick', this.setActiveProject);
+      project === this.state.activeProject
+        ? project.hig.activate()
+        : project.hig.deactivate();
+    });
+
+    if (this.state.activeAccount && this.state.activeProject) {
+      this.hig.setActiveLabel(
+        `${this.state.activeAccount.props.label} / ${this.state.activeProject.props.label}`
+      );
+      this.hig.setActiveImage(this.state.activeProject.props.image);
+      this.hig.setActiveType('project');
+    } else if (this.state.activeAccount) {
+      this.hig.setActiveLabel(this.state.activeAccount.props.label);
+      this.hig.setActiveImage(this.state.activeAccount.props.image);
+      this.hig.setActiveType('account');
+    } else if (this.state.activeProject) {
+      this.hig.setActiveLabel(this.state.activeProject.props.label);
+      this.hig.setActiveImage(this.state.activeProject.props.image);
+      this.hig.setActiveType('project');
     }
   }
 }
