@@ -41,6 +41,7 @@ const Context = props => {
           name={props.name}
           email={props.email}
           signOutLabel={props.signOutLabel}
+          signOutLink={props.signOutLink}
           onSignOutClick={onSignoutClick}
           profileSettingsLabel={props.profileSettingsLabel}
           profileSettingsLink={props.profileSettingsLink}

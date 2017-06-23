@@ -292,7 +292,7 @@ class App extends React.Component {
               name="Jane Doe"
               email="jane.doe@example.com"
               profileSettingsLink="http://www.autodesk.com"
-              onSignOutClick={this.profileSignOutClick}
+              signOutLink="http://www.sanrio.com"
             />
 
             <TopNavSearch
