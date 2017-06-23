@@ -85,7 +85,7 @@ describe('<Profile>', () => {
     });
   });
   describe('events handlers', () => {
-    it('WIP can set onProfileClickOutside', () => {
+    it('It can set onProfileClickOutside', () => {
       const foo = {
         onProfileClickOutside: 'PropTypes.func',
         onSignOutClick: 'PropTypes.func',

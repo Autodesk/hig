@@ -74,8 +74,8 @@ storiesOf('TopNav Profile', module)
         <TopNav logo={logo}>
           <Profile
             image={profileImage}
-            name="Jane Designer"
             email="jane.designer@example.com"
+            name="Jane Designer"
             open={true}
             signOutLabel="Sign off"
             signOutLink="http://www.autodesk.com"
@@ -93,9 +93,9 @@ storiesOf('TopNav Profile', module)
       <GlobalNav>
         <TopNav logo={logo}>
           <Profile
-            email="jane.designer@example.com"
             image={text('image', profileImage)}
-            name="Jane Designer"
+            name={text("name","Jane Designer")}
+            email={text("email", "jane.designer@example.com")}
             open={boolean('profileFlyoutOpen', false)}
             onProfileClickOutside={action('Clicked outside profile')}
             onProfileImageClick={action('profile image clicked')}
