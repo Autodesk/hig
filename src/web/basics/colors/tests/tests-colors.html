@@ -205,8 +205,16 @@
             </div>
         </div>
 
-
-        
+        <script>
+            // DISPLAY HEX
+            var elements = document.querySelectorAll('.tests-color-cube');
+            Array.prototype.forEach.call(elements, function(el, i){
+                var style = window.getComputedStyle(el);
+                var bc = style.backgroundColor;
+                bc = '#' + bc.substr(4, bc.indexOf(')') - 4).split(',').map((color) => parseInt(color).toString(16)).join('');
+                el.insertAdjacentHTML('afterend', bc.toUpperCase()+'<br>');
+            });
+        </script>
         
 
     </body>
