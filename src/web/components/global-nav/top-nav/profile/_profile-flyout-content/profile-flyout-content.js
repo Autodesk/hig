@@ -22,7 +22,8 @@ class ProfileFlyoutContent extends Core {
 
     _componentDidMount() {
         this.signOutButton = new Button({
-            title: this.options.signOutLabel
+            title: this.options.signOutLabel,
+            link: this.options.signOutLink
         });
         this.mountPartialToComment('SIGN_OUT_BUTTON', this.signOutButton);
 
