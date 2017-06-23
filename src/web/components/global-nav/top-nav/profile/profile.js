@@ -93,6 +93,7 @@ Profile._defaults = {
   name: 'name',
   profileSettingsLink: 'https://www.autodesk.com',
   profileSettingsLabel: "Profile Settings",
+  signOutLink: '#',
   signOutLabel: "Sign Out"
 };
 
