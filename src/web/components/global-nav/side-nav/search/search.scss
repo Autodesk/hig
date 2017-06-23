@@ -25,7 +25,7 @@
         margin: 8px 10px;
         width: $hig__global-nav__sidenav--width - 20px - 2px;
 
-        &__input{
+        &__input, &__input[type=text]{
             @include reset;
             border: 1px solid $hig-gray-4;
             border-radius: 4px;
