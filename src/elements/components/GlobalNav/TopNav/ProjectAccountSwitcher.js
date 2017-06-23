@@ -43,7 +43,7 @@ export class ProjectAccountSwitcher extends HIGElement {
       }
     });
 
-    ['_render'].forEach(fn => {
+    ['_render', 'openFlyout', 'closeFlyout'].forEach(fn => {
       this[fn] = this[fn].bind(this);
     });
 
@@ -54,15 +54,6 @@ export class ProjectAccountSwitcher extends HIGElement {
   componentDidMount() {
     this.accounts.componentDidMount();
     this.projects.componentDidMount();
-
-    this.hig.onClick(() => {
-      this.state.open = true;
-      this._render();
-    });
-    this.hig.onClickOutside(() => {
-      this.state.open = false;
-      this._render();
-    });
 
     this.commitUpdate(this.props);
   }
@@ -102,6 +93,16 @@ export class ProjectAccountSwitcher extends HIGElement {
     }
   }
 
+  openFlyout() {
+    this.state.open = true;
+    this._render();
+  }
+
+  closeFlyout() {
+    this.state.open = false;
+    this._render();
+  }
+
   _render() {
     let open = this.props.open;
     if (open === undefined) {
@@ -111,8 +112,12 @@ export class ProjectAccountSwitcher extends HIGElement {
 
     if (this.projects.length > 1 || this.accounts.length > 1) {
       this.hig.addCaret();
+      this.commitPropChange('onClick', this.openFlyout);
+      this.commitPropChange('onClickOutside', this.closeFlyout);
     } else {
       this.hig.removeCaret();
+      this.commitPropChange('onClick', undefined);
+      this.commitPropChange('onClickOutside', undefined);
     }
   }
 }
