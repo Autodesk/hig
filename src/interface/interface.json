@@ -295,7 +295,7 @@
                                 "image": "{String} url src of the image",
                                 "email": "{String} email for profile",
                                 "name": "{String} display name for profile",
-``                                "signOutLink": "{String} the linke for the sign out button",
+                                "signOutLink": "{String} the linke for the sign out button",
                                 "profileSettingsLabel": "{String} the label for the Profile Settings link",
                                 "profileSettingsLink": "{String} the URL for the Profile Settings link",
                                 "signOutLabel": "{String} the label for the sign out button"
