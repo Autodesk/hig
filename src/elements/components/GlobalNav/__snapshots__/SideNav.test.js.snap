@@ -8,7 +8,7 @@ exports[`<SideNav> <SideNav> with search renders children correctly 1`] = `
     <div class=\\"hig__global-nav__side-nav__section__header\\">
         <span class=\\"hig__global-nav__side-nav__section__header__label\\">Project</span>
         <span class=\\"hig__global-nav__side-nav__section__header__name\\">Thunderstor</span>
-        <div class=\\"hig__global-nav__side-nav__section__collapse\\"><div class=\\"hig__icon\\"><svg width=\\"11\\" height=\\"12\\" viewBox=\\"0 0 11 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"double-caret\\"><g stroke-width=\\"1.5\\" stroke=\\"#979797\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.432 -9.533)\\"></polyline><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.432 -4.533)\\"></polyline></g></svg></div></div><!--SECTIONCOLLAPSE-->
+        <div class=\\"hig__global-nav__side-nav__section__collapse\\"><div class=\\"hig__icon\\"><svg width=\\"11\\" height=\\"12\\" viewBox=\\"0 0 11 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"double-caret\\"><g stroke-width=\\"1.5\\" stroke=\\"#979797\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.432 -9.533)\\"></polyline><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.432 -4.533)\\"></polyline></g></svg></div></div><!--SECTION-COLLAPSE-->
     </div>
     <div class=\\"hig__global-nav__side-nav__section__group\\">
     <div class=\\"hig__global-nav__side-nav__section__group__module\\">
@@ -16,7 +16,7 @@ exports[`<SideNav> <SideNav> with search renders children correctly 1`] = `
         <div class=\\"hig__global-nav__side-nav__section__group__module__link__icon\\"><div class=\\"hig__icon\\"></div></div>
         <div class=\\"hig__global-nav__side-nav__section__group__module__link__title\\">Document Workflow</div>
     </a>
-    <div class=\\"hig__global-nav__side-nav__section__group__module__collapse\\"><div class=\\"hig__icon\\"><svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret\\"><title>hig/icon/caret</title><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.815 -10)\\" stroke-width=\\"1.5\\" stroke=\\"#979797\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"></polyline></svg></div></div><!--COLLAPSE-->
+    <div class=\\"hig__global-nav__side-nav__section__group__module__collapse\\"><div class=\\"hig__icon\\"><svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret\\"><title>hig/icon/caret</title><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.815 -10)\\" stroke-width=\\"1.5\\" stroke=\\"#979797\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"></polyline></svg></div></div><!--MODULE-COLLAPSE-->
     <div class=\\"hig__global-nav__side-nav__section__group__module__submodules\\">
         <div class=\\"hig__global-nav__side-nav__section__group__module__submodule hig__global-nav__side-nav__section__group__module__submodule--hide\\">
     <a class=\\"hig__global-nav__side-nav__section__group__module__submodule__link\\" href=\\"#\\">Document</a>
