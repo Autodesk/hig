@@ -108,6 +108,12 @@ export class ProjectAccountSwitcher extends HIGElement {
       open = this.state.open;
     }
     open ? this.hig.open() : this.hig.close();
+
+    if (this.projects.length > 1 || this.accounts.length > 1) {
+      this.hig.addCaret();
+    } else {
+      this.hig.removeCaret();
+    }
   }
 }
 
