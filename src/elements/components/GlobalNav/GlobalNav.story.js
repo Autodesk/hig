@@ -274,18 +274,14 @@ storiesOf('GlobalNav', module)
   })
   .addWithInfo('w sideNavOpen with query', ``, () => {
     const sideNavOpen = boolean('sideNavOpen', true);
-    const query = text('query', 'Field')
+    const query = text('query', 'Field');
     return (
       <GlobalNav sideNavOpen={sideNavOpen}>
         <SideNav>
           <SectionList>
             <Section headerLabel="Project" headerName="ThunderStorm">
               <Group>
-                <Module
-                    icon='insight'
-                    title='Insight'
-                    key={'Insight'}
-                >
+                <Module icon="insight" title="Insight" key={'Insight'}>
                   <Submodule
                     title="Overview"
                     link="#"
@@ -304,10 +300,7 @@ storiesOf('GlobalNav', module)
                 </Module>
               </Group>
             </Section>
-            <Section
-              headerLabel="Account"
-              headerName="Global Construction"
-            >
+            <Section headerLabel="Account" headerName="Global Construction">
               <Group>
                 <Module
                   icon="field"
@@ -321,24 +314,23 @@ storiesOf('GlobalNav', module)
                     link="#"
                     onClick={action('clicked')}
                   />
-                   <Submodule
+                  <Submodule
                     title="Issues Templates"
                     link="#"
                     onClick={action('clicked')}
                   />
                 </Module>
-                 <Module
+                <Module
                   icon="field"
                   title="Field"
                   link="#"
                   onClick={action('clicked')}
                   submodulesClosed={false}
-                >
-                </Module>
+                />
               </Group>
             </Section>
           </SectionList>
-          <Search placeholder="Find module or submodule" query={query}/>
+          <Search placeholder="Find module or submodule" query={query} />
         </SideNav>
         <TopNav logo={logo} />
         <SubNav moduleIndicatorName="Insight" moduleIndicatorIcon="hamburger" />
@@ -354,11 +346,7 @@ storiesOf('GlobalNav', module)
           <SectionList>
             <Section headerLabel="Project" headerName="ThunderStorm">
               <Group>
-                <Module
-                    icon='insight'
-                    title='Insight'
-                    key={'Insight'}
-                >
+                <Module icon="insight" title="Insight" key={'Insight'}>
                   <Submodule
                     title="Overview"
                     link="#"
@@ -377,10 +365,7 @@ storiesOf('GlobalNav', module)
                 </Module>
               </Group>
             </Section>
-            <Section
-              headerLabel="Account"
-              headerName="Global Construction"
-            >
+            <Section headerLabel="Account" headerName="Global Construction">
               <Group>
                 <Module
                   icon="field"
@@ -394,24 +379,23 @@ storiesOf('GlobalNav', module)
                     link="#"
                     onClick={action('clicked')}
                   />
-                   <Submodule
+                  <Submodule
                     title="Issues Templates"
                     link="#"
                     onClick={action('clicked')}
                   />
                 </Module>
-                 <Module
+                <Module
                   icon="field"
                   title="Field"
                   link="#"
                   onClick={action('clicked')}
                   submodulesClosed={false}
-                >
-                </Module>
+                />
               </Group>
             </Section>
           </SectionList>
-          <Search placeholder="Find module or submodule"/>
+          <Search placeholder="Find module or submodule" />
         </SideNav>
         <TopNav logo={logo} />
         <SubNav moduleIndicatorName="Insight" moduleIndicatorIcon="hamburger" />
@@ -524,11 +508,7 @@ storiesOf('GlobalNav', module)
           <SectionList>
             <Section headerLabel="Project" headerName="ThunderStorm">
               <Group>
-                <Module
-                    icon='insight'
-                    title='Insight'
-                    key={'Insight'}
-                >
+                <Module icon="insight" title="Insight" key={'Insight'}>
                   <Submodule
                     title="Overview"
                     link="#"
@@ -547,10 +527,7 @@ storiesOf('GlobalNav', module)
                 </Module>
               </Group>
             </Section>
-            <Section
-              headerLabel="Account"
-              headerName="Global Construction"
-            >
+            <Section headerLabel="Account" headerName="Global Construction">
               <Group />
             </Section>
           </SectionList>
@@ -565,7 +542,7 @@ storiesOf('GlobalNav', module)
   .addWithInfo('empty Section in SideNav', ``, () => {
     const sideNavOpen = boolean('sideNavOpen', true);
     return (
-       <GlobalNav sideNavOpen={sideNavOpen}>
+      <GlobalNav sideNavOpen={sideNavOpen}>
         <SideNav>
           <SectionList>
             <Section headerLabel="Project" headerName="ThunderStorm">
