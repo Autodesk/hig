@@ -36,7 +36,7 @@ class Section extends Core {
 
     addCollapse(CollapseInstance, referenceInstance){
         if(CollapseInstance instanceof Collapse){
-            this.mountPartialToComment('COLLAPSE', CollapseInstance, referenceInstance);
+            this.mountPartialToComment('SECTION-COLLAPSE', CollapseInstance, referenceInstance);
         }
     }
 
