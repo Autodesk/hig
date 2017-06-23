@@ -69,7 +69,6 @@ export class Profile extends HIGElement {
   closeProfile() {
     this.hig.close();
   }
-
 }
 
 const ProfileComponent = createComponent(Profile);

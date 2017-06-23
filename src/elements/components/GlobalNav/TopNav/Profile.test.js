@@ -84,21 +84,24 @@ describe('<Profile>', () => {
     });
   });
   describe('events handlers', () => {
-    it("WIP can set onProfileClickOutside", () => {
+    it('WIP can set onProfileClickOutside', () => {
       const foo = {
         onProfileClickOutside: 'PropTypes.func',
-          onSignOutClick: 'PropTypes.func',
-        onProfileImageClick: 'PropTypes.func'}
-    })
+        onSignOutClick: 'PropTypes.func',
+        onProfileImageClick: 'PropTypes.func'
+      };
+    });
   });
 
   describe('setting and updating props', () => {
     const shex = new SharedExamples(Context, createHigContext);
     const configSets = [
-      { key: 'signOutLink',
+      {
+        key: 'signOutLink',
         sampleValue: '/signout',
         updateValue: 'http://www.google.com',
-        mutator: 'setSignOutLink'},
+        mutator: 'setSignOutLink'
+      },
       {
         key: 'email',
         sampleValue: 'foo@example.com',
