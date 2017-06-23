@@ -8,4 +8,4 @@ branch_name=${branch_name:-HEAD}
 echo "deploying with current branch: $branch_name"
 
 # Deploy server is hidden behind VPN, so no problem to expose path
-curl -H "Content-Type: application/json" -X POST http://10.40.178.10:8080/job/hig/buildWithParameters?token=y43KplNvGh&BRANCH=$branch_name
+curl -H "Content-Type: application/json" -X POST "http://10.40.178.10:8080/job/hig/buildWithParameters?token=y43KplNvGh&BRANCH=${branch_name}"
