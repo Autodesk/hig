@@ -83,6 +83,7 @@ export default class HIGElement {
   // Abstracts a common way of updating property changes.
   // Children will be seen and not heard, i.e. ignored
   commitUpdateWithMapping(updatePayload, mapping) {
+    console.warn(`${this.constructor.name}.commitUpdateWithMapping is deprecated. Call configureHIGEventListener instead.`)
     for (let i = 0; i < updatePayload.length; i += 2) {
       const propKey = updatePayload[i];
       const propValue = updatePayload[i + 1];
@@ -100,16 +101,26 @@ export default class HIGElement {
   }
 
   commitPropChange(propKey, propValue) {
+    console.warn(`${this.constructor.name}.commitPropChange is deprecated. Call configureHIGEventListener instead.`);
+    this.configureHIGEventListener(propKey, propValue);
+  }
+
+  configureHIGEventListener(propKey, propValue) {
     if (this.events[propKey]) {
-      this.replaceEvent(propKey, propValue);
+      this.replaceHIGEventListener(propKey, propValue);
     } else if (this.possibleEvents.indexOf(propKey) !== -1) {
-      this.setupEvent(propKey, propValue);
+      this.addHIGEventListener(propKey, propValue);
     } else {
-      console.warn(`${propKey} is unknown`);
+      console.warn(`${this.hig.constructor.name} has no event listener "${propKey}"`);
     }
   }
 
   setupEvent(eventName, eventFn) {
+    console.warn(`${this.constructor.name}.setupEvent is deprecated. Call addHIGEventListener instead.`);
+    this.addHIGEventListener(eventName, eventFn);
+  }
+
+  addHIGEventListener(eventName, eventFn) {
     if (!eventFn) {
       return;
     }
@@ -121,6 +132,11 @@ export default class HIGElement {
   }
 
   replaceEvent(eventName, eventFn) {
+    console.warn(`${this.constructor.name}.replaceEvent is deprecated. Call replaceHIGEventListener instead.`);
+    this.replaceHIGEventListener(eventName, eventFn);
+  }
+
+  replaceHIGEventListener(eventName, eventFn) {
     // Find the old dispose function
     const dispose = this._disposeFunctions.get(eventName);
 

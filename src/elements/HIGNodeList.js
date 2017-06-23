@@ -123,4 +123,8 @@ export default class HIGNodeList {
   get length() {
     return this.nodes.length;
   }
+
+  forEach(callback) {
+    this.nodes.forEach(callback);
+  }
 }

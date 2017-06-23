@@ -26,14 +26,7 @@ export default class PropMapper {
     props.forEach(propKey => {
       this.accessedProps.add(propKey);
 
-      const propValue = this.props[propKey];
-      if (this.instance.events[propKey]) {
-        this.instance.replaceEvent(propKey, propValue);
-      } else if (this.instance.possibleEvents.indexOf(propKey) !== -1) {
-        this.instance.setupEvent(propKey, propValue);
-      } else {
-        console.warn(`${propKey} is not a known HIG event`);
-      }
+      this.instance.configureHIGEventListener(propKey, props[propKey]);
     });
     return this;
   }

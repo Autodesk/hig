@@ -89,7 +89,7 @@ export class ProjectAccountSwitcher extends HIGElement {
     } else if (instance instanceof Project) {
       this.projects.insertBefore(instance);
     } else {
-      throw new Error('unknown type');
+      throw new Error(`${this.constructor.name} cannot have a child of type ${instance.constructor.name}`);
     }
   }
 
@@ -112,12 +112,12 @@ export class ProjectAccountSwitcher extends HIGElement {
 
     if (this.projects.length > 1 || this.accounts.length > 1) {
       this.hig.addCaret();
-      this.commitPropChange('onClick', this.openFlyout);
-      this.commitPropChange('onClickOutside', this.closeFlyout);
+      this.configureHIGEventListener('onClick', this.openFlyout);
+      this.configureHIGEventListener('onClickOutside', this.closeFlyout);
     } else {
       this.hig.removeCaret();
-      this.commitPropChange('onClick', undefined);
-      this.commitPropChange('onClickOutside', undefined);
+      this.configureHIGEventListener('onClick', undefined);
+      this.configureHIGEventListener('onClickOutside', undefined);
     }
   }
 }
