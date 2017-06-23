@@ -316,7 +316,10 @@
                                         "{Project} [ReferenceProject] - (Optional) reference node for insertBefore"
                                     ]
                                 },
-                                "removeCaretFromTarget": {
+                                "addCaret": {
+                                    "desc": "adds caret to target in Project Account Switcher"
+                                },
+                                "removeCaret": {
                                     "desc": "removes caret from target in Project Account Switcher"
                                 },
                                 "open": {
@@ -608,7 +611,7 @@
                                     "desc": "Calls the provided callback when user clicks on the Help",
                                     "params": "HIG.abstract.EventObject.params",
                                     "returns": "HIG.abstract.EventObject.returns"
-                                },   
+                                },
                                 "onFocusOut": {
                                     "desc": "Calls the provided callback when user clicks on the Help",
                                     "params": "HIG.abstract.EventObject.params",
