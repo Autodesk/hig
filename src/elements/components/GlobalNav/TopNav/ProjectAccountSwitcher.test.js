@@ -185,10 +185,10 @@ describe('<ProjectAccountSwitcher>', () => {
       );
 
       const caretElem = reactContainer.getElementsByClassName(
-        'hig__global-nav__top-nav__project-account-switcher__target__caret'
+        'hig__global-nav__top-nav__project-account-switcher__target__caret--hide'
       );
 
-      expect(caretElem.length).toEqual(0);
+      expect(caretElem.length).toEqual(1);
       expect(elem.length).toEqual(0);
     });
   });

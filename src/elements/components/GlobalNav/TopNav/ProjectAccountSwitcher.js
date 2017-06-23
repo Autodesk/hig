@@ -57,7 +57,7 @@ export class ProjectAccountSwitcher extends HIGElement {
     }
 
     if (this.initialProps.hideProjectAccountFlyout) {
-      this.hig.removeCaretFromTarget();
+      this.hig.hideCaret();
     }
 
     this.hig.onClick(this.openFlyout);
@@ -120,7 +120,7 @@ const ProjectAccountSwitcherComponent = createComponent(ProjectAccountSwitcher);
 ProjectAccountSwitcherComponent.propTypes = {
   isOpen: PropTypes.bool,
   hideProjectAccountFlyout: PropTypes.bool,
-  removeCaretFromTarget: PropTypes.func,
+  hideCaret: PropTypes.func,
   activeLabel: PropTypes.string,
   activeImage: PropTypes.string,
   activeType: PropTypes.string,
