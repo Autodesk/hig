@@ -4,13 +4,13 @@
     padding-left: 40px;
 
     &__link{
-        color: $hig-gray-2;
+        color: color(hig-gray-20);
         text-decoration: none;
         font-size: 14px;
         line-height: 30px;
 
         &:hover, &--active{
-            color: $adsk-blue;
+            color: color(adsk-blue);
         }
     }
 

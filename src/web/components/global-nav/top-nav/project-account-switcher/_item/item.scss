@@ -15,13 +15,13 @@
     overflow: hidden;
 
     border-radius: 2px;
-    border: 1px solid $hig-gray-4;
+    border: 1px solid color(hig-gray-40);
 
-    color: $hig-gray-2;
+    color: color(hig-gray-20);
     font-size: 13px;
     line-height: 32px;
     text-align: center;
-    background-color: $gray-e;
+    background-color: color(hig-gray-60);
 
     .hig__global-nav__top-nav__project-account-switcher__item--project & {
         width: 32px;
@@ -68,6 +68,6 @@
     padding-left: 10px;
 
     .hig__global-nav__top-nav__project-account-switcher__item--active > & {
-        color: $adsk-blue;
+        color: color(adsk-blue);
     }
 }
