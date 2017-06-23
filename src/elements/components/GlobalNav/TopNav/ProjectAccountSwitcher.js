@@ -133,11 +133,11 @@ export class ProjectAccountSwitcher extends HIGElement {
     open ? this.hig.open() : this.hig.close();
 
     if (this.projects.length > 1 || this.accounts.length > 1) {
-      this.hig.addCaret();
+      this.hig.showCaret();
       this.configureHIGEventListener('onClick', this.openFlyout);
       this.configureHIGEventListener('onClickOutside', this.closeFlyout);
     } else {
-      this.hig.removeCaret();
+      this.hig.hideCaret();
       this.configureHIGEventListener('onClick', undefined);
       this.configureHIGEventListener('onClickOutside', undefined);
     }
