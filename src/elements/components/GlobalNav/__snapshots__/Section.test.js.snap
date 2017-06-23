@@ -4,15 +4,11 @@ exports[`<Section> children: <Group> can insert <Group> elements before and afte
 "<div class=\\"hig__global-nav\\">
     <div class=\\"hig__global-nav__sidenav\\">
     <div class=\\"hig__global-nav__sidenav__scroll\\">
-        <!--SEARCH-->
         <div class=\\"hig__global-nav__side-nav__section\\">
     <div class=\\"hig__global-nav__side-nav__section__header\\">
         <span class=\\"hig__global-nav__side-nav__section__header__label\\">some label</span>
         <span class=\\"hig__global-nav__side-nav__section__header__name\\">X</span>
-        <div class=\\"hig__global-nav__side-nav__section__collapse\\">
-    <div class=\\"hig__global-nav__side-nav__section__collapse--maximize\\"><div class=\\"hig__icon\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"expand\\"><title>hig/icon/expand</title><g fill=\\"none\\" fill-rule=\\"evenodd\\"><rect stroke=\\"#C9D2D7\\" x=\\"4.5\\" y=\\"4.5\\" width=\\"15\\" height=\\"15\\" rx=\\"2\\"></rect><polygon fill=\\"#34495E\\" points=\\"16.0342961 11.2694653 7.96570392 11.2694653 7.96570392 12.7523417 16.0342961 12.7523417\\"></polygon><polygon fill=\\"#34495E\\" transform=\\"rotate(90 12 12.01)\\" points=\\"16.0342961 11.2694653 7.96570392 11.2694653 7.96570392 12.7523417 16.0342961 12.7523417\\"></polygon></g></svg></div></div>
-    <div class=\\"hig__global-nav__side-nav__section__collapse--minimize\\"><div class=\\"hig__icon\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"collapse\\"><title>hig/icon/collapse</title><g fill=\\"none\\" fill-rule=\\"evenodd\\"><rect stroke=\\"#C9D2D7\\" x=\\"4.5\\" y=\\"4.5\\" width=\\"15\\" height=\\"15\\" rx=\\"2\\"></rect><polygon fill=\\"#34495E\\" points=\\"16.0342961 11.2694653 7.96570392 11.2694653 7.96570392 12.7523417 16.0342961 12.7523417\\"></polygon></g></svg></div></div>
-</div><!--COLLAPSE-->
+        <div class=\\"hig__global-nav__side-nav__section__collapse\\"><div class=\\"hig__icon\\"><svg width=\\"11\\" height=\\"12\\" viewBox=\\"0 0 11 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"double-caret\\"><g stroke-width=\\"1.5\\" stroke=\\"#979797\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.432 -9.533)\\"></polyline><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.432 -4.533)\\"></polyline></g></svg></div></div><!--SECTIONCOLLAPSE-->
     </div>
     <div class=\\"hig__global-nav__side-nav__section__group hig__global-nav__side-nav__section__group--hide\\">
     <!--MODULE-->
@@ -23,6 +19,7 @@ exports[`<Section> children: <Group> can insert <Group> elements before and afte
         </div>
         <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
     </div>
+    <!--SEARCH-->
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
@@ -38,15 +35,11 @@ exports[`<Section> children: <Group> can insert <Group> elements before and afte
 "<div class=\\"hig__global-nav\\">
     <div class=\\"hig__global-nav__sidenav\\">
     <div class=\\"hig__global-nav__sidenav__scroll\\">
-        <!--SEARCH-->
         <div class=\\"hig__global-nav__side-nav__section\\">
     <div class=\\"hig__global-nav__side-nav__section__header\\">
         <span class=\\"hig__global-nav__side-nav__section__header__label\\">some label</span>
         <span class=\\"hig__global-nav__side-nav__section__header__name\\">X</span>
-        <div class=\\"hig__global-nav__side-nav__section__collapse\\">
-    <div class=\\"hig__global-nav__side-nav__section__collapse--maximize\\"><div class=\\"hig__icon\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"expand\\"><title>hig/icon/expand</title><g fill=\\"none\\" fill-rule=\\"evenodd\\"><rect stroke=\\"#C9D2D7\\" x=\\"4.5\\" y=\\"4.5\\" width=\\"15\\" height=\\"15\\" rx=\\"2\\"></rect><polygon fill=\\"#34495E\\" points=\\"16.0342961 11.2694653 7.96570392 11.2694653 7.96570392 12.7523417 16.0342961 12.7523417\\"></polygon><polygon fill=\\"#34495E\\" transform=\\"rotate(90 12 12.01)\\" points=\\"16.0342961 11.2694653 7.96570392 11.2694653 7.96570392 12.7523417 16.0342961 12.7523417\\"></polygon></g></svg></div></div>
-    <div class=\\"hig__global-nav__side-nav__section__collapse--minimize\\"><div class=\\"hig__icon\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"collapse\\"><title>hig/icon/collapse</title><g fill=\\"none\\" fill-rule=\\"evenodd\\"><rect stroke=\\"#C9D2D7\\" x=\\"4.5\\" y=\\"4.5\\" width=\\"15\\" height=\\"15\\" rx=\\"2\\"></rect><polygon fill=\\"#34495E\\" points=\\"16.0342961 11.2694653 7.96570392 11.2694653 7.96570392 12.7523417 16.0342961 12.7523417\\"></polygon></g></svg></div></div>
-</div><!--COLLAPSE-->
+        <div class=\\"hig__global-nav__side-nav__section__collapse\\"><div class=\\"hig__icon\\"><svg width=\\"11\\" height=\\"12\\" viewBox=\\"0 0 11 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"double-caret\\"><g stroke-width=\\"1.5\\" stroke=\\"#979797\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.432 -9.533)\\"></polyline><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.432 -4.533)\\"></polyline></g></svg></div></div><!--SECTIONCOLLAPSE-->
     </div>
     <div class=\\"hig__global-nav__side-nav__section__group hig__global-nav__side-nav__section__group--hide\\">
     <!--MODULE-->
@@ -59,6 +52,7 @@ exports[`<Section> children: <Group> can insert <Group> elements before and afte
         </div>
         <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
     </div>
+    <!--SEARCH-->
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
@@ -74,15 +68,11 @@ exports[`<Section> children: <Group> can insert <Group> elements before and afte
 "<div class=\\"hig__global-nav\\">
     <div class=\\"hig__global-nav__sidenav\\">
     <div class=\\"hig__global-nav__sidenav__scroll\\">
-        <!--SEARCH-->
         <div class=\\"hig__global-nav__side-nav__section\\">
     <div class=\\"hig__global-nav__side-nav__section__header\\">
         <span class=\\"hig__global-nav__side-nav__section__header__label\\">some label</span>
         <span class=\\"hig__global-nav__side-nav__section__header__name\\">X</span>
-        <div class=\\"hig__global-nav__side-nav__section__collapse\\">
-    <div class=\\"hig__global-nav__side-nav__section__collapse--maximize\\"><div class=\\"hig__icon\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"expand\\"><title>hig/icon/expand</title><g fill=\\"none\\" fill-rule=\\"evenodd\\"><rect stroke=\\"#C9D2D7\\" x=\\"4.5\\" y=\\"4.5\\" width=\\"15\\" height=\\"15\\" rx=\\"2\\"></rect><polygon fill=\\"#34495E\\" points=\\"16.0342961 11.2694653 7.96570392 11.2694653 7.96570392 12.7523417 16.0342961 12.7523417\\"></polygon><polygon fill=\\"#34495E\\" transform=\\"rotate(90 12 12.01)\\" points=\\"16.0342961 11.2694653 7.96570392 11.2694653 7.96570392 12.7523417 16.0342961 12.7523417\\"></polygon></g></svg></div></div>
-    <div class=\\"hig__global-nav__side-nav__section__collapse--minimize\\"><div class=\\"hig__icon\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"collapse\\"><title>hig/icon/collapse</title><g fill=\\"none\\" fill-rule=\\"evenodd\\"><rect stroke=\\"#C9D2D7\\" x=\\"4.5\\" y=\\"4.5\\" width=\\"15\\" height=\\"15\\" rx=\\"2\\"></rect><polygon fill=\\"#34495E\\" points=\\"16.0342961 11.2694653 7.96570392 11.2694653 7.96570392 12.7523417 16.0342961 12.7523417\\"></polygon></g></svg></div></div>
-</div><!--COLLAPSE-->
+        <div class=\\"hig__global-nav__side-nav__section__collapse\\"><div class=\\"hig__icon\\"><svg width=\\"11\\" height=\\"12\\" viewBox=\\"0 0 11 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"double-caret\\"><g stroke-width=\\"1.5\\" stroke=\\"#979797\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.432 -9.533)\\"></polyline><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.432 -4.533)\\"></polyline></g></svg></div></div><!--SECTIONCOLLAPSE-->
     </div>
     <div class=\\"hig__global-nav__side-nav__section__group hig__global-nav__side-nav__section__group--hide\\">
     <!--MODULE-->
@@ -93,6 +83,7 @@ exports[`<Section> children: <Group> can insert <Group> elements before and afte
         </div>
         <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
     </div>
+    <!--SEARCH-->
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
@@ -108,15 +99,11 @@ exports[`<Section> children: <Group> can insert <Group> elements before and afte
 "<div class=\\"hig__global-nav\\">
     <div class=\\"hig__global-nav__sidenav\\">
     <div class=\\"hig__global-nav__sidenav__scroll\\">
-        <!--SEARCH-->
         <div class=\\"hig__global-nav__side-nav__section\\">
     <div class=\\"hig__global-nav__side-nav__section__header\\">
         <span class=\\"hig__global-nav__side-nav__section__header__label\\">some label</span>
         <span class=\\"hig__global-nav__side-nav__section__header__name\\">X</span>
-        <div class=\\"hig__global-nav__side-nav__section__collapse\\">
-    <div class=\\"hig__global-nav__side-nav__section__collapse--maximize\\"><div class=\\"hig__icon\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"expand\\"><title>hig/icon/expand</title><g fill=\\"none\\" fill-rule=\\"evenodd\\"><rect stroke=\\"#C9D2D7\\" x=\\"4.5\\" y=\\"4.5\\" width=\\"15\\" height=\\"15\\" rx=\\"2\\"></rect><polygon fill=\\"#34495E\\" points=\\"16.0342961 11.2694653 7.96570392 11.2694653 7.96570392 12.7523417 16.0342961 12.7523417\\"></polygon><polygon fill=\\"#34495E\\" transform=\\"rotate(90 12 12.01)\\" points=\\"16.0342961 11.2694653 7.96570392 11.2694653 7.96570392 12.7523417 16.0342961 12.7523417\\"></polygon></g></svg></div></div>
-    <div class=\\"hig__global-nav__side-nav__section__collapse--minimize\\"><div class=\\"hig__icon\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"collapse\\"><title>hig/icon/collapse</title><g fill=\\"none\\" fill-rule=\\"evenodd\\"><rect stroke=\\"#C9D2D7\\" x=\\"4.5\\" y=\\"4.5\\" width=\\"15\\" height=\\"15\\" rx=\\"2\\"></rect><polygon fill=\\"#34495E\\" points=\\"16.0342961 11.2694653 7.96570392 11.2694653 7.96570392 12.7523417 16.0342961 12.7523417\\"></polygon></g></svg></div></div>
-</div><!--COLLAPSE-->
+        <div class=\\"hig__global-nav__side-nav__section__collapse\\"><div class=\\"hig__icon\\"><svg width=\\"11\\" height=\\"12\\" viewBox=\\"0 0 11 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"double-caret\\"><g stroke-width=\\"1.5\\" stroke=\\"#979797\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.432 -9.533)\\"></polyline><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.432 -4.533)\\"></polyline></g></svg></div></div><!--SECTIONCOLLAPSE-->
     </div>
     <div class=\\"hig__global-nav__side-nav__section__group hig__global-nav__side-nav__section__group--hide\\">
     <!--MODULE-->
@@ -129,6 +116,7 @@ exports[`<Section> children: <Group> can insert <Group> elements before and afte
         </div>
         <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
     </div>
+    <!--SEARCH-->
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
@@ -144,15 +132,11 @@ exports[`<Section> children: <Group> can insert <Group> elements before and afte
 "<div class=\\"hig__global-nav\\">
     <div class=\\"hig__global-nav__sidenav\\">
     <div class=\\"hig__global-nav__sidenav__scroll\\">
-        <!--SEARCH-->
         <div class=\\"hig__global-nav__side-nav__section\\">
     <div class=\\"hig__global-nav__side-nav__section__header\\">
         <span class=\\"hig__global-nav__side-nav__section__header__label\\">some label</span>
         <span class=\\"hig__global-nav__side-nav__section__header__name\\">X</span>
-        <div class=\\"hig__global-nav__side-nav__section__collapse\\">
-    <div class=\\"hig__global-nav__side-nav__section__collapse--maximize\\"><div class=\\"hig__icon\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"expand\\"><title>hig/icon/expand</title><g fill=\\"none\\" fill-rule=\\"evenodd\\"><rect stroke=\\"#C9D2D7\\" x=\\"4.5\\" y=\\"4.5\\" width=\\"15\\" height=\\"15\\" rx=\\"2\\"></rect><polygon fill=\\"#34495E\\" points=\\"16.0342961 11.2694653 7.96570392 11.2694653 7.96570392 12.7523417 16.0342961 12.7523417\\"></polygon><polygon fill=\\"#34495E\\" transform=\\"rotate(90 12 12.01)\\" points=\\"16.0342961 11.2694653 7.96570392 11.2694653 7.96570392 12.7523417 16.0342961 12.7523417\\"></polygon></g></svg></div></div>
-    <div class=\\"hig__global-nav__side-nav__section__collapse--minimize\\"><div class=\\"hig__icon\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"collapse\\"><title>hig/icon/collapse</title><g fill=\\"none\\" fill-rule=\\"evenodd\\"><rect stroke=\\"#C9D2D7\\" x=\\"4.5\\" y=\\"4.5\\" width=\\"15\\" height=\\"15\\" rx=\\"2\\"></rect><polygon fill=\\"#34495E\\" points=\\"16.0342961 11.2694653 7.96570392 11.2694653 7.96570392 12.7523417 16.0342961 12.7523417\\"></polygon></g></svg></div></div>
-</div><!--COLLAPSE-->
+        <div class=\\"hig__global-nav__side-nav__section__collapse\\"><div class=\\"hig__icon\\"><svg width=\\"11\\" height=\\"12\\" viewBox=\\"0 0 11 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"double-caret\\"><g stroke-width=\\"1.5\\" stroke=\\"#979797\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.432 -9.533)\\"></polyline><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.432 -4.533)\\"></polyline></g></svg></div></div><!--SECTIONCOLLAPSE-->
     </div>
     <div class=\\"hig__global-nav__side-nav__section__group hig__global-nav__side-nav__section__group--hide\\">
     <!--MODULE-->
@@ -163,6 +147,7 @@ exports[`<Section> children: <Group> can insert <Group> elements before and afte
         </div>
         <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
     </div>
+    <!--SEARCH-->
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
@@ -178,15 +163,11 @@ exports[`<Section> children: <Group> can render a list of <Group> elements 1`] =
 "<div class=\\"hig__global-nav\\">
     <div class=\\"hig__global-nav__sidenav\\">
     <div class=\\"hig__global-nav__sidenav__scroll\\">
-        <!--SEARCH-->
         <div class=\\"hig__global-nav__side-nav__section\\">
     <div class=\\"hig__global-nav__side-nav__section__header\\">
         <span class=\\"hig__global-nav__side-nav__section__header__label\\">some label</span>
         <span class=\\"hig__global-nav__side-nav__section__header__name\\">X</span>
-        <div class=\\"hig__global-nav__side-nav__section__collapse\\">
-    <div class=\\"hig__global-nav__side-nav__section__collapse--maximize\\"><div class=\\"hig__icon\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"expand\\"><title>hig/icon/expand</title><g fill=\\"none\\" fill-rule=\\"evenodd\\"><rect stroke=\\"#C9D2D7\\" x=\\"4.5\\" y=\\"4.5\\" width=\\"15\\" height=\\"15\\" rx=\\"2\\"></rect><polygon fill=\\"#34495E\\" points=\\"16.0342961 11.2694653 7.96570392 11.2694653 7.96570392 12.7523417 16.0342961 12.7523417\\"></polygon><polygon fill=\\"#34495E\\" transform=\\"rotate(90 12 12.01)\\" points=\\"16.0342961 11.2694653 7.96570392 11.2694653 7.96570392 12.7523417 16.0342961 12.7523417\\"></polygon></g></svg></div></div>
-    <div class=\\"hig__global-nav__side-nav__section__collapse--minimize\\"><div class=\\"hig__icon\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"collapse\\"><title>hig/icon/collapse</title><g fill=\\"none\\" fill-rule=\\"evenodd\\"><rect stroke=\\"#C9D2D7\\" x=\\"4.5\\" y=\\"4.5\\" width=\\"15\\" height=\\"15\\" rx=\\"2\\"></rect><polygon fill=\\"#34495E\\" points=\\"16.0342961 11.2694653 7.96570392 11.2694653 7.96570392 12.7523417 16.0342961 12.7523417\\"></polygon></g></svg></div></div>
-</div><!--COLLAPSE-->
+        <div class=\\"hig__global-nav__side-nav__section__collapse\\"><div class=\\"hig__icon\\"><svg width=\\"11\\" height=\\"12\\" viewBox=\\"0 0 11 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"double-caret\\"><g stroke-width=\\"1.5\\" stroke=\\"#979797\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.432 -9.533)\\"></polyline><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.432 -4.533)\\"></polyline></g></svg></div></div><!--SECTIONCOLLAPSE-->
     </div>
     <div class=\\"hig__global-nav__side-nav__section__group hig__global-nav__side-nav__section__group--hide\\">
     <!--MODULE-->
@@ -199,6 +180,7 @@ exports[`<Section> children: <Group> can render a list of <Group> elements 1`] =
         </div>
         <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
     </div>
+    <!--SEARCH-->
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
@@ -214,15 +196,11 @@ exports[`<Section> headerLabel sets the headerLabel default 1`] = `
 "<div class=\\"hig__global-nav\\">
     <div class=\\"hig__global-nav__sidenav\\">
     <div class=\\"hig__global-nav__sidenav__scroll\\">
-        <!--SEARCH-->
         <div class=\\"hig__global-nav__side-nav__section\\">
     <div class=\\"hig__global-nav__side-nav__section__header\\">
         <span class=\\"hig__global-nav__side-nav__section__header__label\\">some label</span>
         <span class=\\"hig__global-nav__side-nav__section__header__name\\">X</span>
-        <div class=\\"hig__global-nav__side-nav__section__collapse\\">
-    <div class=\\"hig__global-nav__side-nav__section__collapse--maximize\\"><div class=\\"hig__icon\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"expand\\"><title>hig/icon/expand</title><g fill=\\"none\\" fill-rule=\\"evenodd\\"><rect stroke=\\"#C9D2D7\\" x=\\"4.5\\" y=\\"4.5\\" width=\\"15\\" height=\\"15\\" rx=\\"2\\"></rect><polygon fill=\\"#34495E\\" points=\\"16.0342961 11.2694653 7.96570392 11.2694653 7.96570392 12.7523417 16.0342961 12.7523417\\"></polygon><polygon fill=\\"#34495E\\" transform=\\"rotate(90 12 12.01)\\" points=\\"16.0342961 11.2694653 7.96570392 11.2694653 7.96570392 12.7523417 16.0342961 12.7523417\\"></polygon></g></svg></div></div>
-    <div class=\\"hig__global-nav__side-nav__section__collapse--minimize\\"><div class=\\"hig__icon\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"collapse\\"><title>hig/icon/collapse</title><g fill=\\"none\\" fill-rule=\\"evenodd\\"><rect stroke=\\"#C9D2D7\\" x=\\"4.5\\" y=\\"4.5\\" width=\\"15\\" height=\\"15\\" rx=\\"2\\"></rect><polygon fill=\\"#34495E\\" points=\\"16.0342961 11.2694653 7.96570392 11.2694653 7.96570392 12.7523417 16.0342961 12.7523417\\"></polygon></g></svg></div></div>
-</div><!--COLLAPSE-->
+        <div class=\\"hig__global-nav__side-nav__section__collapse\\"><div class=\\"hig__icon\\"><svg width=\\"11\\" height=\\"12\\" viewBox=\\"0 0 11 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"double-caret\\"><g stroke-width=\\"1.5\\" stroke=\\"#979797\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.432 -9.533)\\"></polyline><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.432 -4.533)\\"></polyline></g></svg></div></div><!--SECTIONCOLLAPSE-->
     </div>
     <!--GROUP-->
 </div><!--SECTION-->
@@ -231,6 +209,7 @@ exports[`<Section> headerLabel sets the headerLabel default 1`] = `
         </div>
         <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
     </div>
+    <!--SEARCH-->
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
@@ -246,15 +225,11 @@ exports[`<Section> headerLabel updates the headerLabel 1`] = `
 "<div class=\\"hig__global-nav\\">
     <div class=\\"hig__global-nav__sidenav\\">
     <div class=\\"hig__global-nav__sidenav__scroll\\">
-        <!--SEARCH-->
         <div class=\\"hig__global-nav__side-nav__section\\">
     <div class=\\"hig__global-nav__side-nav__section__header\\">
         <span class=\\"hig__global-nav__side-nav__section__header__label\\">new header label</span>
         <span class=\\"hig__global-nav__side-nav__section__header__name\\">X</span>
-        <div class=\\"hig__global-nav__side-nav__section__collapse\\">
-    <div class=\\"hig__global-nav__side-nav__section__collapse--maximize\\"><div class=\\"hig__icon\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"expand\\"><title>hig/icon/expand</title><g fill=\\"none\\" fill-rule=\\"evenodd\\"><rect stroke=\\"#C9D2D7\\" x=\\"4.5\\" y=\\"4.5\\" width=\\"15\\" height=\\"15\\" rx=\\"2\\"></rect><polygon fill=\\"#34495E\\" points=\\"16.0342961 11.2694653 7.96570392 11.2694653 7.96570392 12.7523417 16.0342961 12.7523417\\"></polygon><polygon fill=\\"#34495E\\" transform=\\"rotate(90 12 12.01)\\" points=\\"16.0342961 11.2694653 7.96570392 11.2694653 7.96570392 12.7523417 16.0342961 12.7523417\\"></polygon></g></svg></div></div>
-    <div class=\\"hig__global-nav__side-nav__section__collapse--minimize\\"><div class=\\"hig__icon\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"collapse\\"><title>hig/icon/collapse</title><g fill=\\"none\\" fill-rule=\\"evenodd\\"><rect stroke=\\"#C9D2D7\\" x=\\"4.5\\" y=\\"4.5\\" width=\\"15\\" height=\\"15\\" rx=\\"2\\"></rect><polygon fill=\\"#34495E\\" points=\\"16.0342961 11.2694653 7.96570392 11.2694653 7.96570392 12.7523417 16.0342961 12.7523417\\"></polygon></g></svg></div></div>
-</div><!--COLLAPSE-->
+        <div class=\\"hig__global-nav__side-nav__section__collapse\\"><div class=\\"hig__icon\\"><svg width=\\"11\\" height=\\"12\\" viewBox=\\"0 0 11 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"double-caret\\"><g stroke-width=\\"1.5\\" stroke=\\"#979797\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.432 -9.533)\\"></polyline><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.432 -4.533)\\"></polyline></g></svg></div></div><!--SECTIONCOLLAPSE-->
     </div>
     <!--GROUP-->
 </div><!--SECTION-->
@@ -263,6 +238,7 @@ exports[`<Section> headerLabel updates the headerLabel 1`] = `
         </div>
         <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
     </div>
+    <!--SEARCH-->
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
@@ -278,16 +254,11 @@ exports[`<Section> headerName sets the headerName default 1`] = `
 "<div class=\\"hig__global-nav\\">
     <div class=\\"hig__global-nav__sidenav\\">
     <div class=\\"hig__global-nav__sidenav__scroll\\">
-        <!--SEARCH-->
         <div class=\\"hig__global-nav__side-nav__section\\">
     <div class=\\"hig__global-nav__side-nav__section__header\\">
         <span class=\\"hig__global-nav__side-nav__section__header__label\\">Project</span>
         <span class=\\"hig__global-nav__side-nav__section__header__name\\">some label</span>
-        <div class=\\"hig__global-nav__side-nav__section__collapse\\">
-    <div class=\\"hig__global-nav__side-nav__section__collapse--maximize\\"><div class=\\"hig__icon\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"expand\\"><title>hig/icon/expand</title><g fill=\\"none\\" fill-rule=\\"evenodd\\"><rect stroke=\\"#C9D2D7\\" x=\\"4.5\\" y=\\"4.5\\" width=\\"15\\" height=\\"15\\" rx=\\"2\\"></rect><polygon fill=\\"#34495E\\" points=\\"16.0342961 11.2694653 7.96570392 11.2694653 7.96570392 12.7523417 16.0342961 12.7523417\\"></polygon><polygon fill=\\"#34495E\\" transform=\\"rotate(90 12 12.01)\\" points=\\"16.0342961 11.2694653 7.96570392 11.2694653 7.96570392 12.7523417 16.0342961 12.7523417\\"></polygon></g></svg></div></div>
-    <div class=\\"hig__global-nav__side-nav__section__collapse--minimize\\"><div class=\\"hig__icon\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"collapse\\"><title>hig/icon/collapse</title><g fill=\\"none\\" fill-rule=\\"evenodd\\"><rect stroke=\\"#C9D2D7\\" x=\\"4.5\\" y=\\"4.5\\" width=\\"15\\" height=\\"15\\" rx=\\"2\\"></rect><polygon fill=\\"#34495E\\" points=\\"16.0342961 11.2694653 7.96570392 11.2694653 7.96570392 12.7523417 16.0342961 12.7523417\\"></polygon></g></svg></div></div>
-</div><!--COLLAPSE-->
-
+        <div class=\\"hig__global-nav__side-nav__section__collapse\\"><div class=\\"hig__icon\\"><svg width=\\"11\\" height=\\"12\\" viewBox=\\"0 0 11 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"double-caret\\"><g stroke-width=\\"1.5\\" stroke=\\"#979797\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.432 -9.533)\\"></polyline><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.432 -4.533)\\"></polyline></g></svg></div></div><!--SECTIONCOLLAPSE-->
     </div>
     <!--GROUP-->
 </div><!--SECTION-->
@@ -296,6 +267,7 @@ exports[`<Section> headerName sets the headerName default 1`] = `
         </div>
         <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
     </div>
+    <!--SEARCH-->
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->
@@ -311,15 +283,11 @@ exports[`<Section> headerName updates the headerName 1`] = `
 "<div class=\\"hig__global-nav\\">
     <div class=\\"hig__global-nav__sidenav\\">
     <div class=\\"hig__global-nav__sidenav__scroll\\">
-        <!--SEARCH-->
         <div class=\\"hig__global-nav__side-nav__section\\">
     <div class=\\"hig__global-nav__side-nav__section__header\\">
         <span class=\\"hig__global-nav__side-nav__section__header__label\\">Project</span>
         <span class=\\"hig__global-nav__side-nav__section__header__name\\">new header name</span>
-        <div class=\\"hig__global-nav__side-nav__section__collapse\\">
-    <div class=\\"hig__global-nav__side-nav__section__collapse--maximize\\"><div class=\\"hig__icon\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"expand\\"><title>hig/icon/expand</title><g fill=\\"none\\" fill-rule=\\"evenodd\\"><rect stroke=\\"#C9D2D7\\" x=\\"4.5\\" y=\\"4.5\\" width=\\"15\\" height=\\"15\\" rx=\\"2\\"></rect><polygon fill=\\"#34495E\\" points=\\"16.0342961 11.2694653 7.96570392 11.2694653 7.96570392 12.7523417 16.0342961 12.7523417\\"></polygon><polygon fill=\\"#34495E\\" transform=\\"rotate(90 12 12.01)\\" points=\\"16.0342961 11.2694653 7.96570392 11.2694653 7.96570392 12.7523417 16.0342961 12.7523417\\"></polygon></g></svg></div></div>
-    <div class=\\"hig__global-nav__side-nav__section__collapse--minimize\\"><div class=\\"hig__icon\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"collapse\\"><title>hig/icon/collapse</title><g fill=\\"none\\" fill-rule=\\"evenodd\\"><rect stroke=\\"#C9D2D7\\" x=\\"4.5\\" y=\\"4.5\\" width=\\"15\\" height=\\"15\\" rx=\\"2\\"></rect><polygon fill=\\"#34495E\\" points=\\"16.0342961 11.2694653 7.96570392 11.2694653 7.96570392 12.7523417 16.0342961 12.7523417\\"></polygon></g></svg></div></div>
-</div><!--COLLAPSE-->
+        <div class=\\"hig__global-nav__side-nav__section__collapse\\"><div class=\\"hig__icon\\"><svg width=\\"11\\" height=\\"12\\" viewBox=\\"0 0 11 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"double-caret\\"><g stroke-width=\\"1.5\\" stroke=\\"#979797\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.432 -9.533)\\"></polyline><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.432 -4.533)\\"></polyline></g></svg></div></div><!--SECTIONCOLLAPSE-->
     </div>
     <!--GROUP-->
 </div><!--SECTION-->
@@ -328,6 +296,7 @@ exports[`<Section> headerName updates the headerName 1`] = `
         </div>
         <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
     </div>
+    <!--SEARCH-->
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <!--TOPNAV-->

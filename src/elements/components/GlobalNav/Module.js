@@ -20,6 +20,7 @@ import HIGElement from '../../HIGElement';
 import HIGNodeList from '../../HIGNodeList';
 import HIGChildValidator from '../../HIGChildValidator';
 import SubmoduleComponent, { Submodule } from './Submodule';
+import ModuleCollapseComponent, { ModuleCollapse } from './ModuleCollapse'
 
 export class Module extends HIGElement {
   constructor(HIGConstructor, initialProps) {
@@ -33,8 +34,11 @@ export class Module extends HIGElement {
     });
     this.state = {
       title: initialProps.title,
-      query: initialProps.query
+      query: initialProps.query,
+      expanded: false
     };
+
+    this.toggleCollapsed = this.toggleCollapsed.bind(this);
   }
 
   commitUpdate(updatePayload, oldProps, newProps) {
@@ -61,8 +65,19 @@ export class Module extends HIGElement {
     }
   }
 
+  toggleCollapsed() {
+    this.state.expanded = !this.state.expanded;
+    this._render();
+  }
+
   componentDidMount() {
     this.submodules.componentDidMount();
+    if (this.submodules.length > 0) {
+      this.collapse = new ModuleCollapse(this.hig.partials.Collapse, { isCollapsed: !this.state.expanded});
+      this.hig.addCollapse(this.collapse.hig);
+      this.collapse.mount();
+      this.collapse.hig.onClick(this.toggleCollapsed);
+    }
     this._render();
   }
 
@@ -88,6 +103,10 @@ export class Module extends HIGElement {
   }
 
   _render() {
+    if (this.collapse) {
+      this.collapse.commitUpdate(['isCollapsed', !this.state.expanded]);
+    };
+    
     const childMatches = this.submodules.map(submodule => {
       submodule.commitUpdate({
         query: this.state.query,

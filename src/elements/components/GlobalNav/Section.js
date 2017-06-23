@@ -21,7 +21,7 @@ import HIGElement from '../../HIGElement';
 import HIGNodeList from '../../HIGNodeList';
 import HIGChildValidator from '../../HIGChildValidator';
 import GroupComponent, { Group } from './Group';
-import CollapseComponent, { Collapse } from './Collapse';
+import SectionCollapseComponent, { SectionCollapse } from './SectionCollapse';
 
 export class Section extends HIGElement {
   constructor(HIGConstructor, initialProps) {
@@ -45,7 +45,7 @@ export class Section extends HIGElement {
   componentDidMount() {
     this.groups.componentDidMount();
 
-    this.collapse = new Collapse(this.hig.partials.Collapse, {
+    this.collapse = new SectionCollapse(this.hig.partials.Collapse, {
       isCollapsed: !this.state.expanded
     });
     this.hig.addCollapse(this.collapse.hig);
@@ -88,8 +88,8 @@ export class Section extends HIGElement {
     switch (ElementConstructor) {
       case Group:
         return this.groups.createElement(ElementConstructor, props);
-      case Collapse:
-        return new Collapse(this.hig.partials.Collapse, props);
+      case SectionCollapse:
+        return new SectionCollapse(this.hig.partials.Collapse, props);
       default:
         throw new Error(`Unknown type ${ElementConstructor.name}`);
     }
@@ -138,7 +138,7 @@ SectionComponent.propTypes = {
   headerLabel: PropTypes.string,
   headerName: PropTypes.string,
   query: PropTypes.string,
-  children: HIGChildValidator([GroupComponent, CollapseComponent]),
+  children: HIGChildValidator([GroupComponent, SectionCollapseComponent]),
 };
 
 SectionComponent.__docgenInfo = {
@@ -162,6 +162,6 @@ SectionComponent.__docgenInfo = {
 };
 
 SectionComponent.Group = GroupComponent;
-SectionComponent.Collapse = CollapseComponent;
+SectionComponent.SectionCollapse = SectionCollapseComponent;
 
 export default SectionComponent;

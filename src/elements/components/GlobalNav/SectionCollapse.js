@@ -18,7 +18,7 @@ import * as PropTypes from 'prop-types';
 import createComponent from '../../../adapters/createComponent';
 import HIGElement from '../../HIGElement';
 
-export class Collapse extends HIGElement {
+export class SectionCollapse extends HIGElement {
   commitUpdate(updatePayload, oldProps, newProp) {
     for (let i = 0; i < updatePayload.length; i += 2) {
       const propKey = updatePayload[i];
@@ -48,9 +48,9 @@ export class Collapse extends HIGElement {
   }
 }
 
-const CollapseComponent = createComponent(Collapse);
+const SectionCollapseComponent = createComponent(SectionCollapse);
 
-CollapseComponent.propTypes = {
+SectionCollapseComponent.propTypes = {
   minimize: PropTypes.func,
   maximize: PropTypes.func,
   show: PropTypes.func,
@@ -58,7 +58,7 @@ CollapseComponent.propTypes = {
   onClick: PropTypes.func
 };
 
-CollapseComponent.__docgenInfo = {
+SectionCollapseComponent.__docgenInfo = {
   props: {
     minimize: {
       description: 'show [-] icon'
@@ -82,4 +82,4 @@ CollapseComponent.__docgenInfo = {
   }
 };
 
-export default CollapseComponent;
+export default SectionCollapseComponent;

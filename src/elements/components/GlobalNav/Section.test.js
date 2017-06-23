@@ -24,7 +24,7 @@ import Section from './Section';
 import Group from './Group';
 import Module from './Module';
 import Submodule from './Submodule';
-import Collapse from './Collapse';
+import SectionCollapse from './SectionCollapse';
 import SideNav from './SideNav';
 
 const SubmoduleContext = props => {
@@ -33,7 +33,7 @@ const SubmoduleContext = props => {
       <GlobalNav.SideNav>
         <GlobalNav.SideNav.SectionList>
           <Section headerLabel="Project" headerName="ThunderStorm">
-            <Collapse isCollapsed={props.isCollapsed} />
+            <SectionCollapse isCollapsed={props.isCollapsed} />
             <Group>
               <Module
                 icon="gear"
@@ -315,7 +315,7 @@ describe('<Section>', () => {
 
       expect(console.error).toBeCalledWith(
         expect.stringMatching(
-          /'div' is not a valid child of Section. Children should be of type 'Group, Collapse'/
+          /'div' is not a valid child of Section. Children should be of type 'Group, SectionCollapse'/
         )
       );
     });
@@ -331,7 +331,7 @@ describe('<Section>', () => {
 
       expect(console.error).toBeCalledWith(
         expect.stringMatching(
-          /'Hello world!' is not a valid child of Section. Children should be of type 'Group, Collapse'/
+          /'Hello world!' is not a valid child of Section. Children should be of type 'Group, SectionCollapse'/
         )
       );
     });

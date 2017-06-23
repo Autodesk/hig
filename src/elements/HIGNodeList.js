@@ -119,4 +119,8 @@ export default class HIGNodeList {
   map(handler) {
     return this.nodes.map(handler);
   }
+
+  get length(){
+    return this.nodes.length
+  }
 }

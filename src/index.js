@@ -171,7 +171,6 @@ class App extends React.Component {
       <div>
         <GlobalNav sideNavOpen={this.state.open}>
           <SideNav>
-            <Search placeholder="Find module or submodule" />
             <SectionList>
               <Section headerLabel="Project" headerName="ThunderStorm">
                 {topNavFixtures.menu().sections[0].groups.map((group, i) => {
@@ -219,6 +218,7 @@ class App extends React.Component {
               </Section>
 
             </SectionList>
+             <Search placeholder="Find module or submodule" />
           </SideNav>
           <TopNav
             logo={logo}
