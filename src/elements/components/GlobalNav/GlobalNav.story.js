@@ -198,7 +198,7 @@ storiesOf('GlobalNav', module)
             open={profileFlyoutOpenKnob}
             image={profileImage}
             onProfileImageClick={action('clicked')}
-            onProfileImageClick={action('clicked')}
+            onProfileSettingsClick={action('clicked')}
           />
         </TopNav>
         <SubNav moduleIndicatorName="Insight" moduleIndicatorIcon="hamburger" />

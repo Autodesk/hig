@@ -288,16 +288,11 @@ class App extends React.Component {
             <Help title="HELLLP MEEEE!!!!" link="/help" />
 
             <Profile
-              open={this.state.profileFlyoutOpen}
               image={profileImage}
-              signOutLabel="Sign Off"
-              profileSettingsLabel="Preferences"
-              profileSettingsLink="http://www.autodesk.com"
-              onProfileImageClick={this.openProfileFlyout}
-              onProfileClickOutside={this.closeProfileFlyout}
-              onSignOutClick={this.profileSignOutClick}
               name="Jane Doe"
               email="jane.doe@example.com"
+              profileSettingsLink="http://www.autodesk.com"
+              onSignOutClick={this.profileSignOutClick}
             />
 
             <TopNavSearch

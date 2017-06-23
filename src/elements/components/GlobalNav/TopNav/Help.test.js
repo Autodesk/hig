@@ -20,9 +20,7 @@ import React from 'react';
 
 import GlobalNav from './../GlobalNav';
 import TopNav from './TopNav';
-import Profile from './Profile';
 import Help from './Help';
-import SharedExamples from './../SharedExamples';
 
 const Context = props => {
   return (

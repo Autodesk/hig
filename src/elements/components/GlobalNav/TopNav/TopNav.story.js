@@ -22,9 +22,6 @@ import GlobalNav from '../GlobalNav';
 import logo from '../../../../images/bim-logo.png';
 
 const TopNav = GlobalNav.TopNav;
-const Profile = TopNav.Profile;
-const Shortcut = TopNav.Shortcut;
-const Help = TopNav.Help;
 const TopNavSearch = TopNav.Search;
 const Slot = GlobalNav.Slot;
 

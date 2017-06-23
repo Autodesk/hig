@@ -83,11 +83,22 @@ describe('<Profile>', () => {
       expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
     });
   });
+  describe('events handlers', () => {
+    it("WIP can set onProfileClickOutside", () => {
+      const foo = {
+        onProfileClickOutside: 'PropTypes.func',
+          onSignOutClick: 'PropTypes.func',
+        onProfileImageClick: 'PropTypes.func'}
+    })
+  });
 
   describe('setting and updating props', () => {
     const shex = new SharedExamples(Context, createHigContext);
-
     const configSets = [
+      { key: 'signOutLink',
+        sampleValue: '#',
+        updateValue: 'http://www.google.com',
+        mutator: 'setSignOutLink'},
       {
         key: 'email',
         sampleValue: 'foo@example.com',

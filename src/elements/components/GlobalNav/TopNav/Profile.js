@@ -20,20 +20,23 @@ import HIGElement from '../../../HIGElement';
 import createComponent from '../../../../adapters/createComponent';
 
 export class Profile extends HIGElement {
-  componentDidMount() {
-    if (this.initialProps.open === true) {
-      this.hig.open();
-    }
+  constructor(HIGConstructor, initialProps) {
+    super(HIGConstructor, initialProps);
+
+    ['openProfile', 'closeProfile'].forEach(fn => {
+      this[fn] = this[fn].bind(this);
+    });
   }
 
   commitUpdate(updatePayload, oldProps, newProp) {
     const mapping = {
+      email: 'setEmail',
       image: 'setImage',
       name: 'setName',
-      email: 'setEmail',
+      profileSettingsLink: 'setProfileSettingsLink',
       profileSettingsLabel: 'setProfileSettingsLabel',
       signOutLabel: 'setSignOutLabel',
-      profileSettingsLink: 'setProfileSettingsLink'
+      signOutLink: 'setSignOutLink'
     };
 
     const openIndex = updatePayload.indexOf('open');
@@ -50,17 +53,36 @@ export class Profile extends HIGElement {
 
     this.commitUpdateWithMapping(updatePayload, mapping);
   }
+
+  componentDidMount() {
+    if (this.initialProps.open === true) {
+      this.hig.open();
+    }
+    this.hig.onProfileImageClick(this.openProfile);
+    this.hig.onProfileClickOutside(this.closeProfile);
+  }
+
+  openProfile() {
+    this.hig.open();
+  }
+
+  closeProfile() {
+    this.hig.close();
+  }
+
 }
 
 const ProfileComponent = createComponent(Profile);
 
 ProfileComponent.propTypes = {
+  email: PropTypes.string,
   image: PropTypes.string,
   name: PropTypes.string,
-  email: PropTypes.string,
-  signOutLabel: PropTypes.string,
   profileSettingsLabel: PropTypes.string,
   profileSettingsLink: PropTypes.string,
+  signOutLabel: PropTypes.string,
+  signOutLink: PropTypes.string,
+  open: PropTypes.bool,
   onSignOutClick: PropTypes.func,
   onProfileImageClick: PropTypes.func,
   onProfileClickOutside: PropTypes.func
