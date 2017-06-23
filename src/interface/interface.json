@@ -316,8 +316,11 @@
                                         "{Project} [ReferenceProject] - (Optional) reference node for insertBefore"
                                     ]
                                 },
-                                "removeCaretFromTarget": {
-                                    "desc": "removes caret from target in Project Account Switcher"
+                                "showCaret": {
+                                    "desc": "shows a caret indicating a flyout in Project Account Switcher"
+                                },
+                                "hideCaret": {
+                                    "desc": "removes caret indicating a flyout in Project Account Switcher"
                                 },
                                 "open": {
                                     "desc": "opens the project/account switcher"
@@ -608,7 +611,7 @@
                                     "desc": "Calls the provided callback when user clicks on the Help",
                                     "params": "HIG.abstract.EventObject.params",
                                     "returns": "HIG.abstract.EventObject.returns"
-                                },   
+                                },
                                 "onFocusOut": {
                                     "desc": "Calls the provided callback when user clicks on the Help",
                                     "params": "HIG.abstract.EventObject.params",

@@ -41,8 +41,12 @@ class Target extends Core {
         return this._attachListener("click", this.el, this.el, fn);
     }
 
+    addCaret(){
+        this._findDOMEl('.hig__global-nav__top-nav__project-account-switcher__target__caret', this.el).classList.remove('hig__global-nav__top-nav__project-account-switcher__target__caret--hide');
+    }
+
     removeCaret(){
-        this._findDOMEl('.hig__global-nav__top-nav__project-account-switcher__target__caret', this.el).remove(); 
+        this._findDOMEl('.hig__global-nav__top-nav__project-account-switcher__target__caret', this.el).classList.add('hig__global-nav__top-nav__project-account-switcher__target__caret--hide');
     }
 }
 
@@ -54,6 +58,7 @@ Target._interface = {
         "setImage": {},
         "setType": {},
         "onClick": {},
+        "addCaret": {},
         "removeCaret": {}
     }
 };
