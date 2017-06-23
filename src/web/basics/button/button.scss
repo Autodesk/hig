@@ -13,26 +13,26 @@
 
     &.hig__button--default {
         background: white;
-        border: 1px solid $hig-gray-50;
+        border: 1px solid color(hig-gray-50);
         border-radius: 2px;
 
-        color: $hig-slate-dark;
+        color: color(hig-slate)-dark;
 
         &:hover {
-            box-shadow: 0 2px 6px $box-shadow-10;
-            border: 1px solid $hig-gray-20;
+            box-shadow: 0 2px 6px color(box-shadow-10);
+            border: 1px solid color(hig-gray-20);
         }
 
         &:active {
-            background: $hig-gray-40;
-            border: 1px solid $hig-gray-20;
+            background: color(hig-gray-40);
+            border: 1px solid color(hig-gray-20);
             box-shadow: none;
-            color: $hig-gray-10;
+            color: color(hig-gray-10);
         }
     }
 
     &.hig__button--link {
-        color: $adsk-blue;
+        color: color(adsk-blue);
 
         &:hover {
             text-decoration: underline;

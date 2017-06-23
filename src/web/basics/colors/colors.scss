@@ -1,81 +1,96 @@
-// Background colors
-$hig-white: #FFFFFF;
-// $hig-gray-60
-// $hig-slate-dark
+// Color Function
+// Used to get a color value, for example:
+// div {
+//   background: color(adsk-blue);
+// }
 
+@function color($color-name, $color-variant:null) {
+    @if ($color-variant != null) {
+        @return map-get(map-get($colors, $color-name), $color-variant);
+    } @else {
+        @return map-get($colors, $color-name);
+    }
+}
 
-// Grays
-$hig-gray-10: #0A131C;
-$hig-gray-20: #565C5F;
-$hig-gray-30: #939CA5;
-$hig-gray-40: #BEC8D2;
-$hig-gray-50: #D5DBE1;
-$hig-gray-60: #ECF0F3;
-$hig-gray-70: #F3F7FB;
+// Our actual color map
+// SASS map docs: http://sass-lang.com/documentation/file.SASS_REFERENCE.html#maps
 
+$colors: (
+    // Background colors
+    hig-white: #FFFFFF,
 
-// Box Schadows
-$box-shadow-10: rgba(52,73,94,0.15);
-$box-shadow-20: rgba(87,91,94,0.65);
+    // Grays
+    hig-gray-10: #0A131C,
+    hig-gray-20: #565C5F,
+    hig-gray-30: #939CA5,
+    hig-gray-40: #BEC8D2,
+    hig-gray-50: #D5DBE1,
+    hig-gray-60: #ECF0F3,
+    hig-gray-70: #F3F7FB,
 
+    // Box Schadows
+    box-shadow-10: rgba(52,73,94,0.15),
+    box-shadow-20: rgba(87,91,94,0.65),
 
-// Accent Colors
-$adsk-blue: #0696D7;
-$adsk-blue-dark: #087AAD;
-$adsk-blue-light: #4EB4E3;
-$adsk-blue-lightest: #CDEAF7;
+    // Accent Colors
+    adsk-blue: #0696D7,
+    adsk-blue-dark: #087AAD,
+    adsk-blue-light: #4EB4E3,
+    adsk-blue-lightest: #CDEAF7,
 
-$adsk-green: #87BC40;
-$adsk-green-dark: #709C34;
-$adsk-green-light: #ABD079;
-$adsk-green-lightest: #ABD079;
+    adsk-green: #87BC40,
+    adsk-green-dark: #709C34,
+    adsk-green-light: #ABD079,
+    adsk-green-lightest: #ABD079,
 
-$adsk-turquoise: #0ED3BE;
-$adsk-turquoise-dark: #0C9E90;
-$adsk-turquoise-light: #56E0D1;
-$adsk-turquoise-lightest: #B6F1EB;
+    adsk-turquoise: #0ED3BE,
+    adsk-turquoise-dark: #0C9E90,
+    adsk-turquoise-light: #56E0D1,
+    adsk-turquoise-lightest: #B6F1EB,
 
-$adsk-indigo: #1858A8;
-$adsk-indigo-dark: #13478A;
-$adsk-indigo-light: #5E89C2;
-$adsk-indigo-lightest: #D1DDEE;
+    adsk-indigo: #1858A8,
+    adsk-indigo-dark: #13478A,
+    adsk-indigo-light: #5E89C2,
+    adsk-indigo-lightest: #D1DDEE,
 
-$adsk-gold: #FAA21B;
-$adsk-gold-dark: #D98C16;
-$adsk-gold-light: #FBBD5F;
-$adsk-gold-lightest: #FDE3BA;
+    adsk-gold: #FAA21B,
+    adsk-gold-dark: #D98C16,
+    adsk-gold-light: #FBBD5F,
+    adsk-gold-lightest: #FDE3BA,
 
+    // Notification Colors
+    good-green: #7CCC13,
+    alert-red: #D7332A,
+    warning-yellow: #F6A623,
 
-// Notification Colors
-$good-green: #7CCC13;
-$alert-red: #D7332A;
-$warning-yellow: #F6A623;
+    // Data Visualization
+    hig-slate: #4B6B8F,
+    hig-slate-dark: #2E4258,
+    hig-slate-light: #7D93AC,
+    hig-slate-lightest: #C0C9D4,
+    hig-purple: #A76EF5,
+    hig-purple-dark: #794FB2,
+    hig-purple-light: #C199F8,
+    hig-purple-lightest: #E4D3FC,
+    hig-pink: #F73595,
+    hig-pink-dark: #B5236B,
+    hig-pink-light: #F871B4,
+    hig-pink-lightest: #FCC2DF,
+    hig-salmon: #FF7B65,
+    hig-salmon-dark: #CB604E,
+    hig-salmon-light: #FFA293,
+    hig-salmon-lightest: #FFD7D0
+);
 
+// Dynamicly create css classes that can be used with divs
+// this example will add "adsk-blue" as background color to this div:
+// <div class='hig__colors__adsk-blue--background'></div>
 
-// Data Visualization
-$hig-slate: #4B6B8F;
-$hig-slate-dark: #2E4258;
-$hig-slate-light: #7D93AC;
-$hig-slate-lightest: #C0C9D4;
-$hig-purple: #A76EF5;
-$hig-purple-dark: #794FB2;
-$hig-purple-light: #C199F8;
-$hig-purple-lightest: #E4D3FC;
-$hig-pink: #F73595;
-$hig-pink-dark: #B5236B;
-$hig-pink-light: #F871B4;
-$hig-pink-lightest: #FCC2DF;
-$hig-salmon: #FF7B65;
-$hig-salmon-dark: #CB604E;
-$hig-salmon-light: #FFA293;
-$hig-salmon-lightest: #FFD7D0;
-
-
-// Create class styles based on variable names
-$colors: $hig-gray-10, $hig-gray-20, $hig-gray-30, $hig-gray-40, $hig-gray-50, $hig-gray-60, $hig-gray-70;
-
-@for $i from 1 through length($colors) {
-    .hig__colors__background__#{$i} {
-        background-color: nth($colors, $i);
+@each $color_name, $color_value in $colors{
+    .hig__colors__#{$color_name}--color {
+        background-color: $color_value;
+    }
+    .hig__colors__#{$color_name}--background {
+        background-color: $color_value;
     }
 }

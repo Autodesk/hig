@@ -9,9 +9,9 @@ $hig__global-nav__sidenav--width: 280px;
     top: 0;
     left: 0;
     bottom: 0;
-    background: $hig-white;
-    border-right: 1px solid $hig-gray-50;
-    box-shadow: inset -2px 0 7px -2px $box-shadow-20;
+    background: color(hig-white);
+    border-right: 1px solid color(hig-gray-50);
+    box-shadow: inset -2px 0 7px -2px color(box-shadow-20);
     width: $hig__global-nav__sidenav--width;    
 
     display: none; // Hide by default
@@ -35,7 +35,7 @@ $hig__global-nav__sidenav--width: 280px;
         &::-webkit-scrollbar-thumb {
             width: 5px;
             height: 200px;
-            background-color: $hig-gray-30;
+            background-color: color(hig-gray-30);
             border-radius: 2px;
         }
 
@@ -47,7 +47,7 @@ $hig__global-nav__sidenav--width: 280px;
     &__copyright{
         margin-bottom: 40px;
         font-size: 12px;
-        color: $hig-gray-30;
+        color: color(hig-gray-30);
     }
 }
     .hig__global-nav--open .hig__global-nav__sidenav{

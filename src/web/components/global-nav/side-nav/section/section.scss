@@ -9,12 +9,12 @@
         font-size: 12px;
 
         &__label{
-            color: $hig-slate-dark;
+            color: color(hig-slate)-dark;
             font-weight: 500;
         }
 
         &__name{
-            color: $hig-gray-30;
+            color: color(hig-gray-30);
         }
 
     }
