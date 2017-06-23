@@ -171,13 +171,11 @@ storiesOf('GlobalNav', module)
           <Shortcut icon="gear" title="GEAR" link="#" />
           <Help title="HELLLP MEEEE!!!!" link="#`" />
           <Profile
+            image={profileImage}
             name="Jane Designer"
             email="jane.designer@example.com"
-            signOutLabel="Sign Out"
-            open={false}
-            image={profileImage}
-            onProfileImageClick={action('clicked')}
-            onSignOutClick={action('clicked')}
+            onProfileSettingsClick={action('profile settings clicked')}
+            onSignOutClick={action('sign out clicked')}
           />
         </TopNav>
         <SubNav moduleIndicatorName="Insight" moduleIndicatorIcon="hamburger" />
@@ -192,13 +190,12 @@ storiesOf('GlobalNav', module)
         <SideNav />
         <TopNav logo={logo}>
           <Profile
-            name="Jane Designer"
-            email="jane.designer@example.com"
-            signOutLabel="Sign Out"
-            open={profileFlyoutOpenKnob}
             image={profileImage}
-            onProfileImageClick={action('clicked')}
-            onProfileSettingsClick={action('clicked')}
+            name="Jane Designer"
+            open="true"
+            email="jane.designer@example.com"
+            onProfileSettingsClick={action('profile settings clicked')}
+            onSignOutClick={action('sign out clicked')}
           />
         </TopNav>
         <SubNav moduleIndicatorName="Insight" moduleIndicatorIcon="hamburger" />

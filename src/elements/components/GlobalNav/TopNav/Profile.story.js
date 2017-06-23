@@ -56,19 +56,21 @@ storiesOf('TopNav Profile', module)
         <GlobalNav>
           <TopNav logo={logo}>
             <Profile
-              name="Jane Designer"
               email="jane.designer@example.com"
-              signOutLabel={text('signOutLabel', "Logout")}
               image={text('image', profileImage)}
-              onProfileSettingsClick={action('profile settings clicked')}
-              onSignOutClick={action('sign out clicked')}
-
-              signOutLink={text('signOutLink', "#")}
-              onProfileClickOutside={action('clicked outside of profile')}
-              profileSettingsLabel={text('profileSettingsLabel', "My Account")}
+              name="Jane Designer"
               open={ boolean('profileFlyoutOpen', false) }
+
+              onProfileClickOutside={action("Clicked outside profile")}
               onProfileImageClick={action('profile image clicked')}
 
+              onProfileSettingsClick={action('profile settings clicked')}
+              profileSettingsLabel={text('profileSettingsLabel', "My Account")}
+              profileSettingsLink={text('profileSettingsLink', '#')}
+
+              onSignOutClick={action('sign out clicked')}
+              signOutLabel={text('signOutLabel', "Logout")}
+              signOutLink={text('signOutLink', "#")}
             />
           </TopNav>
           <Slot>
