@@ -112,20 +112,16 @@ export default class HIGNodeList {
     }
   }
 
+  get length() {
+    return this.nodes.length;
+  }
+
   forEach(handler) {
     this.nodes.forEach(handler);
   }
 
   map(handler) {
     return this.nodes.map(handler);
-  }
-
-  get length() {
-    return this.nodes.length;
-  }
-
-  forEach(callback) {
-    this.nodes.forEach(callback);
   }
 
   find(callback) {
