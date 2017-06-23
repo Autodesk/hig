@@ -20,7 +20,7 @@ exports[`<Profile> constructor has a good snapshot 1`] = `
     <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
     <!--PROJECT_ACCOUNT_SWITCHER-->
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
-    <!--SHORTCUT-->
+        <!--SHORTCUT-->
     </div>
     <div class=\\"hig__global-nav__profile\\">
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
@@ -73,7 +73,7 @@ exports[`<Profile> setting and updating props can set props for email 1`] = `
     <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
     <!--PROJECT_ACCOUNT_SWITCHER-->
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
-    <!--SHORTCUT-->
+        <!--SHORTCUT-->
     </div>
     <div class=\\"hig__global-nav__profile\\">
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
@@ -126,7 +126,7 @@ exports[`<Profile> setting and updating props can set props for image 1`] = `
     <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
     <!--PROJECT_ACCOUNT_SWITCHER-->
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
-    <!--SHORTCUT-->
+        <!--SHORTCUT-->
     </div>
     <div class=\\"hig__global-nav__profile\\">
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
@@ -179,7 +179,7 @@ exports[`<Profile> setting and updating props can set props for name 1`] = `
     <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
     <!--PROJECT_ACCOUNT_SWITCHER-->
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
-    <!--SHORTCUT-->
+        <!--SHORTCUT-->
     </div>
     <div class=\\"hig__global-nav__profile\\">
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
@@ -232,7 +232,7 @@ exports[`<Profile> setting and updating props can set props for profileSettingsL
     <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
     <!--PROJECT_ACCOUNT_SWITCHER-->
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
-    <!--SHORTCUT-->
+        <!--SHORTCUT-->
     </div>
     <div class=\\"hig__global-nav__profile\\">
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
@@ -285,7 +285,7 @@ exports[`<Profile> setting and updating props can set props for profileSettingsL
     <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
     <!--PROJECT_ACCOUNT_SWITCHER-->
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
-    <!--SHORTCUT-->
+        <!--SHORTCUT-->
     </div>
     <div class=\\"hig__global-nav__profile\\">
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
@@ -338,7 +338,7 @@ exports[`<Profile> setting and updating props can set props for signOutLabel 1`]
     <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
     <!--PROJECT_ACCOUNT_SWITCHER-->
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
-    <!--SHORTCUT-->
+        <!--SHORTCUT-->
     </div>
     <div class=\\"hig__global-nav__profile\\">
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
@@ -391,7 +391,7 @@ exports[`<Profile> setting and updating props can set props for signOutLink 1`] 
     <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
     <!--PROJECT_ACCOUNT_SWITCHER-->
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
-    <!--SHORTCUT-->
+        <!--SHORTCUT-->
     </div>
     <div class=\\"hig__global-nav__profile\\">
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
@@ -444,7 +444,7 @@ exports[`<Profile> setting and updating props can update props for email 1`] = `
     <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
     <!--PROJECT_ACCOUNT_SWITCHER-->
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
-    <!--SHORTCUT-->
+        <!--SHORTCUT-->
     </div>
     <div class=\\"hig__global-nav__profile\\">
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
@@ -497,7 +497,7 @@ exports[`<Profile> setting and updating props can update props for image 1`] = `
     <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
     <!--PROJECT_ACCOUNT_SWITCHER-->
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
-    <!--SHORTCUT-->
+        <!--SHORTCUT-->
     </div>
     <div class=\\"hig__global-nav__profile\\">
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
@@ -550,7 +550,7 @@ exports[`<Profile> setting and updating props can update props for name 1`] = `
     <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
     <!--PROJECT_ACCOUNT_SWITCHER-->
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
-    <!--SHORTCUT-->
+        <!--SHORTCUT-->
     </div>
     <div class=\\"hig__global-nav__profile\\">
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
@@ -603,7 +603,7 @@ exports[`<Profile> setting and updating props can update props for profileSettin
     <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
     <!--PROJECT_ACCOUNT_SWITCHER-->
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
-    <!--SHORTCUT-->
+        <!--SHORTCUT-->
     </div>
     <div class=\\"hig__global-nav__profile\\">
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
@@ -656,7 +656,7 @@ exports[`<Profile> setting and updating props can update props for profileSettin
     <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
     <!--PROJECT_ACCOUNT_SWITCHER-->
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
-    <!--SHORTCUT-->
+        <!--SHORTCUT-->
     </div>
     <div class=\\"hig__global-nav__profile\\">
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">

@@ -21,9 +21,9 @@ exports[`<Account> constructor has a good snapshot 1`] = `
     <div class=\\"hig__global-nav__top-nav____project-account-switcher\\">
     <div class=\\"hig__flyout\\">
     <div class=\\"hig__global-nav__top-nav__project-account-switcher__target\\">
-    <div class=\\"hig__global-nav__top-nav__project-account-switcher__item hig__global-nav__top-nav__project-account-switcher__item--project\\">
+    <div class=\\"hig__global-nav__top-nav__project-account-switcher__item hig__global-nav__top-nav__project-account-switcher__item--account\\">
     <span class=\\"hig__global-nav__top-nav__project-account-switcher__item__image-wrapper\\">
-        <img class=\\"hig__global-nav__top-nav__project-account-switcher__item__image\\" src=\\"\\" alt=\\"\\" width=\\"32\\" height=\\"32\\">
+        <img class=\\"hig__global-nav__top-nav__project-account-switcher__item__image\\" src=\\"something.jpg\\" alt=\\"Oakland Medical Center\\" width=\\"32\\" height=\\"32\\">
         <span class=\\"hig__global-nav__top-nav__project-account-switcher__item__image-placeholder\\"></span>
     </span>
     <span class=\\"hig__global-nav__top-nav__project-account-switcher__item__label\\"></span>
@@ -35,7 +35,7 @@ exports[`<Account> constructor has a good snapshot 1`] = `
         <div class=\\"hig__flyout__panel\\">
             <div class=\\"hig__global-nav__top-nav__project-account-switcher__lists\\">
     <div class=\\"hig__global-nav__top-nav__project-account-switcher__lists__list\\">
-        <div class=\\"hig__global-nav__top-nav__project-account-switcher__item hig__global-nav__top-nav__project-account-switcher__item--account\\">
+        <div class=\\"hig__global-nav__top-nav__project-account-switcher__item hig__global-nav__top-nav__project-account-switcher__item--account hig__global-nav__top-nav__project-account-switcher__item--active\\">
     <span class=\\"hig__global-nav__top-nav__project-account-switcher__item__image-wrapper\\">
         <img class=\\"hig__global-nav__top-nav__project-account-switcher__item__image\\" src=\\"something.jpg\\" alt=\\"Oakland Medical Center\\" width=\\"32\\" height=\\"32\\">
         <span class=\\"hig__global-nav__top-nav__project-account-switcher__item__image-placeholder\\">OMC</span>
@@ -64,7 +64,7 @@ exports[`<Account> constructor has a good snapshot 1`] = `
 </div><!--FLYOUT-->
 </div><!--PROJECT_ACCOUNT_SWITCHER-->
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
-    <!--SHORTCUT-->
+        <!--SHORTCUT-->
     </div>
     <!--PROFILE-->
 </div><!--TOPNAV-->

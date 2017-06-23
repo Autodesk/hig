@@ -36,14 +36,7 @@ const Context = props => {
   return (
     <GlobalNav>
       <TopNav>
-        <ProjectAccountSwitcher
-          activeLabel={props.activeLabel}
-          activeImage={props.activeImage}
-          activeType={props.activeType}
-          isOpen={props.isOpen}
-          onClick={onItemClick}
-          onClickOutside={onClickOutside}
-        >
+        <ProjectAccountSwitcher>
           {props.accounts.map(account => {
             return (
               <Account
@@ -60,7 +53,7 @@ const Context = props => {
 };
 
 function setupAccounts() {
-  const defaults = {
+  const props = {
     accounts: [
       { image: 'something.jpg', label: 'Oakland Medical Center', key: 1 },
       { image: 'foo.jpg', label: 'Berkeley Medical Center', key: 2 },
@@ -68,7 +61,7 @@ function setupAccounts() {
     ]
   };
   const reactContainer = document.createElement('div');
-  mount(<Context {...defaults} />, { attachTo: reactContainer });
+  mount(<Context {...props} />, { attachTo: reactContainer });
   return { reactContainer };
 }
 
