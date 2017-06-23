@@ -97,12 +97,6 @@ describe('<Profile>', () => {
     const shex = new SharedExamples(Context, createHigContext);
     const configSets = [
       {
-        key: 'signOutLink',
-        sampleValue: '/signout',
-        updateValue: 'http://www.google.com',
-        mutator: 'setSignOutLink'
-      },
-      {
         key: 'email',
         sampleValue: 'foo@example.com',
         updateValue: 'hellokitty@example.com',
@@ -137,6 +131,12 @@ describe('<Profile>', () => {
         sampleValue: 'http://www.google.com',
         updateValue: 'http://www.sanrio.com',
         mutator: 'setProfileSettingsLink'
+      },
+      {
+        key: 'signOutLink',
+        sampleValue: '/signout',
+        updateValue: 'http://www.google.com',
+        mutator: 'setSignOutLink'
       }
     ];
 

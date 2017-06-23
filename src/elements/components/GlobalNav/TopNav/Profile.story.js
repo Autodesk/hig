@@ -27,6 +27,21 @@ const TopNav = GlobalNav.TopNav;
 const Profile = TopNav.Profile;
 const Slot = GlobalNav.Slot;
 
+function ParagraphSlot() {
+  return (
+    <Slot>
+      <p>
+        Next level deep v roof party, jianbing pok pok pug butcher vape farm-to-table kombucha. Yr snackwave VHS, wolf
+        poutine actually woke poke flexitarian paleo food truck DIY kale chips viral yuccie. Cornhole tattooed vaporware
+        affogato, gentrify mlkshk portland organic. Swag try-hard cronut hashtag, etsy bespoke chia banjo messenger bag.
+        Mustache umami godard man braid cronut yuccie. YOLO vaporware franzen, gochujang typewriter mixtape brunch salvia
+        paleo lyft. Four dollar toast tumblr mustache thundercats single-origin coffee, freegan flexitarian cold-pressed
+        beard roof party VHS venmo af ugh bushwick.
+      </p>
+    </Slot>
+  );
+}
+
 storiesOf('TopNav Profile', module)
   .addWithInfo(
     'default',
@@ -45,6 +60,31 @@ storiesOf('TopNav Profile', module)
             onSignOutClick={action('sign out clicked')}
           />
         </TopNav>
+        <ParagraphSlot />
+      </GlobalNav>
+    )
+  )
+  .addWithInfo(
+    'different initialSettings (no knobs)',
+    <div>
+      TopNav Search has different initial settings (knobs trigger a commitUpdate)
+    </div>,
+    () => (
+      <GlobalNav>
+        <TopNav logo={logo}>
+          <Profile
+            image={profileImage}
+            name="Jane Designer"
+            email="jane.designer@example.com"
+            open={true}
+            signOutLabel="Sign off"
+            signOutLink="http://www.autodesk.com"
+            onProfileSettingsClick={function() {
+              alert('profile settings clicked');
+            }}
+          />
+        </TopNav>
+        <ParagraphSlot />
       </GlobalNav>
     )
   )
@@ -64,19 +104,10 @@ storiesOf('TopNav Profile', module)
             profileSettingsLink={text('profileSettingsLink', '#')}
             onSignOutClick={action('sign out clicked')}
             signOutLabel={text('signOutLabel', 'Logout')}
-            signOutLink={text('signOutLink', '#')}
+            signOutLink={text('signOutLink', '/signout')}
           />
         </TopNav>
-        <Slot>
-          <p>
-            Next level deep v roof party, jianbing pok pok pug butcher vape farm-to-table kombucha. Yr snackwave VHS, wolf
-            poutine actually woke poke flexitarian paleo food truck DIY kale chips viral yuccie. Cornhole tattooed vaporware
-            affogato, gentrify mlkshk portland organic. Swag try-hard cronut hashtag, etsy bespoke chia banjo messenger bag.
-            Mustache umami godard man braid cronut yuccie. YOLO vaporware franzen, gochujang typewriter mixtape brunch salvia
-            paleo lyft. Four dollar toast tumblr mustache thundercats single-origin coffee, freegan flexitarian cold-pressed
-            beard roof party VHS venmo af ugh bushwick.
-          </p>
-        </Slot>
+        <ParagraphSlot />
       </GlobalNav>
     );
   });

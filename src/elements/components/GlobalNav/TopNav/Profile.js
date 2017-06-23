@@ -104,6 +104,9 @@ ProfileComponent.__docgenInfo = {
     signOutLabel: {
       description: 'sets {String} label for sign out button'
     },
+    signOutLink: {
+      description: 'sets {String} URL for sign out button'
+    },
     profileSettingsLabel: {
       description: 'sets {String} label for settings button'
     },
