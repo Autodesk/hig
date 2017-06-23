@@ -91,7 +91,7 @@ $colors: (
 
 @each $color_name, $color_value in $colors{
     .hig__colors__#{$color_name}--color {
-        background-color: $color_value;
+        color: $color_value;
     }
     .hig__colors__#{$color_name}--background {
         background-color: $color_value;
