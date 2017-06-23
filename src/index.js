@@ -325,8 +325,8 @@ class App extends React.Component {
             <Button title="Add tab after" onClick={this.addTabAfter} />
             <Button title="Remove tab" onClick={this.removeTab} />
 
-            {topNavFixtures.hipsterContent().map(paragraph => {
-              return <p>{paragraph}</p>;
+            {topNavFixtures.hipsterContent().map((paragraph, i) => {
+              return <p key={i} >{paragraph}</p>;
             })}
           </Slot>
         </GlobalNav>

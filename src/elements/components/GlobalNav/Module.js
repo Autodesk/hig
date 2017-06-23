@@ -189,5 +189,6 @@ ModuleComponent.__docgenInfo = {
 };
 
 ModuleComponent.Submodule = SubmoduleComponent;
+ModuleComponent.ModuleCollapse = ModuleCollapseComponent;
 
 export default ModuleComponent;

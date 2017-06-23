@@ -36,6 +36,7 @@ export class SideNav extends HIGElement {
     }
 
     if (this.search) {
+      this.hig.addSearch(this.search.hig);
       this.search.mount();
       this.search.hig.onInput(this.filter);
       this.search.hig.onClearIconClick(this.filter);
