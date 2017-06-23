@@ -316,11 +316,11 @@
                                         "{Project} [ReferenceProject] - (Optional) reference node for insertBefore"
                                     ]
                                 },
-                                "addCaret": {
-                                    "desc": "adds caret to target in Project Account Switcher"
+                                "showCaret": {
+                                    "desc": "shows a caret indicating a flyout in Project Account Switcher"
                                 },
-                                "removeCaret": {
-                                    "desc": "removes caret from target in Project Account Switcher"
+                                "hideCaret": {
+                                    "desc": "removes caret indicating a flyout in Project Account Switcher"
                                 },
                                 "open": {
                                     "desc": "opens the project/account switcher"
