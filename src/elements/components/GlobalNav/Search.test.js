@@ -21,7 +21,7 @@ import React from 'react';
 
 import GlobalNav from './GlobalNav';
 import SideNav from './SideNav';
-import Search from './Search'
+import Search from './Search';
 import Section from './Section';
 import SectionList from './SectionList';
 import Group from './Group';
@@ -30,35 +30,36 @@ import Submodule from './Submodule';
 
 import SharedExamples from './SharedExamples';
 
-
 const Context = props => {
   return (
     <GlobalNav>
       <SideNav>
-        <Search placeholder={props.placeholder}/> 
+        <Search placeholder={props.placeholder} />
         <SectionList>
           <Section>
             <Group>
               <Module tile={props.moduleTitle}>
-                <Submodule title={props.submoduleTitle}/>
-              </Module>  
+                <Submodule title={props.submoduleTitle} />
+              </Module>
             </Group>
-          </Section>  
+          </Section>
         </SectionList>
-      </SideNav>  
-    </GlobalNav>  
-  )
-}
+      </SideNav>
+    </GlobalNav>
+  );
+};
 
-function setUpSearch(){
+function setUpSearch() {
   const defaults = {
-      placeholder: 'Search for something',
-      submoduleTitle: "Document New",
-      moduleTitle: "Docoument Workflow"
+    placeholder: 'Search for something',
+    submoduleTitle: 'Document New',
+    moduleTitle: 'Docoument Workflow'
   };
 
   const reactContainer = document.createElement('div');
-  const wrapper = mount(<Context {... defaults} />, {attachTo: reactContainer} );
+  const wrapper = mount(<Context {...defaults} />, {
+    attachTo: reactContainer
+  });
   return { wrapper, reactContainer };
 }
 

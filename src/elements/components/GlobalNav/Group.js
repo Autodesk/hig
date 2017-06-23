@@ -36,7 +36,7 @@ export class Group extends HIGElement {
 
   componentDidMount() {
     this.modules.componentDidMount();
-    this._render()
+    this._render();
   }
 
   createElement(ElementConstructor, props) {
@@ -58,7 +58,9 @@ export class Group extends HIGElement {
     }
 
     if (updatePayload.includes('expanded')) {
-      this.state.expanded = updatePayload[updatePayload.indexOf('expanded') + 1];
+      this.state.expanded = updatePayload[
+        updatePayload.indexOf('expanded') + 1
+      ];
       this._render();
     }
   }

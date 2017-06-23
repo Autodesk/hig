@@ -24,7 +24,7 @@ export class Submodule extends HIGElement {
     this.state = {
       title: initialProps.title,
       expanded: initialProps.expanded,
-      query: initialProps.query,
+      query: initialProps.query
     };
   }
 
@@ -52,7 +52,9 @@ export class Submodule extends HIGElement {
   }
 
   matches(query) {
-    if (!query) { return false };
+    if (!query) {
+      return false;
+    }
     return this.state.title.toLowerCase().match(query.toLowerCase());
   }
 

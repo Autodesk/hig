@@ -128,7 +128,11 @@ SideNavComponent.propTypes = {
   addLink: PropTypes.func,
   addSearch: PropTypes.func,
   setCopyright: PropTypes.func,
-  children: HIGChildValidator([SectionListComponent, LinkListComponent, SearchComponent])
+  children: HIGChildValidator([
+    SectionListComponent,
+    LinkListComponent,
+    SearchComponent
+  ])
 };
 
 SideNavComponent.__docgenInfo = {
@@ -141,6 +145,6 @@ SideNavComponent.__docgenInfo = {
 
 SideNavComponent.SectionList = SectionListComponent;
 SideNavComponent.LinkList = LinkListComponent;
-SideNavComponent.Search = SearchComponent
+SideNavComponent.Search = SearchComponent;
 
 export default SideNavComponent;

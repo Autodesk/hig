@@ -78,7 +78,7 @@ export default class HIGNodeList {
   _appendChild(node) {
     this.nodes.push(node);
   }
-  
+
   _insertBefore(node, beforeNode) {
     const index = this.nodes.indexOf(beforeNode);
     this.nodes.splice(index, 0, node);
@@ -120,7 +120,7 @@ export default class HIGNodeList {
     return this.nodes.map(handler);
   }
 
-  get length(){
-    return this.nodes.length
+  get length() {
+    return this.nodes.length;
   }
 }

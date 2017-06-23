@@ -24,9 +24,10 @@ import GlobalNav from './GlobalNav';
 const SideNav = GlobalNav.SideNav;
 const SectionList = GlobalNav.SideNav.SectionList;
 const Section = GlobalNav.SideNav.SectionList.Section;
-const Collapse = GlobalNav.SideNav.SectionList.Section.Collapse;
+const Collapse = GlobalNav.SideNav.SectionList.Section.SectionCollapse;
 const Group = GlobalNav.SideNav.SectionList.Section.Group;
 const Module = GlobalNav.SideNav.SectionList.Section.Group.Module;
+const ModuleCollapse = GlobalNav.SideNav.SectionList.Section.Group.Module.ModuleCollapse;
 const Submodule = GlobalNav.SideNav.SectionList.Section.Group.Module.Submodule;
 const TopNav = GlobalNav.TopNav;
 const Profile = TopNav.Profile;
@@ -271,13 +272,12 @@ storiesOf('GlobalNav', module)
     );
   })
   .addWithInfo('w sideNavOpen', ``, () => {
-    const sideNavOpen = boolean('sideNavOpen', true);
+    const isSideNavOpen = boolean('sideNavOpen', true);
     return (
-      <GlobalNav sideNavOpen={sideNavOpen}>
+      <GlobalNav sideNavOpen={isSideNavOpen}>
         <SideNav>
           <SectionList>
             <Section headerLabel="Project" headerName="ThunderStorm">
-              <Collapse onClick={action('clicked')} isCollapsed={true} />
               <Group>
                 <Module
                   icon="project-management"
@@ -298,7 +298,6 @@ storiesOf('GlobalNav', module)
               headerLabel="Contractor"
               headerName="Oakland Medical Center"
             >
-              <Collapse onClick={action('clicked')} isCollapsed={false} />
               <Group>
                 <Module
                   icon="project-management"

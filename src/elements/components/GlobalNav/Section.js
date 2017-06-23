@@ -51,7 +51,7 @@ export class Section extends HIGElement {
     this.hig.addCollapse(this.collapse.hig);
     this.collapse.mount();
     this.collapse.hig.onClick(this.toggleCollapsed);
-    this._render()
+    this._render();
   }
 
   commitUpdate(updatePayload, oldProps, newProp) {
@@ -138,7 +138,7 @@ SectionComponent.propTypes = {
   headerLabel: PropTypes.string,
   headerName: PropTypes.string,
   query: PropTypes.string,
-  children: HIGChildValidator([GroupComponent, SectionCollapseComponent]),
+  children: HIGChildValidator([GroupComponent, SectionCollapseComponent])
 };
 
 SectionComponent.__docgenInfo = {

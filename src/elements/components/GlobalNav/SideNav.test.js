@@ -129,9 +129,7 @@ describe('<SideNav>', () => {
     );
 
     expect(console.error).toBeCalledWith(
-      expect.stringMatching(
-        /'div' is not a valid child of SideNav./
-      )
+      expect.stringMatching(/'div' is not a valid child of SideNav./)
     );
   });
 
@@ -147,9 +145,7 @@ describe('<SideNav>', () => {
     );
 
     expect(console.error).toBeCalledWith(
-      expect.stringMatching(
-        /'Hello World!' is not a valid child of SideNav./
-      )
+      expect.stringMatching(/'Hello World!' is not a valid child of SideNav./)
     );
   });
 
@@ -158,25 +154,23 @@ describe('<SideNav>', () => {
       return (
         <GlobalNav>
           <SideNav>
-            <Search query={props.query}/>
+            <Search query={props.query} />
             <SectionList>
               <Section headerLabel="Project" headerName="Thunderstor">
                 <Group>
                   <Module title={props.moduleTitle}>
-                    <Submodule title={props.submoduleTitle1}/>
-                    <Submodule title={props.submoduleTitle2 } />
-                  </Module>  
-                </Group>  
-              </Section>  
+                    <Submodule title={props.submoduleTitle1} />
+                    <Submodule title={props.submoduleTitle2} />
+                  </Module>
+                </Group>
+              </Section>
 
-            </SectionList>  
-          </SideNav>  
-          
+            </SectionList>
+          </SideNav>
+
         </GlobalNav>
       );
     };
-
-    
 
     function setupReactContext(props) {
       const reactContainer = document.createElement('div');
@@ -185,18 +179,16 @@ describe('<SideNav>', () => {
     }
 
     it('renders children correctly', () => {
-      const props = { 
-        placeholder: 'Search Here', 
+      const props = {
+        placeholder: 'Search Here',
         headerLabel: 'Oakland Medical Center',
         headerName: 'Thunderstorm',
         moduleTitle: 'Document Workflow',
-        submoduleTitle1: 'Document', 
+        submoduleTitle1: 'Document',
         submoduleTitle2: 'Workflow'
       };
-      const {reactContainer} = setupReactContext(props);
+      const { reactContainer } = setupReactContext(props);
       expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
     });
-
-    
   });
 });

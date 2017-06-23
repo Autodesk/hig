@@ -174,51 +174,62 @@ class App extends React.Component {
             <SectionList>
               <Section headerLabel="Project" headerName="ThunderStorm">
                 {topNavFixtures.menu().sections[0].groups.map((group, i) => {
-                  return <Group key={i}>
-                    {group.modules.map(module => {
-                      return <Module
-                        icon={module.icon}
-                        contentImage={module.contentImage}
-                        title={module.label}
-                        key={module.label}
-                      >
-                        {module.submodules.map(submodule => {
-                          return <Submodule
-                            title={submodule.label}
-                            link="#"
-                            key={submodule.label}
-                          />
-                        })}
-                      </Module>
-                    })}
-                  </Group>
+                  return (
+                    <Group key={i}>
+                      {group.modules.map(module => {
+                        return (
+                          <Module
+                            icon={module.icon}
+                            contentImage={module.contentImage}
+                            title={module.label}
+                            key={module.label}
+                          >
+                            {module.submodules.map(submodule => {
+                              return (
+                                <Submodule
+                                  title={submodule.label}
+                                  link="#"
+                                  key={submodule.label}
+                                />
+                              );
+                            })}
+                          </Module>
+                        );
+                      })}
+                    </Group>
+                  );
                 })}
               </Section>
               <Section headerLabel="Account" headerName="GlobalConstruction">
                 {topNavFixtures.menu().sections[1].groups.map((group, i) => {
-                  return <Group key={i}>
-                    {group.modules.map(module => {
-                      return <Module
-                        icon={module.icon}
-                        contentImage={module.contentImage}
-                        title={module.label}
-                        key={module.label}
-                      >
-                        {module.submodules.map(submodule => {
-                          return <Submodule
-                            title={submodule.label}
-                            link="#"
-                            key={submodule.label}
-                          />
-                        })}
-                      </Module>
-                    })}
-                  </Group>
+                  return (
+                    <Group key={i}>
+                      {group.modules.map(module => {
+                        return (
+                          <Module
+                            icon={module.icon}
+                            contentImage={module.contentImage}
+                            title={module.label}
+                            key={module.label}
+                          >
+                            {module.submodules.map(submodule => {
+                              return (
+                                <Submodule
+                                  title={submodule.label}
+                                  link="#"
+                                  key={submodule.label}
+                                />
+                              );
+                            })}
+                          </Module>
+                        );
+                      })}
+                    </Group>
+                  );
                 })}
               </Section>
-
             </SectionList>
-             <Search placeholder="Find module or submodule" />
+            <Search placeholder="Find module or submodule" />
           </SideNav>
           <TopNav
             logo={logo}
@@ -326,7 +337,7 @@ class App extends React.Component {
             <Button title="Remove tab" onClick={this.removeTab} />
 
             {topNavFixtures.hipsterContent().map((paragraph, i) => {
-              return <p key={i} >{paragraph}</p>;
+              return <p key={i}>{paragraph}</p>;
             })}
           </Slot>
         </GlobalNav>

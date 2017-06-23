@@ -82,10 +82,8 @@ function higContext(defaults) {
   const collapse1 = new higSection.partials.Collapse({});
 
   higSideNav.addSection(higSection);
-  
+
   higSection.addCollapse(collapse1);
-
-
 
   return { higNav, higSideNav, higSection, higContainer };
 }
@@ -342,17 +340,21 @@ describe('<Section>', () => {
         <GlobalNav>
           <SideNav>
             <SectionList>
-              <Section headerLabel="Project" headerName="Thunderstor" query={props.query}>
+              <Section
+                headerLabel="Project"
+                headerName="Thunderstor"
+                query={props.query}
+              >
                 <Group>
                   <Module title={props.moduleTitle}>
-                    <Submodule title={props.submoduleTitle1}/>
-                    <Submodule title={props.submoduleTitle2 } />
-                  </Module>  
-                </Group>  
-              </Section>  
+                    <Submodule title={props.submoduleTitle1} />
+                    <Submodule title={props.submoduleTitle2} />
+                  </Module>
+                </Group>
+              </Section>
 
-            </SectionList>  
-          </SideNav>  
+            </SectionList>
+          </SideNav>
         </GlobalNav>
       );
     };
@@ -363,19 +365,18 @@ describe('<Section>', () => {
       return { reactContainer };
     }
 
-
     it('shows modules/submodules that correspond to query', () => {
-      const props = { 
-        placeholder: 'Search Here', 
+      const props = {
+        placeholder: 'Search Here',
         headerLabel: 'Oakland Medical Center',
         headerName: 'Thunderstorm',
         moduleTitle: 'Document Workflow',
-        submoduleTitle1: 'Document', 
+        submoduleTitle1: 'Document',
         submoduleTitle2: 'Workflow',
-        query: "Document"
+        query: 'Document'
       };
 
-      const {reactContainer} = setupReactContext(props);
+      const { reactContainer } = setupReactContext(props);
 
       var hiddenSubmodule = reactContainer.getElementsByClassName(
         'hig__global-nav__side-nav__section__group__module__submodule--hide'
@@ -385,8 +386,8 @@ describe('<Section>', () => {
         'hig__global-nav__side-nav__section__group__module__submodule'
       );
 
-      expect(hiddenSubmodule.length).toEqual(1)
-      expect(submodule.length).toEqual(2)
+      expect(hiddenSubmodule.length).toEqual(1);
+      expect(submodule.length).toEqual(2);
     });
   });
 });
