@@ -187,7 +187,7 @@ class Core {
      * @param {String} eventType - event type, for example "click"
      * @param {String} targetClass - query selector for target class
      * @param {HTMLElement} scopeElement - element that defines the scope in which this takes place
-     * @param {String} executeOnEventFunction - function that will be executed on event
+     * @param {Function} executeOnEventFunction - function that will be executed on event
      * @returns {Function} disposeFunction - function to call to remove event listener
      */
 
@@ -208,11 +208,11 @@ class Core {
             eventTarget = q;
             eventType = 'mouseenter';
         }else{
-            eventFn = function(event){
+            eventFn = (event) => {
                 var element = event.target;
 
                 if(q && (childOf(element, q) || element === q)){
-                    executeOnEventFunction(event);
+                    executeOnEventFunction(event, this);
                 }
             };
             eventTarget = document;
