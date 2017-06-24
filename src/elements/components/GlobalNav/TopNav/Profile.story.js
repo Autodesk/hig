@@ -94,8 +94,8 @@ storiesOf('TopNav Profile', module)
         <TopNav logo={logo}>
           <Profile
             image={text('image', profileImage)}
-            name={text("name","Jane Designer")}
-            email={text("email", "jane.designer@example.com")}
+            name={text('name', 'Jane Designer')}
+            email={text('email', 'jane.designer@example.com')}
             open={boolean('profileFlyoutOpen', false)}
             onProfileClickOutside={action('Clicked outside profile')}
             onProfileImageClick={action('profile image clicked')}
