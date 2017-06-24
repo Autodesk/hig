@@ -119,53 +119,6 @@ class App extends React.Component {
     this.setState({ activeTab: activeTabIndex });
   };
 
-  setActiveProjectOrAccount = activeProjectOrAccountItem => {
-    this.setState({ activeProjectOrAccount: activeProjectOrAccountItem.id });
-    this.setProjectOrAccountTarget(activeProjectOrAccountItem);
-  };
-
-  setProjectOrAccountTarget = targetItem => {
-    if (targetItem.type === 'account') {
-      this.state.accounts.forEach(
-        function(account) {
-          if (account.id === targetItem.id) {
-            this.setState({ projectOrAcccountTarget: account });
-          }
-        }.bind(this)
-      );
-    }
-
-    if (targetItem.type === 'project') {
-      this.state.projects.forEach(
-        function(project) {
-          if (project.id === targetItem.id) {
-            this.setState({ projectOrAcccountTarget: project });
-          }
-        }.bind(this)
-      );
-    }
-  };
-
-  singleProjectOrAccount = () => {
-    // one of these is empty/undefined and the other has only one item
-    var projectsIsEmpty = this.state.projects === undefined ||
-      this.state.projects.length === 0;
-    var accountsIsEmpty = this.state.accounts === undefined ||
-      this.state.accounts.length === 0;
-    if (projectsIsEmpty && !accountsIsEmpty) {
-      var accountsHasOneItem = this.state.accounts.length === 1;
-    } else if (!projectsIsEmpty && accountsIsEmpty) {
-      var projectsHasOneItem = this.state.projects.length === 1;
-    } else {
-      accountsHasOneItem = (projectsHasOneItem = false);
-    }
-    if (accountsHasOneItem || projectsHasOneItem) {
-      return true;
-    } else {
-      return false;
-    }
-  };
-
   render() {
     return (
       <div>
@@ -237,7 +190,9 @@ class App extends React.Component {
             onHamburgerClick={this.toggleSideNav}
           >
             <ProjectAccountSwitcher
-              onClick={() => console.log('clicked')}
+              activeLabel="OK THIS IS NOT OK"
+              activeImage="its-some-image.jpg"
+              activeType="account"
             >
               {this.state.projects.map((project, i) => {
                 return (

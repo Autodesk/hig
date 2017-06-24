@@ -48,7 +48,7 @@ export class ProjectAccountSwitcher extends HIGElement {
       'openFlyout',
       'closeFlyout',
       'setActiveAccount',
-      'setActiveProject',
+      'setActiveProject'
     ].forEach(fn => {
       this[fn] = this[fn].bind(this);
     });
@@ -101,7 +101,9 @@ export class ProjectAccountSwitcher extends HIGElement {
         this.state.activeProject = instance;
       }
     } else {
-      throw new Error(`${this.constructor.name} cannot have a child of type ${instance.constructor.name}`);
+      throw new Error(
+        `${this.constructor.name} cannot have a child of type ${instance.constructor.name}`
+      );
     }
   }
 
@@ -157,18 +159,29 @@ export class ProjectAccountSwitcher extends HIGElement {
 
     if (this.state.activeAccount && this.state.activeProject) {
       this.hig.setActiveLabel(
-        `${this.state.activeAccount.props.label} / ${this.state.activeProject.props.label}`
+        this.props.activeLabel ||
+          `${this.state.activeAccount.props.label} / ${this.state.activeProject.props.label}`
       );
-      this.hig.setActiveImage(this.state.activeProject.props.image);
-      this.hig.setActiveType('project');
+      this.hig.setActiveImage(
+        this.props.activeImage || this.state.activeProject.props.image
+      );
+      this.hig.setActiveType(this.props.activeType || 'project');
     } else if (this.state.activeAccount) {
-      this.hig.setActiveLabel(this.state.activeAccount.props.label);
-      this.hig.setActiveImage(this.state.activeAccount.props.image);
-      this.hig.setActiveType('account');
+      this.hig.setActiveLabel(
+        this.props.activeLabel || this.state.activeAccount.props.label
+      );
+      this.hig.setActiveImage(
+        this.props.activeImage || this.state.activeAccount.props.image
+      );
+      this.hig.setActiveType(this.props.activeType || 'account');
     } else if (this.state.activeProject) {
-      this.hig.setActiveLabel(this.state.activeProject.props.label);
-      this.hig.setActiveImage(this.state.activeProject.props.image);
-      this.hig.setActiveType('project');
+      this.hig.setActiveLabel(
+        this.props.activeLabel || this.state.activeProject.props.label
+      );
+      this.hig.setActiveImage(
+        this.props.activeImage || this.state.activeProject.props.image
+      );
+      this.hig.setActiveType(this.props.activeType || 'project');
     }
   }
 }

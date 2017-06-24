@@ -23,13 +23,16 @@ class SharedExamples {
     this.createHigContext = createHigContext;
   }
 
-  verifyPropsSet(config) {
-    const defaults = { [config.key]: config.sampleValue };
-    const { higContainer, higItem } = this.createHigContext(defaults);
+  verifyPropsSet(config, defaultProps = {}) {
+    const props = {
+      ...defaultProps,
+      [config.key]: config.sampleValue
+    };
+    const { higContainer, higItem } = this.createHigContext(props);
 
     const reactContainer = document.createElement('div');
 
-    const wrapper = mount(<this.Context {...defaults} />, {
+    const wrapper = mount(<this.Context {...props} />, {
       attachTo: reactContainer
     });
 
@@ -40,13 +43,16 @@ class SharedExamples {
     );
   }
 
-  verifyPropsUpdate(config) {
-    const defaults = { [config.key]: config.sampleValue };
-    const { higContainer, higItem } = this.createHigContext(defaults);
+  verifyPropsUpdate(config, defaultProps = {}) {
+    const props = {
+      ...defaultProps,
+      [config.key]: config.sampleValue
+    };
+    const { higContainer, higItem } = this.createHigContext(props);
 
     const reactContainer = document.createElement('div');
 
-    const wrapper = mount(<this.Context {...defaults} />, {
+    const wrapper = mount(<this.Context {...props} />, {
       attachTo: reactContainer
     });
 

@@ -23,6 +23,9 @@ import TopNav from './TopNav';
 import ProjectAccountSwitcher from './ProjectAccountSwitcher';
 import SharedExamples from './../SharedExamples';
 
+const Project = ProjectAccountSwitcher.Project;
+const Account = ProjectAccountSwitcher.Account;
+
 const onAddAccount = function() {
   return 'onAddAcount';
 };
@@ -39,7 +42,18 @@ const onClickOutside = function() {
   return 'onClickOutside';
 };
 
+const defaultProps = {
+  projects: [
+    { label: 'My cool project', image: 'my-cool-project.png' },
+    { label: 'My other project', image: 'my-other-project.png' }
+  ],
+  accounts: []
+};
+
 const Context = props => {
+  const accounts = props.accounts || [];
+  const projects = props.projects || [];
+
   return (
     <GlobalNav>
       <TopNav>
@@ -47,31 +61,33 @@ const Context = props => {
           activeLabel={props.activeLabel}
           activeImage={props.activeImage}
           activeType={props.activeType}
-          isOpen={props.isOpen}
-          onClick={onItemClick}
-          onClickOutside={onClickOutside}
-        />
+          open={props.open}
+        >
+          {accounts.map(account => {
+            return (
+              <Account
+                label={account.label}
+                image={account.image}
+                key={account.label}
+              />
+            );
+          })}
+          {projects.map(project => {
+            return (
+              <Project
+                label={project.label}
+                image={project.image}
+                key={project.label}
+              />
+            );
+          })}
+        </ProjectAccountSwitcher>
       </TopNav>
     </GlobalNav>
   );
 };
 
-const SingleAccountContext = props => {
-  return (
-    <GlobalNav>
-      <TopNav>
-        <ProjectAccountSwitcher
-          activeLabel={props.activeLabel}
-          activeImage={props.activeImage}
-          activeType={props.activeType}
-          hideProjectAccountFlyout={true}
-        />
-      </TopNav>
-    </GlobalNav>
-  );
-};
-
-function createHigContext(defaults) {
+function createHigContext(props) {
   const higContainer = document.createElement('div');
 
   const higNav = new HIG.GlobalNav();
@@ -80,20 +96,38 @@ function createHigContext(defaults) {
   const higTopNav = new higNav.partials.TopNav({});
   higNav.addTopNav(higTopNav);
 
-  const higItem = new higTopNav.partials.ProjectAccountSwitcher(defaults);
-  higTopNav.addProjectAccountSwitcher(higItem);
+  const projectAccountSwitcher = new higTopNav.partials.ProjectAccountSwitcher(props);
+  higTopNav.addProjectAccountSwitcher(projectAccountSwitcher);
 
-  return { higContainer, higItem };
+  props.accounts.forEach(accountProps => {
+    const account = new projectAccountSwitcher.partials.Account(accountProps);
+    projectAccountSwitcher.addAccount(account);
+  });
+
+  props.projects.forEach((projectProps, i) => {
+    const project = new projectAccountSwitcher.partials.Project(projectProps);
+    projectAccountSwitcher.addProject(project);
+
+    if (i === 0) {
+      projectAccountSwitcher.setActiveImage(projectProps.image);
+      projectAccountSwitcher.setActiveLabel(projectProps.label);
+      projectAccountSwitcher.setActiveType('project');
+      project.activate();
+    }
+  });
+
+  return { higContainer, higItem: projectAccountSwitcher };
 }
 
 function setupProjectAccountSwitcher() {
-  const defaults = {
+  const props = {
+    ...defaultProps,
     activeImage: 'something.jpg',
     activeType: 'proeject',
     activeLabel: 'somethingLabel'
   };
   const reactContainer = document.createElement('div');
-  mount(<Context {...defaults} />, { attachTo: reactContainer });
+  mount(<Context {...props} />, { attachTo: reactContainer });
   return { reactContainer };
 }
 
@@ -131,10 +165,11 @@ describe('<ProjectAccountSwitcher>', () => {
 
     configSets.forEach(function(config) {
       it(`can set props for ${config.key}`, () => {
-        shex.verifyPropsSet(config);
+        shex.verifyPropsSet(config, defaultProps);
       });
+
       it(`can update props for ${config.key}`, () => {
-        shex.verifyPropsUpdate(config);
+        shex.verifyPropsUpdate(config, defaultProps);
       });
     });
   });
@@ -143,27 +178,31 @@ describe('<ProjectAccountSwitcher>', () => {
     it('sets the flyout as open if initialized as open', () => {
       const reactContainer = document.createElement('div');
       const wrapper = mount(
-        <Context {...{ isOpen: true, activeLabel: 'someLabel' }} />,
+        <Context {...{ open: true, activeLabel: 'someLabel' }} />,
         {
           attachTo: reactContainer
         }
       );
-      const elem = reactContainer.getElementsByClassName(
+      const flyoutEl = reactContainer.getElementsByClassName(
         'hig__flyout hig__flyout--open'
       );
 
-      expect(elem.length).toEqual(1);
+      expect(flyoutEl.length).toEqual(1);
     });
 
     it('opens the Project Account Switcher on prop change', () => {
+      const props = {
+        ...defaultProps,
+        open: false
+      };
       const reactContainer = document.createElement('div');
-      const wrapper = mount(<Context {...{ isOpen: false }} />, {
+      const wrapper = mount(<Context {...props} />, {
         attachTo: reactContainer
       });
       var elem = reactContainer.getElementsByClassName('hig__flyout--open');
       expect(elem.length).toEqual(0);
 
-      wrapper.setProps({ isOpen: true });
+      wrapper.setProps({ open: true });
       elem = reactContainer.getElementsByClassName(
         'hig__flyout hig__flyout--open'
       );
@@ -173,13 +212,16 @@ describe('<ProjectAccountSwitcher>', () => {
 
   describe('Project Account Switcher flyout', () => {
     it('is not visible when only 1 project or account exists', () => {
+      const props = {
+        ...defaultProps,
+        projects: [
+          { label: 'Just this one project', image: 'just-this-one-image.png' }
+        ]
+      };
       const reactContainer = document.createElement('div');
-      const wrapper = mount(
-        <SingleAccountContext {...{ activeLabel: 'someLabel' }} />,
-        {
-          attachTo: reactContainer
-        }
-      );
+      const wrapper = mount(<Context {...props} />, {
+        attachTo: reactContainer
+      });
       const elem = reactContainer.getElementsByClassName(
         'hig__flyout hig__flyout--open'
       );
