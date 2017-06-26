@@ -23,11 +23,16 @@ export class Project extends HIGElement {
   constructor(HIGConstructor, initialProps) {
     super(HIGConstructor, initialProps);
 
-    this.props = {...initialProps};
+    this.props = { ...initialProps };
+    this.callOnActivateCallback = this.callOnActivateCallback.bind(this);
+  }
+
+  componentDidMount() {
+    this.hig.onClick(this.callOnActivateCallback);
   }
 
   commitUpdate(updatePayload, oldProps, newProp) {
-    this.props = {...this.props, ...updatePayload};
+    this.props = { ...this.props, ...updatePayload };
 
     this.processUpdateProps(updatePayload)
       .mapToHIGFunctions({
@@ -36,8 +41,25 @@ export class Project extends HIGElement {
       })
       .mapToHIGEventListeners(['onClick'])
       .handle('active', value => {
-        value ? this.hig.activate() : this.hig.deactivate()
+        if (value) {
+          this.hig.activate();
+          this.onActivate(this);
+        } else {
+          this.hig.deactivate();
+        }
       });
+  }
+
+  onActivate(callback) {
+    this._onActivate = callback;
+  }
+
+  callOnActivateCallback() {
+    if (!this._onActivate) {
+      return
+    }
+
+    this._onActivate(this);
   }
 }
 

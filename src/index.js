@@ -190,9 +190,10 @@ class App extends React.Component {
             onHamburgerClick={this.toggleSideNav}
           >
             <ProjectAccountSwitcher
-              activeLabel="OK THIS IS NOT OK"
-              activeImage="its-some-image.jpg"
-              activeType="account"
+              onAccountChange={account =>
+                console.log(`Account selected`, account)}
+              onProjectChange={project =>
+                console.log(`Project selected`, project)}
             >
               {this.state.projects.map((project, i) => {
                 return (

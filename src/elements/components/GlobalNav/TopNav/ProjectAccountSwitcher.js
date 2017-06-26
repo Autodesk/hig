@@ -66,14 +66,15 @@ export class ProjectAccountSwitcher extends HIGElement {
 
   commitUpdate(updatePayload, oldProps, newProp) {
     this.processUpdateProps(updatePayload)
-      .mapToHIGFunctions({
-        activeImage: 'setActiveImage',
-        activeLabel: 'setActiveLabel',
-        activeType: 'setActiveType'
-      })
       .mapToHIGEventListeners(['onClick', 'onClickOutside'])
       .handle('open', value => {
         this.props.open = value;
+      })
+      .handle('onAccountChange', value => {
+        this.props.onAccountChange = value;
+      })
+      .handle('onProjectChange', value => {
+        this.props.onProjectChange = value;
       })
       .then(this._render);
   }
@@ -92,11 +93,13 @@ export class ProjectAccountSwitcher extends HIGElement {
   insertBefore(instance, beforeChild = {}) {
     if (instance instanceof Account) {
       this.accounts.insertBefore(instance);
+      instance.onActivate(this.setActiveAccount);
       if (this.state.activeAccount === undefined) {
         this.state.activeAccount = instance;
       }
     } else if (instance instanceof Project) {
       this.projects.insertBefore(instance);
+      instance.onActivate(this.setActiveProject);
       if (this.state.activeProject === undefined) {
         this.state.activeProject = instance;
       }
@@ -117,14 +120,22 @@ export class ProjectAccountSwitcher extends HIGElement {
     this._render();
   }
 
-  setActiveAccount(event, higElement) {
-    this.state.activeAccount = this.accounts.find(a => a.hig === higElement);
+  setActiveAccount(account) {
+    this.state.activeAccount = account;
+    this.state.open = false;
     this._render();
+    if (this.props.onAccountChange) {
+      this.props.onAccountChange(account);
+    }
   }
 
-  setActiveProject(event, higElement) {
-    this.state.activeProject = this.projects.find(p => p.hig === higElement);
+  setActiveProject(project) {
+    this.state.activeProject = project;
+    this.state.open = false;
     this._render();
+    if (this.props.onProjectChange) {
+      this.props.onProjectChange(project);
+    }
   }
 
   _render() {
@@ -145,13 +156,11 @@ export class ProjectAccountSwitcher extends HIGElement {
     }
 
     this.accounts.forEach(account => {
-      account.configureHIGEventListener('onClick', this.setActiveAccount);
       account === this.state.activeAccount
         ? account.hig.activate()
         : account.hig.deactivate();
     });
     this.projects.forEach(project => {
-      project.configureHIGEventListener('onClick', this.setActiveProject);
       project === this.state.activeProject
         ? project.hig.activate()
         : project.hig.deactivate();
@@ -159,29 +168,18 @@ export class ProjectAccountSwitcher extends HIGElement {
 
     if (this.state.activeAccount && this.state.activeProject) {
       this.hig.setActiveLabel(
-        this.props.activeLabel ||
-          `${this.state.activeAccount.props.label} / ${this.state.activeProject.props.label}`
+        `${this.state.activeAccount.props.label} / ${this.state.activeProject.props.label}`
       );
-      this.hig.setActiveImage(
-        this.props.activeImage || this.state.activeProject.props.image
-      );
-      this.hig.setActiveType(this.props.activeType || 'project');
+      this.hig.setActiveImage(this.state.activeProject.props.image);
+      this.hig.setActiveType('project');
     } else if (this.state.activeAccount) {
-      this.hig.setActiveLabel(
-        this.props.activeLabel || this.state.activeAccount.props.label
-      );
-      this.hig.setActiveImage(
-        this.props.activeImage || this.state.activeAccount.props.image
-      );
-      this.hig.setActiveType(this.props.activeType || 'account');
+      this.hig.setActiveLabel(this.state.activeAccount.props.label);
+      this.hig.setActiveImage(this.state.activeAccount.props.image);
+      this.hig.setActiveType('account');
     } else if (this.state.activeProject) {
-      this.hig.setActiveLabel(
-        this.props.activeLabel || this.state.activeProject.props.label
-      );
-      this.hig.setActiveImage(
-        this.props.activeImage || this.state.activeProject.props.image
-      );
-      this.hig.setActiveType(this.props.activeType || 'project');
+      this.hig.setActiveLabel(this.state.activeProject.props.label);
+      this.hig.setActiveImage(this.state.activeProject.props.image);
+      this.hig.setActiveType('project');
     }
   }
 }
@@ -190,11 +188,8 @@ const ProjectAccountSwitcherComponent = createComponent(ProjectAccountSwitcher);
 
 ProjectAccountSwitcherComponent.propTypes = {
   open: PropTypes.bool,
-  activeLabel: PropTypes.string,
-  activeImage: PropTypes.string,
-  activeType: PropTypes.string,
-  onClick: PropTypes.func,
-  onClickOutside: PropTypes.func,
+  onAccountChange: PropTypes.func,
+  onProjectChange: PropTypes.func,
   children: HIGChildValidator([AccountComponent, ProjectComponent])
 };
 
@@ -203,20 +198,11 @@ ProjectAccountSwitcherComponent.__docgenInfo = {
     open: {
       description: '{bool} opens the project/account switcher'
     },
-    activeLabel: {
-      description: 'sets {String} the label displayed in the top nav'
+    onAccountChange: {
+      description: 'calls the provided callback when an account is activated in the switcher'
     },
-    activeImage: {
-      description: 'sets {String} the image displayed in the top nav'
-    },
-    activeType: {
-      description: 'sets the {String} type of the item displayed in the top nav'
-    },
-    onClick: {
-      description: '{func} calls the provided callback when user clicks on the switcher in the top nav'
-    },
-    onClickOutside: {
-      description: '{func} calls the provided callback when the switcher is open and the user clicks outside the switcher'
+    onProjectChange: {
+      description: 'calls the provided callback when a project is activated in the switcher'
     },
     children: {
       description: 'support adding Project and Account'

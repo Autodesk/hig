@@ -26,22 +26,6 @@ import SharedExamples from './../SharedExamples';
 const Project = ProjectAccountSwitcher.Project;
 const Account = ProjectAccountSwitcher.Account;
 
-const onAddAccount = function() {
-  return 'onAddAcount';
-};
-
-const onAddProject = function() {
-  return 'onAddProject';
-};
-
-const onItemClick = function() {
-  return 'onItemClick';
-};
-
-const onClickOutside = function() {
-  return 'onClickOutside';
-};
-
 const defaultProps = {
   projects: [
     { label: 'My cool project', image: 'my-cool-project.png' },
@@ -58,9 +42,6 @@ const Context = props => {
     <GlobalNav>
       <TopNav>
         <ProjectAccountSwitcher
-          activeLabel={props.activeLabel}
-          activeImage={props.activeImage}
-          activeType={props.activeType}
           open={props.open}
         >
           {accounts.map(account => {
@@ -109,9 +90,6 @@ function createHigContext(props) {
     projectAccountSwitcher.addProject(project);
 
     if (i === 0) {
-      projectAccountSwitcher.setActiveImage(projectProps.image);
-      projectAccountSwitcher.setActiveLabel(projectProps.label);
-      projectAccountSwitcher.setActiveType('project');
       project.activate();
     }
   });
@@ -120,14 +98,8 @@ function createHigContext(props) {
 }
 
 function setupProjectAccountSwitcher() {
-  const props = {
-    ...defaultProps,
-    activeImage: 'something.jpg',
-    activeType: 'proeject',
-    activeLabel: 'somethingLabel'
-  };
   const reactContainer = document.createElement('div');
-  mount(<Context {...props} />, { attachTo: reactContainer });
+  mount(<Context {...defaultProps} />, { attachTo: reactContainer });
   return { reactContainer };
 }
 
@@ -136,41 +108,6 @@ describe('<ProjectAccountSwitcher>', () => {
     it('has a good snapshot', () => {
       const { reactContainer } = setupProjectAccountSwitcher();
       expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
-    });
-  });
-
-  describe('setting and updating props', () => {
-    const shex = new SharedExamples(Context, createHigContext);
-
-    const configSets = [
-      {
-        key: 'activeLabel',
-        sampleValue: 'test label',
-        updateValue: 'new label',
-        mutator: 'setActiveLabel'
-      },
-      {
-        key: 'activeImage',
-        sampleValue: '/images/foo.jpg',
-        updateValue: '/images/bar.jpg',
-        mutator: 'setActiveImage'
-      },
-      {
-        key: 'activeType',
-        sampleValue: 'project',
-        updateValue: 'new project',
-        mutator: 'setActiveType'
-      }
-    ];
-
-    configSets.forEach(function(config) {
-      it(`can set props for ${config.key}`, () => {
-        shex.verifyPropsSet(config, defaultProps);
-      });
-
-      it(`can update props for ${config.key}`, () => {
-        shex.verifyPropsUpdate(config, defaultProps);
-      });
     });
   });
 
