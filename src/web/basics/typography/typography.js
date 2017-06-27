@@ -1,5 +1,3 @@
-import './typography.scss';
-
 var Interface = require('interface.json');
 var Core = require('_core.js');
 
