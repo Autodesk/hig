@@ -43,7 +43,7 @@ export class Project extends HIGElement {
       .handle('active', value => {
         if (value) {
           this.hig.activate();
-          this.onActivate(this);
+          this.callOnActivateCallback();
         } else {
           this.hig.deactivate();
         }
