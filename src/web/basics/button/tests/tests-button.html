@@ -22,7 +22,7 @@
             <div class='test-mount-primary-small'></div>
             <div class='test-mount-primary'></div>
             <div class='test-mount-primary-large'></div>
-            
+            <div class='test-mount-primary-disable'></div>
         </div>
 
         <div class='test-container'>
@@ -31,7 +31,7 @@
             <div class='test-mount-secondary-small'></div>
             <div class='test-mount-secondary'></div>
             <div class='test-mount-secondary-large'></div>
-            
+            <div class='test-mount-secondary-disable'></div>
         </div>
 
 
@@ -84,6 +84,16 @@
 
             PrimarylargeSize.mount(".test-mount-primary-large");
 
+            // Disabled Size
+
+            var PrimaryDisabled = new Hig.Button({
+                "title": "Disabled Button"
+            });
+
+            PrimaryDisabled.mount(".test-mount-primary-disable");
+
+            PrimaryDisabled.disable();
+
             // ----------------------------
             // Secondary BUTTON
             // ----------------------------
@@ -123,6 +133,16 @@
             });
 
             SecondarylargeSize.mount(".test-mount-secondary-large");
+
+            // Large Size
+
+            var SecondaryDisable = new Hig.Button({
+                "title": "Disabled Button",
+                "type": "secondary"
+            });
+
+            SecondaryDisable.mount(".test-mount-secondary-disable");
+            SecondaryDisable.disable();
 
 
             // ----------------------------

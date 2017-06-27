@@ -52,11 +52,11 @@ class Button extends Core {
     }
 
     disable(){
-
+        this.el.classList.add('hig__button--disable');
     }
 
     enable(){
-
+        this.el.classList.remove('hig__button--disable');
     }
 
     onClick(fn){

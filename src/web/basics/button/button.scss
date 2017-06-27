@@ -41,6 +41,15 @@
         //             0 0 0 2px color(adsk-blue);
     }
 
+    &--disable{
+        cursor: not-allowed;
+        background-color: color(adsk-blue-lightest);
+
+        &:hover, &:focus{
+            background-color: color(adsk-blue-lightest);
+        }
+    }
+
     // SIZES
 
     &--small{
@@ -83,6 +92,17 @@
         &:active, &:focus {
             background: none;
             border-color: color(hig-gray-10);
+        }
+
+    }
+    
+    &.hig__button--secondary.hig__button--disable{
+        cursor: not-allowed;
+        background: none;
+
+        &:hover, &:focus{
+            background: none;
+            border-color: color(hig-gray-40);
         }
     }
 
