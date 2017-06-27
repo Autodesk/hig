@@ -31,7 +31,6 @@ class Button extends Core {
     setType(type){
         this.el.classList = [];
         this.el.classList = ['hig__button', `hig__button--${type}`]
-        this.el.setAttribute("href", link);
     }
 
     setSize(size){
@@ -59,7 +58,7 @@ class Button extends Core {
     }
 
     onFocus(fn){
-        return this._attachListener("focus", this.el, this.el, fn);
+        return this._attachListener("focusin", this.el, this.el, fn);
     }
 
 }

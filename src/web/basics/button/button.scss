@@ -2,27 +2,27 @@
 @import '~helpers/css/mixins/base.scss';
 
 .hig__button {
-    font-family: 'ArtifaktElement';
-    
     display: inline-block;
-    padding: 5px 10px;
-    min-width: 82px;
+    @include vendor-prefix('box-sizing', 'border-box');
 
-    font-size: 14px;
+    font-family: 'ArtifaktElement';
     font-weight: 700;
     text-decoration: none;
     text-align: center;
+    border-radius: 4px;
 
     // default size: standard
     padding: 0 16px;
     height: 36px;
     line-height: 36px;
-    border-radius: 4px;
-
+    min-width: 68px;
+    font-size: 14px;
+    
     // default colors: primary
     background: color(adsk-blue);
     color: color(hig-white);
 
+    // states
     &:visited {
         color: color(hig-white);
     }
@@ -37,21 +37,63 @@
 
     &:focus {
         outline: none;
-        box-shadow: 0 0 0 1px color(white),
+        box-shadow: 0 0 0 1px color(hig-white),
                     0 0 0 2px color(adsk-blue);
-        // outline: 1px solid color(adsk-blue);
-        // outline-offset: 2px;
     }
+
+    // SIZES
+
+    &--small{
+        height: 28px;
+        line-height: 28px;
+        min-width: 66px;
+        padding: 0 16px;
+        font-size: 13px;
+    }
+
+    &--large{
+        height: 42px;
+        line-height: 42px;
+        min-width: 90px;
+        padding: 0 32px;
+        font-size: 16px;
+    }
+
+    // TYPES
 
     &.hig__button--primary {
-        // same as default values        
+        // same as default values
     }
 
-    &.hig__button--link {
-        color: color(adsk-blue);
+    &.hig__button--secondary {
+        border: 1px solid color(hig-gray-40);
+        background: none;
+        color: color(hig-slate-dark);
+
+        // states
+        &:visited {
+            color: color(hig-slate-dark);
+        }
 
         &:hover {
-            text-decoration: underline;
+            background: none;
+            border-color: color(adsk-turquoise);
         }
+
+        &:active {
+            background: none;
+            border-color: color(hig-gray-10);
+        }
+
+        &:focus {
+            outline: none;
+            border-color: color(adsk-turquoise);
+            box-shadow: 0 0 0 1px none,
+                        0 0 0 2px color(adsk-turquoise);
+        }
+    }
+
+    &.hig__button--flat {
+        // # TODO
     }
 }
