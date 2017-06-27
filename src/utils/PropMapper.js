@@ -21,7 +21,7 @@ export default class PropMapper {
     this.instance = instance;
     this.hig = instance.hig;
     this.accessedProps = new Set();
-    this.instance.props = Object.assign({}, instance.props, updatedProps);
+    this.instance.props = Object.assign({}, instance.props, this.toPropsObject(updatedProps));
 
     ['validate'].forEach(fn => {
       this[fn] = this[fn].bind(this);
@@ -40,22 +40,22 @@ export default class PropMapper {
     return this;
   }
 
-  mapToHIGEventListeners(props) {
-    props.forEach(propKey => {
-      this.accessedProps.add(propKey);
-
-      this.instance.configureHIGEventListener(propKey, props[propKey]);
+  mapToHIGEventListeners(propKeys) {
+    propKeys.forEach(propKey => {
+      this.handle(propKey, value => {
+        this.instance.configureHIGEventListener(propKey, value);
+      });
     });
     return this;
   }
 
-  handle(prop, callback) {
-    this.accessedProps.add(prop);
+  handle(propKey, handleValue) {
+    this.accessedProps.add(propKey);
 
-    const propIndex = this.props.indexOf(prop);
+    const propIndex = this.props.indexOf(propKey);
     if (propIndex >= 0) {
-      const value = this.props.splice(propIndex, 2)[1];
-      callback(value);
+      const value = this.props[propIndex + 1];
+      handleValue(value);
     }
     return this;
   }
@@ -94,5 +94,16 @@ export default class PropMapper {
       },
       []
     );
+  }
+
+  toPropsObject(propsArray) {
+    const propsObject = {};
+    for (let i = 0; i < propsArray.length; i += 2) {
+      const propKey = propsArray[i];
+      const propValue = propsArray[i + 1];
+
+      propsObject[propKey] = propValue;
+    }
+    return propsObject;
   }
 }

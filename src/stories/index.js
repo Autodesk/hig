@@ -21,3 +21,4 @@ import '../elements/components/GlobalNav/TopNav/Search.story.js';
 import '../elements/components/GlobalNav/TopNav/Profile.story';
 import '../elements/components/GlobalNav/GlobalNav.story';
 import '../elements/components/GlobalNav/TopNav/ProjectAccountSwitcher.story';
+import '../elements/components/GlobalNav/SubNav/Tabs.story';

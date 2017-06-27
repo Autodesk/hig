@@ -75,7 +75,7 @@ export class Tabs extends HIGElement {
 
   _render(){
     this.tabs.forEach(tab => {
-      this.state.activeTab === tab ? tab.hig.activate() : tab.hig.deactivate();
+      this.state.activeTab === tab ? tab.activate() : tab.deactivate();
     })
   }
 }

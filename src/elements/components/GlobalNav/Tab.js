@@ -22,14 +22,18 @@ export class Tab extends HIGElement {
   constructor(HIGConstructor, initialProps) {
     super(HIGConstructor, initialProps);
 
-    ['onActiveTab', 'callOnActiveTab'].forEach(fn => {
+    ['onActiveTab', 'callOnActiveTab', '_render'].forEach(fn => {
       this[fn] = this[fn].bind(this);
     });
 
+    this.state = {
+      active: false
+    }
   }
 
   componentDidMount() {
-    this.hig.onClick(this.callOnActiveTab)
+    this.hig.onClick(this.callOnActiveTab);
+    this._render();
   }
 
   commitUpdate(updatePayload, oldProps, newProp) {
@@ -43,6 +47,7 @@ export class Tab extends HIGElement {
           this.callOnActiveTab();
         }
       })
+      .then(this._render);
   }
 
   callOnActiveTab(){
@@ -56,13 +61,33 @@ export class Tab extends HIGElement {
   onActiveTab(callback){
     this._onActiveTab = callback; 
   }
+
+  activate() {
+    this.state.active = true;
+    this._render();
+  }
+
+  deactivate() {
+    this.state.active = false;
+    this._render();
+  }
+
+  _render() {
+    let active = this.props.active;
+    if (active === undefined) {
+      active = this.state.active;
+    }
+
+    active ? this.hig.activate() : this.hig.deactivate();
+  }
 }
 
 const TabComponent = createComponent(Tab);
 
 TabComponent.propTypes = {
   active: PropTypes.bool,
-  label: PropTypes.string
+  label: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 TabComponent.__docgenInfo = {
@@ -72,6 +97,9 @@ TabComponent.__docgenInfo = {
     },
     label: {
       description: 'sets the text of a tab'
+    },
+    onClick: {
+      description: 'calls provided handler when tab recieves a click'
     }
   }
 };

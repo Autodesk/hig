@@ -53,16 +53,7 @@ class App extends React.Component {
     this.state = {
       buttonLabel: 'Toggle HIG Menu',
       fn: false,
-      group1: true,
-      group3: true,
-      open: false,
-      profileFlyoutOpen: false,
-      activeTab: 0,
-      activeProjectOrAccount: 0,
-      projectOrAcccountTarget: topNavFixtures.accountList()[0] ||
-        topNavFixtures.projectList()[0],
       tabs: [{ label: 'One', id: 0 }, { label: 'Two', id: 1 }],
-      searchPlaceholder: 'search for...',
       projects: topNavFixtures.projectList(),
       accounts: topNavFixtures.accountList()
     };
@@ -75,20 +66,12 @@ class App extends React.Component {
     });
   };
 
-  handleInputChange = event => {
-    console.log("I'm listening to an input change");
+  handleTopNavSearchInputChange = event => {
+    console.log("TopNav Search input", event.target.value);
   };
 
   toggleSideNav = event => {
     this.setState({ open: !this.state.open });
-  };
-
-  openProfileFlyout = event => {
-    this.setState({ profileFlyoutOpen: true });
-  };
-
-  closeProfileFlyout = event => {
-    this.setState({ profileFlyoutOpen: false });
   };
 
   profileSignOutClick = event => {
@@ -113,10 +96,6 @@ class App extends React.Component {
     const nextTabs = Array.from(this.state.tabs);
     nextTabs.pop();
     this.setState({ tabs: nextTabs });
-  };
-
-  setActiveTab = activeTabIndex => {
-    this.setState({ activeTab: activeTabIndex });
   };
 
   render() {
@@ -228,8 +207,7 @@ class App extends React.Component {
             />
 
             <TopNavSearch
-              placeholder={this.state.searchPlaceholder}
-              onInput={this.handleInputChange}
+              onInput={this.handleTopNavSearchInputChange}
             />
 
           </TopNav>
