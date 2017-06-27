@@ -88,7 +88,7 @@
         &:focus {
             outline: none;
             border-color: color(adsk-turquoise);
-            box-shadow: 0 0 0 1px none,
+            box-shadow: 0 0 0 1px color(hig-white),
                         0 0 0 2px color(adsk-turquoise);
         }
     }
