@@ -2,33 +2,49 @@
 @import '~helpers/css/mixins/base.scss';
 
 .hig__button {
-    @include reset;
+    font-family: 'ArtifaktElement';
+    
     display: inline-block;
     padding: 5px 10px;
     min-width: 82px;
 
     font-size: 14px;
+    font-weight: 700;
     text-decoration: none;
     text-align: center;
 
-    &.hig__button--default {
-        background: white;
-        border: 1px solid color(hig-gray-50);
-        border-radius: 2px;
+    // default size: standard
+    padding: 0 16px;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 4px;
 
-        color: color(hig-slate-dark);
+    // default colors: primary
+    background: color(adsk-blue);
+    color: color(hig-white);
 
-        &:hover {
-            box-shadow: 0 2px 6px color(box-shadow-10);
-            border: 1px solid color(hig-gray-20);
-        }
+    &:visited {
+        color: color(hig-white);
+    }
 
-        &:active {
-            background: color(hig-gray-40);
-            border: 1px solid color(hig-gray-20);
-            box-shadow: none;
-            color: color(hig-gray-10);
-        }
+    &:hover {
+        background-color: color(adsk-blue-light);
+    }
+
+    &:active {
+        background-color: color(adsk-blue-dark);
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 1px color(white),
+                    0 0 0 2px color(adsk-blue);
+        // outline: 1px solid color(adsk-blue);
+        // outline-offset: 2px;
+    }
+
+    &.hig__button--primary {
+        // same as default values        
     }
 
     &.hig__button--link {

@@ -17,13 +17,7 @@ class Button extends Core {
         this._render(Template, options);
     }
 
-    onClick(fn){
-        return this._attachListener("click", this.el, this.el, fn);
-    }
-
-    onHover(fn){
-        return this._attachListener("hover", this.el, this.el, fn);
-    }
+    
 
     setTitle(title){
         this.el.textContent = title;
@@ -34,10 +28,38 @@ class Button extends Core {
         this.el.setAttribute("href", link);
     }
 
-    setStyle(style){
+    setType(type){
         this.el.classList = [];
-        this.el.classList = ['hig__button', `hig__button--${style}`]
+        this.el.classList = ['hig__button', `hig__button--${type}`]
         this.el.setAttribute("href", link);
+    }
+
+    setSize(size){
+
+    }
+
+    setIcon(icon){
+
+    }
+
+    disable(){
+
+    }
+
+    enable(){
+
+    }
+
+    onClick(fn){
+        return this._attachListener("click", this.el, this.el, fn);
+    }
+
+    onHover(fn){
+        return this._attachListener("hover", this.el, this.el, fn);
+    }
+
+    onFocus(fn){
+        return this._attachListener("focus", this.el, this.el, fn);
     }
 
 }
@@ -46,7 +68,9 @@ Button._interface = Interface['basics']['Button'];
 Button._defaults = {
     title: "link",
     link: "#",
-    style: "default"
+    type: "primary",
+    size: "standard",
+    icon: false
 };
 
 module.exports = Button;
