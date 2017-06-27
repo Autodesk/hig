@@ -4,6 +4,8 @@ var Interface = require('interface.json');
 var Core = require('_core.js');
 
 var Heading = require('./heading/heading.js');
+var Body = require('./body/body.js');
+var Caption = require('./caption/caption.js');
 
 /**
  * Creates an Typography in the SideNav
@@ -22,7 +24,9 @@ class Typography extends Core {
 Typography._interface = Interface['basics']['Typography'];
 Typography._defaults = {};
 Typography._partials = {
-    Heading: Heading
+    Heading: Heading,
+    Body: Body,
+    Caption: Caption
 };
 
 module.exports = Typography;

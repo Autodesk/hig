@@ -33,19 +33,18 @@
         <div class='tests-typo-group'>
             <div class='tests-typo-type hig__colors__hig-white--color hig__colors__hig-slate-dark--background hig__typo'>Body</div>
 
-            <div class='hig__typo'>Standard: The quick brown fox jumps over the lazy dog</div>
-            <div class='hig__typo__bold'>Bold: The quick brown fox jumps over the lazy dog</div>
-            <div><a href="#" class='hig__typo__link'>Link: The quick brown fox jumps over the lazy dog</a></div>
-            <div class='hig__typo__caption'>Caption: The quick brown fox jumps over the lazy dog</div>
+            <div class='tests-typo-body'></div>
+            <div class='tests-typo-bodybold'></div>
+            <div class='tests-typo-caption'></div>
 
         </div>
 
         <script>
-            var typo = new Hig.Typography;
+            var Typography = new Hig.Typography;
 
             // H1 Page Title
 
-            var PageTitle = new typo.partials.Heading({
+            var PageTitle = new Typography.partials.Heading({
                 "text": "Typography - HIG Light",
                 "size": 1
             });
@@ -54,7 +53,7 @@
 
             // H1
 
-            var H1 = new typo.partials.Heading({
+            var H1 = new Typography.partials.Heading({
                 "text": "H1: The quick brown fox jumps over the lazy dog",
                 "size": 1
             });
@@ -63,7 +62,7 @@
 
             // H2
 
-            var H2 = new typo.partials.Heading({
+            var H2 = new Typography.partials.Heading({
                 "text": "H2: The quick brown fox jumps over the lazy dog",
                 "size": 2
             });
@@ -72,7 +71,7 @@
 
             // H3
 
-            var H3 = new typo.partials.Heading({
+            var H3 = new Typography.partials.Heading({
                 "text": "H3: The quick brown fox jumps over the lazy dog",
                 "size": 3
             });
@@ -81,7 +80,7 @@
 
             // H4 + test setText and setSize update method
 
-            var H4 = new typo.partials.Heading({
+            var H4 = new Typography.partials.Heading({
                 "text": "H4: This text is wrong",
                 "size": 1 // we're updating to 4 few lines below
             });
@@ -90,6 +89,32 @@
 
             H4.setText("H4: The quick brown fox jumps over the lazy dog");
             H4.setSize(4);
+
+            // Body
+
+            var Body = new Typography.partials.Body({
+                "text": "Standard: The quick brown fox jumps over the lazy dog"
+            });
+
+            Body.mount(".tests-typo-body");
+
+            // Body Bold
+
+            var BodyBold = new Typography.partials.Body({
+                "text": "Bold: The quick brown fox jumps over the lazy dog"
+            });
+            
+            BodyBold.mount(".tests-typo-bodybold");
+
+            BodyBold = BodyBold.makeBold();
+
+            // Caption
+
+            var Caption = new Typography.partials.Caption({
+                "text": "Caption: The quick brown fox jumps over the lazy dog"
+            });
+
+            Caption.mount(".tests-typo-caption");
         </script>
 
     </body>
