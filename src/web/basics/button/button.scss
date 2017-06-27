@@ -31,14 +31,14 @@
         background-color: color(adsk-blue-light);
     }
 
-    &:active {
+    &:active, &:focus {
         background-color: color(adsk-blue-dark);
     }
 
     &:focus {
         outline: none;
-        box-shadow: 0 0 0 1px color(hig-white),
-                    0 0 0 2px color(adsk-blue);
+        // box-shadow: 0 0 0 1px color(hig-white),
+        //             0 0 0 2px color(adsk-blue);
     }
 
     // SIZES
@@ -80,16 +80,9 @@
             border-color: color(adsk-turquoise);
         }
 
-        &:active {
+        &:active, &:focus {
             background: none;
             border-color: color(hig-gray-10);
-        }
-
-        &:focus {
-            outline: none;
-            border-color: color(adsk-turquoise);
-            box-shadow: 0 0 0 1px color(hig-white),
-                        0 0 0 2px color(adsk-turquoise);
         }
     }
 

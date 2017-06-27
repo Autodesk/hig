@@ -17,8 +17,6 @@ class Button extends Core {
         this._render(Template, options);
     }
 
-    
-
     setTitle(title){
         this.el.textContent = title;
         this.el.setAttribute("title", title);
@@ -29,8 +27,8 @@ class Button extends Core {
     }
 
     setType(type){
-        this.el.classList = [];
-        this.el.classList = ['hig__button', `hig__button--${type}`]
+        this._clearAllClassTypes();
+        this.el.classList.add('hig__button--'+type);
     }
 
     setSize(size){
@@ -59,6 +57,12 @@ class Button extends Core {
 
     onFocus(fn){
         return this._attachListener("focusin", this.el, this.el, fn);
+    }
+
+    _clearAllClassTypes(){
+        this.el.classList.remove("hig__button--primary");
+        this.el.classList.remove("hig__button--secondary");
+        this.el.classList.remove("hig__button--flat");
     }
 
 }
