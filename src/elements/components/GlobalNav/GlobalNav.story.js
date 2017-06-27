@@ -133,31 +133,13 @@ storiesOf('GlobalNav', module)
         </SideNav>
         <TopNav logo={logo}>
           <ProjectAccountSwitcher
-            activeLabel="Oakland Medical Center"
-            activeImage={project1}
-            activeType="account"
             open={boolean(false)}
-            onClickOutside={action('clicked')}
-            onClick={action('clicked')}
+            onProjectChange={action('Project activated')}
+            onAccountChange={action('Account activated')}
           >
-            <Account
-              image=""
-              label="Oakland Medical Center"
-              active={true}
-              onClick={action('clicked')}
-            />
-            <Project
-              image={project4}
-              label=""
-              active={false}
-              onClick={action('clicked')}
-            />
-            <Project
-              image={project1}
-              label="Stanford hospital"
-              active={false}
-              onClick={action('clicked')}
-            />
+            <Account image="" label="DPI Construction" />
+            <Project image={project4} label="Oakland Medical Center" />
+            <Project image={project1} label="Stanford hospital" />
           </ProjectAccountSwitcher>
           <Shortcut icon="gear" title="GEAR" link="#" />
           <Help title="HELLLP MEEEE!!!!" link="#`" />
@@ -188,54 +170,6 @@ storiesOf('GlobalNav', module)
             onProfileSettingsClick={action('profile settings clicked')}
             onSignOutClick={action('sign out clicked')}
           />
-        </TopNav>
-        <SubNav moduleIndicatorName="Insight" moduleIndicatorIcon="hamburger" />
-        <Slot>{LONG_COPY}</Slot>
-      </GlobalNav>
-    );
-  })
-  .addWithInfo('w projectAccountSwitcherOpen', ``, () => {
-    const isOpen = boolean('isOpen', true);
-    return (
-      <GlobalNav>
-        <SideNav />
-        <TopNav logo={logo}>
-          <ProjectAccountSwitcher
-            activeLabel="Oakland Medical Center"
-            activeImage={project1}
-            activeType="account"
-            isOpen={isOpen}
-            onClickOutside={action('clicked')}
-            onClick={action('clicked')}
-            hideProjectAccountFlyout={false}
-          >
-            <Account
-              image={project2}
-              label="Stanford hospital"
-              active={false}
-              onClick={action('clicked')}
-            />
-            <Account
-              image={project1}
-              label="Oakland Medical Center"
-              active={true}
-              onClick={action('clicked')}
-            />
-
-            <Project
-              image=""
-              label="California Pacific"
-              active={true}
-              onClick={action('clicked')}
-            />
-
-            <Project
-              image={project3}
-              label="Stanford hospital"
-              active={false}
-              onClick={action('clicked')}
-            />
-          </ProjectAccountSwitcher>
         </TopNav>
         <SubNav moduleIndicatorName="Insight" moduleIndicatorIcon="hamburger" />
         <Slot>{LONG_COPY}</Slot>
