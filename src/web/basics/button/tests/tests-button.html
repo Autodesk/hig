@@ -4,48 +4,188 @@
         <script type="text/javascript" src="../../../../../dist/hig.js"></script>
 
         <style>
-            .buttonHolder{
-                margin: 30px;
+            body{
+                margin: 50px;
+            }
+            .test-container{
+                margin-bottom: 50px;
+            }
+            .test-container > div{
+                margin: 10px;
             }
         </style>
     </head>
     <body>
-        <div class='test-container' style="padding: 40px; margin: 0;">
-            <div class='regular-button buttonHolder'></div>
-            <div class='dispose-button buttonHolder'></div>
-            <div class='updated-button buttonHolder'></div>
-            <div class='destroy-button buttonHolder'></div>
+        <div class='test-container'>
+            <div class='test-typo-primary'></div>
+
+            <div class='test-mount-primary-small'></div>
+            <div class='test-mount-primary'></div>
+            <div class='test-mount-primary-large'></div>
+            <div class='test-mount-primary-disable'></div>
         </div>
 
+        <div class='test-container'>
+            <div class='test-typo-secondary'></div>
+
+            <div class='test-mount-secondary-small'></div>
+            <div class='test-mount-secondary'></div>
+            <div class='test-mount-secondary-large'></div>
+            <div class='test-mount-secondary-disable'></div>
+        </div>
+
+
+        <div class='test-container'>
+            <div class='test-typo-js'></div>
+
+            <div class='test-js-events'></div>
+            <div class='test-js-dispose'></div>
+            <div class='test-js-update'></div>
+            <div class='test-js-unmount'></div>
+            <div class='test-js-dispose'></div>
         <script>
 
-            // Regular Button
+            var Typo = new Hig.Typography();
 
-            var RegularButton = new Hig.Button({
-                "title": "regular button",
-                "link": "http://autodesk.com"
+            // ----------------------------
+            // PRIMARY BUTTON
+            // ----------------------------
+
+            var TitlePrimaryButton = new Typo.partials.Heading({
+                "text": "Primary Button",
+                "size": 3
             });
 
-            RegularButton.mount(".regular-button");
+            TitlePrimaryButton.mount('.test-typo-primary');
 
-            RegularButton.onClick(function(e){
+            // Standard Size
+
+            var PrimaryStandardSize = new Hig.Button({
+                "title": "Standard Size"
+            });
+
+            PrimaryStandardSize.mount(".test-mount-primary");
+
+            // Small Size
+
+            var PrimarySmallSize = new Hig.Button({
+                "title": "Small Size",
+                "size": "small"
+            });
+
+            PrimarySmallSize.mount(".test-mount-primary-small");
+
+            // Large Size
+
+            var PrimarylargeSize = new Hig.Button({
+                "title": "Large Size",
+                "size": "large"
+            });
+
+            PrimarylargeSize.mount(".test-mount-primary-large");
+
+            // Disabled Size
+
+            var PrimaryDisabled = new Hig.Button({
+                "title": "Disabled Button"
+            });
+
+            PrimaryDisabled.mount(".test-mount-primary-disable");
+
+            PrimaryDisabled.disable();
+
+            // ----------------------------
+            // Secondary BUTTON
+            // ----------------------------
+
+            var TitleSecondaryButton = new Typo.partials.Heading({
+                "text": "Secondary Button",
+                "size": 3
+            });
+
+            TitleSecondaryButton.mount('.test-typo-secondary');
+
+            // Standard Size
+
+            var SecondaryStandardSize = new Hig.Button({
+                "title": "Standard Size",
+                "type": "secondary"
+            });
+
+            SecondaryStandardSize.mount(".test-mount-secondary");
+
+            // Small Size
+
+            var SecondarySmallSize = new Hig.Button({
+                "title": "Small Size",
+                "type": "secondary",
+                "size": "small"
+            });
+
+            SecondarySmallSize.mount(".test-mount-secondary-small");
+
+            // Large Size
+
+            var SecondarylargeSize = new Hig.Button({
+                "title": "Large Size",
+                "type": "secondary",
+                "size": "large"
+            });
+
+            SecondarylargeSize.mount(".test-mount-secondary-large");
+
+            // Large Size
+
+            var SecondaryDisable = new Hig.Button({
+                "title": "Disabled Button",
+                "type": "secondary"
+            });
+
+            SecondaryDisable.mount(".test-mount-secondary-disable");
+            SecondaryDisable.disable();
+
+
+            // ----------------------------
+            // JAVASCRIPT EVENT TESTS
+            // ----------------------------
+
+            var TitleJS = new Typo.partials.Heading({
+                "text": "Javascript Event Tests",
+                "size": 3
+            });
+
+            TitleJS.mount('.test-typo-js');
+
+            // Regular event callback tests
+
+            var EventsButton = new Hig.Button({
+                "title": "All event are logged in console"
+            });
+
+            EventsButton.mount(".test-js-events");
+
+            EventsButton.onClick(function(e){
                 e.preventDefault();
-                console.log("RegularButton CLICK")
+                console.log("EventsButton CLICK")
             });
 
-            RegularButton.onHover(function(e){
-                console.log("RegularButton HOVER")
+            EventsButton.onHover(function(e){
+                console.log("EventsButton HOVER")
+            });
+
+            EventsButton.onFocus(function(e){
+                console.log("EventsButton FOCUS")
             });
 
             // Event Disposing Button
             // Hover or Click should not register
 
             var EventDisposeButton = new Hig.Button({
-                "title": "events disposed button",
+                "title": "Events disposed button, no events should fire",
                 "link": "#"
             });
 
-            EventDisposeButton.mount(".dispose-button");
+            EventDisposeButton.mount(".test-js-dispose");
 
             var clickDispose = EventDisposeButton.onClick(function(e){
                 e.preventDefault();
@@ -67,10 +207,12 @@
                 "link": "#"
             });
 
-            UpdateButton.mount(".updated-button");
+            UpdateButton.mount(".test-js-update");
 
-            UpdateButton.setTitle("correct title");
+            UpdateButton.setTitle("Updated Title, Link (Autodesk.com), Size (large), Type (secondary)");
             UpdateButton.setLink("http://autodesk.com");
+            UpdateButton.setSize("large");
+            UpdateButton.setType("secondary");
 
             // Unmount a Button
             // Remove a button from the DOM after creation, this button should not render
@@ -80,7 +222,7 @@
                 "link": "#"
             });
 
-            UnmountButton.mount(".destroy-button");
+            UnmountButton.mount(".test-js-unmount");
 
             UnmountButton.unmount();
 

@@ -2,40 +2,111 @@
 @import '~helpers/css/mixins/base.scss';
 
 .hig__button {
-    @include reset;
     display: inline-block;
-    padding: 5px 10px;
-    min-width: 82px;
+    @include vendor-prefix('box-sizing', 'border-box');
 
-    font-size: 14px;
+    font-family: 'ArtifaktElement';
+    font-weight: 700;
     text-decoration: none;
     text-align: center;
+    border-radius: 4px;
 
-    &.hig__button--default {
-        background: white;
-        border: 1px solid color(hig-gray-50);
-        border-radius: 2px;
+    // default size: standard
+    padding: 0 16px;
+    height: 36px;
+    line-height: 36px;
+    min-width: 68px;
+    font-size: 14px;
+    
+    // default colors: primary
+    background: color(adsk-blue);
+    color: color(hig-white);
 
-        color: color(hig-slate-dark);
+    // states
+    &:visited {
+        color: color(hig-white);
+    }
 
-        &:hover {
-            box-shadow: 0 2px 6px color(box-shadow-10);
-            border: 1px solid color(hig-gray-20);
-        }
+    &:hover {
+        background-color: color(adsk-blue-light);
+    }
 
-        &:active {
-            background: color(hig-gray-40);
-            border: 1px solid color(hig-gray-20);
-            box-shadow: none;
-            color: color(hig-gray-10);
+    &:active, &:focus {
+        background-color: color(adsk-blue-dark);
+    }
+
+    &:focus {
+        outline: none;
+        // box-shadow: 0 0 0 1px color(hig-white),
+        //             0 0 0 2px color(adsk-blue);
+    }
+
+    &--disable{
+        cursor: not-allowed;
+        background-color: color(adsk-blue-lightest);
+
+        &:hover, &:focus{
+            background-color: color(adsk-blue-lightest);
         }
     }
 
-    &.hig__button--link {
-        color: color(adsk-blue);
+    // SIZES
+
+    &--small{
+        height: 28px;
+        line-height: 28px;
+        min-width: 66px;
+        padding: 0 16px;
+        font-size: 13px;
+    }
+
+    &--large{
+        height: 42px;
+        line-height: 42px;
+        min-width: 90px;
+        padding: 0 32px;
+        font-size: 16px;
+    }
+
+    // TYPES
+
+    &.hig__button--primary {
+        // same as default values
+    }
+
+    &.hig__button--secondary {
+        border: 1px solid color(hig-gray-40);
+        background: none;
+        color: color(hig-slate-dark);
+
+        // states
+        &:visited {
+            color: color(hig-slate-dark);
+        }
 
         &:hover {
-            text-decoration: underline;
+            background: none;
+            border-color: color(adsk-turquoise);
         }
+
+        &:active, &:focus {
+            background: none;
+            border-color: color(hig-gray-10);
+        }
+
+    }
+    
+    &.hig__button--secondary.hig__button--disable{
+        cursor: not-allowed;
+        background: none;
+
+        &:hover, &:focus{
+            background: none;
+            border-color: color(hig-gray-40);
+        }
+    }
+
+    &.hig__button--flat {
+        // # TODO
     }
 }

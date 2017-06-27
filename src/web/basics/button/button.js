@@ -4,6 +4,9 @@ var Template = require('./button.html');
 var Interface = require('../../../interface/interface.json');
 var Core = require('../../helpers/js/_core.js');
 
+var AvailableTypes = ['primary', 'secondary', 'flat'];
+var AvailableSizes = ['small', 'standard', 'large'];
+
 /**
  * Creates an button
  *
@@ -17,14 +20,6 @@ class Button extends Core {
         this._render(Template, options);
     }
 
-    onClick(fn){
-        return this._attachListener("click", this.el, this.el, fn);
-    }
-
-    onHover(fn){
-        return this._attachListener("hover", this.el, this.el, fn);
-    }
-
     setTitle(title){
         this.el.textContent = title;
         this.el.setAttribute("title", title);
@@ -34,10 +29,58 @@ class Button extends Core {
         this.el.setAttribute("href", link);
     }
 
-    setStyle(style){
-        this.el.classList = [];
-        this.el.classList = ['hig__button', `hig__button--${style}`]
-        this.el.setAttribute("href", link);
+    setType(type){
+        if(AvailableTypes.indexOf(type) > -1){
+            this._clearAllTypes();
+            this.el.classList.add('hig__button--'+type);
+        }else{
+            console.error('Button type not found, only these types are allowed: ', AvailableTypes);
+        }
+    }
+
+    setSize(size){
+        if(AvailableSizes.indexOf(size) > -1){
+            this._clearAllSizes();
+            this.el.classList.add('hig__button--'+size);
+        }else{
+            console.error('Button size not found, only these sizes are allowed: ', AvailableSizes);
+        }
+    }
+
+    setIcon(icon){
+        // TODO
+    }
+
+    disable(){
+        this.el.classList.add('hig__button--disable');
+    }
+
+    enable(){
+        this.el.classList.remove('hig__button--disable');
+    }
+
+    onClick(fn){
+        return this._attachListener("click", this.el, this.el, fn);
+    }
+
+    onHover(fn){
+        return this._attachListener("hover", this.el, this.el, fn);
+    }
+
+    onFocus(fn){
+        return this._attachListener("focusin", this.el, this.el, fn);
+    }
+
+    _clearAllTypes(){
+        for(var type in AvailableTypes){
+            this.el.classList.remove("hig__button--"+type);
+        }
+    }
+
+    _clearAllSizes(){
+        for(var size in AvailableSizes){
+            this.el.classList.remove("hig__button--"+size);
+        }
     }
 
 }
@@ -46,7 +89,9 @@ Button._interface = Interface['basics']['Button'];
 Button._defaults = {
     title: "link",
     link: "#",
-    style: "default"
+    type: "primary",
+    size: "standard",
+    icon: false
 };
 
 module.exports = Button;
