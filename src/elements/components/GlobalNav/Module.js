@@ -38,7 +38,9 @@ export class Module extends HIGElement {
       expanded: false
     };
 
-    ['toggleCollapsed', '_render'].forEach(fn => { this[fn] = this[fn].bind(this); });
+    ['toggleCollapsed', '_render'].forEach(fn => {
+      this[fn] = this[fn].bind(this);
+    });
   }
 
   commitUpdate(updatePayload, oldProps, newProps) {

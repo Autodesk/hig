@@ -36,7 +36,7 @@ export class Tabs extends HIGElement {
     this.state = {};
 
     ['setActiveTab'].forEach(fn => {
-      this[fn] = this[fn].bind(this)
+      this[fn] = this[fn].bind(this);
     });
   }
 
@@ -52,8 +52,8 @@ export class Tabs extends HIGElement {
   insertBefore(instance, insertBeforeIndex) {
     this.tabs.insertBefore(instance, insertBeforeIndex);
     instance.onActiveTab(this.setActiveTab);
-    if (this.state.activeTab === undefined){
-      this.state.activeTab = instance
+    if (this.state.activeTab === undefined) {
+      this.state.activeTab = instance;
     }
   }
 
@@ -64,19 +64,19 @@ export class Tabs extends HIGElement {
   commitUpdate(updatePayload, oldProps, newProp) {
     this.props = { ...this.props, ...updatePayload };
   }
-  
-  setActiveTab(tab){
+
+  setActiveTab(tab) {
     this.state.activeTab = tab;
     if (this.props.onTabChange) {
       this.props.onTabChange(tab);
     }
     this._render();
-  };
+  }
 
-  _render(){
+  _render() {
     this.tabs.forEach(tab => {
       this.state.activeTab === tab ? tab.activate() : tab.deactivate();
-    })
+    });
   }
 }
 

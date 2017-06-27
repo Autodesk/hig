@@ -37,7 +37,7 @@ import project4 from '../../../../images/project-4.png';
 const tabOptions = {
   one: 'One',
   two: 'Two'
-}
+};
 const tabDefaultValue = 'one';
 
 storiesOf('Tabs', module)
@@ -75,13 +75,20 @@ storiesOf('Tabs', module)
         </TopNav>
         <SubNav moduleIndicatorName="Insight" moduleIndicatorIcon="hamburger">
           <Tabs>
-            <Tab label="One" active={ activeTab === 'one' } onClick={action('Tab 1 clicked')} />
-            <Tab label="Two" active={ activeTab === 'two' } onClick={action('Tab 2 clicked')}/>
+            <Tab
+              label="One"
+              active={activeTab === 'one'}
+              onClick={action('Tab 1 clicked')}
+            />
+            <Tab
+              label="Two"
+              active={activeTab === 'two'}
+              onClick={action('Tab 2 clicked')}
+            />
           </Tabs>
         </SubNav>
         <Slot>
-          {
-            activeTab === 'one'
+          {activeTab === 'one'
             ? <div>
                 <h1>Tab 1</h1>
                 <p>
@@ -91,7 +98,7 @@ storiesOf('Tabs', module)
                   they sold out, authentic selvage tumblr vinyl. Hot chicken chillwave coloring book fixie vice venmo echo park
                   portland. Tote bag master cleanse cronut banjo banh mi pitchfork, celiac photo booth.
                 </p>
-            </div>
+              </div>
             : <div>
                 <h1>Tab 2</h1>
                 <p>
@@ -102,10 +109,9 @@ storiesOf('Tabs', module)
                   paleo lyft. Four dollar toast tumblr mustache thundercats single-origin coffee, freegan flexitarian cold-pressed
                   beard roof party VHS venmo af ugh bushwick.
                 </p>
-            </div>
-          }
-          
+              </div>}
+
         </Slot>
       </GlobalNav>
     );
-  })
+  });

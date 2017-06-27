@@ -67,7 +67,7 @@ class App extends React.Component {
   };
 
   handleTopNavSearchInputChange = event => {
-    console.log("TopNav Search input", event.target.value);
+    console.log('TopNav Search input', event.target.value);
   };
 
   toggleSideNav = event => {
@@ -206,23 +206,20 @@ class App extends React.Component {
               signOutLink="http://www.sanrio.com"
             />
 
-            <TopNavSearch
-              onInput={this.handleTopNavSearchInputChange}
-            />
+            <TopNavSearch onInput={this.handleTopNavSearchInputChange} />
 
           </TopNav>
           <SubNav
             moduleIndicatorName="Documents Library"
             moduleIndicatorIcon="hamburger"
           >
-            <Tabs onTabChange={tab => {console.log('client tab handler')}}>
+            <Tabs
+              onTabChange={tab => {
+                console.log('client tab handler');
+              }}
+            >
               {this.state.tabs.map((tab, i) => {
-                return (
-                  <Tab
-                    key={tab.id}
-                    label={tab.label}
-                  />
-                );
+                return <Tab key={tab.id} label={tab.label} />;
               })}
             </Tabs>
           </SubNav>

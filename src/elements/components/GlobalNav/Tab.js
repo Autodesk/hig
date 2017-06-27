@@ -28,7 +28,7 @@ export class Tab extends HIGElement {
 
     this.state = {
       active: false
-    }
+    };
   }
 
   componentDidMount() {
@@ -50,7 +50,7 @@ export class Tab extends HIGElement {
       .then(this._render);
   }
 
-  callOnActiveTab(){
+  callOnActiveTab() {
     if (!this._onActiveTab) {
       return;
     }
@@ -58,8 +58,8 @@ export class Tab extends HIGElement {
     this._onActiveTab(this);
   }
 
-  onActiveTab(callback){
-    this._onActiveTab = callback; 
+  onActiveTab(callback) {
+    this._onActiveTab = callback;
   }
 
   activate() {
@@ -87,7 +87,7 @@ const TabComponent = createComponent(Tab);
 TabComponent.propTypes = {
   active: PropTypes.bool,
   label: PropTypes.string,
-  onClick: PropTypes.func,
+  onClick: PropTypes.func
 };
 
 TabComponent.__docgenInfo = {

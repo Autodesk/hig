@@ -39,7 +39,9 @@ export class Section extends HIGElement {
       query: initialProps.query
     };
 
-    ['toggleCollapsed', '_render'].forEach(fn => { this[fn] = this[fn].bind(this); });
+    ['toggleCollapsed', '_render'].forEach(fn => {
+      this[fn] = this[fn].bind(this);
+    });
   }
 
   componentDidMount() {

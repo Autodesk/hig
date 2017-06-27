@@ -20,12 +20,15 @@ export default class PropMapper {
     this.props = this.toPropsArray(updatedProps);
     this.instance = instance;
     this.hig = instance.hig;
-    this.instance.props = Object.assign({}, instance.props, this.toPropsObject(this.props));
+    this.instance.props = Object.assign(
+      {},
+      instance.props,
+      this.toPropsObject(this.props)
+    );
   }
 
   mapToHIGFunctions(mapping) {
     Object.keys(mapping).forEach(propKey => {
-
       const higKey = mapping[propKey];
       this.handle(propKey, value => this.hig[higKey](value));
     });

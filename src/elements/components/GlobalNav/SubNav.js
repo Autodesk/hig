@@ -63,11 +63,10 @@ export class SubNav extends HIGElement {
   }
 
   commitUpdate(updatePayload, oldProps, newProp) {
-    this.processUpdateProps(updatePayload)
-      .mapToHIGFunctions({
-        moduleIndicatorName: 'setModuleIndicatorName',
-        moduleIndicatorIcon: 'setModuleIndicatorIcon'
-      });
+    this.processUpdateProps(updatePayload).mapToHIGFunctions({
+      moduleIndicatorName: 'setModuleIndicatorName',
+      moduleIndicatorIcon: 'setModuleIndicatorIcon'
+    });
   }
 }
 

@@ -22,7 +22,7 @@ export class Submodule extends HIGElement {
   constructor(HIGConstructor, initialProps) {
     super(HIGConstructor, initialProps);
     this.state = {
-      expanded: initialProps.expanded,
+      expanded: initialProps.expanded
     };
     this._render = this._render.bind(this);
   }

@@ -53,8 +53,7 @@ export class Group extends HIGElement {
   }
 
   commitUpdate(updatePayload, oldProps, newProps) {
-    this.processUpdateProps(updatePayload)
-      .then(this._render);
+    this.processUpdateProps(updatePayload).then(this._render);
   }
 
   isVisible() {
