@@ -23,14 +23,17 @@ class ProfileFlyoutContent extends Core {
     _componentDidMount() {
         this.signOutButton = new Button({
             title: this.options.signOutLabel,
-            link: this.options.signOutLink
+            link: this.options.signOutLink,
+            size: 'small',
+            type: 'secondary'
         });
         this.mountPartialToComment('SIGN_OUT_BUTTON', this.signOutButton);
 
         this.settingsLink = new Button({
             title: this.options.profileSettingsLabel,
             link: this.options.profileSettingsLink,
-            style: 'link'
+            size: 'small',
+            type: 'secondary'
         });
         this.mountPartialToComment('SETTINGS_LINK', this.settingsLink);
     }
