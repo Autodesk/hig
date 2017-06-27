@@ -127,4 +127,8 @@ export default class HIGNodeList {
   find(callback) {
     return this.nodes.find(callback);
   }
+
+  find(callback) {
+  return this.nodes.find(callback); 
+  }
 }

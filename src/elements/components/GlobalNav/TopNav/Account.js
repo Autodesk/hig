@@ -32,8 +32,6 @@ export class Account extends HIGElement {
   }
 
   commitUpdate(updatePayload, oldProps, newProp) {
-    this.props = { ...this.props, ...updatePayload };
-
     this.processUpdateProps(updatePayload)
       .mapToHIGFunctions({
         image: 'setImage',

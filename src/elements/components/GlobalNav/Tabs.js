@@ -32,10 +32,17 @@ export class Tabs extends HIGElement {
         this.hig.addTab(instance, beforeInstance);
       }
     });
+    this.props = initialProps;
+    this.state = {};
+
+    ['setActiveTab'].forEach(fn => {
+      this[fn] = this[fn].bind(this)
+    });
   }
 
   componentDidMount() {
     this.tabs.componentDidMount();
+    this._render();
   }
 
   createElement(ElementConstructor, props) {
@@ -44,10 +51,32 @@ export class Tabs extends HIGElement {
 
   insertBefore(instance, insertBeforeIndex) {
     this.tabs.insertBefore(instance, insertBeforeIndex);
+    instance.onActiveTab(this.setActiveTab);
+    if (this.state.activeTab === undefined){
+      this.state.activeTab = instance
+    }
   }
 
   removeChild(instance) {
     this.tabs.removeChild(instance);
+  }
+
+  commitUpdate(updatePayload, oldProps, newProp) {
+    this.props = { ...this.props, ...updatePayload };
+  }
+  
+  setActiveTab(tab){
+    this.state.activeTab = tab;
+    if (this.props.onTabChange) {
+      this.props.onTabChange(tab);
+    }
+    this._render();
+  };
+
+  _render(){
+    this.tabs.forEach(tab => {
+      this.state.activeTab === tab ? tab.hig.activate() : tab.hig.deactivate();
+    })
   }
 }
 

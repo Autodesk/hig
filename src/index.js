@@ -237,14 +237,12 @@ class App extends React.Component {
             moduleIndicatorName="Documents Library"
             moduleIndicatorIcon="hamburger"
           >
-            <Tabs>
+            <Tabs onTabChange={tab => {console.log('client tab handler')}}>
               {this.state.tabs.map((tab, i) => {
                 return (
                   <Tab
                     key={tab.id}
                     label={tab.label}
-                    active={this.state.activeTab === tab.id}
-                    onClick={this.setActiveTab.bind(this, tab.id)}
                   />
                 );
               })}

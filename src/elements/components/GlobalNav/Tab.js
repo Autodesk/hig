@@ -19,35 +19,42 @@ import HIGElement from '../../HIGElement';
 import PropTypes from 'prop-types';
 
 export class Tab extends HIGElement {
+  constructor(HIGConstructor, initialProps) {
+    super(HIGConstructor, initialProps);
+
+    ['onActiveTab', 'callOnActiveTab'].forEach(fn => {
+      this[fn] = this[fn].bind(this);
+    });
+
+  }
+
   componentDidMount() {
-    if (this.initialProps.active) {
-      this.hig.activate();
-    } else {
-      this.hig.deactivate();
-    }
+    this.hig.onClick(this.callOnActiveTab)
   }
 
   commitUpdate(updatePayload, oldProps, newProp) {
-    for (let i = 0; i < updatePayload.length; i += 2) {
-      const propKey = updatePayload[i];
-      const propValue = updatePayload[i + 1];
-
-      switch (propKey) {
-        case 'label':
-          this.hig.setLabel(propValue);
-          break;
-        case 'active':
-          if (propValue) {
-            this.hig.activate();
-          } else {
-            this.hig.deactivate();
-          }
-          break;
-        default: {
-          this.commitPropChange(propKey, propValue);
+    this.processUpdateProps(updatePayload)
+      .mapToHIGEventListeners(['onClick'])
+      .mapToHIGFunctions({
+        label: 'setLabel'
+      })
+      .handle('active', value => {
+        if (value) {
+          this.callOnActiveTab();
         }
-      }
+      })
+  }
+
+  callOnActiveTab(){
+    if (!this._onActiveTab) {
+      return;
     }
+
+    this._onActiveTab(this);
+  }
+
+  onActiveTab(callback){
+    this._onActiveTab = callback; 
   }
 }
 

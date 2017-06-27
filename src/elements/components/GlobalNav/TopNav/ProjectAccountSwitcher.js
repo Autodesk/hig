@@ -53,7 +53,6 @@ export class ProjectAccountSwitcher extends HIGElement {
       this[fn] = this[fn].bind(this);
     });
 
-    this.props = { ...initialProps };
     this.state = {};
   }
 

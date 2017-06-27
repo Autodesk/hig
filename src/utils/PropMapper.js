@@ -16,11 +16,12 @@ limitations under the License.
 */
 
 export default class PropMapper {
-  constructor(props, instance) {
-    this.props = this.toPropsArray(props);
+  constructor(updatedProps, instance) {
+    this.props = this.toPropsArray(updatedProps);
     this.instance = instance;
     this.hig = instance.hig;
     this.accessedProps = new Set();
+    this.instance.props = Object.assign({}, instance.props, updatedProps);
 
     ['validate'].forEach(fn => {
       this[fn] = this[fn].bind(this);
