@@ -37,8 +37,15 @@
 
             // TEXT FIELD
 
+            var FormElements = new Hig.FormElements();
+
+            var TextField = new FormElements.partials.TextField({
+                "label": "Our label",
+                "placeholder": "Some placeholder"
+            });
             
-            
+            TextField.mount('.tests-text-field');
+
         </script>
 
     </body>

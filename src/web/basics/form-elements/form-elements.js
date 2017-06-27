@@ -1,10 +1,10 @@
 var Interface = require('interface.json');
 var Core = require('_core.js');
 
-var TextField = require('text-field/text-field.js');
+var TextField = require('./text-field/text-field.js');
 
 /**
- * Creates an FormElements in the SideNav
+ * Holder for FormElements
  *
  * @class
  */
