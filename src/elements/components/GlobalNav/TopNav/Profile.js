@@ -29,29 +29,25 @@ export class Profile extends HIGElement {
   }
 
   commitUpdate(updatePayload, oldProps, newProp) {
-    const mapping = {
-      email: 'setEmail',
-      image: 'setImage',
-      name: 'setName',
-      profileSettingsLink: 'setProfileSettingsLink',
-      profileSettingsLabel: 'setProfileSettingsLabel',
-      signOutLabel: 'setSignOutLabel',
-      signOutLink: 'setSignOutLink'
-    };
-
-    const openIndex = updatePayload.indexOf('open');
-    if (openIndex >= 0) {
-      const [openKey, openSetting] = updatePayload.splice(openIndex, 2);
-      if (openKey) {
-        if (openSetting === true) {
-          this.hig.open();
-        } else {
-          this.hig.close();
-        }
-      }
-    }
-
-    this.commitUpdateWithMapping(updatePayload, mapping);
+    this.processUpdateProps(updatePayload)
+      .mapToHIGFunctions({
+        email: 'setEmail',
+        image: 'setImage',
+        name: 'setName',
+        profileSettingsLink: 'setProfileSettingsLink',
+        profileSettingsLabel: 'setProfileSettingsLabel',
+        signOutLabel: 'setSignOutLabel',
+        signOutLink: 'setSignOutLink'
+      })
+      .mapToHIGEventListeners([
+        'onSignOutClick',
+        'onProfileSettingsClick',
+        'onProfileImageClick',
+        'onProfileClickOutside'
+      ])
+      .handle('open', value => {
+        value ? this.hig.open() : this.hig.close();
+      });
   }
 
   componentDidMount() {
@@ -83,6 +79,7 @@ ProfileComponent.propTypes = {
   signOutLink: PropTypes.string,
   open: PropTypes.bool,
   onSignOutClick: PropTypes.func,
+  onProfileSettingsClick: PropTypes.func,
   onProfileImageClick: PropTypes.func,
   onProfileClickOutside: PropTypes.func
 };
@@ -112,6 +109,9 @@ ProfileComponent.__docgenInfo = {
     },
     profileSettingsLink: {
       description: 'sets {String} url to settings page'
+    },
+    onProfileSettingsClick: {
+      description: '{function} Triggered when user clicks profile settings link'
     },
     onSignOutClick: {
       description: '{function} Triggered when user clicks sign out button'

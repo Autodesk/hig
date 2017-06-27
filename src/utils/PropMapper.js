@@ -20,19 +20,11 @@ export default class PropMapper {
     this.props = this.toPropsArray(updatedProps);
     this.instance = instance;
     this.hig = instance.hig;
-    this.accessedProps = new Set();
-    this.instance.props = Object.assign({}, instance.props, this.toPropsObject(updatedProps));
-
-    ['validate'].forEach(fn => {
-      this[fn] = this[fn].bind(this);
-    });
-
-    setTimeout(this.validate, 0);
+    this.instance.props = Object.assign({}, instance.props, this.toPropsObject(this.props));
   }
 
   mapToHIGFunctions(mapping) {
     Object.keys(mapping).forEach(propKey => {
-      this.accessedProps.add(propKey);
 
       const higKey = mapping[propKey];
       this.handle(propKey, value => this.hig[higKey](value));
@@ -50,8 +42,6 @@ export default class PropMapper {
   }
 
   handle(propKey, handleValue) {
-    this.accessedProps.add(propKey);
-
     const propIndex = this.props.indexOf(propKey);
     if (propIndex >= 0) {
       const value = this.props[propIndex + 1];
@@ -63,24 +53,6 @@ export default class PropMapper {
   then(callback) {
     callback(this.props);
     return this;
-  }
-
-  validate() {
-    const propKeys = this.props.filter((val, i) => {
-      return i % 2 === 0; // index is an even number
-    });
-    let difference = new Array(
-      ...propKeys.filter(prop => !this.accessedProps.has(prop))
-    );
-    difference = difference.filter(prop => {
-      return prop !== 'children';
-    });
-
-    if (difference.length > 0) {
-      console.warn(
-        `Orion ${this.hig.constructor.name} does not handle "${difference.join('", "')}"`
-      );
-    }
   }
 
   toPropsArray(props) {

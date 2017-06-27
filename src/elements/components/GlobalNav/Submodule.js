@@ -22,40 +22,29 @@ export class Submodule extends HIGElement {
   constructor(HIGConstructor, initialProps) {
     super(HIGConstructor, initialProps);
     this.state = {
-      title: initialProps.title,
       expanded: initialProps.expanded,
-      query: initialProps.query
     };
+    this._render = this._render.bind(this);
   }
 
   commitUpdate(updatePayload, oldProps, newProps) {
-    const mapping = {
-      title: 'setTitle',
-      link: 'setLink'
-    };
-
-    this.commitUpdateWithMapping(updatePayload, mapping);
-
-    if (Object.keys(updatePayload).includes('title')) {
-      this.state.title = updatePayload.title;
-    }
-
-    if (Object.keys(updatePayload).includes('query')) {
-      this.state.query = updatePayload.query;
-      this._render();
-    }
-
-    if (Object.keys(updatePayload).includes('expanded')) {
-      this.state.expanded = updatePayload.expanded;
-      this._render();
-    }
+    this.processUpdateProps(updatePayload)
+      .mapToHIGFunctions({
+        title: 'setTitle',
+        link: 'setLink'
+      })
+      .mapToHIGEventListeners(['onClick', 'onHover'])
+      .handle('expanded', value => {
+        this.state.expanded = value;
+      })
+      .then(this._render);
   }
 
   matches(query) {
     if (!query) {
       return false;
     }
-    return this.state.title.toLowerCase().match(query.toLowerCase());
+    return this.props.title.toLowerCase().match(query.toLowerCase());
   }
 
   isVisible() {
@@ -64,8 +53,8 @@ export class Submodule extends HIGElement {
 
   _render() {
     if (
-      this.matches(this.state.query) ||
-      (!this.state.query && this.state.expanded)
+      this.matches(this.props.query) ||
+      (!this.props.query && this.state.expanded)
     ) {
       this.hig.show();
       this.state.isVisible = true;

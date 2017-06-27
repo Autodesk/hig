@@ -38,31 +38,21 @@ export class Module extends HIGElement {
       expanded: false
     };
 
-    this.toggleCollapsed = this.toggleCollapsed.bind(this);
+    ['toggleCollapsed', '_render'].forEach(fn => { this[fn] = this[fn].bind(this); });
   }
 
   commitUpdate(updatePayload, oldProps, newProps) {
-    const mapping = {
-      icon: 'setIcon',
-      title: 'setTitle',
-      link: 'setLink'
-    };
-
-    this.commitUpdateWithMapping(updatePayload, mapping);
-
-    if (Object.keys(updatePayload).includes('title')) {
-      this.state.title = updatePayload.title;
-    }
-
-    if (Object.keys(updatePayload).includes('query')) {
-      this.state.query = updatePayload.query;
-      this._render();
-    }
-
-    if (Object.keys(updatePayload).includes('expanded')) {
-      this.state.expanded = updatePayload.expanded;
-      this._render();
-    }
+    this.processUpdateProps(updatePayload)
+      .mapToHIGFunctions({
+        icon: 'setIcon',
+        title: 'setTitle',
+        link: 'setLink'
+      })
+      .mapToHIGEventListeners(['onClick', 'onHover'])
+      .handle('expanded', value => {
+        this.state.expanded = value;
+      })
+      .then(this._render);
   }
 
   toggleCollapsed() {
@@ -99,7 +89,7 @@ export class Module extends HIGElement {
     if (!query) {
       return true;
     }
-    return this.state.title.toLowerCase().match(query.toLowerCase());
+    return this.props.title.toLowerCase().match(query.toLowerCase());
   }
 
   isVisible() {
@@ -113,7 +103,7 @@ export class Module extends HIGElement {
 
     const childMatches = this.submodules.map(submodule => {
       submodule.commitUpdate({
-        query: this.state.query,
+        query: this.props.query,
         expanded: this.state.expanded
       });
 
@@ -122,8 +112,8 @@ export class Module extends HIGElement {
 
     if (
       childMatches.some(m => m) ||
-      this.matches(this.state.query) ||
-      !this.state.query
+      this.matches(this.props.query) ||
+      !this.props.query
     ) {
       this.hig.show();
       this.state.isVisible = true;

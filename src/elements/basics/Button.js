@@ -26,21 +26,12 @@ class Button extends HIGElement {
   }
 
   commitUpdate(updatePayload, oldProps, newProps) {
-    const mapping = {
-      title: 'setTitle',
-      link: 'setLink'
-    };
-
-    for (let i = 0; i < updatePayload.length; i += 2) {
-      const propKey = updatePayload[i];
-      const propValue = updatePayload[i + 1];
-
-      if (mapping[propKey]) {
-        this.hig[mapping[propKey]](propValue);
-      } else {
-        this.commitPropChange(propKey, propValue);
-      }
-    }
+    this.processUpdateProps(updatePayload)
+      .mapToHIGFunctions({
+        title: 'setTitle',
+        link: 'setLink'
+      })
+      .mapToHIGEventListeners(['onClick', 'onHover']);
   }
 }
 

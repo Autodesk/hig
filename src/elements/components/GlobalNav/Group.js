@@ -32,6 +32,7 @@ export class Group extends HIGElement {
     });
 
     this.state = {};
+    this._render = this._render.bind(this);
   }
 
   componentDidMount() {
@@ -52,17 +53,8 @@ export class Group extends HIGElement {
   }
 
   commitUpdate(updatePayload, oldProps, newProps) {
-    if (updatePayload.includes('query')) {
-      this.state.query = updatePayload[updatePayload.indexOf('query') + 1];
-      this._render();
-    }
-
-    if (updatePayload.includes('expanded')) {
-      this.state.expanded = updatePayload[
-        updatePayload.indexOf('expanded') + 1
-      ];
-      this._render();
-    }
+    this.processUpdateProps(updatePayload)
+      .then(this._render);
   }
 
   isVisible() {
@@ -72,8 +64,8 @@ export class Group extends HIGElement {
   _render() {
     const matches = this.modules.map(module => {
       module.commitUpdate({
-        query: this.state.query,
-        expanded: this.state.expanded
+        query: this.props.query,
+        expanded: this.props.expanded
       });
 
       return module.isVisible();

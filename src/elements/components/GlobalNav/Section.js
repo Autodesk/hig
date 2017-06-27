@@ -39,7 +39,7 @@ export class Section extends HIGElement {
       query: initialProps.query
     };
 
-    this.toggleCollapsed = this.toggleCollapsed.bind(this);
+    ['toggleCollapsed', '_render'].forEach(fn => { this[fn] = this[fn].bind(this); });
   }
 
   componentDidMount() {
@@ -55,28 +55,15 @@ export class Section extends HIGElement {
   }
 
   commitUpdate(updatePayload, oldProps, newProp) {
-    const mapping = {
-      headerLabel: 'setHeaderLabel',
-      headerName: 'setHeaderName'
-    };
-
-    const queryIndex = updatePayload.indexOf('query');
-    if (queryIndex >= 0) {
-      const value = updatePayload.splice(queryIndex, 2)[1];
-      this.state.query = value;
-    }
-
-    const expandedIndex = updatePayload.indexOf('expanded');
-    if (expandedIndex >= 0) {
-      const value = updatePayload.splice(expandedIndex, 2)[1];
-      this.state.expanded = value;
-    }
-
-    if (expandedIndex >= 0 || queryIndex >= 0) {
-      this._render();
-    }
-
-    this.commitUpdateWithMapping(updatePayload, mapping);
+    this.processUpdateProps(updatePayload)
+      .mapToHIGFunctions({
+        headerLabel: 'setHeaderLabel',
+        headerName: 'setHeaderName'
+      })
+      .handle('expanded', value => {
+        this.state.expanded = value;
+      })
+      .then(this._render);
   }
 
   toggleCollapsed() {
@@ -112,23 +99,21 @@ export class Section extends HIGElement {
   _render() {
     this.collapse.commitUpdate(['isCollapsed', !this.state.expanded]);
     const childVisibility = this.groups.map(group => {
-      group.commitUpdate([
-        'query',
-        this.state.query,
-        'expanded',
-        this.state.expanded
-      ]);
+      group.commitUpdate({
+        query: this.props.query,
+        expanded: this.state.expanded
+      });
 
       return group.isVisible();
     });
 
-    if (childVisibility.some(v => v) || !this.state.query) {
+    if (childVisibility.some(v => v) || !this.props.query) {
       this.hig.show();
     } else {
       this.hig.hide();
     }
 
-    this.state.query ? this.collapse.hig.hide() : this.collapse.hig.show();
+    this.props.query ? this.collapse.hig.hide() : this.collapse.hig.show();
   }
 }
 

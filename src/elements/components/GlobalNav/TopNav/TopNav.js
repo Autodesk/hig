@@ -69,8 +69,9 @@ export class TopNav extends HIGElement {
   }
 
   commitUpdate(updatePayload, oldProps, newProp) {
-    const mapping = { logo: 'setLogo', logoLink: 'setLogoLink' };
-    this.commitUpdateWithMapping(updatePayload, mapping);
+    this.processUpdateProps(updatePayload)
+      .mapToHIGFunctions({ logo: 'setLogo', logoLink: 'setLogoLink' })
+      .mapToHIGEventListeners(['onHamburgerClick']);
   }
 
   createElement(ElementConstructor, props) {
