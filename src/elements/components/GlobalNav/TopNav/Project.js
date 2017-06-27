@@ -56,7 +56,7 @@ export class Project extends HIGElement {
 
   callOnActivateCallback() {
     if (!this._onActivate) {
-      return
+      return;
     }
 
     this._onActivate(this);

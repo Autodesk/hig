@@ -41,9 +41,7 @@ const Context = props => {
   return (
     <GlobalNav>
       <TopNav>
-        <ProjectAccountSwitcher
-          open={props.open}
-        >
+        <ProjectAccountSwitcher open={props.open}>
           {accounts.map(account => {
             return (
               <Account
@@ -77,7 +75,9 @@ function createHigContext(props) {
   const higTopNav = new higNav.partials.TopNav({});
   higNav.addTopNav(higTopNav);
 
-  const projectAccountSwitcher = new higTopNav.partials.ProjectAccountSwitcher(props);
+  const projectAccountSwitcher = new higTopNav.partials.ProjectAccountSwitcher(
+    props
+  );
   higTopNav.addProjectAccountSwitcher(projectAccountSwitcher);
 
   props.accounts.forEach(accountProps => {

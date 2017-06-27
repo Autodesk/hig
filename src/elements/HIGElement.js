@@ -83,7 +83,9 @@ export default class HIGElement {
   // Abstracts a common way of updating property changes.
   // Children will be seen and not heard, i.e. ignored
   commitUpdateWithMapping(updatePayload, mapping) {
-    console.warn(`${this.constructor.name}.commitUpdateWithMapping is deprecated. Call configureHIGEventListener instead.`)
+    console.warn(
+      `${this.constructor.name}.commitUpdateWithMapping is deprecated. Call configureHIGEventListener instead.`
+    );
     for (let i = 0; i < updatePayload.length; i += 2) {
       const propKey = updatePayload[i];
       const propValue = updatePayload[i + 1];
@@ -101,7 +103,9 @@ export default class HIGElement {
   }
 
   commitPropChange(propKey, propValue) {
-    console.warn(`${this.constructor.name}.commitPropChange is deprecated. Call configureHIGEventListener instead.`);
+    console.warn(
+      `${this.constructor.name}.commitPropChange is deprecated. Call configureHIGEventListener instead.`
+    );
     this.configureHIGEventListener(propKey, propValue);
   }
 
@@ -111,12 +115,16 @@ export default class HIGElement {
     } else if (this.possibleEvents.indexOf(propKey) !== -1) {
       this.addHIGEventListener(propKey, propValue);
     } else {
-      console.warn(`${this.hig.constructor.name} has no event listener "${propKey}"`);
+      console.warn(
+        `${this.hig.constructor.name} has no event listener "${propKey}"`
+      );
     }
   }
 
   setupEvent(eventName, eventFn) {
-    console.warn(`${this.constructor.name}.setupEvent is deprecated. Call addHIGEventListener instead.`);
+    console.warn(
+      `${this.constructor.name}.setupEvent is deprecated. Call addHIGEventListener instead.`
+    );
     this.addHIGEventListener(eventName, eventFn);
   }
 
@@ -132,7 +140,9 @@ export default class HIGElement {
   }
 
   replaceEvent(eventName, eventFn) {
-    console.warn(`${this.constructor.name}.replaceEvent is deprecated. Call replaceHIGEventListener instead.`);
+    console.warn(
+      `${this.constructor.name}.replaceEvent is deprecated. Call replaceHIGEventListener instead.`
+    );
     this.replaceHIGEventListener(eventName, eventFn);
   }
 
