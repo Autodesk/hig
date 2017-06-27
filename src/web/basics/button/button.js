@@ -4,6 +4,9 @@ var Template = require('./button.html');
 var Interface = require('../../../interface/interface.json');
 var Core = require('../../helpers/js/_core.js');
 
+var AvailableTypes = ['primary', 'secondary', 'flat'];
+var AvailableSizes = ['small', 'standard', 'large'];
+
 /**
  * Creates an button
  *
@@ -27,16 +30,25 @@ class Button extends Core {
     }
 
     setType(type){
-        this._clearAllClassTypes();
-        this.el.classList.add('hig__button--'+type);
+        if(AvailableTypes.indexOf(type) > -1){
+            this._clearAllTypes();
+            this.el.classList.add('hig__button--'+type);
+        }else{
+            console.error('Button type not found, only these types are allowed: ', AvailableTypes);
+        }
     }
 
     setSize(size){
-
+        if(AvailableSizes.indexOf(size) > -1){
+            this._clearAllSizes();
+            this.el.classList.add('hig__button--'+size);
+        }else{
+            console.error('Button size not found, only these sizes are allowed: ', AvailableSizes);
+        }
     }
 
     setIcon(icon){
-
+        // TODO
     }
 
     disable(){
@@ -59,10 +71,16 @@ class Button extends Core {
         return this._attachListener("focusin", this.el, this.el, fn);
     }
 
-    _clearAllClassTypes(){
-        this.el.classList.remove("hig__button--primary");
-        this.el.classList.remove("hig__button--secondary");
-        this.el.classList.remove("hig__button--flat");
+    _clearAllTypes(){
+        for(var type in AvailableTypes){
+            this.el.classList.remove("hig__button--"+type);
+        }
+    }
+
+    _clearAllSizes(){
+        for(var size in AvailableSizes){
+            this.el.classList.remove("hig__button--"+size);
+        }
     }
 
 }
