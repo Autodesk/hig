@@ -49,8 +49,8 @@ class GlobalNav extends HIGElement {
     if (this.topNav) {
       this.hig.addTopNav(this.topNav.hig);
       this.topNav.mount();
-      this.topNav.onHamburgerClick(this._toggleSideNav)
-    }
+      this._addSideNavOpenCallback(this.topNav);
+    }  
 
     if (this.subNav) {
       this.hig.addSubNav(this.subNav.hig);
@@ -102,7 +102,7 @@ class GlobalNav extends HIGElement {
         if (this.mounted) {
           this.hig.addTopNav(instance.hig);
           instance.mount();
-          this.topNav.onHamburgerClick(this._toggleSideNav)
+          this._addSideNavOpenCallback(instance);
         }
       }
     } else if (instance instanceof SubNav) {
@@ -153,6 +153,10 @@ class GlobalNav extends HIGElement {
   _toggleSideNav(){
     this.state.sideNavOpen = !this.state.sideNavOpen
     this._render();
+  }
+
+  _addSideNavOpenCallback(topNavInstance){
+    topNavInstance.onHamburgerClick(this._toggleSideNav)
   }
 
   _render(){
