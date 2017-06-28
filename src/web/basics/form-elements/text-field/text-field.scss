@@ -7,6 +7,7 @@
         position: absolute;
         top: 24px;
         z-index: 2;
+        pointer-events: none;
     }
 
     &__input{
@@ -17,6 +18,7 @@
 
     &__input:focus + &__label{
         top: 0;
+        pointer-events: all;
     }
 
 }   
