@@ -101,7 +101,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <GlobalNav sideNavOpen={this.state.open}>
+        <GlobalNav>
           <SideNav>
             <SectionList>
               <Section headerLabel="Project" headerName="ThunderStorm">
@@ -166,7 +166,6 @@ class App extends React.Component {
           <TopNav
             logo={logo}
             logoLink="http://autodesk.com"
-            onHamburgerClick={this.toggleSideNav}
           >
             <ProjectAccountSwitcher
               onAccountChange={account =>

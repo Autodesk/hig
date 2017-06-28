@@ -71,7 +71,6 @@ export class TopNav extends HIGElement {
   commitUpdate(updatePayload, oldProps, newProp) {
     this.processUpdateProps(updatePayload)
       .mapToHIGFunctions({ logo: 'setLogo', logoLink: 'setLogoLink' })
-      .mapToHIGEventListeners(['onHamburgerClick']);
   }
 
   createElement(ElementConstructor, props) {
@@ -167,6 +166,10 @@ export class TopNav extends HIGElement {
 
   getFunctionNameFor(instance) {
     return 'add' + instance.constructor.name;
+  }
+
+  onHamburgerClick(callback){
+    this.hig.onHamburgerClick(callback)
   }
 }
 

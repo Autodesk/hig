@@ -118,18 +118,62 @@ import project4 from '../../../images/project-4.png';
 
 storiesOf('GlobalNav', module)
   .addWithInfo('default', <div><p>Global Nav basic usage</p></div>, () => {
-    const sideNavOpen = boolean('sideNavOpen', false);
     return (
-      <GlobalNav sideNavOpen={sideNavOpen}>
-        <SideNav>
+      <GlobalNav >
+       <SideNav>
           <SectionList>
             <Section headerLabel="Project" headerName="ThunderStorm">
-              <Group />
+              <Group>
+                <Module icon="insight" title="Insight" key={'Insight'}>
+                  <Submodule
+                    title="Overview"
+                    link="#"
+                    onClick={action('clicked')}
+                  />
+                  <Submodule
+                    title="Risk"
+                    link="#"
+                    onClick={action('clicked')}
+                  />
+                  <Submodule
+                    title="Risk"
+                    link="#"
+                    onClick={action('clicked')}
+                  />
+                </Module>
+              </Group>
             </Section>
-            <Section headerLabel="Project" headerName="Thunderstorm">
-              <Group />
+            <Section headerLabel="Account" headerName="Global Construction">
+              <Group>
+                <Module
+                  icon="field"
+                  title="Field"
+                  link="#"
+                  onClick={action('clicked')}
+                  submodulesClosed={false}
+                >
+                  <Submodule
+                    title="Checklists Templates"
+                    link="#"
+                    onClick={action('clicked')}
+                  />
+                  <Submodule
+                    title="Issues Templates"
+                    link="#"
+                    onClick={action('clicked')}
+                  />
+                </Module>
+                <Module
+                  icon="field"
+                  title="Field"
+                  link="#"
+                  onClick={action('clicked')}
+                  submodulesClosed={false}
+                />
+              </Group>
             </Section>
           </SectionList>
+          <Search placeholder="Find module or submodule" />
         </SideNav>
         <TopNav logo={logo}>
           <ProjectAccountSwitcher
@@ -151,6 +195,71 @@ storiesOf('GlobalNav', module)
             onSignOutClick={action('sign out clicked')}
           />
         </TopNav>
+        <SubNav moduleIndicatorName="Insight" moduleIndicatorIcon="hamburger" />
+        <Slot>{LONG_COPY}</Slot>
+      </GlobalNav>
+    );
+  })
+    .addWithInfo('with SideNavOpen Prop passed in', ``, () => {
+      const sideNavOpen = boolean('sideNavOpen', true)
+    return (
+      <GlobalNav sideNavOpen={sideNavOpen} >
+       <SideNav>
+          <SectionList>
+            <Section headerLabel="Project" headerName="ThunderStorm">
+              <Group>
+                <Module icon="insight" title="Insight" key={'Insight'}>
+                  <Submodule
+                    title="Overview"
+                    link="#"
+                    onClick={action('clicked')}
+                  />
+                  <Submodule
+                    title="Risk"
+                    link="#"
+                    onClick={action('clicked')}
+                  />
+                  <Submodule
+                    title="Risk"
+                    link="#"
+                    onClick={action('clicked')}
+                  />
+                </Module>
+              </Group>
+            </Section>
+            <Section headerLabel="Account" headerName="Global Construction">
+              <Group>
+                <Module
+                  icon="field"
+                  title="Field"
+                  link="#"
+                  onClick={action('clicked')}
+                  submodulesClosed={false}
+                >
+                  <Submodule
+                    title="Checklists Templates"
+                    link="#"
+                    onClick={action('clicked')}
+                  />
+                  <Submodule
+                    title="Issues Templates"
+                    link="#"
+                    onClick={action('clicked')}
+                  />
+                </Module>
+                <Module
+                  icon="field"
+                  title="Field"
+                  link="#"
+                  onClick={action('clicked')}
+                  submodulesClosed={false}
+                />
+              </Group>
+            </Section>
+          </SectionList>
+          <Search placeholder="Find module or submodule" />
+        </SideNav>
+        <TopNav logo={logo} />
         <SubNav moduleIndicatorName="Insight" moduleIndicatorIcon="hamburger" />
         <Slot>{LONG_COPY}</Slot>
       </GlobalNav>

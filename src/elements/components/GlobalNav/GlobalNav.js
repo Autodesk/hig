@@ -29,7 +29,15 @@ import Slot from './Slot';
 class GlobalNav extends HIGElement {
   constructor(initialProps) {
     super(HIG.GlobalNav, initialProps);
-  }
+
+    ['_toggleSideNav', '_render'].forEach(fn => {
+      this[fn] = this[fn].bind(this);
+    });
+
+     this.state = {
+      sideNavOpen: false
+    }
+  }  
 
   componentDidMount() {
     // Add any children
@@ -41,6 +49,7 @@ class GlobalNav extends HIGElement {
     if (this.topNav) {
       this.hig.addTopNav(this.topNav.hig);
       this.topNav.mount();
+      this.topNav.onHamburgerClick(this._toggleSideNav)
     }
 
     if (this.subNav) {
@@ -57,6 +66,8 @@ class GlobalNav extends HIGElement {
     if (this.slot) {
       this.hig.addSlot(this.slot);
     }
+
+    this._render();
   }
 
   createElement(ElementConstructor, props) {
@@ -91,6 +102,7 @@ class GlobalNav extends HIGElement {
         if (this.mounted) {
           this.hig.addTopNav(instance.hig);
           instance.mount();
+          this.topNav.onHamburgerClick(this._toggleSideNav)
         }
       }
     } else if (instance instanceof SubNav) {
@@ -132,28 +144,23 @@ class GlobalNav extends HIGElement {
   }
 
   commitUpdate(updatePayload, oldProps, newProp) {
-    for (let i = 0; i < updatePayload.length; i += 2) {
-      const propKey = updatePayload[i];
-      const propValue = updatePayload[i + 1];
+    this.processUpdateProps(updatePayload)
+      .handle('sideNavOpen', value => {
+        this.state.sideNavOpen = value;
+      }).then(this._render);
+  }
 
-      switch (propKey) {
-        case 'sideNavOpen': {
-          if (propValue) {
-            this.hig.showSideNav();
-          } else {
-            this.hig.hideSideNav();
-          }
-          break;
-        }
-        case 'children': {
-          /* no-op */
-          break;
-        }
-        default: {
-          console.warn(`${propKey} is unknown`);
-        }
-      }
+  _toggleSideNav(){
+    this.state.sideNavOpen = !this.state.sideNavOpen
+    this._render();
+  }
+
+  _render(){
+    let sideNavOpen = this.props.sideNavOpen;
+    if (sideNavOpen === undefined) {
+      sideNavOpen = this.state.sideNavOpen
     }
+    sideNavOpen ? this.hig.showSideNav() : this.hig.hideSideNav();
   }
 }
 
