@@ -119,8 +119,8 @@ import project4 from '../../../images/project-4.png';
 storiesOf('GlobalNav', module)
   .addWithInfo('default', <div><p>Global Nav basic usage</p></div>, () => {
     return (
-      <GlobalNav >
-       <SideNav>
+      <GlobalNav>
+        <SideNav>
           <SectionList>
             <Section headerLabel="Project" headerName="ThunderStorm">
               <Group>
@@ -200,11 +200,11 @@ storiesOf('GlobalNav', module)
       </GlobalNav>
     );
   })
-    .addWithInfo('with SideNavOpen Prop passed in', ``, () => {
-      const sideNavOpen = boolean('sideNavOpen', true)
+  .addWithInfo('with SideNavOpen Prop passed in', ``, () => {
+    const sideNavOpen = boolean('sideNavOpen', true);
     return (
-      <GlobalNav sideNavOpen={sideNavOpen} >
-       <SideNav>
+      <GlobalNav sideNavOpen={sideNavOpen}>
+        <SideNav>
           <SectionList>
             <Section headerLabel="Project" headerName="ThunderStorm">
               <Group>

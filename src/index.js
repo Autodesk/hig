@@ -163,10 +163,7 @@ class App extends React.Component {
             </SectionList>
             <Search placeholder="Find module or submodule" />
           </SideNav>
-          <TopNav
-            logo={logo}
-            logoLink="http://autodesk.com"
-          >
+          <TopNav logo={logo} logoLink="http://autodesk.com">
             <ProjectAccountSwitcher
               onAccountChange={account =>
                 console.log(`Account selected`, account)}

@@ -34,10 +34,10 @@ class GlobalNav extends HIGElement {
       this[fn] = this[fn].bind(this);
     });
 
-     this.state = {
+    this.state = {
       sideNavOpen: false
-    }
-  }  
+    };
+  }
 
   componentDidMount() {
     // Add any children
@@ -50,7 +50,7 @@ class GlobalNav extends HIGElement {
       this.hig.addTopNav(this.topNav.hig);
       this.topNav.mount();
       this._addSideNavOpenCallback(this.topNav);
-    }  
+    }
 
     if (this.subNav) {
       this.hig.addSubNav(this.subNav.hig);
@@ -147,22 +147,23 @@ class GlobalNav extends HIGElement {
     this.processUpdateProps(updatePayload)
       .handle('sideNavOpen', value => {
         this.state.sideNavOpen = value;
-      }).then(this._render);
+      })
+      .then(this._render);
   }
 
-  _toggleSideNav(){
-    this.state.sideNavOpen = !this.state.sideNavOpen
+  _toggleSideNav() {
+    this.state.sideNavOpen = !this.state.sideNavOpen;
     this._render();
   }
 
-  _addSideNavOpenCallback(topNavInstance){
-    topNavInstance.onHamburgerClick(this._toggleSideNav)
+  _addSideNavOpenCallback(topNavInstance) {
+    topNavInstance.onHamburgerClick(this._toggleSideNav);
   }
 
-  _render(){
+  _render() {
     let sideNavOpen = this.props.sideNavOpen;
     if (sideNavOpen === undefined) {
-      sideNavOpen = this.state.sideNavOpen
+      sideNavOpen = this.state.sideNavOpen;
     }
     sideNavOpen ? this.hig.showSideNav() : this.hig.hideSideNav();
   }

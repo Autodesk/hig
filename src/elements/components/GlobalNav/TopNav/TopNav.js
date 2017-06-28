@@ -69,8 +69,10 @@ export class TopNav extends HIGElement {
   }
 
   commitUpdate(updatePayload, oldProps, newProp) {
-    this.processUpdateProps(updatePayload)
-      .mapToHIGFunctions({ logo: 'setLogo', logoLink: 'setLogoLink' })
+    this.processUpdateProps(updatePayload).mapToHIGFunctions({
+      logo: 'setLogo',
+      logoLink: 'setLogoLink'
+    });
   }
 
   createElement(ElementConstructor, props) {
@@ -168,8 +170,8 @@ export class TopNav extends HIGElement {
     return 'add' + instance.constructor.name;
   }
 
-  onHamburgerClick(callback){
-    this.hig.onHamburgerClick(callback)
+  onHamburgerClick(callback) {
+    this.hig.onHamburgerClick(callback);
   }
 }
 
