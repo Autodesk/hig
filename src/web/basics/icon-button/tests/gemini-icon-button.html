@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../../../../../dist/hig.css">
+        <script type="text/javascript" src="../../../../../dist/hig.js"></script>
+
+        <style>
+            .buttonHolder {
+                display: inline-block;
+                padding: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class='test-container' style="padding: 40px; margin: 0;">
+            <div class='icon-button buttonHolder'></div>
+            <div class='disabled-icon-button buttonHolder'></div>
+        </div>
+
+        <script>
+
+            var IconButton = new Hig.IconButton({
+                title: "Icon button",
+                icon: "assets"
+            });
+            IconButton.mount(".regular-button");
+
+            var DisabledIconButton = new Hig.IconButton({
+                title: "Disabled icon button",
+                icon: "assets"
+            });
+            DisabledIconButton.mount(".link-button");
+            DisabledIconButton.disable();
+
+        </script>
+
+    </body>
+</html>
