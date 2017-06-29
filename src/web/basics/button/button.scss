@@ -89,7 +89,8 @@
         // same as default values
     }
 
-    &.hig__button--secondary {
+    &.hig__button--secondary,
+    &.hig__button--flat {
         border: 1px solid color(hig-gray-40);
         background: none;
         color: color(hig-slate-dark);
@@ -120,7 +121,8 @@
 
     }
 
-    &.hig__button--secondary.hig__button--disabled-button {
+    &.hig__button--secondary.hig__button--disabled-button,
+    &.hig__button--flat.hig__button--disabled-button {
         cursor: not-allowed;
         background: none;
         border-color: color(hig-gray-60);
@@ -128,6 +130,10 @@
     }
 
     &.hig__button--flat {
-        // # TODO
+        border: 1px solid transparent;
+    }
+
+    &.hig__button--flat.hig__button--disabled-button {
+        border-color: transparent;
     }
 }

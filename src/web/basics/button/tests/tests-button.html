@@ -34,6 +34,15 @@
             <div class='test-mount-secondary-disable'></div>
         </div>
 
+        <div class='test-container'>
+            <div class='test-typo-flat'></div>
+
+            <div class='test-mount-flat-small'></div>
+            <div class='test-mount-flat'></div>
+            <div class='test-mount-flat-large'></div>
+            <div class='test-mount-flat-disable'></div>
+        </div>
+
 
         <div class='test-container'>
             <div class='test-typo-js'></div>
@@ -143,6 +152,57 @@
 
             SecondaryDisable.mount(".test-mount-secondary-disable");
             SecondaryDisable.disable();
+
+
+            // ----------------------------
+            // Flat BUTTON
+            // ----------------------------
+
+            var TitleFlatButton = new Typo.partials.Heading({
+                "text": "Flat Button",
+                "size": 3
+            });
+
+            TitleFlatButton.mount('.test-typo-flat');
+
+            // Standard Size
+
+            var FlatStandardSize = new Hig.Button({
+                "title": "Standard Size",
+                "type": "flat"
+            });
+
+            FlatStandardSize.mount(".test-mount-flat");
+
+            // Small Size
+
+            var FlatSmallSize = new Hig.Button({
+                "title": "Small Size",
+                "type": "flat",
+                "size": "small"
+            });
+
+            FlatSmallSize.mount(".test-mount-flat-small");
+
+            // Large Size
+
+            var FlatlargeSize = new Hig.Button({
+                "title": "Large Size",
+                "type": "flat",
+                "size": "large"
+            });
+
+            FlatlargeSize.mount(".test-mount-flat-large");
+
+            // Large Size
+
+            var FlatDisable = new Hig.Button({
+                "title": "Disabled Button",
+                "type": "flat"
+            });
+
+            FlatDisable.mount(".test-mount-flat-disable");
+            FlatDisable.disable();
 
 
             // ----------------------------
