@@ -86,6 +86,12 @@
                         "{String} link - new link for the button"
                     ]
                 },
+                "setIcon": {
+                    "desc": "sets the icon of a button",
+                    "params": [
+                        "{String} icon - icon ID"
+                    ]
+                },
                 "disable": {
                     "desc": "make the button disabled"
                 },
