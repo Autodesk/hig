@@ -1,6 +1,20 @@
 @import '~basics/colors/colors.scss';
 @import '~helpers/css/mixins/base.scss';
 
+.hig__button__wrapper {
+    display: inline-block;
+
+    &.hig__button__wrapper--disabled {
+        & > .hig__button--enabled-button {
+            display: none;
+        }
+
+        & > .hig__button--disabled-button {
+            display: inline-block;
+        }
+    }
+}
+
 .hig__button {
     display: inline-block;
     @include vendor-prefix('box-sizing', 'border-box');
@@ -17,7 +31,7 @@
     line-height: 36px;
     min-width: 68px;
     font-size: 14px;
-    
+
     // default colors: primary
     background: color(adsk-blue);
     color: color(hig-white);
@@ -37,11 +51,12 @@
 
     &:focus {
         outline: none;
-        // box-shadow: 0 0 0 1px color(hig-white),
-        //             0 0 0 2px color(adsk-blue);
+        box-shadow: 0 0 0 1px color(hig-white),
+                    0 0 0 2px color(adsk-blue-dark);
     }
 
-    &--disable{
+    &--disabled-button {
+        display: none;
         cursor: not-allowed;
         background-color: color(adsk-blue-lightest);
 
@@ -89,21 +104,27 @@
             border-color: color(adsk-turquoise);
         }
 
-        &:active, &:focus {
+        &:focus {
+            background: none;
+            outline: none;
+            border-color: color(adsk-turquoise);
+            box-shadow: 0 0 0 1px color(hig-white),
+                        0 0 0 2px color(adsk-turquoise);
+        }
+
+        &:active {
             background: none;
             border-color: color(hig-gray-10);
+            box-shadow: none;
         }
 
     }
-    
-    &.hig__button--secondary.hig__button--disable{
+
+    &.hig__button--secondary.hig__button--disabled-button {
         cursor: not-allowed;
         background: none;
-
-        &:hover, &:focus{
-            background: none;
-            border-color: color(hig-gray-40);
-        }
+        border-color: color(hig-gray-60);
+        color: color(hig-gray-40);
     }
 
     &.hig__button--flat {
