@@ -18,6 +18,7 @@
 .hig__button {
     display: inline-block;
     @include vendor-prefix('box-sizing', 'border-box');
+    @include vendor-prefix('user-select', 'none');
 
     font-family: 'ArtifaktElement';
     font-weight: 700;
