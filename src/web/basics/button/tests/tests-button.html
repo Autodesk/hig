@@ -42,7 +42,7 @@
             <div class='test-js-dispose'></div>
             <div class='test-js-update'></div>
             <div class='test-js-unmount'></div>
-            <div class='test-js-dispose'></div>
+            <div class='test-js-disable'></div>
         <script>
 
             var Typo = new Hig.Typography();
@@ -176,6 +176,31 @@
             EventsButton.onFocus(function(e){
                 console.log("EventsButton FOCUS")
             });
+
+
+            // Disabled event callback tests
+
+            var EventsDisabledButton = new Hig.Button({
+                "title": "No events should be triggered"
+            });
+
+            EventsDisabledButton.mount(".test-js-disable");
+
+            EventsDisabledButton.onClick(function(e){
+                e.preventDefault();
+                console.log("EventsDisabledButton CLICK")
+            });
+
+            EventsDisabledButton.onHover(function(e){
+                console.log("EventsDisabledButton HOVER")
+            });
+
+            EventsDisabledButton.onFocus(function(e){
+                console.log("EventsDisabledButton FOCUS")
+            });
+
+            EventsDisabledButton.disable();
+
 
             // Event Disposing Button
             // Hover or Click should not register

@@ -18,37 +18,41 @@ class IconButton extends Core {
     }
 
     setTitle(title){
-        this.el.setAttribute("title", title);
+        this._findDOMEl('.hig__icon-button--enabled-button', this.el).setAttribute("title", title);
+        this._findDOMEl('.hig__icon-button--disabled-button', this.el).setAttribute("title", title);
     }
 
     setLink(link){
-        this.el.setAttribute("href", link);
+        this._findDOMEl('.hig__icon-button--enabled-button', this.el).setAttribute("href", link);
     }
 
     setIcon(icon){
-        this._findDOMEl('.hig__icon-button__icon', this.el).innerHTML = this._getIconString(icon);
+        const enabledButton = this._findDOMEl('.hig__icon-button--enabled-button', this.el);
+        const disabledButton = this._findDOMEl('.hig__icon-button--disabled-button', this.el);
+        const iconString = this._getIconString(icon);
+
+        this._findDOMEl('.hig__icon-button__icon', enabledButton).innerHTML = iconString;
+        this._findDOMEl('.hig__icon-button__icon', disabledButton).innerHTML = iconString;
     }
 
     disable(){
-        this.el.setAttribute('disabled', "true");
-        this.el.setAttribute('tabindex', "-1");
+        this.el.classList.add('hig__icon-button__wrapper--is-disabled');
     }
 
     enable(){
-        this.el.removeAttribute('disabled');
-        this.el.setAttribute('tabindex', "0");
+        this.el.classList.remove('hig__icon-button__wrapper--is-disabled');
     }
 
     onClick(fn){
-        return this._attachListener("click", this.el, this.el, fn);
+        return this._attachListener("click", '.hig__icon-button--enabled-button', this.el, fn);
     }
 
     onHover(fn){
-        return this._attachListener("hover", this.el, this.el, fn);
+        return this._attachListener("hover", '.hig__icon-button--enabled-button', this.el, fn);
     }
 
     onFocus(fn){
-        return this._attachListener("focusin", this.el, this.el, fn);
+        return this._attachListener("focusin", '.hig__icon-button--enabled-button', this.el, fn);
     }
 
 }
