@@ -72,6 +72,48 @@
                 "icon": "{String} (optional) ID of the icon"
             }
         },
+        "IconButton": {
+            "methods": {
+                "setTitle": {
+                    "desc": "sets the title of a button",
+                    "params": [
+                        "{String} title - new title for the button"
+                    ]
+                },
+                "setLink": {
+                    "desc": "sets the link of a button",
+                    "params": [
+                        "{String} link - new link for the button"
+                    ]
+                },
+                "disable": {
+                    "desc": "make the button disabled"
+                },
+                "enable": {
+                    "desc": "make the button enabled again after disabled state"
+                },
+                "onClick": {
+                    "desc": "Calls the provided callback when user clicks on the button",
+                    "params": "HIG.abstract.EventObject.params",
+                    "returns": "HIG.abstract.EventObject.returns"
+                },
+                "onHover": {
+                    "desc": "Calls the provided callback when user moves the mouse over the button",
+                    "params": "HIG.abstract.EventObject.params",
+                    "returns": "HIG.abstract.EventObject.returns"
+                },
+                "onFocus": {
+                    "desc": "Calls the provided callback when user puts focus on the button",
+                    "params": "HIG.abstract.EventObject.params",
+                    "returns": "HIG.abstract.EventObject.returns"
+                }
+            },
+            "defaults": {
+                "title": "{String} title of the button",
+                "link": "{String} link of the button",
+                "icon": "{String} (optional) ID of the icon"
+            }
+        },
         "Typography": {
             "partials": {
                 "Heading": {
