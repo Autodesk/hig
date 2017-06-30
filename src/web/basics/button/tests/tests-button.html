@@ -21,6 +21,7 @@
 
             <div class='test-mount-primary-small'></div>
             <div class='test-mount-primary'></div>
+            <div class='test-mount-primary-icon'></div>
             <div class='test-mount-primary-large'></div>
             <div class='test-mount-primary-disable'></div>
         </div>
@@ -30,6 +31,7 @@
 
             <div class='test-mount-secondary-small'></div>
             <div class='test-mount-secondary'></div>
+            <div class='test-mount-secondary-icon'></div>
             <div class='test-mount-secondary-large'></div>
             <div class='test-mount-secondary-disable'></div>
         </div>
@@ -39,6 +41,7 @@
 
             <div class='test-mount-flat-small'></div>
             <div class='test-mount-flat'></div>
+            <div class='test-mount-flat-icon'></div>
             <div class='test-mount-flat-large'></div>
             <div class='test-mount-flat-disable'></div>
         </div>
@@ -74,6 +77,15 @@
             });
 
             PrimaryStandardSize.mount(".test-mount-primary");
+
+            // Standard Size with icon
+
+            var PrimaryStandardSizeWithIcon = new Hig.Button({
+                "title": "Standard Size",
+                "icon": "gear"
+            });
+
+            PrimaryStandardSizeWithIcon.mount(".test-mount-primary-icon");
 
             // Small Size
 
@@ -122,6 +134,16 @@
             });
 
             SecondaryStandardSize.mount(".test-mount-secondary");
+
+            // Secondary Size
+
+            var SecondaryStandardSizeWithIcon = new Hig.Button({
+                "title": "Standard Size",
+                "type": "secondary",
+                "icon": "gear"
+            });
+
+            SecondaryStandardSizeWithIcon.mount(".test-mount-secondary-icon");
 
             // Small Size
 
@@ -173,6 +195,16 @@
             });
 
             FlatStandardSize.mount(".test-mount-flat");
+
+            // Standard Size with icon
+
+            var FlatStandardSizeWithIcon = new Hig.Button({
+                "title": "Standard Size",
+                "type": "flat",
+                "icon": "gear"
+            });
+
+            FlatStandardSizeWithIcon.mount(".test-mount-flat-icon");
 
             // Small Size
 

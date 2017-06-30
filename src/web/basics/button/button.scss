@@ -4,6 +4,10 @@
 .hig__button__wrapper {
     display: inline-block;
 
+    &+.hig__button__wrapper {
+        margin-left: 10px;
+    }
+
     &.hig__button__wrapper--disabled {
         & > .hig__button--enabled-button {
             display: none;
@@ -137,4 +141,15 @@
     &.hig__button--flat.hig__button--disabled-button {
         border-color: transparent;
     }
+}
+
+.hig__button--enabled-button__icon > .hig__icon,
+.hig__button--disabled-button__icon > .hig__icon {
+    display: inline;
+    margin-right: 5px;
+    padding-left: 30px;
+}
+
+.hig__button--disabled-button__icon > .hig__icon {
+    opacity: 0.2;
 }

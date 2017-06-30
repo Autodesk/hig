@@ -21,13 +21,13 @@ class Button extends Core {
     }
 
     setTitle(title){
-        const enabledButton = this._findDOMEl('.hig__button--enabled-button', this.el);
-        const disabledButton = this._findDOMEl('.hig__button--disabled-button', this.el);
+        const enabledTitle = this._findDOMEl('.hig__button--enabled-button__title', this.el);
+        const disabledTitle = this._findDOMEl('.hig__button--disabled-button__title', this.el);
 
-        enabledButton.textContent = title;
-        enabledButton.setAttribute("title", title);
-        disabledButton.textContent = title;
-        disabledButton.setAttribute("title", title);
+        enabledTitle.textContent = title;
+        enabledTitle.setAttribute("title", title);
+        disabledTitle.textContent = title;
+        disabledTitle.setAttribute("title", title);
     }
 
     setLink(link){
