@@ -6,7 +6,7 @@
         <style>
             .buttonHolder {
                 display: block;
-                padding: 30px;
+                padding: 10px;
             }
         </style>
     </head>
@@ -38,6 +38,7 @@
             types.forEach(type => {
                 sizes.forEach(size => {
                     icons.forEach(icon => {
+                        const containerSelector = '.' + [type, size].join('-');
                         var Button = new Hig.Button({
                             title: [type, size].join(' '),
                             size,
@@ -45,7 +46,7 @@
                             type
                         });
 
-                        Button.mount('.' + [type, size].join('-'));
+                        Button.mount(containerSelector);
 
                         var DisabledButton = new Hig.Button({
                             title: [type, size].join(' '),
@@ -54,7 +55,7 @@
                             type
                         });
 
-                        DisabledButton.mount('.' + [type, size].join('-'));
+                        DisabledButton.mount(containerSelector);
                         DisabledButton.disable();
                     });
                 });
