@@ -1,23 +1,10 @@
 @import '~basics/colors/colors.scss';
 @import '~helpers/css/mixins/base.scss';
 
-.hig__button__wrapper {
-    display: inline-block;
-
-    &.hig__button__wrapper--disabled {
-        & > .hig__button--enabled-button {
-            display: none;
-        }
-
-        & > .hig__button--disabled-button {
-            display: inline-block;
-        }
-    }
-}
-
 .hig__button {
     display: inline-block;
     @include vendor-prefix('box-sizing', 'border-box');
+    @include vendor-prefix('user-select', 'none');
 
     font-family: 'ArtifaktElement';
     font-weight: 700;
@@ -55,14 +42,17 @@
                     0 0 0 2px color(adsk-blue-dark);
     }
 
-    &--disabled-button {
-        display: none;
+    &--disabled {
         cursor: not-allowed;
         background-color: color(adsk-blue-lightest);
 
         &:hover, &:focus{
             background-color: color(adsk-blue-lightest);
         }
+    }
+
+    & + .hig__button {
+        margin-left: 10px;
     }
 
     // SIZES
@@ -89,7 +79,8 @@
         // same as default values
     }
 
-    &.hig__button--secondary {
+    &.hig__button--secondary,
+    &.hig__button--flat {
         border: 1px solid color(hig-gray-40);
         background: none;
         color: color(hig-slate-dark);
@@ -120,7 +111,8 @@
 
     }
 
-    &.hig__button--secondary.hig__button--disabled-button {
+    &.hig__button--secondary.hig__button--disabled,
+    &.hig__button--flat.hig__button--disabled {
         cursor: not-allowed;
         background: none;
         border-color: color(hig-gray-60);
@@ -128,6 +120,20 @@
     }
 
     &.hig__button--flat {
-        // # TODO
+        border: 1px solid transparent;
     }
+
+    &.hig__button--flat.hig__button--disabled {
+        border-color: transparent;
+    }
+}
+
+.hig__button__icon > .hig__icon {
+    display: inline;
+    margin-right: 5px;
+    padding-left: 30px;
+}
+
+.hig__button--disabled > .hig__button__icon > .hig__icon {
+    opacity: 0.2;
 }

@@ -1,8 +1,3 @@
-<span class="hig__icon-button__wrapper">
-    <a href='{{ link }}' class='hig__icon-button hig__icon-button--enabled-button' title='{{ title }}'>
-        <div class='hig__icon-button__icon'>{{#renderIcon}}{{ icon }}{{/renderIcon}}</div>
-    </a>
-    <span href='{{ link }}' class='hig__icon-button hig__icon-button--disabled-button' title='{{ title }}'>
-        <div class='hig__icon-button__icon'>{{#renderIcon}}{{ icon }}{{/renderIcon}}</div>
-    </span>
-</span>
+<a href="{{ link }}" class="hig__icon-button" title="{{ title }}">
+    <div class="hig__icon-button__icon">{{#renderIcon}}{{ icon }}{{/renderIcon}}</div>
+</a>

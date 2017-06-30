@@ -8,7 +8,7 @@ var AvailableTypes = ['primary', 'secondary', 'flat'];
 var AvailableSizes = ['small', 'standard', 'large'];
 
 /**
- * Creates an button
+ * Creates a button
  *
  * @class
  */
@@ -21,29 +21,18 @@ class Button extends Core {
     }
 
     setTitle(title){
-        const enabledButton = this._findDOMEl('.hig__button--enabled-button', this.el);
-        const disabledButton = this._findDOMEl('.hig__button--disabled-button', this.el);
-
-        enabledButton.textContent = title;
-        enabledButton.setAttribute("title", title);
-        disabledButton.textContent = title;
-        disabledButton.setAttribute("title", title);
+        this.el.setAttribute('title', title);
+        this._findDOMEl('.hig__button__title', this.el).textContent = title;
     }
 
     setLink(link){
-        const enabledButton = this._findDOMEl('.hig__button--enabled-button', this.el);
-
-        enabledButton.setAttribute("href", link);
+        thuis.el.setAttribute("href", link);
     }
 
     setType(type){
         if(AvailableTypes.indexOf(type) > -1){
-            const enabledButton = this._findDOMEl('.hig__button--enabled-button', this.el);
-            const disabledButton = this._findDOMEl('.hig__button--disabled-button', this.el);
-
             this._clearAllTypes();
-            enabledButton.classList.add('hig__button--'+type);
-            disabledButton.classList.add('hig__button--'+type);
+            this.el.classList.add('hig__button--'+type);
         }else{
             console.error(`Button type "${type}" not found, only these types are allowed: `, AvailableTypes);
         }
@@ -51,12 +40,8 @@ class Button extends Core {
 
     setSize(size){
         if(AvailableSizes.indexOf(size) > -1){
-            const enabledButton = this._findDOMEl('.hig__button--enabled-button', this.el);
-            const disabledButton = this._findDOMEl('.hig__button--disabled-button', this.el);
-
             this._clearAllSizes();
-            enabledButton.classList.add('hig__button--'+size);
-            disabledButton.classList.add('hig__button--'+size);
+            this.el.classList.add('hig__button--'+size);
         }else{
             console.error(`Button size "${size}" not found, only these sizes are allowed: `, AvailableSizes);
         }
@@ -67,42 +52,36 @@ class Button extends Core {
     }
 
     disable(){
-        this.el.classList.add('hig__button__wrapper--disabled');
+        this.el.classList.add('hig__button--disabled');
+        this.el.setAttribute('tabindex', "-1");
     }
 
     enable(){
-        this.el.classList.remove('hig__button__wrapper--disabled');
+        this.el.classList.remove('hig__button--disabled');
+        this.el.setAttribute('tabindex', "0");
     }
 
     onClick(fn){
-        return this._attachListener("click", '.hig__button--enabled-button', this.el, fn);
+        return this._attachListener("click", this.el, this.el, fn);
     }
 
     onHover(fn){
-        return this._attachListener("hover", '.hig__button--enabled-button', this.el, fn);
+        return this._attachListener("hover", this.el, this.el, fn);
     }
 
     onFocus(fn){
-        return this._attachListener("focusin", '.hig__button--enabled-button', this.el, fn);
+        return this._attachListener("focusin", this.el, this.el, fn);
     }
 
     _clearAllTypes(){
-        const enabledButton = this._findDOMEl('.hig__button--enabled-button', this.el);
-        const disabledButton = this._findDOMEl('.hig__button--disabled-button', this.el);
-
         for(var type in AvailableTypes){
-            enabledButton.classList.remove("hig__button--"+type);
-            disabledButton.classList.remove("hig__button--"+type);
+            this.el.classList.remove("hig__button--"+type);
         }
     }
 
     _clearAllSizes(){
-        const enabledButton = this._findDOMEl('.hig__button--enabled-button', this.el);
-        const disabledButton = this._findDOMEl('.hig__button--disabled-button', this.el);
-
         for(var size in AvailableSizes){
-            enabledButton.classList.remove("hig__button--"+size);
-            disabledButton.classList.remove("hig__button--"+size);
+            this.el.classList.remove("hig__button--"+size);
         }
     }
 
