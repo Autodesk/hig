@@ -18,41 +18,39 @@ class IconButton extends Core {
     }
 
     setTitle(title){
-        this._findDOMEl('.hig__icon-button--enabled-button', this.el).setAttribute("title", title);
-        this._findDOMEl('.hig__icon-button--disabled-button', this.el).setAttribute("title", title);
+        this.el.setAttribute("title", title);
     }
 
     setLink(link){
-        this._findDOMEl('.hig__icon-button--enabled-button', this.el).setAttribute("href", link);
+        this.el.setAttribute("href", link);
     }
 
     setIcon(icon){
-        const enabledButton = this._findDOMEl('.hig__icon-button--enabled-button', this.el);
-        const disabledButton = this._findDOMEl('.hig__icon-button--disabled-button', this.el);
         const iconString = this._getIconString(icon);
 
-        this._findDOMEl('.hig__icon-button__icon', enabledButton).innerHTML = iconString;
-        this._findDOMEl('.hig__icon-button__icon', disabledButton).innerHTML = iconString;
+        this._findDOMEl('.hig__icon-button__icon', this.el).innerHTML = iconString;
     }
 
     disable(){
-        this.el.classList.add('hig__icon-button__wrapper--is-disabled');
+        this.el.classList.add('hig__icon-button--disabled');
+        this.el.setAttribute('tabindex', '-1');
     }
 
     enable(){
-        this.el.classList.remove('hig__icon-button__wrapper--is-disabled');
+        this.el.classList.remove('hig__icon-button--disabled');
+        this.el.setAttribute('tabindex', '0');
     }
 
     onClick(fn){
-        return this._attachListener("click", '.hig__icon-button--enabled-button', this.el, fn);
+        return this._attachListener("click", this.el, this.el, fn);
     }
 
     onHover(fn){
-        return this._attachListener("hover", '.hig__icon-button--enabled-button', this.el, fn);
+        return this._attachListener("hover", this.el, this.el, fn);
     }
 
     onFocus(fn){
-        return this._attachListener("focusin", '.hig__icon-button--enabled-button', this.el, fn);
+        return this._attachListener("focusin", this.el, this.el, fn);
     }
 
 }

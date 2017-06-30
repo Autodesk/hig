@@ -49,6 +49,9 @@
 
             // Standard
 
+            var TitleIconButton = new Typo.partials.Heading({ "text": "Standard", "size": 4 });
+            TitleIconButton.mount('.test-mount-standard');
+
             var IconButtonStandard = new Hig.IconButton({
                 "title": "Standard Icon Button",
                 "icon": "assets"
@@ -57,6 +60,9 @@
             IconButtonStandard.mount(".test-mount-standard");
 
             // Disabled
+
+            var TitleIconButton = new Typo.partials.Heading({ "text": "Disabled", "size": 4 });
+            TitleIconButton.mount('.test-mount-disabled');
 
             var IconButtonDisabled = new Hig.IconButton({
                 "title": "Disabled Icon Button",
@@ -81,8 +87,11 @@
 
             // Regular event callback tests
 
+            var TitleIconButton = new Typo.partials.Heading({ "text": "All events are logged in console", "size": 4 });
+            TitleIconButton.mount('.test-js-events');
+
             var EventsButton = new Hig.IconButton({
-                "title": "All event are logged in console",
+                "title": "All events are logged in console",
                 "icon": "assets"
             });
 
@@ -104,8 +113,11 @@
 
             // Disabled event callback tests
 
+            var TitleIconButton = new Typo.partials.Heading({ "text": "Disabled buttons still trigger hover, focus, and click events", "size": 4 });
+            TitleIconButton.mount('.test-js-events-disabled');
+
             var EventsDisabledButton = new Hig.IconButton({
-                "title": "Disabled buttons to not get focus or trigger events",
+                "title": "Disabled buttons still trigger hover, focus, and click events",
                 "icon": "assets"
             });
 
@@ -128,6 +140,9 @@
 
             // Event Disposing Button
             // Hover or Click should not register
+
+            var TitleIconButton = new Typo.partials.Heading({ "text": "Events disposed button, no events should fire", "size": 4 });
+            TitleIconButton.mount('.test-js-dispose');
 
             var EventDisposeButton = new Hig.IconButton({
                 "title": "Events disposed button, no events should fire",
@@ -152,6 +167,9 @@
             // Updated Button
             // Update the title and link of the button after creation
 
+            var TitleIconButton = new Typo.partials.Heading({ "text": "Updated Title, Link (Autodesk.com), Size (large), Type (secondary)", "size": 4 });
+            TitleIconButton.mount('.test-js-update');
+
             var UpdateButton = new Hig.IconButton({
                 "title": "NOT the correct title",
                 "link": "#",
@@ -166,6 +184,9 @@
 
             // Unmount a Button
             // Remove a button from the DOM after creation, this button should not render
+
+            var TitleIconButton = new Typo.partials.Heading({ "text": "You should not see this button!", "size": 4 });
+            TitleIconButton.mount('.test-js-unmount');
 
             var UnmountButton = new Hig.IconButton({
                 "title": "You should not see this button!",
