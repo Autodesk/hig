@@ -35,10 +35,10 @@ export class Module extends HIGElement {
     this.state = {
       title: initialProps.title,
       query: initialProps.query,
-      expanded: false
+      collapsed: false,
     };
 
-    ['toggleCollapsed', '_render'].forEach(fn => {
+    ['toggleCollapsed', '_render', 'handleClick', 'setActiveSubmodule'].forEach(fn => {
       this[fn] = this[fn].bind(this);
     });
   }
@@ -50,23 +50,25 @@ export class Module extends HIGElement {
         title: 'setTitle',
         link: 'setLink'
       })
-      .mapToHIGEventListeners(['onClick', 'onHover'])
-      .handle('expanded', value => {
-        this.state.expanded = value;
+      .mapToHIGEventListeners(['onHover'])
+      .handle('activeModule', value => {
+        this === value ? this.activate() : this.deactivate()
       })
       .then(this._render);
   }
 
   toggleCollapsed() {
-    this.state.expanded = !this.state.expanded;
+    this.state.collapsed = !this.state.collapsed;
     this._render();
   }
 
   componentDidMount() {
+    this.hig.onClick(this.handleClick);
+
     this.submodules.componentDidMount();
     if (this.submodules.length > 0) {
       this.collapse = new ModuleCollapse(this.hig.partials.Collapse, {
-        isCollapsed: !this.state.expanded
+        isCollapsed: this.state.collapsed
       });
       this.hig.addCollapse(this.collapse.hig);
       this.collapse.mount();
@@ -81,6 +83,7 @@ export class Module extends HIGElement {
 
   insertBefore(instance, insertBeforeIndex) {
     this.submodules.insertBefore(instance, insertBeforeIndex);
+    instance.onActiveSubmodule(this.setActiveSubmodule);
   }
 
   removeChild(instance) {
@@ -98,15 +101,71 @@ export class Module extends HIGElement {
     return this.state.isVisible;
   }
 
+  dispatchModuleActivated(submodule){
+    const moduleActivatedEvent = new CustomEvent('moduleActivated', {
+      bubbles: true,
+      detail: {
+        activeModule: this,
+        activeSubmodule: submodule 
+      }
+    });
+
+    this.hig.el.dispatchEvent(moduleActivatedEvent);
+  }
+
+  setActiveSubmodule(submodule){
+    this.dispatchModuleActivated(submodule);
+  }
+
+  handleClick() {
+    this.submodules.forEach(submodule => {
+      if (this.props.activeSubmodule === submodule) {
+        this.dispatchModuleActivated(this.props.activeSubmodule);
+        return true; 
+      } else {
+        this.dispatchModuleActivated(this.submodules.nodes[0]);
+      }
+    });  
+  }
+
+  activate(){
+    this.hig.activate();
+  }
+
+  deactivate(){
+    this.hig.deactivate();
+  }
+
+  expandSubmodules(){
+    this.state.collapsed = false;
+    this.submodules.forEach(submodule => {
+      submodule.show();
+    });
+    this._render();
+  }
+
+  collapseSubmodules(){
+    this.state.collapsed = true;
+    this.submodules.forEach(submodule => {
+      submodule.hide();
+    });
+
+    this._render();
+  }
+
   _render() {
+
+    this.submodules.forEach(submodule => {
+      this.props.activeSubmodule === submodule ? submodule.activate() : submodule.deactivate();
+    });
+
     if (this.collapse) {
-      this.collapse.commitUpdate(['isCollapsed', !this.state.expanded]);
+      this.collapse.commitUpdate(['isCollapsed', this.state.collapsed]);
     }
 
     const childMatches = this.submodules.map(submodule => {
       submodule.commitUpdate({
         query: this.props.query,
-        expanded: this.state.expanded
       });
 
       return submodule.isVisible();
@@ -123,6 +182,19 @@ export class Module extends HIGElement {
       this.hig.hide();
       this.state.isVisible = false;
     }
+
+
+    if (this.state.collapsed) {
+      this.submodules.forEach(submodule => {
+        submodule.show();
+      })
+    } 
+    
+    if (!this.props.query &&  !this.state.collapsed) {
+      this.submodules.forEach(submodule => {
+        submodule.hide();
+      });  
+    }
   }
 }
 
@@ -134,7 +206,7 @@ ModuleComponent.propTypes = {
   link: PropTypes.string,
   active: PropTypes.bool,
   query: PropTypes.string,
-  expanded: PropTypes.bool,
+  collapsed: PropTypes.bool,
   onClick: PropTypes.func,
   onHover: PropTypes.func,
   children: HIGChildValidator([SubmoduleComponent])
@@ -166,8 +238,8 @@ ModuleComponent.__docgenInfo = {
       description: '[Boolean] Designates that the module is active'
     },
 
-    expanded: {
-      description: '[Boolean] When true shows submodules, when false hides them'
+    collapsed: {
+      description: '[Boolean] When false shows submodules, when true hides them'
     },
 
     onClick: {

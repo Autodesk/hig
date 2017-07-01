@@ -60,11 +60,26 @@ export class Group extends HIGElement {
     return this.state.isVisible;
   }
 
+  expandModules(){
+    this.modules.forEach(module => {
+      module.expandSubmodules();
+    });
+    this._render();
+  }
+
+  collapseModules(){
+    this.modules.forEach(module => {
+      module.collapseSubmodules();
+    });
+    this._render();
+  }
+
   _render() {
     const matches = this.modules.map(module => {
       module.commitUpdate({
         query: this.props.query,
-        expanded: this.props.expanded
+        activeModule: this.props.activeModule,
+        activeSubmodule: this.props.activeSubmodule
       });
 
       return module.isVisible();

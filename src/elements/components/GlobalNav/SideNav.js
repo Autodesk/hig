@@ -24,8 +24,17 @@ import LinkListComponent, { LinkList } from './LinkList';
 import SearchComponent, { Search } from './Search';
 
 export class SideNav extends HIGElement {
+  constructor(HIGConstructor, initialProps) {
+    super(HIGConstructor, initialProps);
+
+    this.state = {};
+    this.setActiveModule = this.setActiveModule.bind(this);
+  }
+
   componentDidMount() {
     this.filter = this.filter.bind(this);
+
+    this.hig.el.addEventListener('moduleActivated', this.setActiveModule);
 
     if (this.sections) {
       this.sections.mount();
@@ -116,7 +125,19 @@ export class SideNav extends HIGElement {
   filter(event) {
     const query = event.target.value;
     this.sections.forEach(section => {
-      section.commitUpdate(['query', query]);
+      section.commitUpdate({ query });
+    });
+  }
+
+  setActiveModule(event) {
+    this.state.activeModule = event.detail.activeModule;
+    this.state.activeSubmodule = event.detail.activeSubmodule;
+    this._render();
+  }
+
+  _render() {
+    this.sections.forEach(section => {
+      section.commitUpdate(this.state);
     });
   }
 }

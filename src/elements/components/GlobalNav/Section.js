@@ -35,7 +35,7 @@ export class Section extends HIGElement {
     });
 
     this.state = {
-      expanded: false,
+      collapsed: false,
       query: initialProps.query
     };
 
@@ -48,7 +48,7 @@ export class Section extends HIGElement {
     this.groups.componentDidMount();
 
     this.collapse = new SectionCollapse(this.hig.partials.Collapse, {
-      isCollapsed: !this.state.expanded
+      isCollapsed: this.state.collapsed
     });
     this.hig.addCollapse(this.collapse.hig);
     this.collapse.mount();
@@ -62,14 +62,20 @@ export class Section extends HIGElement {
         headerLabel: 'setHeaderLabel',
         headerName: 'setHeaderName'
       })
-      .handle('expanded', value => {
-        this.state.expanded = value;
-      })
       .then(this._render);
   }
 
   toggleCollapsed() {
-    this.state.expanded = !this.state.expanded;
+    this.state.collapsed = !this.state.collapsed;
+    if (this.state.collapsed) {
+       this.groups.forEach(group => {
+        group.collapseModules()
+      });
+    } else {
+       this.groups.forEach(group => {
+        group.expandModules();
+      });
+    }
     this._render();
   }
 
@@ -99,11 +105,15 @@ export class Section extends HIGElement {
   }
 
   _render() {
-    this.collapse.commitUpdate(['isCollapsed', !this.state.expanded]);
+    if(this.collapse) {
+      this.collapse.commitUpdate(['isCollapsed', this.state.collapsed]);
+    }
+
     const childVisibility = this.groups.map(group => {
       group.commitUpdate({
         query: this.props.query,
-        expanded: this.state.expanded
+        activeModule: this.props.activeModule,
+        activeSubmodule: this.props.activeSubmodule
       });
 
       return group.isVisible();

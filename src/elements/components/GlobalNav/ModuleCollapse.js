@@ -27,9 +27,9 @@ export class ModuleCollapse extends HIGElement {
       switch (propKey) {
         case 'isCollapsed':
           if (propValue) {
-            this.hig.maximize();
-          } else {
             this.hig.minimize();
+          } else {
+            this.hig.maximize();
           }
           break;
         default: {

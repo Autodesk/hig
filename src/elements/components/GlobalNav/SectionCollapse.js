@@ -27,9 +27,9 @@ export class SectionCollapse extends HIGElement {
       switch (propKey) {
         case 'isCollapsed':
           if (propValue) {
-            this.hig.maximize();
-          } else {
             this.hig.minimize();
+          } else {
+            this.hig.maximize();
           }
           break;
         default: {
@@ -41,9 +41,9 @@ export class SectionCollapse extends HIGElement {
 
   componentDidMount() {
     if (this.initialProps.isCollapsed === true) {
-      this.hig.maximize();
-    } else {
       this.hig.minimize();
+    } else {
+      this.hig.maximize();
     }
   }
 }
