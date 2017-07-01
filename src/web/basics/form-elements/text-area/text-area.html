@@ -1,1 +1,6 @@
-<textarea class="hig__text-area" value="{{ value }}"/>
+<div class="hig__text-area">
+    {{#label}}<div class="hig__text-area__label-placeholder">{{label}}</div>{{/label}}
+    <textarea class="hig__text-area__field" placeholder="{{ placeholder }}">{{value}}</textarea>
+    {{#label}}<label class="hig__text-area__label">{{label}}</label>{{/label}}
+    {{#instructions}}<p class="hig__text-area__instructions">{{instructions}}</p>{{/instructions}}
+</div>
