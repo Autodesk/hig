@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../../../../../../dist/hig.css">
+        <script type="text/javascript" src="../../../../../../dist/hig.js"></script>
+
+        <style>
+            body{
+                margin: 50px;
+            }
+            .test-container{
+                margin-bottom: 50px;
+            }
+            .test-container > div{
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class='test-container'>
+            <div class='test-typo-primary'></div>
+
+            <div class='test-mount-primary'></div>
+        </div>
+
+        <script>
+
+            var Typo = new Hig.Typography();
+
+            // ----------------------------
+            // TEXT AREA
+            // ----------------------------
+
+            var TitlePrimaryButton = new Typo.partials.Heading({
+                "text": "TextArea",
+                "size": 3
+            });
+
+            TitlePrimaryButton.mount('.test-typo-primary');
+
+            // Standard
+
+            var StandardTextArea = new Hig.TextArea({
+            });
+
+            StandardTextArea.mount(".test-mount-primary");
+
+
+        </script>
+
+    </body>
+</html>

@@ -215,7 +215,7 @@
                             "desc": "Calls the provided callback when focus enters the text area",
                             "params": "HIG.abstract.EventObject.params",
                             "returns": "HIG.abstract.EventObject.returns"
-                        },
+                        }
                     },
                     "defaults": {
                         "label": "{String} label for the text area",
