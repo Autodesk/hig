@@ -22,6 +22,9 @@
 
             <div class='test-typo-setter'></div>
             <div class='test-mount-setter'></div>
+
+            <div class='test-typo-listener'></div>
+            <div class='test-mount-listener'></div>
         </div>
 
         <script>
@@ -53,12 +56,12 @@
             // TEXT AREA WITH SETTERS
             // ----------------------------
 
-            var TitleSetterTextArea = new Typo.partials.Heading({
+            var TitleListenerTextArea = new Typo.partials.Heading({
                 "text": "TextArea configured with setters",
                 "size": 3
             });
 
-            TitleSetterTextArea.mount('.test-typo-setter');
+            TitleListenerTextArea.mount('.test-typo-setter');
 
             var SetterTextArea = new Hig.TextArea();
 
@@ -68,6 +71,36 @@
             SetterTextArea.setPlaceholder('Updated placeholder');
             SetterTextArea.setInstructions('Updated instructions');
             SetterTextArea.setValue('Updated value');
+
+
+
+            // ----------------------------
+            // TEXT AREA WITH EVENT LISTENERS
+            // ----------------------------
+
+            var TitleListenerTextArea = new Typo.partials.Heading({
+                "text": "TextArea dispatches blur, focus, and change events",
+                "size": 3
+            });
+
+            TitleListenerTextArea.mount('.test-typo-listener');
+
+            var ListenersTextArea = new Hig.TextArea({
+                label: '',
+                instructions: 'Events logged to the developer console.'
+            });
+
+            ListenersTextArea.mount(".test-mount-listener");
+
+            function log(event) {
+                const message = `${event.type} event triggered`;
+                console.log(message);
+            }
+
+            ListenersTextArea.onBlur(log);
+            ListenersTextArea.onChange(log);
+            ListenersTextArea.onFocus(log);
+            ListenersTextArea.onInput(log);
 
         </script>
 

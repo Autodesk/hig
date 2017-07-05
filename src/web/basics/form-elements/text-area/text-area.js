@@ -64,6 +64,22 @@ class TextArea extends Core {
         }
     }
 
+    onBlur(fn){
+        return this._attachListener("focusout", '.hig__text-area__field', this.el, fn);
+    }
+
+    onChange(fn){
+        return this._attachListener("change", '.hig__text-area__field', this.el, fn);
+    }
+
+    onFocus(fn){
+        return this._attachListener("focusin", '.hig__text-area__field', this.el, fn);
+    }
+
+    onInput(fn){
+        return this._attachListener("input", '.hig__text-area__field', this.el, fn);
+    }
+
 }
 
 TextArea._interface = Interface['basics']['FormElements']['partials']['TextArea'];
