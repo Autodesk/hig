@@ -1,7 +1,7 @@
 <html>
     <head>
-        <link rel="stylesheet" href="../../../../../dist/hig.css">
-        <script type="text/javascript" src="../../../../../dist/hig.js"></script>
+        <link rel="stylesheet" href="../../../../../../../dist/hig.css">
+        <script type="text/javascript" src="../../../../../../../dist/hig.js"></script>
 
         <style>
             body{
@@ -19,7 +19,7 @@
     </head>
     <body>
         <div class='tests-pagetitle'></div>
-        
+
         <div class='tests-form-elements'>
             <div class='tests-text-field'></div>
         </div>
@@ -40,11 +40,12 @@
             var FormElements = new Hig.FormElements();
 
             var TextField = new FormElements.partials.TextField({
-                "label": "Our label",
-                "name": "testlabel",
-                "placeholder": "Some placeholder"
+                label: "Our label",
+                name: "testlabel",
+                placeholder: "Our placeholder",
+                instructions: "Type your words into the text field"
             });
-            
+
             TextField.mount('.tests-text-field');
 
         </script>

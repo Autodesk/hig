@@ -1,24 +1,111 @@
 @import '~basics/colors/colors.scss';
+@import '~helpers/css/mixins/placeholder.scss';
 
-.hig__text-field{
+.hig__text-field {
     position: relative;
+    font-family: 'ArtifaktElement', sans-serif;
+}
 
-    &__label{
-        position: absolute;
-        top: 24px;
-        z-index: 2;
-        pointer-events: none;
+.hig__text-field__label,
+.hig__text-field__label-placeholder {
+    display: block;
+    margin-bottom: 10px;
+
+    color: color(hig-gray-30);
+    font-size: 12px;
+    line-height: 14px;
+
+    .hig__text-field:focus + & {
+        color: color(adsk-turquoise);
+    }
+}
+
+.hig__text-field__label {
+    position: absolute;
+    pointer-events: none;
+
+    top: 0;
+    pointer-events: all;
+    color: color(hig-gray-30);
+    font-size: 12px;
+    line-height: 14px;
+
+    transition-property: top, font-size, line-height;
+    transition-duration: 0.1s, 0.1s, 0.1s;
+    transition-delay: 0.1s;
+
+    .hig__text-field__input--no-value + & {
+        top: 22px;
+        left: 1px;
+        font-size: 14px;
+        line-height: 20px;
     }
 
-    &__input{
-        position: absolute;
-        margin-top: 24px;
-        z-index: 1;
-    }
-
-    &__input:focus + &__label{
+    .hig__text-field__input--no-value.hig__text-field__input:focus + & {
         top: 0;
-        pointer-events: all;
+        left: 0;
+        font-size: 12px;
+        line-height: 14px;
+        transition-delay: 0;
     }
 
-}   
+    .hig__text-field__input:focus + & {
+        color: color(adsk-turquoise);
+    }
+
+}
+
+.hig__text-field__label-placeholder {
+    color: transparent;
+}
+
+.hig__text-field__input {
+    display: block;
+    height: 25px;
+    padding-bottom: 10px;
+
+    border: none;
+    border-bottom: 1px solid color(hig-gray-40);
+
+    font-family: 'ArtifaktElement', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: color(hig-gray-10);
+
+    @include placeholder {
+        transition: color 0.2s;
+        color: color(hig-gray-30);
+    }
+
+    &:hover {
+        border: none;
+        border-bottom: 1px solid color(adsk-blue-dark);
+        box-shadow: 0 1px 0 color(adsk-blue-dark);
+    }
+
+    &.hig__text-field__input--no-value {
+        @include placeholder {
+            color: transparent;
+        }
+    }
+
+    &:focus {
+        outline: none;
+        border: none;
+        border-bottom: 1px solid color(adsk-turquoise);
+        box-shadow: 0 1px 0 color(adsk-turquoise);
+
+        @include placeholder {
+            color: color(hig-gray-30);
+            transition-delay: 0.2s;
+        }
+    }
+
+}
+
+.hig__text-field__instructions {
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 14px;
+    color: color(hig-gray-30);
+}

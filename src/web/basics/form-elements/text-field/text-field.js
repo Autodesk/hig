@@ -15,6 +15,11 @@ class TextField extends Core {
     constructor(options){
         super(options);
         this._render(Template, options);
+        this._handleKeyDown = this._handleKeyDown.bind(this);
+    }
+
+    _componentDidMount() {
+        this.el.querySelector('.hig__text-field__input').addEventListener('input', this._handleKeyDown);
     }
 
     setLabel(label){
@@ -55,6 +60,18 @@ class TextField extends Core {
 
     onBlur(fn){
         return this._attachListener("blur", this.el, this.el, fn);
+    }
+
+    _handleKeyDown(event) {
+        this._detectPresenceOfValue(event.target.value);
+    }
+
+    _detectPresenceOfValue(value) {
+        if (value.length === 0) {
+            this.el.querySelector('.hig__text-field__input').classList.add('hig__text-field__input--no-value');
+        } else {
+            this.el.querySelector('.hig__text-field__input').classList.remove('hig__text-field__input--no-value');
+        }
     }
 
 }
