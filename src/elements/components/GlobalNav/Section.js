@@ -35,7 +35,7 @@ export class Section extends HIGElement {
     });
 
     this.state = {
-      collapsed: false,
+      collapsed: true,
       query: initialProps.query
     };
 

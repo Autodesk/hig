@@ -35,7 +35,7 @@ export class Module extends HIGElement {
     this.state = {
       title: initialProps.title,
       query: initialProps.query,
-      collapsed: false,
+      collapsed: true,
     };
 
     ['toggleCollapsed', '_render', 'handleClick', 'setActiveSubmodule'].forEach(fn => {
@@ -184,17 +184,15 @@ export class Module extends HIGElement {
     }
 
 
-    if (this.state.collapsed) {
+    if (!this.state.collapsed) {
       this.submodules.forEach(submodule => {
         submodule.show();
       })
-    } 
-    
-    if (!this.props.query &&  !this.state.collapsed) {
+    } else if (!this.props.query && this.state.collapsed) {
       this.submodules.forEach(submodule => {
         submodule.hide();
       });  
-    }
+    }  
   }
 }
 

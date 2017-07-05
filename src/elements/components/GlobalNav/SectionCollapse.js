@@ -40,7 +40,7 @@ export class SectionCollapse extends HIGElement {
   }
 
   componentDidMount() {
-    if (this.initialProps.isCollapsed === true) {
+    if (this.initialProps.isCollapsed) {
       this.hig.minimize();
     } else {
       this.hig.maximize();

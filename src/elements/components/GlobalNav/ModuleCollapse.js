@@ -40,10 +40,10 @@ export class ModuleCollapse extends HIGElement {
   }
 
   componentDidMount() {
-    if (this.initialProps.isCollapsed === true) {
-      this.hig.maximize();
-    } else {
+    if (this.initialProps.isCollapsed) {
       this.hig.minimize();
+    } else {
+      this.hig.maximize();
     }
   }
 }
