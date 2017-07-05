@@ -26,7 +26,7 @@ class Button extends Core {
     }
 
     setLink(link){
-        thuis.el.setAttribute("href", link);
+        this.el.setAttribute("href", link);
     }
 
     setType(type){
