@@ -1,9 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Button> removes the title if it is no longer specified 1`] = `"<a href=\\"#\\" class=\\"hig__button hig__button--primary hig__button--standard\\" title=\\"undefined\\"></a>"`;
+exports[`<Button> removes the title if it is no longer specified 1`] = `
+"<a href=\\"#\\" class=\\"hig__button hig__button--primary hig__button--standard\\" title=\\"undefined\\">
+    
+    <span class=\\"hig__button__title\\"></span>
+</a>"
+`;
 
-exports[`<Button> renders the standard button 1`] = `"<a href=\\"http://example.com\\" class=\\"hig__button hig__button--primary hig__button--standard\\" title=\\"regular button\\">regular button</a>"`;
+exports[`<Button> renders the standard button 1`] = `
+"<a href=\\"http://example.com\\" class=\\"hig__button hig__button--primary hig__button--standard\\" title=\\"regular button\\">
+    
+    <span class=\\"hig__button__title\\">regular button</span>
+</a>"
+`;
 
-exports[`<Button> updates the link the same as setLink 1`] = `"<a href=\\"http://example.com/2\\" class=\\"hig__button hig__button--primary hig__button--standard\\" title=\\"link\\">link</a>"`;
+exports[`<Button> updates the link the same as setLink 1`] = `
+"<a href=\\"http://example.com/2\\" class=\\"hig__button hig__button--primary hig__button--standard\\" title=\\"link\\">
+    
+    <span class=\\"hig__button__title\\">link</span>
+</a>"
+`;
 
-exports[`<Button> updates the title the same as setTitle 1`] = `"<a href=\\"#\\" class=\\"hig__button hig__button--primary hig__button--standard\\" title=\\"correct title\\">correct title</a>"`;
+exports[`<Button> updates the title the same as setTitle 1`] = `
+"<a href=\\"#\\" class=\\"hig__button hig__button--primary hig__button--standard\\" title=\\"correct title\\">
+    
+    <span class=\\"hig__button__title\\">correct title</span>
+</a>"
+`;

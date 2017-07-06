@@ -61,6 +61,7 @@ describe('<SectionList>', () => {
 
     higSideNav.addSection(section1);
     section1.addCollapse(collapse1);
+    collapse1.minimize();
 
     const section2Defaults = {
       headerLabel: 'Project',
@@ -72,6 +73,7 @@ describe('<SectionList>', () => {
 
     higSideNav.addSection(section2);
     section2.addCollapse(collapse2);
+    collapse2.minimize();
 
     const reactContainer = document.createElement('div');
     const wrapper = mount(
@@ -113,12 +115,15 @@ describe('<SectionList>', () => {
     const collapse2 = new section2.partials.Collapse();
     higSideNav.addSection(section2);
     section2.addCollapse(collapse2);
+    collapse2.minimize();
 
     // ADD SECTION 1 before SECTION 2
 
     higSideNav.addSection(section1, section2);
     const collapse1 = new section1.partials.Collapse();
     section1.addCollapse(collapse1);
+    collapse1.minimize();
+
 
     class CustomComponent extends React.Component {
       constructor(props) {
