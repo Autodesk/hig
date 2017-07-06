@@ -108,6 +108,19 @@
             });
             Group1.addModule(Group1_Module2);
 
+            // ADD LINKS TO SIDENAV
+
+            var Link1 = new SideNav.partials.Link({
+                title: "AutoDesk",
+                link: "http://www.autodesk.com"
+            });
+            var Link2 = new SideNav.partials.Link({
+                title: "AutoCAD",
+                link: "https://www.autodesk.com/products/autocad/overview'"
+            });
+            SideNav.addLink(Link1);
+            SideNav.addLink(Link2);
+
            // OPEN THE SIDENAV
            GlobalNav.showSideNav();
 
