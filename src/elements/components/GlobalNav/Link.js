@@ -27,7 +27,6 @@ export class Link extends HIGElement {
 
 const LinkComponent = createComponent(Link);
 
-
 LinkComponent.propTypes = {
   addTitle: PropTypes.func,
   addLink: PropTypes.func,
@@ -38,16 +37,16 @@ LinkComponent.propTypes = {
 LinkComponent.__docgenInfo = {
   props: {
     title: {
-      description: "Title {string} for the Link component"
+      description: 'Title {string} for the Link component'
     },
     link: {
-      description: "URL {string} for the Link component"
+      description: 'URL {string} for the Link component'
     },
     onClick: {
-      description: "{function} Triggered when user clicks on the link"
+      description: '{function} Triggered when user clicks on the link'
     },
     onHover: {
-      description: "{function} Triggered when user hovers over the link"
+      description: '{function} Triggered when user hovers over the link'
     }
   }
 };

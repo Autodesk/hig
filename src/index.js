@@ -50,9 +50,12 @@ const Slot = GlobalNav.Slot;
 const topNavFixtures = new TopNavFixtures();
 
 const links = [
-  {title: 'Autodesk Main', url: 'http://www.autodesk.com'},
-  {title: 'AutoCAD', url: 'https://www.autodesk.com/products/autocad/overview'},
-  {title: 'Maya', url: 'https://www.autodesk.com/products/maya/overview'}
+  { title: 'Autodesk Main', url: 'http://www.autodesk.com' },
+  {
+    title: 'AutoCAD',
+    url: 'https://www.autodesk.com/products/autocad/overview'
+  },
+  { title: 'Maya', url: 'https://www.autodesk.com/products/maya/overview' }
 ];
 
 class App extends React.Component {
@@ -121,10 +124,8 @@ class App extends React.Component {
         <GlobalNav>
           <SideNav>
             <LinkList>
-              { links.map( (link, i) => {
-                return (
-                  <Link title={link.title} link={link.url} key={i} />
-                )
+              {links.map((link, i) => {
+                return <Link title={link.title} link={link.url} key={i} />;
               })}
             </LinkList>
             <SectionList>
