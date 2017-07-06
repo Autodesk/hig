@@ -173,6 +173,64 @@
                 }
             }
         },
+        "FormElements": {
+            "partials": {
+                "TextArea": {
+                    "methods": {
+                        "setLabel": {
+                            "desc": "sets the label",
+                            "params": [
+                                "{String} label - label for the text area"
+                            ]
+                        },
+                        "setInstructions": {
+                            "desc": "sets the instruction text",
+                            "params": [
+                                "{String} instructions - instructions for the text area"
+                            ]
+                        },
+                        "setPlaceholder": {
+                            "desc": "sets the placeholder",
+                            "params": [
+                                "{String} placeholder - text that appears in the text area when empty"
+                            ]
+                        },
+                        "setValue": {
+                            "desc": "sets the value",
+                            "params": [
+                                "{String} value - the text inside of the text area"
+                            ]
+                        },
+                        "onBlur": {
+                            "desc": "Calls the provided callback when focus leaves the text area",
+                            "params": "HIG.abstract.EventObject.params",
+                            "returns": "HIG.abstract.EventObject.returns"
+                        },
+                        "onChange": {
+                            "desc": "Calls the provided callback when the user changes the content of the text area then moves focus elsewhere",
+                            "params": "HIG.abstract.EventObject.params",
+                            "returns": "HIG.abstract.EventObject.returns"
+                        },
+                        "onFocus": {
+                            "desc": "Calls the provided callback when focus enters the text area",
+                            "params": "HIG.abstract.EventObject.params",
+                            "returns": "HIG.abstract.EventObject.returns"
+                        },
+                        "onInput": {
+                            "desc": "Calls the provided callback when the user changes the content of the text area each time a key is pressed",
+                            "params": "HIG.abstract.EventObject.params",
+                            "returns": "HIG.abstract.EventObject.returns"
+                        }
+                    },
+                    "defaults": {
+                        "label": "{String} label for the text area",
+                        "instructions": "{String} instructions for the text area",
+                        "placeholder": "{String} text that appears in the text area when empty",
+                        "value": "{String} the text inside of the text area"
+                    }
+                }
+            }
+        },
         "Flyout": {
             "methods": {
                 "open": {
@@ -421,7 +479,7 @@
                                 "image": "{String} url src of the image",
                                 "email": "{String} email for profile",
                                 "name": "{String} display name for profile",
-                                "signOutLink": "{String} the linke for the sign out button",
+                                "signOutLink": "{String} the link for the sign out button",
                                 "profileSettingsLabel": "{String} the label for the Profile Settings link",
                                 "profileSettingsLink": "{String} the URL for the Profile Settings link",
                                 "signOutLabel": "{String} the label for the sign out button"

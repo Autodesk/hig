@@ -1,6 +1,7 @@
 var Hig = {};
 
 Hig.Button = require('./basics/button/button.js');
+Hig.TextArea = require('./basics/form-elements/text-area/text-area.js');
 Hig.IconButton = require('./basics/icon-button/icon-button.js');
 Hig.Typography = require('./basics/typography/typography.js');
 Hig.Flyout = require('./basics/flyout/flyout.js');

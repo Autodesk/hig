@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../../../../../../dist/hig.css">
+        <script type="text/javascript" src="../../../../../../dist/hig.js"></script>
+
+        <style>
+            body{
+                margin: 50px;
+            }
+            .test-container{
+                margin-bottom: 50px;
+            }
+            .test-container > div{
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class='test-container'>
+            <div class='test-typo-default'></div>
+            <div class='test-mount-default'></div>
+
+            <div class='test-typo-setter'></div>
+            <div class='test-mount-setter'></div>
+
+            <div class='test-typo-listener'></div>
+            <div class='test-mount-listener'></div>
+        </div>
+
+        <script>
+
+            var Typo = new Hig.Typography();
+
+            // ----------------------------
+            // TEXT AREA WITH DEFAULTS
+            // ----------------------------
+
+            var TitleDefaultTextArea = new Typo.partials.Heading({
+                "text": "TextArea configured with defaults",
+                "size": 3
+            });
+
+            TitleDefaultTextArea.mount('.test-typo-default');
+
+            var DefaultTextArea = new Hig.TextArea({
+                label: 'Life story',
+                placeholder: "Tell us your life story",
+                instructions: "Press keys on your keyboard."
+            });
+
+            DefaultTextArea.mount(".test-mount-default");
+
+
+
+            // ----------------------------
+            // TEXT AREA WITH SETTERS
+            // ----------------------------
+
+            var TitleListenerTextArea = new Typo.partials.Heading({
+                "text": "TextArea configured with setters",
+                "size": 3
+            });
+
+            TitleListenerTextArea.mount('.test-typo-setter');
+
+            var SetterTextArea = new Hig.TextArea();
+
+            SetterTextArea.mount(".test-mount-setter");
+
+            SetterTextArea.setLabel('Updated label');
+            SetterTextArea.setPlaceholder('Updated placeholder');
+            SetterTextArea.setInstructions('Updated instructions');
+            SetterTextArea.setValue('Updated value');
+
+
+
+            // ----------------------------
+            // TEXT AREA WITH EVENT LISTENERS
+            // ----------------------------
+
+            var TitleListenerTextArea = new Typo.partials.Heading({
+                "text": "TextArea dispatches blur, focus, and change events",
+                "size": 3
+            });
+
+            TitleListenerTextArea.mount('.test-typo-listener');
+
+            var ListenersTextArea = new Hig.TextArea({
+                label: '',
+                instructions: 'Events logged to the developer console.'
+            });
+
+            ListenersTextArea.mount(".test-mount-listener");
+
+            function log(event) {
+                const message = `${event.type} event triggered`;
+                console.log(message);
+            }
+
+            ListenersTextArea.onBlur(log);
+            ListenersTextArea.onChange(log);
+            ListenersTextArea.onFocus(log);
+            ListenersTextArea.onInput(log);
+
+        </script>
+
+    </body>
+</html>

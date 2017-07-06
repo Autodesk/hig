@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../../../../../../dist/hig.css">
+        <script type="text/javascript" src="../../../../../../dist/hig.js"></script>
+
+        <style>
+            body{
+                margin: 50px;
+            }
+
+            .test-container {
+                margin-bottom: 50px;
+            }
+
+            .test-container > div {
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="test-container">
+            <div class="test-mount"></div>
+        </div>
+
+        <script>
+
+            // ----------------------------
+            // TEXT AREA
+            // ----------------------------
+
+            var DefaultTextArea = new Hig.TextArea({
+                label: 'This is the label',
+                placeholder: 'Placeholder text',
+                instructions: 'Instructional text goes here'
+            });
+
+            DefaultTextArea.mount(".test-mount");
+
+        </script>
+
+    </body>
+</html>
