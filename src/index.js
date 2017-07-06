@@ -26,6 +26,8 @@ import profileImage from './images/profileImage.png';
 import TopNavFixtures from './fixtures/topNavFixtures';
 
 const SideNav = GlobalNav.SideNav;
+const LinkList = GlobalNav.SideNav.LinkList;
+const Link = GlobalNav.SideNav.LinkList.Link;
 const Search = GlobalNav.SideNav.Search;
 const SectionList = GlobalNav.SideNav.SectionList;
 const Section = GlobalNav.SideNav.SectionList.Section;
@@ -46,6 +48,12 @@ const Tab = GlobalNav.SubNav.Tabs.Tab;
 const Slot = GlobalNav.Slot;
 
 const topNavFixtures = new TopNavFixtures();
+
+const links = [
+  {title: 'Autodesk Main', url: 'http://www.autodesk.com'},
+  {title: 'AutoCAD', url: 'https://www.autodesk.com/products/autocad/overview'},
+  {title: 'Maya', url: 'https://www.autodesk.com/products/maya/overview'}
+];
 
 class App extends React.Component {
   constructor() {
@@ -112,6 +120,13 @@ class App extends React.Component {
       <div>
         <GlobalNav>
           <SideNav>
+            <LinkList>
+              { links.map( (link, i) => {
+                return (
+                  <Link title={link.title} link={link.url} key={i} />
+                )
+              })}
+            </LinkList>
             <SectionList>
               <Section headerLabel="Project" headerName="ThunderStorm">
                 {topNavFixtures.menu().sections[0].groups.map((group, i) => {

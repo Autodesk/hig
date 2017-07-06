@@ -15,6 +15,7 @@ limitations under the License.
 
 */
 import createComponent from '../../../adapters/createComponent';
+import HIGChildValidator from '../../HIGChildValidator';
 import HIGNodeList from '../../HIGNodeList';
 
 import LinkComponent, { Link } from './Link';
@@ -59,6 +60,18 @@ export class LinkList {
 
 const LinkListComponent = createComponent(LinkList);
 
-LinkListComponent.Item = LinkComponent;
+LinkListComponent.propTypes = {
+  children: HIGChildValidator([LinkComponent])
+};
+
+LinkListComponent.__docgenInfo = {
+  props: {
+    children: {
+      description: 'support adding Link'
+    }
+  }
+};
+
+LinkListComponent.Link = LinkComponent;
 
 export default LinkListComponent;
