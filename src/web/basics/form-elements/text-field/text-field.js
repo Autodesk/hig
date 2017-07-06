@@ -23,23 +23,39 @@ class TextField extends Core {
     }
 
     setLabel(label){
-
+        if (label) {
+            const labelEl = this._findOrAddElement('LABEL', 'label', '.hig__text-field__label');
+            const labelPlaceholderEl = this._findOrAddElement('LABEL-PLACEHOLDER', 'div', '.hig__text-field__label-placeholder');
+            labelEl.textContent = label;
+            labelPlaceholderEl.textContent = label;
+        } else {
+            this._removeElementIfFound('.hig__text-field__label');
+            this._removeElementIfFound('.hig__text-field__label-placeholder');
+        }
     }
 
     setPlaceholder(placeholder){
-
+        this._findDOMEl('.hig__text-field__input', this.el).setAttribute('placeholder', placeholder);
     }
 
     setValue(value){
-
+        this._findDOMEl('.hig__text-field__input', this.el).setAttribute('value', value);
+        this._detectPresenceOfValue(value);
     }
 
-    setName(value){
-
+    setName(name){
+        this._findDOMEl('.hig__text-field__label', this.el).setAttribute('for', name);
+        this._findDOMEl('.hig__text-field__input', this.el).setAttribute('id', name);
+        this._findDOMEl('.hig__text-field__input', this.el).setAttribute('name', name);
     }
 
     setInstructions(instructions){
-
+        if (instructions) {
+            const instructionsEl = this._findOrAddElement('INSTRUCTIONS', 'p', '.hig__text-field__instructions');
+            instructionsEl.textContent = instructions;
+        } else {
+            this._removeElementIfFound('.hig__text-field__instructions');
+        }
     }
 
     required(requiredLabelText){
