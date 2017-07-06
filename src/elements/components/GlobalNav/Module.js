@@ -136,63 +136,74 @@ export class Module extends HIGElement {
     this.hig.deactivate();
   }
 
-  expandSubmodules(){
-    this.state.collapsed = false;
-    this.submodules.forEach(submodule => {
-      submodule.show();
-    });
-    this._render();
-  }
-
-  collapseSubmodules(){
-    this.state.collapsed = true;
-    this.submodules.forEach(submodule => {
-      submodule.hide();
-    });
-
-    this._render();
-  }
-
-  _render() {
-
-    this.submodules.forEach(submodule => {
-      this.props.activeSubmodule === submodule ? submodule.activate() : submodule.deactivate();
-    });
-
-    if (this.collapse) {
-      this.collapse.commitUpdate(['isCollapsed', this.state.collapsed]);
-    }
-
+  showMatches(query) {
     const childMatches = this.submodules.map(submodule => {
       submodule.commitUpdate({
-        query: this.props.query,
+        query: query,
       });
 
       return submodule.isVisible();
     });
 
-    if (
-      childMatches.some(m => m) ||
-      this.matches(this.props.query) ||
-      !this.props.query
-    ) {
-      this.hig.show();
-      this.state.isVisible = true;
+    if (childMatches.some(m => m)) {
+      let collapsed = false
+      this.showSelf(collapsed);
+      // iterate over the matching children ?
+    } else if (this.matches(query)){
+      let collapsed = true;
+      this.showSelf(collapsed);
     } else {
-      this.hig.hide();
-      this.state.isVisible = false;
+      this.hideSelf();
     }
+  }
 
-
-    if (!this.state.collapsed) {
-      this.submodules.forEach(submodule => {
+  expandAll() {
+    this.showSelf(false)
+    this.submodules.forEach(submodule => {
         submodule.show();
-      })
-    } else if (!this.props.query && this.state.collapsed) {
-      this.submodules.forEach(submodule => {
+    })
+  }
+
+  collapseAll() {
+    this.showSelf(true);
+    this.submodules.forEach(submodule => {
         submodule.hide();
-      });  
+    });
+  }
+
+  hideSelf() {
+    this.hig.hide();
+    this.state.isVisible = false;
+    // this.collapseAll();
+  }
+
+  // only about self (Module) visibility and collapse icon.
+  // set children/submodule show/hide elsewhere
+  showSelf(collapsed) {
+    this.hig.show();
+    this.state.isVisible = true;
+    this.state.collapsed = collapsed;
+    if (!this.collapse) { return; }
+    this.collapse.commitUpdate(['isCollapsed', this.state.collapsed]);
+  }
+
+  _render() {
+    if (this.props.query !== undefined && this.props.query.length === 0){
+      this.collapseAll();
+    } else if (this.props.query !== undefined ) {
+      this.showMatches(this.props.query)
+    } else {
+      if (this.state.collapsed) {
+        this.collapseAll()
+      } else {
+        this.expandAll(); 
+      }
     }  
+
+
+    this.submodules.forEach(submodule => {
+      this.props.activeSubmodule === submodule ? submodule.activate() : submodule.deactivate();
+    }); 
   }
 }
 

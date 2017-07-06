@@ -62,14 +62,14 @@ export class Group extends HIGElement {
 
   expandModules(){
     this.modules.forEach(module => {
-      module.expandSubmodules();
+      module.expandAll();
     });
     this._render();
   }
 
   collapseModules(){
     this.modules.forEach(module => {
-      module.collapseSubmodules();
+      module.collapseAll();
     });
     this._render();
   }
