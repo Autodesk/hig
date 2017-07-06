@@ -46,6 +46,9 @@ export class Group extends HIGElement {
 
   insertBefore(instance, insertBeforeIndex) {
     this.modules.insertBefore(instance, insertBeforeIndex);
+    if (this.mounted) {
+      this._render();
+    }
   }
 
   removeChild(instance) {

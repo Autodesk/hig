@@ -58,6 +58,7 @@ function higContext() {
   const collapse1 = new higSection.partials.Collapse({});
 
   higSection.addCollapse(collapse1);
+  collapse1.minimize();
 
   const higGroup = new higSection.partials.Group();
 
@@ -76,12 +77,10 @@ describe('<Group>', () => {
         title: 'Module 1',
         link: '#'
       };
+      
       const module1 = new higGroup.partials.Module(module1Defaults);
       higGroup.addModule(module1);
-      const collapse1 = new module1.partials.Collapse({})
-      module1.addCollapse(collapse1);
-      collapse1.minimize();
-
+    
       const module2Defaults = {
         icon: 'project-management',
         title: 'Module 2',
@@ -89,10 +88,6 @@ describe('<Group>', () => {
       };
       const module2 = new higGroup.partials.Module(module2Defaults);
       higGroup.addModule(module2);
-
-      const collapse2 = new module2.partials.Collapse({});
-      module2.addCollapse(collapse2);
-      collapse2.minimize();
 
       const reactContainer = document.createElement('div');
 
@@ -119,7 +114,8 @@ describe('<Group>', () => {
       const module1Defaults = {
         icon: 'project-management',
         title: 'Module 1',
-        link: '#'
+        link: '#',
+        key: '1'
       };
       const module1 = new higGroup.partials.Module(module1Defaults);
 
@@ -128,24 +124,14 @@ describe('<Group>', () => {
       const module2Defaults = {
         icon: 'project-management',
         title: 'Module 2',
-        link: '#'
+        link: '#',
+        key: '2'
       };
       const module2 = new higGroup.partials.Module(module2Defaults);
       higGroup.addModule(module2);
 
-      const collapse2 = new module1.partials.Collapse({});
-      module2.addCollapse(collapse2);
-      collapse2.minimize();
-
       // Add before item 2
       higGroup.addModule(module1, module2);
-
-      // const collapse1 = new module1.partials.Collapse({});
-      // module1.addCollapse(collapse1);
-      // collapse1.minimize();
-
-      
-
 
 
       class CustomComponent extends React.Component {
@@ -224,5 +210,5 @@ describe('<Group>', () => {
         )
       );
     });
-  });
+   });
 });

@@ -55,7 +55,8 @@ class App extends React.Component {
       fn: false,
       tabs: [{ label: 'One', id: 0 }, { label: 'Two', id: 1 }],
       projects: topNavFixtures.projectList(),
-      accounts: topNavFixtures.accountList()
+      accounts: topNavFixtures.accountList(),
+      modules: []
     };
   }
 
@@ -98,6 +99,14 @@ class App extends React.Component {
     this.setState({ tabs: nextTabs });
   };
 
+  addModule = () => {
+    const key = Math.floor(Math.random() * 100000, 5);
+    const module  =  {title: `${key}`,  icon: "document-management",  key: key}
+    const modules = Array.from(this.state.modules)
+    modules.push(module);
+    this.setState({modules: modules});
+  }
+
   render() {
     return (
       <div>
@@ -128,9 +137,15 @@ class App extends React.Component {
                           </Module>
                         );
                       })}
+                     
                     </Group>
                   );
                 })}
+                <Group>
+                  {this.state.modules.map(module =>{
+                      return <Module icon={module.icon} title={module.title} key={module.key}/>
+                  })}
+                </Group>  
               </Section>
               <Section headerLabel="Account" headerName="GlobalConstruction">
                 {topNavFixtures.menu().sections[1].groups.map((group, i) => {
@@ -153,7 +168,7 @@ class App extends React.Component {
                                 />
                               );
                             })}
-                          </Module>
+                          </Module> 
                         );
                       })}
                     </Group>
@@ -231,6 +246,8 @@ class App extends React.Component {
             <Button title="Add tab before" onClick={this.addTabBefore} />
             <Button title="Add tab after" onClick={this.addTabAfter} />
             <Button title="Remove tab" onClick={this.removeTab} />
+
+            <Button title="Add Module" onClick={this.addModule} />
 
             {topNavFixtures.hipsterContent().map((paragraph, i) => {
               return <p key={i}>{paragraph}</p>;

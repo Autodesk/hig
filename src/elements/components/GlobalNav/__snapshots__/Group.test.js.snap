@@ -97,7 +97,7 @@ exports[`<Group> children: <Module> can insert <Module> elements before and afte
     <div class=\\"hig__global-nav__side-nav__section__header\\">
         <span class=\\"hig__global-nav__side-nav__section__header__label\\">Project</span>
         <span class=\\"hig__global-nav__side-nav__section__header__name\\">X</span>
-        <div class=\\"hig__global-nav__side-nav__section__collapse\\"><div class=\\"hig__icon\\"><svg width=\\"11\\" height=\\"12\\" viewBox=\\"0 0 11 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"double-caret\\"><g stroke-width=\\"1.5\\" stroke=\\"#979797\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.432 -9.533)\\"></polyline><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.432 -4.533)\\"></polyline></g></svg></div></div><!--SECTION-COLLAPSE-->
+        <div class=\\"hig__global-nav__side-nav__section__collapse hig__global-nav__side-nav__section__collapse--collapsed\\"><div class=\\"hig__icon\\"><svg width=\\"11\\" height=\\"12\\" viewBox=\\"0 0 11 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"double-caret\\"><g stroke-width=\\"1.5\\" stroke=\\"#979797\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.432 -9.533)\\"></polyline><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.432 -4.533)\\"></polyline></g></svg></div></div><!--SECTION-COLLAPSE-->
     </div>
     <div class=\\"hig__global-nav__side-nav__section__group\\">
     <div class=\\"hig__global-nav__side-nav__section__group__module\\">
@@ -137,7 +137,7 @@ exports[`<Group> children: <Module> can insert <Module> elements before and afte
     <div class=\\"hig__global-nav__side-nav__section__header\\">
         <span class=\\"hig__global-nav__side-nav__section__header__label\\">Project</span>
         <span class=\\"hig__global-nav__side-nav__section__header__name\\">X</span>
-        <div class=\\"hig__global-nav__side-nav__section__collapse\\"><div class=\\"hig__icon\\"><svg width=\\"11\\" height=\\"12\\" viewBox=\\"0 0 11 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"double-caret\\"><g stroke-width=\\"1.5\\" stroke=\\"#979797\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.432 -9.533)\\"></polyline><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.432 -4.533)\\"></polyline></g></svg></div></div><!--SECTION-COLLAPSE-->
+        <div class=\\"hig__global-nav__side-nav__section__collapse hig__global-nav__side-nav__section__collapse--collapsed\\"><div class=\\"hig__icon\\"><svg width=\\"11\\" height=\\"12\\" viewBox=\\"0 0 11 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"double-caret\\"><g stroke-width=\\"1.5\\" stroke=\\"#979797\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.432 -9.533)\\"></polyline><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.432 -4.533)\\"></polyline></g></svg></div></div><!--SECTION-COLLAPSE-->
     </div>
     <div class=\\"hig__global-nav__side-nav__section__group\\">
     <div class=\\"hig__global-nav__side-nav__section__group__module\\">
@@ -186,7 +186,7 @@ exports[`<Group> children: <Module> can insert <Module> elements before and afte
     <div class=\\"hig__global-nav__side-nav__section__header\\">
         <span class=\\"hig__global-nav__side-nav__section__header__label\\">Project</span>
         <span class=\\"hig__global-nav__side-nav__section__header__name\\">X</span>
-        <div class=\\"hig__global-nav__side-nav__section__collapse\\"><div class=\\"hig__icon\\"><svg width=\\"11\\" height=\\"12\\" viewBox=\\"0 0 11 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"double-caret\\"><g stroke-width=\\"1.5\\" stroke=\\"#979797\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.432 -9.533)\\"></polyline><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.432 -4.533)\\"></polyline></g></svg></div></div><!--SECTION-COLLAPSE-->
+        <div class=\\"hig__global-nav__side-nav__section__collapse hig__global-nav__side-nav__section__collapse--collapsed\\"><div class=\\"hig__icon\\"><svg width=\\"11\\" height=\\"12\\" viewBox=\\"0 0 11 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"double-caret\\"><g stroke-width=\\"1.5\\" stroke=\\"#979797\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.432 -9.533)\\"></polyline><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.432 -4.533)\\"></polyline></g></svg></div></div><!--SECTION-COLLAPSE-->
     </div>
     <div class=\\"hig__global-nav__side-nav__section__group\\">
     <div class=\\"hig__global-nav__side-nav__section__group__module\\">
