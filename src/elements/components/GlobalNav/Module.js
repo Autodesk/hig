@@ -35,10 +35,15 @@ export class Module extends HIGElement {
     this.state = {
       title: initialProps.title,
       query: initialProps.query,
-      collapsed: true,
+      collapsed: true
     };
 
-    ['toggleCollapsed', '_render', 'handleClick', 'setActiveSubmodule'].forEach(fn => {
+    [
+      'toggleCollapsed',
+      '_render',
+      'handleClick',
+      'setActiveSubmodule'
+    ].forEach(fn => {
       this[fn] = this[fn].bind(this);
     });
   }
@@ -52,7 +57,7 @@ export class Module extends HIGElement {
       })
       .mapToHIGEventListeners(['onHover'])
       .handle('activeModule', value => {
-        this === value ? this.activate() : this.deactivate()
+        this === value ? this.activate() : this.deactivate();
       })
       .then(this._render);
   }
@@ -101,19 +106,19 @@ export class Module extends HIGElement {
     return this.state.isVisible;
   }
 
-  dispatchModuleActivated(submodule){
+  dispatchModuleActivated(submodule) {
     const moduleActivatedEvent = new CustomEvent('moduleActivated', {
       bubbles: true,
       detail: {
         activeModule: this,
-        activeSubmodule: submodule 
+        activeSubmodule: submodule
       }
     });
 
     this.hig.el.dispatchEvent(moduleActivatedEvent);
   }
 
-  setActiveSubmodule(submodule){
+  setActiveSubmodule(submodule) {
     this.dispatchModuleActivated(submodule);
   }
 
@@ -121,35 +126,35 @@ export class Module extends HIGElement {
     this.submodules.forEach(submodule => {
       if (this.props.activeSubmodule === submodule) {
         this.dispatchModuleActivated(this.props.activeSubmodule);
-        return true; 
+        return true;
       } else {
         this.dispatchModuleActivated(this.submodules.nodes[0]);
       }
-    });  
+    });
   }
 
-  activate(){
+  activate() {
     this.hig.activate();
   }
 
-  deactivate(){
+  deactivate() {
     this.hig.deactivate();
   }
 
   showMatches(query) {
     const childMatches = this.submodules.map(submodule => {
       submodule.commitUpdate({
-        query: query,
+        query: query
       });
 
       return submodule.isVisible();
     });
 
     if (childMatches.some(m => m)) {
-      let collapsed = false
+      let collapsed = false;
       this.showSelf(collapsed);
       // iterate over the matching children ?
-    } else if (this.matches(query)){
+    } else if (this.matches(query)) {
       let collapsed = true;
       this.showSelf(collapsed);
     } else {
@@ -158,16 +163,16 @@ export class Module extends HIGElement {
   }
 
   expandAll() {
-    this.showSelf(false)
+    this.showSelf(false);
     this.submodules.forEach(submodule => {
-        submodule.show();
-    })
+      submodule.show();
+    });
   }
 
   collapseAll() {
     this.showSelf(true);
     this.submodules.forEach(submodule => {
-        submodule.hide();
+      submodule.hide();
     });
   }
 
@@ -183,27 +188,30 @@ export class Module extends HIGElement {
     this.hig.show();
     this.state.isVisible = true;
     this.state.collapsed = collapsed;
-    if (!this.collapse) { return; }
+    if (!this.collapse) {
+      return;
+    }
     this.collapse.commitUpdate(['isCollapsed', this.state.collapsed]);
   }
 
   _render() {
-    if (this.props.query !== undefined && this.props.query.length === 0){
+    if (this.props.query !== undefined && this.props.query.length === 0) {
       this.collapseAll();
-    } else if (this.props.query !== undefined ) {
-      this.showMatches(this.props.query)
+    } else if (this.props.query !== undefined) {
+      this.showMatches(this.props.query);
     } else {
       if (this.state.collapsed) {
-        this.collapseAll()
+        this.collapseAll();
       } else {
-        this.expandAll(); 
+        this.expandAll();
       }
-    }  
-
+    }
 
     this.submodules.forEach(submodule => {
-      this.props.activeSubmodule === submodule ? submodule.activate() : submodule.deactivate();
-    }); 
+      this.props.activeSubmodule === submodule
+        ? submodule.activate()
+        : submodule.deactivate();
+    });
   }
 }
 

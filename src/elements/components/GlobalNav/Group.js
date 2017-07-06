@@ -63,14 +63,14 @@ export class Group extends HIGElement {
     return this.state.isVisible;
   }
 
-  expandModules(){
+  expandModules() {
     this.modules.forEach(module => {
       module.expandAll();
     });
     this._render();
   }
 
-  collapseModules(){
+  collapseModules() {
     this.modules.forEach(module => {
       module.collapseAll();
     });

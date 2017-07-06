@@ -68,11 +68,11 @@ export class Section extends HIGElement {
   toggleCollapsed() {
     this.state.collapsed = !this.state.collapsed;
     if (this.state.collapsed) {
-       this.groups.forEach(group => {
-        group.collapseModules()
+      this.groups.forEach(group => {
+        group.collapseModules();
       });
     } else {
-       this.groups.forEach(group => {
+      this.groups.forEach(group => {
         group.expandModules();
       });
     }
@@ -105,7 +105,7 @@ export class Section extends HIGElement {
   }
 
   _render() {
-    if(this.collapse) {
+    if (this.collapse) {
       this.collapse.commitUpdate(['isCollapsed', this.state.collapsed]);
     }
 

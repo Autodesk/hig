@@ -25,11 +25,13 @@ export class Submodule extends HIGElement {
       expanded: false,
       active: false
     };
-    ['_render', 'callOnActiveSubmodule'].forEach(fn => this[fn] = this[fn].bind(this))
+    ['_render', 'callOnActiveSubmodule'].forEach(
+      fn => this[fn] = this[fn].bind(this)
+    );
   }
 
-  componentDidMount(){
-    this.onClick()
+  componentDidMount() {
+    this.onClick();
   }
 
   commitUpdate(updatePayload, oldProps, newProps) {
@@ -53,7 +55,7 @@ export class Submodule extends HIGElement {
     return this.state.isVisible;
   }
 
-  callOnActiveSubmodule(){
+  callOnActiveSubmodule() {
     if (!this._onActiveSubmodule) {
       return;
     }
@@ -64,27 +66,27 @@ export class Submodule extends HIGElement {
     this._onActiveSubmodule = callback;
   }
 
-  activate(){
+  activate() {
     this.hig.activate();
   }
 
-  deactivate(){
+  deactivate() {
     this.hig.deactivate();
   }
 
-  show(){
-    this.hig.show()
-    this.state.expanded = true
-    this._render()
+  show() {
+    this.hig.show();
+    this.state.expanded = true;
+    this._render();
   }
 
-  hide(){
-    this.hig.hide()
-    this.state.expanded = false
-    this._render
+  hide() {
+    this.hig.hide();
+    this.state.expanded = false;
+    this._render();
   }
 
-  onClick(){
+  onClick() {
     this.hig.onClick(this.callOnActiveSubmodule);
     this.state.expanded = true;
     this._render();

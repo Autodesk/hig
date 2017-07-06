@@ -124,7 +124,6 @@ describe('<SectionList>', () => {
     section1.addCollapse(collapse1);
     collapse1.minimize();
 
-
     class CustomComponent extends React.Component {
       constructor(props) {
         super(props);

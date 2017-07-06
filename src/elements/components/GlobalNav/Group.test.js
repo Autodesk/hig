@@ -77,10 +77,10 @@ describe('<Group>', () => {
         title: 'Module 1',
         link: '#'
       };
-      
+
       const module1 = new higGroup.partials.Module(module1Defaults);
       higGroup.addModule(module1);
-    
+
       const module2Defaults = {
         icon: 'project-management',
         title: 'Module 2',
@@ -132,7 +132,6 @@ describe('<Group>', () => {
 
       // Add before item 2
       higGroup.addModule(module1, module2);
-
 
       class CustomComponent extends React.Component {
         constructor(props) {
@@ -210,5 +209,5 @@ describe('<Group>', () => {
         )
       );
     });
-   });
+  });
 });

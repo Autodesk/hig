@@ -101,11 +101,11 @@ class App extends React.Component {
 
   addModule = () => {
     const key = Math.floor(Math.random() * 100000, 5);
-    const module  =  {title: `${key}`,  icon: "document-management",  key: key}
-    const modules = Array.from(this.state.modules)
+    const module = { title: `${key}`, icon: 'document-management', key: key };
+    const modules = Array.from(this.state.modules);
     modules.push(module);
-    this.setState({modules: modules});
-  }
+    this.setState({ modules: modules });
+  };
 
   render() {
     return (
@@ -137,15 +137,21 @@ class App extends React.Component {
                           </Module>
                         );
                       })}
-                     
+
                     </Group>
                   );
                 })}
                 <Group>
-                  {this.state.modules.map(module =>{
-                      return <Module icon={module.icon} title={module.title} key={module.key}/>
+                  {this.state.modules.map(module => {
+                    return (
+                      <Module
+                        icon={module.icon}
+                        title={module.title}
+                        key={module.key}
+                      />
+                    );
                   })}
-                </Group>  
+                </Group>
               </Section>
               <Section headerLabel="Account" headerName="GlobalConstruction">
                 {topNavFixtures.menu().sections[1].groups.map((group, i) => {
@@ -168,7 +174,7 @@ class App extends React.Component {
                                 />
                               );
                             })}
-                          </Module> 
+                          </Module>
                         );
                       })}
                     </Group>

@@ -86,7 +86,6 @@ function higContext(defaults) {
   higSection.addCollapse(collapse1);
   collapse1.minimize();
 
-
   return { higNav, higSideNav, higSection, higContainer };
 }
 
