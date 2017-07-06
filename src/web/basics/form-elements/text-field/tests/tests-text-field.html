@@ -20,6 +20,11 @@
         </div>
 
         <div class='test-group'>
+            <div class='tests-text-field-disabled-heading'></div>
+            <div class='tests-text-field-disabled'></div>
+        </div>
+
+        <div class='test-group'>
             <div class='tests-text-field-update-heading'></div>
             <div class='tests-text-field-update'></div>
         </div>
@@ -52,6 +57,22 @@
             DefaultTextField.mount('.tests-text-field');
 
 
+            // TEXT FIELD DISABLED
+
+            const DisabledHeading = new Heading({
+                text: "Disabled TextField",
+                size: 3
+            });
+
+            const DisabledTextField = new TextField({
+                label: "None shall pass",
+            });
+
+            DisabledHeading.mount('.tests-text-field-disabled-heading');
+            DisabledTextField.mount('.tests-text-field-disabled');
+            DisabledTextField.disable();
+
+
             // TEXT FIELD CONFIGURED WITH SETTERS
 
             const SetterHeading = new Heading({
@@ -69,6 +90,7 @@
             SetterTextField.setName('updated-name');
             SetterTextField.setPlaceholder('Updated placeholder');
             SetterTextField.setValue('Updated value');
+            SetterTextField.required('You have to fill this in.');
 
 
             // TEXT FIELD WITH EVENT LISTENERS
@@ -87,6 +109,16 @@
 
             EventsHeading.mount('.tests-text-field-events-heading');
             EventsTextField.mount('.tests-text-field-events');
+
+            function log(event) {
+                const message = `${event.type} event triggered`;
+                console.log(message);
+            }
+
+            EventsTextField.onBlur(log);
+            EventsTextField.onChange(log);
+            EventsTextField.onFocus(log);
+            EventsTextField.onInput(log);
 
         </script>
 

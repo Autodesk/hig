@@ -4,6 +4,7 @@
 .hig__text-field {
     position: relative;
     font-family: 'ArtifaktElement', sans-serif;
+    margin: 30px 0;
 }
 
 .hig__text-field__label,
@@ -17,6 +18,12 @@
 
     .hig__text-field:focus + & {
         color: color(adsk-turquoise);
+    }
+
+    .hig__text-field--required &::after {
+        content: '*';
+        display: inline-block;
+        margin-left: 5px;
     }
 }
 
@@ -51,6 +58,10 @@
 
     .hig__text-field__input:focus + & {
         color: color(adsk-turquoise);
+    }
+
+    .hig__text-field__input[disabled] + & {
+        color: color(hig-gray-50);
     }
 
 }
@@ -101,11 +112,27 @@
         }
     }
 
+    &[disabled] {
+        border-bottom-style: dashed;
+        border-bottom-color: color(hig-gray-50);
+
+        &:hover {
+            box-shadow: none;
+        }
+    }
+
 }
 
-.hig__text-field__instructions {
+.hig__text-field__instructions,
+.hig__text-field__required-notice {
     margin-top: 10px;
     font-size: 12px;
     line-height: 14px;
     color: color(hig-gray-30);
+}
+
+.hig__text-field__required-notice::before {
+    content: '*';
+    display: inline-block;
+    margin-right: 5px;
 }

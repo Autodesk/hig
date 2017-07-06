@@ -270,13 +270,19 @@
                         "noLongerRequired": {
                             "desc": "makes field not required"
                         },
-                        "onClick": {
-                            "desc": "Calls the provided callback when user clicks on the input field",
+                        "disable": {
+                            "desc": "Disable the text field, preventing user interaction"
+                        },
+                        "enable": {
+                            "desc": "Enable the text field, reenabling user interaction"
+                        },
+                        "onBlur": {
+                            "desc": "Calls the provided callback when user puts blur on the input field",
                             "params": "HIG.abstract.EventObject.params",
                             "returns": "HIG.abstract.EventObject.returns"
                         },
-                        "onHover": {
-                            "desc": "Calls the provided callback when user moves the mouse over the input field",
+                        "onChange": {
+                            "desc": "Calls the provided callback when user changes the value of the text field then moves focus elsewhere",
                             "params": "HIG.abstract.EventObject.params",
                             "returns": "HIG.abstract.EventObject.returns"
                         },
@@ -285,8 +291,8 @@
                             "params": "HIG.abstract.EventObject.params",
                             "returns": "HIG.abstract.EventObject.returns"
                         },
-                        "onBlur": {
-                            "desc": "Calls the provided callback when user puts blur on the input field",
+                        "onInput": {
+                            "desc": "Calls the provided callback when user changes the value of the text field",
                             "params": "HIG.abstract.EventObject.params",
                             "returns": "HIG.abstract.EventObject.returns"
                         }

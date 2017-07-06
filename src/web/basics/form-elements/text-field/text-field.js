@@ -59,27 +59,38 @@ class TextField extends Core {
     }
 
     required(requiredLabelText){
-
+        this.el.classList.add('hig__text-field--required');
+        const requiredNoticeEl = this._findOrAddElement('REQUIRED-NOTICE', 'p', '.hig__text-field__required-notice');
+        requiredNoticeEl.textContent = requiredLabelText;
     }
 
     noLongerRequired(){
-
-    }
-
-    onClick(fn){
-        return this._attachListener("click", this.el, this.el, fn);
-    }
-
-    onHover(fn){
-        return this._attachListener("hover", this.el, this.el, fn);
-    }
-
-    onFocus(fn){
-        return this._attachListener("focusin", this.el, this.el, fn);
+        this.el.classList.remove('hig__text-field--required');
+        this._removeElementIfFound('.hig__text-field__required-notice');
     }
 
     onBlur(fn){
-        return this._attachListener("blur", this.el, this.el, fn);
+        return this._attachListener("focusout", '.hig__text-field__input', this.el, fn);
+    }
+
+    onChange(fn){
+        return this._attachListener("change", '.hig__text-field__input', this.el, fn);
+    }
+
+    onFocus(fn){
+        return this._attachListener("focusin", '.hig__text-field__input', this.el, fn);
+    }
+
+    onInput(fn){
+        return this._attachListener("input", '.hig__text-field__input', this.el, fn);
+    }
+
+    enable() {
+        this._findDOMEl('.hig__text-field__input', this.el).setAttribute('disabled', null);
+    }
+
+    disable() {
+        this._findDOMEl('.hig__text-field__input', this.el).setAttribute('disabled', 'true');
     }
 
     _handleKeyDown(event) {
