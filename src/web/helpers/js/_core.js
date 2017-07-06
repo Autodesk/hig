@@ -249,6 +249,38 @@ class Core {
     }
 
     /**
+     * Returns first matching element if found, creates and returns an element if not
+     * @param {String} searchComment - HTML comment to target where element should be inserted if created
+     * @param {String} tagname - Type of tag to create if selector doesn't find an element. E.g. `div`
+     * @param {String} selector - Selector of the possibly existing element
+     * @returns {HTMLElement} HTMLElement that was found or created
+     */
+
+    _findOrAddElement(searchComment, tagname, selector) {
+        const existingEl = this.el.querySelector(selector, this.el);
+        if (existingEl) {
+            return existingEl;
+        }
+
+        const newEl = document.createElement(tagname);
+        newEl.classList.add(selector.replace('.', ''));
+        return this.mountPartialToComment(searchComment, newEl);
+    }
+
+    /**
+     * Searches for an element and removes it if found.
+     * @param {String} selector - Selector of element to remove
+     * @returns null
+     */
+
+    _removeElementIfFound(selector) {
+        const existingEl = this.el.querySelector(selector, this.el);
+        if (existingEl) {
+            return existingEl.remove();
+        }
+    }
+
+    /**
      * Get the Icon SVG String
      * @param {String} icon - icon ID
      * @returns {String} String with SVG of the icon

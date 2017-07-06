@@ -46,24 +46,6 @@ class TextArea extends Core {
         this._findDOMEl('.hig__text-area__field', this.el).textContent = value;
     }
 
-    _findOrAddElement(searchComment, tagname, selector) {
-        const existingEl = this.el.querySelector(selector, this.el);
-        if (existingEl) {
-            return existingEl;
-        }
-
-        const newEl = document.createElement(tagname);
-        newEl.classList.add(selector.replace('.', ''));
-        return this.mountPartialToComment(searchComment, newEl);
-    }
-
-    _removeElementIfFound(selector) {
-        const existingEl = this.el.querySelector(selector, this.el);
-        if (existingEl) {
-            return existingEl.remove();
-        }
-    }
-
     onBlur(fn){
         return this._attachListener("focusout", '.hig__text-area__field', this.el, fn);
     }

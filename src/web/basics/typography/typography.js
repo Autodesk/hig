@@ -6,7 +6,7 @@ var Body = require('./body/body.js');
 var Caption = require('./caption/caption.js');
 
 /**
- * Creates an Typography in the SideNav
+ * Holder for Typography
  *
  * @class
  */

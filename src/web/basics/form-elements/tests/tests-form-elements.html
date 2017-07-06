@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../../../../../../../dist/hig.css">
+        <script type="text/javascript" src="../../../../../../../dist/hig.js"></script>
+
+        <style>
+            body{
+                padding: 30px;
+            }
+            .tests-typo-group{
+                margin: 50px 0;
+            }
+            .tests-typo-type{
+                margin: 10px 0;
+                padding: 10px;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class='tests-pagetitle'></div>
+
+        <div class='tests-form-elements'>
+            <div class='tests-text-field'></div>
+        </div>
+
+
+        <script>
+            var Typography = new Hig.Typography();
+
+            var PageTitle = new Typography.partials.Heading({
+                "text": "Form Elements",
+                "size": 1
+            });
+
+            PageTitle.mount(".tests-pagetitle");
+
+            // TEXT FIELD
+
+            var FormElements = new Hig.FormElements();
+
+            var TextField = new FormElements.partials.TextField({
+                label: "Our label",
+                name: "testlabel",
+                placeholder: "Our placeholder",
+                instructions: "Type your words into the text field"
+            });
+
+            TextField.mount('.tests-text-field');
+
+        </script>
+
+    </body>
+</html>
