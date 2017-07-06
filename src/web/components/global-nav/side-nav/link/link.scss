@@ -3,16 +3,13 @@
 .hig__global-nav__sidenav__links {
   font-size: 12px;
   line-height: 26px;
+}
+.hig__global-nav__sidenav__links__link {
+  text-decoration: none;
+  color: color(hig-gray-30);
 
-  .hig__global-nav__sidenav__links__link {
-    text-decoration: none;
-    color: color(hig-gray-30);
-
-    &:hover {
-      color: color(adsk-blue);
-    }
-
-    .hig__global-nav__sidenav__links__link__title {
-    }
+  &:hover {
+    color: color(adsk-blue);
   }
+
 }
