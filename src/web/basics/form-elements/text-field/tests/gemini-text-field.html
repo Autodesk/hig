@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../../../../../../../../dist/hig.css">
+        <script type="text/javascript" src="../../../../../../../../dist/hig.js"></script>
+
+        <style>
+            body{
+                padding: 30px;
+            }
+
+            .test-group {
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class='test-group'>
+            <div class='tests-text-field-heading'></div>
+            <div class='tests-text-field'></div>
+        </div>
+
+        <script>
+            const FormElements = new Hig.FormElements();
+            const TextField = FormElements.partials.TextField;
+
+            // TEXT FIELD CONFIGURED WITH DEFAULTS
+
+            const DefaultTextField = new TextField({
+                label: "Our label",
+                name: "testlabel",
+                placeholder: "Our placeholder",
+                instructions: "Type your words into the text field"
+            });
+
+            DefaultTextField.mount('.tests-text-field');
+
+        </script>
+
+    </body>
+</html>

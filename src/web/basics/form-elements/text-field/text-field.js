@@ -109,13 +109,11 @@ class TextField extends Core {
 
 TextField._interface = Interface['basics']['FormElements']['partials']['TextField'];
 TextField._defaults = {
-    "label": "label",
-    "name": "name",
-    "placeholder": "placeholder",
+    "label": "",
+    "name": "",
+    "placeholder": "",
     "value": "",
-    "instructions": "",
-    "required": false,
-    "requiredLabel": ""
+    "instructions": ""
 };
 TextField._partials = {};
 

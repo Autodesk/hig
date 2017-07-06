@@ -302,9 +302,7 @@
                         "name": "{String} name identifier for our text field",
                         "placeholder": "{String} placeholder text for our text field",
                         "value": "{String} (optional) input value for text field",
-                        "instructions": "{String} (optional) instructions under the text field",
-                        "required": "{Boolean} (optional) is the field required or not",
-                        "requiredLabel": "{String} (optional) required text"
+                        "instructions": "{String} (optional) instructions under the text field"
                     }
                 }
             }
