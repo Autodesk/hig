@@ -34,6 +34,10 @@ class TextField extends Core {
 
     }
 
+    setName(value){
+
+    }
+
     setInstructions(instructions){
 
     }

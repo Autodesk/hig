@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../../../../../../../../dist/hig.css">
+        <script type="text/javascript" src="../../../../../../../../dist/hig.js"></script>
+
+        <style>
+            body{
+                padding: 30px;
+            }
+
+            .test-group {
+                margin-bottom: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class='test-group'>
+            <div class='tests-text-field-heading'></div>
+            <div class='tests-text-field'></div>
+        </div>
+
+        <div class='test-group'>
+            <div class='tests-text-field-update-heading'></div>
+            <div class='tests-text-field-update'></div>
+        </div>
+
+        <div class='test-group'>
+            <div class='tests-text-field-events-heading'></div>
+            <div class='tests-text-field-events'></div>
+        </div>
+
+        <script>
+            const Heading = Hig.Typography._partials.Heading;
+            const FormElements = new Hig.FormElements();
+            const TextField = FormElements.partials.TextField;
+
+            // TEXT FIELD CONFIGURED WITH DEFAULTS
+
+            const DefaultHeading = new Heading({
+                text: "TextField configured with defaults",
+                size: 3
+            });
+
+            const DefaultTextField = new TextField({
+                label: "Our label",
+                name: "testlabel",
+                placeholder: "Our placeholder",
+                instructions: "Type your words into the text field"
+            });
+
+            DefaultHeading.mount('.tests-text-field-heading');
+            DefaultTextField.mount('.tests-text-field');
+
+
+            // TEXT FIELD CONFIGURED WITH SETTERS
+
+            const SetterHeading = new Heading({
+                text: "TextField configured with setters",
+                size: 3
+            });
+
+            const SetterTextField = new TextField();
+
+            SetterHeading.mount('.tests-text-field-update-heading');
+            SetterTextField.mount('.tests-text-field-update');
+
+            SetterTextField.setLabel('This is an updated label');
+            SetterTextField.setInstructions('These instructions have been updated');
+            SetterTextField.setName('updated-name');
+            SetterTextField.setPlaceholder('Updated placeholder');
+            SetterTextField.setValue('Updated value');
+
+
+            // TEXT FIELD WITH EVENT LISTENERS
+
+            const EventsHeading = new Heading({
+                text: "TextField that logs events to the console",
+                size: 3
+            });
+
+            const EventsTextField = new TextField({
+                label: "Our label",
+                name: "testlabel",
+                placeholder: "Our placeholder",
+                instructions: "Type your words into the text field"
+            });
+
+            EventsHeading.mount('.tests-text-field-events-heading');
+            EventsTextField.mount('.tests-text-field-events');
+
+        </script>
+
+    </body>
+</html>

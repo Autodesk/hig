@@ -174,6 +174,134 @@
             }
         },
         "FormElements": {
+            "partials": {
+                "TextArea": {
+                    "methods": {
+                        "setLabel": {
+                            "desc": "sets the label",
+                            "params": [
+                                "{String} label - label for the text area"
+                            ]
+                        },
+                        "setInstructions": {
+                            "desc": "sets the instruction text",
+                            "params": [
+                                "{String} instructions - instructions for the text area"
+                            ]
+                        },
+                        "setPlaceholder": {
+                            "desc": "sets the placeholder",
+                            "params": [
+                                "{String} placeholder - text that appears in the text area when empty"
+                            ]
+                        },
+                        "setValue": {
+                            "desc": "sets the value",
+                            "params": [
+                                "{String} value - the text inside of the text area"
+                            ]
+                        },
+                        "onBlur": {
+                            "desc": "Calls the provided callback when focus leaves the text area",
+                            "params": "HIG.abstract.EventObject.params",
+                            "returns": "HIG.abstract.EventObject.returns"
+                        },
+                        "onChange": {
+                            "desc": "Calls the provided callback when the user changes the content of the text area then moves focus elsewhere",
+                            "params": "HIG.abstract.EventObject.params",
+                            "returns": "HIG.abstract.EventObject.returns"
+                        },
+                        "onFocus": {
+                            "desc": "Calls the provided callback when focus enters the text area",
+                            "params": "HIG.abstract.EventObject.params",
+                            "returns": "HIG.abstract.EventObject.returns"
+                        },
+                        "onInput": {
+                            "desc": "Calls the provided callback when the user changes the content of the text area each time a key is pressed",
+                            "params": "HIG.abstract.EventObject.params",
+                            "returns": "HIG.abstract.EventObject.returns"
+                        }
+                    },
+                    "defaults": {
+                        "label": "{String} label for the text area",
+                        "instructions": "{String} instructions for the text area",
+                        "placeholder": "{String} text that appears in the text area when empty",
+                        "value": "{String} the text inside of the text area"
+                    }
+                },
+                "TextField": {
+                    "methods": {
+                        "setInstructions": {
+                            "desc": "sets the instructions",
+                            "params": [
+                                "{String} instructions for our text field"
+                            ]
+                        },
+                        "setLabel": {
+                            "desc": "sets the label",
+                            "params": [
+                                "{String} label for our text field"
+                            ]
+                        },
+                        "setName": {
+                            "desc": "sets the name of the field as submitted with a form",
+                            "params": [
+                                "{String} label used to identify the field when submitted"
+                            ]
+                        },
+                        "setPlaceholder": {
+                            "desc": "sets the placeholder",
+                            "params": [
+                                "{String} placeholder for our text field"
+                            ]
+                        },
+                        "setValue": {
+                            "desc": "sets the value",
+                            "params": [
+                                "{String} value for our text field"
+                            ]
+                        },
+                        "required": {
+                            "desc": "makes field required",
+                            "params": [
+                                "{String} required label text"
+                            ]
+                        },
+                        "noLongerRequired": {
+                            "desc": "makes field not required"
+                        },
+                        "onClick": {
+                            "desc": "Calls the provided callback when user clicks on the input field",
+                            "params": "HIG.abstract.EventObject.params",
+                            "returns": "HIG.abstract.EventObject.returns"
+                        },
+                        "onHover": {
+                            "desc": "Calls the provided callback when user moves the mouse over the input field",
+                            "params": "HIG.abstract.EventObject.params",
+                            "returns": "HIG.abstract.EventObject.returns"
+                        },
+                        "onFocus": {
+                            "desc": "Calls the provided callback when user puts focus on the input field",
+                            "params": "HIG.abstract.EventObject.params",
+                            "returns": "HIG.abstract.EventObject.returns"
+                        },
+                        "onBlur": {
+                            "desc": "Calls the provided callback when user puts blur on the input field",
+                            "params": "HIG.abstract.EventObject.params",
+                            "returns": "HIG.abstract.EventObject.returns"
+                        }
+                    },
+                    "defaults":{
+                        "label": "{String} label for our text field",
+                        "name": "{String} name identifier for our text field",
+                        "placeholder": "{String} placeholder text for our text field",
+                        "value": "{String} (optional) input value for text field",
+                        "instructions": "{String} (optional) instructions under the text field",
+                        "required": "{Boolean} (optional) is the field required or not",
+                        "requiredLabel": "{String} (optional) required text"
+                    }
+                }
+            }
         },
         "Flyout": {
             "methods": {
