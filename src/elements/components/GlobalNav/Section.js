@@ -36,7 +36,7 @@ export class Section extends HIGElement {
 
     this.state = {
       collapsed: true,
-      query: initialProps.query || ""
+      query: initialProps.query
     };
 
     ['toggleCollapsed', '_render'].forEach(fn => {
@@ -111,7 +111,7 @@ export class Section extends HIGElement {
 
     const childVisibility = this.groups.map(group => {
       group.commitUpdate({
-        query: this.props.query || this.state.query,
+        query: this.props.query,
         activeModule: this.props.activeModule,
         activeSubmodule: this.props.activeSubmodule
       });

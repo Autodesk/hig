@@ -40,7 +40,7 @@ export class Search extends HIGElement {
     this.clear();
     this.hig.onFocusIn(this.showClearIcon);
     this.hig.onFocusOut(this.hideClearIcon);
-    this.hig.onClearIconClick(this.clear); 
+    this.hig.onClearIconClick(this.clear);
   }
 
   clear() {
