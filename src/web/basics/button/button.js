@@ -18,6 +18,13 @@ class Button extends Core {
     constructor(options){
         super(options);
         this._render(Template, options);
+        this.initialOptions = options;
+    }
+
+    _componentDidMount() {
+        if (this.initialOptions.icon) {
+            this.setIcon(this.initialOptions.icon);
+        }
     }
 
     setTitle(title){
@@ -48,7 +55,13 @@ class Button extends Core {
     }
 
     setIcon(icon){
-        // TODO
+        if (icon && icon.length > 0) {
+            const iconString = this._getIconString(icon);
+
+            this._findOrAddElement('ICON', 'span', '.hig__button__icon').innerHTML = iconString;
+        } else {
+            this._removeElementIfFound('.hig__button__icon');
+        }
     }
 
     disable(){
