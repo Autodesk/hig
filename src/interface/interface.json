@@ -175,6 +175,110 @@
         },
         "FormElements": {
             "partials": {
+                "PasswordField": {
+                    "methods": {
+                        "disable": {
+                            "desc": "Disable the password field, preventing user interaction"
+                        },
+                        "enable": {
+                            "desc": "Enable the password field, reenabling user interaction"
+                        },
+                        "hidePassword": {
+                            "desc": "Obscures the characters entered into the password field"
+                        },
+                        "hidePasswordHideButton": {
+                            "desc": "Hides a button used to hide the password"
+                        },
+                        "hidePasswordRevealButton": {
+                            "desc": "Hides a button used to reveal the password"
+                        },
+                        "noLongerRequired": {
+                            "desc": "makes field not required"
+                        },
+                        "onBlur": {
+                            "desc": "Calls the provided callback when user puts blur on the input field",
+                            "params": "HIG.abstract.EventObject.params",
+                            "returns": "HIG.abstract.EventObject.returns"
+                        },
+                        "onChange": {
+                            "desc": "Calls the provided callback when user changes the value of the password field then moves focus elsewhere",
+                            "params": "HIG.abstract.EventObject.params",
+                            "returns": "HIG.abstract.EventObject.returns"
+                        },
+                        "onFocus": {
+                            "desc": "Calls the provided callback when user puts focus on the input field",
+                            "params": "HIG.abstract.EventObject.params",
+                            "returns": "HIG.abstract.EventObject.returns"
+                        },
+                        "onInput": {
+                            "desc": "Calls the provided callback when user changes the value of the password field",
+                            "params": "HIG.abstract.EventObject.params",
+                            "returns": "HIG.abstract.EventObject.returns"
+                        },
+                        "onPasswordHideButtonClick": {
+                            "desc": "Calls the provided callback when user clicks on the password hide button",
+                            "params": "HIG.abstract.EventObject.params",
+                            "returns": "HIG.abstract.EventObject.returns"
+                        },
+                        "onPasswordRevealButtonClick": {
+                            "desc": "Calls the provided callback when user clicks on the password reveal button",
+                            "params": "HIG.abstract.EventObject.params",
+                            "returns": "HIG.abstract.EventObject.returns"
+                        },
+                        "required": {
+                            "desc": "makes field required",
+                            "params": [
+                                "{String} required label text"
+                            ]
+                        },
+                        "revealPassword": {
+                            "desc": "Reveals the characters entered into the password field"
+                        },
+                        "setInstructions": {
+                            "desc": "sets the instructions",
+                            "params": [
+                                "{String} instructions for our password field"
+                            ]
+                        },
+                        "setLabel": {
+                            "desc": "sets the label",
+                            "params": [
+                                "{String} label for our password field"
+                            ]
+                        },
+                        "setName": {
+                            "desc": "sets the name of the field as submitted with a form",
+                            "params": [
+                                "{String} label used to identify the field when submitted"
+                            ]
+                        },
+                        "setPlaceholder": {
+                            "desc": "sets the placeholder",
+                            "params": [
+                                "{String} placeholder for our password field"
+                            ]
+                        },
+                        "setValue": {
+                            "desc": "sets the value",
+                            "params": [
+                                "{String} value for our password field"
+                            ]
+                        },
+                        "showPasswordHideButton": {
+                            "desc": "Shows a button used to hide the password"
+                        },
+                        "showPasswordRevealButton": {
+                            "desc": "Shows a button used to reveal the password"
+                        }
+                    },
+                    "defaults":{
+                        "label": "{String} label for our password field",
+                        "name": "{String} name identifier for our password field",
+                        "placeholder": "{String} placeholder text for our password field",
+                        "value": "{String} (optional) input value for password field",
+                        "instructions": "{String} (optional) instructions under the password field"
+                    }
+                },
                 "TextArea": {
                     "methods": {
                         "setLabel": {

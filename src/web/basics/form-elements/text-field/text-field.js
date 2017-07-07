@@ -13,7 +13,13 @@ var Core = require('_core.js');
 class TextField extends Core {
 
     constructor(options){
+        if (!options.name) {
+            // Ensure each text field component has a name so the label can be associated to the input
+            const randomName = Math.floor(Math.random() * 100000, 5).toString()
+            options.name = randomName;
+        }
         super(options);
+
         this._render(Template, options);
         this._handleKeyDown = this._handleKeyDown.bind(this);
     }
@@ -103,6 +109,42 @@ class TextField extends Core {
         } else {
             this.el.querySelector('.hig__text-field__input').classList.remove('hig__text-field__input--no-value');
         }
+    }
+
+    _setType(type) {
+        this.el.querySelector('.hig__text-field__input').setAttribute('type', type);
+    }
+
+    _showPasswordRevealButton() {
+        const iconString = this._getIconString('eye-blocked');
+        const passwordButton = this.el.querySelector('.hig__text-field__password-reveal-button');
+        passwordButton.innerHTML = iconString;
+        passwordButton.classList.add('hig__text-field__button--show');
+    }
+
+    _hidePasswordRevealButton() {
+        const passwordButton = this.el.querySelector('.hig__text-field__password-reveal-button');
+        passwordButton.classList.remove('hig__text-field__button--show');
+    }
+
+    _onPasswordRevealButtonClick(fn) {
+        return this._attachListener("mousedown", '.hig__text-field__password-reveal-button', this.el, fn);
+    }
+
+    _showPasswordHideButton() {
+        const iconString = this._getIconString('eye');
+        const passwordButton = this.el.querySelector('.hig__text-field__password-hide-button');
+        passwordButton.innerHTML = iconString;
+        passwordButton.classList.add('hig__text-field__button--show');
+    }
+
+    _hidePasswordHideButton() {
+        const passwordButton = this.el.querySelector('.hig__text-field__password-hide-button');
+        passwordButton.classList.remove('hig__text-field__button--show');
+    }
+
+    _onPasswordHideButtonClick(fn) {
+        return this._attachListener("mousedown", '.hig__text-field__password-hide-button', this.el, fn);
     }
 
 }
