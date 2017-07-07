@@ -3,9 +3,30 @@
 
 .hig__text-field {
     position: relative;
+    display: flex;
     font-family: 'ArtifaktElement', sans-serif;
     margin: 30px 0;
     max-width: 300px;
+}
+
+.hig__text-field__icon-spacer {
+    flex: 0 0 30px;
+    margin-right: 5px;
+}
+
+.hig__text-field__content {
+    flex: 1 1 auto;
+}
+
+.hig__text-field__icon {
+    display: none;
+    position: absolute;
+    left: -35px;
+    bottom: 2px;
+
+    &.hig__text-field__icon--visible {
+        display: block;
+    }
 }
 
 .hig__text-field__label,
