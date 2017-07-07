@@ -64,7 +64,7 @@ export class Module extends HIGElement {
 
   toggleCollapsed() {
     this.state.collapsed = !this.state.collapsed;
-    this._render();
+    this.commitUpdate({query: undefined})
   }
 
   componentDidMount() {
@@ -153,7 +153,6 @@ export class Module extends HIGElement {
     if (childMatches.some(m => m)) {
       let collapsed = false;
       this.showSelf(collapsed);
-      // iterate over the matching children ?
     } else if (this.matches(query)) {
       let collapsed = true;
       this.showSelf(collapsed);
@@ -165,6 +164,7 @@ export class Module extends HIGElement {
   expandAll() {
     this.showSelf(false);
     this.submodules.forEach(submodule => {
+      submodule.commitUpdate({query: this.props.query})
       submodule.show();
     });
   }
@@ -172,6 +172,7 @@ export class Module extends HIGElement {
   collapseAll() {
     this.showSelf(true);
     this.submodules.forEach(submodule => {
+      submodule.commitUpdate({query: this.props.query})
       submodule.hide();
     });
   }
@@ -195,16 +196,14 @@ export class Module extends HIGElement {
   }
 
   _render() {
-    if (this.props.query !== undefined && this.props.query.length === 0) {
-      this.collapseAll();
-    } else if (this.props.query !== undefined) {
-      this.showMatches(this.props.query);
-    } else {
+    if (this.props.query === undefined) {
       if (this.state.collapsed) {
         this.collapseAll();
       } else {
         this.expandAll();
       }
+    } else  {
+      this.showMatches(this.props.query);
     }
 
     this.submodules.forEach(submodule => {

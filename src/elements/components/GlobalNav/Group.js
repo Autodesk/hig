@@ -65,6 +65,7 @@ export class Group extends HIGElement {
 
   expandModules() {
     this.modules.forEach(module => {
+      module.commitUpdate({query: undefined})
       module.expandAll();
     });
     this._render();
@@ -72,6 +73,7 @@ export class Group extends HIGElement {
 
   collapseModules() {
     this.modules.forEach(module => {
+      this.commitUpdate({query: undefined})
       module.collapseAll();
     });
     this._render();
