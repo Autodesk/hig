@@ -12,7 +12,7 @@ var Core = require('_core.js');
 
 class TextField extends Core {
 
-    constructor(options){
+    constructor(options = {}){
         if (!options.name) {
             // Ensure each text field component has a name so the label can be associated to the input
             const randomName = Math.floor(Math.random() * 100000, 5).toString()
@@ -22,10 +22,14 @@ class TextField extends Core {
 
         this._render(Template, options);
         this._handleKeyDown = this._handleKeyDown.bind(this);
+        this.initialOptions = options;
     }
 
     _componentDidMount() {
         this.el.querySelector('.hig__text-field__input').addEventListener('input', this._handleKeyDown);
+        if (this.initialOptions.icon) {
+            this.setIcon(this.initialOptions.icon);
+        }
     }
 
     setLabel(label){
@@ -53,6 +57,22 @@ class TextField extends Core {
         this._findDOMEl('.hig__text-field__label', this.el).setAttribute('for', name);
         this._findDOMEl('.hig__text-field__input', this.el).setAttribute('id', name);
         this._findDOMEl('.hig__text-field__input', this.el).setAttribute('name', name);
+    }
+
+    setIcon(icon) {
+        const iconEl = this._findDOMEl('.hig__text-field__icon', this.el);
+
+        if (icon && icon.length > 0) {
+            const iconString = this._getIconString(icon);
+
+            iconEl.innerHTML = iconString;
+            iconEl.classList.add('hig__text-field__icon--visible');
+            this._findOrAddElement('ICON-SPACER', 'div', '.hig__text-field__icon-spacer');
+        } else {
+            iconEl.classList.remove('hig__text-field__icon--visible');
+            this._removeElementIfFound('.hig__text-field__icon-spacer');
+        }
+
     }
 
     setInstructions(instructions){
@@ -153,6 +173,7 @@ TextField._interface = Interface['basics']['FormElements']['partials']['TextFiel
 TextField._defaults = {
     "label": "",
     "name": "",
+    "icon": null,
     "placeholder": "",
     "value": "",
     "instructions": ""

@@ -25,6 +25,11 @@
         </div>
 
         <div class='test-group'>
+            <div class='tests-text-field-icon-heading'></div>
+            <div class='tests-text-field-icon'></div>
+        </div>
+
+        <div class='test-group'>
             <div class='tests-text-field-update-heading'></div>
             <div class='tests-text-field-update'></div>
         </div>
@@ -73,11 +78,33 @@
             DisabledTextField.disable();
 
 
+
+            // TEXT FIELD WITH ICON
+
+            const IconHeading = new Heading({
+                text: "TextField with icon",
+                size: 3
+            });
+
+            const IconTextField = new TextField({
+                label: "What is your favorite secret society?",
+                placeholder: "Skull & Bones",
+                icon: 'eye'
+            });
+
+            IconHeading.mount('.tests-text-field-icon-heading');
+            IconTextField.mount('.tests-text-field-icon');
+
+            IconTextField.setIcon('eye-blocked');
+
+
+
             // TEXT FIELD CONFIGURED WITH SETTERS
 
             const SetterHeading = new Heading({
                 text: "TextField configured with setters",
-                size: 3
+                size: 3,
+                icon: 'assets'
             });
 
             const SetterTextField = new TextField();
@@ -91,6 +118,7 @@
             SetterTextField.setPlaceholder('Updated placeholder');
             SetterTextField.setValue('Updated value');
             SetterTextField.required('You have to fill this in.');
+            SetterTextField.setIcon(null);
 
 
             // TEXT FIELD WITH EVENT LISTENERS

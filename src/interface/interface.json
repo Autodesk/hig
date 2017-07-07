@@ -353,6 +353,12 @@
                                 "{String} label used to identify the field when submitted"
                             ]
                         },
+                        "setIcon": {
+                            "desc": "sets the icon of the text field",
+                            "params": [
+                                "{String} icon ID"
+                            ]
+                        },
                         "setPlaceholder": {
                             "desc": "sets the placeholder",
                             "params": [
@@ -404,6 +410,7 @@
                     "defaults":{
                         "label": "{String} label for our text field",
                         "name": "{String} name identifier for our text field",
+                        "icon": "{String} icon ID",
                         "placeholder": "{String} placeholder text for our text field",
                         "value": "{String} (optional) input value for text field",
                         "instructions": "{String} (optional) instructions under the text field"

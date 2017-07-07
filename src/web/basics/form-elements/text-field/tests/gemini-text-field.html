@@ -44,9 +44,12 @@
         </style>
     </head>
     <body>
-        <div class='test-group'>
-            <div class='tests-text-field-heading'></div>
+        <div class='test-group test-group-default'>
             <div class='tests-text-field'></div>
+        </div>
+
+        <div class='test-group test-group-icon'>
+            <div class='tests-text-field-icon'></div>
         </div>
 
         <script>
@@ -57,12 +60,20 @@
 
             const DefaultTextField = new TextField({
                 label: "Our label",
-                name: "testlabel",
                 placeholder: "Our placeholder",
                 instructions: "Type your words into the text field"
             });
 
             DefaultTextField.mount('.tests-text-field');
+
+            // TEXT FIELD CONFIGURED WITH DEFAULTS
+
+            const IconTextField = new TextField({
+                label: "Eye color",
+                icon: "eye"
+            });
+
+            IconTextField.mount('.tests-text-field-icon');
 
         </script>
 
