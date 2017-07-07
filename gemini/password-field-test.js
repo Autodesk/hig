@@ -27,7 +27,7 @@ gemini.suite('password field', (parent) => {
                 actions.sendKeys(this.revealButtonfield, '1password');
             })
             .capture('with password revealed', function(actions, find) {
-                const passwordRevealButton = find('.test-group-reveal .hig__text-field__password-button');
+                const passwordRevealButton = find('.test-group-reveal .hig__text-field__password-reveal-button');
                 actions.mouseDown(passwordRevealButton);
             });
   });

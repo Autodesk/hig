@@ -61,6 +61,18 @@ class PasswordField extends Core {
         return this.textField._onPasswordRevealButtonClick(fn);
     }
 
+    showPasswordHideButton() {
+        this.textField._showPasswordHideButton();
+    }
+
+    hidePasswordHideButton() {
+        this.textField._hidePasswordHideButton();
+    }
+
+    onPasswordHideButtonClick(fn) {
+        return this.textField._onPasswordHideButtonClick(fn);
+    }
+
 }
 
 textFieldMethods.forEach(fn => {

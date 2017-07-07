@@ -186,6 +186,9 @@
                         "hidePassword": {
                             "desc": "Obscures the characters entered into the password field"
                         },
+                        "hidePasswordHideButton": {
+                            "desc": "Hides a button used to hide the password"
+                        },
                         "hidePasswordRevealButton": {
                             "desc": "Hides a button used to reveal the password"
                         },
@@ -209,6 +212,11 @@
                         },
                         "onInput": {
                             "desc": "Calls the provided callback when user changes the value of the password field",
+                            "params": "HIG.abstract.EventObject.params",
+                            "returns": "HIG.abstract.EventObject.returns"
+                        },
+                        "onPasswordHideButtonClick": {
+                            "desc": "Calls the provided callback when user clicks on the password hide button",
                             "params": "HIG.abstract.EventObject.params",
                             "returns": "HIG.abstract.EventObject.returns"
                         },
@@ -255,6 +263,9 @@
                             "params": [
                                 "{String} value for our password field"
                             ]
+                        },
+                        "showPasswordHideButton": {
+                            "desc": "Shows a button used to hide the password"
                         },
                         "showPasswordRevealButton": {
                             "desc": "Shows a button used to reveal the password"

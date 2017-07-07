@@ -117,18 +117,34 @@ class TextField extends Core {
 
     _showPasswordRevealButton() {
         const iconString = this._getIconString('eye-blocked');
-        const passwordButton = this.el.querySelector('.hig__text-field__password-button');
+        const passwordButton = this.el.querySelector('.hig__text-field__password-reveal-button');
         passwordButton.innerHTML = iconString;
         passwordButton.classList.add('hig__text-field__button--show');
     }
 
     _hidePasswordRevealButton() {
-        const passwordButton = this.el.querySelector('.hig__text-field__password-button');
+        const passwordButton = this.el.querySelector('.hig__text-field__password-reveal-button');
         passwordButton.classList.remove('hig__text-field__button--show');
     }
 
     _onPasswordRevealButtonClick(fn) {
-        return this._attachListener("mousedown", '.hig__text-field__password-button', this.el, fn);
+        return this._attachListener("mousedown", '.hig__text-field__password-reveal-button', this.el, fn);
+    }
+
+    _showPasswordHideButton() {
+        const iconString = this._getIconString('eye');
+        const passwordButton = this.el.querySelector('.hig__text-field__password-hide-button');
+        passwordButton.innerHTML = iconString;
+        passwordButton.classList.add('hig__text-field__button--show');
+    }
+
+    _hidePasswordHideButton() {
+        const passwordButton = this.el.querySelector('.hig__text-field__password-hide-button');
+        passwordButton.classList.remove('hig__text-field__button--show');
+    }
+
+    _onPasswordHideButtonClick(fn) {
+        return this._attachListener("mousedown", '.hig__text-field__password-hide-button', this.el, fn);
     }
 
 }

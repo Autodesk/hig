@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="18px" viewBox="0 0 24 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
-    <title>icon-no-eye-24.svg</title>
+    <title>Wiki Stuff </title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Form-Elements-Dev-Assets-(Thijs)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="FORM-STYLES-FOR-DEV-(Comps/Assets-for-Dev)-" transform="translate(-483.000000, -938.000000)" stroke-width="1.5">
-            <g id="08-Password-Handling" transform="translate(42.000000, 903.000000)">
-                <g id="icon-no-eye-24.svg" transform="translate(441.000000, 35.000000)">
-                    <path d="M18.9247,4.7126 C21.0537,6.2976 22.5797,8.4176 22.5797,8.4176 C22.5797,8.4176 18.7387,15.1466 11.7547,15.1466 C10.7807,15.1466 10.3967,15.1326 9.5287,14.8696 M4.1767,17.3756 L19.6787,0.5076 M15.1637,2.9976 C14.0177,2.6106 13.1597,2.4996 11.7547,2.4996 C4.9167,2.4996 0.9007,8.4176 0.9007,8.4176 C0.9007,8.4176 2.6427,11.0836 5.5497,13.0586" id="Stroke-1" stroke="#939CA5"></path>
-                    <path d="M15.6532,8.7985 C15.6532,10.8465 13.9932,12.5075 11.9452,12.5075 C9.8972,12.5075 8.2362,10.8465 8.2362,8.7985 C8.2362,6.7505 9.8972,5.0905 11.9452,5.0905 C13.9932,5.0905 15.6532,6.7505 15.6532,8.7985 Z" id="Stroke-3" stroke="#949DA2"></path>
+    <g id="Styles-on-Wiki-(Working-File-Isabela)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Wiki-Stuff-" transform="translate(-4037.000000, -2314.000000)" stroke-width="1.5" stroke="#949DA2">
+            <g id="eye-blocked" transform="translate(4039.000000, 2318.000000)">
+                <g id="icon-no-eye-24.svg">
+                    <path d="M18.9247,4.7126 C21.0537,6.2976 22.5797,8.4176 22.5797,8.4176 C22.5797,8.4176 18.7387,15.1466 11.7547,15.1466 C10.7807,15.1466 10.3967,15.1326 9.5287,14.8696 M4.1767,17.3756 L19.6787,0.5076 M15.1637,2.9976 C14.0177,2.6106 13.1597,2.4996 11.7547,2.4996 C4.9167,2.4996 0.9007,8.4176 0.9007,8.4176 C0.9007,8.4176 2.6427,11.0836 5.5497,13.0586" id="Stroke-1"></path>
+                    <path d="M15.6532,8.7985 C15.6532,10.8465 13.9932,12.5075 11.9452,12.5075 C9.8972,12.5075 8.2362,10.8465 8.2362,8.7985 C8.2362,6.7505 9.8972,5.0905 11.9452,5.0905 C13.9932,5.0905 15.6532,6.7505 15.6532,8.7985 Z" id="Stroke-3"></path>
                 </g>
             </g>
         </g>
