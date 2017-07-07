@@ -1,0 +1,15 @@
+@import '~basics/colors/colors.scss';
+
+input[type="checkbox"].hig__form-elements__checkbox {
+  &--required {
+    ::after {
+      content: "*"
+    }
+  }
+  &--checked {
+
+  }
+  &--disabled {
+
+  }
+}

@@ -1,0 +1,46 @@
+<html>
+<head>
+  <!-- Probably will need to alter this relative path. -->
+  <link rel="stylesheet" href="../../../../../../dist/hig.css">
+  <script type="text/javascript" src="../../../../../../dist/hig.js"></script>
+  <script type="text/javascript" src="../../../../../../src/web/helpers/test.js"></script>
+
+  <style>
+    body {
+      padding: 30px;
+    }
+
+    .test-group {
+      margin-bottom: 50px;
+    }
+  </style>
+</head>
+<body>
+<div class='test-container'>
+
+  <script>
+    // Build your new hig element to test here
+    const Heading = Hig.Typography._partials.Heading;
+    const FormElements = new Hig.FormElements();
+    const Checkbox = FormElements.partials.Checkbox;
+
+    // TEXT FIELD CONFIGURED WITH DEFAULTS
+
+    const DefaultHeading = new Heading({
+      text: "TextField configured with defaults",
+      size: 3
+    });
+
+    const DefaultTextField = new TextField({
+      label: "Our label",
+      name: "testlabel",
+      placeholder: "Our placeholder",
+      instructions: "Type your words into the text field"
+    });
+
+    DefaultHeading.mount('.tests-text-field-heading');
+    DefaultTextField.mount('.tests-text-field');
+
+  </script>
+</body>
+</html>

@@ -416,6 +416,59 @@
                         "instructions": "{String} (optional) instructions under the text field"
                     }
                 }
+                "Checkbox": {
+                  "methods": {
+                      "setLabel": {
+                          "desc": "sets the label",
+                          "params": [
+                              "{String} label for our checkbox"
+                          ]
+                      },
+                      "setName": {
+                          "desc": "sets the name of the checkbox as submitted with a form",
+                          "params": [
+                              "{String} label used to identify the checkbox when submitted"
+                          ]
+                      },
+                      "setValue": {
+                          "desc": "sets the value",
+                          "params": [
+                              "{String} value for our checkbox"
+                          ]
+                      },
+                      "setChecked": {
+                          "desc": "sets whether the checkbox is checked",
+                          "params": [ "{boolean} true if checked, false if not."]
+                      },
+                      "required": {
+                          "desc": "makes checkbox required",
+                          "params": [
+                              "{String} required label text"
+                          ]
+                      },
+                      "noLongerRequired": {
+                          "desc": "makes checkbox not required"
+                      },
+                      "disable": {
+                          "desc": "Disable the checkbox, preventing user interaction"
+                      },
+                      "enable": {
+                          "desc": "Enable the checkbox, reenabling user interaction"
+                      },
+                      "onHover": {
+                          "desc": "Calls the provided callback when the checkbox is in a hover state",
+                          "params": "HIG.abstract.EventObject.params",
+                          "returns": "HIG.abstract.EventObject.returns"
+                      },
+                      "onFocus": {
+                          "desc": "Calls the provided callback when focus enters the checkbox",
+                          "params": "HIG.abstract.EventObject.params",
+                          "returns": "HIG.abstract.EventObject.returns"
+                      },
+                      "onChange": {
+                          "desc": "Calls the provided callback when user changes the value of the checkbox then moves focus elsewhere",
+                          "params": "HIG.abstract.EventObject.params",
+                          "returns": "HIG.abstract.EventObject.returns"
             }
         },
         "Flyout": {
