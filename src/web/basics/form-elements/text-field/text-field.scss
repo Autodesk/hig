@@ -30,10 +30,7 @@
 
 .hig__text-field__label {
     position: absolute;
-    pointer-events: none;
-
-    top: 0;
-    pointer-events: all;
+    top: -24px;
     color: color(hig-gray-30);
     font-size: 12px;
     line-height: 14px;
@@ -43,14 +40,14 @@
     transition-delay: 0.1s;
 
     .hig__text-field__input--no-value + & {
-        top: 22px;
+        top: -2px;
         left: 1px;
         font-size: 14px;
         line-height: 20px;
     }
 
     .hig__text-field__input--no-value.hig__text-field__input:focus + & {
-        top: 0;
+        top: -24px;
         left: 0;
         font-size: 12px;
         line-height: 14px;
@@ -69,6 +66,7 @@
 
 .hig__text-field__label-placeholder {
     color: transparent;
+    pointer-events: none;
 }
 
 .hig__text-field__input {
@@ -123,6 +121,16 @@
         }
     }
 
+    &[type=password] {
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+
+    &[type=password].hig__text-field__input--no-value {
+        font-size: 14px;
+        letter-spacing: 0;
+    }
+
 }
 
 .hig__text-field__instructions,
@@ -137,4 +145,25 @@
     content: '*';
     display: inline-block;
     margin-right: 5px;
+}
+
+.hig__text-field__input-wrapper {
+    position: relative;
+}
+
+.hig__text-field__button {
+    display: none;
+    position: absolute;
+    top: -3px;
+    right: 0;
+    border: none;
+    background: none;
+
+    &:focus {
+        outline: none;
+    }
+
+    &.hig__text-field__button--show {
+        display: block;
+    }
 }

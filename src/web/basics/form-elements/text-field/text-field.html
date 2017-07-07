@@ -1,9 +1,12 @@
 <div class='hig__text-field'>
     <!--LABEL-PLACEHOLDER-->
     {{#label}}<div class='hig__text-field__label-placeholder'>{{label}}</div>{{/label}}
-    <input name="{{name}}" id="{{name}}" class='hig__text-field__input hig__text-field__input--no-value' placeholder="{{placeholder}}" value="{{value}}">
-    <!--LABEL-->
-    {{#label}}<label for="{{name}}" class='hig__text-field__label'>{{label}}</label>{{/label}}
+    <div class="hig__text-field__input-wrapper">
+        <button class="hig__text-field__button hig__text-field__password-button"></button>
+        <input name="{{name}}" id="{{name}}" class='hig__text-field__input hig__text-field__input--no-value' placeholder="{{placeholder}}" value="{{value}}">
+        <!--LABEL-->
+        {{#label}}<label for="{{name}}" class='hig__text-field__label'>{{label}}</label>{{/label}}
+    </div>
     <!--INSTRUCTIONS-->
     {{#instructions}}<p class="hig__text-field__instructions">{{instructions}}</p>{{/instructions}}
     <!--REQUIRED-NOTICE-->
