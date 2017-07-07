@@ -37,11 +37,11 @@ exports[`<Profile> constructor has a good snapshot 1`] = `
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__email\\">charuvenki@example.com</div>
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__links\\">
         <a href=\\"#\\" class=\\"hig__button hig__button--secondary hig__button--small\\" title=\\"Sign Out\\">
-    
+    <!--ICON-->
     <span class=\\"hig__button__title\\">Sign Out</span>
 </a><!--SIGN_OUT_BUTTON-->
         <a href=\\"https://www.autodesk.com\\" class=\\"hig__button hig__button--secondary hig__button--small\\" title=\\"Profile Settings\\">
-    
+    <!--ICON-->
     <span class=\\"hig__button__title\\">Profile Settings</span>
 </a><!--SETTINGS_LINK-->
     </div>
@@ -96,11 +96,11 @@ exports[`<Profile> setting and updating props can set props for email 1`] = `
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__email\\">foo@example.com</div>
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__links\\">
         <a href=\\"#\\" class=\\"hig__button hig__button--secondary hig__button--small\\" title=\\"Sign Out\\">
-    
+    <!--ICON-->
     <span class=\\"hig__button__title\\">Sign Out</span>
 </a><!--SIGN_OUT_BUTTON-->
         <a href=\\"https://www.autodesk.com\\" class=\\"hig__button hig__button--secondary hig__button--small\\" title=\\"Profile Settings\\">
-    
+    <!--ICON-->
     <span class=\\"hig__button__title\\">Profile Settings</span>
 </a><!--SETTINGS_LINK-->
     </div>
@@ -155,11 +155,11 @@ exports[`<Profile> setting and updating props can set props for image 1`] = `
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__email\\">email@example.com</div>
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__links\\">
         <a href=\\"#\\" class=\\"hig__button hig__button--secondary hig__button--small\\" title=\\"Sign Out\\">
-    
+    <!--ICON-->
     <span class=\\"hig__button__title\\">Sign Out</span>
 </a><!--SIGN_OUT_BUTTON-->
         <a href=\\"https://www.autodesk.com\\" class=\\"hig__button hig__button--secondary hig__button--small\\" title=\\"Profile Settings\\">
-    
+    <!--ICON-->
     <span class=\\"hig__button__title\\">Profile Settings</span>
 </a><!--SETTINGS_LINK-->
     </div>
@@ -214,11 +214,11 @@ exports[`<Profile> setting and updating props can set props for name 1`] = `
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__email\\">email@example.com</div>
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__links\\">
         <a href=\\"#\\" class=\\"hig__button hig__button--secondary hig__button--small\\" title=\\"Sign Out\\">
-    
+    <!--ICON-->
     <span class=\\"hig__button__title\\">Sign Out</span>
 </a><!--SIGN_OUT_BUTTON-->
         <a href=\\"https://www.autodesk.com\\" class=\\"hig__button hig__button--secondary hig__button--small\\" title=\\"Profile Settings\\">
-    
+    <!--ICON-->
     <span class=\\"hig__button__title\\">Profile Settings</span>
 </a><!--SETTINGS_LINK-->
     </div>
@@ -273,11 +273,11 @@ exports[`<Profile> setting and updating props can set props for profileSettingsL
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__email\\">email@example.com</div>
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__links\\">
         <a href=\\"#\\" class=\\"hig__button hig__button--secondary hig__button--small\\" title=\\"Sign Out\\">
-    
+    <!--ICON-->
     <span class=\\"hig__button__title\\">Sign Out</span>
 </a><!--SIGN_OUT_BUTTON-->
         <a href=\\"https://www.autodesk.com\\" class=\\"hig__button hig__button--secondary hig__button--small\\" title=\\"Settings\\">
-    
+    <!--ICON-->
     <span class=\\"hig__button__title\\">Settings</span>
 </a><!--SETTINGS_LINK-->
     </div>
@@ -332,11 +332,11 @@ exports[`<Profile> setting and updating props can set props for profileSettingsL
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__email\\">email@example.com</div>
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__links\\">
         <a href=\\"#\\" class=\\"hig__button hig__button--secondary hig__button--small\\" title=\\"Sign Out\\">
-    
+    <!--ICON-->
     <span class=\\"hig__button__title\\">Sign Out</span>
 </a><!--SIGN_OUT_BUTTON-->
         <a href=\\"http://www.google.com\\" class=\\"hig__button hig__button--secondary hig__button--small\\" title=\\"Profile Settings\\">
-    
+    <!--ICON-->
     <span class=\\"hig__button__title\\">Profile Settings</span>
 </a><!--SETTINGS_LINK-->
     </div>
@@ -391,11 +391,11 @@ exports[`<Profile> setting and updating props can set props for signOutLabel 1`]
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__email\\">email@example.com</div>
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__links\\">
         <a href=\\"#\\" class=\\"hig__button hig__button--secondary hig__button--small\\" title=\\"Logout\\">
-    
+    <!--ICON-->
     <span class=\\"hig__button__title\\">Logout</span>
 </a><!--SIGN_OUT_BUTTON-->
         <a href=\\"https://www.autodesk.com\\" class=\\"hig__button hig__button--secondary hig__button--small\\" title=\\"Profile Settings\\">
-    
+    <!--ICON-->
     <span class=\\"hig__button__title\\">Profile Settings</span>
 </a><!--SETTINGS_LINK-->
     </div>
@@ -450,11 +450,11 @@ exports[`<Profile> setting and updating props can set props for signOutLink 1`] 
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__email\\">email@example.com</div>
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__links\\">
         <a href=\\"/signout\\" class=\\"hig__button hig__button--secondary hig__button--small\\" title=\\"Sign Out\\">
-    
+    <!--ICON-->
     <span class=\\"hig__button__title\\">Sign Out</span>
 </a><!--SIGN_OUT_BUTTON-->
         <a href=\\"https://www.autodesk.com\\" class=\\"hig__button hig__button--secondary hig__button--small\\" title=\\"Profile Settings\\">
-    
+    <!--ICON-->
     <span class=\\"hig__button__title\\">Profile Settings</span>
 </a><!--SETTINGS_LINK-->
     </div>
@@ -509,11 +509,11 @@ exports[`<Profile> setting and updating props can update props for email 1`] = `
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__email\\" title=\\"hellokitty@example.com\\">hellokitty@example.com</div>
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__links\\">
         <a href=\\"#\\" class=\\"hig__button hig__button--secondary hig__button--small\\" title=\\"Sign Out\\">
-    
+    <!--ICON-->
     <span class=\\"hig__button__title\\">Sign Out</span>
 </a><!--SIGN_OUT_BUTTON-->
         <a href=\\"https://www.autodesk.com\\" class=\\"hig__button hig__button--secondary hig__button--small\\" title=\\"Profile Settings\\">
-    
+    <!--ICON-->
     <span class=\\"hig__button__title\\">Profile Settings</span>
 </a><!--SETTINGS_LINK-->
     </div>
@@ -568,11 +568,11 @@ exports[`<Profile> setting and updating props can update props for image 1`] = `
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__email\\">email@example.com</div>
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__links\\">
         <a href=\\"#\\" class=\\"hig__button hig__button--secondary hig__button--small\\" title=\\"Sign Out\\">
-    
+    <!--ICON-->
     <span class=\\"hig__button__title\\">Sign Out</span>
 </a><!--SIGN_OUT_BUTTON-->
         <a href=\\"https://www.autodesk.com\\" class=\\"hig__button hig__button--secondary hig__button--small\\" title=\\"Profile Settings\\">
-    
+    <!--ICON-->
     <span class=\\"hig__button__title\\">Profile Settings</span>
 </a><!--SETTINGS_LINK-->
     </div>
@@ -627,11 +627,11 @@ exports[`<Profile> setting and updating props can update props for name 1`] = `
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__email\\">email@example.com</div>
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__links\\">
         <a href=\\"#\\" class=\\"hig__button hig__button--secondary hig__button--small\\" title=\\"Sign Out\\">
-    
+    <!--ICON-->
     <span class=\\"hig__button__title\\">Sign Out</span>
 </a><!--SIGN_OUT_BUTTON-->
         <a href=\\"https://www.autodesk.com\\" class=\\"hig__button hig__button--secondary hig__button--small\\" title=\\"Profile Settings\\">
-    
+    <!--ICON-->
     <span class=\\"hig__button__title\\">Profile Settings</span>
 </a><!--SETTINGS_LINK-->
     </div>
@@ -686,11 +686,11 @@ exports[`<Profile> setting and updating props can update props for profileSettin
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__email\\">email@example.com</div>
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__links\\">
         <a href=\\"#\\" class=\\"hig__button hig__button--secondary hig__button--small\\" title=\\"Sign Out\\">
-    
+    <!--ICON-->
     <span class=\\"hig__button__title\\">Sign Out</span>
 </a><!--SIGN_OUT_BUTTON-->
         <a href=\\"https://www.autodesk.com\\" class=\\"hig__button hig__button--secondary hig__button--small\\" title=\\"Preferences\\">
-    
+    <!--ICON-->
     <span class=\\"hig__button__title\\">Preferences</span>
 </a><!--SETTINGS_LINK-->
     </div>
@@ -745,11 +745,11 @@ exports[`<Profile> setting and updating props can update props for profileSettin
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__email\\">email@example.com</div>
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__links\\">
         <a href=\\"#\\" class=\\"hig__button hig__button--secondary hig__button--small\\" title=\\"Sign Out\\">
-    
+    <!--ICON-->
     <span class=\\"hig__button__title\\">Sign Out</span>
 </a><!--SIGN_OUT_BUTTON-->
         <a href=\\"http://www.sanrio.com\\" class=\\"hig__button hig__button--secondary hig__button--small\\" title=\\"Profile Settings\\">
-    
+    <!--ICON-->
     <span class=\\"hig__button__title\\">Profile Settings</span>
 </a><!--SETTINGS_LINK-->
     </div>
@@ -804,11 +804,11 @@ exports[`<Profile> setting and updating props can update props for signOutLabel 
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__email\\">email@example.com</div>
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__links\\">
         <a href=\\"#\\" class=\\"hig__button hig__button--secondary hig__button--small\\" title=\\"Sign Out\\">
-    
+    <!--ICON-->
     <span class=\\"hig__button__title\\">Sign Out</span>
 </a><!--SIGN_OUT_BUTTON-->
         <a href=\\"https://www.autodesk.com\\" class=\\"hig__button hig__button--secondary hig__button--small\\" title=\\"Profile Settings\\">
-    
+    <!--ICON-->
     <span class=\\"hig__button__title\\">Profile Settings</span>
 </a><!--SETTINGS_LINK-->
     </div>
@@ -863,11 +863,11 @@ exports[`<Profile> setting and updating props can update props for signOutLink 1
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__email\\">email@example.com</div>
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__links\\">
         <a href=\\"http://www.google.com\\" class=\\"hig__button hig__button--secondary hig__button--small\\" title=\\"Sign Out\\">
-    
+    <!--ICON-->
     <span class=\\"hig__button__title\\">Sign Out</span>
 </a><!--SIGN_OUT_BUTTON-->
         <a href=\\"https://www.autodesk.com\\" class=\\"hig__button hig__button--secondary hig__button--small\\" title=\\"Profile Settings\\">
-    
+    <!--ICON-->
     <span class=\\"hig__button__title\\">Profile Settings</span>
 </a><!--SETTINGS_LINK-->
     </div>
