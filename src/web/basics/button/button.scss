@@ -128,10 +128,17 @@
     }
 }
 
-.hig__button__icon > .hig__icon {
-    display: inline;
-    margin-right: 5px;
-    padding-left: 30px;
+.hig__button__icon {
+    display: inline-block;
+    height: 26px;
+    vertical-align: middle;
+
+    > .hig__icon {
+        display: inline;
+        margin-right: 5px;
+        padding-left: 30px;
+    }
+
 }
 
 .hig__button--disabled > .hig__button__icon > .hig__icon {
