@@ -1,5 +1,16 @@
-<div class='hig__form-elements__checkbox'>
-  <!--LABEL-PLACEHOLDER-->
-  {{ #label }}<div class="hig__form-elements__checkbox__label">{{ label }}</div>{{ /label }}
-  <input type="checkbox" checked="{{ checked }}" name="{{ name }}" id="{{ name }}" value="{{ value }}" class="hig__form-elements__checkbox__input">
+<div class='hig__form-elements__checkbox {{ #required }}hig__form-elements__checkbox--required{{ /required }} {{ #checked }}hig__form-elements__checkbox--checked{{ /checked }}'>
+  <!--CHECKBOX_LABEL-->
+  {{ #label }}
+    <label for="{{ name }}"
+      class="hig__form-elements__checkbox__label">
+      {{ label }}
+    </label>{{ /label }}
+  <input type="checkbox" class="hig__form-elements__checkbox__input"
+         {{ #required }}required{{/required}}
+          {{ #checked }}checked{{ /checked }}
+          {{ #disabled }}disabled{{ /disabled }}
+          name="{{ name }}" id="{{ name }}" value="{{ value }}"
+          >
+  <!--REQUIRED-NOTICE-->
+
 </div>

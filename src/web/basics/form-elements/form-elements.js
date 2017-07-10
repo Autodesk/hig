@@ -23,7 +23,7 @@ class FormElements extends Core {
 FormElements._interface = Interface['basics']['FormElements'];
 FormElements._defaults = {};
 FormElements._partials = {
-    Checkbox: Checkbox.
+    Checkbox: Checkbox,
     PasswordField: PasswordField,
     TextField: TextField,
     TextArea: TextArea

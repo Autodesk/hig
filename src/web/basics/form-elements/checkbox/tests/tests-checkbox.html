@@ -13,33 +13,147 @@
     .test-group {
       margin-bottom: 50px;
     }
+    .tests-checkbox { display: flex; flex-direction: row; }
   </style>
 </head>
 <body>
 <div class='test-container'>
-
+  <div class="tests-checkbox-heading"></div>
+  <div class="tests-checkbox"></div>
+  <div class="tests-checkbox1"></div>
+  <div class="tests-checkbox2"></div>
+  <hr>
+  <div class="tests-checkbox-heading3"></div>
+  <div class="tests-checkbox tests-checkbox3"></div>
+  <hr>
+  <div class="tests-checkbox-heading4"></div>
+  <br>
+  <div class="tests-checkbox tests-checkbox4"></div>
   <script>
     // Build your new hig element to test here
     const Heading = Hig.Typography._partials.Heading;
     const FormElements = new Hig.FormElements();
     const Checkbox = FormElements.partials.Checkbox;
 
-    // TEXT FIELD CONFIGURED WITH DEFAULTS
+    function handleChange() { console.log("Ch-Ch-Ch-Ch-Changes"); }
+    function handleHover() { console.log("Hovering") }
+    function handleFocus() { console.log("In focus") }
 
     const DefaultHeading = new Heading({
-      text: "TextField configured with defaults",
-      size: 3
+      text: "Different Checkboxes",
+      size: 2
     });
 
-    const DefaultTextField = new TextField({
-      label: "Our label",
-      name: "testlabel",
-      placeholder: "Our placeholder",
-      instructions: "Type your words into the text field"
+    const DefaultCheckbox = new Checkbox({
+      label: "So basic",
+      name: "am_i_checked",
+      value: "yes"
     });
 
-    DefaultHeading.mount('.tests-text-field-heading');
-    DefaultTextField.mount('.tests-text-field');
+    DefaultHeading.mount('.tests-checkbox-heading');
+    DefaultCheckbox.mount('.tests-checkbox');
+
+
+    const Checkbox1 = new Checkbox({
+      label: "I agree.",
+      name: "agreement",
+      value: "iagree",
+      checked: true
+    });
+
+    Checkbox1.mount('.tests-checkbox');
+
+    const Checkbox2 = new Checkbox({
+      label: "Required",
+      name: "ready_to_work",
+      value: "work_work",
+      required: true,
+    });
+
+    Checkbox2.mount('.tests-checkbox');
+    Checkbox2.onChange(handleChange);
+    Checkbox2.onHover(handleHover);
+    Checkbox2.onFocus(handleFocus);
+
+    const BasicSettingsHeading3 = new Heading({
+      text: "Disabled",
+      size: 2
+    });
+
+    const Checkbox3 = new Checkbox({
+      label: "Disabled",
+      name: "u_cant_check_this",
+      value: "hammertime",
+      disabled: true
+    });
+
+    BasicSettingsHeading3.mount('.tests-checkbox-heading3');
+    Checkbox3.mount('.tests-checkbox3');
+
+    const FancyCheckboxesHeading = new Heading({
+      text: "Fancy Checkbox",
+      size: 2
+    });
+    const FancyCheckbox = new Checkbox({
+      label: "Fancy!",
+      name: "hella",
+      value: "fancy"
+    });
+    FancyCheckboxesHeading.mount('.tests-checkbox-heading4');
+    FancyCheckbox.mount('.tests-checkbox4');
+
+    const DisableButton = new Hig.Button({
+      title: "Disable checkbox",
+      link: "#"
+    });
+
+    const EnableButton = new Hig.Button({
+      title: "Enable checkbox",
+      link: "#"
+    });
+
+    const CheckButton = new Hig.Button({
+      title: "Check checkbox",
+      link: "#"
+    });
+
+    const UncheckButton = new Hig.Button({
+      title: "Uncheck the checkbox",
+      link: "#"
+    });
+
+    const RequireButton = new Hig.Button({
+      title: "Require checkbox",
+      link: "#"
+    });
+    const NotrequiredButton = new Hig.Button({
+      title: "Stop requiring checkbox",
+      link: "#"
+    });
+
+    [DisableButton, EnableButton, CheckButton, UncheckButton,
+     RequireButton, NotrequiredButton].forEach(function(button) {
+      button.mount('.tests-checkbox-heading4');
+    });
+
+    NotrequiredButton.onClick(function(e) {
+      FancyCheckbox.noLongerRequired();
+    });
+    RequireButton.onClick(function(e) {
+      FancyCheckbox.required();
+    });
+    UncheckButton.onClick(function(e) {
+      FancyCheckbox.uncheck();
+    });
+    CheckButton.onClick(function(e) {
+      FancyCheckbox.check();
+    });
+    EnableButton.onClick(function(e) {
+      FancyCheckbox.enable();
+    });
+    DisableButton.onClick(function(e) {
+      FancyCheckbox.disable();
+    });
 
   </script>
 </body>
