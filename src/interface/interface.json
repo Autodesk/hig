@@ -415,6 +415,83 @@
                         "value": "{String} (optional) input value for text field",
                         "instructions": "{String} (optional) instructions under the text field"
                     }
+                },
+                "Range":{
+                  "methods":{
+                    "setMaxValue": {
+                      "desc": "sets maximum value for range",
+                      "params":[
+                          "{Integer} max value for the range"
+                      ]   
+                    },
+                    "setMinValue": {
+                      "desc": "sets minimum value for range",
+                      "params":[
+                          "{Integer} minimum value for the range"
+                      ] 
+                    },
+                    "setValue": {
+                      "desc": "sets specific value for range",
+                      "params":[
+                          "{Integer} sets specific value for the range"
+                      ]
+                    },
+                    "setLabel": {
+                            "desc": "sets the label",
+                            "params": [
+                                "{String} label - label for the text area"
+                            ]
+                    },
+                    "setInstructions": {
+                        "desc": "sets the instruction text",
+                        "params": [
+                            "{String} instructions - instructions for the text area"
+                        ]
+                    },
+                    "setValue": {
+                        "desc": "sets the value",
+                        "params": [
+                            "{String} value for our text field"
+                        ]
+                    },
+                    "required": {
+                        "desc": "makes field required",
+                        "params": [
+                            "{String} required label text"
+                        ]
+                    },
+                    "noLongerRequired": {
+                        "desc": "makes field not required"
+                    },
+                    "disable": {
+                        "desc": "Disable the text field, preventing user interaction"
+                    },
+                    "enable": {
+                        "desc": "Enable the text field, reenabling user interaction"
+                    },
+                    "onBlur": {
+                            "desc": "Calls the provided callback when user puts blur on the range element",
+                            "params": "HIG.abstract.EventObject.params",
+                            "returns": "HIG.abstract.EventObject.returns"
+                    },
+                     "onFocus": {
+                            "desc": "Calls the provided callback when user puts focus on the range element",
+                            "params": "HIG.abstract.EventObject.params",
+                            "returns": "HIG.abstract.EventObject.returns"
+                    },
+                     "onChange": {
+                            "desc": "Calls the provided callback when user changes the value of the range element then moves focus elsewhere",
+                            "params": "HIG.abstract.EventObject.params",
+                            "returns": "HIG.abstract.EventObject.returns"
+                    }
+                  },
+                  "defaults":{
+                        "value": "{Integer} default value where range starts",
+                        "maxValue": "{Integer} max value for range",
+                        "minValue": "{Integer} max value for range",
+                        "label": "{String} label for our range",
+                        "instructions": "{String} (optional) instructions under the range"
+                  }
                 }
             }
         },

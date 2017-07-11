@@ -11,7 +11,6 @@ var Core = require('_core.js');
  */
 
 class Collapse extends Core {
-
     constructor(options){
         super(options);
         this._render(Template, options);

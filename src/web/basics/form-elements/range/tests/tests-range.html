@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../../../../../../../../dist/hig.css">
+        <script type="text/javascript" src="../../../../../../../../dist/hig.js"></script>
+
+        <style>
+            body{
+                padding: 30px;
+            }
+
+            .test-group {
+                margin-bottom: 50px;
+            }
+        </style>
+    </head>
+
+	<body>
+		<div class='test-group'>
+				<div class='tests-range-heading'></div>
+				<div class='tests-range'></div>
+		</div>
+
+		<div class='test-group'>
+				<div class='tests-range-disabled-heading'></div>
+				<div class='tests-range-disabled'></div>
+		</div>
+
+		<script>
+			const Heading = Hig.Typography._partials.Heading;
+			const FormElements = new Hig.FormElements();
+			const Range = FormElements.partials.Range;
+
+			// RANGE CONFIGURED WITH DEFAULTS
+
+			const DefaultHeading = new Heading({
+				text: "Range configured with defaults",
+				size: 3
+			})
+
+			DefaultHeading.mount('.tests-range-heading');
+
+			const DefaultRange = new Range();
+
+
+			DefaultRange.mount('.tests-range');
+
+			DefaultRange.setValue(5);
+			DefaultRange.setMinValue(0);
+			DefaultRange.setMaxValue(10);
+			DefaultRange.setInstructions('Instructions for Range');
+			DefaultRange.setLabel('Range Label');
+
+			function log(event) {
+				const message = `${event.type} event triggered`;
+				console.log(message);
+			}
+
+			DefaultRange.onBlur(log);
+			DefaultRange.onChange(log);
+			DefaultRange.onFocus(log);	
+		</script>	
+	</body>	
+</html>	
