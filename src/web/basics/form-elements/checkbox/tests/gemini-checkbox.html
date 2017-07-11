@@ -1,12 +1,19 @@
 <html>
 <head>
- <!-- Probably will need to alter this relative path. -->
- <link rel="stylesheet" href="../../../../../dist/hig.css">
- <script type="text/javascript" src="../../../../../dist/hig.js"></script>
+ <link rel="stylesheet" href="../../../../../../dist/hig.css">
+ <script type="text/javascript" src="../../../../../../dist/hig.js"></script>
+ <script type="text/javascript" src="../../../../../../src/web/helpers/test.js"></script>
 
- <!-- ADD STYLE  -->
  <style>
+  body {
+   padding: 30px;
+  }
 
+  .test-group {
+   margin-bottom: 50px;
+  }
+  .test-container { display: flex; flex-direction: row; }
+  /*.tests-checkbox { display: flex; flex-direction: row; flex-shrink: 0; flex-grow: 1; }*/
  </style>
 </head>
 <body>
@@ -14,8 +21,8 @@
 <div class='test-container' style="padding: 40px; margin: 0;">
  <div class="tests-checkbox-heading"></div>
  <div class="tests-checkbox"></div>
- <div class="tests-checkbox1"></div>
- <div class="tests-checkbox2"></div>
+ <div class="tests-checkbox tests-checkbox1"></div>
+ <div class="tests-checkbox tests-checkbox2"></div>
  <br>
  <div class="tests-checkbox tests-checkbox3"></div>
  <br>
@@ -62,7 +69,7 @@
   checked: true
  });
 
- Checkbox1.mount('.tests-checkbox');
+ Checkbox1.mount('.tests-checkbox1');
 
  const Checkbox2 = new Checkbox({
   label: "Required",
@@ -70,7 +77,7 @@
   value: "work_work",
   required: true,
  });
- Checkbox2.mount('.tests-checkbox');
+ Checkbox2.mount('.tests-checkbox2');
 
  const Checkbox3 = new Checkbox({
   label: "Disabled",
@@ -79,23 +86,30 @@
   disabled: true
  });
  Checkbox3.mount('.tests-checkbox3');
- Checkbox3.require();
 
  const Checkbox4 = new Checkbox ({
-   label: "Events",
+   label: "Callcheck",
    name: "events",
    value: "all"
  });
  Checkbox4.mount('.tests-checkbox4');
  Checkbox4.check();
 
- const Checkbox4 = new Checkbox ({
-  label: "Events",
+ const Checkbox5 = new Checkbox ({
+  label: "Callrequired",
   name: "events",
   value: "all"
  });
- Checkbox5.mount('.tests-checkbox4');
- Checkbox5.disable();
+ Checkbox5.mount('.tests-checkbox5');
+ Checkbox5.required();
+
+ const Checkbox6 = new Checkbox ({
+  label: "Calldisable",
+  name: "events",
+  value: "all"
+ });
+ Checkbox6.mount('.tests-checkbox6');
+ Checkbox6.disable();
 </script>
 
 </body>
