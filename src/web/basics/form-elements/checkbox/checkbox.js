@@ -64,7 +64,7 @@ class Checkbox extends Core {
     }
 
     enable() {
-        this._addClass('hig__form-elements__checkbox--disabled');
+        this._removeClass('hig__form-elements__checkbox--disabled');
         this._removeInputAttribute('disabled');
     }
 
