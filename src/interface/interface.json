@@ -233,7 +233,6 @@
                         }
                     }
                 },
-
                 "RadioButton": {
                     "methods": {
                         "setLabel": {
@@ -292,7 +291,93 @@
                         }
                     }
                 },
+                "Dropdown": {
+                    "methods": {
+                        "open": {
+                            "desc": "Opens the menu"
+                        },
+                        "addOption": {
+                            "desc": "Adds an option to the menu",
+                            "params": [
+                                "{Option} option - an instance of the Option partial",
+                                "{Option} [referenceOption] - (Optional) a reference option used when positioning the new option. New option will be added before the reference option."
+                            ]
+                        },
+                        "close": {
+                            "desc": "Closes the menu"
+                        },
+                        "disable": {
+                            "desc": "Disables the option, preventing it from being selected"
+                        },
+                        "enable": {
+                            "desc": "Enables the option, allowing it to be selected"
+                        },
+                        "onBlur": {
+                            "desc": "Calls the provided callback when focus moves away from the dropdown",
+                            "params": "HIG.abstract.EventObject.params",
+                            "returns": "HIG.abstract.EventObject.returns"
+                        },
+                        "onClickOutside": {
+                            "desc": "Calls the provided callback when the menu is open and the user clicks outside of the menu",
+                            "params": "HIG.abstract.EventObject.params",
+                            "returns": "HIG.abstract.EventObject.returns"
+                        },
+                        "onFocus": {
 
+                            "desc": "Calls the provided callback when the dropdown gains focus",
+                            "params": "HIG.abstract.EventObject.params",
+                            "returns": "HIG.abstract.EventObject.returns"
+                        },
+                        "onTargetClick": {
+                            "desc": "Calls the provided callback when the user clicks on the dropdown button",
+                            "params": "HIG.abstract.EventObject.params",
+                            "returns": "HIG.abstract.EventObject.returns"
+                        },
+                        "required": {
+                            "desc": "makes field required",
+                            "params": [
+                                "{String} required label text"
+                            ]
+                        },
+                        "noLongerRequired": {
+                            "desc": "makes field not required"
+                        },
+                        "setInstructions": {
+                            "desc": "Sets instructional text for the dropdown",
+                            "params": [
+                                "{String} instructions - instrucitonal text that wil appear below the dropdown"
+                            ]
+                        },
+                        "setLabel": {
+                            "desc": "Sets the label for the dropdown",
+                            "params": [
+                                "{String} label - label identifying the purpose of the dropdown"
+                            ]
+                        },
+                        "setSelectedOptionLabel": {
+                            "desc": "Sets the label on the dropdown button, representing the label of the selected option"
+                        }
+                    },
+                    "partials": {
+                        "Option": {
+                            "methods": {
+                                "deselect": {},
+                                "onHover": {},
+                                "onClick": {},
+                                "select": {},
+                                "setLabel": {}
+                            },
+                            "defaults": {
+                                "label": "",
+                                "value": null
+                            }
+                        }
+                    },
+                    "defaults": {
+                        "label": "",
+                        "instructions": ""
+                    }
+                },
                 "PasswordField": {
                     "methods": {
                         "disable": {
@@ -540,13 +625,13 @@
                       "desc": "sets maximum value for range",
                       "params":[
                           "{Integer} max value for the range"
-                      ]   
+                      ]
                     },
                     "setMin": {
                       "desc": "sets minimum value for range",
                       "params":[
                           "{Integer} minimum value for the range"
-                      ] 
+                      ]
                     },
                     "setValue": {
                       "desc": "sets specific value for range",

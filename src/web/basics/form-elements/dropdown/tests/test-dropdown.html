@@ -1,0 +1,156 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../../../../../../dist/hig.css">
+        <script type="text/javascript" src="../../../../../../dist/hig.js"></script>
+
+        <style>
+            body {
+                margin: 50px;
+            }
+
+            .test-container {
+                margin-bottom: 50px;
+            }
+
+            .test-container > div {
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class='test-container'>
+            <div class='test-heading-default'></div>
+            <div class='test-mount-default'></div>
+        </div>
+
+        <div class='test-container'>
+            <div class='test-heading-disabled'></div>
+            <div class='test-mount-disabled'></div>
+        </div>
+
+        <div class='test-container'>
+            <div class='test-heading-setters'></div>
+            <div class='test-mount-setters'></div>
+        </div>
+
+        <script>
+
+            const FormElements = new Hig.FormElements();
+            const Dropdown = FormElements.partials.Dropdown;
+
+            const Typo = new Hig.Typography();
+
+            // ----------------------------
+            // DROPDOWN WITH DEFAULTS
+            // ----------------------------
+
+            const TitleDefaultDropdown = new Typo.partials.Heading({
+                "text": "Dropdown configured with defaults",
+                "size": 3
+            });
+
+            TitleDefaultDropdown.mount('.test-heading-default');
+
+            const DefaultDropdown = new Dropdown({
+                label: 'Favorite vice',
+                placeholder: "Choose your poison",
+                instructions: "Despite offering these choices, we in no way condone them.",
+            });
+
+            DefaultDropdown.mount(".test-mount-default");
+            const defaultDropdownOptionData = [
+                { label: 'Foo', value: 'foo', selected: true },
+                { label: 'Bar', value: 'bar' },
+                { label: 'Baz', value: 'baz' },
+            ];
+            const defaultDropdownOptionComponents = defaultDropdownOptionData.map(optionData => {
+                const option = new DefaultDropdown.partials.Option(optionData);
+                DefaultDropdown.addOption(option);
+                option.onClick((event, element) => {
+                    const value = event.target.dataset.value;
+
+                    defaultDropdownOptionComponents.forEach(option => {
+                        if (option.el.dataset.value === value) {
+                            option.select()
+                            DefaultDropdown.setSelectedOptionLabel(option.el.innerText);
+                        } else {
+                            option.deselect();
+                        }
+                    });
+                    DefaultDropdown.close();
+                });
+
+                return option;
+            });
+            DefaultDropdown.setSelectedOptionLabel('Foo');
+
+            DefaultDropdown.onTargetClick(() => {
+                DefaultDropdown.open();
+            });
+
+            DefaultDropdown.onClickOutside(() => {
+                DefaultDropdown.close();
+            });
+
+
+            // ----------------------------
+            // DISABLED DROPDOWN
+            // ----------------------------
+
+            const TitleDisabledDropdown = new Typo.partials.Heading({
+                "text": "Disabled Dropdown",
+                "size": 3
+            });
+
+            TitleDisabledDropdown.mount('.test-heading-disabled');
+
+            const DisabledDropdown = new Dropdown({
+                label: "Can't touch this",
+            });
+
+            DisabledDropdown.mount(".test-mount-disabled");
+            DisabledDropdown.setSelectedOptionLabel('Vaping');
+            DisabledDropdown.disable();
+
+
+
+            // ----------------------------
+            // DROPDOWN CONFIGURED WITH SETTERS
+            // ----------------------------
+
+            const TitleSetterDropdown = new Typo.partials.Heading({
+                "text": "Dropdown configured with setters",
+                "size": 3
+            });
+
+            TitleSetterDropdown.mount('.test-heading-setters');
+
+            const SetterDropdown = new Dropdown();
+
+            SetterDropdown.mount(".test-mount-setters");
+
+            [
+                { label: 'Uncommitted', value: 'foo' },
+                { label: 'Imperceptible', value: 'bar', selected: true },
+                { label: 'Arguable', value: 'baz' },
+            ].forEach(optionData => {
+                const option = new SetterDropdown.partials.Option(optionData);
+                SetterDropdown.addOption(option);
+            });
+            SetterDropdown.setSelectedOptionLabel('Imperceptible');
+            SetterDropdown.setLabel('Favorite type of change');
+            SetterDropdown.setInstructions('Changing your mind is not permitted.');
+
+            SetterDropdown.onTargetClick(() => {
+                SetterDropdown.open();
+            });
+
+            SetterDropdown.onClickOutside(() => {
+                SetterDropdown.close();
+            });
+
+
+        </script>
+
+    </body>
+</html>
