@@ -6,15 +6,17 @@
 .hig__range {
   position: relative;
   margin-bottom: 20px;
-
+  width: 300px;
 
   input[type=range] {
     -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
-    width: 300px; /* Specific width is required for Firefox. */
-    background: transparent; /* Otherwise white in Chrome */
+    width: 100%; /* Specific width is required for Firefox. */
+    background-color: color(hig-gray-50); /* Otherwise white in Chrome */
+    box-sizing: content-box;
   }
 
   input[type=range]::-webkit-slider-thumb {
+    box-sizing: content-box;
     -webkit-appearance: none;
     // border: 1px solid #000000;
     height: 16px;
@@ -24,7 +26,8 @@
     border-radius: 50%;
     cursor: pointer;
     text-align: center; 
-    margin-top: -8px;
+    margin-top: -17px;
+    border: 7px solid color(hig-white);
   }
 
   /* All the same stuff for Firefox */
@@ -35,6 +38,7 @@
     border-radius: 50%;
     background: color(adsk-blue);
     cursor: pointer;
+    border: 7px solid color(hig-white);
   }
 
 
@@ -46,6 +50,7 @@
     border-radius: 50%;
     background: color(adsk-blue);
     cursor: pointer;
+    border: 7px solid color(hig-white);
   }
 
   input[type=range]:focus {
@@ -53,7 +58,7 @@
   }
 
   input[type=range]::-ms-track {
-    width: 300px;
+    width: 100%;
     cursor: pointer;
 
     /* Hides the slider so custom styles can be added */
@@ -65,25 +70,25 @@
   //Styling the track
 
   input[type=range]::-webkit-slider-runnable-track {
-    width: 300px;
+    width: 100%;
     height: 2px;
     cursor: pointer;
     background: color(hig-gray-50);
   }
 
   input[type=range]:focus::-webkit-slider-runnable-track {
-    background: color(adsk-blue);
+    background: color(hig-gray-50);
   }
 
   input[type=range]::-moz-range-track {
-    width: 300px;
+    width: 100%;
     height: 2px;
     cursor: pointer;
     background: color(hig-gray-50);
   }
 
   input[type=range]::-ms-track {
-    width: 300px;
+    width: 100%;
     height: 2px;
     cursor: pointer;
     background: transparent;
@@ -105,21 +110,28 @@
 
 
   input[type=range]:focus::-ms-fill-upper {
-    background: color(adsk-blue);
-  } 
+    background: color(hig-gray-50);
+  }
+
+    /** FF*/
+  input[type="range"]::-moz-range-progress {
+    background-color: color(hig-gray-50);
+  }
 }
 
 .hig__range__label,
 .hig__range__label-placeholder {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
 
     color: color(hig-gray-30);
     font-size: 12px;
     line-height: 14px;
 
-    .hig__text-area__field:focus + & {
-        color: color(adsk-turquoise);
+    .hig__range--required &::after {
+        content: '*';
+        display: inline-block;
+        margin-left: 5px;
     }
 }
 
@@ -131,3 +143,25 @@
 .hig__range__label-placeholder {
     color: transparent;
 }
+
+.hig__range__field__range-values {
+  position: relative;
+  
+  &:after {
+    position: absolute;
+    top: -20px;
+    right: 0px;
+    color: color(hig-gray-30);
+    content: attr(data-range-max);
+  }
+
+  &:before{
+    position: absolute;
+    top: -20px;
+    color: color(hig-gray-30);
+    content: attr(data-range-min)
+  }
+}
+
+
+

@@ -454,6 +454,12 @@
                             "{String} value for our text field"
                         ]
                     },
+                     "setStepValue": {
+                        "desc": "sets the step granulity for range",
+                        "params": [
+                            "{Integer} value for step attribute"
+                        ]
+                    },
                     "required": {
                         "desc": "makes field required",
                         "params": [

@@ -45,10 +45,16 @@ class Range extends Core {
 
     setMaxValue(maxValue){
         this._findDOMEl('.hig__range__field', this.el).setAttribute("max", maxValue);
+        this._findDOMEl('.hig__range__field__range-values', this.el).dataset.rangeMax = maxValue;
     }
 
     setMinValue(minValue){
         this._findDOMEl('.hig__range__field', this.el).setAttribute("min", minValue);
+        this._findDOMEl('.hig__range__field__range-values', this.el).dataset.rangeMin = minValue;
+    }
+
+    setStepValue(value) {
+        this._findDOMEl('.hig__range__field', this.el).setAttribute("step", value);
     }
 
     onBlur(fn){
@@ -93,6 +99,7 @@ Range._defaults = {
     maxValue: null,
     instructions: '',
     label: '',
+    step: 1
 };
 
 Range._partials = {};
