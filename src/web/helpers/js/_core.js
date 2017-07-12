@@ -16,8 +16,7 @@ class Core {
         // CHECK INTERFACE COMPATIBILITY
         if(!this._interface){
             console.warn("NO INTERFACE SET FOR CLASS, PLEASE DEFINE INTERFACE IN _interface PROPERTY OF YOUR CLASS");
-        }else{
-
+        }else {
             var methodArray = Object.getOwnPropertyNames( Object.getPrototypeOf( this ) );
             // CHECK IF ALL METHODS IN COMPONENT ARE DEFINED IN INTERFACE
             methodArray.forEach(function(v, i){

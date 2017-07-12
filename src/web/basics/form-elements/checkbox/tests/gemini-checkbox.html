@@ -1,0 +1,116 @@
+<html>
+<head>
+ <link rel="stylesheet" href="../../../../../../dist/hig.css">
+ <script type="text/javascript" src="../../../../../../dist/hig.js"></script>
+ <script type="text/javascript" src="../../../../../../src/web/helpers/test.js"></script>
+
+ <style>
+  body {
+   padding: 30px;
+  }
+
+  .test-group {
+   margin-bottom: 50px;
+  }
+  .test-container { display: flex; flex-direction: row; }
+  /*.tests-checkbox { display: flex; flex-direction: row; flex-shrink: 0; flex-grow: 1; }*/
+ </style>
+</head>
+<body>
+
+<div class='test-container' style="padding: 40px; margin: 0;">
+ <div class="tests-checkbox-heading"></div>
+ <div class="tests-checkbox"></div>
+ <div class="tests-checkbox tests-checkbox1"></div>
+ <div class="tests-checkbox tests-checkbox2"></div>
+ <br>
+ <div class="tests-checkbox tests-checkbox3"></div>
+ <br>
+ <div class="tests-checkbox tests-checkbox4"></div>
+ <br>
+ <div class="tests-checkbox tests-checkbox5"></div>
+ <br>
+ <div class="tests-checkbox tests-checkbox6"></div>
+</div>
+
+<script>
+ const Heading = Hig.Typography._partials.Heading;
+ const FormElements = new Hig.FormElements();
+ const Checkbox = FormElements.partials.Checkbox;
+
+ const DefaultHeading = new Heading({
+  text: "Different Checkboxes",
+  size: 2
+ });
+//
+// checkboxes = ['basic','checked','required','disabled',
+//  'callcheck','callrequire','calldisable'].map(function(type,i){
+//    var checkbox = new Checkbox({
+//      label: type,
+//      name: `box_${i}`,
+//      value: i.toString
+//    })
+// });
+
+ const DefaultCheckbox = new Checkbox({
+  label: "So basic",
+  name: "am_i_checked",
+  value: "yes"
+ });
+
+ DefaultHeading.mount('.tests-checkbox-heading');
+ DefaultCheckbox.mount('.tests-checkbox');
+
+
+ const Checkbox1 = new Checkbox({
+  label: "Checked",
+  name: "agreement",
+  value: "iagree",
+  checked: true
+ });
+
+ Checkbox1.mount('.tests-checkbox1');
+
+ const Checkbox2 = new Checkbox({
+  label: "Required",
+  name: "ready_to_work",
+  value: "work_work",
+  required: true,
+ });
+ Checkbox2.mount('.tests-checkbox2');
+
+ const Checkbox3 = new Checkbox({
+  label: "Disabled",
+  name: "u_cant_check_this",
+  value: "hammertime",
+  disabled: true
+ });
+ Checkbox3.mount('.tests-checkbox3');
+
+ const Checkbox4 = new Checkbox ({
+   label: "Callcheck",
+   name: "events",
+   value: "all"
+ });
+ Checkbox4.mount('.tests-checkbox4');
+ Checkbox4.check();
+
+ const Checkbox5 = new Checkbox ({
+  label: "Callrequired",
+  name: "events",
+  value: "all"
+ });
+ Checkbox5.mount('.tests-checkbox5');
+ Checkbox5.required();
+
+ const Checkbox6 = new Checkbox ({
+  label: "Calldisable",
+  name: "events",
+  value: "all"
+ });
+ Checkbox6.mount('.tests-checkbox6');
+ Checkbox6.disable();
+</script>
+
+</body>
+</html>

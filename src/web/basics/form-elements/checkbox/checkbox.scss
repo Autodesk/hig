@@ -1,0 +1,56 @@
+@import '~basics/colors/colors.scss';
+
+.hig__form-elements__checkbox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
+
+  &--required {
+    .hig__form-elements__checkbox__label::after {
+        content: '*';
+      }
+  }
+
+  .hig__form-elements__checkbox__input {
+    display: none;
+  }
+}
+
+.hig__form-elements__checkbox__label,
+.hig__form-elements__checkbox__input-wrapper {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.hig__form-elements__checkbox__label {
+  font-family: 'ArtifaktElement', sans-serif;
+  font-style: italic;
+  margin-bottom: 8px;
+  line-height: 14px;
+}
+
+.hig__form-elements__checkbox__input-wrapper::before {
+  visibility: visible;
+  content: '\2714';
+  color: transparent;
+  border: 1px solid color(hig-gray-10);
+  border-radius: 3px;
+  padding: 0 2px;
+
+  .hig__form-elements__checkbox--checked & {
+    border-color: color(adsk-blue-dark);
+    color: color(adsk-blue-dark);
+  }
+  .hig__form-elements__checkbox:hover & {
+    border-color: color(adsk-blue-light);
+    color: color(adsk-blue-light);
+  }
+  .hig__form-elements__checkbox--disabled & {
+    color: transparent;
+    border-color: color(hig-gray-30);
+    border-style: dotted;
+  }
+}
+
