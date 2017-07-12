@@ -25,6 +25,10 @@ class Option extends Core {
         return this._attachListener("click", this.el, this.el, fn);
     }
 
+    onHover(fn) {
+        return this._attachListener("hover", this.el, this.el, fn);
+    }
+
     select() {
         this.el.classList.add('hig__dropdown__option--selected');
     }

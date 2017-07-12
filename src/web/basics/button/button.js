@@ -74,6 +74,10 @@ class Button extends Core {
         this.el.setAttribute('tabindex', "0");
     }
 
+    onBlur(fn){
+        return this._attachListener("focusout", this.el, this.el, fn);
+    }
+
     onClick(fn){
         return this._attachListener("click", this.el, this.el, fn);
     }

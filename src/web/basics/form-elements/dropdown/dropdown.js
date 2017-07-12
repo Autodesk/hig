@@ -47,12 +47,25 @@ class Dropdown extends Core {
         this.button.enable();
     }
 
+    noLongerRequired(){
+        this.el.classList.remove('hig__dropdown--required');
+        this._removeElementIfFound('.hig__dropdown__required-notice');
+    }
+
     onBlur(fn) {
-        return this.button._attachListener("focusout", this.el, this.el, fn);
+        return this.button.onBlur(fn);
     }
 
     onClickOutside(fn) {
         return this._attachListener("click", window.document.body, window.document.body, this._callbackIfClickOutside.bind(this, fn));
+    }
+
+    onKeypress(fn) {
+        return this.button._attachListener("keypress", this.el, this.el, fn);
+    }
+
+    onFocus(fn) {
+        return this.button.onFocus(fn);
     }
 
     onTargetClick(fn) {
@@ -61,6 +74,12 @@ class Dropdown extends Core {
 
     open() {
         this.el.classList.add(OPEN_CLASS);
+    }
+
+    required(requiredLabelText){
+        this.el.classList.add('hig__dropdown--required');
+        const requiredNoticeEl = this._findOrAddElement('REQUIRED-NOTICE', 'p', '.hig__dropdown__required-notice');
+        requiredNoticeEl.textContent = requiredLabelText;
     }
 
     setSelectedOptionLabel(label) {
@@ -78,13 +97,9 @@ class Dropdown extends Core {
 
     setLabel(label) {
         if (label) {
-            const labelEl = this._findOrAddElement('LABEL', 'label', '.hig__dropdown__label');
-            const labelPlaceholderEl = this._findOrAddElement('LABEL-PLACEHOLDER', 'div', '.hig__dropdown__label-placeholder');
-            labelEl.textContent = label;
-            labelPlaceholderEl.textContent = label;
+            this._findOrAddElement('LABEL', 'label', '.hig__dropdown__label').textContent = label;
         } else {
             this._removeElementIfFound('.hig__dropdown__label');
-            this._removeElementIfFound('.hig__dropdown__label-placeholder');
         }
     }
 
@@ -97,26 +112,6 @@ class Dropdown extends Core {
             callback();
         }
     }
-
-    // setPlaceholder(placeholder) {
-    //     this._findDOMEl('.hig__dropdown__field', this.el).setAttribute('placeholder', placeholder);
-    // }
-
-    // setValue(value) {
-    //     this._findDOMEl('.hig__dropdown__field', this.el).textContent = value;
-    // }
-
-    // onBlur(fn){
-    //     return this._attachListener("focusout", '.hig__dropdown__field', this.el, fn);
-    // }
-
-    // onFocus(fn){
-    //     return this._attachListener("focusin", '.hig__dropdown__field', this.el, fn);
-    // }
-
-    // onInput(fn){
-    //     return this._attachListener("input", '.hig__dropdown__field', this.el, fn);
-    // }
 
 }
 

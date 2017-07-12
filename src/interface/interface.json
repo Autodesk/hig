@@ -48,6 +48,11 @@
                 "enable": {
                     "desc": "make the button enabled again after disabled state"
                 },
+                "onBlur": {
+                    "desc": "Calls the provided callback when the user moves focus away from the button",
+                    "params": "HIG.abstract.EventObject.params",
+                    "returns": "HIG.abstract.EventObject.returns"
+                },
                 "onClick": {
                     "desc": "Calls the provided callback when user clicks on the button",
                     "params": "HIG.abstract.EventObject.params",
@@ -328,6 +333,11 @@
                             "params": "HIG.abstract.EventObject.params",
                             "returns": "HIG.abstract.EventObject.returns"
                         },
+                        "onKeypress": {
+                            "desc": "Calls the provided callback when the user presses a key while the dropdown has focus",
+                            "params": "HIG.abstract.EventObject.params",
+                            "returns": "HIG.abstract.EventObject.returns"
+                        },
                         "onTargetClick": {
                             "desc": "Calls the provided callback when the user clicks on the dropdown button",
                             "params": "HIG.abstract.EventObject.params",
@@ -365,7 +375,8 @@
                                 "onHover": {},
                                 "onClick": {},
                                 "select": {},
-                                "setLabel": {}
+                                "setLabel": {},
+                                "setValue": {}
                             },
                             "defaults": {
                                 "label": "",

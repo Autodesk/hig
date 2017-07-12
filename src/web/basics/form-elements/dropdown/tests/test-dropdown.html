@@ -33,6 +33,11 @@
             <div class='test-mount-setters'></div>
         </div>
 
+        <div class='test-container'>
+            <div class='test-heading-events'></div>
+            <div class='test-mount-events'></div>
+        </div>
+
         <script>
 
             const FormElements = new Hig.FormElements();
@@ -140,6 +145,7 @@
             SetterDropdown.setSelectedOptionLabel('Imperceptible');
             SetterDropdown.setLabel('Favorite type of change');
             SetterDropdown.setInstructions('Changing your mind is not permitted.');
+            SetterDropdown.required('I must insist that you choose one.');
 
             SetterDropdown.onTargetClick(() => {
                 SetterDropdown.open();
@@ -149,6 +155,45 @@
                 SetterDropdown.close();
             });
 
+
+
+            // ----------------------------
+            // DROPDOWN WITH LOTS OF EVENT LISTENERS
+            // ----------------------------
+
+            const TitleEventsDropdown = new Typo.partials.Heading({
+                "text": "Dropdown that logs lots of events to the console",
+                "size": 3
+            });
+
+            TitleEventsDropdown.mount('.test-heading-events');
+
+            const EventsDropdown = new Dropdown();
+
+            EventsDropdown.mount(".test-mount-events");
+
+            function log(componentName, eventType) {
+                const message = `${componentName} triggered an ${eventType} event`;
+                console.log(message);
+            }
+
+            EventsDropdown.onClickOutside(log.bind(this, 'Dropdown', 'onClickOutside'));
+            EventsDropdown.onBlur(log.bind(this, 'Dropdown', 'onBlur'));
+            EventsDropdown.onFocus(log.bind(this, 'Dropdown', 'onFocus'));
+            EventsDropdown.onTargetClick(log.bind(this, 'Dropdown', 'onTargetClick'));
+            EventsDropdown.onKeypress(log.bind(this, 'Dropdown', 'onKeypress'));
+
+            [
+                { label: 'Uncommitted', value: 'foo' },
+                { label: 'Imperceptible', value: 'bar', selected: true },
+                { label: 'Arguable', value: 'baz' },
+            ].forEach(optionData => {
+                const option = new EventsDropdown.partials.Option(optionData);
+                EventsDropdown.addOption(option);
+                option.onClick(log.bind(this, `Option ${optionData.label}`, 'onClick'));
+                option.onHover(log.bind(this, `Option ${optionData.label}`, 'onHover'));
+            });
+            EventsDropdown.open();
 
         </script>
 
