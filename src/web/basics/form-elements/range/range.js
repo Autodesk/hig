@@ -30,12 +30,9 @@ class Range extends Core {
    setLabel(label) {
         if (label) {
             const labelEl = this._findOrAddElement('LABEL', 'label', '.hig__range__label');
-            const labelPlaceholderEl = this._findOrAddElement('LABEL-PLACEHOLDER', 'div', '.hig__range__label-placeholder');
             labelEl.textContent = label;
-            labelPlaceholderEl.textContent = label;
         } else {
             this._removeElementIfFound('.hig__range__label');
-            this._removeElementIfFound('.hig__range__label-placeholder');
         }
     }
 
@@ -70,14 +67,11 @@ class Range extends Core {
     }
 
     disable(){
-        this._findDOMEl('.hig__range__field', this.el).
-        this.el.classList.add('hig__range--disabled');
-        this.el.setAttribute('tabindex', "-1");
+        this._findDOMEl('.hig__range__field', this.el).setAttribute('disabled', true);
     }
 
     enable(){
-        this.el.classList.remove('hig__range--disabled');
-        this.el.setAttribute('tabindex', "0");
+        this._findDOMEl('.hig__range__field', this.el).removeAttribute('disabled');
     }
 
     required(requiredLabelText){
