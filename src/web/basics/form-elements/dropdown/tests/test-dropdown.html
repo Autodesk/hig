@@ -64,9 +64,9 @@
 
             DefaultDropdown.mount(".test-mount-default");
             const defaultDropdownOptionData = [
-                { label: 'Foo', value: 'foo', selected: true },
-                { label: 'Bar', value: 'bar' },
-                { label: 'Baz', value: 'baz' },
+                { label: 'Penny slots', value: 'penny-slots', selected: true },
+                { label: 'The drink', value: 'the-drink' },
+                { label: 'Bubblegum', value: 'bubblegum' },
             ];
             const defaultDropdownOptionComponents = defaultDropdownOptionData.map(optionData => {
                 const option = new DefaultDropdown.partials.Option(optionData);
@@ -87,7 +87,7 @@
 
                 return option;
             });
-            DefaultDropdown.setSelectedOptionLabel('Foo');
+            DefaultDropdown.setSelectedOptionLabel('Penny slots');
 
             DefaultDropdown.onTargetClick(() => {
                 DefaultDropdown.open();

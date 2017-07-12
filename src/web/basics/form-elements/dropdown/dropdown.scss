@@ -51,6 +51,7 @@
     min-width: 240px;
     left: 0;
     overflow: hidden;
+    z-index: 10000;
 
     border: 1px solid color(hig-gray-40);
     border-top: 2px solid color(adsk-turquoise);
