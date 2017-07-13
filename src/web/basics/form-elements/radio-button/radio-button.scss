@@ -1,0 +1,24 @@
+@import '~basics/colors/colors.scss';
+.hig__form-elements__input-button__input-wrapper::before {
+  visibility: visible;
+  content: '\2022';
+  color: transparent;
+  border: 1px solid color(hig-gray-10);
+  border-radius: 50%;
+  padding: 0 2px;
+
+  .hig__form-elements__input-button--checked & {
+    border-color: color(adsk-blue-dark);
+    color: color(adsk-blue-dark);
+  }
+  .hig__form-elements__input-button:hover & {
+    border-color: color(adsk-blue-light);
+    color: color(adsk-blue-light);
+  }
+  .hig__form-elements__input-button--disabled & {
+    color: transparent;
+    border-color: color(hig-gray-30);
+    border-style: dotted;
+  }
+
+}

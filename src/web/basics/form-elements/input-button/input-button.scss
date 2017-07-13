@@ -1,0 +1,33 @@
+@import '~basics/colors/colors.scss';
+
+.hig__form-elements__input-button {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
+
+  &--required {
+    .hig__form-elements__input-button__label::after {
+      content: '*';
+    }
+  }
+
+  .hig__form-elements__input-button__input {
+    display: none;
+  }
+}
+
+.hig__form-elements__input-button__label,
+.hig__form-elements__input-button__input-wrapper {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.hig__form-elements__input-button__label {
+  font-family: 'ArtifaktElement', sans-serif;
+  font-style: italic;
+  margin-bottom: 8px;
+  line-height: 14px;
+}
+

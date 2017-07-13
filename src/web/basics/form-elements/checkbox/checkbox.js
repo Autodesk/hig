@@ -15,10 +15,15 @@ class Checkbox extends Core {
     constructor(options){
         super(options);
         this._render(Template, options);
+        this._toggleCheck = this._toggleCheck.bind(this);
+    }
+
+    _componentDidMount() {
+        this.el.addEventListener('click', this._toggleCheck);
     }
 
     setLabel(newValue) {
-        const labelClass = 'hig__form-elements__checkbox__label'
+        const labelClass = 'hig__form-elements__checkbox__label';
         if (newValue) {
             const labelEl = this._findOrAddElement('CHECKBOX_LABEL', 'label', labelClass);
             labelEl.textContent = newValue;
@@ -96,6 +101,14 @@ class Checkbox extends Core {
     _removeInputAttribute(attribute) {
         console.log(this.el.outerHTML);
         this._findDOMEl('.hig__form-elements__checkbox__input', this.el).removeAttribute(attribute);
+    }
+
+    _toggleCheck(evt) {
+        if (this._findDOMEl('.hig__form-elements__checkbox__input', this.el).hasAttribute('checked')) {
+            this.uncheck();
+        } else {
+            this.check();
+        }
     }
 }
 

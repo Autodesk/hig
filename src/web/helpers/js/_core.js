@@ -238,6 +238,7 @@ class Core {
             // do our selection
             var domEl = (s || document).querySelectorAll(f);
             if(!domEl || domEl.length === 0){
+                debugger
                 return console.error("TARGET NOT FOUND ", f);
             }else{
                 return domEl[0];

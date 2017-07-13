@@ -1,0 +1,18 @@
+<div class='hig__form-elements__input-button hig__form-elements__input-button--radio-button hig__form-elements__input-button--{{ name }}'
+   {{ #disabled }}hig__form-elements__checkbox--disabled{{ /disabled }}
+   {{ #required }}hig__form-elements__checkbox--required{{ /required }}
+   {{ #checked }}hig__form-elements__checkbox--checked{{ /checked }}'>
+    <!--RADIOBUTTON_LABEL-->
+    {{ #label }}
+    <label for="{{ name }}"
+           class="hig__form-elements__input-button__label">
+      {{ label }}
+    </label>{{ /label }}
+  <span class="hig__form-elements__input-button__input-wrapper">
+    <input type="radio" class="hig__form-elements__input-button__input"
+        {{ #required }}required{{/required}}
+        {{ #checked }}checked{{ /checked }}
+        {{ #disabled }}disabled{{ /disabled }}
+        name="{{ name }}" id="{{ name }}" value="{{ value }}">
+  </span>
+</div>

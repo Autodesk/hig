@@ -234,6 +234,64 @@
                     }
                 },
 
+                "RadioButton": {
+                    "methods": {
+                        "setLabel": {
+                            "desc": "sets the label",
+                            "params": [
+                                "{String} label for our radio button"
+                            ]
+                        },
+                        "setName": {
+                            "desc": "sets the name of the radio button as submitted with a form",
+                            "params": [
+                                "{String} label used to identify the radio button when submitted"
+                            ]
+                        },
+                        "setValue": {
+                            "desc": "sets the value",
+                            "params": [
+                                "{String} value for our radio button"
+                            ]
+                        },
+                        "check": {
+                            "desc": "checks the radio button"
+                        },
+                        "uncheck": {
+                            "desc": "unchecks the radio button"
+                        },
+                        "required": {
+                            "desc": "makes radio button required",
+                            "params": [
+                                "{String} required label text"
+                            ]
+                        },
+                        "noLongerRequired": {
+                            "desc": "makes radio button not required"
+                        },
+                        "disable": {
+                            "desc": "Disable the radio button, preventing user interaction"
+                        },
+                        "enable": {
+                            "desc": "Enable the radio button, reenabling user interaction"
+                        },
+                        "onHover": {
+                            "desc": "Calls the provided callback when the radio button is in a hover state",
+                            "params": "HIG.abstract.EventObject.params",
+                            "returns": "HIG.abstract.EventObject.returns"
+                        },
+                        "onFocus": {
+                            "desc": "Calls the provided callback when focus enters the radio button",
+                            "params": "HIG.abstract.EventObject.params",
+                            "returns": "HIG.abstract.EventObject.returns"
+                        },
+                        "onChange": {
+                            "desc": "Calls the provided callback when user changes the value of the radio button then moves focus elsewhere",
+                            "params": "HIG.abstract.EventObject.params",
+                            "returns": "HIG.abstract.EventObject.returns"
+                        }
+                    }
+                },
 
                 "PasswordField": {
                     "methods": {
