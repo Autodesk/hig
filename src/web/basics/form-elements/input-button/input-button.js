@@ -4,13 +4,12 @@ var Interface = require('interface.json');
 var Core = require('_core.js');
 
 /**
- * Creates an Checkbox
+ * Base class for InputButton (radio or checkbox)
  *
  * @class
  */
 
 class InputButton extends Core {
-
 
   constructor(options){
     super(options);
@@ -19,7 +18,7 @@ class InputButton extends Core {
     this.wrapperClass = 'hig__form-elements__input-button';
     this.commentLabel = '';
   }
-  
+
   setLabel(newValue) {
     if (newValue) {
       this._findOrAddElement(this.commentLabel, 'label', this.labelClass)
@@ -31,10 +30,11 @@ class InputButton extends Core {
 
   setName(newName){
     this.nameClass = newName;
-    this.el.setAttribute('class', '${this.wrapperClass}--${newValue}');
-    this._setLabelAttribute('for', newValue);
-    this._setInputAttribute('name', newValue);
-    this._setInputAttribute('id', newValue);
+    const currentValue = this._buttonEl().getAttribute('value');
+    this.el.setAttribute('class', `${this.wrapperClass}--${currentValue}`);
+    this._setLabelAttribute('for', newName);
+    this._setInputAttribute('name', newName);
+    this._setInputAttribute('id', `${newName}[${currentValue}]`);
   }
 
   setValue(newValue){
@@ -44,12 +44,12 @@ class InputButton extends Core {
 
   check() {
     this._addClass(this._checkedClass());
-    this._setInputAttribute('checked','');
+    this._buttonEl().checked = true;
   }
 
   uncheck() {
     this._removeClass(this._checkedClass());
-    this._removeInputAttribute('checked');
+    this._buttonEl().checked = false;
   }
 
   required() {

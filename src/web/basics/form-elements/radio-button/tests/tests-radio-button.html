@@ -7,6 +7,7 @@
 
  <style>
   body {
+   background-color: rgb(250,250,250);
    padding: 30px;
   }
 
@@ -20,12 +21,8 @@
 <div class='test-container'>
  <div class="tests-radiobutton-heading"></div>
  <div class="tests-radiobutton"></div>
- <div class="tests-radiobutton1"></div>
- <div class="tests-radiobutton2"></div>
- <hr>
- <div class="tests-radiobutton-heading3"></div>
- <div class="tests-radiobutton tests-radiobutton3"></div>
- <hr>
+ <br>
+
  <div class="tests-radiobutton-heading4"></div>
  <br>
  <div class="tests-radiobutton tests-radiobutton4"></div>
@@ -41,7 +38,7 @@
  function handleFocus() { console.log("In focus") }
 
  const DefaultHeading = new Heading({
-  text: "Different RadioButtones",
+  text: "RadioButton Group",
   size: 2
  });
 
@@ -56,8 +53,8 @@
 
 
  const RadioButton1 = new RadioButton({
-  label: "I agree.",
-  name: "agreement",
+  label: "Checked",
+  name: "am_i_checked",
   value: "iagree",
   checked: true
  });
@@ -66,7 +63,7 @@
 
  const RadioButton2 = new RadioButton({
   label: "Required",
-  name: "ready_to_work",
+  name: "am_i_checked",
   value: "work_work",
   required: true
  });
@@ -77,20 +74,14 @@
  RadioButton2.onHover(handleHover);
  RadioButton2.onFocus(handleFocus);
 
- const BasicSettingsHeading3 = new Heading({
-  text: "Disabled",
-  size: 2
- });
-
  const RadioButton3 = new RadioButton({
   label: "Disabled",
-  name: "u_cant_check_this",
+  name: "am_i_checked",
   value: "hammertime",
   disabled: true
  });
 
- BasicSettingsHeading3.mount('.tests-radiobutton-heading3');
- RadioButton3.mount('.tests-radiobutton3');
+ RadioButton3.mount('.tests-radiobutton');
 
  const FancyRadioButtonsHeading = new Heading({
   text: "Separately controlled radiobutton",
@@ -101,21 +92,9 @@
   name: "hella",
   value: "fancy"
  });
- const FancyRadioButton2 = new RadioButton({
-  label: "Not So Fancy",
-  name: "hella",
-  value: "notsofancy"
- });
- const FancyRadioButton3 = new RadioButton({
-  label: "EXTREME Fance!",
-  name: "hella",
-  value: "extrafancy"
- });
 
  FancyRadioButtonsHeading.mount('.tests-radiobutton-heading4');
  FancyRadioButton.mount('.tests-radiobutton4');
- FancyRadioButton2.mount('.tests-radiobutton4');
- FancyRadioButton3.mount('.tests-radiobutton4');
 
  const DisableButton = new Hig.Button({
   title: "Disable radiobutton",
