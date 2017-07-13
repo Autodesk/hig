@@ -17,14 +17,13 @@
         <div class="test-group test-group-default">
             <div class="test-range"></div>
         </div>
-
-				<div class="test-group test-group-disabled">
-						<div class="test-range-disabled">
-				</div>	
+            <div class="test-group test-group-disabled">
+            <div class="test-range-disabled">
+        </div>	
 
         <script>
-					const FormElements = new Hig.FormElements();
-					const Range = FormElements.partials.Range;
+            const FormElements = new Hig.FormElements();
+            const Range = FormElements.partials.Range;
 
             // ----------------------------
             // RANGE
@@ -32,29 +31,28 @@
 
             var DefaultRange = new Range({
                 value: 5,
-								minValue: '0',
-								maxValue: 10,
+                minValue: '0',
+                maxValue: 10,
                 label: 'Placeholder Range',
                 instructions: 'Instructional text goes here',
+                step: 1
 
             });
 
             DefaultRange.mount(".test-range");
 
-						// DISABLED RANGE
-						var DisabledRange = new Range({
-							 	value: 5,
-								minValue: 0,
-								maxValue: 10,
+            // DISABLED RANGE
+            var DisabledRange = new Range({
+                value: 5,
+                minValue: '0',
+                maxValue: 10,
                 label: 'Placeholder Range',
                 instructions: 'Instructional text goes here',
-						});
+                step: 1
+            });
 						
-						DisabledRange.mount(".test-range-disabled");
-
-						DisabledRange.disable()
-
+            DisabledRange.mount(".test-range-disabled");
+            DisabledRange.disable()
         </script>
-
     </body>
 </html>

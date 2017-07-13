@@ -418,13 +418,13 @@
                 },
                 "Range":{
                   "methods":{
-                    "setMaxValue": {
+                    "setMax": {
                       "desc": "sets maximum value for range",
                       "params":[
                           "{Integer} max value for the range"
                       ]   
                     },
-                    "setMinValue": {
+                    "setMin": {
                       "desc": "sets minimum value for range",
                       "params":[
                           "{Integer} minimum value for the range"
@@ -448,7 +448,7 @@
                             "{String} instructions - instructions for the text area"
                         ]
                     },
-                     "setStepValue": {
+                     "setStep": {
                         "desc": "sets the step granulity for range",
                         "params": [
                             "{Integer} value for step attribute"
@@ -490,7 +490,8 @@
                         "maxValue": "{Integer} max value for range",
                         "minValue": "{Integer} max value for range",
                         "label": "{String} label for our range",
-                        "instructions": "{String} (optional) instructions under the range"
+                        "instructions": "{String} (optional) instructions under the range",
+                        "step": "{Integer} sets increments to which value can be set"
                   }
                 }
             }

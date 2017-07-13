@@ -57,11 +57,11 @@
 			DefaultRange.mount('.tests-range');
 
 			DefaultRange.setValue(5);
-			DefaultRange.setMinValue(0);
-			DefaultRange.setMaxValue(10);
+			DefaultRange.setMin(0);
+			DefaultRange.setMax(10);
 			DefaultRange.setInstructions('Instructions for Range');
 			DefaultRange.setLabel('Range Label');
-
+			DefaultRange.setStep(1);
 			
 			DefaultRange.onBlur(log);
 			DefaultRange.onChange(log);
@@ -81,8 +81,8 @@
 			DisabledRange.mount('.tests-range-disabled');
 
 			DisabledRange.setValue(5);
-			DisabledRange.setMinValue(0);
-			DisabledRange.setMaxValue(10);
+			DisabledRange.setMin(0);
+			DisabledRange.setMax(10);
 			DisabledRange.setInstructions('Instructions for Range');
 			DisabledRange.setLabel('Range Label');
 
