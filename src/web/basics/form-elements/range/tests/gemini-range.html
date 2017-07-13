@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../../../../../../dist/hig.css">
+        <script type="text/javascript" src="../../../../../../dist/hig.js"></script>
+
+        <style>
+            body{
+                margin: 50px;
+            }
+
+            .test-group {
+                margin-bottom: 10px;
+						}
+        </style>
+    </head>
+    <body>
+        <div class="test-group test-group-default">
+            <div class="test-range"></div>
+        </div>
+
+				<div class="test-group test-group-disabled">
+						<div class="test-range-disabled">
+				</div>	
+
+        <script>
+					const FormElements = new Hig.FormElements();
+					const Range = FormElements.partials.Range;
+
+            // ----------------------------
+            // RANGE
+            // ----------------------------
+
+            var DefaultRange = new Range({
+                value: 5,
+								minValue: '0',
+								maxValue: 10,
+                label: 'Placeholder Range',
+                instructions: 'Instructional text goes here',
+
+            });
+
+            DefaultRange.mount(".test-range");
+
+						// DISABLED RANGE
+						var DisabledRange = new Range({
+							 	value: 5,
+								minValue: '0',
+								maxValue: 10,
+                label: 'Placeholder Range',
+                instructions: 'Instructional text goes here',
+						});
+						
+						DisabledRange.mount(".test-range-disabled");
+
+						DisabledRange.disable()
+
+        </script>
+
+    </body>
+</html>

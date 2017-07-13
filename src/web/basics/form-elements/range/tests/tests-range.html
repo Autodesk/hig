@@ -14,6 +14,9 @@
 			.tests-range-heading {
 				margin-bottom: 20px;
 			}
+			.tests-range-disabled-heading {
+				margin-bottom: 20px;
+			}
         </style>
     </head>
 
@@ -32,6 +35,12 @@
 			const Heading = Hig.Typography._partials.Heading;
 			const FormElements = new Hig.FormElements();
 			const Range = FormElements.partials.Range;
+
+			function log(event) {
+				const message = `${event.type} event triggered`;
+				console.log(message);
+			}
+
 
 			// RANGE CONFIGURED WITH DEFAULTS
 
@@ -53,15 +62,34 @@
 			DefaultRange.setInstructions('Instructions for Range');
 			DefaultRange.setLabel('Range Label');
 
-			function log(event) {
-				const message = `${event.type} event triggered`;
-				console.log(message);
-			}
-
+			
 			DefaultRange.onBlur(log);
 			DefaultRange.onChange(log);
 			DefaultRange.onFocus(log);
-			// DefaultRange.disable();
+
+
+
+			// Default range Disable
+			const DefaultHeadingDisabled = new Heading({
+				text: "Disabled Range",
+				size: 3
+			})
+
+			DefaultHeadingDisabled.mount('.tests-range-disabled-heading');
+			
+			const DisabledRange = new Range();
+			DisabledRange.mount('.tests-range-disabled');
+
+			DisabledRange.setValue(5);
+			DisabledRange.setMinValue(0);
+			DisabledRange.setMaxValue(10);
+			DisabledRange.setInstructions('Instructions for Range');
+			DisabledRange.setLabel('Range Label');
+
+			DisabledRange.onBlur(log);
+			DisabledRange.onChange(log);
+			DisabledRange.onFocus(log);
+			DisabledRange.disable();
 		</script>	
 	</body>	
 </html>	

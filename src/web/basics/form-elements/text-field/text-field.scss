@@ -38,7 +38,7 @@
     font-size: 12px;
     line-height: 14px;
 
-    .hig__text-field_range_values:focus + & {
+    .hig__text-field:focus + & {
         color: color(adsk-turquoise);
     }
 
