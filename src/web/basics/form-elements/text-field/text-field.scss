@@ -29,14 +29,18 @@
     }
 }
 
-.hig__text-field__label,
-.hig__text-field__label-placeholder {
+.hig__text-field__label {
     display: block;
+    position: relative;
     padding-bottom: 10px;
 
     color: color(hig-gray-30);
     font-size: 12px;
     line-height: 14px;
+
+    transition-property: top, font-size, line-height;
+    transition-duration: 0.1s, 0.1s, 0.1s;
+    transition-delay: 0.1s;
 
     .hig__text-field:focus + & {
         color: color(adsk-turquoise);
@@ -47,47 +51,26 @@
         display: inline-block;
         margin-left: 5px;
     }
-}
-
-.hig__text-field__label {
-    position: absolute;
-    top: -24px;
-    color: color(hig-gray-30);
-    font-size: 12px;
-    line-height: 14px;
-
-    transition-property: top, font-size, line-height;
-    transition-duration: 0.1s, 0.1s, 0.1s;
-    transition-delay: 0.1s;
 
     .hig__text-field__input--no-value + & {
-        top: -2px;
+        top: 26px;
         left: 1px;
         font-size: 14px;
         line-height: 20px;
     }
 
     .hig__text-field__input--no-value.hig__text-field__input:focus + & {
-        top: -24px;
+        top: 0;
         left: 0;
         font-size: 12px;
         line-height: 14px;
         transition-delay: 0;
     }
 
-    .hig__text-field__input:focus + & {
-        color: color(adsk-turquoise);
-    }
-
     .hig__text-field__input[disabled] + & {
         color: color(hig-gray-50);
     }
 
-}
-
-.hig__text-field__label-placeholder {
-    color: transparent;
-    pointer-events: none;
 }
 
 .hig__text-field__input {
@@ -170,6 +153,8 @@
 
 .hig__text-field__input-wrapper {
     position: relative;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .hig__text-field__button {

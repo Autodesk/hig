@@ -171,6 +171,7 @@
             const EventsDropdown = new Dropdown();
 
             EventsDropdown.mount(".test-mount-events");
+            EventsDropdown.setSelectedOptionLabel('Imperceptible');
 
             function log(componentName, eventType) {
                 const message = `${componentName} triggered an ${eventType} event`;

@@ -34,13 +34,9 @@ class TextField extends Core {
 
     setLabel(label){
         if (label) {
-            const labelEl = this._findOrAddElement('LABEL', 'label', '.hig__text-field__label');
-            const labelPlaceholderEl = this._findOrAddElement('LABEL-PLACEHOLDER', 'div', '.hig__text-field__label-placeholder');
-            labelEl.textContent = label;
-            labelPlaceholderEl.textContent = label;
+            this._findOrAddElement('LABEL', 'label', '.hig__text-field__label').textContent = label;
         } else {
             this._removeElementIfFound('.hig__text-field__label');
-            this._removeElementIfFound('.hig__text-field__label-placeholder');
         }
     }
 
@@ -119,6 +115,10 @@ class TextField extends Core {
         this._findDOMEl('.hig__text-field__input', this.el).setAttribute('disabled', 'true');
     }
 
+    _addSlot(element) {
+        this.mountPartialToComment('SLOT', element);
+    }
+
     _handleKeyDown(event) {
         this._detectPresenceOfValue(event.target.value);
     }
@@ -147,6 +147,10 @@ class TextField extends Core {
         passwordButton.classList.remove('hig__text-field__button--show');
     }
 
+    _onClick(fn){
+        return this._attachListener("click", '.hig__text-field__input', this.el, fn);
+    }
+
     _onPasswordRevealButtonClick(fn) {
         return this._attachListener("mousedown", '.hig__text-field__password-reveal-button', this.el, fn);
     }
@@ -165,6 +169,11 @@ class TextField extends Core {
 
     _onPasswordHideButtonClick(fn) {
         return this._attachListener("mousedown", '.hig__text-field__password-hide-button', this.el, fn);
+    }
+
+    _setReadonly(value) {
+        const field = this._findDOMEl('.hig__text-field__input', this.el);
+        value ? field.setAttribute('readonly', true) : field.removeAttribute('readonly');
     }
 
 }

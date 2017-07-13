@@ -2,12 +2,11 @@
     <!--ICON-SPACER-->
     {{#icon}}<div class="hig__text-field__icon-spacer"></div>{{/icon}}
     <div class="hig__text-field__content">
-        <!--LABEL-PLACEHOLDER-->
-        {{#label}}<div class="hig__text-field__label-placeholder">{{label}}</div>{{/label}}
         <div class="hig__text-field__input-wrapper">
             <label class="hig__text-field__icon" for={{name}}></label>
             <button class="hig__text-field__button hig__text-field__password-reveal-button"></button>
             <button class="hig__text-field__button hig__text-field__password-hide-button"></button>
+            <!--SLOT-->
             <input name="{{name}}" id="{{name}}" class="hig__text-field__input hig__text-field__input--no-value" placeholder="{{placeholder}}" value="{{value}}">
             <!--LABEL-->
             {{#label}}<label for="{{name}}" class="hig__text-field__label">{{label}}</label>{{/label}}

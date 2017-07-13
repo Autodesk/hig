@@ -4,7 +4,7 @@ const Template = require('./dropdown.html');
 const Interface = require('interface.json');
 const Core = require('_core.js');
 
-const Button = require('../../button/button.js');
+const TextField = require('../text-field/text-field.js');
 const Option = require('./option/option.js');
 
 const OPEN_CLASS = 'hig__dropdown--open';
@@ -20,18 +20,27 @@ class Dropdown extends Core {
     constructor(options){
         super(options);
         this._render(Template, options);
+
+        this.initialOptions = options;
     }
 
     _componentDidMount() {
-        this.button = new Button({
-            type: "secondary",
-        });
-        this.mountPartialToComment('BUTTON', this.button);
+        this.menu = document.createElement('div');
+        this.menu.classList.add('hig__dropdown__menu');
+
+        this.menuWrapper = document.createElement('div');
+        this.menuWrapper.classList.add('hig__dropdown__menu-wrapper');
+        this.menuWrapper.appendChild(this.menu);
+
+        this.field = new TextField(this.initialOptions);
+        this.mountPartialToComment('FIELD', this.field);
+        this.field._setReadonly(true);
+        this.field._addSlot(this.menuWrapper);
     }
 
     addOption(option, referenceOption) {
         if (option instanceof Option) {
-            this.mountPartialToComment('OPTIONS', option, referenceOption);
+            option.mount(this.menu, referenceOption);
         }
     }
 
@@ -40,20 +49,19 @@ class Dropdown extends Core {
     }
 
     disable() {
-        this.button.disable();
+        this.field.disable();
     }
 
     enable() {
-        this.button.enable();
+        this.field.enable();
     }
 
     noLongerRequired(){
-        this.el.classList.remove('hig__dropdown--required');
-        this._removeElementIfFound('.hig__dropdown__required-notice');
+        this.field.noLongerRequired();
     }
 
     onBlur(fn) {
-        return this.button.onBlur(fn);
+        return this.field.onBlur(fn);
     }
 
     onClickOutside(fn) {
@@ -61,15 +69,15 @@ class Dropdown extends Core {
     }
 
     onKeypress(fn) {
-        return this.button._attachListener("keypress", this.el, this.el, fn);
+        return this.field._attachListener("keypress", this.el, this.el, fn);
     }
 
     onFocus(fn) {
-        return this.button.onFocus(fn);
+        return this.field.onFocus(fn);
     }
 
     onTargetClick(fn) {
-        this.button.onClick(fn);
+        this.field._onClick(fn);
     }
 
     open() {
@@ -77,37 +85,26 @@ class Dropdown extends Core {
     }
 
     required(requiredLabelText){
-        this.el.classList.add('hig__dropdown--required');
-        const requiredNoticeEl = this._findOrAddElement('REQUIRED-NOTICE', 'p', '.hig__dropdown__required-notice');
-        requiredNoticeEl.textContent = requiredLabelText;
+        this.field.required(requiredLabelText);
     }
 
     setSelectedOptionLabel(label) {
-        this.button.setTitle(label);
+        this.field.setValue(label);
     }
 
     setInstructions(instructions) {
-        if (instructions) {
-            const instructionsEl = this._findOrAddElement('INSTRUCTIONS', 'p', '.hig__dropdown__instructions');
-            instructionsEl.textContent = instructions;
-        } else {
-            this._removeElementIfFound('.hig__dropdown__instructions');
-        }
+        this.field.setInstructions(instructions);
     }
 
     setLabel(label) {
-        if (label) {
-            this._findOrAddElement('LABEL', 'label', '.hig__dropdown__label').textContent = label;
-        } else {
-            this._removeElementIfFound('.hig__dropdown__label');
-        }
+        this.field.setLabel(label);
     }
 
     _callbackIfClickOutside(callback, event) {
         const menuEl = this._findDOMEl('.hig__dropdown__menu');
 
         if (menuEl.contains(event.target) || menuEl === event.target) { return }
-        if (this.button.el.contains(event.target) || this.button.el === event.target) { return }
+        if (this.field.el.contains(event.target) || this.field.el === event.target) { return }
         if (this.el.classList.contains(OPEN_CLASS)) {
             callback();
         }
