@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../../../../../../../../dist/hig.css">
+        <script type="text/javascript" src="../../../../../../../../dist/hig.js"></script>
+
+        <style>
+            body{
+                padding: 30px;
+            }
+
+            .test-group {
+                margin-bottom: 60px;
+            }
+			.tests-range-heading-defaults {
+				margin-bottom: 20px;
+			}
+			.tests-range-heading-disabled {
+				margin-bottom: 20px;
+			}
+			.tests-range-heading-setters {
+				margin-bottom: 20px;
+			}
+        </style>
+    </head>
+
+	<body>
+
+		<div class='test-group'>
+				<div class='tests-range-heading-defaults'></div>
+				<div class='tests-range-defaults'></div>
+		</div>
+		<div class='test-group'>
+				<div class='tests-range-heading-setters'></div>
+				<div class='tests-range-setters'></div>
+		</div>
+
+		<div class='test-group'>
+				<div class='tests-range-heading-disabled'></div>
+				<div class='tests-range-disabled'></div>
+		</div>
+
+		<script>
+			const Heading = Hig.Typography._partials.Heading;
+			const FormElements = new Hig.FormElements();
+			const Range = FormElements.partials.Range;
+
+			function log(event) {
+				const message = `${event.type} event triggered`;
+				console.log(message);
+			}
+
+
+			//RANGE CONFIGURED WITH DEFUAlTS
+			const DefaultHeading1 = new Heading({
+				text: "Range configured with defaults",
+				size: 3
+			})
+
+			DefaultHeading1.mount('.tests-range-heading-defaults');
+
+			const DefaultRange1 = new Range ({
+				max: 10,
+				min: 0,
+				value: 5,
+				label: 'Range with defaults',
+				instructions: 'Instructions for Range',
+				step: 1
+			});
+
+			DefaultRange1.mount('.tests-range-defaults');
+
+			DefaultRange1.onBlur(log);
+			DefaultRange1.onChange(log);
+			DefaultRange1.onFocus(log);
+
+			// RANGE CONFIGURED WITH SETTERS
+
+			const DefaultHeading = new Heading({
+				text: "Range configured with setters",
+				size: 3
+			})
+
+			DefaultHeading.mount('.tests-range-heading-setters');
+
+			const DefaultRange = new Range();
+
+
+			DefaultRange.mount('.tests-range-setters');
+
+			DefaultRange.setValue(5);
+			DefaultRange.setMin(0);
+			DefaultRange.setMax(10);
+			DefaultRange.setInstructions('Instructions for Range');
+			DefaultRange.setLabel('Range Label');
+			DefaultRange.setStep(1);
+			
+			DefaultRange.onBlur(log);
+			DefaultRange.onChange(log);
+			DefaultRange.onFocus(log);
+
+
+
+			// Default range Disable
+			const DefaultHeadingDisabled = new Heading({
+				text: "Disabled Range",
+				size: 3
+			})
+
+			DefaultHeadingDisabled.mount('.tests-range-heading-disabled');
+			
+			const DisabledRange = new Range();
+			DisabledRange.mount('.tests-range-disabled');
+
+			DisabledRange.setValue(5);
+			DisabledRange.setMin(0);
+			DisabledRange.setMax(10);
+			DisabledRange.setInstructions('Instructions for Range');
+			DisabledRange.setLabel('Range Label');
+
+			DisabledRange.onBlur(log);
+			DisabledRange.onChange(log);
+			DisabledRange.onFocus(log);
+			DisabledRange.disable();
+		</script>	
+	</body>	
+</html>	

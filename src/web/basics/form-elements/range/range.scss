@@ -1,0 +1,127 @@
+@import '~basics/fonts/fonts.scss';
+@import '~basics/colors/colors.scss';
+@import '~helpers/css/mixins/base.scss';
+
+.hig__range {
+  position: relative;
+  margin-bottom: 20px;
+  width: 300px;
+
+  font-family: 'ArtifaktElement', sans-serif;
+}
+
+.hig__range__field {
+  -webkit-appearance: none;
+  width: 100%; /* Specific width is required for Firefox. */
+  background-color: transparent; /* Otherwise white in Chrome */
+  box-sizing: content-box;
+  height: 25px;
+  margin: 17px 0 0 0;
+
+  @each $vendor in ('-webkit-slider-thumb', '-moz-range-thumb', '-ms-thumb') {
+    &::#{$vendor} {
+      box-sizing: content-box;
+      -webkit-appearance: none;
+
+      height: 16px;
+      width: 16px;
+      background: color(hig-gray-50);
+      border-radius: 50%;
+      cursor: pointer;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      border: 2px solid color(hig-white);
+    }
+
+    &:focus::#{$vendor} {
+      background-color: color(adsk-blue);
+    }
+
+    &:active::#{$vendor} {
+      background-color: color(adsk-blue-dark);
+    }
+
+    &[disabled]::#{$vendor} {
+      background-color: color(hig-white);
+      border: 2px dotted color(hig-gray-60);
+      outline: 2px solid color(hig-white);
+    }
+  }
+
+  @each $vendor in ('-webkit-slider-runnable-track', '-moz-range-track', '-ms-track') {
+    &::#{$vendor} {
+      width: 100%;
+      height: 2px;
+
+      background: color(hig-gray-50);
+      border-color: transparent;
+      cursor: pointer;
+      color: transparent;
+    }
+
+    &[disabled]::#{$vendor} {
+      background-color: color(hig-gray-60);
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.hig__range__label {
+  display: block;
+  margin-bottom: 15px;
+
+  color: color(hig-gray-30);
+  font-size: 12px;
+  line-height: 14px;
+
+  .hig__range__field:focus + & {
+    color: color(adsk-turquoise);
+  }
+
+  .hig__range--required &::after {
+      content: '*';
+      display: inline-block;
+      margin-left: 5px;
+  }
+}
+
+.hig__range__field__range-values {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+
+  &:after {
+    position: absolute;
+    bottom: 26px;
+    right: 0px;
+    color: color(hig-gray-30);
+    content: attr(data-range-max);
+  }
+
+  &:before {
+    position: absolute;
+    bottom: 26px;
+    color: color(hig-gray-30);
+    content: attr(data-range-min)
+  }
+}
+
+.hig__range__field__current-value {
+  color: color(hig-gray-30);
+  position: absolute;
+  margin: auto;
+  bottom: 26px;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.hig__range__instructions {
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: 14px;
+  color: color(hig-gray-30);
+}

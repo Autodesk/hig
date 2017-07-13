@@ -1,0 +1,13 @@
+<div class="hig__range">
+    <div class="hig__range__field__range-values" data-range-min={{min}} data-range-max={{max}}>
+      <span class="hig__range__field__current-value">{{value}}</span>
+      <input class="hig__range__field" type="range" min={{min}} max={{max}} step={{step}}></input>
+      <!--LABEL-->
+      {{#label}}<label class="hig__range__label">{{label}}</label>{{/label}}
+    </div>  
+
+    <!--INSTRUCTIONS-->
+    {{#instructions}}<p class="hig__range__instructions">{{instructions}}</p>{{/instructions}}
+    <!--REQUIRED-NOTICE-->
+</div>  
+
