@@ -38,15 +38,11 @@
       background-color: color(adsk-blue);
     }
 
-    &:active::#{vendor} {
+    &:active::#{$vendor} {
       background-color: color(adsk-blue-dark);
     }
 
-    &[disabled]::#{vendor} {
-      background-color: color(hig-gray-60);
-    }
-
-    &[disabled]::-webkit-slider-thumb{
+    &[disabled]::#{$vendor} {
       background-color: color(hig-white);
       border: 2px dotted color(hig-gray-60);
       outline: 2px solid color(hig-white);
@@ -97,7 +93,7 @@
   position: relative;
   display: flex;
   flex-direction: column-reverse;
-  
+
   &:after {
     position: absolute;
     bottom: 26px;
