@@ -1,5 +1,6 @@
 <div class="hig__range">
-    <div class="hig__range__field__range-values" data-range-min="" data-range-max="">
+    <div class="hig__range__field__range-values" data-range-min={{minValue}} data-range-max={{maxValue}}>
+      <span class="hig__range__field__current-value">{{value}}</span>
       <input class="hig__range__field" type="range"></input>
       <!--LABEL-->
       {{#label}}<label class="hig__range__label">{{label}}</label>{{/label}}

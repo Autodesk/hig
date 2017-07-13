@@ -15,6 +15,8 @@ class Range extends Core {
     constructor(options){
         super(options);
         this._render(Template, options);
+
+        this._findCurrentRangeValue = this._findCurrentRangeValue.bind(this);
     }
 
     setInstructions(instructions) {
@@ -38,6 +40,7 @@ class Range extends Core {
 
     setValue(value) {
         this._findDOMEl('.hig__range__field', this.el).setAttribute("value", value);
+        this._findDOMEl('.hig__range__field__current-value', this.el).textContent = value;
     }
 
     setMaxValue(maxValue){
@@ -59,7 +62,8 @@ class Range extends Core {
     }
 
     onChange(fn){
-        return this._attachListener("change", '.hig__range__field', this.el, fn);
+        this._attachListener("change", '.hig__range__field', this.el, fn);
+        return this._attachListener("input", '.hig__range__field', this.el, this._findCurrentRangeValue);
     }
 
     onFocus(fn){
@@ -83,6 +87,11 @@ class Range extends Core {
     noLongerRequired(){
         this.el.classList.remove('hig__range--required');
         this._removeElementIfFound('.hig__range__required-notice');
+    }
+
+    _findCurrentRangeValue(){
+        const currentValue = this._findDOMEl('.hig__range__field', this.el).value;
+        this._findDOMEl('.hig__range__field__current-value', this.el).textContent = currentValue;
     }
 }
 

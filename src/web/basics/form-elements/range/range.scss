@@ -45,6 +45,12 @@
     &[disabled]::#{vendor} {
       background-color: color(hig-gray-60);
     }
+
+    &[disabled]::-webkit-slider-thumb{
+      background-color: color(hig-white);
+      border: 2px dotted color(hig-gray-60);
+      outline: 2px solid color(hig-white);
+    }
   }
 
   @each $vendor in ('-webkit-slider-runnable-track', '-moz-range-track', '-ms-track') {
@@ -106,6 +112,15 @@
     color: color(hig-gray-30);
     content: attr(data-range-min)
   }
+}
+
+.hig__range__field__current-value {
+  color: color(hig-gray-30);
+  position: absolute;
+  margin: auto;
+  bottom: 26px;
+  right: 50%;
+  transform: translateX(50%);
 }
 
 .hig__range__instructions {
