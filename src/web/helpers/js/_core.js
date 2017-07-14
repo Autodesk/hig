@@ -263,7 +263,8 @@ class Core {
         }
 
         const newEl = document.createElement(tagname);
-        newEl.classList.add(selector.replace('.', ''));
+        console.log(selector.split('.'))
+        newEl.classList.add(...selector.split('.').filter(c => c.length > 0));
         return this.mountPartialToComment(searchComment, newEl);
     }
 

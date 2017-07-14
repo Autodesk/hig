@@ -139,12 +139,12 @@ class TextField extends Core {
         const iconString = this._getIconString('eye-blocked');
         const passwordButton = this.el.querySelector('.hig__text-field__password-reveal-button');
         passwordButton.innerHTML = iconString;
-        passwordButton.classList.add('hig__text-field__button--show');
+        passwordButton.classList.add('hig__text-field__extra--show');
     }
 
     _hidePasswordRevealButton() {
         const passwordButton = this.el.querySelector('.hig__text-field__password-reveal-button');
-        passwordButton.classList.remove('hig__text-field__button--show');
+        passwordButton.classList.remove('hig__text-field__extra--show');
     }
 
     _onClick(fn){
@@ -159,16 +159,27 @@ class TextField extends Core {
         const iconString = this._getIconString('eye');
         const passwordButton = this.el.querySelector('.hig__text-field__password-hide-button');
         passwordButton.innerHTML = iconString;
-        passwordButton.classList.add('hig__text-field__button--show');
+        passwordButton.classList.add('hig__text-field__extra--show');
     }
 
     _hidePasswordHideButton() {
         const passwordButton = this.el.querySelector('.hig__text-field__password-hide-button');
-        passwordButton.classList.remove('hig__text-field__button--show');
+        passwordButton.classList.remove('hig__text-field__extra--show');
     }
 
     _onPasswordHideButtonClick(fn) {
         return this._attachListener("mousedown", '.hig__text-field__password-hide-button', this.el, fn);
+    }
+
+    _showDropdownCaret() {
+        const iconString = this._getIconString('caret');
+        const caretEl = this._findOrAddElement('EXTRA', 'span', '.hig__text-field__extra.hig__text-field__extra--dropdown-caret');
+        caretEl.innerHTML = iconString;
+        caretEl.classList.add('hig__text-field__extra--show');
+    }
+
+    _hideDropdownCaret() {
+        this._removeElementIfFound('.hig__text-field__extra.hig__text-field__extra--dropdown-caret');
     }
 
     _setReadonly(value) {

@@ -42,7 +42,7 @@
     transition-duration: 0.1s, 0.1s, 0.1s;
     transition-delay: 0.1s;
 
-    .hig__text-field:focus + & {
+    .hig__text-field__input:focus + & {
         color: color(adsk-turquoise);
     }
 
@@ -53,17 +53,15 @@
     }
 
     .hig__text-field__input--no-value + & {
-        top: 26px;
+        top: 25px;
         left: 1px;
         font-size: 14px;
-        line-height: 20px;
     }
 
     .hig__text-field__input--no-value.hig__text-field__input:focus + & {
         top: 0;
         left: 0;
         font-size: 12px;
-        line-height: 14px;
         transition-delay: 0;
     }
 
@@ -157,10 +155,10 @@
     flex-direction: column-reverse;
 }
 
-.hig__text-field__button {
+.hig__text-field__extra {
     display: none;
     position: absolute;
-    top: -5px;
+    bottom: 0;
     right: 0;
     border: none;
     background: none;
@@ -169,7 +167,13 @@
         outline: none;
     }
 
-    &.hig__text-field__button--show {
+    &.hig__text-field__extra--show {
         display: block;
     }
+}
+
+.hig__text-field__extra--dropdown-caret {
+    width: 20px;
+    height: 17px;
+    pointer-events: none;
 }

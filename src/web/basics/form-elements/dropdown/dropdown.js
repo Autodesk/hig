@@ -35,6 +35,7 @@ class Dropdown extends Core {
         this.field = new TextField(this.initialOptions);
         this.mountPartialToComment('FIELD', this.field);
         this.field._setReadonly(true);
+        this.field._showDropdownCaret();
         this.field._addSlot(this.menuWrapper);
     }
 

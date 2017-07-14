@@ -1,6 +1,6 @@
-import './Option.scss';
+import './option.scss';
 
-const Template = require('./Option.html');
+const Template = require('./option.html');
 const Interface = require('interface.json');
 const Core = require('_core.js');
 
