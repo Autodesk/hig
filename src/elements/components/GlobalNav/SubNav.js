@@ -20,7 +20,10 @@ import HIGElement from '../../HIGElement';
 import HIGChildValidator from '../../HIGChildValidator';
 
 import TabsComponent, { Tabs } from './Tabs';
-import Tabs2Component, { Tabs2 } from './Tabs2';
+
+// New tabs which have state in a separate react component
+import { Tabs2 } from './Tabs2';
+import StatefulTabs from './StatefulTabs';
 
 export class SubNav extends HIGElement {
   componentDidMount() {
@@ -78,7 +81,7 @@ const SubNavComponent = createComponent(SubNav);
 SubNavComponent.propTypes = {
   moduleIndicatorName: PropTypes.string,
   moduleIndicatorIcon: PropTypes.string,
-  children: HIGChildValidator([TabsComponent, Tabs2Component])
+  children: HIGChildValidator([TabsComponent, StatefulTabs])
 };
 
 SubNavComponent.__docgenInfo = {
@@ -98,6 +101,6 @@ SubNavComponent.__docgenInfo = {
 };
 
 SubNavComponent.Tabs = TabsComponent;
-SubNavComponent.Tabs2 = Tabs2Component;
+SubNavComponent.Tabs2 = StatefulTabs;
 
 export default SubNavComponent;
