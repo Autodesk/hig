@@ -1,0 +1,154 @@
+<html>
+<head>
+ <!-- Probably will need to alter this relative path. -->
+ <link rel="stylesheet" href="../../../../../../dist/hig.css">
+ <script type="text/javascript" src="../../../../../../dist/hig.js"></script>
+ <script type="text/javascript" src="../../../../../../src/web/helpers/test.js"></script>
+
+ <style>
+  body {
+   background-color: rgb(250,250,250);
+   padding: 30px;
+  }
+
+  .test-group {
+   margin-bottom: 50px;
+  }
+  .tests-radiobutton { display: flex; flex-direction: row; }
+ </style>
+</head>
+<body>
+<div class='test-container'>
+ <div class="tests-radiobutton-heading"></div>
+ <div class="tests-radiobutton"></div>
+ <br>
+
+ <div class="tests-radiobutton-heading4"></div>
+ <br>
+ <div class="tests-radiobutton tests-radiobutton4"></div>
+</div>
+<script>
+ // Build your new hig element to test here
+ const Heading = Hig.Typography._partials.Heading;
+ const FormElements = new Hig.FormElements();
+ const RadioButton = FormElements.partials.RadioButton;
+
+ function handleChange() { console.log("Ch-Ch-Ch-Ch-Changes"); }
+ function handleHover() { console.log("Hovering") }
+ function handleFocus() { console.log("In focus") }
+
+ const DefaultHeading = new Heading({
+  text: "RadioButton Group",
+  size: 2
+ });
+
+ const DefaultRadioButton = new RadioButton({
+  label: "So basic",
+  name: "am_i_checked",
+  value: "yes"
+ });
+
+ DefaultHeading.mount('.tests-radiobutton-heading');
+ DefaultRadioButton.mount('.tests-radiobutton');
+
+
+ const RadioButton1 = new RadioButton({
+  label: "Checked",
+  name: "am_i_checked",
+  value: "iagree",
+  checked: true
+ });
+
+ RadioButton1.mount('.tests-radiobutton');
+
+ const RadioButton2 = new RadioButton({
+  label: "Required",
+  name: "am_i_checked",
+  value: "work_work",
+  required: true
+ });
+
+ console.log(RadioButton2);
+ RadioButton2.mount('.tests-radiobutton');
+ RadioButton2.onChange(handleChange);
+ RadioButton2.onHover(handleHover);
+ RadioButton2.onFocus(handleFocus);
+
+ const RadioButton3 = new RadioButton({
+  label: "Disabled",
+  name: "am_i_checked",
+  value: "hammertime",
+  disabled: true
+ });
+
+ RadioButton3.mount('.tests-radiobutton');
+
+ const FancyRadioButtonsHeading = new Heading({
+  text: "Separately controlled radiobutton",
+  size: 2
+ });
+ const FancyRadioButton = new RadioButton({
+  label: "Fancy!",
+  name: "hella",
+  value: "fancy"
+ });
+
+ FancyRadioButtonsHeading.mount('.tests-radiobutton-heading4');
+ FancyRadioButton.mount('.tests-radiobutton4');
+
+ const DisableButton = new Hig.Button({
+  title: "Disable radiobutton",
+  link: "#"
+ });
+
+ const EnableButton = new Hig.Button({
+  title: "Enable radiobutton",
+  link: "#"
+ });
+
+ const CheckButton = new Hig.Button({
+  title: "Check radiobutton",
+  link: "#"
+ });
+
+ const UncheckButton = new Hig.Button({
+  title: "Uncheck the radiobutton",
+  link: "#"
+ });
+
+ const RequireButton = new Hig.Button({
+  title: "Require radiobutton",
+  link: "#"
+ });
+ const NotrequiredButton = new Hig.Button({
+  title: "Stop requiring radiobutton",
+  link: "#"
+ });
+
+ [DisableButton, EnableButton, CheckButton, UncheckButton,
+  RequireButton, NotrequiredButton].forEach(function(button) {
+  button.mount('.tests-radiobutton-heading4');
+ });
+
+ NotrequiredButton.onClick(function(e) {
+  FancyRadioButton.noLongerRequired();
+ });
+ RequireButton.onClick(function(e) {
+  FancyRadioButton.required();
+ });
+ UncheckButton.onClick(function(e) {
+  FancyRadioButton.uncheck();
+ });
+ CheckButton.onClick(function(e) {
+  FancyRadioButton.check();
+ });
+ EnableButton.onClick(function(e) {
+  FancyRadioButton.enable();
+ });
+ DisableButton.onClick(function(e) {
+  FancyRadioButton.disable();
+ });
+
+</script>
+</body>
+</html>

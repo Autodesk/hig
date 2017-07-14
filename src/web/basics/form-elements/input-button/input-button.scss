@@ -1,6 +1,6 @@
 @import '~basics/colors/colors.scss';
 
-.hig__form-elements__checkbox {
+.hig__form-elements__input-button {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -8,22 +8,21 @@
   padding: 0 10px;
 
   &--required {
-    .hig__form-elements__checkbox__label::after {
-        content: '*';
-      }
+    .hig__form-elements__input-button__label::after {
+      content: '*';
+    }
   }
 
-  .hig__form-elements__checkbox__input {
+  input {
     opacity: 0;
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
-    left: 0;
-  }
+    left: 0;  }
 }
 
-.hig__form-elements__checkbox__label {
+.hig__form-elements__input-button__label {
   font-size: 12px;
   font-weight: bold;
   font-family: 'ArtifaktElement', sans-serif;
@@ -32,28 +31,31 @@
   line-height: 14px;
 }
 
-.hig__form-elements__checkbox__input-wrapper {
-  font-size: 12px;
+.hig__form-elements__input-button__input-wrapper {
   visibility: visible;
   color: transparent;
   border: 1px solid color(hig-gray-40);
-  border-radius: 3px;
   background-color: color(hig-white);
-  padding: 0 2px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 25px;
+  line-height: 14px;
+  height: 14px;
+  width: 14px;
 
-  .hig__form-elements__checkbox:hover & {
+
+  .hig__form-elements__input-button:hover & {
     border-color: color(adsk-turquoise);
   }
-  .hig__form-elements__checkbox--disabled & {
+  .hig__form-elements__input-button--disabled & {
     color: transparent;
     border-color: color(hig-gray-30);
     border-style: dotted;
   }
-}
 
-.hig__form-elements__checkbox__input:checked + .hig__form-elements__checkbox__input-wrapper {
+}
+.hig__form-elements__input-button__input:checked + .hig__form-elements__input-button__input-wrapper {
   border-color: color(hig-slate-light);
-  color: color(hig-white);
-  background-color: color(hig-slate-light);
+  color: color(hig-slate-light);
+  background-color: color(hig-white);
 }
-

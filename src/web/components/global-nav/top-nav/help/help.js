@@ -11,7 +11,7 @@ var Interface = require('interface.json');
 
 class Help extends Shortcut {
     constructor(options){
-        options.icon = 'help'
+        options.icon = 'help';
         super(options);
     }
     setLink(link) { super.setLink(link); }

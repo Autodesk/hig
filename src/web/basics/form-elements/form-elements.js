@@ -6,6 +6,7 @@ var PasswordField = require('./password-field/password-field.js');
 var TextField = require('./text-field/text-field.js');
 var TextArea = require('./text-area/text-area.js');
 var Range = require('./range/range.js');
+var RadioButton = require('./radio-button/radio-button.js');
 
 /**
  * Holder for FormElements
@@ -15,9 +16,7 @@ var Range = require('./range/range.js');
 
 class FormElements extends Core {
 
-    constructor(options){
-        super(options);
-    }
+    constructor(options){ super(options); }
 
 }
 
@@ -28,7 +27,8 @@ FormElements._partials = {
     PasswordField: PasswordField,
     TextField: TextField,
     TextArea: TextArea,
-    Range: Range
+    Range: Range,
+    RadioButton: RadioButton
 };
 
 module.exports = FormElements;

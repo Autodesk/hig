@@ -8,12 +8,11 @@
       class="hig__form-elements__checkbox__label">
       {{ label }}
     </label>{{ /label }}
-  <span class="hig__form-elements__checkbox__input-wrapper"><input type="checkbox" class="hig__form-elements__checkbox__input"
+    <input type="checkbox" class="hig__form-elements__checkbox__input"
          {{ #required }}required{{/required}}
           {{ #checked }}checked{{ /checked }}
           {{ #disabled }}disabled{{ /disabled }}
           name="{{ name }}" id="{{ name }}" value="{{ value }}"
-          ></span>
-  <!--REQUIRED-NOTICE-->
-
+          >
+      <span class="hig__form-elements__checkbox__input-wrapper">&#10004;</span>
 </div>

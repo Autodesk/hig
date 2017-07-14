@@ -18,7 +18,7 @@ class Checkbox extends Core {
     }
 
     setLabel(newValue) {
-        const labelClass = 'hig__form-elements__checkbox__label'
+        const labelClass = 'hig__form-elements__checkbox__label';
         if (newValue) {
             const labelEl = this._findOrAddElement('CHECKBOX_LABEL', 'label', labelClass);
             labelEl.textContent = newValue;
@@ -28,9 +28,11 @@ class Checkbox extends Core {
     }
 
     setName(newName){
-        this._setLabelAttribute('for', newValue);
-        this._setInputAttribute('name', newValue);
-        this._setInputAttribute('id', newValue);
+        const currentValue = this._buttonEl().getAttribute('value');
+
+        this._setLabelAttribute('for', newName);
+        this._setInputAttribute('name', newName);
+        this._setInputAttribute('id', `${newName}[${currentValue}]`);
     }
 
     setValue(newValue){
@@ -40,12 +42,12 @@ class Checkbox extends Core {
 
     check() {
         this._addClass('hig__form-elements__checkbox--checked')
-        this._setInputAttribute('checked','');
+        this._findDOMEl('.hig__form-elements__checkbox__input',this.el).checked=true;
     }
 
     uncheck() {
         this._removeClass('hig__form-elements__checkbox--checked')
-        this._removeInputAttribute('checked');
+        this._findDOMEl('.hig__form-elements__checkbox__input',this.el).checked=false;
     }
 
     required() {
@@ -72,7 +74,6 @@ class Checkbox extends Core {
         return this._attachListener("change", '.hig__form-elements__checkbox__input', this.el, fn);
     }
 
-
     onHover(fn){
         return this._attachListener("hover", this.el, this.el, fn);
     }
@@ -94,7 +95,6 @@ class Checkbox extends Core {
         this._findDOMEl('.hig__form-elements__checkbox__input',this.el).setAttribute(attribute, value);
     }
     _removeInputAttribute(attribute) {
-        console.log(this.el.outerHTML);
         this._findDOMEl('.hig__form-elements__checkbox__input', this.el).removeAttribute(attribute);
     }
 }

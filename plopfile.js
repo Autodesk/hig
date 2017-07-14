@@ -28,16 +28,16 @@ module.exports = function (plop) {
                     new_a.push(p);
                     new_a.push("partials");
                 }
-                
+
             }
         }, this);
 
         new_a.pop(); // remove last "partials"
-        
+
         var s = "['";
         s += new_a.join("']['");
         s += "']";
-        
+
         return s;
 	});
 
@@ -66,6 +66,11 @@ module.exports = function (plop) {
             type: 'add',
             path: '{{absPath path}}/{{ dashCase name }}/tests/gemini-{{ dashCase name }}.html',
             templateFile: 'src/web/helpers/skeletons/skeleton-gemini-template.html',
+            abortOnFail: true
+        },{
+            type: 'add',
+            path: 'gemini/{{ dashCase name }}-test.js',
+            templateFile: 'src/web/helpers/skeletons/skeleton-gemini-test.js',
             abortOnFail: true
         },{
             type: 'add',

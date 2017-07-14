@@ -1,0 +1,119 @@
+<html>
+<head>
+ <link rel="stylesheet" href="../../../../../../dist/hig.css">
+ <script type="text/javascript" src="../../../../../../dist/hig.js"></script>
+ <script type="text/javascript" src="../../../../../../src/web/helpers/test.js"></script>
+
+ <style>
+  body {
+   padding: 30px;
+  }
+
+  .test-group {
+   margin-bottom: 50px;
+  }
+  .test-container div { display: flex; flex-direction: row; }
+
+ </style>
+</head>
+<body>
+
+<div class='test-container' style="padding: 40px; margin: 0;">
+ <h1 class="tests-radiobutton-heading"></h1>
+ <div>
+  <div class="tests-radiobutton"></div>
+  <div class="tests-radiobutton tests-radiobutton1"></div>
+  <div class="tests-radiobutton tests-radiobutton2"></div>
+  <div class="tests-radiobutton tests-radiobutton3"></div>
+ </div>
+ <hr>
+ <div>
+  <div class="tests-radiobutton tests-radiobutton4"></div>
+  <div class="tests-radiobutton tests-radiobutton5"></div>
+  <div class="tests-radiobutton tests-radiobutton6"></div>
+ </div>
+</div>
+
+<script>
+ const Heading = Hig.Typography._partials.Heading;
+ const FormElements = new Hig.FormElements();
+ const RadioButton = FormElements.partials.RadioButton;
+
+ const DefaultHeading = new Heading({
+  text: "Different RadioButtons",
+  size: 2
+ });
+ //
+ // radiobuttones = ['basic','checked','required','disabled',
+ //  'callcheck','callrequire','calldisable'].map(function(type,i){
+ //    var radiobutton = new RadioButton({
+ //      label: type,
+ //      name: `box_${i}`,
+ //      value: i.toString
+ //    })
+ // });
+
+ const DefaultRadioButton = new RadioButton({
+  label: "So basic",
+  name: "am_i_checked",
+  value: "yes"
+ });
+
+ DefaultHeading.mount('.tests-radiobutton-heading');
+ DefaultRadioButton.mount('.tests-radiobutton');
+
+
+ const RadioButton1 = new RadioButton({
+  label: "Checked",
+  name: "agreement",
+  value: "iagree",
+  checked: true
+ });
+
+ RadioButton1.mount('.tests-radiobutton1');
+
+ const RadioButton2 = new RadioButton({
+  label: "Required",
+  name: "ready_to_work",
+  value: "work_work",
+  required: true,
+ });
+ RadioButton2.mount('.tests-radiobutton2');
+
+ const RadioButton3 = new RadioButton({
+  label: "Disabled",
+  name: "u_cant_check_this",
+  value: "hammertime",
+  disabled: true
+ });
+ RadioButton3.mount('.tests-radiobutton3');
+
+
+
+ const RadioButton4 = new RadioButton ({
+  label: "Callcheck",
+  name: "events",
+  value: "shouldbechecked"
+ });
+ RadioButton4.mount('.tests-radiobutton4');
+ RadioButton4.check();
+
+ const RadioButton5 = new RadioButton ({
+  label: "Callrequired",
+  name: "events",
+  value: "shouldberequired"
+ });
+ RadioButton5.mount('.tests-radiobutton5');
+ RadioButton5.required();
+
+ const RadioButton6 = new RadioButton ({
+  label: "Calldisable",
+  name: "events",
+  value: "shouldbedisabled"
+ });
+ RadioButton6.mount('.tests-radiobutton6');
+ RadioButton6.disable();
+</script>
+
+</body>
+</html>
