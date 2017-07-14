@@ -20,6 +20,7 @@ import HIGElement from '../../HIGElement';
 import HIGChildValidator from '../../HIGChildValidator';
 
 import TabsComponent, { Tabs } from './Tabs';
+import Tabs2Component, { Tabs2 } from './Tabs2';
 
 export class SubNav extends HIGElement {
   componentDidMount() {
@@ -33,13 +34,15 @@ export class SubNav extends HIGElement {
     switch (ElementConstructor) {
       case Tabs:
         return new Tabs(this.hig.partials.Tabs, props);
+      case Tabs2:
+        return new Tabs2(this.hig.partials.Tabs, props);
       default:
         throw new Error(`Unknown type ${ElementConstructor.name}`);
     }
   }
 
   appendChild(instance, beforeChild = {}) {
-    if (instance instanceof Tabs) {
+    if (instance instanceof Tabs || instance instanceof Tabs2) {
       if (this.tabs) {
         throw new Error('only one Tabs is allowed');
       } else {
@@ -55,7 +58,7 @@ export class SubNav extends HIGElement {
   }
 
   removeChild(instance) {
-    if (instance instanceof Tabs) {
+    if (instance instanceof Tabs || instance instanceof Tabs2) {
       this.tabs = null;
     }
 
@@ -75,7 +78,7 @@ const SubNavComponent = createComponent(SubNav);
 SubNavComponent.propTypes = {
   moduleIndicatorName: PropTypes.string,
   moduleIndicatorIcon: PropTypes.string,
-  children: HIGChildValidator([TabsComponent])
+  children: HIGChildValidator([TabsComponent, Tabs2Component])
 };
 
 SubNavComponent.__docgenInfo = {
@@ -95,5 +98,6 @@ SubNavComponent.__docgenInfo = {
 };
 
 SubNavComponent.Tabs = TabsComponent;
+SubNavComponent.Tabs2 = Tabs2Component;
 
 export default SubNavComponent;

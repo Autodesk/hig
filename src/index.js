@@ -45,6 +45,10 @@ const TopNavSearch = GlobalNav.TopNav.Search;
 const SubNav = GlobalNav.SubNav;
 const Tabs = GlobalNav.SubNav.Tabs;
 const Tab = GlobalNav.SubNav.Tabs.Tab;
+
+const Tabs2 = GlobalNav.SubNav.Tabs2;
+const Tab2 = Tabs2.Tab2;
+
 const Slot = GlobalNav.Slot;
 
 const topNavFixtures = new TopNavFixtures();
@@ -149,7 +153,6 @@ class App extends React.Component {
                           </Module>
                         );
                       })}
-
                     </Group>
                   );
                 })}
@@ -236,21 +239,16 @@ class App extends React.Component {
             />
 
             <TopNavSearch onInput={this.handleTopNavSearchInputChange} />
-
           </TopNav>
           <SubNav
             moduleIndicatorName="Documents Library"
             moduleIndicatorIcon="hamburger"
           >
-            <Tabs
-              onTabChange={tab => {
-                console.log('client tab handler');
-              }}
-            >
-              {this.state.tabs.map((tab, i) => {
-                return <Tab key={tab.id} label={tab.label} />;
-              })}
-            </Tabs>
+            <Tabs2>
+              {this.state.tabs.map(tab =>
+                <Tab2 key={tab.id} label={tab.label} />
+              )}
+            </Tabs2>
           </SubNav>
 
           <Slot className="playground-content">
@@ -398,7 +396,11 @@ class App extends React.Component {
             </div>
 
             {topNavFixtures.hipsterContent().map((paragraph, i) => {
-              return <p key={i}>{paragraph}</p>;
+              return (
+                <p key={i}>
+                  {paragraph}
+                </p>
+              );
             })}
           </Slot>
         </GlobalNav>
