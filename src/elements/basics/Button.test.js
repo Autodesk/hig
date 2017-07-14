@@ -38,7 +38,116 @@ describe('<Button>', () => {
   }
 
   it('renders the standard button', () => {
-    const defaults = { title: 'regular button', link: 'http://example.com' };
+    const defaults = { size: 'standard', title: 'regular button', link: 'http://example.com' };
+
+    const { higButton, higContainer } = createHigButton(defaults);
+
+    const container = document.createElement('div');
+
+    const wrapper = mount(<Button {...defaults} />, { attachTo: container });
+
+    // expect(container.innerHTML).toMatchSnapshot();
+
+    expect(container.firstElementChild.outerHTML).toMatchSnapshot();
+
+    expect(container.firstElementChild.outerHTML).toEqual(
+      higContainer.firstElementChild.outerHTML
+    );
+  });
+
+  it('renders the small button', () => {
+    const defaults = { size: 'small', title: 'small button', link: 'http://example.com' };
+
+    const { higButton, higContainer } = createHigButton(defaults);
+
+    const container = document.createElement('div');
+
+    const wrapper = mount(<Button {...defaults} />, { attachTo: container });
+
+    // expect(container.innerHTML).toMatchSnapshot();
+
+    expect(container.firstElementChild.outerHTML).toMatchSnapshot();
+
+    expect(container.firstElementChild.outerHTML).toEqual(
+      higContainer.firstElementChild.outerHTML
+    );
+  });
+
+  it('renders the large button', () => {
+    const defaults = { size: 'large', title: 'Large button', link: 'http://example.com' };
+
+    const { higButton, higContainer } = createHigButton(defaults);
+
+    const container = document.createElement('div');
+
+    const wrapper = mount(<Button {...defaults} />, { attachTo: container });
+
+    // expect(container.innerHTML).toMatchSnapshot();
+
+    expect(container.firstElementChild.outerHTML).toMatchSnapshot();
+
+    expect(container.firstElementChild.outerHTML).toEqual(
+      higContainer.firstElementChild.outerHTML
+    );
+  });
+
+
+  it('renders the primary button', () => {
+    const defaults = { size: 'standard', type: 'primary', title: 'Primary button', link: 'http://example.com' };
+
+    const { higButton, higContainer } = createHigButton(defaults);
+
+    const container = document.createElement('div');
+
+    const wrapper = mount(<Button {...defaults} />, { attachTo: container });
+
+    // expect(container.innerHTML).toMatchSnapshot();
+
+    expect(container.firstElementChild.outerHTML).toMatchSnapshot();
+
+    expect(container.firstElementChild.outerHTML).toEqual(
+      higContainer.firstElementChild.outerHTML
+    );
+  });
+
+  it('renders the secondary button', () => {
+    const defaults = { size: 'standard', type: 'secondary', title: 'Secondary button', link: 'http://example.com' };
+
+    const { higButton, higContainer } = createHigButton(defaults);
+
+    const container = document.createElement('div');
+
+    const wrapper = mount(<Button {...defaults} />, { attachTo: container });
+
+    // expect(container.innerHTML).toMatchSnapshot();
+
+    expect(container.firstElementChild.outerHTML).toMatchSnapshot();
+
+    expect(container.firstElementChild.outerHTML).toEqual(
+      higContainer.firstElementChild.outerHTML
+    );
+  });
+
+  it('renders the flat button', () => {
+    const defaults = { size: 'standard', type: 'flat', title: 'Flat button', link: 'http://example.com' };
+
+    const { higButton, higContainer } = createHigButton(defaults);
+
+    const container = document.createElement('div');
+
+    const wrapper = mount(<Button {...defaults} />, { attachTo: container });
+
+    // expect(container.innerHTML).toMatchSnapshot();
+
+    expect(container.firstElementChild.outerHTML).toMatchSnapshot();
+
+    expect(container.firstElementChild.outerHTML).toEqual(
+      higContainer.firstElementChild.outerHTML
+    );
+  });
+
+  it('renders the button with an icon', () => {
+    const defaults = { size: 'standard', icon: 'gear', type: 'primary', title: 'Button with Icon', link: 'http://example.com' };
 
     const { higButton, higContainer } = createHigButton(defaults);
 
@@ -119,7 +228,65 @@ describe('<Button>', () => {
     );
   });
 
-  ['onClick', 'onHover'].forEach(eventName => {
+  it('updates the size using setSize', () => {
+    const { higButton, higContainer } = createHigButton();
+    const newSize = 'large';
+
+    higButton.setSize(newSize);
+
+    const reactContainer = document.createElement('div');
+
+    const wrapper = mount(<Button />, { attachTo: reactContainer });
+
+    wrapper.setProps({ size: newSize });
+
+    expect(reactContainer.firstElementChild.outerHTML).toMatchSnapshot();
+
+    expect(reactContainer.firstElementChild.outerHTML).toEqual(
+      higContainer.firstElementChild.outerHTML
+    );
+  });
+
+  it('updates the icon using setIcon', () => {
+    const { higButton, higContainer } = createHigButton();
+    const newIcon = 'hamburger';
+
+    higButton.setIcon(newIcon);
+
+    const reactContainer = document.createElement('div');
+
+    const wrapper = mount(<Button />, { attachTo: reactContainer });
+
+    wrapper.setProps({ icon: newIcon });
+
+    expect(reactContainer.firstElementChild.outerHTML).toMatchSnapshot();
+
+    expect(reactContainer.firstElementChild.outerHTML).toEqual(
+      higContainer.firstElementChild.outerHTML
+    );
+  });
+
+  it('renders the disabled button', () => {
+    const defaults = { size: 'standard', title: 'regular button', link: 'http://example.com', disabled: 'true' };
+
+    const { higButton, higContainer } = createHigButton(defaults);
+    higButton.disable();
+
+    const container = document.createElement('div');
+
+    const wrapper = mount(<Button {...defaults} />, { attachTo: container });
+
+    // expect(container.innerHTML).toMatchSnapshot();
+
+    expect(container.firstElementChild.outerHTML).toMatchSnapshot();
+
+    expect(container.firstElementChild.outerHTML).toEqual(
+      higContainer.firstElementChild.outerHTML
+    );
+  });
+
+
+  ['onClick', 'onHover', 'onFocus', 'onBlur'].forEach(eventName => {
     it(`sets up ${eventName} initially`, () => {
       const eventSpy = jest.fn();
 
