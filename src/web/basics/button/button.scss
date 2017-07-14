@@ -43,7 +43,7 @@
     }
 
     &--disabled {
-        cursor: not-allowed;
+        pointer-events: none;
         background-color: color(adsk-blue-lightest);
 
         &:hover, &:focus{

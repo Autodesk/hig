@@ -7,6 +7,7 @@ var Core = require('../../helpers/js/_core.js');
 var AvailableTypes = ['primary', 'secondary', 'flat'];
 var AvailableSizes = ['small', 'standard', 'large'];
 
+
 /**
  * Creates a button
  *
@@ -86,6 +87,10 @@ class Button extends Core {
         return this._attachListener("focusin", this.el, this.el, fn);
     }
 
+    onBlur(fn){
+        return this._attachListener("focusout", this.el, this.el, fn);
+    }
+
     _clearAllTypes(){
         for(var type in AvailableTypes){
             this.el.classList.remove("hig__button--"+type);
@@ -108,5 +113,8 @@ Button._defaults = {
     size: "standard",
     icon: false
 };
+
+Button.AvailableTypes = AvailableTypes;
+Button.AvailableSizes = AvailableSizes;
 
 module.exports = Button;
