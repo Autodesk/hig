@@ -1,59 +1,27 @@
 @import '~basics/colors/colors.scss';
 
-.hig__form-elements__checkbox {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 10px;
-
-  &--required {
-    .hig__form-elements__checkbox__label::after {
-        content: '*';
-      }
-  }
-
-  .hig__form-elements__checkbox__input {
-    opacity: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-  }
-}
-
-.hig__form-elements__checkbox__label {
-  font-size: 12px;
-  font-weight: bold;
-  font-family: 'ArtifaktElement', sans-serif;
-  font-style: italic;
-  margin-bottom: 8px;
-  line-height: 14px;
-}
-
-.hig__form-elements__checkbox__input-wrapper {
-  font-size: 12px;
-  visibility: visible;
-  color: transparent;
-  border: 1px solid color(hig-gray-40);
-  border-radius: 3px;
-  background-color: color(hig-white);
-  padding: 0 2px;
-
-  .hig__form-elements__checkbox:hover & {
-    border-color: color(adsk-turquoise);
-  }
-  .hig__form-elements__checkbox--disabled & {
+.hig__input-button--checkbox {
+  .hig__input-button__input-wrapper {
+    visibility: visible;
     color: transparent;
-    border-color: color(hig-gray-30);
-    border-style: dotted;
+    border: 2px solid color(hig-gray-40);
+    border-radius: 3px;
+    background-color: color(hig-white);
+    height: 14px;
+    width: 14px;
+  }
+
+  .hig__input-button__input:checked + .hig__input-button__input-wrapper {
+    border-color: color(hig-slate-light);
+    color: color(hig-white);
+    background-color: color(hig-slate-light);
   }
 }
 
-.hig__form-elements__checkbox__input:checked + .hig__form-elements__checkbox__input-wrapper {
-  border-color: color(hig-slate-light);
-  color: color(hig-white);
-  background-color: color(hig-slate-light);
+// required for specificity
+.hig__input-button.hig__input-button--checkbox:focus  .hig__input-button__input-wrapper,
+.hig__input-button.hig__input-button--checkbox:active  .hig__input-button__input-wrapper {
+  outline: none;
+  border-color: color(adsk-blue-dark);
 }
 

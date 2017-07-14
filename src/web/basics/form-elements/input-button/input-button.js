@@ -13,9 +13,9 @@ class InputButton extends Core {
 
   constructor(options){
     super(options);
-    this.inputClass = 'hig__form-elements__input-button__input';
-    this.labelClass = 'hig__form-elements__input-button__label';
-    this.wrapperClass = 'hig__form-elements__input-button';
+    this.inputClass = 'hig__input-button__input';
+    this.labelClass = 'hig__input-button__label';
+    this.wrapperClass = 'hig__input-button';
     this.commentLabel = '';
   }
 

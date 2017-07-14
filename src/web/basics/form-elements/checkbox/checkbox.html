@@ -1,18 +1,14 @@
-<div class='hig__form-elements__checkbox
-   {{ #disabled }}hig__form-elements__checkbox--disabled{{ /disabled }}
-   {{ #required }}hig__form-elements__checkbox--required{{ /required }}
-   {{ #checked }}hig__form-elements__checkbox--checked{{ /checked }}'>
+<div class='hig__input-button hig__input-button--checkbox
+   {{ #disabled }}hig__input-button--disabled{{ /disabled }}
+   {{ #required }}hig__input-button--required{{ /required }}
+   {{ #checked }}hig__input-button--checked{{ /checked }}'>
   <!--CHECKBOX_LABEL-->
   {{ #label }}
-    <label for="{{ name }}"
-      class="hig__form-elements__checkbox__label">
-      {{ label }}
-    </label>{{ /label }}
-    <input type="checkbox" class="hig__form-elements__checkbox__input"
-         {{ #required }}required{{/required}}
-          {{ #checked }}checked{{ /checked }}
-          {{ #disabled }}disabled{{ /disabled }}
-          name="{{ name }}" id="{{ name }}" value="{{ value }}"
-          >
-      <span class="hig__form-elements__checkbox__input-wrapper">&#10004;</span>
-</div>
+  <label for="{{ name }}" class="hig__input-button__label">{{ label }}</label>{{ /label }}
+  <input type="checkbox" class="hig__input-button__input"
+      {{ #required }}required{{/required}}
+      {{ #checked }}checked{{ /checked }}
+      {{ #disabled }}disabled{{ /disabled }}
+      name="{{ name }}" id="{{ name }}[{{ value }}]" value="{{ value }}">
+  <span class="hig__input-button__input-wrapper"></span>
+</div>`
