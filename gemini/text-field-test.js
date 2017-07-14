@@ -12,6 +12,7 @@ gemini.suite('text field', (parent) => {
             })
             .capture('focused', function(actions, find) {
                 actions.mouseDown(this.field);
+                actions.mouseUp(this.field);
             })
             .capture('with value', function(actions, find) {
                 actions.sendKeys(this.field, 'Now it has a value');

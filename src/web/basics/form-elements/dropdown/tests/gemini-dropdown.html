@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../../../../../../dist/hig.css">
+        <script type="text/javascript" src="../../../../../../dist/hig.js"></script>
+
+        <style>
+            body {
+                margin: 50px;
+            }
+
+            .test-container {
+                margin-bottom: 50px;
+            }
+
+            .test-container > div {
+                padding: 10px;
+            }
+
+            .test-mount-open {
+                height: 170px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class='test-container'>
+            <div class='test-mount-default'></div>
+        </div>
+
+        <div class='test-container'>
+            <div class='test-mount-open'></div>
+        </div>
+
+        <div class='test-container'>
+            <div class='test-mount-disabled'></div>
+        </div>
+
+        <script>
+
+            const FormElements = new Hig.FormElements();
+            const Dropdown = FormElements.partials.Dropdown;
+
+
+            // ----------------------------
+            // DROPDOWN WITH DEFAULTS
+            // ----------------------------
+
+            const DefaultDropdown = new Dropdown({
+                label: 'Favorite vice',
+                instructions: "Despite offering these choices, we in no way condone them.",
+            });
+
+            DefaultDropdown.mount(".test-mount-default");
+            DefaultDropdown.setSelectedOptionLabel('Penny slots');
+
+
+            // ----------------------------
+            // OPEN DROPDOWN
+            // ----------------------------
+
+            const OpenDropdown = new Dropdown({
+                label: 'Favorite vice',
+                instructions: "Despite offering these choices, we in no way condone them.",
+            });
+
+            OpenDropdown.mount(".test-mount-open");
+            const OpenDropdownOptionData = [
+                { label: 'Penny slots', selected: true },
+                { label: 'The drink' },
+                { label: 'Bubblegum' },
+            ];
+            OpenDropdownOptionData.forEach(optionData => {
+                const option = new OpenDropdown.partials.Option(optionData);
+                OpenDropdown.addOption(option);
+            });
+            OpenDropdown.setSelectedOptionLabel('Penny slots');
+            OpenDropdown.open();
+
+
+            // ----------------------------
+            // DISABLED DROPDOWN
+            // ----------------------------
+
+            const DisabledDropdown = new Dropdown({
+                label: "Can't touch this",
+            });
+
+            DisabledDropdown.mount(".test-mount-disabled");
+            DisabledDropdown.setSelectedOptionLabel('Vaping');
+            DisabledDropdown.disable();
+
+
+        </script>
+
+    </body>
+</html>
