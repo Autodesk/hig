@@ -245,9 +245,9 @@ class App extends React.Component {
               onChange={(newTabId, oldTabId) =>
                 console.log(`New Tab: ${newTabId}`)}
             >
-              {this.state.tabs.map(tab =>
+              {this.state.tabs.map(tab => (
                 <Tabs2.Tab key={tab.id} id={tab.id} label={tab.label} />
-              )}
+              ))}
             </Tabs2>
           </SubNav>
 

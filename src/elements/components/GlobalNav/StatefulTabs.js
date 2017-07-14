@@ -57,7 +57,7 @@ class StatefulTabs extends React.Component {
   render() {
     const tabs = React.Children.map(
       this.props.children,
-      child => (isTab(child) ? this.renderTab(child) : null)
+      child => isTab(child) ? this.renderTab(child) : null
     );
     return (
       <Tabs2>
