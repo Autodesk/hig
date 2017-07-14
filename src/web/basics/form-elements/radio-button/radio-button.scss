@@ -6,20 +6,17 @@
   .hig__input-button__input-wrapper {
     border-radius: 50%;
   }
+
+  // required for specificity
+  .hig__input-button__input:focus + .hig__input-button__input-wrapper {
+    outline: none;
+    border-color: color(adsk-blue-dark);
+  }
+
   .hig__input-button__input:checked + .hig__input-button__input-wrapper {
     border-color: color(hig-slate-light);
     color: color(hig-white);
     background-color: color(hig-slate-light);
     box-shadow: inset 0 0 0 3px color(hig-white);
   }
-}
-
-// required for specificity
-.hig__input-button.hig__input-button--radio:focus,
-.hig__input-button.hig__input-button--radio:active {
-  .hig__input-button__input-wrapper {
-    outline: none;
-    border-color: color(adsk-blue-dark);
-  }
-
 }

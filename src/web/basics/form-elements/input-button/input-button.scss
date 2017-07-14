@@ -60,12 +60,12 @@
   }
 }
 
-.hig__input-button.hig__input-button--radio:focus,
+.hig__input-button.hig__input-button--radio,
 .hig__input-button.hig__input-button--radio:active,
-.hig__input-button.hig__input-button--checkbox:focus,
+.hig__input-button.hig__input-button--checkbox,
 .hig__input-button.hig__input-button--checkbox:active {
-
-  .hig__input-button__input:checked + .hig__input-button__input-wrapper {
+  .hig__input-button__input:checked:focus + .hig__input-button__input-wrapper {
+    border-color: color(adsk-blue-dark);
     background-color: color(adsk-blue-dark);
   }
 }

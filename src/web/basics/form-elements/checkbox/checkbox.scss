@@ -11,17 +11,15 @@
     width: 14px;
   }
 
+  // required for specificity
+  .hig__input-button__input:focus + .hig__input-button__input-wrapper {
+    outline: none;
+    border-color: color(adsk-blue-dark);
+  }
+
   .hig__input-button__input:checked + .hig__input-button__input-wrapper {
     border-color: color(hig-slate-light);
     color: color(hig-white);
     background-color: color(hig-slate-light);
   }
 }
-
-// required for specificity
-.hig__input-button.hig__input-button--checkbox:focus  .hig__input-button__input-wrapper,
-.hig__input-button.hig__input-button--checkbox:active  .hig__input-button__input-wrapper {
-  outline: none;
-  border-color: color(adsk-blue-dark);
-}
-
