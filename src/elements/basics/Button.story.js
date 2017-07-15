@@ -17,54 +17,76 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { text } from '@storybook/addon-knobs';
+import { text, select } from '@storybook/addon-knobs';
 
 import Button from './Button';
 
+// const label = 'Sizes';
+// const options = {
+//   small: 'Small',
+//   secondary: 'Secondary',
+//   large: 'Large',
+// };
+// const defaultValue = 'small';
+
 storiesOf('Button', module)
-  .addWithInfo(
-    'regular button',
-    <div>
-      <p>
-        A button is an element that a customer clicks or taps to trigger an action
-        or change within the interface. To change the customer's location within
-        or between interfaces, use a textual link.
-      </p>
-      <p>
-        For content guidelines and common combinations of buttons, view
-        the
-        {' '}
-        <a href="https://wiki.autodesk.com/display/HIG/Button+Text">
-          button text content pattern
-        </a>
-        .
-      </p>
-    </div>,
-    () => <Button onClick={action('clicked')} title="Regular Button" />
-  )
-  .addWithInfo(
-    'configured button',
-    <div>
-      <p>
-        A button is an element that a customer clicks or taps to trigger an action
-        or change within the interface. To change the customer's location within
-        or between interfaces, use a textual link.
-      </p>
-      <p>
-        For content guidelines and common combinations of buttons, view
-        the
-        {' '}
-        <a href="https://wiki.autodesk.com/display/HIG/Button+Text">
-          button text content pattern
-        </a>
-        .
-      </p>
-    </div>,
-    () => (
+  .addWithInfo( 'Standard Button', ``, () => {
+    const sizeOptions = {
+      small: 'Small',
+      standard: 'Standard',
+      large: 'Large',
+    };
+
+    const typeOptions = {
+      primary: 'Primary',
+      secondary: 'Secondary',
+      flat: 'Flat'
+    };
+    
+    const size = select('Size', sizeOptions, 'small')
+    const type = select('Type', typeOptions, 'primary')
+
+    return (
       <Button
+        size={size}
+        type={type}
+        title= 'Button'
         onClick={action('clicked')}
-        title="Configured Button"
-        link="http://www.autodesk.com"
+        onHover={action('on hover')}
+        onBlur={action('on blur')}
+        onFocus={action('on focus')}
       />
     )
-  );
+    
+  })
+  .addWithInfo( 'Disabled Button', ``, () => {
+    const sizeOptions = {
+      small: 'Small',
+      standard: 'Standard',
+      large: 'Large',
+    };
+
+    const typeOptions = {
+      primary: 'Primary',
+      secondary: 'Secondary',
+      flat: 'Flat'
+    };
+    
+    const size = select('Size', sizeOptions, 'small')
+    const type = select('Type', typeOptions, 'primary')
+
+    return (
+      <Button
+        size={size}
+        type={type}
+        title= 'Disabled Button'
+        onClick={action('clicked')}
+        onHover={action('on hover')}
+        onBlur={action('on blur')}
+        onFocus={action('on focus')}
+        disabled={true}
+      />
+    )
+  });
+
+
