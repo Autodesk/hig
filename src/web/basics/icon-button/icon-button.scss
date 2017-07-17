@@ -44,7 +44,7 @@
     }
 
     &.hig__icon-button--disabled {
-        cursor: not-allowed;
+        pointer-events: none;
         background: none;
         border-color: color(hig-gray-60);
         color: color(hig-gray-40);
