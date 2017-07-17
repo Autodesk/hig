@@ -78,7 +78,7 @@ exports[`<Button> updates the link the same as setLink 1`] = `
 `;
 
 exports[`<Button> updates the size using setSize 1`] = `
-"<a href=\\"#\\" class=\\"hig__button hig__button--primary hig__button--large\\" title=\\"some title\\">
+"<a href=\\"#\\" class=\\"hig__button hig__button--primary hig__button--small hig__button--large\\" title=\\"some title\\">
     <!--ICON-->
     <span class=\\"hig__button__title\\">some title</span>
 </a>"
