@@ -28,6 +28,10 @@
     &.hig__text-field__icon--visible {
         display: block;
     }
+
+    .hig__text-field--disabled & {
+        opacity: 0.3;
+    }
 }
 
 .hig__text-field__label {
@@ -120,6 +124,7 @@
     &[disabled] {
         border-bottom-style: dashed;
         border-bottom-color: color(hig-gray-50);
+        color: color(hig-gray-50);
 
         &:hover {
             box-shadow: none;
@@ -175,6 +180,10 @@
 
     &.hig__text-field__extra--show {
         display: block;
+    }
+
+    .hig__text-field--disabled & {
+        opacity: 0.3;
     }
 }
 

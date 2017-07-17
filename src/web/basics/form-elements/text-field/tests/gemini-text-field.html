@@ -34,7 +34,7 @@
                 transition-delay: 0s !important;
             }
 
-            body{
+            body {
                 padding: 30px;
             }
 
@@ -52,6 +52,14 @@
             <div class='tests-text-field-icon'></div>
         </div>
 
+        <div class='test-group test-group-disabled'>
+            <div class='tests-text-field-disabled'></div>
+        </div>
+
+        <div class='test-group test-group-disabled-value'>
+            <div class='tests-text-field-disabled-value'></div>
+        </div>
+
         <script>
             const FormElements = new Hig.FormElements();
             const TextField = FormElements.partials.TextField;
@@ -66,7 +74,7 @@
 
             DefaultTextField.mount('.tests-text-field');
 
-            // TEXT FIELD CONFIGURED WITH DEFAULTS
+            // TEXT FIELD WITH ICON
 
             const IconTextField = new TextField({
                 label: "Eye color",
@@ -74,6 +82,27 @@
             });
 
             IconTextField.mount('.tests-text-field-icon');
+
+            // TEXT FIELD DISABLED
+
+            const DisabledTextField = new TextField({
+                label: "It's a label",
+                placeholder: "It's a placeholder"
+            });
+
+            DisabledTextField.mount('.tests-text-field-disabled');
+            DisabledTextField.disable();
+
+            // TEXT FIELD DISABLED WITH A VALUE
+
+            const DisabledValueTextField = new TextField({
+                label: "It's a label",
+                placeholder: "It's a placeholder",
+                value: "It's a value"
+            });
+
+            DisabledValueTextField.mount('.tests-text-field-disabled-value');
+            DisabledValueTextField.disable();
 
         </script>
 

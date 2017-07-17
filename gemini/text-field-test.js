@@ -24,4 +24,14 @@ gemini.suite('text field', (parent) => {
             .capture('plain');
   });
 
+  gemini.suite('disabled', (suite) => {
+       suite.setCaptureElements('.test-group-disabled')
+            .capture('disabled');
+  });
+
+  gemini.suite('disabled with value', (suite) => {
+       suite.setCaptureElements('.test-group-disabled-value')
+            .capture('disabled with value');
+  });
+
 });
