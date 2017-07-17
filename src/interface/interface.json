@@ -122,7 +122,12 @@
                     "desc": "Calls the provided callback when user puts focus on the button",
                     "params": "HIG.abstract.EventObject.params",
                     "returns": "HIG.abstract.EventObject.returns"
-                }
+                },
+                "onBlur": {
+                    "desc": "Calls the provided callback when user puts focus away from icon button",
+                    "params": "HIG.abstract.EventObject.params",
+                    "returns": "HIG.abstract.EventObject.returns"
+                }  
             },
             "defaults": {
                 "title": "{String} title of the button",
