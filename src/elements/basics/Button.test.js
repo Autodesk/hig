@@ -46,8 +46,6 @@ describe('<Button>', () => {
 
     const wrapper = mount(<Button {...defaults} />, { attachTo: container });
 
-    // expect(container.innerHTML).toMatchSnapshot();
-
     expect(container.firstElementChild.outerHTML).toMatchSnapshot();
 
     expect(container.firstElementChild.outerHTML).toEqual(
@@ -60,13 +58,9 @@ describe('<Button>', () => {
 
     const { higButton, higContainer } = createHigButton(defaults);
 
-
-
     const container = document.createElement('div');
 
     const wrapper = mount(<Button {...defaults} />, { attachTo: container });
-
-    // expect(container.innerHTML).toMatchSnapshot();
 
     expect(container.firstElementChild.outerHTML).toMatchSnapshot();
 
@@ -83,8 +77,6 @@ describe('<Button>', () => {
     const container = document.createElement('div');
 
     const wrapper = mount(<Button {...defaults} />, { attachTo: container });
-
-    // expect(container.innerHTML).toMatchSnapshot();
 
     expect(container.firstElementChild.outerHTML).toMatchSnapshot();
 
@@ -103,8 +95,6 @@ describe('<Button>', () => {
 
     const wrapper = mount(<Button {...defaults} />, { attachTo: container });
 
-    // expect(container.innerHTML).toMatchSnapshot();
-
     expect(container.firstElementChild.outerHTML).toMatchSnapshot();
 
     expect(container.firstElementChild.outerHTML).toEqual(
@@ -121,8 +111,6 @@ describe('<Button>', () => {
 
     const wrapper = mount(<Button {...defaults} />, { attachTo: container });
 
-    // expect(container.innerHTML).toMatchSnapshot();
-
     expect(container.firstElementChild.outerHTML).toMatchSnapshot();
 
     expect(container.firstElementChild.outerHTML).toEqual(
@@ -138,8 +126,6 @@ describe('<Button>', () => {
     const container = document.createElement('div');
 
     const wrapper = mount(<Button {...defaults} />, { attachTo: container });
-
-    // expect(container.innerHTML).toMatchSnapshot();
 
     expect(container.firstElementChild.outerHTML).toMatchSnapshot();
 
@@ -277,8 +263,6 @@ describe('<Button>', () => {
     const container = document.createElement('div');
 
     const wrapper = mount(<Button {...defaults} />, { attachTo: container });
-
-    // expect(container.innerHTML).toMatchSnapshot();
 
     expect(container.firstElementChild.outerHTML).toMatchSnapshot();
 
