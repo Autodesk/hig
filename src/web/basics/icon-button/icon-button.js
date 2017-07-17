@@ -53,6 +53,10 @@ class IconButton extends Core {
         return this._attachListener("focusin", this.el, this.el, fn);
     }
 
+    onBlur(fn){
+        return this._attachListener("focusout", this.el, this.el, fn);
+    }
+
 }
 
 IconButton._interface = Interface['basics']['IconButton'];
