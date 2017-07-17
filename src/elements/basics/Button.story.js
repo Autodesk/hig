@@ -22,11 +22,11 @@ import { text, select } from '@storybook/addon-knobs';
 import Button from './Button';
 
 storiesOf('Button', module)
-  .addWithInfo( 'Standard Button', ``, () => {
+  .addWithInfo('Standard Button', ``, () => {
     const sizeOptions = {
       small: 'Small',
       standard: 'Standard',
-      large: 'Large',
+      large: 'Large'
     };
 
     const typeOptions = {
@@ -34,28 +34,27 @@ storiesOf('Button', module)
       secondary: 'Secondary',
       flat: 'Flat'
     };
-    
-    const size = select('Size', sizeOptions, 'small')
-    const type = select('Type', typeOptions, 'primary')
+
+    const size = select('Size', sizeOptions, 'small');
+    const type = select('Type', typeOptions, 'primary');
 
     return (
       <Button
         size={size}
         type={type}
-        title= 'Button'
+        title="Button"
         onClick={action('clicked')}
         onHover={action('on hover')}
         onBlur={action('on blur')}
         onFocus={action('on focus')}
       />
-    )
-    
+    );
   })
-  .addWithInfo( 'Disabled Button', ``, () => {
+  .addWithInfo('Disabled Button', ``, () => {
     const sizeOptions = {
       small: 'Small',
       standard: 'Standard',
-      large: 'Large',
+      large: 'Large'
     };
 
     const typeOptions = {
@@ -63,22 +62,20 @@ storiesOf('Button', module)
       secondary: 'Secondary',
       flat: 'Flat'
     };
-    
-    const size = select('Size', sizeOptions, 'small')
-    const type = select('Type', typeOptions, 'primary')
+
+    const size = select('Size', sizeOptions, 'small');
+    const type = select('Type', typeOptions, 'primary');
 
     return (
       <Button
         size={size}
         type={type}
-        title='Disabled Button'
+        title="Disabled Button"
         onClick={action('clicked')}
         onHover={action('on hover')}
         onBlur={action('on blur')}
         onFocus={action('on focus')}
         disabled={true}
       />
-    )
+    );
   });
-
-

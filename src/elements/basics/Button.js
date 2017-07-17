@@ -20,13 +20,12 @@ import HIGElement from '../HIGElement';
 import * as PropTypes from 'prop-types';
 import createComponent from '../../adapters/createComponent';
 
-
 class Button extends HIGElement {
   constructor(initialProps) {
     super(HIG.Button, initialProps);
   }
 
-  componentDidMount(){
+  componentDidMount() {
     this.commitUpdate(this.props);
   }
 
@@ -42,12 +41,9 @@ class Button extends HIGElement {
       .mapToHIGEventListeners(['onClick', 'onHover', 'onFocus', 'onBlur'])
       .handle('disabled', value => {
         value ? this.hig.disable() : this.hig.enable();
-      })
-
+      });
   }
 }
-
-
 
 const ButtonComponent = createComponent(Button);
 
@@ -60,9 +56,9 @@ Button.propTypes = {
   onHover: PropTypes.func,
   title: PropTypes.string,
   size: PropTypes.string,
-  type: PropTypes.string, 
+  type: PropTypes.string,
   icon: PropTypes.string
-}
+};
 
 ButtonComponent.__docgenInfo = {
   props: {
@@ -83,7 +79,5 @@ ButtonComponent.__docgenInfo = {
     }
   }
 };
-
-
 
 export default ButtonComponent;

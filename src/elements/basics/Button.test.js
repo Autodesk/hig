@@ -41,7 +41,6 @@ describe('<Button>', () => {
     const defaults = { title: 'regular button', link: 'http://example.com' };
 
     const { higButton, higContainer } = createHigButton(defaults);
-;
     const container = document.createElement('div');
 
     const wrapper = mount(<Button {...defaults} />, { attachTo: container });
@@ -54,7 +53,12 @@ describe('<Button>', () => {
   });
 
   it('renders the small button', () => {
-    const defaults = { size: 'small', type: 'primary', title: 'small button', link: 'http://example.com' };
+    const defaults = {
+      size: 'small',
+      type: 'primary',
+      title: 'small button',
+      link: 'http://example.com'
+    };
 
     const { higButton, higContainer } = createHigButton(defaults);
 
@@ -70,7 +74,12 @@ describe('<Button>', () => {
   });
 
   it('renders the large button', () => {
-    const defaults = { size: 'large', type: 'primary', title: 'Large button', link: 'http://example.com' };
+    const defaults = {
+      size: 'large',
+      type: 'primary',
+      title: 'Large button',
+      link: 'http://example.com'
+    };
 
     const { higButton, higContainer } = createHigButton(defaults);
 
@@ -85,9 +94,13 @@ describe('<Button>', () => {
     );
   });
 
-
   it('renders the primary button', () => {
-    const defaults = { size: 'standard', type: 'primary', title: 'Primary button', link: 'http://example.com' };
+    const defaults = {
+      size: 'standard',
+      type: 'primary',
+      title: 'Primary button',
+      link: 'http://example.com'
+    };
 
     const { higButton, higContainer } = createHigButton(defaults);
 
@@ -103,7 +116,12 @@ describe('<Button>', () => {
   });
 
   it('renders the secondary button', () => {
-    const defaults = { size: 'standard', type: 'secondary', title: 'Secondary button', link: 'http://example.com' };
+    const defaults = {
+      size: 'standard',
+      type: 'secondary',
+      title: 'Secondary button',
+      link: 'http://example.com'
+    };
 
     const { higButton, higContainer } = createHigButton(defaults);
 
@@ -119,7 +137,12 @@ describe('<Button>', () => {
   });
 
   it('renders the flat button', () => {
-    const defaults = {type: 'flat', size: 'standard', title: 'Flat button', link: 'http://example.com' };
+    const defaults = {
+      type: 'flat',
+      size: 'standard',
+      title: 'Flat button',
+      link: 'http://example.com'
+    };
 
     const { higButton, higContainer } = createHigButton(defaults);
 
@@ -222,9 +245,9 @@ describe('<Button>', () => {
 
     const reactContainer = document.createElement('div');
 
-    const wrapper = mount(<Button 
-                           {...defaults} />, 
-                            { attachTo: reactContainer });
+    const wrapper = mount(<Button {...defaults} />, {
+      attachTo: reactContainer
+    });
 
     wrapper.setProps({ size: newSize });
 
@@ -255,7 +278,12 @@ describe('<Button>', () => {
   });
 
   it('renders the disabled button', () => {
-    const defaults = { size: 'standard', title: 'regular button', link: 'http://example.com', disabled: 'true' };
+    const defaults = {
+      size: 'standard',
+      title: 'regular button',
+      link: 'http://example.com',
+      disabled: 'true'
+    };
 
     const { higButton, higContainer } = createHigButton(defaults);
     higButton.disable();
@@ -270,7 +298,6 @@ describe('<Button>', () => {
       higContainer.firstElementChild.outerHTML
     );
   });
-
 
   ['onClick', 'onHover', 'onFocus', 'onBlur'].forEach(eventName => {
     it(`sets up ${eventName} initially`, () => {
