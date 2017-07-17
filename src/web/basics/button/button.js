@@ -57,7 +57,7 @@ class Button extends Core {
 
     setIcon(icon){
         if (icon && icon.length > 0) {
-            const iconString = this._getIconString(icon);
+            const iconString = this._renderIcon(icon);
 
             this._findOrAddElement('ICON', 'span', '.hig__button__icon').innerHTML = iconString;
         } else {
