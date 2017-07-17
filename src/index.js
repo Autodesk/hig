@@ -16,7 +16,7 @@ limitations under the License.
 */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Button, GlobalNav } from './react-hig';
+import { Button, GlobalNav, IconButton } from './react-hig';
 
 import 'hig.web/dist/hig.css';
 import './index.css';
@@ -345,6 +345,43 @@ class App extends React.Component {
                 size="small"
                 type="primary"
                 title="Standard Button with Listeners Attached"
+                onClick={() => {
+                  console.log('Button with icon on click');
+                }}
+                onBlur={() => {
+                  console.log('onblur');
+                }}
+                onFocus={() => {
+                  console.log('focus');
+                }}
+                onHover={() => {
+                  console.log('hover');
+                }}
+              />
+
+              <IconButton
+                title="Icon button"
+                link="#"
+                icon="gear"
+                onClick={() => {
+                  console.log('Button with icon on click');
+                }}
+                onBlur={() => {
+                  console.log('onblur');
+                }}
+                onFocus={() => {
+                  console.log('focus');
+                }}
+                onHover={() => {
+                  console.log('hover');
+                }}
+              />
+
+              <IconButton
+                disabled={true}
+                title="Icon button"
+                link="#"
+                icon="gear"
                 onClick={() => {
                   console.log('Button with icon on click');
                 }}

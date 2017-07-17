@@ -20,9 +20,9 @@ import HIGElement from '../HIGElement';
 import * as PropTypes from 'prop-types';
 import createComponent from '../../adapters/createComponent';
 
-class Button extends HIGElement {
+class IconButton extends HIGElement {
   constructor(initialProps) {
-    super(HIG.Button, initialProps);
+    super(HIG.IconButton, initialProps);
   }
 
   componentDidMount() {
@@ -35,8 +35,6 @@ class Button extends HIGElement {
         title: 'setTitle',
         link: 'setLink',
         icon: 'setIcon',
-        type: 'setType',
-        size: 'setSize'
       })
       .mapToHIGEventListeners(['onClick', 'onHover', 'onFocus', 'onBlur'])
       .handle('disabled', value => {
@@ -45,22 +43,20 @@ class Button extends HIGElement {
   }
 }
 
-const ButtonComponent = createComponent(Button);
+const IconButtonComponent = createComponent(IconButton);
 
-Button.propTypes = {
+IconButton.propTypes = {
+	title: PropTypes.string,
+  icon: PropTypes.string,
   disabled: PropTypes.bool,
   link: PropTypes.string,
   onBlur: PropTypes.func,
   onClick: PropTypes.func,
   onFocus: PropTypes.func,
-  onHover: PropTypes.func,
-  title: PropTypes.string,
-  size: PropTypes.string,
-  type: PropTypes.string,
-  icon: PropTypes.string
+  onHover: PropTypes.func
 };
 
-ButtonComponent.__docgenInfo = {
+IconButtonComponent.__docgenInfo = {
   props: {
     title: {
       description: 'sets the title of a button'
@@ -68,14 +64,6 @@ ButtonComponent.__docgenInfo = {
 
     link: {
       description: 'sets the link of a button'
-    },
-
-    size: {
-      description: 'specifies size of button'
-    },
-
-    type: {
-      description: 'specifies type of button'
     },
 
     icon: {
@@ -100,4 +88,4 @@ ButtonComponent.__docgenInfo = {
   }
 };
 
-export default ButtonComponent;
+export default IconButtonComponent;

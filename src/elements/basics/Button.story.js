@@ -17,32 +17,17 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { text, select } from '@storybook/addon-knobs';
+import { text } from '@storybook/addon-knobs';
 
-import Button from './Button';
+import IconButton from './IconButton';
 
-storiesOf('Button', module)
-  .addWithInfo('Standard Button', ``, () => {
-    const sizeOptions = {
-      small: 'Small',
-      standard: 'Standard',
-      large: 'Large'
-    };
-
-    const typeOptions = {
-      primary: 'Primary',
-      secondary: 'Secondary',
-      flat: 'Flat'
-    };
-
-    const size = select('Size', sizeOptions, 'small');
-    const type = select('Type', typeOptions, 'primary');
-
+storiesOf('IconButton', module)
+  .addWithInfo('Icon Button', ``, () => {
     return (
-      <Button
-        size={size}
-        type={type}
-        title="Button"
+      <IconButton
+        title="IconButton"
+        link="#"
+        icon="gear"
         onClick={action('clicked')}
         onHover={action('on hover')}
         onBlur={action('on blur')}
@@ -51,26 +36,11 @@ storiesOf('Button', module)
     );
   })
   .addWithInfo('Disabled Button', ``, () => {
-    const sizeOptions = {
-      small: 'Small',
-      standard: 'Standard',
-      large: 'Large'
-    };
-
-    const typeOptions = {
-      primary: 'Primary',
-      secondary: 'Secondary',
-      flat: 'Flat'
-    };
-
-    const size = select('Size', sizeOptions, 'small');
-    const type = select('Type', typeOptions, 'primary');
-
     return (
-      <Button
-        size={size}
-        type={type}
-        title="Disabled Button"
+      <IconButton
+        title="Disabled Icon Button"
+        link="#"
+        icon="gear"
         onClick={action('clicked')}
         onHover={action('on hover')}
         onBlur={action('on blur')}
