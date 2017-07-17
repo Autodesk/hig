@@ -36,8 +36,8 @@ class Button extends HIGElement {
         title: 'setTitle',
         link: 'setLink',
         icon: 'setIcon',
-        size: 'setSize',
-        type: 'setType'
+        type: 'setType',
+        size: 'setSize'
       })
       .mapToHIGEventListeners(['onClick', 'onHover', 'onFocus', 'onBlur'])
       .handle('disabled', value => {

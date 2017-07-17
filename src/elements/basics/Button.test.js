@@ -38,10 +38,10 @@ describe('<Button>', () => {
   }
 
   it('renders the standard button', () => {
-    const defaults = { size: 'standard', title: 'regular button', link: 'http://example.com' };
+    const defaults = { title: 'regular button', link: 'http://example.com' };
 
     const { higButton, higContainer } = createHigButton(defaults);
-
+;
     const container = document.createElement('div');
 
     const wrapper = mount(<Button {...defaults} />, { attachTo: container });
@@ -56,9 +56,11 @@ describe('<Button>', () => {
   });
 
   it('renders the small button', () => {
-    const defaults = { size: 'small', title: 'small button', link: 'http://example.com' };
+    const defaults = { size: 'small', type: 'primary', title: 'small button', link: 'http://example.com' };
 
     const { higButton, higContainer } = createHigButton(defaults);
+
+
 
     const container = document.createElement('div');
 
@@ -74,7 +76,7 @@ describe('<Button>', () => {
   });
 
   it('renders the large button', () => {
-    const defaults = { size: 'large', title: 'Large button', link: 'http://example.com' };
+    const defaults = { size: 'large', type: 'primary', title: 'Large button', link: 'http://example.com' };
 
     const { higButton, higContainer } = createHigButton(defaults);
 
@@ -129,7 +131,7 @@ describe('<Button>', () => {
   });
 
   it('renders the flat button', () => {
-    const defaults = { size: 'standard', type: 'flat', title: 'Flat button', link: 'http://example.com' };
+    const defaults = {type: 'flat', size: 'standard', title: 'Flat button', link: 'http://example.com' };
 
     const { higButton, higContainer } = createHigButton(defaults);
 
@@ -147,7 +149,7 @@ describe('<Button>', () => {
   });
 
   it('renders the button with an icon', () => {
-    const defaults = { size: 'standard', icon: 'gear', type: 'primary', title: 'Button with Icon', link: 'http://example.com' };
+    const defaults = { icon: 'gear' };
 
     const { higButton, higContainer } = createHigButton(defaults);
 
@@ -165,7 +167,8 @@ describe('<Button>', () => {
   });
 
   it('updates the title the same as setTitle', () => {
-    const { higButton, higContainer } = createHigButton();
+    const defaults = { title: 'some title' };
+    const { higButton, higContainer } = createHigButton(defaults);
 
     const newTitle = 'correct title';
 
@@ -175,7 +178,7 @@ describe('<Button>', () => {
     const container = document.createElement('div');
 
     // update via React API
-    const wrapper = mount(<Button />, { attachTo: container });
+    const wrapper = mount(<Button {...defaults} />, { attachTo: container });
 
     wrapper.setProps({ title: newTitle });
 
@@ -187,13 +190,11 @@ describe('<Button>', () => {
   });
 
   it('removes the title if it is no longer specified', () => {
-    const defaults = { title: 'some title' };
-
-    const { higButton, higContainer } = createHigButton(defaults);
+    const { higButton, higContainer } = createHigButton();
 
     const reactContainer = document.createElement('div');
 
-    const wrapper = mount(<Button {...defaults} />, {
+    const wrapper = mount(<Button />, {
       attachTo: reactContainer
     });
 
@@ -229,14 +230,17 @@ describe('<Button>', () => {
   });
 
   it('updates the size using setSize', () => {
-    const { higButton, higContainer } = createHigButton();
+    const defaults = { title: 'some title', size: 'small', type: 'primary' };
+    const { higButton, higContainer } = createHigButton(defaults);
     const newSize = 'large';
 
     higButton.setSize(newSize);
 
     const reactContainer = document.createElement('div');
 
-    const wrapper = mount(<Button />, { attachTo: reactContainer });
+    const wrapper = mount(<Button 
+                           {...defaults} />, 
+                            { attachTo: reactContainer });
 
     wrapper.setProps({ size: newSize });
 
