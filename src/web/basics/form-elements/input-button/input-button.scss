@@ -1,28 +1,35 @@
 @import '~basics/colors/colors.scss';
 
-.hig__form-elements__input-button {
+.hig__input-button {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0 10px;
 
+
+  &:focus {
+    outline: none;
+  }
+
+
   &--required {
-    .hig__form-elements__input-button__label::after {
+    .hig__input-button__label::after {
       content: '*';
     }
   }
 
-  input {
+  .hig__input-button__input {
     opacity: 0;
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
-    left: 0;  }
+    left: 0;
+  }
 }
 
-.hig__form-elements__input-button__label {
+.hig__input-button__label {
   font-size: 12px;
   font-weight: bold;
   font-family: 'ArtifaktElement', sans-serif;
@@ -31,31 +38,34 @@
   line-height: 14px;
 }
 
-.hig__form-elements__input-button__input-wrapper {
+.hig__input-button__input-wrapper {
   visibility: visible;
   color: transparent;
-  border: 1px solid color(hig-gray-40);
+  border: 2px solid color(hig-gray-40);
   background-color: color(hig-white);
-  border-radius: 50%;
   text-align: center;
   font-size: 25px;
   line-height: 14px;
   height: 14px;
   width: 14px;
 
-
-  .hig__form-elements__input-button:hover & {
+  .hig__input-button:hover & {
     border-color: color(adsk-turquoise);
   }
-  .hig__form-elements__input-button--disabled & {
+
+  .hig__input-button__input[disabled] + & {
     color: transparent;
     border-color: color(hig-gray-30);
     border-style: dotted;
   }
-
 }
-.hig__form-elements__input-button__input:checked + .hig__form-elements__input-button__input-wrapper {
-  border-color: color(hig-slate-light);
-  color: color(hig-slate-light);
-  background-color: color(hig-white);
+
+.hig__input-button.hig__input-button--radio,
+.hig__input-button.hig__input-button--radio:active,
+.hig__input-button.hig__input-button--checkbox,
+.hig__input-button.hig__input-button--checkbox:active {
+  .hig__input-button__input:checked:focus + .hig__input-button__input-wrapper {
+    border-color: color(adsk-blue-dark);
+    background-color: color(adsk-blue-dark);
+  }
 }

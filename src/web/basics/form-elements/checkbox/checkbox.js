@@ -3,6 +3,7 @@ import './checkbox.scss';
 var Template = require('./checkbox.html');
 var Interface = require('interface.json');
 var Core = require('_core.js');
+var InputButton = require('../input-button/input-button.js');
 
 /**
  * Creates an Checkbox
@@ -10,94 +11,43 @@ var Core = require('_core.js');
  * @class
  */
 
-class Checkbox extends Core {
+// List all the fn you don't want to override so they can be defined in this prototype
+const inputButtonMethods = [
+    'setLabel',
+    'setValue',
+    'setName',
+    'required',
+    'noLongerRequired',
+    'enable',
+    'disable',
+    'check',
+    'uncheck',
+    'onChange',
+    'onFocus',
+    'onHover'
+];
+
+
+class Checkbox extends InputButton {
 
     constructor(options){
         super(options);
+        this.commentLabel = "CHECKBOX_LABEL";
         this._render(Template, options);
     }
-
-    setLabel(newValue) {
-        const labelClass = 'hig__form-elements__checkbox__label';
-        if (newValue) {
-            const labelEl = this._findOrAddElement('CHECKBOX_LABEL', 'label', labelClass);
-            labelEl.textContent = newValue;
-        } else {
-            this.removeElementIfFound('.'+ labelClass);
-        }
-    }
-
-    setName(newName){
-        const currentValue = this._buttonEl().getAttribute('value');
-
-        this._setLabelAttribute('for', newName);
-        this._setInputAttribute('name', newName);
-        this._setInputAttribute('id', `${newName}[${currentValue}]`);
-    }
-
-    setValue(newValue){
-        this._setInputAttribute('value', newValue);
-        this._detectPresenceOfValue(value);
-    }
-
-    check() {
-        this._addClass('hig__form-elements__checkbox--checked')
-        this._findDOMEl('.hig__form-elements__checkbox__input',this.el).checked=true;
-    }
-
-    uncheck() {
-        this._removeClass('hig__form-elements__checkbox--checked')
-        this._findDOMEl('.hig__form-elements__checkbox__input',this.el).checked=false;
-    }
-
-    required() {
-        this._addClass('hig__form-elements__checkbox--required');
-        this._setInputAttribute('required', '');
-    }
-
-    noLongerRequired() {
-        this._removeClass('hig__form-elements__checkbox--required');
-        this._removeInputAttribute('required');
-    }
-
-    disable() {
-        this._addClass('hig__form-elements__checkbox--disabled');
-        this._setInputAttribute('disabled', 'true');
-    }
-
-    enable() {
-        this._removeClass('hig__form-elements__checkbox--disabled');
-        this._removeInputAttribute('disabled');
-    }
-
-    onChange(fn){
-        return this._attachListener("change", '.hig__form-elements__checkbox__input', this.el, fn);
-    }
-
-    onHover(fn){
-        return this._attachListener("hover", this.el, this.el, fn);
-    }
-
-    onFocus(fn){
-        return this._attachListener("focusin", this.el, this.el, fn);
-    }
-
-    _addClass(klass) { this.el.classList.add(klass) }
-    _removeClass(klass) { this.el.classList.remove(klass) }
-
-    _setLabelAttribute(attribute, newValue) {
-        const labelClass = 'hig__form-elements__checkbox__label'
-        const labelEl = this._findOrAddElement('CHECKBOX_LABEL', 'label', labelClass);
-        labelEl.setAttribute = newValue;
-    }
-
-    _setInputAttribute(attribute, value) {
-        this._findDOMEl('.hig__form-elements__checkbox__input',this.el).setAttribute(attribute, value);
-    }
-    _removeInputAttribute(attribute) {
-        this._findDOMEl('.hig__form-elements__checkbox__input', this.el).removeAttribute(attribute);
+    _componentDidMount() {
+        this._findDOMEl('.hig__input-button__input-wrapper',this.el).innerHTML = this._getIconString('check-white');
     }
 }
+
+inputButtonMethods.forEach(fn => {
+    Object.defineProperty(Checkbox.prototype, fn, {
+        configurable: false,
+        enumerable: false,
+        writable: false,
+        value: InputButton.prototype[fn]
+    });
+});
 
 Checkbox._interface = Interface['basics']['FormElements']['partials']['Checkbox'];
 Checkbox._defaults = {

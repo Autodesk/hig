@@ -1,17 +1,14 @@
-<div class='hig__form-elements__input-button hig__form-elements__input-button--radio-button hig__form-elements__input-button--{{ name }}
-   {{ #disabled }}hig__form-elements__input-button--disabled{{ /disabled }}
-   {{ #required }}hig__form-elements__input-button--required{{ /required }}
-   {{ #checked }}hig__form-elements__input-button--checked{{ /checked }}'>
-    <!--RADIOBUTTON_LABEL-->
-    {{ #label }}
-    <label for="{{ name }}"
-           class="hig__form-elements__input-button__label">
-      {{ label }}
-    </label>{{ /label }}
-    <input type="radio" class="hig__form-elements__input-button__input"
-        {{ #required }}required{{/required}}
-        {{ #checked }}checked{{ /checked }}
-        {{ #disabled }}disabled{{ /disabled }}
-        name="{{ name }}" id="{{ name }}[{{ value }}]" value="{{ value }}">
-    <span class="hig__form-elements__input-button__input-wrapper">&#149;</span>
+<div class='hig__input-button hig__input-button--radio
+   {{ #disabled }}hig__input-button--disabled{{ /disabled }}
+   {{ #required }}hig__input-button--required{{ /required }}
+   {{ #checked }}hig__input-button--checked{{ /checked }}'>
+  <!--RADIOBUTTON_LABEL-->
+  {{ #label }}
+  <label for="{{ name }}" class="hig__input-button__label">{{ label }}</label>{{ /label }}
+  <input type="radio" class="hig__input-button__input"
+      {{ #required }}required{{/required}}
+      {{ #checked }}checked{{ /checked }}
+      {{ #disabled }}disabled{{ /disabled }}
+      name="{{ name }}" id="{{ name }}[{{ value }}]" value="{{ value }}">
+  <span class="hig__input-button__input-wrapper"></span>
 </div>
