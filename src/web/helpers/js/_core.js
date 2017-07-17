@@ -89,7 +89,6 @@ class Core {
             data = (data || {});
 
             // ICON MIXIN
-            // ICON MIXIN
             data.renderIcon = () => {
                 return (text, render) => {
                     var iconName = Mustache.render(text, data);
@@ -114,7 +113,6 @@ class Core {
         if (!iconString) {
             console.warn("NO HIG ICON FOUND WITH THE NAME: "+ iconString);
         }
-        
         return "<div class='hig__icon'>" + iconString + "</div>";
     }
 

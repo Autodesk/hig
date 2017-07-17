@@ -26,8 +26,7 @@ class IconButton extends Core {
     }
 
     setIcon(icon){
-        const iconString = this._renderIcon(icon);
-        this._findDOMEl('.hig__icon-button__icon', this.el).innerHTML = iconString;
+        this._findDOMEl('.hig__icon-button__icon', this.el).innerHTML = this._renderIcon(icon);;
     }
 
     disable(){
