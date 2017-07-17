@@ -15,8 +15,8 @@
   width: 100%; /* Specific width is required for Firefox. */
   background-color: transparent; /* Otherwise white in Chrome */
   box-sizing: content-box;
-  height: 25px;
-  margin: 17px 0 0 0;
+  height: 60px;
+  margin: 0 0 17px 0;
 
   @each $vendor in ('-webkit-slider-thumb', '-moz-range-thumb', '-ms-thumb') {
     &::#{$vendor} {
@@ -34,6 +34,10 @@
       border: 2px solid color(hig-white);
     }
 
+    &:hover::#{$vendor} {
+      background-color: color(adsk-turquoise);
+    }
+
     &:focus::#{$vendor} {
       background-color: color(adsk-blue);
     }
@@ -44,7 +48,7 @@
 
     &[disabled]::#{$vendor} {
       background-color: color(hig-white);
-      border: 2px dotted color(hig-gray-60);
+      border: 2px dotted color(hig-gray-50);
       outline: 2px solid color(hig-white);
     }
   }
@@ -79,7 +83,7 @@
   line-height: 14px;
 
   .hig__range__field:focus + & {
-    color: color(adsk-turquoise);
+    color: color(adsk-blue-dark);
   }
 
   .hig__range--required &::after {
@@ -94,29 +98,38 @@
   display: flex;
   flex-direction: column-reverse;
 
-  &:after {
+  &:after,
+  &:before {
     position: absolute;
-    bottom: 26px;
-    right: 0px;
+    bottom: 16px;
     color: color(hig-gray-30);
-    content: attr(data-range-max);
+    font-size: 12px;
+
+    .hig__range--disabled & {
+      color: color(hig-gray-50);
+    }
   }
 
   &:before {
-    position: absolute;
-    bottom: 26px;
-    color: color(hig-gray-30);
-    content: attr(data-range-min)
+    content: attr(data-range-min);
+  }
+
+  &:after {
+    right: 0;
+    content: attr(data-range-max);
   }
 }
 
 .hig__range__field__current-value {
-  color: color(hig-gray-30);
+  color: color(hig-gray-10);
   position: absolute;
   margin: auto;
-  bottom: 26px;
-  right: 50%;
-  transform: translateX(50%);
+  top: 24px;
+  text-align: left;
+
+  .hig__range--disabled & {
+    color: color(hig-gray-50);
+  }
 }
 
 .hig__range__instructions {

@@ -64,7 +64,7 @@
 
             DefaultDropdown.mount(".test-mount-default");
             const defaultDropdownOptionData = [
-                { label: 'Penny slots', value: 'penny-slots', selected: true },
+                { label: 'Penny slots', value: 'penny-slots' },
                 { label: 'The drink', value: 'the-drink' },
                 { label: 'Bubblegum', value: 'bubblegum' },
             ];
@@ -87,7 +87,6 @@
 
                 return option;
             });
-            DefaultDropdown.setSelectedOptionLabel('Penny slots');
 
             DefaultDropdown.onTargetClick(() => {
                 DefaultDropdown.open();
