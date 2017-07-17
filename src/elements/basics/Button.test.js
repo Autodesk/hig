@@ -157,8 +157,6 @@ describe('<Button>', () => {
 
     const wrapper = mount(<Button {...defaults} />, { attachTo: container });
 
-    // expect(container.innerHTML).toMatchSnapshot();
-
     expect(container.firstElementChild.outerHTML).toMatchSnapshot();
 
     expect(container.firstElementChild.outerHTML).toEqual(

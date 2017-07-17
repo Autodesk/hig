@@ -21,14 +21,6 @@ import { text, select } from '@storybook/addon-knobs';
 
 import Button from './Button';
 
-// const label = 'Sizes';
-// const options = {
-//   small: 'Small',
-//   secondary: 'Secondary',
-//   large: 'Large',
-// };
-// const defaultValue = 'small';
-
 storiesOf('Button', module)
   .addWithInfo( 'Standard Button', ``, () => {
     const sizeOptions = {
@@ -79,7 +71,7 @@ storiesOf('Button', module)
       <Button
         size={size}
         type={type}
-        title= 'Disabled Button'
+        title='Disabled Button'
         onClick={action('clicked')}
         onHover={action('on hover')}
         onBlur={action('on blur')}
