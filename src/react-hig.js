@@ -19,4 +19,4 @@ export { default as Button } from './elements/basics/Button';
 export {
   default as GlobalNav
 } from './elements/components/GlobalNav/GlobalNav';
-export { default as IconButton} from './elements/basics/IconButton';
+export { default as IconButton } from './elements/basics/IconButton';

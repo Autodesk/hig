@@ -34,7 +34,7 @@ class IconButton extends HIGElement {
       .mapToHIGFunctions({
         title: 'setTitle',
         link: 'setLink',
-        icon: 'setIcon',
+        icon: 'setIcon'
       })
       .mapToHIGEventListeners(['onClick', 'onHover', 'onFocus', 'onBlur'])
       .handle('disabled', value => {
@@ -46,7 +46,7 @@ class IconButton extends HIGElement {
 const IconButtonComponent = createComponent(IconButton);
 
 IconButton.propTypes = {
-	title: PropTypes.string,
+  title: PropTypes.string,
   icon: PropTypes.string,
   disabled: PropTypes.bool,
   link: PropTypes.string,

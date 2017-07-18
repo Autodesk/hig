@@ -35,16 +35,22 @@ describe('<IconButton>', () => {
     higButton.mount(higContainer);
 
     return { higButton, higContainer };
-	}
-	
-	 it('renders the icon button', () => {
-    const defaults = { title: 'icon button', link: 'http://example.com', icon: 'gear',  };
+  }
 
-		const { higButton, higContainer } = createHigButton(defaults);
-		const container = document.createElement('div');
-		higButton.setIcon('gear');
+  it('renders the icon button', () => {
+    const defaults = {
+      title: 'icon button',
+      link: 'http://example.com',
+      icon: 'gear'
+    };
 
-    const wrapper = mount(<IconButton {...defaults} />, { attachTo: container });
+    const { higButton, higContainer } = createHigButton(defaults);
+    const container = document.createElement('div');
+    higButton.setIcon('gear');
+
+    const wrapper = mount(<IconButton {...defaults} />, {
+      attachTo: container
+    });
 
     expect(container.firstElementChild.outerHTML).toMatchSnapshot();
 
@@ -54,14 +60,20 @@ describe('<IconButton>', () => {
   });
 
   it('renders the disabled icon button', () => {
-    const defaults = { title: 'icon button', link: 'http://example.com', icon: 'gear' };
+    const defaults = {
+      title: 'icon button',
+      link: 'http://example.com',
+      icon: 'gear'
+    };
 
     const { higButton, higContainer } = createHigButton(defaults);
-		const container = document.createElement('div');
-		higButton.setIcon('gear');
-		higButton.disable();
+    const container = document.createElement('div');
+    higButton.setIcon('gear');
+    higButton.disable();
 
-    const wrapper = mount(<IconButton {...defaults} disabled={true} />, { attachTo: container });
+    const wrapper = mount(<IconButton {...defaults} disabled={true} />, {
+      attachTo: container
+    });
 
     expect(container.firstElementChild.outerHTML).toMatchSnapshot();
 
