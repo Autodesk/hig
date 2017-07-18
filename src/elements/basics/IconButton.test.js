@@ -41,7 +41,8 @@ describe('<IconButton>', () => {
     const defaults = { title: 'icon button', link: 'http://example.com', icon: 'gear',  };
 
 		const { higButton, higContainer } = createHigButton(defaults);
-    const container = document.createElement('div');
+		const container = document.createElement('div');
+		higButton.setIcon('gear');
 
     const wrapper = mount(<IconButton {...defaults} />, { attachTo: container });
 
@@ -57,6 +58,7 @@ describe('<IconButton>', () => {
 
     const { higButton, higContainer } = createHigButton(defaults);
 		const container = document.createElement('div');
+		higButton.setIcon('gear');
 		higButton.disable();
 
     const wrapper = mount(<IconButton {...defaults} disabled={true} />, { attachTo: container });
