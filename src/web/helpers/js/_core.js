@@ -94,7 +94,7 @@ class Core {
                     var iconName = Mustache.render(text, data);
                     return this._renderIcon(iconName);
                 }
-            } 
+            }
 
             elWrapper.innerHTML = Mustache.render(
                 template,
@@ -112,6 +112,7 @@ class Core {
         const iconString =  Icons[icon];
         if (!iconString) {
             console.warn("NO HIG ICON FOUND WITH THE NAME: "+ iconString);
+            return;
         }
         return "<div class='hig__icon'>" + iconString + "</div>";
     }
