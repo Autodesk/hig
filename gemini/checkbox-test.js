@@ -34,4 +34,18 @@ gemini.suite('checkbox', (parent) => {
     suite.setCaptureElements('.tests-checkbox6')
        .capture('call disable');
   });
+
+  gemini.suite('setname', (suite) => {
+      suite.setCaptureElements('.tests-checkbox7')
+      .capture('setName');
+  });
+  gemini.suite('setValue', (suite) => {
+      suite.setCaptureElements('.tests-checkbox8')
+      .capture('setValue');
+  });
+  gemini.suite('setLabel', (suite) => {
+      suite.setCaptureElements('.tests-checkbox9')
+      .capture('setLabel');
+  });
+
 });

@@ -20,18 +20,15 @@ class InputButton extends Core {
   }
 
   setLabel(newValue) {
+    this._removeElementIfFound('.'+ this.labelClass);
     if (newValue) {
       this._findOrAddElement(this.commentLabel, 'label', this.labelClass)
         .textContent = newValue;
-    } else {
-      this.removeElementIfFound('.'+ this.labelClass);
-    }
+    };
   }
 
   setName(newName){
-    this.nameClass = newName;
     const currentValue = this._buttonEl().getAttribute('value');
-    this.el.setAttribute('class', `${this.wrapperClass}--${currentValue}`);
     this._setLabelAttribute('for', newName);
     this._setInputAttribute('name', newName);
     this._setInputAttribute('id', `${newName}[${currentValue}]`);
@@ -39,7 +36,6 @@ class InputButton extends Core {
 
   setValue(newValue){
     this._setInputAttribute('value', newValue);
-    this._detectPresenceOfValue(value);
   }
 
   check() {
