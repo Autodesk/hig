@@ -8,15 +8,11 @@
     padding: 0 8px;
     line-height: 36px;
 
-    border-top: 1px solid color(hig-gray-40);
     cursor: pointer;
-
-    &:first-child {
-        border-top: none;
-    }
+    font-size: 14px;
 
     &:hover {
-        background-color: color(adsk-turquoise-lightest);
+        background-color: color(adsk-turquoise-tint);
     }
 }
 

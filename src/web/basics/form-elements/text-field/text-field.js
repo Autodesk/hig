@@ -26,6 +26,7 @@ class TextField extends Core {
     }
 
     _componentDidMount() {
+        this._detectPresenceOfValue(this.initialOptions.value);
         this.el.querySelector('.hig__text-field__input').addEventListener('input', this._handleKeyDown);
         if (this.initialOptions.icon) {
             this.setIcon(this.initialOptions.icon);
@@ -109,10 +110,12 @@ class TextField extends Core {
 
     enable() {
         this._findDOMEl('.hig__text-field__input', this.el).setAttribute('disabled', null);
+        this.el.classList.remove('hig__text-field--disabled');
     }
 
     disable() {
         this._findDOMEl('.hig__text-field__input', this.el).setAttribute('disabled', 'true');
+        this.el.classList.add('hig__text-field--disabled');
     }
 
     _addSlot(element) {

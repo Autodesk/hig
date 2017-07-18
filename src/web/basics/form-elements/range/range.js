@@ -28,7 +28,6 @@ class Range extends Core {
         }
     }
 
-
    setLabel(label) {
         if (label) {
             const labelEl = this._findOrAddElement('LABEL', 'label', '.hig__range__label');
@@ -72,10 +71,12 @@ class Range extends Core {
 
     disable(){
         this._findDOMEl('.hig__range__field', this.el).setAttribute('disabled', true);
+        this.el.classList.add('hig__range--disabled');
     }
 
     enable(){
         this._findDOMEl('.hig__range__field', this.el).removeAttribute('disabled');
+        this.el.classList.remove('hig__range--disabled');
     }
 
     required(requiredLabelText){

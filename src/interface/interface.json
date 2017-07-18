@@ -382,8 +382,8 @@
                         "Option": {
                             "methods": {
                                 "deselect": {},
-                                "onHover": {},
                                 "onClick": {},
+                                "onHover": {},
                                 "select": {},
                                 "setLabel": {},
                                 "setValue": {}

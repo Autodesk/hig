@@ -1,11 +1,16 @@
 @import '~basics/fonts/fonts.scss';
 @import '~basics/colors/colors.scss';
 @import '~helpers/css/mixins/base.scss';
+@import '~helpers/css/mixins/placeholder.scss';
 
 .hig__text-area {
     position: relative;
     font-family: 'ArtifaktElement', sans-serif;
     margin-bottom: 20px;
+
+    *::selection {
+        background-color: color(adsk-turquoise-lightest);
+    }
 }
 
 .hig__text-area__label,
@@ -18,7 +23,7 @@
     line-height: 14px;
 
     .hig__text-area__field:focus + & {
-        color: color(adsk-turquoise);
+        color: color(adsk-blue-dark);
     }
 }
 
@@ -34,7 +39,7 @@
 .hig__text-area__field {
     min-width: 280px;
     min-height: 100px;
-    padding: 20px;
+    padding: 8px;
     margin: 0;
     border-radius: 4px;
     border: 1px solid color(hig-gray-40);
@@ -45,24 +50,21 @@
     color: color(hig-gray-10);
     font-family: 'ArtifaktElement', sans-serif;
 
-    ::-webkit-placeholder,
-    ::-moz-placeholder,
-    ::-ms-input-placeholder,
-    ::placeholder {
+    @include placeholder {
         font-size: 14px;
         line-height: 20px;
-        color: color(hig-gray-40);
+        color: color(hig-gray-30);
     }
 
     &:hover {
-        border: 1px solid color(adsk-blue-dark);
-        box-shadow: 0 0 0 1px color(adsk-blue-dark);
+        border: 1px solid color(adsk-turquoise);
+        box-shadow: 0 0 0 1px color(adsk-turquoise);
     }
 
     &:focus {
         outline: none;
-        border: 1px solid color(adsk-turquoise);
-        box-shadow: 0 0 0 1px color(adsk-turquoise);
+        border: 1px solid color(adsk-blue-dark);
+        box-shadow: 0 0 0 1px color(adsk-blue-dark);
     }
 }
 
