@@ -258,7 +258,10 @@ class App extends React.Component {
               onChange={this.handleChange}
             />
             <div>
-
+              <div>
+                <h3>CHECKBOX</h3>
+                <Checkbox label="I AGREE" name="tsandcs" value="true" />
+              </div>
               <Button title="Add tab before" onClick={this.addTabBefore} />
               <Button title="Add tab after" onClick={this.addTabAfter} />
 
