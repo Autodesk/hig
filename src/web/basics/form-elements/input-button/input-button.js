@@ -84,7 +84,8 @@ class InputButton extends Core {
   _removeClass(klass) { this.el.classList.remove(klass) }
 
   _setLabelAttribute(attribute, newValue) {
-    this.el.querySelector("." + this.labelClass).setAttribute = newValue;
+    const label = this.el.querySelector("." + this.labelClass);
+    if (label) { label.setAttribute = newValue; }
   }
 
   _setInputAttribute(attribute, value) { this._buttonEl().setAttribute(attribute, value); }
