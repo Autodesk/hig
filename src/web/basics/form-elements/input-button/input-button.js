@@ -21,10 +21,10 @@ class InputButton extends Core {
 
   setLabel(newValue) {
     this._removeElementIfFound('.'+ this.labelClass);
-    if (newValue) {
-      this._findOrAddElement(this.commentLabel, 'label', this.labelClass)
+    if (newValue && newValue !== "") {
+      this._findOrAddElement(this.commentLabel, 'label', "." + this.labelClass)
         .textContent = newValue;
-    };
+    }
   }
 
   setName(newName){
@@ -84,16 +84,12 @@ class InputButton extends Core {
   _removeClass(klass) { this.el.classList.remove(klass) }
 
   _setLabelAttribute(attribute, newValue) {
-    this._findOrAddElement(this.commentLabel, 'label', this.labelClass)
-      .setAttribute = newValue;
+    this.el.querySelector("." + this.labelClass).setAttribute = newValue;
   }
 
-  _setInputAttribute(attribute, value) {
-    this._buttonEl().setAttribute(attribute, value);
-  }
-  _removeInputAttribute(attribute) {
-    this._buttonEl().removeAttribute(attribute);
-  }
+  _setInputAttribute(attribute, value) { this._buttonEl().setAttribute(attribute, value); }
+
+  _removeInputAttribute(attribute) { this._buttonEl().removeAttribute(attribute); }
 
   _buttonEl() { return this._findDOMEl("." + this.inputClass, this.el) }
 
