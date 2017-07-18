@@ -89,26 +89,31 @@ class Core {
             data = (data || {});
 
             // ICON MIXIN
-            data.renderIcon = function(){
-                return function (text, render) {
-                    var k = Mustache.render(text, data);
-                    var i = (k == "") ? "" : Icons[k];
-                    if(i == undefined){
-                        console.warn("NO HIG ICON FOUND WITH THE NAME: "+k);
-                    }
-                    return "<div class='hig__icon'>" + i + "</div>";
+            data.renderIcon = () => {
+                return (text, render) => {
+                    var iconName = Mustache.render(text, data);
+                    return this._renderIcon(iconName);
                 }
-            }
+            } 
+
             elWrapper.innerHTML = Mustache.render(
                 template,
                 data,
                 (partials || {})
             );
             this._rendered = elWrapper.firstChild;
-        }else{
+        } else {
             console.error("RENDER ALREADY CALLED ON THIS COMPONENT, USE PROPER METHODS TO UPDATE CONTENT");
         }
 
+    }
+
+    _renderIcon(icon){
+        const iconString =  Icons[icon];
+        if (!iconString) {
+            console.warn("NO HIG ICON FOUND WITH THE NAME: "+ iconString);
+        }
+        return "<div class='hig__icon'>" + iconString + "</div>";
     }
 
     _componentDidMount() {
