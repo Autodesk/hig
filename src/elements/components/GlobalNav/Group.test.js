@@ -144,7 +144,7 @@ describe('<Group>', () => {
             <Context>
               {this.state.showingItemBefore && <Module {...module1Defaults} />}
               <Module {...module2Defaults} />
-              {this.state.showingItemAfter && <Module />}
+              {this.state.showingItemAfter && <Module icon="assets" />}
             </Context>
           );
         }

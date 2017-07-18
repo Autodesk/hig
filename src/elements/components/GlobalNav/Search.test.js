@@ -38,8 +38,8 @@ const Context = props => {
         <SectionList>
           <Section>
             <Group>
-              <Module tile={props.moduleTitle}>
-                <Submodule title={props.submoduleTitle} />
+              <Module tile={props.moduleTitle} icon="assets">
+                <Submodule title={props.submoduleTitle} icon="assets" />
               </Module>
             </Group>
           </Section>

@@ -158,9 +158,9 @@ describe('<SideNav>', () => {
             <SectionList>
               <Section headerLabel="Project" headerName="Thunderstor">
                 <Group>
-                  <Module title={props.moduleTitle}>
-                    <Submodule title={props.submoduleTitle1} />
-                    <Submodule title={props.submoduleTitle2} />
+                  <Module title={props.moduleTitle} icon="assets">
+                    <Submodule title={props.submoduleTitle1} icon="assets" />
+                    <Submodule title={props.submoduleTitle2} icon="assets" />
                   </Module>
                 </Group>
               </Section>

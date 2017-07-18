@@ -40,7 +40,7 @@ const SubmoduleContext = props => {
                 title="Contractor"
                 submodulesClosed={props.isCollapsed}
               >
-                <Submodule title="Library" link="#" />
+                <Submodule title="Library" link="#" icon="assets" />
               </Module>
             </Group>
 
@@ -347,9 +347,9 @@ describe('<Section>', () => {
                 query={props.query}
               >
                 <Group>
-                  <Module title={props.moduleTitle}>
-                    <Submodule title={props.submoduleTitle1} />
-                    <Submodule title={props.submoduleTitle2} />
+                  <Module title={props.moduleTitle} icon="assets">
+                    <Submodule title={props.submoduleTitle1} icon="assets" />
+                    <Submodule title={props.submoduleTitle2} icon="assets" />
                   </Module>
                 </Group>
               </Section>
