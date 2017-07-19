@@ -253,14 +253,14 @@ class App extends React.Component {
             </Tabs>
           </SubNav>
 
-          <Slot>
-
+          <Slot className="playground-content">
             <input
               type="text"
               value={this.state.buttonLabel}
               onChange={this.handleChange}
             />
             <div>
+
               <Button title="Add tab before" onClick={this.addTabBefore} />
               <Button title="Add tab after" onClick={this.addTabAfter} />
 
