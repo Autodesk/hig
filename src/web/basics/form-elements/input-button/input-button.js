@@ -12,6 +12,7 @@ var Core = require('_core.js');
 class InputButton extends Core {
 
   constructor(options){
+    options.id = Math.floor(Math.random() * 100000, 5).toString();
     super(options);
     this.inputClass = 'hig__input-button__input';
     this.labelClass = 'hig__input-button__label';
@@ -19,22 +20,25 @@ class InputButton extends Core {
     this.commentLabel = '';
   }
 
-  setLabel(newValue) {
-    this._removeElementIfFound('.'+ this.labelClass);
-    if (newValue && newValue !== "") {
-      this._findOrAddElement(this.commentLabel, 'label', "." + this.labelClass)
-        .textContent = newValue;
+  setLabel(newLabelText) {
+    const selector = '.'+ this.labelClass;
+    const labelEl = this._findDOMEl(selector, this.el);
+    if (newLabelText) {
+      // update the label text and unhide the label
+      labelEl.textContent = newLabelText;
+      labelEl.classList.remove("hig--hidden");
+    } else {
+      // empty label text and hide the label
+      labelEl.classList.add("hig--hidden");
+      labelEl.textContent = "";
     }
   }
 
   setName(newName){
-    const currentValue = this._buttonEl().getAttribute('value');
-    this._setLabelAttribute('for', newName);
     this._setInputAttribute('name', newName);
-    this._setInputAttribute('id', `${newName}[${currentValue}]`);
   }
 
-  setValue(newValue){
+  setValue(newValue) {
     this._setInputAttribute('value', newValue);
   }
 
@@ -85,12 +89,21 @@ class InputButton extends Core {
 
   _setLabelAttribute(attribute, newValue) {
     const label = this.el.querySelector("." + this.labelClass);
-    if (label) { label.setAttribute = newValue; }
+    if (label) {
+      label.setAttribute(attribute, newValue);
+    }
+    return this;
   }
 
-  _setInputAttribute(attribute, value) { this._buttonEl().setAttribute(attribute, value); }
+  _setInputAttribute(attribute, value) {
+    this._buttonEl().setAttribute(attribute, value);
+    return this;
+  }
 
-  _removeInputAttribute(attribute) { this._buttonEl().removeAttribute(attribute); }
+  _removeInputAttribute(attribute) {
+    this._buttonEl().removeAttribute(attribute);
+    return this;
+  }
 
   _buttonEl() { return this._findDOMEl("." + this.inputClass, this.el) }
 

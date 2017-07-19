@@ -47,5 +47,9 @@ gemini.suite('checkbox', (parent) => {
       suite.setCaptureElements('.tests-checkbox9')
       .capture('setLabel');
   });
+  gemini.suite('bare checkbox updated with setters', (suite) => {
+    suite.setCaptureElements('.tests-checkbox10')
+         .capture('bareCheckbox');
+  });
 
 });

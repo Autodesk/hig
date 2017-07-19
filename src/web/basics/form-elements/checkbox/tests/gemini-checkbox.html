@@ -41,7 +41,13 @@
    <span class="newvalue"></span>
   </div>
   <hr>
-  <div class="tests-checkbox tests-checkbox9"></div>
+  <span class="tests-checkbox tests-checkbox9"></span>
+  <hr>
+  <span class="tests-checkbox tests-checkbox10"></span>
+  <hr>
+  <span class="tests-checkbox tests-checkbox11">
+  </span>
+  <span>This should have no label</span>
 </div>
 
 <script>
@@ -132,6 +138,7 @@
      name: "foo",
      value: "bar"
  });
+
  Checkbox8.mount('.tests-checkbox8');
  Checkbox8.setValue("YASSSSS");
  const c8 = document.querySelector(".tests-checkbox8 .newvalue");
@@ -145,8 +152,19 @@
      value: "bar"
  });
  Checkbox9.mount('.tests-checkbox9');
- Checkbox9.setLabel("NEW LABEL")
+ Checkbox9.setLabel("NEW LABEL");
 
+ const BareCheckbox = new Checkbox({});
+ BareCheckbox.mount('.tests-checkbox10');
+ BareCheckbox.setLabel("LABEL");
+ BareCheckbox.setValue("VALUE");
+ BareCheckbox.setName("NAME");
+
+ const NoLabelCheckbox = new Checkbox({})
+ NoLabelCheckbox.mount('.tests-checkbox11');
+ NoLabelCheckbox.setLabel("");
+ NoLabelCheckbox.setValue("SOMEVAL");
+ NoLabelCheckbox.setName("SOMENAME");
 
 
 </script>

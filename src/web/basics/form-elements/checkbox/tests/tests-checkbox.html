@@ -29,6 +29,11 @@
   <div class="tests-checkbox-heading4"></div>
   <br>
   <div class="tests-checkbox tests-checkbox4"></div>
+  <hr>
+
+  <div class="tests-checkbox-heading7"></div>
+  <br>
+  <div class="tests-checkbox tests-checkbox7"></div>
 </div>
   <script>
     // Build your new hig element to test here
@@ -154,6 +159,49 @@
     });
     DisableButton.onClick(function(e) {
       FancyCheckbox.disable();
+    });
+
+    // set a new name and check it by putting it inside the span.
+    const BareCheckbox = new Checkbox ({});
+    BareCheckbox.mount('.tests-checkbox7');
+
+    const SetLabelButton = new Hig.Button({
+      title: "Toggle Checkbox Label",
+      link: "#"                           });
+    const SetValueButton = new Hig.Button({
+                                            title: "Toggle Checkbox Value",
+                                            link: "#"                           });
+    const SetNameButton = new Hig.Button({
+                                            title: "Toggle Checkbox Name",
+                                            link: "#"                           });
+
+    [SetLabelButton, SetValueButton, SetNameButton].forEach(function(button) {
+      button.mount('.tests-checkbox-heading7');
+    });
+
+    SetLabelButton.onClick(function(e){
+      labelText = BareCheckbox.el.querySelector('label').textContent;
+      if (labelText){
+        BareCheckbox.setLabel("");
+      } else {
+        BareCheckbox.setLabel("I'm a label")
+      }
+    });
+    SetValueButton.onClick(function(e){
+      attrText = BareCheckbox.el.querySelector('input').getAttribute('value');
+      if (attrText){
+        BareCheckbox.setValue("");
+      } else {
+        BareCheckbox.setValue("someval")
+      }
+    });
+    SetNameButton.onClick(function(e){
+      attrText = BareCheckbox.el.querySelector('input').getAttribute('name');
+      if (attrText){
+        BareCheckbox.setName("");
+      } else {
+        BareCheckbox.setName("somename")
+      }
     });
 
   </script>
