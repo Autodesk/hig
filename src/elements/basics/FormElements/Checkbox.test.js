@@ -25,11 +25,14 @@ describe("<Checkbox>", () => {
         const higContainer = document.createElement('div');
 
         // use spread here to clone defaults since HIG.Button mutates this object
-        const higCheckbox = new HIG.Button({ ...defaults });
+        const higCheckbox = new HIG.Checkbox({ ...defaults });
 
         higCheckbox.mount(higContainer);
 
-        return { higCheckbox, higContainer };
+      // to adjust for the randomly generated id
+      const inputId = higCheckbox.el.querySelector('input').getAttribute("id");
+
+        return { higCheckbox, higContainer, inputId };
     };
 
     it('renders the standard  Checkbox', () => {
@@ -39,11 +42,19 @@ describe("<Checkbox>", () => {
             value: "agree"
         };
 
-        const { higCheckbox, higContainer } = createHigCheckbox(defaults);
+        const { higCheckbox, higContainer, inputId } = createHigCheckbox(defaults);
         const container = document.createElement('div');
-        const wrapper = mount(<Checkbox { ...defaults} />, {attachTo: container});
+        mount(<Checkbox { ...defaults} />, {attachTo: container});
 
-        expect(container.firstElementChild.outerHTML).toMatchSnapshot();
+        const label = container.querySelector('label');
+        const input = container.querySelector('input')
+
+        // to adjust for the randomly generated id
+        label.setAttribute("for", inputId);
+        input.setAttribute("id", inputId);
+
+
+      // expect(container.firstElementChild.outerHTML).toMatchSnapshot();
 
         expect(container.firstElementChild.outerHTML).toEqual(
             higContainer.firstElementChild.outerHTML

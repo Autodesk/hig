@@ -1,22 +1,22 @@
 /**
-Copyright 2016 Autodesk,Inc.
+ Copyright 2016 Autodesk,Inc.
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0
+ http://www.apache.org/licenses/LICENSE-2.0
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
 
-*/
+ */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Button, GlobalNav, IconButton } from './react-hig';
+import { Button, GlobalNav, IconButton, Checkbox } from './react-hig';
 
 import 'hig.web/dist/hig.css';
 import './index.css';
@@ -49,32 +49,37 @@ const Slot = GlobalNav.Slot;
 
 const topNavFixtures = new TopNavFixtures();
 
-const links = [
-  { title: 'Autodesk Main', url: 'http://www.autodesk.com' },
-  {
-    title: 'AutoCAD',
-    url: 'https://www.autodesk.com/products/autocad/overview'
-  },
-  { title: 'Maya', url: 'https://www.autodesk.com/products/maya/overview' }
-];
+const links = [{title: 'Autodesk Main', url: 'http://www.autodesk.com'}, {
+  title: 'AutoCAD', url: 'https://www.autodesk.com/products/autocad/overview'
+}, {title: 'Maya', url: 'https://www.autodesk.com/products/maya/overview'}];
+
+const checkboxStyle = {
+  'display': 'flex',
+  'flexDirection': 'row',
+  'justifyContent': 'space-between'
+};
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
       buttonLabel: 'Toggle HIG Menu',
-      fn: false,
-      tabs: [{ label: 'One', id: 0 }, { label: 'Two', id: 1 }],
-      projects: topNavFixtures.projectList(),
-      accounts: topNavFixtures.accountList(),
-      modules: []
+      fn:          false,
+      tabs:        [{label: 'One', id: 0}, {label: 'Two', id: 1}],
+      projects:    topNavFixtures.projectList(),
+      accounts:    topNavFixtures.accountList(),
+      modules:     []
     };
   }
+
+  logEvent = event => {
+    console.log(event.type);
+  };
 
   handleChange = event => {
     const buttonLabel = event.target.value;
     this.setState(() => {
-      return { buttonLabel };
+      return {buttonLabel};
     });
   };
 
@@ -89,29 +94,29 @@ class App extends React.Component {
   addTabBefore = () => {
     const nextLabel = Math.floor(Math.random() * 100000, 5);
     const nextTabs = Array.from(this.state.tabs);
-    nextTabs.unshift({ label: nextLabel.toString(), id: nextLabel });
-    this.setState({ tabs: nextTabs });
+    nextTabs.unshift({label: nextLabel.toString(), id: nextLabel});
+    this.setState({tabs: nextTabs});
   };
 
   addTabAfter = () => {
     const nextLabel = Math.floor(Math.random() * 100000, 5);
     const nextTabs = Array.from(this.state.tabs);
-    nextTabs.push({ label: nextLabel.toString(), id: nextLabel });
-    this.setState({ tabs: nextTabs });
+    nextTabs.push({label: nextLabel.toString(), id: nextLabel});
+    this.setState({tabs: nextTabs});
   };
 
   removeTab = () => {
     const nextTabs = Array.from(this.state.tabs);
     nextTabs.pop();
-    this.setState({ tabs: nextTabs });
+    this.setState({tabs: nextTabs});
   };
 
   addModule = () => {
     const key = Math.floor(Math.random() * 100000, 5);
-    const module = { title: `${key}`, icon: 'document-management', key: key };
+    const module = {title: `${key}`, icon: 'document-management', key: key};
     const modules = Array.from(this.state.modules);
     modules.push(module);
-    this.setState({ modules: modules });
+    this.setState({modules: modules});
   };
 
   render() {
@@ -121,7 +126,7 @@ class App extends React.Component {
           <SideNav>
             <LinkList>
               {links.map((link, i) => {
-                return <Link title={link.title} link={link.url} key={i} />;
+                return <Link title={link.title} link={link.url} key={i}/>;
               })}
             </LinkList>
             <SectionList>
@@ -193,7 +198,7 @@ class App extends React.Component {
                 })}
               </Section>
             </SectionList>
-            <Search placeholder="Find module or submodule" />
+            <Search placeholder="Find module or submodule"/>
           </SideNav>
           <TopNav logo={logo} logoLink="http://autodesk.com">
             <ProjectAccountSwitcher
@@ -222,9 +227,9 @@ class App extends React.Component {
               })}
             </ProjectAccountSwitcher>
 
-            <Shortcut icon="gear" title="Gears for Fears" link="/gears" />
+            <Shortcut icon="gear" title="Gears for Fears" link="/gears"/>
 
-            <Help title="HELLLP MEEEE!!!!" link="/help" />
+            <Help title="HELLLP MEEEE!!!!" link="/help"/>
 
             <Profile
               image={profileImage}
@@ -258,16 +263,12 @@ class App extends React.Component {
               onChange={this.handleChange}
             />
             <div>
-              <div>
-                <h3>CHECKBOX</h3>
-                <Checkbox label="I AGREE" name="tsandcs" value="true" />
-              </div>
-              <Button title="Add tab before" onClick={this.addTabBefore} />
-              <Button title="Add tab after" onClick={this.addTabAfter} />
+              <Button title="Add tab before" onClick={this.addTabBefore}/>
+              <Button title="Add tab after" onClick={this.addTabAfter}/>
 
-              <Button title="Remove tab" onClick={this.removeTab} />
+              <Button title="Remove tab" onClick={this.removeTab}/>
 
-              <Button title="Add Module" onClick={this.addModule} />
+              <Button title="Add Module" onClick={this.addModule}/>
 
               <Button
                 size="small"
@@ -397,7 +398,6 @@ class App extends React.Component {
                 }}
               />
             </div>
-
             {topNavFixtures.hipsterContent().map((paragraph, i) => {
               return (
                 <p key={i}>
@@ -405,6 +405,17 @@ class App extends React.Component {
                 </p>
               );
             })}
+            <hr />
+            <div style={checkboxStyle}>
+              <h3>Form elements</h3>
+              <Checkbox label="I AGREE" name="tsandcs" value="asd" required="true"/>
+              <Checkbox label="Not required" name="tsandcs" value="dfdf" required="false"/>
+              <Checkbox label="Disabled" name="tsandcs" value="hhh" disabled="true"/>
+              <Checkbox label="Checked" name="tsandcs" value="werr" checked="true"/>
+              <Checkbox name="nolabel" value="somevalue" />
+              <Checkbox label="Click me" onHover={ this.logEvent } onChange={ this.logEvent } onFocus={ this.logEvent } />
+            </div>
+
           </Slot>
         </GlobalNav>
       </div>

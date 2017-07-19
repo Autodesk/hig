@@ -34,9 +34,15 @@ class Checkbox extends HIGElement {
             .mapToHIGFunctions({
                 label: 'setLabel',
                 name: 'setName',
-                value: 'setValue',
+                value: 'setValue'
             })
             .mapToHIGEventListeners(['onHover', 'onFocus', 'onChange'])
+            .handle('required', value => {
+                value ? this.hig.required() : this.hig.noLongerRequired();
+            })
+            .handle('checked', value => {
+                value ? this.hig.check() : this.hig.uncheck();
+            })
             .handle('disabled', value => {
                 value ? this.hig.disable() : this.hig.enable();
             });
@@ -58,5 +64,36 @@ Checkbox.propTypes = {
     label: PropTypes.string
 };
 
+CheckboxComponent.__docgenInfo = {
+  props: {
+      name: {
+        description: 'sets the name attribute of the checkbox input'
+      },
+      value: {
+          description: 'sets the value attribute of the checkbox input'
+      },
+      checked: {
+          description: 'boolean - sets whether the checkbox is checked'
+      },
+      disabled: {
+          description: 'boolean - sets whether the checkbox is disabled'
+      },
+      required: {
+          description: 'boolean - sets the whether the checkbox is required'
+      },
+      label: {
+          description: 'sets the label text for the checkbox'
+      },
+      onHover: {
+          description: 'triggers when you hover over the button'
+      },
+      onChange: {
+          description: 'triggers when you check/uncheck the checkbox'
+      },
+      onFocus: {
+          description: 'triggers the checkbox component receives focus'
+      }
+  }
+};
 
 export default CheckboxComponent;
