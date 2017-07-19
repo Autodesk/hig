@@ -82,7 +82,9 @@
     height: 25px;
     padding-bottom: 13px;
     width: 100%;
+    box-sizing: border-box;
 
+    background-color: transparent;
     border: none;
     border-bottom: 1px solid color(hig-gray-40);
 
