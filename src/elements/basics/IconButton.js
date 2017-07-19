@@ -26,8 +26,8 @@ class IconButton extends HIGElement {
   }
 
   componentDidMount() {
-    if(this.initialProps.disabled) {
-      this.hig.disable()
+    if (this.initialProps.disabled) {
+      this.hig.disable();
     } else {
       this.hig.enable();
     }
