@@ -47,6 +47,7 @@ describe('<IconButton>', () => {
     const { higButton, higContainer } = createHigButton(defaults);
     const container = document.createElement('div');
     higButton.setIcon('gear');
+    higButton.enable();
 
     const wrapper = mount(<IconButton {...defaults} />, {
       attachTo: container

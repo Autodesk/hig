@@ -23,25 +23,103 @@ import createComponent from '../../adapters/createComponent';
 class IconButton extends HIGElement {
   constructor(initialProps) {
     super(HIG.IconButton, initialProps);
+
   }
 
   componentDidMount() {
-    this.commitUpdate(this.props);
+    if(this.initialProps.disabled) {
+      this.hig.disable()
+    } else {
+      this.hig.enable();
+    }
   }
 
   commitUpdate(updatePayload, oldProps, newProps) {
-    this.processUpdateProps(updatePayload)
-      .mapToHIGFunctions({
-        title: 'setTitle',
-        link: 'setLink',
-        icon: 'setIcon'
-      })
-      .mapToHIGEventListeners(['onClick', 'onHover', 'onFocus', 'onBlur'])
-      .handle('disabled', value => {
-        value ? this.hig.disable() : this.hig.enable();
-      });
+    for (let i = 0; i < updatePayload.length; i += 2) {
+      const propKey = updatePayload[i];
+      const propValue = updatePayload[i + 1];
+
+      switch (propKey) {
+        case 'disabled': {
+          if (propValue) {
+            this.hig.disable();
+          } else {
+            this.hig.enable();
+          }
+          break;
+        }
+        case 'title': {
+          this.hig.setTitle(propValue);
+          break;
+        }
+        case 'link': {
+          this.hig.setLink(propValue);
+          break;
+        }
+        case 'icon': {
+          this.hig.setIcon(propValue);
+          break;
+        }
+        case 'onClick': {
+          const dispose = this._disposeFunctions.get('onClickDispose');
+
+          if (dispose) {
+            dispose();
+          }
+
+          this._disposeFunctions.set(
+            'onClickDispose',
+            this.hig.onClick(propValue)
+          );
+          break;
+        }
+        case 'onHover': {
+          const dispose = this._disposeFunctions.get('onHoverDispose');
+
+          if (dispose) {
+            dispose();
+          }
+
+          this._disposeFunctions.set(
+            'onHoverDispose',
+            this.hig.onHover(propValue)
+          );
+          break;
+        }
+        case 'onFocus': {
+          const dispose = this._disposeFunctions.get('onFocusDispose');
+
+          if (dispose) {
+            dispose();
+          }
+
+          this._disposeFunctions.set(
+            'onFocusDispose',
+            this.hig.onFocus(propValue)
+          );
+          break;
+        }
+        case 'onBlur': {
+          const dispose = this._disposeFunctions.get('onBlurDispose');
+
+          if (dispose) {
+            dispose();
+          }
+
+          this._disposeFunctions.set(
+            'onBlurDispose',
+            this.hig.onBlur(propValue)
+          );
+          break;
+        }
+        default: {
+          console.warn(`${propKey} is unknown`);
+        }
+      }
+    }
   }
 }
+
 
 const IconButtonComponent = createComponent(IconButton);
 
@@ -79,11 +157,11 @@ IconButtonComponent.__docgenInfo = {
     },
 
     onFocus: {
-      description: 'triggers focus is moved to button'
+      description: 'triggers focus is moved to the icon button'
     },
 
     onBlur: {
-      description: 'triggers blur when focuss is moved away from icon'
+      description: 'triggers blur when focus is moved away from the icon button'
     }
   }
 };
