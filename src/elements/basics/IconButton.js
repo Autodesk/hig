@@ -23,7 +23,6 @@ import createComponent from '../../adapters/createComponent';
 class IconButton extends HIGElement {
   constructor(initialProps) {
     super(HIG.IconButton, initialProps);
-
   }
 
   componentDidMount() {
@@ -119,7 +118,6 @@ class IconButton extends HIGElement {
     }
   }
 }
-
 
 const IconButtonComponent = createComponent(IconButton);
 
