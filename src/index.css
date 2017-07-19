@@ -8,3 +8,7 @@ html, body, #root {
 .playground-content{
   background-color: #FFFFFF;
 }
+
+section {
+  margin-bottom: 40px;
+}

@@ -18,10 +18,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {
   Button,
+  Checkbox,
   GlobalNav,
   IconButton,
-  Checkbox,
-  RadioButton
+  RadioButton,
+  TextField
 } from './react-hig';
 
 import 'hig.web/dist/hig.css';
@@ -74,7 +75,7 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      buttonLabel: 'Toggle HIG Menu',
+      textFieldValue: 'Foobar',
       fn: false,
       tabs: [{ label: 'One', id: 0 }, { label: 'Two', id: 1 }],
       projects: topNavFixtures.projectList(),
@@ -82,17 +83,6 @@ class App extends React.Component {
       modules: []
     };
   }
-
-  logEvent = event => {
-    console.log(event.type);
-  };
-
-  handleChange = event => {
-    const buttonLabel = event.target.value;
-    this.setState(() => {
-      return { buttonLabel };
-    });
-  };
 
   handleTopNavSearchInputChange = event => {
     console.log('TopNav Search input', event.target.value);
@@ -129,6 +119,16 @@ class App extends React.Component {
     modules.push(module);
     this.setState({ modules: modules });
   };
+
+  logEvent(event, higElement) {
+    let messageParts = [
+      `${higElement.constructor.name} triggered an ${event.type} event`
+    ];
+    if (event.target.value !== undefined) {
+      messageParts = messageParts.concat(`: ${event.target.value}`);
+    }
+    console.log(messageParts.join(''));
+  }
 
   render() {
     return (
@@ -268,18 +268,20 @@ class App extends React.Component {
           </SubNav>
 
           <Slot className="playground-content">
-            <input
-              type="text"
-              value={this.state.buttonLabel}
-              onChange={this.handleChange}
-            />
-            <div>
+            <section>
+              <h3>Tabs</h3>
               <Button title="Add tab before" onClick={this.addTabBefore} />
               <Button title="Add tab after" onClick={this.addTabAfter} />
-
               <Button title="Remove tab" onClick={this.removeTab} />
+            </section>
 
+            <section>
+              <h3>Sidebar modules</h3>
               <Button title="Add Module" onClick={this.addModule} />
+            </section>
+
+            <section>
+              <h3>Button</h3>
 
               <Button
                 size="small"
@@ -371,7 +373,9 @@ class App extends React.Component {
                   console.log('hover');
                 }}
               />
-
+            </section>
+            <section>
+              <h3>Icon Button</h3>
               <IconButton
                 title="Icon button"
                 link="#"
@@ -408,85 +412,98 @@ class App extends React.Component {
                   console.log('hover');
                 }}
               />
-            </div>
-            {topNavFixtures.hipsterContent().map((paragraph, i) => {
-              return (
-                <p key={i}>
-                  {paragraph}
-                </p>
-              );
-            })}
-            <hr />
-            <div style={checkboxStyle}>
-              <h3>Checkbox elements</h3>
-              <Checkbox
-                label="I AGREE"
-                name="tsandcs"
-                value="asd"
-                required="true"
-              />
-              <Checkbox
-                label="Not required"
-                name="tsandcs"
-                value="dfdf"
-                required="false"
-              />
-              <Checkbox
-                label="Disabled"
-                name="tsandcs"
-                value="hhh"
-                disabled="true"
-              />
-              <Checkbox
-                label="Checked"
-                name="tsandcs"
-                value="werr"
-                checked="true"
-              />
-              <Checkbox name="nolabel" value="somevalue" />
-              <Checkbox
-                label="Click me"
-                onHover={this.logEvent}
+            </section>
+            <section>
+              <h3>Checkbox</h3>
+              <div style={checkboxStyle}>
+                <Checkbox
+                  label="I AGREE"
+                  name="tsandcs"
+                  value="asd"
+                  required="true"
+                />
+                <Checkbox
+                  label="Not required"
+                  name="tsandcs"
+                  value="dfdf"
+                  required="false"
+                />
+                <Checkbox
+                  label="Disabled"
+                  name="tsandcs"
+                  value="hhh"
+                  disabled="true"
+                />
+                <Checkbox
+                  label="Checked"
+                  name="tsandcs"
+                  value="werr"
+                  checked="true"
+                />
+                <Checkbox name="nolabel" value="somevalue" />
+                <Checkbox
+                  label="Click me"
+                  onHover={this.logEvent}
+                  onChange={this.logEvent}
+                  onFocus={this.logEvent}
+                />
+              </div>
+            </section>
+            <section>
+              <h3>Radio Button</h3>
+              <div style={checkboxStyle}>
+                <div>empty button<RadioButton /></div><hr />
+                <RadioButton
+                  label="I AGREE"
+                  name="tsandcs"
+                  value="asd"
+                  required={true}
+                />
+                <RadioButton
+                  label="Not required"
+                  name="tsandcs"
+                  value="dfdf"
+                  required={false}
+                />
+                <RadioButton
+                  label="Disabled"
+                  name="tsandcs"
+                  value="hhh"
+                  disabled={true}
+                />
+                <RadioButton
+                  label="Checked"
+                  name="tsandcs"
+                  value="werr"
+                  checked={true}
+                />
+                {' '}
+                <hr />
+                <RadioButton
+                  label="Click me"
+                  onHover={this.logEvent}
+                  onChange={this.logEvent}
+                  onFocus={this.logEvent}
+                />
+              </div>
+            </section>
+            <section>
+              <h3>TextField</h3>
+              <TextField
+                label="Tab title"
+                placeholder="Foo"
+                onBlur={this.logEvent}
                 onChange={this.logEvent}
                 onFocus={this.logEvent}
+                onInput={this.logEvent}
               />
-            </div>
-            <div style={checkboxStyle}>
-              <h3>Radio Button elements</h3>
-              <div>empty button<RadioButton /></div><hr />
-              <RadioButton
-                label="I AGREE"
-                name="tsandcs"
-                value="asd"
-                required="true"
-              />
-              <RadioButton
-                label="Not required"
-                name="tsandcs"
-                value="dfdf"
-                required="false"
-              />
-              <RadioButton
-                label="Disabled"
-                name="tsandcs"
-                value="hhh"
-                disabled="true"
-              />
-              <RadioButton
-                label="Checked"
-                name="tsandcs"
-                value="werr"
-                checked="true"
-              />
-              {' '}
-              <hr />
-              <RadioButton
-                label="Click me"
-                onHover={this.logEvent}
-                onChange={this.logEvent}
-                onFocus={this.logEvent}
-              />
-            </div>
+            </section>
+
+            <section>
+              {topNavFixtures.hipsterContent().map((paragraph, i) => {
+                return <p key={i}>{paragraph}</p>;
+              })}
+            </section>
           </Slot>
         </GlobalNav>
       </div>
