@@ -374,6 +374,7 @@ class App extends React.Component {
                 }}
               />
             </section>
+
             <section>
               <h3>Icon Button</h3>
               <IconButton
@@ -413,6 +414,7 @@ class App extends React.Component {
                 }}
               />
             </section>
+
             <section>
               <h3>Checkbox</h3>
               <div style={checkboxStyle}>
@@ -449,6 +451,7 @@ class App extends React.Component {
                 />
               </div>
             </section>
+
             <section>
               <h3>Radio Button</h3>
               <div style={checkboxStyle}>
@@ -487,6 +490,7 @@ class App extends React.Component {
                 />
               </div>
             </section>
+
             <section>
               <h3>TextField</h3>
               <TextField
