@@ -16,7 +16,13 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Button, GlobalNav, IconButton, Checkbox, RadioButton } from './react-hig';
+import {
+  Button,
+  GlobalNav,
+  IconButton,
+  Checkbox,
+  RadioButton
+} from './react-hig';
 
 import 'hig.web/dist/hig.css';
 import './index.css';
@@ -447,7 +453,7 @@ class App extends React.Component {
             </div>
             <div style={checkboxStyle}>
               <h3>Radio Button elements</h3>
-              <div>empty button<RadioButton /></div>< hr />
+              <div>empty button<RadioButton /></div><hr />
               <RadioButton
                 label="I AGREE"
                 name="tsandcs"
@@ -471,7 +477,9 @@ class App extends React.Component {
                 name="tsandcs"
                 value="werr"
                 checked="true"
-              /> <hr />
+              />
+              {' '}
+              <hr />
               <RadioButton
                 label="Click me"
                 onHover={this.logEvent}
