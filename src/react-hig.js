@@ -17,6 +17,7 @@ limitations under the License.
 
 export { default as Button } from './elements/basics/Button';
 export { default as Checkbox } from './adapters/FormElements/Checkbox';
+export { default as RadioButton } from './adapters/FormElements/RadioButton';
 export {
   default as GlobalNav
 } from './elements/components/GlobalNav/GlobalNav';

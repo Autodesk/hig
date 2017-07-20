@@ -16,7 +16,7 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Button, GlobalNav, IconButton, Checkbox } from './react-hig';
+import { Button, GlobalNav, IconButton, Checkbox, RadioButton } from './react-hig';
 
 import 'hig.web/dist/hig.css';
 import './index.css';
@@ -412,7 +412,7 @@ class App extends React.Component {
             })}
             <hr />
             <div style={checkboxStyle}>
-              <h3>Form elements</h3>
+              <h3>Checkbox elements</h3>
               <Checkbox
                 label="I AGREE"
                 name="tsandcs"
@@ -445,7 +445,40 @@ class App extends React.Component {
                 onFocus={this.logEvent}
               />
             </div>
-
+            <div style={checkboxStyle}>
+              <h3>Radio Button elements</h3>
+              <div>empty button<RadioButton /></div>< hr />
+              <RadioButton
+                label="I AGREE"
+                name="tsandcs"
+                value="asd"
+                required="true"
+              />
+              <RadioButton
+                label="Not required"
+                name="tsandcs"
+                value="dfdf"
+                required="false"
+              />
+              <RadioButton
+                label="Disabled"
+                name="tsandcs"
+                value="hhh"
+                disabled="true"
+              />
+              <RadioButton
+                label="Checked"
+                name="tsandcs"
+                value="werr"
+                checked="true"
+              /> <hr />
+              <RadioButton
+                label="Click me"
+                onHover={this.logEvent}
+                onChange={this.logEvent}
+                onFocus={this.logEvent}
+              />
+            </div>
           </Slot>
         </GlobalNav>
       </div>

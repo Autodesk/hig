@@ -94,6 +94,8 @@ export class RadioButton extends HIGElement {
           );
           break;
         }
+        default:
+          console.warn("Unknown key, not handled: ", propKey);
       }
     }
   }

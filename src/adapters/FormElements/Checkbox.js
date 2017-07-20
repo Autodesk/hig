@@ -93,6 +93,8 @@ export class Checkbox extends HIGElement {
           );
           break;
         }
+        default:
+          console.warn("Unknown key, not handled: ", propKey);
       }
     }
   }
