@@ -23,10 +23,30 @@ import createComponent from './createComponent';
 class TextField extends HIGElement {
   constructor(initialProps) {
     super(HIG.TextField, initialProps);
+
+    this.handleInput = this.handleInput.bind(this);
   }
 
   componentDidMount() {
     this.commitUpdate(this.props);
+
+    this.hig
+      ._findDOMEl('.hig__text-field__input')
+      .addEventListener('keypress', this.handleInput);
+  }
+
+  handleInput(event) {
+    // Call callback if provided
+    if (this.props.onInput) {
+      this.props.onInput(...arguments);
+    }
+
+    // Prevent user interaction from changing text field value
+    if (this.props.value) {
+      console.log('handleInput set value:', this.props.value);
+
+      this.hig.setValue(this.props.value);
+    }
   }
 
   commitUpdate(updatePayload, oldProps, newProps) {
@@ -118,6 +138,7 @@ class TextField extends HIGElement {
           break;
         }
         case 'value': {
+          console.log('commit update value: ', propValue);
           this.hig.setValue(propValue);
           break;
         }

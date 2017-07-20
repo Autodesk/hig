@@ -82,6 +82,8 @@ class App extends React.Component {
       accounts: topNavFixtures.accountList(),
       modules: []
     };
+
+    this.setTextFieldValue = this.setTextFieldValue.bind(this);
   }
 
   handleTopNavSearchInputChange = event => {
@@ -128,6 +130,13 @@ class App extends React.Component {
       messageParts = messageParts.concat(`: ${event.target.value}`);
     }
     console.log(messageParts.join(''));
+  }
+
+  setTextFieldValue(event) {
+    this.logEvent(event, TextField)
+    this.setState({
+      textFieldValue: event.target.value
+    });
   }
 
   render() {
@@ -499,7 +508,8 @@ class App extends React.Component {
                 onBlur={this.logEvent}
                 onChange={this.logEvent}
                 onFocus={this.logEvent}
-                onInput={this.logEvent}
+                onInput={this.setTextFieldValue}
+                value={this.state.textFieldValue}
               />
             </section>
 

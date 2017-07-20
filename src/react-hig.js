@@ -22,4 +22,6 @@ export { default as IconButton } from './elements/basics/IconButton';
 export {
   default as RadioButton
 } from './adapters/FormElements/RadioButtonAdapter';
-export { default as TextField } from './adapters/TextFieldAdapter';
+export {
+  default as TextField
+} from './elements/basics/form-elements/TextField';
