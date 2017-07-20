@@ -116,31 +116,31 @@ RadioButton.propTypes = {
 RadioButtonComponent.__docgenInfo = {
   props: {
     name: {
-      description: 'sets the name attribute of the checkbox input'
+      description: 'sets the name attribute of the radiobutton input'
     },
     value: {
-      description: 'sets the value attribute of the checkbox input'
+      description: 'sets the value attribute of the radiobutton input'
     },
     checked: {
-      description: 'boolean - sets whether the checkbox is checked'
+      description: 'boolean - sets whether the radiobutton is checked'
     },
     disabled: {
-      description: 'boolean - sets whether the checkbox is disabled'
+      description: 'boolean - sets whether the radiobutton is disabled'
     },
     required: {
-      description: 'boolean - sets the whether the checkbox is required'
+      description: 'boolean - sets the whether the radiobutton is required'
     },
     label: {
-      description: 'sets the label text for the checkbox'
+      description: 'sets the label text for the radiobutton'
     },
     onHover: {
       description: 'triggers when you hover over the button'
     },
     onChange: {
-      description: 'triggers when you check/uncheck the checkbox'
+      description: 'triggers when you check/uncheck the radiobutton'
     },
     onFocus: {
-      description: 'triggers the checkbox component receives focus'
+      description: 'triggers the radiobutton component receives focus'
     }
   }
 };
