@@ -13,11 +13,14 @@ var Core = require('_core.js');
 class TextField extends Core {
 
     constructor(options = {}){
-        if (!options.name) {
-            // Ensure each text field component has a name so the label can be associated to the input
+        // Ensure each text field component has an id so the label can be associated to the input
+        let name = options.name;
+        if (!name) {
             const randomName = Math.floor(Math.random() * 100000, 5).toString()
-            options.name = randomName;
+            name = randomName;
         }
+        options.id = `text-field-${name}`;
+
         super(options);
 
         this._render(Template, options);
@@ -36,11 +39,11 @@ class TextField extends Core {
     }
 
     setLabel(label){
-        if (label) {
-            this._findOrAddElement('LABEL', 'label', '.hig__text-field__label').textContent = label;
-        } else {
-            this._removeElementIfFound('.hig__text-field__label');
-        }
+        const labelEl = this._findDOMEl('.hig__text-field__label', this.el);
+        labelEl.textContent = label;
+        label
+            ? labelEl.classList.add('hig__text-field__label--visible')
+            : labelEl.classList.remove('hig__text-field__label--visible');
     }
 
     setPlaceholder(placeholder){
@@ -53,8 +56,6 @@ class TextField extends Core {
     }
 
     setName(name){
-        this._findDOMEl('.hig__text-field__label', this.el).setAttribute('for', name);
-        this._findDOMEl('.hig__text-field__input', this.el).setAttribute('id', name);
         this._findDOMEl('.hig__text-field__input', this.el).setAttribute('name', name);
     }
 

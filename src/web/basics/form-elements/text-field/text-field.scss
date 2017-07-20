@@ -35,7 +35,7 @@
 }
 
 .hig__text-field__label {
-    display: block;
+    display: none;
     position: relative;
     padding-bottom: 8px;
 
@@ -47,6 +47,10 @@
     transition-property: top, font-size, line-height;
     transition-duration: 0.1s, 0.1s, 0.1s;
     transition-delay: 0.1s;
+
+    &.hig__text-field__label--visible {
+        display: block;
+    }
 
     .hig__text-field__input:focus + & {
         color: color(adsk-blue-dark);
