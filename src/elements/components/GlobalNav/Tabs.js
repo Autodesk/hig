@@ -16,10 +16,10 @@ limitations under the License.
 */
 import React from 'react';
 
-import Tabs from '../../../adapters/Tabs';
-import Tab from '../../../adapters/Tab';
+import  OrionTabs  from '../../../adapters/Tabs';
+import  OrionTab  from '../../../adapters/Tab';
 
-class StatefulTab extends React.Component {
+class Tab extends React.Component {
   // This is never actually rendered
   render() {
     return <div />;
@@ -27,10 +27,10 @@ class StatefulTab extends React.Component {
 }
 
 function isTab(child) {
-  return child != null && child.type === StatefulTab;
+  return child != null && child.type === Tab;
 }
 
-class StatefulTabs extends React.Component {
+class Tabs extends React.Component {
   constructor(props) {
     super(props);
     const selectedTabId = this.getInitialSelectedTabId();
@@ -60,9 +60,9 @@ class StatefulTabs extends React.Component {
       child => isTab(child) ? this.renderTab(child) : null
     );
     return (
-      <Tabs>
+      <OrionTabs>
         {tabs}
-      </Tabs>
+      </OrionTabs>
     );
   }
 
@@ -70,7 +70,7 @@ class StatefulTabs extends React.Component {
     const { id } = tab.props;
 
     return (
-      <Tab
+      <OrionTab
         {...tab.props}
         active={id === this.state.selectedTabId}
         onClick={this.handleTabClick.bind(this, id)}
@@ -89,6 +89,6 @@ class StatefulTabs extends React.Component {
   }
 }
 
-StatefulTabs.Tab = StatefulTab;
+Tabs.Tab = Tab;
 
-export default StatefulTabs;
+export default Tabs;

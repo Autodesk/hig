@@ -19,10 +19,9 @@ import createComponent from '../../../adapters/createComponent';
 import HIGElement from '../../HIGElement';
 import HIGChildValidator from '../../HIGChildValidator';
 
-
 // New tabs which have state in a separate react component
 import TabsComponent, { Tabs } from '../../../adapters/Tabs';
-import StatefulTabs from './StatefulTabs';
+import StatefulTabs from './Tabs';
 
 export class SubNav extends HIGElement {
   componentDidMount() {

@@ -19,14 +19,14 @@ import * as HIG from 'hig.web';
 import React from 'react';
 
 import GlobalNav from './GlobalNav';
-import Tabs from './StatefulTabs';
+import Tabs from './Tabs';
 import Tab from '../../../adapters/Tab';
 
 const Context = props => {
   return (
     <GlobalNav>
       <GlobalNav.SubNav>
-        <Tabs >
+        <Tabs>
           <Tabs.Tab active={props.active} label={props.label} key={props.id} />
         </Tabs>
       </GlobalNav.SubNav>
@@ -58,4 +58,3 @@ describe('<Tab>', () => {
     expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
   });
 });
-  
