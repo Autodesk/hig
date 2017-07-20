@@ -246,6 +246,11 @@
                             "params": "HIG.abstract.EventObject.params",
                             "returns": "HIG.abstract.EventObject.returns"
                         }
+                    },
+                    "defaults": {
+                        "label": "",
+                        "value": "",
+                        "name": ""
                     }
                 },
                 "RadioButton": {
@@ -304,6 +309,11 @@
                             "params": "HIG.abstract.EventObject.params",
                             "returns": "HIG.abstract.EventObject.returns"
                         }
+                    },
+                    "defaults": {
+                        "label": "",
+                        "value": "",
+                        "name": ""
                     }
                 },
                 "Dropdown": {
