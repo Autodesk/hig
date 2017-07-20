@@ -26,6 +26,11 @@
  <div class="tests-radiobutton-heading4"></div>
  <br>
  <div class="tests-radiobutton tests-radiobutton4"></div>
+ <hr>
+ <div class="tests-radiobutton-heading7"></div>
+ <br>
+ <div class="tests-radiobutton tests-radiobutton7"></div>
+
 </div>
 <script>
  // Build your new hig element to test here
@@ -147,6 +152,51 @@
  });
  DisableButton.onClick(function(e) {
   FancyRadioButton.disable();
+ });
+
+
+
+ // set a new name and check it by putting it inside the span.
+ const BareRadioButton = new RadioButton ({});
+ BareRadioButton.mount('.tests-radiobutton7');
+
+ const SetLabelButton = new Hig.Button({
+                                         title: "Toggle RadioButton Label",
+                                         link: "#"                           });
+ const SetValueButton = new Hig.Button({
+                                         title: "Toggle RadioButton Value",
+                                         link: "#"                           });
+ const SetNameButton = new Hig.Button({
+                                        title: "Toggle RadioButton Name",
+                                        link: "#"                           });
+
+ [SetLabelButton, SetValueButton, SetNameButton].forEach(function(button) {
+   button.mount('.tests-radiobutton-heading7');
+ });
+
+ SetLabelButton.onClick(function(e){
+   labelText = BareRadioButton.el.querySelector('label').textContent;
+   if (labelText){
+     BareRadioButton.setLabel("");
+   } else {
+     BareRadioButton.setLabel("I'm a label")
+   }
+ });
+ SetValueButton.onClick(function(e){
+   attrText = BareRadioButton.el.querySelector('input').getAttribute('value');
+   if (attrText){
+     BareRadioButton.setValue("");
+   } else {
+     BareRadioButton.setValue("someval")
+   }
+ });
+ SetNameButton.onClick(function(e){
+   attrText = BareRadioButton.el.querySelector('input').getAttribute('name');
+   if (attrText){
+     BareRadioButton.setName("");
+   } else {
+     BareRadioButton.setName("somename")
+   }
  });
 
 </script>

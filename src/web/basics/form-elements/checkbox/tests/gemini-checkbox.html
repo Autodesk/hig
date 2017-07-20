@@ -18,8 +18,8 @@
 </head>
 <body>
 
+<div class="tests-checkbox-heading"></div>
 <div class='test-container' style="padding: 40px; margin: 0;">
- <div class="tests-checkbox-heading"></div>
  <div class="tests-checkbox"></div>
  <div class="tests-checkbox tests-checkbox1"></div>
  <div class="tests-checkbox tests-checkbox2"></div>
@@ -29,8 +29,25 @@
  <div class="tests-checkbox tests-checkbox4"></div>
  <br>
  <div class="tests-checkbox tests-checkbox5"></div>
- <br>
- <div class="tests-checkbox tests-checkbox6"></div>
+</div>
+<div class='test-container' style="padding: 40px; margin: 0;">
+  <div class="tests-checkbox tests-checkbox6"></div>
+  <hr>
+  <div class="tests-checkbox tests-checkbox7">
+   <span class="newvalue"></span>
+  </div>
+  <hr>
+  <div class="tests-checkbox tests-checkbox8">
+   <span class="newvalue"></span>
+  </div>
+  <hr>
+  <span class="tests-checkbox tests-checkbox9"></span>
+  <hr>
+  <span class="tests-checkbox tests-checkbox10"></span>
+  <hr>
+  <span class="tests-checkbox tests-checkbox11">
+  </span>
+  <span>This should have no label</span>
 </div>
 
 <script>
@@ -42,15 +59,6 @@
   text: "Different Checkboxes",
   size: 2
  });
-//
-// checkboxes = ['basic','checked','required','disabled',
-//  'callcheck','callrequire','calldisable'].map(function(type,i){
-//    var checkbox = new Checkbox({
-//      label: type,
-//      name: `box_${i}`,
-//      value: i.toString
-//    })
-// });
 
  const DefaultCheckbox = new Checkbox({
   label: "So basic",
@@ -110,6 +118,55 @@
  });
  Checkbox6.mount('.tests-checkbox6');
  Checkbox6.disable();
+
+ // set a new name and check it by putting it inside the span.
+ const Checkbox7 = new Checkbox ({
+     label: "setName",
+     name: "foo",
+     value: "bar"
+ });
+ Checkbox7.mount('.tests-checkbox7');
+ Checkbox7.setName("NEWNAME")
+ const c7 = document.querySelector(".tests-checkbox7 .newvalue");
+ const c7input = document.querySelector(".tests-checkbox7 input");
+ var text = "new name: " + c7input.getAttribute("value");
+ c7.textContent = text;
+
+// set a new value and check it by putting it inside the span
+ const Checkbox8 = new Checkbox ({
+     label: "setValue",
+     name: "foo",
+     value: "bar"
+ });
+
+ Checkbox8.mount('.tests-checkbox8');
+ Checkbox8.setValue("YASSSSS");
+ const c8 = document.querySelector(".tests-checkbox8 .newvalue");
+ const c8input = document.querySelector(".tests-checkbox8 input");
+ text = "new value: " + c8input.getAttribute("value");
+ c8.textContent = text;
+
+ const Checkbox9 = new Checkbox ({
+     label: "setLabel",
+     name: "foo",
+     value: "bar"
+ });
+ Checkbox9.mount('.tests-checkbox9');
+ Checkbox9.setLabel("NEW LABEL");
+
+ const BareCheckbox = new Checkbox({});
+ BareCheckbox.mount('.tests-checkbox10');
+ BareCheckbox.setLabel("LABEL");
+ BareCheckbox.setValue("VALUE");
+ BareCheckbox.setName("NAME");
+
+ const NoLabelCheckbox = new Checkbox({})
+ NoLabelCheckbox.mount('.tests-checkbox11');
+ NoLabelCheckbox.setLabel("");
+ NoLabelCheckbox.setValue("SOMEVAL");
+ NoLabelCheckbox.setName("SOMENAME");
+
+
 </script>
 
 </body>
