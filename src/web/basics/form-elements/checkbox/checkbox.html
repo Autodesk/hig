@@ -1,6 +1,6 @@
 <div class='hig__input-button hig__input-button--checkbox {{ #required }}hig__input-button--required{{ /required }}'>
   <!--CHECKBOX_LABEL-->
-  <label class="hig__input-button__label" for="{{ id }}" >{{ label }}</label>
+  <label class="hig__input-button__label{{^label}} hig--hidden{{/label}}" for="{{ id }}" >{{ label }}</label>
   <input type="checkbox" class="hig__input-button__input"
       {{ #required }}required{{/required}}
       {{ #checked }}checked{{ /checked }}
