@@ -16,8 +16,8 @@ limitations under the License.
 */
 import React from 'react';
 
-import  OrionTabs  from '../../../adapters/Tabs';
-import  OrionTab  from '../../../adapters/Tab';
+import OrionTabs from '../../../adapters/Tabs';
+import OrionTab from '../../../adapters/Tab';
 
 class Tab extends React.Component {
   // This is never actually rendered
