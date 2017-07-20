@@ -16,9 +16,9 @@
  */
 import * as HIG from 'hig.web';
 
-import HIGElement from '../../HIGElement';
+import HIGElement from '../../elements/HIGElement';
 import * as PropTypes from 'prop-types';
-import createComponent from '../../../adapters/createComponent';
+import createComponent from '../createComponent';
 
 class Checkbox extends HIGElement {
     constructor(initialProps) {

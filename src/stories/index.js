@@ -18,7 +18,8 @@ import 'hig.web/dist/hig.css';
 
 import '../elements/basics/Button.story';
 import '../elements/basics/IconButton.story';
-import '../elements/basics/FormElements/Checkbox.story';
+import '../adapters/FormElements/Checkbox.story';
+import '../adapters/FormElements/RadioButton.story';
 import '../elements/components/GlobalNav/TopNav/Search.story.js';
 import '../elements/components/GlobalNav/TopNav/Profile.story';
 import '../elements/components/GlobalNav/GlobalNav.story';
