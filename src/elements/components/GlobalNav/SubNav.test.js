@@ -20,8 +20,8 @@ import React from 'react';
 
 import GlobalNav from './GlobalNav';
 import SubNav from './SubNav';
-import Tabs from './Tabs';
-import Tab from './Tab';
+import Tabs from './StatefulTabs';
+import Tab from '../../../adapters/Tab';
 
 const Context = props => {
   return (
@@ -79,7 +79,7 @@ describe('<SubNav>', () => {
     };
     const updatedProps1 = {
       ...defaultProps,
-      Tabs: <Tabs><Tab label="Things" /></Tabs>
+      Tabs: <Tabs defaultSelectedTabId={1}><Tabs.Tab label="Things" key={1} id={1}/></Tabs>
     };
     const updatedProps2 = { ...defaultProps, Tabs: null };
     const reactContainer = document.createElement('div');

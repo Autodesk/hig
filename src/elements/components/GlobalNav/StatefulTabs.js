@@ -16,8 +16,8 @@ limitations under the License.
 */
 import React from 'react';
 
-import Tabs2 from './Tabs2';
-import Tab2 from './Tab2';
+import Tabs from '../../../adapters/Tabs';
+import Tab from '../../../adapters/Tab';
 
 class StatefulTab extends React.Component {
   // This is never actually rendered
@@ -60,9 +60,9 @@ class StatefulTabs extends React.Component {
       child => isTab(child) ? this.renderTab(child) : null
     );
     return (
-      <Tabs2>
+      <Tabs>
         {tabs}
-      </Tabs2>
+      </Tabs>
     );
   }
 
@@ -70,7 +70,7 @@ class StatefulTabs extends React.Component {
     const { id } = tab.props;
 
     return (
-      <Tab2
+      <Tab
         {...tab.props}
         active={id === this.state.selectedTabId}
         onClick={this.handleTabClick.bind(this, id)}

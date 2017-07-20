@@ -19,15 +19,15 @@ import * as HIG from 'hig.web';
 import React from 'react';
 
 import GlobalNav from './GlobalNav';
-import Tabs from './Tabs';
-import Tab from './Tab';
+import Tabs from './StatefulTabs';
+import Tab from '../../../adapters/Tab';
 
-const Context = props => {
+const Context = props => {  
   return (
     <GlobalNav>
       <GlobalNav.SubNav>
-        <Tabs>
-          {props.tabs.map(label => <Tab key={label} label={label} />)}
+        <Tabs defaultSelectedTab={props.tabs[0].id}>
+          {props.tabs.map(tab => <Tabs.Tab key={tab.key} label={tab.label} id={tab.id} />)}
         </Tabs>
       </GlobalNav.SubNav>
     </GlobalNav>
@@ -36,7 +36,7 @@ const Context = props => {
 
 describe('<Tabs>', () => {
   it('renders tabs', () => {
-    const tabs = ['Hello', 'World'];
+    const tabs = [{ key: 7, label: 'Hello', id: 7}, { key: 8, label: 'World', id: 9} ];
     const reactContainer = document.createElement('div');
     const wrapper = mount(<Context tabs={tabs} />, {
       attachTo: reactContainer
@@ -46,8 +46,12 @@ describe('<Tabs>', () => {
   });
 
   it('adds tabs', () => {
-    const initialTabs = ['Hello', 'World'];
-    const updatedTabs = ['Hello', 'There', 'World', '!'];
+    const initialTabs = [ { key: 1, label: 'Hello', id: 1},{ key: 2, label: 'World', id: 2 }];
+    const updatedTabs = 
+    [
+      { key: 3, label: 'Hello', id: 3 }, 
+      { key: 4, label:'There', id: 4 }, { key: 5, label: 'World', id: 5}, 
+      { key: 6, label: 'Yes', id: 6}];
     const reactContainer = document.createElement('div');
     const wrapper = mount(<Context tabs={initialTabs} />, {
       attachTo: reactContainer
@@ -59,8 +63,8 @@ describe('<Tabs>', () => {
   });
 
   it('removes tabs', () => {
-    const initialTabs = ['Hello', 'World'];
-    const updatedTabs = ['World'];
+    const initialTabs = [{key: 10, label: 'Hello', id: 10}, {key: 11, label: 'World', id: 11}];
+    const updatedTabs = [{key: 12, label: 'Updated Tabs', id: 12}];
     const reactContainer = document.createElement('div');
     const wrapper = mount(<Context tabs={initialTabs} />, {
       attachTo: reactContainer
