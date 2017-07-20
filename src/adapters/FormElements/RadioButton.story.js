@@ -23,7 +23,7 @@ import RadioButton from './RadioButton';
 import Slot from '../../elements/components/GlobalNav/Slot';
 
 const containerStyle = {
-  display: "flex"
+  display: 'flex'
 };
 
 storiesOf('RadioButton', module)
@@ -31,44 +31,44 @@ storiesOf('RadioButton', module)
     return (
       <div style={containerStyle}>
         <RadioButton
-          name={text("radioButtonName1","basic")}
-          value={text("radioButtonValue1", "yes")}
-          label={text("radioButtonLabel1", "yes")}
+          name={text('radioButtonName1', 'basic')}
+          value={text('radioButtonValue1', 'yes')}
+          label={text('radioButtonLabel1', 'yes')}
         />
         <RadioButton
-          name={text("radioButtonName2","basic")}
-          value={text("radioButtonValue2", "no")}
-          label={text("radioButtonLabel2", "no")}
+          name={text('radioButtonName2', 'basic')}
+          value={text('radioButtonValue2', 'no')}
+          label={text('radioButtonLabel2', 'no')}
         />
         <RadioButton
-          name={text("radioButtonName3","basic")}
-          value={text("radioButtonValue3", "maybe")}
-          label={text("radioButtonLabel3", "maybe")}
+          name={text('radioButtonName3', 'basic')}
+          value={text('radioButtonValue3', 'maybe')}
+          label={text('radioButtonLabel3', 'maybe')}
         />
       </div>
-    )
+    );
   })
-  .addWithInfo('with other options', '', () =>{
+  .addWithInfo('with other options', '', () => {
     const valueOptions = {
       extra: '2',
       really: '1',
       basic: '0'
     };
 
-    return(
+    return (
       <div style={containerStyle}>
         <RadioButton
-            name="is_it_fancy"
-            value='fanciness'
-            label="Fancy!"
-            checked={false}
-            required={boolean('Required', true)}
+          name="is_it_fancy"
+          value="fanciness"
+          label="Fancy!"
+          checked={false}
+          required={boolean('Required', true)}
         />
         <RadioButton
-            name="checked"
-            value="hello"
-            label="checked"
-            checked={boolean('Checked', true)}
+          name="checked"
+          value="hello"
+          label="checked"
+          checked={boolean('Checked', true)}
         />
         <RadioButton
           name="disabled"
@@ -77,37 +77,35 @@ storiesOf('RadioButton', module)
           disabled={boolean('Disabled', true)}
         />
       </div>
-    )
+    );
   })
   .addWithInfo('with Events defined', '', () => {
-
-    return(
-          <div style={containerStyle}>
-            <RadioButton
-                name="choisessez"
-                value="un"
-                label="un"
-                onHover={action("hovered 'un'")}
-                onChange={action("changed 'un'")}
-                onFocus={action("focused 'un'")}
-            />
-            <RadioButton
-              name="choisessez"
-              value="deux"
-              label="deux"
-              onHover={action("hovered 'deux'")}
-              onChange={action("changed 'deux'")}
-              onFocus={action("focused 'deux'")}
-            />
-            <RadioButton
-              name="choisessez"
-              value="troi"
-              label="troi"
-              onHover={action("hovered 'troi'")}
-              onChange={action("changed 'troi'")}
-              onFocus={action("focused 'troi'")}
-            />
-          </div>
-    )
-  })
-;
+    return (
+      <div style={containerStyle}>
+        <RadioButton
+          name="choisessez"
+          value="un"
+          label="un"
+          onHover={action("hovered 'un'")}
+          onChange={action("changed 'un'")}
+          onFocus={action("focused 'un'")}
+        />
+        <RadioButton
+          name="choisessez"
+          value="deux"
+          label="deux"
+          onHover={action("hovered 'deux'")}
+          onChange={action("changed 'deux'")}
+          onFocus={action("focused 'deux'")}
+        />
+        <RadioButton
+          name="choisessez"
+          value="troi"
+          label="troi"
+          onHover={action("hovered 'troi'")}
+          onChange={action("changed 'troi'")}
+          onFocus={action("focused 'troi'")}
+        />
+      </div>
+    );
+  });

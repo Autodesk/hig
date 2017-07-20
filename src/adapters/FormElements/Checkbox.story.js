@@ -25,33 +25,34 @@ storiesOf('Checkbox', module)
   .addWithInfo('Basic checkbox', '', () => {
     return (
       <Checkbox
-        name={text("checkboxName","basic")}
-        value={text("checkboxValue", "yes")}
-        label={text("checkboxLabel", "A checkbox")}
+        name={text('checkboxName', 'basic')}
+        value={text('checkboxValue', 'yes')}
+        label={text('checkboxLabel', 'A checkbox')}
       />
-    )
+    );
   })
-  .addWithInfo('with other options', '', () =>{
+  .addWithInfo('with other options', '', () => {
     const valueOptions = {
       extra: '2',
       really: '1',
       basic: '0'
     };
 
-    return(
+    return (
       <div>
         <Checkbox
-            name="is_it_fancy"
-            value='fanciness'
-            label="Fancy!"
-            checked={false}
-            required={boolean('Required', true)}
+          name="is_it_fancy"
+          value="fanciness"
+          label="Fancy!"
+          checked={false}
+          required={boolean('Required', true)}
+          disabled={false}
         />
         <Checkbox
-            name="checked"
-            value="hello"
-            label="checked"
-            checked={boolean('Checked', true)}
+          name="checked"
+          value="hello"
+          label="checked"
+          checked={boolean('Checked', true)}
         />
         <Checkbox
           name="disabled"
@@ -60,23 +61,21 @@ storiesOf('Checkbox', module)
           disabled={boolean('Disabled', true)}
         />
       </div>
-    )
+    );
   })
   .addWithInfo('with Events defined', '', () => {
-    var localName="sdfsdffsd";
-    var localValue="hello";
-    var localLabel="Greetings";
+    var localName = 'sdfsdffsd';
+    var localValue = 'hello';
+    var localLabel = 'Greetings';
 
-    return(
+    return (
       <Checkbox
         name={localName}
         value={localValue}
         label={localLabel}
-        onHover={action("Hovered")}
-        onChange={action("Changed")}
-        onFocus={action("Focused")}
+        onHover={action('Hovered')}
+        onChange={action('Changed')}
+        onFocus={action('Focused')}
       />
-
-    )
-  })
-;
+    );
+  });

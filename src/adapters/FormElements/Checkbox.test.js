@@ -20,48 +20,47 @@ import React from 'react';
 
 import Checkbox from './Checkbox';
 
-describe("<Checkbox>", () => {
-    function createHigCheckbox(defaults = {}) {
-        const higContainer = document.createElement('div');
+describe('<Checkbox>', () => {
+  function createHigCheckbox(defaults = {}) {
+    const higContainer = document.createElement('div');
 
-        // use spread here to clone defaults since HIG.Button mutates this object
-        const higCheckbox = new HIG.Checkbox({ ...defaults });
+    // use spread here to clone defaults since HIG.Button mutates this object
+    const higCheckbox = new HIG.Checkbox({ ...defaults });
 
-        higCheckbox.mount(higContainer);
+    higCheckbox.mount(higContainer);
 
-      // to adjust for the randomly generated id
-      const inputId = higCheckbox.el.querySelector('input').getAttribute("id");
+    // to adjust for the randomly generated id
+    const inputId = higCheckbox.el.querySelector('input').getAttribute('id');
 
-        return { higCheckbox, higContainer, inputId };
+    return { higCheckbox, higContainer, inputId };
+  }
+
+  it('renders the standard  Checkbox', () => {
+    const defaults = {
+      name: 'agree_toc',
+      label: 'I agree',
+      value: 'agree'
     };
 
-    it('renders the standard  Checkbox', () => {
-        const defaults = {
-            name: "agree_toc",
-            label: "I agree",
-            value: "agree"
-        };
+    const { higCheckbox, higContainer, inputId } = createHigCheckbox(defaults);
+    const container = document.createElement('div');
+    mount(<Checkbox {...defaults} />, { attachTo: container });
 
-        const { higCheckbox, higContainer, inputId } = createHigCheckbox(defaults);
-        const container = document.createElement('div');
-        mount(<Checkbox { ...defaults} />, {attachTo: container});
+    const label = container.querySelector('label');
+    const input = container.querySelector('input');
 
-        const label = container.querySelector('label');
-        const input = container.querySelector('input')
+    // to adjust for the randomly generated id
+    label.setAttribute('for', inputId);
+    input.setAttribute('id', inputId);
 
-        // to adjust for the randomly generated id
-        label.setAttribute("for", inputId);
-        input.setAttribute("id", inputId);
+    // expect(container.firstElementChild.outerHTML).toMatchSnapshot();
 
+    expect(container.firstElementChild.outerHTML).toEqual(
+      higContainer.firstElementChild.outerHTML
+    );
+  });
 
-      // expect(container.firstElementChild.outerHTML).toMatchSnapshot();
-
-        expect(container.firstElementChild.outerHTML).toEqual(
-            higContainer.firstElementChild.outerHTML
-        );
-    });
-
-    it("does not show a label if not specified", () => {
-        expect(true).toEqual(true);
-    });
+  it('does not show a label if not specified', () => {
+    expect(true).toEqual(true);
+  });
 });

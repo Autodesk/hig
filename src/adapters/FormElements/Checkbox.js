@@ -20,79 +20,127 @@ import HIGElement from '../../elements/HIGElement';
 import * as PropTypes from 'prop-types';
 import createComponent from '../createComponent';
 
-class Checkbox extends HIGElement {
-    constructor(initialProps) {
-        super(HIG.Checkbox, initialProps);
-    }
+export class Checkbox extends HIGElement {
+  constructor(initialProps) {
+    super(HIG.Checkbox, initialProps);
+  }
 
-    componentDidMount() {
-        this.commitUpdate(this.props);
+  componentDidMount() {
+    if (this.props.required) {
+      this.hig.required();
     }
-
-    commitUpdate(updatePayload, oldProps, newProps) {
-        this.processUpdateProps(updatePayload)
-            .mapToHIGFunctions({
-                label: 'setLabel',
-                name: 'setName',
-                value: 'setValue'
-            })
-            .mapToHIGEventListeners(['onHover', 'onFocus', 'onChange'])
-            .handle('required', value => {
-                value ? this.hig.required() : this.hig.noLongerRequired();
-            })
-            .handle('checked', value => {
-                value ? this.hig.check() : this.hig.uncheck();
-            })
-            .handle('disabled', value => {
-                value ? this.hig.disable() : this.hig.enable();
-            });
+    if (this.props.checked) {
+      this.hig.check();
     }
+    if (this.props.disabled) {
+      this.hig.disable();
+    }
+  }
 
+  commitUpdate(updatePayload, oldProps, newProps) {
+    for (let i = 0; i < updatePayload.length; i += 2) {
+      const propKey = updatePayload[i];
+      const propValue = updatePayload[i + 1];
+      switch (propKey) {
+        case 'label':
+          this.hig.setLabel(propValue);
+          break;
+        case 'name':
+          this.hig.setName(propValue);
+          break;
+        case 'value':
+          this.hig.setValue(propValue);
+          break;
+        case 'required':
+          propValue ? this.hig.required() : this.hig.noLongerRequired();
+          break;
+        case 'checked':
+          propValue ? this.hig.check() : this.hig.uncheck();
+          break;
+        case 'disabled':
+          propValue ? this.hig.disable() : this.hig.enable();
+          break;
+        case 'onChange': {
+          const dispose = this._disposeFunctions.get('onChangeDispose');
+          if (dispose) {
+            dispose();
+          }
+          this._disposeFunctions.set(
+            'onChangeDispose',
+            this.hig.onChange(propValue)
+          );
+          break;
+        }
+        case 'onFocus': {
+          const dispose = this._disposeFunctions.get('onFocusDispose');
+          if (dispose) {
+            dispose();
+          }
+          this._disposeFunctions.set(
+            'onFocusDispose',
+            this.hig.onFocus(propValue)
+          );
+          break;
+        }
+        case 'onHover': {
+          const dispose = this._disposeFunctions.get('onHoverDispose');
+          if (dispose) {
+            dispose();
+          }
+          this._disposeFunctions.set(
+            'onHoverDispose',
+            this.hig.onHover(propValue)
+          );
+          break;
+        }
+      }
+    }
+  }
 }
 
 const CheckboxComponent = createComponent(Checkbox);
 
 Checkbox.propTypes = {
-    disabled: PropTypes.bool,
-    checked: PropTypes.bool,
-    required: PropTypes.bool,
-    onHover: PropTypes.func,
-    onChange: PropTypes.func,
-    onFocus: PropTypes.func,
-    name: PropTypes.string,
-    value: PropTypes.string,
-    label: PropTypes.string
+  disabled: PropTypes.bool,
+  checked: PropTypes.bool,
+  required: PropTypes.bool,
+  onHover: PropTypes.func,
+  onChange: PropTypes.func,
+  onFocus: PropTypes.func,
+  name: PropTypes.string,
+  value: PropTypes.string,
+  label: PropTypes.string
 };
 
 CheckboxComponent.__docgenInfo = {
   props: {
-      name: {
-        description: 'sets the name attribute of the checkbox input'
-      },
-      value: {
-          description: 'sets the value attribute of the checkbox input'
-      },
-      checked: {
-          description: 'boolean - sets whether the checkbox is checked'
-      },
-      disabled: {
-          description: 'boolean - sets whether the checkbox is disabled'
-      },
-      required: {
-          description: 'boolean - sets the whether the checkbox is required'
-      },
-      label: {
-          description: 'sets the label text for the checkbox'
-      },
-      onHover: {
-          description: 'triggers when you hover over the button'
-      },
-      onChange: {
-          description: 'triggers when you check/uncheck the checkbox'
-      },
-      onFocus: {
-          description: 'triggers the checkbox component receives focus'
-      }
+    name: {
+      description: 'sets the name attribute of the checkbox input'
+    },
+    value: {
+      description: 'sets the value attribute of the checkbox input'
+    },
+    checked: {
+      description: 'boolean - sets whether the checkbox is checked'
+    },
+    disabled: {
+      description: 'boolean - sets whether the checkbox is disabled'
+    },
+    required: {
+      description: 'boolean - sets the whether the checkbox is required'
+    },
+    label: {
+      description: 'sets the label text for the checkbox'
+    },
+    onHover: {
+      description: 'triggers when you hover over the button'
+    },
+    onChange: {
+      description: 'triggers when you check/uncheck the checkbox'
+    },
+    onFocus: {
+      description: 'triggers the checkbox component receives focus'
+    }
   }
 };
 
