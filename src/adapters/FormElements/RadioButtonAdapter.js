@@ -20,7 +20,7 @@ import HIGElement from '../../elements/HIGElement';
 import * as PropTypes from 'prop-types';
 import createComponent from '../createComponent';
 
-export class RadioButton extends HIGElement {
+export class RadioButtonAdapter extends HIGElement {
   constructor(initialProps) {
     super(HIG.RadioButton, initialProps);
   }
@@ -101,9 +101,9 @@ export class RadioButton extends HIGElement {
   }
 }
 
-const RadioButtonComponent = createComponent(RadioButton);
+const RadioButtonAdapterComponent = createComponent(RadioButtonAdapter);
 
-RadioButton.propTypes = {
+RadioButtonAdapterComponent.propTypes = {
   disabled: PropTypes.bool,
   checked: PropTypes.bool,
   required: PropTypes.bool,
@@ -115,7 +115,7 @@ RadioButton.propTypes = {
   label: PropTypes.string
 };
 
-RadioButtonComponent.__docgenInfo = {
+RadioButtonAdapterComponent.__docgenInfo = {
   props: {
     name: {
       description: 'sets the name attribute of the radiobutton input'
@@ -147,4 +147,4 @@ RadioButtonComponent.__docgenInfo = {
   }
 };
 
-export default RadioButtonComponent;
+export default RadioButtonAdapterComponent;

@@ -17,9 +17,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { withKnobs, text, boolean, select } from '@storybook/addon-knobs';
+import { text, boolean } from '@storybook/addon-knobs';
 
-import Checkbox from './Checkbox';
+import {default as Checkbox } from './CheckboxAdapter';
 
 storiesOf('Checkbox', module)
   .addWithInfo('Basic checkbox', '', () => {

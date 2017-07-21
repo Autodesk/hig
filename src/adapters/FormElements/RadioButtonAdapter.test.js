@@ -17,9 +17,8 @@
 import { mount } from 'enzyme';
 import * as HIG from 'hig.web';
 import React from 'react';
-import TestUtils from 'react-dom/test-utils';
 
-import RadioButton from './RadioButton';
+import {default as RadioButton} from './RadioButtonAdapter';
 
 const inputId = '1234';
 

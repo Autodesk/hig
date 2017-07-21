@@ -19,7 +19,7 @@ import * as HIG from 'hig.web';
 import React from 'react';
 import TestUtils from 'react-dom/test-utils';
 
-import Checkbox from './Checkbox';
+import {default as Checkbox } from './CheckboxAdapter';
 
 const inputId = '1234';
 

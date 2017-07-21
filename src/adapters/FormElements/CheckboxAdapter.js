@@ -20,7 +20,7 @@ import HIGElement from '../../elements/HIGElement';
 import * as PropTypes from 'prop-types';
 import createComponent from '../createComponent';
 
-export class Checkbox extends HIGElement {
+export class CheckboxAdapter extends HIGElement {
   constructor(initialProps) {
     super(HIG.Checkbox, initialProps);
   }
@@ -100,9 +100,9 @@ export class Checkbox extends HIGElement {
   }
 }
 
-const CheckboxComponent = createComponent(Checkbox);
+const CheckboxAdapterComponent = createComponent(CheckboxAdapter);
 
-Checkbox.propTypes = {
+CheckboxAdapter.propTypes = {
   disabled: PropTypes.bool,
   checked: PropTypes.bool,
   required: PropTypes.bool,
@@ -114,7 +114,7 @@ Checkbox.propTypes = {
   label: PropTypes.string
 };
 
-CheckboxComponent.__docgenInfo = {
+CheckboxAdapterComponent.__docgenInfo = {
   props: {
     name: {
       description: 'sets the name attribute of the checkbox input'
@@ -146,4 +146,4 @@ CheckboxComponent.__docgenInfo = {
   }
 };
 
-export default CheckboxComponent;
+export default CheckboxAdapterComponent;

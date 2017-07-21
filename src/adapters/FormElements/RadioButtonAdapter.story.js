@@ -17,10 +17,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { withKnobs, text, boolean, select } from '@storybook/addon-knobs';
+import { text, boolean } from '@storybook/addon-knobs';
 
-import RadioButton from './RadioButton';
-import Slot from '../../elements/components/GlobalNav/Slot';
+import {default as RadioButton} from './RadioButtonAdapter';
 
 const containerStyle = {
   display: 'flex'
