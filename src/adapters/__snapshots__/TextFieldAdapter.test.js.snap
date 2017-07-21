@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<TextField> renders a text field 1`] = `
+exports[`<TextFieldAdapter> renders a text field 1`] = `
 "<div class=\\"hig__text-field\\">
     <!--ICON-SPACER-->
     
@@ -21,7 +21,7 @@ exports[`<TextField> renders a text field 1`] = `
 </div>"
 `;
 
-exports[`<TextField> renders a text field with initial props 1`] = `
+exports[`<TextFieldAdapter> renders a text field with initial props 1`] = `
 "<div class=\\"hig__text-field\\">
     <!--ICON-SPACER-->
     <div class=\\"hig__text-field__icon-spacer\\"></div>
@@ -42,7 +42,7 @@ exports[`<TextField> renders a text field with initial props 1`] = `
 </div>"
 `;
 
-exports[`<TextField> renders a text field with udpated props 1`] = `
+exports[`<TextFieldAdapter> renders a text field with udpated props 1`] = `
 "<div class=\\"hig__text-field hig__text-field--required\\">
     <div class=\\"hig__text-field__icon-spacer\\"></div><!--ICON-SPACER-->
     

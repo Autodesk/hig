@@ -58,6 +58,8 @@
       "!src/index.js",
       "src/**/*.{js,jsx}",
       "!src/**/*.story.{js,jsx}",
+      "!src/fixtures/**/*",
+      "!src/stories/**/*",
       "!**/node_modules/**"
     ],
     "coverageThreshold": {

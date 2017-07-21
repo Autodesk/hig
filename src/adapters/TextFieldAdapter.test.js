@@ -18,9 +18,9 @@ import { mount } from 'enzyme';
 import * as HIG from 'hig.web';
 import React from 'react';
 
-import TextField from './TextField';
+import TextFieldAdapter from './TextFieldAdapter';
 
-describe('<TextField>', () => {
+describe('<TextFieldAdapter>', () => {
   function createHigTextField(defaults = {}) {
     const higContainer = document.createElement('div');
 
@@ -32,7 +32,7 @@ describe('<TextField>', () => {
   }
 
   function createOrionTextField(props) {
-    return <TextField {...props} />;
+    return <TextFieldAdapter {...props} />;
   }
 
   it('renders a text field', () => {
@@ -58,7 +58,6 @@ describe('<TextField>', () => {
       label: 'Name of your first pet',
       name: 'mySpecialField',
       placeholder: 'Was it Fluffy?',
-      required: 'You really must fill this in.',
       value: 'Rex'
     };
 
@@ -101,6 +100,10 @@ describe('<TextField>', () => {
     higTextField.setPlaceholder(nextProps.placeholder);
     higTextField.required(nextProps.required);
     higTextField.setValue(nextProps.value);
+    higTextField.onBlur(() => {});
+    higTextField.onChange(() => {});
+    higTextField.onFocus(() => {});
+    higTextField.onInput(() => {});
     wrapper.setProps(nextProps);
 
     expect(orionContainer.firstElementChild.outerHTML).toMatchSnapshot();

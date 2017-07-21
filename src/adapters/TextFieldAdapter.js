@@ -127,9 +127,7 @@ class TextFieldAdapter extends HIGElement {
           break;
         }
         default: {
-          console.warn(
-            `${this.constructor.name} doesn't handle the prop ${propKey}`
-          );
+          return;
         }
       }
     }
