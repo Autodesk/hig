@@ -20,7 +20,9 @@ import HIGElement from '../../HIGElement';
 import HIGChildValidator from '../../HIGChildValidator';
 
 // New tabs which have state in a separate react component
-import TabsAdapterComponent, { TabsAdapter } from '../../../adapters/TabsAdapter';
+import TabsAdapterComponent, {
+  TabsAdapter
+} from '../../../adapters/TabsAdapter';
 import Tabs from './Tabs';
 
 export class SubNav extends HIGElement {
@@ -41,7 +43,7 @@ export class SubNav extends HIGElement {
   }
 
   appendChild(instance, beforeChild = {}) {
-    if (instance instanceof TabsAdapter ) {
+    if (instance instanceof TabsAdapter) {
       if (this.tabs) {
         throw new Error('only one Tabs is allowed');
       } else {

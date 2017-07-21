@@ -20,7 +20,6 @@ import React from 'react';
 
 import GlobalNav from './GlobalNav';
 import Tabs from './Tabs';
-import Tab from '../../../adapters/Tab';
 
 const Context = props => {
   return (
