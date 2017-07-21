@@ -20,7 +20,7 @@ import HIGElement from '../elements/HIGElement';
 import * as PropTypes from 'prop-types';
 import createComponent from './createComponent';
 
-class TextField extends HIGElement {
+class TextFieldAdapter extends HIGElement {
   constructor(initialProps) {
     super(HIG.TextField, initialProps);
   }
@@ -136,9 +136,9 @@ class TextField extends HIGElement {
   }
 }
 
-const TextFieldComponent = createComponent(TextField);
+const TextFieldComponent = createComponent(TextFieldAdapter);
 
-TextField.propTypes = {
+TextFieldAdapter.propTypes = {
   disabled: PropTypes.bool,
   icon: PropTypes.string,
   instructions: PropTypes.string,
@@ -153,7 +153,7 @@ TextField.propTypes = {
   value: PropTypes.string
 };
 
-TextField.__docgenInfo = {
+TextFieldAdapter.__docgenInfo = {
   props: {
     disabled: {
       description: 'prevents interaction with the text field'
