@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Checkbox> does not show a label if not specified 1`] = `
+"<div class=\\"hig__input-button hig__input-button--checkbox \\">
+  <!--CHECKBOX_LABEL-->
+  <label class=\\"hig__input-button__label hig--hidden\\" for=\\"1234\\"></label>
+  <input type=\\"checkbox\\" class=\\"hig__input-button__input\\" name=\\"agree_toc\\" id=\\"1234\\" value=\\"agree\\">
+  <span class=\\"hig__input-button__input-wrapper\\"><svg width=\\"14\\" height=\\"14\\" viewBox=\\"0 0 11 9\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"check-white\\"><title>hig/icons/check-white</title><polygon points=\\"7.13516024 12 4 8.9767 4.97189967 7.9722 7.11774268 10.0281 12.0092894 5 13 5.9863\\" transform=\\"translate(-3 -4)\\" stroke-width=\\".5\\" stroke=\\"#FFF\\" fill=\\"#FFF\\" fill-rule=\\"evenodd\\"></polygon></svg></span>
+</div>"
+`;
+
+exports[`<Checkbox> renders the standard  Checkbox 1`] = `
+"<div class=\\"hig__input-button hig__input-button--checkbox \\">
+  <!--CHECKBOX_LABEL-->
+  <label class=\\"hig__input-button__label\\" for=\\"1234\\">I agree</label>
+  <input type=\\"checkbox\\" class=\\"hig__input-button__input\\" name=\\"agree_toc\\" id=\\"1234\\" value=\\"agree\\">
+  <span class=\\"hig__input-button__input-wrapper\\"><svg width=\\"14\\" height=\\"14\\" viewBox=\\"0 0 11 9\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"check-white\\"><title>hig/icons/check-white</title><polygon points=\\"7.13516024 12 4 8.9767 4.97189967 7.9722 7.11774268 10.0281 12.0092894 5 13 5.9863\\" transform=\\"translate(-3 -4)\\" stroke-width=\\".5\\" stroke=\\"#FFF\\" fill=\\"#FFF\\" fill-rule=\\"evenodd\\"></polygon></svg></span>
+</div>"
+`;
