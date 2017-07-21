@@ -16,8 +16,8 @@ limitations under the License.
 */
 import React from 'react';
 
-import OrionTabs from '../../../adapters/Tabs';
-import OrionTab from '../../../adapters/Tab';
+import TabsAdapter from '../../../adapters/TabsAdapter';
+import TabAdapter from '../../../adapters/TabAdapter';
 
 class Tab extends React.Component {
   // This is never actually rendered
@@ -60,9 +60,9 @@ class Tabs extends React.Component {
       child => isTab(child) ? this.renderTab(child) : null
     );
     return (
-      <OrionTabs>
+      <TabsAdapter>
         {tabs}
-      </OrionTabs>
+      </TabsAdapter>
     );
   }
 
@@ -70,7 +70,7 @@ class Tabs extends React.Component {
     const { id } = tab.props;
 
     return (
-      <OrionTab
+      <TabAdapter
         {...tab.props}
         active={id === this.state.selectedTabId}
         onClick={this.handleTabClick.bind(this, id)}

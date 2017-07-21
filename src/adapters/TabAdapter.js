@@ -18,7 +18,7 @@ import createComponent from './createComponent';
 import HIGElement from '../elements/HIGElement';
 import PropTypes from 'prop-types';
 
-export class Tab extends HIGElement {
+export class TabAdapter extends HIGElement {
   componentDidMount() {
     if (this.initialProps.active) {
       this.hig.activate();
@@ -65,15 +65,15 @@ export class Tab extends HIGElement {
   }
 }
 
-const TabComponent = createComponent(Tab);
+const TabAdapterComponent = createComponent(TabAdapter);
 
-TabComponent.propTypes = {
+TabAdapterComponent.propTypes = {
   label: PropTypes.string,
   active: PropTypes.bool,
   onClick: PropTypes.func
 };
 
-TabComponent.__docgenInfo = {
+TabAdapterComponent.__docgenInfo = {
   props: {
     label: {
       description: 'sets the text of a tab'
@@ -89,4 +89,4 @@ TabComponent.__docgenInfo = {
   }
 };
 
-export default TabComponent;
+export default TabAdapterComponent;

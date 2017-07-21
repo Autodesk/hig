@@ -20,8 +20,8 @@ import HIGElement from '../../HIGElement';
 import HIGChildValidator from '../../HIGChildValidator';
 
 // New tabs which have state in a separate react component
-import TabsComponent, { Tabs } from '../../../adapters/Tabs';
-import StatefulTabs from './Tabs';
+import TabsAdapterComponent, { TabsAdapter } from '../../../adapters/TabsAdapter';
+import Tabs from './Tabs';
 
 export class SubNav extends HIGElement {
   componentDidMount() {
@@ -33,15 +33,15 @@ export class SubNav extends HIGElement {
 
   createElement(ElementConstructor, props) {
     switch (ElementConstructor) {
-      case Tabs:
-        return new Tabs(this.hig.partials.Tabs, props);
+      case TabsAdapter:
+        return new TabsAdapter(this.hig.partials.Tabs, props);
       default:
         throw new Error(`Unknown type ${ElementConstructor.name}`);
     }
   }
 
   appendChild(instance, beforeChild = {}) {
-    if (instance instanceof Tabs) {
+    if (instance instanceof TabsAdapter ) {
       if (this.tabs) {
         throw new Error('only one Tabs is allowed');
       } else {
@@ -57,7 +57,7 @@ export class SubNav extends HIGElement {
   }
 
   removeChild(instance) {
-    if (instance instanceof Tabs) {
+    if (instance instanceof TabsAdapter) {
       this.tabs = null;
     }
 
@@ -77,7 +77,7 @@ const SubNavComponent = createComponent(SubNav);
 SubNavComponent.propTypes = {
   moduleIndicatorName: PropTypes.string,
   moduleIndicatorIcon: PropTypes.string,
-  children: HIGChildValidator([TabsComponent, StatefulTabs])
+  children: HIGChildValidator([TabsAdapterComponent, Tabs])
 };
 
 SubNavComponent.__docgenInfo = {
@@ -96,7 +96,6 @@ SubNavComponent.__docgenInfo = {
   }
 };
 
-SubNavComponent.Tabs = TabsComponent;
-SubNavComponent.Tabs2 = StatefulTabs;
+SubNavComponent.Tabs = Tabs;
 
 export default SubNavComponent;

@@ -19,14 +19,14 @@ import HIGElement from '../elements/HIGElement';
 import HIGNodeList from '../elements/HIGNodeList';
 import HIGChildValidator from '../elements/HIGChildValidator';
 
-import TabComponent, { Tab } from './Tab';
+import TabAdapterComponent, { TabAdapter } from './TabAdapter';
 
-export class Tabs extends HIGElement {
+export class TabsAdapter extends HIGElement {
   constructor(HigConstructor, initialProps) {
     super(HigConstructor, initialProps);
 
     this.tabs = new HIGNodeList({
-      type: Tab,
+      type: TabAdapter,
       HIGConstructor: this.hig.partials.Tab,
       onAdd: (instance, beforeInstance) => {
         this.hig.addTab(instance, beforeInstance);
@@ -51,13 +51,13 @@ export class Tabs extends HIGElement {
   }
 }
 
-const TabsComponent = createComponent(Tabs);
+const TabsAdapterComponent = createComponent(TabsAdapter);
 
-TabsComponent.propTypes = {
-  children: HIGChildValidator([TabComponent])
+TabsAdapterComponent.propTypes = {
+  children: HIGChildValidator([TabAdapterComponent])
 };
 
-TabsComponent.__docgenInfo = {
+TabsAdapterComponent.__docgenInfo = {
   props: {
     children: {
       description: 'support adding Tab components'
@@ -65,6 +65,4 @@ TabsComponent.__docgenInfo = {
   }
 };
 
-TabsComponent.Tab = TabComponent;
-
-export default TabsComponent;
+export default TabsAdapterComponent;

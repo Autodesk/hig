@@ -43,7 +43,7 @@ const Account = GlobalNav.TopNav.ProjectAccountSwitcher.Account;
 const Project = GlobalNav.TopNav.ProjectAccountSwitcher.Project;
 const TopNavSearch = GlobalNav.TopNav.Search;
 const SubNav = GlobalNav.SubNav;
-const Tabs2 = GlobalNav.SubNav.Tabs2;
+const Tabs = GlobalNav.SubNav.Tabs;
 
 const Slot = GlobalNav.Slot;
 
@@ -240,15 +240,15 @@ class App extends React.Component {
             moduleIndicatorName="Documents Library"
             moduleIndicatorIcon="hamburger"
           >
-            <Tabs2
+            <Tabs
               defaultSelectedTabId={this.state.tabs[0].id}
               onChange={(newTabId, oldTabId) =>
                 console.log(`New Tab: ${newTabId}`)}
             >
               {this.state.tabs.map(tab => (
-                <Tabs2.Tab key={tab.id} id={tab.id} label={tab.label} />
+                <Tabs.Tab key={tab.id} id={tab.id} label={tab.label} />
               ))}
-            </Tabs2>
+            </Tabs>
           </SubNav>
 
           <Slot className="playground-content">
