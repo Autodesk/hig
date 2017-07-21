@@ -100,10 +100,6 @@ describe('<TextFieldAdapter>', () => {
     higTextField.setPlaceholder(nextProps.placeholder);
     higTextField.required(nextProps.required);
     higTextField.setValue(nextProps.value);
-    higTextField.onBlur(() => {});
-    higTextField.onChange(() => {});
-    higTextField.onFocus(() => {});
-    higTextField.onInput(() => {});
     wrapper.setProps(nextProps);
 
     expect(orionContainer.firstElementChild.outerHTML).toMatchSnapshot();
@@ -111,5 +107,39 @@ describe('<TextFieldAdapter>', () => {
     expect(orionContainer.firstElementChild.outerHTML).toEqual(
       higContainer.firstElementChild.outerHTML
     );
+  });
+
+  it('sets event listeners', () => {
+    const defaults = {
+      onClick: jest.fn(),
+      onBlur: jest.fn(),
+      onFocus: jest.fn(),
+      onInput: jest.fn()
+    };
+
+    const nextProps = {
+      onClick: jest.fn(),
+      onBlur: jest.fn(),
+      onFocus: jest.fn(),
+      onInput: jest.fn()
+    };
+
+    const container = document.createElement('div');
+    const wrapper = mount(createOrionTextField(defaults), {
+      attachTo: container
+    });
+    const instance = wrapper.instance().instance;
+
+    expect(defaults.onClick).toEqual(instance.events['onClick']);
+    expect(defaults.onBlur).toEqual(instance.events['onBlur']);
+    expect(defaults.onFocus).toEqual(instance.events['onFocus']);
+    expect(defaults.onInput).toEqual(instance.events['onInput']);
+
+    wrapper.setProps(nextProps);
+
+    expect(nextProps.onClick).toEqual(instance.events['onClick']);
+    expect(nextProps.onBlur).toEqual(instance.events['onBlur']);
+    expect(nextProps.onFocus).toEqual(instance.events['onFocus']);
+    expect(nextProps.onInput).toEqual(instance.events['onInput']);
   });
 });
