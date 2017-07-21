@@ -89,6 +89,7 @@ describe('<TextFieldAdapter>', () => {
       icon: 'assets',
       instructions: "Don't just do something, sit there.",
       label: 'Name of your first pet',
+      name: 'updatedFieldName',
       placeholder: 'Was it Fluffy?',
       required: 'You really must fill this in.',
       value: 'Rex'
@@ -97,6 +98,7 @@ describe('<TextFieldAdapter>', () => {
     higTextField.setIcon(nextProps.icon);
     higTextField.setInstructions(nextProps.instructions);
     higTextField.setLabel(nextProps.label);
+    higTextField.setName(nextProps.name);
     higTextField.setPlaceholder(nextProps.placeholder);
     higTextField.required(nextProps.required);
     higTextField.setValue(nextProps.value);
@@ -109,37 +111,31 @@ describe('<TextFieldAdapter>', () => {
     );
   });
 
-  it('sets event listeners', () => {
-    const defaults = {
-      onClick: jest.fn(),
-      onBlur: jest.fn(),
-      onFocus: jest.fn(),
-      onInput: jest.fn()
-    };
+  ['onBlur', 'onChange', 'onFocus', 'onInput'].forEach(eventName => {
+    it(`sets event listeners for ${eventName} initially`, () => {
+      const spy = jest.fn();
+      const container = document.createElement('div');
+      const wrapper = mount(createOrionTextField({ [eventName]: spy }), {
+        attachTo: container
+      });
+      const instance = wrapper.instance().instance;
 
-    const nextProps = {
-      onClick: jest.fn(),
-      onBlur: jest.fn(),
-      onFocus: jest.fn(),
-      onInput: jest.fn()
-    };
-
-    const container = document.createElement('div');
-    const wrapper = mount(createOrionTextField(defaults), {
-      attachTo: container
+      const disposeFunction = instance._disposeFunctions.get(eventName);
+      expect(disposeFunction).toBeDefined();
     });
-    const instance = wrapper.instance().instance;
 
-    expect(defaults.onClick).toEqual(instance.events['onClick']);
-    expect(defaults.onBlur).toEqual(instance.events['onBlur']);
-    expect(defaults.onFocus).toEqual(instance.events['onFocus']);
-    expect(defaults.onInput).toEqual(instance.events['onInput']);
+    it(`sets event listeners for ${eventName} when updated`, () => {
+      const spy = jest.fn();
+      const container = document.createElement('div');
+      const wrapper = mount(createOrionTextField({}), {
+        attachTo: container
+      });
+      wrapper.setProps({ [eventName]: spy });
 
-    wrapper.setProps(nextProps);
+      const instance = wrapper.instance().instance;
 
-    expect(nextProps.onClick).toEqual(instance.events['onClick']);
-    expect(nextProps.onBlur).toEqual(instance.events['onBlur']);
-    expect(nextProps.onFocus).toEqual(instance.events['onFocus']);
-    expect(nextProps.onInput).toEqual(instance.events['onInput']);
+      const disposeFunction = instance._disposeFunctions.get(eventName);
+      expect(disposeFunction).toBeDefined();
+    });
   });
 });

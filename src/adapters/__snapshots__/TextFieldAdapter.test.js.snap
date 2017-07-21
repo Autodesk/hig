@@ -53,7 +53,7 @@ exports[`<TextFieldAdapter> renders a text field with udpated props 1`] = `
             <button class=\\"hig__text-field__extra hig__text-field__password-hide-button\\"></button>
             <!--EXTRA-->
             <!--SLOT-->
-            <input name=\\"mySpecialField\\" id=\\"text-field-mySpecialField\\" class=\\"hig__text-field__input\\" placeholder=\\"Was it Fluffy?\\" value=\\"Rex\\">
+            <input name=\\"updatedFieldName\\" id=\\"text-field-mySpecialField\\" class=\\"hig__text-field__input\\" placeholder=\\"Was it Fluffy?\\" value=\\"Rex\\">
             <label for=\\"text-field-mySpecialField\\" class=\\"hig__text-field__label hig__text-field__label--visible\\">Name of your first pet</label>
         </div>
         <p class=\\"hig__text-field__instructions\\">Don't just do something, sit there.</p><!--INSTRUCTIONS-->
