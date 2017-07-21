@@ -18,7 +18,7 @@ import { mount } from 'enzyme';
 import * as HIG from 'hig.web';
 import React from 'react';
 
-import {default as RadioButton} from './RadioButtonAdapter';
+import { default as RadioButton } from './RadioButtonAdapter';
 
 const inputId = '1234';
 
@@ -122,9 +122,7 @@ describe('<RadioButton>', () => {
     const { higRadioButton, higContainer } = createHigRadioButton(defaults);
 
     higRadioButton.setLabel('NEW LABEL!');
-
-    console.log(higContainer);
-
+    
     expect(
       higContainer.querySelector('label').getAttribute('class')
     ).not.toMatch(/hig--hidden/);

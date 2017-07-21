@@ -19,7 +19,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { text, boolean } from '@storybook/addon-knobs';
 
-import {default as RadioButton} from './RadioButtonAdapter';
+import { default as RadioButton } from './RadioButtonAdapter';
 
 const containerStyle = {
   display: 'flex'
