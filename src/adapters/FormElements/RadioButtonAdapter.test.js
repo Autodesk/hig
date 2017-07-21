@@ -122,7 +122,7 @@ describe('<RadioButton>', () => {
     const { higRadioButton, higContainer } = createHigRadioButton(defaults);
 
     higRadioButton.setLabel('NEW LABEL!');
-    
+
     expect(
       higContainer.querySelector('label').getAttribute('class')
     ).not.toMatch(/hig--hidden/);
