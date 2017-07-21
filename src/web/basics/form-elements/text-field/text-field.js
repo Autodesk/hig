@@ -51,7 +51,9 @@ class TextField extends Core {
     }
 
     setValue(value){
-        this._findDOMEl('.hig__text-field__input', this.el).setAttribute('value', value);
+        const inputEl = this._findDOMEl('.hig__text-field__input', this.el);
+        inputEl.setAttribute('value', value);
+        inputEl.value = value;
         this._detectPresenceOfValue(value);
     }
 
@@ -112,7 +114,7 @@ class TextField extends Core {
     }
 
     enable() {
-        this._findDOMEl('.hig__text-field__input', this.el).setAttribute('disabled', null);
+        this._findDOMEl('.hig__text-field__input', this.el).removeAttribute('disabled');
         this.el.classList.remove('hig__text-field--disabled');
     }
 
