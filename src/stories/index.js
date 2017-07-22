@@ -17,6 +17,7 @@ limitations under the License.
 import 'hig.web/dist/hig.css';
 
 import '../elements/basics/Button.story';
+import '../elements/basics/form-elements/TextField.story';
 import '../elements/basics/IconButton.story';
 import '../adapters/FormElements/CheckboxAdapter.story';
 import '../adapters/FormElements/RadioButtonAdapter.story';
