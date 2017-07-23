@@ -25,7 +25,9 @@ import HIGNodeList from '../../../HIGNodeList';
 import ProjectAccountSwitcherComponent, {
   ProjectAccountSwitcher
 } from './ProjectAccountSwitcher';
-import ProfileComponent, { ProfileAdapter } from '../../../../adapters/ProfileAdapter';
+import ProfileComponent, {
+  ProfileAdapter
+} from '../../../../adapters/ProfileAdapter';
 import ShortcutComponent, { Shortcut } from './Shortcut';
 import HelpComponent, { Help } from './Help';
 import SearchComponent, { Search } from './Search';

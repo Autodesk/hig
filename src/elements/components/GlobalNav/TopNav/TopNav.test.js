@@ -21,7 +21,9 @@ import React from 'react';
 
 import GlobalNav from './../GlobalNav';
 import TopNav from './TopNav';
-import ProfileComponent, { ProfileAdapter } from '../../../../adapters/ProfileAdapter';
+import ProfileComponent, {
+  ProfileAdapter
+} from '../../../../adapters/ProfileAdapter';
 import Search from './Search';
 
 const Context = props => {

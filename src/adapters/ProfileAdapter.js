@@ -27,7 +27,7 @@ export class ProfileAdapter extends HIGElement {
       this[fn] = this[fn].bind(this);
     });
   }
-    commitUpdate(updatePayload, oldProps, newProps) {
+  commitUpdate(updatePayload, oldProps, newProps) {
     for (let i = 0; i < updatePayload.length; i += 2) {
       const propKey = updatePayload[i];
       const propValue = updatePayload[i + 1];
@@ -83,7 +83,9 @@ export class ProfileAdapter extends HIGElement {
           break;
         }
         case 'onProfileSettingsClick': {
-          const dispose = this._disposeFunctions.get('onProfileSettingsClickDispose');
+          const dispose = this._disposeFunctions.get(
+            'onProfileSettingsClickDispose'
+          );
 
           if (dispose) {
             dispose();
@@ -96,7 +98,9 @@ export class ProfileAdapter extends HIGElement {
           break;
         }
         case 'onProfileClickOutside': {
-          const dispose = this._disposeFunctions.get('onProfileImageClickDispose');
+          const dispose = this._disposeFunctions.get(
+            'onProfileImageClickDispose'
+          );
 
           if (dispose) {
             dispose();
@@ -109,7 +113,9 @@ export class ProfileAdapter extends HIGElement {
           break;
         }
         case 'onProfileImageClick': {
-          const dispose = this._disposeFunctions.get('onProfileImageClickDispose');
+          const dispose = this._disposeFunctions.get(
+            'onProfileImageClickDispose'
+          );
 
           if (dispose) {
             dispose();
@@ -121,7 +127,7 @@ export class ProfileAdapter extends HIGElement {
           );
           break;
         }
-        case 'onProfileClickOutside': { 
+        case 'onProfileClickOutside': {
           const dispose = this._disposeFunctions.get('onProfileClickOutside');
 
           if (dispose) {
@@ -133,7 +139,7 @@ export class ProfileAdapter extends HIGElement {
             this.hig.onProfileClickOutside(propValue)
           );
           break;
-        }        
+        }
         default: {
           console.warn(`${propKey} is unknown`);
         }
