@@ -21,7 +21,7 @@ import React from 'react';
 
 import GlobalNav from './../GlobalNav';
 import TopNav from './TopNav';
-import Profile from './Profile';
+import ProfileComponent, { ProfileAdapter } from '../../../../adapters/ProfileAdapter';
 import Search from './Search';
 
 const Context = props => {
@@ -69,7 +69,7 @@ describe('<TopNav>', () => {
     mount(
       <GlobalNav>
         <TopNav {...defaults}>
-          <Profile {...profileDefaults} />
+          <ProfileComponent {...profileDefaults} />
         </TopNav>
       </GlobalNav>,
       { attachTo: reactContainer }
@@ -87,7 +87,7 @@ describe('<TopNav>', () => {
     mount(
       <GlobalNav>
         <GlobalNav.TopNav {...defaults}>
-          <Profile {...profileDefaults} />
+          <ProfileComponent {...profileDefaults} />
         </GlobalNav.TopNav>
       </GlobalNav>,
       { attachTo: reactContainer }

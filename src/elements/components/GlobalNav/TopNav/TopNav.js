@@ -25,7 +25,7 @@ import HIGNodeList from '../../../HIGNodeList';
 import ProjectAccountSwitcherComponent, {
   ProjectAccountSwitcher
 } from './ProjectAccountSwitcher';
-import ProfileComponent, { Profile } from './Profile';
+import ProfileComponent, { ProfileAdapter } from '../../../../adapters/ProfileAdapter';
 import ShortcutComponent, { Shortcut } from './Shortcut';
 import HelpComponent, { Help } from './Help';
 import SearchComponent, { Search } from './Search';
@@ -77,8 +77,8 @@ export class TopNav extends HIGElement {
 
   createElement(ElementConstructor, props) {
     switch (ElementConstructor) {
-      case Profile:
-        return new Profile(this.hig.partials.Profile, props);
+      case ProfileAdapter:
+        return new ProfileAdapter(this.hig.partials.Profile, props);
       case ProjectAccountSwitcher:
         return new ProjectAccountSwitcher(
           this.hig.partials.ProjectAccountSwitcher,
@@ -115,7 +115,7 @@ export class TopNav extends HIGElement {
   }
 
   removeChild(instance) {
-    if (instance instanceof Profile) {
+    if (instance instanceof ProfileAdapter) {
       this.profile = null;
     }
 
@@ -134,7 +134,7 @@ export class TopNav extends HIGElement {
 
   checkValidChild(instance) {
     const validInstances = [
-      Profile,
+      ProfileAdapter,
       ProjectAccountSwitcher,
       Shortcut,
       Help,
@@ -148,7 +148,7 @@ export class TopNav extends HIGElement {
   }
 
   getPropertyNameFor(instance) {
-    if (instance instanceof Profile) {
+    if (instance instanceof ProfileAdapter) {
       return 'profile';
     }
     if (instance instanceof ProjectAccountSwitcher) {

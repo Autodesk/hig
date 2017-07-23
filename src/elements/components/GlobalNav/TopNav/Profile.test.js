@@ -20,7 +20,7 @@ import React from 'react';
 
 import GlobalNav from './../GlobalNav';
 import TopNav from './TopNav';
-import Profile from './Profile';
+import  ProfileComponent, { ProfileAdapter } from '../../../../adapters/ProfileAdapter'; 
 import SharedExamples from './../SharedExamples';
 
 const onImageClick = function() {
@@ -34,7 +34,7 @@ const Context = props => {
   return (
     <GlobalNav>
       <TopNav>
-        <Profile
+        <ProfileComponent
           open={props.open}
           image={props.image}
           onProfileImageClick={onImageClick}
@@ -156,7 +156,7 @@ describe('<Profile>', () => {
       return (
         <GlobalNav>
           <TopNav>
-            <Profile open={props.open} />
+            <ProfileComponent open={props.open} />
           </TopNav>
         </GlobalNav>
       );
