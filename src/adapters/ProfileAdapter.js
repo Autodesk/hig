@@ -97,21 +97,6 @@ export class ProfileAdapter extends HIGElement {
           );
           break;
         }
-        case 'onProfileClickOutside': {
-          const dispose = this._disposeFunctions.get(
-            'onProfileImageClickDispose'
-          );
-
-          if (dispose) {
-            dispose();
-          }
-
-          this._disposeFunctions.set(
-            'onProfileImageClickDispose',
-            this.hig.onProfileImageClick(propValue)
-          );
-          break;
-        }
         case 'onProfileImageClick': {
           const dispose = this._disposeFunctions.get(
             'onProfileImageClickDispose'
