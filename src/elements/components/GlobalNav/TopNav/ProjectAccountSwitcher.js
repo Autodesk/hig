@@ -63,20 +63,75 @@ export class ProjectAccountSwitcher extends HIGElement {
     this.commitUpdate(this.props);
   }
 
-  commitUpdate(updatePayload, oldProps, newProp) {
-    this.processUpdateProps(updatePayload)
-      .mapToHIGEventListeners(['onClick', 'onClickOutside'])
-      .handle('open', value => {
-        this.props.open = value;
-      })
-      .handle('onAccountChange', value => {
-        this.props.onAccountChange = value;
-      })
-      .handle('onProjectChange', value => {
-        this.props.onProjectChange = value;
-      })
-      .then(this._render);
+   commitUpdate(updatePayload, oldProps, newProp) {
+     for (let i = 0; i < updatePayload.length; i += 2) {
+      const propKey = updatePayload[i];
+      const propValue = updatePayload[i + 1];
+
+      switch(propKey) {
+        case 'open': {
+          if (propValue) {
+            this.hig.open();
+          } else {
+            this.hig.close();
+          }
+          break;
+        }
+        case 'activeLabel': {
+          this.hig.setActiveLabel(propValue);
+          break;
+        }
+        case 'activeType': {
+          this.hig.setActiveType(propValue);
+          break;
+        }
+        case 'onClickOutside': {
+          const dispose = this._disposeFunctions.get('onClickOutsideDispose');
+
+          if (dispose) {
+            dispose();
+          }
+
+          this._disposeFunctions.set(
+            'onClickOutisdeDispose',
+            this.hig.onClickOutside(propValue)
+          );
+          break;
+        }
+        case 'onClick': {
+          const dispose = this._disposeFunctions.get('onClick');
+
+          if (dispose) {
+            dispose();
+          }
+
+          this._disposeFunctions.set(
+            'onClick',
+            this.hig.onClick(propValue)
+          );
+          break;
+        }
+        default: {
+          console.warn(`${propKey} is unknown`);
+        }
+      }
+    }  
   }
+
+  // commitUpdate(updatePayload, oldProps, newProp) {
+  //   this.processUpdateProps(updatePayload)
+  //     .mapToHIGEventListeners(['onClick', 'onClickOutside'])
+  //     .handle('open', value => {
+  //       this.props.open = value;
+  //     })
+  //     .handle('onAccountChange', value => {
+  //       this.props.onAccountChange = value;
+  //     })
+  //     .handle('onProjectChange', value => {
+  //       this.props.onProjectChange = value;
+  //     })
+  //     .then(this._render);
+  // }
 
   createElement(ElementConstructor, props) {
     switch (ElementConstructor) {
