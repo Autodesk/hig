@@ -2,11 +2,13 @@
 html, body, #root {
   height: 100%;
   margin: 0;
-
+  font-family: 'ArtifaktElement';
 }
 
 .playground-content{
   background-color: #FFFFFF;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 section {
