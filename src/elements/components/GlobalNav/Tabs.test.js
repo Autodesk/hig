@@ -18,7 +18,7 @@ import { mount } from 'enzyme';
 import * as HIG from 'hig.web';
 import React from 'react';
 
-import GlobalNav from './GlobalNav';
+import GlobalNav from '../../../adapters/GlobalNavAdapter';
 import Tabs from './Tabs';
 
 const Context = props => {

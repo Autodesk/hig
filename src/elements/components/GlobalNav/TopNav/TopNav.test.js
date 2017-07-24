@@ -19,7 +19,7 @@ import { mount } from 'enzyme';
 import * as HIG from 'hig.web';
 import React from 'react';
 
-import GlobalNav from './../GlobalNav';
+import GlobalNav from '../../../../adapters/GlobalNavAdapter';
 import TopNav from './TopNav';
 import ProfileComponent from '../../../../adapters/ProfileAdapter';
 import Search from './Search';

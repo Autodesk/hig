@@ -19,7 +19,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { select, boolean, text } from '@storybook/addon-knobs';
 
-import GlobalNav from '../GlobalNav';
+import GlobalNav from '../../../../adapters/GlobalNavAdapter';
 const TopNav = GlobalNav.TopNav;
 const Profile = TopNav.Profile;
 const SubNav = GlobalNav.SubNav;

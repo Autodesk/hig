@@ -18,7 +18,7 @@ limitations under the License.
 import * as ReactHIG from './react-hig';
 
 import Button from './elements/basics/Button';
-import GlobalNav from './elements/components/GlobalNav/GlobalNav';
+import GlobalNav from './adapters/GlobalNavAdapter';
 
 describe('react-hig', () => {
   it('exports Button', () => {
