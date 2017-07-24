@@ -1590,6 +1590,75 @@
             "body": "",
             "headerColor": ""
           }
+      },    
+      "Table": {
+        "methods": {
+          "addTableHead": {},
+          "addTableBody": {}
+        },
+        "partials": {
+          "TableHead": {
+            "methods": {
+              "addRow": {}
+            },
+            "partials": {
+              "TableHeadRow": {
+                "methods": {
+                  "addCell": {}
+                },
+                "partials": {
+                  "TextHeadCell": {
+                    "methods": {
+                      "setText": {},
+                      "setAlign": {}, // Left, right, center,
+                      "setWidth": {} // 1fr, 2fr, 3fr, 100px, 250px
+                    }
+                  },
+                  "SlotHeadCell": {
+                    "methods": {
+                      "addSlot": {},
+                      "setWidth": {}
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "TableBody": {
+            "methods": {
+              "addRow": {}
+            },
+            "partials": {
+              "TableRow": {
+                "methods": {
+                  "addCell": {}
+                },
+                "partials": {
+                  "TextCell": {
+                    "methods": {
+                      "setText": {},
+                      "setAlign": {}, // left, right, center,
+                      "setWidth": {} // 1fr, 2fr, 3fr, 100px, 250px
+                    }
+                  },
+                  "IconCell": {
+                    "methods": {
+                      "setIcon": {},
+                      "setWidth": {} // 1fr, 2fr, 3fr, 100px, 250px
+                    }
+                  },
+                  "SlotCell": {
+                    "methods": {
+                      "addSlot": {},
+                      "setWidth": {} // 1fr, 2fr, 3fr, 100px, 250px
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+>>>>>>> First stab at table interface
       }
     }
   }
