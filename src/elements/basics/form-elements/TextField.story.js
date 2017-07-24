@@ -41,7 +41,7 @@ storiesOf('TextField', module)
   .addWithInfo('With an icon', ``, () => {
     const iconOptions = {
       assets: 'Assets',
-      gear: 'Gear',
+      gear: 'Gear'
     };
 
     return (
