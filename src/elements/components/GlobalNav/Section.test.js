@@ -18,7 +18,7 @@ import { mount } from 'enzyme';
 import * as HIG from 'hig.web';
 import React from 'react';
 
-import GlobalNav from '../../../adapters/GlobalNavAdapter';
+import GlobalNav from '../../../adapters/GlobalNav/GlobalNavAdapter';
 import SectionList from './SectionList';
 import Section from './Section';
 import Group from './Group';

@@ -119,12 +119,12 @@ const LONG_COPY = (
   </div>
 );
 
-import logo from '../images/bim-logo.png';
-import profileImage from '../images/profileImage.png';
-import project1 from '../images/project-1.png';
-import project2 from '../images/project-2.png';
-import project3 from '../images/project-3.png';
-import project4 from '../images/project-4.png';
+import logo from '../../images/bim-logo.png';
+import profileImage from '../../images/profileImage.png';
+import project1 from '../../images/project-1.png';
+import project2 from '../../images/project-2.png';
+import project3 from '../../images/project-3.png';
+import project4 from '../../images/project-4.png';
 
 storiesOf('GlobalNav', module)
   .addWithInfo('default', <div><p>Global Nav basic usage</p></div>, () => {
