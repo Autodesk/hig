@@ -102,7 +102,7 @@ export class CheckboxAdapter extends HIGElement {
 
 const CheckboxAdapterComponent = createComponent(CheckboxAdapter);
 
-CheckboxAdapter.propTypes = {
+CheckboxAdapterComponent.propTypes = {
   disabled: PropTypes.bool,
   checked: PropTypes.bool,
   required: PropTypes.bool,

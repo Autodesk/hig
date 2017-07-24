@@ -124,7 +124,7 @@ class TextFieldAdapter extends HIGElement {
 
 const TextFieldComponent = createComponent(TextFieldAdapter);
 
-TextFieldAdapter.propTypes = {
+TextFieldComponent.propTypes = {
   disabled: PropTypes.bool,
   icon: PropTypes.string,
   instructions: PropTypes.string,
@@ -139,7 +139,7 @@ TextFieldAdapter.propTypes = {
   value: PropTypes.string
 };
 
-TextFieldAdapter.__docgenInfo = {
+TextFieldComponent.__docgenInfo = {
   props: {
     disabled: {
       description: 'prevents interaction with the text field'

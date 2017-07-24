@@ -47,7 +47,7 @@ class Button extends HIGElement {
 
 const ButtonComponent = createComponent(Button);
 
-Button.propTypes = {
+ButtonComponent.propTypes = {
   disabled: PropTypes.bool,
   link: PropTypes.string,
   onBlur: PropTypes.func,

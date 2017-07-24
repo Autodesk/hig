@@ -121,7 +121,7 @@ class IconButton extends HIGElement {
 
 const IconButtonComponent = createComponent(IconButton);
 
-IconButton.propTypes = {
+IconButtonComponent.propTypes = {
   title: PropTypes.string,
   icon: PropTypes.string,
   disabled: PropTypes.bool,
