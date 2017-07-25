@@ -1,44 +1,65 @@
 import React, { Component } from 'react';
-import TextFieldAdapter from '../../../adapters/TextField.js';
+import TextFieldAdapter from '../../../adapters/TextFieldAdapter.js';
 
 export default class TextField extends Component {
   constructor(props) {
     super(props);
 
+    const controlled = this.props.value === undefined ? false : true;
+
     this.state = {
-      value: props.defaultValue
+      value: this.getDefaultValue(),
+      controlled
     };
-
-    this.handleInput = this.handleInput.bind(this);
-    this.setTextFieldEl = this.setTextFieldEl.bind(this);
   }
 
-  handleInput(event) {
-    // // Call callback if provided
-    // if (this.props.onInput) {
-    //   this.props.onInput(...arguments);
-    // }
+  getDefaultValue() {
+    const { defaultValue, value } = this.props;
 
-    // // Prevent user interaction from changing text field value
-    // const currentValue = this.props.value || this.state.value;
-    // // console.log('setting current value', this.textFieldEl)
-    // this.textFieldEl.setValue(currentValue);
-
-    // // Update state with new value
-    // this.setState({
-    //   value: this.props.value || event.target.value
-    // });
+    if (value !== undefined) {
+      return value;
+    } else if (defaultValue !== undefined) {
+      return defaultValue;
+    } else {
+      return 'foo-bar';
+    }
   }
 
-  setTextFieldEl(textFieldEl) {
+  getRenderedValue() {
+    const { value } = this.props;
+
+    if (value !== undefined) {
+      return value;
+    } else {
+      return this.state.value;
+    }
+  }
+
+  handleInput = event => {
+    if (this.props.onInput) {
+      this.props.onInput(event);
+    }
+
+    if (this.state.controlled) {
+      if (this.textFieldEl) {
+        this.textFieldEl.forceNextReset();
+        this.setState({ value: this.state.value });
+      }
+    } else {
+      this.setState({ value: event.target.value });
+    }
+  };
+
+  setTextFieldEl = textFieldEl => {
     this.textFieldEl = textFieldEl;
-  }
+  };
 
   render() {
     return (
-      <TextFieldAdapter ref={this.setTextFieldEl}
+      <TextFieldAdapter
+        ref={this.setTextFieldEl}
         {...this.props}
-        value={this.props.value || this.state.value}
+        value={this.getRenderedValue()}
         onInput={this.handleInput}
       />
     );

@@ -20,18 +20,13 @@ import HIGElement from '../elements/HIGElement';
 import * as PropTypes from 'prop-types';
 import createComponent from './createComponent';
 
-class TextFieldAdapter extends HIGElement {
+class TextField extends HIGElement {
   constructor(initialProps) {
     super(HIG.TextField, initialProps);
   }
 
-  componentDidMount() {
-    this.commitUpdate([
-      'disabled',
-      this.initialProps.disabled,
-      'required',
-      this.initialProps.required
-    ]);
+  forceReset(props) {
+    this.commitUpdate(['value', props.value]);
   }
 
   commitUpdate(updatePayload, oldProps, newProps) {
@@ -67,7 +62,10 @@ class TextFieldAdapter extends HIGElement {
             dispose();
           }
 
-          this._disposeFunctions.set('onBlur', this.hig.onBlur(propValue));
+          this._disposeFunctions.set(
+            'onBlurDispose',
+            this.hig.onBlur(propValue)
+          );
           break;
         }
         case 'onChange': {
@@ -77,7 +75,10 @@ class TextFieldAdapter extends HIGElement {
             dispose();
           }
 
-          this._disposeFunctions.set('onChange', this.hig.onChange(propValue));
+          this._disposeFunctions.set(
+            'onChangeDispose',
+            this.hig.onChange(propValue)
+          );
           break;
         }
         case 'onFocus': {
@@ -87,7 +88,10 @@ class TextFieldAdapter extends HIGElement {
             dispose();
           }
 
-          this._disposeFunctions.set('onFocus', this.hig.onFocus(propValue));
+          this._disposeFunctions.set(
+            'onFocusDispose',
+            this.hig.onFocus(propValue)
+          );
           break;
         }
         case 'onInput': {
@@ -97,7 +101,10 @@ class TextFieldAdapter extends HIGElement {
             dispose();
           }
 
-          this._disposeFunctions.set('onInput', this.hig.onInput(propValue));
+          this._disposeFunctions.set(
+            'onInputDispose',
+            this.hig.onInput(propValue)
+          );
           break;
         }
         case 'placeholder': {
@@ -115,16 +122,18 @@ class TextFieldAdapter extends HIGElement {
           break;
         }
         default: {
-          return;
+          console.warn(
+            `${this.constructor.name} doesn't handle the prop ${propKey}`
+          );
         }
       }
     }
   }
 }
 
-const TextFieldComponent = createComponent(TextFieldAdapter);
+const TextFieldComponent = createComponent(TextField);
 
-TextFieldComponent.propTypes = {
+TextField.propTypes = {
   disabled: PropTypes.bool,
   icon: PropTypes.string,
   instructions: PropTypes.string,
@@ -139,7 +148,7 @@ TextFieldComponent.propTypes = {
   value: PropTypes.string
 };
 
-TextFieldComponent.__docgenInfo = {
+TextField.__docgenInfo = {
   props: {
     disabled: {
       description: 'prevents interaction with the text field'

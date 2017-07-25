@@ -282,7 +282,7 @@ describe('<Button>', () => {
       size: 'standard',
       title: 'regular button',
       link: 'http://example.com',
-      disabled: 'true'
+      disabled: true
     };
 
     const { higButton, higContainer } = createHigButton(defaults);

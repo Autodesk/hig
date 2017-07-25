@@ -73,7 +73,16 @@ export default function createComponent(ElementConstructor) {
       }
     }
 
+    forceNextReset() {
+      this.isForceNextReset = true;
+    }
+
     componentWillReceiveProps(nextProps) {
+      if (this.isForceNextReset) {
+        this.isForceNextReset = false;
+        this.instance.forceReset(nextProps);
+      }
+
       const updatePayload = prepareUpdate(this.props, nextProps);
 
       if (updatePayload) {

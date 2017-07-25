@@ -133,7 +133,7 @@ class App extends React.Component {
   }
 
   setTextFieldValue(event) {
-    this.logEvent(event, TextField)
+    this.logEvent(event, TextField);
     this.setState({
       textFieldValue: event.target.value
     });

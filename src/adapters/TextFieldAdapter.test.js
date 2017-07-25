@@ -18,9 +18,9 @@ import { mount } from 'enzyme';
 import * as HIG from 'hig.web';
 import React from 'react';
 
-import TextFieldAdapter from './TextFieldAdapter';
+import TextField from './TextFieldAdapter';
 
-describe('<TextFieldAdapter>', () => {
+describe('<TextField>', () => {
   function createHigTextField(defaults = {}) {
     const higContainer = document.createElement('div');
 
@@ -32,7 +32,7 @@ describe('<TextFieldAdapter>', () => {
   }
 
   function createOrionTextField(props) {
-    return <TextFieldAdapter {...props} />;
+    return <TextField {...props} />;
   }
 
   it('renders a text field', () => {
@@ -58,6 +58,7 @@ describe('<TextFieldAdapter>', () => {
       label: 'Name of your first pet',
       name: 'mySpecialField',
       placeholder: 'Was it Fluffy?',
+      required: 'You really must fill this in.',
       value: 'Rex'
     };
 
@@ -89,7 +90,6 @@ describe('<TextFieldAdapter>', () => {
       icon: 'assets',
       instructions: "Don't just do something, sit there.",
       label: 'Name of your first pet',
-      name: 'updatedFieldName',
       placeholder: 'Was it Fluffy?',
       required: 'You really must fill this in.',
       value: 'Rex'
@@ -98,7 +98,6 @@ describe('<TextFieldAdapter>', () => {
     higTextField.setIcon(nextProps.icon);
     higTextField.setInstructions(nextProps.instructions);
     higTextField.setLabel(nextProps.label);
-    higTextField.setName(nextProps.name);
     higTextField.setPlaceholder(nextProps.placeholder);
     higTextField.required(nextProps.required);
     higTextField.setValue(nextProps.value);
