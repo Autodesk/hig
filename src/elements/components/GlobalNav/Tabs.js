@@ -16,8 +16,8 @@ limitations under the License.
 */
 import React from 'react';
 
-import TabsAdapter from '../../../adapters/TabsAdapter';
-import TabAdapter from '../../../adapters/TabAdapter';
+import TabsAdapter from '../../../adapters/GlobalNav/SubNav/TabsAdapter';
+import TabAdapter from '../../../adapters/GlobalNav/SubNav/TabAdapter';
 
 class Tab extends React.Component {
   // This is never actually rendered

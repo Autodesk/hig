@@ -19,44 +19,50 @@ import * as HIG from 'hig.web';
 import React from 'react';
 import TestUtils from 'react-dom/test-utils';
 
-import { default as Checkbox } from './CheckboxAdapter';
+import GlobalNav from '../GlobalNavAdapter';
+import SideNav from './SideNavAdapter';
+import LinkList from '../../../elements/components/GlobalNav/LinkList';
+
+import { default as LinkAdapter } from './LinkAdapter';
 
 const inputId = '1234';
 
-describe('<Checkbox>', () => {
+describe('<LinkAdapter>', () => {
   function createHigComponent(defaults = {}) {
     const higContainer = document.createElement('div');
+    const globalNav = new HIG.GlobalNav();
+    const sideNav = new globalNav.partials.SideNav();
+    const link = new sideNav.partials.Link(defaults);
 
-    // use spread here to clone defaults since HIG.Checkbox mutates this object
-    const higCheckbox = new HIG.Checkbox({ ...defaults });
+    globalNav.mount(higContainer);
+    globalNav.addSideNav(sideNav);
+    sideNav.addLink(link);
 
-    higCheckbox.mount(higContainer);
+    return { higComponent: link, higContainer };
+  }
 
-    // to adjust for the randomly generated id
-    const label = higContainer.querySelector('label');
-    const input = higContainer.querySelector('input');
-    label.setAttribute('for', inputId);
-    input.setAttribute('id', inputId);
-
-    return { higComponent: higCheckbox, higContainer };
+  function Context(props) {
+    return (
+      <GlobalNav>
+        <SideNav>
+          <LinkList>
+            <LinkAdapter {...props} />
+          </LinkList>
+        </SideNav>
+      </GlobalNav>
+    );
   }
 
   function createOrionComponent(defaults) {
     const orionContainer = document.createElement('div');
-    const orionWrapper = mount(<Checkbox {...defaults} />, {
+    const orionWrapper = mount(<Context {...defaults} />, {
       attachTo: orionContainer
     });
 
-    const label = orionContainer.querySelector('label');
-    const input = orionContainer.querySelector('input');
-
-    // to adjust for the randomly generated id
-    label.setAttribute('for', inputId);
-    input.setAttribute('id', inputId);
     return { orionWrapper, orionContainer };
   }
 
-  it('renders a Checkbox', () => {
+  it('renders', () => {
     const defaults = {};
     const { higComponent, higContainer } = createHigComponent(defaults);
     const { orionContainer, orionWrapper } = createOrionComponent(defaults);
@@ -68,11 +74,10 @@ describe('<Checkbox>', () => {
     );
   });
 
-  it('renders a Checkbox with initial props', () => {
+  it('renders with initial props', () => {
     const defaults = {
-      label: 'Label',
-      name: 'checkbox-name',
-      value: 'checkbox-value'
+      title: 'A title',
+      link: 'https://a-website.com'
     };
     const { higComponent, higContainer } = createHigComponent(defaults);
     const { orionContainer, orionWrapper } = createOrionComponent(defaults);
@@ -84,27 +89,19 @@ describe('<Checkbox>', () => {
     );
   });
 
-  it('renders a Checkbox with updated props', () => {
+  it('renders with updated props', () => {
     const defaults = {};
     const nextProps = {
-      label: 'Label',
-      name: 'checkbox-name',
-      value: 'checkbox-value',
-      checked: true,
-      required: 'You must check this box',
-      disabled: true
+      title: 'A title',
+      link: 'https://a-website.com'
     };
     const { higComponent, higContainer } = createHigComponent(defaults);
     const { orionContainer, orionWrapper } = createOrionComponent(defaults);
 
     orionWrapper.setProps(nextProps);
 
-    higComponent.setLabel(nextProps.label);
-    higComponent.setName(nextProps.name);
-    higComponent.setValue(nextProps.value);
-    higComponent.check();
-    higComponent.required(nextProps.required);
-    higComponent.disable();
+    higComponent.setTitle(nextProps.title);
+    higComponent.setLink(nextProps.link);
 
     expect(orionContainer.firstElementChild.outerHTML).toMatchSnapshot();
 
@@ -113,28 +110,25 @@ describe('<Checkbox>', () => {
     );
   });
 
-  ['onChange', 'onFocus', 'onHover'].forEach(eventName => {
-    it(`sets event listeners for ${eventName} initially`, () => {
-      const { orionContainer, orionWrapper } = createOrionComponent({
-        [eventName]: () => {}
-      });
-      const instance = orionWrapper.instance().instance;
+  it('warns when passed an unsupported property', () => {
+    const warnSpy = jest.fn();
+    const { orionContainer, orionWrapper } = createOrionComponent({});
+    console.warn = warnSpy;
 
-      const disposeFunction = instance._disposeFunctions.get(eventName);
-      expect(disposeFunction).toBeDefined();
-    });
+    orionWrapper.setProps({ realProp: false });
 
-    it(`sets event listeners for ${eventName} when updated`, () => {
-      const { orionContainer, orionWrapper } = createOrionComponent({
-        [eventName]: () => {}
-      });
+    expect(warnSpy).toHaveBeenCalled();
+  });
+
+  ['onClick', 'onHover'].forEach(eventName => {
+    it(`handles ${eventName}`, () => {
+      const warnSpy = jest.fn();
+      const { orionContainer, orionWrapper } = createOrionComponent({});
+      console.warn = warnSpy;
+
       orionWrapper.setProps({ [eventName]: () => {} });
-      const instance = orionWrapper.instance().instance;
 
-      const disposeFunction = instance._disposeFunctions.get(
-        `${eventName}Dispose`
-      );
-      expect(disposeFunction).toBeDefined();
+      expect(warnSpy).not.toHaveBeenCalled();
     });
   });
 });

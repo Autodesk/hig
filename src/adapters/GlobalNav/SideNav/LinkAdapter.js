@@ -14,37 +14,23 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 */
-import createComponent from './createComponent';
-import HIGElement from '../elements/HIGElement';
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types';
+import createComponent from '../../createComponent';
+import HIGElement from '../../../elements/HIGElement';
 
-export class TabAdapter extends HIGElement {
-  componentDidMount() {
-    if (this.initialProps.active) {
-      this.hig.activate();
-    } else {
-      this.hig.deactivate();
-    }
-    if (this.initialProps.label) {
-      this.hig.setLabel(this.initialProps.label);
-    }
-  }
-  commitUpdate(updatePayload, oldProps, newProps) {
+export class Link extends HIGElement {
+  commitUpdate(updatePayload, oldProps, newProp) {
     for (let i = 0; i < updatePayload.length; i += 2) {
       const propKey = updatePayload[i];
       const propValue = updatePayload[i + 1];
 
       switch (propKey) {
-        case 'active': {
-          if (propValue) {
-            this.hig.activate();
-          } else {
-            this.hig.deactivate();
-          }
+        case 'title': {
+          this.hig.setTitle(propValue);
           break;
         }
-        case 'label': {
-          this.hig.setLabel(propValue);
+        case 'link': {
+          this.hig.setLink(propValue);
           break;
         }
         case 'onClick': {
@@ -60,6 +46,19 @@ export class TabAdapter extends HIGElement {
           );
           break;
         }
+        case 'onHover': {
+          const dispose = this._disposeFunctions.get('onHoverDispose');
+
+          if (dispose) {
+            dispose();
+          }
+
+          this._disposeFunctions.set(
+            'onHoverDispose',
+            this.hig.onHover(propValue)
+          );
+          break;
+        }
         default: {
           console.warn(`${propKey} is unknown`);
         }
@@ -68,28 +67,30 @@ export class TabAdapter extends HIGElement {
   }
 }
 
-const TabAdapterComponent = createComponent(TabAdapter);
+const LinkComponent = createComponent(Link);
 
-TabAdapterComponent.propTypes = {
-  label: PropTypes.string,
-  active: PropTypes.bool,
-  onClick: PropTypes.func
+LinkComponent.propTypes = {
+  addTitle: PropTypes.func,
+  addLink: PropTypes.func,
+  onClick: PropTypes.func,
+  onHover: PropTypes.func
 };
 
-TabAdapterComponent.__docgenInfo = {
+LinkComponent.__docgenInfo = {
   props: {
-    label: {
-      description: 'sets the text of a tab'
+    title: {
+      description: 'Title {string} for the Link component'
     },
-
-    active: {
-      description: 'activates or deactivates the tab'
+    link: {
+      description: 'URL {string} for the Link component'
     },
-
     onClick: {
-      description: 'calls provided handler when tab recieves a click'
+      description: '{function} Triggered when user clicks on the link'
+    },
+    onHover: {
+      description: '{function} Triggered when user hovers over the link'
     }
   }
 };
 
-export default TabAdapterComponent;
+export default LinkComponent;

@@ -19,37 +19,12 @@ import * as HIG from 'hig.web';
 import React from 'react';
 
 import GlobalNav from '../../../adapters/GlobalNav/GlobalNavAdapter';
-import SectionList from './SectionList';
-import Section from './Section';
-import Group from './Group';
-import Module from './Module';
-import Submodule from './Submodule';
-import SectionCollapse from './SectionCollapse';
-import SideNav from './SideNav';
-
-const SubmoduleContext = props => {
-  return (
-    <GlobalNav>
-      <GlobalNav.SideNav>
-        <GlobalNav.SideNav.SectionList>
-          <Section headerLabel="Project" headerName="ThunderStorm">
-            <SectionCollapse isCollapsed={props.isCollapsed} />
-            <Group>
-              <Module
-                icon="gear"
-                title="Contractor"
-                submodulesClosed={props.isCollapsed}
-              >
-                <Submodule title="Library" link="#" icon="assets" />
-              </Module>
-            </Group>
-
-          </Section>
-        </GlobalNav.SideNav.SectionList>
-      </GlobalNav.SideNav>
-    </GlobalNav>
-  );
-};
+import SectionList from '../../../elements/components/GlobalNav/SectionList';
+import Section from './SectionAdapter';
+import Group from './GroupAdapter';
+import Module from './ModuleAdapter';
+import Submodule from './SubmoduleAdapter';
+import SideNav from './SideNavAdapter';
 
 const Context = props => {
   const { children, ...rest } = props;
@@ -69,7 +44,6 @@ const Context = props => {
 function higContext(defaults) {
   const higContainer = document.createElement('div');
 
-  // use spread here to clone defaults since HIG.Button mutates this object
   const higNav = new HIG.GlobalNav();
 
   higNav.mount(higContainer);
@@ -79,12 +53,7 @@ function higContext(defaults) {
 
   const higSection = new higSideNav.partials.Section(defaults);
 
-  const collapse1 = new higSection.partials.Collapse({});
-
   higSideNav.addSection(higSection);
-
-  higSection.addCollapse(collapse1);
-  collapse1.minimize();
 
   return { higNav, higSideNav, higSection, higContainer };
 }
@@ -218,9 +187,6 @@ describe('<Section>', () => {
       var group2 = new higSection.partials.Group();
       higSection.addGroup(group2);
 
-      group1.hide();
-      group2.hide();
-
       const reactContainer = document.createElement('div');
 
       const wrapper = mount(
@@ -251,12 +217,9 @@ describe('<Section>', () => {
 
       var group2 = new higSection.partials.Group();
       higSection.addGroup(group2);
-      group2.hide();
 
       // ADD GROUP 1 before GROUP 2
       higSection.addGroup(group1, group2);
-      group1.hide();
-      group2.hide();
 
       class CustomComponent extends React.Component {
         constructor(props) {
@@ -314,7 +277,7 @@ describe('<Section>', () => {
 
       expect(console.error).toBeCalledWith(
         expect.stringMatching(
-          /'div' is not a valid child of Section. Children should be of type 'Group, SectionCollapse'/
+          /'div' is not a valid child of Section. Children should be of type 'GroupAdapter, SectionCollapseAdapter'/
         )
       );
     });
@@ -330,65 +293,9 @@ describe('<Section>', () => {
 
       expect(console.error).toBeCalledWith(
         expect.stringMatching(
-          /'Hello world!' is not a valid child of Section. Children should be of type 'Group, SectionCollapse'/
+          /'Hello world!' is not a valid child of Section. Children should be of type 'GroupAdapter, SectionCollapseAdapter'/
         )
       );
-    });
-  });
-  describe('Section with Query', () => {
-    const Context = props => {
-      return (
-        <GlobalNav>
-          <SideNav>
-            <SectionList>
-              <Section
-                headerLabel="Project"
-                headerName="Thunderstor"
-                query={props.query}
-              >
-                <Group>
-                  <Module title={props.moduleTitle} icon="assets">
-                    <Submodule title={props.submoduleTitle1} icon="assets" />
-                    <Submodule title={props.submoduleTitle2} icon="assets" />
-                  </Module>
-                </Group>
-              </Section>
-
-            </SectionList>
-          </SideNav>
-        </GlobalNav>
-      );
-    };
-
-    function setupReactContext(props) {
-      const reactContainer = document.createElement('div');
-      mount(<Context {...props} />, { attachTo: reactContainer });
-      return { reactContainer };
-    }
-
-    it('shows modules/submodules that correspond to query', () => {
-      const props = {
-        placeholder: 'Search Here',
-        headerLabel: 'Oakland Medical Center',
-        headerName: 'Thunderstorm',
-        moduleTitle: 'Document Workflow',
-        submoduleTitle1: 'Document',
-        submoduleTitle2: 'Workflow',
-        query: 'Document'
-      };
-
-      const { reactContainer } = setupReactContext(props);
-
-      var hiddenSubmodule = reactContainer.getElementsByClassName(
-        'hig__global-nav__side-nav__section__group__module__submodule--hide'
-      );
-
-      var submodule = reactContainer.getElementsByClassName(
-        'hig__global-nav__side-nav__section__group__module__submodule'
-      );
-
-      expect(hiddenSubmodule.length).toEqual(1);
-      expect(submodule.length).toEqual(2);
     });
   });
 });

@@ -19,7 +19,7 @@ import * as HIG from 'hig.web';
 import React from 'react';
 
 import GlobalNav from '../../../adapters/GlobalNav/GlobalNavAdapter';
-import Tabs from './Tabs';
+import Tabs from './TabsAdapter';
 
 const Context = props => {
   return (
@@ -47,7 +47,6 @@ function createHigContext(props) {
 
   const higTab = new higTabs.partials.Tab(props);
   higTabs.addTab(higTab);
-  higTab.activate();
 
   return { higContainer, higItem: higTab };
 }
@@ -74,12 +73,13 @@ describe('<Tab>', () => {
 
   it('updates sets and updates props', () => {
     const initialProps = { label: 'Such Tab', key: 2 };
-    const updatedProps = { label: 'Many Tab', key: 3 };
+    const updatedProps = { label: 'Many Tab', key: 3, active: true };
     const { wrapper, reactContainer } = createReactComponent(initialProps);
     const { higContainer, higItem } = createHigContext(initialProps);
 
     wrapper.setProps(updatedProps);
     higItem.setLabel(updatedProps.label);
+    higItem.activate();
 
     expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
     expect(reactContainer.firstElementChild.outerHTML).toEqual(

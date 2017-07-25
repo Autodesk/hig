@@ -19,10 +19,10 @@ import * as HIG from 'hig.web';
 import React from 'react';
 
 import GlobalNav from '../../../adapters/GlobalNav/GlobalNavAdapter';
-import Section from './Section';
-import SectionList from './SectionList';
-import Group from './Group';
-import Module from './Module';
+import Section from './SectionAdapter';
+import SectionList from '../../../elements/components/Globalnav/SectionList';
+import Group from './GroupAdapter';
+import Module from './ModuleAdapter';
 
 const Context = props => {
   const { children, ...rest } = props;
@@ -54,11 +54,6 @@ function higContext() {
   const higSection = new higSideNav.partials.Section({});
 
   higSideNav.addSection(higSection);
-
-  const collapse1 = new higSection.partials.Collapse({});
-
-  higSection.addCollapse(collapse1);
-  collapse1.minimize();
 
   const higGroup = new higSection.partials.Group();
 
@@ -189,7 +184,7 @@ describe('<Group>', () => {
 
       expect(console.error).toBeCalledWith(
         expect.stringMatching(
-          /'div' is not a valid child of Group. Children should be of type 'Module'/
+          /'div' is not a valid child of GroupAdapter. Children should be of type 'Module'/
         )
       );
     });
@@ -205,7 +200,7 @@ describe('<Group>', () => {
 
       expect(console.error).toBeCalledWith(
         expect.stringMatching(
-          /'Hello world!' is not a valid child of Group. Children should be of type 'Module'/
+          /'Hello world!' is not a valid child of GroupAdapter. Children should be of type 'Module'/
         )
       );
     });

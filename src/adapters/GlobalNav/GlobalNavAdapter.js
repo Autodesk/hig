@@ -21,9 +21,7 @@ import HIGElement from '../../elements/HIGElement';
 import HIGChildValidator from '../../elements/HIGChildValidator';
 import createComponent from '../createComponent';
 
-import SideNavComponent, {
-  SideNav
-} from '../../elements/components/GlobalNav/SideNav';
+import SideNavComponent, { SideNavAdapter } from './SideNav/SideNavAdapter';
 import TopNavComponent, {
   TopNav
 } from '../../elements/components/GlobalNav/TopNav/TopNav';
@@ -47,7 +45,6 @@ class GlobalNav extends HIGElement {
     if (this.topNav) {
       this.hig.addTopNav(this.topNav.hig);
       this.topNav.mount();
-      this._addSideNavOpenCallback(this.topNav);
     }
 
     if (this.subNav) {
@@ -72,15 +69,15 @@ class GlobalNav extends HIGElement {
         return new TopNav(this.hig.partials.TopNav, props);
       case SubNav:
         return new SubNav(this.hig.partials.SubNav, props);
-      case SideNav:
-        return new SideNav(this.hig.partials.SideNav, props);
+      case SideNavAdapter:
+        return new SideNavAdapter(this.hig.partials.SideNav, props);
       default:
         throw new Error(`Unknown type ${ElementConstructor.name}`);
     }
   }
 
   appendChild(instance, beforeChild = {}) {
-    if (instance instanceof SideNav) {
+    if (instance instanceof SideNavAdapter) {
       if (this.sideNav) {
         throw new Error('only one SideNav is allowed');
       } else {
@@ -98,7 +95,6 @@ class GlobalNav extends HIGElement {
         if (this.mounted) {
           this.hig.addTopNav(instance.hig);
           instance.mount();
-          this._addSideNavOpenCallback(instance);
         }
       }
     } else if (instance instanceof SubNav) {
@@ -129,7 +125,7 @@ class GlobalNav extends HIGElement {
   }
 
   removeChild(instance) {
-    if (instance instanceof SideNav) {
+    if (instance instanceof SideNavAdapter) {
       this.sideNav = null;
     } else if (instance instanceof TopNav) {
       this.topNav = null;
@@ -158,10 +154,6 @@ class GlobalNav extends HIGElement {
         }
       }
     }
-  }
-
-  _addSideNavOpenCallback(topNavInstance) {
-    topNavInstance.onHamburgerClick(this._toggleSideNav);
   }
 }
 

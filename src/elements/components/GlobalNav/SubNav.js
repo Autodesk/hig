@@ -22,7 +22,7 @@ import HIGChildValidator from '../../HIGChildValidator';
 // New tabs which have state in a separate react component
 import TabsAdapterComponent, {
   TabsAdapter
-} from '../../../adapters/TabsAdapter';
+} from '../../../adapters/GlobalNav/SubNav/TabsAdapter';
 import Tabs from './Tabs';
 
 export class SubNav extends HIGElement {

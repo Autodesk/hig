@@ -14,15 +14,18 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 */
-import createComponent from '../../../adapters/createComponent';
-import HIGElement from '../../HIGElement';
-import HIGNodeList from '../../HIGNodeList';
-import HIGChildValidator from '../../HIGChildValidator';
-import ModuleComponent, { Module } from './Module';
+import createComponent from '../../createComponent';
+import HIGElement from '../../../elements/HIGElement';
+import HIGNodeList from '../../../elements/HIGNodeList';
+import HIGChildValidator from '../../../elements/HIGChildValidator';
+import ModuleComponent, {
+  Module
+} from '../../../adapters/GlobalNav/SideNav/ModuleAdapter';
 
-export class Group extends HIGElement {
+export class GroupAdapter extends HIGElement {
   constructor(HIGConstructor, initialProps) {
     super(HIGConstructor, initialProps);
+
     this.modules = new HIGNodeList({
       type: Module,
       HIGConstructor: this.hig.partials.Module,
@@ -30,14 +33,10 @@ export class Group extends HIGElement {
         this.hig.addModule(instance, beforeInstance);
       }
     });
-
-    this.state = {};
-    this._render = this._render.bind(this);
   }
 
   componentDidMount() {
     this.modules.componentDidMount();
-    this._render();
   }
 
   createElement(ElementConstructor, props) {
@@ -46,61 +45,14 @@ export class Group extends HIGElement {
 
   insertBefore(instance, insertBeforeIndex) {
     this.modules.insertBefore(instance, insertBeforeIndex);
-    if (this.mounted) {
-      this._render();
-    }
   }
 
   removeChild(instance) {
     this.modules.removeChild(instance);
   }
-
-  commitUpdate(updatePayload, oldProps, newProps) {
-    this.processUpdateProps(updatePayload).then(this._render);
-  }
-
-  isVisible() {
-    return this.state.isVisible;
-  }
-
-  expandModules() {
-    this.modules.forEach(module => {
-      module.commitUpdate({ query: undefined });
-      module.expandAll();
-    });
-    this._render();
-  }
-
-  collapseModules() {
-    this.modules.forEach(module => {
-      this.commitUpdate({ query: undefined });
-      module.collapseAll();
-    });
-    this._render();
-  }
-
-  _render() {
-    const matches = this.modules.map(module => {
-      module.commitUpdate({
-        query: this.props.query,
-        activeModule: this.props.activeModule,
-        activeSubmodule: this.props.activeSubmodule
-      });
-
-      return module.isVisible();
-    });
-
-    if (matches.some(m => m)) {
-      this.hig.show();
-      this.state.isVisible = true;
-    } else {
-      this.hig.hide();
-      this.state.isVisible = false;
-    }
-  }
 }
 
-const GroupComponent = createComponent(Group);
+const GroupComponent = createComponent(GroupAdapter);
 
 GroupComponent.propTypes = {
   children: HIGChildValidator([ModuleComponent])

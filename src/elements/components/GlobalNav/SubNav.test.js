@@ -21,7 +21,7 @@ import React from 'react';
 import GlobalNav from '../../../adapters/GlobalNav/GlobalNavAdapter';
 import SubNav from './SubNav';
 import Tabs from './Tabs';
-import Tab from '../../../adapters/TabAdapter';
+import Tab from '../../../adapters/GlobalNav/SubNav/TabAdapter';
 
 const Context = props => {
   return (

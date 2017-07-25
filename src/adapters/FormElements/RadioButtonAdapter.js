@@ -26,15 +26,14 @@ export class RadioButtonAdapter extends HIGElement {
   }
 
   componentDidMount() {
-    if (this.props.required) {
-      this.hig.required();
-    }
-    if (this.props.checked) {
-      this.hig.check();
-    }
-    if (this.props.disabled) {
-      this.hig.disable();
-    }
+    this.commitUpdate([
+      'required',
+      this.props.required,
+      'disabled',
+      this.props.disabled,
+      'checked',
+      this.props.disabled
+    ]);
   }
 
   commitUpdate(updatePayload, oldProps, newProps) {
@@ -53,7 +52,9 @@ export class RadioButtonAdapter extends HIGElement {
           this.hig.setValue(propValue);
           break;
         case 'required':
-          propValue ? this.hig.required() : this.hig.noLongerRequired();
+          propValue
+            ? this.hig.required(propValue)
+            : this.hig.noLongerRequired();
           break;
         case 'checked':
           propValue ? this.hig.check() : this.hig.uncheck();
@@ -106,7 +107,7 @@ const RadioButtonAdapterComponent = createComponent(RadioButtonAdapter);
 RadioButtonAdapterComponent.propTypes = {
   disabled: PropTypes.bool,
   checked: PropTypes.bool,
-  required: PropTypes.bool,
+  required: PropTypes.string,
   onHover: PropTypes.func,
   onChange: PropTypes.func,
   onFocus: PropTypes.func,
@@ -124,16 +125,16 @@ RadioButtonAdapterComponent.__docgenInfo = {
       description: 'sets the value attribute of the radiobutton input'
     },
     checked: {
-      description: 'boolean - sets whether the radiobutton is checked'
+      description: 'boolean - sets whether the radio button is checked'
     },
     disabled: {
-      description: 'boolean - sets whether the radiobutton is disabled'
+      description: 'boolean - sets whether the radio button is disabled'
     },
     required: {
-      description: 'boolean - sets the whether the radiobutton is required'
+      description: 'string - sets the whether the radio button is required and displays the provided message'
     },
     label: {
-      description: 'sets the label text for the radiobutton'
+      description: 'sets the label text for the radio button'
     },
     onHover: {
       description: 'triggers when you hover over the button'

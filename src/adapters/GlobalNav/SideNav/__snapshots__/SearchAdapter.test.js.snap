@@ -1,32 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Search> setting and updating props 1`] = `
-"<div class=\\"hig__global-nav\\">
-    <div class=\\"hig__global-nav__sidenav\\">
-    <div class=\\"hig__global-nav__sidenav__scroll hig__global-nav__sidenav__scroll--search\\">
-        <!--SECTION-->
-        <div class=\\"hig__global-nav__sidenav__links\\">
-            <!--LINK-->
-        </div>
-        <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
-    </div>
-    <div class=\\"hig__global-nav__side-nav__search\\">
-    <div class=\\"hig__global-nav__side-nav__search__icon\\"><div class=\\"hig__icon\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"search-small\\"><title>hig/icon/search-small</title><path d=\\"M15.8702459,15.1631391 L18.9748737,18.267767 C19.1701359,18.4630291 19.1701359,18.7796116 18.9748737,18.9748737 C18.7796116,19.1701359 18.4630291,19.1701359 18.267767,18.9748737 L15.2403215,15.9474283 C14.0545271,17.2108151 12.3694256,18 10.5,18 C6.91014913,18 4,15.0898509 4,11.5 C4,7.91014913 6.91014913,5 10.5,5 C14.0898509,5 17,7.91014913 17,11.5 C17,12.8587306 16.5831026,14.1200897 15.8702459,15.1631391 Z M16,11.5 C16,8.46243388 13.5375661,6 10.5,6 C7.46243388,6 5,8.46243388 5,11.5 C5,14.5375661 7.46243388,17 10.5,17 C13.5375661,17 16,14.5375661 16,11.5 Z\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"></path></svg></div></div>
-    <div class=\\"hig__global-nav__side-nav__search__inputholder\\"><input class=\\"hig__global-nav__side-nav__search__inputholder__input\\" type=\\"text\\" placeholder=\\"something new\\" value=\\"default query\\"></div>
-    <div class=\\"hig__global-nav__side-nav__search__clear\\"><div class=\\"hig__icon\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-small\\"><title>hig/icon/close-small</title><g fill=\\"none\\" fill-rule=\\"evenodd\\"><circle stroke=\\"#353636\\" cx=\\"12\\" cy=\\"12\\" r=\\"8\\"></circle><polygon fill=\\"#353636\\" transform=\\"rotate(45 12 12)\\" points=\\"16.5 11.4518414 12.5847458 11.4518414 12.5847458 7.5 11.4152542 7.5 11.4152542 11.4518414 7.5 11.4518414 7.5 12.5226629 11.4152542 12.5226629 11.4152542 16.5 12.5847458 16.5 12.5847458 12.5226629 16.5 12.5226629\\"></polygon></g></svg></div></div>
-</div><!--SEARCH-->
-</div><!--SIDENAV-->
-    <div class=\\"hig__global-nav__container\\">
-        <!--TOPNAV-->
-        <!--SUBNAV-->
-        <div class=\\"hig__global-nav__slot\\">
-            <!--SLOT-->
-        </div>
-    </div>
-</div>"
-`;
-
-exports[`<Search> will is rendered as a child of Side Nav 1`] = `
+exports[`<Search> renders 1`] = `
 "<div class=\\"hig__global-nav\\">
     <div class=\\"hig__global-nav__sidenav\\">
     <div class=\\"hig__global-nav__sidenav__scroll hig__global-nav__sidenav__scroll--search\\">
@@ -40,6 +14,58 @@ exports[`<Search> will is rendered as a child of Side Nav 1`] = `
     <div class=\\"hig__global-nav__side-nav__search__icon\\"><div class=\\"hig__icon\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"search-small\\"><title>hig/icon/search-small</title><path d=\\"M15.8702459,15.1631391 L18.9748737,18.267767 C19.1701359,18.4630291 19.1701359,18.7796116 18.9748737,18.9748737 C18.7796116,19.1701359 18.4630291,19.1701359 18.267767,18.9748737 L15.2403215,15.9474283 C14.0545271,17.2108151 12.3694256,18 10.5,18 C6.91014913,18 4,15.0898509 4,11.5 C4,7.91014913 6.91014913,5 10.5,5 C14.0898509,5 17,7.91014913 17,11.5 C17,12.8587306 16.5831026,14.1200897 15.8702459,15.1631391 Z M16,11.5 C16,8.46243388 13.5375661,6 10.5,6 C7.46243388,6 5,8.46243388 5,11.5 C5,14.5375661 7.46243388,17 10.5,17 C13.5375661,17 16,14.5375661 16,11.5 Z\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"></path></svg></div></div>
     <div class=\\"hig__global-nav__side-nav__search__inputholder\\"><input class=\\"hig__global-nav__side-nav__search__inputholder__input\\" type=\\"text\\" placeholder=\\"Search\\" value=\\"\\"></div>
     <div class=\\"hig__global-nav__side-nav__search__clear\\"><div class=\\"hig__icon\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-small\\"><title>hig/icon/close-small</title><g fill=\\"none\\" fill-rule=\\"evenodd\\"><circle stroke=\\"#353636\\" cx=\\"12\\" cy=\\"12\\" r=\\"8\\"></circle><polygon fill=\\"#353636\\" transform=\\"rotate(45 12 12)\\" points=\\"16.5 11.4518414 12.5847458 11.4518414 12.5847458 7.5 11.4152542 7.5 11.4152542 11.4518414 7.5 11.4518414 7.5 12.5226629 11.4152542 12.5226629 11.4152542 16.5 12.5847458 16.5 12.5847458 12.5226629 16.5 12.5226629\\"></polygon></g></svg></div></div>
+</div><!--SEARCH-->
+</div><!--SIDENAV-->
+    <div class=\\"hig__global-nav__container\\">
+        <!--TOPNAV-->
+        <!--SUBNAV-->
+        <div class=\\"hig__global-nav__slot\\">
+            <!--SLOT-->
+        </div>
+    </div>
+</div>"
+`;
+
+exports[`<Search> renders with initial props 1`] = `
+"<div class=\\"hig__global-nav\\">
+    <div class=\\"hig__global-nav__sidenav\\">
+    <div class=\\"hig__global-nav__sidenav__scroll hig__global-nav__sidenav__scroll--search\\">
+        <!--SECTION-->
+        <div class=\\"hig__global-nav__sidenav__links\\">
+            <!--LINK-->
+        </div>
+        <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
+    </div>
+    <div class=\\"hig__global-nav__side-nav__search\\">
+    <div class=\\"hig__global-nav__side-nav__search__icon\\"><div class=\\"hig__icon\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"search-small\\"><title>hig/icon/search-small</title><path d=\\"M15.8702459,15.1631391 L18.9748737,18.267767 C19.1701359,18.4630291 19.1701359,18.7796116 18.9748737,18.9748737 C18.7796116,19.1701359 18.4630291,19.1701359 18.267767,18.9748737 L15.2403215,15.9474283 C14.0545271,17.2108151 12.3694256,18 10.5,18 C6.91014913,18 4,15.0898509 4,11.5 C4,7.91014913 6.91014913,5 10.5,5 C14.0898509,5 17,7.91014913 17,11.5 C17,12.8587306 16.5831026,14.1200897 15.8702459,15.1631391 Z M16,11.5 C16,8.46243388 13.5375661,6 10.5,6 C7.46243388,6 5,8.46243388 5,11.5 C5,14.5375661 7.46243388,17 10.5,17 C13.5375661,17 16,14.5375661 16,11.5 Z\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"></path></svg></div></div>
+    <div class=\\"hig__global-nav__side-nav__search__inputholder\\"><input class=\\"hig__global-nav__side-nav__search__inputholder__input\\" type=\\"text\\" placeholder=\\"Search a little search for me\\" value=\\"Documents\\"></div>
+    <div class=\\"hig__global-nav__side-nav__search__clear\\"><div class=\\"hig__icon\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-small\\"><title>hig/icon/close-small</title><g fill=\\"none\\" fill-rule=\\"evenodd\\"><circle stroke=\\"#353636\\" cx=\\"12\\" cy=\\"12\\" r=\\"8\\"></circle><polygon fill=\\"#353636\\" transform=\\"rotate(45 12 12)\\" points=\\"16.5 11.4518414 12.5847458 11.4518414 12.5847458 7.5 11.4152542 7.5 11.4152542 11.4518414 7.5 11.4518414 7.5 12.5226629 11.4152542 12.5226629 11.4152542 16.5 12.5847458 16.5 12.5847458 12.5226629 16.5 12.5226629\\"></polygon></g></svg></div></div>
+</div><!--SEARCH-->
+</div><!--SIDENAV-->
+    <div class=\\"hig__global-nav__container\\">
+        <!--TOPNAV-->
+        <!--SUBNAV-->
+        <div class=\\"hig__global-nav__slot\\">
+            <!--SLOT-->
+        </div>
+    </div>
+</div>"
+`;
+
+exports[`<Search> renders with updated props 1`] = `
+"<div class=\\"hig__global-nav\\">
+    <div class=\\"hig__global-nav__sidenav\\">
+    <div class=\\"hig__global-nav__sidenav__scroll hig__global-nav__sidenav__scroll--search\\">
+        <!--SECTION-->
+        <div class=\\"hig__global-nav__sidenav__links\\">
+            <!--LINK-->
+        </div>
+        <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
+    </div>
+    <div class=\\"hig__global-nav__side-nav__search\\">
+    <div class=\\"hig__global-nav__side-nav__search__icon\\"><div class=\\"hig__icon\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"search-small\\"><title>hig/icon/search-small</title><path d=\\"M15.8702459,15.1631391 L18.9748737,18.267767 C19.1701359,18.4630291 19.1701359,18.7796116 18.9748737,18.9748737 C18.7796116,19.1701359 18.4630291,19.1701359 18.267767,18.9748737 L15.2403215,15.9474283 C14.0545271,17.2108151 12.3694256,18 10.5,18 C6.91014913,18 4,15.0898509 4,11.5 C4,7.91014913 6.91014913,5 10.5,5 C14.0898509,5 17,7.91014913 17,11.5 C17,12.8587306 16.5831026,14.1200897 15.8702459,15.1631391 Z M16,11.5 C16,8.46243388 13.5375661,6 10.5,6 C7.46243388,6 5,8.46243388 5,11.5 C5,14.5375661 7.46243388,17 10.5,17 C13.5375661,17 16,14.5375661 16,11.5 Z\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"></path></svg></div></div>
+    <div class=\\"hig__global-nav__side-nav__search__inputholder\\"><input class=\\"hig__global-nav__side-nav__search__inputholder__input\\" type=\\"text\\" placeholder=\\"Search a little search for me\\" value=\\"\\"></div>
+    <div class=\\"hig__global-nav__side-nav__search__clear hig__global-nav__side-nav__search__clear--show\\"><div class=\\"hig__icon\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-small\\"><title>hig/icon/close-small</title><g fill=\\"none\\" fill-rule=\\"evenodd\\"><circle stroke=\\"#353636\\" cx=\\"12\\" cy=\\"12\\" r=\\"8\\"></circle><polygon fill=\\"#353636\\" transform=\\"rotate(45 12 12)\\" points=\\"16.5 11.4518414 12.5847458 11.4518414 12.5847458 7.5 11.4152542 7.5 11.4152542 11.4518414 7.5 11.4518414 7.5 12.5226629 11.4152542 12.5226629 11.4152542 16.5 12.5847458 16.5 12.5847458 12.5226629 16.5 12.5226629\\"></polygon></g></svg></div></div>
 </div><!--SEARCH-->
 </div><!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">

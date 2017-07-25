@@ -14,10 +14,10 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 */
-import createComponent from './createComponent';
-import HIGElement from '../elements/HIGElement';
-import HIGNodeList from '../elements/HIGNodeList';
-import HIGChildValidator from '../elements/HIGChildValidator';
+import createComponent from '../../createComponent';
+import HIGElement from '../../../elements/HIGElement';
+import HIGNodeList from '../../../elements/HIGNodeList';
+import HIGChildValidator from '../../../elements/HIGChildValidator';
 
 import TabAdapterComponent, { TabAdapter } from './TabAdapter';
 
@@ -52,6 +52,7 @@ export class TabsAdapter extends HIGElement {
 }
 
 const TabsAdapterComponent = createComponent(TabsAdapter);
+TabsAdapterComponent.Tab = TabAdapterComponent;
 
 TabsAdapterComponent.propTypes = {
   children: HIGChildValidator([TabAdapterComponent])

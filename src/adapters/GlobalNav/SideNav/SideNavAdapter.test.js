@@ -18,22 +18,20 @@ import { mount } from 'enzyme';
 import * as HIG from 'hig.web';
 import React from 'react';
 
-import GlobalNav from '../../../adapters/GlobalNav/GlobalNavAdapter';
-import SideNav from './SideNav';
-import Search from '../../../adapters/SearchAdapter';
-import SectionList from './SectionList';
-import Section from './Section';
-import Group from './Group';
-import Module from './Module';
-import Submodule from './Submodule';
+import GlobalNav from '../GlobalNavAdapter';
+import SideNav from './SideNavAdapter';
+import Search from './SearchAdapter';
+import SectionList from '../../../elements/components/GlobalNav/SectionList';
+import Section from './SectionAdapter';
+import Group from './GroupAdapter';
+import Module from './ModuleAdapter';
+import Submodule from './SubmoduleAdapter';
 
-import LinkList from './LinkList';
+import LinkList from '../../../elements/components/GlobalNav/LinkList';
 
 describe('<SideNav>', () => {
   function createHigNav() {
     const higContainer = document.createElement('div');
-
-    // use spread here to clone defaults since HIG.Button mutates this object
     const higNav = new HIG.GlobalNav();
 
     higNav.mount(higContainer);

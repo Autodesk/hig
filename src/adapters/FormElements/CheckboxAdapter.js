@@ -26,15 +26,14 @@ export class CheckboxAdapter extends HIGElement {
   }
 
   componentDidMount() {
-    if (this.props.required) {
-      this.hig.required();
-    }
-    if (this.props.checked) {
-      this.hig.check();
-    }
-    if (this.props.disabled) {
-      this.hig.disable();
-    }
+    this.commitUpdate([
+      'required',
+      this.props.required,
+      'disabled',
+      this.props.disabled,
+      'checked',
+      this.props.disabled
+    ]);
   }
 
   commitUpdate(updatePayload, oldProps, newProps) {
@@ -52,7 +51,9 @@ export class CheckboxAdapter extends HIGElement {
           this.hig.setValue(propValue);
           break;
         case 'required':
-          propValue ? this.hig.required() : this.hig.noLongerRequired();
+          propValue
+            ? this.hig.required(propValue)
+            : this.hig.noLongerRequired();
           break;
         case 'checked':
           propValue ? this.hig.check() : this.hig.uncheck();
@@ -105,7 +106,7 @@ const CheckboxAdapterComponent = createComponent(CheckboxAdapter);
 CheckboxAdapterComponent.propTypes = {
   disabled: PropTypes.bool,
   checked: PropTypes.bool,
-  required: PropTypes.bool,
+  required: PropTypes.string,
   onHover: PropTypes.func,
   onChange: PropTypes.func,
   onFocus: PropTypes.func,
@@ -129,7 +130,7 @@ CheckboxAdapterComponent.__docgenInfo = {
       description: 'boolean - sets whether the checkbox is disabled'
     },
     required: {
-      description: 'boolean - sets the whether the checkbox is required'
+      description: 'string - sets the whether the checkbox is required and displays the provided message'
     },
     label: {
       description: 'sets the label text for the checkbox'

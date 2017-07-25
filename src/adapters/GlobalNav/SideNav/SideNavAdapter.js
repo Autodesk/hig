@@ -15,29 +15,21 @@ limitations under the License.
 
 */
 import * as PropTypes from 'prop-types';
-import createComponent from '../../../adapters/createComponent';
-import HIGElement from '../../HIGElement';
-import HIGChildValidator from '../../HIGChildValidator';
 
-import SectionListComponent, { SectionList } from './SectionList';
-import LinkListComponent, { LinkList } from './LinkList';
-import SearchComponent, {
-  SearchAdapter
-} from '../../../adapters/SearchAdapter';
+import HIGElement from '../../../elements/HIGElement';
+import HIGChildValidator from '../../../elements/HIGChildValidator';
+import createComponent from '../../createComponent';
 
-export class SideNav extends HIGElement {
-  constructor(HIGConstructor, initialProps) {
-    super(HIGConstructor, initialProps);
+import SectionListComponent, {
+  SectionList
+} from '../../../elements/components/GlobalNav/SectionList';
+import LinkListComponent, {
+  LinkList
+} from '../../../elements/components/GlobalNav/LinkList';
+import SearchComponent, { SearchAdapter } from './SearchAdapter';
 
-    this.state = {};
-    this.setActiveModule = this.setActiveModule.bind(this);
-  }
-
+export class SideNavAdapter extends HIGElement {
   componentDidMount() {
-    this.filter = this.filter.bind(this);
-
-    this.hig.el.addEventListener('moduleActivated', this.setActiveModule);
-
     if (this.sections) {
       this.sections.mount();
     }
@@ -49,8 +41,6 @@ export class SideNav extends HIGElement {
     if (this.search) {
       this.hig.addSearch(this.search.hig);
       this.search.mount();
-      this.search.hig.onInput(this.filter);
-      this.search.hig.onClearIconClick(this.filter);
     }
   }
 
@@ -96,7 +86,6 @@ export class SideNav extends HIGElement {
 
         if (this.mounted) {
           instance.componentDidMount();
-          instance.hig.onInput(this.filter);
         }
       }
     } else {
@@ -123,28 +112,9 @@ export class SideNav extends HIGElement {
 
     instance.unmount();
   }
-
-  filter(event) {
-    const query = event.target.value;
-    this.sections.forEach(section => {
-      section.commitUpdate({ query });
-    });
-  }
-
-  setActiveModule(event) {
-    this.state.activeModule = event.detail.activeModule;
-    this.state.activeSubmodule = event.detail.activeSubmodule;
-    this._render();
-  }
-
-  _render() {
-    this.sections.forEach(section => {
-      section.commitUpdate(this.state);
-    });
-  }
 }
 
-const SideNavComponent = createComponent(SideNav);
+const SideNavComponent = createComponent(SideNavAdapter);
 
 SideNavComponent.propTypes = {
   addSection: PropTypes.func,

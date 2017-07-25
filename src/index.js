@@ -39,8 +39,10 @@ const Link = GlobalNav.SideNav.LinkList.Link;
 const Search = GlobalNav.SideNav.Search;
 const SectionList = GlobalNav.SideNav.SectionList;
 const Section = GlobalNav.SideNav.SectionList.Section;
+const SectionCollapse = GlobalNav.SideNav.SectionList.Section.SectionCollapse;
 const Group = GlobalNav.SideNav.SectionList.Section.Group;
 const Module = GlobalNav.SideNav.SectionList.Section.Group.Module;
+const ModuleCollapse = GlobalNav.SideNav.SectionList.Section.Group.Module.ModuleCollapse;
 const Submodule = GlobalNav.SideNav.SectionList.Section.Group.Module.Submodule;
 const TopNav = GlobalNav.TopNav;
 const Profile = GlobalNav.TopNav.Profile;
@@ -87,10 +89,16 @@ class App extends React.Component {
       activeLabel: `${topNavFixtures.accountList()[0].label} / ${topNavFixtures.projectList()[0].label}`,
       activeImage: topNavFixtures.projectList()[0].image,
       activeType: 'project',
-      modules: []
+      modules: [],
+      sideNavOpen: false
     };
 
     this.setTextFieldValue = this.setTextFieldValue.bind(this);
+    this.toggleSidenav = this.toggleSidenav.bind(this);
+  }
+
+  toggleSidenav() {
+    this.setState({ sideNavOpen: !this.state.sideNavOpen });
   }
 
   handleTopNavSearchInputChange = event => {
@@ -198,7 +206,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <GlobalNav>
+        <GlobalNav sideNavOpen={this.state.sideNavOpen}>
           <SideNav>
             <LinkList>
               {links.map((link, i) => {
@@ -207,6 +215,7 @@ class App extends React.Component {
             </LinkList>
             <SectionList>
               <Section headerLabel="Project" headerName="ThunderStorm">
+                <SectionCollapse />
                 {topNavFixtures.menu().sections[0].groups.map((group, i) => {
                   return (
                     <Group key={i}>
@@ -218,6 +227,7 @@ class App extends React.Component {
                             title={module.label}
                             key={module.label}
                           >
+                            <ModuleCollapse />
                             {module.submodules.map(submodule => {
                               return (
                                 <Submodule
@@ -246,6 +256,7 @@ class App extends React.Component {
                 </Group>
               </Section>
               <Section headerLabel="Account" headerName="GlobalConstruction">
+                <SectionCollapse />
                 {topNavFixtures.menu().sections[1].groups.map((group, i) => {
                   return (
                     <Group key={i}>
@@ -257,6 +268,7 @@ class App extends React.Component {
                             title={module.label}
                             key={module.label}
                           >
+                            <ModuleCollapse />
                             {module.submodules.map(submodule => {
                               return (
                                 <Submodule
@@ -276,7 +288,11 @@ class App extends React.Component {
             </SectionList>
             <Search placeholder="Find module or submodule" />
           </SideNav>
-          <TopNav logo={logo} logoLink="http://autodesk.com">
+          <TopNav
+            logo={logo}
+            logoLink="http://autodesk.com"
+            onHamburgerClick={this.toggleSidenav}
+          >
             <ProjectAccountSwitcher
               activeLabel={this.state.activeLabel}
               activeImage={this.state.activeImage}
@@ -504,7 +520,7 @@ class App extends React.Component {
                   label="I AGREE"
                   name="tsandcs"
                   value="asd"
-                  required={true}
+                  required="You must check this box"
                 />
                 <Checkbox label="Not required" name="tsandcs" value="dfdf" />
                 <Checkbox
@@ -537,13 +553,13 @@ class App extends React.Component {
                   label="I AGREE"
                   name="tsandcs"
                   value="asd"
-                  required={true}
+                  required="Required"
                 />
                 <RadioButton
                   label="Not required"
                   name="tsandcs"
                   value="dfdf"
-                  required={false}
+                  required={null}
                 />
                 <RadioButton
                   label="Disabled"
@@ -589,6 +605,7 @@ class App extends React.Component {
                 onChange={this.logEvent}
                 onFocus={this.logEvent}
                 onInput={this.logEvent}
+                name="say-my-name"
               />
             </section>
 

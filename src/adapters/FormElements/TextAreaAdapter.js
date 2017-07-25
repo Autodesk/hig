@@ -25,6 +25,15 @@ class TextAreaAdapter extends HIGElement {
     super(HIG.TextArea, initialProps);
   }
 
+  componentDidMount() {
+    this.commitUpdate([
+      'disabled',
+      this.initialProps.disabled,
+      'required',
+      this.initialProps.required
+    ]);
+  }
+
   commitUpdate(updatePayload, oldProps, newProps) {
     for (let i = 0; i < updatePayload.length; i += 2) {
       const propKey = updatePayload[i];

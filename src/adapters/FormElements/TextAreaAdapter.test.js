@@ -104,7 +104,8 @@ describe('<TextAreaAdapter>', () => {
       name: 'updatedFieldName',
       placeholder: 'Was it Fluffy?',
       required: 'You really must fill this in.',
-      value: 'Rex'
+      value: 'Rex',
+      disabled: true
     };
 
     higTextArea.setInstructions(nextProps.instructions);
@@ -113,6 +114,7 @@ describe('<TextAreaAdapter>', () => {
     higTextArea.setPlaceholder(nextProps.placeholder);
     higTextArea.required(nextProps.required);
     higTextArea.setValue(nextProps.value);
+    higTextArea.disable();
 
     wrapper.setProps(nextProps);
 

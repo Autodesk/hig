@@ -18,7 +18,9 @@ import createComponent from '../../../adapters/createComponent';
 import HIGChildValidator from '../../HIGChildValidator';
 import HIGNodeList from '../../HIGNodeList';
 
-import LinkComponent, { Link } from './Link';
+import LinkComponent, {
+  Link
+} from '../../../adapters/GlobalNav/SideNav/LinkAdapter';
 
 // Does not extend HIGElement because it's not a real HIG component
 export class LinkList {

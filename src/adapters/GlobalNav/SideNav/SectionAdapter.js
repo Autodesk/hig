@@ -16,75 +16,68 @@ limitations under the License.
 */
 import * as PropTypes from 'prop-types';
 
-import createComponent from '../../../adapters/createComponent';
-import HIGElement from '../../HIGElement';
-import HIGNodeList from '../../HIGNodeList';
-import HIGChildValidator from '../../HIGChildValidator';
-import GroupComponent, { Group } from './Group';
-import SectionCollapseComponent, { SectionCollapse } from './SectionCollapse';
+import createComponent from '../../createComponent';
+import HIGElement from '../../../elements/HIGElement';
+import HIGNodeList from '../../../elements/HIGNodeList';
+import HIGChildValidator from '../../../elements/HIGChildValidator';
+import GroupComponent, { GroupAdapter } from './GroupAdapter';
+import SectionCollapseComponent, {
+  SectionCollapseAdapter
+} from './SectionCollapseAdapter';
 
 export class Section extends HIGElement {
   constructor(HIGConstructor, initialProps) {
     super(HIGConstructor, initialProps);
+
     this.groups = new HIGNodeList({
-      type: Group,
+      type: GroupAdapter,
       HIGConstructor: this.hig.partials.Group,
       onAdd: (instance, beforeInstance) => {
         this.hig.addGroup(instance, beforeInstance);
       }
-    });
-
-    this.state = {
-      collapsed: true,
-      query: initialProps.query
-    };
-
-    ['toggleCollapsed', '_render'].forEach(fn => {
-      this[fn] = this[fn].bind(this);
     });
   }
 
   componentDidMount() {
     this.groups.componentDidMount();
 
-    this.collapse = new SectionCollapse(this.hig.partials.Collapse, {
-      isCollapsed: this.state.collapsed
-    });
-    this.hig.addCollapse(this.collapse.hig);
-    this.collapse.mount();
-    this.collapse.hig.onClick(this.toggleCollapsed);
-    this._render();
+    if (this.collapse) {
+      this.hig.addCollapse(this.collapse.hig);
+      this.collapse.mount();
+    }
   }
 
   commitUpdate(updatePayload, oldProps, newProp) {
-    this.processUpdateProps(updatePayload)
-      .mapToHIGFunctions({
-        headerLabel: 'setHeaderLabel',
-        headerName: 'setHeaderName'
-      })
-      .then(this._render);
-  }
+    for (let i = 0; i < updatePayload.length; i += 2) {
+      const propKey = updatePayload[i];
+      const propValue = updatePayload[i + 1];
 
-  toggleCollapsed() {
-    this.state.collapsed = !this.state.collapsed;
-    if (this.state.collapsed) {
-      this.groups.forEach(group => {
-        group.collapseModules();
-      });
-    } else {
-      this.groups.forEach(group => {
-        group.expandModules();
-      });
+      switch (propKey) {
+        case 'headerLabel': {
+          this.hig.setHeaderLabel(propValue);
+          break;
+        }
+        case 'headerName': {
+          this.hig.setHeaderName(propValue);
+          break;
+        }
+        case 'children': {
+          // No-op
+          break;
+        }
+        default: {
+          console.warn(`${propKey} is unknown`);
+        }
+      }
     }
-    this._render();
   }
 
   createElement(ElementConstructor, props) {
     switch (ElementConstructor) {
-      case Group:
+      case GroupAdapter:
         return this.groups.createElement(ElementConstructor, props);
-      case SectionCollapse:
-        return new SectionCollapse(this.hig.partials.Collapse, props);
+      case SectionCollapseAdapter:
+        return new SectionCollapseAdapter(props);
       default:
         throw new Error(`Unknown type ${ElementConstructor.name}`);
     }
@@ -95,37 +88,32 @@ export class Section extends HIGElement {
   }
 
   appendChild(instance) {
-    if (instance instanceof Group) {
+    if (instance instanceof GroupAdapter) {
       this.groups.insertBefore(instance); // calls internal _appendChild if no "before" component
+    } else if (instance instanceof SectionCollapseAdapter) {
+      if (this.collapse) {
+        throw new Error('only one SectionCollapse is allowed');
+      } else {
+        this.collapse = instance;
+
+        if (this.mounted) {
+          instance.componentDidMount();
+        }
+      }
+    } else {
+      throw new Error('unknown type');
     }
   }
 
   removeChild(instance) {
-    this.groups.removeChild(instance);
-  }
-
-  _render() {
-    if (this.collapse) {
-      this.collapse.commitUpdate(['isCollapsed', this.state.collapsed]);
+    if (instance instanceof GroupAdapter) {
+      this.groups.removeChild(instance);
     }
 
-    const childVisibility = this.groups.map(group => {
-      group.commitUpdate({
-        query: this.props.query,
-        activeModule: this.props.activeModule,
-        activeSubmodule: this.props.activeSubmodule
-      });
-
-      return group.isVisible();
-    });
-
-    if (childVisibility.some(v => v) || !this.props.query) {
-      this.hig.show();
-    } else {
-      this.hig.hide();
+    if (instance instanceof SectionCollapseAdapter) {
+      this.collpase = null;
+      instance.unmount();
     }
-
-    this.props.query ? this.collapse.hig.hide() : this.collapse.hig.show();
   }
 }
 
@@ -134,7 +122,6 @@ const SectionComponent = createComponent(Section);
 SectionComponent.propTypes = {
   headerLabel: PropTypes.string,
   headerName: PropTypes.string,
-  query: PropTypes.string,
   children: HIGChildValidator([GroupComponent, SectionCollapseComponent])
 };
 
@@ -146,10 +133,6 @@ SectionComponent.__docgenInfo = {
 
     headerName: {
       description: 'sets the name'
-    },
-
-    query: {
-      description: 'query to filter children against'
     },
 
     children: {

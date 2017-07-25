@@ -18,7 +18,9 @@ import createComponent from '../../../adapters/createComponent';
 import HIGNodeList from '../../HIGNodeList';
 import HIGChildValidator from '../../HIGChildValidator';
 
-import SectionComponent, { Section } from './Section';
+import SectionComponent, {
+  Section
+} from '../../../adapters/GlobalNav/SideNav/SectionAdapter';
 
 // Does not extend HIGElement because it's not a real HIG component
 export class SectionList {

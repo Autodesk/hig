@@ -23,10 +23,10 @@ import { default as RadioButton } from './RadioButtonAdapter';
 const inputId = '1234';
 
 describe('<RadioButton>', () => {
-  function createHigRadioButton(defaults = {}) {
+  function createHigComponent(defaults = {}) {
     const higContainer = document.createElement('div');
 
-    // use spread here to clone defaults since HIG.RadioButton mutates this object
+    // use spread here to clone defaults since HIG.Checkbox mutates this object
     const higRadioButton = new HIG.RadioButton({ ...defaults });
 
     higRadioButton.mount(higContainer);
@@ -37,178 +37,103 @@ describe('<RadioButton>', () => {
     label.setAttribute('for', inputId);
     input.setAttribute('id', inputId);
 
-    return { higRadioButton, higContainer };
+    return { higComponent: higRadioButton, higContainer };
   }
 
-  function createComponent(defaults) {
-    const container = document.createElement('div');
-    mount(<RadioButton {...defaults} />, { attachTo: container });
+  function createOrionComponent(defaults) {
+    const orionContainer = document.createElement('div');
+    const orionWrapper = mount(<RadioButton {...defaults} />, {
+      attachTo: orionContainer
+    });
 
-    const label = container.querySelector('label');
-    const input = container.querySelector('input');
+    const label = orionContainer.querySelector('label');
+    const input = orionContainer.querySelector('input');
 
     // to adjust for the randomly generated id
     label.setAttribute('for', inputId);
     input.setAttribute('id', inputId);
-    return container;
+    return { orionWrapper, orionContainer };
   }
 
-  it('renders the standard  RadioButton', () => {
-    const defaults = {
-      name: 'agree_toc',
-      label: 'I agree',
-      value: 'agree'
-    };
+  it('renders', () => {
+    const defaults = {};
+    const { higComponent, higContainer } = createHigComponent(defaults);
+    const { orionContainer, orionWrapper } = createOrionComponent(defaults);
 
-    const { higRadioButton, higContainer } = createHigRadioButton(defaults);
-    const container = createComponent(defaults);
+    expect(orionContainer.firstElementChild.outerHTML).toMatchSnapshot();
 
-    expect(container.firstElementChild.outerHTML).toMatchSnapshot();
-
-    expect(container.firstElementChild.outerHTML).toEqual(
+    expect(orionContainer.firstElementChild.outerHTML).toEqual(
       higContainer.firstElementChild.outerHTML
     );
-    expect(container.querySelector('label').getAttribute('class')).not.toMatch(
-      /hig--hidden/
-    );
   });
 
-  it('does not show a label if not specified', () => {
+  it('renders with initial props', () => {
     const defaults = {
-      label: '',
-      name: 'agree_toc',
-      value: 'agree'
+      label: 'Label',
+      name: 'some-ame',
+      value: 'some-value'
     };
+    const { higComponent, higContainer } = createHigComponent(defaults);
+    const { orionContainer, orionWrapper } = createOrionComponent(defaults);
 
-    const { higRadioButton, higContainer } = createHigRadioButton(defaults);
-    const container = createComponent(defaults);
+    expect(orionContainer.firstElementChild.outerHTML).toMatchSnapshot();
 
-    expect(container.firstElementChild.outerHTML).toMatchSnapshot();
-
-    expect(container.firstElementChild.outerHTML).toEqual(
+    expect(orionContainer.firstElementChild.outerHTML).toEqual(
       higContainer.firstElementChild.outerHTML
     );
-
-    expect(container.querySelector('label').textContent).toEqual('');
-    expect(container.querySelector('label').getAttribute('class')).toMatch(
-      /hig--hidden/
-    );
   });
 
-  it(`sets attributes correctly by default`, () => {
-    const defaults = {
-      label: 'check attributes'
+  it('renders with updated props', () => {
+    const defaults = {};
+    const nextProps = {
+      label: 'Label',
+      name: 'some-name',
+      value: 'some-value',
+      checked: true,
+      required: 'You must make a selection',
+      disabled: true
     };
+    const { higComponent, higContainer } = createHigComponent(defaults);
+    const { orionContainer, orionWrapper } = createOrionComponent(defaults);
 
-    const { higRadioButton, higContainer } = createHigRadioButton(defaults);
-    expect(higContainer.querySelector('input').getAttribute('required')).toBe(
-      null
-    );
-    expect(higContainer.querySelector('input').getAttribute('disabled')).toBe(
-      null
-    );
-  });
+    orionWrapper.setProps(nextProps);
 
-  it('properly updates name value and label', () => {
-    const defaults = {
-      label: '',
-      name: '',
-      value: ''
-    };
-    const { higRadioButton, higContainer } = createHigRadioButton(defaults);
+    higComponent.setLabel(nextProps.label);
+    higComponent.setName(nextProps.name);
+    higComponent.setValue(nextProps.value);
+    higComponent.check();
+    higComponent.required(nextProps.required);
+    higComponent.disable();
 
-    higRadioButton.setLabel('NEW LABEL!');
+    expect(orionContainer.firstElementChild.outerHTML).toMatchSnapshot();
 
-    expect(
-      higContainer.querySelector('label').getAttribute('class')
-    ).not.toMatch(/hig--hidden/);
-    expect(higContainer.querySelector('label').textContent).toEqual(
-      'NEW LABEL!'
-    );
-
-    higRadioButton.setValue('newvalue');
-    expect(higContainer.querySelector('input').getAttribute('value')).toEqual(
-      'newvalue'
-    );
-
-    higRadioButton.setName('newname');
-    expect(higContainer.querySelector('input').getAttribute('name')).toEqual(
-      'newname'
+    expect(orionContainer.firstElementChild.outerHTML).toEqual(
+      higContainer.firstElementChild.outerHTML
     );
   });
 
-  it('properly updates required,disabled,checked when set to true', () => {
-    const defaults = {
-      name: 'agree_toc',
-      label: 'I agree',
-      value: 'agree'
-    };
-
-    const higContainer = document.createElement('div');
-    const wrapper = mount(<RadioButton {...defaults} />, {
-      attachTo: higContainer
-    });
-
-    expect(higContainer.querySelector('input').getAttribute('required')).toBe(
-      null
-    );
-    expect(higContainer.querySelector('input').getAttribute('disabled')).toBe(
-      null
-    );
-    expect(higContainer.querySelector('input').getAttribute('checked')).toBe(
-      null
-    );
-
-    wrapper.setProps({ required: true });
-    expect(higContainer.querySelector('input').getAttribute('required')).toBe(
-      ''
-    );
-
-    wrapper.setProps({ checked: true });
-    expect(higContainer.querySelector('input').checked).toBe(true);
-
-    wrapper.setProps({ disabled: true });
-    expect(higContainer.querySelector('input').getAttribute('disabled')).toBe(
-      'true'
-    );
-  });
-
-  ['onChange'].forEach(eventName => {
-    it(`sets up ${eventName} initially`, () => {
-      const eventSpy = jest.fn();
-      const reactContainer = document.createElement('div');
-      const wrapper = mount(<RadioButton {...{ onChange: eventSpy }} />, {
-        attachTo: reactContainer
+  ['onChange', 'onFocus', 'onHover'].forEach(eventName => {
+    it(`sets event listeners for ${eventName} initially`, () => {
+      const { orionContainer, orionWrapper } = createOrionComponent({
+        [eventName]: () => {}
       });
-      const instance = wrapper.instance().instance;
-      instance.events['onChange']();
+      const instance = orionWrapper.instance().instance;
 
-      // expect onClickSpy to be called
-      expect(eventSpy).toBeCalled();
+      const disposeFunction = instance._disposeFunctions.get(eventName);
+      expect(disposeFunction).toBeDefined();
     });
 
-    it(`sets new events`, () => {
-      const eventSpy = jest.fn();
-      const reactContainer = document.createElement('div');
-      const wrapper = mount(<RadioButton />, { attachTo: reactContainer });
-
-      wrapper.setProps({
-        onChange: eventSpy,
-        onHover: eventSpy,
-        onFocus: eventSpy
+    it(`sets event listeners for ${eventName} when updated`, () => {
+      const { orionContainer, orionWrapper } = createOrionComponent({
+        [eventName]: () => {}
       });
-    });
+      orionWrapper.setProps({ [eventName]: () => {} });
+      const instance = orionWrapper.instance().instance;
 
-    it('warns if the prop is not recognized', () => {
-      const eventSpy = jest.fn();
-      const reactContainer = document.createElement('div');
-      const wrapper = mount(<RadioButton />, { attachTo: reactContainer });
-
-      let oldwarn = console.warn;
-      console.warn = eventSpy;
-      wrapper.setProps({ foo: 'bar' });
-      expect(eventSpy).toBeCalled();
-      console.warn = oldwarn;
+      const disposeFunction = instance._disposeFunctions.get(
+        `${eventName}Dispose`
+      );
+      expect(disposeFunction).toBeDefined();
     });
   });
 });
