@@ -24,7 +24,6 @@ export class AccountAdapter extends HIGElement {
     super(HIGConstructor, initialProps);
 
     this.props = { ...initialProps };
-    // this.callOnActivateCallback = this.callOnActivateCallback.bind(this);
   }
 
   componentDidMount() {
@@ -33,7 +32,6 @@ export class AccountAdapter extends HIGElement {
     } else {
       this.hig.deactivate();
     }
-    // this.hig.onClick(this.callOnActivateCallback);
   }
 
   commitUpdate(updatePayload, oldProps, newProp) {

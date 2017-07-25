@@ -160,6 +160,7 @@ ProjectAccountSwitcherComponent.propTypes = {
   open: PropTypes.bool,
   onAccountChange: PropTypes.func,
   onProjectChange: PropTypes.func,
+
   children: HIGChildValidator([AccountComponent, ProjectComponent])
 };
 
@@ -168,11 +169,32 @@ ProjectAccountSwitcherComponent.__docgenInfo = {
     open: {
       description: '{bool} opens the project/account switcher'
     },
-    onAccountChange: {
-      description: 'calls the provided callback when an account is activated in the switcher'
+    close: {
+      description: '{bool} closes the project/account switcher'
     },
-    onProjectChange: {
-      description: 'calls the provided callback when a project is activated in the switcher'
+    addProject: {
+      description: 'Pass in an instance of a ProjectAccountSwitcher Account'
+    },
+    showCaret: {
+      description: 'shows a caret indicating a flyout in Project Account Switcher'
+    },
+    hideCaret: {
+      description: 'removes caret indicating a flyout in Project Account Switcher'
+    },
+    setActiveLabel: {
+      description: 'Sets the label displayed in the top nav'
+    },
+    setActiveImage: {
+      description: 'Sets the image displayed in the top nav'
+    },
+    setActiveType: {
+      description: 'Sets the type of the item displayed in the top nav'
+    },
+    onClickOutside: {
+      description: 'Calls the provided callback when the switcher is open and the user clicks outside the switcher'
+    },
+    onClick: {
+      description: 'Calls the provided callback when user clicks on the switcher in the top nav'
     },
     children: {
       description: 'support adding Project and Account'
