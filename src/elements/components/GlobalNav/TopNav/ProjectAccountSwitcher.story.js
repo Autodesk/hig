@@ -56,12 +56,17 @@ storiesOf('ProjectAccountSwitcher', module)
       <GlobalNav>
         <TopNav logo={logo}>
           <ProjectAccountSwitcher
-            onProjectChange={action('Project activated')}
-            onAccountChange={action('Account activated')}
+            activeLabel="Hospital Builders / Oakland Medical Center"
+            activeImage={project1}
+            activeType={'project'}
+            open={true}
+            onClickOutside={action('clicked outside')}
+            onClick={action('clicked')}
+            showCaret={true}
           >
-            <Account image={project1} label="Hospital Builders" />
+            <Account image={project1} label="Hospital Builders" active={true} />
             <Account image={project2} label="DPI Construction" />
-            <Project image={project3} label="Oakland Medical Center" />
+            <Project image={project3} label="Oakland Medical Center" active={true}/>
             <Project image={project4} label="Stanford Hospital" />
           </ProjectAccountSwitcher>
           <Profile />
@@ -83,8 +88,16 @@ storiesOf('ProjectAccountSwitcher', module)
     return (
       <GlobalNav>
         <TopNav logo={logo}>
-          <ProjectAccountSwitcher>
-            <Account image={project1} label="Hospital Builders" />
+          <ProjectAccountSwitcher
+            activeLabel="Hospital Builders / Oakland Medical Center"
+            activeImage={project1}
+            activeType={'project'}
+            open={false}
+            onClickOutside={null}
+            onClick={null}
+            showCaret={false}
+          >
+            <Account image={project1} label="Hospital Builders"  />
             <Project image={project3} label="Oakland Medical Center" />
           </ProjectAccountSwitcher>
           <Profile />

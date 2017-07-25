@@ -20,7 +20,7 @@ import React from 'react';
 
 import GlobalNav from '../../../../adapters/GlobalNav/GlobalNavAdapter';
 import TopNav from './TopNav';
-import ProjectAccountSwitcher from './ProjectAccountSwitcher';
+import ProjectAccountSwitcher from '../../../../adapters/ProjectAccountSwitcherAdapter';
 import SharedExamples from './../SharedExamples';
 
 const Project = ProjectAccountSwitcher.Project;
@@ -28,10 +28,14 @@ const Account = ProjectAccountSwitcher.Account;
 
 const defaultProps = {
   projects: [
-    { label: 'My cool project', image: 'my-cool-project.png' },
-    { label: 'My other project', image: 'my-other-project.png' }
+    { label: 'My cool project', image: 'my-cool-project.png', active: true, id: 1 },
+    { label: 'My other project', image: 'my-other-project.png', active: false, id: 3 }
   ],
-  accounts: []
+  accounts: [
+    { label: 'My cool account', image: 'my-cool-account.png', active: true, id: 2 },
+    { label: 'My other account', image: 'my-other-account.png', active: false, id: 4 }
+  ]
+
 };
 
 const Context = props => {
@@ -41,13 +45,20 @@ const Context = props => {
   return (
     <GlobalNav>
       <TopNav>
-        <ProjectAccountSwitcher open={props.open}>
+        <ProjectAccountSwitcher open={props.open}
+          activeLabel={`${projects[0].label} / ${accounts[0].label}`}
+          activeImage={accounts[0].image}
+          activeType={'account'}
+          showCaret={accounts.length > 1 || projects.length > 1 ? true : false}
+          
+        >
           {accounts.map(account => {
             return (
               <Account
                 label={account.label}
                 image={account.image}
                 key={account.label}
+                active= {account.active}
               />
             );
           })}
@@ -57,6 +68,7 @@ const Context = props => {
                 label={project.label}
                 image={project.image}
                 key={project.label}
+                active = {project.active}
               />
             );
           })}
@@ -80,9 +92,12 @@ function createHigContext(props) {
   );
   higTopNav.addProjectAccountSwitcher(projectAccountSwitcher);
 
-  props.accounts.forEach(accountProps => {
+  props.accounts.forEach((accountProps, i) => {
     const account = new projectAccountSwitcher.partials.Account(accountProps);
     projectAccountSwitcher.addAccount(account);
+    if (i === 0) {
+      account.activate();
+    }
   });
 
   props.projects.forEach((projectProps, i) => {
@@ -115,7 +130,7 @@ describe('<ProjectAccountSwitcher>', () => {
     it('sets the flyout as open if initialized as open', () => {
       const reactContainer = document.createElement('div');
       const wrapper = mount(
-        <Context {...{ open: true, activeLabel: 'someLabel' }} />,
+        <Context {...{ open: true, ...defaultProps }} />,
         {
           attachTo: reactContainer
         }
@@ -150,9 +165,12 @@ describe('<ProjectAccountSwitcher>', () => {
   describe('Project Account Switcher flyout', () => {
     it('is not visible when only 1 project or account exists', () => {
       const props = {
-        ...defaultProps,
         projects: [
-          { label: 'Just this one project', image: 'just-this-one-image.png' }
+          { label: 'Just this one project', image: 'just-this-one-image.png',  active: true, id: 1 }
+        ],
+
+        accounts: [
+          { label: 'Just this one account', image: 'just-this-one-account.png',  active: true, id: 1 }
         ]
       };
       const reactContainer = document.createElement('div');

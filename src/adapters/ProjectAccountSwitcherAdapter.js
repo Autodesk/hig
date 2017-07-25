@@ -16,19 +16,19 @@ limitations under the License.
 */
 
 import * as PropTypes from 'prop-types';
-import HIGElement from '../../../HIGElement';
-import HIGNodeList from '../../../HIGNodeList';
-import HIGChildValidator from '../../../HIGChildValidator';
-import createComponent from '../../../../adapters/createComponent';
-import AccountComponent, { Account } from './Account';
-import ProjectComponent, { Project } from './Project';
+import HIGElement from '../elements/HIGElement';
+import HIGNodeList from '../elements/HIGNodeList';
+import HIGChildValidator from '../elements/HIGChildValidator';
+import createComponent from './createComponent';
+import AccountComponent, { AccountAdapter } from './AccountAdapter';
+import ProjectComponent, { ProjectAdapter } from './ProjectAdapter';
 
-export class ProjectAccountSwitcher extends HIGElement {
+export class ProjectAccountSwitcherAdapter extends HIGElement {
   constructor(HIGConstructor, initialProps) {
     super(HIGConstructor, initialProps);
 
     this.accounts = new HIGNodeList({
-      type: Account,
+      type: AccountAdapter,
       HIGConstructor: this.hig.partials.Account,
       onAdd: (instance, beforeInstance) => {
         this.hig.addAccount(instance, beforeInstance);
@@ -36,24 +36,12 @@ export class ProjectAccountSwitcher extends HIGElement {
     });
 
     this.projects = new HIGNodeList({
-      type: Project,
+      type: ProjectAdapter,
       HIGConstructor: this.hig.partials.Project,
       onAdd: (instance, beforeInstance) => {
         this.hig.addProject(instance, beforeInstance);
       }
     });
-
-    // [
-    //   '_render',
-    //   'openFlyout',
-    //   'closeFlyout',
-    //   'setActiveAccount',
-    //   'setActiveProject'
-    // ].forEach(fn => {
-    //   this[fn] = this[fn].bind(this);
-    // });
-
-    // this.state = {};
   }
 
   componentDidMount() {
@@ -62,6 +50,11 @@ export class ProjectAccountSwitcher extends HIGElement {
 
     if (this.initialProps.open === true) {
       this.hig.open();
+    }
+    if (this.initialProps.showCaret) {
+      this.hig.showCaret()
+    } else {
+      this.hig.hideCaret()
     }
 
     this.commitUpdate(this.props);
@@ -81,12 +74,24 @@ export class ProjectAccountSwitcher extends HIGElement {
           }
           break;
         }
+        case 'showCaret': {
+          if (propValue) {
+            this.hig.showCaret();
+          } else {
+            this.hig.hideCaret();
+          }
+          break;
+        }
         case 'activeLabel': {
           this.hig.setActiveLabel(propValue);
           break;
         }
         case 'activeType': {
           this.hig.setActiveType(propValue);
+          break;
+        }
+        case 'activeImage': {
+          this.hig.setActiveImage(propValue);
           break;
         }
         case 'onClickOutside': {
@@ -115,6 +120,10 @@ export class ProjectAccountSwitcher extends HIGElement {
           );
           break;
         }
+        case 'children': {
+          //no-op
+          break;
+        }
         default: {
           console.warn(`${propKey} is unknown`);
         }
@@ -122,26 +131,11 @@ export class ProjectAccountSwitcher extends HIGElement {
     }  
   }
 
-  // commitUpdate(updatePayload, oldProps, newProp) {
-  //   this.processUpdateProps(updatePayload)
-  //     .mapToHIGEventListeners(['onClick', 'onClickOutside'])
-  //     .handle('open', value => {
-  //       this.props.open = value;
-  //     })
-  //     .handle('onAccountChange', value => {
-  //       this.props.onAccountChange = value;
-  //     })
-  //     .handle('onProjectChange', value => {
-  //       this.props.onProjectChange = value;
-  //     })
-  //     .then(this._render);
-  // }
-
   createElement(ElementConstructor, props) {
     switch (ElementConstructor) {
-      case Project:
+      case ProjectAdapter:
         return this.projects.createElement(ElementConstructor, props);
-      case Account:
+      case AccountAdapter:
         return this.accounts.createElement(ElementConstructor, props);
       default:
         throw new Error(`Unknown type ${ElementConstructor.name}`);
@@ -149,9 +143,9 @@ export class ProjectAccountSwitcher extends HIGElement {
   }
 
   insertBefore(instance, beforeChild = {}) {
-    if (instance instanceof Account) {
+    if (instance instanceof AccountAdapter) {
       this.accounts.insertBefore(instance);
-    } else if (instance instanceof Project) {
+    } else if (instance instanceof ProjectAdapter) {
       this.projects.insertBefore(instance);
     } else {
       throw new Error(
@@ -159,82 +153,9 @@ export class ProjectAccountSwitcher extends HIGElement {
       );
     }
   }
-
-  // openFlyout() {
-  //   this.state.open = true;
-  //   this._render();
-  // }
-
-  // closeFlyout() {
-  //   this.state.open = false;
-  //   this._render();
-  // }
-
-  // setActiveAccount(account) {
-  //   this.state.activeAccount = account;
-  //   this.state.open = false;
-  //   this._render();
-  //   if (this.props.onAccountChange) {
-  //     this.props.onAccountChange(account);
-  //   }
-  // }
-
-  // setActiveProject(project) {
-  //   this.state.activeProject = project;
-  //   this.state.open = false;
-  //   this._render();
-  //   if (this.props.onProjectChange) {
-  //     this.props.onProjectChange(project);
-  //   }
-  // }
-
-//   _render() {
-//     let open = this.props.open;
-//     if (open === undefined) {
-//       open = this.state.open;
-//     }
-//     open ? this.hig.open() : this.hig.close();
-
-//     if (this.projects.length > 1 || this.accounts.length > 1) {
-//       this.hig.showCaret();
-//       this.configureHIGEventListener('onClick', this.openFlyout);
-//       this.configureHIGEventListener('onClickOutside', this.closeFlyout);
-//     } else {
-//       this.hig.hideCaret();
-//       this.configureHIGEventListener('onClick', undefined);
-//       this.configureHIGEventListener('onClickOutside', undefined);
-//     }
-
-//     this.accounts.forEach(account => {
-//       account === this.state.activeAccount
-//         ? account.hig.activate()
-//         : account.hig.deactivate();
-//     });
-//     this.projects.forEach(project => {
-//       project === this.state.activeProject
-//         ? project.hig.activate()
-//         : project.hig.deactivate();
-//     });
-
-//     if (this.state.activeAccount && this.state.activeProject) {
-//       this.hig.setActiveLabel(
-//         `${this.state.activeAccount.props.label} / ${this.state.activeProject.props.label}`
-//       );
-//       this.hig.setActiveImage(this.state.activeProject.props.image);
-//       this.hig.setActiveType('project');
-//     } else if (this.state.activeAccount) {
-//       this.hig.setActiveLabel(this.state.activeAccount.props.label);
-//       this.hig.setActiveImage(this.state.activeAccount.props.image);
-//       this.hig.setActiveType('account');
-//     } else if (this.state.activeProject) {
-//       this.hig.setActiveLabel(this.state.activeProject.props.label);
-//       this.hig.setActiveImage(this.state.activeProject.props.image);
-//       this.hig.setActiveType('project');
-//     }
-//   }
 }
 
-const ProjectAccountSwitcherComponent = createComponent(ProjectAccountSwitcher);
+const ProjectAccountSwitcherComponent = createComponent(ProjectAccountSwitcherAdapter);
 
 ProjectAccountSwitcherComponent.propTypes = {
   open: PropTypes.bool,

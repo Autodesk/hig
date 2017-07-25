@@ -20,8 +20,8 @@ import React from 'react';
 
 import GlobalNav from '../../../../adapters/GlobalNav/GlobalNavAdapter';
 import TopNav from './TopNav';
-import ProjectAccountSwitcher from './ProjectAccountSwitcher';
-import Account from './Account';
+import ProjectAccountSwitcher from '../../../../adapters/ProjectAccountSwitcherAdapter';
+import Account from '../../../../adapters/AccountAdapter';
 import SharedExamples from './../SharedExamples';
 
 const onItemClick = function() {
@@ -36,13 +36,19 @@ const Context = props => {
   return (
     <GlobalNav>
       <TopNav>
-        <ProjectAccountSwitcher>
+        <ProjectAccountSwitcher
+          activeLabel={props.accounts[0].label}
+          activeImage={props.accounts[0].image}
+          activeType={'account'}
+          showCaret={props.accounts.length > 1 ? true : false}
+        >
           {props.accounts.map(account => {
             return (
               <Account
                 image={account.image}
                 label={account.label}
                 key={account.key}
+                active={account.active}
               />
             );
           })}
@@ -55,9 +61,9 @@ const Context = props => {
 function setupAccounts() {
   const props = {
     accounts: [
-      { image: 'something.jpg', label: 'Oakland Medical Center', key: 1 },
-      { image: 'foo.jpg', label: 'Berkeley Medical Center', key: 2 },
-      { image: 'bar.jpg', label: 'UCSF Medical Center', key: 3 }
+      { image: 'something.jpg', label: 'Oakland Medical Center', key: 1, id: 1, active: true },
+      { image: 'foo.jpg', label: 'Berkeley Medical Center', key: 2, id: 2, active: false },
+      { image: 'bar.jpg', label: 'UCSF Medical Center', key: 3, id: 3, active: false }
     ]
   };
   const reactContainer = document.createElement('div');

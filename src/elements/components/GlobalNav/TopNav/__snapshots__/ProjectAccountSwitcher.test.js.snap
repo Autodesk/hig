@@ -21,12 +21,12 @@ exports[`<ProjectAccountSwitcher> constructor has a good snapshot 1`] = `
     <div class=\\"hig__global-nav__top-nav____project-account-switcher\\">
     <div class=\\"hig__flyout\\">
     <div class=\\"hig__global-nav__top-nav__project-account-switcher__target\\">
-    <div class=\\"hig__global-nav__top-nav__project-account-switcher__item hig__global-nav__top-nav__project-account-switcher__item--project\\">
+    <div class=\\"hig__global-nav__top-nav__project-account-switcher__item hig__global-nav__top-nav__project-account-switcher__item--account\\">
     <span class=\\"hig__global-nav__top-nav__project-account-switcher__item__image-wrapper\\">
-        <img class=\\"hig__global-nav__top-nav__project-account-switcher__item__image\\" src=\\"my-cool-project.png\\" alt=\\"My cool project\\" width=\\"32\\" height=\\"32\\">
-        <span class=\\"hig__global-nav__top-nav__project-account-switcher__item__image-placeholder\\"></span>
+        <img class=\\"hig__global-nav__top-nav__project-account-switcher__item__image\\" src=\\"my-cool-account.png\\" alt=\\"My cool project / My cool account\\" width=\\"32\\" height=\\"32\\">
+        <span class=\\"hig__global-nav__top-nav__project-account-switcher__item__image-placeholder\\">MCP/MCA</span>
     </span>
-    <span class=\\"hig__global-nav__top-nav__project-account-switcher__item__label\\"></span>
+    <span class=\\"hig__global-nav__top-nav__project-account-switcher__item__label\\">My cool project / My cool account</span>
 </div><!--ITEM-->
     <span class=\\"hig__global-nav__top-nav__project-account-switcher__target__caret\\"><svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret\\"><title>hig/icon/caret</title><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.815 -10)\\" stroke-width=\\"1.5\\" stroke=\\"#979797\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"></polyline></svg></span>
 </div><!--TARGET-->
@@ -35,7 +35,19 @@ exports[`<ProjectAccountSwitcher> constructor has a good snapshot 1`] = `
         <div class=\\"hig__flyout__panel\\">
             <div class=\\"hig__global-nav__top-nav__project-account-switcher__lists\\">
     <div class=\\"hig__global-nav__top-nav__project-account-switcher__lists__list\\">
-        <!--ACCOUNTS-->
+        <div class=\\"hig__global-nav__top-nav__project-account-switcher__item hig__global-nav__top-nav__project-account-switcher__item--account hig__global-nav__top-nav__project-account-switcher__item--active\\">
+    <span class=\\"hig__global-nav__top-nav__project-account-switcher__item__image-wrapper\\">
+        <img class=\\"hig__global-nav__top-nav__project-account-switcher__item__image\\" src=\\"my-cool-account.png\\" alt=\\"My cool account\\" width=\\"32\\" height=\\"32\\">
+        <span class=\\"hig__global-nav__top-nav__project-account-switcher__item__image-placeholder\\">MCA</span>
+    </span>
+    <span class=\\"hig__global-nav__top-nav__project-account-switcher__item__label\\">My cool account</span>
+</div><div class=\\"hig__global-nav__top-nav__project-account-switcher__item hig__global-nav__top-nav__project-account-switcher__item--account\\">
+    <span class=\\"hig__global-nav__top-nav__project-account-switcher__item__image-wrapper\\">
+        <img class=\\"hig__global-nav__top-nav__project-account-switcher__item__image\\" src=\\"my-other-account.png\\" alt=\\"My other account\\" width=\\"32\\" height=\\"32\\">
+        <span class=\\"hig__global-nav__top-nav__project-account-switcher__item__image-placeholder\\">MOA</span>
+    </span>
+    <span class=\\"hig__global-nav__top-nav__project-account-switcher__item__label\\">My other account</span>
+</div><!--ACCOUNTS-->
     </div>
     <div class=\\"hig__global-nav__top-nav__project-account-switcher__lists__list\\">
         <div class=\\"hig__global-nav__top-nav__project-account-switcher__item hig__global-nav__top-nav__project-account-switcher__item--project hig__global-nav__top-nav__project-account-switcher__item--active\\">

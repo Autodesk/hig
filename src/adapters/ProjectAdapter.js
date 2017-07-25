@@ -16,20 +16,23 @@ limitations under the License.
 */
 
 import * as PropTypes from 'prop-types';
-import HIGElement from '../../../HIGElement';
-import createComponent from '../../../../adapters/createComponent';
+import HIGElement from '../elements/HIGElement';
+import createComponent from './createComponent';
 
-export class Project extends HIGElement {
+export class ProjectAdapter extends HIGElement {
   constructor(HIGConstructor, initialProps) {
     super(HIGConstructor, initialProps);
 
     this.props = { ...initialProps };
-    // this.callOnActivateCallback = this.callOnActivateCallback.bind(this);
   }
 
-  // componentDidMount() {
-  //   this.hig.onClick(this.callOnActivateCallback);
-  // }
+  componentDidMount() {
+    if (this.initialProps.active) {
+      this.hig.activate();
+    } else {
+      this.hig.deactivate();
+    }
+  }
 
   commitUpdate(updatePayload, oldProps, newProp) {
     for (let i = 0; i < updatePayload.length; i += 2) {
@@ -66,26 +69,12 @@ export class Project extends HIGElement {
           );
           break;
         }
+        default: {
+          console.warn(`${propKey} is unknown`);
+        } 
       }
     }  
   }
-
-  // commitUpdate(updatePayload, oldProps, newProp) {
-  //   this.processUpdateProps(updatePayload)
-  //     .mapToHIGFunctions({
-  //       image: 'setImage',
-  //       label: 'setLabel'
-  //     })
-  //     .mapToHIGEventListeners(['onClick'])
-  //     .handle('active', value => {
-  //       if (value) {
-  //         this.hig.activate();
-  //         this.callOnActivateCallback();
-  //       } else {
-  //         this.hig.deactivate();
-  //       }
-  //     });
-  // }
 
   onActivate(callback) {
     this._onActivate = callback;
@@ -100,7 +89,7 @@ export class Project extends HIGElement {
   }
 }
 
-const ProjectComponent = createComponent(Project);
+const ProjectComponent = createComponent(ProjectAdapter);
 
 ProjectComponent.propTypes = {
   image: PropTypes.string,

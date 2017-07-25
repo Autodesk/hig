@@ -16,10 +16,10 @@ limitations under the License.
 */
 
 import * as PropTypes from 'prop-types';
-import HIGElement from '../../../HIGElement';
-import createComponent from '../../../../adapters/createComponent';
+import createComponent from './createComponent';
+import HIGElement from '../elements/HIGElement';
 
-export class Account extends HIGElement {
+export class AccountAdapter extends HIGElement {
   constructor(HIGConstructor, initialProps) {
     super(HIGConstructor, initialProps);
 
@@ -27,10 +27,14 @@ export class Account extends HIGElement {
     // this.callOnActivateCallback = this.callOnActivateCallback.bind(this);
   }
 
-  // componentDidMount() {
-    
-  //   this.hig.onClick(this.callOnActivateCallback);
-  // }
+  componentDidMount() {
+    if (this.initialProps.active) {
+      this.hig.activate();
+    } else {
+      this.hig.deactivate();
+    }
+    // this.hig.onClick(this.callOnActivateCallback);
+  }
 
   commitUpdate(updatePayload, oldProps, newProp) {
     for (let i = 0; i < updatePayload.length; i += 2) {
@@ -67,26 +71,13 @@ export class Account extends HIGElement {
           );
           break;
         }
+        default: {
+          console.warn(`${propKey} is unknown`);
+        }
       }
     }  
   }
 
-  // commitUpdate(updatePayload, oldProps, newProp) {
-  //   this.processUpdateProps(updatePayload)
-  //     .mapToHIGFunctions({
-  //       image: 'setImage',
-  //       label: 'setLabel'
-  //     })
-  //     .mapToHIGEventListeners(['onClick'])
-  //     .handle('active', value => {
-  //       if (value) {
-  //         this.hig.activate();
-  //         this.callOnActivateCallback();
-  //       } else {
-  //         this.hig.deactivate();
-  //       }
-  //     });
-  // }
 
   onActivate(callback) {
     this._onActivate = callback;
@@ -101,7 +92,7 @@ export class Account extends HIGElement {
   }
 }
 
-const AccountComponent = createComponent(Account);
+const AccountComponent = createComponent(AccountAdapter);
 
 AccountComponent.propTypes = {
   image: PropTypes.string,

@@ -83,7 +83,10 @@ class App extends React.Component {
       accounts: topNavFixtures.accountList(),
       accountSwitcherIsOpen: false,
       activeAccount: topNavFixtures.accountList()[0],
-      actveProject: topNavFixtures.projectList()[0],
+      activeProject: topNavFixtures.projectList()[0],
+      activeLabel: `${topNavFixtures.accountList()[0].label} / ${topNavFixtures.projectList()[0].label}`,
+      activeImage: topNavFixtures.projectList()[0].image,
+      activeType: 'project',
       modules: [],
 
     };
@@ -136,34 +139,45 @@ class App extends React.Component {
   };
 
   setActiveProjectOrAccount = activeProjectOrAccountItem => {
-    this.setState({activeProjectOrAccount: activeProjectOrAccountItem.id})
-    this.setProjectOrAccountTarget(activeProjectOrAccountItem)
+    this.selectProjectOrAccountTarget(activeProjectOrAccountItem)
     this.setState({isOpen: false});
   };
 
-  setProjectOrAccountTarget = targetItem => {
+  selectProjectOrAccountTarget = targetItem => {
     if (targetItem.type === 'account') {
-      this.state.accounts.forEach(
-        function(account) {
+      this.state.accounts.forEach(account => {
           if (account.id === targetItem.id) {
-            this.setState({ activeAccount: account });
+            this.setState(
+              { activeAccount: account,
+                activeLabel:  this.state.activeProject ? `${account.label} / ${this.state.activeProject.label}` : account.label,
+                activeImage: this.state.activeProject.image,
+                activeType: 'account'
+              }
+            );
           }
-        }.bind(this)
+        }
       );
     }
 
     if (targetItem.type === 'project') {
-      this.state.projects.forEach(
-        function(project) {
+      this.state.projects.forEach(project =>  {
           if (project.id === targetItem.id) {
-            this.setState({ activeProject: project });
+            this.setState(
+              { activeProject: project ,
+                activeLabel: this.state.activeAccount ? `${this.state.activeAccount.label} / ${project.label}` : project.label,
+                activeImage: project.image,
+                activeType: 'project'
+              }
+            );
           }
-        }.bind(this)
+        }
       );
     }
-  }; 
-
-
+  };
+  
+  retreiveProjectOrAccountLength = () => {
+    return this.state.projects.length > 1 || this.state.accounts.length > 1 
+  }
 
   logEvent(event, higElement) {
     let messageParts = [
@@ -265,16 +279,13 @@ class App extends React.Component {
           </SideNav>
           <TopNav logo={logo} logoLink="http://autodesk.com">
             <ProjectAccountSwitcher
-              activeLabel={`${this.state.activeAccount.props.label} / ${this.state.activeProject.props.label}`}
-              activeImage={this.state.projectOrAcccountTarget.image}
-              activeType={this.state.projectOrAcccountTarget.type}
+              activeLabel={this.state.activeLabel}
+              activeImage={this.state.activeImage}
+              activeType={this.state.activeType}
               open={this.state.isOpen}
               onClickOutside = {this.closeProjectAccountSwitcher}
-              onClick = {this.openProjectAccountSwitcher}
-              onAccountChange={account =>
-                console.log(`Account selected`, account)}
-              onProjectChange={project =>
-                console.log(`Project selected`, project)}
+              onClick = {this.retreiveProjectOrAccountLength() ? this.openProjectAccountSwitcher : null}
+              showCaret = {this.retreiveProjectOrAccountLength() ? true : false}
             >
               {this.state.projects.map((project, i) => {
                 return (
@@ -282,7 +293,7 @@ class App extends React.Component {
                     image={project.image}
                     label={project.label}
                     key={project.id}
-                    active = {this.state.activeProjectOrAccount === project.id}
+                    active = {this.state.activeProject.id === project.id }
                     onClick = {this.setActiveProjectOrAccount.bind(this, {
                       id: project.id,
                       type: project.type
@@ -296,7 +307,7 @@ class App extends React.Component {
                     image={account.image}
                     label={account.label}
                     key={account.id}
-                    active = {this.state.activeProjectOrAccount === account.id}
+                    active = {this.state.activeAccount.id === account.id }
                     onClick = {this.setActiveProjectOrAccount.bind(this, {
                       id: account.id,
                       type: account.type
