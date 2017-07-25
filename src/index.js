@@ -82,7 +82,8 @@ class App extends React.Component {
       projects: topNavFixtures.projectList(),
       accounts: topNavFixtures.accountList(),
       accountSwitcherIsOpen: false,
-      projectOrAcccountTarget: topNavFixtures.accountList()[0],
+      activeAccount: topNavFixtures.accountList()[0],
+      actveProject: topNavFixtures.projectList()[0],
       modules: [],
 
     };
@@ -145,7 +146,7 @@ class App extends React.Component {
       this.state.accounts.forEach(
         function(account) {
           if (account.id === targetItem.id) {
-            this.setState({ projectOrAcccountTarget: account });
+            this.setState({ activeAccount: account });
           }
         }.bind(this)
       );
@@ -155,7 +156,7 @@ class App extends React.Component {
       this.state.projects.forEach(
         function(project) {
           if (project.id === targetItem.id) {
-            this.setState({ projectOrAcccountTarget: project });
+            this.setState({ activeProject: project });
           }
         }.bind(this)
       );
@@ -264,7 +265,7 @@ class App extends React.Component {
           </SideNav>
           <TopNav logo={logo} logoLink="http://autodesk.com">
             <ProjectAccountSwitcher
-              activeLabel={this.state.projectOrAcccountTarget.label}
+              activeLabel={`${this.state.activeAccount.props.label} / ${this.state.activeProject.props.label}`}
               activeImage={this.state.projectOrAcccountTarget.image}
               activeType={this.state.projectOrAcccountTarget.type}
               open={this.state.isOpen}
