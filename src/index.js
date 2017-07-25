@@ -431,25 +431,20 @@ class App extends React.Component {
                   label="I AGREE"
                   name="tsandcs"
                   value="asd"
-                  required="true"
+                  required={true}
                 />
-                <Checkbox
-                  label="Not required"
-                  name="tsandcs"
-                  value="dfdf"
-                  required="false"
-                />
+                <Checkbox label="Not required" name="tsandcs" value="dfdf" />
                 <Checkbox
                   label="Disabled"
                   name="tsandcs"
                   value="hhh"
-                  disabled="true"
+                  disabled={true}
                 />
                 <Checkbox
                   label="Checked"
                   name="tsandcs"
                   value="werr"
-                  checked="true"
+                  checked={true}
                 />
                 <Checkbox name="nolabel" value="somevalue" />
                 <Checkbox

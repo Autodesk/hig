@@ -59,7 +59,9 @@ describe('<IconButton>', () => {
   });
 
   it('renders the icon button with updated props', () => {
-    const defaults = {};
+    const defaults = {
+      icon: 'gear'
+    };
 
     const { higButton, higContainer } = createHigButton(defaults);
     const container = document.createElement('div');
@@ -71,7 +73,7 @@ describe('<IconButton>', () => {
     const nextProps = {
       title: 'icon button',
       link: 'http://example.com',
-      icon: 'gear',
+      icon: 'assets',
       disabled: true
     };
 
@@ -115,9 +117,12 @@ describe('<IconButton>', () => {
     it(`sets event listeners for ${eventName} initially`, () => {
       const spy = jest.fn();
       const container = document.createElement('div');
-      const wrapper = mount(<IconButton {...{ [eventName]: spy }} />, {
-        attachTo: container
-      });
+      const wrapper = mount(
+        <IconButton icon="gear" {...{ [eventName]: spy }} />,
+        {
+          attachTo: container
+        }
+      );
       const instance = wrapper.instance().instance;
 
       const disposeFunction = instance._disposeFunctions.get(eventName);
@@ -127,7 +132,7 @@ describe('<IconButton>', () => {
     it(`sets event listeners for ${eventName} when updated`, () => {
       const spy = jest.fn();
       const container = document.createElement('div');
-      const wrapper = mount(<IconButton />, {
+      const wrapper = mount(<IconButton icon="gear" />, {
         attachTo: container
       });
       wrapper.setProps({ [eventName]: spy });

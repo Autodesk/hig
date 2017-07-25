@@ -149,6 +149,10 @@ class GlobalNav extends HIGElement {
           propValue ? this.hig.showSideNav() : this.hig.hideSideNav();
           break;
         }
+        case 'children': {
+          // No-op
+          break;
+        }
         default: {
           console.warn(`${propKey} is unknown`);
         }
