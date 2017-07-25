@@ -108,11 +108,11 @@ exports[`<TopNav> renders a topnav 1`] = `
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__name\\">name</div>
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__email\\">email@example.com</div>
     <div class=\\"src__components__global-nav__top-nav__profile__profile-flyout-content__links\\">
-        <a href=\\"#\\" class=\\"hig__button hig__button--secondary hig__button--small\\" title=\\"Sign Out\\">
+        <a href=\\"#\\" tabindex=\\"0\\" class=\\"hig__button hig__button--secondary hig__button--small\\" title=\\"Sign Out\\">
     <!--ICON-->
     <span class=\\"hig__button__title\\">Sign Out</span>
 </a><!--SIGN_OUT_BUTTON-->
-        <a href=\\"https://www.autodesk.com\\" class=\\"hig__button hig__button--secondary hig__button--small\\" title=\\"Profile Settings\\">
+        <a href=\\"https://www.autodesk.com\\" tabindex=\\"0\\" class=\\"hig__button hig__button--secondary hig__button--small\\" title=\\"Profile Settings\\">
     <!--ICON-->
     <span class=\\"hig__button__title\\">Profile Settings</span>
 </a><!--SETTINGS_LINK-->

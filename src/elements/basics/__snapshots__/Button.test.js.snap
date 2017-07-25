@@ -1,91 +1,91 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Button> removes the title if it is no longer specified 1`] = `
-"<a href=\\"#\\" class=\\"hig__button hig__button--primary hig__button--standard\\" title=\\"undefined\\">
+"<a href=\\"#\\" tabindex=\\"0\\" class=\\"hig__button hig__button--primary hig__button--standard\\" title=\\"undefined\\">
     <!--ICON-->
     <span class=\\"hig__button__title\\"></span>
 </a>"
 `;
 
 exports[`<Button> renders the button with an icon 1`] = `
-"<a href=\\"#\\" class=\\"hig__button hig__button--primary hig__button--standard\\" title=\\"link\\">
+"<a href=\\"#\\" tabindex=\\"0\\" class=\\"hig__button hig__button--primary hig__button--standard\\" title=\\"link\\">
     <span class=\\"hig__button__icon\\"><svg width=\\"20\\" height=\\"20\\" viewBox=\\"0 0 20 20\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"gear\\"><path d=\\"M19.9368983,10.4543901 C19.5951319,10.4052173 19.2316926,10.0976789 19.1258284,9.77097137 L18.6181803,8.53665041 C18.4589672,8.23244572 18.4964781,7.75738634 18.7015379,7.4831854 L19.5267786,6.38471476 C19.7318385,6.10968038 19.7160005,5.67295912 19.4876006,5.41626037 L18.5840037,4.51114723 C18.3264285,4.28445222 17.8904681,4.26695004 17.6137207,4.47364254 L16.516734,5.2970788 C16.2416538,5.5037713 15.7681824,5.54127599 15.4630934,5.38125599 L14.2294002,4.87369254 C13.9001375,4.76867942 13.5925478,4.40530066 13.5458675,4.06442472 L13.3508107,2.70675501 C13.3032968,2.36587907 12.9832034,2.05834063 12.6422707,2.02166938 C12.6422707,2.02166938 12.4297087,2 12.0004168,2 C11.5719585,2 11.3593965,2.02166938 11.3593965,2.02166938 C11.0176301,2.05834063 10.6975368,2.36587907 10.6491893,2.70675501 L10.454966,4.06442472 C10.4066186,4.40530066 10.0990289,4.76867942 9.77143333,4.87369254 L8.53774017,5.38125599 C8.23265119,5.54044256 7.75917976,5.5037713 7.48409953,5.2970788 L6.38544576,4.4728091 C6.11036552,4.2661166 5.67357146,4.28278535 5.41599633,4.51031379 L4.51239945,5.41542693 C4.28566665,5.67295912 4.26732797,6.10884694 4.47405493,6.38388132 L5.29762847,7.48235196 C5.50518901,7.75738634 5.54186638,8.23161228 5.38265327,8.53581698 L4.87333806,9.77097137 C4.769141,10.0985123 4.40486809,10.4060508 4.06393531,10.4543901 L2.70603926,10.6469142 C2.36594007,10.696087 2.05835035,11.0152936 2.02250656,11.3578364 C2.02250656,11.3578364 2,11.570363 2,11.9995833 C2,12.4288036 2.02250656,12.6413302 2.02250656,12.6413302 C2.05835035,12.983873 2.36594007,13.3022461 2.70603926,13.3514189 L4.06393531,13.5447764 C4.40403451,13.5939492 4.769141,13.9014877 4.87333806,14.2281952 L5.38265327,15.4616827 C5.54186638,15.7658874 5.50435544,16.2417802 5.29762847,16.5151477 L4.47405493,17.6136184 C4.26732797,17.8886527 4.21731338,18.2628662 4.36402284,18.4420553 C4.50989872,18.6229112 4.9283541,19.0688003 4.92918768,19.0704671 C4.93002126,19.072134 5.07172925,19.2004834 5.24177885,19.3571696 C5.41182845,19.5138559 6.11036552,19.7313831 6.38544576,19.5263575 L7.48326595,18.7012543 C7.75834618,18.4962287 8.23181761,18.4570571 8.5369066,18.6179106 L9.77059976,19.125474 C10.0990289,19.2296537 10.4066186,19.5938659 10.4541325,19.9347418 L10.6483558,21.2924116 C10.6967032,21.6324541 11.015963,21.9416594 11.3585629,21.9774972 C11.3585629,21.9774972 11.5711249,22 11.9995832,22 C12.4288751,22 12.6414371,21.9774972 12.6414371,21.9774972 C12.9823699,21.9416594 13.3024632,21.6324541 13.3499771,21.2924116 L13.545034,19.9347418 C13.5925478,19.5946993 13.9001375,19.2296537 14.2285667,19.125474 L15.4622598,18.6162437 C15.7665152,18.4570571 16.2408202,18.4945618 16.5159005,18.7012543 L17.6145542,19.5263575 C17.8913016,19.7313831 18.3264285,19.7155478 18.5848372,19.4871859 L19.486767,18.5837396 C19.7143333,18.3245406 19.7310049,17.8886527 19.5259451,17.6136184 L18.7007044,16.5151477 C18.4956446,16.2417802 18.4581336,15.7667208 18.6173467,15.4616827 L19.1249948,14.2281952 C19.230859,13.9006542 19.5934648,13.5931158 19.9360647,13.5447764 L21.2922936,13.3514189 C21.6340599,13.3022461 21.9416496,12.983873 21.9774934,12.6413302 C21.9774934,12.6413302 22,12.4288036 22,11.9995833 C22,11.570363 21.9774934,11.3578364 21.9774934,11.3578364 C21.9416496,11.016127 21.6340599,10.696087 21.2922936,10.6469142 L19.9368983,10.4543901 Z M12.0004168,15.4121833 C10.1152098,15.4121833 8.58724779,13.8833385 8.58724779,11.9995833 C8.58724779,10.1146905 10.1152098,8.58698322 12.0004168,8.58698322 C13.8856238,8.58698322 15.4135858,10.115828 15.4135858,11.9995833 C15.4135858,13.8833385 13.8844861,15.4121833 12.0004168,15.4121833 Z\\" transform=\\"translate(-2 -2)\\" fill-rule=\\"nonzero\\" fill=\\"#353636\\"></path></svg></span><!--ICON-->
     <span class=\\"hig__button__title\\">link</span>
 </a>"
 `;
 
 exports[`<Button> renders the disabled button 1`] = `
-"<a href=\\"http://example.com\\" class=\\"hig__button hig__button--primary hig__button--standard hig__button--disabled\\" title=\\"regular button\\" tabindex=\\"-1\\">
+"<a href=\\"http://example.com\\" tabindex=\\"-1\\" class=\\"hig__button hig__button--primary hig__button--standard hig__button--disabled\\" title=\\"regular button\\">
     <!--ICON-->
     <span class=\\"hig__button__title\\">regular button</span>
 </a>"
 `;
 
 exports[`<Button> renders the flat button 1`] = `
-"<a href=\\"http://example.com\\" class=\\"hig__button hig__button--flat hig__button--standard\\" title=\\"Flat button\\">
+"<a href=\\"http://example.com\\" tabindex=\\"0\\" class=\\"hig__button hig__button--flat hig__button--standard\\" title=\\"Flat button\\">
     <!--ICON-->
     <span class=\\"hig__button__title\\">Flat button</span>
 </a>"
 `;
 
 exports[`<Button> renders the large button 1`] = `
-"<a href=\\"http://example.com\\" class=\\"hig__button hig__button--primary hig__button--large\\" title=\\"Large button\\">
+"<a href=\\"http://example.com\\" tabindex=\\"0\\" class=\\"hig__button hig__button--primary hig__button--large\\" title=\\"Large button\\">
     <!--ICON-->
     <span class=\\"hig__button__title\\">Large button</span>
 </a>"
 `;
 
 exports[`<Button> renders the primary button 1`] = `
-"<a href=\\"http://example.com\\" class=\\"hig__button hig__button--primary hig__button--standard\\" title=\\"Primary button\\">
+"<a href=\\"http://example.com\\" tabindex=\\"0\\" class=\\"hig__button hig__button--primary hig__button--standard\\" title=\\"Primary button\\">
     <!--ICON-->
     <span class=\\"hig__button__title\\">Primary button</span>
 </a>"
 `;
 
 exports[`<Button> renders the secondary button 1`] = `
-"<a href=\\"http://example.com\\" class=\\"hig__button hig__button--secondary hig__button--standard\\" title=\\"Secondary button\\">
+"<a href=\\"http://example.com\\" tabindex=\\"0\\" class=\\"hig__button hig__button--secondary hig__button--standard\\" title=\\"Secondary button\\">
     <!--ICON-->
     <span class=\\"hig__button__title\\">Secondary button</span>
 </a>"
 `;
 
 exports[`<Button> renders the small button 1`] = `
-"<a href=\\"http://example.com\\" class=\\"hig__button hig__button--primary hig__button--small\\" title=\\"small button\\">
+"<a href=\\"http://example.com\\" tabindex=\\"0\\" class=\\"hig__button hig__button--primary hig__button--small\\" title=\\"small button\\">
     <!--ICON-->
     <span class=\\"hig__button__title\\">small button</span>
 </a>"
 `;
 
 exports[`<Button> renders the standard button 1`] = `
-"<a href=\\"http://example.com\\" class=\\"hig__button hig__button--primary hig__button--standard\\" title=\\"regular button\\">
+"<a href=\\"http://example.com\\" tabindex=\\"0\\" class=\\"hig__button hig__button--primary hig__button--standard\\" title=\\"regular button\\">
     <!--ICON-->
     <span class=\\"hig__button__title\\">regular button</span>
 </a>"
 `;
 
 exports[`<Button> updates the icon using setIcon 1`] = `
-"<a href=\\"#\\" class=\\"hig__button hig__button--primary hig__button--standard\\" title=\\"link\\">
+"<a href=\\"#\\" tabindex=\\"0\\" class=\\"hig__button hig__button--primary hig__button--standard\\" title=\\"link\\">
     <span class=\\"hig__button__icon\\"><svg width=\\"30\\" height=\\"30\\" viewBox=\\"0 0 30 30\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-92 -185)\\" fill=\\"none\\" fill-rule=\\"evenodd\\"><rect x=\\"92\\" y=\\"185\\" width=\\"30\\" height=\\"30\\"></rect><path d=\\"M100,195 L115,195 L115,196 L100,196 L100,195 Z M100,200 L115,200 L115,201 L100,201 L100,200 Z M100,205 L115,205 L115,206 L100,206 L100,205 Z\\" fill=\\"#34495E\\"></path></g></svg></span><!--ICON-->
     <span class=\\"hig__button__title\\">link</span>
 </a>"
 `;
 
 exports[`<Button> updates the link the same as setLink 1`] = `
-"<a href=\\"http://example.com/2\\" class=\\"hig__button hig__button--primary hig__button--standard\\" title=\\"link\\">
+"<a href=\\"http://example.com/2\\" tabindex=\\"0\\" class=\\"hig__button hig__button--primary hig__button--standard\\" title=\\"link\\">
     <!--ICON-->
     <span class=\\"hig__button__title\\">link</span>
 </a>"
 `;
 
 exports[`<Button> updates the size using setSize 1`] = `
-"<a href=\\"#\\" class=\\"hig__button hig__button--primary hig__button--small hig__button--large\\" title=\\"some title\\">
+"<a href=\\"#\\" tabindex=\\"0\\" class=\\"hig__button hig__button--primary hig__button--small hig__button--large\\" title=\\"some title\\">
     <!--ICON-->
     <span class=\\"hig__button__title\\">some title</span>
 </a>"
 `;
 
 exports[`<Button> updates the title the same as setTitle 1`] = `
-"<a href=\\"#\\" class=\\"hig__button hig__button--primary hig__button--standard\\" title=\\"correct title\\">
+"<a href=\\"#\\" tabindex=\\"0\\" class=\\"hig__button hig__button--primary hig__button--standard\\" title=\\"correct title\\">
     <!--ICON-->
     <span class=\\"hig__button__title\\">correct title</span>
 </a>"
