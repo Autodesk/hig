@@ -81,7 +81,10 @@ class App extends React.Component {
       tabs: [{ label: 'One', id: 0 }, { label: 'Two', id: 1 }],
       projects: topNavFixtures.projectList(),
       accounts: topNavFixtures.accountList(),
-      modules: []
+      accountSwitcherIsOpen: false,
+      projectOrAcccountTarget: topNavFixtures.accountList()[0],
+      modules: [],
+
     };
 
     this.setTextFieldValue = this.setTextFieldValue.bind(this);
@@ -122,6 +125,44 @@ class App extends React.Component {
     modules.push(module);
     this.setState({ modules: modules });
   };
+
+  closeProjectAccountSwitcher = event => {
+    this.setState({ isOpen: false });
+  };
+
+  openProjectAccountSwitcher = event => {
+    this.setState({ isOpen: true });
+  };
+
+  setActiveProjectOrAccount = activeProjectOrAccountItem => {
+    this.setState({activeProjectOrAccount: activeProjectOrAccountItem.id})
+    this.setProjectOrAccountTarget(activeProjectOrAccountItem)
+    this.setState({isOpen: false});
+  };
+
+  setProjectOrAccountTarget = targetItem => {
+    if (targetItem.type === 'account') {
+      this.state.accounts.forEach(
+        function(account) {
+          if (account.id === targetItem.id) {
+            this.setState({ projectOrAcccountTarget: account });
+          }
+        }.bind(this)
+      );
+    }
+
+    if (targetItem.type === 'project') {
+      this.state.projects.forEach(
+        function(project) {
+          if (project.id === targetItem.id) {
+            this.setState({ projectOrAcccountTarget: project });
+          }
+        }.bind(this)
+      );
+    }
+  }; 
+
+
 
   logEvent(event, higElement) {
     let messageParts = [
@@ -223,6 +264,12 @@ class App extends React.Component {
           </SideNav>
           <TopNav logo={logo} logoLink="http://autodesk.com">
             <ProjectAccountSwitcher
+              activeLabel={this.state.projectOrAcccountTarget.label}
+              activeImage={this.state.projectOrAcccountTarget.image}
+              activeType={this.state.projectOrAcccountTarget.type}
+              open={this.state.isOpen}
+              onClickOutside = {this.closeProjectAccountSwitcher}
+              onClick = {this.openProjectAccountSwitcher}
               onAccountChange={account =>
                 console.log(`Account selected`, account)}
               onProjectChange={project =>
@@ -234,6 +281,11 @@ class App extends React.Component {
                     image={project.image}
                     label={project.label}
                     key={project.id}
+                    active = {this.state.activeProjectOrAccount === project.id}
+                    onClick = {this.setActiveProjectOrAccount.bind(this, {
+                      id: project.id,
+                      type: project.type
+                    })}
                   />
                 );
               })}
@@ -243,6 +295,11 @@ class App extends React.Component {
                     image={account.image}
                     label={account.label}
                     key={account.id}
+                    active = {this.state.activeProjectOrAccount === account.id}
+                    onClick = {this.setActiveProjectOrAccount.bind(this, {
+                      id: account.id,
+                      type: account.type
+                    })}
                   />
                 );
               })}

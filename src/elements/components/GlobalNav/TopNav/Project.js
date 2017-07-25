@@ -24,29 +24,68 @@ export class Project extends HIGElement {
     super(HIGConstructor, initialProps);
 
     this.props = { ...initialProps };
-    this.callOnActivateCallback = this.callOnActivateCallback.bind(this);
+    // this.callOnActivateCallback = this.callOnActivateCallback.bind(this);
   }
 
-  componentDidMount() {
-    this.hig.onClick(this.callOnActivateCallback);
-  }
+  // componentDidMount() {
+  //   this.hig.onClick(this.callOnActivateCallback);
+  // }
 
   commitUpdate(updatePayload, oldProps, newProp) {
-    this.processUpdateProps(updatePayload)
-      .mapToHIGFunctions({
-        image: 'setImage',
-        label: 'setLabel'
-      })
-      .mapToHIGEventListeners(['onClick'])
-      .handle('active', value => {
-        if (value) {
-          this.hig.activate();
-          this.callOnActivateCallback();
-        } else {
-          this.hig.deactivate();
+    for (let i = 0; i < updatePayload.length; i += 2) {
+      const propKey = updatePayload[i];
+      const propValue = updatePayload[i + 1];
+
+      switch(propKey) {
+        case 'active': {
+          if (propValue) {
+            this.hig.activate();
+          } else {
+            this.hig.deactivate();
+          }
+          break;
         }
-      });
+        case 'image': {
+          this.hig.setImage(propValue);
+          break;
+        }
+        case 'label': {
+          this.hig.setLabel(propValue);
+          break;
+        }
+        case 'onClick': {
+          const dispose = this._disposeFunctions.get('onClickDispose');
+
+          if (dispose) {
+            dispose();
+          }
+
+          this._disposeFunctions.set(
+            'onClickDispose',
+            this.hig.onClick(propValue)
+          );
+          break;
+        }
+      }
+    }  
   }
+
+  // commitUpdate(updatePayload, oldProps, newProp) {
+  //   this.processUpdateProps(updatePayload)
+  //     .mapToHIGFunctions({
+  //       image: 'setImage',
+  //       label: 'setLabel'
+  //     })
+  //     .mapToHIGEventListeners(['onClick'])
+  //     .handle('active', value => {
+  //       if (value) {
+  //         this.hig.activate();
+  //         this.callOnActivateCallback();
+  //       } else {
+  //         this.hig.deactivate();
+  //       }
+  //     });
+  // }
 
   onActivate(callback) {
     this._onActivate = callback;

@@ -43,22 +43,26 @@ export class ProjectAccountSwitcher extends HIGElement {
       }
     });
 
-    [
-      '_render',
-      'openFlyout',
-      'closeFlyout',
-      'setActiveAccount',
-      'setActiveProject'
-    ].forEach(fn => {
-      this[fn] = this[fn].bind(this);
-    });
+    // [
+    //   '_render',
+    //   'openFlyout',
+    //   'closeFlyout',
+    //   'setActiveAccount',
+    //   'setActiveProject'
+    // ].forEach(fn => {
+    //   this[fn] = this[fn].bind(this);
+    // });
 
-    this.state = {};
+    // this.state = {};
   }
 
   componentDidMount() {
     this.accounts.componentDidMount();
     this.projects.componentDidMount();
+
+    if (this.initialProps.open === true) {
+      this.hig.open();
+    }
 
     this.commitUpdate(this.props);
   }
@@ -147,16 +151,8 @@ export class ProjectAccountSwitcher extends HIGElement {
   insertBefore(instance, beforeChild = {}) {
     if (instance instanceof Account) {
       this.accounts.insertBefore(instance);
-      instance.onActivate(this.setActiveAccount);
-      if (this.state.activeAccount === undefined) {
-        this.state.activeAccount = instance;
-      }
     } else if (instance instanceof Project) {
       this.projects.insertBefore(instance);
-      instance.onActivate(this.setActiveProject);
-      if (this.state.activeProject === undefined) {
-        this.state.activeProject = instance;
-      }
     } else {
       throw new Error(
         `${this.constructor.name} cannot have a child of type ${instance.constructor.name}`
@@ -164,78 +160,78 @@ export class ProjectAccountSwitcher extends HIGElement {
     }
   }
 
-  openFlyout() {
-    this.state.open = true;
-    this._render();
-  }
+  // openFlyout() {
+  //   this.state.open = true;
+  //   this._render();
+  // }
 
-  closeFlyout() {
-    this.state.open = false;
-    this._render();
-  }
+  // closeFlyout() {
+  //   this.state.open = false;
+  //   this._render();
+  // }
 
-  setActiveAccount(account) {
-    this.state.activeAccount = account;
-    this.state.open = false;
-    this._render();
-    if (this.props.onAccountChange) {
-      this.props.onAccountChange(account);
-    }
-  }
+  // setActiveAccount(account) {
+  //   this.state.activeAccount = account;
+  //   this.state.open = false;
+  //   this._render();
+  //   if (this.props.onAccountChange) {
+  //     this.props.onAccountChange(account);
+  //   }
+  // }
 
-  setActiveProject(project) {
-    this.state.activeProject = project;
-    this.state.open = false;
-    this._render();
-    if (this.props.onProjectChange) {
-      this.props.onProjectChange(project);
-    }
-  }
+  // setActiveProject(project) {
+  //   this.state.activeProject = project;
+  //   this.state.open = false;
+  //   this._render();
+  //   if (this.props.onProjectChange) {
+  //     this.props.onProjectChange(project);
+  //   }
+  // }
 
-  _render() {
-    let open = this.props.open;
-    if (open === undefined) {
-      open = this.state.open;
-    }
-    open ? this.hig.open() : this.hig.close();
+//   _render() {
+//     let open = this.props.open;
+//     if (open === undefined) {
+//       open = this.state.open;
+//     }
+//     open ? this.hig.open() : this.hig.close();
 
-    if (this.projects.length > 1 || this.accounts.length > 1) {
-      this.hig.showCaret();
-      this.configureHIGEventListener('onClick', this.openFlyout);
-      this.configureHIGEventListener('onClickOutside', this.closeFlyout);
-    } else {
-      this.hig.hideCaret();
-      this.configureHIGEventListener('onClick', undefined);
-      this.configureHIGEventListener('onClickOutside', undefined);
-    }
+//     if (this.projects.length > 1 || this.accounts.length > 1) {
+//       this.hig.showCaret();
+//       this.configureHIGEventListener('onClick', this.openFlyout);
+//       this.configureHIGEventListener('onClickOutside', this.closeFlyout);
+//     } else {
+//       this.hig.hideCaret();
+//       this.configureHIGEventListener('onClick', undefined);
+//       this.configureHIGEventListener('onClickOutside', undefined);
+//     }
 
-    this.accounts.forEach(account => {
-      account === this.state.activeAccount
-        ? account.hig.activate()
-        : account.hig.deactivate();
-    });
-    this.projects.forEach(project => {
-      project === this.state.activeProject
-        ? project.hig.activate()
-        : project.hig.deactivate();
-    });
+//     this.accounts.forEach(account => {
+//       account === this.state.activeAccount
+//         ? account.hig.activate()
+//         : account.hig.deactivate();
+//     });
+//     this.projects.forEach(project => {
+//       project === this.state.activeProject
+//         ? project.hig.activate()
+//         : project.hig.deactivate();
+//     });
 
-    if (this.state.activeAccount && this.state.activeProject) {
-      this.hig.setActiveLabel(
-        `${this.state.activeAccount.props.label} / ${this.state.activeProject.props.label}`
-      );
-      this.hig.setActiveImage(this.state.activeProject.props.image);
-      this.hig.setActiveType('project');
-    } else if (this.state.activeAccount) {
-      this.hig.setActiveLabel(this.state.activeAccount.props.label);
-      this.hig.setActiveImage(this.state.activeAccount.props.image);
-      this.hig.setActiveType('account');
-    } else if (this.state.activeProject) {
-      this.hig.setActiveLabel(this.state.activeProject.props.label);
-      this.hig.setActiveImage(this.state.activeProject.props.image);
-      this.hig.setActiveType('project');
-    }
-  }
+//     if (this.state.activeAccount && this.state.activeProject) {
+//       this.hig.setActiveLabel(
+//         `${this.state.activeAccount.props.label} / ${this.state.activeProject.props.label}`
+//       );
+//       this.hig.setActiveImage(this.state.activeProject.props.image);
+//       this.hig.setActiveType('project');
+//     } else if (this.state.activeAccount) {
+//       this.hig.setActiveLabel(this.state.activeAccount.props.label);
+//       this.hig.setActiveImage(this.state.activeAccount.props.image);
+//       this.hig.setActiveType('account');
+//     } else if (this.state.activeProject) {
+//       this.hig.setActiveLabel(this.state.activeProject.props.label);
+//       this.hig.setActiveImage(this.state.activeProject.props.image);
+//       this.hig.setActiveType('project');
+//     }
+//   }
 }
 
 const ProjectAccountSwitcherComponent = createComponent(ProjectAccountSwitcher);
