@@ -20,7 +20,7 @@ import HIGElement from '../elements/HIGElement';
 import * as PropTypes from 'prop-types';
 import createComponent from './createComponent';
 
-class TextField extends HIGElement {
+class TextFieldAdapter extends HIGElement {
   constructor(initialProps) {
     super(HIG.TextField, initialProps);
   }
@@ -131,9 +131,9 @@ class TextField extends HIGElement {
   }
 }
 
-const TextFieldComponent = createComponent(TextField);
+const TextFieldComponent = createComponent(TextFieldAdapter);
 
-TextField.propTypes = {
+TextFieldComponent.propTypes = {
   disabled: PropTypes.bool,
   icon: PropTypes.string,
   instructions: PropTypes.string,
@@ -144,46 +144,8 @@ TextField.propTypes = {
   onFocus: PropTypes.func,
   onInput: PropTypes.func,
   placeholder: PropTypes.string,
-  required: PropTypes.bool,
+  required: PropTypes.string,
   value: PropTypes.string
-};
-
-TextField.__docgenInfo = {
-  props: {
-    disabled: {
-      description: 'prevents interaction with the text field'
-    },
-    icon: {
-      description: 'icon for the text field'
-    },
-    instructions: {
-      description: 'instructional text for the text field'
-    },
-    label: {
-      description: 'label for the text field'
-    },
-    name: {
-      description: 'name of the field as submitted with a form'
-    },
-    onBlur: {
-      description: 'callback called when user moves focus away from the text field'
-    },
-    onChange: {
-      description: 'callback called when user changes the value of the text field and moves focus away'
-    },
-    onFocus: {
-      description: 'callback called when user moves focus onto the text field'
-    },
-    onInput: {
-      description: 'callback called when user changes the value of the text field'
-    },
-    placeholder: {
-      description: 'text prompting the user to enter text'
-    },
-    required: {
-      description: 'text indicating that the user must enter a value for this text field'
-    }
-  }
 };
 
 export default TextFieldComponent;

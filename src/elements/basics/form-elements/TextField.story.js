@@ -26,15 +26,19 @@ storiesOf('TextField', module)
     return (
       <TextField
         disabled={boolean('Disabled', false)}
-        instructions={text('Instructions', '')}
+        instructions={text(
+          'Instructions',
+          'This is a controlled field. Change the value in the knobs panel.'
+        )}
         label={text('Label', 'My text field')}
         name={text('Name', 'my-text-field')}
         onBlur={action('blur')}
-        onChange={action('change')}
+        onChange={action('input')}
         onFocus={action('focus')}
         onInput={action('input')}
         placeholder={text('Placeholder', 'Tell me how you really feel')}
         required={text('Required', '')}
+        value={text('Value', '')}
       />
     );
   })
@@ -57,6 +61,7 @@ storiesOf('TextField', module)
         onInput={action('input')}
         placeholder={text('Placeholder', 'Tell me how you really feel')}
         required={text('Required', '')}
+        value={text('Value', '')}
       />
     );
   });
