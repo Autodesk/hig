@@ -29,14 +29,6 @@ import Slot from '../../elements/components/GlobalNav/Slot';
 class GlobalNav extends HIGElement {
   constructor(initialProps) {
     super(HIG.GlobalNav, initialProps);
-
-    ['_toggleSideNav', '_render'].forEach(fn => {
-      this[fn] = this[fn].bind(this);
-    });
-
-    this.state = {
-      sideNavOpen: false
-    };
   }
 
   componentDidMount() {
@@ -66,8 +58,6 @@ class GlobalNav extends HIGElement {
     if (this.slot) {
       this.hig.addSlot(this.slot);
     }
-
-    this._render();
   }
 
   createElement(ElementConstructor, props) {
