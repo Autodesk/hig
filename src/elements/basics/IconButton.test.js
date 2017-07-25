@@ -37,7 +37,7 @@ describe('<IconButton>', () => {
     return { higButton, higContainer };
   }
 
-  it('renders the icon button', () => {
+  it('renders the icon button with initial props', () => {
     const defaults = {
       title: 'icon button',
       link: 'http://example.com',
@@ -46,8 +46,6 @@ describe('<IconButton>', () => {
 
     const { higButton, higContainer } = createHigButton(defaults);
     const container = document.createElement('div');
-    higButton.setIcon('gear');
-    higButton.enable();
 
     const wrapper = mount(<IconButton {...defaults} />, {
       attachTo: container
@@ -60,19 +58,49 @@ describe('<IconButton>', () => {
     );
   });
 
+  it('renders the icon button with updated props', () => {
+    const defaults = {};
+
+    const { higButton, higContainer } = createHigButton(defaults);
+    const container = document.createElement('div');
+
+    const wrapper = mount(<IconButton {...defaults} />, {
+      attachTo: container
+    });
+
+    const nextProps = {
+      title: 'icon button',
+      link: 'http://example.com',
+      icon: 'gear',
+      disabled: true
+    };
+
+    higButton.setTitle(nextProps.title);
+    higButton.setLink(nextProps.link);
+    higButton.setIcon(nextProps.icon);
+    higButton.disable();
+    wrapper.setProps(nextProps);
+
+    expect(container.firstElementChild.outerHTML).toMatchSnapshot();
+
+    expect(container.firstElementChild.outerHTML).toEqual(
+      higContainer.firstElementChild.outerHTML
+    );
+  });
+
   it('renders the disabled icon button', () => {
     const defaults = {
       title: 'icon button',
       link: 'http://example.com',
-      icon: 'gear'
+      icon: 'gear',
+      disabled: true
     };
 
     const { higButton, higContainer } = createHigButton(defaults);
     const container = document.createElement('div');
-    higButton.setIcon('gear');
     higButton.disable();
 
-    const wrapper = mount(<IconButton {...defaults} disabled={true} />, {
+    const wrapper = mount(<IconButton {...defaults} />, {
       attachTo: container
     });
 
@@ -81,5 +109,35 @@ describe('<IconButton>', () => {
     expect(container.firstElementChild.outerHTML).toEqual(
       higContainer.firstElementChild.outerHTML
     );
+  });
+
+  ['onBlur', 'onClick', 'onFocus', 'onHover'].forEach(eventName => {
+    it(`sets event listeners for ${eventName} initially`, () => {
+      const spy = jest.fn();
+      const container = document.createElement('div');
+      const wrapper = mount(<IconButton {...{ [eventName]: spy }} />, {
+        attachTo: container
+      });
+      const instance = wrapper.instance().instance;
+
+      const disposeFunction = instance._disposeFunctions.get(eventName);
+      expect(disposeFunction).toBeDefined();
+    });
+
+    it(`sets event listeners for ${eventName} when updated`, () => {
+      const spy = jest.fn();
+      const container = document.createElement('div');
+      const wrapper = mount(<IconButton />, {
+        attachTo: container
+      });
+      wrapper.setProps({ [eventName]: spy });
+
+      const instance = wrapper.instance().instance;
+
+      const disposeFunction = instance._disposeFunctions.get(
+        `${eventName}Dispose`
+      );
+      expect(disposeFunction).toBeDefined();
+    });
   });
 });
