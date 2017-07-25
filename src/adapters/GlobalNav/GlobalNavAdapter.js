@@ -21,9 +21,15 @@ import HIGElement from '../../elements/HIGElement';
 import HIGChildValidator from '../../elements/HIGChildValidator';
 import createComponent from '../createComponent';
 
-import SideNavComponent, { SideNav } from '../../elements/components/GlobalNav/SideNav';
-import TopNavComponent, { TopNav } from '../../elements/components/GlobalNav/TopNav/TopNav';
-import SubNavComponent, { SubNav } from '../../elements/components/GlobalNav/SubNav';
+import SideNavComponent, {
+  SideNav
+} from '../../elements/components/GlobalNav/SideNav';
+import TopNavComponent, {
+  TopNav
+} from '../../elements/components/GlobalNav/TopNav/TopNav';
+import SubNavComponent, {
+  SubNav
+} from '../../elements/components/GlobalNav/SubNav';
 import Slot from '../../elements/components/GlobalNav/Slot';
 
 class GlobalNav extends HIGElement {
@@ -138,15 +144,20 @@ class GlobalNav extends HIGElement {
       const propKey = updatePayload[i];
       const propValue = updatePayload[i + 1];
 
-      switch(propKey) {
+      switch (propKey) {
         case 'sideNavOpen': {
           propValue ? this.hig.showSideNav() : this.hig.hideSideNav();
+          break;
         }
         default: {
           console.warn(`${propKey} is unknown`);
         }
       }
     }
+  }
+
+  _addSideNavOpenCallback(topNavInstance) {
+    topNavInstance.onHamburgerClick(this._toggleSideNav);
   }
 }
 
