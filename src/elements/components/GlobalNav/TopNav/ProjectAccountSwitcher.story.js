@@ -66,7 +66,11 @@ storiesOf('ProjectAccountSwitcher', module)
           >
             <Account image={project1} label="Hospital Builders" active={true} />
             <Account image={project2} label="DPI Construction" />
-            <Project image={project3} label="Oakland Medical Center" active={true}/>
+            <Project
+              image={project3}
+              label="Oakland Medical Center"
+              active={true}
+            />
             <Project image={project4} label="Stanford Hospital" />
           </ProjectAccountSwitcher>
           <Profile />
@@ -97,7 +101,7 @@ storiesOf('ProjectAccountSwitcher', module)
             onClick={null}
             showCaret={false}
           >
-            <Account image={project1} label="Hospital Builders"  />
+            <Account image={project1} label="Hospital Builders" />
             <Project image={project3} label="Oakland Medical Center" />
           </ProjectAccountSwitcher>
           <Profile />

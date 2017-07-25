@@ -52,20 +52,20 @@ export class ProjectAccountSwitcherAdapter extends HIGElement {
       this.hig.open();
     }
     if (this.initialProps.showCaret) {
-      this.hig.showCaret()
+      this.hig.showCaret();
     } else {
-      this.hig.hideCaret()
+      this.hig.hideCaret();
     }
 
     this.commitUpdate(this.props);
   }
 
-   commitUpdate(updatePayload, oldProps, newProp) {
-     for (let i = 0; i < updatePayload.length; i += 2) {
+  commitUpdate(updatePayload, oldProps, newProp) {
+    for (let i = 0; i < updatePayload.length; i += 2) {
       const propKey = updatePayload[i];
       const propValue = updatePayload[i + 1];
 
-      switch(propKey) {
+      switch (propKey) {
         case 'open': {
           if (propValue) {
             this.hig.open();
@@ -114,10 +114,7 @@ export class ProjectAccountSwitcherAdapter extends HIGElement {
             dispose();
           }
 
-          this._disposeFunctions.set(
-            'onClick',
-            this.hig.onClick(propValue)
-          );
+          this._disposeFunctions.set('onClick', this.hig.onClick(propValue));
           break;
         }
         case 'children': {
@@ -128,7 +125,7 @@ export class ProjectAccountSwitcherAdapter extends HIGElement {
           console.warn(`${propKey} is unknown`);
         }
       }
-    }  
+    }
   }
 
   createElement(ElementConstructor, props) {
@@ -155,7 +152,9 @@ export class ProjectAccountSwitcherAdapter extends HIGElement {
   }
 }
 
-const ProjectAccountSwitcherComponent = createComponent(ProjectAccountSwitcherAdapter);
+const ProjectAccountSwitcherComponent = createComponent(
+  ProjectAccountSwitcherAdapter
+);
 
 ProjectAccountSwitcherComponent.propTypes = {
   open: PropTypes.bool,

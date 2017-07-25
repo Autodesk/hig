@@ -20,7 +20,8 @@ import React from 'react';
 
 import GlobalNav from '../../../../adapters/GlobalNav/GlobalNavAdapter';
 import TopNav from './TopNav';
-import ProjectAccountSwitcher from '../../../../adapters/ProjectAccountSwitcherAdapter';
+import ProjectAccountSwitcher
+  from '../../../../adapters/ProjectAccountSwitcherAdapter';
 import Account from '../../../../adapters/AccountAdapter';
 import SharedExamples from './../SharedExamples';
 
@@ -61,9 +62,27 @@ const Context = props => {
 function setupAccounts() {
   const props = {
     accounts: [
-      { image: 'something.jpg', label: 'Oakland Medical Center', key: 1, id: 1, active: true },
-      { image: 'foo.jpg', label: 'Berkeley Medical Center', key: 2, id: 2, active: false },
-      { image: 'bar.jpg', label: 'UCSF Medical Center', key: 3, id: 3, active: false }
+      {
+        image: 'something.jpg',
+        label: 'Oakland Medical Center',
+        key: 1,
+        id: 1,
+        active: true
+      },
+      {
+        image: 'foo.jpg',
+        label: 'Berkeley Medical Center',
+        key: 2,
+        id: 2,
+        active: false
+      },
+      {
+        image: 'bar.jpg',
+        label: 'UCSF Medical Center',
+        key: 3,
+        id: 3,
+        active: false
+      }
     ]
   };
   const reactContainer = document.createElement('div');

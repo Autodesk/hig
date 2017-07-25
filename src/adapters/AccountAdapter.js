@@ -41,7 +41,7 @@ export class AccountAdapter extends HIGElement {
       const propKey = updatePayload[i];
       const propValue = updatePayload[i + 1];
 
-      switch(propKey) {
+      switch (propKey) {
         case 'active': {
           if (propValue) {
             this.hig.activate();
@@ -75,9 +75,8 @@ export class AccountAdapter extends HIGElement {
           console.warn(`${propKey} is unknown`);
         }
       }
-    }  
+    }
   }
-
 
   onActivate(callback) {
     this._onActivate = callback;
