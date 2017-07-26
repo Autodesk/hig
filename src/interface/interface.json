@@ -539,6 +539,12 @@
                                 "{String} value - the text inside of the text area"
                             ]
                         },
+                        "setName": {
+                            "desc": "sets the textarea name attribute",
+                            "params": [
+                                "{String} value - value for name attribute of the textarea element"
+                            ]
+                        },
                         "required": {
                             "desc": "makes field required",
                             "params": [
