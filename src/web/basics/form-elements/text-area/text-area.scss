@@ -50,7 +50,7 @@
     .hig__text-area__field--has-value + &,
     .hig__text-area__field--no-value.hig__text-area__field:focus + & {
         top: -22px;
-        left: 1px;
+        left: 0px;
         font-size: 12px;
         transition-delay: 0s;
     }
@@ -106,6 +106,7 @@
         border-style: dashed;
         &:hover {
             border-color: color(hig-gray-40);
+            box-shadow: none;
         }
     }
 }
