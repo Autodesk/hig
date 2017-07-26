@@ -25,6 +25,15 @@
 
             <div class='test-typo-listener'></div>
             <div class='test-mount-listener'></div>
+
+            <div class='test-group'>
+                <div class='tests-text-area-disabled-heading'></div>
+                <div class='tests-text-area-disabled'></div>
+            </div>
+            <div class='test-group'>
+                <div class='tests-text-area-required-heading'></div>
+                <div class='tests-text-area-required'></div>
+            </div>
         </div>
 
         <script>
@@ -49,8 +58,6 @@
             });
 
             DefaultTextArea.mount(".test-mount-default");
-
-
 
             // ----------------------------
             // TEXT AREA WITH SETTERS
@@ -101,6 +108,47 @@
             ListenersTextArea.onChange(log);
             ListenersTextArea.onFocus(log);
             ListenersTextArea.onInput(log);
+
+
+            // ----------------------------
+            // Disabled TEXT AREA WITH NON-DEFAULTS
+            // ----------------------------
+            const DisabledHeading = new Typo.partials.Heading({
+                                                                text: "Disabled TextArea",
+                                                                size: 3,
+                                                              });
+
+            const DisabledTextArea = new Hig.TextArea({
+                                                        label: "None shall pass",
+                                                        disabled: true
+                                                      });
+
+            DisabledHeading.mount('.tests-text-area-disabled-heading');
+            DisabledTextArea.mount('.tests-text-area-disabled');
+            //            DisabledTextArea.disable();
+
+
+            // ----------------------------
+            // REQUIRED TEXT AREA
+            // ----------------------------
+
+            var TitleDefaultTextArea = new Typo.partials.Heading({
+                                                                   "text": "Required TextArea",
+                                                                   "size": 3
+                                                                 });
+
+            TitleDefaultTextArea.mount('.tests-text-area-required-heading');
+
+            var DefaultTextArea = new Hig.TextArea({
+                                                     label: 'Tell us your life story',
+                                                     placeholder: "You must tell us",
+                                                     instructions: "Press keys on your keyboard.",
+                                                     required: "No, really, you must"
+                                                   });
+
+            DefaultTextArea.mount(".tests-text-area-required");
+
+
 
         </script>
 

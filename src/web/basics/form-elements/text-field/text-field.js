@@ -29,11 +29,13 @@ class TextField extends Core {
     }
 
     _componentDidMount() {
-        this._detectPresenceOfValue(this.initialOptions.value);
+        if (this.initialOptions) {
+          this._detectPresenceOfValue(this.initialOptions.value);
+        }
         this.el
             .querySelector('.hig__text-field__input')
             .addEventListener('input', this._handleKeyDown);
-        if (this.initialOptions.icon) {
+        if (this.initialOptions && this.initialOptions.icon) {
             this.setIcon(this.initialOptions.icon);
         }
     }
