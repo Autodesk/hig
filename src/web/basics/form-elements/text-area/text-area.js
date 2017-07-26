@@ -12,10 +12,11 @@ var Core = require('_core.js');
 
 class TextArea extends Core {
 
-  constructor(options) {
+  constructor(options = {}) {
+    options.id = Math.floor(Math.random() * 100000, 5).toString();
     super(options);
     this.labelSelector = '.hig__text-area__label';
-    this.inputSelector = 'textarea';
+    this.inputSelector = '.hig__text-area__field';
     this.initialOptions = options;
 
     this._handleKeyDown = this._handleKeyDown.bind(this);
@@ -44,6 +45,10 @@ class TextArea extends Core {
 
   setPlaceholder(placeholder) {
     this._findDOMEl(this.inputSelector, this.el).setAttribute('placeholder', placeholder);
+  }
+
+  setName(name){
+    this._findDOMEl(this.inputSelector, this.el).setAttribute('name', name);
   }
 
   setValue(value) {

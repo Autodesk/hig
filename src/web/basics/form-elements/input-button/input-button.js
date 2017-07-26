@@ -11,7 +11,7 @@ var Core = require('_core.js');
 
 class InputButton extends Core {
 
-  constructor(options){
+  constructor(options = {}){
     options.id = Math.floor(Math.random() * 100000, 5).toString();
     super(options);
     this.inputClass = 'hig__input-button__input';
