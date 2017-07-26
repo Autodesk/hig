@@ -1,9 +1,9 @@
-<div class="hig__text-area">
-    <!--LABEL-PLACEHOLDER-->
-    {{#label}}<div class="hig__text-area__label-placeholder">{{label}}</div>{{/label}}
-    <textarea class="hig__text-area__field" placeholder="{{ placeholder }}">{{value}}</textarea>
+<div class="hig__text-area {{#disabled}}hig__text-area--disabled{{/disabled}} {{#required}}hig__text-area--required{{/required}}">
+    <textarea class="hig__text-area__field hig__text-area__field--no-value" placeholder="{{ placeholder }}" {{ #disabled }}disabled{{/disabled}}>{{value}}</textarea>
     <!--LABEL-->
-    {{#label}}<label class="hig__text-area__label">{{label}}</label>{{/label}}
+    <label class="hig__text-area__label {{#label}}hig__text-area__label--visible{{/label}}">{{label}}</label>
     <!--INSTRUCTIONS-->
     {{#instructions}}<p class="hig__text-area__instructions">{{instructions}}</p>{{/instructions}}
-</div> 
+    <!--REQUIRED-NOTICE-->
+    {{#required}}<p class="hig__text-area__required-notice">{{required}}</p>{{/required}}
+</div>

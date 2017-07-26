@@ -12,64 +12,111 @@ var Core = require('_core.js');
 
 class TextArea extends Core {
 
-    constructor(options){
-        super(options);
-        this._render(Template, options);
-    }
+  constructor(options) {
+    super(options);
+    this.labelSelector = '.hig__text-area__label';
+    this.inputSelector = 'textarea';
+    this.initialOptions = options;
 
-    setInstructions(instructions) {
-        if (instructions) {
-            const instructionsEl = this._findOrAddElement('INSTRUCTIONS', 'p', '.hig__text-area__instructions');
-            instructionsEl.textContent = instructions;
-        } else {
-            this._removeElementIfFound('.hig__text-area__instructions');
-        }
-    }
+    this._handleKeyDown = this._handleKeyDown.bind(this);
+    this._render(Template, options);
+  }
 
-    setLabel(label) {
-        if (label) {
-            const labelEl = this._findOrAddElement('LABEL', 'label', '.hig__text-area__label');
-            const labelPlaceholderEl = this._findOrAddElement('LABEL-PLACEHOLDER', 'div', '.hig__text-area__label-placeholder');
-            labelEl.textContent = label;
-            labelPlaceholderEl.textContent = label;
-        } else {
-            this._removeElementIfFound('.hig__text-area__label');
-            this._removeElementIfFound('.hig__text-area__label-placeholder');
-        }
+  setInstructions(instructions) {
+    if (instructions) {
+      const instructionsEl = this._findOrAddElement('INSTRUCTIONS', 'p', '.hig__text-area__instructions');
+      instructionsEl.textContent = instructions;
+    } else {
+      this._removeElementIfFound('.hig__text-area__instructions');
     }
+  }
 
-    setPlaceholder(placeholder) {
-        this._findDOMEl('.hig__text-area__field', this.el).setAttribute('placeholder', placeholder);
-    }
 
-    setValue(value) {
-        this._findDOMEl('.hig__text-area__field', this.el).textContent = value;
+  setLabel(label) {
+    const labelEl = this._findDOMEl('.hig__text-area__label', this.el);
+    labelEl.textContent = label;
+    if (label) {
+      labelEl.classList.add('hig__text-area__label--visible')
+    } else {
+      labelEl.classList.remove('hig__text-area__label--visible');
     }
+  }
 
-    onBlur(fn){
-        return this._attachListener("focusout", '.hig__text-area__field', this.el, fn);
-    }
+  setPlaceholder(placeholder) {
+    this._findDOMEl(this.inputSelector, this.el).setAttribute('placeholder', placeholder);
+  }
 
-    onChange(fn){
-        return this._attachListener("change", '.hig__text-area__field', this.el, fn);
-    }
+  setValue(value) {
+    this._findDOMEl(this.inputSelector, this.el).textContent = value;
+    this._detectPresenceOfValue(value)
+  }
 
-    onFocus(fn){
-        return this._attachListener("focusin", '.hig__text-area__field', this.el, fn);
-    }
+  required(requiredLabelText){
+    this.el.classList.add('hig__text-area--required');
+    const requiredNoticeEl = this._findOrAddElement('REQUIRED-NOTICE', 'p', '.hig__text-area__required-notice');
+    requiredNoticeEl.textContent = requiredLabelText;
+  }
 
-    onInput(fn){
-        return this._attachListener("input", '.hig__text-area__field', this.el, fn);
+  noLongerRequired(){
+    this.el.classList.remove('hig__text-area--required');
+    this._removeElementIfFound('.hig__text-area__required-notice');
+  }
+
+  enable() {
+    this._findDOMEl(this.inputSelector, this.el).removeAttribute('disabled');
+    this.el.classList.remove('hig__text-area--disabled');
+  }
+
+  disable() {
+    this._findDOMEl(this.inputSelector, this.el).setAttribute('disabled', 'true');
+    this.el.classList.add('hig__text-area--disabled');
+  }
+
+  onBlur(fn) {
+    return this._attachListener("focusout", this.inputSelector, this.el, fn);
+  }
+
+  onChange(fn) {
+    return this._attachListener("change", this.inputSelector, this.el, fn);
+  }
+
+  onFocus(fn) {
+    return this._attachListener("focusin", this.inputSelector, this.el, fn);
+  }
+
+  onInput(fn) {
+    return this._attachListener("input", this.inputSelector, this.el, fn);
+  }
+
+
+  _componentDidMount() {
+    if (this.initialOptions) {
+      this._detectPresenceOfValue(this.initialOptions.value);
     }
+    this.el
+        .querySelector(this.inputSelector)
+        .addEventListener('input', this._handleKeyDown);
+  }
+
+  _handleKeyDown(event) {
+    this._detectPresenceOfValue(event.target.value);
+  }
+
+  _detectPresenceOfValue(value) {
+    if (value.length === 0) {
+      this.el.querySelector(this.inputSelector).classList.add('hig__text-area__field--no-value');
+      this.el.querySelector(this.inputSelector).classList.remove('hig__text-area__field--has-value');
+    } else {
+      this.el.querySelector(this.inputSelector).classList.remove('hig__text-area__field--no-value');
+      this.el.querySelector(this.inputSelector).classList.add('hig__text-area__field--has-value');
+    }
+  }
 
 }
 
 TextArea._interface = Interface['basics']['FormElements']['partials']['TextArea'];
 TextArea._defaults = {
-    label: '',
-    instructions: '',
-    placeholder: '',
-    value: ''
+  label: '', instructions: '', placeholder: '', value: ''
 };
 TextArea._partials = {};
 

@@ -539,6 +539,21 @@
                                 "{String} value - the text inside of the text area"
                             ]
                         },
+                        "required": {
+                            "desc": "makes field required",
+                            "params": [
+                                "{String} required label text"
+                            ]
+                        },
+                        "noLongerRequired": {
+                            "desc": "makes field not required"
+                        },
+                        "disable": {
+                            "desc": "Disable the text field, preventing user interaction"
+                        },
+                        "enable": {
+                            "desc": "Enable the text field, reenabling user interaction"
+                        },
                         "onBlur": {
                             "desc": "Calls the provided callback when focus leaves the text area",
                             "params": "HIG.abstract.EventObject.params",
