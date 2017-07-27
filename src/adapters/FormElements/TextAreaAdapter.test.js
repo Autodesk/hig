@@ -68,7 +68,6 @@ describe('<TextAreaAdapter>', () => {
 
   it('renders a text field with initial props', () => {
     const defaults = {
-      icon: 'assets',
       instructions: "Don't just do something, sit there.",
       label: 'Name of your first pet',
       name: 'mySpecialField',
@@ -103,7 +102,6 @@ describe('<TextAreaAdapter>', () => {
     setLabelForInputId(orionContainer);
 
     const nextProps = {
-      icon: 'assets',
       instructions: "Don't just do something, sit there.",
       label: 'Name of your first pet',
       name: 'updatedFieldName',

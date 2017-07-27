@@ -26,7 +26,6 @@ class TextAreaAdapter extends HIGElement {
   }
 
   commitUpdate(updatePayload, oldProps, newProps) {
-    console.log(`HERE-------> ${updatePayload}`)
     for (let i = 0; i < updatePayload.length; i += 2) {
       const propKey = updatePayload[i];
       const propValue = updatePayload[i + 1];
@@ -118,7 +117,7 @@ TextAreaComponent.propTypes = {
   label: PropTypes.string,
   name: PropTypes.string,
   placeholder: PropTypes.string,
-  required: PropTypes.bool,
+  required: PropTypes.string,
   value: PropTypes.string,
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
