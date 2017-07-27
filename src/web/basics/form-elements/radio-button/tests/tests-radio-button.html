@@ -60,33 +60,33 @@
  const RadioButton1 = new RadioButton({
   label: "Checked",
   name: "am_i_checked",
-  value: "iagree",
-  checked: true
+  value: "iagree"
  });
 
  RadioButton1.mount('.tests-radiobutton');
+ RadioButton1.check();
 
  const RadioButton2 = new RadioButton({
   label: "Required",
   name: "am_i_checked",
-  value: "work_work",
-  required: true
+  value: "work_work"
  });
 
- console.log(RadioButton2);
+
  RadioButton2.mount('.tests-radiobutton');
  RadioButton2.onChange(handleChange);
  RadioButton2.onHover(handleHover);
  RadioButton2.onFocus(handleFocus);
+ RadioButton2.required();
 
  const RadioButton3 = new RadioButton({
   label: "Disabled",
   name: "am_i_checked",
-  value: "hammertime",
-  disabled: true
+  value: "hammertime"
  });
 
  RadioButton3.mount('.tests-radiobutton');
+ RadioButton3.disable();
 
  const FancyRadioButtonsHeading = new Heading({
   text: "Separately controlled radiobutton",

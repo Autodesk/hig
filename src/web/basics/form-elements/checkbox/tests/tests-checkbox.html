@@ -63,23 +63,23 @@
     const Checkbox1 = new Checkbox({
       label: "Checked",
       name: "agreement",
-      value: "iagree",
-      checked: true
+      value: "iagree"
     });
 
     Checkbox1.mount('.tests-checkbox');
+    Checkbox1.check();
 
     const Checkbox2 = new Checkbox({
       label: "Required",
       name: "ready_to_work",
-      value: "work_work",
-      required: true,
+      value: "work_work"
     });
 
     Checkbox2.mount('.tests-checkbox');
     Checkbox2.onChange(handleChange);
     Checkbox2.onHover(handleHover);
     Checkbox2.onFocus(handleFocus);
+    Checkbox2,required();
 
     const BasicSettingsHeading3 = new Heading({
       text: "Disabled",
@@ -89,12 +89,12 @@
     const Checkbox3 = new Checkbox({
       label: "Disabled",
       name: "u_cant_check_this",
-      value: "hammertime",
-      disabled: true
+      value: "hammertime"
     });
 
     BasicSettingsHeading3.mount('.tests-checkbox-heading3');
     Checkbox3.mount('.tests-checkbox3');
+    Checkbox3.disable();
 
     const FancyCheckboxesHeading = new Heading({
       text: "Separately controlled checkbox",

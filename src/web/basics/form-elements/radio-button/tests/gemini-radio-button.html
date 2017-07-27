@@ -43,15 +43,6 @@
   text: "Different RadioButtons",
   size: 2
  });
- //
- // radiobuttones = ['basic','checked','required','disabled',
- //  'callcheck','callrequire','calldisable'].map(function(type,i){
- //    var radiobutton = new RadioButton({
- //      label: type,
- //      name: `box_${i}`,
- //      value: i.toString
- //    })
- // });
 
  const DefaultRadioButton = new RadioButton({
   label: "So basic",
@@ -66,27 +57,27 @@
  const RadioButton1 = new RadioButton({
   label: "Checked",
   name: "agreement",
-  value: "iagree",
-  checked: true
+  value: "iagree"
  });
 
  RadioButton1.mount('.tests-radiobutton1');
+ RadioButton1.check();
 
  const RadioButton2 = new RadioButton({
   label: "Required",
   name: "ready_to_work",
-  value: "work_work",
-  required: true,
+  value: "work_work"
  });
  RadioButton2.mount('.tests-radiobutton2');
+ RadioButton2.required();
 
  const RadioButton3 = new RadioButton({
   label: "Disabled",
   name: "u_cant_check_this",
-  value: "hammertime",
-  disabled: true
+  value: "hammertime"
  });
  RadioButton3.mount('.tests-radiobutton3');
+ RadioButton3.disable();
 
 
 

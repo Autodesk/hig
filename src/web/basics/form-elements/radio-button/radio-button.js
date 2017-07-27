@@ -49,10 +49,7 @@ RadioButton._interface = Interface['basics']['FormElements']['partials']['RadioB
 RadioButton._defaults = {
     "label": "",
     "name": "",
-    "value": "",
-    "checked": false,
-    "disabled": false,
-    "required": false
+    "value": ""
 };
 RadioButton._partials = {};
 
