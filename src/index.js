@@ -22,7 +22,8 @@ import {
   GlobalNav,
   IconButton,
   RadioButton,
-  TextField
+  TextField,
+  TextArea
 } from './react-hig';
 
 import 'hig.web/dist/hig.css';
@@ -507,6 +508,17 @@ class App extends React.Component {
                 value={this.state.textFieldValue}
               />
             </section>
+          <section>
+            <h3>TextArea</h3>
+            <TextArea
+              label="Tab title"
+            placeholder="Foo"
+            onBlur={this.logEvent}
+            onChange={this.logEvent}
+            onFocus={this.logEvent}
+            onInput={this.logEvent}
+          />
+        </section>
 
             <section>
               {topNavFixtures.hipsterContent().map((paragraph, i) => {

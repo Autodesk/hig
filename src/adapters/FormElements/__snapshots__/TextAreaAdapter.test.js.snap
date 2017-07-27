@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextAreaAdapter> renders a text field 1`] = `
+"<div class=\\"hig__text-area\\">
+    <textarea name=\\"mySpecialField\\" id=\\"1234\\" class=\\"hig__text-area__field hig__text-area__field--no-value\\" placeholder=\\"\\"></textarea>
+    <!--LABEL-->
+    <label for=\\"1234\\" class=\\"hig__text-area__label \\"></label>
+    <!--INSTRUCTIONS-->
+    
+    <!--REQUIRED-NOTICE-->
+    
+</div>"
+`;
+
+exports[`<TextAreaAdapter> renders a text field with initial props 1`] = `
+"<div class=\\"hig__text-area\\">
+    <textarea name=\\"mySpecialField\\" id=\\"1234\\" class=\\"hig__text-area__field hig__text-area__field--has-value\\" placeholder=\\"Was it Fluffy?\\">Rex</textarea>
+    <!--LABEL-->
+    <label for=\\"1234\\" class=\\"hig__text-area__label hig__text-area__label--visible\\">Name of your first pet</label>
+    <!--INSTRUCTIONS-->
+    <p class=\\"hig__text-area__instructions\\">Don't just do something, sit there.</p>
+    <!--REQUIRED-NOTICE-->
+    
+</div>"
+`;
+
+exports[`<TextAreaAdapter> renders a text field with udpated props 1`] = `
+"<div class=\\"hig__text-area\\">
+    <textarea name=\\"updatedFieldName\\" id=\\"1234\\" class=\\"hig__text-area__field hig__text-area__field--no-value\\" placeholder=\\"\\"></textarea>
+    <!--LABEL-->
+    <label for=\\"1234\\" class=\\"hig__text-area__label \\"></label>
+    <!--INSTRUCTIONS-->
+    
+    <!--REQUIRED-NOTICE-->
+    
+</div>"
+`;

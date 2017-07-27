@@ -36,7 +36,8 @@ export default {
           'GlobalNav',
           'IconButton',
           'RadioButton',
-          'TextField'
+          'TextField',
+          'TextArea'
         ]
       }
     }),

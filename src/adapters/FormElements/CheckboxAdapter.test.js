@@ -32,12 +32,7 @@ describe('<Checkbox>', () => {
 
     higCheckbox.mount(higContainer);
 
-    // to adjust for the randomly generated id
-    const label = higContainer.querySelector('label');
-    const input = higContainer.querySelector('input');
-    label.setAttribute('for', inputId);
-    input.setAttribute('id', inputId);
-
+    setLabelForInputId(higContainer);
     return { higCheckbox, higContainer };
   }
 
@@ -45,14 +40,19 @@ describe('<Checkbox>', () => {
     const container = document.createElement('div');
     mount(<Checkbox {...defaults} />, { attachTo: container });
 
-    const label = container.querySelector('label');
-    const input = container.querySelector('input');
-
-    // to adjust for the randomly generated id
-    label.setAttribute('for', inputId);
-    input.setAttribute('id', inputId);
+    setLabelForInputId(container);
     return container;
   }
+
+  function setLabelForInputId(higContainer) {
+    // to adjust for the randomly generated id
+    const label = higContainer.querySelector('label');
+    const input = higContainer.querySelector('input');
+    label.setAttribute('for', inputId);
+    input.setAttribute('id', inputId);
+  }
+
+
 
   it('renders the standard  Checkbox', () => {
     const defaults = {
@@ -153,28 +153,18 @@ describe('<Checkbox>', () => {
       attachTo: higContainer
     });
 
-    expect(higContainer.querySelector('input').getAttribute('required')).toBe(
-      null
-    );
-    expect(higContainer.querySelector('input').getAttribute('disabled')).toBe(
-      null
-    );
-    expect(higContainer.querySelector('input').getAttribute('checked')).toBe(
-      null
-    );
+    expect(higContainer.querySelector('input').getAttribute('required')).toBe(null);
+    expect(higContainer.querySelector('input').getAttribute('disabled')).toBe(null);
+    expect(higContainer.querySelector('input').getAttribute('checked')).toBe(null);
 
     wrapper.setProps({ required: true });
-    expect(higContainer.querySelector('input').getAttribute('required')).toBe(
-      ''
-    );
+    expect(higContainer.querySelector('input').getAttribute('required')).toBe('');
 
     wrapper.setProps({ checked: true });
     expect(higContainer.querySelector('input').checked).toBe(true);
 
     wrapper.setProps({ disabled: true });
-    expect(higContainer.querySelector('input').getAttribute('disabled')).toBe(
-      'true'
-    );
+    expect(higContainer.querySelector('input').getAttribute('disabled')).toBe('true');
   });
 
   ['onChange'].forEach(eventName => {

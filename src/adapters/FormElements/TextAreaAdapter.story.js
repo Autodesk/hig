@@ -19,26 +19,22 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { text, select, boolean } from '@storybook/addon-knobs';
 
-import { TextField } from '../../../react-hig';
+import { default as TextAreaAdapter } from  './TextAreaAdapter';
 
-storiesOf('TextField', module)
+storiesOf('TextAreaAdapter', module)
   .addWithInfo('By default', ``, () => {
     return (
-      <TextField
+      <TextAreaAdapter
         disabled={boolean('Disabled', false)}
-        instructions={text(
-          'Instructions',
-          'This is a controlled field. Change the value in the knobs panel.'
-        )}
+        instructions={text('Instructions', '')}
         label={text('Label', 'My text field')}
         name={text('Name', 'my-text-field')}
         onBlur={action('blur')}
-        onChange={action('input')}
+        onChange={action('change')}
         onFocus={action('focus')}
         onInput={action('input')}
         placeholder={text('Placeholder', 'Tell me how you really feel')}
         required={text('Required', '')}
-        value={text('Value', '')}
       />
     );
   })
@@ -49,7 +45,7 @@ storiesOf('TextField', module)
     };
 
     return (
-      <TextField
+      <TextAreaAdapter
         disabled={boolean('Disabled', false)}
         icon={select('Icon', iconOptions, 'assets')}
         instructions={text('Instructions', '')}
@@ -61,7 +57,6 @@ storiesOf('TextField', module)
         onInput={action('input')}
         placeholder={text('Placeholder', 'Tell me how you really feel')}
         required={text('Required', '')}
-        value={text('Value', '')}
       />
     );
   });
