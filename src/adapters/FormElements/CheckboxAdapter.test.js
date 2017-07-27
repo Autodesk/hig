@@ -52,8 +52,6 @@ describe('<Checkbox>', () => {
     input.setAttribute('id', inputId);
   }
 
-
-
   it('renders the standard  Checkbox', () => {
     const defaults = {
       name: 'agree_toc',
@@ -153,18 +151,28 @@ describe('<Checkbox>', () => {
       attachTo: higContainer
     });
 
-    expect(higContainer.querySelector('input').getAttribute('required')).toBe(null);
-    expect(higContainer.querySelector('input').getAttribute('disabled')).toBe(null);
-    expect(higContainer.querySelector('input').getAttribute('checked')).toBe(null);
+    expect(higContainer.querySelector('input').getAttribute('required')).toBe(
+      null
+    );
+    expect(higContainer.querySelector('input').getAttribute('disabled')).toBe(
+      null
+    );
+    expect(higContainer.querySelector('input').getAttribute('checked')).toBe(
+      null
+    );
 
     wrapper.setProps({ required: true });
-    expect(higContainer.querySelector('input').getAttribute('required')).toBe('');
+    expect(higContainer.querySelector('input').getAttribute('required')).toBe(
+      ''
+    );
 
     wrapper.setProps({ checked: true });
     expect(higContainer.querySelector('input').checked).toBe(true);
 
     wrapper.setProps({ disabled: true });
-    expect(higContainer.querySelector('input').getAttribute('disabled')).toBe('true');
+    expect(higContainer.querySelector('input').getAttribute('disabled')).toBe(
+      'true'
+    );
   });
 
   ['onChange'].forEach(eventName => {
@@ -180,26 +188,37 @@ describe('<Checkbox>', () => {
       // expect onClickSpy to be called
       expect(eventSpy).toBeCalled();
     });
+  });
 
-    it(`sets new events`, () => {
-      const eventSpy = jest.fn();
-      const reactContainer = document.createElement('div');
-      const wrapper = mount(<Checkbox />, { attachTo: reactContainer });
+  it(`sets new events`, () => {
+    const eventSpy0 = jest.fn();
+    const eventSpy = jest.fn();
 
-      wrapper.setProps({
-        onChange: eventSpy,
-        onHover: eventSpy,
-        onFocus: eventSpy
-      });
+    const defaults = {
+      onChange: eventSpy0,
+      onHover: eventSpy0,
+      onFocus: eventSpy0
+    };
+    const newSettings = {
+      onChange: eventSpy,
+      onHover: eventSpy,
+      onFocus: eventSpy
+    };
+
+    const reactContainer = document.createElement('div');
+    const wrapper = mount(<Checkbox {...defaults} />, {
+      attachTo: reactContainer
     });
 
-    it('warns if the prop is not recognized', () => {
-      const eventSpy = jest.fn();
-      const reactContainer = document.createElement('div');
-      const wrapper = mount(<Checkbox />, { attachTo: reactContainer });
-      console.warn = eventSpy;
-      wrapper.setProps({ foo: 'bar' });
-      expect(eventSpy).toBeCalled();
-    });
+    wrapper.setProps(newSettings);
+  });
+
+  it('warns if the prop is not recognized', () => {
+    const eventSpy = jest.fn();
+    const reactContainer = document.createElement('div');
+    const wrapper = mount(<Checkbox />, { attachTo: reactContainer });
+    console.warn = eventSpy;
+    wrapper.setProps({ foo: 'bar' });
+    expect(eventSpy).toBeCalled();
   });
 });

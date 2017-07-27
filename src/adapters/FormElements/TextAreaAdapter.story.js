@@ -19,7 +19,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { text, select, boolean } from '@storybook/addon-knobs';
 
-import { default as TextAreaAdapter } from  './TextAreaAdapter';
+import { default as TextAreaAdapter } from './TextAreaAdapter';
 
 storiesOf('TextAreaAdapter', module)
   .addWithInfo('By default', ``, () => {
@@ -38,7 +38,7 @@ storiesOf('TextAreaAdapter', module)
       />
     );
   })
-  .addWithInfo('With an icon', ``, () => {
+  .addWithInfo('With no label and no events', ``, () => {
     const iconOptions = {
       assets: 'Assets',
       gear: 'Gear'
@@ -47,14 +47,8 @@ storiesOf('TextAreaAdapter', module)
     return (
       <TextAreaAdapter
         disabled={boolean('Disabled', false)}
-        icon={select('Icon', iconOptions, 'assets')}
         instructions={text('Instructions', '')}
-        label={text('Label', 'My text field')}
         name={text('Name', 'my-text-field')}
-        onBlur={action('blur')}
-        onChange={action('change')}
-        onFocus={action('focus')}
-        onInput={action('input')}
         placeholder={text('Placeholder', 'Tell me how you really feel')}
         required={text('Required', '')}
       />

@@ -20,11 +20,9 @@ import React from 'react';
 
 import TextAreaAdapter from './TextAreaAdapter';
 
-
 const inputId = '1234';
 
 describe('<TextAreaAdapter>', () => {
-
   function createHigTextArea(defaults = {}) {
     const higContainer = document.createElement('div');
 
@@ -47,7 +45,6 @@ describe('<TextAreaAdapter>', () => {
     label.setAttribute('for', inputId);
     input.setAttribute('id', inputId);
   }
-
 
   it('renders a text field', () => {
     const defaults = { name: 'mySpecialField' };

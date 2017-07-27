@@ -77,7 +77,8 @@ describe('<TextField>', () => {
 
   it('renders a text field with udpated props', () => {
     const defaults = {
-      name: 'mySpecialField'
+      name: 'mySpecialField',
+      disabled: true
     };
 
     const { higTextField, higContainer } = createHigTextField(defaults);
@@ -92,7 +93,8 @@ describe('<TextField>', () => {
       label: 'Name of your first pet',
       placeholder: 'Was it Fluffy?',
       required: 'You really must fill this in.',
-      value: 'Rex'
+      value: 'Rex',
+      disabled: false
     };
 
     higTextField.setIcon(nextProps.icon);
@@ -101,6 +103,7 @@ describe('<TextField>', () => {
     higTextField.setPlaceholder(nextProps.placeholder);
     higTextField.required(nextProps.required);
     higTextField.setValue(nextProps.value);
+    higTextField.enable();
     wrapper.setProps(nextProps);
 
     expect(orionContainer.firstElementChild.outerHTML).toMatchSnapshot();

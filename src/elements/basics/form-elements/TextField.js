@@ -15,7 +15,8 @@ limitations under the License.
 
 */
 import React, { Component } from 'react';
-import TextFieldAdapter from '../../../adapters/FormElements/TextFieldAdapter.js';
+import TextFieldAdapter
+  from '../../../adapters/FormElements/TextFieldAdapter.js';
 import PropTypes from 'prop-types';
 
 class TextField extends Component {

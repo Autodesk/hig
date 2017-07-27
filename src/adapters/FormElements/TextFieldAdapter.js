@@ -55,6 +55,10 @@ class TextFieldAdapter extends HIGElement {
           this.hig.setName(propValue);
           break;
         }
+        case 'value': {
+          this.hig.setValue(propValue);
+          break;
+        }
         case 'required': {
           propValue
             ? this.hig.required(propValue)
@@ -115,16 +119,6 @@ class TextFieldAdapter extends HIGElement {
         }
         case 'placeholder': {
           this.hig.setPlaceholder(propValue);
-          break;
-        }
-        case 'required': {
-          propValue
-            ? this.hig.required(propValue)
-            : this.hig.noLongerRequired();
-          break;
-        }
-        case 'value': {
-          this.hig.setValue(propValue);
           break;
         }
         default: {

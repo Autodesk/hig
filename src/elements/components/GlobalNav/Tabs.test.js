@@ -36,34 +36,32 @@ const Context = props => {
 };
 
 describe('<Tabs>', () => {
-  it('renders tabs', () => {
-    const tabs = [
-      { key: 7, label: 'Hello', id: 7 },
-      { key: 8, label: 'World', id: 9 }
-    ];
-    const reactContainer = document.createElement('div');
-    const wrapper = mount(<Context tabs={tabs} />, {
-      attachTo: reactContainer
-    });
-
-    expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
-  });
-
-  it('adds tabs', () => {
+  function setupInitialTabs() {
     const initialTabs = [
       { key: 1, label: 'Hello', id: 1 },
       { key: 2, label: 'World', id: 2 }
     ];
+    const reactContainer = document.createElement('div');
+    const wrapper = mount(<Context tabs={initialTabs} />, {
+      attachTo: reactContainer
+    });
+    return { reactContainer, wrapper };
+  }
+
+  it('renders tabs', () => {
+    const { reactContainer, wrapper } = setupInitialTabs();
+    expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
+  });
+
+  it('adds tabs', () => {
+    const { reactContainer, wrapper } = setupInitialTabs();
+
     const updatedTabs = [
       { key: 3, label: 'Hello', id: 3 },
       { key: 4, label: 'There', id: 4 },
       { key: 5, label: 'World', id: 5 },
       { key: 6, label: 'Yes', id: 6 }
     ];
-    const reactContainer = document.createElement('div');
-    const wrapper = mount(<Context tabs={initialTabs} />, {
-      attachTo: reactContainer
-    });
 
     wrapper.setProps({ tabs: updatedTabs });
 
@@ -71,18 +69,47 @@ describe('<Tabs>', () => {
   });
 
   it('removes tabs', () => {
-    const initialTabs = [
-      { key: 10, label: 'Hello', id: 10 },
-      { key: 11, label: 'World', id: 11 }
-    ];
+    const { reactContainer, wrapper } = setupInitialTabs();
     const updatedTabs = [{ key: 12, label: 'Updated Tabs', id: 12 }];
-    const reactContainer = document.createElement('div');
-    const wrapper = mount(<Context tabs={initialTabs} />, {
-      attachTo: reactContainer
-    });
 
     wrapper.setProps({ tabs: updatedTabs });
 
     expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
+  });
+
+  it('updates tab labels', () => {
+    const { reactContainer, wrapper } = setupInitialTabs();
+    wrapper.setProps({
+      tabs: [
+        { key: 1, id: 1, label: 'Goodbye' },
+        { key: 2, id: 2, label: 'Foo' }
+      ]
+    });
+
+    expect(
+      reactContainer.querySelectorAll('.hig__global-nav__sub-nav__tabs__tab')[
+        0
+      ].textContent
+    ).toEqual('Goodbye');
+    expect(
+      reactContainer.querySelectorAll('.hig__global-nav__sub-nav__tabs__tab')[
+        1
+      ].textContent
+    ).toEqual('Foo');
+  });
+
+  it('updates tab events', () => {
+    const { reactContainer, wrapper } = setupInitialTabs();
+
+    wrapper.setProps({
+      tabs: [
+        {
+          key: 1,
+          onClick: function() {
+            alert('foo');
+          }
+        }
+      ]
+    });
   });
 });
