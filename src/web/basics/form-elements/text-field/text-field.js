@@ -205,6 +205,7 @@ TextField._defaults = {
     "name": "",
     "icon": null,
     "placeholder": "",
+    "required": "",
     "value": "",
     "instructions": ""
 };
