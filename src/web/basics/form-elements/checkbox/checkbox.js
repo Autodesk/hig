@@ -53,10 +53,7 @@ Checkbox._interface = Interface['basics']['FormElements']['partials']['Checkbox'
 Checkbox._defaults = {
     "label": "",
     "name": "",
-    "value": "",
-    "checked": false,
-    "disabled": false,
-    "required": false
+    "value": ""
 };
 Checkbox._partials = {};
 

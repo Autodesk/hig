@@ -73,27 +73,27 @@
  const Checkbox1 = new Checkbox({
   label: "Checked",
   name: "agreement",
-  value: "iagree",
-  checked: true
+  value: "iagree"
  });
 
  Checkbox1.mount('.tests-checkbox1');
+ Checkbox1.check();
 
  const Checkbox2 = new Checkbox({
   label: "Required",
   name: "ready_to_work",
-  value: "work_work",
-  required: true,
+  value: "work_work"
  });
  Checkbox2.mount('.tests-checkbox2');
+ Checkbox2.required();
 
  const Checkbox3 = new Checkbox({
   label: "Disabled",
   name: "u_cant_check_this",
-  value: "hammertime",
-  disabled: true
+  value: "hammertime"
  });
  Checkbox3.mount('.tests-checkbox3');
+ Checkbox3.disable();
 
  const Checkbox4 = new Checkbox ({
    label: "Callcheck",
