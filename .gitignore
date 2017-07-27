@@ -50,3 +50,6 @@ nohup.out
 
 # OS files
 .DS_Store
+
+# VS Code
+.vscode/
