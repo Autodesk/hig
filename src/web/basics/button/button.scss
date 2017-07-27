@@ -19,6 +19,9 @@
     min-width: 68px;
     font-size: 14px;
 
+    // always have a border to prevent box-sizing vertical spacing issues
+    border: 1px solid color(adsk-blue);
+
     // default colors: primary
     background: color(adsk-blue);
     color: color(hig-white);
@@ -30,10 +33,12 @@
 
     &:hover {
         background-color: color(adsk-blue-light);
+        border-color: color(adsk-blue-light);
     }
 
     &:active, &:focus {
         background-color: color(adsk-blue-dark);
+        border-color: color(adsk-blue-dark);
     }
 
     &:focus {
@@ -45,9 +50,11 @@
     &--disabled {
         pointer-events: none;
         background-color: color(adsk-blue-lightest);
+        border-color: color(adsk-blue-lightest);
 
         &:hover, &:focus{
             background-color: color(adsk-blue-lightest);
+            border-color: color(adsk-blue-lightest);
         }
     }
 
@@ -77,11 +84,15 @@
 
     &.hig__button--primary {
         // same as default values
+
+        svg *{
+            fill: color(hig-white);
+        }
     }
 
     &.hig__button--secondary,
     &.hig__button--flat {
-        border: 1px solid color(hig-gray-40);
+        border-color: color(hig-gray-40);
         background: none;
         color: color(hig-slate-dark);
 
@@ -120,7 +131,7 @@
     }
 
     &.hig__button--flat {
-        border: 1px solid transparent;
+        border-color: transparent;
     }
 
     &.hig__button--flat.hig__button--disabled {
@@ -130,14 +141,16 @@
 
 .hig__button__icon {
     display: inline-block;
-    height: 26px;
+    height: 24px;
     vertical-align: middle;
+    margin-right: 5px;
 
     > .hig__icon {
         display: inline;
-        margin-right: 5px;
         padding-left: 30px;
     }
+
+    
 
 }
 
