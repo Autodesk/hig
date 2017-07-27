@@ -14,11 +14,11 @@
  limitations under the License.
 
  */
-import { mount } from 'enzyme';
+import {mount} from 'enzyme';
 import * as HIG from 'hig.web';
 import React from 'react';
 
-import { default as RadioButton } from './RadioButtonAdapter';
+import {default as RadioButton} from './RadioButtonAdapter';
 
 const inputId = '1234';
 
@@ -27,7 +27,7 @@ describe('<RadioButton>', () => {
     const higContainer = document.createElement('div');
 
     // use spread here to clone defaults since HIG.RadioButton mutates this object
-    const higRadioButton = new HIG.RadioButton({ ...defaults });
+    const higRadioButton = new HIG.RadioButton({...defaults});
 
     higRadioButton.mount(higContainer);
 
@@ -37,12 +37,12 @@ describe('<RadioButton>', () => {
     label.setAttribute('for', inputId);
     input.setAttribute('id', inputId);
 
-    return { higRadioButton, higContainer };
+    return {higRadioButton, higContainer};
   }
 
   function createComponent(defaults) {
     const container = document.createElement('div');
-    mount(<RadioButton {...defaults} />, { attachTo: container });
+    mount(<RadioButton {...defaults} />, {attachTo: container});
 
     const label = container.querySelector('label');
     const input = container.querySelector('input');
@@ -55,135 +55,94 @@ describe('<RadioButton>', () => {
 
   it('renders the standard  RadioButton', () => {
     const defaults = {
-      name: 'agree_toc',
-      label: 'I agree',
-      value: 'agree'
+      name: 'agree_toc', label: 'I agree', value: 'agree'
     };
 
-    const { higRadioButton, higContainer } = createHigRadioButton(defaults);
+    const {higRadioButton, higContainer} = createHigRadioButton(defaults);
     const container = createComponent(defaults);
 
     expect(container.firstElementChild.outerHTML).toMatchSnapshot();
 
-    expect(container.firstElementChild.outerHTML).toEqual(
-      higContainer.firstElementChild.outerHTML
-    );
-    expect(container.querySelector('label').getAttribute('class')).not.toMatch(
-      /hig--hidden/
-    );
+    expect(container.firstElementChild.outerHTML).toEqual(higContainer.firstElementChild.outerHTML);
+    expect(container.querySelector('label').getAttribute('class')).not.toMatch(/hig--hidden/);
   });
 
   it('does not show a label if not specified', () => {
     const defaults = {
-      label: '',
-      name: 'agree_toc',
-      value: 'agree'
+      label: '', name: 'agree_toc', value: 'agree'
     };
 
-    const { higRadioButton, higContainer } = createHigRadioButton(defaults);
+    const {higRadioButton, higContainer} = createHigRadioButton(defaults);
     const container = createComponent(defaults);
 
     expect(container.firstElementChild.outerHTML).toMatchSnapshot();
 
-    expect(container.firstElementChild.outerHTML).toEqual(
-      higContainer.firstElementChild.outerHTML
-    );
+    expect(container.firstElementChild.outerHTML).toEqual(higContainer.firstElementChild.outerHTML);
 
     expect(container.querySelector('label').textContent).toEqual('');
-    expect(container.querySelector('label').getAttribute('class')).toMatch(
-      /hig--hidden/
-    );
+    expect(container.querySelector('label').getAttribute('class')).toMatch(/hig--hidden/);
   });
 
   it(`sets attributes correctly by default`, () => {
     const defaults = {
-      label: 'check attributes',
-      required: true,
-      checked: true,
-      disabled: true
+      label: 'check attributes'
     };
 
-    const { higRadioButton, higContainer } = createHigRadioButton(defaults);
-    expect(higContainer.querySelector('input').getAttribute('required')).toBe(
-      ''
-    );
-    expect(higContainer.querySelector('input').getAttribute('disabled')).toBe(
-      ''
-    );
-    expect(higContainer.querySelector('input').checked).toBe(true);
+    const {higRadioButton, higContainer} = createHigRadioButton(defaults);
+    expect(higContainer.querySelector('input').getAttribute('required')).toBe(null);
+    expect(higContainer.querySelector('input').getAttribute('disabled')).toBe(null);
   });
 
   it('properly updates name value and label', () => {
     const defaults = {
-      label: '',
-      name: '',
-      value: ''
+      label: '', name: '', value: ''
     };
-    const { higRadioButton, higContainer } = createHigRadioButton(defaults);
+    const {higRadioButton, higContainer} = createHigRadioButton(defaults);
 
     higRadioButton.setLabel('NEW LABEL!');
 
-    expect(
-      higContainer.querySelector('label').getAttribute('class')
-    ).not.toMatch(/hig--hidden/);
-    expect(higContainer.querySelector('label').textContent).toEqual(
-      'NEW LABEL!'
-    );
+    expect(higContainer.querySelector('label').getAttribute('class')).not.toMatch(/hig--hidden/);
+    expect(higContainer.querySelector('label').textContent).toEqual('NEW LABEL!');
 
     higRadioButton.setValue('newvalue');
-    expect(higContainer.querySelector('input').getAttribute('value')).toEqual(
-      'newvalue'
-    );
+    expect(higContainer.querySelector('input').getAttribute('value')).toEqual('newvalue');
 
     higRadioButton.setName('newname');
-    expect(higContainer.querySelector('input').getAttribute('name')).toEqual(
-      'newname'
-    );
+    expect(higContainer.querySelector('input').getAttribute('name')).toEqual('newname');
   });
 
   it('properly updates required,disabled,checked when set to true', () => {
     const defaults = {
-      name: 'agree_toc',
-      label: 'I agree',
-      value: 'agree'
+      name: 'agree_toc', label: 'I agree', value: 'agree'
     };
 
     const higContainer = document.createElement('div');
     const wrapper = mount(<RadioButton {...defaults} />, {
-      attachTo: higContainer
-    });
+                                                           attachTo: higContainer
+                                                         });
 
-    expect(higContainer.querySelector('input').getAttribute('required')).toBe(
-      null
-    );
-    expect(higContainer.querySelector('input').getAttribute('disabled')).toBe(
-      null
-    );
-    expect(higContainer.querySelector('input').getAttribute('checked')).toBe(
-      null
-    );
+    expect(higContainer.querySelector('input').getAttribute('required'))
+      .toBe(null);
+    expect(higContainer.querySelector('input').getAttribute('disabled')).toBe(null);
+    expect(higContainer.querySelector('input').getAttribute('checked')).toBe(null);
 
-    wrapper.setProps({ required: true });
-    expect(higContainer.querySelector('input').getAttribute('required')).toBe(
-      ''
-    );
+    wrapper.setProps({required: true});
+    expect(higContainer.querySelector('input').getAttribute('required')).toBe('');
 
-    wrapper.setProps({ checked: true });
+    wrapper.setProps({checked: true});
     expect(higContainer.querySelector('input').checked).toBe(true);
 
-    wrapper.setProps({ disabled: true });
-    expect(higContainer.querySelector('input').getAttribute('disabled')).toBe(
-      'true'
-    );
+    wrapper.setProps({disabled: true});
+    expect(higContainer.querySelector('input').getAttribute('disabled')).toBe('true');
   });
 
   ['onChange'].forEach(eventName => {
     it(`sets up ${eventName} initially`, () => {
       const eventSpy = jest.fn();
       const reactContainer = document.createElement('div');
-      const wrapper = mount(<RadioButton {...{ onChange: eventSpy }} />, {
-        attachTo: reactContainer
-      });
+      const wrapper = mount(<RadioButton {...{onChange: eventSpy}} />, {
+                                                                         attachTo: reactContainer
+                                                                       });
       const instance = wrapper.instance().instance;
       instance.events['onChange']();
 
@@ -194,23 +153,21 @@ describe('<RadioButton>', () => {
     it(`sets new events`, () => {
       const eventSpy = jest.fn();
       const reactContainer = document.createElement('div');
-      const wrapper = mount(<RadioButton />, { attachTo: reactContainer });
+      const wrapper = mount(<RadioButton/>, {attachTo: reactContainer});
 
       wrapper.setProps({
-        onChange: eventSpy,
-        onHover: eventSpy,
-        onFocus: eventSpy
-      });
+                         onChange: eventSpy, onHover: eventSpy, onFocus: eventSpy
+                       });
     });
 
     it('warns if the prop is not recognized', () => {
       const eventSpy = jest.fn();
       const reactContainer = document.createElement('div');
-      const wrapper = mount(<RadioButton />, { attachTo: reactContainer });
+      const wrapper = mount(<RadioButton/>, {attachTo: reactContainer});
 
       let oldwarn = console.warn;
       console.warn = eventSpy;
-      wrapper.setProps({ foo: 'bar' });
+      wrapper.setProps({foo: 'bar'});
       expect(eventSpy).toBeCalled();
       console.warn = oldwarn;
     });

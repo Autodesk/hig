@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Checkbox> does not show a label if not specified 1`] = `
-"<div class=\\"hig__input-button hig__input-button--checkbox \\">
+"<div class=\\"hig__input-button hig__input-button--checkbox\\">
   <!--CHECKBOX_LABEL-->
   <label class=\\"hig__input-button__label hig--hidden\\" for=\\"1234\\"></label>
   <input type=\\"checkbox\\" class=\\"hig__input-button__input\\" name=\\"agree_toc\\" id=\\"1234\\" value=\\"agree\\">
@@ -10,7 +10,7 @@ exports[`<Checkbox> does not show a label if not specified 1`] = `
 `;
 
 exports[`<Checkbox> renders the standard  Checkbox 1`] = `
-"<div class=\\"hig__input-button hig__input-button--checkbox \\">
+"<div class=\\"hig__input-button hig__input-button--checkbox\\">
   <!--CHECKBOX_LABEL-->
   <label class=\\"hig__input-button__label\\" for=\\"1234\\">I agree</label>
   <input type=\\"checkbox\\" class=\\"hig__input-button__input\\" name=\\"agree_toc\\" id=\\"1234\\" value=\\"agree\\">
