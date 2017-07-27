@@ -8,7 +8,6 @@ exports[`<TextAreaAdapter> renders a text field 1`] = `
     <!--INSTRUCTIONS-->
     
     <!--REQUIRED-NOTICE-->
-    
 </div>"
 `;
 
@@ -20,7 +19,6 @@ exports[`<TextAreaAdapter> renders a text field with initial props 1`] = `
     <!--INSTRUCTIONS-->
     <p class=\\"hig__text-area__instructions\\">Don't just do something, sit there.</p>
     <!--REQUIRED-NOTICE-->
-    
 </div>"
 `;
 
@@ -32,6 +30,5 @@ exports[`<TextAreaAdapter> renders a text field with udpated props 1`] = `
     <p class=\\"hig__text-area__instructions\\">Don't just do something, sit there.</p><!--INSTRUCTIONS-->
     
     <p class=\\"hig__text-area__required-notice\\">You really must fill this in.</p><!--REQUIRED-NOTICE-->
-    
 </div>"
 `;
