@@ -121,7 +121,12 @@ class TextArea extends Core {
 
 TextArea._interface = Interface['basics']['FormElements']['partials']['TextArea'];
 TextArea._defaults = {
-  label: '', instructions: '', placeholder: '', value: ''
+  label: '',
+  instructions: '',
+  placeholder: '',
+  value: '',
+  required: '',
+  name: ''
 };
 TextArea._partials = {};
 

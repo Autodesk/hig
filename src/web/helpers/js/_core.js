@@ -39,7 +39,7 @@ class Core {
         }else{
             for(var v in this._interface['defaults']){
                 if(this._defaults[v] === undefined){
-                    console.error(`DEFAULT VALUE: \"${this.constructor.name}.${v}\" IS DEFINED IN THE INTERFACE BUT NOT IMPLIMENTED`, this);
+                    console.error(`DEFAULT VALUE: \"${this.constructor.name}.${v}\" IS DEFINED IN THE INTERFACE BUT NOT IMPLEMENTED`, this);
                 }
             };
         }
