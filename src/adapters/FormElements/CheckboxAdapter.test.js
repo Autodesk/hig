@@ -32,7 +32,12 @@ describe('<Checkbox>', () => {
 
     higCheckbox.mount(higContainer);
 
-    setLabelForInputId(higContainer);
+    // to adjust for the randomly generated id
+    const label = higContainer.querySelector('label');
+    const input = higContainer.querySelector('input');
+    label.setAttribute('for', inputId);
+    input.setAttribute('id', inputId);
+
     return { higCheckbox, higContainer };
   }
 
@@ -40,16 +45,13 @@ describe('<Checkbox>', () => {
     const container = document.createElement('div');
     mount(<Checkbox {...defaults} />, { attachTo: container });
 
-    setLabelForInputId(container);
-    return container;
-  }
+    const label = container.querySelector('label');
+    const input = container.querySelector('input');
 
-  function setLabelForInputId(higContainer) {
     // to adjust for the randomly generated id
-    const label = higContainer.querySelector('label');
-    const input = higContainer.querySelector('input');
     label.setAttribute('for', inputId);
     input.setAttribute('id', inputId);
+    return container;
   }
 
   it('renders the standard  Checkbox', () => {
@@ -188,37 +190,26 @@ describe('<Checkbox>', () => {
       // expect onClickSpy to be called
       expect(eventSpy).toBeCalled();
     });
-  });
 
-  it(`sets new events`, () => {
-    const eventSpy0 = jest.fn();
-    const eventSpy = jest.fn();
+    it(`sets new events`, () => {
+      const eventSpy = jest.fn();
+      const reactContainer = document.createElement('div');
+      const wrapper = mount(<Checkbox />, { attachTo: reactContainer });
 
-    const defaults = {
-      onChange: eventSpy0,
-      onHover: eventSpy0,
-      onFocus: eventSpy0
-    };
-    const newSettings = {
-      onChange: eventSpy,
-      onHover: eventSpy,
-      onFocus: eventSpy
-    };
-
-    const reactContainer = document.createElement('div');
-    const wrapper = mount(<Checkbox {...defaults} />, {
-      attachTo: reactContainer
+      wrapper.setProps({
+        onChange: eventSpy,
+        onHover: eventSpy,
+        onFocus: eventSpy
+      });
     });
 
-    wrapper.setProps(newSettings);
-  });
-
-  it('warns if the prop is not recognized', () => {
-    const eventSpy = jest.fn();
-    const reactContainer = document.createElement('div');
-    const wrapper = mount(<Checkbox />, { attachTo: reactContainer });
-    console.warn = eventSpy;
-    wrapper.setProps({ foo: 'bar' });
-    expect(eventSpy).toBeCalled();
+    it('warns if the prop is not recognized', () => {
+      const eventSpy = jest.fn();
+      const reactContainer = document.createElement('div');
+      const wrapper = mount(<Checkbox />, { attachTo: reactContainer });
+      console.warn = eventSpy;
+      wrapper.setProps({ foo: 'bar' });
+      expect(eventSpy).toBeCalled();
+    });
   });
 });
