@@ -90,11 +90,11 @@
     &.hig__button--flat {
         border-color: color(hig-gray-40);
         background: none;
-        color: color(hig-slate-dark);
+        color: color(hig-slate-20);
 
         // states
         &:visited {
-            color: color(hig-slate-dark);
+            color: color(hig-slate-20);
         }
 
         &:hover {

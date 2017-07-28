@@ -18,8 +18,8 @@
   }
 
   .hig__input-button__input:checked:not([disabled]) + .hig__input-button__input-wrapper {
-    border-color: color(hig-slate-light);
+    border-color: color(hig-slate-50);
     color: color(hig-white);
-    background-color: color(hig-slate-light);
+    background-color: color(hig-slate-50);
   }
 }
