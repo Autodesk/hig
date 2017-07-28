@@ -20,7 +20,7 @@ import React from 'react';
 
 import GlobalNav from '../../../adapters/GlobalNav/GlobalNavAdapter';
 import Section from './SectionAdapter';
-import SectionList from '../../../elements/components/Globalnav/SectionList';
+import SectionList from '../../../elements/components/GlobalNav/SectionList';
 import Group from './GroupAdapter';
 import Module from './ModuleAdapter';
 
