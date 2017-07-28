@@ -20,7 +20,7 @@
     font-size: 14px;
 
     // always have a border to prevent box-sizing vertical spacing issues
-    border: 1px solid color(adsk-blue);
+    border: 1px solid transparent;
 
     // default colors: primary
     background: color(adsk-blue);
@@ -33,12 +33,10 @@
 
     &:hover {
         background-color: color(adsk-blue-light);
-        border-color: color(adsk-blue-light);
     }
 
     &:active, &:focus {
         background-color: color(adsk-blue-dark);
-        border-color: color(adsk-blue-dark);
     }
 
     &:focus {
@@ -50,11 +48,9 @@
     &--disabled {
         pointer-events: none;
         background-color: color(adsk-blue-lightest);
-        border-color: color(adsk-blue-lightest);
 
         &:hover, &:focus{
             background-color: color(adsk-blue-lightest);
-            border-color: color(adsk-blue-lightest);
         }
     }
 
