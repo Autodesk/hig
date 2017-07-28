@@ -229,7 +229,9 @@
                 var style = window.getComputedStyle(el);
                 var bc = style.backgroundColor;
                 bc = '#' + bc.substr(4, bc.indexOf(')') - 4).split(',').map((color) => parseInt(color).toString(16)).join('');
-                el.insertAdjacentHTML('afterend', bc.toUpperCase()+'<br>');
+                var div = document.createElement('div');
+                div.innerHTML = bc.toUpperCase();
+                el.nextSibling.parentNode.insertBefore(div, el.nextSibling.nextSibling);
             });
         </script>
         
