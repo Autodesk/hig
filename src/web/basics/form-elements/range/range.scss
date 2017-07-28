@@ -39,11 +39,11 @@
     }
 
     &:focus::#{$vendor} {
-      background-color: color(adsk-blue);
+      background-color: color(hig-blue-30);
     }
 
     &:active::#{$vendor} {
-      background-color: color(adsk-blue-dark);
+      background-color: color(hig-blue-20);
     }
 
     &[disabled]::#{$vendor} {
@@ -83,7 +83,7 @@
   line-height: 14px;
 
   .hig__range__field:focus + & {
-    color: color(adsk-blue-dark);
+    color: color(hig-blue-20);
   }
 
   .hig__range--required &::after {

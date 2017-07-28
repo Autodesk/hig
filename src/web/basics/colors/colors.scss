@@ -1,7 +1,7 @@
 // Color Function
 // Used to get a color value, for example:
 // div {
-//   background: color(adsk-blue);
+//   background: color(hig-blue-30);
 // }
 
 @function color($color-name, $color-variant:null) {
@@ -33,15 +33,23 @@ $colors: (
     box-shadow-20: rgba(87,91,94,0.65),
 
     // Accent Colors
-    adsk-blue: #0696D7,
-    adsk-blue-dark: #087AAD,
-    adsk-blue-light: #4EB4E3,
-    adsk-blue-lightest: #CDEAF7,
+    hig-blue-20: #0576AB,
+    hig-blue-30: #0696D7,
+    hig-blue-50: #56B7E3,
+    hig-blue-60: #CEE7F3,
+    hig-blue-70: #E1F2FA,
 
-    adsk-green: #87BC40,
-    adsk-green-dark: #709C34,
-    adsk-green-light: #ABD079,
-    adsk-green-lightest: #ABD079,
+    hig-green-20: #6B9733,
+    hig-green-30: #87BC40,
+    hig-green-50: #ABD079,
+    hig-green-60: #DAEAC5,
+    hig-green-70: #F0F7E8,
+
+    hig-turquoise-20: #144687,
+    hig-turquoise-30: #1957A8,
+    hig-turquoise-50: #5CE1D3,
+    hig-turquoise-60: #BBF3ED,
+    hig-turquoise-70: #E2F9F7,
 
     adsk-turquoise: #0ED3BE,
     adsk-turquoise-dark: #0C9E90,
@@ -87,8 +95,8 @@ $colors: (
 );
 
 // Dynamicly create css classes that can be used with divs
-// this example will add "adsk-blue" as background color to this div:
-// <div class='hig__colors__adsk-blue--background'></div>
+// this example will add "hig-blue-30" as background color to this div:
+// <div class='hig__colors__hig-blue-30--background'></div>
 
 @each $color_name, $color_value in $colors{
     .hig__colors__#{$color_name}--color {

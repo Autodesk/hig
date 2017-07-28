@@ -32,7 +32,7 @@
     }
 
     .hig__text-area__field:focus + & {
-        color: color(adsk-blue-dark);
+        color: color(hig-blue-20);
     }
 
     .hig__text-area--required &::after {
@@ -94,8 +94,8 @@
 
     &:focus {
         outline: none;
-        border: 1px solid color(adsk-blue-dark);
-        box-shadow: 0 0 0 1px color(adsk-blue-dark);
+        border: 1px solid color(hig-blue-20);
+        box-shadow: 0 0 0 1px color(hig-blue-20);
         @include placeholder {
             color: color(hig-gray-30);
             transition-delay: 0.2s;

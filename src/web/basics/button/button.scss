@@ -20,7 +20,7 @@
     font-size: 14px;
 
     // default colors: primary
-    background: color(adsk-blue);
+    background: color(hig-blue-30);
     color: color(hig-white);
 
     // states
@@ -29,25 +29,25 @@
     }
 
     &:hover {
-        background-color: color(adsk-blue-light);
+        background-color: color(hig-blue-50);
     }
 
     &:active, &:focus {
-        background-color: color(adsk-blue-dark);
+        background-color: color(hig-blue-20);
     }
 
     &:focus {
         outline: none;
         box-shadow: 0 0 0 1px color(hig-white),
-                    0 0 0 2px color(adsk-blue-dark);
+                    0 0 0 2px color(hig-blue-20);
     }
 
     &--disabled {
         pointer-events: none;
-        background-color: color(adsk-blue-lightest);
+        background-color: color(hig-blue-60);
 
         &:hover, &:focus{
-            background-color: color(adsk-blue-lightest);
+            background-color: color(hig-blue-60);
         }
     }
 

@@ -53,7 +53,7 @@
     }
 
     .hig__text-field__input:focus + & {
-        color: color(adsk-blue-dark);
+        color: color(hig-blue-20);
     }
 
     .hig__text-field--required &::after {
@@ -118,8 +118,8 @@
     &:focus {
         outline: none;
         border: none;
-        border-bottom: 1px solid color(adsk-blue-dark);
-        box-shadow: 0 1px 0 color(adsk-blue-dark);
+        border-bottom: 1px solid color(hig-blue-20);
+        box-shadow: 0 1px 0 color(hig-blue-20);
 
         @include placeholder {
             color: color(hig-gray-30);
