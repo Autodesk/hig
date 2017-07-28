@@ -15,9 +15,12 @@
     // default size: standard
     padding: 0 16px;
     height: 36px;
-    line-height: 36px;
+    line-height: 34px;
     min-width: 68px;
     font-size: 14px;
+
+    // always have a border to prevent box-sizing vertical spacing issues
+    border: 1px solid transparent;
 
     // default colors: primary
     background: color(hig-blue-30);
@@ -59,7 +62,7 @@
 
     &--small{
         height: 28px;
-        line-height: 28px;
+        line-height: 26px;
         min-width: 66px;
         padding: 0 16px;
         font-size: 13px;
@@ -67,7 +70,7 @@
 
     &--large{
         height: 42px;
-        line-height: 42px;
+        line-height: 40px;
         min-width: 90px;
         padding: 0 32px;
         font-size: 16px;
@@ -77,11 +80,15 @@
 
     &.hig__button--primary {
         // same as default values
+
+        svg *{
+            fill: color(hig-white);
+        }
     }
 
     &.hig__button--secondary,
     &.hig__button--flat {
-        border: 1px solid color(hig-gray-40);
+        border-color: color(hig-gray-40);
         background: none;
         color: color(hig-slate-dark);
 
@@ -120,7 +127,7 @@
     }
 
     &.hig__button--flat {
-        border: 1px solid transparent;
+        border-color: transparent;
     }
 
     &.hig__button--flat.hig__button--disabled {
@@ -130,14 +137,16 @@
 
 .hig__button__icon {
     display: inline-block;
-    height: 26px;
+    height: 24px;
     vertical-align: middle;
+    margin-right: 5px;
 
     > .hig__icon {
         display: inline;
-        margin-right: 5px;
         padding-left: 30px;
     }
+
+    
 
 }
 

@@ -26,11 +26,11 @@ class Submodule extends Core {
     }
 
     setTitle(title){
-        this._findDOMEl(".hig__global-nav__side-nav__section__group__module__title", this.el).textContent = title;
+        this._findDOMEl(".hig__global-nav__side-nav__section__group__module__submodule__link", this.el).textContent = title;
     }
 
     setLink(link){
-        this._findDOMEl("a", this.el).setAttribute("href", link);
+        this._findDOMEl(".hig__global-nav__side-nav__section__group__module__submodule__link", this.el).setAttribute("href", link);
     }
 
     show(){
@@ -53,8 +53,8 @@ class Submodule extends Core {
 
 Submodule._interface = Interface['components']['GlobalNav']['partials']['SideNav']['partials']['Section']['partials']['Group']['partials']['Module']['partials']['Submodule'];
 Submodule._defaults = {
-    "title": "Submodule",
-    "link": "#"
+    "title": "",
+    "link": ""
 };
 Submodule._partials = {};
 
