@@ -47,7 +47,7 @@
     "playground": "react-scripts start",
     "start": "npm run lib -- --watch",
     "test": "react-scripts test --env=jsdom",
-    "test-ci": "react-scripts test --env=jsdom --coverage",
+    "test-ci": "react-scripts test --env=jsdom --coverage --runInBand",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public -o build/storybook",
     "type-check": "tsc"
