@@ -21,7 +21,9 @@ import HIGChildValidator from '../../HIGChildValidator';
 
 import SectionListComponent, { SectionList } from './SectionList';
 import LinkListComponent, { LinkList } from './LinkList';
-import SearchComponent, { Search } from './Search';
+import SearchComponent, {
+  SearchAdapter
+} from '../../../adapters/SearchAdapter';
 
 export class SideNav extends HIGElement {
   constructor(HIGConstructor, initialProps) {
@@ -58,8 +60,8 @@ export class SideNav extends HIGElement {
         return new SectionList(this.hig); // special case hand over the hig instance
       case LinkList:
         return new LinkList(this.hig); // special case hand over the hig instance
-      case Search:
-        return new Search(this.hig.partials.Search, props);
+      case SearchAdapter:
+        return new SearchAdapter(this.hig.partials.Search, props);
       default:
         throw new Error(`Unknown type ${ElementConstructor.name}`);
     }
@@ -86,7 +88,7 @@ export class SideNav extends HIGElement {
           instance.componentDidMount();
         }
       }
-    } else if (instance instanceof Search) {
+    } else if (instance instanceof SearchAdapter) {
       if (this.search) {
         throw new Error('only one Search is allowed');
       } else {
@@ -115,7 +117,7 @@ export class SideNav extends HIGElement {
       this.links = null;
     }
 
-    if (instance instanceof Search) {
+    if (instance instanceof SearchAdapter) {
       this.search = null;
     }
 

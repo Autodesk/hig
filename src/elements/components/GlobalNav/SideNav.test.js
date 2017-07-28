@@ -20,7 +20,7 @@ import React from 'react';
 
 import GlobalNav from '../../../adapters/GlobalNav/GlobalNavAdapter';
 import SideNav from './SideNav';
-import Search from './Search';
+import Search from '../../../adapters/SearchAdapter';
 import SectionList from './SectionList';
 import Section from './Section';
 import Group from './Group';

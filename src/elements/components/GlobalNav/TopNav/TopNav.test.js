@@ -22,7 +22,7 @@ import React from 'react';
 import GlobalNav from '../../../../adapters/GlobalNav/GlobalNavAdapter';
 import TopNav from './TopNav';
 import ProfileComponent from '../../../../adapters/ProfileAdapter';
-import Search from './Search';
+import Search from '../../../../adapters/SearchAdapter';
 
 const Context = props => {
   return (

@@ -25,5 +25,5 @@ import '../adapters/FormElements/RadioButtonAdapter.story';
 import '../elements/components/GlobalNav/TopNav/Search.story.js';
 import '../elements/components/GlobalNav/TopNav/Profile.story';
 import '../adapters/GlobalNav/GlobalNavAdapter.story';
-import '../elements/components/GlobalNav/TopNav/ProjectAccountSwitcher.story';
+import '../adapters/ProjectAccountSwitcher.story';
 import '../elements/components/GlobalNav/SubNav/Tabs.story';

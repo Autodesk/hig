@@ -28,6 +28,7 @@ class SharedExamples {
       ...defaultProps,
       [config.key]: config.sampleValue
     };
+
     const { higContainer, higItem } = this.createHigContext(props);
 
     const reactContainer = document.createElement('div');

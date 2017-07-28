@@ -15,10 +15,9 @@ limitations under the License.
 
 */
 import * as PropTypes from 'prop-types';
-import createComponent from '../../../adapters/createComponent';
-import HIGElement from '../../HIGElement';
-
-export class Search extends HIGElement {
+import createComponent from './createComponent';
+import HIGElement from '../elements/HIGElement';
+export class SearchAdapter extends HIGElement {
   constructor(HIGConstructor, initialProps) {
     super(HIGConstructor, initialProps);
 
@@ -28,12 +27,24 @@ export class Search extends HIGElement {
   }
 
   commitUpdate(updatePayload, oldProps, newProps) {
-    const mapping = {
-      placeholder: 'setPlaceholder',
-      query: 'setQuery'
-    };
+    for (let i = 0; i < updatePayload.length; i += 2) {
+      const propKey = updatePayload[i];
+      const propValue = updatePayload[i + 1];
 
-    this.commitUpdateWithMapping(updatePayload, mapping);
+      switch (propKey) {
+        case 'placeholder': {
+          this.hig.setPlaceholder(propValue);
+          break;
+        }
+        case 'query': {
+          this.hig.setQuery(propValue);
+          break;
+        }
+        default: {
+          console.warn(`${propKey} is unknown`);
+        }
+      }
+    }
   }
 
   componentDidMount() {
@@ -56,7 +67,7 @@ export class Search extends HIGElement {
   }
 }
 
-const SearchComponent = createComponent(Search);
+const SearchComponent = createComponent(SearchAdapter);
 
 SearchComponent.propTypes = {
   query: PropTypes.string,

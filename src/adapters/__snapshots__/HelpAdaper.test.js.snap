@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Help constructor has a good snapshot 1`] = `
+exports[`Help renders help  1`] = `
 "<div class=\\"hig__global-nav\\">
     <!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
@@ -21,12 +21,44 @@ exports[`Help constructor has a good snapshot 1`] = `
     <!--PROJECT_ACCOUNT_SWITCHER-->
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
     <div class=\\"hig__global-nav__top-nav__shortcut\\">
-  <a href=\\"/help\\" title=\\"HELP\\" class=\\"hig__global-nav__top-nav__shortcut__link\\">
+  <a href=\\"#\\" title=\\"\\" class=\\"hig__global-nav__top-nav__shortcut__link\\">
     <div class=\\"hig__global-nav__top-nav__shortcut__link__icon hig__global-nav__top-nav__shortcut__link__icon--help\\">
       <div class=\\"hig__icon\\"><svg viewBox=\\"0.0 0.0 74 74\\" fill=\\"none\\" stroke-linecap=\\"square\\" stroke-miterlimit=\\"10\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"help\\"><clippath id=\\"a\\"><path d=\\"m0 0l100.0 0l0 100.0l-100.0 0l0 -100.0z\\"></path></clippath><g clip-path=\\"url(#a)\\"><path fill=\\"#000\\" fill-opacity=\\"0\\" d=\\"m0 0l100.0 0l0 100.0l-100.0 0z\\" fill-rule=\\"evenodd\\"></path><path fill=\\"#000\\" fill-opacity=\\"0\\" d=\\"m2.2283463 35.761154l0 0c0 -18.61243 15.088358 -33.700787 33.700787 -33.700787l0 0c8.938004 0 17.50993 3.5506084 23.830055 9.870732c6.3201256 6.3201227 9.870731 14.892051 9.870731 23.830055l0 0c0 18.61243 -15.088356 33.70079 -33.700787 33.70079l0 0c-18.61243 0 -33.700787 -15.08836 -33.700787 -33.70079z\\" fill-rule=\\"evenodd\\"></path><path stroke=\\"#000\\" stroke-width=\\"3\\" stroke-linejoin=\\"round\\" stroke-linecap=\\"butt\\" d=\\"m2.2283463 35.761154l0 0c0 -18.61243 15.088358 -33.700787 33.700787 -33.700787l0 0c8.938004 0 17.50993 3.5506084 23.830055 9.870732c6.3201256 6.3201227 9.870731 14.892051 9.870731 23.830055l0 0c0 18.61243 -15.088356 33.70079 -33.700787 33.70079l0 0c-18.61243 0 -33.700787 -15.08836 -33.700787 -33.70079z\\" fill-rule=\\"evenodd\\"></path><path fill=\\"#000\\" d=\\"m38.878353 43.981777l-5.984375 0q-0.015625 -1.296875 -0.015625 -1.578125q0 -2.90625 0.953125 -4.78125q0.96875 -1.875 3.84375 -4.21875q2.890625 -2.34375 3.453125 -3.0625q0.859375 -1.15625 0.859375 -2.53125q0 -1.921875 -1.53125 -3.296875q-1.53125 -1.375 -4.140625 -1.375q-2.5 0 -4.1875 1.4375q-1.6875 1.421875 -2.328125 4.359375l-6.046875 -0.75q0.265625 -4.203125 3.578125 -7.125q3.3125 -2.9375 8.703125 -2.9375q5.671875 0 9.015625 2.96875q3.359375 2.96875 3.359375 6.90625q0 2.171875 -1.234375 4.125q-1.21875 1.9375 -5.25 5.296875q-2.09375 1.734375 -2.59375 2.796875q-0.5 1.046875 -0.453125 3.765625zm-5.984375 8.859375l0 -6.59375l6.59375 0l0 6.59375l-6.59375 0z\\"></path><path fill=\\"#000\\" fill-opacity=\\"0\\" d=\\"m69.62992 67.40682l426.6772 0l0 49.76378l-426.6772 0z\\" fill-rule=\\"evenodd\\"></path></g></svg></div>
     </div>
   </a>
 </div><!--SHORTCUT-->
+    </div>
+    <!--PROFILE-->
+</div><!--TOPNAV-->
+        <!--SUBNAV-->
+        <div class=\\"hig__global-nav__slot\\">
+            <!--SLOT-->
+        </div>
+    </div>
+</div>"
+`;
+
+exports[`Help setting and updating props 1`] = `
+"<div class=\\"hig__global-nav\\">
+    <!--SIDENAV-->
+    <div class=\\"hig__global-nav__container\\">
+        <div class=\\"hig__global-nav__top-nav\\">
+    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
+        <div class=\\"hig__global-nav__top-nav__hamburger\\">
+            <div class=\\"hig__global-nav__top-nav__hamburger__hamburgericon\\"><div class=\\"hig__icon\\"><svg width=\\"30\\" height=\\"30\\" viewBox=\\"0 0 30 30\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-92 -185)\\" fill=\\"none\\" fill-rule=\\"evenodd\\"><rect x=\\"92\\" y=\\"185\\" width=\\"30\\" height=\\"30\\"></rect><path d=\\"M100,195 L115,195 L115,196 L100,196 L100,195 Z M100,200 L115,200 L115,201 L100,201 L100,200 Z M100,205 L115,205 L115,206 L100,206 L100,205 Z\\" fill=\\"#34495E\\"></path></g></svg></div></div>
+            <div class=\\"hig__global-nav__top-nav__hamburger__closeicon\\"><div class=\\"hig__icon\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-hamburger\\"><title>hig_icon_xclose</title><g fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect transform=\\"rotate(45 12 12)\\" x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect transform=\\"rotate(-45 12 12)\\" x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
+        </div>
+        <div class=\\"hig__global-nav__top-nav__logo\\">
+            <a href=\\"#\\">
+                <img src=\\"link\\">
+            </a>
+        </div>
+    </div>
+    <!--SEARCH-->
+    <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
+    <!--PROJECT_ACCOUNT_SWITCHER-->
+    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
+    <div class=\\"hig__global-nav__top-nav__shortcut\\" title=\\"newTest\\" href=\\"newTestLink\\">newTest</div><!--SHORTCUT-->
     </div>
     <!--PROFILE-->
 </div><!--TOPNAV-->

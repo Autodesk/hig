@@ -75,18 +75,6 @@ export class ProjectAdapter extends HIGElement {
       }
     }
   }
-
-  onActivate(callback) {
-    this._onActivate = callback;
-  }
-
-  callOnActivateCallback() {
-    if (!this._onActivate) {
-      return;
-    }
-
-    this._onActivate(this);
-  }
 }
 
 const ProjectComponent = createComponent(ProjectAdapter);

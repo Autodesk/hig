@@ -14,31 +14,34 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
  */
-import HIGElement from '../../../HIGElement';
+import HIGElement from '../elements/HIGElement';
 import * as PropTypes from 'prop-types';
-import createComponent from '../../../../adapters/createComponent';
+import createComponent from './createComponent';
 
-export class Help extends HIGElement {
+export class HelpAdapter extends HIGElement {
   commitUpdate(updatePayload, oldProps, newProps) {
-    const mapping = {
-      title: 'setTitle',
-      link: 'setLink'
-    };
-
     for (let i = 0; i < updatePayload.length; i += 2) {
       const propKey = updatePayload[i];
       const propValue = updatePayload[i + 1];
 
-      if (mapping[propKey]) {
-        this.hig[mapping[propKey]](propValue);
-      } else {
-        this.commitPropChange(propKey, propValue);
+      switch (propKey) {
+        case 'title': {
+          this.hig.setTitle(propValue);
+          break;
+        }
+        case 'link': {
+          this.hig.setLink(propValue);
+          break;
+        }
+        default: {
+          console.warn(`${propKey} is unknown`);
+        }
       }
     }
   }
 }
 
-const HelpComponent = createComponent(Help);
+const HelpComponent = createComponent(HelpAdapter);
 
 HelpComponent.propTypes = {
   title: PropTypes.string,

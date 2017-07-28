@@ -29,8 +29,10 @@ import ProfileComponent, {
   ProfileAdapter
 } from '../../../../adapters/ProfileAdapter';
 import ShortcutComponent, { Shortcut } from './Shortcut';
-import HelpComponent, { Help } from './Help';
-import SearchComponent, { Search } from './Search';
+import HelpComponent, { HelpAdapter } from '../../../../adapters/HelpAdapter';
+import SearchComponent, {
+  SearchAdapter
+} from '../../../../adapters/SearchAdapter';
 
 export class TopNav extends HIGElement {
   constructor(HIGConstructor, initialProps) {
@@ -86,12 +88,12 @@ export class TopNav extends HIGElement {
           this.hig.partials.ProjectAccountSwitcher,
           props
         );
-      case Help:
-        return new Help(this.hig.partials.Help, props);
+      case HelpAdapter:
+        return new HelpAdapter(this.hig.partials.Help, props);
       case Shortcut:
         return this.shortcuts.createElement(ElementConstructor, props);
-      case Search:
-        return new Search(this.hig.partials.Search, props);
+      case SearchAdapter:
+        return new SearchAdapter(this.hig.partials.Search, props);
       default:
         throw new Error(`Unknown type ${ElementConstructor.name}`);
     }
@@ -128,8 +130,8 @@ export class TopNav extends HIGElement {
     const requiredSingle = [
       'Profile',
       'ProjectAccountSwitcher',
-      'Help',
-      'Search'
+      'HelpAdapter',
+      'SearchAdapter'
     ];
     super.requireSingleInstance(instance, requiredSingle);
   }
@@ -139,8 +141,8 @@ export class TopNav extends HIGElement {
       ProfileAdapter,
       ProjectAccountSwitcherAdapter,
       Shortcut,
-      Help,
-      Search
+      HelpAdapter,
+      SearchAdapter
     ];
     if (!validInstances.includes(instance.constructor)) {
       throw new Error(
@@ -159,10 +161,10 @@ export class TopNav extends HIGElement {
     if (instance instanceof Shortcut) {
       return 'shortcut';
     }
-    if (instance instanceof Help) {
+    if (instance instanceof HelpAdapter) {
       return 'help';
     }
-    if (instance instanceof Search) {
+    if (instance instanceof SearchAdapter) {
       return 'search';
     }
     return null;
