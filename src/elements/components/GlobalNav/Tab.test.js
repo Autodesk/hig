@@ -33,27 +33,69 @@ const Context = props => {
   );
 };
 
+function createHigContext(props) {
+  const higContainer = document.createElement('div');
+
+  const higNav = new HIG.GlobalNav();
+  higNav.mount(higContainer);
+
+  const higSubNav = new higNav.partials.SubNav({});
+  higNav.addSubNav(higSubNav);
+
+  const higTabs = new higSubNav.partials.Tabs();
+  higSubNav.addTabs(higTabs);
+
+  const higTab = new higTabs.partials.Tab(props);
+  higTabs.addTab(higTab);
+  higTab.activate();
+
+  return { higContainer, higItem: higTab };
+}
+
+function createReactComponent(props) {
+  const reactContainer = document.createElement('div');
+  const wrapper = mount(<Context {...props} />, {
+    attachTo: reactContainer
+  });
+  return { wrapper, reactContainer };
+}
+
 describe('<Tab>', () => {
-  it('renders a tab', () => {
-    const initialProps = { label: 'Such Tab', key: 1, id: 1 };
-    const reactContainer = document.createElement('div');
-    const wrapper = mount(<Context {...initialProps} />, {
-      attachTo: reactContainer
-    });
+  it('will render defualt tabs', () => {
+    const defaults = {};
+    const { wrapper, reactContainer } = createReactComponent(defaults);
+    const { higContainer, higItem } = createHigContext(defaults);
 
     expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
+    expect(reactContainer.firstElementChild.outerHTML).toEqual(
+      higContainer.firstElementChild.outerHTML
+    );
   });
 
-  it('updates props', () => {
+  it('updates sets and updates props', () => {
     const initialProps = { label: 'Such Tab', key: 2, id: 2 };
     const updatedProps = { label: 'Many Tab', key: 3, id: 3 };
-    const reactContainer = document.createElement('div');
-    const wrapper = mount(<Context {...initialProps} />, {
-      attachTo: reactContainer
-    });
+    const { wrapper, reactContainer } = createReactComponent(initialProps);
+    const { higContainer, higItem } = createHigContext(initialProps);
 
     wrapper.setProps(updatedProps);
+    higItem.setLabel(updatedProps.label);
 
     expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
+    expect(reactContainer.firstElementChild.outerHTML).toEqual(
+      higContainer.firstElementChild.outerHTML
+    );
+  });
+
+  ['onClick'].forEach(eventName => {
+    it(`handles ${eventName}`, () => {
+      const warnSpy = jest.fn();
+      const { wrapper, reactContainer } = createReactComponent({});
+      console.warn = warnSpy;
+
+      wrapper.setProps({ [eventName]: () => {} });
+
+      expect(warnSpy).not.toHaveBeenCalled();
+    });
   });
 });

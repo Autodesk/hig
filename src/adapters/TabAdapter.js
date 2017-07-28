@@ -25,6 +25,9 @@ export class TabAdapter extends HIGElement {
     } else {
       this.hig.deactivate();
     }
+    if (this.initialProps.label) {
+      this.hig.setLabel(this.initialProps.label);
+    }
   }
   commitUpdate(updatePayload, oldProps, newProps) {
     for (let i = 0; i < updatePayload.length; i += 2) {

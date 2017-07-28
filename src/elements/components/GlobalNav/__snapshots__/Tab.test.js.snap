@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Tab> renders a tab 1`] = `
+exports[`<Tab> updates sets and updates props 1`] = `
 "<div class=\\"hig__global-nav\\">
     <!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
@@ -11,7 +11,7 @@ exports[`<Tab> renders a tab 1`] = `
         <div class=\\"hig__global-nav__sub-nav__module-indicator__name\\">Module Name</div>
     </div>
     <div class=\\"hig__global-nav__sub-nav__tabs\\">
-    <div class=\\"hig__global-nav__sub-nav__tabs__tab hig__global-nav__sub-nav__tabs__tab--active\\">Such Tab</div><!--TAB-->
+    <div class=\\"hig__global-nav__sub-nav__tabs__tab hig__global-nav__sub-nav__tabs__tab--active\\" title=\\"Many Tab\\">Many Tab</div><!--TAB-->
 </div><!--TABS-->
     <div class=\\"hig__global-nav__sub-nav__module-indicator\\">
         <div class=\\"hig__global-nav__sub-nav__module-indicator__icon hig__global-nav__sub-nav__spacer\\">#</div>
@@ -25,7 +25,7 @@ exports[`<Tab> renders a tab 1`] = `
 </div>"
 `;
 
-exports[`<Tab> updates props 1`] = `
+exports[`<Tab> will render defualt tabs 1`] = `
 "<div class=\\"hig__global-nav\\">
     <!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
@@ -36,7 +36,7 @@ exports[`<Tab> updates props 1`] = `
         <div class=\\"hig__global-nav__sub-nav__module-indicator__name\\">Module Name</div>
     </div>
     <div class=\\"hig__global-nav__sub-nav__tabs\\">
-    <div class=\\"hig__global-nav__sub-nav__tabs__tab hig__global-nav__sub-nav__tabs__tab--active\\">Many Tab</div><!--TAB-->
+    <div class=\\"hig__global-nav__sub-nav__tabs__tab hig__global-nav__sub-nav__tabs__tab--active\\">Tab</div><!--TAB-->
 </div><!--TABS-->
     <div class=\\"hig__global-nav__sub-nav__module-indicator\\">
         <div class=\\"hig__global-nav__sub-nav__module-indicator__icon hig__global-nav__sub-nav__spacer\\">#</div>

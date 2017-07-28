@@ -11,7 +11,7 @@ exports[`<Tabs> adds tabs 1`] = `
         <div class=\\"hig__global-nav__sub-nav__module-indicator__name\\">Module Name</div>
     </div>
     <div class=\\"hig__global-nav__sub-nav__tabs\\">
-    <div class=\\"hig__global-nav__sub-nav__tabs__tab\\">Hello</div><div class=\\"hig__global-nav__sub-nav__tabs__tab\\">There</div><div class=\\"hig__global-nav__sub-nav__tabs__tab\\">World</div><div class=\\"hig__global-nav__sub-nav__tabs__tab\\">Yes</div><!--TAB-->
+    <div class=\\"hig__global-nav__sub-nav__tabs__tab\\" title=\\"Hello\\">Hello</div><div class=\\"hig__global-nav__sub-nav__tabs__tab\\" title=\\"There\\">There</div><div class=\\"hig__global-nav__sub-nav__tabs__tab\\" title=\\"World\\">World</div><div class=\\"hig__global-nav__sub-nav__tabs__tab\\" title=\\"Yes\\">Yes</div><!--TAB-->
 </div><!--TABS-->
     <div class=\\"hig__global-nav__sub-nav__module-indicator\\">
         <div class=\\"hig__global-nav__sub-nav__module-indicator__icon hig__global-nav__sub-nav__spacer\\">#</div>
@@ -36,7 +36,7 @@ exports[`<Tabs> removes tabs 1`] = `
         <div class=\\"hig__global-nav__sub-nav__module-indicator__name\\">Module Name</div>
     </div>
     <div class=\\"hig__global-nav__sub-nav__tabs\\">
-    <div class=\\"hig__global-nav__sub-nav__tabs__tab\\">Updated Tabs</div><!--TAB-->
+    <div class=\\"hig__global-nav__sub-nav__tabs__tab\\" title=\\"Updated Tabs\\">Updated Tabs</div><!--TAB-->
 </div><!--TABS-->
     <div class=\\"hig__global-nav__sub-nav__module-indicator\\">
         <div class=\\"hig__global-nav__sub-nav__module-indicator__icon hig__global-nav__sub-nav__spacer\\">#</div>
@@ -61,7 +61,7 @@ exports[`<Tabs> renders tabs 1`] = `
         <div class=\\"hig__global-nav__sub-nav__module-indicator__name\\">Module Name</div>
     </div>
     <div class=\\"hig__global-nav__sub-nav__tabs\\">
-    <div class=\\"hig__global-nav__sub-nav__tabs__tab hig__global-nav__sub-nav__tabs__tab--active\\">Hello</div><div class=\\"hig__global-nav__sub-nav__tabs__tab\\">World</div><!--TAB-->
+    <div class=\\"hig__global-nav__sub-nav__tabs__tab hig__global-nav__sub-nav__tabs__tab--active\\" title=\\"Hello\\">Hello</div><div class=\\"hig__global-nav__sub-nav__tabs__tab\\" title=\\"World\\">World</div><!--TAB-->
 </div><!--TABS-->
     <div class=\\"hig__global-nav__sub-nav__module-indicator\\">
         <div class=\\"hig__global-nav__sub-nav__module-indicator__icon hig__global-nav__sub-nav__spacer\\">#</div>
