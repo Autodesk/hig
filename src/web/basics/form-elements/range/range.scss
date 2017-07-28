@@ -35,7 +35,7 @@
     }
 
     &:hover::#{$vendor} {
-      background-color: color(adsk-turquoise);
+      background-color: color(hig-turquoise-30);
     }
 
     &:focus::#{$vendor} {

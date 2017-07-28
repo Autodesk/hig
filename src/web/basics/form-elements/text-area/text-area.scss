@@ -10,7 +10,7 @@
     margin-top: 22px;
 
     *::selection {
-        background-color: color(adsk-turquoise-lightest);
+        background-color: color(hig-turquoise-60);
     }
 }
 
@@ -82,8 +82,8 @@
     }
 
     &:hover {
-        border: 1px solid color(adsk-turquoise);
-        box-shadow: 0 0 0 1px color(adsk-turquoise);
+        border: 1px solid color(hig-turquoise-30);
+        box-shadow: 0 0 0 1px color(hig-turquoise-30);
     }
 
     &.hig__text-area__field--no-value {
