@@ -19,9 +19,9 @@ exports[`<SideNav> <SideNav> with search renders children correctly 1`] = `
     <div class=\\"hig__global-nav__side-nav__section__group__module__collapse hig__global-nav__side-nav__section__group__module__collapse--collapsed\\"><div class=\\"hig__icon\\"><svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret\\"><title>hig/icon/caret</title><polyline points=\\"8 11 12 15 16 11\\" transform=\\"translate(-6.815 -10)\\" stroke-width=\\"1.5\\" stroke=\\"#979797\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"></polyline></svg></div></div><!--MODULE-COLLAPSE-->
     <div class=\\"hig__global-nav__side-nav__section__group__module__submodules\\">
         <div class=\\"hig__global-nav__side-nav__section__group__module__submodule hig__global-nav__side-nav__section__group__module__submodule--hide\\">
-    <a class=\\"hig__global-nav__side-nav__section__group__module__submodule__link\\" href=\\"#\\">Document</a>
+    <a class=\\"hig__global-nav__side-nav__section__group__module__submodule__link\\" href=\\"\\">Document</a>
 </div><div class=\\"hig__global-nav__side-nav__section__group__module__submodule hig__global-nav__side-nav__section__group__module__submodule--hide\\">
-    <a class=\\"hig__global-nav__side-nav__section__group__module__submodule__link\\" href=\\"#\\">Workflow</a>
+    <a class=\\"hig__global-nav__side-nav__section__group__module__submodule__link\\" href=\\"\\">Workflow</a>
 </div><!--SUBMODULE-->
     </div>
 </div><!--MODULE-->

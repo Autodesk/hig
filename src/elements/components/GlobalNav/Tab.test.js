@@ -73,8 +73,8 @@ describe('<Tab>', () => {
   });
 
   it('updates sets and updates props', () => {
-    const initialProps = { label: 'Such Tab', key: 2, id: 2 };
-    const updatedProps = { label: 'Many Tab', key: 3, id: 3 };
+    const initialProps = { label: 'Such Tab', key: 2 };
+    const updatedProps = { label: 'Many Tab', key: 3 };
     const { wrapper, reactContainer } = createReactComponent(initialProps);
     const { higContainer, higItem } = createHigContext(initialProps);
 
