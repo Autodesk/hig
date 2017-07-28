@@ -10,13 +10,13 @@
   // required for specificity
   .hig__input-button__input:focus + .hig__input-button__input-wrapper {
     outline: none;
-    border-color: color(adsk-blue-dark);
+    border-color: color(hig-blue-20);
   }
 
   .hig__input-button__input:checked + .hig__input-button__input-wrapper {
-    border-color: color(hig-slate-light);
+    border-color: color(hig-slate-50);
     color: color(hig-white);
-    background-color: color(hig-slate-light);
+    background-color: color(hig-slate-50);
     box-shadow: inset 0 0 0 3px color(hig-white);
   }
 }

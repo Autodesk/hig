@@ -1,7 +1,7 @@
 // Color Function
 // Used to get a color value, for example:
 // div {
-//   background: color(adsk-blue);
+//   background: color(hig-blue-30);
 // }
 
 @function color($color-name, $color-variant:null) {
@@ -33,62 +33,71 @@ $colors: (
     box-shadow-20: rgba(87,91,94,0.65),
 
     // Accent Colors
-    adsk-blue: #0696D7,
-    adsk-blue-dark: #087AAD,
-    adsk-blue-light: #4EB4E3,
-    adsk-blue-lightest: #CDEAF7,
+    hig-blue-20: #0576AB,
+    hig-blue-30: #0696D7,
+    hig-blue-50: #56B7E3,
+    hig-blue-60: #CEE7F3,
+    hig-blue-70: #E1F2FA,
 
-    adsk-green: #87BC40,
-    adsk-green-dark: #709C34,
-    adsk-green-light: #ABD079,
-    adsk-green-lightest: #ABD079,
+    hig-green-20: #6B9733,
+    hig-green-30: #87BC40,
+    hig-green-50: #ABD079,
+    hig-green-60: #DAEAC5,
+    hig-green-70: #F0F7E8,
 
-    adsk-turquoise: #0ED3BE,
-    adsk-turquoise-dark: #0C9E90,
-    adsk-turquoise-light: #56E0D1,
-    adsk-turquoise-lightest: #B6F1EB,
-    adsk-turquoise-tint: #E8FBF9,
+    hig-turquoise-20: #0CA899,
+    hig-turquoise-30: #0ED3BE,
+    hig-turquoise-50: #5CE1D3,
+    hig-turquoise-60: #BBF3ED,
+    hig-turquoise-70: #E2F9F7,
 
-    adsk-indigo: #1858A8,
-    adsk-indigo-dark: #13478A,
-    adsk-indigo-light: #5E89C2,
-    adsk-indigo-lightest: #D1DDEE,
+    hig-indigo-20: #144687,
+    hig-indigo-30: #1957A8,
+    hig-indigo-50: #5E89C2,
+    hig-indigo-60: #D1DDEE,
+    hig-indigo-70: #E3EAF4,
 
-    adsk-gold: #FAA21B,
-    adsk-gold-dark: #D98C16,
-    adsk-gold-light: #FBBD5F,
-    adsk-gold-lightest: #FDE3BA,
+    hig-gold-20: #C78016,
+    hig-gold-30: #FAA21B,
+    hig-gold-50: #FDC36D,
+    hig-gold-60: #FDE7C5,
+    hig-gold-70: #FEF3E3,
 
     // Notification Colors
-    good-green: #7CCC13,
-    alert-red: #D7332A,
-    warning-yellow: #F6A623,
+    hig-good-green: #7CCC13,
+    hig-alert-red: #D7332A,
+    hig-warning-yellow: #F6A623,
 
     // Data Visualization
-    hig-slate: #4B6B8F,
-    hig-slate-dark: #2E4258,
-    hig-slate-light: #7D93AC,
-    hig-slate-lightest: #C0C9D4,
+    hig-slate-20: #2E4258,
+    hig-slate-30: #4B6B8F,
+    hig-slate-50: #7993B0,
+    hig-slate-60: #C1CEDC,
+    hig-slate-70: #E9EDF1,
 
-    hig-purple: #A76EF5,
-    hig-purple-dark: #794FB2,
-    hig-purple-light: #C199F8,
-    hig-purple-lightest: #E4D3FC,
+    hig-purple-20: #8558C5,
+    hig-purple-30: #A76EF5,
+    hig-purple-50: #C5A1F8,
+    hig-purple-60: #EADCFD,
+    hig-purple-70: #F4EDFD,
 
-    hig-pink: #F73595,
-    hig-pink-dark: #B5236B,
-    hig-pink-light: #F871B4,
-    hig-pink-lightest: #FCC2DF,
+    hig-pink-20: #C52B78,
+    hig-pink-30: #F73595,
+    hig-pink-50: #F87CBA,
+    hig-pink-60: #FDCDE5,
+    hig-pink-70: #FEE6F2,
 
-    hig-salmon: #FF7B65,
-    hig-salmon-dark: #CB604E,
-    hig-salmon-light: #FFA293,
-    hig-salmon-lightest: #FFD7D0
+    hig-salmon-20: #CC6452,
+    hig-salmon-30: #FF7B65,
+    hig-salmon-50: #FFAD9E,
+    hig-salmon-60: #FFDFD9,
+    hig-salmon-70: #FFEFEC
+    
 );
 
 // Dynamicly create css classes that can be used with divs
-// this example will add "adsk-blue" as background color to this div:
-// <div class='hig__colors__adsk-blue--background'></div>
+// this example will add "hig-blue-30" as background color to this div:
+// <div class='hig__colors__hig-blue-30--background'></div>
 
 @each $color_name, $color_value in $colors{
     .hig__colors__#{$color_name}--color {

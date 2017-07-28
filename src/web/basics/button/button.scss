@@ -23,7 +23,7 @@
     border: 1px solid transparent;
 
     // default colors: primary
-    background: color(adsk-blue);
+    background: color(hig-blue-30);
     color: color(hig-white);
 
     // states
@@ -32,25 +32,25 @@
     }
 
     &:hover {
-        background-color: color(adsk-blue-light);
+        background-color: color(hig-blue-50);
     }
 
     &:active, &:focus {
-        background-color: color(adsk-blue-dark);
+        background-color: color(hig-blue-20);
     }
 
     &:focus {
         outline: none;
         box-shadow: 0 0 0 1px color(hig-white),
-                    0 0 0 2px color(adsk-blue-dark);
+                    0 0 0 2px color(hig-blue-20);
     }
 
     &--disabled {
         pointer-events: none;
-        background-color: color(adsk-blue-lightest);
+        background-color: color(hig-blue-60);
 
         &:hover, &:focus{
-            background-color: color(adsk-blue-lightest);
+            background-color: color(hig-blue-60);
         }
     }
 
@@ -90,24 +90,24 @@
     &.hig__button--flat {
         border-color: color(hig-gray-40);
         background: none;
-        color: color(hig-slate-dark);
+        color: color(hig-slate-20);
 
         // states
         &:visited {
-            color: color(hig-slate-dark);
+            color: color(hig-slate-20);
         }
 
         &:hover {
             background: none;
-            border-color: color(adsk-turquoise);
+            border-color: color(hig-turquoise-30);
         }
 
         &:focus {
             background: none;
             outline: none;
-            border-color: color(adsk-turquoise);
+            border-color: color(hig-turquoise-30);
             box-shadow: 0 0 0 1px color(hig-white),
-                        0 0 0 2px color(adsk-turquoise);
+                        0 0 0 2px color(hig-turquoise-30);
         }
 
         &:active {

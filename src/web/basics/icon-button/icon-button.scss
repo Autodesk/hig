@@ -8,7 +8,7 @@
 
     border: 1px solid color(hig-gray-40);
     border-radius: 4px;
-    color: color(hig-slate-dark);
+    color: color(hig-slate-20);
 
     padding: 0;
     height: 36px;
@@ -18,23 +18,23 @@
 
     // states
     &:visited {
-        color: color(hig-slate-dark);
+        color: color(hig-slate-20);
     }
 
     &:hover {
         background: none;
-        border-color: color(adsk-turquoise);
+        border-color: color(hig-turquoise-30);
     }
 
     &:active, &:focus {
         background: none;
-        border-color: color(adsk-turquoise);
+        border-color: color(hig-turquoise-30);
     }
 
     &:focus {
         outline: none;
         box-shadow: 0 0 0 1px color(hig-white),
-                    0 0 0 2px color(adsk-turquoise);
+                    0 0 0 2px color(hig-turquoise-30);
     }
 
     > .hig__icon-button__icon {

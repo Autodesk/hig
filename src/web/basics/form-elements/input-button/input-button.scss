@@ -51,7 +51,7 @@
   width: 14px;
 
   .hig__input-button:hover & {
-    border-color: color(adsk-turquoise);
+    border-color: color(hig-turquoise-30);
   }
 
   .hig__input-button__input[disabled] + & {
@@ -66,7 +66,7 @@
 .hig__input-button.hig__input-button--checkbox,
 .hig__input-button.hig__input-button--checkbox:active {
   .hig__input-button__input:checked:focus + .hig__input-button__input-wrapper {
-    border-color: color(adsk-blue-dark);
-    background-color: color(adsk-blue-dark);
+    border-color: color(hig-blue-20);
+    background-color: color(hig-blue-20);
   }
 }
