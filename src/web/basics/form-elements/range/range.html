@@ -1,9 +1,10 @@
 <div class="hig__range {{#disabled}}hig__range--disabled{{/disabled}}">
     <div class="hig__range__field__range-values" data-range-min={{min}} data-range-max={{max}}>
       <span class="hig__range__field__current-value">{{value}}</span>
-      <input class="hig__range__field" type="range" min={{min}} max={{max}} step={{step}}></input>
+      <input id={{id}} class="hig__range__field" type="range" min={{min}} max={{max}}
+             step={{step}}></input>
       <!--LABEL-->
-      {{#label}}<label class="hig__range__label">{{label}}</label>{{/label}}
+      {{#label}}<label for="{{id}}" class="hig__range__label">{{label}}</label>{{/label}}
     </div>
 
     <!--INSTRUCTIONS-->

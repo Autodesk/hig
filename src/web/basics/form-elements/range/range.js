@@ -13,6 +13,7 @@ var Core = require('_core.js');
 class Range extends Core {
 
     constructor(options){
+        options.id = Math.floor(Math.random() * 100000, 5).toString();
         super(options);
         this._render(Template, options);
 
