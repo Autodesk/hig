@@ -17,27 +17,30 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { text, select, boolean } from '@storybook/addon-knobs';
+import { text, number, boolean } from '@storybook/addon-knobs';
 
-import { default as TextAreaAdapter } from './TextAreaAdapter';
+import { default as RangeAdapter } from './RangeAdapter';
 
-storiesOf('TextAreaAdapter', module)
+storiesOf('Range', module)
   .addWithInfo('By default', ``, () => {
     return (
-      <TextAreaAdapter
+      <RangeAdapter
         disabled={boolean('Disabled', false)}
-        label={text('Label', 'My text field')}
+        label={text('Label', 'How old is your pet?')}
+        minValue={number("min age", 1)}
+        maxValue={number("max age", 20)}
+        step={number("step value", 1)}
         onBlur={action('blur')}
         onChange={action('change')}
         onFocus={action('focus')}
         onInput={action('input')}
-        required={text('Required', '')}
+        required={text('Please tell us', '')}
       />
     );
   })
   .addWithInfo('With no label and no events', ``, () => {
     return (
-      <TextAreaAdapter
+      <RangeAdapter
         disabled={boolean('Disabled', false)}
         instructions={text('Instructions', '')}
         name={text('Name', 'my-text-field')}

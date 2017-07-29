@@ -20,18 +20,9 @@ import HIGElement from '../../elements/HIGElement';
 import * as PropTypes from 'prop-types';
 import createComponent from '../createComponent';
 
-class TextAreaAdapter extends HIGElement {
+class RangeAdapter extends HIGElement {
   constructor(initialProps) {
-    super(HIG.TextArea, initialProps);
-  }
-
-  componentDidMount() {
-    this.commitUpdate([
-      'disabled',
-      this.initialProps.disabled,
-      'required',
-      this.initialProps.required
-    ]);
+    super(HIG.Range, initialProps);
   }
 
   commitUpdate(updatePayload, oldProps, newProps) {
@@ -48,22 +39,26 @@ class TextAreaAdapter extends HIGElement {
           this.hig.setInstructions(propValue);
           break;
         }
+        case 'minValue': {
+          this.hig.setMin(propValue);
+          break;
+        }
+        case 'maxValue': {
+          this.hig.setMax(propValue);
+          break;
+        }
         case 'label': {
           this.hig.setLabel(propValue);
-          break;
-        }
-        case 'name': {
-          this.hig.setName(propValue);
-          break;
-        }
-        case 'placeholder': {
-          this.hig.setPlaceholder(propValue);
           break;
         }
         case 'required': {
           propValue
             ? this.hig.required(propValue)
             : this.hig.noLongerRequired();
+          break;
+        }
+        case 'step': {
+          this.hig.setStep(propValue);
           break;
         }
         case 'value': {
@@ -100,73 +95,67 @@ class TextAreaAdapter extends HIGElement {
           this._disposeFunctions.set('onFocus', this.hig.onFocus(propValue));
           break;
         }
-        case 'onInput': {
-          const dispose = this._disposeFunctions.get('onInputDispose');
-
-          if (dispose) {
-            dispose();
-          }
-
-          this._disposeFunctions.set('onInput', this.hig.onInput(propValue));
-          break;
-        }
         default: {
-          return;
+          console.log(`RangeAdapter property ${propKey} is unknown`);
         }
       }
     }
   }
 }
 
-const TextAreaComponent = createComponent(TextAreaAdapter);
+const RangeComponent = createComponent(RangeAdapter);
 
-TextAreaComponent.propTypes = {
+RangeComponent.propTypes = {
   disabled: PropTypes.bool,
   instructions: PropTypes.string,
   label: PropTypes.string,
-  name: PropTypes.string,
-  placeholder: PropTypes.string,
-  required: PropTypes.string,
-  value: PropTypes.string,
+  minValue: PropTypes.number,
+  maxValue: PropTypes.number,
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
   onFocus: PropTypes.func,
-  onInput: PropTypes.func
+  required: PropTypes.string,
+  step: PropTypes.number,
+  value: PropTypes.number
 };
 
-TextAreaComponent.__docgenInfo = {
+RangeComponent.__docgenInfo = {
   props: {
     disabled: {
-      description: 'prevents interaction with the text field'
+      description: 'prevents interaction with the range'
     },
     instructions: {
-      description: 'instructional text for the text field'
+      description: 'instruction text for the range'
     },
     label: {
-      description: 'label for the text field'
+      description: 'label for the range'
     },
-    name: {
-      description: 'name of the field as submitted with a form'
+    minValue: {
+      description: 'minimum value for the range'
+    },
+    maxValue: {
+      description: 'maximum value for the range'
     },
     onBlur: {
-      description: 'callback called when user moves focus away from the text field'
+      description: 'callback for focus lost from the range'
     },
     onChange: {
-      description: 'callback called when user changes the value of the text field and moves focus away'
+      description: 'callback for change + focus lost for the range'
     },
     onFocus: {
-      description: 'callback called when user moves focus onto the text field'
-    },
-    onInput: {
-      description: 'callback called when user changes the value of the text field'
-    },
-    placeholder: {
-      description: 'text prompting the user to enter text'
+      description: 'callback for focus event on the range'
     },
     required: {
-      description: 'text indicating that the user must enter a value for this text field'
-    }
+      description: 'text indicating that this range field is a required field'
+    },
+    step: {
+      description: 'value of each step between min and max.'
+    },
+    value: {
+      description: 'value for the range input'
+    },
+
   }
 };
 
-export default TextAreaComponent;
+export default RangeComponent;
