@@ -130,6 +130,42 @@
                 "icon": "{String} (optional) ID of the icon"
             }
         },
+        "Spacing": {
+          "defaults": {
+            "inset": "",
+            "stack": "",
+            "inline": ""
+          },
+          "methods": {
+            "setInset": {}, // XXS, XS, S, M, L, XL, XXL => set padding
+            "setStack": {}, // XXS, XS, S, M, L, XL, XXL => set margin-bottom and display: block?
+            "setInline": {} // XXS, XS, S, M, L, XL, XXL => set margin-right and display: inline?
+          }
+        },
+        "InsetSpacer": {
+          "defaults": {
+            "width": "" // XXS, XS, S, M, L, XL, XXL
+          },
+          "methods": {
+            "setWidth": {} // XXS, XS, S, M, L, XL, XXL
+          }
+        },
+        "StackSpacer": {
+          "defaults": {
+            "height": "" // XXS, XS, S, M, L, XL, XXL
+          },
+          "methods": {
+            "setHeight": {} // XXS, XS, S, M, L, XL, XXL
+          }
+        },
+        "InlineSpacer": {
+          "defaults": {
+            "width": "" // XXS, XS, S, M, L, XL, XXL
+          },
+          "methods": {
+            "setWidth": {} // XXS, XS, S, M, L, XL, XXL
+          }
+        },
         "Typography": {
             "partials": {
                 "Heading": {
