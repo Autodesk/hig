@@ -5,7 +5,7 @@
   "main": "dist/hig.js",
   "private": true,
   "scripts": {
-    "build": "webpack",
+    "build": "NODE_ENV=production webpack -p",
     "compile-gh": "node deploy/compile-gh-pages.js",
     "deploy-dev": "./deploy/deploy-dev.sh",
     "watch": "webpack --watch",
