@@ -130,6 +130,10 @@
                 "icon": "{String} (optional) ID of the icon"
             }
         },
+        //
+        // Concept 1: A Spacing component
+        // Configured with any spacing property
+        //
         "Spacing": {
           "defaults": {
             "inset": "",
@@ -142,6 +146,10 @@
             "setInline": {} // XXS, XS, S, M, L, XL, XXL => set margin-right and display: inline?
           }
         },
+        //
+        // Concept 2: Three spacing components
+        // One for each dspacing dimension
+        //
         "InsetSpacer": {
           "defaults": {
             "width": "" // XXS, XS, S, M, L, XL, XXL
