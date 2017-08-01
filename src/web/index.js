@@ -15,5 +15,6 @@ Hig.Table = require('./components/table/table.js')
 Hig.TextArea = require('./basics/form-elements/text-area/text-area.js');
 Hig.TextField = require('./basics/form-elements/text-field/text-field.js');
 Hig.Typography = require('./basics/typography/typography.js');
+Hig.Spacing = require('./basics/spacing/spacing.js');
 
 module.exports = Hig;

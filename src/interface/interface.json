@@ -130,49 +130,41 @@
                 "icon": "{String} (optional) ID of the icon"
             }
         },
-        //
-        // Concept 1: A Spacing component
-        // Configured with any spacing property
-        //
         "Spacing": {
-          "defaults": {
-            "inset": "",
-            "stack": "",
-            "inline": ""
-          },
-          "methods": {
-            "setInset": {}, // XXS, XS, S, M, L, XL, XXL => set padding
-            "setStack": {}, // XXS, XS, S, M, L, XL, XXL => set margin-bottom and display: block?
-            "setInline": {} // XXS, XS, S, M, L, XL, XXL => set margin-right and display: inline?
-          }
+            "defaults": {
+                "inset": "",
+                "stack": "",
+                "inline": ""
+            },
+            "methods": {
+                "setInset": {},
+                "setStack": {},
+                "setInline": {}
+            }
         },
-        //
-        // Concept 2: Three spacing components
-        // One for each dspacing dimension
-        //
         "InsetSpacer": {
-          "defaults": {
-            "width": "" // XXS, XS, S, M, L, XL, XXL
-          },
-          "methods": {
-            "setWidth": {} // XXS, XS, S, M, L, XL, XXL
-          }
+            "defaults": {
+                "width": ""
+            },
+            "methods": {
+                "setWidth": {}
+            }
         },
         "StackSpacer": {
-          "defaults": {
-            "height": "" // XXS, XS, S, M, L, XL, XXL
-          },
-          "methods": {
-            "setHeight": {} // XXS, XS, S, M, L, XL, XXL
-          }
+            "defaults": {
+                "height": ""
+            },
+            "methods": {
+                "setHeight": {}
+            }
         },
         "InlineSpacer": {
-          "defaults": {
-            "width": "" // XXS, XS, S, M, L, XL, XXL
-          },
-          "methods": {
-            "setWidth": {} // XXS, XS, S, M, L, XL, XXL
-          }
+            "defaults": {
+                "width": ""
+            },
+            "methods": {
+                "setWidth": {}
+            }
         },
         "Typography": {
             "partials": {
