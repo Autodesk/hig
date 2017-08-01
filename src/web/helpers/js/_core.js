@@ -83,9 +83,9 @@ class Core {
      * @returns null
      */
 
-    _render(template, data, partials){
+    _render(template, data, partials, tagname = 'div'){
         if(!this._rendered){
-            var elWrapper = document.createElement('div');
+            var elWrapper = document.createElement(tagname);
             data = (data || {});
 
             // ICON MIXIN

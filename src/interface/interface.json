@@ -1605,8 +1605,8 @@
               "TextHeadCell": {
                 "methods": {
                   "setText": {},
-                  "setAlign": {}, // Left, right, center,
-                  "setWidth": {} // 1fr, 2fr, 3fr, 100px, 250px
+                  "setAlign": {}, 
+                  "setWidth": {} 
                 }
               },
               "SlotHeadCell": {
@@ -1625,20 +1625,20 @@
               "TextCell": {
                 "methods": {
                   "setText": {},
-                  "setAlign": {}, // left, right, center,
-                  "setWidth": {} // 1fr, 2fr, 3fr, 100px, 250px
+                  "setAlign": {},
+                  "setWidth": {}
                 }
               },
               "IconCell": {
                 "methods": {
                   "setIcon": {},
-                  "setWidth": {} // 1fr, 2fr, 3fr, 100px, 250px
+                  "setWidth": {} 
                 }
               },
               "SlotCell": {
                 "methods": {
                   "addSlot": {},
-                  "setWidth": {} // 1fr, 2fr, 3fr, 100px, 250px
+                  "setWidth": {} 
                 }
               }
             }
