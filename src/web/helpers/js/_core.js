@@ -16,17 +16,18 @@ class Core {
         if(!this._interface){
             console.warn("NO INTERFACE SET FOR CLASS, PLEASE DEFINE INTERFACE IN _interface PROPERTY OF YOUR CLASS");
         }else {
-            var methodArray = Object.getOwnPropertyNames( Object.getPrototypeOf( this ) );
+            var instanceMethods = Object.getOwnPropertyNames( Object.getPrototypeOf( this ) );
+            var coreMethods = Object.getOwnPropertyNames(Core.prototype);
             // CHECK IF ALL METHODS IN COMPONENT ARE DEFINED IN INTERFACE
-            methodArray.forEach(function(v, i){
-                if(v != "constructor" && v != "defaults" && v[0] != "_" && !this._interface["methods"][v]){
+            instanceMethods.forEach(function(v, i){
+                if(!coreMethods.includes(v) && v[0] != "_" && !this._interface["methods"][v]){
                     console.error("METHOD: \"" + this.constructor.name + '.' + v + "\" IS NOT DEFINED AS INTERFACE OR IS NOT A VALID INTERFACE METHOD");
                 }
             }, this);
 
             // CHECK IF ALL METHODS IN INTERFACE ARE IMPLEMENTED
             for(var k in this._interface["methods"]){
-                if(methodArray.indexOf(k) === -1){
+                if(instanceMethods.indexOf(k) === -1){
                     console.error(`METHOD: \"${this.constructor.name}.${k}\" IS NOT IMPLEMENTED BY THIS COMPONENT YET AND NEEDS AN IMPLEMENTATION`);
                 }
             };

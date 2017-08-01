@@ -127,7 +127,7 @@
                     "desc": "Calls the provided callback when user puts focus away from icon button",
                     "params": "HIG.abstract.EventObject.params",
                     "returns": "HIG.abstract.EventObject.returns"
-                }  
+                }
             },
             "defaults": {
                 "title": "{String} title of the button",
@@ -1577,6 +1577,14 @@
             }
           }
         }
+      },
+      "Modal": {
+          "methods": {
+              "addSlot": {},
+              "close": {},
+              "onOverlayClick": {},
+              "open": {}
+          }
       }
     }
   }

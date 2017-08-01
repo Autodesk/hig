@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../../../../../dist/hig.css">
+        <script type="text/javascript" src="../../../../../dist/hig.js"></script>
+
+        <style>
+            body{
+                margin: 50px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class='test-container'></div>
+
+        <script>
+
+            // ----------------------------
+            // Modal
+            // ----------------------------
+
+            const modalContent = document.createElement('h1');
+            modalContent.innerText = 'Hello, world!';
+
+            var Modal = new Hig.Modal();
+            Modal.mount();
+            Modal.addSlot(modalContent);
+            Modal.onOverlayClick(() => {
+              Modal.close();
+            });
+
+            const openModalButton = new Hig.Button({
+              title: 'Open modal'
+            });
+            openModalButton.mount('.test-container');
+            openModalButton.onClick(() => {
+              Modal.open();
+            });
+
+        </script>
+
+    </body>
+</html>

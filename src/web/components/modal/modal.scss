@@ -1,0 +1,39 @@
+@import '~helpers/css/mixins/breakpoints.scss';
+
+.hig__modal {
+  display: none;
+
+  &.hig__modal--open {
+    display: block;
+  }
+}
+
+.hig__modal__overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hig__modal__content {
+  position: absolute;
+  top: 128px;
+  max-width: calc(100vw - 32px);
+  width: 500px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-height: calc(100vh - 256px);
+  overflow: hidden;
+
+  border: 1px solid rgb(204, 204, 204);
+  background: rgb(255, 255, 255);
+  border-radius: 4px;
+  outline: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+
+  @include tablet-breakpoint {
+    width: 600px;
+  }
+}
