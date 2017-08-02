@@ -20,14 +20,36 @@
 			Table.mount("body");
 
 			var TableHead = new Table.partials.TableHead();
-			debugger;
 			Table.addTableHead(TableHead);
-</script>
+
+			var TextHeadCell = new TableHead.partials.TextHeadCell();
+			TableHead.addCell(TextHeadCell);
+
+			var NewTextHeadCell = new TableHead.partials.TextHeadCell();
+			TableHead.addCell(NewTextHeadCell);
+
+			var SlotHeadCell = new TableHead.partials.SlotHeadCell();
+			TableHead.addCell(SlotHeadCell);
+
+			//Add Table Body
+
+			var TableRow = new Table.partials.TableRow();
+			Table.addTableRow(TableRow);
+
+			var IconCell = new TableRow.partials.IconCell();
+			TableRow.addCell(IconCell);
+
+			var TextCell = new TableRow.partials.TextCell();
+			TableRow.addCell(TextCell);
+
+			var SlotCell = new TableRow.partials.SlotCell();
+			TableRow.addCell(SlotCell);
+		</script>
 
 	<table>
-		<div></div>
 		<thead>
-		<thead>	
+
+		</thead>
 	</table>	
 	</body>
 </html>
