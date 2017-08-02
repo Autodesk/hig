@@ -16,25 +16,98 @@
         <script>
 
             // ----------------------------
-            // Modal
+            // Minimal Modal
             // ----------------------------
 
-            const modalContent = document.createElement('h1');
-            modalContent.innerText = 'Hello, world!';
-
-            var Modal = new Hig.Modal();
+            const Modal = new Hig.Modal();
             Modal.mount();
-            Modal.addSlot(modalContent);
             Modal.onOverlayClick(() => {
               Modal.close();
             });
 
             const openModalButton = new Hig.Button({
-              title: 'Open modal'
+              title: 'Open minimal modal'
             });
             openModalButton.mount('.test-container');
             openModalButton.onClick(() => {
               Modal.open();
+            });
+
+
+
+            // ----------------------------
+            // Modal configured with defaults
+            // ----------------------------
+
+            const DefaultModal = new Hig.Modal({
+              title: 'Descriptive modal header sample',
+              headerColor: 'slate',
+            });
+            DefaultModal.mount();
+            DefaultModal.onOverlayClick(() => {
+              DefaultModal.close();
+            });
+
+            const openDefaultModalButton = new Hig.Button({
+              title: 'Open default modal'
+            });
+            openDefaultModalButton.mount('.test-container');
+            openDefaultModalButton.onClick(() => {
+              DefaultModal.open();
+            });
+
+
+            // ----------------------------
+            // Modal configured with setters
+            // ----------------------------
+
+            const SetterModal = new Hig.Modal();
+            SetterModal.mount();
+            SetterModal.open();
+            SetterModal.setTitle('Descriptive modal title');
+            SetterModal.setHeaderColor('grey');
+            SetterModal.addButton(new Hig.Button({ title: 'Cancel', type: 'secondary' }));
+            SetterModal.addButton(new Hig.Button({ title: 'Make it so' }));
+            SetterModal.onOverlayClick(() => {
+              SetterModal.close();
+            });
+
+            const setterModalContent = document.createElement('div');
+            setterModalContent.innerHTML = `
+              <p>Nisi minim ad enim reprehenderit minim est ut laboris et consectetur anim. Ea consequat sit veniam duis nulla ea sit. Proident ullamco sint Lorem consequat ut in occaecat ad nostrud proident minim. Adipisicing duis ex Lorem quis occaecat veniam culpa Lorem sint incididunt ex quis. Velit ut excepteur commodo aliquip. Aliqua occaecat eu est ullamco adipisicing consequat in culpa qui exercitation esse commodo excepteur.</p>
+              <p>Ad aliquip magna nulla pariatur nostrud amet consequat. Excepteur nostrud adipisicing sit veniam ullamco eiusmod incididunt amet amet commodo nulla nisi amet consectetur. Sit elit laborum exercitation tempor et proident. Voluptate eiusmod mollit exercitation consequat. Anim ullamco non tempor ut commodo qui ea aute laborum reprehenderit ullamco. Ipsum et pariatur eiusmod cupidatat mollit ea ipsum laborum ea sunt pariatur. Minim fugiat nostrud aliqua sunt veniam id id.</p>
+              <p>Labore non Lorem ipsum fugiat laboris deserunt ex sint Lorem minim. Officia elit cupidatat adipisicing magna veniam pariatur non proident ullamco quis magna. Aute ex duis adipisicing dolore in anim tempor quis veniam proident do magna et. Non quis cupidatat laboris sunt commodo sit consectetur dolor do sunt occaecat amet dolor nostrud. Id exercitation Lorem ut magna dolor magna esse exercitation ea anim.</p>
+              <p>Amet aute incididunt aliquip duis incididunt labore mollit. Occaecat velit eu reprehenderit deserunt nulla do laborum proident nulla eu exercitation reprehenderit cillum consequat. Ut ipsum voluptate do voluptate eu et elit in voluptate nostrud commodo.</p>
+              <p>Sunt Lorem amet irure quis Lorem enim adipisicing. Et labore elit nisi ullamco proident aliqua laboris nulla. Tempor pariatur aute nisi elit et commodo duis cillum. Officia laboris in consequat esse cupidatat pariatur est quis ex consequat consequat cillum aliquip.</p>
+              <p>Nisi minim ad enim reprehenderit minim est ut laboris et consectetur anim. Ea consequat sit veniam duis nulla ea sit. Proident ullamco sint Lorem consequat ut in occaecat ad nostrud proident minim. Adipisicing duis ex Lorem quis occaecat veniam culpa Lorem sint incididunt ex quis. Velit ut excepteur commodo aliquip. Aliqua occaecat eu est ullamco adipisicing consequat in culpa qui exercitation esse commodo excepteur.</p>
+              <p>Ad aliquip magna nulla pariatur nostrud amet consequat. Excepteur nostrud adipisicing sit veniam ullamco eiusmod incididunt amet amet commodo nulla nisi amet consectetur. Sit elit laborum exercitation tempor et proident. Voluptate eiusmod mollit exercitation consequat. Anim ullamco non tempor ut commodo qui ea aute laborum reprehenderit ullamco. Ipsum et pariatur eiusmod cupidatat mollit ea ipsum laborum ea sunt pariatur. Minim fugiat nostrud aliqua sunt veniam id id.</p>
+              <p>Labore non Lorem ipsum fugiat laboris deserunt ex sint Lorem minim. Officia elit cupidatat adipisicing magna veniam pariatur non proident ullamco quis magna. Aute ex duis adipisicing dolore in anim tempor quis veniam proident do magna et. Non quis cupidatat laboris sunt commodo sit consectetur dolor do sunt occaecat amet dolor nostrud. Id exercitation Lorem ut magna dolor magna esse exercitation ea anim.</p>
+              <p>Amet aute incididunt aliquip duis incididunt labore mollit. Occaecat velit eu reprehenderit deserunt nulla do laborum proident nulla eu exercitation reprehenderit cillum consequat. Ut ipsum voluptate do voluptate eu et elit in voluptate nostrud commodo.</p>
+              <p>Sunt Lorem amet irure quis Lorem enim adipisicing. Et labore elit nisi ullamco proident aliqua laboris nulla. Tempor pariatur aute nisi elit et commodo duis cillum. Officia laboris in consequat esse cupidatat pariatur est quis ex consequat consequat cillum aliquip.</p>
+              <p>Nisi minim ad enim reprehenderit minim est ut laboris et consectetur anim. Ea consequat sit veniam duis nulla ea sit. Proident ullamco sint Lorem consequat ut in occaecat ad nostrud proident minim. Adipisicing duis ex Lorem quis occaecat veniam culpa Lorem sint incididunt ex quis. Velit ut excepteur commodo aliquip. Aliqua occaecat eu est ullamco adipisicing consequat in culpa qui exercitation esse commodo excepteur.</p>
+              <p>Ad aliquip magna nulla pariatur nostrud amet consequat. Excepteur nostrud adipisicing sit veniam ullamco eiusmod incididunt amet amet commodo nulla nisi amet consectetur. Sit elit laborum exercitation tempor et proident. Voluptate eiusmod mollit exercitation consequat. Anim ullamco non tempor ut commodo qui ea aute laborum reprehenderit ullamco. Ipsum et pariatur eiusmod cupidatat mollit ea ipsum laborum ea sunt pariatur. Minim fugiat nostrud aliqua sunt veniam id id.</p>
+              <p>Labore non Lorem ipsum fugiat laboris deserunt ex sint Lorem minim. Officia elit cupidatat adipisicing magna veniam pariatur non proident ullamco quis magna. Aute ex duis adipisicing dolore in anim tempor quis veniam proident do magna et. Non quis cupidatat laboris sunt commodo sit consectetur dolor do sunt occaecat amet dolor nostrud. Id exercitation Lorem ut magna dolor magna esse exercitation ea anim.</p>
+              <p>Amet aute incididunt aliquip duis incididunt labore mollit. Occaecat velit eu reprehenderit deserunt nulla do laborum proident nulla eu exercitation reprehenderit cillum consequat. Ut ipsum voluptate do voluptate eu et elit in voluptate nostrud commodo.</p>
+              <p>Sunt Lorem amet irure quis Lorem enim adipisicing. Et labore elit nisi ullamco proident aliqua laboris nulla. Tempor pariatur aute nisi elit et commodo duis cillum. Officia laboris in consequat esse cupidatat pariatur est quis ex consequat consequat cillum aliquip.</p>
+              <p>Nisi minim ad enim reprehenderit minim est ut laboris et consectetur anim. Ea consequat sit veniam duis nulla ea sit. Proident ullamco sint Lorem consequat ut in occaecat ad nostrud proident minim. Adipisicing duis ex Lorem quis occaecat veniam culpa Lorem sint incididunt ex quis. Velit ut excepteur commodo aliquip. Aliqua occaecat eu est ullamco adipisicing consequat in culpa qui exercitation esse commodo excepteur.</p>
+              <p>Ad aliquip magna nulla pariatur nostrud amet consequat. Excepteur nostrud adipisicing sit veniam ullamco eiusmod incididunt amet amet commodo nulla nisi amet consectetur. Sit elit laborum exercitation tempor et proident. Voluptate eiusmod mollit exercitation consequat. Anim ullamco non tempor ut commodo qui ea aute laborum reprehenderit ullamco. Ipsum et pariatur eiusmod cupidatat mollit ea ipsum laborum ea sunt pariatur. Minim fugiat nostrud aliqua sunt veniam id id.</p>
+              <p>Labore non Lorem ipsum fugiat laboris deserunt ex sint Lorem minim. Officia elit cupidatat adipisicing magna veniam pariatur non proident ullamco quis magna. Aute ex duis adipisicing dolore in anim tempor quis veniam proident do magna et. Non quis cupidatat laboris sunt commodo sit consectetur dolor do sunt occaecat amet dolor nostrud. Id exercitation Lorem ut magna dolor magna esse exercitation ea anim.</p>
+              <p>Amet aute incididunt aliquip duis incididunt labore mollit. Occaecat velit eu reprehenderit deserunt nulla do laborum proident nulla eu exercitation reprehenderit cillum consequat. Ut ipsum voluptate do voluptate eu et elit in voluptate nostrud commodo.</p>
+              <p>Sunt Lorem amet irure quis Lorem enim adipisicing. Et labore elit nisi ullamco proident aliqua laboris nulla. Tempor pariatur aute nisi elit et commodo duis cillum. Officia laboris in consequat esse cupidatat pariatur est quis ex consequat consequat cillum aliquip.</p>
+              <p>Nisi minim ad enim reprehenderit minim est ut laboris et consectetur anim. Ea consequat sit veniam duis nulla ea sit. Proident ullamco sint Lorem consequat ut in occaecat ad nostrud proident minim. Adipisicing duis ex Lorem quis occaecat veniam culpa Lorem sint incididunt ex quis. Velit ut excepteur commodo aliquip. Aliqua occaecat eu est ullamco adipisicing consequat in culpa qui exercitation esse commodo excepteur.</p>
+              <p>Ad aliquip magna nulla pariatur nostrud amet consequat. Excepteur nostrud adipisicing sit veniam ullamco eiusmod incididunt amet amet commodo nulla nisi amet consectetur. Sit elit laborum exercitation tempor et proident. Voluptate eiusmod mollit exercitation consequat. Anim ullamco non tempor ut commodo qui ea aute laborum reprehenderit ullamco. Ipsum et pariatur eiusmod cupidatat mollit ea ipsum laborum ea sunt pariatur. Minim fugiat nostrud aliqua sunt veniam id id.</p>
+              <p>Labore non Lorem ipsum fugiat laboris deserunt ex sint Lorem minim. Officia elit cupidatat adipisicing magna veniam pariatur non proident ullamco quis magna. Aute ex duis adipisicing dolore in anim tempor quis veniam proident do magna et. Non quis cupidatat laboris sunt commodo sit consectetur dolor do sunt occaecat amet dolor nostrud. Id exercitation Lorem ut magna dolor magna esse exercitation ea anim.</p>
+              <p>Amet aute incididunt aliquip duis incididunt labore mollit. Occaecat velit eu reprehenderit deserunt nulla do laborum proident nulla eu exercitation reprehenderit cillum consequat. Ut ipsum voluptate do voluptate eu et elit in voluptate nostrud commodo.</p>
+              <p>Sunt Lorem amet irure quis Lorem enim adipisicing. Et labore elit nisi ullamco proident aliqua laboris nulla. Tempor pariatur aute nisi elit et commodo duis cillum. Officia laboris in consequat esse cupidatat pariatur est quis ex consequat consequat cillum aliquip.</p>
+            `;
+            SetterModal.addSlot(setterModalContent);
+
+            const openSetterModalButton = new Hig.Button({
+              title: 'Open setter modal'
+            });
+            openSetterModalButton.mount('.test-container');
+            openSetterModalButton.onClick(() => {
+              SetterModal.open();
             });
 
         </script>

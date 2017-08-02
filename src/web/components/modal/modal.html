@@ -1,7 +1,12 @@
 <div class="hig__modal">
   <div class="hig__modal__overlay">
-    <div class="hig__modal__content">
-      <!--SLOT-->
-    </div>
+    <article class="hig__modal__window">
+      <button class="hig__modal__close-button"></button>
+      <header class="hig__modal__header{{#headerColor}} hig__modal__header--{headerColor}{{/headerColor}}">{{title}}</header>
+      <div class="hig__modal__body">
+        <div class="hig__modal__slot"><!--SLOT--></div>
+      </div>
+      <div class="hig__modal__actions"><!--ACTIONS--></div>
+    </article>
   </div>
 </div>

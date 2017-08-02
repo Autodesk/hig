@@ -1,8 +1,11 @@
 import './modal.scss';
 
-var Template = require('./modal.html');
-var Interface = require('interface.json');
-var Core = require('_core.js');
+const Template = require('./modal.html');
+const Interface = require('interface.json');
+const Core = require('_core.js');
+const Button = require('../../basics/button/button');
+
+const AvailableHeaderColors = ['white', 'slate', 'grey'];
 
 /**
  * Creates a Modal
@@ -11,31 +14,50 @@ var Core = require('_core.js');
  */
 
 class Modal extends Core {
-  constructor() {
-    super({});
-    this._render(Template, {});
-  }
+    constructor(options) {
+        super(options);
+        this._render(Template, options);
+    }
 
-  mount() {
-    this.el = document.body.appendChild(this._rendered);
-    this._componentDidMount();
-  }
+    addButton(instance) {
+        if(instance instanceof Button){
+            this.mountPartialToComment('ACTIONS', instance);
+        }
+    }
 
-  addSlot(slotElement) {
-    this.mountPartialToComment('SLOT', slotElement);
-  }
+    addSlot(slotElement) {
+        this.mountPartialToComment('SLOT', slotElement);
+    }
 
-  onOverlayClick(fn) {
-    return this._attachListener('click', '.hig__modal__overlay', this.el, fn);
-  }
+    close() {
+        this.el.classList.remove('hig__modal--open');
+    }
 
-  open() {
-    this.el.classList.add('hig__modal--open');
-  }
+    mount() {
+        this.el = document.body.appendChild(this._rendered);
+        this._componentDidMount();
+    }
 
-  close() {
-    this.el.classList.remove('hig__modal--open');
-  }
+    onOverlayClick(fn) {
+        return this._attachListener('click', '.hig__modal__overlay', this.el, fn);
+    }
+
+    open() {
+        this.el.classList.add('hig__modal--open');
+    }
+
+    setTitle(title) {
+        this._findDOMEl('.hig__modal__header', this.el).textContent = title;
+    }
+
+    setHeaderColor(headerColor) {
+        if (!AvailableHeaderColors.includes(headerColor)) {
+            console.error(`Modal cannot have header color "${headerColor}". Only these colors are allowed: `, AvailableHeaderColors);
+            return;
+        }
+        this.el.classList.remove(AvailableHeaderColors.map(c => `hig__button--${c}`));
+        this.el.classList.add('hig__button--'+headerColor);
+    }
 }
 
 Modal._interface = Interface['components']['Modal'];

@@ -1580,10 +1580,15 @@
       },
       "Modal": {
           "methods": {
+              "addButton": {},
               "addSlot": {},
               "close": {},
+              "onCloseClick": {},
               "onOverlayClick": {},
-              "open": {}
+              "open": {},
+              "setBody": {},
+              "setHeaderColor": {},
+              "setTitle": {}
           }
       }
     }
