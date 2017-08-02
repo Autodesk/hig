@@ -24,12 +24,20 @@
 
 			var TextHeadCell = new TableHead.partials.TextHeadCell();
 			TableHead.addCell(TextHeadCell);
+			TextHeadCell.setText('new text cell');
+			TextHeadCell.setAlign("center");
+			TextHeadCell.setWidth('30%');
+
 
 			var NewTextHeadCell = new TableHead.partials.TextHeadCell();
 			TableHead.addCell(NewTextHeadCell);
 
 			var SlotHeadCell = new TableHead.partials.SlotHeadCell();
 			TableHead.addCell(SlotHeadCell);
+
+			var SlotEl = document.createElement('div');
+			SlotEl.innerHTML = `Raw denim flexitarian green juice kinfolk.`
+			SlotHeadCell.addSlot(SlotEl);
 
 			//Add Table Body
 
@@ -39,11 +47,22 @@
 			var IconCell = new TableRow.partials.IconCell();
 			TableRow.addCell(IconCell);
 
+			IconCell.setIcon('gear');
+			IconCell.setWidth('30%');
+
 			var TextCell = new TableRow.partials.TextCell();
 			TableRow.addCell(TextCell);
+			TextCell.setText('test setting text');
+			TextCell.setAlign('center');
+			TextCell.setWidth('40%');
 
+	
 			var SlotCell = new TableRow.partials.SlotCell();
 			TableRow.addCell(SlotCell);
+
+			var NewSlotEl = document.createElement('div');
+			NewSlotEl.innerHTML = `testing body cell slot.`;
+			SlotCell.addSlot(NewSlotEl);
 		</script>
 
 	<table>

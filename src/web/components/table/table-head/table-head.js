@@ -23,7 +23,6 @@ class TableHead extends Core {
     if (cellInstance instanceof TextHeadCell || cellInstance instanceof SlotHeadCell) {
       this.mountPartialToComment("HEADCELL", cellInstance);
     }
-    console.log('add cell')
   }
 }
 

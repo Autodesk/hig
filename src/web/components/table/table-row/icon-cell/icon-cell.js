@@ -17,12 +17,13 @@ class IconCell extends Core {
     this._render(Template, options, undefined, "tr");
   }
 
-  setIcon() {
-    console.log("setIcon");
+  setIcon(icon) {
+    debugger;
+    this.el.innerHTML = this._renderIcon(icon);
   }
 
-  setWidth() {
-    console.log("setWidth");
+  setWidth(width) {
+    this.el.style.width = width;
   }
 }
 

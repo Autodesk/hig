@@ -4,6 +4,8 @@ var Template = require("./text-cell.html");
 var Interface = require("interface.json");
 var Core = require("_core.js");
 
+var AvailablePositions = ["left", "right", "center"];
+
 /**
  * Creates an Table
  *
@@ -16,17 +18,19 @@ class TextCell extends Core {
     this._render(Template, options, undefined, "tr");
   }
 
-  setText() {
-    console.log("setText");
-  }
-
-  setAlign() {
-    console.log("setAlign");
+  setText(text){
+		this.el.textContent = text;	
 	}
-	
-	setWidth() {
-    console.log("setWidth");
-  }
+
+	setAlign(position){
+		if(AvailablePositions.indexOf(position) > -1) {
+			this.el.style.textAlign = position
+		};
+	}
+
+	setWidth(width){
+  		this.el.style.width = width;
+	}
 }
 
 TextCell._interface =

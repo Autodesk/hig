@@ -19,17 +19,18 @@ class TextHeadCell extends Core {
     this._render(Template, options, undefined, "tr");
 	}
 	
-	setText(){
-		this._findDomEl()
-		
+	setText(text){
+		this.el.textContent = text;	this.el.textContent = text;
 	}
 
-	setAlign(){
-		console.log("setAlign")
+	setAlign(position){
+		if(AvailablePositions.indexOf(position) > -1) {
+			this.el.style.textAlign = position
+		};
 	}
 
-	setWidth(){
-		console.log("setWidth")
+	setWidth(width){
+  		this.el.style.width = width;
 	}
 }
 

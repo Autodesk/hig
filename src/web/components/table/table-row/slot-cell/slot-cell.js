@@ -16,12 +16,12 @@ class SlotCell extends Core {
     this._render(Template, options, undefined, "tr");
   }
 
-  addSlot() {
-    console.log("setIcon");
+  addSlot(slotElement) {
+		this.mountPartialToComment("BODY-SLOT-CELL", slotElement);
   }
 
-  setWidth() {
-    console.log("setWidth");
+  setWidth(width) {
+    this.el.style.width = width;
   }
 }
 

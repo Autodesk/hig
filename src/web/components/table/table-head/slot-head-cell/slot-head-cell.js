@@ -16,12 +16,12 @@ class SlotHeadCell extends Core {
     this._render(Template, options, undefined, "tr");
   }
 
-  addSlot() {
-    console.log("addSlot");
+  addSlot(slotElement) {
+		this.mountPartialToComment("HEAD-SLOT-CELL", slotElement);
   }
 
-  setWidth() {
-    console.log("setWidth");
+  setWidth(width) {
+    this.el.style.width = width;
   }
 }
 
@@ -29,4 +29,5 @@ SlotHeadCell._interface = Interface["components"]["Table"]["partials"]["TableHea
 SlotHeadCell._defaults = {};
 
 module.exports = SlotHeadCell;
+
 
