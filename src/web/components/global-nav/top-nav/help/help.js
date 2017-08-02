@@ -1,5 +1,3 @@
-//var Interface = require('interface.json');
-//var Template = require('../shortcut/shortcut.html');
 var Shortcut = require('../shortcut/shortcut.js');
 var Interface = require('interface.json');
 

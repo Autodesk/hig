@@ -178,6 +178,14 @@
         
             });
 
+            // ADD HELP
+            var Help = new TopNav.partials.Help({
+                title: "Help", 
+                link: "http://www.autodesk.com"
+            });
+
+            TopNav.addHelp(Help);
+
             // ADD PROFILE
             var MyProfile1 = new TopNav.partials.Profile({
                 image: "avatar/david-construction-project-manager.png",
@@ -555,20 +563,20 @@
             });
 
             // ADD ACCOUNT
-            // var accountsData = [
-            //     { label: 'Oakwood Medical Center', image: './project-1.png' },
-            //     { label: 'Colorado Myrtle Shield Apartments', image: './project-2.png' },
-            //     { label: 'Grey Pillars', image: './project-3.png' },
-            //     { label: 'Keystone Apartments' },
-            //     { label: 'Pleasant Park', image: './project-4.png' }
-            // ];
-            // var accountComponents = accountsData.map(function(account){
-            //     return new ProjectAccountSwitcher.partials.Account(account);
-            // });
-            // accountComponents.forEach(function(accountComponent){
-            //     ProjectAccountSwitcher.addAccount(accountComponent);
-            //     accountComponent.onClick(function(){ accountComponent.activate(); });
-            // });
+            var accountsData = [
+                { label: 'Oakwood Medical Center', image: './project-1.png' },
+                { label: 'Colorado Myrtle Shield Apartments', image: './project-2.png' },
+                { label: 'Grey Pillars', image: './project-3.png' },
+                { label: 'Keystone Apartments' },
+                { label: 'Pleasant Park', image: './project-4.png' }
+            ];
+            var accountComponents = accountsData.map(function(account){
+                return new ProjectAccountSwitcher.partials.Account(account);
+            });
+            accountComponents.forEach(function(accountComponent){
+                ProjectAccountSwitcher.addAccount(accountComponent);
+                accountComponent.onClick(function(){ accountComponent.activate(); });
+            });
 
             ProjectAccountSwitcher.onClick(function(){
                 ProjectAccountSwitcher.open();
