@@ -55,6 +55,9 @@ $shadow-layer: -1;
   top: 16px;
   right: 16px;
   z-index: $close-button-layer;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
 .hig__modal__header {
