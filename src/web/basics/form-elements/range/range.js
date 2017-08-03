@@ -12,12 +12,16 @@ var Core = require('_core.js');
 
 class Range extends Core {
 
-    constructor(options){
+    constructor(options = {}){
         options.id = Math.floor(Math.random() * 100000, 5).toString();
         super(options);
         this._render(Template, options);
 
         this._findCurrentRangeValue = this._findCurrentRangeValue.bind(this);
+    }
+
+    _componentDidMount() {
+      this._attachListener("input", '.hig__range__field', this.el, this._findCurrentRangeValue);
     }
 
     setInstructions(instructions) {
@@ -63,7 +67,6 @@ class Range extends Core {
 
     onChange(fn){
         this._attachListener("change", '.hig__range__field', this.el, fn);
-        return this._attachListener("input", '.hig__range__field', this.el, this._findCurrentRangeValue);
     }
 
     onFocus(fn){
@@ -100,7 +103,7 @@ class Range extends Core {
 Range._interface = Interface['basics']['FormElements']['partials']['Range'];
 Range._defaults = {
     value: null,
-    minValue: null,
+    minValue: 0,
     maxValue: null,
     instructions: '',
     label: '',
