@@ -5,7 +5,7 @@ const Interface = require('interface.json');
 const Core = require('_core.js');
 const Button = require('../../basics/button/button');
 
-const AvailableHeaderColors = ['white', 'slate', 'grey'];
+const AvailableHeaderColors = ['white', 'slate', 'gray'];
 
 /**
  * Creates a Modal
@@ -52,7 +52,7 @@ class Modal extends Core {
     }
 
     setTitle(title) {
-        this._findDOMEl('.hig__modal__header', this.el).textContent = title;
+        this._findDOMEl('.hig__modal__header-title', this.el).textContent = title;
     }
 
     setHeaderColor(headerColor) {
@@ -60,8 +60,9 @@ class Modal extends Core {
             console.error(`Modal cannot have header color "${headerColor}". Only these colors are allowed: `, AvailableHeaderColors);
             return;
         }
-        this.el.classList.remove(AvailableHeaderColors.map(c => `hig__button--${c}`));
-        this.el.classList.add('hig__button--'+headerColor);
+        const headerEl = this._findDOMEl('.hig__modal__header', this.el);
+        headerEl.classList.remove(AvailableHeaderColors.map(c => `hig__modal__header--${c}`));
+        headerEl.classList.add('hig__modal__header--'+headerColor);
     }
 
     _callbackIfOverlayClicked(callback, event) {
@@ -72,7 +73,11 @@ class Modal extends Core {
 }
 
 Modal._interface = Interface['components']['Modal'];
-Modal._defaults = {};
+Modal._defaults = {
+    body: "",
+    headerColor: "white",
+    title: ""
+};
 Modal._partials = {};
 
 module.exports = Modal;

@@ -1584,6 +1584,11 @@
               "setBody": {},
               "setHeaderColor": {},
               "setTitle": {}
+          },
+          "defaults": {
+            "title": "",
+            "body": "",
+            "headerColor": ""
           }
       }
     }

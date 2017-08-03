@@ -58,6 +58,10 @@ $shadow-layer: -1;
   border: none;
   background: none;
   cursor: pointer;
+
+  .hig__modal__header--slate > & > .hig__icon > svg * {
+    fill: color(hig-blue-70);
+  }
 }
 
 .hig__modal__header {
@@ -67,6 +71,15 @@ $shadow-layer: -1;
   font-family: 'ArtifaktElement';
   z-index: $header-layer;
   border-bottom: 1px solid color(hig-gray-50);
+
+  &.hig__modal__header--slate {
+    background-color: color(hig-slate-30);
+    color: color(hig-blue-70);
+  }
+
+  &.hig__modal__header--gray {
+    background-color: color(hig-blue-70);
+  }
 }
 
 .hig__modal__body {

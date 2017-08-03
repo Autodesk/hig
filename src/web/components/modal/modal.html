@@ -1,10 +1,12 @@
 <div class="hig__modal">
   <div class="hig__modal__overlay">
     <article class="hig__modal__window">
-      <button class="hig__modal__close-button">{{#renderIcon}}x-close-gray{{/renderIcon}}</button>
-      <header class="hig__modal__header{{#headerColor}} hig__modal__header--{headerColor}{{/headerColor}}">{{title}}</header>
+      <header class="hig__modal__header{{#headerColor}} hig__modal__header--{{headerColor}}{{/headerColor}}">
+        <button class="hig__modal__close-button">{{#renderIcon}}x-close-gray{{/renderIcon}}</button>
+        <span class="hig__modal__header-title">{{title}}</span>
+      </header>
       <div class="hig__modal__body">
-        <div class="hig__modal__slot"><!--SLOT--></div>
+        <div class="hig__modal__slot">{{body}}<!--SLOT--></div>
       </div>
       <div class="hig__modal__actions"><!--ACTIONS--></div>
     </article>
