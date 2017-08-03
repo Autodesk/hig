@@ -33,7 +33,6 @@ $shadow-layer: -1;
   top: 128px;
   max-width: calc(100vw - 32px);
   width: 500px;
-  min-height: 200px;
   left: 50%;
   transform: translateX(-50%);
   max-height: calc(100vh - 256px);
@@ -71,6 +70,7 @@ $shadow-layer: -1;
   font-family: 'ArtifaktElement';
   z-index: $header-layer;
   border-bottom: 1px solid color(hig-gray-50);
+  min-height: 33px;
 
   &.hig__modal__header--slate {
     background-color: color(hig-slate-30);
@@ -101,7 +101,7 @@ $shadow-layer: -1;
   &::before {
     content: '';
     position: relative;
-    background-image: linear-gradient(to bottom, white, transparent);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
     height: 16px;
     display: block;
     z-index: $shadow-mask-layer;
@@ -111,7 +111,7 @@ $shadow-layer: -1;
   &::after {
     content: '';
     position: relative;
-    background-image: linear-gradient(to top, white, transparent);
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
     height: 16px;
     display: block;
     z-index: $shadow-mask-layer;
@@ -125,5 +125,6 @@ $shadow-layer: -1;
   padding: 16px;
   z-index: $actions-layer;
   flex: 0 0 auto;
+  min-height: 33px;
   border-top: 1px solid color(hig-gray-50);
 }

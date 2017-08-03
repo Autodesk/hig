@@ -26,7 +26,7 @@ class Modal extends Core {
     }
 
     addSlot(slotElement) {
-        this.mountPartialToComment('SLOT', slotElement);
+        this._findDOMEl('.hig__modal__slot', this.el).appendChild(slotElement);
     }
 
     close() {
@@ -39,7 +39,6 @@ class Modal extends Core {
     }
 
     onCloseClick(fn) {
-        console.log('sdhfkdsjhfjkds')
         return this._attachListener('click', '.hig__modal__close-button', this.el, fn);
     }
 
@@ -51,8 +50,8 @@ class Modal extends Core {
         this.el.classList.add('hig__modal--open');
     }
 
-    setTitle(title) {
-        this._findDOMEl('.hig__modal__header-title', this.el).textContent = title;
+    setBody(body) {
+        this._findDOMEl('.hig__modal__slot', this.el).textContent = body;
     }
 
     setHeaderColor(headerColor) {
@@ -63,6 +62,10 @@ class Modal extends Core {
         const headerEl = this._findDOMEl('.hig__modal__header', this.el);
         headerEl.classList.remove(AvailableHeaderColors.map(c => `hig__modal__header--${c}`));
         headerEl.classList.add('hig__modal__header--'+headerColor);
+    }
+
+    setTitle(title) {
+        this._findDOMEl('.hig__modal__header-title', this.el).textContent = title;
     }
 
     _callbackIfOverlayClicked(callback, event) {
