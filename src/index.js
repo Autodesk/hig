@@ -22,6 +22,7 @@ import {
   GlobalNav,
   IconButton,
   RadioButton,
+  Range,
   TextField,
   TextArea
 } from './react-hig';
@@ -517,7 +518,7 @@ class App extends React.Component {
               <h3>Checkbox</h3>
               <div style={checkboxStyle}>
                 <Checkbox
-                  label="I AGREE"
+                  label="Required"
                   name="tsandcs"
                   value="asd"
                   required="You must check this box"
@@ -583,6 +584,21 @@ class App extends React.Component {
                 />
               </div>
             </section>
+            <section>
+              <h3>Range</h3>
+              <div>
+                <Range
+                  label="What is your age?"
+                  instructions="You must be 21 or older."
+                  required="Age is required."
+                  minValue={21}
+                  maxValue={99}
+                  value={21}
+                  step={1}
+                />
+
+              </div>
+            </section>
 
             <section>
               <h3>TextField</h3>
@@ -594,6 +610,7 @@ class App extends React.Component {
                 onFocus={this.logEvent}
                 onInput={this.setTextFieldValue}
                 value={this.state.textFieldValue}
+                required="This field is required."
               />
             </section>
             <section>
@@ -601,6 +618,7 @@ class App extends React.Component {
               <TextArea
                 label="Tab title"
                 placeholder="Foo"
+                required="This field is required."
                 onBlur={this.logEvent}
                 onChange={this.logEvent}
                 onFocus={this.logEvent}

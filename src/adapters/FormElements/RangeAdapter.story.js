@@ -24,28 +24,26 @@ import { default as RangeAdapter } from './RangeAdapter';
 storiesOf('Range', module)
   .addWithInfo('By default', ``, () => {
     return (
-      <RangeAdapter
-        disabled={boolean('Disabled', false)}
-        label={text('Label', 'How old is your pet?')}
-        minValue={number("min age", 1)}
-        maxValue={number("max age", 20)}
-        step={number("step value", 1)}
-        onBlur={action('blur')}
-        onChange={action('change')}
-        onFocus={action('focus')}
-        onInput={action('input')}
-        required={text('Please tell us', '')}
-      />
-    );
-  })
-  .addWithInfo('With no label and no events', ``, () => {
-    return (
-      <RangeAdapter
-        disabled={boolean('Disabled', false)}
-        instructions={text('Instructions', '')}
-        name={text('Name', 'my-text-field')}
-        placeholder={text('Placeholder', 'Tell me how you really feel')}
-        required={text('Required', '')}
-      />
+      <div>
+        <RangeAdapter
+          disabled={boolean('Disabled', false)}
+          label={text('label text', "It goes to eleven")}
+          minValue={number("min volume", 1)}
+          maxValue={number("max volume", 11)}
+          step={number("step value", 1)}
+          onChange={action('change')}
+          required={text('required text', 'This is the volume')}
+          value={1}
+        />
+        <RangeAdapter
+          label="Turn it up"
+          instructions="Pump up the volume"
+          required="this field is required."
+          minValue={0}
+          maxValue={21}
+          value={21}
+          step={1}
+        />
+      </div>
     );
   });

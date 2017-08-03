@@ -25,6 +25,12 @@ class RangeAdapter extends HIGElement {
     super(HIG.Range, initialProps);
   }
 
+  componentDidMount() {
+    if (this.props.required) {
+      this.hig.required(this.initialProps.required);
+    }
+  }
+
   commitUpdate(updatePayload, oldProps, newProps) {
     for (let i = 0; i < updatePayload.length; i += 2) {
       const propKey = updatePayload[i];
