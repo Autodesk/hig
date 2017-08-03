@@ -93,6 +93,18 @@
   }
 }
 
+.hig__range__required-notice {
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: 14px;
+  color: #939ca5;
+
+  &:before {
+    content: "*";
+    margin-right: 5px;
+  }
+}
+
 .hig__range__field__range-values {
   position: relative;
   display: flex;
