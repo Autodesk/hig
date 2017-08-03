@@ -1,5 +1,6 @@
 var Icons = require('../../basics/icons/icons.js');
 var Mustache = require('mustache');
+require('./polyfills.js');
 
 class Core {
 
@@ -10,8 +11,6 @@ class Core {
      */
 
     constructor(options) {
-
-        this._events = {};
 
         // CHECK INTERFACE COMPATIBILITY
         if(!this._interface){
@@ -197,8 +196,6 @@ class Core {
      */
 
     _attachListener(eventType, targetClass, scopeElement, executeOnEventFunction ){
-
-        // #TODO: dont attach event listeners twice if _attachListener is called by second item, save events in local this._events object and loop through before attaching a new event
 
         function childOf(/*child node*/c, /*parent node*/p){ //returns boolean
             while( (c=c.parentNode) && c!==p );
