@@ -1,7 +1,34 @@
 @import '~basics/colors/colors.scss';
 @import '~helpers/css/mixins/breakpoints.scss';
-
+@import '~helpers/css/mixins/base.scss';
 
 .hig__table {
+	table-layout: fixed;
+	white-space: nowrap;
+	width: 100%;
 
+	border-collapse: collapse;
+	
+	font-family: 'ArtifaktElement';
+	font-weight: 500;
+	font-size: 14px;
+
+	color: color(hig-gray-10);
+}
+
+.hig__table th {
+	font-weight: 500;
+	padding: 16px 4px;
+
+	white-space: nowrap;
+  overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.hig__table__body td {
+	padding: 8px 4px;
+
+	white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

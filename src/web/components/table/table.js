@@ -7,7 +7,6 @@ var Core = require("_core.js");
 var TableHead = require('./table-head/table-head.js');
 var TableRow = require("./table-row/table-row.js");
 
-
 /**
  * Creates an Table
  *

@@ -17,7 +17,7 @@ class SlotCell extends Core {
   }
 
   addSlot(slotElement) {
-		this.mountPartialToComment("BODY-SLOT-CELL", slotElement);
+		this._el.appendChild(slotElement)
   }
 
   setWidth(width) {

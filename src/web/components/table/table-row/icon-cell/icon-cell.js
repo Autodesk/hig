@@ -1,6 +1,5 @@
 import "./icon-cell.scss";
 
-
 var Template = require("./icon-cell.html");
 var Interface = require("interface.json");
 var Core = require("_core.js");
@@ -18,8 +17,7 @@ class IconCell extends Core {
   }
 
   setIcon(icon) {
-    debugger;
-    this.el.innerHTML = this._renderIcon(icon);
+    this._el.innerHTML = this._renderIcon(icon);
   }
 
   setWidth(width) {

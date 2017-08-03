@@ -17,12 +17,18 @@ class SlotHeadCell extends Core {
   }
 
   addSlot(slotElement) {
-		this.mountPartialToComment("HEAD-SLOT-CELL", slotElement);
+		this._el.appendChild(slotElement);
   }
 
   setWidth(width) {
-    this.el.style.width = width;
-  }
+    if (width.endsWith("fr")) {
+      var value = width.split("fr", 1);
+      var percentWidth = value[0] * 100;
+      this.el.style.width = `${percentWidth}%`;
+    } else {
+      this.el.style.width = width;
+    }
+  }  
 }
 
 SlotHeadCell._interface = Interface["components"]["Table"]["partials"]["TableHead"]["partials"]["SlotHeadCell"];
