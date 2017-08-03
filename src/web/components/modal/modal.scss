@@ -2,6 +2,7 @@
 @import '~helpers/css/mixins/breakpoints.scss';
 @import '~basics/fonts/fonts.scss';
 
+$close-button-layer: 3;
 $shadow-mask-layer: 3;
 $header-layer: 2;
 $actions-layer: 2;
@@ -53,6 +54,7 @@ $shadow-layer: -1;
   position: absolute;
   top: 16px;
   right: 16px;
+  z-index: $close-button-layer;
 }
 
 .hig__modal__header {
@@ -77,9 +79,8 @@ $shadow-layer: -1;
   overflow: auto;
   flex: 1 1 auto;
   box-shadow:
-    inset 0px 9px 6px -8px rgba(0, 0, 0, 0.2),
-    inset 0px -9px 6px -8px rgba(0, 0, 0, 0.2);
-    // inset 0 0 4px rgba(0, 0, 0, 0.2);
+    inset 0px 9px 6px -11px rgba(0, 0, 0, 0.4),
+    inset 0px -9px 6px -11px rgba(0, 0, 0, 0.4);
 
   &::before {
     content: '';

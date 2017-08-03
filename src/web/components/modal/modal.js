@@ -38,8 +38,13 @@ class Modal extends Core {
         this._componentDidMount();
     }
 
+    onCloseClick(fn) {
+        console.log('sdhfkdsjhfjkds')
+        return this._attachListener('click', '.hig__modal__close-button', this.el, fn);
+    }
+
     onOverlayClick(fn) {
-        return this._attachListener('click', '.hig__modal__overlay', this.el, fn);
+        return this._attachListener('click', '.hig__modal__overlay', this.el, this._callbackIfOverlayClicked.bind(this, fn));
     }
 
     open() {
@@ -57,6 +62,12 @@ class Modal extends Core {
         }
         this.el.classList.remove(AvailableHeaderColors.map(c => `hig__button--${c}`));
         this.el.classList.add('hig__button--'+headerColor);
+    }
+
+    _callbackIfOverlayClicked(callback, event) {
+        if (event.target.classList.contains('hig__modal__overlay')) {
+            callback(event);
+        }
     }
 }
 
