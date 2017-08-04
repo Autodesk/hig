@@ -1,0 +1,134 @@
+@import '~basics/colors/colors.scss';
+@import '~helpers/css/mixins/breakpoints.scss';
+@import '~basics/fonts/fonts.scss';
+
+$close-button-layer: 3;
+$shadow-mask-layer: 3;
+$header-layer: 2;
+$actions-layer: 2;
+$body-layer: 1;
+$shadow-layer: -1;
+
+.hig__modal {
+  display: none;
+
+  &.hig__modal--open {
+    display: block;
+  }
+}
+
+.hig__modal__overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hig__modal__window {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 128px;
+  max-width: calc(100vw - 32px);
+  width: 500px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-height: calc(100vh - 256px);
+  overflow: hidden;
+
+  border: 1px solid color(hig-gray-50);
+  background: color(hig-white);
+  border-radius: 4px;
+  outline: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+
+  @include tablet-breakpoint {
+    width: 600px;
+  }
+}
+
+.hig__modal__close-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: $close-button-layer;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  .hig__modal__header--slate > & > .hig__icon > svg * {
+    fill: color(hig-blue-70);
+  }
+}
+
+.hig__modal__header {
+  position: relative;
+  padding: 16px 32px 16px 16px;
+  font-size: 24px;
+  font-family: 'ArtifaktElement';
+  z-index: $header-layer;
+  border-bottom: 1px solid color(hig-gray-50);
+  min-height: 33px;
+
+  &.hig__modal__header--slate {
+    background-color: color(hig-slate-30);
+    color: color(hig-blue-70);
+  }
+
+  &.hig__modal__header--gray {
+    background-color: color(hig-blue-70);
+  }
+}
+
+.hig__modal__body {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex: 1 1 auto;
+  z-index: $body-layer;
+}
+
+.hig__modal__slot {
+  padding: 0 16px;
+  overflow: auto;
+  flex: 1 1 auto;
+  box-shadow:
+    inset 0px 9px 6px -11px rgba(0, 0, 0, 0.4),
+    inset 0px -9px 6px -11px rgba(0, 0, 0, 0.4);
+
+  &::before {
+    content: '';
+    position: relative;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    height: 16px;
+    display: block;
+    z-index: $shadow-mask-layer;
+    margin: 0 -16px;
+  }
+
+  &::after {
+    content: '';
+    position: relative;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    height: 16px;
+    display: block;
+    z-index: $shadow-mask-layer;
+    margin: 0 -16px;
+  }
+}
+
+.hig__modal__actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px;
+  z-index: $actions-layer;
+  flex: 0 0 auto;
+  min-height: 33px;
+  border-top: 1px solid color(hig-gray-50);
+}

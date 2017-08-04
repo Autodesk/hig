@@ -56,7 +56,7 @@ fs.readdir(srcLocation, function(err, filenames) {
         console.log('[x] ERROR: ' + err);
         return;
     }
-    filenames.forEach(function(filename) {
+    filenames.filter(f => f[0] !== '.').forEach(function(filename) {
         var data = fs.readFileSync(srcLocation + filename, 'utf8');
         if(!data) console.log('[x] ERROR: NO DATA');
         var cleanFileName = filename.replace(".svg", "");
