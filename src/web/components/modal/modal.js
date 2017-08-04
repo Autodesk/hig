@@ -60,7 +60,7 @@ class Modal extends Core {
             return;
         }
         const headerEl = this._findDOMEl('.hig__modal__header', this.el);
-        headerEl.classList.remove(AvailableHeaderColors.map(c => `hig__modal__header--${c}`));
+        headerEl.classList.remove(...AvailableHeaderColors.map(c => `hig__modal__header--${c}`));
         headerEl.classList.add('hig__modal__header--'+headerColor);
     }
 

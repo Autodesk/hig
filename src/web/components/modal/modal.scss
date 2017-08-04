@@ -58,6 +58,10 @@ $shadow-layer: -1;
   background: none;
   cursor: pointer;
 
+  &:focus {
+    outline: none;
+  }
+
   .hig__modal__header--slate > & > .hig__icon > svg * {
     fill: color(hig-blue-70);
   }
