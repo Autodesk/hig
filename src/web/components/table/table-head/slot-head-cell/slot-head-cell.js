@@ -21,13 +21,7 @@ class SlotHeadCell extends Core {
   }
 
   setWidth(width) {
-    if (width.endsWith("fr")) {
-      var value = width.split("fr", 1);
-      var percentWidth = value[0] * 100;
-      this.el.style.width = `${percentWidth}%`;
-    } else {
-      this.el.style.width = width;
-    }
+    this.el.style.width = this._setCellWidth(width);
   }  
 }
 

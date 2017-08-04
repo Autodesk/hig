@@ -117,6 +117,16 @@ class Core {
         return "<div class='hig__icon'>" + iconString + "</div>";
     }
 
+    _setCellWidth(width){
+        if (width.endsWith('fr')) {
+            var value = width.split('fr', 1)
+            var percentWidth = value[0] * 100;
+            return  `${percentWidth}%`;
+		} else {
+		    return width ;
+		}
+    }
+
     _componentDidMount() {
         // Subclass should implement this if needed
     }
