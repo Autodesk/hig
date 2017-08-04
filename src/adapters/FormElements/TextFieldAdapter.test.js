@@ -63,7 +63,7 @@ describe('<TextField>', () => {
     };
 
     const { higTextField, higContainer } = createHigTextField(defaults);
-    higTextField.required(defaults.required)
+    higTextField.required(defaults.required);
     const container = document.createElement('div');
     const wrapper = mount(createOrionTextField(defaults), {
       attachTo: container
@@ -123,7 +123,9 @@ describe('<TextField>', () => {
       });
       const instance = wrapper.instance().instance;
 
-      const disposeFunction = instance._disposeFunctions.get(eventName+'Dispose');
+      const disposeFunction = instance._disposeFunctions.get(
+        eventName + 'Dispose'
+      );
       expect(disposeFunction).toBeDefined();
     });
 

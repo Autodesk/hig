@@ -125,7 +125,9 @@ describe('<IconButton>', () => {
       );
       const instance = wrapper.instance().instance;
 
-      const disposeFunction = instance._disposeFunctions.get(eventName+'Dispose');
+      const disposeFunction = instance._disposeFunctions.get(
+        eventName + 'Dispose'
+      );
       expect(disposeFunction).toBeDefined();
     });
 

@@ -77,7 +77,10 @@ class TextAreaAdapter extends HIGElement {
             dispose();
           }
 
-          this._disposeFunctions.set('onBlurDispose', this.hig.onBlur(propValue));
+          this._disposeFunctions.set(
+            'onBlurDispose',
+            this.hig.onBlur(propValue)
+          );
           break;
         }
         case 'onChange': {
@@ -87,7 +90,10 @@ class TextAreaAdapter extends HIGElement {
             dispose();
           }
 
-          this._disposeFunctions.set('onChangeDispose', this.hig.onChange(propValue));
+          this._disposeFunctions.set(
+            'onChangeDispose',
+            this.hig.onChange(propValue)
+          );
           break;
         }
         case 'onFocus': {
@@ -97,7 +103,10 @@ class TextAreaAdapter extends HIGElement {
             dispose();
           }
 
-          this._disposeFunctions.set('onFocusDispose', this.hig.onFocus(propValue));
+          this._disposeFunctions.set(
+            'onFocusDispose',
+            this.hig.onFocus(propValue)
+          );
           break;
         }
         case 'onInput': {
@@ -107,7 +116,10 @@ class TextAreaAdapter extends HIGElement {
             dispose();
           }
 
-          this._disposeFunctions.set('onInputDispose', this.hig.onInput(propValue));
+          this._disposeFunctions.set(
+            'onInputDispose',
+            this.hig.onInput(propValue)
+          );
           break;
         }
         default: {

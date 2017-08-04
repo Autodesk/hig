@@ -25,7 +25,6 @@ class TextFieldAdapter extends HIGElement {
     super(HIG.TextField, initialProps);
   }
 
-
   componentDidMount() {
     if (this.props.required) {
       this.hig.required(this.initialProps.required);

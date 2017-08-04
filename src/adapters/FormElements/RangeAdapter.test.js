@@ -44,8 +44,7 @@ describe('<RangeAdapter>', () => {
     higContainer.querySelector('.hig__range__field__range-values').dataset = {
       rangeMin: 0,
       rangeMax: 0
-    }
-
+    };
   }
 
   function setLabelForInputId(higContainer) {
@@ -98,7 +97,8 @@ describe('<RangeAdapter>', () => {
 
   it('renders a range with udpated props', () => {
     const defaults = {
-      name: 'mySpecialField', label: 'bar'
+      name: 'mySpecialField',
+      label: 'bar'
     };
 
     const { higRange, higContainer } = createHigRange(defaults);
@@ -135,7 +135,7 @@ describe('<RangeAdapter>', () => {
     );
   });
 
-  ['onBlur','onFocus', 'onChange'].forEach(eventName => {
+  ['onBlur', 'onFocus', 'onChange'].forEach(eventName => {
     it(`sets event listeners for ${eventName} initially`, () => {
       const spy = jest.fn();
       const container = document.createElement('div');
@@ -144,9 +144,10 @@ describe('<RangeAdapter>', () => {
       });
       const instance = wrapper.instance().instance;
 
-      const disposeFunction = instance._disposeFunctions.get(eventName+'Dispose');
+      const disposeFunction = instance._disposeFunctions.get(
+        eventName + 'Dispose'
+      );
       expect(disposeFunction).toBeDefined();
-
     });
 
     it(`sets event listeners for ${eventName} when updated`, () => {
@@ -159,9 +160,10 @@ describe('<RangeAdapter>', () => {
 
       const instance = wrapper.instance().instance;
 
-      const disposeFunction = instance._disposeFunctions.get(eventName+'Dispose');
+      const disposeFunction = instance._disposeFunctions.get(
+        eventName + 'Dispose'
+      );
       expect(disposeFunction).toBeDefined();
     });
   });
-
 });
