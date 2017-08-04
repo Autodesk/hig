@@ -83,9 +83,9 @@ class Core {
      * @returns null
      */
 
-    _render(template, data, partials){
+    _render(template, data, partials, tagname = 'div'){
         if(!this._rendered){
-            var elWrapper = document.createElement('div');
+            var elWrapper = document.createElement(tagname);
             data = (data || {});
 
             // ICON MIXIN
@@ -115,6 +115,16 @@ class Core {
             return;
         }
         return "<div class='hig__icon'>" + iconString + "</div>";
+    }
+
+    _setCellWidth(width){
+        if (width.endsWith('fr')) {
+            var value = width.split('fr', 1)
+            var percentWidth = value[0] * 100;
+            return  `${percentWidth}%`;
+        } else {
+            return width ;
+        }
     }
 
     _componentDidMount() {

@@ -1590,6 +1590,57 @@
             "body": "",
             "headerColor": ""
           }
+      },    
+      "Table": {
+        "methods": {
+          "addTableHead": {},
+          "addTableRow": {}
+        },
+        "partials": {
+          "TableHead": {
+            "methods": {
+              "addCell": {}
+            },
+            "partials": {
+              "TextHeadCell": {
+                "methods": {
+                  "setText": {},
+                  "setAlign": {}, 
+                  "setWidth": {} 
+                }
+              },
+              "SlotHeadCell": {
+                "methods": {
+                  "addSlot": {},
+                  "setWidth": {}
+                }
+              }
+            }
+          },
+          "TableRow": {
+            "methods": {
+              "addCell": {}
+            },
+            "partials": {
+              "TextCell": {
+                "methods": {
+                  "setText": {},
+                  "setAlign": {}
+                }
+              },
+              "IconCell": {
+                "methods": {
+                  "setIcon": {}
+                }
+              },
+              "SlotCell": {
+                "methods": {
+                  "addSlot": {}
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
