@@ -119,7 +119,9 @@ describe('<RadioButton>', () => {
       });
       const instance = orionWrapper.instance().instance;
 
-      const disposeFunction = instance._disposeFunctions.get(eventName);
+      const disposeFunction = instance._disposeFunctions.get(
+        `${eventName}Dispose`
+      );
       expect(disposeFunction).toBeDefined();
     });
 
