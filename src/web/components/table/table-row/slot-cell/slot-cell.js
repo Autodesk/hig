@@ -16,7 +16,7 @@ class SlotCell extends Core {
   }
 
   addSlot(slotElement) {
-		this._el.appendChild(slotElement)
+    this._el.appendChild(slotElement)
   }
 }
 

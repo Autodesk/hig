@@ -14,29 +14,29 @@ var TableRow = require("./table-row/table-row.js");
  */
 
 class Table extends Core {
-		constructor(options = {}){
-			super(options);
-			this._render(Template, options);
-		}
+    constructor(options = {}){
+      super(options);
+      this._render(Template, options);
+    }
 
-		addTableHead(tableHeadInstance) {
-				if (tableHeadInstance instanceof TableHead) {
-					this.mountPartialToComment('TABLE-HEAD', tableHeadInstance);
-				}
-		}
+    addTableHead(tableHeadInstance) {
+        if (tableHeadInstance instanceof TableHead) {
+          this.mountPartialToComment('TABLE-HEAD', tableHeadInstance);
+        }
+    }
 
-		addTableRow(tableRowInstance) {
-			if ( tableRowInstance instanceof TableRow) {
-  			this.mountPartialToComment("TABLE-ROW", tableRowInstance);
-			}
-		}		
+    addTableRow(tableRowInstance) {
+        if ( tableRowInstance instanceof TableRow) {
+          this.mountPartialToComment("TABLE-ROW", tableRowInstance);
+        }
+    }
 }
 
 Table._interface = Interface["components"]["Table"];
 Table._defaults = {};
 Table._partials = {
-	TableHead: TableHead,
-	TableRow: TableRow
+  TableHead: TableHead,
+  TableRow: TableRow
 }
 
 module.exports = Table;

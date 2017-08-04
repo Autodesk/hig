@@ -18,14 +18,14 @@ class TextCell extends Core {
   }
 
   setText(text){
-		this.el.textContent = text;	
-	}
+    this.el.textContent = text;
+  }
 
-	setAlign(position){
-		if(AvailablePositions.indexOf(position) > -1) {
-			this.el.style.textAlign = position
-		};
-	}
+  setAlign(position){
+    if(AvailablePositions.indexOf(position) > -1) {
+      this.el.style.textAlign = position
+    };
+  }
 }
 
 TextCell._interface =

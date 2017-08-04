@@ -3,32 +3,32 @@
 @import '~helpers/css/mixins/base.scss';
 
 .hig__table {
-	table-layout: fixed;
-	white-space: nowrap;
-	width: 100%;
+  table-layout: fixed;
+  white-space: nowrap;
+  width: 100%;
 
-	border-collapse: collapse;
-	
-	font-family: 'ArtifaktElement';
-	font-weight: 500;
-	font-size: 14px;
+  border-collapse: collapse;
 
-	color: color(hig-gray-10);
+  font-family: 'ArtifaktElement';
+  font-weight: 500;
+  font-size: 14px;
+
+  color: color(hig-gray-10);
 }
 
 .hig__table th {
-	font-weight: 500;
-	padding: 16px 4px;
+  font-weight: 500;
+  padding: 16px 4px;
 
-	white-space: nowrap;
+  white-space: nowrap;
   overflow: hidden;
-	text-overflow: ellipsis;
+  text-overflow: ellipsis;
 }
 
 .hig__table__body td {
-	padding: 8px 4px;
+  padding: 8px 4px;
 
-	white-space: nowrap;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }

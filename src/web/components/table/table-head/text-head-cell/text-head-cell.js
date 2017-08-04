@@ -16,22 +16,21 @@ class TextHeadCell extends Core {
   constructor(options = {}) {
     super(options);
     this._render(Template, options, undefined, "tr");
-	}
-	
-	setText(text){
-		this.el.textContent = text;	this.el.textContent = text;
-	}
+  }
 
-	setAlign(position){
-		if(AvailablePositions.indexOf(position) > -1) {
-			this.el.style.textAlign = position
-		};
-	}
+  setText(text){
+    this.el.textContent = text;
+  }
 
-	setWidth(width){
-		this.el.style.width = this._setCellWidth(width);
-		
-	}
+  setAlign(position){
+    if(AvailablePositions.indexOf(position) > -1) {
+      this.el.style.textAlign = position
+    };
+  }
+
+  setWidth(width){
+    this.el.style.width = this._setCellWidth(width);
+  }
 }
 
 TextHeadCell._interface =

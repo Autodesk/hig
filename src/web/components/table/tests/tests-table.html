@@ -1,220 +1,214 @@
 <html>
 
-	<head>
-		<link rel="stylesheet" href="../../../../../dist/hig.css">
-		<script type="text/javascript" src="../../../../../dist/hig.js"></script>
-	</head>
+  <head>
+    <link rel="stylesheet" href="../../../../../dist/hig.css">
+    <script type="text/javascript" src="../../../../../dist/hig.js"></script>
+  </head>
 
-	<body>
-		<style>
-			body,
-			html {
-				margin: 20px;
-				padding: 0;
-			}
-		</style>
+  <body>
+    <style>
+      body,
+      html {
+        margin: 20px;
+        padding: 0;
+      }
+    </style>
 
-		<script>
-			// CREATE Table
-			var Table = new Hig.Table();
-			Table.mount("body");
+    <script>
+      // CREATE Table
+      var Table = new Hig.Table();
+      Table.mount("body");
 
-			var TableHead = new Table.partials.TableHead();
-			Table.addTableHead(TableHead);
+      var TableHead = new Table.partials.TableHead();
+      Table.addTableHead(TableHead);
 
-			var EmptyCell = new TableHead.partials.TextHeadCell();
-			TableHead.addCell(EmptyCell);
-			EmptyCell.setWidth('30px');
+      var EmptyCell = new TableHead.partials.TextHeadCell();
+      TableHead.addCell(EmptyCell);
+      EmptyCell.setWidth('30px');
 
-			var TitleHeadCell = new TableHead.partials.TextHeadCell();
-			TableHead.addCell(TitleHeadCell);
-			TitleHeadCell.setText('Title');
-			TitleHeadCell.setAlign("left");
-			TitleHeadCell.setWidth('1fr');
+      var TitleHeadCell = new TableHead.partials.TextHeadCell();
+      TableHead.addCell(TitleHeadCell);
+      TitleHeadCell.setText('Title');
+      TitleHeadCell.setAlign("left");
+      TitleHeadCell.setWidth('1fr');
 
-			var TypeHeadCell = new TableHead.partials.TextHeadCell();
-			TableHead.addCell(TypeHeadCell);
-			TypeHeadCell.setText('Type');
-			TypeHeadCell.setAlign("left");
-			TypeHeadCell.setWidth("1fr");
+      var TypeHeadCell = new TableHead.partials.TextHeadCell();
+      TableHead.addCell(TypeHeadCell);
+      TypeHeadCell.setText('Type');
+      TypeHeadCell.setAlign("left");
+      TypeHeadCell.setWidth("1fr");
 
-			var LocationHeadCell = new TableHead.partials.TextHeadCell();
-			TableHead.addCell(LocationHeadCell);
-			LocationHeadCell.setText('Location');
-			LocationHeadCell.setAlign("left");
-			LocationHeadCell.setWidth("1fr")
+      var LocationHeadCell = new TableHead.partials.TextHeadCell();
+      TableHead.addCell(LocationHeadCell);
+      LocationHeadCell.setText('Location');
+      LocationHeadCell.setAlign("left");
+      LocationHeadCell.setWidth("1fr")
 
-			var BudgetHeadCell = new TableHead.partials.TextHeadCell();
-			TableHead.addCell(BudgetHeadCell);
-			BudgetHeadCell.setText('Budget');
-			BudgetHeadCell.setAlign("left");
-			BudgetHeadCell.setWidth("1fr");
+      var BudgetHeadCell = new TableHead.partials.TextHeadCell();
+      TableHead.addCell(BudgetHeadCell);
+      BudgetHeadCell.setText('Budget');
+      BudgetHeadCell.setAlign("left");
+      BudgetHeadCell.setWidth("1fr");
 
-			var AssigneeHeadCell = new TableHead.partials.TextHeadCell();
-			TableHead.addCell(AssigneeHeadCell);
-			AssigneeHeadCell.setText('Assignee');
-			AssigneeHeadCell.setAlign("left");
-			AssigneeHeadCell.setWidth("2fr");
+      var AssigneeHeadCell = new TableHead.partials.TextHeadCell();
+      TableHead.addCell(AssigneeHeadCell);
+      AssigneeHeadCell.setText('Assignee');
+      AssigneeHeadCell.setAlign("left");
+      AssigneeHeadCell.setWidth("2fr");
 
-			// Example of adding a slot head cell
+      // Example of adding a slot head cell
 
-			// var SlotHeadCell = new TableHead.partials.SlotHeadCell();
-			// TableHead.addCell(SlotHeadCell);
-			// var SlotEl = document.createElement('div');
-			// SlotEl.innerHTML = `Raw denim flexitarian green juice kinfolk.`
-			// SlotHeadCell.addSlot(SlotEl);
-			// SlotHeadCell.setWidth("2fr");
-
-
-			//Add Table Body
-
-			var TableRow = new Table.partials.TableRow();
-			Table.addTableRow(TableRow);
-
-			var IconCell = new TableRow.partials.IconCell();;
-			TableRow.addCell(IconCell);
-			IconCell.setIcon('gear');
-
-			var TextCell = new TableRow.partials.TextCell();
-			TableRow.addCell(TextCell);
-			TextCell.setText('text');
-			TextCell.setAlign('left');
+      // var SlotHeadCell = new TableHead.partials.SlotHeadCell();
+      // TableHead.addCell(SlotHeadCell);
+      // var SlotEl = document.createElement('div');
+      // SlotEl.innerHTML = `Raw denim flexitarian green juice kinfolk.`
+      // SlotHeadCell.addSlot(SlotEl);
+      // SlotHeadCell.setWidth("2fr");
 
 
-			var NextCell = new TableRow.partials.TextCell();
-			TableRow.addCell(NextCell);
-			NextCell.setText('Deserunt ut deserunt mollit elit aute et.');
-			NextCell.setAlign('left');
+      //Add Table Body
+
+      var TableRow = new Table.partials.TableRow();
+      Table.addTableRow(TableRow);
+
+      var IconCell = new TableRow.partials.IconCell();;
+      TableRow.addCell(IconCell);
+      IconCell.setIcon('gear');
+
+      var TextCell = new TableRow.partials.TextCell();
+      TableRow.addCell(TextCell);
+      TextCell.setText('text');
+      TextCell.setAlign('left');
+
+
+      var NextCell = new TableRow.partials.TextCell();
+      TableRow.addCell(NextCell);
+      NextCell.setText('Deserunt ut deserunt mollit elit aute et.');
+      NextCell.setAlign('left');
 	
-			var SlotCell = new TableRow.partials.SlotCell();
-			TableRow.addCell(SlotCell);
+      var SlotCell = new TableRow.partials.SlotCell();
+      TableRow.addCell(SlotCell);
 
-			var NewSlotEl = document.createElement('div');
-			NewSlotEl.innerHTML = `testing body cell slot.`;
-			SlotCell.addSlot(NewSlotEl);
+      var NewSlotEl = document.createElement('div');
+      NewSlotEl.innerHTML = `testing body cell slot.`;
+      SlotCell.addSlot(NewSlotEl);
 
-			var BudgetTextCell = new TableRow.partials.TextCell();
-			TableRow.addCell(BudgetTextCell);
-			BudgetTextCell.setText('2535');
-			BudgetTextCell.setAlign('left');
+      var BudgetTextCell = new TableRow.partials.TextCell();
+      TableRow.addCell(BudgetTextCell);
+      BudgetTextCell.setText('2535');
+      BudgetTextCell.setAlign('left');
 
-			var AssigneeTextCell = new TableRow.partials.TextCell();
-			TableRow.addCell(AssigneeTextCell);
-			AssigneeTextCell.setText('Atlas Plumbi');
-			AssigneeTextCell.setAlign('left');
+      var AssigneeTextCell = new TableRow.partials.TextCell();
+      TableRow.addCell(AssigneeTextCell);
+      AssigneeTextCell.setText('Atlas Plumbi');
+      AssigneeTextCell.setAlign('left');
 
-			//Add a Second Row
+      //Add a Second Row
 
-			var TableRow1 = new Table.partials.TableRow();
-			Table.addTableRow(TableRow1);
+      var TableRow1 = new Table.partials.TableRow();
+      Table.addTableRow(TableRow1);
 
-			var IconCell1 = new TableRow1.partials.IconCell();
-			TableRow1.addCell(IconCell1);
-			IconCell1.setIcon('hamburger');
+      var IconCell1 = new TableRow1.partials.IconCell();
+      TableRow1.addCell(IconCell1);
+      IconCell1.setIcon('hamburger');
 
-			var TextCell1 = new TableRow1.partials.TextCell();
-			TableRow1.addCell(TextCell1);
-			TextCell1.setText('Window Punch List');
-			TextCell1.setAlign('left');
+      var TextCell1 = new TableRow1.partials.TextCell();
+      TableRow1.addCell(TextCell1);
+      TextCell1.setText('Window Punch List');
+      TextCell1.setAlign('left');
 
-			var NextCell1 = new TableRow1.partials.TextCell();
-			TableRow1.addCell(NextCell1);
-			NextCell1.setText('Comissioning');
-			NextCell1.setAlign('left');
+      var NextCell1 = new TableRow1.partials.TextCell();
+      TableRow1.addCell(NextCell1);
+      NextCell1.setText('Comissioning');
+      NextCell1.setAlign('left');
 
-			var SlotCell1 = new TableRow1.partials.SlotCell();
-			TableRow1.addCell(SlotCell1);
-			var NewSlotEl1 = document.createElement('div');
-			NewSlotEl1.innerHTML = `Floor 3, Room 21.`;
-			SlotCell1.addSlot(NewSlotEl1);
+      var SlotCell1 = new TableRow1.partials.SlotCell();
+      TableRow1.addCell(SlotCell1);
+      var NewSlotEl1 = document.createElement('div');
+      NewSlotEl1.innerHTML = `Floor 3, Room 21.`;
+      SlotCell1.addSlot(NewSlotEl1);
 
-			var BudgetTextCell1 = new TableRow1.partials.TextCell();
-			TableRow1.addCell(BudgetTextCell1);
-			BudgetTextCell1.setText('3000');
-			BudgetTextCell1.setAlign('left');
+      var BudgetTextCell1 = new TableRow1.partials.TextCell();
+      TableRow1.addCell(BudgetTextCell1);
+      BudgetTextCell1.setText('3000');
+      BudgetTextCell1.setAlign('left');
 
-			var AssigneeTextCell1 = new TableRow1.partials.TextCell();
-			TableRow1.addCell(AssigneeTextCell1);
-			AssigneeTextCell1.setText('Alexander Mo');
-			AssigneeTextCell1.setAlign('left');
+      var AssigneeTextCell1 = new TableRow1.partials.TextCell();
+      TableRow1.addCell(AssigneeTextCell1);
+      AssigneeTextCell1.setText('Alexander Mo');
+      AssigneeTextCell1.setAlign('left');
 
 
-			//Add Row 3
-			var TableRow2 = new Table.partials.TableRow();
-			Table.addTableRow(TableRow2);
+      //Add Row 3
+      var TableRow2 = new Table.partials.TableRow();
+      Table.addTableRow(TableRow2);
 
-			var IconCell1 = new TableRow2.partials.IconCell();
-			TableRow2.addCell(IconCell1);
-			IconCell1.setIcon('photos');
+      var IconCell1 = new TableRow2.partials.IconCell();
+      TableRow2.addCell(IconCell1);
+      IconCell1.setIcon('photos');
 
-			var TextCell2 = new TableRow2.partials.TextCell();
-			TableRow2.addCell(TextCell2);
-			TextCell2.setText('Window Punch List');
-			TextCell2.setAlign('left');
+      var TextCell2 = new TableRow2.partials.TextCell();
+      TableRow2.addCell(TextCell2);
+      TextCell2.setText('Window Punch List');
+      TextCell2.setAlign('left');
 
-			var NextCell2 = new TableRow2.partials.TextCell();
-			TableRow2.addCell(NextCell2);
-			NextCell2.setText('Comissioning');
-			NextCell2.setAlign('left');
+      var NextCell2 = new TableRow2.partials.TextCell();
+      TableRow2.addCell(NextCell2);
+      NextCell2.setText('Comissioning');
+      NextCell2.setAlign('left');
 
-			var SlotCell2 = new TableRow2.partials.SlotCell();
-			TableRow2.addCell(SlotCell2);
+      var SlotCell2 = new TableRow2.partials.SlotCell();
+      TableRow2.addCell(SlotCell2);
 
-			var NewSlotEl2 = document.createElement('div');
-			NewSlotEl2.innerHTML = `Floor 3, Room 21.`;
-			SlotCell2.addSlot(NewSlotEl2);
+      var NewSlotEl2 = document.createElement('div');
+      NewSlotEl2.innerHTML = `Floor 3, Room 21.`;
+      SlotCell2.addSlot(NewSlotEl2);
 
-			var BudgetTextCell2 = new TableRow2.partials.TextCell();
-			TableRow2.addCell(BudgetTextCell2);
-			BudgetTextCell2.setText('3000');
-			BudgetTextCell2.setAlign('left');
+      var BudgetTextCell2 = new TableRow2.partials.TextCell();
+      TableRow2.addCell(BudgetTextCell2);
+      BudgetTextCell2.setText('3000');
+      BudgetTextCell2.setAlign('left');
 
-			var AssigneeTextCell2 = new TableRow2.partials.TextCell();
-			TableRow2.addCell(AssigneeTextCell2);
-			AssigneeTextCell2.setText('Alexander Mo');
-			AssigneeTextCell2.setAlign('left');
+      var AssigneeTextCell2 = new TableRow2.partials.TextCell();
+      TableRow2.addCell(AssigneeTextCell2);
+      AssigneeTextCell2.setText('Alexander Mo');
+      AssigneeTextCell2.setAlign('left');
 
-			//Add Row 4
-			var TableRow3 = new Table.partials.TableRow();
-			Table.addTableRow(TableRow3);
+      //Add Row 4
+      var TableRow3 = new Table.partials.TableRow();
+      Table.addTableRow(TableRow3);
 
-			var IconCell2 = new TableRow3.partials.IconCell();
-			TableRow3.addCell(IconCell2);
-			IconCell2.setIcon('quantities');
+      var IconCell2 = new TableRow3.partials.IconCell();
+      TableRow3.addCell(IconCell2);
+      IconCell2.setIcon('quantities');
 
-			var TextCell3 = new TableRow3.partials.TextCell();
-			TableRow3.addCell(TextCell3);
-			TextCell3.setText('Window Punch List');
-			TextCell3.setAlign('left');
+      var TextCell3 = new TableRow3.partials.TextCell();
+      TableRow3.addCell(TextCell3);
+      TextCell3.setText('Window Punch List');
+      TextCell3.setAlign('left');
 
-			var NextCell3 = new TableRow3.partials.TextCell();
-			TableRow3.addCell(NextCell3);
-			NextCell3.setText('Comissioning');
-			NextCell3.setAlign('left');
+      var NextCell3 = new TableRow3.partials.TextCell();
+      TableRow3.addCell(NextCell3);
+      NextCell3.setText('Comissioning');
+      NextCell3.setAlign('left');
 
-			var SlotCell3 = new TableRow3.partials.SlotCell();
-			TableRow3.addCell(SlotCell3);
+      var SlotCell3 = new TableRow3.partials.SlotCell();
+      TableRow3.addCell(SlotCell3);
 
-			var NewSlotEl3 = document.createElement('div');
-			NewSlotEl3.innerHTML = `Floor 3, Room 21.`;
-			SlotCell3.addSlot(NewSlotEl3);
+      var NewSlotEl3 = document.createElement('div');
+      NewSlotEl3.innerHTML = `Floor 3, Room 21.`;
+      SlotCell3.addSlot(NewSlotEl3);
 
-			var BudgetTextCell3 = new TableRow3.partials.TextCell();
-			TableRow3.addCell(BudgetTextCell3);
-			BudgetTextCell3.setText('3000');
-			BudgetTextCell3.setAlign('left');
+      var BudgetTextCell3 = new TableRow3.partials.TextCell();
+      TableRow3.addCell(BudgetTextCell3);
+      BudgetTextCell3.setText('3000');
+      BudgetTextCell3.setAlign('left');
 
-			var AssigneeTextCell3 = new TableRow3.partials.TextCell();
-			TableRow3.addCell(AssigneeTextCell3);
-			AssigneeTextCell3.setText('Alexander Mo');
-			AssigneeTextCell3.setAlign('left');
+      var AssigneeTextCell3 = new TableRow3.partials.TextCell();
+      TableRow3.addCell(AssigneeTextCell3);
+      AssigneeTextCell3.setText('Alexander Mo');
+      AssigneeTextCell3.setAlign('left');
 
-		</script>
-
-	<table>
-		<thead>
-
-		</thead>
-	</table>	
-	</body>
+    </script>
+  </body>
 </html>

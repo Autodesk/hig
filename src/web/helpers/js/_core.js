@@ -122,9 +122,9 @@ class Core {
             var value = width.split('fr', 1)
             var percentWidth = value[0] * 100;
             return  `${percentWidth}%`;
-		} else {
-		    return width ;
-		}
+        } else {
+            return width ;
+        }
     }
 
     _componentDidMount() {
