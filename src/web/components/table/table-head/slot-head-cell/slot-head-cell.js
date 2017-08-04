@@ -1,4 +1,3 @@
-
 var Template = require("./slot-head-cell.html");
 var Interface = require("interface.json");
 var Core = require("_core.js");
@@ -16,17 +15,18 @@ class SlotHeadCell extends Core {
   }
 
   addSlot(slotElement) {
-		this._el.appendChild(slotElement);
-  }
+    this._el.appendChild(slotElement);
+}
 
   setWidth(width) {
     this.el.style.width = this._setCellWidth(width);
-  }  
+  }
 }
 
-SlotHeadCell._interface = Interface["components"]["Table"]["partials"]["TableHead"]["partials"]["SlotHeadCell"];
+SlotHeadCell._interface =
+  Interface["components"]["Table"]["partials"]["TableHead"]["partials"][
+    "SlotHeadCell"
+  ];
 SlotHeadCell._defaults = {};
 
 module.exports = SlotHeadCell;
-
-

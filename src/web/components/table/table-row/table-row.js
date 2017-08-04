@@ -20,20 +20,23 @@ class TableRow extends Core {
     this._render(Template, options, undefined, "tbody");
   }
 
-  addCell(cellInstance){
-    if (cellInstance instanceof IconCell || cellInstance instanceof TextCell || cellInstance instanceof SlotCell) {
+  addCell(cellInstance) {
+    if (
+      cellInstance instanceof IconCell ||
+      cellInstance instanceof TextCell ||
+      cellInstance instanceof SlotCell
+    ) {
       this.mountPartialToComment("BODY-CELL", cellInstance);
     }
   }
 }
 
-TableRow._interface =
-  Interface["components"]["Table"]["partials"]["TableRow"];
+TableRow._interface = Interface["components"]["Table"]["partials"]["TableRow"];
 TableRow._defaults = {};
 TableRow._partials = {
-	TextCell: TextCell,
-	SlotCell: SlotCell,
-	IconCell: IconCell,
+  TextCell: TextCell,
+  SlotCell: SlotCell,
+  IconCell: IconCell
 };
 
 module.exports = TableRow;
