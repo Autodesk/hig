@@ -66,7 +66,7 @@ class Range extends Core {
     }
 
     onChange(fn){
-        this._attachListener("change", '.hig__range__field', this.el, fn);
+        return this._attachListener("change", '.hig__range__field', this.el, fn);
     }
 
     onFocus(fn){
@@ -102,12 +102,12 @@ class Range extends Core {
 
 Range._interface = Interface['basics']['FormElements']['partials']['Range'];
 Range._defaults = {
-    value: null,
-    minValue: 0,
-    maxValue: null,
     instructions: '',
     label: '',
-    step: 1
+    minValue: 0,
+    maxValue: null,
+    step: 1,
+    value: null
 };
 
 Range._partials = {};
