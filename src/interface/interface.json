@@ -1625,20 +1625,17 @@
               "TextCell": {
                 "methods": {
                   "setText": {},
-                  "setAlign": {},
-                  "setWidth": {}
+                  "setAlign": {}
                 }
               },
               "IconCell": {
                 "methods": {
-                  "setIcon": {},
-                  "setWidth": {} 
+                  "setIcon": {}
                 }
               },
               "SlotCell": {
                 "methods": {
-                  "addSlot": {},
-                  "setWidth": {} 
+                  "addSlot": {}
                 }
               }
             }

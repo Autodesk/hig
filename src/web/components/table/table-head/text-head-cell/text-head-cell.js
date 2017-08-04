@@ -1,4 +1,3 @@
-import "./text-head-cell.scss";
 
 var Template = require("./text-head-cell.html");
 var Interface = require("interface.json");

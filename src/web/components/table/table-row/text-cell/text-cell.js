@@ -1,4 +1,3 @@
-import "./text-cell.scss";
 
 var Template = require("./text-cell.html");
 var Interface = require("interface.json");
@@ -26,10 +25,6 @@ class TextCell extends Core {
 		if(AvailablePositions.indexOf(position) > -1) {
 			this.el.style.textAlign = position
 		};
-	}
-
-	setWidth(width){
-  		this.el.style.width = width;
 	}
 }
 

@@ -1,4 +1,3 @@
-import "./slot-cell.scss";
 
 var Template = require("./slot-cell.html");
 var Interface = require("interface.json");
@@ -18,10 +17,6 @@ class SlotCell extends Core {
 
   addSlot(slotElement) {
 		this._el.appendChild(slotElement)
-  }
-
-  setWidth(width) {
-    this.el.style.width = width;
   }
 }
 
