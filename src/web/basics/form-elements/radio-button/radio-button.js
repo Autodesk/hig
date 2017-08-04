@@ -1,5 +1,3 @@
-import './radio-button.scss';
-
 var Template = require('./radio-button.html');
 var Interface = require('interface.json');
 var InputButton = require('../input-button/input-button.js');

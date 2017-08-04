@@ -1,5 +1,3 @@
-import './checkbox.scss';
-
 var Template = require('./checkbox.html');
 var Interface = require('interface.json');
 var Core = require('_core.js');
