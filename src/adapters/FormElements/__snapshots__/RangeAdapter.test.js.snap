@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<RangeAdapter> renders a text field 1`] = `
+exports[`<RangeAdapter> renders a range 1`] = `
 "<div class=\\"hig__range \\">
-    <div class=\\"hig__range__field__range-values\\" data-range-min=\\"data-range-max=\\">
+    <div class=\\"hig__range__field__range-values\\" data-range-min=\\"0\\" data-range-max=\\"\\">
       <span class=\\"hig__range__field__current-value\\"></span>
-      <input id=\\"1234\\" class=\\"hig__range__field\\" type=\\"range\\" min=\\"max=\\" step=\\"1\\">
+      <input id=\\"1234\\" class=\\"hig__range__field\\" type=\\"range\\" min=\\"0\\" max=\\"\\" step=\\"1\\" value=\\"\\">
       <!--LABEL-->
       <label for=\\"1234\\" class=\\"hig__range__label\\">foo</label>
     </div>
@@ -15,11 +15,11 @@ exports[`<RangeAdapter> renders a text field 1`] = `
 </div>"
 `;
 
-exports[`<RangeAdapter> renders a text field with initial props 1`] = `
+exports[`<RangeAdapter> renders a range with initial props 1`] = `
 "<div class=\\"hig__range \\">
-    <div class=\\"hig__range__field__range-values\\" data-range-min=\\"data-range-max=\\">
+    <div class=\\"hig__range__field__range-values\\" data-range-min=\\"0\\" data-range-max=\\"\\">
       <span class=\\"hig__range__field__current-value\\">10</span>
-      <input id=\\"1234\\" class=\\"hig__range__field\\" type=\\"range\\" min=\\"max=\\" step=\\"1\\">
+      <input id=\\"1234\\" class=\\"hig__range__field\\" type=\\"range\\" min=\\"0\\" max=\\"\\" step=\\"1\\" value=\\"10\\">
       <!--LABEL-->
       <label for=\\"1234\\" class=\\"hig__range__label\\">Age of your first pet</label>
     </div>
@@ -30,11 +30,11 @@ exports[`<RangeAdapter> renders a text field with initial props 1`] = `
 </div>"
 `;
 
-exports[`<RangeAdapter> renders a text field with udpated props 1`] = `
+exports[`<RangeAdapter> renders a range with udpated props 1`] = `
 "<div class=\\"hig__range hig__range--required\\">
-    <div class=\\"hig__range__field__range-values\\" data-range-min=\\"data-range-max=\\">
+    <div class=\\"hig__range__field__range-values\\" data-range-min=\\"0\\" data-range-max=\\"\\">
       <span class=\\"hig__range__field__current-value\\">1</span>
-      <input id=\\"1234\\" class=\\"hig__range__field\\" type=\\"range\\" min=\\"1\\" step=\\"1\\" max=\\"20\\" value=\\"1\\">
+      <input id=\\"1234\\" class=\\"hig__range__field\\" type=\\"range\\" min=\\"1\\" max=\\"20\\" step=\\"1\\" value=\\"1\\">
       <!--LABEL-->
       <label for=\\"1234\\" class=\\"hig__range__label\\">How old is your pet?</label>
     </div>

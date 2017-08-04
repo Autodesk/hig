@@ -136,7 +136,7 @@ export default class HIGElement {
 
     // in this case we are setting up a new event
     const dispose = this.hig[eventName](eventFn);
-    this._disposeFunctions.set(eventName, dispose);
+    this._disposeFunctions.set(eventName+'Dispose', dispose);
     this.events[eventName] = eventFn;
   }
 

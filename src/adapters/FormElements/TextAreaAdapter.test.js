@@ -136,7 +136,7 @@ describe('<TextAreaAdapter>', () => {
 
       const instance = wrapper.instance().instance;
 
-      const disposeFunction = instance._disposeFunctions.get(eventName);
+      const disposeFunction = instance._disposeFunctions.get(eventName+'Dispose');
       expect(disposeFunction).toBeDefined();
     });
 
@@ -152,7 +152,7 @@ describe('<TextAreaAdapter>', () => {
 
       const instance = wrapper.instance().instance;
 
-      const disposeFunction = instance._disposeFunctions.get(eventName);
+      const disposeFunction = instance._disposeFunctions.get(eventName+'Dispose');
       expect(disposeFunction).toBeDefined();
     });
   });

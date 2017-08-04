@@ -78,17 +78,17 @@ class RangeAdapter extends HIGElement {
             dispose();
           }
 
-          this._disposeFunctions.set('onBlur', this.hig.onBlur(propValue));
+          this._disposeFunctions.set('onBlurDispose', this.hig.onBlur(propValue));
           break;
         }
-        case 'onChange': {
+        case 'onChange':
           const dispose = this._disposeFunctions.get('onChangeDispose');
 
           if (dispose) {
             dispose();
           }
 
-          this._disposeFunctions.set('onChange', this.hig.onChange(propValue));
+          this._disposeFunctions.set('onChangeDispose', this.hig.onChange(propValue));
           break;
         }
         case 'onFocus': {
@@ -98,7 +98,7 @@ class RangeAdapter extends HIGElement {
             dispose();
           }
 
-          this._disposeFunctions.set('onFocus', this.hig.onFocus(propValue));
+          this._disposeFunctions.set('onFocusDispose', this.hig.onFocus(propValue));
           break;
         }
         default: {

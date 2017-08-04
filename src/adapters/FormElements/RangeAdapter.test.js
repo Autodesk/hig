@@ -56,7 +56,7 @@ describe('<RangeAdapter>', () => {
     input.setAttribute('id', inputId);
   }
 
-  it('renders a text field', () => {
+  it('renders a range', () => {
     const defaults = { name: 'mySpecialField', label: 'foo' };
 
     const { higRange, higContainer } = createHigRange(defaults);
@@ -73,7 +73,7 @@ describe('<RangeAdapter>', () => {
     );
   });
 
-  it('renders a text field with initial props', () => {
+  it('renders a range with initial props', () => {
     const defaults = {
       instructions: "Don't just do something, sit there.",
       label: 'Age of your first pet',
@@ -96,7 +96,7 @@ describe('<RangeAdapter>', () => {
     );
   });
 
-  it('renders a text field with udpated props', () => {
+  it('renders a range with udpated props', () => {
     const defaults = {
       name: 'mySpecialField', label: 'bar'
     };
@@ -135,7 +135,7 @@ describe('<RangeAdapter>', () => {
     );
   });
 
-  ['onBlur', 'onChange', 'onFocus'].forEach(eventName => {
+  ['onBlur','onFocus', 'onChange'].forEach(eventName => {
     it(`sets event listeners for ${eventName} initially`, () => {
       const spy = jest.fn();
       const container = document.createElement('div');
@@ -144,8 +144,9 @@ describe('<RangeAdapter>', () => {
       });
       const instance = wrapper.instance().instance;
 
-      const disposeFunction = instance._disposeFunctions.get(eventName);
+      const disposeFunction = instance._disposeFunctions.get(eventName+'Dispose');
       expect(disposeFunction).toBeDefined();
+
     });
 
     it(`sets event listeners for ${eventName} when updated`, () => {
@@ -158,8 +159,9 @@ describe('<RangeAdapter>', () => {
 
       const instance = wrapper.instance().instance;
 
-      const disposeFunction = instance._disposeFunctions.get(eventName);
+      const disposeFunction = instance._disposeFunctions.get(eventName+'Dispose');
       expect(disposeFunction).toBeDefined();
     });
   });
+
 });

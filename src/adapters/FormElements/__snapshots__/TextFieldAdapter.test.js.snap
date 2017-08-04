@@ -22,7 +22,7 @@ exports[`<TextField> renders a text field 1`] = `
 `;
 
 exports[`<TextField> renders a text field with initial props 1`] = `
-"<div class=\\"hig__text-field\\">
+"<div class=\\"hig__text-field hig__text-field--required\\">
     <!--ICON-SPACER-->
     <div class=\\"hig__text-field__icon-spacer\\"></div>
     <div class=\\"hig__text-field__content\\">
@@ -37,7 +37,7 @@ exports[`<TextField> renders a text field with initial props 1`] = `
         </div>
         <!--INSTRUCTIONS-->
         <p class=\\"hig__text-field__instructions\\">Don't just do something, sit there.</p>
-        <!--REQUIRED-NOTICE-->
+        <p class=\\"hig__text-field__required-notice\\">You really must fill this in.</p><!--REQUIRED-NOTICE-->
     </div>
 </div>"
 `;
