@@ -579,7 +579,6 @@
                     "defaults": {
                         "label": "{String} label for the text area",
                         "name": "{String} the name attribute for the textarea",
-                        "required": "{String} The text to show for a required field",
                         "placeholder": "{String} text that appears in the text area when empty",
                         "value": "{String} the text inside of the text area",
                         "instructions": "{String} instructions for the textarea"
@@ -663,7 +662,6 @@
                         "label": "{String} label for our text field",
                         "name": "{String} name identifier for our text field",
                         "icon": "{String} icon ID",
-                        "required": "{String} the text to use for a required field",
                         "placeholder": "{String} placeholder text for our text field",
                         "value": "{String} (optional) input value for text field",
                         "instructions": "{String} (optional) instructions under the text field"
