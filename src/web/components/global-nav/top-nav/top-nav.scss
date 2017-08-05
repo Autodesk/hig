@@ -1,22 +1,23 @@
 @import '~basics/colors/colors.scss';
+@import '~basics/shadows/shadows.scss';
 @import '~helpers/css/mixins/base.scss';
-
 
 $group-height: 56px;
 
 .hig__global-nav__top-nav{
     @include reset;
 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     position: relative;
     background: color(hig-white);
     height: $group-height;
     line-height: $group-height;
-    box-shadow: 0 1px 4px 0 color(box-shadow-10);
     z-index: 2;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include shadow("dropshadow");    
 
     &__group {
         height: 32px;

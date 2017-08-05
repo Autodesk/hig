@@ -1,4 +1,5 @@
 @import '~basics/colors/colors.scss';
+@import '~basics/shadows/shadows.scss';
 @import '~helpers/css/mixins/base.scss';
 
 $hig__global-nav__sidenav--width: 280px;
@@ -11,7 +12,9 @@ $hig__global-nav__sidenav--width: 280px;
     bottom: 0;
     background: color(hig-white);
     border-right: 1px solid color(hig-gray-50);
-    box-shadow: inset -2px 0 7px -2px color(box-shadow-20);
+
+    @include shadow("inner-right");
+
     width: $hig__global-nav__sidenav--width;    
 
     display: none; // Hide by default
