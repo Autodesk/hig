@@ -91,11 +91,11 @@ class Core {
             // ICON MIXIN
             data.renderIcon = () => {
                 return (text, render) => {
-                    var iconName = Mustache.render(text, data);
-                    return this._renderIcon(iconName);
-                }
-            }
-
+                var iconName = Mustache.render(text, data);
+                return this._renderIcon(iconName);
+                };
+            }; 
+            
             elWrapper.innerHTML = Mustache.render(
                 template,
                 data,
@@ -117,7 +117,7 @@ class Core {
         return "<div class='hig__icon'>" + iconString + "</div>";
     }
 
-    _setCellWidth(width){
+    _frToPercentage(width){
         if (width.endsWith('fr')) {
             var value = width.split('fr', 1)
             var percentWidth = value[0] * 100;

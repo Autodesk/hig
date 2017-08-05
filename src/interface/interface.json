@@ -1603,14 +1603,22 @@
               "TextHeadCell": {
                 "methods": {
                   "setText": {},
-                  "setAlign": {}, 
+                  "setAlignment": {}, 
                   "setWidth": {} 
+                },
+                "defaults": {
+                  "text": "{String} text for text cell in head of table",
+                  "alignment": "{String} value for text-align style property of cell",
+                  "width": "{String} value for width of cell"
                 }
               },
               "SlotHeadCell": {
                 "methods": {
                   "addSlot": {},
                   "setWidth": {}
+                }, 
+                "defaults": {
+                  "width": "{String} value for width of cell"
                 }
               }
             }
@@ -1623,7 +1631,11 @@
               "TextCell": {
                 "methods": {
                   "setText": {},
-                  "setAlign": {}
+                  "setAlignment": {}
+                },
+                "defaults": {
+                  "text": "{String} text for text cell in head of table",
+                  "alignment": "{String} value for text-align style property of cell"
                 }
               },
               "IconCell": {

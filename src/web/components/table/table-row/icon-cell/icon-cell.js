@@ -12,11 +12,21 @@ var Core = require("_core.js");
 class IconCell extends Core {
   constructor(options = {}) {
     super(options);
+    debugger;
     this._render(Template, options, undefined, "tr");
+    this.initialOptions = options;
+  }
+
+  _componentDidMount(){
+    if (this.initialOptions.icon) {
+      this.setIcon(this.initialOptions.icon);
+    }
   }
 
   setIcon(icon) {
-    this._el.innerHTML = this._renderIcon(icon);
+    if (icon && icon.length > 0) {
+      this._el.innerHTML = this._getIconString(icon);
+    }
   }
 }
 
@@ -24,6 +34,8 @@ IconCell._interface =
   Interface["components"]["Table"]["partials"]["TableRow"]["partials"][
     "IconCell"
   ];
-IconCell._defaults = {};
+IconCell._defaults = {
+  icon: false
+};
 
 module.exports = IconCell;
