@@ -21,7 +21,7 @@ class TextCell extends Core {
     this.el.textContent = text;
   }
 
-  setAlign(position){
+  setAlignment(position){
     if(AvailablePositions.indexOf(position) > -1) {
       this.el.style.textAlign = position
     };
@@ -32,6 +32,9 @@ TextCell._interface =
   Interface["components"]["Table"]["partials"]["TableRow"]["partials"][
     "TextCell"
   ];
-TextCell._defaults = {};
+TextCell._defaults = {
+  "text": "",
+  "alignment": ""
+};
 
 module.exports = TextCell;

@@ -24,6 +24,6 @@ SlotCell._interface =
   Interface["components"]["Table"]["partials"]["TableRow"]["partials"][
     "SlotCell"
   ];
-SlotCell._defaults = {};
+SlotCell._defaults = {}
 
 module.exports = SlotCell;
