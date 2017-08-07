@@ -3,6 +3,8 @@ var Template = require("./text-head-cell.html");
 var Interface = require("interface.json");
 var Core = require("_core.js");
 
+var frToPercentage  =  require("../../../../helpers/js/_frtopercentage.js");
+
 var AvailablePositions = ["left", "right", "center"];
 
 
@@ -36,7 +38,7 @@ class TextHeadCell extends Core {
   }
 
   setWidth(width){
-    this.el.style.width = this._frToPercentage(width);
+    this.el.style.width = frToPercentage(width);
   }
 }
 

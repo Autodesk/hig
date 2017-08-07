@@ -12,7 +12,6 @@ var Core = require("_core.js");
 class IconCell extends Core {
   constructor(options = {}) {
     super(options);
-    debugger;
     this._render(Template, options, undefined, "tr");
     this.initialOptions = options;
   }
