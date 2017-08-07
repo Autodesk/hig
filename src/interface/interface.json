@@ -132,15 +132,35 @@
         },
         "Spacer": {
             "defaults": {
-                "type": "",
-                "width": "",
-                "inset": ""
+                "type": "{String - 'stack', 'inline'} type of the spacer",
+                "width": "{String - 'none', 'xxs', 'xs', 's', 'm', 'l' 'xl', 'xxl'} width of the spacer",
+                "inset": "{String - 'none', 'xxs', 'xs', 's', 'm', 'l' 'xl', 'xxl'} width of the spacer inset"
             },
             "methods": {
-                "setType": {},
-                "setWidth": {},
-                "setInset": {},
-                "addSlot": {}
+                "setType": {
+                    "desc": "Sets the type of the spacer",
+                    "params": [
+                        "{String - 'none', 'xxs', 'xs', 's', 'm', 'l' 'xl', 'xxl'} type of the spacer"
+                    ]
+                },
+                "setWidth": {
+                    "desc": "Sets the width of the spacer",
+                    "params": [
+                        "{String - 'none', 'xxs', 'xs', 's', 'm', 'l' 'xl', 'xxl'} width of the spacer"
+                    ]
+                },
+                "setInset": {
+                    "desc": "Sets the inset width of the spacer",
+                    "params": [
+                        "{String - 'none', 'xxs', 'xs', 's', 'm', 'l' 'xl', 'xxl'} inset width of the spacer"
+                    ]
+                },
+                "addSlot": {
+                    "desc": "Content for the spacer",
+                    "params": [
+                        "{HTMLElement} HTMLElement"
+                    ]
+                }
             }
         },
         "Typography": {
@@ -1601,7 +1621,7 @@
             "body": "",
             "headerColor": ""
           }
-      },    
+      },
       "Table": {
         "methods": {
           "addTableHead": {},
@@ -1616,8 +1636,8 @@
               "TextHeadCell": {
                 "methods": {
                   "setText": {},
-                  "setAlignment": {}, 
-                  "setWidth": {} 
+                  "setAlignment": {},
+                  "setWidth": {}
                 },
                 "defaults": {
                   "text": "{String} text for text cell in head of table",
@@ -1629,7 +1649,7 @@
                 "methods": {
                   "addSlot": {},
                   "setWidth": {}
-                }, 
+                },
                 "defaults": {
                   "width": "{String} value for width of cell"
                 }
