@@ -130,40 +130,17 @@
                 "icon": "{String} (optional) ID of the icon"
             }
         },
-        "Spacing": {
+        "Spacer": {
             "defaults": {
-                "inset": "",
-                "stack": "",
-                "inline": ""
+                "type": "",
+                "width": "",
+                "inset": ""
             },
             "methods": {
+                "setType": {},
+                "setWidth": {},
                 "setInset": {},
-                "setStack": {},
-                "setInline": {}
-            }
-        },
-        "InsetSpacer": {
-            "defaults": {
-                "width": ""
-            },
-            "methods": {
-                "setWidth": {}
-            }
-        },
-        "StackSpacer": {
-            "defaults": {
-                "height": ""
-            },
-            "methods": {
-                "setHeight": {}
-            }
-        },
-        "InlineSpacer": {
-            "defaults": {
-                "width": ""
-            },
-            "methods": {
-                "setWidth": {}
+                "addSlot": {}
             }
         },
         "Typography": {
