@@ -1,10 +1,11 @@
+<!DOCTYPE html>
 <html>
     <head>
         <link rel="stylesheet" href="../../../../../dist/hig.css">
         <script type="text/javascript" src="../../../../../dist/hig.js"></script>
     </head>
     <body>
-        <div class='testContainer' style="padding: 40px; margin: 0; display: flex; justify-content: flex-end;"></div>
+        <div class='testContainer' style="border: 1px solid #0a131c; padding: 40px; margin: 0; display: flex; justify-content: flex-end;"></div>
         <script>
 
             var flyout = new Hig.Flyout();
@@ -14,7 +15,7 @@
             flyoutContent.textContent = "Hello, world!";
             flyout.addSlot(flyoutContent);
 
-            flyout.onClickOutside(() => {
+            flyout.onClickOutside(function(e) {
                 flyout.close();
             });
 

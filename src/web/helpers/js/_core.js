@@ -20,7 +20,8 @@ class Core {
             var coreMethods = Object.getOwnPropertyNames(Core.prototype);
             // CHECK IF ALL METHODS IN COMPONENT ARE DEFINED IN INTERFACE
             instanceMethods.forEach(function(v, i){
-                if(!coreMethods.includes(v) && v[0] != "_" && !this._interface["methods"][v]){
+                const coreMethodMissing = coreMethods.indexOf(v) === -1;
+                if(coreMethodMissing && v[0] != "_" && !this._interface["methods"][v]){
                     console.error("METHOD: \"" + this.constructor.name + '.' + v + "\" IS NOT DEFINED AS INTERFACE OR IS NOT A VALID INTERFACE METHOD");
                 }
             }, this);
