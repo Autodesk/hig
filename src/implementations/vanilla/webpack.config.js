@@ -3,7 +3,7 @@ var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 var path = require('path');
 
 r = {
-    entry: './src/web/index.js',
+    entry: './src/index.js',
     output: {
         filename: 'hig.js',
         path: path.resolve(__dirname, 'dist'),
@@ -36,11 +36,11 @@ r = {
     },
     resolve: {
         alias: {
-            "basics": path.resolve(__dirname, "src", "web", "basics"),
-            "helpers": path.resolve(__dirname, "src", "web", "helpers"),
-            "components": path.resolve(__dirname, "src", "web", "components"),
-            "interface.json": path.resolve( __dirname, 'src/interface/interface.json' ),
-            "_core.js": path.resolve( __dirname, 'src/web/helpers/js/_core.js' )
+            "basics": path.resolve(__dirname, "src", "basics"),
+            "helpers": path.resolve(__dirname, "src", "helpers"),
+            "components": path.resolve(__dirname, "src", "components"),
+            "interface.json": path.resolve( __dirname, '../../interface/interface.json' ),
+            "_core.js": path.resolve( __dirname, 'src/helpers/js/_core.js' )
         },
         extensions: [ '.js', '.json' ]
     },
