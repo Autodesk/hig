@@ -7,6 +7,8 @@ var Core = require("_core.js");
 var TableHead = require('./table-head/table-head.js');
 var TableRow = require("./table-row/table-row.js");
 
+var AvailableDensities = ["standard", "compressed", "large"]
+
 /**
  * Creates an Table
  *
@@ -14,22 +16,35 @@ var TableRow = require("./table-row/table-row.js");
  */
 
 class Table extends Core {
-    constructor(options = {}){
-      super(options);
-      this._render(Template, options);
-    }
+  constructor(options = {}) {
+    super(options);
+    this._render(Template, options);
+  }
 
-    addTableHead(tableHeadInstance) {
-        if (tableHeadInstance instanceof TableHead) {
-          this.mountPartialToComment('TABLE-HEAD', tableHeadInstance);
-        }
+  addTableHead(tableHeadInstance) {
+    if (tableHeadInstance instanceof TableHead) {
+      this.mountPartialToComment("TABLE-HEAD", tableHeadInstance);
     }
+  }
 
-    addTableRow(tableRowInstance) {
-        if ( tableRowInstance instanceof TableRow) {
-          this.mountPartialToComment("TABLE-ROW", tableRowInstance);
-        }
+  addTableRow(tableRowInstance) {
+    if (tableRowInstance instanceof TableRow) {
+      this.mountPartialToComment("TABLE-ROW", tableRowInstance);
     }
+  }
+
+  setDensity(density) {
+    if (AvailableDensities.indexOf(density) > -1) {
+     this._clearAllDensities();
+     this.el.classList.add("hig__table__td--" + density);
+    }
+  }
+
+  _clearAllDensities() {
+    for (var density in AvailableDensities) {
+       this.el.classList.remove("hig__table__td--" + density);
+    }
+  }
 }
 
 Table._interface = Interface["components"]["Table"];

@@ -1625,7 +1625,8 @@
       "Table": {
         "methods": {
           "addTableHead": {},
-          "addTableRow": {}
+          "addTableRow": {},
+          "setDensity": {}
         },
         "partials": {
           "TableHead": {

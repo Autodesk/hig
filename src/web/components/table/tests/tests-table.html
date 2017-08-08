@@ -33,6 +33,8 @@
     var Table = new Hig.Table();
     Table.mount(".tests-table-setters");
 
+    Table.setDensity("standard");
+
     var TableHead = new Table.partials.TableHead();
     Table.addTableHead(TableHead);
 
@@ -63,6 +65,7 @@
     BudgetHeadCell.setText('Budget');
     BudgetHeadCell.setAlignment("left");
     BudgetHeadCell.setWidth("2fr");
+
 
     // var AssigneeHeadCell = new TableHead.partials.TextHeadCell();
     // TableHead.addCell(AssigneeHeadCell);
@@ -223,7 +226,6 @@
     TableRow3.addCell(AssigneeTextCell3);
     AssigneeTextCell3.setText('Alexander Mo');
     AssigneeTextCell3.setAlignment('left');
-
 
     //Adding a Table using defaults
 

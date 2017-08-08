@@ -252,6 +252,8 @@ class Core {
         }
     }
 
+    
+
     /**
      * Returns first matching element if found, creates and returns an element if not
      * @param {String} searchComment - HTML comment to target where element should be inserted if created
