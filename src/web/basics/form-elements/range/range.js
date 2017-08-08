@@ -21,7 +21,8 @@ class Range extends Core {
     }
 
     _componentDidMount() {
-      this._attachListener("input", '.hig__range__field', this.el, this._findCurrentRangeValue);
+      this._attachListener("change", '.hig__range__field', this.el, this._findCurrentRangeValue); // for IE11
+      this._attachListener("input", '.hig__range__field', this.el, this._findCurrentRangeValue); //  for everyone else :/
     }
 
     setInstructions(instructions) {
