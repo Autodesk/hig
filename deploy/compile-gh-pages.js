@@ -14,14 +14,16 @@ const path = require('path');
 const mustache = require('mustache');
 
 const thisDir = __dirname;
-const rootDir = path.resolve(__dirname + "/../");
+const rootDir = path.resolve(__dirname + '/../');
 
-const testsGlob = rootDir + "/src/**/tests/test*.html"
-const templatePath = thisDir + "/index.template.html"
+const testsGlob = rootDir + '/src/**/tests/test*.html';
+const templatePath = thisDir + '/index.template.html';
 
-const indexMustacheTemplate = fs.readFileSync(templatePath, {encoding: 'utf8'});
+const indexMustacheTemplate = fs.readFileSync(templatePath, {
+  encoding: 'utf8'
+});
 
-const indexOutputPath = rootDir + "/index.html";
+const indexOutputPath = rootDir + '/index.html';
 
 /**
  * Returns a string with the fully rendered template. Synchronous.
@@ -29,15 +31,28 @@ const indexOutputPath = rootDir + "/index.html";
  **/
 
 glob(testsGlob, (er, files) => {
-  var testList = { testLinks: [] };
+  const testLinks = files
+    .map(function(filePath) {
+      const newFilePath = path.relative(rootDir, filePath);
+      const title = path
+        .basename(filePath, '.html')
+        .replace(/test(s)?-/, '')
+        .replace(/-/g, ' ');
+      return { href: newFilePath, title };
+    })
+    .sort((a, b) => {
+      const titleA = a.title.toUpperCase();
+      const titleB = b.title.toUpperCase();
 
-  files.forEach(function(filePath) {
-    var newFilePath = path.relative(rootDir, filePath);
-    var title = path.parse(filePath).base.replace("test-", "");
-    testList.testLinks.push({ href: newFilePath, title: title });
-  });
+      if (titleA > titleB) {
+        return 1;
+      } else if (titleA < titleB) {
+        return -1;
+      }
+      return 0;
+    });
 
-  const rendered = mustache.render(indexMustacheTemplate, testList);
+  const rendered = mustache.render(indexMustacheTemplate, { testLinks });
 
   // clobber the old index.html
   const fd = fs.openSync(indexOutputPath, 'w');
@@ -45,12 +60,10 @@ glob(testsGlob, (er, files) => {
 
   if (bytesWritten == 0) {
     fs.closeSync(fd);
-    throw new Error("Could not write to " + indexOutputPath);
+    throw new Error('Could not write to ' + indexOutputPath);
   }
 
   fs.closeSync(fd);
 
-  console.log("Finished generating test index.html")
+  console.log('Finished generating test index.html');
 });
-
-
