@@ -16,23 +16,10 @@
   background-color: transparent; /* Otherwise white in Chrome */
   box-sizing: content-box;
   height: 60px;
-  margin: 0 0 17px 0;
+  margin: 0;
+  position: relative;
 
   @each $vendor in ('-webkit-slider-thumb', '-moz-range-thumb', '-ms-thumb') {
-    &::#{$vendor} {
-      box-sizing: content-box;
-      -webkit-appearance: none;
-
-      height: 16px;
-      width: 16px;
-      background: color(hig-gray-50);
-      border-radius: 50%;
-      cursor: pointer;
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-      border: 2px solid color(hig-white);
-    }
 
     &:hover::#{$vendor} {
       background-color: color(hig-turquoise-30);
@@ -53,13 +40,48 @@
     }
   }
 
+  @each $vendor in ('-webkit-slider-thumb', '-moz-range-thumb') {
+    &::#{$vendor} {
+      box-sizing: content-box;
+      -webkit-appearance: none;
+      height: 16px;
+      width: 16px;
+      background: color(hig-gray-50);
+      border-radius: 50%;
+      cursor: pointer;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      border: 2px solid color(hig-white);
+    }
+  }
+
+  &::-ms-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    background: color(hig-gray-50);
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    border: 2px solid color(hig-white);
+  }
+
+  &::-ms-fill-upper, &::-ms-fill-lower {
+    border: none;
+    background-color: color(hig-gray-50);
+  }
+
+  &::-ms-tooltip {
+    display: none;
+  }
+
   @each $vendor in ('-webkit-slider-runnable-track', '-moz-range-track', '-ms-track') {
     &::#{$vendor} {
       width: 100%;
       height: 2px;
-
+      border: none;
       background: color(hig-gray-50);
-      border-color: transparent;
       cursor: pointer;
       color: transparent;
     }
@@ -113,7 +135,7 @@
   &:after,
   &:before {
     position: absolute;
-    bottom: 16px;
+    bottom: 0;
     color: color(hig-gray-30);
     font-size: 12px;
 

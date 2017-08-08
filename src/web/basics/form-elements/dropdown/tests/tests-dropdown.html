@@ -68,13 +68,14 @@
                 { label: 'The drink', value: 'the-drink' },
                 { label: 'Bubblegum', value: 'bubblegum' },
             ];
-            const defaultDropdownOptionComponents = defaultDropdownOptionData.map(optionData => {
+            const defaultDropdownOptionComponents =
+              defaultDropdownOptionData.map(function(optionData) {
                 const option = new DefaultDropdown.partials.Option(optionData);
                 DefaultDropdown.addOption(option);
-                option.onClick((event, element) => {
+                option.onClick(function(event, element) {
                     const value = event.target.dataset.value;
 
-                    defaultDropdownOptionComponents.forEach(option => {
+                    defaultDropdownOptionComponents.forEach(function(option)  {
                         if (option.el.dataset.value === value) {
                             option.select()
                             DefaultDropdown.setSelectedOptionLabel(option.el.innerText);
@@ -88,11 +89,11 @@
                 return option;
             });
 
-            DefaultDropdown.onTargetClick(() => {
+            DefaultDropdown.onTargetClick(function(e) {
                 DefaultDropdown.open();
             });
 
-            DefaultDropdown.onClickOutside(() => {
+            DefaultDropdown.onClickOutside(function(e) {
                 DefaultDropdown.close();
             });
 
@@ -137,7 +138,7 @@
                 { label: 'Uncommitted', value: 'foo' },
                 { label: 'Imperceptible', value: 'bar', selected: true },
                 { label: 'Arguable', value: 'baz' },
-            ].forEach(optionData => {
+            ].forEach(function(optionData)  {
                 const option = new SetterDropdown.partials.Option(optionData);
                 SetterDropdown.addOption(option);
             });
@@ -146,11 +147,11 @@
             SetterDropdown.setInstructions('Changing your mind is not permitted.');
             SetterDropdown.required('I must insist that you choose one.');
 
-            SetterDropdown.onTargetClick(() => {
+            SetterDropdown.onTargetClick(function(e) {
                 SetterDropdown.open();
             });
 
-            SetterDropdown.onClickOutside(() => {
+            SetterDropdown.onClickOutside(function(e) {
                 SetterDropdown.close();
             });
 
@@ -173,7 +174,7 @@
             EventsDropdown.setSelectedOptionLabel('Imperceptible');
 
             function log(componentName, eventType) {
-                const message = `${componentName} triggered an ${eventType} event`;
+                const message = componentName + " triggered an " + eventType + " event";
                 console.log(message);
             }
 
@@ -187,11 +188,11 @@
                 { label: 'Uncommitted', value: 'foo' },
                 { label: 'Imperceptible', value: 'bar', selected: true },
                 { label: 'Arguable', value: 'baz' },
-            ].forEach(optionData => {
+            ].forEach(function(optionData)  {
                 const option = new EventsDropdown.partials.Option(optionData);
                 EventsDropdown.addOption(option);
-                option.onClick(log.bind(this, `Option ${optionData.label}`, 'onClick'));
-                option.onHover(log.bind(this, `Option ${optionData.label}`, 'onHover'));
+                option.onClick(log.bind(this, "Option " + optionData.label,  'onClick'));
+                option.onHover(log.bind(this, "Option" + optionData.label, 'onHover'));
             });
             EventsDropdown.open();
 
