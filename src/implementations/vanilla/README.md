@@ -1,8 +1,25 @@
-# Developing
+## Web Implementation
+The HIG Web implementation consists of `html`, `css` and `js`. You can opt to only consume the `html` and `css` part and write the wrapper against the `interface.json` yourself (hard) or opt to use our `js` wrapper directly (easy). 
 
-So you want to help out? Great! Let's get you up and running:
+### Consuming the HIG Basic Example: Button
+```javascript
+var Button = new Hig.Button({
+    "title": "just a button",
+    "link": "http://autodesk.com"
+});
+
+Button.mount("body");
+
+Button.onClick(function(e){
+    e.preventDefault();
+    console.log("Button CLICK")
+});
+```
+
+more advanced button examples can be found in [the components tests dir](src/basics/button/tests/tests-button.html)
 
 ## Getting Started
+So you want to help out? Great! Let's get you up and running:
 
 ```bash
 npm install
@@ -17,20 +34,20 @@ Creating a new component (or subcomponent) consists of 2 parts:
 ```bash
 plop
 ```
-use the arrows to select the `hig_skeleton`, type your component name (ex: `component123`), next type the location where you would want your component directory to live (ex: `src/web/components/component123_parent`). This will generate a `html`, `sass` and `js` file in the directory you provided, in our example it would create: 
+use the arrows to select the `hig_skeleton`, type your component name (ex: `component123`), next type the location where you would want your component directory to live (ex: `src/components/component123_parent`). This will generate a `html`, `sass` and `js` file in the directory you provided, in our example it would create: 
 ```
-src/web/components/component123_parent/component123/component123.html
-src/web/components/component123_parent/component123/component123.sass
-src/web/components/component123_parent/component123/component123.js
+src/components/component123_parent/component123/component123.html
+src/components/component123_parent/component123/component123.sass
+src/components/component123_parent/component123/component123.js
 ```
 
 ## Adding a new icon
-To add a new svg icon to our stack, simply add the `svg` file to the [src/web/basics/icons/src](src/web/basics/icons/src) directory.
+To add a new svg icon to our stack, simply add the `svg` file to the [src/basics/icons/src](src/basics/icons/src) directory.
 Next run the following command:
 ```bash
 npm run build-icons
 ```
-which will trigger our build script to create an updated release file in [src/web/basics/icons/release](src/web/basics/icons/release). The build script in itself simply does a `SVGO` optimize of the svg, and stores the optimized svg as a string in a key-value object in our release file, read more about the script here: [src/web/basics/icons/build/build.js](src/web/basics/icons/build/build.js).
+which will trigger our build script to create an updated release file in [src/basics/icons/release](src/basics/icons/release). The build script in itself simply does a `SVGO` optimize of the svg, and stores the optimized svg as a string in a key-value object in our release file, read more about the script here: [src/basics/icons/build/build.js](src/basics/icons/build/build.js).
 
 ## Running visual regression tests
 
