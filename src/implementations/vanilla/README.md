@@ -1,7 +1,14 @@
 ## Web Implementation
 The HIG Web implementation consists of `html`, `css` and `js`. You can opt to only consume the `html` and `css` part and write the wrapper against the `interface.json` yourself (hard) or opt to use our `js` wrapper directly (easy). 
 
-### Consuming the HIG Basic Example: Button
+## Install
+
+```bash
+npm install
+npm run build
+```
+
+## Consuming Basic Example: Button
 ```javascript
 var Button = new Hig.Button({
     "title": "just a button",
@@ -18,7 +25,7 @@ Button.onClick(function(e){
 
 more advanced button examples can be found in [the components tests dir](src/basics/button/tests/tests-button.html)
 
-## Getting Started
+## Developing
 So you want to help out? Great! Let's get you up and running:
 
 ```bash
@@ -51,6 +58,6 @@ which will trigger our build script to create an updated release file in [src/ba
 
 ## Running visual regression tests
 
-- Make sure `SAUCE_USERNAME` and `SAUCE_ACCESS_KEY` are set in `/.env`.
+- create a local file called `.env` and contact someone on the #orion-hig-web-dev slack channel for credentials (you'll need a `SAUCE_USERNAME=xxxxx` and a `SAUCE_ACCESS_KEY=xxxxx`)
 - Run the gemini tests and generate a report: `$ npm run gemini-report`
 - View the report: `$ open ./gemini-report/index.html`
