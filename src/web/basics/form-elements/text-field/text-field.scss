@@ -11,8 +11,8 @@
 }
 
 .hig__text-field__icon-spacer {
-    flex: 0 0 30px;
-    margin-right: 5px;
+    flex: 0 0 24px;
+    margin-right: 2px;
 }
 
 .hig__text-field__content {
@@ -22,8 +22,8 @@
 .hig__text-field__icon {
     display: none;
     position: absolute;
-    left: -35px;
-    bottom: 5px;
+    left: -26px;
+    bottom: 6px;
 
     &.hig__text-field__icon--visible {
         display: block;

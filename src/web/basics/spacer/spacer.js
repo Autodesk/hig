@@ -24,7 +24,7 @@ const TYPES = ['stack', 'inline'];
  */
 
 class Spacer extends Core {
-    constructor(options) {
+    constructor(options = {}) {
       super(options);
       this._render(Template, options);
       this.initialOptions = options;
@@ -44,7 +44,7 @@ class Spacer extends Core {
         }
     }
 
-    setWidth(width) {
+    setWidth(width = 'none') {
         if (!Spacer.AvailableSizes.includes(width)) {
             console.error(`Spacer cannot have width "${width}". Only these widths are allowed: `, Spacer.AvailableSizes);
             return;
@@ -62,7 +62,7 @@ class Spacer extends Core {
         this.el.classList.add(`hig__spacer--${type}`);
     }
 
-    setInset(size) {
+    setInset(size = 'none') {
         if (!Spacer.AvailableSizes.includes(size)) {
             console.error(`Spacer cannot have inset size "${size}". Only these inset sizes are allowed: `, Spacer.AvailableSizes);
             return;

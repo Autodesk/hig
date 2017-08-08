@@ -95,7 +95,7 @@
             IconHeading.mount('.tests-text-field-icon-heading');
             IconTextField.mount('.tests-text-field-icon');
 
-            IconTextField.setIcon('eye-blocked');
+            IconTextField.setIcon('location');
 
 
 
@@ -138,7 +138,7 @@
             EventsTextField.mount('.tests-text-field-events');
 
             function log(event) {
-                const message = `${event.type} event triggered`;
+                const message = event.type + "event triggered";
                 console.log(message);
             }
 

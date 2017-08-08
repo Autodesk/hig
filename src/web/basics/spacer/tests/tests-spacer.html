@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -48,23 +49,16 @@
 <body>
 
   <script>
-    // Test
-    // w/ nothing
-    // w/ defaults
-    // w/ setters
-
-    // Gemini
-    // Stack in each size
-    // Stack w/ inset in each size
-    // Inline in each size
-    // Inline w/ inset in each size
-
     function renderExample(spec) {
       renderHeader(spec);
 
       const container = document.createElement('div');
       container.classList.add('test-container');
-      container.setAttribute('id', `${spec.exampleType}-${spec.exampleType === 'inset' ? spec.inset : spec.width}`);
+
+
+      const insetOrWidth = spec.exampleType === 'inset' ? spec.inset : spec.width;
+      const elemId = spec.exampleType + "-" + insetOrWidth.toString();
+      container.setAttribute('id', elemId);
 
       mountPlaceholder(container, spec);
       mountSpacer(container, spec);
@@ -77,26 +71,28 @@
 
     function renderHeader(spec) {
       const size = spec.exampleType === 'inset' ? spec.inset : spec.width;
-      const id = `${spec.exampleType}-${size}`;
+      const href = spec.exampleType + "-size";
       const exampleHeader = document.createElement('h3');
-      exampleHeader.innerHTML = `<a id="${id}-link" href="#${id}">${spec.exampleType} - ${size}</a>`;
+      const link = document.createElement("a");
+      link.setAttribute('id', href + "-link");
+      link.setAttribute('href', href);
+      link.textContent = spec.exampleType + " - " + size.toString();
+      exampleHeader.appendChild(link);
       document.body.appendChild(exampleHeader);
     }
 
     function mountPlaceholder(container, spec) {
       const placeholder = document.createElement('span');
-      placeholder.classList.add(`${spec.exampleType}-placeholder`);
+      placeholder.classList.add(spec.exampleType + "-placeholder");
       container.appendChild(placeholder);
     }
 
     function mountSpacer(container, spec) {
-      const spacer = new Hig.Spacer({
-        type: spec.type,
-        width: spec.width,
-        inset: spec.inset
-      });
-
+      const spacer = new Hig.Spacer();
       spacer.mount(container);
+      spacer.setType(spec.type);
+      spacer.setWidth(spec.width);
+      spacer.setInset(spec.inset);
 
       if (spec.content) {
         const contentEl = document.createElement('div');
@@ -106,15 +102,15 @@
       }
     }
 
-    Hig.Spacer.AvailableSizes.map(size => {
+    Hig.Spacer.AvailableSizes.map(function(size) {
       return { type: 'stack', width: size, exampleType: 'stack' }
     }).forEach(renderExample);
 
-    Hig.Spacer.AvailableSizes.map(size => {
+    Hig.Spacer.AvailableSizes.map(function(size) {
       return { type: 'inline', width: size, exampleType: 'inline' }
     }).forEach(renderExample);
 
-    Hig.Spacer.AvailableSizes.map(size => {
+    Hig.Spacer.AvailableSizes.map(function(size) {
       return { type: 'stack', width: 'none', inset: size, exampleType: 'inset', content: 'Nulla officia consequat officia magna. Magna irure consectetur irure sit aliqua. Reprehenderit nostrud eiusmod dolore adipisicing. Lorem nisi incididunt qui ipsum tempor nostrud occaecat id laborum exercitation consectetur. Nulla do eu minim elit cillum eu.' }
     }).forEach(renderExample);
   </script>
