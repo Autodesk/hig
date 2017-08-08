@@ -48,17 +48,6 @@
 <body>
 
   <script>
-    // Test
-    // w/ nothing
-    // w/ defaults
-    // w/ setters
-
-    // Gemini
-    // Stack in each size
-    // Stack w/ inset in each size
-    // Inline in each size
-    // Inline w/ inset in each size
-
     function renderExample(spec) {
       renderHeader(spec);
 
@@ -90,13 +79,11 @@
     }
 
     function mountSpacer(container, spec) {
-      const spacer = new Hig.Spacer({
-        type: spec.type,
-        width: spec.width,
-        inset: spec.inset
-      });
-
+      const spacer = new Hig.Spacer();
       spacer.mount(container);
+      spacer.setType(spec.type);
+      spacer.setWidth(spec.width);
+      spacer.setInset(spec.inset);
 
       if (spec.content) {
         const contentEl = document.createElement('div');
