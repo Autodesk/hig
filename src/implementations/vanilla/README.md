@@ -6,7 +6,7 @@ So you want to help out? Great! Let's get you up and running:
 
 ```bash
 npm install
-webpack --watch
+npm run watch
 ```
 
 ## Writing a new component
