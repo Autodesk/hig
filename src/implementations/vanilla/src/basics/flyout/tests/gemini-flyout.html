@@ -16,8 +16,9 @@
     <body>
         <div class='test-container'></div>
         <script>
+            let currentAnchorPoint = Hig.Flyout.AvailableAnchorPoints[Hig.Flyout.AvailableAnchorPoints.length - 1];
             const flyout = new Hig.Flyout({
-                anchorPoint: Hig.Flyout.AvailableAnchorPoints[0]
+                anchorPoint: currentAnchorPoint
             });
             flyout.mount('.test-container');
 
@@ -30,16 +31,10 @@
             });
 
             flyout.addTarget(defaultButton);
-            defaultButton.onClick(e => {
-                flyout.open();
-            });
-
-
             flyout.open();
 
-            let currentAnchorPoint = Hig.Flyout.AvailableAnchorPoints[0];
 
-            flyout.onClickOutside(function() {
+            defaultButton.onClick(function() {
                 nextAnchorPointIndex = Hig.Flyout.AvailableAnchorPoints.indexOf(currentAnchorPoint) + 1;
                 if (nextAnchorPointIndex > Hig.Flyout.AvailableAnchorPoints.length - 1) {
                     nextAnchorPointIndex = 0;

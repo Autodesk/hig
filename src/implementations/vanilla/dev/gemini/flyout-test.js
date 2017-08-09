@@ -16,10 +16,16 @@ gemini.suite('flyout', parent => {
     'left-bottom'
   ];
 
-  examples.forEach(example => {
-    gemini.suite(example, suite => {
-      suite.setCaptureElements(`.test-container`).capture(example, actions => {
-        actions.click(`.test-container`);
+  gemini.suite('flyout', suite => {
+    suite
+        .setCaptureElements('.test-container')
+        .before((actions, find) => {
+          this.next = find('.hig__button');
+        });
+
+    examples.forEach(example => {
+      suite.capture(example, (actions, find) => {
+        actions.click(this.next);
       });
     });
   });
