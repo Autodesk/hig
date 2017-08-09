@@ -47,7 +47,7 @@ TextHeadCell._interface =
 TextHeadCell._defaults = {
   text: "",
   alignment: "",
-  width: ""
+  width: "1fr"
 };
 
 module.exports = TextHeadCell;

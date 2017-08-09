@@ -1665,11 +1665,13 @@
               "TextCell": {
                 "methods": {
                   "setText": {},
-                  "setAlignment": {}
+                  "setAlignment": {},
+                  "setDetail": {}
                 },
                 "defaults": {
-                  "text": "{String} text for text cell in head of table",
-                  "alignment": "{String} value for text-align style property of cell"
+                  "text": "{String} text for text cell in body of table",
+                  "alignment": "{String} value for text-align style property of cell",
+                  "detail": "{String} supporting text for cell in body of table"
                 }
               },
               "IconCell": {

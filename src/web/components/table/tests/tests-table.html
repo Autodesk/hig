@@ -23,10 +23,15 @@
     .tests-table-setters {
       margin-bottom: 40px;
     }
+
+    .tests-table-large {
+      margin-bottom: 40px;
+    }
   </style>
 
   <div class="tests-table-setters"></div>
   <div class="tests-table-defaults"></div>
+  <div class="tests-table-large"></div>
 
   <script>
     // CREATE Table Using Setters
@@ -97,6 +102,7 @@
     TableRow.addCell(TextCell);
     TextCell.setText('text');
     TextCell.setAlignment('left');
+    TextCell.setDetail('new detail');
 
 
     var NextCell = new TableRow.partials.TextCell();
@@ -231,13 +237,16 @@
 
     var DefaultTable = new Hig.Table();
     DefaultTable.mount(".tests-table-defaults");
+    DefaultTable.setDensity("compressed");
+
 
     var TableHead = new DefaultTable.partials.TableHead();
     DefaultTable.addTableHead(TableHead);
-
+    
     var EmptyCell1 = new TableHead.partials.TextHeadCell(
-      { "width": "30px", "alignment": "left", "text": "" });
-    TableHead.addCell(EmptyCell1);
+        { "width": "1.1fr", "alignment": "left" }
+      );
+      TableHead.addCell(EmptyCell1);
 
 
     var TitleHeadCell1 = new TableHead.partials.TextHeadCell(
@@ -272,10 +281,6 @@
     var TableRowDefault = new DefaultTable.partials.TableRow();
     DefaultTable.addTableRow(TableRowDefault);
 
-    var IconCell = new TableRowDefault.partials.IconCell({
-      icon: "gear"
-    });;
-    TableRowDefault.addCell(IconCell);
 
     var TextCell = new TableRow.partials.TextCell({
       "text": "text", "alignment": "left"
@@ -310,9 +315,6 @@
     var TableRowDefault1 = new DefaultTable.partials.TableRow();
     DefaultTable.addTableRow(TableRowDefault1);
 
-    var IconCellDefault1 = new TableRowDefault1.partials.IconCell({ "icon": "hamburger" });
-    TableRowDefault1.addCell(IconCellDefault1);
-
     var TextCellDefault1 = new TableRowDefault1.partials.TextCell({
       "text": 'Window Punch List', alignment: "left"
     });
@@ -343,13 +345,9 @@
 
     //Add Row 3
 
-
-
     var TableRowDefault2 = new DefaultTable.partials.TableRow();
     DefaultTable.addTableRow(TableRowDefault2);
 
-    var IconCellDefault2 = new TableRowDefault2.partials.IconCell({ "icon": "hamburger" });
-    TableRowDefault2.addCell(IconCellDefault2);
 
     var TextCellDefault2 = new TableRowDefault2.partials.TextCell({
       "text": 'Window Punch List', alignment: "left"
@@ -378,6 +376,162 @@
       "text": 'Alexander Mo', alignment: "left"
     });
     TableRowDefault2.addCell(AssigneeTextCellDefault2);
+
+    // Large table with defaults
+
+     var DefaultTable1 = new Hig.Table();
+      DefaultTable1.mount(".tests-table-large");
+      DefaultTable1.setDensity("large");
+
+
+      var TableHead = new DefaultTable1.partials.TableHead();
+      DefaultTable1.addTableHead(TableHead);
+
+      var EmptyCell1 = new TableHead.partials.TextHeadCell(
+        { "alignment": "left", "text": "" });
+      TableHead.addCell(EmptyCell1);
+
+
+      var TitleHeadCell1 = new TableHead.partials.TextHeadCell(
+        { "width": "2fr", "alignment": "left", "text": "Title" }
+      );
+      TableHead.addCell(TitleHeadCell1);
+
+
+      var TypeHeadCell1 = new TableHead.partials.TextHeadCell(
+        { "width": "2fr", "alignment": "left", "text": "Type" }
+      );
+      TableHead.addCell(TypeHeadCell1);
+
+      var LocationHeadCell1 = new TableHead.partials.TextHeadCell(
+        { "width": "2fr", "alignment": "left", "text": "Location" });
+      TableHead.addCell(LocationHeadCell1);
+
+      var BudgetHeadCell1 = new TableHead.partials.TextHeadCell(
+        { "width": "2fr", "alignment": "left", "text": "Budget" }
+      );
+      TableHead.addCell(BudgetHeadCell1);
+
+      var SlotEl1 = document.createElement('div');
+      SlotEl1.innerHTML = `Raw denim flexitarian green juice kinfolk.`
+      var SlotHeadCell1 = new TableHead.partials.SlotHeadCell({
+        width: "2fr"
+      });
+      TableHead.addCell(SlotHeadCell1);
+      SlotHeadCell1.addSlot(SlotEl1)
+
+
+      // var TableRowDefault = new DefaultTable1.partials.TableRow();
+      // DefaultTable1.addTableRow(TableRowDefault);
+
+      // var IconCell = new TableRowDefault.partials.IconCell({
+      //   icon: "gear"
+      // });;
+      // TableRowDefault.addCell(IconCell);
+
+      // var TextCell = new TableRow.partials.TextCell({
+      //   "text": "text", "alignment": "left", "detail": "detail text"  
+      // });
+      // TableRowDefault.addCell(TextCell);
+
+      // var NextCell = new TableRowDefault.partials.TextCell({
+      //   "text": "Deserunt ut deserunt mollit elit aute et.",
+      //   "alignment": "left"
+      // });
+      // TableRowDefault.addCell(NextCell);
+
+      // var SlotCell = new TableRowDefault.partials.SlotCell();
+      // TableRowDefault.addCell(SlotCell);
+
+      // var NewSlotEl = document.createElement('div');
+      // NewSlotEl.innerHTML = `testing body cell slot.`;
+      // SlotCell.addSlot(NewSlotEl);
+
+      // var BudgetTextCellDefault = new TableRowDefault.partials.TextCell({
+      //   "text": "2535", "alignment": "left"
+      // });
+      // TableRowDefault.addCell(BudgetTextCellDefault);
+
+      // var AssigneeTextCellDefault = new TableRowDefault.partials.TextCell({
+      //   "text": "Atlas Plumbi", "alignment": "left"
+      // });
+      // TableRowDefault.addCell(AssigneeTextCellDefault);
+
+      //Add Row 2
+
+      var TableRowDefault1 = new DefaultTable1.partials.TableRow();
+      DefaultTable.addTableRow(TableRowDefault1);
+
+      // var IconCellDefault1 = new TableRowDefault1.partials.IconCell({ "icon": "hamburger" });
+      // TableRowDefault1.addCell(IconCellDefault1);
+
+      var TextCellDefault1 = new TableRowDefault1.partials.TextCell({
+        "text": 'Window Punch List', "alignment": "left", 
+      });
+      TableRowDefault1.addCell(TextCellDefault1);
+
+
+      var NextCellDefault1 = new TableRowDefault1.partials.TextCell({
+        "text": 'Comissioning', alignment: "left"
+      });
+      TableRowDefault1.addCell(NextCellDefault1);
+
+
+      var SlotCell1 = new TableRowDefault1.partials.SlotCell();
+      TableRowDefault1.addCell(SlotCell1);
+      var NewSlotEl1 = document.createElement('div');
+      NewSlotEl1.innerHTML = `Floor 3, Room 21.`;
+      SlotCell1.addSlot(NewSlotEl1);
+
+      var BudgetTextCellDefault1 = new TableRowDefault1.partials.TextCell({
+        "text": '3000', alignment: "left"
+      });
+      TableRowDefault1.addCell(BudgetTextCellDefault1);
+
+      var AssigneeTextCellDefault1 = new TableRowDefault1.partials.TextCell({
+        "text": 'Alexander Mo', alignment: "left"
+      });
+      TableRowDefault1.addCell(AssigneeTextCellDefault1);
+
+      //Add Row 3
+
+      var TableRowDefault2 = new DefaultTable1.partials.TableRow();
+      DefaultTable1.addTableRow(TableRowDefault2);
+
+       var SlotCell2 = new TableRowDefault2.partials.SlotCell();
+      TableRowDefault2.addCell(SlotCell2);
+      var NewSlotEl2 = document.createElement('div');
+      NewSlotEl2.innerHTML = `<img src="./images/table-image.png" style="width: 104px; height: 58px; padding: 6px 7px;">`;
+      SlotCell2.addSlot(NewSlotEl2);
+
+      var TextCellDefault2 = new TableRowDefault2.partials.TextCell({
+        "text": 'Window Punch List', "alignment": "left", "detail": "text detail"
+      });
+      TableRowDefault2.addCell(TextCellDefault2);
+
+
+      var NextCellDefault2 = new TableRowDefault2.partials.TextCell({
+        "text": 'Comissioning', alignment: "left"
+      });
+      TableRowDefault2.addCell(NextCellDefault2);
+
+
+      var SlotCell2 = new TableRowDefault2.partials.SlotCell();
+      TableRowDefault2.addCell(SlotCell2);
+      var NewSlotEl2 = document.createElement('div');
+      NewSlotEl2.innerHTML = `Floor 3, Room 21.`;
+      SlotCell2.addSlot(NewSlotEl2);
+
+      var BudgetTextCellDefault2 = new TableRowDefault2.partials.TextCell({
+        "text": '3000', alignment: "left"
+      });
+      TableRowDefault2.addCell(BudgetTextCellDefault2);
+
+      var AssigneeTextCellDefault2 = new TableRowDefault2.partials.TextCell({
+        "text": 'Alexander Mo', alignment: "left"
+      });
+      TableRowDefault2.addCell(AssigneeTextCellDefault2);
+    
   </script>
 </body>
 

@@ -36,13 +36,13 @@ class Table extends Core {
   setDensity(density) {
     if (AvailableDensities.indexOf(density) > -1) {
      this._clearAllDensities();
-     this.el.classList.add("hig__table__td--" + density);
+     this.el.classList.add("hig__table--" + density);
     }
   }
 
   _clearAllDensities() {
     for (var density in AvailableDensities) {
-       this.el.classList.remove("hig__table__td--" + density);
+       this.el.classList.remove("hig__table-" + density);
     }
   }
 }
