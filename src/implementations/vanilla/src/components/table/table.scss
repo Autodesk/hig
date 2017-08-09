@@ -29,22 +29,31 @@
   }
 }
 
-.hig__table__body td {
-  position: relative;
+.hig__table__text-cell,
+.hig__table__icon-cell {
+  .hig__table--standard & {
+    padding: 16px 4px;
 
-  & svg {
-    @include vendor-prefix(transform, translateX(-50%) translateY(-50%));
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    &:first-child {
+      padding-left: 8px
+    }
   }
 
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  .hig__table--compressed & {
+    padding: 12px 4px;
+    line-height: 16px;
+
+    &:first-child {
+      padding-left: 8px
+    }
+
+  }
+
+  .hig__table--large & {
+    padding: 20px 7px;
+     &:first-child {
+      padding-left: 12px
+    }
+  }
 }
-
-
-
-
 

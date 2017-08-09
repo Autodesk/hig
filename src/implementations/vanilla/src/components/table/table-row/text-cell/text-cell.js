@@ -1,4 +1,4 @@
-import "./text-cell.scss";
+import './text-cell.scss'
 var Template = require("./text-cell.html");
 var Interface = require("interface.json");
 var Core = require("_core.js");
@@ -18,11 +18,11 @@ class TextCell extends Core {
   }
 
   setText(text) {
-    this._findDOMEl(".hig__text-cell-text", this.el).textContent = text;
+    this._findDOMEl(".hig__table__text-cell-text", this.el).textContent = text;
   }
 
   setDetail(detail) {
-    this._findDOMEl(".hig__text-cell-detail", this.el).textContent = detail;
+    this._findDOMEl(".hig__table__text-cell-detail", this.el).textContent = detail;
   }
 
   setAlignment(position) {

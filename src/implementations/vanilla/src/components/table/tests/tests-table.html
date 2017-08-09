@@ -243,12 +243,6 @@
     var TableHead = new DefaultTable.partials.TableHead();
     DefaultTable.addTableHead(TableHead);
     
-    var EmptyCell1 = new TableHead.partials.TextHeadCell(
-        { "width": "1.1fr", "alignment": "left" }
-      );
-      TableHead.addCell(EmptyCell1);
-
-
     var TitleHeadCell1 = new TableHead.partials.TextHeadCell(
       { "width": "1fr", "alignment": "left", "text": "Title" }
     );
@@ -388,7 +382,7 @@
       DefaultTable1.addTableHead(TableHead);
 
       var EmptyCell1 = new TableHead.partials.TextHeadCell(
-        { "alignment": "left", "text": "" });
+        { "alignment": "left", "text": "", "width": "1fr" });
       TableHead.addCell(EmptyCell1);
 
 
@@ -501,7 +495,7 @@
        var SlotCell2 = new TableRowDefault2.partials.SlotCell();
       TableRowDefault2.addCell(SlotCell2);
       var NewSlotEl2 = document.createElement('div');
-      NewSlotEl2.innerHTML = `<img src="./images/table-image.png" style="width: 104px; height: 58px; padding: 6px 7px;">`;
+      NewSlotEl2.innerHTML = `<img src="./images/table-image.png" style="width: 104px; height: 58px; padding-left: 20px;">`;
       SlotCell2.addSlot(NewSlotEl2);
 
       var TextCellDefault2 = new TableRowDefault2.partials.TextCell({
