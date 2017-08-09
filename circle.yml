@@ -5,12 +5,11 @@ machine:
     version: 7.8.0
 test:
   pre:
-    - npm run install
     - npm run build
     - http-server:
         background: true
   override:
-    - npm run test-ci
+    - npm run gemini-ci
 deployment:
   production:
       branch: master

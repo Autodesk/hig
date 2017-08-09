@@ -42,7 +42,7 @@ class SharedExamples {
       attachTo: reactContainer
     });
 
-    //Update hig.web instance
+    //Update hig-vanilla instance
     higItem[config.mutator](config.updateValue);
 
     //Update React Instance

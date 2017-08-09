@@ -1,13 +1,13 @@
 
 import { mount } from 'enzyme';
-import * as HIG from 'hig.web';
+import * as HIG from 'hig-vanilla';
 import React from 'react';
 
 import GlobalNav from './GlobalNavAdapter';
 
 describe('<GlobalNav>', () => {
   /**
-     * Creates a hig.web GlobalNav and returns the instance and it's container
+     * Creates a hig-vanilla GlobalNav and returns the instance and it's container
      */
   function createHigNav() {
     const higContainer = document.createElement('div');

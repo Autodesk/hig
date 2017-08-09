@@ -2,7 +2,7 @@
 import * as PropTypes from 'prop-types';
 import createComponent from '../../createComponent';
 import HIGElement from '../../../elements/HIGElement';
-import * as HIG from 'hig.web';
+import * as HIG from 'hig-vanilla';
 
 const HIGModuleCollapse = HIG.GlobalNav._partials.SideNav._partials.Section._partials.Group._partials.Module._partials.Collapse;
 

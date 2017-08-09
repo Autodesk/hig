@@ -1,6 +1,6 @@
 
 import { mount } from 'enzyme';
-import * as HIG from 'hig.web';
+import * as HIG from 'hig-vanilla';
 import React from 'react';
 
 import GlobalNav from '../../../adapters/GlobalNav/GlobalNavAdapter';
@@ -76,7 +76,7 @@ describe('<Section>', () => {
 
       const newHeaderLabel = 'new header label';
 
-      // hig.web API
+      // hig-vanilla API
       higSection.setHeaderLabel(newHeaderLabel);
 
       // React API
@@ -134,7 +134,7 @@ describe('<Section>', () => {
 
       const newHeaderName = 'new header name';
 
-      // hig.web API
+      // hig-vanilla API
       higSection.setHeaderName(newHeaderName);
 
       // React API

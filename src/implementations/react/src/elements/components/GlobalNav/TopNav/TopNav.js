@@ -1,5 +1,5 @@
 
-//import * as HIG from 'hig.web';
+//import * as HIG from 'hig-vanilla';
 import * as PropTypes from 'prop-types';
 
 import HIGElement from '../../../HIGElement';

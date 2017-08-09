@@ -23,7 +23,7 @@ export default class HIGNodeList {
     this.type = type;
 
     /**
-     * This is the constructor function for the hig.web partial
+     * This is the constructor function for the hig-vanilla partial
      */
     this.HIGConstructor = HIGConstructor;
 

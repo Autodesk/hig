@@ -1,5 +1,5 @@
 {
-  "name": "hig.web",
+  "name": "hig-vanilla",
   "version": "1.0.0",
   "description": "",
   "main": "dist/hig.js",
@@ -14,14 +14,13 @@
     "gemini-report": "concurrently 'http-server' 'gemini test dev/gemini/* --reporter html --reporter flat' --kill-others",
     "gemini-update": "concurrently 'http-server' 'gemini update dev/gemini/*' --kill-others",
     "gemini-ci": "gemini test dev/gemini/*",
-    "test": "npm run gemini",
-    "test-ci": "npm run gemini-ci"
+    "test": "npm run gemini"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:adsk-hig/hig.web.git"
+    "url": "git@github.com:autodesk/hig.git"
   },
-  "author": "Thijs Bernolet",
+  "author": "Autodesk Inc.",
   "license": "Apache 2.0",
   "devDependencies": {
     "babel-core": "^6.23.1",
