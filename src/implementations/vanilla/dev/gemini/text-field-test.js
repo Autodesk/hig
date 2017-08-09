@@ -1,5 +1,5 @@
 gemini.suite('text field', (parent) => {
-  parent.setUrl('src/web/basics/form-elements/text-field/tests/gemini-text-field.html');
+  parent.setUrl('src/basics/form-elements/text-field/tests/gemini-text-field.html');
 
   gemini.suite('regular', (suite) => {
        suite.setCaptureElements('.test-group-default')

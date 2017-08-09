@@ -1,5 +1,5 @@
 gemini.suite('dropdown', (parent) => {
-  parent.setUrl('src/web/basics/form-elements/dropdown/tests/gemini-dropdown.html');
+  parent.setUrl('src/basics/form-elements/dropdown/tests/gemini-dropdown.html');
 
   gemini.suite('default', (suite) => {
       suite.setCaptureElements('.test-mount-default')

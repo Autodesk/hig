@@ -1,5 +1,5 @@
 gemini.suite('text area', (parent) => {
-  parent.setUrl('src/web/basics/form-elements/text-area/tests/gemini-text-area.html');
+  parent.setUrl('src/basics/form-elements/text-area/tests/gemini-text-area.html');
 
   gemini.suite('regular', (suite) => {
        suite.setCaptureElements('.test-mount')

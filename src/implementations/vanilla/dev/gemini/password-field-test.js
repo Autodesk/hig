@@ -1,5 +1,5 @@
 gemini.suite('password field', (parent) => {
-  parent.setUrl('src/web/basics/form-elements/password-field/tests/gemini-password-field.html');
+  parent.setUrl('src/basics/form-elements/password-field/tests/gemini-password-field.html');
 
   gemini.suite('regular', (suite) => {
        suite.setCaptureElements('.test-group-default')

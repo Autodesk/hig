@@ -1,5 +1,5 @@
 gemini.suite('spacer', parent => {
-  parent.setUrl('src/web/basics/spacer/tests/gemini-spacer.html');
+  parent.setUrl('src/basics/spacer/tests/gemini-spacer.html');
 
   const examples = [
     'stack-none',

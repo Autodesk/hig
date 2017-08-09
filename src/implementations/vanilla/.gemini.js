@@ -3,6 +3,7 @@ require('dotenv').config({path: './dev/.env'})
 module.exports = {
   rootUrl: "http://localhost:8080",
   gridUrl: " http://ondemand.saucelabs.com/wd/hub",
+  screenshotsDir: './dev/gemini-screens',
   windowSize: "1024x768",
   sessionsPerBrowser: 3, system: {
     plugins: {

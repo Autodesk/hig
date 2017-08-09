@@ -1,5 +1,5 @@
 gemini.suite('range', (parent) => {
-  parent.setUrl('src/web/basics/form-elements/range/tests/gemini-range.html');
+  parent.setUrl('src/basics/form-elements/range/tests/gemini-range.html');
 
   gemini.suite('regular', (suite) => {
        suite.setCaptureElements('.test-group-default')

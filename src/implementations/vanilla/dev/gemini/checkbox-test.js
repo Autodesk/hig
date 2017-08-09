@@ -2,7 +2,7 @@
  * Created by shannon on 7/11/17.
  */
 gemini.suite('checkbox', (parent) => {
-  parent.setUrl('src/web/basics/form-elements/checkbox/tests/gemini-checkbox.html');
+  parent.setUrl('src/basics/form-elements/checkbox/tests/gemini-checkbox.html');
 
   gemini.suite('basic', (suite) => {
     suite.setCaptureElements('.tests-checkbox')

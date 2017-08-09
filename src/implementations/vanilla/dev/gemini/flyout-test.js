@@ -1,5 +1,5 @@
 gemini.suite('flyout', parent => {
-  parent.setUrl('src/web/basics/flyout/tests/gemini-flyout.html');
+  parent.setUrl('src/basics/flyout/tests/gemini-flyout.html');
 
   const examples = [
     'top-left',

@@ -1,5 +1,5 @@
 gemini.suite('modal', (parent) => {
-  parent.setUrl('src/web/components/modal/tests/gemini-modal.html');
+  parent.setUrl('src/components/modal/tests/gemini-modal.html');
 
   gemini.suite('modal', (suite) => {
        suite.setCaptureElements('body')
