@@ -1,10 +1,11 @@
-
 import babel from 'rollup-plugin-babel';
 import fs from 'fs';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
-import es2015Rollup from 'babel-preset-es2015-rollup';
 import reactPreset from 'babel-preset-react';
+import externalhelpers from 'babel-plugin-external-helpers';
+import transformlassproperties from 'babel-plugin-transform-class-properties';
+import transformobjectrestspread from 'babel-plugin-transform-object-rest-spread';
 
 const pkg = JSON.parse(fs.readFileSync('./package.json'));
 
@@ -15,7 +16,7 @@ export default {
 
     commonjs({
       namedExports: {
-        '../vanilla/dist/hig.js': [
+        '../hig-vanilla/dist/hig.js': [
           'Button',
           'Checkbox',
           'GlobalNav',
@@ -31,16 +32,35 @@ export default {
     babel({
       exclude: 'node_modules/**',
       babelrc: false,
-      presets: [es2015Rollup, reactPreset],
-      plugins: [
-        'transform-class-properties',
+      "presets": [
         [
-          'transform-object-rest-spread',
+          "es2015",
+          {
+            "modules": false
+          }
+        ],
+        [reactPreset]
+      ],
+      "plugins": [
+        externalhelpers,
+        transformlassproperties,
+        [
+          transformobjectrestspread,
           {
             useBuiltIns: true
           }
         ]
       ]
+
+      // plugins: [
+      //   'transform-class-properties',
+      //   [
+      //     'transform-object-rest-spread',
+      //     {
+      //       useBuiltIns: true
+      //     }
+      //   ]
+      // ]
     })
   ],
   targets: [

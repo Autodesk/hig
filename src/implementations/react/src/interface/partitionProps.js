@@ -3,7 +3,7 @@
 /**
  * Takes reactProps and an interface and returns props
  * @param {React.Properties} reactProps
- * @param {HIG.Web.Interface} _interface
+ * @param {hig-vanilla.Interface} _interface
  *
  * - Returns an object which has a defaults, events and possibleEvent keys
  *

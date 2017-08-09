@@ -15,7 +15,7 @@
 
  */
 import { mount } from 'enzyme';
-import * as HIG from 'hig.web';
+import * as HIG from 'hig-vanilla';
 import React from 'react';
 import TestUtils from 'react-dom/test-utils';
 

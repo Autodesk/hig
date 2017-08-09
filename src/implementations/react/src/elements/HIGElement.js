@@ -5,7 +5,7 @@ import PropMapper from '../utils/PropMapper';
 /**
  * The base class for all React-Hig Elements. These elements hook into the
  * adapters/createComponent adapter, store low level state like event listeners
- * and call the appropriate methods on hig.web instance when needed
+ * and call the appropriate methods on hig-vanilla instance when needed
  *
  */
 export default class HIGElement {

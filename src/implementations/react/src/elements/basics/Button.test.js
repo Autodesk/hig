@@ -1,15 +1,15 @@
 
 import { mount } from 'enzyme';
-import * as HIG from 'hig.web';
+import * as HIG from 'hig-vanilla';
 import React from 'react';
 
 import Button from './Button';
 
 describe('<Button>', () => {
   /**
-     * Creates a hig.web button and returns the instance and it's container
+     * Creates a hig-vanilla button and returns the instance and it's container
      *
-     * @param {object} defaults hig.web defaults for the button
+     * @param {object} defaults hig-vanilla defaults for the button
      */
   function createHigButton(defaults = {}) {
     const higContainer = document.createElement('div');
@@ -297,7 +297,7 @@ describe('<Button>', () => {
       // click on the rendered button
       const instance = wrapper.instance().instance;
 
-      // This is the same fn we pass to hig.web
+      // This is the same fn we pass to hig-vanilla
       instance.events[eventName]();
 
       // expect onClickSpy to be called
@@ -319,7 +319,7 @@ describe('<Button>', () => {
       // click on the rendered button
       const instance = wrapper.instance().instance;
 
-      // This is the same fn we pass to hig.web
+      // This is the same fn we pass to hig-vanilla
       instance.events[eventName]();
 
       // expect onClickSpy to be called
@@ -339,7 +339,7 @@ describe('<Button>', () => {
 
       const instance = wrapper.instance().instance;
 
-      // This is the same fn we pass to hig.web
+      // This is the same fn we pass to hig-vanilla
       instance.events[eventName]();
 
       // expect onClickSpy to be called
