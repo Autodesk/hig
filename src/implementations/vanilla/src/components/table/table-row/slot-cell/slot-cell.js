@@ -1,3 +1,4 @@
+import "./slot-cell.scss";
 
 var Template = require("./slot-cell.html");
 var Interface = require("interface.json");

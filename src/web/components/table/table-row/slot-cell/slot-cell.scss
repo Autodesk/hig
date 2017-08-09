@@ -1,0 +1,11 @@
+@import '~basics/colors/colors.scss';
+@import '~helpers/css/mixins/breakpoints.scss';
+@import '~helpers/css/mixins/base.scss';
+
+.hig__slot-cell img {
+  display: none;
+
+  .hig__table--large & {
+    display: block;
+  }
+}

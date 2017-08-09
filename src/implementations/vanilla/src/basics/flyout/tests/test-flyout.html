@@ -3,29 +3,72 @@
     <head>
         <link rel="stylesheet" href="../../../../../dist/hig.css">
         <script type="text/javascript" src="../../../../../dist/hig.js"></script>
+        <style>
+            .test-container {
+                padding: 40px;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+            }
+        </style>
     </head>
     <body>
-        <div class='testContainer' style="border: 1px solid #0a131c; padding: 40px; margin: 0; display: flex; justify-content: flex-end;"></div>
+        <div class='test-container'></div>
         <script>
 
-            var flyout = new Hig.Flyout();
-            flyout.mount('.testContainer');
+            function createFlyoutContent() {
+                var flyoutContent = document.createElement('div');
+                flyoutContent.textContent = "Hello, world!";
+                return flyoutContent;
+            }
 
-            var flyoutContent = document.createElement('div');
-            flyoutContent.textContent = "Hello, world!";
-            flyout.addSlot(flyoutContent);
 
-            flyout.onClickOutside(function(e) {
-                flyout.close();
+            // ----------------------------
+            // DEFAULT FLYOUT
+            // ----------------------------
+
+            var defaultFlyout = new Hig.Flyout({
+                anchorPoint: 'top-right'
+            });
+            defaultFlyout.mount('.test-container');
+            defaultFlyout.addSlot(createFlyoutContent());
+            defaultFlyout.onClickOutside(function() {
+                defaultFlyout.close();
             });
 
-            var button = new Hig.Button({
-                "title": "Open flyout"
+            var defaultButton = new Hig.Button({
+                "title": "Open default flyout"
             });
 
-            flyout.addTarget(button);
-            button.onClick(function(e){
-                flyout.open();
+            defaultFlyout.addTarget(defaultButton);
+            defaultButton.onClick(function(e) {
+                defaultFlyout.open();
+            });
+
+
+            const spacer = new Hig.Spacer({ type: 'inline' });
+            spacer.mount('.test-container');
+
+
+            // ----------------------------
+            // SETTER FLYOUT
+            // ----------------------------
+
+            var setterFlyout = new Hig.Flyout();
+            setterFlyout.mount('.test-container');
+            setterFlyout.setAnchorPoint('top-center');
+            setterFlyout.addSlot(createFlyoutContent());
+            setterFlyout.onClickOutside(function() {
+                setterFlyout.close();
+            });
+
+            var setterButton = new Hig.Button({
+                "title": "Open setter flyout"
+            });
+
+            setterFlyout.addTarget(setterButton);
+            setterButton.onClick(function(e) {
+                setterFlyout.open();
             });
 
         </script>

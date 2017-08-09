@@ -23,13 +23,14 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+
+  .hig__table--large {
+    padding: 16px 6px;
+  }
 }
 
 .hig__table__body td {
-  padding: 16px 4px;
   position: relative;
-  width: 16px;
-  height: 16px;
 
   & svg {
     @include vendor-prefix(transform, translateX(-50%) translateY(-50%));
@@ -42,3 +43,8 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+
+
+
+

@@ -1,30 +1,54 @@
 <html>
     <head>
-        <link rel="stylesheet" href="/dist/hig.css">
-        <script type="text/javascript" src="/dist/hig.js"></script>
+        <link rel="stylesheet" href="../../../../../dist/hig.css">
+        <script type="text/javascript" src="../../../../../dist/hig.js"></script>
+        <style>
+            .test-container {
+                height: 100vh;
+                padding: 40px;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
     </head>
     <body>
-        <div class='testContainer' style="padding: 200px; margin: 0; display: flex; justify-content: flex-end;"></div>
+        <div class='test-container'></div>
         <script>
-
-            var flyout = new Hig.Flyout();
-            flyout.mount('.testContainer');
+            const flyout = new Hig.Flyout({
+                anchorPoint: Hig.Flyout.AvailableAnchorPoints[0]
+            });
+            flyout.mount('.test-container');
 
             var flyoutContent = document.createElement('div');
-            flyoutContent.textContent = "Hello, world!";
+            flyoutContent.textContent = "Sit irure incididunt cillum sit enim consequat esse. Officia cupidatat minim nisi deserunt et sint enim. Et adipisicing aliqua culpa est veniam amet culpa tempor irure dolor ex laboris ex velit.";
             flyout.addSlot(flyoutContent);
 
-            flyout.onClickOutside(() => {
-                flyout.close();
+            var defaultButton = new Hig.Button({
+                title: 'Open flyout'
             });
 
-            var button = new Hig.Button({
-                "title": "Open flyout"
+            flyout.addTarget(defaultButton);
+            defaultButton.onClick(e => {
+                flyout.open();
             });
 
-            flyout.addTarget(button);
+
             flyout.open();
 
+            let currentAnchorPoint = Hig.Flyout.AvailableAnchorPoints[0];
+
+            flyout.onClickOutside(function() {
+                nextAnchorPointIndex = Hig.Flyout.AvailableAnchorPoints.indexOf(currentAnchorPoint) + 1;
+                if (nextAnchorPointIndex > Hig.Flyout.AvailableAnchorPoints.length - 1) {
+                    nextAnchorPointIndex = 0;
+                }
+
+                currentAnchorPoint = Hig.Flyout.AvailableAnchorPoints[nextAnchorPointIndex];
+
+                flyout.setAnchorPoint(currentAnchorPoint);
+            });
         </script>
     </body>
 </html>

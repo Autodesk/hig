@@ -40,7 +40,7 @@ class Button extends Core {
     setType(type){
         if(AvailableTypes.indexOf(type) > -1){
             this._clearAllTypes();
-            this.el.classList.add('hig__button--'+type);
+            this.el.classList.add('hig__button--'+ type);
         }else{
             console.error(`Button type "${type}" not found, only these types are allowed: `, AvailableTypes);
         }

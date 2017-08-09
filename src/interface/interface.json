@@ -782,17 +782,6 @@
         },
         "Flyout": {
             "methods": {
-                "open": {
-                    "desc": "opens the flyout"
-                },
-                "close": {
-                    "desc": "closes the flyout"
-                },
-                "onClickOutside": {
-                    "desc": "Calls the provided callback when the flyout is open and the user clicks outside of the flyout",
-                    "params": "HIG.abstract.EventObject.params",
-                    "returns": "HIG.abstract.EventObject.returns"
-                },
                 "addSlot": {
                     "desc": "Content for the flyout",
                     "params": [
@@ -804,7 +793,27 @@
                     "params": [
                         "{HTMLElement} HTMLElement"
                     ]
+                },
+                "close": {
+                    "desc": "closes the flyout"
+                },
+                "onClickOutside": {
+                    "desc": "Calls the provided callback when the flyout is open and the user clicks outside of the flyout",
+                    "params": "HIG.abstract.EventObject.params",
+                    "returns": "HIG.abstract.EventObject.returns"
+                },
+                "open": {
+                    "desc": "opens the flyout"
+                },
+                "setAnchorPoint": {
+                  "desc": "sets where the flyout anchors to the target",
+                  "params": [
+                    "{String - 'top-right', 'top-center'} where the flyout anchors to the target"
+                  ]
                 }
+            },
+            "defaults": {
+              "anchorPoint": "{String - 'top-right', 'top-center'} where the flyout anchors to the target"
             }
         }
     },
@@ -1625,7 +1634,8 @@
       "Table": {
         "methods": {
           "addTableHead": {},
-          "addTableRow": {}
+          "addTableRow": {},
+          "setDensity": {}
         },
         "partials": {
           "TableHead": {
@@ -1664,11 +1674,13 @@
               "TextCell": {
                 "methods": {
                   "setText": {},
-                  "setAlignment": {}
+                  "setAlignment": {},
+                  "setDetail": {}
                 },
                 "defaults": {
-                  "text": "{String} text for text cell in head of table",
-                  "alignment": "{String} value for text-align style property of cell"
+                  "text": "{String} text for text cell in body of table",
+                  "alignment": "{String} value for text-align style property of cell",
+                  "detail": "{String} supporting text for cell in body of table"
                 }
               },
               "IconCell": {
