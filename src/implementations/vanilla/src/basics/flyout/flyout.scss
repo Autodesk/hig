@@ -329,5 +329,5 @@
     background-color: color(hig-white);
     border: 1px solid color(hig-gray-40);
     border-radius: 4px;
-    @include shadow("dropshadow");
+    @include shadow("common");
 }
