@@ -1,7 +1,7 @@
 import './spacer.scss';
 
 const Template = require('./spacer.html');
-var Interface = require('../../../interface/interface.json');
+var Interface = require('interface.json');
 var Core = require('../../helpers/js/_core.js');
 
 const SIZES = {

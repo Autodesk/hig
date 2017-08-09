@@ -1,7 +1,7 @@
 import './flyout.scss';
 
 var Template = require('./flyout.html');
-var Interface = require('../../../interface/interface.json');
+var Interface = require('interface.json');
 var Core = require('../../helpers/js/_core.js');
 
 const OPEN_CLASS = 'hig__flyout--open';

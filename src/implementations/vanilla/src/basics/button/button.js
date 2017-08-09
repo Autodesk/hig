@@ -1,7 +1,7 @@
 import './button.scss';
 
 var Template = require('./button.html');
-var Interface = require('../../../interface/interface.json');
+var Interface = require('interface.json');
 var Core = require('../../helpers/js/_core.js');
 
 var AvailableTypes = ['primary', 'secondary', 'flat'];

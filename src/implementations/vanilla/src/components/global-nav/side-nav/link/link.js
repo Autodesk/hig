@@ -1,7 +1,7 @@
 import './link.scss';
 
 var Template = require('./link.html');
-var Interface = require('../../../../../interface/interface.json');
+var Interface = require('interface.json');
 var Core = require('../../../../helpers/js/_core.js');
 
 /**
