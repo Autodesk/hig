@@ -1,0 +1,33 @@
+@import '~basics/colors/colors.scss';
+@import '~helpers/css/mixins/breakpoints.scss';
+@import '~helpers/css/mixins/base.scss';
+
+.hig__text-cell {
+  .hig__table--standard & {
+    height: 48px;
+    padding: 16px 4px;
+    line-height: 16px;
+  }
+
+  .hig__table--compressed & {
+    height: 40px;
+    padding: 13px 4px;
+    line-height: 14px;
+  }
+
+  .hig__table--large & {
+    height: 72px;
+    padding: 28px 7px;
+    line-height: 16px;
+  }
+}
+
+.hig__text-cell-detail {
+  font-size: 12px;
+  color: color(hig-gray-30);
+  display: none;
+
+  .hig__table--large & {
+    display: block;
+  }
+}

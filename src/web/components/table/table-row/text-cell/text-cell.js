@@ -1,4 +1,4 @@
-
+import "./text-cell.scss";
 var Template = require("./text-cell.html");
 var Interface = require("interface.json");
 var Core = require("_core.js");
@@ -17,14 +17,18 @@ class TextCell extends Core {
     this._render(Template, options, undefined, "tr");
   }
 
-  setText(text){
-    this.el.textContent = text;
+  setText(text) {
+    this._findDOMEl(".hig__text-cell-text", this.el).textContent = text;
   }
 
-  setAlignment(position){
-    if(AvailablePositions.indexOf(position) > -1) {
-      this.el.style.textAlign = position
-    };
+  setDetail(detail) {
+    this._findDOMEl(".hig__text-cell-detail", this.el).textContent = detail;
+  }
+
+  setAlignment(position) {
+    if (AvailablePositions.indexOf(position) > -1) {
+      this.el.style.textAlign = position;
+    }
   }
 }
 
@@ -34,7 +38,8 @@ TextCell._interface =
   ];
 TextCell._defaults = {
   "text": "",
-  "alignment": ""
+  "alignment": "",
+  "detail": ""
 };
 
 module.exports = TextCell;
