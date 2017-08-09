@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RangeAdapter> renders a range 1`] = `
+"<div class=\\"hig__range \\">
+    <div class=\\"hig__range__field__range-values\\" data-range-min=\\"0\\" data-range-max=\\"\\">
+      <span class=\\"hig__range__field__current-value\\"></span>
+      <input id=\\"1234\\" class=\\"hig__range__field\\" type=\\"range\\" min=\\"0\\" max=\\"\\" step=\\"1\\" value=\\"\\">
+      <!--LABEL-->
+      <label for=\\"1234\\" class=\\"hig__range__label\\">foo</label>
+    </div>
+
+    <!--INSTRUCTIONS-->
+    
+    <!--REQUIRED-NOTICE-->
+</div>"
+`;
+
+exports[`<RangeAdapter> renders a range with initial props 1`] = `
+"<div class=\\"hig__range \\">
+    <div class=\\"hig__range__field__range-values\\" data-range-min=\\"0\\" data-range-max=\\"\\">
+      <span class=\\"hig__range__field__current-value\\">10</span>
+      <input id=\\"1234\\" class=\\"hig__range__field\\" type=\\"range\\" min=\\"0\\" max=\\"\\" step=\\"1\\" value=\\"10\\">
+      <!--LABEL-->
+      <label for=\\"1234\\" class=\\"hig__range__label\\">Age of your first pet</label>
+    </div>
+
+    <!--INSTRUCTIONS-->
+    <p class=\\"hig__range__instructions\\">Don't just do something, sit there.</p>
+    <!--REQUIRED-NOTICE-->
+</div>"
+`;
+
+exports[`<RangeAdapter> renders a range with udpated props 1`] = `
+"<div class=\\"hig__range hig__range--required\\">
+    <div class=\\"hig__range__field__range-values\\" data-range-min=\\"0\\" data-range-max=\\"\\">
+      <span class=\\"hig__range__field__current-value\\">1</span>
+      <input id=\\"1234\\" class=\\"hig__range__field\\" type=\\"range\\" min=\\"1\\" max=\\"20\\" step=\\"1\\" value=\\"1\\">
+      <!--LABEL-->
+      <label for=\\"1234\\" class=\\"hig__range__label\\">How old is your pet?</label>
+    </div>
+
+    <!--INSTRUCTIONS-->
+    
+    <p class=\\"hig__range__required-notice\\">You really must fill this in.</p><!--REQUIRED-NOTICE-->
+</div>"
+`;

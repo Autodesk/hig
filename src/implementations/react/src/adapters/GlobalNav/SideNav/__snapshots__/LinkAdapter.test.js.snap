@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LinkAdapter> renders 1`] = `
+"<div class=\\"hig__global-nav\\">
+    <div class=\\"hig__global-nav__sidenav\\">
+    <div class=\\"hig__global-nav__sidenav__scroll\\">
+        <!--SECTION-->
+        <div class=\\"hig__global-nav__sidenav__links\\">
+            <a class=\\"hig__global-nav__sidenav__links__link\\" href=\\"#\\">
+  <div>link</div>
+</a><!--LINK-->
+        </div>
+        <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
+    </div>
+    <!--SEARCH-->
+</div><!--SIDENAV-->
+    <div class=\\"hig__global-nav__container\\">
+        <!--TOPNAV-->
+        <!--SUBNAV-->
+        <div class=\\"hig__global-nav__slot\\">
+            <!--SLOT-->
+        </div>
+    </div>
+</div>"
+`;
+
+exports[`<LinkAdapter> renders with initial props 1`] = `
+"<div class=\\"hig__global-nav\\">
+    <div class=\\"hig__global-nav__sidenav\\">
+    <div class=\\"hig__global-nav__sidenav__scroll\\">
+        <!--SECTION-->
+        <div class=\\"hig__global-nav__sidenav__links\\">
+            <a class=\\"hig__global-nav__sidenav__links__link\\" href=\\"https://a-website.com\\">
+  <div>A title</div>
+</a><!--LINK-->
+        </div>
+        <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
+    </div>
+    <!--SEARCH-->
+</div><!--SIDENAV-->
+    <div class=\\"hig__global-nav__container\\">
+        <!--TOPNAV-->
+        <!--SUBNAV-->
+        <div class=\\"hig__global-nav__slot\\">
+            <!--SLOT-->
+        </div>
+    </div>
+</div>"
+`;
+
+exports[`<LinkAdapter> renders with updated props 1`] = `
+"<div class=\\"hig__global-nav\\">
+    <div class=\\"hig__global-nav__sidenav\\">
+    <div class=\\"hig__global-nav__sidenav__scroll\\">
+        <!--SECTION-->
+        <div class=\\"hig__global-nav__sidenav__links\\">
+            <a class=\\"hig__global-nav__sidenav__links__link\\" href=\\"https://a-website.com\\">A title</a><!--LINK-->
+        </div>
+        <div class=\\"hig__global-nav__sidenav__copyright\\">© 2017 Autodesk, Inc.</div>
+    </div>
+    <!--SEARCH-->
+</div><!--SIDENAV-->
+    <div class=\\"hig__global-nav__container\\">
+        <!--TOPNAV-->
+        <!--SUBNAV-->
+        <div class=\\"hig__global-nav__slot\\">
+            <!--SLOT-->
+        </div>
+    </div>
+</div>"
+`;

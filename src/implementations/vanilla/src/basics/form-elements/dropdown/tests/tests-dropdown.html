@@ -1,0 +1,202 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../../../../../dist/hig.css">
+        <script type="text/javascript" src="../../../../../dist/hig.js"></script>
+
+        <style>
+            body {
+                margin: 50px;
+            }
+
+            .test-container {
+                margin-bottom: 50px;
+            }
+
+            .test-container > div {
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class='test-container'>
+            <div class='test-heading-default'></div>
+            <div class='test-mount-default'></div>
+        </div>
+
+        <div class='test-container'>
+            <div class='test-heading-disabled'></div>
+            <div class='test-mount-disabled'></div>
+        </div>
+
+        <div class='test-container'>
+            <div class='test-heading-setters'></div>
+            <div class='test-mount-setters'></div>
+        </div>
+
+        <div class='test-container'>
+            <div class='test-heading-events'></div>
+            <div class='test-mount-events'></div>
+        </div>
+
+        <script>
+
+            const FormElements = new Hig.FormElements();
+            const Dropdown = FormElements.partials.Dropdown;
+
+            const Typo = new Hig.Typography();
+
+            // ----------------------------
+            // DROPDOWN WITH DEFAULTS
+            // ----------------------------
+
+            const TitleDefaultDropdown = new Typo.partials.Heading({
+                "text": "Dropdown configured with defaults",
+                "size": 3
+            });
+
+            TitleDefaultDropdown.mount('.test-heading-default');
+
+            const DefaultDropdown = new Dropdown({
+                label: 'Favorite vice',
+                placeholder: "Choose your poison",
+                instructions: "Despite offering these choices, we in no way condone them.",
+            });
+
+            DefaultDropdown.mount(".test-mount-default");
+            const defaultDropdownOptionData = [
+                { label: 'Penny slots', value: 'penny-slots' },
+                { label: 'The drink', value: 'the-drink' },
+                { label: 'Bubblegum', value: 'bubblegum' },
+            ];
+            const defaultDropdownOptionComponents =
+              defaultDropdownOptionData.map(function(optionData) {
+                const option = new DefaultDropdown.partials.Option(optionData);
+                DefaultDropdown.addOption(option);
+                option.onClick(function(event, element) {
+                    const value = event.target.dataset.value;
+
+                    defaultDropdownOptionComponents.forEach(function(option)  {
+                        if (option.el.dataset.value === value) {
+                            option.select()
+                            DefaultDropdown.setSelectedOptionLabel(option.el.innerText);
+                        } else {
+                            option.deselect();
+                        }
+                    });
+                    DefaultDropdown.close();
+                });
+
+                return option;
+            });
+
+            DefaultDropdown.onTargetClick(function(e) {
+                DefaultDropdown.open();
+            });
+
+            DefaultDropdown.onClickOutside(function(e) {
+                DefaultDropdown.close();
+            });
+
+
+            // ----------------------------
+            // DISABLED DROPDOWN
+            // ----------------------------
+
+            const TitleDisabledDropdown = new Typo.partials.Heading({
+                "text": "Disabled Dropdown",
+                "size": 3
+            });
+
+            TitleDisabledDropdown.mount('.test-heading-disabled');
+
+            const DisabledDropdown = new Dropdown({
+                label: "Can't touch this",
+            });
+
+            DisabledDropdown.mount(".test-mount-disabled");
+            DisabledDropdown.setSelectedOptionLabel('Vaping');
+            DisabledDropdown.disable();
+
+
+
+            // ----------------------------
+            // DROPDOWN CONFIGURED WITH SETTERS
+            // ----------------------------
+
+            const TitleSetterDropdown = new Typo.partials.Heading({
+                "text": "Dropdown configured with setters",
+                "size": 3
+            });
+
+            TitleSetterDropdown.mount('.test-heading-setters');
+
+            const SetterDropdown = new Dropdown();
+
+            SetterDropdown.mount(".test-mount-setters");
+
+            [
+                { label: 'Uncommitted', value: 'foo' },
+                { label: 'Imperceptible', value: 'bar', selected: true },
+                { label: 'Arguable', value: 'baz' },
+            ].forEach(function(optionData)  {
+                const option = new SetterDropdown.partials.Option(optionData);
+                SetterDropdown.addOption(option);
+            });
+            SetterDropdown.setSelectedOptionLabel('Imperceptible');
+            SetterDropdown.setLabel('Favorite type of change');
+            SetterDropdown.setInstructions('Changing your mind is not permitted.');
+            SetterDropdown.required('I must insist that you choose one.');
+
+            SetterDropdown.onTargetClick(function(e) {
+                SetterDropdown.open();
+            });
+
+            SetterDropdown.onClickOutside(function(e) {
+                SetterDropdown.close();
+            });
+
+
+
+            // ----------------------------
+            // DROPDOWN WITH LOTS OF EVENT LISTENERS
+            // ----------------------------
+
+            const TitleEventsDropdown = new Typo.partials.Heading({
+                "text": "Dropdown that logs lots of events to the console",
+                "size": 3
+            });
+
+            TitleEventsDropdown.mount('.test-heading-events');
+
+            const EventsDropdown = new Dropdown();
+
+            EventsDropdown.mount(".test-mount-events");
+            EventsDropdown.setSelectedOptionLabel('Imperceptible');
+
+            function log(componentName, eventType) {
+                const message = componentName + " triggered an " + eventType + " event";
+                console.log(message);
+            }
+
+            EventsDropdown.onClickOutside(log.bind(this, 'Dropdown', 'onClickOutside'));
+            EventsDropdown.onBlur(log.bind(this, 'Dropdown', 'onBlur'));
+            EventsDropdown.onFocus(log.bind(this, 'Dropdown', 'onFocus'));
+            EventsDropdown.onTargetClick(log.bind(this, 'Dropdown', 'onTargetClick'));
+            EventsDropdown.onKeypress(log.bind(this, 'Dropdown', 'onKeypress'));
+
+            [
+                { label: 'Uncommitted', value: 'foo' },
+                { label: 'Imperceptible', value: 'bar', selected: true },
+                { label: 'Arguable', value: 'baz' },
+            ].forEach(function(optionData)  {
+                const option = new EventsDropdown.partials.Option(optionData);
+                EventsDropdown.addOption(option);
+                option.onClick(log.bind(this, "Option " + optionData.label,  'onClick'));
+                option.onHover(log.bind(this, "Option" + optionData.label, 'onHover'));
+            });
+            EventsDropdown.open();
+
+        </script>
+
+    </body>
+</html>

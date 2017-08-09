@@ -1,0 +1,145 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../../../../../dist/hig.css">
+        <script type="text/javascript" src="../../../../../dist/hig.js"></script>
+
+        <style>
+            * {
+                transition-duration: 0s !important;
+                transition-delay: 0s !important;
+            }
+
+            ::-webkit-input-placeholder {
+                transition-duration: 0s !important;
+                transition-delay: 0s !important;
+            }
+
+            ::moz-placeholder {
+                transition-duration: 0s !important;
+                transition-delay: 0s !important;
+            }
+
+            :-moz-placeholder {
+                transition-duration: 0s !important;
+                transition-delay: 0s !important;
+            }
+
+            :-ms-input-placeholder {
+                transition-duration: 0s !important;
+                transition-delay: 0s !important;
+            }
+
+            ::placeholder {
+                transition-duration: 0s !important;
+                transition-delay: 0s !important;
+            }
+
+            body{
+                margin: 50px;
+            }
+
+            .test-container {
+                margin-bottom: 50px;
+            }
+
+            .test-container > div {
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="test-container">
+            <div class="test-mount"></div>
+
+            <div class='test-typo-setter'></div>
+            <div class='test-mount-setter'></div>
+
+
+            <div class='test-group-disabled'>
+                <div class='tests-text-area-disabled-heading'></div>
+                <div class='tests-text-area-disabled'></div>
+            </div>
+            <div class='test-group-required'>
+                <div class='tests-text-area-required-heading'></div>
+                <div class='tests-text-area-required'></div>
+            </div>
+
+        </div>
+
+        <script>
+
+            // ----------------------------
+            // TEXT AREA
+            // ----------------------------
+
+            var DefaultTextArea = new Hig.TextArea({
+                label: 'This is the label',
+                placeholder: 'Placeholder text',
+                instructions: 'Instructional text goes here'
+            });
+
+            DefaultTextArea.mount(".test-mount");
+
+            // ----------------------------
+            // TEXT AREA WITH SETTERS
+            // ----------------------------
+
+            var TitleListenerTextArea = new Typo.partials.Heading({
+                                                                    "text": "TextArea configured with setters",
+                                                                    "size": 3
+                                                                  });
+
+            TitleListenerTextArea.mount('.test-typo-setter');
+
+            var SetterTextArea = new Hig.TextArea();
+
+            SetterTextArea.mount(".test-mount-setter");
+
+            SetterTextArea.setLabel('Updated label');
+            SetterTextArea.setPlaceholder('Updated placeholder');
+            SetterTextArea.setInstructions('Updated instructions');
+            SetterTextArea.setValue('Updated value');
+
+            // ----------------------------
+            // Disabled TEXT AREA WITH NON-DEFAULTS
+            // ----------------------------
+            const DisabledHeading = new Typo.partials.Heading({
+                                                                text: "Disabled TextArea",
+                                                                size: 3,
+                                                              });
+
+            const DisabledTextArea = new Hig.TextArea({
+                                                        label: "None shall pass",
+                                                        disabled: true
+                                                      });
+
+            DisabledHeading.mount('.tests-text-area-disabled-heading');
+            DisabledTextArea.mount('.tests-text-area-disabled');
+            //            DisabledTextArea.disable();
+
+
+            // ----------------------------
+            // REQUIRED TEXT AREA
+            // ----------------------------
+
+            var TitleDefaultTextArea = new Typo.partials.Heading({
+                                                                   "text": "Required TextArea",
+                                                                   "size": 3
+                                                                 });
+
+            TitleDefaultTextArea.mount('.tests-text-area-required-heading');
+
+            var DefaultTextArea = new Hig.TextArea({
+                                                     label: 'Tell us your life story',
+                                                     placeholder: "You must tell us",
+                                                     instructions: "Press keys on your keyboard.",
+                                                     required: "No, really, you must"
+                                                   });
+
+            DefaultTextArea.mount(".tests-text-area-required");
+
+
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../../../../../dist/hig.css">
+        <script type="text/javascript" src="../../../../../dist/hig.js"></script>
+
+        <style>
+            body {
+                margin: 50px;
+            }
+
+            .test-container {
+                margin-bottom: 50px;
+            }
+
+            .test-container > div {
+                padding: 10px;
+            }
+
+            .test-mount-default {
+                height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class='test-container'>
+            <div class='test-mount-default'></div>
+        </div>
+
+        <div class='test-container'>
+            <div class='test-mount-disabled'></div>
+        </div>
+
+        <script>
+
+            const FormElements = new Hig.FormElements();
+            const Dropdown = FormElements.partials.Dropdown;
+
+
+            // ----------------------------
+            // DROPDOWN WITH DEFAULTS
+            // ----------------------------
+
+            const DefaultDropdown = new Dropdown({
+                label: 'Favorite vice',
+                instructions: "Despite offering these choices, we in no way condone them.",
+            });
+
+            DefaultDropdown.mount(".test-mount-default");
+            DefaultDropdown.setSelectedOptionLabel('Penny slots');
+
+            const DefaultDropdownOptionData = [
+                { label: 'Penny slots', selected: true },
+                { label: 'The drink' },
+                { label: 'Bubblegum' },
+            ];
+            DefaultDropdownOptionData.forEach(optionData => {
+                const option = new DefaultDropdown.partials.Option(optionData);
+                DefaultDropdown.addOption(option);
+            });
+            DefaultDropdown.onTargetClick(() => {
+                DefaultDropdown.open();
+            });
+
+            // ----------------------------
+            // DISABLED DROPDOWN
+            // ----------------------------
+
+            const DisabledDropdown = new Dropdown({
+                label: "Can't touch this",
+            });
+
+            DisabledDropdown.mount(".test-mount-disabled");
+            DisabledDropdown.setSelectedOptionLabel('Vaping');
+            DisabledDropdown.disable();
+
+
+        </script>
+
+    </body>
+</html>

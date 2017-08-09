@@ -1,0 +1,74 @@
+{
+  "name": "@orion-ui/react-hig",
+  "version": "1.0.3",
+  "description": "hig components in react",
+  "module": "lib/react-hig.es.js",
+  "main": "lib/react-hig.js",
+  "umd:main": "lib/react-hig.umd.js",
+  "css": "lib/react-hig.css",
+  "author": "Autodesk Inc.",
+  "homepage": ".",
+  "license": "Apache-2.0",
+  "peerDependencies": {
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "prop-types": "^15.5.10"
+  },
+  "devDependencies": {
+    "@storybook/addon-info": "^3.1.0",
+    "@storybook/addon-knobs": "^3.1.0",
+    "@storybook/react": "^3.1.0",
+    "@types/jest": "^19.2.3",
+    "@types/node": "^7.0.21",
+    "@types/react": "^15.0.24",
+    "babel-plugin-object-rest-spread": "0.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "hig.web": "file:../vanilla",
+    "ionicons": "^2.0.1",
+    "jest-enzyme": "2.1.2",
+    "prop-types": "^15.5.10",
+    "react": "^15.4.1",
+    "react-devtools-core": "^2.0.12",
+    "react-dom": "^15.4.1",
+    "react-scripts": "1.0.1",
+    "rollup": "^0.41.6",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-css-only": "^0.2.0",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-watch": "^3.2.2",
+    "storybook-addon-jsx": "^4.1.0",
+    "typescript": "^2.3.2"
+  },
+  "scripts": {
+    "build": "npm run lib && react-scripts build && npm run build-storybook",
+    "lib": "rollup -c && cp node_modules/hig.web/dist/hig.css lib/react-hig.css",
+    "playground": "react-scripts start",
+    "start": "npm run lib -- --watch",
+    "test": "react-scripts test --env=jsdom",
+    "test-ci": "react-scripts test --env=jsdom --coverage --runInBand",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public -o build/storybook",
+    "type-check": "tsc"
+  },
+  "dependencies": {},
+  "jest": {
+    "collectCoverageFrom": [
+      "!src/index.js",
+      "src/**/*.{js,jsx}",
+      "!src/**/*.story.{js,jsx}",
+      "!src/fixtures/**/*",
+      "!src/stories/**/*",
+      "!**/node_modules/**"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 60,
+        "functions": 60,
+        "lines": 60,
+        "statements": 60
+      }
+    }
+  }
+}

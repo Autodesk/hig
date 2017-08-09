@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../../../../dist/hig.css">
+        <script type="text/javascript" src="../../../../dist/hig.js"></script>
+
+        <style>
+            .buttonHolder {
+                display: block;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class='test-container' style="padding: 40px; margin: 0;">
+            <div class="primary">
+                <div class='primary-small buttonHolder'></div>
+                <div class='primary-standard buttonHolder'></div>
+                <div class='primary-large buttonHolder'></div>
+            </div>
+            <div class="secondary">
+                <div class='secondary-small buttonHolder'></div>
+                <div class='secondary-standard buttonHolder'></div>
+                <div class='secondary-large buttonHolder'></div>
+            </div>
+            <div class="flat">
+                <div class='flat-small buttonHolder'></div>
+                <div class='flat-standard buttonHolder'></div>
+                <div class='flat-large buttonHolder'></div>
+            </div>
+        </div>
+
+        <script>
+
+            const sizes = ['small', 'standard', 'large'];
+            const types = ['primary', 'secondary', 'flat'];
+            const icons = [false, 'gear'];
+
+            types.forEach(type => {
+                sizes.forEach(size => {
+                    icons.forEach(icon => {
+                        const containerSelector = '.' + [type, size].join('-');
+                        var Button = new Hig.Button({
+                            title: [type, size].join(' '),
+                            size,
+                            icon,
+                            type
+                        });
+
+                        Button.mount(containerSelector);
+
+                        var DisabledButton = new Hig.Button({
+                            title: [type, size].join(' '),
+                            size,
+                            icon,
+                            type
+                        });
+
+                        DisabledButton.mount(containerSelector);
+                        DisabledButton.disable();
+                    });
+                });
+            });
+
+        </script>
+
+    </body>
+</html>

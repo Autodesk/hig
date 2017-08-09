@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../../../../../../../dist/hig.css">
+        <script type="text/javascript" src="../../../../../../../dist/hig.js"></script>
+
+        <style>
+            * {
+                transition-duration: 0s !important;
+                transition-delay: 0s !important;
+            }
+
+            ::-webkit-input-placeholder {
+                transition-duration: 0s !important;
+                transition-delay: 0s !important;
+            }
+
+            ::moz-placeholder {
+                transition-duration: 0s !important;
+                transition-delay: 0s !important;
+            }
+
+            :-moz-placeholder {
+                transition-duration: 0s !important;
+                transition-delay: 0s !important;
+            }
+
+            :-ms-input-placeholder {
+                transition-duration: 0s !important;
+                transition-delay: 0s !important;
+            }
+
+            ::placeholder {
+                transition-duration: 0s !important;
+                transition-delay: 0s !important;
+            }
+
+            body {
+                padding: 30px;
+            }
+
+            .test-group {
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class='test-group test-group-default'>
+            <div class='tests-text-field'></div>
+        </div>
+
+        <div class='test-group test-group-icon'>
+            <div class='tests-text-field-icon'></div>
+        </div>
+
+        <div class='test-group test-group-disabled'>
+            <div class='tests-text-field-disabled'></div>
+        </div>
+
+        <div class='test-group test-group-disabled-value'>
+            <div class='tests-text-field-disabled-value'></div>
+        </div>
+
+        <script>
+            const FormElements = new Hig.FormElements();
+            const TextField = FormElements.partials.TextField;
+
+            // TEXT FIELD CONFIGURED WITH DEFAULTS
+
+            const DefaultTextField = new TextField({
+                label: "Our label",
+                placeholder: "Our placeholder",
+                instructions: "Type your words into the text field"
+            });
+
+            DefaultTextField.mount('.tests-text-field');
+
+            // TEXT FIELD WITH ICON
+
+            const IconTextField = new TextField({
+                label: "Eye color",
+                icon: "eye"
+            });
+
+            IconTextField.mount('.tests-text-field-icon');
+
+            // TEXT FIELD DISABLED
+
+            const DisabledTextField = new TextField({
+                label: "It's a label",
+                placeholder: "It's a placeholder"
+            });
+
+            DisabledTextField.mount('.tests-text-field-disabled');
+            DisabledTextField.disable();
+
+            // TEXT FIELD DISABLED WITH A VALUE
+
+            const DisabledValueTextField = new TextField({
+                label: "It's a label",
+                placeholder: "It's a placeholder",
+                value: "It's a value"
+            });
+
+            DisabledValueTextField.mount('.tests-text-field-disabled-value');
+            DisabledValueTextField.disable();
+
+        </script>
+
+    </body>
+</html>
