@@ -7,12 +7,12 @@
   "scripts": {
     "build": "NODE_ENV=production webpack -p",
     "watch": "webpack --watch",
-    "generate-index": "node dev/generate-index.js",
+    "generate-index": "node ./dev/generate-index.js",
     "deploy-dev": "./dev/deploy-dev.sh",
     "build-icons": "node src/basics/icons/build/build.js",
-    "gemini": "concurrently 'http-server' 'gemini test gemini/*' --kill-others",
-    "gemini-report": "concurrently 'http-server' 'gemini test gemini/* --reporter html --reporter flat' --kill-others",
-    "gemini-update": "concurrently 'http-server' 'gemini update gemini/*' --kill-others",
+    "gemini": "concurrently 'http-server' 'gemini test dev/gemini/*' --kill-others",
+    "gemini-report": "concurrently 'http-server' 'gemini test dev/gemini/* --reporter html --reporter flat' --kill-others",
+    "gemini-update": "concurrently 'http-server' 'gemini update dev/gemini/*' --kill-others",
     "gemini-ci": "gemini test gemini/*",
     "test": "npm run gemini",
     "test-ci": "npm run gemini-ci"
