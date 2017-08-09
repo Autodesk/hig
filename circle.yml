@@ -2,15 +2,14 @@ machine:
   node:
     version: 7.8.0
 test:
-  pre:
+  override:
     - npm run build:
-      pwd: src/implementations/vanilla
+        pwd: src/implementations/vanilla
     - http-server:
         background: true
         pwd: src/implementations/vanilla
-  override:
     - npm run test-ci:
-      pwd: src/implementations/vanilla
+        pwd: src/implementations/vanilla
 deployment:
   production:
       branch: master
