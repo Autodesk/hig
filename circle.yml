@@ -1,15 +1,16 @@
-general:
-  build_dir: src/implementations/vanilla
 machine:
   node:
     version: 7.8.0
 test:
   pre:
-    - npm run build
+    - npm run build:
+        pwd: src/implementations/vanilla
     - ./node_modules/http-server/bin/http-server:
         background: true
+        pwd: src/implementations/vanilla
   override:
-    - npm run gemini-ci
+    - npm run gemini-ci:
+        pwd: src/implementations/vanilla
 deployment:
   production:
       branch: master
