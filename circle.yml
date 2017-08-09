@@ -3,13 +3,16 @@ machine:
     version: 7.8.0
 test:
   pre:
-    - npm run build
+    - npm run build:
+      pwd: src/implementations/vanilla
     - http-server:
         background: true
+        pwd: src/implementations/vanilla
   override:
-    - npm run test-ci
+    - npm run test-ci:
+      pwd: src/implementations/vanilla
 deployment:
   production:
       branch: master
       commands:
-      - ./deploy/deploy-gh-pages.sh build
+      # - ./src/implementations/vanilla/dev/deploy-gh-pages.sh build

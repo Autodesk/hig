@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config({path: './dev/.env'})
 
 module.exports = {
   rootUrl: "http://localhost:8080",
