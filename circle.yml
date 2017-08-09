@@ -6,7 +6,7 @@ machine:
 test:
   pre:
     - npm run build
-    - http-server:
+    - ./node_modules/http-server/bin/http-server:
         background: true
   override:
     - npm run gemini-ci
