@@ -72,13 +72,6 @@
     BudgetHeadCell.setWidth("2fr");
 
 
-    // var AssigneeHeadCell = new TableHead.partials.TextHeadCell();
-    // TableHead.addCell(AssigneeHeadCell);
-    // AssigneeHeadCell.setText('Assignee');
-    // AssigneeHeadCell.setAlign("left");
-    // AssigneeHeadCell.setWidth("2fr");
-
-
     //Example of adding a slot head cell
 
     var SlotHeadCell = new TableHead.partials.SlotHeadCell();
@@ -243,12 +236,6 @@
     var TableHead = new DefaultTable.partials.TableHead();
     DefaultTable.addTableHead(TableHead);
     
-    var EmptyCell1 = new TableHead.partials.TextHeadCell(
-        { "width": "1.1fr", "alignment": "left" }
-      );
-      TableHead.addCell(EmptyCell1);
-
-
     var TitleHeadCell1 = new TableHead.partials.TextHeadCell(
       { "width": "1fr", "alignment": "left", "text": "Title" }
     );
@@ -388,7 +375,7 @@
       DefaultTable1.addTableHead(TableHead);
 
       var EmptyCell1 = new TableHead.partials.TextHeadCell(
-        { "alignment": "left", "text": "" });
+        { "alignment": "left", "text": "", "width": "1fr" });
       TableHead.addCell(EmptyCell1);
 
 
@@ -419,43 +406,6 @@
       });
       TableHead.addCell(SlotHeadCell1);
       SlotHeadCell1.addSlot(SlotEl1)
-
-
-      // var TableRowDefault = new DefaultTable1.partials.TableRow();
-      // DefaultTable1.addTableRow(TableRowDefault);
-
-      // var IconCell = new TableRowDefault.partials.IconCell({
-      //   icon: "gear"
-      // });;
-      // TableRowDefault.addCell(IconCell);
-
-      // var TextCell = new TableRow.partials.TextCell({
-      //   "text": "text", "alignment": "left", "detail": "detail text"  
-      // });
-      // TableRowDefault.addCell(TextCell);
-
-      // var NextCell = new TableRowDefault.partials.TextCell({
-      //   "text": "Deserunt ut deserunt mollit elit aute et.",
-      //   "alignment": "left"
-      // });
-      // TableRowDefault.addCell(NextCell);
-
-      // var SlotCell = new TableRowDefault.partials.SlotCell();
-      // TableRowDefault.addCell(SlotCell);
-
-      // var NewSlotEl = document.createElement('div');
-      // NewSlotEl.innerHTML = `testing body cell slot.`;
-      // SlotCell.addSlot(NewSlotEl);
-
-      // var BudgetTextCellDefault = new TableRowDefault.partials.TextCell({
-      //   "text": "2535", "alignment": "left"
-      // });
-      // TableRowDefault.addCell(BudgetTextCellDefault);
-
-      // var AssigneeTextCellDefault = new TableRowDefault.partials.TextCell({
-      //   "text": "Atlas Plumbi", "alignment": "left"
-      // });
-      // TableRowDefault.addCell(AssigneeTextCellDefault);
 
       //Add Row 2
 
@@ -501,7 +451,7 @@
        var SlotCell2 = new TableRowDefault2.partials.SlotCell();
       TableRowDefault2.addCell(SlotCell2);
       var NewSlotEl2 = document.createElement('div');
-      NewSlotEl2.innerHTML = `<img src="./images/table-image.png" style="width: 104px; height: 58px; padding: 6px 7px;">`;
+      NewSlotEl2.innerHTML = `<img src="./images/table-image.png" style="width: 104px; height: 58px; margin-left: 20px;">`;
       SlotCell2.addSlot(NewSlotEl2);
 
       var TextCellDefault2 = new TableRowDefault2.partials.TextCell({
