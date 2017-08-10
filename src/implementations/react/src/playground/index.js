@@ -14,29 +14,23 @@
  limitations under the License.
 
  */
-import React from 'react';
-import {
-  Button,
-  GlobalNav,
-  IconButton,
-  TextField
-} from '../react-hig';
+import React from "react";
+import { Button, GlobalNav, TextField } from "../react-hig";
 
-import 'hig-vanilla/dist/hig.css';
-import './index.css';
+import "hig-vanilla/dist/hig.css";
+import "./index.css";
 
-import logo from './images/bim-logo.png';
-import profileImage from './images/profileImage.png';
-import TopNavFixtures from './fixtures/topNavFixtures';
+import logo from "./images/bim-logo.png";
+import profileImage from "./images/profileImage.png";
+import TopNavFixtures from "./fixtures/topNavFixtures";
 
-
-import ButtonSection from './sections/ButtonSection.js';
-import IconButtonSection from './sections/IconButtonSection.js';
-import CheckboxSection from './sections/CheckboxSection';
-import RadioButtonSection from './sections/RadioButtonSection';
-import RangeSection from './sections/RangeSection';
-import TextFieldSection from './sections/TextFieldSection';
-import TextAreaSection from './sections/TextAreaSection';
+import ButtonSection from "./sections/ButtonSection.js";
+import IconButtonSection from "./sections/IconButtonSection.js";
+import CheckboxSection from "./sections/CheckboxSection";
+import RadioButtonSection from "./sections/RadioButtonSection";
+import RangeSection from "./sections/RangeSection";
+import TextFieldSection from "./sections/TextFieldSection";
+import TextAreaSection from "./sections/TextAreaSection";
 
 const SideNav = GlobalNav.SideNav;
 const LinkList = GlobalNav.SideNav.LinkList;
@@ -47,7 +41,8 @@ const Section = GlobalNav.SideNav.SectionList.Section;
 const SectionCollapse = GlobalNav.SideNav.SectionList.Section.SectionCollapse;
 const Group = GlobalNav.SideNav.SectionList.Section.Group;
 const Module = GlobalNav.SideNav.SectionList.Section.Group.Module;
-const ModuleCollapse = GlobalNav.SideNav.SectionList.Section.Group.Module.ModuleCollapse;
+const ModuleCollapse =
+  GlobalNav.SideNav.SectionList.Section.Group.Module.ModuleCollapse;
 const Submodule = GlobalNav.SideNav.SectionList.Section.Group.Module.Submodule;
 const TopNav = GlobalNav.TopNav;
 const Profile = GlobalNav.TopNav.Profile;
@@ -65,27 +60,21 @@ const Slot = GlobalNav.Slot;
 const topNavFixtures = new TopNavFixtures();
 
 const links = [
-  { title: 'Autodesk Main', url: 'http://www.autodesk.com' },
+  { title: "Autodesk Main", url: "http://www.autodesk.com" },
   {
-    title: 'AutoCAD',
-    url: 'https://www.autodesk.com/products/autocad/overview'
+    title: "AutoCAD",
+    url: "https://www.autodesk.com/products/autocad/overview"
   },
-  { title: 'Maya', url: 'https://www.autodesk.com/products/maya/overview' }
+  { title: "Maya", url: "https://www.autodesk.com/products/maya/overview" }
 ];
-
-const checkboxStyle = {
-  display: 'flex',
-  flexDirection: 'row',
-  justifyContent: 'space-between'
-};
 
 class Playground extends React.Component {
   constructor() {
     super();
     this.state = {
-      textFieldValue: 'Foobar',
+      textFieldValue: "Foobar",
       fn: false,
-      tabs: [{ label: 'One', id: 0 }, { label: 'Two', id: 1 }],
+      tabs: [{ label: "One", id: 0 }, { label: "Two", id: 1 }],
       projects: topNavFixtures.projectList(),
       accounts: topNavFixtures.accountList(),
       accountSwitcherIsOpen: false,
@@ -93,7 +82,7 @@ class Playground extends React.Component {
       activeProject: topNavFixtures.projectList()[0],
       activeLabel: `${topNavFixtures.accountList()[0].label} / ${topNavFixtures.projectList()[0].label}`,
       activeImage: topNavFixtures.projectList()[0].image,
-      activeType: 'project',
+      activeType: "project",
       modules: [],
       sideNavOpen: false
     };
@@ -107,11 +96,11 @@ class Playground extends React.Component {
   }
 
   handleTopNavSearchInputChange = event => {
-    console.log('TopNav Search input', event.target.value);
+    console.log("TopNav Search input", event.target.value);
   };
 
   profileSignOutClick = event => {
-    console.log('Profile Sign Out button clicked!');
+    console.log("Profile Sign Out button clicked!");
   };
 
   addTabBefore = () => {
@@ -136,7 +125,7 @@ class Playground extends React.Component {
 
   addModule = () => {
     const key = Math.floor(Math.random() * 100000, 5);
-    const module = { title: `${key}`, icon: 'document-management', key: key };
+    const module = { title: `${key}`, icon: "document-management", key: key };
     const modules = Array.from(this.state.modules);
     modules.push(module);
     this.setState({ modules: modules });
@@ -156,7 +145,7 @@ class Playground extends React.Component {
   };
 
   selectProjectOrAccountTarget = targetItem => {
-    if (targetItem.type === 'account') {
+    if (targetItem.type === "account") {
       this.state.accounts.forEach(account => {
         if (account.id === targetItem.id) {
           this.setState({
@@ -165,13 +154,13 @@ class Playground extends React.Component {
               ? `${account.label} / ${this.state.activeProject.label}`
               : account.label,
             activeImage: this.state.activeProject.image,
-            activeType: 'account'
+            activeType: "account"
           });
         }
       });
     }
 
-    if (targetItem.type === 'project') {
+    if (targetItem.type === "project") {
       this.state.projects.forEach(project => {
         if (project.id === targetItem.id) {
           this.setState({
@@ -180,7 +169,7 @@ class Playground extends React.Component {
               ? `${this.state.activeAccount.label} / ${project.label}`
               : project.label,
             activeImage: project.image,
-            activeType: 'project'
+            activeType: "project"
           });
         }
       });
@@ -198,7 +187,7 @@ class Playground extends React.Component {
     if (event.target.value !== undefined) {
       messageParts = messageParts.concat(`: ${event.target.value}`);
     }
-    console.log(messageParts.join(''));
+    console.log(messageParts.join(""));
   }
 
   setTextFieldValue(event) {

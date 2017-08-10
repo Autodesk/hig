@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PlaygroundSection from '../PlaygroundSection';
 import { Range } from '../../react-hig';
 
