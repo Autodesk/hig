@@ -97,7 +97,7 @@ exports[`<TopNav> renders a topnav 1`] = `
     <div class=\\"hig__global-nav__profile\\">
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
         <!--FLYOUT-->
-    <div class=\\"hig__flyout\\">
+    <div class=\\"hig__flyout hig__flyout--anchor-top-right\\">
     <div class=\\"hig__global-nav__top-nav__profile__profile-image\\">
     <img class=\\"hig__global-nav__top-nav__profile__profile-image__image\\" src=\\"../../../bim-logo.png\\">
 </div><!--TARGET-->
