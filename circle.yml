@@ -1,17 +1,19 @@
 machine:
   node:
     version: 7.8.0
-test:
-  pre:
+dependencies:
+  override:
     - npm install:
         pwd: src/implementations/vanilla
+    - npm install:
+        pwd: src/implementations/react
+test:
+  pre:
     - npm run build:
         pwd: src/implementations/vanilla
     - ./node_modules/http-server/bin/http-server:
         background: true
         pwd: src/implementations/vanilla
-    - npm install:
-        pwd: src/implementations/react
     - npm run build:
         pwd: src/implementations/react
   override:
