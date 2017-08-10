@@ -36,7 +36,6 @@ class PasswordFieldAdapter extends HIGElement {
   }
 
   commitUpdate(updatePayload, oldProps, newProps) {
-    console.log(updatePayload);
     for (let i = 0; i < updatePayload.length; i += 2) {
       const propKey = updatePayload[i];
       const propValue = updatePayload[i + 1];
