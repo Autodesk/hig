@@ -66,6 +66,7 @@
       "!src/**/*.story.{js,jsx}",
       "!src/fixtures/**/*",
       "!src/stories/**/*",
+      "!src/playground/**/*",
       "!**/node_modules/**"
     ],
     "coverageThreshold": {
