@@ -1618,8 +1618,16 @@
               "addButton": {},
               "addSlot": {},
               "close": {},
-              "onCloseClick": {},
-              "onOverlayClick": {},
+              "onCloseClick": {
+                "desc": "Calls the provided callback when user clicks the close button",
+                "params": "HIG.abstract.EventObject.params",
+                "returns": "HIG.abstract.EventObject.returns"
+              },
+              "onOverlayClick": {
+                "desc": "Calls the provided callback when user clicks the overlay beneath the modal",
+                "params": "HIG.abstract.EventObject.params",
+                "returns": "HIG.abstract.EventObject.returns"
+              },
               "open": {},
               "setBody": {},
               "setHeaderColor": {},

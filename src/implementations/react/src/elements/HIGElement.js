@@ -1,4 +1,3 @@
-
 import partitionProps from '../interface/partitionProps';
 import PropMapper from '../utils/PropMapper';
 
@@ -158,6 +157,9 @@ export default class HIGElement {
   }
 
   processUpdateProps(updatePayload) {
+    // console.warn(
+    //   `${this.constructor.name}.processUpdateProps is deprecated.`
+    // );
     return new PropMapper(updatePayload, this);
   }
 }

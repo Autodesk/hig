@@ -104,6 +104,11 @@ export default function createComponent(ElementConstructor) {
   Adapter.propTypes = {};
 
   /**
+   * React default props
+   */
+  Adapter.defaultProps = {};
+
+  /**
    * Empty __docgenInfo for storybook reflection
    */
   Adapter.__docgenInfo = {};
