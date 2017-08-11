@@ -21,6 +21,7 @@ export default {
           'Checkbox',
           'GlobalNav',
           'IconButton',
+          'PasswordField',
           'RadioButton',
           'Range',
           'TextArea',

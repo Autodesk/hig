@@ -9,6 +9,7 @@ Hig.IconButton = require('./basics/icon-button/icon-button.js');
 Hig.Icons = require('./basics/icons/icons.js');
 Hig.InputButton = require('./basics/form-elements/input-button/input-button.js');
 Hig.Modal = require('./components/modal/modal.js');
+Hig.PasswordField = require('./basics/form-elements/password-field/password-field.js');
 Hig.RadioButton = require('./basics/form-elements/radio-button/radio-button.js');
 Hig.Range = require('./basics/form-elements/range/range.js');
 Hig.Table = require('./components/table/table.js')

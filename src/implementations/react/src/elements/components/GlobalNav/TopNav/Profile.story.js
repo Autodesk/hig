@@ -20,8 +20,8 @@ import { action } from '@storybook/addon-actions';
 import { text, boolean } from '@storybook/addon-knobs';
 import GlobalNav from '../../../../adapters/GlobalNav/GlobalNavAdapter';
 
-import logo from '../../../../images/bim-logo.png';
-import profileImage from '../../../../images/profileImage.png';
+import logo from '../../../../playground/images/bim-logo.png';
+import profileImage from '../../../../playground/images/profileImage.png';
 
 const TopNav = GlobalNav.TopNav;
 const Profile = TopNav.Profile;
