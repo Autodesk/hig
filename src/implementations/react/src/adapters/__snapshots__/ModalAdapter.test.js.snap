@@ -45,14 +45,20 @@ exports[`ModalAdapter renders with initial props 1`] = `
       <div class=\\"hig__modal__body\\">
         <div class=\\"hig__modal__slot\\">&lt;h1&gt;Stop&lt;/h1&gt;&lt;p&gt;Give this some consideration.&lt;/p&gt;</div>
       </div>
-      <div class=\\"hig__modal__actions\\"><!--ACTIONS--></div>
+      <div class=\\"hig__modal__actions\\"><a href=\\"#\\" tabindex=\\"0\\" class=\\"hig__button hig__button--secondary hig__button--standard\\" title=\\"Cancel\\">
+    <!--ICON-->
+    <span class=\\"hig__button__title\\">Cancel</span>
+</a><a href=\\"#\\" tabindex=\\"0\\" class=\\"hig__button hig__button--primary hig__button--standard\\" title=\\"Ok\\">
+    <!--ICON-->
+    <span class=\\"hig__button__title\\">Ok</span>
+</a><!--ACTIONS--></div>
     </article>
   </div>
 </div>"
 `;
 
 exports[`ModalAdapter renders with updated props 1`] = `
-"<div class=\\"hig__modal\\">
+"<div class=\\"hig__modal hig__modal--open\\">
   <div class=\\"hig__modal__overlay\\">
     <article class=\\"hig__modal__window\\">
       <header class=\\"hig__modal__header hig__modal__header--gray\\">
@@ -62,7 +68,13 @@ exports[`ModalAdapter renders with updated props 1`] = `
       <div class=\\"hig__modal__body\\">
         <div class=\\"hig__modal__slot\\">&lt;h1&gt;Nice work.&lt;/h1&gt;&lt;p&gt;You slayed the dragon.&lt;/p&gt;</div>
       </div>
-      <div class=\\"hig__modal__actions\\"><!--ACTIONS--></div>
+      <div class=\\"hig__modal__actions\\"><a href=\\"#\\" tabindex=\\"0\\" class=\\"hig__button hig__button--secondary hig__button--standard\\" title=\\"Cancel\\">
+    <!--ICON-->
+    <span class=\\"hig__button__title\\">Cancel</span>
+</a><a href=\\"#\\" tabindex=\\"0\\" class=\\"hig__button hig__button--primary hig__button--standard\\" title=\\"Ok\\">
+    <!--ICON-->
+    <span class=\\"hig__button__title\\">Ok</span>
+</a><!--ACTIONS--></div>
     </article>
   </div>
 </div>"

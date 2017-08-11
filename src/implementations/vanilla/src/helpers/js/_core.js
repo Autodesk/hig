@@ -95,8 +95,8 @@ class Core {
                 var iconName = Mustache.render(text, data);
                 return this._renderIcon(iconName);
                 };
-            }; 
-            
+            };
+
             elWrapper.innerHTML = Mustache.render(
                 template,
                 data,
@@ -117,7 +117,7 @@ class Core {
         }
         return "<div class='hig__icon'>" + iconString + "</div>";
     }
-    
+
     _componentDidMount() {
         // Subclass should implement this if needed
     }
@@ -252,7 +252,7 @@ class Core {
         }
     }
 
-    
+
 
     /**
      * Returns first matching element if found, creates and returns an element if not

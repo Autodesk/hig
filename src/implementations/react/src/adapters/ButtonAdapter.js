@@ -11,7 +11,25 @@ export class ButtonAdapter extends HIGElement {
   }
 
   componentDidMount() {
-    this.commitUpdate(['disabled', this.props.disabled]);
+    if (this.props.disabled) {
+      this.commitUpdate(['disabled', this.props.disabled]);
+    }
+
+    if (this.props.onBlur) {
+      this.commitUpdate(['onBlur', this.props.onBlur]);
+    }
+
+    if (this.props.onClick) {
+      this.commitUpdate(['onClick', this.props.onClick]);
+    }
+
+    if (this.props.onFocus) {
+      this.commitUpdate(['onFocus', this.props.onFocus]);
+    }
+
+    if (this.props.onHover) {
+      this.commitUpdate(['onHover', this.props.onHover]);
+    }
   }
 
   commitUpdate(updatePayload, oldProps, newProps) {
@@ -39,6 +57,10 @@ export class ButtonAdapter extends HIGElement {
             dispose();
           }
 
+          if(!propValue) {
+            return;
+          }
+
           this._disposeFunctions.set(
             'onBlurDispose',
             this.hig.onBlur(propValue)
@@ -50,6 +72,10 @@ export class ButtonAdapter extends HIGElement {
 
           if (dispose) {
             dispose();
+          }
+
+          if(!propValue) {
+            return;
           }
 
           this._disposeFunctions.set(
@@ -65,6 +91,10 @@ export class ButtonAdapter extends HIGElement {
             dispose();
           }
 
+          if(!propValue) {
+            return;
+          }
+
           this._disposeFunctions.set(
             'onFocusDispose',
             this.hig.onFocus(propValue)
@@ -76,6 +106,10 @@ export class ButtonAdapter extends HIGElement {
 
           if (dispose) {
             dispose();
+          }
+
+          if(!propValue) {
+            return;
           }
 
           this._disposeFunctions.set(

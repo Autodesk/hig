@@ -4,9 +4,9 @@ import React from 'react';
 import Modal from './ModalAdapter';
 
 describe('ModalAdapter', () => {
-  function createOrionComponent(props = {}) {
-    const orionContainer = document.body;
-    const orionWrapper = mount(<Modal {...props} />, {
+  function createOrionComponent(props = {}, children = null) {
+    const orionContainer = document.createElement('div');
+    const orionWrapper = mount(<Modal {...props}>{children}</Modal>, {
       attachTo: orionContainer
     });
 
@@ -14,9 +14,9 @@ describe('ModalAdapter', () => {
   }
 
   function createHigComponent(defaults = {}) {
-    const higContainer = document.body;
+    const higContainer = document.createElement('div');
     const modal = new HIG.Modal(defaults);
-    modal.mount();
+    modal.mount(higContainer);
 
     return { higComponent: modal, higContainer };
   }
@@ -37,10 +37,18 @@ describe('ModalAdapter', () => {
     const defaults = {
       headerColor: 'slate',
       title: 'Are you sure you want to do that?',
-      body: '<h1>Stop</h1><p>Give this some consideration.</p>'
+      body: '<h1>Stop</h1><p>Give this some consideration.</p>',
+      buttons: [
+        { title: 'Cancel', type: 'secondary', onClick: () => {} },
+        { title: 'Ok', onClick: () => {} }
+      ]
     };
     const { higComponent, higContainer } = createHigComponent(defaults);
     const { orionContainer, orionWrapper } = createOrionComponent(defaults);
+
+    defaults.buttons.forEach(buttonProps => {
+      higComponent.addButton(new HIG.Button(buttonProps));
+    });
 
     expect(orionContainer.firstElementChild.outerHTML).toMatchSnapshot();
 
@@ -54,15 +62,24 @@ describe('ModalAdapter', () => {
     const nextProps = {
       headerColor: 'gray',
       title: 'Congratulations',
-      body: '<h1>Nice work.</h1><p>You slayed the dragon.</p>'
+      body: '<h1>Nice work.</h1><p>You slayed the dragon.</p>',
+      open: true,
+      buttons: [
+        { title: 'Cancel', type: 'secondary', onClick: () => {} },
+        { title: 'Ok', onClick: () => {} }
+      ]
     };
     const { higComponent, higContainer } = createHigComponent(defaults);
-    const { orionContainer, orionWrapper } = createOrionComponent(defaults);
+    const { orionContainer, orionWrapper } = createOrionComponent(defaults, <h1>Hello, world!</h1>);
 
     orionWrapper.setProps(nextProps);
     higComponent.setHeaderColor(nextProps.headerColor);
     higComponent.setTitle(nextProps.title);
     higComponent.setBody(nextProps.body);
+    higComponent.open();
+    nextProps.buttons.forEach(buttonProps => {
+      higComponent.addButton(new HIG.Button(buttonProps));
+    });
 
     expect(orionContainer.firstElementChild.outerHTML).toMatchSnapshot();
 
@@ -81,24 +98,5 @@ describe('ModalAdapter', () => {
 
       expect(warnSpy).not.toHaveBeenCalled();
     });
-  });
-
-  it('renders buttons', () => {
-    const buttonProps = [
-      { title: 'Cancel', type: 'secondary' },
-      { title: 'Ok' }
-    ];
-    const { higComponent, higContainer } = createHigComponent({ buttons: buttonProps });
-    const { orionContainer, orionWrapper } = createOrionComponent({});
-
-    buttonProps.forEach(buttonDefaults => {
-      higComponent.addButton(new HIG.Button(buttonDefaults));
-    });
-
-    expect(orionContainer.firstElementChild.outerHTML).toMatchSnapshot();
-
-    expect(orionContainer.firstElementChild.outerHTML).toEqual(
-      higContainer.firstElementChild.outerHTML
-    );
   });
 });

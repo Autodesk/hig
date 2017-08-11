@@ -5,7 +5,7 @@ import { Button, Modal } from '../../react-hig';
 class ModalSection extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = { isOpen: false };
   }
 
   closeModal = (event) => {
@@ -13,7 +13,8 @@ class ModalSection extends Component {
     this.setState({ isOpen: false });
   }
 
-  openModal = () => {
+  openModal = (event) => {
+    event.preventDefault();
     this.setState({ isOpen: true });
   }
 

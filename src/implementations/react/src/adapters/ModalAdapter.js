@@ -1,21 +1,37 @@
-// import React from 'react';
 import * as HIG from 'hig-vanilla';
 import * as PropTypes from 'prop-types';
 import createComponent from './createComponent';
 import HIGElement from '../elements/HIGElement';
+import { ButtonAdapter } from './ButtonAdapter';
 
 class ModalAdapter extends HIGElement {
   constructor(initialProps) {
     super(HIG.Modal, initialProps);
 
     this.buttons = [];
-    this.initialProps = initialProps;
   }
 
   componentDidMount() {
-    if (this.initialProps.open) {
-      this.commitUpdate(['open', this.initialProps.open]);
+    if (this.props.open) {
+      this.commitUpdate(['open', this.props.open]);
     }
+
+    if (this.props.buttons) {
+      this.commitUpdate(['buttons', this.props.buttons]);
+    }
+
+    if (this.props.onOverlayClick) {
+      this.commitUpdate(['onOverlayClick', this.props.onOverlayClick]);
+    }
+
+    if (this.props.onCloseClick) {
+      this.commitUpdate(['onCloseClick', this.props.onCloseClick]);
+    }
+
+    this.buttons.forEach(button => {
+      this.hig.addButton(button.hig);
+      button.componentDidMount();
+    });
   }
 
   commitUpdate(updatePayload) {
@@ -29,7 +45,7 @@ class ModalAdapter extends HIGElement {
           break;
         }
         case 'buttons': {
-          this.addButtons(propValue);
+          this._addButtons(propValue);
           break;
         }
         case 'children': {
@@ -81,12 +97,21 @@ class ModalAdapter extends HIGElement {
     }
   }
 
-  addButtons(nextButtons) {
-    // this.buttons.forEach(button => {
-    //   button.unmount();
-    // });
+  _addButtons(nextButtons) {
+    this.buttons.forEach(button => {
+      button.unmount();
+    });
 
-    // this.buttons = nextButtons.map(buttonProps => <HIG.Button {...buttonProps} />);
+    this.buttons = nextButtons.map(buttonProps => {
+      const button = new ButtonAdapter(buttonProps);
+
+      if (this.mounted) {
+        this.hig.addButton(button.hig);
+        button.componentDidMount();
+      }
+
+      return button;
+    });
   }
 }
 
@@ -99,7 +124,8 @@ ModalAdapterComponent.propTypes = {
   onCloseClick: PropTypes.func,
   onOverlayClick: PropTypes.func,
   open: PropTypes.bool,
-  title: PropTypes.string
+  title: PropTypes.string,
+  children: PropTypes.node
 }
 
 ModalAdapterComponent.defaultProps = {
