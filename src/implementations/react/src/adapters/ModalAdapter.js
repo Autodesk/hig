@@ -128,6 +128,35 @@ ModalAdapterComponent.propTypes = {
   children: PropTypes.node
 }
 
+ModalAdapterComponent.__docgenInfo = {
+  props: {
+    body: {
+      description: 'text or html string content of the modal'
+    },
+    buttons: {
+      description: 'an array of props supported by the Button component'
+    },
+    headerColor: {
+      description: 'color of the modal header'
+    },
+    onCloseClick: {
+      description: 'triggers when you click the close button'
+    },
+    onOverlayClick: {
+      description: 'triggers when you click the overlay behind the modal'
+    },
+    open: {
+      description: 'modal is visible when true'
+    },
+    title: {
+      description: 'title of the modal'
+    },
+    children: {
+      description: 'supports add any dom content to the body of the modal'
+    }
+  }
+}
+
 ModalAdapterComponent.defaultProps = {
   buttons: []
 }
