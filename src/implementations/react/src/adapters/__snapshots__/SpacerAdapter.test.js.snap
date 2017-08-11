@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Spacer renders some non defaults 1`] = `"<span class=\\"hig__spacer hig__spacer--stack hig__spacer--width-none hig__spacer--inset-xxl\\"></span>"`;
+
+exports[`Spacer renders the basic spacer 1`] = `"<span class=\\"hig__spacer hig__spacer--stack hig__spacer--width-m\\"></span>"`;
+
+exports[`Spacer setting and updating props can set props for inset 1`] = `"<span class=\\"hig__spacer hig__spacer--stack hig__spacer--width-m hig__spacer--inset-xl\\"></span>"`;
+
+exports[`Spacer setting and updating props can set props for type 1`] = `"<span class=\\"hig__spacer hig__spacer--inline hig__spacer--width-m\\"></span>"`;
+
+exports[`Spacer setting and updating props can set props for width 1`] = `"<span class=\\"hig__spacer hig__spacer--stack hig__spacer--width-xs\\"></span>"`;
+
+exports[`Spacer setting and updating props can update props for inset 1`] = `"<span class=\\"hig__spacer hig__spacer--stack hig__spacer--width-m hig__spacer--inset-none\\"></span>"`;
+
+exports[`Spacer setting and updating props can update props for type 1`] = `"<span class=\\"hig__spacer hig__spacer--width-m hig__spacer--stack\\"></span>"`;
+
+exports[`Spacer setting and updating props can update props for width 1`] = `"<span class=\\"hig__spacer hig__spacer--stack hig__spacer--width-xl\\"></span>"`;

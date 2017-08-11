@@ -153,6 +153,10 @@ class PasswordFieldAdapter extends HIGElement {
           this.hig.setPlaceholder(propValue);
           break;
         }
+        case 'revealPassword': {
+          propValue ? this.hig.revealPassword() : this.hig.hidePassword();
+          break;
+        }
         case 'showPasswordHideButton': {
           propValue ? this.hig.showPasswordHideButton() : this.hig.hidePasswordHideButton();
           break;
