@@ -3,9 +3,9 @@ import { mount } from 'enzyme';
 import * as HIG from 'hig-vanilla';
 import React from 'react';
 
-import Button from './Button';
+import Button from './ButtonAdapter';
 
-describe('<Button>', () => {
+describe('<ButtonAdapter>', () => {
   /**
      * Creates a hig-vanilla button and returns the instance and it's container
      *
@@ -285,81 +285,34 @@ describe('<Button>', () => {
   });
 
   ['onClick', 'onHover', 'onFocus', 'onBlur'].forEach(eventName => {
-    it(`sets up ${eventName} initially`, () => {
-      const eventSpy = jest.fn();
-
-      const reactContainer = document.createElement('div');
-
-      const wrapper = mount(<Button {...{ [eventName]: eventSpy }} />, {
-        attachTo: reactContainer
+    it(`sets event listeners for ${eventName} initially`, () => {
+      const spy = jest.fn();
+      const container = document.createElement('div');
+      const wrapper = mount(<Button {...{ [eventName]: spy }} />, {
+        attachTo: container
       });
-
-      // click on the rendered button
       const instance = wrapper.instance().instance;
 
-      // This is the same fn we pass to hig-vanilla
-      instance.events[eventName]();
-
-      // expect onClickSpy to be called
-      expect(eventSpy).toBeCalled();
+      const disposeFunction = instance._disposeFunctions.get(
+        eventName + 'Dispose'
+      );
+      expect(disposeFunction).toBeDefined();
     });
 
-    it(`updates ${eventName} when it updates`, () => {
-      const eventSpy1 = jest.fn();
-      const eventSpy2 = jest.fn();
-
-      const reactContainer = document.createElement('div');
-
-      const wrapper = mount(<Button {...{ [eventName]: eventSpy1 }} />, {
-        attachTo: reactContainer
-      });
-
-      wrapper.setProps({ [eventName]: eventSpy2 });
-
-      // click on the rendered button
-      const instance = wrapper.instance().instance;
-
-      // This is the same fn we pass to hig-vanilla
-      instance.events[eventName]();
-
-      // expect onClickSpy to be called
-      expect(eventSpy2).toBeCalled();
-    });
-
-    it(`updates ${eventName} when it wasn't specified to begin with`, () => {
-      const eventSpy1 = jest.fn();
-
-      const reactContainer = document.createElement('div');
-
+    it(`sets event listeners for ${eventName} when updated`, () => {
+      const spy = jest.fn();
+      const container = document.createElement('div');
       const wrapper = mount(<Button />, {
-        attachTo: reactContainer
+        attachTo: container
       });
-
-      wrapper.setProps({ [eventName]: eventSpy1 });
+      wrapper.setProps({ [eventName]: spy });
 
       const instance = wrapper.instance().instance;
 
-      // This is the same fn we pass to hig-vanilla
-      instance.events[eventName]();
-
-      // expect onClickSpy to be called
-      expect(eventSpy1).toBeCalled();
-    });
-
-    it(`removes ${eventName} if it is no longer specified`, () => {
-      const eventSpy1 = jest.fn();
-
-      const reactContainer = document.createElement('div');
-
-      const wrapper = mount(<Button {...{ [eventName]: eventSpy1 }} />, {
-        attachTo: reactContainer
-      });
-
-      wrapper.setProps({ [eventName]: undefined });
-
-      const instance = wrapper.instance().instance;
-
-      expect(instance.events[eventName]).toBeUndefined();
+      const disposeFunction = instance._disposeFunctions.get(
+        eventName + 'Dispose'
+      );
+      expect(disposeFunction).toBeDefined();
     });
   });
 });
