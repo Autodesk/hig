@@ -61,7 +61,7 @@ class Dropdown extends Core {
         this.field.noLongerRequired();
     }
 
-    onBlur(fn) {
+    onBlur(fn) {pa
         return this.field.onBlur(fn);
     }
 
@@ -90,7 +90,15 @@ class Dropdown extends Core {
     }
 
     setSelectedOptionLabel(label) {
-        this.field.setValue(label);
+        this.setValue(label);
+    }
+
+    setPlaceholder(placeholderText) {
+        this.field.setPlaceholder(placeholderText);
+    }
+
+    setValue(value) {
+       this.field.setValue(value); 
     }
 
     setInstructions(instructions) {
@@ -115,8 +123,10 @@ class Dropdown extends Core {
 
 Dropdown._interface = Interface['basics']['FormElements']['partials']['Dropdown'];
 Dropdown._defaults = {
-    instructions: '',
-    label: '',
+  label: "",
+  placeholder: "",
+  value: "",
+  instructions: ""
 };
 Dropdown._partials = {
     Option: Option

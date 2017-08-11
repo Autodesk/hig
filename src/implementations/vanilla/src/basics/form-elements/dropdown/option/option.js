@@ -40,7 +40,6 @@ class Option extends Core {
     setValue(value) {
         this.el.setAttribute('data-value', value);
     }
-
 }
 
 Option._interface = Interface['basics']['FormElements']['partials']['Dropdown']['partials']['Option'];

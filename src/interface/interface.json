@@ -256,8 +256,14 @@
                         "setInstructions": {
                             "desc": "Sets instructional text for the dropdown",
                             "params": [
-                                "{String} instructions - instrucitonal text that wil appear below the dropdown"
+                                "{String} instructions - instructional text that will appear below the dropdown"
                             ]
+                        },
+                        "setPlaceholder": {
+                          "desc": "Sets the text for the plaeceholder in the dropdown",
+                          "params": [
+                            "{String} placeholder - placeholder text that will appear in dropdown"
+                          ]
                         },
                         "setLabel": {
                             "desc": "Sets the label for the dropdown",
@@ -267,6 +273,12 @@
                         },
                         "setSelectedOptionLabel": {
                             "desc": "Sets the label on the dropdown button, representing the label of the selected option"
+                        },
+                        "setValue": {
+                          "desc": "sets the value for the dropdown ",
+                          "params": [
+                            "{String} value for dropdown"
+                          ]
                         }
                     },
                     "partials": {
@@ -281,13 +293,15 @@
                             },
                             "defaults": {
                                 "label": "",
-                                "value": null
+                                "value": ""
                             }
                         }
                     },
                     "defaults": {
-                        "label": "",
-                        "instructions": ""
+                        "label": "{String} label for our text field",
+                        "placeholder": "{String} placeholder text for our text field",
+                        "value": "{String} (optional) input value for text field",
+                        "instructions": "{String} (optional) instructions under the text field"
                     }
                 },
                 "PasswordField": {
