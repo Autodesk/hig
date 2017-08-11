@@ -10,9 +10,9 @@
   "homepage": ".",
   "license": "Apache-2.0",
   "peerDependencies": {
+    "prop-types": "^15.5.10",
     "react": "^15.4.1",
-    "react-dom": "^15.4.1",
-    "prop-types": "^15.5.10"
+    "react-dom": "^15.4.1"
   },
   "devDependencies": {
     "@storybook/addon-info": "^3.1.0",
@@ -31,7 +31,7 @@
     "fb-watchman": "^2.0.0",
     "hig-vanilla": "file:../vanilla",
     "ionicons": "^2.0.1",
-    "jest-enzyme": "2.1.2",
+    "jest-enzyme": "^3.7.0",
     "prop-types": "^15.5.10",
     "react": "^15.4.1",
     "react-addons-test-utils": "^15.6.0",
@@ -59,7 +59,10 @@
     "build-storybook": "build-storybook -s public -o build/storybook",
     "type-check": "tsc"
   },
-  "dependencies": {},
+  "dependencies": {
+    "jest": "^20.0.4",
+    "react-test-renderer": "^15.6.1"
+  },
   "jest": {
     "collectCoverageFrom": [
       "!src/index.js",

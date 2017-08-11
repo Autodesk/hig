@@ -1615,9 +1615,21 @@
       },
       "Modal": {
           "methods": {
-              "addButton": {},
-              "addSlot": {},
-              "close": {},
+              "addButton": {
+                "desc": "Add a button to the footer of the modal",
+                "params": [
+                  "{Button} Button - instance of a Button partial"
+                ]
+              },
+              "addSlot": {
+                "desc": "Insert dom elements into the modal",
+                "params": [
+                  "{HTMLElement} HTMLElement"
+                ]
+              },
+              "close": {
+                "desc": "Removes the modal from the display"
+              },
               "onCloseClick": {
                 "desc": "Calls the provided callback when user clicks the close button",
                 "params": "HIG.abstract.EventObject.params",
@@ -1628,15 +1640,32 @@
                 "params": "HIG.abstract.EventObject.params",
                 "returns": "HIG.abstract.EventObject.returns"
               },
-              "open": {},
-              "setBody": {},
-              "setHeaderColor": {},
-              "setTitle": {}
+              "open": {
+                "desc": "displays the modal"
+              },
+              "setBody": {
+                "desc": "Sets the body content of the modal",
+                "params": [
+                  "{ string } text or html string content of the modal"
+                ]
+              },
+              "setHeaderColor": {
+                "desc": "Sets the color of the modal header",
+                "params": [
+                  "{ string - 'default', 'slate', or 'gray' } color of the modal header"
+                ]
+              },
+              "setTitle": {
+                "desc": "Sets the title of the modal",
+                "params": [
+                  "{ string } title - title of the modal"
+                ]
+              }
           },
           "defaults": {
-            "title": "",
-            "body": "",
-            "headerColor": ""
+            "title": "{ string } title of the modal",
+            "body": "{ string } text or html string content of the modal",
+            "headerColor": "{ string - 'default', 'slate', or 'gray' } color of the modal header"
           }
       },
       "Table": {
