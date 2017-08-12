@@ -24,6 +24,7 @@ export default {
           'PasswordField',
           'RadioButton',
           'Range',
+          'Spacer',
           'TextArea',
           'TextField'
         ]
