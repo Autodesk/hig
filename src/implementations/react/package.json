@@ -38,6 +38,7 @@
     "react-devtools-core": "^2.0.12",
     "react-dom": "^15.6.1",
     "react-scripts": "1.0.1",
+    "react-test-renderer": "^15.6.1",
     "rollup": "^0.41.6",
     "rollup-plugin-babel": "^2.7.1",
     "rollup-plugin-commonjs": "^8.0.2",

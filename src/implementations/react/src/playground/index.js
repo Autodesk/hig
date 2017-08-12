@@ -32,6 +32,7 @@ import RangeSection from "./sections/RangeSection";
 import TextFieldSection from "./sections/TextFieldSection";
 import TextAreaSection from "./sections/TextAreaSection";
 import PasswordFieldSection from "./sections/PasswordFieldSection"
+import SpacerSection from "./sections/SpacerSection"
 
 const SideNav = GlobalNav.SideNav;
 const LinkList = GlobalNav.SideNav.LinkList;
@@ -379,6 +380,7 @@ class Playground extends React.Component {
             <PasswordFieldSection />
             <RadioButtonSection />
             <RangeSection />
+            <SpacerSection />
             <TextFieldSection />
             <TextAreaSection />
           </Slot>

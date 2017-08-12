@@ -7,6 +7,7 @@ import '../adapters/FormElements/CheckboxAdapter.story';
 import '../adapters/FormElements/PasswordFieldAdapter.story';
 import '../adapters/FormElements/RangeAdapter.story';
 import '../adapters/FormElements/RadioButtonAdapter.story';
+import '../adapters/SpacerAdapter.story';
 import '../adapters/FormElements/TextAreaAdapter.story';
 import '../elements/basics/form-elements/TextField.story';
 import '../elements/components/GlobalNav/TopNav/Search.story.js';
