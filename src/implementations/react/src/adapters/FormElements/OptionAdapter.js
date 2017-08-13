@@ -15,7 +15,7 @@ export class OptionAdapter extends HIGElement {
     if (this.initialProps.selected) {
       this.hig.select();
     } else {
-      this.hig.deactivate();
+      this.hig.deselect();
     }
   }
 

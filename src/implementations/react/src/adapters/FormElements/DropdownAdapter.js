@@ -28,6 +28,10 @@ export class DropdownAdapter extends HIGElement {
   constructor(initialProps) {
     super(HIG.Dropdown, initialProps);
 
+    ['openDropdown', 'closeDropdown'].forEach(fn => {
+      this[fn] = this[fn].bind(this);
+    });
+
     this.options = new HIGNodeList({
       type: OptionAdapter,
       HIGConstructor: this.hig.partials.Option,
@@ -39,14 +43,16 @@ export class DropdownAdapter extends HIGElement {
 
   componentDidMount() {
     this.options.componentDidMount();
+    this.hig.onTargetClick(this.openDropdown)
+    this.hig.onClickOutside(this.closeDropdown)
 
     this.commitUpdate([
       "open",
       this.initialProps.open,
       "disabled",
       this.initialProps.disabled,
-      "selectedOption",
-      this.initialProps.selectedOption,
+      "selectedOptionLabel",
+      this.initialProps.selectedOptionLabel,
       "required",
       this.initialProps.required
     ]);
@@ -176,6 +182,14 @@ export class DropdownAdapter extends HIGElement {
           .constructor.name}`
       );
     }
+  }
+
+  openDropdown(){
+    this.hig.open();
+  }
+
+  closeDropdown(){
+    this.hig.close();
   }
 }
 
