@@ -17,6 +17,8 @@ export class OptionAdapter extends HIGElement {
     } else {
       this.hig.deselect();
     }
+
+    
   }
 
   commitUpdate(updatePayload, oldProps, newProp) {

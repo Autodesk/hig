@@ -25,6 +25,10 @@ class DropdownSection extends Component {
     console.log(messageParts.join(""));
   }
 
+  setSelectedValue(event, element) {
+    console.log('option event target', event.target);
+  }
+
   render() {
     return (
       <PlaygroundSection title="Dropdown">
@@ -42,6 +46,7 @@ class DropdownSection extends Component {
                 value={option.value}
                 selected={option.selected}
                 key={option.label}
+                onClick={this.setSelectedValue}
                 
               />
             );
