@@ -26,9 +26,26 @@ class RangeAdapter extends HIGElement {
   }
 
   componentDidMount() {
-    if (this.props.required) {
-      this.hig.required(this.initialProps.required);
+    var commitProps = [];
+    if (this.initialProps.disabled) {
+      commitProps.push('disabled', this.initialProps.disabled);
     }
+    if (this.initialProps.required) {
+      commitProps.push('required', this.initialProps.required)
+    }
+    if (this.initialProps.checked) {
+      commitProps.push('checked', this.initialProps.checked)
+    }
+    if (this.initialProps.onBlur) {
+      commitProps.push('onBlur', this.initialProps.onBlur)
+    }
+    if (this.initialProps.onChange) {
+      commitProps.push('onChange', this.initialProps.onChange)
+    }
+    if (this.initialProps.onFocus) {
+      commitProps.push('onFocus', this.initialProps.onFocus)
+    }
+    this.commitUpdate(commitProps);
   }
 
   commitUpdate(updatePayload, oldProps, newProps) {
@@ -58,9 +75,7 @@ class RangeAdapter extends HIGElement {
           break;
         }
         case 'required': {
-          propValue
-            ? this.hig.required(propValue)
-            : this.hig.noLongerRequired();
+          propValue ? this.hig.required(propValue) : this.hig.noLongerRequired();
           break;
         }
         case 'step': {
@@ -78,10 +93,7 @@ class RangeAdapter extends HIGElement {
             dispose();
           }
 
-          this._disposeFunctions.set(
-            'onBlurDispose',
-            this.hig.onBlur(propValue)
-          );
+          this._disposeFunctions.set('onBlurDispose', this.hig.onBlur(propValue));
           break;
         }
         case 'onChange': {
@@ -91,10 +103,7 @@ class RangeAdapter extends HIGElement {
             dispose();
           }
 
-          this._disposeFunctions.set(
-            'onChangeDispose',
-            this.hig.onChange(propValue)
-          );
+          this._disposeFunctions.set('onChangeDispose', this.hig.onChange(propValue));
           break;
         }
         case 'onFocus': {
@@ -104,10 +113,7 @@ class RangeAdapter extends HIGElement {
             dispose();
           }
 
-          this._disposeFunctions.set(
-            'onFocusDispose',
-            this.hig.onFocus(propValue)
-          );
+          this._disposeFunctions.set('onFocusDispose', this.hig.onFocus(propValue));
           break;
         }
         default: {
@@ -121,52 +127,42 @@ class RangeAdapter extends HIGElement {
 const RangeComponent = createComponent(RangeAdapter);
 
 RangeComponent.propTypes = {
-  disabled: PropTypes.bool,
+  disabled:     PropTypes.bool,
   instructions: PropTypes.string,
-  label: PropTypes.string,
-  minValue: PropTypes.number,
-  maxValue: PropTypes.number,
-  onBlur: PropTypes.func,
-  onChange: PropTypes.func,
-  onFocus: PropTypes.func,
-  required: PropTypes.string,
-  step: PropTypes.number,
-  value: PropTypes.number
+  label:        PropTypes.string,
+  minValue:     PropTypes.number,
+  maxValue:     PropTypes.number,
+  onBlur:       PropTypes.func,
+  onChange:     PropTypes.func,
+  onFocus:      PropTypes.func,
+  required:     PropTypes.string,
+  step:         PropTypes.number,
+  value:        PropTypes.number
 };
 
 RangeComponent.__docgenInfo = {
   props: {
-    disabled: {
+    disabled:        {
       description: 'prevents interaction with the range'
-    },
-    instructions: {
+    }, instructions: {
       description: 'instruction text for the range'
-    },
-    label: {
+    }, label:        {
       description: 'label for the range'
-    },
-    minValue: {
+    }, minValue:     {
       description: 'minimum value for the range'
-    },
-    maxValue: {
+    }, maxValue:     {
       description: 'maximum value for the range'
-    },
-    onBlur: {
+    }, onBlur:       {
       description: 'callback for focus lost from the range'
-    },
-    onChange: {
+    }, onChange:     {
       description: 'callback for change + focus lost for the range'
-    },
-    onFocus: {
+    }, onFocus:      {
       description: 'callback for focus event on the range'
-    },
-    required: {
+    }, required:     {
       description: 'text indicating that this range field is a required field'
-    },
-    step: {
+    }, step:         {
       description: 'value of each step between min and max.'
-    },
-    value: {
+    }, value:        {
       description: 'value for the range input'
     }
   }

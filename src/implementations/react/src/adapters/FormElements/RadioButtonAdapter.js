@@ -26,14 +26,27 @@ export class RadioButtonAdapter extends HIGElement {
   }
 
   componentDidMount() {
-    this.commitUpdate([
-      'required',
-      this.props.required,
-      'disabled',
-      this.props.disabled,
-      'checked',
-      this.props.disabled
-    ]);
+    var commitProps = [];
+    if (this.initialProps.disabled) {
+      commitProps.push('disabled',this.initialProps.disabled);
+    }
+    if (this.initialProps.required) {
+      commitProps.push('required',this.initialProps.required)
+    }
+    if (this.initialProps.checked) {
+      commitProps.push('checked',this.initialProps.checked)
+    }
+    if (this.initialProps.onChange) {
+      commitProps.push('onChange',this.initialProps.onChange)
+    }
+    if (this.initialProps.onFocus) {
+      commitProps.push('onFocus',this.initialProps.onFocus)
+    }
+    if (this.initialProps.onHover) {
+      commitProps.push('onHover',this.initialProps.onHover)
+    }
+    this.commitUpdate(commitProps);
+
   }
 
   commitUpdate(updatePayload, oldProps, newProps) {
