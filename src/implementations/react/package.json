@@ -57,7 +57,9 @@
     "test-ci": "react-scripts test --env=jsdom --coverage --runInBand",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public -o build/storybook",
-    "type-check": "tsc"
+    "type-check": "tsc",
+    "deploy-storybook": "npm run build-storybook && surge build/storybook",
+    "deploy-playground": "react-scripts build && surge build"
   },
   "dependencies": {
     "jest": "^20.0.4",
