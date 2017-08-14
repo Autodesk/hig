@@ -15,3 +15,4 @@ import '../elements/components/GlobalNav/TopNav/Profile.story';
 import '../adapters/GlobalNav/GlobalNavAdapter.story';
 import '../adapters/ProjectAccountSwitcher.story';
 import '../elements/components/GlobalNav/SubNav/Tabs.story';
+import '../elements/components/Modal.story';

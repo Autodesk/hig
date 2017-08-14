@@ -190,7 +190,7 @@ PasswordFieldComponent.propTypes = {
   onPasswordHideButtonClick: PropTypes.func,
   onPasswordRevealButtonClick: PropTypes.func,
   placeholder: PropTypes.string,
-  revealPassword:   PropTypes.bool,
+  revealPassword: PropTypes.bool,
   showPasswordHideButton: PropTypes.bool,
   showPasswordRevealButton: PropTypes.bool,
   required: PropTypes.string,

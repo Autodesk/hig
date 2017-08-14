@@ -33,8 +33,9 @@ class Modal extends Core {
         this.el.classList.remove('hig__modal--open');
     }
 
-    mount() {
-        this.el = document.body.appendChild(this._rendered);
+    mount(mountNode) {
+        const parentNode = mountNode ? this._findDOMEl(mountNode) : document.body;
+        this.el =  parentNode.appendChild(this._rendered);
         this._componentDidMount();
     }
 
