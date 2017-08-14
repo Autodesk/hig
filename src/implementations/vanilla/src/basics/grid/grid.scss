@@ -1,1 +1,26 @@
-// TODO
+@import '~helpers/css/mixins/base.scss';
+
+@mixin buildGrid($gutter, $total_columns){
+  $gutter_with_unit: $gutter + 0px; // adding 0px converts number to px in sass
+  
+  // Base parent for our grid
+  .hig__grid{
+    @include clearfix;
+
+    &__item{
+      float: left;
+      margin-left: $gutter_with_unit/2;
+      margin-right: $gutter_with_unit/2;
+      @include vendor-prefix('box-sizing', 'border-box');
+
+      // Loop over columns and create classes
+      @for $i from 1 through $total_columns {
+        &--#{$i}of#{$total_columns} {
+          width: calc(100% * #{$i} / #{$total_columns} - #{$gutter_with_unit});
+        }
+      }
+    }
+  }
+}
+
+@include buildGrid(24, 12);

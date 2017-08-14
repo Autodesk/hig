@@ -130,6 +130,9 @@
                 "icon": "{String} (optional) ID of the icon"
             }
         },
+        "Grid": {
+          
+        },
         "Spacer": {
             "defaults": {
                 "type": "{String - 'stack', 'inline'} type of the spacer",
