@@ -15,7 +15,7 @@
 
  */
 import React from "react";
-import { Button, GlobalNav, TextField } from "../react-hig";
+import { Button, GlobalNav, TextField, FilterableSideNav } from "../react-hig";
 
 import "hig-vanilla/dist/hig.css";
 import "./index.css";
@@ -32,22 +32,11 @@ import RadioButtonSection from "./sections/RadioButtonSection";
 import RangeSection from "./sections/RangeSection";
 import TextFieldSection from "./sections/TextFieldSection";
 import TextAreaSection from "./sections/TextAreaSection";
-import PasswordFieldSection from "./sections/PasswordFieldSection"
-import SpacerSection from "./sections/SpacerSection"
+import PasswordFieldSection from "./sections/PasswordFieldSection";
+import SpacerSection from "./sections/SpacerSection";
 import ModalSection from "./sections/ModalSection";
 import TypographySection from "./sections/TypographySection";
 
-const SideNav = GlobalNav.SideNav;
-const LinkList = GlobalNav.SideNav.LinkList;
-const Link = GlobalNav.SideNav.LinkList.Link;
-const Search = GlobalNav.SideNav.Search;
-const SectionList = GlobalNav.SideNav.SectionList;
-const Section = GlobalNav.SideNav.SectionList.Section;
-const SectionCollapse = GlobalNav.SideNav.SectionList.Section.SectionCollapse;
-const Group = GlobalNav.SideNav.SectionList.Section.Group;
-const Module = GlobalNav.SideNav.SectionList.Section.Group.Module;
-const ModuleCollapse = GlobalNav.SideNav.SectionList.Section.Group.Module.ModuleCollapse;
-const Submodule = GlobalNav.SideNav.SectionList.Section.Group.Module.Submodule;
 const TopNav = GlobalNav.TopNav;
 const Profile = GlobalNav.TopNav.Profile;
 const Shortcut = GlobalNav.TopNav.Shortcut;
@@ -75,8 +64,6 @@ class Playground extends React.Component {
   constructor() {
     super();
     this.state = {
-      textFieldValue: "Foobar",
-      fn: false,
       tabs: [{ label: "One", id: 0 }, { label: "Two", id: 1 }],
       projects: topNavFixtures.projectList(),
       accounts: topNavFixtures.accountList(),
@@ -86,15 +73,334 @@ class Playground extends React.Component {
       activeLabel: `${topNavFixtures.accountList()[0].label} / ${topNavFixtures.projectList()[0].label}`,
       activeImage: topNavFixtures.projectList()[0].image,
       activeType: "project",
-      modules: [],
-      sideNavOpen: false
+      sideNavOpen: true,
+      query: "",
+      items: {
+        sections: [
+          {
+            headerLabel: "Project",
+            headerName: "Oakwood Medical Center",
+            groups: [
+              {
+                modules: [
+                  {
+                    icon: "insight",
+                    label: "Insight",
+                    submodules: [
+                      {
+                        label: "Overview",
+                        contentImage: "content/Oakwood__Insight__Overview@2x.png"
+                      },
+                      {
+                        label: "Risk",
+                        contentImage: "content/Oakwood__Insight__Risk@2x.png"
+                      },
+                      {
+                        label: "Quality",
+                        contentImage: "content/Oakwood__Insight__Quality@2x.png"
+                      },
+                      {
+                        label: "Reports",
+                        contentImage: "content/Oakwood__Insight__Reports@2x.png"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                // end group 1
+                modules: [
+                  {
+                    icon: "construction-management",
+                    label: "Authoring Collaboration",
+                    submodules: [
+                      {
+                        label: "Cloud Work Sharing",
+                        contentImage: "content/Oakwood__AuthoringCollaboration__CloudWorkSharing@2x.png"
+                      },
+                      {
+                        label: "Fluent",
+                        contentImage: "content/Oakwood__AuthoringCollaboration__Fluent@2x.png"
+                      },
+                      {
+                        label: "Approvals",
+                        contentImage: "content/Oakwood__AuthoringCollaboration__Approvals@2x.png"
+                      }
+                    ]
+                  },
+                  {
+                    icon: "document-management",
+                    label: "Document Management",
+                    submodules: [
+                      {
+                        type: "submodule",
+                        label: "Document Workflow",
+                        contentImage: "content/Oakwood__DocumentManagement__DocumentWorkflow@2x.png"
+                      }
+                    ]
+                  },
+                  {
+                    icon: "placeholder",
+                    label: "Model Coordination",
+                    submodules: [
+                      {
+                        label: "Overview",
+                        contentImage: "content/Oakwood__ModelCoordination__Overview@2x.png"
+                      },
+                      {
+                        label: "Models",
+                        contentImage: "content/Oakwood__ModelCoordination__Models@2x.png"
+                      },
+                      {
+                        label: "Checklists",
+                        contentImage: "content/Oakwood__ModelCoordination__Checklists@2x.png"
+                      },
+                      {
+                        label: "Clashes",
+                        contentImage: "content/Oakwood__ModelCoordination__Clashes@2x.png"
+                      },
+                      {
+                        label: "Issues",
+                        contentImage: "content/Oakwood__ModelCoordination__Issues@2x.png"
+                      }
+                    ]
+                  },
+                  {
+                    icon: "project-management",
+                    label: "Project Management",
+                    submodules: [
+                      {
+                        label: "RFIs",
+                        contentImage: "content/Oakwood__ProjectManagement__RFIs@2x.png"
+                      },
+                      {
+                        label: "Submittals",
+                        contentImage: "content/Oakwood__ProjectManagement__Submittals@2x.png"
+                      },
+                      {
+                        label: "Daily Log",
+                        contentImage: "content/Oakwood__ProjectManagement__DailyLog@2x.png"
+                      }
+                    ]
+                  },
+                  {
+                    icon: "quantities",
+                    label: "Quantities",
+                    submodules: [
+                      {
+                        label: "2D",
+                        contentImage: "content/Oakwood__Quantities__2D@2x.png"
+                      },
+                      {
+                        label: "3D",
+                        contentImage: "content/Oakwood__Quantities__3D@2x.png"
+                      }
+                    ]
+                  },
+                  {
+                    icon: "cost-control",
+                    label: "Cost Control",
+                    submodules: [
+                      {
+                        label: "Bid Management",
+                        contentImage: "content/Oakwood__CostControl__BidManagement@2x.png"
+                      },
+                      {
+                        label: "Estimating",
+                        contentImage: "content/Oakwood__CostControl__Estimating@2x.png"
+                      },
+                      {
+                        label: "Budget",
+                        contentImage: "content/Oakwood__CostControl__Budget@2x.png"
+                      },
+                      {
+                        label: "Change Orders",
+                        contentImage: "content/Oakwood__CostControl__ChangeOrders@2x.png"
+                      },
+                      {
+                        label: "Pay Applications",
+                        contentImage: "content/Oakwood__CostControl__PayApplications@2x.png"
+                      }
+                    ]
+                  },
+                  {
+                    icon: "schedule",
+                    label: "Schedule",
+                    submodules: [
+                      {
+                        label: "Master Schedule",
+                        contentImage: "content/Oakwood__Schedule__MasterSchedule@2x.png"
+                      },
+                      {
+                        label: "Production Plan",
+                        contentImage: "content/Oakwood__Schedule__ProductionPlan@2x.png"
+                      }
+                    ]
+                  },
+                  {
+                    icon: "field",
+                    label: "Field",
+                    submodules: [
+                      {
+                        label: "Quality",
+                        contentImage: "content/Oakwood__Field__Quality@2x.png"
+                      },
+                      {
+                        label: "Safety",
+                        contentImage: "content/Oakwood__Field__Safety@2x.png"
+                      },
+                      {
+                        label: "Commissioning",
+                        contentImage: "content/Oakwood__Field__Commissioning@2x.png"
+                      },
+                      {
+                        label: "Checklists",
+                        contentImage: "content/Oakwood__Field__Checklists@2x.png"
+                      },
+                      {
+                        label: "Issues",
+                        contentImage: "content/Oakwood__Field__Issues@2x.png"
+                      },
+                      {
+                        label: "Activities",
+                        contentImage: "content/Oakwood__Field__Activities@2x.png"
+                      }
+                    ]
+                  },
+                  {
+                    icon: "layout",
+                    label: "Layout",
+                    contentImage: "content/Oakwood__Layout@2x.png",
+                    submodules: []
+                  },
+                  {
+                    icon: "buildingops",
+                    label: "Building Ops",
+                    contentImage: "content/Oakwood__BuildingOps@2x.png",
+                    submodules: []
+                  }
+                ]
+              },
+              {
+                // end group 2
+                modules: [
+                  {
+                    icon: "library",
+                    label: "Library",
+                    contentImage: "content/Oakwood__Library@2x.png",
+                    submodules: []
+                  },
+                  {
+                    icon: "photos",
+                    label: "Photos",
+                    contentImage: "content/Oakwood__Photos@2x.png",
+                    submodules: []
+                  },
+                  {
+                    icon: "assets",
+                    label: "Assets",
+                    contentImage: "content/Oakwood__Assets@2x.png",
+                    submodules: []
+                  },
+                  {
+                    icon: "locations",
+                    label: "Location",
+                    contentImage: "content/Oakwood__Locations@2x.png",
+                    submodules: []
+                  }
+                ]
+              },
+              {
+                // end group 3
+                modules: [
+                  {
+                    icon: "project-admin",
+                    label: "Project Admin",
+                    contentImage: "content/Oakwood__ProjectAdmin@2x.png",
+                    submodules: []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            // end section 1
+            headerLabel: "Account",
+            hedaerName: "Global Construction",
+            groups: [
+              {
+                modules: [
+                  {
+                    icon: "insight",
+                    label: "Insight",
+                    contentImage: "content/GlobalConstruction__Insight@2x.png",
+                    submodules: []
+                  },
+                  {
+                    icon: "field",
+                    label: "Field",
+                    submodules: [
+                      {
+                        label: "Checklists Templates",
+                        contentImage: "content/GlobalConstruction__Field__ChecklistsTemplates@2x.png"
+                      },
+                      {
+                        label: "Issues Templates",
+                        contentImage: "content/GlobalConstruction__Field__IssuesTemplates@2x.png"
+                      }
+                    ]
+                  },
+                  {
+                    icon: "account-admin",
+                    label: "Account Admin",
+                    submodules: [
+                      {
+                        label: "Projects",
+                        contentImage: "content/GlobalConstruction__AccountAdmin__Projects@2x.png"
+                      },
+                      {
+                        label: "Members",
+                        contentImage: "content/GlobalConstruction__AccountAdmin__Members@2x.png"
+                      },
+                      {
+                        label: "Companies",
+                        contentImage: "content/GlobalConstruction__AccountAdmin__Companies@2x.png"
+                      },
+                      {
+                        label: "Services",
+                        contentImage: "content/GlobalConstruction__AccountAdmin__Services@2x.png"
+                      },
+                      {
+                        label: "Analytics",
+                        contentImage: "content/GlobalConstruction__AccountAdmin__Analytics@2x.png"
+                      },
+                      {
+                        label: "Settings",
+                        contentImage: "content/GlobalConstruction__AccountAdmin__Settings@2x.png"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        links: [
+          { title: "Autodesk Main", url: "http://www.autodesk.com" },
+          {
+            title: "AutoCAD",
+            url: "https://www.autodesk.com/products/autocad/overview"
+          },
+          {
+            title: "Maya",
+            url: "https://www.autodesk.com/products/maya/overview"
+          }
+        ]
+      }
     };
-
-    this.setTextFieldValue = this.setTextFieldValue.bind(this);
-    this.toggleSidenav = this.toggleSidenav.bind(this);
   }
 
-  toggleSidenav() {
+  toggleSidenav = () => {
     this.setState({ sideNavOpen: !this.state.sideNavOpen });
   }
 
@@ -193,7 +499,7 @@ class Playground extends React.Component {
     console.log(messageParts.join(""));
   }
 
-  setTextFieldValue(event) {
+  setTextFieldValue = (event) => {
     this.logEvent(event, TextField);
     this.setState({
       textFieldValue: event.target.value
@@ -204,87 +510,7 @@ class Playground extends React.Component {
     return (
       <div>
         <GlobalNav sideNavOpen={this.state.sideNavOpen}>
-          <SideNav>
-            <LinkList>
-              {links.map((link, i) => {
-                return <Link title={link.title} link={link.url} key={i} />;
-              })}
-            </LinkList>
-            <SectionList>
-              <Section headerLabel="Project" headerName="ThunderStorm">
-                <SectionCollapse />
-                {topNavFixtures.menu().sections[0].groups.map((group, i) => {
-                  return (
-                    <Group key={i}>
-                      {group.modules.map(module => {
-                        return (
-                          <Module
-                            icon={module.icon}
-                            contentImage={module.contentImage}
-                            title={module.label}
-                            key={module.label}
-                          >
-                            <ModuleCollapse />
-                            {module.submodules.map(submodule => {
-                              return (
-                                <Submodule
-                                  title={submodule.label}
-                                  link="#"
-                                  key={submodule.label}
-                                />
-                              );
-                            })}
-                          </Module>
-                        );
-                      })}
-                    </Group>
-                  );
-                })}
-                <Group>
-                  {this.state.modules.map(module => {
-                    return (
-                      <Module
-                        icon={module.icon}
-                        title={module.title}
-                        key={module.key}
-                      />
-                    );
-                  })}
-                </Group>
-              </Section>
-              <Section headerLabel="Account" headerName="GlobalConstruction">
-                <SectionCollapse />
-                {topNavFixtures.menu().sections[1].groups.map((group, i) => {
-                  return (
-                    <Group key={i}>
-                      {group.modules.map(module => {
-                        return (
-                          <Module
-                            icon={module.icon}
-                            contentImage={module.contentImage}
-                            title={module.label}
-                            key={module.label}
-                          >
-                            <ModuleCollapse />
-                            {module.submodules.map(submodule => {
-                              return (
-                                <Submodule
-                                  title={submodule.label}
-                                  link="#"
-                                  key={submodule.label}
-                                />
-                              );
-                            })}
-                          </Module>
-                        );
-                      })}
-                    </Group>
-                  );
-                })}
-              </Section>
-            </SectionList>
-            <Search placeholder="Find module or submodule" />
-          </SideNav>
+          <FilterableSideNav items={this.state.items} />
           <TopNav
             logo={logo}
             logoLink="http://autodesk.com"
@@ -368,11 +594,6 @@ class Playground extends React.Component {
               <Button title="Add tab before" onClick={this.addTabBefore} />
               <Button title="Add tab after" onClick={this.addTabAfter} />
               <Button title="Remove tab" onClick={this.removeTab} />
-            </section>
-
-            <section>
-              <h3>Sidebar modules</h3>
-              <Button title="Add Module" onClick={this.addModule} />
             </section>
 
             <ButtonSection />

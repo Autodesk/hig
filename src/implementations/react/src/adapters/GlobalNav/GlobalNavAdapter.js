@@ -1,4 +1,3 @@
-
 import * as HIG from 'hig-vanilla';
 import * as PropTypes from 'prop-types';
 
@@ -14,6 +13,7 @@ import SubNavComponent, {
   SubNav
 } from '../../elements/components/GlobalNav/SubNav';
 import Slot from '../../elements/components/GlobalNav/Slot';
+import FilterableSideNav from '../../elements/components/GlobalNav/FilterableSideNav';
 
 class GlobalNav extends HIGElement {
   constructor(initialProps) {
@@ -150,7 +150,8 @@ GlobalNavComponent.propTypes = {
     SideNavComponent,
     TopNavComponent,
     SubNavComponent,
-    Slot
+    Slot,
+    FilterableSideNav
   ])
 };
 
