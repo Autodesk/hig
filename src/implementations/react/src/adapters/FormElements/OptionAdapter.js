@@ -12,13 +12,15 @@ export class OptionAdapter extends HIGElement {
   }
 
   componentDidMount() {
-    if (this.initialProps.selected) {
-      this.hig.select();
-    } else {
-      this.hig.deselect();
+    if (this.props.selected) {
+      this.commitUpdate(['selected', this.props.selected])
+    } 
+    if (this.props.onHover) {
+      this.commitUpdate(['onHover', this.props.onHover])
     }
-
-    
+    if (this.props.onClick) {
+      this.commitUpdate(['onClick', this.props.onClick])
+    }
   }
 
   commitUpdate(updatePayload, oldProps, newProp) {

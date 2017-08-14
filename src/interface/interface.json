@@ -272,13 +272,7 @@
                             ]
                         },
                         "setSelectedOptionLabel": {
-                            "desc": "Sets the label on the dropdown button, representing the label of the selected option"
-                        },
-                        "setValue": {
-                          "desc": "sets the value for the dropdown ",
-                          "params": [
-                            "{String} value for dropdown"
-                          ]
+                            "desc": "Sets the label on the dropdown button"
                         }
                     },
                     "partials": {

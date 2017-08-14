@@ -28,10 +28,6 @@ export class DropdownAdapter extends HIGElement {
   constructor(initialProps) {
     super(HIG.Dropdown, initialProps);
 
-    ['openDropdown', 'closeDropdown'].forEach(fn => {
-      this[fn] = this[fn].bind(this);
-    });
-
     this.options = new HIGNodeList({
       type: OptionAdapter,
       HIGConstructor: this.hig.partials.Option,
@@ -43,19 +39,46 @@ export class DropdownAdapter extends HIGElement {
 
   componentDidMount() {
     this.options.componentDidMount();
-    this.hig.onTargetClick(this.openDropdown)
-    this.hig.onClickOutside(this.closeDropdown)
 
-    this.commitUpdate([
-      "open",
-      this.initialProps.open,
-      "disabled",
-      this.initialProps.disabled,
-      "selectedOptionLabel",
-      this.initialProps.selectedOptionLabel,
-      "required",
-      this.initialProps.required
-    ]);
+    if (this.props.open) {
+      this.commitUpdate(['open', this.props.open])
+    }
+
+    if (this.props.disabled) {
+      this.commitUpdate(['disabled', this.props.disabled])
+    }
+
+    if (this.props.selectedOptionLabel) {
+      this.commitUpdate(['selectedOptionLabel', this.props.selectedOptionLabel])
+    }
+
+    if (this.props.required) {
+      this.commitUpdate(['required', this.props.required])
+    }
+
+    if (this.props.onBlur) {
+      this.commitUpdate(['onBlur', this.props.onBlur])
+    }
+
+    if (this.props.onClickOutside) {
+      this.commitUpdate(['onClickOutside', this.props.onClickOutside])
+    }
+
+    if (this.props.onFocus) {
+      this.commitUpdate(['onFocus', this.props.onFocus])
+    }
+
+    if (this.props.onKeypress){
+      this.commitUpdate(['onKeypress', this.props.onKeypress])
+    }
+
+    if (this.props.onTargetClick) {
+      this.commitUpdate(['onTargetClick', this.props.onTargetClick])
+    }
+
+    if (this.props.children) {
+      this.commitUpdate(['children', this.props])
+    }
   }
 
   commitUpdate(updatePayload, oldProps, newProps) {
@@ -74,10 +97,6 @@ export class DropdownAdapter extends HIGElement {
         }
         case "placeholder": {
           this.hig.setPlaceholder(propValue);
-          break;
-        }
-        case "value": {
-          this.hig.setValue(propValue);
           break;
         }
         case "open": {
@@ -157,6 +176,10 @@ export class DropdownAdapter extends HIGElement {
           this._disposeFunctions.set("onTargetClickDispose", this.hig.onTargetClick(propValue));
           break;
         }
+        case "children": {
+          //no-op
+          break;
+        }
         default: {
           console.warn(`${propKey} is unknown`);
         }
@@ -184,11 +207,11 @@ export class DropdownAdapter extends HIGElement {
     }
   }
 
-  openDropdown(){
+  openDropdown = () => {
     this.hig.open();
   }
 
-  closeDropdown(){
+  closeDropdown = () => {
     this.hig.close();
   }
 }
