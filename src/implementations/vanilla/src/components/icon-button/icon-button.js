@@ -55,7 +55,7 @@ class IconButton extends Core {
   }
 }
 
-IconButton._interface = Interface.basics.IconButton;
+IconButton._interface = Interface.components.IconButton;
 IconButton._defaults = {
   title: 'link',
   link: '#',
