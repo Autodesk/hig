@@ -26,9 +26,26 @@ class TextFieldAdapter extends HIGElement {
   }
 
   componentDidMount() {
-    if (this.props.required) {
-      this.hig.required(this.initialProps.required);
+    var commitProps = [];
+    if (this.initialProps.disabled) {
+      commitProps.push('disabled',this.initialProps.disabled);
     }
+    if (this.initialProps.required) {
+      commitProps.push('required',this.initialProps.required);
+    }
+    if (this.initialProps.onBlur) {
+      commitProps.push('onBlur',this.initialProps.onBlur);
+    }
+    if (this.initialProps.onChange) {
+      commitProps.push('onChange',this.initialProps.onChange);
+    }
+    if (this.initialProps.onFocus) {
+      commitProps.push('onFocus',this.initialProps.onFocus);
+    }
+    if (this.initialProps.onInput) {
+      commitProps.push('onInput',this.initialProps.onInput);
+    }
+    this.commitUpdate(commitProps);
   }
 
   forceReset(props) {
