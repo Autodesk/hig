@@ -5,7 +5,7 @@
 
         <style>
             body {
-                margin: 50px;
+                margin: 30px;
             }
 
             .test-container {
@@ -13,7 +13,7 @@
             }
 
             .test-container > div {
-                margin: 10px;
+                margin: 10px 0;
             }
         </style>
     </head>
@@ -43,15 +43,13 @@
             const FormElements = new Hig.FormElements();
             const Dropdown = FormElements.partials.Dropdown;
 
-            const Typo = new Hig.Typography();
-
             // ----------------------------
             // DROPDOWN WITH DEFAULTS
             // ----------------------------
 
-            const TitleDefaultDropdown = new Typo.partials.Heading({
+            const TitleDefaultDropdown = new Hig.Typography({
                 "text": "Dropdown configured with defaults",
-                "size": 3
+                "type": "h2"
             });
 
             TitleDefaultDropdown.mount('.test-heading-default');
@@ -102,9 +100,9 @@
             // DISABLED DROPDOWN
             // ----------------------------
 
-            const TitleDisabledDropdown = new Typo.partials.Heading({
+            const TitleDisabledDropdown = new Hig.Typography({
                 "text": "Disabled Dropdown",
-                "size": 3
+                "type": "h2"
             });
 
             TitleDisabledDropdown.mount('.test-heading-disabled');
@@ -123,9 +121,9 @@
             // DROPDOWN CONFIGURED WITH SETTERS
             // ----------------------------
 
-            const TitleSetterDropdown = new Typo.partials.Heading({
+            const TitleSetterDropdown = new Hig.Typography({
                 "text": "Dropdown configured with setters",
-                "size": 3
+                "type": "h2"
             });
 
             TitleSetterDropdown.mount('.test-heading-setters');
@@ -161,9 +159,9 @@
             // DROPDOWN WITH LOTS OF EVENT LISTENERS
             // ----------------------------
 
-            const TitleEventsDropdown = new Typo.partials.Heading({
+            const TitleEventsDropdown = new Hig.Typography({
                 "text": "Dropdown that logs lots of events to the console",
-                "size": 3
+                "type": "h2"
             });
 
             TitleEventsDropdown.mount('.test-heading-events');

@@ -6,13 +6,13 @@
 
         <style>
             body{
-                margin: 50px;
+                margin: 30px;
             }
             .test-container{
                 margin-bottom: 50px;
             }
             .test-container > div{
-                margin: 10px;
+                margin: 10px 0;
             }
         </style>
     </head>
@@ -59,15 +59,13 @@
         </div>
         <script>
 
-            var Typo = new Hig.Typography();
-
             // ----------------------------
             // PRIMARY BUTTON
             // ----------------------------
 
-            var TitlePrimaryButton = new Typo.partials.Heading({
+            var TitlePrimaryButton = new Hig.Typography({
                 "text": "Primary Button",
-                "size": 3
+                "type": "h2"
             });
 
             TitlePrimaryButton.mount('.test-typo-primary');
@@ -121,9 +119,9 @@
             // Secondary BUTTON
             // ----------------------------
 
-            var TitleSecondaryButton = new Typo.partials.Heading({
+            var TitleSecondaryButton = new Hig.Typography({
                 "text": "Secondary Button",
-                "size": 3
+                "type": "h2"
             });
 
             TitleSecondaryButton.mount('.test-typo-secondary');
@@ -182,9 +180,9 @@
             // Flat BUTTON
             // ----------------------------
 
-            var TitleFlatButton = new Typo.partials.Heading({
+            var TitleFlatButton = new Hig.Typography({
                 "text": "Flat Button",
-                "size": 3
+                "type": "h2"
             });
 
             TitleFlatButton.mount('.test-typo-flat');
@@ -243,9 +241,9 @@
             // JAVASCRIPT EVENT TESTS
             // ----------------------------
 
-            var TitleJS = new Typo.partials.Heading({
+            var TitleJS = new Hig.Typography({
                 "text": "Javascript Event Tests",
-                "size": 3
+                "type": "h2"
             });
 
             TitleJS.mount('.test-typo-js');

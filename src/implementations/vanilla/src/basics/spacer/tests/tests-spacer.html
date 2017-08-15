@@ -7,7 +7,7 @@
 
   <style>
     body {
-      padding: 30px;
+      margin: 30px;
       font-family: 'ArtifaktElement';
     }
 
@@ -48,7 +48,14 @@
 
 <body>
 
+  <div class='typo-holder-title'></div>
+
   <script>
+    new Hig.Typography({
+        "text": "HIG Spacer",
+        "type": "h2"
+    }).mount('.typo-holder-title');
+
     function renderExample(spec) {
       renderHeader(spec);
 

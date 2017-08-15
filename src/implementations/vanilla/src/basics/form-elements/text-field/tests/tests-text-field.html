@@ -5,7 +5,7 @@
 
         <style>
             body{
-                padding: 30px;
+                margin: 30px;
             }
 
             .test-group {
@@ -40,15 +40,14 @@
         </div>
 
         <script>
-            const Heading = Hig.Typography._partials.Heading;
             const FormElements = new Hig.FormElements();
             const TextField = FormElements.partials.TextField;
 
             // TEXT FIELD CONFIGURED WITH DEFAULTS
 
-            const DefaultHeading = new Heading({
+            const DefaultHeading = new Hig.Typography({
                 text: "TextField configured with defaults",
-                size: 3
+                type: "h2"
             });
 
             const DefaultTextField = new TextField({
@@ -64,9 +63,9 @@
 
             // TEXT FIELD DISABLED
 
-            const DisabledHeading = new Heading({
+            const DisabledHeading = new Hig.Typography({
                 text: "Disabled TextField",
-                size: 3
+                type: "h2"
             });
 
             const DisabledTextField = new TextField({
@@ -81,9 +80,9 @@
 
             // TEXT FIELD WITH ICON
 
-            const IconHeading = new Heading({
+            const IconHeading = new Hig.Typography({
                 text: "TextField with icon",
-                size: 3
+                type: "h2"
             });
 
             const IconTextField = new TextField({
@@ -101,15 +100,14 @@
 
             // TEXT FIELD CONFIGURED WITH SETTERS
 
-            const SetterHeading = new Heading({
+            const SetterHeading = new Hig.Typography({
                 text: "TextField configured with setters",
-                size: 3,
-                icon: 'assets'
+                type: "h2"
             });
+            SetterHeading.mount('.tests-text-field-update-heading');
 
             const SetterTextField = new TextField();
-
-            SetterHeading.mount('.tests-text-field-update-heading');
+            
             SetterTextField.mount('.tests-text-field-update');
 
             SetterTextField.setLabel('This is an updated label');
@@ -123,9 +121,9 @@
 
             // TEXT FIELD WITH EVENT LISTENERS
 
-            const EventsHeading = new Heading({
+            const EventsHeading = new Hig.Typography({
                 text: "TextField that logs events to the console",
-                size: 3
+                type: "h2"
             });
 
             const EventsTextField = new TextField({
