@@ -1,5 +1,7 @@
 # Human Interface Guidelines
 
+### Current state of CI: [![CircleCI](https://circleci.com/gh/Autodesk/hig.svg?style=svg)](https://circleci.com/gh/Autodesk/hig)
+
 HIG is Autodesk's unified design design system, so we can build better products faster. 
 
 HIG aims to provide implementations for the mayor platforms (web/native ios/native android/...) with one **shared interface.json** that makes sure all the different implementations are consistent across the platforms. To understand how we structured the HIG, please go and read our [interface.json](src/interface/interface.json).

@@ -5,18 +5,18 @@ import { Button, Modal } from '../../react-hig';
 class ModalSection extends Component {
   constructor() {
     super();
-    this.state = { isOpen: false };
+    this.state = { isOpen: true };
   }
 
   closeModal = (event) => {
     event.preventDefault();
     this.setState({ isOpen: false });
-  }
+  };
 
   openModal = (event) => {
     event.preventDefault();
     this.setState({ isOpen: true });
-  }
+  };
 
   render() {
     const buttonProps = [
@@ -29,12 +29,11 @@ class ModalSection extends Component {
         <Button title="Open modal" onClick={this.openModal} />
         <Modal
           title="Are you sure?"
-          open={this.state.isOpen}
+          isOpen={this.state.isOpen}
           buttons={buttonProps}
           body="This is the body of my modal"
           headerColor="gray"
-          onCloseClick={this.closeModal}
-          onOverlayClick={this.closeModal}
+          onClose={this.closeModal}
         >
           <h1>This is my modal content</h1>
         </Modal>

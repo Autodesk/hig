@@ -3,44 +3,48 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { text, select, boolean } from '@storybook/addon-knobs';
 
-import Modal from '../../adapters/ModalAdapter';
+import  Modal  from './Modal';
 
 storiesOf('Modal', module)
-  .addWithInfo('Standard Modal', ``, () => {
+  .addWithInfo('Basic Modal', ``, () => {
     const headerColorOptions = {
       default: 'Default',
       gray: 'Gray',
       slate: 'Slate'
-    }
+    };
 
     const buttonTypeOptions = {
       primary: 'Primary',
       secondary: 'Secondary',
       flat: 'Flat'
-    }
+    };
 
     const buttonProps = [
       {
         title: text('Button 1 title', 'Cancel'),
         type: select('Button 1 type', buttonTypeOptions, 'secondary'),
-        onClick: action
+        onClick: action('button 1ONE!!!')
       },
-      {
-        title: text('Button 2 title', 'Ok'),
+      { title: text('Button 2 title', 'Ok'),
         type: select('Button 2 type', buttonTypeOptions, 'primary'),
-        onClick: action
-      }
-    ]
+        onClick: action("BUTTON 2")
+      },
+      { title: "WAAAAT", type: 'Secondary', onClick: action('u cant change this')}
+    ];
 
     return (
-      <Modal
-        title={text('Title', 'Are you sure you want to do that?')}
-        headerColor={select('Header color', headerColorOptions, 'default')}
-        body={text('Body', 'This action could have some pretty serious consequences. You should give this a little thought.')}
-        open={boolean('Open', true)}
-        onCloseClick={action}
-        onOverlayClick={action}
-        buttons={buttonProps}
-      />
+      <div>
+        <Modal
+          title={'Wait a minute...'}
+          headerColor={'Gray'}
+          isOpen={boolean("isOpen", true)}
+          body="Here is some stuff"
+          buttons={buttonProps}
+          onClose={action('onClose')}
+        >
+          <h2>Heads up, little buddy!</h2>
+          <p>This action could have some pretty serious consequences. You should give this a little thought.</p>
+        </Modal>
+      </div>
     );
   });
