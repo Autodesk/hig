@@ -10,126 +10,6 @@
         }
     },
     "basics": {
-        "Button": {
-            "methods": {
-                "setTitle": {
-                    "desc": "sets the title of a button",
-                    "params": [
-                        "{String} title - new title for the button"
-                    ]
-                },
-                "setLink": {
-                    "desc": "sets the link of a button",
-                    "params": [
-                        "{String} link - new link for the button"
-                    ]
-                },
-                "setType": {
-                    "desc": "sets the type of a button",
-                    "params": [
-                        "{String} type can be either: primary (default), secondary or flat"
-                    ]
-                },
-                "setSize": {
-                    "desc": "sets the size of a button",
-                    "params": [
-                        "{String} size can be either: standard (default), small, large"
-                    ]
-                },
-                "setIcon": {
-                    "desc": "sets the icon of a button",
-                    "params": [
-                        "{String} icon ID"
-                    ]
-                },
-                "disable": {
-                    "desc": "make the button disabled"
-                },
-                "enable": {
-                    "desc": "make the button enabled again after disabled state"
-                },
-                "onBlur": {
-                    "desc": "Calls the provided callback when the user moves focus away from the button",
-                    "params": "HIG.abstract.EventObject.params",
-                    "returns": "HIG.abstract.EventObject.returns"
-                },
-                "onClick": {
-                    "desc": "Calls the provided callback when user clicks on the button",
-                    "params": "HIG.abstract.EventObject.params",
-                    "returns": "HIG.abstract.EventObject.returns"
-                },
-                "onHover": {
-                    "desc": "Calls the provided callback when user moves the mouse over the button",
-                    "params": "HIG.abstract.EventObject.params",
-                    "returns": "HIG.abstract.EventObject.returns"
-                },
-                "onFocus": {
-                    "desc": "Calls the provided callback when user puts focus on the button",
-                    "params": "HIG.abstract.EventObject.params",
-                    "returns": "HIG.abstract.EventObject.returns"
-                }
-            },
-            "defaults": {
-                "title": "{String} title of the button",
-                "link": "{String} link of the button",
-                "type": "{String} type of the button: primary (default), secondary or flat",
-                "size": "{String} size of the button: standard (default), small, large",
-                "icon": "{String} (optional) ID of the icon"
-            }
-        },
-        "IconButton": {
-            "methods": {
-                "setTitle": {
-                    "desc": "sets the title of a button",
-                    "params": [
-                        "{String} title - new title for the button"
-                    ]
-                },
-                "setLink": {
-                    "desc": "sets the link of a button",
-                    "params": [
-                        "{String} link - new link for the button"
-                    ]
-                },
-                "setIcon": {
-                    "desc": "sets the icon of a button",
-                    "params": [
-                        "{String} icon - icon ID"
-                    ]
-                },
-                "disable": {
-                    "desc": "make the button disabled"
-                },
-                "enable": {
-                    "desc": "make the button enabled again after disabled state"
-                },
-                "onClick": {
-                    "desc": "Calls the provided callback when user clicks on the button",
-                    "params": "HIG.abstract.EventObject.params",
-                    "returns": "HIG.abstract.EventObject.returns"
-                },
-                "onHover": {
-                    "desc": "Calls the provided callback when user moves the mouse over the button",
-                    "params": "HIG.abstract.EventObject.params",
-                    "returns": "HIG.abstract.EventObject.returns"
-                },
-                "onFocus": {
-                    "desc": "Calls the provided callback when user puts focus on the button",
-                    "params": "HIG.abstract.EventObject.params",
-                    "returns": "HIG.abstract.EventObject.returns"
-                },
-                "onBlur": {
-                    "desc": "Calls the provided callback when user puts focus away from icon button",
-                    "params": "HIG.abstract.EventObject.params",
-                    "returns": "HIG.abstract.EventObject.returns"
-                }
-            },
-            "defaults": {
-                "title": "{String} title of the button",
-                "link": "{String} link of the button",
-                "icon": "{String} (optional) ID of the icon"
-            }
-        },
         "Spacer": {
             "defaults": {
                 "type": "{String - 'stack', 'inline'} type of the spacer",
@@ -791,6 +671,126 @@
         }
     },
     "components": {
+      "Button": {
+        "methods": {
+            "setTitle": {
+                "desc": "sets the title of a button",
+                "params": [
+                    "{String} title - new title for the button"
+                ]
+            },
+            "setLink": {
+                "desc": "sets the link of a button",
+                "params": [
+                    "{String} link - new link for the button"
+                ]
+            },
+            "setType": {
+                "desc": "sets the type of a button",
+                "params": [
+                    "{String} type can be either: primary (default), secondary or flat"
+                ]
+            },
+            "setSize": {
+                "desc": "sets the size of a button",
+                "params": [
+                    "{String} size can be either: standard (default), small, large"
+                ]
+            },
+            "setIcon": {
+                "desc": "sets the icon of a button",
+                "params": [
+                    "{String} icon ID"
+                ]
+            },
+            "disable": {
+                "desc": "make the button disabled"
+            },
+            "enable": {
+                "desc": "make the button enabled again after disabled state"
+            },
+            "onBlur": {
+                "desc": "Calls the provided callback when the user moves focus away from the button",
+                "params": "HIG.abstract.EventObject.params",
+                "returns": "HIG.abstract.EventObject.returns"
+            },
+            "onClick": {
+                "desc": "Calls the provided callback when user clicks on the button",
+                "params": "HIG.abstract.EventObject.params",
+                "returns": "HIG.abstract.EventObject.returns"
+            },
+            "onHover": {
+                "desc": "Calls the provided callback when user moves the mouse over the button",
+                "params": "HIG.abstract.EventObject.params",
+                "returns": "HIG.abstract.EventObject.returns"
+            },
+            "onFocus": {
+                "desc": "Calls the provided callback when user puts focus on the button",
+                "params": "HIG.abstract.EventObject.params",
+                "returns": "HIG.abstract.EventObject.returns"
+            }
+        },
+        "defaults": {
+            "title": "{String} title of the button",
+            "link": "{String} link of the button",
+            "type": "{String} type of the button: primary (default), secondary or flat",
+            "size": "{String} size of the button: standard (default), small, large",
+            "icon": "{String} (optional) ID of the icon"
+        }
+    },
+    "IconButton": {
+        "methods": {
+            "setTitle": {
+                "desc": "sets the title of a button",
+                "params": [
+                    "{String} title - new title for the button"
+                ]
+            },
+            "setLink": {
+                "desc": "sets the link of a button",
+                "params": [
+                    "{String} link - new link for the button"
+                ]
+            },
+            "setIcon": {
+                "desc": "sets the icon of a button",
+                "params": [
+                    "{String} icon - icon ID"
+                ]
+            },
+            "disable": {
+                "desc": "make the button disabled"
+            },
+            "enable": {
+                "desc": "make the button enabled again after disabled state"
+            },
+            "onClick": {
+                "desc": "Calls the provided callback when user clicks on the button",
+                "params": "HIG.abstract.EventObject.params",
+                "returns": "HIG.abstract.EventObject.returns"
+            },
+            "onHover": {
+                "desc": "Calls the provided callback when user moves the mouse over the button",
+                "params": "HIG.abstract.EventObject.params",
+                "returns": "HIG.abstract.EventObject.returns"
+            },
+            "onFocus": {
+                "desc": "Calls the provided callback when user puts focus on the button",
+                "params": "HIG.abstract.EventObject.params",
+                "returns": "HIG.abstract.EventObject.returns"
+            },
+            "onBlur": {
+                "desc": "Calls the provided callback when user puts focus away from icon button",
+                "params": "HIG.abstract.EventObject.params",
+                "returns": "HIG.abstract.EventObject.returns"
+            }
+        },
+        "defaults": {
+            "title": "{String} title of the button",
+            "link": "{String} link of the button",
+            "icon": "{String} (optional) ID of the icon"
+        }
+      },
       "GlobalNav": {
         "methods": {
           "addSideNav": {
