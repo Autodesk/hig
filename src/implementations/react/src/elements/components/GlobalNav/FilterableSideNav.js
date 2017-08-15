@@ -19,7 +19,8 @@ class FilterableSideNav extends Component {
     super(props);
 
     this.state = {
-      query: ''
+      query: '',
+      modules: {}
     }
   }
 
@@ -55,6 +56,26 @@ class FilterableSideNav extends Component {
     this.setState({ query: event.target.value });
   }
 
+  moduleState(section, module) {
+    const moduleKey = `${section.headerLabel}-${module.label}`;
+    return this.state.modules[moduleKey] || { minimized: true };
+  }
+
+  toggleModule(section, module) {
+    const moduleKey = `${section.headerLabel}-${module.label}`;
+    const moduleState = this.moduleState(section, module);
+
+    this.setState({
+      modules: {
+        ...this.state.modules,
+        [moduleKey]: {
+          ...moduleState,
+          minimized: !moduleState.minimized
+        }
+      }
+    });
+  }
+
   render() {
     const sections = filterSideNavSections(this.props.sections, this.props.query || this.state.query);
 
@@ -64,7 +85,8 @@ class FilterableSideNav extends Component {
           {sections.map(section => {
             return (
               <Section
-                {...section}
+                headerLabel={section.headerLabel}
+                headerName={section.headerName}
                 key={`${section.headerLabel}-${section.headerName}`}
               >
                 <SectionCollapse />
@@ -72,6 +94,9 @@ class FilterableSideNav extends Component {
                   return (
                     <Group key={i}>
                       {group.modules.map(module => {
+                        const moduleState = this.moduleState(section, module);
+                        const submodules = moduleState.minimized ? [] : module.submodules;
+
                         return (
                           <Module
                             icon={module.icon}
@@ -79,8 +104,8 @@ class FilterableSideNav extends Component {
                             title={module.label}
                             key={module.label}
                           >
-                            {module.submodules.length > 0 ? <ModuleCollapse /> : null}
-                            {module.submodules.map(submodule => {
+                            {module.submodules.length > 0 ? <ModuleCollapse minimized={moduleState.minimized} onClick={this.toggleModule.bind(this, section, module)} /> : null}
+                            {submodules.map(submodule => {
                               return (
                                 <Submodule
                                   title={submodule.label}
