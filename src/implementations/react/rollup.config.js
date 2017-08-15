@@ -4,7 +4,7 @@ import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import reactPreset from 'babel-preset-react';
 import externalhelpers from 'babel-plugin-external-helpers';
-import transformlassproperties from 'babel-plugin-transform-class-properties';
+import transformclassproperties from 'babel-plugin-transform-class-properties';
 import transformobjectrestspread from 'babel-plugin-transform-object-rest-spread';
 
 const pkg = JSON.parse(fs.readFileSync('./package.json'));
@@ -45,7 +45,7 @@ export default {
       ],
       "plugins": [
         externalhelpers,
-        transformlassproperties,
+        transformclassproperties,
         [
           transformobjectrestspread,
           {
