@@ -1,0 +1,68 @@
+@import '~basics/fonts/fonts.scss';
+@import '~basics/colors/colors.scss';
+
+.hig__typography{
+  font-family: 'ArtifaktElement', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  color: color('hig-gray-10');
+
+  // Attempt to do antialiasing at pixel level instead of subpixel
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  // BOLD
+  &__bold{
+    font-weight: 700;
+  }
+
+  // DISABLED
+  &__disabled{
+    color: color('hig-gray-40');
+  }
+
+  // CAPTION
+  &__caption{
+    font-size: 12px;
+    line-height: 16px;
+  }
+  
+  // HEADER
+  &__h1{
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 48px;
+    color: color('hig-gray-10');
+  }
+
+  &__h2{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: color('hig-gray-10');
+  }
+
+  &__h3{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 32px;
+    color: color('hig-gray-10');
+  }
+
+  &__sub1{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    color: color('hig-gray-30');
+  }
+
+  &__sub2{
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    color: color('hig-gray-30');
+  }
+
+
+}

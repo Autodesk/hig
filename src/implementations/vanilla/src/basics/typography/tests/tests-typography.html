@@ -10,111 +10,136 @@
             .tests-typo-group{
                 margin: 50px 0;
             }
-            .tests-typo-type{
-                margin: 10px 0;
-                padding: 10px;
-                border-radius: 5px;
-            }
         </style>
     </head>
     <body>
         <div class='tests-typo-pagetitle'></div>
+        <div class='tests-typo-subpagetitle'></div>
         
         <div class='tests-typo-group'>
-            <div class='tests-typo-type hig__colors__hig-white--color hig__colors__hig-slate-20--background hig__typo'>Headlines</div>
+            <div class='tests-typo-header-title'></div>
             
             <div class='tests-typo-headings-h1'></div>
             <div class='tests-typo-headings-h2'></div>
             <div class='tests-typo-headings-h3'></div>
-            <div class='tests-typo-headings-h4'></div>
+            <div class='tests-typo-headings-sub1'></div>
+            <div class='tests-typo-headings-sub2'></div>
 
         </div>
 
         <div class='tests-typo-group'>
-            <div class='tests-typo-type hig__colors__hig-white--color hig__colors__hig-slate-20--background hig__typo'>Body</div>
+            <div class='tests-typo-body-title'></div>
 
             <div class='tests-typo-body'></div>
             <div class='tests-typo-bodybold'></div>
+            <div class='tests-typo-disabled'></div>
             <div class='tests-typo-caption'></div>
-
         </div>
 
         <script>
-            var Typography = new Hig.Typography();
-
-            // H1 Page Title
-
-            var PageTitle = new Typography.partials.Heading({
-                "text": "Typography - HIG Light",
-                "size": 1
-            });
-
-            PageTitle.mount(".tests-typo-pagetitle");
-
+            // ------
+            // HEADER
+            // ------
+            
             // H1
-
-            var H1 = new Typography.partials.Heading({
+            var H1 = new Hig.Typography({
                 "text": "H1: The quick brown fox jumps over the lazy dog",
-                "size": 1
+                "type": "h1"
             });
-
             H1.mount(".tests-typo-headings-h1");
 
             // H2
-
-            var H2 = new Typography.partials.Heading({
+            var H2 = new Hig.Typography({
                 "text": "H2: The quick brown fox jumps over the lazy dog",
-                "size": 2
+                "type": "h2"
             });
-
             H2.mount(".tests-typo-headings-h2");
 
             // H3
-
-            var H3 = new Typography.partials.Heading({
-                "text": "H3: The quick brown fox jumps over the lazy dog",
-                "size": 3
+            var H3 = new Hig.Typography({
+                "text": "H3: This text is wrong",
+                "type": "h2" // we're updating to h3 few lines below
             });
-
             H3.mount(".tests-typo-headings-h3");
 
-            // H4 + test setText and setSize update method
+            // Test setText and setSize update method
+            H3.setText("H3: The quick brown fox jumps over the lazy dog");
+            H3.setType("h3"); 
 
-            var H4 = new Typography.partials.Heading({
-                "text": "H4: This text is wrong",
-                "size": 1 // we're updating to 4 few lines below
+            // SUB 1
+            var Sub1 = new Hig.Typography({
+                "text": "Sub1: The quick brown fox jumps over the lazy dog",
+                "type": "sub1"
             });
-
-            H4.mount(".tests-typo-headings-h4");
-
-            H4.setText("H4: The quick brown fox jumps over the lazy dog");
-            H4.setSize(4);
-
-            // Body
-
-            var Body = new Typography.partials.Body({
-                "text": "Standard: The quick brown fox jumps over the lazy dog"
+            Sub1.mount(".tests-typo-headings-sub1");
+            
+            // SUB 2
+            var Sub2 = new Hig.Typography({
+                "text": "Sub2: The quick brown fox jumps over the lazy dog",
+                "type": "sub2"
             });
+            Sub2.mount(".tests-typo-headings-sub2");
 
+            // ----
+            // BODY
+            // ----
+
+            var Body = new Hig.Typography({
+                "text": "Standard: The quick brown fox jumps over the lazy dog",
+                "type": "body"
+            });
             Body.mount(".tests-typo-body");
 
-            // Body Bold
-
-            var BodyBold = new Typography.partials.Body({
-                "text": "Bold: The quick brown fox jumps over the lazy dog"
+            // Bold
+            var BodyBold = new Hig.Typography({
+                "text": "Bold: The quick brown fox jumps over the lazy dog",
+                "type": "bold"
             });
-            
             BodyBold.mount(".tests-typo-bodybold");
 
-            BodyBold = BodyBold.makeBold();
+            // Disabled
+            var disabled = new Hig.Typography({
+                "text": "Disabled: The quick brown fox jumps over the lazy dog",
+                "type": "disabled"
+            });
+            disabled.mount(".tests-typo-disabled");
 
             // Caption
-
-            var Caption = new Typography.partials.Caption({
-                "text": "Caption: The quick brown fox jumps over the lazy dog"
+            var Caption = new Hig.Typography({
+                "text": "Caption: The quick brown fox jumps over the lazy dog",
+                "type": "caption"
             });
-
             Caption.mount(".tests-typo-caption");
+
+
+            // ---------------------------
+            // SPECIFIC TEST PAGE ELEMENTS
+            // ---------------------------
+
+            var PageTitle = new Hig.Typography({
+                "text": "Typography - HIG Light",
+                "type": "h2"
+            });
+            PageTitle.mount(".tests-typo-pagetitle");
+
+            var SubPageTitle = new Hig.Typography({
+                "text": "All fonts are Artifakt Element.",
+                "type": "sub1"
+            });
+            SubPageTitle.mount(".tests-typo-subpagetitle");
+
+            var HeaderTitle = new Hig.Typography({
+                "text": "Header",
+                "type": "h2"
+            });
+            HeaderTitle.mount(".tests-typo-header-title");
+
+            var BodyTitle = new Hig.Typography({
+                "text": "Body",
+                "type": "h2"
+            });
+            BodyTitle.mount(".tests-typo-body-title");
+
         </script>
 
     </body>

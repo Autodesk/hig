@@ -164,56 +164,23 @@
             }
         },
         "Typography": {
-            "partials": {
-                "Heading": {
-                    "methods":{
-                        "setText": {
-                            "desc": "sets the text",
-                            "params": [
-                                "{String} text - text you want to display"
-                            ]
-                        },
-                        "setSize": {
-                            "desc": "sets the size of a heading",
-                            "params": [
-                                "{Integer} 1 to 4, 1 being bigger heading and 4 being smallest, corresponds to h1-h4"
-                            ]
-                        }
-                    },
-                    "defaults": {
-                        "text": "{String} text you want to display",
-                        "size": "{Integer} 1 to 4, 1 being bigger heading and 4 being smallest, corresponds to h1-h4"
-                    }
+            "methods":{
+                "setText": {
+                    "desc": "sets the text",
+                    "params": [
+                        "{String} text - text you want to display"
+                    ]
                 },
-                "Body": {
-                    "methods":{
-                        "setText": {
-                            "desc": "sets the text",
-                            "params": [
-                                "{String} text - text you want to display"
-                            ]
-                        },
-                        "makeBold": {
-                            "desc": "make the text bold"
-                        }
-                    },
-                    "defaults": {
-                        "text": "{String} text you want to display"
-                    }
-                },
-                "Caption": {
-                    "methods":{
-                        "setText": {
-                            "desc": "sets the text",
-                            "params": [
-                                "{String} text - text you want to display"
-                            ]
-                        }
-                    },
-                    "defaults": {
-                        "text": "{String} text you want to display"
-                    }
+                "setType": {
+                    "desc": "sets the type of typography",
+                    "params": [
+                        "{String} h1, h2, h3, sub1, sub2, body, bold, disabled or caption"
+                    ]
                 }
+            },
+            "defaults": {
+                "text": "{String} text you want to display",
+                "type": "{String} h1, h2, h3, sub1, sub2, body, bold, disabled or caption"
             }
         },
         "FormElements": {
