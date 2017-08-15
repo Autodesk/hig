@@ -7,16 +7,17 @@ module.exports = {
   },
   'settings': {
     'import/resolver': {
-      'babel-module': {}
+      'babel-module': {},
+      'webpack': true
     }
   },
   'globals': {
     gemini: true,
   },
   'rules': {
-    'no-underscore-dangle': 0,
     'class-methods-use-this': 0,
-    'import/no-extraneous-dependencies': 0,
-    'import/no-unresolved': 0
+    'max-len': [2, { code: 100 }],
+    'no-underscore-dangle': 0,
+    'import/no-extraneous-dependencies': 0
   }
 };

@@ -1,10 +1,9 @@
 import './profile-flyout-content.scss';
 
-var Template = require('./profile-flyout-content.html');
-var Interface = require('interface.json');
-var Core = require('_core.js');
+const Template = require('./profile-flyout-content.html');
+const Core = require('_core.js');
 
-var Button = require('../../../../../basics/button/button.js');
+const Button = require('components/button/button.js');
 
 /**
  * Creates an ProfileFlyoutContent
@@ -13,81 +12,79 @@ var Button = require('../../../../../basics/button/button.js');
  */
 
 class ProfileFlyoutContent extends Core {
+  constructor(options) {
+    super(options);
+    this.options = options;
+    this._render(Template, options);
+  }
 
-    constructor(options){
-        super(options);
-        this.options = options;
-        this._render(Template, options);
-    }
+  _componentDidMount() {
+    this.signOutButton = new Button({
+      title: this.options.signOutLabel,
+      link: this.options.signOutLink,
+      size: 'small',
+      type: 'secondary'
+    });
+    this.mountPartialToComment('SIGN_OUT_BUTTON', this.signOutButton);
 
-    _componentDidMount() {
-        this.signOutButton = new Button({
-            title: this.options.signOutLabel,
-            link: this.options.signOutLink,
-            size: 'small',
-            type: 'secondary'
-        });
-        this.mountPartialToComment('SIGN_OUT_BUTTON', this.signOutButton);
+    this.settingsLink = new Button({
+      title: this.options.profileSettingsLabel,
+      link: this.options.profileSettingsLink,
+      size: 'small',
+      type: 'secondary'
+    });
+    this.mountPartialToComment('SETTINGS_LINK', this.settingsLink);
+  }
 
-        this.settingsLink = new Button({
-            title: this.options.profileSettingsLabel,
-            link: this.options.profileSettingsLink,
-            size: 'small',
-            type: 'secondary'
-        });
-        this.mountPartialToComment('SETTINGS_LINK', this.settingsLink);
-    }
+  setEmail(email) {
+    const el = this.el.querySelector('.src__components__global-nav__top-nav__profile__profile-flyout-content__email');
+    el.textContent = email;
+    el.setAttribute('title', email);
+  }
 
-    setEmail(email) {
-        const el = this.el.querySelector('.src__components__global-nav__top-nav__profile__profile-flyout-content__email');
-        el.textContent = email;
-        el.setAttribute('title', email);
-    }
+  setName(name) {
+    const el = this.el.querySelector('.src__components__global-nav__top-nav__profile__profile-flyout-content__name');
+    el.textContent = name;
+    el.setAttribute('title', name);
+  }
 
-    setName(name) {
-        const el = this.el.querySelector('.src__components__global-nav__top-nav__profile__profile-flyout-content__name')
-        el.textContent = name;
-        el.setAttribute('title', name);
-    }
+  setProfileSettingsLabel(label) {
+    this.settingsLink.setTitle(label);
+  }
 
-    setProfileSettingsLabel(label) {
-        this.settingsLink.setTitle(label);
-    }
+  setSignOutLabel(label) {
+    this.signOutButton.setTitle(label);
+  }
 
-    setSignOutLabel(label) {
-        this.signOutButton.setTitle(label);
-    }
+  setProfileSettingsLink(link) {
+    this.settingsLink.setLink(link);
+  }
 
-    setProfileSettingsLink(link) {
-        this.settingsLink.setLink(link);
-    }
+  setSignOutLink(link) {
+    this.signOutButton.setLink(link);
+  }
 
-    setSignOutLink(link) {
-        this.signOutButton.setLink(link);
-    }
+  onProfileSettingsClick(fn) {
+    return this.settingsLink.onClick(fn);
+  }
 
-    onProfileSettingsClick(fn){
-        return this.settingsLink.onClick(fn);
-    }
-
-    onSignOutClick(fn){
-        return this.signOutButton.onClick(fn);
-    }
-
+  onSignOutClick(fn) {
+    return this.signOutButton.onClick(fn);
+  }
 }
 
 ProfileFlyoutContent._interface = {
-    methods: {
-        "setEmail": {},
-        "setName": {},
-        "setProfileSettingsLabel": {},
-        "setSignOutLabel": {},
-        "setProfileSettingsLink": {},
-        "setSignOutLink": {},
-        "onProfileSettingsClick": {},
-        "onSignOutClick": {},
-    },
-    defaults: {}
+  methods: {
+    setEmail: {},
+    setName: {},
+    setProfileSettingsLabel: {},
+    setSignOutLabel: {},
+    setProfileSettingsLink: {},
+    setSignOutLink: {},
+    onProfileSettingsClick: {},
+    onSignOutClick: {},
+  },
+  defaults: {}
 };
 ProfileFlyoutContent._defaults = {};
 

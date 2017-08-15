@@ -1,12 +1,12 @@
 import './global-nav.scss';
 
-var Template = require('./global-nav.html');
-var Interface = require('interface.json');
-var Core = require('_core.js');
+const Template = require('./global-nav.html');
+const Interface = require('interface.json');
+const Core = require('_core.js');
 
-var SideNav = require('./side-nav/side-nav.js');
-var TopNav = require('./top-nav/top-nav.js');
-var SubNav = require('./sub-nav/sub-nav.js');
+const SideNav = require('./side-nav/side-nav.js');
+const TopNav = require('./top-nav/top-nav.js');
+const SubNav = require('./sub-nav/sub-nav.js');
 
 /**
  * Creates an GlobalNav
@@ -15,54 +15,52 @@ var SubNav = require('./sub-nav/sub-nav.js');
  */
 
 class GlobalNav extends Core {
+  constructor(options) {
+    super(options);
+    this._render(Template, options);
+  }
 
-    constructor(options){
-        super(options);
-        this._render(Template, options);
+  addSideNav(sideNavInstance) {
+    if (sideNavInstance instanceof SideNav) {
+      this.mountPartialToComment('SIDENAV', sideNavInstance);
     }
+  }
 
-    addSideNav(sideNavInstance){
-        if(sideNavInstance instanceof SideNav){
-            this.mountPartialToComment('SIDENAV', sideNavInstance)
-        }
+  addTopNav(topNavInstance) {
+    if (topNavInstance instanceof TopNav) {
+      this.mountPartialToComment('TOPNAV', topNavInstance);
     }
+  }
 
-    addTopNav(topNavInstance){
-        if(topNavInstance instanceof TopNav){
-            this.mountPartialToComment('TOPNAV', topNavInstance);
-        }
+  addSubNav(subNavInstance) {
+    if (subNavInstance instanceof SubNav) {
+      this.mountPartialToComment('SUBNAV', subNavInstance);
     }
+  }
 
-    addSubNav(subNavInstance){
-        if(subNavInstance instanceof SubNav){
-            this.mountPartialToComment('SUBNAV', subNavInstance);
-        }
-    }
+  addSlot(slotElement) {
+    this.mountPartialToComment('SLOT', slotElement);
+  }
 
-    addSlot(slotElement){
-        this.mountPartialToComment('SLOT', slotElement);
-    }
+  showSideNav() {
+    this.el.classList.add('hig__global-nav--open');
+  }
 
-    showSideNav(){
-        this.el.classList.add("hig__global-nav--open");
-    }
+  hideSideNav() {
+    this.el.classList.remove('hig__global-nav--open');
+  }
 
-    hideSideNav(){
-        this.el.classList.remove("hig__global-nav--open");
-    }
-
-    onHoverOutside(fn) {
-        return this._attachListener("hover", ".hig__global-nav__container", this.el, fn);
-    }
-
+  onHoverOutside(fn) {
+    return this._attachListener('hover', '.hig__global-nav__container', this.el, fn);
+  }
 }
 
-GlobalNav._interface = Interface['components']['GlobalNav'];
+GlobalNav._interface = Interface.components.GlobalNav;
 GlobalNav._defaults = {};
 GlobalNav._partials = {
-    SideNav: SideNav,
-    TopNav: TopNav,
-    SubNav: SubNav
-}
+  SideNav,
+  TopNav,
+  SubNav
+};
 
 module.exports = GlobalNav;

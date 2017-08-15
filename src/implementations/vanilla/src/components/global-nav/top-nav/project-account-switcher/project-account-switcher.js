@@ -4,7 +4,7 @@ var Template = require('./project-account-switcher.html');
 var Interface = require('interface.json');
 var Core = require('_core.js');
 
-var Button = require('../../../../basics/button/button.js');
+var Button = require('../../../button/button.js');
 var Flyout = require('../../../../basics/flyout/flyout.js');
 var Project = require('./project/project.js');
 var Account = require('./account/account.js');
