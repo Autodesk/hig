@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import SideNav from '../../../adapters/GlobalNav/SideNav/SideNavAdapter';
+import filterSideNavSections from './filterSideNavSections';
 
 const LinkList = SideNav.LinkList;
 const Link = SideNav.LinkList.Link;
@@ -14,33 +15,49 @@ const ModuleCollapse = SideNav.SectionList.Section.Group.Module.ModuleCollapse;
 const Submodule = SideNav.SectionList.Section.Group.Module.Submodule;
 
 class FilterableSideNav extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      modules: {}
+    }
+  }
+
   static propTypes = {
     query: PropTypes.string,
-    items: PropTypes.shape({
-      links: PropTypes.arrayOf(PropTypes.object),
-      sections: PropTypes.arrayOf(
-        PropTypes.shape({
-          headerLabel: PropTypes.string,
-          headerName: PropTypes.string,
-          groups: PropTypes.arrayOf(
-            PropTypes.shape({
-              modules: PropTypes.arrayOf(
-                PropTypes.shape({
-                  submodules: PropTypes.arrayOf(PropTypes.object)
-                })
-              )
-            })
-          )
-        })
-      )
-    }).isRequired
+    links: PropTypes.arrayOf(PropTypes.object),
+    sections: PropTypes.arrayOf(
+      PropTypes.shape({
+        headerLabel: PropTypes.string,
+        headerName: PropTypes.string,
+        groups: PropTypes.arrayOf(
+          PropTypes.shape({
+            modules: PropTypes.arrayOf(
+              PropTypes.shape({
+                submodules: PropTypes.arrayOf(PropTypes.shape({
+                  label: PropTypes.string
+                }))
+              })
+            )
+          })
+        )
+      })
+    )
   };
 
+  static defaultProps = {
+    query: '',
+    sections: [],
+    links: []
+  }
+
   render() {
+    const sections = filterSideNavSections(this.props.sections, this.props.query);
+
     return (
       <SideNav>
         <SectionList>
-          {this.props.items.sections.map(section => {
+          {sections.map(section => {
             return (
               <Section
                 {...section}
@@ -79,7 +96,7 @@ class FilterableSideNav extends Component {
           })}
         </SectionList>
         <LinkList>
-          {this.props.items.links.map((link, i) => {
+          {this.props.links.map((link, i) => {
             return <Link {...link} key={link.title} />;
           })}
         </LinkList>
