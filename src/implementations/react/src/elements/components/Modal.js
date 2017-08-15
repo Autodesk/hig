@@ -30,7 +30,7 @@ Modal.propTypes= {
   headerColor: PropTypes.string,
   open: PropTypes.bool,
   onClose: PropTypes.func.isRequired,
-  onModalClick: PropTypes.func
+  children: PropTypes.node
 };
 
 export default Modal;

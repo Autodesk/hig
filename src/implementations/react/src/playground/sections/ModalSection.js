@@ -5,7 +5,7 @@ import { Button, Modal } from '../../react-hig';
 class ModalSection extends Component {
   constructor() {
     super();
-    this.state = { isOpen: true };
+    this.state = { isOpen: false };
   }
 
   closeModal = (event) => {
