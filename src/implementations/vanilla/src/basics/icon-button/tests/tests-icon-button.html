@@ -1,55 +1,61 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="../../../../dist/hig.css">
-        <script type="text/javascript" src="../../../../dist/hig.js"></script>
 
-        <style>
-            body{
-                margin: 50px;
-            }
-            .test-container{
-                margin-bottom: 50px;
-            }
-            .test-container > div{
-                margin: 10px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class='test-container'>
-            <div class='test-typo-primary'></div>
+<head>
+    <link rel="stylesheet" href="../../../../dist/hig.css">
+    <script type="text/javascript" src="../../../../dist/hig.js"></script>
 
-            <div class='test-mount-standard'></div>
-            <div class='test-mount-disabled'></div>
-        </div>
+    <style>
+        body {
+            margin: 30px;
+        }
 
-        <div class='test-container'>
-            <div class='test-typo-js'></div>
+        .test-container {
+            margin-bottom: 50px;
+        }
 
-            <div class='test-js-events'></div>
-            <div class='test-js-events-disabled'></div>
-            <div class='test-js-dispose'></div>
-            <div class='test-js-update'></div>
-            <div class='test-js-unmount'></div>
-            <div class='test-js-dispose'></div>
+        .test-container>div {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='test-container'>
+        <div class='test-typo-primary'></div>
+
+        <div class='test-mount-standard'></div>
+        <div class='test-mount-disabled'></div>
+    </div>
+
+    <div class='test-container'>
+        <div class='test-typo-js'></div>
+
+        <div class='test-js-events'></div>
+        <div class='test-js-events-disabled'></div>
+        <div class='test-js-dispose'></div>
+        <div class='test-js-update'></div>
+        <div class='test-js-unmount'></div>
+        <div class='test-js-dispose'></div>
         <script>
-
             var Typo = new Hig.Typography();
 
             // ----------------------------
             // ICON BUTTON
             // ----------------------------
 
-            var TitleIconButton = new Typo.partials.Heading({
+            var TitleIconButton = new Hig.Typography({
                 "text": "Icon Button",
-                "size": "h3"
+                "type": "h2"
             });
 
             TitleIconButton.mount('.test-typo-primary');
 
             // Standard
 
-            var TitleIconButton = new Typo.partials.Heading({ "text": "Standard", "size": 4 });
+            var TitleIconButton = new Hig.Typography({ 
+                "text": "Standard", 
+                "type": "h3"
+            });
             TitleIconButton.mount('.test-mount-standard');
 
             var IconButtonStandard = new Hig.IconButton({
@@ -61,7 +67,10 @@
 
             // Disabled
 
-            var TitleIconButton = new Typo.partials.Heading({ "text": "Disabled", "size": 4 });
+            var TitleIconButton = new Hig.Typography({ 
+                "text": "Disabled", 
+                "type": "h3"
+            });
             TitleIconButton.mount('.test-mount-disabled');
 
             var IconButtonDisabled = new Hig.IconButton({
@@ -78,16 +87,19 @@
             // JAVASCRIPT EVENT TESTS
             // ----------------------------
 
-            var TitleJS = new Typo.partials.Heading({
+            var TitleJS = new Hig.Typography({
                 "text": "Javascript Event Tests",
-                "size": "h3"
+                "type": "h3"
             });
 
             TitleJS.mount('.test-typo-js');
 
             // Regular event callback tests
 
-            var TitleIconButton = new Typo.partials.Heading({ "text": "All events are logged in console", "size": 4 });
+            var TitleIconButton = new Hig.Typography({ 
+                "text": "All events are logged in console", 
+                "type": "h3"
+            });
             TitleIconButton.mount('.test-js-events');
 
             var EventsButton = new Hig.IconButton({
@@ -97,23 +109,26 @@
 
             EventsButton.mount(".test-js-events");
 
-            EventsButton.onClick(function(e){
+            EventsButton.onClick(function (e) {
                 e.preventDefault();
                 console.log("EventsButton CLICK")
             });
 
-            EventsButton.onHover(function(e){
+            EventsButton.onHover(function (e) {
                 console.log("EventsButton HOVER")
             });
 
-            EventsButton.onFocus(function(e){
+            EventsButton.onFocus(function (e) {
                 console.log("EventsButton FOCUS")
             });
 
 
             // Disabled event callback tests
 
-            var TitleIconButton = new Typo.partials.Heading({ "text": "Disabled buttons still trigger hover, focus, and click events", "size": 4 });
+            var TitleIconButton = new Hig.Typography({ 
+                "text": "Disabled buttons still trigger hover, focus, and click events", 
+                "type": "h3"
+            });
             TitleIconButton.mount('.test-js-events-disabled');
 
             var EventsDisabledButton = new Hig.IconButton({
@@ -125,23 +140,26 @@
 
             EventsDisabledButton.disable();
 
-            EventsDisabledButton.onClick(function(e){
+            EventsDisabledButton.onClick(function (e) {
                 e.preventDefault();
                 console.log("EventsDisabledButton CLICK")
             });
 
-            EventsDisabledButton.onHover(function(e){
+            EventsDisabledButton.onHover(function (e) {
                 console.log("EventsDisabledButton HOVER")
             });
 
-            EventsDisabledButton.onFocus(function(e){
+            EventsDisabledButton.onFocus(function (e) {
                 console.log("EventsDisabledButton FOCUS")
             });
 
             // Event Disposing Button
             // Hover or Click should not register
 
-            var TitleIconButton = new Typo.partials.Heading({ "text": "Events disposed button, no events should fire", "size": 4 });
+            var TitleIconButton = new Hig.Typography({ 
+                "text": "Events disposed button, no events should fire", 
+                "type": "h3"
+            });
             TitleIconButton.mount('.test-js-dispose');
 
             var EventDisposeButton = new Hig.IconButton({
@@ -152,13 +170,13 @@
 
             EventDisposeButton.mount(".test-js-dispose");
 
-            var clickDispose = EventDisposeButton.onClick(function(e){
+            var clickDispose = EventDisposeButton.onClick(function (e) {
                 e.preventDefault();
                 console.log("EventDisposeButton CLICK")
             });
             clickDispose();
 
-            var hoverDispose = EventDisposeButton.onHover(function(e){
+            var hoverDispose = EventDisposeButton.onHover(function (e) {
                 console.log("EventDisposeButton HOVER")
             });
             hoverDispose();
@@ -167,7 +185,10 @@
             // Updated Button
             // Update the title and link of the button after creation
 
-            var TitleIconButton = new Typo.partials.Heading({ "text": "Updated Title, Link (Autodesk.com), Size (large), Type (secondary)", "size": 4 });
+            var TitleIconButton = new Hig.Typography({ 
+                "text": "Updated Title, Link (Autodesk.com), Size (large), Type (secondary)", 
+                "type": "h3"
+            });
             TitleIconButton.mount('.test-js-update');
 
             var UpdateButton = new Hig.IconButton({
@@ -185,7 +206,10 @@
             // Unmount a Button
             // Remove a button from the DOM after creation, this button should not render
 
-            var TitleIconButton = new Typo.partials.Heading({ "text": "You should not see this button!", "size": 4 });
+            var TitleIconButton = new Hig.Typography({ 
+                "text": "You should not see this button!", 
+                "type": "h3"
+            });
             TitleIconButton.mount('.test-js-unmount');
 
             var UnmountButton = new Hig.IconButton({
@@ -197,9 +221,8 @@
             UnmountButton.mount(".test-js-unmount");
 
             UnmountButton.unmount();
-
-
         </script>
 
-    </body>
+</body>
+
 </html>

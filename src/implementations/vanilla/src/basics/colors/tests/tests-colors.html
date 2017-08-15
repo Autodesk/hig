@@ -4,6 +4,9 @@
         <script type="text/javascript" src="../../../../dist/hig.js"></script>
 
         <style>
+            body{
+                margin: 30px;
+            }
             .tests-color{
                 display: inline-block;
                 width: 195px;
@@ -26,15 +29,18 @@
                 border: 1px solid black;
             }
             .tests-color-group{
-                padding: 30px 40px;
+                padding: 30px 0;
+            }
+            .tests-color-group:first-child{
+                padding: 0;
             }
         </style>
     </head>
-    <body class='hig__typo'>
+    <body>
         
         <div class='tests-color-group'>
-            <div class='hig__typography__h3'>HIG Background Colors</div>
-            <div class='hig__typography__p'>The UI background colors are the foundational colors for HIG compliant products.</div>
+            <div class='typo-holder-background'></div>
+            <div class='typo-holder-background-sub'></div>
             <div class='tests-color'>
                 <div class='tests-color-cube tests-color-cube--border hig__colors__hig-white--background hig__colors__hig-slate-20--border'></div>
                 hig-white
@@ -50,8 +56,8 @@
         </div>
 
         <div class='tests-color-group'>
-            <div class='hig__typography__h3'>HIG Gray Colors</div>
-            <div class='hig__typography__p'>Should be used in text, icons, lines, and backgrounds.</div>
+            <div class='typo-holder-gray'></div>
+            <div class='typo-holder-gray-sub'></div>
             <div class='tests-color'>
                 <div class='tests-color-cube tests-color-cube--small hig__colors__hig-gray-10--background'></div>
                 hig-gray-10
@@ -83,8 +89,8 @@
         </div>
 
         <div class='tests-color-group'>
-            <div class='hig__typography__h3'>HIG Accent Colors</div>
-            <div class='hig__typography__p'>Should be used as accent colors to draw attention to specific content within the page. </div>
+            <div class='typo-holder-accent'></div>
+            <div class='typo-holder-accent-sub'></div>
             
             <div class='tests-color'>
                 <div class='tests-color-cube tests-color-cube--small hig__colors__hig-blue-20--background'></div>
@@ -153,8 +159,9 @@
         </div>
 
         <div class='tests-color-group'>
-            <div class='hig__typography__h3'>HIG Notification Colors</div>
-            <div class='hig__typography__p'>Colors to be used to draw attention to alerts and warnings.</div>
+            <div class='typo-holder-notification'></div>
+            <div class='typo-holder-notification-sub'></div>
+            
             <div class='tests-color'>
                 <div class='tests-color-cube tests-color-cube--small hig__colors__hig-good-green--background'></div>
                 hig-good-green
@@ -170,8 +177,9 @@
         </div>
 
         <div class='tests-color-group'>
-            <div class='hig__typography__h3'>HIG Data Visualization Colors </div>
-            <div class='hig__typography__p'>Additional colors to be used as within charts, graphs, diagrams.</div>
+            <div class='typo-holder-data'></div>
+            <div class='typo-holder-data-sub'></div>
+
             <div class='tests-color'>
                 <div class='tests-color-cube tests-color-cube--small hig__colors__hig-slate-20--background'></div>
                 hig-slate-20
@@ -223,6 +231,59 @@
         </div>
 
         <script>
+            var Type = new Hig.Typography();
+            Type.applyTypographyToElement("body");
+
+            new Hig.Typography({
+                "text": "HIG Background Colors",
+                "type": "h2"
+            }).mount('.typo-holder-background');
+
+            new Hig.Typography({
+                "text": "The UI background colors are the foundational colors for HIG compliant products.",
+                "type": "body"
+            }).mount('.typo-holder-background-sub');
+
+            new Hig.Typography({
+                "text": "HIG Gray Colors",
+                "type": "h2"
+            }).mount('.typo-holder-gray');
+
+            new Hig.Typography({
+                "text": "Should be used in text, icons, lines, and backgrounds.",
+                "type": "body"
+            }).mount('.typo-holder-gray-sub');
+
+            new Hig.Typography({
+                "text": "HIG Accent Colors",
+                "type": "h2"
+            }).mount('.typo-holder-accent');
+
+            new Hig.Typography({
+                "text": "Should be used as accent colors to draw attention to specific content within the page. ",
+                "type": "body"
+            }).mount('.typo-holder-accent-sub');
+
+            new Hig.Typography({
+                "text": "HIG Notification Colors",
+                "type": "h2"
+            }).mount('.typo-holder-notification');
+
+            new Hig.Typography({
+                "text": "Colors to be used to draw attention to alerts and warnings.",
+                "type": "body"
+            }).mount('.typo-holder-notification-sub');
+
+            new Hig.Typography({
+                "text": "HIG Data Visualization Colors",
+                "type": "h2"
+            }).mount('.typo-holder-data');
+
+            new Hig.Typography({
+                "text": "Additional colors to be used as within charts, graphs, diagrams.",
+                "type": "body"
+            }).mount('.typo-holder-data-sub');
+
             // DISPLAY HEX
             var elements = document.querySelectorAll('.tests-color-cube');
             Array.prototype.forEach.call(elements, function(el, i){

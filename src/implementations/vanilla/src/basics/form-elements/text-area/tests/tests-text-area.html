@@ -1,156 +1,155 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="../../../../../dist/hig.css">
-        <script type="text/javascript" src="../../../../../dist/hig.js"></script>
 
-        <style>
-            body{
-                margin: 50px;
-            }
-            .test-container{
-                margin-bottom: 50px;
-            }
-            .test-container > div{
-                margin: 10px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class='test-container'>
-            <div class='test-typo-default'></div>
-            <div class='test-mount-default'></div>
+<head>
+    <link rel="stylesheet" href="../../../../../dist/hig.css">
+    <script type="text/javascript" src="../../../../../dist/hig.js"></script>
 
-            <div class='test-typo-setter'></div>
-            <div class='test-mount-setter'></div>
+    <style>
+        body {
+            margin: 30px;
+        }
 
-            <div class='test-typo-listener'></div>
-            <div class='test-mount-listener'></div>
+        .test-container {
+            margin-bottom: 50px;
+        }
 
-            <div class='test-group'>
-                <div class='tests-text-area-disabled-heading'></div>
-                <div class='tests-text-area-disabled'></div>
-            </div>
-            <div class='test-group'>
-                <div class='tests-text-area-required-heading'></div>
-                <div class='tests-text-area-required'></div>
-            </div>
+        .test-container>div {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='test-container'>
+        <div class='test-typo-default'></div>
+        <div class='test-mount-default'></div>
+
+        <div class='test-typo-setter'></div>
+        <div class='test-mount-setter'></div>
+
+        <div class='test-typo-listener'></div>
+        <div class='test-mount-listener'></div>
+
+        <div class='test-group'>
+            <div class='tests-text-area-disabled-heading'></div>
+            <div class='tests-text-area-disabled'></div>
         </div>
+        <div class='test-group'>
+            <div class='tests-text-area-required-heading'></div>
+            <div class='tests-text-area-required'></div>
+        </div>
+    </div>
 
-        <script>
+    <script>
+        // ----------------------------
+        // TEXT AREA WITH DEFAULTS
+        // ----------------------------
 
-            var Typo = new Hig.Typography();
+        var TitleDefaultTextArea = new Hig.Typography({
+            "text": "TextArea configured with defaults",
+            "type": "h2"
+        });
 
-            // ----------------------------
-            // TEXT AREA WITH DEFAULTS
-            // ----------------------------
+        TitleDefaultTextArea.mount('.test-typo-default');
 
-            var TitleDefaultTextArea = new Typo.partials.Heading({
-                "text": "TextArea configured with defaults",
-                "size": "h3"
-            });
+        var DefaultTextArea = new Hig.TextArea({
+            label: 'Life story',
+            placeholder: "Tell us your life story",
+            instructions: "Press keys on your keyboard."
+        });
 
-            TitleDefaultTextArea.mount('.test-typo-default');
+        DefaultTextArea.mount(".test-mount-default");
 
-            var DefaultTextArea = new Hig.TextArea({
-                label: 'Life story',
-                placeholder: "Tell us your life story",
-                instructions: "Press keys on your keyboard."
-            });
+        // ----------------------------
+        // TEXT AREA WITH SETTERS
+        // ----------------------------
 
-            DefaultTextArea.mount(".test-mount-default");
+        var TitleListenerTextArea = new Hig.Typography({
+            "text": "TextArea configured with setters",
+            "type": "h2"
+        });
 
-            // ----------------------------
-            // TEXT AREA WITH SETTERS
-            // ----------------------------
+        TitleListenerTextArea.mount('.test-typo-setter');
 
-            var TitleListenerTextArea = new Typo.partials.Heading({
-                "text": "TextArea configured with setters",
-                "size": "h3"
-            });
+        var SetterTextArea = new Hig.TextArea();
 
-            TitleListenerTextArea.mount('.test-typo-setter');
+        SetterTextArea.mount(".test-mount-setter");
 
-            var SetterTextArea = new Hig.TextArea();
-
-            SetterTextArea.mount(".test-mount-setter");
-
-            SetterTextArea.setLabel('Updated label');
-            SetterTextArea.setPlaceholder('Updated placeholder');
-            SetterTextArea.setInstructions('Updated instructions');
-            SetterTextArea.setValue('Updated value');
-
-
-
-            // ----------------------------
-            // TEXT AREA WITH EVENT LISTENERS
-            // ----------------------------
-
-            var TitleListenerTextArea = new Typo.partials.Heading({
-                "text": "TextArea dispatches blur, focus, and change events",
-                "size": "h3"
-            });
-
-            TitleListenerTextArea.mount('.test-typo-listener');
-
-            var ListenersTextArea = new Hig.TextArea({
-                label: '',
-                instructions: 'Events logged to the developer console.'
-            });
-
-            ListenersTextArea.mount(".test-mount-listener");
-
-            function log(event) {
-                const message = event.type + "event triggered";
-                console.log(message);
-            }
-
-            ListenersTextArea.onBlur(log);
-            ListenersTextArea.onChange(log);
-            ListenersTextArea.onFocus(log);
-            ListenersTextArea.onInput(log);
-
-
-            // ----------------------------
-            // Disabled TEXT AREA WITH NON-DEFAULTS
-            // ----------------------------
-            const DisabledHeading = new Typo.partials.Heading({
-                                                                text: "Disabled TextArea",
-                                                                size: 3,
-                                                              });
-
-            const DisabledTextArea = new Hig.TextArea({
-                                                        label: "None shall pass",
-                                                        disabled: true
-                                                      });
-
-            DisabledHeading.mount('.tests-text-area-disabled-heading');
-            DisabledTextArea.mount('.tests-text-area-disabled');
-            DisabledTextArea.disable();
-
-
-            // ----------------------------
-            // REQUIRED TEXT AREA
-            // ----------------------------
-
-            var TitleDefaultTextArea = new Typo.partials.Heading({
-                                                                   "text": "Required TextArea",
-                                                                   "size": "h3"
-                                                                 });
-
-            TitleDefaultTextArea.mount('.tests-text-area-required-heading');
-
-            var DefaultTextArea = new Hig.TextArea({
-                                                     label: 'Tell us your life story',
-                                                     placeholder: "You must tell us",
-                                                     instructions: "Press keys on your keyboard.",
-                                                     required: "No, really, you must"
-                                                   });
-
-            DefaultTextArea.mount(".tests-text-area-required");
+        SetterTextArea.setLabel('Updated label');
+        SetterTextArea.setPlaceholder('Updated placeholder');
+        SetterTextArea.setInstructions('Updated instructions');
+        SetterTextArea.setValue('Updated value');
 
 
 
-        </script>
+        // ----------------------------
+        // TEXT AREA WITH EVENT LISTENERS
+        // ----------------------------
 
-    </body>
+        var TitleListenerTextArea = new Hig.Typography({
+            "text": "TextArea dispatches blur, focus, and change events",
+            "type": "h2"
+        });
+
+        TitleListenerTextArea.mount('.test-typo-listener');
+
+        var ListenersTextArea = new Hig.TextArea({
+            label: '',
+            instructions: 'Events logged to the developer console.'
+        });
+
+        ListenersTextArea.mount(".test-mount-listener");
+
+        function log(event) {
+            const message = event.type + "event triggered";
+            console.log(message);
+        }
+
+        ListenersTextArea.onBlur(log);
+        ListenersTextArea.onChange(log);
+        ListenersTextArea.onFocus(log);
+        ListenersTextArea.onInput(log);
+
+
+        // ----------------------------
+        // Disabled TEXT AREA WITH NON-DEFAULTS
+        // ----------------------------
+        const DisabledHeading = new Hig.Typography({
+            text: "Disabled TextArea",
+            stype: 2,
+        });
+
+        const DisabledTextArea = new Hig.TextArea({
+            label: "None shall pass",
+            disabled: true
+        });
+
+        DisabledHeading.mount('.tests-text-area-disabled-heading');
+        DisabledTextArea.mount('.tests-text-area-disabled');
+        DisabledTextArea.disable();
+
+
+        // ----------------------------
+        // REQUIRED TEXT AREA
+        // ----------------------------
+
+        var TitleDefaultTextArea = new Hig.Typography({
+            "text": "Required TextArea",
+            "type": "h2"
+        });
+
+        TitleDefaultTextArea.mount('.tests-text-area-required-heading');
+
+        var DefaultTextArea = new Hig.TextArea({
+            label: 'Tell us your life story',
+            placeholder: "You must tell us",
+            instructions: "Press keys on your keyboard.",
+            required: "No, really, you must"
+        });
+
+        DefaultTextArea.mount(".tests-text-area-required");
+    </script>
+
+</body>
+
 </html>

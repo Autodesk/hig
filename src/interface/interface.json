@@ -176,6 +176,12 @@
                     "params": [
                         "{String} h1, h2, h3, sub1, sub2, body, bold, disabled or caption"
                     ]
+                },
+                "applyTypographyToElement": {
+                    "desc": "Apply HIG typography to input html element",
+                    "params": [
+                        "{HTMLElement} HTMLElement"
+                    ]
                 }
             },
             "defaults": {

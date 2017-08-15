@@ -41,7 +41,6 @@
 		</div>
 
 		<script>
-			const Heading = Hig.Typography._partials.Heading;
 			const FormElements = new Hig.FormElements();
 			const Range = FormElements.partials.Range;
 
@@ -52,9 +51,9 @@
 
 
 			//RANGE CONFIGURED WITH DEFUAlTS
-			const DefaultHeading1 = new Heading({
+			const DefaultHeading1 = new Hig.Typography({
 				text: "Range configured with defaults",
-				size: 3
+				type: "h2"
 			})
 
 			DefaultHeading1.mount('.tests-range-heading-defaults');
@@ -70,9 +69,9 @@
 
 			// RANGE CONFIGURED WITH SETTERS
 
-			const DefaultHeading = new Heading({
+			const DefaultHeading = new Hig.Typography({
 				text: "Range configured with setters",
-				size: 3
+				type: "h2"
 			});
 
 			DefaultHeading.mount('.tests-range-heading-setters');
@@ -96,9 +95,9 @@
 
 
 			// Default range Disable
-			const DefaultHeadingDisabled = new Heading({
+			const DefaultHeadingDisabled = new Hig.Typography({
 				text: "Disabled Range",
-				size: 3
+				type: "h2"
 			})
 
 			DefaultHeadingDisabled.mount('.tests-range-heading-disabled');
