@@ -13,12 +13,13 @@
             }
             
             .group{
-                margin: 50px;
+                margin: 50px 0;
             }
         </style>
     </head>
     <body class='hig__colors__hig-gray-60--background'>
-        
+        <div class='typo-holder-title'></div>
+
         <div class='group'>
             <div class='typo-holder-common'></div>
             <div class='box hig__shadows__common'></div>
@@ -41,23 +42,28 @@
 
         <script>
             new Hig.Typography({
-                "text": "Common",
+                "text": "HIG Shadows",
                 "type": "h2"
+            }).mount('.typo-holder-title');
+
+            new Hig.Typography({
+                "text": "Common",
+                "type": "h3"
             }).mount('.typo-holder-common');
 
             new Hig.Typography({
                 "text": "Dropshadow",
-                "type": "h2"
+                "type": "h3"
             }).mount('.typo-holder-dropshadow');
 
             new Hig.Typography({
                 "text": "Inner-right",
-                "type": "h2"
+                "type": "h3"
             }).mount('.typo-holder-ir');
 
             new Hig.Typography({
                 "text": "Inner-left",
-                "type": "h2"
+                "type": "h3"
             }).mount('.typo-holder-il');
 
 

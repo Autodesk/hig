@@ -1,120 +1,125 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="../../../../../dist/hig.css">
-        <script type="text/javascript" src="../../../../../dist/hig.js"></script>
 
-        <style>
-            body{
-                padding: 30px;
-            }
+<head>
+	<link rel="stylesheet" href="../../../../../dist/hig.css">
+	<script type="text/javascript" src="../../../../../dist/hig.js"></script>
 
-            .test-group {
-                margin-bottom: 60px;
-            }
-			.tests-range-heading-defaults {
-				margin-bottom: 20px;
-			}
-			.tests-range-heading-disabled {
-				margin-bottom: 20px;
-			}
-			.tests-range-heading-setters {
-				margin-bottom: 20px;
-			}
-        </style>
-    </head>
+	<style>
+		body {
+			margin: 30px;
+		}
 
-	<body>
+		.test-group {
+			margin-bottom: 60px;
+		}
 
-		<div class='test-group'>
-				<div class='tests-range-heading-defaults'></div>
-				<div class='tests-range-defaults'></div>
-		</div>
-		<div class='test-group'>
-				<div class='tests-range-heading-setters'></div>
-				<div class='tests-range-setters'></div>
-		</div>
+		.tests-range-heading-defaults {
+			margin-bottom: 20px;
+		}
 
-		<div class='test-group'>
-				<div class='tests-range-heading-disabled'></div>
-				<div class='tests-range-disabled'></div>
-		</div>
+		.tests-range-heading-disabled {
+			margin-bottom: 20px;
+		}
 
-		<script>
-			const FormElements = new Hig.FormElements();
-			const Range = FormElements.partials.Range;
+		.tests-range-heading-setters {
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
 
-			function log(event) {
-				const message = event.type + "event triggered";
-				console.log(message);
-			}
+<body>
 
+	<div class='test-group'>
+		<div class='tests-range-heading-defaults'></div>
+		<div class='tests-range-defaults'></div>
+	</div>
+	<div class='test-group'>
+		<div class='tests-range-heading-setters'></div>
+		<div class='tests-range-setters'></div>
+	</div>
 
-			//RANGE CONFIGURED WITH DEFUAlTS
-			const DefaultHeading1 = new Hig.Typography({
-				text: "Range configured with defaults",
-				type: "h2"
-			})
+	<div class='test-group'>
+		<div class='tests-range-heading-disabled'></div>
+		<div class='tests-range-disabled'></div>
+	</div>
 
-			DefaultHeading1.mount('.tests-range-heading-defaults');
+	<script>
+		const FormElements = new Hig.FormElements();
+		const Range = FormElements.partials.Range;
 
-			const DefaultRange1 = new Range ({
-				max: 10,
-				value: 2,
-				label: 'Range with defaults',
-				instructions: 'Instructions for Range',
-			});
-
-			DefaultRange1.mount('.tests-range-defaults');
-
-			// RANGE CONFIGURED WITH SETTERS
-
-			const DefaultHeading = new Hig.Typography({
-				text: "Range configured with setters",
-				type: "h2"
-			});
-
-			DefaultHeading.mount('.tests-range-heading-setters');
-
-			const DefaultRange = new Range();
+		function log(event) {
+			const message = event.type + "event triggered";
+			console.log(message);
+		}
 
 
-			DefaultRange.mount('.tests-range-setters');
+		//RANGE CONFIGURED WITH DEFUAlTS
+		const DefaultHeading1 = new Hig.Typography({
+			text: "Range configured with defaults",
+			type: "h2"
+		})
 
-			DefaultRange.setMin(1)
-			DefaultRange.setValue(5);
-			DefaultRange.setMax(11);
-			DefaultRange.setInstructions('Instructions for Range');
-			DefaultRange.setLabel('Range Label');
-			DefaultRange.setStep(2);
+		DefaultHeading1.mount('.tests-range-heading-defaults');
 
-			DefaultRange.onBlur(log);
-			DefaultRange.onChange(log);
-			DefaultRange.onFocus(log);
+		const DefaultRange1 = new Range({
+			max: 10,
+			value: 2,
+			label: 'Range with defaults',
+			instructions: 'Instructions for Range',
+		});
+
+		DefaultRange1.mount('.tests-range-defaults');
+
+		// RANGE CONFIGURED WITH SETTERS
+
+		const DefaultHeading = new Hig.Typography({
+			text: "Range configured with setters",
+			type: "h2"
+		});
+
+		DefaultHeading.mount('.tests-range-heading-setters');
+
+		const DefaultRange = new Range();
+
+
+		DefaultRange.mount('.tests-range-setters');
+
+		DefaultRange.setMin(1)
+		DefaultRange.setValue(5);
+		DefaultRange.setMax(11);
+		DefaultRange.setInstructions('Instructions for Range');
+		DefaultRange.setLabel('Range Label');
+		DefaultRange.setStep(2);
+
+		DefaultRange.onBlur(log);
+		DefaultRange.onChange(log);
+		DefaultRange.onFocus(log);
 
 
 
-			// Default range Disable
-			const DefaultHeadingDisabled = new Hig.Typography({
-				text: "Disabled Range",
-				type: "h2"
-			})
+		// Default range Disable
+		const DefaultHeadingDisabled = new Hig.Typography({
+			text: "Disabled Range",
+			type: "h2"
+		})
 
-			DefaultHeadingDisabled.mount('.tests-range-heading-disabled');
-			
-			const DisabledRange = new Range();
-			DisabledRange.mount('.tests-range-disabled');
+		DefaultHeadingDisabled.mount('.tests-range-heading-disabled');
 
-			DisabledRange.setValue(5);
-			DisabledRange.setMin(0);
-			DisabledRange.setMax(10);
-			DisabledRange.setInstructions('Instructions for Range');
-			DisabledRange.setLabel('Range Label');
+		const DisabledRange = new Range();
+		DisabledRange.mount('.tests-range-disabled');
 
-			DisabledRange.onBlur(log);
-			DisabledRange.onChange(log);
-			DisabledRange.onFocus(log);
-			DisabledRange.disable();
-		</script>	
-	</body>	
-</html>	
+		DisabledRange.setValue(5);
+		DisabledRange.setMin(0);
+		DisabledRange.setMax(10);
+		DisabledRange.setInstructions('Instructions for Range');
+		DisabledRange.setLabel('Range Label');
+
+		DisabledRange.onBlur(log);
+		DisabledRange.onChange(log);
+		DisabledRange.onFocus(log);
+		DisabledRange.disable();
+	</script>
+</body>
+
+</html>
