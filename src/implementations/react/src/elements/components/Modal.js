@@ -1,10 +1,10 @@
 import React from 'react';
-import  ModalAdapter  from '../../adapters/ModalAdapter'
-import PropTypes from 'prop-types';
+import ModalAdapter  from '../../adapters/ModalAdapter';
+import * as PropTypes from 'prop-types';
 
 class Modal extends React.Component {
   close = (event) => {
-    this.props.onClose(event);
+    return this.props.onClose(event);
   };
 
   render() {
