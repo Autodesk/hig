@@ -19,7 +19,7 @@ class FilterableSideNav extends Component {
     super(props);
 
     this.state = {
-      modules: {}
+      query: ''
     }
   }
 
@@ -51,8 +51,12 @@ class FilterableSideNav extends Component {
     links: []
   }
 
+  setQuery = (event) => {
+    this.setState({ query: event.target.value });
+  }
+
   render() {
-    const sections = filterSideNavSections(this.props.sections, this.props.query);
+    const sections = filterSideNavSections(this.props.sections, this.props.query || this.state.query);
 
     return (
       <SideNav>
@@ -75,7 +79,7 @@ class FilterableSideNav extends Component {
                             title={module.label}
                             key={module.label}
                           >
-                            <ModuleCollapse />
+                            {module.submodules.length > 0 ? <ModuleCollapse /> : null}
                             {module.submodules.map(submodule => {
                               return (
                                 <Submodule
@@ -100,6 +104,7 @@ class FilterableSideNav extends Component {
             return <Link {...link} key={link.title} />;
           })}
         </LinkList>
+        <Search onInput={this.setQuery} />
       </SideNav>
     );
   }
