@@ -51,13 +51,12 @@
 </div>
 
 <script>
- const Heading = Hig.Typography._partials.Heading;
  const FormElements = new Hig.FormElements();
  const Checkbox = FormElements.partials.Checkbox;
 
- const DefaultHeading = new Heading({
+ const DefaultHeading = new Hig.Typography({
   text: "Different Checkboxes",
-  size: 2
+  type: "size"
  });
 
  const DefaultCheckbox = new Checkbox({
