@@ -59,7 +59,7 @@
     "build-storybook": "build-storybook -s public -o build/storybook",
     "type-check": "tsc",
     "deploy-storybook": "npm run build-storybook && surge build/storybook",
-    "deploy-playground": "react-scripts build && surge build"
+    "deploy-playground": "npm run lib && react-scripts build && surge build "
   },
   "dependencies": {
     "jest": "^20.0.4",
