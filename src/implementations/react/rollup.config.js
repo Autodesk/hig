@@ -16,7 +16,7 @@ export default {
 
     commonjs({
       namedExports: {
-        '../hig-vanilla/dist/hig.js': [
+        '../vanilla/dist/hig.js': [
           'Button',
           'Checkbox',
           'GlobalNav',
