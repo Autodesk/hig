@@ -81,7 +81,7 @@ class Dropdown extends Core {
   }
 
   onTargetClick(fn) {
-    this.field._onClick(fn);
+    return this.field._onClick(fn);
   }
 
   open() {

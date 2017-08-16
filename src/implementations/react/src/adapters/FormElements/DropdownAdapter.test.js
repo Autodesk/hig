@@ -78,6 +78,14 @@ describe("<DropdownAdapter>", () => {
     );
   };
 
+  const EventListenerContext = props => {
+    return (
+      <DropdownComponent {...props}>
+        <OptionComponent {...props} />
+      </DropdownComponent>
+    );
+  };
+
   it("renders a dropdown with initial props", () => {
     const defaults = {
       label: "dropdown label",
@@ -179,58 +187,45 @@ describe("<DropdownAdapter>", () => {
     );
   });
 
-  // [
-  //   "onBlur",
-  //   "onTargetClick",
-  //   "onClickOutside",
-  //   "onKeypress",
-  //   "onFocus"
-  // ].forEach(eventName => {
-  //   const defaults = {
-  //     label: "dropdown label",
-  //     placeholder: "dropdown placeholder",
-  //     instructions: "instructions for dropdown",
-  //     disabled: true,
-  //     option: { label: "option-label", value: "option-value" }
-  //   };
+  [
+    "onBlur",
+    "onTargetClick",
+    "onClickOutside",
+    "onKeypress",
+    "onFocus"
+  ].forEach(eventName => {
+    it(`sets event listeners for ${eventName} initially`, () => {
+      const spy = jest.fn();
+      const container = document.createElement("div");
+      const wrapper = mount(EventListenerContext({ [eventName]: spy }), {
+        attachTo: container
+      });
+      setLabelForInputId(container);
 
-  //   it(`sets event listeners for ${eventName} initially`, () => {
-  //     const spy = jest.fn();
-  //     const container = document.createElement("div");
-  //     const wrapper = mount(Context({defaults, [eventName]: spy }));
-  //     setLabelForInputId(container);
+      const instance = wrapper.instance().instance;
 
-  //     const instance = wrapper.instance().instance;
+      const disposeFunction = instance._disposeFunctions.get(
+        eventName + "Dispose"
+      );
+      expect(disposeFunction).toBeDefined();
+    });
 
-  //     const disposeFunction = instance._disposeFunctions.get(
-  //       eventName + "Dispose"
-  //     );
-  //     expect(disposeFunction).toBeDefined();
-  //   });
+    it(`sets event listeners for ${eventName} when updated`, () => {
+      const spy = jest.fn();
+      const container = document.createElement("div");
+      const wrapper = mount(EventListenerContext({}), {
+        attachTo: container
+      });
+      setLabelForInputId(container);
 
-    // it(`sets event listeners for ${eventName} when updated`, () => {
-    //   const defaults = {
-    //     label: "dropdown label",
-    //     placeholder: "dropdown placeholder",
-    //     instructions: "instructions for dropdown",
-    //     option: { label: "option-label", value: "option-value" }
-    //   };
+      wrapper.setProps({ [eventName]: spy });
 
-    //   const spy = jest.fn();
-    //   const container = document.createElement("div");
-    //   const wrapper = mount(<UpdatedContext {...defaults} />, {
-    //     attachTo: container
-    //   });
-    //   setLabelForInputId(container);
+      const instance = wrapper.instance().instance;
 
-    //   wrapper.setProps({ [eventName]: spy });
-
-    //   const instance = wrapper.instance().instance;
-
-    //   const disposeFunction = instance._disposeFunctions.get(
-    //     eventName + "Dispose"
-    //   );
-    //   expect(disposeFunction).toBeDefined();
-    // });
-  // });
+      const disposeFunction = instance._disposeFunctions.get(
+        eventName + "Dispose"
+      );
+      expect(disposeFunction).toBeDefined();
+    });
+  });
 });

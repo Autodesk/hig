@@ -41,43 +41,46 @@ export class DropdownAdapter extends HIGElement {
     this.options.componentDidMount();
 
     if (this.props.open) {
-      this.commitUpdate(['open', this.props.open])
+      this.commitUpdate(["open", this.props.open]);
     }
 
     if (this.props.disabled) {
-      this.commitUpdate(['disabled', this.props.disabled])
+      this.commitUpdate(["disabled", this.props.disabled]);
     }
 
     if (this.props.selectedOptionLabel) {
-      this.commitUpdate(['selectedOptionLabel', this.props.selectedOptionLabel])
+      this.commitUpdate([
+        "selectedOptionLabel",
+        this.props.selectedOptionLabel
+      ]);
     }
 
     if (this.props.required) {
-      this.commitUpdate(['required', this.props.required])
+      this.commitUpdate(["required", this.props.required]);
     }
 
     if (this.props.onBlur) {
-      this.commitUpdate(['onBlur', this.props.onBlur])
+      this.commitUpdate(["onBlur", this.props.onBlur]);
     }
 
     if (this.props.onClickOutside) {
-      this.commitUpdate(['onClickOutside', this.props.onClickOutside])
+      this.commitUpdate(["onClickOutside", this.props.onClickOutside]);
     }
 
     if (this.props.onFocus) {
-      this.commitUpdate(['onFocus', this.props.onFocus])
+      this.commitUpdate(["onFocus", this.props.onFocus]);
     }
 
-    if (this.props.onKeypress){
-      this.commitUpdate(['onKeypress', this.props.onKeypress])
+    if (this.props.onKeypress) {
+      this.commitUpdate(["onKeypress", this.props.onKeypress]);
     }
 
     if (this.props.onTargetClick) {
-      this.commitUpdate(['onTargetClick', this.props.onTargetClick])
+      this.commitUpdate(["onTargetClick", this.props.onTargetClick]);
     }
 
     if (this.props.children) {
-      this.commitUpdate(['children', this.props])
+      this.commitUpdate(["children", this.props]);
     }
   }
 
@@ -133,7 +136,10 @@ export class DropdownAdapter extends HIGElement {
           if (dispose) {
             dispose();
           }
-          this._disposeFunctions.set("onBlurDispose", this.hig.onBlur(propValue));
+          this._disposeFunctions.set(
+            "onBlurDispose",
+            this.hig.onBlur(propValue)
+          );
           break;
         }
         case "onClickOutside": {
@@ -143,7 +149,10 @@ export class DropdownAdapter extends HIGElement {
             dispose();
           }
 
-          this._disposeFunctions.set("onClickOutsideDispose", this.hig.onClickOutside(propValue));
+          this._disposeFunctions.set(
+            "onClickOutsideDispose",
+            this.hig.onClickOutside(propValue)
+          );
           break;
         }
         case "onFocus": {
@@ -153,7 +162,10 @@ export class DropdownAdapter extends HIGElement {
             dispose();
           }
 
-          this._disposeFunctions.set("onFocusDispose", this.hig.onFocus(propValue));
+          this._disposeFunctions.set(
+            "onFocusDispose",
+            this.hig.onFocus(propValue)
+          );
           break;
         }
         case "onKeypress": {
@@ -163,7 +175,10 @@ export class DropdownAdapter extends HIGElement {
             dispose();
           }
 
-          this._disposeFunctions.set("onKeypressDispose", this.hig.onKeypress(propValue));
+          this._disposeFunctions.set(
+            "onKeypressDispose",
+            this.hig.onKeypress(propValue)
+          );
           break;
         }
         case "onTargetClick": {
@@ -173,7 +188,10 @@ export class DropdownAdapter extends HIGElement {
             dispose();
           }
 
-          this._disposeFunctions.set("onTargetClickDispose", this.hig.onTargetClick(propValue));
+          this._disposeFunctions.set(
+            "onTargetClickDispose",
+            this.hig.onTargetClick(propValue)
+          );
           break;
         }
         case "children": {
@@ -209,11 +227,11 @@ export class DropdownAdapter extends HIGElement {
 
   openDropdown = () => {
     this.hig.open();
-  }
+  };
 
   closeDropdown = () => {
     this.hig.close();
-  }
+  };
 }
 
 const DropdownComponent = createComponent(DropdownAdapter);
@@ -235,40 +253,42 @@ DropdownComponent.propTypes = {
 };
 
 DropdownComponent.__docgenInfo = {
-  label: {
-    description: "{string} label for the the dropdown"
-  },
-  instructions: {
-    description: "{string} instructions for the dropdown"
-  },
-  open: {
-    description: "{bool} opens the dropdown"
-  },
-  disabled: {
-    description: "{bool} makes the dropdown disabled"
-  },
-  required: {
-    description: "{string} makes the field required"
-  },
-  onBlur: {
-    description:
-      "Calls the provided callback when focus moves away from the dropdown"
-  },
-  onClickOutside: {
-    description:
-      "Calls the provided callback when the user clicks on the dropdown"
-  },
-  onFocus: {
-    description:
-      "Calls the provided callback when the user focuses on the dropdown"
-  },
-  onKeypress: {
-    description:
-      "Calls the provided callback when the user presses a key while the dropdown has focus"
-  },
-  onTargetClick: {
-    description:
-      "Calls the provided callback when the user clicks on the dropdown button"
+  props: {
+    label: {
+      description: "{string} label for the the dropdown"
+    },
+    instructions: {
+      description: "{string} instructions for the dropdown"
+    },
+    open: {
+      description: "{bool} opens the dropdown"
+    },
+    disabled: {
+      description: "{bool} makes the dropdown disabled"
+    },
+    required: {
+      description: "{string} makes the field required"
+    },
+    onBlur: {
+      description:
+        "Calls the provided callback when focus moves away from the dropdown"
+    },
+    onClickOutside: {
+      description:
+        "Calls the provided callback when the user clicks on the dropdown"
+    },
+    onFocus: {
+      description:
+        "Calls the provided callback when the user focuses on the dropdown"
+    },
+    onKeypress: {
+      description:
+        "Calls the provided callback when the user presses a key while the dropdown has focus"
+    },
+    onTargetClick: {
+      description:
+        "Calls the provided callback when the user clicks on the dropdown button"
+    }
   }
 };
 

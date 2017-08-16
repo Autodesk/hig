@@ -1,1714 +1,1705 @@
 {
-    "version": "1.0.0",
-    "abstract": {
-        "EventObject": {
-            "desc": "listen to events",
-            "params": [
-                "{Function} fn - function to be called on event, function will get native event as input"
-            ],
-            "returns": "{Function} disposeFunction - function you can call directly to remove event listener"
+  "version": "1.0.0",
+  "abstract": {
+    "EventObject": {
+      "desc": "listen to events",
+      "params": [
+        "{Function} fn - function to be called on event, function will get native event as input"
+      ],
+      "returns": "{Function} disposeFunction - function you can call directly to remove event listener"
+    }
+  },
+  "basics": {
+    "Spacer": {
+      "defaults": {
+        "type": "{String - 'stack', 'inline'} type of the spacer",
+        "width": "{String - 'none', 'xxs', 'xs', 's', 'm', 'l' 'xl', 'xxl'} width of the spacer",
+        "inset": "{String - 'none', 'xxs', 'xs', 's', 'm', 'l' 'xl', 'xxl'} width of the spacer inset"
+      },
+      "methods": {
+        "setType": {
+          "desc": "Sets the type of the spacer",
+          "params": [
+            "{String - 'none', 'xxs', 'xs', 's', 'm', 'l' 'xl', 'xxl'} type of the spacer"
+          ]
+        },
+        "setWidth": {
+          "desc": "Sets the width of the spacer",
+          "params": [
+            "{String - 'none', 'xxs', 'xs', 's', 'm', 'l' 'xl', 'xxl'} width of the spacer"
+          ]
+        },
+        "setInset": {
+          "desc": "Sets the inset width of the spacer",
+          "params": [
+            "{String - 'none', 'xxs', 'xs', 's', 'm', 'l' 'xl', 'xxl'} inset width of the spacer"
+          ]
+        },
+        "addSlot": {
+          "desc": "Content for the spacer",
+          "params": [
+            "{HTMLElement} HTMLElement"
+          ]
         }
+      }
     },
-    "basics": {
-        "Spacer": {
-            "defaults": {
-                "type": "{String - 'stack', 'inline'} type of the spacer",
-                "width": "{String - 'none', 'xxs', 'xs', 's', 'm', 'l' 'xl', 'xxl'} width of the spacer",
-                "inset": "{String - 'none', 'xxs', 'xs', 's', 'm', 'l' 'xl', 'xxl'} width of the spacer inset"
-            },
-            "methods": {
-                "setType": {
-                    "desc": "Sets the type of the spacer",
-                    "params": [
-                        "{String - 'none', 'xxs', 'xs', 's', 'm', 'l' 'xl', 'xxl'} type of the spacer"
-                    ]
-                },
-                "setWidth": {
-                    "desc": "Sets the width of the spacer",
-                    "params": [
-                        "{String - 'none', 'xxs', 'xs', 's', 'm', 'l' 'xl', 'xxl'} width of the spacer"
-                    ]
-                },
-                "setInset": {
-                    "desc": "Sets the inset width of the spacer",
-                    "params": [
-                        "{String - 'none', 'xxs', 'xs', 's', 'm', 'l' 'xl', 'xxl'} inset width of the spacer"
-                    ]
-                },
-                "addSlot": {
-                    "desc": "Content for the spacer",
-                    "params": [
-                        "{HTMLElement} HTMLElement"
-                    ]
-                }
-            }
+    "Typography": {
+      "methods": {
+        "setText": {
+          "desc": "sets the text",
+          "params": [
+            "{String} text - text you want to display"
+          ]
         },
-        "Typography": {
-            "methods":{
-                "setText": {
-                    "desc": "sets the text",
-                    "params": [
-                        "{String} text - text you want to display"
-                    ]
-                },
-                "setType": {
-                    "desc": "sets the type of typography",
-                    "params": [
-                        "{String} h1, h2, h3, sub1, sub2, body, bold, disabled or caption"
-                    ]
-                },
-                "applyTypographyToElement": {
-                    "desc": "Apply HIG typography to input html element",
-                    "params": [
-                        "{HTMLElement} HTMLElement"
-                    ]
-                }
-            },
-            "defaults": {
-                "text": "{String} text you want to display",
-                "type": "{String} h1, h2, h3, sub1, sub2, body, bold, disabled or caption"
-            }
+        "setType": {
+          "desc": "sets the type of typography",
+          "params": [
+            "{String} h1, h2, h3, sub1, sub2, body, bold, disabled or caption"
+          ]
         },
-        "FormElements": {
-            "partials": {
-                "Checkbox": {
-                    "methods": {
-                        "setLabel": {
-                            "desc": "sets the label",
-                            "params": [
-                                "{String} label for our checkbox"
-                            ]
-                        },
-                        "setName": {
-                            "desc": "sets the name of the checkbox as submitted with a form",
-                            "params": [
-                                "{String} label used to identify the checkbox when submitted"
-                            ]
-                        },
-                        "setValue": {
-                            "desc": "sets the value",
-                            "params": [
-                                "{String} value for our checkbox"
-                            ]
-                        },
-                        "check": {
-                            "desc": "checks the checkbox"
-                        },
-                        "uncheck": {
-                            "desc": "unchecks the checkbox"
-                        },
-                        "required": {
-                            "desc": "makes checkbox required",
-                            "params": [
-                                "{String} required label text"
-                            ]
-                        },
-                        "noLongerRequired": {
-                            "desc": "makes checkbox not required"
-                        },
-                        "disable": {
-                            "desc": "Disable the checkbox, preventing user interaction"
-                        },
-                        "enable": {
-                            "desc": "Enable the checkbox, reenabling user interaction"
-                        },
-                        "onHover": {
-                            "desc": "Calls the provided callback when the checkbox is in a hover state",
-                            "params": "HIG.abstract.EventObject.params",
-                            "returns": "HIG.abstract.EventObject.returns"
-                        },
-                        "onFocus": {
-                            "desc": "Calls the provided callback when focus enters the checkbox",
-                            "params": "HIG.abstract.EventObject.params",
-                            "returns": "HIG.abstract.EventObject.returns"
-                        },
-                        "onChange": {
-                            "desc": "Calls the provided callback when user changes the value of the checkbox then moves focus elsewhere",
-                            "params": "HIG.abstract.EventObject.params",
-                            "returns": "HIG.abstract.EventObject.returns"
-                        }
-                    },
-                    "defaults": {
-                        "label": "",
-                        "value": "",
-                        "name": ""
-                    }
-                },
-                "RadioButton": {
-                    "methods": {
-                        "setLabel": {
-                            "desc": "sets the label",
-                            "params": [
-                                "{String} label for our radio button"
-                            ]
-                        },
-                        "setName": {
-                            "desc": "sets the name of the radio button as submitted with a form",
-                            "params": [
-                                "{String} label used to identify the radio button when submitted"
-                            ]
-                        },
-                        "setValue": {
-                            "desc": "sets the value",
-                            "params": [
-                                "{String} value for our radio button"
-                            ]
-                        },
-                        "check": {
-                            "desc": "checks the radio button"
-                        },
-                        "uncheck": {
-                            "desc": "unchecks the radio button"
-                        },
-                        "required": {
-                            "desc": "makes radio button required",
-                            "params": [
-                                "{String} required label text"
-                            ]
-                        },
-                        "noLongerRequired": {
-                            "desc": "makes radio button not required"
-                        },
-                        "disable": {
-                            "desc": "Disable the radio button, preventing user interaction"
-                        },
-                        "enable": {
-                            "desc": "Enable the radio button, reenabling user interaction"
-                        },
-                        "onHover": {
-                            "desc": "Calls the provided callback when the radio button is in a hover state",
-                            "params": "HIG.abstract.EventObject.params",
-                            "returns": "HIG.abstract.EventObject.returns"
-                        },
-                        "onFocus": {
-                            "desc": "Calls the provided callback when focus enters the radio button",
-                            "params": "HIG.abstract.EventObject.params",
-                            "returns": "HIG.abstract.EventObject.returns"
-                        },
-                        "onChange": {
-                            "desc": "Calls the provided callback when user changes the value of the radio button then moves focus elsewhere",
-                            "params": "HIG.abstract.EventObject.params",
-                            "returns": "HIG.abstract.EventObject.returns"
-                        }
-                    },
-                    "defaults": {
-                        "label": "",
-                        "value": "",
-                        "name": ""
-                    }
-                },
-                "Dropdown": {
-                    "methods": {
-                        "open": {
-                            "desc": "Opens the menu"
-                        },
-                        "addOption": {
-                            "desc": "Adds an option to the menu",
-                            "params": [
-                                "{Option} option - an instance of the Option partial",
-                                "{Option} [referenceOption] - (Optional) a reference option used when positioning the new option. New option will be added before the reference option."
-                            ]
-                        },
-                        "close": {
-                            "desc": "Closes the menu"
-                        },
-                        "disable": {
-                            "desc": "Disables the option, preventing it from being selected"
-                        },
-                        "enable": {
-                            "desc": "Enables the option, allowing it to be selected"
-                        },
-                        "onBlur": {
-                            "desc": "Calls the provided callback when focus moves away from the dropdown",
-                            "params": "HIG.abstract.EventObject.params",
-                            "returns": "HIG.abstract.EventObject.returns"
-                        },
-                        "onClickOutside": {
-                            "desc": "Calls the provided callback when the menu is open and the user clicks outside of the menu",
-                            "params": "HIG.abstract.EventObject.params",
-                            "returns": "HIG.abstract.EventObject.returns"
-                        },
-                        "onFocus": {
-
-                            "desc": "Calls the provided callback when the dropdown gains focus",
-                            "params": "HIG.abstract.EventObject.params",
-                            "returns": "HIG.abstract.EventObject.returns"
-                        },
-                        "onKeypress": {
-                            "desc": "Calls the provided callback when the user presses a key while the dropdown has focus",
-                            "params": "HIG.abstract.EventObject.params",
-                            "returns": "HIG.abstract.EventObject.returns"
-                        },
-                        "onTargetClick": {
-                            "desc": "Calls the provided callback when the user clicks on the dropdown button",
-                            "params": "HIG.abstract.EventObject.params",
-                            "returns": "HIG.abstract.EventObject.returns"
-                        },
-                        "required": {
-                            "desc": "makes field required",
-                            "params": [
-                                "{String} required label text"
-                            ]
-                        },
-                        "noLongerRequired": {
-                            "desc": "makes field not required"
-                        },
-                        "setInstructions": {
-                            "desc": "Sets instructional text for the dropdown",
-                            "params": [
-                                "{String} instructions - instructional text that will appear below the dropdown"
-                            ]
-                        },
-                        "setPlaceholder": {
-                          "desc": "Sets the text for the plaeceholder in the dropdown",
-                          "params": [
-                            "{String} placeholder - placeholder text that will appear in dropdown"
-                          ]
-                        },
-                        "setLabel": {
-                            "desc": "Sets the label for the dropdown",
-                            "params": [
-                                "{String} label - label identifying the purpose of the dropdown"
-                            ]
-                        },
-                        "setSelectedOptionLabel": {
-                            "desc": "Sets the label on the dropdown button"
-                        }
-                    },
-                    "partials": {
-                        "Option": {
-                            "methods": {
-                                "deselect": { },
-                                "onClick": {},
-                                "onHover": {},
-                                "select": {},
-                                "setLabel": {},
-                                "setValue": {}
-                            },
-                            "defaults": {
-                                "label": "",
-                                "value": ""
-                            }
-                        }
-                    },
-                    "defaults": {
-                        "label": "{String} label for our text field",
-                        "placeholder": "{String} placeholder text for our text field",
-                        "instructions": "{String} (optional) instructions under the text field"
-                    }
-                },
-                "PasswordField": {
-                    "methods": {
-                        "disable": {
-                            "desc": "Disable the password field, preventing user interaction"
-                        },
-                        "enable": {
-                            "desc": "Enable the password field, reenabling user interaction"
-                        },
-                        "hidePassword": {
-                            "desc": "Obscures the characters entered into the password field"
-                        },
-                        "hidePasswordHideButton": {
-                            "desc": "Hides a button used to hide the password"
-                        },
-                        "hidePasswordRevealButton": {
-                            "desc": "Hides a button used to reveal the password"
-                        },
-                        "noLongerRequired": {
-                            "desc": "makes field not required"
-                        },
-                        "onBlur": {
-                            "desc": "Calls the provided callback when user puts blur on the input field",
-                            "params": "HIG.abstract.EventObject.params",
-                            "returns": "HIG.abstract.EventObject.returns"
-                        },
-                        "onChange": {
-                            "desc": "Calls the provided callback when user changes the value of the password field then moves focus elsewhere",
-                            "params": "HIG.abstract.EventObject.params",
-                            "returns": "HIG.abstract.EventObject.returns"
-                        },
-                        "onFocus": {
-                            "desc": "Calls the provided callback when user puts focus on the input field",
-                            "params": "HIG.abstract.EventObject.params",
-                            "returns": "HIG.abstract.EventObject.returns"
-                        },
-                        "onInput": {
-                            "desc": "Calls the provided callback when user changes the value of the password field",
-                            "params": "HIG.abstract.EventObject.params",
-                            "returns": "HIG.abstract.EventObject.returns"
-                        },
-                        "onPasswordHideButtonClick": {
-                            "desc": "Calls the provided callback when user clicks on the password hide button",
-                            "params": "HIG.abstract.EventObject.params",
-                            "returns": "HIG.abstract.EventObject.returns"
-                        },
-                        "onPasswordRevealButtonClick": {
-                            "desc": "Calls the provided callback when user clicks on the password reveal button",
-                            "params": "HIG.abstract.EventObject.params",
-                            "returns": "HIG.abstract.EventObject.returns"
-                        },
-                        "required": {
-                            "desc": "makes field required",
-                            "params": [
-                                "{String} required label text"
-                            ]
-                        },
-                        "revealPassword": {
-                            "desc": "Reveals the characters entered into the password field"
-                        },
-                        "setInstructions": {
-                            "desc": "sets the instructions",
-                            "params": [
-                                "{String} instructions for our password field"
-                            ]
-                        },
-                        "setLabel": {
-                            "desc": "sets the label",
-                            "params": [
-                                "{String} label for our password field"
-                            ]
-                        },
-                        "setName": {
-                            "desc": "sets the name of the field as submitted with a form",
-                            "params": [
-                                "{String} label used to identify the field when submitted"
-                            ]
-                        },
-                        "setPlaceholder": {
-                            "desc": "sets the placeholder",
-                            "params": [
-                                "{String} placeholder for our password field"
-                            ]
-                        },
-                        "setValue": {
-                            "desc": "sets the value",
-                            "params": [
-                                "{String} value for our password field"
-                            ]
-                        },
-                        "showPasswordHideButton": {
-                            "desc": "Shows a button used to hide the password"
-                        },
-                        "showPasswordRevealButton": {
-                            "desc": "Shows a button used to reveal the password"
-                        }
-                    },
-                    "defaults":{
-                        "label": "{String} label for our password field",
-                        "name": "{String} name identifier for our password field",
-                        "placeholder": "{String} placeholder text for our password field",
-                        "value": "{String} (optional) input value for password field",
-                        "instructions": "{String} (optional) instructions under the password field"
-                    }
-                },
-                "TextArea": {
-                    "methods": {
-                        "setLabel": {
-                            "desc": "sets the label",
-                            "params": [
-                                "{String} label - label for the text area"
-                            ]
-                        },
-                        "setInstructions": {
-                            "desc": "sets the instruction text",
-                            "params": [
-                                "{String} instructions - instructions for the text area"
-                            ]
-                        },
-                        "setPlaceholder": {
-                            "desc": "sets the placeholder",
-                            "params": [
-                                "{String} placeholder - text that appears in the text area when empty"
-                            ]
-                        },
-                        "setValue": {
-                            "desc": "sets the value",
-                            "params": [
-                                "{String} value - the text inside of the text area"
-                            ]
-                        },
-                        "setName": {
-                            "desc": "sets the textarea name attribute",
-                            "params": [
-                                "{String} value - value for name attribute of the textarea element"
-                            ]
-                        },
-                        "required": {
-                            "desc": "makes field required",
-                            "params": [
-                                "{String} required label text"
-                            ]
-                        },
-                        "noLongerRequired": {
-                            "desc": "makes field not required"
-                        },
-                        "disable": {
-                            "desc": "Disable the text field, preventing user interaction"
-                        },
-                        "enable": {
-                            "desc": "Enable the text field, reenabling user interaction"
-                        },
-                        "onBlur": {
-                            "desc": "Calls the provided callback when focus leaves the text area",
-                            "params": "HIG.abstract.EventObject.params",
-                            "returns": "HIG.abstract.EventObject.returns"
-                        },
-                        "onChange": {
-                            "desc": "Calls the provided callback when the user changes the content of the text area then moves focus elsewhere",
-                            "params": "HIG.abstract.EventObject.params",
-                            "returns": "HIG.abstract.EventObject.returns"
-                        },
-                        "onFocus": {
-                            "desc": "Calls the provided callback when focus enters the text area",
-                            "params": "HIG.abstract.EventObject.params",
-                            "returns": "HIG.abstract.EventObject.returns"
-                        },
-                        "onInput": {
-                            "desc": "Calls the provided callback when the user changes the content of the text area each time a key is pressed",
-                            "params": "HIG.abstract.EventObject.params",
-                            "returns": "HIG.abstract.EventObject.returns"
-                        }
-                    },
-                    "defaults": {
-                        "label": "{String} label for the text area",
-                        "name": "{String} the name attribute for the textarea",
-                        "placeholder": "{String} text that appears in the text area when empty",
-                        "value": "{String} the text inside of the text area",
-                        "instructions": "{String} instructions for the textarea"
-                    }
-                },
-                "TextField": {
-                    "methods": {
-                        "setInstructions": {
-                            "desc": "sets the instructions",
-                            "params": [
-                                "{String} instructions for our text field"
-                            ]
-                        },
-                        "setLabel": {
-                            "desc": "sets the label",
-                            "params": [
-                                "{String} label for our text field"
-                            ]
-                        },
-                        "setName": {
-                            "desc": "sets the name of the field as submitted with a form",
-                            "params": [
-                                "{String} label used to identify the field when submitted"
-                            ]
-                        },
-                        "setIcon": {
-                            "desc": "sets the icon of the text field",
-                            "params": [
-                                "{String} icon ID"
-                            ]
-                        },
-                        "setPlaceholder": {
-                            "desc": "sets the placeholder",
-                            "params": [
-                                "{String} placeholder for our text field"
-                            ]
-                        },
-                        "setValue": {
-                            "desc": "sets the value",
-                            "params": [
-                                "{String} value for our text field"
-                            ]
-                        },
-                        "required": {
-                            "desc": "makes field required",
-                            "params": [
-                                "{String} required label text"
-                            ]
-                        },
-                        "noLongerRequired": {
-                            "desc": "makes field not required"
-                        },
-                        "disable": {
-                            "desc": "Disable the text field, preventing user interaction"
-                        },
-                        "enable": {
-                            "desc": "Enable the text field, reenabling user interaction"
-                        },
-                        "onBlur": {
-                            "desc": "Calls the provided callback when user puts blur on the input field",
-                            "params": "HIG.abstract.EventObject.params",
-                            "returns": "HIG.abstract.EventObject.returns"
-                        },
-                        "onChange": {
-                            "desc": "Calls the provided callback when user changes the value of the text field then moves focus elsewhere",
-                            "params": "HIG.abstract.EventObject.params",
-                            "returns": "HIG.abstract.EventObject.returns"
-                        },
-                        "onFocus": {
-                            "desc": "Calls the provided callback when user puts focus on the input field",
-                            "params": "HIG.abstract.EventObject.params",
-                            "returns": "HIG.abstract.EventObject.returns"
-                        },
-                        "onInput": {
-                            "desc": "Calls the provided callback when user changes the value of the text field",
-                            "params": "HIG.abstract.EventObject.params",
-                            "returns": "HIG.abstract.EventObject.returns"
-                        }
-                    },
-                    "defaults":{
-                        "label": "{String} label for our text field",
-                        "name": "{String} name identifier for our text field",
-                        "icon": "{String} icon ID",
-                        "placeholder": "{String} placeholder text for our text field",
-                        "value": "{String} (optional) input value for text field",
-                        "instructions": "{String} (optional) instructions under the text field"
-                    }
-                },
-                "Range":{
-                  "methods":{
-                    "setMax": {
-                      "desc": "sets maximum value for range",
-                      "params":[
-                          "{Integer} max value for the range"
-                      ]
-                    },
-                    "setMin": {
-                      "desc": "sets minimum value for range",
-                      "params":[
-                          "{Integer} minimum value for the range"
-                      ]
-                    },
-                    "setValue": {
-                      "desc": "sets specific value for range",
-                      "params":[
-                          "{Integer} sets specific value for the range"
-                      ]
-                    },
-                    "setLabel": {
-                            "desc": "sets the label",
-                            "params": [
-                                "{String} label - label for the text area"
-                            ]
-                    },
-                    "setInstructions": {
-                        "desc": "sets the instruction text",
-                        "params": [
-                            "{String} instructions - instructions for the text area"
-                        ]
-                    },
-                     "setStep": {
-                        "desc": "sets the step granulity for range",
-                        "params": [
-                            "{Integer} value for step attribute"
-                        ]
-                    },
-                    "required": {
-                        "desc": "makes field required",
-                        "params": [
-                            "{String} required label text"
-                        ]
-                    },
-                    "noLongerRequired": {
-                        "desc": "makes field not required"
-                    },
-                    "disable": {
-                        "desc": "Disable the text field, preventing user interaction"
-                    },
-                    "enable": {
-                        "desc": "Enable the text field, reenabling user interaction"
-                    },
-                    "onBlur": {
-                            "desc": "Calls the provided callback when user puts blur on the range element",
-                            "params": "HIG.abstract.EventObject.params",
-                            "returns": "HIG.abstract.EventObject.returns"
-                    },
-                     "onFocus": {
-                            "desc": "Calls the provided callback when user puts focus on the range element",
-                            "params": "HIG.abstract.EventObject.params",
-                            "returns": "HIG.abstract.EventObject.returns"
-                    },
-                     "onChange": {
-                            "desc": "Calls the provided callback when user changes the value of the range element then moves focus elsewhere",
-                            "params": "HIG.abstract.EventObject.params",
-                            "returns": "HIG.abstract.EventObject.returns"
-                    }
-                  },
-                  "defaults":{
-                        "value": "{Integer} default value where range starts",
-                        "maxValue": "{Integer} max value for range",
-                        "minValue": "{Integer} max value for range",
-                        "label": "{String} label for our range",
-                        "instructions": "{String} (optional) instructions under the range",
-                        "step": "{Integer} sets increments to which value can be set"
-                  }
-                }
-            }
-        },
-        "Flyout": {
-            "methods": {
-                "addSlot": {
-                    "desc": "Content for the flyout",
-                    "params": [
-                        "{HTMLElement} HTMLElement"
-                    ]
-                },
-                "addTarget": {
-                    "desc": "Flyout will be positioned relative to this element",
-                    "params": [
-                        "{HTMLElement} HTMLElement"
-                    ]
-                },
-                "close": {
-                    "desc": "closes the flyout"
-                },
-                "onClickOutside": {
-                    "desc": "Calls the provided callback when the flyout is open and the user clicks outside of the flyout",
-                    "params": "HIG.abstract.EventObject.params",
-                    "returns": "HIG.abstract.EventObject.returns"
-                },
-                "open": {
-                    "desc": "opens the flyout"
-                },
-                "setAnchorPoint": {
-                  "desc": "sets where the flyout anchors to the target",
-                  "params": [
-                    "{String - 'top-right', 'top-center'} where the flyout anchors to the target"
-                  ]
-                }
-            },
-            "defaults": {
-              "anchorPoint": "{String - 'top-right', 'top-center'} where the flyout anchors to the target"
-            }
-        }
-    },
-    "components": {
-      "Button": {
-        "methods": {
-            "setTitle": {
-                "desc": "sets the title of a button",
-                "params": [
-                    "{String} title - new title for the button"
-                ]
-            },
-            "setLink": {
-                "desc": "sets the link of a button",
-                "params": [
-                    "{String} link - new link for the button"
-                ]
-            },
-            "setType": {
-                "desc": "sets the type of a button",
-                "params": [
-                    "{String} type can be either: primary (default), secondary or flat"
-                ]
-            },
-            "setSize": {
-                "desc": "sets the size of a button",
-                "params": [
-                    "{String} size can be either: standard (default), small, large"
-                ]
-            },
-            "setIcon": {
-                "desc": "sets the icon of a button",
-                "params": [
-                    "{String} icon ID"
-                ]
-            },
-            "disable": {
-                "desc": "make the button disabled"
-            },
-            "enable": {
-                "desc": "make the button enabled again after disabled state"
-            },
-            "onBlur": {
-                "desc": "Calls the provided callback when the user moves focus away from the button",
-                "params": "HIG.abstract.EventObject.params",
-                "returns": "HIG.abstract.EventObject.returns"
-            },
-            "onClick": {
-                "desc": "Calls the provided callback when user clicks on the button",
-                "params": "HIG.abstract.EventObject.params",
-                "returns": "HIG.abstract.EventObject.returns"
-            },
-            "onHover": {
-                "desc": "Calls the provided callback when user moves the mouse over the button",
-                "params": "HIG.abstract.EventObject.params",
-                "returns": "HIG.abstract.EventObject.returns"
-            },
-            "onFocus": {
-                "desc": "Calls the provided callback when user puts focus on the button",
-                "params": "HIG.abstract.EventObject.params",
-                "returns": "HIG.abstract.EventObject.returns"
-            }
-        },
-        "defaults": {
-            "title": "{String} title of the button",
-            "link": "{String} link of the button",
-            "type": "{String} type of the button: primary (default), secondary or flat",
-            "size": "{String} size of the button: standard (default), small, large",
-            "icon": "{String} (optional) ID of the icon"
-        }
-    },
-    "IconButton": {
-        "methods": {
-            "setTitle": {
-                "desc": "sets the title of a button",
-                "params": [
-                    "{String} title - new title for the button"
-                ]
-            },
-            "setLink": {
-                "desc": "sets the link of a button",
-                "params": [
-                    "{String} link - new link for the button"
-                ]
-            },
-            "setIcon": {
-                "desc": "sets the icon of a button",
-                "params": [
-                    "{String} icon - icon ID"
-                ]
-            },
-            "disable": {
-                "desc": "make the button disabled"
-            },
-            "enable": {
-                "desc": "make the button enabled again after disabled state"
-            },
-            "onClick": {
-                "desc": "Calls the provided callback when user clicks on the button",
-                "params": "HIG.abstract.EventObject.params",
-                "returns": "HIG.abstract.EventObject.returns"
-            },
-            "onHover": {
-                "desc": "Calls the provided callback when user moves the mouse over the button",
-                "params": "HIG.abstract.EventObject.params",
-                "returns": "HIG.abstract.EventObject.returns"
-            },
-            "onFocus": {
-                "desc": "Calls the provided callback when user puts focus on the button",
-                "params": "HIG.abstract.EventObject.params",
-                "returns": "HIG.abstract.EventObject.returns"
-            },
-            "onBlur": {
-                "desc": "Calls the provided callback when user puts focus away from icon button",
-                "params": "HIG.abstract.EventObject.params",
-                "returns": "HIG.abstract.EventObject.returns"
-            }
-        },
-        "defaults": {
-            "title": "{String} title of the button",
-            "link": "{String} link of the button",
-            "icon": "{String} (optional) ID of the icon"
+        "applyTypographyToElement": {
+          "desc": "Apply HIG typography to input html element",
+          "params": [
+            "{HTMLElement} HTMLElement"
+          ]
         }
       },
-      "GlobalNav": {
-        "methods": {
-          "addSideNav": {
-            "desc": "Pass in an instance of a SideNav partial to mount it to the GlobalNav",
-            "params": [
-              "{SideNav} SideNav - instance of a SideNav partial"
-            ],
-            "returns": "{SideNav}"
-          },
-          "addTopNav": {
-            "desc": "Pass in an instance of a TopNav",
-            "params": [
-              "{TopNav} TopNav - instance of a TopNav partial"
-            ]
-          },
-          "addSubNav": {
-            "desc": "Pass in an instance of a SubNav",
-            "params": [
-              "{SubNav} SubNav - instance of a SubNav partial"
-            ]
-          },
-          "addSlot": {
-            "desc": "Pass in any HTMLElement you want",
-            "params": [
-              "{HTMLElement} HTMLElement"
-            ]
-          },
-          "showSideNav": {
-            "desc": "show the SideNav"
-          },
-          "hideSideNav": {
-            "desc": "hide the SideNav"
-          },
-          "onHoverOutside": "HIG.abstract.EventObject"
-        },
-        "partials": {
-          "TopNav": {
-            "methods": {
-              "setLogo": {
-                "desc": "sets the logo",
-                "params": [
-                  "{String} logo - url to svg or other image object"
-                ]
-              },
-              "setLogoLink": {
-                "desc": "sets the link of the logo",
-                "params": [
-                  "{String} link - new link"
-                ]
-              },
-              "sidenavOpen": {
-                "desc": "changes the hamburger icon to a close icon"
-              },
-              "sidenavClosed": {
-                "desc": "changes the close icon to a hamburger icon"
-              },
-              "addProfile": {
-                "desc": "Pass in an instance of an Profile partial to mount it to the GlobalNav",
-                "params": [
-                  "{Profile} Profile - instance of a Profile partial"
-                ]
-              },
-              "addProjectAccountSwitcher": {
-                "desc": "Pass in an instance of a ProjectAccountSwitcher partial to mount it to the TopNav",
-                "params": [
-                  "{ProjectAccountSwitcher} ProjectAccountSwitcher - instance of a ProjectAccountSwitcher partial"
-                ]
-              },
-              "addSearch": {
-                "desc": "Pass in an instance of a Search partial",
-                "params": [
-                  "{Link} Search - instance of a Search partial",
-                  "{Search} [ReferenceSearch] - (Optional) reference node for insertBefore"
-                ]
-              },
-              "addShortcut": {
-                "desc": "Pass in an instance of a Shortcut partial to mount it to the TopNav",
-                "params": [
-                  "{Shortcut} Shortcut - instance of a Shortcut partial"
-                ]
-              },
-              "addHelp": {
-                "desc": "Pass in an instance of a Help partial to mount it to the TopNav",
-                "params": [
-                  "{Help} Help - instance of a Help partial"
-                ]
-              },
-              "onHamburgerClick": {
-                "desc": "Calls the provided callback when user clicks on the hamburger icon",
-                "params": "HIG.abstract.EventObject.params",
-                "returns": "HIG.abstract.EventObject.returns"
-              }
-            },
-            "defaults": {
-              "logo": "{String} url to svg or other image object",
-              "logoLink": "{String} url behind the logo"
-            },
-            "partials": {
-              "Search": {
-                "methods": {
-                  "setPlaceholder": {
-                    "desc": "sets the placeholder",
-                    "params": [
-                      "{String} placeholder - new placeholder"
-                    ]
-                  },
-                  "setQuery": {
-                    "desc": "sets the search query",
-                    "params": [
-                      "{String} query - new query"
-                    ]
-                  },
-                  "showClearIcon": {
-                    "desc": "show the clear input icon"
-                  },
-                  "hideClearIcon": {
-                    "desc": "hide the clear input icon"
-                  },
-                  "onClearIconClick": {
-                    "desc": "Calls the provided callback when the Clear Icon is clicked",
-                    "params": "HIG.abstract.EventObject.params",
-                    "returns": "HIG.abstract.EventObject.returns"
-                  },
-                  "onInput": {
-                    "desc": "Calls the provided callback when user enters text in Search input",
-                    "params": "HIG.abstract.EventObject.params",
-                    "returns": "HIG.abstract.EventObject.returns"
-                  },
-                  "onFocusIn": {
-                    "desc": "Calls the provided callback when Search input gains focus",
-                    "params": "HIG.abstract.EventObject.params",
-                    "returns": "HIG.abstract.EventObject.returns"
-                  },
-                  "onFocusOut": {
-                    "desc": "Calls the provided callback when the Search input loses focus",
-                    "params": "HIG.abstract.EventObject.params",
-                    "returns": "HIG.abstract.EventObject.returns"
-                  }
-                },
-                "defaults": {
-                  "query": "{String} Set a search query in the input",
-                  "placeholder": "{String} A placeholder text when nothing is searched"
-                }
-              },
-              "Profile": {
-                "methods": {
-                  "setEmail": {
-                    "desc": "sets the email",
-                    "params": [
-                      "{String} email - email of the signed in user"
-                    ]
-                  },
-                  "setImage": {
-                    "desc": "sets the image",
-                    "params": [
-                      "{String} image - url to svg or other image object"
-                    ]
-                  },
-                  "setName": {
-                    "desc": "sets the name",
-                    "params": [
-                      "{String} name - name of the signed in user"
-                    ]
-                  },
-                  "setProfileSettingsLabel": {
-                    "desc": "sets the settings label",
-                    "params": [
-                      "{String} settings label - label for the settings button"
-                    ]
-                  },
-                  "setProfileSettingsLink": {
-                    "desc": "sets the settings link",
-                    "params": [
-                      "{String} settingsLink - label for the settings link button"
-                    ]
-                  },
-                  "setSignOutLabel": {
-                    "desc": "sets the sign out label",
-                    "params": [
-                      "{String} signOutLabel - label for the sign out button"
-                    ]
-                  },
-                  "setSignOutLink": {
-                    "desc": "sets the settings link",
-                    "params": [
-                      "{String} settingsLink - label for the settings link button"
-                    ]
-                  },
-                  "open": {
-                    "desc": "opens the profile"
-                  },
-                  "close": {
-                    "desc": "closes the profile"
-                  },
-                  "onProfileClickOutside": {
-                    "desc": "Calls the provided callback when the profile is open and the user clicks outside of the profile",
-                    "params": "HIG.abstract.EventObject.params",
-                    "returns": "HIG.abstract.EventObject.returns"
-                  },
-                  "onProfileImageClick": {
-                    "desc": "Calls the provided callback when user clicks on the profile image",
-                    "params": "HIG.abstract.EventObject.params",
-                    "returns": "HIG.abstract.EventObject.returns"
-                  },
-                  "onProfileSettingsClick": {
-                    "desc": "Calls the provided callback when user clicks on the profile settings link",
-                    "params": "HIG.abstract.EventObject.params",
-                    "returns": "HIG.abstract.EventObject.returns"
-                  },
-                  "onSignOutClick": {
-                    "desc": "Calls the provided callback when user clicks on the sign out button",
-                    "params": "HIG.abstract.EventObject.params",
-                    "returns": "HIG.abstract.EventObject.returns"
-                  }
-                },
-                "defaults": {
-                  "image": "{String} url src of the image",
-                  "email": "{String} email for profile",
-                  "name": "{String} display name for profile",
-                  "signOutLink": "{String} the link for the sign out button",
-                  "profileSettingsLabel": "{String} the label for the Profile Settings link",
-                  "profileSettingsLink": "{String} the URL for the Profile Settings link",
-                  "signOutLabel": "{String} the label for the sign out button"
-                }
-              },
-              "ProjectAccountSwitcher": {
-                "methods": {
-                  "addAccount": {
-                    "desc": "Pass in an instance of a ProjectAccountSwitcher Account",
-                    "params": [
-                      "{Account} [ReferenceAccount]",
-                      "{Account} [ReferenceAccount] - (Optional) reference node for insertBefore"
-                    ]
-                  },
-                  "addProject": {
-                    "desc": "Pass in an instance of a ProjectAccountSwitcher Project",
-                    "params": [
-                      "{Project} [ReferenceProject]",
-                      "{Project} [ReferenceProject] - (Optional) reference node for insertBefore"
-                    ]
-                  },
-                  "showCaret": {
-                    "desc": "shows a caret indicating a flyout in Project Account Switcher"
-                  },
-                  "hideCaret": {
-                    "desc": "removes caret indicating a flyout in Project Account Switcher"
-                  },
-                  "open": {
-                    "desc": "opens the project/account switcher"
-                  },
-                  "close": {
-                    "desc": "closes the project/account switcher"
-                  },
-                  "setActiveLabel": {
-                    "desc": "Sets the label displayed in the top nav",
-                    "params": [
-                      "{String} - Label of the active project or account"
-                    ]
-                  },
-                  "setActiveImage": {
-                    "desc": "Sets the image displayed in the top nav",
-                    "params": [
-                      "{String} - url of the image of the active project or account"
-                    ]
-                  },
-                  "setActiveType": {
-                    "desc": "Sets the type of the item displayed in the top nav",
-                    "params": [
-                      "{String} - ['account' or 'project']"
-                    ]
-                  },
-                  "onClickOutside": {
-                    "desc": "Calls the provided callback when the switcher is open and the user clicks outside the switcher",
-                    "params": "HIG.abstract.EventObject.params",
-                    "returns": "HIG.abstract.EventObject.returns"
-                  },
-                  "onClick": {
-                    "desc": "Calls the provided callback when user clicks on the switcher in the top nav",
-                    "params": "HIG.abstract.EventObject.params",
-                    "returns": "HIG.abstract.EventObject.returns"
-                  }
-                },
-                "partials": {
-                  "Account": {
-                    "methods": {
-                      "setLabel": {
-                        "desc": "sets the label",
-                        "params": [
-                          "{String} label - new label"
-                        ]
-                      },
-                      "setImage": {},
-                      "activate": {
-                        "desc": "activates the account"
-                      },
-                      "deactivate": {
-                        "desc": "deactivates the account"
-                      },
-                      "onClick": {
-                        "desc": "Calls the provided callback when user clicks on the account",
-                        "params": "HIG.abstract.EventObject.params",
-                        "returns": "HIG.abstract.EventObject.returns"
-                      }
-                    },
-                    "defaults": {
-                      "image": "{String} - url of the account image",
-                      "label": "{String} - label of the account"
-                    }
-                  },
-                  "Project": {
-                    "methods": {
-                      "setLabel": {
-                        "desc": "sets the label",
-                        "params": [
-                          "{String} label - new label"
-                        ]
-                      },
-                      "setImage": {},
-                      "activate": {
-                        "desc": "activates the project"
-                      },
-                      "deactivate": {
-                        "desc": "deactivates the project"
-                      },
-                      "onClick": {
-                        "desc": "Calls the provided callback when user clicks on the project",
-                        "params": "HIG.abstract.EventObject.params",
-                        "returns": "HIG.abstract.EventObject.returns"
-                      }
-                    },
-                    "defaults": {
-                      "image": "{String} - url of the project image",
-                      "label": "{String} - label of the project"
-                    }
-                  }
-                },
-                "defaults": {
-                  "activeImage": "{String} - url of the image of the active project or account",
-                  "activeType": "{String} ['account' or 'project']",
-                  "activeLabel": "{String} - Label of the active project or account"
-                }
-              },
-              "Shortcut": {
-                "methods": {
-                  "setIcon": {
-                    "desc": "sets the icon of the Shortcut",
-                    "params": [
-                      "{String} title - new icon ID"
-                    ]
-                  },
-                  "setTitle": {
-                    "desc": "sets the hover title of the Shortcut",
-                    "params": [
-                      "{String} title - new hover title"
-                    ]
-                  },
-                  "setLink": {
-                    "desc": "sets the link of the Shortcut",
-                    "params": [
-                      "{String} link - new link"
-                    ]
-                  },
-                  "onClick": {
-                    "desc": "Calls the provided callback when user clicks on the Shortcut",
-                    "params": "HIG.abstract.EventObject.params",
-                    "returns": "HIG.abstract.EventObject.returns"
-                  }
-                },
-                "defaults": {
-                  "icon": "{String} icon identifier",
-                  "title": "{String} the title of the Shortcut to be shown on hover",
-                  "link": "{String} link behind the Shortcut"
-                }
-              },
-              "Help": {
-                "methods": {
-                  "setTitle": {
-                    "desc": "sets the hover title of the Help",
-                    "params": [
-                      "{String} title - new hover title"
-                    ]
-                  },
-                  "setLink": {
-                    "desc": "sets the link of the Help",
-                    "params": [
-                      "{String} link - new link"
-                    ]
-                  },
-                  "onClick": {
-                    "desc": "Calls the provided callback when user clicks on the Help",
-                    "params": "HIG.abstract.EventObject.params",
-                    "returns": "HIG.abstract.EventObject.returns"
-                  }
-                },
-                "defaults": {
-                  "title": "{String} the title of the Help icon to be shown on hover",
-                  "link": "{String} link behind the Help icon"
-                }
-              }
-            }
-          },
-          "SubNav": {
-            "methods": {
-              "setModuleIndicatorName": {
-                "desc": "sets the moduleIndicatorName",
-                "params": [
-                  "{String} moduleIndicatorName - new moduleIndicatorName"
-                ]
-              },
-              "setModuleIndicatorIcon": {
-                "desc": "sets the moduleIndicatorIcon",
-                "params": [
-                  "{String} moduleIndicatorIcon - new moduleIndicatorIcon"
-                ]
-              },
-              "addTabs": {
-                "desc": "Pass in an instance of Tabs",
-                "params": [
-                  "{Tabs} Tabs - instance of a Tabs partial"
-                ]
-              },
-              "onModuleIndicatorClick": {
-                "desc": "Calls the provided callback when the module indicator (name or icon) is clicked",
-                "params": "HIG.abstract.EventObject.params",
-                "returns": "HIG.abstract.EventObject.returns"
-              }
-            },
-            "partials": {
-              "Tabs": {
-                "methods": {
-                  "addTab": {
-                    "desc": "Pass in an instance of a SubNav Tab partial",
-                    "params": [
-                      "{Tab} Tab - instance of a Tab partial",
-                      "{Tab} [ReferenceTab] - (Optional) reference node for insertBefore"
-                    ]
-                  }
-                },
-                "partials": {
-                  "Tab": {
-                    "methods": {
-                      "setLabel": {
-                        "desc": "sets the label",
-                        "params": [
-                          "{String} label - new label"
-                        ]
-                      },
-                      "activate": {
-                        "desc": "activates the tab"
-                      },
-                      "deactivate": {
-                        "desc": "deactivates the tab"
-                      },
-                      "onClick": {
-                        "desc": "Calls the provided callback when user clicks on the tab",
-                        "params": "HIG.abstract.EventObject.params",
-                        "returns": "HIG.abstract.EventObject.returns"
-                      }
-                    },
-                    "defaults": {
-                      "label": "{String} Label of the tab"
-                    }
-                  }
-                }
-              }
-            },
-            "defaults": {
-              "moduleIndicatorName": "{String} Name of the module",
-              "moduleIndicatorIcon": "{String} icon identifier"
-            }
-          },
-          "SideNav": {
-            "methods": {
-              "addSection": {
-                "desc": "Pass in an instance of a SideNav Section partial",
-                "params": [
-                  "{Section} Section - instance of a Section partial",
-                  "{Section} [ReferenceSection] - (Optional) reference node for insertBefore"
-                ]
-              },
-              "addLink": {
-                "desc": "Pass in an instance of a SideNav Link partial",
-                "params": [
-                  "{Link} Link - instance of a Link partial",
-                  "{Link} [ReferenceLink] - (Optional) reference node for insertBefore"
-                ]
-              },
-              "addSearch": {
-                "desc": "Pass in an instance of a Search partial",
-                "params": [
-                  "{Link} Search - instance of a Search partial",
-                  "{Search} [ReferenceSearch] - (Optional) reference node for insertBefore"
-                ]
-              },
-              "setCopyright": {
-                "desc": "Change the copyright notice at bottom of side nav",
-                "params": [
-                  "{String} Copyright notice"
-                ]
-              }
-            },
-            "partials": {
-              "Search": {
-                "methods": {
-                  "setPlaceholder": {
-                    "desc": "sets the placeholder",
-                    "params": [
-                      "{String} placeholder - new placeholder"
-                    ]
-                  },
-                  "setQuery": {
-                    "desc": "sets the search query",
-                    "params": [
-                      "{String} query - new query"
-                    ]
-                  },
-                  "showClearIcon": {
-                    "desc": "show the clear input icon"
-                  },
-                  "hideClearIcon": {
-                    "desc": "hide the clear input icon"
-                  },
-                  "onClearIconClick": {
-                    "desc": "Calls the provided callback when user clicks on the Help",
-                    "params": "HIG.abstract.EventObject.params",
-                    "returns": "HIG.abstract.EventObject.returns"
-                  },
-                  "onInput": {
-                    "desc": "Calls the provided callback when user clicks on the Help",
-                    "params": "HIG.abstract.EventObject.params",
-                    "returns": "HIG.abstract.EventObject.returns"
-                  },
-                  "onFocusIn": {
-                    "desc": "Calls the provided callback when user clicks on the Help",
-                    "params": "HIG.abstract.EventObject.params",
-                    "returns": "HIG.abstract.EventObject.returns"
-                  },
-                  "onFocusOut": {
-                    "desc": "Calls the provided callback when user clicks on the Help",
-                    "params": "HIG.abstract.EventObject.params",
-                    "returns": "HIG.abstract.EventObject.returns"
-                  }
-                },
-                "defaults": {
-                  "query": "{String} Set a search query in the input",
-                  "placeholder": "{String} A placeholder text when nothing is searched"
-                }
-              },
-              "Section": {
-                "methods": {
-                  "setHeaderLabel": {
-                    "desc": "sets the label",
-                    "params": [
-                      "{String} label - new label"
-                    ]
-                  },
-                  "setHeaderName": {
-                    "desc": "sets the name",
-                    "params": [
-                      "{String} name - new name"
-                    ]
-                  },
-                  "addGroup": {
-                    "desc": "Pass in an instance of a SideNav Section Group partial",
-                    "params": [
-                      "{Group} Group - instance of a Group partial",
-                      "{Group} [ReferenceGroup] - (Optional) reference node for insertBefore"
-                    ]
-                  },
-                  "addCollapse": {
-                    "desc": "Pass in an instance of a Collapse partial",
-                    "params": [
-                      "{Collapse} Collapse - instance of a Collapse partial",
-                      "{Collapse} [ReferenceCollapse] - (Optional) reference node for insertBefore"
-                    ]
-                  },
-                  "show": {
-                    "desc": "show (used for filtering)"
-                  },
-                  "hide": {
-                    "desc": "hide (used for filtering)"
-                  }
-                },
-                "defaults": {
-                  "headerLabel": "{String} A label for the section, ex: Project or Account",
-                  "headerName": "{String} A identifiable project or account name"
-                },
-                "partials": {
-                  "Group": {
-                    "methods": {
-                      "addModule": {
-                        "desc": "Pass in an instance of a SideNav group Module partial",
-                        "params": [
-                          "{Module} Module - instance of a Module partial",
-                          "{Module} [ReferenceModule] - (Optional) reference node for insertBefore"
-                        ]
-                      },
-                      "show": {
-                        "desc": "show (used for filtering)"
-                      },
-                      "hide": {
-                        "desc": "hide (used for filtering)"
-                      }
-                    },
-                    "partials": {
-                      "Module": {
-                        "methods": {
-                          "setIcon": {
-                            "desc": "sets the icon of an module",
-                            "params": [
-                              "{String} title - new icon ID"
-                            ]
-                          },
-                          "setTitle": {
-                            "desc": "sets the title of an module",
-                            "params": [
-                              "{String} title - new title"
-                            ]
-                          },
-                          "setLink": {
-                            "desc": "sets the link of an module",
-                            "params": [
-                              "{String} link - new link"
-                            ]
-                          },
-                          "show": {
-                            "desc": "show (used for filtering)"
-                          },
-                          "hide": {
-                            "desc": "hide (used for filtering)"
-                          },
-                          "activate": {
-                            "desc": "activates the module"
-                          },
-                          "deactivate": {
-                            "desc": "deactivates the module"
-                          },
-                          "addSubmodule": {
-                            "desc": "Pass in an instance of a Submodule partial",
-                            "params": [
-                              "{Submodule} Submodule - instance of a Submodule partial",
-                              "{Submodule} [ReferenceSubmodule] - (Optional) reference node for insertBefore"
-                            ]
-                          },
-                          "addCollapse": {
-                            "desc": "Pass in an instance of a Collapse partial",
-                            "params": [
-                              "{Collapse} Collapse - instance of a Collapse partial",
-                              "{Collapse} [ReferenceCollapse] - (Optional) reference node for insertBefore"
-                            ]
-                          },
-                          "onClick": {
-                            "desc": "Calls the provided callback when user clicks on the item",
-                            "params": "HIG.abstract.EventObject.params",
-                            "returns": "HIG.abstract.EventObject.returns"
-                          },
-                          "onHover": {
-                            "desc": "Calls the provided callback when user moves the mouse over the item",
-                            "params": "HIG.abstract.EventObject.params",
-                            "returns": "HIG.abstract.EventObject.returns"
-                          }
-                        },
-                        "defaults": {
-                          "icon": "{String} icon identifier",
-                          "title": "{String} the string of our SideNav module",
-                          "link": "{String} link behind the module"
-                        },
-                        "partials": {
-                          "Submodule": {
-                            "methods": {
-                              "setTitle": {
-                                "desc": "sets the title of an module",
-                                "params": [
-                                  "{String} title - new title"
-                                ]
-                              },
-                              "setLink": {
-                                "desc": "sets the link of an module",
-                                "params": [
-                                  "{String} link - new link"
-                                ]
-                              },
-                              "show": {
-                                "desc": "show (used for filtering)"
-                              },
-                              "hide": {
-                                "desc": "hide (used for filtering)"
-                              },
-                              "activate": {
-                                "desc": "activates the submodule"
-                              },
-                              "deactivate": {
-                                "desc": "deactivates the submodule"
-                              },
-                              "onClick": {
-                                "desc": "Calls the provided callback when user clicks on the item",
-                                "params": "HIG.abstract.EventObject.params",
-                                "returns": "HIG.abstract.EventObject.returns"
-                              },
-                              "onHover": {
-                                "desc": "Calls the provided callback when user clicks on the item",
-                                "params": "HIG.abstract.EventObject.params",
-                                "returns": "HIG.abstract.EventObject.returns"
-                              }
-                            },
-                            "defaults": {
-                              "title": "{String} the string of our SideNav submodule",
-                              "link": "{String} link behind the submodule"
-                            }
-                          },
-                          "Collapse": {
-                            "methods": {
-                              "minimize": {
-                                "desc": "show [ - ]"
-                              },
-                              "maximize": {
-                                "desc": "show [ + ]"
-                              },
-                              "show": {
-                                "desc": "show (used for filtering)"
-                              },
-                              "hide": {
-                                "desc": "hide (used for filtering)"
-                              },
-                              "onClick": {
-                                "desc": "Calls the provided callback when user clicks on the item",
-                                "params": "HIG.abstract.EventObject.params",
-                                "returns": "HIG.abstract.EventObject.returns"
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  },
-                  "Collapse": {
-                    "methods": {
-                      "minimize": {
-                        "desc": "show [ - ]"
-                      },
-                      "maximize": {
-                        "desc": "show [ + ]"
-                      },
-                      "show": {
-                        "desc": "show (used for filtering)"
-                      },
-                      "hide": {
-                        "desc": "hide (used for filtering)"
-                      },
-                      "onClick": {
-                        "desc": "Calls the provided callback when user clicks on the item",
-                        "params": "HIG.abstract.EventObject.params",
-                        "returns": "HIG.abstract.EventObject.returns"
-                      }
-                    }
-                  }
-                }
-              },
-              "Link": {
-                "methods": {
-                  "setTitle": {
-                    "desc": "sets the title",
-                    "params": [
-                      "{String} title - new title"
-                    ]
-                  },
-                  "setLink": {
-                    "desc": "sets the link",
-                    "params": [
-                      "{String} link - new link"
-                    ]
-                  },
-                  "onClick": {
-                    "desc": "Calls the provided callback when user clicks on the link",
-                    "params": "HIG.abstract.EventObject.params",
-                    "returns": "HIG.abstract.EventObject.returns"
-                  },
-                  "onHover": {
-                    "desc": "Calls the provided callback when user moves the mouse over the link",
-                    "params": "HIG.abstract.EventObject.params",
-                    "returns": "HIG.abstract.EventObject.returns"
-                  }
-                },
-                "defaults": {
-                  "title": "{String} title",
-                  "link": "{String} link"
-                }
-              }
-            },
-            "defaults": {
-              "copyright": "{String} Copyright notice at bottom of side nav"
-            }
-          }
-        }
-      },
-      "Modal": {
+      "defaults": {
+        "text": "{String} text you want to display",
+        "type": "{String} h1, h2, h3, sub1, sub2, body, bold, disabled or caption"
+      }
+    },
+    "FormElements": {
+      "partials": {
+        "Checkbox": {
           "methods": {
-              "addButton": {
-                "desc": "Add a button to the footer of the modal",
-                "params": [
-                  "{Button} Button - instance of a Button partial"
-                ]
-              },
-              "addSlot": {
-                "desc": "Insert dom elements into the modal",
-                "params": [
-                  "{HTMLElement} HTMLElement"
-                ]
-              },
-              "close": {
-                "desc": "Removes the modal from the display"
-              },
-              "onCloseClick": {
-                "desc": "Calls the provided callback when user clicks the close button",
-                "params": "HIG.abstract.EventObject.params",
-                "returns": "HIG.abstract.EventObject.returns"
-              },
-              "onOverlayClick": {
-                "desc": "Calls the provided callback when user clicks the overlay beneath the modal",
-                "params": "HIG.abstract.EventObject.params",
-                "returns": "HIG.abstract.EventObject.returns"
-              },
-              "open": {
-                "desc": "displays the modal"
-              },
-              "setBody": {
-                "desc": "Sets the body content of the modal",
-                "params": [
-                  "{ string } text or html string content of the modal"
-                ]
-              },
-              "setHeaderColor": {
-                "desc": "Sets the color of the modal header",
-                "params": [
-                  "{ string - 'default', 'slate', or 'gray' } color of the modal header"
-                ]
-              },
-              "setTitle": {
-                "desc": "Sets the title of the modal",
-                "params": [
-                  "{ string } title - title of the modal"
-                ]
-              }
+            "setLabel": {
+              "desc": "sets the label",
+              "params": [
+                "{String} label for our checkbox"
+              ]
+            },
+            "setName": {
+              "desc": "sets the name of the checkbox as submitted with a form",
+              "params": [
+                "{String} label used to identify the checkbox when submitted"
+              ]
+            },
+            "setValue": {
+              "desc": "sets the value",
+              "params": [
+                "{String} value for our checkbox"
+              ]
+            },
+            "check": {
+              "desc": "checks the checkbox"
+            },
+            "uncheck": {
+              "desc": "unchecks the checkbox"
+            },
+            "required": {
+              "desc": "makes checkbox required",
+              "params": [
+                "{String} required label text"
+              ]
+            },
+            "noLongerRequired": {
+              "desc": "makes checkbox not required"
+            },
+            "disable": {
+              "desc": "Disable the checkbox, preventing user interaction"
+            },
+            "enable": {
+              "desc": "Enable the checkbox, reenabling user interaction"
+            },
+            "onHover": {
+              "desc": "Calls the provided callback when the checkbox is in a hover state",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            },
+            "onFocus": {
+              "desc": "Calls the provided callback when focus enters the checkbox",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            },
+            "onChange": {
+              "desc": "Calls the provided callback when user changes the value of the checkbox then moves focus elsewhere",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            }
           },
           "defaults": {
-            "title": "{ string } title of the modal",
-            "body": "{ string } text or html string content of the modal",
-            "headerColor": "{ string - 'default', 'slate', or 'gray' } color of the modal header"
+            "label": "",
+            "value": "",
+            "name": ""
           }
-      },
-      "Table": {
-        "methods": {
-          "addTableHead": {},
-          "addTableRow": {},
-          "setDensity": {}
         },
-        "partials": {
-          "TableHead": {
-            "methods": {
-              "addCell": {}
+        "RadioButton": {
+          "methods": {
+            "setLabel": {
+              "desc": "sets the label",
+              "params": [
+                "{String} label for our radio button"
+              ]
             },
-            "partials": {
-              "TextHeadCell": {
-                "methods": {
-                  "setText": {},
-                  "setAlignment": {},
-                  "setWidth": {}
+            "setName": {
+              "desc": "sets the name of the radio button as submitted with a form",
+              "params": [
+                "{String} label used to identify the radio button when submitted"
+              ]
+            },
+            "setValue": {
+              "desc": "sets the value",
+              "params": [
+                "{String} value for our radio button"
+              ]
+            },
+            "check": {
+              "desc": "checks the radio button"
+            },
+            "uncheck": {
+              "desc": "unchecks the radio button"
+            },
+            "required": {
+              "desc": "makes radio button required",
+              "params": [
+                "{String} required label text"
+              ]
+            },
+            "noLongerRequired": {
+              "desc": "makes radio button not required"
+            },
+            "disable": {
+              "desc": "Disable the radio button, preventing user interaction"
+            },
+            "enable": {
+              "desc": "Enable the radio button, reenabling user interaction"
+            },
+            "onHover": {
+              "desc": "Calls the provided callback when the radio button is in a hover state",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            },
+            "onFocus": {
+              "desc": "Calls the provided callback when focus enters the radio button",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            },
+            "onChange": {
+              "desc": "Calls the provided callback when user changes the value of the radio button then moves focus elsewhere",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            }
+          },
+          "defaults": {
+            "label": "",
+            "value": "",
+            "name": ""
+          }
+        },
+        "Dropdown": {
+          "methods": {
+            "open": {
+              "desc": "Opens the menu"
+            },
+            "addOption": {
+              "desc": "Adds an option to the menu",
+              "params": [
+                "{Option} option - an instance of the Option partial",
+                "{Option} [referenceOption] - (Optional) a reference option used when positioning the new option. New option will be added before the reference option."
+              ]
+            },
+            "close": {
+              "desc": "Closes the menu"
+            },
+            "disable": {
+              "desc": "Disables the option, preventing it from being selected"
+            },
+            "enable": {
+              "desc": "Enables the option, allowing it to be selected"
+            },
+            "onBlur": {
+              "desc": "Calls the provided callback when focus moves away from the dropdown",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            },
+            "onClickOutside": {
+              "desc": "Calls the provided callback when the menu is open and the user clicks outside of the menu",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            },
+            "onFocus": {
+              "desc": "Calls the provided callback when the dropdown gains focus",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            },
+            "onKeypress": {
+              "desc": "Calls the provided callback when the user presses a key while the dropdown has focus",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            },
+            "onTargetClick": {
+              "desc": "Calls the provided callback when the user clicks on the dropdown button",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            },
+            "required": {
+              "desc": "makes field required",
+              "params": [
+                "{String} required label text"
+              ]
+            },
+            "noLongerRequired": {
+              "desc": "makes field not required"
+            },
+            "setInstructions": {
+              "desc": "Sets instructional text for the dropdown",
+              "params": [
+                "{String} instructions - instrucitonal text that wil appear below the dropdown"
+              ]
+            },
+            "setLabel": {
+              "desc": "Sets the label for the dropdown",
+              "params": [
+                "{String} label - label identifying the purpose of the dropdown"
+              ]
+            },
+            "setSelectedOptionLabel": {
+              "desc": "Sets the label on the dropdown button, representing the label of the selected option"
+            }
+          },
+          "partials": {
+            "Option": {
+              "methods": {
+                "deselect": {},
+                "onClick": {},
+                "onHover": {},
+                "select": {},
+                "setLabel": {},
+                "setValue": {}
+              },
+              "defaults": {
+                "label": "",
+                "value": null
+              }
+            }
+          },
+          "defaults": {
+            "label": "",
+            "instructions": ""
+          }
+        },
+        "PasswordField": {
+          "methods": {
+            "disable": {
+              "desc": "Disable the password field, preventing user interaction"
+            },
+            "enable": {
+              "desc": "Enable the password field, reenabling user interaction"
+            },
+            "hidePassword": {
+              "desc": "Obscures the characters entered into the password field"
+            },
+            "hidePasswordHideButton": {
+              "desc": "Hides a button used to hide the password"
+            },
+            "hidePasswordRevealButton": {
+              "desc": "Hides a button used to reveal the password"
+            },
+            "noLongerRequired": {
+              "desc": "makes field not required"
+            },
+            "onBlur": {
+              "desc": "Calls the provided callback when user puts blur on the input field",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            },
+            "onChange": {
+              "desc": "Calls the provided callback when user changes the value of the password field then moves focus elsewhere",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            },
+            "onFocus": {
+              "desc": "Calls the provided callback when user puts focus on the input field",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            },
+            "onInput": {
+              "desc": "Calls the provided callback when user changes the value of the password field",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            },
+            "onPasswordHideButtonClick": {
+              "desc": "Calls the provided callback when user clicks on the password hide button",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            },
+            "onPasswordRevealButtonClick": {
+              "desc": "Calls the provided callback when user clicks on the password reveal button",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            },
+            "required": {
+              "desc": "makes field required",
+              "params": [
+                "{String} required label text"
+              ]
+            },
+            "revealPassword": {
+              "desc": "Reveals the characters entered into the password field"
+            },
+            "setInstructions": {
+              "desc": "sets the instructions",
+              "params": [
+                "{String} instructions for our password field"
+              ]
+            },
+            "setLabel": {
+              "desc": "sets the label",
+              "params": [
+                "{String} label for our password field"
+              ]
+            },
+            "setName": {
+              "desc": "sets the name of the field as submitted with a form",
+              "params": [
+                "{String} label used to identify the field when submitted"
+              ]
+            },
+            "setPlaceholder": {
+              "desc": "sets the placeholder",
+              "params": [
+                "{String} placeholder for our password field"
+              ]
+            },
+            "setValue": {
+              "desc": "sets the value",
+              "params": [
+                "{String} value for our password field"
+              ]
+            },
+            "showPasswordHideButton": {
+              "desc": "Shows a button used to hide the password"
+            },
+            "showPasswordRevealButton": {
+              "desc": "Shows a button used to reveal the password"
+            }
+          },
+          "defaults": {
+            "label": "{String} label for our password field",
+            "name": "{String} name identifier for our password field",
+            "placeholder": "{String} placeholder text for our password field",
+            "value": "{String} (optional) input value for password field",
+            "instructions": "{String} (optional) instructions under the password field"
+          }
+        },
+        "TextArea": {
+          "methods": {
+            "setLabel": {
+              "desc": "sets the label",
+              "params": [
+                "{String} label - label for the text area"
+              ]
+            },
+            "setInstructions": {
+              "desc": "sets the instruction text",
+              "params": [
+                "{String} instructions - instructions for the text area"
+              ]
+            },
+            "setPlaceholder": {
+              "desc": "sets the placeholder",
+              "params": [
+                "{String} placeholder - text that appears in the text area when empty"
+              ]
+            },
+            "setValue": {
+              "desc": "sets the value",
+              "params": [
+                "{String} value - the text inside of the text area"
+              ]
+            },
+            "setName": {
+              "desc": "sets the textarea name attribute",
+              "params": [
+                "{String} value - value for name attribute of the textarea element"
+              ]
+            },
+            "required": {
+              "desc": "makes field required",
+              "params": [
+                "{String} required label text"
+              ]
+            },
+            "noLongerRequired": {
+              "desc": "makes field not required"
+            },
+            "disable": {
+              "desc": "Disable the text field, preventing user interaction"
+            },
+            "enable": {
+              "desc": "Enable the text field, reenabling user interaction"
+            },
+            "onBlur": {
+              "desc": "Calls the provided callback when focus leaves the text area",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            },
+            "onChange": {
+              "desc": "Calls the provided callback when the user changes the content of the text area then moves focus elsewhere",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            },
+            "onFocus": {
+              "desc": "Calls the provided callback when focus enters the text area",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            },
+            "onInput": {
+              "desc": "Calls the provided callback when the user changes the content of the text area each time a key is pressed",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            }
+          },
+          "defaults": {
+            "label": "{String} label for the text area",
+            "name": "{String} the name attribute for the textarea",
+            "placeholder": "{String} text that appears in the text area when empty",
+            "value": "{String} the text inside of the text area",
+            "instructions": "{String} instructions for the textarea"
+          }
+        },
+        "TextField": {
+          "methods": {
+            "setInstructions": {
+              "desc": "sets the instructions",
+              "params": [
+                "{String} instructions for our text field"
+              ]
+            },
+            "setLabel": {
+              "desc": "sets the label",
+              "params": [
+                "{String} label for our text field"
+              ]
+            },
+            "setName": {
+              "desc": "sets the name of the field as submitted with a form",
+              "params": [
+                "{String} label used to identify the field when submitted"
+              ]
+            },
+            "setIcon": {
+              "desc": "sets the icon of the text field",
+              "params": [
+                "{String} icon ID"
+              ]
+            },
+            "setPlaceholder": {
+              "desc": "sets the placeholder",
+              "params": [
+                "{String} placeholder for our text field"
+              ]
+            },
+            "setValue": {
+              "desc": "sets the value",
+              "params": [
+                "{String} value for our text field"
+              ]
+            },
+            "required": {
+              "desc": "makes field required",
+              "params": [
+                "{String} required label text"
+              ]
+            },
+            "noLongerRequired": {
+              "desc": "makes field not required"
+            },
+            "disable": {
+              "desc": "Disable the text field, preventing user interaction"
+            },
+            "enable": {
+              "desc": "Enable the text field, reenabling user interaction"
+            },
+            "onBlur": {
+              "desc": "Calls the provided callback when user puts blur on the input field",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            },
+            "onChange": {
+              "desc": "Calls the provided callback when user changes the value of the text field then moves focus elsewhere",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            },
+            "onFocus": {
+              "desc": "Calls the provided callback when user puts focus on the input field",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            },
+            "onInput": {
+              "desc": "Calls the provided callback when user changes the value of the text field",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            }
+          },
+          "defaults": {
+            "label": "{String} label for our text field",
+            "name": "{String} name identifier for our text field",
+            "icon": "{String} icon ID",
+            "placeholder": "{String} placeholder text for our text field",
+            "value": "{String} (optional) input value for text field",
+            "instructions": "{String} (optional) instructions under the text field"
+          }
+        },
+        "Range": {
+          "methods": {
+            "setMax": {
+              "desc": "sets maximum value for range",
+              "params": [
+                "{Integer} max value for the range"
+              ]
+            },
+            "setMin": {
+              "desc": "sets minimum value for range",
+              "params": [
+                "{Integer} minimum value for the range"
+              ]
+            },
+            "setValue": {
+              "desc": "sets specific value for range",
+              "params": [
+                "{Integer} sets specific value for the range"
+              ]
+            },
+            "setLabel": {
+              "desc": "sets the label",
+              "params": [
+                "{String} label - label for the text area"
+              ]
+            },
+            "setInstructions": {
+              "desc": "sets the instruction text",
+              "params": [
+                "{String} instructions - instructions for the text area"
+              ]
+            },
+            "setStep": {
+              "desc": "sets the step granulity for range",
+              "params": [
+                "{Integer} value for step attribute"
+              ]
+            },
+            "required": {
+              "desc": "makes field required",
+              "params": [
+                "{String} required label text"
+              ]
+            },
+            "noLongerRequired": {
+              "desc": "makes field not required"
+            },
+            "disable": {
+              "desc": "Disable the text field, preventing user interaction"
+            },
+            "enable": {
+              "desc": "Enable the text field, reenabling user interaction"
+            },
+            "onBlur": {
+              "desc": "Calls the provided callback when user puts blur on the range element",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            },
+            "onFocus": {
+              "desc": "Calls the provided callback when user puts focus on the range element",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            },
+            "onChange": {
+              "desc": "Calls the provided callback when user changes the value of the range element then moves focus elsewhere",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            }
+          },
+          "defaults": {
+            "value": "{Integer} default value where range starts",
+            "maxValue": "{Integer} max value for range",
+            "minValue": "{Integer} max value for range",
+            "label": "{String} label for our range",
+            "instructions": "{String} (optional) instructions under the range",
+            "step": "{Integer} sets increments to which value can be set"
+          }
+        }
+      }
+    },
+    "Flyout": {
+      "methods": {
+        "addSlot": {
+          "desc": "Content for the flyout",
+          "params": [
+            "{HTMLElement} HTMLElement"
+          ]
+        },
+        "addTarget": {
+          "desc": "Flyout will be positioned relative to this element",
+          "params": [
+            "{HTMLElement} HTMLElement"
+          ]
+        },
+        "close": {
+          "desc": "closes the flyout"
+        },
+        "onClickOutside": {
+          "desc": "Calls the provided callback when the flyout is open and the user clicks outside of the flyout",
+          "params": "HIG.abstract.EventObject.params",
+          "returns": "HIG.abstract.EventObject.returns"
+        },
+        "open": {
+          "desc": "opens the flyout"
+        },
+        "setAnchorPoint": {
+          "desc": "sets where the flyout anchors to the target",
+          "params": [
+            "{String - 'top-right', 'top-center'} where the flyout anchors to the target"
+          ]
+        }
+      },
+      "defaults": {
+        "anchorPoint": "{String - 'top-right', 'top-center'} where the flyout anchors to the target"
+      }
+    }
+  },
+  "components": {
+    "Button": {
+      "methods": {
+        "setTitle": {
+          "desc": "sets the title of a button",
+          "params": [
+            "{String} title - new title for the button"
+          ]
+        },
+        "setLink": {
+          "desc": "sets the link of a button",
+          "params": [
+            "{String} link - new link for the button"
+          ]
+        },
+        "setType": {
+          "desc": "sets the type of a button",
+          "params": [
+            "{String} type can be either: primary (default), secondary or flat"
+          ]
+        },
+        "setSize": {
+          "desc": "sets the size of a button",
+          "params": [
+            "{String} size can be either: standard (default), small, large"
+          ]
+        },
+        "setIcon": {
+          "desc": "sets the icon of a button",
+          "params": [
+            "{String} icon ID"
+          ]
+        },
+        "disable": {
+          "desc": "make the button disabled"
+        },
+        "enable": {
+          "desc": "make the button enabled again after disabled state"
+        },
+        "onBlur": {
+          "desc": "Calls the provided callback when the user moves focus away from the button",
+          "params": "HIG.abstract.EventObject.params",
+          "returns": "HIG.abstract.EventObject.returns"
+        },
+        "onClick": {
+          "desc": "Calls the provided callback when user clicks on the button",
+          "params": "HIG.abstract.EventObject.params",
+          "returns": "HIG.abstract.EventObject.returns"
+        },
+        "onHover": {
+          "desc": "Calls the provided callback when user moves the mouse over the button",
+          "params": "HIG.abstract.EventObject.params",
+          "returns": "HIG.abstract.EventObject.returns"
+        },
+        "onFocus": {
+          "desc": "Calls the provided callback when user puts focus on the button",
+          "params": "HIG.abstract.EventObject.params",
+          "returns": "HIG.abstract.EventObject.returns"
+        }
+      },
+      "defaults": {
+        "title": "{String} title of the button",
+        "link": "{String} link of the button",
+        "type": "{String} type of the button: primary (default), secondary or flat",
+        "size": "{String} size of the button: standard (default), small, large",
+        "icon": "{String} (optional) ID of the icon"
+      }
+    },
+    "IconButton": {
+      "methods": {
+        "setTitle": {
+          "desc": "sets the title of a button",
+          "params": [
+            "{String} title - new title for the button"
+          ]
+        },
+        "setLink": {
+          "desc": "sets the link of a button",
+          "params": [
+            "{String} link - new link for the button"
+          ]
+        },
+        "setIcon": {
+          "desc": "sets the icon of a button",
+          "params": [
+            "{String} icon - icon ID"
+          ]
+        },
+        "disable": {
+          "desc": "make the button disabled"
+        },
+        "enable": {
+          "desc": "make the button enabled again after disabled state"
+        },
+        "onClick": {
+          "desc": "Calls the provided callback when user clicks on the button",
+          "params": "HIG.abstract.EventObject.params",
+          "returns": "HIG.abstract.EventObject.returns"
+        },
+        "onHover": {
+          "desc": "Calls the provided callback when user moves the mouse over the button",
+          "params": "HIG.abstract.EventObject.params",
+          "returns": "HIG.abstract.EventObject.returns"
+        },
+        "onFocus": {
+          "desc": "Calls the provided callback when user puts focus on the button",
+          "params": "HIG.abstract.EventObject.params",
+          "returns": "HIG.abstract.EventObject.returns"
+        },
+        "onBlur": {
+          "desc": "Calls the provided callback when user puts focus away from icon button",
+          "params": "HIG.abstract.EventObject.params",
+          "returns": "HIG.abstract.EventObject.returns"
+        }
+      },
+      "defaults": {
+        "title": "{String} title of the button",
+        "link": "{String} link of the button",
+        "icon": "{String} (optional) ID of the icon"
+      }
+    },
+    "GlobalNav": {
+      "methods": {
+        "addSideNav": {
+          "desc": "Pass in an instance of a SideNav partial to mount it to the GlobalNav",
+          "params": [
+            "{SideNav} SideNav - instance of a SideNav partial"
+          ],
+          "returns": "{SideNav}"
+        },
+        "addTopNav": {
+          "desc": "Pass in an instance of a TopNav",
+          "params": [
+            "{TopNav} TopNav - instance of a TopNav partial"
+          ]
+        },
+        "addSubNav": {
+          "desc": "Pass in an instance of a SubNav",
+          "params": [
+            "{SubNav} SubNav - instance of a SubNav partial"
+          ]
+        },
+        "addSlot": {
+          "desc": "Pass in any HTMLElement you want",
+          "params": [
+            "{HTMLElement} HTMLElement"
+          ]
+        },
+        "showSideNav": {
+          "desc": "show the SideNav"
+        },
+        "hideSideNav": {
+          "desc": "hide the SideNav"
+        },
+        "onHoverOutside": "HIG.abstract.EventObject"
+      },
+      "partials": {
+        "TopNav": {
+          "methods": {
+            "setLogo": {
+              "desc": "sets the logo",
+              "params": [
+                "{String} logo - url to svg or other image object"
+              ]
+            },
+            "setLogoLink": {
+              "desc": "sets the link of the logo",
+              "params": [
+                "{String} link - new link"
+              ]
+            },
+            "sidenavOpen": {
+              "desc": "changes the hamburger icon to a close icon"
+            },
+            "sidenavClosed": {
+              "desc": "changes the close icon to a hamburger icon"
+            },
+            "addProfile": {
+              "desc": "Pass in an instance of an Profile partial to mount it to the GlobalNav",
+              "params": [
+                "{Profile} Profile - instance of a Profile partial"
+              ]
+            },
+            "addProjectAccountSwitcher": {
+              "desc": "Pass in an instance of a ProjectAccountSwitcher partial to mount it to the TopNav",
+              "params": [
+                "{ProjectAccountSwitcher} ProjectAccountSwitcher - instance of a ProjectAccountSwitcher partial"
+              ]
+            },
+            "addSearch": {
+              "desc": "Pass in an instance of a Search partial",
+              "params": [
+                "{Link} Search - instance of a Search partial",
+                "{Search} [ReferenceSearch] - (Optional) reference node for insertBefore"
+              ]
+            },
+            "addShortcut": {
+              "desc": "Pass in an instance of a Shortcut partial to mount it to the TopNav",
+              "params": [
+                "{Shortcut} Shortcut - instance of a Shortcut partial"
+              ]
+            },
+            "addHelp": {
+              "desc": "Pass in an instance of a Help partial to mount it to the TopNav",
+              "params": [
+                "{Help} Help - instance of a Help partial"
+              ]
+            },
+            "onHamburgerClick": {
+              "desc": "Calls the provided callback when user clicks on the hamburger icon",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            }
+          },
+          "defaults": {
+            "logo": "{String} url to svg or other image object",
+            "logoLink": "{String} url behind the logo"
+          },
+          "partials": {
+            "Search": {
+              "methods": {
+                "setPlaceholder": {
+                  "desc": "sets the placeholder",
+                  "params": [
+                    "{String} placeholder - new placeholder"
+                  ]
                 },
-                "defaults": {
-                  "text": "{String} text for text cell in head of table",
-                  "alignment": "{String} value for text-align style property of cell",
-                  "width": "{String} value for width of cell"
+                "setQuery": {
+                  "desc": "sets the search query",
+                  "params": [
+                    "{String} query - new query"
+                  ]
+                },
+                "showClearIcon": {
+                  "desc": "show the clear input icon"
+                },
+                "hideClearIcon": {
+                  "desc": "hide the clear input icon"
+                },
+                "onClearIconClick": {
+                  "desc": "Calls the provided callback when the Clear Icon is clicked",
+                  "params": "HIG.abstract.EventObject.params",
+                  "returns": "HIG.abstract.EventObject.returns"
+                },
+                "onInput": {
+                  "desc": "Calls the provided callback when user enters text in Search input",
+                  "params": "HIG.abstract.EventObject.params",
+                  "returns": "HIG.abstract.EventObject.returns"
+                },
+                "onFocusIn": {
+                  "desc": "Calls the provided callback when Search input gains focus",
+                  "params": "HIG.abstract.EventObject.params",
+                  "returns": "HIG.abstract.EventObject.returns"
+                },
+                "onFocusOut": {
+                  "desc": "Calls the provided callback when the Search input loses focus",
+                  "params": "HIG.abstract.EventObject.params",
+                  "returns": "HIG.abstract.EventObject.returns"
                 }
               },
-              "SlotHeadCell": {
-                "methods": {
-                  "addSlot": {},
-                  "setWidth": {}
+              "defaults": {
+                "query": "{String} Set a search query in the input",
+                "placeholder": "{String} A placeholder text when nothing is searched"
+              }
+            },
+            "Profile": {
+              "methods": {
+                "setEmail": {
+                  "desc": "sets the email",
+                  "params": [
+                    "{String} email - email of the signed in user"
+                  ]
                 },
-                "defaults": {
-                  "width": "{String} value for width of cell"
+                "setImage": {
+                  "desc": "sets the image",
+                  "params": [
+                    "{String} image - url to svg or other image object"
+                  ]
+                },
+                "setName": {
+                  "desc": "sets the name",
+                  "params": [
+                    "{String} name - name of the signed in user"
+                  ]
+                },
+                "setProfileSettingsLabel": {
+                  "desc": "sets the settings label",
+                  "params": [
+                    "{String} settings label - label for the settings button"
+                  ]
+                },
+                "setProfileSettingsLink": {
+                  "desc": "sets the settings link",
+                  "params": [
+                    "{String} settingsLink - label for the settings link button"
+                  ]
+                },
+                "setSignOutLabel": {
+                  "desc": "sets the sign out label",
+                  "params": [
+                    "{String} signOutLabel - label for the sign out button"
+                  ]
+                },
+                "setSignOutLink": {
+                  "desc": "sets the settings link",
+                  "params": [
+                    "{String} settingsLink - label for the settings link button"
+                  ]
+                },
+                "open": {
+                  "desc": "opens the profile"
+                },
+                "close": {
+                  "desc": "closes the profile"
+                },
+                "onProfileClickOutside": {
+                  "desc": "Calls the provided callback when the profile is open and the user clicks outside of the profile",
+                  "params": "HIG.abstract.EventObject.params",
+                  "returns": "HIG.abstract.EventObject.returns"
+                },
+                "onProfileImageClick": {
+                  "desc": "Calls the provided callback when user clicks on the profile image",
+                  "params": "HIG.abstract.EventObject.params",
+                  "returns": "HIG.abstract.EventObject.returns"
+                },
+                "onProfileSettingsClick": {
+                  "desc": "Calls the provided callback when user clicks on the profile settings link",
+                  "params": "HIG.abstract.EventObject.params",
+                  "returns": "HIG.abstract.EventObject.returns"
+                },
+                "onSignOutClick": {
+                  "desc": "Calls the provided callback when user clicks on the sign out button",
+                  "params": "HIG.abstract.EventObject.params",
+                  "returns": "HIG.abstract.EventObject.returns"
+                }
+              },
+              "defaults": {
+                "image": "{String} url src of the image",
+                "email": "{String} email for profile",
+                "name": "{String} display name for profile",
+                "signOutLink": "{String} the link for the sign out button",
+                "profileSettingsLabel": "{String} the label for the Profile Settings link",
+                "profileSettingsLink": "{String} the URL for the Profile Settings link",
+                "signOutLabel": "{String} the label for the sign out button"
+              }
+            },
+            "ProjectAccountSwitcher": {
+              "methods": {
+                "addAccount": {
+                  "desc": "Pass in an instance of a ProjectAccountSwitcher Account",
+                  "params": [
+                    "{Account} [ReferenceAccount]",
+                    "{Account} [ReferenceAccount] - (Optional) reference node for insertBefore"
+                  ]
+                },
+                "addProject": {
+                  "desc": "Pass in an instance of a ProjectAccountSwitcher Project",
+                  "params": [
+                    "{Project} [ReferenceProject]",
+                    "{Project} [ReferenceProject] - (Optional) reference node for insertBefore"
+                  ]
+                },
+                "showCaret": {
+                  "desc": "shows a caret indicating a flyout in Project Account Switcher"
+                },
+                "hideCaret": {
+                  "desc": "removes caret indicating a flyout in Project Account Switcher"
+                },
+                "open": {
+                  "desc": "opens the project/account switcher"
+                },
+                "close": {
+                  "desc": "closes the project/account switcher"
+                },
+                "setActiveLabel": {
+                  "desc": "Sets the label displayed in the top nav",
+                  "params": [
+                    "{String} - Label of the active project or account"
+                  ]
+                },
+                "setActiveImage": {
+                  "desc": "Sets the image displayed in the top nav",
+                  "params": [
+                    "{String} - url of the image of the active project or account"
+                  ]
+                },
+                "setActiveType": {
+                  "desc": "Sets the type of the item displayed in the top nav",
+                  "params": [
+                    "{String} - ['account' or 'project']"
+                  ]
+                },
+                "onClickOutside": {
+                  "desc": "Calls the provided callback when the switcher is open and the user clicks outside the switcher",
+                  "params": "HIG.abstract.EventObject.params",
+                  "returns": "HIG.abstract.EventObject.returns"
+                },
+                "onClick": {
+                  "desc": "Calls the provided callback when user clicks on the switcher in the top nav",
+                  "params": "HIG.abstract.EventObject.params",
+                  "returns": "HIG.abstract.EventObject.returns"
+                }
+              },
+              "partials": {
+                "Account": {
+                  "methods": {
+                    "setLabel": {
+                      "desc": "sets the label",
+                      "params": [
+                        "{String} label - new label"
+                      ]
+                    },
+                    "setImage": {},
+                    "activate": {
+                      "desc": "activates the account"
+                    },
+                    "deactivate": {
+                      "desc": "deactivates the account"
+                    },
+                    "onClick": {
+                      "desc": "Calls the provided callback when user clicks on the account",
+                      "params": "HIG.abstract.EventObject.params",
+                      "returns": "HIG.abstract.EventObject.returns"
+                    }
+                  },
+                  "defaults": {
+                    "image": "{String} - url of the account image",
+                    "label": "{String} - label of the account"
+                  }
+                },
+                "Project": {
+                  "methods": {
+                    "setLabel": {
+                      "desc": "sets the label",
+                      "params": [
+                        "{String} label - new label"
+                      ]
+                    },
+                    "setImage": {},
+                    "activate": {
+                      "desc": "activates the project"
+                    },
+                    "deactivate": {
+                      "desc": "deactivates the project"
+                    },
+                    "onClick": {
+                      "desc": "Calls the provided callback when user clicks on the project",
+                      "params": "HIG.abstract.EventObject.params",
+                      "returns": "HIG.abstract.EventObject.returns"
+                    }
+                  },
+                  "defaults": {
+                    "image": "{String} - url of the project image",
+                    "label": "{String} - label of the project"
+                  }
+                }
+              },
+              "defaults": {
+                "activeImage": "{String} - url of the image of the active project or account",
+                "activeType": "{String} ['account' or 'project']",
+                "activeLabel": "{String} - Label of the active project or account"
+              }
+            },
+            "Shortcut": {
+              "methods": {
+                "setIcon": {
+                  "desc": "sets the icon of the Shortcut",
+                  "params": [
+                    "{String} title - new icon ID"
+                  ]
+                },
+                "setTitle": {
+                  "desc": "sets the hover title of the Shortcut",
+                  "params": [
+                    "{String} title - new hover title"
+                  ]
+                },
+                "setLink": {
+                  "desc": "sets the link of the Shortcut",
+                  "params": [
+                    "{String} link - new link"
+                  ]
+                },
+                "onClick": {
+                  "desc": "Calls the provided callback when user clicks on the Shortcut",
+                  "params": "HIG.abstract.EventObject.params",
+                  "returns": "HIG.abstract.EventObject.returns"
+                }
+              },
+              "defaults": {
+                "icon": "{String} icon identifier",
+                "title": "{String} the title of the Shortcut to be shown on hover",
+                "link": "{String} link behind the Shortcut"
+              }
+            },
+            "Help": {
+              "methods": {
+                "setTitle": {
+                  "desc": "sets the hover title of the Help",
+                  "params": [
+                    "{String} title - new hover title"
+                  ]
+                },
+                "setLink": {
+                  "desc": "sets the link of the Help",
+                  "params": [
+                    "{String} link - new link"
+                  ]
+                },
+                "onClick": {
+                  "desc": "Calls the provided callback when user clicks on the Help",
+                  "params": "HIG.abstract.EventObject.params",
+                  "returns": "HIG.abstract.EventObject.returns"
+                }
+              },
+              "defaults": {
+                "title": "{String} the title of the Help icon to be shown on hover",
+                "link": "{String} link behind the Help icon"
+              }
+            }
+          }
+        },
+        "SubNav": {
+          "methods": {
+            "setModuleIndicatorName": {
+              "desc": "sets the moduleIndicatorName",
+              "params": [
+                "{String} moduleIndicatorName - new moduleIndicatorName"
+              ]
+            },
+            "setModuleIndicatorIcon": {
+              "desc": "sets the moduleIndicatorIcon",
+              "params": [
+                "{String} moduleIndicatorIcon - new moduleIndicatorIcon"
+              ]
+            },
+            "addTabs": {
+              "desc": "Pass in an instance of Tabs",
+              "params": [
+                "{Tabs} Tabs - instance of a Tabs partial"
+              ]
+            },
+            "onModuleIndicatorClick": {
+              "desc": "Calls the provided callback when the module indicator (name or icon) is clicked",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            }
+          },
+          "partials": {
+            "Tabs": {
+              "methods": {
+                "addTab": {
+                  "desc": "Pass in an instance of a SubNav Tab partial",
+                  "params": [
+                    "{Tab} Tab - instance of a Tab partial",
+                    "{Tab} [ReferenceTab] - (Optional) reference node for insertBefore"
+                  ]
+                }
+              },
+              "partials": {
+                "Tab": {
+                  "methods": {
+                    "setLabel": {
+                      "desc": "sets the label",
+                      "params": [
+                        "{String} label - new label"
+                      ]
+                    },
+                    "activate": {
+                      "desc": "activates the tab"
+                    },
+                    "deactivate": {
+                      "desc": "deactivates the tab"
+                    },
+                    "onClick": {
+                      "desc": "Calls the provided callback when user clicks on the tab",
+                      "params": "HIG.abstract.EventObject.params",
+                      "returns": "HIG.abstract.EventObject.returns"
+                    }
+                  },
+                  "defaults": {
+                    "label": "{String} Label of the tab"
+                  }
                 }
               }
             }
           },
-          "TableRow": {
-            "methods": {
-              "addCell": {}
+          "defaults": {
+            "moduleIndicatorName": "{String} Name of the module",
+            "moduleIndicatorIcon": "{String} icon identifier"
+          }
+        },
+        "SideNav": {
+          "methods": {
+            "addSection": {
+              "desc": "Pass in an instance of a SideNav Section partial",
+              "params": [
+                "{Section} Section - instance of a Section partial",
+                "{Section} [ReferenceSection] - (Optional) reference node for insertBefore"
+              ]
             },
-            "partials": {
-              "TextCell": {
-                "methods": {
-                  "setText": {},
-                  "setAlignment": {},
-                  "setDetail": {}
+            "addLink": {
+              "desc": "Pass in an instance of a SideNav Link partial",
+              "params": [
+                "{Link} Link - instance of a Link partial",
+                "{Link} [ReferenceLink] - (Optional) reference node for insertBefore"
+              ]
+            },
+            "addSearch": {
+              "desc": "Pass in an instance of a Search partial",
+              "params": [
+                "{Link} Search - instance of a Search partial",
+                "{Search} [ReferenceSearch] - (Optional) reference node for insertBefore"
+              ]
+            },
+            "setCopyright": {
+              "desc": "Change the copyright notice at bottom of side nav",
+              "params": [
+                "{String} Copyright notice"
+              ]
+            }
+          },
+          "partials": {
+            "Search": {
+              "methods": {
+                "setPlaceholder": {
+                  "desc": "sets the placeholder",
+                  "params": [
+                    "{String} placeholder - new placeholder"
+                  ]
                 },
-                "defaults": {
-                  "text": "{String} text for text cell in body of table",
-                  "alignment": "{String} value for text-align style property of cell",
-                  "detail": "{String} supporting text for cell in body of table"
+                "setQuery": {
+                  "desc": "sets the search query",
+                  "params": [
+                    "{String} query - new query"
+                  ]
+                },
+                "showClearIcon": {
+                  "desc": "show the clear input icon"
+                },
+                "hideClearIcon": {
+                  "desc": "hide the clear input icon"
+                },
+                "onClearIconClick": {
+                  "desc": "Calls the provided callback when user clicks on the Help",
+                  "params": "HIG.abstract.EventObject.params",
+                  "returns": "HIG.abstract.EventObject.returns"
+                },
+                "onInput": {
+                  "desc": "Calls the provided callback when user clicks on the Help",
+                  "params": "HIG.abstract.EventObject.params",
+                  "returns": "HIG.abstract.EventObject.returns"
+                },
+                "onFocusIn": {
+                  "desc": "Calls the provided callback when user clicks on the Help",
+                  "params": "HIG.abstract.EventObject.params",
+                  "returns": "HIG.abstract.EventObject.returns"
+                },
+                "onFocusOut": {
+                  "desc": "Calls the provided callback when user clicks on the Help",
+                  "params": "HIG.abstract.EventObject.params",
+                  "returns": "HIG.abstract.EventObject.returns"
                 }
               },
-              "IconCell": {
-                "methods": {
-                  "setIcon": {}
+              "defaults": {
+                "query": "{String} Set a search query in the input",
+                "placeholder": "{String} A placeholder text when nothing is searched"
+              }
+            },
+            "Section": {
+              "methods": {
+                "setHeaderLabel": {
+                  "desc": "sets the label",
+                  "params": [
+                    "{String} label - new label"
+                  ]
+                },
+                "setHeaderName": {
+                  "desc": "sets the name",
+                  "params": [
+                    "{String} name - new name"
+                  ]
+                },
+                "addGroup": {
+                  "desc": "Pass in an instance of a SideNav Section Group partial",
+                  "params": [
+                    "{Group} Group - instance of a Group partial",
+                    "{Group} [ReferenceGroup] - (Optional) reference node for insertBefore"
+                  ]
+                },
+                "addCollapse": {
+                  "desc": "Pass in an instance of a Collapse partial",
+                  "params": [
+                    "{Collapse} Collapse - instance of a Collapse partial",
+                    "{Collapse} [ReferenceCollapse] - (Optional) reference node for insertBefore"
+                  ]
+                },
+                "show": {
+                  "desc": "show (used for filtering)"
+                },
+                "hide": {
+                  "desc": "hide (used for filtering)"
                 }
               },
-              "SlotCell": {
-                "methods": {
-                  "addSlot": {}
+              "defaults": {
+                "headerLabel": "{String} A label for the section, ex: Project or Account",
+                "headerName": "{String} A identifiable project or account name"
+              },
+              "partials": {
+                "Group": {
+                  "methods": {
+                    "addModule": {
+                      "desc": "Pass in an instance of a SideNav group Module partial",
+                      "params": [
+                        "{Module} Module - instance of a Module partial",
+                        "{Module} [ReferenceModule] - (Optional) reference node for insertBefore"
+                      ]
+                    },
+                    "show": {
+                      "desc": "show (used for filtering)"
+                    },
+                    "hide": {
+                      "desc": "hide (used for filtering)"
+                    }
+                  },
+                  "partials": {
+                    "Module": {
+                      "methods": {
+                        "setIcon": {
+                          "desc": "sets the icon of an module",
+                          "params": [
+                            "{String} title - new icon ID"
+                          ]
+                        },
+                        "setTitle": {
+                          "desc": "sets the title of an module",
+                          "params": [
+                            "{String} title - new title"
+                          ]
+                        },
+                        "setLink": {
+                          "desc": "sets the link of an module",
+                          "params": [
+                            "{String} link - new link"
+                          ]
+                        },
+                        "show": {
+                          "desc": "show (used for filtering)"
+                        },
+                        "hide": {
+                          "desc": "hide (used for filtering)"
+                        },
+                        "activate": {
+                          "desc": "activates the module"
+                        },
+                        "deactivate": {
+                          "desc": "deactivates the module"
+                        },
+                        "addSubmodule": {
+                          "desc": "Pass in an instance of a Submodule partial",
+                          "params": [
+                            "{Submodule} Submodule - instance of a Submodule partial",
+                            "{Submodule} [ReferenceSubmodule] - (Optional) reference node for insertBefore"
+                          ]
+                        },
+                        "addCollapse": {
+                          "desc": "Pass in an instance of a Collapse partial",
+                          "params": [
+                            "{Collapse} Collapse - instance of a Collapse partial",
+                            "{Collapse} [ReferenceCollapse] - (Optional) reference node for insertBefore"
+                          ]
+                        },
+                        "onClick": {
+                          "desc": "Calls the provided callback when user clicks on the item",
+                          "params": "HIG.abstract.EventObject.params",
+                          "returns": "HIG.abstract.EventObject.returns"
+                        },
+                        "onHover": {
+                          "desc": "Calls the provided callback when user moves the mouse over the item",
+                          "params": "HIG.abstract.EventObject.params",
+                          "returns": "HIG.abstract.EventObject.returns"
+                        }
+                      },
+                      "defaults": {
+                        "icon": "{String} icon identifier",
+                        "title": "{String} the string of our SideNav module",
+                        "link": "{String} link behind the module"
+                      },
+                      "partials": {
+                        "Submodule": {
+                          "methods": {
+                            "setTitle": {
+                              "desc": "sets the title of an module",
+                              "params": [
+                                "{String} title - new title"
+                              ]
+                            },
+                            "setLink": {
+                              "desc": "sets the link of an module",
+                              "params": [
+                                "{String} link - new link"
+                              ]
+                            },
+                            "show": {
+                              "desc": "show (used for filtering)"
+                            },
+                            "hide": {
+                              "desc": "hide (used for filtering)"
+                            },
+                            "activate": {
+                              "desc": "activates the submodule"
+                            },
+                            "deactivate": {
+                              "desc": "deactivates the submodule"
+                            },
+                            "onClick": {
+                              "desc": "Calls the provided callback when user clicks on the item",
+                              "params": "HIG.abstract.EventObject.params",
+                              "returns": "HIG.abstract.EventObject.returns"
+                            },
+                            "onHover": {
+                              "desc": "Calls the provided callback when user clicks on the item",
+                              "params": "HIG.abstract.EventObject.params",
+                              "returns": "HIG.abstract.EventObject.returns"
+                            }
+                          },
+                          "defaults": {
+                            "title": "{String} the string of our SideNav submodule",
+                            "link": "{String} link behind the submodule"
+                          }
+                        },
+                        "Collapse": {
+                          "methods": {
+                            "minimize": {
+                              "desc": "show [ - ]"
+                            },
+                            "maximize": {
+                              "desc": "show [ + ]"
+                            },
+                            "show": {
+                              "desc": "show (used for filtering)"
+                            },
+                            "hide": {
+                              "desc": "hide (used for filtering)"
+                            },
+                            "onClick": {
+                              "desc": "Calls the provided callback when user clicks on the item",
+                              "params": "HIG.abstract.EventObject.params",
+                              "returns": "HIG.abstract.EventObject.returns"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "Collapse": {
+                  "methods": {
+                    "minimize": {
+                      "desc": "show [ - ]"
+                    },
+                    "maximize": {
+                      "desc": "show [ + ]"
+                    },
+                    "show": {
+                      "desc": "show (used for filtering)"
+                    },
+                    "hide": {
+                      "desc": "hide (used for filtering)"
+                    },
+                    "onClick": {
+                      "desc": "Calls the provided callback when user clicks on the item",
+                      "params": "HIG.abstract.EventObject.params",
+                      "returns": "HIG.abstract.EventObject.returns"
+                    }
+                  }
                 }
+              }
+            },
+            "Link": {
+              "methods": {
+                "setTitle": {
+                  "desc": "sets the title",
+                  "params": [
+                    "{String} title - new title"
+                  ]
+                },
+                "setLink": {
+                  "desc": "sets the link",
+                  "params": [
+                    "{String} link - new link"
+                  ]
+                },
+                "onClick": {
+                  "desc": "Calls the provided callback when user clicks on the link",
+                  "params": "HIG.abstract.EventObject.params",
+                  "returns": "HIG.abstract.EventObject.returns"
+                },
+                "onHover": {
+                  "desc": "Calls the provided callback when user moves the mouse over the link",
+                  "params": "HIG.abstract.EventObject.params",
+                  "returns": "HIG.abstract.EventObject.returns"
+                }
+              },
+              "defaults": {
+                "title": "{String} title",
+                "link": "{String} link"
+              }
+            }
+          },
+          "defaults": {
+            "copyright": "{String} Copyright notice at bottom of side nav"
+          }
+        }
+      }
+    },
+    "Modal": {
+      "methods": {
+        "addButton": {
+          "desc": "Add a button to the footer of the modal",
+          "params": [
+            "{Button} Button - instance of a Button partial"
+          ]
+        },
+        "addSlot": {
+          "desc": "Insert dom elements into the modal",
+          "params": [
+            "{HTMLElement} HTMLElement"
+          ]
+        },
+        "close": {
+          "desc": "Removes the modal from the display"
+        },
+        "onCloseClick": {
+          "desc": "Calls the provided callback when user clicks the close button",
+          "params": "HIG.abstract.EventObject.params",
+          "returns": "HIG.abstract.EventObject.returns"
+        },
+        "onOverlayClick": {
+          "desc": "Calls the provided callback when user clicks the overlay beneath the modal",
+          "params": "HIG.abstract.EventObject.params",
+          "returns": "HIG.abstract.EventObject.returns"
+        },
+        "open": {
+          "desc": "displays the modal"
+        },
+        "setBody": {
+          "desc": "Sets the body content of the modal",
+          "params": [
+            "{ string } text or html string content of the modal"
+          ]
+        },
+        "setHeaderColor": {
+          "desc": "Sets the color of the modal header",
+          "params": [
+            "{ string - 'default', 'slate', or 'gray' } color of the modal header"
+          ]
+        },
+        "setTitle": {
+          "desc": "Sets the title of the modal",
+          "params": [
+            "{ string } title - title of the modal"
+          ]
+        }
+      },
+      "defaults": {
+        "title": "{ string } title of the modal",
+        "body": "{ string } text or html string content of the modal",
+        "headerColor": "{ string - 'default', 'slate', or 'gray' } color of the modal header"
+      }
+    },
+    "Table": {
+      "methods": {
+        "addTableHead": {},
+        "addTableRow": {},
+        "setDensity": {}
+      },
+      "partials": {
+        "TableHead": {
+          "methods": {
+            "addCell": {}
+          },
+          "partials": {
+            "TextHeadCell": {
+              "methods": {
+                "setText": {},
+                "setAlignment": {},
+                "setWidth": {}
+              },
+              "defaults": {
+                "text": "{String} text for text cell in head of table",
+                "alignment": "{String} value for text-align style property of cell",
+                "width": "{String} value for width of cell"
+              }
+            },
+            "SlotHeadCell": {
+              "methods": {
+                "addSlot": {},
+                "setWidth": {}
+              },
+              "defaults": {
+                "width": "{String} value for width of cell"
+              }
+            }
+          }
+        },
+        "TableRow": {
+          "methods": {
+            "addCell": {}
+          },
+          "partials": {
+            "TextCell": {
+              "methods": {
+                "setText": {},
+                "setAlignment": {},
+                "setDetail": {}
+              },
+              "defaults": {
+                "text": "{String} text for text cell in body of table",
+                "alignment": "{String} value for text-align style property of cell",
+                "detail": "{String} supporting text for cell in body of table"
+              }
+            },
+            "IconCell": {
+              "methods": {
+                "setIcon": {}
+              }
+            },
+            "SlotCell": {
+              "methods": {
+                "addSlot": {}
               }
             }
           }
@@ -1716,3 +1707,4 @@
       }
     }
   }
+}
