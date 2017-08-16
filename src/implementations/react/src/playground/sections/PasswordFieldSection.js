@@ -8,7 +8,7 @@ class PasswordFieldSection extends Component {
     this.state = {};
   }
 
-  setPasswordFieldValue = (event) => {
+  setPasswordFieldValue = (event) => {    
     this.setState({ textFieldValue: event.target.textFieldValue });
   }
 

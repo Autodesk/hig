@@ -25,6 +25,7 @@ import profileImage from "./images/profileImage.png";
 import TopNavFixtures from "./fixtures/topNavFixtures";
 
 import ButtonSection from "./sections/ButtonSection.js";
+import DropdownSection from "./sections/DropdownSection";
 import IconButtonSection from "./sections/IconButtonSection.js";
 import CheckboxSection from "./sections/CheckboxSection";
 import RadioButtonSection from "./sections/RadioButtonSection";
@@ -44,8 +45,7 @@ const Section = GlobalNav.SideNav.SectionList.Section;
 const SectionCollapse = GlobalNav.SideNav.SectionList.Section.SectionCollapse;
 const Group = GlobalNav.SideNav.SectionList.Section.Group;
 const Module = GlobalNav.SideNav.SectionList.Section.Group.Module;
-const ModuleCollapse =
-  GlobalNav.SideNav.SectionList.Section.Group.Module.ModuleCollapse;
+const ModuleCollapse = GlobalNav.SideNav.SectionList.Section.Group.Module.ModuleCollapse;
 const Submodule = GlobalNav.SideNav.SectionList.Section.Group.Module.Submodule;
 const TopNav = GlobalNav.TopNav;
 const Profile = GlobalNav.TopNav.Profile;
@@ -57,7 +57,6 @@ const Project = GlobalNav.TopNav.ProjectAccountSwitcher.Project;
 const TopNavSearch = GlobalNav.TopNav.Search;
 const SubNav = GlobalNav.SubNav;
 const Tabs = GlobalNav.SubNav.Tabs;
-
 const Slot = GlobalNav.Slot;
 
 const topNavFixtures = new TopNavFixtures();
@@ -385,6 +384,7 @@ class Playground extends React.Component {
             <TextFieldSection />
             <TextAreaSection />
             <ModalSection />
+            <DropdownSection />
           </Slot>
         </GlobalNav>
       </div>
