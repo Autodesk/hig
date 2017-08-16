@@ -34,13 +34,12 @@ class Option extends Core {
     }
 
     setLabel(label) {
-        this.el.textContent = label;
+       this._findDOMEl(".hig__option__label", this.el).textContent = label;
     }
 
     setValue(value) {
         this.el.setAttribute('data-value', value);
     }
-
 }
 
 Option._interface = Interface['basics']['FormElements']['partials']['Dropdown']['partials']['Option'];
