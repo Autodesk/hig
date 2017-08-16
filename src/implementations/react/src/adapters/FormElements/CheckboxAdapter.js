@@ -49,6 +49,10 @@ export class CheckboxAdapter extends HIGElement {
 
   }
 
+  forceReset(props) {
+    this.commitUpdate(['checked', props.checked]);
+  }
+
   commitUpdate(updatePayload, oldProps, newProps) {
     for (let i = 0; i < updatePayload.length; i += 2) {
       const propKey = updatePayload[i];
@@ -130,23 +134,23 @@ CheckboxAdapterComponent.propTypes = {
 
 CheckboxAdapterComponent.__docgenInfo = {
   props: {
-    name: {
-      description: 'sets the name attribute of the checkbox input'
-    },
-    value: {
-      description: 'sets the value attribute of the checkbox input'
-    },
     checked: {
       description: 'boolean - sets whether the checkbox is checked'
     },
     disabled: {
       description: 'boolean - sets whether the checkbox is disabled'
     },
+    label: {
+      description: 'sets the label text for the checkbox'
+    },
+    name: {
+      description: 'sets the name attribute of the checkbox input'
+    },
     required: {
       description: 'string - sets the whether the checkbox is required and displays the provided message'
     },
-    label: {
-      description: 'sets the label text for the checkbox'
+    value: {
+      description: 'sets the value attribute of the checkbox input'
     },
     onHover: {
       description: 'triggers when you hover over the button'

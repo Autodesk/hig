@@ -3,7 +3,7 @@ import 'hig-vanilla/dist/hig.css';
 
 import '../elements/basics/Button.story';
 import '../elements/basics/IconButton.story';
-import '../adapters/FormElements/CheckboxAdapter.story';
+import '../elements/components/FormElements/Checkbox.story';
 import '../adapters/FormElements/PasswordFieldAdapter.story';
 import '../adapters/FormElements/RangeAdapter.story';
 import '../adapters/FormElements/RadioButtonAdapter.story';
