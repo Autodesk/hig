@@ -18,7 +18,7 @@ class Checkbox extends React.Component {
   };
 
   resolveChecked = () => {
-    if (this.props.checked == undefined) {
+    if (this.props.checked === undefined) {
       return this.state.isChecked;
     }
     return this.props.checked;

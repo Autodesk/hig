@@ -22,7 +22,7 @@ exports[`<RadioButton> renders with updated props 1`] = `
 "<div class=\\"hig__input-button hig__input-button--radio hig__input-button--checked hig__input-button--required hig__input-button--disabled\\">
   <!--RADIOBUTTON_LABEL-->
   <label for=\\"1234\\" class=\\"hig__input-button__label\\">Label</label>
-  <input type=\\"radio\\" class=\\"hig__input-button__input\\" name=\\"some-name\\" id=\\"1234\\" value=\\"some-value\\" required=\\"\\" disabled=\\"true\\">
+  <input type=\\"radio\\" class=\\"hig__input-button__input\\" name=\\"some-name\\" id=\\"1234\\" value=\\"some-value\\" checked=\\"\\" required=\\"\\" disabled=\\"true\\">
   <span class=\\"hig__input-button__input-wrapper\\"></span>
 </div>"
 `;
