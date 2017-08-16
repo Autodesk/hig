@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import PlaygroundSection from "../PlaygroundSection";
 import { Checkbox } from "../../react-hig";
 
@@ -16,28 +16,48 @@ function logEvent(event) {
   console.log(messageParts.join(""));
 }
 
-function CheckboxSection() {
-  return (
-    <PlaygroundSection title="Checkbox">
+class CheckboxSection extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      controlledChecked: false
+    }
+  }
+
+  setControlledChecked = event => {
+    this.setState({ controlledChecked: event.target.checked });
+  };
+
+  render() {
+    return (
+      <PlaygroundSection title="Checkbox">
       <div style={checkboxStyle}>
         <Checkbox
           label="Required"
-          name="tsandcs"
-          value="asd"
           required="You must check this box"
         />
-        <Checkbox label="Not required" name="tsandcs" value="dfdf" />
-        <Checkbox label="Disabled" name="tsandcs" value="hhh" disabled={true} />
-        <Checkbox label="Checked" name="tsandcs" value="werr" checked={true} />
-        <Checkbox name="nolabel" value="somevalue" />
         <Checkbox
-          label="Click me"
-          onHover={logEvent}
-          onChange={logEvent}
-          onFocus={logEvent}
+          label="Disabled"
+          disabled={true}
         />
+        <Checkbox
+          label="Controlled"
+          checked={this.state.controlledChecked}
+          onChange={this.setControlledChecked}
+        />
+        <Checkbox
+          label="Uncontrolled"
+        />
+        <Checkbox
+        label="With event logging"
+        onHover={logEvent}
+        onChange={logEvent}
+        onFocus={logEvent}
+      />
       </div>
     </PlaygroundSection>
   );
+  }
 }
 export default CheckboxSection;

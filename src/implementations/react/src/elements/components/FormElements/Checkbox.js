@@ -5,35 +5,72 @@ import PropTypes from 'prop-types';
 class Checkbox extends React.Component {
   constructor(props) {
     super(props);
+
+    const controlled = props.checked === undefined ? false : true;
+
     this.state = {
-      isChecked: props.checked === undefined ? false : props.checked
+      checked: this.getDefaultChecked(),
+      controlled
     }
   }
-  onCheckboxChange = (event) => {
-    this.setState({isChecked: !this.state.isChecked});
-    this.resolveChecked();
+
+  getDefaultChecked() {
+    const { defaultChecked, checked } = this.props;
+
+    if (checked !== undefined) {
+      return checked;
+    } else if (defaultChecked !== undefined) {
+      return defaultChecked;
+    } else {
+      return false;
+    }
+  }
+
+  getRenderedChecked() {
+    const { checked } = this.props;
+
+    if (checked !== undefined) {
+      return checked;
+    } else {
+      return this.state.checked;
+    }
+  }
+
+  handleChange = event => {
     if (this.props.onChange) {
       this.props.onChange(event);
     }
+
+    if (this.state.controlled) {
+      if (this.checkboxEl) {
+        this.checkboxEl.forceNextReset();
+        this.setState({ checked: this.state.checked });
+      }
+    } else {
+      this.setState({ value: event.target.value });
+    }
   };
 
-  resolveChecked = () => {
-    if (this.props.checked === undefined) {
-      return this.state.isChecked;
-    }
-    return this.props.checked;
+  setCheckboxEl = checkboxEl => {
+    this.checkboxEl = checkboxEl;
   };
 
   render() {
+    let checked = this.props.checked;
+    if (checked === undefined) {
+      checked = this.state.checked;
+    }
+
     return (
       <CheckboxAdapter
-        checked={this.state.isChecked}
+        ref={this.setCheckboxEl}
+        checked={checked}
         disabled={this.props.disabled}
         name={this.props.name}
         label={this.props.label}
         required={this.props.required}
         value={this.props.value}
-        onChange={this.onCheckboxChange}
+        onChange={this.handleChange}
         onFocus={this.props.onFocus}
         onHover={this.props.onHover}
       />
@@ -43,10 +80,11 @@ class Checkbox extends React.Component {
 
 Checkbox.propTypes = {
   checked: PropTypes.bool,
+  defaultChecked: PropTypes.bool,
   disabled: PropTypes.bool,
   label: PropTypes.string,
   name: PropTypes.string,
-  required: PropTypes.bool,
+  required: PropTypes.string,
   value: PropTypes.string,
   onChange: PropTypes.func,
   onFocus: PropTypes.func,

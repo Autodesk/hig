@@ -8,7 +8,7 @@ class TextField extends Component {
   constructor(props) {
     super(props);
 
-    const controlled = this.props.value === undefined ? false : true;
+    const controlled = props.value === undefined ? false : true;
 
     this.state = {
       value: this.getDefaultValue(),

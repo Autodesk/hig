@@ -49,6 +49,10 @@ export class CheckboxAdapter extends HIGElement {
 
   }
 
+  forceReset(props) {
+    this.commitUpdate(['checked', props.checked]);
+  }
+
   commitUpdate(updatePayload, oldProps, newProps) {
     for (let i = 0; i < updatePayload.length; i += 2) {
       const propKey = updatePayload[i];
