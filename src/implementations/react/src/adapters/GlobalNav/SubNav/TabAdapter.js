@@ -1,7 +1,7 @@
 
 import createComponent from '../../createComponent';
 import HIGElement from '../../../elements/HIGElement';
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types';
 
 export class TabAdapter extends HIGElement {
   componentDidMount() {
