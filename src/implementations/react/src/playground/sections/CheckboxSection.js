@@ -50,6 +50,10 @@ class CheckboxSection extends Component {
           label="Uncontrolled"
         />
         <Checkbox
+          label="Uncontrolled w/ default"
+          defaultChecked={true}
+        />
+        <Checkbox
         label="With event logging"
         onHover={logEvent}
         onChange={logEvent}
