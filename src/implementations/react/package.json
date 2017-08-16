@@ -27,6 +27,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-es2015-rollup": "^3.0.0",
+    "concurrently": "^3.4.0",
     "enzyme": "^2.9.1",
     "fb-watchman": "^2.0.0",
     "hig-vanilla": "file:../vanilla",
@@ -49,17 +50,20 @@
     "typescript": "^2.3.2"
   },
   "scripts": {
-    "build": "npm run lib && react-scripts build && npm run build-storybook",
-    "lib": "rollup -c && cp ../vanilla/dist/hig.css lib/react-hig.css",
+    "build": "npm run build-vanilla && rollup -c",
+    "build-playground": "react-scripts build",
+    "build-storybook": "build-storybook -s public -o build/storybook",
+    "build-vanilla": "cd ../vanilla && npm run build && cd ../react && mkdir -p lib && cp ../vanilla/dist/hig.css lib/react-hig.css",
     "playground": "react-scripts start",
-    "start": "npm run lib -- --watch",
+    "storybook": "start-storybook -p 9009 -s public",
+    "start": "concurrently 'npm run start-vanilla' 'rollup -c --watch' --kill-others",
+    "start-vanilla": "cd ../vanilla && npm run watch",
     "test": "react-scripts test --env=jsdom",
     "test-ci": "react-scripts test --env=jsdom --coverage --runInBand",
-    "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public -o build/storybook",
     "type-check": "tsc",
     "deploy-storybook": "npm run build-storybook && surge build/storybook",
-    "deploy-playground": "npm run lib && react-scripts build && surge build "
+    "deploy-playground": "npm run lib && react-scripts build && surge build",
+    "postinstall": "cd ../vanilla && npm install"
   },
   "dependencies": {
     "jest": "^20.0.4",
