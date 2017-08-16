@@ -56,15 +56,10 @@ class Checkbox extends React.Component {
   };
 
   render() {
-    let checked = this.props.checked;
-    if (checked === undefined) {
-      checked = this.state.checked;
-    }
-
     return (
       <CheckboxAdapter
         ref={this.setCheckboxEl}
-        checked={checked}
+        checked={this.getRenderedChecked()}
         disabled={this.props.disabled}
         name={this.props.name}
         label={this.props.label}
