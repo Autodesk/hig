@@ -19,8 +19,10 @@ export default {
         '../vanilla/dist/hig.js': [
           'Button',
           'Checkbox',
+          'Dropdown',
           'GlobalNav',
           'IconButton',
+          'Option',
           'PasswordField',
           'RadioButton',
           'Range',
