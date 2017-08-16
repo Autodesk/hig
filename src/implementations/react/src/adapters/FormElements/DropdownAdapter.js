@@ -78,10 +78,6 @@ export class DropdownAdapter extends HIGElement {
     if (this.props.onTargetClick) {
       this.commitUpdate(["onTargetClick", this.props.onTargetClick]);
     }
-
-    if (this.props.children) {
-      this.commitUpdate(["children", this.props]);
-    }
   }
 
   commitUpdate(updatePayload, oldProps, newProps) {
