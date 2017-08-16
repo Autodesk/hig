@@ -31,6 +31,18 @@ export class Module extends HIGElement {
       this.hig.addCollapse(this.collapse.hig);
       this.collapse.mount();
     }
+
+    if (this.props.active !== undefined) {
+      this.commitUpdate(['active', this.props.active]);
+    }
+
+    if (this.props.onClick !== undefined) {
+      this.commitUpdate(['onClick', this.props.onClick]);
+    }
+
+    if (this.props.onHover !== undefined) {
+      this.commitUpdate(['onHover', this.props.onHover]);
+    }
   }
 
   commitUpdate(updatePayload, oldProps, newProps) {

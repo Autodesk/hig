@@ -20,23 +20,30 @@ class FilterableSideNav extends Component {
 
     this.state = {
       query: '',
-      modules: {}
+      activeModule: '',
+      moduleStates: {},
+      sectionStates: {}
     }
   }
 
   static propTypes = {
     query: PropTypes.string,
     links: PropTypes.arrayOf(PropTypes.object),
+    onModuleChange: PropTypes.func.isRequired,
     sections: PropTypes.arrayOf(
       PropTypes.shape({
+        id: PropTypes.string.isRequired,
         headerLabel: PropTypes.string,
         headerName: PropTypes.string,
         groups: PropTypes.arrayOf(
           PropTypes.shape({
             modules: PropTypes.arrayOf(
               PropTypes.shape({
+                id: PropTypes.string.isRequired,
+                label: PropTypes.string.isRequired,
                 submodules: PropTypes.arrayOf(PropTypes.shape({
-                  label: PropTypes.string
+                  id: PropTypes.string.isRequired,
+                  label: PropTypes.string.isRequired
                 }))
               })
             )
@@ -56,24 +63,67 @@ class FilterableSideNav extends Component {
     this.setState({ query: event.target.value });
   }
 
-  moduleState(section, module) {
-    const moduleKey = `${section.headerLabel}-${module.label}`;
-    return this.state.modules[moduleKey] || { minimized: true };
+  moduleKey(section, module, submodule = { label: '' }) {
+    return `${section.headerLabel}-${module.label}-${submodule.label}`;
   }
 
-  toggleModule(section, module) {
-    const moduleKey = `${section.headerLabel}-${module.label}`;
-    const moduleState = this.moduleState(section, module);
+  moduleState(key) {
+      const state = {
+      ...this.state.moduleStates[key],
+      active: this.state.activeModule === key,
+      key
+    };
+
+    if (state.minimized === undefined) {
+      state.minimized = true;
+    }
+
+    return state;
+  }
+
+  sectionModules(section) {
+
+  }
+
+  toggleModuleMinimized(key) {
+    const moduleState = this.moduleState(key);
 
     this.setState({
-      modules: {
-        ...this.state.modules,
-        [moduleKey]: {
+      moduleStates: {
+        ...this.state.moduleStates,
+        [key]: {
           ...moduleState,
           minimized: !moduleState.minimized
         }
       }
     });
+  }
+
+  setActiveModule(key, event) {
+    event.preventDefault();
+    this.setState({ activeModule: key });
+  }
+
+  sectionMinimized(section) {
+    return section
+      .groups
+      .reduce((acc, g) => { return acc.concat(...g.modules) }, [])
+      .every(module => this.moduleState(module.id).minimized);
+  }
+
+  toggleSectionMinimized(section) {
+    this.setState({ moduleStates: {
+      ...this.state.moduleStates,
+      ...section.modules.reduce((acc, module) => {
+        const key = this.moduleKey(section, module);
+        const state = this.moduleState(key);
+
+        return {
+          ...acc,
+          [key]: {...state, minimized: !this.sectionMinimized(section)}
+        }
+      }, {})
+    }})
   }
 
   render() {
@@ -89,12 +139,13 @@ class FilterableSideNav extends Component {
                 headerName={section.headerName}
                 key={`${section.headerLabel}-${section.headerName}`}
               >
-                <SectionCollapse />
+                <SectionCollapse minimized={this.sectionMinimized(section)} onClick={this.toggleSectionMinimized.bind(this, section.id)} />
                 {section.groups.map((group, i) => {
                   return (
                     <Group key={i}>
                       {group.modules.map(module => {
-                        const moduleState = this.moduleState(section, module);
+                        const key = this.moduleKey(section, module);
+                        const moduleState = this.moduleState(key);
                         const submodules = moduleState.minimized ? [] : module.submodules;
 
                         return (
@@ -102,15 +153,27 @@ class FilterableSideNav extends Component {
                             icon={module.icon}
                             contentImage={module.contentImage}
                             title={module.label}
-                            key={module.label}
+                            active={moduleState.active}
+                            onClick={this.setActiveModule.bind(this, key)}
+                            key={key}
                           >
-                            {module.submodules.length > 0 ? <ModuleCollapse minimized={moduleState.minimized} onClick={this.toggleModule.bind(this, section, module)} /> : null}
+                            {module.submodules.length > 0
+                              ? <ModuleCollapse
+                                  minimized={moduleState.minimized}
+                                  onClick={this.toggleModuleMinimized.bind(this, key)}
+                                />
+                              : null
+                            }
                             {submodules.map(submodule => {
+                              const key = this.moduleKey(section, module, submodule);
+                              const state = this.moduleState(key);
+
                               return (
                                 <Submodule
                                   title={submodule.label}
-                                  link="#"
-                                  key={submodule.label}
+                                  onClick={this.setActiveModule.bind(this, key)}
+                                  active={state.active}
+                                  key={key}
                                 />
                               );
                             })}
