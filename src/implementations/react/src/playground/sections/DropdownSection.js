@@ -31,7 +31,7 @@ class DropdownSection extends Component {
     console.log(messageParts.join(""));
   }
 
-  setSelectedValue = (selectedOption) => {
+  setSelectedValue = selectedOption => {
     this.setState({
       selectedOptionLabel: selectedOption.label,
       open: false
@@ -60,6 +60,7 @@ class DropdownSection extends Component {
           onBlur={this.logEvent}
           onFocus={this.logEvent}
           onKeypress={this.logEvent}
+          required={"This field is required"}
         >
           {optionData.map(option => {
             return (
@@ -70,17 +71,21 @@ class DropdownSection extends Component {
                   option.label === this.state.selectedOptionLabel ? true : false
                 }
                 key={option.label}
-                onClick={this.setSelectedValue.bind(this, {label: option.label, value: option.value})}
+                onClick={this.setSelectedValue.bind(this, {
+                  label: option.label,
+                  value: option.value
+                })}
               />
             );
-          })};
+          })}
         </Dropdown>
-        
+
         <Dropdown
           label="Disabled Dropdown"
           instructions="instructions for disabled dropdown"
           placeholder="placeholder for disabled dropdown"
-          disabled={true}/>  
+          disabled={true}
+        />
       </PlaygroundSection>
     );
   }

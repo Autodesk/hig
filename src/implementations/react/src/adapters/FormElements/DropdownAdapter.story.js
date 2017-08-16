@@ -29,6 +29,7 @@ storiesOf("Dropdown", module)
         onBlur={action("on Blur")}
         onFocus={action("on Focus")}
         onKeyPress={action("onKeypress")}
+        required={"This field is required"}
       >
         <Option
           label={OptionData[0].label}
@@ -55,6 +56,7 @@ storiesOf("Dropdown", module)
         onBlur={action("on Blur")}
         onFocus={action("on Focus")}
         onKeyPress={action("onKeypress")}
+        required={"This field is required"}
       >
         <Option
           label={OptionData[0].label}

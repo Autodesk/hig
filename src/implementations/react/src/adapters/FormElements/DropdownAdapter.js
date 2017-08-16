@@ -288,6 +288,9 @@ DropdownComponent.__docgenInfo = {
     onTargetClick: {
       description:
         "Calls the provided callback when the user clicks on the dropdown button"
+    },
+    setSelectedOptionLabel: {
+      description: "Sets value of selected option as value of dropdown"
     }
   }
 };

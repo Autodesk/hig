@@ -1,4 +1,3 @@
-import * as HIG from "hig-vanilla";
 
 import HIGElement from "../../elements/HIGElement";
 import * as PropTypes from "prop-types";
