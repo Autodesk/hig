@@ -28,7 +28,7 @@ class Typography extends Core {
 
     setType(type){
         this.el.classList = [];
-        this.el.classList.add(["hig__typography", "hig__typography__"+type]);
+        this.el.classList.add("hig__typography", "hig__typography__"+type);
     }
 
     applyTypographyToElement(el){
