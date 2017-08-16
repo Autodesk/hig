@@ -1,6 +1,7 @@
 <div class="hig__text-field">
     <!--ICON-SPACER-->
-    {{#icon}}<div class="hig__text-field__icon-spacer"></div>{{/icon}}
+    {{#icon}}
+    <div class="hig__text-field__icon-spacer"></div>{{/icon}}
     <div class="hig__text-field__content">
         <div class="hig__text-field__input-wrapper">
             <label class="hig__text-field__icon" for={{id}}></label>
@@ -8,11 +9,14 @@
             <button class="hig__text-field__extra hig__text-field__password-hide-button"></button>
             <!--EXTRA-->
             <!--SLOT-->
-            <input name="{{name}}" id="{{id}}" class="hig__text-field__input hig__text-field__input--no-value" placeholder="{{placeholder}}" value="{{value}}">
+            <input name="{{name}}" id="{{id}}" class="hig__text-field__input hig__text-field__input--no-value" placeholder="{{placeholder}}"
+                value="{{value}}">
             <label for="{{id}}" class="hig__text-field__label {{#label}}hig__text-field__label--visible{{/label}}">{{label}}</label>
         </div>
+        {{#instructions}}
+        <p class="hig__text-field__instructions">{{instructions}}</p>
+        {{/instructions}}
         <!--INSTRUCTIONS-->
-        {{#instructions}}<p class="hig__text-field__instructions">{{instructions}}</p>{{/instructions}}
         <!--REQUIRED-NOTICE-->
     </div>
 </div>

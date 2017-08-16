@@ -278,7 +278,7 @@
                     "partials": {
                         "Option": {
                             "methods": {
-                                "deselect": {},
+                                "deselect": { },
                                 "onClick": {},
                                 "onHover": {},
                                 "select": {},
@@ -294,7 +294,6 @@
                     "defaults": {
                         "label": "{String} label for our text field",
                         "placeholder": "{String} placeholder text for our text field",
-                        "value": "{String} (optional) input value for text field",
                         "instructions": "{String} (optional) instructions under the text field"
                     }
                 },

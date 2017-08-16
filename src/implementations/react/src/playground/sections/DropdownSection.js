@@ -75,8 +75,7 @@ class DropdownSection extends Component {
             );
           })};
         </Dropdown>
-
-
+        
         <Dropdown
           label="Disabled Dropdown"
           instructions="instructions for disabled dropdown"

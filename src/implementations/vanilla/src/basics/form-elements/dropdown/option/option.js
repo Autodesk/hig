@@ -34,7 +34,7 @@ class Option extends Core {
     }
 
     setLabel(label) {
-        this.el.textContent = label;
+       this._findDOMEl(".hig__option__label", this.el).textContent = label;
     }
 
     setValue(value) {

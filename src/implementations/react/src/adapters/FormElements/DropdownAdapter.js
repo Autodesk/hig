@@ -223,7 +223,7 @@ DropdownComponent.propTypes = {
   instructions: PropTypes.string,
   open: PropTypes.bool,
   disabled: PropTypes.bool,
-  required: PropTypes.bool,
+  required: PropTypes.string,
   onBlur: PropTypes.func,
   onClickOutside: PropTypes.func,
   onFocus: PropTypes.func,
