@@ -3,11 +3,12 @@ import * as PropTypes from 'prop-types';
 import createComponent from './createComponent';
 import HIGElement from '../elements/HIGElement';
 import { ButtonAdapter } from './ButtonAdapter';
+import { Slot } from '../elements/components/GlobalNav/Slot'
+import React from 'react';
 
 class ModalAdapter extends HIGElement {
   constructor(initialProps) {
     super(HIG.Modal, initialProps);
-
     this.buttons = [];
   }
 
@@ -18,6 +19,10 @@ class ModalAdapter extends HIGElement {
 
     if (this.props.buttons) {
       this.commitUpdate(['buttons', this.props.buttons]);
+    }
+
+    if (this.props.slotEl) {
+      this.commitUpdate(['slotEl', this.props.slotEl]);
     }
 
     if (this.props.onOverlayClick) {
@@ -32,6 +37,9 @@ class ModalAdapter extends HIGElement {
       this.hig.addButton(button.hig);
       button.componentDidMount();
     });
+
+    console.log(this.props)
+
   }
 
   commitUpdate(updatePayload) {
@@ -86,6 +94,10 @@ class ModalAdapter extends HIGElement {
           propValue ? this.hig.open() : this.hig.close();
           break;
         }
+        case 'slotEl': {
+          this.hig.addSlot(propValue);
+          break;
+        }
         case 'title': {
           this.hig.setTitle(propValue);
           break;
@@ -126,7 +138,7 @@ ModalAdapterComponent.propTypes = {
   open: PropTypes.bool,
   title: PropTypes.string,
   children: PropTypes.node
-}
+};
 
 ModalAdapterComponent.__docgenInfo = {
   props: {

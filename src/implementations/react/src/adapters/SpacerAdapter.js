@@ -41,14 +41,6 @@ class SpacerAdapter extends HIGElement {
     }
   }
 
-  addSlot(element) {
-    if (this.mounted) {
-      this.hig.addSlot(element);
-    } else {
-      this.slot = element;
-    }
-  }
-
   insertBefore(instance) {
     this.appendChild(instance);
   }
