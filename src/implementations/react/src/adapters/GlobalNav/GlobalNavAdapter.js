@@ -147,11 +147,11 @@ const GlobalNavComponent = createComponent(GlobalNav);
 GlobalNavComponent.propTypes = {
   sideNavOpen: PropTypes.bool,
   children: HIGChildValidator([
+    FilterableSideNav,
     SideNavComponent,
     TopNavComponent,
     SubNavComponent,
     Slot,
-    FilterableSideNav
   ])
 };
 
