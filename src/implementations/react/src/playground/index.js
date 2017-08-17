@@ -35,6 +35,7 @@ import TextAreaSection from "./sections/TextAreaSection";
 import PasswordFieldSection from "./sections/PasswordFieldSection"
 import SpacerSection from "./sections/SpacerSection"
 import ModalSection from "./sections/ModalSection";
+import TypographySection from "./sections/TypographySection";
 
 const SideNav = GlobalNav.SideNav;
 const LinkList = GlobalNav.SideNav.LinkList;
@@ -385,6 +386,7 @@ class Playground extends React.Component {
             <TextAreaSection />
             <ModalSection />
             <DropdownSection />
+            <TypographySection />
           </Slot>
         </GlobalNav>
       </div>
