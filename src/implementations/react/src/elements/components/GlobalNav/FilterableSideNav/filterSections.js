@@ -1,4 +1,4 @@
-export default function filterSideNavSections(sections, query) {
+export default function filterSections(sections, query) {
   return sections.reduce((acc, section) => {
     const groups = filterGroups(section.groups, query);
 
