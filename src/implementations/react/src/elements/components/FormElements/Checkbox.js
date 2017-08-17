@@ -1,6 +1,6 @@
 import React from 'react';
 import CheckboxAdapter from '../../../adapters/FormElements/CheckboxAdapter';
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types';
 
 class Checkbox extends React.Component {
   constructor(props) {
