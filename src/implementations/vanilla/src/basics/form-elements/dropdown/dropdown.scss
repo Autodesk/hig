@@ -3,6 +3,9 @@
 @import '~helpers/css/mixins/base.scss';
 
 .hig__dropdown {
+  .hig__text-field__input{
+      font-weight: 600;
+  }
   .hig__text-field__extra--dropdown-caret {
       bottom: 6px;
   }  

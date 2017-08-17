@@ -71,7 +71,7 @@
                 const option = new DefaultDropdown.partials.Option(optionData);
                 DefaultDropdown.addOption(option);
                 option.onClick(function(event, element) {
-                    const value = event.target.dataset.value;
+                    const value = optionData.value;
 
                     defaultDropdownOptionComponents.forEach(function(option)  {
                         if (option.el.dataset.value === value) {
