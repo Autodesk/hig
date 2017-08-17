@@ -12,36 +12,41 @@ var Core = require('_core.js');
 
 class Typography extends Core {
 
-    constructor(options){
-        super(options);
-        
-        // Check for compliance
-        if(options && ['h1', 'h2', 'h3', 'sub1', 'sub2', 'body', 'bold', 'disabled', 'caption'].indexOf(options["type"]) === -1){
-            console.error("Not a valid typography type!");
-        }
-        this._render(Template, options);
+  constructor(options) {
+    super(options);
+
+    // Check for compliance
+    if (options && ['h1', 'h2', 'h3', 'sub1', 'sub2', 'body', 'bold', 'disabled', 'caption'].indexOf(options["type"]) === -1) {
+      console.error("Not a valid typography type!");
     }
 
-    setText(text){
-        this.el.textContent = text;
-    }
+    this._render(Template, options);
+  }
 
-    setType(type){
-        this.el.classList = [];
-        this.el.classList.add("hig__typography", "hig__typography__"+type);
-    }
+  setText(text) {
+    this.el.textContent = text;
+  }
 
-    applyTypographyToElement(el){
-        var e = this._findDOMEl(el);
-        e.classList.add("hig__typography");
-    }
+  setType(type) {
+    // Note this assumes the type class is last in the list!
+    this._removeElLastClass();
+    this.el.classList.add("hig__typography__" + type);
+  }
+
+  _removeElLastClass() {
+    this.el.classList.remove(this.el.classList.item(this.el.classList.length - 1));
+  }
+
+  applyTypographyToElement(el) {
+    var e = this._findDOMEl(el);
+    e.classList.add("hig__typography");
+  }
 
 }
 
 Typography._interface = Interface['basics']['Typography'];
 Typography._defaults = {
-    "text": "text",
-    "type": "body"
+  "text": "text", "type": "body"
 };
 
 module.exports = Typography;
