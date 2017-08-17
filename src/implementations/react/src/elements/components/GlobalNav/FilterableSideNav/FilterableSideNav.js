@@ -15,34 +15,6 @@ const ModuleCollapse = SideNav.SectionList.Section.Group.Module.ModuleCollapse;
 const Submodule = SideNav.SectionList.Section.Group.Module.Submodule;
 
 class FilterableSideNav extends Component {
-  static propTypes = {
-    query: PropTypes.string,
-    links: PropTypes.arrayOf(PropTypes.object),
-    sections: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.string.isRequired,
-        headerLabel: PropTypes.string,
-        headerName: PropTypes.string,
-        minimized: PropTypes.bool,
-        groups: PropTypes.arrayOf(
-          PropTypes.shape({
-            modules: PropTypes.arrayOf(
-              PropTypes.shape({
-                id: PropTypes.string.isRequired,
-                label: PropTypes.string.isRequired,
-                minimized: PropTypes.bool,
-                submodules: PropTypes.arrayOf(PropTypes.shape({
-                  id: PropTypes.string.isRequired,
-                  label: PropTypes.string.isRequired
-                }))
-              })
-            )
-          })
-        )
-      })
-    )
-  };
-
   handleModuleClick = (id, event) => {
     event.preventDefault();
     this.props.setActiveModule(id);
@@ -110,5 +82,33 @@ class FilterableSideNav extends Component {
     );
   }
 }
+
+FilterableSideNav.propTypes = {
+  query: PropTypes.string,
+  links: PropTypes.arrayOf(PropTypes.object),
+  sections: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      headerLabel: PropTypes.string,
+      headerName: PropTypes.string,
+      minimized: PropTypes.bool,
+      groups: PropTypes.arrayOf(
+        PropTypes.shape({
+          modules: PropTypes.arrayOf(
+            PropTypes.shape({
+              id: PropTypes.string.isRequired,
+              label: PropTypes.string.isRequired,
+              minimized: PropTypes.bool,
+              submodules: PropTypes.arrayOf(PropTypes.shape({
+                id: PropTypes.string.isRequired,
+                label: PropTypes.string.isRequired
+              }))
+            })
+          )
+        })
+      )
+    })
+  )
+};
 
 export default withState(FilterableSideNav);

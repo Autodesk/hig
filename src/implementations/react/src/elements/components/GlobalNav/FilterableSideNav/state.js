@@ -4,7 +4,7 @@ import * as PropTypes from 'prop-types';
 import filterSections from './filterSections';
 
 export default function withState(WrappedComponent) {
-  return class FilterableNavWithState extends Component {
+  class FilterableNavWithState extends Component {
     constructor(props) {
       super(props);
 
@@ -14,33 +14,6 @@ export default function withState(WrappedComponent) {
         moduleStates: {}
       }
     }
-
-    static propTypes = {
-      query: PropTypes.string,
-      links: PropTypes.arrayOf(PropTypes.object),
-      onModuleChange: PropTypes.func.isRequired,
-      sections: PropTypes.arrayOf(
-        PropTypes.shape({
-          id: PropTypes.string.isRequired,
-          headerLabel: PropTypes.string,
-          headerName: PropTypes.string,
-          groups: PropTypes.arrayOf(
-            PropTypes.shape({
-              modules: PropTypes.arrayOf(
-                PropTypes.shape({
-                  id: PropTypes.string.isRequired,
-                  label: PropTypes.string.isRequired,
-                  submodules: PropTypes.arrayOf(PropTypes.shape({
-                    id: PropTypes.string.isRequired,
-                    label: PropTypes.string.isRequired
-                  }))
-                })
-              )
-            })
-          )
-        })
-      )
-    };
 
     static defaultProps = {
       query: '',
@@ -166,4 +139,33 @@ export default function withState(WrappedComponent) {
       );
     }
   }
+
+  FilterableNavWithState.propTypes = {
+    query: PropTypes.string,
+    links: PropTypes.arrayOf(PropTypes.object),
+    onModuleChange: PropTypes.func.isRequired,
+    sections: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        headerLabel: PropTypes.string,
+        headerName: PropTypes.string,
+        groups: PropTypes.arrayOf(
+          PropTypes.shape({
+            modules: PropTypes.arrayOf(
+              PropTypes.shape({
+                id: PropTypes.string.isRequired,
+                label: PropTypes.string.isRequired,
+                submodules: PropTypes.arrayOf(PropTypes.shape({
+                  id: PropTypes.string.isRequired,
+                  label: PropTypes.string.isRequired
+                }))
+              })
+            )
+          })
+        )
+      })
+    )
+  };
+
+  return FilterableNavWithState;
 }
