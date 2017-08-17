@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types';
 import SideNav from '../../../../adapters/GlobalNav/SideNav/SideNavAdapter';
 import withState from './state';
 
