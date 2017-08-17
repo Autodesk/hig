@@ -11,3 +11,4 @@ export { default as Range } from './adapters/FormElements/RangeAdapter';
 export { default as Spacer } from './adapters/SpacerAdapter';
 export { default as TextArea } from './adapters/FormElements/TextAreaAdapter';
 export { default as TextField } from './adapters/FormElements/TextFieldAdapter';
+export * from './elements/components/Typography';
