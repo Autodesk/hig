@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import filterSections from './filterSections';
 
 export default function withState(WrappedComponent) {
-  return class extends Component {
+  return class FilterableNavWithState extends Component {
     constructor(props) {
       super(props);
 
@@ -52,9 +52,12 @@ export default function withState(WrappedComponent) {
       this.setState({ query: event.target.value });
     }
 
-    setActiveModule = (key, event) => {
-      event.preventDefault();
-      this.setState({ activeModule: key });
+    setActiveModule = (id) => {
+      this.setState({ activeModule: id });
+
+      if(this.props.onModuleChange) {
+        this.props.onModuleChange(id);
+      }
     }
 
     toggleSectionMinimized = (id) => {

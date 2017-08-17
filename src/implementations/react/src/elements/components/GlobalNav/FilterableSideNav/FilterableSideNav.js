@@ -43,6 +43,11 @@ class FilterableSideNav extends Component {
     )
   };
 
+  handleModuleClick = (id, event) => {
+    event.preventDefault();
+    this.props.setActiveModule(id);
+  }
+
   render() {
     return (
       <SideNav>
@@ -65,7 +70,7 @@ class FilterableSideNav extends Component {
                             contentImage={module.contentImage}
                             title={module.label}
                             active={module.active}
-                            onClick={this.props.setActiveModule.bind(this, module.id)}
+                            onClick={this.handleModuleClick.bind(this, module.id)}
                             key={module.id}
                           >
                             {module.submodules.length > 0
@@ -79,7 +84,7 @@ class FilterableSideNav extends Component {
                               return (
                                 <Submodule
                                   title={submodule.label}
-                                  onClick={this.props.setActiveModule.bind(this, submodule.id)}
+                                  onClick={this.handleModuleClick.bind(this, submodule.id)}
                                   active={submodule.active}
                                   key={submodule.id}
                                 />

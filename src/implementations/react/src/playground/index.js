@@ -179,7 +179,7 @@ class Playground extends React.Component {
     return (
       <div>
         <GlobalNav sideNavOpen={this.state.sideNavOpen}>
-          <FilterableSideNav sections={sideNavFixtures.sections} links={sideNavFixtures.links} />
+          <FilterableSideNav onModuleChange={id => console.log(`Module selected: ${id}`)} sections={sideNavFixtures.sections} links={sideNavFixtures.links} />
           <TopNav
             logo={logo}
             logoLink="http://autodesk.com"
