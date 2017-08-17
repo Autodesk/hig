@@ -16,6 +16,10 @@
   color: color(hig-gray-10);
 }
 
+.hig__table__wrapper {
+  overflow: auto;
+}
+
 .hig__table__text-cell,
 .hig__table__icon-cell {
   .hig__table--standard & {
@@ -33,7 +37,6 @@
     &:first-child {
       padding-left: 8px
     }
-
   }
 
   .hig__table--large & {
