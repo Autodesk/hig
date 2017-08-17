@@ -16,19 +16,6 @@
   color: color(hig-gray-10);
 }
 
-.hig__table th {
-  font-weight: 500;
-  padding: 16px 4px;
-
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-
-  .hig__table--large {
-    padding: 16px 6px;
-  }
-}
-
 .hig__table__text-cell,
 .hig__table__icon-cell {
   .hig__table--standard & {

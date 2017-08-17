@@ -1,0 +1,13 @@
+.hig__text-head-cell {
+  font-weight: 700;
+  font-size: 14px;
+  padding: 16px 4px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  .hig__table--large & {
+    padding: 16px 6px;
+  }
+}
