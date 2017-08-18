@@ -31,7 +31,6 @@ storiesOf('Modal', module)
           title={'Wait a minute...'}
           headerColor={'Gray'}
           isOpen={boolean("isOpen", true)}
-          body="Here is some stuff"
           buttons={buttonProps}
           onClose={action('onClose')}
         >
@@ -41,4 +40,22 @@ storiesOf('Modal', module)
         </Modal>
       </div>
     );
+  })
+  .addWithInfo('With body text instead of children', ``, () => {
+    const buttonProps = [
+      { title: "I can't", type: 'secondary', onClick: action('No') },
+      { title: 'Yes', type: 'primary', onClick: action('Yes') },
+      { title: 'Literally Yes', type: 'primary', onClick: action('Literally') },
+    ];
+    return (
+      <div>
+        <Modal
+          title={'Just one question'}
+          body="Can you even?"
+          headerColor="Slate"
+          isOpen={boolean("isOpen", true)}
+          buttons={buttonProps}
+          onClose={action('onClose')}
+        />
+      </div>)
   });

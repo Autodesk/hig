@@ -3,8 +3,18 @@ import ModalAdapter from '../../adapters/ModalAdapter';
 import * as PropTypes from 'prop-types';
 
 class Modal extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {};
+  }
+
   close = (event) => {
     return this.props.onClose(event);
+  };
+
+  setSlotEl = (el) => {
+    this.setState({ slotEl: el });
   };
 
   render() {
@@ -17,8 +27,9 @@ class Modal extends React.Component {
         onCloseClick={this.close}
         onOverlayClick={this.close}
         title={this.props.title}
+        slotEl={this.state.slotEl}
       >
-        {this.props.children}
+        <div ref={this.setSlotEl}>{this.props.children}</div>
       </ModalAdapter>
     );
   }
