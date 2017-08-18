@@ -1,9 +1,10 @@
 @import '~basics/colors/colors.scss';
 @import '~helpers/css/mixins/base.scss';
+@import '~helpers/css/mixins/spacing.scss';
 
 .hig__global-nav__side-nav__section__group__module__collapse {
   @include vendor-prefix('transform', 'rotate(0deg)');
-  margin-right: spacing(s);
+  margin-right: spacing(xs);
 
   &--collapsed {
     @include vendor-prefix('transform', 'rotate(-90deg)');
@@ -15,5 +16,9 @@
 
   &:hover {
     cursor: pointer;
+  }
+
+  svg * {
+    stroke: color(hig-gray-30);
   }
 }

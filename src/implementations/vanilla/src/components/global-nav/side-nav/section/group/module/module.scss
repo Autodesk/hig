@@ -5,6 +5,7 @@
 .hig__global-nav__side-nav__section__group__module {
   position: relative;
   margin: spacing(xxs) 0;
+  user-select: none;
 }
 
 .hig__global-nav__side-nav__section__group__module__row {
@@ -19,7 +20,6 @@
   align-items: stretch;
   border-left: 2px solid transparent;
   flex: 1 1 auto;
-
   color: color(hig-gray-10);
   text-decoration: none;
 
@@ -38,7 +38,7 @@
 }
 
 .hig__global-nav__side-nav__section__group__module__link__icon {
-  padding-left: spacing(s) - 2px; /* - 2px from border-left */
+  padding-left: spacing(xs);
 
   svg * {
     fill: color(hig-gray-10);
@@ -56,9 +56,9 @@
 }
 
 .hig__global-nav__side-nav__section__group__module__link__title {
-  font-weight: 500;
+  font-weight: 700;
   font-size: 15px;
-  padding-left: 10px;
+  padding-left: spacing(xs);
   line-height: 30px;
 }
 

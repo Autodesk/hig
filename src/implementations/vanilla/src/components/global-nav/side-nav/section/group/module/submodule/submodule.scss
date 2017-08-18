@@ -1,21 +1,26 @@
 @import '~basics/colors/colors.scss';
 
-.hig__global-nav__side-nav__section__group__module__submodule{
-    padding-left: 40px;
+.hig__global-nav__side-nav__section__group__module__submodule {
+  display: block;
+  padding-left: 48px;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 30px;
+  color: color(hig-gray-20);
+  user-select: none;
 
-    &__link{
-        display: block;
-        color: color(hig-gray-20);
-        text-decoration: none;
-        font-size: 14px;
-        line-height: 30px;
+  &:hover,
+  &--active {
+    color: color(hig-blue-30);
+  }
 
-        &:hover, &--active{
-            color: color(hig-blue-30);
-        }
-    }
+  &:focus,
+  &:active {
+    outline: none;
+    color: color(hig-blue-20);
+  }
 
-    &--hide{
-        display: none;
-    }
+  &--hide {
+    display: none;
+  }
 }
