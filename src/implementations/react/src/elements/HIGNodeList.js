@@ -22,6 +22,10 @@ export default class HIGNodeList {
      */
     this.type = type;
 
+    this.listItems = listItems
+
+    this.types = listItems.map( item =>)
+
     /**
      * This is the constructor function for the hig-vanilla partial
      */
