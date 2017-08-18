@@ -71,9 +71,10 @@ describe("<DropdownAdapter>", () => {
   };
 
   const UpdatedContext = props => {
+    const {option, ...dropdownProps } = props;
     return (
-      <DropdownComponent {...props}>
-        <OptionComponent {...props.option} />
+      <DropdownComponent {...dropdownProps}>
+        <OptionComponent {...option} />
       </DropdownComponent>
     );
   };

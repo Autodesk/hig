@@ -15,7 +15,7 @@
 
  */
 import React from "react";
-import { Button, GlobalNav, TextField } from "../react-hig";
+import { Button, GlobalNav, TextField, FilterableSideNav } from "../react-hig";
 
 import "hig-vanilla/dist/hig.css";
 import "./index.css";
@@ -23,6 +23,7 @@ import "./index.css";
 import logo from "./images/bim-logo.png";
 import profileImage from "./images/profileImage.png";
 import TopNavFixtures from "./fixtures/topNavFixtures";
+import sideNavFixtures from "./fixtures/sideNavFixtures";
 
 import ButtonSection from "./sections/ButtonSection.js";
 import DropdownSection from "./sections/DropdownSection";
@@ -32,22 +33,11 @@ import RadioButtonSection from "./sections/RadioButtonSection";
 import RangeSection from "./sections/RangeSection";
 import TextFieldSection from "./sections/TextFieldSection";
 import TextAreaSection from "./sections/TextAreaSection";
-import PasswordFieldSection from "./sections/PasswordFieldSection"
-import SpacerSection from "./sections/SpacerSection"
+import PasswordFieldSection from "./sections/PasswordFieldSection";
+import SpacerSection from "./sections/SpacerSection";
 import ModalSection from "./sections/ModalSection";
 import TypographySection from "./sections/TypographySection";
 
-const SideNav = GlobalNav.SideNav;
-const LinkList = GlobalNav.SideNav.LinkList;
-const Link = GlobalNav.SideNav.LinkList.Link;
-const Search = GlobalNav.SideNav.Search;
-const SectionList = GlobalNav.SideNav.SectionList;
-const Section = GlobalNav.SideNav.SectionList.Section;
-const SectionCollapse = GlobalNav.SideNav.SectionList.Section.SectionCollapse;
-const Group = GlobalNav.SideNav.SectionList.Section.Group;
-const Module = GlobalNav.SideNav.SectionList.Section.Group.Module;
-const ModuleCollapse = GlobalNav.SideNav.SectionList.Section.Group.Module.ModuleCollapse;
-const Submodule = GlobalNav.SideNav.SectionList.Section.Group.Module.Submodule;
 const TopNav = GlobalNav.TopNav;
 const Profile = GlobalNav.TopNav.Profile;
 const Shortcut = GlobalNav.TopNav.Shortcut;
@@ -62,21 +52,10 @@ const Slot = GlobalNav.Slot;
 
 const topNavFixtures = new TopNavFixtures();
 
-const links = [
-  { title: "Autodesk Main", url: "http://www.autodesk.com" },
-  {
-    title: "AutoCAD",
-    url: "https://www.autodesk.com/products/autocad/overview"
-  },
-  { title: "Maya", url: "https://www.autodesk.com/products/maya/overview" }
-];
-
 class Playground extends React.Component {
   constructor() {
     super();
     this.state = {
-      textFieldValue: "Foobar",
-      fn: false,
       tabs: [{ label: "One", id: 0 }, { label: "Two", id: 1 }],
       projects: topNavFixtures.projectList(),
       accounts: topNavFixtures.accountList(),
@@ -86,15 +65,11 @@ class Playground extends React.Component {
       activeLabel: `${topNavFixtures.accountList()[0].label} / ${topNavFixtures.projectList()[0].label}`,
       activeImage: topNavFixtures.projectList()[0].image,
       activeType: "project",
-      modules: [],
-      sideNavOpen: false
+      sideNavOpen: true
     };
-
-    this.setTextFieldValue = this.setTextFieldValue.bind(this);
-    this.toggleSidenav = this.toggleSidenav.bind(this);
   }
 
-  toggleSidenav() {
+  toggleSidenav = () => {
     this.setState({ sideNavOpen: !this.state.sideNavOpen });
   }
 
@@ -193,7 +168,7 @@ class Playground extends React.Component {
     console.log(messageParts.join(""));
   }
 
-  setTextFieldValue(event) {
+  setTextFieldValue = (event) => {
     this.logEvent(event, TextField);
     this.setState({
       textFieldValue: event.target.value
@@ -204,87 +179,7 @@ class Playground extends React.Component {
     return (
       <div>
         <GlobalNav sideNavOpen={this.state.sideNavOpen}>
-          <SideNav>
-            <LinkList>
-              {links.map((link, i) => {
-                return <Link title={link.title} link={link.url} key={i} />;
-              })}
-            </LinkList>
-            <SectionList>
-              <Section headerLabel="Project" headerName="ThunderStorm">
-                <SectionCollapse />
-                {topNavFixtures.menu().sections[0].groups.map((group, i) => {
-                  return (
-                    <Group key={i}>
-                      {group.modules.map(module => {
-                        return (
-                          <Module
-                            icon={module.icon}
-                            contentImage={module.contentImage}
-                            title={module.label}
-                            key={module.label}
-                          >
-                            <ModuleCollapse />
-                            {module.submodules.map(submodule => {
-                              return (
-                                <Submodule
-                                  title={submodule.label}
-                                  link="#"
-                                  key={submodule.label}
-                                />
-                              );
-                            })}
-                          </Module>
-                        );
-                      })}
-                    </Group>
-                  );
-                })}
-                <Group>
-                  {this.state.modules.map(module => {
-                    return (
-                      <Module
-                        icon={module.icon}
-                        title={module.title}
-                        key={module.key}
-                      />
-                    );
-                  })}
-                </Group>
-              </Section>
-              <Section headerLabel="Account" headerName="GlobalConstruction">
-                <SectionCollapse />
-                {topNavFixtures.menu().sections[1].groups.map((group, i) => {
-                  return (
-                    <Group key={i}>
-                      {group.modules.map(module => {
-                        return (
-                          <Module
-                            icon={module.icon}
-                            contentImage={module.contentImage}
-                            title={module.label}
-                            key={module.label}
-                          >
-                            <ModuleCollapse />
-                            {module.submodules.map(submodule => {
-                              return (
-                                <Submodule
-                                  title={submodule.label}
-                                  link="#"
-                                  key={submodule.label}
-                                />
-                              );
-                            })}
-                          </Module>
-                        );
-                      })}
-                    </Group>
-                  );
-                })}
-              </Section>
-            </SectionList>
-            <Search placeholder="Find module or submodule" />
-          </SideNav>
+          <FilterableSideNav onModuleChange={id => console.log(`Module selected: ${id}`)} sections={sideNavFixtures.sections} links={sideNavFixtures.links} />
           <TopNav
             logo={logo}
             logoLink="http://autodesk.com"
@@ -368,11 +263,6 @@ class Playground extends React.Component {
               <Button title="Add tab before" onClick={this.addTabBefore} />
               <Button title="Add tab after" onClick={this.addTabAfter} />
               <Button title="Remove tab" onClick={this.removeTab} />
-            </section>
-
-            <section>
-              <h3>Sidebar modules</h3>
-              <Button title="Add Module" onClick={this.addModule} />
             </section>
 
             <ButtonSection />

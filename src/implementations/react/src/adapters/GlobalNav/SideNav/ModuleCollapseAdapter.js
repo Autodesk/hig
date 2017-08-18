@@ -12,7 +12,12 @@ export class ModuleCollapseAdapter extends HIGElement {
   }
 
   componentDidMount() {
-    this.commitUpdate(['minimized', this.initialProps.minimized]);
+    if (this.props.minimized) {
+      this.commitUpdate(['minimized', this.props.minimized]);
+    }
+    if (this.props.onClick) {
+      this.commitUpdate(['onClick', this.props.onClick]);
+    }
   }
 
   commitUpdate(updatePayload, oldProps, newProp) {
