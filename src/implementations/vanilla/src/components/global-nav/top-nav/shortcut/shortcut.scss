@@ -1,12 +1,22 @@
 @import '~basics/colors/colors.scss';
 
 .hig__global-nav__top-nav__shortcut {
-    padding: 0 10px;
-}
-.hig__global-nav__top-nav__shortcut__link {
-    display: block;
-}
-.hig__global-nav__top-nav__shortcut__link__icon {
-    margin: auto;
-    vertical-align: middle;
+
+    &:first-child{
+        padding-left:8px;
+    }
+    &:last-child{
+        padding-right:8px;
+    }
+
+    margin: 0 1px;
+
+    &__link {
+        display: block;
+
+        &__icon {
+            margin: auto;
+            vertical-align: middle;
+        }
+    }
 }
