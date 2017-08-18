@@ -31,11 +31,12 @@ class ModalSection extends Component {
           title="Are you sure?"
           isOpen={this.state.isOpen}
           buttons={buttonProps}
-          body="This is the body of my modal"
+          body="This is the text body of my modal"
           headerColor="gray"
           onClose={this.closeModal}
         >
-          <h1>This is my modal content</h1>
+          <h1><u>This is my HTML title</u></h1>
+          <p><i>This is my HTML content.</i></p>
         </Modal>
       </PlaygroundSection>
     )
