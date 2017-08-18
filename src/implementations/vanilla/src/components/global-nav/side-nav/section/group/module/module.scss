@@ -1,35 +1,67 @@
 @import '~basics/colors/colors.scss';
+@import '~helpers/css/mixins/spacing.scss';
 @import '~helpers/css/mixins/base.scss';
 
-.hig__global-nav__side-nav__section__group__module{
-    
-    position: relative;
-    padding: 5px 0;
+.hig__global-nav__side-nav__section__group__module {
+  position: relative;
+  margin: spacing(xxs) 0;
+}
 
-    &__link{
-        @include clearfix;
-        color: color(hig-slate-20);
-        text-decoration: none;
+.hig__global-nav__side-nav__section__group__module__row {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  height: 32px;
+}
 
-        &__icon{
-            float: left;
-        }
+.hig__global-nav__side-nav__section__group__module__link {
+  display: flex;
+  align-items: stretch;
+  border-left: 2px solid transparent;
+  flex: 1 1 auto;
 
-        &__title{
-            font-weight: 500;
-            font-size: 15px;
-            float: left;
-            padding-left: 10px;
-            line-height: 30px;
-        }
+  color: color(hig-gray-10);
+  text-decoration: none;
 
-        &:hover, &--active{
-            color: color(hig-blue-30);
-        }
+  &:hover,
+  &--active {
+    color: color(hig-blue-30);
+    border-left-color: color(hig-blue-30);
+  }
 
+  &:active,
+  &:focus {
+    outline: none;
+    color: color(hig-blue-20);
+    border-left-color: color(hig-blue-20);
+  }
+}
+
+.hig__global-nav__side-nav__section__group__module__link__icon {
+  padding-left: spacing(s) - 2px; /* - 2px from border-left */
+
+  svg * {
+    fill: color(hig-gray-10);
+
+    .hig__global-nav__side-nav__section__group__module__link:hover &,
+    .hig__global-nav__side-nav__section__group__module__link--active & {
+      fill: color(hig-blue-30);
     }
 
-    &--hide{
-        display: none;
+    .hig__global-nav__side-nav__section__group__module__link:focus &,
+    .hig__global-nav__side-nav__section__group__module__link:active & {
+      fill: color(hig-blue-20);
     }
+  }
+}
+
+.hig__global-nav__side-nav__section__group__module__link__title {
+  font-weight: 500;
+  font-size: 15px;
+  padding-left: 10px;
+  line-height: 30px;
+}
+
+.hig__global-nav__side-nav__section__group__module--hide {
+  display: none;
 }

@@ -3,56 +3,61 @@
 @import '~helpers/css/mixins/base.scss';
 
 $hig__global-nav__sidenav--width: 280px;
+$hig__global-nav__sidenav--l-side-padding: 16px;
+$hig__global-nav__sidenav--r-side-padding: 12px;
 
 .hig__global-nav__sidenav {
-    @include reset;
-    position: fixed;
-    top: 0;
+  @include reset;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: color(hig-white);
+  border-right: 1px solid color(hig-gray-50);
+  overflow-x: hidden;
+
+  @include shadow("inner-right");
+
+  width: $hig__global-nav__sidenav--width;
+
+  display: none; // Hide by default
+
+  // Sidenav Scroll
+  &__scroll {
+    position: absolute;
+    top: 4px;
     left: 0;
-    bottom: 0;
-    background: color(hig-white);
-    border-right: 1px solid color(hig-gray-50);
+    right: 4px;
+    bottom: 4px;
+    @include vendor-prefix('box-sizing', 'border-box');
+    padding: 14px 0;
 
-    @include shadow("inner-right");
+    overflow-y: scroll;
+    overflow-x: hidden;
 
-    width: $hig__global-nav__sidenav--width;    
-
-    display: none; // Hide by default
-
-    // Sidenav Scroll
-    &__scroll{
-        position: absolute;
-        top: 4px;
-        left: 4px;
-        right: 4px;
-        bottom: 4px;
-        @include vendor-prefix('box-sizing', 'border-box');
-        padding: 14px 12px;
-
-        overflow-y: scroll;
-        
-        &::-webkit-scrollbar {
-            width: 4px;
-        } 
-
-        &::-webkit-scrollbar-thumb {
-            width: 5px;
-            height: 200px;
-            background-color: color(hig-gray-30);
-            border-radius: 2px;
-        }
-
-        &--search{
-            bottom: 4px + 52px; // search at the bottom
-        }
+    &::-webkit-scrollbar {
+      width: 4px;
     }
-    
-    &__copyright{
-        margin-bottom: 40px;
-        font-size: 12px;
-        color: color(hig-gray-30);
+
+    &::-webkit-scrollbar-thumb {
+      width: 5px;
+      height: 200px;
+      background-color: color(hig-gray-30);
+      border-radius: 2px;
     }
+
+    &--search{
+      bottom: 4px + 52px; // search at the bottom
+    }
+  }
+
+  &__copyright {
+    margin-bottom: 40px;
+    font-size: 12px;
+    color: color(hig-gray-30);
+  }
 }
-    .hig__global-nav--open .hig__global-nav__sidenav{
-        display: block;
-    }
+
+.hig__global-nav--open .hig__global-nav__sidenav {
+  display: block;
+}

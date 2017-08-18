@@ -2,26 +2,22 @@
 @import '~helpers/css/mixins/breakpoints.scss';
 @import 'side-nav/side-nav.scss';
 
-.hig__global-nav{
+.hig__global-nav {
+  position: relative;
+  height: 100%;
+
+  &__container {
     position: relative;
-    height: 100%;
+    min-height: 100%;
+    background: color(hig-gray-60);
+  }
 
-    &__container{
-        position: relative;
-        min-height: 100%;
-        background: color(hig-gray-60);
-    }
-
-    &__slot{
-        padding: 20px;
-    }
-
-    @include tablet-breakpoint {
-
-    }
-
-
+  &__slot{
+    padding: 20px;
+  }
 }
-.hig__global-nav--open .hig__global-nav__container{
-    margin-left: $hig__global-nav__sidenav--width;
+
+.hig__global-nav--open .hig__global-nav__container {
+  margin-left: $hig__global-nav__sidenav--width;
+  overflow: hidden;
 }
