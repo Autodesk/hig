@@ -3,8 +3,6 @@ import * as PropTypes from 'prop-types';
 import createComponent from './createComponent';
 import HIGElement from '../elements/HIGElement';
 import { ButtonAdapter } from './ButtonAdapter';
-import { Slot } from '../elements/components/GlobalNav/Slot'
-import React from 'react';
 
 class ModalAdapter extends HIGElement {
   constructor(initialProps) {
@@ -37,9 +35,6 @@ class ModalAdapter extends HIGElement {
       this.hig.addButton(button.hig);
       button.componentDidMount();
     });
-
-    console.log(this.props)
-
   }
 
   commitUpdate(updatePayload) {

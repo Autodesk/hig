@@ -56,7 +56,6 @@ storiesOf('Modal', module)
           isOpen={boolean("isOpen", true)}
           buttons={buttonProps}
           onClose={action('onClose')}
-        >
-        </Modal>
+        />
       </div>)
   });
