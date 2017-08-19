@@ -12,10 +12,12 @@ export class TableHeadAdapter extends HIGElement {
 
     this.cells = new HIGNodeList([
       {
-        type: TextHeadCellAdapter, 
-        HIGConstructor: this.hig.partials.TextHeadCell,
-        onAdd: (instance, beforeInstance) => {
-          this.hig.addCell(instance, beforeInstance);
+        TextHeadCellAdapter: {
+          type: TextHeadCellAdapter,
+          HIGConstructor: this.hig.partials.TextHeadCell,
+          onAdd: (instance, beforeInstance) => {
+            this.hig.addCell(instance, beforeInstance);
+          }
         }
       }
     ]);

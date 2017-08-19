@@ -28,13 +28,15 @@ export class DropdownAdapter extends HIGElement {
   constructor(initialProps) {
     super(HIG.Dropdown, initialProps);
 
-    this.options = new HIGNodeList({
-      type: OptionAdapter,
-      HIGConstructor: this.hig.partials.Option,
-      onAdd: (instance, beforeInstance) => {
-        this.hig.addOption(instance, beforeInstance);
-      }
-    });
+    this.options = new HIGNodeList([{
+      "OptionAdapter": {
+        type: OptionAdapter,
+        HIGConstructor: this.hig.partials.Option,
+        onAdd: (instance, beforeInstance) => {
+          this.hig.addOption(instance, beforeInstance);
+        }
+      }  
+    }]);
   }
 
   componentDidMount() {

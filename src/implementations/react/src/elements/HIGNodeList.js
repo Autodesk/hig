@@ -4,7 +4,7 @@
  * Makes it simple to manage a list of child nodes within a react-hig element
  */
 export default class HIGNodeList {
-  constructor([listItems]) {
+  constructor(listItems) {
     // if (!type) {
     //   throw new Error('type is required');
     // }
@@ -48,7 +48,8 @@ export default class HIGNodeList {
 
   insertBefore(instance, insertBeforeIndex) {
 
-    var onAdd = this.listItems.find(instance).onAdd
+    var onAdd = this.listItems.forEach(item => {
+    });  
     if (!(this.types.indexOf(instance) === -1)) {
       throw new Error(`unknown type ${instance}`);
     }
@@ -93,7 +94,7 @@ export default class HIGNodeList {
 
   componentDidMount() {
     this.nodes.forEach(node => {
-      const onAdd = this.listItems.find(node).onAdd
+      const onAdd = this.listItems.find(node.name).onAdd
       onAdd(node.hig);
       node.mount();
     });
@@ -102,8 +103,8 @@ export default class HIGNodeList {
   }
 
   createElement(ElementConstructor, props) {
-    var type = this.listItems.find(ElementConstructor).type
-    var constructor = this.listItems.find(ElementConstructor).HIGConstructor;
+    var type = this.listItems.find(ElementConstructor.name).type
+    var constructor = this.listItems.find(ElementConstructor.name).HIGConstructor;
 
     if (type) {
       return new type(constructor, props);
