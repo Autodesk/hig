@@ -244,17 +244,6 @@
             // LOOP OVER SECTIONS
             menuModel.forEach(function(sectionModel){
 
-                // ADD A SECTION IN OUR SIDENAV
-                var generated_section = new SideNav.partials.Section({
-                    "headerLabel": sectionModel["label"],
-                    "headerName": sectionModel["name"]
-                });
-                SideNav.addSection(generated_section);
-
-                // ADD A COLLAPSE ICON TO OUR SIDENAV SECTION HEADER
-                var generated_section_collapse_icon = new generated_section.partials.Collapse();
-                generated_section.addCollapse(generated_section_collapse_icon);
-
                 // STORE IN MODEL FOR INTERNAL STATE
                 sectionModel['_generated_section'] = generated_section;
                 sectionModel['_generated_section_collapse_icon'] = generated_section_collapse_icon;
@@ -339,26 +328,6 @@
                         }
                     });
 
-                });
-
-                // SECTION EVENTS
-                generated_section_collapse_icon.onClick(function(e){
-                    if(sectionModel["_collapsed"]){
-                        generated_section_collapse_icon.minimize();
-                        sectionModel["groups"].map(function(groupModel){
-                            groupModel["modules"].map(function(moduleModel){
-                                showSubmodules(moduleModel, true);
-                            });
-                        });
-                    }else{
-                        generated_section_collapse_icon.maximize();
-                        sectionModel["groups"].map(function(groupModel){
-                            groupModel["modules"].map(function(moduleModel){
-                                hideSubmodules(moduleModel, true);
-                            });
-                        });
-                    }
-                    sectionModel["_collapsed"] = !sectionModel["_collapsed"];
                 });
 
             });

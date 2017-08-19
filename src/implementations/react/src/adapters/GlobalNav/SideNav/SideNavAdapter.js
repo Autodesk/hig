@@ -2,39 +2,134 @@
 import * as PropTypes from 'prop-types';
 
 import HIGElement from '../../../elements/HIGElement';
+import HIGNodeList from '../../../elements/HIGNodeList';
 import HIGChildValidator from '../../../elements/HIGChildValidator';
 import createComponent from '../../createComponent';
 
-import SectionListComponent, {
-  SectionList
-} from '../../../elements/components/GlobalNav/SectionList';
-import LinkListComponent, {
-  LinkList
-} from '../../../elements/components/GlobalNav/LinkList';
+import GroupComponent, { GroupAdapter } from './GroupAdapter';
+import LinkComponent, { LinkAdapter } from './LinkAdapter';
 import SearchComponent, { SearchAdapter } from './SearchAdapter';
 
 export class SideNavAdapter extends HIGElement {
-  componentDidMount() {
-    if (this.sections) {
-      this.sections.mount();
-    }
+  constructor(HIGConstructor, initialProps) {
+    super(HIGConstructor, initialProps);
 
-    if (this.links) {
-      this.links.mount();
-    }
+    this.groups = new HIGNodeList({
+      type: GroupAdapter,
+      HIGConstructor: this.hig.partials.Group,
+      onAdd: (instance, beforeInstance) => {
+        this.hig.addGroup(instance, beforeInstance);
+      }
+    });
+
+    this.links = new HIGNodeList({
+      type: LinkAdapter,
+      HIGConstructor: this.hig.partials.Link,
+      onAdd: (instance, beforeInstance) => {
+        this.hig.addLink(instance, beforeInstance);
+      }
+    });
+  }
+
+  componentDidMount() {
+    this.groups.componentDidMount();
+    this.links.componentDidMount();
 
     if (this.search) {
       this.hig.addSearch(this.search.hig);
       this.search.mount();
     }
+
+    if (this.props.headerLabel) {
+      this.commitUpdate(['headerLabel', this.props.headerLabel]);
+    }
+
+    if (this.props.headerLink) {
+      this.commitUpdate(['headerLink', this.props.headerLink]);
+    }
+
+    if (this.props.superHeaderLabel) {
+      this.commitUpdate(['superHeaderLabel', this.props.superHeaderLabel]);
+    }
+
+    if (this.props.superHeaderLink) {
+      this.commitUpdate(['superHeaderLink', this.props.superHeaderLink]);
+    }
+
+    if (this.props.onHeaderClick) {
+      this.commitUpdate(['onHeaderClick', this.props.onHeaderClick]);
+    }
+
+    if (this.props.onSuperHeaderClick) {
+      this.commitUpdate(['onSuperHeaderClick', this.props.onSuperHeaderClick]);
+    }
+  }
+
+  commitUpdate(updatePayload, oldProps, newProps) {
+    for (let i = 0; i < updatePayload.length; i += 2) {
+      const propKey = updatePayload[i];
+      const propValue = updatePayload[i + 1];
+
+      switch (propKey) {
+        case 'headerLabel': {
+          this.hig.setHeaderLabel(propValue);
+          break;
+        }
+        case 'headerLink': {
+          this.hig.setHeaderLink(propValue);
+          break;
+        }
+        case 'superHeaderLabel': {
+          this.hig.setSuperHeaderLabel(propValue);
+          break;
+        }
+        case 'superHeaderLink': {
+          this.hig.setSuperHeaderLink(propValue);
+          break;
+        }
+        case 'onHeaderClick': {
+          const dispose = this._disposeFunctions.get('onHeaderClickDispose');
+
+          if (dispose) {
+            dispose();
+          }
+
+          this._disposeFunctions.set(
+            'onHeaderClickDispose',
+            this.hig.onHeaderClick(propValue)
+          );
+          break;
+        }
+        case 'onSuperHeaderClick': {
+          const dispose = this._disposeFunctions.get('onSuperHeaderClickDispose');
+
+          if (dispose) {
+            dispose();
+          }
+
+          this._disposeFunctions.set(
+            'onSuperHeaderClickDispose',
+            this.hig.onSuperHeaderClick(propValue)
+          );
+          break;
+        }
+        case 'children': {
+          // No-op
+          break;
+        }
+        default: {
+          console.warn(`${propKey} is unknown`);
+        }
+      }
+    }
   }
 
   createElement(ElementConstructor, props) {
     switch (ElementConstructor) {
-      case SectionList:
-        return new SectionList(this.hig); // special case hand over the hig instance
-      case LinkList:
-        return new LinkList(this.hig); // special case hand over the hig instance
+      case GroupAdapter:
+        return new GroupAdapter(this.hig.partials.Group, props);
+      case LinkAdapter:
+        return new LinkAdapter(this.hig.partials.Link, props);
       case SearchAdapter:
         return new SearchAdapter(this.hig.partials.Search, props);
       default:
@@ -43,26 +138,14 @@ export class SideNavAdapter extends HIGElement {
   }
 
   appendChild(instance) {
-    if (instance instanceof SectionList) {
-      if (this.sections) {
-        throw new Error('only one SectionList is allowed');
-      } else {
-        this.sections = instance;
+    this.insertBefore(instance);
+  }
 
-        if (this.mounted) {
-          instance.componentDidMount();
-        }
-      }
-    } else if (instance instanceof LinkList) {
-      if (this.links) {
-        throw new Error('only one LinkList is allowed');
-      } else {
-        this.links = instance;
-
-        if (this.mounted) {
-          instance.componentDidMount();
-        }
-      }
+  insertBefore(instance, insertBeforeIndex) {
+    if (instance instanceof GroupAdapter) {
+      this.groups.insertBefore(instance, insertBeforeIndex);
+    } else if (instance instanceof LinkAdapter) {
+      this.links.insertBefore(instance, insertBeforeIndex);
     } else if (instance instanceof SearchAdapter) {
       if (this.search) {
         throw new Error('only one Search is allowed');
@@ -78,17 +161,13 @@ export class SideNavAdapter extends HIGElement {
     }
   }
 
-  insertBefore(instance, insertBeforeIndex) {
-    this.appendChild(instance);
-  }
-
   removeChild(instance) {
-    if (instance instanceof SectionList) {
-      this.sections = null;
+    if (instance instanceof GroupAdapter) {
+      this.groups.removeChild(instance);
     }
 
-    if (instance instanceof LinkList) {
-      this.links = null;
+    if (instance instanceof LinkAdapter) {
+      this.links.removeChild(instance);
     }
 
     if (instance instanceof SearchAdapter) {
@@ -107,8 +186,8 @@ SideNavComponent.propTypes = {
   addSearch: PropTypes.func,
   setCopyright: PropTypes.func,
   children: HIGChildValidator([
-    SectionListComponent,
-    LinkListComponent,
+    GroupComponent,
+    LinkComponent,
     SearchComponent
   ])
 };
@@ -121,8 +200,8 @@ SideNavComponent.__docgenInfo = {
   }
 };
 
-SideNavComponent.SectionList = SectionListComponent;
-SideNavComponent.LinkList = LinkListComponent;
+SideNavComponent.Group = GroupComponent;
+SideNavComponent.Link = LinkComponent;
 SideNavComponent.Search = SearchComponent;
 
 export default SideNavComponent;

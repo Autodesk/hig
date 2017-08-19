@@ -21,8 +21,6 @@ import TestUtils from 'react-dom/test-utils';
 
 import GlobalNav from '../GlobalNavAdapter';
 import SideNav from './SideNavAdapter';
-import SectionList from '../../../elements/components/GlobalNav/SectionList';
-import Section from './SectionAdapter';
 import Group from './GroupAdapter';
 import Module from './ModuleAdapter';
 import ModuleCollapseAdapter from './ModuleCollapseAdapter';
@@ -55,15 +53,11 @@ describe('<ModuleCollapseAdapter>', () => {
     return (
       <GlobalNav>
         <SideNav>
-          <SectionList>
-            <Section label="Project" title="Runway">
-              <Group>
-                <Module icon="assets">
-                  <ModuleCollapseAdapter {...props} />
-                </Module>
-              </Group>
-            </Section>
-          </SectionList>
+          <Group>
+            <Module icon="assets">
+              <ModuleCollapseAdapter {...props} />
+            </Module>
+          </Group>
         </SideNav>
       </GlobalNav>
     );

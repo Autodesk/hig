@@ -49,7 +49,7 @@ class Submodule extends Core {
   }
 }
 
-Submodule._interface = Interface.components.GlobalNav.partials.SideNav.partials.Section.partials.Group.partials.Module.partials.Submodule;
+Submodule._interface = Interface.components.GlobalNav.partials.SideNav.partials.Group.partials.Module.partials.Submodule;
 Submodule._defaults = {
   title: '',
   link: ''

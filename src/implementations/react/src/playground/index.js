@@ -25,9 +25,9 @@ import profileImage from "./images/profileImage.png";
 import TopNavFixtures from "./fixtures/topNavFixtures";
 import sideNavFixtures from "./fixtures/sideNavFixtures";
 
-import ButtonSection from "./sections/ButtonSection.js";
+import ButtonSection from "./sections/ButtonSection";
 import DropdownSection from "./sections/DropdownSection";
-import IconButtonSection from "./sections/IconButtonSection.js";
+import IconButtonSection from "./sections/IconButtonSection";
 import CheckboxSection from "./sections/CheckboxSection";
 import RadioButtonSection from "./sections/RadioButtonSection";
 import RangeSection from "./sections/RangeSection";
@@ -179,7 +179,12 @@ class Playground extends React.Component {
     return (
       <div>
         <GlobalNav sideNavOpen={this.state.sideNavOpen}>
-          <FilterableSideNav onModuleChange={id => console.log(`Module selected: ${id}`)} sections={sideNavFixtures.sections} links={sideNavFixtures.links} />
+          <FilterableSideNav
+            superHeaderLabel="Global Construction"
+            headerLabel="Oakwood Medical Center"
+            onModuleChange={id => console.log(`Module selected: ${id}`)}
+            sections={sideNavFixtures.sections} links={sideNavFixtures.links}
+          />
           <TopNav
             logo={logo}
             logoLink="http://autodesk.com"

@@ -3,7 +3,7 @@ import * as PropTypes from 'prop-types';
 import createComponent from '../../createComponent';
 import HIGElement from '../../../elements/HIGElement';
 
-export class Link extends HIGElement {
+export class LinkAdapter extends HIGElement {
   commitUpdate(updatePayload, oldProps, newProp) {
     for (let i = 0; i < updatePayload.length; i += 2) {
       const propKey = updatePayload[i];
@@ -52,7 +52,7 @@ export class Link extends HIGElement {
   }
 }
 
-const LinkComponent = createComponent(Link);
+const LinkComponent = createComponent(LinkAdapter);
 
 LinkComponent.propTypes = {
   addTitle: PropTypes.func,

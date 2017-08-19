@@ -1,6 +1,7 @@
 @import '~basics/colors/colors.scss';
 @import '~basics/shadows/shadows.scss';
 @import '~helpers/css/mixins/base.scss';
+@import '~helpers/css/mixins/spacing.scss';
 
 $hig__global-nav__sidenav--width: 280px;
 $hig__global-nav__sidenav--l-side-padding: 16px;
@@ -61,4 +62,28 @@ $hig__global-nav__sidenav--r-side-padding: 12px;
 
 .hig__global-nav--open .hig__global-nav__sidenav {
   display: block;
+}
+
+.hig__global-nav__sidenav__super-header,
+.hig__global-nav__sidenav__header {
+  margin: 0;
+  padding: 0;
+}
+
+.hig__global-nav__sidenav__super-header-link,
+.hig__global-nav__sidenav__header-link {
+  display: block;
+  padding: 0 $hig__global-nav__sidenav--r-side-padding 0 $hig__global-nav__sidenav--l-side-padding;
+  font-weight: 600;
+}
+
+.hig__global-nav__sidenav__super-header {
+  color: color(hig-gray-20);
+  font-size: 12px;
+}
+
+.hig__global-nav__sidenav__header {
+  color: color(hig-gray-10);
+  font-size: 16px;
+  margin-bottom: spacing(s);
 }

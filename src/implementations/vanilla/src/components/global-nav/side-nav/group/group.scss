@@ -1,6 +1,6 @@
 @import '~helpers/css/mixins/spacing.scss';
 @import '~basics/colors/colors.scss';
-@import '../../side-nav.scss';
+@import '../side-nav.scss';
 
 .hig__global-nav__side-nav__section__group {
   padding: spacing(xs) 0;
