@@ -4,44 +4,52 @@
  * Makes it simple to manage a list of child nodes within a react-hig element
  */
 export default class HIGNodeList {
-  constructor({ type, HIGConstructor, onAdd }) {
-    if (!type) {
-      throw new Error('type is required');
-    }
+  constructor([listItems]) {
+    // if (!type) {
+    //   throw new Error('type is required');
+    // }
 
-    if (!HIGConstructor) {
-      throw new Error('HIGConstructor is required');
-    }
+    // if (!HIGConstructor) {
+    //   throw new Error('HIGConstructor is required');
+    // }
 
-    if (!onAdd) {
-      throw new Error('onInsert is required');
-    }
+    // if (!onAdd) {
+    //   throw new Error('onInsert is required');
+    // }
 
     /**
      * This is the constructor function for the HIGElement
      */
-    this.type = type;
+    // this.type = type;
 
     this.listItems = listItems
 
-    this.types = listItems.map( item =>)
+    this.types = listItems.map(item => {
+      item.type
+    });
+
+    // this.addFunctions
+    
+    
 
     /**
      * This is the constructor function for the hig-vanilla partial
      */
-    this.HIGConstructor = HIGConstructor;
+    // this.HIGConstructor = HIGConstructor;
 
     /**
      * This is a function which calls the hig add* method. It takes two hig instances
      */
-    this.onAdd = onAdd;
+    // this.onAdd = onAdd;
 
     this.nodes = [];
     this.mounted = false;
   }
 
   insertBefore(instance, insertBeforeIndex) {
-    if (!(instance instanceof this.type)) {
+
+    var onAdd = this.listItems.find(instance).onAdd
+    if (!(this.types.indexOf(instance) === -1)) {
       throw new Error(`unknown type ${instance}`);
     }
 
@@ -56,10 +64,10 @@ export default class HIGNodeList {
 
     if (this.mounted) {
       if (beforeChild) {
-        this.onAdd(instance.hig, beforeChild.hig);
+        onAdd(instance.hig, beforeChild.hig);
         instance.mount();
       } else {
-        this.onAdd(instance.hig);
+        onAdd(instance.hig);
         instance.mount();
       }
     }
@@ -85,7 +93,8 @@ export default class HIGNodeList {
 
   componentDidMount() {
     this.nodes.forEach(node => {
-      this.onAdd(node.hig);
+      const onAdd = this.listItems.find(node).onAdd
+      onAdd(node.hig);
       node.mount();
     });
 
@@ -93,12 +102,20 @@ export default class HIGNodeList {
   }
 
   createElement(ElementConstructor, props) {
-    switch (ElementConstructor) {
-      case this.type:
-        return new this.type(this.HIGConstructor, props);
-      default:
-        throw new Error(`Unknown type ${ElementConstructor.name}`);
+    var type = this.listItems.find(ElementConstructor).type
+    var constructor = this.listItems.find(ElementConstructor).HIGConstructor;
+
+    if (type) {
+      return new type(constructor, props);
+    } else {
+       throw new Error(`Unknown type ${ElementConstructor.name}`);
     }
+    // switch (ElementConstructor) {
+    //   case this.type:
+    //     return new this.type(this.HIGConstructor, props);
+    //   default:
+       
+    // }
   }
 
   get length() {
