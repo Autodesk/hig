@@ -17,6 +17,7 @@ export default function createComponent(ElementConstructor) {
       super(props);
 
       if (context.parent) {
+        console.log(context.parent);
         this.instance = context.parent.createElement(ElementConstructor, props);
       } else {
         this.instance = new ElementConstructor(props);

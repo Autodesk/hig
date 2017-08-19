@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FlyoutAdapter renders 1`] = `
+"<div class=\\"hig__flyout hig__flyout--anchor-top-right\\">
+    <!--TARGET-->
+    <div class=\\"hig__flyout__container\\">
+        <div class=\\"hig__flyout__chevron\\"></div>
+        <div class=\\"hig__flyout__panel\\">
+            <!--SLOT-->
+        </div>
+    </div>
+</div>"
+`;
+
+exports[`FlyoutAdapter renders with non-default props 1`] = `
+"<div class=\\"hig__flyout hig__flyout--anchor-bottom-left hig__flyout--open\\">
+    <a href=\\"#\\" tabindex=\\"0\\" class=\\"hig__button hig__button--primary hig__button--standard\\" title=\\"Open setter flyout\\">
+    <!--ICON-->
+    <span class=\\"hig__button__title\\">Open setter flyout</span>
+</a><!--TARGET-->
+    <div class=\\"hig__flyout__container\\">
+        <div class=\\"hig__flyout__chevron\\"></div>
+        <div class=\\"hig__flyout__panel\\">
+            <!--SLOT-->
+        </div>
+    </div>
+</div>"
+`;
