@@ -251,7 +251,7 @@ class Playground extends React.Component {
                 <Tabs.Tab key={tab.id} id={tab.id} label={tab.label} />
               ))}
             </Tabs>
-          </SubNav> */}
+          </SubNav>
 
           <Slot className="playground-content">
             <section>

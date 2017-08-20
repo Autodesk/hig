@@ -12,10 +12,12 @@ export class GroupAdapter extends HIGElement {
     super(HIGConstructor, initialProps);
 
     this.modules = new HIGNodeList({
-      type: ModuleAdapter,
-      HIGConstructor: this.hig.partials.Module,
-      onAdd: (instance, beforeInstance) => {
-        this.hig.addModule(instance, beforeInstance);
+      Module: {
+        type: Module,
+        HIGConstructor: this.hig.partials.Module,
+        onAdd: (instance, beforeInstance) => {
+          this.hig.addModule(instance, beforeInstance);
+        }
       }
     });
   }

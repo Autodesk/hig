@@ -28,7 +28,7 @@ export default class HIGNodeList {
 
     this.types = []
     Object.keys(this.listItems).forEach(item => {
-        this.types.push(this.listItems[item].type)  
+        this.types.push(this.listItems[item].type);
     })
 
     // this.addFunctions
