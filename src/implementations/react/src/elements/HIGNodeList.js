@@ -49,6 +49,9 @@ export default class HIGNodeList {
   insertBefore(instance, insertBeforeIndex) {
 
     var onAdd = this.listItems.forEach(item => {
+      if (instance.name === item.name) {
+        return item.onAdd
+      }
     });  
     if (!(this.types.indexOf(instance) === -1)) {
       throw new Error(`unknown type ${instance}`);
