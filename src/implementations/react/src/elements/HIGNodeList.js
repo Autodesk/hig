@@ -24,9 +24,12 @@ export default class HIGNodeList {
 
     this.listItems = listItems
 
-    this.types = listItems.map(item => {
-      item.type
-    });
+    var keys = Object.keys(listItems)
+
+    this.types = []
+    Object.keys(this.listItems).forEach(item => {
+        this.types.push(this.listItems[item].type)  
+    })
 
     // this.addFunctions
     
@@ -47,16 +50,13 @@ export default class HIGNodeList {
   }
 
   insertBefore(instance, insertBeforeIndex) {
-
-    var onAdd = this.listItems.forEach(item => {
-      if (instance.name === item.name) {
-        return item.onAdd
-      }
-    });  
     if (!(this.types.indexOf(instance) === -1)) {
       throw new Error(`unknown type ${instance}`);
     }
 
+    var constructorName = instance.constructor.name
+    var onAdd = this.listItems[constructorName].onAdd
+    
     // Update the model
     const beforeChild = this._item(insertBeforeIndex);
 
@@ -97,7 +97,7 @@ export default class HIGNodeList {
 
   componentDidMount() {
     this.nodes.forEach(node => {
-      const onAdd = this.listItems.find(node.name).onAdd
+      const onAdd = this.listItems[node.constructor.name].onAdd
       onAdd(node.hig);
       node.mount();
     });
@@ -106,8 +106,8 @@ export default class HIGNodeList {
   }
 
   createElement(ElementConstructor, props) {
-    var type = this.listItems.find(ElementConstructor.name).type
-    var constructor = this.listItems.find(ElementConstructor.name).HIGConstructor;
+    var type = this.listItems[ElementConstructor.name].type
+    var constructor = this.listItems[ElementConstructor.name].HIGConstructor;
 
     if (type) {
       return new type(constructor, props);

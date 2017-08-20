@@ -25,18 +25,22 @@ import HIGChildValidator from "../../elements/HIGChildValidator";
 import OptionComponent, { OptionAdapter } from "./OptionAdapter";
 
 export class DropdownAdapter extends HIGElement {
+  // static listTypes = {
+  //   OptionaAdapter: { type: OptionAdapter, HIGConstructor: () => {} },
+  //   [IconAdapter.name]: { type: IconAdapter, HIGConstructor: () => {} }
+  // };
   constructor(initialProps) {
     super(HIG.Dropdown, initialProps);
 
-    this.options = new HIGNodeList([{
-      "OptionAdapter": {
+    this.options = new HIGNodeList({
+      OptionAdapter: {
         type: OptionAdapter,
         HIGConstructor: this.hig.partials.Option,
         onAdd: (instance, beforeInstance) => {
           this.hig.addOption(instance, beforeInstance);
         }
-      }  
-    }]);
+      }
+    });
   }
 
   componentDidMount() {
