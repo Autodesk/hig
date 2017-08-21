@@ -51,8 +51,12 @@ const SubNav = GlobalNav.SubNav;
 const Tabs = GlobalNav.SubNav.Tabs;
 const Slot = GlobalNav.Slot;
 const TableHead = Table.TableHead;
+const TableRow = Table.TableRow;
 const TextHeadCell = Table.TableHead.TextHeadCell;
 const SlotHeadCell = Table.TableHead.SlotHeadCell;
+const TextCell = Table.TableRow.TextCell;
+const IconCell = Table.TableRow.IconCell;
+const SlotCell = Table.TableRow.SlotCell;
 
 const topNavFixtures = new TopNavFixtures();
 
@@ -174,8 +178,7 @@ class Playground extends React.Component {
   }
 
   render() {
-    return (
-      <div>
+    return <div>
         <GlobalNav sideNavOpen={this.state.sideNavOpen}>
           <SideNav
             superHeaderLabel="Global Construction"
@@ -227,31 +230,19 @@ class Playground extends React.Component {
                   })}
                 />
               ))}
+
             </ProjectAccountSwitcher>
 
             <Shortcut icon="gear" title="Gears for Fears" link="/gears" />
 
             <Help title="HELLLP MEEEE!!!!" link="/help" />
 
-            <Profile
-              image={profileImage}
-              name="Jane Doe"
-              email="jane.doe@example.com"
-              profileSettingsLink="http://www.autodesk.com"
-              signOutLink="http://www.sanrio.com"
-            />
+            <Profile image={profileImage} name="Jane Doe" email="jane.doe@example.com" profileSettingsLink="http://www.autodesk.com" signOutLink="http://www.sanrio.com" />
 
             <TopNavSearch onInput={this.handleTopNavSearchInputChange} />
           </TopNav>
-          <SubNav
-            moduleIndicatorName="Documents Library"
-            moduleIndicatorIcon="hamburger"
-          >
-            <Tabs
-              defaultSelectedTabId={this.state.tabs[0].id}
-              onChange={(newTabId, oldTabId) =>
-                console.log(`New Tab: ${newTabId}`)}
-            >
+          <SubNav moduleIndicatorName="Documents Library" moduleIndicatorIcon="hamburger">
+            <Tabs defaultSelectedTabId={this.state.tabs[0].id} onChange={(newTabId, oldTabId) => console.log(`New Tab: ${newTabId}`)}>
               {this.state.tabs.map(tab =>
                 <Tabs.Tab key={tab.id} id={tab.id} label={tab.label} />
               )}
@@ -280,14 +271,17 @@ class Playground extends React.Component {
             <TypographySection />
             <Table density="standard">
               <TableHead>
-                <TextHeadCell text="test"/>
-                <SlotHeadCell>{slot}</SlotHeadCell>
+                <TextHeadCell text="test" />
+                <TextHeadCell text="test1" />
               </TableHead>
+              <TableRow>
+                <TextCell text="text cell test"/>
+                <IconCell icon="gear" />
+              </TableRow>  
             </Table>
           </Slot>
         </GlobalNav>
       </div>
-    );
   }
 }
 

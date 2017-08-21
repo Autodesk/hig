@@ -29,6 +29,9 @@ export class SlotHeadCellAdapter extends HIGElement {
           this.hig.setWidth(propValue);
           break;
         }
+        default: {
+          console.warn(`${propKey} is unknown`);
+        }
       }
     }
   }

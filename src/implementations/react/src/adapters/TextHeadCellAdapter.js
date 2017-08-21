@@ -27,6 +27,9 @@ export class TextHeadCellAdapter extends HIGElement {
           this.hig.setAlignment(propValue);
           break;
         }
+        default: {
+          console.warn(`${propKey} is unknown`);
+        }
       }
     }
   }

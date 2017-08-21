@@ -5,6 +5,7 @@ import createComponent from "./createComponent";
 import HIGChildValidator from "../elements/HIGChildValidator";
 
 import TableHeadComponent, { TableHeadAdapter } from "./TableHeadAdapter";
+import TableRowComponent, { TableRowAdapter } from "./TableRowAdapter";
 
 export class TableAdapter extends HIGElement {
   constructor(initialProps) {
@@ -16,7 +17,12 @@ export class TableAdapter extends HIGElement {
     if (this.tableHead) {
       this.hig.addTableHead(this.tableHead.hig);
       this.tableHead.mount();
-		}
+    }
+    
+     if (this.tableRow) {
+       this.hig.addTableRow(this.tableRow.hig);
+       this.tableRow.mount();
+     }
 		
 		if (this.props.density) {
 			this.commitUpdate(["density"], this.props.density)
@@ -27,6 +33,8 @@ export class TableAdapter extends HIGElement {
     switch (ElementConstructor) {
       case TableHeadAdapter:
         return new TableHeadAdapter(this.hig.partials.TableHead, props);
+      case TableRowAdapter:
+        return new TableRowAdapter(this.hig.partials.TableRow, props);
       default:
         throw new Error(`Unknown type ${ElementConstructor.name}`);
     }
@@ -39,7 +47,7 @@ export class TableAdapter extends HIGElement {
   appendChild(instance, beforeChilde = {}) {
     if (instance instanceof TableHeadAdapter) {
       if (this.tableHead) {
-        throw new Error("only one SideNav is allowed");
+        throw new Error("only one TableHead is allowed");
       } else {
         this.tableHead = instance;
         if (this.mounted) {
@@ -47,6 +55,12 @@ export class TableAdapter extends HIGElement {
           instance.mount();
         }
       }
+    } else if (instance instanceof TableRowAdapter) {
+        this.tableRow = instance;
+        if (this.mounted) {
+          this.hig.addTableRow(instance.hig);
+          instance.mount();
+        }
     } else {
       throw new Error("unknown type");
     }
@@ -55,6 +69,10 @@ export class TableAdapter extends HIGElement {
   removeChild(instance) {
     if (instance instanceof TableHeadAdapter) {
       this.TableHeadAdapter = null;
+    } 
+
+    if (instance instanceof TableRowAdapter) {
+      this.TableRowAdapter = null;
     }
     instance.unmount();
   }
@@ -86,10 +104,12 @@ const TableComponent = createComponent(TableAdapter);
 TableComponent.propTypes = {
   density: PropTypes.string,
 	children: HIGChildValidator([
-		TableHeadComponent
+    TableHeadComponent,
+    TableRowComponent
 	])
 }
 
 TableComponent.TableHead = TableHeadComponent;
+TableComponent.TableRow = TableRowComponent;
 
 export default TableComponent

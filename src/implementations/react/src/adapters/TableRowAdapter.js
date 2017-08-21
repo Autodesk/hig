@@ -18,16 +18,23 @@ export class TableRowAdapter extends HIGElement {
     this.props = { ...initialProps };
 
     this.cells = new HIGNodeList({
-      TextHeadCellAdapter: {
-        type: TextHeadCellAdapter,
-        HIGConstructor: this.hig.partials.TextHeadCell,
+      TextCellAdapter: {
+        type: TextCellAdapter,
+        HIGConstructor: this.hig.partials.TextCell,
         onAdd: (instance, beforeInstance) => {
           this.hig.addCell(instance, beforeInstance);
         }
       },
       SlotHeadCellAdapter: {
-        type: SlotHeadCellAdapter,
-        HIGConstructor: this.hig.partials.SlotHeadCell,
+        type: SlotCellAdapter,
+        HIGConstructor: this.hig.partials.SlotCell,
+        onAdd: (instance, beforeInstance) => {
+          this.hig.addCell(instance, beforeInstance);
+        }
+      },
+      IconCellAdapter: {
+        type: IconCellAdapter,
+        HIGConstructor: this.hig.partials.IconCell,
         onAdd: (instance, beforeInstance) => {
           this.hig.addCell(instance, beforeInstance);
         }
@@ -58,9 +65,11 @@ export class TableRowAdapter extends HIGElement {
 
   createElement(ElementConstructor, props) {
     switch (ElementConstructor) {
-      case TextHeadCellAdapter:
+      case TextCellAdapter:
         return this.cells.createElement(ElementConstructor, props);
-      case SlotHeadCellAdapter:
+      case IconCellAdapter:
+        return this.cells.createElement(ElementConstructor, props);
+      case SlotCellAdapter:
         return this.cells.createElement(ElementConstructor, props);
       default:
         throw new Error(`Unknown type ${ElementConstructor.name}`);
@@ -69,8 +78,8 @@ export class TableRowAdapter extends HIGElement {
 
   insertBefore(instance, beforeChild = {}) {
     if (
-      instance instanceof SlotHeadCellAdapter ||
-      instance instanceof TextHeadCellAdapter
+      instance instanceof SlotCellAdapter ||
+      instance instanceof TextCellAdapter || instance instanceof IconCellAdapter
     ) {
       this.cells.insertBefore(instance);
     } else {
@@ -85,7 +94,7 @@ export class TableRowAdapter extends HIGElement {
 const TableRowComponent = createComponent(TableRowAdapter);
 
 TableRowAdapter.PropTypes = {
-  children: HIGChildValidator([TextHeadCellComponent, SlotHeadCellComponent])
+  children: HIGChildValidator([TextCellComponent, SlotCellComponent, IconCellComponent])
 };
 
 TableRowComponent.__docgenInfo = {
@@ -96,7 +105,8 @@ TableRowComponent.__docgenInfo = {
   }
 };
 
-TableRowComponent.TextHeadCell = TextHeadCellComponent;
-TableRowComponent.SlotHeadCell = SlotHeadCellComponent;
+TableRowComponent.TextCell = TextCellComponent;
+TableRowComponent.SlotCell = SlotCellComponent;
+TableRowComponent.IconCell = IconCellComponent;
 
-export default TableHeadComponent;
+export default TableRowComponent;

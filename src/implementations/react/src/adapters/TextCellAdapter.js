@@ -27,6 +27,9 @@ export class TextCellAdapter extends HIGElement {
           this.hig.setDetail(propValue);
           break;
         }
+        default: {
+          console.warn(`${propKey} is unknown`);
+        }
       }
     }
   }
@@ -47,10 +50,10 @@ TextCellComponent.__docgenInfo = {
     },
     alignment: {
       description: "sets {String} text-position of cell"
-		}, 
-		detail: {
-			description: "sets {String} supporting text for cell in body of table"
-		}
+    },
+    detail: {
+      description: "sets {String} supporting text for cell in body of table"
+    }
   }
 };
 

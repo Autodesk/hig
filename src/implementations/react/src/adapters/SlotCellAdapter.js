@@ -27,6 +27,9 @@ export class SlotCellAdapter extends HIGElement {
           this.hig.setDetail(propValue);
           break;
         }
+        default: {
+          console.warn(`${propKey} is unknown`);
+        }
       }
     }
   }
@@ -35,21 +38,13 @@ export class SlotCellAdapter extends HIGElement {
 const SlotCellComponent = createComponent(SlotCellAdapter);
 
 SlotCellComponent.propTypes = {
-  text: PropTypes.string,
-  detail: PropTypes.string,
-  alignment: PropTypes.string
+  slot: PropTypes.node,
 };
 
 SlotCellComponent.__docgenInfo = {
   props: {
-    text: {
-      description: "sets {String} text in cell"
-    },
-    alignment: {
-      description: "sets {String} text-position of cell"
-    },
-    detail: {
-      description: "sets {String} supporting text for cell in body of table"
+    slot: {
+      description: "sets node into cell"
     }
   }
 };
