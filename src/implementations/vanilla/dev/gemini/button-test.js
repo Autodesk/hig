@@ -1,5 +1,5 @@
 gemini.suite('button', (parent) => {
-  parent.setUrl('src/basics/button/tests/gemini-button.html');
+  parent.setUrl('src/components/button/tests/gemini-button.html');
 
   gemini.suite('regular', (suite) => {
        suite.setCaptureElements('.primary')

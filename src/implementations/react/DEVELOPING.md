@@ -1,3 +1,25 @@
+## Getting Started
+
+in this directory simple run:
+```
+npm install
+```
+
+To start developing, simply run:
+```
+npm run start
+```
+
+To start seeing React examples in Storybook, run:
+```
+npm run storybook
+```
+
+To make a production build, run:
+```
+npm run build
+```
+
 ## Structure
 
 ### hig-react.js
@@ -147,20 +169,3 @@ type Properties = { [key: string]: any };
 ### index.js
 
 A set of examples of using the HIG primitives with the DOM.
-
-
-### TODO
-
-* Switch getDOMNode to el property getter
-* Use interface json (mock help method) to generate properties in Orion Elements
-  * Use defaults to figure out property names
-  * Add mock for event names with 'onEvent' style
-  * Rename append* methods to add* methods
-* Better error messaging for failure modes:
-  * Trying to append the wrong child type
-  * Trying to add a child to the DOM when it should be nested inside another HIG.Web component
-* Create a base class in hig-react-elements to help tidy up some boilerplate
-* Consider contributing to ReactPortal since it looks like we can't use it switch
-  rendering modes yet (https://github.com/facebook/react/blob/f6c4fe6cbbdca375b50ac10373007a9b74279e95/src/renderers/dom/fiber/ReactDOMFiber.js#L534)
-* Try to back port this version of HIG.Web to hig-playground to see if we can have
-  a common implementation

@@ -1,0 +1,61 @@
+@import '~basics/colors/colors.scss';
+@import '~helpers/css/mixins/base.scss';
+
+.hig__icon-button {
+  display: inline-block;
+  position: relative;
+  @include vendor-prefix('box-sizing', 'border-box');
+
+  border: 1px solid color(hig-gray-40);
+  border-radius: 4px;
+  color: color(hig-gray-10);
+
+  padding: 0;
+  height: 36px;
+  line-height: 36px;
+  min-width: 36px;
+  font-size: 14px;
+
+  // states
+  &:visited {
+    color: color(hig-gray-10);
+  }
+
+  &:hover {
+    background: none;
+    border-color: color(hig-turquoise-30);
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    background: color(hig-slate-50);
+    border-color: color(hig-slate-50);
+
+    svg * {
+      fill: color(hig-white);
+    }
+  }
+
+  > .hig__icon-button__icon {
+    @include vendor-prefix(transform, translateX(-50%) translateY(-50%));
+    position: absolute;
+    top: 50%; left: 50%;
+  }
+
+  &.hig__icon-button--disabled {
+    pointer-events: none;
+    background: none;
+    border-color: color(hig-gray-50);
+    color: color(hig-gray-40);
+
+    &:hover, &:focus {
+      background: none;
+      border-color: color(hig-gray-60);
+    }
+
+    svg {
+      opacity: 0.2;
+    }
+  }
+}

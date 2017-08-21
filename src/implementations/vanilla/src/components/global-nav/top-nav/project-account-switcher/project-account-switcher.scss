@@ -1,6 +1,9 @@
 @import '~basics/colors/colors.scss';
 
 .hig__global-nav__top-nav____project-account-switcher {
+  .hig__flyout__container{
+    right: -10px;
+  }
   .hig__flyout__panel {
     padding: 0px 10px 10px 10px;
 
@@ -9,7 +12,7 @@
         color: color(hig-blue-30);
         text-decoration: none;
       }
-    } 
+    }
   }
 }
 

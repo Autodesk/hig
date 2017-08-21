@@ -26,13 +26,23 @@ class PasswordFieldAdapter extends HIGElement {
   }
 
   componentDidMount() {
-    this.commitUpdate([
-                        'disabled', this.initialProps.disabled,
-                        'required', this.initialProps.required,
-                        'revealPassword', this.initialProps.revealPassword,
-                        'showPasswordHideButton', this.initialProps.showPasswordHideButton,
-                        'showPasswordRevealButton', this.initialProps.showPasswordRevealButton
-                      ]);
+    var commitProps = [];
+    if (this.initialProps.disabled) {
+      commitProps.push('disabled',this.initialProps.disabled);
+    }
+    if (this.initialProps.required) {
+      commitProps.push('required',this.initialProps.required)
+    }
+    if (this.initialProps.revealPassword) {
+      commitProps.push('revealPassword',this.initialProps.revealPassword)
+    }
+    if (this.initialProps.showPasswordHideButton) {
+      commitProps.push('showPasswordHideButton',this.initialProps.showPasswordHideButton)
+    }
+    if (this.initialProps.showPasswordRevealButton) {
+      commitProps.push('showPasswordRevealButton',this.initialProps.showPasswordRevealButton)
+    }
+    this.commitUpdate(commitProps);
   }
 
   commitUpdate(updatePayload, oldProps, newProps) {
@@ -153,6 +163,10 @@ class PasswordFieldAdapter extends HIGElement {
           this.hig.setPlaceholder(propValue);
           break;
         }
+        case 'revealPassword': {
+          propValue ? this.hig.revealPassword() : this.hig.hidePassword();
+          break;
+        }
         case 'showPasswordHideButton': {
           propValue ? this.hig.showPasswordHideButton() : this.hig.hidePasswordHideButton();
           break;
@@ -186,7 +200,7 @@ PasswordFieldComponent.propTypes = {
   onPasswordHideButtonClick: PropTypes.func,
   onPasswordRevealButtonClick: PropTypes.func,
   placeholder: PropTypes.string,
-  revealPassword:   PropTypes.bool,
+  revealPassword: PropTypes.bool,
   showPasswordHideButton: PropTypes.bool,
   showPasswordRevealButton: PropTypes.bool,
   required: PropTypes.string,

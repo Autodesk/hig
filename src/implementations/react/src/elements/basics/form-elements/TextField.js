@@ -2,13 +2,13 @@
 import React, { Component } from 'react';
 import TextFieldAdapter
   from '../../../adapters/FormElements/TextFieldAdapter.js';
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types';
 
 class TextField extends Component {
   constructor(props) {
     super(props);
 
-    const controlled = this.props.value === undefined ? false : true;
+    const controlled = props.value === undefined ? false : true;
 
     this.state = {
       value: this.getDefaultValue(),

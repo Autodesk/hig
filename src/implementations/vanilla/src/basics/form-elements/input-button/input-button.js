@@ -43,11 +43,13 @@ class InputButton extends Core {
 
   check() {
     this._addClass(this._checkedClass());
+    this._setInputAttribute('checked', '');
     this._buttonEl().checked = true;
   }
 
   uncheck() {
     this._removeClass(this._checkedClass());
+    this._removeInputAttribute('checked');
     this._buttonEl().checked = false;
   }
 

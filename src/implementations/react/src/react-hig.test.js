@@ -2,7 +2,7 @@
 
 import * as ReactHIG from './react-hig';
 
-import Button from './elements/basics/Button';
+import Button from './adapters/ButtonAdapter';
 import GlobalNav from './adapters/GlobalNav/GlobalNavAdapter';
 
 describe('react-hig', () => {

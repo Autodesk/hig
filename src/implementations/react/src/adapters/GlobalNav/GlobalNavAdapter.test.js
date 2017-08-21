@@ -147,7 +147,7 @@ describe('<GlobalNav>', () => {
 
     expect(console.error).toBeCalledWith(
       expect.stringMatching(
-        /'div' is not a valid child of GlobalNav. Children should be of type 'SideNavAdapter, TopNav, SubNav, Slot'/
+        /'div' is not a valid child of GlobalNav. Children should be of type ', SideNavAdapter, TopNav, SubNav, Slot'/
       )
     );
   });
@@ -163,7 +163,7 @@ describe('<GlobalNav>', () => {
 
     expect(console.error).toBeCalledWith(
       expect.stringMatching(
-        /'some random child text' is not a valid child of GlobalNav. Children should be of type 'SideNavAdapter, TopNav, SubNav, Slot'/
+        /'some random child text' is not a valid child of GlobalNav. Children should be of type ', SideNavAdapter, TopNav, SubNav, Slot'/
       )
     );
   });

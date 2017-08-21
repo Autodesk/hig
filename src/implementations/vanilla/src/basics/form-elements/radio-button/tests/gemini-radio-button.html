@@ -35,13 +35,12 @@
 </div>
 
 <script>
- const Heading = Hig.Typography._partials.Heading;
  const FormElements = new Hig.FormElements();
  const RadioButton = FormElements.partials.RadioButton;
 
- const DefaultHeading = new Heading({
+ const DefaultHeading = new Hig.Typography({
   text: "Different RadioButtons",
-  size: 2
+  type: "h2"
  });
 
  const DefaultRadioButton = new RadioButton({

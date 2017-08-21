@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DropdownAdapter> renders a disabled 1`] = `
+"<div class=\\"hig__dropdown\\">
+    <div class=\\"hig__text-field hig__text-field--disabled\\">
+    <!--ICON-SPACER-->
+
+    <div class=\\"hig__text-field__content\\">
+        <div class=\\"hig__text-field__input-wrapper\\">
+            <label class=\\"hig__text-field__icon\\" for=\\"text-field-5678\\"></label>
+            <button class=\\"hig__text-field__extra hig__text-field__password-reveal-button\\"></button>
+            <button class=\\"hig__text-field__extra hig__text-field__password-hide-button\\"></button>
+            <span class=\\"hig__text-field__extra hig__text-field__extra--dropdown-caret hig__text-field__extra--show\\"><svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret\\"><title>hig-web-light/basic/form-element/caret</title><polyline transform=\\"rotate(45 9.828 3)\\" points=\\"8 2 8 8 2 8\\" stroke=\\"#2E4258\\" stroke-width=\\"1.15\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"></polyline></svg></span><!--EXTRA-->
+            <div class=\\"hig__dropdown__menu-wrapper\\"><div class=\\"hig__dropdown__menu\\"><div class=\\"hig__dropdown__option \\" data-value=\\"option-value\\">
+    <span class=\\"hig__option__label\\">option-label</span>
+    <div class=\\"hig__dropdown__option__checkmark\\"><div class=\\"hig__icon\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"checkmark-blue-dark\\"><polygon fill=\\"#087AAD\\" points=\\"10.1802137 16 6 12.1129 7.29586623 10.8214 10.1569902 13.4647 16.6790525 7 18 8.2681\\" fill-rule=\\"evenodd\\"></polygon></svg></div></div>
+</div></div></div><!--SLOT-->
+            <input name=\\"\\" id=\\"text-field-5678\\" class=\\"hig__text-field__input hig__text-field__input--no-value\\" placeholder=\\"dropdown placeholder\\" value=\\"\\" readonly=\\"true\\" disabled=\\"true\\">
+            <label for=\\"text-field-5678\\" class=\\"hig__text-field__label hig__text-field__label--visible\\">dropdown label</label>
+        </div>
+        <p class=\\"hig__text-field__instructions\\">instructions for dropdown</p>
+        <!--INSTRUCTIONS-->
+        <!--REQUIRED-NOTICE-->
+    </div>
+</div><!--FIELD-->
+</div>"
+`;
+
+exports[`<DropdownAdapter> renders a dropdown with initial props 1`] = `
+"<div class=\\"hig__dropdown\\">
+    <div class=\\"hig__text-field\\">
+    <!--ICON-SPACER-->
+
+    <div class=\\"hig__text-field__content\\">
+        <div class=\\"hig__text-field__input-wrapper\\">
+            <label class=\\"hig__text-field__icon\\" for=\\"text-field-5678\\"></label>
+            <button class=\\"hig__text-field__extra hig__text-field__password-reveal-button\\"></button>
+            <button class=\\"hig__text-field__extra hig__text-field__password-hide-button\\"></button>
+            <span class=\\"hig__text-field__extra hig__text-field__extra--dropdown-caret hig__text-field__extra--show\\"><svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret\\"><title>hig-web-light/basic/form-element/caret</title><polyline transform=\\"rotate(45 9.828 3)\\" points=\\"8 2 8 8 2 8\\" stroke=\\"#2E4258\\" stroke-width=\\"1.15\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"></polyline></svg></span><!--EXTRA-->
+            <div class=\\"hig__dropdown__menu-wrapper\\"><div class=\\"hig__dropdown__menu\\"><div class=\\"hig__dropdown__option \\" data-value=\\"option value\\">
+    <span class=\\"hig__option__label\\">option label</span>
+    <div class=\\"hig__dropdown__option__checkmark\\"><div class=\\"hig__icon\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"checkmark-blue-dark\\"><polygon fill=\\"#087AAD\\" points=\\"10.1802137 16 6 12.1129 7.29586623 10.8214 10.1569902 13.4647 16.6790525 7 18 8.2681\\" fill-rule=\\"evenodd\\"></polygon></svg></div></div>
+</div></div></div><!--SLOT-->
+            <input name=\\"\\" id=\\"text-field-5678\\" class=\\"hig__text-field__input hig__text-field__input--no-value\\" placeholder=\\"dropdown placeholder\\" value=\\"\\" readonly=\\"true\\">
+            <label for=\\"text-field-5678\\" class=\\"hig__text-field__label hig__text-field__label--visible\\">dropdown label</label>
+        </div>
+        <p class=\\"hig__text-field__instructions\\">instructions for dropdown</p>
+        <!--INSTRUCTIONS-->
+        <!--REQUIRED-NOTICE-->
+    </div>
+</div><!--FIELD-->
+</div>"
+`;
+
+exports[`<DropdownAdapter> renders a dropdown with updated props 1`] = `
+"<div class=\\"hig__dropdown\\">
+    <div class=\\"hig__text-field\\">
+    <!--ICON-SPACER-->
+
+    <div class=\\"hig__text-field__content\\">
+        <div class=\\"hig__text-field__input-wrapper\\">
+            <label class=\\"hig__text-field__icon\\" for=\\"text-field-5678\\"></label>
+            <button class=\\"hig__text-field__extra hig__text-field__password-reveal-button\\"></button>
+            <button class=\\"hig__text-field__extra hig__text-field__password-hide-button\\"></button>
+            <span class=\\"hig__text-field__extra hig__text-field__extra--dropdown-caret hig__text-field__extra--show\\"><svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret\\"><title>hig-web-light/basic/form-element/caret</title><polyline transform=\\"rotate(45 9.828 3)\\" points=\\"8 2 8 8 2 8\\" stroke=\\"#2E4258\\" stroke-width=\\"1.15\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"></polyline></svg></span><!--EXTRA-->
+            <div class=\\"hig__dropdown__menu-wrapper\\"><div class=\\"hig__dropdown__menu\\"><div class=\\"hig__dropdown__option hig__dropdown__option--selected\\" data-value=\\"updated option value\\">
+    <span class=\\"hig__option__label\\">updated option label</span>
+    <div class=\\"hig__dropdown__option__checkmark\\"><div class=\\"hig__icon\\"><svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"checkmark-blue-dark\\"><polygon fill=\\"#087AAD\\" points=\\"10.1802137 16 6 12.1129 7.29586623 10.8214 10.1569902 13.4647 16.6790525 7 18 8.2681\\" fill-rule=\\"evenodd\\"></polygon></svg></div></div>
+</div></div></div><!--SLOT-->
+            <input name=\\"\\" id=\\"text-field-5678\\" class=\\"hig__text-field__input\\" placeholder=\\"updated dropdown placeholder\\" value=\\"updated option label\\" readonly=\\"true\\">
+            <label for=\\"text-field-5678\\" class=\\"hig__text-field__label hig__text-field__label--visible\\">updated dropdown label</label>
+        </div>
+        <p class=\\"hig__text-field__instructions\\">updated instructions for dropdown</p>
+        <!--INSTRUCTIONS-->
+        <!--REQUIRED-NOTICE-->
+    </div>
+</div><!--FIELD-->
+</div>"
+`;

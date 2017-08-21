@@ -23,9 +23,9 @@
     font-weight: 500;
     line-height: 14px;
 
-    transition-property: top, font-size, line-height;
-    transition-duration: 0.1s, 0.1s, 0.1s;
-    transition-delay: 0.1s;
+    transition-property: top, left, font-size, line-height;
+    transition-duration: 0.1s, 0.1s, 0.1s, 0.1s;
+    transition-delay: 0.1s, 0.1s, 0.1s, 0.1s;
 
     &.hig__text-area__label--visible {
         display: inherit;

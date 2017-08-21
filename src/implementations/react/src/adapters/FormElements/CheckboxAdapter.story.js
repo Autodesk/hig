@@ -19,7 +19,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { text, boolean } from '@storybook/addon-knobs';
 
-import { default as Checkbox } from './CheckboxAdapter';
+import { default as Checkbox } from '';
 
 storiesOf('Checkbox', module)
   .addWithInfo('Basic checkbox', '', () => {
@@ -45,17 +45,17 @@ storiesOf('Checkbox', module)
           value="fanciness"
           label="Fancy!"
           checked={false}
-          required={boolean('Required', true)}
+          required={text('Required text', "This field is required.")}
           disabled={false}
         />
         <Checkbox
-          name="checked"
+          name="checkbox-checked"
           value="hello"
           label="checked"
           checked={boolean('Checked', true)}
         />
         <Checkbox
-          name="disabled"
+          name="checkbox-disabled"
           value="hello"
           label="disabled"
           disabled={boolean('Disabled', true)}

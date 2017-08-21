@@ -14,3 +14,14 @@ html, body, #root {
 section {
   margin-bottom: 40px;
 }
+
+.hig__spacer {
+  color: #000000;
+  background-color: #5e89c2;
+  border: 1px solid #000000;
+}
+
+p.spacer_para {
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+}

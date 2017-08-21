@@ -51,7 +51,7 @@ r = {
 }
 
 if(process.env.NODE_ENV != "production"){
-    r['devtool'] = "eval-source-map";
+    r['devtool'] = "source-map";
 }
 
 module.exports = r;

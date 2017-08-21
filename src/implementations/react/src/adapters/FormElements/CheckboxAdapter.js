@@ -26,14 +26,31 @@ export class CheckboxAdapter extends HIGElement {
   }
 
   componentDidMount() {
-    this.commitUpdate([
-      'required',
-      this.props.required,
-      'disabled',
-      this.props.disabled,
-      'checked',
-      this.props.disabled
-    ]);
+    var commitProps = [];
+    if (this.initialProps.disabled) {
+      commitProps.push('disabled',this.initialProps.disabled);
+    }
+    if (this.initialProps.required) {
+      commitProps.push('required',this.initialProps.required)
+    }
+    if (this.initialProps.checked) {
+      commitProps.push('checked',this.initialProps.checked)
+    }
+    if (this.initialProps.onChange) {
+      commitProps.push('onChange',this.initialProps.onChange)
+    }
+    if (this.initialProps.onFocus) {
+      commitProps.push('onFocus',this.initialProps.onFocus)
+    }
+    if (this.initialProps.onHover) {
+      commitProps.push('onHover',this.initialProps.onHover)
+    }
+    this.commitUpdate(commitProps);
+
+  }
+
+  forceReset(props) {
+    this.commitUpdate(['checked', props.checked]);
   }
 
   commitUpdate(updatePayload, oldProps, newProps) {
@@ -117,23 +134,23 @@ CheckboxAdapterComponent.propTypes = {
 
 CheckboxAdapterComponent.__docgenInfo = {
   props: {
-    name: {
-      description: 'sets the name attribute of the checkbox input'
-    },
-    value: {
-      description: 'sets the value attribute of the checkbox input'
-    },
     checked: {
       description: 'boolean - sets whether the checkbox is checked'
     },
     disabled: {
       description: 'boolean - sets whether the checkbox is disabled'
     },
+    label: {
+      description: 'sets the label text for the checkbox'
+    },
+    name: {
+      description: 'sets the name attribute of the checkbox input'
+    },
     required: {
       description: 'string - sets the whether the checkbox is required and displays the provided message'
     },
-    label: {
-      description: 'sets the label text for the checkbox'
+    value: {
+      description: 'sets the value attribute of the checkbox input'
     },
     onHover: {
       description: 'triggers when you hover over the button'
