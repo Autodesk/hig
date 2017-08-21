@@ -235,7 +235,7 @@
 
     var TableHead = new DefaultTable.partials.TableHead();
     DefaultTable.addTableHead(TableHead);
-    
+
     var TitleHeadCell1 = new TableHead.partials.TextHeadCell(
       { "width": "1fr", "alignment": "left", "text": "Title" }
     );
@@ -375,7 +375,7 @@
       DefaultTable1.addTableHead(TableHead);
 
       var EmptyCell1 = new TableHead.partials.TextHeadCell(
-        { "alignment": "left", "text": "", "width": "1fr" });
+        { "width": "104px" });
       TableHead.addCell(EmptyCell1);
 
 
@@ -411,9 +411,6 @@
 
       var TableRowDefault1 = new DefaultTable1.partials.TableRow();
       DefaultTable.addTableRow(TableRowDefault1);
-
-      // var IconCellDefault1 = new TableRowDefault1.partials.IconCell({ "icon": "hamburger" });
-      // TableRowDefault1.addCell(IconCellDefault1);
 
       var TextCellDefault1 = new TableRowDefault1.partials.TextCell({
         "text": 'Window Punch List', "alignment": "left", 
@@ -451,7 +448,10 @@
        var SlotCell2 = new TableRowDefault2.partials.SlotCell();
       TableRowDefault2.addCell(SlotCell2);
       var NewSlotEl2 = document.createElement('div');
-      NewSlotEl2.innerHTML = `<img src="./images/table-image.png" style="width: 104px; height: 58px; margin-left: 20px;">`;
+      NewSlotEl2.style.display = 'flex';
+      NewSlotEl2.style.alignItems = 'center';
+      NewSlotEl2.style.justifyContent = 'center';
+      NewSlotEl2.innerHTML = `<img src="./images/table-image.png" style="width: 104px; height: 58px;">`;
       SlotCell2.addSlot(NewSlotEl2);
 
       var TextCellDefault2 = new TableRowDefault2.partials.TextCell({
@@ -481,7 +481,7 @@
         "text": 'Alexander Mo', alignment: "left"
       });
       TableRowDefault2.addCell(AssigneeTextCellDefault2);
-    
+
   </script>
 </body>
 
