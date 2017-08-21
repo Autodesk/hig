@@ -278,11 +278,10 @@ class Playground extends React.Component {
             <ModalSection />
             <DropdownSection />
             <TypographySection />
-
-            <Table>
+            <Table density="standard">
               <TableHead>
-                <TextHeadCell text="test" />
-                <SlotHeadCell slot="test1" />
+                <TextHeadCell text="test"/>
+                <SlotHeadCell>{slot}</SlotHeadCell>
               </TableHead>
             </Table>
           </Slot>

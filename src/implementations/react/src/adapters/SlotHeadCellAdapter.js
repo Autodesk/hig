@@ -9,6 +9,12 @@ export class SlotHeadCellAdapter extends HIGElement {
     this.props = { ...initialProps };
   }
 
+  componentDidMount() {
+    if(this.props.slot) {
+      this.commitUpdate(['slot', this.props.slot]);
+    }
+  }
+
   commitUpdate(updatePayload, oldProps, newProp) {
     for (let i = 0; i < updatePayload.length; i += 2) {
       const propKey = updatePayload[i];
@@ -31,14 +37,14 @@ export class SlotHeadCellAdapter extends HIGElement {
 const SlotHeadCellComponent = createComponent(SlotHeadCellAdapter);
 
 SlotHeadCellComponent.propTypes = {
-  slot: PropTypes.string,
+  children: PropTypes.node,
   width: PropTypes.string
 };
 
 SlotHeadCellComponent.__docgenInfo = {
   props: {
-    slot: {
-      description: "sets {String} in cell"
+    children: {
+      description: "slot in cell"
     },
     width: {
       description: "sets {String} width of the cell"

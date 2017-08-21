@@ -84,6 +84,7 @@ export class TableAdapter extends HIGElement {
 const TableComponent = createComponent(TableAdapter);
 
 TableComponent.propTypes = {
+  density: PropTypes.string,
 	children: HIGChildValidator([
 		TableHeadComponent
 	])

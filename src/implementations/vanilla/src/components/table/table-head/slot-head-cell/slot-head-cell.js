@@ -37,8 +37,7 @@ SlotHeadCell._interface =
     "SlotHeadCell"
   ];
 SlotHeadCell._defaults = {
-  slot: "",
-  width: ""
+  width: "1fr"
 };
 
 module.exports = SlotHeadCell;
