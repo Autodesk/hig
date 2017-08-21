@@ -15,7 +15,7 @@
 
  */
 import React from 'react';
-import { Button, GlobalNav, SideNav } from '../react-hig';
+import { Button, GlobalNav, SideNav, Table } from '../react-hig';
 
 import 'hig-vanilla/dist/hig.css';
 import './index.css';
@@ -38,6 +38,7 @@ import SpacerSection from './sections/SpacerSection';
 import ModalSection from './sections/ModalSection';
 import TypographySection from './sections/TypographySection';
 
+
 const TopNav = GlobalNav.TopNav;
 const Profile = GlobalNav.TopNav.Profile;
 const Shortcut = GlobalNav.TopNav.Shortcut;
@@ -49,6 +50,9 @@ const TopNavSearch = GlobalNav.TopNav.Search;
 const SubNav = GlobalNav.SubNav;
 const Tabs = GlobalNav.SubNav.Tabs;
 const Slot = GlobalNav.Slot;
+const TableHead = Table.TableHead;
+const TextHeadCell = Table.TableHead.TextHeadCell;
+const SlotHeadCell = Table.TableHead.SlotHeadCell;
 
 const topNavFixtures = new TopNavFixtures();
 
@@ -62,7 +66,8 @@ class Playground extends React.Component {
       accountSwitcherIsOpen: false,
       activeAccount: topNavFixtures.accountList()[0],
       activeProject: topNavFixtures.projectList()[0],
-      activeLabel: `${topNavFixtures.accountList()[0].label} / ${topNavFixtures.projectList()[0].label}`,
+      activeLabel: `${topNavFixtures.accountList()[0]
+        .label} / ${topNavFixtures.projectList()[0].label}`,
       activeImage: topNavFixtures.projectList()[0].image,
       activeType: 'project',
       sideNavOpen: true
@@ -247,9 +252,9 @@ class Playground extends React.Component {
               onChange={(newTabId, oldTabId) =>
                 console.log(`New Tab: ${newTabId}`)}
             >
-              {this.state.tabs.map(tab => (
+              {this.state.tabs.map(tab =>
                 <Tabs.Tab key={tab.id} id={tab.id} label={tab.label} />
-              ))}
+              )}
             </Tabs>
           </SubNav>
 
@@ -273,6 +278,13 @@ class Playground extends React.Component {
             <ModalSection />
             <DropdownSection />
             <TypographySection />
+
+            <Table>
+              <TableHead>
+                <TextHeadCell text="test" />
+                <SlotHeadCell slot="test1" />
+              </TableHead>
+            </Table>
           </Slot>
         </GlobalNav>
       </div>

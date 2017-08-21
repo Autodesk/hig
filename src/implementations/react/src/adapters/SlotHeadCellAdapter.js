@@ -45,3 +45,5 @@ SlotHeadCellComponent.__docgenInfo = {
     }
   }
 };
+
+export default SlotHeadCellComponent;

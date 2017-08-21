@@ -35,17 +35,23 @@ export class TextHeadCellAdapter extends HIGElement {
 const TextHeadCellComponent = createComponent(TextHeadCellAdapter);
 
 TextHeadCellComponent.propTypes = {
-  slot: PropTypes.string,
-  width: PropTypes.string
+  text: PropTypes.string,
+  width: PropTypes.string,
+  alignment: PropTypes.string
 };
 
 TextHeadCellComponent.__docgenInfo = {
   props: {
-    slot: {
-      description: "sets {String} in cell"
+    text: {
+      description: "sets {String} text in cell"
     },
     width: {
       description: "sets {String} width of the cell"
+    },
+    alignment: {
+      description: "sets {String} text-position of cell"
     }
   }
 };
+
+export default TextHeadCellComponent;
