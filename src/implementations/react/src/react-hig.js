@@ -1,6 +1,7 @@
 export { default as Button } from './adapters/ButtonAdapter';
 export { default as Checkbox } from './elements/components/FormElements/Checkbox';
 export { default as Dropdown } from "./adapters/FormElements/DropdownAdapter";
+export { default as FilterableSideNav } from './elements/components/GlobalNav/FilterableSideNav';
 export { default as GlobalNav } from './adapters/GlobalNav/GlobalNavAdapter';
 export { default as IconButton } from './elements/basics/IconButton';
 export { default as Modal } from './elements/components/Modal';

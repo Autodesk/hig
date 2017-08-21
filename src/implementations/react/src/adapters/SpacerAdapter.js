@@ -13,7 +13,7 @@ class SpacerAdapter extends HIGElement {
 
   componentDidMount() {
     if (this.slot) {
-      this.hig.addSlot(this.slot);
+      this.addSlot(this.slot);
     }
   }
 

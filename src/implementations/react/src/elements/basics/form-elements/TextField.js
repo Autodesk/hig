@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import TextFieldAdapter
   from '../../../adapters/FormElements/TextFieldAdapter.js';
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types';
 
 class TextField extends Component {
   constructor(props) {

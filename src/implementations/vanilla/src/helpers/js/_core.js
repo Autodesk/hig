@@ -184,8 +184,15 @@ class Core {
      */
 
     unmount(){
-        if (!this.el) { return }
-        this.el.parentNode.removeChild(this.el); // use removeChild for IE11 support
+        let el;
+
+        try {
+            el = this.el;
+        } catch (error) {
+            return
+        }
+
+        el.parentNode.removeChild(this.el); // use removeChild for IE11 support
     }
 
     /**
