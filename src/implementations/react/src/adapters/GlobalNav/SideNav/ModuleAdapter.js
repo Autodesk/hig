@@ -9,8 +9,8 @@ import SubmoduleAdapterComponent, {
 import ModuleCollapseAdapterComponent, {
   ModuleCollapseAdapter
 } from './ModuleCollapseAdapter';
-import Submodule from '../../../elements/components/GlobalNav/FilterableSideNav/Submodule';
-import ModuleCollapse from '../../../elements/components/GlobalNav/FilterableSideNav/ModuleCollapse';
+import Submodule from '../../../elements/components/GlobalNav/SideNav/Submodule';
+import ModuleCollapse from '../../../elements/components/GlobalNav/SideNav/ModuleCollapse';
 
 export class ModuleAdapter extends HIGElement {
   constructor(HIGConstructor, initialProps) {

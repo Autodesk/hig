@@ -15,7 +15,7 @@
 
  */
 import React from 'react';
-import { Button, GlobalNav, FilterableSideNav } from '../react-hig';
+import { Button, GlobalNav, SideNav } from '../react-hig';
 
 import 'hig-vanilla/dist/hig.css';
 import './index.css';
@@ -172,7 +172,7 @@ class Playground extends React.Component {
     return (
       <div>
         <GlobalNav sideNavOpen={this.state.sideNavOpen}>
-          <FilterableSideNav
+          <SideNav
             superHeaderLabel="Global Construction"
             headerLabel="Oakwood Medical Center"
             onModuleChange={id => console.log(`Module selected: ${id}`)}

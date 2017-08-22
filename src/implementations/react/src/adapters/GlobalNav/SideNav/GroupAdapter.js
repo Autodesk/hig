@@ -5,7 +5,7 @@ import HIGChildValidator from '../../../elements/HIGChildValidator';
 import ModuleComponent, {
   ModuleAdapter
 } from '../../../adapters/GlobalNav/SideNav/ModuleAdapter';
-import Module from '../../../elements/components/GlobalNav/FilterableSideNav/Module';
+import Module from '../../../elements/components/GlobalNav/SideNav/Module';
 
 export class GroupAdapter extends HIGElement {
   constructor(HIGConstructor, initialProps) {

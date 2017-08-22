@@ -4,7 +4,7 @@ import * as PropTypes from 'prop-types';
 import { filter, group, mergeState, getModuleState } from './model';
 
 export default function withState(WrappedComponent) {
-  class FilterableNavWithState extends Component {
+  class SideNavWithState extends Component {
     static propTypes = {
       links: PropTypes.arrayOf(PropTypes.object),
       query: PropTypes.string,
@@ -103,5 +103,5 @@ export default function withState(WrappedComponent) {
     }
   }
 
-  return FilterableNavWithState;
+  return SideNavWithState;
 }

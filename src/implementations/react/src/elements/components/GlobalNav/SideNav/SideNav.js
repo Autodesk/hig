@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import * as PropTypes from 'prop-types';
-import SideNav from '../../../../adapters/GlobalNav/SideNav/SideNavAdapter';
+import SideNavAdapter from '../../../../adapters/GlobalNav/SideNav/SideNavAdapter';
 import Submodule from './Submodule';
 import Group from '../../../../adapters/GlobalNav/SideNav/GroupAdapter';
 import Module from './Module';
@@ -9,7 +9,7 @@ import Link from '../../../../adapters/GlobalNav/SideNav/LinkAdapter';
 import Search from '../../../../adapters/GlobalNav/SideNav/SearchAdapter';
 import WithState from './WithState';
 
-class FilterableSideNav extends Component {
+class SideNav extends Component {
   static propTypes = {
     copyright: PropTypes.string,
     groups: PropTypes.arrayOf(
@@ -61,7 +61,7 @@ class FilterableSideNav extends Component {
     };
 
     return (
-      <SideNav {...sideNavProps}>
+      <SideNavAdapter {...sideNavProps}>
         {this.props.groups.map((group, i) => (
           <Group key={group.modules[0].id}>
             {group.modules.map(module => {
@@ -94,9 +94,9 @@ class FilterableSideNav extends Component {
         ))}
         {this.props.links.map(link => <Link {...link} key={link.title} />)}
         <Search onInput={this.props.setQuery} />
-      </SideNav>
+      </SideNavAdapter>
     );
   }
 }
 
-export default WithState(FilterableSideNav);
+export default WithState(SideNav);
