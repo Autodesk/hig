@@ -7,8 +7,6 @@ import React from 'react';
 import GlobalNav from '../../../adapters/GlobalNav/GlobalNavAdapter';
 import SideNav from './SideNavAdapter';
 import Search from './SearchAdapter';
-import Section from './SectionAdapter';
-import SectionList from '../../../elements/components/GlobalNav/SectionList';
 import Group from './GroupAdapter';
 import Module from './ModuleAdapter';
 import Submodule from './SubmoduleAdapter';

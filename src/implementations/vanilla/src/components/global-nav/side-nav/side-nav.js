@@ -56,7 +56,7 @@ class SideNav extends Core {
   }
 
   setHeaderLink(link) {
-    this._findDOMEl('.hig__global-nav__sidenav__header-link', this.el).setAttr('href', link);
+    this._findDOMEl('.hig__global-nav__sidenav__header-link', this.el).setAttribute('href', link);
   }
 
   setSuperHeaderLabel(label) {
@@ -64,14 +64,16 @@ class SideNav extends Core {
   }
 
   setSuperHeaderLink(link) {
-    this._findDOMEl('.hig__global-nav__sidenav__super-header-link', this.el).setAttr('href', link);
+    this._findDOMEl('.hig__global-nav__sidenav__super-header-link', this.el).setAttribute('href', link);
   }
 }
 
 SideNav._interface = Interface.components.GlobalNav.partials.SideNav;
 SideNav._defaults = {
   headerLabel: null,
+  headerLink: null,
   superHeaderLabel: null,
+  superHeaderLink: null,
   copyright: `${String.fromCharCode(169)} 2017 Autodesk, Inc.`
 };
 SideNav._partials = {

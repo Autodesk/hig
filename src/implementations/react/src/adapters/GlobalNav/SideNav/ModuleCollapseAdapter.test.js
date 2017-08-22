@@ -30,21 +30,15 @@ describe('<ModuleCollapseAdapter>', () => {
     const higContainer = document.createElement('div');
     const globalNav = new HIG.GlobalNav();
     const sideNav = new globalNav.partials.SideNav();
-    const section = new sideNav.partials.Section({
-      label: 'Project',
-      title: 'Runway'
-    });
-    const group = new section.partials.Group();
+    const group = new sideNav.partials.Group();
     const module = new group.partials.Module({ icon: 'assets' });
     const collapse = new module.partials.Collapse();
 
     globalNav.mount(higContainer);
     globalNav.addSideNav(sideNav);
-    sideNav.addSection(section);
-    section.addGroup(group);
+    sideNav.addGroup(group);
     group.addModule(module);
     module.addCollapse(collapse);
-    section.addCollapse(collapse);
 
     return { higComponent: collapse, higContainer };
   }

@@ -1165,6 +1165,13 @@
           }
         },
         "SideNav": {
+          "defaults": {
+            "copyright": "{String} Copyright notice at bottom of side nav",
+            "headerLabel": "{String} header label",
+            "superHeaderLabel": "{String} super header label",
+            "headerLink": "{String} href of the header",
+            "superHeaderLink": "{String} href of the super header"
+          },
           "methods": {
             "addGroup": {
               "desc": "Pass in an instance of a SideNav Section Group partial",
@@ -1202,16 +1209,16 @@
               "params": ["{String} Copyright notice"]
             },
             "setHeaderLabel": {
-              "desc": "sets the label",
-              "params": ["{String} label - new label"]
+              "desc": "sets the header label",
+              "params": ["{String} label - header label"]
             },
             "setHeaderLink": {
               "desc": "sets the href of the header",
               "params": ["{String} link - href for the header"]
             },
             "setSuperHeaderLabel": {
-              "desc": "sets the name",
-              "params": ["{String} name - new name"]
+              "desc": "sets the super header label",
+              "params": ["{String} name - new super header label"]
             },
             "setSuperHeaderLink": {
               "desc": "sets the href of the super header",
@@ -1424,9 +1431,6 @@
                 "link": "{String} link"
               }
             }
-          },
-          "defaults": {
-            "copyright": "{String} Copyright notice at bottom of side nav"
           }
         }
       }

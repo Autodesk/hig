@@ -71,6 +71,10 @@ export class SideNavAdapter extends HIGElement {
       const propValue = updatePayload[i + 1];
 
       switch (propKey) {
+        case 'copyright': {
+          this.hig.setCopyright(propValue);
+          break;
+        }
         case 'headerLabel': {
           this.hig.setHeaderLabel(propValue);
           break;

@@ -159,7 +159,7 @@ describe('<Group>', () => {
 
       expect(console.error).toBeCalledWith(
         expect.stringMatching(
-          /'div' is not a valid child of GroupAdapter. Children should be of type 'Module'/
+          /'div' is not a valid child of GroupAdapter. Children should be of type 'ModuleAdapter/
         )
       );
     });
@@ -175,7 +175,7 @@ describe('<Group>', () => {
 
       expect(console.error).toBeCalledWith(
         expect.stringMatching(
-          /'Hello world!' is not a valid child of GroupAdapter. Children should be of type 'Module'/
+          /'Hello world!' is not a valid child of GroupAdapter. Children should be of type 'ModuleAdapter/
         )
       );
     });
