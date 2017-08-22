@@ -115,39 +115,37 @@
   
   @if $breakpoint == "phone" {
     @include breakpoint("phone"){
-      .hig__grid--phone{
-        @include quarters("", 8px);
-      }
-      @include quarters("--phone", 8px);
+      @include quarters("", 8px);
     }
+    @include quarters("--phone", 8px);
   }
   @else if $breakpoint == "tablet" {
     @include breakpoint("tablet"){
       @include quarters("", 16px);
       @include eighths("", 16px);
-      @include quarters("--tablet", 16px);
-      @include eighths("--tablet", 16px);
     }
+    @include quarters("--tablet", 16px);
+    @include eighths("--tablet", 16px);
   }
   @else if $breakpoint == "laptop" {
     @include breakpoint("laptop"){
       @include quarters("", 16px);
       @include eighths("", 16px);
       @include twelfths("", 16px);
-      @include quarters("--laptop", 16px);
-      @include eighths("--laptop", 16px);
-      @include twelfths("--laptop", 16px);
     }
+    @include quarters("--laptop", 16px);
+    @include eighths("--laptop", 16px);
+    @include twelfths("--laptop", 16px);
   }
   @else if $breakpoint == "desktop" {
     @include breakpoint("desktop"){
       @include quarters("", 24px);
       @include eighths("", 24px);
       @include twelfths("", 24px);
-      @include quarters("--desktop", 24px);
-      @include eighths("--desktop", 24px);
-      @include twelfths("--desktop", 24px);
     }
+    @include quarters("--desktop", 24px);
+    @include eighths("--desktop", 24px);
+    @include twelfths("--desktop", 24px);
   }
   @else{
     @include buildAbstract("", $gutter, $margin);
