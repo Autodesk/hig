@@ -41,13 +41,13 @@ const SlotHeadCellComponent = createComponent(SlotHeadCellAdapter);
 
 SlotHeadCellComponent.propTypes = {
   children: PropTypes.node,
-  width: PropTypes.string
+  width: PropTypes.string,
 };
 
 SlotHeadCellComponent.__docgenInfo = {
   props: {
     children: {
-      description: "slot in cell"
+      description: "content for slot cell"
     },
     width: {
       description: "sets {String} width of the cell"

@@ -15,7 +15,7 @@
 
  */
 import React from 'react';
-import { Button, GlobalNav, SideNav, Table } from '../react-hig';
+import { Button, GlobalNav, TextField, SideNav, Table } from '../react-hig';
 
 import 'hig-vanilla/dist/hig.css';
 import './index.css';
@@ -37,7 +37,7 @@ import PasswordFieldSection from './sections/PasswordFieldSection';
 import SpacerSection from './sections/SpacerSection';
 import ModalSection from './sections/ModalSection';
 import TypographySection from './sections/TypographySection';
-
+import TableSection from "./sections/TableSection";
 
 const TopNav = GlobalNav.TopNav;
 const Profile = GlobalNav.TopNav.Profile;
@@ -50,13 +50,7 @@ const TopNavSearch = GlobalNav.TopNav.Search;
 const SubNav = GlobalNav.SubNav;
 const Tabs = GlobalNav.SubNav.Tabs;
 const Slot = GlobalNav.Slot;
-const TableHead = Table.TableHead;
-const TableRow = Table.TableRow;
-const TextHeadCell = Table.TableHead.TextHeadCell;
-const SlotHeadCell = Table.TableHead.SlotHeadCell;
-const TextCell = Table.TableRow.TextCell;
-const IconCell = Table.TableRow.IconCell;
-const SlotCell = Table.TableRow.SlotCell;
+
 
 const topNavFixtures = new TopNavFixtures();
 
@@ -230,7 +224,6 @@ class Playground extends React.Component {
                   })}
                 />
               ))}
-
             </ProjectAccountSwitcher>
 
             <Shortcut icon="gear" title="Gears for Fears" link="/gears" />
@@ -269,16 +262,7 @@ class Playground extends React.Component {
             <ModalSection />
             <DropdownSection />
             <TypographySection />
-            <Table density="standard">
-              <TableHead>
-                <TextHeadCell text="test" />
-                <TextHeadCell text="test1" />
-              </TableHead>
-              <TableRow>
-                <TextCell text="text cell test"/>
-                <IconCell icon="gear" />
-              </TableRow>  
-            </Table>
+            <TableSection/>
           </Slot>
         </GlobalNav>
       </div>

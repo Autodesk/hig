@@ -9,22 +9,20 @@ export class SlotCellAdapter extends HIGElement {
     this.props = { ...initialProps };
   }
 
+  componentDidMount() {
+    if (this.props.slot) {
+      this.commitUpdate(["slot", this.props.slot]);
+    }
+  }
+
   commitUpdate(updatePayload, oldProps, newProp) {
     for (let i = 0; i < updatePayload.length; i += 2) {
       const propKey = updatePayload[i];
       const propValue = updatePayload[i + 1];
 
       switch (propKey) {
-        case "text": {
-          this.hig.setText(propValue);
-          break;
-        }
-        case "alignment": {
-          this.hig.setAlignment(propValue);
-          break;
-        }
-        case "detail": {
-          this.hig.setDetail(propValue);
+        case "slot": {
+          this.hig.addSlot(propValue);
           break;
         }
         default: {
@@ -38,13 +36,13 @@ export class SlotCellAdapter extends HIGElement {
 const SlotCellComponent = createComponent(SlotCellAdapter);
 
 SlotCellComponent.propTypes = {
-  slot: PropTypes.node,
+  children: PropTypes.node
 };
 
 SlotCellComponent.__docgenInfo = {
   props: {
-    slot: {
-      description: "sets node into cell"
+    children: {
+      description: "content for slot cell"
     }
   }
 };

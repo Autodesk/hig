@@ -14,4 +14,6 @@ export { default as TextArea } from './adapters/FormElements/TextAreaAdapter';
 export { default as TextField } from './adapters/FormElements/TextFieldAdapter';
 export * from './elements/components/Typography';
 export { default as Table } from  './adapters/TableAdapter'
+export { default as SlotHeadCell } from './elements/components/SlotHeadCell'
+export { default as SlotCell } from './elements/components/SlotCell'
 

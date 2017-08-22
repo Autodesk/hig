@@ -25,7 +25,7 @@ export class TableRowAdapter extends HIGElement {
           this.hig.addCell(instance, beforeInstance);
         }
       },
-      SlotHeadCellAdapter: {
+      SlotCellAdapter: {
         type: SlotCellAdapter,
         HIGConstructor: this.hig.partials.SlotCell,
         onAdd: (instance, beforeInstance) => {
