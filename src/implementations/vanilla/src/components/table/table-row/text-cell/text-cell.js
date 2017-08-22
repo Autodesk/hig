@@ -43,3 +43,4 @@ TextCell._defaults = {
 };
 
 module.exports = TextCell;
+  

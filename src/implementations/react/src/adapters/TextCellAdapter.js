@@ -9,6 +9,12 @@ export class TextCellAdapter extends HIGElement {
     this.props = { ...initialProps };
   }
 
+  componentDidMount(){
+    if (this.props.detail){
+      this.commitUpdate(["detail", this.props.detail])
+    }
+  }
+
   commitUpdate(updatePayload, oldProps, newProp) {
     for (let i = 0; i < updatePayload.length; i += 2) {
       const propKey = updatePayload[i];

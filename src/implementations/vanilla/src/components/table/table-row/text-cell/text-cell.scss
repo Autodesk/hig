@@ -7,6 +7,8 @@
   overflow: hidden;
   text-overflow: ellipsis;
 
+
+
   .hig__table--standard & {
     height: 16px;
     line-height: 14px;
@@ -20,5 +22,15 @@
   .hig__table--large & {
     height: 32px;
     line-height: 16px;
+  }
+}
+
+.hig__table__text-cell-detail {
+  color: color(hig-slate-30);
+  display: none;
+  font-size: 12px;
+  
+  .hig__table--large & {
+    display: block;
   }
 }
