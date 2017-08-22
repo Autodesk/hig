@@ -1,26 +1,166 @@
 @import '~helpers/css/mixins/base.scss';
+@import '~basics/responsive/responsive.scss';
 
-@mixin buildGrid($gutter, $total_columns){
-  $gutter_with_unit: $gutter + 0px; // adding 0px converts number to px in sass
-  
-  // Base parent for our grid
-  .hig__grid{
-    @include clearfix;
+// Base parent for our grid
+.hig__grid{
+  @include clearfix;
+
+  &__item{
+    float: left;
+    @include vendor-prefix('box-sizing', 'border-box');
+  }
+}
+
+@mixin quarters($suffix, $gutter) {
+  // Whole
+  .hig__grid__item--one-whole#{$suffix}{ 
+    width: calc(100% - #{$gutter}); 
+  }
+
+  // Halves
+  .hig__grid__item--one-half#{$suffix}{ 
+    width: calc(50% - #{$gutter}); 
+  }
+
+  // Quarters
+  .hig__grid__item--one-quarter#{$suffix}{ 
+    width: calc(25% - #{$gutter}); 
+  }
+  .hig__grid__item--two-quarters#{$suffix}{ 
+    width: calc(50% - #{$gutter});
+  }
+  .hig__grid__item--three-quarters#{$suffix}{ 
+    width: calc(75% - #{$gutter}); 
+  }
+}
+
+@mixin eighths($suffix, $gutter) {
+  .hig__grid__item--one-eighth#{$suffix} {
+    width: calc(12.5% - #{$gutter}); 
+  }
+  .hig__grid__item--two-eighths#{$suffix} {
+    width: calc(25% - #{$gutter});
+  }
+  .hig__grid__item--three-eighths#{$suffix} {
+    width: calc(37.5% - #{$gutter}); 
+  }
+  .hig__grid__item--four-eighths#{$suffix} {
+    width: calc(50% - #{$gutter});
+  }
+  .hig__grid__item--five-eighths#{$suffix} {
+    width: calc(62.5% - #{$gutter}); 
+  }
+  .hig__grid__item--six-eighths#{$suffix} {
+    width: calc(75% - #{$gutter}); 
+  }
+  .hig__grid__item--seven-eighths#{$suffix} {
+    width: calc(87.5% - #{$gutter}); 
+  }
+}
+@mixin twelfths($suffix, $gutter) {
+  .hig__grid__item--one-twelfth#{$suffix}{ 
+    width: calc(8.33333% - #{$gutter}); 
+  }
+  .hig__grid__item--two-twelfths#{$suffix}{ 
+    width: calc(16.66666% - #{$gutter}); 
+  }
+  .hig__grid__item--three-twelfths#{$suffix}{ 
+    width: calc(25% - #{$gutter});
+  }
+  .hig__grid__item--four-twelfths#{$suffix}{ 
+    width: calc(33.33333% - #{$gutter}); 
+  }
+  .hig__grid__item--five-twelfths#{$suffix}{ 
+    width: calc(41.66666% - #{$gutter}); 
+  }
+  .hig__grid__item--six-twelfths#{$suffix}{ 
+    width: calc(50% - #{$gutter});
+  }
+  .hig__grid__item--seven-twelfths#{$suffix}{ 
+    width: calc(58.333333% - #{$gutter}); 
+  }
+  .hig__grid__item--eight-twelfths#{$suffix}{ 
+    width: calc(66.66666% - #{$gutter}); 
+  }
+  .hig__grid__item--nine-twelfths#{$suffix}{ 
+    width: calc(75% - #{$gutter}); 
+  }
+  .hig__grid__item--ten-twelfths#{$suffix}{ 
+    width: calc(83.33333% - #{$gutter}); 
+  }
+  .hig__grid__item--eleven-twelfths#{$suffix}{ 
+    width: calc(91.66666% - #{$gutter}); 
+  }
+}
+
+@mixin buildAbstract($suffix, $gutter, $margin){
+  .hig__grid#{$suffix}{
+    $margin_rest: $margin - ($gutter/2);    
+    width: calc(100% - #{$margin_rest * 2});
+    padding: 0 $margin_rest;
 
     &__item{
-      float: left;
-      margin-left: $gutter_with_unit/2;
-      margin-right: $gutter_with_unit/2;
-      @include vendor-prefix('box-sizing', 'border-box');
-
-      // Loop over columns and create classes
-      @for $i from 1 through $total_columns {
-        &--#{$i}of#{$total_columns} {
-          width: calc(100% * #{$i} / #{$total_columns} - #{$gutter_with_unit});
-        }
-      }
+      margin: 0 ($gutter / 2);
     }
   }
 }
 
-@include buildGrid(24, 12);
+@mixin buildGrid($breakpoint, $total_columns, $gutter, $margin){
+  @if $breakpoint != "" {
+    @include breakpoint($breakpoint){
+      @include buildAbstract("", $gutter, $margin);
+    }
+    @include buildAbstract("--#{$breakpoint}", $gutter, $margin);
+  }
+  
+  @if $breakpoint == "phone" {
+    @include breakpoint("phone"){
+      .hig__grid--phone{
+        @include quarters("", 8px);
+      }
+      @include quarters("--phone", 8px);
+    }
+  }
+  @else if $breakpoint == "tablet" {
+    @include breakpoint("tablet"){
+      @include quarters("", 16px);
+      @include eighths("", 16px);
+      @include quarters("--tablet", 16px);
+      @include eighths("--tablet", 16px);
+    }
+  }
+  @else if $breakpoint == "laptop" {
+    @include breakpoint("laptop"){
+      @include quarters("", 16px);
+      @include eighths("", 16px);
+      @include twelfths("", 16px);
+      @include quarters("--laptop", 16px);
+      @include eighths("--laptop", 16px);
+      @include twelfths("--laptop", 16px);
+    }
+  }
+  @else if $breakpoint == "desktop" {
+    @include breakpoint("desktop"){
+      @include quarters("", 24px);
+      @include eighths("", 24px);
+      @include twelfths("", 24px);
+      @include quarters("--desktop", 24px);
+      @include eighths("--desktop", 24px);
+      @include twelfths("--desktop", 24px);
+    }
+  }
+  @else{
+    @include buildAbstract("", $gutter, $margin);
+    @include quarters("", 24px);
+    @include eighths("", 24px);
+    @include twelfths("", 24px);
+  }
+}
+
+
+
+@include buildGrid("large", 12, 24px, 24px);
+@include buildGrid("desktop", 12, 24px, 24px);
+@include buildGrid("laptop", 12, 16px, 18px);
+@include buildGrid("tablet", 8, 16px, 16px);
+@include buildGrid("phone", 4, 8px, 8px);
