@@ -181,21 +181,27 @@ export class SideNavAdapter extends HIGElement {
 const SideNavComponent = createComponent(SideNavAdapter);
 
 SideNavComponent.propTypes = {
-  addSection: PropTypes.func,
-  addLink: PropTypes.func,
-  addSearch: PropTypes.func,
-  setCopyright: PropTypes.func,
   children: HIGChildValidator([
     GroupComponent,
     LinkComponent,
     SearchComponent
-  ])
+  ]),
+  copyright: PropTypes.string,
+  headerLabel: PropTypes.string,
+  headerLink: PropTypes.string,
+  onHeaderClick: PropTypes.func,
+  onSuperHeaderClick: PropTypes.func,
+  superHeaderLabel: PropTypes.string,
+  superHeaderLink: PropTypes.string
 };
 
 SideNavComponent.__docgenInfo = {
   props: {
     children: {
-      description: 'support adding SectionList, and LinkList'
+      description: 'supports adding Group, Link, anand Search components'
+    },
+    copyright: {
+      descroption: 'copyright notice at bottom of the side nav'
     }
   }
 };

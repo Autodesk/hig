@@ -12,10 +12,13 @@ export class ModuleCollapseAdapter extends HIGElement {
   }
 
   componentDidMount() {
-    if (this.props.minimized) {
+    if (this.props.hidden !== undefined) {
+      this.commitUpdate(['hidden', this.props.hidden]);
+    }
+    if (this.props.minimized !== undefined) {
       this.commitUpdate(['minimized', this.props.minimized]);
     }
-    if (this.props.onClick) {
+    if (this.props.onClick !== undefined) {
       this.commitUpdate(['onClick', this.props.onClick]);
     }
   }
@@ -26,6 +29,9 @@ export class ModuleCollapseAdapter extends HIGElement {
       const propValue = updatePayload[i + 1];
 
       switch (propKey) {
+        case 'hidden':
+          propValue ? this.hig.hide() : this.hig.show();
+          break;
         case 'minimized':
           propValue ? this.hig.minimize() : this.hig.maximize();
           break;
@@ -53,16 +59,19 @@ export class ModuleCollapseAdapter extends HIGElement {
 const ModuleCollapseComponent = createComponent(ModuleCollapseAdapter);
 
 ModuleCollapseComponent.propTypes = {
+  hidden: PropTypes.bool,
   minimized: PropTypes.bool,
   onClick: PropTypes.func
 };
 
 ModuleCollapseComponent.__docgenInfo = {
   props: {
+    hidden: {
+      description: 'hide the collapse'
+    },
     minimized: {
       description: 'designate that collapse is in the minimized state'
     },
-
     onClick: {
       description: 'triggered when icon is clicked on'
     }
