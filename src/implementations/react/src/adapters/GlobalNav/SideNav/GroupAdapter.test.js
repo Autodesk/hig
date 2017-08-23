@@ -4,8 +4,6 @@ import * as HIG from 'hig-vanilla';
 import React from 'react';
 
 import GlobalNav from '../../../adapters/GlobalNav/GlobalNavAdapter';
-import Section from './SectionAdapter';
-import SectionList from '../../../elements/components/GlobalNav/SectionList';
 import Group from './GroupAdapter';
 import Module from './ModuleAdapter';
 
@@ -15,11 +13,7 @@ const Context = props => {
   return (
     <GlobalNav>
       <GlobalNav.SideNav>
-        <GlobalNav.SideNav.SectionList>
-          <GlobalNav.SideNav.SectionList.Section>
-            <Group>{props.children}</Group>
-          </GlobalNav.SideNav.SectionList.Section>
-        </GlobalNav.SideNav.SectionList>
+        <Group>{props.children}</Group>
       </GlobalNav.SideNav>
     </GlobalNav>
   );
@@ -36,15 +30,11 @@ function higContext() {
   const higSideNav = new higNav.partials.SideNav();
   higNav.addSideNav(higSideNav);
 
-  const higSection = new higSideNav.partials.Section({});
+  const higGroup = new higSideNav.partials.Group();
 
-  higSideNav.addSection(higSection);
+  higSideNav.addGroup(higGroup);
 
-  const higGroup = new higSection.partials.Group();
-
-  higSection.addGroup(higGroup);
-
-  return { higNav, higSideNav, higSection, higGroup, higContainer };
+  return { higNav, higSideNav, higGroup, higContainer };
 }
 
 describe('<Group>', () => {
@@ -169,7 +159,7 @@ describe('<Group>', () => {
 
       expect(console.error).toBeCalledWith(
         expect.stringMatching(
-          /'div' is not a valid child of GroupAdapter. Children should be of type 'Module'/
+          /'div' is not a valid child of GroupAdapter. Children should be of type 'ModuleAdapter/
         )
       );
     });
@@ -185,7 +175,7 @@ describe('<Group>', () => {
 
       expect(console.error).toBeCalledWith(
         expect.stringMatching(
-          /'Hello world!' is not a valid child of GroupAdapter. Children should be of type 'Module'/
+          /'Hello world!' is not a valid child of GroupAdapter. Children should be of type 'ModuleAdapter/
         )
       );
     });

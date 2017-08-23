@@ -21,7 +21,6 @@ import TestUtils from 'react-dom/test-utils';
 
 import GlobalNav from '../GlobalNavAdapter';
 import SideNav from './SideNavAdapter';
-import LinkList from '../../../elements/components/GlobalNav/LinkList';
 
 import { default as LinkAdapter } from './LinkAdapter';
 
@@ -45,9 +44,7 @@ describe('<LinkAdapter>', () => {
     return (
       <GlobalNav>
         <SideNav>
-          <LinkList>
-            <LinkAdapter {...props} />
-          </LinkList>
+          <LinkAdapter {...props} />
         </SideNav>
       </GlobalNav>
     );

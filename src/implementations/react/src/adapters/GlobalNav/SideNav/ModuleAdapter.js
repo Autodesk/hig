@@ -1,17 +1,18 @@
-
 import * as PropTypes from 'prop-types';
 import createComponent from '../../createComponent';
 import HIGElement from '../../../elements/HIGElement';
 import HIGNodeList from '../../../elements/HIGNodeList';
 import HIGChildValidator from '../../../elements/HIGChildValidator';
-import SubmoduleComponent, {
+import SubmoduleAdapterComponent, {
   SubmoduleAdapter
-} from '../../../adapters/GlobalNav/SideNav/SubmoduleAdapter';
-import ModuleCollapseComponent, {
+} from './SubmoduleAdapter';
+import ModuleCollapseAdapterComponent, {
   ModuleCollapseAdapter
 } from './ModuleCollapseAdapter';
+import Submodule from '../../../elements/components/GlobalNav/SideNav/Submodule';
+import ModuleCollapse from '../../../elements/components/GlobalNav/SideNav/ModuleCollapse';
 
-export class Module extends HIGElement {
+export class ModuleAdapter extends HIGElement {
   constructor(HIGConstructor, initialProps) {
     super(HIGConstructor, initialProps);
 
@@ -98,7 +99,7 @@ export class Module extends HIGElement {
           break;
         }
         default: {
-          console.warn(`${propKey} is unknown`);
+          // No-op
         }
       }
     }
@@ -149,7 +150,7 @@ export class Module extends HIGElement {
   }
 }
 
-const ModuleComponent = createComponent(Module);
+const ModuleComponent = createComponent(ModuleAdapter);
 
 ModuleComponent.propTypes = {
   icon: PropTypes.string,
@@ -158,7 +159,7 @@ ModuleComponent.propTypes = {
   active: PropTypes.bool,
   onClick: PropTypes.func,
   onHover: PropTypes.func,
-  children: HIGChildValidator([SubmoduleComponent, ModuleCollapseComponent])
+  children: HIGChildValidator([Submodule, ModuleCollapse, SubmoduleAdapterComponent, ModuleCollapseAdapterComponent])
 };
 
 ModuleComponent.__docgenInfo = {
@@ -193,7 +194,7 @@ ModuleComponent.__docgenInfo = {
   }
 };
 
-ModuleComponent.Submodule = SubmoduleComponent;
-ModuleComponent.ModuleCollapse = ModuleCollapseComponent;
+ModuleComponent.Submodule = SubmoduleAdapterComponent;
+ModuleComponent.ModuleCollapse = ModuleCollapseAdapterComponent;
 
 export default ModuleComponent;

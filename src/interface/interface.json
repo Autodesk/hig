@@ -1165,12 +1165,19 @@
           }
         },
         "SideNav": {
+          "defaults": {
+            "copyright": "{String} Copyright notice at bottom of side nav",
+            "headerLabel": "{String} header label",
+            "superHeaderLabel": "{String} super header label",
+            "headerLink": "{String} href of the header",
+            "superHeaderLink": "{String} href of the super header"
+          },
           "methods": {
-            "addSection": {
-              "desc": "Pass in an instance of a SideNav Section partial",
+            "addGroup": {
+              "desc": "Pass in an instance of a SideNav Section Group partial",
               "params": [
-                "{Section} Section - instance of a Section partial",
-                "{Section} [ReferenceSection] - (Optional) reference node for insertBefore"
+                "{Group} Group - instance of a Group partial",
+                "{Group} [ReferenceGroup] - (Optional) reference node for insertBefore"
               ]
             },
             "addLink": {
@@ -1187,9 +1194,35 @@
                 "{Search} [ReferenceSearch] - (Optional) reference node for insertBefore"
               ]
             },
+            "onHeaderClick": {
+              "desc": "Calls the provided callback when user clicks on the header",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            },
+            "onSuperHeaderClick": {
+              "desc": "Calls the provided callback when user clicks on the super header",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            },
             "setCopyright": {
               "desc": "Change the copyright notice at bottom of side nav",
               "params": ["{String} Copyright notice"]
+            },
+            "setHeaderLabel": {
+              "desc": "sets the header label",
+              "params": ["{String} label - header label"]
+            },
+            "setHeaderLink": {
+              "desc": "sets the href of the header",
+              "params": ["{String} link - href for the header"]
+            },
+            "setSuperHeaderLabel": {
+              "desc": "sets the super header label",
+              "params": ["{String} name - new super header label"]
+            },
+            "setSuperHeaderLink": {
+              "desc": "sets the href of the super header",
+              "params": ["{String} link - href for the super header"]
             }
           },
           "partials": {
@@ -1235,28 +1268,13 @@
                 "placeholder": "{String} A placeholder text when nothing is searched"
               }
             },
-            "Section": {
+            "Group": {
               "methods": {
-                "setHeaderLabel": {
-                  "desc": "sets the label",
-                  "params": ["{String} label - new label"]
-                },
-                "setHeaderName": {
-                  "desc": "sets the name",
-                  "params": ["{String} name - new name"]
-                },
-                "addGroup": {
-                  "desc": "Pass in an instance of a SideNav Section Group partial",
+                "addModule": {
+                  "desc": "Pass in an instance of a SideNav group Module partial",
                   "params": [
-                    "{Group} Group - instance of a Group partial",
-                    "{Group} [ReferenceGroup] - (Optional) reference node for insertBefore"
-                  ]
-                },
-                "addCollapse": {
-                  "desc": "Pass in an instance of a Collapse partial",
-                  "params": [
-                    "{Collapse} Collapse - instance of a Collapse partial",
-                    "{Collapse} [ReferenceCollapse] - (Optional) reference node for insertBefore"
+                    "{Module} Module - instance of a Module partial",
+                    "{Module} [ReferenceModule] - (Optional) reference node for insertBefore"
                   ]
                 },
                 "show": {
@@ -1266,34 +1284,66 @@
                   "desc": "hide (used for filtering)"
                 }
               },
-              "defaults": {
-                "headerLabel": "{String} A label for the section, ex: Project or Account",
-                "headerName": "{String} A identifiable project or account name"
-              },
               "partials": {
-                "Group": {
+                "Module": {
                   "methods": {
-                    "addModule": {
-                      "desc": "Pass in an instance of a SideNav group Module partial",
-                      "params": [
-                        "{Module} Module - instance of a Module partial",
-                        "{Module} [ReferenceModule] - (Optional) reference node for insertBefore"
-                      ]
+                    "setIcon": {
+                      "desc": "sets the icon of an module",
+                      "params": ["{String} title - new icon ID"]
+                    },
+                    "setTitle": {
+                      "desc": "sets the title of an module",
+                      "params": ["{String} title - new title"]
+                    },
+                    "setLink": {
+                      "desc": "sets the link of an module",
+                      "params": ["{String} link - new link"]
                     },
                     "show": {
                       "desc": "show (used for filtering)"
                     },
                     "hide": {
                       "desc": "hide (used for filtering)"
+                    },
+                    "activate": {
+                      "desc": "activates the module"
+                    },
+                    "deactivate": {
+                      "desc": "deactivates the module"
+                    },
+                    "addSubmodule": {
+                      "desc": "Pass in an instance of a Submodule partial",
+                      "params": [
+                        "{Submodule} Submodule - instance of a Submodule partial",
+                        "{Submodule} [ReferenceSubmodule] - (Optional) reference node for insertBefore"
+                      ]
+                    },
+                    "addCollapse": {
+                      "desc": "Pass in an instance of a Collapse partial",
+                      "params": [
+                        "{Collapse} Collapse - instance of a Collapse partial",
+                        "{Collapse} [ReferenceCollapse] - (Optional) reference node for insertBefore"
+                      ]
+                    },
+                    "onClick": {
+                      "desc": "Calls the provided callback when user clicks on the item",
+                      "params": "HIG.abstract.EventObject.params",
+                      "returns": "HIG.abstract.EventObject.returns"
+                    },
+                    "onHover": {
+                      "desc": "Calls the provided callback when user moves the mouse over the item",
+                      "params": "HIG.abstract.EventObject.params",
+                      "returns": "HIG.abstract.EventObject.returns"
                     }
                   },
+                  "defaults": {
+                    "icon": "{String} icon identifier",
+                    "title": "{String} the string of our SideNav module",
+                    "link": "{String} link behind the module"
+                  },
                   "partials": {
-                    "Module": {
+                    "Submodule": {
                       "methods": {
-                        "setIcon": {
-                          "desc": "sets the icon of an module",
-                          "params": ["{String} title - new icon ID"]
-                        },
                         "setTitle": {
                           "desc": "sets the title of an module",
                           "params": ["{String} title - new title"]
@@ -1309,24 +1359,10 @@
                           "desc": "hide (used for filtering)"
                         },
                         "activate": {
-                          "desc": "activates the module"
+                          "desc": "activates the submodule"
                         },
                         "deactivate": {
-                          "desc": "deactivates the module"
-                        },
-                        "addSubmodule": {
-                          "desc": "Pass in an instance of a Submodule partial",
-                          "params": [
-                            "{Submodule} Submodule - instance of a Submodule partial",
-                            "{Submodule} [ReferenceSubmodule] - (Optional) reference node for insertBefore"
-                          ]
-                        },
-                        "addCollapse": {
-                          "desc": "Pass in an instance of a Collapse partial",
-                          "params": [
-                            "{Collapse} Collapse - instance of a Collapse partial",
-                            "{Collapse} [ReferenceCollapse] - (Optional) reference node for insertBefore"
-                          ]
+                          "desc": "deactivates the submodule"
                         },
                         "onClick": {
                           "desc": "Calls the provided callback when user clicks on the item",
@@ -1334,98 +1370,36 @@
                           "returns": "HIG.abstract.EventObject.returns"
                         },
                         "onHover": {
-                          "desc": "Calls the provided callback when user moves the mouse over the item",
+                          "desc": "Calls the provided callback when user clicks on the item",
                           "params": "HIG.abstract.EventObject.params",
                           "returns": "HIG.abstract.EventObject.returns"
                         }
                       },
                       "defaults": {
-                        "icon": "{String} icon identifier",
-                        "title": "{String} the string of our SideNav module",
-                        "link": "{String} link behind the module"
-                      },
-                      "partials": {
-                        "Submodule": {
-                          "methods": {
-                            "setTitle": {
-                              "desc": "sets the title of an module",
-                              "params": ["{String} title - new title"]
-                            },
-                            "setLink": {
-                              "desc": "sets the link of an module",
-                              "params": ["{String} link - new link"]
-                            },
-                            "show": {
-                              "desc": "show (used for filtering)"
-                            },
-                            "hide": {
-                              "desc": "hide (used for filtering)"
-                            },
-                            "activate": {
-                              "desc": "activates the submodule"
-                            },
-                            "deactivate": {
-                              "desc": "deactivates the submodule"
-                            },
-                            "onClick": {
-                              "desc": "Calls the provided callback when user clicks on the item",
-                              "params": "HIG.abstract.EventObject.params",
-                              "returns": "HIG.abstract.EventObject.returns"
-                            },
-                            "onHover": {
-                              "desc": "Calls the provided callback when user clicks on the item",
-                              "params": "HIG.abstract.EventObject.params",
-                              "returns": "HIG.abstract.EventObject.returns"
-                            }
-                          },
-                          "defaults": {
-                            "title": "{String} the string of our SideNav submodule",
-                            "link": "{String} link behind the submodule"
-                          }
+                        "title": "{String} the string of our SideNav submodule",
+                        "link": "{String} link behind the submodule"
+                      }
+                    },
+                    "Collapse": {
+                      "methods": {
+                        "minimize": {
+                          "desc": "show [ - ]"
                         },
-                        "Collapse": {
-                          "methods": {
-                            "minimize": {
-                              "desc": "show [ - ]"
-                            },
-                            "maximize": {
-                              "desc": "show [ + ]"
-                            },
-                            "show": {
-                              "desc": "show (used for filtering)"
-                            },
-                            "hide": {
-                              "desc": "hide (used for filtering)"
-                            },
-                            "onClick": {
-                              "desc": "Calls the provided callback when user clicks on the item",
-                              "params": "HIG.abstract.EventObject.params",
-                              "returns": "HIG.abstract.EventObject.returns"
-                            }
-                          }
+                        "maximize": {
+                          "desc": "show [ + ]"
+                        },
+                        "show": {
+                          "desc": "show (used for filtering)"
+                        },
+                        "hide": {
+                          "desc": "hide (used for filtering)"
+                        },
+                        "onClick": {
+                          "desc": "Calls the provided callback when user clicks on the item",
+                          "params": "HIG.abstract.EventObject.params",
+                          "returns": "HIG.abstract.EventObject.returns"
                         }
                       }
-                    }
-                  }
-                },
-                "Collapse": {
-                  "methods": {
-                    "minimize": {
-                      "desc": "show [ - ]"
-                    },
-                    "maximize": {
-                      "desc": "show [ + ]"
-                    },
-                    "show": {
-                      "desc": "show (used for filtering)"
-                    },
-                    "hide": {
-                      "desc": "hide (used for filtering)"
-                    },
-                    "onClick": {
-                      "desc": "Calls the provided callback when user clicks on the item",
-                      "params": "HIG.abstract.EventObject.params",
-                      "returns": "HIG.abstract.EventObject.returns"
                     }
                   }
                 }
@@ -1457,9 +1431,6 @@
                 "link": "{String} link"
               }
             }
-          },
-          "defaults": {
-            "copyright": "{String} Copyright notice at bottom of side nav"
           }
         }
       }

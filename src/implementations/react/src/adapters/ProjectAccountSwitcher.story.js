@@ -21,15 +21,6 @@ import { select, boolean, text } from '@storybook/addon-knobs';
 
 import GlobalNav from './GlobalNav/GlobalNavAdapter';
 
-const SideNav = GlobalNav.SideNav;
-const Search = GlobalNav.SideNav.Search;
-const SectionList = GlobalNav.SideNav.SectionList;
-const Section = GlobalNav.SideNav.SectionList.Section;
-const Collapse = GlobalNav.SideNav.SectionList.Section.SectionCollapse;
-const Group = GlobalNav.SideNav.SectionList.Section.Group;
-const Module = GlobalNav.SideNav.SectionList.Section.Group.Module;
-const ModuleCollapse = GlobalNav.SideNav.SectionList.Section.Group.Module.ModuleCollapse;
-const Submodule = GlobalNav.SideNav.SectionList.Section.Group.Module.Submodule;
 const TopNav = GlobalNav.TopNav;
 const Profile = TopNav.Profile;
 const Shortcut = TopNav.Shortcut;

@@ -1,14 +1,14 @@
-import React, { Component } from "react";
-import PlaygroundSection from "../PlaygroundSection";
-import { Dropdown } from "../../react-hig";
+import React, { Component } from 'react';
+import PlaygroundSection from '../PlaygroundSection';
+import { Dropdown } from '../../react-hig';
 
 const Option = Dropdown.Option;
 
 const optionData = [
-  { label: "text option label", value: "test option value", selected: true },
+  { label: 'text option label', value: 'test option value', selected: true },
   {
-    label: "text option label 1",
-    value: "test option value 1",
+    label: 'text option label 1',
+    value: 'test option value 1',
     selected: false
   }
 ];
@@ -21,6 +21,13 @@ class DropdownSection extends Component {
     };
   }
 
+  setSelectedValue = (selectedOption) => {
+    this.setState({
+      selectedOptionLabel: selectedOption.label,
+      open: false
+    });
+  };
+
   logEvent(event, higElement) {
     let messageParts = [
       `${higElement.constructor.name} triggered an ${event.type} event`
@@ -28,15 +35,9 @@ class DropdownSection extends Component {
     if (event.target.value !== undefined) {
       messageParts = messageParts.concat(`: ${event.target.value}`);
     }
-    console.log(messageParts.join(""));
+    console.log(messageParts.join(''));
   }
 
-  setSelectedValue = selectedOption => {
-    this.setState({
-      selectedOptionLabel: selectedOption.label,
-      open: false
-    });
-  };
 
   openDropdown = () => {
     this.setState({ open: true });
@@ -60,31 +61,29 @@ class DropdownSection extends Component {
           onBlur={this.logEvent}
           onFocus={this.logEvent}
           onKeypress={this.logEvent}
-          required={"This field is required"}
+          required={'This field is required'}
         >
-          {optionData.map(option => {
-            return (
-              <Option
-                label={option.label}
-                value={option.value}
-                selected={
-                  option.label === this.state.selectedOptionLabel ? true : false
-                }
-                key={option.label}
-                onClick={this.setSelectedValue.bind(this, {
-                  label: option.label,
-                  value: option.value
-                })}
-              />
-            );
-          })}
+          {optionData.map(option => (
+            <Option
+              label={option.label}
+              value={option.value}
+              selected={
+                option.label === this.state.selectedOptionLabel
+              }
+              key={option.label}
+              onClick={this.setSelectedValue.bind(this, {
+                label: option.label,
+                value: option.value
+              })}
+            />
+          ))}
         </Dropdown>
 
         <Dropdown
           label="Disabled Dropdown"
           instructions="instructions for disabled dropdown"
           placeholder="placeholder for disabled dropdown"
-          disabled={true}
+          disabled
         />
       </PlaygroundSection>
     );

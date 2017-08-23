@@ -9,9 +9,7 @@ class Modal extends React.Component {
     this.state = {};
   }
 
-  close = (event) => {
-    return this.props.onClose(event);
-  };
+  close = (event) => this.props.onClose(event);
 
   setSlotEl = (el) => {
     this.setState({ slotEl: el });
@@ -35,7 +33,7 @@ class Modal extends React.Component {
   }
 }
 
-Modal.propTypes= {
+Modal.propTypes = {
   body: PropTypes.string,
   buttons: PropTypes.array,
   headerColor: PropTypes.string,

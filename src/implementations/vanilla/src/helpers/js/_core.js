@@ -192,7 +192,9 @@ class Core {
             return
         }
 
-        el.parentNode.removeChild(this.el); // use removeChild for IE11 support
+        if (el.parentNode) {
+            el.parentNode.removeChild(this.el); // use removeChild for IE11 support
+        }
     }
 
     /**
