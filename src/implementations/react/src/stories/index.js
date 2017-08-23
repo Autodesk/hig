@@ -15,6 +15,7 @@ import '../elements/components/GlobalNav/TopNav/Profile.story';
 import '../adapters/GlobalNav/GlobalNavAdapter.story';
 import '../adapters/ProjectAccountSwitcher.story';
 import '../elements/components/GlobalNav/SubNav/Tabs.story';
+import '../elements/components/GlobalNav/SideNav/SideNav.story';
 import '../elements/components/Modal.story';
 import "../adapters/FormElements/DropdownAdapter.story";
 import '../elements/components/Typography.story';
