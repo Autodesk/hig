@@ -27,7 +27,7 @@ describe('ModuleCollapse', () => {
     const errorSpy = jest.fn();
     console.error = errorSpy;
 
-    const wrapper = mount(<Context onClick={() => {}} />);
+    const wrapper = mount(<Context id="1" onClick={() => {}} />);
 
     expect(errorSpy).not.toHaveBeenCalled();
   });

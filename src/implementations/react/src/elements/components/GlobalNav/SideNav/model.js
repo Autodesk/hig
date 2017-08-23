@@ -23,11 +23,14 @@ export function group({ modules, submodules }) {
 };
 
 export function mergeState({ modules, submodules }, state) {
+  const activeModule = modules.find(m => m.id === state.activeModule) || {};
+  const activeSubmodule = submodules.find(m => m.id === state.activeModule) || {};
+
   return {
     modules: modules.map(module => {
       const moduleWithState = {
         ...module,
-        active: module.id === state.activeModule,
+        active: module.id === activeModule.id || module.id === activeSubmodule.moduleId,
         ...getModuleState(state.moduleStates, module.id)
       }
 

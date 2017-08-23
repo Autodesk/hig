@@ -69,14 +69,14 @@ describe('SideNav model', () => {
     });
 
     describe('with an active submodule', () => {
-      it('sets active on the submodule', () => {
+      it('sets active on the submodule and the parent module', () => {
         const state = {
           activeModule: 'A',
           moduleStates: {}
         }
         const result = mergeState(props, state);
 
-        expect(result.modules[0].active).not.toBeTruthy();
+        expect(result.modules[0].active).toBeTruthy();
         expect(result.submodules[0].active).toBeTruthy();
       });
     });
