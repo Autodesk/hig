@@ -4,6 +4,7 @@ import ModuleCollapseAdapter from '../../../../adapters/GlobalNav/SideNav/Module
 
 class ModuleCollapse extends Component {
   static propTypes = {
+    id: PropTypes.string.isRequired,
     onClick: PropTypes.func.isRequired
   }
 

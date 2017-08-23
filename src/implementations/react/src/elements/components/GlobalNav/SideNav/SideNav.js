@@ -74,6 +74,7 @@ class SideNav extends Component {
                   {...module}
                 >
                   <ModuleCollapse
+                    id={module.id}
                     minimized={module.minimized}
                     onClick={this.props.toggleModuleMinimized}
                     hidden={hideCollapse}
