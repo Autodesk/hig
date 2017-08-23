@@ -97,6 +97,7 @@ export default function withState(WrappedComponent) {
           toggleModuleMinimized={this.toggleModuleMinimized}
           onModuleClick={this.handleModuleClick}
           onSubmoduleClick={this.setActiveModule}
+          disableCollapse={modules.length <= 5 || renderedQuery.length > 0}
           {...otherProps}
         />
       );

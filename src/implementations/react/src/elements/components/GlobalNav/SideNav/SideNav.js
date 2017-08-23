@@ -65,8 +65,8 @@ class SideNav extends Component {
         {this.props.groups.map((group, i) => (
           <Group key={group.modules[0].id}>
             {group.modules.map(module => {
-              const showSubmodules = this.props.query.length > 0 || !module.minimized;
-              const hideCollapse =  this.props.query.length > 0 || module.submodules.length === 0;
+              const showSubmodules = this.props.disableCollapse || !module.minimized;
+              const hideCollapse =  this.props.disableCollapse || module.submodules.length === 0;
               return (
                 <Module
                   onClick={this.props.onModuleClick}
