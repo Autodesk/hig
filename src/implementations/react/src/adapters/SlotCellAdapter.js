@@ -25,6 +25,10 @@ export class SlotCellAdapter extends HIGElement {
           this.hig.addSlot(propValue);
           break;
         }
+        case "children": {
+          //no-op
+          break;
+        }
         default: {
           console.warn(`${propKey} is unknown`);
         }

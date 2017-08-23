@@ -1,17 +1,16 @@
-import * as PropTypes from 'prop-types';
-import createComponent from '../../createComponent';
-import HIGElement from '../../../elements/HIGElement';
-import HIGNodeList from '../../../elements/HIGNodeList';
-import HIGChildValidator from '../../../elements/HIGChildValidator';
+import * as PropTypes from "prop-types";
+import createComponent from "../../createComponent";
+import HIGElement from "../../../elements/HIGElement";
+import HIGNodeList from "../../../elements/HIGNodeList";
+import HIGChildValidator from "../../../elements/HIGChildValidator";
 import SubmoduleAdapterComponent, {
   SubmoduleAdapter
-} from './SubmoduleAdapter';
+} from "./SubmoduleAdapter";
 import ModuleCollapseAdapterComponent, {
   ModuleCollapseAdapter
-} from './ModuleCollapseAdapter';
-import Submodule from '../../../elements/components/GlobalNav/SideNav/Submodule';
-import ModuleCollapse from '../../../elements/components/GlobalNav/SideNav/ModuleCollapse';
-
+} from "./ModuleCollapseAdapter";
+import Submodule from "../../../elements/components/GlobalNav/SideNav/Submodule";
+import ModuleCollapse from "../../../elements/components/GlobalNav/SideNav/ModuleCollapse";
 
 export class ModuleAdapter extends HIGElement {
   constructor(HIGConstructor, initialProps) {
@@ -37,15 +36,15 @@ export class ModuleAdapter extends HIGElement {
     }
 
     if (this.props.active !== undefined) {
-      this.commitUpdate(['active', this.props.active]);
+      this.commitUpdate(["active", this.props.active]);
     }
 
     if (this.props.onClick !== undefined) {
-      this.commitUpdate(['onClick', this.props.onClick]);
+      this.commitUpdate(["onClick", this.props.onClick]);
     }
 
     if (this.props.onHover !== undefined) {
-      this.commitUpdate(['onHover', this.props.onHover]);
+      this.commitUpdate(["onHover", this.props.onHover]);
     }
   }
 
@@ -162,7 +161,12 @@ ModuleComponent.propTypes = {
   active: PropTypes.bool,
   onClick: PropTypes.func,
   onHover: PropTypes.func,
-  children: HIGChildValidator([Submodule, ModuleCollapse, SubmoduleAdapterComponent, ModuleCollapseAdapterComponent])
+  children: HIGChildValidator([
+    Submodule,
+    ModuleCollapse,
+    SubmoduleAdapterComponent,
+    ModuleCollapseAdapterComponent
+  ])
 };
 
 ModuleComponent.__docgenInfo = {

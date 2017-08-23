@@ -11,10 +11,6 @@ const TextCell = Table.TableRow.TextCell;
 const IconCell = Table.TableRow.IconCell;
 
 class TableSection extends Component {
-  constructor() {
-    super();
-  }
-
   render() {
     return <PlaygroundSection title="Table">
         <Table density="standard">
@@ -154,7 +150,7 @@ class TableSection extends Component {
           </TableHead>
           <TableRow>
             <SlotCell>
-              <img src={tableImage} style={{ width: 104, height: 58, marginLeft: 20 }} />
+              <img alt="slot cell" src={tableImage} style={{ width: 104, height: 58, marginLeft: 20 }} />
             </SlotCell>
             <TextCell text="Window Punch List" detail="window punchlist detail" alignment="left" />
             <TextCell text="Deserunt ut deserunt mollit elit aute et." alignment="left" />

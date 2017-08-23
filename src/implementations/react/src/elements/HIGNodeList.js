@@ -5,31 +5,18 @@ export default class HIGNodeList {
   constructor(listItems) {
     this._checkItems(listItems);
 
-    /**
-     * This is the constructor function for the HIGElement
-     */
-    // this.type = type;
+    // This is the constructor function for the hig-vanilla partial
+    //this.listItems[constructorName].HIGConstructor;
+
+    //This is the constructor function for the HIGElement
+    //this.listItems[constructorName].type;
+
+    //This is a function which calls the hig add* method. It takes two hig instances
+    //this.listItems[constructorName].onAdd;
 
     this.listItems = listItems;
 
-    /**
-     * These are the constructor functions for the HIGElement
-     */
-    // this.types = types;
-
     this.types = this._retrieveTypes(this.listItems);
-
-    // this.addFunctions
-
-    /**
-     * This is the constructor function for the hig-vanilla partial
-     */
-    // this.HIGConstructor = HIGConstructor;
-
-    /**
-     * This is a function which calls the hig add* method. It takes two hig instances
-     */
-    // this.onAdd = onAdd;
 
     this.nodes = [];
     this.mounted = false;
@@ -124,12 +111,6 @@ export default class HIGNodeList {
     } else {
       throw new Error(`Unknown type ${ElementConstructor.name}`);
     }
-    // switch (ElementConstructor) {
-    //   case this.type:
-    //     return new this.type(this.HIGConstructor, props);
-    //   default:
-
-    // }
   }
 
   get length() {

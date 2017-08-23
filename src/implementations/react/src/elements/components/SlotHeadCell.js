@@ -1,6 +1,5 @@
 import React from "react";
 import SlotHeadCellAdapter from "../../adapters/SlotHeadCellAdapter";
-import * as PropTypes from "prop-types"
 
 class SlotHeadCell extends React.Component {
 	constructor() {

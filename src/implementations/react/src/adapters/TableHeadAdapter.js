@@ -1,5 +1,4 @@
 import HIGElement from "../elements/HIGElement";
-import * as PropTypes from "prop-types";
 import createComponent from "./createComponent";
 import HIGNodeList from "../elements/HIGNodeList";
 import HIGChildValidator from "../elements/HIGChildValidator";
@@ -41,7 +40,6 @@ export class TableHeadAdapter extends HIGElement {
   commitUpdate(updatePayload, oldProps, newProp) {
     for (let i = 0; i < updatePayload.length; i += 2) {
       const propKey = updatePayload[i];
-      const propValue = updatePayload[i + 1];
 
       switch (propKey) {
         case "children": {

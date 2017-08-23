@@ -25,10 +25,6 @@ import HIGChildValidator from "../../elements/HIGChildValidator";
 import OptionComponent, { OptionAdapter } from "./OptionAdapter";
 
 export class DropdownAdapter extends HIGElement {
-  // static listTypes = {
-  //   OptionaAdapter: { type: OptionAdapter, HIGConstructor: () => {} },
-  //   [IconAdapter.name]: { type: IconAdapter, HIGConstructor: () => {} }
-  // };
   constructor(initialProps) {
     super(HIG.Dropdown, initialProps);
 
