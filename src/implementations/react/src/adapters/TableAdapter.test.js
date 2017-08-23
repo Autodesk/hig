@@ -114,7 +114,7 @@ describe("<TableAdapter>", () => {
     );
   };
 
-  it("renders a dropdown with intial props", () => {
+  it("renders a table with intial props", () => {
     const defaults = {
       table: { density: "standard" },
       emptyCell: { width: "30px" },
@@ -134,5 +134,31 @@ describe("<TableAdapter>", () => {
     expect(container.firstElementChild.outerHTML).toEqual(
       higContainer.firstElementChild.outerHTML
     );
+  });
+
+  it("renders a Table with updated props", () => {
+    const defaults = {
+      table: { density: "standard" },
+      emptyCell: { width: "30px" },
+      textHeadCell: { text: "Title", alignment: "left", width: "1fr" },
+      slotHeadCell: { width: "1fr" },
+      textCell: { text: "Window Punch List", alignment: "left" },
+      iconCell: { icon: "gear" }
+    };
+
+    const { higContainer, higTable } = createHigContext(defaults);
+    const container = document.createElement("div");
+    const wrapper = mount(<Context {...defaults} />, {
+      attachTo: container
+    });
+
+    const nextProps = {
+      table: { density: "compressed" },
+      emptyCell: { width: "40px" },
+      textHeadCell: { text: "New TItles ", alignment: "left", width: "1fr" },
+      slotHeadCell: { width: "1fr" },
+      textCell: { text: "Window Punch List", alignment: "left" },
+      iconCell: { icon: "gear" }
+    };
   });
 });
