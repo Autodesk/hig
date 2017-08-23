@@ -12,8 +12,8 @@ export class GroupAdapter extends HIGElement {
     super(HIGConstructor, initialProps);
 
     this.modules = new HIGNodeList({
-      Module: {
-        type: Module,
+      ModuleAdapter: {
+        type: ModuleAdapter,
         HIGConstructor: this.hig.partials.Module,
         onAdd: (instance, beforeInstance) => {
           this.hig.addModule(instance, beforeInstance);
