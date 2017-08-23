@@ -30,36 +30,43 @@ describe("HigNodeList", () => {
   const optionInstance = new OptionAdapter(HIG.Option, optionProps);
   const optionInstance1 = new OptionAdapter(HIG.Option, optionProps1);
   const dropdownList = new HigNodeList({
-    type: OptionAdapter,
-    HIGConstructor: HIG.Option,
-    onAdd: (instance, beforeInstance) => {
-      dropdownInstance.addOption(instance, beforeInstance);
+    OptionAdapter: {
+      type: OptionAdapter,
+      HIGConstructor: HIG.Option,
+      onAdd: (instance, beforeInstance) => {
+        dropdownInstance.addOption(instance, beforeInstance);
+      }
     }
   });
 
   const dropdownList1 = new HigNodeList({
-    type: OptionAdapter,
-    HIGConstructor: HIG.Option,
-    onAdd: (instance, beforeInstance) => {
-      dropdownInstance.addOption(instance, beforeInstance);
+    OptionAdapter: {
+      type: OptionAdapter,
+      HIGConstructor: HIG.Option,
+      onAdd: (instance, beforeInstance) => {
+        dropdownInstance.addOption(instance, beforeInstance);
+      }
     }
   });
   const dropdownList2 = new HigNodeList({
-    type: OptionAdapter,
-    HIGConstructor: HIG.Option,
-    onAdd: (instance, beforeInstance) => {
-      dropdownInstance.addOption(instance, beforeInstance);
+    OptionAdapter: {
+      type: OptionAdapter,
+      HIGConstructor: HIG.Option,
+      onAdd: (instance, beforeInstance) => {
+        dropdownInstance.addOption(instance, beforeInstance);
+      }
     }
-	});
-	
-	const dropdownList3 = new HigNodeList({
-    type: OptionAdapter,
-    HIGConstructor: HIG.Option,
-    onAdd: (instance, beforeInstance) => {
-      dropdownInstance.addOption(instance, beforeInstance);
+  });
+
+  const dropdownList3 = new HigNodeList({
+    OptionAdapter: {
+      type: OptionAdapter,
+      HIGConstructor: HIG.Option,
+      onAdd: (instance, beforeInstance) => {
+        dropdownInstance.addOption(instance, beforeInstance);
+      }
     }
-	});
-	
+  });
 
   describe("#createElement", () => {
     it("correctly creates elements", () => {
@@ -85,19 +92,58 @@ describe("HigNodeList", () => {
       dropdownList2.insertBefore(optionInstance);
       dropdownList2.insertBefore(optionInstance1, 0);
       expect(dropdownList2.nodes[0]).toEqual(optionInstance1);
+      expect(dropdownList2.nodes[1]).toEqual(optionInstance);
+    });    
+  });
+
+  describe("#removeChild", () => {
+    it("removes child from dropdown", () => {
+      dropdownList3.insertBefore(optionInstance);
+  		dropdownList3.insertBefore(optionInstance1);
+
+  		expect(dropdownList3.nodes[1]).toEqual(optionInstance1);
+
+  		dropdownList3.removeChild(dropdownList.nodes[0]);
+  		expect(dropdownList3.nodes[0]).toEqual(optionInstance1);
     });
   });
 
-  // describe("#removeChild", () => {
-  //   it("removes child from dropdown", () => {
-	// 		dropdownList3.componentDidMount();
-  //     dropdownList3.insertBefore(optionInstance);
-	// 		dropdownList3.insertBefore(optionInstance1);
-		
-	// 		expect(dropdownList3.nodes[1]).toEqual(optionInstance1);
-			
-	// 		dropdownList3.removeChild(dropdownList.nodes[0]);
-	// 		expect(dropdownList3.nodes[0]).toEqual(optionInstance1);
-  //   });
-  // });
+  describe("check node list interface", () => {
+    it("throws an error if type not specified", () => {
+      expect(() => {
+        new HigNodeList({
+          OptionAdapter: {
+            HIGConstructor: HIG.Option,
+            onAdd: (instance, beforeInstance) => {
+              dropdownInstance.addOption(instance, beforeInstance);
+            }
+          }  
+        })
+      }).toThrow("type is required")
+    });
+
+    it("throws an error if HIGConstructor not specified", () => {
+      expect(() => {
+        new HigNodeList({
+          OptionAdapter: {
+            type: OptionAdapter,
+            onAdd: (instance, beforeInstance) => {
+              dropdownInstance.addOption(instance, beforeInstance);
+            }
+          }
+        });
+      }).toThrow("HIGConstructor is required");
+    });
+
+    it("throws an error if onAdd callback not specififed", () => {
+      expect(() => {
+        new HigNodeList({
+          OptionAdapter: {
+            type: OptionAdapter,
+            HIGConstructor: HIG.Option
+          }
+        });
+      }).toThrow("onInsert is required");
+    });
+  });  
 });

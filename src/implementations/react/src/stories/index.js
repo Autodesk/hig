@@ -19,3 +19,4 @@ import '../elements/components/GlobalNav/SideNav/SideNav.story';
 import '../elements/components/Modal.story';
 import "../adapters/FormElements/DropdownAdapter.story";
 import '../elements/components/Typography.story';
+import '../adapters/TableAdapter.story.js';

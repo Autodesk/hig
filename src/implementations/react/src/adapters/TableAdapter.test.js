@@ -89,7 +89,15 @@ describe("<TableAdapter>", () => {
 
     higTableRow.addCell(textCell);
 
-    return { higContainer, higTable: higTable };
+    return {
+      higContainer,
+      higTable,
+      slotHeadCell,
+      emptyCell: emptyCell,
+      textHeadCell: textHeadCell,
+      iconcell: iconCell,
+      textCell: textCell
+    };
   }
 
   const Context = props => {
@@ -97,7 +105,7 @@ describe("<TableAdapter>", () => {
       <TableComponent density={props.table.density}>
         <TableHead>
           <TextHeadCell width={props.emptyCell.width} />
-          <TextHeadCell text="Title" width="1fr" alignment="left" />
+          <TextHeadCell text={props.textHeadCell.text} width={props.textHeadCell.width} alignment={props.textHeadCell.alignment} />
           <SlotHeadCell>
             Raw denim flexitarian green juice kinfolk.
           </SlotHeadCell>
@@ -125,6 +133,7 @@ describe("<TableAdapter>", () => {
     };
 
     const { higContainer, higTable } = createHigContext(defaults);
+
     const container = document.createElement("div");
     const wrapper = mount(<Context {...defaults} />, {
       attachTo: container
@@ -146,7 +155,16 @@ describe("<TableAdapter>", () => {
       iconCell: { icon: "gear" }
     };
 
-    const { higContainer, higTable } = createHigContext(defaults);
+    const {
+      higContainer,
+      higTable,
+      slotHeadCell,
+      emptyCell,
+      textHeadCell,
+      iconcell,
+      textCell
+    } = createHigContext(defaults);
+
     const container = document.createElement("div");
     const wrapper = mount(<Context {...defaults} />, {
       attachTo: container
@@ -155,10 +173,28 @@ describe("<TableAdapter>", () => {
     const nextProps = {
       table: { density: "compressed" },
       emptyCell: { width: "40px" },
-      textHeadCell: { text: "New TItles ", alignment: "left", width: "1fr" },
+      textHeadCell: { text: "New Titles ", alignment: "center", width: "1fr" },
       slotHeadCell: { width: "1fr" },
-      textCell: { text: "Window Punch List", alignment: "left" },
-      iconCell: { icon: "gear" }
+      textCell: { text: "Window Punch List", alignment: "center" },
+      iconCell: { icon: "hamburger" }
     };
+
+    higTable.setDensity(nextProps.table.density);
+    emptyCell.setWidth(nextProps.emptyCell.width);
+    textHeadCell.setText(nextProps.textHeadCell.text);
+    textHeadCell.setAlignment(nextProps.textHeadCell.alignment);
+    textHeadCell.setWidth(nextProps.textHeadCell.width);
+    slotHeadCell.setWidth(nextProps.slotHeadCell.width);
+    textCell.setText(nextProps.textCell.text);
+    textCell.setAlignment(nextProps.textCell.alignment);
+    iconcell.setIcon("hamburger");
+
+    const prevProps = wrapper.props;
+    wrapper.setProps(nextProps);
+
+    expect(container.firstElementChild.outerHTML).toMatchSnapshot();
+    expect(container.firstElementChild.outerHTML).toEqual(
+      higContainer.firstElementChild.outerHTML
+    );
   });
 });
