@@ -28,14 +28,10 @@ export function mergeState({ modules, submodules }, state) {
       const moduleWithState = {
         ...module,
         active: module.id === state.activeModule,
-        ...state.moduleStates[module.id]
+        ...getModuleState(state.moduleStates, module.id)
       }
 
-      if (moduleWithState.minimized === undefined) {
-        moduleWithState.minimized = true;
-      }
-
-      return moduleWithState
+      return moduleWithState;
     }),
     submodules: submodules.map(submodule => {
       return {
@@ -52,6 +48,5 @@ export function getModuleState(moduleStates, id) {
   if (state.minimized === undefined) {
     state.minimized = true;
   }
-
   return state;
 }
