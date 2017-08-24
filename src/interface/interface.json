@@ -738,7 +738,7 @@
         "link": "{String} link of the button",
         "icon": "{String} (optional) ID of the icon"
       }
-    },
+    },  
     "GlobalNav": {
       "methods": {
         "addSideNav": {

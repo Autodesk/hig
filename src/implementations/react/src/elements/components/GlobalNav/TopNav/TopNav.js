@@ -24,10 +24,12 @@ export class TopNav extends HIGElement {
     super(HIGConstructor, initialProps);
 
     this.shortcuts = new HIGNodeList({
-      type: Shortcut,
-      HIGConstructor: this.hig.partials.Shortcut,
-      onAdd: (instance, beforeInstance) => {
-        this.hig.addShortcut(instance, beforeInstance);
+      Shortcut: {
+        type: Shortcut,
+        HIGConstructor: this.hig.partials.Shortcut,
+        onAdd: (instance, beforeInstance) => {
+          this.hig.addShortcut(instance, beforeInstance);
+        }
       }
     });
   }
