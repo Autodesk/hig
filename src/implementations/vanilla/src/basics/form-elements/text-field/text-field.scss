@@ -15,6 +15,21 @@
     margin-right: 2px;
 }
 
+.hig__text-field__clear-button {
+    background: none;
+    border: none;
+    position: absolute;
+    display: none;
+    top: 14px;
+    right: 14px;
+    width: 24px;
+    height: 24px;
+
+    &.hig__text-field__clear-button--show {
+        display: block;
+    }
+}
+
 .hig__text-field__content {
     flex: 1 1 auto;
 }
@@ -86,6 +101,7 @@
     display: block;
     height: 25px;
     padding-bottom: 13px;
+    padding-right: 36px;
     width: 100%;
     box-sizing: border-box;
 
