@@ -115,6 +115,8 @@
   @if $breakpoint == "phone" {
     @include breakpoint("phone"){
       @include quarters("", 8px);
+      @include eighths("", 8px);
+      @include twelfths("", 8px);
     }
     @include quarters("--phone", 8px);
   }
@@ -122,6 +124,7 @@
     @include breakpoint("tablet"){
       @include quarters("", 16px);
       @include eighths("", 16px);
+      @include twelfths("", 16px);
     }
     @include quarters("--tablet", 16px);
     @include eighths("--tablet", 16px);
