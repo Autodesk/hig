@@ -1,7 +1,9 @@
 import React from 'react';
 import PlaygroundSection from '../PlaygroundSection';
 import {Spacer, GlobalNav} from '../../react-hig';
-const Slot = GlobalNav.Slot;
+import createSlotComponent from '../../adapters/createSlotComponent';
+
+const Slot = createSlotComponent();
 
 function SpacerSection() {
   return ( <PlaygroundSection title="SPACE">

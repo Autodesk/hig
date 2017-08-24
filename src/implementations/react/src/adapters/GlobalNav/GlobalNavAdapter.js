@@ -5,7 +5,7 @@ import HIGElement from '../../elements/HIGElement';
 import HIGChildValidator from '../../elements/HIGChildValidator';
 import createComponent from '../createComponent';
 
-import SideNavComponent, { SideNavAdapter } from './SideNav/SideNavAdapter';
+import SideNavAdapterComponent, { SideNavAdapter } from './SideNav/SideNavAdapter';
 import TopNavComponent, {
   TopNav
 } from '../../elements/components/GlobalNav/TopNav/TopNav';
@@ -148,7 +148,7 @@ GlobalNavComponent.propTypes = {
   sideNavOpen: PropTypes.bool,
   children: HIGChildValidator([
     SideNav,
-    SideNavComponent,
+    SideNavAdapterComponent,
     TopNavComponent,
     SubNavComponent,
     Slot,
@@ -167,7 +167,7 @@ GlobalNavComponent.__docgenInfo = {
   }
 };
 
-GlobalNavComponent.SideNav = SideNavComponent;
+GlobalNavComponent.SideNav = SideNavAdapterComponent;
 GlobalNavComponent.TopNav = TopNavComponent;
 GlobalNavComponent.SubNav = SubNavComponent;
 GlobalNavComponent.Slot = Slot;
