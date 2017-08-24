@@ -16,7 +16,7 @@
           min-width: 1681px;
           max-width: 1920px;
         }
-        .container{
+        .container--laptop{
           min-width: 1281px;
           max-width: 1680px;
         }
@@ -44,8 +44,116 @@
     </style>
   </head>
   <body>
-    <div class='container--large hig__colors__hig-gray-50--background'>
-      <div class='hig__typography hig__typography__h2'>Large Screen (min width 1921px) (24px gutter) (24px margin)</div>
+    <div class='hig__typography hig__typography__h2 hig__spacer--stack hig__spacer--width-xl'>Resize browsers to specified size to see grid in action</div>
+
+    <div class='hig__colors__hig-gray-50--background'>
+      <div class='hig__typography hig__typography__h2'>Fully resizeable</div>
+      
+      <div class='hig__spacer--stack hig__spacer--width-m'>
+        <div class='hig__typography hig__typography__h3'>4 x 1</div>
+        <div class='hig__grid'>
+          <div class='hig__grid__item hig__grid__item--one-quarter'>
+            <div class='test-content'>1/4</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--one-quarter'>
+            <div class='test-content'>1/4</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--one-quarter'>
+            <div class='test-content'>1/4</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--one-quarter'>
+            <div class='test-content'>1/4</div>
+          </div>
+        </div>
+        <div class='hig__typography hig__typography__h3'>2 x 2</div>
+        <div class='hig__grid'>
+          <div class='hig__grid__item hig__grid__item--one-half'>
+            <div class='test-content'>2/2</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--one-half'>
+            <div class='test-content'>2/2</div>
+          </div>
+        </div>
+        <div class='hig__typography hig__typography__h3'>1 x 1</div>
+        <div class='hig__grid'>
+          <div class='hig__grid__item hig__grid__item--one-whole'>
+            <div class='test-content'>1/1</div>
+          </div>
+        </div>
+      </div>
+
+      <div class='hig__spacer--stack hig__spacer--width-m'>
+        <div class='hig__typography hig__typography__h3'>2 - 4 - 6</div>
+        <div class='hig__grid'>
+          <div class='hig__grid__item hig__grid__item--two-twelfths'>
+            <div class='test-content'>2/12</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--four-twelfths'>
+            <div class='test-content'>4/12</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--six-twelfths'>
+            <div class='test-content'>6/12</div>
+          </div>
+        </div>
+      </div>
+
+      <div class='hig__spacer--stack hig__spacer--width-m'>
+        <div class='hig__typography hig__typography__h3'>3 x 4</div>
+        <div class='hig__grid'>
+          <div class='hig__grid__item hig__grid__item--four-twelfths'>
+            <div class='test-content'>4/12</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--four-twelfths'>
+            <div class='test-content'>4/12</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--four-twelfths'>
+            <div class='test-content'>4/12</div>
+          </div>
+        </div>
+      </div>
+
+      <div class='hig__spacer--stack hig__spacer--width-m'>
+        <div class='hig__typography hig__typography__h3'>Incomplete 2 and 3</div>
+        <div class='hig__grid'>
+          <div class='hig__grid__item hig__grid__item--two-twelfths'>
+            <div class='test-content'>2/12</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--three-twelfths'>
+            <div class='test-content'>3/12</div>
+          </div>
+        </div>
+      </div>
+
+      <div class='hig__spacer--stack hig__spacer--width-m'>
+        <div class='hig__typography hig__typography__h3'>8 x 1</div>
+        <div class='hig__grid'>
+          <div class='hig__grid__item hig__grid__item--one-eighth'>
+            <div class='test-content'>1/8</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--one-eighth'>
+            <div class='test-content'>1/8</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--one-eighth'>
+            <div class='test-content'>1/8</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--one-eighth'>
+            <div class='test-content'>1/8</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--one-eighth'>
+            <div class='test-content'>1/8</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--one-eighth'>
+            <div class='test-content'>1/8</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--one-eighth'>
+            <div class='test-content'>1/8</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--one-eighth'>
+            <div class='test-content'>1/8</div>
+          </div>
+        </div>
+      </div>
+
       <div class='hig__spacer--stack hig__spacer--width-m'>
         <div class='hig__typography hig__typography__h3'>12 x 1</div>
         <div class='hig__grid'>
@@ -89,6 +197,135 @@
       </div>
 
       <div class='hig__spacer--stack hig__spacer--width-m'>
+        <div class='hig__typography hig__typography__h3'>Pyramid</div>
+        <div class='hig__grid'>
+          <div class='hig__grid__item hig__grid__item--one-twelfth'>
+            <div class='test-content'>1/12</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--eleven-twelfths'>
+            <div class='test-content'>11/12</div>
+          </div>
+        </div>
+        <div class='hig__grid'>
+          <div class='hig__grid__item hig__grid__item--two-twelfths'>
+            <div class='test-content'>2/12</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--ten-twelfths'>
+            <div class='test-content'>10/12</div>
+          </div>
+        </div>
+        <div class='hig__grid'>
+          <div class='hig__grid__item hig__grid__item--three-twelfths'>
+            <div class='test-content'>3/12</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--nine-twelfths'>
+            <div class='test-content'>9/12</div>
+          </div>
+        </div>
+        <div class='hig__grid'>
+          <div class='hig__grid__item hig__grid__item--four-twelfths'>
+            <div class='test-content'>4/12</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--eight-twelfths'>
+            <div class='test-content'>8/12</div>
+          </div>
+        </div>
+        <div class='hig__grid'>
+          <div class='hig__grid__item hig__grid__item--five-twelfths'>
+            <div class='test-content'>5/12</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--seven-twelfths'>
+            <div class='test-content'>7/12</div>
+          </div>
+        </div>
+        <div class='hig__grid'>
+          <div class='hig__grid__item hig__grid__item--six-twelfths'>
+            <div class='test-content'>6/12</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--six-twelfths'>
+            <div class='test-content'>6/12</div>
+          </div>
+        </div>
+        <div class='hig__grid'>
+          <div class='hig__grid__item hig__grid__item--seven-twelfths'>
+            <div class='test-content'>7/12</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--five-twelfths'>
+            <div class='test-content'>5/12</div>
+          </div>
+        </div>
+        <div class='hig__grid'>
+          <div class='hig__grid__item hig__grid__item--eight-twelfths'>
+            <div class='test-content'>8/12</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--four-twelfths'>
+            <div class='test-content'>4/12</div>
+          </div>
+        </div>
+        <div class='hig__grid'>
+          <div class='hig__grid__item hig__grid__item--nine-twelfths'>
+            <div class='test-content'>9/12</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--three-twelfths'>
+            <div class='test-content'>3/12</div>
+          </div>
+        </div>
+        <div class='hig__grid'>
+          <div class='hig__grid__item hig__grid__item--ten-twelfths'>
+            <div class='test-content'>10/12</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--two-twelfths'>
+            <div class='test-content'>2/12</div>
+          </div>
+        </div>
+        <div class='hig__grid'>
+          <div class='hig__grid__item hig__grid__item--eleven-twelfths'>
+            <div class='test-content'>11/12</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--one-twelfth'>
+            <div class='test-content'>1/12</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='container--large hig__colors__hig-gray-50--background'>
+      <div class='hig__typography hig__typography__h2'>Large Screen (min width 1921px) (24px gutter) (24px margin)</div>
+      
+      <div class='hig__spacer--stack hig__spacer--width-m'>
+        <div class='hig__typography hig__typography__h3'>4 x 1</div>
+        <div class='hig__grid'>
+          <div class='hig__grid__item hig__grid__item--one-quarter'>
+            <div class='test-content'>1/4</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--one-quarter'>
+            <div class='test-content'>1/4</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--one-quarter'>
+            <div class='test-content'>1/4</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--one-quarter'>
+            <div class='test-content'>1/4</div>
+          </div>
+        </div>
+        <div class='hig__typography hig__typography__h3'>2 x 2</div>
+        <div class='hig__grid'>
+          <div class='hig__grid__item hig__grid__item--one-half'>
+            <div class='test-content'>2/2</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--one-half'>
+            <div class='test-content'>2/2</div>
+          </div>
+        </div>
+        <div class='hig__typography hig__typography__h3'>1 x 1</div>
+        <div class='hig__grid'>
+          <div class='hig__grid__item hig__grid__item--one-whole'>
+            <div class='test-content'>1/1</div>
+          </div>
+        </div>
+      </div>
+
+      <div class='hig__spacer--stack hig__spacer--width-m'>
         <div class='hig__typography hig__typography__h3'>2 - 4 - 6</div>
         <div class='hig__grid'>
           <div class='hig__grid__item hig__grid__item--two-twelfths'>
@@ -126,6 +363,48 @@
           </div>
           <div class='hig__grid__item hig__grid__item--three-twelfths'>
             <div class='test-content'>3/12</div>
+          </div>
+        </div>
+      </div>
+
+      <div class='hig__spacer--stack hig__spacer--width-m'>
+        <div class='hig__typography hig__typography__h3'>12 x 1</div>
+        <div class='hig__grid'>
+          <div class='hig__grid__item hig__grid__item--one-twelfth'>
+            <div class='test-content'>1/12</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--one-twelfth'>
+            <div class='test-content'>1/12</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--one-twelfth'>
+            <div class='test-content'>1/12</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--one-twelfth'>
+            <div class='test-content'>1/12</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--one-twelfth'>
+            <div class='test-content'>1/12</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--one-twelfth'>
+            <div class='test-content'>1/12</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--one-twelfth'>
+            <div class='test-content'>1/12</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--one-twelfth'>
+            <div class='test-content'>1/12</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--one-twelfth'>
+            <div class='test-content'>1/12</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--one-twelfth'>
+            <div class='test-content'>1/12</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--one-twelfth'>
+            <div class='test-content'>1/12</div>
+          </div>
+          <div class='hig__grid__item hig__grid__item--one-twelfth'>
+            <div class='test-content'>1/12</div>      
           </div>
         </div>
       </div>

@@ -110,7 +110,6 @@
     @include breakpoint($breakpoint){
       @include buildAbstract("", $gutter, $margin);
     }
-    @include buildAbstract("--#{$breakpoint}", $gutter, $margin);
   }
   
   @if $breakpoint == "phone" {
