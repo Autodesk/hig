@@ -1,16 +1,15 @@
-
 import * as PropTypes from 'prop-types';
-import createComponent from '../../../adapters/createComponent';
-import HIGElement from '../../HIGElement';
-import HIGChildValidator from '../../HIGChildValidator';
+import createComponent from '../../createComponent';
+import HIGElement from '../../../elements/HIGElement';
+import HIGChildValidator from '../../../elements/HIGChildValidator';
 
 // New tabs which have state in a separate react component
 import TabsAdapterComponent, {
   TabsAdapter
-} from '../../../adapters/GlobalNav/SubNav/TabsAdapter';
-import Tabs from './Tabs';
+} from './TabsAdapter';
+import Tabs from '../../../elements/components/GlobalNav/SubNav/Tabs';
 
-export class SubNav extends HIGElement {
+export class SubNavAdapter extends HIGElement {
   componentDidMount() {
     if (this.tabs) {
       this.hig.addTabs(this.tabs.hig);
@@ -77,15 +76,15 @@ export class SubNav extends HIGElement {
   }
 }
 
-const SubNavComponent = createComponent(SubNav);
+const SubNavAdapterComponent = createComponent(SubNavAdapter);
 
-SubNavComponent.propTypes = {
+SubNavAdapterComponent.propTypes = {
   moduleIndicatorName: PropTypes.string,
   moduleIndicatorIcon: PropTypes.string,
   children: HIGChildValidator([TabsAdapterComponent, Tabs])
 };
 
-SubNavComponent.__docgenInfo = {
+SubNavAdapterComponent.__docgenInfo = {
   props: {
     moduleIndicatorName: {
       description: 'sets the moduleIndicatorName'
@@ -101,6 +100,6 @@ SubNavComponent.__docgenInfo = {
   }
 };
 
-SubNavComponent.Tabs = Tabs;
+SubNavAdapterComponent.Tabs = Tabs;
 
-export default SubNavComponent;
+export default SubNavAdapterComponent;

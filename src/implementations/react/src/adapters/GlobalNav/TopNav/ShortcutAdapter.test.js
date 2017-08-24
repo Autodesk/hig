@@ -3,18 +3,17 @@ import { mount } from 'enzyme';
 import * as HIG from 'hig-vanilla';
 import React from 'react';
 
-import GlobalNav from '../../../../adapters/GlobalNav/GlobalNavAdapter';
-import TopNav from './TopNav';
-import Shortcut from './Shortcut';
-import SharedExamples from './../SharedExamples';
+import GlobalNavAdapter from '../GlobalNavAdapter';
+import TopNavAdapter from './TopNavAdapter';
+import ShortcutAdapter from './ShortcutAdapter';
 
 const Context = props => {
   return (
-    <GlobalNav>
-      <TopNav>
-        <Shortcut title={props.title} link={props.link} icon={props.icon} />
-      </TopNav>
-    </GlobalNav>
+    <GlobalNavAdapter>
+      <TopNavAdapter>
+        <ShortcutAdapter title={props.title} link={props.link} icon={props.icon} />
+      </TopNavAdapter>
+    </GlobalNavAdapter>
   );
 };
 

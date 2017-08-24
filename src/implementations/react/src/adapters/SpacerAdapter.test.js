@@ -4,7 +4,6 @@ import React from 'react';
 
 import Slot from '../elements/components/GlobalNav/Slot';
 import Spacer from './SpacerAdapter'
-import SharedExamples from '../elements/components/GlobalNav/SharedExamples'
 
 const Context = props => {
   return (

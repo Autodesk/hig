@@ -1,45 +1,34 @@
-
-
 /**
  * Makes it simple to manage a list of child nodes within a react-hig element
  */
 export default class HIGNodeList {
-  constructor({ type, HIGConstructor, onAdd }) {
-    if (!type) {
-      throw new Error('type is required');
-    }
+  constructor(listItems) {
+    this._checkItems(listItems);
 
-    if (!HIGConstructor) {
-      throw new Error('HIGConstructor is required');
-    }
+    // This is the constructor function for the hig-vanilla partial
+    //this.listItems[constructorName].HIGConstructor;
 
-    if (!onAdd) {
-      throw new Error('onInsert is required');
-    }
+    //This is the constructor function for the HIGElement
+    //this.listItems[constructorName].type;
 
-    /**
-     * This is the constructor function for the HIGElement
-     */
-    this.type = type;
+    //This is a function which calls the hig add* method. It takes two hig instances
+    //this.listItems[constructorName].onAdd;
 
-    /**
-     * This is the constructor function for the hig-vanilla partial
-     */
-    this.HIGConstructor = HIGConstructor;
+    this.listItems = listItems;
 
-    /**
-     * This is a function which calls the hig add* method. It takes two hig instances
-     */
-    this.onAdd = onAdd;
+    this.types = this._retrieveTypes(this.listItems);
 
     this.nodes = [];
     this.mounted = false;
   }
 
   insertBefore(instance, insertBeforeIndex) {
-    if (!(instance instanceof this.type)) {
+    if (!(this.types.indexOf(instance) === -1)) {
       throw new Error(`unknown type ${instance}`);
     }
+
+    var constructorName = instance.constructor.name;
+    var onAdd = this.listItems[constructorName].onAdd;
 
     // Update the model
     const beforeChild = this._item(insertBeforeIndex);
@@ -52,10 +41,10 @@ export default class HIGNodeList {
 
     if (this.mounted) {
       if (beforeChild) {
-        this.onAdd(instance.hig, beforeChild.hig);
+        onAdd(instance.hig, beforeChild.hig);
         instance.mount();
       } else {
-        this.onAdd(instance.hig);
+        onAdd(instance.hig);
         instance.mount();
       }
     }
@@ -79,9 +68,34 @@ export default class HIGNodeList {
     return this.nodes[index];
   }
 
+  _checkItems(listItems) {
+    Object.keys(listItems).forEach(item => {
+      if (!listItems[item].type) {
+        throw new Error("type is required");
+      }
+
+      if (!listItems[item].HIGConstructor) {
+        throw new Error("HIGConstructor is required");
+      }
+
+      if (!listItems[item].onAdd) {
+        throw new Error("onInsert is required");
+      }
+    });
+  }
+
+  _retrieveTypes(listItems) {
+    var listTypes = [];
+    Object.keys(listItems).forEach(item => {
+      listTypes.push(listItems[item].type);
+    });
+    return listTypes;
+  }
+
   componentDidMount() {
     this.nodes.forEach(node => {
-      this.onAdd(node.hig);
+      const onAdd = this.listItems[node.constructor.name].onAdd;
+      onAdd(node.hig);
       node.mount();
     });
 
@@ -89,11 +103,13 @@ export default class HIGNodeList {
   }
 
   createElement(ElementConstructor, props) {
-    switch (ElementConstructor) {
-      case this.type:
-        return new this.type(this.HIGConstructor, props);
-      default:
-        throw new Error(`Unknown type ${ElementConstructor.name}`);
+    var type = this.listItems[ElementConstructor.name].type;
+    var constructor = this.listItems[ElementConstructor.name].HIGConstructor;
+
+    if (type) {
+      return new type(constructor, props);
+    } else {
+      throw new Error(`Unknown type ${ElementConstructor.name}`);
     }
   }
 

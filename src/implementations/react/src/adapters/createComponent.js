@@ -5,6 +5,7 @@ import * as PropTypes from 'prop-types';
 
 import prepareUpdate from './prepareUpdate';
 
+
 export default function createComponent(ElementConstructor) {
   const displayName = ElementConstructor.name;
 

@@ -1,27 +1,25 @@
-
-
 import { mount } from 'enzyme';
 import * as HIG from 'hig-vanilla';
 import React from 'react';
 
-import GlobalNav from '../../../../adapters/GlobalNav/GlobalNavAdapter';
-import TopNav from './TopNav';
-import ProfileComponent from '../../../../adapters/ProfileAdapter';
-import Search from '../../../../adapters/SearchAdapter';
+import GlobalNavAdapter from '../GlobalNavAdapter';
+import TopNavAdapter from './TopNavAdapter';
+import ProfileAdapter from './ProfileAdapter';
+import SearchAdapter from './SearchAdapter';
 
 const Context = props => {
   return (
-    <GlobalNav>
-      <TopNav>
-        <Search
+    <GlobalNavAdapter>
+      <TopNavAdapter>
+        <SearchAdapter
           placeholder={props.placeholder}
           query={props.query}
           onInput={props.onInput}
           onFocusIn={props.onFocusIn}
           onFocusOut={props.onFocusOut}
         />
-      </TopNav>
-    </GlobalNav>
+      </TopNavAdapter>
+    </GlobalNavAdapter>
   );
 };
 
@@ -52,11 +50,11 @@ describe('<TopNav>', () => {
     const reactContainer = document.createElement('div');
 
     mount(
-      <GlobalNav>
-        <TopNav {...defaults}>
-          <ProfileComponent {...profileDefaults} />
-        </TopNav>
-      </GlobalNav>,
+      <GlobalNavAdapter>
+        <TopNavAdapter {...defaults}>
+          <ProfileAdapter {...profileDefaults} />
+        </TopNavAdapter>
+      </GlobalNavAdapter>,
       { attachTo: reactContainer }
     );
     expect(reactContainer.firstElementChild.outerHTML).toMatchSnapshot();
@@ -70,11 +68,11 @@ describe('<TopNav>', () => {
 
     const reactContainer = document.createElement('div');
     mount(
-      <GlobalNav>
-        <GlobalNav.TopNav {...defaults}>
-          <ProfileComponent {...profileDefaults} />
-        </GlobalNav.TopNav>
-      </GlobalNav>,
+      <GlobalNavAdapter>
+        <TopNavAdapter {...defaults}>
+          <ProfileAdapter {...profileDefaults} />
+        </TopNavAdapter>
+      </GlobalNavAdapter>,
       { attachTo: reactContainer }
     );
 

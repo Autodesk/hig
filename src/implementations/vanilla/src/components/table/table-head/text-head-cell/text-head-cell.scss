@@ -1,13 +1,28 @@
 .hig__text-head-cell {
   font-weight: 700;
   font-size: 14px;
-  padding: 16px 4px;
 
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 
-  .hig__table--large & {
-    padding: 16px 6px;
+
+  padding: 20px 48px 20px 0px; 
+
+  &:last-child{
+    padding-right: 0px;
   }
+
+  .hig__table--standard & {
+    &:first-child {
+       padding: 20px 12px 20px 12px; 
+    }
+  }
+
+  .hig__table--compressed & {
+    &:first-child {
+      padding: 20px 48px 20px 32px; 
+    }
+  }
+  
 }

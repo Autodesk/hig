@@ -14,11 +14,11 @@ limitations under the License.
 
  */
 
-import HIGElement from '../../../HIGElement';
+import HIGElement from '../../../elements/HIGElement';
 import * as PropTypes from 'prop-types';
-import createComponent from '../../../../adapters/createComponent';
+import createComponent from '../../createComponent';
 
-export class Shortcut extends HIGElement {
+export class ShortcutAdapter extends HIGElement {
   commitUpdate(updatePayload, oldProps, newProps) {
     const mapping = {
       title: 'setTitle',
@@ -30,15 +30,15 @@ export class Shortcut extends HIGElement {
   }
 }
 
-const ShortcutComponent = createComponent(Shortcut);
+const ShortcutAdapterComponent = createComponent(ShortcutAdapter);
 
-ShortcutComponent.propTypes = {
+ShortcutAdapterComponent.propTypes = {
   title: PropTypes.string,
   link: PropTypes.string,
   icon: PropTypes.string
 };
 
-ShortcutComponent.__docgenInfo = {
+ShortcutAdapterComponent.__docgenInfo = {
   props: {
     title: {
       description: 'sets the title of a shortcut'
@@ -54,4 +54,4 @@ ShortcutComponent.__docgenInfo = {
   }
 };
 
-export default ShortcutComponent;
+export default ShortcutAdapterComponent;

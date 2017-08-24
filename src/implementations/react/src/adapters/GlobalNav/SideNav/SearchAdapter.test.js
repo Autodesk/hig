@@ -11,9 +11,6 @@ import Group from './GroupAdapter';
 import Module from './ModuleAdapter';
 import Submodule from './SubmoduleAdapter';
 
-import SharedExamples
-  from '../../../elements/components/GlobalNav/SharedExamples';
-
 const Context = props => {
   return (
     <GlobalNav>

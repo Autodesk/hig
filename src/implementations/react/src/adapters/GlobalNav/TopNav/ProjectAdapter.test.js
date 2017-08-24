@@ -3,11 +3,10 @@ import { mount } from 'enzyme';
 import * as HIG from 'hig-vanilla';
 import React from 'react';
 
-import GlobalNav from './GlobalNav/GlobalNavAdapter';
-import TopNav from '../elements/components/GlobalNav/TopNav/TopNav';
-import ProjectAccountSwitcher from './ProjectAccountSwitcherAdapter';
-import Project from './ProjectAdapter';
-import SharedExamples from '../elements/components/GlobalNav/SharedExamples';
+import GlobalNavAdapter from '../GlobalNavAdapter';
+import TopNavAdapter from './TopNavAdapter';
+import ProjectAccountSwitcherAdapter from './ProjectAccountSwitcherAdapter';
+import ProjectAdapter from './ProjectAdapter';
 
 const onItemClick = function() {
   return 'onItemClick';
@@ -19,13 +18,13 @@ const onClickOutside = function() {
 
 const Context = props => {
   return (
-    <GlobalNav>
-      <TopNav>
-        <ProjectAccountSwitcher>
-          <Project {...props} />
-        </ProjectAccountSwitcher>
-      </TopNav>
-    </GlobalNav>
+    <GlobalNavAdapter>
+      <TopNavAdapter>
+        <ProjectAccountSwitcherAdapter>
+          <ProjectAdapter {...props} />
+        </ProjectAccountSwitcherAdapter>
+      </TopNavAdapter>
+    </GlobalNavAdapter>
   );
 };
 
