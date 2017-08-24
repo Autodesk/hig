@@ -2,10 +2,6 @@
 @import '~helpers/css/mixins/breakpoints.scss';
 @import '~helpers/css/mixins/base.scss';
 
-.hig__table__text-cell {
-  line-height: 17px;
-}
-
 .hig__table__text-cell-detail {
   color: color(hig-slate-30);
   display: none;

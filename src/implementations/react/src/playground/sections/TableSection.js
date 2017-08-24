@@ -15,7 +15,7 @@ class TableSection extends Component {
     return <PlaygroundSection title="Table">
         <Table density="standard">
           <TableHead>
-            <TextHeadCell width="30px" />
+            <TextHeadCell width="24px" />
             <TextHeadCell text="Title" alignment="left" width="1fr" />
             <TextHeadCell text="Type" alignment="left" width="1fr" />
             <TextHeadCell text="Location" alignment="left" width="1fr" />

@@ -25,10 +25,11 @@
 
 .hig__table__text-cell,{
   .hig__table--standard & {
-    padding: 16px 48px 16px 0px;
+    padding: 12px 48px 12px 0px;
+    height: 24px;
 
     &:first-child {
-      padding-left: 12px
+       padding: 12px 48px 12px 4px;
     }
 
     &:last-child{
@@ -37,10 +38,11 @@
   }
 
   .hig__table--compressed & {
-    padding: 12px  48px 12px 0px;
+    padding: 8px  48px 8px 0px;
+    height: 24px;
 
     &:first-child {
-      padding-left: 8px
+      padding: 8px  48px 8px 8px;
     }
 
     &:last-child{
@@ -49,7 +51,8 @@
   }
 
   .hig__table--large & {
-    padding: 18px 48px 18px 0px;
+    padding: 20px 48px 20px 0px;
+    height: 32px;
 
     &:first-child {
       padding-left: 8px
@@ -63,10 +66,12 @@
 
 .hig__table__icon-cell {
   .hig__table--standard & {
-    padding: 16px 12px 16px 0px;
+    height: 24px;
+    padding: 12px 4px 12px 0px;
 
     &:first-child {
-      padding-left: 12px
+      padding: 12px 4px 12px 4px;
+
     }
   }
 
