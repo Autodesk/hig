@@ -3,10 +3,9 @@ import { mount } from 'enzyme';
 import * as HIG from 'hig-vanilla';
 import React from 'react';
 
-import GlobalNav from '../../../../adapters/GlobalNav/GlobalNavAdapter';
-import TopNav from './TopNav';
-import ProfileComponent from '../../../../adapters/ProfileAdapter';
-import SharedExamples from './../SharedExamples';
+import GlobalNavAdapter from '../../GlobalNav/GlobalNavAdapter';
+import TopNavAdapter from './TopNavAdapter';
+import ProfileAdapter from './ProfileAdapter';
 
 const onImageClick = function() {
   return 'onImageClick';
@@ -17,9 +16,9 @@ const onSignoutClick = function() {
 
 const Context = props => {
   return (
-    <GlobalNav>
-      <TopNav>
-        <ProfileComponent
+    <GlobalNavAdapter>
+      <TopNavAdapter>
+        <ProfileAdapter
           open={props.open}
           image={props.image}
           onProfileImageClick={onImageClick}
@@ -31,8 +30,8 @@ const Context = props => {
           profileSettingsLabel={props.profileSettingsLabel}
           profileSettingsLink={props.profileSettingsLink}
         />
-      </TopNav>
-    </GlobalNav>
+      </TopNavAdapter>
+    </GlobalNavAdapter>
   );
 };
 
@@ -139,11 +138,11 @@ describe('<Profile>', () => {
   describe('open and close profile flyout', () => {
     const newContext = props => {
       return (
-        <GlobalNav>
-          <TopNav>
-            <ProfileComponent open={props.open} />
-          </TopNav>
-        </GlobalNav>
+        <GlobalNavAdapter>
+          <TopNavAdapter>
+            <ProfileAdapter open={props.open} />
+          </TopNavAdapter>
+        </GlobalNavAdapter>
       );
     };
 

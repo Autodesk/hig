@@ -3,20 +3,21 @@ import { mount } from 'enzyme';
 import * as HIG from 'hig-vanilla';
 import React from 'react';
 
-import GlobalNav from '../../../adapters/GlobalNav/GlobalNavAdapter';
+import GlobalNavAdapter from '../../../../adapters/GlobalNav/GlobalNavAdapter';
+import SubNavAdapter from '../../../../adapters/GlobalNav/SubNav/SubNavAdapter';
 import Tabs from './Tabs';
 
 const Context = props => {
   return (
-    <GlobalNav>
-      <GlobalNav.SubNav>
+    <GlobalNavAdapter>
+      <SubNavAdapter>
         <Tabs defaultSelectedTab={props.tabs[0].id}>
           {props.tabs.map(tab => (
             <Tabs.Tab key={tab.key} label={tab.label} id={tab.id} />
           ))}
         </Tabs>
-      </GlobalNav.SubNav>
-    </GlobalNav>
+      </SubNavAdapter>
+    </GlobalNavAdapter>
   );
 };
 

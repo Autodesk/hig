@@ -2,30 +2,30 @@
 //import * as HIG from 'hig-vanilla';
 import * as PropTypes from 'prop-types';
 
-import HIGElement from '../../../HIGElement';
-import HIGChildValidator from '../../../HIGChildValidator';
-import createComponent from '../../../../adapters/createComponent';
+import HIGElement from '../../../elements/HIGElement';
+import HIGChildValidator from '../../../elements/HIGChildValidator';
+import createComponent from '../../createComponent';
 
-import HIGNodeList from '../../../HIGNodeList';
+import HIGNodeList from '../../../elements/HIGNodeList';
 import ProjectAccountSwitcherComponent, {
   ProjectAccountSwitcherAdapter
-} from '../../../../adapters/ProjectAccountSwitcherAdapter';
+} from './ProjectAccountSwitcherAdapter';
 import ProfileComponent, {
   ProfileAdapter
-} from '../../../../adapters/ProfileAdapter';
-import ShortcutComponent, { Shortcut } from './Shortcut';
-import HelpComponent, { HelpAdapter } from '../../../../adapters/HelpAdapter';
+} from './ProfileAdapter';
+import ShortcutAdapterComponent, { ShortcutAdapter } from './ShortcutAdapter';
+import HelpComponent, { HelpAdapter } from './HelpAdapter';
 import SearchComponent, {
   SearchAdapter
-} from '../../../../adapters/SearchAdapter';
+} from './SearchAdapter';
 
-export class TopNav extends HIGElement {
+export class TopNavAdapter extends HIGElement {
   constructor(HIGConstructor, initialProps) {
     super(HIGConstructor, initialProps);
 
     this.shortcuts = new HIGNodeList({
-      Shortcut: {
-        type: Shortcut,
+      ShortcutAdapter: {
+        type: ShortcutAdapter,
         HIGConstructor: this.hig.partials.Shortcut,
         onAdd: (instance, beforeInstance) => {
           this.hig.addShortcut(instance, beforeInstance);
@@ -95,7 +95,7 @@ export class TopNav extends HIGElement {
         );
       case HelpAdapter:
         return new HelpAdapter(this.hig.partials.Help, props);
-      case Shortcut:
+      case ShortcutAdapter:
         return this.shortcuts.createElement(ElementConstructor, props);
       case SearchAdapter:
         return new SearchAdapter(this.hig.partials.Search, props);
@@ -108,7 +108,7 @@ export class TopNav extends HIGElement {
     this.requireSingleInstance(instance);
     this.checkValidChild(instance);
 
-    if (instance instanceof Shortcut) {
+    if (instance instanceof ShortcutAdapter) {
       this.shortcuts.insertBefore(instance);
     } else {
       this[this.getPropertyNameFor(instance)] = instance;
@@ -145,7 +145,7 @@ export class TopNav extends HIGElement {
     const validInstances = [
       ProfileAdapter,
       ProjectAccountSwitcherAdapter,
-      Shortcut,
+      ShortcutAdapter,
       HelpAdapter,
       SearchAdapter
     ];
@@ -163,7 +163,7 @@ export class TopNav extends HIGElement {
     if (instance instanceof ProjectAccountSwitcherAdapter) {
       return 'projectAccountSwitcher';
     }
-    if (instance instanceof Shortcut) {
+    if (instance instanceof ShortcutAdapter) {
       return 'shortcut';
     }
     if (instance instanceof HelpAdapter) {
@@ -184,9 +184,9 @@ export class TopNav extends HIGElement {
   }
 }
 
-const TopNavComponent = createComponent(TopNav);
+const TopNavAdapterComponent = createComponent(TopNavAdapter);
 
-TopNavComponent.propTypes = {
+TopNavAdapterComponent.propTypes = {
   logo: PropTypes.string,
   logoLink: PropTypes.string,
   onHamburgerClick: PropTypes.func,
@@ -196,13 +196,13 @@ TopNavComponent.propTypes = {
   children: HIGChildValidator([
     ProfileComponent,
     ProjectAccountSwitcherComponent,
-    ShortcutComponent,
+    ShortcutAdapterComponent,
     HelpComponent,
     SearchComponent
   ])
 };
 
-TopNavComponent.__docgenInfo = {
+TopNavAdapterComponent.__docgenInfo = {
   props: {
     logo: {
       description: 'sets the logo'
@@ -221,19 +221,19 @@ TopNavComponent.__docgenInfo = {
     },
 
     addProjectAccountSwitcher: {
-      description: 'Pass in an instance of a ProjectAccountSwitcher partial to mount it to the TopNav'
+      description: 'Pass in an instance of a ProjectAccountSwitcher partial to mount it to the top nav'
     },
 
     addSearch: {
-      description: 'Pass in an instance of a topNavSearch partial to mount to TopNav'
+      description: 'Pass in an instance of a TopNavSearch partial to mount to top nav'
     }
   }
 };
 
-TopNavComponent.Profile = ProfileComponent;
-TopNavComponent.Shortcut = ShortcutComponent;
-TopNavComponent.Help = HelpComponent;
-TopNavComponent.ProjectAccountSwitcher = ProjectAccountSwitcherComponent;
-TopNavComponent.Search = SearchComponent;
+TopNavAdapterComponent.Profile = ProfileComponent;
+TopNavAdapterComponent.Shortcut = ShortcutAdapterComponent;
+TopNavAdapterComponent.Help = HelpComponent;
+TopNavAdapterComponent.ProjectAccountSwitcher = ProjectAccountSwitcherComponent;
+TopNavAdapterComponent.Search = SearchComponent;
 
-export default TopNavComponent;
+export default TopNavAdapterComponent;

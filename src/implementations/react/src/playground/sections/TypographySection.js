@@ -1,7 +1,9 @@
 import React from 'react';
 import PlaygroundSection from '../PlaygroundSection';
-import { H1, H2, H3, Sub1, Sub2, Body, Bold, Caption, Disabled, GlobalNav} from '../../react-hig'
-const Slot = GlobalNav.Slot;
+import { H1, H2, H3, Sub1, Sub2, Body, Bold, Caption, Disabled } from '../../react-hig'
+import createSlotComponent from '../../adapters/createSlotComponent';
+
+const Slot = createSlotComponent();
 
 function TypographySection() {
   return ( <PlaygroundSection title="TYPOGRAPHY">

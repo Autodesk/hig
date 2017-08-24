@@ -18,17 +18,17 @@ import { mount } from 'enzyme';
 import * as HIG from 'hig-vanilla';
 import React from 'react';
 
-import GlobalNav from './GlobalNav/GlobalNavAdapter';
-import TopNav from '../elements/components/GlobalNav/TopNav/TopNav';
-import Help from './HelpAdapter';
+import GlobalNavAdapter from '../GlobalNavAdapter';
+import TopNavAdapter from './TopNavAdapter';
+import HelpAdapter from './HelpAdapter';
 
 const Context = props => {
   return (
-    <GlobalNav>
-      <TopNav>
-        <Help title={props.title} link={props.link} />
-      </TopNav>
-    </GlobalNav>
+    <GlobalNavAdapter>
+      <TopNavAdapter>
+        <HelpAdapter title={props.title} link={props.link} />
+      </TopNavAdapter>
+    </GlobalNavAdapter>
   );
 };
 

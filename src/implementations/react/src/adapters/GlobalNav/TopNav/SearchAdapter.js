@@ -14,11 +14,11 @@ limitations under the License.
 
  */
 
-import HIGElement from '../../../HIGElement';
+import HIGElement from '../../../elements/HIGElement';
 import * as PropTypes from 'prop-types';
-import createComponent from '../../../../adapters/createComponent';
+import createComponent from '../../createComponent';
 
-export class Search extends HIGElement {
+export class SearchAdapter extends HIGElement {
   componentDidMount() {
     this.hig.onInput(this.topNavSearchOnInput.bind(this));
     this.hig.onClearIconClick(this.topNavClearInput.bind(this));
@@ -43,9 +43,9 @@ export class Search extends HIGElement {
   }
 }
 
-const SearchComponent = createComponent(Search);
+const SearchAdapterComponent = createComponent(SearchAdapter);
 
-SearchComponent.propTypes = {
+SearchAdapterComponent.propTypes = {
   placeholder: PropTypes.string,
   query: PropTypes.string,
   onClearIconClick: PropTypes.func,
@@ -54,7 +54,7 @@ SearchComponent.propTypes = {
   onFocusOut: PropTypes.func
 };
 
-SearchComponent.__docgenInfo = {
+SearchAdapterComponent.__docgenInfo = {
   props: {
     placeholder: { description: '{String} sets the placeholder text' },
     query: { description: '{String} sets the search query text' },
@@ -68,4 +68,4 @@ SearchComponent.__docgenInfo = {
     onFocusOut: { description: '{function} Triggers when input loses focus' }
   }
 };
-export default SearchComponent;
+export default SearchAdapterComponent;

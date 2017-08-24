@@ -3,21 +3,20 @@ import { mount } from 'enzyme';
 import * as HIG from 'hig-vanilla';
 import React from 'react';
 
-import GlobalNav from './GlobalNav/GlobalNavAdapter';
-import TopNav from '../elements/components/GlobalNav/TopNav/TopNav';
+import GlobalNavAdapter from '../../GlobalNav/GlobalNavAdapter';
+import TopNavAdapter from './TopNavAdapter';
 import ProjectAccountSwitcher from './ProjectAccountSwitcherAdapter';
-import SharedExamples from '../elements/components/GlobalNav/SharedExamples';
 
 const Project = ProjectAccountSwitcher.Project;
 const Account = ProjectAccountSwitcher.Account;
 
 const Context = props => {
   return (
-    <GlobalNav>
-      <TopNav>
+    <GlobalNavAdapter>
+      <TopNavAdapter>
         <ProjectAccountSwitcher {...props} activeType={'account'} />
-      </TopNav>
-    </GlobalNav>
+      </TopNavAdapter>
+    </GlobalNavAdapter>
   );
 };
 

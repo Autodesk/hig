@@ -14,9 +14,9 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
  */
-import HIGElement from '../elements/HIGElement';
+import HIGElement from '../../../elements/HIGElement';
 import * as PropTypes from 'prop-types';
-import createComponent from './createComponent';
+import createComponent from '../../createComponent';
 
 export class HelpAdapter extends HIGElement {
   commitUpdate(updatePayload, oldProps, newProps) {
@@ -41,14 +41,14 @@ export class HelpAdapter extends HIGElement {
   }
 }
 
-const HelpComponent = createComponent(HelpAdapter);
+const HelpAdapterComponent = createComponent(HelpAdapter);
 
-HelpComponent.propTypes = {
+HelpAdapterComponent.propTypes = {
   title: PropTypes.string,
   link: PropTypes.string
 };
 
-HelpComponent.__docgenInfo = {
+HelpAdapterComponent.__docgenInfo = {
   props: {
     title: {
       description: 'sets the title of a Help shortcut'
@@ -60,4 +60,4 @@ HelpComponent.__docgenInfo = {
   }
 };
 
-export default HelpComponent;
+export default HelpAdapterComponent;
