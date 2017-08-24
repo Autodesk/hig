@@ -2,10 +2,6 @@
 @import '~basics/responsive/responsive.scss';
 @import '~helpers/css/mixins/base.scss';
 
-.hig__table__slot-cell img {
-  display: none;
-
-  .hig__table--large & {
-    display: block;
-  }
+.hig__table__slot-cell {
+  overflow: hidden;
 }

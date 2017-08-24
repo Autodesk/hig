@@ -54,7 +54,7 @@
     "test-ci": "react-scripts test --env=jsdom --coverage --runInBand",
     "type-check": "tsc",
     "deploy-storybook": "npm run build-storybook && surge build/storybook",
-    "deploy-playground": "npm run lib && react-scripts build && surge build",
+    "deploy-playground": "react-scripts build && surge build",
     "postinstall": "cd ../vanilla && npm install"
   },
   "dependencies": {

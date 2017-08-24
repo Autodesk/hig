@@ -1,5 +1,3 @@
-
-
 import * as ReactHIG from './react-hig';
 
 import Button from './adapters/ButtonAdapter';

@@ -13,7 +13,7 @@ import SubNavComponent, {
   SubNav
 } from '../../elements/components/GlobalNav/SubNav';
 import Slot from '../../elements/components/GlobalNav/Slot';
-import FilterableSideNav from '../../elements/components/GlobalNav/FilterableSideNav';
+import SideNav from '../../elements/components/GlobalNav/SideNav';
 
 class GlobalNav extends HIGElement {
   constructor(initialProps) {
@@ -147,7 +147,7 @@ const GlobalNavComponent = createComponent(GlobalNav);
 GlobalNavComponent.propTypes = {
   sideNavOpen: PropTypes.bool,
   children: HIGChildValidator([
-    FilterableSideNav,
+    SideNav,
     SideNavComponent,
     TopNavComponent,
     SubNavComponent,

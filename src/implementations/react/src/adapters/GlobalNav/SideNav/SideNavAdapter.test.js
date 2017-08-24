@@ -1,4 +1,3 @@
-
 import { mount } from 'enzyme';
 import * as HIG from 'hig-vanilla';
 import React from 'react';
@@ -6,129 +5,97 @@ import React from 'react';
 import GlobalNav from '../GlobalNavAdapter';
 import SideNav from './SideNavAdapter';
 import Search from './SearchAdapter';
-import SectionList from '../../../elements/components/GlobalNav/SectionList';
-import Section from './SectionAdapter';
 import Group from './GroupAdapter';
 import Module from './ModuleAdapter';
 import Submodule from './SubmoduleAdapter';
 
-import LinkList from '../../../elements/components/GlobalNav/LinkList';
-
 describe('<SideNav>', () => {
-  function createHigNav() {
+  function createHigComponent(defaults = {}) {
     const higContainer = document.createElement('div');
-    const higNav = new HIG.GlobalNav();
+    const globalNav = new HIG.GlobalNav();
+    const sideNav = new globalNav.partials.SideNav(defaults);
 
-    higNav.mount(higContainer);
+    globalNav.mount(higContainer);
+    globalNav.addSideNav(sideNav);
 
-    return { higNav, higContainer };
+    return { higComponent: sideNav, higContainer };
   }
 
-  let Context = props => <GlobalNav>{props.children}</GlobalNav>;
-
-  it('can render a SectionList as a child', () => {
-    const { higNav, higContainer } = createHigNav();
-
-    const sideNav = new higNav.partials.SideNav();
-    higNav.addSideNav(sideNav);
-
-    const reactContainer = document.createElement('div');
-    const wrapper = mount(
+  function Context(props) {
+    return (
       <GlobalNav>
-        <SideNav>
-          <SectionList />
-        </SideNav>
-      </GlobalNav>,
-      {
-        attachTo: reactContainer
-      }
+        <SideNav {...props} />
+      </GlobalNav>
     );
+  }
 
-    expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
+  function createOrionComponent(defaults) {
+    const orionContainer = document.createElement('div');
+    const orionWrapper = mount(<Context {...defaults} />, {
+      attachTo: orionContainer
+    });
 
-    expect(reactContainer.firstChild.outerHTML).toEqual(
+    return { orionWrapper, orionContainer };
+  }
+
+  it('renders without defaults', () => {
+    const { higComponent, higContainer } = createHigComponent({});
+    const { orionWrapper, orionContainer } = createOrionComponent({});
+
+    expect(orionContainer.firstChild.outerHTML).toMatchSnapshot();
+
+    expect(orionContainer.firstChild.outerHTML).toEqual(
       higContainer.firstChild.outerHTML
     );
   });
 
-  it('errors when there are multiple SectionList elements', () => {
-    expect(() =>
-      mount(
-        <GlobalNav>
-          <SideNav>
-            <SectionList />
-            <SectionList />
-          </SideNav>
-        </GlobalNav>
-      )).toThrowError(/only one SectionList is allowed/);
-  });
+  it('renders when configured with defaults', () => {
+    const defaults = {
+      copyright: "Copyright @ 2017",
+      headerLabel: "My lovely project",
+      headerLink: "http://my-project-url.com",
+      superHeaderLabel: "My lovely account",
+      superHeaderLink: "http://my-account-url.com"
+    };
+    const { higComponent, higContainer } = createHigComponent(defaults);
+    const { orionWrapper, orionContainer } = createOrionComponent(defaults);
 
-  it('can render a LinksList as a child', () => {
-    const { higNav, higContainer } = createHigNav();
+    expect(orionContainer.firstChild.outerHTML).toMatchSnapshot();
 
-    const sideNav = new higNav.partials.SideNav();
-    higNav.addSideNav(sideNav);
-
-    const reactContainer = document.createElement('div');
-    const wrapper = mount(
-      <GlobalNav>
-        <SideNav>
-          <LinkList />
-        </SideNav>
-      </GlobalNav>,
-      {
-        attachTo: reactContainer
-      }
-    );
-
-    expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
-
-    expect(reactContainer.firstChild.outerHTML).toEqual(
+    expect(orionContainer.firstChild.outerHTML).toEqual(
       higContainer.firstChild.outerHTML
     );
   });
 
-  it('errors when there are multiple LinkList elements', () => {
-    expect(() =>
-      mount(
-        <GlobalNav>
-          <SideNav>
-            <LinkList />
-            <LinkList />
-          </SideNav>
-        </GlobalNav>
-      )).toThrowError(/only one LinkList is allowed/);
-  });
+  it('renders when configured with updated props', () => {
+    const defaults = {
+      copyright: "Copyright @ 2017",
+      headerLabel: "My lovely project",
+      headerLink: "http://my-project-url.com",
+      superHeaderLabel: "My lovely account",
+      superHeaderLink: "http://my-account-url.com"
+    };
+    const nextProps = {
+      copyright: "Copyright @ 2018",
+      headerLabel: "My updated project",
+      headerLink: "http://my-updated-project-url.com",
+      superHeaderLabel: "My updated account",
+      superHeaderLink: "http://my-updated-account-url.com"
+    }
+    const { higComponent, higContainer } = createHigComponent(defaults);
+    const { orionWrapper, orionContainer } = createOrionComponent(defaults);
 
-  it('can not render HTML elements as children', () => {
-    global.console.error = jest.fn();
+    orionWrapper.setProps(nextProps);
+    higComponent.setCopyright(nextProps.copyright);
+    higComponent.setHeaderLabel(nextProps.headerLabel);
+    higComponent.setHeaderLink(nextProps.headerLink);
+    higComponent.setSuperHeaderLabel(nextProps.superHeaderLabel);
+    higComponent.setSuperHeaderLink(nextProps.superHeaderLink);
 
-    mount(
-      <GlobalNav>
-        <SideNav>
-          <div>Hello world!</div>
-        </SideNav>
-      </GlobalNav>
-    );
+    expect(orionContainer.firstChild.outerHTML).toMatchSnapshot();
 
-    expect(console.error).toBeCalledWith(
-      expect.stringMatching(/'div' is not a valid child of SideNav./)
-    );
-  });
-
-  it('can not render text as children', () => {
-    global.console.error = jest.fn();
-
-    mount(
-      <GlobalNav>
-        <SideNav>
-          Hello World!
-        </SideNav>
-      </GlobalNav>
-    );
-
-    expect(console.error).toBeCalledWith(
-      expect.stringMatching(/'Hello World!' is not a valid child of SideNav./)
+    expect(orionContainer.firstChild.outerHTML).toEqual(
+      higContainer.firstChild.outerHTML
     );
   });
 
@@ -137,20 +104,14 @@ describe('<SideNav>', () => {
       return (
         <GlobalNav>
           <SideNav>
+            <Group>
+              <Module title={props.moduleTitle} icon="assets">
+                <Submodule title={props.submoduleTitle1} icon="assets" />
+                <Submodule title={props.submoduleTitle2} icon="assets" />
+              </Module>
+            </Group>
             <Search query={props.query} />
-            <SectionList>
-              <Section headerLabel="Project" headerName="Thunderstor">
-                <Group>
-                  <Module title={props.moduleTitle} icon="assets">
-                    <Submodule title={props.submoduleTitle1} icon="assets" />
-                    <Submodule title={props.submoduleTitle2} icon="assets" />
-                  </Module>
-                </Group>
-              </Section>
-
-            </SectionList>
           </SideNav>
-
         </GlobalNav>
       );
     };

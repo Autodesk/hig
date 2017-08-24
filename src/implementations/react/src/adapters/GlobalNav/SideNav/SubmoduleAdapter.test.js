@@ -21,8 +21,6 @@ import TestUtils from 'react-dom/test-utils';
 
 import GlobalNav from '../GlobalNavAdapter';
 import SideNav from './SideNavAdapter';
-import SectionList from '../../../elements/components/GlobalNav/SectionList';
-import Section from './SectionAdapter';
 import Group from './GroupAdapter';
 import Module from './ModuleAdapter';
 import Submodule from './SubmoduleAdapter';
@@ -34,18 +32,13 @@ describe('<SubmoduleAdapter>', () => {
     const higContainer = document.createElement('div');
     const globalNav = new HIG.GlobalNav();
     const sideNav = new globalNav.partials.SideNav();
-    const section = new sideNav.partials.Section({
-      label: 'Project',
-      title: 'Runway'
-    });
-    const group = new section.partials.Group();
+    const group = new sideNav.partials.Group();
     const module = new group.partials.Module({ icon: 'assets' });
     const submodule = new module.partials.Submodule(defaults);
 
     globalNav.mount(higContainer);
     globalNav.addSideNav(sideNav);
-    sideNav.addSection(section);
-    section.addGroup(group);
+    sideNav.addGroup(group);
     group.addModule(module);
     module.addSubmodule(submodule);
     submodule.show();
@@ -57,15 +50,11 @@ describe('<SubmoduleAdapter>', () => {
     return (
       <GlobalNav>
         <SideNav>
-          <SectionList>
-            <Section label="Project" title="Runway">
-              <Group>
-                <Module icon="assets">
-                  <SubmoduleAdapter {...props} />
-                </Module>
-              </Group>
-            </Section>
-          </SectionList>
+          <Group>
+            <Module icon="assets">
+              <SubmoduleAdapter {...props} />
+            </Module>
+          </Group>
         </SideNav>
       </GlobalNav>
     );

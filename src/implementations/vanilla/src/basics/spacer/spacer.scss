@@ -1,22 +1,4 @@
-// Spacing Function
-// Used to get a spacing value, for example:
-// div {
-//   margin-bottom: spacing(xl);
-// }
-@function spacing($size-name) {
-  @return map-get($sizes, $size-name);
-}
-
-$sizes: (
-  none: 0,
-  xxs: 4px,
-  xs: 8px,
-  s: 12px,
-  m: 16px,
-  l: 24px,
-  xl: 32px,
-  xxl: 64px,
-);
+@import '~helpers/css/mixins/spacing.scss';
 
 .hig__spacer {
   display: block;
@@ -26,7 +8,7 @@ $sizes: (
   display: inline-block;
 }
 
-@each $size-name, $size-value in $sizes {
+@each $size-name, $size-value in $spacing-sizes {
   .hig__spacer--inset-#{$size-name} {
     padding: $size-value;
   }

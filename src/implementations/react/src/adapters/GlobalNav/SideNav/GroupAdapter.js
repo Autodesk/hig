@@ -1,18 +1,18 @@
-
 import createComponent from '../../createComponent';
 import HIGElement from '../../../elements/HIGElement';
 import HIGNodeList from '../../../elements/HIGNodeList';
 import HIGChildValidator from '../../../elements/HIGChildValidator';
 import ModuleComponent, {
-  Module
+  ModuleAdapter
 } from '../../../adapters/GlobalNav/SideNav/ModuleAdapter';
+import Module from '../../../elements/components/GlobalNav/SideNav/Module';
 
 export class GroupAdapter extends HIGElement {
   constructor(HIGConstructor, initialProps) {
     super(HIGConstructor, initialProps);
 
     this.modules = new HIGNodeList({
-      type: Module,
+      type: ModuleAdapter,
       HIGConstructor: this.hig.partials.Module,
       onAdd: (instance, beforeInstance) => {
         this.hig.addModule(instance, beforeInstance);
@@ -40,7 +40,7 @@ export class GroupAdapter extends HIGElement {
 const GroupComponent = createComponent(GroupAdapter);
 
 GroupComponent.propTypes = {
-  children: HIGChildValidator([ModuleComponent])
+  children: HIGChildValidator([ModuleComponent, Module])
 };
 
 GroupComponent.__docgenInfo = {
