@@ -1,5 +1,5 @@
 @import '~basics/colors/colors.scss';
-@import '~helpers/css/mixins/breakpoints.scss';
+@import '~basics/responsive/responsive.scss';
 
 .hig__table__th {
   border-bottom: 1px solid color(hig-slate-dark);

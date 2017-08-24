@@ -93,8 +93,8 @@
   }
 }
 
-@mixin buildAbstract($suffix, $gutter, $margin){
-  .hig__grid#{$suffix}{
+@mixin buildAbstract($gutter, $margin){
+  .hig__grid{
     $margin_rest: $margin - ($gutter/2);    
     width: calc(100% - #{$margin_rest * 2});
     padding: 0 $margin_rest;
@@ -108,7 +108,7 @@
 @mixin buildGrid($breakpoint, $total_columns, $gutter, $margin){
   @if $breakpoint != "" {
     @include breakpoint($breakpoint){
-      @include buildAbstract("", $gutter, $margin);
+      @include buildAbstract($gutter, $margin);
     }
   }
   
@@ -147,7 +147,7 @@
     @include twelfths("--desktop", 24px);
   }
   @else{
-    @include buildAbstract("", $gutter, $margin);
+    @include buildAbstract($gutter, $margin);
     @include quarters("", 24px);
     @include eighths("", 24px);
     @include twelfths("", 24px);
