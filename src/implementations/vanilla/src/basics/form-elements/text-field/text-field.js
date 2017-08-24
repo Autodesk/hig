@@ -40,6 +40,17 @@ class TextField extends Core {
         }
     }
 
+    showClearButton() {
+        const buttonElement = this.el.querySelector('.hig__text-field__clear-button');
+        const iconString = this._getIconString('clear-small');
+        buttonElement.innerHTML = iconString;
+        this.el.classList.add('hig__text-field--clear-button-visible');
+    }
+
+    hideClearButton() {
+        this.el.classList.remove('hig__text-field--clear-button-visible');
+    }
+
     setLabel(label){
         const labelEl = this._findDOMEl('.hig__text-field__label', this.el);
         labelEl.textContent = label;
@@ -50,6 +61,11 @@ class TextField extends Core {
 
     setPlaceholder(placeholder){
         this._findDOMEl('.hig__text-field__input', this.el).setAttribute('placeholder', placeholder);
+    }
+
+    getValue(){
+      const inputEl = this._findDOMEl('.hig__text-field__input', this.el);
+      return inputEl.getAttribute('value');
     }
 
     setValue(value){
@@ -113,6 +129,10 @@ class TextField extends Core {
 
     onInput(fn){
         return this._attachListener("input", '.hig__text-field__input', this.el, fn);
+    }
+
+    onClearButtonClick(fn){
+        return this._attachListener("click", '.hig__text-field__clear-button', this.el, fn);
     }
 
     enable() {
