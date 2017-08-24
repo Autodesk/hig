@@ -32,7 +32,7 @@ export class SlotHeadCellAdapter extends HIGElement {
         case "children": {
           //no-op
           break;
-        }
+        } 
         default: {
           console.warn(`${propKey} is unknown`);
         }

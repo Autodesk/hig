@@ -3,26 +3,7 @@
 @import '~helpers/css/mixins/base.scss';
 
 .hig__table__text-cell {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-
-
-
-  .hig__table--standard & {
-    height: 16px;
-    line-height: 14px;
-  }
-
-  .hig__table--compressed & {
-    height: 14px;
-    line-height: 14px;
-  }
-
-  .hig__table--large & {
-    height: 32px;
-    line-height: 16px;
-  }
+  line-height: 17px;
 }
 
 .hig__table__text-cell-detail {
@@ -33,4 +14,11 @@
   .hig__table--large & {
     display: block;
   }
+}
+
+
+.hig__table__text-cell-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
