@@ -38,6 +38,8 @@ class TextField extends Core {
         if (this.initialOptions && this.initialOptions.icon) {
             this.setIcon(this.initialOptions.icon);
         }
+        this._findDOMEl('.hig__text-field__clear-button')
+            .addEventListener('click', () => this._clearValue());
     }
 
     setLabel(label){
@@ -57,6 +59,10 @@ class TextField extends Core {
         inputEl.setAttribute('value', value);
         inputEl.value = value;
         this._detectPresenceOfValue(value);
+    }
+
+    _clearValue() {
+        this.setValue('');
     }
 
     setName(name){
@@ -135,14 +141,28 @@ class TextField extends Core {
 
     _detectPresenceOfValue(value) {
         if (value.length === 0) {
+            this._hideClearButton();
             this.el.querySelector('.hig__text-field__input').classList.add('hig__text-field__input--no-value');
         } else {
+            this._showClearButton();
             this.el.querySelector('.hig__text-field__input').classList.remove('hig__text-field__input--no-value');
         }
     }
 
     _setType(type) {
         this.el.querySelector('.hig__text-field__input').setAttribute('type', type);
+    }
+
+    _showClearButton() {
+        const button = this.el.querySelector('.hig__text-field__clear-button');
+        const iconString = this._getIconString('clear-small');
+        button.innerHTML = iconString;
+        button.classList.add('hig__text-field__clear-button--show');
+    }
+
+    _hideClearButton() {
+        const button = this.el.querySelector('.hig__text-field__clear-button');
+        button.classList.remove('hig__text-field__clear-button--show');
     }
 
     _showPasswordRevealButton() {
