@@ -3,9 +3,9 @@ import { mount } from 'enzyme';
 import * as HIG from 'hig-vanilla';
 import React from 'react';
 
-import GlobalNav from './GlobalNavAdapter';
+import GlobalNavAdapter from './GlobalNavAdapter';
 
-describe('<GlobalNav>', () => {
+describe('<GlobalNavAdapter>', () => {
   /**
      * Creates a hig-vanilla GlobalNav and returns the instance and it's container
      */
@@ -24,7 +24,7 @@ describe('<GlobalNav>', () => {
     const { higNav, higContainer } = createHigNav();
 
     const reactContainer = document.createElement('div');
-    const wrapper = mount(<GlobalNav />, { attachTo: reactContainer });
+    const wrapper = mount(<GlobalNavAdapter />, { attachTo: reactContainer });
 
     expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
 
@@ -37,7 +37,7 @@ describe('<GlobalNav>', () => {
     it('shows an error if it is not a boolean', () => {
       global.console.error = jest.fn();
 
-      mount(<GlobalNav sideNavOpen="foo" />);
+      mount(<GlobalNavAdapter sideNavOpen="foo" />);
 
       expect(console.error).toBeCalledWith(
         expect.stringMatching(
@@ -49,7 +49,7 @@ describe('<GlobalNav>', () => {
     it('is equal to showSideNav', () => {
       const { higNav, higContainer } = createHigNav();
       const reactContainer = document.createElement('div');
-      const wrapper = mount(<GlobalNav />, { attachTo: reactContainer });
+      const wrapper = mount(<GlobalNavAdapter />, { attachTo: reactContainer });
 
       higNav.showSideNav();
 
@@ -74,7 +74,7 @@ describe('<GlobalNav>', () => {
     it('can showSideNav by default', () => {
       const { higNav, higContainer } = createHigNav();
       const reactContainer = document.createElement('div');
-      const wrapper = mount(<GlobalNav sideNavOpen={true} />, {
+      const wrapper = mount(<GlobalNavAdapter sideNavOpen={true} />, {
         attachTo: reactContainer
       });
 
@@ -95,9 +95,9 @@ describe('<GlobalNav>', () => {
 
       const reactContainer = document.createElement('div');
       const wrapper = mount(
-        <GlobalNav>
-          <GlobalNav.SideNav />
-        </GlobalNav>,
+        <GlobalNavAdapter>
+          <GlobalNavAdapter.SideNav />
+        </GlobalNavAdapter>,
         {
           attachTo: reactContainer
         }
@@ -113,10 +113,10 @@ describe('<GlobalNav>', () => {
     it('can only render a single SideNav', () => {
       expect(() => {
         mount(
-          <GlobalNav>
-            <GlobalNav.SideNav />
-            <GlobalNav.SideNav />
-          </GlobalNav>
+          <GlobalNavAdapter>
+            <GlobalNavAdapter.SideNav />
+            <GlobalNavAdapter.SideNav />
+          </GlobalNavAdapter>
         );
       }).toThrowError(/only one SideNav is allowed/);
     });
@@ -126,7 +126,7 @@ describe('<GlobalNav>', () => {
     const { higNav, higContainer } = createHigNav();
 
     const reactContainer = document.createElement('div');
-    const wrapper = mount(<GlobalNav />, { attachTo: reactContainer });
+    const wrapper = mount(<GlobalNavAdapter />, { attachTo: reactContainer });
 
     expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
 
@@ -139,15 +139,15 @@ describe('<GlobalNav>', () => {
     global.console.error = jest.fn();
 
     mount(
-      <GlobalNav>
-        <GlobalNav.TopNav />
+      <GlobalNavAdapter>
+        <GlobalNavAdapter.TopNav />
         <div>Hello world!</div>
-      </GlobalNav>
+      </GlobalNavAdapter>
     );
 
     expect(console.error).toBeCalledWith(
       expect.stringMatching(
-        /'div' is not a valid child of GlobalNav. Children should be of type ', SideNavAdapter, TopNav, SubNav, Slot'/
+        /'div' is not a valid child of GlobalNav. Children should be of type ', SideNavAdapter, TopNavAdapter, SubNavAdapter, Slot'/
       )
     );
   });
@@ -156,14 +156,14 @@ describe('<GlobalNav>', () => {
     global.console.error = jest.fn();
 
     mount(
-      <GlobalNav>
+      <GlobalNavAdapter>
         some random child text
-      </GlobalNav>
+      </GlobalNavAdapter>
     );
 
     expect(console.error).toBeCalledWith(
       expect.stringMatching(
-        /'some random child text' is not a valid child of GlobalNav. Children should be of type ', SideNavAdapter, TopNav, SubNav, Slot'/
+        /'some random child text' is not a valid child of GlobalNav. Children should be of type ', SideNavAdapter, TopNavAdapter, SubNavAdapter, Slot'/
       )
     );
   });

@@ -1,23 +1,22 @@
-
 import { mount } from 'enzyme';
 import * as HIG from 'hig-vanilla';
 import React from 'react';
 
-import GlobalNav from '../../../adapters/GlobalNav/GlobalNavAdapter';
-import SubNav from './SubNav';
-import Tabs from './Tabs';
-import Tab from '../../../adapters/GlobalNav/SubNav/TabAdapter';
+import GlobalNavAdapter from '../GlobalNavAdapter';
+import SubNavAdapter from './SubNavAdapter';
+import TabsAdapter from './TabsAdapter';
+import TabAdapter from './TabAdapter';
 
 const Context = props => {
   return (
-    <GlobalNav>
-      <SubNav
+    <GlobalNavAdapter>
+      <SubNavAdapter
         moduleIndicatorName={props.moduleIndicatorName}
         moduleIndicatorIcon={props.moduleIndicatorIcon}
       >
         {props.Tabs}
-      </SubNav>
-    </GlobalNav>
+      </SubNavAdapter>
+    </GlobalNavAdapter>
   );
 };
 
@@ -65,9 +64,9 @@ describe('<SubNav>', () => {
     const updatedProps1 = {
       ...defaultProps,
       Tabs: (
-        <Tabs defaultSelectedTabId={1}>
-          <Tabs.Tab label="Things" key={1} id={1} />
-        </Tabs>
+        <TabsAdapter defaultSelectedTabId={1}>
+          <TabAdapter label="Things" key={1} id={1} />
+        </TabsAdapter>
       )
     };
     const updatedProps2 = { ...defaultProps, Tabs: null };

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import GlobalNavAdapter from '../../../adapters/GlobalNav/GlobalNavAdapter';
-import TopNavAdapter from './TopNav/TopNav';
+import TopNavAdapter from '../../../adapters/GlobalNav/TopNav/TopNavAdapter';
 import SideNav from './SideNav';
 import Slot from './Slot';
 

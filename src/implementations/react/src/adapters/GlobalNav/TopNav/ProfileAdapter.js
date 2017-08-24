@@ -1,8 +1,6 @@
-
-
 import * as PropTypes from 'prop-types';
-import HIGElement from '../elements/HIGElement';
-import createComponent from './createComponent';
+import HIGElement from '../../../elements/HIGElement';
+import createComponent from '../../createComponent';
 
 export class ProfileAdapter extends HIGElement {
   constructor(HIGConstructor, initialProps) {

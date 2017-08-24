@@ -6,12 +6,12 @@ import HIGChildValidator from '../../elements/HIGChildValidator';
 import createComponent from '../createComponent';
 
 import SideNavAdapterComponent, { SideNavAdapter } from './SideNav/SideNavAdapter';
-import TopNavComponent, {
-  TopNav
-} from '../../elements/components/GlobalNav/TopNav/TopNav';
-import SubNavComponent, {
-  SubNav
-} from '../../elements/components/GlobalNav/SubNav';
+import TopNavAdapterComponent, {
+  TopNavAdapter
+} from './TopNav/TopNavAdapter';
+import SubNavAdapterComponent, {
+  SubNavAdapter
+} from './SubNav/SubNavAdapter';
 import Slot from '../../elements/components/GlobalNav/Slot';
 import SideNav from '../../elements/components/GlobalNav/SideNav';
 
@@ -50,10 +50,10 @@ class GlobalNav extends HIGElement {
 
   createElement(ElementConstructor, props) {
     switch (ElementConstructor) {
-      case TopNav:
-        return new TopNav(this.hig.partials.TopNav, props);
-      case SubNav:
-        return new SubNav(this.hig.partials.SubNav, props);
+      case TopNavAdapter:
+        return new TopNavAdapter(this.hig.partials.TopNav, props);
+      case SubNavAdapter:
+        return new SubNavAdapter(this.hig.partials.SubNav, props);
       case SideNavAdapter:
         return new SideNavAdapter(this.hig.partials.SideNav, props);
       default:
@@ -72,7 +72,7 @@ class GlobalNav extends HIGElement {
           instance.mount();
         }
       }
-    } else if (instance instanceof TopNav) {
+    } else if (instance instanceof TopNavAdapter) {
       if (this.topNav) {
         throw new Error('only one TopNav is allowed');
       } else {
@@ -82,7 +82,7 @@ class GlobalNav extends HIGElement {
           instance.mount();
         }
       }
-    } else if (instance instanceof SubNav) {
+    } else if (instance instanceof SubNavAdapter) {
       if (this.subNav) {
         throw new Error('only one SubNav is allowed');
       } else {
@@ -112,9 +112,9 @@ class GlobalNav extends HIGElement {
   removeChild(instance) {
     if (instance instanceof SideNavAdapter) {
       this.sideNav = null;
-    } else if (instance instanceof TopNav) {
+    } else if (instance instanceof TopNavAdapter) {
       this.topNav = null;
-    } else if (instance instanceof SubNav) {
+    } else if (instance instanceof SubNavAdapter) {
       this.subNav = null;
     }
     instance.unmount();
@@ -149,8 +149,8 @@ GlobalNavComponent.propTypes = {
   children: HIGChildValidator([
     SideNav,
     SideNavAdapterComponent,
-    TopNavComponent,
-    SubNavComponent,
+    TopNavAdapterComponent,
+    SubNavAdapterComponent,
     Slot,
   ])
 };
@@ -168,8 +168,8 @@ GlobalNavComponent.__docgenInfo = {
 };
 
 GlobalNavComponent.SideNav = SideNavAdapterComponent;
-GlobalNavComponent.TopNav = TopNavComponent;
-GlobalNavComponent.SubNav = SubNavComponent;
+GlobalNavComponent.TopNav = TopNavAdapterComponent;
+GlobalNavComponent.SubNav = SubNavAdapterComponent;
 GlobalNavComponent.Slot = Slot;
 
 export default GlobalNavComponent;

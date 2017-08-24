@@ -15,13 +15,13 @@
 
  */
 import React from 'react';
-import { Button, GlobalNav, SideNav} from '../react-hig';
+import { Button, GlobalNav } from '../react-hig';
 
 import 'hig-vanilla/dist/hig.css';
 import './index.css';
 
-import logo from './images/bim-logo.png';
-import profileImage from './images/profileImage.png';
+// import logo from './images/bim-logo.png';
+// import profileImage from './images/profileImage.png';
 import TopNavFixtures from './fixtures/topNavFixtures';
 import sideNavFixtures from './fixtures/sideNavFixtures';
 
@@ -195,6 +195,7 @@ class Playground extends React.Component {
           <TableSection/>
         </GlobalNav>
       </div>
+    );
   }
 }
 

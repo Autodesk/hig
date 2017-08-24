@@ -1,10 +1,8 @@
-
-
 import * as PropTypes from 'prop-types';
-import HIGElement from '../elements/HIGElement';
-import createComponent from './createComponent';
+import createComponent from '../../createComponent';
+import HIGElement from '../../../elements/HIGElement';
 
-export class ProjectAdapter extends HIGElement {
+export class AccountAdapter extends HIGElement {
   constructor(HIGConstructor, initialProps) {
     super(HIGConstructor, initialProps);
 
@@ -62,9 +60,9 @@ export class ProjectAdapter extends HIGElement {
   }
 }
 
-const ProjectComponent = createComponent(ProjectAdapter);
+const AccountComponent = createComponent(AccountAdapter);
 
-ProjectComponent.propTypes = {
+AccountComponent.propTypes = {
   image: PropTypes.string,
   label: PropTypes.string,
   activate: PropTypes.func,
@@ -72,24 +70,24 @@ ProjectComponent.propTypes = {
   onClick: PropTypes.func
 };
 
-ProjectComponent.__docgenInfo = {
+AccountComponent.__docgenInfo = {
   props: {
     label: {
-      description: 'sets {String} the label displayed for a project in project/account switcher'
+      description: 'sets {String} the label displayed for an account in Account/account switcher'
     },
     image: {
-      description: 'sets {String} the image displayed for a project in project/account switcher'
+      description: 'sets {String} the image displayed for an account in Account/account switcher'
     },
     activate: {
-      description: '{func} activates the project'
+      description: '{func} activates the Account'
     },
     deactivate: {
-      description: '{func} deactivates the project'
+      description: '{func} deactivates the Account'
     },
     onClick: {
-      description: '{func} calls the provided callback when user clicks on the project'
+      description: '{func} calls the provided callback when user clicks on the Account'
     }
   }
 };
 
-export default ProjectComponent;
+export default AccountComponent;

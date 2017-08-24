@@ -1,8 +1,8 @@
 import * as PropTypes from "prop-types";
-import HIGElement from "../elements/HIGElement";
-import HIGNodeList from "../elements/HIGNodeList";
-import HIGChildValidator from "../elements/HIGChildValidator";
-import createComponent from "./createComponent";
+import HIGElement from "../../../elements/HIGElement";
+import HIGNodeList from "../../../elements/HIGNodeList";
+import HIGChildValidator from "../../../elements/HIGChildValidator";
+import createComponent from "../../createComponent";
 import AccountComponent, { AccountAdapter } from "./AccountAdapter";
 import ProjectComponent, { ProjectAdapter } from "./ProjectAdapter";
 

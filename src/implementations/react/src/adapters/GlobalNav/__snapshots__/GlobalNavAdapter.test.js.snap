@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<GlobalNav> can render the Container as a child 1`] = `
+exports[`<GlobalNavAdapter> can render the Container as a child 1`] = `
 "<div class=\\"hig__global-nav\\">
     <!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
@@ -13,7 +13,7 @@ exports[`<GlobalNav> can render the Container as a child 1`] = `
 </div>"
 `;
 
-exports[`<GlobalNav> renders the global nav 1`] = `
+exports[`<GlobalNavAdapter> renders the global nav 1`] = `
 "<div class=\\"hig__global-nav\\">
     <!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
@@ -26,7 +26,7 @@ exports[`<GlobalNav> renders the global nav 1`] = `
 </div>"
 `;
 
-exports[`<GlobalNav> sideNavOpen prop can render the SideNav as a child 1`] = `
+exports[`<GlobalNavAdapter> sideNavOpen prop can render the SideNav as a child 1`] = `
 "<div class=\\"hig__global-nav\\">
     <div class=\\"hig__global-nav__sidenav\\">
   <div class=\\"hig__global-nav__sidenav__scroll\\">
@@ -54,7 +54,7 @@ exports[`<GlobalNav> sideNavOpen prop can render the SideNav as a child 1`] = `
 </div>"
 `;
 
-exports[`<GlobalNav> sideNavOpen prop can showSideNav by default 1`] = `
+exports[`<GlobalNavAdapter> sideNavOpen prop can showSideNav by default 1`] = `
 "<div class=\\"hig__global-nav hig__global-nav--open\\">
     <!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
@@ -67,7 +67,7 @@ exports[`<GlobalNav> sideNavOpen prop can showSideNav by default 1`] = `
 </div>"
 `;
 
-exports[`<GlobalNav> sideNavOpen prop is equal to showSideNav 1`] = `
+exports[`<GlobalNavAdapter> sideNavOpen prop is equal to showSideNav 1`] = `
 "<div class=\\"hig__global-nav hig__global-nav--open\\">
     <!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
@@ -80,7 +80,7 @@ exports[`<GlobalNav> sideNavOpen prop is equal to showSideNav 1`] = `
 </div>"
 `;
 
-exports[`<GlobalNav> sideNavOpen prop is equal to showSideNav 2`] = `
+exports[`<GlobalNavAdapter> sideNavOpen prop is equal to showSideNav 2`] = `
 "<div class=\\"hig__global-nav\\">
     <!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">

@@ -1,6 +1,6 @@
 import React from 'react';
 import PlaygroundSection from '../PlaygroundSection';
-import {Spacer, GlobalNav} from '../../react-hig';
+import { Spacer } from '../../react-hig';
 import createSlotComponent from '../../adapters/createSlotComponent';
 
 const Slot = createSlotComponent();
