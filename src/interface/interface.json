@@ -879,6 +879,11 @@
               "desc": "Calls the provided callback when user clicks on the hamburger icon",
               "params": "HIG.abstract.EventObject.params",
               "returns": "HIG.abstract.EventObject.returns"
+            },
+            "onLogoClick": {
+              "desc": "Calls the provided callback when user clicks on the logo",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
             }
           },
           "defaults": {

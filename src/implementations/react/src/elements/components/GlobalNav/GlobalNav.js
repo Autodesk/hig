@@ -28,7 +28,15 @@ class GlobalNav extends Component {
     submodules: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired
-    }))
+    })),
+    topNav: PropTypes.shape({
+      logo: PropTypes.string,
+      logoLink: PropTypes.string,
+    })
+  }
+
+  static defaultProps = {
+    topNav: {}
   }
 
   constructor(props) {
@@ -43,7 +51,7 @@ class GlobalNav extends Component {
   render() {
     return (
       <GlobalNavAdapter sideNavOpen={this.state.sideNavOpen}>
-        <TopNavAdapter onHamburgerClick={this.toggleSideNavOpen}/>
+        <TopNavAdapter onHamburgerClick={this.toggleSideNavOpen} {...this.props.topNav} />
         <SideNav
           onModuleChange={this.props.onModuleChange}
           modules={this.props.modules}
