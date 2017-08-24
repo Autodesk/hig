@@ -77,7 +77,7 @@
               "desc": "Content for the grid item",
               "params": ["{HTMLElement} HTMLElement"]
             },
-            "changeFraction": {
+            "setFraction": {
               "fraction": "see defaults"
             }
           },

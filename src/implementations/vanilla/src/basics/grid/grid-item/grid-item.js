@@ -19,7 +19,7 @@ class GridItem extends Core {
     this.mountPartialToComment('SLOT', slotElement);
   }
 
-  changeFraction(fraction){
+  setFraction(fraction){
     this.el.classList = "";
     this.el.classList.add("hig__grid__item", "hig__grid__item--"+fraction);
   }
