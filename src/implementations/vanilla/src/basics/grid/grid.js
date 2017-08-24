@@ -2,7 +2,9 @@ import './grid.scss';
 
 const Template = require('./grid.html');
 var Interface = require('interface.json');
-var Core = require('../../helpers/js/_core.js');
+var Core = require('_core.js');
+
+var GridItem = require('./grid-item/grid-item.js');
 
 /**
  * Creates a Grid
@@ -12,17 +14,21 @@ var Core = require('../../helpers/js/_core.js');
 
 class Grid extends Core {
 
-  constructor(options = {}) {
+  constructor(options) {
     super(options);
     this._render(Template, options);
   }
 
+  addGridItem(gridItem){
+    this.mountPartialToComment('GRIDITEM', gridItem);
+  }
+
 }
 
-
 Grid._interface = Interface['basics']['Grid'];
-Grid._defaults = {
-
-};
+Grid._defaults = {};
+Grid._partials = {
+  GridItem: GridItem
+}
 
 module.exports = Grid;
