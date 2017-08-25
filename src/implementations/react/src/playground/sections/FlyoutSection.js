@@ -18,6 +18,24 @@ class FlyoutSection extends Component {
     this.setState({ isOpen: true });
   };
 
+  setContent = (el) => {
+    this.setState({ content: el });
+  }
+
+  setTarget = (el) => {
+    this.setState({ target: el });
+
+  }
+
+  myFlyoutContent = () => {
+    return (
+      <div>
+        <h3>Important flyout information</h3>
+        <p>You can put what ever you want in here.</p>
+      </div>
+    );
+  };
+
   render() {
     const buttonProps = [
       { title: 'Cancel', type: 'secondary', onClick: this.closeFlyout },
@@ -26,7 +44,7 @@ class FlyoutSection extends Component {
 
     return (
       <PlaygroundSection title="Flyout">
-        <Button title="Open flyout" onClick={this.openFlyout} />
+        
         <Flyout
           title="Are you sure?"
           isOpen={this.state.isOpen}
@@ -34,9 +52,16 @@ class FlyoutSection extends Component {
           body="This is the text body of my flyout"
           headerColor="gray"
           onClose={this.closeFlyout}
+          content={this.state.content}
+          target={this.state.target}
+
         >
-          <h1><u>This is my HTML title</u></h1>
-          <p><i>This is my HTML content.</i></p>
+          <div ref={this.setContent}>
+            {this.myFlyoutContent()};
+           </div> 
+          <div ref={this.setTarget}>
+            <Button title="Open flyout" onClick={this.openFlyout} />;
+          </div>
         </Flyout>
       </PlaygroundSection>
     )
