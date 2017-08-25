@@ -63,6 +63,30 @@
         "type": "{String} h1, h2, h3, sub1, sub2, body, bold, disabled or caption"
       }
     },
+    "Grid": {
+      "methods": {
+        "addGridItem": {
+          "desc": "Add a GridItem to your grid",
+          "params": ["{GridItem} GridItem"]
+        }
+      },
+      "partials": {
+        "GridItem": {
+          "methods": {
+            "addSlot": {
+              "desc": "Content for the grid item",
+              "params": ["{HTMLElement} HTMLElement"]
+            },
+            "setFraction": {
+              "fraction": "see defaults"
+            }
+          },
+          "defaults": {
+            "fraction": "fraction in english, with 1, 2, 4, 8, 12 as nominators, so our possible values are: 'one-whole', 'one-half', 'one-quarter', 'two-quarter', 'three-quarter', 'one-eighth', 'two-eighths', 'three-eighths', 'four-eighths', 'five-eights', 'six-eighths', 'seven-eighths', 'one-twelfth', 'two-twelfths', 'three-twelfths', 'four-twelfths', 'five-twelfths', 'six-twelfths', 'seven-twelfths', 'eight-twelfths', 'nine-twelfths', 'ten-twelfths', 'eleven-twelfths'"
+          }
+        }
+      }
+    },
     "FormElements": {
       "partials": {
         "Checkbox": {

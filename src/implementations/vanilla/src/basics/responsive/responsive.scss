@@ -1,0 +1,85 @@
+$breakpoints: (
+    phone: 0,
+    tablet: 769,
+    laptop: 1281,
+    desktop: 1681,
+    large: 1921
+);
+
+// Our different screen breakpoints
+
+@mixin phone-breakpoint {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet-breakpoint {
+  @media screen and (min-width: 769px) and (max-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin laptop-breakpoint {
+  @media screen and (min-width: 1281px) and (max-width: 1680px) {
+    @content;
+  }
+}
+
+@mixin desktop-breakpoint {
+  @media screen and (min-width: 1681px) and (max-width: 1920px) {
+    @content;
+  }
+}
+
+@mixin large-breakpoint {
+  @media screen and (min-width: 1921px) {
+    @content;
+  }
+}
+
+// Generic breakpoint mixin because you cant use interpolation for mixin calling in sass
+
+@mixin breakpoint($breakpoint) {
+  @if $breakpoint == "phone" {
+    @include phone-breakpoint{
+      @content;
+    }
+  }
+  @else if $breakpoint == "tablet" {
+    @include tablet-breakpoint{
+      @content;
+    }
+  }
+  @else if $breakpoint == "laptop" {
+    @include laptop-breakpoint{
+      @content;
+    }
+  }
+  @else if $breakpoint == "desktop" {
+    @include desktop-breakpoint{
+      @content;
+    }
+  }
+  @else{
+    @include large-breakpoint{
+      @content;
+    }
+  }
+}
+
+@mixin eachBreakpoint{
+  @each $breakpoint_name, $breakpoint_value in $breakpoints{
+    @include breakpoint($breakpoint_name){
+      @content;
+    }
+  }
+}
+
+@each $breakpoint_name, $breakpoint_value in $breakpoints{
+  @include breakpoint($breakpoint_name){
+    .hig__responsive__#{$breakpoint_name}--hide{
+      display: none;
+    }
+  }
+}
