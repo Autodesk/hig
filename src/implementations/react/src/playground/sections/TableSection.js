@@ -19,7 +19,7 @@ class TableSection extends Component {
             <TextHeadCell text="Title" alignment="left" width="1fr" />
             <TextHeadCell text="Type" alignment="left" width="1fr" />
             <TextHeadCell text="Location" alignment="left" width="1fr" />
-            <TextHeadCell text="Budget" alignment="left" width="1fr" />
+            <TextHeadCell text="Budget" alignment="right" width="1fr" />
             <TextHeadCell text="Raw denim flexitarian green juice kinfolk." alignment="left" width="1fr" />
           </TableHead>
           <TableRow>
@@ -27,7 +27,7 @@ class TableSection extends Component {
             <TextCell text="text cell test" alignment="left" detail="new detail" />
             <TextCell text="Deserunt ut deserunt mollit elit aute et." alignment="left" />
             <TextCell text="Testing body cell slot." alignment="left" />
-            <TextCell text="2535" alignment="left" />
+            <TextCell text="2535" alignment="right" />
             <TextCell text="Atlas Plumbi" alignment="left" />
           </TableRow>
           <TableRow>
@@ -35,7 +35,7 @@ class TableSection extends Component {
             <TextCell text="Window Punch List" alignment="left" />
             <TextCell text="Commissioning" alignment="left" />
             <TextCell text="Floor 3, Room 21." alignment="left" />
-            <TextCell text="3000" alignment="left" />
+            <TextCell text="3000" alignment="right" />
             <TextCell text="Alexander Mo" alignment="left" />
           </TableRow>
           <TableRow>
@@ -43,7 +43,7 @@ class TableSection extends Component {
             <TextCell text="Window Punch List" alignment="left" />
             <TextCell text="Commissioning" alignment="left" />
             <TextCell text="Floor 3, Room 21." alignment="left" />
-            <TextCell text="3000" alignment="left" />
+            <TextCell text="3000" alignment="right" />
             <TextCell text="Alexander Mo" alignment="left" />
           </TableRow>
           <TableRow>
@@ -51,7 +51,7 @@ class TableSection extends Component {
             <TextCell text="Window Punch List" alignment="left" />
             <TextCell text="Commissioning" alignment="left" />
             <TextCell text="Floor 3, Room 21." alignment="left" />
-            <TextCell text="3000" alignment="left" />
+            <TextCell text="3000" alignment="right" />
             <TextCell text="Alexander Mo" alignment="left" />
           </TableRow>
           <TableRow>
@@ -59,7 +59,7 @@ class TableSection extends Component {
             <TextCell text="Window Punch List" alignment="left" />
             <TextCell text="Commissioning" alignment="left" />
             <TextCell text="Floor 3, Room 21." alignment="left" />
-            <TextCell text="3000" alignment="left" />
+            <TextCell text="3000" alignment="right" />
             <TextCell text="Alexander Mo" alignment="left" />
           </TableRow>
         </Table>
@@ -68,42 +68,42 @@ class TableSection extends Component {
             <TextHeadCell text="Title" alignment="left" width="1fr" />
             <TextHeadCell text="Type" alignment="left" width="1fr" />
             <TextHeadCell text="Location" alignment="left" width="1fr" />
-            <TextHeadCell text="Budget" alignment="left" width="1fr" />
+            <TextHeadCell text="Budget" alignment="right" width="1fr" />
             <TextHeadCell text="Raw denim flexitarian green juice kinfolk." alignment="left" width="1fr" />
           </TableHead>
           <TableRow>
             <TextCell text="text cell test" alignment="left" detail="new detail" />
             <TextCell text="Deserunt ut deserunt mollit elit aute et." alignment="left" />
             <TextCell text="Testing body cell" alignment="left" />
-            <TextCell text="2535" alignment="left" />
+            <TextCell text="2535" alignment="right" />
             <TextCell text="Atlas Plumbi" alignment="left" />
           </TableRow>
           <TableRow>
             <TextCell text="Window Punch List" alignment="left" />
             <TextCell text="Commissioning" alignment="left" />
             <TextCell text="Floor 3, Room 21." alignment="left" />;
-            <TextCell text="3000" alignment="left" />
+            <TextCell text="3000" alignment="right" />
             <TextCell text="Alexander Mo" alignment="left" />
           </TableRow>
           <TableRow>
             <TextCell text="Window Punch List" alignment="left" />
             <TextCell text="Commissioning" alignment="left" />
             <TextCell text="Floor 3, Room 21." alignment="left" />
-            <TextCell text="3000" alignment="left" />
+            <TextCell text="3000" alignment="right" />
             <TextCell text="Alexander Mo" alignment="left" />
           </TableRow>
           <TableRow>
             <TextCell text="Window Punch List" alignment="left" />
             <TextCell text="Commissioning" alignment="left" />
             <TextCell text="Floor 3, Room 21." alignment="left" />
-            <TextCell text="3000" alignment="left" />
+            <TextCell text="3000" alignment="right" />
             <TextCell text="Alexander Mo" alignment="left" />
           </TableRow>
           <TableRow>
             <TextCell text="Window Punch List" alignment="left" />
             <TextCell text="Commissioning" alignment="left" />
             <TextCell text="Floor 3, Room 21." alignment="left" />
-            <TextCell text="3000" alignment="left" />
+            <TextCell text="3000" alignment="right" />
             <TextCell text="Alexander Mo" alignment="left" />
           </TableRow>
         </Table>
@@ -113,7 +113,7 @@ class TableSection extends Component {
             <TextHeadCell text="Title" alignment="left" width="2fr" />
             <TextHeadCell text="Type" alignment="left" width="2fr" />
             <TextHeadCell text="Location" alignment="left" width="2fr" />
-            <TextHeadCell text="Budget" alignment="left" width="2fr" />
+            <TextHeadCell text="Budget" alignment="right" width="2fr" />
             <TextHeadCell text="Raw denim flexitarian green juice kinfolk." alignment="left" width="2fr" />;
           </TableHead>
           <TableRow>
@@ -123,7 +123,7 @@ class TableSection extends Component {
             <TextCell text="Window Punch List" detail="window punchlist detail" alignment="left" />
             <TextCell text="Deserunt ut deserunt mollit elit aute et." alignment="left" />
             <TextCell text="Testing body cell slot." alignment="left" />
-            <TextCell text="2535" alignment="left" />
+            <TextCell text="2535" alignment="right" />
             <TextCell text="Atlas Plumbi" alignment="left" />
           </TableRow>
         </Table>
