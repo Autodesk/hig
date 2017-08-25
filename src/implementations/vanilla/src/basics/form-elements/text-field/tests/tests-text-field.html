@@ -117,17 +117,18 @@
             ClearButtonHeading.mount('.tests-text-field-clear-button-heading');
             ClearButtonTextField.mount('.tests-text-field-clear-button');
 
-            ClearButtonTextField.onInput(() => {
-              if (ClearButtonTextField.getValue().length === 0) {
-                ClearButtonTextField.showClearButton();
-              } else {
+            ClearButtonTextField.onInput(event => {
+              if (event.target.value.length === 0) {
                 ClearButtonTextField.hideClearButton();
+              } else {
+                ClearButtonTextField.showClearButton();
               }
             });
 
             ClearButtonTextField.onClearButtonClick(() => {
               console.log("Clear button clicked");
               ClearButtonTextField.setValue("");
+              ClearButtonTextField.hideClearButton();
             });
 
             // TEXT FIELD CONFIGURED WITH SETTERS

@@ -63,11 +63,6 @@ class TextField extends Core {
         this._findDOMEl('.hig__text-field__input', this.el).setAttribute('placeholder', placeholder);
     }
 
-    getValue(){
-      const inputEl = this._findDOMEl('.hig__text-field__input', this.el);
-      return inputEl.getAttribute('value');
-    }
-
     setValue(value){
         const inputEl = this._findDOMEl('.hig__text-field__input', this.el);
         inputEl.setAttribute('value', value);

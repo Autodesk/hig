@@ -506,9 +506,6 @@
               "desc": "sets the placeholder",
               "params": ["{String} placeholder for our text field"]
             },
-            "getValue": {
-
-            },
             "setValue": {
               "desc": "sets the value",
               "params": ["{String} value for our text field"]
