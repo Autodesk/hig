@@ -19,6 +19,11 @@ gemini.suite('text field', (parent) => {
             });
   });
 
+  gemini.suite('with clear button', (suite) => {
+       suite.setCaptureElements('.test-group-clear-button')
+            .capture('plain');
+  });
+
   gemini.suite('with icon', (suite) => {
        suite.setCaptureElements('.test-group-icon')
             .capture('plain');
@@ -31,7 +36,9 @@ gemini.suite('text field', (parent) => {
 
   gemini.suite('disabled with value', (suite) => {
        suite.setCaptureElements('.test-group-disabled-value')
-            .capture('disabled with value');
+            .capture('disabled with value', actions => {
+                actions.click(`#test-group-disabled-value`);
+            });
   });
 
 });
