@@ -1,7 +1,7 @@
 @import '~basics/colors/colors.scss';
 @import '~basics/shadows/shadows.scss';
+@import '~basics/responsive/responsive.scss';
 @import '~helpers/css/mixins/base.scss';
-@import '~helpers/css/mixins/breakpoints.scss';
 
 .hig__global-nav__sub-nav {
     @include reset;
@@ -35,7 +35,7 @@
             font-weight: 700;
             white-space: nowrap;
 
-            @include thirteen-inch-laptop-breakpoint {
+            @include laptop-breakpoint {
                 display: flex;
             }
         }
@@ -44,7 +44,7 @@
             display: block;
             margin-left: 15px;
 
-            @include thirteen-inch-laptop-breakpoint {
+            @include laptop-breakpoint {
                 display: none;
             }
         }
