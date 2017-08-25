@@ -69,7 +69,7 @@
     var BudgetHeadCell = new TableHead.partials.TextHeadCell();
     TableHead.addCell(BudgetHeadCell);
     BudgetHeadCell.setText('Budget');
-    BudgetHeadCell.setAlignment("left");
+    BudgetHeadCell.setAlignment("right");
     BudgetHeadCell.setWidth("2fr");
 
 
@@ -110,7 +110,7 @@
     var BudgetTextCell = new TableRow.partials.TextCell();
     TableRow.addCell(BudgetTextCell);
     BudgetTextCell.setText('2535');
-    BudgetTextCell.setAlignment('left');
+    BudgetTextCell.setAlignment('right');
 
     var AssigneeTextCell = new TableRow.partials.TextCell();
     TableRow.addCell(AssigneeTextCell);
@@ -145,7 +145,7 @@
     var BudgetTextCell1 = new TableRow1.partials.TextCell();
     TableRow1.addCell(BudgetTextCell1);
     BudgetTextCell1.setText('3000');
-    BudgetTextCell1.setAlignment('left');
+    BudgetTextCell1.setAlignment('right');
 
     var AssigneeTextCell1 = new TableRow1.partials.TextCell();
     TableRow1.addCell(AssigneeTextCell1);
@@ -181,7 +181,7 @@
     var BudgetTextCell2 = new TableRow2.partials.TextCell();
     TableRow2.addCell(BudgetTextCell2);
     BudgetTextCell2.setText('3000');
-    BudgetTextCell2.setAlignment('left');
+    BudgetTextCell2.setAlignment('right');
 
     var AssigneeTextCell2 = new TableRow2.partials.TextCell();
     TableRow2.addCell(AssigneeTextCell2);
@@ -216,7 +216,7 @@
     var BudgetTextCell3 = new TableRow3.partials.TextCell();
     TableRow3.addCell(BudgetTextCell3);
     BudgetTextCell3.setText('3000');
-    BudgetTextCell3.setAlignment('left');
+    BudgetTextCell3.setAlignment('right');
 
     var AssigneeTextCell3 = new TableRow3.partials.TextCell();
     TableRow3.addCell(AssigneeTextCell3);
@@ -249,7 +249,7 @@
     TableHead.addCell(LocationHeadCell1);
 
     var BudgetHeadCell1 = new TableHead.partials.TextHeadCell(
-      { "width": "2fr", "alignment": "left", "text": "Budget" }
+      { "width": "2fr", "alignment": "right", "text": "Budget" }
     );
     TableHead.addCell(BudgetHeadCell1);
 
@@ -282,7 +282,7 @@
     SlotCell.addSlot(NewSlotEl);
 
     var BudgetTextCellDefault = new TableRowDefault.partials.TextCell({
-      "text": "2535", "alignment": "left"
+      "text": "2535", "alignment": "right"
     });
     TableRowDefault.addCell(BudgetTextCellDefault);
 
@@ -315,7 +315,7 @@
     SlotCell1.addSlot(NewSlotEl1);
 
     var BudgetTextCellDefault1 = new TableRowDefault1.partials.TextCell({
-      "text": '3000', alignment: "left"
+      "text": '3000', alignment: "right"
     });
     TableRowDefault1.addCell(BudgetTextCellDefault1);
 
@@ -349,7 +349,7 @@
     SlotCell2.addSlot(NewSlotEl2);
 
     var BudgetTextCellDefault2 = new TableRowDefault2.partials.TextCell({
-      "text": '3000', alignment: "left"
+      "text": '3000', alignment: "right"
     });
     TableRowDefault2.addCell(BudgetTextCellDefault2);
 
@@ -389,7 +389,7 @@
     TableHead.addCell(LocationHeadCell1);
 
     var BudgetHeadCell1 = new TableHead.partials.TextHeadCell(
-      { "width": "2fr", "alignment": "left", "text": "Budget" }
+      { "width": "2fr", "alignment": "right", "text": "Budget" }
     );
     TableHead.addCell(BudgetHeadCell1);
 
@@ -423,15 +423,13 @@
     });
     TableRowDefault2.addCell(NextCellDefault2);
 
-
-    var SlotCell2 = new TableRowDefault2.partials.SlotCell();
-    TableRowDefault2.addCell(SlotCell2);
-    var NewSlotEl2 = document.createElement('div');
-    NewSlotEl2.innerHTML = 'Floor 3, Room 21.';
-    SlotCell2.addSlot(NewSlotEl2);
+    var NextCellDefault3 = new TableRowDefault2.partials.TextCell({
+      "text": 'Floor 3, Room 21', alignment: "left"
+    });
+    TableRowDefault2.addCell(NextCellDefault3);
 
     var BudgetTextCellDefault2 = new TableRowDefault2.partials.TextCell({
-      "text": '3000', alignment: "left"
+      "text": '3000', alignment: "right"
     });
     TableRowDefault2.addCell(BudgetTextCellDefault2);
 
