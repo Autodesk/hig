@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 
 import GlobalNavAdapter from '../../../adapters/GlobalNav/GlobalNavAdapter';
 import TopNavAdapter from '../../../adapters/GlobalNav/TopNav/TopNavAdapter';
+import SubNavAdapter from '../../../adapters/GlobalNav/SubNav/SubNavAdapter';
 import SideNav from './SideNav';
 import Slot from './Slot';
+import ProjectAccountSwitcher from './TopNav/ProjectAccountSwitcher';
 
 class GlobalNav extends Component {
   static propTypes = {
@@ -32,11 +34,11 @@ class GlobalNav extends Component {
     topNav: PropTypes.shape({
       logo: PropTypes.string,
       logoLink: PropTypes.string,
-    })
-  }
-
-  static defaultProps = {
-    topNav: {}
+    }),
+    accounts: PropTypes.any,
+    projects: PropTypes.any,
+    activeProjectId: PropTypes.any,
+    activeAccountId: PropTypes.any
   }
 
   constructor(props) {
@@ -51,13 +53,24 @@ class GlobalNav extends Component {
   render() {
     return (
       <GlobalNavAdapter sideNavOpen={this.state.sideNavOpen}>
-        <TopNavAdapter onHamburgerClick={this.toggleSideNavOpen} {...this.props.topNav} />
+        <TopNavAdapter
+          onHamburgerClick={this.toggleSideNavOpen}
+          {...this.props.topNav}
+        >
+          <ProjectAccountSwitcher
+            accounts={this.props.accounts}
+            projects={this.props.projects}
+            activeProjectId={this.props.activeProjectId}
+            activeAccountId={this.props.activeAccountId}
+          />
+        </TopNavAdapter>
         <SideNav
           onModuleChange={this.props.onModuleChange}
           modules={this.props.modules}
           submodules={this.props.submodules}
           {...this.props.sideNav}
         />
+        <SubNavAdapter />
         <Slot>{this.props.children}</Slot>
       </GlobalNavAdapter>
     )

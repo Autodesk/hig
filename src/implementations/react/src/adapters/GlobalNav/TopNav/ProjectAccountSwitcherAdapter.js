@@ -5,6 +5,8 @@ import HIGChildValidator from "../../../elements/HIGChildValidator";
 import createComponent from "../../createComponent";
 import AccountComponent, { AccountAdapter } from "./AccountAdapter";
 import ProjectComponent, { ProjectAdapter } from "./ProjectAdapter";
+import Project from '../../../elements/components/GlobalNav/TopNav/Project';
+import Account from '../../../elements/components/GlobalNav/TopNav/Account';
 
 export class ProjectAccountSwitcherAdapter extends HIGElement {
   constructor(HIGConstructor, initialProps) {
@@ -146,10 +148,13 @@ const ProjectAccountSwitcherComponent = createComponent(
 
 ProjectAccountSwitcherComponent.propTypes = {
   open: PropTypes.bool,
+  showCaret: PropTypes.bool,
   onAccountChange: PropTypes.func,
   onProjectChange: PropTypes.func,
-
-  children: HIGChildValidator([AccountComponent, ProjectComponent])
+  activeLabel: PropTypes.string,
+  activeImage: PropTypes.string,
+  activeType: PropTypes.string,
+  children: HIGChildValidator([Account, Project, AccountComponent, ProjectComponent])
 };
 
 ProjectAccountSwitcherComponent.__docgenInfo = {
@@ -157,27 +162,17 @@ ProjectAccountSwitcherComponent.__docgenInfo = {
     open: {
       description: "{bool} opens the project/account switcher"
     },
-    close: {
-      description: "{bool} closes the project/account switcher"
-    },
-    addProject: {
-      description: "Pass in an instance of a ProjectAccountSwitcher Account"
-    },
     showCaret: {
       description:
         "shows a caret indicating a flyout in Project Account Switcher"
     },
-    hideCaret: {
-      description:
-        "removes caret indicating a flyout in Project Account Switcher"
-    },
-    setActiveLabel: {
+    activeLabel: {
       description: "Sets the label displayed in the top nav"
     },
-    setActiveImage: {
+    activeImage: {
       description: "Sets the image displayed in the top nav"
     },
-    setActiveType: {
+    activeType: {
       description: "Sets the type of the item displayed in the top nav"
     },
     onClickOutside: {

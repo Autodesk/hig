@@ -65,8 +65,7 @@ const ProjectComponent = createComponent(ProjectAdapter);
 ProjectComponent.propTypes = {
   image: PropTypes.string,
   label: PropTypes.string,
-  activate: PropTypes.func,
-  deactivate: PropTypes.func,
+  active: PropTypes.bool,
   onClick: PropTypes.func
 };
 
@@ -78,11 +77,8 @@ ProjectComponent.__docgenInfo = {
     image: {
       description: 'sets {String} the image displayed for a project in project/account switcher'
     },
-    activate: {
+    active: {
       description: '{func} activates the project'
-    },
-    deactivate: {
-      description: '{func} deactivates the project'
     },
     onClick: {
       description: '{func} calls the provided callback when user clicks on the project'

@@ -22,8 +22,8 @@ import './index.css';
 
 import logo from './images/bim-logo.png';
 // import profileImage from './images/profileImage.png';
-import TopNavFixtures from './fixtures/topNavFixtures';
-import sideNavFixtures from './fixtures/sideNavFixtures';
+import { projects, accounts } from './fixtures/topNavFixtures';
+import { modules, submodules, links } from './fixtures/sideNavFixtures';
 
 import ButtonSection from './sections/ButtonSection';
 import DropdownSection from './sections/DropdownSection';
@@ -39,8 +39,6 @@ import ModalSection from './sections/ModalSection';
 import TypographySection from './sections/TypographySection';
 import TableSection from "./sections/TableSection";
 
-const topNavFixtures = new TopNavFixtures();
-
 class Playground extends React.Component {
   render() {
     const topNavProps = {
@@ -50,7 +48,7 @@ class Playground extends React.Component {
     const sideNavProps = {
       superHeaderLabel: "Global Construction",
       headerLabel: "Oakwood Medical Center",
-      links: sideNavFixtures.links,
+      links: links,
       onLogoClick: event => {
         event.preventDefault();
         console.log('Logo clicked');
@@ -60,11 +58,15 @@ class Playground extends React.Component {
     return (
       <div>
         <GlobalNav
+          superHeaderLabel="Project"
+          headerLabel="Oakwood Medical Center"
           sideNav={sideNavProps}
           topNav={topNavProps}
-          modules={sideNavFixtures.modules}
-          submodules={sideNavFixtures.submodules}
+          modules={modules}
+          submodules={submodules}
           onModuleChange={id => console.log(`Module selected: ${id}`)}
+          projects={projects}
+          accounts={accounts}
         >
           <section>
             <h3>Tabs</h3>

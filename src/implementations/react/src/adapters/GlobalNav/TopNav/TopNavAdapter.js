@@ -10,6 +10,7 @@ import HIGNodeList from '../../../elements/HIGNodeList';
 import ProjectAccountSwitcherComponent, {
   ProjectAccountSwitcherAdapter
 } from './ProjectAccountSwitcherAdapter';
+import ProjectAccountSwitcher from '../../../elements/components/GlobalNav/TopNav/ProjectAccountSwitcher';
 import ProfileComponent, {
   ProfileAdapter
 } from './ProfileAdapter';
@@ -207,6 +208,7 @@ TopNavAdapterComponent.propTypes = {
   children: HIGChildValidator([
     ProfileComponent,
     ProjectAccountSwitcherComponent,
+    ProjectAccountSwitcher,
     ShortcutAdapterComponent,
     HelpComponent,
     SearchComponent

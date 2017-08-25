@@ -65,8 +65,7 @@ const AccountComponent = createComponent(AccountAdapter);
 AccountComponent.propTypes = {
   image: PropTypes.string,
   label: PropTypes.string,
-  activate: PropTypes.func,
-  deactivate: PropTypes.func,
+  active: PropTypes.bool,
   onClick: PropTypes.func
 };
 
@@ -78,11 +77,8 @@ AccountComponent.__docgenInfo = {
     image: {
       description: 'sets {String} the image displayed for an account in Account/account switcher'
     },
-    activate: {
+    active: {
       description: '{func} activates the Account'
-    },
-    deactivate: {
-      description: '{func} deactivates the Account'
     },
     onClick: {
       description: '{func} calls the provided callback when user clicks on the Account'
