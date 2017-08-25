@@ -19,7 +19,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { select, boolean, text } from '@storybook/addon-knobs';
 
-import GlobalNav from '../../../../adapters/GlobalNav/GlobalNavAdapter';
+import GlobalNav from '../adapters/GlobalNav/GlobalNavAdapter';
 const TopNav = GlobalNav.TopNav;
 const Profile = TopNav.Profile;
 const SubNav = GlobalNav.SubNav;
@@ -27,12 +27,12 @@ const Tabs = GlobalNav.SubNav.Tabs;
 const Tab = GlobalNav.SubNav.Tabs.Tab;
 const Slot = GlobalNav.Slot;
 
-import logo from '../../../../playground/images/bim-logo.png';
-import profileImage from '../../../../playground/images/profileImage.png';
-import project1 from '../../../../playground/images/project-1.png';
-import project2 from '../../../../playground/images/project-2.png';
-import project3 from '../../../../playground/images/project-3.png';
-import project4 from '../../../../playground/images/project-4.png';
+import logo from '../playground/images/bim-logo.png';
+import profileImage from '../playground/images/profileImage.png';
+import project1 from '../playground/images/project-1.png';
+import project2 from '../playground/images/project-2.png';
+import project3 from '../playground/images/project-3.png';
+import project4 from '../playground/images/project-4.png';
 
 const tabOptions = {
   one: 'One',

@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { text } from '@storybook/addon-knobs';
 
-import { H1, H2, H3, Sub1, Sub2, Body, Bold, Caption, Disabled } from './Typography';
+import { H1, H2, H3, Sub1, Sub2, Body, Bold, Caption, Disabled } from '../elements/components/Typography';
 
 storiesOf('Typography elements', module)
   .addWithInfo("All Elements", ``, () => {

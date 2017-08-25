@@ -19,7 +19,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { text, number, boolean } from '@storybook/addon-knobs';
 
-import { default as RangeAdapter } from './RangeAdapter';
+import { default as RangeAdapter } from '../adapters/FormElements/RangeAdapter';
 
 storiesOf('Range', module).addWithInfo('By default', ``, () => {
   return (

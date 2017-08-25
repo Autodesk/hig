@@ -3,9 +3,9 @@ import { mount } from 'enzyme';
 import * as HIG from 'hig-vanilla';
 import React from 'react';
 
-import IconButton from './IconButton';
+import IconButtonAdapter from './IconButtonAdapter';
 
-describe('<IconButton>', () => {
+describe('<IconButtonAdapter>', () => {
   /**
      * Creates a hig-vanilla button and returns the instance and it's container
      *
@@ -32,7 +32,7 @@ describe('<IconButton>', () => {
     const { higButton, higContainer } = createHigButton(defaults);
     const container = document.createElement('div');
 
-    const wrapper = mount(<IconButton {...defaults} />, {
+    const wrapper = mount(<IconButtonAdapter {...defaults} />, {
       attachTo: container
     });
 
@@ -51,7 +51,7 @@ describe('<IconButton>', () => {
     const { higButton, higContainer } = createHigButton(defaults);
     const container = document.createElement('div');
 
-    const wrapper = mount(<IconButton {...defaults} />, {
+    const wrapper = mount(<IconButtonAdapter {...defaults} />, {
       attachTo: container
     });
 
@@ -87,7 +87,7 @@ describe('<IconButton>', () => {
     const container = document.createElement('div');
     higButton.disable();
 
-    const wrapper = mount(<IconButton {...defaults} />, {
+    const wrapper = mount(<IconButtonAdapter {...defaults} />, {
       attachTo: container
     });
 
@@ -103,7 +103,7 @@ describe('<IconButton>', () => {
       const spy = jest.fn();
       const container = document.createElement('div');
       const wrapper = mount(
-        <IconButton icon="gear" {...{ [eventName]: spy }} />,
+        <IconButtonAdapter icon="gear" {...{ [eventName]: spy }} />,
         {
           attachTo: container
         }
@@ -119,7 +119,7 @@ describe('<IconButton>', () => {
     it(`sets event listeners for ${eventName} when updated`, () => {
       const spy = jest.fn();
       const container = document.createElement('div');
-      const wrapper = mount(<IconButton icon="gear" />, {
+      const wrapper = mount(<IconButtonAdapter icon="gear" />, {
         attachTo: container
       });
       wrapper.setProps({ [eventName]: spy });

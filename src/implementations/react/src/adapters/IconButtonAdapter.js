@@ -1,11 +1,11 @@
 
 import * as HIG from 'hig-vanilla';
 
-import HIGElement from '../HIGElement';
+import HIGElement from '../elements/HIGElement';
 import * as PropTypes from 'prop-types';
-import createComponent from '../../adapters/createComponent';
+import createComponent from '../adapters/createComponent';
 
-class IconButton extends HIGElement {
+class IconButtonAdapter extends HIGElement {
   constructor(initialProps) {
     super(HIG.IconButton, initialProps);
   }
@@ -104,9 +104,9 @@ class IconButton extends HIGElement {
   }
 }
 
-const IconButtonComponent = createComponent(IconButton);
+const IconButtonAdapterComponent = createComponent(IconButtonAdapter);
 
-IconButtonComponent.propTypes = {
+IconButtonAdapterComponent.propTypes = {
   title: PropTypes.string,
   icon: PropTypes.string,
   disabled: PropTypes.bool,
@@ -117,7 +117,7 @@ IconButtonComponent.propTypes = {
   onHover: PropTypes.func
 };
 
-IconButtonComponent.__docgenInfo = {
+IconButtonAdapterComponent.__docgenInfo = {
   props: {
     title: {
       description: 'sets the title of a button'
@@ -149,4 +149,4 @@ IconButtonComponent.__docgenInfo = {
   }
 };
 
-export default IconButtonComponent;
+export default IconButtonAdapterComponent;
