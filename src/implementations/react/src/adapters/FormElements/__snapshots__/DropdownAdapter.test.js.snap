@@ -17,6 +17,7 @@ exports[`<DropdownAdapter> renders a disabled 1`] = `
 </div></div></div><!--SLOT-->
             <input name=\\"\\" id=\\"text-field-5678\\" class=\\"hig__text-field__input hig__text-field__input--no-value\\" placeholder=\\"dropdown placeholder\\" value=\\"\\" readonly=\\"true\\" disabled=\\"true\\">
             <label for=\\"text-field-5678\\" class=\\"hig__text-field__label hig__text-field__label--visible\\">dropdown label</label>
+            <button class=\\"hig__text-field__clear-button\\"></button>
         </div>
         <p class=\\"hig__text-field__instructions\\">instructions for dropdown</p>
         <!--INSTRUCTIONS-->
@@ -43,6 +44,7 @@ exports[`<DropdownAdapter> renders a dropdown with initial props 1`] = `
 </div></div></div><!--SLOT-->
             <input name=\\"\\" id=\\"text-field-5678\\" class=\\"hig__text-field__input hig__text-field__input--no-value\\" placeholder=\\"dropdown placeholder\\" value=\\"\\" readonly=\\"true\\">
             <label for=\\"text-field-5678\\" class=\\"hig__text-field__label hig__text-field__label--visible\\">dropdown label</label>
+            <button class=\\"hig__text-field__clear-button\\"></button>
         </div>
         <p class=\\"hig__text-field__instructions\\">instructions for dropdown</p>
         <!--INSTRUCTIONS-->
@@ -69,6 +71,7 @@ exports[`<DropdownAdapter> renders a dropdown with updated props 1`] = `
 </div></div></div><!--SLOT-->
             <input name=\\"\\" id=\\"text-field-5678\\" class=\\"hig__text-field__input\\" placeholder=\\"updated dropdown placeholder\\" value=\\"updated option label\\" readonly=\\"true\\">
             <label for=\\"text-field-5678\\" class=\\"hig__text-field__label hig__text-field__label--visible\\">updated dropdown label</label>
+            <button class=\\"hig__text-field__clear-button\\"></button>
         </div>
         <p class=\\"hig__text-field__instructions\\">updated instructions for dropdown</p>
         <!--INSTRUCTIONS-->
