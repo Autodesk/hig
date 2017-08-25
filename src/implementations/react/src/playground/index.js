@@ -46,8 +46,8 @@ class Playground extends React.Component {
       onLogoClick: function() { console.log('Logo clicked'); }
     }
     const sideNavProps = {
-      superHeaderLabel: "Global Construction",
-      headerLabel: "Oakwood Medical Center",
+      superHeaderLabel: "HIG",
+      headerLabel: "Playground",
       links: links,
       onLogoClick: event => {
         event.preventDefault();
@@ -58,15 +58,13 @@ class Playground extends React.Component {
     return (
       <div>
         <GlobalNav
-          superHeaderLabel="Project"
-          headerLabel="Oakwood Medical Center"
-          sideNav={sideNavProps}
-          topNav={topNavProps}
+          accounts={accounts}
           modules={modules}
-          submodules={submodules}
           onModuleChange={id => console.log(`Module selected: ${id}`)}
           projects={projects}
-          accounts={accounts}
+          sideNav={sideNavProps}
+          submodules={submodules}
+          topNav={topNavProps}
         >
           <section>
             <h3>Tabs</h3>

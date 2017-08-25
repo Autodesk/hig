@@ -5,24 +5,24 @@ exports[`<Profile> constructor has a good snapshot 1`] = `
     <!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <div class=\\"hig__global-nav__top-nav\\">
-    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
-        <div class=\\"hig__global-nav__top-nav__hamburger\\">
-            <div class=\\"hig__global-nav__top-nav__hamburger__hamburgericon\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
-            <div class=\\"hig__global-nav__top-nav__hamburger__closeicon\\"><div class=\\"hig__icon\\"><svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 18 18\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-hamburger\\"><g stroke=\\"#0A131C\\" stroke-width=\\"2\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"square\\"><path d=\\"M18.754628,5.24537196 L5.24537196,18.754628\\" transform=\\"translate(-3 -3)\\"></path><path d=\\"M5.24537196,5.24537196 L18.754628,18.754628\\" transform=\\"translate(-3 -3)\\"></path></g></svg></div></div>
-        </div>
-        <div class=\\"hig__global-nav__top-nav__logo\\">
-            <a href=\\"#\\">
-                <img src=\\"link\\">
-            </a>
-        </div>
+  <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
+    <div class=\\"hig__global-nav__top-nav__hamburger\\">
+      <div class=\\"hig__global-nav__top-nav__hamburger__hamburgericon\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
+      <div class=\\"hig__global-nav__top-nav__hamburger__closeicon\\"><div class=\\"hig__icon\\"><svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 18 18\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-hamburger\\"><g stroke=\\"#0A131C\\" stroke-width=\\"2\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"square\\"><path d=\\"M18.754628,5.24537196 L5.24537196,18.754628\\" transform=\\"translate(-3 -3)\\"></path><path d=\\"M5.24537196,5.24537196 L18.754628,18.754628\\" transform=\\"translate(-3 -3)\\"></path></g></svg></div></div>
     </div>
-    <!--SEARCH-->
-    <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
-    <!--PROJECT_ACCOUNT_SWITCHER-->
-    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
-    <!--SHORTCUT-->
+    <div class=\\"hig__global-nav__top-nav__logo\\">
+      <a>
+        <img src=\\"\\">
+      </a>
     </div>
-    <div class=\\"hig__global-nav__profile\\">
+  </div>
+  <!--SEARCH-->
+  <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
+  <!--PROJECT_ACCOUNT_SWITCHER-->
+  <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
+  <!--SHORTCUT-->
+  </div>
+  <div class=\\"hig__global-nav__profile\\">
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
         <!--FLYOUT-->
     <div class=\\"hig__flyout hig__flyout--anchor-top-right\\">
@@ -64,24 +64,24 @@ exports[`<Profile> setting and updating props can set props for email 1`] = `
     <!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <div class=\\"hig__global-nav__top-nav\\">
-    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
-        <div class=\\"hig__global-nav__top-nav__hamburger\\">
-            <div class=\\"hig__global-nav__top-nav__hamburger__hamburgericon\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
-            <div class=\\"hig__global-nav__top-nav__hamburger__closeicon\\"><div class=\\"hig__icon\\"><svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 18 18\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-hamburger\\"><g stroke=\\"#0A131C\\" stroke-width=\\"2\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"square\\"><path d=\\"M18.754628,5.24537196 L5.24537196,18.754628\\" transform=\\"translate(-3 -3)\\"></path><path d=\\"M5.24537196,5.24537196 L18.754628,18.754628\\" transform=\\"translate(-3 -3)\\"></path></g></svg></div></div>
-        </div>
-        <div class=\\"hig__global-nav__top-nav__logo\\">
-            <a href=\\"#\\">
-                <img src=\\"link\\">
-            </a>
-        </div>
+  <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
+    <div class=\\"hig__global-nav__top-nav__hamburger\\">
+      <div class=\\"hig__global-nav__top-nav__hamburger__hamburgericon\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
+      <div class=\\"hig__global-nav__top-nav__hamburger__closeicon\\"><div class=\\"hig__icon\\"><svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 18 18\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-hamburger\\"><g stroke=\\"#0A131C\\" stroke-width=\\"2\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"square\\"><path d=\\"M18.754628,5.24537196 L5.24537196,18.754628\\" transform=\\"translate(-3 -3)\\"></path><path d=\\"M5.24537196,5.24537196 L18.754628,18.754628\\" transform=\\"translate(-3 -3)\\"></path></g></svg></div></div>
     </div>
-    <!--SEARCH-->
-    <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
-    <!--PROJECT_ACCOUNT_SWITCHER-->
-    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
-    <!--SHORTCUT-->
+    <div class=\\"hig__global-nav__top-nav__logo\\">
+      <a>
+        <img src=\\"\\">
+      </a>
     </div>
-    <div class=\\"hig__global-nav__profile\\">
+  </div>
+  <!--SEARCH-->
+  <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
+  <!--PROJECT_ACCOUNT_SWITCHER-->
+  <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
+  <!--SHORTCUT-->
+  </div>
+  <div class=\\"hig__global-nav__profile\\">
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
         <!--FLYOUT-->
     <div class=\\"hig__flyout hig__flyout--anchor-top-right\\">
@@ -123,24 +123,24 @@ exports[`<Profile> setting and updating props can set props for image 1`] = `
     <!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <div class=\\"hig__global-nav__top-nav\\">
-    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
-        <div class=\\"hig__global-nav__top-nav__hamburger\\">
-            <div class=\\"hig__global-nav__top-nav__hamburger__hamburgericon\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
-            <div class=\\"hig__global-nav__top-nav__hamburger__closeicon\\"><div class=\\"hig__icon\\"><svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 18 18\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-hamburger\\"><g stroke=\\"#0A131C\\" stroke-width=\\"2\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"square\\"><path d=\\"M18.754628,5.24537196 L5.24537196,18.754628\\" transform=\\"translate(-3 -3)\\"></path><path d=\\"M5.24537196,5.24537196 L18.754628,18.754628\\" transform=\\"translate(-3 -3)\\"></path></g></svg></div></div>
-        </div>
-        <div class=\\"hig__global-nav__top-nav__logo\\">
-            <a href=\\"#\\">
-                <img src=\\"link\\">
-            </a>
-        </div>
+  <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
+    <div class=\\"hig__global-nav__top-nav__hamburger\\">
+      <div class=\\"hig__global-nav__top-nav__hamburger__hamburgericon\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
+      <div class=\\"hig__global-nav__top-nav__hamburger__closeicon\\"><div class=\\"hig__icon\\"><svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 18 18\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-hamburger\\"><g stroke=\\"#0A131C\\" stroke-width=\\"2\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"square\\"><path d=\\"M18.754628,5.24537196 L5.24537196,18.754628\\" transform=\\"translate(-3 -3)\\"></path><path d=\\"M5.24537196,5.24537196 L18.754628,18.754628\\" transform=\\"translate(-3 -3)\\"></path></g></svg></div></div>
     </div>
-    <!--SEARCH-->
-    <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
-    <!--PROJECT_ACCOUNT_SWITCHER-->
-    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
-    <!--SHORTCUT-->
+    <div class=\\"hig__global-nav__top-nav__logo\\">
+      <a>
+        <img src=\\"\\">
+      </a>
     </div>
-    <div class=\\"hig__global-nav__profile\\">
+  </div>
+  <!--SEARCH-->
+  <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
+  <!--PROJECT_ACCOUNT_SWITCHER-->
+  <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
+  <!--SHORTCUT-->
+  </div>
+  <div class=\\"hig__global-nav__profile\\">
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
         <!--FLYOUT-->
     <div class=\\"hig__flyout hig__flyout--anchor-top-right\\">
@@ -182,24 +182,24 @@ exports[`<Profile> setting and updating props can set props for name 1`] = `
     <!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <div class=\\"hig__global-nav__top-nav\\">
-    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
-        <div class=\\"hig__global-nav__top-nav__hamburger\\">
-            <div class=\\"hig__global-nav__top-nav__hamburger__hamburgericon\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
-            <div class=\\"hig__global-nav__top-nav__hamburger__closeicon\\"><div class=\\"hig__icon\\"><svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 18 18\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-hamburger\\"><g stroke=\\"#0A131C\\" stroke-width=\\"2\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"square\\"><path d=\\"M18.754628,5.24537196 L5.24537196,18.754628\\" transform=\\"translate(-3 -3)\\"></path><path d=\\"M5.24537196,5.24537196 L18.754628,18.754628\\" transform=\\"translate(-3 -3)\\"></path></g></svg></div></div>
-        </div>
-        <div class=\\"hig__global-nav__top-nav__logo\\">
-            <a href=\\"#\\">
-                <img src=\\"link\\">
-            </a>
-        </div>
+  <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
+    <div class=\\"hig__global-nav__top-nav__hamburger\\">
+      <div class=\\"hig__global-nav__top-nav__hamburger__hamburgericon\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
+      <div class=\\"hig__global-nav__top-nav__hamburger__closeicon\\"><div class=\\"hig__icon\\"><svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 18 18\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-hamburger\\"><g stroke=\\"#0A131C\\" stroke-width=\\"2\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"square\\"><path d=\\"M18.754628,5.24537196 L5.24537196,18.754628\\" transform=\\"translate(-3 -3)\\"></path><path d=\\"M5.24537196,5.24537196 L18.754628,18.754628\\" transform=\\"translate(-3 -3)\\"></path></g></svg></div></div>
     </div>
-    <!--SEARCH-->
-    <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
-    <!--PROJECT_ACCOUNT_SWITCHER-->
-    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
-    <!--SHORTCUT-->
+    <div class=\\"hig__global-nav__top-nav__logo\\">
+      <a>
+        <img src=\\"\\">
+      </a>
     </div>
-    <div class=\\"hig__global-nav__profile\\">
+  </div>
+  <!--SEARCH-->
+  <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
+  <!--PROJECT_ACCOUNT_SWITCHER-->
+  <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
+  <!--SHORTCUT-->
+  </div>
+  <div class=\\"hig__global-nav__profile\\">
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
         <!--FLYOUT-->
     <div class=\\"hig__flyout hig__flyout--anchor-top-right\\">
@@ -241,24 +241,24 @@ exports[`<Profile> setting and updating props can set props for profileSettingsL
     <!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <div class=\\"hig__global-nav__top-nav\\">
-    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
-        <div class=\\"hig__global-nav__top-nav__hamburger\\">
-            <div class=\\"hig__global-nav__top-nav__hamburger__hamburgericon\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
-            <div class=\\"hig__global-nav__top-nav__hamburger__closeicon\\"><div class=\\"hig__icon\\"><svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 18 18\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-hamburger\\"><g stroke=\\"#0A131C\\" stroke-width=\\"2\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"square\\"><path d=\\"M18.754628,5.24537196 L5.24537196,18.754628\\" transform=\\"translate(-3 -3)\\"></path><path d=\\"M5.24537196,5.24537196 L18.754628,18.754628\\" transform=\\"translate(-3 -3)\\"></path></g></svg></div></div>
-        </div>
-        <div class=\\"hig__global-nav__top-nav__logo\\">
-            <a href=\\"#\\">
-                <img src=\\"link\\">
-            </a>
-        </div>
+  <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
+    <div class=\\"hig__global-nav__top-nav__hamburger\\">
+      <div class=\\"hig__global-nav__top-nav__hamburger__hamburgericon\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
+      <div class=\\"hig__global-nav__top-nav__hamburger__closeicon\\"><div class=\\"hig__icon\\"><svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 18 18\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-hamburger\\"><g stroke=\\"#0A131C\\" stroke-width=\\"2\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"square\\"><path d=\\"M18.754628,5.24537196 L5.24537196,18.754628\\" transform=\\"translate(-3 -3)\\"></path><path d=\\"M5.24537196,5.24537196 L18.754628,18.754628\\" transform=\\"translate(-3 -3)\\"></path></g></svg></div></div>
     </div>
-    <!--SEARCH-->
-    <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
-    <!--PROJECT_ACCOUNT_SWITCHER-->
-    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
-    <!--SHORTCUT-->
+    <div class=\\"hig__global-nav__top-nav__logo\\">
+      <a>
+        <img src=\\"\\">
+      </a>
     </div>
-    <div class=\\"hig__global-nav__profile\\">
+  </div>
+  <!--SEARCH-->
+  <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
+  <!--PROJECT_ACCOUNT_SWITCHER-->
+  <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
+  <!--SHORTCUT-->
+  </div>
+  <div class=\\"hig__global-nav__profile\\">
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
         <!--FLYOUT-->
     <div class=\\"hig__flyout hig__flyout--anchor-top-right\\">
@@ -300,24 +300,24 @@ exports[`<Profile> setting and updating props can set props for profileSettingsL
     <!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <div class=\\"hig__global-nav__top-nav\\">
-    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
-        <div class=\\"hig__global-nav__top-nav__hamburger\\">
-            <div class=\\"hig__global-nav__top-nav__hamburger__hamburgericon\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
-            <div class=\\"hig__global-nav__top-nav__hamburger__closeicon\\"><div class=\\"hig__icon\\"><svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 18 18\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-hamburger\\"><g stroke=\\"#0A131C\\" stroke-width=\\"2\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"square\\"><path d=\\"M18.754628,5.24537196 L5.24537196,18.754628\\" transform=\\"translate(-3 -3)\\"></path><path d=\\"M5.24537196,5.24537196 L18.754628,18.754628\\" transform=\\"translate(-3 -3)\\"></path></g></svg></div></div>
-        </div>
-        <div class=\\"hig__global-nav__top-nav__logo\\">
-            <a href=\\"#\\">
-                <img src=\\"link\\">
-            </a>
-        </div>
+  <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
+    <div class=\\"hig__global-nav__top-nav__hamburger\\">
+      <div class=\\"hig__global-nav__top-nav__hamburger__hamburgericon\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
+      <div class=\\"hig__global-nav__top-nav__hamburger__closeicon\\"><div class=\\"hig__icon\\"><svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 18 18\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-hamburger\\"><g stroke=\\"#0A131C\\" stroke-width=\\"2\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"square\\"><path d=\\"M18.754628,5.24537196 L5.24537196,18.754628\\" transform=\\"translate(-3 -3)\\"></path><path d=\\"M5.24537196,5.24537196 L18.754628,18.754628\\" transform=\\"translate(-3 -3)\\"></path></g></svg></div></div>
     </div>
-    <!--SEARCH-->
-    <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
-    <!--PROJECT_ACCOUNT_SWITCHER-->
-    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
-    <!--SHORTCUT-->
+    <div class=\\"hig__global-nav__top-nav__logo\\">
+      <a>
+        <img src=\\"\\">
+      </a>
     </div>
-    <div class=\\"hig__global-nav__profile\\">
+  </div>
+  <!--SEARCH-->
+  <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
+  <!--PROJECT_ACCOUNT_SWITCHER-->
+  <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
+  <!--SHORTCUT-->
+  </div>
+  <div class=\\"hig__global-nav__profile\\">
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
         <!--FLYOUT-->
     <div class=\\"hig__flyout hig__flyout--anchor-top-right\\">
@@ -359,24 +359,24 @@ exports[`<Profile> setting and updating props can set props for signOutLabel 1`]
     <!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <div class=\\"hig__global-nav__top-nav\\">
-    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
-        <div class=\\"hig__global-nav__top-nav__hamburger\\">
-            <div class=\\"hig__global-nav__top-nav__hamburger__hamburgericon\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
-            <div class=\\"hig__global-nav__top-nav__hamburger__closeicon\\"><div class=\\"hig__icon\\"><svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 18 18\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-hamburger\\"><g stroke=\\"#0A131C\\" stroke-width=\\"2\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"square\\"><path d=\\"M18.754628,5.24537196 L5.24537196,18.754628\\" transform=\\"translate(-3 -3)\\"></path><path d=\\"M5.24537196,5.24537196 L18.754628,18.754628\\" transform=\\"translate(-3 -3)\\"></path></g></svg></div></div>
-        </div>
-        <div class=\\"hig__global-nav__top-nav__logo\\">
-            <a href=\\"#\\">
-                <img src=\\"link\\">
-            </a>
-        </div>
+  <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
+    <div class=\\"hig__global-nav__top-nav__hamburger\\">
+      <div class=\\"hig__global-nav__top-nav__hamburger__hamburgericon\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
+      <div class=\\"hig__global-nav__top-nav__hamburger__closeicon\\"><div class=\\"hig__icon\\"><svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 18 18\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-hamburger\\"><g stroke=\\"#0A131C\\" stroke-width=\\"2\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"square\\"><path d=\\"M18.754628,5.24537196 L5.24537196,18.754628\\" transform=\\"translate(-3 -3)\\"></path><path d=\\"M5.24537196,5.24537196 L18.754628,18.754628\\" transform=\\"translate(-3 -3)\\"></path></g></svg></div></div>
     </div>
-    <!--SEARCH-->
-    <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
-    <!--PROJECT_ACCOUNT_SWITCHER-->
-    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
-    <!--SHORTCUT-->
+    <div class=\\"hig__global-nav__top-nav__logo\\">
+      <a>
+        <img src=\\"\\">
+      </a>
     </div>
-    <div class=\\"hig__global-nav__profile\\">
+  </div>
+  <!--SEARCH-->
+  <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
+  <!--PROJECT_ACCOUNT_SWITCHER-->
+  <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
+  <!--SHORTCUT-->
+  </div>
+  <div class=\\"hig__global-nav__profile\\">
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
         <!--FLYOUT-->
     <div class=\\"hig__flyout hig__flyout--anchor-top-right\\">
@@ -418,24 +418,24 @@ exports[`<Profile> setting and updating props can set props for signOutLink 1`] 
     <!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <div class=\\"hig__global-nav__top-nav\\">
-    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
-        <div class=\\"hig__global-nav__top-nav__hamburger\\">
-            <div class=\\"hig__global-nav__top-nav__hamburger__hamburgericon\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
-            <div class=\\"hig__global-nav__top-nav__hamburger__closeicon\\"><div class=\\"hig__icon\\"><svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 18 18\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-hamburger\\"><g stroke=\\"#0A131C\\" stroke-width=\\"2\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"square\\"><path d=\\"M18.754628,5.24537196 L5.24537196,18.754628\\" transform=\\"translate(-3 -3)\\"></path><path d=\\"M5.24537196,5.24537196 L18.754628,18.754628\\" transform=\\"translate(-3 -3)\\"></path></g></svg></div></div>
-        </div>
-        <div class=\\"hig__global-nav__top-nav__logo\\">
-            <a href=\\"#\\">
-                <img src=\\"link\\">
-            </a>
-        </div>
+  <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
+    <div class=\\"hig__global-nav__top-nav__hamburger\\">
+      <div class=\\"hig__global-nav__top-nav__hamburger__hamburgericon\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
+      <div class=\\"hig__global-nav__top-nav__hamburger__closeicon\\"><div class=\\"hig__icon\\"><svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 18 18\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-hamburger\\"><g stroke=\\"#0A131C\\" stroke-width=\\"2\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"square\\"><path d=\\"M18.754628,5.24537196 L5.24537196,18.754628\\" transform=\\"translate(-3 -3)\\"></path><path d=\\"M5.24537196,5.24537196 L18.754628,18.754628\\" transform=\\"translate(-3 -3)\\"></path></g></svg></div></div>
     </div>
-    <!--SEARCH-->
-    <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
-    <!--PROJECT_ACCOUNT_SWITCHER-->
-    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
-    <!--SHORTCUT-->
+    <div class=\\"hig__global-nav__top-nav__logo\\">
+      <a>
+        <img src=\\"\\">
+      </a>
     </div>
-    <div class=\\"hig__global-nav__profile\\">
+  </div>
+  <!--SEARCH-->
+  <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
+  <!--PROJECT_ACCOUNT_SWITCHER-->
+  <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
+  <!--SHORTCUT-->
+  </div>
+  <div class=\\"hig__global-nav__profile\\">
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
         <!--FLYOUT-->
     <div class=\\"hig__flyout hig__flyout--anchor-top-right\\">
@@ -477,24 +477,24 @@ exports[`<Profile> setting and updating props can update props for email 1`] = `
     <!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <div class=\\"hig__global-nav__top-nav\\">
-    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
-        <div class=\\"hig__global-nav__top-nav__hamburger\\">
-            <div class=\\"hig__global-nav__top-nav__hamburger__hamburgericon\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
-            <div class=\\"hig__global-nav__top-nav__hamburger__closeicon\\"><div class=\\"hig__icon\\"><svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 18 18\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-hamburger\\"><g stroke=\\"#0A131C\\" stroke-width=\\"2\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"square\\"><path d=\\"M18.754628,5.24537196 L5.24537196,18.754628\\" transform=\\"translate(-3 -3)\\"></path><path d=\\"M5.24537196,5.24537196 L18.754628,18.754628\\" transform=\\"translate(-3 -3)\\"></path></g></svg></div></div>
-        </div>
-        <div class=\\"hig__global-nav__top-nav__logo\\">
-            <a href=\\"#\\">
-                <img src=\\"link\\">
-            </a>
-        </div>
+  <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
+    <div class=\\"hig__global-nav__top-nav__hamburger\\">
+      <div class=\\"hig__global-nav__top-nav__hamburger__hamburgericon\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
+      <div class=\\"hig__global-nav__top-nav__hamburger__closeicon\\"><div class=\\"hig__icon\\"><svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 18 18\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-hamburger\\"><g stroke=\\"#0A131C\\" stroke-width=\\"2\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"square\\"><path d=\\"M18.754628,5.24537196 L5.24537196,18.754628\\" transform=\\"translate(-3 -3)\\"></path><path d=\\"M5.24537196,5.24537196 L18.754628,18.754628\\" transform=\\"translate(-3 -3)\\"></path></g></svg></div></div>
     </div>
-    <!--SEARCH-->
-    <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
-    <!--PROJECT_ACCOUNT_SWITCHER-->
-    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
-    <!--SHORTCUT-->
+    <div class=\\"hig__global-nav__top-nav__logo\\">
+      <a>
+        <img src=\\"\\">
+      </a>
     </div>
-    <div class=\\"hig__global-nav__profile\\">
+  </div>
+  <!--SEARCH-->
+  <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
+  <!--PROJECT_ACCOUNT_SWITCHER-->
+  <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
+  <!--SHORTCUT-->
+  </div>
+  <div class=\\"hig__global-nav__profile\\">
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
         <!--FLYOUT-->
     <div class=\\"hig__flyout hig__flyout--anchor-top-right\\">
@@ -536,24 +536,24 @@ exports[`<Profile> setting and updating props can update props for image 1`] = `
     <!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <div class=\\"hig__global-nav__top-nav\\">
-    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
-        <div class=\\"hig__global-nav__top-nav__hamburger\\">
-            <div class=\\"hig__global-nav__top-nav__hamburger__hamburgericon\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
-            <div class=\\"hig__global-nav__top-nav__hamburger__closeicon\\"><div class=\\"hig__icon\\"><svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 18 18\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-hamburger\\"><g stroke=\\"#0A131C\\" stroke-width=\\"2\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"square\\"><path d=\\"M18.754628,5.24537196 L5.24537196,18.754628\\" transform=\\"translate(-3 -3)\\"></path><path d=\\"M5.24537196,5.24537196 L18.754628,18.754628\\" transform=\\"translate(-3 -3)\\"></path></g></svg></div></div>
-        </div>
-        <div class=\\"hig__global-nav__top-nav__logo\\">
-            <a href=\\"#\\">
-                <img src=\\"link\\">
-            </a>
-        </div>
+  <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
+    <div class=\\"hig__global-nav__top-nav__hamburger\\">
+      <div class=\\"hig__global-nav__top-nav__hamburger__hamburgericon\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
+      <div class=\\"hig__global-nav__top-nav__hamburger__closeicon\\"><div class=\\"hig__icon\\"><svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 18 18\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-hamburger\\"><g stroke=\\"#0A131C\\" stroke-width=\\"2\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"square\\"><path d=\\"M18.754628,5.24537196 L5.24537196,18.754628\\" transform=\\"translate(-3 -3)\\"></path><path d=\\"M5.24537196,5.24537196 L18.754628,18.754628\\" transform=\\"translate(-3 -3)\\"></path></g></svg></div></div>
     </div>
-    <!--SEARCH-->
-    <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
-    <!--PROJECT_ACCOUNT_SWITCHER-->
-    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
-    <!--SHORTCUT-->
+    <div class=\\"hig__global-nav__top-nav__logo\\">
+      <a>
+        <img src=\\"\\">
+      </a>
     </div>
-    <div class=\\"hig__global-nav__profile\\">
+  </div>
+  <!--SEARCH-->
+  <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
+  <!--PROJECT_ACCOUNT_SWITCHER-->
+  <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
+  <!--SHORTCUT-->
+  </div>
+  <div class=\\"hig__global-nav__profile\\">
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
         <!--FLYOUT-->
     <div class=\\"hig__flyout hig__flyout--anchor-top-right\\">
@@ -595,24 +595,24 @@ exports[`<Profile> setting and updating props can update props for name 1`] = `
     <!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <div class=\\"hig__global-nav__top-nav\\">
-    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
-        <div class=\\"hig__global-nav__top-nav__hamburger\\">
-            <div class=\\"hig__global-nav__top-nav__hamburger__hamburgericon\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
-            <div class=\\"hig__global-nav__top-nav__hamburger__closeicon\\"><div class=\\"hig__icon\\"><svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 18 18\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-hamburger\\"><g stroke=\\"#0A131C\\" stroke-width=\\"2\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"square\\"><path d=\\"M18.754628,5.24537196 L5.24537196,18.754628\\" transform=\\"translate(-3 -3)\\"></path><path d=\\"M5.24537196,5.24537196 L18.754628,18.754628\\" transform=\\"translate(-3 -3)\\"></path></g></svg></div></div>
-        </div>
-        <div class=\\"hig__global-nav__top-nav__logo\\">
-            <a href=\\"#\\">
-                <img src=\\"link\\">
-            </a>
-        </div>
+  <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
+    <div class=\\"hig__global-nav__top-nav__hamburger\\">
+      <div class=\\"hig__global-nav__top-nav__hamburger__hamburgericon\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
+      <div class=\\"hig__global-nav__top-nav__hamburger__closeicon\\"><div class=\\"hig__icon\\"><svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 18 18\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-hamburger\\"><g stroke=\\"#0A131C\\" stroke-width=\\"2\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"square\\"><path d=\\"M18.754628,5.24537196 L5.24537196,18.754628\\" transform=\\"translate(-3 -3)\\"></path><path d=\\"M5.24537196,5.24537196 L18.754628,18.754628\\" transform=\\"translate(-3 -3)\\"></path></g></svg></div></div>
     </div>
-    <!--SEARCH-->
-    <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
-    <!--PROJECT_ACCOUNT_SWITCHER-->
-    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
-    <!--SHORTCUT-->
+    <div class=\\"hig__global-nav__top-nav__logo\\">
+      <a>
+        <img src=\\"\\">
+      </a>
     </div>
-    <div class=\\"hig__global-nav__profile\\">
+  </div>
+  <!--SEARCH-->
+  <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
+  <!--PROJECT_ACCOUNT_SWITCHER-->
+  <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
+  <!--SHORTCUT-->
+  </div>
+  <div class=\\"hig__global-nav__profile\\">
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
         <!--FLYOUT-->
     <div class=\\"hig__flyout hig__flyout--anchor-top-right\\">
@@ -654,24 +654,24 @@ exports[`<Profile> setting and updating props can update props for profileSettin
     <!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <div class=\\"hig__global-nav__top-nav\\">
-    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
-        <div class=\\"hig__global-nav__top-nav__hamburger\\">
-            <div class=\\"hig__global-nav__top-nav__hamburger__hamburgericon\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
-            <div class=\\"hig__global-nav__top-nav__hamburger__closeicon\\"><div class=\\"hig__icon\\"><svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 18 18\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-hamburger\\"><g stroke=\\"#0A131C\\" stroke-width=\\"2\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"square\\"><path d=\\"M18.754628,5.24537196 L5.24537196,18.754628\\" transform=\\"translate(-3 -3)\\"></path><path d=\\"M5.24537196,5.24537196 L18.754628,18.754628\\" transform=\\"translate(-3 -3)\\"></path></g></svg></div></div>
-        </div>
-        <div class=\\"hig__global-nav__top-nav__logo\\">
-            <a href=\\"#\\">
-                <img src=\\"link\\">
-            </a>
-        </div>
+  <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
+    <div class=\\"hig__global-nav__top-nav__hamburger\\">
+      <div class=\\"hig__global-nav__top-nav__hamburger__hamburgericon\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
+      <div class=\\"hig__global-nav__top-nav__hamburger__closeicon\\"><div class=\\"hig__icon\\"><svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 18 18\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-hamburger\\"><g stroke=\\"#0A131C\\" stroke-width=\\"2\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"square\\"><path d=\\"M18.754628,5.24537196 L5.24537196,18.754628\\" transform=\\"translate(-3 -3)\\"></path><path d=\\"M5.24537196,5.24537196 L18.754628,18.754628\\" transform=\\"translate(-3 -3)\\"></path></g></svg></div></div>
     </div>
-    <!--SEARCH-->
-    <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
-    <!--PROJECT_ACCOUNT_SWITCHER-->
-    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
-    <!--SHORTCUT-->
+    <div class=\\"hig__global-nav__top-nav__logo\\">
+      <a>
+        <img src=\\"\\">
+      </a>
     </div>
-    <div class=\\"hig__global-nav__profile\\">
+  </div>
+  <!--SEARCH-->
+  <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
+  <!--PROJECT_ACCOUNT_SWITCHER-->
+  <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
+  <!--SHORTCUT-->
+  </div>
+  <div class=\\"hig__global-nav__profile\\">
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
         <!--FLYOUT-->
     <div class=\\"hig__flyout hig__flyout--anchor-top-right\\">
@@ -713,24 +713,24 @@ exports[`<Profile> setting and updating props can update props for profileSettin
     <!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <div class=\\"hig__global-nav__top-nav\\">
-    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
-        <div class=\\"hig__global-nav__top-nav__hamburger\\">
-            <div class=\\"hig__global-nav__top-nav__hamburger__hamburgericon\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
-            <div class=\\"hig__global-nav__top-nav__hamburger__closeicon\\"><div class=\\"hig__icon\\"><svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 18 18\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-hamburger\\"><g stroke=\\"#0A131C\\" stroke-width=\\"2\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"square\\"><path d=\\"M18.754628,5.24537196 L5.24537196,18.754628\\" transform=\\"translate(-3 -3)\\"></path><path d=\\"M5.24537196,5.24537196 L18.754628,18.754628\\" transform=\\"translate(-3 -3)\\"></path></g></svg></div></div>
-        </div>
-        <div class=\\"hig__global-nav__top-nav__logo\\">
-            <a href=\\"#\\">
-                <img src=\\"link\\">
-            </a>
-        </div>
+  <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
+    <div class=\\"hig__global-nav__top-nav__hamburger\\">
+      <div class=\\"hig__global-nav__top-nav__hamburger__hamburgericon\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
+      <div class=\\"hig__global-nav__top-nav__hamburger__closeicon\\"><div class=\\"hig__icon\\"><svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 18 18\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-hamburger\\"><g stroke=\\"#0A131C\\" stroke-width=\\"2\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"square\\"><path d=\\"M18.754628,5.24537196 L5.24537196,18.754628\\" transform=\\"translate(-3 -3)\\"></path><path d=\\"M5.24537196,5.24537196 L18.754628,18.754628\\" transform=\\"translate(-3 -3)\\"></path></g></svg></div></div>
     </div>
-    <!--SEARCH-->
-    <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
-    <!--PROJECT_ACCOUNT_SWITCHER-->
-    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
-    <!--SHORTCUT-->
+    <div class=\\"hig__global-nav__top-nav__logo\\">
+      <a>
+        <img src=\\"\\">
+      </a>
     </div>
-    <div class=\\"hig__global-nav__profile\\">
+  </div>
+  <!--SEARCH-->
+  <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
+  <!--PROJECT_ACCOUNT_SWITCHER-->
+  <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
+  <!--SHORTCUT-->
+  </div>
+  <div class=\\"hig__global-nav__profile\\">
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
         <!--FLYOUT-->
     <div class=\\"hig__flyout hig__flyout--anchor-top-right\\">
@@ -772,24 +772,24 @@ exports[`<Profile> setting and updating props can update props for signOutLabel 
     <!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <div class=\\"hig__global-nav__top-nav\\">
-    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
-        <div class=\\"hig__global-nav__top-nav__hamburger\\">
-            <div class=\\"hig__global-nav__top-nav__hamburger__hamburgericon\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
-            <div class=\\"hig__global-nav__top-nav__hamburger__closeicon\\"><div class=\\"hig__icon\\"><svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 18 18\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-hamburger\\"><g stroke=\\"#0A131C\\" stroke-width=\\"2\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"square\\"><path d=\\"M18.754628,5.24537196 L5.24537196,18.754628\\" transform=\\"translate(-3 -3)\\"></path><path d=\\"M5.24537196,5.24537196 L18.754628,18.754628\\" transform=\\"translate(-3 -3)\\"></path></g></svg></div></div>
-        </div>
-        <div class=\\"hig__global-nav__top-nav__logo\\">
-            <a href=\\"#\\">
-                <img src=\\"link\\">
-            </a>
-        </div>
+  <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
+    <div class=\\"hig__global-nav__top-nav__hamburger\\">
+      <div class=\\"hig__global-nav__top-nav__hamburger__hamburgericon\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
+      <div class=\\"hig__global-nav__top-nav__hamburger__closeicon\\"><div class=\\"hig__icon\\"><svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 18 18\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-hamburger\\"><g stroke=\\"#0A131C\\" stroke-width=\\"2\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"square\\"><path d=\\"M18.754628,5.24537196 L5.24537196,18.754628\\" transform=\\"translate(-3 -3)\\"></path><path d=\\"M5.24537196,5.24537196 L18.754628,18.754628\\" transform=\\"translate(-3 -3)\\"></path></g></svg></div></div>
     </div>
-    <!--SEARCH-->
-    <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
-    <!--PROJECT_ACCOUNT_SWITCHER-->
-    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
-    <!--SHORTCUT-->
+    <div class=\\"hig__global-nav__top-nav__logo\\">
+      <a>
+        <img src=\\"\\">
+      </a>
     </div>
-    <div class=\\"hig__global-nav__profile\\">
+  </div>
+  <!--SEARCH-->
+  <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
+  <!--PROJECT_ACCOUNT_SWITCHER-->
+  <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
+  <!--SHORTCUT-->
+  </div>
+  <div class=\\"hig__global-nav__profile\\">
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
         <!--FLYOUT-->
     <div class=\\"hig__flyout hig__flyout--anchor-top-right\\">
@@ -831,24 +831,24 @@ exports[`<Profile> setting and updating props can update props for signOutLink 1
     <!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <div class=\\"hig__global-nav__top-nav\\">
-    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
-        <div class=\\"hig__global-nav__top-nav__hamburger\\">
-            <div class=\\"hig__global-nav__top-nav__hamburger__hamburgericon\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
-            <div class=\\"hig__global-nav__top-nav__hamburger__closeicon\\"><div class=\\"hig__icon\\"><svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 18 18\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-hamburger\\"><g stroke=\\"#0A131C\\" stroke-width=\\"2\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"square\\"><path d=\\"M18.754628,5.24537196 L5.24537196,18.754628\\" transform=\\"translate(-3 -3)\\"></path><path d=\\"M5.24537196,5.24537196 L18.754628,18.754628\\" transform=\\"translate(-3 -3)\\"></path></g></svg></div></div>
-        </div>
-        <div class=\\"hig__global-nav__top-nav__logo\\">
-            <a href=\\"#\\">
-                <img src=\\"link\\">
-            </a>
-        </div>
+  <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
+    <div class=\\"hig__global-nav__top-nav__hamburger\\">
+      <div class=\\"hig__global-nav__top-nav__hamburger__hamburgericon\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
+      <div class=\\"hig__global-nav__top-nav__hamburger__closeicon\\"><div class=\\"hig__icon\\"><svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 18 18\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-hamburger\\"><g stroke=\\"#0A131C\\" stroke-width=\\"2\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"square\\"><path d=\\"M18.754628,5.24537196 L5.24537196,18.754628\\" transform=\\"translate(-3 -3)\\"></path><path d=\\"M5.24537196,5.24537196 L18.754628,18.754628\\" transform=\\"translate(-3 -3)\\"></path></g></svg></div></div>
     </div>
-    <!--SEARCH-->
-    <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
-    <!--PROJECT_ACCOUNT_SWITCHER-->
-    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
-    <!--SHORTCUT-->
+    <div class=\\"hig__global-nav__top-nav__logo\\">
+      <a>
+        <img src=\\"\\">
+      </a>
     </div>
-    <div class=\\"hig__global-nav__profile\\">
+  </div>
+  <!--SEARCH-->
+  <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
+  <!--PROJECT_ACCOUNT_SWITCHER-->
+  <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
+  <!--SHORTCUT-->
+  </div>
+  <div class=\\"hig__global-nav__profile\\">
     <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
         <!--FLYOUT-->
     <div class=\\"hig__flyout hig__flyout--anchor-top-right\\">

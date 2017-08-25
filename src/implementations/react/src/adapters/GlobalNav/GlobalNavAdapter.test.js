@@ -41,7 +41,7 @@ describe('<GlobalNavAdapter>', () => {
 
       expect(console.error).toBeCalledWith(
         expect.stringMatching(
-          /Invalid prop `sideNavOpen` of type `string` supplied to `GlobalNav`, expected `boolean`./
+          /Invalid prop `sideNavOpen` of type `string` supplied to `GlobalNavAdapter`, expected `boolean`./
         )
       );
     });
@@ -147,7 +147,7 @@ describe('<GlobalNavAdapter>', () => {
 
     expect(console.error).toBeCalledWith(
       expect.stringMatching(
-        /'div' is not a valid child of GlobalNav. Children should be of type ', SideNavAdapter, TopNavAdapter, SubNavAdapter, Slot'/
+        /'div' is not a valid child of GlobalNavAdapter. Children should be of type ', SideNavAdapter, TopNavAdapter, SubNavAdapter, Slot'/
       )
     );
   });
@@ -163,7 +163,7 @@ describe('<GlobalNavAdapter>', () => {
 
     expect(console.error).toBeCalledWith(
       expect.stringMatching(
-        /'some random child text' is not a valid child of GlobalNav. Children should be of type ', SideNavAdapter, TopNavAdapter, SubNavAdapter, Slot'/
+        /'some random child text' is not a valid child of GlobalNavAdapter. Children should be of type ', SideNavAdapter, TopNavAdapter, SubNavAdapter, Slot'/
       )
     );
   });
