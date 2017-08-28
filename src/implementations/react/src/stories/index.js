@@ -1,5 +1,6 @@
 
 import 'hig-vanilla/dist/hig.css';
+import './index.css';
 
 import './Button.story';
 import './Checkbox.story';
