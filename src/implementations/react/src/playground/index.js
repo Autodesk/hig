@@ -68,7 +68,7 @@ class Playground extends React.Component {
       },
       searchable: true
     };
-
+    
     return (
       <GlobalNav
         accounts={accounts}
@@ -100,7 +100,9 @@ class Playground extends React.Component {
         <TypographySection />
         <TableSection/>
         <TextLinkSection/>
+        <Flyout />
       </GlobalNav>
+
     );
   }
 }

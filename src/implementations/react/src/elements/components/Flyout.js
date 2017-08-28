@@ -9,8 +9,13 @@ class Flyout extends React.Component {
   }
 
   setTargetEl = (el) => {
-    this.setState({targetEl: el})
+    this.setState({target: el})
   };
+
+  setContentEl = (el) => {
+    this.setState({content: el})
+  }
+
 
   render() {
 
@@ -20,10 +25,11 @@ class Flyout extends React.Component {
         anchorPoint={this.props.anchorPoint}
         open={this.props.open}
         onClickOutside={this.props.onClickOutside}
-        target={this.state.targetEl}
-        content={this.props.content}
+        target={this.state.target}
+        content={this.state.content}
         >
         <div ref={this.setTargetEl}>{this.props.children}</div>
+        <div ref={this.setContentEl}>test test test</div>
       </FlyoutAdapter>
     )
   }

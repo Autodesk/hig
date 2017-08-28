@@ -26,7 +26,7 @@ class FlyoutAdapter extends HIGElement {
     if (this.target) {
       this._addTarget(this.target)
     }
-    if (this.content) {
+    if (this.slot) {
       this._addSlot(this.props.content)
     }
 
@@ -48,6 +48,8 @@ class FlyoutAdapter extends HIGElement {
       this.slot = element;
     }
   }
+
+  
 
   commitUpdate(updatePayload) {
     for (let i = 0; i < updatePayload.length; i += 2) {
