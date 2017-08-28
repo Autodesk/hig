@@ -48,6 +48,10 @@
             <div class='tests-text-field'></div>
         </div>
 
+        <div class='test-group test-group-clear-button'>
+            <div class='tests-text-field-clear-button'></div>
+        </div>
+
         <div class='test-group test-group-icon'>
             <div class='tests-text-field-icon'></div>
         </div>
@@ -56,6 +60,9 @@
             <div class='tests-text-field-disabled'></div>
         </div>
 
+        <div class='test-group-disabled-value-anchor'>
+            <a id='test-group-disabled-value' href='#test-group-disabled-value'>Disabled with Value</a>
+        </div>
         <div class='test-group test-group-disabled-value'>
             <div class='tests-text-field-disabled-value'></div>
         </div>
@@ -73,6 +80,19 @@
             });
 
             DefaultTextField.mount('.tests-text-field');
+
+            // TEXT FIELD WITH CLEAR BUTTON
+
+            const ClearButtonTextField = new TextField({
+                label: "This is a label",
+                placeholder: "This is a placeholder",
+                value: "This text is long enough to ensure no overlap with the clear button",
+                instructions: "Clear button will appear when you type here"
+            });
+
+            ClearButtonTextField.mount('.tests-text-field-clear-button');
+
+            ClearButtonTextField.showClearButton();
 
             // TEXT FIELD WITH ICON
 
@@ -102,6 +122,9 @@
             });
 
             DisabledValueTextField.mount('.tests-text-field-disabled-value');
+
+            DisabledValueTextField.showClearButton();
+
             DisabledValueTextField.disable();
 
         </script>

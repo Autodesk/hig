@@ -510,6 +510,17 @@
               "desc": "sets the value",
               "params": ["{String} value for our text field"]
             },
+            "showClearButton": {
+              "desc": "Makes the clear button visible"
+            },
+            "hideClearButton": {
+              "desc": "Hides the clear button"
+            },
+            "onClearButtonClick": {
+              "desc": "Calls the provided callback when user clicks the clear button",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            },
             "required": {
               "desc": "makes field required",
               "params": ["{String} required label text"]

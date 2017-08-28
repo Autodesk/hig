@@ -30,6 +30,11 @@
         </div>
 
         <div class='test-group'>
+            <div class='tests-text-field-clear-button-heading'></div>
+            <div class='tests-text-field-clear-button'></div>
+        </div>
+
+        <div class='test-group'>
             <div class='tests-text-field-update-heading'></div>
             <div class='tests-text-field-update'></div>
         </div>
@@ -97,6 +102,34 @@
             IconTextField.setIcon('location');
 
 
+            // TEXT FIELD WITH CLEAR BUTTON
+
+            const ClearButtonHeading = new Hig.Typography({
+                text: "TextField with clear button",
+                type: "h2"
+            });
+
+            const ClearButtonTextField = new TextField({
+                label: "What is your favorite secret society?",
+                placeholder: "Skull & Bones"
+            });
+
+            ClearButtonHeading.mount('.tests-text-field-clear-button-heading');
+            ClearButtonTextField.mount('.tests-text-field-clear-button');
+
+            ClearButtonTextField.onInput(event => {
+              if (event.target.value.length === 0) {
+                ClearButtonTextField.hideClearButton();
+              } else {
+                ClearButtonTextField.showClearButton();
+              }
+            });
+
+            ClearButtonTextField.onClearButtonClick(() => {
+              console.log("Clear button clicked");
+              ClearButtonTextField.setValue("");
+              ClearButtonTextField.hideClearButton();
+            });
 
             // TEXT FIELD CONFIGURED WITH SETTERS
 
@@ -107,7 +140,7 @@
             SetterHeading.mount('.tests-text-field-update-heading');
 
             const SetterTextField = new TextField();
-            
+
             SetterTextField.mount('.tests-text-field-update');
 
             SetterTextField.setLabel('This is an updated label');
