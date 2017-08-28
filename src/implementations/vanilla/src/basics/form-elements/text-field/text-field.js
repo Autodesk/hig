@@ -165,11 +165,13 @@ class TextField extends Core {
         const passwordButton = this.el.querySelector('.hig__text-field__password-reveal-button');
         passwordButton.innerHTML = iconString;
         passwordButton.classList.add('hig__text-field__extra--show');
+        this.el.classList.add('hig__text-field--password-button-visible');
     }
 
     _hidePasswordRevealButton() {
         const passwordButton = this.el.querySelector('.hig__text-field__password-reveal-button');
         passwordButton.classList.remove('hig__text-field__extra--show');
+        this.el.classList.remove('hig__text-field--password-button-visible');
     }
 
     _onClick(fn){
@@ -185,11 +187,13 @@ class TextField extends Core {
         const passwordButton = this.el.querySelector('.hig__text-field__password-hide-button');
         passwordButton.innerHTML = iconString;
         passwordButton.classList.add('hig__text-field__extra--show');
+        this.el.classList.add('hig__text-field--password-button-visible');
     }
 
     _hidePasswordHideButton() {
         const passwordButton = this.el.querySelector('.hig__text-field__password-hide-button');
         passwordButton.classList.remove('hig__text-field__extra--show');
+        this.el.classList.remove('hig__text-field--password-button-visible');
     }
 
     _onPasswordHideButtonClick(fn) {
