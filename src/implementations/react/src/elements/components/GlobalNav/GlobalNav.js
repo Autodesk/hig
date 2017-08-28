@@ -50,9 +50,16 @@ class GlobalNav extends Component {
     this.setState({ sideNavOpen: !this.state.sideNavOpen });
   }
 
+  renderedSideNavOpen() {
+    if(this.props.sideNavOpen !== undefined) {
+      return this.props.sideNavOpen;
+    }
+    return this.state.sideNavOpen;
+  }
+
   render() {
     return (
-      <GlobalNavAdapter sideNavOpen={this.state.sideNavOpen}>
+      <GlobalNavAdapter sideNavOpen={this.renderedSideNavOpen()}>
         <TopNavAdapter
           onHamburgerClick={this.toggleSideNavOpen}
           {...this.props.topNav}
@@ -65,16 +72,22 @@ class GlobalNav extends Component {
           />
         </TopNavAdapter>
         <SideNav
-          onModuleChange={this.props.onModuleChange}
+          activeModuleId={this.props.activeModuleId}
+          activeSubmoduleId={this.props.activeSubmoduleId}
           modules={this.props.modules}
+          onModuleChange={this.props.onModuleChange}
+          onSubmoduleChange={this.props.onSubmoduleChange}
           submodules={this.props.submodules}
           {...this.props.sideNav}
         />
         <SubNavAdapter />
-        <Slot>{this.props.children}</Slot>
+        {this.props.children
+          ? <Slot>{this.props.children}</Slot>
+          : null}
       </GlobalNavAdapter>
     )
   }
 }
 
 export default GlobalNav;
+
