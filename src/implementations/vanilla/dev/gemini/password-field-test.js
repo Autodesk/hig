@@ -25,7 +25,7 @@ gemini.suite('password field', (parent) => {
                 this.revealButtonfield = find('.test-group-reveal .hig__text-field__input');
             })
             .capture('with password reveal button', function(actions, find) {
-                actions.sendKeys(this.revealButtonfield, '1password');
+                actions.sendKeys(this.revealButtonfield, 'this-is-a-password-that-is-long-enough-to-overflow');
             })
             .capture('with password revealed', function(actions, find) {
                 const passwordRevealButton = find('.test-group-reveal .hig__text-field__password-reveal-button');
