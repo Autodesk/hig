@@ -19,30 +19,30 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { text, select, boolean } from '@storybook/addon-knobs';
 
-import { default as PasswordField } from './PasswordFieldAdapter';
+import TextAreaAdapter from '../adapters/FormElements/TextAreaAdapter';
 
-storiesOf('PasswordFieldAdapter', module)
-  .addWithInfo('Default', ``, () => {
+storiesOf('TextAreaAdapter', module)
+  .addWithInfo('By default', ``, () => {
     return (
-      <PasswordField label={text('Label', 'My text field')} />
-    );
-  })
-  .addWithInfo('With knobs & events', ``, () => {
-    return (
-      <PasswordField
+      <TextAreaAdapter
         disabled={boolean('Disabled', false)}
-        instructions={text('Instructions', 'Here are your instructions.')}
-        label={text('Label', "What's the password?")}
+        label={text('Label', 'My text field')}
         onBlur={action('blur')}
         onChange={action('change')}
         onFocus={action('focus')}
         onInput={action('input')}
-        onPasswordHideButtonClick={action('Password HIDE Button clicked')}
-        onPasswordRevealButtonClick={action('Password REVEAL Button clicked')}
-        showPasswordRevealButton={boolean("Show PasswordReveal",true)}
-        showPasswordHideButton={boolean("Show PasswordHide",false)}
-        placeholder={text('Placeholder', "Shh! It's a secret!")}
-        required={text('Required', 'Hint: it\'s not "password", "monkey", or "123456"')}
+        required={text('Required', '')}
       />
     );
   })
+  .addWithInfo('With no label and no events', ``, () => {
+    return (
+      <TextAreaAdapter
+        disabled={boolean('Disabled', false)}
+        instructions={text('Instructions', '')}
+        name={text('Name', 'my-text-field')}
+        placeholder={text('Placeholder', 'Tell me how you really feel')}
+        required={text('Required', '')}
+      />
+    );
+  });

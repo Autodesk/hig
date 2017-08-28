@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { text, select, boolean } from "@storybook/addon-knobs";
 
-import TableComponent from "./TableAdapter";
+import TableComponent from "../adapters/TableAdapter";
 import SlotCell from "../elements/components/SlotCell";
 import SlotHeadCell from "../elements/components/SlotHeadCell";
 

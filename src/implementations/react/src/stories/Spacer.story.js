@@ -3,8 +3,8 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { text, select } from '@storybook/addon-knobs';
 
-import { default as Spacer } from './SpacerAdapter';
-import {GlobalNav} from '../react-hig';
+import Spacer from '../adapters/SpacerAdapter';
+import { GlobalNav } from '../react-hig';
 const Slot = GlobalNav.Slot;
 
 const spacerStyle = {

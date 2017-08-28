@@ -19,8 +19,8 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { select, boolean, text } from '@storybook/addon-knobs';
 
-import { GlobalNav } from '../../../../react-hig';
-import SideNav from './SideNav';
+import GlobalNav from '../adapters/GlobalNav/GlobalNavAdapter';
+import SideNav from '../elements/components/GlobalNav/SideNav';
 
 const links = [
   { title: 'Autodesk Main', url: 'http://www.autodesk.com' },

@@ -3,7 +3,7 @@ import {storiesOf} from '@storybook/react';
 import {action} from '@storybook/addon-actions';
 import {text, select, boolean} from '@storybook/addon-knobs';
 
-import Modal from './Modal';
+import Modal from '../elements/components/Modal';
 
 storiesOf('Modal', module)
   .addWithInfo('Basic Modal', ``, () => {
