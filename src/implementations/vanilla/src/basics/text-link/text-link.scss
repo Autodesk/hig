@@ -1,0 +1,23 @@
+@import '~basics/colors/colors.scss';
+
+.hig__text-link {
+  font-family: 'ArtifaktElement', sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.hig__text-link__primary {
+  color: color(hig-blue-30);
+
+  &:hover {
+    color: color(hig-blue-20);
+  }
+}
+
+.hig__text-link__secondary {
+  color: color(hig-gray-30);
+
+  &:hover {
+    color: color(hig-blue-30);
+  }
+}
