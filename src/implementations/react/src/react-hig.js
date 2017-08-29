@@ -4,7 +4,7 @@ export { default as Dropdown } from "./adapters/FormElements/DropdownAdapter";
 export { default as SideNav } from './elements/components/GlobalNav/SideNav';
 export { default as GlobalNav } from './elements/components/GlobalNav/GlobalNav';
 export { default as IconButton } from './adapters/IconButtonAdapter';
-export { default as Flyout } from "./adapters/FlyoutAdapter";
+export { default as Flyout } from "./elements/components/Flyout";
 export { default as Modal } from './elements/components/Modal';
 export { default as Option } from './adapters/FormElements/OptionAdapter';
 export { default as PasswordField } from './adapters/FormElements/PasswordFieldAdapter';

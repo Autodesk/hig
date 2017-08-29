@@ -39,6 +39,7 @@ import ModalSection from './sections/ModalSection';
 import TypographySection from './sections/TypographySection';
 import TableSection from "./sections/TableSection";
 import TextLinkSection from "./sections/TextLinkSection";
+import FlyoutSection from "./sections/FlyoutSection"
 
 class Playground extends React.Component {
   constructor(props) {
@@ -51,6 +52,10 @@ class Playground extends React.Component {
   navigate = (id) => {
     console.log('Go to', id);
     this.setState({ activeModuleId: id });
+  }
+
+  onClickOutside = () => {
+    console.log("clicked outside")
   }
 
   render() {
@@ -99,10 +104,13 @@ class Playground extends React.Component {
         <DropdownSection />
         <TypographySection />
         <TableSection/>
+<<<<<<< 3236b5740fc222bdfcce7c2d5c960a67e42de2c2
         <TextLinkSection/>
         <Flyout />
+=======
+        <FlyoutSection />
+>>>>>>> cleaning up flyout section
       </GlobalNav>
-
     );
   }
 }

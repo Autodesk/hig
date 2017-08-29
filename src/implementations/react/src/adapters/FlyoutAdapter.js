@@ -1,7 +1,7 @@
-import * as HIG from 'hig-vanilla';
-import * as PropTypes from 'prop-types';
-import createComponent from './createComponent';
-import HIGElement from '../elements/HIGElement';
+import * as HIG from "hig-vanilla";
+import * as PropTypes from "prop-types";
+import createComponent from "./createComponent";
+import HIGElement from "../elements/HIGElement";
 
 class FlyoutAdapter extends HIGElement {
   constructor(initialProps) {
@@ -9,33 +9,38 @@ class FlyoutAdapter extends HIGElement {
   }
 
   componentDidMount() {
-
     var commitProps = [];
     if (this.props.anchorPoint) {
-      commitProps.push('anchorPoint',this.props.anchorPoint);
+      commitProps.push("anchorPoint", this.props.anchorPoint);
     }
 
     if (this.props.open) {
-      commitProps.push('open',this.props.open);
+      commitProps.push("open", this.props.open);
     }
 
     if (this.props.onClickOutside) {
-      commitProps.push('onClickOutside',this.props.onClickOutside);
+      commitProps.push("onClickOutside", this.props.onClickOutside);
     }
 
-    if (this.target) {
-      this._addTarget(this.target)
+    if (this.props.target) {
+      commitProps.push("target", this.props.target);
     }
-    if (this.slot) {
-      this._addSlot(this.props.content)
+    if (this.props.content) {
+      commitProps.push("content", this.props.content);
     }
 
     this.commitUpdate(commitProps);
   }
 
+  getChildContext() {
+    return {
+      parent: null
+    };
+  }
+
   _addTarget(element) {
     if (this.mounted) {
-      this.hig.addTarget(element)
+      this.hig.addTarget(element);
     } else {
       this.target = element;
     }
@@ -43,13 +48,11 @@ class FlyoutAdapter extends HIGElement {
 
   _addSlot(element) {
     if (this.mounted) {
-      this.hig.addSlot(element)
+      this.hig.addSlot(element);
     } else {
       this.slot = element;
     }
   }
-
-  
 
   commitUpdate(updatePayload) {
     for (let i = 0; i < updatePayload.length; i += 2) {
@@ -57,26 +60,26 @@ class FlyoutAdapter extends HIGElement {
       const propValue = updatePayload[i + 1];
 
       switch (propKey) {
-        case 'anchorPoint': {
+        case "anchorPoint": {
           this.hig.setAnchorPoint(propValue);
         }
-        case 'onClickOutside': {
+        case "onClickOutside": {
           this._resetOnClickOutsideHandler(propValue);
           break;
         }
-        case 'open': {
+        case "open": {
           propValue ? this.hig.open() : this.hig.close();
           break;
         }
-        case 'children': {
+        case "children": {
           // no-op
           break;
         }
-        case 'target': {
+        case "target": {
           this._addTarget(propValue);
           break;
         }
-        case 'content': {
+        case "content": {
           this._addSlot(propValue);
         }
         default: {
@@ -87,14 +90,17 @@ class FlyoutAdapter extends HIGElement {
   }
 
   _resetOnClickOutsideHandler(propValue) {
-    const dispose = this._disposeFunctions.get('onClickOutsideDispose');
-    if (dispose) { dispose(); }
+    const dispose = this._disposeFunctions.get("onClickOutsideDispose");
+    if (dispose) {
+      dispose();
+    }
 
-    this._disposeFunctions.set('onClickOutsideDispose', this.hig.onClickOutside(propValue));
+    this._disposeFunctions.set(
+      "onClickOutsideDispose",
+      this.hig.onClickOutside(propValue)
+    );
     return dispose;
   }
-
-
 }
 
 const FlyoutAdapterComponent = createComponent(FlyoutAdapter);
@@ -109,17 +115,23 @@ FlyoutAdapterComponent.propTypes = {
 
 FlyoutAdapterComponent.__docgenInfo = {
   props: {
-    anchorPoint:    { description: 'where the flyout should be anchored relative to target' },
-    onClickOutside: { description: 'handler that triggers when you click away from the flyout' },
-    open:           { description: 'True or False - sets flyout to open or closed' },
-    target:         { description: 'target component to open the flyout' },
-    content:        { description: 'HTML or flat text content for the flyout' },
-    children:       { description: 'supports adding dom content to the body of the flyout' }
+    anchorPoint: {
+      description: "where the flyout should be anchored relative to target"
+    },
+    onClickOutside: {
+      description: "handler that triggers when you click away from the flyout"
+    },
+    open: { description: "True or False - sets flyout to open or closed" },
+    target: { description: "target component to open the flyout" },
+    content: { description: "HTML or flat text content for the flyout" },
+    children: {
+      description: "supports adding dom content to the body of the flyout"
+    }
   }
 };
 
 FlyoutAdapterComponent.defaultProps = {
-  anchorPoint: 'top-right'
+  anchorPoint: "top-right"
 };
 
 export default FlyoutAdapterComponent;

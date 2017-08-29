@@ -16,9 +16,7 @@ class Flyout extends React.Component {
     this.setState({content: el})
   }
 
-
   render() {
-
     return (
 
       <FlyoutAdapter
@@ -29,7 +27,7 @@ class Flyout extends React.Component {
         content={this.state.content}
         >
         <div ref={this.setTargetEl}>{this.props.children}</div>
-        <div ref={this.setContentEl}>test test test</div>
+        <div ref={this.setContentEl}>{this.props.content}</div>
       </FlyoutAdapter>
     )
   }
