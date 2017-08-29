@@ -38,7 +38,7 @@ export default function WithState(WrappedComponent) {
     }
 
     setQuery = (event) => {
-      this.setState({ query: event.target.value });
+      this.setState({ query: event.target.value || '' });
     }
 
     setActiveModule = (id) => {

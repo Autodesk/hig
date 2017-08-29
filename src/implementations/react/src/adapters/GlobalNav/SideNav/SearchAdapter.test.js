@@ -43,7 +43,7 @@ function createHigComponent(defaults = {}) {
   return { higComponent: search, higContainer };
 }
 
-describe('<Search>', () => {
+describe('<SearchAdapter>', () => {
   it('renders', () => {
     const defaults = {};
     const { higComponent, higContainer } = createHigComponent(defaults);
@@ -59,7 +59,7 @@ describe('<Search>', () => {
   it('renders with initial props', () => {
     const defaults = {
       placeholder: 'Search a little search for me',
-      query: 'Documents'
+      value: 'Documents'
     };
     const { higComponent, higContainer } = createHigComponent(defaults);
     const { orionContainer, orionWrapper } = createOrionComponent(defaults);
@@ -75,7 +75,7 @@ describe('<Search>', () => {
     const defaults = {};
     const nextProps = {
       placeholder: 'Search a little search for me',
-      query: 'Documents',
+      value: 'Documents',
       clearIconVisible: true
     };
     const { higComponent, higContainer } = createHigComponent(defaults);
@@ -83,7 +83,7 @@ describe('<Search>', () => {
 
     orionWrapper.setProps(nextProps);
     higComponent.setPlaceholder(nextProps.placeholder);
-    higComponent.setQuery(nextProps.query);
+    higComponent.setValue(nextProps.value);
     higComponent.showClearIcon();
 
     expect(orionContainer.firstElementChild.outerHTML).toMatchSnapshot();

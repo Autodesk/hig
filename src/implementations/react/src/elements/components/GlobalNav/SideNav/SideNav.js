@@ -6,7 +6,7 @@ import Group from '../../../../adapters/GlobalNav/SideNav/GroupAdapter';
 import Module from './Module';
 import ModuleCollapse from './ModuleCollapse';
 import Link from '../../../../adapters/GlobalNav/SideNav/LinkAdapter';
-import Search from '../../../../adapters/GlobalNav/SideNav/SearchAdapter';
+import Search from './Search';
 import WithState from './WithState';
 
 class SideNav extends Component {
@@ -52,12 +52,13 @@ class SideNav extends Component {
 
   render() {
     const sideNavProps = {
+      copyright: this.props.copyright,
       headerLabel: this.props.headerLabel,
       headerLink: this.props.headerLink,
       onHeaderClick: this.props.onHeaderClick,
+      onSuperHeaderClick: this.props.onSuperHeaderClick,
       superHeaderLabel: this.props.superHeaderLabel,
       superHeaderLink: this.props.superHeaderLink,
-      onSuperHeaderClick: this.props.onSuperHeaderClick
     };
 
     return (

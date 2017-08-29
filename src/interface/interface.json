@@ -1300,26 +1300,10 @@
           "partials": {
             "Search": {
               "methods": {
-                "setPlaceholder": {
-                  "desc": "sets the placeholder",
-                  "params": ["{String} placeholder - new placeholder"]
-                },
-                "setQuery": {
-                  "desc": "sets the search query",
-                  "params": ["{String} query - new query"]
-                },
-                "showClearIcon": {
-                  "desc": "show the clear input icon"
-                },
                 "hideClearIcon": {
                   "desc": "hide the clear input icon"
                 },
                 "onClearIconClick": {
-                  "desc": "Calls the provided callback when user clicks on the Help",
-                  "params": "HIG.abstract.EventObject.params",
-                  "returns": "HIG.abstract.EventObject.returns"
-                },
-                "onInput": {
                   "desc": "Calls the provided callback when user clicks on the Help",
                   "params": "HIG.abstract.EventObject.params",
                   "returns": "HIG.abstract.EventObject.returns"
@@ -1333,10 +1317,26 @@
                   "desc": "Calls the provided callback when user clicks on the Help",
                   "params": "HIG.abstract.EventObject.params",
                   "returns": "HIG.abstract.EventObject.returns"
+                },
+                "onInput": {
+                  "desc": "Calls the provided callback when user clicks on the Help",
+                  "params": "HIG.abstract.EventObject.params",
+                  "returns": "HIG.abstract.EventObject.returns"
+                },
+                "setPlaceholder": {
+                  "desc": "sets the placeholder",
+                  "params": ["{String} placeholder - new placeholder"]
+                },
+                "setValue": {
+                  "desc": "sets the search value",
+                  "params": ["{String} value - new value"]
+                },
+                "showClearIcon": {
+                  "desc": "show the clear input icon"
                 }
               },
               "defaults": {
-                "query": "{String} Set a search query in the input",
+                "value": "{String} Set a value in the input",
                 "placeholder": "{String} A placeholder text when nothing is searched"
               }
             },
