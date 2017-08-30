@@ -167,8 +167,7 @@ const submoduleFixtures = [
 storiesOf('SideNav', module)
   .addWithInfo('default', <div><p>Global Nav basic usage</p></div>, () => {
     const numberOfModulesOptions = { '6': '6', '3': '3' };
-    const moduleCount = select('Number of modules', numberOfModulesOptions, '5');
-
+    const moduleCount = select('Number of modules', numberOfModulesOptions, '6');
     const modules = moduleFixtures.slice(0, parseInt(moduleCount));
 
     return (
@@ -183,6 +182,8 @@ storiesOf('SideNav', module)
           submodules={submoduleFixtures}
           onModuleChange={action('Module changed')}
           copyright={text('Copyright', '© 2017 Autodesk, Inc.')}
+          searchable={boolean('Searchable', true)}
+          query={text('Query', '')}
         />
       </GlobalNav>
     );

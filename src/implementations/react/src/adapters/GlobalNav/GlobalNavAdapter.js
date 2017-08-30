@@ -15,7 +15,7 @@ import SubNavAdapterComponent, {
 import Slot from '../../elements/components/GlobalNav/Slot';
 import SideNav from '../../elements/components/GlobalNav/SideNav';
 
-class GlobalNav extends HIGElement {
+class GlobalNavAdapter extends HIGElement {
   constructor(initialProps) {
     super(HIG.GlobalNav, initialProps);
   }
@@ -142,9 +142,9 @@ class GlobalNav extends HIGElement {
   }
 }
 
-const GlobalNavComponent = createComponent(GlobalNav);
+const GlobalNavAdapterComponent = createComponent(GlobalNavAdapter);
 
-GlobalNavComponent.propTypes = {
+GlobalNavAdapterComponent.propTypes = {
   sideNavOpen: PropTypes.bool,
   children: HIGChildValidator([
     SideNav,
@@ -155,7 +155,7 @@ GlobalNavComponent.propTypes = {
   ])
 };
 
-GlobalNavComponent.__docgenInfo = {
+GlobalNavAdapterComponent.__docgenInfo = {
   props: {
     sideNavOpen: {
       description: 'show or hide the SideNav'
@@ -167,9 +167,9 @@ GlobalNavComponent.__docgenInfo = {
   }
 };
 
-GlobalNavComponent.SideNav = SideNavAdapterComponent;
-GlobalNavComponent.TopNav = TopNavAdapterComponent;
-GlobalNavComponent.SubNav = SubNavAdapterComponent;
-GlobalNavComponent.Slot = Slot;
+GlobalNavAdapterComponent.SideNav = SideNavAdapterComponent;
+GlobalNavAdapterComponent.TopNav = TopNavAdapterComponent;
+GlobalNavAdapterComponent.SubNav = SubNavAdapterComponent;
+GlobalNavAdapterComponent.Slot = Slot;
 
-export default GlobalNavComponent;
+export default GlobalNavAdapterComponent;

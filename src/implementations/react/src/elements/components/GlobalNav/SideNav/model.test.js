@@ -33,6 +33,11 @@ describe('SideNav model', () => {
       expect(result.modules).toEqual(expect.arrayContaining([module1]));
       expect(result.modules).not.toEqual(expect.arrayContaining([module2]));
     });
+
+    it('returns any other props', () => {
+      const result = filter({ modules, submodules, foo: 'bar' }, '');
+      expect(result.foo).toEqual('bar');
+    });
   });
 
   describe('group', () => {
@@ -58,7 +63,7 @@ describe('SideNav model', () => {
     describe('with an active module', () => {
       it('sets active on the module', () => {
         const state = {
-          activeModule: '1',
+          activeModuleId: '1',
           moduleStates: {}
         }
         const result = mergeState(props, state);
@@ -66,12 +71,28 @@ describe('SideNav model', () => {
         expect(result.modules[0].active).toBeTruthy();
         expect(result.submodules[0].active).not.toBeTruthy();
       });
+
+      describe('as a prop', () => {
+        it('uses the prop', () => {
+          const state = {
+            activeModuleId: '1',
+            moduleStates: {}
+          }
+          const result = mergeState({
+            ...props,
+            activeModuleId: 'A'
+          }, state);
+
+          expect(result.modules[0].active).toBeTruthy();
+          expect(result.submodules[0].active).toBeTruthy();
+        });
+      });
     });
 
     describe('with an active submodule', () => {
       it('sets active on the submodule and the parent module', () => {
         const state = {
-          activeModule: 'A',
+          activeModuleId: 'A',
           moduleStates: {}
         }
         const result = mergeState(props, state);
@@ -105,6 +126,18 @@ describe('SideNav model', () => {
 
         expect(result.modules[0].minimized).toBeTruthy();
       });
+    });
+
+    it('returns any other props', () => {
+      const state = {
+        moduleStates: {
+          '1': {
+            minimized: false
+          }
+        }
+      }
+      const result = mergeState({ ...props, foo: 'bar' }, state);
+      expect(result.foo).toEqual('bar');
     });
   });
 

@@ -5,7 +5,25 @@ import HIGElement from '../../../elements/HIGElement';
 
 export class SearchAdapter extends HIGElement {
   componentDidMount() {
-    this.commitUpdate(['clearIconVisible', this.props.clearIconVisible]);
+    if (this.props.clearIconVisible !== undefined) {
+      this.commitUpdate(['clearIconVisible', this.props.clearIconVisible]);
+    }
+
+    if (this.props.onClearIconClick !== undefined) {
+      this.commitUpdate(['onClearIconClick', this.props.onClearIconClick]);
+    }
+
+    if (this.props.onInput !== undefined) {
+      this.commitUpdate(['onInput', this.props.onInput]);
+    }
+
+    if (this.props.onFocus !== undefined) {
+      this.commitUpdate(['onFocus', this.props.onFocus]);
+    }
+
+    if (this.props.onBlur !== undefined) {
+      this.commitUpdate(['onBlur', this.props.onBlur]);
+    }
   }
 
   commitUpdate(updatePayload, oldProps, newProps) {
@@ -78,11 +96,19 @@ export class SearchAdapter extends HIGElement {
           );
           break;
         }
+        case 'value': {
+          this.hig.setValue(propValue);
+          break;
+        }
         default: {
           console.warn(`${propKey} is unknown`);
         }
       }
     }
+  }
+
+  forceReset(props) {
+    this.commitUpdate(['value', props.value]);
   }
 }
 

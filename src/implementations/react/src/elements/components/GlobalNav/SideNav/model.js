@@ -2,13 +2,13 @@ export function match(string, query) {
   return string.toLowerCase().startsWith(query.toLowerCase());
 }
 
-export function filter({ modules, submodules }, query) {
+export function filter({ modules, submodules, ...props }, query) {
   const filteredSubmodules = submodules.filter(submodule => match(submodule.title, query));
   const filteredModules = modules.filter(module => {
     return filteredSubmodules.some(s => s.moduleId === module.id) || match(module.title, query);
   });
 
-  return { modules: filteredModules, submodules: filteredSubmodules }
+  return { ...props, modules: filteredModules, submodules: filteredSubmodules }
 }
 
 export function group({ modules, submodules }) {
@@ -22,11 +22,13 @@ export function group({ modules, submodules }) {
   }));
 };
 
-export function mergeState({ modules, submodules }, state) {
-  const activeModule = modules.find(m => m.id === state.activeModule) || {};
-  const activeSubmodule = submodules.find(m => m.id === state.activeModule) || {};
+export function mergeState({ modules, submodules, ...props }, state) {
+  const activeModuleId = props.activeModuleId || state.activeModuleId;
+  const activeModule = modules.find(m => m.id === activeModuleId) || {};
+  const activeSubmodule = submodules.find(m => m.id === activeModuleId) || {};
 
   return {
+    ...props,
     modules: modules.map(module => {
       const moduleWithState = {
         ...module,
@@ -39,7 +41,7 @@ export function mergeState({ modules, submodules }, state) {
     submodules: submodules.map(submodule => {
       return {
         ...submodule,
-        active: submodule.id === state.activeModule,
+        active: submodule.id === activeModuleId,
       }
     })
   }

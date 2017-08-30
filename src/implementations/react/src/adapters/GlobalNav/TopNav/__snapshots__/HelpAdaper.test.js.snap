@@ -5,30 +5,30 @@ exports[`Help renders help  1`] = `
     <!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <div class=\\"hig__global-nav__top-nav\\">
-    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
-        <div class=\\"hig__global-nav__top-nav__hamburger\\">
-            <div class=\\"hig__global-nav__top-nav__hamburger__hamburgericon\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
-            <div class=\\"hig__global-nav__top-nav__hamburger__closeicon\\"><div class=\\"hig__icon\\"><svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 18 18\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-hamburger\\"><g stroke=\\"#0A131C\\" stroke-width=\\"2\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"square\\"><path d=\\"M18.754628,5.24537196 L5.24537196,18.754628\\" transform=\\"translate(-3 -3)\\"></path><path d=\\"M5.24537196,5.24537196 L18.754628,18.754628\\" transform=\\"translate(-3 -3)\\"></path></g></svg></div></div>
-        </div>
-        <div class=\\"hig__global-nav__top-nav__logo\\">
-            <a href=\\"#\\">
-                <img src=\\"link\\">
-            </a>
-        </div>
+  <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
+    <div class=\\"hig__global-nav__top-nav__hamburger\\">
+      <div class=\\"hig__global-nav__top-nav__hamburger__hamburgericon\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
+      <div class=\\"hig__global-nav__top-nav__hamburger__closeicon\\"><div class=\\"hig__icon\\"><svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 18 18\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-hamburger\\"><g stroke=\\"#0A131C\\" stroke-width=\\"2\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"square\\"><path d=\\"M18.754628,5.24537196 L5.24537196,18.754628\\" transform=\\"translate(-3 -3)\\"></path><path d=\\"M5.24537196,5.24537196 L18.754628,18.754628\\" transform=\\"translate(-3 -3)\\"></path></g></svg></div></div>
     </div>
-    <!--SEARCH-->
-    <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
-    <!--PROJECT_ACCOUNT_SWITCHER-->
-    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
-    <div class=\\"hig__global-nav__top-nav__shortcut\\">
+    <div class=\\"hig__global-nav__top-nav__logo\\">
+      <a>
+        <img src=\\"\\">
+      </a>
+    </div>
+  </div>
+  <!--SEARCH-->
+  <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
+  <!--PROJECT_ACCOUNT_SWITCHER-->
+  <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
+  <div class=\\"hig__global-nav__top-nav__shortcut\\">
   <a href=\\"#\\" title=\\"\\" class=\\"hig__global-nav__top-nav__shortcut__link\\">
     <div class=\\"hig__global-nav__top-nav__shortcut__link__icon hig__global-nav__top-nav__shortcut__link__icon--help\\">
       <div class=\\"hig__icon\\"><svg width=\\"22\\" height=\\"22\\" viewBox=\\"0 0 22 22\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"help\\"><g transform=\\"translate(-1 -1)\\" fill=\\"none\\" fill-rule=\\"evenodd\\"><rect stroke=\\"#353636\\" stroke-width=\\"1.5\\" stroke-linejoin=\\"round\\" x=\\"2.673\\" y=\\"2.673\\" width=\\"18.654\\" height=\\"18.654\\" rx=\\"9.327\\"></rect><path d=\\"M11.0622007,13.6077749 L12.6281276,13.6077749 L12.6281276,13.2731751 C12.6281276,11.7607842 14.9970939,11.6670963 14.9970939,9.84687362 L14.9970939,9.44535391 C14.9970939,8.2274108 13.9397586,7.22361152 12.1463039,7.22361152 C10.8079049,7.22361152 9.92456155,7.67866719 9.13490613,8.30771474 L9.88440958,9.29813002 C10.620529,8.78953839 11.1425047,8.50847459 11.99908,8.50847459 C12.8155035,8.50847459 13.2839431,8.93676228 13.2839431,9.59257781 L13.2839431,9.91379357 C13.2839431,11.0648167 11.0622007,11.3324965 11.0622007,13.2196392 L11.0622007,13.6077749 Z M11.8384722,16.9403885 C12.4407517,16.9403885 12.8958074,16.4719488 12.8958074,15.8830532 C12.8958074,15.3075417 12.4407517,14.825718 11.8384722,14.825718 C11.2629606,14.825718 10.7945209,15.3075417 10.7945209,15.8830532 C10.7945209,16.4719488 11.2629606,16.9403885 11.8384722,16.9403885 Z\\" fill=\\"#353636\\"></path></g></svg></div>
     </div>
   </a>
 </div><!--SHORTCUT-->
-    </div>
-    <!--PROFILE-->
+  </div>
+  <!--PROFILE-->
 </div><!--TOPNAV-->
         <!--SUBNAV-->
         <div class=\\"hig__global-nav__slot\\">
@@ -43,24 +43,24 @@ exports[`Help setting and updating props 1`] = `
     <!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <div class=\\"hig__global-nav__top-nav\\">
-    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
-        <div class=\\"hig__global-nav__top-nav__hamburger\\">
-            <div class=\\"hig__global-nav__top-nav__hamburger__hamburgericon\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
-            <div class=\\"hig__global-nav__top-nav__hamburger__closeicon\\"><div class=\\"hig__icon\\"><svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 18 18\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-hamburger\\"><g stroke=\\"#0A131C\\" stroke-width=\\"2\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"square\\"><path d=\\"M18.754628,5.24537196 L5.24537196,18.754628\\" transform=\\"translate(-3 -3)\\"></path><path d=\\"M5.24537196,5.24537196 L18.754628,18.754628\\" transform=\\"translate(-3 -3)\\"></path></g></svg></div></div>
-        </div>
-        <div class=\\"hig__global-nav__top-nav__logo\\">
-            <a href=\\"#\\">
-                <img src=\\"link\\">
-            </a>
-        </div>
+  <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
+    <div class=\\"hig__global-nav__top-nav__hamburger\\">
+      <div class=\\"hig__global-nav__top-nav__hamburger__hamburgericon\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
+      <div class=\\"hig__global-nav__top-nav__hamburger__closeicon\\"><div class=\\"hig__icon\\"><svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 18 18\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-hamburger\\"><g stroke=\\"#0A131C\\" stroke-width=\\"2\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"square\\"><path d=\\"M18.754628,5.24537196 L5.24537196,18.754628\\" transform=\\"translate(-3 -3)\\"></path><path d=\\"M5.24537196,5.24537196 L18.754628,18.754628\\" transform=\\"translate(-3 -3)\\"></path></g></svg></div></div>
     </div>
-    <!--SEARCH-->
-    <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
-    <!--PROJECT_ACCOUNT_SWITCHER-->
-    <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
-    <div class=\\"hig__global-nav__top-nav__shortcut\\" title=\\"newTest\\" href=\\"newTestLink\\">newTest</div><!--SHORTCUT-->
+    <div class=\\"hig__global-nav__top-nav__logo\\">
+      <a>
+        <img src=\\"\\">
+      </a>
     </div>
-    <!--PROFILE-->
+  </div>
+  <!--SEARCH-->
+  <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
+  <!--PROJECT_ACCOUNT_SWITCHER-->
+  <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
+  <div class=\\"hig__global-nav__top-nav__shortcut\\" title=\\"newTest\\" href=\\"newTestLink\\">newTest</div><!--SHORTCUT-->
+  </div>
+  <!--PROFILE-->
 </div><!--TOPNAV-->
         <!--SUBNAV-->
         <div class=\\"hig__global-nav__slot\\">

@@ -18,11 +18,11 @@ function isTab(child) {
 class Tabs extends React.Component {
   constructor(props) {
     super(props);
-    const selectedTabId = this.getInitialSelectedTabId();
+    const selectedTabId = this.defaultSelectedTabId();
     this.state = { selectedTabId };
   }
 
-  getInitialSelectedTabId() {
+  defaultSelectedTabId() {
     const { defaultSelectedTabId, selectedTabId } = this.props;
 
     if (selectedTabId !== undefined) {
@@ -35,6 +35,13 @@ class Tabs extends React.Component {
       return tabs.length === 0 ? undefined : tabs[0].props.id;
     }
   }
+
+  renderedSelectedTabId() {
+    return this.props.selectedTabId
+      ? this.props.selectedTabId
+      : this.state.selectedTabId
+  }
+
   getTabChildren() {
     return React.Children.toArray(this.props.children).filter(isTab);
   }
@@ -57,7 +64,7 @@ class Tabs extends React.Component {
     return (
       <TabAdapter
         {...tab.props}
-        active={id === this.state.selectedTabId}
+        active={id === this.renderedSelectedTabId()}
         onClick={this.handleTabClick.bind(this, id)}
       />
     );
@@ -65,12 +72,10 @@ class Tabs extends React.Component {
 
   handleTabClick(newTabId) {
     if (this.props.onChange) {
-      this.props.onChange(newTabId, this.state.selectedTabId);
+      this.props.onChange(newTabId, this.renderedSelectedTabId());
     }
 
-    if (this.props.selectedTabId === undefined) {
-      this.setState({ selectedTabId: newTabId });
-    }
+    this.setState({ selectedTabId: newTabId });
   }
 }
 

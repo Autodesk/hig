@@ -6,7 +6,7 @@ import Group from '../../../../adapters/GlobalNav/SideNav/GroupAdapter';
 import Module from './Module';
 import ModuleCollapse from './ModuleCollapse';
 import Link from '../../../../adapters/GlobalNav/SideNav/LinkAdapter';
-import Search from '../../../../adapters/GlobalNav/SideNav/SearchAdapter';
+import Search from './Search';
 import WithState from './WithState';
 
 class SideNav extends Component {
@@ -33,6 +33,7 @@ class SideNav extends Component {
     query: PropTypes.string,
     onModuleClick: PropTypes.func.isRequired,
     onSubmoduleClick: PropTypes.func.isRequired,
+    searchable: PropTypes.bool,
     superHeaderLabel: PropTypes.string,
     superHeaderLink: PropTypes.string
   };
@@ -52,12 +53,13 @@ class SideNav extends Component {
 
   render() {
     const sideNavProps = {
+      copyright: this.props.copyright,
       headerLabel: this.props.headerLabel,
       headerLink: this.props.headerLink,
       onHeaderClick: this.props.onHeaderClick,
+      onSuperHeaderClick: this.props.onSuperHeaderClick,
       superHeaderLabel: this.props.superHeaderLabel,
       superHeaderLink: this.props.superHeaderLink,
-      onSuperHeaderClick: this.props.onSuperHeaderClick
     };
 
     return (
@@ -94,7 +96,9 @@ class SideNav extends Component {
           </Group>
         ))}
         {this.props.links.map(link => <Link {...link} key={link.title} />)}
-        <Search onInput={this.props.setQuery} />
+        {this.props.searchable
+          ? <Search onInput={this.props.setQuery} value={this.props.query} />
+          : null}
       </SideNavAdapter>
     );
   }

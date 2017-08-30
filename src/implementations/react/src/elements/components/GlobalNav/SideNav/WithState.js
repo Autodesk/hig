@@ -17,7 +17,8 @@ export default function WithState(WrappedComponent) {
       submodules: PropTypes.arrayOf(PropTypes.shape({
         id: PropTypes.string.isRequired,
         title: PropTypes.string.isRequired
-      }))
+      })),
+      activeModuleId: PropTypes.string
     }
 
     constructor(props) {
@@ -25,12 +26,13 @@ export default function WithState(WrappedComponent) {
 
       this.state = {
         query: '',
-        activeModule: '',
+        activeModuleId: '',
         moduleStates: {}
       }
     }
 
     static defaultProps = {
+      activeModuleId: null,
       query: '',
       modules: [],
       submodules: [],
@@ -38,11 +40,11 @@ export default function WithState(WrappedComponent) {
     }
 
     setQuery = (event) => {
-      this.setState({ query: event.target.value });
+      this.setState({ query: event.target.value || '' });
     }
 
-    setActiveModule = (id) => {
-      this.setState({ activeModule: id });
+    setActiveModuleId = (id) => {
+      this.setState({ activeModuleId: id });
 
       if(this.props.onModuleChange) {
         this.props.onModuleChange(id);
@@ -69,27 +71,35 @@ export default function WithState(WrappedComponent) {
       if (submodulesPresent) {
         this.toggleModuleMinimized(id);
       } else {
-        this.setActiveModule(id);
+        this.setActiveModuleId(id);
       }
     }
 
+    renderedQuery() {
+      return this.props.query
+        ? this.props.query
+        : this.state.query;
+    }
+
     render() {
+      const query = this.renderedQuery();
       const { modules, submodules, ...otherProps } = this.props;
-      const filteredProps = filter({ modules, submodules }, this.state.query);
+      const filteredProps = filter(this.props, query);
       const filteredPropsWithState = mergeState(filteredProps, this.state);
       const groupedProps = group(filteredPropsWithState);
 
       return (
         <WrappedComponent
+          {...otherProps}
           groups={groupedProps}
-          query={this.state.query}
+          query={query}
           setQuery={this.setQuery}
-          setActiveModule={this.setActiveModule}
+          setActiveModuleId={this.setActiveModuleId}
           toggleModuleMinimized={this.toggleModuleMinimized}
           onModuleClick={this.handleModuleClick}
-          onSubmoduleClick={this.setActiveModule}
-          disableCollapse={modules.length <= 5 || this.state.query.length > 0}
-          {...otherProps}
+          onSubmoduleClick={this.setActiveModuleId}
+          disableCollapse={modules.length <= 5 || query.length > 0}
+          searchable={this.props.searchable}
         />
       );
     }

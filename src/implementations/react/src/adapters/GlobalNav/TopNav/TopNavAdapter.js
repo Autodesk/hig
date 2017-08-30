@@ -10,6 +10,7 @@ import HIGNodeList from '../../../elements/HIGNodeList';
 import ProjectAccountSwitcherComponent, {
   ProjectAccountSwitcherAdapter
 } from './ProjectAccountSwitcherAdapter';
+import ProjectAccountSwitcher from '../../../elements/components/GlobalNav/TopNav/ProjectAccountSwitcher';
 import ProfileComponent, {
   ProfileAdapter
 } from './ProfileAdapter';
@@ -75,6 +76,19 @@ export class TopNavAdapter extends HIGElement {
         }
         case 'logoLink': {
           this.hig.setLogoLink(propValue);
+          break;
+        }
+        case 'onLogoClick': {
+          const dispose = this._disposeFunctions.get("onLogoClickDispose");
+
+          if (dispose) {
+            dispose();
+          }
+
+          this._disposeFunctions.set(
+            "onLogoClickDispose",
+            this.hig.onLogoClick(propValue)
+          );
           break;
         }
         default: {
@@ -189,13 +203,12 @@ const TopNavAdapterComponent = createComponent(TopNavAdapter);
 TopNavAdapterComponent.propTypes = {
   logo: PropTypes.string,
   logoLink: PropTypes.string,
+  onLogoClick: PropTypes.func,
   onHamburgerClick: PropTypes.func,
-  addProfile: PropTypes.func,
-  addProjectAccountSwitcher: PropTypes.func,
-  addSearch: PropTypes.func,
   children: HIGChildValidator([
     ProfileComponent,
     ProjectAccountSwitcherComponent,
+    ProjectAccountSwitcher,
     ShortcutAdapterComponent,
     HelpComponent,
     SearchComponent
@@ -207,25 +220,14 @@ TopNavAdapterComponent.__docgenInfo = {
     logo: {
       description: 'sets the logo'
     },
-
     logoLink: {
       description: 'sets the link of the logo'
     },
-
     onHamburgerClick: {
       description: 'triggered when hamburger icon is clicked'
     },
-
-    addProfile: {
-      description: 'adds Profile to the top nav'
-    },
-
-    addProjectAccountSwitcher: {
-      description: 'Pass in an instance of a ProjectAccountSwitcher partial to mount it to the top nav'
-    },
-
-    addSearch: {
-      description: 'Pass in an instance of a TopNavSearch partial to mount to top nav'
+    onLogoClick: {
+      description: 'triggered when logo is clicked'
     }
   }
 };

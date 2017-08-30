@@ -8,6 +8,7 @@ import createComponent from "../../createComponent";
 import GroupComponent, { GroupAdapter } from "./GroupAdapter";
 import LinkComponent, { LinkAdapter } from "./LinkAdapter";
 import SearchComponent, { SearchAdapter } from "./SearchAdapter";
+import Search from '../../../elements/components/GlobalNav/SideNav/Search';
 
 export class SideNavAdapter extends HIGElement {
   constructor(HIGConstructor, initialProps) {
@@ -190,7 +191,7 @@ export class SideNavAdapter extends HIGElement {
 const SideNavComponent = createComponent(SideNavAdapter);
 
 SideNavComponent.propTypes = {
-  children: HIGChildValidator([GroupComponent, LinkComponent, SearchComponent]),
+  children: HIGChildValidator([GroupComponent, LinkComponent, SearchComponent, Search]),
   copyright: PropTypes.string,
   headerLabel: PropTypes.string,
   headerLink: PropTypes.string,
