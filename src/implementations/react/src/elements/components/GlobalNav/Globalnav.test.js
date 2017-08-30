@@ -1,7 +1,8 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import GlobalNav, { SideNav, Slot } from './index.js';
+import GlobalNav, { SideNav, SubNav, Slot, Tabs } from './index.js';
 import TopNav, { ProjectAccountSwitcher } from './TopNav';
+import TabAdapter from '../../../adapters/GlobalNav/SubNav/TabAdapter';
 import GlobalNavAdapter from '../../../adapters/GlobalNav/GlobalNavAdapter';
 
 function Context(props) {
@@ -22,7 +23,7 @@ describe('<GlobalNav>', () => {
     });
   })
 
-  describe('with ProjectAccoutnSwitcher props', () => {
+  describe('with ProjectAccountSwitcher props', () => {
     it('passes accounts', () => {
       const accounts = [{ id: '1', label: 'Foo', image: 'https://images/accounts/foo.png' }];
       const wrapper = mount(<Context accounts={accounts} />);
@@ -111,6 +112,81 @@ describe('<GlobalNav>', () => {
     it('does not render a slot', () => {
       const wrapper = mount(<Context />);
       expect(wrapper).not.toMatchSelector(Slot);
+    });
+  });
+
+  describe('for SubNav', () => {
+    const modules = [
+      { id: 'mod-1', title: 'Settings', icon: 'gear' }
+    ];
+    const submodules = [
+      { id: 'sub-1', moduleId: 'mod-1', title: 'Usage' },
+      { id: 'sub-2', moduleId: 'mod-1', title: 'Battery' }
+    ];
+
+    describe('with an active module', () => {
+      describe('with submodules', () => {
+        let wrapper;
+        beforeEach(() => {
+          wrapper = mount(<Context modules={modules} submodules={submodules} activeModuleId="mod-1" />);
+        });
+
+        it('passes title to SubNav', () => {
+          expect(wrapper.find(SubNav)).toHaveProp('moduleIndicatorName', 'Settings');
+        });
+
+        it('passes icon to SubNav', () => {
+          expect(wrapper.find(SubNav)).toHaveProp('moduleIndicatorIcon', 'gear');
+        });
+
+        it('shows a tab for each submodule', () => {
+          const tabLabels = wrapper.find(TabAdapter).map(tab => tab.prop('label')).sort();
+          const submoduleLabels = submodules.map(s => s.title).sort();
+
+          expect(tabLabels).toEqual(submoduleLabels);
+        });
+      });
+
+      describe('without submodules', () => {
+        let wrapper;
+        beforeEach(() => {
+          wrapper = mount(<Context modules={modules} submodules={[]} activeModuleId="mod-1" />);
+        });
+
+        it('passes label to the SubNav', () => {
+          expect(wrapper.find(SubNav)).toHaveProp('moduleIndicatorName', 'Settings');
+        });
+
+        it('passes icon to SubNav', () => {
+          expect(wrapper.find(SubNav)).toHaveProp('moduleIndicatorIcon', 'gear');
+        });
+
+        it('does not render tabs', () => {
+          expect(wrapper.find(Tabs).length).toEqual(0);
+        });
+      });
+    });
+
+    describe('with an active submodule', () => {
+      let wrapper;
+      beforeEach(() => {
+        wrapper = mount(<Context modules={modules} submodules={submodules} activeModuleId="sub-1" />);
+      });
+
+      it('passes the parents title to SubNav', () => {
+        expect(wrapper.find(SubNav)).toHaveProp('moduleIndicatorName', 'Settings');
+      });
+
+      it('passes the parents icon to SubNav', () => {
+        expect(wrapper.find(SubNav)).toHaveProp('moduleIndicatorIcon', 'gear');
+      });
+
+      it('shows a tab for each sibling submodule', () => {
+        const tabLabels = wrapper.find(TabAdapter).map(tab => tab.prop('label')).sort();
+        const submoduleLabels = submodules.map(s => s.title).sort();
+
+        expect(tabLabels).toEqual(submoduleLabels);
+      });
     });
   });
 });

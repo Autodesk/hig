@@ -6,6 +6,7 @@ import TopNavAdapter from '../../../adapters/GlobalNav/TopNav/TopNavAdapter';
 import SubNavAdapter from '../../../adapters/GlobalNav/SubNav/SubNavAdapter';
 import SideNav from './SideNav';
 import Slot from './Slot';
+import Tabs from './SubNav/Tabs';
 import ProjectAccountSwitcher from './TopNav/ProjectAccountSwitcher';
 
 class GlobalNav extends Component {
@@ -41,6 +42,11 @@ class GlobalNav extends Component {
     activeAccountId: PropTypes.any
   }
 
+  static defaultProps = {
+    modules: [],
+    submodules: []
+  }
+
   constructor(props) {
     super(props);
     this.state = {};
@@ -57,7 +63,31 @@ class GlobalNav extends Component {
     return this.state.sideNavOpen;
   }
 
+  renderedActiveModule() {
+    const activeSubmodule = this.props.submodules.find(s => s.id === this.props.activeModuleId) || {};
+    const activeModule = this.props.modules.find(m => m.id === activeSubmodule.moduleId || m.id === this.props.activeModuleId);
+
+    if (activeModule === undefined) {
+      return null;
+    }
+
+    activeModule.submodules = this.props.submodules.filter(s => s.moduleId === activeModule.id);
+    return activeModule;
+  }
+
+  renderTab = (submodule) => {
+    return (
+      <Tabs.Tab
+        id={submodule.id}
+        label={submodule.title}
+        key={submodule.id}
+      />
+    );
+  }
+
   render() {
+    const activeModule = this.renderedActiveModule();
+
     return (
       <GlobalNavAdapter sideNavOpen={this.renderedSideNavOpen()}>
         <TopNavAdapter
@@ -80,7 +110,21 @@ class GlobalNav extends Component {
           submodules={this.props.submodules}
           {...this.props.sideNav}
         />
-        <SubNavAdapter />
+        {activeModule
+          ? <SubNavAdapter
+              moduleIndicatorName={activeModule.title}
+              moduleIndicatorIcon={activeModule.icon}
+            >
+              {activeModule.submodules.length > 0
+                ? <Tabs
+                    selectedTabId={this.props.activeModuleId}
+                    onChange={this.props.onModuleChange}
+                    >
+                      {activeModule.submodules.map(this.renderTab)}
+                  </Tabs>
+                : null}
+            </SubNavAdapter>
+          : null}
         {this.props.children
           ? <Slot>{this.props.children}</Slot>
           : null}

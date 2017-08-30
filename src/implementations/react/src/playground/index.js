@@ -42,10 +42,12 @@ import TableSection from "./sections/TableSection";
 class Playground extends React.Component {
   constructor(props) {
     super(props);
-    this.state={};
+    this.state = {
+      activeModuleId: '1-2-5'
+    };
   }
 
-  navigate(id) {
+  navigate = (id) => {
     console.log('Go to', id);
     this.setState({ activeModuleId: id });
   }
@@ -70,7 +72,7 @@ class Playground extends React.Component {
       <GlobalNav
         accounts={accounts}
         modules={modules}
-        onModuleChange={id => console.log(`Module selected: ${id}`)}
+        onModuleChange={this.navigate}
         projects={projects}
         sideNav={sideNavProps}
         submodules={submodules}
