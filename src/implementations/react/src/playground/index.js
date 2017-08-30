@@ -56,37 +56,35 @@ class Playground extends React.Component {
     };
 
     return (
-      <div>
-        <GlobalNav
-          accounts={accounts}
-          modules={modules}
-          onModuleChange={id => console.log(`Module selected: ${id}`)}
-          projects={projects}
-          sideNav={sideNavProps}
-          submodules={submodules}
-          topNav={topNavProps}
-        >
-          <section>
-            <h3>Tabs</h3>
-            <Button title="Add tab before" onClick={this.addTabBefore} />
-            <Button title="Add tab after" onClick={this.addTabAfter} />
-            <Button title="Remove tab" onClick={this.removeTab} />
-          </section>
-          <ButtonSection />
-          <IconButtonSection />
-          <CheckboxSection />
-          <PasswordFieldSection />
-          <RadioButtonSection />
-          <RangeSection />
-          <SpacerSection />
-          <TextFieldSection />
-          <TextAreaSection />
-          <ModalSection />
-          <DropdownSection />
-          <TypographySection />
-          <TableSection/>
-        </GlobalNav>
-      </div>
+      <GlobalNav
+        accounts={accounts}
+        modules={modules}
+        onModuleChange={id => console.log(`Module selected: ${id}`)}
+        projects={projects}
+        sideNav={sideNavProps}
+        submodules={submodules}
+        topNav={topNavProps}
+      >
+        <section>
+          <h3>Tabs</h3>
+          <Button title="Add tab before" onClick={this.addTabBefore} />
+          <Button title="Add tab after" onClick={this.addTabAfter} />
+          <Button title="Remove tab" onClick={this.removeTab} />
+        </section>
+        <ButtonSection />
+        <IconButtonSection />
+        <CheckboxSection />
+        <PasswordFieldSection />
+        <RadioButtonSection />
+        <RangeSection />
+        <SpacerSection />
+        <TextFieldSection />
+        <TextAreaSection />
+        <ModalSection />
+        <DropdownSection />
+        <TypographySection />
+        <TableSection/>
+      </GlobalNav>
     );
   }
 }

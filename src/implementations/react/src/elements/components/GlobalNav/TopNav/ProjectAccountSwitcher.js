@@ -23,6 +23,11 @@ class ProjectAccountSwitcher extends Component {
     onAccountClick: PropTypes.func,
   }
 
+  static defaultProps = {
+    accounts: [],
+    projects: []
+  }
+
   constructor(props) {
     super(props);
 

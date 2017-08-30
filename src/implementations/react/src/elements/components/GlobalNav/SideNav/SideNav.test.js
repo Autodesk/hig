@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { mount } from 'enzyme';
 
 import GlobalNavAdapter from '../../../../adapters/GlobalNav/GlobalNavAdapter';
+import SideNavAdapter from '../../../../adapters/GlobalNav/SideNav/SideNavAdapter';
 import SideNav from '../SideNav';
 
 describe('<SideNav>', () => {
@@ -15,7 +16,7 @@ describe('<SideNav>', () => {
         { id: 'sub-1', moduleId: 'mod-1', title: 'Rose', icon: 'assets' },
         { id: 'sub-2', moduleId: 'mod-1', title: 'Wheat', icon: 'assets' },
         { id: 'sub-3', moduleId: 'mod-2', title: 'Goat', icon: 'assets' },
-        { id: 'sub-3', moduleId: 'mod-2', title: 'Wolf', icon: 'assets' },
+        { id: 'sub-4', moduleId: 'mod-2', title: 'Wolf', icon: 'assets' },
       ]
     }
 
@@ -59,15 +60,45 @@ describe('<SideNav>', () => {
   });
 
   describe('with links', () => {
-    pending('renders links');
+    it('renders links', () => {
+      const links = [];
+      const wrapper = mount(<Context links={links} />);
+      expect(wrapper.find(Link).first());
+    });
   });
 
-  describe('other props', () => {
-    pending('passes headerLabel');
-    pending('passes superHeaderLabel');
-    pending('passes headerLink');
-    pending('passes superHeaderLink');
-    pending('passes onHeaderClick');
-    pending('passes onSuperHeaderClick');
+  describe('with other props', () => {
+    it('passes headerLabel', () => {
+      const wrapper = mount(<Context headerLabel="My Project" />)
+      expect(wrapper.find(SideNavAdapter)).toHaveProp('headerLabel', 'My Project');
+    });
+
+    it('passes superHeaderLabel', () => {
+      const wrapper = mount(<Context superHeaderLabel="Global Construction" />)
+      expect(wrapper.find(SideNavAdapter)).toHaveProp('superHeaderLabel', 'Global Construction');
+    });
+
+    it('passes headerLink', () => {
+      const wrapper = mount(<Context headerLink="https://my-project.com" />);
+      expect(wrapper.find(SideNavAdapter)).toHaveProp('headerLink', 'https://my-project.com');
+    });
+
+    it('passes superHeaderLink', () => {
+      const wrapper = mount(<Context superHeaderLink="https://my-account.com" />);
+      expect(wrapper.find(SideNavAdapter)).toHaveProp('superHeaderLink', 'https://my-account.com');
+    });
+
+    it('passes onHeaderClick', () => {
+      const callback = jest.fn();
+      const wrapper = mount(<Context onHeaderClick={callback} />);
+      expect(wrapper.find(SideNavAdapter)).toHaveProp('onHeaderClick', callback);
+    });
+
+    it('passes onSuperHeaderClick', () => {
+      const callback = jest.fn();
+      const wrapper = mount(<Context onSuperHeaderClick={callback} />);
+      expect(wrapper.find(SideNavAdapter)).toHaveProp('onSuperHeaderClick', callback);
+    });
+
   });
 });
