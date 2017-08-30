@@ -41,6 +41,38 @@
         }
       }
     },
+    "TextLink": {
+      "defaults": {
+        "href": null,
+        "text": "Text",
+        "type": "primary"
+      },
+      "methods": {
+        "onClick": {
+            "desc": "Calls the provided callback when the text is clicked",
+            "params": "HIG.abstract.EventObject.params",
+            "returns": "HIG.abstract.EventObject.returns"
+        },
+        "setHref": {
+            "desc": "Sets the path or url destination of the link",
+            "params": [
+              "{String} Path or url to link to"
+            ]
+        },
+        "setText": {
+            "desc": "sets the text and alt-text of the link",
+            "params": [
+              "{String} Text and alt-text of the link"
+            ]
+        },
+        "setType": {
+            "desc": "Sets the type of the text link",
+            "params": [
+              "{String - 'primary', 'secondary'} The type of text link"
+            ]
+        }
+      }
+    },
     "Typography": {
       "methods": {
         "setText": {
@@ -773,7 +805,7 @@
         "link": "{String} link of the button",
         "icon": "{String} (optional) ID of the icon"
       }
-    },  
+    },
     "GlobalNav": {
       "methods": {
         "addSideNav": {
