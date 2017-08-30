@@ -17,24 +17,24 @@ class Flyout extends React.Component {
   };
 
   closeFlyout = () => {
-    this.setState({ isOpen: false });
+    this.setState({ open: false });
   };
 
   openFlyout = event => {
     event.preventDefault();
-    this.setState({ isOpen: true });
+    this.setState({ open: true });
   };
 
   render() {
     return (
       <FlyoutAdapter
         anchorPoint={this.props.anchorPoint}
-        open={this.props.open}
+        open={this.state.open}
         onClickOutside={this.closeFlyout}
         target={this.state.target}
         content={this.state.content}
       >
-        <div ref={this.setTargetEl}>{this.props.children}</div>
+        <div ref={this.setTargetEl}>{React.cloneElement(this.props.children, { onClick: this.openFlyout})}</div>
         <div ref={this.setContentEl} >{this.props.content}</div>
       </FlyoutAdapter>
     );

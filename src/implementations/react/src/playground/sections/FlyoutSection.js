@@ -37,7 +37,7 @@ class FlyoutSection extends Component {
           content={this.myFlyoutContent()}
 
         >
-           <Button title="Open flyout" onClick={this.openFlyout} />
+           <Button title="Open flyout"/>
         </Flyout>
       </PlaygroundSection>
     )
