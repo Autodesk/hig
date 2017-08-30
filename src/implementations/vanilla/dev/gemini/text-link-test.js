@@ -3,37 +3,92 @@ gemini.suite('text link', (parent) => {
 
   gemini.suite('defaults', (suite) => {
        suite.setCaptureElements('.tests-text-link-defaults')
-            .capture('plain');
+            .before(function(actions, find) {
+                this.field = find('.hig__text-link');
+            })
+            .capture('plain')
+            .capture('focused', function(actions, find) {
+                actions.mouseDown(this.field);
+                actions.mouseUp(this.field);
+            })
+            .capture('hovered', function(actions, find) {
+                actions.mouseMove(this.field);
+            });
   });
 
   gemini.suite('with text and href', (suite) => {
        suite.setCaptureElements('.tests-text-link-with-href')
-            .capture('plain');
+            .before(function(actions, find) {
+                this.field = find('.hig__text-link');
+            })
+            .capture('plain')
+            .capture('focused', function(actions, find) {
+                actions.mouseDown(this.field);
+                actions.mouseUp(this.field);
+            })
+            .capture('hovered', function(actions, find) {
+                actions.mouseMove(this.field);
+            });
   });
 
   gemini.suite('secondary', (suite) => {
        suite.setCaptureElements('.tests-text-link-secondary')
-            .capture('plain');
+            .before(function(actions, find) {
+                this.field = find('.hig__text-link');
+            })
+            .capture('plain')
+            .capture('focused', function(actions, find) {
+                actions.mouseDown(this.field);
+                actions.mouseUp(this.field);
+            })
+            .capture('hovered', function(actions, find) {
+                actions.mouseMove(this.field);
+            });
   });
 
   gemini.suite('secondary with href', (suite) => {
        suite.setCaptureElements('.tests-text-link-secondary-with-href')
-            .capture('plain');
+            .before(function(actions, find) {
+                this.field = find('.hig__text-link');
+            })
+            .capture('plain')
+            .capture('focused', function(actions, find) {
+                actions.mouseDown(this.field);
+                actions.mouseUp(this.field);
+            })
+            .capture('hovered', function(actions, find) {
+                actions.mouseMove(this.field);
+            })
   });
 
   gemini.suite('with onclick', (suite) => {
        suite.setCaptureElements('.tests-text-link-with-onclick')
-            .capture('plain');
-
-       suite.setCaptureElements('.tests-text-link-with-onclick')
-            .capture('clicked', actions => {
-                actions.click(`.tests-text-link-with-onclick .hig__text-link`);
-            });
+            .before(function(actions, find) {
+                this.field = find('.hig__text-link');
+            })
+            .capture('plain')
+            .capture('focused', function(actions, find) {
+                actions.mouseDown(this.field);
+                actions.mouseUp(this.field);
+            })
+            .capture('hovered', function(actions, find) {
+                actions.mouseMove(this.field);
+            })
   });
 
   gemini.suite('with onclick and href', (suite) => {
        suite.setCaptureElements('.tests-text-link-with-onclick-and-href')
-            .capture('plain');
+            .before(function(actions, find) {
+                this.field = find('.hig__text-link');
+            })
+            .capture('plain')
+            .capture('focused', function(actions, find) {
+                actions.mouseDown(this.field);
+                actions.mouseUp(this.field);
+            })
+            .capture('hovered', function(actions, find) {
+                actions.mouseMove(this.field);
+            })
   });
 
 });
