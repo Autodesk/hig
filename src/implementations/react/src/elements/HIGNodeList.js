@@ -14,7 +14,9 @@ export default class HIGNodeList {
     //This is a function which calls the hig add* method. It takes two hig instances
     //this.listItems[constructorName].onAdd;
 
-    this.listItems = listItems;
+    this.listItems = new Map(Object.values(listItems).map((spec) => {
+      return [ spec.type, spec ];
+    }));
 
     this.types = this._retrieveTypes(this.listItems);
 
@@ -27,8 +29,7 @@ export default class HIGNodeList {
       throw new Error(`unknown type ${instance}`);
     }
 
-    var constructorName = instance.constructor.name;
-    var onAdd = this.listItems[constructorName].onAdd;
+    var onAdd = this.listItems.get(instance.constructor).onAdd;
 
     // Update the model
     const beforeChild = this._item(insertBeforeIndex);
@@ -94,7 +95,7 @@ export default class HIGNodeList {
 
   componentDidMount() {
     this.nodes.forEach(node => {
-      const onAdd = this.listItems[node.constructor.name].onAdd;
+      const onAdd = this.listItems.get(node.constructor).onAdd;
       onAdd(node.hig);
       node.mount();
     });
@@ -103,8 +104,8 @@ export default class HIGNodeList {
   }
 
   createElement(ElementConstructor, props) {
-    var type = this.listItems[ElementConstructor.name].type;
-    var constructor = this.listItems[ElementConstructor.name].HIGConstructor;
+    var type = this.listItems.get(ElementConstructor).type;
+    var constructor = this.listItems.get(ElementConstructor).HIGConstructor;
 
     if (type) {
       return new type(constructor, props);
