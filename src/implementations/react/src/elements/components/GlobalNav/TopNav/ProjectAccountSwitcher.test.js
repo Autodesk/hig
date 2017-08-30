@@ -4,6 +4,7 @@ import { mount } from 'enzyme';
 import ProjectAccountSwitcher from './ProjectAccountSwitcher';
 import GlobalNavAdapter from '../../../../adapters/GlobalNav/GlobalNavAdapter';
 import TopNavAdapter from '../../../../adapters/GlobalNav/TopNav/TopNavAdapter';
+import ProjectAccountSwitcherAdapter from '../../../../adapters/GlobalNav/TopNav/ProjectAccountSwitcherAdapter';
 
 class Context extends Component {
   static defaultProps = {
@@ -24,24 +25,83 @@ class Context extends Component {
 
 describe('<ProjectAccountSwitcher>', () => {
   describe('configuring the flyout', () => {
+    let wrapper;
+
     describe('with just one account', () => {
-      pending('does not show the caret');
-      pending('does not add click handlers');
+
+      beforeEach(() => {
+        const accounts= [
+          { id: '1', label: 'My account' }
+        ];
+        wrapper = mount(<Context accounts={accounts} />);
+      });
+
+      it('does not show the caret', () => {
+        expect(wrapper.find(ProjectAccountSwitcherAdapter)).not.toHaveProp('showCaret');
+      });
+
+      it('does not add click handlers', () => {
+        expect(wrapper.find(ProjectAccountSwitcherAdapter)).not.toHaveProp('onClick');
+        expect(wrapper.find(ProjectAccountSwitcherAdapter)).not.toHaveProp('onClickOutside');
+      });
     });
 
     describe('with just one project', () => {
-      pending('does not show the caret');
-      pending('does not pass click handlers');
+
+      beforeEach(() => {
+        const projects= [
+          { id: '1', label: 'My project' }
+        ];
+        wrapper = mount(<Context projects={projects} />);
+      });
+
+      it('does not show the caret', () => {
+        expect(wrapper.find(ProjectAccountSwitcherAdapter)).not.toHaveProp('showCaret');
+      });
+
+      it('does not add click handlers', () => {
+        expect(wrapper.find(ProjectAccountSwitcherAdapter)).not.toHaveProp('onClick');
+        expect(wrapper.find(ProjectAccountSwitcherAdapter)).not.toHaveProp('onClickOutside');
+      });
     });
 
     describe('with more than one account', () => {
-      pending('shows the caret');
-      pending('passes click handlers');
+      beforeEach(() => {
+        const accounts= [
+          { id: '1', label: 'My account' },
+          { id: '2', label: 'Another account' }
+        ];
+        wrapper = mount(<Context accounts={accounts} />);
+      });
+
+      it('shows the caret', () => {
+        expect(wrapper.find(ProjectAccountSwitcherAdapter)).toHaveProp('showCaret', true);
+      });
+
+      it('passes click handlers', () => {
+        expect(wrapper.find(ProjectAccountSwitcherAdapter).prop('onClick')).toBeInstanceOf(Function)
+        expect(wrapper.find(ProjectAccountSwitcherAdapter).prop('onClickOutside')).toBeInstanceOf(Function)
+      });
     });
 
     describe('with more than one project', () => {
-      pending('shows the caret');
-      pending('passes click handlers');
+
+      beforeEach(() => {
+        const projects= [
+          { id: '1', label: 'My project' },
+          { id: '2', label: 'Another project' }
+        ];
+        wrapper = mount(<Context projects={projects} />);
+      });
+
+      it('shows the caret', () => {
+        expect(wrapper.find(ProjectAccountSwitcherAdapter)).toHaveProp('showCaret', true);
+      });
+
+      it('passes click handlers', () => {
+        expect(wrapper.find(ProjectAccountSwitcherAdapter).prop('onClick')).toBeInstanceOf(Function)
+        expect(wrapper.find(ProjectAccountSwitcherAdapter).prop('onClickOutside')).toBeInstanceOf(Function)
+      });
     });
   });
 

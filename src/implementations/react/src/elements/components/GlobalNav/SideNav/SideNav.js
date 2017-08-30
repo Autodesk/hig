@@ -33,6 +33,7 @@ class SideNav extends Component {
     query: PropTypes.string,
     onModuleClick: PropTypes.func.isRequired,
     onSubmoduleClick: PropTypes.func.isRequired,
+    searchable: PropTypes.bool,
     superHeaderLabel: PropTypes.string,
     superHeaderLink: PropTypes.string
   };
@@ -95,7 +96,9 @@ class SideNav extends Component {
           </Group>
         ))}
         {this.props.links.map(link => <Link {...link} key={link.title} />)}
-        <Search onInput={this.props.setQuery} />
+        {this.props.searchable
+          ? <Search onInput={this.props.setQuery} value={this.props.query} />
+          : null}
       </SideNavAdapter>
     );
   }

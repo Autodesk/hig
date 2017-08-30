@@ -40,6 +40,16 @@ import TypographySection from './sections/TypographySection';
 import TableSection from "./sections/TableSection";
 
 class Playground extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state={};
+  }
+
+  navigate(id) {
+    console.log('Go to', id);
+    this.setState({ activeModuleId: id });
+  }
+
   render() {
     const topNavProps = {
       logo,
@@ -52,7 +62,8 @@ class Playground extends React.Component {
       onLogoClick: event => {
         event.preventDefault();
         console.log('Logo clicked');
-      }
+      },
+      searchable: true
     };
 
     return (
@@ -64,6 +75,7 @@ class Playground extends React.Component {
         sideNav={sideNavProps}
         submodules={submodules}
         topNav={topNavProps}
+        activeModuleId={this.state.activeModuleId}
       >
         <section>
           <h3>Tabs</h3>

@@ -3,7 +3,7 @@ import { mount } from 'enzyme';
 
 import GlobalNavAdapter from '../../../../adapters/GlobalNav/GlobalNavAdapter';
 import SideNavAdapter from '../../../../adapters/GlobalNav/SideNav/SideNavAdapter';
-import SideNav, { Link } from '../SideNav';
+import SideNav, { Link, Module, Submodule, Search } from '../SideNav';
 
 describe('<SideNav>', () => {
   class Context extends Component {
@@ -22,8 +22,8 @@ describe('<SideNav>', () => {
     }
 
     render() {
-        return (
-          <GlobalNavAdapter>
+      return (
+        <GlobalNavAdapter>
           <SideNav {...this.props}/>
         </GlobalNavAdapter>
       );
@@ -32,31 +32,54 @@ describe('<SideNav>', () => {
 
   describe('with a query', () => {
     describe('matching a module', () => {
-      pending('it shows the module');
+      it('it shows the module', () => {
+        const wrapper = mount(<Context query="Flo" />);
+        expect(wrapper.find(Module).length).toEqual(1);
+        expect(wrapper.find(Module)).toHaveProp('title', 'Flora');
+      });
     });
 
     describe('matching a submodule', () => {
-      pending('it shows the submodule and the parent');
+      it('it shows the submodule and the parent', () => {
+        const wrapper = mount(<Context query="Ros" />);
+        expect(wrapper.find(Module).length).toEqual(1);
+        expect(wrapper.find(Module)).toHaveProp('title', 'Flora');
+        expect(wrapper.find(Submodule).length).toEqual(1);
+        expect(wrapper.find(Submodule)).toHaveProp('title', 'Rose');
+      });
     });
   });
 
   describe('with activeModuleId', () => {
     describe('matching a module', () => {
-      pending('passes active to the module');
+      it('passes active to the module', () => {
+        const wrapper = mount(<Context activeModuleId="mod-1" />);
+        expect(wrapper.find(Module).first()).toHaveProp('active', true);
+      });
     });
 
     describe('matching a submodule', () => {
-      pending('passes active to the submodule and its parent');
+      it('passes active to the submodule and its parent', () => {
+        const wrapper = mount(<Context activeModuleId="sub-1" />);
+        expect(wrapper.find(Submodule).first()).toHaveProp('active', true);
+        expect(wrapper.find(Module).first()).toHaveProp('active', true);
+      });
     });
   });
 
   describe('with searchable', () => {
     describe('true', () => {
-      pending('renders a search field');
+      it('renders a search field', () => {
+        const wrapper = mount(<Context searchable={true} />);
+        expect(wrapper.find(Search).length).toEqual(1);
+      });
     });
 
     describe('false', () => {
-      pending('does not render a search field');
+      it('does not render a search field', () => {
+        const wrapper = mount(<Context searchable={false} />);
+        expect(wrapper.find(Search).length).toEqual(0);
+      });
     });
   });
 

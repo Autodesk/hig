@@ -84,12 +84,14 @@ describe('<GlobalNav>', () => {
     it('passes other side nav props', () => {
       const sideNavProps = {
         headerLabel: 'General Hospital',
-        headerLink: 'https://accounts.something.com/general-hospital'
+        headerLink: 'https://accounts.something.com/general-hospital',
+        searchable: true
       };
       const wrapper = mount(<Context sideNav={sideNavProps} />);
 
       expect(wrapper.find(SideNav)).toHaveProp('headerLabel', 'General Hospital');
       expect(wrapper.find(SideNav)).toHaveProp('headerLink', 'https://accounts.something.com/general-hospital');
+      expect(wrapper.find(SideNav)).toHaveProp('searchable', true);
     });
 
     it('passes onModuleChange', () => {
