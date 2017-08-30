@@ -8,8 +8,7 @@ class FlyoutSection extends Component {
     this.state = { isOpen: false };
   }
 
-  closeFlyout = (event) => {
-    event.preventDefault();
+  closeFlyout = () => {
     this.setState({ isOpen: false });
   };
 
@@ -33,11 +32,10 @@ class FlyoutSection extends Component {
       <PlaygroundSection title="Flyout">
         
         <Flyout
-          anchorPoint="top-right"
+          anchorPoint="bottom-left"
           open={this.state.isOpen}
-          content={this.state.content}
-          onClickOutside={this.closeFlyout}
           content={this.myFlyoutContent()}
+
         >
            <Button title="Open flyout" onClick={this.openFlyout} />
         </Flyout>

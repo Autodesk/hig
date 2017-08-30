@@ -1,6 +1,5 @@
 import React from 'react';
 import ModalAdapter from '../../adapters/ModalAdapter';
-import * as PropTypes from 'prop-types';
 
 class Modal extends React.Component {
   constructor(props) {

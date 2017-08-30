@@ -32,12 +32,6 @@ class FlyoutAdapter extends HIGElement {
     this.commitUpdate(commitProps);
   }
 
-  getChildContext() {
-    return {
-      parent: null
-    };
-  }
-
   _addTarget(element) {
     if (this.mounted) {
       this.hig.addTarget(element);
@@ -62,6 +56,7 @@ class FlyoutAdapter extends HIGElement {
       switch (propKey) {
         case "anchorPoint": {
           this.hig.setAnchorPoint(propValue);
+          break;
         }
         case "onClickOutside": {
           this._resetOnClickOutsideHandler(propValue);
@@ -72,7 +67,6 @@ class FlyoutAdapter extends HIGElement {
           break;
         }
         case "children": {
-          // no-op
           break;
         }
         case "target": {
@@ -81,6 +75,7 @@ class FlyoutAdapter extends HIGElement {
         }
         case "content": {
           this._addSlot(propValue);
+          break;
         }
         default: {
           console.warn(`${propKey} is unknown`);
@@ -103,13 +98,13 @@ class FlyoutAdapter extends HIGElement {
   }
 }
 
-const FlyoutAdapterComponent = createComponent(FlyoutAdapter);
+const FlyoutAdapterComponent = createComponent(FlyoutAdapter, {parent: null});
 
 FlyoutAdapterComponent.propTypes = {
   anchorPoint: PropTypes.string,
   onClickOutside: PropTypes.func,
   open: PropTypes.bool,
-  target: PropTypes.node,
+  target: PropTypes.any,
   children: PropTypes.node
 };
 

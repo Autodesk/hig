@@ -6,9 +6,8 @@ import * as PropTypes from 'prop-types';
 import prepareUpdate from './prepareUpdate';
 
 
-export default function createComponent(ElementConstructor) {
+export default function createComponent(ElementConstructor, childContext = {}) {
   const displayName = ElementConstructor.name;
-
   /**
    * @augments {React.Component<*, *>}
    */
@@ -87,7 +86,11 @@ export default function createComponent(ElementConstructor) {
     }
 
     getChildContext() {
-      if (this.instance) {
+      if (Object.keys(childContext).length > 0 ){
+        return {
+          parent: childContext.parent
+        }
+      } else if (this.instance) {
         return {
           parent: this.instance
         };

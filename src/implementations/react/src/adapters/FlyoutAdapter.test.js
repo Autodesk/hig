@@ -1,16 +1,31 @@
 import { mount } from 'enzyme';
 import * as HIG from 'hig-vanilla';
 import React from 'react';
-import Flyout from './FlyoutAdapter';
+import Flyout from '../elements/components/Flyout';
 import {ButtonAdapter} from './ButtonAdapter';
 
 describe('FlyoutAdapter', () => {
-  function createOrionComponent(props = {}, children = null) {
-    const orionContainer = document.createElement('div');
-    const orionWrapper = mount(<Flyout {...props} />,
-      { attachTo: orionContainer });
 
-    return { orionWrapper, orionContainer };
+
+  // function createOrionComponent(props = {}) {
+  //   const orionContainer = document.createElement('div');
+  //   const orionWrapper = mount(<Flyout {...props} />,
+  //     { attachTo: orionContainer });
+
+  //   return { orionWrapper, orionContainer };
+  // }
+
+  const Context = props => {
+    return (
+      <Flyout
+        anchorPoint={props.anchorPoint}
+        open={this.props.open}
+        onClickOutside={this.props.onClickOutside}
+        content={props.conten}
+      >
+        <Button title={props.buttonTitle}   />
+      </Flyout>
+    )
   }
 
   function createHigComponent(initialProps = {}) {
