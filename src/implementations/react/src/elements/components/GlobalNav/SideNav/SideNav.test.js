@@ -3,7 +3,7 @@ import { mount } from 'enzyme';
 
 import GlobalNavAdapter from '../../../../adapters/GlobalNav/GlobalNavAdapter';
 import SideNavAdapter from '../../../../adapters/GlobalNav/SideNav/SideNavAdapter';
-import SideNav from '../SideNav';
+import SideNav, { Link } from '../SideNav';
 
 describe('<SideNav>', () => {
   class Context extends Component {
@@ -17,7 +17,8 @@ describe('<SideNav>', () => {
         { id: 'sub-2', moduleId: 'mod-1', title: 'Wheat', icon: 'assets' },
         { id: 'sub-3', moduleId: 'mod-2', title: 'Goat', icon: 'assets' },
         { id: 'sub-4', moduleId: 'mod-2', title: 'Wolf', icon: 'assets' },
-      ]
+      ],
+      onModuleChange: jest.fn()
     }
 
     render() {
