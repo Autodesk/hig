@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { mount } from 'enzyme';
 
 import ProjectAccountSwitcher from './ProjectAccountSwitcher';
+import Project from './Project';
+import Account from './Account';
 import GlobalNavAdapter from '../../../../adapters/GlobalNav/GlobalNavAdapter';
 import TopNavAdapter from '../../../../adapters/GlobalNav/TopNav/TopNavAdapter';
 import ProjectAccountSwitcherAdapter from '../../../../adapters/GlobalNav/TopNav/ProjectAccountSwitcherAdapter';
@@ -106,31 +108,114 @@ describe('<ProjectAccountSwitcher>', () => {
   });
 
   describe('showing the active item', () => {
+    const accounts = [
+      { id: '1', label: 'Global Construction', image: '/images/accounts/1.png' },
+      { id: '2', label: 'HDR Remodelling', image: '/images/accounts/2.png' }
+    ];
+    const projects = [
+      { id: 'A', label: 'General Hospital', image: '/images/projects/A.png' },
+      { id: 'B', label: 'Rinky-Dink Rollerrink', image: '/images/projects/B.png' }
+    ];
+
     describe('with nothing active', () => {
-      pending('???');
+      it('activates the first project, account, or both', () => {
+        const wrapper = mount(<Context accounts={accounts} projects={projects} />);
+        expect(wrapper.find(ProjectAccountSwitcherAdapter)).toHaveProp('activeLabel', 'Global Construction / General Hospital');
+        expect(wrapper.find(ProjectAccountSwitcherAdapter)).toHaveProp('activeImage', '/images/projects/A.png');
+        expect(wrapper.find(ProjectAccountSwitcherAdapter)).toHaveProp('activeType', 'project');
+      });
     });
 
     describe('with an account active', () => {
-      pending('passes the account label');
-      pending('passes the account image');
-      pending('passes the account type');
+      let wrapper;
+      beforeEach(() => {
+        wrapper = mount(<Context accounts={accounts} projects={[]} activeAccountId="1" />);
+      });
+
+      it('passes the account label', () => {
+        expect(wrapper.find(ProjectAccountSwitcherAdapter)).toHaveProp('activeLabel', 'Global Construction');
+      });
+
+      it('passes the account image', () => {
+        expect(wrapper.find(ProjectAccountSwitcherAdapter)).toHaveProp('activeImage', '/images/accounts/1.png');
+      });
+
+      it('passes the account type', () => {
+        expect(wrapper.find(ProjectAccountSwitcherAdapter)).toHaveProp('activeType', 'account');
+      });
     });
 
     describe('with a project active', () => {
-      pending('passes the project label');
-      pending('passes the project image');
-      pending('passes the project type');
+      let wrapper;
+      beforeEach(() => {
+        wrapper = mount(<Context accounts={[]} projects={projects} activeAccountId="1" />);
+      });
+
+      it('passes the project label', () => {
+        expect(wrapper.find(ProjectAccountSwitcherAdapter)).toHaveProp('activeLabel', 'General Hospital');
+      });
+
+      it('passes the project image', () => {
+        expect(wrapper.find(ProjectAccountSwitcherAdapter)).toHaveProp('activeImage', '/images/projects/A.png');
+      });
+
+      it('passes the project type', () => {
+        expect(wrapper.find(ProjectAccountSwitcherAdapter)).toHaveProp('activeType', 'project');
+      });
     });
 
     describe('with an account and project active', () => {
-      pending('passes a blended label');
-      pending('passes the project image');
-      pending('passes the project type');
+      let wrapper;
+      beforeEach(() => {
+        wrapper = mount(<Context accounts={accounts} projects={projects} activeAccountId="1" />);
+      });
+
+      it('passes a blended label', () => {
+        expect(wrapper.find(ProjectAccountSwitcherAdapter)).toHaveProp('activeLabel', 'Global Construction / General Hospital');
+      });
+
+      it('passes the project image', () => {
+        expect(wrapper.find(ProjectAccountSwitcherAdapter)).toHaveProp('activeImage', '/images/projects/A.png');
+      });
+
+      it('passes the project type', () => {
+        expect(wrapper.find(ProjectAccountSwitcherAdapter)).toHaveProp('activeType', 'project');
+      });
     });
   });
 
   describe('passing props', () => {
-    pending('passes projects');
-    pending('passes accounts');
+    let wrapper;
+    const accounts = [
+      { id: '1', label: 'Global Construction', image: '/images/accounts/1.png' },
+      { id: '2', label: 'HDR Remodelling', image: '/images/accounts/2.png' }
+    ];
+    const projects = [
+      { id: 'A', label: 'General Hospital', image: '/images/projects/A.png' },
+      { id: 'B', label: 'Rinky-Dink Rollerrink', image: '/images/projects/B.png' }
+    ];
+
+    beforeEach(() => {
+      wrapper = mount(<Context projects={projects} accounts={accounts} />);
+    });
+
+    it('passes projects', () => {
+      expect(wrapper.find(Project).at(0)).toHaveProp('label', 'General Hospital');
+      expect(wrapper.find(Project).at(1)).toHaveProp('label', 'Rinky-Dink Rollerrink');
+    });
+
+    it('passes accounts', () => {
+      expect(wrapper.find(Account).at(0)).toHaveProp('label', 'Global Construction');
+      expect(wrapper.find(Account).at(1)).toHaveProp('label', 'HDR Remodelling');
+    });
+
+    it('sets click listener on an account', () => {
+      expect(wrapper.find(Account).first().prop('onClick')).toBeInstanceOf(Function);
+    });
+
+    it('sets click listener on an project', () => {
+      expect(wrapper.find(Project).first().prop('onClick')).toBeInstanceOf(Function);
+    });
   });
+
 });

@@ -38,6 +38,20 @@ class ProjectAccountSwitcher extends Component {
     this.setState({ open: !this.state.open });
   }
 
+  handleProjectClick = (id) => {
+    this.setState({ activeProjectId: id });
+    if (this.props.onProjectClick) {
+      this.props.onProjectClick(id);
+    }
+  }
+
+  handleAccountClick = (id) => {
+    this.setState({ activeAccountId: id });
+    if (this.props.onAccountClick) {
+      this.props.onAccountClick(id);
+    }
+  }
+
   activeProps() {
     const activeAccount = this.props.accounts.find(a => a.id === this.renderedActiveAccountId());
     const activeProject = this.props.projects.find(a => a.id === this.renderedActiveProjectId());
@@ -64,20 +78,6 @@ class ProjectAccountSwitcher extends Component {
     }
 
     return {};
-  }
-
-  handleProjectClick = (id) => {
-    this.setState({ activeProjectId: id });
-    if (this.props.onProjectClick) {
-      this.props.onProjectClick(id);
-    }
-  }
-
-  handleAccountClick = (id) => {
-    this.setState({ activeAccountId: id });
-    if (this.props.onAccountClick) {
-      this.props.onAccountClick(id);
-    }
   }
 
   renderedActiveProjectId() {
