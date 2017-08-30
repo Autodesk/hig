@@ -33,9 +33,7 @@ class FlyoutSection extends Component {
         
         <Flyout
           anchorPoint="bottom-left"
-          open={this.state.isOpen}
           content={this.myFlyoutContent()}
-
         >
            <Button title="Open flyout"/>
         </Flyout>

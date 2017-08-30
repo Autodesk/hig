@@ -1,84 +1,114 @@
-import { mount } from 'enzyme';
-import * as HIG from 'hig-vanilla';
-import React from 'react';
-import Flyout from '../elements/components/Flyout';
-import {ButtonAdapter} from './ButtonAdapter';
+import { mount } from "enzyme";
+import * as HIG from "hig-vanilla";
+import React from "react";
+import Flyout from "../elements/components/Flyout";
+import ButtonComponent from "./ButtonAdapter";
 
-describe('FlyoutAdapter', () => {
+function myFlyoutContent() {
+  return <div>Important flyout information</div>;
+}
 
+function higFlyoutcontent() {
+  var flyoutContent = document.createElement("div");
+  var extraDiv = document.createElement("div");
+  flyoutContent.appendChild(extraDiv);
+  extraDiv.textContent = "Important flyout information";
+  return flyoutContent;
+}
 
-  // function createOrionComponent(props = {}) {
-  //   const orionContainer = document.createElement('div');
-  //   const orionWrapper = mount(<Flyout {...props} />,
-  //     { attachTo: orionContainer });
-
-  //   return { orionWrapper, orionContainer };
-  // }
-
+describe("FlyoutAdapter", () => {
   const Context = props => {
     return (
-      <Flyout
-        anchorPoint={props.anchorPoint}
-        open={this.props.open}
-        onClickOutside={this.props.onClickOutside}
-        content={props.conten}
-      >
-        <Button title={props.buttonTitle}   />
+      <Flyout anchorPoint={props.anchorPoint} content={props.content}>
+        <div>{props.targetContent}</div>
       </Flyout>
-    )
-  }
+    );
+  };
 
   function createHigComponent(initialProps = {}) {
-    const higContainer = document.createElement('div');
-    const flyout = new HIG.Flyout(initialProps);
+    const higContainer = document.createElement("div");
+    const flyout = new HIG.Flyout({ anchorPoint: initialProps.anchorPoint });
     flyout.mount(higContainer);
+    flyout.addSlot(initialProps.content);
+
+    const wrapperDiv = document.createElement("div");
+    const contentDiv = document.createElement("div");
+    wrapperDiv.appendChild(contentDiv);
+    contentDiv.textContent = initialProps.targetContent;
+
+    flyout.addTarget(wrapperDiv);
 
     return { higComponent: flyout, higContainer };
   }
 
-  it('renders', () => {
-    const { higComponent, higContainer } = createHigComponent({});
-    const { orionContainer, orionWrapper } = createOrionComponent({});
+  it("renders with props", () => {
+    const orionProps = {
+      anchorPoint: "bottom-left",
+      content: myFlyoutContent(),
+      buttonTitle: "open Flyout",
+      targetContent: "Test Test Test"
+    };
 
-    expect(orionContainer.firstElementChild.outerHTML).toMatchSnapshot();
+    const higProps = {
+      anchorPoint: "bottom-left",
+      content: higFlyoutcontent(),
+      buttonTitle: "open Flyout",
+      targetContent: "Test Test Test"
+    };
 
-    expect(orionContainer.firstElementChild.outerHTML).toEqual(
+    const { higComponent, higContainer } = createHigComponent(higProps);
+    const container = document.createElement("div");
+    const wrapper = mount(Context(orionProps), {
+      attachTo: container
+    });
+
+    expect(container.firstElementChild.outerHTML).toMatchSnapshot();
+
+    expect(container.firstElementChild.outerHTML).toEqual(
       higContainer.firstElementChild.outerHTML
     );
   });
 
-  it('renders with non-default props', () => {
-
-    const buttonProps = { "title": "Open setter flyout" };
-    const higButton = new HIG.Button(buttonProps);
-    const spy = jest.fn();
+  it("renders with non-default props", () => {
+    const orionProps = {
+      anchorPoint: "bottom-left",
+      content: myFlyoutContent(),
+      targetContent: "Test Test Test"
+    };
 
     const higProps = {
-      anchorPoint: 'bottom-left',
-      open: true,
-      onClickOutside: spy,
+      anchorPoint: "bottom-left",
+      content: higFlyoutcontent(),
+      targetContent: "Test Test Test"
     };
 
-    const orionProps = {
-      anchorPoint: 'bottom-left',
-      open: true,
-      onClickOutside: spy,
-      target: new ButtonAdapter(buttonProps)
+    const newOrionProps = {
+      anchorPoint: "top-left",
+      content: myFlyoutContent(),
+      targetContent: "New Test"
     };
+
+    const newHigProps = {
+      anchorPoint: "top-left",
+      content: higFlyoutcontent(),
+      targetContent: "Test Test Test"
+    }  
+
 
     const { higComponent, higContainer } = createHigComponent(higProps);
-    const { orionContainer, orionWrapper } = createOrionComponent(orionProps );
+    const container = document.createElement("div");
+    const wrapper = mount(Context(orionProps), {
+      attachTo: container
+    });
 
-    higComponent.addTarget(higButton);
-    higComponent.open();
+    higComponent.setAnchorPoint(newHigProps.anchorPoint);
 
-    expect(orionContainer.firstElementChild.outerHTML).toMatchSnapshot();
-    expect(orionContainer.firstElementChild.outerHTML)
-      .toEqual(higContainer.firstElementChild.outerHTML);
+    const prevProps = wrapper.props;
+    wrapper.setProps(newOrionProps);
+
+    expect(container.firstElementChild.outerHTML).toMatchSnapshot();
+    expect(container.firstElementChild.outerHTML).toEqual(
+      higContainer.firstElementChild.outerHTML
+    );
   });
-
-  it('upates props correctly', () => {
-
-  })
 });
-
