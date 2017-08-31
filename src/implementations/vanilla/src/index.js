@@ -14,6 +14,7 @@ Hig.Option = require('./basics/form-elements/dropdown/option/option.js');
 Hig.PasswordField = require('./basics/form-elements/password-field/password-field.js');
 Hig.RadioButton = require('./basics/form-elements/radio-button/radio-button.js');
 Hig.Range = require('./basics/form-elements/range/range.js');
+Hig.RichText = require('./basics/rich-text/rich-text.js');
 Hig.Table = require('./components/table/table.js')
 Hig.TextArea = require('./basics/form-elements/text-area/text-area.js');
 Hig.TextField = require('./basics/form-elements/text-field/text-field.js');

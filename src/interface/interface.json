@@ -611,6 +611,19 @@
         }
       }
     },
+    "RichText": {
+      "defaults": {
+        "html": "{String} HTML to be rendered and styled within"
+      },
+      "methods": {
+        "setHtml": {
+          "desc": "Sets HTML to be rendered and styled within",
+          "params": [
+            "{String} HTML"
+          ]
+        }
+      }
+    },
     "Spacer": {
       "defaults": {
         "type": "{String - 'stack', 'inline'} type of the spacer",

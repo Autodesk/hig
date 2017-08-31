@@ -9,14 +9,16 @@
     body {
       margin: 30px;
     }
-    ul{
-      padding: 0 18px;
+
+    ul {
+      padding: 0;
+      list-style: none;
     }
   </style>
 </head>
 <body class='hig__typography'>
-  <div class='hig__typography hig__typography__h2'>HIG Vanilla Tests</div>
-  <div>
+  <div class='hig__typography__h2'>HIG Vanilla Tests</div>
+  <div class="hig__rich-text">
     <ul>
       {{#testLinks}}
       <li><a href="{{ & href }}">{{ title }}</a></li>

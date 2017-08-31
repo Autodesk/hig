@@ -1,5 +1,6 @@
 @import '~basics/colors/colors.scss';
 
+.hig__rich-text a,
 .hig__text-link {
   font-family: 'ArtifaktElement', sans-serif;
   font-size: 14px;
@@ -7,6 +8,7 @@
   text-decoration: none;
 }
 
+.hig__rich-text a,
 .hig__text-link--primary {
   color: color(hig-blue-30);
 
