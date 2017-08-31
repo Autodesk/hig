@@ -1,6 +1,6 @@
 import React from 'react';
 import PlaygroundSection from '../PlaygroundSection';
-import { TextLink } from '../../react-hig';
+import { TextLink } from '../../hig-react';
 
 function TextLinkSection() {
   return (
