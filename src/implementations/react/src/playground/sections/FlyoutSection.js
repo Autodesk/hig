@@ -8,16 +8,6 @@ class FlyoutSection extends Component {
     this.state = { isOpen: false };
   }
 
-  closeFlyout = () => {
-    this.setState({ isOpen: false });
-  };
-
-  openFlyout = (event) => {
-    event.preventDefault();
-    this.setState({ isOpen: true });
-  };
-
-
   myFlyoutContent = () => {
     return (
       <div>
