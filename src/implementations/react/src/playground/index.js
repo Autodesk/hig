@@ -53,11 +53,7 @@ class Playground extends React.Component {
     console.log('Go to', id);
     this.setState({ activeModuleId: id });
   }
-
-  onClickOutside = () => {
-    console.log("clicked outside")
-  }
-
+  
   render() {
     const topNavProps = {
       logo,
