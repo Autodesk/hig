@@ -3,7 +3,8 @@
 @import '~helpers/css/mixins/typography-base.scss';
 
 .hig__typography,
-.hig__rich-text {
+.hig__rich-text,
+.hig__rich-text p {
   @include typography-base;
 }
 
@@ -65,7 +66,7 @@
   color: color('hig-gray-10');
 }
 
-.hig__rich-text h4
+.hig__rich-text h4,
 .hig__typography__sub1 {
   @include typography-base;
 

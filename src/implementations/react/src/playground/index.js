@@ -40,6 +40,7 @@ import TypographySection from './sections/TypographySection';
 import TableSection from "./sections/TableSection";
 import TextLinkSection from "./sections/TextLinkSection";
 import FlyoutSection from "./sections/FlyoutSection"
+import RichTextSection from "./sections/RichTextSection";
 
 class Playground extends React.Component {
   constructor(props) {
@@ -53,7 +54,7 @@ class Playground extends React.Component {
     console.log('Go to', id);
     this.setState({ activeModuleId: id });
   }
-  
+
   render() {
     const topNavProps = {
       logo,
@@ -69,7 +70,7 @@ class Playground extends React.Component {
       },
       searchable: true
     };
-    
+
     return (
       <GlobalNav
         accounts={accounts}
@@ -100,12 +101,9 @@ class Playground extends React.Component {
         <DropdownSection />
         <TypographySection />
         <TableSection/>
-<<<<<<< 3236b5740fc222bdfcce7c2d5c960a67e42de2c2
         <TextLinkSection/>
-        <Flyout />
-=======
         <FlyoutSection />
->>>>>>> cleaning up flyout section
+        <RichTextSection />
       </GlobalNav>
     );
   }
