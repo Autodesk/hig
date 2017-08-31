@@ -32,14 +32,5 @@ class Modal extends React.Component {
   }
 }
 
-Modal.propTypes= {
-  body: PropTypes.string,
-  buttons: PropTypes.array,
-  headerColor: PropTypes.string,
-  open: PropTypes.bool,
-  onClose: PropTypes.func.isRequired,
-  children: PropTypes.node
-};
-
 
 export default Modal;
