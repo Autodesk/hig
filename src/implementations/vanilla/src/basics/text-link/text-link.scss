@@ -7,7 +7,7 @@
   text-decoration: none;
 }
 
-.hig__text-link__primary {
+.hig__text-link--primary {
   color: color(hig-blue-30);
 
   &:hover {
@@ -15,7 +15,7 @@
   }
 }
 
-.hig__text-link__secondary {
+.hig__text-link--secondary {
   color: color(hig-gray-30);
 
   &:hover {

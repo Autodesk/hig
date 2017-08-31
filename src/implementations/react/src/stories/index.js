@@ -20,4 +20,5 @@ import './Tabs.story';
 import './Table.story.js';
 import './TextArea.story';
 import './TextField.story';
+import './TextLink.story';
 import './Typography.story';
