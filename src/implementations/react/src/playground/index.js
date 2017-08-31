@@ -15,7 +15,7 @@
 
  */
 import React from 'react';
-import { Button, GlobalNav } from '../react-hig';
+import { Button, GlobalNav } from '../hig-react';
 
 import 'hig-vanilla/dist/hig.css';
 import './index.css';

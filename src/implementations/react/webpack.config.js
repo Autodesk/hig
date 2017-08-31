@@ -5,10 +5,10 @@ const pkg = JSON.parse(fs.readFileSync('./package.json'));
 
 
 r = {
-  entry: './src/react-hig.js',
+  entry: './src/hig-react.js',
   output: {
     path: path.resolve('./lib'),
-    filename: 'react-hig.js',
+    filename: 'hig-react.js',
     library: 'HigReact',
     libraryTarget: 'umd'
   },

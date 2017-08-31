@@ -1,6 +1,6 @@
 import React from 'react';
 import PlaygroundSection from '../PlaygroundSection';
-import { IconButton } from '../../react-hig';
+import { IconButton } from '../../hig-react';
 
 function IconButtonSection() {
   return (

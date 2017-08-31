@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PlaygroundSection from '../PlaygroundSection';
-import { Button, Modal } from '../../react-hig';
+import { Button, Modal } from '../../hig-react';
 
 class ModalSection extends Component {
   constructor() {

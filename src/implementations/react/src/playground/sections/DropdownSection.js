@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PlaygroundSection from '../PlaygroundSection';
-import { Dropdown } from '../../react-hig';
+import { Dropdown } from '../../hig-react';
 
 const Option = Dropdown.Option;
 
