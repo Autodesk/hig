@@ -38,6 +38,7 @@ import SpacerSection from './sections/SpacerSection';
 import ModalSection from './sections/ModalSection';
 import TypographySection from './sections/TypographySection';
 import TableSection from "./sections/TableSection";
+import TextLinkSection from "./sections/TextLinkSection";
 
 class Playground extends React.Component {
   constructor(props) {
@@ -98,6 +99,7 @@ class Playground extends React.Component {
         <DropdownSection />
         <TypographySection />
         <TableSection/>
+        <TextLinkSection/>
       </GlobalNav>
     );
   }
