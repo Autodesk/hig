@@ -43,7 +43,7 @@ $shadow-layer: -1;
   background: color(hig-white);
   border-radius: 4px;
   outline: none;
-  box-shadow: 0 0 8px 0 #BEC8D2;
+  box-shadow: 0 0 8px 0 rgba(190, 200, 210, 0.4);
 
   @include phone-breakpoint {
     width: 500px;
