@@ -33,9 +33,9 @@ storiesOf('TextLink', module)
 
     return (
       <TextLink
-        href="https://github.com/Autodesk/hig"
+        href={text('Href', 'https://github.com/Autodesk/hig')}
         type={type}
-        text="TextLink"
+        text={text('Text', 'AutoDesk HIG')}
       />
     );
   })
@@ -51,7 +51,7 @@ storiesOf('TextLink', module)
     return (
       <TextLink
         type={type}
-        text="TextLink"
+        text={text('Text', 'AutoDesk HIG')}
         onClick={action('clicked')}
       />
     );
