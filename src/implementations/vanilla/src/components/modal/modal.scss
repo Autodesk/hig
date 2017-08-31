@@ -10,6 +10,7 @@ $body-layer: 1;
 $shadow-layer: -1;
 
 .hig__modal {
+  color: #2A3B4D;
   display: none;
 
   &.hig__modal--open {
@@ -32,27 +33,27 @@ $shadow-layer: -1;
   flex-direction: column;
   top: 128px;
   max-width: calc(100vw - 32px);
-  width: 500px;
+  width: 600px;
   left: 50%;
   transform: translateX(-50%);
   max-height: calc(100vh - 256px);
   overflow: hidden;
 
-  border: 1px solid color(hig-gray-50);
+  border: 3px solid color(hig-blue-20);
   background: color(hig-white);
   border-radius: 4px;
   outline: none;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 8px 0 #BEC8D2;
 
-  @include tablet-breakpoint {
-    width: 600px;
+  @include phone-breakpoint {
+    width: 500px;
   }
 }
 
 .hig__modal__close-button {
   position: absolute;
   top: 16px;
-  right: 16px;
+  right: 0;
   z-index: $close-button-layer;
   border: none;
   background: none;
@@ -62,27 +63,26 @@ $shadow-layer: -1;
     outline: none;
   }
 
-  .hig__modal__header--slate > & > .hig__icon > svg * {
-    fill: color(hig-blue-70);
+  .hig__modal__header--alternate & {
+    top: 16px;
+    right: 16px;
   }
 }
 
 .hig__modal__header {
   position: relative;
-  padding: 16px 32px 16px 16px;
+  margin: 0 32px;
+  padding: 16px 0;
   font-size: 24px;
   font-family: 'ArtifaktElement';
   z-index: $header-layer;
   border-bottom: 1px solid color(hig-gray-50);
   min-height: 33px;
 
-  &.hig__modal__header--slate {
-    background-color: color(hig-slate-30);
-    color: color(hig-blue-70);
-  }
-
-  &.hig__modal__header--gray {
+  &.hig__modal__header--alternate {
     background-color: color(hig-blue-70);
+    margin: 0;
+    padding: 16px 32px;
   }
 }
 
@@ -95,12 +95,10 @@ $shadow-layer: -1;
 }
 
 .hig__modal__slot {
-  padding: 0 16px;
+  padding: 0 32px;
   overflow: auto;
   flex: 1 1 auto;
-  box-shadow:
-    inset 0px 9px 6px -11px rgba(0, 0, 0, 0.4),
-    inset 0px -9px 6px -11px rgba(0, 0, 0, 0.4);
+  border: none;
 
   &::before {
     content: '';
@@ -126,9 +124,9 @@ $shadow-layer: -1;
 .hig__modal__actions {
   display: flex;
   justify-content: flex-end;
-  padding: 16px;
+  padding: 16px 32px;
   z-index: $actions-layer;
   flex: 0 0 auto;
   min-height: 33px;
-  border-top: 1px solid color(hig-gray-50);
+  border: none;
 }

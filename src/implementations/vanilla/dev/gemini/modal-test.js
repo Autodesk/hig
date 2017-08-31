@@ -6,11 +6,8 @@ gemini.suite('modal', (parent) => {
             .before(function(actions, find) {
                 this.next = find('.hig__modal__close-button');
             })
-            .capture('white')
-            .capture('gray', function(actions, find) {
-                actions.click(this.next);
-            })
-            .capture('slate', function(actions, find) {
+            .capture('standard')
+            .capture('alternate', function(actions, find) {
                 actions.click(this.next);
             })
             .capture('scrolling', function(actions, find) {

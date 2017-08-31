@@ -59,31 +59,61 @@
             });
 
             const openModalButton = new Hig.Button({
-              title: 'Open minimal modal'
+              title: 'Minimal modal'
             });
             openModalButton.mount('.test-container');
             openModalButton.onClick(function() {
               Modal.open();
             });
+            Modal.onCloseClick(function() {
+              Modal.close();
+            });
 
+            // ----------------------------
+            // Modal configured with standard defaults
+            // ----------------------------
 
+            const WithButtons = new Hig.Modal({
+              title: 'With buttons',
+              body: 'Nisi minim ad enim reprehenderit minim est ut laboris et consectetur anim. Ea consequat sit veniam duis nulla ea sit. Proident ullamco sint Lorem consequat ut in occaecat ad nostrud proident minim. Adipisicing duis ex Lorem quis occaecat veniam culpa Lorem sint incididunt ex quis. Velit ut excepteur commodo aliquip. Aliqua occaecat eu est ullamco adipisicing consequat in culpa qui exercitation esse commodo excepteur.'
+            });
+            WithButtons.mount();
+            WithButtons.onOverlayClick(function() {
+              WithButtons.close();
+            });
+            WithButtons.onCloseClick(function() {
+              WithButtons.close();
+            });
+            WithButtons.addButton(new Hig.Button({ title: 'Cancel', type: 'secondary' }));
+            WithButtons.addButton(new Hig.Button({ title: 'Make it so' }));
+
+            const openWithButtonsButton = new Hig.Button({
+              title: 'Modal with buttons'
+            });
+            openWithButtonsButton.mount('.test-container');
+            openWithButtonsButton.onClick(function() {
+              WithButtons.open();
+            });
 
             // ----------------------------
             // Modal configured with defaults
             // ----------------------------
 
             const DefaultModal = new Hig.Modal({
-              title: 'Modal configured with defaults',
-              headerColor: 'slate',
+              title: 'Alternate Header + Text using defaults',
+              headerColor: 'alternate',
               body: 'Nisi minim ad enim reprehenderit minim est ut laboris et consectetur anim. Ea consequat sit veniam duis nulla ea sit. Proident ullamco sint Lorem consequat ut in occaecat ad nostrud proident minim. Adipisicing duis ex Lorem quis occaecat veniam culpa Lorem sint incididunt ex quis. Velit ut excepteur commodo aliquip. Aliqua occaecat eu est ullamco adipisicing consequat in culpa qui exercitation esse commodo excepteur.'
             });
             DefaultModal.mount();
             DefaultModal.onOverlayClick(function() {
               DefaultModal.close();
             });
+            DefaultModal.onCloseClick(function() {
+              DefaultModal.close();
+            });
 
             const openDefaultModalButton = new Hig.Button({
-              title: 'Open default modal'
+              title: 'Alternate Header + Text using defaults'
             });
             openDefaultModalButton.mount('.test-container');
             openDefaultModalButton.onClick(function() {
@@ -97,8 +127,8 @@
 
             const SetterModal = new Hig.Modal();
             SetterModal.mount();
-            SetterModal.setTitle('Modal configured with setters');
-            SetterModal.setHeaderColor('gray');
+            SetterModal.setTitle('Alternate header using setters');
+            SetterModal.setHeaderColor('alternate');
             SetterModal.addButton(new Hig.Button({ title: 'Cancel', type: 'secondary' }));
             SetterModal.addButton(new Hig.Button({ title: 'Make it so' }));
             SetterModal.onOverlayClick(function() {
@@ -114,7 +144,7 @@
             SetterModal.addSlot(setterModalContent);
 
             const openSetterModalButton = new Hig.Button({
-              title: 'Open setter modal'
+              title: 'Alternate Header using setters'
             });
             openSetterModalButton.mount('.test-container');
             openSetterModalButton.onClick(function() {

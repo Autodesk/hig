@@ -5,7 +5,7 @@ const Interface = require('interface.json');
 const Core = require('_core.js');
 const Button = require('../button/button');
 
-const AvailableHeaderColors = ['white', 'slate', 'gray'];
+const AvailableHeaderColors = ['standard', 'alternate'];
 
 /**
  * Creates a Modal
@@ -94,7 +94,7 @@ class Modal extends Core {
 Modal._interface = Interface.components.Modal;
 Modal._defaults = {
   body: '',
-  headerColor: 'white',
+  headerColor: 'standard',
   title: ''
 };
 Modal._partials = {};
