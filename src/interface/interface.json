@@ -10,113 +10,36 @@
     }
   },
   "basics": {
-    "Spacer": {
-      "defaults": {
-        "type": "{String - 'stack', 'inline'} type of the spacer",
-        "width": "{String - 'none', 'xxs', 'xs', 's', 'm', 'l' 'xl', 'xxl'} width of the spacer",
-        "inset": "{String - 'none', 'xxs', 'xs', 's', 'm', 'l' 'xl', 'xxl'} width of the spacer inset"
-      },
+    "Flyout": {
       "methods": {
-        "setType": {
-          "desc": "Sets the type of the spacer",
-          "params": [
-            "{String - 'none', 'xxs', 'xs', 's', 'm', 'l' 'xl', 'xxl'} type of the spacer"
-          ]
-        },
-        "setWidth": {
-          "desc": "Sets the width of the spacer",
-          "params": [
-            "{String - 'none', 'xxs', 'xs', 's', 'm', 'l' 'xl', 'xxl'} width of the spacer"
-          ]
-        },
-        "setInset": {
-          "desc": "Sets the inset width of the spacer",
-          "params": [
-            "{String - 'none', 'xxs', 'xs', 's', 'm', 'l' 'xl', 'xxl'} inset width of the spacer"
-          ]
-        },
         "addSlot": {
-          "desc": "Content for the spacer",
+          "desc": "Content for the flyout",
           "params": ["{HTMLElement} HTMLElement"]
-        }
-      }
-    },
-    "TextLink": {
-      "defaults": {
-        "href": null,
-        "text": "Text",
-        "type": "primary"
-      },
-      "methods": {
-        "onClick": {
-            "desc": "Calls the provided callback when the text is clicked",
-            "params": "HIG.abstract.EventObject.params",
-            "returns": "HIG.abstract.EventObject.returns"
         },
-        "setHref": {
-            "desc": "Sets the path or url destination of the link",
-            "params": [
-              "{String} Path or url to link to"
-            ]
+        "addTarget": {
+          "desc": "Flyout will be positioned relative to this element",
+          "params": ["{HTMLElement} HTMLElement"]
         },
-        "setText": {
-            "desc": "sets the text and alt-text of the link",
-            "params": [
-              "{String} Text and alt-text of the link"
-            ]
+        "close": {
+          "desc": "closes the flyout"
         },
-        "setType": {
-            "desc": "Sets the type of the text link",
-            "params": [
-              "{String - 'primary', 'secondary'} The type of text link"
-            ]
-        }
-      }
-    },
-    "Typography": {
-      "methods": {
-        "setText": {
-          "desc": "sets the text",
-          "params": ["{String} text - text you want to display"]
+        "onClickOutside": {
+          "desc": "Calls the provided callback when the flyout is open and the user clicks outside of the flyout",
+          "params": "HIG.abstract.EventObject.params",
+          "returns": "HIG.abstract.EventObject.returns"
         },
-        "setType": {
-          "desc": "sets the type of typography",
+        "open": {
+          "desc": "opens the flyout"
+        },
+        "setAnchorPoint": {
+          "desc": "sets where the flyout anchors to the target",
           "params": [
-            "{String} h1, h2, h3, sub1, sub2, body, bold, disabled or caption"
+            "{String - 'top-right', 'top-center'} where the flyout anchors to the target"
           ]
-        },
-        "applyTypographyToElement": {
-          "desc": "Apply HIG typography to input html element",
-          "params": ["{HTMLElement} HTMLElement"]
         }
       },
       "defaults": {
-        "text": "{String} text you want to display",
-        "type": "{String} h1, h2, h3, sub1, sub2, body, bold, disabled or caption"
-      }
-    },
-    "Grid": {
-      "methods": {
-        "addGridItem": {
-          "desc": "Add a GridItem to your grid",
-          "params": ["{GridItem} GridItem"]
-        }
-      },
-      "partials": {
-        "GridItem": {
-          "methods": {
-            "addSlot": {
-              "desc": "Content for the grid item",
-              "params": ["{HTMLElement} HTMLElement"]
-            },
-            "setFraction": {
-              "fraction": "see defaults"
-            }
-          },
-          "defaults": {
-            "fraction": "fraction in english, with 1, 2, 4, 8, 12 as nominators, so our possible values are: 'one-whole', 'one-half', 'one-quarter', 'two-quarter', 'three-quarter', 'one-eighth', 'two-eighths', 'three-eighths', 'four-eighths', 'five-eights', 'six-eighths', 'seven-eighths', 'one-twelfth', 'two-twelfths', 'three-twelfths', 'four-twelfths', 'five-twelfths', 'six-twelfths', 'seven-twelfths', 'eight-twelfths', 'nine-twelfths', 'ten-twelfths', 'eleven-twelfths'"
-          }
-        }
+        "anchorPoint": "{String - 'top-right', 'top-center'} where the flyout anchors to the target"
       }
     },
     "FormElements": {
@@ -664,36 +587,113 @@
         }
       }
     },
-    "Flyout": {
+    "Grid": {
       "methods": {
-        "addSlot": {
-          "desc": "Content for the flyout",
-          "params": ["{HTMLElement} HTMLElement"]
-        },
-        "addTarget": {
-          "desc": "Flyout will be positioned relative to this element",
-          "params": ["{HTMLElement} HTMLElement"]
-        },
-        "close": {
-          "desc": "closes the flyout"
-        },
-        "onClickOutside": {
-          "desc": "Calls the provided callback when the flyout is open and the user clicks outside of the flyout",
-          "params": "HIG.abstract.EventObject.params",
-          "returns": "HIG.abstract.EventObject.returns"
-        },
-        "open": {
-          "desc": "opens the flyout"
-        },
-        "setAnchorPoint": {
-          "desc": "sets where the flyout anchors to the target",
+        "addGridItem": {
+          "desc": "Add a GridItem to your grid",
+          "params": ["{GridItem} GridItem"]
+        }
+      },
+      "partials": {
+        "GridItem": {
+          "methods": {
+            "addSlot": {
+              "desc": "Content for the grid item",
+              "params": ["{HTMLElement} HTMLElement"]
+            },
+            "setFraction": {
+              "fraction": "see defaults"
+            }
+          },
+          "defaults": {
+            "fraction": "fraction in english, with 1, 2, 4, 8, 12 as nominators, so our possible values are: 'one-whole', 'one-half', 'one-quarter', 'two-quarter', 'three-quarter', 'one-eighth', 'two-eighths', 'three-eighths', 'four-eighths', 'five-eights', 'six-eighths', 'seven-eighths', 'one-twelfth', 'two-twelfths', 'three-twelfths', 'four-twelfths', 'five-twelfths', 'six-twelfths', 'seven-twelfths', 'eight-twelfths', 'nine-twelfths', 'ten-twelfths', 'eleven-twelfths'"
+          }
+        }
+      }
+    },
+    "Spacer": {
+      "defaults": {
+        "type": "{String - 'stack', 'inline'} type of the spacer",
+        "width": "{String - 'none', 'xxs', 'xs', 's', 'm', 'l' 'xl', 'xxl'} width of the spacer",
+        "inset": "{String - 'none', 'xxs', 'xs', 's', 'm', 'l' 'xl', 'xxl'} width of the spacer inset"
+      },
+      "methods": {
+        "setType": {
+          "desc": "Sets the type of the spacer",
           "params": [
-            "{String - 'top-right', 'top-center'} where the flyout anchors to the target"
+            "{String - 'none', 'xxs', 'xs', 's', 'm', 'l' 'xl', 'xxl'} type of the spacer"
           ]
+        },
+        "setWidth": {
+          "desc": "Sets the width of the spacer",
+          "params": [
+            "{String - 'none', 'xxs', 'xs', 's', 'm', 'l' 'xl', 'xxl'} width of the spacer"
+          ]
+        },
+        "setInset": {
+          "desc": "Sets the inset width of the spacer",
+          "params": [
+            "{String - 'none', 'xxs', 'xs', 's', 'm', 'l' 'xl', 'xxl'} inset width of the spacer"
+          ]
+        },
+        "addSlot": {
+          "desc": "Content for the spacer",
+          "params": ["{HTMLElement} HTMLElement"]
+        }
+      }
+    },
+    "TextLink": {
+      "defaults": {
+        "href": null,
+        "text": "Text",
+        "type": "primary"
+      },
+      "methods": {
+        "onClick": {
+            "desc": "Calls the provided callback when the text is clicked",
+            "params": "HIG.abstract.EventObject.params",
+            "returns": "HIG.abstract.EventObject.returns"
+        },
+        "setHref": {
+            "desc": "Sets the path or url destination of the link",
+            "params": [
+              "{String} Path or url to link to"
+            ]
+        },
+        "setText": {
+            "desc": "sets the text and alt-text of the link",
+            "params": [
+              "{String} Text and alt-text of the link"
+            ]
+        },
+        "setType": {
+            "desc": "Sets the type of the text link",
+            "params": [
+              "{String - 'primary', 'secondary'} The type of text link"
+            ]
+        }
+      }
+    },
+    "Typography": {
+      "methods": {
+        "setText": {
+          "desc": "sets the text",
+          "params": ["{String} text - text you want to display"]
+        },
+        "setType": {
+          "desc": "sets the type of typography",
+          "params": [
+            "{String} h1, h2, h3, sub1, sub2, body, bold, disabled or caption"
+          ]
+        },
+        "applyTypographyToElement": {
+          "desc": "Apply HIG typography to input html element",
+          "params": ["{HTMLElement} HTMLElement"]
         }
       },
       "defaults": {
-        "anchorPoint": "{String - 'top-right', 'top-center'} where the flyout anchors to the target"
+        "text": "{String} text you want to display",
+        "type": "{String} h1, h2, h3, sub1, sub2, body, bold, disabled or caption"
       }
     }
   },
@@ -756,53 +756,6 @@
         "link": "{String} link of the button",
         "type": "{String} type of the button: primary (default), secondary or flat",
         "size": "{String} size of the button: standard (default), small, large",
-        "icon": "{String} (optional) ID of the icon"
-      }
-    },
-    "IconButton": {
-      "methods": {
-        "setTitle": {
-          "desc": "sets the title of a button",
-          "params": ["{String} title - new title for the button"]
-        },
-        "setLink": {
-          "desc": "sets the link of a button",
-          "params": ["{String} link - new link for the button"]
-        },
-        "setIcon": {
-          "desc": "sets the icon of a button",
-          "params": ["{String} icon - icon ID"]
-        },
-        "disable": {
-          "desc": "make the button disabled"
-        },
-        "enable": {
-          "desc": "make the button enabled again after disabled state"
-        },
-        "onClick": {
-          "desc": "Calls the provided callback when user clicks on the button",
-          "params": "HIG.abstract.EventObject.params",
-          "returns": "HIG.abstract.EventObject.returns"
-        },
-        "onHover": {
-          "desc": "Calls the provided callback when user moves the mouse over the button",
-          "params": "HIG.abstract.EventObject.params",
-          "returns": "HIG.abstract.EventObject.returns"
-        },
-        "onFocus": {
-          "desc": "Calls the provided callback when user puts focus on the button",
-          "params": "HIG.abstract.EventObject.params",
-          "returns": "HIG.abstract.EventObject.returns"
-        },
-        "onBlur": {
-          "desc": "Calls the provided callback when user puts focus away from icon button",
-          "params": "HIG.abstract.EventObject.params",
-          "returns": "HIG.abstract.EventObject.returns"
-        }
-      },
-      "defaults": {
-        "title": "{String} title of the button",
-        "link": "{String} link of the button",
         "icon": "{String} (optional) ID of the icon"
       }
     },
@@ -1505,6 +1458,53 @@
             }
           }
         }
+      }
+    },
+    "IconButton": {
+      "methods": {
+        "setTitle": {
+          "desc": "sets the title of a button",
+          "params": ["{String} title - new title for the button"]
+        },
+        "setLink": {
+          "desc": "sets the link of a button",
+          "params": ["{String} link - new link for the button"]
+        },
+        "setIcon": {
+          "desc": "sets the icon of a button",
+          "params": ["{String} icon - icon ID"]
+        },
+        "disable": {
+          "desc": "make the button disabled"
+        },
+        "enable": {
+          "desc": "make the button enabled again after disabled state"
+        },
+        "onClick": {
+          "desc": "Calls the provided callback when user clicks on the button",
+          "params": "HIG.abstract.EventObject.params",
+          "returns": "HIG.abstract.EventObject.returns"
+        },
+        "onHover": {
+          "desc": "Calls the provided callback when user moves the mouse over the button",
+          "params": "HIG.abstract.EventObject.params",
+          "returns": "HIG.abstract.EventObject.returns"
+        },
+        "onFocus": {
+          "desc": "Calls the provided callback when user puts focus on the button",
+          "params": "HIG.abstract.EventObject.params",
+          "returns": "HIG.abstract.EventObject.returns"
+        },
+        "onBlur": {
+          "desc": "Calls the provided callback when user puts focus away from icon button",
+          "params": "HIG.abstract.EventObject.params",
+          "returns": "HIG.abstract.EventObject.returns"
+        }
+      },
+      "defaults": {
+        "title": "{String} title of the button",
+        "link": "{String} link of the button",
+        "icon": "{String} (optional) ID of the icon"
       }
     },
     "Modal": {
