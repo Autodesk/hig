@@ -5,6 +5,7 @@ import './index.css';
 import './Button.story';
 import './Checkbox.story';
 import "./Dropdown.story";
+import "./Flyout.story";
 import './GlobalNav.story';
 import './IconButton.story';
 import './Modal.story';
@@ -22,3 +23,4 @@ import './TextArea.story';
 import './TextField.story';
 import './TextLink.story';
 import './Typography.story';
+
