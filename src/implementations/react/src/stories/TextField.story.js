@@ -19,7 +19,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { text, select, boolean } from '@storybook/addon-knobs';
 
-import { TextField } from '../react-hig';
+import { TextField } from '../hig-react';
 
 storiesOf('TextField', module)
   .addWithInfo('By default', ``, () => {

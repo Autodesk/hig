@@ -1,6 +1,6 @@
 import React from 'react';
 import PlaygroundSection from '../PlaygroundSection';
-import { TextArea } from '../../react-hig';
+import { TextArea } from '../../hig-react';
 
 function logEvent(event, higElement) {
   let messageParts = [

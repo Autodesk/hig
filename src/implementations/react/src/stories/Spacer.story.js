@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions';
 import { text, select } from '@storybook/addon-knobs';
 
 import Spacer from '../adapters/SpacerAdapter';
-import { GlobalNav } from '../react-hig';
+import { GlobalNav } from '../hig-react';
 const Slot = GlobalNav.Slot;
 
 const spacerStyle = {

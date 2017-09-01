@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PlaygroundSection from '../PlaygroundSection';
-import { PasswordField } from '../../react-hig';
+import { PasswordField } from '../../hig-react';
 
 class PasswordFieldSection extends Component {
   constructor() {

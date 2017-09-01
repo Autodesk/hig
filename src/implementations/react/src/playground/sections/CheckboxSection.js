@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PlaygroundSection from "../PlaygroundSection";
-import { Checkbox } from "../../react-hig";
+import { Checkbox } from "../../hig-react";
 
 const checkboxStyle = {
   display: "flex",

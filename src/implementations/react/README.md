@@ -1,4 +1,4 @@
-# react-hig
+# hig-react
 
 React components for the HIG
 
@@ -10,27 +10,27 @@ React components for the HIG
 This project uses [node](http://nodejs.org) and [npm](https://npmjs.com). Go check them out if you don't have them locally installed.
 
 ```sh
-$ npm install --save @hig/react-hig
+$ npm install --save @hig/hig-react
 ```
 
 Then with a module bundler like [rollup](http://rollupjs.org/) or [webpack](https://webpack.js.org/), use as you would anything else:
 
 ```javascript
 // using ES6 modules
-import { Button } from '@hig/react-hig';
+import { Button } from '@hig/hig-react';
 
 // Styles
-import '@hig/react-hig/lib/react-hig.css';
+import '@hig/hig-react/lib/hig-react.css';
 
 // using CommonJS modules
-var ReactHIG = require('@hig/react-hig');
+var ReactHIG = require('@hig/hig-react');
 var Button = ReactHIG.Button;
 ```
 
 The [UMD](https://github.com/umdjs/umd) build is also available on [unpkg](https://unpkg.com):
 
 ```html
-<script src="https://unpkg.com/@hig/react-hig/lib/react-hig.umd.js"></script>
+<script src="https://unpkg.com/@hig/hig-react/lib/hig-react.umd.js"></script>
 ```
 
 You can find the library on `window.ReactHIG`.
@@ -40,8 +40,8 @@ You can find the library on `window.ReactHIG`.
 ```jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Button } from '@hig/react-hig';
-import '@hig/react-hig/lib/react-hig.css';
+import { Button } from '@hig/hig-react';
+import '@hig/hig-react/lib/hig-react.css';
 
 class App extends React.Component {
   render() {
