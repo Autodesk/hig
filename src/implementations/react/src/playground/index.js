@@ -17,7 +17,7 @@
 import React from 'react';
 import { Button, GlobalNav } from '../hig-react';
 
-import 'hig-vanilla/dist/hig.css';
+import 'hig-vanilla/lib/hig.css';
 import './index.css';
 
 import logo from './images/bim-logo.png';
