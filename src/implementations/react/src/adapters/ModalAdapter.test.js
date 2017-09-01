@@ -35,7 +35,7 @@ describe('ModalAdapter', () => {
 
   it('renders with initial props', () => {
     const defaults = {
-      headerColor: 'slate',
+      style: 'alternate',
       title: 'Are you sure you want to do that?',
       body: '<h1>Stop</h1><p>Give this some consideration.</p>',
       buttons: [
@@ -60,7 +60,7 @@ describe('ModalAdapter', () => {
   it('renders with updated props', () => {
     const defaults = {};
     const nextProps = {
-      headerColor: 'gray',
+      style: 'alternate',
       title: 'Congratulations',
       body: '<h1>Nice work.</h1><p>You slayed the dragon.</p>',
       open: true,
@@ -73,7 +73,7 @@ describe('ModalAdapter', () => {
     const { orionContainer, orionWrapper } = createOrionComponent(defaults, <h1>Hello, world!</h1>);
 
     orionWrapper.setProps(nextProps);
-    higComponent.setHeaderColor(nextProps.headerColor);
+    higComponent.setStyle(nextProps.style);
     higComponent.setTitle(nextProps.title);
     higComponent.setBody(nextProps.body);
     higComponent.open();

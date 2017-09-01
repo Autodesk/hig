@@ -7,12 +7,15 @@ import Modal from '../elements/components/Modal';
 
 storiesOf('Modal', module)
   .addWithInfo('Basic Modal', ``, () => {
-    const headerColorOptions = {
-      default: 'Default', gray: 'Gray', slate: 'Slate'
+    const styleOptions = {
+      standard: 'Standard',
+      alternate: 'Alternate'
     };
 
     const buttonTypeOptions = {
-      primary: 'Primary', secondary: 'Secondary', flat: 'Flat'
+      primary: 'Primary',
+      secondary: 'Secondary',
+      flat: 'Flat'
     };
 
     const buttonProps = [{
@@ -29,7 +32,7 @@ storiesOf('Modal', module)
       <div>
         <Modal
           title={'Wait a minute...'}
-          headerColor={'Gray'}
+          style={'alternate'}
           isOpen={boolean("isOpen", true)}
           buttons={buttonProps}
           onClose={action('onClose')}
@@ -52,7 +55,7 @@ storiesOf('Modal', module)
         <Modal
           title={'Just one question'}
           body="Can you even?"
-          headerColor="Slate"
+          style="standard"
           isOpen={boolean("isOpen", true)}
           buttons={buttonProps}
           onClose={action('onClose')}
