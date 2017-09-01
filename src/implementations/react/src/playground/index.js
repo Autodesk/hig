@@ -81,12 +81,12 @@ class Playground extends React.Component {
 
     return (
       <GlobalNav
-        accounts={accounts}
         modules={modules}
-        onModuleChange={this.navigate}
+        accounts={accounts}
         projects={projects}
         onProjectClick={this.projectClicked}
         onAccountClick={this.accountClicked}
+        onModuleChange={this.navigate}
         sideNav={sideNavProps}
         submodules={submodules}
         topNav={topNavProps}

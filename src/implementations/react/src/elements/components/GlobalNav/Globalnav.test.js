@@ -34,7 +34,13 @@ describe("<GlobalNav>", () => {
     });
 
     it("passes activeAccountId", () => {
-      const wrapper = mount(<Context activeAccountId="1" />);
+      const accounts = [
+        { id: "1", label: "Foo", image: "https://images/accounts/foo.png" }
+      ];
+
+      const wrapper = mount(
+        <Context accounts={accounts} activeAccountId="1" />
+      );
       expect(wrapper.find(ProjectAccountSwitcher)).toHaveProp(
         "activeAccountId",
         "1"
@@ -42,7 +48,10 @@ describe("<GlobalNav>", () => {
     });
 
     it("passes activeProjectId", () => {
-      const wrapper = mount(<Context activeProjectId="1" />);
+      const projects = [
+        { id: "1", label: "Foo", image: "https://images/projects/foo.png" }
+      ];
+      const wrapper = mount(<Context projects={projects} activeProjectId="1" />);
       expect(wrapper.find(ProjectAccountSwitcher)).toHaveProp(
         "activeProjectId",
         "1"
@@ -185,7 +194,12 @@ describe("<GlobalNav>", () => {
         let wrapper;
         beforeEach(() => {
           wrapper = mount(
-            <Context modules={modules} submodules={[]} activeModuleId="mod-1" showSubNav={true} />
+            <Context
+              modules={modules}
+              submodules={[]}
+              activeModuleId="mod-1"
+              showSubNav={true}
+            />
           );
         });
 
