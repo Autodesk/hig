@@ -1,5 +1,5 @@
 
-import 'hig-vanilla/dist/hig.css';
+import 'hig-vanilla/lib/hig.css';
 import './index.css';
 
 import './Button.story';
