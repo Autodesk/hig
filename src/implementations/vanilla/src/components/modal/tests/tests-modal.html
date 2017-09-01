@@ -6,21 +6,33 @@
 
         <style>
             body{
-                margin: 50px;
-                font-family: 'ArtifaktElement';
+              margin: 50px;
+              font-family: 'ArtifaktElement';
             }
 
             p {
               margin: 0 0 16px 0;
             }
 
+            .test-button {
+              margin: 16px;
+            }
+
         </style>
     </head>
     <body>
-        <div class='test-container'></div>
+        <div class='test-container'>
+            <div class='test-button test-button-minimal'></div>
+            <div class='test-button test-button-buttons'></div>
+            <div class='test-button test-button-defaults'></div>
+            <div class='test-button test-button-alt-defaults'></div>
+            <div class='test-button test-button-setters'></div>
+        </div>
 
         <script>
-          const paragraphs = [
+          const smallText = ['Nisi minim ad enim reprehenderit minim est ut laboris et consectetur anim. Ea consequat sit veniam duis nulla ea sit. Proident ullamco sint Lorem consequat ut in occaecat ad nostrud proident minim. Adipisicing duis ex Lorem quis occaecat veniam culpa Lorem sint incididunt ex quis. Velit ut excepteur commodo aliquip. Aliqua occaecat eu est ullamco adipisicing consequat in culpa qui exercitation esse commodo excepteur.'];
+          const mediumText = [smallText, smallText, smallText];
+          const largeText = [
               'Nisi minim ad enim reprehenderit minim est ut laboris et consectetur anim. Ea consequat sit veniam duis nulla ea sit. Proident ullamco sint Lorem consequat ut in occaecat ad nostrud proident minim. Adipisicing duis ex Lorem quis occaecat veniam culpa Lorem sint incididunt ex quis. Velit ut excepteur commodo aliquip. Aliqua occaecat eu est ullamco adipisicing consequat in culpa qui exercitation esse commodo excepteur.',
               'Ad aliquip magna nulla pariatur nostrud amet consequat. Excepteur nostrud adipisicing sit veniam ullamco eiusmod incididunt amet amet commodo nulla nisi amet consectetur. Sit elit laborum exercitation tempor et proident. Voluptate eiusmod mollit exercitation consequat. Anim ullamco non tempor ut commodo qui ea aute laborum reprehenderit ullamco. Ipsum et pariatur eiusmod cupidatat mollit ea ipsum laborum ea sunt pariatur. Minim fugiat nostrud aliqua sunt veniam id id.',
               'Labore non Lorem ipsum fugiat laboris deserunt ex sint Lorem minim. Officia elit cupidatat adipisicing magna veniam pariatur non proident ullamco quis magna. Aute ex duis adipisicing dolore in anim tempor quis veniam proident do magna et. Non quis cupidatat laboris sunt commodo sit consectetur dolor do sunt occaecat amet dolor nostrud. Id exercitation Lorem ut magna dolor magna esse exercitation ea anim.',
@@ -59,9 +71,9 @@
             });
 
             const openModalButton = new Hig.Button({
-              title: 'Minimal modal'
+              title: 'Minimal'
             });
-            openModalButton.mount('.test-container');
+            openModalButton.mount('.test-button-minimal');
             openModalButton.onClick(function() {
               Modal.open();
             });
@@ -74,8 +86,8 @@
             // ----------------------------
 
             const WithButtons = new Hig.Modal({
-              title: 'With buttons',
-              body: paragraphs
+              title: 'Buttons / S Text',
+              body: smallText
             });
             WithButtons.mount();
             WithButtons.onOverlayClick(function() {
@@ -88,9 +100,9 @@
             WithButtons.addButton(new Hig.Button({ title: 'Make it so' }));
 
             const openWithButtonsButton = new Hig.Button({
-              title: 'Modal with buttons'
+              title: 'Buttons / S Text'
             });
-            openWithButtonsButton.mount('.test-container');
+            openWithButtonsButton.mount('.test-button-buttons');
             openWithButtonsButton.onClick(function() {
               WithButtons.open();
             });
@@ -100,9 +112,8 @@
             // ----------------------------
 
             const DefaultModal = new Hig.Modal({
-              title: 'Alternate Header + Text using defaults',
-              style: 'alternate',
-              body: paragraphs
+              title: 'Buttons / M Text / Defaults',
+              body: mediumText
             });
             DefaultModal.mount();
             DefaultModal.onOverlayClick(function() {
@@ -111,13 +122,40 @@
             DefaultModal.onCloseClick(function() {
               DefaultModal.close();
             });
+            DefaultModal.addButton(new Hig.Button({ title: 'Cancel', type: 'secondary' }));
+            DefaultModal.addButton(new Hig.Button({ title: 'OK' }));
 
             const openDefaultModalButton = new Hig.Button({
-              title: 'Alternate Header + Text using defaults'
+              title: 'Buttons / M Text / Defaults'
             });
-            openDefaultModalButton.mount('.test-container');
+            openDefaultModalButton.mount('.test-button-defaults');
             openDefaultModalButton.onClick(function() {
               DefaultModal.open();
+            });
+
+            // ----------------------------
+            // Modal configured with Alt style and defaults
+            // ----------------------------
+
+            const DefaultAltModal = new Hig.Modal({
+              title: 'Alt Style / M Text / Defaults',
+              style: 'alternate',
+              body: mediumText
+            });
+            DefaultAltModal.mount();
+            DefaultAltModal.onOverlayClick(function() {
+              DefaultAltModal.close();
+            });
+            DefaultAltModal.onCloseClick(function() {
+              DefaultAltModal.close();
+            });
+
+            const openDefaultAltModalButton = new Hig.Button({
+              title: 'Alt Style / M Text / Defaults'
+            });
+            openDefaultAltModalButton.mount('.test-button-alt-defaults');
+            openDefaultAltModalButton.onClick(function() {
+              DefaultAltModal.open();
             });
 
 
@@ -127,7 +165,8 @@
 
             const SetterModal = new Hig.Modal();
             SetterModal.mount();
-            SetterModal.setTitle('Alternate header using setters');
+            SetterModal.setBody(largeText)
+            SetterModal.setTitle('Alt Style / Buttons / L Text / Setters');
             SetterModal.setStyle('alternate');
             SetterModal.addButton(new Hig.Button({ title: 'Cancel', type: 'secondary' }));
             SetterModal.addButton(new Hig.Button({ title: 'Make it so' }));
@@ -140,13 +179,13 @@
 
             const setterModalContent = document.createElement('div');
             setterModalContent.innerHTML =
-              paragraphs.map(function(p) {"<p>" + p + "</p>"}).join('');
+              largeText.map(function(p) {"<p>" + p + "</p>"}).join('');
             SetterModal.addSlot(setterModalContent);
 
             const openSetterModalButton = new Hig.Button({
-              title: 'Alternate Header using setters'
+              title: 'Alt Style / Buttons / L Text / Setters'
             });
-            openSetterModalButton.mount('.test-container');
+            openSetterModalButton.mount('.test-button-setters');
             openSetterModalButton.onClick(function() {
               SetterModal.open();
             });
