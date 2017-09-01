@@ -55,6 +55,14 @@ class Playground extends React.Component {
     this.setState({ activeModuleId: id });
   }
 
+  projectClicked = (id) => {
+    console.log("project clicked", id);
+  }
+
+  accountClicked = (id) => {
+    console.log("account clicked", id);
+  }
+
   render() {
     const topNavProps = {
       logo,
@@ -77,6 +85,8 @@ class Playground extends React.Component {
         modules={modules}
         onModuleChange={this.navigate}
         projects={projects}
+        onProjectClick={this.projectClicked}
+        onAccountClick={this.accountClicked}
         sideNav={sideNavProps}
         submodules={submodules}
         topNav={topNavProps}
