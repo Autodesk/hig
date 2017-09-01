@@ -81,6 +81,7 @@ class Playground extends React.Component {
         submodules={submodules}
         topNav={topNavProps}
         activeModuleId={this.state.activeModuleId}
+        showSubNav={true}
       >
         <section>
           <h3>Tabs</h3>

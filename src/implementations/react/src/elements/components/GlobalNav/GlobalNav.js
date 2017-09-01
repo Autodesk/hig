@@ -39,7 +39,8 @@ class GlobalNav extends Component {
     accounts: PropTypes.any,
     projects: PropTypes.any,
     activeProjectId: PropTypes.any,
-    activeAccountId: PropTypes.any
+    activeAccountId: PropTypes.any,
+    showSubNav: PropTypes.bool
   }
 
   static defaultProps = {
@@ -89,7 +90,7 @@ class GlobalNav extends Component {
     const activeModule = this.renderedActiveModule();
 
     return (
-      <GlobalNavAdapter sideNavOpen={this.renderedSideNavOpen()}>
+      <GlobalNavAdapter sideNavOpen={this.renderedSideNavOpen()} >
         <TopNavAdapter
           onHamburgerClick={this.toggleSideNavOpen}
           {...this.props.topNav}
@@ -110,7 +111,7 @@ class GlobalNav extends Component {
           submodules={this.props.submodules}
           {...this.props.sideNav}
         />
-        {activeModule
+        {activeModule && this.props.showSubNav
           ? <SubNavAdapter
               moduleIndicatorName={activeModule.title}
               moduleIndicatorIcon={activeModule.icon}

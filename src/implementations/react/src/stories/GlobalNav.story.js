@@ -119,7 +119,7 @@ import project4 from '../playground/images/project-4.png';
 storiesOf('GlobalNav', module)
   .addWithInfo('default', <div><p>Global Nav basic usage</p></div>, () => {
     return (
-      <GlobalNav>
+      <GlobalNav showSubNav={true}>
         <SideNav />
         <TopNav logo={logo}>
           <ProjectAccountSwitcher
