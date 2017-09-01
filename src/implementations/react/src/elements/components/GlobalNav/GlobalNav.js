@@ -78,6 +78,10 @@ class GlobalNav extends Component {
     return activeModule;
   }
 
+  showProjectAccountSwitcher(){
+   return ( this.props.accounts && this.props.accounts.length > 0 || this.props.projects && this.props.projects.length > 0)
+  }
+
   renderTab = (submodule) => {
     return (
       <Tabs.Tab
@@ -97,14 +101,14 @@ class GlobalNav extends Component {
           onHamburgerClick={this.toggleSideNavOpen}
           {...this.props.topNav}
         >
-          <ProjectAccountSwitcher
-            accounts={this.props.accounts}
-            projects={this.props.projects}
-            activeProjectId={this.props.activeProjectId}
-            activeAccountId={this.props.activeAccountId}
-            onProjectClick={this.props.onProjectClick}
-            onAccountClick={this.props.onAccountClick}
+        {this.showProjectAccountSwitcher() 
+          ? <ProjectAccountSwitcher
+              accounts={this.props.accounts}
+              projects={this.props.projects}
+              activeProjectId={this.props.activeProjectId}
+              activeAccountId={this.props.activeAccountId}
             />
+          : null}
         </TopNavAdapter>
         <SideNav
           activeModuleId={this.props.activeModuleId}
