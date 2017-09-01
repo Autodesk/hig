@@ -1,7 +1,7 @@
 import React from 'react';
 import PlaygroundSection from '../PlaygroundSection';
 import createSlotComponent from '../../adapters/createSlotComponent';
-import { RichText } from '../../react-hig';
+import { RichText } from '../../hig-react';
 
 const Slot = createSlotComponent();
 
