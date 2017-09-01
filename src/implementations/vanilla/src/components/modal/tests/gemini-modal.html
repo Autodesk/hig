@@ -62,7 +62,7 @@
           function configureShortModal() {
             Modal.setTitle('Non-scrolling modal');
             Modal.setBody('Nisi minim ad enim reprehenderit minim est ut laboris et consectetur anim. Ea consequat sit veniam duis nulla ea sit. Proident ullamco sint Lorem consequat ut in occaecat ad nostrud proident minim. Adipisicing duis ex Lorem quis occaecat veniam culpa Lorem sint incididunt ex quis. Velit ut excepteur commodo aliquip. Aliqua occaecat eu est ullamco adipisicing consequat in culpa qui exercitation esse commodo excepteur.');
-            Modal.setHeaderColor('standard');
+            Modal.setStyle('standard');
 
             if (disposeCloseClick) { disposeCloseClick() };
             disposeCloseClick = Modal.onCloseClick(configureAlternateModal);
@@ -78,7 +78,7 @@
 
           function configureAlternateModal() {
             Modal.setTitle('Alternate modal');
-            Modal.setHeaderColor('alternate');
+            Modal.setStyle('alternate');
 
             disposeCloseClick();
             disposeCloseClick = Modal.onCloseClick(configureLongModal);
@@ -90,7 +90,7 @@
 
           function configureLongModal() {
             Modal.setTitle('Scrolling modal');
-            Modal.setHeaderColor('standard');
+            Modal.setStyle('standard');
             Modal.setBody('');
 
             const longModalContent = document.createElement('div');

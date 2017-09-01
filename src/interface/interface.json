@@ -1707,7 +1707,7 @@
     "Modal": {
       "defaults": {
         "body": "{ string } text or html string content of the modal",
-        "headerColor": "{ string - 'default', 'slate', or 'gray' } color of the modal header",
+        "style": "{ string - 'standard' or 'alternate' } style of the modal shell",
         "title": "{ string } title of the modal"
       },
       "methods": {
@@ -1745,10 +1745,10 @@
             "{ string } text or html string content of the modal"
           ]
         },
-        "setHeaderColor": {
-          "desc": "Sets the color of the modal header",
+        "setStyle": {
+          "desc": "Sets the style of the modal shell",
           "params": [
-            "{ string - 'default', 'slate', or 'gray' } color of the modal header"
+            "{ string - 'standard' or 'alternate' } style of the modal shell"
           ]
         },
         "setTitle": {

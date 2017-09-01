@@ -63,7 +63,7 @@ $shadow-layer: -1;
     outline: none;
   }
 
-  .hig__modal__header--alternate & {
+  .hig__modal__window--alternate & {
     top: 16px;
     right: 16px;
   }
@@ -79,7 +79,7 @@ $shadow-layer: -1;
   border-bottom: 1px solid color(hig-gray-50);
   min-height: 33px;
 
-  &.hig__modal__header--alternate {
+  .hig__modal__window--alternate & {
     background-color: color(hig-blue-70);
     margin: 0;
     padding: 16px 32px;
@@ -124,9 +124,16 @@ $shadow-layer: -1;
 .hig__modal__actions {
   display: flex;
   justify-content: flex-end;
-  padding: 16px 32px;
+  margin: 0 32px;
+  padding: 16px 0;
   z-index: $actions-layer;
   flex: 0 0 auto;
   min-height: 33px;
-  border: none;
+  border-top: 1px solid color(hig-gray-50);
+
+  .hig__modal__window--alternate & {
+    border: none;
+    margin: 0;
+    padding: 16px 32px;
+  }
 }

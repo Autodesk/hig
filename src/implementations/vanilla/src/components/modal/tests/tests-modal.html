@@ -75,7 +75,7 @@
 
             const WithButtons = new Hig.Modal({
               title: 'With buttons',
-              body: 'Nisi minim ad enim reprehenderit minim est ut laboris et consectetur anim. Ea consequat sit veniam duis nulla ea sit. Proident ullamco sint Lorem consequat ut in occaecat ad nostrud proident minim. Adipisicing duis ex Lorem quis occaecat veniam culpa Lorem sint incididunt ex quis. Velit ut excepteur commodo aliquip. Aliqua occaecat eu est ullamco adipisicing consequat in culpa qui exercitation esse commodo excepteur.'
+              body: paragraphs
             });
             WithButtons.mount();
             WithButtons.onOverlayClick(function() {
@@ -101,8 +101,8 @@
 
             const DefaultModal = new Hig.Modal({
               title: 'Alternate Header + Text using defaults',
-              headerColor: 'alternate',
-              body: 'Nisi minim ad enim reprehenderit minim est ut laboris et consectetur anim. Ea consequat sit veniam duis nulla ea sit. Proident ullamco sint Lorem consequat ut in occaecat ad nostrud proident minim. Adipisicing duis ex Lorem quis occaecat veniam culpa Lorem sint incididunt ex quis. Velit ut excepteur commodo aliquip. Aliqua occaecat eu est ullamco adipisicing consequat in culpa qui exercitation esse commodo excepteur.'
+              style: 'alternate',
+              body: paragraphs
             });
             DefaultModal.mount();
             DefaultModal.onOverlayClick(function() {
@@ -128,7 +128,7 @@
             const SetterModal = new Hig.Modal();
             SetterModal.mount();
             SetterModal.setTitle('Alternate header using setters');
-            SetterModal.setHeaderColor('alternate');
+            SetterModal.setStyle('alternate');
             SetterModal.addButton(new Hig.Button({ title: 'Cancel', type: 'secondary' }));
             SetterModal.addButton(new Hig.Button({ title: 'Make it so' }));
             SetterModal.onOverlayClick(function() {

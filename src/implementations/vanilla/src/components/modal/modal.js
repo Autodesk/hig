@@ -5,7 +5,7 @@ const Interface = require('interface.json');
 const Core = require('_core.js');
 const Button = require('../button/button');
 
-const AvailableHeaderColors = ['standard', 'alternate'];
+const AvailableStyles = ['standard', 'alternate'];
 
 /**
  * Creates a Modal
@@ -65,19 +65,19 @@ class Modal extends Core {
     this._findDOMEl('.hig__modal__slot', this.el).textContent = body;
   }
 
-  setHeaderColor(headerColor) {
-    if (!AvailableHeaderColors.includes(headerColor)) {
+  setStyle(style) {
+    if (!AvailableStyles.includes(style)) {
       console.error(
-        `Modal cannot have header color "${headerColor}". Only these colors are allowed: `,
-        AvailableHeaderColors
+        `Modal cannot have style "${style}". Only these styles are allowed: `,
+        AvailableStyles
       );
       return;
     }
-    const headerEl = this._findDOMEl('.hig__modal__header', this.el);
-    headerEl.classList.remove(
-      ...AvailableHeaderColors.map(c => `hig__modal__header--${c}`)
+    const windowEl = this._findDOMEl('.hig__modal__window', this.el);
+    windowEl.classList.remove(
+      ...AvailableStyles.map(s => `hig__modal__window--${s}`)
     );
-    headerEl.classList.add(`hig__modal__header--${headerColor}`);
+    windowEl.classList.add(`hig__modal__window--${style}`);
   }
 
   setTitle(title) {
@@ -94,7 +94,7 @@ class Modal extends Core {
 Modal._interface = Interface.components.Modal;
 Modal._defaults = {
   body: '',
-  headerColor: 'standard',
+  style: 'standard',
   title: ''
 };
 Modal._partials = {};
