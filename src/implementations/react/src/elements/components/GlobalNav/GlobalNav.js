@@ -38,6 +38,8 @@ class GlobalNav extends Component {
     }),
     accounts: PropTypes.any,
     projects: PropTypes.any,
+    onProjectClick: PropTypes.func,
+    onAccountClick: PropTypes.func,
     activeProjectId: PropTypes.any,
     activeAccountId: PropTypes.any,
     showSubNav: PropTypes.bool
@@ -100,7 +102,9 @@ class GlobalNav extends Component {
             projects={this.props.projects}
             activeProjectId={this.props.activeProjectId}
             activeAccountId={this.props.activeAccountId}
-          />
+            onProjectClick={this.props.onProjectClick}
+            onAccountClick={this.props.onAccountClick}
+            />
         </TopNavAdapter>
         <SideNav
           activeModuleId={this.props.activeModuleId}
