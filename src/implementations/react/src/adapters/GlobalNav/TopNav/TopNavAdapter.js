@@ -91,14 +91,6 @@ export class TopNavAdapter extends HIGElement {
           );
           break;
         }
-        case 'sidenavOpen': {
-          this.hig.sidenavOpen();
-          break;
-        }
-        case 'sidenavClosed': {
-          this.hig.sidenavClosed();
-          break;
-        }
         default: {
           console.warn(`${propKey} is unknown`);
         }
