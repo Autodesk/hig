@@ -1183,12 +1183,6 @@
             "setLogoLink": {
               "desc": "sets the link of the logo",
               "params": ["{String} link - new link"]
-            },
-            "sidenavClosed": {
-              "desc": "changes the close icon to a hamburger icon"
-            },
-            "sidenavOpen": {
-              "desc": "changes the hamburger icon to a close icon"
             }
           },
           "partials": {

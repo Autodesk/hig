@@ -12,7 +12,7 @@
   display: block;
   text-decoration: none;
   color: color(hig-gray-30);
-  padding-left: $hig__global-nav__sidenav--l-side-padding;
+  padding-left: spacing(m);
 
   &:hover {
     color: color(hig-blue-30);

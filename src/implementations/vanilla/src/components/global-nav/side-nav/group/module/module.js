@@ -16,6 +16,9 @@ const Collapse = require('./collapse/collapse.js');
 class Module extends Core {
   constructor(options) {
     super(options);
+    if(!options.icon){
+      options['no-icon-class'] = "hig__global-nav__side-nav__section__group__module__submodules--no-icon";
+    }
     this._render(Template, options);
   }
 
