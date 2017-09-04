@@ -15,6 +15,16 @@
   }
 
   &:first-child {
-      padding: 12px 48px 12px 12px; 
+    .hig__table--standard & {
+      padding: 12px 4px 12px 4px; 
+    }
+
+    .hig__table--compressed & {
+      padding: 12px 48px 12px 8px; 
+    }
+
+    .hig__table--large & {
+       padding: 12px 48px 12px 12px; 
+    }
   }
 }
