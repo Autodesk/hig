@@ -2,15 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function RichText(props) {
-  return <div className="hig__rich-text">{props.children}</div>;
+  return <div dangerouslySetInnerHTML={props.dangerouslySetInnerHTML} className="hig__rich-text">{props.children}</div>;
 }
 
 RichText.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
+  dangerouslySetInnerHTML: PropTypes.node
 }
 
 RichText.defaultProps = {
-  children: null
+  children: null,
+  dangerouslySetInnerHTML: null
 }
 
 export default RichText;
