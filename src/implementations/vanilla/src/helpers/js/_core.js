@@ -216,11 +216,14 @@ class Core {
         var q = this._findDOMEl(targetClass, scopeElement);
         var eventTarget, eventFn;
 
-        if(eventType == 'hover' || eventType == 'mouseenter'){
+        if (eventType == 'hover') {
+            eventType = 'mouseenter';
+        }
+
+        if (eventType == 'mouseenter' || eventType == 'scroll') {
             eventFn = executeOnEventFunction;
             eventTarget = q;
-            eventType = 'mouseenter';
-        }else{
+        } else {
             eventFn = (event) => {
                 var element = event.target;
 
