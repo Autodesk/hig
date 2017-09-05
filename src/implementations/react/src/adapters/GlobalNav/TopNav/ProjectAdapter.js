@@ -15,6 +15,10 @@ export class ProjectAdapter extends HIGElement {
     } else {
       this.hig.deactivate();
     }
+
+    if(this.initialProps.projectSectionTitle) {
+      this.hig.setProjectSectionTitle(this.initialProps.projectSectionTitle)
+    }
   }
 
   commitUpdate(updatePayload, oldProps, newProp) {
@@ -37,6 +41,10 @@ export class ProjectAdapter extends HIGElement {
         }
         case 'label': {
           this.hig.setLabel(propValue);
+          break;
+        }
+        case "projectSectionTitle": {
+          this.hig.setProjectSectionTitle(propValue);
           break;
         }
         case 'onClick': {

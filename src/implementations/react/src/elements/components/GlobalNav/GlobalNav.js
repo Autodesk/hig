@@ -105,6 +105,8 @@ class GlobalNav extends Component {
           ? <ProjectAccountSwitcher
               accounts={this.props.accounts}
               projects={this.props.projects}
+              accountSectionTitle={this.props.accountSectionTitle}
+              projectSectionTitle={this.props.projectSectionTitle}
               activeProjectId={this.props.activeProjectId}
               activeAccountId={this.props.activeAccountId}
             />

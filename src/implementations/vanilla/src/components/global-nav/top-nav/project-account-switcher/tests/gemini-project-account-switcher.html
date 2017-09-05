@@ -1,77 +1,90 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="../../../../../../lib/hig.css">
-        <script type="text/javascript" src="../../../../../../lib/hig.js"></script>
-    </head>
-    <body>
-        <style>
-            body, html{
-                margin: 0; padding: 0;
+
+<head>
+    <link rel="stylesheet" href="../../../../../../lib/hig.css">
+    <script type="text/javascript" src="../../../../../../lib/hig.js"></script>
+</head>
+
+<body>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+    <script>
+        // CREATE GLOBALNAV COMPONENT
+        var GlobalNav = new Hig.GlobalNav();
+        GlobalNav.mount("body");
+
+        // ADD TOP GlobalNav
+        var TopNav = new GlobalNav.partials.TopNav({
+            "logo": "https://www.dexigner.com/images/news/xw/22856.jpg",
+            "logo_link": "#"
+        });
+        GlobalNav.addTopNav(TopNav);
+
+        TopNav.setLogo("../../../tests/bim-logo.png"); // Update logo
+        TopNav.setLogoLink("http://autodesk.com"); // update logo link
+
+        // CREATE PROFILE
+        var MyProfile1 = new TopNav.partials.Profile({});
+
+        TopNav.addProfile(MyProfile1);
+
+        // CREATE PROJECT ACCOUNT SWITCHER
+        var ProjectAccountSwitcher = new TopNav.partials.ProjectAccountSwitcher({
+            activeLabel: 'Global Construction / West Oakwood Medical Center',
+            activeType: 'project'
+        });
+
+        TopNav.addProjectAccountSwitcher(ProjectAccountSwitcher);
+
+        // ADD PROJECTS
+        var projectsData = [
+            { label: 'Oakwood Medical Center' },
+            { label: 'Colorado Myrtle Shield Apartments' },
+            { label: 'Grey Pillars' },
+            { label: 'Keystone Apartments' },
+            { label: 'Pleasant Park' }
+        ];
+        var projectComponents = projectsData.map((project) => {
+            return new ProjectAccountSwitcher.partials.Project(project);
+        });
+        projectComponents.forEach((projectComponent, i) => {
+            ProjectAccountSwitcher.addProject(projectComponent);
+            if (i === 0) {
+                projectComponent.activate();
+                projectComponent.setProjectSectionTitle("Projects")
             }
-        </style>
+        });
 
-        <script>
+        // ADD ACCOUNT
+        var accountsData = [
+            { label: 'Oakwood Medical Center' },
+            { label: 'Colorado Myrtle Shield Apartments' },
+            { label: 'Grey Pillars' },
+            { label: 'Keystone Apartments' },
+            { label: 'Pleasant Park' }
+        ];
+        var accountComponents = accountsData.map((account, i) => {
+            const newAccount = new ProjectAccountSwitcher.partials.Account(account);
+            return newAccount
+        });
 
-            // CREATE GLOBALNAV COMPONENT
-            var GlobalNav = new Hig.GlobalNav();
-            GlobalNav.mount("body");
+        accountComponents.forEach((accountComponent, i) => {
+            ProjectAccountSwitcher.addAccount(accountComponent);
+            if (i === 0) {
+                accountComponent.activate();
+                accountComponent.setAccountSectionTitle("Accounts")
+            }
+        });
 
-            // ADD TOP GlobalNav
-            var TopNav = new GlobalNav.partials.TopNav({
-                "logo": "https://www.dexigner.com/images/news/xw/22856.jpg",
-                "logo_link": "#"
-            });
-            GlobalNav.addTopNav(TopNav);
+        ProjectAccountSwitcher.open();
+    </script>
 
-            TopNav.setLogo("../../../tests/bim-logo.png"); // Update logo
-            TopNav.setLogoLink("http://autodesk.com"); // update logo link
+</body>
 
-            // CREATE PROFILE
-            var MyProfile1 = new TopNav.partials.Profile({});
-
-            TopNav.addProfile(MyProfile1);
-
-            // CREATE PROJECT ACCOUNT SWITCHER
-            var ProjectAccountSwitcher = new TopNav.partials.ProjectAccountSwitcher({
-                activeLabel: 'Global Construction / West Oakwood Medical Center',
-                activeType: 'project'
-            });
-
-            TopNav.addProjectAccountSwitcher(ProjectAccountSwitcher);
-
-            // ADD PROJECTS
-            var projectsData = [
-                { label: 'Oakwood Medical Center' },
-                { label: 'Colorado Myrtle Shield Apartments' },
-                { label: 'Grey Pillars' },
-                { label: 'Keystone Apartments' },
-                { label: 'Pleasant Park' }
-            ];
-            var projectComponents = projectsData.map((project) => {
-                return new ProjectAccountSwitcher.partials.Project(project);
-            });
-            projectComponents.forEach((projectComponent) => {
-                ProjectAccountSwitcher.addProject(projectComponent);
-            });
-
-            // ADD ACCOUNT
-            var accountsData = [
-                { label: 'Oakwood Medical Center' },
-                { label: 'Colorado Myrtle Shield Apartments' },
-                { label: 'Grey Pillars' },
-                { label: 'Keystone Apartments' },
-                { label: 'Pleasant Park' }
-            ];
-            var accountComponents = accountsData.map((account) => {
-                return new ProjectAccountSwitcher.partials.Account(account);
-            });
-
-            accountComponents.forEach((accountComponent) => {
-                ProjectAccountSwitcher.addAccount(accountComponent);
-            });
-
-            ProjectAccountSwitcher.open();
-        </script>
-
-    </body>
 </html>

@@ -5,8 +5,8 @@ import HIGChildValidator from "../../../elements/HIGChildValidator";
 import createComponent from "../../createComponent";
 import AccountComponent, { AccountAdapter } from "./AccountAdapter";
 import ProjectComponent, { ProjectAdapter } from "./ProjectAdapter";
-import Project from '../../../elements/components/GlobalNav/TopNav/Project';
-import Account from '../../../elements/components/GlobalNav/TopNav/Account';
+import Project from "../../../elements/components/GlobalNav/TopNav/Project";
+import Account from "../../../elements/components/GlobalNav/TopNav/Account";
 
 export class ProjectAccountSwitcherAdapter extends HIGElement {
   constructor(HIGConstructor, initialProps) {
@@ -135,8 +135,7 @@ export class ProjectAccountSwitcherAdapter extends HIGElement {
       this.projects.insertBefore(instance);
     } else {
       throw new Error(
-        `${this.constructor.name} cannot have a child of type ${instance
-          .constructor.name}`
+        `${this.constructor.name} cannot have a child of type ${instance.constructor.name}`
       );
     }
   }
@@ -151,10 +150,17 @@ ProjectAccountSwitcherComponent.propTypes = {
   showCaret: PropTypes.bool,
   onAccountChange: PropTypes.func,
   onProjectChange: PropTypes.func,
+  setProjectSectionTitle: PropTypes.func,
+  setAccountSectionTitle: PropTypes.func,
   activeLabel: PropTypes.string,
   activeImage: PropTypes.string,
   activeType: PropTypes.string,
-  children: HIGChildValidator([Account, Project, AccountComponent, ProjectComponent])
+  children: HIGChildValidator([
+    Account,
+    Project,
+    AccountComponent,
+    ProjectComponent
+  ])
 };
 
 ProjectAccountSwitcherComponent.__docgenInfo = {
@@ -163,8 +169,7 @@ ProjectAccountSwitcherComponent.__docgenInfo = {
       description: "{bool} opens the project/account switcher"
     },
     showCaret: {
-      description:
-        "shows a caret indicating a flyout in Project Account Switcher"
+      description: "shows a caret indicating a flyout in Project Account Switcher"
     },
     activeLabel: {
       description: "Sets the label displayed in the top nav"
@@ -176,12 +181,10 @@ ProjectAccountSwitcherComponent.__docgenInfo = {
       description: "Sets the type of the item displayed in the top nav"
     },
     onClickOutside: {
-      description:
-        "Calls the provided callback when the switcher is open and the user clicks outside the switcher"
+      description: "Calls the provided callback when the switcher is open and the user clicks outside the switcher"
     },
     onClick: {
-      description:
-        "Calls the provided callback when user clicks on the switcher in the top nav"
+      description: "Calls the provided callback when user clicks on the switcher in the top nav"
     },
     children: {
       description: "support adding Project and Account"

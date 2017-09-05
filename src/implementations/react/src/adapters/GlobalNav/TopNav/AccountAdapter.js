@@ -1,6 +1,6 @@
-import * as PropTypes from 'prop-types';
-import createComponent from '../../createComponent';
-import HIGElement from '../../../elements/HIGElement';
+import * as PropTypes from "prop-types";
+import createComponent from "../../createComponent";
+import HIGElement from "../../../elements/HIGElement";
 
 export class AccountAdapter extends HIGElement {
   constructor(HIGConstructor, initialProps) {
@@ -15,6 +15,10 @@ export class AccountAdapter extends HIGElement {
     } else {
       this.hig.deactivate();
     }
+
+    if (this.initialProps.accountSectionTitle) {
+      this.hig.setAccountSectionTitle(this.initialProps.accountSectionTitle);
+    }
   }
 
   commitUpdate(updatePayload, oldProps, newProp) {
@@ -23,7 +27,7 @@ export class AccountAdapter extends HIGElement {
       const propValue = updatePayload[i + 1];
 
       switch (propKey) {
-        case 'active': {
+        case "active": {
           if (propValue) {
             this.hig.activate();
           } else {
@@ -31,23 +35,27 @@ export class AccountAdapter extends HIGElement {
           }
           break;
         }
-        case 'image': {
+        case "image": {
           this.hig.setImage(propValue);
           break;
         }
-        case 'label': {
+        case "label": {
           this.hig.setLabel(propValue);
           break;
         }
-        case 'onClick': {
-          const dispose = this._disposeFunctions.get('onClickDispose');
+        case "accountSectionTitle": {
+          this.hig.setAccountSectionTitle(propValue);
+          break;
+        }
+        case "onClick": {
+          const dispose = this._disposeFunctions.get("onClickDispose");
 
           if (dispose) {
             dispose();
           }
 
           this._disposeFunctions.set(
-            'onClickDispose',
+            "onClickDispose",
             this.hig.onClick(propValue)
           );
           break;
@@ -72,16 +80,16 @@ AccountComponent.propTypes = {
 AccountComponent.__docgenInfo = {
   props: {
     label: {
-      description: 'sets {String} the label displayed for an account in Account/account switcher'
+      description: "sets {String} the label displayed for an account in Account/account switcher"
     },
     image: {
-      description: 'sets {String} the image displayed for an account in Account/account switcher'
+      description: "sets {String} the image displayed for an account in Account/account switcher"
     },
     active: {
-      description: '{func} activates the Account'
+      description: "{func} activates the Account"
     },
     onClick: {
-      description: '{func} calls the provided callback when user clicks on the Account'
+      description: "{func} calls the provided callback when user clicks on the Account"
     }
   }
 };
