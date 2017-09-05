@@ -166,7 +166,7 @@
             const SetterModal = new Hig.Modal();
             SetterModal.mount();
             SetterModal.setBody(largeText)
-            SetterModal.setTitle('Alt Style / Buttons / L Text / Setters');
+            SetterModal.setTitle('Alt Style / Buttons / L Text / Setters / Scrolled');
             SetterModal.setStyle('alternate');
             SetterModal.addButton(new Hig.Button({ title: 'Cancel', type: 'secondary' }));
             SetterModal.addButton(new Hig.Button({ title: 'Make it so' }));
@@ -183,11 +183,12 @@
             SetterModal.addSlot(setterModalContent);
 
             const openSetterModalButton = new Hig.Button({
-              title: 'Alt Style / Buttons / L Text / Setters'
+              title: 'Alt Style / Buttons / L Text / Setters / Scrolled'
             });
             openSetterModalButton.mount('.test-button-setters');
             openSetterModalButton.onClick(function() {
               SetterModal.open();
+              SetterModal.setScrollTop(500);
             });
 
         </script>

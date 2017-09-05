@@ -33,6 +33,11 @@ class Modal extends Core {
     }
   }
 
+  setScrollTop(scrollTop) {
+     const scrollingElement = this._findDOMEl('.hig__modal__slot', this.el);
+     scrollingElement.scrollTop = scrollTop; 
+  }
+
   addButton(instance) {
     if (instance instanceof Button) {
       this.mountPartialToComment('ACTIONS', instance);
