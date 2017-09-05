@@ -84,6 +84,8 @@ class Playground extends React.Component {
         modules={modules}
         accounts={accounts}
         projects={projects}
+        accountSectionTitle="New Accounts"
+        projectSectionTitle="New Projects"
         onProjectClick={this.projectClicked}
         onAccountClick={this.accountClicked}
         onModuleChange={this.navigate}

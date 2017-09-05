@@ -14,11 +14,15 @@
       "methods": {
         "addSlot": {
           "desc": "Content for the flyout",
-          "params": ["{HTMLElement} HTMLElement"]
+          "params": [
+            "{HTMLElement} HTMLElement"
+          ]
         },
         "addTarget": {
           "desc": "Flyout will be positioned relative to this element",
-          "params": ["{HTMLElement} HTMLElement"]
+          "params": [
+            "{HTMLElement} HTMLElement"
+          ]
         },
         "close": {
           "desc": "closes the flyout"
@@ -48,7 +52,9 @@
           "methods": {
             "setLabel": {
               "desc": "sets the label",
-              "params": ["{String} label for our checkbox"]
+              "params": [
+                "{String} label for our checkbox"
+              ]
             },
             "setName": {
               "desc": "sets the name of the checkbox as submitted with a form",
@@ -58,7 +64,9 @@
             },
             "setValue": {
               "desc": "sets the value",
-              "params": ["{String} value for our checkbox"]
+              "params": [
+                "{String} value for our checkbox"
+              ]
             },
             "check": {
               "desc": "checks the checkbox"
@@ -68,7 +76,9 @@
             },
             "required": {
               "desc": "makes checkbox required",
-              "params": ["{String} required label text"]
+              "params": [
+                "{String} required label text"
+              ]
             },
             "noLongerRequired": {
               "desc": "makes checkbox not required"
@@ -105,7 +115,9 @@
           "methods": {
             "setLabel": {
               "desc": "sets the label",
-              "params": ["{String} label for our radio button"]
+              "params": [
+                "{String} label for our radio button"
+              ]
             },
             "setName": {
               "desc": "sets the name of the radio button as submitted with a form",
@@ -115,7 +127,9 @@
             },
             "setValue": {
               "desc": "sets the value",
-              "params": ["{String} value for our radio button"]
+              "params": [
+                "{String} value for our radio button"
+              ]
             },
             "check": {
               "desc": "checks the radio button"
@@ -125,7 +139,9 @@
             },
             "required": {
               "desc": "makes radio button required",
-              "params": ["{String} required label text"]
+              "params": [
+                "{String} required label text"
+              ]
             },
             "noLongerRequired": {
               "desc": "makes radio button not required"
@@ -206,7 +222,9 @@
             },
             "required": {
               "desc": "makes field required",
-              "params": ["{String} required label text"]
+              "params": [
+                "{String} required label text"
+              ]
             },
             "noLongerRequired": {
               "desc": "makes field not required"
@@ -254,11 +272,15 @@
                 },
                 "setLabel": {
                   "desc": "Sets the label for the option",
-                  "params": ["{String} label - label identifying the option"]
+                  "params": [
+                    "{String} label - label identifying the option"
+                  ]
                 },
                 "setValue": {
                   "desc": "Sets the value for the option",
-                  "params": ["{String} label - label identifying the option"]
+                  "params": [
+                    "{String} label - label identifying the option"
+                  ]
                 }
               },
               "defaults": {
@@ -325,18 +347,24 @@
             },
             "required": {
               "desc": "makes field required",
-              "params": ["{String} required label text"]
+              "params": [
+                "{String} required label text"
+              ]
             },
             "revealPassword": {
               "desc": "Reveals the characters entered into the password field"
             },
             "setInstructions": {
               "desc": "sets the instructions",
-              "params": ["{String} instructions for our password field"]
+              "params": [
+                "{String} instructions for our password field"
+              ]
             },
             "setLabel": {
               "desc": "sets the label",
-              "params": ["{String} label for our password field"]
+              "params": [
+                "{String} label for our password field"
+              ]
             },
             "setName": {
               "desc": "sets the name of the field as submitted with a form",
@@ -346,11 +374,15 @@
             },
             "setPlaceholder": {
               "desc": "sets the placeholder",
-              "params": ["{String} placeholder for our password field"]
+              "params": [
+                "{String} placeholder for our password field"
+              ]
             },
             "setValue": {
               "desc": "sets the value",
-              "params": ["{String} value for our password field"]
+              "params": [
+                "{String} value for our password field"
+              ]
             },
             "showPasswordHideButton": {
               "desc": "Shows a button used to hide the password"
@@ -371,7 +403,9 @@
           "methods": {
             "setLabel": {
               "desc": "sets the label",
-              "params": ["{String} label - label for the text area"]
+              "params": [
+                "{String} label - label for the text area"
+              ]
             },
             "setInstructions": {
               "desc": "sets the instruction text",
@@ -387,7 +421,9 @@
             },
             "setValue": {
               "desc": "sets the value",
-              "params": ["{String} value - the text inside of the text area"]
+              "params": [
+                "{String} value - the text inside of the text area"
+              ]
             },
             "setName": {
               "desc": "sets the textarea name attribute",
@@ -397,7 +433,9 @@
             },
             "required": {
               "desc": "makes field required",
-              "params": ["{String} required label text"]
+              "params": [
+                "{String} required label text"
+              ]
             },
             "noLongerRequired": {
               "desc": "makes field not required"
@@ -441,11 +479,15 @@
           "methods": {
             "setInstructions": {
               "desc": "sets the instructions",
-              "params": ["{String} instructions for our text field"]
+              "params": [
+                "{String} instructions for our text field"
+              ]
             },
             "setLabel": {
               "desc": "sets the label",
-              "params": ["{String} label for our text field"]
+              "params": [
+                "{String} label for our text field"
+              ]
             },
             "setName": {
               "desc": "sets the name of the field as submitted with a form",
@@ -455,15 +497,21 @@
             },
             "setIcon": {
               "desc": "sets the icon of the text field",
-              "params": ["{String} icon ID"]
+              "params": [
+                "{String} icon ID"
+              ]
             },
             "setPlaceholder": {
               "desc": "sets the placeholder",
-              "params": ["{String} placeholder for our text field"]
+              "params": [
+                "{String} placeholder for our text field"
+              ]
             },
             "setValue": {
               "desc": "sets the value",
-              "params": ["{String} value for our text field"]
+              "params": [
+                "{String} value for our text field"
+              ]
             },
             "showClearButton": {
               "desc": "Makes the clear button visible"
@@ -478,7 +526,9 @@
             },
             "required": {
               "desc": "makes field required",
-              "params": ["{String} required label text"]
+              "params": [
+                "{String} required label text"
+              ]
             },
             "noLongerRequired": {
               "desc": "makes field not required"
@@ -523,19 +573,27 @@
           "methods": {
             "setMax": {
               "desc": "sets maximum value for range",
-              "params": ["{Integer} max value for the range"]
+              "params": [
+                "{Integer} max value for the range"
+              ]
             },
             "setMin": {
               "desc": "sets minimum value for range",
-              "params": ["{Integer} minimum value for the range"]
+              "params": [
+                "{Integer} minimum value for the range"
+              ]
             },
             "setValue": {
               "desc": "sets specific value for range",
-              "params": ["{Integer} sets specific value for the range"]
+              "params": [
+                "{Integer} sets specific value for the range"
+              ]
             },
             "setLabel": {
               "desc": "sets the label",
-              "params": ["{String} label - label for the text area"]
+              "params": [
+                "{String} label - label for the text area"
+              ]
             },
             "setInstructions": {
               "desc": "sets the instruction text",
@@ -545,11 +603,15 @@
             },
             "setStep": {
               "desc": "sets the step granulity for range",
-              "params": ["{Integer} value for step attribute"]
+              "params": [
+                "{Integer} value for step attribute"
+              ]
             },
             "required": {
               "desc": "makes field required",
-              "params": ["{String} required label text"]
+              "params": [
+                "{String} required label text"
+              ]
             },
             "noLongerRequired": {
               "desc": "makes field not required"
@@ -591,7 +653,9 @@
       "methods": {
         "addGridItem": {
           "desc": "Add a GridItem to your grid",
-          "params": ["{GridItem} GridItem"]
+          "params": [
+            "{GridItem} GridItem"
+          ]
         }
       },
       "partials": {
@@ -599,7 +663,9 @@
           "methods": {
             "addSlot": {
               "desc": "Content for the grid item",
-              "params": ["{HTMLElement} HTMLElement"]
+              "params": [
+                "{HTMLElement} HTMLElement"
+              ]
             },
             "setFraction": {
               "fraction": "see defaults"
@@ -651,7 +717,9 @@
         },
         "addSlot": {
           "desc": "Content for the spacer",
-          "params": ["{HTMLElement} HTMLElement"]
+          "params": [
+            "{HTMLElement} HTMLElement"
+          ]
         }
       }
     },
@@ -663,27 +731,27 @@
       },
       "methods": {
         "onClick": {
-            "desc": "Calls the provided callback when the text is clicked",
-            "params": "HIG.abstract.EventObject.params",
-            "returns": "HIG.abstract.EventObject.returns"
+          "desc": "Calls the provided callback when the text is clicked",
+          "params": "HIG.abstract.EventObject.params",
+          "returns": "HIG.abstract.EventObject.returns"
         },
         "setHref": {
-            "desc": "Sets the path or url destination of the link",
-            "params": [
-              "{String} Path or url to link to"
-            ]
+          "desc": "Sets the path or url destination of the link",
+          "params": [
+            "{String} Path or url to link to"
+          ]
         },
         "setText": {
-            "desc": "sets the text and alt-text of the link",
-            "params": [
-              "{String} Text and alt-text of the link"
-            ]
+          "desc": "sets the text and alt-text of the link",
+          "params": [
+            "{String} Text and alt-text of the link"
+          ]
         },
         "setType": {
-            "desc": "Sets the type of the text link",
-            "params": [
-              "{String - 'primary', 'secondary'} The type of text link"
-            ]
+          "desc": "Sets the type of the text link",
+          "params": [
+            "{String - 'primary', 'secondary'} The type of text link"
+          ]
         }
       }
     },
@@ -691,7 +759,9 @@
       "methods": {
         "setText": {
           "desc": "sets the text",
-          "params": ["{String} text - text you want to display"]
+          "params": [
+            "{String} text - text you want to display"
+          ]
         },
         "setType": {
           "desc": "sets the type of typography",
@@ -701,7 +771,9 @@
         },
         "applyTypographyToElement": {
           "desc": "Apply HIG typography to input html element",
-          "params": ["{HTMLElement} HTMLElement"]
+          "params": [
+            "{HTMLElement} HTMLElement"
+          ]
         }
       },
       "defaults": {
@@ -748,11 +820,15 @@
         },
         "setIcon": {
           "desc": "sets the icon of a button",
-          "params": ["{String} icon ID"]
+          "params": [
+            "{String} icon ID"
+          ]
         },
         "setLink": {
           "desc": "sets the link of a button",
-          "params": ["{String} link - new link for the button"]
+          "params": [
+            "{String} link - new link for the button"
+          ]
         },
         "setSize": {
           "desc": "sets the size of a button",
@@ -762,7 +838,9 @@
         },
         "setTitle": {
           "desc": "sets the title of a button",
-          "params": ["{String} title - new title for the button"]
+          "params": [
+            "{String} title - new title for the button"
+          ]
         },
         "setType": {
           "desc": "sets the type of a button",
@@ -776,20 +854,28 @@
       "methods": {
         "addSideNav": {
           "desc": "Pass in an instance of a SideNav partial to mount it to the GlobalNav",
-          "params": ["{SideNav} SideNav - instance of a SideNav partial"],
+          "params": [
+            "{SideNav} SideNav - instance of a SideNav partial"
+          ],
           "returns": "{SideNav}"
         },
         "addTopNav": {
           "desc": "Pass in an instance of a TopNav",
-          "params": ["{TopNav} TopNav - instance of a TopNav partial"]
+          "params": [
+            "{TopNav} TopNav - instance of a TopNav partial"
+          ]
         },
         "addSubNav": {
           "desc": "Pass in an instance of a SubNav",
-          "params": ["{SubNav} SubNav - instance of a SubNav partial"]
+          "params": [
+            "{SubNav} SubNav - instance of a SubNav partial"
+          ]
         },
         "addSlot": {
           "desc": "Pass in any HTMLElement you want",
-          "params": ["{HTMLElement} HTMLElement"]
+          "params": [
+            "{HTMLElement} HTMLElement"
+          ]
         },
         "hideSideNav": {
           "desc": "hide the SideNav"
@@ -842,23 +928,33 @@
             },
             "setCopyright": {
               "desc": "Change the copyright notice at bottom of side nav",
-              "params": ["{String} Copyright notice"]
+              "params": [
+                "{String} Copyright notice"
+              ]
             },
             "setHeaderLabel": {
               "desc": "sets the header label",
-              "params": ["{String} label - header label"]
+              "params": [
+                "{String} label - header label"
+              ]
             },
             "setHeaderLink": {
               "desc": "sets the href of the header",
-              "params": ["{String} link - href for the header"]
+              "params": [
+                "{String} link - href for the header"
+              ]
             },
             "setSuperHeaderLabel": {
               "desc": "sets the super header label",
-              "params": ["{String} name - new super header label"]
+              "params": [
+                "{String} name - new super header label"
+              ]
             },
             "setSuperHeaderLink": {
               "desc": "sets the href of the super header",
-              "params": ["{String} link - href for the super header"]
+              "params": [
+                "{String} link - href for the super header"
+              ]
             }
           },
           "partials": {
@@ -921,15 +1017,21 @@
                     },
                     "setIcon": {
                       "desc": "sets the icon of an module",
-                      "params": ["{String} title - new icon ID"]
+                      "params": [
+                        "{String} title - new icon ID"
+                      ]
                     },
                     "setLink": {
                       "desc": "sets the link of an module",
-                      "params": ["{String} link - new link"]
+                      "params": [
+                        "{String} link - new link"
+                      ]
                     },
                     "setTitle": {
                       "desc": "sets the title of an module",
-                      "params": ["{String} title - new title"]
+                      "params": [
+                        "{String} title - new title"
+                      ]
                     },
                     "show": {
                       "desc": "show (used for filtering)"
@@ -984,11 +1086,15 @@
                         },
                         "setTitle": {
                           "desc": "sets the title of an module",
-                          "params": ["{String} title - new title"]
+                          "params": [
+                            "{String} title - new title"
+                          ]
                         },
                         "setLink": {
                           "desc": "sets the link of an module",
-                          "params": ["{String} link - new link"]
+                          "params": [
+                            "{String} link - new link"
+                          ]
                         },
                         "show": {
                           "desc": "show (used for filtering)"
@@ -1017,11 +1123,15 @@
                 },
                 "setLink": {
                   "desc": "sets the link",
-                  "params": ["{String} link - new link"]
+                  "params": [
+                    "{String} link - new link"
+                  ]
                 },
                 "setTitle": {
                   "desc": "sets the title",
-                  "params": ["{String} title - new title"]
+                  "params": [
+                    "{String} title - new title"
+                  ]
                 }
               }
             },
@@ -1052,11 +1162,15 @@
                 },
                 "setPlaceholder": {
                   "desc": "sets the placeholder",
-                  "params": ["{String} placeholder - new placeholder"]
+                  "params": [
+                    "{String} placeholder - new placeholder"
+                  ]
                 },
                 "setValue": {
                   "desc": "sets the search value",
-                  "params": ["{String} value - new value"]
+                  "params": [
+                    "{String} value - new value"
+                  ]
                 },
                 "showClearIcon": {
                   "desc": "show the clear input icon"
@@ -1077,7 +1191,9 @@
           "methods": {
             "addTabs": {
               "desc": "Pass in an instance of Tabs",
-              "params": ["{Tabs} Tabs - instance of a Tabs partial"]
+              "params": [
+                "{Tabs} Tabs - instance of a Tabs partial"
+              ]
             },
             "onModuleIndicatorClick": {
               "desc": "Calls the provided callback when the module indicator (name or icon) is clicked",
@@ -1127,7 +1243,9 @@
                     },
                     "setLabel": {
                       "desc": "sets the label",
-                      "params": ["{String} label - new label"]
+                      "params": [
+                        "{String} label - new label"
+                      ]
                     }
                   }
                 }
@@ -1143,11 +1261,15 @@
           "methods": {
             "addHelp": {
               "desc": "Pass in an instance of a Help partial to mount it to the TopNav",
-              "params": ["{Help} Help - instance of a Help partial"]
+              "params": [
+                "{Help} Help - instance of a Help partial"
+              ]
             },
             "addProfile": {
               "desc": "Pass in an instance of an Profile partial to mount it to the GlobalNav",
-              "params": ["{Profile} Profile - instance of a Profile partial"]
+              "params": [
+                "{Profile} Profile - instance of a Profile partial"
+              ]
             },
             "addProjectAccountSwitcher": {
               "desc": "Pass in an instance of a ProjectAccountSwitcher partial to mount it to the TopNav",
@@ -1164,7 +1286,9 @@
             },
             "addShortcut": {
               "desc": "Pass in an instance of a Shortcut partial to mount it to the TopNav",
-              "params": ["{Shortcut} Shortcut - instance of a Shortcut partial"]
+              "params": [
+                "{Shortcut} Shortcut - instance of a Shortcut partial"
+              ]
             },
             "onHamburgerClick": {
               "desc": "Calls the provided callback when user clicks on the hamburger icon",
@@ -1178,7 +1302,9 @@
             },
             "setLogo": {
               "desc": "sets the logo",
-              "params": ["{String} logo - url to svg or other image object"]
+              "params": [
+                "{String} logo - url to svg or other image object"
+              ]
             },
             "setLogoLink": {
               "desc": "sets the link of the logo",
@@ -1199,11 +1325,15 @@
                 },
                 "setLink": {
                   "desc": "sets the link of the Help",
-                  "params": ["{String} link - new link"]
+                  "params": [
+                    "{String} link - new link"
+                  ]
                 },
                 "setTitle": {
                   "desc": "sets the hover title of the Help",
-                  "params": ["{String} title - new hover title"]
+                  "params": [
+                    "{String} title - new hover title"
+                  ]
                 }
               }
             },
@@ -1246,7 +1376,9 @@
                 },
                 "setEmail": {
                   "desc": "sets the email",
-                  "params": ["{String} email - email of the signed in user"]
+                  "params": [
+                    "{String} email - email of the signed in user"
+                  ]
                 },
                 "setImage": {
                   "desc": "sets the image",
@@ -1256,7 +1388,9 @@
                 },
                 "setName": {
                   "desc": "sets the name",
-                  "params": ["{String} name - name of the signed in user"]
+                  "params": [
+                    "{String} name - name of the signed in user"
+                  ]
                 },
                 "setProfileSettingsLabel": {
                   "desc": "sets the settings label",
@@ -1338,7 +1472,9 @@
                 },
                 "setActiveType": {
                   "desc": "Sets the type of the item displayed in the top nav",
-                  "params": ["{String} - ['account' or 'project']"]
+                  "params": [
+                    "{String} - ['account' or 'project']"
+                  ]
                 },
                 "showCaret": {
                   "desc": "shows a caret indicating a flyout in Project Account Switcher"
@@ -1365,7 +1501,9 @@
                     "setImage": {},
                     "setLabel": {
                       "desc": "sets the label",
-                      "params": ["{String} label - new label"]
+                      "params": [
+                        "{String} label - new label"
+                      ]
                     }
                   }
                 },
@@ -1389,7 +1527,21 @@
                     "setImage": {},
                     "setLabel": {
                       "desc": "sets the label",
-                      "params": ["{String} label - new label"]
+                      "params": [
+                        "{String} label - new label"
+                      ]
+                    },
+                    "setProjectSectionTitle": {
+                      "desc": "sets section title for Projects section",
+                      "params": [
+                        "{String} title for projects section"
+                      ]
+                    },
+                    "setAccountSectionTitle": {
+                      "desc": "sets section title for Accounts section",
+                      "params": [
+                        "{String} title for accounts section"
+                      ]
                     }
                   }
                 }
@@ -1426,11 +1578,15 @@
                 },
                 "setPlaceholder": {
                   "desc": "sets the placeholder",
-                  "params": ["{String} placeholder - new placeholder"]
+                  "params": [
+                    "{String} placeholder - new placeholder"
+                  ]
                 },
                 "setQuery": {
                   "desc": "sets the search query",
-                  "params": ["{String} query - new query"]
+                  "params": [
+                    "{String} query - new query"
+                  ]
                 },
                 "showClearIcon": {
                   "desc": "show the clear input icon"
@@ -1451,15 +1607,21 @@
                 },
                 "setIcon": {
                   "desc": "sets the icon of the Shortcut",
-                  "params": ["{String} title - new icon ID"]
+                  "params": [
+                    "{String} title - new icon ID"
+                  ]
                 },
                 "setLink": {
                   "desc": "sets the link of the Shortcut",
-                  "params": ["{String} link - new link"]
+                  "params": [
+                    "{String} link - new link"
+                  ]
                 },
                 "setTitle": {
                   "desc": "sets the hover title of the Shortcut",
-                  "params": ["{String} title - new hover title"]
+                  "params": [
+                    "{String} title - new hover title"
+                  ]
                 }
               }
             }
@@ -1502,15 +1664,21 @@
         },
         "setIcon": {
           "desc": "sets the icon of a button",
-          "params": ["{String} icon - icon ID"]
+          "params": [
+            "{String} icon - icon ID"
+          ]
         },
         "setLink": {
           "desc": "sets the link of a button",
-          "params": ["{String} link - new link for the button"]
+          "params": [
+            "{String} link - new link for the button"
+          ]
         },
         "setTitle": {
           "desc": "sets the title of a button",
-          "params": ["{String} title - new title for the button"]
+          "params": [
+            "{String} title - new title for the button"
+          ]
         }
       }
     },
@@ -1523,11 +1691,15 @@
       "methods": {
         "addButton": {
           "desc": "Add a button to the footer of the modal",
-          "params": ["{Button} Button - instance of a Button partial"]
+          "params": [
+            "{Button} Button - instance of a Button partial"
+          ]
         },
         "addSlot": {
           "desc": "Insert dom elements into the modal",
-          "params": ["{HTMLElement} HTMLElement"]
+          "params": [
+            "{HTMLElement} HTMLElement"
+          ]
         },
         "close": {
           "desc": "Removes the modal from the display"
@@ -1547,7 +1719,9 @@
         },
         "setBody": {
           "desc": "Sets the body content of the modal",
-          "params": ["{ string } text or html string content of the modal"]
+          "params": [
+            "{ string } text or html string content of the modal"
+          ]
         },
         "setHeaderColor": {
           "desc": "Sets the color of the modal header",
@@ -1557,7 +1731,9 @@
         },
         "setTitle": {
           "desc": "Sets the title of the modal",
-          "params": ["{ string } title - title of the modal"]
+          "params": [
+            "{ string } title - title of the modal"
+          ]
         }
       }
     },

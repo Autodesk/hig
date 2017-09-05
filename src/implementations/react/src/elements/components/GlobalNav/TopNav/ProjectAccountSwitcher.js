@@ -111,8 +111,21 @@ class ProjectAccountSwitcher extends Component {
         {...this.flyoutProps()}
         {...this.activeProps()}
       >
-        {accounts.map(a => <Account onClick={this.handleAccountClick} key={a.id} {...a}/>)}
-        {projects.map(p => <Project onClick={this.handleProjectClick} key={p.id} {...p}/>)}
+        {accounts.map((a, i) => {
+          if( i === 0) {
+            return <Account accountSectionTitle={this.props.accountSectionTitle} onClick={this.handleAccountClick} key={a.id} {...a}/>
+          } else {
+            return <Account onClick={this.handleAccountClick} key={a.id} {...a}/>
+          }
+        })}
+          
+        {projects.map((p, i) => {
+          if(i === 0) {
+            return <Project projectSectionTitle={this.props.projectSectionTitle} onClick={this.handleProjectClick} key={p.id} {...p}/>
+          } else {
+            return <Project onClick={this.handleProjectClick} key={p.id} {...p} />
+          }
+        })}  
       </ProjectAccountSwitcherAdapter>
     );
   }

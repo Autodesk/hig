@@ -33,11 +33,12 @@
         }
     }
 
-    .hig__global-nav__top-nav__project-account-switcher__item--project:first-child::before {
-        content: 'Projects';
-    }
-
-    .hig__global-nav__top-nav__project-account-switcher__item--account:first-child::before {
-        content: 'Accounts';
+     .hig__global-nav__top-nav__project-account-switcher__item--account:first-child::before {
+        content: attr(data-account-section-title);
     }     
+
+    .hig__global-nav__top-nav__project-account-switcher__item--project:first-child::before {
+        content: attr(data-project-section-title);
+    }
 }
+   
