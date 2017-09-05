@@ -68,14 +68,6 @@ class TopNav extends Core {
     }
   }
 
-  sidenavOpen() {
-    this._findDOMEl('.hig__global-nav__top-nav__hamburger', this.el).classList.add('hig__global-nav__top-nav__hamburger--menuopen');
-  }
-
-  sidenavClosed() {
-    this._findDOMEl('.hig__global-nav__top-nav__hamburger', this.el).classList.remove('hig__global-nav__top-nav__hamburger--menuopen');
-  }
-
   _setLogoAttributeForTag(tag, attr, val) {
     const scope = this._findDOMEl('.hig__global-nav__top-nav__logo', this.el);
     this._findDOMEl(tag, scope).setAttribute(attr, val);

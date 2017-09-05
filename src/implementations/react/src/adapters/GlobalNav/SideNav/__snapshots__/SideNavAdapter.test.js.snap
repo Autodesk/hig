@@ -10,7 +10,8 @@ exports[`<SideNav> <SideNav> with search renders children correctly 1`] = `
     <h4 class=\\"hig__global-nav__sidenav__header\\">
       <a class=\\"hig__global-nav__sidenav__header-link\\"></a>
     </h4>
-    <div class=\\"hig__global-nav__side-nav__section__group\\">
+    <div class=\\"hig__global-nav__sidenav__groups\\">
+      <div class=\\"hig__global-nav__side-nav__section__group\\">
     <div class=\\"hig__global-nav__side-nav__section__group__module\\">
   <div class=\\"hig__global-nav__side-nav__section__group__module__row\\">
     <a class=\\"hig__global-nav__side-nav__section__group__module__link\\" href=\\"#\\">
@@ -19,7 +20,7 @@ exports[`<SideNav> <SideNav> with search renders children correctly 1`] = `
     </a>
     <!--MODULE-COLLAPSE-->
   </div>
-  <div class=\\"hig__global-nav__side-nav__section__group__module__submodules\\">
+  <div class=\\"hig__global-nav__side-nav__section__group__module__submodules \\">
     <a class=\\"hig__global-nav__side-nav__section__group__module__submodule\\" href=\\"\\">
   Document
 </a><a class=\\"hig__global-nav__side-nav__section__group__module__submodule\\" href=\\"\\">
@@ -28,6 +29,7 @@ exports[`<SideNav> <SideNav> with search renders children correctly 1`] = `
   </div>
 </div><!--MODULE-->
 </div><!--GROUP-->
+    </div>
     <div class=\\"hig__global-nav__sidenav__links\\">
       <!--LINK-->
     </div>
@@ -59,7 +61,9 @@ exports[`<SideNav> renders when configured with defaults 1`] = `
     <h4 class=\\"hig__global-nav__sidenav__header\\">
       <a class=\\"hig__global-nav__sidenav__header-link\\" href=\\"http://my-project-url.com\\">My lovely project</a>
     </h4>
-    <!--GROUP-->
+    <div class=\\"hig__global-nav__sidenav__groups\\">
+      <!--GROUP-->
+    </div>
     <div class=\\"hig__global-nav__sidenav__links\\">
       <!--LINK-->
     </div>
@@ -87,7 +91,9 @@ exports[`<SideNav> renders when configured with updated props 1`] = `
     <h4 class=\\"hig__global-nav__sidenav__header\\">
       <a class=\\"hig__global-nav__sidenav__header-link\\" href=\\"http://my-updated-project-url.com\\">My updated project</a>
     </h4>
-    <!--GROUP-->
+    <div class=\\"hig__global-nav__sidenav__groups\\">
+      <!--GROUP-->
+    </div>
     <div class=\\"hig__global-nav__sidenav__links\\">
       <!--LINK-->
     </div>
@@ -115,7 +121,9 @@ exports[`<SideNav> renders without defaults 1`] = `
     <h4 class=\\"hig__global-nav__sidenav__header\\">
       <a class=\\"hig__global-nav__sidenav__header-link\\"></a>
     </h4>
-    <!--GROUP-->
+    <div class=\\"hig__global-nav__sidenav__groups\\">
+      <!--GROUP-->
+    </div>
     <div class=\\"hig__global-nav__sidenav__links\\">
       <!--LINK-->
     </div>

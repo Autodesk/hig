@@ -4,8 +4,6 @@
 @import '~helpers/css/mixins/spacing.scss';
 
 $hig__global-nav__sidenav--width: 280px;
-$hig__global-nav__sidenav--l-side-padding: 16px;
-$hig__global-nav__sidenav--r-side-padding: 12px;
 
 .hig__global-nav__sidenav {
   @include reset;
@@ -52,8 +50,12 @@ $hig__global-nav__sidenav--r-side-padding: 12px;
     }
   }
 
+  &__links{
+    margin: spacing(m) 0;
+  }
+
   &__copyright {
-    padding-left: $hig__global-nav__sidenav--l-side-padding;
+    padding-left: spacing(m);
     margin-bottom: 40px;
     font-size: 12px;
     color: color(hig-gray-30);
@@ -73,7 +75,7 @@ $hig__global-nav__sidenav--r-side-padding: 12px;
 .hig__global-nav__sidenav__super-header-link,
 .hig__global-nav__sidenav__header-link {
   display: block;
-  padding: 0 $hig__global-nav__sidenav--r-side-padding 0 $hig__global-nav__sidenav--l-side-padding;
+  padding: 0 spacing(s) 0 spacing(m);
   font-weight: 600;
 }
 

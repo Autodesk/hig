@@ -10,7 +10,9 @@ exports[`<LinkAdapter> renders 1`] = `
     <h4 class=\\"hig__global-nav__sidenav__header\\">
       <a class=\\"hig__global-nav__sidenav__header-link\\"></a>
     </h4>
-    <!--GROUP-->
+    <div class=\\"hig__global-nav__sidenav__groups\\">
+      <!--GROUP-->
+    </div>
     <div class=\\"hig__global-nav__sidenav__links\\">
       <a class=\\"hig__global-nav__sidenav__links__link\\" href=\\"#\\">link</a><!--LINK-->
     </div>
@@ -38,7 +40,9 @@ exports[`<LinkAdapter> renders with initial props 1`] = `
     <h4 class=\\"hig__global-nav__sidenav__header\\">
       <a class=\\"hig__global-nav__sidenav__header-link\\"></a>
     </h4>
-    <!--GROUP-->
+    <div class=\\"hig__global-nav__sidenav__groups\\">
+      <!--GROUP-->
+    </div>
     <div class=\\"hig__global-nav__sidenav__links\\">
       <a class=\\"hig__global-nav__sidenav__links__link\\" href=\\"https://a-website.com\\">A title</a><!--LINK-->
     </div>
@@ -66,7 +70,9 @@ exports[`<LinkAdapter> renders with updated props 1`] = `
     <h4 class=\\"hig__global-nav__sidenav__header\\">
       <a class=\\"hig__global-nav__sidenav__header-link\\"></a>
     </h4>
-    <!--GROUP-->
+    <div class=\\"hig__global-nav__sidenav__groups\\">
+      <!--GROUP-->
+    </div>
     <div class=\\"hig__global-nav__sidenav__links\\">
       <a class=\\"hig__global-nav__sidenav__links__link\\" href=\\"https://a-website.com\\">A title</a><!--LINK-->
     </div>

@@ -10,7 +10,8 @@ exports[`<SubmoduleAdapter> renders 1`] = `
     <h4 class=\\"hig__global-nav__sidenav__header\\">
       <a class=\\"hig__global-nav__sidenav__header-link\\"></a>
     </h4>
-    <div class=\\"hig__global-nav__side-nav__section__group\\">
+    <div class=\\"hig__global-nav__sidenav__groups\\">
+      <div class=\\"hig__global-nav__side-nav__section__group\\">
     <div class=\\"hig__global-nav__side-nav__section__group__module\\">
   <div class=\\"hig__global-nav__side-nav__section__group__module__row\\">
     <a class=\\"hig__global-nav__side-nav__section__group__module__link\\" href=\\"#\\">
@@ -19,13 +20,14 @@ exports[`<SubmoduleAdapter> renders 1`] = `
     </a>
     <!--MODULE-COLLAPSE-->
   </div>
-  <div class=\\"hig__global-nav__side-nav__section__group__module__submodules\\">
+  <div class=\\"hig__global-nav__side-nav__section__group__module__submodules \\">
     <a class=\\"hig__global-nav__side-nav__section__group__module__submodule\\" href=\\"\\">
   
 </a><!--SUBMODULE-->
   </div>
 </div><!--MODULE-->
 </div><!--GROUP-->
+    </div>
     <div class=\\"hig__global-nav__sidenav__links\\">
       <!--LINK-->
     </div>
@@ -53,7 +55,8 @@ exports[`<SubmoduleAdapter> renders with initial props 1`] = `
     <h4 class=\\"hig__global-nav__sidenav__header\\">
       <a class=\\"hig__global-nav__sidenav__header-link\\"></a>
     </h4>
-    <div class=\\"hig__global-nav__side-nav__section__group\\">
+    <div class=\\"hig__global-nav__sidenav__groups\\">
+      <div class=\\"hig__global-nav__side-nav__section__group\\">
     <div class=\\"hig__global-nav__side-nav__section__group__module\\">
   <div class=\\"hig__global-nav__side-nav__section__group__module__row\\">
     <a class=\\"hig__global-nav__side-nav__section__group__module__link\\" href=\\"#\\">
@@ -62,13 +65,14 @@ exports[`<SubmoduleAdapter> renders with initial props 1`] = `
     </a>
     <!--MODULE-COLLAPSE-->
   </div>
-  <div class=\\"hig__global-nav__side-nav__section__group__module__submodules\\">
+  <div class=\\"hig__global-nav__side-nav__section__group__module__submodules \\">
     <a class=\\"hig__global-nav__side-nav__section__group__module__submodule\\" href=\\"https://a-website.com\\">
   A title
 </a><!--SUBMODULE-->
   </div>
 </div><!--MODULE-->
 </div><!--GROUP-->
+    </div>
     <div class=\\"hig__global-nav__sidenav__links\\">
       <!--LINK-->
     </div>
@@ -96,7 +100,8 @@ exports[`<SubmoduleAdapter> renders with updated props 1`] = `
     <h4 class=\\"hig__global-nav__sidenav__header\\">
       <a class=\\"hig__global-nav__sidenav__header-link\\"></a>
     </h4>
-    <div class=\\"hig__global-nav__side-nav__section__group\\">
+    <div class=\\"hig__global-nav__sidenav__groups\\">
+      <div class=\\"hig__global-nav__side-nav__section__group\\">
     <div class=\\"hig__global-nav__side-nav__section__group__module\\">
   <div class=\\"hig__global-nav__side-nav__section__group__module__row\\">
     <a class=\\"hig__global-nav__side-nav__section__group__module__link\\" href=\\"#\\">
@@ -105,11 +110,12 @@ exports[`<SubmoduleAdapter> renders with updated props 1`] = `
     </a>
     <!--MODULE-COLLAPSE-->
   </div>
-  <div class=\\"hig__global-nav__side-nav__section__group__module__submodules\\">
+  <div class=\\"hig__global-nav__side-nav__section__group__module__submodules \\">
     <a class=\\"hig__global-nav__side-nav__section__group__module__submodule hig__global-nav__side-nav__section__group__module__submodule--active\\" href=\\"https://a-website.com\\">A title</a><!--SUBMODULE-->
   </div>
 </div><!--MODULE-->
 </div><!--GROUP-->
+    </div>
     <div class=\\"hig__global-nav__sidenav__links\\">
       <!--LINK-->
     </div>

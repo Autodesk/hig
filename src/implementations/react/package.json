@@ -1,6 +1,6 @@
 {
   "name": "hig-react",
-  "version": "0.2.1",
+  "version": "0.9.0",
   "description": "hig components in react",
   "main": "lib/hig-react.js",
   "css": "lib/hig-react.css",
@@ -46,6 +46,7 @@
     "lib-react": "NODE_ENV=production webpack",
     "lib-vanilla": "cd ../vanilla && npm run lib && cd ../react && mkdir -p lib && cp ../vanilla/lib/hig.css lib/hig-react.css",
     "playground": "react-scripts start",
+    "prepublish": "npm run lib",
     "build-playground": "react-scripts build",
     "deploy-playground": "react-scripts build && surge build",
     "storybook": "start-storybook -p 9009 -s public",

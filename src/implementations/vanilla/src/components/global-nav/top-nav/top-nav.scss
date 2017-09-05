@@ -46,11 +46,11 @@ $group-height: 56px;
             display: none;
         }
 
-        &--menuopen &__hamburgericon{
+        .hig__global-nav--open &__hamburgericon{
             display: none;
         }
 
-        &--menuopen &__closeicon{
+        .hig__global-nav--open &__closeicon{
             display: block;
             
         }
