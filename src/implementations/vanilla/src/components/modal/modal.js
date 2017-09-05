@@ -19,6 +19,20 @@ class Modal extends Core {
     this._render(Template, options);
   }
 
+  _componentDidMount() {
+    const scrollingElement = this._findDOMEl('.hig__modal__slot', this.el);
+    this._attachListener('scroll', scrollingElement, scrollingElement, (event) => this._handleScroll(event.target));
+  }
+
+  _handleScroll(scrollingElement) {
+    const windowElement = this._findDOMEl('.hig__modal__window', this.el);
+    if (scrollingElement.scrollTop > 0) {
+        windowElement.classList.add(`hig__modal__window--scrolling`);
+    } else {
+        windowElement.classList.remove(`hig__modal__window--scrolling`);
+    }
+  }
+
   addButton(instance) {
     if (instance instanceof Button) {
       this.mountPartialToComment('ACTIONS', instance);

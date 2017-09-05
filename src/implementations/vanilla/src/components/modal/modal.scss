@@ -63,6 +63,10 @@ $shadow-layer: -1;
     outline: none;
   }
 
+  .hig__modal__window--scrolling & {
+    right: 32px;
+  }
+
   .hig__modal__window--alternate & {
     top: 16px;
     right: 16px;
@@ -78,6 +82,11 @@ $shadow-layer: -1;
   z-index: $header-layer;
   border-bottom: 1px solid color(hig-gray-50);
   min-height: 33px;
+
+  .hig__modal__window--scrolling & {
+    margin: 0;
+    padding: 16px 32px;
+  }
 
   .hig__modal__window--alternate & {
     background-color: color(hig-blue-70);
@@ -130,6 +139,11 @@ $shadow-layer: -1;
   flex: 0 0 auto;
   min-height: 33px;
   border-top: 1px solid color(hig-gray-50);
+
+  .hig__modal__window--scrolling & {
+    margin: 0;
+    padding: 16px 32px;
+  }
 
   .hig__modal__window--alternate & {
     border: none;
