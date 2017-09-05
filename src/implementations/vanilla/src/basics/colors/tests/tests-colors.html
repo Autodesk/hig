@@ -37,7 +37,7 @@
         </style>
     </head>
     <body>
-        
+
         <div class='tests-color-group'>
             <div class='typo-holder-background'></div>
             <div class='typo-holder-background-sub'></div>
@@ -91,7 +91,7 @@
         <div class='tests-color-group'>
             <div class='typo-holder-accent'></div>
             <div class='typo-holder-accent-sub'></div>
-            
+
             <div class='tests-color'>
                 <div class='tests-color-cube tests-color-cube--small hig__colors__hig-blue-20--background'></div>
                 hig-blue-20
@@ -161,7 +161,7 @@
         <div class='tests-color-group'>
             <div class='typo-holder-notification'></div>
             <div class='typo-holder-notification-sub'></div>
-            
+
             <div class='tests-color'>
                 <div class='tests-color-cube tests-color-cube--small hig__colors__hig-good-green--background'></div>
                 hig-good-green
@@ -233,6 +233,7 @@
         <script>
             var Type = new Hig.Typography();
             Type.applyTypographyToElement("body");
+            console.log(Hig.Colors)
 
             new Hig.Typography({
                 "text": "HIG Background Colors",
@@ -295,7 +296,7 @@
                 el.nextSibling.parentNode.insertBefore(div, el.nextSibling.nextSibling);
             });
         </script>
-        
+
 
     </body>
 </html>
