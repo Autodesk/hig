@@ -1,11 +1,13 @@
 @import '~basics/fonts/fonts.scss';
 @import '~basics/colors/colors.scss';
 @import '~helpers/css/mixins/typography-base.scss';
+@import '~helpers/css/mixins/spacing.scss';
 
 .hig__typography,
 .hig__rich-text,
 .hig__rich-text p {
   @include typography-base;
+  margin-bottom: spacing(m);
 }
 
 

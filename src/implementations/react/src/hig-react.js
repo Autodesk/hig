@@ -10,7 +10,7 @@ export { default as Option } from './adapters/FormElements/OptionAdapter';
 export { default as PasswordField } from './adapters/FormElements/PasswordFieldAdapter';
 export { default as RadioButton } from './adapters/FormElements/RadioButtonAdapter';
 export { default as Range } from './adapters/FormElements/RangeAdapter';
-export { default as RichText } from './adapters/RichTextAdapter';
+export { default as RichText } from './elements/components/RichText';
 export { default as Spacer } from './adapters/SpacerAdapter';
 export { default as TextArea } from './adapters/FormElements/TextAreaAdapter';
 export { default as TextField } from './adapters/FormElements/TextFieldAdapter';
