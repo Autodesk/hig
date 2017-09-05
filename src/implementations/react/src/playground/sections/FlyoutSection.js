@@ -20,7 +20,7 @@ class FlyoutSection extends Component {
   render() {
     return (
       <PlaygroundSection title="Flyout">
-        
+
         <Flyout
           anchorPoint="bottom-left"
           content={this.myFlyoutContent()}
