@@ -35,15 +35,16 @@ class GlobalNav extends Component {
     topNav: PropTypes.shape({
       logo: PropTypes.string,
       logoLink: PropTypes.string,
+      accounts: PropTypes.any,
+      projects: PropTypes.any,
+      projectTitle: PropTypes.string,
+      accountTitle: PropTypes.string,
+      onProjectClick: PropTypes.func,
+      onAccountClick: PropTypes.func,
+      activeProjectId: PropTypes.any,
+      activeAccountId: PropTypes.any,
     }),
-    accounts: PropTypes.any,
-    projects: PropTypes.any,
-    projectTitle: PropTypes.string,
-    accountTitle: PropTypes.string,
-    onProjectClick: PropTypes.func,
-    onAccountClick: PropTypes.func,
-    activeProjectId: PropTypes.any,
-    activeAccountId: PropTypes.any,
+    
     showSubNav: PropTypes.bool
   }
 
@@ -81,7 +82,7 @@ class GlobalNav extends Component {
   }
 
   showProjectAccountSwitcher(){
-   return ( this.props.accounts && this.props.accounts.length > 0 || this.props.projects && this.props.projects.length > 0)
+   return ( this.props.topNav.accounts && this.props.topNav.accounts.length > 0 || this.props.topNav.projects && this.props.topNav.projects.length > 0)
   }
 
   renderTab = (submodule) => {
@@ -105,12 +106,14 @@ class GlobalNav extends Component {
         >
         {this.showProjectAccountSwitcher() 
           ? <ProjectAccountSwitcher
-              accounts={this.props.accounts}
-              projects={this.props.projects}
-              accountTitle={this.props.accountTitle}
-              projectTitle={this.props.projectTitle}
-              activeProjectId={this.props.activeProjectId}
-              activeAccountId={this.props.activeAccountId}
+              accounts={this.props.topNav.accounts}
+              projects={this.props.topNav.projects}
+              accountTitle={this.props.topNav.accountTitle}
+              projectTitle={this.props.topNav.projectTitle}
+              activeProjectId={this.props.topNav.activeProjectId}
+              activeAccountId={this.props.topNav.activeAccountId}
+              onProjectClick={this.props.topNav.onProjectClick}
+              onAccountClick={this.props.topNav.onAccountClick}
             />
           : null}
         </TopNavAdapter>

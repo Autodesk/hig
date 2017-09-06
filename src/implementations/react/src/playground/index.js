@@ -65,9 +65,16 @@ class Playground extends React.Component {
 
   render() {
     const topNavProps = {
+      accounts: accounts,
+      projects: projects,
+      accountTitle: "Accounts",
+      projectTitle: "Projects",
+      onProjectClick: this.projectClicked,
+      onAccountClick: this.accountClicked,
       logo,
       onLogoClick: function() { console.log('Logo clicked'); }
     }
+
     const sideNavProps = {
       superHeaderLabel: "HIG",
       headerLabel: "Playground",
@@ -82,12 +89,6 @@ class Playground extends React.Component {
     return (
       <GlobalNav
         modules={modules}
-        accounts={accounts}
-        projects={projects}
-        accountTitle="Accounts"
-        projectTitle="Projects"
-        onProjectClick={this.projectClicked}
-        onAccountClick={this.accountClicked}
         onModuleChange={this.navigate}
         sideNav={sideNavProps}
         submodules={submodules}
