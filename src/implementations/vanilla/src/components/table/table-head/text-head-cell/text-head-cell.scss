@@ -7,22 +7,24 @@
   text-overflow: ellipsis;
 
 
-  padding: 20px 48px 20px 0px; 
+  padding: 12px 48px 12px 0px; 
+  height: 24px;
 
   &:last-child{
     padding-right: 0px;
   }
 
-  .hig__table--standard & {
-    &:first-child {
-       padding: 20px 12px 20px 12px; 
+  &:first-child {
+    .hig__table--standard & {
+      padding: 12px 4px 12px 4px; 
     }
-  }
 
-  .hig__table--compressed & {
-    &:first-child {
-      padding: 20px 48px 20px 8px; 
+    .hig__table--compressed & {
+      padding: 12px 48px 12px 8px; 
+    }
+
+    .hig__table--large & {
+       padding: 12px 48px 12px 12px; 
     }
   }
-  
 }

@@ -46,7 +46,7 @@
 
     var EmptyCell = new TableHead.partials.TextHeadCell();
     TableHead.addCell(EmptyCell);
-    EmptyCell.setWidth('24px');
+    EmptyCell.setWidth("30px");
 
     var TitleHeadCell = new TableHead.partials.TextHeadCell();
     TableHead.addCell(TitleHeadCell);
@@ -70,14 +70,13 @@
     TableHead.addCell(BudgetHeadCell);
     BudgetHeadCell.setText('Budget');
     BudgetHeadCell.setAlignment("right");
-    BudgetHeadCell.setWidth("2fr");
-
+    BudgetHeadCell.setWidth("50px");
 
     var nextHeadCell = new TableHead.partials.TextHeadCell();
     TableHead.addCell(nextHeadCell);
     nextHeadCell.setText('Name');
     nextHeadCell.setAlignment("left");
-    nextHeadCell.setWidth("2fr");
+    nextHeadCell.setWidth("1fr");
 
     //Add Table Body
 
@@ -88,29 +87,29 @@
     TableRow.addCell(IconCell);
     IconCell.setIcon('gear');
 
+
+    var TypeCell1 = new TableRow.partials.TextCell();
+    TableRow.addCell(TypeCell1);
+    TypeCell1.setText('Window Commissioning');
+    TypeCell1.setAlignment("left");
+
     var TextCell = new TableRow.partials.TextCell();
     TableRow.addCell(TextCell);
-    TextCell.setText('TEST DETAIL TEXT');
+    TextCell.setText('Lorem ipsum dolor sit amet, consectetur adipiscing elit');
     TextCell.setAlignment('left');
     TextCell.setDetail('new detail');
 
 
-    var NextCell = new TableRow.partials.TextCell();
-    TableRow.addCell(NextCell);
-    NextCell.setText('Deserunt ut deserunt mollit elit aute et.');
-    NextCell.setAlignment('left');
-
-    var SlotCell = new TableRow.partials.SlotCell();
-    TableRow.addCell(SlotCell);
-
-    var NewSlotEl = document.createElement('div');
-    NewSlotEl.innerHTML = "testing body cell slot.";
-    SlotCell.addSlot(NewSlotEl);
+    var LocationCell = new TableRow.partials.TextCell();
+    TableRow.addCell(LocationCell);
+    LocationCell.setText('Floor 3, Room 21. Building 400. 2nd Street');
+    LocationCell.setAlignment('left');
 
     var BudgetTextCell = new TableRow.partials.TextCell();
     TableRow.addCell(BudgetTextCell);
     BudgetTextCell.setText('2535');
     BudgetTextCell.setAlignment('right');
+
 
     var AssigneeTextCell = new TableRow.partials.TextCell();
     TableRow.addCell(AssigneeTextCell);
@@ -131,26 +130,28 @@
     TextCell1.setText('Window Punch List');
     TextCell1.setAlignment('left');
 
-    var NextCell1 = new TableRow1.partials.TextCell();
-    TableRow1.addCell(NextCell1);
-    NextCell1.setText('Comissioning');
-    NextCell1.setAlignment('left');
+    var TextCell11 = new TableRow1.partials.TextCell();
+    TableRow1.addCell(TextCell11);
+    TextCell11.setText('Lorem ipsum dolor sit amet, consectetur adipiscing elit');
+    TextCell11.setAlignment('left');
+    TextCell.setDetail('new detail');
 
-    var SlotCell1 = new TableRow1.partials.SlotCell();
-    TableRow1.addCell(SlotCell1);
-    var NewSlotEl1 = document.createElement('div');
-    NewSlotEl1.innerHTML = "Floor 3, Room 21.";
-    SlotCell1.addSlot(NewSlotEl1);
+
+    var LocationCell1 = new TableRow1.partials.TextCell();
+    TableRow1.addCell(LocationCell1);
+    LocationCell1.setText('Floor 3, Room 21. Building 400. 2nd Street');
+    LocationCell1.setAlignment('left');
 
     var BudgetTextCell1 = new TableRow1.partials.TextCell();
     TableRow1.addCell(BudgetTextCell1);
     BudgetTextCell1.setText('3000');
     BudgetTextCell1.setAlignment('right');
 
-    var AssigneeTextCell1 = new TableRow1.partials.TextCell();
-    TableRow1.addCell(AssigneeTextCell1);
-    AssigneeTextCell1.setText('Alexander Mo');
-    AssigneeTextCell1.setAlignment('left');
+
+    var AssigneeTextCell2 = new TableRow1.partials.TextCell();
+    TableRow1.addCell(AssigneeTextCell2);
+    AssigneeTextCell2.setText('Alexander Mo');
+    AssigneeTextCell2.setAlignment('left');
 
 
     //Add Row 3
@@ -168,25 +169,23 @@
 
     var NextCell2 = new TableRow2.partials.TextCell();
     TableRow2.addCell(NextCell2);
-    NextCell2.setText('Comissioning');
+    NextCell2.setText('Lorem ipsum dolor sit amet, consectetur adipiscing elit');
     NextCell2.setAlignment('left');
 
-    var SlotCell2 = new TableRow2.partials.SlotCell();
-    TableRow2.addCell(SlotCell2);
-
-    var NewSlotEl2 = document.createElement('div');
-    NewSlotEl2.innerHTML = "Floor 3, Room 21.";
-    SlotCell2.addSlot(NewSlotEl2);
+    var LocationCell2 = new TableRow2.partials.TextCell();
+    TableRow2.addCell(LocationCell2);
+    LocationCell2.setText('Floor 3, Room 21. Building 400. 2nd Street');
+    LocationCell2.setAlignment('left');
 
     var BudgetTextCell2 = new TableRow2.partials.TextCell();
     TableRow2.addCell(BudgetTextCell2);
     BudgetTextCell2.setText('3000');
     BudgetTextCell2.setAlignment('right');
 
-    var AssigneeTextCell2 = new TableRow2.partials.TextCell();
-    TableRow2.addCell(AssigneeTextCell2);
-    AssigneeTextCell2.setText('Alexander Mo');
-    AssigneeTextCell2.setAlignment('left');
+    var AssigneeTextCell4 = new TableRow2.partials.TextCell();
+    TableRow2.addCell(AssigneeTextCell4);
+    AssigneeTextCell4.setText('Alexander Mo');
+    AssigneeTextCell4.setAlignment('left');
 
     //Add Row 4
     var TableRow3 = new Table.partials.TableRow();
@@ -203,32 +202,29 @@
 
     var NextCell3 = new TableRow3.partials.TextCell();
     TableRow3.addCell(NextCell3);
-    NextCell3.setText('Comissioning');
+    NextCell3.setText('Lorem ipsum dolor sit amet, consectetur adipiscing elit');
     NextCell3.setAlignment('left');
 
-    var SlotCell3 = new TableRow3.partials.SlotCell();
-    TableRow3.addCell(SlotCell3);
-
-    var NewSlotEl3 = document.createElement('div');
-    NewSlotEl3.innerHTML = "Floor 3, Room 21.";
-    SlotCell3.addSlot(NewSlotEl3);
+    var LocationCell3 = new TableRow3.partials.TextCell();
+    TableRow3.addCell(LocationCell3);
+    LocationCell3.setText('Floor 3, Room 21. Building 400. 2nd Street');
+    LocationCell3.setAlignment('left');
 
     var BudgetTextCell3 = new TableRow3.partials.TextCell();
     TableRow3.addCell(BudgetTextCell3);
     BudgetTextCell3.setText('3000');
     BudgetTextCell3.setAlignment('right');
 
-    var AssigneeTextCell3 = new TableRow3.partials.TextCell();
-    TableRow3.addCell(AssigneeTextCell3);
-    AssigneeTextCell3.setText('Alexander Mo');
-    AssigneeTextCell3.setAlignment('left');
+    var AssigneeTextCell6 = new TableRow3.partials.TextCell();
+    TableRow3.addCell(AssigneeTextCell6);
+    AssigneeTextCell6.setText('Alexander Mo');
+    AssigneeTextCell6.setAlignment('left');
 
     //Adding a Table using defaults
 
     var DefaultTable = new Hig.Table();
     DefaultTable.mount(".tests-table-defaults");
     DefaultTable.setDensity("compressed");
-
 
     var TableHead = new DefaultTable.partials.TableHead();
     DefaultTable.addTableHead(TableHead);
@@ -237,7 +233,6 @@
       { "width": "1fr", "alignment": "left", "text": "Title" }
     );
     TableHead.addCell(TitleHeadCell1);
-
 
     var TypeHeadCell1 = new TableHead.partials.TextHeadCell(
       { "width": "1fr", "alignment": "left", "text": "Type" }
@@ -249,114 +244,91 @@
     TableHead.addCell(LocationHeadCell1);
 
     var BudgetHeadCell1 = new TableHead.partials.TextHeadCell(
-      { "width": "2fr", "alignment": "right", "text": "Budget" }
+      { "width": "50px", "alignment": "right", "text": "Budget" }
     );
     TableHead.addCell(BudgetHeadCell1);
 
-    var lastHeadCell1 = new TableHead.partials.TextHeadCell(
-      { "width": "2fr", "alignment": "left", "text": "Name" }
+    var nameHeadCell = new TableHead.partials.TextHeadCell(
+      { "width": "1fr", "alignment": "left", "text": "Name" }
     );
-    TableHead.addCell(lastHeadCell1);
+    TableHead.addCell(nameHeadCell);
 
+    // Add row
 
     var TableRowDefault = new DefaultTable.partials.TableRow();
     DefaultTable.addTableRow(TableRowDefault);
 
 
-    var TextCell = new TableRow.partials.TextCell({
-      "text": "text", "alignment": "left"
+    var TextCell = new TableRowDefault.partials.TextCell({
+      "text": "Closure Gypsum Boards", "alignment": "left"
     });
     TableRowDefault.addCell(TextCell);
 
-    var NextCell = new TableRowDefault.partials.TextCell({
-      "text": "Deserunt ut deserunt mollit elit aute et.",
+    var TypeCell = new TableRowDefault.partials.TextCell({
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit", "alignment": "left"
+    });
+    TableRowDefault.addCell(TypeCell);
+
+    var LocationCell = new TableRowDefault.partials.TextCell({
+      "text": "Floor 3, Room 21. Building 400. 2nd Street",
       "alignment": "left"
     });
-    TableRowDefault.addCell(NextCell);
+    TableRowDefault.addCell(LocationCell);
 
-    var SlotCell = new TableRowDefault.partials.SlotCell();
-    TableRowDefault.addCell(SlotCell);
 
-    var NewSlotEl = document.createElement('div');
-    NewSlotEl.innerHTML = "testing body cell slot.";
-    SlotCell.addSlot(NewSlotEl);
 
     var BudgetTextCellDefault = new TableRowDefault.partials.TextCell({
       "text": "2535", "alignment": "right"
     });
+
     TableRowDefault.addCell(BudgetTextCellDefault);
 
+    var NameCell = new TableRowDefault.partials.TextCell({
+      "text": "Atlas",
+      "alignment": "left"
+    });
+    TableRowDefault.addCell(NameCell);
+
     var AssigneeTextCellDefault = new TableRowDefault.partials.TextCell({
-      "text": "Atlas Plumbi", "alignment": "left"
+      "text": "Plumbi", "alignment": "left"
     });
     TableRowDefault.addCell(AssigneeTextCellDefault);
 
     //Add Row 2
-
     var TableRowDefault1 = new DefaultTable.partials.TableRow();
     DefaultTable.addTableRow(TableRowDefault1);
 
-    var TextCellDefault1 = new TableRowDefault1.partials.TextCell({
-      "text": 'Window Punch List', alignment: "left"
+
+    var TextCell = new TableRowDefault1.partials.TextCell({
+      "text": "Closure Gypsum Boards", "alignment": "left"
     });
-    TableRowDefault1.addCell(TextCellDefault1);
+    TableRowDefault1.addCell(TextCell);
 
-
-    var NextCellDefault1 = new TableRowDefault1.partials.TextCell({
-      "text": 'Comissioning', alignment: "left"
+    var TypeCell = new TableRowDefault1.partials.TextCell({
+      "text": "Comissioning", "alignment": "left"
     });
-    TableRowDefault1.addCell(NextCellDefault1);
+    TableRowDefault1.addCell(TypeCell);
 
-
-    var SlotCell1 = new TableRowDefault1.partials.SlotCell();
-    TableRowDefault1.addCell(SlotCell1);
-    var NewSlotEl1 = document.createElement('div');
-    NewSlotEl1.innerHTML = "Floor 3, Room 21.";
-    SlotCell1.addSlot(NewSlotEl1);
-
-    var BudgetTextCellDefault1 = new TableRowDefault1.partials.TextCell({
-      "text": '3000', alignment: "right"
+    var LocationCell1 = new TableRowDefault1.partials.TextCell({
+      "text": "Floor 3, Room 21. Building 400. 2nd Street",
+      "alignment": "left"
     });
-    TableRowDefault1.addCell(BudgetTextCellDefault1);
+    TableRowDefault1.addCell(LocationCell1);
 
-    var AssigneeTextCellDefault1 = new TableRowDefault1.partials.TextCell({
-      "text": 'Alexander Mo', alignment: "left"
+
+    var BudgetTextCellDefault = new TableRowDefault1.partials.TextCell({
+      "text": "2535", "alignment": "right"
     });
-    TableRowDefault1.addCell(AssigneeTextCellDefault1);
 
-    //Add Row 3
+    TableRowDefault1.addCell(BudgetTextCellDefault);
 
-    var TableRowDefault2 = new DefaultTable.partials.TableRow();
-    DefaultTable.addTableRow(TableRowDefault2);
-
-
-    var TextCellDefault2 = new TableRowDefault2.partials.TextCell({
-      "text": 'Window Punch List', alignment: "left"
+    var NameCell = new TableRowDefault1.partials.TextCell({
+      "text": "Atlas Plumbi",
+      "alignment": "left"
     });
-    TableRowDefault2.addCell(TextCellDefault2);
+    TableRowDefault1.addCell(NameCell);
 
 
-    var NextCellDefault2 = new TableRowDefault2.partials.TextCell({
-      "text": 'Comissioning', alignment: "left"
-    });
-    TableRowDefault2.addCell(NextCellDefault2);
-
-
-    var SlotCell2 = new TableRowDefault2.partials.SlotCell();
-    TableRowDefault2.addCell(SlotCell2);
-    var NewSlotEl2 = document.createElement('div');
-    NewSlotEl2.innerHTML = "Floor 3, Room 21.";
-    SlotCell2.addSlot(NewSlotEl2);
-
-    var BudgetTextCellDefault2 = new TableRowDefault2.partials.TextCell({
-      "text": '3000', alignment: "right"
-    });
-    TableRowDefault2.addCell(BudgetTextCellDefault2);
-
-    var AssigneeTextCellDefault2 = new TableRowDefault2.partials.TextCell({
-      "text": 'Alexander Mo', alignment: "left"
-    });
-    TableRowDefault2.addCell(AssigneeTextCellDefault2);
 
     // Large table with defaults
 
@@ -374,28 +346,29 @@
 
 
     var TitleHeadCell1 = new TableHead.partials.TextHeadCell(
-      { "width": "2fr", "alignment": "left", "text": "Title" }
+      { "width": "1fr", "alignment": "left", "text": "Title" }
     );
     TableHead.addCell(TitleHeadCell1);
 
 
     var TypeHeadCell1 = new TableHead.partials.TextHeadCell(
-      { "width": "2fr", "alignment": "left", "text": "Type" }
+      { "width": "1fr", "alignment": "left", "text": "Type" }
     );
     TableHead.addCell(TypeHeadCell1);
 
     var LocationHeadCell1 = new TableHead.partials.TextHeadCell(
-      { "width": "2fr", "alignment": "left", "text": "Location" });
+      { "width": "1fr", "alignment": "left", "text": "Location" });
     TableHead.addCell(LocationHeadCell1);
 
     var BudgetHeadCell1 = new TableHead.partials.TextHeadCell(
-      { "width": "2fr", "alignment": "right", "text": "Budget" }
+      { "width": "50px", "alignment": "right", "text": "Budget" }
     );
     TableHead.addCell(BudgetHeadCell1);
 
     var newHeadCell1 = new TableHead.partials.TextHeadCell(
-      { "width": "2fr", "alignment": "left", "text": "Name" }
+      { "width": "1fr", "alignment": "left", "text": "Name" }
     );
+
     TableHead.addCell(newHeadCell1);
 
     //Add Row
@@ -419,14 +392,15 @@
 
 
     var NextCellDefault2 = new TableRowDefault2.partials.TextCell({
-      "text": 'Comissioning', alignment: "left"
+      "text": 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', alignment: "left"
     });
     TableRowDefault2.addCell(NextCellDefault2);
 
-    var NextCellDefault3 = new TableRowDefault2.partials.TextCell({
-      "text": 'Floor 3, Room 21', alignment: "left"
+
+    var NextCellDefault5 = new TableRowDefault2.partials.TextCell({
+      "text": 'Floor 3, Room 21. Building 400. 2nd Street', alignment: "left"
     });
-    TableRowDefault2.addCell(NextCellDefault3);
+    TableRowDefault2.addCell(NextCellDefault5);
 
     var BudgetTextCellDefault2 = new TableRowDefault2.partials.TextCell({
       "text": '3000', alignment: "right"
