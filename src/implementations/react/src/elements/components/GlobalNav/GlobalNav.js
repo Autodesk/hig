@@ -38,6 +38,8 @@ class GlobalNav extends Component {
     }),
     accounts: PropTypes.any,
     projects: PropTypes.any,
+    projectTitle: PropTypes.string,
+    accountTitle: PropTypes.string,
     onProjectClick: PropTypes.func,
     onAccountClick: PropTypes.func,
     activeProjectId: PropTypes.any,
@@ -105,8 +107,8 @@ class GlobalNav extends Component {
           ? <ProjectAccountSwitcher
               accounts={this.props.accounts}
               projects={this.props.projects}
-              accountSectionTitle={this.props.accountSectionTitle}
-              projectSectionTitle={this.props.projectSectionTitle}
+              accountTitle={this.props.accountTitle}
+              projectTitle={this.props.projectTitle}
               activeProjectId={this.props.activeProjectId}
               activeAccountId={this.props.activeAccountId}
             />

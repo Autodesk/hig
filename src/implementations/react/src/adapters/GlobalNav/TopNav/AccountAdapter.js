@@ -15,10 +15,6 @@ export class AccountAdapter extends HIGElement {
     } else {
       this.hig.deactivate();
     }
-
-    if (this.initialProps.accountSectionTitle) {
-      this.hig.setAccountSectionTitle(this.initialProps.accountSectionTitle);
-    }
   }
 
   commitUpdate(updatePayload, oldProps, newProp) {
@@ -41,10 +37,6 @@ export class AccountAdapter extends HIGElement {
         }
         case "label": {
           this.hig.setLabel(propValue);
-          break;
-        }
-        case "accountSectionTitle": {
-          this.hig.setAccountSectionTitle(propValue);
           break;
         }
         case "onClick": {

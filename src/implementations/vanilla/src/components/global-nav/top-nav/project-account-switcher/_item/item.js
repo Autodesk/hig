@@ -58,16 +58,6 @@ class Item extends Core {
         this.el.classList.add(`hig__global-nav__top-nav__project-account-switcher__item--${type}`);
     }
 
-    setProjectSectionTitle(title){
-        const firstProjectItem = this._findDOMEl(".hig__global-nav__top-nav__project-account-switcher__item--project.hig__global-nav__top-nav__project-account-switcher__item--active:first-child");
-       firstProjectItem.dataset.projectSectionTitle = title;
-    }
-
-    setAccountSectionTitle(title){
-        const firstAccountItem = this._findDOMEl(".hig__global-nav__top-nav__project-account-switcher__item--account.hig__global-nav__top-nav__project-account-switcher__item--active:first-child");
-        firstAccountItem.dataset.accountSectionTitle = title;
-    }
-
     activate() {
         this.el.classList.add("hig__global-nav__top-nav__project-account-switcher__item--active");
     }

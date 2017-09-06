@@ -83,6 +83,14 @@ export class ProjectAccountSwitcherAdapter extends HIGElement {
           this.hig.setActiveImage(propValue);
           break;
         }
+        case "projectTitle": {
+          this.hig.setProjectTitle(propValue);
+          break;
+        }
+        case "accountTitle": {
+          this.hig.setAccountTitle(propValue);
+          break;
+        }
         case "onClickOutside": {
           const dispose = this._disposeFunctions.get("onClickOutsideDispose");
 
@@ -155,6 +163,8 @@ ProjectAccountSwitcherComponent.propTypes = {
   activeLabel: PropTypes.string,
   activeImage: PropTypes.string,
   activeType: PropTypes.string,
+  projectTitle: PropTypes.string,
+  accountTitle: PropTypes.string,
   children: HIGChildValidator([
     Account,
     Project,

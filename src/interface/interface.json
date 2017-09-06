@@ -1422,7 +1422,9 @@
               "defaults": {
                 "activeLabel": "{String} - Label of the active project or account",
                 "activeImage": "{String} - url of the image of the active project or account",
-                "activeType": "{String} ['account' or 'project']"
+                "activeType": "{String} ['account' or 'project']",
+                "projectTitle": "{String} - title",
+                "accountTitle": "{String} - title"
               },
               "methods": {
                 "addAccount": {
@@ -1437,6 +1439,18 @@
                   "params": [
                     "{Project} [ReferenceProject]",
                     "{Project} [ReferenceProject] - (Optional) reference node for insertBefore"
+                  ]
+                },
+                "setProjectTitle": {
+                  "desc": "Set Title of Project List",
+                  "params": [
+                    "{String} title"
+                  ]
+                },
+                "setAccountTitle": {
+                  "desc": "Set Title of Account List",
+                  "params": [
+                    "{String} title"
                   ]
                 },
                 "close": {
@@ -1529,18 +1543,6 @@
                       "desc": "sets the label",
                       "params": [
                         "{String} label - new label"
-                      ]
-                    },
-                    "setProjectSectionTitle": {
-                      "desc": "sets section title for Projects section",
-                      "params": [
-                        "{String} title for projects section"
-                      ]
-                    },
-                    "setAccountSectionTitle": {
-                      "desc": "sets section title for Accounts section",
-                      "params": [
-                        "{String} title for accounts section"
                       ]
                     }
                   }
