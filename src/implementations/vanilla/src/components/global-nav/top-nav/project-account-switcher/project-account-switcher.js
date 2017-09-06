@@ -27,7 +27,10 @@ class ProjectAccountSwitcher extends Core {
       image: options.activeImage,
       _type: options.activeType
     });
-    this.flyoutContent = new Lists();
+    this.flyoutContent = new Lists({
+      projectTitle: options.projectTitle,
+      accountTitle: options.accountTitle
+    });
 
     this._render(Template, options);
   }
@@ -81,6 +84,14 @@ class ProjectAccountSwitcher extends Core {
   setActiveType(type) {
     this.target.setType(type);
   }
+
+  setProjectTitle(title){
+    this.flyoutContent.setProjectTitle(title);
+  }
+
+  setAccountTitle(title){
+    this.flyoutContent.setAccountTitle(title);
+  }
 }
 
 ProjectAccountSwitcher._interface =
@@ -90,7 +101,9 @@ ProjectAccountSwitcher._interface =
 ProjectAccountSwitcher._defaults = {
   activeImage: "",
   activeLabel: "",
-  activeType: "project"
+  activeType: "project",
+  projectTitle: "",
+  accountTitle: ""
 };
 ProjectAccountSwitcher._partials = {
   Account: Account,

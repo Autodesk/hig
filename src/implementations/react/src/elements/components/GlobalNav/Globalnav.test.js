@@ -26,7 +26,10 @@ describe("<GlobalNav>", () => {
       const accounts = [
         { id: "1", label: "Foo", image: "https://images/accounts/foo.png" }
       ];
-      const wrapper = mount(<Context accounts={accounts} />);
+      const topNavProps = {
+        accounts: accounts
+      }
+      const wrapper = mount(<Context topNav={topNavProps} />);
       expect(wrapper.find(ProjectAccountSwitcher)).toHaveProp(
         "accounts",
         accounts
@@ -37,9 +40,12 @@ describe("<GlobalNav>", () => {
       const accounts = [
         { id: "1", label: "Foo", image: "https://images/accounts/foo.png" }
       ];
-
+      const topNavProps = {
+        accounts: accounts,
+        activeAccountId: "1"
+      }
       const wrapper = mount(
-        <Context accounts={accounts} activeAccountId="1" />
+        <Context topNav={topNavProps} />
       );
       expect(wrapper.find(ProjectAccountSwitcher)).toHaveProp(
         "activeAccountId",
@@ -51,7 +57,11 @@ describe("<GlobalNav>", () => {
       const projects = [
         { id: "1", label: "Foo", image: "https://images/projects/foo.png" }
       ];
-      const wrapper = mount(<Context projects={projects} activeProjectId="1" />);
+      const topNavProps = {
+        projects: projects,
+        activeProjectId: "1"
+      }
+      const wrapper = mount(<Context topNav={topNavProps} />);
       expect(wrapper.find(ProjectAccountSwitcher)).toHaveProp(
         "activeProjectId",
         "1"
@@ -62,7 +72,10 @@ describe("<GlobalNav>", () => {
       const projects = [
         { id: "1", label: "Foo", image: "https://images/projects/foo.png" }
       ];
-      const wrapper = mount(<Context projects={projects} />);
+      const topNavProps = {
+        projects: projects
+      }
+      const wrapper = mount(<Context topNav={topNavProps} />);
       expect(wrapper.find(ProjectAccountSwitcher)).toHaveProp(
         "projects",
         projects

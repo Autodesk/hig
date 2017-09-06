@@ -34,18 +34,17 @@ exports[`<Account> renders an Account 1`] = `
         <div class=\\"hig__flyout__chevron\\"></div>
         <div class=\\"hig__flyout__panel\\">
             <div class=\\"hig__global-nav__top-nav__project-account-switcher__lists\\">
-    <div class=\\"hig__global-nav__top-nav__project-account-switcher__lists__list\\">
-        <div class=\\"hig__global-nav__top-nav__project-account-switcher__item hig__global-nav__top-nav__project-account-switcher__item--account\\">
+    <div class=\\"hig__global-nav__top-nav__project-account-switcher__list\\">
+  <!--TITLE-->
+  <div class=\\"hig__global-nav__top-nav__project-account-switcher__item hig__global-nav__top-nav__project-account-switcher__item--account\\">
     <span class=\\"hig__global-nav__top-nav__project-account-switcher__item__image-wrapper\\">
         <img class=\\"hig__global-nav__top-nav__project-account-switcher__item__image\\" src=\\"\\" alt=\\"\\" width=\\"32\\" height=\\"32\\">
         <span class=\\"hig__global-nav__top-nav__project-account-switcher__item__image-placeholder\\"></span>
     </span>
     <span class=\\"hig__global-nav__top-nav__project-account-switcher__item__label\\"></span>
+</div><!--ITEMS-->
 </div><!--ACCOUNTS-->
-    </div>
-    <div class=\\"hig__global-nav__top-nav__project-account-switcher__lists__list\\">
-        <!--PROJECTS-->
-    </div>
+    <!--PROJECTS-->
 </div><!--SLOT-->
         </div>
     </div>
@@ -98,18 +97,17 @@ exports[`<Account> setting and updating props 1`] = `
         <div class=\\"hig__flyout__chevron\\"></div>
         <div class=\\"hig__flyout__panel\\">
             <div class=\\"hig__global-nav__top-nav__project-account-switcher__lists\\">
-    <div class=\\"hig__global-nav__top-nav__project-account-switcher__lists__list\\">
-        <div class=\\"hig__global-nav__top-nav__project-account-switcher__item hig__global-nav__top-nav__project-account-switcher__item--account hig__global-nav__top-nav__project-account-switcher__item--active\\">
+    <div class=\\"hig__global-nav__top-nav__project-account-switcher__list\\">
+  <!--TITLE-->
+  <div class=\\"hig__global-nav__top-nav__project-account-switcher__item hig__global-nav__top-nav__project-account-switcher__item--account hig__global-nav__top-nav__project-account-switcher__item--active\\">
     <span class=\\"hig__global-nav__top-nav__project-account-switcher__item__image-wrapper\\">
         <img class=\\"hig__global-nav__top-nav__project-account-switcher__item__image\\" src=\\"newImage.jpg\\" alt=\\"newLabel\\" width=\\"32\\" height=\\"32\\">
         <span class=\\"hig__global-nav__top-nav__project-account-switcher__item__image-placeholder\\">T</span>
     </span>
     <span class=\\"hig__global-nav__top-nav__project-account-switcher__item__label\\">testLabel</span>
+</div><!--ITEMS-->
 </div><!--ACCOUNTS-->
-    </div>
-    <div class=\\"hig__global-nav__top-nav__project-account-switcher__lists__list\\">
-        <!--PROJECTS-->
-    </div>
+    <!--PROJECTS-->
 </div><!--SLOT-->
         </div>
     </div>
