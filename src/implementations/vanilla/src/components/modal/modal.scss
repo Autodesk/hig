@@ -63,7 +63,7 @@ $shadow-layer: -1;
     outline: none;
   }
 
-  .hig__modal__window--scrolling & {
+  .hig__modal__window--is-scrolling & {
     right: 32px;
   }
 
@@ -83,7 +83,7 @@ $shadow-layer: -1;
   border-bottom: 1px solid color(hig-gray-50);
   min-height: 33px;
 
-  .hig__modal__window--scrolling & {
+  .hig__modal__window--is-scrolling & {
     margin: 0;
     padding: 16px 32px;
   }
@@ -131,21 +131,30 @@ $shadow-layer: -1;
 }
 
 .hig__modal__actions {
+  border-top: none;
   display: flex;
-  justify-content: flex-end;
-  margin: 0 32px;
-  padding: 16px 0;
-  z-index: $actions-layer;
   flex: 0 0 auto;
+  justify-content: flex-end;
+  margin: 0;
   min-height: 33px;
-  border-top: 1px solid color(hig-gray-50);
+  padding: 16px 32px;
+  z-index: $actions-layer;
 
-  .hig__modal__window--scrolling & {
+  .hig__modal__window--has-scrolling & {
+    border-top: 1px solid color(hig-gray-50);
+    margin: 0 32px;
+    padding: 16px 0;
+  }
+
+  .hig__modal__window--is-scrolling & {
+    border-top: 1px solid color(hig-gray-50);
     margin: 0;
     padding: 16px 32px;
   }
 
-  .hig__modal__window--alternate & {
+  .hig__modal__window--alternate &,
+  .hig__modal__window--alternate & + .hig__modal__window--has-scrolling &,
+  .hig__modal__window--alternate & + .hig__modal__window--is-scrolling & {
     border: none;
     margin: 0;
     padding: 16px 32px;

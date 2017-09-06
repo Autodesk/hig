@@ -21,21 +21,35 @@ class Modal extends Core {
 
   _componentDidMount() {
     const scrollingElement = this._findDOMEl('.hig__modal__slot', this.el);
-    this._attachListener('scroll', scrollingElement, scrollingElement, (event) => this._handleScroll(event.target));
+    this._attachListener('scroll', scrollingElement, scrollingElement, (event) => this._handleIsScrolling(event.target));
   }
 
-  _handleScroll(scrollingElement) {
+  _handleIsScrolling(scrollingElement) {
     const windowElement = this._findDOMEl('.hig__modal__window', this.el);
     if (scrollingElement.scrollTop > 0) {
-        windowElement.classList.add(`hig__modal__window--scrolling`);
+        windowElement.classList.add(`hig__modal__window--is-scrolling`);
     } else {
-        windowElement.classList.remove(`hig__modal__window--scrolling`);
+        windowElement.classList.remove(`hig__modal__window--is-scrolling`);
     }
+  }
+
+  _handleHasScrolling() {
+    const windowElement = this._findDOMEl('.hig__modal__window', this.el);
+    if (this._hasScrolling()) {
+      windowElement.classList.add(`hig__modal__window--has-scrolling`);
+    } else {
+      windowElement.classList.remove(`hig__modal__window--has-scrolling`);
+    }
+  }
+
+  _hasScrolling() {
+    const scrollingElement = this._findDOMEl('.hig__modal__slot', this.el);
+    return scrollingElement.scrollHeight > scrollingElement.clientHeight;
   }
 
   setScrollTop(scrollTop) {
      const scrollingElement = this._findDOMEl('.hig__modal__slot', this.el);
-     scrollingElement.scrollTop = scrollTop; 
+     scrollingElement.scrollTop = scrollTop;
   }
 
   addButton(instance) {
@@ -78,6 +92,7 @@ class Modal extends Core {
 
   open() {
     this.el.classList.add('hig__modal--open');
+    this._handleHasScrolling();
   }
 
   setBody(body) {
