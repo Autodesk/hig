@@ -50,7 +50,8 @@ class GlobalNav extends Component {
 
   static defaultProps = {
     modules: [],
-    submodules: []
+    submodules: [],
+    topNav: {}
   }
 
   constructor(props) {
