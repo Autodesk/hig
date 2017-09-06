@@ -15,9 +15,9 @@
 
  */
 import React from 'react';
-import { Button, GlobalNav } from '../react-hig';
+import { Button, GlobalNav } from '../hig-react';
 
-import 'hig-vanilla/dist/hig.css';
+import 'hig-vanilla/lib/hig.css';
 import './index.css';
 
 import logo from './images/bim-logo.png';
@@ -38,6 +38,9 @@ import SpacerSection from './sections/SpacerSection';
 import ModalSection from './sections/ModalSection';
 import TypographySection from './sections/TypographySection';
 import TableSection from "./sections/TableSection";
+import TextLinkSection from "./sections/TextLinkSection";
+import FlyoutSection from "./sections/FlyoutSection"
+import RichTextSection from "./sections/RichTextSection";
 
 class Playground extends React.Component {
   constructor(props) {
@@ -52,11 +55,26 @@ class Playground extends React.Component {
     this.setState({ activeModuleId: id });
   }
 
+  projectClicked = (id) => {
+    console.log("project clicked", id);
+  }
+
+  accountClicked = (id) => {
+    console.log("account clicked", id);
+  }
+
   render() {
     const topNavProps = {
+      accounts: accounts,
+      projects: projects,
+      accountTitle: "Accounts",
+      projectTitle: "Projects",
+      onProjectClick: this.projectClicked,
+      onAccountClick: this.accountClicked,
       logo,
       onLogoClick: function() { console.log('Logo clicked'); }
     }
+
     const sideNavProps = {
       superHeaderLabel: "HIG",
       headerLabel: "Playground",
@@ -70,14 +88,13 @@ class Playground extends React.Component {
 
     return (
       <GlobalNav
-        accounts={accounts}
         modules={modules}
         onModuleChange={this.navigate}
-        projects={projects}
         sideNav={sideNavProps}
         submodules={submodules}
         topNav={topNavProps}
         activeModuleId={this.state.activeModuleId}
+        showSubNav={true}
       >
         <section>
           <h3>Tabs</h3>
@@ -98,6 +115,9 @@ class Playground extends React.Component {
         <DropdownSection />
         <TypographySection />
         <TableSection/>
+        <TextLinkSection/>
+        <FlyoutSection />
+        <RichTextSection />
       </GlobalNav>
     );
   }

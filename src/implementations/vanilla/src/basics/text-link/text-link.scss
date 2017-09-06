@@ -1,5 +1,6 @@
 @import '~basics/colors/colors.scss';
 
+.hig__rich-text a,
 .hig__text-link {
   font-family: 'ArtifaktElement', sans-serif;
   font-size: 14px;
@@ -7,7 +8,8 @@
   text-decoration: none;
 }
 
-.hig__text-link__primary {
+.hig__rich-text a,
+.hig__text-link--primary {
   color: color(hig-blue-30);
 
   &:hover {
@@ -15,7 +17,7 @@
   }
 }
 
-.hig__text-link__secondary {
+.hig__text-link--secondary {
   color: color(hig-gray-30);
 
   &:hover {

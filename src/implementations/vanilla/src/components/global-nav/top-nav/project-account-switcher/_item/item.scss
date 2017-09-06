@@ -1,14 +1,14 @@
 @import '~basics/colors/colors.scss';
 
 .hig__global-nav__top-nav__project-account-switcher__item {
-    display: flex;
-    height: 42px;
-    align-items: center;
-    font-size: 13px;
-    width: 100%;
-}
+  display: flex;
+  height: 34px;
+  line-height: 34px;
+  align-items: center;
+  font-size: 13px;
+  width: 100%;
 
-.hig__global-nav__top-nav__project-account-switcher__item__image-wrapper {
+  &__image-wrapper {
     display: inline-block;
     position: relative;
     flex: 0 0 auto;
@@ -32,9 +32,9 @@
         width: 60px;
         height: 30px;
     }
-}
+  }
 
-.hig__global-nav__top-nav__project-account-switcher__item__image {
+  &__image {
     position: absolute;
     top: 0;
     left: 0;
@@ -56,9 +56,9 @@
         width: 60px;
         height: 30px;
     }
-}
+  }
 
-.hig__global-nav__top-nav__project-account-switcher__item__label {
+  &__label {
     flex: 1 1 auto;
     min-width: 0;
     white-space: nowrap;
@@ -70,4 +70,5 @@
     .hig__global-nav__top-nav__project-account-switcher__item--active > & {
         color: color(hig-blue-30);
     }
+  }
 }

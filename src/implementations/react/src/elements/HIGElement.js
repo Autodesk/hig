@@ -1,7 +1,7 @@
 import partitionProps from '../interface/partitionProps';
 
 /**
- * The base class for all React-Hig Elements. These elements hook into the
+ * The base class for all hig-react Elements. These elements hook into the
  * adapters/createComponent adapter, store low level state like event listeners
  * and call the appropriate methods on hig-vanilla instance when needed
  *

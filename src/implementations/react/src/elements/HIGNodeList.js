@@ -1,5 +1,5 @@
 /**
- * Makes it simple to manage a list of child nodes within a react-hig element
+ * Makes it simple to manage a list of child nodes within a hig-react element
  */
 export default class HIGNodeList {
   constructor(listItems) {

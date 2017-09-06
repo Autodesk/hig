@@ -83,6 +83,7 @@ Spacer._defaults = {
   inset: null
 };
 
+Spacer.SizeMap = SIZES;
 Spacer.AvailableSizes = Object.keys(SIZES);
 Spacer.AvailableTypes = TYPES;
 

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PlaygroundSection from "../PlaygroundSection";
-import { Table, SlotCell } from "../../react-hig";
+import { Table, SlotCell } from "../../hig-react";
 
 import tableImage from "../images/table-image.png";
 

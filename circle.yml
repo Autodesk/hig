@@ -9,13 +9,11 @@ dependencies:
         pwd: src/implementations/react
 test:
   pre:
-    - npm run build:
-        pwd: src/implementations/vanilla
+    - npm run lib:
+        pwd: src/implementations/react
     - ./node_modules/http-server/bin/http-server:
         background: true
         pwd: src/implementations/vanilla
-    - npm run build:
-        pwd: src/implementations/react
   override:
     - npm run gemini-ci:
         pwd: src/implementations/vanilla

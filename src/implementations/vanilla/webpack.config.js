@@ -2,11 +2,11 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 var path = require('path');
 
-r = {
+var r = {
     entry: './src/index.js',
     output: {
         filename: 'hig.js',
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'lib'),
         library: 'Hig',
         libraryTarget: 'umd'
     },
@@ -22,7 +22,7 @@ r = {
                 babelrc: false,
                 compact: false
             },
-            exclude: [/node_modules/, /orion-ui\/packages\/hig\.web\/dist/]
+            exclude: [/node_modules/]
         },{
             test: /\.scss$/,
             loader: ExtractTextPlugin.extract({

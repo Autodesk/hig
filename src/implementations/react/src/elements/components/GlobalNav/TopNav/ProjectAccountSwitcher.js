@@ -19,6 +19,8 @@ class ProjectAccountSwitcher extends Component {
     })),
     activeProjectId: PropTypes.string,
     activeAccountId: PropTypes.string,
+    projectTitle: PropTypes.string,
+    accountTitle: PropTypes.string,
     onProjectClick: PropTypes.func,
     onAccountClick: PropTypes.func,
   }
@@ -107,12 +109,28 @@ class ProjectAccountSwitcher extends Component {
     });
 
     return (
-      <ProjectAccountSwitcherAdapter open={this.state.open}
+      <ProjectAccountSwitcherAdapter 
+        open={this.state.open} 
+        projectTitle={this.props.projectTitle}
+        accountTitle={this.props.accountTitle}
         {...this.flyoutProps()}
         {...this.activeProps()}
       >
-        {accounts.map(a => <Account onClick={this.handleAccountClick} key={a.id} {...a}/>)}
-        {projects.map(p => <Project onClick={this.handleProjectClick} key={p.id} {...p}/>)}
+        {accounts.map((a, i) => {
+          if( i === 0) {
+            return <Account onClick={this.handleAccountClick} key={a.id} {...a}/>
+          } else {
+            return <Account onClick={this.handleAccountClick} key={a.id} {...a}/>
+          }
+        })}
+          
+        {projects.map((p, i) => {
+          if(i === 0) {
+            return <Project onClick={this.handleProjectClick} key={p.id} {...p}/>
+          } else {
+            return <Project onClick={this.handleProjectClick} key={p.id} {...p} />
+          }
+        })}  
       </ProjectAccountSwitcherAdapter>
     );
   }

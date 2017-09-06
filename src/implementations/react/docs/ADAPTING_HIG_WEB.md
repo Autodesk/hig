@@ -10,7 +10,7 @@ Methods have two jobs. They either change the view state of the component or the
 
 2. `"partials"`
 
-Partials are sub-components which can only exist in the context of the parent component. They are identical in all other respects. Construction of a partial is done via an instance of the parent. [See example](https://github.com/adsk-hig/hig.web/blob/ce1abb8b8977e24ee393593df4feb480164bb42c/src/web/components/global-nav/tests/tests-global-nav.html#L19). When adapting to React partials generally become child React Components. The [React Context](https://facebook.github.io/react/docs/context) API is [used to connect child nodes to their parents](https://github.com/Autodesk/orion-ui/blob/dd3d53c2d0e59c4c6668943dfe67517794308154/packages/react-hig/src/react-hig.js#L32) to construct hig.web instances.
+Partials are sub-components which can only exist in the context of the parent component. They are identical in all other respects. Construction of a partial is done via an instance of the parent. [See example](https://github.com/adsk-hig/hig.web/blob/ce1abb8b8977e24ee393593df4feb480164bb42c/src/web/components/global-nav/tests/tests-global-nav.html#L19). When adapting to React partials generally become child React Components. The [React Context](https://facebook.github.io/react/docs/context) API is [used to connect child nodes to their parents](https://github.com/Autodesk/orion-ui/blob/dd3d53c2d0e59c4c6668943dfe67517794308154/packages/hig-react/src/hig-react.js#L32) to construct hig.web instances.
 
 3. `"defaults"`
 
@@ -100,7 +100,7 @@ interface Props {
 
 You need to map properties to methods because in hig.web properties are only used during construction and then methods are used to mutate the state of an instance. In React the properties are also used at runtime to mutate the state.
 
-In `react-hig` this mapping is done in a method which must be implemented for each component called `commitUpdate`
+In `hig-react` this mapping is done in a method which must be implemented for each component called `commitUpdate`
 
 ```typescript
 interface HIGElement {
@@ -210,7 +210,7 @@ class GlobalNav extends HIGElement {
     super(HIG.GlobalNav, initialProps);
   }
 
-  // method which is called after the HIGElement is mounted by react-hig
+  // method which is called after the HIGElement is mounted by hig-react
   componentDidMount() {
     // this.initialProps are the same props which are passed to the constructor function
     if (this.initialProps.sideNavOpen) {
@@ -250,7 +250,7 @@ Above you can see we call the `showSideNav` or `hideSideNav` methods in two plac
 ### Children (Partials)
 
 Managing partials is the most complex part of adapting hig.web to React. In hig.web an instance of a parent is required to
-construct an instance of a partial. react-hig manages this by using React Context to provide partial components access to their parent.
+construct an instance of a partial. hig-react manages this by using React Context to provide partial components access to their parent.
 
 
 #### During Construction:
@@ -260,7 +260,7 @@ construct an instance of a partial. react-hig manages this by using React Contex
 * else
   * call the top level `createElement(type, props)`
 
-Both of these methods are expected to return an instance of a sub-class of HIGElement (a react-hig construct).
+Both of these methods are expected to return an instance of a sub-class of HIGElement (a hig-react construct).
 
 #### After Mounting:
 

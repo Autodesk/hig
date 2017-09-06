@@ -1,6 +1,7 @@
 const Hig = {};
 
 Hig.Button = require('./components/button/button.js');
+Hig.colors = require('./basics/colors/colors.js');
 Hig.Checkbox = require('./basics/form-elements/checkbox/checkbox.js');
 Hig.Dropdown = require('./basics/form-elements/dropdown/dropdown.js');
 Hig.FormElements = require('./basics/form-elements/form-elements.js');
@@ -14,12 +15,14 @@ Hig.Option = require('./basics/form-elements/dropdown/option/option.js');
 Hig.PasswordField = require('./basics/form-elements/password-field/password-field.js');
 Hig.RadioButton = require('./basics/form-elements/radio-button/radio-button.js');
 Hig.Range = require('./basics/form-elements/range/range.js');
+Hig.RichText = require('./basics/rich-text/rich-text.js');
 Hig.Table = require('./components/table/table.js')
 Hig.TextArea = require('./basics/form-elements/text-area/text-area.js');
 Hig.TextField = require('./basics/form-elements/text-field/text-field.js');
 Hig.TextLink = require('./basics/text-link/text-link.js');
 Hig.Typography = require('./basics/typography/typography.js');
 Hig.Spacer = require('./basics/spacer/spacer.js');
+Hig.sizes = Hig.Spacer.SizeMap;
 Hig.Grid = require('./basics/grid/grid.js');
 
 module.exports = Hig;

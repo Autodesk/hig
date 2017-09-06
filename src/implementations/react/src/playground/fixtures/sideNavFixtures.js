@@ -50,7 +50,6 @@ export const modules = [
   {
     id: "1-9",
     groupId: '2',
-    icon: "field",
     title: "Field"
   },
   {

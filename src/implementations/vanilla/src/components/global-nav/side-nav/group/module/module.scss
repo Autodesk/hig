@@ -4,64 +4,74 @@
 
 .hig__global-nav__side-nav__section__group__module {
   position: relative;
-  margin: spacing(xxs) 0;
+  margin: spacing(xs) 0;
   user-select: none;
-}
 
-.hig__global-nav__side-nav__section__group__module__row {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  height: 32px;
-}
-
-.hig__global-nav__side-nav__section__group__module__link {
-  display: flex;
-  align-items: stretch;
-  border-left: 2px solid transparent;
-  flex: 1 1 auto;
-  color: color(hig-gray-10);
-  text-decoration: none;
-
-  &:hover,
-  &--active {
-    color: color(hig-blue-30);
-    border-left-color: color(hig-blue-30);
+  &__row {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    height: 32px;
   }
 
-  &:active,
-  &:focus {
-    outline: none;
-    color: color(hig-blue-20);
-    border-left-color: color(hig-blue-20);
-  }
-}
+  &__link {
+    display: flex;
+    align-items: stretch;
+    border-left: 2px solid transparent;
+    flex: 1 1 auto;
+    color: color(hig-gray-10);
+    text-decoration: none;
 
-.hig__global-nav__side-nav__section__group__module__link__icon {
-  padding-left: spacing(xs);
-
-  svg * {
-    fill: color(hig-gray-10);
-
-    .hig__global-nav__side-nav__section__group__module__link:hover &,
-    .hig__global-nav__side-nav__section__group__module__link--active & {
-      fill: color(hig-blue-30);
+    &:hover,
+    &--active {
+      color: color(hig-blue-30);
+      border-left-color: color(hig-blue-30);
     }
 
-    .hig__global-nav__side-nav__section__group__module__link:focus &,
-    .hig__global-nav__side-nav__section__group__module__link:active & {
-      fill: color(hig-blue-20);
+    &:active,
+    &:focus {
+      outline: none;
+      color: color(hig-blue-20);
+      border-left-color: color(hig-blue-20);
+    }
+
+    &__icon {
+      padding-left: spacing(xs);
+  
+      svg * {
+        fill: color(hig-gray-10);
+  
+        &__link:hover &,
+        &__link--active & {
+          fill: color(hig-blue-30);
+        }
+  
+        &__link:focus &,
+        &__link:active & {
+          fill: color(hig-blue-20);
+        }
+      }
+    }
+  
+    &__title {
+      font-weight: 700;
+      font-size: 15px;
+      padding-left: spacing(xs) - 2;
+      line-height: 32px;
     }
   }
-}
 
-.hig__global-nav__side-nav__section__group__module__link__title {
-  font-weight: 700;
-  font-size: 15px;
-  padding-left: spacing(xs);
-  line-height: 30px;
-}
+  
 
-.hig__global-nav__side-nav__section__group__module--hide {
-  display: none;
+  &--hide {
+    display: none;
+  }
+
+  &__submodules{
+    padding-left: 48px;
+
+    &--no-icon{
+      padding-left: spacing(m);;
+    }
+  }
 }

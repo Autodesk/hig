@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PlaygroundSection from '../PlaygroundSection';
-import { TextField } from '../../react-hig';
+import { TextField } from '../../hig-react';
 
 class TextFieldSection extends Component {
   constructor() {

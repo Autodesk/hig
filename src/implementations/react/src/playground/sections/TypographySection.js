@@ -1,6 +1,6 @@
 import React from 'react';
 import PlaygroundSection from '../PlaygroundSection';
-import { H1, H2, H3, Sub1, Sub2, Body, Bold, Caption, Disabled } from '../../react-hig'
+import { H1, H2, H3, Sub1, Sub2, Body, Bold, Caption, Disabled } from '../../hig-react'
 import createSlotComponent from '../../adapters/createSlotComponent';
 
 const Slot = createSlotComponent();
@@ -14,9 +14,9 @@ function TypographySection() {
       <Sub1>Sub1 example text</Sub1>
       <Sub2>Sub2 example text</Sub2>
       <Body>Body example text</Body>
-      <p><Bold>Bold example text</Bold></p>
-      <p><Disabled>Disabled example text</Disabled></p>
-      <p><Caption>Caption example text</Caption></p>
+      <div><Bold>Bold example text</Bold></div>
+      <div><Disabled>Disabled example text</Disabled></div>
+      <div><Caption>Caption example text</Caption></div>
     </Slot>
   </PlaygroundSection>)
 };

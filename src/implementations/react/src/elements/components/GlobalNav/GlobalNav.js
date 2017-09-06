@@ -35,16 +35,23 @@ class GlobalNav extends Component {
     topNav: PropTypes.shape({
       logo: PropTypes.string,
       logoLink: PropTypes.string,
+      accounts: PropTypes.any,
+      projects: PropTypes.any,
+      projectTitle: PropTypes.string,
+      accountTitle: PropTypes.string,
+      onProjectClick: PropTypes.func,
+      onAccountClick: PropTypes.func,
+      activeProjectId: PropTypes.any,
+      activeAccountId: PropTypes.any,
     }),
-    accounts: PropTypes.any,
-    projects: PropTypes.any,
-    activeProjectId: PropTypes.any,
-    activeAccountId: PropTypes.any
+    
+    showSubNav: PropTypes.bool
   }
 
   static defaultProps = {
     modules: [],
-    submodules: []
+    submodules: [],
+    topNav: {}
   }
 
   constructor(props) {
@@ -75,6 +82,10 @@ class GlobalNav extends Component {
     return activeModule;
   }
 
+  showProjectAccountSwitcher(){
+   return ( this.props.topNav.accounts && this.props.topNav.accounts.length > 0 || this.props.topNav.projects && this.props.topNav.projects.length > 0)
+  }
+
   renderTab = (submodule) => {
     return (
       <Tabs.Tab
@@ -89,17 +100,23 @@ class GlobalNav extends Component {
     const activeModule = this.renderedActiveModule();
 
     return (
-      <GlobalNavAdapter sideNavOpen={this.renderedSideNavOpen()}>
+      <GlobalNavAdapter sideNavOpen={this.renderedSideNavOpen()} >
         <TopNavAdapter
           onHamburgerClick={this.toggleSideNavOpen}
           {...this.props.topNav}
         >
-          <ProjectAccountSwitcher
-            accounts={this.props.accounts}
-            projects={this.props.projects}
-            activeProjectId={this.props.activeProjectId}
-            activeAccountId={this.props.activeAccountId}
-          />
+        {this.showProjectAccountSwitcher() 
+          ? <ProjectAccountSwitcher
+              accounts={this.props.topNav.accounts}
+              projects={this.props.topNav.projects}
+              accountTitle={this.props.topNav.accountTitle}
+              projectTitle={this.props.topNav.projectTitle}
+              activeProjectId={this.props.topNav.activeProjectId}
+              activeAccountId={this.props.topNav.activeAccountId}
+              onProjectClick={this.props.topNav.onProjectClick}
+              onAccountClick={this.props.topNav.onAccountClick}
+            />
+          : null}
         </TopNavAdapter>
         <SideNav
           activeModuleId={this.props.activeModuleId}
@@ -110,7 +127,7 @@ class GlobalNav extends Component {
           submodules={this.props.submodules}
           {...this.props.sideNav}
         />
-        {activeModule
+        {activeModule && this.props.showSubNav
           ? <SubNavAdapter
               moduleIndicatorName={activeModule.title}
               moduleIndicatorIcon={activeModule.icon}

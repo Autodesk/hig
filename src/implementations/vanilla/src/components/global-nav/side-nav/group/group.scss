@@ -13,8 +13,8 @@
     height: 1px;
     display: block;
     content: '';
-    left: $hig__global-nav__sidenav--l-side-padding;
-    right: $hig__global-nav__sidenav--r-side-padding;
+    left: spacing(m);
+    right: spacing(s);
     border-top: 1px solid color(hig-gray-50);
   }
 

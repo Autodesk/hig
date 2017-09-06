@@ -1,0 +1,19 @@
+// Typography Base
+// Give an element standard typographic properties
+// Usage Example:
+// .selector {
+//     @include typography-base;
+// }
+
+@mixin typography-base() {
+  font-family: 'ArtifaktElement', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  color: color('hig-gray-10');
+  margin: 0;
+
+  // Attempt to do antialiasing at pixel level instead of subpixel
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

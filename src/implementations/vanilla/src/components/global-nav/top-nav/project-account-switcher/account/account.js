@@ -14,6 +14,8 @@ class Account {
         return new Item(options);
     }
 
+    
+
 }
 
 Account._interface = Interface['components']['GlobalNav']['partials']['TopNav']['partials']['ProjectAccountSwitcher']['partials']['Account'];

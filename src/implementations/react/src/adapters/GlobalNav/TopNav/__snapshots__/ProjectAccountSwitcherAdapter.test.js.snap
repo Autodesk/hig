@@ -34,12 +34,8 @@ exports[`<ProjectAccountSwitcher> renders a projectAccountSwitcher 1`] = `
         <div class=\\"hig__flyout__chevron\\"></div>
         <div class=\\"hig__flyout__panel\\">
             <div class=\\"hig__global-nav__top-nav__project-account-switcher__lists\\">
-    <div class=\\"hig__global-nav__top-nav__project-account-switcher__lists__list\\">
-        <!--ACCOUNTS-->
-    </div>
-    <div class=\\"hig__global-nav__top-nav__project-account-switcher__lists__list\\">
-        <!--PROJECTS-->
-    </div>
+    <!--ACCOUNTS-->
+    <!--PROJECTS-->
 </div><!--SLOT-->
         </div>
     </div>
@@ -92,12 +88,8 @@ exports[`<ProjectAccountSwitcher> sets and updates props 1`] = `
         <div class=\\"hig__flyout__chevron\\"></div>
         <div class=\\"hig__flyout__panel\\">
             <div class=\\"hig__global-nav__top-nav__project-account-switcher__lists\\">
-    <div class=\\"hig__global-nav__top-nav__project-account-switcher__lists__list\\">
-        <!--ACCOUNTS-->
-    </div>
-    <div class=\\"hig__global-nav__top-nav__project-account-switcher__lists__list\\">
-        <!--PROJECTS-->
-    </div>
+    <!--ACCOUNTS-->
+    <!--PROJECTS-->
 </div><!--SLOT-->
         </div>
     </div>

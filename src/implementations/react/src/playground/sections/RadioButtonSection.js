@@ -1,6 +1,6 @@
 import React from 'react';
 import PlaygroundSection from '../PlaygroundSection';
-import { RadioButton } from '../../react-hig';
+import { RadioButton } from '../../hig-react';
 
 const checkboxStyle = {
   display: 'flex',

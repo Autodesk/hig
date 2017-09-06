@@ -1,14 +1,9 @@
+import React from "react";
+import * as PropTypes from "prop-types";
+import prepareUpdate from "./prepareUpdate";
 
-
-import React from 'react';
-import * as PropTypes from 'prop-types';
-
-import prepareUpdate from './prepareUpdate';
-
-
-export default function createComponent(ElementConstructor) {
+export default function createComponent(ElementConstructor, childContext = {}) {
   const displayName = ElementConstructor.name;
-
   /**
    * @augments {React.Component<*, *>}
    */
@@ -78,7 +73,7 @@ export default function createComponent(ElementConstructor) {
 
     render() {
       return React.createElement(
-        'hig-element',
+        "hig-element",
         {
           ref: r => this._el = r
         },
@@ -87,15 +82,7 @@ export default function createComponent(ElementConstructor) {
     }
 
     getChildContext() {
-      if (this.instance) {
-        return {
-          parent: this.instance
-        };
-      } else {
-        return {
-          parent: null
-        };
-      }
+      return this.instance ? { parent: this.instance, ...childContext } : {};
     }
   };
 

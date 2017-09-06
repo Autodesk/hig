@@ -3,20 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <title>HIG Example Tests</title>
-  <link rel="stylesheet" href="./dist/hig.css">
-  <script type="text/javascript" src="./dist/hig.js"></script>
+  <link rel="stylesheet" href="./lib/hig.css">
+  <script type="text/javascript" src="./lib/hig.js"></script>
   <style>
     body {
       margin: 30px;
     }
-    ul{
-      padding: 0 18px;
+
+    ul {
+      padding: 0;
+      list-style: none;
     }
   </style>
 </head>
 <body class='hig__typography'>
-  <div class='hig__typography hig__typography__h2'>HIG Vanilla Tests</div>
-  <div>
+  <div class='hig__typography__h2'>HIG Vanilla Tests</div>
+  <div class="hig__rich-text">
     <ul>
       {{#testLinks}}
       <li><a href="{{ & href }}">{{ title }}</a></li>
