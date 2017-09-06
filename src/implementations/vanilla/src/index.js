@@ -1,6 +1,7 @@
 const Hig = {};
 
 Hig.Button = require('./components/button/button.js');
+Hig.colors = require('./basics/colors/colors.js');
 Hig.Checkbox = require('./basics/form-elements/checkbox/checkbox.js');
 Hig.Dropdown = require('./basics/form-elements/dropdown/dropdown.js');
 Hig.FormElements = require('./basics/form-elements/form-elements.js');
@@ -21,6 +22,7 @@ Hig.TextField = require('./basics/form-elements/text-field/text-field.js');
 Hig.TextLink = require('./basics/text-link/text-link.js');
 Hig.Typography = require('./basics/typography/typography.js');
 Hig.Spacer = require('./basics/spacer/spacer.js');
+Hig.sizes = Hig.Spacer.SizeMap;
 Hig.Grid = require('./basics/grid/grid.js');
 
 module.exports = Hig;

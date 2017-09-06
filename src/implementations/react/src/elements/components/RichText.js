@@ -7,7 +7,7 @@ function RichText(props) {
 
 RichText.propTypes = {
   children: PropTypes.node,
-  dangerouslySetInnerHTML: PropTypes.node
+  dangerouslySetInnerHTML: PropTypes.any
 }
 
 RichText.defaultProps = {
