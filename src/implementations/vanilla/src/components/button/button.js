@@ -6,6 +6,7 @@ const Core = require('../../helpers/js/_core.js');
 
 const AvailableTypes = ['primary', 'secondary', 'flat'];
 const AvailableSizes = ['small', 'standard', 'large'];
+const AvailableModes = ['fit', 'fill'];
 
 /**
  * Creates a button
@@ -43,6 +44,18 @@ class Button extends Core {
       console.error(
         `Button type "${type}" not found, only these types are allowed: `,
         AvailableTypes,
+      );
+    }
+  }
+
+  setMode(mode) {
+    if (AvailableModes.indexOf(mode) > -1) {
+      this._clearAllModes();
+      this.el.classList.add(`hig__button--${mode}`);
+    } else {
+      console.error(
+        `Button type "${mode}" not found, only these types are allowed: `,
+        AvailableModes,
       );
     }
   }
@@ -110,6 +123,12 @@ class Button extends Core {
       this.el.classList.remove(`hig__button--${size}`);
     });
   }
+
+  _clearAllModes() {
+    AvailableModes.forEach((mode) => {
+      this.el.classList.remove(`hig__button--${mode}`);
+    });
+  }
 }
 
 Button._interface = Interface.components.Button;
@@ -118,6 +137,7 @@ Button._defaults = {
   link: '#',
   type: 'primary',
   size: 'standard',
+  mode: 'fit',
   icon: false,
 };
 

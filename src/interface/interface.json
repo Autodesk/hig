@@ -789,6 +789,7 @@
         "link": "{String} link of the button",
         "size": "{String} size of the button: standard (default), small, large",
         "title": "{String} title of the button",
+        "mode": "{String} either 'fill' or 'fit', defaults to 'fit', determines if a button should take over the remaining space or not",
         "type": "{String} type of the button: primary (default), secondary or flat"
       },
       "methods": {
@@ -846,6 +847,12 @@
           "desc": "sets the type of a button",
           "params": [
             "{String} type can be either: primary (default), secondary or flat"
+          ]
+        },
+        "setMode": {
+          "desc": "sets the mode of a button",
+          "params": [
+            "{String} mode - either 'fill' or 'fit'"
           ]
         }
       }

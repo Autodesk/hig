@@ -47,6 +47,17 @@
             <div class='test-mount-flat-disable'></div>
         </div>
 
+        <div class='test-container'>
+            <div class='test-typo-primary-fill'></div>
+
+            <div class='test-mount-primary-fill-small'></div>
+            <div class='test-mount-primary-fill'></div>
+            <div class='test-mount-primary-fill-icon'></div>
+            <div class='test-mount-primary-fill-large'></div>
+            <div class='test-mount-primary-fill-disable'></div>
+        </div>
+
+
 
         <div class='test-container'>
             <div class='test-typo-js'></div>
@@ -345,6 +356,67 @@
             UnmountButton.mount(".test-js-unmount");
 
             UnmountButton.unmount();
+
+            // ----------------------------
+            // FILL BUTTON
+            // ----------------------------
+
+            var TitlePrimaryButton = new Hig.Typography({
+                "text": "Fill Button",
+                "type": "h2"
+            });
+
+            TitlePrimaryButton.mount('.test-typo-primary-fill');
+
+            // Standard Size
+
+            var PrimaryStandardSize = new Hig.Button({
+                "title": "Standard Size",
+                "mode": "fill",
+            });
+
+            PrimaryStandardSize.mount(".test-mount-primary-fill");
+
+            // Standard Size with icon
+
+            var PrimaryStandardSizeWithIcon = new Hig.Button({
+                "title": "Standard Size",
+                "mode": "fill",
+                "icon": "gear"
+            });
+
+            PrimaryStandardSizeWithIcon.mount(".test-mount-primary-fill-icon");
+
+            // Small Size
+
+            var PrimarySmallSize = new Hig.Button({
+                "title": "Small Size",
+                "mode": "fill",
+                "size": "small"
+            });
+
+            PrimarySmallSize.mount(".test-mount-primary-fill-small");
+
+            // Large Size
+
+            var PrimarylargeSize = new Hig.Button({
+                "title": "Large Size",
+                "mode": "fill",
+                "size": "large"
+            });
+
+            PrimarylargeSize.mount(".test-mount-primary-fill-large");
+
+            // Disabled Size
+
+            var PrimaryDisabled = new Hig.Button({
+                "title": "Disabled Button",
+                "mode": "fill",
+            });
+
+            PrimaryDisabled.mount(".test-mount-primary-fill-disable");
+
+            PrimaryDisabled.disable();
 
 
         </script>
