@@ -1,38 +1,35 @@
 import React from 'react';
 import PlaygroundSection from '../PlaygroundSection';
 import { Spacer } from '../../hig-react';
-import createSlotComponent from '../../adapters/createSlotComponent';
-
-const Slot = createSlotComponent();
 
 function SpacerSection() {
   return ( <PlaygroundSection title="SPACE">
       <Spacer type="inline" width="m" inset="xl">
-        <Slot>
+        <Spacer.Slot>
           <p className="spacer_para">STACK M WIDTH</p>
           <p className="spacer_para">STACK XL INSET</p>
-        </Slot>
+        </Spacer.Slot>
       </Spacer>
       <p></p>
       <Spacer type="inline" width="none" inset="none">
-        <Slot>
+        <Spacer.Slot>
           <p className="spacer_para">NO WIDTH OR INSET</p>
           <p className="spacer_para">NO WIDTH OR INSET</p>
-        </Slot>
+        </Spacer.Slot>
       </Spacer>
       <p></p>
       <Spacer type="stack" width="xxs" inset="xxl">
-        <Slot>
+        <Spacer.Slot>
           <p className="spacer_para">STACK XXS WIDTH</p>
           <p className="spacer_para">STACK XXL INSET</p>
-        </Slot>
+        </Spacer.Slot>
       </Spacer>
       <p></p>
       <Spacer type="stack" width="none" inset="none">
-        <Slot>
+        <Spacer.Slot>
           <p className="spacer_para">NO WIDTH OR INSET</p>
           <p className="spacer_para">NO WIDTH OR INSET</p>
-        </Slot>
+        </Spacer.Slot>
       </Spacer>
       </PlaygroundSection>
   )

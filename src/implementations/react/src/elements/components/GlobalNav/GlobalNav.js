@@ -44,7 +44,7 @@ class GlobalNav extends Component {
       activeProjectId: PropTypes.any,
       activeAccountId: PropTypes.any,
     }),
-    
+
     showSubNav: PropTypes.bool
   }
 
@@ -82,8 +82,10 @@ class GlobalNav extends Component {
     return activeModule;
   }
 
-  showProjectAccountSwitcher(){
-   return ( this.props.topNav.accounts && this.props.topNav.accounts.length > 0 || this.props.topNav.projects && this.props.topNav.projects.length > 0)
+  showProjectAccountSwitcher() {
+    const accounts = this.props.topNav.accounts || [];
+    const projects = this.props.topNav.projects || [];
+    return accounts.length > 0 || projects.length > 0;
   }
 
   renderTab = (submodule) => {
@@ -100,52 +102,54 @@ class GlobalNav extends Component {
     const activeModule = this.renderedActiveModule();
 
     return (
-      <GlobalNavAdapter sideNavOpen={this.renderedSideNavOpen()} >
-        <TopNavAdapter
-          onHamburgerClick={this.toggleSideNavOpen}
-          {...this.props.topNav}
-        >
-        {this.showProjectAccountSwitcher() 
-          ? <ProjectAccountSwitcher
-              accounts={this.props.topNav.accounts}
-              projects={this.props.topNav.projects}
-              accountTitle={this.props.topNav.accountTitle}
-              projectTitle={this.props.topNav.projectTitle}
-              activeProjectId={this.props.topNav.activeProjectId}
-              activeAccountId={this.props.topNav.activeAccountId}
-              onProjectClick={this.props.topNav.onProjectClick}
-              onAccountClick={this.props.topNav.onAccountClick}
-            />
-          : null}
-        </TopNavAdapter>
-        <SideNav
-          activeModuleId={this.props.activeModuleId}
-          activeSubmoduleId={this.props.activeSubmoduleId}
-          modules={this.props.modules}
-          onModuleChange={this.props.onModuleChange}
-          onSubmoduleChange={this.props.onSubmoduleChange}
-          submodules={this.props.submodules}
-          {...this.props.sideNav}
-        />
-        {activeModule && this.props.showSubNav
-          ? <SubNavAdapter
-              moduleIndicatorName={activeModule.title}
-              moduleIndicatorIcon={activeModule.icon}
-            >
-              {activeModule.submodules.length > 0
-                ? <Tabs
-                    selectedTabId={this.props.activeModuleId}
-                    onChange={this.props.onModuleChange}
-                    >
-                      {activeModule.submodules.map(this.renderTab)}
-                  </Tabs>
-                : null}
-            </SubNavAdapter>
-          : null}
-        {this.props.children
-          ? <Slot>{this.props.children}</Slot>
-          : null}
-      </GlobalNavAdapter>
+      <div>
+        <GlobalNavAdapter sideNavOpen={this.renderedSideNavOpen()} >
+          <TopNavAdapter
+            onHamburgerClick={this.toggleSideNavOpen}
+            {...this.props.topNav}
+          >
+          {this.showProjectAccountSwitcher()
+            ? <ProjectAccountSwitcher
+                accounts={this.props.topNav.accounts}
+                projects={this.props.topNav.projects}
+                accountTitle={this.props.topNav.accountTitle}
+                projectTitle={this.props.topNav.projectTitle}
+                activeProjectId={this.props.topNav.activeProjectId}
+                activeAccountId={this.props.topNav.activeAccountId}
+                onProjectClick={this.props.topNav.onProjectClick}
+                onAccountClick={this.props.topNav.onAccountClick}
+              />
+            : null}
+          </TopNavAdapter>
+          <SideNav
+            activeModuleId={this.props.activeModuleId}
+            activeSubmoduleId={this.props.activeSubmoduleId}
+            modules={this.props.modules}
+            onModuleChange={this.props.onModuleChange}
+            onSubmoduleChange={this.props.onSubmoduleChange}
+            submodules={this.props.submodules}
+            {...this.props.sideNav}
+          />
+          {activeModule && this.props.showSubNav
+            ? <SubNavAdapter
+                moduleIndicatorName={activeModule.title}
+                moduleIndicatorIcon={activeModule.icon}
+              >
+                {activeModule.submodules.length > 0
+                  ? <Tabs
+                      selectedTabId={this.props.activeModuleId}
+                      onChange={this.props.onModuleChange}
+                      >
+                        {activeModule.submodules.map(this.renderTab)}
+                    </Tabs>
+                  : null}
+              </SubNavAdapter>
+            : null}
+          {this.props.children
+            ? <Slot>{this.props.children}</Slot>
+            : null}
+        </GlobalNavAdapter>
+      </div>
     )
   }
 }
