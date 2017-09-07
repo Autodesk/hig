@@ -8,8 +8,8 @@ function ButtonSection() {
 
       <Button
         size="standard"
-        title="Standard Fill Button"
-        mode="fill"
+        title="Grow Width Button"
+        width="grow"
         onClick={() => {
           console.log('Small Button on click');
         }}

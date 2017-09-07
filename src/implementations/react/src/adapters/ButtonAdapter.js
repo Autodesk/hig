@@ -130,8 +130,8 @@ export class ButtonAdapter extends HIGElement {
           this.hig.setSize(propValue);
           break;
         }
-        case 'mode': {
-          this.hig.setMode(propValue);
+        case 'width': {
+          this.hig.setWidth(propValue);
           break;
         }
         default: {
@@ -154,7 +154,7 @@ ButtonComponent.propTypes = {
   title: PropTypes.string,
   size: PropTypes.string,
   type: PropTypes.string,
-  mode: PropTypes.string,
+  width: PropTypes.string,
   icon: PropTypes.string
 };
 
@@ -176,8 +176,8 @@ ButtonComponent.__docgenInfo = {
       description: 'specifies type of button'
     },
 
-    mode: {
-      description: 'specifies mode of button (fit or fill)'
+    width: {
+      description: 'specifies width of button (grow or shrink)'
     },
 
     icon: {
