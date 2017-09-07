@@ -5,6 +5,16 @@ import { Button } from '../../hig-react';
 function ButtonSection() {
   return (
     <PlaygroundSection title="Button">
+
+      <Button
+        size="standard"
+        title="Grow Width Button"
+        width="grow"
+        onClick={() => {
+          console.log('Small Button on click');
+        }}
+      />
+
       <Button
         size="small"
         title="Small Button"

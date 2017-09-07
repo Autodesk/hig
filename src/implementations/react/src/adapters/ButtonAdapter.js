@@ -130,6 +130,10 @@ export class ButtonAdapter extends HIGElement {
           this.hig.setSize(propValue);
           break;
         }
+        case 'width': {
+          this.hig.setWidth(propValue);
+          break;
+        }
         default: {
           console.warn(`${propKey} is unknown`);
         }
@@ -150,6 +154,7 @@ ButtonComponent.propTypes = {
   title: PropTypes.string,
   size: PropTypes.string,
   type: PropTypes.string,
+  width: PropTypes.string,
   icon: PropTypes.string
 };
 
@@ -169,6 +174,10 @@ ButtonComponent.__docgenInfo = {
 
     type: {
       description: 'specifies type of button'
+    },
+
+    width: {
+      description: 'specifies width of button (grow or shrink)'
     },
 
     icon: {

@@ -6,6 +6,7 @@ const Core = require('../../helpers/js/_core.js');
 
 const AvailableTypes = ['primary', 'secondary', 'flat'];
 const AvailableSizes = ['small', 'standard', 'large'];
+const AvailableWidths = ['shrink', 'grow'];
 
 /**
  * Creates a button
@@ -43,6 +44,18 @@ class Button extends Core {
       console.error(
         `Button type "${type}" not found, only these types are allowed: `,
         AvailableTypes,
+      );
+    }
+  }
+
+  setWidth(width) {
+    if (AvailableWidths.indexOf(width) > -1) {
+      this._clearAllWidths();
+      this.el.classList.add(`hig__button--${width}`);
+    } else {
+      console.error(
+        `Button type "${width}" not found, only these types are allowed: `,
+        AvailableWidths,
       );
     }
   }
@@ -110,6 +123,12 @@ class Button extends Core {
       this.el.classList.remove(`hig__button--${size}`);
     });
   }
+
+  _clearAllWidths() {
+    AvailableWidths.forEach((width) => {
+      this.el.classList.remove(`hig__button--${width}`);
+    });
+  }
 }
 
 Button._interface = Interface.components.Button;
@@ -118,6 +137,7 @@ Button._defaults = {
   link: '#',
   type: 'primary',
   size: 'standard',
+  width: 'shrink',
   icon: false,
 };
 
