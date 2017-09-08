@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PlaygroundSection from '../PlaygroundSection';
 import { PasswordField } from '../../hig-react';
 
-class PasswordFieldSection extends Component {
+class PasswordFieldSection extends PureComponent {
   constructor() {
     super();
     this.state = {};

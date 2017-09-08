@@ -203,7 +203,7 @@ class TextField extends Core {
   }
 
   _detectPresenceOfValue(value) {
-    if (value.length === 0) {
+    if (value === undefined || value.length === 0) {
       this.el
         .querySelector('.hig__text-field__input')
         .classList.add('hig__text-field__input--no-value');

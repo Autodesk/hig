@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PlaygroundSection from '../PlaygroundSection';
 import { TextArea } from '../../hig-react';
 
@@ -12,7 +12,7 @@ function logEvent(event, higElement) {
   console.log(messageParts.join(''));
 }
 
-class TextAreaSection extends Component {
+class TextAreaSection extends PureComponent {
   constructor(props) {
     super(props);
     this.state = { value: '' };

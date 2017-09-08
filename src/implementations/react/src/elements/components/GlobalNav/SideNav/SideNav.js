@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import * as PropTypes from 'prop-types';
-import SideNavAdapter from '../../../../adapters/GlobalNav/SideNav/SideNavAdapter';
+import SideNavAdapter from '../../../../adapters/GlobalNav/SideNav/NewSideNavAdapter';
 import Submodule from './Submodule';
-import Group from '../../../../adapters/GlobalNav/SideNav/GroupAdapter';
+import Group from '../../../../adapters/GlobalNav/SideNav/NewGroupAdapter';
 import Module from './Module';
 import ModuleCollapse from './ModuleCollapse';
-import Link from '../../../../adapters/GlobalNav/SideNav/LinkAdapter';
+import Link from '../../../../adapters/GlobalNav/SideNav/NewLinkAdapter';
 import Search from './Search';
-import Slot from '../../../../adapters/SlotAdapter';
 import WithState from './WithState';
 
 class SideNav extends Component {
@@ -102,7 +101,7 @@ class SideNav extends Component {
           </Group>
         ))}
         {this.props.slot
-          ? <Slot>{this.props.slot}</Slot>
+          ? this.props.slot
           : null}
         {this.props.links.map(link => <Link {...link} key={link.title} />)}
         {this.props.searchable

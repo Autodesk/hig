@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import PlaygroundSection from "../PlaygroundSection";
 import { Grid, GridItem } from "../../hig-react";
 
-class GridSection extends Component {
+class GridSection extends PureComponent {
   render() {
     const style = {
       backgroundColor: "#FF5500",

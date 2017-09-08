@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import ModuleCollapseAdapter from '../../../../adapters/GlobalNav/SideNav/ModuleCollapseAdapter';
+import ModuleCollapseAdapter from '../../../../adapters/GlobalNav/SideNav/NewCollapseAdapter';
 
 class ModuleCollapse extends Component {
   static propTypes = {

@@ -1,8 +1,8 @@
 
 import React from 'react';
 
-import TabsAdapter from '../../../../adapters/GlobalNav/SubNav/TabsAdapter';
-import TabAdapter from '../../../../adapters/GlobalNav/SubNav/TabAdapter';
+import TabsAdapter from '../../../../adapters/GlobalNav/SubNav/NewTabsAdapter';
+import TabAdapter from '../../../../adapters/GlobalNav/SubNav/NewTabAdapter';
 
 class Tab extends React.Component {
   // This is never actually rendered

@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PlaygroundSection from '../PlaygroundSection';
 import { Button, Modal } from '../../hig-react';
 
-class ModalSection extends Component {
+class ModalSection extends PureComponent {
   constructor() {
     super();
-    this.state = { 
+    this.state = {
       isOpen: false,
       openUncontrolled: false
     };

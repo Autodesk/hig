@@ -1,10 +1,10 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import GlobalNavAdapter from '../../../../adapters/GlobalNav/GlobalNavAdapter';
-import SideNavAdapter from '../../../../adapters/GlobalNav/SideNav/SideNavAdapter';
-import SearchAdapter from '../../../../adapters/GlobalNav/SideNav/SearchAdapter';
-import GroupAdapter from '../../../../adapters/GlobalNav/SideNav/GroupAdapter';
+import GlobalNavAdapter from '../../../../adapters/GlobalNav/NewGlobalNavAdapter';
+import SideNavAdapter from '../../../../adapters/GlobalNav/SideNav/NewSideNavAdapter';
+import SearchAdapter from '../../../../adapters/GlobalNav/SideNav/NewSearchAdapter';
+import GroupAdapter from '../../../../adapters/GlobalNav/SideNav/NewGroupAdapter';
 import Module from './Module';
 
 describe('Module', () => {
