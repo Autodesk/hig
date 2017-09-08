@@ -5,7 +5,7 @@ import GlobalNavAdapter from '../../../adapters/GlobalNav/GlobalNavAdapter';
 import TopNavAdapter from '../../../adapters/GlobalNav/TopNav/TopNavAdapter';
 import SubNavAdapter from '../../../adapters/GlobalNav/SubNav/SubNavAdapter';
 import SideNav from './SideNav';
-import Slot from './Slot';
+import Slot from '../../../adapters/SlotAdapter';
 import Tabs from './SubNav/Tabs';
 import ProjectAccountSwitcher from './TopNav/ProjectAccountSwitcher';
 
@@ -19,7 +19,7 @@ class GlobalNav extends Component {
       onHeaderClick: PropTypes.func,
       onSuperHeaderClick: PropTypes.func,
       superHeaderLabel: PropTypes.string,
-      superHeaderLink: PropTypes.string,
+      superHeaderLink: PropTypes.string
     }),
     onModuleChange: PropTypes.func.isRequired,
     modules: PropTypes.arrayOf(
@@ -44,14 +44,14 @@ class GlobalNav extends Component {
       activeProjectId: PropTypes.any,
       activeAccountId: PropTypes.any,
     }),
-
     showSubNav: PropTypes.bool
   }
 
   static defaultProps = {
     modules: [],
     submodules: [],
-    topNav: {}
+    topNav: {},
+    sideNav: {}
   }
 
   constructor(props) {

@@ -39,6 +39,14 @@ class SideNav extends Core {
     }
   }
 
+  addSlot(slotElement) {
+    this._findOrAddElement(
+      'SLOT',
+      'div',
+      '.hig__side-nav__slot',
+    ).appendChild(slotElement);
+  }
+
   onHeaderClick(fn) {
     return this._attachListener('click', '.hig__global-nav__sidenav__header-link', this.el, fn);
   }

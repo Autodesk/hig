@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import * as PropTypes from 'prop-types';
+import HIGChildValidator from "../../../HIGChildValidator";
 import SideNavAdapter from '../../../../adapters/GlobalNav/SideNav/SideNavAdapter';
 import Submodule from './Submodule';
 import Group from '../../../../adapters/GlobalNav/SideNav/GroupAdapter';
@@ -7,6 +8,7 @@ import Module from './Module';
 import ModuleCollapse from './ModuleCollapse';
 import Link from '../../../../adapters/GlobalNav/SideNav/LinkAdapter';
 import Search from './Search';
+import Slot from '../../../../adapters/SlotAdapter';
 import WithState from './WithState';
 
 class SideNav extends Component {
@@ -34,6 +36,7 @@ class SideNav extends Component {
     onModuleClick: PropTypes.func.isRequired,
     onSubmoduleClick: PropTypes.func.isRequired,
     searchable: PropTypes.bool,
+    slot: PropTypes.node,
     superHeaderLabel: PropTypes.string,
     superHeaderLink: PropTypes.string
   };
@@ -95,6 +98,9 @@ class SideNav extends Component {
             })}
           </Group>
         ))}
+        {this.props.slot
+          ? <Slot>{this.props.slot}</Slot>
+          : null}
         {this.props.links.map(link => <Link {...link} key={link.title} />)}
         {this.props.searchable
           ? <Search onInput={this.props.setQuery} value={this.props.query} />
