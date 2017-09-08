@@ -4,9 +4,9 @@ import { mount } from 'enzyme';
 import ProjectAccountSwitcher from './ProjectAccountSwitcher';
 import Project from './Project';
 import Account from './Account';
-import GlobalNavAdapter from '../../../../adapters/GlobalNav/GlobalNavAdapter';
-import TopNavAdapter from '../../../../adapters/GlobalNav/TopNav/TopNavAdapter';
-import ProjectAccountSwitcherAdapter from '../../../../adapters/GlobalNav/TopNav/ProjectAccountSwitcherAdapter';
+import GlobalNavAdapter from '../../../../adapters/GlobalNav/NewGlobalNavAdapter';
+import TopNavAdapter from '../../../../adapters/GlobalNav/TopNav/NewTopNavAdapter';
+import ProjectAccountSwitcherAdapter from '../../../../adapters/GlobalNav/TopNav/NewProjectAccountSwitcherAdapter';
 
 class Context extends Component {
   static defaultProps = {

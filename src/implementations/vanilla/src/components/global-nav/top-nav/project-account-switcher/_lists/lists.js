@@ -1,8 +1,8 @@
-var Template = require("./lists.html");
-var Interface = require("interface.json");
-var Core = require("_core.js");
+const Template = require('./lists.html');
+const Interface = require('interface.json');
+const Core = require('_core.js');
 
-var List = require("./_list/_list.js");
+const List = require('./_list/_list.js');
 
 /**
  * Creates an Lists
@@ -23,38 +23,56 @@ class Lists extends Core {
     this.accountTitle = false;
   }
 
-  addProject(newInstance, referenceInstance) {
-    if (!this.projectList) {
-      this.projectList = new List();
-      this.mountPartialToComment("PROJECTS", this.projectList);
-      if (this.options.projectTitle) {
-        this.projectTitle = this.projectList.addTitle(
-          this.options.projectTitle
-        );
-      }
+  _componentDidMount() {
+    if (this.options.accountTitle) {
+      this.setAccountTitle(this.options.accountTitle);
     }
+
+    if (this.options.projectTitle) {
+      this.setProjectTitle(this.options.projectTitle);
+    }
+  }
+
+  addProject(newInstance, referenceInstance) {
+    this._ensureProjectsList();
     this.projectList.addItem(newInstance, referenceInstance);
   }
 
   addAccount(newInstance, referenceInstance) {
-    if (!this.accountList) {
-      this.accountList = new List();
-      this.mountPartialToComment("ACCOUNTS", this.accountList);
-      if (this.options.accountTitle) {
-        this.accountTitle = this.accountList.addTitle(
-          this.options.accountTitle
-        );
-      }
-    }
+    this._ensureAccountsList();
     this.accountList.addItem(newInstance, referenceInstance);
   }
 
   setProjectTitle(title) {
-    this.projectTitle.setTitle(title);
+    if (this.projectTitle) {
+      this.projectTitle.setTitle(title);
+    } else {
+      this._ensureProjectsList();
+      this.projectTitle = this.projectList.addTitle(title);
+    }
   }
 
   setAccountTitle(title) {
-    this.accountTitle.setTitle(title);
+    if (this.accountTitle) {
+      this.accountTitle.setTitle(title);
+    } else {
+      this._ensureAccountsList();
+      this.accountTitle = this.accountList.addTitle(title);
+    }
+  }
+
+  _ensureAccountsList() {
+    if (this.accountList) { return; }
+
+    this.accountList = new List();
+    this.mountPartialToComment('ACCOUNTS', this.accountList);
+  }
+
+  _ensureProjectsList() {
+    if (this.projectList) { return; }
+
+    this.projectList = new List();
+    this.mountPartialToComment('PROJECTS', this.projectList);
   }
 }
 
@@ -68,8 +86,8 @@ Lists._interface = {
   }
 };
 Lists._defaults = {
-  projectTitle: "",
-  accountTitle: ""
+  projectTitle: '',
+  accountTitle: ''
 };
 Lists._partials = {};
 

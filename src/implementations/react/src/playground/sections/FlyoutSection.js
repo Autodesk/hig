@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PlaygroundSection from '../PlaygroundSection';
 import { Button, Flyout } from '../../hig-react';
 
-class FlyoutSection extends Component {
+class FlyoutSection extends PureComponent {
   constructor() {
     super();
     this.state = { isOpen: false };

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import AccountAdapter from '../../../../adapters/GlobalNav/TopNav/AccountAdapter';
+import AccountAdapter from '../../../../adapters/GlobalNav/TopNav/NewAccountAdapter';
 
 class Account extends Component {
   static propTypes = {

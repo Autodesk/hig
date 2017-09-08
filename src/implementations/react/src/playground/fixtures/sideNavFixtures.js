@@ -256,13 +256,16 @@ export const submodules = [
 ];
 
 export const links = [
-  { title: "Autodesk Main", url: "http://www.autodesk.com" },
+  {
+    title: "Autodesk Main",
+    link: "http://www.autodesk.com"
+  },
   {
     title: "AutoCAD",
-    url: "https://www.autodesk.com/products/autocad/overview"
+    link: "https://www.autodesk.com/products/autocad/overview"
   },
   {
     title: "Maya",
-    url: "https://www.autodesk.com/products/maya/overview"
+    link: "https://www.autodesk.com/products/maya/overview"
   }
 ];

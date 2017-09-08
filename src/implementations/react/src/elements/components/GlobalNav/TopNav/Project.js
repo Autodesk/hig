@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import ProjectAdapter from '../../../../adapters/GlobalNav/TopNav/ProjectAdapter';
+import ProjectAdapter from '../../../../adapters/GlobalNav/TopNav/NewProjectAdapter';
 
 class Project extends Component {
   static propTypes = {

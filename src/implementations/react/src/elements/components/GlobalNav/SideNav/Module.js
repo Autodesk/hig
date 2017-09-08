@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import ModuleAdapter from '../../../../adapters/GlobalNav/SideNav/ModuleAdapter';
+import ModuleAdapter from '../../../../adapters/GlobalNav/SideNav/NewModuleAdapter';
 
 class Module extends Component {
   static propTypes = {

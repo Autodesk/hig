@@ -33,7 +33,7 @@
     "jest-enzyme": "^3.7.0",
     "prop-types": "^15.5.10",
     "react": "^15.4.1",
-    "react-addons-test-utils": "^15.6.0",
+    "react-addons-test-utils": "^15.6.2",
     "react-devtools-core": "^2.0.12",
     "react-dom": "^15.6.1",
     "react-scripts": "1.0.1",

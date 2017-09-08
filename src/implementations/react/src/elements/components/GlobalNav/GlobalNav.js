@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import GlobalNavAdapter from '../../../adapters/GlobalNav/GlobalNavAdapter';
-import TopNavAdapter from '../../../adapters/GlobalNav/TopNav/TopNavAdapter';
-import SubNavAdapter from '../../../adapters/GlobalNav/SubNav/SubNavAdapter';
+import GlobalNavAdapter from '../../../adapters/GlobalNav/NewGlobalNavAdapter';
+import TopNavAdapter from '../../../adapters/GlobalNav/TopNav/NewTopNavAdapter';
+import SubNavAdapter from '../../../adapters/GlobalNav/SubNav/NewSubNavAdapter';
 import HelpAdapter from '../../../adapters/GlobalNav/TopNav/Help/HelpAdapter';
 import GroupAdapter from '../../../adapters/GlobalNav/TopNav/Help/GroupAdapter';
 import OptionAdapter from '../../../adapters/GlobalNav/TopNav/Help/OptionAdapter';
 import SideNav from './SideNav';
-import Slot from '../../../adapters/SlotAdapter';
 import Tabs from './SubNav/Tabs';
 import ProjectAccountSwitcher from './TopNav/ProjectAccountSwitcher';
 
@@ -138,9 +137,9 @@ class GlobalNav extends Component {
               {this.showHelp()
               ? <HelpAdapter {...this.props.topNav.help}>
                 {(this.props.topNav.help.groups || []).map(groupProps => (
-                  <GroupAdapter {...groupProps}>
+                  <GroupAdapter key={groupProps.options} {...groupProps}>
                     {(groupProps.options || []).map(optionProps => (
-                      <OptionAdapter {...optionProps} />
+                      <OptionAdapter key={optionProps.name} {...optionProps} />
                     ))}
                   </GroupAdapter>
                 ))}
@@ -172,7 +171,7 @@ class GlobalNav extends Component {
               </SubNavAdapter>
             : null}
           {this.props.children
-            ? <Slot>{this.props.children}</Slot>
+            ? this.props.children
             : null}
         </GlobalNavAdapter>
       </div>

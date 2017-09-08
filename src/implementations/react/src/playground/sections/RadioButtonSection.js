@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PlaygroundSection from '../PlaygroundSection';
 import { RadioButton } from '../../hig-react';
 
@@ -18,7 +18,7 @@ function logEvent(event) {
   console.log(messageParts.join(''));
 }
 
-class RadioButtonSection extends Component {
+class RadioButtonSection extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {

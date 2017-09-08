@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import * as PropTypes from 'prop-types';
 
-function PlaygroundSection(props) {
-  return (
-    <section>
-      <h3>{props.title}</h3>
-      {props.children}
-    </section>
-  )
+class PlaygroundSection extends PureComponent {
+  render() {
+    return (
+      <section>
+        <h3>{this.props.title}</h3>
+        {this.props.children}
+      </section>
+    )
+  }
 }
 
 PlaygroundSection.propTypes = {
