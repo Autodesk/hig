@@ -86,6 +86,10 @@ class Button extends Core {
     }
   }
 
+  setTarget(target) {
+    this.el.setAttribute('target', target);
+  }
+
   disable() {
     this.el.classList.add('hig__button--disabled');
     this.el.setAttribute('tabindex', '-1');
@@ -133,12 +137,13 @@ class Button extends Core {
 
 Button._interface = Interface.components.Button;
 Button._defaults = {
-  title: 'link',
-  link: '#',
-  type: 'primary',
-  size: 'standard',
-  width: 'shrink',
   icon: false,
+  link: '#',
+  size: 'standard',
+  target: '_self',
+  title: 'link',
+  type: 'primary',
+  width: 'shrink'
 };
 
 Button.AvailableTypes = AvailableTypes;
