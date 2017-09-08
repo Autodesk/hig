@@ -118,6 +118,10 @@ export class ButtonAdapter extends HIGElement {
           );
           break;
         }
+        case 'target': {
+          this.hig.setTarget(propValue);
+          break;
+        }
         case 'title': {
           this.hig.setTitle(propValue);
           break;
