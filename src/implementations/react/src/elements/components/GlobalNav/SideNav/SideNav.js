@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import * as PropTypes from 'prop-types';
-import HIGChildValidator from "../../../HIGChildValidator";
 import SideNavAdapter from '../../../../adapters/GlobalNav/SideNav/SideNavAdapter';
 import Submodule from './Submodule';
 import Group from '../../../../adapters/GlobalNav/SideNav/GroupAdapter';
