@@ -10,7 +10,7 @@ import SideNavAdapterComponent, {
 } from "./SideNav/SideNavAdapter";
 import TopNavAdapterComponent, { TopNavAdapter } from "./TopNav/TopNavAdapter";
 import SubNavAdapterComponent, { SubNavAdapter } from "./SubNav/SubNavAdapter";
-import Slot from "../../elements/components/GlobalNav/Slot";
+import Slot from "../SlotAdapter";
 import SideNav from "../../elements/components/GlobalNav/SideNav";
 
 class GlobalNavAdapter extends HIGElement {

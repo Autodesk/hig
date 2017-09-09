@@ -4,7 +4,7 @@ import * as PropTypes from 'prop-types';
 import HIGElement from '../elements/HIGElement';
 import HIGChildValidator from '../elements/HIGChildValidator';
 import createComponent from './createComponent';
-import Slot from '../elements/components/GlobalNav/Slot';
+import Slot from './SlotAdapter';
 
 class SpacerAdapter extends HIGElement {
   constructor(initialProps) {

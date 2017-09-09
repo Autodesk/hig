@@ -2,7 +2,7 @@ import {mount} from 'enzyme';
 import * as HIG from 'hig-vanilla';
 import React from 'react';
 
-import Slot from '../elements/components/GlobalNav/Slot';
+import Slot from './SlotAdapter';
 import Spacer from './SpacerAdapter'
 
 const Context = props => {

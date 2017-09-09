@@ -9,6 +9,7 @@ import GroupComponent, { GroupAdapter } from "./GroupAdapter";
 import LinkComponent, { LinkAdapter } from "./LinkAdapter";
 import SearchComponent, { SearchAdapter } from "./SearchAdapter";
 import Search from '../../../elements/components/GlobalNav/SideNav/Search';
+import Slot from '../../SlotAdapter';
 
 export class SideNavAdapter extends HIGElement {
   constructor(HIGConstructor, initialProps) {
@@ -66,6 +67,10 @@ export class SideNavAdapter extends HIGElement {
 
     if (this.props.onSuperHeaderClick) {
       this.commitUpdate(["onSuperHeaderClick", this.props.onSuperHeaderClick]);
+    }
+
+    if (this.slot) {
+      this.hig.addSlot(this.slot);
     }
   }
 
@@ -171,6 +176,14 @@ export class SideNavAdapter extends HIGElement {
     }
   }
 
+  addSlot(element) {
+    if (this.mounted) {
+      this.hig.addSlot(element);
+    } else {
+      this.slot = element;
+    }
+  }
+
   removeChild(instance) {
     if (instance instanceof GroupAdapter) {
       this.groups.removeChild(instance);
@@ -191,7 +204,7 @@ export class SideNavAdapter extends HIGElement {
 const SideNavComponent = createComponent(SideNavAdapter);
 
 SideNavComponent.propTypes = {
-  children: HIGChildValidator([GroupComponent, LinkComponent, SearchComponent, Search]),
+  children: HIGChildValidator([GroupComponent, LinkComponent, SearchComponent, Search, Slot]),
   copyright: PropTypes.string,
   headerLabel: PropTypes.string,
   headerLink: PropTypes.string,

@@ -39,6 +39,7 @@ exports[`<GlobalNavAdapter> sideNavOpen prop can render the SideNav as a child 1
     <div class=\\"hig__global-nav__sidenav__groups\\">
       <!--GROUP-->
     </div>
+    <!--SLOT-->
     <div class=\\"hig__global-nav__sidenav__links\\">
       <!--LINK-->
     </div>

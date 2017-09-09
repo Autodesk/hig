@@ -8,6 +8,7 @@ import Search from './SearchAdapter';
 import Group from './GroupAdapter';
 import Module from './ModuleAdapter';
 import Submodule from './SubmoduleAdapter';
+import Slot from '../../SlotAdapter';
 
 describe('<SideNav>', () => {
   function createHigComponent(defaults = {}) {
@@ -99,7 +100,7 @@ describe('<SideNav>', () => {
     );
   });
 
-  describe('<SideNav> with search', () => {
+  describe('with search', () => {
     const Context = props => {
       return (
         <GlobalNav>
@@ -131,6 +132,39 @@ describe('<SideNav>', () => {
         submoduleTitle1: 'Document',
         submoduleTitle2: 'Workflow'
       };
+      const { reactContainer } = setupReactContext(props);
+      expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
+    });
+  });
+
+  describe('with slot content', () => {
+    const Context = props => {
+      return (
+        <GlobalNav>
+          <SideNav>
+            <Group>
+              <Module title={props.moduleTitle} icon="assets">
+                <Submodule title={props.submoduleTitle1} icon="assets" />
+                <Submodule title={props.submoduleTitle2} icon="assets" />
+              </Module>
+            </Group>
+            <Slot>
+              <h1>Hello, world!</h1>
+            </Slot>
+            <Search query={props.query} />
+          </SideNav>
+        </GlobalNav>
+      );
+    };
+
+    function setupReactContext(props) {
+      const reactContainer = document.createElement('div');
+      mount(<Context {...props} />, { attachTo: reactContainer });
+      return { reactContainer };
+    }
+
+    it('renders children correctly', () => {
+      const props = {};
       const { reactContainer } = setupReactContext(props);
       expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
     });
