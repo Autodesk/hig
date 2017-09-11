@@ -64,6 +64,7 @@ class Modal extends Core {
 
   close() {
     this.el.classList.remove('hig__modal--open');
+    this.el.classList.add('hig__modal--close');
   }
 
   mount(mountNode) {
@@ -91,6 +92,7 @@ class Modal extends Core {
   }
 
   open() {
+    this.el.classList.remove('hig__modal--close');
     this.el.classList.add('hig__modal--open');
     this._handleHasScrolling();
   }

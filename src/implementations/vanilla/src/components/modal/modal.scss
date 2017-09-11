@@ -13,6 +13,8 @@ $shadow-layer: -1;
   color: #2A3B4D;
   opacity: 0;
   pointer-events: none;
+  transition: all ease 0.2s;
+  transition-delay: 0.2s;
 
   &.hig__modal--open {
     opacity: 1.0;
@@ -51,6 +53,17 @@ $shadow-layer: -1;
 
   @include phone-breakpoint {
     width: 500px;
+  }
+
+  @keyframes close-animation {
+    0% { top: 131px; }
+    30% { top: 125px; }
+  }
+
+  .hig__modal--close & {
+    animation: close-animation 0.4s;
+    transition: all ease 0.2s;
+    transition-delay: 0.2s;
   }
 
   .hig__modal--open & {
