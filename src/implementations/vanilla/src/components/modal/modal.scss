@@ -22,31 +22,30 @@ $shadow-layer: -1;
 }
 
 .hig__modal__overlay {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
   background-color: rgba(0, 0, 0, 0.4);
+  bottom: 0px;
+  left: 0px;
+  position: fixed;
+  right: 0px;
+  top: 0px;
 }
 
 .hig__modal__window {
-  position: absolute;
+  background: color(hig-white);
+  border: 3px solid color(hig-blue-20);
+  border-radius: 4px;
+  box-shadow: 0 0 8px 0 rgba(190, 200, 210, 0.4);
   display: flex;
   flex-direction: column;
-  top: 128px;
-  max-width: calc(100vw - 32px);
-  width: 600px;
   left: 50%;
-  transform: translateX(-50%);
   max-height: calc(100vh - 256px);
-  overflow: hidden;
-
-  border: 3px solid color(hig-blue-20);
-  background: color(hig-white);
-  border-radius: 4px;
+  max-width: calc(100vw - 32px);
   outline: none;
-  box-shadow: 0 0 8px 0 rgba(190, 200, 210, 0.4);
+  overflow: hidden;
+  position: absolute;
+  top: 128px;
+  transform: translateX(-50%);
+  width: 600px;
 
   @include phone-breakpoint {
     width: 500px;
@@ -54,13 +53,13 @@ $shadow-layer: -1;
 }
 
 .hig__modal__close-button {
-  position: absolute;
-  top: 16px;
-  right: 0;
-  z-index: $close-button-layer;
-  border: none;
   background: none;
+  border: none;
   cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 16px;
+  z-index: $close-button-layer;
 
   &:focus {
     outline: none;
@@ -71,20 +70,20 @@ $shadow-layer: -1;
   }
 
   .hig__modal__window--alternate & {
-    top: 16px;
     right: 16px;
+    top: 16px;
   }
 }
 
 .hig__modal__header {
-  position: relative;
-  margin: 0 32px;
-  padding: 16px 0;
-  font-size: 24px;
-  font-family: 'ArtifaktElement';
-  z-index: $header-layer;
   border-bottom: 1px solid color(hig-gray-50);
+  font-family: 'ArtifaktElement';
+  font-size: 24px;
+  margin: 0 32px;
   min-height: 33px;
+  padding: 16px 0;
+  position: relative;
+  z-index: $header-layer;
 
   .hig__modal__window--is-scrolling & {
     margin: 0;
@@ -100,36 +99,36 @@ $shadow-layer: -1;
 
 .hig__modal__body {
   display: flex;
+  flex: 1 1 auto;
   flex-direction: column;
   position: relative;
-  flex: 1 1 auto;
   z-index: $body-layer;
 }
 
 .hig__modal__slot {
-  padding: 0 32px;
-  overflow: auto;
-  flex: 1 1 auto;
   border: none;
+  flex: 1 1 auto;
+  overflow: auto;
+  padding: 0 32px;
 
   &::before {
-    content: '';
-    position: relative;
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
-    height: 16px;
+    content: '';
     display: block;
-    z-index: $shadow-mask-layer;
+    height: 16px;
     margin: 0 -16px;
+    position: relative;
+    z-index: $shadow-mask-layer;
   }
 
   &::after {
-    content: '';
-    position: relative;
     background-image: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
-    height: 16px;
+    content: '';
     display: block;
-    z-index: $shadow-mask-layer;
+    height: 16px;
     margin: 0 -16px;
+    position: relative;
+    z-index: $shadow-mask-layer;
   }
 }
 
