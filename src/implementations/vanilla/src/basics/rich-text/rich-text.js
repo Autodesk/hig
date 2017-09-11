@@ -1,4 +1,4 @@
-// import './rich-text.scss';
+import './rich-text.scss';
 
 const Template = require('./rich-text.html');
 var Interface = require('interface.json');

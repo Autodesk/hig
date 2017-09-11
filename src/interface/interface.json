@@ -930,6 +930,12 @@
                 "{Search} [ReferenceSearch] - (Optional) reference node for insertBefore"
               ]
             },
+            "addSlot": {
+              "desc": "Pass any content into the side nav",
+              "params": [
+                "{HTMLElement} HTMLElement"
+              ]
+            },
             "onHeaderClick": {
               "desc": "Calls the provided callback when user clicks on the header",
               "params": "HIG.abstract.EventObject.params",

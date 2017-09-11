@@ -1,0 +1,17 @@
+.hig__rich-text{
+  ul{
+    padding-left: 20px;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  li:before {
+    content:"·";
+    font-size:18px;
+    padding-right: 8px;
+    vertical-align: middle;
+    margin-left: -14px;
+  }
+}

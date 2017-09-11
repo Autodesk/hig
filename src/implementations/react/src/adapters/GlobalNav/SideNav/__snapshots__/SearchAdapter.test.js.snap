@@ -13,6 +13,7 @@ exports[`<SearchAdapter> renders 1`] = `
     <div class=\\"hig__global-nav__sidenav__groups\\">
       <!--GROUP-->
     </div>
+    <!--SLOT-->
     <div class=\\"hig__global-nav__sidenav__links\\">
       <!--LINK-->
     </div>
@@ -47,6 +48,7 @@ exports[`<SearchAdapter> renders with initial props 1`] = `
     <div class=\\"hig__global-nav__sidenav__groups\\">
       <!--GROUP-->
     </div>
+    <!--SLOT-->
     <div class=\\"hig__global-nav__sidenav__links\\">
       <!--LINK-->
     </div>
@@ -81,6 +83,7 @@ exports[`<SearchAdapter> renders with updated props 1`] = `
     <div class=\\"hig__global-nav__sidenav__groups\\">
       <!--GROUP-->
     </div>
+    <!--SLOT-->
     <div class=\\"hig__global-nav__sidenav__links\\">
       <!--LINK-->
     </div>

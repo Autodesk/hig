@@ -83,7 +83,14 @@ class Playground extends React.Component {
         event.preventDefault();
         console.log('Logo clicked');
       },
-      searchable: true
+      searchable: true,
+      slot: (
+        <div>
+          <Button title="Designer Toolkit" link="https://github.com/Autodesk/hig" />
+          <p></p>
+          <Button title="Git Repository" type="secondary" link="https://github.com/Autodesk/hig" target="_blank" />
+        </div>
+      )
     };
 
     return (
@@ -96,12 +103,6 @@ class Playground extends React.Component {
         activeModuleId={this.state.activeModuleId}
         showSubNav={true}
       >
-        <section>
-          <h3>Tabs</h3>
-          <Button title="Add tab before" onClick={this.addTabBefore} />
-          <Button title="Add tab after" onClick={this.addTabAfter} />
-          <Button title="Remove tab" onClick={this.removeTab} />
-        </section>
         <ButtonSection />
         <IconButtonSection />
         <CheckboxSection />

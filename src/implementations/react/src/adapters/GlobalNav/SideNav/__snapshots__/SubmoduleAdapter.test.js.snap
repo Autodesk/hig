@@ -28,6 +28,7 @@ exports[`<SubmoduleAdapter> renders 1`] = `
 </div><!--MODULE-->
 </div><!--GROUP-->
     </div>
+    <!--SLOT-->
     <div class=\\"hig__global-nav__sidenav__links\\">
       <!--LINK-->
     </div>
@@ -73,6 +74,7 @@ exports[`<SubmoduleAdapter> renders with initial props 1`] = `
 </div><!--MODULE-->
 </div><!--GROUP-->
     </div>
+    <!--SLOT-->
     <div class=\\"hig__global-nav__sidenav__links\\">
       <!--LINK-->
     </div>
@@ -116,6 +118,7 @@ exports[`<SubmoduleAdapter> renders with updated props 1`] = `
 </div><!--MODULE-->
 </div><!--GROUP-->
     </div>
+    <!--SLOT-->
     <div class=\\"hig__global-nav__sidenav__links\\">
       <!--LINK-->
     </div>
