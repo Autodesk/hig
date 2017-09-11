@@ -17,7 +17,7 @@ $shadow-layer: -1;
   &.hig__modal--open {
     opacity: 1.0;
     pointer-events: visible;
-    transition: all ease 0.4s;
+    transition: all ease 0.2s;
   }
 }
 
@@ -40,8 +40,10 @@ $shadow-layer: -1;
   left: 50%;
   max-height: calc(100vh - 256px);
   max-width: calc(100vw - 32px);
+  opacity: 0;
   outline: none;
   overflow: hidden;
+  pointer-events: none;
   position: absolute;
   top: 128px;
   transform: translateX(-50%);
@@ -49,6 +51,13 @@ $shadow-layer: -1;
 
   @include phone-breakpoint {
     width: 500px;
+  }
+
+  .hig__modal--open & {
+    opacity: 1.0;
+    pointer-events: visible;
+    transition: all ease 0.2s;
+    transition-delay: 0.2s;
   }
 }
 
