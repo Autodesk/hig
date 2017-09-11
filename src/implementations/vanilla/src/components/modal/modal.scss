@@ -11,10 +11,13 @@ $shadow-layer: -1;
 
 .hig__modal {
   color: #2A3B4D;
-  display: none;
+  opacity: 0;
+  pointer-events: none;
 
   &.hig__modal--open {
-    display: block;
+    opacity: 1.0;
+    pointer-events: visible;
+    transition: all ease 0.4s;
   }
 }
 
@@ -24,7 +27,7 @@ $shadow-layer: -1;
   left: 0px;
   right: 0px;
   bottom: 0px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .hig__modal__window {
