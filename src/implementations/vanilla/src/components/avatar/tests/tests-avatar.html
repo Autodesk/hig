@@ -1,0 +1,172 @@
+<html>
+<head>
+  <link rel="stylesheet" href="../../../../lib/hig.css">
+  <script type="text/javascript" src="../../../../lib/hig.js"></script>
+  <style>
+    body{
+      margin: 30px;
+    }
+    .avatar{
+      margin: 10px 0;
+    }
+    .avatar > div{
+      float: left;
+      margin-right: 5px;
+    }
+    .avatar > span{
+      margin-left: 30px;
+      line-height: 30px;
+    }
+    .group{
+      margin: 50px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class='group'>
+    <div class='avatar avatar1'></div>
+    <div class='avatar avatar2'></div>
+    <div class='avatar avatar3'></div>
+  </div>
+  <div class='group'>
+    <div class='avatar avatar4'></div>
+    <div class='avatar avatar5'></div>
+    <div class='avatar avatar6'></div>
+    <div class='avatar avatar7'></div>
+  </div>
+  
+  <script>
+
+    // AVATAR 1
+    var avatar = new Hig.Avatar({
+      "name": "David Gonzalez"
+    });
+    avatar.mount('.avatar1');
+
+    avatar = new Hig.Avatar({
+      "image": "avatar1.png"
+    });
+    avatar.mount('.avatar1');
+
+    var Body = new Hig.Typography({
+      "text": "David Gonzalez",
+      "type": "bold"
+    });
+    Body.mount(".avatar1");
+
+    // AVATAR 2
+    avatar = new Hig.Avatar({
+      "name": "Kyle Reynolds"
+    });
+    avatar.mount('.avatar2');
+
+    avatar = new Hig.Avatar({
+      "image": "avatar2.png"
+    });
+    avatar.mount('.avatar2');
+
+    var Body = new Hig.Typography({
+      "text": "Kyle Reynolds",
+      "type": "bold"
+    });
+    Body.mount(".avatar2");
+
+    // AVATAR 3, test methods setImage and setSize
+    avatar = new Hig.Avatar({
+      "name": "Maria Mc Caplin"
+    });
+    avatar.mount('.avatar3');
+
+    avatar = new Hig.Avatar({
+      "name": "Maria Mc Caplin",
+      "size": "small"
+    });
+    avatar.mount('.avatar3');
+    avatar.setImage('avatar3.png');
+    avatar.setSize('large');
+    
+    var Body = new Hig.Typography({
+      "text": "Maria Mc Caplin",
+      "type": "bold"
+    });
+    Body.mount(".avatar3");
+
+    // AVATAR 4 SMALL
+    avatar = new Hig.Avatar({
+      "size": "small",
+      "name": "Francis Mc Caplin Small"
+    });
+    avatar.mount('.avatar4');
+
+    avatar = new Hig.Avatar({
+      "size": "small",
+      "image": "avatar1.png"
+    });
+    avatar.mount('.avatar4');
+
+    var Body = new Hig.Typography({
+      "text": "Francis Mc Caplin Small",
+      "type": "bold"
+    });
+    Body.mount(".avatar4");
+
+    // AVATAR 5 MEDIUM
+    avatar = new Hig.Avatar({
+      "size": "medium",
+      "name": "Brandon Mc Caplin Medium"
+    });
+    avatar.mount('.avatar5');
+
+    avatar = new Hig.Avatar({
+      "size": "medium",
+      "image": "avatar1.png"
+    });
+    avatar.mount('.avatar5');
+
+    var Body = new Hig.Typography({
+      "text": "Brandon Mc Caplin Medium",
+      "type": "bold"
+    });
+    Body.mount(".avatar5");
+
+    // AVATAR 6 LARGE
+    avatar = new Hig.Avatar({
+      "size": "large",
+      "name": "Zake Mc Caplin Large"
+    });
+    avatar.mount('.avatar6');
+
+    avatar = new Hig.Avatar({
+      "size": "large",
+      "image": "avatar2.png"
+    });
+    avatar.mount('.avatar6');
+
+    var Body = new Hig.Typography({
+      "text": "Zake Mc Caplin Large",
+      "type": "bold"
+    });
+    Body.mount(".avatar6");
+
+    // AVATAR 7 XLARGE
+    avatar = new Hig.Avatar({
+      "size": "extralarge",
+      "name": "Xorb Mc Caplin Extralarge"
+    });
+    avatar.mount('.avatar7');
+
+    avatar = new Hig.Avatar({
+      "size": "extralarge",
+      "image": "avatar3.png"
+    });
+    avatar.mount('.avatar7');
+
+    var Body = new Hig.Typography({
+      "text": "Xorb Mc Caplin Extralarge",
+      "type": "bold"
+    });
+    Body.mount(".avatar7");
+
+  </script>
+</body>
+</html>

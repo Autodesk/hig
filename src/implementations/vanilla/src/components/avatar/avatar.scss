@@ -1,0 +1,63 @@
+@import '~basics/colors/colors.scss';
+@import '~helpers/css/mixins/typography-base.scss';
+@import '~helpers/css/mixins/spacing.scss';
+
+.hig__avatar {
+  position: relative;
+  border-radius: 50%;
+  color: color(hig-gray-10);
+  background: color(hig-purple-50);
+
+  &__image {
+    position: absolute;
+    z-index: 2;
+
+    & img{
+      border-radius: 50%;
+    }
+
+    & img[src=""] {
+      display: none;
+    }
+  }
+
+  &__initials{
+    position: absolute;
+    @include typography-base;
+    text-align: center;
+  }
+}
+
+$sizes: (
+  "small": 16px,
+  "medium": 24px,
+  "large": 36px,
+  "extralarge": 64px
+);
+
+@each $size_name, $size_value in $sizes{
+  .hig__avatar--size--#{$size_name}, .hig__avatar--size--#{$size_name} img, .hig__avatar--size--#{$size_name} .hig__avatar__initials {
+    width: $size_value;
+    height: $size_value;
+    line-height: $size_value;
+    font-size: ($size_value/2) - 2;
+  }
+}
+
+$backgroundcolors: (
+  1: color(hig-slate-50),
+  2: color(hig-purple-50),
+  3: color(hig-pink-50),
+  4: color(hig-salmon-50),
+  5: color(hig-blue-50),
+  6: color(hig-green-50),
+  7: color(hig-turquoise-50),
+  8: color(hig-indigo-50),
+  9: color(hig-gold-50)
+);
+
+@each $background_name, $background_value in $backgroundcolors{
+  .hig__avatar__background-#{$background_name} {
+    background-color: $background_value;
+  }
+}
