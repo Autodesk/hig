@@ -7,7 +7,8 @@ class GridSection extends Component {
     const style = {
       backgroundColor: "#FF5500",
       minHeight: 50,
-      marginBottom: 10
+      marginBottom: 10,
+      color: "#FFF"
     };
 
     return (
