@@ -1,6 +1,7 @@
 import React from "react";
 import GridItemAdapter from "../../../adapters/FormElements/GridItemAdapter";
 
+
 class GridItem extends React.Component {
 	constructor(props){
 		super(props);

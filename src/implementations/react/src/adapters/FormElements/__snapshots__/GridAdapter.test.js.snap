@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TableAdapter renders a grid 1`] = `
+"<div class=\\"hig__grid\\">
+  <div class=\\"hig__grid__item hig__grid__item--one-whole\\">
+  <div>one-whole</div><!--SLOT-->
+</div><!--GRIDITEM-->
+</div>"
+`;
+
+exports[`TableAdapter renders a grid with updated props 1`] = `
+"<div class=\\"hig__grid\\">
+  <div class=\\"hig__grid__item hig__grid__item--one-twelfth\\">
+  <div>one-twelfth</div><!--SLOT-->
+</div><!--GRIDITEM-->
+</div>"
+`;

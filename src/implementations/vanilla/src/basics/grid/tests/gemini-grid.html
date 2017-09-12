@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="../../../../lib/hig.css">
+	<script type="text/javascript" src="../../../../lib/hig.js"></script>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		.container--large {
+			min-width: 1921px;
+		}
+
+		.container--desktop {
+			min-width: 1681px;
+			max-width: 1920px;
+		}
+
+		.container--laptop {
+			min-width: 1281px;
+			max-width: 1680px;
+		}
+
+		.container--tablet {
+			min-width: 769px;
+			max-width: 1280px;
+		}
+
+		.container--phone {
+			max-width: 768px;
+		}
+		/* Lets add some custom style to our grid */
+
+		.test-title-holder {
+			margin: 30px;
+		}
+
+		.test-grid-holder {
+			padding: 20px 0;
+		}
+
+		.hig__grid__item {
+			background: #FF5500;
+			min-height: 50px;
+		}
+
+		.hig__grid {
+			margin-bottom: 10px;
+		}
+
+		.hig__grid__item .hig__typography {
+			color: #fff;
+			padding: 5px;
+		}
+	</style>
+</head>
+
+<body class="grid-test">
+	<div class='test-title-holder'></div>
+	<div class='test-grid-holder'></div>
+
+	<script>
+		var Grid, GridItem;
+
+		var Title = new Hig.Typography({
+			"text": "HIG Grid (resize browsers to see grid in action)",
+			"type": "h1"
+		});
+		Title.mount('.test-title-holder');
+
+		// ------------------------------
+		// ONE WHOLE
+		// ------------------------------
+		Grid = new Hig.Grid();
+		Grid.mount(".test-grid-holder");
+
+		// ONE WHOLE
+		GridItem = new Grid.partials.GridItem({
+			"fraction": "one-whole"
+		});
+		Grid.addGridItem(GridItem);
+		GridItem.addSlot(new Hig.Typography({ "text": 'one-whole' }));
+
+		// ------------------------------
+		// 2 x ONE-HALF
+		// ------------------------------
+
+		Grid = new Hig.Grid();
+		Grid.mount(".test-grid-holder");
+
+		for (var i = 0; i < 2; i++) {
+			GridItem = new Grid.partials.GridItem({
+				"fraction": "one-half"
+			});
+			Grid.addGridItem(GridItem);
+			GridItem.addSlot(new Hig.Typography({ "text": 'one-half' }));
+		}
+
+		// ------------------------------
+		// 4 x ONE-QUARTER
+		// ------------------------------
+
+		Grid = new Hig.Grid();
+		Grid.mount(".test-grid-holder");
+
+		for (var i = 0; i < 4; i++) {
+			GridItem = new Grid.partials.GridItem({
+				"fraction": "one-quarter"
+			});
+			Grid.addGridItem(GridItem);
+			GridItem.addSlot(new Hig.Typography({ "text": 'one-quarter' }));
+		}
+
+		// ------------------------------
+		// 8 x ONE-EIGHTH
+		// ------------------------------
+
+		Grid = new Hig.Grid();
+		Grid.mount(".test-grid-holder");
+
+		for (var i = 0; i < 8; i++) {
+			GridItem = new Grid.partials.GridItem({
+				"fraction": "one-eighth"
+			});
+			Grid.addGridItem(GridItem);
+			GridItem.addSlot(new Hig.Typography({ "text": 'one-eighth' }));
+		}
+
+		// ------------------------------
+		// 12 x ONE-TWELFTH
+		// ------------------------------
+
+		Grid = new Hig.Grid();
+		Grid.mount(".test-grid-holder");
+
+		for (var i = 0; i < 12; i++) {
+			GridItem = new Grid.partials.GridItem({
+				"fraction": "one-twelfth"
+			});
+			Grid.addGridItem(GridItem);
+			GridItem.addSlot(new Hig.Typography({ "text": 'one-twelfth' }));
+		}
+
+		// ------------------------------
+		// PYRAMID
+		// ------------------------------
+
+		var nominators = ['one-twelfth', 'two-twelfths', 'three-twelfths', 'four-twelfths', 'five-twelfths', 'six-twelfths', 'seven-twelfths', 'eight-twelfths', 'nine-twelfths', 'ten-twelfths', 'eleven-twelfths'];
+
+		for (var i = 0; i < 11; i++) {
+			Grid = new Hig.Grid();
+			Grid.mount(".test-grid-holder");
+
+			GridItem = new Grid.partials.GridItem({
+				"fraction": nominators[i]
+			});
+			Grid.addGridItem(GridItem);
+			GridItem.addSlot(new Hig.Typography({ "text": nominators[i] }));
+
+			GridItem = new Grid.partials.GridItem({
+				"fraction": nominators[nominators.length - i - 1]
+			});
+			Grid.addGridItem(GridItem);
+			GridItem.addSlot(new Hig.Typography({ "text": nominators[nominators.length - i - 1] }));
+		}
+
+		// ------------------------------
+		// TEST CHANGE FRACTION METHOD
+		// ------------------------------
+
+		Grid = new Hig.Grid();
+		Grid.mount(".test-grid-holder");
+
+		// ONE WHOLE
+		GridItem = new Grid.partials.GridItem({
+			"fraction": "one-quarter"
+		});
+		Grid.addGridItem(GridItem);
+		GridItem.addSlot(new Hig.Typography({ "text": 'one-whole' }));
+
+		// Change to one whole instead of quarter
+		GridItem.setFraction("one-whole");
+	</script>
+
+</body>
+
+</html>
