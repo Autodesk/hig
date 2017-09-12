@@ -55,8 +55,8 @@ class ModalAdapter extends HIGElement {
           // no-op
           break;
         }
-        case 'headerColor': {
-          this.hig.setHeaderColor(propValue);
+        case 'style': {
+          this.hig.setStyle(propValue);
           break;
         }
         case 'onOverlayClick': {
@@ -127,7 +127,7 @@ const ModalAdapterComponent = createComponent(ModalAdapter);
 ModalAdapterComponent.propTypes = {
   body: PropTypes.string,
   buttons: PropTypes.array,
-  headerColor: PropTypes.string,
+  style: PropTypes.string,
   onCloseClick: PropTypes.func,
   onOverlayClick: PropTypes.func,
   open: PropTypes.bool,
@@ -143,8 +143,8 @@ ModalAdapterComponent.__docgenInfo = {
     buttons: {
       description: 'an array of props supported by the Button component'
     },
-    headerColor: {
-      description: 'color of the modal header'
+    style: {
+      description: 'style of the modal shell'
     },
     onCloseClick: {
       description: 'triggers when you click the close button'

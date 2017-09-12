@@ -5,7 +5,7 @@ const Interface = require('interface.json');
 const Core = require('_core.js');
 const Button = require('../button/button');
 
-const AvailableHeaderColors = ['white', 'slate', 'gray'];
+const AvailableStyles = ['standard', 'alternate'];
 
 /**
  * Creates a Modal
@@ -17,6 +17,39 @@ class Modal extends Core {
   constructor(options) {
     super(options);
     this._render(Template, options);
+  }
+
+  _componentDidMount() {
+    const scrollingElement = this._findDOMEl('.hig__modal__slot', this.el);
+    this._attachListener('scroll', scrollingElement, scrollingElement, (event) => this._handleIsScrolling(event.target));
+  }
+
+  _handleIsScrolling(scrollingElement) {
+    const windowElement = this._findDOMEl('.hig__modal__window', this.el);
+    if (scrollingElement.scrollTop > 0) {
+        windowElement.classList.add(`hig__modal__window--is-scrolling`);
+    } else {
+        windowElement.classList.remove(`hig__modal__window--is-scrolling`);
+    }
+  }
+
+  _handleHasScrolling() {
+    const windowElement = this._findDOMEl('.hig__modal__window', this.el);
+    if (this._hasScrolling()) {
+      windowElement.classList.add(`hig__modal__window--has-scrolling`);
+    } else {
+      windowElement.classList.remove(`hig__modal__window--has-scrolling`);
+    }
+  }
+
+  _hasScrolling() {
+    const scrollingElement = this._findDOMEl('.hig__modal__slot', this.el);
+    return scrollingElement.scrollHeight > scrollingElement.clientHeight;
+  }
+
+  setScrollTop(scrollTop) {
+     const scrollingElement = this._findDOMEl('.hig__modal__slot', this.el);
+     scrollingElement.scrollTop = scrollTop;
   }
 
   addButton(instance) {
@@ -31,6 +64,7 @@ class Modal extends Core {
 
   close() {
     this.el.classList.remove('hig__modal--open');
+    this.el.classList.add('hig__modal--close');
   }
 
   mount(mountNode) {
@@ -58,26 +92,28 @@ class Modal extends Core {
   }
 
   open() {
+    this.el.classList.remove('hig__modal--close');
     this.el.classList.add('hig__modal--open');
+    this._handleHasScrolling();
   }
 
   setBody(body) {
     this._findDOMEl('.hig__modal__slot', this.el).textContent = body;
   }
 
-  setHeaderColor(headerColor) {
-    if (!AvailableHeaderColors.includes(headerColor)) {
+  setStyle(style) {
+    if (!AvailableStyles.includes(style)) {
       console.error(
-        `Modal cannot have header color "${headerColor}". Only these colors are allowed: `,
-        AvailableHeaderColors
+        `Modal cannot have style "${style}". Only these styles are allowed: `,
+        AvailableStyles
       );
       return;
     }
-    const headerEl = this._findDOMEl('.hig__modal__header', this.el);
-    headerEl.classList.remove(
-      ...AvailableHeaderColors.map(c => `hig__modal__header--${c}`)
+    const windowEl = this._findDOMEl('.hig__modal__window', this.el);
+    windowEl.classList.remove(
+      ...AvailableStyles.map(s => `hig__modal__window--${s}`)
     );
-    headerEl.classList.add(`hig__modal__header--${headerColor}`);
+    windowEl.classList.add(`hig__modal__window--${style}`);
   }
 
   setTitle(title) {
@@ -94,7 +130,7 @@ class Modal extends Core {
 Modal._interface = Interface.components.Modal;
 Modal._defaults = {
   body: '',
-  headerColor: 'white',
+  style: 'standard',
   title: ''
 };
 Modal._partials = {};
