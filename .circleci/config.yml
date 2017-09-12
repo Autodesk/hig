@@ -1,0 +1,39 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/hig
+    docker:
+      - image: circleci/node:8.2.1
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: npm Install (Vanilla)
+          command: npm install
+          pwd: src/implementations/vanilla
+      - run:
+          name: npm Install (React)
+          command: npm install
+          pwd: src/implementations/react
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+      - run:
+          name: Build (React)
+          command: npm run lib
+          pwd: src/implementations/react
+      - run:
+          name: Start Server (Vanilla)
+          command: ./node_modules/http-server/bin/http-server
+          background: true
+          pwd: src/implementations/vanilla
+      - run:
+          name: Run Tests (Vanilla)
+          command: npm run gemini-ci
+          pwd: src/implementations/vanilla
+      - run:
+          name: Run Tests (React)
+          command: npm run test-ci
+          pwd: src/implementations/react
