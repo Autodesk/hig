@@ -7,3 +7,4 @@ gemini.suite("table", parent => {
     suite.setCaptureElements("body").capture("table");
   });
 });
+  
