@@ -32,7 +32,7 @@ class ModalSection extends Component {
           isOpen={this.state.isOpen}
           buttons={buttonProps}
           body="This is the text body of my modal"
-          headerColor="gray"
+          style="alternate"
           onClose={this.closeModal}
         >
           <h1><u>This is my HTML title</u></h1>

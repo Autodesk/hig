@@ -19,7 +19,7 @@ class Modal extends React.Component {
       <ModalAdapter
         body={this.props.body}
         buttons={this.props.buttons}
-        headerColor={this.props.headerColor}
+        style={this.props.style}
         open={this.props.isOpen}
         onCloseClick={this.close}
         onOverlayClick={this.close}
