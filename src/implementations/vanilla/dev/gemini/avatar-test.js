@@ -1,5 +1,5 @@
 gemini.suite('avatar', (parent) => {
-  parent.setUrl('src/basics/button/tests/gemini-button.html');
+  parent.setUrl('src/components/avatar/tests/tests-avatar.html');
 
   gemini.suite('basic', (suite) => {
     suite.setCaptureElements('.test-container')
