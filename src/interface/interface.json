@@ -783,6 +783,33 @@
     }
   },
   "components": {
+    "Avatar": {
+      "defaults": {
+        "name": "{String} the name for the avatar",
+        "size": "{String} small, medium, large or extralarge",
+        "image": "{String} url to a profile image"
+      },
+      "methods": {
+        "setName": {
+          "desc": "sets the name",
+          "params": [
+            "{String} name for the avatar"
+          ]
+        },
+        "setSize": {
+          "desc": "sets the size",
+          "params": [
+            "{String} small, medium, large or extralarge"
+          ]
+        },
+        "setImage": {
+          "desc": "sets the image",
+          "params": [
+            "{String} url to a profile image"
+          ]
+        }
+      }
+    },
     "Button": {
       "defaults": {
         "icon": "{String} (optional) ID of the icon",

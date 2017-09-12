@@ -60,22 +60,22 @@ module.exports = function (plop) {
 		actions: [{
             type: 'add',
             path: '{{absPath path}}/{{ dashCase name }}/tests/tests-{{ dashCase name }}.html',
-            templateFile: 'src/web/helpers/skeletons/skeleton-tests-template.html',
+            templateFile: '../src/helpers/skeletons/skeleton-tests-template.html',
             abortOnFail: true
         },{
             type: 'add',
             path: '{{absPath path}}/{{ dashCase name }}/tests/gemini-{{ dashCase name }}.html',
-            templateFile: 'src/web/helpers/skeletons/skeleton-gemini-template.html',
+            templateFile: '../src/helpers/skeletons/skeleton-gemini-template.html',
             abortOnFail: true
         },{
             type: 'add',
             path: 'gemini/{{ dashCase name }}-test.js',
-            templateFile: 'src/web/helpers/skeletons/skeleton-gemini-test.js',
+            templateFile: '../src/helpers/skeletons/skeleton-gemini-test.js',
             abortOnFail: true
         },{
             type: 'add',
             path: '{{absPath path}}/{{ dashCase name }}/{{ dashCase name }}.html',
-            templateFile: 'src/web/helpers/skeletons/skeleton-template.html',
+            templateFile: '../src/helpers/skeletons/skeleton-template.html',
             abortOnFail: true
         },{
             type: 'modify',
@@ -86,7 +86,7 @@ module.exports = function (plop) {
         },{
             type: 'add',
             path: '{{absPath path}}/{{ dashCase name }}/{{ dashCase name }}.scss',
-            templateFile: 'src/web/helpers/skeletons/skeleton-template.scss',
+            templateFile: '../src/helpers/skeletons/skeleton-template.scss',
             abortOnFail: true
         },{
             type: 'modify',
@@ -97,7 +97,7 @@ module.exports = function (plop) {
         },{
             type: 'add',
             path: '{{absPath path}}/{{ dashCase name }}/{{ dashCase name }}.js',
-            templateFile: 'src/web/helpers/skeletons/skeleton-template.js',
+            templateFile: '../src/helpers/skeletons/skeleton-template.js',
             abortOnFail: true
         },{
             type: 'modify',
