@@ -41,8 +41,8 @@ describe("TableAdapter", () => {
     return {
       higContainer,
       higGrid,
-			higGridItem,
-			gridItemContent
+      higGridItem,
+      gridItemContent
     };
   }
 
@@ -58,7 +58,12 @@ describe("TableAdapter", () => {
     const props = {
       value: "one-whole"
     };
-    const { higContainer, higGrid, higGridItem, gridItemContent } = createHigContext(props);
+    const {
+      higContainer,
+      higGrid,
+      higGridItem,
+      gridItemContent
+    } = createHigContext(props);
     const container = document.createElement("div");
     const wrapper = mount(<Context {...props} />, {
       attachTo: container
@@ -74,21 +79,26 @@ describe("TableAdapter", () => {
     const props = {
       value: "one-whole"
     };
-    const { higContainer, higGrid, higGridItem , gridItemContent} = createHigContext(props);
+    const {
+      higContainer,
+      higGrid,
+      higGridItem,
+      gridItemContent
+    } = createHigContext(props);
     const container = document.createElement("div");
     const wrapper = mount(<Context {...props} />, {
       attachTo: container
-		});
+    });
 
-		const newProps = {
-			value: "one-twelfth"
-		}
-		
-		higGridItem.setFraction(newProps.value);
-		gridItemContent.innerHTML = newProps.value;
+    const newProps = {
+      value: "one-twelfth"
+    };
 
-		const prevProps = wrapper.props;
-		wrapper.setProps(newProps)
+    higGridItem.setFraction(newProps.value);
+    gridItemContent.innerHTML = newProps.value;
+
+    const prevProps = wrapper.props;
+    wrapper.setProps(newProps);
 
     expect(container.firstElementChild.outerHTML).toMatchSnapshot();
     expect(container.firstElementChild.outerHTML).toEqual(
