@@ -10,7 +10,7 @@ gemini.suite('modal', (parent) => {
             .capture('alternate', function(actions, find) {
                 actions.click(this.next);
             })
-            .capture('scrolling', function(actions, find) {
+            .capture('scrollable', function(actions, find) {
                 actions.click(this.next);
             })
   });
