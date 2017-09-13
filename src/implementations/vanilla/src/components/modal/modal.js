@@ -50,6 +50,7 @@ class Modal extends Core {
   setScrollTop(scrollTop) {
      const scrollingElement = this._findDOMEl('.hig__modal__slot', this.el);
      scrollingElement.scrollTop = scrollTop;
+     _handleIsScrolling(scrollingElement);
   }
 
   addButton(instance) {
@@ -99,6 +100,7 @@ class Modal extends Core {
 
   setBody(body) {
     this._findDOMEl('.hig__modal__slot', this.el).textContent = body;
+    this._handleHasScrolling();
   }
 
   setStyle(style) {
