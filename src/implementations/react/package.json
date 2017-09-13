@@ -1,6 +1,6 @@
 {
   "name": "hig-react",
-  "version": "0.17.0",
+  "version": "0.18.0",
   "description": "hig components in react",
   "main": "lib/hig-react.js",
   "css": "lib/hig-react.css",
@@ -16,7 +16,6 @@
     "lib/*.css"
   ],
   "devDependencies": {
-    "hig-vanilla": "file:../vanilla",
     "@storybook/addon-info": "^3.1.0",
     "@storybook/addon-knobs": "^3.2.0",
     "@storybook/react": "^3.1.0",
@@ -25,10 +24,12 @@
     "@types/react": "^15.0.24",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.1",
+    "babel-plugin-react-docgen": "^1.7.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "enzyme": "^2.9.1",
+    "hig-vanilla": "file:../vanilla",
     "jest-enzyme": "^3.7.0",
     "prop-types": "^15.5.10",
     "react": "^15.4.1",
@@ -43,12 +44,13 @@
   },
   "scripts": {
     "lib": "npm run lib-vanilla && npm run lib-react",
-    "lib-react": "NODE_ENV=production webpack",
+    "lib-react": "webpack && NODE_ENV=production webpack",
     "lib-vanilla": "cd ../vanilla && npm run lib && cd ../react && mkdir -p lib && cp ../vanilla/lib/hig.css lib/hig-react.css",
     "playground": "react-scripts start",
     "prepublish": "npm run lib",
     "build-playground": "react-scripts build",
     "deploy-playground": "react-scripts build && surge build",
+    "generate-docs": "node ./scripts/generate-docs.js",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public -o build/storybook",
     "deploy-storybook": "npm run build-storybook && surge build/storybook",

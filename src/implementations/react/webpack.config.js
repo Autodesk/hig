@@ -2,7 +2,34 @@ const path = require('path');
 const fs = require('fs');
 const webpack = require('webpack');
 
-var r = {
+const babel = require('./webpack/babel');
+const minify = require('./webpack/minify');
+
+const externals = [
+  "react",
+  "react-dom",
+  "prop-types"
+];
+
+const debug = {
+  devtool: "source-map",
+  entry: './src/hig-react.js',
+  output: {
+    path: path.resolve('./lib'),
+    filename: 'hig-react-debug.js',
+    library: 'HigReact',
+    libraryTarget: 'umd'
+  },
+  module: {
+    rules: [
+      babel({ plugins: ["react-docgen"]})
+    ]
+  },
+  plugins: [],
+  externals: externals
+}
+
+const production = {
   entry: './src/hig-react.js',
   output: {
     path: path.resolve('./lib'),
@@ -12,48 +39,17 @@ var r = {
   },
   module: {
     rules: [
-      {
-        test: /\.js$/,
-        exclude: [/node_modules/, /..\/vanilla/],
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: [
-              'es2015', 
-              'react',
-              'stage-2'
-            ],
-            plugins: [],
-            babelrc: false,
-            compact: false
-          }
-        }
-      }
+      babel()
     ]
   },
-  plugins: [],
-  externals: [
-    "react",
-    "react-dom",
-    "prop-types"
-  ]
+  plugins: [
+    minify()
+  ],
+  externals: externals
 }
 
-if(process.env.NODE_ENV != "production"){
-  r['devtool'] = "source-map";
-}else{
-  r['plugins'].push(
-    new webpack.optimize.UglifyJsPlugin({
-      minimize: true,
-      compress: {
-          keep_fnames: true,
-          warnings: false
-      },
-      mangle: {
-          keep_fnames: true
-      }
-    })
-  );
+if(process.env.NODE_ENV != "production") {
+  module.exports = debug;
+} else {
+  module.exports = production;
 }
-
-module.exports = r;

@@ -138,7 +138,7 @@ class Button extends Core {
 Button._interface = Interface.components.Button;
 Button._defaults = {
   icon: false,
-  link: '#',
+  link: false,
   size: 'standard',
   target: '_self',
   title: 'link',
