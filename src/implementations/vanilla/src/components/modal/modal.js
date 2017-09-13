@@ -100,6 +100,7 @@ class Modal extends Core {
 
   setBody(body) {
     this._findDOMEl('.hig__modal__slot', this.el).textContent = body;
+    this._handleHasScrolling();
   }
 
   setStyle(style) {
