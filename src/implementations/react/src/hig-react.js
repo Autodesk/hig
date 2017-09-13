@@ -23,3 +23,7 @@ export { default as Table } from  './adapters/TableAdapter';
 export { default as Slot } from './adapters/SlotAdapter';
 export { default as SlotHeadCell } from './elements/components/SlotHeadCell';
 export { default as SlotCell } from './elements/components/SlotCell';
+export { default as Grid } from './adapters/FormElements/GridAdapter';
+export { default as GridItem } from './elements/components/FormElements/GridItem';
+
+
