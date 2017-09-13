@@ -1,9 +1,9 @@
 import "./icon.scss";
 
-const Template = require("./button.html");
+const Template = require("./icon.html");
 const Interface = require("interface.json");
 const Core = require("../../helpers/js/_core.js");
-var Icons = require("./icons/icons.js");
+var Icons = require("../icons/icons.js");
 
 /**
  * Creates an icon
@@ -18,20 +18,35 @@ class Icon extends Core {
     this.initialOptions = options;
   }
 
+  _componentDidMount() {
+    if (this.initialOptions.nameOrSVG) {
+      this.setNameOrSVG(this.initialOptions.nameOrSVG);
+    }
+  }
+
   setNameOrSVG(icon) {
-    const iconString = Icons[icon];
+    var iconString = this._confirmNameOrSVG(icon);
+    this._el.innerHTML = iconString;
+  }
 
-    if (!iconString) {
-      if (/^<svg>/.text(icon)) {
-        iconString = icon;
-      } else {
-        console.warn("NO HIG ICON: " + iconString);
-        return;
-      }
-    } 
+  _confirmNameOrSVG(icon) {
+    var isNamedIcon = Icons[icon];
+    var isSVG = /^<svg/.test(icon);
 
-    this.el.appenChild(iconString);
+    if (isNamedIcon) {
+      return isNamedIcon;
+    } else if (isSVG) {
+      return icon;
+    } else {
+      console.warn("NO HIG ICON: " + icon);
+      return;
+    }
   }
 }
 
-Icon._interface  = Interface.
+Icon._interface = Interface["basics"]["Icon"];
+Icon._defaults = {
+  nameOrSVG: ""
+};
+
+module.exports = Icon;

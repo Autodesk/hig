@@ -9,6 +9,7 @@ Hig.FormElements = require('./basics/form-elements/form-elements.js');
 Hig.Flyout = require('./basics/flyout/flyout.js');
 Hig.GlobalNav = require('./components/global-nav/global-nav.js');
 Hig.IconButton = require('./components/icon-button/icon-button.js');
+Hig.Icon = require('./basics/icon/icon.js');
 Hig.Icons = require('./basics/icons/icons.js');
 Hig.InputButton = require('./basics/form-elements/input-button/input-button.js');
 Hig.Modal = require('./components/modal/modal.js');

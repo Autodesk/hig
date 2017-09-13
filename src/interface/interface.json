@@ -677,6 +677,16 @@
         }
       }
     },
+    "Icon": {
+      "methods": {
+        "setNameOrSVG": {
+          "desc": "Add Icon using name of icon or SVG",
+          "params": [
+            "String either SVG or name of icon"
+          ]
+        }
+      }
+    },
     "RichText": {
       "defaults": {
         "html": "{String} HTML to be rendered and styled within"
