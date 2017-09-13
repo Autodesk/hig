@@ -13,9 +13,6 @@ gemini.suite('modal', (parent) => {
             .capture('scrollable', function(actions, find) {
                 actions.click(this.next);
             })
-            .capture('scrolling', function(actions, find) {
-                actions.click(this.next);
-            });
   });
 
 });

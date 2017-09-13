@@ -63,7 +63,6 @@
             Modal.setTitle('Non-scrolling Modal');
             Modal.setBody('Nisi minim ad enim reprehenderit minim est ut laboris et consectetur anim. Ea consequat sit veniam duis nulla ea sit. Proident ullamco sint Lorem consequat ut in occaecat ad nostrud proident minim. Adipisicing duis ex Lorem quis occaecat veniam culpa Lorem sint incididunt ex quis. Velit ut excepteur commodo aliquip. Aliqua occaecat eu est ullamco adipisicing consequat in culpa qui exercitation esse commodo excepteur.');
             Modal.setStyle('standard');
-            Modal.open();
 
             if (disposeCloseClick) { disposeCloseClick() };
             disposeCloseClick = Modal.onCloseClick(configureAlternateModal);
@@ -80,7 +79,6 @@
           function configureAlternateModal() {
             Modal.setTitle('Alternate Modal');
             Modal.setStyle('alternate');
-            Modal.open();
 
             disposeCloseClick();
             disposeCloseClick = Modal.onCloseClick(configureLongModal);
@@ -93,27 +91,11 @@
           function configureLongModal() {
             Modal.setTitle('Scrollable Modal');
             Modal.setStyle('standard');
+            Modal.setBody('');
 
             const longModalContent = document.createElement('div');
             longModalContent.innerHTML = paragraphs.map(p => `<p>${p}</p>`).join('');
-            Modal.setBody(paragraphs);
-
-            Modal.open();
-
-            disposeCloseClick();
-            disposeCloseClick = Modal.onCloseClick(configureScrollingModal);
-          }
-
-          // ----------------------------
-          // Long modal scrolled
-          // ----------------------------
-
-          function configureScrollingModal() {
-            Modal.setTitle('Scrolling Modal');
-            Modal.setStyle('standard');
-            Modal.open();
-
-            Modal.setScrollTop(200);
+            Modal.addSlot(longModalContent);
 
             disposeCloseClick();
             disposeCloseClick = Modal.onCloseClick(configureShortModal);
