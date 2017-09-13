@@ -89,27 +89,13 @@
           // ----------------------------
 
           function configureLongModal() {
-            Modal.setTitle('Scrolling Modal');
+            Modal.setTitle('Scrollable Modal');
             Modal.setStyle('standard');
             Modal.setBody('');
 
             const longModalContent = document.createElement('div');
             longModalContent.innerHTML = paragraphs.map(p => `<p>${p}</p>`).join('');
             Modal.addSlot(longModalContent);
-
-            disposeCloseClick();
-            disposeCloseClick = Modal.onCloseClick(configureScrolledModal);
-          }
-
-          // ----------------------------
-          // Long modal scrolled
-          // ----------------------------
-
-          function configureScrolledModal() {
-            Modal.setTitle('Scrolled Modal');
-            Modal.setStyle('standard');
-
-            Modal.setScrollTop(500);
 
             disposeCloseClick();
             disposeCloseClick = Modal.onCloseClick(configureShortModal);
