@@ -12,6 +12,11 @@
   text-align: center;
   border-radius: 4px;
 
+  // overflow
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
   // default size: standard
   padding: 0 16px;
   height: 36px;
