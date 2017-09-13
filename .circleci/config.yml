@@ -7,33 +7,73 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: dependency-cache-vanilla-v1-{{ checksum "package.json" }}
       - run:
           name: npm Install (Vanilla)
           command: npm install
-          pwd: src/implementations/vanilla
+          working_directory: src/implementations/vanilla
+      - save_cache:
+          key: dependency-cache-vanilla-v1-{{ checksum "package.json" }}
+          paths:
+            - src/implementations/vanilla/node_modules
+      - restore_cache:
+          key: dependency-cache-react-v1-{{ checksum "package.json" }}
       - run:
           name: npm Install (React)
           command: npm install
-          pwd: src/implementations/react
+          working_directory: src/implementations/react
       - save_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: dependency-cache-react-v1-{{ checksum "package.json" }}
           paths:
-            - node_modules
+            - src/implementations/react/node_modules
+      - run:
+          name: Build (Vanilla)
+          command: npm run lib
+          working_directory: src/implementations/vanilla
+      - save_cache:
+          key: lib-cache-vanilla-v1-{{ .Revision }}
+          paths:
+            - src/implementations/vanilla/lib
       - run:
           name: Build (React)
           command: npm run lib
-          pwd: src/implementations/react
+          working_directory: src/implementations/react
+      - save_cache:
+          key: lib-cache-react-v1-{{ .Revision }}
+          paths:
+            - src/implementations/react/lib
+  test:
+    working_directory: ~/hig
+    docker:
+      - image: circleci/node:8.2.1
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-vanilla-v1-{{ checksum "package.json" }}
+      - restore_cache:
+          key: lib-cache-vanilla-v1-{{ .Revision }}
       - run:
           name: Start Server (Vanilla)
           command: ./node_modules/http-server/bin/http-server
           background: true
-          pwd: src/implementations/vanilla
+          working_directory: src/implementations/vanilla
       - run:
           name: Run Tests (Vanilla)
           command: npm run gemini-ci
-          pwd: src/implementations/vanilla
+          working_directory: src/implementations/vanilla
+      - restore_cache:
+          key: dependency-cache-react-v1-{{ checksum "package.json" }}
+      - restore_cache:
+          key: lib-cache-react-v1-{{ .Revision }}
       - run:
           name: Run Tests (React)
           command: npm run test-ci
-          pwd: src/implementations/react
+          working_directory: src/implementations/react
+workflows:
+  version: 2
+  build-and-test:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build
