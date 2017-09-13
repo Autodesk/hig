@@ -5,6 +5,7 @@ module.exports = {
   gridUrl: " http://ondemand.saucelabs.com/wd/hub",
   screenshotsDir: './dev/gemini-screens',
   windowSize: "1024x768",
+  compositeImage: true,
   sessionsPerBrowser: 3, system: {
     plugins: {
       sauce: {
