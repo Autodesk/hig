@@ -43,21 +43,21 @@
     "webpack": "^3.5.5"
   },
   "scripts": {
+    "build-playground": "react-scripts build",
+    "build-storybook": "build-storybook -s public -o build/storybook",
+    "debug-webpack": "NODE_ENV=development webpack",
+    "deploy-playground": "react-scripts build && surge build",
+    "deploy-storybook": "npm run build-storybook && surge build/storybook",
+    "generate-docs": "node ./scripts/generate-docs.js",
     "lib": "npm run lib-vanilla && npm run lib-react",
     "lib-react": "webpack && NODE_ENV=production webpack",
     "lib-vanilla": "cd ../vanilla && npm run lib && cd ../react && mkdir -p lib && cp ../vanilla/lib/hig.css lib/hig-react.css",
     "playground": "react-scripts start",
     "prepublish": "npm run lib",
-    "build-playground": "react-scripts build",
-    "deploy-playground": "react-scripts build && surge build",
-    "generate-docs": "node ./scripts/generate-docs.js",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public -o build/storybook",
-    "deploy-storybook": "npm run build-storybook && surge build/storybook",
     "test": "react-scripts test --env=jsdom",
     "test-ci": "react-scripts test --env=jsdom --coverage --runInBand",
-    "type-check": "tsc",
-    "debug-webpack": "NODE_ENV=development webpack"
+    "type-check": "tsc"
   },
   "dependencies": {
     "jest": "^20.0.4",
