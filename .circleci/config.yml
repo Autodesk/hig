@@ -91,9 +91,23 @@ jobs:
           name: Validate hig-react version
           command: npm run validate
           working_directory: src/implementations/react
+  deploy:
+    <<: *defaults
+    steps:
+      - checkout
+      # Get vanilla node_modules for this revision of vanilla/package.json
+      - restore_cache:
+          key: dependency-cache-vanilla-v1-{{ checksum "package.json" }}
+      # Get React node_modules for this revision of react/package.json
+      - restore_cache:
+          key: dependency-cache-react-v1-{{ checksum "package.json" }}
+      - run:
+          name: Deploy hig-react
+          command: npm publish
+          working_directory: src/implementations/react
 workflows:
   version: 2
-  build-test-and-validate:
+  build-test-validate-and-deploy:
     jobs:
       - build
       - test:
@@ -103,6 +117,15 @@ workflows:
           filters:
             branches:
               ignore: master
+          requires:
+            - build
+            - test
+      - deploy:
+          #filters:
+            #branches:
+            #  only: master
+            #tags:
+            #  only: /v[0-9]+(\.[0-9]+)*/
           requires:
             - build
             - test
