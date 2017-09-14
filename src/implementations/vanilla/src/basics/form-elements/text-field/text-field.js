@@ -4,6 +4,8 @@ var Template = require('./text-field.html');
 var Interface = require('interface.json');
 var Core = require('_core.js');
 
+var Icon = require('../../icon/icon.js')
+
 /**
  * Creates an TextField
  *
@@ -78,9 +80,8 @@ class TextField extends Core {
         const iconEl = this._findDOMEl('.hig__text-field__icon', this.el);
 
         if (icon && icon.length > 0) {
-            const iconString = this._getIconString(icon);
+            this._findOrCreateIconComponent(iconEl).setNameOrSVG(icon);
 
-            iconEl.innerHTML = iconString;
             iconEl.classList.add('hig__text-field__icon--visible');
             this._findOrAddElement('ICON-SPACER', 'div', '.hig__text-field__icon-spacer');
         } else {
@@ -88,6 +89,16 @@ class TextField extends Core {
             this._removeElementIfFound('.hig__text-field__icon-spacer');
         }
 
+    }
+
+    _findOrCreateIconComponent(mountElOrSelector, name) {
+        if (this[name]) {
+            return this[name];
+        } else {
+            this[name] = new Icon({});
+            this[name].mount(mountElOrSelector);
+            return this[name];
+        }
     }
 
     setInstructions(instructions){

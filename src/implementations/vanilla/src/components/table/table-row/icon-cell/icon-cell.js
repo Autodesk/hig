@@ -3,6 +3,8 @@ import "./icon-cell.scss";
 var Template = require("./icon-cell.html");
 var Interface = require("interface.json");
 var Core = require("_core.js");
+var Icon = require("../../../../basics/icon/icon.js");
+
 
 /**
  * Creates an Table
@@ -17,7 +19,7 @@ class IconCell extends Core {
     this.initialOptions = options;
   }
 
-  _componentDidMount(){
+  _componentDidMount() {
     if (this.initialOptions.icon) {
       this.setIcon(this.initialOptions.icon);
     }
@@ -25,7 +27,17 @@ class IconCell extends Core {
 
   setIcon(icon) {
     if (icon && icon.length > 0) {
-      this._el.innerHTML = this._getIconString(icon);
+      this._findOrCreateIconComponent(this._el).setNameOrSVG(icon);
+    }
+  }
+
+  _findOrCreateIconComponent(mountElOrSelector, name='icon') {
+    if (this[name]) {
+        return this[name];
+    } else {
+        this[name] = new Icon({});
+        this[name].mount(mountElOrSelector);
+        return this[name];
     }
   }
 }
