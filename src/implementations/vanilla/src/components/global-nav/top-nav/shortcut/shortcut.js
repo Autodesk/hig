@@ -15,6 +15,13 @@ class Shortcut extends Core {
   constructor(options) {
     super(options);
     this._render(Template, options);
+    this.initialOptions = options;
+  }
+
+  _componentDidMount() {
+    if (this.initialOptions.icon) {
+      this.setIcon(this.initialOptions.icon);
+    }
   }
 
   onClick(fn) {
@@ -22,9 +29,11 @@ class Shortcut extends Core {
   }
 
   setIcon(icon) {
-   const mountedEl =  this._findDOMEl(".hig__global-nav__top-nav__shortcut__link__icon", this.el)
-   this._findOrCreateIconComponent(mountedEl).setNameOrSVG(icon);
-
+    const mountedEl = this._findDOMEl(
+      ".hig__global-nav__top-nav__shortcut__link__icon",
+      this.el
+    );
+    this._findOrCreateIconComponent(mountedEl).setNameOrSVG(icon);
   }
 
   setTitle(title) {

@@ -3,6 +3,8 @@ import './search.scss';
 const Template = require('./search.html');
 const Interface = require('interface.json');
 const Core = require('_core.js');
+const Icon = require("../../../../basics/icon/icon.js");
+
 
 /**
  * Creates an Search
@@ -14,6 +16,10 @@ class Search extends Core {
   constructor(options) {
     super(options);
     this._render(Template, options);
+  }
+
+  _componentDidMount(){
+    this._setIcons()
   }
 
   hideClearIcon() {
@@ -46,6 +52,24 @@ class Search extends Core {
 
   showClearIcon() {
     this._findDOMEl('.hig__global-nav__side-nav__search__clear', this.el).classList.add('hig__global-nav__side-nav__search__clear--show');
+  }
+
+  _setIcons(){
+    const mountSearchIcon = this._findDOMEl('.hig__global-nav__side-nav__search__icon', this.el);
+    this._findOrCreateIconComponent(mountSearchIcon, 'search').setNameOrSVG("search-small");
+
+    const mountClearIcon = this._findDOMEl(".hig__global-nav__side-nav__search__clear", this.el);
+    this._findOrCreateIconComponent(mountClearIcon, 'clear').setNameOrSVG("close-small");
+  }
+
+  _findOrCreateIconComponent(mountElOrSelector, name = "icon") {
+    if (this[name]) {
+      return this[name];
+    } else {
+      this[name] = new Icon({});
+      this[name].mount(mountElOrSelector);
+      return this[name];
+    }
   }
 }
 
