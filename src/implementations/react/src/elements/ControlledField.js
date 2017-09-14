@@ -48,8 +48,8 @@ export default function controlled(FieldAdapter) {
       }
 
       if (this.state.controlled) {
-        if (this.fieldEl) {
-          this.fieldEl.forceNextReset();
+        if (this.field) {
+          this.field.forceNextReset();
           this.setState({ value: this.state.value });
         }
       } else {
@@ -57,14 +57,14 @@ export default function controlled(FieldAdapter) {
       }
     };
 
-    setFieldEl = FieldEl => {
-      this.fieldEl = FieldEl;
+    setField = field => {
+      this.field = field;
     };
 
     render() {
       return (
         <FieldAdapter
-          ref={this.setFieldEl}
+          ref={this.setField}
           {...this.props}
           value={this.getRenderedValue()}
           onInput={this.handleInput}
