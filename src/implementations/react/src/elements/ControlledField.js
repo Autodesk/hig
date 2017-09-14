@@ -1,12 +1,13 @@
-
 import React, { Component } from 'react';
 import * as PropTypes from 'prop-types';
 
 export default function controlled(FieldAdapter) {
   class ControlledField extends Component {
-    static propTypes = FieldAdapter.propTypes;
-    static defaultProps = FieldAdapter.defaultProps;
-    static __docgenInfo = FieldAdapter.__docgenInfo;
+    static propTypes = {
+      defaultValue: PropTypes.string,
+      value: PropTypes.string,
+      onInput: PropTypes.func
+    };
 
     constructor(props) {
       super(props);

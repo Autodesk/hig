@@ -316,7 +316,7 @@
               "desc": "makes field not required"
             },
             "onBlur": {
-              "desc": "Calls the provided callback when user puts blur on the input field",
+              "desc": "Calls the provided callback when user moves focus away from the input field",
               "params": "HIG.abstract.EventObject.params",
               "returns": "HIG.abstract.EventObject.returns"
             },
