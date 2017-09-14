@@ -5,6 +5,7 @@ export { default as Checkbox } from './elements/components/FormElements/Checkbox
 export { default as Dropdown } from './elements/components/FormElements/Dropdown';
 export { default as SideNav } from './elements/components/GlobalNav/SideNav';
 export { default as GlobalNav } from './elements/components/GlobalNav/GlobalNav';
+export { default as Icon } from './adapters/IconAdapter';
 export { default as IconButton } from './adapters/IconButtonAdapter';
 export { default as Flyout } from './elements/components/Flyout';
 export { default as Modal } from './elements/components/Modal';
