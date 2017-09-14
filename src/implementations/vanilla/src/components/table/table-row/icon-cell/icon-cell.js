@@ -3,7 +3,7 @@ import "./icon-cell.scss";
 var Template = require("./icon-cell.html");
 var Interface = require("interface.json");
 var Core = require("_core.js");
-var Icon = require("../../../../basics/icon/icon.js");
+const Icon = require("../../../../basics/icon/icon.js");
 
 
 /**

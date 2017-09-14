@@ -7,7 +7,7 @@ const Core = require('../../helpers/js/_core.js');
 const AvailableTypes = ['primary', 'secondary', 'flat'];
 const AvailableSizes = ['small', 'standard', 'large'];
 const AvailableWidths = ['shrink', 'grow'];
-var Icon = require("../../basics/icon/icon.js");
+const Icon = require("../../basics/icon/icon.js");
 
 
 /**
