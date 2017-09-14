@@ -57,7 +57,8 @@
     "storybook": "start-storybook -p 9009 -s public",
     "test": "react-scripts test --env=jsdom",
     "test-ci": "react-scripts test --env=jsdom --coverage --runInBand",
-    "type-check": "tsc"
+    "type-check": "tsc",
+    "validate": "node ./scripts/validate-version.js"
   },
   "dependencies": {
     "jest": "^20.0.4",
