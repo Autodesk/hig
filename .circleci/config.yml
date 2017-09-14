@@ -90,6 +90,9 @@ workflows:
           requires:
             - build
       - validate:
+          filters:
+            branches:
+              ignore: master
           requires:
             - build
             - test
