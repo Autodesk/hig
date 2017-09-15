@@ -137,7 +137,6 @@ class TextAreaAdapter extends HIGElement {
           break;
         }
         case 'value': {
-          console.log('setting value', propValue)
           this.hig.setValue(propValue);
           break;
         }
