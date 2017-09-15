@@ -5,7 +5,7 @@ defaults: &defaults
 
 version: 2
 jobs:
-  vanilla-build:
+  vanilla-setup:
     <<: *defaults
     steps:
       - checkout
@@ -21,6 +21,13 @@ jobs:
           key: dependency-cache-vanilla-v1-{{ checksum "src/implementations/vanilla/package.json" }}
           paths:
             - src/implementations/vanilla/node_modules
+  vanilla-build:
+    <<: *defaults
+    steps:
+      - checkout
+      # Get vanilla node_modules for this revision of vanilla/package.json
+      - restore_cache:
+          key: dependency-cache-vanilla-v1-{{ checksum "src/implementations/vanilla/package.json" }}
       - run:
           name: Build (Vanilla)
           command: npm run lib
@@ -30,7 +37,7 @@ jobs:
           key: lib-cache-vanilla-v1-{{ .Revision }}
           paths:
             - src/implementations/vanilla/lib
-  react-build:
+  react-setup:
     <<: *defaults
     steps:
       - checkout
@@ -49,6 +56,16 @@ jobs:
           key: dependency-cache-react-v1-{{ checksum "src/implementations/react/package.json" }}
           paths:
             - src/implementations/react/node_modules
+  react-build:
+    <<: *defaults
+    steps:
+      - checkout
+      # Get vanilla node_modules for this revision of vanilla/package.json
+      - restore_cache:
+          key: dependency-cache-vanilla-v1-{{ checksum "src/implementations/vanilla/package.json" }}
+      # Get React node_modules for this revision of react/package.json
+      - restore_cache:
+          key: dependency-cache-react-v1-{{ checksum "src/implementations/react/package.json" }}
       - run:
           name: Build (React)
           command: npm run lib
@@ -130,10 +147,16 @@ workflows:
   version: 2
   build-test-validate-and-deploy:
     jobs:
-      - vanilla-build
+      - vanilla-setup
+      - react-setup:
+          requires:
+            - vanilla-setup
+      - vanilla-build:
+          requires:
+            - vanilla-setup
       - react-build:
           requires:
-            - vanilla-build
+            - react-setup
       - vanilla-test:
           requires:
             - vanilla-build
@@ -145,7 +168,6 @@ workflows:
             branches:
               ignore: master
           requires:
-            - react-build
             - vanilla-test
             - react-test
       - react-deploy:
@@ -155,6 +177,5 @@ workflows:
             tags:
               only: /v[0-9]+(\.[0-9]+)*/
           requires:
-            - react-build
             - vanilla-test
             - react-test
