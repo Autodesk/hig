@@ -102,6 +102,10 @@ jobs:
       - restore_cache:
           key: dependency-cache-react-v1-{{ checksum "package.json" }}
       - run:
+          name: Add auth token
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+          working_directory: src/implementations/react
+      - run:
           name: Deploy hig-react
           command: npm publish
           working_directory: src/implementations/react
