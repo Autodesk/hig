@@ -125,11 +125,11 @@ workflows:
             - build
             - test
       - deploy:
-          #filters:
-            #branches:
-            #  only: master
-            #tags:
-            #  only: /v[0-9]+(\.[0-9]+)*/
+          filters:
+            branches:
+              only: master
+            tags:
+              only: /v[0-9]+(\.[0-9]+)*/
           requires:
             - build
             - test
