@@ -87,17 +87,13 @@ class PasswordField extends Component {
     this.setState({ hasFocus: true });
   }
 
-  handleInput = event => {
-    this.props.onInput(event);
-  }
-
-  hidePassword = (event) => {
+  handlePasswordHideButtonClick = (event) => {
     event.stopPropagation();
     event.preventDefault();
     this.setState({ showPassword: false });
   }
 
-  showPassword = (event) => {
+  handlePasswordRevealButtonClick = (event) => {
     event.stopPropagation();
     event.preventDefault();
     this.setState({ showPassword: true });
@@ -108,11 +104,9 @@ class PasswordField extends Component {
       <ControlledPasswordFieldAdapter
         {...this.props}
         onBlur={this.handleBlur}
-        onChange={this.handleChange}
         onFocus={this.handleFocus}
-        onInput={this.handleInput}
-        onPasswordHideButtonClick={this.hidePassword}
-        onPasswordRevealButtonClick={this.showPassword}
+        onPasswordHideButtonClick={this.handlePasswordHideButtonClick}
+        onPasswordRevealButtonClick={this.handlePasswordRevealButtonClick}
         revealPassword={this.state.showPassword}
         showPasswordHideButton={this.state.hasFocus && this.state.showPassword}
         showPasswordRevealButton={this.state.hasFocus && !this.state.showPassword}
