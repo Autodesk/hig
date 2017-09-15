@@ -123,7 +123,7 @@ class ProjectAccountSwitcher extends Component {
             return <Account onClick={this.handleAccountClick} key={a.id} {...a}/>
           }
         })}
-          
+            
         {projects.map((p, i) => {
           if(i === 0) {
             return <Project onClick={this.handleProjectClick} key={p.id} {...p}/>

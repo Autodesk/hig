@@ -285,11 +285,7 @@ class Core {
      * Get the Icon SVG String
      * @param {String} icon - icon ID
      * @returns {String} String with SVG of the icon
-     */
-
-    _getIconString(icon){
-        return Icons[icon];
-    }
+     
 
     /**
      * Returns valid interface methods
