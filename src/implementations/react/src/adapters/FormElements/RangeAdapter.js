@@ -48,6 +48,10 @@ class RangeAdapter extends HIGElement {
     this.commitUpdate(commitProps);
   }
 
+  forceReset(props) {
+    this.commitUpdate(['value', props.value]);
+  }
+
   commitUpdate(updatePayload, oldProps, newProps) {
     for (let i = 0; i < updatePayload.length; i += 2) {
       const propKey = updatePayload[i];
@@ -62,28 +66,16 @@ class RangeAdapter extends HIGElement {
           this.hig.setInstructions(propValue);
           break;
         }
-        case 'minValue': {
-          this.hig.setMin(propValue);
+        case 'label': {
+          this.hig.setLabel(propValue);
           break;
         }
         case 'maxValue': {
           this.hig.setMax(propValue);
           break;
         }
-        case 'label': {
-          this.hig.setLabel(propValue);
-          break;
-        }
-        case 'required': {
-          propValue ? this.hig.required(propValue) : this.hig.noLongerRequired();
-          break;
-        }
-        case 'step': {
-          this.hig.setStep(propValue);
-          break;
-        }
-        case 'value': {
-          this.hig.setValue(propValue);
+        case 'minValue': {
+          this.hig.setMin(propValue);
           break;
         }
         case 'onBlur': {
@@ -116,6 +108,28 @@ class RangeAdapter extends HIGElement {
           this._disposeFunctions.set('onFocusDispose', this.hig.onFocus(propValue));
           break;
         }
+        case 'onInput': {
+          const dispose = this._disposeFunctions.get('onInputDispose');
+
+          if (dispose) {
+            dispose();
+          }
+
+          this._disposeFunctions.set('onInputDispose', this.hig.onInput(propValue));
+          break;
+        }
+        case 'required': {
+          propValue ? this.hig.required(propValue) : this.hig.noLongerRequired();
+          break;
+        }
+        case 'step': {
+          this.hig.setStep(propValue);
+          break;
+        }
+        case 'value': {
+          this.hig.setValue(propValue);
+          break;
+        }
         default: {
           console.log(`RangeAdapter property ${propKey} is unknown`);
         }
@@ -137,35 +151,10 @@ RangeComponent.propTypes = {
   onFocus:      PropTypes.func,
   required:     PropTypes.string,
   step:         PropTypes.number,
-  value:        PropTypes.number
-};
-
-RangeComponent.__docgenInfo = {
-  props: {
-    disabled:        {
-      description: 'prevents interaction with the range'
-    }, instructions: {
-      description: 'instruction text for the range'
-    }, label:        {
-      description: 'label for the range'
-    }, minValue:     {
-      description: 'minimum value for the range'
-    }, maxValue:     {
-      description: 'maximum value for the range'
-    }, onBlur:       {
-      description: 'callback for focus lost from the range'
-    }, onChange:     {
-      description: 'callback for change + focus lost for the range'
-    }, onFocus:      {
-      description: 'callback for focus event on the range'
-    }, required:     {
-      description: 'text indicating that this range field is a required field'
-    }, step:         {
-      description: 'value of each step between min and max.'
-    }, value:        {
-      description: 'value for the range input'
-    }
-  }
+  value:        PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ])
 };
 
 export default RangeComponent;

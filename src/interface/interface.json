@@ -316,7 +316,7 @@
               "desc": "makes field not required"
             },
             "onBlur": {
-              "desc": "Calls the provided callback when user puts blur on the input field",
+              "desc": "Calls the provided callback when user moves focus away from the input field",
               "params": "HIG.abstract.EventObject.params",
               "returns": "HIG.abstract.EventObject.returns"
             },
@@ -634,6 +634,11 @@
             },
             "onChange": {
               "desc": "Calls the provided callback when user changes the value of the range element then moves focus elsewhere",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            },
+            "onInput": {
+              "desc": "Calls the provided callback when user changes the value of the range element",
               "params": "HIG.abstract.EventObject.params",
               "returns": "HIG.abstract.EventObject.returns"
             }

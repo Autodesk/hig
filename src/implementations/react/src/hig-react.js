@@ -10,14 +10,14 @@ export { default as IconButton } from './adapters/IconButtonAdapter';
 export { default as Flyout } from './elements/components/Flyout';
 export { default as Modal } from './elements/components/Modal';
 export { default as Option } from './adapters/FormElements/OptionAdapter';
-export { default as PasswordField } from './adapters/FormElements/PasswordFieldAdapter';
+export { default as PasswordField } from './elements/components/FormElements/PasswordField';
 export { default as RadioButton } from './adapters/FormElements/RadioButtonAdapter';
-export { default as Range } from './adapters/FormElements/RangeAdapter';
+export { default as Range } from './elements/components/FormElements/Range';
 export { default as RichText } from './elements/components/RichText';
 export { default as Spacer } from './adapters/SpacerAdapter';
 export { sizes } from 'hig-vanilla';
-export { default as TextArea } from './adapters/FormElements/TextAreaAdapter';
-export { default as TextField } from './adapters/FormElements/TextFieldAdapter';
+export { default as TextArea } from './elements/components/FormElements/TextArea';
+export { default as TextField } from './elements/components/FormElements/TextField';
 export { default as TextLink } from './adapters/TextLinkAdapter';
 export * from './elements/components/Typography';
 export { default as Table } from  './adapters/TableAdapter';
@@ -26,5 +26,3 @@ export { default as SlotHeadCell } from './elements/components/SlotHeadCell';
 export { default as SlotCell } from './elements/components/SlotCell';
 export { default as Grid } from './adapters/FormElements/GridAdapter';
 export { default as GridItem } from './elements/components/FormElements/GridItem';
-
-

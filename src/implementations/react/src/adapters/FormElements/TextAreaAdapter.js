@@ -48,6 +48,10 @@ class TextAreaAdapter extends HIGElement {
     this.commitUpdate(commitProps);
   }
 
+  forceReset(props) {
+    this.commitUpdate(['value', props.value]);
+  }
+
   commitUpdate(updatePayload, oldProps, newProps) {
     for (let i = 0; i < updatePayload.length; i += 2) {
       const propKey = updatePayload[i];
@@ -68,20 +72,6 @@ class TextAreaAdapter extends HIGElement {
         }
         case 'name': {
           this.hig.setName(propValue);
-          break;
-        }
-        case 'placeholder': {
-          this.hig.setPlaceholder(propValue);
-          break;
-        }
-        case 'required': {
-          propValue
-            ? this.hig.required(propValue)
-            : this.hig.noLongerRequired();
-          break;
-        }
-        case 'value': {
-          this.hig.setValue(propValue);
           break;
         }
         case 'onBlur': {
@@ -136,6 +126,20 @@ class TextAreaAdapter extends HIGElement {
           );
           break;
         }
+        case 'placeholder': {
+          this.hig.setPlaceholder(propValue);
+          break;
+        }
+        case 'required': {
+          propValue
+            ? this.hig.required(propValue)
+            : this.hig.noLongerRequired();
+          break;
+        }
+        case 'value': {
+          this.hig.setValue(propValue);
+          break;
+        }
         default: {
           return;
         }
@@ -151,48 +155,13 @@ TextAreaComponent.propTypes = {
   instructions: PropTypes.string,
   label: PropTypes.string,
   name: PropTypes.string,
-  placeholder: PropTypes.string,
-  required: PropTypes.string,
-  value: PropTypes.string,
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
   onFocus: PropTypes.func,
-  onInput: PropTypes.func
-};
-
-TextAreaComponent.__docgenInfo = {
-  props: {
-    disabled: {
-      description: 'prevents interaction with the text field'
-    },
-    instructions: {
-      description: 'instructional text for the text field'
-    },
-    label: {
-      description: 'label for the text field'
-    },
-    name: {
-      description: 'name of the field as submitted with a form'
-    },
-    onBlur: {
-      description: 'callback called when user moves focus away from the text field'
-    },
-    onChange: {
-      description: 'callback called when user changes the value of the text field and moves focus away'
-    },
-    onFocus: {
-      description: 'callback called when user moves focus onto the text field'
-    },
-    onInput: {
-      description: 'callback called when user changes the value of the text field'
-    },
-    placeholder: {
-      description: 'text prompting the user to enter text'
-    },
-    required: {
-      description: 'text indicating that the user must enter a value for this text field'
-    }
-  }
+  onInput: PropTypes.func,
+  placeholder: PropTypes.string,
+  required: PropTypes.string,
+  value: PropTypes.string
 };
 
 export default TextAreaComponent;

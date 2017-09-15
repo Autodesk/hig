@@ -5,16 +5,18 @@ import { TextField } from '../../hig-react';
 class TextFieldSection extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      value: ''
+    };
   }
 
-  setTextFieldValue = (event) => {
-    this.setState({ textFieldValue: event.target.textFieldValue });
+  setValue = (event) => {
+    this.setState({ value: event.target.value });
   }
 
   logEvent(event, higElement) {
     let messageParts = [
-      `${higElement.constructor.name} triggered an ${event.type} event`
+      `TextField triggered an ${event.type} event`
     ];
     if (event.target.value !== undefined) {
       messageParts = messageParts.concat(`: ${event.target.value}`);
@@ -31,12 +33,13 @@ class TextFieldSection extends Component {
           onBlur={this.logEvent}
           onChange={this.logEvent}
           onFocus={this.logEvent}
-          onInput={this.setTextFieldValue}
-          value={this.state.textFieldValue}
+          onInput={this.setValue}
+          value={this.state.value}
           required="This field is required."
         />
       </PlaygroundSection>
     )
   }
 }
+
 export default TextFieldSection;

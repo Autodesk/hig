@@ -8,13 +8,13 @@ class PasswordFieldSection extends Component {
     this.state = {};
   }
 
-  setPasswordFieldValue = (event) => {    
-    this.setState({ textFieldValue: event.target.textFieldValue });
+  setPassword = (event) => {
+    this.setState({ password: event.target.value });
   }
 
   logEvent(event, higElement) {
     let messageParts = [
-      `${higElement.constructor.name} triggered an ${event.type} event`
+      `PasswordField triggered an ${event.type} event`
     ];
     if (event.target.value !== undefined) {
       messageParts = messageParts.concat(`: ${event.target.value}`);
@@ -32,7 +32,8 @@ class PasswordFieldSection extends Component {
           onBlur={this.logEvent}
           onChange={this.logEvent}
           onFocus={this.logEvent}
-          onInput={this.logEvent}
+          onInput={this.setPassword}
+          value={this.state.password}
           onPasswordHideButtonClick={function() {"clicked Password hide button"}}
           onPasswordRevealButtonClick={function(){console.log('Password REVEAL clicked')}}
           showPasswordRevealButton={false}

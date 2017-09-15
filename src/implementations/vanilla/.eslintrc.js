@@ -16,8 +16,9 @@ module.exports = {
   },
   'rules': {
     'class-methods-use-this': 0,
-    'max-len': [2, { code: 100 }],
+    'import/no-extraneous-dependencies': 0,
     'no-underscore-dangle': 0,
-    'import/no-extraneous-dependencies': 0
+    'no-unused-expressions': ['error', { allowTernary: true }],
+    'max-len': [2, { code: 100 }]
   }
 };
