@@ -1,9 +1,12 @@
+defaults: &defaults
+      working_directory: ~/hig
+      docker:
+        - image: circleci/node:8.2.1
+
 version: 2
 jobs:
   build:
-    working_directory: ~/hig
-    docker:
-      - image: circleci/node:8.2.1
+    <<: *defaults
     steps:
       - checkout
       # Get vanilla node_modules for this revision of vanilla/package.json
@@ -49,9 +52,7 @@ jobs:
           paths:
             - src/implementations/react/lib
   test:
-    working_directory: ~/hig
-    docker:
-      - image: circleci/node:8.2.1
+    <<: *defaults
     steps:
       - checkout
       # Get vanilla node_modules for this revision of vanilla/package.json
@@ -80,9 +81,7 @@ jobs:
           command: npm run test-ci
           working_directory: src/implementations/react
   validate:
-    working_directory: ~/hig
-    docker:
-      - image: circleci/node:8.2.1
+    <<: *defaults
     steps:
       - checkout
       # Get React node_modules for this revision of react/package.json
