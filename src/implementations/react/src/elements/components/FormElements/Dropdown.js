@@ -5,6 +5,23 @@ import * as PropTypes from 'prop-types';
 
 const OptionAdapter = DropdownAdapter.Option;
 
+class Option extends Component {
+  static propTypes = {
+    onClick: PropTypes.func.isRequired,
+    value: PropTypes.string.isRequired
+  }
+
+  handleClick = (event) => {
+    this.props.onClick(this.props.value);
+  }
+
+  render() {
+    return (
+      <OptionAdapter {...this.props} onClick={this.handleClick} />
+    )
+  }
+}
+
 class Dropdown extends Component {
 
   static propTypes = {
@@ -15,52 +32,59 @@ class Dropdown extends Component {
     required: PropTypes.string,
     value: PropTypes.string,
     defaultValue: PropTypes.string,
-
     options: PropTypes.arrayOf(PropTypes.shape({
       label: PropTypes.string,
       value: PropTypes.string
     })),
-
     onChange: PropTypes.func,
     onBlur: PropTypes.func,
     onFocus: PropTypes.func,
     onKeypress: PropTypes.func
   }
 
+  static defaultProps = {
+    options: [],
+    onChange: () => {}
+  }
+
   constructor(props) {
     super(props);
 
-    var val = (this.props.value || this.props.defaultValue);
-    var lab;
-    
-    if(this.props.options){
-      this.props.options.forEach((v) => {
-        if(v.value === val){
-          lab = v.label;
-        }
-      }, this);
-    }
-
     this.state = {
       open: false,
-      value: val,
-      selectedLabel: lab
+      value: this.getDefaultValue()
     };
-
-    
   }
 
-  setSelectedValue = (selectedOption) => {
-    if(selectedOption.value !== this.state.value){
-      if(this.props.onChange){
-        this.props.onChange(selectedOption);
-      }
-      this.setState({
-        open: false,
-        value: selectedOption.value,
-        selectedLabel: selectedOption.label,
-      });
+  getDefaultValue() {
+    const { defaultValue, value } = this.props;
+
+    if (value !== undefined) {
+      return value;
+    } else if (defaultValue !== undefined) {
+      return defaultValue;
+    } else {
+      return '';
     }
+  }
+
+  getRenderedValue() {
+    const { value } = this.props;
+
+    if (value !== undefined) {
+      return value;
+    } else {
+      return this.state.value;
+    }
+  }
+
+  setSelectedValue = (selectedOptionValue) => {
+    this.props.onChange(selectedOptionValue);
+
+    this.setState({
+      open: false,
+      value: selectedOptionValue
+    });
   };
 
   openDropdown = () => {
@@ -72,30 +96,22 @@ class Dropdown extends Component {
   };
 
   render() {
+    const selectedOption = this.props.options.find(o => o.value === this.getRenderedValue()) || {};
+
     return (
       <DropdownAdapter
-        label={this.props.label}
-        instructions={this.props.instructions}
-        placeholder={this.props.placeholder}
-        disabled={this.props.disabled}
-        required={this.props.required}
-        
+        {...this.props}
         open={this.state.open}
-        selectedOptionLabel={this.state.selectedLabel}
+        selectedOptionLabel={selectedOption.label}
         onTargetClick={this.openDropdown}
         onClickOutside={this.closeDropdown}
-
-        onBlur={this.props.onBlur}
-        onFocus={this.props.onFocus}
-        onKeypress={this.props.onKeypress}
       >
-        {this.props.options && this.props.options.map(option => (
-          <OptionAdapter
+        {this.props.options.map(option => (
+          <Option
             key={option.value}
-            label={option.label}
-            value={option.value}
-            selected={option.value === this.state.value}
-            onClick={this.setSelectedValue.bind(this, option)}
+            {...option}
+            selected={option.value === selectedOption.value}
+            onClick={this.setSelectedValue}
           />
         ))}
       </DropdownAdapter>
