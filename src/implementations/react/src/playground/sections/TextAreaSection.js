@@ -40,4 +40,5 @@ class TextAreaSection extends Component {
     )
   }
 }
+
 export default TextAreaSection;

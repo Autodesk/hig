@@ -4,8 +4,8 @@ import * as PropTypes from 'prop-types';
 export default function controlled(FieldAdapter) {
   class ControlledField extends Component {
     static propTypes = {
-      defaultValue: PropTypes.string,
-      value: PropTypes.string,
+      defaultValue: PropTypes.any,
+      value: PropTypes.any,
       onInput: PropTypes.func
     };
 

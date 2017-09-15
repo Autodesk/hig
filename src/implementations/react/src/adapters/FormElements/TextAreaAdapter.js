@@ -49,7 +49,6 @@ class TextAreaAdapter extends HIGElement {
   }
 
   forceReset(props) {
-    console.log('forcing reset', props.value)
     this.commitUpdate(['value', props.value]);
   }
 

@@ -1,26 +1,31 @@
 import PropTypes from 'prop-types';
-import TextAreaAdapter
-  from '../../../adapters/FormElements/TextAreaAdapter.js';
+import RangeAdapter
+  from '../../../adapters/FormElements/RangeAdapter.js';
 import controlled from '../../ControlledField';
 
-const TextArea = controlled(TextAreaAdapter);
+const Range = controlled(RangeAdapter);
 
-TextArea.propTypes = {
+Range.propTypes = {
   disabled: PropTypes.bool,
   initialValue: PropTypes.string,
   instructions: PropTypes.string,
   label: PropTypes.string,
   name: PropTypes.string,
+  minValue: PropTypes.number,
+  maxValue: PropTypes.number,
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
   onFocus: PropTypes.func,
   onInput: PropTypes.func,
-  placeholder: PropTypes.string,
   required: PropTypes.string,
-  value: PropTypes.string
+  step: PropTypes.number,
+  value: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ])
 }
 
-TextArea.__docgeninfo = {
+Range.__docgeninfo = {
   disabled: {
     description: 'disable the field, preventing user interaction'
   },
@@ -36,6 +41,12 @@ TextArea.__docgeninfo = {
   name: {
     description: 'set on the element\'s name attribute'
   },
+  minValue: {
+    description: 'minimum value for the range'
+  },
+  maxValue: {
+    description: 'maximum value for the range'
+  },
   onBlur: {
     description: 'called when user moves focus away from the field'
   },
@@ -48,15 +59,15 @@ TextArea.__docgeninfo = {
   onInput: {
     description: 'called when user enters a new value'
   },
-  placeholder: {
-    description: 'data entry suggestions or formatting examples'
-  },
   required: {
     description: 'indicates a field must be filled before the form may be completed'
+  },
+  step: {
+    description: 'ammount of each step between min and max'
   },
   value: {
     description: 'controlled value of the field'
   }
 }
 
-export default TextArea;
+export default Range;

@@ -25,13 +25,13 @@ class PasswordField extends Component {
 
   static __docgeninfo = {
     disabled: {
-      description: 'disable the password field, preventing user interaction'
+      description: 'disable the field, preventing user interaction'
     },
     initialValue: {
-      description: 'initial value of the password'
+      description: 'initial value of the field'
     },
     instructions: {
-      description: 'a short description and (rarely) link to more information'
+      description: 'a short description or suggestion'
     },
     label: {
       description: 'describes what the field controls'
@@ -58,7 +58,7 @@ class PasswordField extends Component {
       description: 'indicates a field must be filled before the form may be completed'
     },
     value: {
-      description: 'controlled value of the password'
+      description: 'controlled value of the field'
     },
   }
 
