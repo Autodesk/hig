@@ -7,6 +7,7 @@ import createComponent from "../createComponent";
 import HIGNodeList from "../../elements/HIGNodeList";
 import HIGChildValidator from "../../elements/HIGChildValidator";
 import OptionComponent, { OptionAdapter } from "./OptionAdapter";
+import Option from '../../elements/components/FormElements/Option';
 
 export class DropdownAdapter extends HIGElement {
   constructor(initialProps) {
@@ -181,7 +182,7 @@ export class DropdownAdapter extends HIGElement {
           break;
         }
         default: {
-          console.warn(`${propKey} is unknown`);
+          // No-op
         }
       }
     }
@@ -232,7 +233,7 @@ DropdownComponent.propTypes = {
   onTargetClick: PropTypes.func,
   setSelectedOptionLabel: PropTypes.func,
 
-  children: HIGChildValidator([OptionComponent])
+  children: HIGChildValidator([OptionComponent, Option])
 };
 
 DropdownComponent.__docgenInfo = {

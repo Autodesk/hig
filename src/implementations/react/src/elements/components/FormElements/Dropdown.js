@@ -1,26 +1,9 @@
 import React, { Component } from 'react';
-import DropdownAdapter
-  from '../../../adapters/FormElements/DropdownAdapter.js';
 import * as PropTypes from 'prop-types';
 
-const OptionAdapter = DropdownAdapter.Option;
-
-class Option extends Component {
-  static propTypes = {
-    onClick: PropTypes.func.isRequired,
-    value: PropTypes.string.isRequired
-  }
-
-  handleClick = (event) => {
-    this.props.onClick(this.props.value);
-  }
-
-  render() {
-    return (
-      <OptionAdapter {...this.props} onClick={this.handleClick} />
-    )
-  }
-}
+import DropdownAdapter
+  from '../../../adapters/FormElements/DropdownAdapter.js';
+import Option from './Option';
 
 class Dropdown extends Component {
 

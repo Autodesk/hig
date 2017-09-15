@@ -13,7 +13,7 @@ export class OptionAdapter extends HIGElement {
   componentDidMount() {
     if (this.props.selected) {
       this.commitUpdate(['selected', this.props.selected])
-    } 
+    }
     if (this.props.onHover) {
       this.commitUpdate(['onHover', this.props.onHover])
     }
@@ -71,7 +71,7 @@ export class OptionAdapter extends HIGElement {
           break;
         }
         default: {
-          console.warn(`${propKey} is unknown`);
+          // No-op
         }
       }
     }
