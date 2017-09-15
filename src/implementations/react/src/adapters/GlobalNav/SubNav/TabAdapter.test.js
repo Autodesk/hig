@@ -9,7 +9,7 @@ import Tabs from './TabsAdapter';
 const Context = props => {
   return (
     <GlobalNav>
-      <GlobalNav.SubNav>
+      <GlobalNav.SubNav moduleIndicatorIcon='gear'>
         <Tabs>
           <Tabs.Tab active={props.active} label={props.label} key={props.id} />
         </Tabs>
@@ -24,8 +24,9 @@ function createHigContext(props) {
   const higNav = new HIG.GlobalNav();
   higNav.mount(higContainer);
 
-  const higSubNav = new higNav.partials.SubNav({});
+  const higSubNav = new higNav.partials.SubNav({moduleIndicatorIcon: 'gear'});
   higNav.addSubNav(higSubNav);
+  
 
   const higTabs = new higSubNav.partials.Tabs();
   higSubNav.addTabs(higTabs);

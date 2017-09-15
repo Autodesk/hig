@@ -76,14 +76,11 @@ class Button extends Core {
 
   setIcon(icon) {
     if (icon && icon.length > 0) {
-      const iconString = this._getIconString(icon);
-
       const mountEl  = this._findOrAddElement(
         "ICON",
         "span",
         ".hig__button__icon"
       )
-
       this._findOrCreateIconComponent(mountEl).setNameOrSVG(icon);
     } else {
       this._removeElementIfFound(".hig__button__icon");
