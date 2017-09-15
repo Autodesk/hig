@@ -1,19 +1,3 @@
-/**
- Copyright 2016 Autodesk,Inc.
-
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
-
- http://www.apache.org/licenses/LICENSE-2.0
-
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
-
- */
 import * as HIG from "hig-vanilla";
 
 import HIGElement from "../../elements/HIGElement";
@@ -23,6 +7,7 @@ import createComponent from "../createComponent";
 import HIGNodeList from "../../elements/HIGNodeList";
 import HIGChildValidator from "../../elements/HIGChildValidator";
 import OptionComponent, { OptionAdapter } from "./OptionAdapter";
+import Option from '../../elements/components/FormElements/Option';
 
 export class DropdownAdapter extends HIGElement {
   constructor(initialProps) {
@@ -197,7 +182,7 @@ export class DropdownAdapter extends HIGElement {
           break;
         }
         default: {
-          console.warn(`${propKey} is unknown`);
+          // No-op
         }
       }
     }
@@ -237,6 +222,7 @@ const DropdownComponent = createComponent(DropdownAdapter);
 DropdownComponent.propTypes = {
   label: PropTypes.string,
   instructions: PropTypes.string,
+  placeholder: PropTypes.string,
   open: PropTypes.bool,
   disabled: PropTypes.bool,
   required: PropTypes.string,
@@ -247,7 +233,7 @@ DropdownComponent.propTypes = {
   onTargetClick: PropTypes.func,
   setSelectedOptionLabel: PropTypes.func,
 
-  children: HIGChildValidator([OptionComponent])
+  children: HIGChildValidator([OptionComponent, Option])
 };
 
 DropdownComponent.__docgenInfo = {

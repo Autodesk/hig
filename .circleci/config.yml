@@ -1,35 +1,43 @@
+defaults: &defaults
+      working_directory: ~/hig
+      docker:
+        - image: circleci/node:8.2.1
+
 version: 2
 jobs:
   build:
-    working_directory: ~/hig
-    docker:
-      - image: circleci/node:8.2.1
+    <<: *defaults
     steps:
       - checkout
+      # Get vanilla node_modules for this revision of vanilla/package.json
       - restore_cache:
-          key: dependency-cache-vanilla-v1-{{ checksum "package.json" }}
+          key: dependency-cache-vanilla-v1-{{ checksum "src/implementations/vanilla/package.json" }}
       - run:
           name: npm Install (Vanilla)
           command: npm install
           working_directory: src/implementations/vanilla
+      # Store vanilla node_modules for this revision of vanilla/package.json
       - save_cache:
-          key: dependency-cache-vanilla-v1-{{ checksum "package.json" }}
+          key: dependency-cache-vanilla-v1-{{ checksum "src/implementations/vanilla/package.json" }}
           paths:
             - src/implementations/vanilla/node_modules
+      # Get React node_modules for this revision of react/package.json
       - restore_cache:
-          key: dependency-cache-react-v1-{{ checksum "package.json" }}
+          key: dependency-cache-react-v1-{{ checksum "src/implementations/react/package.json" }}
       - run:
           name: npm Install (React)
           command: npm install
           working_directory: src/implementations/react
+      # Store React node_modules for this revision of react/package.json
       - save_cache:
-          key: dependency-cache-react-v1-{{ checksum "package.json" }}
+          key: dependency-cache-react-v1-{{ checksum "src/implementations/react/package.json" }}
           paths:
             - src/implementations/react/node_modules
       - run:
           name: Build (Vanilla)
           command: npm run lib
           working_directory: src/implementations/vanilla
+      # Store vanilla build files for this commit
       - save_cache:
           key: lib-cache-vanilla-v1-{{ .Revision }}
           paths:
@@ -38,18 +46,19 @@ jobs:
           name: Build (React)
           command: npm run lib
           working_directory: src/implementations/react
+      # Store React build files for this commit
       - save_cache:
           key: lib-cache-react-v1-{{ .Revision }}
           paths:
             - src/implementations/react/lib
   test:
-    working_directory: ~/hig
-    docker:
-      - image: circleci/node:8.2.1
+    <<: *defaults
     steps:
       - checkout
+      # Get vanilla node_modules for this revision of vanilla/package.json
       - restore_cache:
-          key: dependency-cache-vanilla-v1-{{ checksum "package.json" }}
+          key: dependency-cache-vanilla-v1-{{ checksum "src/implementations/vanilla/package.json" }}
+      # Get vanilla build files for this commit
       - restore_cache:
           key: lib-cache-vanilla-v1-{{ .Revision }}
       - run:
@@ -61,8 +70,10 @@ jobs:
           name: Run Tests (Vanilla)
           command: npm run gemini-ci
           working_directory: src/implementations/vanilla
+      # Get React node_modules for this revision of react/package.json
       - restore_cache:
-          key: dependency-cache-react-v1-{{ checksum "package.json" }}
+          key: dependency-cache-react-v1-{{ checksum "src/implementations/react/package.json" }}
+      # Get React build files for this commit
       - restore_cache:
           key: lib-cache-react-v1-{{ .Revision }}
       - run:
@@ -70,13 +81,12 @@ jobs:
           command: npm run test-ci
           working_directory: src/implementations/react
   validate:
-    working_directory: ~/hig
-    docker:
-      - image: circleci/node:8.2.1
+    <<: *defaults
     steps:
       - checkout
+      # Get React node_modules for this revision of react/package.json
       - restore_cache:
-          key: dependency-cache-react-v1-{{ checksum "package.json" }}
+          key: dependency-cache-react-v1-{{ checksum "src/implementations/react/package.json" }}
       - run:
           name: Validate hig-react version
           command: npm run validate
