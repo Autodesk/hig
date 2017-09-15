@@ -87,7 +87,7 @@ jobs:
           name: Run Tests (React)
           command: npm run test-ci
           working_directory: src/implementations/react
-  validate:
+  react-validate:
     <<: *defaults
     steps:
       - checkout
@@ -98,7 +98,7 @@ jobs:
           name: Validate hig-react version
           command: npm run validate
           working_directory: src/implementations/react
-  deploy:
+  react-deploy:
     <<: *defaults
     steps:
       - checkout
@@ -128,14 +128,14 @@ workflows:
           requires:
             - vanilla-build
             - react-build
-      - validate:
+      - react-validate:
           filters:
             branches:
               ignore: master
           requires:
             - react-build
             - test
-      - deploy:
+      - react-deploy:
           filters:
             branches:
               only: master
