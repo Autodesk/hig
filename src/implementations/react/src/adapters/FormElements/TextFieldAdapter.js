@@ -78,16 +78,6 @@ class TextFieldAdapter extends HIGElement {
           this.hig.setName(propValue);
           break;
         }
-        case 'value': {
-          this.hig.setValue(propValue);
-          break;
-        }
-        case 'required': {
-          propValue
-            ? this.hig.required(propValue)
-            : this.hig.noLongerRequired();
-          break;
-        }
         case 'onBlur': {
           const dispose = this._disposeFunctions.get('onBlurDispose');
 
@@ -111,6 +101,19 @@ class TextFieldAdapter extends HIGElement {
           this._disposeFunctions.set(
             'onChangeDispose',
             this.hig.onChange(propValue)
+          );
+          break;
+        }
+        case 'onClearButtonClick': {
+          const dispose = this._disposeFunctions.get('onClearButtonClickDispose');
+
+          if (dispose) {
+            dispose();
+          }
+
+          this._disposeFunctions.set(
+            'onClearButtonClickDispose',
+            this.hig.onClearButtonClick(propValue)
           );
           break;
         }
@@ -144,6 +147,20 @@ class TextFieldAdapter extends HIGElement {
           this.hig.setPlaceholder(propValue);
           break;
         }
+        case 'required': {
+          propValue
+            ? this.hig.required(propValue)
+            : this.hig.noLongerRequired();
+          break;
+        }
+        case 'showClearButton': {
+          propValue ? this.hig.showClearButton() : this.hig.hideClearButton();
+          break;
+        }
+        case 'value': {
+          this.hig.setValue(propValue);
+          break;
+        }
         default: {
           console.warn(
             `${this.constructor.name} doesn't handle the prop ${propKey}`
@@ -164,11 +181,13 @@ TextFieldComponent.propTypes = {
   name: PropTypes.string,
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
+  onClearButtonClick: PropTypes.func,
   onFocus: PropTypes.func,
   onInput: PropTypes.func,
   placeholder: PropTypes.string,
   required: PropTypes.string,
-  value: PropTypes.string
+  showClearButton: PropTypes.bool,
+  value: PropTypes.string,
 };
 
 export default TextFieldComponent;
