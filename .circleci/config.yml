@@ -7,23 +7,23 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependency-cache-vanilla-v1-{{ checksum "package.json" }}
+          key: dependency-cache-vanilla-v1-{{ checksum "src/implementations/vanilla/package.json" }}
       - run:
           name: npm Install (Vanilla)
           command: npm install
           working_directory: src/implementations/vanilla
       - save_cache:
-          key: dependency-cache-vanilla-v1-{{ checksum "package.json" }}
+          key: dependency-cache-vanilla-v1-{{ checksum "src/implementations/vanilla/package.json" }}
           paths:
             - src/implementations/vanilla/node_modules
       - restore_cache:
-          key: dependency-cache-react-v1-{{ checksum "package.json" }}
+          key: dependency-cache-react-v1-{{ checksum "src/implementations/react/package.json" }}
       - run:
           name: npm Install (React)
           command: npm install
           working_directory: src/implementations/react
       - save_cache:
-          key: dependency-cache-react-v1-{{ checksum "package.json" }}
+          key: dependency-cache-react-v1-{{ checksum "src/implementations/react/package.json" }}
           paths:
             - src/implementations/react/node_modules
       - run:
@@ -49,7 +49,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependency-cache-vanilla-v1-{{ checksum "package.json" }}
+          key: dependency-cache-vanilla-v1-{{ checksum "src/implementations/vanilla/package.json" }}
       - restore_cache:
           key: lib-cache-vanilla-v1-{{ .Revision }}
       - run:
@@ -62,7 +62,7 @@ jobs:
           command: npm run gemini-ci
           working_directory: src/implementations/vanilla
       - restore_cache:
-          key: dependency-cache-react-v1-{{ checksum "package.json" }}
+          key: dependency-cache-react-v1-{{ checksum "src/implementations/react/package.json" }}
       - restore_cache:
           key: lib-cache-react-v1-{{ .Revision }}
       - run:
@@ -76,7 +76,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependency-cache-react-v1-{{ checksum "package.json" }}
+          key: dependency-cache-react-v1-{{ checksum "src/implementations/react/package.json" }}
       - run:
           name: Validate hig-react version
           command: npm run validate
