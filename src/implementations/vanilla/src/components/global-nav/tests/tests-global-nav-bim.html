@@ -110,7 +110,6 @@
             // CREATE GLOBALNAV COMPONENT
             var GlobalNav = new Hig.GlobalNav();
             GlobalNav.mount("body");
-            GlobalNav.showSideNav();
 
             // ADD SIDENAV
             var SideNav = new GlobalNav.partials.SideNav();
@@ -152,10 +151,8 @@
             TopNav.onHamburgerClick(function(e){
                 if(menuModel["_menu_open"]){
                     GlobalNav.hideSideNav();
-                    TopNav.sidenavClosed();
                 }else{
                     GlobalNav.showSideNav();
-                    TopNav.sidenavOpen();
                 }
                 menuModel["_menu_open"] = !menuModel["_menu_open"];
             });
@@ -228,10 +225,8 @@
             SubNav.onModuleIndicatorClick(function(e){
                 if(menuModel["_menu_open"]){
                     GlobalNav.hideSideNav();
-                    TopNav.sidenavClosed();
                 }else{
                     GlobalNav.showSideNav();
-                    TopNav.sidenavOpen();
                 }
                 menuModel["_menu_open"] = !menuModel["_menu_open"];
             });
