@@ -69,11 +69,30 @@ jobs:
           name: Run Tests (React)
           command: npm run test-ci
           working_directory: src/implementations/react
+  validate:
+    working_directory: ~/hig
+    docker:
+      - image: circleci/node:8.2.1
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-react-v1-{{ checksum "package.json" }}
+      - run:
+          name: Validate hig-react version
+          command: npm run validate
+          working_directory: src/implementations/react
 workflows:
   version: 2
-  build-and-test:
+  build-test-and-validate:
     jobs:
       - build
       - test:
           requires:
             - build
+      - validate:
+          filters:
+            branches:
+              ignore: master
+          requires:
+            - build
+            - test

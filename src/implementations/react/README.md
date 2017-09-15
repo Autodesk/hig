@@ -17,10 +17,10 @@ Then with a module bundler like [rollup](http://rollupjs.org/) or [webpack](http
 
 ```javascript
 // using ES6 modules
-import { Button } from '@hig/hig-react';
+import { Button } from 'hig-react';
 
 // Styles
-import '@hig/hig-react/lib/hig-react.css';
+import 'hig-react/lib/hig-react.css';
 
 // using CommonJS modules
 var ReactHIG = require('@hig/hig-react');
