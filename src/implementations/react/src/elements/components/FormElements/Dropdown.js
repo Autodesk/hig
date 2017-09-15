@@ -13,7 +13,8 @@ class Dropdown extends Component {
     placeholder: PropTypes.string,
     disabled: PropTypes.bool,
     required: PropTypes.string,
-    selectedOption: PropTypes.string,
+    value: PropTypes.string,
+    defaultValue: PropTypes.string,
 
     options: PropTypes.arrayOf(PropTypes.shape({
       label: PropTypes.string,
@@ -29,25 +30,37 @@ class Dropdown extends Component {
   constructor(props) {
     super(props);
 
+    var val = (this.props.value || this.props.defaultValue);
+    var lab;
+    
+    if(this.props.options){
+      this.props.options.forEach((v) => {
+        if(v.value === val){
+          lab = v.label;
+        }
+      }, this);
+    }
+
     this.state = {
-      open: false
+      open: false,
+      value: val,
+      selectedLabel: lab
     };
 
-    if(this.props.selectedOption){
-      this.setState({
-        selectedOptionLabel: this.props.selectedOption
-      })
-    }
+    
   }
 
   setSelectedValue = (selectedOption) => {
-    if(this.props.onChange){
-      this.props.onChange(selectedOption.label);
+    if(selectedOption.value !== this.state.value){
+      if(this.props.onChange){
+        this.props.onChange(selectedOption);
+      }
+      this.setState({
+        open: false,
+        value: selectedOption.value,
+        selectedLabel: selectedOption.label,
+      });
     }
-    this.setState({
-      selectedOptionLabel: selectedOption.label,
-      open: false
-    });
   };
 
   openDropdown = () => {
@@ -68,7 +81,7 @@ class Dropdown extends Component {
         required={this.props.required}
         
         open={this.state.open}
-        selectedOptionLabel={this.state.selectedOptionLabel}
+        selectedOptionLabel={this.state.selectedLabel}
         onTargetClick={this.openDropdown}
         onClickOutside={this.closeDropdown}
 
@@ -78,20 +91,18 @@ class Dropdown extends Component {
       >
         {this.props.options && this.props.options.map(option => (
           <OptionAdapter
+            key={option.value}
             label={option.label}
             value={option.value}
-            selected={option.label === this.state.selectedOptionLabel}
-            key={option.label}
-            onClick={this.setSelectedValue.bind(this, {
-              label: option.label,
-              value: option.value
-            })}
+            selected={option.value === this.state.value}
+            onClick={this.setSelectedValue.bind(this, option)}
           />
         ))}
       </DropdownAdapter>
     );
   }
 }
+
 
 Dropdown.__docgenInfo = {
   props: {
@@ -110,8 +121,11 @@ Dropdown.__docgenInfo = {
     required: {
       description: "{string} makes the field required"
     },
-    selectedOption: {
+    value: {
       description: "{string} option that is selected on construction"
+    },
+    initialSelectedOption: {
+      description: "{string} initial selected option"
     },
     options: {
       description: "{Array} array with objects, objects have a 'label' and a 'value'"

@@ -7,10 +7,9 @@ class DropdownSection extends Component {
     return (
       <PlaygroundSection title="Dropdown">
         <Dropdown
-          label="Regular Dropdown"
-          instructions="instructions for regular dropdown"
-          placeholder="placeholder for regular dropdown"
-
+          label="Controlled Dropdown"
+          instructions="instructions for regular Controlled dropdown"
+          placeholder="placeholder for regular Controlled dropdown"
           options={
             [ 
               { 
@@ -22,7 +21,26 @@ class DropdownSection extends Component {
               }
             ]
           }
+          value="bar value"
+          onChange={(id) => { console.log(id); }}
+        />
 
+        <Dropdown
+          label="Uncontrolled Dropdown"
+          instructions="instructions for regular Uncontrolled dropdown"
+          placeholder="placeholder for regular Uncontrolled dropdown"
+          options={
+            [ 
+              { 
+                label: "foo", 
+                value: "foo value" 
+              }, { 
+                label: "bar", 
+                value: "bar value" 
+              }
+            ]
+          }
+          defaultValue="bar value"
           onChange={(id) => { console.log(id); }}
         />
 
