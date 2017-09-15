@@ -19,7 +19,7 @@ class IconButton extends Core {
     this.initialOptions = options
   }
 
-  _componendDidMount(){
+  _componentDidMount(){
     if (this.initialOptions.icon) {
       this.setIcon(this.initialOptions.icon);
     }
@@ -34,7 +34,7 @@ class IconButton extends Core {
     this.el.setAttribute('href', link);
   }
 
-   setIcon(icon) {
+  setIcon(icon) {
     const mountEl = this._findDOMEl('.hig__icon-button__icon', this.el)
     this._findOrCreateIconComponent(mountEl).setNameOrSVG(icon);
   }

@@ -45,8 +45,8 @@ class TextField extends Core {
     const buttonElement = this.el.querySelector(
       ".hig__text-field__clear-button"
     );
-    const iconString = this._getIconString("clear-small");
-    buttonElement.innerHTML = iconString;
+
+    this._findOrCreateIconComponent(buttonElement, "clear-small").setNameOrSVG("clear-small");
     this.el.classList.add("hig__text-field--clear-button-visible");
   }
 
@@ -259,11 +259,10 @@ class TextField extends Core {
   }
 
   _showPasswordHideButton() {
-    const iconString = this._getIconString("eye");
     const passwordButton = this.el.querySelector(
       ".hig__text-field__password-hide-button"
     );
-    passwordButton.innerHTML = iconString;
+    this._findOrCreateIconComponent(passwordButton, "eye").setNameOrSVG("eye");
     passwordButton.classList.add("hig__text-field__extra--show");
     this.el.classList.add("hig__text-field--password-button-visible");
   }
@@ -286,13 +285,12 @@ class TextField extends Core {
   }
 
   _showDropdownCaret() {
-    const iconString = this._getIconString("caret");
     const caretEl = this._findOrAddElement(
       "EXTRA",
       "span",
       ".hig__text-field__extra.hig__text-field__extra--dropdown-caret"
     );
-    caretEl.innerHTML = iconString;
+    this._findOrCreateIconComponent(caretEl).setNameOrSVG("caret");
     caretEl.classList.add("hig__text-field__extra--show");
   }
 
