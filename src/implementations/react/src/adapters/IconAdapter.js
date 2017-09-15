@@ -21,47 +21,46 @@ import * as PropTypes from "prop-types";
 import createComponent from "./createComponent";
 
 export class IconAdapter extends HIGElement {
-	constructor(initialProps) {
-		super(HIG.Icon, initialProps)
-	}
+  constructor(initialProps) {
+    super(HIG.Icon, initialProps);
+  }
 
-	componentDidMount(){
-		if (this.props.nameOrSVG) {
-			this.commitUpdate(['nameOrSVG', this.props.nameOrSVG])
-		}
-	}
+  componentDidMount() {
+    if (this.props.nameOrSVG) {
+      this.commitUpdate(["nameOrSVG", this.props.nameOrSVG]);
+    }
+  }
 
-	commitUpdate(updatePayload, oldProps, newProps) {
+  commitUpdate(updatePayload, oldProps, newProps) {
     for (let i = 0; i < updatePayload.length; i += 2) {
       const propKey = updatePayload[i];
-			const propValue = updatePayload[i + 1];
+      const propValue = updatePayload[i + 1];
 
-			switch(propKey) {
-				case 'nameOrSVG': {
-					this.hig.setNameOrSVG(propValue);
-					break;
-				}
-				default: {
+      switch (propKey) {
+        case "nameOrSVG": {
+          this.hig.setNameOrSVG(propValue);
+          break;
+        }
+        default: {
           console.warn(`${propKey} is unknown`);
         }
-			}
-		}
-	}
+      }
+    }
+  }
 }
 
-const IconComponent = createComponent(IconAdapter)
+const IconComponent = createComponent(IconAdapter);
 
 IconComponent.propTypes = {
-	nameOrSVG: PropTypes.string
+  nameOrSVG: PropTypes.string
 };
 
 IconComponent.__docgenInfo = {
-	props: {
-		nameOrSVG: {
-			description: 'provides name of icon or actual svg for icon'
-		}
-	}
-}
+  props: {
+    nameOrSVG: {
+      description: "provides name of icon or actual svg for icon"
+    }
+  }
+};
 
 export default IconComponent;
-
