@@ -7,14 +7,14 @@ exports[`<SubNav> adds and removes tabs 1`] = `
         <!--TOPNAV-->
         <div class=\\"hig__global-nav__sub-nav\\">
     <div class=\\"hig__global-nav__sub-nav__module-indicator\\">
-        <div class=\\"hig__global-nav__sub-nav__module-indicator__icon\\">hamburger</div>
+        <div class=\\"hig__global-nav__sub-nav__module-indicator__icon\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
         <div class=\\"hig__global-nav__sub-nav__module-indicator__name\\">Documents Library</div>
     </div>
     <div class=\\"hig__global-nav__sub-nav__tabs\\">
     <div class=\\"hig__global-nav__sub-nav__tabs__tab\\" title=\\"Things\\">Things</div><!--TAB-->
 </div><!--TABS-->
     <div class=\\"hig__global-nav__sub-nav__module-indicator\\">
-        <div class=\\"hig__global-nav__sub-nav__module-indicator__icon hig__global-nav__sub-nav__spacer\\">hamburger</div>
+        <div class=\\"hig__global-nav__sub-nav__module-indicator__icon hig__global-nav__sub-nav__spacer\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
         <div class=\\"hig__global-nav__sub-nav__module-indicator__name hig__global-nav__sub-nav__spacer\\">Documents Library</div>
     </div>
 </div><!--SUBNAV-->
@@ -32,12 +32,12 @@ exports[`<SubNav> adds and removes tabs 2`] = `
         <!--TOPNAV-->
         <div class=\\"hig__global-nav__sub-nav\\">
     <div class=\\"hig__global-nav__sub-nav__module-indicator\\">
-        <div class=\\"hig__global-nav__sub-nav__module-indicator__icon\\">hamburger</div>
+        <div class=\\"hig__global-nav__sub-nav__module-indicator__icon\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
         <div class=\\"hig__global-nav__sub-nav__module-indicator__name\\">Documents Library</div>
     </div>
     <!--TABS-->
     <div class=\\"hig__global-nav__sub-nav__module-indicator\\">
-        <div class=\\"hig__global-nav__sub-nav__module-indicator__icon hig__global-nav__sub-nav__spacer\\">hamburger</div>
+        <div class=\\"hig__global-nav__sub-nav__module-indicator__icon hig__global-nav__sub-nav__spacer\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
         <div class=\\"hig__global-nav__sub-nav__module-indicator__name hig__global-nav__sub-nav__spacer\\">Documents Library</div>
     </div>
 </div><!--SUBNAV-->
@@ -55,12 +55,12 @@ exports[`<SubNav> renders with props 1`] = `
         <!--TOPNAV-->
         <div class=\\"hig__global-nav__sub-nav\\">
     <div class=\\"hig__global-nav__sub-nav__module-indicator\\">
-        <div class=\\"hig__global-nav__sub-nav__module-indicator__icon\\">hamburger</div>
+        <div class=\\"hig__global-nav__sub-nav__module-indicator__icon\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
         <div class=\\"hig__global-nav__sub-nav__module-indicator__name\\">Documents Library</div>
     </div>
     <!--TABS-->
     <div class=\\"hig__global-nav__sub-nav__module-indicator\\">
-        <div class=\\"hig__global-nav__sub-nav__module-indicator__icon hig__global-nav__sub-nav__spacer\\">hamburger</div>
+        <div class=\\"hig__global-nav__sub-nav__module-indicator__icon hig__global-nav__sub-nav__spacer\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
         <div class=\\"hig__global-nav__sub-nav__module-indicator__name hig__global-nav__sub-nav__spacer\\">Documents Library</div>
     </div>
 </div><!--SUBNAV-->
@@ -78,12 +78,12 @@ exports[`<SubNav> updates props 1`] = `
         <!--TOPNAV-->
         <div class=\\"hig__global-nav__sub-nav\\">
     <div class=\\"hig__global-nav__sub-nav__module-indicator\\">
-        <div class=\\"hig__global-nav__sub-nav__module-indicator__icon\\"><svg width=\\"20\\" height=\\"21\\" viewBox=\\"0 0 20 21\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"project-management\\"><g transform=\\"translate(.242)\\" fill=\\"#34495E\\" fill-rule=\\"evenodd\\"><path d=\\"M15,8.15002717 C14.6738533,8.08382289 14.3400214,8.03878262 14,8.01640228 L14,1 L1,1 L1,17 L6.15002717,17 C6.21952655,17.3423796 6.31234911,17.6762897 6.42676427,18 L0,18 L0,0 L15,0 L15,8.15002717 Z M8.40093151,10 C8.07157864,10.3054873 7.76971094,10.6401947 7.49945072,11 L3,11 L3,10 L8.40093151,10 Z M6.42676427,13 C6.31234911,13.3237103 6.21952655,13.6576204 6.15002717,14 L3,14 L3,13 L6.42676427,13 Z M3,4 L12,4 L12,5 L3,5 L3,4 Z M3,7 L12,7 L12,8 L3,8 L3,7 Z\\" fill-rule=\\"nonzero\\"></path><path d=\\"M13.5,20 C15.9852814,20 18,17.9852814 18,15.5 C18,13.0147186 15.9852814,11 13.5,11 C11.0147186,11 9,13.0147186 9,15.5 C9,17.9852814 11.0147186,20 13.5,20 Z M13.5,21 C10.4624339,21 8,18.5375661 8,15.5 C8,12.4624339 10.4624339,10 13.5,10 C16.5375661,10 19,12.4624339 19,15.5 C19,18.5375661 16.5375661,21 13.5,21 Z\\" fill-rule=\\"nonzero\\"></path><rect x=\\"13\\" y=\\"12\\" width=\\"1\\" height=\\"4\\"></rect><rect x=\\"13\\" y=\\"15\\" width=\\"4\\" height=\\"1\\"></rect></g></svg></div>
+        <div class=\\"hig__global-nav__sub-nav__module-indicator__icon\\"><div class=\\"hig__icon\\"><svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" role=\\"img\\" title=\\"project-management\\"><title>project-management-24</title><rect x=\\"5\\" y=\\"6\\" width=\\"10\\" height=\\"1\\" fill=\\"#f2f7fa\\"></rect><polygon points=\\"15 6 5 6 5 7 15 7 15 6 15 6\\" fill=\\"#2e4258\\"></polygon><rect x=\\"5\\" y=\\"9\\" width=\\"10\\" height=\\"1\\" fill=\\"#f2f7fa\\"></rect><polygon points=\\"15 9 5 9 5 10 15 10 15 9 15 9\\" fill=\\"#2e4258\\"></polygon><path d=\\"M16.5,11A5.5,5.5,0,1,0,22,16.5,5.5,5.5,0,0,0,16.5,11Zm0,10A4.5,4.5,0,1,1,21,16.5,4.51,4.51,0,0,1,16.5,21Z\\" fill=\\"#2e4258\\"></path><polygon points=\\"17 16 17 13 16 13 16 17 20 17 20 16 17 16\\" fill=\\"#2e4258\\"></polygon><path d=\\"M10.18,18H3V3H17v7a6.47,6.47,0,0,1,1,.16V3a1,1,0,0,0-1-1H3A1,1,0,0,0,2,3V18a1,1,0,0,0,1,1h7.5A6.45,6.45,0,0,1,10.18,18Z\\" fill=\\"#2e4258\\"></path><g><path d=\\"M11.82,12H5v1h6A6.52,6.52,0,0,1,11.82,12Z\\" fill=\\"#f2f7fa\\"></path><path d=\\"M11.82,12H5v1h6a6.52,6.52,0,0,1,.79-1Z\\" fill=\\"#2e4258\\"></path></g></svg></div></div>
         <div class=\\"hig__global-nav__sub-nav__module-indicator__name\\">Projects Library</div>
     </div>
     <!--TABS-->
     <div class=\\"hig__global-nav__sub-nav__module-indicator\\">
-        <div class=\\"hig__global-nav__sub-nav__module-indicator__icon hig__global-nav__sub-nav__spacer\\"><svg width=\\"20\\" height=\\"21\\" viewBox=\\"0 0 20 21\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"project-management\\"><g transform=\\"translate(.242)\\" fill=\\"#34495E\\" fill-rule=\\"evenodd\\"><path d=\\"M15,8.15002717 C14.6738533,8.08382289 14.3400214,8.03878262 14,8.01640228 L14,1 L1,1 L1,17 L6.15002717,17 C6.21952655,17.3423796 6.31234911,17.6762897 6.42676427,18 L0,18 L0,0 L15,0 L15,8.15002717 Z M8.40093151,10 C8.07157864,10.3054873 7.76971094,10.6401947 7.49945072,11 L3,11 L3,10 L8.40093151,10 Z M6.42676427,13 C6.31234911,13.3237103 6.21952655,13.6576204 6.15002717,14 L3,14 L3,13 L6.42676427,13 Z M3,4 L12,4 L12,5 L3,5 L3,4 Z M3,7 L12,7 L12,8 L3,8 L3,7 Z\\" fill-rule=\\"nonzero\\"></path><path d=\\"M13.5,20 C15.9852814,20 18,17.9852814 18,15.5 C18,13.0147186 15.9852814,11 13.5,11 C11.0147186,11 9,13.0147186 9,15.5 C9,17.9852814 11.0147186,20 13.5,20 Z M13.5,21 C10.4624339,21 8,18.5375661 8,15.5 C8,12.4624339 10.4624339,10 13.5,10 C16.5375661,10 19,12.4624339 19,15.5 C19,18.5375661 16.5375661,21 13.5,21 Z\\" fill-rule=\\"nonzero\\"></path><rect x=\\"13\\" y=\\"12\\" width=\\"1\\" height=\\"4\\"></rect><rect x=\\"13\\" y=\\"15\\" width=\\"4\\" height=\\"1\\"></rect></g></svg></div>
+        <div class=\\"hig__global-nav__sub-nav__module-indicator__icon hig__global-nav__sub-nav__spacer\\"><div class=\\"hig__icon\\"><svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" role=\\"img\\" title=\\"project-management\\"><title>project-management-24</title><rect x=\\"5\\" y=\\"6\\" width=\\"10\\" height=\\"1\\" fill=\\"#f2f7fa\\"></rect><polygon points=\\"15 6 5 6 5 7 15 7 15 6 15 6\\" fill=\\"#2e4258\\"></polygon><rect x=\\"5\\" y=\\"9\\" width=\\"10\\" height=\\"1\\" fill=\\"#f2f7fa\\"></rect><polygon points=\\"15 9 5 9 5 10 15 10 15 9 15 9\\" fill=\\"#2e4258\\"></polygon><path d=\\"M16.5,11A5.5,5.5,0,1,0,22,16.5,5.5,5.5,0,0,0,16.5,11Zm0,10A4.5,4.5,0,1,1,21,16.5,4.51,4.51,0,0,1,16.5,21Z\\" fill=\\"#2e4258\\"></path><polygon points=\\"17 16 17 13 16 13 16 17 20 17 20 16 17 16\\" fill=\\"#2e4258\\"></polygon><path d=\\"M10.18,18H3V3H17v7a6.47,6.47,0,0,1,1,.16V3a1,1,0,0,0-1-1H3A1,1,0,0,0,2,3V18a1,1,0,0,0,1,1h7.5A6.45,6.45,0,0,1,10.18,18Z\\" fill=\\"#2e4258\\"></path><g><path d=\\"M11.82,12H5v1h6A6.52,6.52,0,0,1,11.82,12Z\\" fill=\\"#f2f7fa\\"></path><path d=\\"M11.82,12H5v1h6a6.52,6.52,0,0,1,.79-1Z\\" fill=\\"#2e4258\\"></path></g></svg></div></div>
         <div class=\\"hig__global-nav__sub-nav__module-indicator__name hig__global-nav__sub-nav__spacer\\">Projects Library</div>
     </div>
 </div><!--SUBNAV-->

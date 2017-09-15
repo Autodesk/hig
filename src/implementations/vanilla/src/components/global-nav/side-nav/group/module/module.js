@@ -6,6 +6,7 @@ const Core = require('_core.js');
 
 const Submodule = require('./submodule/submodule.js');
 const Collapse = require('./collapse/collapse.js');
+const Icon = require("../../../../../basics/icon/icon.js");
 
 /**
  * Creates an Module
@@ -20,6 +21,13 @@ class Module extends Core {
       options['no-icon-class'] = "hig__global-nav__side-nav__section__group__module__submodules--no-icon";
     }
     this._render(Template, options);
+    this.initialOptions = options
+  }
+
+  _componentDidMount(){
+    if (this.initialOptions.icon) {
+      this.setIcon(this.initialOptions.icon);
+    }
   }
 
   onClick(fn) {
@@ -31,7 +39,8 @@ class Module extends Core {
   }
 
   setIcon(icon) {
-    this._findDOMEl('.hig__global-nav__side-nav__section__group__module__link__icon', this.el).innerHTML = this._getIconString(icon);
+    const mountEl = this._findDOMEl('.hig__global-nav__side-nav__section__group__module__link__icon', this.el);
+    this._findOrCreateIconComponent(mountEl).setNameOrSVG(icon);
   }
 
   setTitle(title) {
@@ -68,6 +77,16 @@ class Module extends Core {
 
   deactivate() {
     this._findDOMEl('.hig__global-nav__side-nav__section__group__module__link', this.el).classList.remove('hig__global-nav__side-nav__section__group__module__link--active');
+  }
+
+  _findOrCreateIconComponent(mountElOrSelector, name='icon') {
+    if (this[name]) {
+        return this[name];
+    } else {
+        this[name] = new Icon({});
+        this[name].mount(mountElOrSelector);
+        return this[name];
+    }
   }
 }
 

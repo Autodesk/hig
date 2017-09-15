@@ -27,6 +27,13 @@
 
     &.hig__text-field__icon--visible {
         display: block;
+
+        .hig__icon{
+            position: relative;
+            width: 30px;
+            height: 30px;
+            right: 3px;
+        }
     }
 
     .hig__text-field--disabled & {
@@ -207,6 +214,14 @@
     width: 26px;
     height: 17px;
     pointer-events: none;
+
+    .hig__icon {
+        position: relative;
+        height: 30px;
+        width: 30px;
+        bottom: 10px;
+        right: 12px;
+    }
 }
 
 .hig__text-field__clear-button {
@@ -226,5 +241,13 @@
 
     .hig__text-field--disabled & {
         display: none;
+    }
+
+    .hig__icon{
+        position: relative;
+        width: 30px;
+        height: 30px;
+        bottom: 3px;
+
     }
 }

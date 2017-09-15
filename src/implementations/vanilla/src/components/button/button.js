@@ -7,6 +7,8 @@ const Core = require('../../helpers/js/_core.js');
 const AvailableTypes = ['primary', 'secondary', 'flat'];
 const AvailableSizes = ['small', 'standard', 'large'];
 const AvailableWidths = ['shrink', 'grow'];
+const Icon = require("../../basics/icon/icon.js");
+
 
 /**
  * Creates a button
@@ -74,15 +76,14 @@ class Button extends Core {
 
   setIcon(icon) {
     if (icon && icon.length > 0) {
-      const iconString = this._getIconString(icon);
-
-      this._findOrAddElement(
-        'ICON',
-        'span',
-        '.hig__button__icon',
-      ).innerHTML = iconString;
+      const mountEl  = this._findOrAddElement(
+        "ICON",
+        "span",
+        ".hig__button__icon"
+      )
+      this._findOrCreateIconComponent(mountEl).setNameOrSVG(icon);
     } else {
-      this._removeElementIfFound('.hig__button__icon');
+      this._removeElementIfFound(".hig__button__icon");
     }
   }
 
@@ -114,6 +115,16 @@ class Button extends Core {
 
   onFocus(fn) {
     return this._attachListener('focusin', this.el, this.el, fn);
+  }
+
+  _findOrCreateIconComponent(mountElOrSelector, name = "icon") {
+    if (this[name]) {
+      return this[name];
+    } else {
+      this[name] = new Icon({});
+      this[name].mount(mountElOrSelector);
+      return this[name];
+    }
   }
 
   _clearAllTypes() {

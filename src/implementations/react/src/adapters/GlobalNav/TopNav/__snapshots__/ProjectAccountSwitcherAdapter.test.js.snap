@@ -28,7 +28,7 @@ exports[`<ProjectAccountSwitcher> renders a projectAccountSwitcher 1`] = `
     </span>
     <span class=\\"hig__global-nav__top-nav__project-account-switcher__item__label\\"></span>
 </div><!--ITEM-->
-    <span class=\\"hig__global-nav__top-nav__project-account-switcher__target__caret hig__global-nav__top-nav__project-account-switcher__target__caret--hide\\"><svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret\\"><title>hig-web-light/basic/form-element/caret</title><polyline transform=\\"rotate(45 9.828 3)\\" points=\\"8 2 8 8 2 8\\" stroke=\\"#2E4258\\" stroke-width=\\"1.15\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"></polyline></svg></span>
+    <span class=\\"hig__global-nav__top-nav__project-account-switcher__target__caret hig__global-nav__top-nav__project-account-switcher__target__caret--hide\\"><div class=\\"hig__icon\\"><svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret\\"><title>hig-web-light/basic/form-element/caret</title><polyline transform=\\"rotate(45 9.828 3)\\" points=\\"8 2 8 8 2 8\\" stroke=\\"#2E4258\\" stroke-width=\\"1.15\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"></polyline></svg></div></span>
 </div><!--TARGET-->
     <div class=\\"hig__flyout__container\\">
         <div class=\\"hig__flyout__chevron\\"></div>
@@ -82,7 +82,7 @@ exports[`<ProjectAccountSwitcher> sets and updates props 1`] = `
     </span>
     <span class=\\"hig__global-nav__top-nav__project-account-switcher__item__label\\">My cool project</span>
 </div><!--ITEM-->
-    <span class=\\"hig__global-nav__top-nav__project-account-switcher__target__caret hig__global-nav__top-nav__project-account-switcher__target__caret--hide\\"><svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret\\"><title>hig-web-light/basic/form-element/caret</title><polyline transform=\\"rotate(45 9.828 3)\\" points=\\"8 2 8 8 2 8\\" stroke=\\"#2E4258\\" stroke-width=\\"1.15\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"></polyline></svg></span>
+    <span class=\\"hig__global-nav__top-nav__project-account-switcher__target__caret hig__global-nav__top-nav__project-account-switcher__target__caret--hide\\"><div class=\\"hig__icon\\"><svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret\\"><title>hig-web-light/basic/form-element/caret</title><polyline transform=\\"rotate(45 9.828 3)\\" points=\\"8 2 8 8 2 8\\" stroke=\\"#2E4258\\" stroke-width=\\"1.15\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"></polyline></svg></div></span>
 </div><!--TARGET-->
     <div class=\\"hig__flyout__container\\">
         <div class=\\"hig__flyout__chevron\\"></div>

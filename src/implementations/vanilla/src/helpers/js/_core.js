@@ -89,14 +89,6 @@ class Core {
             var elWrapper = document.createElement(tagname);
             data = (data || {});
 
-            // ICON MIXIN
-            data.renderIcon = () => {
-                return (text, render) => {
-                var iconName = Mustache.render(text, data);
-                return this._renderIcon(iconName);
-                };
-            };
-
             elWrapper.innerHTML = Mustache.render(
                 template,
                 data,
@@ -107,15 +99,6 @@ class Core {
             console.error("RENDER ALREADY CALLED ON THIS COMPONENT, USE PROPER METHODS TO UPDATE CONTENT");
         }
 
-    }
-
-    _renderIcon(icon){
-        const iconString =  Icons[icon];
-        if (!iconString) {
-            console.warn("NO HIG ICON FOUND WITH THE NAME: "+ iconString);
-            return;
-        }
-        return "<div class='hig__icon'>" + iconString + "</div>";
     }
 
     _componentDidMount() {
@@ -302,11 +285,7 @@ class Core {
      * Get the Icon SVG String
      * @param {String} icon - icon ID
      * @returns {String} String with SVG of the icon
-     */
-
-    _getIconString(icon){
-        return Icons[icon];
-    }
+     
 
     /**
      * Returns valid interface methods

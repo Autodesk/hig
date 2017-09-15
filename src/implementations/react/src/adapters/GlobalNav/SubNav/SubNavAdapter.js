@@ -10,6 +10,7 @@ import TabsAdapterComponent, {
 import Tabs from '../../../elements/components/GlobalNav/SubNav/Tabs';
 
 export class SubNavAdapter extends HIGElement {
+
   componentDidMount() {
     if (this.tabs) {
       this.hig.addTabs(this.tabs.hig);
