@@ -29,7 +29,7 @@ class TopNav extends Core {
 
   onHamburgerClick(fn) {
     return this._attachListener(
-      "click",
+      "click touchstart",
       ".hig__global-nav__top-nav__hamburger",
       this.el,
       fn
@@ -38,7 +38,7 @@ class TopNav extends Core {
 
   onLogoClick(fn) {
     return this._attachListener(
-      "click",
+      "click touchstart",
       ".hig__global-nav__top-nav__logo > a",
       this.el,
       fn
