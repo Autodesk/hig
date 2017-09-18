@@ -39,10 +39,7 @@ $group-height: 56px;
       width: 30px;
       height: 30px;
       margin: 0 10px 0 12px;
-
-      &:hover{
-        cursor: pointer;
-      }
+      cursor: pointer;
 
       &__closeicon{
         display: none;
@@ -62,6 +59,7 @@ $group-height: 56px;
         line-height: 0;
         height: 24px;
         line-height: 0;
+        cursor: pointer;
 
         & img{
             height: 100%;
