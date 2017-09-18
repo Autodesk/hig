@@ -1,10 +1,10 @@
 import * as HIG from "hig-vanilla";
-import HIGElement from "../../elements/HIGElement";
-import createComponent from "../createComponent";
-import HIGNodeList from "../../elements/HIGNodeList";
-import HIGChildValidator from "../../elements/HIGChildValidator";
+import HIGElement from "../elements/HIGElement";
+import createComponent from "./createComponent";
+import HIGNodeList from "../elements/HIGNodeList";
+import HIGChildValidator from "../elements/HIGChildValidator";
 import GridItemComponent, { GridItemAdapter } from "./GridItemAdapter";
-import GridItem from "../../elements/components/FormElements/GridItem";
+import GridItem from "../elements/components/GridItem";
 
 class GridAdapter extends HIGElement {
   constructor(initialProps) {

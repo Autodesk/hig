@@ -1,6 +1,6 @@
-import HIGElement from "../../elements/HIGElement";
+import HIGElement from "../elements/HIGElement";
 import * as PropTypes from "prop-types";
-import createComponent from "../createComponent";
+import createComponent from "./createComponent";
 
 export class GridItemAdapter extends HIGElement {
   componentDidMount() {

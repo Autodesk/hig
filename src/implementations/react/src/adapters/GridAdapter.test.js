@@ -20,7 +20,7 @@ import * as HIG from "hig-vanilla";
 import React from "react";
 
 import GridComponent from "./GridAdapter";
-import GridItem from "../../elements/components/FormElements/GridItem";
+import GridItem from "../elements/components/GridItem";
 
 describe("TableAdapter", () => {
   function createHigContext(props) {
