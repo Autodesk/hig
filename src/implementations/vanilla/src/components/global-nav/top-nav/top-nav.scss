@@ -36,30 +36,30 @@ $group-height: 56px;
     }
 
     &__hamburger{
-        margin: 0 10px 0 12px;
+      width: 30px;
+      height: 30px;
+      margin: 0 10px 0 12px;
+      cursor: pointer;
 
-        &:hover{
-            cursor: pointer;
-        }
+      &__closeicon{
+        display: none;
+      }
 
-        &__closeicon{
-            display: none;
-        }
+      .hig__global-nav--open &__hamburgericon{
+        display: none;
+      }
 
-        .hig__global-nav--open &__hamburgericon{
-            display: none;
-        }
-
-        .hig__global-nav--open &__closeicon{
-            display: block;
-            
-        }
+      .hig__global-nav--open &__closeicon{
+        display: block;
+          
+      }
     }
 
     &__logo {
         line-height: 0;
         height: 24px;
         line-height: 0;
+        cursor: pointer;
 
         & img{
             height: 100%;

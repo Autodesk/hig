@@ -149,12 +149,18 @@
 
             // EVENTS TOPNAV
             TopNav.onHamburgerClick(function(e){
+              console.log('onHamburgerClick');
+
                 if(menuModel["_menu_open"]){
                     GlobalNav.hideSideNav();
                 }else{
                     GlobalNav.showSideNav();
                 }
                 menuModel["_menu_open"] = !menuModel["_menu_open"];
+            });
+
+            TopNav.onLogoClick(function(e){
+                console.log('onLogoClick');
             });
 
             // ADD SEARCH TO TOPNAV
@@ -214,22 +220,22 @@
             MyProfile1.onProfileClickOutside(function(e){ MyProfile1.close() });
 
             // ADD SUBNAV
-            var SubNav = new GlobalNav.partials.SubNav();
-            GlobalNav.addSubNav(SubNav);
+            // var SubNav = new GlobalNav.partials.SubNav();
+            // GlobalNav.addSubNav(SubNav);
 
-            // ADD TABS IN SUBNAV
-            var Tabs = new SubNav.partials.Tabs();
-            SubNav.addTabs(Tabs);
+            // // ADD TABS IN SUBNAV
+            // var Tabs = new SubNav.partials.Tabs();
+            // SubNav.addTabs(Tabs);
 
             // LISTEN TO MODULE INDICATOR CLICK IN SUBNAV
-            SubNav.onModuleIndicatorClick(function(e){
-                if(menuModel["_menu_open"]){
-                    GlobalNav.hideSideNav();
-                }else{
-                    GlobalNav.showSideNav();
-                }
-                menuModel["_menu_open"] = !menuModel["_menu_open"];
-            });
+            // SubNav.onModuleIndicatorClick(function(e){
+            //     if(menuModel["_menu_open"]){
+            //         GlobalNav.hideSideNav();
+            //     }else{
+            //         GlobalNav.showSideNav();
+            //     }
+            //     menuModel["_menu_open"] = !menuModel["_menu_open"];
+            // });
 
             // ADD SOME CONTENT
             var SlotEl = document.createElement('div');

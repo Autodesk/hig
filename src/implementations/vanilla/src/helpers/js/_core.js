@@ -182,48 +182,55 @@ class Core {
 
     /**
      * Attach a document event listener
-     * @param {String} eventType - event type, for example "click"
+     * @param {String} eventTypes - event types, for example "click", supports multiple events, seperated by space, ex: "click touchstart"
      * @param {String} targetClass - query selector for target class
      * @param {HTMLElement} scopeElement - element that defines the scope in which this takes place
      * @param {Function} executeOnEventFunction - function that will be executed on event
-     * @returns {Function} disposeFunction - function to call to remove event listener
+     * @returns {Function} disposeFunction - function to call to remove event listener, note: only returns dispose function when single eventType has been requested
      */
 
-    _attachListener(eventType, targetClass, scopeElement, executeOnEventFunction ){
+    _attachListener(eventTypes, targetClass, scopeElement, executeOnEventFunction ){
+      function childOf(/*child node*/c, /*parent node*/p){ //returns boolean
+        while( (c=c.parentNode) && c!==p );
+        return !!c;
+      }
 
-        function childOf(/*child node*/c, /*parent node*/p){ //returns boolean
-            while( (c=c.parentNode) && c!==p );
-            return !!c;
-        }
+      var q = this._findDOMEl(targetClass, scopeElement);
+      var eventTarget, eventFn;
 
-        var q = this._findDOMEl(targetClass, scopeElement);
-        var eventTarget, eventFn;
+      var events = eventTypes.split(' ');
+      for (var i=0; i<events.length; i++) {
+        var eventType = events[i];
 
         if (eventType == 'hover') {
-            eventType = 'mouseenter';
+          eventType = 'mouseenter';
         }
 
         if (eventType == 'mouseenter' || eventType == 'scroll') {
-            eventFn = executeOnEventFunction;
-            eventTarget = q;
+          eventFn = executeOnEventFunction;
+          eventTarget = q;
         } else {
-            eventFn = (event) => {
-                var element = event.target;
+          eventFn = (event) => {
+            var element = event.target;
 
-                if(q && (childOf(element, q) || element === q)){
-                    executeOnEventFunction(event, this);
-                }
-            };
-            eventTarget = document;
+            if(q && (childOf(element, q) || element === q)){
+                executeOnEventFunction(event, this);
+            }
+          };
+          eventTarget = document;
         }
 
         eventTarget.addEventListener(eventType, eventFn);
 
-        var dispose = function(){
+        if(events.length === 1){
+          var dispose = function(){
             eventTarget.removeEventListener(eventType, eventFn);
-        };
+          };
 
-        return dispose;
+          return dispose;
+        }
+      }
+
     }
 
     /**
