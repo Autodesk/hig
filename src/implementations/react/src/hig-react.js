@@ -20,7 +20,7 @@ export { sizes } from 'hig-vanilla';
 export { default as Slot } from './adapters/SlotAdapter';
 export { default as SlotHeadCell } from './elements/components/SlotHeadCell';
 export { default as SlotCell } from './elements/components/SlotCell';
-export { default as Spacer } from './adapters/SpacerAdapter';
+export { default as Spacer } from './elements/components/Spacer';
 export { default as TextArea } from './elements/components/FormElements/TextArea';
 export { default as TextField } from './elements/components/FormElements/TextField';
 export { default as TextLink } from './adapters/TextLinkAdapter';
