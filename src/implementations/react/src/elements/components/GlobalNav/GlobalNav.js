@@ -28,6 +28,9 @@ class GlobalNav extends Component {
         title: PropTypes.string.isRequired
       }),
     ),
+    showSubNav: PropTypes.bool,
+    sideNavOpen: PropTypes.bool,
+    sideNavOpenByDefault: PropTypes.bool,
     submodules: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired
@@ -43,27 +46,26 @@ class GlobalNav extends Component {
       onAccountClick: PropTypes.func,
       activeProjectId: PropTypes.any,
       activeAccountId: PropTypes.any,
-    }),
-    showSubNav: PropTypes.bool,
-    sideNavOpen: PropTypes.bool,
-    sideNavOpenByDefault: PropTypes.bool
+    })
   }
 
   static defaultProps = {
     modules: [],
     submodules: [],
     topNav: {},
-    sideNav: {}
+    sideNav: {},
+    onHamburgerClick: () => {}
   }
 
   constructor(props) {
     super(props);
     this.state = {
-      sideNavOpen: (this.props.sideNavOpenByDefault || false)  
+      sideNavOpen: (this.props.sideNavOpenByDefault || false)
     };
   }
 
-  toggleSideNavOpen = () => {
+  handleHamburgerClick = (event) => {
+    this.props.onHamburgerClick(event);
     this.setState({ sideNavOpen: !this.state.sideNavOpen });
   }
 
@@ -109,7 +111,7 @@ class GlobalNav extends Component {
       <div>
         <GlobalNavAdapter sideNavOpen={this.renderedSideNavOpen()} >
           <TopNavAdapter
-            onHamburgerClick={this.toggleSideNavOpen}
+            onHamburgerClick={this.handleHamburgerClick}
             {...this.props.topNav}
           >
           {this.showProjectAccountSwitcher()

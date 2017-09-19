@@ -68,17 +68,21 @@ $breakpoints: (
   }
 }
 
-@mixin eachBreakpoint{
-  @each $breakpoint_name, $breakpoint_value in $breakpoints{
+@mixin eachBreakpoint {
+  @each $breakpoint_name, $breakpoint_value in $breakpoints {
     @include breakpoint($breakpoint_name){
       @content;
     }
   }
 }
 
-@each $breakpoint_name, $breakpoint_value in $breakpoints{
-  @include breakpoint($breakpoint_name){
-    .hig__responsive__#{$breakpoint_name}--hide{
+@each $breakpoint_name, $breakpoint_value in $breakpoints {
+  :export {
+    #{$breakpoint_name}: $breakpoint_value;
+  }
+
+  @include breakpoint($breakpoint_name) {
+    .hig__responsive__#{$breakpoint_name}--hide {
       display: none;
     }
   }

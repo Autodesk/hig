@@ -1,4 +1,5 @@
 export { default as Avatar } from './adapters/AvatarAdapter';
+export { breakpoints } from 'hig-vanilla';
 export { default as Button } from './adapters/ButtonAdapter';
 export { default as Checkbox } from './elements/components/FormElements/Checkbox';
 export { colors } from 'hig-vanilla';

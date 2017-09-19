@@ -32,11 +32,11 @@ class SpacerAdapter extends HIGElement {
           this.hig.setInset(propValue);
           break;
         case 'children': {
-          //no-op
+          // No-op
           break;
         }
         default:
-          console.warn('Unknown key, not handled: ', propKey);
+          // No-op
       }
     }
   }
@@ -64,9 +64,9 @@ class SpacerAdapter extends HIGElement {
 const SpacerAdapterComponent = createComponent(SpacerAdapter);
 
 SpacerAdapterComponent.propTypes = {
-  type: PropTypes.string,
-  width: PropTypes.string,
-  inset: PropTypes.string,
+  type: PropTypes.oneOf(HIG.Spacer.AvailableTypes),
+  width: PropTypes.oneOf(HIG.Spacer.AvailableSizes),
+  inset: PropTypes.oneOf(HIG.Spacer.AvailableSizes),
   children: HIGChildValidator([Slot])
 };
 

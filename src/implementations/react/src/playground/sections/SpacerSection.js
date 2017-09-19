@@ -3,7 +3,8 @@ import PlaygroundSection from '../PlaygroundSection';
 import { Spacer } from '../../hig-react';
 
 function SpacerSection() {
-  return ( <PlaygroundSection title="SPACE">
+  return (
+    <PlaygroundSection title="SPACE">
       <Spacer type="inline" width="m" inset="xl">
         <p className="spacer_para">STACK M WIDTH</p>
         <p className="spacer_para">STACK XL INSET</p>
@@ -23,7 +24,7 @@ function SpacerSection() {
         <p className="spacer_para">NO WIDTH OR INSET</p>
         <p className="spacer_para">NO WIDTH OR INSET</p>
       </Spacer>
-      </PlaygroundSection>
+    </PlaygroundSection>
   )
 };
 export default SpacerSection;
