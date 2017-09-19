@@ -8,6 +8,7 @@ export { default as Flyout } from './elements/components/Flyout';
 export { default as GlobalNav } from './elements/components/GlobalNav/GlobalNav';
 export { default as Grid } from './adapters/GridAdapter';
 export { default as GridItem } from './elements/components/GridItem';
+
 export { default as Icon } from './adapters/IconAdapter';
 export { default as IconButton } from './adapters/IconButtonAdapter';
 export { default as Modal } from './elements/components/Modal';
@@ -25,5 +26,6 @@ export { default as Spacer } from './elements/components/Spacer';
 export { default as TextArea } from './elements/components/FormElements/TextArea';
 export { default as TextField } from './elements/components/FormElements/TextField';
 export { default as TextLink } from './adapters/TextLinkAdapter';
-export { default as Table } from  './adapters/TableAdapter';
+export { default as Table } from "./elements/components/Table";
 export * from './elements/components/Typography';
+

@@ -1,20 +1,113 @@
 import React, { Component } from "react";
 import PlaygroundSection from "../PlaygroundSection";
-import { Table, SlotCell } from "../../hig-react";
+import { Table, Icon } from "../../hig-react";
 
 import tableImage from "../images/table-image.png";
 
-const TableHead = Table.TableHead;
-const TableRow = Table.TableRow;
-const TextHeadCell = Table.TableHead.TextHeadCell;
-const TextCell = Table.TableRow.TextCell;
-const IconCell = Table.TableRow.IconCell;
+function StatusCell(props) {
+  const styles = {
+    display: 'block',
+    borderRadius: "50%",
+    border: "1px solid transparent",
+    width: '18px',
+    height: '18px'
+  };
+
+  if (props.data.status === "good") {
+    styles.backgroundColor = "#B8E986";
+    styles.borderColor = "#7ED321";
+  } else {
+    styles.backgroundColor = "#CE3346";
+    styles.borderColor = "#D0021B";
+  }
+
+  return <span style={styles} />;
+}
+
+function MixedCell(props) {
+  if (props.data.status === 'good') {
+    return <p>Hella good</p>
+  } else {
+    return <Icon nameOrSVG={props.data.icon} />
+  }
+}
+
+const columns = [
+  {
+    alignment: "left",
+    width: "32px",
+    accessor: "icon",
+    Cell: props => <Icon nameOrSVG={props.data.icon} />
+  },
+  {
+    alignment: "left",
+    width: "32px",
+    accessor: "icon",
+    Cell: MixedCell
+  },
+  {
+    Header: "Text",
+    alignment: "left",
+    width: "1fr",
+    accessor: "text",
+  },
+  {
+    Header: "Detail",
+    alignment: "left",
+    width: "1fr",
+    accessor: "detail",
+    status: "good"
+  },
+  {
+    Header: "Ratio",
+    alignment: "right",
+    width: "1fr",
+    accessor: row => row.nominator / row.demoninator,
+  },
+  {
+    Header: "Status",
+    alignment: "center",
+    width: "48px",
+    accessor: "status",
+    Cell: StatusCell
+  }
+];
+
+const data = [
+  {
+    text: "1text cell test",
+    detail: "1more notes",
+    nominator: 1,
+    demoninator: 3,
+    status: "good",
+    icon: "gear"
+  },
+  {
+    text: "2text cell test",
+    detail: "2more notes",
+    nominator: 2,
+    demoninator: 5,
+    status: "bad",
+    icon: "assets"
+  },
+  {
+    text: "3text cell test",
+    detail: "3more notes",
+    nominator: 7,
+    demoninator: 10,
+    status: "good",
+    icon: "building-ops"
+  }
+];
 
 class TableSection extends Component {
   render() {
-    return <PlaygroundSection title="Table">
-        <Table density="standard">
-          <TableHead>
+    return (
+      <PlaygroundSection title="Table">
+        <Table density="standard" columns={columns} data={data}>
+          {/* <TableHead>
+          </TableHead>  */}
+          {/* <TableHead>
             <TextHeadCell width="24px" />
             <TextHeadCell text="Title" alignment="left" width="1fr" />
             <TextHeadCell text="Type" alignment="left" width="1fr" />
@@ -125,9 +218,10 @@ class TableSection extends Component {
             <TextCell text="Testing body cell slot." alignment="left" />
             <TextCell text="2535" alignment="right" />
             <TextCell text="Atlas Plumbi" alignment="left" />
-          </TableRow>
+          </TableRow> */}
         </Table>
-      </PlaygroundSection>;
+      </PlaygroundSection>
+    );
   }
 }
 

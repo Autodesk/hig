@@ -9,6 +9,12 @@ export class SlotCellAdapter extends HIGElement {
     this.props = { ...initialProps };
   }
 
+  static childContextTypes = {
+    parent: PropTypes.shape({
+      appendChild: PropTypes.func
+    })
+  };
+
   componentDidMount() {
     if (this.props.slot) {
       this.commitUpdate(["slot", this.props.slot]);
@@ -37,7 +43,7 @@ export class SlotCellAdapter extends HIGElement {
   }
 }
 
-const SlotCellComponent = createComponent(SlotCellAdapter);
+const SlotCellComponent = createComponent(SlotCellAdapter, { parent: null });
 
 SlotCellComponent.propTypes = {
   children: PropTypes.node

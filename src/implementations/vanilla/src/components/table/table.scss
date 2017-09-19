@@ -24,9 +24,11 @@
 }
 
 .hig__table__text-cell,{
+  min-width: 180px;
   .hig__table--standard & {
     padding: 12px 48px 12px 0px;
     height: 24px;
+    
 
     &:first-child {
        padding: 12px 48px 12px 4px;
@@ -65,6 +67,7 @@
 }
 
 .hig__table__icon-cell {
+  min-width: 180px;
   .hig__table--standard & {
     height: 24px;
     padding: 12px 4px 12px 0px;
@@ -78,4 +81,8 @@
   .hig__table--compressed & {
     display: none;
   }
+}
+
+.hig__table__slot-cell {
+  min-width: 180px;
 }
