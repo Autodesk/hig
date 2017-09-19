@@ -15,7 +15,7 @@
 
  */
 import React from 'react';
-import { Button, GlobalNav } from '../hig-react';
+import { Button, GlobalNav, breakpoints } from '../hig-react';
 
 import 'hig-vanilla/lib/hig.css';
 import './index.css';
@@ -44,18 +44,23 @@ import RichTextSection from "./sections/RichTextSection";
 import AvatarSection from "./sections/AvatarSection";
 import GridSection from "./sections/GridSection";
 import IconSection from "./sections/IconSection";
+import SideNav from '../elements/components/GlobalNav/SideNav/SideNav';
 
 class Playground extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeModuleId: '1-2-5'
+      activeModuleId: '1-2-5',
+      sideNavOpen: true
     };
   }
 
   navigate = (id) => {
     console.log('Go to', id);
     this.setState({ activeModuleId: id });
+    if (window.innerWidth <= breakpoints.tablet) {
+      this.setState({ sideNavOpen: false });
+    }
   }
 
   projectClicked = (id) => {
@@ -64,6 +69,10 @@ class Playground extends React.Component {
 
   accountClicked = (id) => {
     console.log("account clicked", id);
+  }
+
+  toggleSideNav = () => {
+    this.setState({ sideNavOpen: !this.state.sideNavOpen });
   }
 
   render() {
@@ -105,7 +114,8 @@ class Playground extends React.Component {
         topNav={topNavProps}
         activeModuleId={this.state.activeModuleId}
         showSubNav={true}
-        sideNavOpenByDefault
+        sideNavOpen={this.state.sideNavOpen}
+        onHamburgerClick={this.toggleSideNav}
       >
         <ButtonSection />
         <IconButtonSection />

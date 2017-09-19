@@ -1,6 +1,7 @@
 const Hig = {};
 
 Hig.Avatar = require('./components/avatar/avatar.js');
+Hig.breakpoints = require('./basics/responsive/responsive');
 Hig.Button = require('./components/button/button.js');
 Hig.colors = require('./basics/colors/colors.js');
 Hig.Checkbox = require('./basics/form-elements/checkbox/checkbox.js');
