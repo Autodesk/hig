@@ -44,7 +44,9 @@ class GlobalNav extends Component {
       activeProjectId: PropTypes.any,
       activeAccountId: PropTypes.any,
     }),
-    showSubNav: PropTypes.bool
+    showSubNav: PropTypes.bool,
+    sideNavOpen: PropTypes.bool,
+    sideNavOpenByDefault: PropTypes.bool
   }
 
   static defaultProps = {
@@ -56,7 +58,9 @@ class GlobalNav extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      sideNavOpen: (this.props.sideNavOpenByDefault || false)  
+    };
   }
 
   toggleSideNavOpen = () => {

@@ -105,6 +105,7 @@ class Playground extends React.Component {
         topNav={topNavProps}
         activeModuleId={this.state.activeModuleId}
         showSubNav={true}
+        sideNavOpenByDefault
       >
         <ButtonSection />
         <IconButtonSection />
