@@ -1,13 +1,8 @@
 @import '~basics/colors/colors.scss';
 @import '~basics/responsive/responsive.scss';
 @import '~basics/fonts/fonts.scss';
+@import '~helpers/css/layers.scss';
 
-$close-button-layer: 3;
-$shadow-mask-layer: 3;
-$header-layer: 2;
-$actions-layer: 2;
-$body-layer: 1;
-$shadow-layer: -1;
 
 .hig__modal {
   color: #2A3B4D;
@@ -78,7 +73,7 @@ $shadow-layer: -1;
   position: absolute;
   right: 0;
   top: 16px;
-  z-index: $close-button-layer;
+  z-index: $modal-close-button-layer;
 
   &:focus {
     outline: none;
@@ -102,7 +97,7 @@ $shadow-layer: -1;
   min-height: 33px;
   padding: 16px 0;
   position: relative;
-  z-index: $header-layer;
+  z-index: $modal-header-layer;
 
   .hig__modal__window--is-scrolling & {
     margin: 0;
@@ -122,7 +117,7 @@ $shadow-layer: -1;
   flex-direction: column;
   overflow: hidden;
   position: relative;
-  z-index: $body-layer;
+  z-index: $modal-body-layer;
 }
 
 .hig__modal__slot {
@@ -139,7 +134,7 @@ $shadow-layer: -1;
     height: 16px;
     margin: 0 -16px;
     position: relative;
-    z-index: $shadow-mask-layer;
+    z-index: $modal-shadow-mask-layer;
   }
 
   &::after {
@@ -149,7 +144,7 @@ $shadow-layer: -1;
     height: 16px;
     margin: 0 -16px;
     position: relative;
-    z-index: $shadow-mask-layer;
+    z-index: $modal-shadow-mask-layer;
   }
 }
 
@@ -161,7 +156,7 @@ $shadow-layer: -1;
   margin: 0;
   min-height: 33px;
   padding: 16px 16px;
-  z-index: $actions-layer;
+  z-index: $modal-actions-layer;
 
   ::-webkit-scrollbar {
     display: block;

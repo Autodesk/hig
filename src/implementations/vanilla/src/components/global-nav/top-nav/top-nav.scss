@@ -1,6 +1,7 @@
 @import '~basics/colors/colors.scss';
 @import '~basics/shadows/shadows.scss';
 @import '~helpers/css/mixins/base.scss';
+@import '~helpers/css/layers.scss';
 
 $group-height: 56px;
 
@@ -15,9 +16,9 @@ $group-height: 56px;
     background: color(hig-white);
     height: $group-height;
     line-height: $group-height;
-    z-index: 2;
+    z-index: $top-nav-layer;
 
-    @include shadow("dropshadow");    
+    @include shadow("dropshadow");
 
     &__group {
         height: 32px;
@@ -51,7 +52,7 @@ $group-height: 56px;
 
       .hig__global-nav--open &__closeicon{
         display: block;
-          
+
       }
     }
 
