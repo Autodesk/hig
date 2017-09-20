@@ -43,7 +43,7 @@ export class SlotCellAdapter extends HIGElement {
   }
 }
 
-const SlotCellComponent = createComponent(SlotCellAdapter, { parent: null });
+const SlotCellComponent = createComponent(SlotCellAdapter);
 
 SlotCellComponent.propTypes = {
   children: PropTypes.node

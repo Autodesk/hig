@@ -26,6 +26,10 @@
 
     .hig__table--large & {
        padding: 12px 48px 12px 12px; 
+
+       &:first-child{
+          padding: 12px 8px 12px 8px
+       }
     }
   }
 }

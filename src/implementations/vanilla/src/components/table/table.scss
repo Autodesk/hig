@@ -31,7 +31,7 @@
     
 
     &:first-child {
-       padding: 12px 48px 12px 4px;
+       padding: 12px 0px 12px 4px;
     }
 
     &:last-child{
@@ -40,7 +40,7 @@
   }
 
   .hig__table--compressed & {
-    padding: 8px  48px 8px 0px;
+    padding: 8px  0px 8px 0px;
     height: 24px;
 
     &:first-child {
@@ -53,7 +53,7 @@
   }
 
   .hig__table--large & {
-    padding: 20px 48px 20px 0px;
+    padding: 20px 0px 20px 0px;
     height: 32px;
 
     &:first-child {
@@ -85,4 +85,20 @@
 
 .hig__table__slot-cell {
   min-width: 180px;
+}
+
+.hig__table__text-cell-content{
+  padding-right: 48px;
+}
+
+.hig__table--compressed td:first-child {
+  padding-left: 8px;
+}
+
+.hig__table__slot-cell {
+  // img {
+  //   &:first-child {
+  //     padding: 8px
+  //   }
+  // }
 }

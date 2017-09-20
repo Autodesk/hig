@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 import PlaygroundSection from "../../playground/PlaygroundSection";
+import Checkbox from "../../adapters/FormElements/CheckboxAdapter";
 
 // import tableImage from "../images/table-image.png";
 
@@ -44,7 +45,7 @@ class Table extends Component {
             ))}
           </TableRow>
         ))}
-      </TableAdapter>
+      </TableAdapter> 
     );
   }
 }
