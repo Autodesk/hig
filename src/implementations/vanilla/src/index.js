@@ -20,6 +20,7 @@ Hig.RadioButton = require('./basics/form-elements/radio-button/radio-button.js')
 Hig.Range = require('./basics/form-elements/range/range.js');
 Hig.RichText = require('./basics/rich-text/rich-text.js');
 Hig.Table = require('./components/table/table.js');
+Hig.TextCellContent = require('./components/table/table-row/text-cell-content/text-cell-content.js')
 Hig.TextArea = require('./basics/form-elements/text-area/text-area.js');
 Hig.TextField = require('./basics/form-elements/text-field/text-field.js');
 Hig.TextLink = require('./basics/text-link/text-link.js');

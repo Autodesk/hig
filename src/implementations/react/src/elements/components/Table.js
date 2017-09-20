@@ -67,6 +67,6 @@ function getCell(props) {
   if (props.column.Cell) {
     return <SlotCell><props.column.Cell {...props} /></SlotCell>
   } else {
-    return <TextCell text={content} alignment={props.column.alignment}  />;
+    return <TextCell text={content}  />;
   }
 }

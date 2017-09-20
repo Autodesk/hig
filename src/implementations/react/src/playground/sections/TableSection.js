@@ -1,103 +1,103 @@
 import React, { Component } from "react";
 import PlaygroundSection from "../PlaygroundSection";
-import { Table, Icon } from "../../hig-react";
+import { Table, Icon, TextCellContent } from "../../hig-react";
 
 import tableImage from "../images/table-image.png";
 
-function StatusCell(props) {
-  const styles = {
-    display: 'block',
-    borderRadius: "50%",
-    border: "1px solid transparent",
-    width: '18px',
-    height: '18px'
-  };
+// function StatusCell(props) {
+//   const styles = {
+//     display: 'block',
+//     borderRadius: "50%",
+//     border: "1px solid transparent",
+//     width: '18px',
+//     height: '18px'
+//   };
 
-  if (props.data.status === "good") {
-    styles.backgroundColor = "#B8E986";
-    styles.borderColor = "#7ED321";
-  } else {
-    styles.backgroundColor = "#CE3346";
-    styles.borderColor = "#D0021B";
-  }
+//   if (props.data.status === "good") {
+//     styles.backgroundColor = "#B8E986";
+//     styles.borderColor = "#7ED321";
+//   } else {
+//     styles.backgroundColor = "#CE3346";
+//     styles.borderColor = "#D0021B";
+//   }
 
-  return <span style={styles} />;
-}
+//   return <span style={styles} />;
+// }
 
-function MixedCell(props) {
-  if (props.data.status === 'good') {
-    return <p>Hella good</p>
-  } else {
-    return <Icon nameOrSVG={props.data.icon} />
-  }
-}
+// function MixedCell(props) {
+//   if (props.data.status === 'good') {
+//     return <p>Hella good</p>
+//   } else {
+//     return <Icon nameOrSVG={props.data.icon} />
+//   }
+// }
 
 const columns = [
   {
     alignment: "left",
-    width: "32px",
+    width: "30px",
     accessor: "icon",
     Cell: props => <Icon nameOrSVG={props.data.icon} />
   },
   {
-    alignment: "left",
-    width: "32px",
-    accessor: "icon",
-    Cell: MixedCell
-  },
-  {
-    Header: "Text",
+    Header: "Title",
     alignment: "left",
     width: "1fr",
-    accessor: "text",
+    accessor: "title",
+    Cell: props => <TextCellContent text={props.data.title} detail={props.data.detail} />
   },
   {
-    Header: "Detail",
+    Header: "Type",
     alignment: "left",
     width: "1fr",
-    accessor: "detail",
-    status: "good"
+    accessor: "type",
   },
   {
-    Header: "Ratio",
-    alignment: "right",
+    Header: "Location",
+    alignment: "left",
     width: "1fr",
-    accessor: row => row.nominator / row.demoninator,
+    accessor: "location",
   },
   {
-    Header: "Status",
-    alignment: "center",
-    width: "48px",
-    accessor: "status",
-    Cell: StatusCell
+    Header: "Budget",
+    alignment: "left",
+    width: "50px",
+    accessor: "budget",
+  },
+  {
+    Header: "Name",
+    alignment: "left",
+    width: "1fr",
+    accessor: "name",
   }
 ];
 
 const data = [
   {
-    text: "1text cell test",
-    detail: "1more notes",
-    nominator: 1,
-    demoninator: 3,
-    status: "good",
-    icon: "gear"
-  },
-  {
-    text: "2text cell test",
-    detail: "2more notes",
-    nominator: 2,
-    demoninator: 5,
-    status: "bad",
-    icon: "assets"
-  },
-  {
-    text: "3text cell test",
-    detail: "3more notes",
-    nominator: 7,
-    demoninator: 10,
-    status: "good",
-    icon: "building-ops"
+    icon: "gear",
+    title: "Window Commissioning",
+    type: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    location: "Floor 3, Room 21. Building 400. 2nd Street",
+    budget: "2535",
+    name: "AtlasPlumbi"
+    
   }
+  // {
+  //   text: "2text cell test",
+  //   detail1: "1more notes",
+  //   nominator: 2,
+  //   demoninator: 5,
+  //   status: "bad",
+  //   icon: "assets"
+  // },
+  // {
+  //   text: "3text cell test",
+  //   detail1: "3more notes",
+  //   nominator: 7,
+  //   demoninator: 10,
+  //   status: "good",
+  //   icon: "building-ops"
+  // }
 ];
 
 class TableSection extends Component {
