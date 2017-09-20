@@ -66,10 +66,11 @@ export default function WithState(WrappedComponent) {
     }
 
     handleModuleClick = (id) => {
-      const submodulesPresent = this.props.submodules.some(s => s.moduleId === id);
+      const submodules = this.props.submodules.filter(s => s.moduleId === id);
 
-      if (submodulesPresent) {
+      if (submodules.length > 0) {
         this.toggleModuleMinimized(id);
+        this.setActiveModuleId(submodules[0].id);
       } else {
         this.setActiveModuleId(id);
       }
