@@ -61,7 +61,6 @@ function getCell(props) {
     }
     default: {
       content = props.data[props.column.accessor];
-
     }
   }
 

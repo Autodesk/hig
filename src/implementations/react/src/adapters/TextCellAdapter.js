@@ -5,27 +5,27 @@ import createComponent from "./createComponent";
 import HIGChildValidator from "../elements/HIGChildValidator";
 
 export class TextCellAdapter extends HIGElement {
-	constructor(HIGConstructor, initialProps) {
+  constructor(HIGConstructor, initialProps) {
     super(HIGConstructor, initialProps);
 
     this.props = { ...initialProps };
-	}
-	
-	componentDidMount(){
-		if (this.props.text){
-      this.commitUpdate(["text", this.props.text])
-		}
-		
-		if (this.props.alignment){
-      this.commitUpdate(["alignment", this.props.alignment])
+  }
+
+  componentDidMount() {
+    if (this.props.text) {
+      this.commitUpdate(["text", this.props.text]);
     }
 
-    if (this.props.detail){
-      this.commitUpdate(["detail", this.props.detail])
+    if (this.props.alignment) {
+      this.commitUpdate(["alignment", this.props.alignment]);
+    }
+
+    if (this.props.detail) {
+      this.commitUpdate(["detail", this.props.detail]);
     }
   }
 
-	commitUpdate(updatePayload, oldProps, newProp) {
+  commitUpdate(updatePayload, oldProps, newProp) {
     for (let i = 0; i < updatePayload.length; i += 2) {
       const propKey = updatePayload[i];
       const propValue = updatePayload[i + 1];
@@ -48,7 +48,7 @@ export class TextCellAdapter extends HIGElement {
         }
       }
     }
-	}
+  }
 }
 
 const TextCellComponent = createComponent(TextCellAdapter);
