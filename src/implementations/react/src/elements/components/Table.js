@@ -3,11 +3,9 @@ import PropTypes from "prop-types";
 
 import PlaygroundSection from "../../playground/PlaygroundSection";
 import Checkbox from "../../adapters/FormElements/CheckboxAdapter";
-
-// import tableImage from "../images/table-image.png";
-
 import TableAdapter from "../../adapters/TableAdapter";
 import SlotCell from "./SlotCell";
+
 const TableHead = TableAdapter.TableHead;
 const TableRow = TableAdapter.TableRow;
 const TextHeadCell = TableAdapter.TableHead.TextHeadCell;
@@ -34,7 +32,7 @@ class Table extends Component {
               text={column.Header}
               alignment={column.alignment}
               width={column.width}
-              key={column.Header}
+              key={column.id}
             />
           ))}
         </TableHead>
@@ -47,6 +45,22 @@ class Table extends Component {
         ))}
       </TableAdapter> 
     );
+  }
+}
+
+Table.__docgenInfo = {
+  props: {
+    density: {
+      description: "sets the size of the table"
+    },
+
+    columns: {
+      description: "provides content for header cells"
+    },
+
+    data: {
+      description: "provides content table cells"
+    }
   }
 }
 

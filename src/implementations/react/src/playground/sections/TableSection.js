@@ -34,12 +34,14 @@ import tableImage from "../images/table-image.png";
 
 const columns = [
   {
+    id: 1,
     alignment: "left",
     width: "30px",
     accessor: "icon",
     Cell: props => <Icon nameOrSVG={props.data.icon} />
   },
   {
+    id: 2,
     Header: "Title",
     alignment: "left",
     width: "1fr",
@@ -47,18 +49,21 @@ const columns = [
     Cell: props => <TextCellContent text={props.data.title} detail={props.data.detail} />
   },
   {
+    id: 3,
     Header: "Type",
     alignment: "left",
     width: "1fr",
     accessor: "type",
   },
   {
+    id: 4,
     Header: "Location",
     alignment: "left",
     width: "1fr",
     accessor: "location",
   },
   {
+    id: 5,
     Header: "Budget",
     alignment: "right",
     width: "50px",
@@ -66,6 +71,7 @@ const columns = [
     Cell: props => <TextCellContent text={props.data.budget} alignment={props.data.alignment} />
   },
   {
+    id: 6,
     Header: "Name",
     alignment: "left",
     width: "1fr",
