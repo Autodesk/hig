@@ -1,6 +1,7 @@
 @import '~basics/fonts/fonts.scss';
 @import '~basics/colors/colors.scss';
 @import '~helpers/css/mixins/base.scss';
+@import '~helpers/css/layers.scss';
 
 .hig__dropdown {
   .hig__text-field__input{
@@ -8,7 +9,7 @@
   }
   .hig__text-field__extra--dropdown-caret {
       bottom: 6px;
-  }  
+  }
 }
 
 .hig__dropdown__menu-wrapper {
@@ -23,7 +24,7 @@
     left: 0;
     right: 0;
     overflow: hidden;
-    z-index: 10000;
+    z-index: $dropdown-layer;
 
     border: 1px solid color(hig-gray-40);
     border-top: none;

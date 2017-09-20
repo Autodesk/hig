@@ -1,5 +1,6 @@
 @import '../../basics/colors/colors.scss';
 @import '../../basics/shadows/shadows.scss';
+@import '~helpers/css/layers.scss';
 
 @mixin chevron-border() {
     content: '';
@@ -91,6 +92,7 @@
 .hig__flyout__container {
     position: absolute;
     display: none;
+    z-index: $flyout-container-layer;
 
     .hig__flyout--open > & {
         display: block;

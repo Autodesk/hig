@@ -1,5 +1,6 @@
 @import '~helpers/css/mixins/states.scss';
 @import '~basics/colors/colors.scss';
+@import '~helpers/css/layers.scss';
 
 .hig__input-button {
   position: relative;
@@ -16,7 +17,7 @@
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: $checkbox-layer;
 }
 
 .hig__input-button__label {
