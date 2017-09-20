@@ -2,10 +2,7 @@
 
 React components for the HIG
 
-## Table of Contents
-
--   [Install](#install)
--   [Usage](#usage)
+## Consume
 
 This project uses [node](http://nodejs.org) and [npm](https://npmjs.com). Go check them out if you don't have them locally installed.
 
@@ -31,6 +28,8 @@ You can find the library on `window.ReactHIG`.
 
 ## Usage
 
+for more code examples see the hig website: [hig.autodesk.com](http://hig.autodesk.com)
+
 ```jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -47,4 +46,8 @@ class App extends React.Component {
   }
 }
 ```
+
+## Contribute
+
+please see our [DEVELOPING.md](./DEVELOPING.md) for running a `storybook` and `playground` locally to play around with the source and see our [CONTRIBUTING.md](../../../CONTRIBUTING.md) and how to get your code back in the repo
 
