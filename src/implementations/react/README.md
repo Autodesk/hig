@@ -16,7 +16,10 @@ Then with a module bundler like [rollup](http://rollupjs.org/) or [webpack](http
 // using ES6 modules
 import { Button } from 'hig-react';
 
-// Styles
+// give me all the components at once
+import * as Hig from 'hig-react';
+
+// CSS Style (works well with webpack)
 import 'hig-react/lib/hig-react.css';
 
 // using CommonJS modules
