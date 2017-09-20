@@ -39,7 +39,7 @@
   max-width: calc(100vw - 32px);
   opacity: 0;
   outline: none;
-  position: absolute;
+  position: fixed;
   top: 128px;
   transform: translateX(-50%);
   width: 600px;
@@ -157,6 +157,10 @@
   min-height: 33px;
   padding: 16px 16px;
   z-index: $modal-actions-layer;
+
+  &:empty{
+    display: none;
+  }
 
   ::-webkit-scrollbar {
     display: block;
