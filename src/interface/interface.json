@@ -1846,15 +1846,22 @@
           },
           "partials": {
             "TextCell": {
-              "defaults": {
-                "text": "{String} text for text cell in body of table",
-                "alignment": "{String} value for text-align style property of cell",
-                "detail": "{String} supporting text for cell in body of table"
-              },
               "methods": {
                 "setText": {},
                 "setAlignment": {},
                 "setDetail": {}
+              }
+            },  
+            "TextCellContent": {
+              "methods": {
+                "setText": {},
+                "setAlignment": {},
+                "setDetail": {}
+              },
+              "defaults": {
+                "text": "{String} text for text cell in body of table",
+                "alignment": "{String} value for text-align style property of cell",
+                "detail": "{String} supporting text for cell in body of table"
               }
             },
             "IconCell": {

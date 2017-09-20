@@ -1,6 +1,7 @@
 .hig__text-head-cell {
   font-weight: 700;
   font-size: 14px;
+  min-width: 180px;
 
   white-space: nowrap;
   overflow: hidden;
@@ -25,6 +26,10 @@
 
     .hig__table--large & {
        padding: 12px 48px 12px 12px; 
+
+       &:first-child{
+          padding: 12px 8px 12px 8px
+       }
     }
   }
 }

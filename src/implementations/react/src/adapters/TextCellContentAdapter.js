@@ -1,27 +1,18 @@
-import * as HIG from "hig-vanilla";
+import * as HIG from 'hig-vanilla';
 import HIGElement from "../elements/HIGElement";
 import * as PropTypes from "prop-types";
 import createComponent from "./createComponent";
-import HIGChildValidator from "../elements/HIGChildValidator";
 
-export class TextCellAdapter extends HIGElement {
-  constructor(HIGConstructor, initialProps) {
-    super(HIGConstructor, initialProps);
+export class TextCellContentAdapter extends HIGElement {
+  constructor(initialProps) {
+    super(HIG.TextCellContent, initialProps);
 
     this.props = { ...initialProps };
   }
 
-  componentDidMount() {
-    if (this.props.text) {
-      this.commitUpdate(["text", this.props.text]);
-    }
-
-    if (this.props.alignment) {
-      this.commitUpdate(["alignment", this.props.alignment]);
-    }
-
-    if (this.props.detail) {
-      this.commitUpdate(["detail", this.props.detail]);
+  componentDidMount(){
+    if (this.props.detail){
+      this.commitUpdate(["detail", this.props.detail])
     }
   }
 
@@ -51,15 +42,15 @@ export class TextCellAdapter extends HIGElement {
   }
 }
 
-const TextCellComponent = createComponent(TextCellAdapter);
+const TextCellContentComponent = createComponent(TextCellContentAdapter);
 
-TextCellComponent.propTypes = {
+TextCellContentComponent.propTypes = {
   text: PropTypes.string,
   detail: PropTypes.string,
   alignment: PropTypes.string
 };
 
-TextCellComponent.__docgenInfo = {
+TextCellContentComponent.__docgenInfo = {
   props: {
     text: {
       description: "sets {String} text in cell"
@@ -73,4 +64,4 @@ TextCellComponent.__docgenInfo = {
   }
 };
 
-export default TextCellComponent;
+export default TextCellContentComponent;

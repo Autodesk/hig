@@ -1,33 +1,37 @@
-import './text-cell.scss'
+import "./text-cell.scss";
 var Template = require("./text-cell.html");
 var Interface = require("interface.json");
 var Core = require("_core.js");
 
-var AvailablePositions = ["left", "right", "center"];
-
-/**
- * Creates an Table
- *
- * @class
- */
+const TextCellContent = require("../text-cell-content/text-cell-content.js");
 
 class TextCell extends Core {
   constructor(options = {}) {
     super(options);
     this._render(Template, options, undefined, "tr");
+    this.initialOptions = options;
+  }
+
+  _componentDidMount() {
+    this.textCellContent = new TextCellContent(this.initialOptions);
+    this.mountPartialToComment("TEXT-CELL-CONTENT", this.textCellContent);
   }
 
   setText(text) {
-    this._findDOMEl(".hig__table__text-cell-text", this.el).textContent = text;
+    if (this.textCellContent) {
+      this.textCellContent.setText(text);
+    }
   }
 
   setDetail(detail) {
-    this._findDOMEl(".hig__table__text-cell-detail", this.el).textContent = detail;
+    if (this.textCellContent) {
+      this.textCellContent.setDetail(detail);
+    }
   }
 
   setAlignment(position) {
-    if (AvailablePositions.indexOf(position) > -1) {
-      this.el.style.textAlign = position;
+    if (this.textCellContent) {
+      this.textCellContent.setAlignment(position);
     }
   }
 }
@@ -36,11 +40,8 @@ TextCell._interface =
   Interface["components"]["Table"]["partials"]["TableRow"]["partials"][
     "TextCell"
   ];
-TextCell._defaults = {
-  "text": "",
-  "alignment": "",
-  "detail": ""
-};
+
+TextCell._defaults = {};
+TextCell._partials = {};
 
 module.exports = TextCell;
-  
