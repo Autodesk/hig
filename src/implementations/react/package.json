@@ -16,6 +16,7 @@
     "lib/*.css"
   ],
   "dependecies": {
+    "hig-vanilla": "file:../vanilla",
     "webpack": "^3.5.5"
   },
   "devDependencies": {
@@ -32,7 +33,6 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "enzyme": "^2.9.1",
-    "hig-vanilla": "file:../vanilla",
     "jest-enzyme": "^3.7.0",
     "prop-types": "^15.5.10",
     "react": "^15.4.1",
