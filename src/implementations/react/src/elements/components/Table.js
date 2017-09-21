@@ -37,13 +37,11 @@ class Table extends Component {
           ))}
         </TableHead>
         {this.props.data.map(row => (
-          <TableRow key={row['accessor']}>
-            {this.props.columns.map(column => (
-              getCell({ column, data: row })
-            ))}
+          <TableRow key={row.id}>
+            {this.props.columns.map(column => getCell({ column, data: row }))}
           </TableRow>
         ))}
-      </TableAdapter> 
+      </TableAdapter>
     );
   }
 }
@@ -62,7 +60,7 @@ Table.__docgenInfo = {
       description: "provides content table cells"
     }
   }
-}
+};
 
 export default Table;
 
@@ -79,8 +77,12 @@ function getCell(props) {
   }
 
   if (props.column.Cell) {
-    return <SlotCell><props.column.Cell {...props} /></SlotCell>
+    return (
+      <SlotCell key={props.column.accessor}>
+        <props.column.Cell {...props} />
+      </SlotCell>
+    );
   } else {
-    return <TextCell text={content}  />;
+    return <TextCell key={props.column.accessor} text={content} />;
   }
 }
