@@ -7,24 +7,6 @@ import Option from './Option';
 
 class Dropdown extends Component {
 
-  static propTypes = {
-    label: PropTypes.string,
-    instructions: PropTypes.string,
-    placeholder: PropTypes.string,
-    disabled: PropTypes.bool,
-    required: PropTypes.string,
-    value: PropTypes.string,
-    defaultValue: PropTypes.string,
-    options: PropTypes.arrayOf(PropTypes.shape({
-      label: PropTypes.string,
-      value: PropTypes.string
-    })),
-    onChange: PropTypes.func,
-    onBlur: PropTypes.func,
-    onFocus: PropTypes.func,
-    onKeypress: PropTypes.func
-  }
-
   static defaultProps = {
     options: [],
     onChange: () => {}
@@ -102,6 +84,23 @@ class Dropdown extends Component {
   }
 }
 
+Dropdown.propTypes = {
+  label: PropTypes.string,
+  instructions: PropTypes.string,
+  placeholder: PropTypes.string,
+  disabled: PropTypes.bool,
+  required: PropTypes.string,
+  value: PropTypes.string,
+  defaultValue: PropTypes.string,
+  options: PropTypes.arrayOf(PropTypes.shape({
+    label: PropTypes.string,
+    value: PropTypes.string
+  })),
+  onChange: PropTypes.func,
+  onBlur: PropTypes.func,
+  onFocus: PropTypes.func,
+  onKeypress: PropTypes.func
+};
 
 Dropdown.__docgenInfo = {
   props: {
