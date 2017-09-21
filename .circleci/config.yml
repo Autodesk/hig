@@ -1,7 +1,7 @@
 defaults: &defaults
       working_directory: ~/hig
       docker:
-        - image: circleci/node:8.2.1
+        - image: circleci/node:8.5.0
 
 version: 2
 jobs:
