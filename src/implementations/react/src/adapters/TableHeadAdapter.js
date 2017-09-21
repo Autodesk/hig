@@ -74,6 +74,13 @@ export class TableHeadAdapter extends HIGElement {
       );
     }
   }
+
+  removeChild(instance) {
+    if (instance instanceof TextHeadCellAdapter || instance instanceof SlotHeadCellAdapter) {
+      this.cells.removeChild(instance);
+    }
+    instance.unmount();
+  }
 }
 
 const TableHeadComponent = createComponent(TableHeadAdapter);
