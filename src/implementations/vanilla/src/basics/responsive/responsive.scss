@@ -1,33 +1,33 @@
 $breakpoints: (
-    phone: 0,
-    tablet: 769,
-    laptop: 1281,
-    desktop: 1681,
-    large: 1921
+  phone: 0,
+  tablet: 769,
+  laptop: 1281,
+  desktop: 1681,
+  large: 1921
 );
 
 // Our different screen breakpoints
 
 @mixin phone-breakpoint {
-  @media screen and (max-width: 768px) {
+  @media screen {
     @content;
   }
 }
 
 @mixin tablet-breakpoint {
-  @media screen and (min-width: 769px) and (max-width: 1280px) {
+  @media screen and (min-width: 769px) {
     @content;
   }
 }
 
 @mixin laptop-breakpoint {
-  @media screen and (min-width: 1281px) and (max-width: 1680px) {
+  @media screen and (min-width: 1281px) {
     @content;
   }
 }
 
 @mixin desktop-breakpoint {
-  @media screen and (min-width: 1681px) and (max-width: 1920px) {
+  @media screen and (min-width: 1681px) {
     @content;
   }
 }
