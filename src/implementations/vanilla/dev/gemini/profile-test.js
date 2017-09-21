@@ -3,6 +3,6 @@ gemini.suite('profile', (parent) => {
 
   gemini.suite('profile', (suite) => {
     suite.setCaptureElements('body')
-         .capture('open');
+      .capture('open');
   });
 });

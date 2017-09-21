@@ -3,6 +3,6 @@ gemini.suite('project-account-switcher', (parent) => {
 
   gemini.suite('project-account-switcher', (suite) => {
     suite.setCaptureElements('body')
-         .capture('open');
+      .capture('open');
   });
 });
