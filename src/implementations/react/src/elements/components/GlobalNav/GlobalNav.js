@@ -8,10 +8,6 @@ import SideNav from './SideNav';
 import Slot from '../../../adapters/SlotAdapter';
 import Tabs from './SubNav/Tabs';
 import ProjectAccountSwitcher from './TopNav/ProjectAccountSwitcher';
-import ProfileAdapter from '../../../adapters/GlobalNav/TopNav/ProfileAdapter';
-import SearchAdapter from '../../../adapters/GlobalNav/TopNav/SearchAdapter';
-
-const Shortcut = TopNavAdapter.Shortcut;
 
 class GlobalNav extends Component {
   static propTypes = {
