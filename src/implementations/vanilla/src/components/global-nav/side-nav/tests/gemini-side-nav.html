@@ -37,16 +37,9 @@
             var SideNav = new GlobalNav.partials.SideNav();
             GlobalNav.addSideNav(SideNav);
 
-            // ADD A SECTION IN OUR SIDENAV
-            var Section1 = new SideNav.partials.Section({
-                "headerLabel": "Project",
-                "headerName": "Thunderstorm"
-            });
-            SideNav.addSection(Section1);
-
-            // ADD A GROUP TO OUR SECTION
-            var Group1 = new Section1.partials.Group();
-            Section1.addGroup(Group1);
+            // ADD A GROUP TO OUR SIDENAV
+            var Group1 = new SideNav.partials.Group();
+            SideNav.addGroup(Group1);
 
             // ADD SOME ITEMS TO OUR GROUP
             var Group1_Module1 = new Group1.partials.Module({
@@ -70,9 +63,9 @@
             });
             Group1.addModule(Group1_Module3);
 
-            // ADD ANOTHER GROUP TO OUR SECTION
-            var Group2 = new Section1.partials.Group();
-            Section1.addGroup(Group2);
+            // ADD ANOTHER GROUP TO OUR SIDENAV
+            var Group2 = new SideNav.partials.Group();
+            SideNav.addGroup(Group2);
 
             // ADD SOME ITEMS TO OUR GROUP
             var Group2_Module1 = new Group2.partials.Module({
@@ -82,16 +75,9 @@
             });
             Group2.addModule(Group2_Module1);
 
-            // ADD ANOTHER SECTION IN OUR SIDENAV
-            var Section2 = new SideNav.partials.Section({
-                "headerLabel": "Project",
-                "headerName": "Thunderstorm"
-            });
-            SideNav.addSection(Section2);
-
-            // ADD A GROUP TO OUR OTHER SECTION
-            var Group1 = new Section2.partials.Group();
-            Section2.addGroup(Group1);
+            // ADD A GROUP TO OUR OTHER SIDENAV
+            var Group1 = new SideNav.partials.Group();
+            SideNav.addGroup(Group1);
 
             // ADD SOME ITEMS TO OUR GROUP
             var Group1_Module1 = new Group1.partials.Module({

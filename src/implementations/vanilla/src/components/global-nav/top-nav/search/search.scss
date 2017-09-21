@@ -1,56 +1,53 @@
 @import '~basics/colors/colors.scss';
 @import '~helpers/css/mixins/base.scss';
 
-.hig__global-nav__top-nav__search{
-    position: relative;
-    
-    &__icon{
-        margin: 0 10px;
-        display: inline-block;
-        vertical-align: middle;
+.hig__global-nav__top-nav__search {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+}
 
-        &:hover{
-            cursor: pointer;
-        }
-    }
+.hig__global-nav__top-nav__search__icon {
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
 
-    &__inputholder{
-        display: inline-block;
-        vertical-align: middle;
+  &:hover{
+    cursor: pointer;
+  }
+}
 
-        &__input{
-            @include reset;
-            margin-left: -5px;
-            border: none;
-            font-size: 16px;
-            padding: 5px;
-            max-width: 460px;
-            font-weight: 500;
+.hig__global-nav__top-nav__search__input {
+  @include reset;
+  align-self: center;
+  margin-left: -5px;
+  border: none;
+  font-size: 16px;
+  padding: 5px;
+  max-width: 460px;
+  font-weight: 500;
 
-            &::placeholder{
-                font-weight: normal;
-                color: color(hig-gray-30);
-            }
+  &::placeholder {
+    font-weight: normal;
+    color: color(hig-gray-30);
+  }
 
-            &:focus{
-                border: none;
-                outline: none;
-            }
-        }
-    }
+  &:focus {
+    border: none;
+    outline: none;
+  }
+}
 
-    &__clear{
-        position: absolute;
-        right: 0;
-        top: 12px;
-        opacity: 0; // hide by opacity to enable event propagation with focusin/focusout events
+.hig__global-nav__top-nav__search__clear {
+  display: flex;
+  align-items: center;
+  opacity: 0; // hide by opacity to enable event propagation with focusin/focusout events
 
-        &--show{
-            opacity: 1;
-        }
+  &--show {
+    opacity: 1;
+  }
 
-        &:hover{
-            cursor: pointer;
-        }
-    }
+  &:hover {
+    cursor: pointer;
+  }
 }

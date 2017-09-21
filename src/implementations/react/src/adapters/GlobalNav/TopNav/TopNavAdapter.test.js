@@ -99,7 +99,7 @@ describe('<TopNav>', () => {
 
     expect(domContainer.firstChild.outerHTML).toMatchSnapshot();
     const elems = domContainer.getElementsByClassName(
-      'hig__global-nav__top-nav__search__inputholder__input'
+      'hig__global-nav__top-nav__search__input'
     );
     expect(elems.length).toEqual(1);
   });
@@ -118,7 +118,7 @@ describe('<TopNav>', () => {
     expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
 
     const elems = reactContainer.getElementsByClassName(
-      'hig__global-nav__top-nav__search__inputholder__input'
+      'hig__global-nav__top-nav__search__input'
     );
     expect(elems.length).toEqual(1);
   });

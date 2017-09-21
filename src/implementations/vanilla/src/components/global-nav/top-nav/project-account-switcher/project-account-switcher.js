@@ -1,15 +1,15 @@
-import "./project-account-switcher.scss";
+import './project-account-switcher.scss';
 
-var Template = require("./project-account-switcher.html");
-var Interface = require("interface.json");
-var Core = require("_core.js");
+let Template = require('./project-account-switcher.html');
+let Interface = require('interface.json');
+let Core = require('_core.js');
 
-var Button = require("../../../button/button.js");
-var Flyout = require("../../../../basics/flyout/flyout.js");
-var Project = require("./project/project.js");
-var Account = require("./account/account.js");
-var Lists = require("./_lists/lists.js");
-var Target = require("./_target/target.js");
+let Button = require('../../../button/button.js');
+let Flyout = require('../../../../basics/flyout/flyout.js');
+let Project = require('./project/project.js');
+let Account = require('./account/account.js');
+let Lists = require('./_lists/lists.js');
+let Target = require('./_target/target.js');
 
 /**
  * Creates an ProjectAccountSwitcher
@@ -36,7 +36,7 @@ class ProjectAccountSwitcher extends Core {
   }
 
   _componentDidMount() {
-    this.mountPartialToComment("FLYOUT", this.flyout);
+    this.mountPartialToComment('FLYOUT', this.flyout);
     this.flyout.addTarget(this.target);
     this.flyout.addSlot(this.flyoutContent);
   }
@@ -85,29 +85,27 @@ class ProjectAccountSwitcher extends Core {
     this.target.setType(type);
   }
 
-  setProjectTitle(title){
+  setProjectTitle(title) {
     this.flyoutContent.setProjectTitle(title);
   }
 
-  setAccountTitle(title){
+  setAccountTitle(title) {
     this.flyoutContent.setAccountTitle(title);
   }
 }
 
 ProjectAccountSwitcher._interface =
-  Interface["components"]["GlobalNav"]["partials"]["TopNav"]["partials"][
-    "ProjectAccountSwitcher"
-  ];
+  Interface.components.GlobalNav.partials.TopNav.partials.ProjectAccountSwitcher;
 ProjectAccountSwitcher._defaults = {
-  activeImage: "",
-  activeLabel: "",
-  activeType: "project",
-  projectTitle: "",
-  accountTitle: ""
+  activeImage: '',
+  activeLabel: '',
+  activeType: 'project',
+  projectTitle: '',
+  accountTitle: ''
 };
 ProjectAccountSwitcher._partials = {
-  Account: Account,
-  Project: Project
+  Account,
+  Project
 };
 
 module.exports = ProjectAccountSwitcher;

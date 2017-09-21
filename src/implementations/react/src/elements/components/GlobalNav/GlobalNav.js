@@ -8,6 +8,10 @@ import SideNav from './SideNav';
 import Slot from '../../../adapters/SlotAdapter';
 import Tabs from './SubNav/Tabs';
 import ProjectAccountSwitcher from './TopNav/ProjectAccountSwitcher';
+import ProfileAdapter from '../../../adapters/GlobalNav/TopNav/ProfileAdapter';
+import SearchAdapter from '../../../adapters/GlobalNav/TopNav/SearchAdapter';
+
+const Shortcut = TopNavAdapter.Shortcut;
 
 class GlobalNav extends Component {
   static propTypes = {
@@ -114,18 +118,18 @@ class GlobalNav extends Component {
             onHamburgerClick={this.handleHamburgerClick}
             {...this.props.topNav}
           >
-          {this.showProjectAccountSwitcher()
-            ? <ProjectAccountSwitcher
-                accounts={this.props.topNav.accounts}
-                projects={this.props.topNav.projects}
-                accountTitle={this.props.topNav.accountTitle}
-                projectTitle={this.props.topNav.projectTitle}
-                activeProjectId={this.props.topNav.activeProjectId}
-                activeAccountId={this.props.topNav.activeAccountId}
-                onProjectClick={this.props.topNav.onProjectClick}
-                onAccountClick={this.props.topNav.onAccountClick}
-              />
-            : null}
+            {this.showProjectAccountSwitcher()
+              ? <ProjectAccountSwitcher
+                  accounts={this.props.topNav.accounts}
+                  projects={this.props.topNav.projects}
+                  accountTitle={this.props.topNav.accountTitle}
+                  projectTitle={this.props.topNav.projectTitle}
+                  activeProjectId={this.props.topNav.activeProjectId}
+                  activeAccountId={this.props.topNav.activeAccountId}
+                  onProjectClick={this.props.topNav.onProjectClick}
+                  onAccountClick={this.props.topNav.onAccountClick}
+                />
+              : null}
           </TopNavAdapter>
           <SideNav
             activeModuleId={this.props.activeModuleId}
