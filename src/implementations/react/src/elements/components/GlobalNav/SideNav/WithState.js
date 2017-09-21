@@ -24,10 +24,18 @@ export default function WithState(WrappedComponent) {
     constructor(props) {
       super(props);
 
+      const moduleStates = {};
+
+      const activeSubmodule = this.props.submodules.find(s => s.id === this.props.activeModuleId);
+      if (activeSubmodule) {
+        const activeModule = this.props.modules.find(m => m.id === activeSubmodule.moduleId);
+        moduleStates[activeModule.id] = { minimized: false };
+      }
+
       this.state = {
         query: '',
         activeModuleId: '',
-        moduleStates: {}
+        moduleStates
       }
     }
 

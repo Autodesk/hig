@@ -44,7 +44,6 @@ import RichTextSection from "./sections/RichTextSection";
 import AvatarSection from "./sections/AvatarSection";
 import GridSection from "./sections/GridSection";
 import IconSection from "./sections/IconSection";
-import SideNav from '../elements/components/GlobalNav/SideNav/SideNav';
 
 class Playground extends React.Component {
   constructor(props) {
