@@ -208,6 +208,13 @@ export class DropdownAdapter extends HIGElement {
     }
   }
 
+  removeChild(instance) {
+    if (instance instanceof OptionAdapter) {
+      this.options.removeChild(instance)
+    }
+    instance.unmount();
+  }
+
   openDropdown = () => {
     this.hig.open();
   };

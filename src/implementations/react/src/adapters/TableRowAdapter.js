@@ -87,6 +87,17 @@ export class TableRowAdapter extends HIGElement {
       );
     }
   }
+
+  removeChild(instance) {
+    if (instance instanceof TextCellAdapter || 
+      instance instanceof IconCellAdapter || instance instanceof SlotCellAdapter) 
+    {
+      this.cells.removeChild(instance);
+    }
+    instance.unmount();
+  }
+
+
 }
 
 const TableRowComponent = createComponent(TableRowAdapter);
