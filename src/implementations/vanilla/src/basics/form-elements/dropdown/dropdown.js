@@ -109,9 +109,7 @@ class Dropdown extends Core {
   }
 
   _callbackIfClickOutside(callback, event) {
-    const menuEl = this._findDOMEl(".hig__dropdown__menu");
-
-    if (menuEl.contains(event.target) || menuEl === event.target) {
+    if (this.menu.contains(event.target) || this.menu === event.target) {
       return;
     }
     if (
