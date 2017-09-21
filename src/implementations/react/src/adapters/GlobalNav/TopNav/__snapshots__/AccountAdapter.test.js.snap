@@ -5,21 +5,19 @@ exports[`<Account> renders an Account 1`] = `
     <!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <div class=\\"hig__global-nav__top-nav\\">
-  <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
+  <div class=\\"hig__global-nav__top-nav__item\\">
     <div class=\\"hig__global-nav__top-nav__hamburger\\">
       <div class=\\"hig__global-nav__top-nav__hamburger__hamburgericon\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
       <div class=\\"hig__global-nav__top-nav__hamburger__closeicon\\"><div class=\\"hig__icon\\"><svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 18 18\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-hamburger\\"><g stroke=\\"#0A131C\\" stroke-width=\\"2\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"square\\"><path d=\\"M18.754628,5.24537196 L5.24537196,18.754628\\" transform=\\"translate(-3 -3)\\"></path><path d=\\"M5.24537196,5.24537196 L18.754628,18.754628\\" transform=\\"translate(-3 -3)\\"></path></g></svg></div></div>
     </div>
-    <div class=\\"hig__global-nav__top-nav__logo\\">
-      <a>
-        <img src=\\"\\">
-      </a>
-    </div>
+    <a class=\\"hig__global-nav__top-nav__logo\\">
+      <img src=\\"\\">
+    </a>
   </div>
   <!--SEARCH-->
   <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
-  <div class=\\"hig__global-nav__top-nav____project-account-switcher\\">
-    <div class=\\"hig__flyout hig__flyout--anchor-top-right\\">
+  <div class=\\"hig__global-nav__top-nav__project-account-switcher hig__global-nav__top-nav__item\\">
+    <div class=\\"hig__flyout\\">
     <div class=\\"hig__global-nav__top-nav__project-account-switcher__target\\">
     <div class=\\"hig__global-nav__top-nav__project-account-switcher__item hig__global-nav__top-nav__project-account-switcher__item--project\\">
     <span class=\\"hig__global-nav__top-nav__project-account-switcher__item__image-wrapper\\">
@@ -30,7 +28,7 @@ exports[`<Account> renders an Account 1`] = `
 </div><!--ITEM-->
     <span class=\\"hig__global-nav__top-nav__project-account-switcher__target__caret hig__global-nav__top-nav__project-account-switcher__target__caret--hide\\"><div class=\\"hig__icon\\"><svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret\\"><title>hig-web-light/basic/form-element/caret</title><polyline transform=\\"rotate(45 9.828 3)\\" points=\\"8 2 8 8 2 8\\" stroke=\\"#2E4258\\" stroke-width=\\"1.15\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"></polyline></svg></div></span>
 </div><!--TARGET-->
-    <div class=\\"hig__flyout__container\\">
+    <div class=\\"hig__flyout__container hig__flyout__container--anchor-top-right\\">
         <div class=\\"hig__flyout__chevron\\"></div>
         <div class=\\"hig__flyout__panel\\">
             <div class=\\"hig__global-nav__top-nav__project-account-switcher__lists\\">
@@ -50,9 +48,7 @@ exports[`<Account> renders an Account 1`] = `
     </div>
 </div><!--FLYOUT-->
 </div><!--PROJECT_ACCOUNT_SWITCHER-->
-  <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
   <!--SHORTCUT-->
-  </div>
   <!--PROFILE-->
 </div><!--TOPNAV-->
         <!--SUBNAV-->
@@ -68,21 +64,19 @@ exports[`<Account> setting and updating props 1`] = `
     <!--SIDENAV-->
     <div class=\\"hig__global-nav__container\\">
         <div class=\\"hig__global-nav__top-nav\\">
-  <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--left\\">
+  <div class=\\"hig__global-nav__top-nav__item\\">
     <div class=\\"hig__global-nav__top-nav__hamburger\\">
       <div class=\\"hig__global-nav__top-nav__hamburger__hamburgericon\\"><div class=\\"hig__icon\\"><svg width=\\"16\\" height=\\"12\\" viewBox=\\"0 0 16 12\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"hamburger\\"><g transform=\\"translate(-4 -6)\\" fill=\\"#353636\\" fill-rule=\\"evenodd\\"><rect x=\\"4\\" y=\\"6\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"11\\" width=\\"16\\" height=\\"2\\"></rect><rect x=\\"4\\" y=\\"16\\" width=\\"16\\" height=\\"2\\"></rect></g></svg></div></div>
       <div class=\\"hig__global-nav__top-nav__hamburger__closeicon\\"><div class=\\"hig__icon\\"><svg width=\\"18\\" height=\\"18\\" viewBox=\\"0 0 18 18\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-hamburger\\"><g stroke=\\"#0A131C\\" stroke-width=\\"2\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"square\\"><path d=\\"M18.754628,5.24537196 L5.24537196,18.754628\\" transform=\\"translate(-3 -3)\\"></path><path d=\\"M5.24537196,5.24537196 L18.754628,18.754628\\" transform=\\"translate(-3 -3)\\"></path></g></svg></div></div>
     </div>
-    <div class=\\"hig__global-nav__top-nav__logo\\">
-      <a>
-        <img src=\\"\\">
-      </a>
-    </div>
+    <a class=\\"hig__global-nav__top-nav__logo\\">
+      <img src=\\"\\">
+    </a>
   </div>
   <!--SEARCH-->
   <div class=\\"hig__global-nav__top-nav__spacer\\"></div>
-  <div class=\\"hig__global-nav__top-nav____project-account-switcher\\">
-    <div class=\\"hig__flyout hig__flyout--anchor-top-right\\">
+  <div class=\\"hig__global-nav__top-nav__project-account-switcher hig__global-nav__top-nav__item\\">
+    <div class=\\"hig__flyout\\">
     <div class=\\"hig__global-nav__top-nav__project-account-switcher__target\\">
     <div class=\\"hig__global-nav__top-nav__project-account-switcher__item hig__global-nav__top-nav__project-account-switcher__item--project\\">
     <span class=\\"hig__global-nav__top-nav__project-account-switcher__item__image-wrapper\\">
@@ -93,7 +87,7 @@ exports[`<Account> setting and updating props 1`] = `
 </div><!--ITEM-->
     <span class=\\"hig__global-nav__top-nav__project-account-switcher__target__caret hig__global-nav__top-nav__project-account-switcher__target__caret--hide\\"><div class=\\"hig__icon\\"><svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret\\"><title>hig-web-light/basic/form-element/caret</title><polyline transform=\\"rotate(45 9.828 3)\\" points=\\"8 2 8 8 2 8\\" stroke=\\"#2E4258\\" stroke-width=\\"1.15\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"></polyline></svg></div></span>
 </div><!--TARGET-->
-    <div class=\\"hig__flyout__container\\">
+    <div class=\\"hig__flyout__container hig__flyout__container--anchor-top-right\\">
         <div class=\\"hig__flyout__chevron\\"></div>
         <div class=\\"hig__flyout__panel\\">
             <div class=\\"hig__global-nav__top-nav__project-account-switcher__lists\\">
@@ -113,9 +107,7 @@ exports[`<Account> setting and updating props 1`] = `
     </div>
 </div><!--FLYOUT-->
 </div><!--PROJECT_ACCOUNT_SWITCHER-->
-  <div class=\\"hig__global-nav__top-nav__group hig__global-nav__top-nav__group--right\\">
   <!--SHORTCUT-->
-  </div>
   <!--PROFILE-->
 </div><!--TOPNAV-->
         <!--SUBNAV-->

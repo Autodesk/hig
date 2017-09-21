@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FlyoutAdapter renders with non-default props 1`] = `
-"<div class=\\"hig__flyout hig__flyout--anchor-top-left\\">
+"<div class=\\"hig__flyout\\">
     <div><div>Test Test Test</div></div><!--TARGET-->
-    <div class=\\"hig__flyout__container\\">
+    <div class=\\"hig__flyout__container hig__flyout__container--anchor-top-left\\">
         <div class=\\"hig__flyout__chevron\\"></div>
         <div class=\\"hig__flyout__panel\\">
             <div><div>Important flyout information</div></div><!--SLOT-->
@@ -13,9 +13,9 @@ exports[`FlyoutAdapter renders with non-default props 1`] = `
 `;
 
 exports[`FlyoutAdapter renders with props 1`] = `
-"<div class=\\"hig__flyout hig__flyout--anchor-bottom-left\\">
+"<div class=\\"hig__flyout\\">
     <div><div>Test Test Test</div></div><!--TARGET-->
-    <div class=\\"hig__flyout__container\\">
+    <div class=\\"hig__flyout__container hig__flyout__container--anchor-bottom-left\\">
         <div class=\\"hig__flyout__chevron\\"></div>
         <div class=\\"hig__flyout__panel\\">
             <div><div>Important flyout information</div></div><!--SLOT-->

@@ -1,4 +1,4 @@
-gemini.suite('flyout', parent => {
+gemini.suite('flyout', (parent) => {
   parent.setUrl('src/basics/flyout/tests/gemini-flyout.html');
 
   const examples = [
@@ -16,14 +16,14 @@ gemini.suite('flyout', parent => {
     'left-bottom'
   ];
 
-  gemini.suite('flyout', suite => {
+  gemini.suite('flyout', (suite) => {
     suite
-        .setCaptureElements('.test-container')
-        .before((actions, find) => {
-          this.next = find('.hig__button');
-        });
+      .setCaptureElements('.test-container')
+      .before((actions, find) => {
+        this.next = find('.hig__button');
+      });
 
-    examples.forEach(example => {
+    examples.forEach((example) => {
       suite.capture(example, (actions, find) => {
         actions.click(this.next);
       });

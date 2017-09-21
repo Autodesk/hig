@@ -1,8 +1,8 @@
 import './flyout.scss';
 
-var Template = require('./flyout.html');
-var Interface = require('interface.json');
-var Core = require('../../helpers/js/_core.js');
+const Template = require('./flyout.html');
+const Interface = require('interface.json');
+const Core = require('../../helpers/js/_core.js');
 
 const OPEN_CLASS = 'hig__flyout--open';
 
@@ -71,10 +71,12 @@ class Flyout extends Core {
       );
       return;
     }
-    this.el.classList.remove(
-      ...Flyout.AvailableAnchorPoints.map(s => `hig__flyout--anchor-${s}`)
+
+    const container = this._findDOMEl('.hig__flyout__container', this.el);
+    container.classList.remove(
+      ...Flyout.AvailableAnchorPoints.map(s => `hig__flyout__container--anchor-${s}`)
     );
-    this.el.classList.add(`hig__flyout--anchor-${anchorPoint}`);
+    container.classList.add(`hig__flyout__container--anchor-${anchorPoint}`);
   }
 
   _callbackIfClickOutside(callback, event) {
@@ -87,7 +89,7 @@ class Flyout extends Core {
   }
 }
 
-Flyout._interface = Interface['basics']['Flyout'];
+Flyout._interface = Interface.basics.Flyout;
 Flyout._defaults = {
   title: 'link',
   link: '#',

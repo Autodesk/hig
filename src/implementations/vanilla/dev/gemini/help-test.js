@@ -3,6 +3,6 @@ gemini.suite('help', (parent) => {
 
   gemini.suite('help-button', (suite) => {
     suite.setCaptureElements('.hig__global-nav__top-nav')
-         .capture('regular help button');
+      .capture('regular help button');
   });
 });

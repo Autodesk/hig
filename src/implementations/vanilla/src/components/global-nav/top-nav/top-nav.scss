@@ -5,69 +5,71 @@
 
 $group-height: 56px;
 
-.hig__global-nav__top-nav{
-    @include reset;
+.hig__global-nav__top-nav {
+  @include reset;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
 
-    position: relative;
-    background: color(hig-white);
-    height: $group-height;
-    line-height: $group-height;
-    z-index: $top-nav-layer;
+  position: relative;
+  background: color(hig-white);
+  height: $group-height;
+  line-height: $group-height;
+  z-index: $top-nav-layer;
 
-    @include shadow("dropshadow");
+  @include shadow("dropshadow");
+}
 
-    &__group {
-        height: 32px;
-        line-height: 32px;
-        display: flex;
-        align-items: center;
+.hig__global-nav__top-nav__item {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  position: relative;
 
-        &--right{
-            border-left: 1px solid color(hig-gray-50);
-        }
-        &--left{
-            padding-right: 20px;
-            border-right: 1px solid color(hig-gray-50);
-        }
+  &+&:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 12px;
+    bottom: 12px;
+    border-left: 1px solid color(hig-gray-50);
+  }
+}
 
-    }
+.hig__global-nav__top-nav__spacer {
+  flex: 1 1 0;
+}
 
-    &__hamburger{
-      width: 30px;
-      height: 30px;
-      margin: 0 10px 0 12px;
-      cursor: pointer;
+.hig__global-nav__top-nav__hamburger {
+  display: flex;
+  align-items: center;
+  width: 30px;
+  padding: 0 5px 0 12px;
+  cursor: pointer;
 
-      &__closeicon{
-        display: none;
-      }
+  &__closeicon {
+    display: none;
+  }
 
-      .hig__global-nav--open &__hamburgericon{
-        display: none;
-      }
+  .hig__global-nav--open &__hamburgericon {
+    display: none;
+  }
 
-      .hig__global-nav--open &__closeicon{
-        display: block;
+  .hig__global-nav--open &__closeicon {
+    display: block;
+  }
+}
 
-      }
-    }
+.hig__global-nav__top-nav__logo {
+  display: flex;
+  align-items: center;
+  padding: 0 12px 0 5px;
+  line-height: 0;
+  cursor: pointer;
 
-    &__logo {
-        line-height: 0;
-        height: 24px;
-        line-height: 0;
-        cursor: pointer;
-
-        & img{
-            height: 100%;
-        }
-    }
-
-    &__spacer {
-        flex: 1 1 0;
-    }
+  & img {
+    height: 24px;
+    width: auto;
+  }
 }
