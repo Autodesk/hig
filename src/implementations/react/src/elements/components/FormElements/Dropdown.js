@@ -122,8 +122,8 @@ Dropdown.__docgenInfo = {
     value: {
       description: "{string} option that is selected on construction"
     },
-    initialSelectedOption: {
-      description: "{string} initial selected option"
+    defaultValue: {
+      description: "{string} default selected option"
     },
     options: {
       description: "{Array} array with objects, objects have a 'label' and a 'value'"
@@ -136,13 +136,13 @@ Dropdown.__docgenInfo = {
       description:
         "Calls the provided callback when focus moves away from the dropdown"
     },
-    onKeypress: {
-      description:
-        "Calls the provided callback when the user presses a key while the dropdown has focus"
-    },
     onFocus: {
       description:
         "Calls the provided callback when the user focuses on the dropdown"
+    },
+    onKeypress: {
+      description:
+        "Calls the provided callback when the user presses a key while the dropdown has focus"
     }
   }
 };
