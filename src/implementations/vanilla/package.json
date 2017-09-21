@@ -5,8 +5,8 @@
   "main": "lib/hig.js",
   "css": "lib/hig.css",
   "scripts": {
-    "lib": "NODE_ENV=production webpack -p",
-    "watch": "webpack --watch",
+    "lib": "NODE_ENV=production ./node_modules/.bin/webpack -p",
+    "watch": "./node_modules/.bin/webpack --watch",
     "deploy": "npm run lib && surge .",
     "generate-index": "node ./dev/generate-index.js",
     "build-icons": "node src/basics/icons/build/build.js",
@@ -23,6 +23,9 @@
   "author": "Autodesk Inc.",
   "license": "Apache 2.0",
   "homepage": "http://hig.autodesk.com",
+  "dependencies": {
+    "webpack": "^3.5.5"
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.1",
@@ -52,7 +55,6 @@
     "raw-loader": "^0.5.1",
     "sass-loader": "^6.0.0",
     "style-loader": "^0.13.1",
-    "svgo": "^0.7.2",
-    "webpack": "^3.5.5"
+    "svgo": "^0.7.2"
   }
 }
