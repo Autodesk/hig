@@ -135,6 +135,12 @@ jobs:
       # Get React node_modules for this revision of react/package.json
       - restore_cache:
           key: dependency-cache-react-v2-{{ checksum "package.json" }}
+      # Get vanilla build files for this commit
+      - restore_cache:
+          key: lib-cache-vanilla-v2-{{ .Revision }}
+      # Get React build files for this commit
+      - restore_cache:
+          key: lib-cache-react-v2-{{ .Revision }}
       - run:
           name: Add auth token
           command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
