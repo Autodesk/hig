@@ -37,6 +37,26 @@ function CaptionComponent(props) {
     return (<Typography type="caption" text={props.children} />)
 }
 
+const TYPOGRAPHY_DEFAULT_DOC = {
+  props: {
+    children: {
+      description: 'any content'
+    }
+  }
+};
+
+[H1Component,
+H2Component,
+H3Component,
+Sub1Component,
+Sub2Component,
+BodyComponent,
+BoldComponent,
+DisabledComponent,
+CaptionComponent].forEach((componentClass) => {
+  componentClass.__docgenInfo = TYPOGRAPHY_DEFAULT_DOC
+});
+
 export {
   H1Component as H1,
   H2Component as H2,
@@ -48,7 +68,3 @@ export {
   DisabledComponent as Disabled,
   CaptionComponent as Caption
 }
-
-
-
-
