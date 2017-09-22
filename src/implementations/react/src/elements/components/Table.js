@@ -1,6 +1,8 @@
 import * as HIG from "hig-vanilla";
 import * as PropTypes from "prop-types";
 import React, { Component } from "react";
+import PropTypes from "prop-types";
+
 import TableAdapter from "../../adapters/TableAdapter";
 import SlotCell from "./SlotCell";
 
@@ -14,6 +16,11 @@ class Table extends Component {
   constructor(props) {
     super(props);
     this.state = {};
+  }
+
+  static propTypes = {
+    selectable: PropTypes.bool,
+
   }
 
   static defaultProps = {
@@ -35,8 +42,8 @@ class Table extends Component {
           ))}
         </TableHead>
         {this.props.data.map(row => (
-          <TableRow key={row.id}>
-            {this.props.columns.map(column => getCell({ column, data: row }))}
+          <TableRow key={row.id} selected={row.selected}>
+            {this.props.columns.map((column, index) => getCell({ column, data: row, index }))}
           </TableRow>
         ))}
       </TableAdapter>
@@ -88,11 +95,11 @@ function getCell(props) {
 
   if (props.column.Cell) {
     return (
-      <SlotCell key={props.column.accessor}>
+      <SlotCell key={props.index}>
         <props.column.Cell {...props} />
       </SlotCell>
     );
   } else {
-    return <TextCell key={props.column.accessor} text={content} />;
+    return <TextCell key={props.index} text={content} />;
   }
 }

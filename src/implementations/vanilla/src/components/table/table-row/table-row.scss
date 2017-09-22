@@ -4,6 +4,7 @@
 .hig__table__row {
   border-bottom: 1px solid color(hig-gray-50);
 
+  &--selected,
   &:hover {
     background-color: color(hig-turquoise-70);
   }

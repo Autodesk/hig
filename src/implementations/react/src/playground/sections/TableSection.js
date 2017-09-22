@@ -1,15 +1,33 @@
 import React, { Component } from "react";
 import PlaygroundSection from "../PlaygroundSection";
-import { Table, Icon, TextCellContent } from "../../hig-react";
+
+import { Table, Icon, TextCellContent, Checkbox } from "../../hig-react";
 
 import tableImage from "../images/table-image.png";
 
+class RowCheckbox extends Component {
+  onChange = (event) => {
+    this.props.onChange(this.props.data.id, event.target.checked);
+  }
+
+  render() {
+    return (<Checkbox checked={this.props.data.selected} onChange={this.onChange} />);
+  }
+}
+
 const columns = [
   {
-    id: '1',
+    id: 0,
+    width: "30px",
+    Cell: props => <RowCheckbox {...props} onChange={(id, selected) => {
+        console.log(`${id} ${selected ? 'selected' : 'deselected'}`)
+      }
+    } />
+  },
+  {
+    id: 1,
     alignment: "left",
     width: "30px",
-    accessor: "icon",
     Cell: props => <Icon nameOrSVG={props.data.icon} />
   },
   {
@@ -67,7 +85,8 @@ const data = [
     location: "Floor 3, Room 21. Building 400. 2nd Street",
     budget: "2535",
     alignment: "right",
-    name: "AtlasPlumbi"
+    name: "AtlasPlumbi",
+    selected: true
   },
   {
     id: '2',
@@ -325,14 +344,6 @@ const data2 = [
   }
 ];
 
-function logEvent(event) {
-  let messageParts = [`Checkbox triggered a ${event.type} event`];
-  if (event.target.value !== undefined) {
-    messageParts = messageParts.concat(`: ${event.target.value}`);
-  }
-  console.log(messageParts.join(""));
-}
-
 class TableSection extends Component {
   render() {
     return (
@@ -341,7 +352,6 @@ class TableSection extends Component {
           density="standard"
           columns={columns}
           data={data}
-          checkBoxCallback={logEvent}
         />
         <Table density="compressed" columns={columns1} data={data1} />
         <Table density="large" columns={columns2} data={data2} />

@@ -1,12 +1,12 @@
-import "./table-row.scss";
+import './table-row.scss';
 
-var Template = require("./table-row.html");
-var Interface = require("interface.json");
-var Core = require("_core.js");
+const Template = require('./table-row.html');
+const Interface = require('interface.json');
+const Core = require('_core.js');
 
-var TextCell = require("./text-cell/text-cell.js");
-var SlotCell = require("./slot-cell/slot-cell.js");
-var IconCell = require("./icon-cell/icon-cell.js");
+const TextCell = require('./text-cell/text-cell.js');
+const SlotCell = require('./slot-cell/slot-cell.js');
+const IconCell = require('./icon-cell/icon-cell.js');
 
 /**
  * Creates an Table
@@ -17,7 +17,7 @@ var IconCell = require("./icon-cell/icon-cell.js");
 class TableRow extends Core {
   constructor(options = {}) {
     super(options);
-    this._render(Template, options, undefined, "tbody");
+    this._render(Template, options, undefined, 'tbody');
   }
 
   addCell(cellInstance) {
@@ -26,17 +26,25 @@ class TableRow extends Core {
       cellInstance instanceof TextCell ||
       cellInstance instanceof SlotCell
     ) {
-      this.mountPartialToComment("BODY-CELL", cellInstance);
+      this.mountPartialToComment('BODY-CELL', cellInstance);
     }
+  }
+
+  select() {
+    this.el.classList.add('hig__table__row--selected');
+  }
+
+  deselect() {
+    this.el.classList.remove('hig__table__row--selected');
   }
 }
 
-TableRow._interface = Interface["components"]["Table"]["partials"]["TableRow"];
+TableRow._interface = Interface.components.Table.partials.TableRow;
 TableRow._defaults = {};
 TableRow._partials = {
-  TextCell: TextCell,
-  SlotCell: SlotCell,
-  IconCell: IconCell
+  TextCell,
+  SlotCell,
+  IconCell
 };
 
 module.exports = TableRow;
