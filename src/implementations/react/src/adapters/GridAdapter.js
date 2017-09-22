@@ -59,6 +59,13 @@ class GridAdapter extends HIGElement {
       );
     }
   }
+
+  removeChild(instance) {
+    if (instance instanceof GridItemAdapter) {
+      this.gridItems.removeChild(instance);
+    }
+    instance.unmount();
+  }
 }
 
 const GridComponent = createComponent(GridAdapter);
