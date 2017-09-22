@@ -1,6 +1,6 @@
 {
   "name": "hig-react",
-  "version": "0.26.13",
+  "version": "0.26.14",
   "description": "hig components in react",
   "main": "lib/hig-react.js",
   "css": "lib/hig-react.css",
