@@ -56,7 +56,7 @@ class Search extends Core {
 
   _setIcons(){
     const mountSearchIcon = this._findDOMEl('.hig__global-nav__side-nav__search__icon', this.el);
-    this._findOrCreateIconComponent(mountSearchIcon, 'search').setNameOrSVG("search-small");
+    this._findOrCreateIconComponent(mountSearchIcon, 'search').setNameOrSVG("search", "16" );
 
     const mountClearIcon = this._findDOMEl(".hig__global-nav__side-nav__search__clear", this.el);
     this._findOrCreateIconComponent(mountClearIcon, 'clear').setNameOrSVG("close-small");

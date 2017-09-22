@@ -1,0 +1,6 @@
+<svg id="assets" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <title>print-16</title>
+  <path d="M15,4H1A1,1,0,0,0,0,5v6a1,1,0,0,0,1,1H2V10H14v2h1a1,1,0,0,0,1-1V5A1,1,0,0,0,15,4ZM14,7H11V6h3Z"/>
+  <path d="M3,11v4a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V11Zm8,4H5V14h6Zm0-2H5V12h6Z"/>
+  <path d="M3,0H13a1,1,0,0,1,1,1V3a0,0,0,0,1,0,0H2A0,0,0,0,1,2,3V1A1,1,0,0,1,3,0Z"/>
+</svg>

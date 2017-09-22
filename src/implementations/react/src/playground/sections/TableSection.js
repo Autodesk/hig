@@ -89,7 +89,7 @@ const columns = [
 const data = [
   {
     id: 1,
-    icon: "gear",
+    icon: "settings",
     title: "Window Commissioning",
     type: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     location: "Floor 3, Room 21. Building 400. 2nd Street",

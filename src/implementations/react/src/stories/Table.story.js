@@ -21,7 +21,7 @@ const props = {
   textHeadCell: { text: "Title", alignment: "left", width: "1fr" },
   slotHeadCell: { width: "1fr" },
   textCell: { text: "Window Punch List", alignment: "left" },
-  iconCell: { icon: "gear" }
+  iconCell: { icon: "settings" }
 };
 storiesOf("Table", module)
   .addWithInfo("large table", "", () => {
@@ -76,7 +76,7 @@ storiesOf("Table", module)
           </SlotHeadCell>
         </TableHead>
         <TableRow>
-          <IconCell icon="gear" />
+          <IconCell icon="settings" />
           <TextCell
             text="text cell test"
             alignment="left"
@@ -149,7 +149,7 @@ storiesOf("Table", module)
           </SlotHeadCell>
         </TableHead>
         <TableRow>
-          <IconCell icon="gear" />
+          <IconCell icon="settings" />
           <TextCell
             text="text cell test"
             alignment="left"

@@ -8,7 +8,7 @@ function IconButtonSection() {
       <IconButton
         title="Icon button"
         link="#"
-        icon="gear"
+        icon="settings"
         onClick={() => {
           console.log('Button with icon on click');
         }}
@@ -27,7 +27,7 @@ function IconButtonSection() {
         disabled={true}
         title="Icon button"
         link="#"
-        icon="gear"
+        icon="settings"
         onClick={() => {
           console.log('Button with icon on click');
         }}

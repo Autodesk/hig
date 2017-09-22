@@ -18,7 +18,7 @@ const Context = props => {
 };
 
 function setupReactContext() {
-  const props = { title: 'GEARS', link: '/settings', icon: 'gear' };
+  const props = { title: 'GEARS', link: '/settings', icon: 'settings' };
   const reactContainer = document.createElement('div');
   mount(<Context {...props} />, { attachTo: reactContainer });
   return { reactContainer };

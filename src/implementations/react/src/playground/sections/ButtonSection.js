@@ -82,7 +82,7 @@ function ButtonSection() {
         size="small"
         type="primary"
         title="Standard Button with Icon"
-        icon="gear"
+        icon="settings"
         onClick={() => {
           console.log('Button with icon on click');
         }}

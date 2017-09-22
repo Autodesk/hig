@@ -24,8 +24,11 @@ class Icon extends Core {
     }
   }
 
-  setNameOrSVG(icon) {
-    var iconString = this._confirmNameOrSVG(icon);
+  setNameOrSVG(icon, size="") {
+    var iconString = size === "16" 
+      ? this._confirmNameOrSVG(icon + '-16') 
+      : this._confirmNameOrSVG(icon);
+
     this._el.innerHTML = iconString;
   }
 

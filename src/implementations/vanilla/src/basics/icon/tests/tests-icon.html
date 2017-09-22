@@ -36,6 +36,7 @@
 		} */
 
 		.test-icon,
+		.test-icon-16,
 		.test-icon-svg {
 			display: flex;
 			flex-wrap: wrap;
@@ -45,8 +46,13 @@
 
 <body>
 	<div class='test-container hig__rich-text'>
-		<h3>Included Icons</h3>
+		<h3>Included 24px Icons</h3>
 		<div class="test-icon"></div>
+
+		<h3>Included 16px Icons</h3>
+		<div class="test-icon-16"></div>
+
+		
 
 		<h3>Added SVGs</h3>
 		<div class="test-icon-svg"></div>
@@ -57,7 +63,18 @@
 	<script>
 		//Add existing icons using names
 		var iconKeys = Object.keys(Hig.Icons);
+
+		const size24Keys = [];
+		const size16Keys = []
 		iconKeys.forEach(key => {
+			if(/-16/.test(key)) {
+				return size16Keys.push(key);
+			} else {
+				return size24Keys.push(key);
+			}
+		});
+
+		size24Keys.forEach(key => {
 			var icon = new Hig.Icon({
 				"nameOrSVG": key
 			})
@@ -73,6 +90,26 @@
 
 			iconContainer.appendChild(iconName)
 			document.querySelector('.test-icon').appendChild(iconContainer);
+			icon.mount(iconContainer);
+		});
+
+
+		size16Keys.forEach(key => {
+			var icon = new Hig.Icon({
+				"nameOrSVG": key
+			})
+
+			var iconContainer = document.createElement('div');
+			iconContainer.classList = "test-icon-" + key + " test-icon-display";
+
+
+			var iconName = document.createElement('span');
+			iconName.innerHTML = key;
+			iconName.classList = "test-icon-name";
+
+
+			iconContainer.appendChild(iconName)
+			document.querySelector('.test-icon-16').appendChild(iconContainer);
 			icon.mount(iconContainer);
 		});
 

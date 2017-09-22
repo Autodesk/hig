@@ -10,7 +10,7 @@ import Tabs from './Tabs';
 const Context = props => {
   return (
     <GlobalNavAdapter>
-      <SubNavAdapter moduleIndicatorIcon='gear'>
+      <SubNavAdapter moduleIndicatorIcon='settings'>
         <Tabs defaultSelectedTab={props.tabs[0].id}>
           {props.tabs.map(tab => (
             <Tabs.Tab key={tab.key} label={tab.label} id={tab.id} />
