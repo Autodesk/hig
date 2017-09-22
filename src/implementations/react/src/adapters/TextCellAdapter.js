@@ -1,8 +1,6 @@
-import * as HIG from "hig-vanilla";
 import HIGElement from "../elements/HIGElement";
 import * as PropTypes from "prop-types";
 import createComponent from "./createComponent";
-import HIGChildValidator from "../elements/HIGChildValidator";
 
 export class TextCellAdapter extends HIGElement {
   constructor(HIGConstructor, initialProps) {

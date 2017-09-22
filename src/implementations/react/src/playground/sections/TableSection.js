@@ -1,36 +1,8 @@
 import React, { Component } from "react";
 import PlaygroundSection from "../PlaygroundSection";
-import { Table, Icon, TextCellContent, SlotCell } from "../../hig-react";
+import { Table, Icon, TextCellContent } from "../../hig-react";
 
 import tableImage from "../images/table-image.png";
-
-// function StatusCell(props) {
-//   const styles = {
-//     display: 'block',
-//     borderRadius: "50%",
-//     border: "1px solid transparent",
-//     width: '18px',
-//     height: '18px'
-//   };
-
-//   if (props.data.status === "good") {
-//     styles.backgroundColor = "#B8E986";
-//     styles.borderColor = "#7ED321";
-//   } else {
-//     styles.backgroundColor = "#CE3346";
-//     styles.borderColor = "#D0021B";
-//   }
-
-//   return <span style={styles} />;
-// }
-
-// function MixedCell(props) {
-//   if (props.data.status === 'good') {
-//     return <p>Hella good</p>
-//   } else {
-//     return <Icon nameOrSVG={props.data.icon} />
-//   }
-// }
 
 const columns = [
   {
