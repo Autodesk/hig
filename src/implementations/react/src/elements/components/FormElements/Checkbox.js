@@ -73,6 +73,38 @@ class Checkbox extends React.Component {
   }
 }
 
+Checkbox.__docgenInfo = {
+  props: {
+    checked: {
+      description: 'boolean - sets whether the checkbox is checked'
+    },
+    disabled: {
+      description: 'boolean - sets whether the checkbox is disabled'
+    },
+    label: {
+      description: 'sets the label text for the checkbox'
+    },
+    name: {
+      description: 'sets the name attribute of the checkbox input'
+    },
+    required: {
+      description: 'string - sets the whether the checkbox is required and displays the provided message'
+    },
+    value: {
+      description: 'sets the value attribute of the checkbox input'
+    },
+    onHover: {
+      description: 'triggers when you hover over the button'
+    },
+    onChange: {
+      description: 'triggers when you check/uncheck the checkbox'
+    },
+    onFocus: {
+      description: 'triggers the checkbox component receives focus'
+    }
+  }
+};
+
 Checkbox.propTypes = {
   checked: PropTypes.bool,
   defaultChecked: PropTypes.bool,
@@ -87,4 +119,3 @@ Checkbox.propTypes = {
 };
 
 export default Checkbox;
-
