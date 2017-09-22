@@ -257,6 +257,7 @@ class TextField extends Core {
     const passwordButton = this.el.querySelector(
       '.hig__text-field__password-hide-button'
     );
+
     this._findOrCreateIconComponent(passwordButton, 'visible').setNameOrSVG('visible');
     passwordButton.classList.add('hig__text-field__extra--show');
     this.el.classList.add('hig__text-field--password-button-visible');

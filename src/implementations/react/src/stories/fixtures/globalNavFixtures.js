@@ -24,7 +24,7 @@ export const modules = [
   {
     id: "1-2",
     groupId: '2',
-    icon: "construction-management",
+    icon: "collaboration",
     title: "Authoring Collaboration"
   },
   {

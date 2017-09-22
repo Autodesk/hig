@@ -1,0 +1,5 @@
+<svg id="assets" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <title>paste-16</title>
+  <path d="M13,3V5H2V3A1,1,0,0,0,1,4V15a1,1,0,0,0,1,1H13a1,1,0,0,0,1-1V4A1,1,0,0,0,13,3ZM11,14H4V13h7Zm0-2H4V11h7Zm0-2H4V9h7Zm0-2H4V7h7Z"/>
+  <path d="M10,2A2.8,2.8,0,0,0,7.5.5,2.77,2.77,0,0,0,5,2H3V4h9V2Z"/>
+</svg>

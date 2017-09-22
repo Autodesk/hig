@@ -131,7 +131,7 @@ storiesOf('GlobalNav', module)
             <Project image={project4} label="Oakland Medical Center" />
             <Project image={project1} label="Stanford hospital" />
           </ProjectAccountSwitcher>
-          <Shortcut icon="gear" title="GEAR" link="#" />
+          <Shortcut icon="settings" title="GEAR" link="#" />
           <Help title="HELLLP MEEEE!!!!" link="#`" />
           <Profile
             image={profileImage}

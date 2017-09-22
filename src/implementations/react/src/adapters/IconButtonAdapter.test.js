@@ -26,7 +26,7 @@ describe('<IconButtonAdapter>', () => {
     const defaults = {
       title: 'icon button',
       link: 'http://example.com',
-      icon: 'gear'
+      icon: 'settings'
     };
 
     const { higButton, higContainer } = createHigButton(defaults);
@@ -45,7 +45,7 @@ describe('<IconButtonAdapter>', () => {
 
   it('renders the icon button with updated props', () => {
     const defaults = {
-      icon: 'gear'
+      icon: 'settings'
     };
 
     const { higButton, higContainer } = createHigButton(defaults);
@@ -79,7 +79,7 @@ describe('<IconButtonAdapter>', () => {
     const defaults = {
       title: 'icon button',
       link: 'http://example.com',
-      icon: 'gear',
+      icon: 'settings',
       disabled: true
     };
 
@@ -103,7 +103,7 @@ describe('<IconButtonAdapter>', () => {
       const spy = jest.fn();
       const container = document.createElement('div');
       const wrapper = mount(
-        <IconButtonAdapter icon="gear" {...{ [eventName]: spy }} />,
+        <IconButtonAdapter icon="settings" {...{ [eventName]: spy }} />,
         {
           attachTo: container
         }
@@ -119,7 +119,7 @@ describe('<IconButtonAdapter>', () => {
     it(`sets event listeners for ${eventName} when updated`, () => {
       const spy = jest.fn();
       const container = document.createElement('div');
-      const wrapper = mount(<IconButtonAdapter icon="gear" />, {
+      const wrapper = mount(<IconButtonAdapter icon="settings" />, {
         attachTo: container
       });
       wrapper.setProps({ [eventName]: spy });

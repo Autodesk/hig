@@ -8,7 +8,7 @@ export const modules = [
   {
     id: "1-2",
     groupId: '2',
-    icon: "construction-management",
+    icon: "collaboration",
     title: "Authoring Collaboration"
   },
   {
@@ -20,7 +20,7 @@ export const modules = [
   {
     id: "1-4",
     groupId: '2',
-    icon: "placeholder",
+    icon: "model-coordination",
     title: "Model Coordination"
   },
   {
@@ -44,7 +44,7 @@ export const modules = [
   {
     id: "1-8",
     groupId: '2',
-    icon: "schedule",
+    icon: "document-management",
     title: "Schedule"
   },
   {
@@ -61,13 +61,13 @@ export const modules = [
   {
     id: "1-11",
     groupId: '2',
-    icon: "buildingops",
+    icon: "building-ops",
     title: "Building Ops"
   },
   {
     id: "1-12",
     groupId: '3',
-    icon: "library",
+    icon: "file-document",
     title: "Library"
   },
   {
@@ -85,13 +85,13 @@ export const modules = [
   {
     id: "1-15",
     groupId: '3',
-    icon: "locations",
+    icon: "location",
     title: "Location"
   },
   {
     id: "1-16",
     groupId: '4',
-    icon: "project-admin",
+    icon: "project-management",
     title: "Project Admin"
   }
 ];

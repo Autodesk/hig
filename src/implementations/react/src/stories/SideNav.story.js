@@ -41,7 +41,7 @@ const moduleFixtures = [
   {
     id: "1-2",
     groupId: '2',
-    icon: "construction-management",
+    icon: "collaboration",
     title: "Authoring Collaboration"
   },
   {
@@ -53,7 +53,7 @@ const moduleFixtures = [
   {
     id: "1-4",
     groupId: '2',
-    icon: "placeholder",
+    icon: "model-coordination",
     title: "Model Coordination"
   },
   {

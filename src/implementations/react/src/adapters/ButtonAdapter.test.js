@@ -143,7 +143,7 @@ describe('<ButtonAdapter>', () => {
   });
 
   it('renders the button with an icon', () => {
-    const defaults = { icon: 'gear' };
+    const defaults = { icon: 'settings' };
 
     const { higButton, higContainer } = createHigButton(defaults);
 

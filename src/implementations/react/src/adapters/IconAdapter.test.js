@@ -20,7 +20,7 @@ describe("<ButtonAdapter", () => {
 
   it("renders an icon from initial props using a name", () => {
     const props = {
-      nameOrSVG: "gear"
+      nameOrSVG: "settings"
     };
 
     const { higContainer, higTable } = createHigContext(props);

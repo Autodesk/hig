@@ -27,7 +27,7 @@ storiesOf('IconButton', module)
       <IconButton
         title="IconButton"
         link="#"
-        icon="gear"
+        icon="settings"
         onClick={action('clicked')}
         onHover={action('on hover')}
         onBlur={action('on blur')}
@@ -40,7 +40,7 @@ storiesOf('IconButton', module)
       <IconButton
         title="Disabled Icon Button"
         link="#"
-        icon="gear"
+        icon="settings"
         onClick={action('clicked')}
         onHover={action('on hover')}
         onBlur={action('on blur')}

@@ -5,6 +5,8 @@ const Interface = require("interface.json");
 const Core = require("../../helpers/js/_core.js");
 var Icons = require("../icons/icons.js");
 
+const AvailableSizes = ["24", "16"];
+
 /**
  * Creates an icon
  *
@@ -20,13 +22,20 @@ class Icon extends Core {
 
   _componentDidMount() {
     if (this.initialOptions.nameOrSVG) {
-      this.setNameOrSVG(this.initialOptions.nameOrSVG);
+      this.setNameOrSVG(this.initialOptions.nameOrSVG, this.initialOptions.size);
     }
   }
 
-  setNameOrSVG(icon) {
-    var iconString = this._confirmNameOrSVG(icon);
-    this._el.innerHTML = iconString;
+  setNameOrSVG(icon, size = "24") {
+    if (AvailableSizes.indexOf(size) > -1) {
+      const iconString = this._confirmNameOrSVG(icon + `-${size}`);
+      this._el.innerHTML = iconString;
+    } else {
+      console.error(
+        `Icon named "${icon} size "${size}" not found, only these size are allowed: `,
+        AvailableSizes
+      );
+    }
   }
 
   _confirmNameOrSVG(icon) {
@@ -48,5 +57,7 @@ Icon._interface = Interface["basics"]["Icon"];
 Icon._defaults = {
   nameOrSVG: ""
 };
+
+Icon.AvailableSizes = AvailableSizes;
 
 module.exports = Icon;

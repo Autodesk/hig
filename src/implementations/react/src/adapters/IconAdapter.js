@@ -26,19 +26,31 @@ export class IconAdapter extends HIGElement {
   }
 
   componentDidMount() {
-    if (this.props.nameOrSVG) {
-      this.commitUpdate(["nameOrSVG", this.props.nameOrSVG]);
+    if (this.props.nameOrSVG || this.props.size) {
+      this.commitUpdate([
+        "nameOrSVG",
+        this.props.nameOrSVG,
+        "size",
+        this.props.size
+      ]);
     }
   }
 
   commitUpdate(updatePayload, oldProps, newProps) {
+    let nextSize;
+    let nextNameOrSVG;
+
     for (let i = 0; i < updatePayload.length; i += 2) {
       const propKey = updatePayload[i];
       const propValue = updatePayload[i + 1];
 
       switch (propKey) {
         case "nameOrSVG": {
-          this.hig.setNameOrSVG(propValue);
+          nextNameOrSVG = propValue;
+          break;
+        }
+        case "size": {
+          nextSize = propValue;
           break;
         }
         default: {
@@ -46,13 +58,26 @@ export class IconAdapter extends HIGElement {
         }
       }
     }
+
+    if (nextNameOrSVG && nextSize) {
+      this.hig.setNameOrSVG(nextNameOrSVG, nextSize);
+    } else if (nextNameOrSVG) {
+      this.hig.setNameOrSVG(nextNameOrSVG, this.props.size);
+    } else if (nextSize) {
+      this.hig.setNameOrSVG(this.props.nameOrSVG, nextSize);
+    }
   }
 }
 
 const IconComponent = createComponent(IconAdapter);
 
 IconComponent.propTypes = {
-  nameOrSVG: PropTypes.string
+  nameOrSVG: PropTypes.string.isRequired,
+  size: PropTypes.oneOf(HIG.Icon.AvailableSizes)
+};
+
+IconComponent.defaultProps = {
+  size: undefined
 };
 
 IconComponent.__docgenInfo = {

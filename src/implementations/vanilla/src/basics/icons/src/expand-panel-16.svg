@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <title>expand-panel-16</title>
+  <g id="assets">
+    <g>
+      <rect y="1" width="7" height="14" rx="1" ry="1" transform="translate(7 16) rotate(-180)"/>
+      <polygon points="10.64 5.46 12.18 7 8 7 8 9 12.16 9 10.64 10.53 12.05 11.94 16 7.99 12.05 4.04 10.64 5.46"/>
+    </g>
+  </g>
+</svg>

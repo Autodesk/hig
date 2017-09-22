@@ -129,7 +129,7 @@ describe("<TableAdapter>", () => {
       textHeadCell: { text: "Title", alignment: "left", width: "1fr" },
       slotHeadCell: { width: "1fr" },
       textCell: { text: "Window Punch List", alignment: "left" },
-      iconCell: { icon: "gear" }
+      iconCell: { icon: "settings" }
     };
 
     const { higContainer, higTable } = createHigContext(defaults);
@@ -152,7 +152,7 @@ describe("<TableAdapter>", () => {
       textHeadCell: { text: "Title", alignment: "left", width: "1fr" },
       slotHeadCell: { width: "1fr" },
       textCell: { text: "Window Punch List", alignment: "left" },
-      iconCell: { icon: "gear" }
+      iconCell: { icon: "settings" }
     };
 
     const {

@@ -158,7 +158,7 @@ describe("<GlobalNav>", () => {
   });
 
   describe("for SubNav", () => {
-    const modules = [{ id: "mod-1", title: "Settings", icon: "gear" }];
+    const modules = [{ id: "mod-1", title: "Settings", icon: "settings" }];
     const submodules = [
       { id: "sub-1", moduleId: "mod-1", title: "Usage" },
       { id: "sub-2", moduleId: "mod-1", title: "Battery" }
@@ -188,7 +188,7 @@ describe("<GlobalNav>", () => {
         it("passes icon to SubNav", () => {
           expect(wrapper.find(SubNav)).toHaveProp(
             "moduleIndicatorIcon",
-            "gear"
+            "settings"
           );
         });
 
@@ -226,7 +226,7 @@ describe("<GlobalNav>", () => {
         it("passes icon to SubNav", () => {
           expect(wrapper.find(SubNav)).toHaveProp(
             "moduleIndicatorIcon",
-            "gear"
+            "settings"
           );
         });
 
@@ -257,7 +257,7 @@ describe("<GlobalNav>", () => {
       });
 
       it("passes the parents icon to SubNav", () => {
-        expect(wrapper.find(SubNav)).toHaveProp("moduleIndicatorIcon", "gear");
+        expect(wrapper.find(SubNav)).toHaveProp("moduleIndicatorIcon", "settings");
       });
 
       it("shows a tab for each sibling submodule", () => {

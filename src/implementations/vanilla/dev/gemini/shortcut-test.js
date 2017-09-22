@@ -1,8 +1,8 @@
 gemini.suite('shortcut', (parent) => {
   parent.setUrl('src/components/global-nav/top-nav/shortcut/tests/gemini-shortcut.html');
 
-  gemini.suite('gear', (suite) => {
+  gemini.suite('settings', (suite) => {
     suite.setCaptureElements('.hig__global-nav__top-nav')
-      .capture('gear shortcut');
+      .capture('settings shortcut');
   });
 });
