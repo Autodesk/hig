@@ -1,8 +1,4 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
-
-import PlaygroundSection from "../../playground/PlaygroundSection";
-import Checkbox from "../../adapters/FormElements/CheckboxAdapter";
 import TableAdapter from "../../adapters/TableAdapter";
 import SlotCell from "./SlotCell";
 
@@ -10,7 +6,6 @@ const TableHead = TableAdapter.TableHead;
 const TableRow = TableAdapter.TableRow;
 const TextHeadCell = TableAdapter.TableHead.TextHeadCell;
 const TextCell = TableAdapter.TableRow.TextCell;
-const IconCell = TableAdapter.TableRow.IconCell;
 
 class Table extends Component {
   constructor(props) {
@@ -61,6 +56,9 @@ Table.__docgenInfo = {
     }
   }
 };
+
+
+
 
 export default Table;
 
