@@ -74,25 +74,23 @@ export default function WithState(WrappedComponent) {
     }
 
     handleModuleClick = (id) => {
+      const submodules = this.props.submodules.filter(s => s.moduleId === id);
+
+      if (submodules.length > 0) {
+        this.toggleModuleMinimized(id);
+        this.setActiveModuleId(submodules[0].id);
+      } else {
+        this.setActiveModuleId(id);
+      }
       if (this.props.onModuleClick) {
         this.props.onModuleClick(id);
-      } else {
-        const submodules = this.props.submodules.filter(s => s.moduleId === id);
-
-        if (submodules.length > 0) {
-          this.toggleModuleMinimized(id);
-          this.setActiveModuleId(submodules[0].id);
-        } else {
-          this.setActiveModuleId(id);
-        }
       }
     }
 
     handleSubmoduleClick = (id) => {
+      this.setActiveModuleId(id);
       if (this.props.onSubmoduleClick) {
         this.props.onSubmoduleClick(id);
-      } else {
-        this.setActiveModuleId(id);
       }
     }
 

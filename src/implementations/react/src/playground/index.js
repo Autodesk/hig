@@ -74,6 +74,14 @@ class Playground extends React.Component {
     this.setState({ sideNavOpen: !this.state.sideNavOpen });
   }
 
+  handleModuleClick = (id) => {
+    console.log(`module click ${id}`)
+  }
+
+  handleSubmoduleClick = (id) => {
+    console.log(`submodule click ${id}`)
+  }
+
   render() {
     const topNavProps = {
       accounts: accounts,
@@ -101,7 +109,9 @@ class Playground extends React.Component {
           <p></p>
           <Button title="Git Repository" type="secondary" link="https://github.com/Autodesk/hig" target="_blank" />
         </div>
-      )
+      ),
+      onModuleClick: this.handleModuleClick,
+      onSubmoduleClick: this.handleSubmoduleClick
     };
 
     return (
