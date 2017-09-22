@@ -28,7 +28,7 @@ class Icon extends Core {
 
   setNameOrSVG(icon, size = "24") {
     if (AvailableSizes.indexOf(size) > -1) {
-      const iconString = this._confirmNameOrSVG(icon + `-${size}`);
+      const iconString = this._confirmNameOrSVG(icon, size);
       this._el.innerHTML = iconString;
     } else {
       console.error(
@@ -38,8 +38,8 @@ class Icon extends Core {
     }
   }
 
-  _confirmNameOrSVG(icon) {
-    var isNamedIcon = Icons[icon];
+  _confirmNameOrSVG(icon, size) {
+    var isNamedIcon = Icons[`${icon}-${size}`];
     var isSVG = /^<svg/.test(icon);
 
     if (isNamedIcon) {
