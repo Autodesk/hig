@@ -23,45 +23,6 @@ class PasswordField extends Component {
     value: PropTypes.string
   }
 
-  static __docgeninfo = {
-    disabled: {
-      description: 'disable the field, preventing user interaction'
-    },
-    initialValue: {
-      description: 'initial value of the field'
-    },
-    instructions: {
-      description: 'a short description or suggestion'
-    },
-    label: {
-      description: 'describes what the field controls'
-    },
-    name: {
-      description: 'set on the element\'s name attribute'
-    },
-    onBlur: {
-      description: 'called when user moves focus away from the field'
-    },
-    onChange: {
-      description: 'called when user enters a new value and moves focus away from the field'
-    },
-    onFocus: {
-      description: 'called when user moves focus onto the field'
-    },
-    onInput: {
-      description: 'called when user enters a new value'
-    },
-    placeholder: {
-      description: 'data entry suggestions or formatting examples'
-    },
-    required: {
-      description: 'indicates a field must be filled before the form may be completed'
-    },
-    value: {
-      description: 'controlled value of the field'
-    },
-  }
-
   static defaultProps = {
     onBlur: () => {},
     onFocus: () => {},
@@ -112,6 +73,47 @@ class PasswordField extends Component {
         showPasswordRevealButton={this.state.hasFocus && !this.state.showPassword}
       />
     );
+  }
+}
+
+PasswordField.__docgeninfo = {
+  props: {
+    disabled: {
+      description: 'disable the field, preventing user interaction'
+    },
+    initialValue: {
+      description: 'initial value of the field'
+    },
+    instructions: {
+      description: 'a short description or suggestion'
+    },
+    label: {
+      description: 'describes what the field controls'
+    },
+    name: {
+      description: 'set on the element\'s name attribute'
+    },
+    onBlur: {
+      description: 'called when user moves focus away from the field'
+    },
+    onChange: {
+      description: 'called when user enters a new value and moves focus away from the field'
+    },
+    onFocus: {
+      description: 'called when user moves focus onto the field'
+    },
+    onInput: {
+      description: 'called when user enters a new value'
+    },
+    placeholder: {
+      description: 'data entry suggestions or formatting examples'
+    },
+    required: {
+      description: 'indicates a field must be filled before the form may be completed'
+    },
+    value: {
+      description: 'controlled value of the field'
+    }
   }
 }
 
