@@ -1,6 +1,9 @@
+import * as HIG from "hig-vanilla";
+import * as PropTypes from "prop-types";
 import React, { Component } from "react";
 import TableAdapter from "../../adapters/TableAdapter";
 import SlotCell from "./SlotCell";
+
 
 const TableHead = TableAdapter.TableHead;
 const TableRow = TableAdapter.TableRow;
@@ -57,8 +60,17 @@ Table.__docgenInfo = {
   }
 };
 
-
-
+Table.propTypes = {
+  density: PropTypes.oneOf(HIG.Table.AvailableDensities),
+  data: PropTypes.arrayOf(PropTypes.object),
+  columns: PropTypes.arrayOf(PropTypes.shape({
+    Header: PropTypes.string,
+    alignment: PropTypes.alignment,
+    width: PropTypes.string,
+    id: PropTypes.string,
+    Cell: PropTypes.any
+  })),
+};
 
 export default Table;
 
