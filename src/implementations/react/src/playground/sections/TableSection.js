@@ -6,14 +6,14 @@ import tableImage from "../images/table-image.png";
 
 const columns = [
   {
-    id: 1,
+    id: '1',
     alignment: "left",
     width: "30px",
     accessor: "icon",
     Cell: props => <Icon nameOrSVG={props.data.icon} />
   },
   {
-    id: 2,
+    id: '2',
     Header: "Title",
     alignment: "left",
     width: "1fr",
@@ -23,21 +23,21 @@ const columns = [
     )
   },
   {
-    id: 3,
+    id: '3',
     Header: "Type",
     alignment: "left",
     width: "1fr",
     accessor: "type"
   },
   {
-    id: 4,
+    id: '4',
     Header: "Location",
     alignment: "left",
     width: "1fr",
     accessor: "location"
   },
   {
-    id: 5,
+    id: '5',
     Header: "Budget",
     alignment: "right",
     width: "50px",
@@ -50,7 +50,7 @@ const columns = [
     )
   },
   {
-    id: 6,
+    id: '6',
     Header: "Name",
     alignment: "left",
     width: "1fr",
@@ -60,7 +60,7 @@ const columns = [
 
 const data = [
   {
-    id: 1,
+    id: '1',
     icon: "settings",
     title: "Window Commissioning",
     type: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
@@ -70,7 +70,7 @@ const data = [
     name: "AtlasPlumbi"
   },
   {
-    id: 2,
+    id: '2',
     icon: "hamburger",
     title: "Pre-Pour Checklist",
     type: "Proin ut arcu vitae urna congue pulvinar.",
@@ -80,7 +80,7 @@ const data = [
     name: "Abby Worgan"
   },
   {
-    id: 3,
+    id: '3',
     icon: "photos",
     title: "Void Slab - Face Up",
     type: "Proin ut arcu vitae urna congue pulvinar.",
@@ -90,7 +90,7 @@ const data = [
     name: "Ben Ling"
   },
   {
-    id: 4,
+    id: '4',
     icon: "quantities",
     title: "Closure Cypsum Boards",
     type: "Suspendisse faucibus congue odio, vitae tempus quam lobortis non",
@@ -100,7 +100,7 @@ const data = [
     name: "George Fitzmaur"
   },
   {
-    id: 5,
+    id: '5',
     icon: "cost-control",
     title: "Windows",
     type: "Duis ac sem in massa scelerisque efficitur.",
@@ -113,7 +113,7 @@ const data = [
 
 const columns1 = [
   {
-    id: 1,
+    id: '1',
     Header: "Title",
     alignment: "left",
     width: "1fr",
@@ -123,21 +123,21 @@ const columns1 = [
     )
   },
   {
-    id: 2,
+    id: '2',
     Header: "Type",
     alignment: "left",
     width: "1fr",
     accessor: "type"
   },
   {
-    id: 3,
+    id: '3',
     Header: "Location",
     alignment: "left",
     width: "1fr",
     accessor: "location"
   },
   {
-    id: 4,
+    id: '4',
     Header: "Budget",
     alignment: "right",
     width: "50px",
@@ -150,7 +150,7 @@ const columns1 = [
     )
   },
   {
-    id: 5,
+    id: '5',
     Header: "Name",
     alignment: "left",
     width: "1fr",
@@ -160,7 +160,7 @@ const columns1 = [
 
 const data1 = [
   {
-    id: 1,
+    id: '1',
     title: "Window Commissioning",
     type: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     location: "Floor 3, Room 21. Building 400. 2nd Street",
@@ -169,7 +169,7 @@ const data1 = [
     name: "AtlasPlumbi"
   },
   {
-    id: 2,
+    id: '2',
     title: "Pre-Pour Checklist",
     type: "Proin ut arcu vitae urna congue pulvinar.",
     location: "Building 3, Room 3. Building 201. 3rd Street",
@@ -178,7 +178,7 @@ const data1 = [
     name: "Abby Worgan"
   },
   {
-    id: 3,
+    id: '3',
     title: "Void Slab - Face Up",
     type: "Proin ut arcu vitae urna congue pulvinar.",
     location: "Floor 4, Building 400. 1st Street",
@@ -187,7 +187,7 @@ const data1 = [
     name: "Ben Ling"
   },
   {
-    id: 4,
+    id: '4',
     title: "Closure Cypsum Boards",
     type: "Suspendisse faucibus congue odio, vitae tempus quam lobortis non",
     location: "Floor 12, Room 2. Building 100. B Street",
@@ -196,7 +196,7 @@ const data1 = [
     name: "George Fitzmaur"
   },
   {
-    id: 5,
+    id: '5',
     title: "Windows",
     type: "Duis ac sem in massa scelerisque efficitur.",
     location: "Floor 11, Room A. Building 200. 16th Street",
@@ -208,7 +208,7 @@ const data1 = [
 
 const columns2 = [
   {
-    id: 1,
+    id: '1',
     alignment: "left",
     width: "104px",
     accessor: "image",
@@ -227,7 +227,7 @@ const columns2 = [
     )
   },
   {
-    id: 2,
+    id: '2',
     Header: "Title",
     alignment: "left",
     width: "1fr",
@@ -237,21 +237,21 @@ const columns2 = [
     )
   },
   {
-    id: 3,
+    id: '3',
     Header: "Type",
     alignment: "left",
     width: "1fr",
     accessor: "type"
   },
   {
-    id: 4,
+    id: '4',
     Header: "Location",
     alignment: "left",
     width: "1fr",
     accessor: "location"
   },
   {
-    id: 5,
+    id: '5',
     Header: "Budget",
     alignment: "right",
     width: "50px",
@@ -264,7 +264,7 @@ const columns2 = [
     )
   },
   {
-    id: 6,
+    id: '6',
     Header: "Name",
     alignment: "left",
     width: "1fr",
@@ -274,7 +274,7 @@ const columns2 = [
 
 const data2 = [
   {
-    id: 1,
+    id: '1',
     image: tableImage,
     title: "Window Commissioning",
     type: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
@@ -284,7 +284,7 @@ const data2 = [
     name: "AtlasPlumbi"
   },
   {
-    id: 2,
+    id: '2',
     image: tableImage,
     title: "Pre-Pour Checklist",
     type: "Proin ut arcu vitae urna congue pulvinar.",
@@ -294,7 +294,7 @@ const data2 = [
     name: "Abby Worgan"
   },
   {
-    id: 3,
+    id: '3',
     image: tableImage,
     title: "Void Slab - Face Up",
     type: "Proin ut arcu vitae urna congue pulvinar.",
@@ -304,7 +304,7 @@ const data2 = [
     name: "Ben Ling"
   },
   {
-    id: 4,
+    id: '4',
     image: tableImage,
     title: "Closure Cypsum Boards",
     type: "Suspendisse faucibus congue odio, vitae tempus quam lobortis non",
@@ -314,7 +314,7 @@ const data2 = [
     name: "George Fitzmaur"
   },
   {
-    id: 5,
+    id: '5',
     image: tableImage,
     title: "Windows",
     type: "Duis ac sem in massa scelerisque efficitur.",

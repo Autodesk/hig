@@ -54,4 +54,6 @@ Table._partials = {
   TableRow: TableRow
 }
 
+Table.AvailableDensities = AvailableDensities;
+
 module.exports = Table;
