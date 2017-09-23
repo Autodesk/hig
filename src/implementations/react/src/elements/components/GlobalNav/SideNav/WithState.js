@@ -82,6 +82,16 @@ export default function WithState(WrappedComponent) {
       } else {
         this.setActiveModuleId(id);
       }
+      if (this.props.onModuleClick) {
+        this.props.onModuleClick(id);
+      }
+    }
+
+    handleSubmoduleClick = (id) => {
+      this.setActiveModuleId(id);
+      if (this.props.onSubmoduleClick) {
+        this.props.onSubmoduleClick(id);
+      }
     }
 
     renderedQuery() {
@@ -106,7 +116,7 @@ export default function WithState(WrappedComponent) {
           setActiveModuleId={this.setActiveModuleId}
           toggleModuleMinimized={this.toggleModuleMinimized}
           onModuleClick={this.handleModuleClick}
-          onSubmoduleClick={this.setActiveModuleId}
+          onSubmoduleClick={this.handleSubmoduleClick}
           disableCollapse={modules.length <= 5 || query.length > 0}
           searchable={this.props.searchable}
         />
@@ -124,6 +134,12 @@ export default function WithState(WrappedComponent) {
       },
       onModuleChange: {
         description: 'A funciton that will be called when the user activates a module or submodule'
+      },
+      onModuleClick: {
+        description: 'A funciton that will be called when the user clicks on a module'
+      },
+      onSubmoduleClick: {
+        description: 'A funciton that will be called when the user clicks on a submodule'
       },
       submodules: {
         description: 'An array of props for building submodules'

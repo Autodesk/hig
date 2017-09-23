@@ -59,6 +59,8 @@ class SideNav extends Component {
       headerLabel: this.props.headerLabel,
       headerLink: this.props.headerLink,
       onHeaderClick: this.props.onHeaderClick,
+      onModuleClick: this.props.onModuleClick,
+      onSubmoduleClick: this.props.onSubmoduleClick,
       onSuperHeaderClick: this.props.onSuperHeaderClick,
       superHeaderLabel: this.props.superHeaderLabel,
       superHeaderLink: this.props.superHeaderLink,
