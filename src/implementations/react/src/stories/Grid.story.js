@@ -3,8 +3,8 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { text, select, boolean } from "@storybook/addon-knobs";
 
-import Grid from "../adapters/FormElements/GridAdapter";
-import GridItem from "../elements/components/FormElements/GridItem";
+import Grid from "../adapters/GridAdapter";
+import GridItem from "../adapters/GridItemAdapter";
 
 const style = {
   backgroundColor: "#FF5500",
