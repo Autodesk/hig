@@ -1,0 +1,17 @@
+.hig__global-nav__help {
+  align-items: center;
+  display: flex;
+
+  .hig__flyout__panel {
+    width: auto;
+  }
+
+  .hig__flyout__container {
+    margin-right: -4px;
+    margin-top: 18px;
+  }
+}
+
+.hig__global-nav__help .hig__icon {
+  left: -4px;
+}

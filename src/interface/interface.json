@@ -1375,27 +1375,48 @@
           },
           "partials": {
             "Help": {
-              "defaults": {
-                "link": "{String} link behind the Help icon",
-                "title": "{String} the title of the Help icon to be shown on hover"
-              },
+              "defaults": {},
               "methods": {
+                "open": {
+                  "desc": "Open the help flyout"
+                },
+                "close": {
+                  "desc": "Close the help flyout"
+                },
                 "onClick": {
                   "desc": "Calls the provided callback when user clicks on the Help",
                   "params": "HIG.abstract.EventObject.params",
                   "returns": "HIG.abstract.EventObject.returns"
                 },
-                "setLink": {
-                  "desc": "sets the link of the Help",
-                  "params": [
-                    "{String} link - new link"
-                  ]
+                "onClickOutside": {
+                  "desc": "Calls the provided callback when user clicks outside of the Help",
+                  "params": "HIG.abstract.EventObject.params",
+                  "returns": "HIG.abstract.EventObject.returns"
                 },
-                "setTitle": {
-                  "desc": "sets the hover title of the Help",
+                "addGroup": {
+                  "desc": "adds a group to the help menu",
                   "params": [
-                    "{String} title - new hover title"
+                    "{Group} group - the group to add"
                   ]
+                }
+              },
+              "partials": {
+                "Group": {
+                  "methods": {
+                    "addOption": {
+                      "desc": "Adds an option to the group",
+                      "params": "{Option} option - the option to add"
+                    }
+                  },
+                  "defaults": {
+                    "name": "{String} - the name of the group"
+                  }
+                },
+                "Option": {
+                  "defaults": {
+                    "name": "{String} - the name of the option",
+                    "href": "{String} - the link where the option navigates to"
+                  }
                 }
               }
             },
@@ -1851,7 +1872,7 @@
                 "setAlignment": {},
                 "setDetail": {}
               }
-            },  
+            },
             "TextCellContent": {
               "methods": {
                 "setText": {},
