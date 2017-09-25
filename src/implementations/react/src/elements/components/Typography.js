@@ -1,5 +1,6 @@
 import React from 'react';
 import Typography from '../../adapters/TypographyAdapter'
+import PropTypes from 'prop-types';
 
 function H1Component(props) {
     return (<Typography type="h1" text={props.children} />)
@@ -45,6 +46,10 @@ const TYPOGRAPHY_DEFAULT_DOC = {
   }
 };
 
+const TYPOGRAPHY_DEFAULT_TYPES = {
+  children: PropTypes.string
+};
+
 [H1Component,
 H2Component,
 H3Component,
@@ -54,7 +59,8 @@ BodyComponent,
 BoldComponent,
 DisabledComponent,
 CaptionComponent].forEach((componentClass) => {
-  componentClass.__docgenInfo = TYPOGRAPHY_DEFAULT_DOC
+  componentClass.__docgenInfo = TYPOGRAPHY_DEFAULT_DOC;
+  componentClass.propTypes = TYPOGRAPHY_DEFAULT_TYPES;
 });
 
 export {
