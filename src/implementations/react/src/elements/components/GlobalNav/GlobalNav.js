@@ -18,6 +18,8 @@ class GlobalNav extends Component {
       links: PropTypes.arrayOf(PropTypes.object),
       onHeaderClick: PropTypes.func,
       onSuperHeaderClick: PropTypes.func,
+      onModuleClick: PropTypes.func,
+      onSubmoduleClick: PropTypes.func,
       superHeaderLabel: PropTypes.string,
       superHeaderLink: PropTypes.string
     }),
@@ -161,4 +163,3 @@ class GlobalNav extends Component {
 }
 
 export default GlobalNav;
-
