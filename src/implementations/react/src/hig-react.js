@@ -28,5 +28,7 @@ export { default as TextCellContent} from "./adapters/TextCellContentAdapter";
 export { default as TextField } from './elements/components/FormElements/TextField';
 export { default as TextLink } from './adapters/TextLinkAdapter';
 export { default as Table } from "./elements/components/Table";
+export { default as SelectableTable } from "./elements/components/SelectableTable";
+
 export * from './elements/components/Typography';
 

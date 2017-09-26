@@ -26,6 +26,7 @@ Hig.TextField = require('./basics/form-elements/text-field/text-field.js');
 Hig.TextLink = require('./basics/text-link/text-link.js');
 Hig.Typography = require('./basics/typography/typography.js');
 Hig.Spacer = require('./basics/spacer/spacer.js');
+Hig.SlotHeadCell = require('./components/table/table-head/slot-head-cell/slot-head-cell.js');
 Hig.Grid = require('./basics/grid/grid.js');
 
 Hig.sizes = Hig.Spacer.SizeMap;

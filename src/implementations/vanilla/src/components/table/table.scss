@@ -13,6 +13,7 @@
   font-weight: 500;
   font-size: 14px;
   color: color(hig-gray-10);
+  background: color(hig-white)
 }
 
 .hig__table__wrapper {
@@ -22,9 +23,10 @@
 .hig__table__body {
   font-weight: 300
 }
-
-.hig__table__text-cell,{
+  
+.hig__table__text-cell{
   min-width: 180px;
+  border-bottom: 1px solid color(hig-gray-50);
   .hig__table--standard & {
     padding: 12px 48px 12px 0px;
     height: 24px;
@@ -68,6 +70,7 @@
 
 .hig__table__icon-cell {
   min-width: 180px;
+  border-bottom: 1px solid color(hig-gray-50);
   .hig__table--standard & {
     height: 24px;
     padding: 12px 4px 12px 0px;
@@ -84,7 +87,9 @@
 }
 
 .hig__table__slot-cell {
+  border-bottom: 1px solid color(hig-gray-50);
   min-width: 180px;
+  position: relative;
 }
 
 .hig__table__text-cell-content{

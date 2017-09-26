@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import PlaygroundSection from "../PlaygroundSection";
 
-import { Table, Icon, TextCellContent, Checkbox } from "../../hig-react";
+import { Table, Icon, TextCellContent, SlotHeadCell } from "../../hig-react";
 
 import tableImage from "../images/table-image.png";
-
 
 const columns = [
   {
@@ -80,7 +79,8 @@ const data = [
     location: "Building 3, Room 3. Building 201. 3rd Street",
     budget: "4500",
     alignment: "right",
-    name: "Abby Worgan"
+    name: "Abby Worgan",
+    selected: false
   },
   {
     id: "3",
@@ -90,7 +90,8 @@ const data = [
     location: "Floor 4, Building 400. 1st Street",
     budget: "3000",
     alignment: "right",
-    name: "Ben Ling"
+    name: "Ben Ling",
+    selected: false
   },
   {
     id: "4",
@@ -100,7 +101,8 @@ const data = [
     location: "Floor 12, Room 2. Building 100. B Street",
     budget: "5500",
     alignment: "right",
-    name: "George Fitzmaur"
+    name: "George Fitzmaur",
+    selected: false
   },
   {
     id: "5",
@@ -110,7 +112,8 @@ const data = [
     location: "Floor 11, Room A. Building 200. 16th Street",
     budget: "3300",
     alignment: "right",
-    name: "Claire Louise"
+    name: "Claire Louise",
+    selected: false
   }
 ];
 
@@ -213,8 +216,8 @@ const columns2 = [
   {
     id: "1",
     alignment: "left",
-    width: "120px",
     HeaderCell: props => (<div></div>),
+    width: "120px",
     accessor: "image",
     Cell: props => (
       <img
@@ -329,16 +332,57 @@ const data2 = [
   }
 ];
 
-class TableSection extends Component {
+
+class SelectableTableSection extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      columns: columns1,
+      data: data1
+    };
+  }
+
+  onSelectionChange = selectedInfo => {
+    if (selectedInfo.selected) {
+      const updatedData = this.state.data.map(row => {
+        row.selected = true;
+        return row;
+      });
+      this.setState({ data: updatedData });
+    } else {
+      const updatedData = this.state.data.map(row => {
+        row.selected = false;
+        return row;
+      });
+      this.setState({ data: updatedData });
+    }
+	};
+	
+  checkboxHandler = selectedInfo => {
+		const existingData = this.state.data
+		const selectedIndex = existingData.findIndex((row) => {
+			return row.id === selectedInfo.id
+		});
+		existingData[selectedIndex].selected = selectedInfo.selected
+		this.setState({data: existingData})
+  };
+
+
+
   render() {
     return (
-      <PlaygroundSection title="Table">
-        <Table density="standard" columns={columns} data={data} />
-        <Table density="compressed" columns={columns1} data={data1} />
-        <Table density="large" columns={columns2} data={data2} />
+      <PlaygroundSection title="Selectable Table">
+        <Table
+          density="compressed"
+          columns={this.state.columns}
+          data={this.state.data}
+          selectable={true}
+          checkboxCallback={this.checkboxHandler} 
+          onSelectAllSelectionChange={this.onSelectionChange}
+        />
       </PlaygroundSection>
     );
   }
 }
 
-export default TableSection;
+export default SelectableTableSection;
