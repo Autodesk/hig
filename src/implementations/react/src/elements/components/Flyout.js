@@ -25,12 +25,6 @@ class Flyout extends React.Component {
     }
   };
 
-  static childContextTypes = {
-    parent: PropTypes.shape({
-      appendChild: PropTypes.func
-    })
-  }
-
   setTargetEl = el => {
     this.setState({ target: el });
   };
