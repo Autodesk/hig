@@ -84,12 +84,12 @@ class TopNav extends Core {
 
   addHelp(instance, referenceInstance) {
     if (instance instanceof Help) {
-      const shortcutContainer = this._findOrAddElement(
+      const helpContainer = this._findOrAddElement(
         'SHORTCUT',
         'div',
         '.hig__global-nav__top-nav__item.hig__global-nav__top-nav__spacer-container'
       );
-      instance.mount(shortcutContainer, referenceInstance);
+      instance.mount(helpContainer, referenceInstance);
     }
   }
 

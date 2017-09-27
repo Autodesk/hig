@@ -179,30 +179,39 @@
 
             TopNavSearch.onClearIconClick(function(e){
                 TopNavSearch.setQuery(''); // set input to empty
-
             });
 
             // ADD HELP
-            var Help = new TopNav.partials.Help({
-                title: "Help",
-                link: "http://www.autodesk.com"
-            });
+            var Help = new TopNav.partials.Help();
 
             TopNav.addHelp(Help);
 
-            var Help2 = new TopNav.partials.Help({
-                title: "Help", 
-                link: "http://www.autodesk.com"
-            });
+            Help.onClick(function(e) { Help.open(); });
+            Help.onClickOutside(function(e) { Help.close(); });
 
-            TopNav.addHelp(Help2);
+            const Group1 = new Help.partials.Group();
 
-            var Help3 = new TopNav.partials.Help({
-                title: "Help", 
-                link: "http://www.autodesk.com"
-            });
+            const G1O1 = new Help.partials.Option({ name: 'This is item G1O1', link: 'g1o1' });
+            const G1O2 = new Help.partials.Option({ name: 'Help item G1O2', link: 'g1o2' });
+            const G1O3 = new Help.partials.Option({ name: 'The help item G1O3' });
 
-            TopNav.addHelp(Help3);
+            Help.addGroup(Group1);
+            Group1.addOption(G1O1);
+            Group1.addOption(G1O2);
+            Group1.addOption(G1O3);
+
+            G1O3.onClick(() => console.log('g1o3!'));
+
+            const Group2 = new Help.partials.Group();
+
+            const G2O1 = new Help.partials.Option({ name: 'Another help item G2O1', link: 'g2o1' });
+            const G2O2 = new Help.partials.Option({ name: 'Help G2O2', link: 'g2o2' });
+            const G2O3 = new Help.partials.Option({ name: 'G2O3 Help item', link: 'g2o3' });
+
+            Help.addGroup(Group2);
+            Group2.addOption(G2O1);
+            Group2.addOption(G2O2);
+            Group2.addOption(G2O3);
 
             // ADD PROFILE
             var MyProfile1 = new TopNav.partials.Profile({

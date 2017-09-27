@@ -16,10 +16,29 @@
  const imagesPath = "../../../../../../../src/components/global-nav/tests"
  var {TopNav,GlobalNav} = testHelper.createFullNav();
 
- var help = new TopNav.partials.Help({
-  onClick: function() { alert('foo')}, title: "HELP HELP!", link: "http://www.autodesk.com"
- });
+ var help = new TopNav.partials.Help();
  TopNav.addHelp(help, TopNav.ProjectAccountSwitcher);
+
+ const g1 = new help.partials.Group();
+
+ const g1o1 = new help.partials.Option({ name: 'This is item G1O1', link: 'g1o1' });
+ const g1o2 = new help.partials.Option({ name: 'Help item G1O2', link: 'g1o2' });
+
+ help.addGroup(g1);
+ g1.addOption(g1o1);
+ g1.addOption(g1o2);
+
+ const g2 = new help.partials.Group();
+
+ const g2o1 = new help.partials.Option({ name: 'Another help item G2O1', link: 'g2o1' });
+ const g2o2 = new help.partials.Option({ name: 'Help G2O2', link: 'g2o2' });
+
+ help.addGroup(g2);
+ g2.addOption(g2o1);
+ g2.addOption(g2o2);
+
+ help.open();
+
 </script>
 
 </body>

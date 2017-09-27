@@ -1,0 +1,23 @@
+@import '~basics/colors/colors.scss';
+@import '~helpers/css/mixins/base.scss';
+
+.hig__global-nav__help__option {
+  flex: 1 1 auto;
+  margin: 0 0 10px 0;
+}
+
+.hig__global-nav__help__option__link {
+  color: color(hig-gray-20);
+  cursor: pointer;
+  font-family: ArtifaktElement;
+  font-size: 13px;
+  line-height: 34px;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  &:hover {
+    color: color(hig-blue-30);
+    text-decoration: none;
+  }
+}

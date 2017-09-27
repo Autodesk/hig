@@ -1,0 +1,12 @@
+@import '~basics/colors/colors.scss';
+@import '~helpers/css/mixins/base.scss';
+
+.hig__global-nav__help__group {
+  border-bottom: 1px solid color(hig-gray-50);
+  margin: 0 10px 10px 0;
+
+  &:last-child {
+    border-bottom: 0;
+    margin-bottom: 0;
+  }
+}
