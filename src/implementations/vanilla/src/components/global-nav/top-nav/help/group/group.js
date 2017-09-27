@@ -24,8 +24,6 @@ class Group extends Core {
 }
 
 Group._interface = Interface.components.GlobalNav.partials.TopNav.partials.Help.partials.Group;
-Group._defaults = {
-  name: ""
-};
+Group._defaults = {};
 
 module.exports = Group;

@@ -14,12 +14,24 @@ class Option extends Core {
     super(options);
     this._render(Template, options);
   }
+
+  onClick(fn) {
+    return this._attachListener('click', this.el, this.el, fn);
+  }
+
+  setLink(link) {
+    this.link = link;
+  }
+
+  setName(name) {
+    this.name = name;
+  }
 }
 
 Option._interface = Interface.components.GlobalNav.partials.TopNav.partials.Help.partials.Option;
 Option._defaults = {
   name: "",
-  href: ""
+  link: null
 };
 
 module.exports = Option;

@@ -19,19 +19,19 @@
  var help = new TopNav.partials.Help();
  TopNav.addHelp(help, TopNav.ProjectAccountSwitcher);
 
- const g1 = new help.partials.Group({ name: 'Group 1' });
+ const g1 = new help.partials.Group();
 
- const g1o1 = new help.partials.Option({ name: 'This is item G1O1', href: 'g1o1' });
- const g1o2 = new help.partials.Option({ name: 'Help item G1O2', href: 'g1o2' });
+ const g1o1 = new help.partials.Option({ name: 'This is item G1O1', link: 'g1o1' });
+ const g1o2 = new help.partials.Option({ name: 'Help item G1O2', link: 'g1o2' });
 
  help.addGroup(g1);
  g1.addOption(g1o1);
  g1.addOption(g1o2);
 
- const g2 = new help.partials.Group({ name: 'Group 2' });
+ const g2 = new help.partials.Group();
 
- const g2o1 = new help.partials.Option({ name: 'Another help item G2O1', href: 'g2o1' });
- const g2o2 = new help.partials.Option({ name: 'Help G2O2', href: 'g2o2' });
+ const g2o1 = new help.partials.Option({ name: 'Another help item G2O1', link: 'g2o1' });
+ const g2o2 = new help.partials.Option({ name: 'Help G2O2', link: 'g2o2' });
 
  help.addGroup(g2);
  g2.addOption(g2o1);

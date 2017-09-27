@@ -1416,14 +1416,31 @@
                       "params": "{Option} option - the option to add"
                     }
                   },
-                  "defaults": {
-                    "name": "{String} - the name of the group"
-                  }
+                  "defaults": {}
                 },
                 "Option": {
+                  "methods": {
+                    "onClick": {
+                      "desc": "Calls the provided callback when user clicks on the option",
+                      "params": "HIG.abstract.EventObject.params",
+                      "returns": "HIG.abstract.EventObject.returns"
+                    },
+                    "setName": {
+                      "desc": "Sets the name of the option",
+                      "params": [
+                        "{String} name - new option name"
+                      ]
+                    },
+                    "setLink": {
+                      "desc": "Sets the link forthe option",
+                      "params": [
+                        "{String} link - new option link"
+                      ]
+                    }
+                  },
                   "defaults": {
                     "name": "{String} - the name of the option",
-                    "href": "{String} - the link where the option navigates to"
+                    "link": "{String} - the link where the option navigates to"
                   }
                 }
               }
