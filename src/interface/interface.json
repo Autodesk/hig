@@ -1375,7 +1375,9 @@
           },
           "partials": {
             "Help": {
-              "defaults": {},
+              "defaults": {
+                "title": "{String} the title of the Help icon to be shown on hover"
+              },
               "methods": {
                 "open": {
                   "desc": "Open the help flyout"
@@ -1398,7 +1400,13 @@
                   "params": [
                     "{Group} group - the group to add"
                   ]
-                }
+                },
+                "setTitle": {
+                   "desc": "sets the hover title of the Help",
+                   "params": [
+                     "{String} title - new hover title"
+                   ]
+                 }
               },
               "partials": {
                 "Group": {

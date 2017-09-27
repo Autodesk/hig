@@ -17,7 +17,7 @@ const Option = require('./option/option.js');
 class Help extends Core {
   constructor(options) {
     super(options);
-    this.options = options;
+    this.options = options || {};
     this._render(Template, options);
   }
 
@@ -45,12 +45,16 @@ class Help extends Core {
     }
   }
 
+  setTitle(title) {
+    this.shortcut.setTitle(title);
+  }
+
   _componentDidMount() {
     this.flyout = new Flyout();
     this.mountPartialToComment('FLYOUT', this.flyout, this.el);
     this.shortcut = new Shortcut({
       icon: 'help',
-      title: 'Help'
+      title: this.options.title
     });
     this.shortcut.mount(this.el);
     this.flyout.addTarget(this.shortcut);
@@ -59,6 +63,7 @@ class Help extends Core {
 
 Help._interface = Interface.components.GlobalNav.partials.TopNav.partials.Help;
 Help._defaults = {
+  title: "Help"
 };
 Help._partials = {
   Group,
