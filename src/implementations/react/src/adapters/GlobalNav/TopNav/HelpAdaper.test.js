@@ -26,7 +26,7 @@ const Context = props => {
   return (
     <GlobalNavAdapter>
       <TopNavAdapter>
-        <HelpAdapter title={props.title} link={props.link} />
+        <HelpAdapter title={props.title} />
       </TopNavAdapter>
     </GlobalNavAdapter>
   );
@@ -70,13 +70,11 @@ describe('Help', () => {
 
   it('setting and updating props', () => {
     const defaults = {
-      title: 'test',
-      link: 'testLink'
+      title: 'test'
     };
 
     const nextProps = {
-      title: 'newTest',
-      link: 'newTestLink'
+      title: 'newTest'
     };
 
     const { higContainer, higItem } = createHigContext(defaults);
@@ -85,7 +83,6 @@ describe('Help', () => {
     reactWrapper.setProps(nextProps);
 
     higItem.setTitle(nextProps.title);
-    higItem.setLink(nextProps.link);
 
     expect(reactContainer.firstElementChild.outerHTML).toMatchSnapshot();
     expect(reactContainer.firstElementChild.outerHTML).toEqual(

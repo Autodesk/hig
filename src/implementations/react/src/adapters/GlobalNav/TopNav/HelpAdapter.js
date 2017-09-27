@@ -29,10 +29,6 @@ export class HelpAdapter extends HIGElement {
           this.hig.setTitle(propValue);
           break;
         }
-        case 'link': {
-          this.hig.setLink(propValue);
-          break;
-        }
         default: {
           console.warn(`${propKey} is unknown`);
         }
@@ -44,18 +40,13 @@ export class HelpAdapter extends HIGElement {
 const HelpAdapterComponent = createComponent(HelpAdapter);
 
 HelpAdapterComponent.propTypes = {
-  title: PropTypes.string,
-  link: PropTypes.string
+  title: PropTypes.string
 };
 
 HelpAdapterComponent.__docgenInfo = {
   props: {
     title: {
       description: 'sets the title of a Help shortcut'
-    },
-
-    link: {
-      description: 'sets the link of a Help shortcut'
     }
   }
 };
