@@ -33,5 +33,6 @@ Option._defaults = {
   name: "",
   link: null
 };
+Option._partials = {};
 
 module.exports = Option;
