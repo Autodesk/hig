@@ -14,11 +14,32 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
  */
-import HIGElement from '../../../../elements/HIGElement';
 import * as PropTypes from 'prop-types';
+import * as HIG from 'hig-vanilla';
+import HIGElement from '../../../../elements/HIGElement';
+import HIGNodeList from '../../../../elements/HIGNodeList';
+import HIGChildValidator from "../../../../elements/HIGChildValidator";
 import createComponent from '../../../createComponent';
+import GroupComponent, { GroupAdapter } from './GroupAdapter';
 
 export class HelpAdapter extends HIGElement {
+
+  constructor(HIGConstructor, initialProps) {
+    super(HIGConstructor, initialProps);
+
+    this.props = { ...initialProps };
+
+    this.groups = new HIGNodeList({
+      GroupAdapter: {
+        type: GroupAdapter,
+        HIGConstructor: this.hig.partials.Group,
+        onAdd: (instance, beforeInstance) => {
+          this.hig.addOption(instance, beforeInstance);
+        }
+      }
+    });
+  }
+
   commitUpdate(updatePayload, oldProps, newProps) {
     for (let i = 0; i < updatePayload.length; i += 2) {
       const propKey = updatePayload[i];
@@ -35,12 +56,40 @@ export class HelpAdapter extends HIGElement {
       }
     }
   }
+
+  createElement(ElementConstructor, props) {
+    switch (ElementConstructor) {
+      case GroupAdapter:
+        return this.groups.createElement(ElementConstructor, props);
+      default:
+        throw new Error(`Unknown type ${ElementConstructor.name}`);
+    }
+  }
+
+  insertBefore(instance, beforeChild = {}) {
+    if (instance instanceof GroupAdapter) {
+      this.groups.insertBefore(instance);
+    } else {
+      throw new Error(
+        `${this.constructor.name} cannot have a child of type ${instance
+          .constructor.name}`
+      );
+    }
+  }
+
+  removeChild(instance) {
+    if (instance instanceof GroupAdapter) {
+      this.groups.removeChild(instance)
+    }
+    instance.unmount();
+  }
 }
 
 const HelpAdapterComponent = createComponent(HelpAdapter);
 
 HelpAdapterComponent.propTypes = {
   title: PropTypes.string
+  //children: HIGChildValidator([GroupComponent, Group])
 };
 
 HelpAdapterComponent.__docgenInfo = {
