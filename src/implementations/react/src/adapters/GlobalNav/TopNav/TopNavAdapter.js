@@ -15,7 +15,7 @@ import ProfileComponent, {
   ProfileAdapter
 } from './ProfileAdapter';
 import ShortcutAdapterComponent, { ShortcutAdapter } from './ShortcutAdapter';
-import HelpComponent, { HelpAdapter } from './HelpAdapter';
+import HelpComponent, { HelpAdapter } from './Help/HelpAdapter';
 import SearchComponent, {
   SearchAdapter
 } from './SearchAdapter';
