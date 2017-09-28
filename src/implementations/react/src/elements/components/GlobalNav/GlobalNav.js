@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 import GlobalNavAdapter from '../../../adapters/GlobalNav/GlobalNavAdapter';
 import TopNavAdapter from '../../../adapters/GlobalNav/TopNav/TopNavAdapter';
 import SubNavAdapter from '../../../adapters/GlobalNav/SubNav/SubNavAdapter';
+import HelpAdapter from '../../../adapters/GlobalNav/TopNav/Help/HelpAdapter';
+import GroupAdapter from '../../../adapters/GlobalNav/TopNav/Help/GroupAdapter';
+import OptionAdapter from '../../../adapters/GlobalNav/TopNav/Help/OptionAdapter';
 import SideNav from './SideNav';
 import Slot from '../../../adapters/SlotAdapter';
 import Tabs from './SubNav/Tabs';
@@ -128,6 +131,11 @@ class GlobalNav extends Component {
                   onAccountClick={this.props.topNav.onAccountClick}
                 />
               : null}
+              <HelpAdapter>
+                <GroupAdapter>
+                  <OptionAdapter name="foo" />
+                </GroupAdapter>
+              </HelpAdapter>
           </TopNavAdapter>
           <SideNav
             activeModuleId={this.props.activeModuleId}

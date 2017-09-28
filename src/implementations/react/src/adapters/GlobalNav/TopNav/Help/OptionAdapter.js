@@ -27,23 +27,23 @@ export class OptionAdapter extends HIGElement {
       const propValue = updatePayload[i + 1];
 
       switch (propKey) {
-        case "name": {
+        case 'name': {
           this.hig.setName(propValue);
           break;
         }
-        case "link": {
+        case 'link': {
           this.hig.setLink(propValue);
           break;
         }
-        case "onClick": {
-          const dispose = this._disposeFunctions.get("onClick");
+        case 'onClick': {
+          const dispose = this._disposeFunctions.get('onClick');
 
           if (dispose) {
             dispose();
           }
 
           this._disposeFunctions.set(
-            "onClickDispose",
+            'onClickDispose',
             this.hig.onClick(propValue)
           );
           break;
@@ -67,14 +67,14 @@ OptionComponent.propTypes = {
 OptionComponent.__docgenInfo = {
   props: {
     name: {
-      description: "sets {String} the name of the Option"
+      description: 'sets {String} the name of the Option'
     },
     link: {
-      description: "sets {String} an optional link for the Option"
+      description: 'sets {String} an optional link for the Option'
     },
     onClick: {
       description:
-        "{func} calls the provided callback when user clicks on the Option"
+        '{func} calls the provided callback when user clicks on the Option'
     },
   }
 };

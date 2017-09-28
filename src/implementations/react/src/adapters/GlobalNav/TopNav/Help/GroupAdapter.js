@@ -3,9 +3,10 @@ import * as HIG from 'hig-vanilla';
 
 import HIGElement from '../../../../elements/HIGElement';
 import HIGNodeList from '../../../../elements/HIGNodeList';
-import HIGChildValidator from "../../../../elements/HIGChildValidator";
+import HIGChildValidator from '../../../../elements/HIGChildValidator';
 import createComponent from '../../../createComponent';
 import OptionComponent, { OptionAdapter } from './OptionAdapter'
+import Option from '../../../../elements/components/GlobalNav/TopNav/Help/Option';
 
 export class GroupAdapter extends HIGElement {
   constructor(HIGConstructor, initialProps) {
@@ -25,6 +26,7 @@ export class GroupAdapter extends HIGElement {
   }
 
   componentDidMount() {
+    this.options.componentDidMount();
   }
 
   commitUpdate(updatePayload, oldProps, newProp) {

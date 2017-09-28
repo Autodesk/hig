@@ -18,9 +18,10 @@ import * as PropTypes from 'prop-types';
 import * as HIG from 'hig-vanilla';
 import HIGElement from '../../../../elements/HIGElement';
 import HIGNodeList from '../../../../elements/HIGNodeList';
-import HIGChildValidator from "../../../../elements/HIGChildValidator";
+import HIGChildValidator from '../../../../elements/HIGChildValidator';
 import createComponent from '../../../createComponent';
 import GroupComponent, { GroupAdapter } from './GroupAdapter';
+import Group from '../../../../elements/components/GlobalNav/TopNav/Help/Group';
 
 export class HelpAdapter extends HIGElement {
 
@@ -34,10 +35,18 @@ export class HelpAdapter extends HIGElement {
         type: GroupAdapter,
         HIGConstructor: this.hig.partials.Group,
         onAdd: (instance, beforeInstance) => {
-          this.hig.addOption(instance, beforeInstance);
+          this.hig.addGroup(instance, beforeInstance);
         }
       }
     });
+  }
+
+  componentDidMount() {
+    this.groups.componentDidMount();
+
+    if (this.props.open) {
+      this.commitUpdate(['open', this.props.open]);
+    }
   }
 
   commitUpdate(updatePayload, oldProps, newProps) {
@@ -46,8 +55,46 @@ export class HelpAdapter extends HIGElement {
       const propValue = updatePayload[i + 1];
 
       switch (propKey) {
+        case 'onClick': {
+          const dispose = this._disposeFunctions.get('onClick');
+
+          if (dispose) {
+            dispose();
+          }
+
+          this._disposeFunctions.set(
+            'onClickDispose',
+            this.hig.onTargetClick(propValue)
+          );
+          break;
+        }
+        case 'onClickOutside': {
+          const dispose = this._disposeFunctions.get('onClickOutside');
+
+          if (dispose) {
+            dispose();
+          }
+
+          this._disposeFunctions.set(
+            'onClickOutsideDispose',
+            this.hig.onClickOutside(propValue)
+          );
+          break;
+        }
+        case 'open': {
+          if (propValue) {
+            this.hig.open();
+          } else {
+            this.hig.close();
+          }
+          break;
+        }
         case 'title': {
           this.hig.setTitle(propValue);
+          break;
+        }
+        case 'children': {
+          //no-op
           break;
         }
         default: {
@@ -85,14 +132,14 @@ export class HelpAdapter extends HIGElement {
   }
 }
 
-const HelpAdapterComponent = createComponent(HelpAdapter);
+const HelpComponent = createComponent(HelpAdapter);
 
-HelpAdapterComponent.propTypes = {
-  title: PropTypes.string
-  //children: HIGChildValidator([GroupComponent, Group])
+HelpComponent.propTypes = {
+  title: PropTypes.string,
+  children: HIGChildValidator([GroupComponent, Group])
 };
 
-HelpAdapterComponent.__docgenInfo = {
+HelpComponent.__docgenInfo = {
   props: {
     title: {
       description: 'sets the title of a Help shortcut'
@@ -100,4 +147,4 @@ HelpAdapterComponent.__docgenInfo = {
   }
 };
 
-export default HelpAdapterComponent;
+export default HelpComponent;
