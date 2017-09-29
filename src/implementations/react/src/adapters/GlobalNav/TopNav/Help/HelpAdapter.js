@@ -21,6 +21,7 @@ import HIGNodeList from '../../../../elements/HIGNodeList';
 import HIGChildValidator from '../../../../elements/HIGChildValidator';
 import createComponent from '../../../createComponent';
 import GroupComponent, { GroupAdapter } from './GroupAdapter';
+import OptionComponent, { OptionAdapter } from './OptionAdapter';
 import Group from '../../../../elements/components/GlobalNav/TopNav/Help/Group';
 
 export class HelpAdapter extends HIGElement {
@@ -151,6 +152,9 @@ HelpComponent.__docgenInfo = {
     },
     onClickOutside: {
       description: ''
+    },
+    children: {
+      description: "support adding Group and Option"
     }
   }
 };
