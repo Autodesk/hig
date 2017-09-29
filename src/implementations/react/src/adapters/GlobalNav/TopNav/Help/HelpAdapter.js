@@ -64,7 +64,7 @@ export class HelpAdapter extends HIGElement {
 
           this._disposeFunctions.set(
             'onClickDispose',
-            this.hig.onTargetClick(propValue)
+            this.hig.onClick(propValue)
           );
           break;
         }
@@ -135,6 +135,8 @@ export class HelpAdapter extends HIGElement {
 const HelpComponent = createComponent(HelpAdapter);
 
 HelpComponent.propTypes = {
+  onClick: PropTypes.func,
+  onClickOutside: PropTypes.func,
   title: PropTypes.string,
   children: HIGChildValidator([GroupComponent, Group])
 };
@@ -143,6 +145,12 @@ HelpComponent.__docgenInfo = {
   props: {
     title: {
       description: 'sets the title of a Help shortcut'
+    },
+    onClick: {
+      description: ''
+    },
+    onClickOutside: {
+      description: ''
     }
   }
 };

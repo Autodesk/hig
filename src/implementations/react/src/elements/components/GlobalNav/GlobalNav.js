@@ -99,6 +99,10 @@ class GlobalNav extends Component {
     return accounts.length > 0 || projects.length > 0;
   }
 
+  showHelp() {
+    return !!this.props.topNav.help;
+  }
+
   renderTab = (submodule) => {
     return (
       <Tabs.Tab
@@ -131,11 +135,17 @@ class GlobalNav extends Component {
                   onAccountClick={this.props.topNav.onAccountClick}
                 />
               : null}
-              <HelpAdapter>
-                <GroupAdapter>
-                  <OptionAdapter name="foo" />
-                </GroupAdapter>
+              {this.showHelp()
+              ? <HelpAdapter {...this.props.topNav.help}>
+                {(this.props.topNav.help.groups || []).map(groupProps => (
+                  <GroupAdapter {...groupProps}>
+                    {(groupProps.options || []).map(optionProps => (
+                      <OptionAdapter {...optionProps} />
+                    ))}
+                  </GroupAdapter>
+                ))}
               </HelpAdapter>
+              : null}
           </TopNavAdapter>
           <SideNav
             activeModuleId={this.props.activeModuleId}

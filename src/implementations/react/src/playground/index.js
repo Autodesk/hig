@@ -51,7 +51,8 @@ class Playground extends React.Component {
     super(props);
     this.state = {
       activeModuleId: '1-2-5',
-      sideNavOpen: true
+      isHelpOpen: false,
+      isSideNavOpen: true
     };
   }
 
@@ -59,7 +60,7 @@ class Playground extends React.Component {
     console.log('Go to', id);
     this.setState({ activeModuleId: id });
     if (window.innerWidth <= breakpoints.tablet) {
-      this.setState({ sideNavOpen: false });
+      this.setState({ isSideNavOpen: false });
     }
   }
 
@@ -72,7 +73,7 @@ class Playground extends React.Component {
   }
 
   toggleSideNav = () => {
-    this.setState({ sideNavOpen: !this.state.sideNavOpen });
+    this.setState({ isSideNavOpen: !this.state.isSideNavOpen });
   }
 
   handleModuleClick = (id) => {
@@ -83,7 +84,48 @@ class Playground extends React.Component {
     console.log(`submodule click ${id}`)
   }
 
+  openHelp = () => {
+    this.setState({ isHelpOpen: true });
+  }
+
+  closeHelp = () => {
+    this.setState({ isHelpOpen: false });
+  }
+
   render() {
+    const helpProps = {
+      onClick: this.openHelp,
+      onClickOutside: this.closeHelp,
+      groups: [
+        {
+          options: [
+            {
+              name: 'group 1, option 1',
+              onClick: function() { console.log('g1 o1 clicked'); }
+            },
+            {
+              name: 'group 1, option 2',
+              onClick: function() { console.log('g1 o2 clicked'); }
+            }
+          ]
+        },
+        {
+          options: [
+            {
+              name: 'group 2, option 1',
+              onClick: function() { console.log('g2 o1 clicked'); }
+            },
+            {
+              name: 'group 2, option 2',
+              onClick: function() { console.log('g2 o2 clicked'); }
+            }
+          ]
+        }
+      ],
+      open: this.state.isHelpOpen,
+      title: 'Help!',
+    };
+
     const topNavProps = {
       accounts: accounts,
       projects: projects,
@@ -91,9 +133,10 @@ class Playground extends React.Component {
       projectTitle: 'Projects',
       onAccountClick: this.accountClicked,
       onProjectClick: this.projectClicked,
+      help: helpProps,
       logo,
       onLogoClick: function() { console.log('Logo clicked'); }
-    }
+    };
 
     const sideNavProps = {
       superHeaderLabel: 'HIG',
@@ -124,7 +167,7 @@ class Playground extends React.Component {
         topNav={topNavProps}
         activeModuleId={this.state.activeModuleId}
         showSubNav={true}
-        sideNavOpen={this.state.sideNavOpen}
+        isSideNavOpen={this.state.isSideNavOpen}
         onHamburgerClick={this.toggleSideNav}
       >
         <ButtonSection />
