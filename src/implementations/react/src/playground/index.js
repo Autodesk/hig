@@ -25,26 +25,26 @@ import logo from './images/bim-logo.png';
 import { projects, accounts } from './fixtures/topNavFixtures';
 import { modules, submodules, links } from './fixtures/sideNavFixtures';
 
+import AvatarSection from './sections/AvatarSection';
 import ButtonSection from './sections/ButtonSection';
-import DropdownSection from './sections/DropdownSection';
-import IconButtonSection from './sections/IconButtonSection';
 import CheckboxSection from './sections/CheckboxSection';
-import RadioButtonSection from './sections/RadioButtonSection';
-import RangeSection from './sections/RangeSection';
-import TextFieldSection from './sections/TextFieldSection';
-import TextAreaSection from './sections/TextAreaSection';
+import DropdownSection from './sections/DropdownSection';
+import FlyoutSection from './sections/FlyoutSection'
+import GridSection from './sections/GridSection';
+import IconSection from './sections/IconSection';
+import IconButtonSection from './sections/IconButtonSection';
+import ModalSection from './sections/ModalSection';
 import PasswordFieldSection from './sections/PasswordFieldSection';
 import SpacerSection from './sections/SpacerSection';
-import ModalSection from './sections/ModalSection';
-import TypographySection from './sections/TypographySection';
-import TableSection from "./sections/TableSection";
-import TextLinkSection from "./sections/TextLinkSection";
-import FlyoutSection from "./sections/FlyoutSection"
-import RichTextSection from "./sections/RichTextSection";
+import RadioButtonSection from './sections/RadioButtonSection';
+import RangeSection from './sections/RangeSection';
+import RichTextSection from './sections/RichTextSection';
 import SelectableTableSection from "./sections/SelectableTableSection";
-import AvatarSection from "./sections/AvatarSection";
-import GridSection from "./sections/GridSection";
-import IconSection from "./sections/IconSection";
+import TableSection from './sections/TableSection';
+import TextAreaSection from './sections/TextAreaSection';
+import TextFieldSection from './sections/TextFieldSection';
+import TextLinkSection from './sections/TextLinkSection';
+import TypographySection from './sections/TypographySection';
 
 class Playground extends React.Component {
   constructor(props) {
@@ -64,11 +64,11 @@ class Playground extends React.Component {
   }
 
   projectClicked = (id) => {
-    console.log("project clicked", id);
+    console.log('project clicked', id);
   }
 
   accountClicked = (id) => {
-    console.log("account clicked", id);
+    console.log('account clicked', id);
   }
 
   toggleSideNav = () => {
@@ -87,17 +87,17 @@ class Playground extends React.Component {
     const topNavProps = {
       accounts: accounts,
       projects: projects,
-      accountTitle: "Accounts",
-      projectTitle: "Projects",
-      onProjectClick: this.projectClicked,
+      accountTitle: 'Accounts',
+      projectTitle: 'Projects',
       onAccountClick: this.accountClicked,
+      onProjectClick: this.projectClicked,
       logo,
       onLogoClick: function() { console.log('Logo clicked'); }
     }
 
     const sideNavProps = {
-      superHeaderLabel: "HIG",
-      headerLabel: "Playground",
+      superHeaderLabel: 'HIG',
+      headerLabel: 'Playground',
       links: links,
       onLogoClick: event => {
         event.preventDefault();
@@ -106,9 +106,9 @@ class Playground extends React.Component {
       searchable: true,
       slot: (
         <div>
-          <Button title="Designer Toolkit" link="https://github.com/Autodesk/hig" />
+          <Button title='Designer Toolkit' link='https://github.com/Autodesk/hig' />
           <p></p>
-          <Button title="Git Repository" type="secondary" link="https://github.com/Autodesk/hig" target="_blank" />
+          <Button title='Git Repository' type='secondary' link='https://github.com/Autodesk/hig' target='_blank' />
         </div>
       ),
       onModuleClick: this.handleModuleClick,
