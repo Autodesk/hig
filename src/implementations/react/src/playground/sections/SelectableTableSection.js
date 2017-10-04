@@ -337,8 +337,8 @@ class SelectableTableSection extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      columns: columns1,
-      data: data1
+      columns: columns,
+      data: data
     };
   }
 
@@ -373,7 +373,7 @@ class SelectableTableSection extends Component {
     return (
       <PlaygroundSection title="Selectable Table">
         <Table
-          density="compressed"
+          density="standard"
           columns={this.state.columns}
           data={this.state.data}
           selectable={true}
