@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 import GlobalNavAdapter from '../../../adapters/GlobalNav/GlobalNavAdapter';
 import TopNavAdapter from '../../../adapters/GlobalNav/TopNav/TopNavAdapter';
 import SubNavAdapter from '../../../adapters/GlobalNav/SubNav/SubNavAdapter';
+import HelpAdapter from '../../../adapters/GlobalNav/TopNav/Help/HelpAdapter';
+import GroupAdapter from '../../../adapters/GlobalNav/TopNav/Help/GroupAdapter';
+import OptionAdapter from '../../../adapters/GlobalNav/TopNav/Help/OptionAdapter';
 import SideNav from './SideNav';
 import Slot from '../../../adapters/SlotAdapter';
 import Tabs from './SubNav/Tabs';
@@ -96,6 +99,10 @@ class GlobalNav extends Component {
     return accounts.length > 0 || projects.length > 0;
   }
 
+  showHelp() {
+    return !!this.props.topNav.help;
+  }
+
   renderTab = (submodule) => {
     return (
       <Tabs.Tab
@@ -127,6 +134,17 @@ class GlobalNav extends Component {
                   onProjectClick={this.props.topNav.onProjectClick}
                   onAccountClick={this.props.topNav.onAccountClick}
                 />
+              : null}
+              {this.showHelp()
+              ? <HelpAdapter {...this.props.topNav.help}>
+                {(this.props.topNav.help.groups || []).map(groupProps => (
+                  <GroupAdapter {...groupProps}>
+                    {(groupProps.options || []).map(optionProps => (
+                      <OptionAdapter {...optionProps} />
+                    ))}
+                  </GroupAdapter>
+                ))}
+              </HelpAdapter>
               : null}
           </TopNavAdapter>
           <SideNav

@@ -7,6 +7,7 @@ import './Checkbox.story';
 import "./Dropdown.story";
 import "./Flyout.story";
 import './GlobalNav.story';
+import './Help.story';
 import './IconButton.story';
 import './Modal.story';
 import './PasswordField.story';
@@ -24,4 +25,3 @@ import './TextField.story';
 import './TextLink.story';
 import './Typography.story';
 import './Grid.story';
-

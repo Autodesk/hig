@@ -18,15 +18,23 @@ import { mount } from 'enzyme';
 import * as HIG from 'hig-vanilla';
 import React from 'react';
 
-import GlobalNavAdapter from '../GlobalNavAdapter';
-import TopNavAdapter from './TopNavAdapter';
-import HelpAdapter from './HelpAdapter';
+import GlobalNavAdapter from '../../GlobalNavAdapter';
+import TopNavAdapter from '../TopNavAdapter';
+import HelpAdapter, { HelpComponent } from './HelpAdapter';
+import GroupAdapter, { GroupComponent } from './GroupAdapter';
+import OptionAdapter, { OptionComponent } from './OptionAdapter';
 
 const Context = props => {
   return (
     <GlobalNavAdapter>
       <TopNavAdapter>
-        <HelpAdapter title={props.title} />
+        <HelpAdapter title={props.title}>
+          <GroupAdapter>
+            <OptionAdapter
+              {...props.group.option}
+            />
+          </GroupAdapter>
+        </HelpAdapter>
       </TopNavAdapter>
     </GlobalNavAdapter>
   );
@@ -53,12 +61,26 @@ function createHigContext(props) {
 
   higTopNav.addHelp(help);
 
-  return { higContainer, higItem: help };
+  const group = new help.partials.Group();
+  help.addGroup(group);
+
+  const option = new help.partials.Option(props.group.option);
+  group.addOption(option);
+
+  return { higContainer, higItem: help, higOption: option };
 }
 
 describe('Help', () => {
   it('renders help ', () => {
-    const props = {};
+    const props = {
+      title: "Help!",
+      group: {
+        option: {
+          name: "option",
+          link: "/link"
+        }
+      }
+    };
     const { reactWrapper, reactContainer } = setupReactContext(props);
     const { higContainer, higItem } = createHigContext(props);
 
@@ -69,20 +91,33 @@ describe('Help', () => {
   });
 
   it('setting and updating props', () => {
-    const defaults = {
-      title: 'test'
+    const props = {
+      title: "Help!",
+      group: {
+        option: {
+          name: "option",
+          link: "/link"
+        }
+      }
     };
 
     const nextProps = {
-      title: 'newTest'
+      title: "New Help!",
+      group: {
+        option: {
+          name: "new option!",
+          link: "/link"
+        }
+      }
     };
 
-    const { higContainer, higItem } = createHigContext(defaults);
-    const { reactWrapper, reactContainer } = setupReactContext(defaults);
+    const { higContainer, higItem, higOption } = createHigContext(props);
+    const { reactWrapper, reactContainer } = setupReactContext(props);
 
     reactWrapper.setProps(nextProps);
 
     higItem.setTitle(nextProps.title);
+    higOption.setName(nextProps.group.option.name)
 
     expect(reactContainer.firstElementChild.outerHTML).toMatchSnapshot();
     expect(reactContainer.firstElementChild.outerHTML).toEqual(
