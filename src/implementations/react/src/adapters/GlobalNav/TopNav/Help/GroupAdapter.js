@@ -1,6 +1,3 @@
-import * as PropTypes from 'prop-types';
-import * as HIG from 'hig-vanilla';
-
 import HIGElement from '../../../../elements/HIGElement';
 import HIGNodeList from '../../../../elements/HIGNodeList';
 import HIGChildValidator from '../../../../elements/HIGChildValidator';
@@ -32,7 +29,6 @@ export class GroupAdapter extends HIGElement {
   commitUpdate(updatePayload, oldProps, newProp) {
     for (let i = 0; i < updatePayload.length; i += 2) {
       const propKey = updatePayload[i];
-      const propValue = updatePayload[i + 1];
 
       switch (propKey) {
         default: {

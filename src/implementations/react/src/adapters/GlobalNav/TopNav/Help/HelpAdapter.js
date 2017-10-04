@@ -15,13 +15,11 @@ limitations under the License.
 
  */
 import * as PropTypes from 'prop-types';
-import * as HIG from 'hig-vanilla';
 import HIGElement from '../../../../elements/HIGElement';
 import HIGNodeList from '../../../../elements/HIGNodeList';
 import HIGChildValidator from '../../../../elements/HIGChildValidator';
 import createComponent from '../../../createComponent';
 import GroupComponent, { GroupAdapter } from './GroupAdapter';
-import OptionComponent, { OptionAdapter } from './OptionAdapter';
 import Group from '../../../../elements/components/GlobalNav/TopNav/Help/Group';
 
 export class HelpAdapter extends HIGElement {
