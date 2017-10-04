@@ -36,7 +36,9 @@ function ModuleAdapter(props) {
           {(instance, value) => value ? instance.activate() : instance.deactivate()}
         </MapsPropToMethod>
         <MountsHIGChild {...adapterProps}>{collapse}</MountsHIGChild>
-        <MountsHIGChildList {...adapterProps}>{submodules}</MountsHIGChildList>
+        {submodules.length > 0
+          ? <MountsHIGChildList {...adapterProps}>{submodules}</MountsHIGChildList>
+          : null}
       </div>
     )}</HIGAdapter>
   );

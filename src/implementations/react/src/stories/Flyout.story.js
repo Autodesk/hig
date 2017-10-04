@@ -4,7 +4,7 @@ import { action } from "@storybook/addon-actions";
 import { text, select, boolean } from "@storybook/addon-knobs";
 
 import Flyout from "../elements/components/Flyout";
-import Button from "../adapters/ButtonAdapter";
+import Button from "../adapters/NewButtonAdapter";
 
 const content = () => {
   return (

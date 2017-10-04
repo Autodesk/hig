@@ -2,7 +2,7 @@ import { mount } from "enzyme";
 import * as HIG from "hig-vanilla";
 import React from "react";
 import Flyout from "../elements/components/Flyout";
-import ButtonComponent from "./ButtonAdapter";
+import ButtonComponent from "./NewButtonAdapter";
 
 function myFlyoutContent() {
   return <div>Important flyout information</div>;
@@ -92,7 +92,7 @@ describe("FlyoutAdapter", () => {
       anchorPoint: "top-left",
       content: higFlyoutcontent(),
       targetContent: "Test Test Test"
-    }  
+    }
 
 
     const { higComponent, higContainer } = createHigComponent(higProps);

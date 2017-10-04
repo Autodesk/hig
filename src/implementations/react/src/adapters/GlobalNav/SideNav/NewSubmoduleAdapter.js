@@ -14,7 +14,7 @@ function SubmoduleAdapter(props) {
         <MapsEventListener listener="onClick" handler={props.onClick} {...adapterProps} />
         <MapsEventListener listener="onHover" handler={props.onHover} {...adapterProps} />
         <MapsPropToMethod value={props.show} setter="show" {...adapterProps}>
-          {(instance, value) => { instance.show() }}
+          {(instance, value) => value ? instance.show() : instance.hide()}
         </MapsPropToMethod>
         <MapsPropToMethod value={props.link} setter="setLink" {...adapterProps} />
         <MapsPropToMethod value={props.title} setter="setTitle" {...adapterProps} />

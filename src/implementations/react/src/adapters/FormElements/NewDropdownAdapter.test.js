@@ -24,7 +24,7 @@ describe('DropdownAdapter', () => {
           onKeypress={() => {}}
           onTargetClick={() => {}}
         >
-          <OptionAdapter />
+          <OptionAdapter value="123" />
         </DropdownAdapter>
       );
       mockInstance.close();
