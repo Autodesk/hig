@@ -2,6 +2,9 @@ import React from 'react';
 import { mount } from 'enzyme';
 
 import * as HIG from 'hig-vanilla';
+import GlobalNavAdapter from '../NewGlobalNavAdapter';
+import SideNavAdapter from './NewSideNavAdapter';
+import GroupAdapter from './NewGroupAdapter';
 import ModuleAdapter from './NewModuleAdapter';
 import SubmoduleAdapter from './NewSubmoduleAdapter';
 import CollapseAdapter from './NewCollapseAdapter';
@@ -10,18 +13,24 @@ describe('ModuleAdapter', () => {
   it('implements the hig interface', () => {
     expect((mockInstance) => {
       const wrapper = mount(
-        <ModuleAdapter
-          higInstance={mockInstance}
-          title="Foo"
-          icon="settings"
-          link="http://autodesk.com"
-          onClick={() => {}}
-          onHover={() => {}}
-          active={true}
-        >
-          <CollapseAdapter />
-          <SubmoduleAdapter />
-        </ModuleAdapter>
+        <GlobalNavAdapter>
+          <SideNavAdapter>
+            <GroupAdapter>
+              <ModuleAdapter
+                higInstance={mockInstance}
+                title="Foo"
+                icon="settings"
+                link="http://autodesk.com"
+                onClick={() => {}}
+                onHover={() => {}}
+                active={true}
+              >
+                <CollapseAdapter />
+                <SubmoduleAdapter />
+              </ModuleAdapter>
+            </GroupAdapter>
+          </SideNavAdapter>
+        </GlobalNavAdapter>
       );
 
       mockInstance.deactivate();

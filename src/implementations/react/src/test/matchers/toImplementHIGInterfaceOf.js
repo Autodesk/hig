@@ -1,19 +1,14 @@
-function implementsInterface(fn, HIGComponent) {
+function implementsInterface(testFunction, HIGComponent) {
   const interfaceMethods = Object.keys(HIGComponent._interface.methods);
-  const mockInstance = interfaceMethods.reduce((acc, methodName) => {
-    return {
-      ...acc,
-      [methodName]: jest.fn()
-    }
-  }, {
-    mount: jest.fn(),
-    unmount: jest.fn()
-  });
+  const spiedInstance = interfaceMethods.reduce((instance, methodName) => {
+    jest.spyOn(instance, methodName);
+    return instance;
+  }, new HIGComponent({}));
 
-  fn(mockInstance);
+  testFunction(spiedInstance);
 
   const uncalledMethods = interfaceMethods.reduce((acc, methodName) => {
-    return (mockInstance[methodName].mock.calls.length === 0)
+    return (spiedInstance[methodName].mock.calls.length === 0)
       ? acc.concat([methodName])
       : acc;
   }, []);

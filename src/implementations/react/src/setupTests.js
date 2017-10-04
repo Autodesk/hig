@@ -1,4 +1,4 @@
-import SharedExamples from './test/SharedExamples/SharedExamples';
+import SharedExamples from './test/sharedExamples/SharedExamples';
 import './test/matchers/toImplementHIGInterfaceOf';
 import 'jest-enzyme';
 
