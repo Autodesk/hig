@@ -3,7 +3,8 @@ import * as PropTypes from "prop-types";
 import React, { Component } from "react";
 import TableAdapter from "../../adapters/TableAdapter";
 import SlotCell from "./SlotCell";
-
+import SlotHeadCell from "./SlotHeadCell";
+import SelectableTable from "./SelectableTable";
 
 const TableHead = TableAdapter.TableHead;
 const TableRow = TableAdapter.TableRow;
@@ -16,30 +17,46 @@ class Table extends Component {
     this.state = {};
   }
 
+  static propTypes = {
+    selectable: PropTypes.bool
+  };
+
   static defaultProps = {
     columns: [],
     data: []
   };
 
-  render() {
+  renderTable(columns, data, density) {
     return (
-      <TableAdapter density={this.props.density}>
+      <TableAdapter density={density}>
         <TableHead>
-          {this.props.columns.map(column => (
-            <TextHeadCell
-              text={column.Header}
-              alignment={column.alignment}
-              width={column.width}
-              key={column.id}
-            />
-          ))}
+          {columns.map((column, index) => getHeadCell({ column, index }))}
         </TableHead>
-        {this.props.data.map(row => (
-          <TableRow key={row.id}>
-            {this.props.columns.map(column => getCell({ column, data: row }))}
+        {data.map((row, index) => (
+          <TableRow key={row.id} selected={row.selected}>
+            {columns.map((column, index) =>
+              getCell({ column, data: row, index })
+            )}  
           </TableRow>
         ))}
       </TableAdapter>
+    );
+  }
+
+  render() {
+    const isSelectable = this.props.selectable;
+    return (
+      <div>
+        {isSelectable
+          ? <SelectableTable
+              columns={this.props.columns}
+              data={this.props.data}
+              {...this.props}
+            >
+              {this.renderTable}
+            </SelectableTable>
+          : this.renderTable(this.props.columns, this.props.data, this.props.density)}
+      </div>
     );
   }
 }
@@ -63,13 +80,15 @@ Table.__docgenInfo = {
 Table.propTypes = {
   density: PropTypes.oneOf(HIG.Table.AvailableDensities),
   data: PropTypes.arrayOf(PropTypes.object),
-  columns: PropTypes.arrayOf(PropTypes.shape({
-    Header: PropTypes.string,
-    alignment: PropTypes.alignment,
-    width: PropTypes.string,
-    id: PropTypes.string,
-    Cell: PropTypes.any
-  })),
+  columns: PropTypes.arrayOf(
+    PropTypes.shape({
+      Header: PropTypes.string,
+      alignment: PropTypes.alignment,
+      width: PropTypes.string,
+      id: PropTypes.string,
+      Cell: PropTypes.any
+    })
+  )
 };
 
 export default Table;
@@ -88,11 +107,30 @@ function getCell(props) {
 
   if (props.column.Cell) {
     return (
-      <SlotCell key={props.column.accessor}>
+      <SlotCell key={props.column.id} >
         <props.column.Cell {...props} />
       </SlotCell>
     );
   } else {
-    return <TextCell key={props.column.accessor} text={content} />;
+    return <TextCell key={props.column.id} text={content} />;
+  }
+}
+
+function getHeadCell(props) {
+   if (typeof props.column.HeaderCell === 'string') {
+      return (
+        <TextHeadCell
+          key={props.column.id}
+          text={props.column.HeaderCell}
+          alignment={props.column.alignment}
+          width={props.column.width}
+        />
+      );
+    } else {
+      return (
+        <SlotHeadCell key={props.column.id} width={props.column.width} >
+          <props.column.HeaderCell {...props}  />
+        </SlotHeadCell>
+      );
   }
 }

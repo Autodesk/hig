@@ -203,7 +203,7 @@ class IconSection extends Component {
           <h3>Included 16px Icons</h3>
           <div style={parentContainerStyles}>
             {iconKeys16.map(key => {
-              return <Icon nameOrSVG={key} size="16" key={key} />;
+              return <Icon nameOrSVG={key} size="16" key={key} />
             })}
           </div>
         </div>

@@ -1,3 +1,7 @@
+@import '~basics/colors/colors.scss';
+@import '~basics/responsive/responsive.scss';
+@import '~helpers/css/mixins/base.scss';
+
 .hig__text-head-cell {
   font-weight: 700;
   font-size: 14px;
@@ -6,6 +10,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  border-bottom: 1px solid color(hig-gray-30);
 
 
   padding: 12px 48px 12px 0px; 

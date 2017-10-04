@@ -1,6 +1,6 @@
-import React from 'react';
-import CheckboxAdapter from '../../../adapters/FormElements/CheckboxAdapter';
-import * as PropTypes from 'prop-types';
+import React from "react";
+import CheckboxAdapter from "../../../adapters/FormElements/CheckboxAdapter";
+import * as PropTypes from "prop-types";
 
 class Checkbox extends React.Component {
   constructor(props) {
@@ -11,8 +11,12 @@ class Checkbox extends React.Component {
     this.state = {
       checked: this.getDefaultChecked(),
       controlled
-    }
+    };
   }
+
+  static defaultProps = {
+    onChange: () => {}
+  };
 
   getDefaultChecked() {
     const { defaultChecked, checked } = this.props;
@@ -37,17 +41,14 @@ class Checkbox extends React.Component {
   }
 
   handleChange = event => {
-    if (this.props.onChange) {
-      this.props.onChange(event);
-    }
-
-    if (this.state.controlled) {
-      if (this.checkboxEl) {
+    this.props.onChange(event);
+    if (this.checkboxEl) {
+      if (this.state.controlled) {
         this.checkboxEl.forceNextReset();
         this.setState({ checked: this.state.checked });
+      } else  {
+        this.setState({ checked: event.target.checked });
       }
-    } else {
-      this.setState({ value: event.target.value });
     }
   };
 
@@ -76,31 +77,31 @@ class Checkbox extends React.Component {
 Checkbox.__docgenInfo = {
   props: {
     checked: {
-      description: 'boolean - sets whether the checkbox is checked'
+      description: "boolean - sets whether the checkbox is checked"
     },
     disabled: {
-      description: 'boolean - sets whether the checkbox is disabled'
+      description: "boolean - sets whether the checkbox is disabled"
     },
     label: {
-      description: 'sets the label text for the checkbox'
+      description: "sets the label text for the checkbox"
     },
     name: {
-      description: 'sets the name attribute of the checkbox input'
+      description: "sets the name attribute of the checkbox input"
     },
     required: {
-      description: 'string - sets the whether the checkbox is required and displays the provided message'
+      description: "string - sets the whether the checkbox is required and displays the provided message"
     },
     value: {
-      description: 'sets the value attribute of the checkbox input'
+      description: "sets the value attribute of the checkbox input"
     },
     onHover: {
-      description: 'triggers when you hover over the button'
+      description: "triggers when you hover over the button"
     },
     onChange: {
-      description: 'triggers when you check/uncheck the checkbox'
+      description: "triggers when you check/uncheck the checkbox"
     },
     onFocus: {
-      description: 'triggers the checkbox component receives focus'
+      description: "triggers the checkbox component receives focus"
     }
   }
 };

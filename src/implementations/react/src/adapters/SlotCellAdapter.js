@@ -32,7 +32,7 @@ export class SlotCellAdapter extends HIGElement {
           break;
         }
         case "children": {
-          //no-op
+          //no-op 
           break;
         }
         default: {

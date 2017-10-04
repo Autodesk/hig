@@ -41,6 +41,7 @@ import TableSection from "./sections/TableSection";
 import TextLinkSection from "./sections/TextLinkSection";
 import FlyoutSection from "./sections/FlyoutSection"
 import RichTextSection from "./sections/RichTextSection";
+import SelectableTableSection from "./sections/SelectableTableSection";
 import AvatarSection from "./sections/AvatarSection";
 import GridSection from "./sections/GridSection";
 import IconSection from "./sections/IconSection";
@@ -145,6 +146,8 @@ class Playground extends React.Component {
         <AvatarSection />
         <GridSection/>
         <IconSection />
+        <SelectableTableSection />
+
       </GlobalNav>
     );
   }

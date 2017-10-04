@@ -1888,7 +1888,9 @@
         },
         "TableRow": {
           "methods": {
-            "addCell": {}
+            "addCell": {},
+            "select": {},
+            "deselect": {}
           },
           "partials": {
             "TextCell": {

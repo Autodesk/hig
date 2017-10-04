@@ -1,3 +1,5 @@
+import "./slot-head-cell.scss";
+
 var Template = require("./slot-head-cell.html");
 var Interface = require("interface.json");
 var Core = require("_core.js");
