@@ -8,11 +8,11 @@ class SelectableTable extends Component {
   constructor(props) {
     super(props);
     this.state = {
-			rows: {},
-			allRowsSelected: false
-		};
+      rows: {},
+      allRowsSelected: false
+    };
 
-		this.initialProps = props
+    this.initialProps = props;
   }
 
   static propTypes = {
@@ -20,7 +20,6 @@ class SelectableTable extends Component {
   };
 
   static defaultProps = {
-   
     columns: [],
     data: [],
     onSelectAllSelectionChange: () => {},
@@ -28,28 +27,30 @@ class SelectableTable extends Component {
   };
 
   selectRow = rowInfo => {
-		const newRows = {...this.state.rows, [rowInfo.id]: {selected: rowInfo.selected}};
-		this.setState({ rows: newRows });
-		
+    const newRows = {
+      ...this.state.rows,
+      [rowInfo.id]: { selected: rowInfo.selected }
+    };
+    this.setState({ rows: newRows });
   };
 
   renderedAllRowsSelected() {
-		if(this.props.allRowsSelected !== undefined) {
-			return this.props.allRowsSelected;
-		} else {
-			return this.state.allRowsSelected;
-		}
+    if (this.props.allRowsSelected !== undefined) {
+      return this.props.allRowsSelected;
+    } else {
+      return this.state.allRowsSelected;
+    }
   }
 
   handleAllSelectionChange = event => {
-			this.setState({ allRowsSelected: event.target.checked });
-			this.props.onSelectAllSelectionChange({selected: event.target.checked});
-	};
+    this.setState({ allRowsSelected: event.target.checked });
+    this.props.onSelectAllSelectionChange({ selected: event.target.checked });
+  };
 
-	handleRowCheckboxOnChange = (rowInfo) => {
-      this.selectRow(rowInfo);
-      this.props.checkboxCallback(rowInfo);
-	}
+  handleRowCheckboxOnChange = rowInfo => {
+    this.selectRow(rowInfo);
+    this.props.checkboxCallback(rowInfo);
+  };
 
   checkboxHeader = () => {
     return {
@@ -60,22 +61,21 @@ class SelectableTable extends Component {
         <HeaderCheckbox
           onSelectAllSelectionChange={this.handleAllSelectionChange}
           selected={this.renderedAllRowsSelected()}
-          style={{background: 'red'}}
+          style={{ background: "red" }}
         />
       ),
       Cell: props => (
         <RowCheckbox
           id={props.data.id}
-					selected={props.data.selected}
+          selected={props.data.selected}
           onChange={this.handleRowCheckboxOnChange}
         />
       )
     };
-	};
-	
+  };
 
   isRowSelected(row) {
-		if (row.selected !== undefined) {
+    if (row.selected !== undefined) {
       return row.selected;
     } else if (this.state.rows[row.id] && this.state.rows[row.id].selected) {
       return this.state.rows[row.id].selected;

@@ -123,7 +123,6 @@ function getHeadCell(props) {
           key={props.column.id}
           text={props.column.HeaderCell}
           alignment={props.column.alignment}
-          alignment={props.column.alignment}
           width={props.column.width}
         />
       );

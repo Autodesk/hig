@@ -1,5 +1,4 @@
 import HIGElement from "../elements/HIGElement";
-import * as HIG from 'hig-vanilla';
 import * as PropTypes from "prop-types";
 import createComponent from "./createComponent";
 
@@ -10,21 +9,19 @@ export class SlotHeadCellAdapter extends HIGElement {
     this.props = { ...initialProps };
   }
 
-
   static childContextTypes = {
     parent: PropTypes.shape({
       appendChild: PropTypes.func
     })
   };
 
-  
   componentDidMount() {
-    if(this.props.slot) {
-      this.commitUpdate(['slot', this.props.slot]);
+    if (this.props.slot) {
+      this.commitUpdate(["slot", this.props.slot]);
     }
-    
-    if(this.props.width) {
-      this.commitUpdate(['width', this.props.width])
+
+    if (this.props.width) {
+      this.commitUpdate(["width", this.props.width]);
     }
   }
 
@@ -45,7 +42,7 @@ export class SlotHeadCellAdapter extends HIGElement {
         case "children": {
           //no-op
           break;
-        } 
+        }
         default: {
           console.warn(`${propKey} is unknown`);
         }
@@ -54,11 +51,13 @@ export class SlotHeadCellAdapter extends HIGElement {
   }
 }
 
-const SlotHeadCellComponent = createComponent(SlotHeadCellAdapter, {parent: null});
+const SlotHeadCellComponent = createComponent(SlotHeadCellAdapter, {
+  parent: null
+});
 
 SlotHeadCellComponent.propTypes = {
   children: PropTypes.node,
-  width: PropTypes.string,
+  width: PropTypes.string
 };
 
 SlotHeadCellComponent.__docgenInfo = {

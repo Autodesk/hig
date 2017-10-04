@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PlaygroundSection from "../PlaygroundSection";
 
-import { Table, Icon, TextCellContent, Checkbox } from "../../hig-react";
+import { Table, Icon, TextCellContent} from "../../hig-react";
 
 import tableImage from "../images/table-image.png";
 
