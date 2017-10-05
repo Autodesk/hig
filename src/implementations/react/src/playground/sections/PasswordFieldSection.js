@@ -5,11 +5,13 @@ import { PasswordField } from '../../hig-react';
 class PasswordFieldSection extends PureComponent {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      password: 'foo'
+    };
   }
 
   setPassword = (event) => {
-    this.setState({ password: event.target.value });
+    // this.setState({ password: event.target.value });
   }
 
   logEvent(event, higElement) {

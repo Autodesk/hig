@@ -77,7 +77,7 @@ textFieldMethods.forEach((fn) => {
   Object.defineProperty(PasswordField.prototype, fn, {
     configurable: false,
     enumerable: false,
-    writable: false,
+    writable: true,
     value() {
       return this.textField[fn].apply(this.textField, arguments);
     }

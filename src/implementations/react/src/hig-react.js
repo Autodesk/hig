@@ -8,9 +8,8 @@ export { default as Flyout } from './elements/components/Flyout';
 export { default as GlobalNav } from './elements/components/GlobalNav/GlobalNav';
 export { default as Grid } from './adapters/GridAdapter';
 export { default as GridItem } from './elements/components/GridItem';
-
-export { default as Icon } from './adapters/IconAdapter';
 export { default as IconButton } from './adapters/NewIconButtonAdapter';
+export { default as Icon } from './adapters/NewIconAdapter';
 export { default as Modal } from './elements/components/Modal';
 export { default as Option } from './adapters/FormElements/OptionAdapter';
 export { default as PasswordField } from './elements/components/FormElements/PasswordField';
@@ -25,10 +24,8 @@ export { default as SlotCell } from './elements/components/SlotCell';
 export { default as Spacer } from './adapters/NewSpacerAdapter';
 export { default as TextArea } from './elements/components/FormElements/TextArea';
 export { default as TextCellContent} from "./adapters/TextCellContentAdapter";
-export { default as TextField } from './elements/components/FormElements/TextField';
+export { default as TextField } from './adapters/FormElements/NewTextFieldAdapter';
 export { default as TextLink } from './adapters/TextLinkAdapter';
 export { default as Table } from "./elements/components/Table";
 export { default as SelectableTable } from "./elements/components/SelectableTable";
-
 export * from './elements/components/Typography';
-

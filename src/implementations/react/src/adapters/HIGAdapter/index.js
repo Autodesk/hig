@@ -6,3 +6,4 @@ export { default as MountedByHIGParentList } from './MountedByHIGParentList';
 export { default as MountsAnyChild } from './MountsAnyChild';
 export { default as MountsHIGChild } from './MountsHIGChild';
 export { default as MountsHIGChildList } from './MountsHIGChildList';
+export { default as ControlsProp } from './ControlsProp';
