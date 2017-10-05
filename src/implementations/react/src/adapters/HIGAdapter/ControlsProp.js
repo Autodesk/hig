@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
+import throwIfNoHIGMethod from './throwIfNoHIGMethod';
 
 class ControlsProp extends Component {
   static propTypes = {
@@ -59,6 +60,7 @@ class ControlsProp extends Component {
 
     if(!props.handler) { return; }
 
+    throwIfNoHIGMethod(this.props, this.props.listener);
     this.setState({ dispose: props.higInstance[props.listener](this.handleEvent) });
   }
 
@@ -89,7 +91,7 @@ class ControlsProp extends Component {
       return null;
     }
 
-    this.throwIfNoSetter();
+    throwIfNoHIGMethod(this.props, this.props.setter);
     this.props.higInstance[this.props.setter](this.renderedValue());
 
     return null;

@@ -66,7 +66,7 @@ describe('MapsPropToMethod', () => {
       const higInstance = new VanillaComponent({});
 
       expect(() => {
-        const wrapper = mount(<MapsPropToMethod name="MySpecialComponent" setter="setBaz" value="foo" higInstance={higInstance} mounted={true} />);
+        const wrapper = mount(<MapsPropToMethod displayName="MySpecialComponent" setter="setBaz" value="foo" higInstance={higInstance} mounted={true} />);
       }).toThrow(TypeError(`MySpecialComponent has no method 'setBaz'`));
     });
   });

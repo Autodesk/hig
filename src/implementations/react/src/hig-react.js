@@ -14,7 +14,7 @@ export { default as Modal } from './elements/components/Modal';
 export { default as Option } from './adapters/FormElements/OptionAdapter';
 export { default as PasswordField } from './elements/components/FormElements/PasswordField';
 export { default as RadioButton } from './adapters/FormElements/RadioButtonAdapter';
-export { default as Range } from './elements/components/FormElements/Range';
+export { default as Range } from './adapters/FormElements/NewRangeAdapter';
 export { default as RichText } from './elements/components/RichText';
 export { default as SideNav } from './elements/components/GlobalNav/SideNav';
 export { sizes } from 'hig-vanilla';
