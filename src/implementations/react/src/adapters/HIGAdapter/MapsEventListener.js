@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
+import throwIfNoHIGMethod from './throwIfNoHIGMethod';
 
 export default class MapsEventlistener extends Component {
   static propTypes = {
@@ -37,6 +38,7 @@ export default class MapsEventlistener extends Component {
 
     if(!props.handler) { return; }
 
+    throwIfNoHIGMethod(this.props, this.props.listener);
     this.setState({ dispose: props.higInstance[props.listener](props.handler) });
   }
 
