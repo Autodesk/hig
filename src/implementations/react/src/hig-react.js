@@ -10,7 +10,7 @@ export { default as Grid } from './adapters/GridAdapter';
 export { default as GridItem } from './elements/components/GridItem';
 
 export { default as Icon } from './adapters/IconAdapter';
-export { default as IconButton } from './adapters/IconButtonAdapter';
+export { default as IconButton } from './adapters/NewIconButtonAdapter';
 export { default as Modal } from './elements/components/Modal';
 export { default as Option } from './adapters/FormElements/OptionAdapter';
 export { default as PasswordField } from './elements/components/FormElements/PasswordField';
