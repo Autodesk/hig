@@ -7,7 +7,7 @@ class MapsPropToMethod extends Component {
     higInstance: PropTypes.object.isRequired,
     mounted: PropTypes.bool.isRequired,
     setter: PropTypes.string,
-    value: PropTypes.any,
+    value: PropTypes.any
   }
 
   constructor(props) {
