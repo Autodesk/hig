@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import HigAdapter from './HigAdapter';
+import HIGAdapter from './HIGAdapter';
 import MapsEventListener from './MapsEventListener';
 
 describe('MapsEventListener', () => {

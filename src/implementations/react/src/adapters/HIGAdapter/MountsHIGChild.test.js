@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { mount, shallow } from 'enzyme';
-import HigAdapter from './HigAdapter';
+import HIGAdapter from './HIGAdapter';
 import MountsHIGChild from './MountsHIGChild';
 
 describe('MountsHIGChild', () => {

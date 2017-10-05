@@ -27,9 +27,16 @@ describe('DropdownAdapter', () => {
           <OptionAdapter value="123" />
         </DropdownAdapter>
       );
-      mockInstance.close();
-      mockInstance.disable();
-      mockInstance.noLongerRequired();
+      mount(
+        <DropdownAdapter
+          higInstance={mockInstance}
+          open={false}
+          disabled={true}
+          required=""
+        >
+          <OptionAdapter value="123" />
+        </DropdownAdapter>
+      );
     }).toImplementHIGInterfaceOf(HIG.Dropdown);
   });
 });
