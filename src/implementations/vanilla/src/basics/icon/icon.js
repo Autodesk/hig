@@ -1,11 +1,11 @@
-import "./icon.scss";
+import './icon.scss';
 
-const Template = require("./icon.html");
-const Interface = require("interface.json");
-const Core = require("../../helpers/js/_core.js");
-var Icons = require("../icons/icons.js");
+const Template = require('./icon.html');
+const Interface = require('interface.json');
+const Core = require('../../helpers/js/_core.js');
+let Icons = require('../icons/icons.js');
 
-const AvailableSizes = ["24", "16"];
+const AvailableSizes = ['24', '16'];
 
 /**
  * Creates an icon
@@ -26,7 +26,7 @@ class Icon extends Core {
     }
   }
 
-  setNameOrSVG(icon, size = "24") {
+  setNameOrSVG(icon, size = '24') {
     if (AvailableSizes.indexOf(size) > -1) {
       const iconString = this._confirmNameOrSVG(icon, size);
       this._el.innerHTML = iconString;
@@ -48,14 +48,14 @@ class Icon extends Core {
       return icon;
     } else {
       console.warn("NO HIG ICON: " + icon);
-      return;
+
     }
   }
 }
 
-Icon._interface = Interface["basics"]["Icon"];
+Icon._interface = Interface.basics.Icon;
 Icon._defaults = {
-  nameOrSVG: ""
+  nameOrSVG: ''
 };
 
 Icon.AvailableSizes = AvailableSizes;

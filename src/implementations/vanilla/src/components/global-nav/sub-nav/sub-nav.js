@@ -1,11 +1,11 @@
-import "./sub-nav.scss";
+import './sub-nav.scss';
 
-var Template = require("./sub-nav.html");
-var Interface = require("interface.json");
-var Core = require("_core.js");
+let Template = require('./sub-nav.html');
+let Interface = require('interface.json');
+let Core = require('_core.js');
 
-var Tabs = require("./tabs/tabs.js");
-const Icon = require("../../../basics/icon/icon.js");
+let Tabs = require('./tabs/tabs.js');
+const Icon = require('../../../basics/icon/icon.js');
 
 /**
  * Creates an SubNav
@@ -22,51 +22,51 @@ class SubNav extends Core {
 
   _componentDidMount() {
     if (this.initialOptions.moduleIndicatorIcon) {
-        this.setModuleIndicatorIcon(this.initialOptions.moduleIndicatorIcon);
-    }  
+      this.setModuleIndicatorIcon(this.initialOptions.moduleIndicatorIcon);
+    }
   }
 
   setModuleIndicatorName(name) {
     this._findDOMEl(
-      ".hig__global-nav__sub-nav__module-indicator__name",
+      '.hig__global-nav__sub-nav__module-indicator__name',
       this.el
     ).textContent = name;
     this._findDOMEl(
-      ".hig__global-nav__sub-nav__module-indicator__name.hig__global-nav__sub-nav__spacer",
+      '.hig__global-nav__sub-nav__module-indicator__name.hig__global-nav__sub-nav__spacer',
       this.el
     ).textContent = name;
   }
 
   setModuleIndicatorIcon(icon) {
     const mountIndicatorIcon = this._findDOMEl(
-      ".hig__global-nav__sub-nav__module-indicator__icon",
+      '.hig__global-nav__sub-nav__module-indicator__icon',
       this.el
     );
     this._findOrCreateIconComponent(
       mountIndicatorIcon,
-      "indicator-icon"
+      'indicator-icon'
     ).setNameOrSVG(icon);
 
     const mountIndicatorIconSpacer = this._findDOMEl(
-      ".hig__global-nav__sub-nav__module-indicator__icon.hig__global-nav__sub-nav__spacer",
+      '.hig__global-nav__sub-nav__module-indicator__icon.hig__global-nav__sub-nav__spacer',
       this.el
     );
     this._findOrCreateIconComponent(
       mountIndicatorIconSpacer,
-      "indicator-icon-spacer"
+      'indicator-icon-spacer'
     ).setNameOrSVG(icon);
   }
 
   addTabs(tabsInstance) {
     if (tabsInstance instanceof Tabs) {
-      this.mountPartialToComment("TABS", tabsInstance);
+      this.mountPartialToComment('TABS', tabsInstance);
     }
   }
 
   onModuleIndicatorClick(fn) {
     return this._attachListener(
-      "click",
-      ".hig__global-nav__sub-nav__module-indicator",
+      'click',
+      '.hig__global-nav__sub-nav__module-indicator',
       this.el,
       fn
     );
@@ -75,21 +75,21 @@ class SubNav extends Core {
   _findOrCreateIconComponent(mountElOrSelector, name = "icon") {
     if (this[name]) {
       return this[name];
-    } else {
+    } 
       this[name] = new Icon({});
       this[name].mount(mountElOrSelector);
       return this[name];
-    }
+    
   }
 }
 
-SubNav._interface = Interface["components"]["GlobalNav"]["partials"]["SubNav"];
+SubNav._interface = Interface.components.GlobalNav.partials.SubNav;
 SubNav._defaults = {
-  moduleIndicatorName: "Module Name",
-  moduleIndicatorIcon: "#"
+  moduleIndicatorName: 'Module Name',
+  moduleIndicatorIcon: ''
 };
 SubNav._partials = {
-  Tabs: Tabs
+  Tabs
 };
 
 module.exports = SubNav;
