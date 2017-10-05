@@ -26,3 +26,4 @@ function NewButtonAdapter(props) {
 }
 
 export default NewButtonAdapter;
+ 
