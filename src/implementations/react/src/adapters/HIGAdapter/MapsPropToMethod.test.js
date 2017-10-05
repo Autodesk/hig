@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
-import HigAdapter from './HigAdapter';
+import HIGAdapter from './HIGAdapter';
 import MapsPropToMethod from './MapsPropToMethod';
 
 describe('MapsPropToMethod', () => {

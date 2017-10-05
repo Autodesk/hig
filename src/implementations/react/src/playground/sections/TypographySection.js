@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PlaygroundSection from '../PlaygroundSection';
-import { H1, H2, H3, Sub1, Sub2, Body, Bold, Caption, Disabled } from '../../hig-react'
+import { H1, H2, H3, Sub1, Sub2, Body, Bold, Caption, Disabled } from '../../hig-react';
 import createSlotComponent from '../../adapters/createSlotComponent';
 
 const Slot = createSlotComponent();
