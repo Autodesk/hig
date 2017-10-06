@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import * as HIG from 'hig-vanilla';
 import HIGAdapter, {
   MapsPropToMethod,
@@ -16,8 +17,8 @@ function FlyoutAdapter(props) {
           {(instance, value) => value ? instance.open() : instance.close() }
         </MapsPropToMethod>
         <MapsEventListener listener="onClickOutside" handler={props.onClickOutside} {...adapterProps} />
-        <MountsAnyChild mounter="addSlot" {...adapterProps}>{props.content}</MountsAnyChild>
         <MountsAnyChild mounter="addTarget" {...adapterProps}>{props.children}</MountsAnyChild>
+        <MountsAnyChild mounter="addSlot" {...adapterProps}>{props.content}</MountsAnyChild>
       </div>
     )}</HIGAdapter>
   );
