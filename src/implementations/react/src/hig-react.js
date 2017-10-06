@@ -10,6 +10,7 @@ export { default as Grid } from './adapters/NewGridAdapter';
 export { default as GridItem } from './adapters/NewGridItemAdapter';
 export { default as IconButton } from './adapters/NewIconButtonAdapter';
 export { default as Icon } from './adapters/NewIconAdapter';
+export { default as IconButton } from './adapters/NewIconButtonAdapter';
 export { default as Modal } from './elements/components/Modal';
 export { default as Option } from './adapters/FormElements/NewOptionAdapter';
 export { default as PasswordField } from './elements/components/FormElements/PasswordField';
@@ -29,3 +30,4 @@ export { default as TextLink } from './adapters/NewTextLinkAdapter';
 export { default as Table } from "./elements/components/Table";
 export { default as SelectableTable } from "./elements/components/SelectableTable";
 export * from './elements/components/Typography';
+
