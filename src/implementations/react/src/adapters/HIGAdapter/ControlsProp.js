@@ -5,12 +5,17 @@ import throwIfNoHIGMethod from './throwIfNoHIGMethod';
 class ControlsProp extends Component {
   static propTypes = {
     defaultValue: PropTypes.any,
+    eventTargetPropName: PropTypes.string,
     handler: PropTypes.func,
     higInstance: PropTypes.object.isRequired,
     listener: PropTypes.string,
     mounted: PropTypes.bool.isRequired,
     setter: PropTypes.string,
     value: PropTypes.any
+  }
+
+  defaultProps = {
+    eventTargetPropName: 'value'
   }
 
   constructor(props) {
@@ -72,7 +77,7 @@ class ControlsProp extends Component {
     if (this.state.controlled) {
       this.setState({ value: this.state.value });
     } else {
-      this.setState({ value: event.target.value });
+      this.setState({ value: event.target[this.props.eventTargetPropName] });
     }
   }
 
@@ -91,8 +96,12 @@ class ControlsProp extends Component {
       return null;
     }
 
-    throwIfNoHIGMethod(this.props, this.props.setter);
-    this.props.higInstance[this.props.setter](this.renderedValue());
+    if (this.props.children) {
+      this.props.children(this.props.higInstance, this.renderedValue());
+    } else {
+      throwIfNoHIGMethod(this.props, this.props.setter);
+      this.props.higInstance[this.props.setter](this.renderedValue());
+    }
 
     return null;
   }

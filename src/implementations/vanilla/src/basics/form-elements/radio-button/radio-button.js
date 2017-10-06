@@ -1,22 +1,22 @@
-var Template = require('./radio-button.html');
-var Interface = require('interface.json');
-var InputButton = require('../input-button/input-button.js');
+const Template = require('./radio-button.html');
+const Interface = require('interface.json');
+const InputButton = require('../input-button/input-button.js');
 
 
 // List all the fn you don't want to override so they can be defined in this prototype
 const inputButtonMethods = [
-    'setLabel',
-    'setValue',
-    'setName',
-    'required',
-    'noLongerRequired',
-    'enable',
-    'disable',
-    'check',
-    'uncheck',
-    'onChange',
-    'onFocus',
-    'onHover'
+  'setLabel',
+  'setValue',
+  'setName',
+  'required',
+  'noLongerRequired',
+  'enable',
+  'disable',
+  'check',
+  'uncheck',
+  'onChange',
+  'onFocus',
+  'onHover'
 ];
 
 /**
@@ -26,28 +26,27 @@ const inputButtonMethods = [
  */
 
 class RadioButton extends InputButton {
-
-    constructor(options) {
-        super(options);
-        this.commentLabel = 'RADIOBUTTON_LABEL';
-        this._render(Template, options);
-    }
+  constructor(options) {
+    super(options);
+    this.commentLabel = 'RADIOBUTTON_LABEL';
+    this._render(Template, options);
+  }
 }
 
-inputButtonMethods.forEach(fn => {
-    Object.defineProperty(RadioButton.prototype, fn, {
-        configurable: false,
-        enumerable: false,
-        writable: false,
-        value: InputButton.prototype[fn]
-    });
+inputButtonMethods.forEach((fn) => {
+  Object.defineProperty(RadioButton.prototype, fn, {
+    configurable: false,
+    enumerable: false,
+    writable: true,
+    value: InputButton.prototype[fn]
+  });
 });
 
-RadioButton._interface = Interface['basics']['FormElements']['partials']['RadioButton'];
+RadioButton._interface = Interface.basics.FormElements.partials.RadioButton;
 RadioButton._defaults = {
-    "label": "",
-    "name": "",
-    "value": ""
+  label: '',
+  name: '',
+  value: ''
 };
 RadioButton._partials = {};
 
