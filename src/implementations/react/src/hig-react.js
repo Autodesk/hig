@@ -22,7 +22,7 @@ export { default as Slot } from './adapters/SlotAdapter';
 export { default as SlotHeadCell } from './elements/components/SlotHeadCell';
 export { default as SlotCell } from './elements/components/SlotCell';
 export { default as Spacer } from './adapters/NewSpacerAdapter';
-export { default as TextArea } from './elements/components/FormElements/TextArea';
+export { default as TextArea } from './adapters/FormElements/NewTextAreaAdapter';
 export { default as TextCellContent} from "./adapters/TextCellContentAdapter";
 export { default as TextField } from './adapters/FormElements/NewTextFieldAdapter';
 export { default as TextLink } from './adapters/TextLinkAdapter';
