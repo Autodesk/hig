@@ -7,7 +7,7 @@ import ButtonAdapter from './NewButtonAdapter';
 describe('ButtonAdapter', () => {
   it('implements the hig interface', () => {
     expect((mockInstance) => {
-      const wrapper = mount(
+      mount(
         <ButtonAdapter
           higInstance={mockInstance}
           disabled={true}
@@ -25,7 +25,12 @@ describe('ButtonAdapter', () => {
           onHover={() => {}}
         />
       );
-      mockInstance.enable();
+      mount(
+        <ButtonAdapter
+          higInstance={mockInstance}
+          disabled={false}
+        />
+      );
     }).toImplementHIGInterfaceOf(HIG.Button);
   });
 });
