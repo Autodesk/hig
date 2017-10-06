@@ -1,12 +1,14 @@
 import * as PropTypes from "prop-types";
-import React from "react";
+import React, { Component } from "react";
 import * as HIG from 'hig-vanilla';
 import FlyoutAdapter from "../../adapters/NewFlyoutAdapter";
 
-class Flyout extends React.Component {
+class Flyout extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      open: false
+    };
   }
 
   static propTypes = {
@@ -25,40 +27,28 @@ class Flyout extends React.Component {
     }
   };
 
-  static childContextTypes = {
-    parent: PropTypes.shape({
-      appendChild: PropTypes.func
-    })
-  }
-
-  setTargetEl = el => {
-    this.setState({ target: el });
-  };
-
-  setContentEl = el => {
-    this.setState({ content: el });
-  };
-
   closeFlyout = () => {
     this.setState({ open: false });
   };
 
   openFlyout = event => {
+    console.log('CLICKING THE THING');
     event.preventDefault();
     this.setState({ open: true });
   };
 
   render() {
+    const target = this.props.children
+      ? React.cloneElement(this.props.children, { onClick: this.openFlyout })
+      : null
     return (
       <FlyoutAdapter
         anchorPoint={this.props.anchorPoint}
         open={this.state.open}
         onClickOutside={this.closeFlyout}
-        target={this.state.target}
-        content={this.state.content}
+        content={this.props.content}
       >
-        <div ref={this.setTargetEl}>{React.cloneElement(this.props.children, { onClick: this.openFlyout})}</div>
-        <div ref={this.setContentEl} >{this.props.content}</div>
+        {target}
       </FlyoutAdapter>
     );
   }
