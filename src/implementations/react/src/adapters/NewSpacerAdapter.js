@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import * as HIG from 'hig-vanilla';
 import HIGAdapter, { MapsPropToMethod, MountsAnyChild } from './HIGAdapter';
 
-function NewSpacerAdapter(props) {
+function SpacerAdapter(props) {
   return (
-    <HIGAdapter {...props} name="Spacer" HIGConstructor={HIG.Spacer}>
+    <HIGAdapter {...props} displayName="Spacer" HIGConstructor={HIG.Spacer}>
       {(adapterProps) => (
         <div>
           <MapsPropToMethod value={props.inset} setter="setInset" {...adapterProps} />
@@ -19,4 +20,11 @@ function NewSpacerAdapter(props) {
   );
 }
 
-export default NewSpacerAdapter;
+SpacerAdapter.propTypes = {
+  inset: PropTypes.oneOf(HIG.Spacer.AvailableSizes),
+  type: PropTypes.oneOf(HIG.Spacer.AvailableTypes),
+  width: PropTypes.oneOf(HIG.Spacer.AvailableSizes),
+  children: PropTypes.node
+}
+
+export default SpacerAdapter;

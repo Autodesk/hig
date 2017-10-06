@@ -24,7 +24,7 @@ class TextLinkSection extends PureComponent {
           <TextLink
             href="https://github.com/Autodesk/hig"
             type="secondary"
-            title="This is a secondary text link"
+            text="This is a secondary text link"
           />
         </div>
       </PlaygroundSection>

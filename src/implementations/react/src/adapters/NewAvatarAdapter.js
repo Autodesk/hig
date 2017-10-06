@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import * as HIG from 'hig-vanilla';
 import HIGAdapter, {
   MapsPropToMethod
@@ -16,6 +17,12 @@ function AvatarAdapter(props) {
       )}
     </HIGAdapter>
   );
+}
+
+AvatarAdapter.propTypes = {
+  name: PropTypes.string,
+  size: PropTypes.oneOf(HIG.Avatar.AvailableSizes),
+  image: PropTypes.string
 }
 
 export default AvatarAdapter;

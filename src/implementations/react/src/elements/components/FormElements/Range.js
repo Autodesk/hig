@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import RangeAdapter
-  from '../../../adapters/FormElements/RangeAdapter.js';
+  from '../../../adapters/FormElements/NewRangeAdapter.js';
 import controlled from '../../ControlledField';
 
 const Range = controlled(RangeAdapter);
