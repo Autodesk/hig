@@ -1,44 +1,13 @@
 import React from 'react';
 import * as PropTypes from 'prop-types';
-import ModalAdapter from '../../adapters/ModalAdapter';
+import * as HIG from 'hig-vanilla';
+import ModalAdapter from '../../adapters/NewModalAdapter';
+import { Button } from '../../hig-react';
 
 class Modal extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { isOpen: false };
-  }
-
-  close = (event) => {
-    if(this.props.onClose) {
-      this.props.onClose(event);
-    }
-    if(this.props.openUncontrolled && !this.props.openControlled){
-      this.setState({ isOpen: false });
-    }
-  }
-
-  open = (event) => {
-    if(this.props.onOpen) {
-      this.props.onOpen(event);
-    }
-  }
-
-  setSlotEl = (el) => {
-    this.setState({ slotEl: el });
-  };
-
-  componentWillReceiveProps(nextProps){
-    if(nextProps.openUncontrolled && !this.props.openControlled){
-      this.setState({ isOpen: nextProps.openUncontrolled });
-    }
-  }
-
-  checkOpenState = () => {
-    if(this.props.openControlled){
-      return this.props.openControlled;
-    }else{
-      return this.state.isOpen;
-    }
+    this.state = { open: false };
   }
 
   render() {
@@ -47,37 +16,30 @@ class Modal extends React.Component {
         body={this.props.body}
         buttons={this.props.buttons}
         style={this.props.style}
-        open={this.checkOpenState()}
-        onCloseClick={this.close}
-        onOverlayClick={this.close}
+        open={this.props.open}
+        onCloseClick={this.props.onClose}
+        onOverlayClick={this.props.onClose}
         title={this.props.title}
         slotEl={this.state.slotEl}
       >
-        <div ref={this.setSlotEl}>{this.props.children}</div>
+        {this.props.children}
       </ModalAdapter>
     );
   }
 }
 
 Modal.propTypes = {
-  openControlled: PropTypes.bool,
-  openUncontrolled: PropTypes.bool,
   body: PropTypes.string,
-  buttons: PropTypes.array,
-  style: PropTypes.string,
+  buttons: PropTypes.arrayOf(PropTypes.shape(Button.propTypes)),
+  children: PropTypes.node,
   onClose: PropTypes.func,
-  title: PropTypes.string,
-  children: PropTypes.node
+  open: PropTypes.bool,
+  style: PropTypes.oneOf(HIG.Modal.AvailableStyles),
+  title: PropTypes.string
 };
 
 Modal.__docgenInfo = {
   props: {
-    openControlled: {
-      description: 'modal is controlled by parent, passing in true will open and passing in false will close modal (note: openControlled overrides openUncontrolled)'
-    },
-    openUncontrolled: {
-      description: 'modal is controlled by internal state, passing in true will open modal, passing in false will not do anything'
-    },
     body: {
       description: 'text or html string content of the modal'
     },
@@ -88,7 +50,10 @@ Modal.__docgenInfo = {
       description: 'style of the modal shell'
     },
     onClose: {
-      description: 'triggers when modal is closed'
+      description: 'triggers when the modal will close'
+    },
+    open: {
+      description: 'modal is visible when true'
     },
     title: {
       description: 'title of the modal'
@@ -97,6 +62,10 @@ Modal.__docgenInfo = {
       description: 'supports add any dom content to the body of the modal'
     }
   }
+}
+
+Modal.defaultProps = {
+  onClose: () => {}
 }
 
 export default Modal;

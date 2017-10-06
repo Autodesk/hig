@@ -1805,10 +1805,6 @@
             "{Button} Button - instance of a Button partial"
           ]
         },
-        "setScrollTop": {
-          "desc": "Scroll the slot to the particular location",
-          "params": ["{Number} ScrollTop - the location to scroll the slot to"]
-        },
         "addSlot": {
           "desc": "Insert dom elements into the modal",
           "params": [
