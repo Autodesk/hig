@@ -11,7 +11,7 @@ describe('AvatarAdapter', () => {
         <AvatarAdapter
           higInstance={mockInstance}
           name="Tilda Swinton"
-          size="m"
+          size="medium"
           image="/my-image.png"
         />
       )

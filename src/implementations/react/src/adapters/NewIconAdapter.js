@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import HIGAdapter, {
   MapsPropToMethod
 } from './HIGAdapter';
@@ -12,6 +13,10 @@ function IconAdapter(props) {
       )}
     </HIGAdapter>
   );
+}
+
+IconAdapter.propTypes = {
+  nameOrSVG: PropTypes.string
 }
 
 export default IconAdapter;

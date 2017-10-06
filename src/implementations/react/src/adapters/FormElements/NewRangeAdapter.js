@@ -55,7 +55,10 @@ RangeAdapter.propTypes = {
   placeholder: PropTypes.string,
   required: PropTypes.string,
   showClearButton: PropTypes.bool,
-  value: PropTypes.string,
+  value: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ])
 };
 
 export default RangeAdapter;
