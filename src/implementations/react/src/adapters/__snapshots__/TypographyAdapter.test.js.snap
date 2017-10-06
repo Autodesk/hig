@@ -1,5 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[` 1`] = `"<span class=\\"hig__typography hig__typography__h3\\">Calm down, bro!</span>"`;
-
-exports[`Typography Adapter renders a basic typography adapter 1`] = `"<span class=\\"hig__typography hig__typography__h1\\">Come at me, bro!</span>"`;
