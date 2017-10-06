@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import * as HIG from 'hig-vanilla';
 import HIGAdapter, { MapsPropToMethod, MapsEventListener } from './HIGAdapter';
 
-function NewButtonAdapter(props) {
+function ButtonAdapter(props) {
   return (
-    <HIGAdapter name="Button" HIGConstructor={HIG.Button} {...props}>{(adapterProps) => (
+    <HIGAdapter displayName="Button" HIGConstructor={HIG.Button} {...props}>{(adapterProps) => (
       <div>
         <MapsPropToMethod value={props.icon} setter="setIcon" {...adapterProps} />
         <MapsPropToMethod value={props.link} setter="setLink" {...adapterProps} />
@@ -25,5 +26,53 @@ function NewButtonAdapter(props) {
   );
 }
 
-export default NewButtonAdapter;
- 
+ButtonAdapter.propTypes = {
+  disabled: PropTypes.bool,
+  link: PropTypes.string,
+  onBlur: PropTypes.func,
+  onClick: PropTypes.func,
+  onFocus: PropTypes.func,
+  onHover: PropTypes.func,
+  title: PropTypes.string,
+  size: PropTypes.oneOf(HIG.Button.AvailableSizes),
+  type: PropTypes.oneOf(HIG.Button.AvailableTypes),
+  width: PropTypes.oneOf(HIG.Button.AvailableWidths),
+  icon: PropTypes.string
+};
+
+ButtonAdapter.__docgenInfo = {
+  props: {
+    title: {
+      description: 'sets the title of a button'
+    },
+    link: {
+      description: 'sets the link of a button'
+    },
+    size: {
+      description: 'specifies size of button'
+    },
+    type: {
+      description: 'specifies type of button'
+    },
+    width: {
+      description: 'specifies width of button (grow or shrink)'
+    },
+    icon: {
+      description: 'an icon name or svg string'
+    },
+    onClick: {
+      description: 'triggers when you click the button'
+    },
+    onHover: {
+      description: 'triggers when you hover over the button'
+    },
+    onFocus: {
+      description: 'triggers focus is moved to button'
+    },
+    onBlur: {
+      description: 'triggers blur when focuss is moved away from icon'
+    }
+  }
+};
+
+export default ButtonAdapter;

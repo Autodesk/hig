@@ -1,7 +1,7 @@
 import * as PropTypes from "prop-types";
 import React from "react";
 import * as HIG from 'hig-vanilla';
-import FlyoutAdapter from "../../adapters/FlyoutAdapter";
+import FlyoutAdapter from "../../adapters/NewFlyoutAdapter";
 
 class Flyout extends React.Component {
   constructor(props) {
