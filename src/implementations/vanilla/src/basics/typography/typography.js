@@ -1,8 +1,8 @@
-import "./typography.scss"
+import './typography.scss';
 
-var Template = require('./typography.html');
-var Interface = require('interface.json');
-var Core = require('_core.js');
+const Template = require('./typography.html');
+const Interface = require('interface.json');
+const Core = require('_core.js');
 
 /**
  * Creates Typography Class
@@ -11,13 +11,12 @@ var Core = require('_core.js');
  */
 
 class Typography extends Core {
-
   constructor(options) {
     super(options);
 
     // Check for compliance
-    if (options && ['h1', 'h2', 'h3', 'sub1', 'sub2', 'body', 'bold', 'disabled', 'caption'].indexOf(options["type"]) === -1) {
-      console.error("Not a valid typography type!");
+    if (options && ['h1', 'h2', 'h3', 'sub1', 'sub2', 'body', 'bold', 'disabled', 'caption'].indexOf(options.type) === -1) {
+      console.error('Not a valid typography type!');
     }
 
     this._render(Template, options);
@@ -30,7 +29,7 @@ class Typography extends Core {
   setType(type) {
     // Note this assumes the type class is last in the list!
     this._removeElLastClass();
-    this.el.classList.add("hig__typography__" + type);
+    this.el.classList.add(`hig__typography__${type}`);
   }
 
   _removeElLastClass() {
@@ -38,15 +37,14 @@ class Typography extends Core {
   }
 
   applyTypographyToElement(el) {
-    var e = this._findDOMEl(el);
-    e.classList.add("hig__typography");
+    const e = this._findDOMEl(el);
+    e.classList.add('hig__typography');
   }
-
 }
 
-Typography._interface = Interface['basics']['Typography'];
+Typography._interface = Interface.basics.Typography;
 Typography._defaults = {
-  "text": "text", "type": "body"
+  text: 'text', type: 'body'
 };
 
 module.exports = Typography;
