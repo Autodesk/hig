@@ -2,7 +2,7 @@ import React from "react";
 import * as PropTypes from "prop-types";
 import {colors} from "hig-vanilla"
 
-import Checkbox from "./Checkbox";
+import Checkbox from "../../../adapters/FormElements/NewCheckboxAdapter";
 
 class HeaderCheckbox extends React.Component {
   constructor(props) {
@@ -10,20 +10,20 @@ class HeaderCheckbox extends React.Component {
     this.state = {};
     this.initialProps = props;
   }
-  
+
   static propTypes = {
     checked: PropTypes.bool,
     onChange: PropTypes.func
   };
-	
+
   render() {
     const styleProps = {
-      position: "absolute", 
+      position: "absolute",
       background: colors["hig-white"],
-      top: "0", 
+      top: "0",
       right: "0",
       left: "0",
-      bottom: "-1px", 
+      bottom: "-1px",
       width: "50px",
       display: "flex",
       flexDirection: "column",

@@ -1,7 +1,7 @@
 import React from "react";
 import * as PropTypes from "prop-types";
 
-import Checkbox from "./Checkbox";
+import Checkbox from "../../../adapters/FormElements/NewCheckboxAdapter";
 import {colors} from "hig-vanilla"
 
 class RowCheckbox extends React.Component {
@@ -21,9 +21,9 @@ class RowCheckbox extends React.Component {
 
   render() {
     const styleProps = {
-      position: "absolute", 
+      position: "absolute",
       background: colors["hig-white"],
-      top: "0", 
+      top: "0",
       right: "0",
       left: "0",
       bottom: "-1px",
@@ -34,8 +34,8 @@ class RowCheckbox extends React.Component {
     return (
       <div style={styleProps}>
         <Checkbox onChange={this.onChange} checked={this.props.selected} />
-      </div>  
-    );   
+      </div>
+    );
   }
 }
 

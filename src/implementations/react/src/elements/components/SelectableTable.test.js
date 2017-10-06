@@ -1,11 +1,10 @@
 import React from "react";
 import { mount } from "enzyme";
 
+import { Checkbox, Icon } from "../../hig-react";
 import SelectableTable from "./SelectableTable";
-import Icon from "../../adapters/IconAdapter";
 import TextCellContent from "../../adapters/TextCellContentAdapter";
 import RowCheckbox from "./FormElements/RowCheckbox";
-import Checkbox from "./FormElements/Checkbox";
 import HeaderCheckbox from "./FormElements/HeaderCheckbox";
 
 function Context(props) {
