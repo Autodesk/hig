@@ -1,5 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`<TextLinkAdapter> renders a primary text link 1`] = `"<a class=\\"hig__text-link hig__text-link--primary\\" href=\\"http://example.com\\" alt=\\"this is a primary text link\\">this is a primary text link</a>"`;
-
-exports[`<TextLinkAdapter> renders a secondary text link 1`] = `"<a class=\\"hig__text-link hig__text-link--secondary\\" href=\\"http://example.com\\" alt=\\"this is a secondary text link\\">this is a secondary text link</a>"`;
