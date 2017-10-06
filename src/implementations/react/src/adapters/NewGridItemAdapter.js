@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import * as HIG from 'hig-vanilla';
 import HIGAdapter, {
   MapsPropToMethod,
-  MountedByHIGParent,
+  MountedByHIGParentList,
   MountsAnyChild
 } from './HIGAdapter';
 
@@ -12,9 +12,11 @@ function GridItemAdapter(props) {
     <HIGAdapter {...props} displayName="GridItem" HIGConstructor={HIG.Grid._partials.GridItem}>
       {(adapterProps) => (
         <div>
-          <MountedByHIGParent mounter="addGridItem" {...adapterProps} />
+          <MountedByHIGParentList mounter="addGridItem" {...adapterProps} />
           <MapsPropToMethod setter="setFraction" value={props.fraction} {...adapterProps} />
-          <MountsAnyChild mounter="addSlot" {...adapterProps}>{props.children}</MountsAnyChild>
+          {props.children
+            ? <MountsAnyChild mounter="addSlot" {...adapterProps}>{props.children}</MountsAnyChild>
+            : null}
         </div>
       )}
     </HIGAdapter>
