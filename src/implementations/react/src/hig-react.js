@@ -24,7 +24,7 @@ export { default as SlotHeadCell } from './elements/components/SlotHeadCell';
 export { default as SlotCell } from './elements/components/SlotCell';
 export { default as Spacer } from './adapters/NewSpacerAdapter';
 export { default as TextArea } from './adapters/FormElements/NewTextAreaAdapter';
-export { default as TextCellContent} from "./adapters/TextCellContentAdapter";
+export { default as TextCellContent} from "./adapters/NewTextCellContentAdapter";
 export { default as TextField } from './adapters/FormElements/NewTextFieldAdapter';
 export { default as TextLink } from './adapters/NewTextLinkAdapter';
 export { default as Table } from "./elements/components/Table";

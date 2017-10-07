@@ -1,15 +1,20 @@
 import * as HIG from "hig-vanilla";
 import * as PropTypes from "prop-types";
 import React, { Component } from "react";
-import TableAdapter from "../../adapters/TableAdapter";
-import SlotCell from "./SlotCell";
-import SlotHeadCell from "./SlotHeadCell";
+import TableAdapter from "../../adapters/NewTableAdapter";
+import TableHeadAdapter from "../../adapters/NewTableHeadAdapter";
+import TableRowAdapter from "../../adapters/NewTableRowAdapter";
+import TextHeadCellAdapter from "../../adapters/NewTextHeadCellAdapter";
+import TextCell from  "../../adapters/NewTextCellAdapter";
+import SlotCell from "../../adapters/NewSlotCellAdapter";
+
+import SlotHeadCell from "../../adapters/NewSlotHeadCellAdapter";
 import SelectableTable from "./SelectableTable";
 
-const TableHead = TableAdapter.TableHead;
-const TableRow = TableAdapter.TableRow;
-const TextHeadCell = TableAdapter.TableHead.TextHeadCell;
-const TextCell = TableAdapter.TableRow.TextCell;
+// const TableHead = TableAdapter.TableHead;
+// const TableRow = TableAdapter.TableRow;
+// const TextHeadCell = TableAdapter.TableHead.TextHeadCell;
+// const TextCell = TableAdapter.TableRow.TextCell;
 
 class Table extends Component {
   constructor(props) {
@@ -29,15 +34,15 @@ class Table extends Component {
   renderTable(columns, data, density) {
     return (
       <TableAdapter density={density}>
-        <TableHead>
+        <TableHeadAdapter>
           {columns.map((column, index) => getHeadCell({ column, index }))}
-        </TableHead>
+        </TableHeadAdapter>
         {data.map((row, index) => (
-          <TableRow key={row.id} selected={row.selected}>
+          <TableRowAdapter key={row.id} selected={row.selected}>
             {columns.map((column, index) =>
               getCell({ column, data: row, index })
             )}  
-          </TableRow>
+          </TableRowAdapter>
         ))}
       </TableAdapter>
     );
@@ -107,7 +112,7 @@ function getCell(props) {
 
   if (props.column.Cell) {
     return (
-      <SlotCell key={props.column.id} >
+      <SlotCell key={props.column.id}>
         <props.column.Cell {...props} />
       </SlotCell>
     );
@@ -119,7 +124,7 @@ function getCell(props) {
 function getHeadCell(props) {
    if (typeof props.column.HeaderCell === 'string') {
       return (
-        <TextHeadCell
+        <TextHeadCellAdapter
           key={props.column.id}
           text={props.column.HeaderCell}
           alignment={props.column.alignment}
