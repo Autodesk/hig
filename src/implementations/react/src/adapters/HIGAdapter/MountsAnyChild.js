@@ -14,6 +14,14 @@ export default class MountsAnyChild extends Component {
     this.state = {};
   }
 
+  static childContextTypes = {
+    higParent: PropTypes.object
+  }
+
+  getChildContext() {
+    return { higParent: null };
+  }
+
   setEl = (el) => {
     this.el = el;
   }

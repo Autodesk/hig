@@ -59,7 +59,7 @@ export class TableRowAdapter extends HIGElement {
         case "children": {
           //no-op
           break;
-        }
+        } 
         case "selected": {
           propValue ? this.hig.select() : this.hig.deselect();
           break;
