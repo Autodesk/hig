@@ -1,18 +1,18 @@
 import { mount } from 'enzyme';
 import React from 'react';
 import * as HIG from 'hig-vanilla';
-import SlotCellAdapter from './NewSlotCellAdapter';
+import SlotHeadCellAdapter from './SlotHeadCellAdapter';
 
-describe('SlotCellAdapter', () => {
+describe('SlotHeadCellAdapter', () => {
   it('implements the hig interface', () => {
     expect(mockInstance => {
       mount(
-        <SlotCellAdapter
+        <SlotHeadCellAdapter
           higInstance={mockInstance}
         >
           <h1>Slot content</h1>
-        </SlotCellAdapter>
+        </SlotHeadCellAdapter>
       );
-    }).toImplementHIGInterfaceOf(HIG.Table._partials.TableRow._partials.SlotCell);
+    }).toImplementHIGInterfaceOf(HIG.Table._partials.TableHead._partials.SlotHeadCell);
   });
 });

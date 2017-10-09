@@ -1,55 +1,28 @@
-import HIGElement from "../elements/HIGElement";
+import React from 'react';
+import * as HIG from 'hig-vanilla';
 import * as PropTypes from "prop-types";
-import createComponent from "./createComponent";
+import HIGAdapter, { MapsPropToMethod, MountsAnyChild, MountedByHIGParentList } from './HIGAdapter';
 
-export class SlotCellAdapter extends HIGElement {
-  constructor(HIGConstructor, initialProps) {
-    super(HIGConstructor, initialProps);
-
-    this.props = { ...initialProps };
-  }
-
-  static childContextTypes = {
-    parent: PropTypes.shape({
-      appendChild: PropTypes.func
-    })
-  };
-
-  componentDidMount() {
-    if (this.props.slot) {
-      this.commitUpdate(["slot", this.props.slot]);
-    }
-  }
-
-  commitUpdate(updatePayload, oldProps, newProp) {
-    for (let i = 0; i < updatePayload.length; i += 2) {
-      const propKey = updatePayload[i];
-      const propValue = updatePayload[i + 1];
-
-      switch (propKey) {
-        case "slot": {
-          this.hig.addSlot(propValue);
-          break;
-        }
-        case "children": {
-          //no-op 
-          break;
-        }
-        default: {
-          console.warn(`${propKey} is unknown`);
-        }
-      }
-    }
-  }
+function SlotCellAdapter(props) {
+  return (
+    <HIGAdapter {...props} name="Slot" HIGConstructor={HIG.Table._partials.TableRow._partials.SlotCell}>
+      {(adapterProps) => (
+        <div>
+          <MountedByHIGParentList mounter="addCell" {...adapterProps} />
+          <MountsAnyChild mounter="addSlot" {...adapterProps}>
+            {props.children}
+          </MountsAnyChild>
+        </div>
+      )}
+    </HIGAdapter>
+  );
 }
 
-const SlotCellComponent = createComponent(SlotCellAdapter, {parent: null});
-
-SlotCellComponent.propTypes = {
+SlotCellAdapter.propTypes = {
   children: PropTypes.node
 };
 
-SlotCellComponent.__docgenInfo = {
+SlotCellAdapter.__docgenInfo = {
   props: {
     children: {
       description: "content for slot cell"
@@ -57,4 +30,4 @@ SlotCellComponent.__docgenInfo = {
   }
 };
 
-export default SlotCellComponent;
+export default SlotCellAdapter;

@@ -3,9 +3,9 @@ import {mount} from 'enzyme'
 
 import * as HIG from 'hig-vanilla'
 
-import TableHeadAdapter from './NewTableHeadAdapter';
-import SlotHeadCell from './NewSlotHeadCellAdapter'
-import TextHeadCell from './NewTextHeadCellAdapter'
+import TableHeadAdapter from './TableHeadAdapter';
+import SlotHeadCell from './SlotHeadCellAdapter'
+import TextHeadCell from './TextHeadCellAdapter'
 
 describe('TableHeadAdapter', () => {
   it('implements the hig interface', () => {

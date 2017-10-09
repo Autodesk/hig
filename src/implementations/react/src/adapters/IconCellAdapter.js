@@ -1,54 +1,18 @@
-import HIGElement from "../elements/HIGElement";
-import * as PropTypes from "prop-types";
-import createComponent from "./createComponent";
+import React from 'react'
+import * as HIG from 'hig-vanilla'
 
-export class IconCellAdapter extends HIGElement {
-  constructor(HIGConstructor, initialProps) {
-    super(HIGConstructor, initialProps);
+import HIGAdapter, { MapsPropToMethod, MapsEventListener, MountedByHIGParentList } from './HIGAdapter'
 
-    this.props = { ...initialProps };
-  }
-
-  componentDidMount() {
-    if (this.props.icon) {
-      this.commitUpdate(["icon", this.props.icon]);
-    }
-  }
-
-  commitUpdate(updatePayload, oldProps, newProp) {
-    for (let i = 0; i < updatePayload.length; i += 2) {
-      const propKey = updatePayload[i];
-      const propValue = updatePayload[i + 1];
-
-      switch (propKey) {
-        case "icon": {
-          this.hig.setIcon(propValue);
-          break;
-        }
-        case "children": {
-          //no-op
-          break;
-        }
-        default: {
-          console.warn(`${propKey} is unknown`);
-        }
-      }
-    }
-  }
+function IconCellAdapter(props) {
+  return (
+    <HIGAdapter displayName="IconCell" HIGConstructor={HIG.Table._partials.TableRow._partials.IconCell} {...props}>{(adapterProps) => (
+      <div>
+        <MountedByHIGParentList mounter="addCell" {...adapterProps} />
+        <MapsPropToMethod value={props.icon} setter={"setIcon"} {...adapterProps} />
+      </div>
+    )}
+    </HIGAdapter>
+  )
 }
 
-const IconCellComponent = createComponent(IconCellAdapter);
-
-IconCellComponent.propTypes = {
-  icon: PropTypes.string
-};
-
-IconCellComponent.__docgenInfo = {
-  props: {
-    icon: {
-      description: "sets icon in cell"
-    }
-  }
-};
-
-export default IconCellComponent;
+export default IconCellAdapter

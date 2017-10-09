@@ -1,60 +1,21 @@
-import HIGElement from "../elements/HIGElement";
-import * as PropTypes from "prop-types";
-import createComponent from "./createComponent";
+import React from 'react' 
+import * as HIG from 'hig-vanilla'
 
-export class TextHeadCellAdapter extends HIGElement {
-  constructor(HIGConstructor, initialProps) {
-    super(HIGConstructor, initialProps);
+import HIGAdapter, { MapsPropToMethod, MapsEventListener, MountedByHIGParentList } from './HIGAdapter'
 
-    this.props = { ...initialProps };
-  }
-
-  commitUpdate(updatePayload, oldProps, newProp) {
-    for (let i = 0; i < updatePayload.length; i += 2) {
-      const propKey = updatePayload[i];
-      const propValue = updatePayload[i + 1];
-
-      switch (propKey) {
-        case "text": {
-          this.hig.setText(propValue);
-          break;
-        }
-        case "width": {
-          this.hig.setWidth(propValue);
-          break;
-        }
-        case "alignment": {
-          this.hig.setAlignment(propValue);
-          break;
-        }
-        default: {
-          console.warn(`${propKey} is unknown`);
-        }
-      }
-    }
-  }
+function TextHeadCellAdapter (props) {
+  return (
+    <HIGAdapter displayName="TextHeadCell" HIGConstructor={HIG.Table._partials.TableHead._partials.TextHeadCell} {...props}>{(adapterProps) => (
+      <div>
+        <MountedByHIGParentList mounter="addCell" {...adapterProps} />
+         <MapsPropToMethod value={props.text} setter="setText" {...adapterProps} />
+        <MapsPropToMethod value={props.detail} setter="setDetail" {...adapterProps} />
+        <MapsPropToMethod value={props.alignment} setter="setAlignment" {...adapterProps} /> 
+        <MapsPropToMethod value={props.width} setter="setWidth" {...adapterProps} />   
+      </div>
+    )}</HIGAdapter>
+  )   
 }
 
-const TextHeadCellComponent = createComponent(TextHeadCellAdapter);
 
-TextHeadCellComponent.propTypes = {
-  text: PropTypes.string,
-  width: PropTypes.string,
-  alignment: PropTypes.string
-};
-
-TextHeadCellComponent.__docgenInfo = {
-  props: {
-    text: {
-      description: "sets {String} text in cell"
-    },
-    width: {
-      description: "sets {String} width of the cell"
-    },
-    alignment: {
-      description: "sets {String} text-position of cell"
-    }
-  }
-};
-
-export default TextHeadCellComponent;
+export default TextHeadCellAdapter

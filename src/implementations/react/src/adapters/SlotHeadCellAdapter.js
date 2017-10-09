@@ -1,66 +1,30 @@
-import HIGElement from "../elements/HIGElement";
+import React from 'react';
+import * as HIG from 'hig-vanilla';
 import * as PropTypes from "prop-types";
-import createComponent from "./createComponent";
+import HIGAdapter, { MapsPropToMethod, MountsAnyChild, MountedByHIGParentList } from './HIGAdapter';
 
-export class SlotHeadCellAdapter extends HIGElement {
-  constructor(HIGConstructor, initialProps) {
-    super(HIGConstructor, initialProps);
-
-    this.props = { ...initialProps };
-  }
-
-  static childContextTypes = {
-    parent: PropTypes.shape({
-      appendChild: PropTypes.func
-    })
-  };
-
-  componentDidMount() {
-    if (this.props.slot) {
-      this.commitUpdate(["slot", this.props.slot]);
-    }
-
-    if (this.props.width) {
-      this.commitUpdate(["width", this.props.width]);
-    }
-  }
-
-  commitUpdate(updatePayload, oldProps, newProp) {
-    for (let i = 0; i < updatePayload.length; i += 2) {
-      const propKey = updatePayload[i];
-      const propValue = updatePayload[i + 1];
-
-      switch (propKey) {
-        case "slot": {
-          this.hig.addSlot(propValue);
-          break;
-        }
-        case "width": {
-          this.hig.setWidth(propValue);
-          break;
-        }
-        case "children": {
-          //no-op
-          break;
-        }
-        default: {
-          console.warn(`${propKey} is unknown`);
-        }
-      }
-    }
-  }
+function SlotHeadCellAdapter(props) {
+  return (
+    <HIGAdapter {...props} name="Slot" HIGConstructor={HIG.Table._partials.TableHead._partials.SlotHeadCell}>
+      {(adapterProps) => (
+        <div>
+          <MapsPropToMethod value={props.width} setter="setWidth" {...adapterProps} />
+          <MountedByHIGParentList mounter="addCell" {...adapterProps} />
+          <MountsAnyChild mounter="addSlot" {...adapterProps}>
+            {props.children}
+          </MountsAnyChild>
+        </div>
+      )}
+    </HIGAdapter>
+  );
 }
 
-const SlotHeadCellComponent = createComponent(SlotHeadCellAdapter, {
-  parent: null
-});
-
-SlotHeadCellComponent.propTypes = {
+SlotHeadCellAdapter.propTypes = {
   children: PropTypes.node,
   width: PropTypes.string
 };
 
-SlotHeadCellComponent.__docgenInfo = {
+SlotHeadCellAdapter.__docgenInfo = {
   props: {
     children: {
       description: "content for slot cell"
@@ -71,4 +35,4 @@ SlotHeadCellComponent.__docgenInfo = {
   }
 };
 
-export default SlotHeadCellComponent;
+export default SlotHeadCellAdapter;

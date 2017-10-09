@@ -1,14 +1,14 @@
 import * as HIG from "hig-vanilla";
 import * as PropTypes from "prop-types";
 import React, { Component } from "react";
-import TableAdapter from "../../adapters/NewTableAdapter";
-import TableHeadAdapter from "../../adapters/NewTableHeadAdapter";
-import TableRowAdapter from "../../adapters/NewTableRowAdapter";
-import TextHeadCellAdapter from "../../adapters/NewTextHeadCellAdapter";
-import TextCell from  "../../adapters/NewTextCellAdapter";
-import SlotCell from "../../adapters/NewSlotCellAdapter";
+import TableAdapter from "../../adapters/TableAdapter";
+import TableHeadAdapter from "../../adapters/TableHeadAdapter";
+import TableRowAdapter from "../../adapters/TableRowAdapter";
+import TextHeadCellAdapter from "../../adapters/TextHeadCellAdapter";
+import TextCell from  "../../adapters/TextCellAdapter";
+import SlotCell from "../../adapters/SlotCellAdapter";
 
-import SlotHeadCell from "../../adapters/NewSlotHeadCellAdapter";
+import SlotHeadCell from "../../adapters/SlotHeadCellAdapter";
 import SelectableTable from "./SelectableTable";
 
 // const TableHead = TableAdapter.TableHead;
