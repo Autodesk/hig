@@ -9,16 +9,16 @@ describe('CheckboxAdapter', () => {
       mount(
         <CheckboxAdapter
           higInstance={spiedInstance}
-          value="Foo"
+          checked={true}
           label="Favorite word"
           name="favorite-word"
-          checked={true}
           disabled={true}
           required="You really have to fill this out"
           onChange={() => {}}
           onClearButtonClick={() => {}}
           onFocus={() => {}}
           onHover={() => {}}
+
         />
       )
       mount(
@@ -26,7 +26,6 @@ describe('CheckboxAdapter', () => {
           higInstance={spiedInstance}
           disabled={false}
           required=""
-          checked={false}
         />
       )
     }).toImplementHIGInterfaceOf(HIG.Checkbox);
