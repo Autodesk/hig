@@ -44,12 +44,12 @@ const columns = [
     alignment: "right",
     width: "50px",
     accessor: "budget",
-      // Cell: props => (
-      //   <TextCellContent
-      //     text={props.data.budget}
-      //     alignment={props.data.alignment}
-      //   />
-      // )
+      Cell: props => (
+        <TextCellContent
+          text={props.data.budget}
+          alignment={props.data.alignment}
+        />
+      )
   },
   {
     id: "6",
