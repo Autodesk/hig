@@ -1,8 +1,8 @@
-import React from 'react' 
+import React from 'react'
 import * as HIG from 'hig-vanilla'
 import PropTypes from 'prop-types';
 
-import HIGAdapter, { MapsPropToMethod } from './HIGAdapter'
+import HIGAdapter, { MapsPropToMethod } from '../HIGAdapter';
 
 function TextCellContentAdapter (props) {
   return (
@@ -10,10 +10,10 @@ function TextCellContentAdapter (props) {
       <div>
         <MapsPropToMethod value={props.text} setter="setText" {...adapterProps} />
         <MapsPropToMethod value={props.detail} setter="setDetail" {...adapterProps} />
-        <MapsPropToMethod value={props.alignment} setter="setAlignment" {...adapterProps} />  
+        <MapsPropToMethod value={props.alignment} setter="setAlignment" {...adapterProps} />
       </div>
     )}</HIGAdapter>
-  )   
+  )
 }
 
 TextCellContentAdapter.propTypes = {

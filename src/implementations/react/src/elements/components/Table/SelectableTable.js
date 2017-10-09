@@ -1,8 +1,8 @@
 import * as HIG from "hig-vanilla";
 import * as PropTypes from "prop-types";
 import React, { Component } from "react";
-import HeaderCheckbox from "./FormElements/HeaderCheckbox";
-import RowCheckbox from "./FormElements/RowCheckbox";
+import HeaderCheckbox from "./HeaderCheckbox";
+import RowCheckbox from "./RowCheckbox";
 
 class SelectableTable extends Component {
   constructor(props) {

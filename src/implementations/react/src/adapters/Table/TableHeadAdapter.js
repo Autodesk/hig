@@ -1,22 +1,22 @@
 import React from 'react'
 import * as HIG from 'hig-vanilla'
 
-import HIGAdapter, { 
-  MapsPropToMethod, 
+import HIGAdapter, {
+  MapsPropToMethod,
   MountedByHIGParent,
-  MountsHIGChildList 
-} from './HIGAdapter'
+  MountsHIGChildList
+} from '../HIGAdapter'
 
 function TableHeadAdapter(props) {
   return(
     <HIGAdapter displayName="TableHead" HIGConstructor={HIG.Table._partials.TableHead} {...props}>
       {(adapterProps) => (
-        <div> 
-          <MountedByHIGParent mounter="addTableHead" {...adapterProps} /> 
+        <div>
+          <MountedByHIGParent mounter="addTableHead" {...adapterProps} />
           <MountsHIGChildList {...adapterProps}>{props.children}</MountsHIGChildList>
         </div>
       )}
-    </HIGAdapter> 
+    </HIGAdapter>
   )
 }
 

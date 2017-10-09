@@ -8,14 +8,14 @@ describe('TextCellAdapter', () => {
   it('implements the text cell interface', () => {
     expect((mockInstance) => {
       const wrapper = mount(
-        <TextCellAdapter 
+        <TextCellAdapter
           higInstance={mockInstance}
           text="test"
           detail="test detail"
           alignment="left"
-        />    
-      ) 
+        />
+      )
     }).toImplementHIGInterfaceOf(HIG.Table._partials.TableRow._partials.TextCell)
-    
-  })  
+
+  })
 })

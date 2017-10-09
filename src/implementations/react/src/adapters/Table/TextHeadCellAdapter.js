@@ -1,7 +1,7 @@
-import React from 'react' 
+import React from 'react'
 import * as HIG from 'hig-vanilla'
 
-import HIGAdapter, { MapsPropToMethod, MapsEventListener, MountedByHIGParentList } from './HIGAdapter'
+import HIGAdapter, { MapsPropToMethod, MapsEventListener, MountedByHIGParentList } from '../HIGAdapter'
 
 function TextHeadCellAdapter (props) {
   return (
@@ -10,11 +10,11 @@ function TextHeadCellAdapter (props) {
         <MountedByHIGParentList mounter="addCell" {...adapterProps} />
          <MapsPropToMethod value={props.text} setter="setText" {...adapterProps} />
         <MapsPropToMethod value={props.detail} setter="setDetail" {...adapterProps} />
-        <MapsPropToMethod value={props.alignment} setter="setAlignment" {...adapterProps} /> 
-        <MapsPropToMethod value={props.width} setter="setWidth" {...adapterProps} />   
+        <MapsPropToMethod value={props.alignment} setter="setAlignment" {...adapterProps} />
+        <MapsPropToMethod value={props.width} setter="setWidth" {...adapterProps} />
       </div>
     )}</HIGAdapter>
-  )   
+  )
 }
 
 

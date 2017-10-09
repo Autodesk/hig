@@ -1,7 +1,7 @@
 import React from 'react';
 import * as HIG from 'hig-vanilla';
 import * as PropTypes from "prop-types";
-import HIGAdapter, { MapsPropToMethod, MountsAnyChild, MountedByHIGParentList } from './HIGAdapter';
+import HIGAdapter, { MapsPropToMethod, MountsAnyChild, MountedByHIGParentList } from '../HIGAdapter';
 
 function SlotHeadCellAdapter(props) {
   return (

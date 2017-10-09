@@ -2,14 +2,14 @@ import React from 'react'
 import * as HIG from 'hig-vanilla'
 import PropTypes from 'prop-types';
 
-import HIGAdapter, { 
-  MapsPropToMethod, 
+import HIGAdapter, {
+  MapsPropToMethod,
   MountedByHIGParent,
   MountsHIGChildList,
-  MountsHIGChild 
-} from './HIGAdapter'
+  MountsHIGChild
+} from '../HIGAdapter'
 
-import TableHeadAdapter from './TableHeadAdapter'
+import TableHeadAdapter from './TableHeadAdapter';
 
 function sortChildren(children) {
   return {
@@ -22,13 +22,13 @@ function TableAdapter(props) {
   return(
     <HIGAdapter displayName="Table" HIGConstructor={HIG.Table} {...props}>
       {(adapterProps) => (
-        <div> 
+        <div>
           <MapsPropToMethod value={props.density} setter="setDensity" {...adapterProps} />
           <MountsHIGChild {...adapterProps}>{tableHead}</MountsHIGChild>
           <MountsHIGChildList {...adapterProps}>{otherChildren}</MountsHIGChildList>
         </div>
       )}
-    </HIGAdapter> 
+    </HIGAdapter>
   )
 }
 

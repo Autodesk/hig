@@ -1,14 +1,14 @@
 import * as HIG from "hig-vanilla";
 import * as PropTypes from "prop-types";
 import React, { Component } from "react";
-import TableAdapter from "../../adapters/TableAdapter";
-import TableHeadAdapter from "../../adapters/TableHeadAdapter";
-import TableRowAdapter from "../../adapters/TableRowAdapter";
-import TextHeadCellAdapter from "../../adapters/TextHeadCellAdapter";
-import TextCell from  "../../adapters/TextCellAdapter";
-import SlotCell from "../../adapters/SlotCellAdapter";
+import TableAdapter from "../../../adapters/Table/TableAdapter";
+import TableHeadAdapter from "../../../adapters/Table/TableHeadAdapter";
+import TableRowAdapter from "../../../adapters/Table/TableRowAdapter";
+import TextHeadCellAdapter from "../../../adapters/Table/TextHeadCellAdapter";
+import TextCell from  "../../../adapters/Table/TextCellAdapter";
+import SlotCell from "../../../adapters/Table/SlotCellAdapter";
 
-import SlotHeadCell from "../../adapters/SlotHeadCellAdapter";
+import SlotHeadCell from "../../../adapters/Table/SlotHeadCellAdapter";
 import SelectableTable from "./SelectableTable";
 
 class Table extends Component {
@@ -36,7 +36,7 @@ class Table extends Component {
           <TableRowAdapter key={row.id} selected={row.selected}>
             {columns.map((column, index) =>
               getCell({ column, data: row, index })
-            )}  
+            )}
           </TableRowAdapter>
         ))}
       </TableAdapter>
