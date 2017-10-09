@@ -99,7 +99,7 @@ class GlobalNav extends Component {
   }
 
   showHelp() {
-    return !!this.props.topNav.help;
+    return this.props.topNav.help && this.props.topNav.help.groups && this.props.topNav.help.groups.length > 0;
   }
 
   renderTab = (submodule) => {

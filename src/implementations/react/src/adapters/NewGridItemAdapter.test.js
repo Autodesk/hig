@@ -11,6 +11,7 @@ describe('GridItemAdapter', () => {
           higInstance={mockInstance}
           fraction="one-quarter"
         >
+          <h1>Slot content</h1>
         </GridItemAdapter>
       );
     }).toImplementHIGInterfaceOf(HIG.Grid._partials.GridItem);

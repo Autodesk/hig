@@ -17,7 +17,7 @@ function HelpAdapter(props) {
           <MapsEventListener handler={props.onClick} listener="onClick" {...adapterProps} />
           <MapsEventListener handler={props.onClickOutside} listener="onClickOutside" {...adapterProps} />
           <MapsPropToMethod value={props.title} setter="setTitle" {...adapterProps} />
-          <MapsPropToMethod value={props.title} {...adapterProps}>
+          <MapsPropToMethod value={props.open} {...adapterProps}>
             {(instance, value) => value ? instance.open() : instance.close()}
           </MapsPropToMethod>
           <MountsHIGChildList {...adapterProps}>{props.children}</MountsHIGChildList>
