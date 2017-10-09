@@ -2,7 +2,7 @@ import './help.scss';
 
 const Interface = require('interface.json');
 const Core = require('_core.js');
-const Template = require ('./help.html');
+const Template = require('./help.html');
 
 const Flyout = require('basics/flyout/flyout.js');
 const Shortcut = require('../shortcut/shortcut.js');
@@ -63,7 +63,7 @@ class Help extends Core {
 
 Help._interface = Interface.components.GlobalNav.partials.TopNav.partials.Help;
 Help._defaults = {
-  title: "Help"
+  title: 'Help'
 };
 Help._partials = {
   Group,

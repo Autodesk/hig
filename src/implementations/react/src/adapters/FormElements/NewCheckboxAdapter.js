@@ -17,7 +17,7 @@ function CheckboxAdapter(props) {
             handler={props.onChange}
             listener="onChange"
             value={props.checked}
-            defaultValue={props.defaultValue}
+            defaultValue={props.defaultChecked !== undefined ? props.defaultChecked : false}
             {...adapterProps}
           >
             {(instance, value) => value ? instance.check() : instance.uncheck()}

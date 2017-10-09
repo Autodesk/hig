@@ -15,7 +15,8 @@ class ControlsProp extends Component {
   }
 
   defaultProps = {
-    eventTargetPropName: 'value'
+    eventTargetPropName: 'value',
+    defaultValue: ''
   }
 
   constructor(props) {
@@ -29,21 +30,15 @@ class ControlsProp extends Component {
   defaultValue() {
     const { defaultValue, value } = this.props;
 
-    if (value !== undefined) {
-      return value;
-    } else if (defaultValue !== undefined) {
-      return defaultValue;
-    } else {
-      return '';
-    }
+    return value !== undefined
+      ? value
+      : defaultValue;
   }
 
   renderedValue() {
-    if (this.props.value !== undefined) {
-      return this.props.value;
-    } else {
-      return this.state.value;
-    }
+    return this.props.value !== undefined
+      ? this.props.value
+      : this.state.value;
   }
 
   componentWillReceiveProps(nextProps) {
@@ -76,12 +71,6 @@ class ControlsProp extends Component {
       this.setState({ value: this.state.value });
     } else {
       this.setState({ value: event.target[this.props.eventTargetPropName] });
-    }
-  }
-
-  throwIfNoSetter() {
-    if (this.props.higInstance[this.props.setter] === undefined) {
-      throw(new TypeError(`${this.props.name} has no method '${this.props.setter}'`));
     }
   }
 
