@@ -39,10 +39,8 @@ class ControlsProp extends Component {
   }
 
   renderedValue() {
-    const { value } = this.props;
-
-    if (value !== undefined) {
-      return value;
+    if (this.props.value !== undefined) {
+      return this.props.value;
     } else {
       return this.state.value;
     }
