@@ -12,7 +12,7 @@ describe('RadioButtonAdapter', () => {
           value="Foo"
           label="Favorite word"
           name="favorite-word"
-          value="foo"
+          checked={true}
           disabled={true}
           required="You really have to fill this out"
           onChange={() => {}}
@@ -26,6 +26,7 @@ describe('RadioButtonAdapter', () => {
           higInstance={spiedInstance}
           disabled={false}
           required=""
+          checked={false}
         />
       )
     }).toImplementHIGInterfaceOf(HIG.RadioButton);

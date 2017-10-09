@@ -13,9 +13,10 @@ function RadioButtonAdapter(props) {
       {adapterProps => (
         <div>
           <ControlsProp
+            eventTargetPropName="checked"
             handler={props.onChange}
             listener="onChange"
-            value={props.value}
+            value={props.checked}
             defaultValue={props.defaultValue}
             {...adapterProps}
           >
