@@ -7,7 +7,7 @@ function NewSlotHeadCellAdapter(props) {
     <HIGAdapter {...props} name="Slot" HIGConstructor={HIG.Table._partials.TableHead._partials.SlotHeadCell}>
       {(adapterProps) => (
         <div>
-          <MapsPropToMethod value="props.width" setter="setWidth" {...adapterProps} />
+          <MapsPropToMethod value={props.width} setter="setWidth" {...adapterProps} />
           <MountedByHIGParentList mounter="addCell" {...adapterProps} />
           <MountsAnyChild mounter="addSlot" {...adapterProps}>
             {props.children}

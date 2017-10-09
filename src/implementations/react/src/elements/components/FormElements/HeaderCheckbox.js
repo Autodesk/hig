@@ -30,7 +30,7 @@ class HeaderCheckbox extends React.Component {
       justifyContent: "center" }
     return (
       <div style={styleProps}>
-        <Checkbox checked={this.props.selected} onChange={this.props.onSelectAllSelectionChange} />
+        <Checkbox checked={this.props.selected} onChange={this.props.onSelectAllSelectionChange}/>
       </div>
     );
   }
