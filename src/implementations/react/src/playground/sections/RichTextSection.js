@@ -1,9 +1,6 @@
 import React, { PureComponent } from 'react';
 import PlaygroundSection from '../PlaygroundSection';
-import createSlotComponent from '../../adapters/createSlotComponent';
 import { RichText } from '../../hig-react';
-
-const Slot = createSlotComponent();
 
 class RichTextSection extends PureComponent {
   render() {
@@ -15,15 +12,13 @@ class RichTextSection extends PureComponent {
 
     return (
       <PlaygroundSection title="RichText">
-        <Slot>
-          <RichText dangerouslySetInnerHTML={{__html: html}} />
-          <RichText>
-            <h4>H4, Sub1: example text</h4>
-            <h5>H5, Sub2: example text</h5>
-            <p>P: Body example text</p>
-            <p><b>B, Bold: Bold example text</b></p>
-          </RichText>
-        </Slot>
+        <RichText dangerouslySetInnerHTML={{__html: html}} />
+        <RichText>
+          <h4>H4, Sub1: example text</h4>
+          <h5>H5, Sub2: example text</h5>
+          <p>P: Body example text</p>
+          <p><b>B, Bold: Bold example text</b></p>
+        </RichText>
       </PlaygroundSection>
     );
   }
