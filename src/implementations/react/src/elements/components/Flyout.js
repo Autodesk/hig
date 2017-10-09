@@ -32,8 +32,6 @@ class Flyout extends Component {
   };
 
   openFlyout = event => {
-    console.log('CLICKING THE THING');
-    event.preventDefault();
     this.setState({ open: true });
   };
 

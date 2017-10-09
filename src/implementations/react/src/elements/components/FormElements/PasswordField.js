@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import PasswordFieldAdapter
   from '../../../adapters/FormElements/NewPasswordFieldAdapter.js';
-import controlled from '../../ControlledField';
 
 class PasswordField extends Component {
   static propTypes = {
