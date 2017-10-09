@@ -2,7 +2,7 @@ import React from 'react'
 import { mount } from 'enzyme'
 
 import * as HIG from 'hig-vanilla'
-import TextCellAdapter from './NewTextCellAdapter'
+import TextCellAdapter from './TextCellAdapter'
 
 describe('TextCellAdapter', () => {
   it('implements the text cell interface', () => {

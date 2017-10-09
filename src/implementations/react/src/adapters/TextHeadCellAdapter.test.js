@@ -2,19 +2,19 @@ import React from 'react'
 import { mount } from 'enzyme'
 
 import * as HIG from 'hig-vanilla'
-import TextCellContentAdapter from './NewTextCellContentAdapter'
+import TextHeadCellAdapter from './TextHeadCellAdapter'
 
-describe('TextCellAdapter', () => {
+describe('TextHeadCellAdapter', () => {
   it('implements the text cell interface', () => {
     expect((mockInstance) => {
       const wrapper = mount(
-        <TextCellContentAdapter 
+        <TextHeadCellAdapter 
           higInstance={mockInstance}
           text="test"
-          detail="test detail"
           alignment="left"
+          width="30px"
         />    
       ) 
-    }).toImplementHIGInterfaceOf(HIG.TextCellContent)
+    }).toImplementHIGInterfaceOf(HIG.Table._partials.TableHead._partials.TextHeadCell)
   })  
 })

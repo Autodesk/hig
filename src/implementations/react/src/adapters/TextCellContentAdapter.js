@@ -1,56 +1,28 @@
-import * as HIG from 'hig-vanilla';
-import HIGElement from "../elements/HIGElement";
-import * as PropTypes from "prop-types";
-import createComponent from "./createComponent";
+import React from 'react' 
+import * as HIG from 'hig-vanilla'
+import PropTypes from 'prop-types';
 
-export class TextCellContentAdapter extends HIGElement {
-  constructor(initialProps) {
-    super(HIG.TextCellContent, initialProps);
+import HIGAdapter, { MapsPropToMethod } from './HIGAdapter'
 
-    this.props = { ...initialProps };
-  }
-
-  componentDidMount(){
-    if (this.props.detail){
-      this.commitUpdate(["detail", this.props.detail])
-    }
-  }
-
-  commitUpdate(updatePayload, oldProps, newProp) {
-    for (let i = 0; i < updatePayload.length; i += 2) {
-      const propKey = updatePayload[i];
-      const propValue = updatePayload[i + 1];
-
-      switch (propKey) {
-        case "text": {
-          this.hig.setText(propValue);
-          break;
-        }
-        case "alignment": {
-          this.hig.setAlignment(propValue);
-          break;
-        }
-        case "detail": {
-          this.hig.setDetail(propValue);
-          break;
-        }
-        default: {
-          console.warn(`${propKey} is unknown`);
-        }
-      }
-    }
-  }
+function TextCellContentAdapter (props) {
+  return (
+    <HIGAdapter displayName="TextCellContent" HIGConstructor={HIG.TextCellContent} {...props}>{(adapterProps) => (
+      <div>
+        <MapsPropToMethod value={props.text} setter="setText" {...adapterProps} />
+        <MapsPropToMethod value={props.detail} setter="setDetail" {...adapterProps} />
+        <MapsPropToMethod value={props.alignment} setter="setAlignment" {...adapterProps} />  
+      </div>
+    )}</HIGAdapter>
+  )   
 }
 
-const TextCellContentComponent = createComponent(TextCellContentAdapter);
-
-TextCellContentComponent.propTypes = {
+TextCellContentAdapter.propTypes = {
   text: PropTypes.string,
   detail: PropTypes.string,
   alignment: PropTypes.string
 };
 
-TextCellContentComponent.__docgenInfo = {
+TextCellContentAdapter.__docgenInfo = {
   props: {
     text: {
       description: "sets {String} text in cell"
@@ -64,4 +36,5 @@ TextCellContentComponent.__docgenInfo = {
   }
 };
 
-export default TextCellContentComponent;
+
+export default TextCellContentAdapter

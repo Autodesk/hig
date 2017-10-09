@@ -3,7 +3,7 @@ import { mount } from 'enzyme'
 
 import * as HIG from 'hig-vanilla'
 
-import IconCellAdapter from "./NewIconCellAdapter"
+import IconCellAdapter from "./IconCellAdapter"
 
 describe('IconCellAdapter', () =>{
   it('implements hig interface', () => {
