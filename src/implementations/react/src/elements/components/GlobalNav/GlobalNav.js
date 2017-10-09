@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import GlobalNavAdapter from '../../../adapters/GlobalNav/NewGlobalNavAdapter';
 import TopNavAdapter from '../../../adapters/GlobalNav/TopNav/NewTopNavAdapter';
 import SubNavAdapter from '../../../adapters/GlobalNav/SubNav/NewSubNavAdapter';
-import HelpAdapter from '../../../adapters/GlobalNav/TopNav/Help/HelpAdapter';
-import GroupAdapter from '../../../adapters/GlobalNav/TopNav/Help/GroupAdapter';
-import OptionAdapter from '../../../adapters/GlobalNav/TopNav/Help/OptionAdapter';
+import HelpAdapter from '../../../adapters/GlobalNav/TopNav/NewHelpAdapter';
+import GroupAdapter from '../../../adapters/GlobalNav/TopNav/NewGroupAdapter';
+import OptionAdapter from '../../../adapters/GlobalNav/TopNav/NewOptionAdapter';
 import SideNav from './SideNav';
 import Tabs from './SubNav/Tabs';
 import ProjectAccountSwitcher from './TopNav/ProjectAccountSwitcher';
@@ -136,8 +136,8 @@ class GlobalNav extends Component {
               : null}
               {this.showHelp()
               ? <HelpAdapter {...this.props.topNav.help}>
-                {(this.props.topNav.help.groups || []).map(groupProps => (
-                  <GroupAdapter key={groupProps.options} {...groupProps}>
+                {(this.props.topNav.help.groups || []).map((groupProps, i) => (
+                  <GroupAdapter key={i} {...groupProps}>
                     {(groupProps.options || []).map(optionProps => (
                       <OptionAdapter key={optionProps.name} {...optionProps} />
                     ))}
