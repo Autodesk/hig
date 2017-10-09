@@ -3,8 +3,8 @@ import { mount } from 'enzyme';
 import * as HIG from 'hig-vanilla';
 import React from 'react';
 
-import GlobalNavAdapter from '../../../../adapters/GlobalNav/NewGlobalNavAdapter';
-import SubNavAdapter from '../../../../adapters/GlobalNav/SubNav/NewSubNavAdapter';
+import GlobalNavAdapter from '../../../../adapters/GlobalNav/GlobalNavAdapter';
+import SubNavAdapter from '../../../../adapters/GlobalNav/SubNav/SubNavAdapter';
 import Tabs from './Tabs';
 
 const Context = props => {

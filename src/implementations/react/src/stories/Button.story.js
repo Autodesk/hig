@@ -19,7 +19,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { text, select } from '@storybook/addon-knobs';
 
-import Button from '../adapters/NewButtonAdapter';
+import Button from '../adapters/ButtonAdapter';
 
 storiesOf('Button', module)
   .addWithInfo('Standard Button', ``, () => {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import SearchAdapter from '../../../../adapters/GlobalNav/SideNav/NewSearchAdapter';
+import SearchAdapter from '../../../../adapters/GlobalNav/SideNav/SearchAdapter';
 
 class Search extends Component {
   static propTypes = {

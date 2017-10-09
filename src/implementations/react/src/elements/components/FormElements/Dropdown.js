@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import * as PropTypes from 'prop-types';
 
-import DropdownAdapter from '../../../adapters/FormElements/NewDropdownAdapter.js';
+import DropdownAdapter from '../../../adapters/FormElements/DropdownAdapter.js';
 import Option from './Option';
 
 class Dropdown extends Component {

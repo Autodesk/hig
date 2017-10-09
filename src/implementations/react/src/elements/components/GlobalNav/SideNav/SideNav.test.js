@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { mount } from 'enzyme';
 
-import GlobalNavAdapter from '../../../../adapters/GlobalNav/NewGlobalNavAdapter';
-import SideNavAdapter from '../../../../adapters/GlobalNav/SideNav/NewSideNavAdapter';
+import GlobalNavAdapter from '../../../../adapters/GlobalNav/GlobalNavAdapter';
+import SideNavAdapter from '../../../../adapters/GlobalNav/SideNav/SideNavAdapter';
 import SideNav, { Link, Module, Submodule, Search } from '../SideNav';
 
 describe('<SideNav>', () => {

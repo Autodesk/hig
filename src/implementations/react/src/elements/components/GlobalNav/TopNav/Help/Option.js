@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import OptionAdapter from '../../../../../adapters/GlobalNav/TopNav/NewOptionAdapter';
+import OptionAdapter from '../../../../../adapters/GlobalNav/TopNav/OptionAdapter';
 
 class Option extends Component {
   static propTypes = {

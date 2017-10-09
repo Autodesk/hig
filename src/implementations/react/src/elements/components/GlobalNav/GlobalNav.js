@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import GlobalNavAdapter from '../../../adapters/GlobalNav/NewGlobalNavAdapter';
-import TopNavAdapter from '../../../adapters/GlobalNav/TopNav/NewTopNavAdapter';
-import SubNavAdapter from '../../../adapters/GlobalNav/SubNav/NewSubNavAdapter';
-import HelpAdapter from '../../../adapters/GlobalNav/TopNav/NewHelpAdapter';
-import GroupAdapter from '../../../adapters/GlobalNav/TopNav/NewGroupAdapter';
-import OptionAdapter from '../../../adapters/GlobalNav/TopNav/NewOptionAdapter';
+import GlobalNavAdapter from '../../../adapters/GlobalNav/GlobalNavAdapter';
+import TopNavAdapter from '../../../adapters/GlobalNav/TopNav/TopNavAdapter';
+import SubNavAdapter from '../../../adapters/GlobalNav/SubNav/SubNavAdapter';
+import HelpAdapter from '../../../adapters/GlobalNav/TopNav/HelpAdapter';
+import GroupAdapter from '../../../adapters/GlobalNav/TopNav/GroupAdapter';
+import OptionAdapter from '../../../adapters/GlobalNav/TopNav/OptionAdapter';
 import SideNav from './SideNav';
 import Tabs from './SubNav/Tabs';
 import ProjectAccountSwitcher from './TopNav/ProjectAccountSwitcher';

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-import GroupAdapter from '../../../../../adapters/GlobalNav/TopNav/NewGroupAdapter';
+import GroupAdapter from '../../../../../adapters/GlobalNav/TopNav/GroupAdapter';
 
 class Group extends Component {
   static propTypes = {

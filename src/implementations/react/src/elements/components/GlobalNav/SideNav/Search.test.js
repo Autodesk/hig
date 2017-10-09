@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Search from './Search';
-import SearchAdapter from '../../../../adapters/GlobalNav/SideNav/NewSearchAdapter';
+import SearchAdapter from '../../../../adapters/GlobalNav/SideNav/SearchAdapter';
 
 describe('<Search />', () => {
   describe('value', () => {

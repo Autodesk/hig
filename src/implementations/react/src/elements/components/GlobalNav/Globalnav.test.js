@@ -2,8 +2,8 @@ import React from "react";
 import { mount } from "enzyme";
 import GlobalNav, { SideNav, SubNav, Tabs } from "./index.js";
 import TopNav, { ProjectAccountSwitcher } from "./TopNav";
-import TabAdapter from "../../../adapters/GlobalNav/SubNav/NewTabAdapter";
-import GlobalNavAdapter from "../../../adapters/GlobalNav/NewGlobalNavAdapter";
+import TabAdapter from "../../../adapters/GlobalNav/SubNav/TabAdapter";
+import GlobalNavAdapter from "../../../adapters/GlobalNav/GlobalNavAdapter";
 
 function Context(props) {
   const renderedProps = {

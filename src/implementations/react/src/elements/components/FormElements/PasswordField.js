@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import PasswordFieldAdapter
-  from '../../../adapters/FormElements/NewPasswordFieldAdapter.js';
+  from '../../../adapters/FormElements/PasswordFieldAdapter.js';
 
 class PasswordField extends Component {
   static propTypes = {

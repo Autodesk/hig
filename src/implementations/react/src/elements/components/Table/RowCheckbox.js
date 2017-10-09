@@ -1,7 +1,7 @@
 import React from "react";
 import * as PropTypes from "prop-types";
 
-import Checkbox from "../../../adapters/FormElements/NewCheckboxAdapter";
+import Checkbox from "../../../adapters/FormElements/CheckboxAdapter";
 import {colors} from "hig-vanilla"
 
 class RowCheckbox extends React.Component {

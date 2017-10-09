@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import SubmoduleAdapter from '../../../../adapters/GlobalNav/SideNav/NewSubmoduleAdapter';
+import SubmoduleAdapter from '../../../../adapters/GlobalNav/SideNav/SubmoduleAdapter';
 
 class Submodule extends Component {
   static propTypes = {

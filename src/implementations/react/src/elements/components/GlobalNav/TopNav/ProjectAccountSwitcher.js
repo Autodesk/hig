@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import ProjectAccountSwitcherAdapter from '../../../../adapters/GlobalNav/TopNav/NewProjectAccountSwitcherAdapter';
+import ProjectAccountSwitcherAdapter from '../../../../adapters/GlobalNav/TopNav/ProjectAccountSwitcherAdapter';
 import Project from './Project';
 import Account from './Account';
 

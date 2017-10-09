@@ -1,6 +1,6 @@
 import * as ReactHIG from './hig-react';
 
-import Button from './adapters/NewButtonAdapter';
+import Button from './adapters/ButtonAdapter';
 import GlobalNav from './elements/components/GlobalNav/GlobalNav';
 
 describe('hig-react', () => {

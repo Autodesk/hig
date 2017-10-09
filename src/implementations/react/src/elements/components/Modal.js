@@ -1,7 +1,7 @@
 import React from 'react';
 import * as PropTypes from 'prop-types';
 import * as HIG from 'hig-vanilla';
-import ModalAdapter from '../../adapters/NewModalAdapter';
+import ModalAdapter from '../../adapters/ModalAdapter';
 import { Button } from '../../hig-react';
 
 class Modal extends React.Component {

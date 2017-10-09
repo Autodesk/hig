@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import * as PropTypes from 'prop-types';
-import SideNavAdapter from '../../../../adapters/GlobalNav/SideNav/NewSideNavAdapter';
+import SideNavAdapter from '../../../../adapters/GlobalNav/SideNav/SideNavAdapter';
 import Submodule from './Submodule';
-import Group from '../../../../adapters/GlobalNav/SideNav/NewGroupAdapter';
+import Group from '../../../../adapters/GlobalNav/SideNav/GroupAdapter';
 import Module from './Module';
 import ModuleCollapse from './ModuleCollapse';
-import Link from '../../../../adapters/GlobalNav/SideNav/NewLinkAdapter';
+import Link from '../../../../adapters/GlobalNav/SideNav/LinkAdapter';
 import Search from './Search';
 import WithState from './WithState';
 

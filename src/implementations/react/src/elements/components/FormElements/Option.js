@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import OptionAdapter
-  from '../../../adapters/FormElements/NewOptionAdapter.js';
+  from '../../../adapters/FormElements/OptionAdapter.js';
 import * as PropTypes from 'prop-types';
 
 class Option extends Component {

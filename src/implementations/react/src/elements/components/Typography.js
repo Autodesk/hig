@@ -1,5 +1,5 @@
 import React from 'react';
-import Typography from '../../adapters/NewTypographyAdapter'
+import Typography from '../../adapters/TypographyAdapter'
 import PropTypes from 'prop-types';
 
 function H1Component(props) {
