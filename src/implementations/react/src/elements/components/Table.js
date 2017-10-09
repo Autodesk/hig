@@ -11,11 +11,6 @@ import SlotCell from "../../adapters/SlotCellAdapter";
 import SlotHeadCell from "../../adapters/SlotHeadCellAdapter";
 import SelectableTable from "./SelectableTable";
 
-// const TableHead = TableAdapter.TableHead;
-// const TableRow = TableAdapter.TableRow;
-// const TextHeadCell = TableAdapter.TableHead.TextHeadCell;
-// const TextCell = TableAdapter.TableRow.TextCell;
-
 class Table extends Component {
   constructor(props) {
     super(props);
