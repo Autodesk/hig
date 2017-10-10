@@ -1,91 +1,30 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import * as HIG from 'hig-vanilla';
-import * as PropTypes from 'prop-types';
+import HIGAdapter, { MapsPropToMethod, MountsAnyChild } from './HIGAdapter';
 
-import HIGElement from '../elements/HIGElement';
-import HIGChildValidator from '../elements/HIGChildValidator';
-import createComponent from './createComponent';
-import Slot from './SlotAdapter';
-
-class SpacerAdapter extends HIGElement {
-  constructor(initialProps) {
-    super(HIG.Spacer, initialProps)
-  }
-
-  componentDidMount() {
-    if (this.slot) {
-      this.addSlot(this.slot);
-    }
-  }
-
-  commitUpdate(updatePayload, oldProps, newProps) {
-    for (let i = 0; i < updatePayload.length; i += 2) {
-      const propKey = updatePayload[i];
-      const propValue = updatePayload[i + 1];
-      switch (propKey) {
-        case 'type':
-          this.hig.setType(propValue);
-          break;
-        case 'width':
-          this.hig.setWidth(propValue);
-          break;
-        case 'inset':
-          this.hig.setInset(propValue);
-          break;
-        case 'children': {
-          // No-op
-          break;
-        }
-        default:
-          // No-op
-      }
-    }
-  }
-
-  addSlot(element) {
-    if (this.mounted) {
-      this.hig.addSlot(element);
-    } else {
-      this.slot = element;
-    }
-  }
-
-  insertBefore(instance) {
-    this.appendChild(instance);
-  }
-
-  removeChild(instance) {
-    if (instance instanceof Slot) {
-      this.slot = null;
-      instance.unmount();
-    }
-  }
+function SpacerAdapter(props) {
+  return (
+    <HIGAdapter {...props} displayName="Spacer" HIGConstructor={HIG.Spacer}>
+      {(adapterProps) => (
+        <div>
+          <MapsPropToMethod value={props.inset} setter="setInset" {...adapterProps} />
+          <MapsPropToMethod value={props.type} setter="setType" {...adapterProps} />
+          <MapsPropToMethod value={props.width} setter="setWidth" {...adapterProps} />
+          <MountsAnyChild mounter="addSlot" {...adapterProps}>
+            {props.children}
+          </MountsAnyChild>
+        </div>
+      )}
+    </HIGAdapter>
+  );
 }
 
-const SpacerAdapterComponent = createComponent(SpacerAdapter);
-
-SpacerAdapterComponent.propTypes = {
+SpacerAdapter.propTypes = {
+  inset: PropTypes.oneOf(HIG.Spacer.AvailableSizes),
   type: PropTypes.oneOf(HIG.Spacer.AvailableTypes),
   width: PropTypes.oneOf(HIG.Spacer.AvailableSizes),
-  inset: PropTypes.oneOf(HIG.Spacer.AvailableSizes),
-  children: HIGChildValidator([Slot])
-};
+  children: PropTypes.node
+}
 
-SpacerAdapterComponent.__docgenInfo = {
-  props: {
-    type: {
-      description: "{String - 'stack', 'inline'} type of the spacer"
-    },
-    width: {
-      description: "{String - 'none', 'xxs', 'xs', 's', 'm', 'l' 'xl', 'xxl'} width of the spacer"
-    },
-    inset: {
-      description: "{String - 'none', 'xxs', 'xs', 's', 'm', 'l' 'xl', 'xxl'} width of the spacer inset"
-    },
-    children: {
-      description: 'support adding Slot component'
-    }
-  }
-};
-
-export default SpacerAdapterComponent;
-SpacerAdapterComponent.Slot = Slot;
+export default SpacerAdapter;

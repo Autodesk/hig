@@ -1,61 +1,28 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import * as HIG from 'hig-vanilla';
+import HIGAdapter, {
+  MapsPropToMethod
+} from './HIGAdapter';
 
-import HIGElement from '../elements/HIGElement';
-import * as PropTypes from 'prop-types';
-import createComponent from './createComponent';
-
-export class AvatarAdapter extends HIGElement {
-  constructor(initialProps) {
-    super(HIG.Avatar, initialProps);
-  }
-
-  commitUpdate(updatePayload, oldProps, newProps) {
-    for (let i = 0; i < updatePayload.length; i += 2) {
-      const propKey = updatePayload[i];
-      const propValue = updatePayload[i + 1];
-
-      switch (propKey) {
-        
-        case 'name': {
-          this.hig.setName(propValue);
-          break;
-        }
-        case 'size': {
-          this.hig.setSize(propValue);
-          break;
-        }
-        case 'image': {
-          this.hig.setImage(propValue);
-          break;
-        }
-        default: {
-          console.warn(`${propKey} is unknown`);
-        }
-      }
-    }
-  }
+function AvatarAdapter(props) {
+  return (
+    <HIGAdapter {...props} displayName="Avatar" HIGConstructor={HIG.Avatar}>
+      {adapterProps => (
+        <div>
+          <MapsPropToMethod setter="setName" value={props.name} {...adapterProps} />
+          <MapsPropToMethod setter="setSize" value={props.size} {...adapterProps} />
+          <MapsPropToMethod setter="setImage" value={props.image} {...adapterProps} />
+        </div>
+      )}
+    </HIGAdapter>
+  );
 }
 
-const AvatarComponent = createComponent(AvatarAdapter);
-
-AvatarComponent.propTypes = {
+AvatarAdapter.propTypes = {
   name: PropTypes.string,
-  size: PropTypes.string,
+  size: PropTypes.oneOf(HIG.Avatar.AvailableSizes),
   image: PropTypes.string
-};
+}
 
-AvatarComponent.__docgenInfo = {
-  props: {
-    name: {
-      description: 'sets the name and initials of an avatar'
-    },
-    size: {
-      description: 'sets the size of an avatar, either small, medium, large or extralarge, defaults to large'
-    },
-    image: {
-      description: 'url to image of an avatar'
-    }
-  }
-};
-
-export default AvatarComponent;
+export default AvatarAdapter;

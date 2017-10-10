@@ -41,7 +41,7 @@ class ProjectAccountSwitcher extends Component {
   }
 
   handleProjectClick = (id) => {
-    this.setState({ 
+    this.setState({
       activeProjectId: id,
       open: false
     });
@@ -51,7 +51,7 @@ class ProjectAccountSwitcher extends Component {
   }
 
   handleAccountClick = (id) => {
-    this.setState({ 
+    this.setState({
       activeAccountId: id,
       open: false
     });
@@ -115,8 +115,8 @@ class ProjectAccountSwitcher extends Component {
     });
 
     return (
-      <ProjectAccountSwitcherAdapter 
-        open={this.state.open} 
+      <ProjectAccountSwitcherAdapter
+        open={this.state.open}
         projectTitle={this.props.projectTitle}
         accountTitle={this.props.accountTitle}
         {...this.flyoutProps()}
@@ -129,14 +129,14 @@ class ProjectAccountSwitcher extends Component {
             return <Account onClick={this.handleAccountClick} key={a.id} {...a}/>
           }
         })}
-            
+
         {projects.map((p, i) => {
           if(i === 0) {
             return <Project onClick={this.handleProjectClick} key={p.id} {...p}/>
           } else {
             return <Project onClick={this.handleProjectClick} key={p.id} {...p} />
           }
-        })}  
+        })}
       </ProjectAccountSwitcherAdapter>
     );
   }

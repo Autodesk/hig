@@ -1,6 +1,6 @@
 import React from "react";
 import { mount } from "enzyme";
-import GlobalNav, { SideNav, SubNav, Slot, Tabs } from "./index.js";
+import GlobalNav, { SideNav, SubNav, Tabs } from "./index.js";
 import TopNav, { ProjectAccountSwitcher } from "./TopNav";
 import TabAdapter from "../../../adapters/GlobalNav/SubNav/TabAdapter";
 import GlobalNavAdapter from "../../../adapters/GlobalNav/GlobalNavAdapter";
@@ -147,13 +147,6 @@ describe("<GlobalNav>", () => {
       const callback = jest.fn();
       const wrapper = mount(<Context onSubmoduleChange={callback} />);
       expect(wrapper.find(SideNav)).toHaveProp("onSubmoduleChange", callback);
-    });
-  });
-
-  describe("without children", () => {
-    it("does not render a slot", () => {
-      const wrapper = mount(<Context />);
-      expect(wrapper).not.toMatchSelector(Slot);
     });
   });
 

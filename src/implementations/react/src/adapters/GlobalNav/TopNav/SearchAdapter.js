@@ -1,71 +1,41 @@
-/* Copyright 2016 Autodesk,Inc.
+import React from 'react';
+import PropTypes from 'prop-types';
+import * as HIG from 'hig-vanilla';
+import HIGAdapter, {
+  MountedByHIGParent,
+  MapsPropToMethod,
+  MapsEventListener
+} from '../../HIGAdapter';
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-
- */
-
-import HIGElement from '../../../elements/HIGElement';
-import * as PropTypes from 'prop-types';
-import createComponent from '../../createComponent';
-
-export class SearchAdapter extends HIGElement {
-  componentDidMount() {
-    this.hig.onInput(this.topNavSearchOnInput.bind(this));
-    this.hig.onClearIconClick(this.topNavClearInput.bind(this));
-  }
-
-  commitUpdate(updatePayload, oldProps, newProps) {
-    const mapping = {
-      placeholder: 'setPlaceholder',
-      query: 'setQuery'
-    };
-    super.commitUpdateWithMapping(updatePayload, mapping);
-  }
-
-  topNavSearchOnInput(event) {
-    this.hig.showClearIcon();
-    this.hig.setQuery(event.target.value);
-  }
-
-  topNavClearInput(event) {
-    this.hig.setQuery('');
-    this.hig.hideClearIcon();
-  }
+function SearchAdapter(props) {
+  return (
+    <HIGAdapter name="Search" HIGConstructor={HIG.GlobalNav._partials.TopNav._partials.Search} {...props}>
+      {adapterProps => (
+        <div>
+          <MountedByHIGParent mounter="addSearch" {...adapterProps} />
+          <MapsEventListener listener="onInput" handler={props.onInput} {...adapterProps} />
+          <MapsEventListener listener="onFocusIn" handler={props.onFocus} {...adapterProps} />
+          <MapsEventListener listener="onFocusOut" handler={props.onBlur} {...adapterProps} />
+          <MapsEventListener listener="onClearIconClick" handler={props.onClearIconClick} {...adapterProps} />
+          <MapsPropToMethod setter="setQuery" value={props.query} {...adapterProps} />
+          <MapsPropToMethod setter="setPlaceholder" value={props.placeholder} {...adapterProps} />
+          <MapsPropToMethod value={props.showClearIcon} {...adapterProps}>
+            {(instance, value) => { value ? instance.showClearIcon() : instance.hideClearIcon() }}
+          </MapsPropToMethod>
+        </div>
+      )}
+    </HIGAdapter>
+  );
 }
 
-const SearchAdapterComponent = createComponent(SearchAdapter);
-
-SearchAdapterComponent.propTypes = {
-  placeholder: PropTypes.string,
+SearchAdapter.propTypes = {
   query: PropTypes.string,
+  placeholder: PropTypes.string,
+  clearIconVisible: PropTypes.bool,
   onClearIconClick: PropTypes.func,
   onInput: PropTypes.func,
-  onFocusIn: PropTypes.func,
-  onFocusOut: PropTypes.func
+  onFocus: PropTypes.func,
+  onBlur: PropTypes.func
 };
 
-SearchAdapterComponent.__docgenInfo = {
-  props: {
-    placeholder: { description: '{String} sets the placeholder text' },
-    query: { description: '{String} sets the search query text' },
-    onClearIconClick: {
-      description: '{function} Triggers when user clicks clear icon'
-    },
-    onInput: {
-      description: '{function} Triggers when user enters text into search field'
-    },
-    onFocusIn: { description: '{function} Triggers when input has focus' },
-    onFocusOut: { description: '{function} Triggers when input loses focus' }
-  }
-};
-export default SearchAdapterComponent;
+export default SearchAdapter;

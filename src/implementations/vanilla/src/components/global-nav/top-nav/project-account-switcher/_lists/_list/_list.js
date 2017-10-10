@@ -1,7 +1,7 @@
-var Template = require('./_list.html');
-var Core = require('_core.js');
+const Template = require('./_list.html');
+const Core = require('_core.js');
 
-var Title = require('./_list-title/_list-title.js');
+const Title = require('./_list-title/_list-title.js');
 
 import './_list.scss';
 
@@ -12,29 +12,29 @@ import './_list.scss';
  */
 
 class List extends Core {
+  constructor(options) {
+    super(options);
+    this._render(Template, options);
+  }
 
-    constructor(options){
-        super(options);
-        this._render(Template, options);
-    }
+  addTitle(title) {
+    const t = new Title({
+      title
+    });
 
-    addTitle(title){
-      var t = new Title({
-        title: title
-      });
+    this.mountPartialToComment('TITLE', t);
+    return t;
+  }
 
-      return this.mountPartialToComment('TITLE', t);      
-    }
-
-    addItem(newInstance, referenceInstance){
-      this.mountPartialToComment('ITEMS', newInstance, referenceInstance);
-    }
+  addItem(newInstance, referenceInstance) {
+    this.mountPartialToComment('ITEMS', newInstance, referenceInstance);
+  }
 }
 
 List._interface = {
-  "methods": {
-    "addTitle": {},
-    "addItem": {}
+  methods: {
+    addTitle: {},
+    addItem: {}
   }
 };
 List._defaults = {};

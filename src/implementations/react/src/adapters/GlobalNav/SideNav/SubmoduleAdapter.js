@@ -1,109 +1,33 @@
+import React from 'react';
+import * as HIG from 'hig-vanilla';
+import HIGAdapter, {
+  MapsEventListener,
+  MapsPropToMethod,
+  MountedByHIGParentList
+} from '../../HIGAdapter';
 
-import * as PropTypes from 'prop-types';
-import createComponent from '../../createComponent';
-import HIGElement from '../../../elements/HIGElement';
-
-export class SubmoduleAdapter extends HIGElement {
-  componentDidMount() {
-    this.hig.show();
-
-    if (this.props.active !== undefined) {
-      this.commitUpdate(['active', this.props.active]);
-    }
-
-    if (this.props.onClick !== undefined) {
-      this.commitUpdate(['onClick', this.props.onClick]);
-    }
-
-    if (this.props.onHover !== undefined) {
-      this.commitUpdate(['onHover', this.props.onHover]);
-    }
-  }
-
-  commitUpdate(updatePayload, oldProps, newProps) {
-    for (let i = 0; i < updatePayload.length; i += 2) {
-      const propKey = updatePayload[i];
-      const propValue = updatePayload[i + 1];
-
-      switch (propKey) {
-        case 'active': {
-          propValue ? this.hig.activate() : this.hig.deactivate();
-          break;
-        }
-        case 'title': {
-          this.hig.setTitle(propValue);
-          break;
-        }
-        case 'link': {
-          this.hig.setLink(propValue || '');
-          break;
-        }
-        case 'onClick': {
-          const dispose = this._disposeFunctions.get('onClickDispose');
-
-          if (dispose) {
-            dispose();
-          }
-
-          this._disposeFunctions.set(
-            'onClickDispose',
-            this.hig.onClick(propValue)
-          );
-          break;
-        }
-        case 'onHover': {
-          const dispose = this._disposeFunctions.get('onHoverDispose');
-
-          if (dispose) {
-            dispose();
-          }
-
-          this._disposeFunctions.set(
-            'onHoverDispose',
-            this.hig.onHover(propValue)
-          );
-          break;
-        }
-        default: {
-          console.warn(`${propKey} is unknown`);
-        }
-      }
-    }
-  }
+function SubmoduleAdapter(props) {
+  return (
+    <HIGAdapter name="Submodule" HIGConstructor={HIG.GlobalNav._partials.SideNav._partials.Group._partials.Module._partials.Submodule} {...props}>{(adapterProps) => (
+      <div>
+        <MountedByHIGParentList mounter="addSubmodule" {...adapterProps} />
+        <MapsEventListener listener="onClick" handler={props.onClick} {...adapterProps} />
+        <MapsEventListener listener="onHover" handler={props.onHover} {...adapterProps} />
+        <MapsPropToMethod value={props.show} setter="show" {...adapterProps}>
+          {(instance, value) => value ? instance.show() : instance.hide()}
+        </MapsPropToMethod>
+        <MapsPropToMethod value={props.link} setter="setLink" {...adapterProps} />
+        <MapsPropToMethod value={props.title} setter="setTitle" {...adapterProps} />
+        <MapsPropToMethod value={props.active} {...adapterProps}>
+          {(instance, value) => value ? instance.activate() : instance.deactivate()}
+        </MapsPropToMethod>
+      </div>
+    )}</HIGAdapter>
+  );
 }
 
-const SubmoduleComponent = createComponent(SubmoduleAdapter);
+SubmoduleAdapter.defaultProps = {
+  show: true
+}
 
-SubmoduleComponent.propTypes = {
-  title: PropTypes.string,
-  link: PropTypes.string,
-  active: PropTypes.bool,
-  onClick: PropTypes.func,
-  onHover: PropTypes.func
-};
-
-SubmoduleComponent.__docgenInfo = {
-  props: {
-    title: {
-      description: 'sets the title of a submodule'
-    },
-
-    link: {
-      description: 'sets the link of a submodule'
-    },
-
-    active: {
-      description: 'activates the submodule'
-    },
-
-    onClick: {
-      description: 'triggered when a link is clicked on'
-    },
-
-    onHover: {
-      description: 'triggered when a link is hovered over'
-    }
-  }
-};
-
-export default SubmoduleComponent;
+export default SubmoduleAdapter;

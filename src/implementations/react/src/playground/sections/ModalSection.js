@@ -1,13 +1,12 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PlaygroundSection from '../PlaygroundSection';
 import { Button, Modal } from '../../hig-react';
 
-class ModalSection extends Component {
+class ModalSection extends PureComponent {
   constructor() {
     super();
-    this.state = { 
-      isOpen: false,
-      openUncontrolled: false
+    this.state = {
+      isOpen: false
     };
   }
 
@@ -16,20 +15,11 @@ class ModalSection extends Component {
   };
 
   closeModal = (event) => {
-    event.preventDefault();
-    this.setState({ isOpen: false, openUncontrolled: false });
+    this.setState({ isOpen: false });
   };
 
   openModal = (event) => {
-    event.preventDefault();
-    this.setState({ isOpen: true, openUncontrolled: false });
-    console.log(this.state);
-  };
-
-  openModalUncontrolled = (event) => {
-    event.preventDefault();
-    this.setState({ openUncontrolled: true });
-    console.log(this.state);
+    this.setState({ isOpen: true });
   };
 
   render() {
@@ -40,22 +30,10 @@ class ModalSection extends Component {
 
     return (
       <PlaygroundSection title="Modal">
-        <Button title="Open modal (uncontrolled)" onClick={this.openModalUncontrolled} />
+        <Button title="Open modal" onClick={this.openModal} />
         <Modal
           title="Are you sure?"
-          openUncontrolled={this.state.openUncontrolled}
-          body="This is the text body of my modal"
-          style="standard"
-          onClose={this.logCloseModal}
-          >
-          <h1><u>This is my HTML title</u></h1>
-          <p><i>This is my HTML content.</i></p>
-        </Modal>
-
-        <Button title="Open modal (controlled)" onClick={this.openModal} />
-        <Modal
-          title="Are you sure?"
-          openControlled={this.state.isOpen}
+          open={this.state.isOpen}
           buttons={buttonProps}
           body="This is the text body of my modal"
           style="alternate"

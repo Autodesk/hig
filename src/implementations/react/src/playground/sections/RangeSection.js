@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PlaygroundSection from '../PlaygroundSection';
 import { Range } from '../../hig-react';
 
-class RangeSection extends Component {
+class RangeSection extends PureComponent {
   constructor(props) {
     super(props);
     this.state ={

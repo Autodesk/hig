@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import PasswordFieldAdapter
   from '../../../adapters/FormElements/PasswordFieldAdapter.js';
-import controlled from '../../ControlledField';
-
-const ControlledPasswordFieldAdapter = controlled(PasswordFieldAdapter);
 
 class PasswordField extends Component {
   static propTypes = {
@@ -62,7 +59,7 @@ class PasswordField extends Component {
 
   render() {
     return (
-      <ControlledPasswordFieldAdapter
+      <PasswordFieldAdapter
         {...this.props}
         onBlur={this.handleBlur}
         onFocus={this.handleFocus}

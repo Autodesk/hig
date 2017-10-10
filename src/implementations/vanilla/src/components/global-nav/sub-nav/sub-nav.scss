@@ -2,59 +2,55 @@
 @import '~basics/shadows/shadows.scss';
 @import '~basics/responsive/responsive.scss';
 @import '~helpers/css/mixins/base.scss';
+@import '~helpers/css/layers.scss';
 
 .hig__global-nav__sub-nav {
-    @include reset;
+  @include reset;
 
-    background: color(hig-gray-60);
-    height: 54px;
-    line-height: 54px;
-    @include shadow("dropshadow");
+  background: color(hig-gray-60);
+  height: 54px;
+  line-height: 54px;
+  @include shadow("dropshadow");
 
+  display: flex;
+  align-items: center;
+
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: $sub-nav-layer;
+}
+
+.hig__global-nav__sub-nav__module-indicator:hover {
+  cursor: pointer;
+}
+
+.hig__global-nav__sub-nav__module-indicator__name {
+  display: none;
+  height: 50px;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 0 17px;
+
+  font-size: 18px;
+  font-weight: 700;
+  white-space: nowrap;
+
+  @include laptop-breakpoint {
     display: flex;
-    align-items: center;
+  }
+}
 
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
+.hig__global-nav__sub-nav__module-indicator__icon {
+  display: block;
+  margin-left: 15px;
 
-    &__module-indicator{
-        
-        &:hover{
-            cursor: pointer;
-        }
+  @include laptop-breakpoint {
+    display: none;
+  }
+}
 
-        &__name {
-            display: none;
-            height: 50px;
-            align-items: center;
-            flex-shrink: 0;
-            padding: 0 17px;
-
-            font-size: 18px;
-            font-weight: 700;
-            white-space: nowrap;
-
-            @include laptop-breakpoint {
-                display: flex;
-            }
-        }
-
-        &__icon {
-            display: block;
-            margin-left: 15px;
-
-            @include laptop-breakpoint {
-                display: none;
-            }
-        }
-    }
-
-    
-
-    &__spacer {
-        visibility: hidden;
-        flex-shrink: 100;
-    }
-
+.hig__global-nav__sub-nav__spacer {
+  visibility: hidden;
+  flex-shrink: 100;
 }

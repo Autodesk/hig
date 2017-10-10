@@ -187,7 +187,7 @@ class Playground extends React.Component {
         <FlyoutSection />
         <RichTextSection />
         <AvatarSection />
-        <GridSection/>
+        <GridSection />
         <IconSection />
         <SelectableTableSection />
 

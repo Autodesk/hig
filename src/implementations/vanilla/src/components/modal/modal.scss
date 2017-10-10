@@ -25,6 +25,7 @@
   position: fixed;
   right: 0px;
   top: 0px;
+  z-index: $modal-layer;
 }
 
 .hig__modal__window {

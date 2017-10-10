@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import PlaygroundSection from "../PlaygroundSection";
 import { Icon } from "../../hig-react";
 
@@ -186,7 +186,7 @@ const parentContainerStyles = {
   flexWrap: "wrap"
 };
 
-class IconSection extends Component {
+class IconSection extends PureComponent {
   render() {
     return (
       <PlaygroundSection title="Icon">

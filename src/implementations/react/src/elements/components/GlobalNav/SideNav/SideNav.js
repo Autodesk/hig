@@ -7,7 +7,6 @@ import Module from './Module';
 import ModuleCollapse from './ModuleCollapse';
 import Link from '../../../../adapters/GlobalNav/SideNav/LinkAdapter';
 import Search from './Search';
-import Slot from '../../../../adapters/SlotAdapter';
 import WithState from './WithState';
 
 class SideNav extends Component {
@@ -102,7 +101,7 @@ class SideNav extends Component {
           </Group>
         ))}
         {this.props.slot
-          ? <Slot>{this.props.slot}</Slot>
+          ? this.props.slot
           : null}
         {this.props.links.map(link => <Link {...link} key={link.title} />)}
         {this.props.searchable

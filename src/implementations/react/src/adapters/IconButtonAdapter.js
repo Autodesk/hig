@@ -1,152 +1,37 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import * as HIG from 'hig-vanilla'
 
-import * as HIG from 'hig-vanilla';
+import HIGAdapter, { MapsPropToMethod, MapsEventListener } from './HIGAdapter';
 
-import HIGElement from '../elements/HIGElement';
-import * as PropTypes from 'prop-types';
-import createComponent from '../adapters/createComponent';
-
-class IconButtonAdapter extends HIGElement {
-  constructor(initialProps) {
-    super(HIG.IconButton, initialProps);
-  }
-
-  componentDidMount() {
-    if (this.initialProps.disabled) {
-      this.hig.disable();
-    } else {
-      this.hig.enable();
-    }
-  }
-
-  commitUpdate(updatePayload, oldProps, newProps) {
-    for (let i = 0; i < updatePayload.length; i += 2) {
-      const propKey = updatePayload[i];
-      const propValue = updatePayload[i + 1];
-
-      switch (propKey) {
-        case 'disabled': {
-          if (propValue) {
-            this.hig.disable();
-          } else {
-            this.hig.enable();
-          }
-          break;
-        }
-        case 'title': {
-          this.hig.setTitle(propValue);
-          break;
-        }
-        case 'link': {
-          this.hig.setLink(propValue);
-          break;
-        }
-        case 'icon': {
-          this.hig.setIcon(propValue);
-          break;
-        }
-        case 'onClick': {
-          const dispose = this._disposeFunctions.get('onClickDispose');
-
-          if (dispose) {
-            dispose();
-          }
-
-          this._disposeFunctions.set(
-            'onClickDispose',
-            this.hig.onClick(propValue)
-          );
-          break;
-        }
-        case 'onHover': {
-          const dispose = this._disposeFunctions.get('onHoverDispose');
-
-          if (dispose) {
-            dispose();
-          }
-
-          this._disposeFunctions.set(
-            'onHoverDispose',
-            this.hig.onHover(propValue)
-          );
-          break;
-        }
-        case 'onFocus': {
-          const dispose = this._disposeFunctions.get('onFocusDispose');
-
-          if (dispose) {
-            dispose();
-          }
-
-          this._disposeFunctions.set(
-            'onFocusDispose',
-            this.hig.onFocus(propValue)
-          );
-          break;
-        }
-        case 'onBlur': {
-          const dispose = this._disposeFunctions.get('onBlurDispose');
-
-          if (dispose) {
-            dispose();
-          }
-
-          this._disposeFunctions.set(
-            'onBlurDispose',
-            this.hig.onBlur(propValue)
-          );
-          break;
-        }
-        default: {
-          console.warn(`${propKey} is unknown`);
-        }
-      }
-    }
-  }
+function IconButtonAdapter(props) {
+  return (
+    <HIGAdapter displayName="IconButton" HIGConstructor={HIG.IconButton} {...props}>{(adapterProps) => (
+        <div>
+          <MapsPropToMethod value={props.title} setter={"setTitle"} {...adapterProps} />
+          <MapsPropToMethod value={props.link} setter={"setLink"} {...adapterProps} />
+          <MapsPropToMethod value={props.icon} setter={"setIcon"} {...adapterProps} />
+          <MapsPropToMethod value={props.disabled} {...adapterProps}>
+            {(instance, value) => value ? instance.disable() : instance.enable() }
+          </MapsPropToMethod>
+          <MapsEventListener listener="onClick" handler={props.onBlur}  {...adapterProps} />
+          <MapsEventListener listener="onHover" handler={props.onHover}  {...adapterProps} />
+          <MapsEventListener listener="onFocus" handler={props.onFocus}  {...adapterProps} />
+          <MapsEventListener listener="onBlur" handler={props.onBlur}  {...adapterProps} />
+        </div>
+    )}</HIGAdapter>
+  );
 }
 
-const IconButtonAdapterComponent = createComponent(IconButtonAdapter);
-
-IconButtonAdapterComponent.propTypes = {
+IconButtonAdapter.propTypes = {
   title: PropTypes.string,
-  icon: PropTypes.string,
-  disabled: PropTypes.bool,
   link: PropTypes.string,
+  icon: PropTypes.string.isRequired,
+  disabled: PropTypes.bool,
   onBlur: PropTypes.func,
   onClick: PropTypes.func,
   onFocus: PropTypes.func,
   onHover: PropTypes.func
-};
+}
 
-IconButtonAdapterComponent.__docgenInfo = {
-  props: {
-    title: {
-      description: 'sets the title of a button'
-    },
-
-    link: {
-      description: 'sets the link of a button'
-    },
-
-    icon: {
-      description: 'specifies icon for button'
-    },
-
-    onClick: {
-      description: 'triggers when you click the button'
-    },
-
-    onHover: {
-      description: 'triggers when you hover over the button'
-    },
-
-    onFocus: {
-      description: 'triggers focus is moved to the icon button'
-    },
-
-    onBlur: {
-      description: 'triggers blur when focus is moved away from the icon button'
-    }
-  }
-};
-
-export default IconButtonAdapterComponent;
+export default IconButtonAdapter

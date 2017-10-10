@@ -4,11 +4,10 @@ import PropTypes from 'prop-types';
 import GlobalNavAdapter from '../../../adapters/GlobalNav/GlobalNavAdapter';
 import TopNavAdapter from '../../../adapters/GlobalNav/TopNav/TopNavAdapter';
 import SubNavAdapter from '../../../adapters/GlobalNav/SubNav/SubNavAdapter';
-import HelpAdapter from '../../../adapters/GlobalNav/TopNav/Help/HelpAdapter';
-import GroupAdapter from '../../../adapters/GlobalNav/TopNav/Help/GroupAdapter';
-import OptionAdapter from '../../../adapters/GlobalNav/TopNav/Help/OptionAdapter';
+import HelpAdapter from '../../../adapters/GlobalNav/TopNav/HelpAdapter';
+import GroupAdapter from '../../../adapters/GlobalNav/TopNav/GroupAdapter';
+import OptionAdapter from '../../../adapters/GlobalNav/TopNav/OptionAdapter';
 import SideNav from './SideNav';
-import Slot from '../../../adapters/SlotAdapter';
 import Tabs from './SubNav/Tabs';
 import ProjectAccountSwitcher from './TopNav/ProjectAccountSwitcher';
 
@@ -100,7 +99,7 @@ class GlobalNav extends Component {
   }
 
   showHelp() {
-    return !!this.props.topNav.help;
+    return this.props.topNav.help && this.props.topNav.help.groups && this.props.topNav.help.groups.length > 0;
   }
 
   renderTab = (submodule) => {
@@ -137,10 +136,10 @@ class GlobalNav extends Component {
               : null}
               {this.showHelp()
               ? <HelpAdapter {...this.props.topNav.help}>
-                {(this.props.topNav.help.groups || []).map(groupProps => (
-                  <GroupAdapter {...groupProps}>
+                {(this.props.topNav.help.groups || []).map((groupProps, i) => (
+                  <GroupAdapter key={i} {...groupProps}>
                     {(groupProps.options || []).map(optionProps => (
-                      <OptionAdapter {...optionProps} />
+                      <OptionAdapter key={optionProps.name} {...optionProps} />
                     ))}
                   </GroupAdapter>
                 ))}
@@ -172,7 +171,7 @@ class GlobalNav extends Component {
               </SubNavAdapter>
             : null}
           {this.props.children
-            ? <Slot>{this.props.children}</Slot>
+            ? this.props.children
             : null}
         </GlobalNavAdapter>
       </div>

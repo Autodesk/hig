@@ -7,7 +7,7 @@ const Core = require('../../helpers/js/_core.js');
 const AvailableTypes = ['primary', 'secondary', 'flat'];
 const AvailableSizes = ['small', 'standard', 'large'];
 const AvailableWidths = ['shrink', 'grow'];
-const Icon = require("../../basics/icon/icon.js");
+const Icon = require('../../basics/icon/icon.js');
 
 
 /**
@@ -76,14 +76,14 @@ class Button extends Core {
 
   setIcon(icon) {
     if (icon && icon.length > 0) {
-      const mountEl  = this._findOrAddElement(
-        "ICON",
-        "span",
-        ".hig__button__icon"
-      )
+      const mountEl = this._findOrAddElement(
+        'ICON',
+        'span',
+        '.hig__button__icon'
+      );
       this._findOrCreateIconComponent(mountEl).setNameOrSVG(icon);
     } else {
-      this._removeElementIfFound(".hig__button__icon");
+      this._removeElementIfFound('.hig__button__icon');
     }
   }
 
@@ -120,11 +120,11 @@ class Button extends Core {
   _findOrCreateIconComponent(mountElOrSelector, name = "icon") {
     if (this[name]) {
       return this[name];
-    } else {
+    } 
       this[name] = new Icon({});
       this[name].mount(mountElOrSelector);
       return this[name];
-    }
+    
   }
 
   _clearAllTypes() {
@@ -157,7 +157,8 @@ Button._defaults = {
   width: 'shrink'
 };
 
-Button.AvailableTypes = AvailableTypes;
 Button.AvailableSizes = AvailableSizes;
+Button.AvailableTypes = AvailableTypes;
+Button.AvailableWidths = AvailableWidths;
 
 module.exports = Button;

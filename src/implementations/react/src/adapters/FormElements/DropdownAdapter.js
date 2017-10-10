@@ -1,232 +1,45 @@
-import * as HIG from "hig-vanilla";
+import React from 'react';
+import PropTypes from 'prop-types';
+import * as HIG from 'hig-vanilla';
+import HIGAdapter, {
+  MapsPropToMethod,
+  MapsEventListener,
+  MountsHIGChildList
+} from '../HIGAdapter';
 
-import HIGElement from "../../elements/HIGElement";
-import * as PropTypes from "prop-types";
-import createComponent from "../createComponent";
-
-import HIGNodeList from "../../elements/HIGNodeList";
-import HIGChildValidator from "../../elements/HIGChildValidator";
-import OptionComponent, { OptionAdapter } from "./OptionAdapter";
-import Option from '../../elements/components/FormElements/Option';
-
-export class DropdownAdapter extends HIGElement {
-  constructor(initialProps) {
-    super(HIG.Dropdown, initialProps);
-
-    this.options = new HIGNodeList({
-      OptionAdapter: {
-        type: OptionAdapter,
-        HIGConstructor: this.hig.partials.Option,
-        onAdd: (instance, beforeInstance) => {
-          this.hig.addOption(instance, beforeInstance);
-        }
-      }
-    });
-  }
-
-  componentDidMount() {
-    this.options.componentDidMount();
-
-    if (this.props.open) {
-      this.commitUpdate(["open", this.props.open]);
-    }
-
-    if (this.props.disabled) {
-      this.commitUpdate(["disabled", this.props.disabled]);
-    }
-
-    if (this.props.selectedOptionLabel) {
-      this.commitUpdate([
-        "selectedOptionLabel",
-        this.props.selectedOptionLabel
-      ]);
-    }
-
-    if (this.props.required) {
-      this.commitUpdate(["required", this.props.required]);
-    }
-
-    if (this.props.onBlur) {
-      this.commitUpdate(["onBlur", this.props.onBlur]);
-    }
-
-    if (this.props.onClickOutside) {
-      this.commitUpdate(["onClickOutside", this.props.onClickOutside]);
-    }
-
-    if (this.props.onFocus) {
-      this.commitUpdate(["onFocus", this.props.onFocus]);
-    }
-
-    if (this.props.onKeypress) {
-      this.commitUpdate(["onKeypress", this.props.onKeypress]);
-    }
-
-    if (this.props.onTargetClick) {
-      this.commitUpdate(["onTargetClick", this.props.onTargetClick]);
-    }
-  }
-
-  commitUpdate(updatePayload, oldProps, newProps) {
-    for (let i = 0; i < updatePayload.length; i += 2) {
-      const propKey = updatePayload[i];
-      const propValue = updatePayload[i + 1];
-
-      switch (propKey) {
-        case "label": {
-          this.hig.setLabel(propValue);
-          break;
-        }
-        case "instructions": {
-          this.hig.setInstructions(propValue);
-          break;
-        }
-        case "placeholder": {
-          this.hig.setPlaceholder(propValue);
-          break;
-        }
-        case "open": {
-          if (propValue) {
-            this.hig.open();
-          } else {
-            this.hig.close();
-          }
-          break;
-        }
-        case "disabled": {
-          if (propValue) {
-            this.hig.disable();
-          } else {
-            this.hig.enable();
-          }
-          break;
-        }
-        case "selectedOptionLabel": {
-          this.hig.setSelectedOptionLabel(propValue);
-          break;
-        }
-        case "required": {
-          if (propValue) {
-            this.hig.required(propValue);
-          } else {
-            this.hig.noLongerRequired();
-          }
-          break;
-        }
-        case "onBlur": {
-          const dispose = this._disposeFunctions.get("onBlur");
-
-          if (dispose) {
-            dispose();
-          }
-          this._disposeFunctions.set(
-            "onBlurDispose",
-            this.hig.onBlur(propValue)
-          );
-          break;
-        }
-        case "onClickOutside": {
-          const dispose = this._disposeFunctions.get("onClickOutside");
-
-          if (dispose) {
-            dispose();
-          }
-
-          this._disposeFunctions.set(
-            "onClickOutsideDispose",
-            this.hig.onClickOutside(propValue)
-          );
-          break;
-        }
-        case "onFocus": {
-          const dispose = this._disposeFunctions.get("onFocus");
-
-          if (dispose) {
-            dispose();
-          }
-
-          this._disposeFunctions.set(
-            "onFocusDispose",
-            this.hig.onFocus(propValue)
-          );
-          break;
-        }
-        case "onKeypress": {
-          const dispose = this._disposeFunctions.get("onKeypress");
-
-          if (dispose) {
-            dispose();
-          }
-
-          this._disposeFunctions.set(
-            "onKeypressDispose",
-            this.hig.onKeypress(propValue)
-          );
-          break;
-        }
-        case "onTargetClick": {
-          const dispose = this._disposeFunctions.get("onTargetClick");
-
-          if (dispose) {
-            dispose();
-          }
-
-          this._disposeFunctions.set(
-            "onTargetClickDispose",
-            this.hig.onTargetClick(propValue)
-          );
-          break;
-        }
-        case "children": {
-          //no-op
-          break;
-        }
-        default: {
-          // No-op
-        }
-      }
-    }
-  }
-
-  createElement(ElementConstructor, props) {
-    switch (ElementConstructor) {
-      case OptionAdapter:
-        return this.options.createElement(ElementConstructor, props);
-      default:
-        throw new Error(`Unknown type ${ElementConstructor.name}`);
-    }
-  }
-
-  insertBefore(instance, beforeChild = {}) {
-    if (instance instanceof OptionAdapter) {
-      this.options.insertBefore(instance);
-    } else {
-      throw new Error(
-        `${this.constructor.name} cannot have a child of type ${instance
-          .constructor.name}`
-      );
-    }
-  }
-
-  removeChild(instance) {
-    if (instance instanceof OptionAdapter) {
-      this.options.removeChild(instance)
-    }
-    instance.unmount();
-  }
-
-  openDropdown = () => {
-    this.hig.open();
-  };
-
-  closeDropdown = () => {
-    this.hig.close();
-  };
+function DropdownAdapter(props) {
+  return (
+    <HIGAdapter {...props} name="Dropdown" HIGConstructor={HIG.Dropdown}>{adapterProps => (
+      <div>
+        <MapsEventListener listener="onBlur" handler={props.onBlur} {...adapterProps} />
+        <MapsEventListener listener="onClickOutside" handler={props.onClickOutside} {...adapterProps} />
+        <MapsEventListener listener="onFocus" handler={props.onFocus} {...adapterProps} />
+        <MapsEventListener listener="onKeypress" handler={props.onKeypress} {...adapterProps} />
+        <MapsEventListener listener="onTargetClick" handler={props.onTargetClick} {...adapterProps} />
+        <MapsPropToMethod value={props.label} setter="setLabel" {...adapterProps} />
+        <MapsPropToMethod value={props.instructions} setter="setInstructions" {...adapterProps} />
+        <MapsPropToMethod value={props.placeholder} setter="setPlaceholder" {...adapterProps} />
+        <MapsPropToMethod value={props.open} {...adapterProps}>
+          {(instance, value) => { value ? instance.open() : instance.close() }}
+        </MapsPropToMethod>
+        <MapsPropToMethod value={props.disabled} {...adapterProps}>
+          {(instance, value) => { value ? instance.disable() : instance.enable() }}
+        </MapsPropToMethod>
+        <MapsPropToMethod value={props.required} {...adapterProps}>
+          {(instance, value) => { value ? instance.required(value) : instance.noLongerRequired() }}
+        </MapsPropToMethod>
+        <MapsPropToMethod value={props.selectedOptionLabel} setter="setSelectedOptionLabel" {...adapterProps} />
+        <MountsHIGChildList {...adapterProps}>{props.children}</MountsHIGChildList>
+      </div>
+    )}</HIGAdapter>
+  );
 }
 
-const DropdownComponent = createComponent(DropdownAdapter);
+DropdownAdapter.defaultProps = {
+  children: null
+}
 
-DropdownComponent.propTypes = {
+DropdownAdapter.propTypes = {
   label: PropTypes.string,
   instructions: PropTypes.string,
   placeholder: PropTypes.string,
@@ -239,53 +52,7 @@ DropdownComponent.propTypes = {
   onKeypress: PropTypes.func,
   onTargetClick: PropTypes.func,
   setSelectedOptionLabel: PropTypes.func,
-
-  children: HIGChildValidator([OptionComponent, Option])
+  // children: HIGChildValidator([OptionAdapter, Option])
 };
 
-DropdownComponent.__docgenInfo = {
-  props: {
-    label: {
-      description: "{string} label for the the dropdown"
-    },
-    instructions: {
-      description: "{string} instructions for the dropdown"
-    },
-    open: {
-      description: "{bool} opens the dropdown"
-    },
-    disabled: {
-      description: "{bool} makes the dropdown disabled"
-    },
-    required: {
-      description: "{string} makes the field required"
-    },
-    onBlur: {
-      description:
-        "Calls the provided callback when focus moves away from the dropdown"
-    },
-    onClickOutside: {
-      description:
-        "Calls the provided callback when the user clicks on the dropdown"
-    },
-    onFocus: {
-      description:
-        "Calls the provided callback when the user focuses on the dropdown"
-    },
-    onKeypress: {
-      description:
-        "Calls the provided callback when the user presses a key while the dropdown has focus"
-    },
-    onTargetClick: {
-      description:
-        "Calls the provided callback when the user clicks on the dropdown button"
-    },
-    setSelectedOptionLabel: {
-      description: "Sets value of selected option as value of dropdown"
-    }
-  }
-};
-
-DropdownComponent.Option = OptionComponent;
-
-export default DropdownComponent;
+export default DropdownAdapter;

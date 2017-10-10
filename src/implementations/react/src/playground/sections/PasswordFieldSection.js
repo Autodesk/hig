@@ -1,15 +1,17 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PlaygroundSection from '../PlaygroundSection';
 import { PasswordField } from '../../hig-react';
 
-class PasswordFieldSection extends Component {
+class PasswordFieldSection extends PureComponent {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      password: 'foo'
+    };
   }
 
   setPassword = (event) => {
-    this.setState({ password: event.target.value });
+    // this.setState({ password: event.target.value });
   }
 
   logEvent(event, higElement) {

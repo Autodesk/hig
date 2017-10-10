@@ -1,17 +1,10 @@
 import React, { Component } from 'react';
 import * as PropTypes from 'prop-types';
 
-import DropdownAdapter
-  from '../../../adapters/FormElements/DropdownAdapter.js';
+import DropdownAdapter from '../../../adapters/FormElements/DropdownAdapter.js';
 import Option from './Option';
 
 class Dropdown extends Component {
-
-  static defaultProps = {
-    options: [],
-    onChange: () => {}
-  }
-
   constructor(props) {
     super(props);
 
@@ -19,6 +12,11 @@ class Dropdown extends Component {
       open: false,
       value: this.getDefaultValue()
     };
+  }
+
+  static defaultProps = {
+    options: [],
+    onChange: () => {}
   }
 
   getDefaultValue() {

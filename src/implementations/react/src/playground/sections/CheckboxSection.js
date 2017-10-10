@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import PlaygroundSection from "../PlaygroundSection";
 import { Checkbox } from "../../hig-react";
 
@@ -16,7 +16,7 @@ function logEvent(event) {
   console.log(messageParts.join(""));
 }
 
-class CheckboxSection extends Component {
+class CheckboxSection extends PureComponent {
   constructor(props) {
     super(props);
 

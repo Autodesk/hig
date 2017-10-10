@@ -1,141 +1,67 @@
-import * as HIG from 'hig-vanilla';
-import * as PropTypes from 'prop-types';
-import createComponent from './createComponent';
-import HIGElement from '../elements/HIGElement';
-import { ButtonAdapter } from './ButtonAdapter';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import createFragment from 'react-addons-create-fragment';
 
-class ModalAdapter extends HIGElement {
-  constructor(initialProps) {
-    super(HIG.Modal, initialProps);
+import * as HIG from 'hig-vanilla';
+import HIGAdapter, {
+  MapsPropToMethod,
+  MapsEventListener,
+  MountsAnyChild
+} from './HIGAdapter';
+import { Button } from '../hig-react';
+
+class ModalAdapter extends Component {
+  constructor(props) {
+    super(props);
     this.buttons = [];
   }
 
-  componentDidMount() {
-    if (this.props.open) {
-      this.commitUpdate(['open', this.props.open]);
-    }
-
-    if (this.props.buttons) {
-      this.commitUpdate(['buttons', this.props.buttons]);
-    }
-
-    if (this.props.slotEl) {
-      this.commitUpdate(['slotEl', this.props.slotEl]);
-    }
-
-    if (this.props.onOverlayClick) {
-      this.commitUpdate(['onOverlayClick', this.props.onOverlayClick]);
-    }
-
-    if (this.props.onCloseClick) {
-      this.commitUpdate(['onCloseClick', this.props.onCloseClick]);
-    }
-
-    this.buttons.forEach(button => {
-      this.hig.addButton(button.hig);
-      button.componentDidMount();
-    });
-  }
-
-  commitUpdate(updatePayload) {
-    for (let i = 0; i < updatePayload.length; i += 2) {
-      const propKey = updatePayload[i];
-      const propValue = updatePayload[i + 1];
-
-      switch (propKey) {
-        case 'body': {
-          this.hig.setBody(propValue);
-          break;
-        }
-        case 'buttons': {
-          this._addButtons(propValue);
-          break;
-        }
-        case 'children': {
-          // no-op
-          break;
-        }
-        case 'style': {
-          this.hig.setStyle(propValue);
-          break;
-        }
-        case 'onOverlayClick': {
-          const dispose = this._disposeFunctions.get('onOverlayClickDispose');
-
-          if (dispose) {
-            dispose();
-          }
-
-          this._disposeFunctions.set(
-            'onOverlayClickDispose',
-            this.hig.onOverlayClick(propValue)
-          );
-          break;
-        }
-        case 'onCloseClick': {
-          const dispose = this._disposeFunctions.get('onCloseClick');
-
-          if (dispose) {
-            dispose();
-          }
-
-          this._disposeFunctions.set(
-            'onCloseClick',
-            this.hig.onCloseClick(propValue)
-          );
-          break;
-        }
-        case 'open': {
-          propValue ? this.hig.open() : this.hig.close();
-          break;
-        }
-        case 'slotEl': {
-          this.hig.addSlot(propValue);
-          break;
-        }
-        case 'title': {
-          this.hig.setTitle(propValue);
-          break;
-        }
-        default: {
-          console.warn(`${propKey} is unknown`);
-        }
-      }
-    }
-  }
-
-  _addButtons(nextButtons) {
+  mapButtons = (higInstance, nextButtons) => {
     this.buttons.forEach(button => {
       button.unmount();
     });
 
     this.buttons = nextButtons.map(buttonProps => {
-      const button = new ButtonAdapter(buttonProps);
+      const button = new HIG.Button(buttonProps);
 
-      if (this.mounted) {
-        this.hig.addButton(button.hig);
-        button.componentDidMount();
-      }
+      higInstance.addButton(button);
 
       return button;
     });
   }
+
+  render() {
+    return (
+      <HIGAdapter displayName="Modal" HIGConstructor={HIG.Modal} {...this.props}>{(adapterProps) => (
+        <div>
+          <MapsPropToMethod setter="setBody" value={this.props.body} {...adapterProps} />
+          <MapsPropToMethod setter="setStyle" value={this.props.style} {...adapterProps} />
+          <MapsPropToMethod setter="setTitle" value={this.props.title} {...adapterProps} />
+          <MapsPropToMethod value={this.props.open} {...adapterProps}>
+            {(instance, value) => value ? instance.open() : instance.close() }
+          </MapsPropToMethod>
+          <MapsEventListener listener="onCloseClick" handler={this.props.onCloseClick} {...adapterProps} />
+          <MapsEventListener listener="onOverlayClick" handler={this.props.onOverlayClick} {...adapterProps} />
+          <MountsAnyChild mounter="addSlot" {...adapterProps}>{this.props.children}</MountsAnyChild>
+          <MapsPropToMethod value={this.props.buttons} {...adapterProps}>{this.mapButtons}</MapsPropToMethod>
+        </div>
+      )}</HIGAdapter>
+    );
+  }
 }
 
-const ModalAdapterComponent = createComponent(ModalAdapter);
-
-ModalAdapterComponent.propTypes = {
+ModalAdapter.propTypes = {
   body: PropTypes.string,
-  buttons: PropTypes.array,
-  style: PropTypes.string,
+  buttons: PropTypes.arrayOf(PropTypes.shape(Button.propTypes)),
+  children: PropTypes.node,
   onCloseClick: PropTypes.func,
   onOverlayClick: PropTypes.func,
   open: PropTypes.bool,
-  title: PropTypes.string,
-  children: PropTypes.node
+  style: PropTypes.oneOf(HIG.Modal.AvailableStyles),
+  title: PropTypes.string
 };
 
-ModalAdapterComponent.__docgenInfo = {
+ModalAdapter.__docgenInfo = {
   props: {
     body: {
       description: 'text or html string content of the modal'
@@ -164,8 +90,8 @@ ModalAdapterComponent.__docgenInfo = {
   }
 }
 
-ModalAdapterComponent.defaultProps = {
+ModalAdapter.defaultProps = {
   buttons: []
 }
 
-export default ModalAdapterComponent;
+export default ModalAdapter;

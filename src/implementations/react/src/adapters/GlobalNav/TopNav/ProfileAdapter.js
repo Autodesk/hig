@@ -1,140 +1,39 @@
-import * as PropTypes from 'prop-types';
-import HIGElement from '../../../elements/HIGElement';
-import createComponent from '../../createComponent';
+import React from 'react';
+import PropTypes from 'prop-types';
+import * as HIG from 'hig-vanilla';
+import HIGAdapter, {
+  MountedByHIGParent,
+  MapsPropToMethod,
+  MapsEventListener
+} from '../../HIGAdapter';
 
-export class ProfileAdapter extends HIGElement {
-  constructor(HIGConstructor, initialProps) {
-    super(HIGConstructor, initialProps);
-
-    ['openProfile', 'closeProfile'].forEach(fn => {
-      this[fn] = this[fn].bind(this);
-    });
-  }
-  commitUpdate(updatePayload, oldProps, newProps) {
-    for (let i = 0; i < updatePayload.length; i += 2) {
-      const propKey = updatePayload[i];
-      const propValue = updatePayload[i + 1];
-
-      switch (propKey) {
-        case 'open': {
-          if (propValue) {
-            this.hig.open();
-          } else {
-            this.hig.close();
-          }
-          break;
-        }
-        case 'email': {
-          this.hig.setEmail(propValue);
-          break;
-        }
-        case 'image': {
-          this.hig.setImage(propValue);
-          break;
-        }
-        case 'name': {
-          this.hig.setName(propValue);
-          break;
-        }
-        case 'profileSettingsLink': {
-          this.hig.setProfileSettingsLink(propValue);
-          break;
-        }
-        case 'profileSettingsLabel': {
-          this.hig.setProfileSettingsLabel(propValue);
-          break;
-        }
-        case 'signOutLabel': {
-          this.hig.setSignOutLabel(propValue);
-          break;
-        }
-        case 'signOutLink': {
-          this.hig.setSignOutLink(propValue);
-          break;
-        }
-        case 'onSignOutClick': {
-          const dispose = this._disposeFunctions.get('onSignOutClickDispose');
-
-          if (dispose) {
-            dispose();
-          }
-
-          this._disposeFunctions.set(
-            'onSignOutClickDispose',
-            this.hig.onSignOutClick(propValue)
-          );
-          break;
-        }
-        case 'onProfileSettingsClick': {
-          const dispose = this._disposeFunctions.get(
-            'onProfileSettingsClickDispose'
-          );
-
-          if (dispose) {
-            dispose();
-          }
-
-          this._disposeFunctions.set(
-            'onProfileSettingsClickDispose',
-            this.hig.onProfileSettingsClick(propValue)
-          );
-          break;
-        }
-        case 'onProfileImageClick': {
-          const dispose = this._disposeFunctions.get(
-            'onProfileImageClickDispose'
-          );
-
-          if (dispose) {
-            dispose();
-          }
-
-          this._disposeFunctions.set(
-            'onProfileImageClickDispose',
-            this.hig.onProfileImageClick(propValue)
-          );
-          break;
-        }
-        case 'onProfileClickOutside': {
-          const dispose = this._disposeFunctions.get('onProfileClickOutside');
-
-          if (dispose) {
-            dispose();
-          }
-
-          this._disposeFunctions.set(
-            'onProfileClickOutside',
-            this.hig.onProfileClickOutside(propValue)
-          );
-          break;
-        }
-        default: {
-          console.warn(`${propKey} is unknown`);
-        }
-      }
-    }
-  }
-
-  componentDidMount() {
-    if (this.initialProps.open === true) {
-      this.hig.open();
-    }
-    this.hig.onProfileImageClick(this.openProfile);
-    this.hig.onProfileClickOutside(this.closeProfile);
-  }
-
-  openProfile() {
-    this.hig.open();
-  }
-
-  closeProfile() {
-    this.hig.close();
-  }
+function ProfileAdapter(props) {
+  return (
+    <HIGAdapter {...props} name="Profile" HIGConstructor={HIG.GlobalNav._partials.TopNav._partials.Profile}>
+      {adapterProps => (
+        <div>
+          <MountedByHIGParent mounter="addProfile" {...adapterProps} />
+          <MapsEventListener listener="onSignOutClick" handler={props.onSignOutClick} {...adapterProps} />
+          <MapsEventListener listener="onProfileSettingsClick" handler={props.onProfileSettingsClick} {...adapterProps} />
+          <MapsEventListener listener="onProfileImageClick" handler={props.onProfileImageClick} {...adapterProps} />
+          <MapsEventListener listener="onProfileClickOutside" handler={props.onProfileClickOutside} {...adapterProps} />
+          <MapsPropToMethod setter="setImage" value={props.image} {...adapterProps} />
+          <MapsPropToMethod setter="setName" value={props.name} {...adapterProps} />
+          <MapsPropToMethod setter="setProfileSettingsLabel" value={props.profileSettingsLabel} {...adapterProps} />
+          <MapsPropToMethod setter="setProfileSettingsLink" value={props.profileSettingsLink} {...adapterProps} />
+          <MapsPropToMethod setter="setSignOutLabel" value={props.signOutLabel} {...adapterProps} />
+          <MapsPropToMethod setter="setSignOutLink" value={props.signOutLink} {...adapterProps} />
+          <MapsPropToMethod setter="setEmail" value={props.email} {...adapterProps} />
+          <MapsPropToMethod value={props.open} {...adapterProps}>
+            {(instance, value) => { value ? instance.open() : instance.close() }}
+          </MapsPropToMethod>
+        </div>
+      )}
+    </HIGAdapter>
+  );
 }
 
-const ProfileComponent = createComponent(ProfileAdapter);
-
-ProfileComponent.propTypes = {
+ProfileAdapter.propTypes = {
   email: PropTypes.string,
   image: PropTypes.string,
   name: PropTypes.string,
@@ -149,45 +48,4 @@ ProfileComponent.propTypes = {
   onProfileClickOutside: PropTypes.func
 };
 
-ProfileComponent.__docgenInfo = {
-  props: {
-    open: {
-      description: '{bool} sets whether flyout is open or closed'
-    },
-    name: {
-      description: 'sets {String} display name'
-    },
-    email: {
-      description: 'sets {String} email'
-    },
-    image: {
-      description: 'sets {String} image - url to svg or other image object'
-    },
-    signOutLabel: {
-      description: 'sets {String} label for sign out button'
-    },
-    signOutLink: {
-      description: 'sets {String} URL for sign out button'
-    },
-    profileSettingsLabel: {
-      description: 'sets {String} label for settings button'
-    },
-    profileSettingsLink: {
-      description: 'sets {String} url to settings page'
-    },
-    onProfileSettingsClick: {
-      description: '{function} Triggered when user clicks profile settings link'
-    },
-    onSignOutClick: {
-      description: '{function} Triggered when user clicks sign out button'
-    },
-    onProfileImageClick: {
-      description: '{function} triggers when you click the profile'
-    },
-    onProfileClickOutside: {
-      description: '{function} triggers when you click anywhere but the profile flyout'
-    }
-  }
-};
-
-export default ProfileComponent;
+export default ProfileAdapter;
