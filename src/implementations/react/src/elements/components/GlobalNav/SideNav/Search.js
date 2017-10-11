@@ -5,17 +5,20 @@ import SearchAdapter from '../../../../adapters/GlobalNav/SideNav/SearchAdapter'
 class Search extends Component {
   static propTypes = {
     value: PropTypes.string,
-    defaultValue: PropTypes.string
+    defaultValue: PropTypes.string,
+    onInput: PropTypes.func
   }
 
   static defaultProps = {
-
+    onInput: () => {},
+    value: undefined,
+    defaultValue: undefined
   }
 
   constructor(props) {
     super(props);
 
-    const controlled = props.value === undefined ? false : true;
+    const controlled = props.value !== undefined;
 
     this.state = {
       value: this.getDefaultValue(),
@@ -30,9 +33,8 @@ class Search extends Component {
       return value;
     } else if (defaultValue !== undefined) {
       return defaultValue;
-    } else {
-      return '';
     }
+    return '';
   }
 
   getRenderedValue() {
@@ -40,18 +42,9 @@ class Search extends Component {
 
     if (value !== undefined) {
       return value;
-    } else {
-      return this.state.value;
     }
+    return this.state.value;
   }
-
-  handleInput = event => {
-    if (this.props.onInput) {
-      this.props.onInput(event);
-    }
-
-    this._setValue(event.target.value);
-  };
 
   showClearIcon = () => {
     this.setState({ clearIconVisible: true });
@@ -61,36 +54,25 @@ class Search extends Component {
     this.setState({ clearIconVisible: false });
   }
 
-  handleClearIconClick = event => {
+  handleClearIconClick = (event) => {
     this._setValue('');
-
-    if (this.props.onInput) {
-      this.props.onInput(event);
-    }
+    this.props.onInput(event);
   }
-
-  setNativeEl = nativeEl => {
-    this.nativeEl = nativeEl;
-  };
 
   _setValue(value) {
     if (this.state.controlled) {
-      if (this.nativeEl) {
-        this.nativeEl.forceNextReset();
-        this.setState({ value: this.state.value });
-      }
+      this.setState({ value: this.state.value });
     } else {
-      this.setState({ value: value });
+      this.setState({ value });
     }
   }
 
   render() {
     return (
       <SearchAdapter
-        ref={this.setNativeEl}
         {...this.props}
         value={this.getRenderedValue()}
-        onInput={this.handleInput}
+        onInput={this.props.onInput}
         onBlur={this.hideClearIcon}
         onFocus={this.showClearIcon}
         clearIconVisible={this.state.clearIconVisible}

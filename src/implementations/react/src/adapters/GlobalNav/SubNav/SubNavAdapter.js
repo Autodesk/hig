@@ -9,7 +9,7 @@ import HIGAdapter, {
 
 function SubNavAdapter(props) {
   return (
-    <HIGAdapter name="SubNav" HIGConstructor={HIG.GlobalNav._partials.SubNav} {...props}>
+    <HIGAdapter displayName="SubNav" HIGConstructor={HIG.GlobalNav._partials.SubNav} {...props}>
       {adapterProps => (
         <div>
           <MountedByHIGParent mounter="addSubNav" {...adapterProps} />

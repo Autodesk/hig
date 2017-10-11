@@ -8,7 +8,7 @@ import HIGAdapter, {
 
 function ShortcutAdapter(props) {
   return (
-    <HIGAdapter name="Shortcut" HIGConstructor={HIG.GlobalNav._partials.TopNav._partials.Shortcut} {...props}>
+    <HIGAdapter displayName="Shortcut" HIGConstructor={HIG.GlobalNav._partials.TopNav._partials.Shortcut} {...props}>
       {adapterProps => (
         <div>
           <MountedByHIGParent mounter="addShortcut" {...adapterProps} />

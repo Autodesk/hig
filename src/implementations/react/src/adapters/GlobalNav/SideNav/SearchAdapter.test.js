@@ -7,18 +7,16 @@ import SearchAdapter from './SearchAdapter';
 describe('SideNav SearchAdapter', () => {
   it('implements the hig interface', () => {
     expect((mockInstance) => {
-      const wrapper = mount(
-        <SearchAdapter
-          higInstance={mockInstance}
-          onFocus={() => {}}
-          onBlur={() => {}}
-          onInput={() => {}}
-          onClearIconClick={() => {}}
-          showClearIcon={true}
-          placeholder="Foo"
-          value="Bar"
-        />
-      );
+      const wrapper = mount(<SearchAdapter
+        higInstance={mockInstance}
+        onFocus={() => {}}
+        onBlur={() => {}}
+        onInput={() => {}}
+        onClearIconClick={() => {}}
+        clearIconVisible
+        placeholder="Foo"
+        value="Bar"
+      />);
       wrapper.props().higInstance.hideClearIcon();
     }).toImplementHIGInterfaceOf(HIG.GlobalNav._partials.SideNav._partials.Search);
   });

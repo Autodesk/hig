@@ -22,24 +22,27 @@ function sortChildren(children) {
       SubNavAdapter,
       SideNav
     ].includes(child.type))
-  }
+  };
 }
 
 export default function GlobalNavAdapter(props) {
-  const { otherChildren, topNav, sideNav, subNav } = sortChildren(React.Children.toArray(props.children));
+  const {
+    otherChildren, topNav, sideNav, subNav
+  } = sortChildren(React.Children.toArray(props.children));
 
   return (
-    <HIGAdapter name="GlobalNav" HIGConstructor={HIG.GlobalNav} {...props}>{adapterProps => (
+    <HIGAdapter displayName="GlobalNav" HIGConstructor={HIG.GlobalNav} {...props}>{adapterProps => (
       <div>
         <MapsEventListener listener="onHoverOutside" handler={props.onHoverOutside} {...adapterProps} />
         <MapsPropToMethod value={props.sideNavOpen} {...adapterProps}>
-          {(instance, value) => { value ? instance.showSideNav() : instance.hideSideNav() }}
+          {(instance, value) => { value ? instance.showSideNav() : instance.hideSideNav(); }}
         </MapsPropToMethod>
-        <MountsHIGChild {...adapterProps}>{topNav}</MountsHIGChild>
+        <MountsAnyChild mounter="addSlot" {...adapterProps}>{otherChildren}</MountsAnyChild>
         <MountsHIGChild {...adapterProps}>{sideNav}</MountsHIGChild>
         <MountsHIGChild {...adapterProps}>{subNav}</MountsHIGChild>
-        <MountsAnyChild mounter="addSlot" {...adapterProps}>{otherChildren}</MountsAnyChild>
+        <MountsHIGChild {...adapterProps}>{topNav}</MountsHIGChild>
       </div>
-    )}</HIGAdapter>
+    )}
+    </HIGAdapter>
   );
 }

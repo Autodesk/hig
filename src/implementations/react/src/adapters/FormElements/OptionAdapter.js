@@ -5,13 +5,13 @@ import HIGAdapter, { MapsPropToMethod, MapsEventListener, MountedByHIGParentList
 
 function OptionAdapter(props) {
   return (
-    <HIGAdapter {...props} name="Option" HIGConstructor={HIG.Dropdown._partials.Option}>
+    <HIGAdapter {...props} displayName="Option" HIGConstructor={HIG.Dropdown._partials.Option}>
       {adapterProps => (
         <div>
           <MapsPropToMethod value={props.label} setter="setLabel" {...adapterProps} />
           <MapsPropToMethod value={props.value} setter="setValue" {...adapterProps} />
           <MapsPropToMethod value={props.selected} {...adapterProps}>
-            {(instance, value) => { value ? instance.select() : instance.deselect() }}
+            {(instance, value) => { value ? instance.select() : instance.deselect(); }}
           </MapsPropToMethod>
           <MapsEventListener listener="onHover" handler={props.onHover} {...adapterProps} />
           <MapsEventListener listener="onClick" handler={props.onClick} {...adapterProps} />
@@ -28,6 +28,6 @@ OptionAdapter.propTypes = {
   onClick: PropTypes.func,
   label: PropTypes.string,
   selected: PropTypes.bool
-}
+};
 
 export default OptionAdapter;

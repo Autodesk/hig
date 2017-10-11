@@ -10,6 +10,13 @@ module.exports = {
   plugins: [
     "react"
   ],
+  globals: {
+    describe: true,
+    it: true,
+    expect: true,
+    jest: true,
+    beforeEach: true
+  },
   'rules': {
     'class-methods-use-this': 0,
     'max-len': [2, { code: 100 }],
