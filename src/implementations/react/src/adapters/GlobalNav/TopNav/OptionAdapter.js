@@ -8,7 +8,7 @@ import MountedByHIGParentList from '../../HIGAdapter/MountedByHIGParentList';
 
 function OptionAdapter(props) {
   return (
-    <HIGAdapter {...props} name="Option" HIGConstructor={HIG.GlobalNav._partials.TopNav._partials.Help._partials.Option}>
+    <HIGAdapter {...props} displayName="Option" HIGConstructor={HIG.GlobalNav._partials.TopNav._partials.Help._partials.Option}>
       {adapterProps => (
         <div>
           <MountedByHIGParentList mounter="addOption" {...adapterProps} />
@@ -18,7 +18,7 @@ function OptionAdapter(props) {
         </div>
       )}
     </HIGAdapter>
-  )
+  );
 }
 
 export default OptionAdapter;

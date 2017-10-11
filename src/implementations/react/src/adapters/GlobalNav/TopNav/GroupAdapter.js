@@ -9,7 +9,7 @@ import HIGAdapter, {
 
 function GroupAdapter(props) {
   return (
-    <HIGAdapter {...props} name="Group" HIGConstructor={HIG.GlobalNav._partials.TopNav._partials.Help._partials.Group}>
+    <HIGAdapter {...props} displayName="Group" HIGConstructor={HIG.GlobalNav._partials.TopNav._partials.Help._partials.Group}>
       {adapterProps => (
         <div>
           <MountedByHIGParentList mounter="addGroup" {...adapterProps}>{props.children}</MountedByHIGParentList>

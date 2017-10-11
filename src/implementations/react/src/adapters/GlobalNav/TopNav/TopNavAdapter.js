@@ -20,7 +20,7 @@ function sortChildren(children) {
     profile: children.find(child => child.type === ProfileAdapter),
     help: children.find(child => child.type === HelpAdapter),
     projectAccountSwitcher: children.find(child => [ProjectAccountSwitcher, ProjectAccountSwitcherAdapter].includes(child.type)),
-  }
+  };
 }
 
 function TopNavAdapter(props) {
@@ -33,7 +33,7 @@ function TopNavAdapter(props) {
   } = sortChildren(React.Children.toArray(props.children));
 
   return (
-    <HIGAdapter name="TopNav" HIGConstructor={HIG.GlobalNav._partials.TopNav} {...props}>
+    <HIGAdapter displayName="TopNav" HIGConstructor={HIG.GlobalNav._partials.TopNav} {...props}>
       {adapterProps => (
         <div>
           <MountedByHIGParent mounter="addTopNav" {...adapterProps} />
