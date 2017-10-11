@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import createFragment from 'react-addons-create-fragment';
 
 import * as HIG from 'hig-vanilla';
 import HIGAdapter, {
@@ -17,11 +16,11 @@ class ModalAdapter extends Component {
   }
 
   mapButtons = (higInstance, nextButtons) => {
-    this.buttons.forEach(button => {
+    this.buttons.forEach((button) => {
       button.unmount();
     });
 
-    this.buttons = nextButtons.map(buttonProps => {
+    this.buttons = nextButtons.map((buttonProps) => {
       const button = new HIG.Button(buttonProps);
 
       higInstance.addButton(button);
@@ -32,20 +31,21 @@ class ModalAdapter extends Component {
 
   render() {
     return (
-      <HIGAdapter displayName="Modal" HIGConstructor={HIG.Modal} {...this.props}>{(adapterProps) => (
+      <HIGAdapter displayName="Modal" HIGConstructor={HIG.Modal} {...this.props}>{adapterProps => (
         <div>
           <MapsPropToMethod setter="setBody" value={this.props.body} {...adapterProps} />
           <MapsPropToMethod setter="setStyle" value={this.props.style} {...adapterProps} />
           <MapsPropToMethod setter="setTitle" value={this.props.title} {...adapterProps} />
           <MapsPropToMethod value={this.props.open} {...adapterProps}>
-            {(instance, value) => value ? instance.open() : instance.close() }
+            {(instance, value) => (value ? instance.open() : instance.close()) }
           </MapsPropToMethod>
           <MapsEventListener listener="onCloseClick" handler={this.props.onCloseClick} {...adapterProps} />
           <MapsEventListener listener="onOverlayClick" handler={this.props.onOverlayClick} {...adapterProps} />
           <MountsAnyChild mounter="addSlot" {...adapterProps}>{this.props.children}</MountsAnyChild>
           <MapsPropToMethod value={this.props.buttons} {...adapterProps}>{this.mapButtons}</MapsPropToMethod>
         </div>
-      )}</HIGAdapter>
+      )}
+      </HIGAdapter>
     );
   }
 }
@@ -88,10 +88,10 @@ ModalAdapter.__docgenInfo = {
       description: 'supports add any dom content to the body of the modal'
     }
   }
-}
+};
 
 ModalAdapter.defaultProps = {
   buttons: []
-}
+};
 
 export default ModalAdapter;

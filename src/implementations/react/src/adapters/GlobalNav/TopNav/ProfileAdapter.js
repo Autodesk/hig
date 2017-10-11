@@ -9,7 +9,7 @@ import HIGAdapter, {
 
 function ProfileAdapter(props) {
   return (
-    <HIGAdapter {...props} name="Profile" HIGConstructor={HIG.GlobalNav._partials.TopNav._partials.Profile}>
+    <HIGAdapter {...props} displayName="Profile" HIGConstructor={HIG.GlobalNav._partials.TopNav._partials.Profile}>
       {adapterProps => (
         <div>
           <MountedByHIGParent mounter="addProfile" {...adapterProps} />
@@ -25,7 +25,7 @@ function ProfileAdapter(props) {
           <MapsPropToMethod setter="setSignOutLink" value={props.signOutLink} {...adapterProps} />
           <MapsPropToMethod setter="setEmail" value={props.email} {...adapterProps} />
           <MapsPropToMethod value={props.open} {...adapterProps}>
-            {(instance, value) => { value ? instance.open() : instance.close() }}
+            {(instance, value) => { value ? instance.open() : instance.close(); }}
           </MapsPropToMethod>
         </div>
       )}

@@ -9,7 +9,7 @@ import HIGAdapter, {
 
 function SearchAdapter(props) {
   return (
-    <HIGAdapter name="Search" HIGConstructor={HIG.GlobalNav._partials.TopNav._partials.Search} {...props}>
+    <HIGAdapter displayName="Search" HIGConstructor={HIG.GlobalNav._partials.TopNav._partials.Search} {...props}>
       {adapterProps => (
         <div>
           <MountedByHIGParent mounter="addSearch" {...adapterProps} />
@@ -20,7 +20,7 @@ function SearchAdapter(props) {
           <MapsPropToMethod setter="setQuery" value={props.query} {...adapterProps} />
           <MapsPropToMethod setter="setPlaceholder" value={props.placeholder} {...adapterProps} />
           <MapsPropToMethod value={props.showClearIcon} {...adapterProps}>
-            {(instance, value) => { value ? instance.showClearIcon() : instance.hideClearIcon() }}
+            {(instance, value) => { value ? instance.showClearIcon() : instance.hideClearIcon(); }}
           </MapsPropToMethod>
         </div>
       )}

@@ -9,7 +9,7 @@ import HIGAdapter, {
 
 function LinkAdapter(props) {
   return (
-    <HIGAdapter name="Link" HIGConstructor={HIG.GlobalNav._partials.SideNav._partials.Link} {...props}>
+    <HIGAdapter displayName="Link" HIGConstructor={HIG.GlobalNav._partials.SideNav._partials.Link} {...props}>
       {adapterProps => (
         <div>
           <MapsPropToMethod value={props.link} setter="setLink" {...adapterProps} />
@@ -28,6 +28,6 @@ LinkAdapter.propTypes = {
   title: PropTypes.string,
   onClick: PropTypes.func,
   onHover: PropTypes.func
-}
+};
 
 export default LinkAdapter;

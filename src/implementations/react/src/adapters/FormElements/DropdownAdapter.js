@@ -9,7 +9,7 @@ import HIGAdapter, {
 
 function DropdownAdapter(props) {
   return (
-    <HIGAdapter {...props} name="Dropdown" HIGConstructor={HIG.Dropdown}>{adapterProps => (
+    <HIGAdapter {...props} displayName="Dropdown" HIGConstructor={HIG.Dropdown}>{adapterProps => (
       <div>
         <MapsEventListener listener="onBlur" handler={props.onBlur} {...adapterProps} />
         <MapsEventListener listener="onClickOutside" handler={props.onClickOutside} {...adapterProps} />
@@ -20,24 +20,25 @@ function DropdownAdapter(props) {
         <MapsPropToMethod value={props.instructions} setter="setInstructions" {...adapterProps} />
         <MapsPropToMethod value={props.placeholder} setter="setPlaceholder" {...adapterProps} />
         <MapsPropToMethod value={props.open} {...adapterProps}>
-          {(instance, value) => { value ? instance.open() : instance.close() }}
+          {(instance, value) => { value ? instance.open() : instance.close(); }}
         </MapsPropToMethod>
         <MapsPropToMethod value={props.disabled} {...adapterProps}>
-          {(instance, value) => { value ? instance.disable() : instance.enable() }}
+          {(instance, value) => { value ? instance.disable() : instance.enable(); }}
         </MapsPropToMethod>
         <MapsPropToMethod value={props.required} {...adapterProps}>
-          {(instance, value) => { value ? instance.required(value) : instance.noLongerRequired() }}
+          {(instance, value) => { value ? instance.required(value) : instance.noLongerRequired(); }}
         </MapsPropToMethod>
         <MapsPropToMethod value={props.selectedOptionLabel} setter="setSelectedOptionLabel" {...adapterProps} />
         <MountsHIGChildList {...adapterProps}>{props.children}</MountsHIGChildList>
       </div>
-    )}</HIGAdapter>
+    )}
+    </HIGAdapter>
   );
 }
 
 DropdownAdapter.defaultProps = {
   children: null
-}
+};
 
 DropdownAdapter.propTypes = {
   label: PropTypes.string,
