@@ -4,18 +4,14 @@ import HIGAdapter from './HIGAdapter';
 
 describe('HIGAdapter', () => {
   class VanillaComponent {
-    constructor(defaults) {}
-
     mount = jest.fn()
     unmount = jest.fn()
   }
 
   describe('on mount', () => {
     it('mounts the instance with an element and a comment', () => {
-      const wrapper = mount(
-        <HIGAdapter HIGConstructor={VanillaComponent} />
-      );
-      const higInstance = wrapper.state().higInstance;
+      const wrapper = mount(<HIGAdapter HIGConstructor={VanillaComponent} />);
+      const { higInstance } = wrapper.state();
 
       expect(higInstance.mount).toHaveBeenCalled();
       expect(higInstance.mount.mock.calls[0][0]).toBeInstanceOf(HTMLElement);
@@ -23,21 +19,16 @@ describe('HIGAdapter', () => {
     });
 
     it('sets name as the tagname', () => {
-      const wrapper = shallow(
-        <HIGAdapter HIGConstructor={VanillaComponent} displayName="MyComponent" />
-      );
+      const wrapper = shallow(<HIGAdapter HIGConstructor={VanillaComponent} displayName="MyComponent" />);
 
-      expect(wrapper.find('HIGMyComponent')).toBePresent();
+      expect(wrapper.find('hig-mycomponent')).toBePresent();
     });
   });
-
 
   describe('providing context to adapter subcomponents', () => {
     it('calls the children function with "higInstance"', () => {
       const childFunction = jest.fn();
-      const wrapper = mount(
-        <HIGAdapter HIGConstructor={VanillaComponent}>{childFunction}</HIGAdapter>
-      );
+      mount(<HIGAdapter HIGConstructor={VanillaComponent}>{childFunction}</HIGAdapter>);
 
       const adapterProps = childFunction.mock.calls.pop().pop();
       expect(adapterProps.higInstance).toBeInstanceOf(VanillaComponent);
@@ -45,9 +36,7 @@ describe('HIGAdapter', () => {
 
     it('calls the children function with "mounted"', () => {
       const childFunction = jest.fn();
-      const wrapper = mount(
-        <HIGAdapter HIGConstructor={VanillaComponent}>{childFunction}</HIGAdapter>
-      );
+      mount(<HIGAdapter HIGConstructor={VanillaComponent}>{childFunction}</HIGAdapter>);
 
       const adapterProps = childFunction.mock.calls.pop().pop();
       expect(adapterProps.mounted).toEqual(true);
@@ -55,9 +44,12 @@ describe('HIGAdapter', () => {
 
     it('passes displayName to the children', () => {
       const childFunction = jest.fn();
-      const wrapper = mount(
-        <HIGAdapter displayName="MySpecialComponent" HIGConstructor={VanillaComponent}>{childFunction}</HIGAdapter>
-      );
+      mount(<HIGAdapter
+        displayName="MySpecialComponent"
+        HIGConstructor={VanillaComponent}
+      >
+        {childFunction}
+      </HIGAdapter>);
 
       const adapterProps = childFunction.mock.calls.pop().pop();
       expect(adapterProps.displayName).toEqual('MySpecialComponent');
@@ -65,8 +57,6 @@ describe('HIGAdapter', () => {
 
     describe('with higParent context', () => {
       class VanillaParentComponent {
-        constructor(defaults) {}
-
         mount = jest.fn()
         addComponent = jest.fn()
       }
@@ -100,7 +90,7 @@ describe('HIGAdapter', () => {
     });
 
     it('calls unmount on the hig instance', () => {
-      const higInstance = wrapper.state().higInstance;
+      const { higInstance } = wrapper.state();
       wrapper.unmount();
 
       expect(higInstance.unmount).toHaveBeenCalled();

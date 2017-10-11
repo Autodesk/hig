@@ -40,12 +40,12 @@ export default function SideNavAdapter(props) {
           <MapsPropToMethod value={props.superHeaderLabel} setter="setSuperHeaderLabel" {...adapterProps} />
           <MapsPropToMethod value={props.superHeaderLink} setter="setSuperHeaderLink" {...adapterProps} />
           <MapsPropToMethod value={props.copyright} setter="setCopyright" {...adapterProps} />
-          <MountsHIGChildList {...adapterProps}>{groups}</MountsHIGChildList>
-          <MountsHIGChildList {...adapterProps}>{links}</MountsHIGChildList>
-          <MountsHIGChild {...adapterProps}>{search}</MountsHIGChild>
           {otherChildren.length > 0
             ? <MountsAnyChild mounter="addSlot" {...adapterProps}>{otherChildren}</MountsAnyChild>
             : null}
+          <MountsHIGChild {...adapterProps}>{search}</MountsHIGChild>
+          <MountsHIGChildList {...adapterProps}>{groups}</MountsHIGChildList>
+          <MountsHIGChildList {...adapterProps}>{links}</MountsHIGChildList>
         </div>
       )}
     </HIGAdapter>

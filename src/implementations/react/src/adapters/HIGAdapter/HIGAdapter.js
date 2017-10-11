@@ -22,7 +22,7 @@ class HIGAdapter extends Component {
     this.state = {
       higInstance: props.higInstance || new props.HIGConstructor({}),
       mounted: false
-    }
+    };
   }
 
   onMount = () => {
@@ -50,7 +50,7 @@ class HIGAdapter extends Component {
 
   render() {
     return React.createElement(
-      `HIG${this.props.displayName}`,
+      `hig-${this.props.displayName.toLowerCase()}`,
       { ref: this.setEl },
       this.props.children({
         higInstance: this.state.higInstance,

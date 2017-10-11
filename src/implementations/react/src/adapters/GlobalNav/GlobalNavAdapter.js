@@ -37,9 +37,10 @@ export default function GlobalNavAdapter(props) {
         <MapsPropToMethod value={props.sideNavOpen} {...adapterProps}>
           {(instance, value) => { value ? instance.showSideNav() : instance.hideSideNav(); }}
         </MapsPropToMethod>
-        <MountsHIGChild {...adapterProps}>{topNav}</MountsHIGChild>
-        <MountsHIGChild {...adapterProps}>{subNav}</MountsHIGChild>
         <MountsAnyChild mounter="addSlot" {...adapterProps}>{otherChildren}</MountsAnyChild>
+        <MountsHIGChild {...adapterProps}>{sideNav}</MountsHIGChild>
+        <MountsHIGChild {...adapterProps}>{subNav}</MountsHIGChild>
+        <MountsHIGChild {...adapterProps}>{topNav}</MountsHIGChild>
       </div>
     )}
     </HIGAdapter>
