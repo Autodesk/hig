@@ -30,13 +30,13 @@ function TextFieldAdapter(props) {
           <MapsPropToMethod setter="setName" value={props.name} {...adapterProps} />
           <MapsPropToMethod setter="setIcon" value={props.icon} {...adapterProps} />
           <MapsPropToMethod value={props.disabled} {...adapterProps}>
-            {(instance, value) => value ? instance.disable() : instance.enable()}
+            {(instance, value) => (value ? instance.disable() : instance.enable())}
           </MapsPropToMethod>
           <MapsPropToMethod value={props.required} {...adapterProps}>
-            {(instance, value) => value ? instance.required(value) : instance.noLongerRequired()}
+            {(instance, value) => (value ? instance.required(value) : instance.noLongerRequired())}
           </MapsPropToMethod>
           <MapsPropToMethod value={props.showClearButton} {...adapterProps}>
-            {(instance, value) => value ? instance.showClearButton() : instance.hideClearButton()}
+            {(instance, value) => (value ? instance.showClearButton() : instance.hideClearButton())}
           </MapsPropToMethod>
         </div>
       )}
@@ -60,6 +60,24 @@ TextFieldAdapter.propTypes = {
   required: PropTypes.string,
   showClearButton: PropTypes.bool,
   value: PropTypes.string,
+};
+
+TextFieldAdapter.defaultProps = {
+  defaultValue: undefined,
+  disabled: undefined,
+  icon: undefined,
+  instructions: undefined,
+  label: undefined,
+  name: undefined,
+  onBlur: undefined,
+  onChange: undefined,
+  onClearButtonClick: undefined,
+  onFocus: undefined,
+  onInput: undefined,
+  placeholder: undefined,
+  required: undefined,
+  showClearButton: undefined,
+  value: undefined
 };
 
 export default TextFieldAdapter;

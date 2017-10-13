@@ -26,7 +26,7 @@ class RadioButtonSection extends PureComponent {
     };
   }
 
-  setValue = event => {
+  setValue = (event) => {
     console.log('CHANGE', event.target.value);
     this.setState({ value: event.target.value });
   }
@@ -56,7 +56,7 @@ class RadioButtonSection extends PureComponent {
             label="Disabled"
             name="tsandcs"
             value="hhh"
-            disabled={true}
+            disabled
             onChange={this.setValue}
             checked={this.state.value === 'hhh'}
           />

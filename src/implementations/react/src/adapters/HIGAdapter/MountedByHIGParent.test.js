@@ -1,7 +1,5 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { mount, shallow } from 'enzyme';
-import HIGAdapter from './HIGAdapter';
+import React from 'react';
+import { mount } from 'enzyme';
 import MountedByHIGParent from './MountedByHIGParent';
 
 describe('MountedByHIGParent', () => {
@@ -18,15 +16,13 @@ describe('MountedByHIGParent', () => {
 
     it('calls the mount function on its parent', () => {
       const higInstance = new VanillaComponent();
-      const wrapper = mount(
-        <MountedByHIGParent
-          higInstance={higInstance}
-          higParent={higParent}
-          mounted={false}
-          mounter="addComponent"
-          onMount={() => {}}
-        />
-      );
+      mount(<MountedByHIGParent
+        higInstance={higInstance}
+        higParent={higParent}
+        mounted={false}
+        mounter="addComponent"
+        onMount={() => {}}
+      />);
 
       expect(higParent.addComponent).toHaveBeenCalledWith(higInstance);
     });
@@ -43,15 +39,13 @@ describe('MountedByHIGParent', () => {
 
     it('does not blow up', () => {
       expect(() => {
-        wrapper = mount(
-          <MountedByHIGParent
-            higParent={higParent}
-            mounter="addComponent"
-            onMount={() => {}}
-            higInstance={higInstance}
-            mounted={false}
-          />
-        );
+        wrapper = mount(<MountedByHIGParent
+          higParent={higParent}
+          mounter="addComponent"
+          onMount={() => {}}
+          higInstance={higInstance}
+          mounted={false}
+        />);
       }).not.toThrow();
     });
 

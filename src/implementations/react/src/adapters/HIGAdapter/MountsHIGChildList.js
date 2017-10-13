@@ -21,13 +21,13 @@ class MountsHIGChildList extends Component {
   }
 
   render() {
-    const children = React.Children.map(this.props.children, (child, index) => {
-      return child ? React.cloneElement(child, { index }) : null;
-    });
+    const children = React.Children.map(this.props.children, (child, index) => (
+      child
+        ? React.cloneElement(child, { index })
+        : null));
 
     return this.props.mounted ? (<div>{children}</div>) : null;
   }
 }
 
 export default MountsHIGChildList;
-  

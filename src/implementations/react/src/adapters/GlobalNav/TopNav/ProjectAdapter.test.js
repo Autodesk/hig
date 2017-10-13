@@ -5,16 +5,14 @@ import ProjectAdapter from './ProjectAdapter';
 
 describe('ProjectAdapter', () => {
   it('implements the hig interface', () => {
-    expect(mockInstance => {
-      const wrapper = mount(
-        <ProjectAdapter
-          higInstance={mockInstance}
-          onClick={() => {}}
-          image="/my-image.png"
-          label="Buzz"
-          active={true}
-        />
-      );
+    expect((mockInstance) => {
+      const wrapper = mount(<ProjectAdapter
+        higInstance={mockInstance}
+        onClick={() => {}}
+        image="/my-image.png"
+        label="Buzz"
+        active
+      />);
       wrapper.props().higInstance.deactivate();
     }).toImplementHIGInterfaceOf(HIG.GlobalNav._partials.TopNav._partials.ProjectAccountSwitcher._partials.Project);
   });

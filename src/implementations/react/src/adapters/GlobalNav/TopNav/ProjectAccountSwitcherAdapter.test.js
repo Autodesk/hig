@@ -7,24 +7,22 @@ import AccountAdapter from './AccountAdapter';
 
 describe('ProjectAccountSwitcherAdapter', () => {
   it('implements the hig interface', () => {
-    expect(mockInstance => {
-      const wrapper = mount(
-        <ProjectAccountSwitcherAdapter
-          higInstance={mockInstance}
-          open={true}
-          showCaret={true}
-          onClick={() => {}}
-          onClickOutside={() => {}}
-          projectTitle="Foo"
-          accountTitle="Bar"
-          activeImage="/my-image.png"
-          activeLabel="Buzz"
-          activeType="project"
-        >
-          <ProjectAdapter />
-          <AccountAdapter />
-        </ProjectAccountSwitcherAdapter>
-      );
+    expect((mockInstance) => {
+      const wrapper = mount(<ProjectAccountSwitcherAdapter
+        higInstance={mockInstance}
+        open
+        showCaret
+        onClick={() => {}}
+        onClickOutside={() => {}}
+        projectTitle="Foo"
+        accountTitle="Bar"
+        activeImage="/my-image.png"
+        activeLabel="Buzz"
+        activeType="project"
+      >
+        <ProjectAdapter />
+        <AccountAdapter />
+      </ProjectAccountSwitcherAdapter>);
       wrapper.props().higInstance.close();
       wrapper.props().higInstance.hideCaret();
     }).toImplementHIGInterfaceOf(HIG.GlobalNav._partials.TopNav._partials.ProjectAccountSwitcher);

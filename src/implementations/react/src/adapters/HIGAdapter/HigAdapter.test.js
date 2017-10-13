@@ -10,7 +10,7 @@ describe('HIGAdapter', () => {
 
   describe('on mount', () => {
     it('mounts the instance with an element and a comment', () => {
-      const wrapper = mount(<HIGAdapter HIGConstructor={VanillaComponent} />);
+      const wrapper = mount(<HIGAdapter HIGConstructor={VanillaComponent} displayName="MyComponent" />);
       const { higInstance } = wrapper.state();
 
       expect(higInstance.mount).toHaveBeenCalled();
@@ -28,7 +28,7 @@ describe('HIGAdapter', () => {
   describe('providing context to adapter subcomponents', () => {
     it('calls the children function with "higInstance"', () => {
       const childFunction = jest.fn();
-      mount(<HIGAdapter HIGConstructor={VanillaComponent}>{childFunction}</HIGAdapter>);
+      mount(<HIGAdapter HIGConstructor={VanillaComponent} displayName="MyComponent">{childFunction}</HIGAdapter>);
 
       const adapterProps = childFunction.mock.calls.pop().pop();
       expect(adapterProps.higInstance).toBeInstanceOf(VanillaComponent);
@@ -36,7 +36,7 @@ describe('HIGAdapter', () => {
 
     it('calls the children function with "mounted"', () => {
       const childFunction = jest.fn();
-      mount(<HIGAdapter HIGConstructor={VanillaComponent}>{childFunction}</HIGAdapter>);
+      mount(<HIGAdapter HIGConstructor={VanillaComponent} displayName="MyComponent">{childFunction}</HIGAdapter>);
 
       const adapterProps = childFunction.mock.calls.pop().pop();
       expect(adapterProps.mounted).toEqual(true);
@@ -65,7 +65,7 @@ describe('HIGAdapter', () => {
         const childFunction = jest.fn();
         const higParent = new VanillaParentComponent({});
         const wrapper = mount(
-          <HIGAdapter HIGConstructor={VanillaComponent}>{childFunction}</HIGAdapter>,
+          <HIGAdapter HIGConstructor={VanillaComponent} displayName="MyComponent">{childFunction}</HIGAdapter>,
           { context: { higParent } }
         );
         wrapper.setState({ mounted: true });
@@ -80,7 +80,7 @@ describe('HIGAdapter', () => {
     let wrapper;
 
     beforeEach(() => {
-      wrapper = mount(<HIGAdapter HIGConstructor={VanillaComponent} />);
+      wrapper = mount(<HIGAdapter HIGConstructor={VanillaComponent} displayName="MyComponent" />);
     });
 
     it('does not blow up', () => {

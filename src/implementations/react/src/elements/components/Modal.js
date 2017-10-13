@@ -62,10 +62,10 @@ Modal.__docgenInfo = {
       description: 'supports add any dom content to the body of the modal'
     }
   }
-}
+};
 
 Modal.defaultProps = {
   onClose: () => {}
-}
+};
 
 export default Modal;

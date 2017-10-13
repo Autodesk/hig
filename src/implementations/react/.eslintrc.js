@@ -15,7 +15,8 @@ module.exports = {
     it: true,
     expect: true,
     jest: true,
-    beforeEach: true
+    beforeEach: true,
+    document: true
   },
   'rules': {
     'class-methods-use-this': 0,

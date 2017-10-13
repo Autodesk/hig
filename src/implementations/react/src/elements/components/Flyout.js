@@ -1,7 +1,7 @@
-import * as PropTypes from "prop-types";
-import React, { Component } from "react";
+import * as PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import * as HIG from 'hig-vanilla';
-import FlyoutAdapter from "../../adapters/FlyoutAdapter";
+import FlyoutAdapter from '../../adapters/FlyoutAdapter';
 
 class Flyout extends Component {
   constructor(props) {
@@ -20,10 +20,10 @@ class Flyout extends Component {
   static __docgenInfo = {
     props: {
       anchorPoint: {
-        description: "where the flyout will be anchored relative to target"
+        description: 'where the flyout will be anchored relative to target'
       },
-      children: { description: "target component to open the flyout" },
-      content: { description: "content for the flyout" },
+      children: { description: 'target component to open the flyout' },
+      content: { description: 'content for the flyout' },
     }
   };
 
@@ -31,14 +31,14 @@ class Flyout extends Component {
     this.setState({ open: false });
   };
 
-  openFlyout = event => {
+  openFlyout = (event) => {
     this.setState({ open: true });
   };
 
   render() {
     const target = this.props.children
       ? React.cloneElement(this.props.children, { onClick: this.openFlyout })
-      : null
+      : null;
     return (
       <FlyoutAdapter
         anchorPoint={this.props.anchorPoint}

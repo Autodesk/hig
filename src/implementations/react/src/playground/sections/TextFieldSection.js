@@ -38,7 +38,7 @@ class TextFieldSection extends PureComponent {
           required="This field is required."
         />
       </PlaygroundSection>
-    )
+    );
   }
 }
 

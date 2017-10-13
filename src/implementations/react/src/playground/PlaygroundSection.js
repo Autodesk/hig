@@ -8,13 +8,13 @@ class PlaygroundSection extends PureComponent {
         <h3>{this.props.title}</h3>
         {this.props.children}
       </section>
-    )
+    );
   }
 }
 
 PlaygroundSection.propTypes = {
   title: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired
-}
+};
 
 export default PlaygroundSection;

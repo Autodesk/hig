@@ -1,9 +1,10 @@
-import './text-cell-content.scss'
-var Template = require("./text-cell-content.html");
-var Interface = require("interface.json");
-var Core = require("_core.js");
+import './text-cell-content.scss';
 
-var AvailablePositions = ["left", "right", "center"];
+const Template = require('./text-cell-content.html');
+const Interface = require('interface.json');
+const Core = require('_core.js');
+
+const AvailableAlignments = ['left', 'right', 'center'];
 
 /**
  * Creates an Table
@@ -18,28 +19,28 @@ class TextCellContent extends Core {
   }
 
   setText(text) {
-    this._findDOMEl(".hig__table__text-cell-text", this.el).textContent = text;
+    this._findDOMEl('.hig__table__text-cell-text', this.el).textContent = text;
   }
 
   setDetail(detail) {
-    this._findDOMEl(".hig__table__text-cell-detail", this.el).textContent = detail;
+    this._findDOMEl('.hig__table__text-cell-detail', this.el).textContent = detail;
   }
 
-  setAlignment(position) {
-    if (AvailablePositions.indexOf(position) > -1) {
-      this.el.style.textAlign = position;
+  setAlignment(alignment) {
+    if (AvailableAlignments.indexOf(alignment) > -1) {
+      this.el.style.textAlign = alignment;
     }
   }
 }
 
 TextCellContent._interface =
-  Interface["components"]["Table"]["partials"]["TableRow"]["partials"]["TextCellContent"];
+  Interface.components.Table.partials.TableRow.partials.TextCellContent;
 
 TextCellContent._defaults = {
-  "text": "",
-  "alignment": "",
-  "detail": ""
+  text: '',
+  alignment: '',
+  detail: ''
 };
+TextCellContent.AvailableAlignments = AvailableAlignments;
 
 module.exports = TextCellContent;
-  

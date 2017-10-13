@@ -5,9 +5,9 @@ import { Range } from '../../hig-react';
 class RangeSection extends PureComponent {
   constructor(props) {
     super(props);
-    this.state ={
+    this.state = {
       value: 21
-    }
+    };
   }
 
   setValue = (event) => {
@@ -28,7 +28,7 @@ class RangeSection extends PureComponent {
           step={1}
         />
       </PlaygroundSection>
-    )
+    );
   }
 }
 export default RangeSection;

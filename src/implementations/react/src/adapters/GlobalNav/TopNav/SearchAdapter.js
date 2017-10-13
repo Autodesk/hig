@@ -9,18 +9,26 @@ import HIGAdapter, {
 
 function SearchAdapter(props) {
   return (
-    <HIGAdapter displayName="Search" HIGConstructor={HIG.GlobalNav._partials.TopNav._partials.Search} {...props}>
+    <HIGAdapter
+      displayName="Search"
+      HIGConstructor={HIG.GlobalNav._partials.TopNav._partials.Search}
+      {...props}
+    >
       {adapterProps => (
         <div>
           <MountedByHIGParent mounter="addSearch" {...adapterProps} />
           <MapsEventListener listener="onInput" handler={props.onInput} {...adapterProps} />
           <MapsEventListener listener="onFocusIn" handler={props.onFocus} {...adapterProps} />
           <MapsEventListener listener="onFocusOut" handler={props.onBlur} {...adapterProps} />
-          <MapsEventListener listener="onClearIconClick" handler={props.onClearIconClick} {...adapterProps} />
+          <MapsEventListener
+            listener="onClearIconClick"
+            handler={props.onClearIconClick}
+            {...adapterProps}
+          />
           <MapsPropToMethod setter="setQuery" value={props.query} {...adapterProps} />
           <MapsPropToMethod setter="setPlaceholder" value={props.placeholder} {...adapterProps} />
           <MapsPropToMethod value={props.showClearIcon} {...adapterProps}>
-            {(instance, value) => { value ? instance.showClearIcon() : instance.hideClearIcon(); }}
+            {(instance, value) => (value ? instance.showClearIcon() : instance.hideClearIcon())}
           </MapsPropToMethod>
         </div>
       )}
@@ -35,7 +43,19 @@ SearchAdapter.propTypes = {
   onClearIconClick: PropTypes.func,
   onInput: PropTypes.func,
   onFocus: PropTypes.func,
-  onBlur: PropTypes.func
+  onBlur: PropTypes.func,
+  showClearIcon: PropTypes.bool,
+};
+
+SearchAdapter.defaultProps = {
+  query: undefined,
+  placeholder: undefined,
+  clearIconVisible: undefined,
+  onClearIconClick: undefined,
+  onInput: undefined,
+  onFocus: undefined,
+  onBlur: undefined,
+  showClearIcon: undefined
 };
 
 export default SearchAdapter;

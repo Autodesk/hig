@@ -29,7 +29,7 @@ import AvatarSection from './sections/AvatarSection';
 import ButtonSection from './sections/ButtonSection';
 import CheckboxSection from './sections/CheckboxSection';
 import DropdownSection from './sections/DropdownSection';
-import FlyoutSection from './sections/FlyoutSection'
+import FlyoutSection from './sections/FlyoutSection';
 import GridSection from './sections/GridSection';
 import IconSection from './sections/IconSection';
 import IconButtonSection from './sections/IconButtonSection';
@@ -39,7 +39,7 @@ import SpacerSection from './sections/SpacerSection';
 import RadioButtonSection from './sections/RadioButtonSection';
 import RangeSection from './sections/RangeSection';
 import RichTextSection from './sections/RichTextSection';
-import SelectableTableSection from "./sections/SelectableTableSection";
+import SelectableTableSection from './sections/SelectableTableSection';
 import TableSection from './sections/TableSection';
 import TextAreaSection from './sections/TextAreaSection';
 import TextFieldSection from './sections/TextFieldSection';
@@ -77,11 +77,11 @@ class Playground extends React.Component {
   }
 
   handleModuleClick = (id) => {
-    console.log(`module click ${id}`)
+    console.log(`module click ${id}`);
   }
 
   handleSubmoduleClick = (id) => {
-    console.log(`submodule click ${id}`)
+    console.log(`submodule click ${id}`);
   }
 
   openHelp = () => {
@@ -101,11 +101,11 @@ class Playground extends React.Component {
           options: [
             {
               name: 'group 1, option 1',
-              link: "#" 
+              onClick() { console.log('g1 o1 clicked'); }
             },
             {
               name: 'group 1, option 2',
-              onClick: function() { console.log('g1 o2 clicked'); }
+              onClick() { console.log('g1 o2 clicked'); }
             }
           ]
         },
@@ -113,11 +113,11 @@ class Playground extends React.Component {
           options: [
             {
               name: 'group 2, option 1',
-              onClick: function() { console.log('g2 o1 clicked'); }
+              onClick() { console.log('g2 o1 clicked'); }
             },
             {
               name: 'group 2, option 2',
-              onClick: function() { console.log('g2 o2 clicked'); }
+              onClick() { console.log('g2 o2 clicked'); }
             }
           ]
         }
@@ -127,31 +127,31 @@ class Playground extends React.Component {
     };
 
     const topNavProps = {
-      accounts: accounts,
-      projects: projects,
+      accounts,
+      projects,
       accountTitle: 'Accounts',
       projectTitle: 'Projects',
       onAccountClick: this.accountClicked,
       onProjectClick: this.projectClicked,
       help: helpProps,
       logo,
-      onLogoClick: function() { console.log('Logo clicked'); }
+      onLogoClick() { console.log('Logo clicked'); }
     };
 
     const sideNavProps = {
       superHeaderLabel: 'HIG',
       headerLabel: 'Playground',
-      links: links,
-      onLogoClick: event => {
+      links,
+      onLogoClick: (event) => {
         event.preventDefault();
         console.log('Logo clicked');
       },
       searchable: true,
       slot: (
         <div>
-          <Button title='Designer Toolkit' link='https://github.com/Autodesk/hig' />
-          <p></p>
-          <Button title='Git Repository' type='secondary' link='https://github.com/Autodesk/hig' target='_blank' />
+          <Button title="Designer Toolkit" link="https://github.com/Autodesk/hig" />
+          <p />
+          <Button title="Git Repository" type="secondary" link="https://github.com/Autodesk/hig" target="_blank" />
         </div>
       ),
       onModuleClick: this.handleModuleClick,
@@ -166,7 +166,7 @@ class Playground extends React.Component {
         submodules={submodules}
         topNav={topNavProps}
         activeModuleId={this.state.activeModuleId}
-        showSubNav={true}
+        showSubNav
         isSideNavOpen={this.state.isSideNavOpen}
         onHamburgerClick={this.toggleSideNav}
       >
@@ -182,8 +182,8 @@ class Playground extends React.Component {
         <ModalSection />
         <DropdownSection />
         <TypographySection />
-        <TableSection/>
-        <TextLinkSection/>
+        <TableSection />
+        <TextLinkSection />
         <FlyoutSection />
         <RichTextSection />
         <AvatarSection />

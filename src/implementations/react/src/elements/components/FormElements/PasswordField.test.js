@@ -9,7 +9,7 @@ describe('PasswordField', () => {
     const props = {
       onFocus: jest.fn(),
       onBlur: jest.fn()
-    }
+    };
     wrapper = shallow(<PasswordField {...props} />);
   });
 
@@ -32,10 +32,10 @@ describe('PasswordField', () => {
   });
 
   describe('on focus', () => {
-    let props = {
+    const props = {
       onFocus: jest.fn(),
       onBlur: jest.fn()
-    }
+    };
 
     beforeEach(() => {
       wrapper = shallow(<PasswordField {...props} />);

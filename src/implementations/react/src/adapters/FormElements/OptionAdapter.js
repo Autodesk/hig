@@ -1,7 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import * as HIG from 'hig-vanilla';
-import HIGAdapter, { MapsPropToMethod, MapsEventListener, MountedByHIGParentList } from '../HIGAdapter';
+import HIGAdapter, {
+  MapsPropToMethod,
+  MapsEventListener,
+  MountedByHIGParentList
+} from '../HIGAdapter';
 
 function OptionAdapter(props) {
   return (
@@ -11,7 +15,7 @@ function OptionAdapter(props) {
           <MapsPropToMethod value={props.label} setter="setLabel" {...adapterProps} />
           <MapsPropToMethod value={props.value} setter="setValue" {...adapterProps} />
           <MapsPropToMethod value={props.selected} {...adapterProps}>
-            {(instance, value) => { value ? instance.select() : instance.deselect(); }}
+            {(instance, value) => (value ? instance.select() : instance.deselect())}
           </MapsPropToMethod>
           <MapsEventListener listener="onHover" handler={props.onHover} {...adapterProps} />
           <MapsEventListener listener="onClick" handler={props.onClick} {...adapterProps} />
@@ -27,7 +31,17 @@ OptionAdapter.propTypes = {
   onHover: PropTypes.func,
   onClick: PropTypes.func,
   label: PropTypes.string,
-  selected: PropTypes.bool
+  selected: PropTypes.bool,
+  value: PropTypes.string
+};
+
+OptionAdapter.defaultProps = {
+  index: undefined,
+  onHover: undefined,
+  onClick: undefined,
+  label: undefined,
+  selected: undefined,
+  value: undefined
 };
 
 export default OptionAdapter;

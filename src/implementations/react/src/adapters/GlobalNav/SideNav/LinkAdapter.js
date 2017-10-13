@@ -30,4 +30,11 @@ LinkAdapter.propTypes = {
   onHover: PropTypes.func
 };
 
+LinkAdapter.defaultProps = {
+  link: undefined,
+  title: undefined,
+  onClick: undefined,
+  onHover: undefined
+};
+
 export default LinkAdapter;

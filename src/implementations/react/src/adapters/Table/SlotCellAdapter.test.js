@@ -5,14 +5,12 @@ import SlotCellAdapter from './SlotCellAdapter';
 
 describe('SlotCellAdapter', () => {
   it('implements the hig interface', () => {
-    expect(mockInstance => {
-      mount(
-        <SlotCellAdapter
-          higInstance={mockInstance}
-        >
-          <h1>Slot content</h1>
-        </SlotCellAdapter>
-      );
+    expect((mockInstance) => {
+      mount(<SlotCellAdapter
+        higInstance={mockInstance}
+      >
+        <h1>Slot content</h1>
+      </SlotCellAdapter>);
     }).toImplementHIGInterfaceOf(HIG.Table._partials.TableRow._partials.SlotCell);
   });
 });

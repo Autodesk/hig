@@ -6,14 +6,12 @@ import GridItemAdapter from './GridItemAdapter';
 
 describe('GridAdapter', () => {
   it('implements the hig interface', () => {
-    expect(mockInstance => {
-      mount(
-        <GridAdapter
-          higInstance={mockInstance}
-        >
-          <GridItemAdapter />
-        </GridAdapter>
-      );
+    expect((mockInstance) => {
+      mount(<GridAdapter
+        higInstance={mockInstance}
+      >
+        <GridItemAdapter fraction="one-quarter" />
+      </GridAdapter>);
     }).toImplementHIGInterfaceOf(HIG.Grid);
   });
 });

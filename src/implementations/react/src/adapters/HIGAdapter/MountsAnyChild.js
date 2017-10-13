@@ -5,8 +5,17 @@ export default class MountsAnyChild extends Component {
   static propTypes = {
     children: PropTypes.node,
     higInstance: PropTypes.object,
-    mounted: PropTypes.bool,
-    mounter: PropTypes.string
+    mounted: PropTypes.bool.isRequired,
+    mounter: PropTypes.string.isRequired
+  }
+
+  static defaultProps = {
+    children: undefined,
+    higInstance: undefined
+  }
+
+  static childContextTypes = {
+    higParent: PropTypes.object
   }
 
   constructor(props) {
@@ -14,16 +23,8 @@ export default class MountsAnyChild extends Component {
     this.state = {};
   }
 
-  static childContextTypes = {
-    higParent: PropTypes.object
-  }
-
   getChildContext() {
     return { higParent: null };
-  }
-
-  setEl = (el) => {
-    this.el = el;
   }
 
   componentDidMount() {
@@ -34,6 +35,10 @@ export default class MountsAnyChild extends Component {
     this.passChildren(nextProps);
   }
 
+  setEl = (el) => {
+    this.el = el;
+  }
+
   passChildren(props) {
     if (props.mounted && this.el) {
       props.higInstance[props.mounter](this.el);
@@ -41,7 +46,7 @@ export default class MountsAnyChild extends Component {
   }
 
   render() {
-    let children = this.props.children;
+    let { children } = this.props;
     if (children === undefined || (children.length !== undefined && children.length === 0)) {
       children = null;
     }

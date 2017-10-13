@@ -24,6 +24,11 @@ SlotHeadCellAdapter.propTypes = {
   width: PropTypes.string
 };
 
+SlotHeadCellAdapter.defaultProps = {
+  children: undefined,
+  width: undefined
+};
+
 SlotHeadCellAdapter.__docgenInfo = {
   props: {
     children: {

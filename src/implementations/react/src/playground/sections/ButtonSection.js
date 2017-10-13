@@ -43,7 +43,7 @@ class ButtonSection extends PureComponent {
         <Button
           size="small"
           title="Disabled Button"
-          disabled={true}
+          disabled
           onClick={() => {
             console.log('Large Button on click');
           }}

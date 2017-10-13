@@ -7,29 +7,25 @@ import ModalAdapter from './ModalAdapter';
 describe('ModalAdapter', () => {
   it('implements the hig interface', () => {
     expect((mockInstance) => {
-      mount(
-        <ModalAdapter
-          higInstance={mockInstance}
-          open={true}
-          onCloseClick={() => {}}
-          onOverlayClick={() => {}}
-          body="This is some text in my modal"
-          style="standard"
-          title="My modal"
-          buttons={[
-            {title: 'Ok'},
-            {title: 'Cancel'}
+      mount(<ModalAdapter
+        higInstance={mockInstance}
+        open
+        onCloseClick={() => {}}
+        onOverlayClick={() => {}}
+        body="This is some text in my modal"
+        style="standard"
+        title="My modal"
+        buttons={[
+            { title: 'Ok' },
+            { title: 'Cancel' }
           ]}
-        >
-          <div>Click me to see the Modal</div>
-        </ModalAdapter>
-      );
-      mount(
-        <ModalAdapter
-          higInstance={mockInstance}
-          open={false}
-        />
-      );
+      >
+        <div>Click me to see the Modal</div>
+      </ModalAdapter>);
+      mount(<ModalAdapter
+        higInstance={mockInstance}
+        open={false}
+      />);
     }).toImplementHIGInterfaceOf(HIG.Modal);
   });
 });

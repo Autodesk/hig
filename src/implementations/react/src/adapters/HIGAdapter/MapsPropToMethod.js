@@ -5,15 +5,22 @@ import throwIfNoHIGMethod from './throwIfNoHIGMethod';
 class MapsPropToMethod extends Component {
   static propTypes = {
     children: PropTypes.func,
+    displayName: PropTypes.string.isRequired,
     higInstance: PropTypes.object.isRequired,
     mounted: PropTypes.bool.isRequired,
     setter: PropTypes.string,
     value: PropTypes.any
   }
 
+  static defaultProps = {
+    children: undefined,
+    setter: undefined,
+    value: undefined
+  }
+
   constructor(props) {
     super(props);
-    this.state = { unset: props.value === undefined }
+    this.state = { unset: props.value === undefined };
   }
 
   componentWillReceiveProps(nextProps) {
@@ -24,16 +31,16 @@ class MapsPropToMethod extends Component {
 
   throwIfNoSetter() {
     if (this.props.higInstance[this.props.setter] === undefined) {
-      throw(new TypeError(`${this.props.displayName} has no method '${this.props.setter}'`));
+      throw (new TypeError(`${this.props.displayName} has no method '${this.props.setter}'`));
     }
   }
 
   render() {
-    if(!this.props.mounted) {
+    if (!this.props.mounted) {
       return null;
     }
 
-    if(this.props.value === undefined && this.state.unset) {
+    if (this.props.value === undefined && this.state.unset) {
       return null;
     }
 

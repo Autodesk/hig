@@ -1,18 +1,15 @@
 const path = require('path');
-const fs = require('fs');
-const webpack = require('webpack');
-
 const babel = require('./webpack/babel');
 const minify = require('./webpack/minify');
 
 const externals = [
-  "react",
-  "react-dom",
-  "prop-types"
+  'react',
+  'react-dom',
+  'prop-types'
 ];
 
 const debug = {
-  devtool: "source-map",
+  devtool: 'source-map',
   entry: './src/hig-react.js',
   output: {
     path: path.resolve('./lib'),
@@ -22,12 +19,12 @@ const debug = {
   },
   module: {
     rules: [
-      babel({ plugins: ["react-docgen"]})
+      babel({ plugins: ['react-docgen'] })
     ]
   },
   plugins: [],
-  externals: externals
-}
+  externals
+};
 
 const production = {
   entry: './src/hig-react.js',
@@ -45,10 +42,10 @@ const production = {
   plugins: [
     minify()
   ],
-  externals: externals
-}
+  externals
+};
 
-if(process.env.NODE_ENV != "production") {
+if (process.env.NODE_ENV != 'production') {
   module.exports = debug;
 } else {
   module.exports = production;

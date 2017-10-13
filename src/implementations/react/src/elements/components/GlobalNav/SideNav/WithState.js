@@ -7,18 +7,24 @@ export default function WithState(WrappedComponent) {
   class SideNavWithState extends Component {
     static propTypes = {
       links: PropTypes.arrayOf(PropTypes.object),
-      modules: PropTypes.arrayOf(
-        PropTypes.shape({
-          id: PropTypes.string.isRequired,
-          title: PropTypes.string.isRequired
-        })
-      ),
+      modules: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired
+      })),
       onModuleChange: PropTypes.func.isRequired,
       submodules: PropTypes.arrayOf(PropTypes.shape({
         id: PropTypes.string.isRequired,
         title: PropTypes.string.isRequired
       })),
       activeModuleId: PropTypes.string
+    }
+
+    static defaultProps = {
+      activeModuleId: null,
+      query: '',
+      modules: [],
+      submodules: [],
+      links: []
     }
 
     constructor(props) {
@@ -36,15 +42,7 @@ export default function WithState(WrappedComponent) {
         query: '',
         activeModuleId: '',
         moduleStates
-      }
-    }
-
-    static defaultProps = {
-      activeModuleId: null,
-      query: '',
-      modules: [],
-      submodules: [],
-      links: []
+      };
     }
 
     setQuery = (event) => {
@@ -54,7 +52,7 @@ export default function WithState(WrappedComponent) {
     setActiveModuleId = (id) => {
       this.setState({ activeModuleId: id });
 
-      if(this.props.onModuleChange) {
+      if (this.props.onModuleChange) {
         this.props.onModuleChange(id);
       }
     }

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import * as HIG from 'hig-vanilla';
 import HIGAdapter, {
   MapsEventListener,
@@ -8,7 +9,11 @@ import HIGAdapter, {
 
 function ModuleAdapter(props) {
   return (
-    <HIGAdapter displayName="Collapse" HIGConstructor={HIG.GlobalNav._partials.SideNav._partials.Group._partials.Module._partials.Collapse} {...props}>{adapterProps => (
+    <HIGAdapter
+      displayName="Collapse"
+      HIGConstructor={HIG.GlobalNav._partials.SideNav._partials.Group._partials.Module._partials.Collapse}
+      {...props}
+    >{adapterProps => (
       <div>
         <MapsEventListener listener="onClick" handler={props.onClick} {...adapterProps} />
         <MapsPropToMethod value={props.minimized} {...adapterProps}>
@@ -23,5 +28,17 @@ function ModuleAdapter(props) {
     </HIGAdapter>
   );
 }
+
+ModuleAdapter.propTypes = {
+  onClick: PropTypes.func,
+  minimized: PropTypes.bool,
+  hidden: PropTypes.bool
+};
+
+ModuleAdapter.defaultProps = {
+  onClick: undefined,
+  minimized: undefined,
+  hidden: undefined
+};
 
 export default ModuleAdapter;

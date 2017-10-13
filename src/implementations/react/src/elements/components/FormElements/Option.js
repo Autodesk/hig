@@ -16,7 +16,7 @@ class Option extends Component {
   render() {
     return (
       <OptionAdapter {...this.props} onClick={this.handleClick} />
-    )
+    );
   }
 }
 

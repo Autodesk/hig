@@ -6,17 +6,15 @@ import TabsAdapter from './TabsAdapter';
 
 describe('SubNavAdapter', () => {
   it('implements the hig interface', () => {
-    expect(mockInstance => {
-      mount(
-        <SubNavAdapter
-          higInstance={mockInstance}
-          onModuleIndicatorClick={() => {}}
-          moduleIndicatorName="Settings"
-          moduleIndicatorIcon="settings"
-        >
-          <TabsAdapter />
-        </SubNavAdapter>
-      )
+    expect((mockInstance) => {
+      mount(<SubNavAdapter
+        higInstance={mockInstance}
+        onModuleIndicatorClick={() => {}}
+        moduleIndicatorName="Settings"
+        moduleIndicatorIcon="settings"
+      >
+        <TabsAdapter />
+      </SubNavAdapter>);
     }).toImplementHIGInterfaceOf(HIG.GlobalNav._partials.SubNav);
   });
 });

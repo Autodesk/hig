@@ -15,7 +15,9 @@ class Option extends Component {
   }
 
   render() {
-    const { name, link, onClick, ...otherProps } = this.props;
+    const {
+      name, link, onClick, ...otherProps
+    } = this.props;
     return (<OptionAdapter onClick={this.handleClick} {...otherProps} />);
   }
 }

@@ -9,19 +9,17 @@ import SubNavAdapter from './SubNav/SubNavAdapter';
 
 describe('GlobalNavAdapter', () => {
   it('implements the hig interface', () => {
-    expect(mockInstance => {
-      const wrapper = mount(
-        <GlobalNavAdapter
-          higInstance={mockInstance}
-          sideNavOpen={true}
-          onHoverOutside={() => {}}
-        >
-          <TopNavAdapter />
-          <SubNavAdapter />
-          <SideNavAdapter />
-          <h1>Slot content</h1>
-        </GlobalNavAdapter>
-      );
+    expect((mockInstance) => {
+      const wrapper = mount(<GlobalNavAdapter
+        higInstance={mockInstance}
+        sideNavOpen
+        onHoverOutside={() => {}}
+      >
+        <TopNavAdapter />
+        <SubNavAdapter />
+        <SideNavAdapter />
+        <h1>Slot content</h1>
+      </GlobalNavAdapter>);
       wrapper.props().higInstance.hideSideNav();
     }).toImplementHIGInterfaceOf(HIG.GlobalNav);
   });

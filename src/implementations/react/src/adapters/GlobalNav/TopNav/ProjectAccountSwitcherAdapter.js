@@ -35,10 +35,10 @@ function ProjectAccountSwitcherAdapter(props) {
           <MapsPropToMethod setter="setActiveLabel" value={props.activeLabel} {...adapterProps} />
           <MapsPropToMethod setter="setActiveType" value={props.activeType} {...adapterProps} />
           <MapsPropToMethod value={props.open} {...adapterProps}>
-            {(instance, value) => { value ? instance.open() : instance.close(); }}
+            {(instance, value) => (value ? instance.open() : instance.close())}
           </MapsPropToMethod>
           <MapsPropToMethod value={props.showCaret} {...adapterProps}>
-            {(instance, value) => { value ? instance.showCaret() : instance.hideCaret(); }}
+            {(instance, value) => (value ? instance.showCaret() : instance.hideCaret())}
           </MapsPropToMethod>
           <MountsHIGChildList {...adapterProps}>{projects}</MountsHIGChildList>
           <MountsHIGChildList {...adapterProps}>{accounts}</MountsHIGChildList>
@@ -49,13 +49,25 @@ function ProjectAccountSwitcherAdapter(props) {
 }
 
 ProjectAccountSwitcherAdapter.propTypes = {
-  query: PropTypes.string,
-  placeholder: PropTypes.string,
-  clearIconVisible: PropTypes.bool,
-  onClearIconClick: PropTypes.func,
-  onInput: PropTypes.func,
-  onFocus: PropTypes.func,
-  onBlur: PropTypes.func
+  children: PropTypes.node,
+  onClick: PropTypes.func,
+  onClickOutside: PropTypes.func,
+  projectTitle: PropTypes.string,
+  accountTitle: PropTypes.string,
+  activeImage: PropTypes.string,
+  activeLabel: PropTypes.string,
+  activeType: PropTypes.string,
+  open: PropTypes.bool,
+  showCaret: PropTypes.bool,
+};
+
+ProjectAccountSwitcherAdapter.defaultProps = {
+  children: undefined,
+  projectTitle: undefined,
+  accountTitle: undefined,
+  activeImage: undefined,
+  activeLabel: undefined,
+  activeType: undefined
 };
 
 export default ProjectAccountSwitcherAdapter;

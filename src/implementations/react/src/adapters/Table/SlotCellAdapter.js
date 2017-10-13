@@ -1,11 +1,18 @@
 import React from 'react';
 import * as HIG from 'hig-vanilla';
 import * as PropTypes from 'prop-types';
-import HIGAdapter, { MapsPropToMethod, MountsAnyChild, MountedByHIGParentList } from '../HIGAdapter';
+import HIGAdapter, {
+  MountsAnyChild,
+  MountedByHIGParentList
+} from '../HIGAdapter';
 
 function SlotCellAdapter(props) {
   return (
-    <HIGAdapter {...props} displayName="Slot" HIGConstructor={HIG.Table._partials.TableRow._partials.SlotCell}>
+    <HIGAdapter
+      {...props}
+      displayName="Slot"
+      HIGConstructor={HIG.Table._partials.TableRow._partials.SlotCell}
+    >
       {adapterProps => (
         <div>
           <MountedByHIGParentList mounter="addCell" {...adapterProps} />
@@ -20,6 +27,10 @@ function SlotCellAdapter(props) {
 
 SlotCellAdapter.propTypes = {
   children: PropTypes.node
+};
+
+SlotCellAdapter.defaultProps = {
+  children: undefined
 };
 
 SlotCellAdapter.__docgenInfo = {

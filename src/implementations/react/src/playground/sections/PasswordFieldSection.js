@@ -36,15 +36,15 @@ class PasswordFieldSection extends PureComponent {
           onFocus={this.logEvent}
           onInput={this.setPassword}
           value={this.state.password}
-          onPasswordHideButtonClick={function() {"clicked Password hide button"}}
-          onPasswordRevealButtonClick={function(){console.log('Password REVEAL clicked')}}
+          onPasswordHideButtonClick={function () { 'clicked Password hide button'; }}
+          onPasswordRevealButtonClick={function () { console.log('Password REVEAL clicked'); }}
           showPasswordRevealButton={false}
           showPasswordHideButton={false}
           placeholder="Enter the dragon, I mean password"
           required="Hint: It's not 'password', 'monkey', or '123456'"
         />
       </PlaygroundSection>
-    )
+    );
   }
 }
 export default PasswordFieldSection;

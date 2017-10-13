@@ -7,14 +7,12 @@ import CollapseAdapter from './CollapseAdapter';
 describe('CollapseAdapter', () => {
   it('implements the hig interface', () => {
     expect((mockInstance) => {
-      const wrapper = mount(
-        <CollapseAdapter
-          higInstance={mockInstance}
-          minimized={true}
-          onClick={() => {}}
-          hidden={false}
-        />
-      );
+      mount(<CollapseAdapter
+        higInstance={mockInstance}
+        minimized
+        onClick={() => {}}
+        hidden={false}
+      />);
 
       mockInstance.maximize();
       mockInstance.hide();

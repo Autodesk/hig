@@ -5,6 +5,11 @@ import DropdownAdapter from '../../../adapters/FormElements/DropdownAdapter.js';
 import Option from './Option';
 
 class Dropdown extends Component {
+  static defaultProps = {
+    options: [],
+    onChange: () => {}
+  }
+
   constructor(props) {
     super(props);
 
@@ -14,11 +19,6 @@ class Dropdown extends Component {
     };
   }
 
-  static defaultProps = {
-    options: [],
-    onChange: () => {}
-  }
-
   getDefaultValue() {
     const { defaultValue, value } = this.props;
 
@@ -26,9 +26,8 @@ class Dropdown extends Component {
       return value;
     } else if (defaultValue !== undefined) {
       return defaultValue;
-    } else {
-      return '';
     }
+    return '';
   }
 
   getRenderedValue() {
@@ -36,9 +35,8 @@ class Dropdown extends Component {
 
     if (value !== undefined) {
       return value;
-    } else {
-      return this.state.value;
     }
+    return this.state.value;
   }
 
   setSelectedValue = (selectedOptionValue) => {
@@ -103,44 +101,44 @@ Dropdown.propTypes = {
 Dropdown.__docgenInfo = {
   props: {
     label: {
-      description: "{string} label for the the dropdown"
+      description: '{string} label for the the dropdown'
     },
     instructions: {
-      description: "{string} instructions for the dropdown"
+      description: '{string} instructions for the dropdown'
     },
     placeholder: {
-      description: "{string} placeholder for the dropdown"
+      description: '{string} placeholder for the dropdown'
     },
     disabled: {
-      description: "{bool} makes the dropdown disabled"
+      description: '{bool} makes the dropdown disabled'
     },
     required: {
-      description: "{string} makes the field required"
+      description: '{string} makes the field required'
     },
     value: {
-      description: "{string} option that is selected on construction"
+      description: '{string} option that is selected on construction'
     },
     defaultValue: {
-      description: "{string} default selected option"
+      description: '{string} default selected option'
     },
     options: {
       description: "{Array} array with objects, objects have a 'label' and a 'value'"
     },
     onChange: {
       description:
-        "Calls the provided callback when option is changed"
+        'Calls the provided callback when option is changed'
     },
     onBlur: {
       description:
-        "Calls the provided callback when focus moves away from the dropdown"
+        'Calls the provided callback when focus moves away from the dropdown'
     },
     onFocus: {
       description:
-        "Calls the provided callback when the user focuses on the dropdown"
+        'Calls the provided callback when the user focuses on the dropdown'
     },
     onKeypress: {
       description:
-        "Calls the provided callback when the user presses a key while the dropdown has focus"
+        'Calls the provided callback when the user presses a key while the dropdown has focus'
     }
   }
 };

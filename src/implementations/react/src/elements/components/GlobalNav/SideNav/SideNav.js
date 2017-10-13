@@ -12,19 +12,15 @@ import WithState from './WithState';
 class SideNav extends Component {
   static propTypes = {
     copyright: PropTypes.string,
-    groups: PropTypes.arrayOf(
-      PropTypes.shape({
-        modules: PropTypes.arrayOf(
-          PropTypes.shape({
-            id: PropTypes.string.isRequired,
-            minimized: PropTypes.bool,
-            submodules: PropTypes.arrayOf(PropTypes.shape({
-              id: PropTypes.string.isRequired
-            }))
-          })
-        )
-      })
-    ),
+    groups: PropTypes.arrayOf(PropTypes.shape({
+      modules: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        minimized: PropTypes.bool,
+        submodules: PropTypes.arrayOf(PropTypes.shape({
+          id: PropTypes.string.isRequired
+        }))
+      }))
+    })),
     headerLabel: PropTypes.string,
     headerLink: PropTypes.string,
     links: PropTypes.arrayOf(PropTypes.object),
@@ -71,9 +67,9 @@ class SideNav extends Component {
       <SideNavAdapter {...sideNavProps}>
         {this.props.groups.map((group, i) => (
           <Group key={group.modules[0].id}>
-            {group.modules.map(module => {
+            {group.modules.map((module) => {
               const showSubmodules = this.props.disableCollapse || !module.minimized;
-              const hideCollapse =  this.props.disableCollapse || module.submodules.length === 0;
+              const hideCollapse = this.props.disableCollapse || module.submodules.length === 0;
               return (
                 <Module
                   onClick={this.props.onModuleClick}

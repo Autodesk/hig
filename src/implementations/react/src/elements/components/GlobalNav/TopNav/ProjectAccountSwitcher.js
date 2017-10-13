@@ -1,3 +1,10 @@
+/**
+ * ProjectAccountSwitcher
+ *
+ *
+ *
+*/
+
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
@@ -73,7 +80,7 @@ class ProjectAccountSwitcher extends Component {
       return { activeImage: activeAccount.image, activeLabel: activeAccount.label, activeType: 'account' };
     }
 
-    return {}
+    return {};
   }
 
   flyoutProps() {
@@ -82,7 +89,7 @@ class ProjectAccountSwitcher extends Component {
         showCaret: true,
         onClick: this.toggleOpen,
         onClickOutside: this.toggleOpen
-      }
+      };
     }
 
     return {};
@@ -107,12 +114,8 @@ class ProjectAccountSwitcher extends Component {
   }
 
   render() {
-    const projects = this.props.projects.map(project => {
-      return {...project, active: project.id === this.renderedActiveProjectId()}
-    });
-    const accounts = this.props.accounts.map(account => {
-      return {...account, active: account.id === this.renderedActiveAccountId()}
-    });
+    const projects = this.props.projects.map(project => ({ ...project, active: project.id === this.renderedActiveProjectId() }));
+    const accounts = this.props.accounts.map(account => ({ ...account, active: account.id === this.renderedActiveAccountId() }));
 
     return (
       <ProjectAccountSwitcherAdapter
@@ -123,19 +126,17 @@ class ProjectAccountSwitcher extends Component {
         {...this.activeProps()}
       >
         {accounts.map((a, i) => {
-          if( i === 0) {
-            return <Account onClick={this.handleAccountClick} key={a.id} {...a}/>
-          } else {
-            return <Account onClick={this.handleAccountClick} key={a.id} {...a}/>
+          if (i === 0) {
+            return <Account onClick={this.handleAccountClick} key={a.id} {...a} />;
           }
+            return <Account onClick={this.handleAccountClick} key={a.id} {...a} />;
         })}
 
         {projects.map((p, i) => {
-          if(i === 0) {
-            return <Project onClick={this.handleProjectClick} key={p.id} {...p}/>
-          } else {
-            return <Project onClick={this.handleProjectClick} key={p.id} {...p} />
+          if (i === 0) {
+            return <Project onClick={this.handleProjectClick} key={p.id} {...p} />;
           }
+            return <Project onClick={this.handleProjectClick} key={p.id} {...p} />;
         })}
       </ProjectAccountSwitcherAdapter>
     );

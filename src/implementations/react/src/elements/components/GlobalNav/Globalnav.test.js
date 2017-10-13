@@ -260,7 +260,7 @@ describe('<GlobalNav>', () => {
           />);
         });
 
-        it('does not render SubNave', () => {
+        it('does not render SubNav', () => {
           expect(wrapper.find(SubNav).length).toEqual(0);
         });
       });

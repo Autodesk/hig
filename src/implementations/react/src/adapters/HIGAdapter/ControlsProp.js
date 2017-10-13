@@ -11,12 +11,18 @@ class ControlsProp extends Component {
     listener: PropTypes.string,
     mounted: PropTypes.bool.isRequired,
     setter: PropTypes.string,
-    value: PropTypes.any
+    value: PropTypes.any,
+    children: PropTypes.func,
   }
 
-  defaultProps = {
+  static defaultProps = {
+    children: undefined,
+    defaultValue: '',
     eventTargetPropName: 'value',
-    defaultValue: ''
+    handler: undefined,
+    listener: undefined,
+    setter: undefined,
+    value: undefined
   }
 
   constructor(props) {
@@ -24,7 +30,11 @@ class ControlsProp extends Component {
     this.state = {
       controlled: props.value !== undefined,
       value: this.defaultValue()
-    }
+    };
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.configureHandler(nextProps);
   }
 
   defaultValue() {
@@ -35,20 +45,6 @@ class ControlsProp extends Component {
       : defaultValue;
   }
 
-  renderedValue() {
-    return this.props.value !== undefined
-      ? this.props.value
-      : this.state.value;
-  }
-
-  componentWillReceiveProps(nextProps) {
-    this.configureHandler(nextProps);
-
-    if (nextProps.value !== undefined) {
-      this.setState({ unset: false });
-    }
-  }
-
   configureHandler(props) {
     if (!props.mounted) { return; }
 
@@ -56,7 +52,7 @@ class ControlsProp extends Component {
       this.state.dispose();
     }
 
-    if(!props.handler) { return; }
+    if (!props.handler) { return; }
 
     throwIfNoHIGMethod(this.props, this.props.listener);
     this.setState({ dispose: props.higInstance[props.listener](this.handleEvent) });
@@ -74,12 +70,18 @@ class ControlsProp extends Component {
     }
   }
 
+  renderedValue() {
+    return this.props.value !== undefined
+      ? this.props.value
+      : this.state.value;
+  }
+
   render() {
-    if(!this.props.mounted) {
+    if (!this.props.mounted) {
       return null;
     }
 
-    if(this.state.value === undefined) {
+    if (this.state.value === undefined) {
       return null;
     }
 

@@ -10,17 +10,18 @@ import HIGAdapter, {
 
 function FlyoutAdapter(props) {
   return (
-    <HIGAdapter displayName="Flyout" HIGConstructor={HIG.Flyout} {...props}>{(adapterProps) => (
+    <HIGAdapter displayName="Flyout" HIGConstructor={HIG.Flyout} {...props}>{adapterProps => (
       <div>
         <MapsPropToMethod value={props.anchorPoint} setter="setAnchorPoint" {...adapterProps} />
         <MapsPropToMethod value={props.open} {...adapterProps}>
-          {(instance, value) => value ? instance.open() : instance.close() }
+          {(instance, value) => (value ? instance.open() : instance.close()) }
         </MapsPropToMethod>
         <MapsEventListener listener="onClickOutside" handler={props.onClickOutside} {...adapterProps} />
         <MountsAnyChild mounter="addTarget" {...adapterProps}>{props.children}</MountsAnyChild>
         <MountsAnyChild mounter="addSlot" {...adapterProps}>{props.content}</MountsAnyChild>
       </div>
-    )}</HIGAdapter>
+    )}
+    </HIGAdapter>
   );
 }
 
@@ -28,8 +29,16 @@ FlyoutAdapter.propTypes = {
   anchorPoint: PropTypes.oneOf(HIG.Flyout.AvailableAnchorPoints),
   onClickOutside: PropTypes.func,
   open: PropTypes.bool,
-  target: PropTypes.any,
+  content: PropTypes.node,
   children: PropTypes.node
+};
+
+FlyoutAdapter.defaultProps = {
+  anchorPoint: undefined,
+  onClickOutside: undefined,
+  open: undefined,
+  content: undefined,
+  children: undefined
 };
 
 export default FlyoutAdapter;

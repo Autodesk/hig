@@ -1,12 +1,12 @@
-import "./text-head-cell.scss";
+import './text-head-cell.scss';
 
-var Template = require("./text-head-cell.html");
-var Interface = require("interface.json");
-var Core = require("_core.js");
+const Template = require('./text-head-cell.html');
+const Interface = require('interface.json');
+const Core = require('_core.js');
 
-var frToPercentage  =  require("../../../../helpers/js/_frtopercentage.js");
+const frToPercentage = require('../../../../helpers/js/_frtopercentage.js');
 
-var AvailablePositions = ["left", "right", "center"];
+const AvailableAlignments = ['left', 'right', 'center'];
 
 
 /**
@@ -18,37 +18,38 @@ var AvailablePositions = ["left", "right", "center"];
 class TextHeadCell extends Core {
   constructor(options = {}) {
     super(options);
-    this._render(Template, options, undefined, "tr");
+    this._render(Template, options, undefined, 'tr');
     this.initialOptions = options;
   }
 
-  _componentDidMount(){
-    if(this.initialOptions.width){
+  _componentDidMount() {
+    if (this.initialOptions.width) {
       this.setWidth(this.initialOptions.width);
     }
   }
 
-  setText(text){
+  setText(text) {
     this.el.textContent = text;
   }
 
-  setAlignment(position){
-    if(AvailablePositions.indexOf(position) > -1) {
-      this.el.style.textAlign = position
-    };
+  setAlignment(alignment) {
+    if (AvailableAlignments.indexOf(alignment) > -1) {
+      this.el.style.textAlign = alignment;
+    }
   }
 
-  setWidth(width){
+  setWidth(width) {
     this.el.style.width = frToPercentage(width);
   }
 }
 
 TextHeadCell._interface =
-  Interface["components"]["Table"]["partials"]["TableHead"]["partials"]["TextHeadCell"];
+  Interface.components.Table.partials.TableHead.partials.TextHeadCell;
 TextHeadCell._defaults = {
-  text: "",
-  alignment: "",
-  width: "1fr"
+  text: '',
+  alignment: '',
+  width: '1fr'
 };
+TextHeadCell.AvailableAlignments = AvailableAlignments;
 
 module.exports = TextHeadCell;

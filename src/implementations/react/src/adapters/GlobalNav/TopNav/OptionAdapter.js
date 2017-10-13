@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import * as HIG from 'hig-vanilla';
 import HIGAdapter, {
   MapsEventListener,
@@ -8,7 +9,11 @@ import MountedByHIGParentList from '../../HIGAdapter/MountedByHIGParentList';
 
 function OptionAdapter(props) {
   return (
-    <HIGAdapter {...props} displayName="Option" HIGConstructor={HIG.GlobalNav._partials.TopNav._partials.Help._partials.Option}>
+    <HIGAdapter
+      {...props}
+      displayName="Option"
+      HIGConstructor={HIG.GlobalNav._partials.TopNav._partials.Help._partials.Option}
+    >
       {adapterProps => (
         <div>
           <MountedByHIGParentList mounter="addOption" {...adapterProps} />
@@ -20,5 +25,17 @@ function OptionAdapter(props) {
     </HIGAdapter>
   );
 }
+
+OptionAdapter.propTypes = {
+  onClick: PropTypes.func,
+  name: PropTypes.string,
+  link: PropTypes.string
+};
+
+OptionAdapter.defaultProps = {
+  onClick: undefined,
+  name: undefined,
+  link: undefined
+};
 
 export default OptionAdapter;

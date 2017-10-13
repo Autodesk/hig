@@ -12,26 +12,24 @@ import CollapseAdapter from './CollapseAdapter';
 describe('ModuleAdapter', () => {
   it('implements the hig interface', () => {
     expect((mockInstance) => {
-      const wrapper = mount(
-        <GlobalNavAdapter>
-          <SideNavAdapter>
-            <GroupAdapter>
-              <ModuleAdapter
-                higInstance={mockInstance}
-                title="Foo"
-                icon="settings"
-                link="http://autodesk.com"
-                onClick={() => {}}
-                onHover={() => {}}
-                active={true}
-              >
-                <CollapseAdapter />
-                <SubmoduleAdapter />
-              </ModuleAdapter>
-            </GroupAdapter>
-          </SideNavAdapter>
-        </GlobalNavAdapter>
-      );
+      mount(<GlobalNavAdapter>
+        <SideNavAdapter>
+          <GroupAdapter>
+            <ModuleAdapter
+              higInstance={mockInstance}
+              title="Foo"
+              icon="settings"
+              link="http://autodesk.com"
+              onClick={() => {}}
+              onHover={() => {}}
+              active
+            >
+              <CollapseAdapter />
+              <SubmoduleAdapter />
+            </ModuleAdapter>
+          </GroupAdapter>
+        </SideNavAdapter>
+      </GlobalNavAdapter>);
 
       mockInstance.deactivate();
 

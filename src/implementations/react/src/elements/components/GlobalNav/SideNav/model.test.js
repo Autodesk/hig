@@ -1,13 +1,13 @@
 import { match, filter, group, mergeState, getModuleState } from './model';
 
 describe('SideNav model', () => {
-  let module1 = { id: '1', title: '1 cool module', groupId: 'X' };
-  let module2 = { id: '2', title: '2 legit to quit', groupId: 'Y' };
-  let modules = [module1, module2];
+  const module1 = { id: '1', title: '1 cool module', groupId: 'X' };
+  const module2 = { id: '2', title: '2 legit to quit', groupId: 'Y' };
+  const modules = [module1, module2];
 
-  let submoduleA = { id: 'A', title: 'A cool submodule', moduleId: '1' };
-  let submoduleB = { id: 'B', title: 'Belive in your sumbodule', moduleId: '2' };
-  let submodules = [submoduleA, submoduleB];
+  const submoduleA = { id: 'A', title: 'A cool submodule', moduleId: '1' };
+  const submoduleB = { id: 'B', title: 'Belive in your sumbodule', moduleId: '2' };
+  const submodules = [submoduleA, submoduleB];
 
   describe('filter', () => {
     it('returns submodules matching the query', () => {
@@ -45,12 +45,16 @@ describe('SideNav model', () => {
       expect(group({ modules, submodules })).toEqual([
         {
           modules: [
-            { id: '1', title: '1 cool module', groupId: 'X', submodules: [submoduleA] },
+            {
+              id: '1', title: '1 cool module', groupId: 'X', submodules: [submoduleA]
+            },
           ]
         },
         {
           modules: [
-            { id: '2', title: '2 legit to quit', groupId: 'Y', submodules: [submoduleB] }
+            {
+              id: '2', title: '2 legit to quit', groupId: 'Y', submodules: [submoduleB]
+            }
           ]
         }
       ]);
@@ -65,7 +69,7 @@ describe('SideNav model', () => {
         const state = {
           activeModuleId: '1',
           moduleStates: {}
-        }
+        };
         const result = mergeState(props, state);
 
         expect(result.modules[0].active).toBeTruthy();
@@ -77,7 +81,7 @@ describe('SideNav model', () => {
           const state = {
             activeModuleId: '1',
             moduleStates: {}
-          }
+          };
           const result = mergeState({
             ...props,
             activeModuleId: 'A'
@@ -94,7 +98,7 @@ describe('SideNav model', () => {
         const state = {
           activeModuleId: 'A',
           moduleStates: {}
-        }
+        };
         const result = mergeState(props, state);
 
         expect(result.modules[0].active).toBeTruthy();
@@ -106,11 +110,11 @@ describe('SideNav model', () => {
       it('preserves the value', () => {
         const state = {
           moduleStates: {
-            '1': {
+            1: {
               minimized: false
             }
           }
-        }
+        };
         const result = mergeState(props, state);
 
         expect(result.modules[0].minimized).not.toBeTruthy();
@@ -121,7 +125,7 @@ describe('SideNav model', () => {
       it('preserves the value', () => {
         const state = {
           moduleStates: {}
-        }
+        };
         const result = mergeState(props, state);
 
         expect(result.modules[0].minimized).toBeTruthy();
@@ -131,11 +135,11 @@ describe('SideNav model', () => {
     it('returns any other props', () => {
       const state = {
         moduleStates: {
-          '1': {
+          1: {
             minimized: false
           }
         }
-      }
+      };
       const result = mergeState({ ...props, foo: 'bar' }, state);
       expect(result.foo).toEqual('bar');
     });
@@ -143,8 +147,8 @@ describe('SideNav model', () => {
 
   describe('.match', () => {
     describe('with a matching query', () => {
-      let string = 'foo';
-      let query = 'fo';
+      const string = 'foo';
+      const query = 'fo';
 
       it('returns true', () => {
         expect(match(string, query)).toEqual(true);
@@ -152,8 +156,8 @@ describe('SideNav model', () => {
     });
 
     describe('with a matching query with mis-matched case', () => {
-      let string = 'foo';
-      let query = 'Fo';
+      const string = 'foo';
+      const query = 'Fo';
 
       it('returns true', () => {
         expect(match(string, query)).toEqual(true);
@@ -161,13 +165,12 @@ describe('SideNav model', () => {
     });
 
     describe('with a non-matching query', () => {
-      let string = 'foo';
-      let query = 'baz';
+      const string = 'foo';
+      const query = 'baz';
 
       it('returns false', () => {
         expect(match(string, query)).toEqual(false);
       });
     });
   });
-
 });

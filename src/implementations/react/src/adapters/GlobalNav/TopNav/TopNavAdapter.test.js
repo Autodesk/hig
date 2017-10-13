@@ -10,22 +10,20 @@ import ProjectAccountSwitcherAdapter from './ProjectAccountSwitcherAdapter';
 
 describe('TopNavAdapter', () => {
   it('implements the hig interface', () => {
-    expect(mockInstance => {
-      mount(
-        <TopNavAdapter
-          higInstance={mockInstance}
-          logo="settings"
-          logoLink="http://autodesk.com"
-          onLogoClick={() => {}}
-          onHamburgerClick={() => {}}
-        >
-          <ShortcutAdapter />
-          <SearchAdapter />
-          <ProfileAdapter />
-          <HelpAdapter />
-          <ProjectAccountSwitcherAdapter />
-        </TopNavAdapter>
-      )
+    expect((mockInstance) => {
+      mount(<TopNavAdapter
+        higInstance={mockInstance}
+        logo="settings"
+        logoLink="http://autodesk.com"
+        onLogoClick={() => {}}
+        onHamburgerClick={() => {}}
+      >
+        <ShortcutAdapter />
+        <SearchAdapter />
+        <ProfileAdapter />
+        <HelpAdapter />
+        <ProjectAccountSwitcherAdapter />
+      </TopNavAdapter>);
     }).toImplementHIGInterfaceOf(HIG.GlobalNav._partials.TopNav);
-  })
+  });
 });

@@ -16,7 +16,7 @@ function IconAdapter(props) {
 }
 
 IconAdapter.propTypes = {
-  nameOrSVG: PropTypes.string
-}
+  nameOrSVG: PropTypes.string.isRequired
+};
 
 export default IconAdapter;
