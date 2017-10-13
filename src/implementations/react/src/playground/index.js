@@ -101,7 +101,7 @@ class Playground extends React.Component {
           options: [
             {
               name: 'group 1, option 1',
-              onClick: function() { console.log('g1 o1 clicked'); }
+              link: "#" 
             },
             {
               name: 'group 1, option 2',

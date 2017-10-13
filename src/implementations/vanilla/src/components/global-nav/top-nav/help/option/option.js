@@ -20,11 +20,12 @@ class Option extends Core {
   }
 
   setLink(link) {
-    this.link = link;
+    this.el.setAttribute('href', link);
   }
 
   setName(name) {
-    this.name = name;
+    this.el.setAttribute('title', name);
+    this.el.textContent = name;
   }
 }
 

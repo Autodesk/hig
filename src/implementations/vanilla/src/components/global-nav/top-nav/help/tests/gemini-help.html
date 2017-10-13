@@ -21,21 +21,37 @@
 
  const g1 = new help.partials.Group();
 
- const g1o1 = new help.partials.Option({ name: 'This is item G1O1', link: 'g1o1' });
+ const g1o1 = new help.partials.Option({});
+
+
  const g1o2 = new help.partials.Option({ name: 'Help item G1O2', link: 'g1o2' });
 
  help.addGroup(g1);
  g1.addOption(g1o1);
  g1.addOption(g1o2);
 
+ g1o1.setLink('g1o1');
+ g1o1.setName('This is item G1O1');
+
+ g1o2.setLink('g1o2');
+ g1o2.setName('Help item G1O2');
+
  const g2 = new help.partials.Group();
 
- const g2o1 = new help.partials.Option({ name: 'Another help item G2O1', link: 'g2o1' });
- const g2o2 = new help.partials.Option({ name: 'Help G2O2', link: 'g2o2' });
+ const g2o1 = new help.partials.Option({});
+ const g2o2 = new help.partials.Option({});
 
  help.addGroup(g2);
  g2.addOption(g2o1);
  g2.addOption(g2o2);
+
+ g2o1.setLink('g2o1');
+ g2o1.setName('Another help item G2O1');
+
+ g2o2.setLink('g2o2');
+ g2o2.setName('Help G2O2');
+
+
 
  help.open();
 
