@@ -13,28 +13,17 @@ import ProjectAccountSwitcher from './TopNav/ProjectAccountSwitcher';
 
 class GlobalNav extends Component {
   static propTypes = {
-    sideNav: PropTypes.shape({
-      copyright: PropTypes.string,
-      headerLabel: PropTypes.string,
-      headerLink: PropTypes.string,
-      links: PropTypes.arrayOf(PropTypes.object),
-      onHeaderClick: PropTypes.func,
-      onSuperHeaderClick: PropTypes.func,
-      onModuleClick: PropTypes.func,
-      onSubmoduleClick: PropTypes.func,
-      superHeaderLabel: PropTypes.string,
-      superHeaderLink: PropTypes.string
-    }),
+    activeModuleId: PropTypes.string,
+    children: PropTypes.node,
+    onHamburgerClick: PropTypes.func,
     onModuleChange: PropTypes.func.isRequired,
-    modules: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.string.isRequired,
-        title: PropTypes.string.isRequired
-      }),
-    ),
     showSubNav: PropTypes.bool,
     sideNavOpen: PropTypes.bool,
     sideNavOpenByDefault: PropTypes.bool,
+    modules: PropTypes.arrayOf(PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired
+    })),
     submodules: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired
@@ -42,23 +31,45 @@ class GlobalNav extends Component {
     topNav: PropTypes.shape({
       logo: PropTypes.string,
       logoLink: PropTypes.string,
-      accounts: PropTypes.any,
-      projects: PropTypes.any,
-      projectTitle: PropTypes.string,
-      accountTitle: PropTypes.string,
-      onProjectClick: PropTypes.func,
-      onAccountClick: PropTypes.func,
-      activeProjectId: PropTypes.any,
-      activeAccountId: PropTypes.any,
+      projectAccountSwitcher: PropTypes.shape({
+        accounts: PropTypes.array,
+        projects: PropTypes.array,
+        projectTitle: PropTypes.string,
+        accountTitle: PropTypes.string,
+        onProjectClick: PropTypes.func,
+        onAccountClick: PropTypes.func,
+        activeProjectId: PropTypes.string,
+        activeAccountId: PropTypes.string,
+      }),
+      help: PropTypes.shape({
+        groups: PropTypes.arrayOf(PropTypes.shape({
+          name: PropTypes.string
+        }))
+      })
+    }),
+    sideNav: PropTypes.shape({
+      copyright: PropTypes.string,
+      headerLabel: PropTypes.string,
+      headerLink: PropTypes.string,
+      links: PropTypes.arrayOf(PropTypes.object),
+      onHeaderClick: PropTypes.func,
+      onSuperHeaderClick: PropTypes.func,
+      superHeaderLabel: PropTypes.string,
+      superHeaderLink: PropTypes.string
     })
   }
 
   static defaultProps = {
+    activeModuleId: undefined,
+    children: undefined,
     modules: [],
     submodules: [],
     topNav: {},
     sideNav: {},
-    onHamburgerClick: () => {}
+    onHamburgerClick: () => {},
+    showSubNav: false,
+    sideNavOpen: undefined,
+    sideNavOpenByDefault: false
   }
 
   constructor(props) {
@@ -73,8 +84,20 @@ class GlobalNav extends Component {
     this.setState({ sideNavOpen: !this.state.sideNavOpen });
   }
 
+  showProjectAccountSwitcher() {
+    const topNav = this.props.topNav || {};
+    const projectAccountSwitcher = topNav.projectAccountSwitcher || {};
+    const accounts = projectAccountSwitcher.accounts || [];
+    const projects = projectAccountSwitcher.projects || [];
+    return accounts.length > 0 || projects.length > 0;
+  }
+
+  showHelp() {
+    return this.props.topNav.help && this.props.topNav.help.groups && this.props.topNav.help.groups.length > 0;
+  }
+
   renderedSideNavOpen() {
-    if(this.props.sideNavOpen !== undefined) {
+    if (this.props.sideNavOpen !== undefined) {
       return this.props.sideNavOpen;
     }
     return this.state.sideNavOpen;
@@ -92,25 +115,13 @@ class GlobalNav extends Component {
     return activeModule;
   }
 
-  showProjectAccountSwitcher() {
-    const accounts = this.props.topNav.accounts || [];
-    const projects = this.props.topNav.projects || [];
-    return accounts.length > 0 || projects.length > 0;
-  }
-
-  showHelp() {
-    return this.props.topNav.help && this.props.topNav.help.groups && this.props.topNav.help.groups.length > 0;
-  }
-
-  renderTab = (submodule) => {
-    return (
-      <Tabs.Tab
-        id={submodule.id}
-        label={submodule.title}
-        key={submodule.id}
-      />
-    );
-  }
+  renderTab = submodule => (
+    <Tabs.Tab
+      id={submodule.id}
+      label={submodule.title}
+      key={submodule.id}
+    />
+  )
 
   render() {
     const activeModule = this.renderedActiveModule();
@@ -123,51 +134,40 @@ class GlobalNav extends Component {
             {...this.props.topNav}
           >
             {this.showProjectAccountSwitcher()
-              ? <ProjectAccountSwitcher
-                  accounts={this.props.topNav.accounts}
-                  projects={this.props.topNav.projects}
-                  accountTitle={this.props.topNav.accountTitle}
-                  projectTitle={this.props.topNav.projectTitle}
-                  activeProjectId={this.props.topNav.activeProjectId}
-                  activeAccountId={this.props.topNav.activeAccountId}
-                  onProjectClick={this.props.topNav.onProjectClick}
-                  onAccountClick={this.props.topNav.onAccountClick}
-                />
+              ? <ProjectAccountSwitcher {...this.props.topNav.projectAccountSwitcher} />
               : null}
-              {this.showHelp()
+            {this.showHelp()
               ? <HelpAdapter {...this.props.topNav.help}>
                 {(this.props.topNav.help.groups || []).map((groupProps, i) => (
                   <GroupAdapter key={i} {...groupProps}>
                     {(groupProps.options || []).map(optionProps => (
                       <OptionAdapter key={optionProps.name} {...optionProps} />
-                    ))}
+                      ))}
                   </GroupAdapter>
-                ))}
+                  ))}
               </HelpAdapter>
               : null}
           </TopNavAdapter>
           <SideNav
             activeModuleId={this.props.activeModuleId}
-            activeSubmoduleId={this.props.activeSubmoduleId}
             modules={this.props.modules}
             onModuleChange={this.props.onModuleChange}
-            onSubmoduleChange={this.props.onSubmoduleChange}
             submodules={this.props.submodules}
             {...this.props.sideNav}
           />
           {activeModule && this.props.showSubNav
             ? <SubNavAdapter
-                moduleIndicatorName={activeModule.title}
-                moduleIndicatorIcon={activeModule.icon}
-              >
-                {activeModule.submodules.length > 0
-                  ? <Tabs
-                      selectedTabId={this.props.activeModuleId}
-                      onChange={this.props.onModuleChange}
-                      >
-                        {activeModule.submodules.map(this.renderTab)}
-                    </Tabs>
-                  : null}
+              moduleIndicatorName={activeModule.title}
+              moduleIndicatorIcon={activeModule.icon}
+            >
+              {activeModule.submodules.length > 0
+                ? <Tabs
+                  selectedTabId={this.props.activeModuleId}
+                  onChange={this.props.onModuleChange}
+                >
+                  {activeModule.submodules.map(this.renderTab)}
+                </Tabs>
+                : null}
               </SubNavAdapter>
             : null}
           {this.props.children
@@ -175,7 +175,7 @@ class GlobalNav extends Component {
             : null}
         </GlobalNavAdapter>
       </div>
-    )
+    );
   }
 }
 
