@@ -20,7 +20,9 @@ class Option extends Core {
   }
 
   setLink(link) {
-    this.el.setAttribute('href', link);
+    link === undefined
+    ? this.el.removeAttribte('href')
+    : this.el.setAttribute('href', link);
   }
 
   setName(name) {
