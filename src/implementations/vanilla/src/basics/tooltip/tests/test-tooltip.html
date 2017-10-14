@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../../../../lib/hig.css">
+        <script type="text/javascript" src="../../../../lib/hig.js"></script>
+        <style>
+            .test-container {
+                padding: 40px;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class='test-container'></div>
+        <script>
+            // ----------------------------
+            // SETTER FLYOUT
+            // ----------------------------
+
+            var higTooltip = new Hig.Tooltip({anchorPoint: 'top-center'});
+            higTooltip.mount('.test-container');
+            higTooltip.setAnchorPoint('top-center');
+            higTooltip.addContent("Hello World");
+            higTooltip.onClickOutside(function() {
+                higTooltip.close();
+            });
+
+            var setterButton = new Hig.Button({
+                "title": "Open Tooltip"
+            });
+
+            higTooltip.addTarget(setterButton);
+            setterButton.onClick(function(e) {
+                higTooltip.open();
+            });
+
+        </script>
+    </body>
+</html>

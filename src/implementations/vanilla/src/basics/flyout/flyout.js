@@ -21,6 +21,11 @@ const ANCHOR_POINTS = [
   'left-bottom'
 ];
 
+const AVAILABLE_TYPES = [
+  'tooltip', 
+  'default'
+]
+
 /**
  * Creates a flyout
  *
@@ -36,6 +41,7 @@ class Flyout extends Core {
 
   _componentDidMount() {
     this.setAnchorPoint(this.initialOptions.anchorPoint);
+    this._setType(this.initialOptions.type); 
   }
 
   open() {
@@ -44,6 +50,23 @@ class Flyout extends Core {
 
   close() {
     this.el.classList.remove(OPEN_CLASS);
+  }
+
+  _setType(type){
+    if (!Flyout.AvailableTypes.includes(type)) {
+      console.error(
+        `Flyout cannot have type "${type}". Only these inset types are allowed: `,
+        Flyout.AvailableTypes
+      );
+      return;
+    }
+
+    
+    this.el.classList.remove(
+      ...Flyout.AvailableTypes.map(s => `hig__flyout--${s}`)
+    );
+
+    this.el.classList.add(`hig__flyout--${type}`);
   }
 
   onClickOutside(fn) {
@@ -79,6 +102,7 @@ class Flyout extends Core {
     container.classList.add(`hig__flyout__container--anchor-${anchorPoint}`);
   }
 
+
   _callbackIfClickOutside(callback, event) {
     if (this.el.contains(event.target) || this.el === event.target) {
       return;
@@ -96,6 +120,7 @@ Flyout._defaults = {
   anchorPoint: 'top-right'
 };
 
+Flyout.AvailableTypes = AVAILABLE_TYPES;
 Flyout.AvailableAnchorPoints = ANCHOR_POINTS;
 
 module.exports = Flyout;

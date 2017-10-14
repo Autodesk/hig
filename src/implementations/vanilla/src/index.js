@@ -8,6 +8,7 @@ Hig.Checkbox = require('./basics/form-elements/checkbox/checkbox.js');
 Hig.Dropdown = require('./basics/form-elements/dropdown/dropdown.js');
 Hig.FormElements = require('./basics/form-elements/form-elements.js');
 Hig.Flyout = require('./basics/flyout/flyout.js');
+Hig.Tooltip = require('./basics/tooltip/tooltip.js');
 Hig.GlobalNav = require('./components/global-nav/global-nav.js');
 Hig.IconButton = require('./components/icon-button/icon-button.js');
 Hig.Icon = require('./basics/icon/icon.js');
