@@ -19,10 +19,10 @@ class FlyoutSection extends Component {
             </div>
           }
         >
-           <Button title="Open flyout" />
+          <Button title="Open flyout" />
         </Flyout>
       </PlaygroundSection>
-    )
+    );
   }
 }
 

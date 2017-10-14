@@ -18,6 +18,6 @@ class TypographySection extends PureComponent {
       </PlaygroundSection>
     );
   }
-};
+}
 
 export default TypographySection;

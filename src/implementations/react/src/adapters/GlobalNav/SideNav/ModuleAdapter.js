@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import * as HIG from 'hig-vanilla';
 import HIGAdapter, {
   MapsEventListener,
@@ -24,7 +25,11 @@ function ModuleAdapter(props) {
   const { collapse, submodules } = sortChildren(React.Children.toArray(props.children));
 
   return (
-    <HIGAdapter displayName="Module" HIGConstructor={HIG.GlobalNav._partials.SideNav._partials.Group._partials.Module} {...props}>{adapterProps => (
+    <HIGAdapter
+      displayName="Module"
+      HIGConstructor={HIG.GlobalNav._partials.SideNav._partials.Group._partials.Module}
+      {...props}
+    >{adapterProps => (
       <div>
         <MountedByHIGParentList mounter="addModule" {...adapterProps} />
         <MapsEventListener listener="onClick" handler={props.onClick} {...adapterProps} />
@@ -45,8 +50,24 @@ function ModuleAdapter(props) {
   );
 }
 
+ModuleAdapter.propTypes = {
+  children: PropTypes.any,
+  icon: PropTypes.string,
+  link: PropTypes.string,
+  title: PropTypes.string,
+  active: PropTypes.bool,
+  onClick: PropTypes.func,
+  onHover: PropTypes.func
+};
+
 ModuleAdapter.defaultProps = {
-  children: []
+  children: [],
+  icon: undefined,
+  link: undefined,
+  title: undefined,
+  active: undefined,
+  onClick: undefined,
+  onHover: undefined,
 };
 
 export default ModuleAdapter;

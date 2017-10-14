@@ -1,20 +1,37 @@
-import React from 'react'
-import * as HIG from 'hig-vanilla'
+import React from 'react';
+import PropTypes from 'prop-types';
+import * as HIG from 'hig-vanilla';
 
-import HIGAdapter, { MapsPropToMethod, MapsEventListener, MountedByHIGParentList } from '../HIGAdapter'
+import HIGAdapter, { MapsPropToMethod, MountedByHIGParentList } from '../HIGAdapter';
 
-function TextCellAdapter (props) {
+function TextCellAdapter(props) {
   return (
-    <HIGAdapter displayName="TextCell" HIGConstructor={HIG.Table._partials.TableRow._partials.TextCell} {...props}>{(adapterProps) => (
+    <HIGAdapter
+      {...props}
+      displayName="TextCell"
+      HIGConstructor={HIG.Table._partials.TableRow._partials.TextCell}
+    >{adapterProps => (
       <div>
         <MountedByHIGParentList mounter="addCell" {...adapterProps} />
-         <MapsPropToMethod value={props.text} setter="setText" {...adapterProps} />
+        <MapsPropToMethod value={props.text} setter="setText" {...adapterProps} />
         <MapsPropToMethod value={props.detail} setter="setDetail" {...adapterProps} />
         <MapsPropToMethod value={props.alignment} setter="setAlignment" {...adapterProps} />
       </div>
-    )}</HIGAdapter>
-  )
+    )}
+    </HIGAdapter>
+  );
 }
 
+TextCellAdapter.propTypes = {
+  text: PropTypes.string,
+  detail: PropTypes.string,
+  alignment: PropTypes.oneOf(HIG.Table._partials.TableRow._partials.TextCell.AvailableAlignments)
+};
 
-export default TextCellAdapter
+TextCellAdapter.defaultProps = {
+  text: undefined,
+  detail: undefined,
+  alignment: undefined
+};
+
+export default TextCellAdapter;

@@ -1,21 +1,18 @@
-import React from 'react'
-import { mount } from 'enzyme'
+import React from 'react';
+import { mount } from 'enzyme';
 
-import * as HIG from 'hig-vanilla'
-import TextCellAdapter from './TextCellAdapter'
+import * as HIG from 'hig-vanilla';
+import TextCellAdapter from './TextCellAdapter';
 
 describe('TextCellAdapter', () => {
   it('implements the text cell interface', () => {
     expect((mockInstance) => {
-      const wrapper = mount(
-        <TextCellAdapter
-          higInstance={mockInstance}
-          text="test"
-          detail="test detail"
-          alignment="left"
-        />
-      )
-    }).toImplementHIGInterfaceOf(HIG.Table._partials.TableRow._partials.TextCell)
-
-  })
-})
+      mount(<TextCellAdapter
+        higInstance={mockInstance}
+        text="test"
+        detail="test detail"
+        alignment="left"
+      />);
+    }).toImplementHIGInterfaceOf(HIG.Table._partials.TableRow._partials.TextCell);
+  });
+});

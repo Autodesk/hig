@@ -20,7 +20,7 @@ function CheckboxAdapter(props) {
             defaultValue={props.defaultChecked !== undefined ? props.defaultChecked : false}
             {...adapterProps}
           >
-            {(instance, value) => value ? instance.check() : instance.uncheck()}
+            {(instance, value) => (value ? instance.check() : instance.uncheck())}
           </ControlsProp>
           <MapsEventListener listener="onFocus" handler={props.onFocus} {...adapterProps} />
           <MapsEventListener listener="onHover" handler={props.onFocus} {...adapterProps} />
@@ -28,10 +28,10 @@ function CheckboxAdapter(props) {
           <MapsPropToMethod setter="setName" value={props.name} {...adapterProps} />
           <MapsPropToMethod setter="setValue" value={props.value} {...adapterProps} />
           <MapsPropToMethod value={props.disabled} {...adapterProps}>
-            {(instance, value) => value ? instance.disable() : instance.enable()}
+            {(instance, value) => (value ? instance.disable() : instance.enable())}
           </MapsPropToMethod>
           <MapsPropToMethod value={props.required} {...adapterProps}>
-            {(instance, value) => value ? instance.required(value) : instance.noLongerRequired()}
+            {(instance, value) => (value ? instance.required(value) : instance.noLongerRequired())}
           </MapsPropToMethod>
         </div>
       )}
@@ -40,7 +40,8 @@ function CheckboxAdapter(props) {
 }
 
 CheckboxAdapter.propTypes = {
-  defaultValue: PropTypes.string,
+  checked: PropTypes.bool,
+  defaultChecked: PropTypes.bool,
   disabled: PropTypes.bool,
   icon: PropTypes.string,
   instructions: PropTypes.string,
@@ -55,6 +56,25 @@ CheckboxAdapter.propTypes = {
   required: PropTypes.string,
   showClearButton: PropTypes.bool,
   value: PropTypes.string,
+};
+
+CheckboxAdapter.defaultProps = {
+  checked: undefined,
+  defaultChecked: undefined,
+  disabled: undefined,
+  icon: undefined,
+  instructions: undefined,
+  label: undefined,
+  name: undefined,
+  onBlur: undefined,
+  onChange: undefined,
+  onClearButtonClick: undefined,
+  onFocus: undefined,
+  onInput: undefined,
+  placeholder: undefined,
+  required: undefined,
+  showClearButton: undefined,
+  value: undefined,
 };
 
 export default CheckboxAdapter;

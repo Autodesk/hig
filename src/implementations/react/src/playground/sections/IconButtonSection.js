@@ -25,7 +25,7 @@ class IconButtonSection extends PureComponent {
         />
 
         <IconButton
-          disabled={true}
+          disabled
           title="Icon button"
           link="#"
           icon="settings"

@@ -21,7 +21,7 @@ class Context extends Component {
           <ProjectAccountSwitcher {...this.props} />
         </TopNavAdapter>
       </GlobalNavAdapter>
-    )
+    );
   }
 }
 
@@ -30,9 +30,8 @@ describe('<ProjectAccountSwitcher>', () => {
     let wrapper;
 
     describe('with just one account', () => {
-
       beforeEach(() => {
-        const accounts= [
+        const accounts = [
           { id: '1', label: 'My account' }
         ];
         wrapper = mount(<Context accounts={accounts} />);
@@ -49,9 +48,8 @@ describe('<ProjectAccountSwitcher>', () => {
     });
 
     describe('with just one project', () => {
-
       beforeEach(() => {
-        const projects= [
+        const projects = [
           { id: '1', label: 'My project' }
         ];
         wrapper = mount(<Context projects={projects} />);
@@ -69,7 +67,7 @@ describe('<ProjectAccountSwitcher>', () => {
 
     describe('with more than one account', () => {
       beforeEach(() => {
-        const accounts= [
+        const accounts = [
           { id: '1', label: 'My account' },
           { id: '2', label: 'Another account' }
         ];
@@ -81,15 +79,14 @@ describe('<ProjectAccountSwitcher>', () => {
       });
 
       it('passes click handlers', () => {
-        expect(wrapper.find(ProjectAccountSwitcherAdapter).prop('onClick')).toBeInstanceOf(Function)
-        expect(wrapper.find(ProjectAccountSwitcherAdapter).prop('onClickOutside')).toBeInstanceOf(Function)
+        expect(wrapper.find(ProjectAccountSwitcherAdapter).prop('onClick')).toBeInstanceOf(Function);
+        expect(wrapper.find(ProjectAccountSwitcherAdapter).prop('onClickOutside')).toBeInstanceOf(Function);
       });
     });
 
     describe('with more than one project', () => {
-
       beforeEach(() => {
-        const projects= [
+        const projects = [
           { id: '1', label: 'My project' },
           { id: '2', label: 'Another project' }
         ];
@@ -101,8 +98,8 @@ describe('<ProjectAccountSwitcher>', () => {
       });
 
       it('passes click handlers', () => {
-        expect(wrapper.find(ProjectAccountSwitcherAdapter).prop('onClick')).toBeInstanceOf(Function)
-        expect(wrapper.find(ProjectAccountSwitcherAdapter).prop('onClickOutside')).toBeInstanceOf(Function)
+        expect(wrapper.find(ProjectAccountSwitcherAdapter).prop('onClick')).toBeInstanceOf(Function);
+        expect(wrapper.find(ProjectAccountSwitcherAdapter).prop('onClickOutside')).toBeInstanceOf(Function);
       });
     });
   });
@@ -217,5 +214,4 @@ describe('<ProjectAccountSwitcher>', () => {
       expect(wrapper.find(Project).first().prop('onClick')).toBeInstanceOf(Function);
     });
   });
-
 });

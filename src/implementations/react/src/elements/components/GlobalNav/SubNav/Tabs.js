@@ -29,17 +29,16 @@ class Tabs extends React.Component {
       return selectedTabId;
     } else if (defaultSelectedTabId !== undefined) {
       return defaultSelectedTabId;
-    } else {
-      // select first tab in absence of user input
-      const tabs = this.getTabChildren();
-      return tabs.length === 0 ? undefined : tabs[0].props.id;
     }
+    // select first tab in absence of user input
+    const tabs = this.getTabChildren();
+    return tabs.length === 0 ? undefined : tabs[0].props.id;
   }
 
   renderedSelectedTabId() {
     return this.props.selectedTabId
       ? this.props.selectedTabId
-      : this.state.selectedTabId
+      : this.state.selectedTabId;
   }
 
   getTabChildren() {
@@ -49,7 +48,7 @@ class Tabs extends React.Component {
   render() {
     const tabs = React.Children.map(
       this.props.children,
-      child => isTab(child) ? this.renderTab(child) : null
+      child => (isTab(child) ? this.renderTab(child) : null)
     );
     return (
       <TabsAdapter>

@@ -4,23 +4,20 @@ export function match(string, query) {
 
 export function filter({ modules, submodules, ...props }, query) {
   const filteredSubmodules = submodules.filter(submodule => match(submodule.title, query));
-  const filteredModules = modules.filter(module => {
-    return filteredSubmodules.some(s => s.moduleId === module.id) || match(module.title, query);
-  });
+  const filteredModules = modules.filter(module => filteredSubmodules.some(s => s.moduleId === module.id) || match(module.title, query));
 
-  return { ...props, modules: filteredModules, submodules: filteredSubmodules }
+  return { ...props, modules: filteredModules, submodules: filteredSubmodules };
 }
 
 export function group({ modules, submodules }) {
   const uniqueGroupIds = Array.from(new Set(modules.map(m => m.groupId)));
   return uniqueGroupIds.map(groupId => ({
-    modules: modules.filter(m => m.groupId === groupId).map(module => {
-      return {
-        ...module,
-        submodules: submodules.filter(s => s.moduleId === module.id)
-      }})
+    modules: modules.filter(m => m.groupId === groupId).map(module => ({
+      ...module,
+      submodules: submodules.filter(s => s.moduleId === module.id)
+    }))
   }));
-};
+}
 
 export function mergeState({ modules, submodules, ...props }, state) {
   const activeModuleId = props.activeModuleId || state.activeModuleId;
@@ -29,22 +26,20 @@ export function mergeState({ modules, submodules, ...props }, state) {
 
   return {
     ...props,
-    modules: modules.map(module => {
+    modules: modules.map((module) => {
       const moduleWithState = {
         ...module,
         active: module.id === activeModule.id || module.id === activeSubmodule.moduleId,
         ...getModuleState(state.moduleStates, module.id)
-      }
+      };
 
       return moduleWithState;
     }),
-    submodules: submodules.map(submodule => {
-      return {
-        ...submodule,
-        active: submodule.id === activeModuleId,
-      }
-    })
-  }
+    submodules: submodules.map(submodule => ({
+      ...submodule,
+      active: submodule.id === activeModuleId,
+    }))
+  };
 }
 
 export function getModuleState(moduleStates, id) {

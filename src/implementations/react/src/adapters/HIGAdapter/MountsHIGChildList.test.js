@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount } from "enzyme";
+import { mount } from 'enzyme';
 import { MountsHIGChildList } from './index';
 
 describe('MountsHIGChildList', () => {
@@ -7,7 +7,7 @@ describe('MountsHIGChildList', () => {
     addThing = jest.fn()
   }
   function ChildComponent(props) {
-    return <h1>{props.id}</h1>
+    return <h1>{props.id}</h1>;
   }
 
   function context(props, ids) {
@@ -25,7 +25,7 @@ describe('MountsHIGChildList', () => {
         higInstance,
         mounter: 'addThing',
         mounted: true
-      }
+      };
       const wrapper = mount(context(props, ['1', '2', '3']));
 
       expect(wrapper.find(ChildComponent).first()).toHaveProp('index');
@@ -34,11 +34,9 @@ describe('MountsHIGChildList', () => {
 
   it('provides the higInstance via context as "higParent"', () => {
     const higInstance = new VanillaParent();
-    const wrapper = mount(
-      <MountsHIGChildList higInstance={higInstance} mounted={true}>
-        <ChildComponent />
-      </MountsHIGChildList>
-    );
+    const wrapper = mount(<MountsHIGChildList higInstance={higInstance} mounted>
+      <ChildComponent />
+    </MountsHIGChildList>);
 
     const context = wrapper.instance().getChildContext();
     expect(context.higParent).toEqual(higInstance);
@@ -47,15 +45,13 @@ describe('MountsHIGChildList', () => {
   describe('with a null child', () => {
     it('does not blow up', () => {
       expect(() => {
-          const higInstance = new VanillaParent();
-          const wrapper = mount(
-            <MountsHIGChildList higInstance={higInstance} mounted={true}>
-              <ChildComponent />
-              {null}
-              <ChildComponent />
-            </MountsHIGChildList>
-        );
+        const higInstance = new VanillaParent();
+        const wrapper = mount(<MountsHIGChildList higInstance={higInstance} mounted>
+          <ChildComponent />
+          {null}
+          <ChildComponent />
+        </MountsHIGChildList>);
       }).not.toThrow();
     });
-  })
+  });
 });

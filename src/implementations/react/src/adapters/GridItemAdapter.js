@@ -10,7 +10,7 @@ import HIGAdapter, {
 function GridItemAdapter(props) {
   return (
     <HIGAdapter {...props} displayName="GridItem" HIGConstructor={HIG.Grid._partials.GridItem}>
-      {(adapterProps) => (
+      {adapterProps => (
         <div>
           <MountedByHIGParentList mounter="addGridItem" {...adapterProps} />
           <MapsPropToMethod setter="setFraction" value={props.fraction} {...adapterProps} />
@@ -24,8 +24,12 @@ function GridItemAdapter(props) {
 }
 
 GridItemAdapter.propTypes = {
-  fraction: PropTypes.oneOf(HIG.Grid._partials.GridItem.AvailableFractions),
+  fraction: PropTypes.oneOf(HIG.Grid._partials.GridItem.AvailableFractions).isRequired,
   children: PropTypes.node
+};
+
+GridItemAdapter.defaultProps = {
+  children: undefined
 };
 
 GridItemAdapter.__docgenInfo = {
@@ -34,7 +38,7 @@ GridItemAdapter.__docgenInfo = {
       description: "fraction in english, with 1, 2, 4, 8, 12 as nominators, so our possible values are: 'one-whole', 'one-half', 'one-quarter', 'two-quarter', 'three-quarter', 'one-eighth', 'two-eighths', 'three-eighths', 'four-eighths', 'five-eights', 'six-eighths', 'seven-eighths', 'one-twelfth', 'two-twelfths', 'three-twelfths', 'four-twelfths', 'five-twelfths', 'six-twelfths', 'seven-twelfths', 'eight-twelfths', 'nine-twelfths', 'ten-twelfths', 'eleven-twelfths'"
     },
     children: {
-      description: "Content for the grid item"
+      description: 'Content for the grid item'
     }
   }
 };

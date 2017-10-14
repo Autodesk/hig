@@ -3,7 +3,6 @@ import { mount } from 'enzyme';
 
 import GlobalNavAdapter from '../../../../adapters/GlobalNav/GlobalNavAdapter';
 import SideNavAdapter from '../../../../adapters/GlobalNav/SideNav/SideNavAdapter';
-import SearchAdapter from '../../../../adapters/GlobalNav/SideNav/SearchAdapter';
 import GroupAdapter from '../../../../adapters/GlobalNav/SideNav/GroupAdapter';
 import ModuleAdapter from '../../../../adapters/GlobalNav/SideNav/ModuleAdapter';
 import Submodule from './Submodule';
@@ -27,7 +26,7 @@ describe('Submodule', () => {
     const errorSpy = jest.fn();
     console.error = errorSpy;
 
-    const wrapper = mount(<Context onClick={() => {}} id="1" />);
+    mount(<Context onClick={() => {}} id="1" />);
 
     expect(errorSpy).not.toHaveBeenCalled();
   });

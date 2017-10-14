@@ -1,21 +1,37 @@
-import React from 'react'
-import * as HIG from 'hig-vanilla'
+import React from 'react';
+import PropTypes from 'prop-types';
+import * as HIG from 'hig-vanilla';
 
-import HIGAdapter, { MapsPropToMethod, MapsEventListener, MountedByHIGParentList } from '../HIGAdapter'
+import HIGAdapter, { MapsPropToMethod, MountedByHIGParentList } from '../HIGAdapter';
 
-function TextHeadCellAdapter (props) {
+function TextHeadCellAdapter(props) {
   return (
-    <HIGAdapter displayName="TextHeadCell" HIGConstructor={HIG.Table._partials.TableHead._partials.TextHeadCell} {...props}>{(adapterProps) => (
+    <HIGAdapter
+      {...props}
+      displayName="TextHeadCell"
+      HIGConstructor={HIG.Table._partials.TableHead._partials.TextHeadCell}
+    >{adapterProps => (
       <div>
         <MountedByHIGParentList mounter="addCell" {...adapterProps} />
-         <MapsPropToMethod value={props.text} setter="setText" {...adapterProps} />
-        <MapsPropToMethod value={props.detail} setter="setDetail" {...adapterProps} />
+        <MapsPropToMethod value={props.text} setter="setText" {...adapterProps} />
         <MapsPropToMethod value={props.alignment} setter="setAlignment" {...adapterProps} />
         <MapsPropToMethod value={props.width} setter="setWidth" {...adapterProps} />
       </div>
-    )}</HIGAdapter>
-  )
+    )}
+    </HIGAdapter>
+  );
 }
 
+TextHeadCellAdapter.propTypes = {
+  text: PropTypes.string,
+  alignment: PropTypes.string,
+  width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+};
 
-export default TextHeadCellAdapter
+TextHeadCellAdapter.defaultProps = {
+  text: undefined,
+  alignment: undefined,
+  width: undefined,
+};
+
+export default TextHeadCellAdapter;

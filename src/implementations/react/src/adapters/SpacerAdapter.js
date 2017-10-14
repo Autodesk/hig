@@ -6,7 +6,7 @@ import HIGAdapter, { MapsPropToMethod, MountsAnyChild } from './HIGAdapter';
 function SpacerAdapter(props) {
   return (
     <HIGAdapter {...props} displayName="Spacer" HIGConstructor={HIG.Spacer}>
-      {(adapterProps) => (
+      {adapterProps => (
         <div>
           <MapsPropToMethod value={props.inset} setter="setInset" {...adapterProps} />
           <MapsPropToMethod value={props.type} setter="setType" {...adapterProps} />
@@ -25,6 +25,13 @@ SpacerAdapter.propTypes = {
   type: PropTypes.oneOf(HIG.Spacer.AvailableTypes),
   width: PropTypes.oneOf(HIG.Spacer.AvailableSizes),
   children: PropTypes.node
-}
+};
+
+SpacerAdapter.defaultProps = {
+  inset: undefined,
+  type: undefined,
+  width: undefined,
+  children: undefined
+};
 
 export default SpacerAdapter;

@@ -5,7 +5,6 @@ export default class MountedByHIGParentList extends PureComponent {
   static propTypes = {
     higInstance: PropTypes.object.isRequired,
     higParent: PropTypes.object,
-    index: PropTypes.number,
     mounter: PropTypes.string.isRequired,
     onMount: PropTypes.func.isRequired
   }

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import * as HIG from 'hig-vanilla';
 import HIGAdapter, {
   MapsEventListener,
@@ -33,9 +34,13 @@ export default function GlobalNavAdapter(props) {
   return (
     <HIGAdapter displayName="GlobalNav" HIGConstructor={HIG.GlobalNav} {...props}>{adapterProps => (
       <div>
-        <MapsEventListener listener="onHoverOutside" handler={props.onHoverOutside} {...adapterProps} />
+        <MapsEventListener
+          listener="onHoverOutside"
+          handler={props.onHoverOutside}
+          {...adapterProps}
+        />
         <MapsPropToMethod value={props.sideNavOpen} {...adapterProps}>
-          {(instance, value) => { value ? instance.showSideNav() : instance.hideSideNav(); }}
+          {(instance, value) => (value ? instance.showSideNav() : instance.hideSideNav())}
         </MapsPropToMethod>
         <MountsAnyChild mounter="addSlot" {...adapterProps}>{otherChildren}</MountsAnyChild>
         <MountsHIGChild {...adapterProps}>{sideNav}</MountsHIGChild>
@@ -46,3 +51,15 @@ export default function GlobalNavAdapter(props) {
     </HIGAdapter>
   );
 }
+
+GlobalNavAdapter.propTypes = {
+  children: PropTypes.node,
+  onHoverOutside: PropTypes.func,
+  sideNavOpen: PropTypes.bool,
+};
+
+GlobalNavAdapter.defaultProps = {
+  children: undefined,
+  onHoverOutside: undefined,
+  sideNavOpen: undefined,
+};

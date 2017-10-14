@@ -4,21 +4,21 @@ import { Dropdown, Checkbox } from '../../hig-react';
 
 const options = [
   {
-    label: "foo",
-    value: "foo value"
+    label: 'foo',
+    value: 'foo value'
   }, {
-    label: "bar",
-    value: "bar value"
+    label: 'bar',
+    value: 'bar value'
   }
 ];
 
 class DropdownSection extends PureComponent {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       value: 'bar value',
       options
-    }
+    };
   }
 
   setValue = (value) => {
@@ -26,10 +26,12 @@ class DropdownSection extends PureComponent {
   }
 
   toggleOptions = (event) => {
-    this.setState({ options: event.target.checked ? options : [{
-      label: "foo",
-      value: "foo value"
-    }] });
+    this.setState({
+      options: event.target.checked ? options : [{
+        label: 'foo',
+        value: 'foo value'
+      }]
+    });
   }
 
   render() {
@@ -52,11 +54,11 @@ class DropdownSection extends PureComponent {
           options={
             [
               {
-                label: "foo",
-                value: "foo value"
+                label: 'foo',
+                value: 'foo value'
               }, {
-                label: "bar",
-                value: "bar value"
+                label: 'bar',
+                value: 'bar value'
               }
             ]
           }

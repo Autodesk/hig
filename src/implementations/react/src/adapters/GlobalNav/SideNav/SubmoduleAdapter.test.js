@@ -7,17 +7,15 @@ import SubmoduleAdapter from './SubmoduleAdapter';
 describe('SubmoduleAdapter', () => {
   it('implements the hig interface', () => {
     expect((mockInstance) => {
-      const wrapper = mount(
-        <SubmoduleAdapter
-          higInstance={mockInstance}
-          title="Foo"
-          link="http://autodesk.com"
-          onClick={() => {}}
-          onHover={() => {}}
-          active={true}
-          show={true}
-        />
-      );
+      mount(<SubmoduleAdapter
+        higInstance={mockInstance}
+        title="Foo"
+        link="http://autodesk.com"
+        onClick={() => {}}
+        onHover={() => {}}
+        active
+        show
+      />);
 
       mockInstance.deactivate();
       mockInstance.hide();

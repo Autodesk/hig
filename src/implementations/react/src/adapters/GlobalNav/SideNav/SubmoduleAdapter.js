@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import * as HIG from 'hig-vanilla';
 import HIGAdapter, {
   MapsEventListener,
@@ -8,7 +9,11 @@ import HIGAdapter, {
 
 function SubmoduleAdapter(props) {
   return (
-    <HIGAdapter displayName="Submodule" HIGConstructor={HIG.GlobalNav._partials.SideNav._partials.Group._partials.Module._partials.Submodule} {...props}>{adapterProps => (
+    <HIGAdapter
+      displayName="Submodule"
+      HIGConstructor={HIG.GlobalNav._partials.SideNav._partials.Group._partials.Module._partials.Submodule}
+      {...props}
+    >{adapterProps => (
       <div>
         <MountedByHIGParentList mounter="addSubmodule" {...adapterProps} />
         <MapsEventListener listener="onClick" handler={props.onClick} {...adapterProps} />
@@ -27,8 +32,22 @@ function SubmoduleAdapter(props) {
   );
 }
 
+SubmoduleAdapter.propTypes = {
+  active: PropTypes.bool,
+  onClick: PropTypes.func,
+  onHover: PropTypes.func,
+  link: PropTypes.string,
+  show: PropTypes.bool,
+  title: PropTypes.string,
+};
+
 SubmoduleAdapter.defaultProps = {
-  show: true
+  active: undefined,
+  onClick: undefined,
+  onHover: undefined,
+  link: undefined,
+  show: true,
+  title: undefined
 };
 
 export default SubmoduleAdapter;

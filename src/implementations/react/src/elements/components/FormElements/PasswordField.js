@@ -112,6 +112,6 @@ PasswordField.__docgeninfo = {
       description: 'controlled value of the field'
     }
   }
-}
+};
 
 export default PasswordField;

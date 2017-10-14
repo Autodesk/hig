@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import * as HIG from 'hig-vanilla';
 import HIGAdapter, {
   MapsPropToMethod,
@@ -33,12 +34,32 @@ export default function SideNavAdapter(props) {
       {adapterProps => (
         <div>
           <MountedByHIGParent mounter="addSideNav" {...adapterProps} />
-          <MapsEventListener listener="onHeaderClick" handler={props.onHeaderClick} {...adapterProps} />
-          <MapsEventListener listener="onSuperHeaderClick" handler={props.onSuperHeaderClick} {...adapterProps} />
-          <MapsPropToMethod value={props.headerLabel} setter="setHeaderLabel" {...adapterProps} />
+          <MapsEventListener
+            listener="onHeaderClick"
+            handler={props.onHeaderClick}
+            {...adapterProps}
+          />
+          <MapsEventListener
+            listener="onSuperHeaderClick"
+            handler={props.onSuperHeaderClick}
+            {...adapterProps}
+          />
+          <MapsPropToMethod
+            value={props.headerLabel}
+            setter="setHeaderLabel"
+            {...adapterProps}
+          />
           <MapsPropToMethod value={props.headerLink} setter="setHeaderLink" {...adapterProps} />
-          <MapsPropToMethod value={props.superHeaderLabel} setter="setSuperHeaderLabel" {...adapterProps} />
-          <MapsPropToMethod value={props.superHeaderLink} setter="setSuperHeaderLink" {...adapterProps} />
+          <MapsPropToMethod
+            value={props.superHeaderLabel}
+            setter="setSuperHeaderLabel"
+            {...adapterProps}
+          />
+          <MapsPropToMethod
+            value={props.superHeaderLink}
+            setter="setSuperHeaderLink"
+            {...adapterProps}
+          />
           <MapsPropToMethod value={props.copyright} setter="setCopyright" {...adapterProps} />
           {otherChildren.length > 0
             ? <MountsAnyChild mounter="addSlot" {...adapterProps}>{otherChildren}</MountsAnyChild>
@@ -51,3 +72,25 @@ export default function SideNavAdapter(props) {
     </HIGAdapter>
   );
 }
+
+SideNavAdapter.propTypes = {
+  children: PropTypes.node,
+  copyright: PropTypes.string,
+  onHeaderClick: PropTypes.func,
+  onSuperHeaderClick: PropTypes.func,
+  headerLabel: PropTypes.string,
+  superHeaderLabel: PropTypes.string,
+  headerLink: PropTypes.string,
+  superHeaderLink: PropTypes.string,
+};
+
+SideNavAdapter.defaultProps = {
+  children: undefined,
+  copyright: undefined,
+  onHeaderClick: undefined,
+  onSuperHeaderClick: undefined,
+  headerLabel: undefined,
+  superHeaderLabel: undefined,
+  headerLink: undefined,
+  superHeaderLink: undefined
+};

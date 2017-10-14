@@ -8,13 +8,11 @@ import ModuleAdapter from './ModuleAdapter';
 describe('GroupAdapter', () => {
   it('implements the hig interface', () => {
     expect((mockInstance) => {
-      const wrapper = mount(
-        <GroupAdapter
-          higInstance={mockInstance}
-        >
-          <ModuleAdapter />
-        </GroupAdapter>
-      );
+      mount(<GroupAdapter
+        higInstance={mockInstance}
+      >
+        <ModuleAdapter />
+      </GroupAdapter>);
 
       // Doesn't implement show and hide.
       mockInstance.show();

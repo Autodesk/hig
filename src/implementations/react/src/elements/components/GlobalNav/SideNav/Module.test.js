@@ -3,7 +3,6 @@ import { mount } from 'enzyme';
 
 import GlobalNavAdapter from '../../../../adapters/GlobalNav/GlobalNavAdapter';
 import SideNavAdapter from '../../../../adapters/GlobalNav/SideNav/SideNavAdapter';
-import SearchAdapter from '../../../../adapters/GlobalNav/SideNav/SearchAdapter';
 import GroupAdapter from '../../../../adapters/GlobalNav/SideNav/GroupAdapter';
 import Module from './Module';
 
@@ -13,8 +12,7 @@ describe('Module', () => {
       <GlobalNavAdapter>
         <SideNavAdapter>
           <GroupAdapter>
-            <Module icon="assets" {...props}>
-            </Module>
+            <Module icon="assets" {...props} />
           </GroupAdapter>
         </SideNavAdapter>
       </GlobalNavAdapter>

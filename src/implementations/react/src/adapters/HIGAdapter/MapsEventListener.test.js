@@ -1,12 +1,9 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import HIGAdapter from './HIGAdapter';
 import MapsEventListener from './MapsEventListener';
 
 describe('MapsEventListener', () => {
   class VanillaComponent {
-    constructor(defaults) {}
-
     mount = jest.fn()
     onBoop = jest.fn()
   }
@@ -14,14 +11,14 @@ describe('MapsEventListener', () => {
   describe('when handler is initially defined', () => {
     const vanilla = new VanillaComponent({});
     const handleBoop = jest.fn();
-    const wrapper = mount(<MapsEventListener higInstance={vanilla} listener="onBoop" handler={handleBoop} mounted={true} />);
+    const wrapper = mount(<MapsEventListener higInstance={vanilla} listener="onBoop" handler={handleBoop} mounted />);
 
     it('calls the listener method with the handler', () => {
       expect(vanilla.onBoop).toHaveBeenCalledWith(handleBoop);
     });
 
     describe('then becomes undefined', () => {
-      let dispose = jest.fn();
+      const dispose = jest.fn();
 
       beforeEach(() => {
         wrapper.setState({ dispose });
@@ -34,8 +31,8 @@ describe('MapsEventListener', () => {
     });
 
     describe('then it changes', () => {
-      let dispose = jest.fn();
-      let newHandler = jest.fn();
+      const dispose = jest.fn();
+      const newHandler = jest.fn();
 
       beforeEach(() => {
         wrapper.setState({ dispose });
@@ -54,8 +51,12 @@ describe('MapsEventListener', () => {
 
   describe('when initially undefined', () => {
     const vanilla = new VanillaComponent({});
-    const handleBoop = jest.fn();
-    const wrapper = mount(<MapsEventListener higInstance={vanilla} listener="onBoop" handler={undefined} mounted={true} />);
+    mount(<MapsEventListener
+      higInstance={vanilla}
+      listener="onBoop"
+      handler={undefined}
+      mounted
+    />);
 
     it('does not call the listener', () => {
       expect(vanilla.onBoop).not.toHaveBeenCalled();
@@ -66,16 +67,15 @@ describe('MapsEventListener', () => {
     it('disposes of the event listener', () => {
       const vanilla = new VanillaComponent({});
       const dispose = jest.fn();
-      const wrapper = mount(
-        <MapsEventListener
-          higInstance={vanilla}
-          listener="onBoop"
-          mounted={true}
-        />);
+      const wrapper = mount(<MapsEventListener
+        higInstance={vanilla}
+        listener="onBoop"
+        mounted
+      />);
       wrapper.setState({ dispose });
       wrapper.unmount();
 
       expect(dispose).toHaveBeenCalled();
     });
-  })
+  });
 });

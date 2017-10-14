@@ -61,6 +61,17 @@ ModalAdapter.propTypes = {
   title: PropTypes.string
 };
 
+ModalAdapter.defaultProps = {
+  body: undefined,
+  buttons: undefined,
+  children: undefined,
+  onCloseClick: undefined,
+  onOverlayClick: undefined,
+  open: undefined,
+  style: undefined,
+  title: undefined
+};
+
 ModalAdapter.__docgenInfo = {
   props: {
     body: {

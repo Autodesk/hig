@@ -6,7 +6,7 @@ import HIGAdapter, { MapsPropToMethod, MapsEventListener } from './HIGAdapter';
 function TextLinkAdapter(props) {
   return (
     <HIGAdapter {...props} displayName="TextLink" HIGConstructor={HIG.TextLink}>
-      {(adapterProps) => (
+      {adapterProps => (
         <div>
           <MapsEventListener listener="onClick" handler={props.onClick} {...adapterProps} />
           <MapsPropToMethod setter="setHref" value={props.href} {...adapterProps} />
@@ -21,23 +21,29 @@ function TextLinkAdapter(props) {
 TextLinkAdapter.propTypes = {
   href: PropTypes.string,
   onClick: PropTypes.func,
-  text: PropTypes.string,
+  text: PropTypes.string.isRequired,
   type: PropTypes.oneOf(HIG.TextLink.AvailableTypes)
+};
+
+TextLinkAdapter.defaultProps = {
+  href: undefined,
+  onClick: undefined,
+  type: undefined
 };
 
 TextLinkAdapter.__docgenInfo = {
   props: {
     text: {
-      description: "sets the text and alt-text of the link"
+      description: 'sets the text and alt-text of the link'
     },
     href: {
-      description: "sets the link url or path"
+      description: 'sets the link url or path'
     },
     type: {
-      description: "specifies type of link"
+      description: 'specifies type of link'
     },
     onClick: {
-      description: "triggers when you click the link"
+      description: 'triggers when you click the link'
     }
   }
 };

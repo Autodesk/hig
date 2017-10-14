@@ -1,12 +1,9 @@
 import React from 'react';
-import { mount, shallow } from 'enzyme';
-import HIGAdapter from './HIGAdapter';
+import { mount } from 'enzyme';
 import MapsPropToMethod from './MapsPropToMethod';
 
 describe('MapsPropToMethod', () => {
   class VanillaComponent {
-    constructor(defaults) {}
-
     mount = jest.fn()
     setFoo = jest.fn()
   }
@@ -14,14 +11,26 @@ describe('MapsPropToMethod', () => {
   describe('for a setter', () => {
     it('calls the setter with the value', () => {
       const higInstance = new VanillaComponent({});
-      const wrapper = mount(<MapsPropToMethod setter="setFoo" value="foo" higInstance={higInstance} mounted={true} />);
+      mount(<MapsPropToMethod
+        setter="setFoo"
+        value="foo"
+        higInstance={higInstance}
+        mounted
+        displayName="MyComponent"
+      />);
 
       expect(higInstance.setFoo).toHaveBeenCalledWith('foo');
     });
 
     it('updates the setter with the value', () => {
       const higInstance = new VanillaComponent({});
-      const wrapper = mount(<MapsPropToMethod setter="setFoo" value="foo" higInstance={higInstance} mounted={true} />);
+      const wrapper = mount(<MapsPropToMethod
+        setter="setFoo"
+        value="foo"
+        higInstance={higInstance}
+        mounted
+        displayName="MyComponent"
+      />);
 
       wrapper.setProps({ value: 'bar' });
 
@@ -31,7 +40,12 @@ describe('MapsPropToMethod', () => {
     describe('when value initially undefined', () => {
       it('does not pass undefined to the setter', () => {
         const higInstance = new VanillaComponent({});
-        const wrapper = mount(<MapsPropToMethod setter="setFoo" higInstance={higInstance} mounted={true} />);
+        mount(<MapsPropToMethod
+          setter="setFoo"
+          higInstance={higInstance}
+          mounted
+          displayName="MyComponent"
+        />);
 
         expect(higInstance.setFoo).not.toHaveBeenCalled();
       });
@@ -41,7 +55,13 @@ describe('MapsPropToMethod', () => {
       describe('then it becomes undefined', () => {
         it('passes undefined to the setter', () => {
           const higInstance = new VanillaComponent({});
-          const wrapper = mount(<MapsPropToMethod setter="setFoo" value="foo" higInstance={higInstance} mounted={true} />);
+          const wrapper = mount(<MapsPropToMethod
+            setter="setFoo"
+            value="foo"
+            higInstance={higInstance}
+            mounted
+            displayName="MyComponent"
+          />);
 
           wrapper.setProps({ value: undefined });
 
@@ -55,7 +75,14 @@ describe('MapsPropToMethod', () => {
     it('calls mapper with the value', () => {
       const higInstance = new VanillaComponent({});
       const mapper = jest.fn();
-      const wrapper = mount(<MapsPropToMethod value="foo" higInstance={higInstance} mounted={true}>{mapper}</MapsPropToMethod>);
+      mount(<MapsPropToMethod
+        value="foo"
+        higInstance={higInstance}
+        mounted
+        displayName="MyComponent"
+      >
+        {mapper}
+      </MapsPropToMethod>);
 
       expect(mapper).toHaveBeenCalledWith(higInstance, 'foo');
     });
@@ -66,8 +93,14 @@ describe('MapsPropToMethod', () => {
       const higInstance = new VanillaComponent({});
 
       expect(() => {
-        const wrapper = mount(<MapsPropToMethod displayName="MySpecialComponent" setter="setBaz" value="foo" higInstance={higInstance} mounted={true} />);
-      }).toThrow(TypeError(`MySpecialComponent has no method 'setBaz'`));
+        mount(<MapsPropToMethod
+          displayName="MySpecialComponent"
+          setter="setBaz"
+          value="foo"
+          higInstance={higInstance}
+          mounted
+        />);
+      }).toThrow(TypeError('MySpecialComponent has no method \'setBaz\''));
     });
   });
 });

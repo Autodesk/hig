@@ -6,14 +6,12 @@ import OptionAdapter from './OptionAdapter';
 
 describe('Help GroupAdapter', () => {
   it('implements the hig interface', () => {
-    expect(mockInstance => {
-      mount(
-        <GroupAdapter
-          higInstance={mockInstance}
-        >
-          <OptionAdapter />
-        </GroupAdapter>
-      )
+    expect((mockInstance) => {
+      mount(<GroupAdapter
+        higInstance={mockInstance}
+      >
+        <OptionAdapter />
+      </GroupAdapter>);
     }).toImplementHIGInterfaceOf(HIG.GlobalNav._partials.TopNav._partials.Help._partials.Group);
   });
 });

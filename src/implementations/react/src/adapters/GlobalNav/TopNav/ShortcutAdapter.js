@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import * as HIG from 'hig-vanilla';
 import HIGAdapter, {
   MapsPropToMethod,
@@ -21,5 +22,19 @@ function ShortcutAdapter(props) {
     </HIGAdapter>
   );
 }
+
+ShortcutAdapter.propTypes = {
+  onClick: PropTypes.func,
+  icon: PropTypes.string,
+  link: PropTypes.string,
+  title: PropTypes.string
+};
+
+ShortcutAdapter.defaultProps = {
+  onClick: undefined,
+  icon: undefined,
+  link: undefined,
+  title: undefined
+};
 
 export default ShortcutAdapter;

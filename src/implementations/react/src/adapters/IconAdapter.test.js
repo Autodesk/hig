@@ -5,13 +5,11 @@ import IconAdapter from './IconAdapter';
 
 describe('IconAdapter', () => {
   it('implements the hig interface', () => {
-    expect(spiedInstance => {
-      mount(
-        <IconAdapter
-          higInstance={spiedInstance}
-          nameOrSVG="settings"
-        />
-      )
+    expect((spiedInstance) => {
+      mount(<IconAdapter
+        higInstance={spiedInstance}
+        nameOrSVG="settings"
+      />);
     }).toImplementHIGInterfaceOf(HIG.Icon);
   });
 });

@@ -29,10 +29,10 @@ function RangeAdapter(props) {
           <MapsPropToMethod setter="setMax" value={props.max} {...adapterProps} />
           <MapsPropToMethod setter="setStep" value={props.step} {...adapterProps} />
           <MapsPropToMethod value={props.disabled} {...adapterProps}>
-            {(instance, value) => value ? instance.disable() : instance.enable()}
+            {(instance, value) => (value ? instance.disable() : instance.enable())}
           </MapsPropToMethod>
           <MapsPropToMethod value={props.required} {...adapterProps}>
-            {(instance, value) => value ? instance.required(value) : instance.noLongerRequired()}
+            {(instance, value) => (value ? instance.required(value) : instance.noLongerRequired())}
           </MapsPropToMethod>
         </div>
       )}
@@ -59,6 +59,24 @@ RangeAdapter.propTypes = {
     PropTypes.string,
     PropTypes.number
   ])
+};
+
+RangeAdapter.defaultProps = {
+  defaultValue: undefined,
+  disabled: undefined,
+  icon: undefined,
+  instructions: undefined,
+  label: undefined,
+  name: undefined,
+  onBlur: undefined,
+  onChange: undefined,
+  onClearButtonClick: undefined,
+  onFocus: undefined,
+  onInput: undefined,
+  placeholder: undefined,
+  required: undefined,
+  showClearButton: undefined,
+  value: undefined
 };
 
 export default RangeAdapter;

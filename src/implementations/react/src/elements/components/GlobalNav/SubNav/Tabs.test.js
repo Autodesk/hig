@@ -7,19 +7,17 @@ import GlobalNavAdapter from '../../../../adapters/GlobalNav/GlobalNavAdapter';
 import SubNavAdapter from '../../../../adapters/GlobalNav/SubNav/SubNavAdapter';
 import Tabs from './Tabs';
 
-const Context = props => {
-  return (
-    <GlobalNavAdapter>
-      <SubNavAdapter moduleIndicatorIcon='settings'>
-        <Tabs defaultSelectedTab={props.tabs[0].id}>
-          {props.tabs.map(tab => (
-            <Tabs.Tab key={tab.key} label={tab.label} id={tab.id} />
+const Context = props => (
+  <GlobalNavAdapter>
+    <SubNavAdapter moduleIndicatorIcon="settings">
+      <Tabs defaultSelectedTab={props.tabs[0].id}>
+        {props.tabs.map(tab => (
+          <Tabs.Tab key={tab.key} label={tab.label} id={tab.id} />
           ))}
-        </Tabs>
-      </SubNavAdapter>
-    </GlobalNavAdapter>
-  );
-};
+      </Tabs>
+    </SubNavAdapter>
+  </GlobalNavAdapter>
+);
 
 describe('<Tabs>', () => {
   function setupInitialTabs() {
@@ -72,16 +70,12 @@ describe('<Tabs>', () => {
       ]
     });
 
-    expect(
-      reactContainer.querySelectorAll('.hig__global-nav__sub-nav__tabs__tab')[
-        0
-      ].textContent
-    ).toEqual('Goodbye');
-    expect(
-      reactContainer.querySelectorAll('.hig__global-nav__sub-nav__tabs__tab')[
-        1
-      ].textContent
-    ).toEqual('Foo');
+    expect(reactContainer.querySelectorAll('.hig__global-nav__sub-nav__tabs__tab')[
+      0
+    ].textContent).toEqual('Goodbye');
+    expect(reactContainer.querySelectorAll('.hig__global-nav__sub-nav__tabs__tab')[
+      1
+    ].textContent).toEqual('Foo');
   });
 
   it('updates tab events', () => {
@@ -91,7 +85,7 @@ describe('<Tabs>', () => {
       tabs: [
         {
           key: 1,
-          onClick: function() {
+          onClick() {
             alert('foo');
           }
         }

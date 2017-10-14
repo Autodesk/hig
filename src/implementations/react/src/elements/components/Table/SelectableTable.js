@@ -1,20 +1,10 @@
-import * as HIG from "hig-vanilla";
-import * as PropTypes from "prop-types";
-import React, { Component } from "react";
-import HeaderCheckbox from "./HeaderCheckbox";
-import RowCheckbox from "./RowCheckbox";
+import * as HIG from 'hig-vanilla';
+import * as PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import HeaderCheckbox from './HeaderCheckbox';
+import RowCheckbox from './RowCheckbox';
 
 class SelectableTable extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      rows: {},
-      allRowsSelected: false
-    };
-
-    this.initialProps = props;
-  }
-
   static propTypes = {
     selectable: PropTypes.bool
   };
@@ -26,7 +16,17 @@ class SelectableTable extends Component {
     checkboxCallback: () => {}
   };
 
-  selectRow = rowInfo => {
+  constructor(props) {
+    super(props);
+    this.state = {
+      rows: {},
+      allRowsSelected: false
+    };
+
+    this.initialProps = props;
+  }
+
+  selectRow = (rowInfo) => {
     const newRows = {
       ...this.state.rows,
       [rowInfo.id]: { selected: rowInfo.selected }
@@ -37,42 +37,39 @@ class SelectableTable extends Component {
   renderedAllRowsSelected() {
     if (this.props.allRowsSelected !== undefined) {
       return this.props.allRowsSelected;
-    } else {
-      return this.state.allRowsSelected;
     }
+    return this.state.allRowsSelected;
   }
 
-  handleAllSelectionChange = event => {
+  handleAllSelectionChange = (event) => {
     this.setState({ allRowsSelected: event.target.checked });
     this.props.onSelectAllSelectionChange({ selected: event.target.checked });
   };
 
-  handleRowCheckboxOnChange = rowInfo => {
+  handleRowCheckboxOnChange = (rowInfo) => {
     this.selectRow(rowInfo);
     this.props.checkboxCallback(rowInfo);
   };
 
-  checkboxHeader = () => {
-    return {
-      id: "checkboxHeader",
-      alignment: "center",
-      width: "50px",
-      HeaderCell: props => (
-        <HeaderCheckbox
-          onSelectAllSelectionChange={this.handleAllSelectionChange}
-          selected={this.renderedAllRowsSelected()}
-          style={{ background: "red" }}
-        />
-      ),
-      Cell: props => (
-        <RowCheckbox
-          id={props.data.id}
-          selected={props.data.selected}
-          onChange={this.handleRowCheckboxOnChange}
-        />
-      )
-    };
-  };
+  checkboxHeader = () => ({
+    id: 'checkboxHeader',
+    alignment: 'center',
+    width: '50px',
+    HeaderCell: props => (
+      <HeaderCheckbox
+        onSelectAllSelectionChange={this.handleAllSelectionChange}
+        selected={this.renderedAllRowsSelected()}
+        style={{ background: 'red' }}
+      />
+    ),
+    Cell: props => (
+      <RowCheckbox
+        id={props.data.id}
+        selected={props.data.selected}
+        onChange={this.handleRowCheckboxOnChange}
+      />
+    )
+  });
 
   isRowSelected(row) {
     if (row.selected !== undefined) {
@@ -82,12 +79,10 @@ class SelectableTable extends Component {
     }
   }
 
-  mergeRowState = row => {
-    return {
-      ...row,
-      selected: this.isRowSelected(row)
-    };
-  };
+  mergeRowState = row => ({
+    ...row,
+    selected: this.isRowSelected(row)
+  });
 
   render() {
     const columns = [this.checkboxHeader()].concat(this.props.columns);
@@ -99,15 +94,15 @@ class SelectableTable extends Component {
 SelectableTable.__docgenInfo = {
   props: {
     density: {
-      description: "sets the size of the table"
+      description: 'sets the size of the table'
     },
 
     columns: {
-      description: "provides content for header cells"
+      description: 'provides content for header cells'
     },
 
     data: {
-      description: "provides content table cells"
+      description: 'provides content table cells'
     }
   }
 };
@@ -118,15 +113,13 @@ SelectableTable.propTypes = {
   checkboxCallback: PropTypes.func,
   children: PropTypes.func,
   onSelectAllSelectionChange: PropTypes.func,
-  columns: PropTypes.arrayOf(
-    PropTypes.shape({
-      Header: PropTypes.string,
-      alignment: PropTypes.alignment,
-      width: PropTypes.string,
-      id: PropTypes.string,
-      Cell: PropTypes.any
-    })
-  )
+  columns: PropTypes.arrayOf(PropTypes.shape({
+    Header: PropTypes.string,
+    alignment: PropTypes.alignment,
+    width: PropTypes.string,
+    id: PropTypes.string,
+    Cell: PropTypes.any
+  }))
 };
 
 export default SelectableTable;

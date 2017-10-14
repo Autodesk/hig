@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import * as HIG from 'hig-vanilla';
 import HIGAdapter, {
   MapsPropToMethod,
@@ -51,5 +52,21 @@ function TopNavAdapter(props) {
     </HIGAdapter>
   );
 }
+
+TopNavAdapter.propTypes = {
+  children: PropTypes.node,
+  logo: PropTypes.string,
+  logoLink: PropTypes.string,
+  onLogoClick: PropTypes.func,
+  onHamburgerClick: PropTypes.func,
+};
+
+TopNavAdapter.defaultProps = {
+  children: undefined,
+  logo: undefined,
+  logoLink: undefined,
+  onLogoClick: undefined,
+  onHamburgerClick: undefined,
+};
 
 export default TopNavAdapter;

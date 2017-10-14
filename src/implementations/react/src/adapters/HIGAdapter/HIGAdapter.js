@@ -5,16 +5,17 @@ class HIGAdapter extends Component {
   static propTypes = {
     children: PropTypes.func,
     HIGConstructor: PropTypes.func.isRequired,
-    displayName: PropTypes.string.isRequired
+    displayName: PropTypes.string.isRequired,
+    higInstance: PropTypes.object
   }
 
   static contextTypes = {
-    higParent: PropTypes.object
+    higParent: PropTypes.object,
   }
 
   static defaultProps = {
-    displayName: 'Element',
-    children: () => {}
+    children: () => {},
+    higInstance: undefined
   }
 
   constructor(props) {
@@ -25,28 +26,31 @@ class HIGAdapter extends Component {
     };
   }
 
-  onMount = () => {
-    this.setState({ mounted: true });
-  }
-
-  setEl = (el) => { this._el = el; }
-
   componentDidMount() {
     if (!this.context.higParent) {
       this._mount = this._el.parentNode;
       this._anchor = document.createComment(`HIG${this.props.displayName}-Anchor`);
+      // Place this component's element with an anchor comment
       this._mount.replaceChild(this._anchor, this._el);
-      this.state.higInstance.mount(this._mount, this._anchor); // Mount the hig component at the comment
+      // Mount the hig component at the comment
+      this.state.higInstance.mount(this._mount, this._anchor);
       this.onMount();
     }
   }
 
   componentWillUnmount() {
     if (this._anchor) {
-      this._mount.replaceChild(this._el, this._anchor); // Replace the anchor comment with this component's div
+      // Replace the anchor comment with this component's div
+      this._mount.replaceChild(this._el, this._anchor);
     }
     this.state.higInstance.unmount();
   }
+
+  onMount = () => {
+    this.setState({ mounted: true });
+  }
+
+  setEl = (el) => { this._el = el; }
 
   render() {
     return React.createElement(

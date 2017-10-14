@@ -19,25 +19,25 @@ class TextAreaSection extends PureComponent {
   }
 
   setValue = (event) => {
-    console.log(event.target.value)
+    console.log(event.target.value);
     this.setState({ value: event.target.value });
   }
 
   render() {
-      return (
-        <PlaygroundSection title="TextArea">
-          <TextArea
-            label="Tab title"
-            placeholder="Foo"
-            required="This field is required."
-            onBlur={logEvent}
-            onChange={logEvent}
-            onFocus={logEvent}
-            onInput={this.setValue}
-            value={this.state.value}
-          />
+    return (
+      <PlaygroundSection title="TextArea">
+        <TextArea
+          label="Tab title"
+          placeholder="Foo"
+          required="This field is required."
+          onBlur={logEvent}
+          onChange={logEvent}
+          onFocus={logEvent}
+          onInput={this.setValue}
+          value={this.state.value}
+        />
       </PlaygroundSection>
-    )
+    );
   }
 }
 

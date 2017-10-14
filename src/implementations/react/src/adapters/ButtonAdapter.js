@@ -5,7 +5,7 @@ import HIGAdapter, { MapsPropToMethod, MapsEventListener } from './HIGAdapter';
 
 function ButtonAdapter(props) {
   return (
-    <HIGAdapter displayName="Button" HIGConstructor={HIG.Button} {...props}>{(adapterProps) => (
+    <HIGAdapter displayName="Button" HIGConstructor={HIG.Button} {...props}>{adapterProps => (
       <div>
         <MapsPropToMethod value={props.icon} setter="setIcon" {...adapterProps} />
         <MapsPropToMethod value={props.link} setter="setLink" {...adapterProps} />
@@ -15,14 +15,15 @@ function ButtonAdapter(props) {
         <MapsPropToMethod value={props.size} setter="setSize" {...adapterProps} />
         <MapsPropToMethod value={props.width} setter="setWidth" {...adapterProps} />
         <MapsPropToMethod value={props.disabled} {...adapterProps}>
-          {(instance, value) => value ? instance.disable() : instance.enable() }
+          {(instance, value) => (value ? instance.disable() : instance.enable()) }
         </MapsPropToMethod>
         <MapsEventListener listener="onBlur" handler={props.onBlur} {...adapterProps} />
         <MapsEventListener listener="onClick" handler={props.onClick} {...adapterProps} />
         <MapsEventListener listener="onFocus" handler={props.onFocus} {...adapterProps} />
         <MapsEventListener listener="onHover" handler={props.onHover} {...adapterProps} />
       </div>
-    )}</HIGAdapter>
+    )}
+    </HIGAdapter>
   );
 }
 
@@ -33,11 +34,26 @@ ButtonAdapter.propTypes = {
   onClick: PropTypes.func,
   onFocus: PropTypes.func,
   onHover: PropTypes.func,
-  title: PropTypes.string,
   size: PropTypes.oneOf(HIG.Button.AvailableSizes),
+  target: PropTypes.oneOf(['_self', '_blank', '_parent', '_top']),
+  title: PropTypes.string.isRequired,
   type: PropTypes.oneOf(HIG.Button.AvailableTypes),
   width: PropTypes.oneOf(HIG.Button.AvailableWidths),
   icon: PropTypes.string
+};
+
+ButtonAdapter.defaultProps = {
+  disabled: false,
+  link: undefined,
+  onBlur: undefined,
+  onClick: undefined,
+  onFocus: undefined,
+  onHover: undefined,
+  size: undefined,
+  target: undefined,
+  type: undefined,
+  width: undefined,
+  icon: undefined
 };
 
 ButtonAdapter.__docgenInfo = {

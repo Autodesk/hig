@@ -20,9 +20,13 @@ function AvatarAdapter(props) {
 }
 
 AvatarAdapter.propTypes = {
-  name: PropTypes.string,
-  size: PropTypes.oneOf(HIG.Avatar.AvailableSizes),
+  name: PropTypes.string.isRequired,
+  size: PropTypes.oneOf(HIG.Avatar.AvailableSizes).isRequired,
   image: PropTypes.string
-}
+};
+
+AvatarAdapter.defaultProps = {
+  image: undefined
+};
 
 export default AvatarAdapter;

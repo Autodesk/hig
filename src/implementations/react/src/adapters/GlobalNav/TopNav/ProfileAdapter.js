@@ -9,23 +9,51 @@ import HIGAdapter, {
 
 function ProfileAdapter(props) {
   return (
-    <HIGAdapter {...props} displayName="Profile" HIGConstructor={HIG.GlobalNav._partials.TopNav._partials.Profile}>
+    <HIGAdapter
+      {...props}
+      displayName="Profile"
+      HIGConstructor={HIG.GlobalNav._partials.TopNav._partials.Profile}
+    >
       {adapterProps => (
         <div>
           <MountedByHIGParent mounter="addProfile" {...adapterProps} />
-          <MapsEventListener listener="onSignOutClick" handler={props.onSignOutClick} {...adapterProps} />
-          <MapsEventListener listener="onProfileSettingsClick" handler={props.onProfileSettingsClick} {...adapterProps} />
-          <MapsEventListener listener="onProfileImageClick" handler={props.onProfileImageClick} {...adapterProps} />
-          <MapsEventListener listener="onProfileClickOutside" handler={props.onProfileClickOutside} {...adapterProps} />
+          <MapsEventListener
+            listener="onSignOutClick"
+            handler={props.onSignOutClick}
+            {...adapterProps}
+          />
+          <MapsEventListener
+            listener="onProfileSettingsClick"
+            handler={props.onProfileSettingsClick}
+            {...adapterProps}
+          />
+          <MapsEventListener
+            listener="onProfileImageClick"
+            handler={props.onProfileImageClick}
+            {...adapterProps}
+          />
+          <MapsEventListener
+            listener="onProfileClickOutside"
+            handler={props.onProfileClickOutside}
+            {...adapterProps}
+          />
           <MapsPropToMethod setter="setImage" value={props.image} {...adapterProps} />
           <MapsPropToMethod setter="setName" value={props.name} {...adapterProps} />
-          <MapsPropToMethod setter="setProfileSettingsLabel" value={props.profileSettingsLabel} {...adapterProps} />
-          <MapsPropToMethod setter="setProfileSettingsLink" value={props.profileSettingsLink} {...adapterProps} />
+          <MapsPropToMethod
+            setter="setProfileSettingsLabel"
+            value={props.profileSettingsLabel}
+            {...adapterProps}
+          />
+          <MapsPropToMethod
+            setter="setProfileSettingsLink"
+            value={props.profileSettingsLink}
+            {...adapterProps}
+          />
           <MapsPropToMethod setter="setSignOutLabel" value={props.signOutLabel} {...adapterProps} />
           <MapsPropToMethod setter="setSignOutLink" value={props.signOutLink} {...adapterProps} />
           <MapsPropToMethod setter="setEmail" value={props.email} {...adapterProps} />
           <MapsPropToMethod value={props.open} {...adapterProps}>
-            {(instance, value) => { value ? instance.open() : instance.close(); }}
+            {(instance, value) => (value ? instance.open() : instance.close())}
           </MapsPropToMethod>
         </div>
       )}
@@ -46,6 +74,21 @@ ProfileAdapter.propTypes = {
   onProfileSettingsClick: PropTypes.func,
   onProfileImageClick: PropTypes.func,
   onProfileClickOutside: PropTypes.func
+};
+
+ProfileAdapter.defaultProps = {
+  email: undefined,
+  image: undefined,
+  name: undefined,
+  profileSettingsLabel: undefined,
+  profileSettingsLink: undefined,
+  signOutLabel: undefined,
+  signOutLink: undefined,
+  open: undefined,
+  onSignOutClick: undefined,
+  onProfileSettingsClick: undefined,
+  onProfileImageClick: undefined,
+  onProfileClickOutside: undefined
 };
 
 export default ProfileAdapter;

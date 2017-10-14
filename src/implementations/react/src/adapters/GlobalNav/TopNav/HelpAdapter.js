@@ -10,12 +10,20 @@ import HIGAdapter, {
 
 function HelpAdapter(props) {
   return (
-    <HIGAdapter displayName="Help" HIGConstructor={HIG.GlobalNav._partials.TopNav._partials.Help} {...props}>
+    <HIGAdapter
+      displayName="Help"
+      HIGConstructor={HIG.GlobalNav._partials.TopNav._partials.Help}
+      {...props}
+    >
       {adapterProps => (
         <div>
           <MountedByHIGParent mounter="addHelp" {...adapterProps} />
           <MapsEventListener handler={props.onClick} listener="onClick" {...adapterProps} />
-          <MapsEventListener handler={props.onClickOutside} listener="onClickOutside" {...adapterProps} />
+          <MapsEventListener
+            handler={props.onClickOutside}
+            listener="onClickOutside"
+            {...adapterProps}
+          />
           <MapsPropToMethod value={props.title} setter="setTitle" {...adapterProps} />
           <MapsPropToMethod value={props.open} {...adapterProps}>
             {(instance, value) => (value ? instance.open() : instance.close())}
@@ -29,7 +37,20 @@ function HelpAdapter(props) {
 
 HelpAdapter.propTypes = {
   title: PropTypes.string,
-  link: PropTypes.string
+  link: PropTypes.string,
+  onClick: PropTypes.func,
+  onClickOutside: PropTypes.func,
+  open: PropTypes.bool,
+  children: PropTypes.node
+};
+
+HelpAdapter.defaultProps = {
+  title: undefined,
+  link: undefined,
+  onClick: undefined,
+  onClickOutside: undefined,
+  open: undefined,
+  children: undefined
 };
 
 export default HelpAdapter;

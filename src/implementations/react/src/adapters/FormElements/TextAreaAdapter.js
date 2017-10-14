@@ -28,10 +28,10 @@ function TextAreaAdapter(props) {
           <MapsPropToMethod setter="setLabel" value={props.label} {...adapterProps} />
           <MapsPropToMethod setter="setName" value={props.name} {...adapterProps} />
           <MapsPropToMethod value={props.disabled} {...adapterProps}>
-            {(instance, value) => value ? instance.disable() : instance.enable()}
+            {(instance, value) => (value ? instance.disable() : instance.enable())}
           </MapsPropToMethod>
           <MapsPropToMethod value={props.required} {...adapterProps}>
-            {(instance, value) => value ? instance.required(value) : instance.noLongerRequired()}
+            {(instance, value) => (value ? instance.required(value) : instance.noLongerRequired())}
           </MapsPropToMethod>
         </div>
       )}
@@ -55,6 +55,24 @@ TextAreaAdapter.propTypes = {
   required: PropTypes.string,
   showClearButton: PropTypes.bool,
   value: PropTypes.string,
+};
+
+TextAreaAdapter.defaultProps = {
+  defaultValue: undefined,
+  disabled: undefined,
+  icon: undefined,
+  instructions: undefined,
+  label: undefined,
+  name: undefined,
+  onBlur: undefined,
+  onChange: undefined,
+  onClearButtonClick: undefined,
+  onFocus: undefined,
+  onInput: undefined,
+  placeholder: undefined,
+  required: undefined,
+  showClearButton: undefined,
+  value: undefined
 };
 
 export default TextAreaAdapter;

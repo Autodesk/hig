@@ -9,14 +9,26 @@ describe('<SideNav>', () => {
   class Context extends Component {
     static defaultProps = {
       modules: [
-        { id: 'mod-1', title: 'Flora', groupId: 'group-1', icon: 'assets' },
-        { id: 'mod-2', title: 'Fauna', groupId: 'group-2', icon: 'assets' }
+        {
+          id: 'mod-1', title: 'Flora', groupId: 'group-1', icon: 'assets'
+        },
+        {
+          id: 'mod-2', title: 'Fauna', groupId: 'group-2', icon: 'assets'
+        }
       ],
       submodules: [
-        { id: 'sub-1', moduleId: 'mod-1', title: 'Rose', icon: 'assets' },
-        { id: 'sub-2', moduleId: 'mod-1', title: 'Wheat', icon: 'assets' },
-        { id: 'sub-3', moduleId: 'mod-2', title: 'Goat', icon: 'assets' },
-        { id: 'sub-4', moduleId: 'mod-2', title: 'Wolf', icon: 'assets' },
+        {
+          id: 'sub-1', moduleId: 'mod-1', title: 'Rose', icon: 'assets'
+        },
+        {
+          id: 'sub-2', moduleId: 'mod-1', title: 'Wheat', icon: 'assets'
+        },
+        {
+          id: 'sub-3', moduleId: 'mod-2', title: 'Goat', icon: 'assets'
+        },
+        {
+          id: 'sub-4', moduleId: 'mod-2', title: 'Wolf', icon: 'assets'
+        },
       ],
       onModuleChange: jest.fn()
     }
@@ -24,7 +36,7 @@ describe('<SideNav>', () => {
     render() {
       return (
         <GlobalNavAdapter>
-          <SideNav {...this.props}/>
+          <SideNav {...this.props} />
         </GlobalNavAdapter>
       );
     }
@@ -70,7 +82,7 @@ describe('<SideNav>', () => {
   describe('with searchable', () => {
     describe('true', () => {
       it('renders a search field', () => {
-        const wrapper = mount(<Context searchable={true} />);
+        const wrapper = mount(<Context searchable />);
         expect(wrapper.find(Search).length).toEqual(1);
       });
     });
@@ -93,12 +105,12 @@ describe('<SideNav>', () => {
 
   describe('with other props', () => {
     it('passes headerLabel', () => {
-      const wrapper = mount(<Context headerLabel="My Project" />)
+      const wrapper = mount(<Context headerLabel="My Project" />);
       expect(wrapper.find(SideNavAdapter)).toHaveProp('headerLabel', 'My Project');
     });
 
     it('passes superHeaderLabel', () => {
-      const wrapper = mount(<Context superHeaderLabel="Global Construction" />)
+      const wrapper = mount(<Context superHeaderLabel="Global Construction" />);
       expect(wrapper.find(SideNavAdapter)).toHaveProp('superHeaderLabel', 'Global Construction');
     });
 
@@ -123,6 +135,5 @@ describe('<SideNav>', () => {
       const wrapper = mount(<Context onSuperHeaderClick={callback} />);
       expect(wrapper.find(SideNavAdapter)).toHaveProp('onSuperHeaderClick', callback);
     });
-
   });
 });

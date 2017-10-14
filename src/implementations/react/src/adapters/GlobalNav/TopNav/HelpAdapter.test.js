@@ -6,19 +6,17 @@ import GroupAdapter from './GroupAdapter';
 
 describe('HelpAdapter', () => {
   it('implements the hig interface', () => {
-    expect(mockInstance => {
-      mount(
-        <HelpAdapter
-          higInstance={mockInstance}
-          onClick={() => {}}
-          onClickOutside={() => {}}
-          title="Foo"
-          open={true}
-        >
-          <GroupAdapter />
-        </HelpAdapter>
-      );
+    expect((mockInstance) => {
+      mount(<HelpAdapter
+        higInstance={mockInstance}
+        onClick={() => {}}
+        onClickOutside={() => {}}
+        title="Foo"
+        open
+      >
+        <GroupAdapter />
+      </HelpAdapter>);
       mockInstance.close();
     }).toImplementHIGInterfaceOf(HIG.GlobalNav._partials.TopNav._partials.Help);
-  })
+  });
 });

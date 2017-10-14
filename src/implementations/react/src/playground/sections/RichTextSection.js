@@ -12,7 +12,7 @@ class RichTextSection extends PureComponent {
 
     return (
       <PlaygroundSection title="RichText">
-        <RichText dangerouslySetInnerHTML={{__html: html}} />
+        <RichText dangerouslySetInnerHTML={{ __html: html }} />
         <RichText>
           <h4>H4, Sub1: example text</h4>
           <h5>H5, Sub2: example text</h5>
@@ -22,6 +22,6 @@ class RichTextSection extends PureComponent {
       </PlaygroundSection>
     );
   }
-};
+}
 
 export default RichTextSection;

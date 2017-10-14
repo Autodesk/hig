@@ -1,5 +1,5 @@
-import React from 'react'
-import * as HIG from 'hig-vanilla'
+import React from 'react';
+import * as HIG from 'hig-vanilla';
 import PropTypes from 'prop-types';
 
 import HIGAdapter, {
@@ -9,19 +9,29 @@ import HIGAdapter, {
 } from '../HIGAdapter';
 
 function TableRowAdapter(props) {
-  return(
+  return (
     <HIGAdapter displayName="TableRow" HIGConstructor={HIG.Table._partials.TableRow} {...props}>
-      {(adapterProps) => (
+      {adapterProps => (
         <div>
           <MapsPropToMethod value={props.selected} {...adapterProps} >
-            {(instance, value) => value ? instance.select() : instance.deselect()}
+            {(instance, value) => (value ? instance.select() : instance.deselect())}
           </MapsPropToMethod>
           <MountedByHIGParent mounter="addTableRow" {...adapterProps} />
           <MountsHIGChildList {...adapterProps}>{props.children}</MountsHIGChildList>
         </div>
       )}
     </HIGAdapter>
-  )
+  );
 }
+
+TableRowAdapter.propTypes = {
+  selected: PropTypes.bool,
+  children: PropTypes.node
+};
+
+TableRowAdapter.defaultProps = {
+  selected: undefined,
+  children: undefined
+};
 
 export default TableRowAdapter;

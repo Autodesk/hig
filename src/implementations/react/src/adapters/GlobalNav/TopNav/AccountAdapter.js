@@ -11,7 +11,7 @@ function AccountAdapter(props) {
   return (
     <HIGAdapter
       {...props}
-      name="Account"
+      displayName="Account"
       HIGConstructor={HIG.GlobalNav._partials.TopNav._partials.ProjectAccountSwitcher._partials.Account}
     >
       {adapterProps => (
@@ -21,7 +21,7 @@ function AccountAdapter(props) {
           <MapsPropToMethod setter="setImage" value={props.image} {...adapterProps} />
           <MapsPropToMethod setter="setLabel" value={props.label} {...adapterProps} />
           <MapsPropToMethod value={props.active} {...adapterProps}>
-            {(instance, value) => { value ? instance.activate() : instance.deactivate() }}
+            {(instance, value) => (value ? instance.activate() : instance.deactivate())}
           </MapsPropToMethod>
         </div>
       )}
@@ -34,6 +34,13 @@ AccountAdapter.propTypes = {
   label: PropTypes.string,
   image: PropTypes.string,
   onClick: PropTypes.func
+};
+
+AccountAdapter.defaultProps = {
+  active: undefined,
+  label: undefined,
+  image: undefined,
+  onClick: undefined
 };
 
 export default AccountAdapter;
