@@ -5,7 +5,7 @@ The HIG Web implementation consists of `html`, `css` and `js`. You can opt to on
 
 ```bash
 npm install
-npm run build
+npm run lib
 ```
 
 ## Consuming Basic Example: Button
@@ -23,7 +23,7 @@ Button.onClick(function(e){
 });
 ```
 
-more advanced button examples can be found in [the components tests dir](src/basics/button/tests/tests-button.html)
+more advanced button examples can be found in [the components tests dir](src/components/button/tests/tests-button.html)
 
 ## Developing
 So you want to help out? Great! Let's get you up and running:
