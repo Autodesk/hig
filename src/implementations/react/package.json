@@ -2,6 +2,10 @@
   "name": "hig-react",
   "version": "0.28.4",
   "description": "hig components in react",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Autodesk/hig"
+  },
   "main": "lib/hig-react.js",
   "css": "lib/hig-react.css",
   "author": "Autodesk Inc.",
@@ -30,11 +34,12 @@
     "babel-preset-stage-2": "^6.24.1",
     "enzyme": "^2.9.1",
     "eslint": "^4.8.0",
-    "eslint-config-airbnb": "^16.0.0",
+    "eslint-config-airbnb": "^15.1.0",
     "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.4.0",
     "hig-vanilla": "file:../vanilla",
+    "jest": "^20.0.4",
     "jest-enzyme": "^3.7.0",
     "prop-types": "^15.5.10",
     "react": "^15.4.1",
@@ -57,6 +62,7 @@
     "lib": "npm run lib-vanilla && npm run lib-react",
     "lib-react": "webpack && NODE_ENV=production webpack",
     "lib-vanilla": "cd ../vanilla && npm run lib && cd ../react && mkdir -p lib && cp ../vanilla/lib/hig.css lib/hig-react.css",
+    "lint": "eslint ./src/** -c ./.eslintrc.js",
     "playground": "react-scripts start",
     "storybook": "start-storybook -p 9009 -s public",
     "test": "react-scripts test --env=jsdom",
@@ -64,10 +70,7 @@
     "type-check": "tsc",
     "validate": "node ./scripts/validate-version.js"
   },
-  "dependencies": {
-    "jest": "^20.0.4",
-    "react-test-renderer": "^15.6.1"
-  },
+  "dependencies": {},
   "jest": {
     "collectCoverageFrom": [
       "!src/index.js",
