@@ -48,7 +48,7 @@ storiesOf('TopNav Profile', module)
     <div>
       Basic usage of <pre>GlobalNav.TopNav.Profile</pre>
 
-    </div>,
+  </div>,
     () => (
       <GlobalNav>
         <TopNav logo={logo}>
@@ -76,10 +76,10 @@ storiesOf('TopNav Profile', module)
             image={profileImage}
             email="jane.designer@example.com"
             name="Jane Designer"
-            open={true}
+            open
             signOutLabel="Sign off"
             signOutLink="http://www.autodesk.com"
-            onProfileSettingsClick={function() {
+            onProfileSettingsClick={function () {
               alert('profile settings clicked');
             }}
           />
@@ -88,26 +88,24 @@ storiesOf('TopNav Profile', module)
       </GlobalNav>
     )
   )
-  .addWithInfo('user configured', `Set open state, events, `, () => {
-    return (
-      <GlobalNav>
-        <TopNav logo={logo}>
-          <Profile
-            image={text('image', profileImage)}
-            name={text('name', 'Jane Designer')}
-            email={text('email', 'jane.designer@example.com')}
-            open={boolean('profileFlyoutOpen', false)}
-            onProfileClickOutside={action('Clicked outside profile')}
-            onProfileImageClick={action('profile image clicked')}
-            onProfileSettingsClick={action('profile settings clicked')}
-            profileSettingsLabel={text('profileSettingsLabel', 'My Account')}
-            profileSettingsLink={text('profileSettingsLink', '#')}
-            onSignOutClick={action('sign out clicked')}
-            signOutLabel={text('signOutLabel', 'Logout')}
-            signOutLink={text('signOutLink', '/signout')}
-          />
-        </TopNav>
-        <ParagraphSlot />
-      </GlobalNav>
-    );
-  });
+  .addWithInfo('user configured', 'Set open state, events, ', () => (
+    <GlobalNav>
+      <TopNav logo={logo}>
+        <Profile
+          image={text('image', profileImage)}
+          name={text('name', 'Jane Designer')}
+          email={text('email', 'jane.designer@example.com')}
+          open={boolean('profileFlyoutOpen', false)}
+          onProfileClickOutside={action('Clicked outside profile')}
+          onProfileImageClick={action('profile image clicked')}
+          onProfileSettingsClick={action('profile settings clicked')}
+          profileSettingsLabel={text('profileSettingsLabel', 'My Account')}
+          profileSettingsLink={text('profileSettingsLink', '#')}
+          onSignOutClick={action('sign out clicked')}
+          signOutLabel={text('signOutLabel', 'Logout')}
+          signOutLink={text('signOutLink', '/signout')}
+        />
+      </TopNav>
+      <ParagraphSlot />
+    </GlobalNav>
+  ));

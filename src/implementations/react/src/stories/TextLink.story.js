@@ -22,11 +22,10 @@ import { text, select } from '@storybook/addon-knobs';
 import TextLink from '../adapters/TextLinkAdapter';
 
 storiesOf('TextLink', module)
-  .addWithInfo('TextLink with href', ``, () => {
-
+  .addWithInfo('TextLink with href', '', () => {
     const typeOptions = {
-      'primary': 'Primary',
-      'secondary': 'Secondary'
+      primary: 'Primary',
+      secondary: 'Secondary'
     };
 
     const type = select('Type', typeOptions, 'primary');
@@ -39,11 +38,10 @@ storiesOf('TextLink', module)
       />
     );
   })
-  .addWithInfo('TextLink with onClick', ``, () => {
-
+  .addWithInfo('TextLink with onClick', '', () => {
     const typeOptions = {
-      'primary': 'Primary',
-      'secondary': 'Secondary'
+      primary: 'Primary',
+      secondary: 'Secondary'
     };
 
     const type = select('Type', typeOptions, 'primary');
@@ -55,4 +53,4 @@ storiesOf('TextLink', module)
         onClick={action('clicked')}
       />
     );
-  })
+  });

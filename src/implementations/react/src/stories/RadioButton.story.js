@@ -26,27 +26,25 @@ const containerStyle = {
 };
 
 storiesOf('RadioButton', module)
-  .addWithInfo('Basic radioButton group', '', () => {
-    return (
-      <div style={containerStyle}>
-        <RadioButton
-          name={text('radioButtonName1', 'basic')}
-          value={text('radioButtonValue1', 'yes')}
-          label={text('radioButtonLabel1', 'yes')}
-        />
-        <RadioButton
-          name={text('radioButtonName2', 'basic')}
-          value={text('radioButtonValue2', 'no')}
-          label={text('radioButtonLabel2', 'no')}
-        />
-        <RadioButton
-          name={text('radioButtonName3', 'basic')}
-          value={text('radioButtonValue3', 'maybe')}
-          label={text('radioButtonLabel3', 'maybe')}
-        />
-      </div>
-    );
-  })
+  .addWithInfo('Basic radioButton group', '', () => (
+    <div style={containerStyle}>
+      <RadioButton
+        name={text('radioButtonName1', 'basic')}
+        value={text('radioButtonValue1', 'yes')}
+        label={text('radioButtonLabel1', 'yes')}
+      />
+      <RadioButton
+        name={text('radioButtonName2', 'basic')}
+        value={text('radioButtonValue2', 'no')}
+        label={text('radioButtonLabel2', 'no')}
+      />
+      <RadioButton
+        name={text('radioButtonName3', 'basic')}
+        value={text('radioButtonValue3', 'maybe')}
+        label={text('radioButtonLabel3', 'maybe')}
+      />
+    </div>
+  ))
   .addWithInfo('with other options', '', () => {
     const valueOptions = {
       extra: '2',
@@ -78,33 +76,31 @@ storiesOf('RadioButton', module)
       </div>
     );
   })
-  .addWithInfo('with Events defined', '', () => {
-    return (
-      <div style={containerStyle}>
-        <RadioButton
-          name="choisessez"
-          value="un"
-          label="un"
-          onHover={action("hovered 'un'")}
-          onChange={action("changed 'un'")}
-          onFocus={action("focused 'un'")}
-        />
-        <RadioButton
-          name="choisessez"
-          value="deux"
-          label="deux"
-          onHover={action("hovered 'deux'")}
-          onChange={action("changed 'deux'")}
-          onFocus={action("focused 'deux'")}
-        />
-        <RadioButton
-          name="choisessez"
-          value="troi"
-          label="troi"
-          onHover={action("hovered 'troi'")}
-          onChange={action("changed 'troi'")}
-          onFocus={action("focused 'troi'")}
-        />
-      </div>
-    );
-  });
+  .addWithInfo('with Events defined', '', () => (
+    <div style={containerStyle}>
+      <RadioButton
+        name="choisessez"
+        value="un"
+        label="un"
+        onHover={action("hovered 'un'")}
+        onChange={action("changed 'un'")}
+        onFocus={action("focused 'un'")}
+      />
+      <RadioButton
+        name="choisessez"
+        value="deux"
+        label="deux"
+        onHover={action("hovered 'deux'")}
+        onChange={action("changed 'deux'")}
+        onFocus={action("focused 'deux'")}
+      />
+      <RadioButton
+        name="choisessez"
+        value="troi"
+        label="troi"
+        onHover={action("hovered 'troi'")}
+        onChange={action("changed 'troi'")}
+        onFocus={action("focused 'troi'")}
+      />
+    </div>
+  ));

@@ -22,27 +22,25 @@ import { text, select, boolean } from '@storybook/addon-knobs';
 import { TextField } from '../hig-react';
 
 storiesOf('TextField', module)
-  .addWithInfo('By default', ``, () => {
-    return (
-      <TextField
-        disabled={boolean('Disabled', false)}
-        instructions={text(
-          'Instructions',
-          'This is a controlled field. Change the value in the knobs panel.'
-        )}
-        label={text('Label', 'My text field')}
-        name={text('Name', 'my-text-field')}
-        onBlur={action('blur')}
-        onChange={action('input')}
-        onFocus={action('focus')}
-        onInput={action('input')}
-        placeholder={text('Placeholder', 'Tell me how you really feel')}
-        required={text('Required', '')}
-        value={text('Value', '')}
-      />
-    );
-  })
-  .addWithInfo('With an icon', ``, () => {
+  .addWithInfo('By default', '', () => (
+    <TextField
+      disabled={boolean('Disabled', false)}
+      instructions={text(
+        'Instructions',
+        'This is a controlled field. Change the value in the knobs panel.'
+      )}
+      label={text('Label', 'My text field')}
+      name={text('Name', 'my-text-field')}
+      onBlur={action('blur')}
+      onChange={action('input')}
+      onFocus={action('focus')}
+      onInput={action('input')}
+      placeholder={text('Placeholder', 'Tell me how you really feel')}
+      required={text('Required', '')}
+      value={text('Value', '')}
+    />
+  ))
+  .addWithInfo('With an icon', '', () => {
     const iconOptions = {
       assets: 'Assets',
       settings: 'Settings'

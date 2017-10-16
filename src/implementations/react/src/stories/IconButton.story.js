@@ -22,30 +22,26 @@ import { text } from '@storybook/addon-knobs';
 import IconButton from '../adapters/IconButtonAdapter';
 
 storiesOf('IconButton', module)
-  .addWithInfo('Icon Button', ``, () => {
-    return (
-      <IconButton
-        title="IconButton"
-        link="#"
-        icon="settings"
-        onClick={action('clicked')}
-        onHover={action('on hover')}
-        onBlur={action('on blur')}
-        onFocus={action('on focus')}
-      />
-    );
-  })
-  .addWithInfo('Disabled Button', ``, () => {
-    return (
-      <IconButton
-        title="Disabled Icon Button"
-        link="#"
-        icon="settings"
-        onClick={action('clicked')}
-        onHover={action('on hover')}
-        onBlur={action('on blur')}
-        onFocus={action('on focus')}
-        disabled={true}
-      />
-    );
-  });
+  .addWithInfo('Icon Button', '', () => (
+    <IconButton
+      title="IconButton"
+      link="#"
+      icon="settings"
+      onClick={action('clicked')}
+      onHover={action('on hover')}
+      onBlur={action('on blur')}
+      onFocus={action('on focus')}
+    />
+  ))
+  .addWithInfo('Disabled Button', '', () => (
+    <IconButton
+      title="Disabled Icon Button"
+      link="#"
+      icon="settings"
+      onClick={action('clicked')}
+      onHover={action('on hover')}
+      onBlur={action('on blur')}
+      onFocus={action('on focus')}
+      disabled
+    />
+  ));

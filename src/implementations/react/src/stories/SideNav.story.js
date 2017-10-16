@@ -33,145 +33,145 @@ const links = [
 
 const moduleFixtures = [
   {
-    id: "1-1",
+    id: '1-1',
     groupId: '1',
-    icon: "insight",
-    title: "Insight"
+    icon: 'insight',
+    title: 'Insight'
   },
   {
-    id: "1-2",
+    id: '1-2',
     groupId: '2',
-    icon: "collaboration",
-    title: "Authoring Collaboration"
+    icon: 'collaboration',
+    title: 'Authoring Collaboration'
   },
   {
-    id: "1-3",
+    id: '1-3',
     groupId: '2',
-    icon: "document-management",
-    title: "Document Management"
+    icon: 'document-management',
+    title: 'Document Management'
   },
   {
-    id: "1-4",
+    id: '1-4',
     groupId: '2',
-    icon: "model-coordination",
-    title: "Model Coordination"
+    icon: 'model-coordination',
+    title: 'Model Coordination'
   },
   {
-    id: "1-5",
+    id: '1-5',
     groupId: '2',
-    icon: "project-management",
-    title: "Project Management"
+    icon: 'project-management',
+    title: 'Project Management'
   },
   {
-    id: "1-6",
+    id: '1-6',
     groupId: '2',
-    icon: "quantities",
-    title: "Quantities"
+    icon: 'quantities',
+    title: 'Quantities'
   },
-]
+];
 
 const submoduleFixtures = [
   {
-    id: "1-1-1",
+    id: '1-1-1',
     moduleId: '1-1',
-    title: "Overview",
+    title: 'Overview',
   },
   {
-    id: "1-1-2",
+    id: '1-1-2',
     moduleId: '1-1',
-    title: "Risk",
+    title: 'Risk',
   },
   {
-    id: "1-1-3",
+    id: '1-1-3',
     moduleId: '1-1',
-    title: "Quality",
+    title: 'Quality',
   },
   {
-    id: "1-1-4",
+    id: '1-1-4',
     moduleId: '1-1',
-    title: "Reports",
+    title: 'Reports',
   },
   {
-    id: "1-2-5",
+    id: '1-2-5',
     moduleId: '1-2',
-    title: "Cloud Work Sharing",
+    title: 'Cloud Work Sharing',
   },
   {
-    id: "1-2-6",
+    id: '1-2-6',
     moduleId: '1-2',
-    title: "Fluent",
+    title: 'Fluent',
   },
   {
-    id: "1-2-7",
+    id: '1-2-7',
     moduleId: '1-2',
-    title: "Approvals",
+    title: 'Approvals',
   },
   {
-    id: "1-3-8",
+    id: '1-3-8',
     moduleId: '1-3',
-    type: "submodule",
-    title: "Document Workflow",
+    type: 'submodule',
+    title: 'Document Workflow',
   },
   {
-    id: "1-4-9",
+    id: '1-4-9',
     moduleId: '1-4',
-    title: "Overview",
+    title: 'Overview',
   },
   {
-    id: "1-4-10",
+    id: '1-4-10',
     moduleId: '1-4',
-    title: "Models",
+    title: 'Models',
   },
   {
-    id: "1-4-11",
+    id: '1-4-11',
     moduleId: '1-4',
-    title: "Checklists",
+    title: 'Checklists',
   },
   {
-    id: "1-4-12",
+    id: '1-4-12',
     moduleId: '1-4',
-    title: "Clashes",
+    title: 'Clashes',
   },
   {
-    id: "1-4-13",
+    id: '1-4-13',
     moduleId: '1-4',
-    title: "Issues",
+    title: 'Issues',
   },
   {
-    id: "1-5-14",
+    id: '1-5-14',
     moduleId: '1-5',
-    title: "RFIs",
+    title: 'RFIs',
   },
   {
-    id: "1-5-15",
+    id: '1-5-15',
     moduleId: '1-5',
-    title: "Submittals",
+    title: 'Submittals',
   },
   {
-    id: "1-5-16",
+    id: '1-5-16',
     moduleId: '1-5',
-    title: "Daily Log",
+    title: 'Daily Log',
   },
   {
-    id: "1-6-17",
+    id: '1-6-17',
     moduleId: '1-6',
-    title: "2D",
+    title: '2D',
   },
   {
-    id: "1-6-18",
+    id: '1-6-18',
     moduleId: '1-6',
-    title: "3D",
+    title: '3D',
   }
 ];
 
 storiesOf('SideNav', module)
   .addWithInfo('default', <div><p>Global Nav basic usage</p></div>, () => {
-    const numberOfModulesOptions = { '6': '6', '3': '3' };
+    const numberOfModulesOptions = { 6: '6', 3: '3' };
     const moduleCount = select('Number of modules', numberOfModulesOptions, '6');
     const modules = moduleFixtures.slice(0, parseInt(moduleCount));
 
     return (
-      <GlobalNav sideNavOpen={true}>
+      <GlobalNav sideNavOpen>
         <SideNav
           superHeaderLabel={text('Super header label', 'Global Construction')}
           headerLabel={text('Header label', 'Oakwood Medical Center')}
@@ -187,4 +187,4 @@ storiesOf('SideNav', module)
         />
       </GlobalNav>
     );
-  })
+  });

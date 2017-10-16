@@ -117,32 +117,30 @@ import project3 from '../playground/images/project-3.png';
 import project4 from '../playground/images/project-4.png';
 
 storiesOf('GlobalNav', module)
-  .addWithInfo('default', <div><p>Global Nav basic usage</p></div>, () => {
-    return (
-      <GlobalNav showSubNav={true}>
-        <SideNav />
-        <TopNav logo={logo}>
-          <ProjectAccountSwitcher
-            open={boolean('Project Account Switcher open:', false)}
-            onProjectChange={action('Project activated')}
-            onAccountChange={action('Account activated')}
-          >
-            <Account image="" label="DPI Construction" />
-            <Project image={project4} label="Oakland Medical Center" />
-            <Project image={project1} label="Stanford hospital" />
-          </ProjectAccountSwitcher>
-          <Shortcut icon="settings" title="GEAR" link="#" />
-          <Help title="HELLLP MEEEE!!!!" link="#`" />
-          <Profile
-            image={profileImage}
-            name="Jane Designer"
-            email="jane.designer@example.com"
-            onProfileSettingsClick={action('profile settings clicked')}
-            onSignOutClick={action('sign out clicked')}
-          />
-        </TopNav>
-        <SubNav moduleIndicatorName="Insight" moduleIndicatorIcon="hamburger" />
-        <Slot>{LONG_COPY}</Slot>
-      </GlobalNav>
-    );
-  })
+  .addWithInfo('default', <div><p>Global Nav basic usage</p></div>, () => (
+    <GlobalNav showSubNav>
+      <SideNav />
+      <TopNav logo={logo}>
+        <ProjectAccountSwitcher
+          open={boolean('Project Account Switcher open:', false)}
+          onProjectChange={action('Project activated')}
+          onAccountChange={action('Account activated')}
+        >
+          <Account image="" label="DPI Construction" />
+          <Project image={project4} label="Oakland Medical Center" />
+          <Project image={project1} label="Stanford hospital" />
+        </ProjectAccountSwitcher>
+        <Shortcut icon="settings" title="GEAR" link="#" />
+        <Help title="HELLLP MEEEE!!!!" link="#`" />
+        <Profile
+          image={profileImage}
+          name="Jane Designer"
+          email="jane.designer@example.com"
+          onProfileSettingsClick={action('profile settings clicked')}
+          onSignOutClick={action('sign out clicked')}
+        />
+      </TopNav>
+      <SubNav moduleIndicatorName="Insight" moduleIndicatorIcon="hamburger" />
+      <Slot>{LONG_COPY}</Slot>
+    </GlobalNav>
+  ));

@@ -50,19 +50,19 @@ storiesOf('TopNav Help', module)
         <GlobalNav>
           <TopNav logo={logo}>
             <Help
-              title='Help'
+              title="Help"
               onClick={action('on Click')}
               onClickOutside={action('on Click Outside')}
-              open={true}
+              open
             >
               <Group>
                 <Option
                   name="option 1"
-                  onClick={action("on Click")}
+                  onClick={action('on Click')}
                 />
                 <Option
                   name="option 2"
-                  onClick={action("on Click")}
+                  onClick={action('on Click')}
                 />
               </Group>
             </Help>
@@ -79,29 +79,29 @@ storiesOf('TopNav Help', module)
         <GlobalNav>
           <TopNav logo={logo}>
             <Help
-              title='Help'
+              title="Help"
               onClick={action('on Click')}
               onClickOutside={action('on Click Outside')}
-              open={true}
+              open
             >
               <Group>
                 <Option
                   name="group 1 option 1"
-                  onClick={action("on Click")}
+                  onClick={action('on Click')}
                 />
                 <Option
                   name="group 1 option 2"
-                  onClick={action("on Click")}
+                  onClick={action('on Click')}
                 />
               </Group>
               <Group>
                 <Option
                   name="group 2 option 1"
-                  onClick={action("on Click")}
+                  onClick={action('on Click')}
                 />
                 <Option
                   name="group 2 option 2"
-                  onClick={action("on Click")}
+                  onClick={action('on Click')}
                 />
               </Group>
             </Help>
@@ -111,4 +111,4 @@ storiesOf('TopNav Help', module)
         <ParagraphSlot />
       </div>
     )
-  )
+  );

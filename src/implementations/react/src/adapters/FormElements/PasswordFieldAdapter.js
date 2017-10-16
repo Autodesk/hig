@@ -52,8 +52,8 @@ function PasswordFieldAdapter(props) {
           </MapsPropToMethod>
           <MapsPropToMethod value={props.showPasswordRevealButton} {...adapterProps}>
             {(instance, value) => (value
-                ? instance.showPasswordRevealButton()
-                : instance.hidePasswordRevealButton())}
+              ? instance.showPasswordRevealButton()
+              : instance.hidePasswordRevealButton())}
           </MapsPropToMethod>
         </div>
       )}

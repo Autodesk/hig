@@ -20,6 +20,7 @@ import { action } from '@storybook/addon-actions';
 import { select, boolean, text } from '@storybook/addon-knobs';
 
 import GlobalNav from '../adapters/GlobalNav/GlobalNavAdapter';
+
 const TopNav = GlobalNav.TopNav;
 const Profile = TopNav.Profile;
 const SubNav = GlobalNav.SubNav;
@@ -41,31 +42,29 @@ const tabOptions = {
 const tabDefaultValue = 'one';
 
 storiesOf('Tabs', module)
-  .addWithInfo('default', '', () => {
-    return (
-      <GlobalNav>
-        <TopNav logo={logo}>
-          <Profile />
-        </TopNav>
-        <SubNav moduleIndicatorName="Insight" moduleIndicatorIcon="hamburger">
-          <Tabs>
-            <Tab label="One" />
-            <Tab label="Two" />
-          </Tabs>
-        </SubNav>
-        <Slot>
-          <p>
+  .addWithInfo('default', '', () => (
+    <GlobalNav>
+      <TopNav logo={logo}>
+        <Profile />
+      </TopNav>
+      <SubNav moduleIndicatorName="Insight" moduleIndicatorIcon="hamburger">
+        <Tabs>
+          <Tab label="One" />
+          <Tab label="Two" />
+        </Tabs>
+      </SubNav>
+      <Slot>
+        <p>
             Next level deep v roof party, jianbing pok pok pug butcher vape farm-to-table kombucha. Yr snackwave VHS, wolf
             poutine actually woke poke flexitarian paleo food truck DIY kale chips viral yuccie. Cornhole tattooed vaporware
             affogato, gentrify mlkshk portland organic. Swag try-hard cronut hashtag, etsy bespoke chia banjo messenger bag.
             Mustache umami godard man braid cronut yuccie. YOLO vaporware franzen, gochujang typewriter mixtape brunch salvia
             paleo lyft. Four dollar toast tumblr mustache thundercats single-origin coffee, freegan flexitarian cold-pressed
             beard roof party VHS venmo af ugh bushwick.
-          </p>
-        </Slot>
-      </GlobalNav>
-    );
-  })
+        </p>
+      </Slot>
+    </GlobalNav>
+  ))
   .addWithInfo('client-controlled', '', () => {
     const activeTab = select('Active tab', tabOptions, tabDefaultValue);
     return (
@@ -90,26 +89,26 @@ storiesOf('Tabs', module)
         <Slot>
           {activeTab === 'one'
             ? <div>
-                <h1>Tab 1</h1>
-                <p>
+              <h1>Tab 1</h1>
+              <p>
                   Raw denim flexitarian green juice kinfolk. Umami hammock trust fund everyday carry, woke wolf viral sriracha austin.
                   Fingerstache affogato messenger bag salvia, cray iPhone bushwick blue bottle marfa gentrify dreamcatcher pop-up.
                   Slow-carb etsy enamel pin cronut, raclette post-ironic hashtag. Hoodie dreamcatcher enamel pin lumbersexual before
                   they sold out, authentic selvage tumblr vinyl. Hot chicken chillwave coloring book fixie vice venmo echo park
                   portland. Tote bag master cleanse cronut banjo banh mi pitchfork, celiac photo booth.
-                </p>
-              </div>
+              </p>
+            </div>
             : <div>
-                <h1>Tab 2</h1>
-                <p>
+              <h1>Tab 2</h1>
+              <p>
                   Next level deep v roof party, jianbing pok pok pug butcher vape farm-to-table kombucha. Yr snackwave VHS, wolf
                   poutine actually woke poke flexitarian paleo food truck DIY kale chips viral yuccie. Cornhole tattooed vaporware
                   affogato, gentrify mlkshk portland organic. Swag try-hard cronut hashtag, etsy bespoke chia banjo messenger bag.
                   Mustache umami godard man braid cronut yuccie. YOLO vaporware franzen, gochujang typewriter mixtape brunch salvia
                   paleo lyft. Four dollar toast tumblr mustache thundercats single-origin coffee, freegan flexitarian cold-pressed
                   beard roof party VHS venmo af ugh bushwick.
-                </p>
-              </div>}
+              </p>
+            </div>}
 
         </Slot>
       </GlobalNav>

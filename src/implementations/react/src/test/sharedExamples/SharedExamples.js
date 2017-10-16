@@ -42,15 +42,15 @@ class SharedExamples {
       attachTo: reactContainer
     });
 
-    //Update hig-vanilla instance
+    // Update hig-vanilla instance
     higItem[config.mutator](config.updateValue);
 
-    //Update React Instance
+    // Update React Instance
     wrapper.setProps({ [config.key]: config.updateValue });
 
     expect(reactContainer.firstChild.outerHTML).toMatchSnapshot();
 
-    //Check them against each other
+    // Check them against each other
     expect(reactContainer.firstChild.outerHTML).toEqual(
       higContainer.firstChild.outerHTML
     );

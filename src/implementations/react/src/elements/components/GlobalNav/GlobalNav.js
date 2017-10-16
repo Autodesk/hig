@@ -1,4 +1,4 @@
-  import React, { Component } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import GlobalNavAdapter from '../../../adapters/GlobalNav/GlobalNavAdapter';
@@ -142,9 +142,9 @@ class GlobalNav extends Component {
                   <GroupAdapter key={i} {...groupProps}>
                     {(groupProps.options || []).map(optionProps => (
                       <OptionAdapter key={optionProps.name} {...optionProps} />
-                      ))}
+                    ))}
                   </GroupAdapter>
-                  ))}
+                ))}
               </HelpAdapter>
               : null}
           </TopNavAdapter>
@@ -168,7 +168,7 @@ class GlobalNav extends Component {
                   {activeModule.submodules.map(this.renderTab)}
                 </Tabs>
                 : null}
-              </SubNavAdapter>
+            </SubNavAdapter>
             : null}
           {this.props.children
             ? this.props.children

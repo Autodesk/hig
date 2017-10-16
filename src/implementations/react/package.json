@@ -63,6 +63,7 @@
     "lib-react": "webpack && NODE_ENV=production webpack",
     "lib-vanilla": "cd ../vanilla && npm run lib && cd ../react && mkdir -p lib && cp ../vanilla/lib/hig.css lib/hig-react.css",
     "lint": "eslint ./src/** -c ./.eslintrc.js",
+    "lint-fix": "eslint ./src/** -c ./.eslintrc.js --fix",
     "playground": "react-scripts start",
     "storybook": "start-storybook -p 9009 -s public",
     "test": "react-scripts test --env=jsdom",

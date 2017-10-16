@@ -15,16 +15,16 @@ function ModuleAdapter(props) {
       {...props}
     >{adapterProps => (
       <div>
-        <MapsEventListener listener="onClick" handler={props.onClick} {...adapterProps} />
-        <MapsPropToMethod value={props.minimized} {...adapterProps}>
+          <MapsEventListener listener="onClick" handler={props.onClick} {...adapterProps} />
+          <MapsPropToMethod value={props.minimized} {...adapterProps}>
           {(instance, value) => (value ? instance.minimize() : instance.maximize())}
         </MapsPropToMethod>
-        <MapsPropToMethod value={props.hidden} {...adapterProps}>
+          <MapsPropToMethod value={props.hidden} {...adapterProps}>
           {(instance, value) => (value ? instance.hide() : instance.show())}
         </MapsPropToMethod>
-        <MountedByHIGParent mounter="addCollapse" {...adapterProps} />
-      </div>
-    )}
+          <MountedByHIGParent mounter="addCollapse" {...adapterProps} />
+        </div>
+      )}
     </HIGAdapter>
   );
 }

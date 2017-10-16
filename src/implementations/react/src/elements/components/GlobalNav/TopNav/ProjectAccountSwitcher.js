@@ -129,14 +129,14 @@ class ProjectAccountSwitcher extends Component {
           if (i === 0) {
             return <Account onClick={this.handleAccountClick} key={a.id} {...a} />;
           }
-            return <Account onClick={this.handleAccountClick} key={a.id} {...a} />;
+          return <Account onClick={this.handleAccountClick} key={a.id} {...a} />;
         })}
 
         {projects.map((p, i) => {
           if (i === 0) {
             return <Project onClick={this.handleProjectClick} key={p.id} {...p} />;
           }
-            return <Project onClick={this.handleProjectClick} key={p.id} {...p} />;
+          return <Project onClick={this.handleProjectClick} key={p.id} {...p} />;
         })}
       </ProjectAccountSwitcherAdapter>
     );

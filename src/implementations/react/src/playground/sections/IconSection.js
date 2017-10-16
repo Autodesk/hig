@@ -193,21 +193,21 @@ class IconSection extends PureComponent {
         <div className="test-container hig__rich-text">
           <h3>Included 24px Icons</h3>
           <div style={parentContainerStyles}>
-            {iconKeys.map((key) => <Icon nameOrSVG={key} key={key} />)}
+            {iconKeys.map(key => <Icon nameOrSVG={key} key={key} />)}
           </div>
         </div>
 
         <div className="test-container-1 hig__rich-text">
           <h3>Included 16px Icons</h3>
           <div style={parentContainerStyles}>
-            {iconKeys16.map((key) => <Icon nameOrSVG={key} size="16" key={key} />)}
+            {iconKeys16.map(key => <Icon nameOrSVG={key} size="16" key={key} />)}
           </div>
         </div>
 
         <div className="test-container-1 hig__rich-text">
           <h3>SVG Icons</h3>
           <div style={parentContainerStyles}>
-            {Object.keys(newIcons).map((key) => <Icon nameOrSVG={newIcons[key]} key={key} />)}
+            {Object.keys(newIcons).map(key => <Icon nameOrSVG={newIcons[key]} key={key} />)}
           </div>
         </div>
 

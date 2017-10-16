@@ -31,21 +31,21 @@ function ModuleAdapter(props) {
       {...props}
     >{adapterProps => (
       <div>
-        <MountedByHIGParentList mounter="addModule" {...adapterProps} />
-        <MapsEventListener listener="onClick" handler={props.onClick} {...adapterProps} />
-        <MapsEventListener listener="onHover" handler={props.onHover} {...adapterProps} />
-        <MapsPropToMethod value={props.icon} setter="setIcon" {...adapterProps} />
-        <MapsPropToMethod value={props.link} setter="setLink" {...adapterProps} />
-        <MapsPropToMethod value={props.title} setter="setTitle" {...adapterProps} />
-        <MapsPropToMethod value={props.active} {...adapterProps}>
+          <MountedByHIGParentList mounter="addModule" {...adapterProps} />
+          <MapsEventListener listener="onClick" handler={props.onClick} {...adapterProps} />
+          <MapsEventListener listener="onHover" handler={props.onHover} {...adapterProps} />
+          <MapsPropToMethod value={props.icon} setter="setIcon" {...adapterProps} />
+          <MapsPropToMethod value={props.link} setter="setLink" {...adapterProps} />
+          <MapsPropToMethod value={props.title} setter="setTitle" {...adapterProps} />
+          <MapsPropToMethod value={props.active} {...adapterProps}>
           {(instance, value) => (value ? instance.activate() : instance.deactivate())}
         </MapsPropToMethod>
-        <MountsHIGChild {...adapterProps}>{collapse}</MountsHIGChild>
-        {submodules.length > 0
-          ? <MountsHIGChildList {...adapterProps}>{submodules}</MountsHIGChildList>
-          : null}
-      </div>
-    )}
+          <MountsHIGChild {...adapterProps}>{collapse}</MountsHIGChild>
+          {submodules.length > 0
+            ? <MountsHIGChildList {...adapterProps}>{submodules}</MountsHIGChildList>
+            : null}
+        </div>
+      )}
     </HIGAdapter>
   );
 }

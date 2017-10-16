@@ -12,12 +12,12 @@ function TextCellAdapter(props) {
       HIGConstructor={HIG.Table._partials.TableRow._partials.TextCell}
     >{adapterProps => (
       <div>
-        <MountedByHIGParentList mounter="addCell" {...adapterProps} />
-        <MapsPropToMethod value={props.text} setter="setText" {...adapterProps} />
-        <MapsPropToMethod value={props.detail} setter="setDetail" {...adapterProps} />
-        <MapsPropToMethod value={props.alignment} setter="setAlignment" {...adapterProps} />
-      </div>
-    )}
+          <MountedByHIGParentList mounter="addCell" {...adapterProps} />
+          <MapsPropToMethod value={props.text} setter="setText" {...adapterProps} />
+          <MapsPropToMethod value={props.detail} setter="setDetail" {...adapterProps} />
+          <MapsPropToMethod value={props.alignment} setter="setAlignment" {...adapterProps} />
+        </div>
+      )}
     </HIGAdapter>
   );
 }

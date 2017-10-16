@@ -1,12 +1,12 @@
 import React from 'react';
-import {storiesOf} from '@storybook/react';
-import {action} from '@storybook/addon-actions';
-import {text, select, boolean} from '@storybook/addon-knobs';
+import { storiesOf } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
+import { text, select, boolean } from '@storybook/addon-knobs';
 
 import Modal from '../elements/components/Modal';
 
 storiesOf('Modal', module)
-  .addWithInfo('Basic Modal', ``, () => {
+  .addWithInfo('Basic Modal', '', () => {
     const styleOptions = {
       standard: 'Standard',
       alternate: 'Alternate'
@@ -19,21 +19,21 @@ storiesOf('Modal', module)
     };
 
     const buttonProps = [{
-      title:   text('Button 1 title', 'Cancel'),
-      type:    select('Button 1 type', buttonTypeOptions, 'secondary'),
+      title: text('Button 1 title', 'Cancel'),
+      type: select('Button 1 type', buttonTypeOptions, 'secondary'),
       onClick: action('button 1ONE!!!')
     }, {
-      title:   text('Button 2 title', 'Ok'),
-      type:    select('Button 2 type', buttonTypeOptions, 'primary'),
-      onClick: action("BUTTON 2")
-    }, {title: "WAAAAT", type: 'Secondary', onClick: action('u cant change this')}];
+      title: text('Button 2 title', 'Ok'),
+      type: select('Button 2 type', buttonTypeOptions, 'primary'),
+      onClick: action('BUTTON 2')
+    }, { title: 'WAAAAT', type: 'Secondary', onClick: action('u cant change this') }];
 
     return (
       <div>
         <Modal
           title={'Wait a minute...'}
           style={'alternate'}
-          isOpen={boolean("isOpen", true)}
+          isOpen={boolean('isOpen', true)}
           buttons={buttonProps}
           onClose={action('onClose')}
         >
@@ -44,7 +44,7 @@ storiesOf('Modal', module)
       </div>
     );
   })
-  .addWithInfo('With body text instead of children', ``, () => {
+  .addWithInfo('With body text instead of children', '', () => {
     const buttonProps = [
       { title: "I can't", type: 'secondary', onClick: action('No') },
       { title: 'Yes', type: 'primary', onClick: action('Yes') },
@@ -56,9 +56,9 @@ storiesOf('Modal', module)
           title={'Just one question'}
           body="Can you even?"
           style="standard"
-          isOpen={boolean("isOpen", true)}
+          isOpen={boolean('isOpen', true)}
           buttons={buttonProps}
           onClose={action('onClose')}
         />
-      </div>)
+      </div>);
   });

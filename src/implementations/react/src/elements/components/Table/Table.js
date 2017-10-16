@@ -91,7 +91,7 @@ class Table extends Component {
             {...this.props}
           >
             {this.renderTable}
-            </SelectableTable>
+          </SelectableTable>
           : this.renderTable(this.props.columns, this.props.data, this.props.density)}
       </div>
     );

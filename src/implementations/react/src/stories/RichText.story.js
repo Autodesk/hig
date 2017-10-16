@@ -5,7 +5,7 @@ import { text } from '@storybook/addon-knobs';
 import { RichText } from '../react-hig';
 
 storiesOf('Typography elements', module)
-  .addWithInfo("All Elements", ``, () => {
+  .addWithInfo('All Elements', '', () => {
     const content = text('Content', `
 
     `);
@@ -19,5 +19,5 @@ storiesOf('Typography elements', module)
         <p>P: Body example text</p>
         <p><b>B, Bold: Bold example text</b></p>
       </RichText>
-    )
+    );
   });

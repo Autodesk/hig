@@ -22,15 +22,13 @@ import { text, boolean } from '@storybook/addon-knobs';
 import { default as Checkbox } from './Checkbox';
 
 storiesOf('Checkbox', module)
-  .addWithInfo('Basic checkbox', '', () => {
-    return (
-      <Checkbox
-        name={text('checkboxName', 'basic')}
-        value={text('checkboxValue', 'yes')}
-        label={text('checkboxLabel', 'A checkbox')}
-      />
-    );
-  })
+  .addWithInfo('Basic checkbox', '', () => (
+    <Checkbox
+      name={text('checkboxName', 'basic')}
+      value={text('checkboxValue', 'yes')}
+      label={text('checkboxLabel', 'A checkbox')}
+    />
+  ))
   .addWithInfo('with other options', '', () => {
     const valueOptions = {
       extra: '2',
@@ -44,7 +42,7 @@ storiesOf('Checkbox', module)
           name="is_it_fancy"
           value="fanciness"
           label="Fancy!"
-          required={text('Required text', "This field is required.")}
+          required={text('Required text', 'This field is required.')}
           disabled={false}
         />
         <Checkbox
@@ -63,9 +61,9 @@ storiesOf('Checkbox', module)
     );
   })
   .addWithInfo('with Events defined', '', () => {
-    var localName = 'sdfsdffsd';
-    var localValue = 'hello';
-    var localLabel = 'Greetings';
+    const localName = 'sdfsdffsd';
+    const localValue = 'hello';
+    const localLabel = 'Greetings';
 
     return (
       <Checkbox

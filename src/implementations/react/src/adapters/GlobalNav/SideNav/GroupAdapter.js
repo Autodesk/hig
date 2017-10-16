@@ -14,10 +14,10 @@ function GroupAdapter(props) {
       {...props}
     >{adapterProps => (
       <div>
-        <MountsHIGChildList {...adapterProps}>{props.children}</MountsHIGChildList>
-        <MountedByHIGParentList mounter="addGroup" {...adapterProps} />
-      </div>
-    )}
+          <MountsHIGChildList {...adapterProps}>{props.children}</MountsHIGChildList>
+          <MountedByHIGParentList mounter="addGroup" {...adapterProps} />
+        </div>
+      )}
     </HIGAdapter>
   );
 }

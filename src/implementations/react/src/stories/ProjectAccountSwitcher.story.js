@@ -42,84 +42,80 @@ import project3 from '../playground/images/project-3.png';
 import project4 from '../playground/images/project-4.png';
 
 storiesOf('ProjectAccountSwitcher', module)
-  .addWithInfo('with multiple projects and accounts', '', () => {
-    return (
-      <GlobalNav>
-        <TopNav logo={logo}>
-          <ProjectAccountSwitcher
-            activeLabel="Hospital Builders / Oakland Medical Center"
-            activeImage={project1}
-            activeType={'project'}
-            open={true}
-            onClickOutside={action('clicked outside')}
-            onClick={action('clicked')}
-            showCaret={true}
-          >
-            <Account
-              image={project1}
-              label="Hospital Builders"
-              active={true}
-              onClick={action('clicked account')}
-            />
-            <Account
-              image={project2}
-              label="DPI Construction"
-              onClick={action('clicked account')}
-            />
-            <Project
-              image={project3}
-              label="Oakland Medical Center"
-              active={true}
-            />
-            <Project
-              image={project4}
-              label="Stanford Hospital"
-              onClick={action('clicked account')}
-            />
-          </ProjectAccountSwitcher>
-          <Profile />
-        </TopNav>
-        <SubNav moduleIndicatorName="Insight" moduleIndicatorIcon="hamburger" />
-        <Slot>
-          <p>
+  .addWithInfo('with multiple projects and accounts', '', () => (
+    <GlobalNav>
+      <TopNav logo={logo}>
+        <ProjectAccountSwitcher
+          activeLabel="Hospital Builders / Oakland Medical Center"
+          activeImage={project1}
+          activeType={'project'}
+          open
+          onClickOutside={action('clicked outside')}
+          onClick={action('clicked')}
+          showCaret
+        >
+          <Account
+            image={project1}
+            label="Hospital Builders"
+            active
+            onClick={action('clicked account')}
+          />
+          <Account
+            image={project2}
+            label="DPI Construction"
+            onClick={action('clicked account')}
+          />
+          <Project
+            image={project3}
+            label="Oakland Medical Center"
+            active
+          />
+          <Project
+            image={project4}
+            label="Stanford Hospital"
+            onClick={action('clicked account')}
+          />
+        </ProjectAccountSwitcher>
+        <Profile />
+      </TopNav>
+      <SubNav moduleIndicatorName="Insight" moduleIndicatorIcon="hamburger" />
+      <Slot>
+        <p>
             Raw denim flexitarian green juice kinfolk. Umami hammock trust fund everyday carry, woke wolf viral sriracha austin.
             Fingerstache affogato messenger bag salvia, cray iPhone bushwick blue bottle marfa gentrify dreamcatcher pop-up.
             Slow-carb etsy enamel pin cronut, raclette post-ironic hashtag. Hoodie dreamcatcher enamel pin lumbersexual before
             they sold out, authentic selvage tumblr vinyl. Hot chicken chillwave coloring book fixie vice venmo echo park
             portland. Tote bag master cleanse cronut banjo banh mi pitchfork, celiac photo booth.
-          </p>
-        </Slot>
-      </GlobalNav>
-    );
-  })
-  .addWithInfo('with a single account and project', ``, () => {
-    return (
-      <GlobalNav>
-        <TopNav logo={logo}>
-          <ProjectAccountSwitcher
-            activeLabel="Hospital Builders / Oakland Medical Center"
-            activeImage={project1}
-            activeType={'project'}
-            open={false}
-            onClickOutside={null}
-            onClick={null}
-            showCaret={false}
-          >
-            <Account image={project1} label="Hospital Builders" />
-            <Project image={project3} label="Oakland Medical Center" />
-          </ProjectAccountSwitcher>
-          <Profile />
-        </TopNav>
-        <SubNav moduleIndicatorName="Insight" moduleIndicatorIcon="hamburger" />
-        <Slot>
-          <p>
+        </p>
+      </Slot>
+    </GlobalNav>
+  ))
+  .addWithInfo('with a single account and project', '', () => (
+    <GlobalNav>
+      <TopNav logo={logo}>
+        <ProjectAccountSwitcher
+          activeLabel="Hospital Builders / Oakland Medical Center"
+          activeImage={project1}
+          activeType={'project'}
+          open={false}
+          onClickOutside={null}
+          onClick={null}
+          showCaret={false}
+        >
+          <Account image={project1} label="Hospital Builders" />
+          <Project image={project3} label="Oakland Medical Center" />
+        </ProjectAccountSwitcher>
+        <Profile />
+      </TopNav>
+      <SubNav moduleIndicatorName="Insight" moduleIndicatorIcon="hamburger" />
+      <Slot>
+        <p>
             Raw denim flexitarian green juice kinfolk. Umami hammock trust fund everyday carry, woke wolf viral sriracha austin.
             Fingerstache affogato messenger bag salvia, cray iPhone bushwick blue bottle marfa gentrify dreamcatcher pop-up.
             Slow-carb etsy enamel pin cronut, raclette post-ironic hashtag. Hoodie dreamcatcher enamel pin lumbersexual before
             they sold out, authentic selvage tumblr vinyl. Hot chicken chillwave coloring book fixie vice venmo echo park
             portland. Tote bag master cleanse cronut banjo banh mi pitchfork, celiac photo booth.
-          </p>
-        </Slot>
-      </GlobalNav>
-    );
-  });
+        </p>
+      </Slot>
+    </GlobalNav>
+  ));

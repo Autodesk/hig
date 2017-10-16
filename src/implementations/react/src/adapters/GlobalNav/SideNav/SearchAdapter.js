@@ -16,28 +16,28 @@ function SearchAdapter(props) {
       {...props}
     >{adapterProps => (
       <div>
-        <MapsPropToMethod value={props.icon} setter="setIcon" {...adapterProps} />
-        <MapsPropToMethod value={props.placeholder} setter="setPlaceholder" {...adapterProps} />
-        <ControlsProp
+          <MapsPropToMethod value={props.icon} setter="setIcon" {...adapterProps} />
+          <MapsPropToMethod value={props.placeholder} setter="setPlaceholder" {...adapterProps} />
+          <ControlsProp
           listener="onInput"
           handler={props.onInput}
           value={props.value}
           setter="setValue"
           {...adapterProps}
         />
-        <MapsPropToMethod value={props.clearIconVisible} {...adapterProps}>
+          <MapsPropToMethod value={props.clearIconVisible} {...adapterProps}>
           {(instance, value) => (value ? instance.showClearIcon() : instance.hideClearIcon()) }
         </MapsPropToMethod>
-        <MapsEventListener listener="onFocusOut" handler={props.onBlur} {...adapterProps} />
-        <MapsEventListener listener="onFocusIn" handler={props.onFocus} {...adapterProps} />
-        <MapsEventListener
+          <MapsEventListener listener="onFocusOut" handler={props.onBlur} {...adapterProps} />
+          <MapsEventListener listener="onFocusIn" handler={props.onFocus} {...adapterProps} />
+          <MapsEventListener
           listener="onClearIconClick"
           handler={props.onClearIconClick}
           {...adapterProps}
         />
-        <MountedByHIGParent mounter="addSearch" {...adapterProps} />
-      </div>
-    )}
+          <MountedByHIGParent mounter="addSearch" {...adapterProps} />
+        </div>
+      )}
     </HIGAdapter>
   );
 }

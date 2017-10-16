@@ -16,9 +16,9 @@ describe('ModalAdapter', () => {
         style="standard"
         title="My modal"
         buttons={[
-            { title: 'Ok' },
-            { title: 'Cancel' }
-          ]}
+          { title: 'Ok' },
+          { title: 'Cancel' }
+        ]}
       >
         <div>Click me to see the Modal</div>
       </ModalAdapter>);

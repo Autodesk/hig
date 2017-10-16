@@ -22,27 +22,23 @@ import { text, select, boolean } from '@storybook/addon-knobs';
 import TextAreaAdapter from '../adapters/FormElements/TextAreaAdapter';
 
 storiesOf('TextAreaAdapter', module)
-  .addWithInfo('By default', ``, () => {
-    return (
-      <TextAreaAdapter
-        disabled={boolean('Disabled', false)}
-        label={text('Label', 'My text field')}
-        onBlur={action('blur')}
-        onChange={action('change')}
-        onFocus={action('focus')}
-        onInput={action('input')}
-        required={text('Required', '')}
-      />
-    );
-  })
-  .addWithInfo('With no label and no events', ``, () => {
-    return (
-      <TextAreaAdapter
-        disabled={boolean('Disabled', false)}
-        instructions={text('Instructions', '')}
-        name={text('Name', 'my-text-field')}
-        placeholder={text('Placeholder', 'Tell me how you really feel')}
-        required={text('Required', '')}
-      />
-    );
-  });
+  .addWithInfo('By default', '', () => (
+    <TextAreaAdapter
+      disabled={boolean('Disabled', false)}
+      label={text('Label', 'My text field')}
+      onBlur={action('blur')}
+      onChange={action('change')}
+      onFocus={action('focus')}
+      onInput={action('input')}
+      required={text('Required', '')}
+    />
+  ))
+  .addWithInfo('With no label and no events', '', () => (
+    <TextAreaAdapter
+      disabled={boolean('Disabled', false)}
+      instructions={text('Instructions', '')}
+      name={text('Name', 'my-text-field')}
+      placeholder={text('Placeholder', 'Tell me how you really feel')}
+      required={text('Required', '')}
+    />
+  ));
