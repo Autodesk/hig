@@ -1,9 +1,25 @@
-import * as PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import * as HIG from 'hig-vanilla';
-import FlyoutAdapter from '../../adapters/FlyoutAdapter';
+import * as PropTypes from "prop-types";
+import React, { Component } from "react";
+import * as HIG from "hig-vanilla";
+import FlyoutAdapter from "../../adapters/FlyoutAdapter";
 
 class Flyout extends Component {
+  static propTypes = {
+    anchorPoint: PropTypes.oneOf(HIG.Flyout.AvailableAnchorPoints),
+    children: PropTypes.node,
+    content: PropTypes.node
+  };
+
+  static __docgenInfo = {
+    props: {
+      anchorPoint: {
+        description: "where the flyout will be anchored relative to target"
+      },
+      children: { description: "target component to open the flyout" },
+      content: { description: "content for the flyout" }
+    }
+  };
+
   constructor(props) {
     super(props);
     this.state = {
@@ -11,27 +27,11 @@ class Flyout extends Component {
     };
   }
 
-  static propTypes = {
-    anchorPoint: PropTypes.oneOf(HIG.Flyout.AvailableAnchorPoints),
-    children: PropTypes.node,
-    content: PropTypes.node
-  }
-
-  static __docgenInfo = {
-    props: {
-      anchorPoint: {
-        description: 'where the flyout will be anchored relative to target'
-      },
-      children: { description: 'target component to open the flyout' },
-      content: { description: 'content for the flyout' },
-    }
-  };
-
   closeFlyout = () => {
     this.setState({ open: false });
   };
 
-  openFlyout = (event) => {
+  openFlyout = () => {
     this.setState({ open: true });
   };
 

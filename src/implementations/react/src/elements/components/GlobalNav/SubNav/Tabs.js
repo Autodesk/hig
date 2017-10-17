@@ -1,8 +1,10 @@
+/* eslint-disable react/no-multi-comp */
+/* eslint-disable react/jsx-no-bind */
 
-import React from 'react';
+import React from "react";
 
-import TabsAdapter from '../../../../adapters/GlobalNav/SubNav/TabsAdapter';
-import TabAdapter from '../../../../adapters/GlobalNav/SubNav/TabAdapter';
+import TabsAdapter from "../../../../adapters/GlobalNav/SubNav/TabsAdapter";
+import TabAdapter from "../../../../adapters/GlobalNav/SubNav/TabAdapter";
 
 class Tab extends React.Component {
   // This is never actually rendered
@@ -22,6 +24,10 @@ class Tabs extends React.Component {
     this.state = { selectedTabId };
   }
 
+  getTabChildren() {
+    return React.Children.toArray(this.props.children).filter(isTab);
+  }
+
   defaultSelectedTabId() {
     const { defaultSelectedTabId, selectedTabId } = this.props;
 
@@ -35,26 +41,12 @@ class Tabs extends React.Component {
     return tabs.length === 0 ? undefined : tabs[0].props.id;
   }
 
-  renderedSelectedTabId() {
-    return this.props.selectedTabId
-      ? this.props.selectedTabId
-      : this.state.selectedTabId;
-  }
+  handleTabClick(newTabId) {
+    if (this.props.onChange) {
+      this.props.onChange(newTabId, this.renderedSelectedTabId());
+    }
 
-  getTabChildren() {
-    return React.Children.toArray(this.props.children).filter(isTab);
-  }
-
-  render() {
-    const tabs = React.Children.map(
-      this.props.children,
-      child => (isTab(child) ? this.renderTab(child) : null)
-    );
-    return (
-      <TabsAdapter>
-        {tabs}
-      </TabsAdapter>
-    );
+    this.setState({ selectedTabId: newTabId });
   }
 
   renderTab(tab) {
@@ -69,12 +61,18 @@ class Tabs extends React.Component {
     );
   }
 
-  handleTabClick(newTabId) {
-    if (this.props.onChange) {
-      this.props.onChange(newTabId, this.renderedSelectedTabId());
-    }
+  renderedSelectedTabId() {
+    return this.props.selectedTabId
+      ? this.props.selectedTabId
+      : this.state.selectedTabId;
+  }
 
-    this.setState({ selectedTabId: newTabId });
+  render() {
+    const tabs = React.Children.map(
+      this.props.children,
+      child => (isTab(child) ? this.renderTab(child) : null)
+    );
+    return <TabsAdapter>{tabs}</TabsAdapter>;
   }
 }
 

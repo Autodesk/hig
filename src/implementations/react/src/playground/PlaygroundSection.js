@@ -1,5 +1,5 @@
-import React, { PureComponent } from 'react';
-import * as PropTypes from 'prop-types';
+import React, { PureComponent } from "react";
+import * as PropTypes from "prop-types";
 
 class PlaygroundSection extends PureComponent {
   render() {

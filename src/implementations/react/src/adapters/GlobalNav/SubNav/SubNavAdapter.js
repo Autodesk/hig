@@ -1,16 +1,20 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import * as HIG from 'hig-vanilla';
+import React from "react";
+import PropTypes from "prop-types";
+import * as HIG from "hig-vanilla";
 import HIGAdapter, {
   MapsEventListener,
   MapsPropToMethod,
   MountedByHIGParent,
   MountsHIGChildList
-} from '../../HIGAdapter';
+} from "../../HIGAdapter";
 
 function SubNavAdapter(props) {
   return (
-    <HIGAdapter displayName="SubNav" HIGConstructor={HIG.GlobalNav._partials.SubNav} {...props}>
+    <HIGAdapter
+      displayName="SubNav"
+      HIGConstructor={HIG.GlobalNav._partials.SubNav}
+      {...props}
+    >
       {adapterProps => (
         <div>
           <MountedByHIGParent mounter="addSubNav" {...adapterProps} />
@@ -29,7 +33,9 @@ function SubNavAdapter(props) {
             setter="setModuleIndicatorIcon"
             {...adapterProps}
           />
-          <MountsHIGChildList {...adapterProps}>{props.children}</MountsHIGChildList>
+          <MountsHIGChildList {...adapterProps}>
+            {props.children}
+          </MountsHIGChildList>
         </div>
       )}
     </HIGAdapter>
@@ -40,7 +46,7 @@ SubNavAdapter.propTypes = {
   children: PropTypes.node,
   onModuleIndicatorClick: PropTypes.func,
   moduleIndicatorIcon: PropTypes.string,
-  moduleIndicatorName: PropTypes.string,
+  moduleIndicatorName: PropTypes.string
 };
 
 SubNavAdapter.defaultProps = {

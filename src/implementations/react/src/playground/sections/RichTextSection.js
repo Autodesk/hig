@@ -1,6 +1,6 @@
-import React, { PureComponent } from 'react';
-import PlaygroundSection from '../PlaygroundSection';
-import { RichText } from '../../hig-react';
+import React, { PureComponent } from "react";
+import PlaygroundSection from "../PlaygroundSection";
+import { RichText } from "../../hig-react";
 
 class RichTextSection extends PureComponent {
   render() {
@@ -17,7 +17,9 @@ class RichTextSection extends PureComponent {
           <h4>H4, Sub1: example text</h4>
           <h5>H5, Sub2: example text</h5>
           <p>P: Body example text</p>
-          <p><b>B, Bold: Bold example text</b></p>
+          <p>
+            <b>B, Bold: Bold example text</b>
+          </p>
         </RichText>
       </PlaygroundSection>
     );

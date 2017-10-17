@@ -1,6 +1,6 @@
-import React, { PureComponent } from 'react';
-import PlaygroundSection from '../PlaygroundSection';
-import { Range } from '../../hig-react';
+import React, { PureComponent } from "react";
+import PlaygroundSection from "../PlaygroundSection";
+import { Range } from "../../hig-react";
 
 class RangeSection extends PureComponent {
   constructor(props) {
@@ -10,9 +10,9 @@ class RangeSection extends PureComponent {
     };
   }
 
-  setValue = (event) => {
+  setValue = event => {
     this.setState({ value: event.target.value });
-  }
+  };
 
   render() {
     return (

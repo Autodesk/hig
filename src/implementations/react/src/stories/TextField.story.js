@@ -14,54 +14,54 @@
  limitations under the License.
 
  */
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { text, select, boolean } from '@storybook/addon-knobs';
+import React from "react";
+/* eslint-disable import/no-extraneous-dependencies */
+import { storiesOf } from "@storybook/react";
+import { action } from "@storybook/addon-actions";
+import { text, select, boolean } from "@storybook/addon-knobs";
+/* eslint-enable import/no-extraneous-dependencies */
 
-import { TextField } from '../hig-react';
+import { TextField } from "../hig-react";
 
-storiesOf('TextField', module)
-  .addWithInfo('By default', ``, () => {
-    return (
-      <TextField
-        disabled={boolean('Disabled', false)}
-        instructions={text(
-          'Instructions',
-          'This is a controlled field. Change the value in the knobs panel.'
-        )}
-        label={text('Label', 'My text field')}
-        name={text('Name', 'my-text-field')}
-        onBlur={action('blur')}
-        onChange={action('input')}
-        onFocus={action('focus')}
-        onInput={action('input')}
-        placeholder={text('Placeholder', 'Tell me how you really feel')}
-        required={text('Required', '')}
-        value={text('Value', '')}
-      />
-    );
-  })
-  .addWithInfo('With an icon', ``, () => {
+storiesOf("TextField", module)
+  .addWithInfo("By default", "", () => (
+    <TextField
+      disabled={boolean("Disabled", false)}
+      instructions={text(
+        "Instructions",
+        "This is a controlled field. Change the value in the knobs panel."
+      )}
+      label={text("Label", "My text field")}
+      name={text("Name", "my-text-field")}
+      onBlur={action("blur")}
+      onChange={action("input")}
+      onFocus={action("focus")}
+      onInput={action("input")}
+      placeholder={text("Placeholder", "Tell me how you really feel")}
+      required={text("Required", "")}
+      value={text("Value", "")}
+    />
+  ))
+  .addWithInfo("With an icon", "", () => {
     const iconOptions = {
-      assets: 'Assets',
-      settings: 'Settings'
+      assets: "Assets",
+      settings: "Settings"
     };
 
     return (
       <TextField
-        disabled={boolean('Disabled', false)}
-        icon={select('Icon', iconOptions, 'assets')}
-        instructions={text('Instructions', '')}
-        label={text('Label', 'My text field')}
-        name={text('Name', 'my-text-field')}
-        onBlur={action('blur')}
-        onChange={action('change')}
-        onFocus={action('focus')}
-        onInput={action('input')}
-        placeholder={text('Placeholder', 'Tell me how you really feel')}
-        required={text('Required', '')}
-        value={text('Value', '')}
+        disabled={boolean("Disabled", false)}
+        icon={select("Icon", iconOptions, "assets")}
+        instructions={text("Instructions", "")}
+        label={text("Label", "My text field")}
+        name={text("Name", "my-text-field")}
+        onBlur={action("blur")}
+        onChange={action("change")}
+        onFocus={action("focus")}
+        onInput={action("input")}
+        placeholder={text("Placeholder", "Tell me how you really feel")}
+        required={text("Required", "")}
+        value={text("Value", "")}
       />
     );
   });

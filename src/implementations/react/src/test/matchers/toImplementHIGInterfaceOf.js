@@ -7,10 +7,13 @@ function implementsInterface(testFunction, HIGComponent) {
 
   testFunction(spiedInstance);
 
-  const uncalledMethods = interfaceMethods.reduce((acc, methodName) => (
-    (spiedInstance[methodName].mock.calls.length === 0)
-      ? acc.concat([methodName])
-      : acc), []);
+  const uncalledMethods = interfaceMethods.reduce(
+    (acc, methodName) =>
+      spiedInstance[methodName].mock.calls.length === 0
+        ? acc.concat([methodName])
+        : acc,
+    []
+  );
 
   return {
     pass: uncalledMethods.length === 0,
@@ -23,15 +26,17 @@ function implementsInterface(testFunction, HIGComponent) {
 expect.extend({
   toImplementHIGInterfaceOf: (fn, HIGComponent) => {
     const {
-      pass, uncalledMethods, calledCount, totalMethods
+      pass,
+      uncalledMethods,
+      calledCount,
+      totalMethods
     } = implementsInterface(fn, HIGComponent);
 
     if (pass) {
       return {
-        message: () => (
+        message: () =>
           `
-Expected adapter to excercise the hig interface. ${calledCount} of ${totalMethods} methods called.`
-        ),
+Expected adapter to excercise the hig interface. ${calledCount} of ${totalMethods} methods called.`,
         pass: true
       };
     }
@@ -39,7 +44,9 @@ Expected adapter to excercise the hig interface. ${calledCount} of ${totalMethod
       message: () => `
 Expected adapter to excercise the hig interface,
 but only ${calledCount} of ${totalMethods} methods called.
-${uncalledMethods.map(methodName => `"${methodName}" was not called`).join('\n')}
+${uncalledMethods
+        .map(methodName => `"${methodName}" was not called`)
+        .join("\n")}
       `,
       pass: false
     };

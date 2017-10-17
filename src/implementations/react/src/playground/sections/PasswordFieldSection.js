@@ -1,27 +1,26 @@
-import React, { PureComponent } from 'react';
-import PlaygroundSection from '../PlaygroundSection';
-import { PasswordField } from '../../hig-react';
+/* eslint-disable no-console */
+import React, { PureComponent } from "react";
+import PlaygroundSection from "../PlaygroundSection";
+import { PasswordField } from "../../hig-react";
 
 class PasswordFieldSection extends PureComponent {
   constructor() {
     super();
     this.state = {
-      password: 'foo'
+      password: "foo"
     };
   }
 
-  setPassword = (event) => {
-    // this.setState({ password: event.target.value });
-  }
+  setPassword = event => {
+    this.setState({ password: event.target.value });
+  };
 
-  logEvent(event, higElement) {
-    let messageParts = [
-      `PasswordField triggered an ${event.type} event`
-    ];
+  logEvent(event) {
+    let messageParts = [`PasswordField triggered an ${event.type} event`];
     if (event.target.value !== undefined) {
       messageParts = messageParts.concat(`: ${event.target.value}`);
     }
-    console.log(messageParts.join(''));
+    console.log(messageParts.join(""));
   }
 
   render() {
@@ -36,8 +35,12 @@ class PasswordFieldSection extends PureComponent {
           onFocus={this.logEvent}
           onInput={this.setPassword}
           value={this.state.password}
-          onPasswordHideButtonClick={function () { 'clicked Password hide button'; }}
-          onPasswordRevealButtonClick={function () { console.log('Password REVEAL clicked'); }}
+          onPasswordHideButtonClick={() => {
+            "clicked Password hide button";
+          }}
+          onPasswordRevealButtonClick={() => {
+            console.log("Password REVEAL clicked");
+          }}
           showPasswordRevealButton={false}
           showPasswordHideButton={false}
           placeholder="Enter the dragon, I mean password"

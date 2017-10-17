@@ -14,9 +14,9 @@
  limitations under the License.
 
  */
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
-import Playground from './playground';
+import Playground from "./playground";
 
-ReactDOM.render(<Playground />, document.getElementById('root'));
+ReactDOM.render(<Playground />, document.getElementById("root"));

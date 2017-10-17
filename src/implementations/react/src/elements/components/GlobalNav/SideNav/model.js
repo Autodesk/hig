@@ -3,8 +3,14 @@ export function match(string, query) {
 }
 
 export function filter({ modules, submodules, ...props }, query) {
-  const filteredSubmodules = submodules.filter(submodule => match(submodule.title, query));
-  const filteredModules = modules.filter(module => filteredSubmodules.some(s => s.moduleId === module.id) || match(module.title, query));
+  const filteredSubmodules = submodules.filter(submodule =>
+    match(submodule.title, query)
+  );
+  const filteredModules = modules.filter(
+    module =>
+      filteredSubmodules.some(s => s.moduleId === module.id) ||
+      match(module.title, query)
+  );
 
   return { ...props, modules: filteredModules, submodules: filteredSubmodules };
 }
@@ -19,29 +25,6 @@ export function group({ modules, submodules }) {
   }));
 }
 
-export function mergeState({ modules, submodules, ...props }, state) {
-  const activeModuleId = props.activeModuleId || state.activeModuleId;
-  const activeModule = modules.find(m => m.id === activeModuleId) || {};
-  const activeSubmodule = submodules.find(m => m.id === activeModuleId) || {};
-
-  return {
-    ...props,
-    modules: modules.map((module) => {
-      const moduleWithState = {
-        ...module,
-        active: module.id === activeModule.id || module.id === activeSubmodule.moduleId,
-        ...getModuleState(state.moduleStates, module.id)
-      };
-
-      return moduleWithState;
-    }),
-    submodules: submodules.map(submodule => ({
-      ...submodule,
-      active: submodule.id === activeModuleId,
-    }))
-  };
-}
-
 export function getModuleState(moduleStates, id) {
   const state = moduleStates[id] || {};
 
@@ -49,4 +32,29 @@ export function getModuleState(moduleStates, id) {
     state.minimized = true;
   }
   return state;
+}
+
+export function mergeState({ modules, submodules, ...props }, state) {
+  const activeModuleId = props.activeModuleId || state.activeModuleId;
+  const activeModule = modules.find(m => m.id === activeModuleId) || {};
+  const activeSubmodule = submodules.find(m => m.id === activeModuleId) || {};
+
+  return {
+    ...props,
+    modules: modules.map(module => {
+      const moduleWithState = {
+        ...module,
+        active:
+          module.id === activeModule.id ||
+          module.id === activeSubmodule.moduleId,
+        ...getModuleState(state.moduleStates, module.id)
+      };
+
+      return moduleWithState;
+    }),
+    submodules: submodules.map(submodule => ({
+      ...submodule,
+      active: submodule.id === activeModuleId
+    }))
+  };
 }

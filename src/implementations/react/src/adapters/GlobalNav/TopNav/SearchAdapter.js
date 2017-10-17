@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import * as HIG from 'hig-vanilla';
+import React from "react";
+import PropTypes from "prop-types";
+import * as HIG from "hig-vanilla";
 import HIGAdapter, {
   MountedByHIGParent,
   MapsPropToMethod,
   MapsEventListener
-} from '../../HIGAdapter';
+} from "../../HIGAdapter";
 
 function SearchAdapter(props) {
   return (
@@ -17,18 +17,39 @@ function SearchAdapter(props) {
       {adapterProps => (
         <div>
           <MountedByHIGParent mounter="addSearch" {...adapterProps} />
-          <MapsEventListener listener="onInput" handler={props.onInput} {...adapterProps} />
-          <MapsEventListener listener="onFocusIn" handler={props.onFocus} {...adapterProps} />
-          <MapsEventListener listener="onFocusOut" handler={props.onBlur} {...adapterProps} />
+          <MapsEventListener
+            listener="onInput"
+            handler={props.onInput}
+            {...adapterProps}
+          />
+          <MapsEventListener
+            listener="onFocusIn"
+            handler={props.onFocus}
+            {...adapterProps}
+          />
+          <MapsEventListener
+            listener="onFocusOut"
+            handler={props.onBlur}
+            {...adapterProps}
+          />
           <MapsEventListener
             listener="onClearIconClick"
             handler={props.onClearIconClick}
             {...adapterProps}
           />
-          <MapsPropToMethod setter="setQuery" value={props.query} {...adapterProps} />
-          <MapsPropToMethod setter="setPlaceholder" value={props.placeholder} {...adapterProps} />
+          <MapsPropToMethod
+            setter="setQuery"
+            value={props.query}
+            {...adapterProps}
+          />
+          <MapsPropToMethod
+            setter="setPlaceholder"
+            value={props.placeholder}
+            {...adapterProps}
+          />
           <MapsPropToMethod value={props.showClearIcon} {...adapterProps}>
-            {(instance, value) => (value ? instance.showClearIcon() : instance.hideClearIcon())}
+            {(instance, value) =>
+              value ? instance.showClearIcon() : instance.hideClearIcon()}
           </MapsPropToMethod>
         </div>
       )}
@@ -44,7 +65,7 @@ SearchAdapter.propTypes = {
   onInput: PropTypes.func,
   onFocus: PropTypes.func,
   onBlur: PropTypes.func,
-  showClearIcon: PropTypes.bool,
+  showClearIcon: PropTypes.bool
 };
 
 SearchAdapter.defaultProps = {

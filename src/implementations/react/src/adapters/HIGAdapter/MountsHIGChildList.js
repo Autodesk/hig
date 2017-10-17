@@ -1,32 +1,33 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import HIGPropTypes from "./HIGPropTypes";
 
 class MountsHIGChildList extends Component {
   static propTypes = {
     children: PropTypes.node,
-    higInstance: PropTypes.any,
+    higInstance: HIGPropTypes.higInstance,
     mounted: PropTypes.bool.isRequired
-  }
+  };
 
   static defaultProps = {
     children: null
-  }
+  };
 
   static childContextTypes = {
     higParent: PropTypes.object
-  }
+  };
 
   getChildContext() {
     return { higParent: this.props.higInstance };
   }
 
   render() {
-    const children = React.Children.map(this.props.children, (child, index) => (
-      child
-        ? React.cloneElement(child, { index })
-        : null));
+    const children = React.Children.map(
+      this.props.children,
+      (child, index) => (child ? React.cloneElement(child, { index }) : null)
+    );
 
-    return this.props.mounted ? (<div>{children}</div>) : null;
+    return this.props.mounted ? <div>{children}</div> : null;
   }
 }
 

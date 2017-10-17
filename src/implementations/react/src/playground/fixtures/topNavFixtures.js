@@ -15,61 +15,61 @@ limitations under the License.
 
  */
 
-import project1 from '../images/project-1.png';
-import project2 from '../images/project-2.png';
-import project3 from '../images/project-3.png';
-import project4 from '../images/project-4.png';
+import project1 from "../images/project-1.png";
+import project2 from "../images/project-2.png";
+import project3 from "../images/project-3.png";
+import project4 from "../images/project-4.png";
 
 export const projects = [
   {
-    label: 'Oakwood Medical Center',
+    label: "Oakwood Medical Center",
     image: project2,
-    id: '0'
+    id: "0"
   },
   {
-    label: 'Colorado Myrtle Shield Apartments',
+    label: "Colorado Myrtle Shield Apartments",
     image: project3,
-    id: '2'
+    id: "2"
   },
   {
-    label: 'Grey Pillars',
+    label: "Grey Pillars",
     image: project4,
-    id: '4'
+    id: "4"
   },
   {
-    label: 'Keystone Apartments',
-    id: '6'
+    label: "Keystone Apartments",
+    id: "6"
   },
   {
-    label: 'Pleasant Park',
+    label: "Pleasant Park",
     image: project1,
-    id: '8'
+    id: "8"
   }
 ];
 
 export const accounts = [
   {
-    label: 'Oakwood Medical Center',
+    label: "Oakwood Medical Center",
     image: project1,
-    id: '1'
+    id: "1"
   },
   {
-    label: 'Colorado Myrtle Shield Apartments',
+    label: "Colorado Myrtle Shield Apartments",
     image: project2,
-    id: '3'
+    id: "3"
   },
   {
-    label: 'Grey Pillars',
+    label: "Grey Pillars",
     image: project3,
-    id: '5'
+    id: "5"
   },
   {
-    label: 'Keystone Apartments',
-    id: '7'
+    label: "Keystone Apartments",
+    id: "7"
   },
   {
-    label: 'Pleasant Park',
+    label: "Pleasant Park",
     image: project4,
-    id: '9'
+    id: "9"
   }
 ];

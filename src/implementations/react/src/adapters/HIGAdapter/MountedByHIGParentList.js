@@ -1,17 +1,18 @@
-import { PureComponent } from 'react';
-import PropTypes from 'prop-types';
+import { PureComponent } from "react";
+import PropTypes from "prop-types";
+import HIGPropTypes from "./HIGPropTypes";
 
 export default class MountedByHIGParentList extends PureComponent {
   static propTypes = {
-    higInstance: PropTypes.object.isRequired,
-    higParent: PropTypes.object,
+    higInstance: HIGPropTypes.higInstance,
+    higParent: HIGPropTypes.higInstance,
     mounter: PropTypes.string.isRequired,
     onMount: PropTypes.func.isRequired
-  }
+  };
 
   static defaultProps = {
     higParent: undefined
-  }
+  };
 
   componentDidMount() {
     this.mountToParentList(this.props);
@@ -22,7 +23,9 @@ export default class MountedByHIGParentList extends PureComponent {
   }
 
   mountToParentList(props) {
-    if (!props.higParent) { return; }
+    if (!props.higParent) {
+      return;
+    }
 
     props.higParent[props.mounter](props.higInstance);
     this.props.onMount();
