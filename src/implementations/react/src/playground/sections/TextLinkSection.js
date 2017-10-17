@@ -1,6 +1,6 @@
-import React, { PureComponent } from 'react';
-import PlaygroundSection from '../PlaygroundSection';
-import { TextLink } from '../../hig-react';
+import React, { PureComponent } from "react";
+import PlaygroundSection from "../PlaygroundSection";
+import { TextLink } from "../../hig-react";
 
 class TextLinkSection extends PureComponent {
   render() {
@@ -16,7 +16,7 @@ class TextLinkSection extends PureComponent {
           <TextLink
             text="This is a primary text link with onClick"
             onClick={() => {
-              console.log('Text link on click');
+              console.log("Text link on click");
             }}
           />
         </div>

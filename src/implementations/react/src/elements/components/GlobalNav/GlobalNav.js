@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
-import GlobalNavAdapter from '../../../adapters/GlobalNav/GlobalNavAdapter';
-import TopNavAdapter from '../../../adapters/GlobalNav/TopNav/TopNavAdapter';
-import SubNavAdapter from '../../../adapters/GlobalNav/SubNav/SubNavAdapter';
-import HelpAdapter from '../../../adapters/GlobalNav/TopNav/HelpAdapter';
-import GroupAdapter from '../../../adapters/GlobalNav/TopNav/GroupAdapter';
-import OptionAdapter from '../../../adapters/GlobalNav/TopNav/OptionAdapter';
-import SideNav from './SideNav';
-import Tabs from './SubNav/Tabs';
-import ProjectAccountSwitcher from './TopNav/ProjectAccountSwitcher';
+import GlobalNavAdapter from "../../../adapters/GlobalNav/GlobalNavAdapter";
+import TopNavAdapter from "../../../adapters/GlobalNav/TopNav/TopNavAdapter";
+import SubNavAdapter from "../../../adapters/GlobalNav/SubNav/SubNavAdapter";
+import HelpAdapter from "../../../adapters/GlobalNav/TopNav/HelpAdapter";
+import GroupAdapter from "../../../adapters/GlobalNav/TopNav/GroupAdapter";
+import OptionAdapter from "../../../adapters/GlobalNav/TopNav/OptionAdapter";
+import SideNav from "./SideNav";
+import Tabs from "./SubNav/Tabs";
+import ProjectAccountSwitcher from "./TopNav/ProjectAccountSwitcher";
 
 class GlobalNav extends Component {
   static propTypes = {
@@ -20,14 +20,18 @@ class GlobalNav extends Component {
     showSubNav: PropTypes.bool,
     sideNavOpen: PropTypes.bool,
     sideNavOpenByDefault: PropTypes.bool,
-    modules: PropTypes.arrayOf(PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired
-    })),
-    submodules: PropTypes.arrayOf(PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired
-    })),
+    modules: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired
+      })
+    ),
+    submodules: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired
+      })
+    ),
     topNav: PropTypes.shape({
       logo: PropTypes.string,
       logoLink: PropTypes.string,
@@ -39,12 +43,14 @@ class GlobalNav extends Component {
         onProjectClick: PropTypes.func,
         onAccountClick: PropTypes.func,
         activeProjectId: PropTypes.string,
-        activeAccountId: PropTypes.string,
+        activeAccountId: PropTypes.string
       }),
       help: PropTypes.shape({
-        groups: PropTypes.arrayOf(PropTypes.shape({
-          name: PropTypes.string
-        }))
+        groups: PropTypes.arrayOf(
+          PropTypes.shape({
+            name: PropTypes.string
+          })
+        )
       })
     }),
     sideNav: PropTypes.shape({
@@ -57,7 +63,7 @@ class GlobalNav extends Component {
       superHeaderLabel: PropTypes.string,
       superHeaderLink: PropTypes.string
     })
-  }
+  };
 
   static defaultProps = {
     activeModuleId: undefined,
@@ -70,19 +76,19 @@ class GlobalNav extends Component {
     showSubNav: false,
     sideNavOpen: undefined,
     sideNavOpenByDefault: false
-  }
+  };
 
   constructor(props) {
     super(props);
     this.state = {
-      sideNavOpen: (this.props.sideNavOpenByDefault || false)
+      sideNavOpen: this.props.sideNavOpenByDefault || false
     };
   }
 
-  handleHamburgerClick = (event) => {
+  handleHamburgerClick = event => {
     this.props.onHamburgerClick(event);
     this.setState({ sideNavOpen: !this.state.sideNavOpen });
-  }
+  };
 
   showProjectAccountSwitcher() {
     const topNav = this.props.topNav || {};
@@ -93,7 +99,11 @@ class GlobalNav extends Component {
   }
 
   showHelp() {
-    return this.props.topNav.help && this.props.topNav.help.groups && this.props.topNav.help.groups.length > 0;
+    return (
+      this.props.topNav.help &&
+      this.props.topNav.help.groups &&
+      this.props.topNav.help.groups.length > 0
+    );
   }
 
   renderedSideNavOpen() {
@@ -104,40 +114,45 @@ class GlobalNav extends Component {
   }
 
   renderedActiveModule() {
-    const activeSubmodule = this.props.submodules.find(s => s.id === this.props.activeModuleId) || {};
-    const activeModule = this.props.modules.find(m => m.id === activeSubmodule.moduleId || m.id === this.props.activeModuleId);
+    const activeSubmodule =
+      this.props.submodules.find(s => s.id === this.props.activeModuleId) || {};
+    const activeModule = this.props.modules.find(
+      m =>
+        m.id === activeSubmodule.moduleId || m.id === this.props.activeModuleId
+    );
 
     if (activeModule === undefined) {
       return null;
     }
 
-    activeModule.submodules = this.props.submodules.filter(s => s.moduleId === activeModule.id);
+    activeModule.submodules = this.props.submodules.filter(
+      s => s.moduleId === activeModule.id
+    );
     return activeModule;
   }
 
   renderTab = submodule => (
-    <Tabs.Tab
-      id={submodule.id}
-      label={submodule.title}
-      key={submodule.id}
-    />
-  )
+    <Tabs.Tab id={submodule.id} label={submodule.title} key={submodule.id} />
+  );
 
+  /* eslint-disable react/no-array-index-key */
   render() {
     const activeModule = this.renderedActiveModule();
 
     return (
       <div>
-        <GlobalNavAdapter sideNavOpen={this.renderedSideNavOpen()} >
+        <GlobalNavAdapter sideNavOpen={this.renderedSideNavOpen()}>
           <TopNavAdapter
             onHamburgerClick={this.handleHamburgerClick}
             {...this.props.topNav}
           >
-            {this.showProjectAccountSwitcher()
-              ? <ProjectAccountSwitcher {...this.props.topNav.projectAccountSwitcher} />
-              : null}
-            {this.showHelp()
-              ? <HelpAdapter {...this.props.topNav.help}>
+            {this.showProjectAccountSwitcher() ? (
+              <ProjectAccountSwitcher
+                {...this.props.topNav.projectAccountSwitcher}
+              />
+            ) : null}
+            {this.showHelp() ? (
+              <HelpAdapter {...this.props.topNav.help}>
                 {(this.props.topNav.help.groups || []).map((groupProps, i) => (
                   <GroupAdapter key={i} {...groupProps}>
                     {(groupProps.options || []).map(optionProps => (
@@ -146,7 +161,7 @@ class GlobalNav extends Component {
                   </GroupAdapter>
                 ))}
               </HelpAdapter>
-              : null}
+            ) : null}
           </TopNavAdapter>
           <SideNav
             activeModuleId={this.props.activeModuleId}
@@ -155,28 +170,27 @@ class GlobalNav extends Component {
             submodules={this.props.submodules}
             {...this.props.sideNav}
           />
-          {activeModule && this.props.showSubNav
-            ? <SubNavAdapter
+          {activeModule && this.props.showSubNav ? (
+            <SubNavAdapter
               moduleIndicatorName={activeModule.title}
               moduleIndicatorIcon={activeModule.icon}
             >
-              {activeModule.submodules.length > 0
-                ? <Tabs
+              {activeModule.submodules.length > 0 ? (
+                <Tabs
                   selectedTabId={this.props.activeModuleId}
                   onChange={this.props.onModuleChange}
                 >
                   {activeModule.submodules.map(this.renderTab)}
                 </Tabs>
-                : null}
+              ) : null}
             </SubNavAdapter>
-            : null}
-          {this.props.children
-            ? this.props.children
-            : null}
+          ) : null}
+          {this.props.children ? this.props.children : null}
         </GlobalNavAdapter>
       </div>
     );
   }
+  /* eslint-enable react/no-array-index-key */
 }
 
 export default GlobalNav;

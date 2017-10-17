@@ -1,15 +1,27 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import * as HIG from 'hig-vanilla';
-import HIGAdapter, { MapsPropToMethod } from './HIGAdapter';
+import React from "react";
+import PropTypes from "prop-types";
+import * as HIG from "hig-vanilla";
+import HIGAdapter, { MapsPropToMethod } from "./HIGAdapter";
 
 function TypographyAdapter(props) {
   return (
-    <HIGAdapter {...props} displayName="Typography" HIGConstructor={HIG.Typography}>
+    <HIGAdapter
+      {...props}
+      displayName="Typography"
+      HIGConstructor={HIG.Typography}
+    >
       {adapterProps => (
         <div>
-          <MapsPropToMethod setter="setType" value={props.type} {...adapterProps} />
-          <MapsPropToMethod setter="setText" value={props.text} {...adapterProps} />
+          <MapsPropToMethod
+            setter="setType"
+            value={props.type}
+            {...adapterProps}
+          />
+          <MapsPropToMethod
+            setter="setText"
+            value={props.text}
+            {...adapterProps}
+          />
         </div>
       )}
     </HIGAdapter>
@@ -27,7 +39,8 @@ TypographyAdapter.__docgenInfo = {
       description: "{String - 'stack', 'inline'} type of the typography"
     },
     text: {
-      description: '{String - styled or unstyled text to show inside the typography '
+      description:
+        "{String - styled or unstyled text to show inside the typography "
     }
   }
 };

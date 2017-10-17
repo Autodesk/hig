@@ -14,177 +14,188 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
  */
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { select, boolean, text } from '@storybook/addon-knobs';
+import React from "react";
+/* eslint-disable import/no-extraneous-dependencies */
+import { storiesOf } from "@storybook/react";
+import { action } from "@storybook/addon-actions";
+import { select, boolean, text } from "@storybook/addon-knobs";
+/* eslint-enable import/no-extraneous-dependencies */
 
-import GlobalNav from '../adapters/GlobalNav/GlobalNavAdapter';
-import SideNav from '../elements/components/GlobalNav/SideNav';
+import GlobalNav from "../adapters/GlobalNav/GlobalNavAdapter";
+import SideNav from "../elements/components/GlobalNav/SideNav";
 
 const links = [
-  { title: 'Autodesk Main', url: 'http://www.autodesk.com' },
+  { title: "Autodesk Main", url: "http://www.autodesk.com" },
   {
-    title: 'AutoCAD',
-    url: 'https://www.autodesk.com/products/autocad/overview'
+    title: "AutoCAD",
+    url: "https://www.autodesk.com/products/autocad/overview"
   },
-  { title: 'Maya', url: 'https://www.autodesk.com/products/maya/overview' }
+  { title: "Maya", url: "https://www.autodesk.com/products/maya/overview" }
 ];
 
 const moduleFixtures = [
   {
-    id: '1-1',
-    groupId: '1',
-    icon: 'insight',
-    title: 'Insight'
+    id: "1-1",
+    groupId: "1",
+    icon: "insight",
+    title: "Insight"
   },
   {
-    id: '1-2',
-    groupId: '2',
-    icon: 'collaboration',
-    title: 'Authoring Collaboration'
+    id: "1-2",
+    groupId: "2",
+    icon: "collaboration",
+    title: "Authoring Collaboration"
   },
   {
-    id: '1-3',
-    groupId: '2',
-    icon: 'document-management',
-    title: 'Document Management'
+    id: "1-3",
+    groupId: "2",
+    icon: "document-management",
+    title: "Document Management"
   },
   {
-    id: '1-4',
-    groupId: '2',
-    icon: 'model-coordination',
-    title: 'Model Coordination'
+    id: "1-4",
+    groupId: "2",
+    icon: "model-coordination",
+    title: "Model Coordination"
   },
   {
-    id: '1-5',
-    groupId: '2',
-    icon: 'project-management',
-    title: 'Project Management'
+    id: "1-5",
+    groupId: "2",
+    icon: "project-management",
+    title: "Project Management"
   },
   {
-    id: '1-6',
-    groupId: '2',
-    icon: 'quantities',
-    title: 'Quantities'
-  },
+    id: "1-6",
+    groupId: "2",
+    icon: "quantities",
+    title: "Quantities"
+  }
 ];
 
 const submoduleFixtures = [
   {
-    id: '1-1-1',
-    moduleId: '1-1',
-    title: 'Overview',
+    id: "1-1-1",
+    moduleId: "1-1",
+    title: "Overview"
   },
   {
-    id: '1-1-2',
-    moduleId: '1-1',
-    title: 'Risk',
+    id: "1-1-2",
+    moduleId: "1-1",
+    title: "Risk"
   },
   {
-    id: '1-1-3',
-    moduleId: '1-1',
-    title: 'Quality',
+    id: "1-1-3",
+    moduleId: "1-1",
+    title: "Quality"
   },
   {
-    id: '1-1-4',
-    moduleId: '1-1',
-    title: 'Reports',
+    id: "1-1-4",
+    moduleId: "1-1",
+    title: "Reports"
   },
   {
-    id: '1-2-5',
-    moduleId: '1-2',
-    title: 'Cloud Work Sharing',
+    id: "1-2-5",
+    moduleId: "1-2",
+    title: "Cloud Work Sharing"
   },
   {
-    id: '1-2-6',
-    moduleId: '1-2',
-    title: 'Fluent',
+    id: "1-2-6",
+    moduleId: "1-2",
+    title: "Fluent"
   },
   {
-    id: '1-2-7',
-    moduleId: '1-2',
-    title: 'Approvals',
+    id: "1-2-7",
+    moduleId: "1-2",
+    title: "Approvals"
   },
   {
-    id: '1-3-8',
-    moduleId: '1-3',
-    type: 'submodule',
-    title: 'Document Workflow',
+    id: "1-3-8",
+    moduleId: "1-3",
+    type: "submodule",
+    title: "Document Workflow"
   },
   {
-    id: '1-4-9',
-    moduleId: '1-4',
-    title: 'Overview',
+    id: "1-4-9",
+    moduleId: "1-4",
+    title: "Overview"
   },
   {
-    id: '1-4-10',
-    moduleId: '1-4',
-    title: 'Models',
+    id: "1-4-10",
+    moduleId: "1-4",
+    title: "Models"
   },
   {
-    id: '1-4-11',
-    moduleId: '1-4',
-    title: 'Checklists',
+    id: "1-4-11",
+    moduleId: "1-4",
+    title: "Checklists"
   },
   {
-    id: '1-4-12',
-    moduleId: '1-4',
-    title: 'Clashes',
+    id: "1-4-12",
+    moduleId: "1-4",
+    title: "Clashes"
   },
   {
-    id: '1-4-13',
-    moduleId: '1-4',
-    title: 'Issues',
+    id: "1-4-13",
+    moduleId: "1-4",
+    title: "Issues"
   },
   {
-    id: '1-5-14',
-    moduleId: '1-5',
-    title: 'RFIs',
+    id: "1-5-14",
+    moduleId: "1-5",
+    title: "RFIs"
   },
   {
-    id: '1-5-15',
-    moduleId: '1-5',
-    title: 'Submittals',
+    id: "1-5-15",
+    moduleId: "1-5",
+    title: "Submittals"
   },
   {
-    id: '1-5-16',
-    moduleId: '1-5',
-    title: 'Daily Log',
+    id: "1-5-16",
+    moduleId: "1-5",
+    title: "Daily Log"
   },
   {
-    id: '1-6-17',
-    moduleId: '1-6',
-    title: '2D',
+    id: "1-6-17",
+    moduleId: "1-6",
+    title: "2D"
   },
   {
-    id: '1-6-18',
-    moduleId: '1-6',
-    title: '3D',
+    id: "1-6-18",
+    moduleId: "1-6",
+    title: "3D"
   }
 ];
 
-storiesOf('SideNav', module)
-  .addWithInfo('default', <div><p>Global Nav basic usage</p></div>, () => {
-    const numberOfModulesOptions = { 6: '6', 3: '3' };
-    const moduleCount = select('Number of modules', numberOfModulesOptions, '6');
-    const modules = moduleFixtures.slice(0, parseInt(moduleCount));
+storiesOf("SideNav", module).addWithInfo(
+  "default",
+  <div>
+    <p>Global Nav basic usage</p>
+  </div>,
+  () => {
+    const numberOfModulesOptions = { 6: "6", 3: "3" };
+    const moduleCount = select(
+      "Number of modules",
+      numberOfModulesOptions,
+      "6"
+    );
+    const modules = moduleFixtures.slice(0, parseInt(moduleCount, 10));
 
     return (
       <GlobalNav sideNavOpen>
         <SideNav
-          superHeaderLabel={text('Super header label', 'Global Construction')}
-          headerLabel={text('Header label', 'Oakwood Medical Center')}
-          superHeaderLink={text('Super header link', '')}
-          headerLink={text('Header link', '')}
+          superHeaderLabel={text("Super header label", "Global Construction")}
+          headerLabel={text("Header label", "Oakwood Medical Center")}
+          superHeaderLink={text("Super header link", "")}
+          headerLink={text("Header link", "")}
           links={links}
           modules={modules}
           submodules={submoduleFixtures}
-          onModuleChange={action('Module changed')}
-          copyright={text('Copyright', '© 2017 Autodesk, Inc.')}
-          searchable={boolean('Searchable', true)}
-          query={text('Query', '')}
+          onModuleChange={action("Module changed")}
+          copyright={text("Copyright", "© 2017 Autodesk, Inc.")}
+          searchable={boolean("Searchable", true)}
+          query={text("Query", "")}
         />
       </GlobalNav>
     );
-  });
+  }
+);

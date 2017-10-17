@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import * as PropTypes from 'prop-types';
+import React, { Component } from "react";
+import * as PropTypes from "prop-types";
 
-import DropdownAdapter from '../../../adapters/FormElements/DropdownAdapter.js';
-import Option from './Option';
+import DropdownAdapter from "../../../adapters/FormElements/DropdownAdapter";
+import Option from "./Option";
 
 class Dropdown extends Component {
   static defaultProps = {
     options: [],
     onChange: () => {}
-  }
+  };
 
   constructor(props) {
     super(props);
@@ -27,7 +27,7 @@ class Dropdown extends Component {
     } else if (defaultValue !== undefined) {
       return defaultValue;
     }
-    return '';
+    return "";
   }
 
   getRenderedValue() {
@@ -39,7 +39,7 @@ class Dropdown extends Component {
     return this.state.value;
   }
 
-  setSelectedValue = (selectedOptionValue) => {
+  setSelectedValue = selectedOptionValue => {
     this.props.onChange(selectedOptionValue);
 
     this.setState({
@@ -57,7 +57,8 @@ class Dropdown extends Component {
   };
 
   render() {
-    const selectedOption = this.props.options.find(o => o.value === this.getRenderedValue()) || {};
+    const selectedOption =
+      this.props.options.find(o => o.value === this.getRenderedValue()) || {};
 
     return (
       <DropdownAdapter
@@ -88,10 +89,12 @@ Dropdown.propTypes = {
   required: PropTypes.string,
   value: PropTypes.string,
   defaultValue: PropTypes.string,
-  options: PropTypes.arrayOf(PropTypes.shape({
-    label: PropTypes.string,
-    value: PropTypes.string
-  })),
+  options: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string,
+      value: PropTypes.string
+    })
+  ),
   onChange: PropTypes.func,
   onBlur: PropTypes.func,
   onFocus: PropTypes.func,
@@ -101,44 +104,44 @@ Dropdown.propTypes = {
 Dropdown.__docgenInfo = {
   props: {
     label: {
-      description: '{string} label for the the dropdown'
+      description: "{string} label for the the dropdown"
     },
     instructions: {
-      description: '{string} instructions for the dropdown'
+      description: "{string} instructions for the dropdown"
     },
     placeholder: {
-      description: '{string} placeholder for the dropdown'
+      description: "{string} placeholder for the dropdown"
     },
     disabled: {
-      description: '{bool} makes the dropdown disabled'
+      description: "{bool} makes the dropdown disabled"
     },
     required: {
-      description: '{string} makes the field required'
+      description: "{string} makes the field required"
     },
     value: {
-      description: '{string} option that is selected on construction'
+      description: "{string} option that is selected on construction"
     },
     defaultValue: {
-      description: '{string} default selected option'
+      description: "{string} default selected option"
     },
     options: {
-      description: "{Array} array with objects, objects have a 'label' and a 'value'"
+      description:
+        "{Array} array with objects, objects have a 'label' and a 'value'"
     },
     onChange: {
-      description:
-        'Calls the provided callback when option is changed'
+      description: "Calls the provided callback when option is changed"
     },
     onBlur: {
       description:
-        'Calls the provided callback when focus moves away from the dropdown'
+        "Calls the provided callback when focus moves away from the dropdown"
     },
     onFocus: {
       description:
-        'Calls the provided callback when the user focuses on the dropdown'
+        "Calls the provided callback when the user focuses on the dropdown"
     },
     onKeypress: {
       description:
-        'Calls the provided callback when the user presses a key while the dropdown has focus'
+        "Calls the provided callback when the user presses a key while the dropdown has focus"
     }
   }
 };

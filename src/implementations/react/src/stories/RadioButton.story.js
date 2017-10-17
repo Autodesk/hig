@@ -14,69 +14,63 @@
  limitations under the License.
 
  */
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { text, boolean } from '@storybook/addon-knobs';
+import React from "react";
+/* eslint-disable import/no-extraneous-dependencies */
+import { storiesOf } from "@storybook/react";
+import { action } from "@storybook/addon-actions";
+import { text, boolean } from "@storybook/addon-knobs";
+/* eslint-enable import/no-extraneous-dependencies */
 
-import RadioButton from '../adapters/FormElements/RadioButtonAdapter';
+import RadioButton from "../adapters/FormElements/RadioButtonAdapter";
 
 const containerStyle = {
-  display: 'flex'
+  display: "flex"
 };
 
-storiesOf('RadioButton', module)
-  .addWithInfo('Basic radioButton group', '', () => (
+storiesOf("RadioButton", module)
+  .addWithInfo("Basic radioButton group", "", () => (
     <div style={containerStyle}>
       <RadioButton
-        name={text('radioButtonName1', 'basic')}
-        value={text('radioButtonValue1', 'yes')}
-        label={text('radioButtonLabel1', 'yes')}
+        name={text("radioButtonName1", "basic")}
+        value={text("radioButtonValue1", "yes")}
+        label={text("radioButtonLabel1", "yes")}
       />
       <RadioButton
-        name={text('radioButtonName2', 'basic')}
-        value={text('radioButtonValue2', 'no')}
-        label={text('radioButtonLabel2', 'no')}
+        name={text("radioButtonName2", "basic")}
+        value={text("radioButtonValue2", "no")}
+        label={text("radioButtonLabel2", "no")}
       />
       <RadioButton
-        name={text('radioButtonName3', 'basic')}
-        value={text('radioButtonValue3', 'maybe')}
-        label={text('radioButtonLabel3', 'maybe')}
+        name={text("radioButtonName3", "basic")}
+        value={text("radioButtonValue3", "maybe")}
+        label={text("radioButtonLabel3", "maybe")}
       />
     </div>
   ))
-  .addWithInfo('with other options', '', () => {
-    const valueOptions = {
-      extra: '2',
-      really: '1',
-      basic: '0'
-    };
-
-    return (
-      <div style={containerStyle}>
-        <RadioButton
-          name="is_it_fancy"
-          value="fanciness"
-          label="Fancy!"
-          checked={false}
-          required={boolean('Required', true)}
-        />
-        <RadioButton
-          name="checked"
-          value="hello"
-          label="checked"
-          checked={boolean('Checked', true)}
-        />
-        <RadioButton
-          name="disabled"
-          value="hello"
-          label="disabled"
-          disabled={boolean('Disabled', true)}
-        />
-      </div>
-    );
-  })
-  .addWithInfo('with Events defined', '', () => (
+  .addWithInfo("with other options", "", () => (
+    <div style={containerStyle}>
+      <RadioButton
+        name="is_it_fancy"
+        value="fanciness"
+        label="Fancy!"
+        checked={false}
+        required={boolean("Required", true)}
+      />
+      <RadioButton
+        name="checked"
+        value="hello"
+        label="checked"
+        checked={boolean("Checked", true)}
+      />
+      <RadioButton
+        name="disabled"
+        value="hello"
+        label="disabled"
+        disabled={boolean("Disabled", true)}
+      />
+    </div>
+  ))
+  .addWithInfo("with Events defined", "", () => (
     <div style={containerStyle}>
       <RadioButton
         name="choisessez"

@@ -1,29 +1,39 @@
-import React from 'react';
-import * as HIG from 'hig-vanilla';
+import React from "react";
+import * as HIG from "hig-vanilla";
 
 import HIGAdapter, {
   MapsPropToMethod,
   MountsHIGChildList,
   MountsHIGChild
-} from '../HIGAdapter';
+} from "../HIGAdapter";
 
-import TableHeadAdapter from './TableHeadAdapter';
+import TableHeadAdapter from "./TableHeadAdapter";
 
 function sortChildren(children) {
   return {
     tableHead: children.find(child => child.type === TableHeadAdapter),
-    otherChildren: children.filter(child => ![TableHeadAdapter].includes(child.type))
+    otherChildren: children.filter(
+      child => ![TableHeadAdapter].includes(child.type)
+    )
   };
 }
 function TableAdapter(props) {
-  const { tableHead, otherChildren } = sortChildren(React.Children.toArray(props.children));
+  const { tableHead, otherChildren } = sortChildren(
+    React.Children.toArray(props.children)
+  );
   return (
     <HIGAdapter displayName="Table" HIGConstructor={HIG.Table} {...props}>
       {adapterProps => (
         <div>
-          <MapsPropToMethod value={props.density} setter="setDensity" {...adapterProps} />
+          <MapsPropToMethod
+            value={props.density}
+            setter="setDensity"
+            {...adapterProps}
+          />
           <MountsHIGChild {...adapterProps}>{tableHead}</MountsHIGChild>
-          <MountsHIGChildList {...adapterProps}>{otherChildren}</MountsHIGChildList>
+          <MountsHIGChildList {...adapterProps}>
+            {otherChildren}
+          </MountsHIGChildList>
         </div>
       )}
     </HIGAdapter>

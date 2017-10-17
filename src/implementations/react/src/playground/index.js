@@ -14,83 +14,83 @@
  limitations under the License.
 
  */
-import React from 'react';
-import { Button, GlobalNav, breakpoints } from '../hig-react';
+import React from "react";
+import { Button, GlobalNav, breakpoints } from "../hig-react";
 
-import 'hig-vanilla/lib/hig.css';
-import './index.css';
+import "hig-vanilla/lib/hig.css";
+import "./index.css";
 
-import logo from './images/bim-logo.png';
+import logo from "./images/bim-logo.png";
 // import profileImage from './images/profileImage.png';
-import { projects, accounts } from './fixtures/topNavFixtures';
-import { modules, submodules, links } from './fixtures/sideNavFixtures';
+import { projects, accounts } from "./fixtures/topNavFixtures";
+import { modules, submodules, links } from "./fixtures/sideNavFixtures";
 
-import AvatarSection from './sections/AvatarSection';
-import ButtonSection from './sections/ButtonSection';
-import CheckboxSection from './sections/CheckboxSection';
-import DropdownSection from './sections/DropdownSection';
-import FlyoutSection from './sections/FlyoutSection';
-import GridSection from './sections/GridSection';
-import IconSection from './sections/IconSection';
-import IconButtonSection from './sections/IconButtonSection';
-import ModalSection from './sections/ModalSection';
-import PasswordFieldSection from './sections/PasswordFieldSection';
-import SpacerSection from './sections/SpacerSection';
-import RadioButtonSection from './sections/RadioButtonSection';
-import RangeSection from './sections/RangeSection';
-import RichTextSection from './sections/RichTextSection';
-import SelectableTableSection from './sections/SelectableTableSection';
-import TableSection from './sections/TableSection';
-import TextAreaSection from './sections/TextAreaSection';
-import TextFieldSection from './sections/TextFieldSection';
-import TextLinkSection from './sections/TextLinkSection';
-import TypographySection from './sections/TypographySection';
+import AvatarSection from "./sections/AvatarSection";
+import ButtonSection from "./sections/ButtonSection";
+import CheckboxSection from "./sections/CheckboxSection";
+import DropdownSection from "./sections/DropdownSection";
+import FlyoutSection from "./sections/FlyoutSection";
+import GridSection from "./sections/GridSection";
+import IconSection from "./sections/IconSection";
+import IconButtonSection from "./sections/IconButtonSection";
+import ModalSection from "./sections/ModalSection";
+import PasswordFieldSection from "./sections/PasswordFieldSection";
+import SpacerSection from "./sections/SpacerSection";
+import RadioButtonSection from "./sections/RadioButtonSection";
+import RangeSection from "./sections/RangeSection";
+import RichTextSection from "./sections/RichTextSection";
+import SelectableTableSection from "./sections/SelectableTableSection";
+import TableSection from "./sections/TableSection";
+import TextAreaSection from "./sections/TextAreaSection";
+import TextFieldSection from "./sections/TextFieldSection";
+import TextLinkSection from "./sections/TextLinkSection";
+import TypographySection from "./sections/TypographySection";
 
 class Playground extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeModuleId: '1-2-5',
+      activeModuleId: "1-2-5",
       isHelpOpen: false,
       isSideNavOpen: true
     };
   }
 
-  navigate = (id) => {
-    console.log('Go to', id);
+  navigate = id => {
+    console.log("Go to", id);
     this.setState({ activeModuleId: id });
     if (window.innerWidth <= breakpoints.tablet) {
       this.setState({ isSideNavOpen: false });
     }
-  }
+  };
 
-  projectClicked = (id) => {
-    console.log('project clicked', id);
-  }
+  projectClicked = id => {
+    console.log("project clicked", id);
+  };
 
-  accountClicked = (id) => {
-    console.log('account clicked', id);
-  }
+  accountClicked = id => {
+    console.log("account clicked", id);
+  };
 
   toggleSideNav = () => {
     this.setState({ isSideNavOpen: !this.state.isSideNavOpen });
-  }
+  };
 
-  handleModuleClick = (id) => {
+  handleModuleClick = id => {
     console.log(`module click ${id}`);
-  }
+  };
 
-  handleSubmoduleClick = (id) => {
+  handleSubmoduleClick = id => {
     console.log(`submodule click ${id}`);
-  }
+  };
 
   openHelp = () => {
     this.setState({ isHelpOpen: true });
-  }
+  };
 
   closeHelp = () => {
     this.setState({ isHelpOpen: false });
-  }
+  };
 
   render() {
     const helpProps = {
@@ -100,58 +100,76 @@ class Playground extends React.Component {
         {
           options: [
             {
-              name: 'group 1, option 1',
-              onClick() { console.log('g1 o1 clicked'); }
+              name: "group 1, option 1",
+              onClick() {
+                console.log("g1 o1 clicked");
+              }
             },
             {
-              name: 'group 1, option 2',
-              onClick() { console.log('g1 o2 clicked'); }
+              name: "group 1, option 2",
+              onClick() {
+                console.log("g1 o2 clicked");
+              }
             }
           ]
         },
         {
           options: [
             {
-              name: 'group 2, option 1',
-              onClick() { console.log('g2 o1 clicked'); }
+              name: "group 2, option 1",
+              onClick() {
+                console.log("g2 o1 clicked");
+              }
             },
             {
-              name: 'group 2, option 2',
-              onClick() { console.log('g2 o2 clicked'); }
+              name: "group 2, option 2",
+              onClick() {
+                console.log("g2 o2 clicked");
+              }
             }
           ]
         }
       ],
       open: this.state.isHelpOpen,
-      title: 'Help!',
+      title: "Help!"
     };
 
     const topNavProps = {
       accounts,
       projects,
-      accountTitle: 'Accounts',
-      projectTitle: 'Projects',
+      accountTitle: "Accounts",
+      projectTitle: "Projects",
       onAccountClick: this.accountClicked,
       onProjectClick: this.projectClicked,
       help: helpProps,
       logo,
-      onLogoClick() { console.log('Logo clicked'); }
+      onLogoClick() {
+        console.log("Logo clicked");
+      }
     };
 
     const sideNavProps = {
-      superHeaderLabel: 'HIG',
-      headerLabel: 'Playground',
+      superHeaderLabel: "HIG",
+      headerLabel: "Playground",
       links,
-      onLogoClick: (event) => {
+      onLogoClick: event => {
         event.preventDefault();
-        console.log('Logo clicked');
+        console.log("Logo clicked");
       },
       searchable: true,
       slot: (
         <div>
-          <Button title="Designer Toolkit" link="https://github.com/Autodesk/hig" />
+          <Button
+            title="Designer Toolkit"
+            link="https://github.com/Autodesk/hig"
+          />
           <p />
-          <Button title="Git Repository" type="secondary" link="https://github.com/Autodesk/hig" target="_blank" />
+          <Button
+            title="Git Repository"
+            type="secondary"
+            link="https://github.com/Autodesk/hig"
+            target="_blank"
+          />
         </div>
       ),
       onModuleClick: this.handleModuleClick,
@@ -190,7 +208,6 @@ class Playground extends React.Component {
         <GridSection />
         <IconSection />
         <SelectableTableSection />
-
       </GlobalNav>
     );
   }

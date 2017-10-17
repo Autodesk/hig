@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import * as HIG from 'hig-vanilla';
+import React from "react";
+import PropTypes from "prop-types";
+import * as HIG from "hig-vanilla";
 import HIGAdapter, {
   MountedByHIGParent,
   MapsPropToMethod,
   MapsEventListener
-} from '../../HIGAdapter';
+} from "../../HIGAdapter";
 
 function ProfileAdapter(props) {
   return (
@@ -37,8 +37,16 @@ function ProfileAdapter(props) {
             handler={props.onProfileClickOutside}
             {...adapterProps}
           />
-          <MapsPropToMethod setter="setImage" value={props.image} {...adapterProps} />
-          <MapsPropToMethod setter="setName" value={props.name} {...adapterProps} />
+          <MapsPropToMethod
+            setter="setImage"
+            value={props.image}
+            {...adapterProps}
+          />
+          <MapsPropToMethod
+            setter="setName"
+            value={props.name}
+            {...adapterProps}
+          />
           <MapsPropToMethod
             setter="setProfileSettingsLabel"
             value={props.profileSettingsLabel}
@@ -49,9 +57,21 @@ function ProfileAdapter(props) {
             value={props.profileSettingsLink}
             {...adapterProps}
           />
-          <MapsPropToMethod setter="setSignOutLabel" value={props.signOutLabel} {...adapterProps} />
-          <MapsPropToMethod setter="setSignOutLink" value={props.signOutLink} {...adapterProps} />
-          <MapsPropToMethod setter="setEmail" value={props.email} {...adapterProps} />
+          <MapsPropToMethod
+            setter="setSignOutLabel"
+            value={props.signOutLabel}
+            {...adapterProps}
+          />
+          <MapsPropToMethod
+            setter="setSignOutLink"
+            value={props.signOutLink}
+            {...adapterProps}
+          />
+          <MapsPropToMethod
+            setter="setEmail"
+            value={props.email}
+            {...adapterProps}
+          />
           <MapsPropToMethod value={props.open} {...adapterProps}>
             {(instance, value) => (value ? instance.open() : instance.close())}
           </MapsPropToMethod>

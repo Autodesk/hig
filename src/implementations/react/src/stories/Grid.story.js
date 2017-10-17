@@ -1,19 +1,19 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { text, select, boolean } from '@storybook/addon-knobs';
+import React from "react";
+/* eslint-disable import/no-extraneous-dependencies */
+import { storiesOf } from "@storybook/react";
+/* eslint-enable import/no-extraneous-dependencies */
 
-import Grid from '../adapters/GridAdapter';
-import GridItem from '../adapters/GridItemAdapter';
+import Grid from "../adapters/GridAdapter";
+import GridItem from "../adapters/GridItemAdapter";
 
 const style = {
-  backgroundColor: '#FF5500',
+  backgroundColor: "#FF5500",
   minHeight: 50,
   marginBottom: 10,
-  color: '#fff'
+  color: "#fff"
 };
 
-storiesOf('Grid', module).addWithInfo('Grid', '', () => (
+storiesOf("Grid", module).addWithInfo("Grid", "", () => (
   <div>
     <Grid>
       <GridItem fraction="one-whole">

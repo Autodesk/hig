@@ -14,24 +14,25 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
  */
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { text } from '@storybook/addon-knobs';
-import GlobalNav from '../adapters/GlobalNav/GlobalNavAdapter';
-import logo from '../playground/images/bim-logo.png';
+import React from "react";
+/* eslint-disable import/no-extraneous-dependencies */
+import { storiesOf } from "@storybook/react";
+import { action } from "@storybook/addon-actions";
+import { text } from "@storybook/addon-knobs";
+/* eslint-enable import/no-extraneous-dependencies */
+import GlobalNav from "../adapters/GlobalNav/GlobalNavAdapter";
+import logo from "../playground/images/bim-logo.png";
 
 const TopNav = GlobalNav.TopNav;
 const TopNavSearch = TopNav.Search;
 const Slot = GlobalNav.Slot;
 
-storiesOf('TopNav Search', module)
+storiesOf("TopNav Search", module)
   .addWithInfo(
-    'default',
+    "default",
     <div>
       Basic usage of <pre>GlobalNav.TopNav.Search</pre>
-
-  </div>,
+    </div>,
     () => (
       <GlobalNav>
         <TopNav logo={logo}>
@@ -41,28 +42,32 @@ storiesOf('TopNav Search', module)
     )
   )
   .addWithInfo(
-    'with placeholder and events configured',
-    'Set your own placeholder text, and add additional listeners/event handlers',
+    "with placeholder and events configured",
+    "Set your own placeholder text, and add additional listeners/event handlers",
     () => (
       <GlobalNav>
         <TopNav logo={logo}>
           <TopNavSearch
-            placeholder={text('Placeholder', 'in search of...')}
-            query={text('Query', '')}
-            onInput={action('Typing detected')}
-            onFocusIn={action('Focus in')}
-            onFocusOut={action('Focus out')}
-            onClearIconClick={action('Clicked Clear Icon')}
+            placeholder={text("Placeholder", "in search of...")}
+            query={text("Query", "")}
+            onInput={action("Typing detected")}
+            onFocusIn={action("Focus in")}
+            onFocusOut={action("Focus out")}
+            onClearIconClick={action("Clicked Clear Icon")}
           />
         </TopNav>
         <Slot>
           <p>
-              Next level deep v roof party, jianbing pok pok pug butcher vape farm-to-table kombucha. Yr snackwave VHS, wolf
-              poutine actually woke poke flexitarian paleo food truck DIY kale chips viral yuccie. Cornhole tattooed vaporware
-              affogato, gentrify mlkshk portland organic. Swag try-hard cronut hashtag, etsy bespoke chia banjo messenger bag.
-              Mustache umami godard man braid cronut yuccie. YOLO vaporware franzen, gochujang typewriter mixtape brunch salvia
-              paleo lyft. Four dollar toast tumblr mustache thundercats single-origin coffee, freegan flexitarian cold-pressed
-              beard roof party VHS venmo af ugh bushwick.
+            Next level deep v roof party, jianbing pok pok pug butcher vape
+            farm-to-table kombucha. Yr snackwave VHS, wolf poutine actually woke
+            poke flexitarian paleo food truck DIY kale chips viral yuccie.
+            Cornhole tattooed vaporware affogato, gentrify mlkshk portland
+            organic. Swag try-hard cronut hashtag, etsy bespoke chia banjo
+            messenger bag. Mustache umami godard man braid cronut yuccie. YOLO
+            vaporware franzen, gochujang typewriter mixtape brunch salvia paleo
+            lyft. Four dollar toast tumblr mustache thundercats single-origin
+            coffee, freegan flexitarian cold-pressed beard roof party VHS venmo
+            af ugh bushwick.
           </p>
         </Slot>
       </GlobalNav>

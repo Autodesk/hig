@@ -1,34 +1,35 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { text, select, boolean } from '@storybook/addon-knobs';
+import React from "react";
+/* eslint-disable import/no-extraneous-dependencies */
+import { storiesOf } from "@storybook/react";
+import { action } from "@storybook/addon-actions";
+/* eslint-enable import/no-extraneous-dependencies */
 
-import Dropdown from '../adapters/FormElements/DropdownAdapter';
+import Dropdown from "../adapters/FormElements/DropdownAdapter";
 
 const Option = Dropdown.Option;
 
 const OptionData = [
-  { label: 'text option label', value: 'test option value', selected: true },
+  { label: "text option label", value: "test option value", selected: true },
   {
-    label: 'text option label 1',
-    value: 'test option value 1',
+    label: "text option label 1",
+    value: "test option value 1",
     selected: false
   }
 ];
 
-storiesOf('Dropdown', module)
-  .addWithInfo('default dropdown open with options', '', () => (
+storiesOf("Dropdown", module)
+  .addWithInfo("default dropdown open with options", "", () => (
     <Dropdown
       instructions="test instructions"
       label="Dropdown Label"
       selectedOptionLabel={OptionData[0].label}
       open
-      onTargetClick={action('Target clicked')}
-      onClickOutside={action('onClick outside')}
-      onBlur={action('on Blur')}
-      onFocus={action('on Focus')}
-      onKeyPress={action('onKeypress')}
-      required={'This field is required'}
+      onTargetClick={action("Target clicked")}
+      onClickOutside={action("onClick outside")}
+      onBlur={action("on Blur")}
+      onFocus={action("on Focus")}
+      onKeyPress={action("onKeypress")}
+      required={"This field is required"}
     >
       <Option
         label={OptionData[0].label}
@@ -42,18 +43,18 @@ storiesOf('Dropdown', module)
       />
     </Dropdown>
   ))
-  .addWithInfo('default dropdown closed with options', '', () => (
+  .addWithInfo("default dropdown closed with options", "", () => (
     <Dropdown
       instructions="test instructions"
       label="Dropdown Label"
       selectedOptionLabel={OptionData[0].label}
       open={false}
-      onTargetClick={action('Target clicked')}
-      onClickOutside={action('onClick outside')}
-      onBlur={action('on Blur')}
-      onFocus={action('on Focus')}
-      onKeyPress={action('onKeypress')}
-      required={'This field is required'}
+      onTargetClick={action("Target clicked")}
+      onClickOutside={action("onClick outside")}
+      onBlur={action("on Blur")}
+      onFocus={action("on Focus")}
+      onKeyPress={action("onKeypress")}
+      required={"This field is required"}
     >
       <Option
         label={OptionData[0].label}
@@ -67,18 +68,18 @@ storiesOf('Dropdown', module)
       />
     </Dropdown>
   ))
-  .addWithInfo('disabled dropdown', '', () => (
+  .addWithInfo("disabled dropdown", "", () => (
     <Dropdown
       instructions="test instructions"
       label="Dropdown Label"
       selectedOptionLabel={OptionData[0].label}
       disabled
       open={false}
-      onTargetClick={action('Target clicked')}
-      onClickOutside={action('onClick outside')}
-      onBlur={action('on Blur')}
-      onFocus={action('on Focus')}
-      onKeyPress={action('onKeypress')}
+      onTargetClick={action("Target clicked")}
+      onClickOutside={action("onClick outside")}
+      onBlur={action("on Blur")}
+      onFocus={action("on Focus")}
+      onKeyPress={action("onKeypress")}
     >
       <Option
         label={OptionData[0].label}
@@ -92,4 +93,3 @@ storiesOf('Dropdown', module)
       />
     </Dropdown>
   ));
-

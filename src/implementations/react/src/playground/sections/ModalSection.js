@@ -1,6 +1,6 @@
-import React, { PureComponent } from 'react';
-import PlaygroundSection from '../PlaygroundSection';
-import { Button, Modal } from '../../hig-react';
+import React, { PureComponent } from "react";
+import PlaygroundSection from "../PlaygroundSection";
+import { Button, Modal } from "../../hig-react";
 
 class ModalSection extends PureComponent {
   constructor() {
@@ -10,22 +10,22 @@ class ModalSection extends PureComponent {
     };
   }
 
-  logCloseModal = (event) => {
-    console.log('Close modal triggered');
+  logCloseModal = event => {
+    console.log("Close modal triggered");
   };
 
-  closeModal = (event) => {
+  closeModal = event => {
     this.setState({ isOpen: false });
   };
 
-  openModal = (event) => {
+  openModal = event => {
     this.setState({ isOpen: true });
   };
 
   render() {
     const buttonProps = [
-      { title: 'Cancel', type: 'secondary', onClick: this.closeModal },
-      { title: 'Ok', onClick: this.closeModal }
+      { title: "Cancel", type: "secondary", onClick: this.closeModal },
+      { title: "Ok", onClick: this.closeModal }
     ];
 
     return (
@@ -39,8 +39,12 @@ class ModalSection extends PureComponent {
           style="alternate"
           onClose={this.closeModal}
         >
-          <h1><u>This is my HTML title</u></h1>
-          <p><i>This is my HTML content.</i></p>
+          <h1>
+            <u>This is my HTML title</u>
+          </h1>
+          <p>
+            <i>This is my HTML content.</i>
+          </p>
         </Modal>
       </PlaygroundSection>
     );

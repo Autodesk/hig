@@ -1,10 +1,10 @@
-import React from 'react';
-import * as HIG from 'hig-vanilla';
-import * as PropTypes from 'prop-types';
+import React from "react";
+import * as HIG from "hig-vanilla";
+import * as PropTypes from "prop-types";
 import HIGAdapter, {
   MountsAnyChild,
   MountedByHIGParentList
-} from '../HIGAdapter';
+} from "../HIGAdapter";
 
 function SlotCellAdapter(props) {
   return (
@@ -36,7 +36,7 @@ SlotCellAdapter.defaultProps = {
 SlotCellAdapter.__docgenInfo = {
   props: {
     children: {
-      description: 'content for slot cell'
+      description: "content for slot cell"
     }
   }
 };

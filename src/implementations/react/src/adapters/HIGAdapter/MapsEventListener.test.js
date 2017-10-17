@@ -1,23 +1,30 @@
-import React from 'react';
-import { mount } from 'enzyme';
-import MapsEventListener from './MapsEventListener';
+import React from "react";
+import { mount } from "enzyme";
+import MapsEventListener from "./MapsEventListener";
 
-describe('MapsEventListener', () => {
+describe("MapsEventListener", () => {
   class VanillaComponent {
-    mount = jest.fn()
-    onBoop = jest.fn()
+    mount = jest.fn();
+    onBoop = jest.fn();
   }
 
-  describe('when handler is initially defined', () => {
+  describe("when handler is initially defined", () => {
     const vanilla = new VanillaComponent({});
     const handleBoop = jest.fn();
-    const wrapper = mount(<MapsEventListener higInstance={vanilla} listener="onBoop" handler={handleBoop} mounted />);
+    const wrapper = mount(
+      <MapsEventListener
+        higInstance={vanilla}
+        listener="onBoop"
+        handler={handleBoop}
+        mounted
+      />
+    );
 
-    it('calls the listener method with the handler', () => {
+    it("calls the listener method with the handler", () => {
       expect(vanilla.onBoop).toHaveBeenCalledWith(handleBoop);
     });
 
-    describe('then becomes undefined', () => {
+    describe("then becomes undefined", () => {
       const dispose = jest.fn();
 
       beforeEach(() => {
@@ -25,12 +32,12 @@ describe('MapsEventListener', () => {
         wrapper.setProps({ handler: undefined });
       });
 
-      it('disposes of the handler', () => {
+      it("disposes of the handler", () => {
         expect(dispose).toHaveBeenCalled();
       });
     });
 
-    describe('then it changes', () => {
+    describe("then it changes", () => {
       const dispose = jest.fn();
       const newHandler = jest.fn();
 
@@ -39,39 +46,39 @@ describe('MapsEventListener', () => {
         wrapper.setProps({ handler: newHandler });
       });
 
-      it('disposes of the handler previous', () => {
+      it("disposes of the handler previous", () => {
         expect(dispose).toHaveBeenCalled();
       });
 
-      it('sets the new handler', () => {
+      it("sets the new handler", () => {
         expect(vanilla.onBoop).toHaveBeenLastCalledWith(newHandler);
       });
     });
   });
 
-  describe('when initially undefined', () => {
+  describe("when initially undefined", () => {
     const vanilla = new VanillaComponent({});
-    mount(<MapsEventListener
-      higInstance={vanilla}
-      listener="onBoop"
-      handler={undefined}
-      mounted
-    />);
+    mount(
+      <MapsEventListener
+        higInstance={vanilla}
+        listener="onBoop"
+        handler={undefined}
+        mounted
+      />
+    );
 
-    it('does not call the listener', () => {
+    it("does not call the listener", () => {
       expect(vanilla.onBoop).not.toHaveBeenCalled();
     });
   });
 
-  describe('when unmounted', () => {
-    it('disposes of the event listener', () => {
+  describe("when unmounted", () => {
+    it("disposes of the event listener", () => {
       const vanilla = new VanillaComponent({});
       const dispose = jest.fn();
-      const wrapper = mount(<MapsEventListener
-        higInstance={vanilla}
-        listener="onBoop"
-        mounted
-      />);
+      const wrapper = mount(
+        <MapsEventListener higInstance={vanilla} listener="onBoop" mounted />
+      );
       wrapper.setState({ dispose });
       wrapper.unmount();
 

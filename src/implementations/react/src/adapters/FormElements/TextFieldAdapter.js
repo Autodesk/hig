@@ -1,15 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
+import * as HIG from "hig-vanilla";
 import HIGAdapter, {
   MapsEventListener,
   MapsPropToMethod,
   ControlsProp
-} from '../HIGAdapter';
-import * as HIG from 'hig-vanilla';
+} from "../HIGAdapter";
 
 function TextFieldAdapter(props) {
   return (
-    <HIGAdapter {...props} displayName="TextField" HIGConstructor={HIG.TextField}>
+    <HIGAdapter
+      {...props}
+      displayName="TextField"
+      HIGConstructor={HIG.TextField}
+    >
       {adapterProps => (
         <div>
           <ControlsProp
@@ -20,23 +24,62 @@ function TextFieldAdapter(props) {
             defaultValue={props.defaultValue}
             {...adapterProps}
           />
-          <MapsEventListener listener="onBlur" handler={props.onBlur} {...adapterProps} />
-          <MapsEventListener listener="onChange" handler={props.onChange} {...adapterProps} />
-          <MapsEventListener listener="onClearButtonClick" handler={props.onClearButtonClick} {...adapterProps} />
-          <MapsEventListener listener="onFocus" handler={props.onFocus} {...adapterProps} />
-          <MapsPropToMethod setter="setInstructions" value={props.instructions} {...adapterProps} />
-          <MapsPropToMethod setter="setPlaceholder" value={props.placeholder} {...adapterProps} />
-          <MapsPropToMethod setter="setLabel" value={props.label} {...adapterProps} />
-          <MapsPropToMethod setter="setName" value={props.name} {...adapterProps} />
-          <MapsPropToMethod setter="setIcon" value={props.icon} {...adapterProps} />
+          <MapsEventListener
+            listener="onBlur"
+            handler={props.onBlur}
+            {...adapterProps}
+          />
+          <MapsEventListener
+            listener="onChange"
+            handler={props.onChange}
+            {...adapterProps}
+          />
+          <MapsEventListener
+            listener="onClearButtonClick"
+            handler={props.onClearButtonClick}
+            {...adapterProps}
+          />
+          <MapsEventListener
+            listener="onFocus"
+            handler={props.onFocus}
+            {...adapterProps}
+          />
+          <MapsPropToMethod
+            setter="setInstructions"
+            value={props.instructions}
+            {...adapterProps}
+          />
+          <MapsPropToMethod
+            setter="setPlaceholder"
+            value={props.placeholder}
+            {...adapterProps}
+          />
+          <MapsPropToMethod
+            setter="setLabel"
+            value={props.label}
+            {...adapterProps}
+          />
+          <MapsPropToMethod
+            setter="setName"
+            value={props.name}
+            {...adapterProps}
+          />
+          <MapsPropToMethod
+            setter="setIcon"
+            value={props.icon}
+            {...adapterProps}
+          />
           <MapsPropToMethod value={props.disabled} {...adapterProps}>
-            {(instance, value) => (value ? instance.disable() : instance.enable())}
+            {(instance, value) =>
+              value ? instance.disable() : instance.enable()}
           </MapsPropToMethod>
           <MapsPropToMethod value={props.required} {...adapterProps}>
-            {(instance, value) => (value ? instance.required(value) : instance.noLongerRequired())}
+            {(instance, value) =>
+              value ? instance.required(value) : instance.noLongerRequired()}
           </MapsPropToMethod>
           <MapsPropToMethod value={props.showClearButton} {...adapterProps}>
-            {(instance, value) => (value ? instance.showClearButton() : instance.hideClearButton())}
+            {(instance, value) =>
+              value ? instance.showClearButton() : instance.hideClearButton()}
           </MapsPropToMethod>
         </div>
       )}
@@ -59,7 +102,7 @@ TextFieldAdapter.propTypes = {
   placeholder: PropTypes.string,
   required: PropTypes.string,
   showClearButton: PropTypes.bool,
-  value: PropTypes.string,
+  value: PropTypes.string
 };
 
 TextFieldAdapter.defaultProps = {

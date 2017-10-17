@@ -1,14 +1,26 @@
-import React from 'react';
-import * as HIG from 'hig-vanilla';
-import * as PropTypes from 'prop-types';
-import HIGAdapter, { MapsPropToMethod, MountsAnyChild, MountedByHIGParentList } from '../HIGAdapter';
+import React from "react";
+import * as HIG from "hig-vanilla";
+import * as PropTypes from "prop-types";
+import HIGAdapter, {
+  MapsPropToMethod,
+  MountsAnyChild,
+  MountedByHIGParentList
+} from "../HIGAdapter";
 
 function SlotHeadCellAdapter(props) {
   return (
-    <HIGAdapter {...props} displayName="Slot" HIGConstructor={HIG.Table._partials.TableHead._partials.SlotHeadCell}>
+    <HIGAdapter
+      {...props}
+      displayName="Slot"
+      HIGConstructor={HIG.Table._partials.TableHead._partials.SlotHeadCell}
+    >
       {adapterProps => (
         <div>
-          <MapsPropToMethod value={props.width} setter="setWidth" {...adapterProps} />
+          <MapsPropToMethod
+            value={props.width}
+            setter="setWidth"
+            {...adapterProps}
+          />
           <MountedByHIGParentList mounter="addCell" {...adapterProps} />
           <MountsAnyChild mounter="addSlot" {...adapterProps}>
             {props.children}
@@ -32,10 +44,10 @@ SlotHeadCellAdapter.defaultProps = {
 SlotHeadCellAdapter.__docgenInfo = {
   props: {
     children: {
-      description: 'content for slot cell'
+      description: "content for slot cell"
     },
     width: {
-      description: 'sets {String} width of the cell'
+      description: "sets {String} width of the cell"
     }
   }
 };

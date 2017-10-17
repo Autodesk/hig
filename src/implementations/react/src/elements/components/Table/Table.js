@@ -1,20 +1,20 @@
-import * as HIG from 'hig-vanilla';
-import * as PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import TableAdapter from '../../../adapters/Table/TableAdapter';
-import TableHeadAdapter from '../../../adapters/Table/TableHeadAdapter';
-import TableRowAdapter from '../../../adapters/Table/TableRowAdapter';
-import TextHeadCellAdapter from '../../../adapters/Table/TextHeadCellAdapter';
-import TextCell from '../../../adapters/Table/TextCellAdapter';
-import SlotCell from '../../../adapters/Table/SlotCellAdapter';
+import * as HIG from "hig-vanilla";
+import * as PropTypes from "prop-types";
+import React, { Component } from "react";
+import TableAdapter from "../../../adapters/Table/TableAdapter";
+import TableHeadAdapter from "../../../adapters/Table/TableHeadAdapter";
+import TableRowAdapter from "../../../adapters/Table/TableRowAdapter";
+import TextHeadCellAdapter from "../../../adapters/Table/TextHeadCellAdapter";
+import TextCell from "../../../adapters/Table/TextCellAdapter";
+import SlotCell from "../../../adapters/Table/SlotCellAdapter";
 
-import SlotHeadCell from '../../../adapters/Table/SlotHeadCellAdapter';
-import SelectableTable from './SelectableTable';
+import SlotHeadCell from "../../../adapters/Table/SlotHeadCellAdapter";
+import SelectableTable from "./SelectableTable";
 
 function getCell(props) {
   let content;
   switch (typeof props.column.accessor) {
-    case 'function': {
+    case "function": {
       content = props.column.accessor(props.data);
       break;
     }
@@ -34,7 +34,7 @@ function getCell(props) {
 }
 
 function getHeadCell(props) {
-  if (typeof props.column.HeaderCell === 'string') {
+  if (typeof props.column.HeaderCell === "string") {
     return (
       <TextHeadCellAdapter
         key={props.column.id}
@@ -45,7 +45,7 @@ function getHeadCell(props) {
     );
   }
   return (
-    <SlotHeadCell key={props.column.id} width={props.column.width} >
+    <SlotHeadCell key={props.column.id} width={props.column.width}>
       <props.column.HeaderCell {...props} />
     </SlotHeadCell>
   );
@@ -73,7 +73,8 @@ class Table extends Component {
         {data.map(row => (
           <TableRowAdapter key={row.id} selected={row.selected}>
             {columns.map((column, index) =>
-              getCell({ column, data: row, index }))}
+              getCell({ column, data: row, index })
+            )}
           </TableRowAdapter>
         ))}
       </TableAdapter>
@@ -84,15 +85,21 @@ class Table extends Component {
     const isSelectable = this.props.selectable;
     return (
       <div>
-        {isSelectable
-          ? <SelectableTable
+        {isSelectable ? (
+          <SelectableTable
             columns={this.props.columns}
             data={this.props.data}
             {...this.props}
           >
             {this.renderTable}
           </SelectableTable>
-          : this.renderTable(this.props.columns, this.props.data, this.props.density)}
+        ) : (
+          this.renderTable(
+            this.props.columns,
+            this.props.data,
+            this.props.density
+          )
+        )}
       </div>
     );
   }
@@ -101,15 +108,15 @@ class Table extends Component {
 Table.__docgenInfo = {
   props: {
     density: {
-      description: 'sets the size of the table'
+      description: "sets the size of the table"
     },
 
     columns: {
-      description: 'provides content for header cells'
+      description: "provides content for header cells"
     },
 
     data: {
-      description: 'provides content table cells'
+      description: "provides content table cells"
     }
   }
 };
@@ -117,13 +124,15 @@ Table.__docgenInfo = {
 Table.propTypes = {
   density: PropTypes.oneOf(HIG.Table.AvailableDensities),
   data: PropTypes.arrayOf(PropTypes.object),
-  columns: PropTypes.arrayOf(PropTypes.shape({
-    Header: PropTypes.string,
-    alignment: PropTypes.alignment,
-    width: PropTypes.string,
-    id: PropTypes.string,
-    Cell: PropTypes.any
-  }))
+  columns: PropTypes.arrayOf(
+    PropTypes.shape({
+      Header: PropTypes.string,
+      alignment: PropTypes.alignment,
+      width: PropTypes.string,
+      id: PropTypes.string,
+      Cell: PropTypes.any
+    })
+  )
 };
 
 export default Table;

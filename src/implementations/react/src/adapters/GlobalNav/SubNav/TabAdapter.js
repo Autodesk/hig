@@ -1,26 +1,37 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import * as HIG from 'hig-vanilla';
+import React from "react";
+import PropTypes from "prop-types";
+import * as HIG from "hig-vanilla";
 import HIGAdapter, {
   MapsEventListener,
   MapsPropToMethod,
-  MountedByHIGParentList,
-} from '../../HIGAdapter';
+  MountedByHIGParentList
+} from "../../HIGAdapter";
 
 function TabsAdapter(props) {
   return (
     <HIGAdapter
       displayName="Tab"
-      HIGConstructor={HIG.GlobalNav._partials.SubNav._partials.Tabs._partials.Tab}
+      HIGConstructor={
+        HIG.GlobalNav._partials.SubNav._partials.Tabs._partials.Tab
+      }
       {...props}
     >
       {adapterProps => (
         <div>
           <MountedByHIGParentList mounter="addTab" {...adapterProps} />
-          <MapsEventListener listener="onClick" handler={props.onClick} {...adapterProps} />
-          <MapsPropToMethod setter="setLabel" value={props.label} {...adapterProps} />
+          <MapsEventListener
+            listener="onClick"
+            handler={props.onClick}
+            {...adapterProps}
+          />
+          <MapsPropToMethod
+            setter="setLabel"
+            value={props.label}
+            {...adapterProps}
+          />
           <MapsPropToMethod value={props.active} {...adapterProps}>
-            {(instance, value) => (value ? instance.activate() : instance.deactivate())}
+            {(instance, value) =>
+              value ? instance.activate() : instance.deactivate()}
           </MapsPropToMethod>
         </div>
       )}

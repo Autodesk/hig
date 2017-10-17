@@ -1,63 +1,71 @@
-import React, { Component } from 'react';
-import * as PropTypes from 'prop-types';
+import React, { Component } from "react";
+import * as PropTypes from "prop-types";
 
-import { filter, group, mergeState, getModuleState } from './model';
+import { filter, group, mergeState, getModuleState } from "./model";
 
 export default function WithState(WrappedComponent) {
   class SideNavWithState extends Component {
     static propTypes = {
       links: PropTypes.arrayOf(PropTypes.object),
-      modules: PropTypes.arrayOf(PropTypes.shape({
-        id: PropTypes.string.isRequired,
-        title: PropTypes.string.isRequired
-      })),
+      modules: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          title: PropTypes.string.isRequired
+        })
+      ),
       onModuleChange: PropTypes.func.isRequired,
-      submodules: PropTypes.arrayOf(PropTypes.shape({
-        id: PropTypes.string.isRequired,
-        title: PropTypes.string.isRequired
-      })),
+      submodules: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          title: PropTypes.string.isRequired
+        })
+      ),
       activeModuleId: PropTypes.string
-    }
+    };
 
     static defaultProps = {
       activeModuleId: null,
-      query: '',
+      query: "",
       modules: [],
       submodules: [],
       links: []
-    }
+    };
 
     constructor(props) {
       super(props);
 
       const moduleStates = {};
 
-      const activeSubmodule = this.props.submodules.find(s => s.id === this.props.activeModuleId);
+      const activeSubmodule = this.props.submodules.find(
+        s => s.id === this.props.activeModuleId
+      );
       if (activeSubmodule) {
-        const activeModule = this.props.modules.find(m => m.id === activeSubmodule.moduleId);
+        const activeModule = this.props.modules.find(
+          m => m.id === activeSubmodule.moduleId
+        );
         moduleStates[activeModule.id] = { minimized: false };
       }
 
       this.state = {
-        query: '',
-        activeModuleId: '',
+        query: "",
+        activeModuleId: "",
         moduleStates
       };
     }
 
-    setQuery = (event) => {
-      this.setState({ query: event.target.value || '' });
-    }
+    setQuery = event => {
+      this.setState({ query: event.target.value || "" });
+    };
 
-    setActiveModuleId = (id) => {
+    setActiveModuleId = id => {
       this.setState({ activeModuleId: id });
 
       if (this.props.onModuleChange) {
         this.props.onModuleChange(id);
       }
-    }
+    };
 
-    toggleModuleMinimized = (id) => {
+    toggleModuleMinimized = id => {
       const moduleState = getModuleState(this.state.moduleStates, id);
 
       this.setState({
@@ -69,9 +77,9 @@ export default function WithState(WrappedComponent) {
           }
         }
       });
-    }
+    };
 
-    handleModuleClick = (id) => {
+    handleModuleClick = id => {
       const submodules = this.props.submodules.filter(s => s.moduleId === id);
 
       if (submodules.length > 0) {
@@ -83,19 +91,17 @@ export default function WithState(WrappedComponent) {
       if (this.props.onModuleClick) {
         this.props.onModuleClick(id);
       }
-    }
+    };
 
-    handleSubmoduleClick = (id) => {
+    handleSubmoduleClick = id => {
       this.setActiveModuleId(id);
       if (this.props.onSubmoduleClick) {
         this.props.onSubmoduleClick(id);
       }
-    }
+    };
 
     renderedQuery() {
-      return this.props.query
-        ? this.props.query
-        : this.state.query;
+      return this.props.query ? this.props.query : this.state.query;
     }
 
     render() {
@@ -125,22 +131,26 @@ export default function WithState(WrappedComponent) {
   WithState.__docgenInfo = {
     props: {
       links: {
-        description: 'An array of props for building links on the bottom of the side nav'
+        description:
+          "An array of props for building links on the bottom of the side nav"
       },
       modules: {
-        description: 'An array of props for building modules'
+        description: "An array of props for building modules"
       },
       onModuleChange: {
-        description: 'A funciton that will be called when the user activates a module or submodule'
+        description:
+          "A funciton that will be called when the user activates a module or submodule"
       },
       onModuleClick: {
-        description: 'A funciton that will be called when the user clicks on a module'
+        description:
+          "A funciton that will be called when the user clicks on a module"
       },
       onSubmoduleClick: {
-        description: 'A funciton that will be called when the user clicks on a submodule'
+        description:
+          "A funciton that will be called when the user clicks on a submodule"
       },
       submodules: {
-        description: 'An array of props for building submodules'
+        description: "An array of props for building submodules"
       }
     }
   };

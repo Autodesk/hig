@@ -1,31 +1,21 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { text, select, boolean } from '@storybook/addon-knobs';
+import React from "react";
+/* eslint-disable import/no-extraneous-dependencies */
+import { storiesOf } from "@storybook/react";
+/* eslint-enable import/no-extraneous-dependencies */
 
-import TableComponent from '../adapters/TableAdapter';
-import SlotCell from '../elements/components/SlotCell';
-import SlotHeadCell from '../elements/components/SlotHeadCell';
+import Table from "../adapters/Table/TableAdapter";
 
-import tableImage from '../playground/images/table-image.png';
+import tableImage from "../playground/images/table-image.png";
 
-const TableHead = TableComponent.TableHead;
-const TableRow = TableComponent.TableRow;
-const TextHeadCell = TableComponent.TableHead.TextHeadCell;
-const TextCell = TableComponent.TableRow.TextCell;
-const IconCell = TableComponent.TableRow.IconCell;
+const TableHead = Table.TableHead;
+const TableRow = Table.TableRow;
+const TextHeadCell = Table.TableHead.TextHeadCell;
+const TextCell = Table.TableRow.TextCell;
+const IconCell = Table.TableRow.IconCell;
 
-const props = {
-  table: { density: 'standard' },
-  emptyCell: { width: '30px' },
-  textHeadCell: { text: 'Title', alignment: 'left', width: '1fr' },
-  slotHeadCell: { width: '1fr' },
-  textCell: { text: 'Window Punch List', alignment: 'left' },
-  iconCell: { icon: 'settings' }
-};
-storiesOf('Table', module)
-  .addWithInfo('large table', '', () => (
-    <TableComponent density="large">
+storiesOf("Table", module)
+  .addWithInfo("large table", "", () => (
+    <Table density="large">
       <TableHead>
         <TextHeadCell width="1fr" />
         <TextHeadCell text="Title" alignment="left" width="2fr" />
@@ -58,10 +48,10 @@ storiesOf('Table', module)
         <TextCell text="2535" alignment="left" />
         <TextCell text="Atlas Plumbi" alignment="left" />
       </TableRow>
-    </TableComponent>
+    </Table>
   ))
-  .addWithInfo('standard table', '', () => (
-    <TableComponent density="standard">
+  .addWithInfo("standard table", "", () => (
+    <Table density="standard">
       <TableHead>
         <TextHeadCell width="30px" />
         <TextHeadCell text="Title" alignment="left" width="1fr" />
@@ -74,11 +64,7 @@ storiesOf('Table', module)
       </TableHead>
       <TableRow>
         <IconCell icon="settings" />
-        <TextCell
-          text="text cell test"
-          alignment="left"
-          detail="new detail"
-        />
+        <TextCell text="text cell test" alignment="left" detail="new detail" />
         <TextCell
           text="Deserunt ut deserunt mollit elit aute et."
           alignment="left"
@@ -129,10 +115,10 @@ storiesOf('Table', module)
         <TextCell text="3000" alignment="left" />
         <TextCell text="Alexander Mo" alignment="left" />
       </TableRow>
-    </TableComponent>
+    </Table>
   ))
-  .addWithInfo('compressed table', '', () => (
-    <TableComponent density="compressed">
+  .addWithInfo("compressed table", "", () => (
+    <Table density="compressed">
       <TableHead>
         <TextHeadCell width="30px" />
         <TextHeadCell text="Title" alignment="left" width="1fr" />
@@ -145,11 +131,7 @@ storiesOf('Table', module)
       </TableHead>
       <TableRow>
         <IconCell icon="settings" />
-        <TextCell
-          text="text cell test"
-          alignment="left"
-          detail="new detail"
-        />
+        <TextCell text="text cell test" alignment="left" detail="new detail" />
         <TextCell
           text="Deserunt ut deserunt mollit elit aute et."
           alignment="left"
@@ -200,5 +182,5 @@ storiesOf('Table', module)
         <TextCell text="3000" alignment="left" />
         <TextCell text="Alexander Mo" alignment="left" />
       </TableRow>
-    </TableComponent>
+    </Table>
   ));

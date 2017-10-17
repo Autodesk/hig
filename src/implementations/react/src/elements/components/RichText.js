@@ -1,10 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 function RichText(props) {
-  return props.children
-    ? <div className="hig__rich-text">{props.children}</div>
-    : <div className="hig__rich-text" dangerouslySetInnerHTML={props.dangerouslySetInnerHTML} />;
+  return props.children ? (
+    <div className="hig__rich-text">{props.children}</div>
+  ) : (
+    <div
+      className="hig__rich-text"
+      dangerouslySetInnerHTML={props.dangerouslySetInnerHTML}
+    />
+  );
 }
 
 RichText.propTypes = {

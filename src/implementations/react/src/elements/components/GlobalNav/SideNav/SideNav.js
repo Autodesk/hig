@@ -1,26 +1,32 @@
-import React, { Component } from 'react';
-import * as PropTypes from 'prop-types';
-import SideNavAdapter from '../../../../adapters/GlobalNav/SideNav/SideNavAdapter';
-import Submodule from './Submodule';
-import Group from '../../../../adapters/GlobalNav/SideNav/GroupAdapter';
-import Module from './Module';
-import ModuleCollapse from './ModuleCollapse';
-import Link from '../../../../adapters/GlobalNav/SideNav/LinkAdapter';
-import Search from './Search';
-import WithState from './WithState';
+import React, { Component } from "react";
+import * as PropTypes from "prop-types";
+import SideNavAdapter from "../../../../adapters/GlobalNav/SideNav/SideNavAdapter";
+import Submodule from "./Submodule";
+import Group from "../../../../adapters/GlobalNav/SideNav/GroupAdapter";
+import Module from "./Module";
+import ModuleCollapse from "./ModuleCollapse";
+import Link from "../../../../adapters/GlobalNav/SideNav/LinkAdapter";
+import Search from "./Search";
+import WithState from "./WithState";
 
 class SideNav extends Component {
   static propTypes = {
     copyright: PropTypes.string,
-    groups: PropTypes.arrayOf(PropTypes.shape({
-      modules: PropTypes.arrayOf(PropTypes.shape({
-        id: PropTypes.string.isRequired,
-        minimized: PropTypes.bool,
-        submodules: PropTypes.arrayOf(PropTypes.shape({
-          id: PropTypes.string.isRequired
-        }))
-      }))
-    })),
+    groups: PropTypes.arrayOf(
+      PropTypes.shape({
+        modules: PropTypes.arrayOf(
+          PropTypes.shape({
+            id: PropTypes.string.isRequired,
+            minimized: PropTypes.bool,
+            submodules: PropTypes.arrayOf(
+              PropTypes.shape({
+                id: PropTypes.string.isRequired
+              })
+            )
+          })
+        )
+      })
+    ),
     headerLabel: PropTypes.string,
     headerLink: PropTypes.string,
     links: PropTypes.arrayOf(PropTypes.object),
@@ -45,10 +51,10 @@ class SideNav extends Component {
     onSubmoduleClick: null,
     onHeaderClick: null,
     onSuperHeaderClick: null,
-    query: '',
+    query: "",
     superHeaderLabel: null,
     superHeaderLink: null
-  }
+  };
 
   render() {
     const sideNavProps = {
@@ -60,16 +66,18 @@ class SideNav extends Component {
       onSubmoduleClick: this.props.onSubmoduleClick,
       onSuperHeaderClick: this.props.onSuperHeaderClick,
       superHeaderLabel: this.props.superHeaderLabel,
-      superHeaderLink: this.props.superHeaderLink,
+      superHeaderLink: this.props.superHeaderLink
     };
 
     return (
       <SideNavAdapter {...sideNavProps}>
-        {this.props.groups.map((group, i) => (
+        {this.props.groups.map(group => (
           <Group key={group.modules[0].id}>
-            {group.modules.map((module) => {
-              const showSubmodules = this.props.disableCollapse || !module.minimized;
-              const hideCollapse = this.props.disableCollapse || module.submodules.length === 0;
+            {group.modules.map(module => {
+              const showSubmodules =
+                this.props.disableCollapse || !module.minimized;
+              const hideCollapse =
+                this.props.disableCollapse || module.submodules.length === 0;
               return (
                 <Module
                   onClick={this.props.onModuleClick}
@@ -84,25 +92,23 @@ class SideNav extends Component {
                   />
                   {showSubmodules
                     ? module.submodules.map(submodule => (
-                      <Submodule
-                        onClick={this.props.onSubmoduleClick}
-                        key={submodule.id}
-                        {...submodule}
-                      />
-                    ))
+                        <Submodule
+                          onClick={this.props.onSubmoduleClick}
+                          key={submodule.id}
+                          {...submodule}
+                        />
+                      ))
                     : null}
                 </Module>
               );
             })}
           </Group>
         ))}
-        {this.props.slot
-          ? this.props.slot
-          : null}
+        {this.props.slot ? this.props.slot : null}
         {this.props.links.map(link => <Link {...link} key={link.title} />)}
-        {this.props.searchable
-          ? <Search onInput={this.props.setQuery} value={this.props.query} />
-          : null}
+        {this.props.searchable ? (
+          <Search onInput={this.props.setQuery} value={this.props.query} />
+        ) : null}
       </SideNavAdapter>
     );
   }

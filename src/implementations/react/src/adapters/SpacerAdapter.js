@@ -1,16 +1,28 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import * as HIG from 'hig-vanilla';
-import HIGAdapter, { MapsPropToMethod, MountsAnyChild } from './HIGAdapter';
+import React from "react";
+import PropTypes from "prop-types";
+import * as HIG from "hig-vanilla";
+import HIGAdapter, { MapsPropToMethod, MountsAnyChild } from "./HIGAdapter";
 
 function SpacerAdapter(props) {
   return (
     <HIGAdapter {...props} displayName="Spacer" HIGConstructor={HIG.Spacer}>
       {adapterProps => (
         <div>
-          <MapsPropToMethod value={props.inset} setter="setInset" {...adapterProps} />
-          <MapsPropToMethod value={props.type} setter="setType" {...adapterProps} />
-          <MapsPropToMethod value={props.width} setter="setWidth" {...adapterProps} />
+          <MapsPropToMethod
+            value={props.inset}
+            setter="setInset"
+            {...adapterProps}
+          />
+          <MapsPropToMethod
+            value={props.type}
+            setter="setType"
+            {...adapterProps}
+          />
+          <MapsPropToMethod
+            value={props.width}
+            setter="setWidth"
+            {...adapterProps}
+          />
           <MountsAnyChild mounter="addSlot" {...adapterProps}>
             {props.children}
           </MountsAnyChild>

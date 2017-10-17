@@ -1,6 +1,6 @@
-import { Component } from 'react';
-import PropTypes from 'prop-types';
-import throwIfNoHIGMethod from './throwIfNoHIGMethod';
+import { Component } from "react";
+import PropTypes from "prop-types";
+import throwIfNoHIGMethod from "./throwIfNoHIGMethod";
 
 export default class MapsEventlistener extends Component {
   static propTypes = {
@@ -8,12 +8,12 @@ export default class MapsEventlistener extends Component {
     handler: PropTypes.func,
     mounted: PropTypes.bool.isRequired,
     higInstance: PropTypes.object
-  }
+  };
 
   static defaultProps = {
     handler: undefined,
     higInstance: undefined
-  }
+  };
 
   constructor(props) {
     super(props);
@@ -35,17 +35,25 @@ export default class MapsEventlistener extends Component {
   }
 
   configureHandler(props) {
-    if (!props.mounted) { return; }
+    if (!props.mounted) {
+      return;
+    }
 
     if (this.state.dispose) {
       this.state.dispose();
     }
 
-    if (!props.handler) { return; }
+    if (!props.handler) {
+      return;
+    }
 
     throwIfNoHIGMethod(this.props, this.props.listener);
-    this.setState({ dispose: props.higInstance[props.listener](props.handler) });
+    this.setState({
+      dispose: props.higInstance[props.listener](props.handler)
+    });
   }
 
-  render() { return null; }
+  render() {
+    return null;
+  }
 }

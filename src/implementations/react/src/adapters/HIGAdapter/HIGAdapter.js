@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 class HIGAdapter extends Component {
   static propTypes = {
@@ -7,16 +7,16 @@ class HIGAdapter extends Component {
     HIGConstructor: PropTypes.func.isRequired,
     displayName: PropTypes.string.isRequired,
     higInstance: PropTypes.object
-  }
+  };
 
   static contextTypes = {
-    higParent: PropTypes.object,
-  }
+    higParent: PropTypes.object
+  };
 
   static defaultProps = {
     children: () => {},
     higInstance: undefined
-  }
+  };
 
   constructor(props) {
     super(props);
@@ -29,7 +29,9 @@ class HIGAdapter extends Component {
   componentDidMount() {
     if (!this.context.higParent) {
       this._mount = this._el.parentNode;
-      this._anchor = document.createComment(`HIG${this.props.displayName}-Anchor`);
+      this._anchor = document.createComment(
+        `HIG${this.props.displayName}-Anchor`
+      );
       // Place this component's element with an anchor comment
       this._mount.replaceChild(this._anchor, this._el);
       // Mount the hig component at the comment
@@ -48,9 +50,11 @@ class HIGAdapter extends Component {
 
   onMount = () => {
     this.setState({ mounted: true });
-  }
+  };
 
-  setEl = (el) => { this._el = el; }
+  setEl = el => {
+    this._el = el;
+  };
 
   render() {
     return React.createElement(

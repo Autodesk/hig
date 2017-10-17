@@ -1,19 +1,25 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import * as HIG from 'hig-vanilla';
+import React from "react";
+import PropTypes from "prop-types";
+import * as HIG from "hig-vanilla";
 
 import HIGAdapter, {
   MountedByHIGParent,
   MountsHIGChildList
-} from '../HIGAdapter';
+} from "../HIGAdapter";
 
 function TableHeadAdapter(props) {
   return (
-    <HIGAdapter displayName="TableHead" HIGConstructor={HIG.Table._partials.TableHead} {...props}>
+    <HIGAdapter
+      displayName="TableHead"
+      HIGConstructor={HIG.Table._partials.TableHead}
+      {...props}
+    >
       {adapterProps => (
         <div>
           <MountedByHIGParent mounter="addTableHead" {...adapterProps} />
-          <MountsHIGChildList {...adapterProps}>{props.children}</MountsHIGChildList>
+          <MountsHIGChildList {...adapterProps}>
+            {props.children}
+          </MountsHIGChildList>
         </div>
       )}
     </HIGAdapter>

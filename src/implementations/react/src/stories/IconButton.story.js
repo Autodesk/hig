@@ -14,34 +14,35 @@
  limitations under the License.
 
  */
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { text } from '@storybook/addon-knobs';
+import React from "react";
+/* eslint-disable import/no-extraneous-dependencies */
+import { storiesOf } from "@storybook/react";
+import { action } from "@storybook/addon-actions";
+/* eslint-enable import/no-extraneous-dependencies */
 
-import IconButton from '../adapters/IconButtonAdapter';
+import IconButton from "../adapters/IconButtonAdapter";
 
-storiesOf('IconButton', module)
-  .addWithInfo('Icon Button', '', () => (
+storiesOf("IconButton", module)
+  .addWithInfo("Icon Button", "", () => (
     <IconButton
       title="IconButton"
       link="#"
       icon="settings"
-      onClick={action('clicked')}
-      onHover={action('on hover')}
-      onBlur={action('on blur')}
-      onFocus={action('on focus')}
+      onClick={action("clicked")}
+      onHover={action("on hover")}
+      onBlur={action("on blur")}
+      onFocus={action("on focus")}
     />
   ))
-  .addWithInfo('Disabled Button', '', () => (
+  .addWithInfo("Disabled Button", "", () => (
     <IconButton
       title="Disabled Icon Button"
       link="#"
       icon="settings"
-      onClick={action('clicked')}
-      onHover={action('on hover')}
-      onBlur={action('on blur')}
-      onFocus={action('on focus')}
+      onClick={action("clicked")}
+      onHover={action("on hover")}
+      onBlur={action("on blur")}
+      onFocus={action("on focus")}
       disabled
     />
   ));

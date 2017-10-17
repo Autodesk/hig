@@ -1,6 +1,6 @@
-import { Component } from 'react';
-import PropTypes from 'prop-types';
-import throwIfNoHIGMethod from './throwIfNoHIGMethod';
+import { Component } from "react";
+import PropTypes from "prop-types";
+import throwIfNoHIGMethod from "./throwIfNoHIGMethod";
 
 class MapsPropToMethod extends Component {
   static propTypes = {
@@ -10,13 +10,13 @@ class MapsPropToMethod extends Component {
     mounted: PropTypes.bool.isRequired,
     setter: PropTypes.string,
     value: PropTypes.any
-  }
+  };
 
   static defaultProps = {
     children: undefined,
     setter: undefined,
     value: undefined
-  }
+  };
 
   constructor(props) {
     super(props);
@@ -31,7 +31,9 @@ class MapsPropToMethod extends Component {
 
   throwIfNoSetter() {
     if (this.props.higInstance[this.props.setter] === undefined) {
-      throw (new TypeError(`${this.props.displayName} has no method '${this.props.setter}'`));
+      throw new TypeError(
+        `${this.props.displayName} has no method '${this.props.setter}'`
+      );
     }
   }
 

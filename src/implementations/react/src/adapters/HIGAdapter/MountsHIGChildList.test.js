@@ -1,56 +1,60 @@
-import React from 'react';
-import { mount } from 'enzyme';
-import { MountsHIGChildList } from './index';
+import React from "react";
+import { mount } from "enzyme";
+import { MountsHIGChildList } from "./index";
 
-describe('MountsHIGChildList', () => {
+describe("MountsHIGChildList", () => {
   class VanillaParent {
-    addThing = jest.fn()
+    addThing = jest.fn();
   }
   function ChildComponent(props) {
     return <h1>{props.id}</h1>;
   }
 
-  function context(props, ids) {
+  function Context(props, ids) {
     return (
-      <MountsHIGChildList {...props} >
+      <MountsHIGChildList {...props}>
         {ids.map(id => <ChildComponent key={id} id={id} />)}
       </MountsHIGChildList>
     );
   }
 
-  describe('with a list of children', () => {
-    it('assigns index to children', () => {
+  describe("with a list of children", () => {
+    it("assigns index to children", () => {
       const higInstance = new VanillaParent();
       const props = {
         higInstance,
-        mounter: 'addThing',
+        mounter: "addThing",
         mounted: true
       };
-      const wrapper = mount(context(props, ['1', '2', '3']));
+      const wrapper = mount(Context(props, ["1", "2", "3"]));
 
-      expect(wrapper.find(ChildComponent).first()).toHaveProp('index');
+      expect(wrapper.find(ChildComponent).first()).toHaveProp("index");
     });
   });
 
   it('provides the higInstance via context as "higParent"', () => {
     const higInstance = new VanillaParent();
-    const wrapper = mount(<MountsHIGChildList higInstance={higInstance} mounted>
-      <ChildComponent />
-    </MountsHIGChildList>);
+    const wrapper = mount(
+      <MountsHIGChildList higInstance={higInstance} mounted>
+        <ChildComponent />
+      </MountsHIGChildList>
+    );
 
     const context = wrapper.instance().getChildContext();
     expect(context.higParent).toEqual(higInstance);
   });
 
-  describe('with a null child', () => {
-    it('does not blow up', () => {
+  describe("with a null child", () => {
+    it("does not blow up", () => {
       expect(() => {
         const higInstance = new VanillaParent();
-        const wrapper = mount(<MountsHIGChildList higInstance={higInstance} mounted>
-          <ChildComponent />
-          {null}
-          <ChildComponent />
-        </MountsHIGChildList>);
+        mount(
+          <MountsHIGChildList higInstance={higInstance} mounted>
+            <ChildComponent />
+            {null}
+            <ChildComponent />
+          </MountsHIGChildList>
+        );
       }).not.toThrow();
     });
   });

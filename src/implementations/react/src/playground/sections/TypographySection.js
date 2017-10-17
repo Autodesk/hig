@@ -1,6 +1,16 @@
-import React, { PureComponent } from 'react';
-import PlaygroundSection from '../PlaygroundSection';
-import { H1, H2, H3, Sub1, Sub2, Body, Bold, Caption, Disabled } from '../../hig-react';
+import React, { PureComponent } from "react";
+import PlaygroundSection from "../PlaygroundSection";
+import {
+  H1,
+  H2,
+  H3,
+  Sub1,
+  Sub2,
+  Body,
+  Bold,
+  Caption,
+  Disabled
+} from "../../hig-react";
 
 class TypographySection extends PureComponent {
   render() {
@@ -12,9 +22,15 @@ class TypographySection extends PureComponent {
         <Sub1>Sub1 example text</Sub1>
         <Sub2>Sub2 example text</Sub2>
         <Body>Body example text</Body>
-        <div><Bold>Bold example text</Bold></div>
-        <div><Disabled>Disabled example text</Disabled></div>
-        <div><Caption>Caption example text</Caption></div>
+        <div>
+          <Bold>Bold example text</Bold>
+        </div>
+        <div>
+          <Disabled>Disabled example text</Disabled>
+        </div>
+        <div>
+          <Caption>Caption example text</Caption>
+        </div>
       </PlaygroundSection>
     );
   }

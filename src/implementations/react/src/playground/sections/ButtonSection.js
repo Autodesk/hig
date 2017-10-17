@@ -1,18 +1,17 @@
-import React, { PureComponent } from 'react';
-import PlaygroundSection from '../PlaygroundSection';
-import { Button } from '../../hig-react';
+import React, { PureComponent } from "react";
+import PlaygroundSection from "../PlaygroundSection";
+import { Button } from "../../hig-react";
 
 class ButtonSection extends PureComponent {
   render() {
     return (
       <PlaygroundSection title="Button">
-
         <Button
           size="standard"
           title="Grow Width Button"
           width="grow"
           onClick={() => {
-            console.log('Small Button on click');
+            console.log("Small Button on click");
           }}
         />
 
@@ -20,7 +19,7 @@ class ButtonSection extends PureComponent {
           size="small"
           title="Small Button"
           onClick={() => {
-            console.log('Small Button on click');
+            console.log("Small Button on click");
           }}
         />
 
@@ -28,7 +27,7 @@ class ButtonSection extends PureComponent {
           size="standard"
           title="Standard Button"
           onClick={() => {
-            console.log('Small Button on click');
+            console.log("Small Button on click");
           }}
         />
 
@@ -36,7 +35,7 @@ class ButtonSection extends PureComponent {
           size="large"
           title="Large Button"
           onClick={() => {
-            console.log('Large Button on click');
+            console.log("Large Button on click");
           }}
         />
 
@@ -45,11 +44,11 @@ class ButtonSection extends PureComponent {
           title="Disabled Button"
           disabled
           onClick={() => {
-            console.log('Large Button on click');
+            console.log("Large Button on click");
           }}
-          onBlur={() => console.log('onblur')}
-          onFocus={() => console.log('focus')}
-          onHover={() => console.log('hover')}
+          onBlur={() => console.log("onblur")}
+          onFocus={() => console.log("focus")}
+          onHover={() => console.log("hover")}
         />
 
         <Button
@@ -57,7 +56,7 @@ class ButtonSection extends PureComponent {
           type="primary"
           title="Primary Button"
           onClick={() => {
-            console.log('Small Primary Button on click');
+            console.log("Small Primary Button on click");
           }}
         />
 
@@ -66,7 +65,7 @@ class ButtonSection extends PureComponent {
           type="secondary"
           title="Secondary Button"
           onClick={() => {
-            console.log('Small Secondary Button on click');
+            console.log("Small Secondary Button on click");
           }}
         />
 
@@ -75,7 +74,7 @@ class ButtonSection extends PureComponent {
           type="flat"
           title="Flat Button"
           onClick={() => {
-            console.log('Small Flat Button on click');
+            console.log("Small Flat Button on click");
           }}
         />
 
@@ -85,7 +84,7 @@ class ButtonSection extends PureComponent {
           title="Standard Button with Icon"
           icon="settings"
           onClick={() => {
-            console.log('Button with icon on click');
+            console.log("Button with icon on click");
           }}
         />
 
@@ -94,16 +93,16 @@ class ButtonSection extends PureComponent {
           type="primary"
           title="Standard Button with Listeners Attached"
           onClick={() => {
-            console.log('Button with icon on click');
+            console.log("Button with icon on click");
           }}
           onBlur={() => {
-            console.log('onblur');
+            console.log("onblur");
           }}
           onFocus={() => {
-            console.log('focus');
+            console.log("focus");
           }}
           onHover={() => {
-            console.log('hover');
+            console.log("hover");
           }}
         />
       </PlaygroundSection>

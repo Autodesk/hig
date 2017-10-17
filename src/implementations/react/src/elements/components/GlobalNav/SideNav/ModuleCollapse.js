@@ -1,23 +1,21 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import ModuleCollapseAdapter from '../../../../adapters/GlobalNav/SideNav/CollapseAdapter';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import ModuleCollapseAdapter from "../../../../adapters/GlobalNav/SideNav/CollapseAdapter";
 
 class ModuleCollapse extends Component {
   static propTypes = {
     id: PropTypes.string.isRequired,
     onClick: PropTypes.func.isRequired
-  }
+  };
 
-  handleClick = (event) => {
+  handleClick = event => {
     event.preventDefault();
     this.props.onClick(this.props.id);
-  }
+  };
 
   render() {
     const { onClick, ...otherProps } = this.props;
-    return (
-      <ModuleCollapseAdapter onClick={this.handleClick} {...otherProps} />
-    );
+    return <ModuleCollapseAdapter onClick={this.handleClick} {...otherProps} />;
   }
 }
 

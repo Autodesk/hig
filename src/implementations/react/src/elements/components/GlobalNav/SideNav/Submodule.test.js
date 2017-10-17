@@ -1,13 +1,13 @@
-import React from 'react';
-import { mount } from 'enzyme';
+import React from "react";
+import { mount } from "enzyme";
 
-import GlobalNavAdapter from '../../../../adapters/GlobalNav/GlobalNavAdapter';
-import SideNavAdapter from '../../../../adapters/GlobalNav/SideNav/SideNavAdapter';
-import GroupAdapter from '../../../../adapters/GlobalNav/SideNav/GroupAdapter';
-import ModuleAdapter from '../../../../adapters/GlobalNav/SideNav/ModuleAdapter';
-import Submodule from './Submodule';
+import GlobalNavAdapter from "../../../../adapters/GlobalNav/GlobalNavAdapter";
+import SideNavAdapter from "../../../../adapters/GlobalNav/SideNav/SideNavAdapter";
+import GroupAdapter from "../../../../adapters/GlobalNav/SideNav/GroupAdapter";
+import ModuleAdapter from "../../../../adapters/GlobalNav/SideNav/ModuleAdapter";
+import Submodule from "./Submodule";
 
-describe('Submodule', () => {
+describe("Submodule", () => {
   function Context(props) {
     return (
       <GlobalNavAdapter>
@@ -22,7 +22,7 @@ describe('Submodule', () => {
     );
   }
 
-  it('calls back on click', () => {
+  it("calls back on click", () => {
     const errorSpy = jest.fn();
     console.error = errorSpy;
 

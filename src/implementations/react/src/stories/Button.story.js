@@ -14,67 +14,69 @@
  limitations under the License.
 
  */
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { text, select } from '@storybook/addon-knobs';
+import React from "react";
+/* eslint-disable import/no-extraneous-dependencies */
+import { storiesOf } from "@storybook/react";
+import { action } from "@storybook/addon-actions";
+import { select } from "@storybook/addon-knobs";
+/* eslint-enable import/no-extraneous-dependencies */
 
-import Button from '../adapters/ButtonAdapter';
+import Button from "../adapters/ButtonAdapter";
 
-storiesOf('Button', module)
-  .addWithInfo('Standard Button', '', () => {
+storiesOf("Button", module)
+  .addWithInfo("Standard Button", "", () => {
     const sizeOptions = {
-      small: 'Small',
-      standard: 'Standard',
-      large: 'Large'
+      small: "Small",
+      standard: "Standard",
+      large: "Large"
     };
 
     const typeOptions = {
-      primary: 'Primary',
-      secondary: 'Secondary',
-      flat: 'Flat'
+      primary: "Primary",
+      secondary: "Secondary",
+      flat: "Flat"
     };
 
-    const size = select('Size', sizeOptions, 'small');
-    const type = select('Type', typeOptions, 'primary');
+    const size = select("Size", sizeOptions, "small");
+    const type = select("Type", typeOptions, "primary");
 
     return (
       <Button
         size={size}
         type={type}
         title="Button"
-        onClick={action('clicked')}
-        onHover={action('on hover')}
-        onBlur={action('on blur')}
-        onFocus={action('on focus')}
+        onClick={action("clicked")}
+        onHover={action("on hover")}
+        onBlur={action("on blur")}
+        onFocus={action("on focus")}
       />
     );
   })
-  .addWithInfo('Disabled Button', '', () => {
+  .addWithInfo("Disabled Button", "", () => {
     const sizeOptions = {
-      small: 'Small',
-      standard: 'Standard',
-      large: 'Large'
+      small: "Small",
+      standard: "Standard",
+      large: "Large"
     };
 
     const typeOptions = {
-      primary: 'Primary',
-      secondary: 'Secondary',
-      flat: 'Flat'
+      primary: "Primary",
+      secondary: "Secondary",
+      flat: "Flat"
     };
 
-    const size = select('Size', sizeOptions, 'small');
-    const type = select('Type', typeOptions, 'primary');
+    const size = select("Size", sizeOptions, "small");
+    const type = select("Type", typeOptions, "primary");
 
     return (
       <Button
         size={size}
         type={type}
         title="Disabled Button"
-        onClick={action('clicked')}
-        onHover={action('on hover')}
-        onBlur={action('on blur')}
-        onFocus={action('on focus')}
+        onClick={action("clicked")}
+        onHover={action("on hover")}
+        onBlur={action("on blur")}
+        onFocus={action("on focus")}
         disabled
       />
     );

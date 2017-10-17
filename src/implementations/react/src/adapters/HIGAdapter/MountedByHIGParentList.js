@@ -1,5 +1,5 @@
-import { PureComponent } from 'react';
-import PropTypes from 'prop-types';
+import { PureComponent } from "react";
+import PropTypes from "prop-types";
 
 export default class MountedByHIGParentList extends PureComponent {
   static propTypes = {
@@ -7,11 +7,11 @@ export default class MountedByHIGParentList extends PureComponent {
     higParent: PropTypes.object,
     mounter: PropTypes.string.isRequired,
     onMount: PropTypes.func.isRequired
-  }
+  };
 
   static defaultProps = {
     higParent: undefined
-  }
+  };
 
   componentDidMount() {
     this.mountToParentList(this.props);
@@ -22,7 +22,9 @@ export default class MountedByHIGParentList extends PureComponent {
   }
 
   mountToParentList(props) {
-    if (!props.higParent) { return; }
+    if (!props.higParent) {
+      return;
+    }
 
     props.higParent[props.mounter](props.higInstance);
     this.props.onMount();

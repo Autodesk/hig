@@ -14,31 +14,36 @@
  limitations under the License.
 
  */
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { text, select, boolean } from '@storybook/addon-knobs';
+import React from "react";
+/* eslint-disable import/no-extraneous-dependencies */
+import { storiesOf } from "@storybook/react";
+import { action } from "@storybook/addon-actions";
+import { text, boolean } from "@storybook/addon-knobs";
+/* eslint-enable import/no-extraneous-dependencies */
 
-import PasswordFieldAdapter from '../adapters/FormElements/PasswordFieldAdapter';
+import PasswordField from "../adapters/FormElements/PasswordFieldAdapter";
 
-storiesOf('PasswordFieldAdapter', module)
-  .addWithInfo('Default', '', () => (
-    <PasswordField label={text('Label', 'My text field')} />
+storiesOf("PasswordFieldAdapter", module)
+  .addWithInfo("Default", "", () => (
+    <PasswordField label={text("Label", "My text field")} />
   ))
-  .addWithInfo('With knobs & events', '', () => (
-    <PasswordFieldAdapter
-      disabled={boolean('Disabled', false)}
-      instructions={text('Instructions', 'Here are your instructions.')}
-      label={text('Label', "What's the password?")}
-      onBlur={action('blur')}
-      onChange={action('change')}
-      onFocus={action('focus')}
-      onInput={action('input')}
-      onPasswordHideButtonClick={action('Password HIDE Button clicked')}
-      onPasswordRevealButtonClick={action('Password REVEAL Button clicked')}
-      showPasswordRevealButton={boolean('Show PasswordReveal', true)}
-      showPasswordHideButton={boolean('Show PasswordHide', false)}
-      placeholder={text('Placeholder', "Shh! It's a secret!")}
-      required={text('Required', 'Hint: it\'s not "password", "monkey", or "123456"')}
+  .addWithInfo("With knobs & events", "", () => (
+    <PasswordField
+      disabled={boolean("Disabled", false)}
+      instructions={text("Instructions", "Here are your instructions.")}
+      label={text("Label", "What's the password?")}
+      onBlur={action("blur")}
+      onChange={action("change")}
+      onFocus={action("focus")}
+      onInput={action("input")}
+      onPasswordHideButtonClick={action("Password HIDE Button clicked")}
+      onPasswordRevealButtonClick={action("Password REVEAL Button clicked")}
+      showPasswordRevealButton={boolean("Show PasswordReveal", true)}
+      showPasswordHideButton={boolean("Show PasswordHide", false)}
+      placeholder={text("Placeholder", "Shh! It's a secret!")}
+      required={text(
+        "Required",
+        'Hint: it\'s not "password", "monkey", or "123456"'
+      )}
     />
   ));

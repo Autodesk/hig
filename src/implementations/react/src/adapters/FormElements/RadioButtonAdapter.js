@@ -1,15 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
+import * as HIG from "hig-vanilla";
 import HIGAdapter, {
   MapsEventListener,
   MapsPropToMethod,
   ControlsProp
-} from '../HIGAdapter';
-import * as HIG from 'hig-vanilla';
+} from "../HIGAdapter";
 
 function RadioButtonAdapter(props) {
   return (
-    <HIGAdapter {...props} displayName="RadioButton" HIGConstructor={HIG.RadioButton}>
+    <HIGAdapter
+      {...props}
+      displayName="RadioButton"
+      HIGConstructor={HIG.RadioButton}
+    >
       {adapterProps => (
         <div>
           <ControlsProp
@@ -20,18 +24,41 @@ function RadioButtonAdapter(props) {
             defaultValue={props.defaultChecked}
             {...adapterProps}
           >
-            {(instance, value) => (value ? instance.check() : instance.uncheck())}
+            {(instance, value) =>
+              value ? instance.check() : instance.uncheck()}
           </ControlsProp>
-          <MapsEventListener listener="onFocus" handler={props.onFocus} {...adapterProps} />
-          <MapsEventListener listener="onHover" handler={props.onFocus} {...adapterProps} />
-          <MapsPropToMethod setter="setLabel" value={props.label} {...adapterProps} />
-          <MapsPropToMethod setter="setName" value={props.name} {...adapterProps} />
-          <MapsPropToMethod setter="setValue" value={props.value} {...adapterProps} />
+          <MapsEventListener
+            listener="onFocus"
+            handler={props.onFocus}
+            {...adapterProps}
+          />
+          <MapsEventListener
+            listener="onHover"
+            handler={props.onFocus}
+            {...adapterProps}
+          />
+          <MapsPropToMethod
+            setter="setLabel"
+            value={props.label}
+            {...adapterProps}
+          />
+          <MapsPropToMethod
+            setter="setName"
+            value={props.name}
+            {...adapterProps}
+          />
+          <MapsPropToMethod
+            setter="setValue"
+            value={props.value}
+            {...adapterProps}
+          />
           <MapsPropToMethod value={props.disabled} {...adapterProps}>
-            {(instance, value) => (value ? instance.disable() : instance.enable())}
+            {(instance, value) =>
+              value ? instance.disable() : instance.enable()}
           </MapsPropToMethod>
           <MapsPropToMethod value={props.required} {...adapterProps}>
-            {(instance, value) => (value ? instance.required(value) : instance.noLongerRequired())}
+            {(instance, value) =>
+              value ? instance.required(value) : instance.noLongerRequired()}
           </MapsPropToMethod>
         </div>
       )}
@@ -55,7 +82,7 @@ RadioButtonAdapter.propTypes = {
   placeholder: PropTypes.string,
   required: PropTypes.string,
   showClearButton: PropTypes.bool,
-  value: PropTypes.string,
+  value: PropTypes.string
 };
 
 RadioButtonAdapter.defaultProps = {

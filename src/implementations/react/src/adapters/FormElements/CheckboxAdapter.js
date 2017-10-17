@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
+import * as HIG from "hig-vanilla";
 import HIGAdapter, {
   MapsEventListener,
   MapsPropToMethod,
   ControlsProp
-} from '../HIGAdapter';
-import * as HIG from 'hig-vanilla';
+} from "../HIGAdapter";
 
 function CheckboxAdapter(props) {
   return (
@@ -17,21 +17,46 @@ function CheckboxAdapter(props) {
             handler={props.onChange}
             listener="onChange"
             value={props.checked}
-            defaultValue={props.defaultChecked !== undefined ? props.defaultChecked : false}
+            defaultValue={
+              props.defaultChecked !== undefined ? props.defaultChecked : false
+            }
             {...adapterProps}
           >
-            {(instance, value) => (value ? instance.check() : instance.uncheck())}
+            {(instance, value) =>
+              value ? instance.check() : instance.uncheck()}
           </ControlsProp>
-          <MapsEventListener listener="onFocus" handler={props.onFocus} {...adapterProps} />
-          <MapsEventListener listener="onHover" handler={props.onFocus} {...adapterProps} />
-          <MapsPropToMethod setter="setLabel" value={props.label} {...adapterProps} />
-          <MapsPropToMethod setter="setName" value={props.name} {...adapterProps} />
-          <MapsPropToMethod setter="setValue" value={props.value} {...adapterProps} />
+          <MapsEventListener
+            listener="onFocus"
+            handler={props.onFocus}
+            {...adapterProps}
+          />
+          <MapsEventListener
+            listener="onHover"
+            handler={props.onFocus}
+            {...adapterProps}
+          />
+          <MapsPropToMethod
+            setter="setLabel"
+            value={props.label}
+            {...adapterProps}
+          />
+          <MapsPropToMethod
+            setter="setName"
+            value={props.name}
+            {...adapterProps}
+          />
+          <MapsPropToMethod
+            setter="setValue"
+            value={props.value}
+            {...adapterProps}
+          />
           <MapsPropToMethod value={props.disabled} {...adapterProps}>
-            {(instance, value) => (value ? instance.disable() : instance.enable())}
+            {(instance, value) =>
+              value ? instance.disable() : instance.enable()}
           </MapsPropToMethod>
           <MapsPropToMethod value={props.required} {...adapterProps}>
-            {(instance, value) => (value ? instance.required(value) : instance.noLongerRequired())}
+            {(instance, value) =>
+              value ? instance.required(value) : instance.noLongerRequired()}
           </MapsPropToMethod>
         </div>
       )}
@@ -55,7 +80,7 @@ CheckboxAdapter.propTypes = {
   placeholder: PropTypes.string,
   required: PropTypes.string,
   showClearButton: PropTypes.bool,
-  value: PropTypes.string,
+  value: PropTypes.string
 };
 
 CheckboxAdapter.defaultProps = {
@@ -74,7 +99,7 @@ CheckboxAdapter.defaultProps = {
   placeholder: undefined,
   required: undefined,
   showClearButton: undefined,
-  value: undefined,
+  value: undefined
 };
 
 export default CheckboxAdapter;

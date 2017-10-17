@@ -14,12 +14,16 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
  */
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { select, boolean, text } from '@storybook/addon-knobs';
+import React from "react";
+/* eslint-disable import/no-extraneous-dependencies */
+import { storiesOf } from "@storybook/react";
+import { action } from "@storybook/addon-actions";
+import { select } from "@storybook/addon-knobs";
+/* eslint-enable import/no-extraneous-dependencies */
 
-import GlobalNav from '../adapters/GlobalNav/GlobalNavAdapter';
+import GlobalNav from "../adapters/GlobalNav/GlobalNavAdapter";
+
+import logo from "../playground/images/bim-logo.png";
 
 const TopNav = GlobalNav.TopNav;
 const Profile = TopNav.Profile;
@@ -28,21 +32,14 @@ const Tabs = GlobalNav.SubNav.Tabs;
 const Tab = GlobalNav.SubNav.Tabs.Tab;
 const Slot = GlobalNav.Slot;
 
-import logo from '../playground/images/bim-logo.png';
-import profileImage from '../playground/images/profileImage.png';
-import project1 from '../playground/images/project-1.png';
-import project2 from '../playground/images/project-2.png';
-import project3 from '../playground/images/project-3.png';
-import project4 from '../playground/images/project-4.png';
-
 const tabOptions = {
-  one: 'One',
-  two: 'Two'
+  one: "One",
+  two: "Two"
 };
-const tabDefaultValue = 'one';
+const tabDefaultValue = "one";
 
-storiesOf('Tabs', module)
-  .addWithInfo('default', '', () => (
+storiesOf("Tabs", module)
+  .addWithInfo("default", "", () => (
     <GlobalNav>
       <TopNav logo={logo}>
         <Profile />
@@ -55,18 +52,22 @@ storiesOf('Tabs', module)
       </SubNav>
       <Slot>
         <p>
-            Next level deep v roof party, jianbing pok pok pug butcher vape farm-to-table kombucha. Yr snackwave VHS, wolf
-            poutine actually woke poke flexitarian paleo food truck DIY kale chips viral yuccie. Cornhole tattooed vaporware
-            affogato, gentrify mlkshk portland organic. Swag try-hard cronut hashtag, etsy bespoke chia banjo messenger bag.
-            Mustache umami godard man braid cronut yuccie. YOLO vaporware franzen, gochujang typewriter mixtape brunch salvia
-            paleo lyft. Four dollar toast tumblr mustache thundercats single-origin coffee, freegan flexitarian cold-pressed
-            beard roof party VHS venmo af ugh bushwick.
+          Next level deep v roof party, jianbing pok pok pug butcher vape
+          farm-to-table kombucha. Yr snackwave VHS, wolf poutine actually woke
+          poke flexitarian paleo food truck DIY kale chips viral yuccie.
+          Cornhole tattooed vaporware affogato, gentrify mlkshk portland
+          organic. Swag try-hard cronut hashtag, etsy bespoke chia banjo
+          messenger bag. Mustache umami godard man braid cronut yuccie. YOLO
+          vaporware franzen, gochujang typewriter mixtape brunch salvia paleo
+          lyft. Four dollar toast tumblr mustache thundercats single-origin
+          coffee, freegan flexitarian cold-pressed beard roof party VHS venmo af
+          ugh bushwick.
         </p>
       </Slot>
     </GlobalNav>
   ))
-  .addWithInfo('client-controlled', '', () => {
-    const activeTab = select('Active tab', tabOptions, tabDefaultValue);
+  .addWithInfo("client-controlled", "", () => {
+    const activeTab = select("Active tab", tabOptions, tabDefaultValue);
     return (
       <GlobalNav>
         <TopNav logo={logo}>
@@ -76,40 +77,49 @@ storiesOf('Tabs', module)
           <Tabs>
             <Tab
               label="One"
-              active={activeTab === 'one'}
-              onClick={action('Tab 1 clicked')}
+              active={activeTab === "one"}
+              onClick={action("Tab 1 clicked")}
             />
             <Tab
               label="Two"
-              active={activeTab === 'two'}
-              onClick={action('Tab 2 clicked')}
+              active={activeTab === "two"}
+              onClick={action("Tab 2 clicked")}
             />
           </Tabs>
         </SubNav>
         <Slot>
-          {activeTab === 'one'
-            ? <div>
+          {activeTab === "one" ? (
+            <div>
               <h1>Tab 1</h1>
               <p>
-                  Raw denim flexitarian green juice kinfolk. Umami hammock trust fund everyday carry, woke wolf viral sriracha austin.
-                  Fingerstache affogato messenger bag salvia, cray iPhone bushwick blue bottle marfa gentrify dreamcatcher pop-up.
-                  Slow-carb etsy enamel pin cronut, raclette post-ironic hashtag. Hoodie dreamcatcher enamel pin lumbersexual before
-                  they sold out, authentic selvage tumblr vinyl. Hot chicken chillwave coloring book fixie vice venmo echo park
-                  portland. Tote bag master cleanse cronut banjo banh mi pitchfork, celiac photo booth.
+                Raw denim flexitarian green juice kinfolk. Umami hammock trust
+                fund everyday carry, woke wolf viral sriracha austin.
+                Fingerstache affogato messenger bag salvia, cray iPhone bushwick
+                blue bottle marfa gentrify dreamcatcher pop-up. Slow-carb etsy
+                enamel pin cronut, raclette post-ironic hashtag. Hoodie
+                dreamcatcher enamel pin lumbersexual before they sold out,
+                authentic selvage tumblr vinyl. Hot chicken chillwave coloring
+                book fixie vice venmo echo park portland. Tote bag master
+                cleanse cronut banjo banh mi pitchfork, celiac photo booth.
               </p>
             </div>
-            : <div>
+          ) : (
+            <div>
               <h1>Tab 2</h1>
               <p>
-                  Next level deep v roof party, jianbing pok pok pug butcher vape farm-to-table kombucha. Yr snackwave VHS, wolf
-                  poutine actually woke poke flexitarian paleo food truck DIY kale chips viral yuccie. Cornhole tattooed vaporware
-                  affogato, gentrify mlkshk portland organic. Swag try-hard cronut hashtag, etsy bespoke chia banjo messenger bag.
-                  Mustache umami godard man braid cronut yuccie. YOLO vaporware franzen, gochujang typewriter mixtape brunch salvia
-                  paleo lyft. Four dollar toast tumblr mustache thundercats single-origin coffee, freegan flexitarian cold-pressed
-                  beard roof party VHS venmo af ugh bushwick.
+                Next level deep v roof party, jianbing pok pok pug butcher vape
+                farm-to-table kombucha. Yr snackwave VHS, wolf poutine actually
+                woke poke flexitarian paleo food truck DIY kale chips viral
+                yuccie. Cornhole tattooed vaporware affogato, gentrify mlkshk
+                portland organic. Swag try-hard cronut hashtag, etsy bespoke
+                chia banjo messenger bag. Mustache umami godard man braid cronut
+                yuccie. YOLO vaporware franzen, gochujang typewriter mixtape
+                brunch salvia paleo lyft. Four dollar toast tumblr mustache
+                thundercats single-origin coffee, freegan flexitarian
+                cold-pressed beard roof party VHS venmo af ugh bushwick.
               </p>
-            </div>}
-
+            </div>
+          )}
         </Slot>
       </GlobalNav>
     );

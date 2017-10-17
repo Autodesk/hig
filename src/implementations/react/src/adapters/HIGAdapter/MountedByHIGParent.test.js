@@ -1,34 +1,36 @@
-import React from 'react';
-import { mount } from 'enzyme';
-import MountedByHIGParent from './MountedByHIGParent';
+import React from "react";
+import { mount } from "enzyme";
+import MountedByHIGParent from "./MountedByHIGParent";
 
-describe('MountedByHIGParent', () => {
+describe("MountedByHIGParent", () => {
   class VanillaParentComponent {
-    addComponent = jest.fn()
+    addComponent = jest.fn();
   }
   class VanillaComponent {
-    mount = jest.fn()
-    unmount = jest.fn()
+    mount = jest.fn();
+    unmount = jest.fn();
   }
 
-  describe('with a higParent', () => {
+  describe("with a higParent", () => {
     const higParent = new VanillaParentComponent();
 
-    it('calls the mount function on its parent', () => {
+    it("calls the mount function on its parent", () => {
       const higInstance = new VanillaComponent();
-      mount(<MountedByHIGParent
-        higInstance={higInstance}
-        higParent={higParent}
-        mounted={false}
-        mounter="addComponent"
-        onMount={() => {}}
-      />);
+      mount(
+        <MountedByHIGParent
+          higInstance={higInstance}
+          higParent={higParent}
+          mounted={false}
+          mounter="addComponent"
+          onMount={() => {}}
+        />
+      );
 
       expect(higParent.addComponent).toHaveBeenCalledWith(higInstance);
     });
   });
 
-  describe('instantiated without a higParent', () => {
+  describe("instantiated without a higParent", () => {
     let higInstance;
     let higParent;
     let wrapper;
@@ -37,24 +39,28 @@ describe('MountedByHIGParent', () => {
       higInstance = new VanillaComponent();
     });
 
-    it('does not blow up', () => {
+    it("does not blow up", () => {
       expect(() => {
-        wrapper = mount(<MountedByHIGParent
-          higParent={higParent}
-          mounter="addComponent"
-          onMount={() => {}}
-          higInstance={higInstance}
-          mounted={false}
-        />);
+        wrapper = mount(
+          <MountedByHIGParent
+            higParent={higParent}
+            mounter="addComponent"
+            onMount={() => {}}
+            higInstance={higInstance}
+            mounted={false}
+          />
+        );
       }).not.toThrow();
     });
 
-    describe('then provided a higParent', () => {
-      it('calls the mount function on its parent', () => {
+    describe("then provided a higParent", () => {
+      it("calls the mount function on its parent", () => {
         higParent = new VanillaParentComponent();
         wrapper.setProps({ higParent });
 
-        expect(higParent.addComponent.mock.calls[0][0]).toBeInstanceOf(VanillaComponent);
+        expect(higParent.addComponent.mock.calls[0][0]).toBeInstanceOf(
+          VanillaComponent
+        );
       });
     });
   });
