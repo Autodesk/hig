@@ -1,19 +1,18 @@
 import React from "react";
+/* eslint-disable import/no-extraneous-dependencies */
 import { storiesOf } from "@storybook/react";
-import { action } from "@storybook/addon-actions";
-import { text, select, boolean } from "@storybook/addon-knobs";
+import { select } from "@storybook/addon-knobs";
+/* eslint-enable import/no-extraneous-dependencies */
 
 import Flyout from "../elements/components/Flyout";
 import Button from "../adapters/ButtonAdapter";
 
-const content = () => {
-  return (
-    <div>
-      <h3>Important flyout information</h3>
-      <p>You can put what ever you want in here.</p>
-    </div>
-  );
-};
+const content = () => (
+  <div>
+    <h3>Important flyout information</h3>
+    <p>You can put what ever you want in here.</p>
+  </div>
+);
 
 storiesOf("Flyout", module).addWithInfo("flyout default", "", () => {
   const anchorOptions = {

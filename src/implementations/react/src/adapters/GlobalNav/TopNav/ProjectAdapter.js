@@ -1,27 +1,43 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import * as HIG from 'hig-vanilla';
+import React from "react";
+import PropTypes from "prop-types";
+import * as HIG from "hig-vanilla";
 import HIGAdapter, {
   MountedByHIGParentList,
   MapsPropToMethod,
   MapsEventListener
-} from '../../HIGAdapter';
+} from "../../HIGAdapter";
 
 function ProjectAdapter(props) {
   return (
     <HIGAdapter
       {...props}
       displayName="Project"
-      HIGConstructor={HIG.GlobalNav._partials.TopNav._partials.ProjectAccountSwitcher._partials.Project}
+      HIGConstructor={
+        HIG.GlobalNav._partials.TopNav._partials.ProjectAccountSwitcher
+          ._partials.Project
+      }
     >
       {adapterProps => (
         <div>
           <MountedByHIGParentList mounter="addProject" {...adapterProps} />
-          <MapsEventListener listener="onClick" handler={props.onClick} {...adapterProps} />
-          <MapsPropToMethod setter="setImage" value={props.image} {...adapterProps} />
-          <MapsPropToMethod setter="setLabel" value={props.label} {...adapterProps} />
+          <MapsEventListener
+            listener="onClick"
+            handler={props.onClick}
+            {...adapterProps}
+          />
+          <MapsPropToMethod
+            setter="setImage"
+            value={props.image}
+            {...adapterProps}
+          />
+          <MapsPropToMethod
+            setter="setLabel"
+            value={props.label}
+            {...adapterProps}
+          />
           <MapsPropToMethod value={props.active} {...adapterProps}>
-            {(instance, value) => (value ? instance.activate() : instance.deactivate())}
+            {(instance, value) =>
+              value ? instance.activate() : instance.deactivate()}
           </MapsPropToMethod>
         </div>
       )}

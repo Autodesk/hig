@@ -1,27 +1,26 @@
-import React, { PureComponent } from 'react';
-import PlaygroundSection from '../PlaygroundSection';
-import { TextField } from '../../hig-react';
+/* eslint-disable no-console */
+import React, { PureComponent } from "react";
+import PlaygroundSection from "../PlaygroundSection";
+import { TextField } from "../../hig-react";
 
 class TextFieldSection extends PureComponent {
   constructor() {
     super();
     this.state = {
-      value: ''
+      value: ""
     };
   }
 
-  setValue = (event) => {
+  setValue = event => {
     this.setState({ value: event.target.value });
-  }
+  };
 
-  logEvent(event, higElement) {
-    let messageParts = [
-      `TextField triggered an ${event.type} event`
-    ];
+  logEvent(event) {
+    let messageParts = [`TextField triggered an ${event.type} event`];
     if (event.target.value !== undefined) {
       messageParts = messageParts.concat(`: ${event.target.value}`);
     }
-    console.log(messageParts.join(''));
+    console.log(messageParts.join(""));
   }
 
   render() {

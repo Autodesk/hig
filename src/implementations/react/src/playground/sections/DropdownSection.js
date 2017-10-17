@@ -1,14 +1,16 @@
-import React, { PureComponent } from 'react';
-import PlaygroundSection from '../PlaygroundSection';
-import { Dropdown, Checkbox } from '../../hig-react';
+/* eslint-disable no-console */
+import React, { PureComponent } from "react";
+import PlaygroundSection from "../PlaygroundSection";
+import { Dropdown, Checkbox } from "../../hig-react";
 
 const options = [
   {
-    label: 'foo',
-    value: 'foo value'
-  }, {
-    label: 'bar',
-    value: 'bar value'
+    label: "foo",
+    value: "foo value"
+  },
+  {
+    label: "bar",
+    value: "bar value"
   }
 ];
 
@@ -16,28 +18,36 @@ class DropdownSection extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      value: 'bar value',
+      value: "bar value",
       options
     };
   }
 
-  setValue = (value) => {
+  setValue = value => {
     this.setState({ value });
-  }
+  };
 
-  toggleOptions = (event) => {
+  toggleOptions = event => {
     this.setState({
-      options: event.target.checked ? options : [{
-        label: 'foo',
-        value: 'foo value'
-      }]
+      options: event.target.checked
+        ? options
+        : [
+            {
+              label: "foo",
+              value: "foo value"
+            }
+          ]
     });
-  }
+  };
 
   render() {
     return (
       <PlaygroundSection title="Dropdown">
-        <Checkbox title="Toggle options" onChange={this.toggleOptions} checked={this.state.options.length > 1} />
+        <Checkbox
+          title="Toggle options"
+          onChange={this.toggleOptions}
+          checked={this.state.options.length > 1}
+        />
         <Dropdown
           label="Controlled Dropdown"
           instructions="instructions for regular Controlled dropdown"
@@ -51,19 +61,20 @@ class DropdownSection extends PureComponent {
           label="Uncontrolled Dropdown"
           instructions="instructions for regular Uncontrolled dropdown"
           placeholder="placeholder for regular Uncontrolled dropdown"
-          options={
-            [
-              {
-                label: 'foo',
-                value: 'foo value'
-              }, {
-                label: 'bar',
-                value: 'bar value'
-              }
-            ]
-          }
+          options={[
+            {
+              label: "foo",
+              value: "foo value"
+            },
+            {
+              label: "bar",
+              value: "bar value"
+            }
+          ]}
           defaultValue="bar value"
-          onChange={(id) => { console.log(id); }}
+          onChange={id => {
+            console.log(id);
+          }}
         />
 
         <Dropdown

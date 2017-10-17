@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import * as HIG from 'hig-vanilla';
+import React from "react";
+import PropTypes from "prop-types";
+import * as HIG from "hig-vanilla";
 import HIGAdapter, {
   MountedByHIGParent,
   MountsHIGChildList
-} from '../../HIGAdapter';
+} from "../../HIGAdapter";
 
 function TabsAdapter(props) {
   return (
@@ -16,7 +16,9 @@ function TabsAdapter(props) {
       {adapterProps => (
         <div>
           <MountedByHIGParent mounter="addTabs" {...adapterProps} />
-          <MountsHIGChildList {...adapterProps}>{props.children}</MountsHIGChildList>
+          <MountsHIGChildList {...adapterProps}>
+            {props.children}
+          </MountsHIGChildList>
         </div>
       )}
     </HIGAdapter>

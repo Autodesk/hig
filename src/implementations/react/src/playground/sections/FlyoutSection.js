@@ -1,12 +1,8 @@
-import React, { Component } from 'react';
-import PlaygroundSection from '../PlaygroundSection';
-import { Button, Flyout } from '../../hig-react';
+import React, { Component } from "react";
+import PlaygroundSection from "../PlaygroundSection";
+import { Button, Flyout } from "../../hig-react";
 
 class FlyoutSection extends Component {
-  constructor() {
-    super();
-  }
-
   render() {
     return (
       <PlaygroundSection title="Flyout">

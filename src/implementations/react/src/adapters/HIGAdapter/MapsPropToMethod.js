@@ -1,22 +1,23 @@
-import { Component } from 'react';
-import PropTypes from 'prop-types';
-import throwIfNoHIGMethod from './throwIfNoHIGMethod';
+import { Component } from "react";
+import PropTypes from "prop-types";
+import throwIfNoHIGMethod from "./throwIfNoHIGMethod";
+import HIGPropTypes from "./HIGPropTypes";
 
 class MapsPropToMethod extends Component {
   static propTypes = {
     children: PropTypes.func,
     displayName: PropTypes.string.isRequired,
-    higInstance: PropTypes.object.isRequired,
+    higInstance: HIGPropTypes.higInstance,
     mounted: PropTypes.bool.isRequired,
     setter: PropTypes.string,
-    value: PropTypes.any
-  }
+    value: PropTypes.any // eslint-disable-line react/forbid-prop-types
+  };
 
   static defaultProps = {
     children: undefined,
     setter: undefined,
     value: undefined
-  }
+  };
 
   constructor(props) {
     super(props);
@@ -31,7 +32,9 @@ class MapsPropToMethod extends Component {
 
   throwIfNoSetter() {
     if (this.props.higInstance[this.props.setter] === undefined) {
-      throw (new TypeError(`${this.props.displayName} has no method '${this.props.setter}'`));
+      throw new TypeError(
+        `${this.props.displayName} has no method '${this.props.setter}'`
+      );
     }
   }
 

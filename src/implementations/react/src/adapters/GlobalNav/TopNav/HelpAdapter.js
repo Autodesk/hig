@@ -1,12 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import * as HIG from 'hig-vanilla';
+import React from "react";
+import PropTypes from "prop-types";
+import * as HIG from "hig-vanilla";
 import HIGAdapter, {
   MapsPropToMethod,
   MapsEventListener,
   MountedByHIGParent,
   MountsHIGChildList
-} from '../../HIGAdapter';
+} from "../../HIGAdapter";
 
 function HelpAdapter(props) {
   return (
@@ -18,17 +18,27 @@ function HelpAdapter(props) {
       {adapterProps => (
         <div>
           <MountedByHIGParent mounter="addHelp" {...adapterProps} />
-          <MapsEventListener handler={props.onClick} listener="onClick" {...adapterProps} />
+          <MapsEventListener
+            handler={props.onClick}
+            listener="onClick"
+            {...adapterProps}
+          />
           <MapsEventListener
             handler={props.onClickOutside}
             listener="onClickOutside"
             {...adapterProps}
           />
-          <MapsPropToMethod value={props.title} setter="setTitle" {...adapterProps} />
+          <MapsPropToMethod
+            value={props.title}
+            setter="setTitle"
+            {...adapterProps}
+          />
           <MapsPropToMethod value={props.open} {...adapterProps}>
             {(instance, value) => (value ? instance.open() : instance.close())}
           </MapsPropToMethod>
-          <MountsHIGChildList {...adapterProps}>{props.children}</MountsHIGChildList>
+          <MountsHIGChildList {...adapterProps}>
+            {props.children}
+          </MountsHIGChildList>
         </div>
       )}
     </HIGAdapter>

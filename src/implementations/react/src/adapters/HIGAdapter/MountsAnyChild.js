@@ -1,22 +1,23 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import HIGPropTypes from "./HIGPropTypes";
 
 export default class MountsAnyChild extends Component {
   static propTypes = {
     children: PropTypes.node,
-    higInstance: PropTypes.object,
+    higInstance: HIGPropTypes.higInstance,
     mounted: PropTypes.bool.isRequired,
     mounter: PropTypes.string.isRequired
-  }
+  };
 
   static defaultProps = {
     children: undefined,
     higInstance: undefined
-  }
+  };
 
   static childContextTypes = {
     higParent: PropTypes.object
-  }
+  };
 
   constructor(props) {
     super(props);
@@ -35,9 +36,9 @@ export default class MountsAnyChild extends Component {
     this.passChildren(nextProps);
   }
 
-  setEl = (el) => {
+  setEl = el => {
     this.el = el;
-  }
+  };
 
   passChildren(props) {
     if (props.mounted && this.el) {
@@ -47,7 +48,10 @@ export default class MountsAnyChild extends Component {
 
   render() {
     let { children } = this.props;
-    if (children === undefined || (children.length !== undefined && children.length === 0)) {
+    if (
+      children === undefined ||
+      (children.length !== undefined && children.length === 0)
+    ) {
       children = null;
     }
 

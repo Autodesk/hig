@@ -1,6 +1,6 @@
-import React, { PureComponent } from 'react';
-import PlaygroundSection from '../PlaygroundSection';
-import { Spacer } from '../../hig-react';
+import React, { PureComponent } from "react";
+import PlaygroundSection from "../PlaygroundSection";
+import { Spacer } from "../../hig-react";
 
 class SpacerSection extends PureComponent {
   render() {

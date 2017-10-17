@@ -1,49 +1,78 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import * as HIG from 'hig-vanilla';
+import React from "react";
+import PropTypes from "prop-types";
+import * as HIG from "hig-vanilla";
 import HIGAdapter, {
   MapsPropToMethod,
   MapsEventListener,
   MountsHIGChildList
-} from '../HIGAdapter';
+} from "../HIGAdapter";
 
 function DropdownAdapter(props) {
   return (
-    <HIGAdapter {...props} displayName="Dropdown" HIGConstructor={HIG.Dropdown}>{adapterProps => (
-      <div>
-        <MapsEventListener listener="onBlur" handler={props.onBlur} {...adapterProps} />
-        <MapsEventListener
-          listener="onClickOutside"
-          handler={props.onClickOutside}
-          {...adapterProps}
-        />
-        <MapsEventListener listener="onFocus" handler={props.onFocus} {...adapterProps} />
-        <MapsEventListener listener="onKeypress" handler={props.onKeypress} {...adapterProps} />
-        <MapsEventListener
-          listener="onTargetClick"
-          handler={props.onTargetClick}
-          {...adapterProps}
-        />
-        <MapsPropToMethod value={props.label} setter="setLabel" {...adapterProps} />
-        <MapsPropToMethod value={props.instructions} setter="setInstructions" {...adapterProps} />
-        <MapsPropToMethod value={props.placeholder} setter="setPlaceholder" {...adapterProps} />
-        <MapsPropToMethod value={props.open} {...adapterProps}>
-          {(instance, value) => (value ? instance.open() : instance.close())}
-        </MapsPropToMethod>
-        <MapsPropToMethod value={props.disabled} {...adapterProps}>
-          {(instance, value) => (value ? instance.disable() : instance.enable())}
-        </MapsPropToMethod>
-        <MapsPropToMethod value={props.required} {...adapterProps}>
-          {(instance, value) => (value ? instance.required(value) : instance.noLongerRequired())}
-        </MapsPropToMethod>
-        <MapsPropToMethod
-          value={props.selectedOptionLabel}
-          setter="setSelectedOptionLabel"
-          {...adapterProps}
-        />
-        <MountsHIGChildList {...adapterProps}>{props.children}</MountsHIGChildList>
-      </div>
-    )}
+    <HIGAdapter {...props} displayName="Dropdown" HIGConstructor={HIG.Dropdown}>
+      {adapterProps => (
+        <div>
+          <MapsEventListener
+            listener="onBlur"
+            handler={props.onBlur}
+            {...adapterProps}
+          />
+          <MapsEventListener
+            listener="onClickOutside"
+            handler={props.onClickOutside}
+            {...adapterProps}
+          />
+          <MapsEventListener
+            listener="onFocus"
+            handler={props.onFocus}
+            {...adapterProps}
+          />
+          <MapsEventListener
+            listener="onKeypress"
+            handler={props.onKeypress}
+            {...adapterProps}
+          />
+          <MapsEventListener
+            listener="onTargetClick"
+            handler={props.onTargetClick}
+            {...adapterProps}
+          />
+          <MapsPropToMethod
+            value={props.label}
+            setter="setLabel"
+            {...adapterProps}
+          />
+          <MapsPropToMethod
+            value={props.instructions}
+            setter="setInstructions"
+            {...adapterProps}
+          />
+          <MapsPropToMethod
+            value={props.placeholder}
+            setter="setPlaceholder"
+            {...adapterProps}
+          />
+          <MapsPropToMethod value={props.open} {...adapterProps}>
+            {(instance, value) => (value ? instance.open() : instance.close())}
+          </MapsPropToMethod>
+          <MapsPropToMethod value={props.disabled} {...adapterProps}>
+            {(instance, value) =>
+              value ? instance.disable() : instance.enable()}
+          </MapsPropToMethod>
+          <MapsPropToMethod value={props.required} {...adapterProps}>
+            {(instance, value) =>
+              value ? instance.required(value) : instance.noLongerRequired()}
+          </MapsPropToMethod>
+          <MapsPropToMethod
+            value={props.selectedOptionLabel}
+            setter="setSelectedOptionLabel"
+            {...adapterProps}
+          />
+          <MountsHIGChildList {...adapterProps}>
+            {props.children}
+          </MountsHIGChildList>
+        </div>
+      )}
     </HIGAdapter>
   );
 }
@@ -77,7 +106,7 @@ DropdownAdapter.defaultProps = {
   onKeypress: undefined,
   onTargetClick: undefined,
   selectedOptionLabel: undefined,
-  children: undefined,
+  children: undefined
 };
 
 export default DropdownAdapter;

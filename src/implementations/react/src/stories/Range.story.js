@@ -14,35 +14,35 @@
  limitations under the License.
 
  */
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { text, number, boolean } from '@storybook/addon-knobs';
+import React from "react";
+/* eslint-disable import/no-extraneous-dependencies */
+import { storiesOf } from "@storybook/react";
+import { action } from "@storybook/addon-actions";
+import { text, number, boolean } from "@storybook/addon-knobs";
+/* eslint-enable import/no-extraneous-dependencies */
 
-import { default as RangeAdapter } from '../adapters/FormElements/RangeAdapter';
+import RangeAdapter from "../adapters/FormElements/RangeAdapter";
 
-storiesOf('Range', module).addWithInfo('By default', ``, () => {
-  return (
-    <div>
-      <RangeAdapter
-        disabled={boolean('Disabled', false)}
-        label={text('label text', 'It goes to eleven')}
-        minValue={number('min volume', 1)}
-        maxValue={number('max volume', 11)}
-        step={number('step value', 1)}
-        onChange={action('change')}
-        required={text('required text', 'This is the volume')}
-        value={1}
-      />
-      <RangeAdapter
-        label="Turn it up"
-        instructions="Pump up the volume"
-        required="this field is required."
-        minValue={0}
-        maxValue={21}
-        value={21}
-        step={1}
-      />
-    </div>
-  );
-});
+storiesOf("Range", module).addWithInfo("By default", "", () => (
+  <div>
+    <RangeAdapter
+      disabled={boolean("Disabled", false)}
+      label={text("label text", "It goes to eleven")}
+      minValue={number("min volume", 1)}
+      maxValue={number("max volume", 11)}
+      step={number("step value", 1)}
+      onChange={action("change")}
+      required={text("required text", "This is the volume")}
+      value={1}
+    />
+    <RangeAdapter
+      label="Turn it up"
+      instructions="Pump up the volume"
+      required="this field is required."
+      minValue={0}
+      maxValue={21}
+      value={21}
+      step={1}
+    />
+  </div>
+));

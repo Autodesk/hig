@@ -1,19 +1,19 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import SearchAdapter from '../../../../adapters/GlobalNav/SideNav/SearchAdapter';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import SearchAdapter from "../../../../adapters/GlobalNav/SideNav/SearchAdapter";
 
 class Search extends Component {
   static propTypes = {
     value: PropTypes.string,
     defaultValue: PropTypes.string,
     onInput: PropTypes.func
-  }
+  };
 
   static defaultProps = {
     onInput: () => {},
     value: undefined,
     defaultValue: undefined
-  }
+  };
 
   constructor(props) {
     super(props);
@@ -34,7 +34,7 @@ class Search extends Component {
     } else if (defaultValue !== undefined) {
       return defaultValue;
     }
-    return '';
+    return "";
   }
 
   getRenderedValue() {
@@ -48,16 +48,16 @@ class Search extends Component {
 
   showClearIcon = () => {
     this.setState({ clearIconVisible: true });
-  }
+  };
 
   hideClearIcon = () => {
     this.setState({ clearIconVisible: false });
-  }
+  };
 
-  handleClearIconClick = (event) => {
-    this._setValue('');
+  handleClearIconClick = event => {
+    this._setValue("");
     this.props.onInput(event);
-  }
+  };
 
   _setValue(value) {
     if (this.state.controlled) {

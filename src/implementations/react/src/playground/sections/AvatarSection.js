@@ -1,8 +1,8 @@
-import React, { PureComponent } from 'react';
-import PlaygroundSection from '../PlaygroundSection';
-import AvatarImage from '../images/profileImage.png';
+import React, { PureComponent } from "react";
+import PlaygroundSection from "../PlaygroundSection";
+import AvatarImage from "../images/profileImage.png";
 
-import { Avatar } from '../../hig-react';
+import { Avatar } from "../../hig-react";
 
 class AvatarSection extends PureComponent {
   render() {

@@ -1,13 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import * as HIG from 'hig-vanilla';
-import HIGAdapter, { MountsHIGChildList } from './HIGAdapter';
+import React from "react";
+import PropTypes from "prop-types";
+import * as HIG from "hig-vanilla";
+import HIGAdapter, { MountsHIGChildList } from "./HIGAdapter";
 
 function GridAdapter(props) {
   return (
     <HIGAdapter {...props} displayName="Grid" HIGConstructor={HIG.Grid}>
       {adapterProps => (
-        <MountsHIGChildList {...adapterProps}>{props.children}</MountsHIGChildList>
+        <MountsHIGChildList {...adapterProps}>
+          {props.children}
+        </MountsHIGChildList>
       )}
     </HIGAdapter>
   );
@@ -24,7 +26,7 @@ GridAdapter.defaultProps = {
 GridAdapter.__docgenInfo = {
   props: {
     children: {
-      description: 'support adding GridItems'
+      description: "support adding GridItems"
     }
   }
 };

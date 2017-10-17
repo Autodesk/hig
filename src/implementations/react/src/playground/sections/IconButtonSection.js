@@ -1,6 +1,7 @@
-import React, { PureComponent } from 'react';
-import PlaygroundSection from '../PlaygroundSection';
-import { IconButton } from '../../hig-react';
+/* eslint-disable no-console */
+import React, { PureComponent } from "react";
+import PlaygroundSection from "../PlaygroundSection";
+import { IconButton } from "../../hig-react";
 
 class IconButtonSection extends PureComponent {
   render() {
@@ -11,16 +12,16 @@ class IconButtonSection extends PureComponent {
           link="#"
           icon="settings"
           onClick={() => {
-            console.log('Button with icon on click');
+            console.log("Button with icon on click");
           }}
           onBlur={() => {
-            console.log('onblur');
+            console.log("onblur");
           }}
           onFocus={() => {
-            console.log('focus');
+            console.log("focus");
           }}
           onHover={() => {
-            console.log('hover');
+            console.log("hover");
           }}
         />
 
@@ -30,16 +31,16 @@ class IconButtonSection extends PureComponent {
           link="#"
           icon="settings"
           onClick={() => {
-            console.log('Button with icon on click');
+            console.log("Button with icon on click");
           }}
           onBlur={() => {
-            console.log('onblur');
+            console.log("onblur");
           }}
           onFocus={() => {
-            console.log('focus');
+            console.log("focus");
           }}
           onHover={() => {
-            console.log('hover');
+            console.log("hover");
           }}
         />
       </PlaygroundSection>
