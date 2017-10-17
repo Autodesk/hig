@@ -56,7 +56,7 @@ describe("SelectableTable", () => {
     const headerCheckboxCallbackMock = jest.fn();
     const checkboxCallbackMock = jest.fn();
 
-    const props = {
+    const tableProps = {
       columns,
       data,
       checkboxCallback: checkboxCallbackMock,
@@ -67,7 +67,7 @@ describe("SelectableTable", () => {
     const mockFunction = jest.fn();
 
     mockFunction.mockReturnValue(null);
-    mount(<SelectableTable {...props}>{mockFunction}</SelectableTable>);
+    mount(<SelectableTable {...tableProps}>{mockFunction}</SelectableTable>);
     const wrapperInstance = wrapper.instance();
 
     describe("renders with checkboxes", () => {
@@ -84,13 +84,13 @@ describe("SelectableTable", () => {
         Cell: props => (
           <RowCheckbox
             {...props}
-            selected={this.props.data.selected}
-            onChange={this.props.checkboxCallbackMock}
+            selected={props.data.selected}
+            onChange={props.checkboxCallbackMock}
           />
         )
       };
 
-      props.columns = [headerCheckbox].concat(props.columns);
+      tableProps.columns = [headerCheckbox].concat(tableProps.columns);
 
       it("it renders the table", () => {
         expect(mockFunction).toHaveBeenCalled();
@@ -99,12 +99,14 @@ describe("SelectableTable", () => {
       it("adds the check box header to columns table", () => {
         expect(mockFunction.mock.calls[0][0][0].id).toEqual("checkboxHeader");
         expect(mockFunction.mock.calls[0][0].length).toEqual(
-          props.columns.length
+          tableProps.columns.length
         );
       });
 
       it("sets the correct data cells", () => {
-        expect(mockFunction.mock.calls[0][1].length).toEqual(props.data.length);
+        expect(mockFunction.mock.calls[0][1].length).toEqual(
+          tableProps.data.length
+        );
         expect(mockFunction.mock.calls[0][1][0].selected).toEqual(false);
         expect(mockFunction.mock.calls[0][1][1].selected).toEqual(true);
       });

@@ -6,7 +6,7 @@ import Project from "./Project";
 import Account from "./Account";
 import GlobalNavAdapter from "../../../../adapters/GlobalNav/GlobalNavAdapter";
 import TopNavAdapter from "../../../../adapters/GlobalNav/TopNav/TopNavAdapter";
-import ProjectAccountSwitcherAdapter from "../../../../adapters/GlobalNav/TopNav/ProjectAccountSwitcherAdapter";
+import ProjectAccountSwitcherAdapter from "../../../../adapters/GlobalNav/TopNav/ProjectAccountSwitcherAdapter"; // eslint-disable-line max-len
 
 class Context extends Component {
   static defaultProps = {

@@ -12,7 +12,7 @@ import SearchAdapter from "./SearchAdapter";
 import ProfileAdapter from "./ProfileAdapter";
 import HelpAdapter from "./HelpAdapter";
 import ProjectAccountSwitcherAdapter from "./ProjectAccountSwitcherAdapter";
-import ProjectAccountSwitcher from "../../../elements/components/GlobalNav/TopNav/ProjectAccountSwitcher";
+import ProjectAccountSwitcher from "../../../elements/components/GlobalNav/TopNav/ProjectAccountSwitcher"; // eslint-disable-line max-len
 
 function sortChildren(children) {
   return {

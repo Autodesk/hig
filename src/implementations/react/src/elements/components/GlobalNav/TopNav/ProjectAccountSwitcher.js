@@ -8,7 +8,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-import ProjectAccountSwitcherAdapter from "../../../../adapters/GlobalNav/TopNav/ProjectAccountSwitcherAdapter";
+import ProjectAccountSwitcherAdapter from "../../../../adapters/GlobalNav/TopNav/ProjectAccountSwitcherAdapter"; // eslint-disable-line max-len
 import Project from "./Project";
 import Account from "./Account";
 

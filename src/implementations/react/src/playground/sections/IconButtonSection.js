@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React, { PureComponent } from "react";
 import PlaygroundSection from "../PlaygroundSection";
 import { IconButton } from "../../hig-react";

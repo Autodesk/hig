@@ -77,19 +77,4 @@ describe("<Tabs>", () => {
         .textContent
     ).toEqual("Foo");
   });
-
-  it("updates tab events", () => {
-    const { wrapper } = setupInitialTabs();
-
-    wrapper.setProps({
-      tabs: [
-        {
-          key: 1,
-          onClick() {
-            alert("foo");
-          }
-        }
-      ]
-    });
-  });
 });

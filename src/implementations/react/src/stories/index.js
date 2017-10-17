@@ -18,7 +18,6 @@ import "./Search.story";
 import "./SideNav.story";
 import "./Spacer.story";
 import "./Tabs.story";
-import "./Table.story";
 import "./TextArea.story";
 import "./TextField.story";
 import "./TextLink.story";

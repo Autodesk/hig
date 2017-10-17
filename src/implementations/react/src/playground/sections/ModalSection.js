@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React, { PureComponent } from "react";
 import PlaygroundSection from "../PlaygroundSection";
 import { Button, Modal } from "../../hig-react";
@@ -10,15 +11,15 @@ class ModalSection extends PureComponent {
     };
   }
 
-  logCloseModal = event => {
+  logCloseModal = () => {
     console.log("Close modal triggered");
   };
 
-  closeModal = event => {
+  closeModal = () => {
     this.setState({ isOpen: false });
   };
 
-  openModal = event => {
+  openModal = () => {
     this.setState({ isOpen: true });
   };
 
