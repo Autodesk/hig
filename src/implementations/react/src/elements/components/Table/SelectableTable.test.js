@@ -63,11 +63,12 @@ describe("SelectableTable", () => {
       onSelectAllSelectionChange: headerCheckboxCallbackMock
     };
 
-    let wrapper;
     const mockFunction = jest.fn();
 
     mockFunction.mockReturnValue(null);
-    mount(<SelectableTable {...tableProps}>{mockFunction}</SelectableTable>);
+    const wrapper = mount(
+      <SelectableTable {...tableProps}>{mockFunction}</SelectableTable>
+    );
     const wrapperInstance = wrapper.instance();
 
     describe("renders with checkboxes", () => {

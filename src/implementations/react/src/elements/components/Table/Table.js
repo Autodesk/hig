@@ -105,25 +105,7 @@ class Table extends Component {
   }
 }
 
-Table.__docgenInfo = {
-  props: {
-    density: {
-      description: "sets the size of the table"
-    },
-
-    columns: {
-      description: "provides content for header cells"
-    },
-
-    data: {
-      description: "provides content table cells"
-    }
-  }
-};
-
 Table.propTypes = {
-  density: PropTypes.oneOf(HIG.Table.AvailableDensities),
-  data: PropTypes.arrayOf(PropTypes.object),
   columns: PropTypes.arrayOf(
     PropTypes.shape({
       Header: PropTypes.string,
@@ -132,7 +114,34 @@ Table.propTypes = {
       id: PropTypes.string,
       Cell: PropTypes.any
     })
-  )
+  ),
+  data: PropTypes.arrayOf(PropTypes.object),
+  density: PropTypes.oneOf(HIG.Table.AvailableDensities),
+  selectable: PropTypes.bool
+};
+
+Table.__docgenInfo = {
+  props: {
+    columns: {
+      description: "provides content for header cells"
+    },
+    data: {
+      description: "provides content table cells"
+    },
+    density: {
+      description: "sets the size of the table"
+    },
+    onRowSelectionChange: {
+      description: "called when user selects or deselects a row"
+    },
+    onSelectAllSelectionChange: {
+      description: "called when user checks or unchecks the select-all checkbox"
+    },
+    selectable: {
+      description:
+        "when true adds checkboxes to each row, and a select-all checkbox to the header"
+    }
+  }
 };
 
 export default Table;

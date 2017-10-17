@@ -157,7 +157,7 @@ class SelectableTableSection extends Component {
           columns={this.state.columns}
           data={this.state.data}
           selectable
-          checkboxCallback={this.checkboxHandler}
+          onRowSelectionChange={this.checkboxHandler}
           onSelectAllSelectionChange={this.onSelectionChange}
         />
       </PlaygroundSection>

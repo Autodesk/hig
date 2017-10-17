@@ -12,72 +12,6 @@ import Tabs from "./SubNav/Tabs";
 import ProjectAccountSwitcher from "./TopNav/ProjectAccountSwitcher";
 
 class GlobalNav extends Component {
-  static propTypes = {
-    activeModuleId: PropTypes.string,
-    children: PropTypes.node,
-    onHamburgerClick: PropTypes.func,
-    onModuleChange: PropTypes.func.isRequired,
-    showSubNav: PropTypes.bool,
-    sideNavOpen: PropTypes.bool,
-    sideNavOpenByDefault: PropTypes.bool,
-    modules: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.string.isRequired,
-        title: PropTypes.string.isRequired
-      })
-    ),
-    submodules: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.string.isRequired,
-        title: PropTypes.string.isRequired
-      })
-    ),
-    topNav: PropTypes.shape({
-      logo: PropTypes.string,
-      logoLink: PropTypes.string,
-      projectAccountSwitcher: PropTypes.shape({
-        accounts: PropTypes.array,
-        projects: PropTypes.array,
-        projectTitle: PropTypes.string,
-        accountTitle: PropTypes.string,
-        onProjectClick: PropTypes.func,
-        onAccountClick: PropTypes.func,
-        activeProjectId: PropTypes.string,
-        activeAccountId: PropTypes.string
-      }),
-      help: PropTypes.shape({
-        groups: PropTypes.arrayOf(
-          PropTypes.shape({
-            name: PropTypes.string
-          })
-        )
-      })
-    }),
-    sideNav: PropTypes.shape({
-      copyright: PropTypes.string,
-      headerLabel: PropTypes.string,
-      headerLink: PropTypes.string,
-      links: PropTypes.arrayOf(PropTypes.object),
-      onHeaderClick: PropTypes.func,
-      onSuperHeaderClick: PropTypes.func,
-      superHeaderLabel: PropTypes.string,
-      superHeaderLink: PropTypes.string
-    })
-  };
-
-  static defaultProps = {
-    activeModuleId: undefined,
-    children: undefined,
-    modules: [],
-    submodules: [],
-    topNav: {},
-    sideNav: {},
-    onHamburgerClick: () => {},
-    showSubNav: false,
-    sideNavOpen: undefined,
-    sideNavOpenByDefault: false
-  };
-
   constructor(props) {
     super(props);
     this.state = {
@@ -192,5 +126,111 @@ class GlobalNav extends Component {
   }
   /* eslint-enable react/no-array-index-key */
 }
+
+GlobalNav.propTypes = {
+  activeModuleId: PropTypes.string,
+  children: PropTypes.node,
+  onHamburgerClick: PropTypes.func,
+  onModuleChange: PropTypes.func.isRequired,
+  showSubNav: PropTypes.bool,
+  sideNavOpen: PropTypes.bool,
+  sideNavOpenByDefault: PropTypes.bool,
+  modules: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired
+    })
+  ),
+  submodules: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired
+    })
+  ),
+  topNav: PropTypes.shape({
+    logo: PropTypes.string,
+    logoLink: PropTypes.string,
+    projectAccountSwitcher: PropTypes.shape({
+      accounts: PropTypes.array,
+      projects: PropTypes.array,
+      projectTitle: PropTypes.string,
+      accountTitle: PropTypes.string,
+      onProjectClick: PropTypes.func,
+      onAccountClick: PropTypes.func,
+      activeProjectId: PropTypes.string,
+      activeAccountId: PropTypes.string
+    }),
+    help: PropTypes.shape({
+      groups: PropTypes.arrayOf(
+        PropTypes.shape({
+          name: PropTypes.string
+        })
+      )
+    })
+  }),
+  sideNav: PropTypes.shape({
+    copyright: PropTypes.string,
+    headerLabel: PropTypes.string,
+    headerLink: PropTypes.string,
+    links: PropTypes.arrayOf(PropTypes.object),
+    onHeaderClick: PropTypes.func,
+    onSuperHeaderClick: PropTypes.func,
+    superHeaderLabel: PropTypes.string,
+    superHeaderLink: PropTypes.string
+  })
+};
+
+GlobalNav.defaultProps = {
+  activeModuleId: undefined,
+  children: undefined,
+  modules: [],
+  submodules: [],
+  topNav: {},
+  sideNav: {},
+  onHamburgerClick: () => {},
+  showSubNav: false,
+  sideNavOpen: undefined,
+  sideNavOpenByDefault: false
+};
+
+GlobalNav.__docgenInfo = {
+  props: {
+    activeModuleId: {
+      description: "id of the active module or submodule"
+    },
+    children: {
+      description: "page content"
+    },
+    onHamburgerClick: {
+      description:
+        "called when the user clicks on the 'hamburger' button in order to toggle the menu"
+    },
+    onModuleChange: {
+      description: "called when the user selects a module or submodule"
+    },
+    showSubNav: {
+      description: "when true, shows the Subnav below the Topnav"
+    },
+    sideNavOpen: {
+      description: "when true, Sidenav is open"
+    },
+    sideNavOpenByDefault: {
+      description:
+        "initial open state of the side nav, user actions will override"
+    },
+    modules: {
+      description: "a list of modules to appear in the sidenav"
+    },
+    submodules: {
+      description: "a list of submodules to appear in the sidenav"
+    },
+    topNav: {
+      description: "options to configure the Topnav"
+    },
+    sideNav: {
+      description: "options to configure the Sidenav"
+    }
+  }
+};
 
 export default GlobalNav;

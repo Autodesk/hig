@@ -21,4 +21,12 @@ IconAdapter.propTypes = {
   nameOrSVG: PropTypes.string.isRequired
 };
 
+IconAdapter.__docgenInfo = {
+  props: {
+    nameOrSVG: {
+      description: "name of an included icon, or svg string of a custom icon"
+    }
+  }
+};
+
 export default IconAdapter;

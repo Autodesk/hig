@@ -123,4 +123,55 @@ TextFieldAdapter.defaultProps = {
   value: undefined
 };
 
+TextFieldAdapter.__docgenInfo = {
+  props: {
+    defaultValue: {
+      description: "initial value of the field, user actions will override"
+    },
+    disabled: {
+      description: "prevents user actions on the field"
+    },
+    icon: {
+      description:
+        "icon for the field, either the name of an included icon, or an svg string of a custom icon"
+    },
+    instructions: {
+      description: "instructional text for the field"
+    },
+    label: {
+      description: "text describing what the field represents"
+    },
+    name: {
+      description: "name of the field when submitted with a form"
+    },
+    onBlur: {
+      description: "called when user moves focus from the field"
+    },
+    onChange: {
+      description: "called after user changes the value of the field"
+    },
+    onClearButtonClick: {
+      description: "called when user clicks the clear button"
+    },
+    onFocus: {
+      description: "called when user puts focus onto the field"
+    },
+    onInput: {
+      description: "called as user changes the value of the field"
+    },
+    placeholder: {
+      description: "example of what the user should type into the field"
+    },
+    required: {
+      description: "text describing why the field is required"
+    },
+    showClearButton: {
+      description: "when true causes the clear button to appear"
+    },
+    value: {
+      description: "value of the field"
+    }
+  }
+};
+
 export default TextFieldAdapter;

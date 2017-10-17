@@ -128,8 +128,11 @@ export default function WithState(WrappedComponent) {
     }
   }
 
-  WithState.__docgenInfo = {
+  SideNavWithState.__docgenInfo = {
     props: {
+      activeModuleId: {
+        description: "id of the active module or submodule"
+      },
       links: {
         description:
           "An array of props for building links on the bottom of the side nav"

@@ -34,7 +34,4 @@ export {
 export { default as TextField } from "./adapters/FormElements/TextFieldAdapter";
 export { default as TextLink } from "./adapters/TextLinkAdapter";
 export { default as Table } from "./elements/components/Table";
-export {
-  default as SelectableTable
-} from "./elements/components/Table/SelectableTable";
 export * from "./elements/components/Typography";

@@ -13,7 +13,7 @@ class SelectableTable extends Component {
     columns: [],
     data: [],
     onSelectAllSelectionChange: () => {},
-    checkboxCallback: () => {}
+    onRowSelectionChange: () => {}
   };
 
   constructor(props) {
@@ -41,7 +41,7 @@ class SelectableTable extends Component {
 
   handleRowCheckboxOnChange = rowInfo => {
     this.selectRow(rowInfo);
-    this.props.checkboxCallback(rowInfo);
+    this.props.onRowSelectionChange(rowInfo);
   };
 
   checkboxHeader = () => ({
@@ -94,16 +94,20 @@ class SelectableTable extends Component {
 
 SelectableTable.__docgenInfo = {
   props: {
-    density: {
-      description: "sets the size of the table"
-    },
-
     columns: {
       description: "provides content for header cells"
     },
-
     data: {
       description: "provides content table cells"
+    },
+    density: {
+      description: "sets the size of the table"
+    },
+    onRowSelectionChange: {
+      description: "called when user selects or deselects a row"
+    },
+    onSelectAllSelectionChange: {
+      description: "called when user checks or unchecks the select-all checkbox"
     }
   }
 };
@@ -111,7 +115,7 @@ SelectableTable.__docgenInfo = {
 SelectableTable.propTypes = {
   density: PropTypes.oneOf(HIG.Table.AvailableDensities),
   data: PropTypes.arrayOf(PropTypes.object),
-  checkboxCallback: PropTypes.func,
+  onRowSelectionChange: PropTypes.func,
   children: PropTypes.func,
   onSelectAllSelectionChange: PropTypes.func,
   columns: PropTypes.arrayOf(

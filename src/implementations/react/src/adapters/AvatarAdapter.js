@@ -35,6 +35,20 @@ AvatarAdapter.propTypes = {
   image: PropTypes.string
 };
 
+AvatarAdapter.__docgenInfo = {
+  props: {
+    name: {
+      description: "the name for the avatar"
+    },
+    size: {
+      description: "small, medium, large or extralarge"
+    },
+    image: {
+      description: "url to a profile image"
+    }
+  }
+};
+
 AvatarAdapter.defaultProps = {
   image: undefined
 };

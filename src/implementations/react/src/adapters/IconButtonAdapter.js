@@ -78,4 +78,33 @@ IconButtonAdapter.defaultProps = {
   onHover: undefined
 };
 
+IconButtonAdapter.__docgenInfo = {
+  props: {
+    title: {
+      description: "title of the button for accessibility purposes"
+    },
+    link: {
+      description: "url button will navigate to when clicked"
+    },
+    icon: {
+      description: "name of an included icon, or svg string of a custom icon"
+    },
+    disabled: {
+      description: "prevents user actions on the button"
+    },
+    onBlur: {
+      description: "called when user moves focus away from the button"
+    },
+    onClick: {
+      description: " called when user clicks the button"
+    },
+    onFocus: {
+      description: "called when user moves focus onto the button"
+    },
+    onHover: {
+      description: "called when user moves the mouse over the button"
+    }
+  }
+};
+
 export default IconButtonAdapter;

@@ -104,36 +104,20 @@ ButtonAdapter.defaultProps = {
 
 ButtonAdapter.__docgenInfo = {
   props: {
-    title: {
-      description: "sets the title of a button"
-    },
-    link: {
-      description: "sets the link of a button"
-    },
-    size: {
-      description: "specifies size of button"
-    },
-    type: {
-      description: "specifies type of button"
-    },
-    width: {
-      description: "specifies width of button (grow or shrink)"
-    },
-    icon: {
-      description: "an icon name or svg string"
-    },
-    onClick: {
-      description: "triggers when you click the button"
-    },
-    onHover: {
-      description: "triggers when you hover over the button"
-    },
-    onFocus: {
-      description: "triggers focus is moved to button"
-    },
+    disabled: { description: "prevents user action on the button" },
+    icon: { description: "an icon name or svg string" },
+    link: { description: "sets the link of a button" },
     onBlur: {
       description: "triggers blur when focuss is moved away from icon"
-    }
+    },
+    onClick: { description: "triggers when you click the button" },
+    onFocus: { description: "triggers focus is moved to button" },
+    onHover: { description: "triggers when you hover over the button" },
+    size: { description: "specifies size of button" },
+    target: { description: "specifies where to display the linked URL" },
+    title: { description: "sets the title of a button" },
+    type: { description: "specifies type of button" },
+    width: { description: "specifies width of button (grow or shrink)" }
   }
 };
 

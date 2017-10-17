@@ -715,7 +715,7 @@
         "setType": {
           "desc": "Sets the type of the spacer",
           "params": [
-            "{String - 'none', 'xxs', 'xs', 's', 'm', 'l' 'xl', 'xxl'} type of the spacer"
+            "{String - 'stack' or 'inline'} type of the spacer"
           ]
         },
         "setWidth": {

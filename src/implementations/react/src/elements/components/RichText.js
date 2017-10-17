@@ -15,12 +15,26 @@ function RichText(props) {
 
 RichText.propTypes = {
   children: PropTypes.node,
-  dangerouslySetInnerHTML: PropTypes.any
+  dangerouslySetInnerHTML: PropTypes.shape({
+    __html: PropTypes.string
+  })
 };
 
 RichText.defaultProps = {
   children: null,
   dangerouslySetInnerHTML: null
+};
+
+RichText.__docgenInfo = {
+  props: {
+    children: {
+      description: "react-generated markup to style with HIG typography rules"
+    },
+    dangerouslySetInnerHTML: {
+      description:
+        "HTML string to be rendered and styled with HIG typography rules"
+    }
+  }
 };
 
 export default RichText;

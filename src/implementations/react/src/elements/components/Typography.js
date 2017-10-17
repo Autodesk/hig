@@ -38,7 +38,7 @@ function CaptionComponent(props) {
   return <Typography type="caption" text={props.children} />;
 }
 
-const TYPOGRAPHY_DEFAULT_DOC = {
+const docgenInfo = {
   props: {
     children: {
       description: "any content"
@@ -46,8 +46,8 @@ const TYPOGRAPHY_DEFAULT_DOC = {
   }
 };
 
-const TYPOGRAPHY_DEFAULT_TYPES = {
-  children: PropTypes.string
+const propTypes = {
+  children: PropTypes.node
 };
 
 [
@@ -61,8 +61,8 @@ const TYPOGRAPHY_DEFAULT_TYPES = {
   DisabledComponent,
   CaptionComponent
 ].forEach(componentClass => {
-  componentClass.__docgenInfo = TYPOGRAPHY_DEFAULT_DOC; // eslint-disable-line no-param-reassign
-  componentClass.propTypes = TYPOGRAPHY_DEFAULT_TYPES; // eslint-disable-line no-param-reassign
+  componentClass.__docgenInfo = docgenInfo; // eslint-disable-line no-param-reassign
+  componentClass.propTypes = propTypes; // eslint-disable-line no-param-reassign
 });
 
 export {

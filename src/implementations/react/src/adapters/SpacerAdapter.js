@@ -46,4 +46,16 @@ SpacerAdapter.defaultProps = {
   children: undefined
 };
 
+SpacerAdapter.__docgenInfo = {
+  props: {
+    inset: { description: "inset width of the spacer" },
+    type: { description: "type of the spacer ('stack' or 'inline')" },
+    width: {
+      description:
+        "width of the spacer (vertical if type is 'stack', horizontal if type is 'inline'"
+    },
+    children: { description: "content to render within the spacer" }
+  }
+};
+
 export default SpacerAdapter;

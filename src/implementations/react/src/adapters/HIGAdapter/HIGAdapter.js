@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import HIGPropTypes from "./HIGPropTypes";
 
 class HIGAdapter extends Component {
   static propTypes = {
     children: PropTypes.func,
     HIGConstructor: PropTypes.func.isRequired,
     displayName: PropTypes.string.isRequired,
-    higInstance: PropTypes.object
+    higInstance: HIGPropTypes.higInstance
   };
 
   static contextTypes = {

@@ -48,7 +48,6 @@ function OptionAdapter(props) {
 }
 
 OptionAdapter.propTypes = {
-  index: PropTypes.number,
   onHover: PropTypes.func,
   onClick: PropTypes.func,
   label: PropTypes.string,
@@ -57,12 +56,31 @@ OptionAdapter.propTypes = {
 };
 
 OptionAdapter.defaultProps = {
-  index: undefined,
   onHover: undefined,
   onClick: undefined,
   label: undefined,
   selected: undefined,
   value: undefined
+};
+
+OptionAdapter.__docgenInfo = {
+  props: {
+    onHover: {
+      description: "called when user moves mouse over the option"
+    },
+    onClick: {
+      description: "called when the user clicks the option"
+    },
+    label: {
+      description: "text displayed on the option"
+    },
+    selected: {
+      description: "indicates the option is currently selected"
+    },
+    value: {
+      description: "data represented by the option"
+    }
+  }
 };
 
 export default OptionAdapter;

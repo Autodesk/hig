@@ -77,37 +77,67 @@ function RangeAdapter(props) {
 RangeAdapter.propTypes = {
   defaultValue: PropTypes.string,
   disabled: PropTypes.bool,
-  icon: PropTypes.string,
   instructions: PropTypes.string,
   label: PropTypes.string,
   name: PropTypes.string,
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
-  onClearButtonClick: PropTypes.func,
   onFocus: PropTypes.func,
   onInput: PropTypes.func,
-  placeholder: PropTypes.string,
   required: PropTypes.string,
-  showClearButton: PropTypes.bool,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 };
 
 RangeAdapter.defaultProps = {
   defaultValue: undefined,
   disabled: undefined,
-  icon: undefined,
   instructions: undefined,
   label: undefined,
   name: undefined,
   onBlur: undefined,
   onChange: undefined,
-  onClearButtonClick: undefined,
   onFocus: undefined,
   onInput: undefined,
-  placeholder: undefined,
   required: undefined,
-  showClearButton: undefined,
   value: undefined
+};
+
+RangeAdapter.__docgenInfo = {
+  props: {
+    defaultValue: {
+      description: "initial value of the field, user raction will override"
+    },
+    disabled: {
+      description: "prevents user actions on the field"
+    },
+    instructions: {
+      description: "instructional text for the field"
+    },
+    label: {
+      description: "text describing what the field represents"
+    },
+    name: {
+      description: "name of the field when submitted with a form"
+    },
+    onBlur: {
+      description: "called when user moves focus from the field"
+    },
+    onChange: {
+      description: "called after user changes the value of the field"
+    },
+    onFocus: {
+      description: "called when user puts focus onto the field"
+    },
+    onInput: {
+      description: "called as user changes the value of the field"
+    },
+    required: {
+      description: "text describing why the field is required"
+    },
+    value: {
+      description: "value of the field"
+    }
+  }
 };
 
 export default RangeAdapter;
