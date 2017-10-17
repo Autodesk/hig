@@ -4,6 +4,7 @@ import MapsPropToMethod from "./MapsPropToMethod";
 
 describe("MapsPropToMethod", () => {
   class VanillaComponent {
+    _interface = {};
     mount = jest.fn();
     setFoo = jest.fn();
   }

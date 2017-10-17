@@ -1,13 +1,14 @@
 import { Component } from "react";
 import PropTypes from "prop-types";
 import throwIfNoHIGMethod from "./throwIfNoHIGMethod";
+import HIGPropTypes from "./HIGPropTypes";
 
 export default class MapsEventlistener extends Component {
   static propTypes = {
     listener: PropTypes.string.isRequired,
     handler: PropTypes.func,
     mounted: PropTypes.bool.isRequired,
-    higInstance: PropTypes.object
+    higInstance: HIGPropTypes.higInstance
   };
 
   static defaultProps = {

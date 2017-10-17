@@ -4,6 +4,7 @@ import { MountsHIGChildList } from "./index";
 
 describe("MountsHIGChildList", () => {
   class VanillaParent {
+    _interface = {};
     addThing = jest.fn();
   }
   function ChildComponent(props) {

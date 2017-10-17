@@ -1,5 +1,7 @@
+/* eslint-disable react/forbid-prop-types */
 import { Component } from "react";
 import PropTypes from "prop-types";
+import HIGPropTypes from "./HIGPropTypes";
 import throwIfNoHIGMethod from "./throwIfNoHIGMethod";
 
 class ControlsProp extends Component {
@@ -7,7 +9,7 @@ class ControlsProp extends Component {
     defaultValue: PropTypes.any,
     eventTargetPropName: PropTypes.string,
     handler: PropTypes.func,
-    higInstance: PropTypes.object.isRequired,
+    higInstance: HIGPropTypes.higInstance,
     listener: PropTypes.string,
     mounted: PropTypes.bool.isRequired,
     setter: PropTypes.string,

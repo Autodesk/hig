@@ -4,6 +4,7 @@ import MountsAnyChild from "./MountsAnyChild";
 
 describe("MountsAnyChild", () => {
   class VanillaComponent {
+    _interface = {};
     mount = jest.fn();
     addSlot = jest.fn();
   }

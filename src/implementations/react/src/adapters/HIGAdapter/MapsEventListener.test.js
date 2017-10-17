@@ -4,6 +4,7 @@ import MapsEventListener from "./MapsEventListener";
 
 describe("MapsEventListener", () => {
   class VanillaComponent {
+    _interface = {};
     mount = jest.fn();
     onBoop = jest.fn();
   }

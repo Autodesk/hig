@@ -5,6 +5,7 @@ import MountsHIGChild from "./MountsHIGChild";
 
 describe("MountsHIGChild", () => {
   class VanillaComponent {
+    _interface = {};
     mount = jest.fn();
     addSlot = jest.fn();
   }

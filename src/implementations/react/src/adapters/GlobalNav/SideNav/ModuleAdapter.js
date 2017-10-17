@@ -83,7 +83,7 @@ function ModuleAdapter(props) {
 }
 
 ModuleAdapter.propTypes = {
-  children: PropTypes.any,
+  children: PropTypes.node,
   icon: PropTypes.string,
   link: PropTypes.string,
   title: PropTypes.string,

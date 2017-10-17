@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import HIGPropTypes from "./HIGPropTypes";
 
 class MountsHIGChildList extends Component {
   static propTypes = {
     children: PropTypes.node,
-    higInstance: PropTypes.any,
+    higInstance: HIGPropTypes.higInstance,
     mounted: PropTypes.bool.isRequired
   };
 

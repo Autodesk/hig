@@ -4,9 +4,11 @@ import MountedByHIGParent from "./MountedByHIGParent";
 
 describe("MountedByHIGParent", () => {
   class VanillaParentComponent {
+    _interface = {};
     addComponent = jest.fn();
   }
   class VanillaComponent {
+    _interface = {};
     mount = jest.fn();
     unmount = jest.fn();
   }
