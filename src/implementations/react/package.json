@@ -69,7 +69,7 @@
     "playground": "react-scripts start",
     "storybook": "start-storybook -p 9009 -s public",
     "test": "react-scripts test --env=jsdom",
-    "test-ci": "react-scripts test --env=jsdom --coverage --runInBand",
+    "test-ci": "react-scripts test --env=jsdom --coverage --runInBand && npm run lint",
     "type-check": "tsc",
     "validate": "node ./scripts/validate-version.js"
   },
