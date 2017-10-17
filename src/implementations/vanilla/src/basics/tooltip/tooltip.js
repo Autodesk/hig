@@ -51,6 +51,7 @@ class Tooltip extends Core {
 
   addContent(content) {
     const contentContainer = document.createElement('span');
+    contentContainer.classList.add('hig__flyout__tooltip__content');
     contentContainer.textContent = content;
 
     this.flyout.addSlot(contentContainer);

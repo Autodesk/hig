@@ -1,0 +1,46 @@
+<html>
+  <head>
+      <link rel="stylesheet" href="../../../../lib/hig.css">
+      <script type="text/javascript" src="../../../../lib/hig.js"></script>
+      <style>
+          .test-container {
+              height: 100vh;
+              padding: 40px;
+              margin: 0;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+          }
+      </style>
+  </head>
+  <body>
+      <div class='test-container'></div>
+      <script>
+          let currentAnchorPoint = Hig.Tooltip.AvailableAnchorPoints[Hig.Tooltip.AvailableAnchorPoints.length - 1];
+          const tooltip = new Hig.Tooltip();
+          tooltip.mount('.test-container');
+          tooltip.setAnchorPoint(currentAnchorPoint)
+          var tooltipContent = "helloWorld"
+          tooltip.addContent(tooltipContent);
+
+          var defaultButton = new Hig.Button({
+              title: 'Open tooltip'
+          });
+
+          tooltip.addTarget(defaultButton);
+          tooltip.open();
+
+
+          defaultButton.onClick(function() {
+              nextAnchorPointIndex = Hig.Tooltip.AvailableAnchorPoints.indexOf(currentAnchorPoint) + 1;
+              if (nextAnchorPointIndex > Hig.Tooltip.AvailableAnchorPoints.length - 1) {
+                  nextAnchorPointIndex = 0;
+              }
+
+              currentAnchorPoint = Hig.Tooltip.AvailableAnchorPoints[nextAnchorPointIndex];
+
+              tooltip.setAnchorPoint(currentAnchorPoint);
+          });
+      </script>
+  </body>
+</html>
