@@ -172,7 +172,7 @@ workflows:
       - react-validate:
           filters:
             branches:
-              ignore: master
+              only: master
           requires:
             - vanilla-test
             - react-test
@@ -184,4 +184,4 @@ workflows:
               only: /v[0-9]+(\.[0-9]+)*/
           requires:
             - vanilla-test
-            - react-test
+            - react-validate
