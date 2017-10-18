@@ -114,17 +114,17 @@ jobs:
           name: Run Tests (React)
           command: npm run test-ci
           working_directory: src/implementations/react
-  react-validate:
-    <<: *defaults
-    steps:
-      - checkout
-      # Get React node_modules for this revision of react/package.json
-      - restore_cache:
-          key: dependency-cache-react-v2-{{ checksum "src/implementations/react/package.json" }}
-      - run:
-          name: Validate hig-react version
-          command: npm run validate
-          working_directory: src/implementations/react
+#   react-validate:
+#     <<: *defaults
+#     steps:
+#       - checkout
+#       # Get React node_modules for this revision of react/package.json
+#       - restore_cache:
+#           key: dependency-cache-react-v2-{{ checksum "src/implementations/react/package.json" }}
+#       - run:
+#           name: Validate hig-react version
+#           command: npm run validate
+#           working_directory: src/implementations/react
   react-deploy:
     <<: *defaults
     steps:
@@ -184,4 +184,4 @@ workflows:
               only: /v[0-9]+(\.[0-9]+)*/
           requires:
             - vanilla-test
-            - react-validate
+            - react-test

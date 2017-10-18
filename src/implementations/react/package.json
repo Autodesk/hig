@@ -40,6 +40,7 @@
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-prettier": "^2.3.1",
     "eslint-plugin-react": "^7.4.0",
+    "hig-vanilla": "file:../vanilla",
     "jest": "^20.0.4",
     "jest-enzyme": "^3.7.0",
     "prettier": "^1.7.4",
@@ -73,9 +74,7 @@
     "type-check": "tsc",
     "validate": "node ./scripts/validate-version.js"
   },
-  "dependencies": {
-    "hig-vanilla": "file:../vanilla"
-  },
+  "dependencies": {},
   "jest": {
     "collectCoverageFrom": [
       "!src/index.js",
