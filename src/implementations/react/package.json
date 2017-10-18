@@ -1,6 +1,6 @@
 {
   "name": "hig-react",
-  "version": "0.28.6",
+  "version": "0.28.7",
   "description": "hig components in react",
   "repository": {
     "type": "git",
@@ -43,6 +43,7 @@
     "hig-vanilla": "file:../vanilla",
     "jest": "^20.0.4",
     "jest-enzyme": "^3.7.0",
+    "node-fetch": "^1.7.3",
     "prettier": "^1.7.4",
     "prop-types": "^15.5.10",
     "react": "^15.4.1",
@@ -51,6 +52,7 @@
     "react-dom": "^15.6.1",
     "react-scripts": "1.0.14",
     "react-test-renderer": "^15.6.1",
+    "registry-url": "^3.1.0",
     "storybook-addon-jsx": "^4.1.0",
     "typescript": "^2.3.2",
     "webpack": "^3.5.5"
@@ -72,7 +74,7 @@
     "test": "react-scripts test --env=jsdom",
     "test-ci": "react-scripts test --env=jsdom --coverage --runInBand && npm run lint",
     "type-check": "tsc",
-    "validate": "node ./scripts/validate-version.js"
+    "validate": "node ./scripts/validate-version/index.js"
   },
   "dependencies": {},
   "jest": {
