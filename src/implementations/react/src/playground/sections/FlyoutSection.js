@@ -3,10 +3,7 @@ import PlaygroundSection from "../PlaygroundSection";
 import { Button, Flyout } from "../../hig-react";
 
 class FlyoutSection extends Component {
-<<<<<<< fc814d36c90159381c7954dddb2cfc8f39c93f11
-=======
 
->>>>>>> completed tooltip adapter
   render() {
     return (
       <PlaygroundSection title="Flyout">

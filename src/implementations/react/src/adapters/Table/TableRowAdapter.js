@@ -1,5 +1,6 @@
 import React from "react";
 import * as HIG from "hig-vanilla";
+import * as PropTypes from "prop-types";
 
 import HIGAdapter, {
   MapsPropToMethod,
