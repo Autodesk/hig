@@ -24,9 +24,8 @@ class Tooltip extends Core {
   constructor(options) {
     super(options);
     this._render('<div></div>', options);
-    this.initialOptions = options 
+    this.initialOptions = options;
     this.flyout = new Flyout({type: 'tooltip'});
-    
   }
     
   mount(mountEl){
@@ -46,15 +45,13 @@ class Tooltip extends Core {
   }
 
   addTarget(targetElement){
-    this.flyout.addTarget(targetElement)
+    this.flyout.addTarget(targetElement);
   }
 
-  addContent(content) {
-    const contentContainer = document.createElement('span');
-    contentContainer.classList.add('hig__flyout__tooltip__content');
+  setContent(content) {
+    const contentContainer = this._ensureContentContainer();
     contentContainer.textContent = content;
-
-    this.flyout.addSlot(contentContainer);
+    this.flyout.addSlot(contentContainer)
   }
 
   setAnchorPoint(anchorPoint) {
@@ -64,8 +61,21 @@ class Tooltip extends Core {
         Tooltip.AvailableAnchorPoints
       );
       return;
+    } else {
+      this.flyout.setAnchorPoint(anchorPoint);
     }
-    this.flyout.setAnchorPoint(anchorPoint);
+    
+  }
+
+  _ensureContentContainer(){
+    const existingEl = document.querySelector('.hig__flyout__tooltip__content');
+    if (existingEl) {
+      return existingEl;
+    } else {
+      const contentContainer = document.createElement('span');
+      contentContainer.classList.add('hig__flyout__tooltip__content');
+      return contentContainer
+    }
   }
 }
 
@@ -77,5 +87,4 @@ Tooltip._defaults = {
 }
 
 Tooltip.AvailableAnchorPoints = ANCHOR_POINTS;
-
 module.exports = Tooltip;

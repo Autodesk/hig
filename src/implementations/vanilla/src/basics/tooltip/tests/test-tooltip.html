@@ -22,7 +22,7 @@
             var higTooltip = new Hig.Tooltip({anchorPoint: 'top-center'});
             higTooltip.mount('.test-container');
             higTooltip.setAnchorPoint('left-center');
-            higTooltip.addContent("Hello World");
+            higTooltip.setContent("Hello World");
             higTooltip.onClickOutside(function() {
                 higTooltip.close();
             });

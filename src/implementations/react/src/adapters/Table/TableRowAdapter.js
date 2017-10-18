@@ -1,6 +1,5 @@
 import React from "react";
 import * as HIG from "hig-vanilla";
-import PropTypes from "prop-types";
 
 import HIGAdapter, {
   MapsPropToMethod,
@@ -19,7 +18,7 @@ function TableRowAdapter(props) {
         <div>
           <MapsPropToMethod value={props.selected} {...adapterProps}>
             {(instance, value) =>
-              value ? instance.select() : instance.deselect()}
+              (value ? instance.select() : instance.deselect())}
           </MapsPropToMethod>
           <MountedByHIGParent mounter="addTableRow" {...adapterProps} />
           <MountsHIGChildList {...adapterProps}>

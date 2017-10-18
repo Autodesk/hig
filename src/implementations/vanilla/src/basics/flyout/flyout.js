@@ -52,7 +52,7 @@ class Flyout extends Core {
     this.el.classList.remove(OPEN_CLASS);
   }
 
-  _setType(type){
+  _setType(type='default'){
     if (!Flyout.AvailableTypes.includes(type)) {
       console.error(
         `Flyout cannot have type "${type}". Only these inset types are allowed: `,
