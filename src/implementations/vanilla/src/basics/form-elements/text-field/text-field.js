@@ -232,7 +232,10 @@ class TextField extends Core {
       '.hig__text-field__password-reveal-button'
     );
     passwordButton.classList.remove('hig__text-field__extra--show');
-    this.el.classList.remove('hig__text-field--password-button-visible');
+
+    const passwordHideButton = this.el.querySelector('.hig__text-field__password-hide-button');
+    passwordHideButton === undefined ? this.el.classList.remove('hig__text-field--password-button-visible') : null;
+   
   }
 
   _onClick(fn) {
@@ -268,7 +271,8 @@ class TextField extends Core {
       '.hig__text-field__password-hide-button'
     );
     passwordButton.classList.remove('hig__text-field__extra--show');
-    this.el.classList.remove('hig__text-field--password-button-visible');
+    const passwordHideButton = this.el.querySelector('.hig__text-field__password-reveal-button');
+    passwordHideButton === undefined ? this.el.classList.remove('hig__text-field--password-button-visible') : null;
   }
 
   _onPasswordHideButtonClick(fn) {
