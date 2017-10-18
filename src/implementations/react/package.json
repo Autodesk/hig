@@ -74,8 +74,7 @@
     "type-check": "tsc",
     "validate": "node ./scripts/validate-version.js"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "jest": {
     "collectCoverageFrom": [
       "!src/index.js",
