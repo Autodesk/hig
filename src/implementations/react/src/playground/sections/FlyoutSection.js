@@ -3,7 +3,6 @@ import PlaygroundSection from "../PlaygroundSection";
 import { Button, Flyout } from "../../hig-react";
 
 class FlyoutSection extends Component {
-
   render() {
     return (
       <PlaygroundSection title="Flyout">

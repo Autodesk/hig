@@ -19,7 +19,7 @@ function TableRowAdapter(props) {
         <div>
           <MapsPropToMethod value={props.selected} {...adapterProps}>
             {(instance, value) =>
-              (value ? instance.select() : instance.deselect())}
+              value ? instance.select() : instance.deselect()}
           </MapsPropToMethod>
           <MountedByHIGParent mounter="addTableRow" {...adapterProps} />
           <MountsHIGChildList {...adapterProps}>

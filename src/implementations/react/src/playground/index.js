@@ -25,12 +25,12 @@ import RadioButtonSection from "./sections/RadioButtonSection";
 import RangeSection from "./sections/RangeSection";
 import RichTextSection from "./sections/RichTextSection";
 import SelectableTableSection from "./sections/SelectableTableSection";
-import TableSection from './sections/TableSection';
-import TextAreaSection from './sections/TextAreaSection';
-import TextFieldSection from './sections/TextFieldSection';
-import TextLinkSection from './sections/TextLinkSection';
-import TooltipSection from './sections/TooltipSection'
-import TypographySection from './sections/TypographySection';
+import TableSection from "./sections/TableSection";
+import TextAreaSection from "./sections/TextAreaSection";
+import TextFieldSection from "./sections/TextFieldSection";
+import TextLinkSection from "./sections/TextLinkSection";
+import TooltipSection from "./sections/TooltipSection";
+import TypographySection from "./sections/TypographySection";
 
 class Playground extends React.Component {
   constructor(props) {
