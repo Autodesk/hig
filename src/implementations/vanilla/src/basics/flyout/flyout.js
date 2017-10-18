@@ -60,7 +60,6 @@ class Flyout extends Core {
       );
       return;
     }
-
     
     this.el.classList.remove(
       ...Flyout.AvailableTypes.map(s => `hig__flyout--${s}`)
