@@ -89,6 +89,7 @@
   display: inline-block;
 }
 
+
 .hig__flyout__container {
   position: absolute;
   display: none;
@@ -332,4 +333,11 @@
   border: 1px solid color(hig-gray-40);
   border-radius: 4px;
   @include shadow("common");
+}
+
+.hig__flyout--tooltip {
+  .hig__flyout__panel {
+    background-color: color(hig-gray-20);
+    color: color(hig-white)
+  }
 }

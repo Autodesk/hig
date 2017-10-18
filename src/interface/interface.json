@@ -46,6 +46,42 @@
         "anchorPoint": "{String - 'top-right', 'top-center'} where the flyout anchors to the target"
       }
     },
+    "Tooltip": {
+      "methods": {
+        "setContent": {
+          "desc": "Content for the tooltip",
+          "params": [
+            "{String} content for flyout "
+          ]
+        },
+        "addTarget": {
+          "desc": "Tooltip will be positioned relative to this element",
+          "params": [
+            "{HTMLElement} HTMLElement"
+          ]
+        },
+        "close": {
+          "desc": "closes the tooltip"
+        },
+        "onClickOutside": {
+          "desc": "Calls the provided callback when the tooltip is open and the user clicks outside of the tooltip",
+          "params": "HIG.abstract.EventObject.params",
+          "returns": "HIG.abstract.EventObject.returns"
+        },
+        "open": {
+          "desc": "opens the tooltip"
+        },
+        "setAnchorPoint": {
+          "desc": "sets where the tooltip anchors to the target",
+          "params": [
+            "{String - 'top-right', 'top-center'} where the tooltip anchors to the target"
+          ]
+        }
+      },
+      "defaults": {
+        "anchorPoint": "{String -  'top-center'} where the tooltip anchors to the target"
+      }
+    },
     "FormElements": {
       "partials": {
         "Checkbox": {
