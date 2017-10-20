@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../../../../../../lib/hig.css">
+        <script type="text/javascript" src="../../../../../../lib/hig.js"></script>
+    </head>
+    <body>
+        <style>
+            body, html{
+                margin: 0; padding: 0;
+            }
+        </style>
+
+        <div class="test-wrapper"></div>
+
+        <script>
+            // ADD TABS IN SUBNAV
+            var Tabs = new Hig.Tabs();
+            Tabs.mount('.test-wrapper');
+
+            var Tab1 = new Tabs.partials.Tab({
+                "label": "Details"
+            });
+            Tabs.addTab(Tab1);
+            Tab1.activate();
+            Tab1.onClick(() => {
+                Tab1.activate();
+                Tab2.deactivate();
+                Tab3.deactivate();
+            });
+
+            var Tab2 = new Tabs.partials.Tab({
+                "label": "Activities"
+            });
+            Tabs.addTab(Tab2);
+            Tab2.onClick(() => {
+                Tab1.deactivate();
+                Tab2.activate();
+                Tab3.deactivate();
+            });
+
+            var Tab3 = new Tabs.partials.Tab({
+                "label": "Inspector"
+            });
+            Tabs.addTab(Tab3);
+            Tab3.onClick(() => {
+                Tab1.deactivate();
+                Tab2.deactivate();
+                Tab3.activate();
+            });
+
+        </script>
+
+    </body>
+</html>
