@@ -29,6 +29,32 @@ All pull requests for new features must go through the following process:
 * HIG developers will provide feedback on pull requests, looking at code quality, style, tests, performance, and directional alignment with the goals of the project. That feedback should be discussed and incorporated
 * LGTM from Tech Lead and one other core committer, who confirm engineering quality and direction.
 
+#### Fork the project
+Fork the `hig` project with your GitHub account.
+
+#### Create a new branch off of the `development` branch
+On your fork, locally, create a new branch off of `development`.
+The name of your branch should include the type of change it holds, a brief description of the changes, and the issue number if relevant.
+E.g. Fixing a typo in the readme as discussed in issue #101 would have a branch name like this:
+```
+bugs/fix-readme-type-101
+```
+
+#### Develop new functionality
+Read [DEVELOPING](DEVELOPING.md) for mor information about how to develop within this project. Once your changes are complete ensure your branch meets testing, coverage, and linting standards by running `npm run test-ci`.
+	- Ensure changes are tested
+	- Add to the playground for manual testing if needed
+	- Ensure branch meets testing, coverage, and linting standards
+		- `npm run test-ci`
+
+#### Create a pull request
+When you're ready for fedback, create a pull request against the `development` branch. The title of your pull request should be a concise descritpion of the changes within it. The description of the PR should include the reason behind your PR, a breif explaination of your approach, and highlights of any especially interesting or potentially surprising details. If the change is visual, add a screenshot or gif to the pull request descrption.
+
+When you create a pull request, our continuous integration system automatically runs tests,ensures test coverage stays above a threshold, and ensures code complies with linting standards. All CI checks must pass before the pull request is ready to merge.
+
+A core committer will review your pull request and provide feedback or merge it into `development` as appropriate.
+
+
 ### Open source governance
 
 The HIG project's chief and primary concern is with the development of HIG Interface and platform specific implementations, an open source library of components which increase developer efficiency and provide a consistent look and feel to web applications across Autodesk. The look and feel of components is based on Autodesk Human Interface guidelines designs and the various product teams that contribute to HIG. The HIG project's governance model thus reflects only the need to steer the engineering direction of the components and not any other activities which are out of scope.
@@ -45,6 +71,4 @@ Core Committers:
 
 ### See Also
 
-* [DEVELOPING](DEVELOPING.md) 
-
-
+* [DEVELOPING](DEVELOPING.md)
