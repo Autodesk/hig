@@ -95,6 +95,17 @@
   display: none;
   z-index: $flyout-container-layer;
 
+  @keyframes show-flyout {
+    0% { 
+      transform: translateY(-120%);
+      opacity: 0; 
+    }
+    100% { 
+      transform: translateY(-125%);
+      opacity: 1
+    }
+  }
+
   .hig__flyout--open > & {
     display: block;
   }
@@ -117,8 +128,6 @@
     margin-top: 5px;
   }
 
-
-
   &--anchor-right-top {
     transform: translateX(-100%);
     left: -4px;
@@ -140,8 +149,11 @@
 
 
   &--anchor-bottom-left {
-    transform: translateY(-100%);
-    top: -4px;
+    animation: show-flyout 0.2s;
+    transition: all ease 0.2s;
+
+    transform: translateY(-125%);
+
     left: 0;
     margin-left: 5px;
   }
