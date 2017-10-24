@@ -2,11 +2,11 @@
 @import '~helpers/css/layers.scss';
 
 .hig__global-nav__sub-nav__tabs {
-@include reset;
-flex-grow: 1;
-display: flex;
-justify-content: center;
-z-index: $sub-nav-tabs-layer;
-height: 54px;
-line-height: 46px;
+  @include reset;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  z-index: $sub-nav-tabs-layer;
+  height: 54px;
+  line-height: 46px;
 }

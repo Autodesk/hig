@@ -22,6 +22,7 @@ Hig.SlotHeadCell = require('./components/table/table-head/slot-head-cell/slot-he
 Hig.Spacer = require('./basics/spacer/spacer.js');
 Hig.Table = require('./components/table/table.js');
 Hig.Tabs = require('./components/tabs/tabs.js');
+Hig.Tab = require('./components/tabs/tab/tab.js');
 Hig.TextArea = require('./basics/form-elements/text-area/text-area.js');
 Hig.TextCellContent = require(
   './components/table/table-row/text-cell-content/text-cell-content.js'

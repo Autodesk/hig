@@ -21,8 +21,9 @@ class Tab extends Core {
   }
 
   setLabel(label) {
-    this.el.textContent = label;
     this.el.setAttribute('title', label);
+    this._findDOMEl('.hig__tabs__label', this.el).textContent = label;
+    this._findDOMEl('.hig__tabs__active-label', this.el).textContent = label;
   }
 
   activate() {

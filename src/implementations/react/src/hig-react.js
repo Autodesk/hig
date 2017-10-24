@@ -36,4 +36,6 @@ export {
 export { default as TextField } from "./adapters/FormElements/TextFieldAdapter";
 export { default as TextLink } from "./adapters/TextLinkAdapter";
 export { default as Table } from "./elements/components/Table";
+export { default as Tabs } from "./elements/components/Tabs";
+export { Tab } from "./elements/components/Tabs";
 export * from "./elements/components/Typography";

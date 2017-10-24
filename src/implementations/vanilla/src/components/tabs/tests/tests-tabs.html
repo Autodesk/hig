@@ -38,10 +38,9 @@
                 Tab3.deactivate();
             });
 
-            var Tab3 = new Tabs.partials.Tab({
-                "label": "Inspector"
-            });
+            var Tab3 = new Tabs.partials.Tab();
             Tabs.addTab(Tab3);
+            Tab3.setLabel("Inspector");
             Tab3.onClick(() => {
                 Tab1.deactivate();
                 Tab2.deactivate();
