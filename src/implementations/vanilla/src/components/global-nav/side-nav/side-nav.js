@@ -64,7 +64,11 @@ class SideNav extends Core {
   }
 
   setHeaderLink(link) {
-    this._findDOMEl('.hig__global-nav__sidenav__header-link', this.el).setAttribute('href', link);
+    if (link) {
+      this._findDOMEl('.hig__global-nav__sidenav__header-link', this.el).setAttribute('href', link);
+    } else {
+      this._findDOMEl('.hig__global-nav__sidenav__header-link', this.el).removeAttribute('href');
+    }
   }
 
   setSuperHeaderLabel(label) {
@@ -72,7 +76,11 @@ class SideNav extends Core {
   }
 
   setSuperHeaderLink(link) {
-    this._findDOMEl('.hig__global-nav__sidenav__super-header-link', this.el).setAttribute('href', link);
+    if (link) {
+      this._findDOMEl('.hig__global-nav__sidenav__super-header-link', this.el).setAttribute('href', link);
+    } else {
+      this._findDOMEl('.hig__global-nav__sidenav__super-header-link', this.el).removeAttribute('href');
+    }
   }
 }
 
