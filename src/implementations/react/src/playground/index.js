@@ -137,6 +137,7 @@ class Playground extends React.Component {
     const sideNavProps = {
       superHeaderLabel: "HIG",
       headerLabel: "Playground",
+      headerLink: "http://apple.com",
       links,
       onLogoClick: event => {
         event.preventDefault();
