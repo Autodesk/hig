@@ -1957,6 +1957,44 @@
           }
         }
       }
+    },
+    "Tabs": {
+      "methods": {
+        "addTab": {
+          "desc": "Pass in an instance of a Tab partial",
+          "params": [
+            "{Tab} Tab - instance of a Tab partial",
+            "{Tab} [ReferenceTab] - (Optional) reference node for insertBefore"
+          ]
+        }
+      },
+      "partials": {
+        "Tab": {
+          "defaults": {
+            "label": "{String} Label of the tab"
+          },
+          "methods": {
+            "activate": {
+              "desc": "activates the tab"
+            },
+            "deactivate": {
+              "desc": "deactivates the tab"
+            },
+            "onClick": {
+              "desc": "Calls the provided callback when user clicks on the tab",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            },
+            "setLabel": {
+              "desc": "sets the label",
+              "params": [
+                "{String} label - new label"
+              ]
+            }
+          }
+        }
+      }
     }
+
   }
 }

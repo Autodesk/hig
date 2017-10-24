@@ -21,20 +21,21 @@ class Tab extends Core {
   }
 
   setLabel(label) {
-    this.el.textContent = label;
     this.el.setAttribute('title', label);
+    this._findDOMEl('.hig__tabs__label', this.el).textContent = label;
+    this._findDOMEl('.hig__tabs__active-label', this.el).textContent = label;
   }
 
   activate() {
-    this.el.classList.add('hig__global-nav__sub-nav__tabs__tab--active');
+    this.el.classList.add('hig__tabs__tab--active');
   }
 
   deactivate() {
-    this.el.classList.remove('hig__global-nav__sub-nav__tabs__tab--active');
+    this.el.classList.remove('hig__tabs__tab--active');
   }
 }
 
-Tab._interface = Interface.components.GlobalNav.partials.SubNav.partials.Tabs.partials.Tab;
+Tab._interface = Interface.components.Tabs.partials.Tab;
 Tab._defaults = {
   label: 'Tab'
 };

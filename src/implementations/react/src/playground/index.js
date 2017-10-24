@@ -25,6 +25,7 @@ import RadioButtonSection from "./sections/RadioButtonSection";
 import RangeSection from "./sections/RangeSection";
 import RichTextSection from "./sections/RichTextSection";
 import SelectableTableSection from "./sections/SelectableTableSection";
+import TabsSection from "./sections/TabsSection";
 import TableSection from "./sections/TableSection";
 import TextAreaSection from "./sections/TextAreaSection";
 import TextFieldSection from "./sections/TextFieldSection";
@@ -174,6 +175,7 @@ class Playground extends React.Component {
         isSideNavOpen={this.state.isSideNavOpen}
         onHamburgerClick={this.toggleSideNav}
       >
+        <TabsSection />
         <ButtonSection />
         <IconButtonSection />
         <CheckboxSection />
