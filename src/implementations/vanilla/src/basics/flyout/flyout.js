@@ -4,7 +4,18 @@ const Template = require('./flyout.html');
 const Interface = require('interface.json');
 const Core = require('../../helpers/js/_core.js');
 
-const OPEN_CLASS = 'hig__flyout--open';
+import CSSTransition from '../../helpers/js/css-transition.js';
+
+const OPENING_CLASS = 'hig__flyout--entering';
+const OPENED_CLASS = 'hig__flyout--entered';
+const CLOSING_CLASS = 'hig__flyout--exiting';
+const CLOSED_CLASS = 'hig__flyout--exited';
+const ANIMATION_CLASSES = [
+  OPENING_CLASS,
+  OPENED_CLASS,
+  CLOSING_CLASS,
+  CLOSED_CLASS
+];
 
 const ANCHOR_POINTS = [
   'top-left',
@@ -36,14 +47,16 @@ class Flyout extends Core {
 
   _componentDidMount() {
     this.setAnchorPoint(this.initialOptions.anchorPoint);
+    this.flyoutContainer = this._findDOMEl('.hig__flyout__container', this.el);
+    this.containerAnimation = new CSSTransition(this.el, 'hig__flyout')
   }
 
   open() {
-    this.el.classList.add(OPEN_CLASS);
-  }
+    this.containerAnimation.enter();
+  };
 
   close() {
-    this.el.classList.remove(OPEN_CLASS);
+    this.containerAnimation.exit();
   }
 
   onClickOutside(fn) {
@@ -74,7 +87,9 @@ class Flyout extends Core {
 
     const container = this._findDOMEl('.hig__flyout__container', this.el);
     container.classList.remove(
-      ...Flyout.AvailableAnchorPoints.map(s => `hig__flyout__container--anchor-${s}`)
+      ...Flyout.AvailableAnchorPoints.map(
+        s => `hig__flyout__container--anchor-${s}`
+      )
     );
     container.classList.add(`hig__flyout__container--anchor-${anchorPoint}`);
   }
@@ -83,7 +98,7 @@ class Flyout extends Core {
     if (this.el.contains(event.target) || this.el === event.target) {
       return;
     }
-    if (this.el.classList.contains(OPEN_CLASS)) {
+    if (this.containerAnimation.isEntering()) {
       callback();
     }
   }
