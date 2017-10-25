@@ -1,7 +1,6 @@
 const Core = require('./_core');
 
 function ensureInterfaceIsDefined(instance) {
-  // CHECK INTERFACE COMPATIBILITY
   if (!instance._interface) {
     console.warn(
       'NO INTERFACE SET FOR CLASS, PLEASE DEFINE INTERFACE IN _interface PROPERTY OF YOUR CLASS'
@@ -20,8 +19,7 @@ function ensureDefaultsAreDefined(instance) {
 }
 
 function ensureImplementedMethodsAreDefinedInInterface(instance, instanceMethodNames) {
-  const coreMethods = Object.getOwnPropertyNames(Core.prototype);
-  // CHECK IF ALL METHODS IN COMPONENT ARE DEFINED IN INTERFACE
+  const coreMethods = Object.getOwnPropertyNames(Object.getPrototypeOf(Object.getPrototypeOf(instance)));
   instanceMethodNames.forEach((instanceMethodName) => {
     const coreMethodMissing = !coreMethods.includes(instanceMethodName);
     if (
@@ -35,11 +33,10 @@ function ensureImplementedMethodsAreDefinedInInterface(instance, instanceMethodN
         }" IS NOT DEFINED AS INTERFACE OR IS NOT A VALID INTERFACE METHOD`
       );
     }
-  }, instance);
+  });
 }
 
 function ensureAllInterfaceMethodsAreImplemented(instance, instanceMethodNames) {
-  // CHECK IF ALL METHODS IN INTERFACE ARE IMPLEMENTED
   Object.keys(instance._interface.methods).forEach((interfaceMethodName) => {
     if (!instanceMethodNames.includes(interfaceMethodName)) {
       console.error(
