@@ -1,3 +1,5 @@
+require('./helpers/js/polyfills.js');
+
 const Hig = {};
 require('./basics/container/container.js');
 

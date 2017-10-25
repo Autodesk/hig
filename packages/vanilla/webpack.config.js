@@ -19,7 +19,7 @@ const r = {
           'es2015',
           'stage-2'
         ],
-        plugins: [],
+        plugins: ['transform-object-rest-spread'],
         babelrc: false,
         compact: false
       },
