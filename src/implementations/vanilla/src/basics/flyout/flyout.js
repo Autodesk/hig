@@ -98,7 +98,7 @@ class Flyout extends Core {
     if (this.el.contains(event.target) || this.el === event.target) {
       return;
     }
-    if (this.el.classList.contains(OPENED_CLASS)) {
+    if (this.containerAnimation.isEntering()) {
       callback();
     }
   }
