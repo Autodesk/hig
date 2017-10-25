@@ -89,7 +89,7 @@
   display: inline-block;
 }
 
-.hig__flyout--opening > {
+.hig__flyout--entering > {
   .hig__flyout__container {
     &--anchor-bottom-center, &--anchor-bottom-left, &--anchor-bottom-right {
       animation-name: show-flyout-anchor-bottom;
@@ -113,7 +113,7 @@
   }
 }
 
-.hig__flyout--closing {
+.hig__flyout--exiting {
   .hig__flyout__container {
     &--anchor-bottom-center, &--anchor-bottom-left, &--anchor-bottom-right {
       animation-name: hide-flyout-anchor-bottom;
@@ -142,16 +142,16 @@
   display: none;
   z-index: $flyout-container-layer;
 
-  .hig__flyout--opening > &,
-  .hig__flyout--opened > & {
+  .hig__flyout--entering > &,
+  .hig__flyout--entered > & {
     display: block;
   }
 
-  .hig__flyout--closing > & {
+  .hig__flyout--exiting > & {
     display: block;
   }
 
-  .hig__flyout--closed > & {
+  .hig__flyout--exited > & {
     display: none;
   }
 
