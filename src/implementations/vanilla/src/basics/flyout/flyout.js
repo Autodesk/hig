@@ -4,10 +4,12 @@ const Template = require('./flyout.html');
 const Interface = require('interface.json');
 const Core = require('../../helpers/js/_core.js');
 
-const OPENING_CLASS = 'hig__flyout--opening';
-const OPENED_CLASS = 'hig__flyout--opened';
-const CLOSING_CLASS = 'hig__flyout--closing';
-const CLOSED_CLASS = 'hig__flyout--closed';
+import CSSTransition from '../../helpers/js/css-transition.js';
+
+const OPENING_CLASS = 'hig__flyout--entering';
+const OPENED_CLASS = 'hig__flyout--entered';
+const CLOSING_CLASS = 'hig__flyout--exiting';
+const CLOSED_CLASS = 'hig__flyout--exited';
 const ANIMATION_CLASSES = [
   OPENING_CLASS,
   OPENED_CLASS,
@@ -46,60 +48,15 @@ class Flyout extends Core {
   _componentDidMount() {
     this.setAnchorPoint(this.initialOptions.anchorPoint);
     this.flyoutContainer = this._findDOMEl('.hig__flyout__container', this.el);
+    this.containerAnimation = new CSSTransition(this.el, 'hig__flyout')
   }
 
   open() {
-    if (
-      this.el.classList.contains(OPENING_CLASS) ||
-      this.el.classList.contains(OPENED_CLASS)
-    ) {
-      return;
-    }
-
-    this._resetAnimationState();
-    this.flyoutContainer.addEventListener(
-      'animationend',
-      this.handleOpenComplete
-    );
-    this.el.classList.add(OPENING_CLASS);
-  }
-
-  handleOpenComplete = (event) => {
-    this._resetAnimationState();
-    this.el.classList.add(OPENED_CLASS);
+    this.containerAnimation.enter();
   };
 
   close() {
-    if (
-      this.el.classList.contains(CLOSING_CLASS) ||
-      this.el.classList.contains(CLOSED_CLASS)
-    ) {
-      return;
-    }
-    console.log('Closing flyout');
-    this._resetAnimationState();
-    this.flyoutContainer.addEventListener(
-      'animationend',
-      this.handleCloseComplete
-    );
-    this.el.classList.add(CLOSING_CLASS);
-  }
-
-  handleCloseComplete = (event) => {
-    this._resetAnimationState();
-    this.el.classList.add(CLOSED_CLASS);
-  };
-
-  _resetAnimationState() {
-    this.el.classList.remove(...ANIMATION_CLASSES);
-    this.flyoutContainer.removeEventListener(
-      'animationend',
-      this.handleOpenComplete
-    );
-    this.flyoutContainer.removeEventListener(
-      'animationend',
-      this.handleCloseComplete
-    );
+    this.containerAnimation.exit();
   }
 
   onClickOutside(fn) {
