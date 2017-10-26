@@ -1,5 +1,4 @@
 const Template = require('./lists.html');
-const Interface = require('interface.json');
 const Core = require('_core.js');
 
 const List = require('./_list/_list.js');
@@ -76,19 +75,22 @@ class Lists extends Core {
   }
 }
 
-// HACKY HACKY HACKY :(
-Lists._interface = {
-  methods: {
-    addAccount: {},
-    addProject: {},
-    setProjectTitle: {},
-    setAccountTitle: {}
-  }
-};
 Lists._defaults = {
   projectTitle: '',
   accountTitle: ''
 };
 Lists._partials = {};
+
+if (process.env.NODE_ENV !== 'production') {
+  // HACKY HACKY HACKY :(
+  Lists._interface = {
+    methods: {
+      addAccount: {},
+      addProject: {},
+      setProjectTitle: {},
+      setAccountTitle: {}
+    }
+  };
+}
 
 module.exports = Lists;

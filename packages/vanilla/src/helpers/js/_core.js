@@ -15,10 +15,19 @@ class Core {
 
     // MIX OPTIONS WITH DEFAULTS
     // This modifies the passed options object
-    options = {
-      ...this._defaults,
-      ...options
-    };
+    if (options) {
+      const defaults = this._defaults;
+      if (defaults) {
+        for (const key in defaults) {
+          if (!defaults.hasOwnProperty(key)) continue; // skip loop if the property is from prototype
+          if (!options[key]) {
+            options[key] = defaults[key];
+          }
+        }
+      }
+    } else {
+      options = this._defaults;
+    }
 
     // SET PARTIALS IF ANY
     if (this._partials) {
@@ -257,21 +266,6 @@ class Core {
       return existingEl.remove();
     }
     return null;
-  }
-
-  /**
-     * Get the Icon SVG String
-     * @param {String} icon - icon ID
-     * @returns {String} String with SVG of the icon
-
-
-    /**
-     * Returns valid interface methods
-     * @returns {Object} interface methods
-     */
-
-  help() {
-    return this._interface;
   }
 
   defaults() {

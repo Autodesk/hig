@@ -1,7 +1,6 @@
 import './text-cell.scss';
 
 const Template = require('./text-cell.html');
-const Interface = require('interface.json');
 const Core = require('_core.js');
 
 const TextCellContent = require('../text-cell-content/text-cell-content.js');
@@ -39,11 +38,14 @@ class TextCell extends Core {
   }
 }
 
-TextCell._interface =
-  Interface.components.Table.partials.TableRow.partials.TextCell;
 
 TextCell._defaults = {};
 TextCell._partials = {};
 TextCell.AvailableAlignments = AvailableAlignments;
+
+if (process.env.NODE_ENV !== 'production') {
+  const Interface = require('interface.json');
+  TextCell._interface = Interface.components.Table.partials.TableRow.partials.TextCell;
+}
 
 module.exports = TextCell;

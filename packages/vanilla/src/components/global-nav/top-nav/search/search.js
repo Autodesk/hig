@@ -1,7 +1,6 @@
 import './search.scss';
 
 const Template = require('./search.html');
-const Interface = require('interface.json');
 const Core = require('_core.js');
 const Icon = require('../../../../basics/icon/icon.js');
 
@@ -109,12 +108,15 @@ class Search extends Core {
   }
 }
 
-Search._interface =
-  Interface.components.GlobalNav.partials.TopNav.partials.Search;
 Search._defaults = {
   query: '',
   placeholder: 'Search'
 };
 Search._partials = {};
+
+if (process.env.NODE_ENV !== 'production') {
+  const Interface = require('interface.json');
+  Search._interface = Interface.components.GlobalNav.partials.TopNav.partials.Search;
+}
 
 module.exports = Search;

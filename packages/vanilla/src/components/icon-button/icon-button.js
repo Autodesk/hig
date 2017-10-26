@@ -1,9 +1,8 @@
 import './icon-button.scss';
 
 const Template = require('./icon-button.html');
-const Interface = require('interface.json');
 const Core = require('_core.js');
-const Icon = require("../../basics/icon/icon.js");
+const Icon = require('../../basics/icon/icon.js');
 
 
 /**
@@ -16,15 +15,15 @@ class IconButton extends Core {
   constructor(options) {
     super(options);
     this._render(Template, options);
-    this.initialOptions = options
+    this.initialOptions = options;
   }
 
-  _componentDidMount(){
+  _componentDidMount() {
     if (this.initialOptions.icon) {
       this.setIcon(this.initialOptions.icon);
     }
   }
-  
+
 
   setTitle(title) {
     this.el.setAttribute('title', title);
@@ -35,7 +34,7 @@ class IconButton extends Core {
   }
 
   setIcon(icon) {
-    const mountEl = this._findDOMEl('.hig__icon-button__icon', this.el)
+    const mountEl = this._findDOMEl('.hig__icon-button__icon', this.el);
     this._findOrCreateIconComponent(mountEl).setNameOrSVG(icon);
   }
 
@@ -65,23 +64,25 @@ class IconButton extends Core {
     return this._attachListener('focusout', this.el, this.el, fn);
   }
 
-  _findOrCreateIconComponent(mountElOrSelector, name='icon') {
+  _findOrCreateIconComponent(mountElOrSelector, name = 'icon') {
     if (this[name]) {
-        return this[name];
-    } else {
-        this[name] = new Icon({});
-        this[name].mount(mountElOrSelector);
-        return this[name];
+      return this[name];
     }
+    this[name] = new Icon({});
+    this[name].mount(mountElOrSelector);
+    return this[name];
   }
-  
 }
 
-IconButton._interface = Interface.components.IconButton;
 IconButton._defaults = {
   title: 'link',
   link: '#',
   icon: false
 };
+
+if (process.env.NODE_ENV !== 'production') {
+  const Interface = require('interface.json');
+  IconButton._interface = Interface.components.IconButton;
+}
 
 module.exports = IconButton;

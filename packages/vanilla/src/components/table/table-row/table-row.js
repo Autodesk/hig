@@ -1,7 +1,6 @@
 import './table-row.scss';
 
 const Template = require('./table-row.html');
-const Interface = require('interface.json');
 const Core = require('_core.js');
 
 const TextCell = require('./text-cell/text-cell.js');
@@ -39,12 +38,16 @@ class TableRow extends Core {
   }
 }
 
-TableRow._interface = Interface.components.Table.partials.TableRow;
 TableRow._defaults = {};
 TableRow._partials = {
   TextCell,
   SlotCell,
   IconCell
 };
+
+if (process.env.NODE_ENV !== 'production') {
+  const Interface = require('interface.json');
+  TableRow._interface = Interface.components.Table.partials.TableRow;
+}
 
 module.exports = TableRow;

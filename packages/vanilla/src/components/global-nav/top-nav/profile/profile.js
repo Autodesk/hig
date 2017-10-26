@@ -1,12 +1,11 @@
 import './profile.scss';
 
-var Template = require ('./profile.html');
-var Interface = require('interface.json');
-var Core = require('_core.js');
+const Template = require('./profile.html');
+const Core = require('_core.js');
 
-var Flyout = require('./../../../../basics/flyout/flyout.js');
-var ProfileImage = require('./_profile-image/profile-image.js');
-var ProfileFlyoutContent = require('./_profile-flyout-content/profile-flyout-content.js');
+const Flyout = require('./../../../../basics/flyout/flyout.js');
+const ProfileImage = require('./_profile-image/profile-image.js');
+const ProfileFlyoutContent = require('./_profile-flyout-content/profile-flyout-content.js');
 /**
  * Creates an Profile
  *
@@ -15,8 +14,7 @@ var ProfileFlyoutContent = require('./_profile-flyout-content/profile-flyout-con
  */
 
 class Profile extends Core {
-
-  constructor(options){
+  constructor(options) {
     super(options);
     this.options = options;
     this._render(Template, options);
@@ -85,16 +83,20 @@ class Profile extends Core {
   }
 }
 
-Profile._interface = Interface['components']['GlobalNav']['partials']['TopNav']['partials']['Profile'];
 
 Profile._defaults = {
   image: 'https://placekitten.com/g/50/50',
   email: 'email@example.com',
   name: 'name',
   profileSettingsLink: 'https://www.autodesk.com',
-  profileSettingsLabel: "Profile Settings",
+  profileSettingsLabel: 'Profile Settings',
   signOutLink: '#',
-  signOutLabel: "Sign Out"
+  signOutLabel: 'Sign Out'
 };
+
+if (process.env.NODE_ENV !== 'production') {
+  const Interface = require('interface.json');
+  Profile._interface = Interface.components.GlobalNav.partials.TopNav.partials.Profile;
+}
 
 module.exports = Profile;

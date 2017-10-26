@@ -1,7 +1,6 @@
 import './top-nav.scss';
 
 const Template = require('./top-nav.html');
-const Interface = require('interface.json');
 const Core = require('_core.js');
 
 const Profile = require('./profile/profile.js');
@@ -111,7 +110,6 @@ class TopNav extends Core {
   }
 }
 
-TopNav._interface = Interface.components.GlobalNav.partials.TopNav;
 TopNav._defaults = {
   logo: null,
   logoLink: null
@@ -124,5 +122,10 @@ TopNav._partials = {
   Help,
   Search
 };
+
+if (process.env.NODE_ENV !== 'production') {
+  const Interface = require('interface.json');
+  TopNav._interface = Interface.components.GlobalNav.partials.TopNav;
+}
 
 module.exports = TopNav;

@@ -1,7 +1,6 @@
 import './global-nav.scss';
 
 const Template = require('./global-nav.html');
-const Interface = require('interface.json');
 const Core = require('_core.js');
 
 const SideNav = require('./side-nav/side-nav.js');
@@ -55,12 +54,16 @@ class GlobalNav extends Core {
   }
 }
 
-GlobalNav._interface = Interface.components.GlobalNav;
 GlobalNav._defaults = {};
 GlobalNav._partials = {
   SideNav,
   TopNav,
   SubNav
 };
+
+if (process.env.NODE_ENV !== 'production') {
+  const Interface = require('interface.json');
+  GlobalNav._interface = Interface.components.GlobalNav;
+}
 
 module.exports = GlobalNav;

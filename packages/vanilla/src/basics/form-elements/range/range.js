@@ -1,7 +1,6 @@
 import './range.scss';
 
 const Template = require('./range.html');
-const Interface = require('interface.json');
 const Core = require('_core.js');
 
 /**
@@ -107,7 +106,6 @@ class Range extends Core {
   }
 }
 
-Range._interface = Interface.basics.FormElements.partials.Range;
 Range._defaults = {
   instructions: '',
   label: '',
@@ -118,5 +116,10 @@ Range._defaults = {
 };
 
 Range._partials = {};
+
+if (process.env.NODE_ENV !== 'production') {
+  const Interface = require('interface.json');
+  Range._interface = Interface.basics.FormElements.partials.Range;
+}
 
 module.exports = Range;

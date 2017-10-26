@@ -1,10 +1,9 @@
 import './sub-nav.scss';
 
-let Template = require('./sub-nav.html');
-let Interface = require('interface.json');
-let Core = require('_core.js');
+const Template = require('./sub-nav.html');
+const Core = require('_core.js');
 
-let Tabs = require('./tabs/tabs.js');
+const Tabs = require('./tabs/tabs.js');
 const Icon = require('../../../basics/icon/icon.js');
 
 /**
@@ -72,18 +71,16 @@ class SubNav extends Core {
     );
   }
 
-  _findOrCreateIconComponent(mountElOrSelector, name = "icon") {
+  _findOrCreateIconComponent(mountElOrSelector, name = 'icon') {
     if (this[name]) {
       return this[name];
-    } 
-      this[name] = new Icon({});
-      this[name].mount(mountElOrSelector);
-      return this[name];
-    
+    }
+    this[name] = new Icon({});
+    this[name].mount(mountElOrSelector);
+    return this[name];
   }
 }
 
-SubNav._interface = Interface.components.GlobalNav.partials.SubNav;
 SubNav._defaults = {
   moduleIndicatorName: 'Module Name',
   moduleIndicatorIcon: ''
@@ -91,5 +88,10 @@ SubNav._defaults = {
 SubNav._partials = {
   Tabs
 };
+
+if (process.env.NODE_ENV !== 'production') {
+  const Interface = require('interface.json');
+  SubNav._interface = Interface.components.GlobalNav.partials.SubNav;
+}
 
 module.exports = SubNav;

@@ -1,7 +1,6 @@
 import './group.scss';
 
 const Template = require('./group.html');
-const Interface = require('interface.json');
 const Core = require('_core.js');
 
 const Module = require('./module/module.js');
@@ -33,10 +32,14 @@ class Group extends Core {
   }
 }
 
-Group._interface = Interface.components.GlobalNav.partials.SideNav.partials.Group;
 Group._defaults = {};
 Group._partials = {
   Module
 };
+
+if (process.env.NODE_ENV !== 'production') {
+  const Interface = require('interface.json');
+  Group._interface = Interface.components.GlobalNav.partials.SideNav.partials.Group;
+}
 
 module.exports = Group;

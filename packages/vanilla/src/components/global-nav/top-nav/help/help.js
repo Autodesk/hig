@@ -1,6 +1,5 @@
 import './help.scss';
 
-const Interface = require('interface.json');
 const Core = require('_core.js');
 const Template = require('./help.html');
 
@@ -61,7 +60,6 @@ class Help extends Core {
   }
 }
 
-Help._interface = Interface.components.GlobalNav.partials.TopNav.partials.Help;
 Help._defaults = {
   title: 'Help'
 };
@@ -69,5 +67,10 @@ Help._partials = {
   Group,
   Option
 };
+
+if (process.env.NODE_ENV !== 'production') {
+  const Interface = require('interface.json');
+  Help._interface = Interface.components.GlobalNav.partials.TopNav.partials.Help;
+}
 
 module.exports = Help;

@@ -1,5 +1,4 @@
 const Template = require('./checkbox.html');
-const Interface = require('interface.json');
 const Core = require('_core.js');
 const InputButton = require('../input-button/input-button.js');
 const Icon = require('../../icon/icon.js');
@@ -45,13 +44,16 @@ inputButtonMethods.forEach((fn) => {
   });
 });
 
-Checkbox._interface =
-  Interface.basics.FormElements.partials.Checkbox;
 Checkbox._defaults = {
   label: '',
   name: '',
   value: ''
 };
 Checkbox._partials = {};
+
+if (process.env.NODE_ENV !== 'production') {
+  const Interface = require('interface.json');
+  Checkbox._interface = Interface.basics.FormElements.partials.Checkbox;
+}
 
 module.exports = Checkbox;

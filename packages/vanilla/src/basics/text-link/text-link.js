@@ -1,7 +1,6 @@
 import './text-link.scss';
 
 const Template = require('./text-link.html');
-const Interface = require('interface.json');
 const Core = require('../../helpers/js/_core.js');
 
 const TYPES = ['primary', 'secondary'];
@@ -59,7 +58,6 @@ class TextLink extends Core {
   }
 }
 
-TextLink._interface = Interface.basics.TextLink;
 TextLink.AvailableTypes = TYPES;
 
 TextLink._defaults = {
@@ -67,5 +65,10 @@ TextLink._defaults = {
   text: 'Text',
   type: 'primary'
 };
+
+if (process.env.NODE_ENV !== 'production') {
+  const Interface = require('interface.json');
+  TextLink._interface = Interface.basics.TextLink;
+}
 
 module.exports = TextLink;

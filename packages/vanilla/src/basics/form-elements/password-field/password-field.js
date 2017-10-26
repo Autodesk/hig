@@ -1,5 +1,4 @@
 const Template = require('./password-field.html');
-const Interface = require('interface.json');
 const Core = require('_core.js');
 
 const TextField = require('../text-field/text-field');
@@ -84,10 +83,14 @@ textFieldMethods.forEach((fn) => {
   });
 });
 
-PasswordField._interface = Interface.basics.FormElements.partials.PasswordField;
 PasswordField._defaults = Object.assign({}, TextField._defaults, {
   label: 'Password'
 });
 PasswordField._partials = {};
+
+if (process.env.NODE_ENV !== 'production') {
+  const Interface = require('interface.json');
+  PasswordField._interface = Interface.basics.FormElements.partials.PasswordField;
+}
 
 module.exports = PasswordField;

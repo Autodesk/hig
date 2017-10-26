@@ -1,7 +1,6 @@
 import './text-head-cell.scss';
 
 const Template = require('./text-head-cell.html');
-const Interface = require('interface.json');
 const Core = require('_core.js');
 
 const frToPercentage = require('../../../../helpers/js/_frtopercentage.js');
@@ -43,13 +42,16 @@ class TextHeadCell extends Core {
   }
 }
 
-TextHeadCell._interface =
-  Interface.components.Table.partials.TableHead.partials.TextHeadCell;
 TextHeadCell._defaults = {
   text: '',
   alignment: '',
   width: '1fr'
 };
 TextHeadCell.AvailableAlignments = AvailableAlignments;
+
+if (process.env.NODE_ENV !== 'production') {
+  const Interface = require('interface.json');
+  TextHeadCell._interface = Interface.components.Table.partials.TableHead.partials.TextHeadCell;
+}
 
 module.exports = TextHeadCell;

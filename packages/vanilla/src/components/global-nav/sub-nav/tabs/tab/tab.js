@@ -1,7 +1,6 @@
 import './tab.scss';
 
 const Template = require('./tab.html');
-const Interface = require('interface.json');
 const Core = require('_core.js');
 
 /**
@@ -34,10 +33,14 @@ class Tab extends Core {
   }
 }
 
-Tab._interface = Interface.components.GlobalNav.partials.SubNav.partials.Tabs.partials.Tab;
 Tab._defaults = {
   label: 'Tab'
 };
 Tab._partials = {};
+
+if (process.env.NODE_ENV !== 'production') {
+  const Interface = require('interface.json');
+  Tab._interface = Interface.components.GlobalNav.partials.SubNav.partials.Tabs.partials.Tab;
+}
 
 module.exports = Tab;

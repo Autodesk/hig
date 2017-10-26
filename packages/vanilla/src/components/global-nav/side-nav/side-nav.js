@@ -1,7 +1,6 @@
 import './side-nav.scss';
 
 const Template = require('./side-nav.html');
-const Interface = require('interface.json');
 const Core = require('_core.js');
 
 const Link = require('./link/link.js');
@@ -84,7 +83,6 @@ class SideNav extends Core {
   }
 }
 
-SideNav._interface = Interface.components.GlobalNav.partials.SideNav;
 SideNav._defaults = {
   headerLabel: null,
   headerLink: null,
@@ -97,5 +95,10 @@ SideNav._partials = {
   Link,
   Search
 };
+
+if (process.env.NODE_ENV !== 'production') {
+  const Interface = require('interface.json');
+  SideNav._interface = Interface.components.GlobalNav.partials.SideNav;
+}
 
 module.exports = SideNav;

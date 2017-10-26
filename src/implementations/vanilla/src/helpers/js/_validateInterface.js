@@ -37,7 +37,8 @@ function ensureImplementedMethodsAreDefinedInInterface(instance, instanceMethodN
 }
 
 function ensureAllInterfaceMethodsAreImplemented(instance, instanceMethodNames) {
-  Object.keys(instance._interface.methods).forEach((interfaceMethodName) => {
+  const interfaceMethods = instance._interface.methods || {};
+  Object.keys(interfaceMethods).forEach((interfaceMethodName) => {
     if (!instanceMethodNames.includes(interfaceMethodName)) {
       console.error(
         `METHOD: "${
