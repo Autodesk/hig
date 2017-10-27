@@ -55,5 +55,8 @@
     "svgo": "^0.7.2",
     "webpack": "^3.5.5",
     "hig-interface": "^0.1.0"
+  },
+  "dependencies": {
+    "hig-interface": "^0.1.1"
   }
 }
