@@ -3,6 +3,7 @@ require('./helpers/js/polyfills.js');
 const Hig = {};
 require('./basics/container/container.js');
 
+Hig.Core = require('./helpers/js/_core');
 Hig.Avatar = require('./components/avatar/avatar.js');
 Hig.Button = require('./components/button/button.js');
 Hig.Checkbox = require('./basics/form-elements/checkbox/checkbox.js');
