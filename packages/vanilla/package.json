@@ -53,6 +53,7 @@
     "sass-loader": "^6.0.0",
     "style-loader": "^0.13.1",
     "svgo": "^0.7.2",
-    "webpack": "^3.5.5"
+    "webpack": "^3.5.5",
+    "hig-interface": "^0.1.0"
   }
 }
