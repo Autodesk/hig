@@ -1,13 +1,3 @@
-const Core = require('./_core');
-
-function ensureInterfaceIsDefined(instance) {
-  if (!instance._interface) {
-    console.warn(
-      'NO INTERFACE SET FOR CLASS, PLEASE DEFINE INTERFACE IN _interface PROPERTY OF YOUR CLASS'
-    );
-  }
-}
-
 function ensureDefaultsAreDefined(instance) {
   if (!instance._defaults) {
     console.warn(
@@ -19,11 +9,16 @@ function ensureDefaultsAreDefined(instance) {
 }
 
 function ensureImplementedMethodsAreDefinedInInterface(instance, instanceMethodNames) {
-  const coreMethods = Object.getOwnPropertyNames(Object.getPrototypeOf(Object.getPrototypeOf(instance)));
+  const coreMethods = Object.getOwnPropertyNames(
+    Object.getPrototypeOf(Object.getPrototypeOf(instance))
+  );
   instanceMethodNames.forEach((instanceMethodName) => {
     const coreMethodMissing = !coreMethods.includes(instanceMethodName);
     if (
-      coreMethodMissing && instanceMethodName[0] !== '_' && !instance._interface.methods[instanceMethodName]
+      coreMethodMissing
+        && instanceMethodName[0]
+        !== '_'
+        && !instance._interface.methods[instanceMethodName]
     ) {
       console.error(
         `METHOD: "${
@@ -67,11 +62,12 @@ function ensureAllOptionKeysAreDefinedInInterface(instance) {
 }
 
 function validateInterface(instance) {
+  if (!instance._interface) { return; }
+
   const instanceMethodNames = Object.getOwnPropertyNames(
     Object.getPrototypeOf(instance)
   );
 
-  ensureInterfaceIsDefined(instance);
   ensureDefaultsAreDefined(instance);
 
   ensureImplementedMethodsAreDefinedInInterface(instance, instanceMethodNames);

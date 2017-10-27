@@ -9,9 +9,7 @@ class Core {
      */
 
   constructor(options = {}) {
-    if (process.env.NODE_ENV !== 'production') {
-      validateInterface(this);
-    }
+    validateInterface(this);
 
     // MIX OPTIONS WITH DEFAULTS
     // This modifies the passed options object

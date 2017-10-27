@@ -60,7 +60,8 @@
     "style-loader": "^0.13.1",
     "svgo": "^0.7.2",
     "svg-url-loader": "^2.3.0",
-    "webpack": "^3.5.5"
+    "webpack": "^3.5.5",
+    "webpack-strip-block": "^0.2.0"
   },
   "dependencies": {
     "hig-interface": "^0.1.5"
