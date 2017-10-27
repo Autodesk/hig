@@ -7,6 +7,8 @@ export {
   default as Dropdown
 } from "./elements/components/FormElements/Dropdown";
 export { default as Flyout } from "./elements/components/Flyout";
+
+export { default as Tooltip } from "./elements/components/Tooltip";
 export {
   default as GlobalNav
 } from "./elements/components/GlobalNav/GlobalNav";
@@ -34,4 +36,6 @@ export {
 export { default as TextField } from "./adapters/FormElements/TextFieldAdapter";
 export { default as TextLink } from "./adapters/TextLinkAdapter";
 export { default as Table } from "./elements/components/Table";
+export { default as Tabs } from "./elements/components/Tabs";
+export { Tab } from "./elements/components/Tabs";
 export * from "./elements/components/Typography";

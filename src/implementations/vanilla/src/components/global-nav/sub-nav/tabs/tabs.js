@@ -1,10 +1,10 @@
 import './tabs.scss';
 
-var Template = require('./tabs.html');
-var Interface = require('interface.json');
-var Core = require('_core.js');
+const Template = require('./tabs.html');
+const Interface = require('interface.json');
+const Core = require('_core.js');
 
-var Tab = require('./tab/tab.js');
+const Tab = require('./tab/tab.js');
 
 /**
  * Creates a Tabs
@@ -13,24 +13,22 @@ var Tab = require('./tab/tab.js');
  */
 
 class Tabs extends Core {
+  constructor(options) {
+    super(options);
+    this._render(Template, options);
+  }
 
-    constructor(options){
-        super(options);
-        this._render(Template, options);
+  addTab(tabInstance, referenceTab) {
+    if (tabInstance instanceof Tab) {
+      this.mountPartialToComment('TAB', tabInstance, referenceTab);
     }
-
-    addTab(tabInstance, referenceTab){
-        if(tabInstance instanceof Tab){
-            this.mountPartialToComment('TAB', tabInstance, referenceTab)
-        }
-    }
-
+  }
 }
 
-Tabs._interface = Interface['components']['GlobalNav']['partials']['SubNav']['partials']['Tabs'];
+Tabs._interface = Interface.components.GlobalNav.partials.SubNav.partials.Tabs;
 Tabs._defaults = {};
 Tabs._partials = {
-    Tab: Tab
+  Tab
 };
 
 module.exports = Tabs;

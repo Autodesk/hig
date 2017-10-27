@@ -77,6 +77,13 @@ $hig__global-nav__sidenav--width: 280px;
   display: block;
   padding: 0 spacing(s) 0 spacing(m);
   font-weight: 600;
+  color: color('hig-gray-10');
+  text-decoration: none;
+
+  &[href]:hover {
+    cursor: pointer;
+    color: color(hig-blue-30);
+  }
 }
 
 .hig__global-nav__sidenav__super-header {

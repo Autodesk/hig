@@ -1,6 +1,6 @@
 {
   "name": "hig-react",
-  "version": "0.28.7",
+  "version": "0.28.8",
   "description": "hig components in react",
   "repository": {
     "type": "git",
@@ -20,9 +20,6 @@
     "lib/*.css"
   ],
   "devDependencies": {
-    "@storybook/addon-info": "^3.1.0",
-    "@storybook/addon-knobs": "^3.2.0",
-    "@storybook/react": "^3.1.0",
     "@types/jest": "^19.2.3",
     "@types/node": "^7.0.21",
     "@types/react": "^15.0.24",
@@ -53,16 +50,13 @@
     "react-scripts": "1.0.14",
     "react-test-renderer": "^15.6.1",
     "registry-url": "^3.1.0",
-    "storybook-addon-jsx": "^4.1.0",
     "typescript": "^2.3.2",
     "webpack": "^3.5.5"
   },
   "scripts": {
     "build-playground": "react-scripts build",
-    "build-storybook": "build-storybook -s public -o build/storybook",
     "debug-webpack": "NODE_ENV=development webpack",
     "deploy-playground": "react-scripts build && surge build",
-    "deploy-storybook": "npm run build-storybook && surge build/storybook",
     "generate-docs": "node ./scripts/generate-docs.js",
     "lib": "npm run lib-vanilla && npm run lib-react",
     "lib-react": "webpack && NODE_ENV=production webpack",
@@ -70,7 +64,7 @@
     "lint": "eslint ./src/** -c ./.eslintrc.js",
     "lint-fix": "eslint ./src/** -c ./.eslintrc.js --fix",
     "playground": "react-scripts start",
-    "storybook": "start-storybook -p 9009 -s public",
+    "start": "react-scripts start",
     "test": "react-scripts test --env=jsdom",
     "test-ci": "react-scripts test --env=jsdom --coverage --runInBand && npm run lint",
     "type-check": "tsc",

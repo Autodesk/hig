@@ -22,17 +22,12 @@
     color: color(hig-gray-10);
     text-decoration: none;
 
-    &:hover,
-    &--active {
-      color: color(hig-blue-30);
-      border-left-color: color(hig-blue-30);
-    }
-
     &:active,
     &:focus {
       outline: none;
       color: color(hig-blue-20);
       border-left-color: color(hig-blue-20);
+      
     }
 
     &__icon {
@@ -52,6 +47,15 @@
         }
       }
     }
+
+    &:hover,
+    &--active {
+      color: color(hig-blue-30);
+      border-left-color: color(hig-blue-30);
+      svg * {
+        fill: color(hig-blue-30);
+      }
+    }
   
     &__title {
       font-weight: 700;
@@ -60,9 +64,7 @@
       line-height: 32px;
     }
   }
-
   
-
   &--hide {
     display: none;
   }
