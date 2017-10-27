@@ -70,7 +70,9 @@
     "type-check": "tsc",
     "validate": "node ./scripts/validate-version/index.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "hig-vanilla": "^0.1.0"
+  },
   "jest": {
     "collectCoverageFrom": [
       "!src/index.js",
