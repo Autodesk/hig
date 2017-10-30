@@ -10,9 +10,9 @@ To start developing, simply run:
 npm run start
 ```
 
-To start seeing React examples in Storybook, run:
+To start seeing React examples on our playground, run:
 ```
-npm run storybook
+npm run playground
 ```
 
 To make a production build, run:
