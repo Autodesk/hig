@@ -37,7 +37,13 @@ const production = {
   module: {
     rules: [
       babel()
-    ]
+    ],
+    resolve: {
+      alias: {
+        "hig-vanilla": "hig-vanilla"
+      },
+      extensions: [ '.js', '.json' ]
+    }
   },
   plugins: [
     minify()
