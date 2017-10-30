@@ -68,7 +68,7 @@
     "validate": "node ./scripts/validate-version/index.js"
   },
   "dependencies": {
-    "hig-vanilla": "^0.1.0"
+    "hig-vanilla": "^0.1.2"
   },
   "jest": {
     "collectCoverageFrom": [
