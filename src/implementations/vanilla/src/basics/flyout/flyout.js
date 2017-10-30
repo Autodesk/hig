@@ -6,17 +6,6 @@ const Core = require('../../helpers/js/_core.js');
 
 import CSSTransition from '../../helpers/js/css-transition.js';
 
-const OPENING_CLASS = 'hig__flyout--entering';
-const OPENED_CLASS = 'hig__flyout--entered';
-const CLOSING_CLASS = 'hig__flyout--exiting';
-const CLOSED_CLASS = 'hig__flyout--exited';
-const ANIMATION_CLASSES = [
-  OPENING_CLASS,
-  OPENED_CLASS,
-  CLOSING_CLASS,
-  CLOSED_CLASS
-];
-
 const ANCHOR_POINTS = [
   'top-left',
   'top-center',
@@ -33,9 +22,9 @@ const ANCHOR_POINTS = [
 ];
 
 const AVAILABLE_TYPES = [
-  'tooltip', 
+  'tooltip',
   'default'
-]
+];
 
 /**
  * Creates a flyout
@@ -52,20 +41,20 @@ class Flyout extends Core {
 
   _componentDidMount() {
     this.setAnchorPoint(this.initialOptions.anchorPoint);
-    this._setType(this.initialOptions.type); 
+    this._setType(this.initialOptions.type);
     this.flyoutContainer = this._findDOMEl('.hig__flyout__container', this.el);
-    this.containerAnimation = new CSSTransition(this.el, 'hig__flyout')
+    this.containerAnimation = new CSSTransition(this.el, 'hig__flyout');
   }
 
   open() {
     this.containerAnimation.enter();
-  };
+  }
 
   close() {
     this.containerAnimation.exit();
   }
 
-  _setType(type='default'){
+  _setType(type = 'default') {
     if (!Flyout.AvailableTypes.includes(type)) {
       console.error(
         `Flyout cannot have type "${type}". Only these inset types are allowed: `,
@@ -73,7 +62,7 @@ class Flyout extends Core {
       );
       return;
     }
-    
+
     this.el.classList.remove(
       ...Flyout.AvailableTypes.map(s => `hig__flyout--${s}`)
     );
