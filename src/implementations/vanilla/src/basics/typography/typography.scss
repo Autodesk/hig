@@ -23,7 +23,7 @@
 .hig__typography__disabled {
   @include typography-base;
 
-  color: color('hig-gray-40');
+  color: color('hig-cool-gray-40');
 }
 
 // CAPTION
@@ -43,7 +43,7 @@
   font-weight: 400;
   font-size: 30px;
   line-height: 48px;
-  color: color('hig-gray-10');
+  color: color('hig-gray-70');
 }
 
 .hig__rich-text h2,
@@ -54,7 +54,7 @@
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
-  color: color('hig-gray-10');
+  color: color('hig-gray-70');
 }
 
 .hig__rich-text h3,
@@ -65,7 +65,7 @@
   font-weight: 600;
   font-size: 18px;
   line-height: 32px;
-  color: color('hig-gray-10');
+  color: color('hig-gray-70');
 }
 
 .hig__rich-text h4,
@@ -76,7 +76,7 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 24px;
-  color: color('hig-gray-30');
+  color: color('hig-cool-gray-40');
 }
 
 .hig__rich-text h5,
@@ -87,5 +87,5 @@
   font-weight: 700;
   font-size: 12px;
   line-height: 16px;
-  color: color('hig-gray-30');
+  color: color('hig-cool-gray-40');
 }
