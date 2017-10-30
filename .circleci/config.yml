@@ -49,7 +49,7 @@ jobs:
           key: dependency-cache-react-v5-{{ checksum "packages/react/package.json" }}
       - run:
           name: npm Install (React)
-          command: rm -rf node_modules && npm install
+          command: npm install hig-vanilla && npm install
           working_directory: packages/react
       # Store React node_modules for this revision of react/package.json
       - save_cache:
