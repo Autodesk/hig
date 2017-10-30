@@ -25,7 +25,7 @@
     @include chevron-border();
     top: -11px;
     border-top-width: 0;
-    border-color: transparent transparent color(hig-cool-gray-30) transparent;
+    border-color: transparent transparent color(hig-cool-gray-20) transparent;
   }
 
   &::after {
@@ -41,7 +41,7 @@
     @include chevron-border();
     right: -11px;
     border-right-width: 0;
-    border-color: transparent transparent transparent color(hig-cool-gray-30);
+    border-color: transparent transparent transparent color(hig-cool-gray-20);
   }
 
   &::after {
@@ -57,7 +57,7 @@
     @include chevron-border();
     bottom: -10px;
     border-bottom-width: 0;
-    border-color: color(hig-cool-gray-30) transparent transparent transparent;
+    border-color: color(hig-cool-gray-20) transparent transparent transparent;
   }
 
   &::after {
@@ -73,7 +73,7 @@
     @include chevron-border();
     left: -11px;
     border-left-width: 0;
-    border-color: transparent color(hig-cool-gray-30) transparent transparent;
+    border-color: transparent color(hig-cool-gray-20) transparent transparent;
   }
 
   &::after {
@@ -189,7 +189,7 @@
     transform: translateX(-100%);
     left: -4px;
     bottom: -7px;
-    
+
   }
 
   &--anchor-bottom-left {
@@ -204,8 +204,6 @@
     top: -4px;
     left: 50%;
     transform: translateX(-50%) translateY(-100%);
-
-   
   }
 
   &--anchor-bottom-right {
@@ -214,7 +212,7 @@
     margin-right: 5px;
     transform: translateY(-100%);
   }
-  
+
   &--anchor-left-top {
     left: 100%;
     top: -7px;
@@ -385,25 +383,18 @@
   width: 270px;
 
   background-color: color(hig-white);
-  border: 1px solid color(hig-cool-gray-30);
+  border: 1px solid color(hig-cool-gray-20);
   border-radius: 4px;
   @include shadow("common");
 }
 
-.hig__flyout--tooltip {
-  .hig__flyout__panel {
-    background-color: color(hig-cool-gray-50);
-    color: color(hig-white)
-  }
-}
-
 @keyframes show-flyout-anchor-top {
-  0% { 
+  0% {
     margin-top: 0px;
-    opacity: 0; 
+    opacity: 0;
   }
 
-  30% { 
+  30% {
     opacity: 1;
   }
 
@@ -417,25 +408,25 @@
 }
 
 @keyframes hide-flyout-anchor-top {
-  0% { 
+  0% {
     margin-top: 4px;
-    opacity: 1; 
+    opacity: 1;
   }
 
-  100% { 
+  100% {
     margin-top: 0px;
     opacity: 0;
-    
+
   }
 }
 
 @keyframes show-flyout-anchor-bottom {
-  0% { 
+  0% {
     top: 0px;
-    opacity: 0; 
+    opacity: 0;
   }
 
-  30% { 
+  30% {
     opacity: 1;
   }
 
@@ -449,12 +440,12 @@
 }
 
 @keyframes hide-flyout-anchor-bottom {
-  0% { 
+  0% {
     top: -4px;
-    opacity: 1; 
+    opacity: 1;
   }
 
-  100% { 
+  100% {
     opacity: 0;
     top: 0px;
   }
@@ -462,12 +453,12 @@
 
 
 @keyframes show-flyout-anchor-right {
-  0% { 
+  0% {
     left: 0;
-    opacity: 0; 
+    opacity: 0;
   }
 
-  30% { 
+  30% {
     opacity: 1;
   }
 
@@ -481,12 +472,12 @@
 }
 
 @keyframes hide-flyout-anchor-right {
-  0% { 
+  0% {
     left: -4px;
-    opacity: 1; 
+    opacity: 1;
   }
 
-  100% { 
+  100% {
     opacity: 0;
     left: 0px;
   }
@@ -494,13 +485,13 @@
 
 
 @keyframes show-flyout-anchor-left {
-  0% { 
+  0% {
     left: 100%;
     margin-left: 0px;
-    opacity: 0; 
+    opacity: 0;
   }
 
-  30% { 
+  30% {
     opacity: 1;
   }
 
@@ -514,9 +505,9 @@
 }
 
 @keyframes hide-flyout-anchor-left {
-  0% { 
+  0% {
     margin-left: 4px;
-    opacity: 1; 
+    opacity: 1;
   }
 
   100% {

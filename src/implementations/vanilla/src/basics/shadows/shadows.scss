@@ -11,33 +11,32 @@
 // }
 
 @mixin shadow($shadow-type:"common") {
-    @if ($shadow-type == "dropshadow") {
-        @include vendor-prefix('box-shadow', 0px 1px 4px color(hig-cool-gray-30));
-    } @else if ($shadow-type == "inner-right") {
-        @include vendor-prefix('box-shadow', inset -5px 0px 8px -5px color(hig-cool-gray-50));
-    } @else if ($shadow-type == "inner-left") {
-        @include vendor-prefix('box-shadow', inset 5px 0px 8px -5px color(hig-cool-gray-50));
-    } @else {
-        border: 1px color(hig-cool-gray-20) solid;
-        @include vendor-prefix('box-shadow', 0 0 4px color(hig-cool-gray-30));
-    }
+  @if ($shadow-type == "dropshadow") {
+    @include vendor-prefix('box-shadow', 0px 1px 4px color(hig-cool-gray-30));
+  } @else if ($shadow-type == "inner-right") {
+    @include vendor-prefix('box-shadow', inset -5px 0px 8px -5px color(hig-cool-gray-50));
+  } @else if ($shadow-type == "inner-left") {
+    @include vendor-prefix('box-shadow', inset 5px 0px 8px -5px color(hig-cool-gray-50));
+  } @else {
+    @include vendor-prefix('box-shadow', 0 0 4px color(hig-cool-gray-30));
+  }
 }
 
 
 // CSS Classes for OOCSS
 
 .hig__shadows__common{
-    @include shadow("common");
+  @include shadow("common");
 }
 
-.hig__shadows__dropshadow{
-    @include shadow("dropshadow");
+.hig__shadows__dropshadow {
+  @include shadow("dropshadow");
 }
 
-.hig__shadows__inner-right{
-    @include shadow("inner-right");
+.hig__shadows__inner-right {
+  @include shadow("inner-right");
 }
 
-.hig__shadows__inner-left{
-    @include shadow("inner-left");
+.hig__shadows__inner-left {
+  @include shadow("inner-left");
 }
