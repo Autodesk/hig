@@ -5,8 +5,8 @@
 .hig__avatar {
   position: relative;
   border-radius: 50%;
-  color: color(hig-gray-10);
-  background: color(hig-purple-50);
+  color: color(hig-gray-70);
+  background: color(hig-purple-40);
 
   &__image {
     position: absolute;
@@ -45,15 +45,15 @@ $sizes: (
 }
 
 $backgroundcolors: (
-  1: color(hig-slate-50),
-  2: color(hig-purple-50),
-  3: color(hig-pink-50),
-  4: color(hig-salmon-50),
-  5: color(hig-blue-50),
-  6: color(hig-green-50),
-  7: color(hig-turquoise-50),
-  8: color(hig-indigo-50),
-  9: color(hig-gold-50)
+  1: color(hig-turquoise-40),
+  2: color(hig-purple-40),
+  3: color(hig-pink-40),
+  4: color(hig-salmon-40),
+  5: color(hig-blue-40),
+  6: color(hig-green-40),
+  7: color(hig-turquoise-40),
+  8: color(hig-indigo-40),
+  9: color(hig-gold-40)
 );
 
 @each $background_name, $background_value in $backgroundcolors{

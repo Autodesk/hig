@@ -10,7 +10,7 @@
     margin-top: 22px;
 
     *::selection {
-        background-color: color(hig-turquoise-60);
+        background-color: color(hig-turquoise-30);
     }
 }
 
@@ -18,7 +18,7 @@
     position: absolute;
     padding-bottom: 8px;
 
-    color: color(hig-gray-30);
+    color: color(hig-cool-gray-50);
     font-size: 12px;
     font-weight: 500;
     line-height: 14px;
@@ -32,7 +32,7 @@
     }
 
     .hig__text-area__field:focus + & {
-        color: color(hig-blue-20);
+        color: color(hig-blue-60);
     }
 
     .hig__text-area--required &::after {
@@ -56,7 +56,7 @@
     }
 
     .hig__text-area__field[disabled] + & {
-        color: color(hig-gray-50);
+        color: color(hig-cool-gray-20);
     }
 }
 
@@ -66,24 +66,24 @@
     padding: 8px;
     margin: 0;
     border-radius: 4px;
-    border: 1px solid color(hig-gray-40);
+    border: 1px solid color(hig-cool-gray-30);
     resize: none;
 
     font-size: 14px;
     line-height: 20px;
-    color: color(hig-gray-10);
+    color: color(hig-gray-70);
     font-family: 'ArtifaktElement', sans-serif;
 
     @include placeholder {
         transition: color 0.2s;
         font-size: 14px;
         line-height: 20px;
-        color: color(hig-gray-30);
+        color: color(hig-cool-gray-50);
     }
 
     &:hover {
-        border: 1px solid color(hig-turquoise-30);
-        box-shadow: 0 0 0 1px color(hig-turquoise-30);
+        border: 1px solid color(hig-turquoise-50);
+        box-shadow: 0 0 0 1px color(hig-turquoise-50);
     }
 
     &.hig__text-area__field--no-value {
@@ -94,10 +94,10 @@
 
     &:focus {
         outline: none;
-        border: 1px solid color(hig-blue-20);
-        box-shadow: 0 0 0 1px color(hig-blue-20);
+        border: 1px solid color(hig-blue-60);
+        box-shadow: 0 0 0 1px color(hig-blue-60);
         @include placeholder {
-            color: color(hig-gray-30);
+            color: color(hig-cool-gray-50);
             transition-delay: 0.2s;
         }
     }
@@ -105,7 +105,7 @@
     &:disabled {
         border-style: dashed;
         &:hover {
-            border-color: color(hig-gray-40);
+            border-color: color(hig-cool-gray-30);
             box-shadow: none;
         }
     }
@@ -116,7 +116,7 @@
     margin-top: 10px;
     font-size: 12px;
     line-height: 14px;
-    color: color(hig-gray-30);
+    color: color(hig-cool-gray-50);
 }
 
 .hig__text-area__required-notice {

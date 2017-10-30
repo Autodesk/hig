@@ -2,27 +2,27 @@
 @import '~helpers/css/mixins/base.scss';
 
 .hig__dropdown__option {
-    position: relative;
-    @include vendor-prefix('box-sizing', 'border-box');
-    height: 36px;
-    padding: 0 8px;
-    line-height: 36px;
+  position: relative;
+  @include vendor-prefix('box-sizing', 'border-box');
+  height: 36px;
+  padding: 0 8px;
+  line-height: 36px;
 
-    cursor: pointer;
-    font-size: 14px;
+  cursor: pointer;
+  font-size: 14px;
 
-    &:hover {
-        background-color: color(hig-turquoise-70);
-    }
+  &:hover {
+    background-color: color(hig-blue-10);
+  }
 }
 
 .hig__dropdown__option__checkmark {
-    display: none;
-    position: absolute;
-    top: 4px;
-    right: 4px;
+  display: none;
+  position: absolute;
+  top: 4px;
+  right: 4px;
 
-    .hig__dropdown__option--selected > & {
-        display: block;
-    }
+  .hig__dropdown__option--selected > & {
+    display: block;
+  }
 }

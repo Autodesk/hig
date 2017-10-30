@@ -29,7 +29,7 @@
   border: 1px solid transparent;
 
   // default colors: primary
-  background: color(hig-blue-30);
+  background: color(hig-blue-50);
   color: color(hig-white);
 
   // states
@@ -38,22 +38,22 @@
   }
 
   &:hover {
-    background-color: color(hig-blue-50);
+    background-color: color(hig-blue-40);
   }
 
   &:active,
   &:focus {
     outline: none;
-    background-color: color(hig-blue-20);
+    background-color: color(hig-blue-60);
     box-shadow: none;
   }
 
   &--disabled {
     pointer-events: none;
-    background-color: color(hig-blue-60);
+    background-color: color(hig-blue-20);
 
     &:hover, &:focus {
-      background-color: color(hig-blue-60);
+      background-color: color(hig-blue-20);
     }
   }
 
@@ -97,26 +97,26 @@
 
   &.hig__button--secondary,
   &.hig__button--flat {
-    border-color: color(hig-gray-40);
+    border-color: color(hig-cool-gray-30);
     background: none;
-    color: color(hig-gray-10);
+    color: color(hig-gray-70);
 
     // states
     &:visited {
-      color: color(hig-gray-10);
+      color: color(hig-gray-70);
     }
 
     &:hover {
       background: none;
-      border-color: color(hig-turquoise-30);
+      border-color: color(hig-turquoise-50);
     }
 
     &:active,
     &:focus {
       outline: none;
       color: color(hig-white);
-      background: color(hig-slate-50);
-      border-color: color(hig-slate-50);
+      background: color(hig-turquoise-40);
+      border-color: color(hig-turquoise-40);
       box-shadow: none;
 
       svg * {
@@ -129,8 +129,8 @@
   &.hig__button--flat.hig__button--disabled {
     cursor: not-allowed;
     background: none;
-    border-color: color(hig-gray-50);
-    color: color(hig-gray-40);
+    border-color: color(hig-cool-gray-20);
+    color: color(hig-cool-gray-30);
   }
 
   &.hig__button--flat {

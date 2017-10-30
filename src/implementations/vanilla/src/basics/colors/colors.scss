@@ -1,7 +1,7 @@
 // Color Function
 // Used to get a color value, for example:
 // div {
-//   background: color(hig-blue-30);
+//   background: color(hig-blue-50);
 // }
 
 @function color($color-name, $color-variant:null) {
@@ -16,78 +16,95 @@
 // SASS map docs: http://sass-lang.com/documentation/file.SASS_REFERENCE.html#maps
 
 $colors: (
-  // Background colors
   hig-white: #FFFFFF,
 
-  // Grays
-  hig-gray-10: #0A131C,
-  hig-gray-20: #4A555B,
-  hig-gray-30: #939CA5,
-  hig-gray-40: #BEC8D2,
-  hig-gray-50: #D5DBE1,
-  hig-gray-60: #ECF0F3,
-  hig-gray-70: #F3F7FB,
+  // Primary colors
+  hig-cool-gray-10: #ECF0F3,
+  hig-cool-gray-20: #D4DBE1,
+  hig-cool-gray-30: #BEC8D2,
+  hig-cool-gray-40: #939CA5,
+  hig-cool-gray-50: #485366,
+  hig-cool-gray-60: #3B4454,
+  hig-cool-gray-70: #222934,
 
-  // Accent Colors
-  hig-blue-20: #0576AB,
-  hig-blue-30: #0696D7,
-  hig-blue-50: #56B7E3,
-  hig-blue-60: #CEE7F3,
-  hig-blue-70: #E1F2FA,
+  hig-gray-10: #F2F2F2,
+  hig-gray-20: #E2E2E2,
+  hig-gray-30: #CCCCCC,
+  hig-gray-40: #999999,
+  hig-gray-50: #666666,
+  hig-gray-60: #393939,
+  hig-gray-70: #000000,
 
-  hig-green-20: #6B9733,
-  hig-green-30: #87BC40,
-  hig-green-50: #ABD079,
-  hig-green-60: #DAEAC5,
-  hig-green-70: #F0F7E8,
+  hig-blue-10: #E6F4FB,
+  hig-blue-20: #CCEAF9,
+  hig-blue-30: #9BD5EF,
+  hig-blue-40: #66BFE9,
+  hig-blue-50: #0696D7,
+  hig-blue-60: #0671A1,
+  hig-blue-70: #024B6C,
 
-  hig-turquoise-20: #0CA899,
-  hig-turquoise-30: #0ED3BE,
-  hig-turquoise-50: #5CE1D3,
-  hig-turquoise-60: #BBF3ED,
-  hig-turquoise-70: #E2F9F7,
+  // Secondary colors
+  hig-green-20: #F0F7E8,
+  hig-green-30: #DBEAC5,
+  hig-green-40: #ABD079,
+  hig-green-50: #87BC40,
+  hig-green-60: #6B9733,
+  hig-green-70: #567A28,
 
-  hig-indigo-20: #144687,
-  hig-indigo-30: #1957A8,
-  hig-indigo-50: #5E89C2,
-  hig-indigo-60: #D1DDEE,
-  hig-indigo-70: #E3EAF4,
+  hig-turquoise-20: #E2F9F7,
+  hig-turquoise-30: #BBF3ED,
+  hig-turquoise-40: #5CE1D3,
+  hig-turquoise-50: #0ED3BE,
+  hig-turquoise-60: #0CA899,
+  hig-turquoise-70: #0A8378,
 
-  hig-gold-20: #C78016,
-  hig-gold-30: #FAA21B,
-  hig-gold-50: #FDC36D,
-  hig-gold-60: #FDE7C5,
-  hig-gold-70: #FEF3E3,
+  hig-indigo-20: #E3EAF4,
+  hig-indigo-30: #D1DDEE,
+  hig-indigo-40: #5987C2,
+  hig-indigo-50: #1957A8,
+  hig-indigo-60: #144687,
+  hig-indigo-70: #0D3160,
 
-  // Notification Colors
-  hig-good-green: #7CCC13,
-  hig-alert-red: #EC4A41,
-  hig-warning-yellow: #F5B723,
+  hig-gold-20: #FEF3E3,
+  hig-gold-30: #FDE7C5,
+  hig-gold-40: #FDC36D,
+  hig-gold-50: #FAA21B,
+  hig-gold-60: #C78016,
+  hig-gold-70: #98610F,
 
-  // Data Visualization
-  hig-slate-20: #2E4258,
-  hig-slate-30: #4B6B8F,
-  hig-slate-50: #7993B0,
-  hig-slate-60: #C1CEDC,
-  hig-slate-70: #E9EDF1,
+  // Tertiary colors
+  hig-slate-20: #DCE7F3,
+  hig-slate-30: #C1CEDC,
+  hig-slate-40: #7993B0,
+  hig-slate-50: #4B6B8F,
+  hig-slate-60: #354D67,
+  hig-slate-70: #2C3E53,
 
-  hig-purple-20: #8558C5,
-  hig-purple-30: #A76EF5,
-  hig-purple-50: #C5A1F8,
-  hig-purple-60: #EADCFD,
-  hig-purple-70: #F4EDFD,
+  hig-purple-20: #F4EDFD,
+  hig-purple-30: #EADCFD,
+  hig-purple-40: #C5A1F8,
+  hig-purple-50: #A76EF5,
+  hig-purple-60: #8558C5,
+  hig-purple-70: #5F3E8E,
 
-  hig-pink-20: #C52B78,
-  hig-pink-30: #F73595,
-  hig-pink-50: #F87CBA,
-  hig-pink-60: #FDCDE5,
-  hig-pink-70: #FEE6F2,
+  hig-pink-20: #FEE6F2,
+  hig-pink-30: #FDCDE5,
+  hig-pink-40: #F87CBA,
+  hig-pink-50: #F63595,
+  hig-pink-60: #C52B78,
+  hig-pink-70: #9C215E,
 
-  hig-salmon-20: #CC6452,
-  hig-salmon-30: #FF7B65,
-  hig-salmon-50: #FFAD9E,
-  hig-salmon-60: #FFDFD9,
-  hig-salmon-70: #FFEFEC
+  hig-salmon-20: #FFEFEC,
+  hig-salmon-30: #FFDFD9,
+  hig-salmon-40: #FFAD9E,
+  hig-salmon-50: #FF7B65,
+  hig-salmon-60 : #CC6452,
+  hig-salmon-70: #9D4B3D,
+
+  // Alert colors
+  hig-green-good: #87BC40,
+  hig-yellow-warning: #F5B723,
+  hig-red-alert: #EC4A41,
 );
 
 // Dynamicly create css classes that can be used with divs

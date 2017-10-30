@@ -3,10 +3,10 @@
 @import '~helpers/css/mixins/base.scss';
 
 .hig__table__text-cell-detail {
-  color: color(hig-gray-30);
+  color: color(hig-cool-gray-50);
   display: none;
   font-size: 12px;
-  
+
   .hig__table--large & {
     display: block;
   }

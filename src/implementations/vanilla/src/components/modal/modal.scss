@@ -30,7 +30,7 @@
 
 .hig__modal__window {
   background: color(hig-white);
-  border: 3px solid color(hig-blue-20);
+  border: 3px solid color(hig-blue-60);
   border-radius: 4px;
   box-shadow: 0 0 8px 0 rgba(190, 200, 210, 0.4);
   display: flex;
@@ -91,7 +91,7 @@
 }
 
 .hig__modal__header {
-  border-bottom: 1px solid color(hig-gray-50);
+  border-bottom: 1px solid color(hig-cool-gray-20);
   font-family: 'ArtifaktElement';
   font-size: 24px;
   margin: 0 32px;
@@ -106,7 +106,7 @@
   }
 
   .hig__modal__window--alternate & {
-    background-color: color(hig-blue-70);
+    background-color: color(hig-blue-10);
     margin: 0;
     padding: 16px 32px;
   }
@@ -168,13 +168,13 @@
   }
 
   .hig__modal__window--has-scrolling & {
-    border-top: 1px solid color(hig-gray-50);
+    border-top: 1px solid color(hig-cool-gray-20);
     margin: 0 32px;
     padding: 16px 0;
   }
 
   .hig__modal__window--is-scrolling & {
-    border-top: 1px solid color(hig-gray-50);
+    border-top: 1px solid color(hig-cool-gray-20);
     margin: 0;
     padding: 16px 32px;
   }

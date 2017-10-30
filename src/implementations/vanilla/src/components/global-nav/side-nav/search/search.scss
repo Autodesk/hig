@@ -9,7 +9,7 @@
     left: 0;
     right: 0;
     height: 52px;
-    border-top: 1px solid color(hig-gray-40);  
+    border-top: 1px solid color(hig-cool-gray-30);
 
     &__icon{
         position: absolute;
@@ -27,7 +27,7 @@
 
         &__input, &__input[type=text]{
             @include reset;
-            border: 1px solid color(hig-gray-40);
+            border: 1px solid color(hig-cool-gray-30);
             border-radius: 4px;
             font-size: 14px;
             padding: 6px 6px 6px 35px;
@@ -36,7 +36,7 @@
 
             &::placeholder{
                 font-weight: normal;
-                color: color(hig-gray-30);
+                color: color(hig-cool-gray-50);
             }
 
             &:focus{

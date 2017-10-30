@@ -12,7 +12,7 @@ $hig__global-nav__sidenav--width: 280px;
   left: 0;
   bottom: 0;
   background: color(hig-white);
-  border-right: 1px solid color(hig-gray-50);
+  border-right: 1px solid color(hig-cool-gray-20);
   overflow-x: hidden;
 
   @include shadow("inner-right");
@@ -41,7 +41,7 @@ $hig__global-nav__sidenav--width: 280px;
     &::-webkit-scrollbar-thumb {
       width: 5px;
       height: 200px;
-      background-color: color(hig-gray-30);
+      background-color: color(hig-cool-gray-50);
       border-radius: 2px;
     }
 
@@ -58,7 +58,7 @@ $hig__global-nav__sidenav--width: 280px;
     padding-left: spacing(m);
     margin-bottom: 40px;
     font-size: 12px;
-    color: color(hig-gray-30);
+    color: color(hig-cool-gray-50);
   }
 }
 
@@ -82,17 +82,17 @@ $hig__global-nav__sidenav--width: 280px;
 
   &[href]:hover {
     cursor: pointer;
-    color: color(hig-blue-30);
+    color: color(hig-blue-50);
   }
 }
 
 .hig__global-nav__sidenav__super-header {
-  color: color(hig-gray-20);
+  color: color(hig-cool-gray-50);
   font-size: 12px;
 }
 
 .hig__global-nav__sidenav__header {
-  color: color(hig-gray-10);
+  color: color(hig-gray-70);
   font-size: 16px;
   margin-bottom: spacing(s);
 }

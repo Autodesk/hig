@@ -25,7 +25,7 @@
     @include chevron-border();
     top: -11px;
     border-top-width: 0;
-    border-color: transparent transparent color(hig-gray-40) transparent;
+    border-color: transparent transparent color(hig-cool-gray-30) transparent;
   }
 
   &::after {
@@ -41,7 +41,7 @@
     @include chevron-border();
     right: -11px;
     border-right-width: 0;
-    border-color: transparent transparent transparent color(hig-gray-40);
+    border-color: transparent transparent transparent color(hig-cool-gray-30);
   }
 
   &::after {
@@ -57,7 +57,7 @@
     @include chevron-border();
     bottom: -10px;
     border-bottom-width: 0;
-    border-color: color(hig-gray-40) transparent transparent transparent;
+    border-color: color(hig-cool-gray-30) transparent transparent transparent;
   }
 
   &::after {
@@ -73,7 +73,7 @@
     @include chevron-border();
     left: -11px;
     border-left-width: 0;
-    border-color: transparent color(hig-gray-40) transparent transparent;
+    border-color: transparent color(hig-cool-gray-30) transparent transparent;
   }
 
   &::after {
@@ -385,14 +385,14 @@
   width: 270px;
 
   background-color: color(hig-white);
-  border: 1px solid color(hig-gray-40);
+  border: 1px solid color(hig-cool-gray-30);
   border-radius: 4px;
   @include shadow("common");
 }
 
 .hig__flyout--tooltip {
   .hig__flyout__panel {
-    background-color: color(hig-gray-20);
+    background-color: color(hig-cool-gray-50);
     color: color(hig-white)
   }
 }
