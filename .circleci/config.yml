@@ -11,144 +11,137 @@ jobs:
       - checkout
       # Get vanilla node_modules for this revision of vanilla/package.json
       - restore_cache:
-          key: dependency-cache-vanilla-v2-{{ checksum "src/implementations/vanilla/package.json" }}
+          key: dependency-cache-vanilla-v3-{{ checksum "packages/vanilla/package.json" }}
       - run:
           name: npm Install (Vanilla)
           command: npm install
-          working_directory: src/implementations/vanilla
+          working_directory: packages/vanilla
       # Store vanilla node_modules for this revision of vanilla/package.json
       - save_cache:
-          key: dependency-cache-vanilla-v2-{{ checksum "src/implementations/vanilla/package.json" }}
+          key: dependency-cache-vanilla-v3-{{ checksum "packages/vanilla/package.json" }}
           paths:
-            - src/implementations/vanilla/node_modules
+            - packages/vanilla/node_modules
   vanilla-build:
     <<: *defaults
     steps:
       - checkout
       # Get vanilla node_modules for this revision of vanilla/package.json
       - restore_cache:
-          key: dependency-cache-vanilla-v2-{{ checksum "src/implementations/vanilla/package.json" }}
+          key: dependency-cache-vanilla-v3-{{ checksum "packages/vanilla/package.json" }}
       - run:
           name: Build (Vanilla)
           command: npm run lib
-          working_directory: src/implementations/vanilla
+          working_directory: packages/vanilla
       # Store vanilla build files for this commit
       - save_cache:
-          key: lib-cache-vanilla-v2-{{ .Revision }}
+          key: lib-cache-vanilla-v3-{{ .Revision }}
           paths:
-            - src/implementations/vanilla/lib
+            - packages/vanilla/lib
   react-setup:
     <<: *defaults
     steps:
       - checkout
       # Get vanilla node_modules for this revision of vanilla/package.json
       - restore_cache:
-          key: dependency-cache-vanilla-v2-{{ checksum "src/implementations/vanilla/package.json" }}
+          key: dependency-cache-vanilla-v3-{{ checksum "packages/vanilla/package.json" }}
       # Get React node_modules for this revision of react/package.json
       - restore_cache:
-          key: dependency-cache-react-v2-{{ checksum "src/implementations/react/package.json" }}
+          key: dependency-cache-react-v3-{{ checksum "packages/react/package.json" }}
       - run:
           name: npm Install (React)
           command: npm install
-          working_directory: src/implementations/react
+          working_directory: packages/react
       # Store React node_modules for this revision of react/package.json
       - save_cache:
-          key: dependency-cache-react-v2-{{ checksum "src/implementations/react/package.json" }}
+          key: dependency-cache-react-v3-{{ checksum "packages/react/package.json" }}
           paths:
-            - src/implementations/react/node_modules
+            - packages/react/node_modules
   react-build:
     <<: *defaults
     steps:
       - checkout
       # Get vanilla node_modules for this revision of vanilla/package.json
       - restore_cache:
-          key: dependency-cache-vanilla-v2-{{ checksum "src/implementations/vanilla/package.json" }}
+          key: dependency-cache-vanilla-v3-{{ checksum "packages/vanilla/package.json" }}
       # Get React node_modules for this revision of react/package.json
       - restore_cache:
-          key: dependency-cache-react-v2-{{ checksum "src/implementations/react/package.json" }}
+          key: dependency-cache-react-v3-{{ checksum "packages/react/package.json" }}
       - run:
           name: Build (React)
           command: npm run lib
-          working_directory: src/implementations/react
+          working_directory: packages/react
       # Store React build files for this commit
       - save_cache:
-          key: lib-cache-react-v2-{{ .Revision }}
+          key: lib-cache-react-v3-{{ .Revision }}
           paths:
-            - src/implementations/react/lib
+            - packages/react/lib
   vanilla-test:
     <<: *defaults
     steps:
       - checkout
       # Get vanilla node_modules for this revision of vanilla/package.json
       - restore_cache:
-          key: dependency-cache-vanilla-v2-{{ checksum "src/implementations/vanilla/package.json" }}
+          key: dependency-cache-vanilla-v3-{{ checksum "packages/vanilla/package.json" }}
       # Get vanilla build files for this commit
       - restore_cache:
-          key: lib-cache-vanilla-v2-{{ .Revision }}
+          key: lib-cache-vanilla-v3-{{ .Revision }}
       - run:
           name: Start Server (Vanilla)
           command: ./node_modules/http-server/bin/http-server
           background: true
-          working_directory: src/implementations/vanilla
+          working_directory: packages/vanilla
       - run:
           name: Run Tests (Vanilla)
           command: npm run gemini-ci
-          working_directory: src/implementations/vanilla
+          working_directory: packages/vanilla
   react-test:
     <<: *defaults
     steps:
       - checkout
       # Get vanilla node_modules for this revision of vanilla/package.json
       - restore_cache:
-          key: dependency-cache-vanilla-v2-{{ checksum "src/implementations/vanilla/package.json" }}
+          key: dependency-cache-vanilla-v3-{{ checksum "packages/vanilla/package.json" }}
       # Get vanilla build files for this commit
       - restore_cache:
-          key: lib-cache-vanilla-v2-{{ .Revision }}
+          key: lib-cache-vanilla-v3-{{ .Revision }}
       # Get React node_modules for this revision of react/package.json
       - restore_cache:
-          key: dependency-cache-react-v2-{{ checksum "src/implementations/react/package.json" }}
+          key: dependency-cache-react-v3-{{ checksum "packages/react/package.json" }}
       # Get React build files for this commit
       - restore_cache:
-          key: lib-cache-react-v2-{{ .Revision }}
+          key: lib-cache-react-v3-{{ .Revision }}
       - run:
           name: Run Tests (React)
           command: npm run test-ci
-          working_directory: src/implementations/react
-  react-validate:
-    <<: *defaults
-    steps:
-      - checkout
-      # Get React node_modules for this revision of react/package.json
-      - restore_cache:
-          key: dependency-cache-react-v2-{{ checksum "src/implementations/react/package.json" }}
-      - run:
-          name: Validate hig-react version
-          command: npm run validate
-          working_directory: src/implementations/react
-  react-deploy:
+          working_directory: packages/react
+  pacakges-deploy:
     <<: *defaults
     steps:
       - checkout
       # Get vanilla node_modules for this revision of vanilla/package.json
       - restore_cache:
-          key: dependency-cache-vanilla-v2-{{ checksum "package.json" }}
+          key: dependency-cache-vanilla-v3-{{ checksum "package.json" }}
       # Get React node_modules for this revision of react/package.json
       - restore_cache:
-          key: dependency-cache-react-v2-{{ checksum "package.json" }}
+          key: dependency-cache-react-v3-{{ checksum "package.json" }}
       # Get vanilla build files for this commit
       - restore_cache:
-          key: lib-cache-vanilla-v2-{{ .Revision }}
+          key: lib-cache-vanilla-v3-{{ .Revision }}
       # Get React build files for this commit
       - restore_cache:
-          key: lib-cache-react-v2-{{ .Revision }}
+          key: lib-cache-react-v3-{{ .Revision }}
       - run:
           name: Add auth token
           command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
-          working_directory: src/implementations/react
+          working_directory: packages/react
       - run:
           name: Deploy hig-react
           command: npm publish
-          working_directory: src/implementations/react
+          working_directory: packages/react
+      - run:
+          name: Deploy hig-vanilla
+          command: npm publish
+          working_directory: packages/vanilla   
 workflows:
   version: 2
   build-test-validate-and-deploy:
@@ -176,11 +169,9 @@ workflows:
           requires:
             - vanilla-test
             - react-test
-      - react-deploy:
+      - packages-deploy:
           filters:
             branches:
               only: master
             tags:
               only: /v[0-9]+(\.[0-9]+)*/
-          requires:
-            - react-validate
