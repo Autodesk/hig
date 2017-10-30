@@ -10,10 +10,10 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  border-bottom: 1px solid color(hig-gray-30);
+  border-bottom: 1px solid color(hig-cool-gray-50);
 
 
-  padding: 12px 48px 12px 0px; 
+  padding: 12px 48px 12px 0px;
   height: 24px;
 
   &:last-child{
@@ -22,15 +22,15 @@
 
   &:first-child {
     .hig__table--standard & {
-      padding: 12px 4px 12px 4px; 
+      padding: 12px 4px 12px 4px;
     }
 
     .hig__table--compressed & {
-      padding: 12px 48px 12px 8px; 
+      padding: 12px 48px 12px 8px;
     }
 
     .hig__table--large & {
-       padding: 12px 48px 12px 12px; 
+       padding: 12px 48px 12px 12px;
 
        &:first-child{
           padding: 12px 8px 12px 8px

@@ -47,7 +47,7 @@
     position: relative;
     padding-bottom: 8px;
 
-    color: color(hig-gray-30);
+    color: color(hig-cool-gray-50);
     font-size: 12px;
     font-weight: 500;
     line-height: 14px;
@@ -61,7 +61,7 @@
     }
 
     .hig__text-field__input:focus + & {
-        color: color(hig-blue-20);
+        color: color(hig-blue-60);
     }
 
     .hig__text-field--required &::after {
@@ -84,7 +84,7 @@
     }
 
     .hig__text-field__input[disabled] + & {
-        color: color(hig-gray-50);
+        color: color(hig-cool-gray-20);
         pointer-events: none;
     }
 
@@ -100,23 +100,23 @@
 
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid color(hig-gray-40);
+    border-bottom: 1px solid color(hig-cool-gray-30);
 
     font-family: 'ArtifaktElement', sans-serif;
     font-size: 14px;
     line-height: 20px;
-    color: color(hig-gray-10);
+    color: color(hig-gray-70);
 
     @include placeholder {
         transition: color 0.2s;
-        color: color(hig-gray-30);
+        color: color(hig-cool-gray-50);
         font-size: 14px;
     }
 
     &:hover {
         border: none;
-        border-bottom: 1px solid color(hig-turquoise-30);
-        box-shadow: 0 1px 0 color(hig-turquoise-30);
+        border-bottom: 1px solid color(hig-turquoise-50);
+        box-shadow: 0 1px 0 color(hig-turquoise-50);
     }
 
     .hig__text-field--clear-button-visible & {
@@ -137,11 +137,11 @@
     &:focus {
         outline: none;
         border: none;
-        border-bottom: 1px solid color(hig-blue-20);
-        box-shadow: 0 1px 0 color(hig-blue-20);
+        border-bottom: 1px solid color(hig-blue-60);
+        box-shadow: 0 1px 0 color(hig-blue-60);
 
         @include placeholder {
-            color: color(hig-gray-30);
+            color: color(hig-cool-gray-50);
             font-size: 14px;
             transition-delay: 0.2s;
         }
@@ -149,8 +149,8 @@
 
     &[disabled] {
         border-bottom-style: dashed;
-        border-bottom-color: color(hig-gray-50);
-        color: color(hig-gray-50);
+        border-bottom-color: color(hig-cool-gray-20);
+        color: color(hig-cool-gray-20);
 
         &:hover {
             box-shadow: none;
@@ -176,7 +176,7 @@
     font-size: 12px;
     font-weight: 400;
     line-height: 14px;
-    color: color(hig-gray-30);
+    color: color(hig-cool-gray-50);
 }
 
 .hig__text-field__required-notice::before {

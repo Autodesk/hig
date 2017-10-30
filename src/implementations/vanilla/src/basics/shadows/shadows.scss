@@ -2,7 +2,7 @@
 @import '~helpers/css/mixins/base.scss';
 
 // Shadow Function
-// returns HIG shadow and border, 
+// returns HIG shadow and border,
 // input can be one of these: "common", "dropshadow", "inner-left" or "inner-right" (defaults to "common")
 //
 // usage:
@@ -12,14 +12,14 @@
 
 @mixin shadow($shadow-type:"common") {
     @if ($shadow-type == "dropshadow") {
-        @include vendor-prefix('box-shadow', 0px 1px 4px color(hig-gray-40));
+        @include vendor-prefix('box-shadow', 0px 1px 4px color(hig-cool-gray-30));
     } @else if ($shadow-type == "inner-right") {
-        @include vendor-prefix('box-shadow', inset -5px 0px 8px -5px color(hig-gray-30));
+        @include vendor-prefix('box-shadow', inset -5px 0px 8px -5px color(hig-cool-gray-50));
     } @else if ($shadow-type == "inner-left") {
-        @include vendor-prefix('box-shadow', inset 5px 0px 8px -5px color(hig-gray-30));
+        @include vendor-prefix('box-shadow', inset 5px 0px 8px -5px color(hig-cool-gray-50));
     } @else {
-        border: 1px color(hig-gray-50) solid;
-        @include vendor-prefix('box-shadow', 0 0 4px color(hig-gray-40));
+        border: 1px color(hig-cool-gray-20) solid;
+        @include vendor-prefix('box-shadow', 0 0 4px color(hig-cool-gray-30));
     }
 }
 

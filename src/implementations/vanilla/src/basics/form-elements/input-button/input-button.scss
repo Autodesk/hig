@@ -36,7 +36,7 @@
 .hig__input-button__input-wrapper {
   position: relative;
   color: transparent;
-  border: 1px solid color(hig-gray-40);
+  border: 1px solid color(hig-cool-gray-30);
   background-color: color(hig-white);
   text-align: center;
   font-size: 25px;
@@ -54,28 +54,28 @@
   }
 
   .hig__input-button:hover & {
-    border-color: color(hig-turquoise-30);
+    border-color: color(hig-turquoise-50);
   }
 
   .hig__input-button__input:checked + & {
-    border-color: color(hig-slate-50);
-    background-color: color(hig-slate-50);
+    border-color: color(hig-slate-40);
+    background-color: color(hig-slate-40);
   }
 
   .hig__input-button__input[disabled] + & {
-    border-color: color(hig-gray-30);
+    border-color: color(hig-cool-gray-50);
     border-style: dotted;
     background-color: color(hig-white);
   }
 
   .hig__input-button__input:focus + & {
     outline: none;
-    border-color: color(hig-blue-20);
+    border-color: color(hig-blue-60);
   }
 
   .hig__input-button__input:focus:checked + & {
-    border-color: color(hig-blue-20);
-    background-color: color(hig-blue-20);
+    border-color: color(hig-blue-60);
+    background-color: color(hig-blue-60);
   }
 
   .hig__icon{

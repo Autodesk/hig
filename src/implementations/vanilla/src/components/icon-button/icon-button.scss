@@ -6,9 +6,9 @@
   position: relative;
   @include vendor-prefix('box-sizing', 'border-box');
 
-  border: 1px solid color(hig-gray-40);
+  border: 1px solid color(hig-cool-gray-30);
   border-radius: 4px;
-  color: color(hig-gray-10);
+  color: color(hig-gray-70);
 
   padding: 0;
   height: 36px;
@@ -18,19 +18,19 @@
 
   // states
   &:visited {
-    color: color(hig-gray-10);
+    color: color(hig-gray-70);
   }
 
   &:hover {
     background: none;
-    border-color: color(hig-turquoise-30);
+    border-color: color(hig-turquoise-50);
   }
 
   &:active,
   &:focus {
     outline: none;
-    background: color(hig-slate-50);
-    border-color: color(hig-slate-50);
+    background: color(hig-turquoise-40);
+    border-color: color(hig-turquoise-40);
 
     svg * {
       fill: color(hig-white);
@@ -46,12 +46,12 @@
   &.hig__icon-button--disabled {
     pointer-events: none;
     background: none;
-    border-color: color(hig-gray-50);
-    color: color(hig-gray-40);
+    border-color: color(hig-cool-gray-20);
+    color: color(hig-cool-gray-30);
 
     &:hover, &:focus {
       background: none;
-      border-color: color(hig-gray-60);
+      border-color: color(hig-cool-gray-10);
     }
 
     svg {

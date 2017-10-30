@@ -22,20 +22,20 @@
   @each $vendor in ('-webkit-slider-thumb', '-moz-range-thumb', '-ms-thumb') {
 
     &:hover::#{$vendor} {
-      background-color: color(hig-turquoise-30);
+      background-color: color(hig-turquoise-50);
     }
 
     &:focus::#{$vendor} {
-      background-color: color(hig-blue-30);
+      background-color: color(hig-blue-50);
     }
 
     &:active::#{$vendor} {
-      background-color: color(hig-blue-20);
+      background-color: color(hig-blue-60);
     }
 
     &[disabled]::#{$vendor} {
       background-color: color(hig-white);
-      border: 2px dotted color(hig-gray-50);
+      border: 2px dotted color(hig-cool-gray-20);
       outline: 2px solid color(hig-white);
     }
   }
@@ -46,7 +46,7 @@
       -webkit-appearance: none;
       height: 16px;
       width: 16px;
-      background: color(hig-gray-50);
+      background: color(hig-cool-gray-20);
       border-radius: 50%;
       cursor: pointer;
       position: relative;
@@ -60,7 +60,7 @@
     -webkit-appearance: none;
     height: 16px;
     width: 16px;
-    background: color(hig-gray-50);
+    background: color(hig-cool-gray-20);
     border-radius: 50%;
     cursor: pointer;
     position: relative;
@@ -69,7 +69,7 @@
 
   &::-ms-fill-upper, &::-ms-fill-lower {
     border: none;
-    background-color: color(hig-gray-50);
+    background-color: color(hig-cool-gray-20);
   }
 
   &::-ms-tooltip {
@@ -81,13 +81,13 @@
       width: 100%;
       height: 2px;
       border: none;
-      background: color(hig-gray-50);
+      background: color(hig-cool-gray-20);
       cursor: pointer;
       color: transparent;
     }
 
     &[disabled]::#{$vendor} {
-      background-color: color(hig-gray-60);
+      background-color: color(hig-cool-gray-10);
     }
   }
 
@@ -100,12 +100,12 @@
   display: block;
   margin-bottom: 15px;
 
-  color: color(hig-gray-30);
+  color: color(hig-cool-gray-50);
   font-size: 12px;
   line-height: 14px;
 
   .hig__range__field:focus + & {
-    color: color(hig-blue-20);
+    color: color(hig-blue-60);
   }
 
   .hig__range--required &::after {
@@ -136,11 +136,11 @@
   &:before {
     position: absolute;
     bottom: 0;
-    color: color(hig-gray-30);
+    color: color(hig-cool-gray-50);
     font-size: 12px;
 
     .hig__range--disabled & {
-      color: color(hig-gray-50);
+      color: color(hig-cool-gray-20);
     }
   }
 
@@ -155,14 +155,14 @@
 }
 
 .hig__range__field__current-value {
-  color: color(hig-gray-10);
+  color: color(hig-gray-70);
   position: absolute;
   margin: auto;
   top: 24px;
   text-align: left;
 
   .hig__range--disabled & {
-    color: color(hig-gray-50);
+    color: color(hig-cool-gray-20);
   }
 }
 
@@ -170,5 +170,5 @@
   margin-top: 10px;
   font-size: 12px;
   line-height: 14px;
-  color: color(hig-gray-30);
+  color: color(hig-cool-gray-50);
 }

@@ -11,7 +11,7 @@
   border-top: 2px solid transparent;
   cursor: pointer;
 
-  color: color(hig-slate-20);
+  color: color(hig-gray-70);
   user-select: none;
   font-size: 14px;
   font-weight: 500;
@@ -23,7 +23,7 @@
     top: 6px;
     bottom: 8px;
     left: 0;
-    border-left: 1px solid color(hig-gray-50);
+    border-left: 1px solid color(hig-cool-gray-20);
   }
 
   &:first-child::before {
@@ -57,7 +57,7 @@
   font-weight: 700;
 
   .hig__tabs__tab--active >  & {
-    color: color(hig-slate-20);
-    border-bottom-color: color(hig-slate-20);
+    color: color(hig-gray-70);
+    border-bottom-color: color(hig-gray-70);
   }
 }

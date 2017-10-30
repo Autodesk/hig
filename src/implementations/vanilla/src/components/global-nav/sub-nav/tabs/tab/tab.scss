@@ -5,7 +5,7 @@
   align-content: center;
   border-bottom: 4px solid transparent;
   border-top: 4px solid transparent;
-  color: color(hig-slate-20);
+  color: color(hig-gray-70);
   margin-left: 20px;
   cursor: pointer;
   user-select: none;
@@ -17,7 +17,7 @@
   }
 
   &.hig__global-nav__sub-nav__tabs__tab--active {
-    color: color(hig-blue-30);
-    border-bottom-color: color(hig-blue-30);
+    color: color(hig-blue-50);
+    border-bottom-color: color(hig-blue-50);
   }
 }

@@ -11,17 +11,17 @@
 
 .hig__rich-text a,
 .hig__text-link--primary {
-  color: color(hig-blue-30);
+  color: color(hig-blue-50);
 
   &:hover {
-    color: color(hig-blue-20);
+    color: color(hig-blue-60);
   }
 }
 
 .hig__text-link--secondary {
-  color: color(hig-gray-30);
+  color: color(hig-cool-gray-50);
 
   &:hover {
-    color: color(hig-blue-30);
+    color: color(hig-blue-50);
   }
 }

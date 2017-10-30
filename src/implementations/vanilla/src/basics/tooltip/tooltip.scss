@@ -23,14 +23,14 @@
     @include tooltip-chevron-border();
     top: -6px;
     border-top-width: 0;
-    border-color: transparent transparent color(hig-gray-20) transparent;
+    border-color: transparent transparent color(hig-cool-gray-50) transparent;
   }
 
   &::after {
     @include tooltip-chevron-bg();
     top: -6px;
     border-top-width: 0;
-    border-color: transparent transparent color(hig-gray-20) transparent;
+    border-color: transparent transparent color(hig-cool-gray-50) transparent;
   }
 }
 
@@ -39,14 +39,14 @@
     @include tooltip-chevron-border();
     right: -6px;
     border-right-width: 0;
-    border-color: transparent transparent transparent color(hig-gray-20);
+    border-color: transparent transparent transparent color(hig-cool-gray-50);
   }
 
   &::after {
     @include tooltip-chevron-bg();
     right: -6px;
     border-right-width: 0;
-    border-color: transparent transparent transparent color(hig-gray-20);
+    border-color: transparent transparent transparent color(hig-cool-gray-50);
   }
 }
 
@@ -55,14 +55,14 @@
     @include tooltip-chevron-border();
     bottom: -7px;
     border-bottom-width: 0;
-    border-color: color(hig-gray-20) transparent transparent transparent;
+    border-color: color(hig-cool-gray-50) transparent transparent transparent;
   }
 
   &::after {
     @include tooltip-chevron-bg();
     bottom: -6px;
     border-bottom-width: 0;
-    border-color: color(hig-gray-20) transparent transparent transparent;
+    border-color: color(hig-cool-gray-50) transparent transparent transparent;
   }
 }
 
@@ -71,14 +71,14 @@
     @include tooltip-chevron-border();
     left: -6px;
     border-left-width: 0;
-    border-color: transparent color(hig-gray-20) transparent transparent;
+    border-color: transparent color(hig-cool-gray-50) transparent transparent;
   }
 
   &::after {
     @include tooltip-chevron-bg();
     left: -6px;
     border-left-width: 0;
-    border-color: transparent color(hig-gray-20) transparent transparent;
+    border-color: transparent color(hig-cool-gray-50) transparent transparent;
   }
 }
 
@@ -86,11 +86,11 @@
 
 .hig__flyout--tooltip {
   .hig__flyout__panel {
-    background-color: color(hig-gray-20);
+    background-color: color(hig-cool-gray-50);
     color: color(hig-white);
-    border: 1px solid color(hig-gray-20);
+    border: 1px solid color(hig-cool-gray-50);
     width: inherit;
-    padding: 0 0 0 0 
+    padding: 0 0 0 0
   }
 
   .hig__flyout__tooltip__content {
@@ -128,7 +128,7 @@
       margin-left: 3px;
     }
   }
-  
+
   .hig__flyout__container--anchor-top-center .hig__flyout__chevron  {
     @include tooltip-top-chevron;
 
@@ -169,6 +169,6 @@
     }
   }
 
-  
+
 }
 

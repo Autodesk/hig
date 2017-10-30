@@ -19,44 +19,44 @@
     align-items: stretch;
     border-left: 2px solid transparent;
     flex: 1 1 auto;
-    color: color(hig-gray-10);
+    color: color(hig-gray-70);
     text-decoration: none;
 
     &:active,
     &:focus {
       outline: none;
-      color: color(hig-blue-20);
-      border-left-color: color(hig-blue-20);
-      
+      color: color(hig-blue-60);
+      border-left-color: color(hig-blue-60);
+
     }
 
     &__icon {
       padding-left: spacing(xs);
-  
+
       svg * {
-        fill: color(hig-gray-10);
-  
+        fill: color(hig-gray-70);
+
         &__link:hover &,
         &__link--active & {
-          fill: color(hig-blue-30);
+          fill: color(hig-blue-50);
         }
-  
+
         &__link:focus &,
         &__link:active & {
-          fill: color(hig-blue-20);
+          fill: color(hig-blue-60);
         }
       }
     }
 
     &:hover,
     &--active {
-      color: color(hig-blue-30);
-      border-left-color: color(hig-blue-30);
+      color: color(hig-blue-50);
+      border-left-color: color(hig-blue-50);
       svg * {
-        fill: color(hig-blue-30);
+        fill: color(hig-blue-50);
       }
     }
-  
+
     &__title {
       font-weight: 700;
       font-size: 15px;
@@ -64,7 +64,7 @@
       line-height: 32px;
     }
   }
-  
+
   &--hide {
     display: none;
   }
