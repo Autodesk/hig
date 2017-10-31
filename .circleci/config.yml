@@ -5,76 +5,46 @@ defaults: &defaults
 
 version: 4
 jobs:
-  vanilla-setup:
+  bootstrap:
     <<: *defaults
     steps:
       - checkout
-      # Get vanilla node_modules for this revision of vanilla/package.json
       - restore_cache:
-          key: dependency-cache-vanilla-v5-{{ checksum "packages/vanilla/package.json" }}
+          key: dependency-cache-{{ checksum "package.json" }}
       - run:
-          name: npm Install (Vanilla)
-          command: npm install
-          working_directory: packages/vanilla
-      # Store vanilla node_modules for this revision of vanilla/package.json
+          name: Lerna bootstrap
+          command: npm install && npm run bootstrap
       - save_cache:
-          key: dependency-cache-vanilla-v5-{{ checksum "packages/vanilla/package.json" }}
+          key: dependency-cache-{{ checksum "package.json" }}
           paths:
             - packages/vanilla/node_modules
+            - packages/react/node_modules
   vanilla-build:
     <<: *defaults
     steps:
       - checkout
-      # Get vanilla node_modules for this revision of vanilla/package.json
       - restore_cache:
-          key: dependency-cache-vanilla-v5-{{ checksum "packages/vanilla/package.json" }}
+          key: dependency-cache-{{ checksum "package.json" }}
       - run:
           name: Build (Vanilla)
           command: npm run lib
           working_directory: packages/vanilla
-      # Store vanilla build files for this commit
       - save_cache:
           key: lib-cache-vanilla-v5-{{ .Revision }}
           paths:
             - packages/vanilla/lib
-  react-setup:
-    <<: *defaults
-    steps:
-      - checkout
-      # Get vanilla node_modules for this revision of vanilla/package.json
-      - restore_cache:
-          key: dependency-cache-vanilla-v5-{{ checksum "packages/vanilla/package.json" }}
-      # Get React node_modules for this revision of react/package.json
-      - restore_cache:
-          key: dependency-cache-react-v5-{{ checksum "packages/react/package.json" }}
-      - run:
-          name: npm Install (React)
-          command: npm install hig-vanilla && npm install
-          working_directory: packages/react
-      # Store React node_modules for this revision of react/package.json
-      - save_cache:
-          key: dependency-cache-react-v5-{{ checksum "packages/react/package.json" }}
-          paths:
-            - packages/react/node_modules
   react-build:
     <<: *defaults
     steps:
       - checkout
-      # Get vanilla node_modules for this revision of vanilla/package.json
       - restore_cache:
-          key: dependency-cache-vanilla-v5-{{ checksum "packages/vanilla/package.json" }}
-      # Get React node_modules for this revision of react/package.json
+          key: dependency-cache-{{ checksum "package.json" }}
       - restore_cache:
-          key: dependency-cache-react-v5-{{ checksum "packages/react/package.json" }}
-      - run: 
-          name: Install Lerna 
-          command: sudo npm install -g lerna
-          working_directory:  ~/hig  
-      - run: 
-          name: 
-          command: lerna bootstrap && cd packages/react && npm run lib
-          working_directory:  ~/hig           
-      # Store React build files for this commit
+          key: lib-cache-vanilla-v5-{{ .Revision }}
+      - run:
+          name: Build (React)
+          command: npm run lib
+          working_directory:  packages/react
       - save_cache:
           key: lib-cache-react-v5-{{ .Revision }}
           paths:
@@ -83,10 +53,8 @@ jobs:
     <<: *defaults
     steps:
       - checkout
-      # Get vanilla node_modules for this revision of vanilla/package.json
       - restore_cache:
-          key: dependency-cache-vanilla-v5-{{ checksum "packages/vanilla/package.json" }}
-      # Get vanilla build files for this commit
+          key: dependency-cache-{{ checksum "package.json" }}
       - restore_cache:
           key: lib-cache-vanilla-v5-{{ .Revision }}
       - run:
@@ -102,16 +70,10 @@ jobs:
     <<: *defaults
     steps:
       - checkout
-      # Get vanilla node_modules for this revision of vanilla/package.json
       - restore_cache:
-          key: dependency-cache-vanilla-v5-{{ checksum "packages/vanilla/package.json" }}
-      # Get vanilla build files for this commit
+          key: dependency-cache-{{ checksum "package.json" }}
       - restore_cache:
           key: lib-cache-vanilla-v5-{{ .Revision }}
-      # Get React node_modules for this revision of react/package.json
-      - restore_cache:
-          key: dependency-cache-react-v5-{{ checksum "packages/react/package.json" }}
-      # Get React build files for this commit
       - restore_cache:
           key: lib-cache-react-v5-{{ .Revision }}
       - run:
@@ -122,16 +84,10 @@ jobs:
     <<: *defaults
     steps:
       - checkout
-      # Get vanilla node_modules for this revision of vanilla/package.json
       - restore_cache:
-          key: dependency-cache-vanilla-v5-{{ checksum "package.json" }}
-      # Get React node_modules for this revision of react/package.json
-      - restore_cache:
-          key: dependency-cache-react-v5-{{ checksum "package.json" }}
-      # Get vanilla build files for this commit
+          key: dependency-cache-{{ checksum "package.json" }}
       - restore_cache:
           key: lib-cache-vanilla-v5-{{ .Revision }}
-      # Get React build files for this commit
       - restore_cache:
           key: lib-cache-react-v5-{{ .Revision }}
       - run:
@@ -145,35 +101,28 @@ jobs:
       - run:
           name: Deploy hig-vanilla
           command: npm publish
-          working_directory: packages/vanilla   
+          working_directory: packages/vanilla
 workflows:
   version: 2
   build-test-validate-and-deploy:
     jobs:
-      - vanilla-setup
-      - react-setup:
-          requires:
-            - vanilla-setup
+      - bootstrap
       - vanilla-build:
           requires:
-            - vanilla-setup
+            - bootstrap
       - react-build:
           requires:
-            - react-setup
+            - vanilla-build
       - vanilla-test:
           requires:
             - vanilla-build
       - react-test:
           requires:
             - react-build
-      - react-validate:
-          filters:
-            branches:
-              only: master
+      - packages-deploy:
           requires:
             - vanilla-test
             - react-test
-      - packages-deploy:
           filters:
             branches:
               only: master

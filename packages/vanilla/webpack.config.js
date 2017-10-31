@@ -16,8 +16,8 @@ const r = {
         loader: 'babel-loader',
         query: {
             presets: [
-                'es2015',
-                'stage2'
+                "es2015",
+                "stage-2"
             ],
             plugins: [],
             babelrc: false,

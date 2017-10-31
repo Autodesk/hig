@@ -9,6 +9,7 @@
     "lerna": "^2.4.0"
   },
   "scripts": {
-    "update-packages": "lerna publish --skip-npm"
+    "update-packages": "lerna publish --skip-npm",
+    "bootstrap": "lerna bootstrap"
   }
 }
