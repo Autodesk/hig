@@ -66,10 +66,14 @@ jobs:
       # Get React node_modules for this revision of react/package.json
       - restore_cache:
           key: dependency-cache-react-v5-{{ checksum "packages/react/package.json" }}
-      - run:
-          name: Build (React)
-          command: npm run lib
-          working_directory: packages/react
+      - run: 
+          name: Install Lerna 
+          command: sudo npm install -g lerna
+          working_directory:  ~/hig  
+      - run: 
+          name: 
+          command: lerna bootstrap && cd packages/react && npm run lib
+          working_directory:  ~/hig           
       # Store React build files for this commit
       - save_cache:
           key: lib-cache-react-v5-{{ .Revision }}
