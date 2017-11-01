@@ -1,0 +1,26 @@
+@import '~basics/colors/colors.scss';
+@import '~helpers/css/mixins/base.scss';
+
+.hig__global-nav__top-nav__profile__profile-flyout-content {
+    @include reset;
+
+    &__name {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow-x: hidden;
+        font-size: 16px;
+    }
+
+    &__email {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow-x: hidden;
+        font-size: 12px;
+        color: color(hig-cool-gray-50);
+    }
+
+    &__links {
+        display: flex;
+        margin-top: 20px;
+    }
+}

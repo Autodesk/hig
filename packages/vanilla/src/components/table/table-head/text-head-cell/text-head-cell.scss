@@ -1,0 +1,40 @@
+@import '~basics/colors/colors.scss';
+@import '~basics/responsive/responsive.scss';
+@import '~helpers/css/mixins/base.scss';
+
+.hig__text-head-cell {
+  font-weight: 700;
+  font-size: 14px;
+  min-width: 180px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-bottom: 1px solid color(hig-cool-gray-50);
+
+
+  padding: 12px 48px 12px 0px;
+  height: 24px;
+
+  &:last-child{
+    padding-right: 0px;
+  }
+
+  &:first-child {
+    .hig__table--standard & {
+      padding: 12px 4px 12px 4px;
+    }
+
+    .hig__table--compressed & {
+      padding: 12px 48px 12px 8px;
+    }
+
+    .hig__table--large & {
+       padding: 12px 48px 12px 12px;
+
+       &:first-child{
+          padding: 12px 8px 12px 8px
+       }
+    }
+  }
+}

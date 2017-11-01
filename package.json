@@ -4,5 +4,12 @@
   "description": "Autodesk design system",
   "author": "Autodesk Inc.",
   "homepage": ".",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "lerna": "^2.4.0"
+  },
+  "scripts": {
+    "update-packages": "lerna publish --skip-npm",
+    "bootstrap": "lerna bootstrap"
+  }
 }

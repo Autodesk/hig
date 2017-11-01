@@ -1,0 +1,189 @@
+@import '~basics/colors/colors.scss';
+@import '~basics/responsive/responsive.scss';
+@import '~basics/fonts/fonts.scss';
+@import '~helpers/css/layers.scss';
+
+
+.hig__modal {
+  color: #2A3B4D;
+  opacity: 0;
+  pointer-events: none;
+  transition: all ease 0.2s;
+  transition-delay: 0.2s;
+
+  &.hig__modal--open {
+    opacity: 1.0;
+    pointer-events: visible;
+    transition: all ease 0.2s;
+  }
+}
+
+.hig__modal__overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  bottom: 0px;
+  left: 0px;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  z-index: $modal-layer;
+}
+
+.hig__modal__window {
+  background: color(hig-white);
+  border: 3px solid color(hig-blue-60);
+  border-radius: 4px;
+  box-shadow: 0 0 8px 0 rgba(190, 200, 210, 0.4);
+  display: flex;
+  flex-direction: column;
+  left: 50%;
+  max-height: calc(100vh - 256px);
+  max-width: calc(100vw - 32px);
+  opacity: 0;
+  outline: none;
+  position: fixed;
+  top: 128px;
+  transform: translateX(-50%);
+  width: 600px;
+
+  @include phone-breakpoint {
+    width: 500px;
+  }
+
+  @keyframes close-animation {
+    0% { top: 131px; }
+    30% { top: 125px; }
+  }
+
+  .hig__modal--close & {
+    animation: close-animation 0.4s;
+    transition: all ease 0.2s;
+    transition-delay: 0.2s;
+  }
+
+  .hig__modal--open & {
+    opacity: 1.0;
+    transition: all ease 0.2s;
+    transition-delay: 0.2s;
+  }
+}
+
+.hig__modal__close-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 16px;
+  z-index: $modal-close-button-layer;
+
+  &:focus {
+    outline: none;
+  }
+
+  .hig__modal__window--is-scrolling & {
+    right: 32px;
+  }
+
+  .hig__modal__window--alternate & {
+    right: 16px;
+    top: 16px;
+  }
+}
+
+.hig__modal__header {
+  border-bottom: 1px solid color(hig-cool-gray-20);
+  font-family: 'ArtifaktElement';
+  font-size: 24px;
+  margin: 0 32px;
+  min-height: 33px;
+  padding: 16px 0;
+  position: relative;
+  z-index: $modal-header-layer;
+
+  .hig__modal__window--is-scrolling & {
+    margin: 0;
+    padding: 16px 32px;
+  }
+
+  .hig__modal__window--alternate & {
+    background-color: color(hig-blue-10);
+    margin: 0;
+    padding: 16px 32px;
+  }
+}
+
+.hig__modal__body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  z-index: $modal-body-layer;
+}
+
+.hig__modal__slot {
+  border: none;
+  flex: 1 1 auto;
+  overflow-x: auto;
+  overflow-y: scroll;
+  padding: 0 32px;
+
+  &::before {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    content: '';
+    display: block;
+    height: 16px;
+    margin: 0 -16px;
+    position: relative;
+    z-index: $modal-shadow-mask-layer;
+  }
+
+  &::after {
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    content: '';
+    display: block;
+    height: 16px;
+    margin: 0 -16px;
+    position: relative;
+    z-index: $modal-shadow-mask-layer;
+  }
+}
+
+.hig__modal__actions {
+  border-top: none;
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: flex-end;
+  margin: 0;
+  min-height: 33px;
+  padding: 16px 16px;
+  z-index: $modal-actions-layer;
+
+  &:empty{
+    display: none;
+  }
+
+  ::-webkit-scrollbar {
+    display: block;
+  }
+
+  .hig__modal__window--has-scrolling & {
+    border-top: 1px solid color(hig-cool-gray-20);
+    margin: 0 32px;
+    padding: 16px 0;
+  }
+
+  .hig__modal__window--is-scrolling & {
+    border-top: 1px solid color(hig-cool-gray-20);
+    margin: 0;
+    padding: 16px 32px;
+  }
+
+  .hig__modal__window--alternate &,
+  .hig__modal__window--alternate & + .hig__modal__window--has-scrolling &,
+  .hig__modal__window--alternate & + .hig__modal__window--is-scrolling & {
+    border: none;
+    margin: 0;
+    padding: 16px 32px;
+  }
+}

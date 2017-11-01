@@ -1,0 +1,42 @@
+@import '~basics/colors/colors.scss';
+@import '~helpers/css/mixins/base.scss';
+
+// Shadow Function
+// returns HIG shadow and border,
+// input can be one of these: "common", "dropshadow", "inner-left" or "inner-right" (defaults to "common")
+//
+// usage:
+// div {
+//   shadow("regular");
+// }
+
+@mixin shadow($shadow-type:"common") {
+  @if ($shadow-type == "dropshadow") {
+    @include vendor-prefix('box-shadow', 0px 1px 4px color(hig-cool-gray-30));
+  } @else if ($shadow-type == "inner-right") {
+    @include vendor-prefix('box-shadow', inset -5px 0px 8px -5px color(hig-cool-gray-50));
+  } @else if ($shadow-type == "inner-left") {
+    @include vendor-prefix('box-shadow', inset 5px 0px 8px -5px color(hig-cool-gray-50));
+  } @else {
+    @include vendor-prefix('box-shadow', 0 0 4px color(hig-cool-gray-30));
+  }
+}
+
+
+// CSS Classes for OOCSS
+
+.hig__shadows__common{
+  @include shadow("common");
+}
+
+.hig__shadows__dropshadow {
+  @include shadow("dropshadow");
+}
+
+.hig__shadows__inner-right {
+  @include shadow("inner-right");
+}
+
+.hig__shadows__inner-left {
+  @include shadow("inner-left");
+}

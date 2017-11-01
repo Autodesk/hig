@@ -1,0 +1,20 @@
+@import '~basics/colors/colors.scss';
+@import '~basics/responsive/responsive.scss';
+@import '~helpers/css/mixins/base.scss';
+
+.hig__table__text-cell-detail {
+  color: color(hig-cool-gray-50);
+  display: none;
+  font-size: 12px;
+
+  .hig__table--large & {
+    display: block;
+  }
+}
+
+
+.hig__table__text-cell-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

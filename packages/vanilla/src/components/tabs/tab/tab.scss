@@ -1,0 +1,63 @@
+@import '~basics/colors/colors.scss';
+@import '~helpers/css/mixins/spacing.scss';
+
+.hig__tabs__tab {
+  position: relative;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding: 0 spacing(s);
+
+  border-top: 2px solid transparent;
+  cursor: pointer;
+
+  color: color(hig-gray-70);
+  user-select: none;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    bottom: 8px;
+    left: 0;
+    border-left: 1px solid color(hig-cool-gray-20);
+  }
+
+  &:first-child::before {
+    display: none;
+  }
+}
+
+.hig__tabs__label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-bottom: 2px solid transparent;
+
+  .hig__tabs__tab--active > & {
+    color: transparent;
+  }
+}
+
+.hig__tabs__active-label {
+  padding: spacing(xxs) 0;
+
+  border-bottom: 2px solid transparent;
+
+  color: transparent;
+  font-weight: 700;
+
+  .hig__tabs__tab--active >  & {
+    color: color(hig-gray-70);
+    border-bottom-color: color(hig-gray-70);
+  }
+}

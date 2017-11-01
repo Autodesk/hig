@@ -1,0 +1,33 @@
+@import '~basics/colors/colors.scss';
+@import '~helpers/css/mixins/base.scss';
+
+.hig__global-nav__help__option {
+  flex: 1 1 auto;
+  margin: 0 0 20px 0;
+}
+
+.hig__global-nav__help__option__link {
+  color: color(hig-gray-70);
+  cursor: pointer;
+  font-family: ArtifaktElement;
+  font-size: 14px;
+  line-height: 14px;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  margin: 0 0 20px 0;
+
+  &:first-child {
+    padding-top: 10px
+  }
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+
+  &:hover {
+    color: color(hig-blue-50);
+    text-decoration: none;
+  }
+}
