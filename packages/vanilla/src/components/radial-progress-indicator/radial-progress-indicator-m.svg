@@ -1,0 +1,23 @@
+<svg id="hig__radial-progress-indicator" width="62px" height="64px" viewBox="0 0 62 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M49.84,6.11 L31.03,0 L12.22,6.11 L0.600000024,22.11 L0.600000024,41.89 L12.22,57.89 L31.03,64 L49.84,57.89 L61.46,41.89 L61.46,22.11 L49.84,6.11 Z M55.46,39.94 L46.13,52.78 L31.03,57.69 L15.93,52.78 L6.60000002,39.94 L6.60000002,24.06 L15.93,11.22 L31.03,6.31 L46.13,11.22 L55.46,24.07 L55.46,39.94 Z" id="background" fill="#ECF0F3"></path>
+  <polygon class="hig__radial-progress-indicator__segment-20" fill="#0ED3BE" points="31 6.31 31 0 12.19 6.11"></polygon>
+  <polygon class="hig__radial-progress-indicator__segment-19" fill="#0CA899" points="31 6.31 12.19 6.11 15.9 11.215"></polygon>
+  <polygon class="hig__radial-progress-indicator__segment-18" fill="#0ED3BE" points="15.9 11.215 12.19 6.11 0.565 22.11"></polygon>
+  <polygon class="hig__radial-progress-indicator__segment-17" fill="#0CA899" points="15.9 11.215 0.565 22.11 6.565 24.06"></polygon>
+  <polygon class="hig__radial-progress-indicator__segment-16" fill="#0ED3BE" points="6.565 24.06 0.565 22.11 0.565 41.89"></polygon>
+  <polygon class="hig__radial-progress-indicator__segment-15" fill="#0CA899" points="6.565 24.06 0.565 41.89 6.565 39.94"></polygon>
+  <polygon class="hig__radial-progress-indicator__segment-14" fill="#0ED3BE" points="6.565 39.94 0.565 41.89 12.19 57.89"></polygon>
+  <polygon class="hig__radial-progress-indicator__segment-13" fill="#0CA899" points="6.565 39.94 12.19 57.89 15.9 52.785"></polygon>
+  <polygon class="hig__radial-progress-indicator__segment-12" fill="#0ED3BE" points="15.9 52.785 12.19 57.89 31 64"></polygon>
+  <polygon class="hig__radial-progress-indicator__segment-11" fill="#0CA899" points="15.9 52.785 31 64 31 57.69"></polygon>
+  <polygon class="hig__radial-progress-indicator__segment-10" fill="#0ED3BE" points="31 57.69 31 64 49.81 57.89"></polygon>
+  <polygon class="hig__radial-progress-indicator__segment-09" fill="#0CA899" points="31 57.69 49.81 57.89 46.1 52.785"></polygon>
+  <polygon class="hig__radial-progress-indicator__segment-08" fill="#0ED3BE" points="46.1 52.785 49.81 57.89 61.435 41.89"></polygon>
+  <polygon class="hig__radial-progress-indicator__segment-07" fill="#0CA899" points="46.1 52.785 61.435 41.89 55.435 39.94"></polygon>
+  <polygon class="hig__radial-progress-indicator__segment-06" fill="#0ED3BE" points="55.435 39.94 61.435 41.89 61.435 22.11"></polygon>
+  <polygon class="hig__radial-progress-indicator__segment-05" fill="#0CA899" points="55.435 39.94 61.435 22.11 55.435 24.06"></polygon>
+  <polygon class="hig__radial-progress-indicator__segment-04" fill="#0ED3BE" points="55.435 24.06 61.435 22.11 49.81 6.11"></polygon>
+  <polygon class="hig__radial-progress-indicator__segment-03" fill="#0CA899" points="55.435 24.06 49.81 6.11 46.1 11.215"></polygon>
+  <polygon class="hig__radial-progress-indicator__segment-02" fill="#0ED3BE" points="46.1 11.215 49.81 6.11 31 0"></polygon>
+  <polygon class="hig__radial-progress-indicator__segment-01" fill="#0CA899" points="46.1 11.215 31 0 31 6.31"></polygon>
+</svg>
