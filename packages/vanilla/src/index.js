@@ -12,6 +12,9 @@ Hig.Icon = require('./basics/icon/icon.js');
 Hig.IconButton = require('./components/icon-button/icon-button.js');
 Hig.Icons = require('./basics/icons/icons.js');
 Hig.InputButton = require('./basics/form-elements/input-button/input-button.js');
+Hig.LinearProgressIndicator = require(
+  './components/linear-progress-indicator/linear-progress-indicator'
+);
 Hig.Modal = require('./components/modal/modal.js');
 Hig.Option = require('./basics/form-elements/dropdown/option/option.js');
 Hig.PasswordField = require('./basics/form-elements/password-field/password-field.js');

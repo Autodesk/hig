@@ -1883,6 +1883,16 @@
         }
       }
     },
+    "LinearProgressIndicator": {
+      "methods": {
+        "setPercentComplete": {
+          "desc": "sets the percent complete",
+          "params": [
+            "{Number} An integer from 0 to 100 representing the percent the delayed operation has completed"
+          ]
+        }
+      }
+    },
     "Table": {
       "methods": {
         "addTableHead": {},

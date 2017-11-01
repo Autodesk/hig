@@ -1,0 +1,58 @@
+@import '~basics/colors/colors.scss';
+
+.hig__linear-progress-indicator {
+  position: relative;
+  border-radius: 2px;
+  background-color: color(hig-cool-gray-10);
+  overflow: hidden;
+  width: 100%;
+  height: 4px;
+};
+
+.hig__linear-progress-indicator__bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  left: -3px;
+  display: flex;
+  align-items: stretch;
+  transition: width 0.3s ease-in-out;
+  animation: 2s linear infinite indeterminate-cycle;
+
+  .hig__linear-progress-indicator--determinate & {
+    animation: none;
+  }
+}
+
+.hig__linear-progress-indicator__fill {
+  flex: 1 1 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 2px;
+    width: 200px;
+    height: 4px;
+    background-image: linear-gradient(135deg, rgba(14,211,190,0) 0%,rgba(14,211,190,1) 100%);
+    background-size: 200px 4px;
+  }
+
+  .hig__linear-progress-indicator--determinate & {
+    background: color(hig-turquoise-50);
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+@keyframes indeterminate-cycle {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(200px);
+  }
+}
