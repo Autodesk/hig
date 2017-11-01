@@ -1,6 +1,6 @@
 {
   "name": "hig-react",
-  "version": "0.28.10",
+  "version": "0.28.11",
   "description": "hig components in react",
   "repository": {
     "type": "git",
@@ -68,7 +68,7 @@
     "validate": "node ./scripts/validate-version/index.js"
   },
   "dependencies": {
-    "hig-vanilla": "^0.1.3"
+    "hig-vanilla": "^0.1.4"
   },
   "jest": {
     "collectCoverageFrom": [
