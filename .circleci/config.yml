@@ -98,6 +98,10 @@ jobs:
           name: Deploy hig-react
           command: npm publish
           working_directory: packages/react
+      -run: 
+          name: Deploy hig-interface
+          command: npm publish
+          working_directory: packages/interface
       - run:
           name: Deploy hig-vanilla
           command: npm publish
