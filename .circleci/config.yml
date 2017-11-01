@@ -80,7 +80,7 @@ jobs:
           name: Run Tests (React)
           command: npm run test-ci
           working_directory: packages/react
-  pacakges-deploy:
+  packages-deploy:
     <<: *defaults
     steps:
       - checkout
