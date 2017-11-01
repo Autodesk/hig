@@ -10,12 +10,12 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: dependency-cache-v1-{{ checksum "package.json" }}
       - run:
           name: Lerna bootstrap
           command: npm install && npm run bootstrap
       - save_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: dependency-cache-v1-{{ checksum "package.json" }}
           paths:
             - packages/vanilla/node_modules
             - packages/react/node_modules
@@ -24,13 +24,13 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: dependency-cache-v1-{{ checksum "package.json" }}
       - run:
           name: Build (Vanilla)
           command: npm run lib
           working_directory: packages/vanilla
       - save_cache:
-          key: lib-cache-vanilla-v5-{{ .Revision }}
+          key: lib-cache-vanilla-v1-{{ .Revision }}
           paths:
             - packages/vanilla/lib
   react-build:
@@ -38,15 +38,15 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: dependency-cache-v1-{{ checksum "package.json" }}
       - restore_cache:
-          key: lib-cache-vanilla-v5-{{ .Revision }}
+          key: lib-cache-vanilla-v1-{{ .Revision }}
       - run:
           name: Build (React)
           command: npm run lib
           working_directory:  packages/react
       - save_cache:
-          key: lib-cache-react-v5-{{ .Revision }}
+          key: lib-cache-react-v1-{{ .Revision }}
           paths:
             - packages/react/lib
   vanilla-test:
@@ -54,9 +54,9 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: dependency-cache-v1-{{ checksum "package.json" }}
       - restore_cache:
-          key: lib-cache-vanilla-v5-{{ .Revision }}
+          key: lib-cache-vanilla-v1-{{ .Revision }}
       - run:
           name: Start Server (Vanilla)
           command: ./node_modules/http-server/bin/http-server
@@ -71,11 +71,11 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: dependency-cache-v1-{{ checksum "package.json" }}
       - restore_cache:
-          key: lib-cache-vanilla-v5-{{ .Revision }}
+          key: lib-cache-vanilla-v1-{{ .Revision }}
       - restore_cache:
-          key: lib-cache-react-v5-{{ .Revision }}
+          key: lib-cache-react-v1-{{ .Revision }}
       - run:
           name: Run Tests (React)
           command: npm run test-ci
@@ -85,11 +85,11 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: dependency-cache-v1-{{ checksum "package.json" }}
       - restore_cache:
-          key: lib-cache-vanilla-v5-{{ .Revision }}
+          key: lib-cache-vanilla-v1-{{ .Revision }}
       - restore_cache:
-          key: lib-cache-react-v5-{{ .Revision }}
+          key: lib-cache-react-v1-{{ .Revision }}
       - run:
           name: Add auth token
           command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
