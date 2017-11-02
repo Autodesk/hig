@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../../../../lib/hig.css">
+    <script type="text/javascript" src="../../../../lib/hig.js"></script>
+    <style>
+      body{
+        margin: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header-determinate hig__spacer--stack hig__spacer--width-m"></div>
+    <div class="test-container">
+      <div class="determinate-0 hig__spacer--stack hig__spacer--width-m"></div>
+      <div class="determinate-33 hig__spacer--stack hig__spacer--width-m"></div>
+      <div class="determinate-66 hig__spacer--stack hig__spacer--width-m"></div>
+      <div class="determinate-100 hig__spacer--stack hig__spacer--width-m"></div>
+    </div>
+
+    <div class="header-animated hig__spacer--stack hig__spacer--width-m"></div>
+    <div class="animated hig__spacer--stack hig__spacer--width-m"></div>
+
+    <div class="header-indeterminate hig__spacer--stack hig__spacer--width-m"></div>
+    <div class="indeterminate hig__spacer--stack hig__spacer--width-m"></div>
+
+    <script>
+      // var determinateHeader = new Hig.Typography({
+      //   "type": "h2",
+      //   "text": "determinate"
+      // });
+      // determinateHeader.mount(".header-determinate");
+
+      // var determinate0 = new Hig.RadialProgressIndicator();
+      // determinate0.mount('.determinate-0');
+      // determinate0.setPercentComplete(0);
+
+      // var determinate33 = new Hig.RadialProgressIndicator();
+      // determinate33.mount('.determinate-33');
+      // determinate33.setPercentComplete(33);
+
+      // var determinate66 = new Hig.RadialProgressIndicator();
+      // determinate66.mount('.determinate-66');
+      // determinate66.setPercentComplete(66);
+
+      // var determinate100 = new Hig.RadialProgressIndicator();
+      // determinate100.mount('.determinate-100');
+      // determinate100.setPercentComplete(100);
+
+
+
+
+      // var animated = new Hig.RadialProgressIndicator();
+      // animated.mount('.animated');
+      // animated.setPercentComplete(0);
+
+      // const steps = [0, 15, 30, 45, 60, 75, 90, 100];
+      // let currentStep = 0;
+      // setInterval(function() {
+      //   let nextStep = currentStep + 1;
+      //   if (nextStep > steps.length - 1) {
+      //     nextStep = 0;
+      //   }
+
+      //   animated.setPercentComplete(steps[nextStep]);
+      //   currentStep = nextStep;
+      // }, 500);
+
+
+
+      var indeterminateHeader = new Hig.Typography({
+        "type": "h2",
+        "text": "indeterminate"
+      });
+      indeterminateHeader.mount(".header-indeterminate");
+
+      var indeterminate = new Hig.RadialProgressIndicator();
+      indeterminate.mount('.indeterminate');
+    </script>
+  </body>
+</html>

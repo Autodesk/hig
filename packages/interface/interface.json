@@ -1893,6 +1893,22 @@
         }
       }
     },
+    "RadialProgressIndicator": {
+      "defaults": {
+        "size": "{String - xs, s, m, l} the size of the progress indicator"
+      },
+      "methods": {
+        "setPercentComplete": {
+          "desc": "sets the percent complete",
+          "params": [
+            "{Number} An integer from 0 to 100 representing the percent the delayed operation has completed"
+          ]
+        },
+        "setSize": {
+          "desc": "{String - xs, s, m, l} the size of the progress indicator"
+        }
+      }
+    },
     "Table": {
       "methods": {
         "addTableHead": {},

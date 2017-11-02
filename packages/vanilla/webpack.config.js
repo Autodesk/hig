@@ -31,7 +31,7 @@ const r = {
         loader: 'css-loader!sass-loader'
       }),
     }, {
-      test: /\.html$/,
+      test: /\.(html|svg)$/,
       use: 'raw-loader'
     },
     {

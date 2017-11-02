@@ -18,6 +18,9 @@ Hig.LinearProgressIndicator = require(
 Hig.Modal = require('./components/modal/modal.js');
 Hig.Option = require('./basics/form-elements/dropdown/option/option.js');
 Hig.PasswordField = require('./basics/form-elements/password-field/password-field.js');
+Hig.RadialProgressIndicator = require(
+  './components/radial-progress-indicator/radial-progress-indicator'
+);
 Hig.RadioButton = require('./basics/form-elements/radio-button/radio-button.js');
 Hig.Range = require('./basics/form-elements/range/range.js');
 Hig.RichText = require('./basics/rich-text/rich-text.js');
