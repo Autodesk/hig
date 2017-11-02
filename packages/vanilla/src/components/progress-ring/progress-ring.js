@@ -1,9 +1,12 @@
 import './progress-ring.scss';
 
-const Template = require('./progress-ring.html');
 const Interface = require('interface.json');
 const Core = require('_core.js');
-const ProgressRingIndeterminateMedium = require('./progress-ring-indeterminate-m');
+
+const Template = require('./progress-ring.html');
+const ProgressRingIndeterminate = require('./progress-ring-indeterminate');
+const smallSVG = require('./progress-ring-s.svg');
+const mediumsSVG = require('./progress-ring-m.svg');
 
 const AvailableSizes = ['xs', 's', 'm', 'l'];
 
@@ -34,7 +37,9 @@ class ProgressRing extends Core {
       return;
     }
 
-    this.animation = new ProgressRingIndeterminateMedium(this.el);
+    this.el.innerHTML = size === 's' ? smallSVG : mediumsSVG;
+
+    this.animation = new ProgressRingIndeterminate(this.el);
   }
 
   setPercentComplete(percentComplete) {

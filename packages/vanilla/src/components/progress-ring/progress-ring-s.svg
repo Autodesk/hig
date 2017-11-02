@@ -1,0 +1,26 @@
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="Progress-Indicators" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Group">
+      <polygon id="background-path" fill="#ECF0F3" points="20.49 3.51 12 0 3.51 3.51 0 12 3.51 20.49 12 24 20.49 20.49 24 12"></polygon>
+      <g fill-rule="nonzero" fill="#0ED3BE">
+        <polygon class="segment" id="16" points="3.52 3.52 12 4.33 12 0"></polygon>
+        <polygon class="segment" id="15" points="3.52 3.52 6.58 6.58 12 4.33"></polygon>
+        <polygon class="segment" id="14" points="0 12 6.58 6.58 3.52 3.52"></polygon>
+        <polygon class="segment" id="13" points="0 12 4.33 12 6.58 6.58"></polygon>
+        <polygon class="segment" id="12" points="3.52 20.48 4.33 12 0 12"></polygon>
+        <polygon class="segment" id="11" points="3.52 20.48 6.58 17.42 4.33 12"></polygon>
+        <polygon class="segment" id="10" points="12 24 6.58 17.42 3.52 20.48"></polygon>
+        <polygon class="segment" id="09" points="12 24 12 19.67 6.58 17.42"></polygon>
+        <polygon class="segment" id="08" points="20.48 20.48 12 19.67 12 24"></polygon>
+        <polygon class="segment" id="07" points="20.48 20.48 17.42 17.42 12 19.67"></polygon>
+        <polygon class="segment" id="06" points="24 12 17.42 17.42 20.48 20.48"></polygon>
+        <polygon class="segment" id="05" points="24 12 19.67 12 17.42 17.42"></polygon>
+        <polygon class="segment" id="04" points="20.48 3.52 19.67 12 24 12"></polygon>
+        <polygon class="segment" id="03" points="20.48 3.52 17.42 6.58 19.67 12"></polygon>
+        <polygon class="segment" id="02" points="12 0 17.42 6.58 20.48 3.52"></polygon>
+        <polygon class="segment" id="01" points="12 0 12 4.33 17.42 6.58"></polygon>
+      </g>
+      <polygon id="background" fill="#FFFFFF" fill-rule="nonzero" points="17.42 17.42 12 19.67 6.58 17.42 4.33 12 6.58 6.58 12 4.33 17.42 6.58 19.67 12"></polygon>
+    </g>
+  </g>
+</svg>
