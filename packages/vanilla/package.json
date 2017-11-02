@@ -4,6 +4,7 @@
   "description": "Stateless implementation in pure CSS, HTML and JS with no framework dependecies",
   "main": "lib/hig.js",
   "css": "lib/hig.css",
+  "files": ["lib/hig.js", "lib/hig.css"],
   "scripts": {
     "lib": "NODE_ENV=production webpack -p",
     "watch": "webpack --watch",
