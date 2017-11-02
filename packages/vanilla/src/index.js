@@ -12,15 +12,11 @@ Hig.Icon = require('./basics/icon/icon.js');
 Hig.IconButton = require('./components/icon-button/icon-button.js');
 Hig.Icons = require('./basics/icons/icons.js');
 Hig.InputButton = require('./basics/form-elements/input-button/input-button.js');
-Hig.LinearProgressIndicator = require(
-  './components/linear-progress-indicator/linear-progress-indicator'
-);
+Hig.ProgressBar = require('./components/progress-bar/progress-bar');
+Hig.ProgressRing = require('./components/progress-ring/progress-ring');
 Hig.Modal = require('./components/modal/modal.js');
 Hig.Option = require('./basics/form-elements/dropdown/option/option.js');
 Hig.PasswordField = require('./basics/form-elements/password-field/password-field.js');
-Hig.RadialProgressIndicator = require(
-  './components/radial-progress-indicator/radial-progress-indicator'
-);
 Hig.RadioButton = require('./basics/form-elements/radio-button/radio-button.js');
 Hig.Range = require('./basics/form-elements/range/range.js');
 Hig.RichText = require('./basics/rich-text/rich-text.js');

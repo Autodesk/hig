@@ -1,6 +1,6 @@
 @import '~basics/colors/colors.scss';
 
-.hig__linear-progress-indicator {
+.hig__progress-bar {
   position: relative;
   border-radius: 2px;
   background-color: color(hig-cool-gray-10);
@@ -9,7 +9,7 @@
   height: 4px;
 };
 
-.hig__linear-progress-indicator__bar {
+.hig__progress-bar__bar {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -20,12 +20,12 @@
   transition: width 0.3s ease-in-out;
   animation: 2s linear infinite indeterminate-cycle;
 
-  .hig__linear-progress-indicator--determinate & {
+  .hig__progress-bar--determinate & {
     animation: none;
   }
 }
 
-.hig__linear-progress-indicator__fill {
+.hig__progress-bar__fill {
   flex: 1 1 0;
 
   &::before {
@@ -38,7 +38,7 @@
     background-size: 200px 4px;
   }
 
-  .hig__linear-progress-indicator--determinate & {
+  .hig__progress-bar--determinate & {
     background: color(hig-turquoise-50);
 
     &::before {

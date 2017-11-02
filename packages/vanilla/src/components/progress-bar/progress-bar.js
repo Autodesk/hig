@@ -1,10 +1,10 @@
-import './linear-progress-indicator.scss';
+import './progress-bar.scss';
 
-const Template = require('./linear-progress-indicator.html');
+const Template = require('./progress-bar.html');
 const Interface = require('interface.json');
 const Core = require('_core.js');
 
-class LinearProgressIndicator extends Core {
+class ProgressBar extends Core {
   constructor(options) {
     super(options);
 
@@ -13,13 +13,13 @@ class LinearProgressIndicator extends Core {
 
   _componentDidMount() {
     this.bar = this._findDOMEl(
-      '.hig__linear-progress-indicator__bar',
+      '.hig__progress-bar__bar',
       this.el
     );
   }
 
   setPercentComplete(percentComplete) {
-    this.el.classList.add('hig__linear-progress-indicator--determinate');
+    this.el.classList.add('hig__progress-bar--determinate');
     this.bar.style.width = `${this._renderedPercent(percentComplete)}%`;
   }
 
@@ -30,8 +30,8 @@ class LinearProgressIndicator extends Core {
   }
 }
 
-LinearProgressIndicator._interface = Interface.components.LinearProgressIndicator;
-LinearProgressIndicator._defaults = {};
-LinearProgressIndicator._partials = {};
+ProgressBar._interface = Interface.components.ProgressBar;
+ProgressBar._defaults = {};
+ProgressBar._partials = {};
 
-module.exports = LinearProgressIndicator;
+module.exports = ProgressBar;

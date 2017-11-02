@@ -1,11 +1,11 @@
-import svg from './radial-progress-indicator-m.svg';
+import svg from './progress-ring-m.svg';
 
 const SEGMENT_COUNT = 20;
 const CYCLE_DURATION = 1000;
 const FADE_DURATION = 416;
 const SEGMENT_DELAY_FACTOR = CYCLE_DURATION / SEGMENT_COUNT;
 
-class IndeterminateRadialMedium {
+class ProgressRingIndeterminateMedium {
   constructor(el) {
     this.start = undefined;
     this.el = el;
@@ -43,4 +43,4 @@ class IndeterminateRadialMedium {
   }
 }
 
-module.exports = IndeterminateRadialMedium;
+module.exports = ProgressRingIndeterminateMedium;

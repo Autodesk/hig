@@ -1883,7 +1883,7 @@
         }
       }
     },
-    "LinearProgressIndicator": {
+    "ProgressBar": {
       "methods": {
         "setPercentComplete": {
           "desc": "sets the percent complete",
@@ -1893,7 +1893,7 @@
         }
       }
     },
-    "RadialProgressIndicator": {
+    "ProgressRing": {
       "defaults": {
         "size": "{String - xs, s, m, l} the size of the progress indicator"
       },

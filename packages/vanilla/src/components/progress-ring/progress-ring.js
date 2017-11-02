@@ -1,16 +1,13 @@
-import './radial-progress-indicator.scss';
+import './progress-ring.scss';
 
-const Template = require('./radial-progress-indicator.html');
+const Template = require('./progress-ring.html');
 const Interface = require('interface.json');
 const Core = require('_core.js');
-const IndeterminateRadialMedium = require('./indeterminate-radial-medium');
+const ProgressRingIndeterminateMedium = require('./progress-ring-indeterminate-m');
 
 const AvailableSizes = ['xs', 's', 'm', 'l'];
 
-
-// Segment color decay: 1s
-
-class RadialProgressIndicator extends Core {
+class ProgressRing extends Core {
   static _partials = {};
   static _defaults = {
     size: AvailableSizes[2]
@@ -37,7 +34,7 @@ class RadialProgressIndicator extends Core {
       return;
     }
 
-    this.animation = new IndeterminateRadialMedium(this.el);
+    this.animation = new ProgressRingIndeterminateMedium(this.el);
   }
 
   setPercentComplete(percentComplete) {
@@ -45,6 +42,6 @@ class RadialProgressIndicator extends Core {
   }
 }
 
-RadialProgressIndicator._interface = Interface.components.RadialProgressIndicator;
+ProgressRing._interface = Interface.components.ProgressRing;
 
-module.exports = RadialProgressIndicator;
+module.exports = ProgressRing;
