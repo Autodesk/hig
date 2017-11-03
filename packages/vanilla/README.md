@@ -1,5 +1,5 @@
 ## Web Implementation
-The HIG Web implementation consists of `html`, `css` and `js`. You can opt to only consume the `html` and `css` part and write the wrapper against the `interface.json` yourself (hard) or opt to use our `js` wrapper directly (easy). 
+The HIG Web implementation consists of `html`, `css` and `js`. You can opt to only consume the `html` and `css` part and write the wrapper against the `interface.json` yourself (hard) or opt to use our `js` wrapper directly (easy).
 
 ## Install
 
@@ -41,7 +41,7 @@ Creating a new component (or subcomponent) consists of 2 parts:
 ```bash
 plop
 ```
-use the arrows to select the `hig_skeleton`, type your component name (ex: `component123`), next type the location where you would want your component directory to live (ex: `src/components/component123_parent`). This will generate a `html`, `sass` and `js` file in the directory you provided, in our example it would create: 
+Use the arrows to select the `hig_skeleton`, type your component name (ex: `component123`), next type the location where you would want your component directory to live (ex: `src/components/component123_parent`). This will generate a `html`, `sass` and `js` file in the directory you provided, in our example it would create:
 ```
 src/components/component123_parent/component123/component123.html
 src/components/component123_parent/component123/component123.sass
