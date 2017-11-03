@@ -7,7 +7,7 @@
         margin: 30px;
       }
 
-      .indeterminate {
+      .group {
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
@@ -18,22 +18,72 @@
   <body>
     <div class="header-determinate hig__spacer--stack hig__spacer--width-m"></div>
     <div class="test-container">
-      <div class="determinate-0 hig__spacer--stack hig__spacer--width-m"></div>
-      <div class="determinate-33 hig__spacer--stack hig__spacer--width-m"></div>
-      <div class="determinate-66 hig__spacer--stack hig__spacer--width-m"></div>
-      <div class="determinate-100 hig__spacer--stack hig__spacer--width-m"></div>
+      <div class="group determinate-0 hig__spacer--stack hig__spacer--width-m"></div>
+      <div class="group determinate-33 hig__spacer--stack hig__spacer--width-m"></div>
+      <div class="group determinate-66 hig__spacer--stack hig__spacer--width-m"></div>
+      <div class="group determinate-100 hig__spacer--stack hig__spacer--width-m"></div>
     </div>
 
     <div class="header-animated hig__spacer--stack hig__spacer--width-m"></div>
-    <div class="animated hig__spacer--stack hig__spacer--width-m"></div>
+    <div class="group animated hig__spacer--stack hig__spacer--width-m"></div>
 
     <div class="header-indeterminate hig__spacer--stack hig__spacer--width-m"></div>
-    <div class="indeterminate hig__spacer--stack hig__spacer--width-m"></div>
+    <div class="group indeterminate hig__spacer--stack hig__spacer--width-m"></div>
 
     <script>
+      var determinateHeader = new Hig.Typography({
+        "type": "h2",
+        "text": "Determinate"
+      });
+      determinateHeader.mount(".header-determinate");
+
+      Hig.ProgressRing.AvailableSizes.forEach(function(size) {
+        var determinate0 = new Hig.ProgressRing({ size: size });
+        determinate0.mount('.determinate-0');
+        determinate0.setPercentComplete(0);
+
+        var determinate33 = new Hig.ProgressRing({ size: size });
+        determinate33.mount('.determinate-33');
+        determinate33.setPercentComplete(33);
+
+        var determinate66 = new Hig.ProgressRing({ size: size });
+        determinate66.mount('.determinate-66');
+        determinate66.setPercentComplete(66);
+
+        var determinate100 = new Hig.ProgressRing({ size: size });
+        determinate100.mount('.determinate-100');
+        determinate100.setPercentComplete(100);
+      });
+
+
+      var rings = [];
+      Hig.ProgressRing.AvailableSizes.forEach(function(size) {
+        const ring = new Hig.ProgressRing({ size: size });
+        ring.mount('.animated');
+        ring.setPercentComplete(0);
+        rings.push(ring);
+      });
+
+      const steps = [0, 14, 28, 42, 56, 70, 84, 100, 0];
+      let currentStep = 0;
+      let interval = setInterval(function() {
+        let nextStep = currentStep + 1;
+        if (nextStep > steps.length - 1) {
+          nextStep = 0;
+        }
+
+        rings.forEach(function (ring) {
+          ring.setPercentComplete(steps[nextStep]);
+        });
+
+        currentStep = nextStep;
+      }, 600);
+
+
+
       var indeterminateHeader = new Hig.Typography({
         "type": "h2",
-        "text": "indeterminate"
+        "text": "Indeterminate"
       });
       indeterminateHeader.mount(".header-indeterminate");
 

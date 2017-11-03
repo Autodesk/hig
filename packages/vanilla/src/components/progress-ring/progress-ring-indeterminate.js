@@ -13,10 +13,10 @@ class ProgressRingIndeterminate {
     this.SEGMENT_DELAY_FACTOR = CYCLE_DURATION / this.SEGMENT_COUNT;
 
     this.step(1);
-    window.requestAnimationFrame(this.step);
   }
 
   step = (timestamp) => {
+    if (!this.playing) { return; }
     if (!this.startTime) this.startTime = timestamp;
     const elapsed = timestamp - this.startTime;
     const elapsedThisCycle = elapsed % CYCLE_DURATION;
@@ -45,6 +45,17 @@ class ProgressRingIndeterminate {
 
     // Fading
     return Math.abs(((elapsedThisCycle - segmentFadeStartTime) / FADE_DURATION) - 1);
+  }
+
+  start() {
+    this.playing = true;
+    this.startTime = undefined;
+    window.requestAnimationFrame(this.step);
+  }
+
+  stop() {
+    this.playing = false;
+    window.cancelAnimationFrame(this.step);
   }
 }
 

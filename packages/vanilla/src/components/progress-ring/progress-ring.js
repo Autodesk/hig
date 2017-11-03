@@ -5,6 +5,7 @@ const Core = require('_core.js');
 
 const Template = require('./progress-ring.html');
 const ProgressRingIndeterminate = require('./progress-ring-indeterminate');
+const ProgressRingDeterminate = require('./progress-ring-determinate');
 const extraSmallSVG = require('./progress-ring-xs.svg');
 const smallSVG = require('./progress-ring-s.svg');
 const mediumsSVG = require('./progress-ring-m.svg');
@@ -72,10 +73,16 @@ class ProgressRing extends Core {
     this.el.children[0].style.transform = `scale(${sizes[size].scale})`;
 
     this.animation = new ProgressRingIndeterminate(this.el);
+    this.animation.start();
   }
 
   setPercentComplete(percentComplete) {
-
+    if (!(this.animation instanceof ProgressRingDeterminate)) {
+      this.animation.stop();
+      this.animation = new ProgressRingDeterminate(this.el);
+      this.animation.start();
+    }
+    this.animation.setProgress(percentComplete);
   }
 }
 
