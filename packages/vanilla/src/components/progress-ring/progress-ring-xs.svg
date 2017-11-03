@@ -1,0 +1,16 @@
+<svg width="14px" height="16px" viewBox="0 0 14 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <polygon id="background" fill="#ECF0F3" fill-rule="nonzero" points="7 0 7 0 0.07 4 0.07 12 0.07 12 7 16 7 16 13.93 12 13.93 12 13.93 4"></polygon>
+  <polygon class="segment" fill="#0ED3BE" fill-rule="nonzero" points="7 3.46 7 0 0.07 4 0.07 4"></polygon>
+  <polygon class="segment" fill="#0ED3BE" fill-rule="nonzero" points="3.07 5.73 7 3.46 0.07 4 0.07 4"></polygon>
+  <polygon class="segment" fill="#0ED3BE" fill-rule="nonzero" points="3.07 5.73 0.07 4 0.07 12 0.07 12"></polygon>
+  <polygon class="segment" fill="#0ED3BE" fill-rule="nonzero" points="3.07 10.27 3.07 5.73 0.07 12 0.07 12"></polygon>
+  <polygon class="segment" fill="#0ED3BE" fill-rule="nonzero" points="3.07 10.27 0.07 12 7 16 7 16"></polygon>
+  <polygon class="segment" fill="#0ED3BE" fill-rule="nonzero" points="7 12.54 3.07 10.27 7 16 7 16"></polygon>
+  <polygon class="segment" fill="#0ED3BE" fill-rule="nonzero" points="7 12.54 7 16 13.93 12 13.93 12"></polygon>
+  <polygon class="segment" fill="#0ED3BE" fill-rule="nonzero" points="10.93 10.27 7 12.54 13.93 12 13.93 12"></polygon>
+  <polygon class="segment" fill="#0ED3BE" fill-rule="nonzero" points="10.93 10.27 13.93 12 13.93 4 13.93 4"></polygon>
+  <polygon class="segment" fill="#0ED3BE" fill-rule="nonzero" points="10.93 5.73 10.93 10.27 13.93 4 13.93 4"></polygon>
+  <polygon class="segment" fill="#0ED3BE" fill-rule="nonzero" points="10.93 5.73 13.93 4 7 0 7 0"></polygon>
+  <polygon class="segment" fill="#0ED3BE" fill-rule="nonzero" points="7 3.46 10.93 5.73 7 0 7 0"></polygon>
+  <polygon id="mask" fill="#FFFFFF" points="10.93 10.27 7 12.54 3.07 10.27 3.07 5.73 7 3.46 10.93 5.73"></polygon>
+</svg>

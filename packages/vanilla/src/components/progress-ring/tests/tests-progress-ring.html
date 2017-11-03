@@ -6,6 +6,13 @@
       body{
         margin: 30px;
       }
+
+      .indeterminate {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-around;
+      }
     </style>
   </head>
   <body>
@@ -30,11 +37,21 @@
       });
       indeterminateHeader.mount(".header-indeterminate");
 
-      var indeterminateM = new Hig.ProgressRing();
-      indeterminateM.mount('.indeterminate');
+      var indeterminateXS = new Hig.ProgressRing({ size: 'xs' });
+      indeterminateXS.mount('.indeterminate');
 
       var indeterminateS = new Hig.ProgressRing({ size: 's' });
       indeterminateS.mount('.indeterminate');
+
+      var indeterminateM = new Hig.ProgressRing();
+      indeterminateM.mount('.indeterminate');
+
+      var indeterminateL = new Hig.ProgressRing({ size: 'l' });
+      indeterminateL.mount('.indeterminate');
+
+      var indeterminateXL = new Hig.ProgressRing({ size: 'xl' });
+      indeterminateXL.mount('.indeterminate');
+
     </script>
   </body>
 </html>

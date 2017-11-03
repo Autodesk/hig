@@ -5,10 +5,39 @@ const Core = require('_core.js');
 
 const Template = require('./progress-ring.html');
 const ProgressRingIndeterminate = require('./progress-ring-indeterminate');
+const extraSmallSVG = require('./progress-ring-xs.svg');
 const smallSVG = require('./progress-ring-s.svg');
 const mediumsSVG = require('./progress-ring-m.svg');
 
-const AvailableSizes = ['xs', 's', 'm', 'l'];
+const AvailableSizes = ['xs', 's', 'm', 'l', 'xl'];
+
+const sizes = {
+  xs: {
+    svg: extraSmallSVG,
+    size: 16,
+    scale: 1
+  },
+  s: {
+    svg: smallSVG,
+    size: 24,
+    scale: 1
+  },
+  m: {
+    svg: mediumsSVG,
+    size: 64,
+    scale: 1
+  },
+  l: {
+    svg: mediumsSVG,
+    size: 128,
+    scale: 2
+  },
+  xl: {
+    svg: mediumsSVG,
+    size: 216,
+    scale: 3.35
+  },
+};
 
 class ProgressRing extends Core {
   static _partials = {};
@@ -37,7 +66,10 @@ class ProgressRing extends Core {
       return;
     }
 
-    this.el.innerHTML = size === 's' ? smallSVG : mediumsSVG;
+    this.el.innerHTML = sizes[size].svg;
+    this.el.style.width = sizes[size].size;
+    this.el.style.height = sizes[size].size;
+    this.el.children[0].style.transform = `scale(${sizes[size].scale})`;
 
     this.animation = new ProgressRingIndeterminate(this.el);
   }
