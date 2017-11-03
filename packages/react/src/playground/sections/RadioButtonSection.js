@@ -76,7 +76,6 @@ class RadioButtonSection extends PureComponent {
             onChange={logEvent}
             onFocus={logEvent}
           />
-
           <hr />
           <RadioButton
             label="Disabled and Checked"
