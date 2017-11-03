@@ -29,8 +29,6 @@
  <hr>
  <div>
   <div class="tests-radiobutton tests-radiobutton4"></div>
-  <div class="tests-radiobutton tests-radiobutton5"></div>
-  <div class="tests-radiobutton tests-radiobutton6"></div>
  </div>
 </div>
 
@@ -79,30 +77,14 @@
  RadioButton3.disable();
 
 
-
- const RadioButton4 = new RadioButton ({
-  label: "Callcheck",
-  name: "events",
-  value: "shouldbechecked"
+ const RadioButton4 = new RadioButton({
+  label: "Checked and Disabled",
+  name: "checked_and_disabled",
+  value: "test"
  });
  RadioButton4.mount('.tests-radiobutton4');
+ RadioButton4.disable();
  RadioButton4.check();
-
- const RadioButton5 = new RadioButton ({
-  label: "Callrequired",
-  name: "events",
-  value: "shouldberequired"
- });
- RadioButton5.mount('.tests-radiobutton5');
- RadioButton5.required();
-
- const RadioButton6 = new RadioButton ({
-  label: "Calldisable",
-  name: "events",
-  value: "shouldbedisabled"
- });
- RadioButton6.mount('.tests-radiobutton6');
- RadioButton6.disable();
 </script>
 
 </body>

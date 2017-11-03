@@ -88,7 +88,11 @@
       stroke: color(hig-indigo-30);
       fill: color(hig-indigo-30);
     }
-  }  
+  }
+  
+  .hig__input-button--radio.hig__input-button--checked.hig__input-button--disabled  & {
+    background-color: color(hig-indigo-30);
+  }
 }
 
 .hig__input-button__input-wrapper > svg {
