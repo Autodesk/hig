@@ -36,6 +36,7 @@ class CheckboxSection extends PureComponent {
         <div style={checkboxStyle}>
           <Checkbox label="Required" required="You must check this box" />
           <Checkbox label="Disabled" disabled />
+          <Checkbox label="Disabled + Checked" checked disabled />
           <Checkbox
             label="Controlled"
             checked={this.state.controlledChecked}
