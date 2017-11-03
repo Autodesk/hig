@@ -52,5 +52,5 @@ class App extends React.Component {
 
 ## Contribute
 
-please see our [DEVELOPING.md](./DEVELOPING.md) for running our `playground` locally to play around with the source and see our [CONTRIBUTING.md](../../../CONTRIBUTING.md) and how to get your code back in the repo
+Please see our [DEVELOPING.md](./DEVELOPING.md) for running our `playground` locally to play around with the source and see our [CONTRIBUTING.md](../../../CONTRIBUTING.md) and how to get your code back in the repo.
 
