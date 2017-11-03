@@ -61,6 +61,6 @@
     "webpack": "^3.5.5"
   },
   "dependencies": {
-    "hig-interface": "^0.1.4"
+    "hig-interface": "^0.1.5"
   }
 }
