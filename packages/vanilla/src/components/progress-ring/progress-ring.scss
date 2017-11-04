@@ -3,3 +3,57 @@
   justify-content: center;
   align-items: center;
 }
+
+.hig__progress-ring__background {
+  transform-origin: center;
+
+  .hig__progress-ring--entering & {
+    animation: background-entering 0.65s ease-in-out;
+  }
+}
+
+.hig__progress-ring__mask {
+  transform-origin: center;
+
+  .hig__progress-ring--entering & {
+    animation: mask-entering 0.65s ease-out;
+  }
+}
+
+.hig__progress-ring__segment {
+  opacity: 0;
+}
+
+
+@keyframes background-entering {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  61% {
+    transform: scale(1.1);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes mask-entering {
+  from {
+    opacity: 0;
+    transform: scale(2);
+  }
+
+  61% {
+    opacity: 0;
+    transform: scale(1.7);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

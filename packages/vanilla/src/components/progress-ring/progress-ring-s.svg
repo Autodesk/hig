@@ -1,26 +1,20 @@
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <g id="Progress-Indicators" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-    <g id="Group">
-      <polygon id="background-path" fill="#ECF0F3" points="20.49 3.51 12 0 3.51 3.51 0 12 3.51 20.49 12 24 20.49 20.49 24 12"></polygon>
-      <g fill-rule="nonzero" fill="#0ED3BE">
-        <polygon class="segment" id="16" points="3.52 3.52 12 4.33 12 0"></polygon>
-        <polygon class="segment" id="15" points="3.52 3.52 6.58 6.58 12 4.33"></polygon>
-        <polygon class="segment" id="14" points="0 12 6.58 6.58 3.52 3.52"></polygon>
-        <polygon class="segment" id="13" points="0 12 4.33 12 6.58 6.58"></polygon>
-        <polygon class="segment" id="12" points="3.52 20.48 4.33 12 0 12"></polygon>
-        <polygon class="segment" id="11" points="3.52 20.48 6.58 17.42 4.33 12"></polygon>
-        <polygon class="segment" id="10" points="12 24 6.58 17.42 3.52 20.48"></polygon>
-        <polygon class="segment" id="09" points="12 24 12 19.67 6.58 17.42"></polygon>
-        <polygon class="segment" id="08" points="20.48 20.48 12 19.67 12 24"></polygon>
-        <polygon class="segment" id="07" points="20.48 20.48 17.42 17.42 12 19.67"></polygon>
-        <polygon class="segment" id="06" points="24 12 17.42 17.42 20.48 20.48"></polygon>
-        <polygon class="segment" id="05" points="24 12 19.67 12 17.42 17.42"></polygon>
-        <polygon class="segment" id="04" points="20.48 3.52 19.67 12 24 12"></polygon>
-        <polygon class="segment" id="03" points="20.48 3.52 17.42 6.58 19.67 12"></polygon>
-        <polygon class="segment" id="02" points="12 0 17.42 6.58 20.48 3.52"></polygon>
-        <polygon class="segment" id="01" points="12 0 12 4.33 17.42 6.58"></polygon>
-      </g>
-      <polygon id="background" fill="#FFFFFF" fill-rule="nonzero" points="17.42 17.42 12 19.67 6.58 17.42 4.33 12 6.58 6.58 12 4.33 17.42 6.58 19.67 12"></polygon>
-    </g>
-  </g>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <polygon class="hig__progress-ring__background" fill="#ECF0F3" points="22.49 5.51 14 2 5.51 5.51 2 14 5.51 22.49 14 26 22.49 22.49 26 14"></polygon>
+  <polygon class="hig__progress-ring__segment" fill="#0ED3BE" fill-rule="nonzero" points="5.52 5.52 14 6.33 14 2"></polygon>
+  <polygon class="hig__progress-ring__segment" fill="#0ED3BE" fill-rule="nonzero" points="5.52 5.52 8.58 8.58 14 6.33"></polygon>
+  <polygon class="hig__progress-ring__segment" fill="#0ED3BE" fill-rule="nonzero" points="2 14 8.58 8.58 5.52 5.52"></polygon>
+  <polygon class="hig__progress-ring__segment" fill="#0ED3BE" fill-rule="nonzero" points="2 14 6.33 14 8.58 8.58"></polygon>
+  <polygon class="hig__progress-ring__segment" fill="#0ED3BE" fill-rule="nonzero" points="5.52 22.48 6.33 14 2 14"></polygon>
+  <polygon class="hig__progress-ring__segment" fill="#0ED3BE" fill-rule="nonzero" points="5.52 22.48 8.58 19.42 6.33 14"></polygon>
+  <polygon class="hig__progress-ring__segment" fill="#0ED3BE" fill-rule="nonzero" points="14 26 8.58 19.42 5.52 22.48"></polygon>
+  <polygon class="hig__progress-ring__segment" fill="#0ED3BE" fill-rule="nonzero" points="14 26 14 21.67 8.58 19.42"></polygon>
+  <polygon class="hig__progress-ring__segment" fill="#0ED3BE" fill-rule="nonzero" points="22.48 22.48 14 21.67 14 26"></polygon>
+  <polygon class="hig__progress-ring__segment" fill="#0ED3BE" fill-rule="nonzero" points="22.48 22.48 19.42 19.42 14 21.67"></polygon>
+  <polygon class="hig__progress-ring__segment" fill="#0ED3BE" fill-rule="nonzero" points="26 14 19.42 19.42 22.48 22.48"></polygon>
+  <polygon class="hig__progress-ring__segment" fill="#0ED3BE" fill-rule="nonzero" points="26 14 21.67 14 19.42 19.42"></polygon>
+  <polygon class="hig__progress-ring__segment" fill="#0ED3BE" fill-rule="nonzero" points="22.48 5.52 21.67 14 26 14"></polygon>
+  <polygon class="hig__progress-ring__segment" fill="#0ED3BE" fill-rule="nonzero" points="22.48 5.52 19.42 8.58 21.67 14"></polygon>
+  <polygon class="hig__progress-ring__segment" fill="#0ED3BE" fill-rule="nonzero" points="14 2 19.42 8.58 22.48 5.52"></polygon>
+  <polygon class="hig__progress-ring__segment" fill="#0ED3BE" fill-rule="nonzero" points="14 2 14 6.33 19.42 8.58"></polygon>
+  <polygon class="hig__progress-ring__mask" fill="#FFFFFF" fill-rule="nonzero" points="19.42 19.42 14 21.67 8.58 19.42 6.33 14 8.58 8.58 14 6.33 19.42 8.58 21.67 14"></polygon>
 </svg>

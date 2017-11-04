@@ -1,10 +1,9 @@
 import './flyout.scss';
+import CSSTransition from '../../helpers/js/css-transition';
 
 const Template = require('./flyout.html');
 const Interface = require('interface.json');
 const Core = require('../../helpers/js/_core.js');
-
-import CSSTransition from '../../helpers/js/css-transition.js';
 
 const ANCHOR_POINTS = [
   'top-left',

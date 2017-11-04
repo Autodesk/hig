@@ -1,16 +1,16 @@
-<svg width="14px" height="16px" viewBox="0 0 14 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <polygon id="background" fill="#ECF0F3" fill-rule="nonzero" points="7 0 7 0 0.07 4 0.07 12 0.07 12 7 16 7 16 13.93 12 13.93 12 13.93 4"></polygon>
-  <polygon class="segment" fill="#0ED3BE" fill-rule="nonzero" points="7 3.46 7 0 0.07 4 0.07 4"></polygon>
-  <polygon class="segment" fill="#0ED3BE" fill-rule="nonzero" points="3.07 5.73 7 3.46 0.07 4 0.07 4"></polygon>
-  <polygon class="segment" fill="#0ED3BE" fill-rule="nonzero" points="3.07 5.73 0.07 4 0.07 12 0.07 12"></polygon>
-  <polygon class="segment" fill="#0ED3BE" fill-rule="nonzero" points="3.07 10.27 3.07 5.73 0.07 12 0.07 12"></polygon>
-  <polygon class="segment" fill="#0ED3BE" fill-rule="nonzero" points="3.07 10.27 0.07 12 7 16 7 16"></polygon>
-  <polygon class="segment" fill="#0ED3BE" fill-rule="nonzero" points="7 12.54 3.07 10.27 7 16 7 16"></polygon>
-  <polygon class="segment" fill="#0ED3BE" fill-rule="nonzero" points="7 12.54 7 16 13.93 12 13.93 12"></polygon>
-  <polygon class="segment" fill="#0ED3BE" fill-rule="nonzero" points="10.93 10.27 7 12.54 13.93 12 13.93 12"></polygon>
-  <polygon class="segment" fill="#0ED3BE" fill-rule="nonzero" points="10.93 10.27 13.93 12 13.93 4 13.93 4"></polygon>
-  <polygon class="segment" fill="#0ED3BE" fill-rule="nonzero" points="10.93 5.73 10.93 10.27 13.93 4 13.93 4"></polygon>
-  <polygon class="segment" fill="#0ED3BE" fill-rule="nonzero" points="10.93 5.73 13.93 4 7 0 7 0"></polygon>
-  <polygon class="segment" fill="#0ED3BE" fill-rule="nonzero" points="7 3.46 10.93 5.73 7 0 7 0"></polygon>
-  <polygon id="mask" fill="#FFFFFF" points="10.93 10.27 7 12.54 3.07 10.27 3.07 5.73 7 3.46 10.93 5.73"></polygon>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <polygon class="hig__progress-ring__background" fill="#ECF0F3" fill-rule="nonzero" points="10 2 10 2 3.07 6 3.07 14 3.07 14 10 18 10 18 16.93 14 16.93 14 16.93 6"></polygon>
+  <polygon class="hig__progress-ring__segment" fill="#0ED3BE" fill-rule="nonzero" points="10 5.46 10 2 3.07 6 3.07 6"></polygon>
+  <polygon class="hig__progress-ring__segment" fill="#0ED3BE" fill-rule="nonzero" points="6.07 7.73 10 5.46 3.07 6 3.07 6"></polygon>
+  <polygon class="hig__progress-ring__segment" fill="#0ED3BE" fill-rule="nonzero" points="6.07 7.73 3.07 6 3.07 14 3.07 14"></polygon>
+  <polygon class="hig__progress-ring__segment" fill="#0ED3BE" fill-rule="nonzero" points="6.07 12.27 6.07 7.73 3.07 14 3.07 14"></polygon>
+  <polygon class="hig__progress-ring__segment" fill="#0ED3BE" fill-rule="nonzero" points="6.07 12.27 3.07 14 10 18 10 18"></polygon>
+  <polygon class="hig__progress-ring__segment" fill="#0ED3BE" fill-rule="nonzero" points="10 14.54 6.07 12.27 10 18 10 18"></polygon>
+  <polygon class="hig__progress-ring__segment" fill="#0ED3BE" fill-rule="nonzero" points="10 14.54 10 18 16.93 14 16.93 14"></polygon>
+  <polygon class="hig__progress-ring__segment" fill="#0ED3BE" fill-rule="nonzero" points="13.93 12.27 10 14.54 16.93 14 16.93 14"></polygon>
+  <polygon class="hig__progress-ring__segment" fill="#0ED3BE" fill-rule="nonzero" points="13.93 12.27 16.93 14 16.93 6 16.93 6"></polygon>
+  <polygon class="hig__progress-ring__segment" fill="#0ED3BE" fill-rule="nonzero" points="13.93 7.73 13.93 12.27 16.93 6 16.93 6"></polygon>
+  <polygon class="hig__progress-ring__segment" fill="#0ED3BE" fill-rule="nonzero" points="13.93 7.73 16.93 6 10 2 10 2"></polygon>
+  <polygon class="hig__progress-ring__segment" fill="#0ED3BE" fill-rule="nonzero" points="10 5.46 13.93 7.73 10 2 10 2"></polygon>
+  <polygon class="hig__progress-ring__mask" fill="#FFFFFF" points="13.93 12.27 10 14.54 6.07 12.27 6.07 7.73 10 5.46 13.93 7.73"></polygon>
 </svg>

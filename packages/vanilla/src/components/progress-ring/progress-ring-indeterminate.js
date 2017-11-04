@@ -1,3 +1,4 @@
+import CSSTransition from '../../helpers/js/css-transition';
 import svg from './progress-ring-s.svg';
 
 const CYCLE_DURATION = 1000;
@@ -7,16 +8,24 @@ class ProgressRingIndeterminate {
   constructor(el) {
     this.startTime = undefined;
     this.el = el;
-    this.segments = this.el.querySelectorAll('.segment');
+    this.segments = this.el.querySelectorAll('.hig__progress-ring__segment');
 
     this.SEGMENT_COUNT = this.segments.length;
     this.SEGMENT_DELAY_FACTOR = CYCLE_DURATION / this.SEGMENT_COUNT;
 
     this.step(1);
+
+    this.containerAnimation = new CSSTransition(this.el, 'hig__progress-ring');
+    this.containerAnimation.enter();
   }
 
   step = (timestamp) => {
     if (!this.playing) { return; }
+    if (!this.containerAnimation.isEntered()) {
+      window.requestAnimationFrame(this.step);
+      return;
+    }
+
     if (!this.startTime) this.startTime = timestamp;
     const elapsed = timestamp - this.startTime;
     const elapsedThisCycle = elapsed % CYCLE_DURATION;
@@ -56,6 +65,7 @@ class ProgressRingIndeterminate {
   stop() {
     this.playing = false;
     window.cancelAnimationFrame(this.step);
+    this.containerAnimation.stop();
   }
 }
 

@@ -15,27 +15,27 @@ const AvailableSizes = ['xs', 's', 'm', 'l', 'xl'];
 const sizes = {
   xs: {
     svg: extraSmallSVG,
-    size: 16,
+    size: 20,
     scale: 1
   },
   s: {
     svg: smallSVG,
-    size: 24,
+    size: 28,
     scale: 1
   },
   m: {
     svg: mediumsSVG,
-    size: 64,
+    size: 72,
     scale: 1
   },
   l: {
     svg: mediumsSVG,
-    size: 128,
+    size: 144,
     scale: 2
   },
   xl: {
     svg: mediumsSVG,
-    size: 216,
+    size: 242,
     scale: 3.35
   },
 };
