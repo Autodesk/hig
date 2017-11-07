@@ -59,8 +59,18 @@
   }
 
   .hig__input-button__input:checked + & {
+    background: no-repeat  color(hig-slate-40) url('../../icons/src/check-white-24.svg') center;
+    border-color: color(hig-slate-40);
+  }
+
+  .hig__input-button__input:indeterminate + & {
     border-color: color(hig-slate-40);
     background-color: color(hig-slate-40);
+    &::before {
+      content: '-';
+      color: color(hig-white);
+      line-height: 11px;
+    }
   }
 
   .hig__input-button__input[disabled] + & {

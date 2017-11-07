@@ -2,6 +2,7 @@ import './input-button.scss';
 
 var Interface = require('interface.json');
 var Core = require('_core.js');
+const Icon = require('../../icon/icon.js');
 
 /**
  * Base class for InputButton (radio or checkbox)
@@ -51,6 +52,16 @@ class InputButton extends Core {
     this._removeClass(this._checkedClass());
     this._removeInputAttribute('checked');
     this._buttonEl().checked = false;
+  }
+
+  indeterminate(){
+    this._addClass(this._indeterminateClass());
+    this._buttonEl().indeterminate = true;
+  }
+
+  determinate(){
+    this._removeClass(this._indeterminateClass());
+    this._buttonEl().indeterminate = false;
   }
 
   required() {
@@ -106,6 +117,10 @@ class InputButton extends Core {
     return this._findDOMEl('.' + this.inputClass, this.el);
   }
 
+  _wrapperEl(){
+    return this._findDOMEl('.hig__input-button__input-wrapper', this.el);
+  }
+
   _checkedClass() {
     return `${this.wrapperClass}--checked`;
   }
@@ -114,6 +129,10 @@ class InputButton extends Core {
   }
   _disabledClass() {
     return `${this.wrapperClass}--disabled`;
+  }
+
+  _indeterminateClass() {
+    return `${this.wrapperClass}--indeterminate`;
   }
 }
 

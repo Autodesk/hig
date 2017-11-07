@@ -25,6 +25,20 @@ function CheckboxAdapter(props) {
             {(instance, value) =>
               value ? instance.check() : instance.uncheck()}
           </ControlsProp>
+          <ControlsProp
+            eventTargetPropName="indeterminate"
+            handler={props.onChange}
+            listener="onChange"
+            value={props.indeterminate}
+            defaultValue={
+              props.indeterminate !== undefined ? props.indeterminate : false
+            }
+            {...adapterProps}
+          >
+            {(instance, value) =>
+              value ? instance.indeterminate() : instance.determinate()}
+          </ControlsProp>    
+
           <MapsEventListener
             listener="onFocus"
             handler={props.onFocus}

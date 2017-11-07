@@ -30,6 +30,7 @@ class CheckboxSection extends PureComponent {
     this.setState({ controlledChecked: event.target.checked });
   };
 
+
   render() {
     return (
       <PlaygroundSection title="Checkbox">
@@ -37,6 +38,7 @@ class CheckboxSection extends PureComponent {
           <Checkbox label="Required" required="You must check this box" />
           <Checkbox label="Disabled" disabled />
           <Checkbox label="Disabled + Checked" checked disabled />
+          <Checkbox label="Indeterminate" indeterminate={this.state.controlledIndeterminate} onChange={this.setControlledIndeterminate} />
           <Checkbox
             label="Controlled"
             checked={this.state.controlledChecked}
