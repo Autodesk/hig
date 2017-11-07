@@ -2,12 +2,12 @@
 
 HIG is Autodesk's unified design system, so we can build better products faster.
 
-HIG aims to provide implementations for the major platforms (web/native ios/native android/...) with one **shared interface.json** that makes sure all the different implementations are consistent across the platforms. To understand how we structured the HIG, please go and read our [interface.json](packages/hig-interface/interface.json).
+HIG aims to provide implementations for the major platforms (web/native ios/native android/...) with one **shared interface.json** that makes sure all the different implementations are consistent across the platforms. To understand how we structured the HIG, please go and read our [interface.json](packages/interface/interface.json).
 
 ## Implementations
 Currently HIG has 2 implementations:
-- Vanilla html/css/javascript, see [src/implementations/vanilla](src/implementations/vanilla)
-- React, see [src/implementations/react](src/implementations/react)
+- Vanilla html/css/javascript, see [packages/vanilla](packages/vanilla)
+- React, see [packages/react](packages/react)
 
 ## Design
 
