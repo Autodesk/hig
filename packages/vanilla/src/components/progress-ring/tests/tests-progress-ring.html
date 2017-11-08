@@ -37,25 +37,6 @@
       });
       determinateHeader.mount(".header-determinate");
 
-      Hig.ProgressRing.AvailableSizes.forEach(function(size) {
-        var determinate0 = new Hig.ProgressRing({ size: size });
-        determinate0.mount('.determinate-0');
-        determinate0.setPercentComplete(0);
-
-        var determinate33 = new Hig.ProgressRing({ size: size });
-        determinate33.mount('.determinate-33');
-        determinate33.setPercentComplete(33);
-
-        var determinate66 = new Hig.ProgressRing({ size: size });
-        determinate66.mount('.determinate-66');
-        determinate66.setPercentComplete(66);
-
-        var determinate100 = new Hig.ProgressRing({ size: size });
-        determinate100.mount('.determinate-100');
-        determinate100.setPercentComplete(100);
-      });
-
-
       var rings = [];
       Hig.ProgressRing.AvailableSizes.forEach(function(size) {
         const ring = new Hig.ProgressRing({ size: size });
@@ -64,7 +45,7 @@
         rings.push(ring);
       });
 
-      const steps = [0, 7, 14, 28, 42, 56, 70, 84, 100, 0];
+      const steps = [7, 14, 28, 42, 56, 70, 84, 100, 0, 0, 0];
       let currentStep = 0;
       let interval = setInterval(function() {
         let nextStep = currentStep + 1;

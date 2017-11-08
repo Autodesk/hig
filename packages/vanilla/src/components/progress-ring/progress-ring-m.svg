@@ -1,5 +1,5 @@
 <svg width="72px" height="72px" viewBox="0 0 72 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <polygon class="hig__progress-ring__background" fill="#ECF0F3" points="54.81 10.11 36 4 17.19 10.11 5.57 26.11 5.57 45.89 17.19 61.89 36 68 54.81 61.89 66.43 45.89 66.43 26.11"></polygon>
+  <polygon class="hig__progress-ring__background" points="54.81 10.11 36 4 17.19 10.11 5.57 26.11 5.57 45.89 17.19 61.89 36 68 54.81 61.89 66.43 45.89 66.43 26.11"></polygon>
   <polygon class="hig__progress-ring__segment" fill="#0ED3BE" fill-rule="nonzero" points="36 10.31 36 4 17.19 10.11"></polygon>
   <polygon class="hig__progress-ring__segment" fill="#0CA899" fill-rule="nonzero" points="36 10.31 17.19 10.11 20.9 15.215"></polygon>
   <polygon class="hig__progress-ring__segment" fill="#0ED3BE" fill-rule="nonzero" points="20.9 15.215 17.19 10.11 5.565 26.11"></polygon>

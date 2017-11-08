@@ -1,13 +1,17 @@
 class CSSTransition {
-  constructor(el, transitionClass) {
-    this.el = el;
-    this.enteringClass = `${transitionClass}--entering`;
-    this.enteredClass = `${transitionClass}--entered`;
-    this.exitingClass = `${transitionClass}--exiting`;
-    this.exitedClass = `${transitionClass}--exited`;
+  constructor(options) {
+    this.el = options.el;
+    this.enteringDuration = options.enteringDuration;
+    this.exitingDuration = options.exitingDuration;
+    this.enteringClass = `${options.class}--entering`;
+    this.enteredClass = `${options.class}--entered`;
+    this.exitingClass = `${options.class}--exiting`;
+    this.exitedClass = `${options.class}--exited`;
     this.animationClasses = [
       this.enteringClass, this.enteredClass, this.exitingClass, this.exitedClass
     ];
+
+    this.state = 'exited';
     this.el.classList.add(this.exitedClass);
   }
 
@@ -18,8 +22,8 @@ class CSSTransition {
       return;
     }
 
-    this.resetAnimationState();
-    this.el.addEventListener('animationend', this.handleEnterComplete);
+    this.clearState();
+    this.enteringTimout = setTimeout(this.handleEnterComplete, this.enteringDuration);
     this.el.classList.add(this.enteringClass);
   }
 
@@ -30,46 +34,48 @@ class CSSTransition {
       return;
     }
 
-    this.resetAnimationState();
-    this.el.addEventListener('animationend', this.handleExitComplete);
+    this.clearState();
+    this.exitingTimout = setTimeout(this.handleExitComplete, this.exitingDuration);
     this.el.classList.add(this.exitingClass);
   }
 
 
-  resetAnimationState() {
+  clearState() {
     this.el.classList.remove(...this.animationClasses);
-    this.el.removeEventListener(
-      'animationend',
-      this.handleEnterComplete
-    );
-    this.el.removeEventListener(
-      'animationend',
-      this.handleExitComplete
-    );
   }
 
   handleEnterComplete = () => {
     this.state = 'entered';
-    this.resetAnimationState();
+    this.clearState();
     this.el.classList.add(this.enteredClass);
   }
 
   handleExitComplete = () => {
     this.state = 'exited';
-    this.resetAnimationState();
+    this.clearState();
     this.el.classList.add(this.exitedClass);
   }
 
   isEntering() {
-    return !!(this.state === 'entered' || this.state === 'entering');
+    return this.state === 'entering';
   }
 
   isEntered() {
     return this.state === 'entered';
   }
 
+  isExiting() {
+    return this.state === 'exiting';
+  }
+
+  isExited() {
+    return this.state === 'exited';
+  }
+
   stop() {
-    this.resetAnimationState();
+    clearTimeout(this.enteringTimeout);
+    clearTimeout(this.exitingTimeout);
+    this.clearState();
   }
 }
 

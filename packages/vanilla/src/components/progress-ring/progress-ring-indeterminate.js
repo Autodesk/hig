@@ -15,7 +15,12 @@ class ProgressRingIndeterminate {
 
     this.step(1);
 
-    this.containerAnimation = new CSSTransition(this.el, 'hig__progress-ring');
+    this.containerAnimation = new CSSTransition({
+      el: this.el,
+      class: 'hig__progress-ring',
+      enteringDuration: 650,
+      exitingDuration: 466,
+    });
     this.containerAnimation.enter();
   }
 
@@ -30,13 +35,17 @@ class ProgressRingIndeterminate {
     const elapsed = timestamp - this.startTime;
     const elapsedThisCycle = elapsed % CYCLE_DURATION;
 
+    this.setSegmentOpacities(elapsedThisCycle);
+
+    window.requestAnimationFrame(this.step);
+  }
+
+  setSegmentOpacities(elapsedThisCycle) {
     this.segments.forEach((segment, i) => {
       const index = Math.abs(i - this.SEGMENT_COUNT) - 1;
 
       segment.style.opacity = this.opacityForSegment(index, elapsedThisCycle);
     });
-
-    window.requestAnimationFrame(this.step);
   }
 
   opacityForSegment(index, elapsedThisCycle) {

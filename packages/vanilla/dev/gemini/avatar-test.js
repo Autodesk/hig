@@ -3,6 +3,6 @@ gemini.suite('avatar', (parent) => {
 
   gemini.suite('basic', (suite) => {
     suite.setCaptureElements('.test-container')
-         .capture('basic avatar');
+      .capture('basic avatar');
   });
 });
