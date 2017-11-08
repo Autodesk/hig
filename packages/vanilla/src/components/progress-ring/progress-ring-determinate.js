@@ -7,12 +7,10 @@ class ProgressRingDeterminate {
     this.startTime = undefined;
     this.el = el;
     this.el.classList.add('hig__progress-ring--determinate');
-    this.segments = this.el.querySelectorAll('.hig__progress-ring__segment');
     this.value = 0;
     this.prevTimestamp = 0;
 
-    this.SEGMENT_COUNT = this.segments.length;
-    this.FADE_DELAY_FACTOR = 1 / this.SEGMENT_COUNT;
+    this.initSegments();
 
     this.containerAnimation = new CSSTransition({
       el: this.el,
@@ -20,6 +18,12 @@ class ProgressRingDeterminate {
       enteringDuration: 650,
       exitingDuration: 466,
     });
+  }
+
+  initSegments() {
+    this.segments = this.el.querySelectorAll('.hig__progress-ring__segment');
+    this.SEGMENT_COUNT = this.segments.length;
+    this.FADE_DELAY_FACTOR = 1 / this.SEGMENT_COUNT;
   }
 
   setProgress(percent) {
@@ -110,6 +114,11 @@ class ProgressRingDeterminate {
     this.prevTimestamp = undefined;
     window.cancelAnimationFrame(this.step);
     this.containerAnimation.stop();
+  }
+
+  forceReset() {
+    this.initSegments();
+    this.setSegmentOpacities(this.value);
   }
 }
 

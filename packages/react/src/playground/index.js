@@ -2,7 +2,7 @@
 import React from "react";
 import "hig-vanilla/lib/hig.css";
 
-import { Button, GlobalNav, breakpoints } from "../hig-react";
+import { Button, Container, GlobalNav, breakpoints } from "../hig-react";
 
 import "./index.css";
 
@@ -16,17 +16,18 @@ import CheckboxSection from "./sections/CheckboxSection";
 import DropdownSection from "./sections/DropdownSection";
 import FlyoutSection from "./sections/FlyoutSection";
 import GridSection from "./sections/GridSection";
-import IconSection from "./sections/IconSection";
 import IconButtonSection from "./sections/IconButtonSection";
+import IconSection from "./sections/IconSection";
 import ModalSection from "./sections/ModalSection";
 import PasswordFieldSection from "./sections/PasswordFieldSection";
-import SpacerSection from "./sections/SpacerSection";
+import ProgressBarSection from "./sections/ProgressBarSection";
+import ProgressRingSection from "./sections/ProgressRingSection";
 import RadioButtonSection from "./sections/RadioButtonSection";
 import RangeSection from "./sections/RangeSection";
 import RichTextSection from "./sections/RichTextSection";
 import SelectableTableSection from "./sections/SelectableTableSection";
-import TabsSection from "./sections/TabsSection";
 import TableSection from "./sections/TableSection";
+import TabsSection from "./sections/TabsSection";
 import TextAreaSection from "./sections/TextAreaSection";
 import TextFieldSection from "./sections/TextFieldSection";
 import TextLinkSection from "./sections/TextLinkSection";
@@ -176,28 +177,31 @@ class Playground extends React.Component {
         isSideNavOpen={this.state.isSideNavOpen}
         onHamburgerClick={this.toggleSideNav}
       >
-        <TabsSection />
-        <ButtonSection />
-        <IconButtonSection />
-        <CheckboxSection />
-        <PasswordFieldSection />
-        <RadioButtonSection />
-        <RangeSection />
-        <SpacerSection />
-        <TextFieldSection />
-        <TextAreaSection />
-        <ModalSection />
-        <DropdownSection />
-        <TypographySection />
-        <TableSection />
-        <TextLinkSection />
-        <FlyoutSection />
-        <TooltipSection />
-        <RichTextSection />
-        <AvatarSection />
-        <GridSection />
-        <IconSection />
-        <SelectableTableSection />
+        <Container>
+          <ProgressBarSection />
+          <ProgressRingSection />
+          <TabsSection />
+          <ButtonSection />
+          <IconButtonSection />
+          <CheckboxSection />
+          <PasswordFieldSection />
+          <RadioButtonSection />
+          <RangeSection />
+          <TextFieldSection />
+          <TextAreaSection />
+          <ModalSection />
+          <DropdownSection />
+          <TypographySection />
+          <TableSection />
+          <TextLinkSection />
+          <FlyoutSection />
+          <TooltipSection />
+          <RichTextSection />
+          <AvatarSection />
+          <GridSection />
+          <IconSection />
+          <SelectableTableSection />
+        </Container>
       </GlobalNav>
     );
   }

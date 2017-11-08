@@ -8,10 +8,7 @@ class ProgressRingIndeterminate {
   constructor(el) {
     this.startTime = undefined;
     this.el = el;
-    this.segments = this.el.querySelectorAll('.hig__progress-ring__segment');
-
-    this.SEGMENT_COUNT = this.segments.length;
-    this.SEGMENT_DELAY_FACTOR = CYCLE_DURATION / this.SEGMENT_COUNT;
+    this.initSegments();
 
     this.step(1);
 
@@ -22,6 +19,13 @@ class ProgressRingIndeterminate {
       exitingDuration: 466,
     });
     this.containerAnimation.enter();
+  }
+
+  initSegments() {
+    this.segments = this.el.querySelectorAll('.hig__progress-ring__segment');
+
+    this.SEGMENT_COUNT = this.segments.length;
+    this.SEGMENT_DELAY_FACTOR = CYCLE_DURATION / this.SEGMENT_COUNT;
   }
 
   step = (timestamp) => {
@@ -75,6 +79,11 @@ class ProgressRingIndeterminate {
     this.playing = false;
     window.cancelAnimationFrame(this.step);
     this.containerAnimation.stop();
+  }
+
+  forceReset() {
+    this.initSegments();
+    this.step(Date.now());
   }
 }
 

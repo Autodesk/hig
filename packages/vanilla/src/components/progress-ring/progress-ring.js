@@ -55,6 +55,9 @@ class ProgressRing extends Core {
   }
 
   _componentDidMount() {
+    this.animation = new ProgressRingIndeterminate(this.el);
+    this.animation.start();
+
     this.setSize(this.initialOptions.size);
   }
 
@@ -66,14 +69,15 @@ class ProgressRing extends Core {
       );
       return;
     }
+    if (size === this.size) { return; }
+    this.size = size;
 
     this.el.innerHTML = sizes[size].svg;
     this.el.style.width = sizes[size].size;
     this.el.style.height = sizes[size].size;
     this.el.children[0].style.transform = `scale(${sizes[size].scale})`;
 
-    this.animation = new ProgressRingIndeterminate(this.el);
-    this.animation.start();
+    this.animation.forceReset();
   }
 
   setPercentComplete(percentComplete) {

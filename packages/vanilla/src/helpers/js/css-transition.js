@@ -16,6 +16,7 @@ class CSSTransition {
   }
 
   enter() {
+    if (this.isEntered() || this.isEntering()) { return; }
     this.state = 'entering';
     if (this.el.classList.contains(this.enteringClass)
         || this.el.classList.contains(this.enteredClass)) {
@@ -28,6 +29,7 @@ class CSSTransition {
   }
 
   exit() {
+    if (this.isExited() || this.isExiting()) { return; }
     this.state = 'exiting';
     if (this.el.classList.contains(this.exitingClass)
         || this.el.classList.contains(this.exitedClass)) {

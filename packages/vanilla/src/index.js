@@ -1,4 +1,5 @@
 const Hig = {};
+require('./basics/container/container.js');
 
 Hig.Avatar = require('./components/avatar/avatar.js');
 Hig.Button = require('./components/button/button.js');
