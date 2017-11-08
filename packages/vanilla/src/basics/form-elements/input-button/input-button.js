@@ -2,7 +2,7 @@ import './input-button.scss';
 
 var Interface = require('interface.json');
 var Core = require('_core.js');
-
+const Icon = require('../../icon/icon.js');
 /**
  * Base class for InputButton (radio or checkbox)
  *
@@ -42,15 +42,21 @@ class InputButton extends Core {
   }
 
   check() {
-    this._addClass(this._checkedClass());
     this._setInputAttribute('checked', '');
     this._buttonEl().checked = true;
   }
 
   uncheck() {
-    this._removeClass(this._checkedClass());
     this._removeInputAttribute('checked');
     this._buttonEl().checked = false;
+  }
+
+  indeterminate(){
+    this._buttonEl().indeterminate = true;
+  }
+
+  determinate(){
+    this._buttonEl().indeterminate = false;
   }
 
   required() {
@@ -64,12 +70,10 @@ class InputButton extends Core {
   }
 
   disable() {
-    this._addClass(this._disabledClass());
     this._setInputAttribute('disabled', 'true');
   }
 
   enable() {
-    this._removeClass(this._disabledClass());
     this._removeInputAttribute('disabled');
   }
 
@@ -106,14 +110,11 @@ class InputButton extends Core {
     return this._findDOMEl('.' + this.inputClass, this.el);
   }
 
-  _checkedClass() {
-    return `${this.wrapperClass}--checked`;
+  _wrapperEl(){
+    return this._findDOMEl('.hig__input-button__input-wrapper', this.el);
   }
   _requiredClass() {
     return `${this.wrapperClass}--required`;
-  }
-  _disabledClass() {
-    return `${this.wrapperClass}--disabled`;
   }
 }
 

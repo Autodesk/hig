@@ -61,6 +61,7 @@
     "webpack": "^3.5.5"
   },
   "dependencies": {
-    "hig-interface": "^0.1.5"
+    "hig-interface": "^0.1.5",
+    "svg-url-loader": "^2.3.0"
   }
 }

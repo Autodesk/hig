@@ -33,6 +33,13 @@ const r = {
     }, {
       test: /\.html$/,
       use: 'raw-loader'
+    },
+    {
+      test: /\.svg/,
+      use: {
+          loader: 'svg-url-loader',
+          options: {}
+      }
     }]
   },
   resolve: {
