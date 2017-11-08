@@ -3,7 +3,6 @@ import './input-button.scss';
 var Interface = require('interface.json');
 var Core = require('_core.js');
 const Icon = require('../../icon/icon.js');
-
 /**
  * Base class for InputButton (radio or checkbox)
  *
@@ -43,6 +42,7 @@ class InputButton extends Core {
   }
 
   check() {
+    // this.__clearAllStates();
     this._addClass(this._checkedClass());
     this._setInputAttribute('checked', '');
     this._buttonEl().checked = true;

@@ -34,20 +34,6 @@ class Checkbox extends InputButton {
   }
   _componentDidMount() {
   }
-
-  // _setIcon() {
-  //   const mountEl = this._findDOMEl('.hig__input-button__input-wrapper', this.el);
-  //   this._findOrCreateIconComponent(mountEl).setNameOrSVG('check-white');
-  // }
-
-  // _findOrCreateIconComponent(mountElOrSelector, name = 'icon') {
-  //   if (this[name]) {
-  //     return this[name];
-  //   }
-  //   this[name] = new Icon({});
-  //   this[name].mount(mountElOrSelector);
-  //   return this[name];
-  // }
 } 
 
 inputButtonMethods.forEach((fn) => {

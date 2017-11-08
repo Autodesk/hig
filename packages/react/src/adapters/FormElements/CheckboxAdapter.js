@@ -25,20 +25,7 @@ function CheckboxAdapter(props) {
             {(instance, value) =>
               value ? instance.check() : instance.uncheck()}
           </ControlsProp>
-          <ControlsProp
-            eventTargetPropName="indeterminate"
-            handler={props.onChange}
-            listener="onChange"
-            value={props.indeterminate}
-            defaultValue={
-              props.indeterminate !== undefined ? props.indeterminate : false
-            }
-            {...adapterProps}
-          >
-            {(instance, value) =>
-              value ? instance.indeterminate() : instance.determinate()}
-          </ControlsProp>    
-
+              
           <MapsEventListener
             listener="onFocus"
             handler={props.onFocus}
@@ -68,6 +55,12 @@ function CheckboxAdapter(props) {
             {(instance, value) =>
               value ? instance.disable() : instance.enable()}
           </MapsPropToMethod>
+
+          <MapsPropToMethod value={props.indeterminate} {...adapterProps}>
+            {(instance, value) =>
+              value ? instance.indeterminate() : instance.determinate()}
+          </MapsPropToMethod>
+
           <MapsPropToMethod value={props.required} {...adapterProps}>
             {(instance, value) =>
               value ? instance.required(value) : instance.noLongerRequired()}
@@ -82,19 +75,21 @@ CheckboxAdapter.propTypes = {
   checked: PropTypes.bool,
   defaultChecked: PropTypes.bool,
   disabled: PropTypes.bool,
+  indeterminate: PropTypes.bool,
   label: PropTypes.string,
   name: PropTypes.string,
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
   onFocus: PropTypes.func,
   required: PropTypes.string,
-  value: PropTypes.string
+  value: PropTypes.string,
 };
 
 CheckboxAdapter.defaultProps = {
   checked: undefined,
   defaultChecked: undefined,
   disabled: undefined,
+  indeterminate: undefined,
   label: undefined,
   name: undefined,
   onBlur: undefined,
@@ -115,6 +110,9 @@ CheckboxAdapter.__docgenInfo = {
     },
     disabled: {
       description: "prevents user actions on the checkbox"
+    },
+    indeterminate: {
+      description: "sets indeterminate state for checkbox"
     },
     label: {
       description: "text identifying the field"
