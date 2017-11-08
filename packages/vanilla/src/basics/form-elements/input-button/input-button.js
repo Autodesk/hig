@@ -42,25 +42,20 @@ class InputButton extends Core {
   }
 
   check() {
-    // this.__clearAllStates();
-    this._addClass(this._checkedClass());
     this._setInputAttribute('checked', '');
     this._buttonEl().checked = true;
   }
 
   uncheck() {
-    this._removeClass(this._checkedClass());
     this._removeInputAttribute('checked');
     this._buttonEl().checked = false;
   }
 
   indeterminate(){
-    this._addClass(this._indeterminateClass());
     this._buttonEl().indeterminate = true;
   }
 
   determinate(){
-    this._removeClass(this._indeterminateClass());
     this._buttonEl().indeterminate = false;
   }
 
@@ -75,12 +70,10 @@ class InputButton extends Core {
   }
 
   disable() {
-    this._addClass(this._disabledClass());
     this._setInputAttribute('disabled', 'true');
   }
 
   enable() {
-    this._removeClass(this._disabledClass());
     this._removeInputAttribute('disabled');
   }
 
@@ -120,19 +113,8 @@ class InputButton extends Core {
   _wrapperEl(){
     return this._findDOMEl('.hig__input-button__input-wrapper', this.el);
   }
-
-  _checkedClass() {
-    return `${this.wrapperClass}--checked`;
-  }
   _requiredClass() {
     return `${this.wrapperClass}--required`;
-  }
-  _disabledClass() {
-    return `${this.wrapperClass}--disabled`;
-  }
-
-  _indeterminateClass() {
-    return `${this.wrapperClass}--indeterminate`;
   }
 }
 

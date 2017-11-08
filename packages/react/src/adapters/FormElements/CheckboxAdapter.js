@@ -13,6 +13,22 @@ function CheckboxAdapter(props) {
       {adapterProps => (
         <div>
           <ControlsProp
+            eventTargetPropName="indeterminate"
+            handler={props.onChange}
+            listener="onChange"
+            value={props.indeterminate}
+            defaultValue={
+              props.defaultIndeterminate !== undefined
+                ? props.defaultIndeterminate
+                : false
+            }
+            {...adapterProps}
+          >
+            {(instance, value) =>
+              value ? instance.indeterminate() : instance.determinate()}
+          </ControlsProp>
+
+          <ControlsProp
             eventTargetPropName="checked"
             handler={props.onChange}
             listener="onChange"
@@ -54,11 +70,6 @@ function CheckboxAdapter(props) {
           <MapsPropToMethod value={props.disabled} {...adapterProps}>
             {(instance, value) =>
               value ? instance.disable() : instance.enable()}
-          </MapsPropToMethod>
-
-          <MapsPropToMethod value={props.indeterminate} {...adapterProps}>
-            {(instance, value) =>
-              value ? instance.indeterminate() : instance.determinate()}
           </MapsPropToMethod>
 
           <MapsPropToMethod value={props.required} {...adapterProps}>

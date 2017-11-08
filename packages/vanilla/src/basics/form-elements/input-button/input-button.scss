@@ -60,17 +60,21 @@
   }
 
 
-  .hig__input-button--checkbox.hig__input-button--indeterminate .hig__input-button__input:focus + & {
+  .hig__input-button--checkbox .hig__input-button__input:indeterminate:focus + & {
     background: no-repeat color(hig-blue-60) url('../../icons/src/checkmark-indeterminate-16.svg') center;
     border-color: color(hig-blue-60);
   }
 
-  .hig__input-button--checkbox.hig__input-button--indeterminate .hig__input-button__input + & {
+  .hig__input-button--checkbox .hig__input-button__input:indeterminate:checked + & {
     background: no-repeat color(hig-slate-40) url('../../icons/src/checkmark-indeterminate-16.svg') center;
     border-color: color(hig-slate-40);
   }
 
- 
+  .hig__input-button--checkbox .hig__input-button__input:indeterminate + & {
+    background: no-repeat color(hig-slate-40) url('../../icons/src/checkmark-indeterminate-16.svg') center;
+    border-color: color(hig-slate-40);
+  }
+
   .hig__input-button__input[disabled] + & {
     border-color: color(hig-cool-gray-30);
     border-style: dotted;
@@ -87,7 +91,7 @@
     position: initial;
   }
 
-  .hig__input-button--checked .hig__input-button__input:checked[disabled] + & {
+  .hig__input-button--checkbox .hig__input-button__input:checked[disabled] + & {
     background: no-repeat url('../../icons/src/check-disabled-16.svg') center;
     border-color: color(hig-cool-gray-30);
     border-style: dotted;
