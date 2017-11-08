@@ -25,7 +25,7 @@ function CheckboxAdapter(props) {
             {(instance, value) =>
               value ? instance.check() : instance.uncheck()}
           </ControlsProp>
-              
+
           <MapsEventListener
             listener="onFocus"
             handler={props.onFocus}
@@ -82,7 +82,7 @@ CheckboxAdapter.propTypes = {
   onChange: PropTypes.func,
   onFocus: PropTypes.func,
   required: PropTypes.string,
-  value: PropTypes.string,
+  value: PropTypes.string
 };
 
 CheckboxAdapter.defaultProps = {

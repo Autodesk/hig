@@ -22,7 +22,7 @@ class CheckboxSection extends PureComponent {
     super(props);
 
     this.state = {
-      controlledChecked: false,
+      controlledChecked: false
     };
   }
 
