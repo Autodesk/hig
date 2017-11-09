@@ -113,14 +113,14 @@
     background-color: color(hig-slate-40);
     box-shadow: inset 0 0 0 3px color(hig-white);
   }
-  
+
   .hig__input-button--radio .hig__input-button__input:checked[disabled] + & {
     background: none;
     background-color: color(hig-cool-gray-30);
     border-color: color(hig-cool-gray-30);
     border-style: dotted;
   }
- 
+
   .hig__input-button--radio .hig__input-button__input[disabled] + & {
     background: none;
     border-color: color(hig-cool-gray-30);

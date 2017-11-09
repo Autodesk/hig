@@ -1,0 +1,176 @@
+@import '../../basics/colors/colors.scss';
+@import '~helpers/css/mixins/base.scss';
+
+.hig__progress-ring {
+  @include reset;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+
+  &.hig__progress-ring--determinate::after {
+    content: attr(aria-valuenow) "%";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: scale(0.7);
+    transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+  }
+
+  &.hig__progress-ring--determinate.hig__progress-ring--entered::after {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  &.hig__progress-ring--determinate.hig__progress-ring--xl::after {
+    font-size: 30px;
+  }
+
+  &.hig__progress-ring--determinate.hig__progress-ring--l::after {
+    font-size: 24px;
+  }
+
+  &.hig__progress-ring--determinate.hig__progress-ring--m::after {
+    font-size: 14px;
+  }
+
+  &.hig__progress-ring--determinate.hig__progress-ring--s::after,
+  &.hig__progress-ring--determinate.hig__progress-ring--xs::after {
+    display: none;
+  }
+}
+
+.hig__progress-ring__background {
+  transform-origin: center;
+  fill: color(hig-cool-gray-10);
+
+  .hig__progress-ring--entering & {
+    animation: background-entering 0.65s ease-in-out;
+  }
+
+  .hig__progress-ring--exiting & {
+    animation: background-exiting 0.466s ease-in forwards;
+  }
+
+  .hig__progress-ring--exited & {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+.hig__progress-ring__mask {
+  transform-origin: center;
+
+  .hig__progress-ring--entering & {
+    animation: mask-entering 0.65s ease-out;
+  }
+
+  .hig__progress-ring--exiting & {
+    animation: mask-exiting 0.466s ease-in forwards;
+  }
+
+  .hig__progress-ring--exited & {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+.hig__progress-ring__segment {
+  opacity: 0;
+
+  .hig__progress-ring--exiting & {
+    animation: segments-exiting 0.466s linear;
+  }
+}
+
+
+@keyframes background-entering {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  61% {
+    transform: scale(1.1);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes mask-entering {
+  from {
+    opacity: 0;
+    transform: scale(2);
+  }
+
+  55% {
+    opacity: 0;
+    transform: scale(1.6);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+@keyframes background-exiting {
+  from {
+    opacity: 1;
+    transform: scale(1);
+    fill: color(hig-turquoise-50);
+  }
+
+  10% {
+    transform: scale(1.1);
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+@keyframes mask-exiting {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  10% {
+    transform: scale(1.2);
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+@keyframes segments-exiting {
+  from {
+    opacity: 1;
+  }
+
+  28% {
+    opacity: 0;
+  }
+}
