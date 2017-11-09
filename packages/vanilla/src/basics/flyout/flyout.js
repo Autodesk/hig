@@ -107,7 +107,7 @@ class Flyout extends Core {
 
 
   _callbackIfClickOutside(callback, event) {
-    if (this.el.contains(event.target) || this.el === event.target) {
+    if (this.flyoutContainer.contains(event.target) || this.flyoutContainer === event.target) {
       return;
     }
     if (this.containerAnimation.isEntering()) {
