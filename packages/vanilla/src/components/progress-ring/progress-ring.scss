@@ -1,9 +1,49 @@
 @import '../../basics/colors/colors.scss';
+@import '~helpers/css/mixins/base.scss';
 
 .hig__progress-ring {
+  @include reset;
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
+
+  &.hig__progress-ring--determinate::after {
+    content: attr(aria-valuenow) "%";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: scale(0.7);
+    transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+  }
+
+  &.hig__progress-ring--determinate.hig__progress-ring--entered::after {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  &.hig__progress-ring--determinate.hig__progress-ring--xl::after {
+    font-size: 30px;
+  }
+
+  &.hig__progress-ring--determinate.hig__progress-ring--l::after {
+    font-size: 24px;
+  }
+
+  &.hig__progress-ring--determinate.hig__progress-ring--m::after {
+    font-size: 14px;
+  }
+
+  &.hig__progress-ring--determinate.hig__progress-ring--s::after,
+  &.hig__progress-ring--determinate.hig__progress-ring--xs::after {
+    display: none;
+  }
 }
 
 .hig__progress-ring__background {
