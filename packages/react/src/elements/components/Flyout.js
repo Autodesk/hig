@@ -31,13 +31,13 @@ class Flyout extends Component {
     this.setState({ open: false });
   };
 
-  openFlyout = () => {
-    this.setState({ open: true });
+  toggleFlyout = () => {
+    this.setState({ open: !this.state.open });
   };
 
   render() {
     const target = this.props.children
-      ? React.cloneElement(this.props.children, { onClick: this.openFlyout })
+      ? React.cloneElement(this.props.children, { onClick: this.toggleFlyout })
       : null;
     return (
       <FlyoutAdapter
