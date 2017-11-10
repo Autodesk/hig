@@ -9,7 +9,6 @@ import smallSVG from './progress-ring-s.svg';
 import mediumsSVG from './progress-ring-m.svg';
 
 const AvailableSizes = ['xs', 's', 'm', 'l', 'xl'];
-const SIZE_CLASSES = AvailableSizes.map(size => (`hig__progress-ring--${size}`));
 
 const sizes = {
   xs: {
@@ -75,8 +74,6 @@ class ProgressRing extends Core {
     this.el.style.width = sizes[size].size;
     this.el.style.height = sizes[size].size;
     this.el.children[0].style.transform = `scale(${sizes[size].scale})`;
-    this.el.classList.remove(...SIZE_CLASSES);
-    this.el.classList.add(`hig__progress-ring--${size}`);
 
     this.animation.forceReset();
   }
@@ -88,6 +85,7 @@ class ProgressRing extends Core {
       this.animation.start();
     }
     this.animation.setProgress(percentComplete);
+    this.el.setAttribute('aria-valuenow', percentComplete);
   }
 }
 

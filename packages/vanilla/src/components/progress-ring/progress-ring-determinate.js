@@ -99,7 +99,6 @@ class ProgressRingDeterminate {
       const index = Math.abs(i - this.SEGMENT_COUNT) - 1;
       segment.style.opacity = this.opacityForSegment(index, value);
     });
-    this.el.setAttribute('aria-valuenow', (value * 100).toFixed(0));
   }
 
   opacityForSegment(index, value) {
