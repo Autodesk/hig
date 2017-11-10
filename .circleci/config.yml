@@ -10,12 +10,12 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependencies-{{ checksum "packages/react/package.json" }}={{ checksum "packages/vanilla/package.json" }}
+          key: dependencies-{{ checksum "package.json" }}-{{ checksum "packages/react/package.json" }}-{{ checksum "packages/vanilla/package.json" }}
       - run:
           name: Lerna bootstrap
           command: npm install && npm run bootstrap
       - save_cache:
-          key: dependencies-{{ checksum "packages/react/package.json" }}={{ checksum "packages/vanilla/package.json" }}
+          key: dependencies-{{ checksum "packages/react/package.json" }}-{{ checksum "packages/vanilla/package.json" }}
           paths:
             - packages/vanilla/node_modules
             - packages/react/node_modules
@@ -24,7 +24,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependencies-{{ checksum "packages/react/package.json" }}={{ checksum "packages/vanilla/package.json" }}
+          key: dependencies-{{ checksum "packages/react/package.json" }}-{{ checksum "packages/vanilla/package.json" }}
       - run:
           name: Build (Vanilla)
           command: npm run lib
@@ -38,7 +38,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependencies-{{ checksum "packages/react/package.json" }}={{ checksum "packages/vanilla/package.json" }}
+          key: dependencies-{{ checksum "packages/react/package.json" }}-{{ checksum "packages/vanilla/package.json" }}
       - restore_cache:
           key: vanilla-build-{{ .Revision }}
       - run:
