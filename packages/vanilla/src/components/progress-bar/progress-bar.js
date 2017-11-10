@@ -20,6 +20,7 @@ class ProgressBar extends Core {
   setPercentComplete(percentComplete) {
     this.el.classList.add('hig__progress-bar--determinate');
     this.bar.style.width = `${this._renderedPercent(percentComplete)}%`;
+    this.el.setAttribute('aria-valuenow', percentComplete);
   }
 
   _renderedPercent(percent) {
