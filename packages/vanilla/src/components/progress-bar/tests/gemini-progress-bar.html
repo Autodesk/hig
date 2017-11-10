@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../../../../lib/hig.css">
+    <script type="text/javascript" src="../../../../lib/hig.js"></script>
+    <style>
+      body{
+        margin: 30px;
+      }
+
+      .group {
+        padding: 12px;
+      }
+
+      .indeterminate .hig__progress-bar__bar {
+        animation: none;
+        transform: translateX(-50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header-determinate hig__spacer--stack hig__spacer--width-m"></div>
+    <div class="group determinate">
+      <div class="determinate-0 hig__spacer--stack hig__spacer--width-m"></div>
+      <div class="determinate-33 hig__spacer--stack hig__spacer--width-m"></div>
+      <div class="determinate-66 hig__spacer--stack hig__spacer--width-m"></div>
+      <div class="determinate-100 hig__spacer--stack hig__spacer--width-m"></div>
+    </div>
+
+    <div class="header-indeterminate hig__spacer--stack hig__spacer--width-m"></div>
+    <div class="group indeterminate hig__spacer--stack hig__spacer--width-m"></div>
+
+    <script>
+      var determinateHeader = new Hig.Typography({
+        "type": "h2",
+        "text": "determinate"
+      });
+      determinateHeader.mount(".header-determinate");
+
+      var determinate0 = new Hig.ProgressBar();
+      determinate0.mount('.determinate-0');
+      determinate0.setPercentComplete(0);
+
+      var determinate33 = new Hig.ProgressBar();
+      determinate33.mount('.determinate-33');
+      determinate33.setPercentComplete(33);
+
+      var determinate66 = new Hig.ProgressBar();
+      determinate66.mount('.determinate-66');
+      determinate66.setPercentComplete(66);
+
+      var determinate100 = new Hig.ProgressBar();
+      determinate100.mount('.determinate-100');
+      determinate100.setPercentComplete(100);
+
+
+      var indeterminateHeader = new Hig.Typography({
+        "type": "h2",
+        "text": "indeterminate"
+      });
+      indeterminateHeader.mount(".header-indeterminate");
+
+      var indeterminate = new Hig.ProgressBar();
+      indeterminate.mount('.indeterminate');
+    </script>
+  </body>
+</html>

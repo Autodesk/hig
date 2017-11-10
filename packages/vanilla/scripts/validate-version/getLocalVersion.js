@@ -1,6 +1,6 @@
-const localPackageJson = require("../../package.json");
+import localPackageJson from '../../package.json';
 
 // Get the package.json version from the local codebase
-module.exports = function getLocalVersion() {
+export default function getLocalVersion() {
   return localPackageJson.version;
-};
+}

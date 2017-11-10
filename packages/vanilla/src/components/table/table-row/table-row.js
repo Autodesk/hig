@@ -1,12 +1,10 @@
+import Interface from 'interface.json';
+import Core from '_core.js';
 import './table-row.scss';
-
-const Template = require('./table-row.html');
-const Interface = require('interface.json');
-const Core = require('_core.js');
-
-const TextCell = require('./text-cell/text-cell.js');
-const SlotCell = require('./slot-cell/slot-cell.js');
-const IconCell = require('./icon-cell/icon-cell.js');
+import Template from './table-row.html';
+import TextCell from './text-cell/text-cell.js';
+import SlotCell from './slot-cell/slot-cell.js';
+import IconCell from './icon-cell/icon-cell.js';
 
 /**
  * Creates an Table
@@ -47,4 +45,4 @@ TableRow._partials = {
   IconCell
 };
 
-module.exports = TableRow;
+export default TableRow;

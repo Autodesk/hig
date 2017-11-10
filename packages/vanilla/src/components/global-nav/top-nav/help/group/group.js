@@ -1,9 +1,8 @@
-import "./group.scss";
-
-const Template = require("./group.html");
-const Core = require("_core.js");
-const Interface = require("interface.json");
-const Option = require('../option/option.js');
+import Interface from 'interface.json';
+import Core from '_core.js';
+import './group.scss';
+import Template from './group.html';
+import Option from '../option/option.js';
 
 /**
  * Creates a Group
@@ -28,4 +27,4 @@ Group._defaults = {};
 Group._partials = {
   Option
 };
-module.exports = Group;
+export default Group;

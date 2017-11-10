@@ -1,6 +1,6 @@
-var Icons = require("../../basics/icons/icons.js");
-var Mustache = require("mustache");
-require("./polyfills.js");
+import Mustache from "mustache";
+import Icons from "../../basics/icons/icons";
+import "./polyfills.js";
 
 class Core {
   /**
@@ -321,7 +321,7 @@ class Core {
      * Get the Icon SVG String
      * @param {String} icon - icon ID
      * @returns {String} String with SVG of the icon
-     
+
 
     /**
      * Returns valid interface methods
@@ -349,4 +349,4 @@ class Core {
   }
 }
 
-module.exports = Core;
+export default Core;

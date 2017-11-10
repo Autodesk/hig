@@ -1,10 +1,8 @@
+import Interface from 'interface.json';
+import Core from '_core.js';
 import './text-cell.scss';
-
-const Template = require('./text-cell.html');
-const Interface = require('interface.json');
-const Core = require('_core.js');
-
-const TextCellContent = require('../text-cell-content/text-cell-content.js');
+import Template from './text-cell.html';
+import TextCellContent from '../text-cell-content/text-cell-content';
 
 const AvailableAlignments = ['left', 'right', 'center'];
 
@@ -46,4 +44,4 @@ TextCell._defaults = {};
 TextCell._partials = {};
 TextCell.AvailableAlignments = AvailableAlignments;
 
-module.exports = TextCell;
+export default TextCell;

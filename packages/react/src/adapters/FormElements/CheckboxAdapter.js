@@ -13,6 +13,22 @@ function CheckboxAdapter(props) {
       {adapterProps => (
         <div>
           <ControlsProp
+            eventTargetPropName="indeterminate"
+            handler={props.onChange}
+            listener="onChange"
+            value={props.indeterminate}
+            defaultValue={
+              props.defaultIndeterminate !== undefined
+                ? props.defaultIndeterminate
+                : false
+            }
+            {...adapterProps}
+          >
+            {(instance, value) =>
+              value ? instance.indeterminate() : instance.determinate()}
+          </ControlsProp>
+
+          <ControlsProp
             eventTargetPropName="checked"
             handler={props.onChange}
             listener="onChange"
@@ -25,6 +41,7 @@ function CheckboxAdapter(props) {
             {(instance, value) =>
               value ? instance.check() : instance.uncheck()}
           </ControlsProp>
+
           <MapsEventListener
             listener="onFocus"
             handler={props.onFocus}
@@ -54,6 +71,7 @@ function CheckboxAdapter(props) {
             {(instance, value) =>
               value ? instance.disable() : instance.enable()}
           </MapsPropToMethod>
+
           <MapsPropToMethod value={props.required} {...adapterProps}>
             {(instance, value) =>
               value ? instance.required(value) : instance.noLongerRequired()}
@@ -68,6 +86,7 @@ CheckboxAdapter.propTypes = {
   checked: PropTypes.bool,
   defaultChecked: PropTypes.bool,
   disabled: PropTypes.bool,
+  indeterminate: PropTypes.bool,
   label: PropTypes.string,
   name: PropTypes.string,
   onBlur: PropTypes.func,
@@ -81,6 +100,7 @@ CheckboxAdapter.defaultProps = {
   checked: undefined,
   defaultChecked: undefined,
   disabled: undefined,
+  indeterminate: undefined,
   label: undefined,
   name: undefined,
   onBlur: undefined,
@@ -101,6 +121,9 @@ CheckboxAdapter.__docgenInfo = {
     },
     disabled: {
       description: "prevents user actions on the checkbox"
+    },
+    indeterminate: {
+      description: "sets indeterminate state for checkbox"
     },
     label: {
       description: "text identifying the field"

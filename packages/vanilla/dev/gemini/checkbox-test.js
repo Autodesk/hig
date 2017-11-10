@@ -22,34 +22,19 @@ gemini.suite('checkbox', (parent) => {
     suite.setCaptureElements('.tests-checkbox3')
          .capture('disabled');
   });
-  gemini.suite('callcheck', (suite) => {
+
+  gemini.suite('without label', (suite) => {
     suite.setCaptureElements('.tests-checkbox4')
-         .capture('call check');
+         .capture('without label');
   });
-  gemini.suite('callrequired', (suite) => {
+
+  gemini.suite('checked and disabled checkbox', (suite) => {
     suite.setCaptureElements('.tests-checkbox5')
-         .capture('call required');
+         .capture('checked and disabled Checkbox');
   });
-  gemini.suite('calldisable', (suite) => {
+
+  gemini.suite('indeterminate checkbox', (suite) => {
     suite.setCaptureElements('.tests-checkbox6')
-       .capture('call disable');
+         .capture('indeterminate Checkbox');
   });
-
-  gemini.suite('setname', (suite) => {
-      suite.setCaptureElements('.tests-checkbox7')
-      .capture('setName');
-  });
-  gemini.suite('setValue', (suite) => {
-      suite.setCaptureElements('.tests-checkbox8')
-      .capture('setValue');
-  });
-  gemini.suite('setLabel', (suite) => {
-      suite.setCaptureElements('.tests-checkbox9')
-      .capture('setLabel');
-  });
-  gemini.suite('bare checkbox updated with setters', (suite) => {
-    suite.setCaptureElements('.tests-checkbox10')
-         .capture('bareCheckbox');
-  });
-
 });

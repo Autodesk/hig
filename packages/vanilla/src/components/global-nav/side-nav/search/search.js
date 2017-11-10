@@ -1,9 +1,8 @@
+import Interface from 'interface.json';
+import Core from '_core.js';
 import './search.scss';
-
-const Template = require('./search.html');
-const Interface = require('interface.json');
-const Core = require('_core.js');
-const Icon = require("../../../../basics/icon/icon.js");
+import Template from './search.html';
+import Icon from '../../../../basics/icon/icon';
 
 
 /**
@@ -18,8 +17,8 @@ class Search extends Core {
     this._render(Template, options);
   }
 
-  _componentDidMount(){
-    this._setIcons()
+  _componentDidMount() {
+    this._setIcons();
   }
 
   hideClearIcon() {
@@ -54,22 +53,21 @@ class Search extends Core {
     this._findDOMEl('.hig__global-nav__side-nav__search__clear', this.el).classList.add('hig__global-nav__side-nav__search__clear--show');
   }
 
-  _setIcons(){
+  _setIcons() {
     const mountSearchIcon = this._findDOMEl('.hig__global-nav__side-nav__search__icon', this.el);
-    this._findOrCreateIconComponent(mountSearchIcon, 'search').setNameOrSVG("search", "16" );
+    this._findOrCreateIconComponent(mountSearchIcon, 'search').setNameOrSVG('search', '16');
 
-    const mountClearIcon = this._findDOMEl(".hig__global-nav__side-nav__search__clear", this.el);
-    this._findOrCreateIconComponent(mountClearIcon, 'clear').setNameOrSVG("close-small");
+    const mountClearIcon = this._findDOMEl('.hig__global-nav__side-nav__search__clear', this.el);
+    this._findOrCreateIconComponent(mountClearIcon, 'clear').setNameOrSVG('close-small');
   }
 
-  _findOrCreateIconComponent(mountElOrSelector, name = "icon") {
+  _findOrCreateIconComponent(mountElOrSelector, name = 'icon') {
     if (this[name]) {
       return this[name];
-    } else {
-      this[name] = new Icon({});
-      this[name].mount(mountElOrSelector);
-      return this[name];
     }
+    this[name] = new Icon({});
+    this[name].mount(mountElOrSelector);
+    return this[name];
   }
 }
 
@@ -80,4 +78,4 @@ Search._defaults = {
 };
 Search._partials = {};
 
-module.exports = Search;
+export default Search;

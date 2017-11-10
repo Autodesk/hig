@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../../../../lib/hig.css">
+    <script type="text/javascript" src="../../../../lib/hig.js"></script>
+    <style>
+      body{
+        margin: 30px;
+      }
+
+      .group {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-around;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header-determinate hig__spacer--stack hig__spacer--width-m"></div>
+    <div class="test-container">
+      <div class="group determinate-0 hig__spacer--stack hig__spacer--width-m"></div>
+      <div class="group determinate-33 hig__spacer--stack hig__spacer--width-m"></div>
+      <div class="group determinate-66 hig__spacer--stack hig__spacer--width-m"></div>
+      <div class="group determinate-100 hig__spacer--stack hig__spacer--width-m"></div>
+    </div>
+
+    <div class="header-animated hig__spacer--stack hig__spacer--width-m"></div>
+    <div class="group animated hig__spacer--stack hig__spacer--width-m"></div>
+
+    <div class="header-indeterminate hig__spacer--stack hig__spacer--width-m"></div>
+    <div class="group indeterminate hig__spacer--stack hig__spacer--width-m"></div>
+
+    <script>
+      var determinateHeader = new Hig.Typography({
+        "type": "h2",
+        "text": "Determinate"
+      });
+      determinateHeader.mount(".header-determinate");
+
+      var rings = [];
+      Hig.ProgressRing.AvailableSizes.forEach(function(size) {
+        const ring = new Hig.ProgressRing({ size: size });
+        ring.mount('.animated');
+        ring.setPercentComplete(0);
+        rings.push(ring);
+      });
+
+      const steps = [7, 14, 28, 42, 56, 70, 84, 100, 0, 0, 0];
+      let currentStep = 0;
+      let interval = setInterval(function() {
+        let nextStep = currentStep + 1;
+        if (nextStep > steps.length - 1) {
+          nextStep = 0;
+        }
+
+        rings.forEach(function (ring) {
+          ring.setPercentComplete(steps[nextStep]);
+        });
+
+        currentStep = nextStep;
+      }, 600);
+
+
+
+      var indeterminateHeader = new Hig.Typography({
+        "type": "h2",
+        "text": "Indeterminate"
+      });
+      indeterminateHeader.mount(".header-indeterminate");
+
+      var indeterminateXS = new Hig.ProgressRing({ size: 'xs' });
+      indeterminateXS.mount('.indeterminate');
+
+      var indeterminateS = new Hig.ProgressRing({ size: 's' });
+      indeterminateS.mount('.indeterminate');
+
+      var indeterminateM = new Hig.ProgressRing();
+      indeterminateM.mount('.indeterminate');
+
+      var indeterminateL = new Hig.ProgressRing({ size: 'l' });
+      indeterminateL.mount('.indeterminate');
+
+      var indeterminateXL = new Hig.ProgressRing({ size: 'xl' });
+      indeterminateXL.mount('.indeterminate');
+
+    </script>
+  </body>
+</html>

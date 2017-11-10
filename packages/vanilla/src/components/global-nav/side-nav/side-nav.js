@@ -1,12 +1,10 @@
+import Interface from 'interface.json';
+import Core from '_core.js';
 import './side-nav.scss';
-
-const Template = require('./side-nav.html');
-const Interface = require('interface.json');
-const Core = require('_core.js');
-
-const Link = require('./link/link.js');
-const Search = require('./search/search.js');
-const Group = require('./group/group.js');
+import Template from './side-nav.html';
+import Link from './link/link';
+import Search from './search/search';
+import Group from './group/group';
 
 /**
  * Creates a SideNav
@@ -98,4 +96,4 @@ SideNav._partials = {
   Search
 };
 
-module.exports = SideNav;
+export default SideNav;

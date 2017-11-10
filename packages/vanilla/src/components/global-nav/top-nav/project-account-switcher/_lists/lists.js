@@ -1,8 +1,7 @@
-const Template = require('./lists.html');
-const Interface = require('interface.json');
-const Core = require('_core.js');
-
-const List = require('./_list/_list.js');
+import Interface from 'interface.json';
+import Core from '_core.js';
+import Template from './lists.html';
+import List from './_list/_list.js';
 
 /**
  * Creates an Lists
@@ -91,4 +90,4 @@ Lists._defaults = {
 };
 Lists._partials = {};
 
-module.exports = Lists;
+export default Lists;

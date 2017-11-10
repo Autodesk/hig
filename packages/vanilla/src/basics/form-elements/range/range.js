@@ -1,8 +1,7 @@
+import Interface from 'interface.json';
+import Core from '_core.js';
 import './range.scss';
-
-const Template = require('./range.html');
-const Interface = require('interface.json');
-const Core = require('_core.js');
+import Template from './range.html';
 
 /**
  * Creates a Range
@@ -119,4 +118,4 @@ Range._defaults = {
 
 Range._partials = {};
 
-module.exports = Range;
+export default Range;

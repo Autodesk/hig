@@ -1,15 +1,13 @@
+import Interface from 'interface.json';
+import Core from '_core.js';
 import './top-nav.scss';
-
-const Template = require('./top-nav.html');
-const Interface = require('interface.json');
-const Core = require('_core.js');
-
-const Profile = require('./profile/profile.js');
-const Shortcut = require('./shortcut/shortcut.js');
-const Help = require('./help/help.js');
-const ProjectAccountSwitcher = require('./project-account-switcher/project-account-switcher.js');
-const Search = require('./search/search.js');
-const Icon = require('../../../basics/icon/icon.js');
+import Template from './top-nav.html';
+import Profile from './profile/profile.js';
+import Shortcut from './shortcut/shortcut.js';
+import Help from './help/help.js';
+import ProjectAccountSwitcher from './project-account-switcher/project-account-switcher.js';
+import Search from './search/search.js';
+import Icon from '../../../basics/icon/icon.js';
 
 /**
  * Creates an TopNav
@@ -125,4 +123,4 @@ TopNav._partials = {
   Search
 };
 
-module.exports = TopNav;
+export default TopNav;

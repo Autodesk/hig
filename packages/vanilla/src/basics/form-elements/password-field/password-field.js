@@ -1,8 +1,7 @@
-const Template = require('./password-field.html');
-const Interface = require('interface.json');
-const Core = require('_core.js');
-
-const TextField = require('../text-field/text-field');
+import Template from './password-field.html';
+import Interface from 'interface.json';
+import Core from '_core.js';
+import TextField from '../text-field/text-field';
 
 const textFieldMethods = [
   'setLabel',
@@ -90,4 +89,4 @@ PasswordField._defaults = Object.assign({}, TextField._defaults, {
 });
 PasswordField._partials = {};
 
-module.exports = PasswordField;
+export default PasswordField;

@@ -1,13 +1,14 @@
-import "./dropdown.scss";
+import Core from '_core.js';
+import Interface from 'interface.json';
 
-const Template = require("./dropdown.html");
-const Interface = require("interface.json");
-const Core = require("_core.js");
+import './dropdown.scss';
 
-const TextField = require("../text-field/text-field.js");
-const Option = require("./option/option.js");
+import Template from './dropdown.html';
 
-const OPEN_CLASS = "hig__dropdown--open";
+import TextField from '../text-field/text-field';
+import Option from './option/option';
+
+const OPEN_CLASS = 'hig__dropdown--open';
 
 /**
  * Creates a Dropdown
@@ -23,15 +24,15 @@ class Dropdown extends Core {
   }
 
   _componentDidMount() {
-    this.menu = document.createElement("div");
-    this.menu.classList.add("hig__dropdown__menu");
+    this.menu = document.createElement('div');
+    this.menu.classList.add('hig__dropdown__menu');
 
-    this.menuWrapper = document.createElement("div");
-    this.menuWrapper.classList.add("hig__dropdown__menu-wrapper");
+    this.menuWrapper = document.createElement('div');
+    this.menuWrapper.classList.add('hig__dropdown__menu-wrapper');
     this.menuWrapper.appendChild(this.menu);
 
     this.field = new TextField(this.initialOptions);
-    this.mountPartialToComment("FIELD", this.field);
+    this.mountPartialToComment('FIELD', this.field);
     this.field._setReadonly(true);
     this.field._showDropdownCaret();
     this.field._addSlot(this.menuWrapper);
@@ -65,7 +66,7 @@ class Dropdown extends Core {
 
   onClickOutside(fn) {
     return this._attachListener(
-      "click",
+      'click',
       window.document.body,
       window.document.body,
       this._callbackIfClickOutside.bind(this, fn)
@@ -73,7 +74,7 @@ class Dropdown extends Core {
   }
 
   onKeypress(fn) {
-    return this.field._attachListener("keypress", this.el, this.el, fn);
+    return this.field._attachListener('keypress', this.el, this.el, fn);
   }
 
   onFocus(fn) {
@@ -125,14 +126,14 @@ class Dropdown extends Core {
 }
 
 Dropdown._interface =
-  Interface["basics"]["FormElements"]["partials"]["Dropdown"];
+  Interface.basics.FormElements.partials.Dropdown;
 Dropdown._defaults = {
-  label: "",
-  placeholder: "",
-  instructions: ""
+  label: '',
+  placeholder: '',
+  instructions: ''
 };
 Dropdown._partials = {
-  Option: Option
+  Option
 };
 
-module.exports = Dropdown;
+export default Dropdown;

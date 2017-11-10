@@ -1,8 +1,7 @@
+import Interface from 'interface.json';
+import Core from '_core.js';
 import './submodule.scss';
-
-const Template = require('./submodule.html');
-const Interface = require('interface.json');
-const Core = require('_core.js');
+import Template from './submodule.html';
 
 /**
  * Creates an Submodule
@@ -56,4 +55,4 @@ Submodule._defaults = {
 };
 Submodule._partials = {};
 
-module.exports = Submodule;
+export default Submodule;

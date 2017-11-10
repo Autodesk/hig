@@ -1,5 +1,5 @@
-var Interface = require('interface.json');
-var Item = require('../_item/item.js');
+import Interface from 'interface.json';
+import Item from '../_item/item';
 
 /**
  * Creates an Account
@@ -8,21 +8,16 @@ var Item = require('../_item/item.js');
  */
 
 class Account {
-
-    constructor(options){
-        options._type = 'account';
-        return new Item(options);
-    }
-
-    
-
+  constructor(options){
+    options._type = 'account';
+    return new Item(options);
+  }
 }
 
 Account._interface = Interface['components']['GlobalNav']['partials']['TopNav']['partials']['ProjectAccountSwitcher']['partials']['Account'];
 Account._defaults = {
-    "image": "",
-    "label": "",
+  "image": "",
+  "label": "",
 };
 
-
-module.exports = Account;
+export default Account;

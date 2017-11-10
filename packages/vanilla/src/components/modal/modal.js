@@ -1,10 +1,9 @@
+import Interface from 'interface.json';
+import Core from '_core.js';
 import './modal.scss';
-
-const Template = require('./modal.html');
-const Interface = require('interface.json');
-const Core = require('_core.js');
-const Button = require('../button/button');
-const Icon = require('../../basics/icon/icon.js');
+import Template from './modal.html';
+import Button from '../button/button';
+import Icon from '../../basics/icon/icon.js';
 
 const AvailableStyles = ['standard', 'alternate'];
 
@@ -157,4 +156,4 @@ Modal._partials = {};
 
 Modal.AvailableStyles = AvailableStyles;
 
-module.exports = Modal;
+export default Modal;

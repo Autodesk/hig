@@ -1,11 +1,9 @@
-import "./target.scss";
-
-var Template = require("./target.html");
-var Interface = require("interface.json");
-var Core = require("_core.js");
-
-var Item = require("../_item/item.js");
-const Icon = require("../../../../../basics/icon/icon.js");
+import Interface from 'interface.json';
+import Core from '_core.js';
+import './target.scss';
+import Template from './target.html';
+import Item from '../_item/item';
+import Icon from '../../../../../basics/icon/icon';
 
 /**
  * Creates an Target
@@ -21,7 +19,7 @@ class Target extends Core {
   }
 
   _componentDidMount() {
-    this.mountPartialToComment("ITEM", this.item);
+    this.mountPartialToComment('ITEM', this.item);
     this._setIcon();
   }
 
@@ -38,40 +36,40 @@ class Target extends Core {
   }
 
   onClick(fn) {
-    return this._attachListener("click", this.el, this.el, fn);
+    return this._attachListener('click', this.el, this.el, fn);
   }
 
   addCaret() {
     this._findDOMEl(
-      ".hig__global-nav__top-nav__project-account-switcher__target__caret",
+      '.hig__global-nav__top-nav__project-account-switcher__target__caret',
       this.el
     ).classList.remove(
-      "hig__global-nav__top-nav__project-account-switcher__target__caret--hide"
+      'hig__global-nav__top-nav__project-account-switcher__target__caret--hide'
     );
   }
 
   removeCaret() {
     this._findDOMEl(
-      ".hig__global-nav__top-nav__project-account-switcher__target__caret",
+      '.hig__global-nav__top-nav__project-account-switcher__target__caret',
       this.el
     ).classList.add(
-      "hig__global-nav__top-nav__project-account-switcher__target__caret--hide"
+      'hig__global-nav__top-nav__project-account-switcher__target__caret--hide'
     );
   }
 
-  _setIcon(){
-    const mountEl = this._findDOMEl(".hig__global-nav__top-nav__project-account-switcher__target__caret", this.el)
-    this._findOrCreateIconComponent(mountEl).setNameOrSVG("caret");
+  _setIcon() {
+    const mountEl = this._findDOMEl('.hig__global-nav__top-nav__project-account-switcher__target__caret', this.el);
+    this._findOrCreateIconComponent(mountEl).setNameOrSVG('caret');
   }
 
   _findOrCreateIconComponent(mountElOrSelector, name = "icon") {
     if (this[name]) {
       return this[name];
-    } else {
+    }
       this[name] = new Icon({});
       this[name].mount(mountElOrSelector);
       return this[name];
-    }
+
   }
 }
 
@@ -88,4 +86,4 @@ Target._interface = {
 Target._defaults = {};
 Target._partials = {};
 
-module.exports = Target;
+export default Target;

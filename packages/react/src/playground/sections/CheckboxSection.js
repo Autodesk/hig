@@ -22,12 +22,18 @@ class CheckboxSection extends PureComponent {
     super(props);
 
     this.state = {
-      controlledChecked: false
+      controlledChecked: false,
+      controlledIndeterminateChecked: false,
+      controlledIndeterminate: true
     };
   }
 
   setControlledChecked = event => {
     this.setState({ controlledChecked: event.target.checked });
+  };
+
+  setControlledIndeterminate = event => {
+    console.log(event.target.checked);
   };
 
   render() {
@@ -36,6 +42,13 @@ class CheckboxSection extends PureComponent {
         <div style={checkboxStyle}>
           <Checkbox label="Required" required="You must check this box" />
           <Checkbox label="Disabled" disabled />
+          <Checkbox label="Disabled + Checked" checked disabled />
+          <Checkbox
+            label="Indeterminate"
+            indeterminate={this.state.controlledIndeterminate}
+            checked={this.state.controlledIndeterminateChecked}
+            onChange={this.setControlledIndeterminate}
+          />
           <Checkbox
             label="Controlled"
             checked={this.state.controlledChecked}

@@ -1,9 +1,7 @@
+import Core from '_core.js';
 import './profile-flyout-content.scss';
-
-const Template = require('./profile-flyout-content.html');
-const Core = require('_core.js');
-
-const Button = require('components/button/button.js');
+import Template from './profile-flyout-content.html';
+import Button from 'components/button/button.js';
 
 /**
  * Creates an ProfileFlyoutContent
@@ -88,4 +86,4 @@ ProfileFlyoutContent._interface = {
 };
 ProfileFlyoutContent._defaults = {};
 
-module.exports = ProfileFlyoutContent;
+export default ProfileFlyoutContent;
