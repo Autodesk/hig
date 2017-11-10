@@ -93,19 +93,15 @@ jobs:
       - run:
           name: Add auth token
           command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
-          working_directory: packages/react
       - run:
           name: Deploy hig-react
           command: node ./scripts/publish-if-needed/index.js react
-          working_directory: packages/react
       - run:
           name: Deploy hig-interface
           command: node ./scripts/publish-if-needed/index.js interface
-          working_directory: packages/interface
       - run:
           name: Deploy hig-vanilla
           command: node ./scripts/publish-if-needed/index.js vanilla
-          working_directory: packages/vanilla
 workflows:
   version: 2
   build-test-validate-and-deploy:
