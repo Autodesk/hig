@@ -1,12 +1,10 @@
 const registryUrl = require("registry-url");
 const fetch = require("node-fetch");
 const url = require("url");
-const localPackageJson = require("../../package.json");
-
-const remotePackageUrl = url.resolve(registryUrl(), localPackageJson.name);
 
 // Get the package.json version published to NPM
-async function fetchPublishedVersion() {
+async function fetchPublishedVersion(packagePublishedName) {
+  const remotePackageUrl = url.resolve(registryUrl(), packagePublishedName);
   return fetch(remotePackageUrl)
     .then(res => res.json())
     .then(pkg => pkg["dist-tags"].latest);
