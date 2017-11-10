@@ -1,7 +1,9 @@
 // !/usr/bin/env node
+const path = require('path');
 const fetchPublishedVersion = require("./fetchPublishedVersion");
 const exec = require('../exec.js');
 const packageName = process.argv[2];
+const packagePath = path.join('./packages', packageName);
 const packageConfig = require('./getPackageConfig')(packageName);
 
 // Log a message to the console with timestamp
@@ -31,7 +33,7 @@ function getHighestVersion(version1, version2) {
 // Exit the script with a success message
 function exitPublish() {
   info("Publishing");
-  exec("npm publish")
+  exec(`(cd ${packagePath} && npm publish)`);
   info("Finished");
   return process.exit(0);
 }
