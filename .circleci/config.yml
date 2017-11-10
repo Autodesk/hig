@@ -17,6 +17,7 @@ jobs:
       - save_cache:
           key: dependencies-{{ checksum "packages/react/package.json" }}-{{ checksum "packages/vanilla/package.json" }}
           paths:
+            - node_modules
             - packages/vanilla/node_modules
             - packages/react/node_modules
   vanilla-build:
