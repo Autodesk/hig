@@ -96,15 +96,15 @@ jobs:
           working_directory: packages/react
       - run:
           name: Deploy hig-react
-          command: npm publish
+          command: node ./scripts/publish-if-needed/index.js react
           working_directory: packages/react
       - run:
           name: Deploy hig-interface
-          command: npm publish
+          command: node ./scripts/publish-if-needed/index.js interface
           working_directory: packages/interface
       - run:
           name: Deploy hig-vanilla
-          command: npm publish
+          command: node ./scripts/publish-if-needed/index.js vanilla
           working_directory: packages/vanilla
 workflows:
   version: 2

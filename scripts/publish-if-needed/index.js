@@ -1,10 +1,12 @@
 // !/usr/bin/env node
-import fetchPublishedVersion from "./fetchPublishedVersion";
-import getLocalVersion from "./getLocalVersion";
+const fetchPublishedVersion = require("./fetchPublishedVersion");
+const exec = require('../exec.js');
+const packageName = process.argv[2];
+const packageConfig = require('./getPackageConfig')(packageName);
 
 // Log a message to the console with timestamp
 function info(infoString) {
-  console.log(`[validate-version.js ${Date.now()}]: ${infoString}`);
+  console.log(`[publish-if-needed.js ${Date.now()}]: ${infoString}`);
 }
 
 // Takes two symantic version strings and returns the highest one
@@ -27,18 +29,19 @@ function getHighestVersion(version1, version2) {
 }
 
 // Exit the script with a success message
-function exitSuccess() {
-  info("Passed!");
+function exitPublish() {
+  info("Publishing");
+  exec("npm publish")
   info("Finished");
   return process.exit(0);
 }
 
 // Exit the script with a failure message, the two versions that produced
 // the failure as arguments
-function exitFailure() {
-  info("Failed! Local version must be higher than published version.");
+function exitNoPublish(localVersion, publishedVersion) {
+  info(`Publication not needed.`);
   info("Finished");
-  return process.exit(1);
+  return process.exit(0);
 }
 
 // Exit with an error message, the error message string as argument
@@ -50,26 +53,26 @@ function exitError(message) {
 
 // Main
 async function validateVersion() {
-  info("Starting");
+  info(`Checking version of ${packageName}`);
 
-  const localVersion = getLocalVersion();
+  const localVersion = packageConfig.version;
 
-  info(`Local version is ${localVersion}`);
+  info(`Local version is ${packageConfig.name}@${localVersion}`);
 
-  const publishedVersion = await fetchPublishedVersion();
+  const publishedVersion = await fetchPublishedVersion(packageConfig.name);
 
-  info(`Published version is ${publishedVersion}`);
+  info(`Published version is ${packageConfig.name}@${publishedVersion}`);
 
   const highestVersion = getHighestVersion(publishedVersion, localVersion);
   switch (highestVersion) {
     case null:
-      exitFailure(localVersion, publishedVersion);
+      exitNoPublish(localVersion, publishedVersion);
       break;
     case publishedVersion:
-      exitFailure(localVersion, publishedVersion);
+      exitNoPublish(localVersion, publishedVersion);
       break;
     case localVersion:
-      exitSuccess();
+      exitPublish();
       break;
     default:
       exitError("Unspecified error");
