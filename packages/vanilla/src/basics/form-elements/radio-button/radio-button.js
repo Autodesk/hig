@@ -1,5 +1,4 @@
 const Template = require('./radio-button.html');
-const Interface = require('interface.json');
 const InputButton = require('../input-button/input-button.js');
 
 
@@ -42,12 +41,16 @@ inputButtonMethods.forEach((fn) => {
   });
 });
 
-RadioButton._interface = Interface.basics.FormElements.partials.RadioButton;
 RadioButton._defaults = {
   label: '',
   name: '',
   value: ''
 };
 RadioButton._partials = {};
+
+if (process.env.NODE_ENV !== 'production') {
+  const Interface = require('interface.json');
+  RadioButton._interface = Interface.basics.FormElements.partials.RadioButton;
+}
 
 module.exports = RadioButton;

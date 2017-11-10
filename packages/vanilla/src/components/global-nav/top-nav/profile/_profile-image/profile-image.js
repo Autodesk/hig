@@ -1,8 +1,7 @@
 import './profile-image.scss';
 
-var Template = require('./profile-image.html');
-var Interface = require('interface.json');
-var Core = require('_core.js');
+const Template = require('./profile-image.html');
+const Core = require('_core.js');
 
 /**
  * Creates a ProfileImage
@@ -11,31 +10,32 @@ var Core = require('_core.js');
  */
 
 class ProfileImage extends Core {
+  constructor(options) {
+    super(options);
+    this._render(Template, options);
+  }
 
-    constructor(options){
-        super(options);
-        this._render(Template, options);
-    }
+  onClick(fn) {
+    return this._attachListener('click', this.el, this.el, fn);
+  }
 
-    onClick(fn) {
-        return this._attachListener("click", this.el, this.el, fn);
-    }
-
-    setImage(imageUrl) {
-        this.el
-            .querySelector('.hig__global-nav__top-nav__profile__profile-image__image')
-            .setAttribute("src", imageUrl);
-    }
-
+  setImage(imageUrl) {
+    this.el
+      .querySelector('.hig__global-nav__top-nav__profile__profile-image__image')
+      .setAttribute('src', imageUrl);
+  }
 }
 
-ProfileImage._interface = {
+ProfileImage._defaults = {};
+
+if (process.env.NODE_ENV !== 'production') {
+  ProfileImage._interface = {
     methods: {
-        "onClick": {},
-        "setImage": {}
+      onClick: {},
+      setImage: {}
     },
     defaults: {}
-};
-ProfileImage._defaults = {};
+  };
+}
 
 module.exports = ProfileImage;

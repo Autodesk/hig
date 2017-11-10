@@ -1,9 +1,8 @@
 import './collapse.scss';
 
 const Template = require('./collapse.html');
-const Interface = require('interface.json');
 const Core = require('_core.js');
-const Icon = require("../../../../../../basics/icon/icon.js");
+const Icon = require('../../../../../../basics/icon/icon.js');
 
 
 /**
@@ -18,8 +17,8 @@ class Collapse extends Core {
     this._render(Template, options);
   }
 
-  _componentDidMount(){
-    this._setIcon()
+  _componentDidMount() {
+    this._setIcon();
   }
 
   minimize() {
@@ -42,23 +41,26 @@ class Collapse extends Core {
     this.el.classList.add('hig__global-nav__side-nav__section__group__module__collapse--hide');
   }
 
-  _setIcon(){
+  _setIcon() {
     this._findOrCreateIconComponent(this.el).setNameOrSVG('caret');
   }
 
-  _findOrCreateIconComponent(mountElOrSelector, name = "icon") {
+  _findOrCreateIconComponent(mountElOrSelector, name = 'icon') {
     if (this[name]) {
       return this[name];
-    } else {
-      this[name] = new Icon({});
-      this[name].mount(mountElOrSelector);
-      return this[name];
     }
+    this[name] = new Icon({});
+    this[name].mount(mountElOrSelector);
+    return this[name];
   }
 }
 
-Collapse._interface = Interface.components.GlobalNav.partials.SideNav.partials.Group.partials.Module.partials.Collapse;
 Collapse._defaults = {};
 Collapse._partials = {};
+
+if (process.env.NODE_ENV !== 'production') {
+  const Interface = require('interface.json');
+  Collapse._interface = Interface.components.GlobalNav.partials.SideNav.partials.Group.partials.Module.partials.Collapse;
+}
 
 module.exports = Collapse;

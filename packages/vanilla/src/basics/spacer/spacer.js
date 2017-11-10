@@ -1,7 +1,6 @@
 import './spacer.scss';
 
 const Template = require('./spacer.html');
-const Interface = require('interface.json');
 const Core = require('../../helpers/js/_core.js');
 
 const SIZES = {
@@ -76,7 +75,6 @@ class Spacer extends Core {
   }
 }
 
-Spacer._interface = Interface.basics.Spacer;
 Spacer._defaults = {
   type: 'stack',
   width: 'm',
@@ -86,5 +84,10 @@ Spacer._defaults = {
 Spacer.SizeMap = SIZES;
 Spacer.AvailableSizes = Object.keys(SIZES);
 Spacer.AvailableTypes = TYPES;
+
+if (process.env.NODE_ENV !== 'production') {
+  const Interface = require('interface.json');
+  Spacer._interface = Interface.basics.Spacer;
+}
 
 module.exports = Spacer;

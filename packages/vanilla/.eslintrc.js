@@ -18,6 +18,7 @@ module.exports = {
     'class-methods-use-this': 0,
     'jsx-a11y/href-no-hash': 0,
     'import/no-extraneous-dependencies': 0,
+    "jsx-a11y/href-no-hash": "off",
     'no-underscore-dangle': 0,
     'no-unused-expressions': ['error', { allowTernary: true }],
     'max-len': [2, { code: 100 }]

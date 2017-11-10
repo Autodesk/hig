@@ -1,7 +1,6 @@
 import './link.scss';
 
 const Template = require('./link.html');
-const Interface = require('interface.json');
 const Core = require('../../../../helpers/js/_core.js');
 
 /**
@@ -33,10 +32,14 @@ class Link extends Core {
   }
 }
 
-Link._interface = Interface.components.GlobalNav.partials.SideNav.partials.Link;
 Link._defaults = {
   title: 'link',
   link: '#'
 };
+
+if (process.env.NODE_ENV !== 'production') {
+  const Interface = require('interface.json');
+  Link._interface = Interface.components.GlobalNav.partials.SideNav.partials.Link;
+}
 
 module.exports = Link;

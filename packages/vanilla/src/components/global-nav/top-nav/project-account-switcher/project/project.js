@@ -1,5 +1,4 @@
-var Interface = require('interface.json');
-var Item = require('../_item/item.js');
+const Item = require('../_item/item.js');
 
 /**
  * Creates an Project
@@ -8,18 +7,20 @@ var Item = require('../_item/item.js');
  */
 
 class Project {
-
-    constructor(options){
-        options._type = 'project';
-        return new Item(options);
-    }
+  constructor(options) {
+    options._type = 'project';
+    return new Item(options);
+  }
 }
 
-Project._interface = Interface['components']['GlobalNav']['partials']['TopNav']['partials']['ProjectAccountSwitcher']['partials']['Project'];
 Project._defaults = {
-    "image": "",
-    "label": "",
+  image: '',
+  label: '',
 };
 
+if (process.env.NODE_ENV !== 'production') {
+  const Interface = require('interface.json');
+  Project._interface = Interface.components.GlobalNav.partials.TopNav.partials.ProjectAccountSwitcher.partials.Project;
+}
 
 module.exports = Project;

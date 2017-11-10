@@ -1,7 +1,6 @@
 import './button.scss';
 
 const Template = require('./button.html');
-const Interface = require('interface.json');
 const Core = require('../../helpers/js/_core.js');
 
 const AvailableTypes = ['primary', 'secondary', 'flat'];
@@ -117,14 +116,13 @@ class Button extends Core {
     return this._attachListener('focusin', this.el, this.el, fn);
   }
 
-  _findOrCreateIconComponent(mountElOrSelector, name = "icon") {
+  _findOrCreateIconComponent(mountElOrSelector, name = 'icon') {
     if (this[name]) {
       return this[name];
-    } 
-      this[name] = new Icon({});
-      this[name].mount(mountElOrSelector);
-      return this[name];
-    
+    }
+    this[name] = new Icon({});
+    this[name].mount(mountElOrSelector);
+    return this[name];
   }
 
   _clearAllTypes() {
@@ -146,7 +144,7 @@ class Button extends Core {
   }
 }
 
-Button._interface = Interface.components.Button;
+
 Button._defaults = {
   icon: false,
   link: false,
@@ -160,5 +158,10 @@ Button._defaults = {
 Button.AvailableSizes = AvailableSizes;
 Button.AvailableTypes = AvailableTypes;
 Button.AvailableWidths = AvailableWidths;
+
+if (process.env.NODE_ENV !== 'production') {
+  const Interface = require('interface.json');
+  Button._interface = Interface.components.Button;
+}
 
 module.exports = Button;

@@ -1,7 +1,6 @@
 import './shortcut.scss';
 
 const Template = require('./shortcut.html');
-const Interface = require('interface.json');
 const Core = require('_core.js');
 const Icon = require('../../../../basics/icon/icon.js');
 
@@ -50,12 +49,15 @@ class Shortcut extends Core {
   }
 }
 
-Shortcut._interface =
-  Interface.components.GlobalNav.partials.TopNav.partials.Shortcut;
 Shortcut._defaults = {
   icon: '',
   title: '',
   link: '#'
 };
+
+if (process.env.NODE_ENV !== 'production') {
+  const Interface = require('interface.json');
+  Shortcut._interface = Interface.components.GlobalNav.partials.TopNav.partials.Shortcut;
+}
 
 module.exports = Shortcut;

@@ -1,5 +1,4 @@
 const Template = require('./grid-item.html');
-const Interface = require('interface.json');
 const Core = require('_core.js');
 
 const AvailableFractions = [
@@ -51,11 +50,15 @@ class GridItem extends Core {
 }
 
 
-GridItem._interface = Interface.basics.Grid.partials.GridItem;
 GridItem._defaults = {
   fraction: 'one-whole'
 };
 
 GridItem.AvailableFractions = AvailableFractions;
+
+if (process.env.NODE_ENV !== 'production') {
+  const Interface = require('interface.json');
+  GridItem._interface = Interface.basics.Grid.partials.GridItem;
+}
 
 module.exports = GridItem;

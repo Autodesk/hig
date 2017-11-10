@@ -1,7 +1,6 @@
 import './modal.scss';
 
 const Template = require('./modal.html');
-const Interface = require('interface.json');
 const Core = require('_core.js');
 const Button = require('../button/button');
 const Icon = require('../../basics/icon/icon.js');
@@ -147,7 +146,6 @@ class Modal extends Core {
   }
 }
 
-Modal._interface = Interface.components.Modal;
 Modal._defaults = {
   body: '',
   style: 'standard',
@@ -156,5 +154,10 @@ Modal._defaults = {
 Modal._partials = {};
 
 Modal.AvailableStyles = AvailableStyles;
+
+if (process.env.NODE_ENV !== 'production') {
+  const Interface = require('interface.json');
+  Modal._interface = Interface.components.Modal;
+}
 
 module.exports = Modal;

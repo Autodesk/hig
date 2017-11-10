@@ -2,7 +2,6 @@ import './flyout.scss';
 import CSSTransition from '../../helpers/js/css-transition';
 
 const Template = require('./flyout.html');
-const Interface = require('interface.json');
 const Core = require('../../helpers/js/_core.js');
 
 const ANCHOR_POINTS = [
@@ -120,7 +119,6 @@ class Flyout extends Core {
   }
 }
 
-Flyout._interface = Interface.basics.Flyout;
 Flyout._defaults = {
   title: 'link',
   link: '#',
@@ -129,5 +127,10 @@ Flyout._defaults = {
 
 Flyout.AvailableTypes = AVAILABLE_TYPES;
 Flyout.AvailableAnchorPoints = ANCHOR_POINTS;
+
+if (process.env.NODE_ENV !== 'production') {
+  const Interface = require('interface.json');
+  Flyout._interface = Interface.basics.Flyout;
+}
 
 module.exports = Flyout;

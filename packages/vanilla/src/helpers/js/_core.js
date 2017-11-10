@@ -1,6 +1,5 @@
-var Icons = require("../../basics/icons/icons.js");
-var Mustache = require("mustache");
-require("./polyfills.js");
+const Mustache = require('mustache');
+const validateInterface = require('./_validateInterface');
 
 class Core {
   /**
@@ -9,64 +8,15 @@ class Core {
      * @param {Object} [options] - Options object with the overrides for our defaults
      */
 
-  constructor(options) {
-    // CHECK INTERFACE COMPATIBILITY
-    if (!this._interface) {
-      console.warn(
-        "NO INTERFACE SET FOR CLASS, PLEASE DEFINE INTERFACE IN _interface PROPERTY OF YOUR CLASS"
-      );
-    } else {
-      var instanceMethods = Object.getOwnPropertyNames(
-        Object.getPrototypeOf(this)
-      );
-      var coreMethods = Object.getOwnPropertyNames(Core.prototype);
-      // CHECK IF ALL METHODS IN COMPONENT ARE DEFINED IN INTERFACE
-      instanceMethods.forEach(function(v, i) {
-        const coreMethodMissing = coreMethods.indexOf(v) === -1;
-        if (
-          coreMethodMissing && v[0] != "_" && !this._interface["methods"][v]
-        ) {
-          console.error(
-            'METHOD: "' +
-              this.constructor.name +
-              "." +
-              v +
-              '" IS NOT DEFINED AS INTERFACE OR IS NOT A VALID INTERFACE METHOD'
-          );
-        }
-      }, this);
-
-      // CHECK IF ALL METHODS IN INTERFACE ARE IMPLEMENTED
-      for (var k in this._interface["methods"]) {
-        if (instanceMethods.indexOf(k) === -1) {
-          console.error(
-            `METHOD: \"${this.constructor.name}.${k}\" IS NOT IMPLEMENTED BY THIS COMPONENT YET AND NEEDS AN IMPLEMENTATION`
-          );
-        }
-      }
-    }
-
-    // CHECK DEFAULTS ARE DEFINED
-    if (!this._defaults) {
-      console.warn(
-        `NO DEFAULTS SET FOR ${this.constructor.name}, PLEASE DEFINE DEFAULTS IN _defaults PROPERTY OF YOUR CLASS`
-      );
-    } else {
-      for (var v in this._interface["defaults"]) {
-        if (this._defaults[v] === undefined) {
-          console.error(
-            `DEFAULT VALUE: \"${this.constructor.name}.${v}\" IS DEFINED IN THE INTERFACE BUT NOT IMPLEMENTED`,
-            this
-          );
-        }
-      }
-    }
+  constructor(options = {}) {
+    validateInterface(this);
 
     // MIX OPTIONS WITH DEFAULTS
+    // This modifies the passed options object
     if (options) {
-      var defaults = this._defaults;
+      const defaults = this._defaults;
       if (defaults) {
-        for (var key in defaults) {
+        for (const key in defaults) {
           if (!defaults.hasOwnProperty(key)) continue; // skip loop if the property is from prototype
           if (!options[key]) {
             options[key] = defaults[key];
@@ -103,16 +53,15 @@ class Core {
      * @returns null
      */
 
-  _render(template, data, partials, tagname = "div") {
+  _render(template, data = {}, partials = {}, tagname = 'div') {
     if (!this._rendered) {
-      var elWrapper = document.createElement(tagname);
-      data = data || {};
+      const elWrapper = document.createElement(tagname);
 
-      elWrapper.innerHTML = Mustache.render(template, data, partials || {});
+      elWrapper.innerHTML = Mustache.render(template, data, partials);
       this._rendered = elWrapper.firstChild;
     } else {
       console.error(
-        "RENDER ALREADY CALLED ON THIS COMPONENT, USE PROPER METHODS TO UPDATE CONTENT"
+        'RENDER ALREADY CALLED ON THIS COMPONENT, USE PROPER METHODS TO UPDATE CONTENT'
       );
     }
   }
@@ -131,8 +80,8 @@ class Core {
      */
 
   mount(mountNode, beforeChild, scopeNode) {
-    var parentNode = this._findDOMEl(mountNode, scopeNode);
-    var refNode = this._findDOMEl(beforeChild, scopeNode);
+    const parentNode = this._findDOMEl(mountNode, scopeNode);
+    const refNode = this._findDOMEl(beforeChild, scopeNode);
 
     this.el = parentNode.insertBefore(this._rendered, refNode);
     this._componentDidMount();
@@ -152,15 +101,15 @@ class Core {
       return NodeFilter.FILTER_ACCEPT;
     }
 
-    var comment = null;
+    let comment = null;
 
-    var iterator = document.createNodeIterator(
+    const iterator = document.createNodeIterator(
       this.el || document,
       NodeFilter.SHOW_COMMENT,
       filterNone,
       false
     ); // Fourth argument, which is actually obsolete according to the DOM4 standard, is required in IE 11
-    var curNode;
+    let curNode;
     while ((curNode = iterator.nextNode())) {
       if (curNode.nodeValue == searchComment) {
         comment = curNode;
@@ -168,7 +117,7 @@ class Core {
     }
 
     if (comment) {
-      var refNode = scopeNode ? scopeNode.el : comment;
+      const refNode = scopeNode ? scopeNode.el : comment;
       if (mountNode._rendered) {
         mountNode.el = comment.parentNode.insertBefore(
           mountNode._rendered,
@@ -180,11 +129,11 @@ class Core {
       }
 
       return mountNode.el;
-    } else {
-      console.error(
-        `MOUNT PARTIAL TO COMMENT: ${this.constructor.name} has no comment \"${searchComment}\" to mount to.`
-      );
     }
+    console.error(
+      `MOUNT PARTIAL TO COMMENT: ${this.constructor.name} has no comment \"${searchComment}\" to mount to.`
+    );
+    return null;
   }
 
   /**
@@ -221,29 +170,30 @@ class Core {
     scopeElement,
     executeOnEventFunction
   ) {
-    function childOf(/*child node*/ c, /*parent node*/ p) {
-      //returns boolean
+    function childOf(/* child node */ c, /* parent node */ p) {
+      // returns boolean
       while ((c = c.parentNode) && c !== p);
       return !!c;
     }
 
-    var q = this._findDOMEl(targetClass, scopeElement);
-    var eventTarget, eventFn;
+    const q = this._findDOMEl(targetClass, scopeElement);
+    let eventTarget;
+    let eventFn;
 
-    var events = eventTypes.split(" ");
-    for (var i = 0; i < events.length; i++) {
-      var eventType = events[i];
+    const events = eventTypes.split(' ');
+    for (let i = 0; i < events.length; i++) {
+      let eventType = events[i];
 
-      if (eventType == "hover") {
-        eventType = "mouseenter";
+      if (eventType === 'hover') {
+        eventType = 'mouseenter';
       }
 
-      if (eventType == "mouseenter" || eventType == "scroll") {
+      if (eventType === 'mouseenter' || eventType === 'scroll') {
         eventFn = executeOnEventFunction;
         eventTarget = q;
       } else {
-        eventFn = event => {
-          var element = event.target;
+        eventFn = (event) => {
+          const element = event.target;
 
           if (q && (childOf(element, q) || element === q)) {
             executeOnEventFunction(event, this);
@@ -255,7 +205,7 @@ class Core {
       eventTarget.addEventListener(eventType, eventFn);
 
       if (events.length === 1) {
-        var dispose = function() {
+        const dispose = function () {
           eventTarget.removeEventListener(eventType, eventFn);
         };
 
@@ -272,17 +222,15 @@ class Core {
      */
 
   _findDOMEl(f, s) {
-    if (typeof f === "string") {
+    if (typeof f === 'string') {
       // do our selection
-      var domEl = (s || document).querySelectorAll(f);
+      const domEl = (s || document).querySelectorAll(f);
       if (!domEl || domEl.length === 0) {
-        return console.error("TARGET NOT FOUND ", f);
-      } else {
-        return domEl[0];
+        return console.error('TARGET NOT FOUND ', f);
       }
-    } else {
-      return f; // already a HTMLElement, no need to search
+      return domEl[0];
     }
+    return f; // already a HTMLElement, no need to search
   }
 
   /**
@@ -300,7 +248,7 @@ class Core {
     }
 
     const newEl = document.createElement(tagname);
-    newEl.classList.add(...selector.split(".").filter(c => c.length > 0));
+    newEl.classList.add(...selector.split('.').filter(c => c.length > 0));
     return this.mountPartialToComment(searchComment, newEl);
   }
 
@@ -315,21 +263,7 @@ class Core {
     if (existingEl) {
       return existingEl.remove();
     }
-  }
-
-  /**
-     * Get the Icon SVG String
-     * @param {String} icon - icon ID
-     * @returns {String} String with SVG of the icon
-     
-
-    /**
-     * Returns valid interface methods
-     * @returns {Object} interface methods
-     */
-
-  help() {
-    return this._interface;
+    return null;
   }
 
   defaults() {

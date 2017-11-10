@@ -1,7 +1,6 @@
 import './text-area.scss';
 
 const Template = require('./text-area.html');
-const Interface = require('interface.json');
 const Core = require('_core.js');
 
 /**
@@ -104,11 +103,10 @@ class TextArea extends Core {
   }
 
   _handleKeyDown(event) {
-    console.log('handling keydown');
     this._detectPresenceOfValue(event.target.value);
   }
 
-  _detectPresenceOfValue(value) {
+  _detectPresenceOfValue(value = '') {
     if (value.length === 0) {
       this.el.querySelector(this.inputSelector).classList.add('hig__text-area__field--no-value');
       this.el.querySelector(this.inputSelector).classList.remove('hig__text-area__field--has-value');
@@ -119,7 +117,6 @@ class TextArea extends Core {
   }
 }
 
-TextArea._interface = Interface.basics.FormElements.partials.TextArea;
 TextArea._defaults = {
   label: '',
   instructions: '',
@@ -129,5 +126,10 @@ TextArea._defaults = {
   name: ''
 };
 TextArea._partials = {};
+
+if (process.env.NODE_ENV !== 'production') {
+  const Interface = require('interface.json');
+  TextArea._interface = Interface.basics.FormElements.partials.TextArea;
+}
 
 module.exports = TextArea;

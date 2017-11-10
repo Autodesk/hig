@@ -1,7 +1,6 @@
 import './avatar.scss';
 
 const Template = require('./avatar.html');
-const Interface = require('interface.json');
 const Core = require('_core.js');
 
 const Sizes = ['small', 'medium', 'large', 'extralarge'];
@@ -55,7 +54,6 @@ class Avatar extends Core {
   }
 }
 
-Avatar._interface = Interface.components.Avatar;
 Avatar._defaults = {
   name: '',
   size: 'large',
@@ -64,5 +62,10 @@ Avatar._defaults = {
 Avatar._partials = {};
 
 Avatar.AvailableSizes = Sizes;
+
+if (process.env.NODE_ENV !== 'production') {
+  const Interface = require('interface.json');
+  Avatar._interface = Interface.components.Avatar;
+}
 
 module.exports = Avatar;

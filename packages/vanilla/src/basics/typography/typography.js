@@ -1,7 +1,6 @@
 import './typography.scss';
 
 const Template = require('./typography.html');
-const Interface = require('interface.json');
 const Core = require('_core.js');
 
 /**
@@ -42,9 +41,13 @@ class Typography extends Core {
   }
 }
 
-Typography._interface = Interface.basics.Typography;
 Typography._defaults = {
   text: 'text', type: 'body'
 };
+
+if (process.env.NODE_ENV !== 'production') {
+  const Interface = require('interface.json');
+  Typography._interface = Interface.basics.Typography;
+}
 
 module.exports = Typography;

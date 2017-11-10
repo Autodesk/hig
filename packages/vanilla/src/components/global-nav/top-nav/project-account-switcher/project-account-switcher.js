@@ -1,15 +1,14 @@
 import './project-account-switcher.scss';
 
-let Template = require('./project-account-switcher.html');
-let Interface = require('interface.json');
-let Core = require('_core.js');
+const Template = require('./project-account-switcher.html');
+const Core = require('_core.js');
 
-let Button = require('../../../button/button.js');
-let Flyout = require('../../../../basics/flyout/flyout.js');
-let Project = require('./project/project.js');
-let Account = require('./account/account.js');
-let Lists = require('./_lists/lists.js');
-let Target = require('./_target/target.js');
+const Button = require('../../../button/button.js');
+const Flyout = require('../../../../basics/flyout/flyout.js');
+const Project = require('./project/project.js');
+const Account = require('./account/account.js');
+const Lists = require('./_lists/lists.js');
+const Target = require('./_target/target.js');
 
 /**
  * Creates an ProjectAccountSwitcher
@@ -94,8 +93,6 @@ class ProjectAccountSwitcher extends Core {
   }
 }
 
-ProjectAccountSwitcher._interface =
-  Interface.components.GlobalNav.partials.TopNav.partials.ProjectAccountSwitcher;
 ProjectAccountSwitcher._defaults = {
   activeImage: '',
   activeLabel: '',
@@ -107,5 +104,10 @@ ProjectAccountSwitcher._partials = {
   Account,
   Project
 };
+
+if (process.env.NODE_ENV !== 'production') {
+  const Interface = require('interface.json');
+  ProjectAccountSwitcher._interface = Interface.components.GlobalNav.partials.TopNav.partials.ProjectAccountSwitcher;
+}
 
 module.exports = ProjectAccountSwitcher;

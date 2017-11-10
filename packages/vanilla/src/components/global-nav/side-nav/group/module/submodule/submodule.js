@@ -1,7 +1,6 @@
 import './submodule.scss';
 
 const Template = require('./submodule.html');
-const Interface = require('interface.json');
 const Core = require('_core.js');
 
 /**
@@ -49,11 +48,15 @@ class Submodule extends Core {
   }
 }
 
-Submodule._interface = Interface.components.GlobalNav.partials.SideNav.partials.Group.partials.Module.partials.Submodule;
 Submodule._defaults = {
   title: '',
   link: ''
 };
 Submodule._partials = {};
+
+if (process.env.NODE_ENV !== 'production') {
+  const Interface = require('interface.json');
+  Submodule._interface = Interface.components.GlobalNav.partials.SideNav.partials.Group.partials.Module.partials.Submodule;
+}
 
 module.exports = Submodule;

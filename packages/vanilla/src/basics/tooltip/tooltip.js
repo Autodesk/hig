@@ -1,7 +1,5 @@
 import './tooltip.scss';
 
-// const Template = require('./tooltip.html');
-const Interface = require('interface.json');
 const Core = require('_core.js');
 
 const Flyout = require('../flyout/flyout.js');
@@ -25,33 +23,33 @@ class Tooltip extends Core {
     super(options);
     this._render('<div></div>', options);
     this.initialOptions = options;
-    this.flyout = new Flyout({type: 'tooltip'});
+    this.flyout = new Flyout({ type: 'tooltip' });
   }
-    
-  mount(mountEl){
+
+  mount(mountEl) {
     this.flyout.mount(mountEl);
   }
 
-  open(){
+  open() {
     this.flyout.open();
   }
 
-  close(){
+  close() {
     this.flyout.close();
   }
 
-  onClickOutside(fn){
-    return this.flyout.onClickOutside(fn)
+  onClickOutside(fn) {
+    return this.flyout.onClickOutside(fn);
   }
 
-  addTarget(targetElement){
+  addTarget(targetElement) {
     this.flyout.addTarget(targetElement);
   }
 
   setContent(content) {
     const contentContainer = this._ensureContentContainer();
     contentContainer.textContent = content;
-    this.flyout.addSlot(contentContainer)
+    this.flyout.addSlot(contentContainer);
   }
 
   setAnchorPoint(anchorPoint) {
@@ -60,31 +58,32 @@ class Tooltip extends Core {
         `Tooltip cannot have anchorPoint "${anchorPoint}". Only these inset anchorPoints are allowed: `,
         Tooltip.AvailableAnchorPoints
       );
-      return;
     } else {
       this.flyout.setAnchorPoint(anchorPoint);
     }
-    
   }
 
-  _ensureContentContainer(){
+  _ensureContentContainer() {
     const existingEl = document.querySelector('.hig__flyout__tooltip__content');
     if (existingEl) {
       return existingEl;
-    } else {
-      const contentContainer = document.createElement('span');
-      contentContainer.classList.add('hig__flyout__tooltip__content');
-      return contentContainer
     }
+    const contentContainer = document.createElement('span');
+    contentContainer.classList.add('hig__flyout__tooltip__content');
+    return contentContainer;
   }
 }
 
 
-Tooltip._interface = Interface.basics.Tooltip;
-
 Tooltip._defaults = {
   anchorPoint: 'top-center'
-}
+};
 
 Tooltip.AvailableAnchorPoints = ANCHOR_POINTS;
+
+if (process.env.NODE_ENV !== 'production') {
+  const Interface = require('interface.json');
+  Tooltip._interface = Interface.basics.Tooltip;
+}
+
 module.exports = Tooltip;

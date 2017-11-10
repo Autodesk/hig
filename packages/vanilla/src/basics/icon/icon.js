@@ -1,9 +1,8 @@
 import './icon.scss';
 
 const Template = require('./icon.html');
-const Interface = require('interface.json');
 const Core = require('../../helpers/js/_core.js');
-let Icons = require('../icons/icons.js');
+const Icons = require('../icons/icons.js');
 
 const AvailableSizes = ['24', '16'];
 
@@ -39,25 +38,27 @@ class Icon extends Core {
   }
 
   _confirmNameOrSVG(icon, size) {
-    var isNamedIcon = Icons[`${icon}-${size}`];
-    var isSVG = /^<svg/.test(icon);
+    const isNamedIcon = Icons[`${icon}-${size}`];
+    const isSVG = /^<svg/.test(icon);
 
     if (isNamedIcon) {
       return isNamedIcon;
     } else if (isSVG) {
       return icon;
-    } else {
-      console.warn("NO HIG ICON: " + icon);
-
     }
+    console.warn(`NO HIG ICON: ${icon}`);
   }
 }
 
-Icon._interface = Interface.basics.Icon;
 Icon._defaults = {
   nameOrSVG: ''
 };
 
 Icon.AvailableSizes = AvailableSizes;
+
+if (process.env.NODE_ENV !== 'production') {
+  const Interface = require('interface.json');
+  Icon._interface = Interface.basics.Icon;
+}
 
 module.exports = Icon;

@@ -1,7 +1,6 @@
 import './text-cell-content.scss';
 
 const Template = require('./text-cell-content.html');
-const Interface = require('interface.json');
 const Core = require('_core.js');
 
 const AvailableAlignments = ['left', 'right', 'center'];
@@ -33,8 +32,6 @@ class TextCellContent extends Core {
   }
 }
 
-TextCellContent._interface =
-  Interface.components.Table.partials.TableRow.partials.TextCellContent;
 
 TextCellContent._defaults = {
   text: '',
@@ -42,5 +39,10 @@ TextCellContent._defaults = {
   detail: ''
 };
 TextCellContent.AvailableAlignments = AvailableAlignments;
+
+if (process.env.NODE_ENV !== 'production') {
+  const Interface = require('interface.json');
+  TextCellContent._interface = Interface.components.Table.partials.TableRow.partials.TextCellContent;
+}
 
 module.exports = TextCellContent;
