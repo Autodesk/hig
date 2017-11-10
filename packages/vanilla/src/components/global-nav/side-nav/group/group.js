@@ -1,10 +1,8 @@
+import Interface from 'interface.json';
+import Core from '_core.js';
 import './group.scss';
-
-const Template = require('./group.html');
-const Interface = require('interface.json');
-const Core = require('_core.js');
-
-const Module = require('./module/module.js');
+import Template from './group.html';
+import Module from './module/module';
 
 /**
  * Creates an Group in a section of the sidenav
@@ -39,4 +37,4 @@ Group._partials = {
   Module
 };
 
-module.exports = Group;
+export default Group;

@@ -1,8 +1,6 @@
-const Template = require('./checkbox.html');
-const Interface = require('interface.json');
-const Core = require('_core.js');
-const InputButton = require('../input-button/input-button.js');
-const Icon = require('../../icon/icon.js');
+import Interface from 'interface.json';
+import Template from './checkbox.html';
+import InputButton from '../input-button/input-button';
 
 /**
  * Creates an Checkbox
@@ -34,7 +32,7 @@ class Checkbox extends InputButton {
   }
   _componentDidMount() {
   }
-} 
+}
 
 inputButtonMethods.forEach((fn) => {
   Object.defineProperty(Checkbox.prototype, fn, {
@@ -54,4 +52,4 @@ Checkbox._defaults = {
 };
 Checkbox._partials = {};
 
-module.exports = Checkbox;
+export default Checkbox;

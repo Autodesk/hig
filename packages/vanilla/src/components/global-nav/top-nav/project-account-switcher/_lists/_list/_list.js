@@ -1,7 +1,6 @@
-const Template = require('./_list.html');
-const Core = require('_core.js');
-
-const Title = require('./_list-title/_list-title.js');
+import Template from './_list.html';
+import Core from '_core.js';
+import Title from './_list-title/_list-title';
 
 import './_list.scss';
 
@@ -40,4 +39,4 @@ List._interface = {
 List._defaults = {};
 List._partials = {};
 
-module.exports = List;
+export default List;

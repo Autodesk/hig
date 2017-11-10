@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   'extends': './node_modules/eslint-config-airbnb/.eslintrc',
   'parser': 'babel-eslint',
   'globals': {

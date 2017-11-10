@@ -1,5 +1,5 @@
-const Template = require('./_list-title.html');
-const Core = require('_core.js');
+import Core from '_core.js';
+import Template from './_list-title.html';
 
 /**
  * Creates an List Title
@@ -28,4 +28,4 @@ Lists._defaults = {
 };
 Lists._partials = {};
 
-module.exports = Lists;
+export default Lists;

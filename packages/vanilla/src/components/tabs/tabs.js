@@ -1,10 +1,8 @@
+import Interface from 'interface.json';
+import Core from '_core.js';
 import './tabs.scss';
-
-const Template = require('./tabs.html');
-const Interface = require('interface.json');
-const Core = require('_core.js');
-
-const Tab = require('./tab/tab.js');
+import Template from './tabs.html';
+import Tab from './tab/tab.js';
 
 /**
  * Creates a Tabs
@@ -31,4 +29,4 @@ Tabs._partials = {
   Tab
 };
 
-module.exports = Tabs;
+export default Tabs;

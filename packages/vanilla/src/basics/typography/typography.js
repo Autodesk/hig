@@ -1,8 +1,7 @@
+import Interface from 'interface.json';
+import Core from '_core.js';
 import './typography.scss';
-
-const Template = require('./typography.html');
-const Interface = require('interface.json');
-const Core = require('_core.js');
+import Template from './typography.html';
 
 /**
  * Creates Typography Class
@@ -47,4 +46,4 @@ Typography._defaults = {
   text: 'text', type: 'body'
 };
 
-module.exports = Typography;
+export default Typography;

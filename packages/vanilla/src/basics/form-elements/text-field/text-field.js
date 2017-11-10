@@ -1,9 +1,8 @@
+import Interface from 'interface.json';
+import Core from '_core.js';
 import './text-field.scss';
-
-const Template = require('./text-field.html');
-const Interface = require('interface.json');
-const Core = require('_core.js');
-const Icon = require('../../icon/icon.js');
+import Template from './text-field.html';
+import Icon from '../../icon/icon';
 
 /**
  * Creates an TextField
@@ -235,7 +234,6 @@ class TextField extends Core {
 
     const passwordHideButton = this.el.querySelector('.hig__text-field__password-hide-button');
     passwordHideButton === undefined ? this.el.classList.remove('hig__text-field--password-button-visible') : null;
-   
   }
 
   _onClick(fn) {
@@ -321,4 +319,4 @@ TextField._defaults = {
 };
 TextField._partials = {};
 
-module.exports = TextField;
+export default TextField;

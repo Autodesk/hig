@@ -1,8 +1,7 @@
+import Interface from 'interface.json';
+import Core from '_core.js';
 import './spacer.scss';
-
-const Template = require('./spacer.html');
-const Interface = require('interface.json');
-const Core = require('../../helpers/js/_core.js');
+import Template from './spacer.html';
 
 const SIZES = {
   none: 0,
@@ -87,4 +86,4 @@ Spacer.SizeMap = SIZES;
 Spacer.AvailableSizes = Object.keys(SIZES);
 Spacer.AvailableTypes = TYPES;
 
-module.exports = Spacer;
+export default Spacer;
