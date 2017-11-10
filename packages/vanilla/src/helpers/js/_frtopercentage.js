@@ -3,9 +3,9 @@ function frToPercentage(width) {
       var value = width.split('fr')
       var percentWidth = Math.round(value[0] * 100);
       return  `${percentWidth}%`;
-  } else {
+  } 
       return width ;
-  }
+  
 }
 
-module.exports = frToPercentage;
+export default frToPercentage;

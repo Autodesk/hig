@@ -1,8 +1,7 @@
+import Interface from 'interface.json';
+import Core from '_core.js';
 import './rich-text.scss';
-
-const Template = require('./rich-text.html');
-var Interface = require('interface.json');
-var Core = require('../../helpers/js/_core.js');
+import Template from './rich-text.html';
 
 /**
  * Creates a RichText
@@ -28,9 +27,9 @@ class RichText extends Core {
   }
 }
 
-RichText._interface = Interface['basics']['RichText'];
+RichText._interface = Interface.basics.RichText;
 RichText._defaults = {
   html: ''
 };
 
-module.exports = RichText;
+export default RichText;

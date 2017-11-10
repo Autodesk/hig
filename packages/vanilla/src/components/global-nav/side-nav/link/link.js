@@ -1,8 +1,7 @@
+import Interface from 'interface.json';
+import Core from '_core.js';
 import './link.scss';
-
-const Template = require('./link.html');
-const Interface = require('interface.json');
-const Core = require('../../../../helpers/js/_core.js');
+import Template from './link.html';
 
 /**
  * Creates an Link
@@ -39,4 +38,4 @@ Link._defaults = {
   link: '#'
 };
 
-module.exports = Link;
+export default Link;

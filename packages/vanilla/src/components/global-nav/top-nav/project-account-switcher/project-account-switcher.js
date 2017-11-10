@@ -1,15 +1,13 @@
+import Interface from 'interface.json';
+import Core from '_core.js';
 import './project-account-switcher.scss';
-
-let Template = require('./project-account-switcher.html');
-let Interface = require('interface.json');
-let Core = require('_core.js');
-
-let Button = require('../../../button/button.js');
-let Flyout = require('../../../../basics/flyout/flyout.js');
-let Project = require('./project/project.js');
-let Account = require('./account/account.js');
-let Lists = require('./_lists/lists.js');
-let Target = require('./_target/target.js');
+import Template from './project-account-switcher.html';
+import Button from '../../../button/button';
+import Flyout from '../../../../basics/flyout/flyout';
+import Project from './project/project';
+import Account from './account/account';
+import Lists from './_lists/lists';
+import Target from './_target/target';
 
 /**
  * Creates an ProjectAccountSwitcher
@@ -108,4 +106,4 @@ ProjectAccountSwitcher._partials = {
   Project
 };
 
-module.exports = ProjectAccountSwitcher;
+export default ProjectAccountSwitcher;

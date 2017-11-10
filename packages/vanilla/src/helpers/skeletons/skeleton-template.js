@@ -1,8 +1,7 @@
+import Interface from 'interface.json';
+import Core from '_core.js';
 import './{{ dashCase name }}.scss';
-
-var Template = require('./{{ dashCase name }}.html');
-var Interface = require('interface.json');
-var Core = require('_core.js');
+import Template from './{{ dashCase name }}.html';
 
 /**
  * Creates an {{ properCase name }}
@@ -17,7 +16,7 @@ class {{ properCase name }} extends Core {
         this._render(Template, options);
     }
 
-    
+
 
 }
 
@@ -25,4 +24,4 @@ class {{ properCase name }} extends Core {
 {{ properCase name }}._defaults = {};
 {{ properCase name }}._partials = {};
 
-module.exports = {{ properCase name }};
+export default {{ properCase name }};

@@ -1,8 +1,7 @@
+import Interface from 'interface.json';
+import Core from '_core.js';
 import './progress-bar.scss';
-
-const Template = require('./progress-bar.html');
-const Interface = require('interface.json');
-const Core = require('_core.js');
+import Template from './progress-bar.html';
 
 class ProgressBar extends Core {
   constructor(options) {
@@ -34,4 +33,4 @@ ProgressBar._interface = Interface.components.ProgressBar;
 ProgressBar._defaults = {};
 ProgressBar._partials = {};
 
-module.exports = ProgressBar;
+export default ProgressBar;

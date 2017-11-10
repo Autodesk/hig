@@ -1,12 +1,10 @@
+import Interface from 'interface.json';
+import Core from '_core.js';
 import './module.scss';
-
-const Template = require('./module.html');
-const Interface = require('interface.json');
-const Core = require('_core.js');
-
-const Submodule = require('./submodule/submodule.js');
-const Collapse = require('./collapse/collapse.js');
-const Icon = require("../../../../../basics/icon/icon.js");
+import Template from './module.html';
+import Submodule from './submodule/submodule';
+import Collapse from './collapse/collapse';
+import Icon from '../../../../../basics/icon/icon';
 
 /**
  * Creates an Module
@@ -17,14 +15,14 @@ const Icon = require("../../../../../basics/icon/icon.js");
 class Module extends Core {
   constructor(options) {
     super(options);
-    if(!options.icon){
-      options['no-icon-class'] = "hig__global-nav__side-nav__section__group__module__submodules--no-icon";
+    if (!options.icon) {
+      options['no-icon-class'] = 'hig__global-nav__side-nav__section__group__module__submodules--no-icon';
     }
     this._render(Template, options);
-    this.initialOptions = options
+    this.initialOptions = options;
   }
 
-  _componentDidMount(){
+  _componentDidMount() {
     if (this.initialOptions.icon) {
       this.setIcon(this.initialOptions.icon);
     }
@@ -79,14 +77,13 @@ class Module extends Core {
     this._findDOMEl('.hig__global-nav__side-nav__section__group__module__link', this.el).classList.remove('hig__global-nav__side-nav__section__group__module__link--active');
   }
 
-  _findOrCreateIconComponent(mountElOrSelector, name='icon') {
+  _findOrCreateIconComponent(mountElOrSelector, name = 'icon') {
     if (this[name]) {
-        return this[name];
-    } else {
-        this[name] = new Icon({});
-        this[name].mount(mountElOrSelector);
-        return this[name];
+      return this[name];
     }
+    this[name] = new Icon({});
+    this[name].mount(mountElOrSelector);
+    return this[name];
   }
 }
 
@@ -101,4 +98,4 @@ Module._partials = {
   Collapse
 };
 
-module.exports = Module;
+export default Module;

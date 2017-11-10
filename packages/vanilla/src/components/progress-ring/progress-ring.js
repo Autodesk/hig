@@ -1,14 +1,12 @@
+import Interface from 'interface.json';
+import Core from '_core.js';
 import './progress-ring.scss';
-
-const Interface = require('interface.json');
-const Core = require('_core.js');
-
-const Template = require('./progress-ring.html');
-const ProgressRingIndeterminate = require('./progress-ring-indeterminate');
-const ProgressRingDeterminate = require('./progress-ring-determinate');
-const extraSmallSVG = require('./progress-ring-xs.svg');
-const smallSVG = require('./progress-ring-s.svg');
-const mediumsSVG = require('./progress-ring-m.svg');
+import Template from './progress-ring.html';
+import ProgressRingIndeterminate from './progress-ring-indeterminate';
+import ProgressRingDeterminate from './progress-ring-determinate';
+import extraSmallSVG from './progress-ring-xs.svg';
+import smallSVG from './progress-ring-s.svg';
+import mediumsSVG from './progress-ring-m.svg';
 
 const AvailableSizes = ['xs', 's', 'm', 'l', 'xl'];
 const SIZE_CLASSES = AvailableSizes.map(size => (`hig__progress-ring--${size}`));
@@ -95,4 +93,4 @@ class ProgressRing extends Core {
 
 ProgressRing._interface = Interface.components.ProgressRing;
 
-module.exports = ProgressRing;
+export default ProgressRing;

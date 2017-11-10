@@ -1,8 +1,7 @@
+import Interface from 'interface.json';
+import Core from '_core.js';
 import './avatar.scss';
-
-const Template = require('./avatar.html');
-const Interface = require('interface.json');
-const Core = require('_core.js');
+import Template from './avatar.html';
 
 const Sizes = ['small', 'medium', 'large', 'extralarge'];
 
@@ -65,4 +64,4 @@ Avatar._partials = {};
 
 Avatar.AvailableSizes = Sizes;
 
-module.exports = Avatar;
+export default Avatar;

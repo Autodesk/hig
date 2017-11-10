@@ -81,4 +81,4 @@ class CSSTransition {
   }
 }
 
-module.exports = CSSTransition;
+export default CSSTransition;

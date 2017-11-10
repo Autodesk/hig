@@ -1,9 +1,10 @@
-import './flyout.scss';
-import CSSTransition from '../../helpers/js/css-transition';
+import Interface from 'interface.json';
+import Core from '_core.js';
 
-const Template = require('./flyout.html');
-const Interface = require('interface.json');
-const Core = require('../../helpers/js/_core.js');
+import './flyout.scss';
+
+import CSSTransition from '../../helpers/js/css-transition';
+import Template from './flyout.html';
 
 const ANCHOR_POINTS = [
   'top-left',
@@ -130,4 +131,4 @@ Flyout._defaults = {
 Flyout.AvailableTypes = AVAILABLE_TYPES;
 Flyout.AvailableAnchorPoints = ANCHOR_POINTS;
 
-module.exports = Flyout;
+export default Flyout;

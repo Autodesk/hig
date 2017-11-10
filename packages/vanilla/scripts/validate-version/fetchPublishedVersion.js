@@ -1,7 +1,7 @@
-const registryUrl = require("registry-url");
-const fetch = require("node-fetch");
-const url = require("url");
-const localPackageJson = require("../../package.json");
+import registryUrl from 'registry-url';
+import fetch from 'node-fetch';
+import url from 'url';
+import localPackageJson from '../../package.json';
 
 const remotePackageUrl = url.resolve(registryUrl(), localPackageJson.name);
 
@@ -9,7 +9,7 @@ const remotePackageUrl = url.resolve(registryUrl(), localPackageJson.name);
 async function fetchPublishedVersion() {
   return fetch(remotePackageUrl)
     .then(res => res.json())
-    .then(pkg => pkg["dist-tags"].latest);
+    .then(pkg => pkg['dist-tags'].latest);
 }
 
-module.exports = fetchPublishedVersion;
+export default fetchPublishedVersion;

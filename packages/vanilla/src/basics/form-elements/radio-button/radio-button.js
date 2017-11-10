@@ -1,6 +1,6 @@
-const Template = require('./radio-button.html');
-const Interface = require('interface.json');
-const InputButton = require('../input-button/input-button.js');
+import Interface from 'interface.json';
+import Template from './radio-button.html';
+import InputButton from '../input-button/input-button';
 
 
 // List all the fn you don't want to override so they can be defined in this prototype
@@ -50,4 +50,4 @@ RadioButton._defaults = {
 };
 RadioButton._partials = {};
 
-module.exports = RadioButton;
+export default RadioButton;

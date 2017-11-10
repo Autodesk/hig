@@ -1,10 +1,8 @@
+import Interface from 'interface.json';
+import Core from '_core.js';
 import './text-head-cell.scss';
-
-const Template = require('./text-head-cell.html');
-const Interface = require('interface.json');
-const Core = require('_core.js');
-
-const frToPercentage = require('../../../../helpers/js/_frtopercentage.js');
+import Template from './text-head-cell.html';
+import frToPercentage from '../../../../helpers/js/_frtopercentage';
 
 const AvailableAlignments = ['left', 'right', 'center'];
 
@@ -52,4 +50,4 @@ TextHeadCell._defaults = {
 };
 TextHeadCell.AvailableAlignments = AvailableAlignments;
 
-module.exports = TextHeadCell;
+export default TextHeadCell;

@@ -1,12 +1,10 @@
+import Interface from 'interface.json';
+import Core from '_core.js';
 import './global-nav.scss';
-
-const Template = require('./global-nav.html');
-const Interface = require('interface.json');
-const Core = require('_core.js');
-
-const SideNav = require('./side-nav/side-nav.js');
-const TopNav = require('./top-nav/top-nav.js');
-const SubNav = require('./sub-nav/sub-nav.js');
+import Template from './global-nav.html';
+import SideNav from './side-nav/side-nav.js';
+import TopNav from './top-nav/top-nav.js';
+import SubNav from './sub-nav/sub-nav.js';
 
 /**
  * Creates an GlobalNav
@@ -63,4 +61,4 @@ GlobalNav._partials = {
   SubNav
 };
 
-module.exports = GlobalNav;
+export default GlobalNav;

@@ -1,10 +1,8 @@
+import Interface from 'interface.json';
+import Core from '_core.js';
 import './icon-button.scss';
-
-const Template = require('./icon-button.html');
-const Interface = require('interface.json');
-const Core = require('_core.js');
-const Icon = require("../../basics/icon/icon.js");
-
+import Template from './icon-button.html';
+import Icon from "../../basics/icon/icon";
 
 /**
  * Creates an icon button
@@ -24,7 +22,7 @@ class IconButton extends Core {
       this.setIcon(this.initialOptions.icon);
     }
   }
-  
+
 
   setTitle(title) {
     this.el.setAttribute('title', title);
@@ -74,7 +72,7 @@ class IconButton extends Core {
         return this[name];
     }
   }
-  
+
 }
 
 IconButton._interface = Interface.components.IconButton;
@@ -84,4 +82,4 @@ IconButton._defaults = {
   icon: false
 };
 
-module.exports = IconButton;
+export default IconButton;

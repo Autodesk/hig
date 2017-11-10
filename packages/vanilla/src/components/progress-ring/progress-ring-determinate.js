@@ -123,4 +123,4 @@ class ProgressRingDeterminate {
   }
 }
 
-module.exports = ProgressRingDeterminate;
+export default ProgressRingDeterminate;

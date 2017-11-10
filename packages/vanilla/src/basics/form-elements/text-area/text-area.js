@@ -1,8 +1,7 @@
+import Interface from 'interface.json';
+import Core from '_core.js';
 import './text-area.scss';
-
-const Template = require('./text-area.html');
-const Interface = require('interface.json');
-const Core = require('_core.js');
+import Template from './text-area.html';
 
 /**
  * Creates a TextArea
@@ -130,4 +129,4 @@ TextArea._defaults = {
 };
 TextArea._partials = {};
 
-module.exports = TextArea;
+export default TextArea;

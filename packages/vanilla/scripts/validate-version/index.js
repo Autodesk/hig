@@ -1,6 +1,6 @@
 // !/usr/bin/env node
-const fetchPublishedVersion = require("./fetchPublishedVersion");
-const getLocalVersion = require("./getLocalVersion");
+import fetchPublishedVersion from "./fetchPublishedVersion";
+import getLocalVersion from "./getLocalVersion";
 
 // Log a message to the console with timestamp
 function info(infoString) {

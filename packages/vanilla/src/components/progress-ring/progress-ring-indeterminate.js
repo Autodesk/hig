@@ -87,4 +87,4 @@ class ProgressRingIndeterminate {
   }
 }
 
-module.exports = ProgressRingIndeterminate;
+export default ProgressRingIndeterminate;

@@ -8,10 +8,10 @@
  * then launch http-server from the root, and view localhost in your browser.
  *
  */
-const fs = require('fs');
-const glob = require('glob');
-const path = require('path');
-const mustache = require('mustache');
+import fs from 'fs';
+import glob from 'glob';
+import path from 'path';
+import mustache from 'mustache';
 
 const thisDir = __dirname;
 const rootDir = path.resolve(__dirname + '/../');
