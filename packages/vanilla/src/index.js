@@ -1,7 +1,11 @@
 import './basics/container/container';
 import Spacer from './basics/spacer/spacer';
+import colorMap from './basics/colors/colors';
 
-const sizes = Spacer.SizeMap;
+// Assigning values to a new object
+// ensures they are exported correctly in production
+const sizes = { ...Spacer.SizeMap };
+const colors = { ...colorMap };
 
 export { default as Avatar } from './components/avatar/avatar';
 export { default as Button } from './components/button/button';
@@ -52,7 +56,7 @@ export {
 export { default as TextLink } from './basics/text-link/text-link';
 export { default as Tooltip } from './basics/tooltip/tooltip';
 export { default as Typography } from './basics/typography/typography';
-export { default as breakpoints } from './basics/responsive/responsive';
-export { default as colors } from './basics/colors/colors';
 
+export { default as breakpoints } from './basics/responsive/responsive';
+export { colors };
 export { sizes };
