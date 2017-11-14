@@ -8,31 +8,31 @@
  * then launch http-server from the root, and view localhost in your browser.
  *
  */
-import fs from 'fs';
-import glob from 'glob';
-import path from 'path';
-import mustache from 'mustache';
+const fs = require('fs');
+const glob = require('glob');
+const path = require('path');
+const mustache = require('mustache');
 
 const thisDir = __dirname;
-const rootDir = path.resolve(__dirname + '/../');
+const rootDir = path.resolve(`${__dirname}/../`);
 
-const testsGlob = rootDir + '/src/**/tests/test*.html';
-const templatePath = thisDir + '/index.template.html';
+const testsGlob = `${rootDir}/src/**/tests/test*.html`;
+const templatePath = `${thisDir}/index.template.html`;
 
 const indexMustacheTemplate = fs.readFileSync(templatePath, {
   encoding: 'utf8'
 });
 
-const indexOutputPath = rootDir + '/index.html';
+const indexOutputPath = `${rootDir}/index.html`;
 
 /**
  * Returns a string with the fully rendered template. Synchronous.
  *
- **/
+ * */
 
 glob(testsGlob, (er, files) => {
   const testLinks = files
-    .map(function(filePath) {
+    .map((filePath) => {
       const newFilePath = path.relative(rootDir, filePath);
       const title = path
         .basename(filePath, '.html')
@@ -60,7 +60,7 @@ glob(testsGlob, (er, files) => {
 
   if (bytesWritten == 0) {
     fs.closeSync(fd);
-    throw new Error('Could not write to ' + indexOutputPath);
+    throw new Error(`Could not write to ${indexOutputPath}`);
   }
 
   fs.closeSync(fd);
