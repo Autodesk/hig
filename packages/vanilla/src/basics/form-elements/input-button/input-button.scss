@@ -5,7 +5,7 @@
 .hig__input-button {
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   padding: 0 10px;
 }
@@ -20,18 +20,25 @@
   z-index: $checkbox-layer;
 }
 
+
 .hig__input-button__label {
-  font-size: 12px;
-  font-weight: bold;
+  font-size: 14px;
+  font-weight: normal;
   font-family: 'ArtifaktElement', sans-serif;
-  font-style: italic;
-  margin-bottom: 8px;
+  color: color(hig-cool-gray-50);
+
+  margin: 8px;
   line-height: 14px;
 
   .hig__input-button--required &::after {
     content: '*';
   }
 }
+
+.hig__input-button__input:checked[disabled], .hig__input-button__input[disabled]  ~ .hig__input-button__label {
+  color: color(hig-cool-gray-30);
+}
+
 
 .hig__input-button__input-wrapper {
   position: relative;
