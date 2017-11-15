@@ -1,9 +1,8 @@
+import Interface from 'interface.json';
+import Core from '_core.js';
 import './shortcut.scss';
-
-const Template = require('./shortcut.html');
-const Interface = require('interface.json');
-const Core = require('_core.js');
-const Icon = require('../../../../basics/icon/icon.js');
+import Template from './shortcut.html';
+import Icon from '../../../../basics/icon/icon';
 
 /**
  * Creates an Shortcut
@@ -58,4 +57,4 @@ Shortcut._defaults = {
   link: '#'
 };
 
-module.exports = Shortcut;
+export default Shortcut;

@@ -1,6 +1,6 @@
-const Template = require('./grid-item.html');
-const Interface = require('interface.json');
-const Core = require('_core.js');
+import Interface from 'interface.json';
+import Core from '_core.js';
+import Template from './grid-item.html';
 
 const AvailableFractions = [
   'one-whole',
@@ -58,4 +58,4 @@ GridItem._defaults = {
 
 GridItem.AvailableFractions = AvailableFractions;
 
-module.exports = GridItem;
+export default GridItem;

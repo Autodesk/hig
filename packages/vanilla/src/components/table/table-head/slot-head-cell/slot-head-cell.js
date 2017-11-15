@@ -1,10 +1,8 @@
-import "./slot-head-cell.scss";
-
-var Template = require("./slot-head-cell.html");
-var Interface = require("interface.json");
-var Core = require("_core.js");
-
-var frToPercentage = require("../../../../helpers/js/_frtopercentage.js");
+import Interface from 'interface.json';
+import Core from '_core.js';
+import './slot-head-cell.scss';
+import Template from './slot-head-cell.html';
+import frToPercentage from '../../../../helpers/js/_frtopercentage';
 
 /**
  * Creates an Table
@@ -15,7 +13,7 @@ var frToPercentage = require("../../../../helpers/js/_frtopercentage.js");
 class SlotHeadCell extends Core {
   constructor(options = {}) {
     super(options);
-    this._render(Template, options, undefined, "tr");
+    this._render(Template, options, undefined, 'tr');
     this.initialOptions = options;
   }
 
@@ -35,11 +33,9 @@ class SlotHeadCell extends Core {
 }
 
 SlotHeadCell._interface =
-  Interface["components"]["Table"]["partials"]["TableHead"]["partials"][
-    "SlotHeadCell"
-  ];
+  Interface.components.Table.partials.TableHead.partials.SlotHeadCell;
 SlotHeadCell._defaults = {
-  width: "1fr"
+  width: '1fr'
 };
 
-module.exports = SlotHeadCell;
+export default SlotHeadCell;

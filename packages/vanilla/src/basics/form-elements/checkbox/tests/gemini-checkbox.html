@@ -29,6 +29,7 @@
  <div class="tests-checkbox tests-checkbox4"></div>
  <br>
  <div class="tests-checkbox tests-checkbox5"></div>
+ <div class="tests-checkbox tests-checkbox6"></div>
   <span>This should have no label</span>
 </div>
 
@@ -84,15 +85,26 @@
 
 
  const DisabledAndCheckedCheckbox1 = new Checkbox({
-  label: "Checked",
+ });
+
+DisabledAndCheckedCheckbox1.mount('.tests-checkbox5');
+DisabledAndCheckedCheckbox1.setLabel("Checked+Disabled");
+DisabledAndCheckedCheckbox1.setName("agreement");
+DisabledAndCheckedCheckbox1.setValue("iagree");
+DisabledAndCheckedCheckbox1.check();
+DisabledAndCheckedCheckbox1.disable();
+
+
+
+
+const indeterminateCheckbox = new Checkbox({
+  label: "Indeterminate",
   name: "agreement",
   value: "iagree"
  });
 
-DisabledAndCheckedCheckbox1.mount('.tests-checkbox5');
-DisabledAndCheckedCheckbox1.check();
-DisabledAndCheckedCheckbox1.disable();
-
+indeterminateCheckbox.mount('.tests-checkbox6');
+indeterminateCheckbox.indeterminate();
 
 </script>
 

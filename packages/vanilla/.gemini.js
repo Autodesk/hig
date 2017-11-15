@@ -1,36 +1,30 @@
-require('dotenv').config({path: './dev/.env'})
+const dotenv = require("dotenv");
+
+dotenv.config({ path: "./dev/.env" });
 
 module.exports = {
   rootUrl: "http://localhost:8080",
   gridUrl: " http://ondemand.saucelabs.com/wd/hub",
-  screenshotsDir: './dev/gemini-screens',
+  screenshotsDir: "./dev/gemini-screens",
   windowSize: "1024x768",
   compositeImage: true,
-  sessionsPerBrowser: 3, system: {
+  sessionsPerBrowser: 3,
+  system: {
     plugins: {
       sauce: {
         username: process.env.SAUCE_USERNAME,
         accessKey: process.env.SAUCE_ACCESS_KEY
       }
     }
-  }, browsers:        {
+  },
+  browsers: {
     chrome: {
       desiredCapabilities: {
-        browserName: 'chrome',
-        version: '54.0',
-        platform: 'macOs 10.12',
-        name: 'gemini visual regression tests'
+        browserName: "chrome",
+        version: "54.0",
+        platform: "macOs 10.12",
+        name: "gemini visual regression tests"
       }
-    }, 
-    //edge:   {
-    //  tolerance: 4.0,
-    //  calibrate: true,
-    //  desiredCapabilities: {
-    //    browserName: 'MicrosoftEdge',
-    //    version:     '14.14393',
-    //    platform:    'Windows 10',
-    //    name:        'gemini visual regression tests'
-    //  }
-    //}
+    }
   }
-}
+};

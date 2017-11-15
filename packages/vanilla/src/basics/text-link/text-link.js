@@ -1,8 +1,7 @@
+import Interface from 'interface.json';
+import Core from '_core.js';
 import './text-link.scss';
-
-const Template = require('./text-link.html');
-const Interface = require('interface.json');
-const Core = require('../../helpers/js/_core.js');
+import Template from './text-link.html';
 
 const TYPES = ['primary', 'secondary'];
 
@@ -68,4 +67,4 @@ TextLink._defaults = {
   type: 'primary'
 };
 
-module.exports = TextLink;
+export default TextLink;

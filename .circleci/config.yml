@@ -10,13 +10,14 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependencies-{{ checksum "packages/react/package.json" }}={{ checksum "packages/vanilla/package.json" }}
+          key: dependencies-{{ checksum "package.json" }}-{{ checksum "packages/react/package.json" }}-{{ checksum "packages/vanilla/package.json" }}
       - run:
           name: Lerna bootstrap
           command: npm install && npm run bootstrap
       - save_cache:
-          key: dependencies-{{ checksum "packages/react/package.json" }}={{ checksum "packages/vanilla/package.json" }}
+          key: dependencies-{{ checksum "package.json" }}-{{ checksum "packages/react/package.json" }}-{{ checksum "packages/vanilla/package.json" }}
           paths:
+            - node_modules
             - packages/vanilla/node_modules
             - packages/react/node_modules
   vanilla-build:
@@ -24,7 +25,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependencies-{{ checksum "packages/react/package.json" }}={{ checksum "packages/vanilla/package.json" }}
+          key: dependencies-{{ checksum "package.json" }}-{{ checksum "packages/react/package.json" }}-{{ checksum "packages/vanilla/package.json" }}
       - run:
           name: Build (Vanilla)
           command: npm run lib
@@ -38,7 +39,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependencies-{{ checksum "packages/react/package.json" }}={{ checksum "packages/vanilla/package.json" }}
+          key: dependencies-{{ checksum "package.json" }}-{{ checksum "packages/react/package.json" }}-{{ checksum "packages/vanilla/package.json" }}
       - restore_cache:
           key: vanilla-build-{{ .Revision }}
       - run:
@@ -54,7 +55,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependencies-{{ checksum "packages/react/package.json" }}={{ checksum "packages/vanilla/package.json" }}
+          key: dependencies-{{ checksum "package.json" }}-{{ checksum "packages/react/package.json" }}-{{ checksum "packages/vanilla/package.json" }}
       - restore_cache:
           key: vanilla-build-{{ .Revision }}
       - run:
@@ -71,7 +72,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependencies-{{ checksum "packages/react/package.json" }}={{ checksum "packages/vanilla/package.json" }}
+          key: dependencies-{{ checksum "package.json" }}-{{ checksum "packages/react/package.json" }}-{{ checksum "packages/vanilla/package.json" }}
       - restore_cache:
           key: vanilla-build-{{ .Revision }}
       - restore_cache:
@@ -85,7 +86,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependencies-{{ checksum "packages/react/package.json" }}={{ checksum "packages/vanilla/package.json" }}
+          key: dependencies-{{ checksum "package.json" }}-{{ checksum "packages/react/package.json" }}-{{ checksum "packages/vanilla/package.json" }}
       - restore_cache:
           key: vanilla-build-{{ .Revision }}
       - restore_cache:
@@ -93,19 +94,15 @@ jobs:
       - run:
           name: Add auth token
           command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
-          working_directory: packages/react
       - run:
           name: Deploy hig-react
-          command: npm publish
-          working_directory: packages/react
+          command: node ./scripts/publish-if-needed/index.js react
       - run:
           name: Deploy hig-interface
-          command: npm publish
-          working_directory: packages/interface
+          command: node ./scripts/publish-if-needed/index.js interface
       - run:
           name: Deploy hig-vanilla
-          command: npm publish
-          working_directory: packages/vanilla
+          command: node ./scripts/publish-if-needed/index.js vanilla
 workflows:
   version: 2
   build-test-validate-and-deploy:

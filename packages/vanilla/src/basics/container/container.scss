@@ -1,0 +1,10 @@
+@import '~helpers/css/mixins/spacing.scss';
+@import '../../basics/colors/colors.scss';
+@import '../../basics/shadows/shadows.scss';
+
+.hig__container {
+  padding: spacing(m);
+  background-color: color(hig-white);
+  @include shadow;
+  border-radius: 4px;
+}

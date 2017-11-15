@@ -31,8 +31,17 @@ const r = {
         loader: 'css-loader!sass-loader'
       }),
     }, {
-      test: /\.html$/,
+      test: /\.(html|svg)$/,
+      issuer: /\.js$/,
       use: 'raw-loader'
+    },
+    {
+      test: /\.svg$/,
+      issuer: /\.scss$/,
+      use: {
+        loader: 'svg-url-loader',
+        options: {}
+      }
     }]
   },
   resolve: {

@@ -3,11 +3,11 @@ export { breakpoints } from "hig-vanilla";
 export { default as Button } from "./adapters/ButtonAdapter";
 export { default as Checkbox } from "./adapters/FormElements/CheckboxAdapter";
 export { colors } from "hig-vanilla";
+export { default as Container } from "./elements/components/Container";
 export {
   default as Dropdown
 } from "./elements/components/FormElements/Dropdown";
 export { default as Flyout } from "./elements/components/Flyout";
-
 export { default as Tooltip } from "./elements/components/Tooltip";
 export {
   default as GlobalNav
@@ -21,6 +21,8 @@ export { default as Option } from "./adapters/FormElements/OptionAdapter";
 export {
   default as PasswordField
 } from "./elements/components/FormElements/PasswordField";
+export { default as ProgressBar } from "./adapters/ProgressBarAdapter";
+export { default as ProgressRing } from "./adapters/ProgressRingAdapter";
 export {
   default as RadioButton
 } from "./adapters/FormElements/RadioButtonAdapter";

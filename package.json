@@ -6,7 +6,9 @@
   "homepage": ".",
   "license": "Apache-2.0",
   "devDependencies": {
-    "lerna": "^2.4.0"
+    "lerna": "^2.4.0",
+    "node-fetch": "^1.7.3",
+    "registry-url": "^3.1.0"
   },
   "scripts": {
     "update-packages": "lerna publish --skip-npm",

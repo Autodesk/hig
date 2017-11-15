@@ -1,8 +1,7 @@
-import "./option.scss";
-
-const Template = require("./option.html");
-const Core = require("_core.js");
-const Interface = require("interface.json");
+import Core from '_core.js';
+import Interface from 'interface.json';
+import './option.scss';
+import Template from './option.html';
 
 /**
  * Creates a Option
@@ -21,8 +20,8 @@ class Option extends Core {
 
   setLink(link) {
     link === undefined
-    ? this.el.removeAttribte('href')
-    : this.el.setAttribute('href', link);
+      ? this.el.removeAttribte('href')
+      : this.el.setAttribute('href', link);
   }
 
   setName(name) {
@@ -33,9 +32,9 @@ class Option extends Core {
 
 Option._interface = Interface.components.GlobalNav.partials.TopNav.partials.Help.partials.Option;
 Option._defaults = {
-  name: "",
+  name: '',
   link: null
 };
 Option._partials = {};
 
-module.exports = Option;
+export default Option;

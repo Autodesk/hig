@@ -1,10 +1,10 @@
+import Interface from 'interface.json';
+import Core from '_core.js';
+
 import './flyout.scss';
 
-const Template = require('./flyout.html');
-const Interface = require('interface.json');
-const Core = require('../../helpers/js/_core.js');
-
-import CSSTransition from '../../helpers/js/css-transition.js';
+import CSSTransition from '../../helpers/js/css-transition';
+import Template from './flyout.html';
 
 const ANCHOR_POINTS = [
   'top-left',
@@ -43,7 +43,12 @@ class Flyout extends Core {
     this.setAnchorPoint(this.initialOptions.anchorPoint);
     this._setType(this.initialOptions.type);
     this.flyoutContainer = this._findDOMEl('.hig__flyout__container', this.el);
-    this.containerAnimation = new CSSTransition(this.el, 'hig__flyout');
+    this.containerAnimation = new CSSTransition({
+      el: this.el,
+      class: 'hig__flyout',
+      enteringDuration: 300,
+      exitingDuration: 300
+    });
   }
 
   open() {
@@ -107,10 +112,10 @@ class Flyout extends Core {
 
 
   _callbackIfClickOutside(callback, event) {
-    if (this.el.contains(event.target) || this.el === event.target) {
+    if (this.flyoutContainer.contains(event.target) || this.flyoutContainer === event.target) {
       return;
     }
-    if (this.containerAnimation.isEntering()) {
+    if (this.containerAnimation.isEntering() || this.containerAnimation.isEntered()) {
       callback();
     }
   }
@@ -126,4 +131,4 @@ Flyout._defaults = {
 Flyout.AvailableTypes = AVAILABLE_TYPES;
 Flyout.AvailableAnchorPoints = ANCHOR_POINTS;
 
-module.exports = Flyout;
+export default Flyout;

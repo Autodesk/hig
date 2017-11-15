@@ -1,8 +1,6 @@
-const Template = require('./checkbox.html');
-const Interface = require('interface.json');
-const Core = require('_core.js');
-const InputButton = require('../input-button/input-button.js');
-const Icon = require('../../icon/icon.js');
+import Interface from 'interface.json';
+import Template from './checkbox.html';
+import InputButton from '../input-button/input-button';
 
 /**
  * Creates an Checkbox
@@ -33,21 +31,6 @@ class Checkbox extends InputButton {
     this._render(Template, options);
   }
   _componentDidMount() {
-    this._setIcon();
-  }
-
-  _setIcon() {
-    const mountEl = this._findDOMEl('.hig__input-button__input-wrapper', this.el);
-    this._findOrCreateIconComponent(mountEl).setNameOrSVG('check-white');
-  }
-
-  _findOrCreateIconComponent(mountElOrSelector, name = 'icon') {
-    if (this[name]) {
-      return this[name];
-    }
-    this[name] = new Icon({});
-    this[name].mount(mountElOrSelector);
-    return this[name];
   }
 }
 
@@ -69,4 +52,4 @@ Checkbox._defaults = {
 };
 Checkbox._partials = {};
 
-module.exports = Checkbox;
+export default Checkbox;

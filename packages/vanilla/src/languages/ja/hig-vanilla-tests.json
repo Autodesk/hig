@@ -1,0 +1,9 @@
+{
+  "sample" : {
+    "hello_world": "ようこそ、世界！"
+  },
+  "flyout" : {
+    "open_default_btn": "既定のフライアウトを開く",
+    "open_setter_btn": "セッターフライアウトを開く"
+  }
+}

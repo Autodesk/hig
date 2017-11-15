@@ -28,8 +28,13 @@ gemini.suite('checkbox', (parent) => {
          .capture('without label');
   });
 
-  gemini.suite('chekd and disabled checkbox', (suite) => {
+  gemini.suite('checked and disabled checkbox', (suite) => {
     suite.setCaptureElements('.tests-checkbox5')
          .capture('checked and disabled Checkbox');
+  });
+
+  gemini.suite('indeterminate checkbox', (suite) => {
+    suite.setCaptureElements('.tests-checkbox6')
+         .capture('indeterminate Checkbox');
   });
 });

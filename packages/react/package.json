@@ -1,6 +1,6 @@
 {
   "name": "hig-react",
-  "version": "0.28.13",
+  "version": "0.28.19",
   "description": "hig components in react",
   "repository": {
     "type": "git",
@@ -49,13 +49,11 @@
     "react-dom": "^15.6.1",
     "react-scripts": "1.0.14",
     "react-test-renderer": "^15.6.1",
-    "registry-url": "^3.1.0",
     "typescript": "^2.3.2",
     "webpack": "^3.5.5"
   },
   "scripts": {
     "build-playground": "react-scripts build",
-    "debug-webpack": "NODE_ENV=development webpack",
     "deploy-playground": "react-scripts build && surge build",
     "generate-docs": "node ./scripts/generate-docs.js",
     "lib": "webpack && NODE_ENV=production webpack",
@@ -65,11 +63,10 @@
     "start": "react-scripts start",
     "test": "react-scripts test --env=jsdom",
     "test-ci": "react-scripts test --env=jsdom --coverage --runInBand && npm run lint",
-    "type-check": "tsc",
-    "validate": "node ./scripts/validate-version/index.js"
+    "type-check": "tsc"
   },
   "dependencies": {
-    "hig-vanilla": "^0.1.6"
+    "hig-vanilla": "^0.1.12"
   },
   "jest": {
     "collectCoverageFrom": [

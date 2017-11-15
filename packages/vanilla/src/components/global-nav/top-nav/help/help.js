@@ -1,13 +1,11 @@
+import Interface from 'interface.json';
+import Core from '_core.js';
 import './help.scss';
-
-const Interface = require('interface.json');
-const Core = require('_core.js');
-const Template = require('./help.html');
-
-const Flyout = require('basics/flyout/flyout.js');
-const Shortcut = require('../shortcut/shortcut.js');
-const Group = require('./group/group.js');
-const Option = require('./option/option.js');
+import Template from './help.html';
+import Flyout from 'basics/flyout/flyout.js';
+import Shortcut from '../shortcut/shortcut.js';
+import Group from './group/group.js';
+import Option from './option/option.js';
 
 /**
  * Creates a Help
@@ -70,4 +68,4 @@ Help._partials = {
   Option
 };
 
-module.exports = Help;
+export default Help;
