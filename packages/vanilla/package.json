@@ -49,6 +49,7 @@
     "gemini": "^4.18.1",
     "gemini-sauce": "^1.0.1",
     "http-server": "^0.10.0",
+    "i18next": "^8.1.0",
     "loader-utils": "^1.0.2",
     "mustache": "^2.3.0",
     "node-sass": "^4.5.0",
