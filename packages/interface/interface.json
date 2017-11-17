@@ -1779,7 +1779,8 @@
       "defaults": {
         "icon": "{String} (optional) ID of the icon",
         "link": "{String} link of the button",
-        "title": "{String} title of the button"
+        "title": "{String} title of the button",
+        "type": "{String} type of the button: primary (default), secondary or flat"
       },
       "methods": {
         "disable": {
@@ -1824,6 +1825,12 @@
           "desc": "sets the title of a button",
           "params": [
             "{String} title - new title for the button"
+          ]
+        },
+        "setType": {
+          "desc": "sets the type of a button",
+          "params": [
+            "{String} type can be either: primary (default), secondary or flat"
           ]
         }
       }

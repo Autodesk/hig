@@ -14,6 +14,7 @@ describe("IconButtonAdapter", () => {
           title="Test"
           link="#"
           icon="settings"
+          type="flat"
           onClick={() => {}}
           onHover={() => {}}
           onFocus={() => {}}
@@ -24,14 +25,9 @@ describe("IconButtonAdapter", () => {
       mount(
         <IconButtonAdapter
           higInstance={mockInstance}
-          disabled={false}
           title="Test"
-          link="#"
           icon="settings"
-          onClick={() => {}}
-          onHover={() => {}}
-          onFocus={() => {}}
-          onBlur={() => {}}
+          disabled={false}
         />
       );
     }).toImplementHIGInterfaceOf(HIG.IconButton);

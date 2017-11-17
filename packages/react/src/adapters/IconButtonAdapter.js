@@ -28,6 +28,11 @@ function IconButtonAdapter(props) {
             setter="setIcon"
             {...adapterProps}
           />
+          <MapsPropToMethod
+            value={props.type}
+            setter="setType"
+            {...adapterProps}
+          />
           <MapsPropToMethod value={props.disabled} {...adapterProps}>
             {(instance, value) =>
               value ? instance.disable() : instance.enable()}
