@@ -71,7 +71,8 @@ IconButtonAdapter.propTypes = {
   onBlur: PropTypes.func,
   onClick: PropTypes.func,
   onFocus: PropTypes.func,
-  onHover: PropTypes.func
+  onHover: PropTypes.func,
+  type: PropTypes.oneOf(HIG.IconButton.AvailableTypes)
 };
 
 IconButtonAdapter.defaultProps = {
@@ -80,7 +81,8 @@ IconButtonAdapter.defaultProps = {
   onBlur: undefined,
   onClick: undefined,
   onFocus: undefined,
-  onHover: undefined
+  onHover: undefined,
+  type: undefined
 };
 
 IconButtonAdapter.__docgenInfo = {
@@ -101,13 +103,16 @@ IconButtonAdapter.__docgenInfo = {
       description: "called when user moves focus away from the button"
     },
     onClick: {
-      description: " called when user clicks the button"
+      description: "called when user clicks the button"
     },
     onFocus: {
       description: "called when user moves focus onto the button"
     },
     onHover: {
       description: "called when user moves the mouse over the button"
+    },
+    type: {
+      description: "'primary' or 'flat'; the style of the button"
     }
   }
 };
