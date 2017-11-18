@@ -3,6 +3,7 @@ import Core from '_core.js';
 import './search.scss';
 import Template from './search.html';
 import Icon from '../../../../basics/icon/icon';
+import Option from '../../../../basics/form-elements/option/option';
 
 /**
  * Creates an Search
@@ -14,10 +15,23 @@ class Search extends Core {
   constructor(options) {
     super(options);
     this._render(Template, options);
+
+    this.initialOptions = options;
   }
 
   _componentDidMount() {
     this._setIcons();
+  }
+
+  addOption(option, referenceOption) {
+    console.log('add option')
+    if (option instanceof Option) {
+      const optionWrapper = this._findDOMEl(
+        '.hig__option__wrapper',
+        this.el
+      )
+      option.mount(optionWrapper)
+    }
   }
 
   setPlaceholder(placeholder) {

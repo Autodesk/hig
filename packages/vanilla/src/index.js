@@ -26,9 +26,13 @@ export {
   default as ProgressRing
 } from './components/progress-ring/progress-ring';
 export { default as Modal } from './components/modal/modal';
+// export {
+//   default as Option
+// } from './basics/form-elements/dropdown/option/option';
 export {
   default as Option
-} from './basics/form-elements/dropdown/option/option';
+} from './basics/form-elements/option/option';
+
 export {
   default as PasswordField
 } from './basics/form-elements/password-field/password-field';

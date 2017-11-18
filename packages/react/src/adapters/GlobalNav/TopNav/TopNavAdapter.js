@@ -8,7 +8,7 @@ import HIGAdapter, {
   MountsHIGChild
 } from "../../HIGAdapter";
 import ShortcutAdapter from "./ShortcutAdapter";
-import SearchAdapter from "./SearchAdapter";
+import Search from "../../../elements/components/GlobalNav/TopNav/Search";
 import ProfileAdapter from "./ProfileAdapter";
 import HelpAdapter from "./HelpAdapter";
 import ProjectAccountSwitcherAdapter from "./ProjectAccountSwitcherAdapter";
@@ -17,7 +17,7 @@ import ProjectAccountSwitcher from "../../../elements/components/GlobalNav/TopNa
 function sortChildren(children) {
   return {
     shortcut: children.find(child => child.type === ShortcutAdapter),
-    search: children.find(child => child.type === SearchAdapter),
+    search: children.find(child => child.type === Search),
     profile: children.find(child => child.type === ProfileAdapter),
     help: children.find(child => child.type === HelpAdapter),
     projectAccountSwitcher: children.find(child =>

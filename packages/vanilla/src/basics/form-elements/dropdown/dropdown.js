@@ -6,7 +6,7 @@ import './dropdown.scss';
 import Template from './dropdown.html';
 
 import TextField from '../text-field/text-field';
-import Option from './option/option';
+import Option from '../option/option';
 
 const OPEN_CLASS = 'hig__dropdown--open';
 
@@ -54,7 +54,7 @@ class Dropdown extends Core {
 
   enable() {
     this.field.enable();
-  }
+  } 
 
   noLongerRequired() {
     this.field.noLongerRequired();
@@ -132,8 +132,6 @@ Dropdown._defaults = {
   placeholder: '',
   instructions: ''
 };
-Dropdown._partials = {
-  Option
-};
+Dropdown._partials = {};
 
 export default Dropdown;

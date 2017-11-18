@@ -4,7 +4,8 @@ import { GlobalNav as VanillaGlobalNav } from "hig-vanilla";
 import HIGAdapter, {
   MountedByHIGParent,
   MapsPropToMethod,
-  MapsEventListener
+  MapsEventListener,
+  MountsHIGChildList
 } from "../../HIGAdapter";
 
 function SearchAdapter(props) {
@@ -51,6 +52,10 @@ function SearchAdapter(props) {
             {(instance, value) =>
               value ? instance.showClearIcon() : instance.hideClearIcon()}
           </MapsPropToMethod>
+
+          <MountsHIGChildList {...adapterProps}>
+            {props.children}
+          </MountsHIGChildList>
         </div>
       )}
     </HIGAdapter>
@@ -65,7 +70,8 @@ SearchAdapter.propTypes = {
   onInput: PropTypes.func,
   onFocus: PropTypes.func,
   onBlur: PropTypes.func,
-  showClearIcon: PropTypes.bool
+  showClearIcon: PropTypes.bool,
+  children: PropTypes.node
 };
 
 SearchAdapter.defaultProps = {
@@ -76,7 +82,8 @@ SearchAdapter.defaultProps = {
   onInput: undefined,
   onFocus: undefined,
   onBlur: undefined,
-  showClearIcon: undefined
+  showClearIcon: undefined,
+  children: undefined
 };
 
 export default SearchAdapter;
