@@ -24,13 +24,13 @@ class Search extends Core {
   }
 
   addOption(option, referenceOption) {
-    console.log('add option')
+    console.log('add option');
     if (option instanceof Option) {
       const optionWrapper = this._findDOMEl(
-        '.hig__option__wrapper',
+        '.hig__option__list',
         this.el
-      )
-      option.mount(optionWrapper)
+      );
+      option.mount(optionWrapper);
     }
   }
 
