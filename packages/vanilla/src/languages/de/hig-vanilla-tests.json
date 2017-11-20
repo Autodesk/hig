@@ -1,0 +1,9 @@
+{
+  "sample" : {
+    "hello_world": "Hallo, Welt!"
+  },
+  "flyout" : {
+    "open_default_btn": "Standard Flyout öffnen",
+    "open_setter_btn": "Flyout Setter öffnen"
+  }
+}

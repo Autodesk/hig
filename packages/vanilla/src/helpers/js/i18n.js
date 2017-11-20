@@ -2,7 +2,7 @@ import i18next from 'i18next'
 
 const translations = {};
 
-['en', 'ja'].forEach(lang =>
+['en', 'de', 'ja', 'zh-Hans'].forEach(lang =>
   translations[lang] = {
     translation: require('../../languages/' + lang + '/hig-vanilla-tests.json')
   }
