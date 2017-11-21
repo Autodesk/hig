@@ -24,9 +24,13 @@ class Search extends Component {
     this.state = {};
   }
 
+  filterOptions = event => {
+    console.log("Top Nav Search value", event.target.value);
+  };
+
   render() {
     return (
-      <SearchAdapter>
+      <SearchAdapter onInput={this.filterOptions}>
         {this.props.options.map(option => (
           <Option
             key={option.value}
@@ -38,6 +42,7 @@ class Search extends Component {
             onHover={() => {
               console.log("onHover");
             }}
+            onInput={this.filterOptions}
           />
         ))}
       </SearchAdapter>
