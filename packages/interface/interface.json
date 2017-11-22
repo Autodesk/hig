@@ -1785,6 +1785,22 @@
                     "{Option} option - an instance of the Option partial",
                     "{Option} [referenceOption] - (Optional) a reference option used when positioning the new option. New option will be added before the reference option."
                   ]
+                },
+                "onClickOutside": {
+                  "desc": "Calls the provided callback when user clicks outside of the Help",
+                  "params": "HIG.abstract.EventObject.params",
+                  "returns": "HIG.abstract.EventObject.returns"
+                },
+                "onTargetClick": {
+                  "desc": "Calls the provided callback when user clicks on Search Input",
+                  "params": "HIG.abstract.EventObject.params",
+                  "returns": "HIG.abstract.EventObject.returns"
+                },
+                "setValue": {
+                  "desc": "sets the search value",
+                  "params": [
+                    "{String} value - new value"
+                  ]
                 }
               }
             },

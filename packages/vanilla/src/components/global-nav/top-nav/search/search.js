@@ -81,6 +81,15 @@ class Search extends Core {
     );
   }
 
+  onClickOutside(fn) {
+    return this._attachListener(
+      'click',
+      window.document.body,
+      window.document.body,
+      this._callbackIfClickOutside.bind(this, fn)
+    );
+  }
+
   onFocusIn(fn) {
     return this._attachListener(
       'focusin',
@@ -99,6 +108,15 @@ class Search extends Core {
     );
   }
 
+  onTargetClick(fn) {
+    return this._attachListener(
+      'click',
+      '.hig__global-nav__top-nav__search__input',
+      this.el,
+      fn
+    );
+  }
+
   showOptions() {
     this._findDOMEl('.hig__option__list', this.el).classList.add(OPEN_CLASS);
   }
@@ -106,6 +124,14 @@ class Search extends Core {
   hideOptions() {
     this._findDOMEl('.hig__option__list', this.el).classList.remove(OPEN_CLASS);
   }
+
+  setValue(value) {
+    this._findDOMEl(
+      '.hig__global-nav__top-nav__search__input',
+      this.el
+    ).value = value;
+  }
+
 
   _setIcons() {
     const mountSearchIcon = this._findDOMEl(
@@ -128,6 +154,21 @@ class Search extends Core {
     this[name] = new Icon({});
     this[name].mount(mountElOrSelector);
     return this[name];
+  }
+
+  _callbackIfClickOutside(callback, event) {
+    if (this.el.contains(event.target) || this.el === event.target) {
+      return;
+    }
+    if (
+      this._findDOMEl('.hig__option__list', this.el).contains(event.target) ||
+      this._findDOMEl('.hig__option__list', this.el) === event.target
+    ) {
+      return;
+    }
+    if (this._findDOMEl('.hig__option__list').contains(OPEN_CLASS)) {
+      callback();
+    }
   }
 }
 

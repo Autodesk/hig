@@ -14,15 +14,21 @@ class Search extends Component {
     )
   };
 
-  static defaultProps = {};
+  static defaultProps = {
+    onInput: () => {},
+    value: undefined,
+    defaultValue: undefined
+  };
 
   constructor(props) {
     super(props);
-    this.initialProps = props;
-    console.log("initialProps search", this.initialProps);
+
+    const controlled = props.value !== undefined;
 
     this.state = {
-      showOptions: this.props.showOptions
+      showOptions: this.props.showOptions,
+      value: this.getDefaultValue(),
+      controlled
     };
   }
 
@@ -30,15 +36,71 @@ class Search extends Component {
     this.props.onSearchInput({ value: event.target.value });
   };
 
-  // hideOptions = () => {
-  //   this.setState({ showOptions: false });
-  // };
+  getDefaultValue() {
+    const { defaultValue, value } = this.props;
+
+    if (value !== undefined) {
+      return value;
+    } else if (defaultValue !== undefined) {
+      return defaultValue;
+    }
+    return "";
+  }
+
+  getRenderedValue() {
+    const { value } = this.props;
+
+    if (value !== undefined) {
+      return value;
+    }
+    return this.state.value;
+  }
+
+  hideOptions = () => {
+    this.setState({ showOptions: false });
+  };
+
+  showOptions = () => {
+    if (this.props.showOptions.length > 0) {
+      this.setState({ showOptions: true });
+    }
+  };
+
+  hideClearIcon = () => {
+    this.setState({ clearIconVisible: false });
+  };
+
+  showClearIcon = () => {
+    this.setState({ clearIconVisible: true });
+  };
+
+  handleClearIconClick = () => {
+    this._setValue("");
+    this.props.onSearchInput({ value: "" });
+  };
+
+  _setValue(value) {
+    if (this.state.controlled) {
+      this.setState({ value: this.state.value });
+    } else {
+      this.setState({ value });
+    }
+  }
 
   render() {
     return (
       <SearchAdapter
+        {...this.props}
+        value={this.getRenderedValue()}
         onInput={this.onInput}
         showOptions={this.props.showOptions}
+        onBlur={this.hideClearIcon}
+        onFocus={this.showClearIcon}
+        showClearIcon={this.state.clearIconVisible}
+        onClearIconClick={this.handleClearIconClick}
+
+        // onClickOutside={this.hideOptions}
+        // onTargetClick={this.showOptions}
       >
         {this.props.options.length > 0
           ? this.props.options.map(option => (

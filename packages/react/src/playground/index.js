@@ -55,7 +55,8 @@ class Playground extends React.Component {
       activeModuleId: "1-2-5",
       isHelpOpen: false,
       isSideNavOpen: true,
-      filteredSearchOptions: []
+      filteredSearchOptions: [],
+      searchInputValue: ""
     };
   }
 
@@ -95,15 +96,16 @@ class Playground extends React.Component {
     this.setState({ isHelpOpen: false });
   };
 
-  onSearchInput = value => {
-    this.filterSearchInput(value);
+  onSearchInput = input => {
+    this.setState({ searchInputValue: input.value });
+    this.filterSearchInput(input.value);
   };
 
-  filterSearchInput = input => {
+  filterSearchInput = value => {
     const filteredSearchOptions =
-      input.value.length > 0
+      value.length > 0
         ? searchOptions.filter(option =>
-            option.label.toLowerCase().startsWith(input.value.toLowerCase())
+            option.label.toLowerCase().startsWith(value.toLowerCase())
           )
         : [];
 
@@ -161,6 +163,7 @@ class Playground extends React.Component {
       onProjectClick: this.projectClicked,
       onSearchInput: this.onSearchInput,
       filteredSearchOptions: this.state.filteredSearchOptions,
+      searchInputValue: this.state.searchInputValue,
       help: helpProps,
       logo,
       onLogoClick() {

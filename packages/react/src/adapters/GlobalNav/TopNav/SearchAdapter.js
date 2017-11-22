@@ -5,7 +5,8 @@ import HIGAdapter, {
   MountedByHIGParent,
   MapsPropToMethod,
   MapsEventListener,
-  MountsHIGChildList
+  MountsHIGChildList,
+  ControlsProp
 } from "../../HIGAdapter";
 
 function SearchAdapter(props) {
@@ -18,9 +19,16 @@ function SearchAdapter(props) {
       {adapterProps => (
         <div>
           <MountedByHIGParent mounter="addSearch" {...adapterProps} />
-          <MapsEventListener
+          {/* <MapsEventListener
             listener="onInput"
             handler={props.onInput}
+            {...adapterProps}
+          /> */}
+          <ControlsProp
+            listener="onInput"
+            handler={props.onInput}
+            value={props.value}
+            setter="setValue"
             {...adapterProps}
           />
           <MapsEventListener
@@ -56,6 +64,12 @@ function SearchAdapter(props) {
             {(instance, value) =>
               value ? instance.showOptions() : instance.hideOptions()}
           </MapsPropToMethod>
+
+          <MapsEventListener
+            listener="onClickOutside"
+            handler={props.onClickOutside}
+            {...adapterProps}
+          />
 
           <MountsHIGChildList {...adapterProps}>
             {props.children}
