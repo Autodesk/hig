@@ -3,7 +3,6 @@ import React from "react";
 import "hig-vanilla/lib/hig.css";
 
 import { Button, Container, GlobalNav, breakpoints } from "../hig-react";
-
 import "./index.css";
 
 import logo from "./images/bim-logo.png";
@@ -34,13 +33,29 @@ import TextLinkSection from "./sections/TextLinkSection";
 import TooltipSection from "./sections/TooltipSection";
 import TypographySection from "./sections/TypographySection";
 
+const searchOptions = [
+  {
+    label: "foo",
+    value: "foo value"
+  },
+  {
+    label: "foo1",
+    value: "foo1 value"
+  },
+  {
+    label: "bar",
+    value: "bar value"
+  }
+];
+
 class Playground extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       activeModuleId: "1-2-5",
       isHelpOpen: false,
-      isSideNavOpen: true
+      isSideNavOpen: true,
+      filteredSearchOptions: []
     };
   }
 
@@ -78,6 +93,21 @@ class Playground extends React.Component {
 
   closeHelp = () => {
     this.setState({ isHelpOpen: false });
+  };
+
+  onSearchInput = value => {
+    this.filterSearchInput(value);
+  };
+
+  filterSearchInput = input => {
+    const filteredSearchOptions =
+      input.value.length > 0
+        ? searchOptions.filter(option =>
+            option.label.toLowerCase().startsWith(input.value.toLowerCase())
+          )
+        : [];
+
+    this.setState({ filteredSearchOptions });
   };
 
   render() {
@@ -129,6 +159,8 @@ class Playground extends React.Component {
       projectTitle: "Projects",
       onAccountClick: this.accountClicked,
       onProjectClick: this.projectClicked,
+      onSearchInput: this.onSearchInput,
+      filteredSearchOptions: this.state.filteredSearchOptions,
       help: helpProps,
       logo,
       onLogoClick() {

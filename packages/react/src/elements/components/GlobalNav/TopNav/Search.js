@@ -21,30 +21,40 @@ class Search extends Component {
     this.initialProps = props;
     console.log("initialProps search", this.initialProps);
 
-    this.state = {};
+    this.state = {
+      showOptions: this.props.showOptions
+    };
   }
 
-  filterOptions = event => {
-    console.log("Top Nav Search value", event.target.value);
+  onInput = event => {
+    this.props.onSearchInput({ value: event.target.value });
   };
+
+  // hideOptions = () => {
+  //   this.setState({ showOptions: false });
+  // };
 
   render() {
     return (
-      <SearchAdapter onInput={this.filterOptions}>
-        {this.props.options.map(option => (
-          <Option
-            key={option.value}
-            {...option}
-            // selected={option.value === selectedOption.value}
-            onClick={() => {
-              console.log("onClick");
-            }}
-            onHover={() => {
-              console.log("onHover");
-            }}
-            onInput={this.filterOptions}
-          />
-        ))}
+      <SearchAdapter
+        onInput={this.onInput}
+        showOptions={this.props.showOptions}
+      >
+        {this.props.options.length > 0
+          ? this.props.options.map(option => (
+              <Option
+                key={option.value}
+                {...option}
+                // selected={option.value === selectedOption.value}
+                onClick={() => {
+                  console.log("onClick");
+                }}
+                onHover={() => {
+                  console.log("onHover");
+                }}
+              />
+            ))
+          : null}
       </SearchAdapter>
     );
   }

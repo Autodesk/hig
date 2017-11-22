@@ -81,16 +81,11 @@ class GlobalNav extends Component {
             onHamburgerClick={this.handleHamburgerClick}
             {...this.props.topNav}
           >
-            <Search options={[
-                {
-                  label: "foo",
-                  value: "foo value"
-                },
-                {
-                  label: "bar",
-                  value: "bar value"
-                }
-              ]} />
+            <Search
+              options={this.props.topNav.filteredSearchOptions}
+              onSearchInput={this.props.topNav.onSearchInput}
+              showOptions={this.props.topNav.filteredSearchOptions.length > 0}
+            />
             {this.showProjectAccountSwitcher() ? (
               <ProjectAccountSwitcher
                 {...this.props.topNav.projectAccountSwitcher}

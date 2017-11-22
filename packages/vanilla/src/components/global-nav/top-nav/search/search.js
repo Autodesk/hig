@@ -5,6 +5,7 @@ import Template from './search.html';
 import Icon from '../../../../basics/icon/icon';
 import Option from '../../../../basics/form-elements/option/option';
 
+const OPEN_CLASS = 'hig__option__list--show';
 /**
  * Creates an Search
  *
@@ -96,6 +97,14 @@ class Search extends Core {
       this.el,
       fn
     );
+  }
+
+  showOptions() {
+    this._findDOMEl('.hig__option__list', this.el).classList.add(OPEN_CLASS);
+  }
+
+  hideOptions() {
+    this._findDOMEl('.hig__option__list', this.el).classList.remove(OPEN_CLASS);
   }
 
   _setIcons() {

@@ -52,6 +52,10 @@ function SearchAdapter(props) {
             {(instance, value) =>
               value ? instance.showClearIcon() : instance.hideClearIcon()}
           </MapsPropToMethod>
+          <MapsPropToMethod value={props.showOptions} {...adapterProps}>
+            {(instance, value) =>
+              value ? instance.showOptions() : instance.hideOptions()}
+          </MapsPropToMethod>
 
           <MountsHIGChildList {...adapterProps}>
             {props.children}
@@ -71,6 +75,7 @@ SearchAdapter.propTypes = {
   onFocus: PropTypes.func,
   onBlur: PropTypes.func,
   showClearIcon: PropTypes.bool,
+  showOptions: PropTypes.bool,
   children: PropTypes.node
 };
 
@@ -83,6 +88,7 @@ SearchAdapter.defaultProps = {
   onFocus: undefined,
   onBlur: undefined,
   showClearIcon: undefined,
+  showOptions: undefined,
   children: undefined
 };
 

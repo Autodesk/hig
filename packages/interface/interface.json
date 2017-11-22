@@ -1773,6 +1773,12 @@
                 "showClearIcon": {
                   "desc": "show the clear input icon"
                 },
+                "showOptions": {
+                  "desc": "shows fitered options"
+                },
+                "hideOptions": {
+                  "desc": "hides filtered options"
+                },
                 "addOption": {
                   "desc": "Adds an option to the search dropdown",
                   "params": [
