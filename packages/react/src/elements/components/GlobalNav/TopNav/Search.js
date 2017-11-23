@@ -60,11 +60,11 @@ class Search extends Component {
     this.setState({ showOptions: false });
   };
 
-  showOptions = () => {
-    if (this.props.showOptions.length > 0) {
-      this.setState({ showOptions: true });
-    }
-  };
+  // showOptions = () => {
+  //   if (this.props.showOptions) {
+  //     this.setState({ showOptions: true });
+  //   }
+  // };
 
   hideClearIcon = () => {
     this.setState({ clearIconVisible: false });
@@ -98,8 +98,7 @@ class Search extends Component {
         onFocus={this.showClearIcon}
         showClearIcon={this.state.clearIconVisible}
         onClearIconClick={this.handleClearIconClick}
-
-        // onClickOutside={this.hideOptions}
+        onClickOutside={this.handleClearIconClick}
         // onTargetClick={this.showOptions}
       >
         {this.props.options.length > 0

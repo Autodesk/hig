@@ -166,7 +166,7 @@ class Search extends Core {
     ) {
       return;
     }
-    if (this._findDOMEl('.hig__option__list').contains(OPEN_CLASS)) {
+    if (this._findDOMEl('.hig__option__list', this.el).classList.contains(OPEN_CLASS)) {
       callback();
     }
   }
