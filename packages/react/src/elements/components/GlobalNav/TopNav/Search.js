@@ -82,6 +82,9 @@ class Search extends Component {
       case 38:
         this._arrowUp();
         break;
+      case 13:
+        this._submitInput();
+        break;
       default:
         console.log("no focused option");
     }
@@ -119,6 +122,13 @@ class Search extends Component {
       const focusedOptionIndex = this.state.focusedOptionIndex - 1;
       this.setState({ focusedOptionIndex });
     }
+  }
+
+  _submitInput() {
+    this.props.onSearchInput({
+      value: this.props.options[this.state.focusedOptionIndex].label
+    });
+    this.hideOptions();
   }
 
   render() {
