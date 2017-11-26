@@ -46,6 +46,13 @@ function SearchAdapter(props) {
             handler={props.onClearIconClick}
             {...adapterProps}
           />
+
+          <MapsEventListener
+            listener="onKeydown"
+            handler={props.onKeydown}
+            {...adapterProps}
+          />
+
           <MapsPropToMethod
             setter="setQuery"
             value={props.query}

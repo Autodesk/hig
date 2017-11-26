@@ -175,7 +175,7 @@ class Playground extends React.Component {
       superHeaderLabel: "HIG",
       headerLabel: "Playground",
       headerLink: "http://apple.com",
-      links,
+      links,  
       onLogoClick: event => {
         event.preventDefault();
         console.log("Logo clicked");

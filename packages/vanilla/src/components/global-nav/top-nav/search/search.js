@@ -27,10 +27,7 @@ class Search extends Core {
   addOption(option, referenceOption) {
     console.log('add option');
     if (option instanceof Option) {
-      const optionWrapper = this._findDOMEl(
-        '.hig__option__list',
-        this.el
-      );
+      const optionWrapper = this._findDOMEl('.hig__option__list', this.el);
       option.mount(optionWrapper);
     }
   }
@@ -75,6 +72,15 @@ class Search extends Core {
   onInput(fn) {
     return this._attachListener(
       'input',
+      '.hig__global-nav__top-nav__search__input',
+      this.el,
+      fn
+    );
+  }
+
+  onKeydown(fn) {
+    return this._attachListener(
+      'keydown',
       '.hig__global-nav__top-nav__search__input',
       this.el,
       fn
@@ -132,19 +138,22 @@ class Search extends Core {
     ).value = value;
   }
 
-
   _setIcons() {
     const mountSearchIcon = this._findDOMEl(
       '.hig__global-nav__top-nav__search__icon',
       this.el
     );
-    this._findOrCreateIconComponent(mountSearchIcon, 'search').setNameOrSVG('search');
+    this._findOrCreateIconComponent(mountSearchIcon, 'search').setNameOrSVG(
+      'search'
+    );
 
     const mountClearIcon = this._findDOMEl(
       '.hig__global-nav__top-nav__search__clear',
       this.el
     );
-    this._findOrCreateIconComponent(mountClearIcon, 'clear').setNameOrSVG('close-small');
+    this._findOrCreateIconComponent(mountClearIcon, 'clear').setNameOrSVG(
+      'close-small'
+    );
   }
 
   _findOrCreateIconComponent(mountElOrSelector, name = 'icon') {
@@ -157,16 +166,16 @@ class Search extends Core {
   }
 
   _callbackIfClickOutside(callback, event) {
+    const higOptionList = this._findDOMEl('.hig__option__list', this.el);
     if (this.el.contains(event.target) || this.el === event.target) {
       return;
     }
     if (
-      this._findDOMEl('.hig__option__list', this.el).contains(event.target) ||
-      this._findDOMEl('.hig__option__list', this.el) === event.target
+      higOptionList.contains(event.target) || higOptionList === event.target
     ) {
       return;
     }
-    if (this._findDOMEl('.hig__option__list', this.el).classList.contains(OPEN_CLASS)) {
+    if (higOptionList.classList.contains(OPEN_CLASS)) {
       callback();
     }
   }

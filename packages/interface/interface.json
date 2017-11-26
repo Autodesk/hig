@@ -176,6 +176,12 @@
               "params": [
                 "{String} label - label identifying the option"
               ]
+            },
+            "focus": {
+              "description": "focuses the option"
+            },
+            "unfocus":{
+              "description": "removes focus from the options"
             }
           },
           "defaults": {
@@ -1442,7 +1448,9 @@
             },
             "setLogoLink": {
               "desc": "sets the link of the logo",
-              "params": ["{String} link - new link"]
+              "params": [
+                "{String} link - new link"
+              ]
             }
           },
           "partials": {
@@ -1474,11 +1482,11 @@
                   ]
                 },
                 "setTitle": {
-                   "desc": "sets the hover title of the Help",
-                   "params": [
-                     "{String} title - new hover title"
-                   ]
-                 }
+                  "desc": "sets the hover title of the Help",
+                  "params": [
+                    "{String} title - new hover title"
+                  ]
+                }
               },
               "partials": {
                 "Group": {
@@ -1801,6 +1809,11 @@
                   "params": [
                     "{String} value - new value"
                   ]
+                },
+                "onKeydown": {
+                  "desc": "Calls the provided callback when user pressed key down on Search Input",
+                  "params": "HIG.abstract.EventObject.params",
+                  "returns": "HIG.abstract.EventObject.returns"
                 }
               }
             },
@@ -2093,6 +2106,5 @@
         }
       }
     }
-
   }
 }

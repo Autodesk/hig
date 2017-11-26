@@ -16,10 +16,6 @@ class Option extends Core {
     this._render(Template, options);
   }
 
-  _componentDidMount() {
-    
-  }
-
   deselect() {
     this.el.classList.remove('hig__dropdown__option--selected');
   }
@@ -36,6 +32,14 @@ class Option extends Core {
     this.el.classList.add('hig__dropdown__option--selected');
   }
 
+  focus() {
+    this.el.classList.add('hig__dropdown__option--focused');
+  }
+
+  unfocus() {
+    this.el.classList.remove('hig__dropdown__option--focused');
+  }
+
   setLabel(label) {
     this._findDOMEl('.hig__option__label', this.el).textContent = label;
   }
@@ -45,8 +49,7 @@ class Option extends Core {
   }
 }
 
-Option._interface =
-  Interface.basics.FormElements.partials.Option;
+Option._interface = Interface.basics.FormElements.partials.Option;
 Option._defaults = {
   label: '',
   value: ''

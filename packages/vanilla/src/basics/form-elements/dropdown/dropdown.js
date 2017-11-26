@@ -54,7 +54,7 @@ class Dropdown extends Core {
 
   enable() {
     this.field.enable();
-  } 
+  }
 
   noLongerRequired() {
     this.field.noLongerRequired();
@@ -114,8 +114,7 @@ class Dropdown extends Core {
       return;
     }
     if (
-      this.field.el.contains(event.target) ||
-      this.field.el === event.target
+      this.field.el.contains(event.target) || this.field.el === event.target
     ) {
       return;
     }
@@ -125,8 +124,7 @@ class Dropdown extends Core {
   }
 }
 
-Dropdown._interface =
-  Interface.basics.FormElements.partials.Dropdown;
+Dropdown._interface = Interface.basics.FormElements.partials.Dropdown;
 Dropdown._defaults = {
   label: '',
   placeholder: '',

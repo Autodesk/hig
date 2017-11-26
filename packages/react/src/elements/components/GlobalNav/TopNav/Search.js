@@ -60,12 +60,6 @@ class Search extends Component {
     this.setState({ showOptions: false });
   };
 
-  // showOptions = () => {
-  //   if (this.props.showOptions) {
-  //     this.setState({ showOptions: true });
-  //   }
-  // };
-
   hideClearIcon = () => {
     this.setState({ clearIconVisible: false });
   };
@@ -77,6 +71,21 @@ class Search extends Component {
   handleClearIconClick = () => {
     this._setValue("");
     this.props.onSearchInput({ value: "" });
+    this.setState({ focusedOptionIndex: undefined });
+  };
+
+  handleKeydown = event => {
+    switch (event.keyCode) {
+      case 40:
+        this._arrowDown();
+        break;
+      case 38:
+        this._arrowUp();
+        break;
+      default:
+        console.log("no focused option");
+    }
+    console.log("keycode", event.keyCode);
   };
 
   _setValue(value) {
@@ -84,6 +93,31 @@ class Search extends Component {
       this.setState({ value: this.state.value });
     } else {
       this.setState({ value });
+    }
+  }
+
+  _arrowDown() {
+    if (
+      this.state.focusedOptionIndex === undefined ||
+      this.state.focusedOptionIndex >= this.props.options.length - 1
+    ) {
+      this.setState({ focusedOptionIndex: 0 });
+    } else {
+      const focusedOptionIndex = this.state.focusedOptionIndex + 1;
+      this.setState({ focusedOptionIndex });
+    }
+  }
+
+  _arrowUp() {
+    if (
+      this.state.focusedOptionIndex === undefined ||
+      this.state.focusedOptionIndex <= 0
+    ) {
+      const focusedOptionIndex = this.props.options.length - 1;
+      this.setState({ focusedOptionIndex });
+    } else {
+      const focusedOptionIndex = this.state.focusedOptionIndex - 1;
+      this.setState({ focusedOptionIndex });
     }
   }
 
@@ -99,12 +133,13 @@ class Search extends Component {
         showClearIcon={this.state.clearIconVisible}
         onClearIconClick={this.handleClearIconClick}
         onClickOutside={this.handleClearIconClick}
-        // onTargetClick={this.showOptions}
+        onKeydown={this.handleKeydown}
       >
         {this.props.options.length > 0
-          ? this.props.options.map(option => (
+          ? this.props.options.map((option, index) => (
               <Option
                 key={option.value}
+                focused={index === this.state.focusedOptionIndex}
                 {...option}
                 // selected={option.value === selectedOption.value}
                 onClick={() => {
