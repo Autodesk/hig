@@ -26,7 +26,7 @@ class Search extends Component {
     const controlled = props.value !== undefined;
 
     this.state = {
-      showOptions: this.props.showOptions,
+      showOptions: false,
       value: this.getDefaultValue(),
       controlled
     };
@@ -34,6 +34,7 @@ class Search extends Component {
 
   onInput = event => {
     this.props.onSearchInput({ value: event.target.value });
+    this.showOptions();
   };
 
   getDefaultValue() {
@@ -58,6 +59,10 @@ class Search extends Component {
 
   hideOptions = () => {
     this.setState({ showOptions: false });
+  };
+
+  showOptions = () => {
+    this.setState({ showOptions: true });
   };
 
   hideClearIcon = () => {
@@ -137,7 +142,7 @@ class Search extends Component {
         {...this.props}
         value={this.getRenderedValue()}
         onInput={this.onInput}
-        showOptions={this.props.showOptions}
+        showOptions={this.props.options.length > 0 && this.state.showOptions}
         onBlur={this.hideClearIcon}
         onFocus={this.showClearIcon}
         showClearIcon={this.state.clearIconVisible}
