@@ -1,6 +1,6 @@
 import React from "react";
 import { mount } from "enzyme";
-import * as HIG from "hig-vanilla";
+import { TextField as VanillaTextField } from "hig-vanilla";
 import TextFieldAdapter from "./TextFieldAdapter";
 
 describe("TextFieldAdapter", () => {
@@ -9,7 +9,7 @@ describe("TextFieldAdapter", () => {
       mount(
         <TextFieldAdapter
           higInstance={spiedInstance}
-          value="Foo"
+          value="TextField"
           instructions="Type in your favorite word"
           placeholder="Fizz"
           label="Favorite word"
@@ -33,6 +33,6 @@ describe("TextFieldAdapter", () => {
           required=""
         />
       );
-    }).toImplementHIGInterfaceOf(HIG.TextField);
+    }).toImplementHIGInterfaceOf(VanillaTextField);
   });
 });

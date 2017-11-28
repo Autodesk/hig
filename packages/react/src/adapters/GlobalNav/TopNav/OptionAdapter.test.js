@@ -1,6 +1,6 @@
 import { mount } from "enzyme";
 import React from "react";
-import * as HIG from "hig-vanilla";
+import { GlobalNav as VanillaGlobalNav } from "hig-vanilla";
 import OptionAdapter from "./OptionAdapter";
 
 describe("Help OptionAdapter", () => {
@@ -15,7 +15,7 @@ describe("Help OptionAdapter", () => {
         />
       );
     }).toImplementHIGInterfaceOf(
-      HIG.GlobalNav._partials.TopNav._partials.Help._partials.Option
+      VanillaGlobalNav._partials.TopNav._partials.Help._partials.Option
     );
   });
 });

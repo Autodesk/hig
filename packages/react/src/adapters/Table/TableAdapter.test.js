@@ -1,7 +1,7 @@
 import React from "react";
 import { mount } from "enzyme";
 
-import * as HIG from "hig-vanilla";
+import { Table as VanillaTable } from "hig-vanilla";
 
 import TableAdapter from "./TableAdapter";
 import TableHeadAdapter from "./TableHeadAdapter";
@@ -16,6 +16,6 @@ describe("TableAdapter", () => {
           <TableRowAdapter />
         </TableAdapter>
       );
-    }).toImplementHIGInterfaceOf(HIG.Table);
+    }).toImplementHIGInterfaceOf(VanillaTable);
   });
 });

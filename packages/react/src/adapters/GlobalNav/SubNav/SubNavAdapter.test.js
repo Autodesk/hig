@@ -1,6 +1,6 @@
 import React from "react";
 import { mount } from "enzyme";
-import * as HIG from "hig-vanilla";
+import { GlobalNav as VanillaGlobalNav } from "hig-vanilla";
 import SubNavAdapter from "./SubNavAdapter";
 import TabsAdapter from "./TabsAdapter";
 
@@ -17,6 +17,6 @@ describe("SubNavAdapter", () => {
           <TabsAdapter />
         </SubNavAdapter>
       );
-    }).toImplementHIGInterfaceOf(HIG.GlobalNav._partials.SubNav);
+    }).toImplementHIGInterfaceOf(VanillaGlobalNav._partials.SubNav);
   });
 });

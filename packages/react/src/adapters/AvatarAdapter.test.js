@@ -1,7 +1,7 @@
 import { mount } from "enzyme";
 import React from "react";
 
-import * as HIG from "hig-vanilla";
+import { Avatar as VanillaAvatar } from "hig-vanilla";
 import AvatarAdapter from "./AvatarAdapter";
 
 describe("AvatarAdapter", () => {
@@ -15,6 +15,6 @@ describe("AvatarAdapter", () => {
           image="/my-image.png"
         />
       );
-    }).toImplementHIGInterfaceOf(HIG.Avatar);
+    }).toImplementHIGInterfaceOf(VanillaAvatar);
   });
 });

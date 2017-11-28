@@ -1,6 +1,6 @@
 {
   "name": "hig-vanilla",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "Stateless implementation in pure CSS, HTML and JS with no framework dependecies",
   "main": "lib/hig.js",
   "css": "lib/hig.css",
@@ -49,6 +49,7 @@
     "gemini": "^4.18.1",
     "gemini-sauce": "^1.0.1",
     "http-server": "^0.10.0",
+    "i18next": "^8.1.0",
     "loader-utils": "^1.0.2",
     "mustache": "^2.3.0",
     "node-sass": "^4.5.0",
@@ -62,6 +63,6 @@
     "webpack": "^3.5.5"
   },
   "dependencies": {
-    "hig-interface": "^0.1.7"
+    "hig-interface": "^0.1.8"
   }
 }

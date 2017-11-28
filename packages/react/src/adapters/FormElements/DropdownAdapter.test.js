@@ -1,6 +1,6 @@
 import { mount } from "enzyme";
 import React from "react";
-import * as HIG from "hig-vanilla";
+import { Dropdown as VanillaDropdown } from "hig-vanilla";
 import DropdownAdapter from "./DropdownAdapter";
 import OptionAdapter from "./OptionAdapter";
 
@@ -36,6 +36,6 @@ describe("DropdownAdapter", () => {
           <OptionAdapter value="123" />
         </DropdownAdapter>
       );
-    }).toImplementHIGInterfaceOf(HIG.Dropdown);
+    }).toImplementHIGInterfaceOf(VanillaDropdown);
   });
 });

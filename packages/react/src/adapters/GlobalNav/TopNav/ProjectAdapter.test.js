@@ -1,6 +1,6 @@
 import { mount } from "enzyme";
 import React from "react";
-import * as HIG from "hig-vanilla";
+import { GlobalNav as VanillaGlobalNav } from "hig-vanilla";
 import ProjectAdapter from "./ProjectAdapter";
 
 describe("ProjectAdapter", () => {
@@ -17,8 +17,8 @@ describe("ProjectAdapter", () => {
       );
       wrapper.props().higInstance.deactivate();
     }).toImplementHIGInterfaceOf(
-      HIG.GlobalNav._partials.TopNav._partials.ProjectAccountSwitcher._partials
-        .Project
+      VanillaGlobalNav._partials.TopNav._partials.ProjectAccountSwitcher
+        ._partials.Project
     );
   });
 });

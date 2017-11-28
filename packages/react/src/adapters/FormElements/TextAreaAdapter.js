@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import * as HIG from "hig-vanilla";
+import { TextArea as VanillaTextArea } from "hig-vanilla";
 import HIGAdapter, {
   MapsEventListener,
   MapsPropToMethod,
@@ -9,7 +9,11 @@ import HIGAdapter, {
 
 function TextAreaAdapter(props) {
   return (
-    <HIGAdapter {...props} displayName="TextArea" HIGConstructor={HIG.TextArea}>
+    <HIGAdapter
+      {...props}
+      displayName="TextArea"
+      HIGConstructor={VanillaTextArea}
+    >
       {adapterProps => (
         <div>
           <ControlsProp

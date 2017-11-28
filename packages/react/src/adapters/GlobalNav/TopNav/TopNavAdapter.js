@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import * as HIG from "hig-vanilla";
+import { GlobalNav as VanillaGlobalNav } from "hig-vanilla";
 import HIGAdapter, {
   MapsPropToMethod,
   MapsEventListener,
@@ -40,7 +40,7 @@ function TopNavAdapter(props) {
   return (
     <HIGAdapter
       displayName="TopNav"
-      HIGConstructor={HIG.GlobalNav._partials.TopNav}
+      HIGConstructor={VanillaGlobalNav._partials.TopNav}
       {...props}
     >
       {adapterProps => (

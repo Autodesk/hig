@@ -1,7 +1,7 @@
 import React from "react";
 import { mount } from "enzyme";
 
-import * as HIG from "hig-vanilla";
+import { GlobalNav as VanillaGlobalNav } from "hig-vanilla";
 import SearchAdapter from "./SearchAdapter";
 
 describe("SideNav SearchAdapter", () => {
@@ -21,7 +21,7 @@ describe("SideNav SearchAdapter", () => {
       );
       wrapper.props().higInstance.hideClearIcon();
     }).toImplementHIGInterfaceOf(
-      HIG.GlobalNav._partials.SideNav._partials.Search
+      VanillaGlobalNav._partials.SideNav._partials.Search
     );
   });
 });

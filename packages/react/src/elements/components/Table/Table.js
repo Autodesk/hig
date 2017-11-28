@@ -1,4 +1,4 @@
-import * as HIG from "hig-vanilla";
+import { Table as VanillaTable } from "hig-vanilla";
 import * as PropTypes from "prop-types";
 import React, { Component } from "react";
 import TableAdapter from "../../../adapters/Table/TableAdapter";
@@ -116,7 +116,7 @@ Table.propTypes = {
     })
   ),
   data: PropTypes.arrayOf(PropTypes.object),
-  density: PropTypes.oneOf(HIG.Table.AvailableDensities),
+  density: PropTypes.oneOf(VanillaTable.AvailableDensities),
   selectable: PropTypes.bool
 };
 

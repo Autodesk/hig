@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import * as HIG from "hig-vanilla";
+import { Table as VanillaTable } from "hig-vanilla";
 
 import HIGAdapter, {
   MapsPropToMethod,
@@ -12,7 +12,7 @@ function TextHeadCellAdapter(props) {
     <HIGAdapter
       {...props}
       displayName="TextHeadCell"
-      HIGConstructor={HIG.Table._partials.TableHead._partials.TextHeadCell}
+      HIGConstructor={VanillaTable._partials.TableHead._partials.TextHeadCell}
     >
       {adapterProps => (
         <div>

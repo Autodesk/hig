@@ -1,11 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import * as HIG from "hig-vanilla";
+import { TextLink as VanillaTextLink } from "hig-vanilla";
 import HIGAdapter, { MapsPropToMethod, MapsEventListener } from "./HIGAdapter";
 
 function TextLinkAdapter(props) {
   return (
-    <HIGAdapter {...props} displayName="TextLink" HIGConstructor={HIG.TextLink}>
+    <HIGAdapter
+      {...props}
+      displayName="TextLink"
+      HIGConstructor={VanillaTextLink}
+    >
       {adapterProps => (
         <div>
           <MapsEventListener
@@ -38,7 +42,7 @@ TextLinkAdapter.propTypes = {
   href: PropTypes.string,
   onClick: PropTypes.func,
   text: PropTypes.string.isRequired,
-  type: PropTypes.oneOf(HIG.TextLink.AvailableTypes)
+  type: PropTypes.oneOf(VanillaTextLink.AvailableTypes)
 };
 
 TextLinkAdapter.defaultProps = {

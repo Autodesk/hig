@@ -1,6 +1,6 @@
 import { mount } from "enzyme";
 import React from "react";
-import * as HIG from "hig-vanilla";
+import { GlobalNav as VanillaGlobalNav } from "hig-vanilla";
 import ProfileAdapter from "./ProfileAdapter";
 
 describe("TopNav ProfileAdapter", () => {
@@ -25,7 +25,7 @@ describe("TopNav ProfileAdapter", () => {
       );
       wrapper.props().higInstance.close();
     }).toImplementHIGInterfaceOf(
-      HIG.GlobalNav._partials.TopNav._partials.Profile
+      VanillaGlobalNav._partials.TopNav._partials.Profile
     );
   });
 });

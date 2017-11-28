@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import * as HIG from "hig-vanilla";
+import { IconButton as VanillaIconButton } from "hig-vanilla";
 
 import HIGAdapter, { MapsPropToMethod, MapsEventListener } from "./HIGAdapter";
 
@@ -8,7 +8,7 @@ function IconButtonAdapter(props) {
   return (
     <HIGAdapter
       displayName="IconButton"
-      HIGConstructor={HIG.IconButton}
+      HIGConstructor={VanillaIconButton}
       {...props}
     >
       {adapterProps => (
@@ -26,6 +26,11 @@ function IconButtonAdapter(props) {
           <MapsPropToMethod
             value={props.icon}
             setter="setIcon"
+            {...adapterProps}
+          />
+          <MapsPropToMethod
+            value={props.type}
+            setter="setType"
             {...adapterProps}
           />
           <MapsPropToMethod value={props.disabled} {...adapterProps}>
@@ -66,7 +71,8 @@ IconButtonAdapter.propTypes = {
   onBlur: PropTypes.func,
   onClick: PropTypes.func,
   onFocus: PropTypes.func,
-  onHover: PropTypes.func
+  onHover: PropTypes.func,
+  type: PropTypes.oneOf(VanillaIconButton.AvailableTypes)
 };
 
 IconButtonAdapter.defaultProps = {
@@ -75,7 +81,8 @@ IconButtonAdapter.defaultProps = {
   onBlur: undefined,
   onClick: undefined,
   onFocus: undefined,
-  onHover: undefined
+  onHover: undefined,
+  type: undefined
 };
 
 IconButtonAdapter.__docgenInfo = {
@@ -96,13 +103,16 @@ IconButtonAdapter.__docgenInfo = {
       description: "called when user moves focus away from the button"
     },
     onClick: {
-      description: " called when user clicks the button"
+      description: "called when user clicks the button"
     },
     onFocus: {
       description: "called when user moves focus onto the button"
     },
     onHover: {
       description: "called when user moves the mouse over the button"
+    },
+    type: {
+      description: "'primary' or 'flat'; the style of the button"
     }
   }
 };

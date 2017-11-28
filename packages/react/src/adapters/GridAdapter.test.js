@@ -1,6 +1,6 @@
 import { mount } from "enzyme";
 import React from "react";
-import * as HIG from "hig-vanilla";
+import { Grid as VanillaGrid } from "hig-vanilla";
 import GridAdapter from "./GridAdapter";
 import GridItemAdapter from "./GridItemAdapter";
 
@@ -12,6 +12,6 @@ describe("GridAdapter", () => {
           <GridItemAdapter fraction="one-quarter" />
         </GridAdapter>
       );
-    }).toImplementHIGInterfaceOf(HIG.Grid);
+    }).toImplementHIGInterfaceOf(VanillaGrid);
   });
 });

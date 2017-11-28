@@ -13,14 +13,21 @@
             margin-bottom: 50px;
         }
 
-        .test-container>div {
+        .test-container > div {
             margin: 10px 0;
         }
     </style>
 </head>
 
 <body>
-    <div class='test-container'>
+    <div class='test-container primary'>
+        <div class='test-typo-primary'></div>
+
+        <div class='test-mount-standard'></div>
+        <div class='test-mount-disabled'></div>
+    </div>
+
+    <div class='test-container flat'>
         <div class='test-typo-primary'></div>
 
         <div class='test-mount-standard'></div>
@@ -39,10 +46,6 @@
         <script>
             var Typo = new Hig.Typography();
 
-            // ----------------------------
-            // ICON BUTTON
-            // ----------------------------
-
             var TitleIconButton = new Hig.Typography({
                 "text": "Icon Button",
                 "type": "h2"
@@ -50,37 +53,42 @@
 
             TitleIconButton.mount('.test-typo-primary');
 
-            // Standard
+            Hig.IconButton.AvailableTypes.forEach(function(type) {
+                // Standard
 
-            var TitleIconButton = new Hig.Typography({ 
-                "text": "Standard", 
-                "type": "h3"
+                var TitleIconButton = new Hig.Typography({
+                    "text": `Standard - ${type}`,
+                    "type": "h3"
+                });
+                TitleIconButton.mount('.test-mount-standard');
+
+                var IconButtonStandard = new Hig.IconButton({
+                    "title": "Standard Icon Button",
+                    "icon": "assets",
+                    type: type
+                });
+
+                IconButtonStandard.mount(".test-mount-standard");
+
+                // Disabled
+
+                var TitleIconButton = new Hig.Typography({
+                    "text": `Disabled - ${type}`,
+                    "type": "h3"
+                });
+                TitleIconButton.mount('.test-mount-disabled');
+
+                var IconButtonDisabled = new Hig.IconButton({
+                    "title": "Disabled Icon Button",
+                    "icon": "settings",
+                    type: type
+                });
+
+                IconButtonDisabled.mount(".test-mount-disabled");
+
+                IconButtonDisabled.disable();
             });
-            TitleIconButton.mount('.test-mount-standard');
 
-            var IconButtonStandard = new Hig.IconButton({
-                "title": "Standard Icon Button",
-                "icon": "assets"
-            });
-
-            IconButtonStandard.mount(".test-mount-standard");
-
-            // Disabled
-
-            var TitleIconButton = new Hig.Typography({ 
-                "text": "Disabled", 
-                "type": "h3"
-            });
-            TitleIconButton.mount('.test-mount-disabled');
-
-            var IconButtonDisabled = new Hig.IconButton({
-                "title": "Disabled Icon Button",
-                "icon": "settings"
-            });
-
-            IconButtonDisabled.mount(".test-mount-disabled");
-
-            IconButtonDisabled.disable();
 
 
             // ----------------------------
@@ -96,8 +104,8 @@
 
             // Regular event callback tests
 
-            var TitleIconButton = new Hig.Typography({ 
-                "text": "All events are logged in console", 
+            var TitleIconButton = new Hig.Typography({
+                "text": "All events are logged in console",
                 "type": "h3"
             });
             TitleIconButton.mount('.test-js-events');
@@ -125,8 +133,8 @@
 
             // Disabled event callback tests
 
-            var TitleIconButton = new Hig.Typography({ 
-                "text": "Disabled buttons still trigger hover, focus, and click events", 
+            var TitleIconButton = new Hig.Typography({
+                "text": "Disabled buttons still trigger hover, focus, and click events",
                 "type": "h3"
             });
             TitleIconButton.mount('.test-js-events-disabled');
@@ -156,8 +164,8 @@
             // Event Disposing Button
             // Hover or Click should not register
 
-            var TitleIconButton = new Hig.Typography({ 
-                "text": "Events disposed button, no events should fire", 
+            var TitleIconButton = new Hig.Typography({
+                "text": "Events disposed button, no events should fire",
                 "type": "h3"
             });
             TitleIconButton.mount('.test-js-dispose');
@@ -185,8 +193,8 @@
             // Updated Button
             // Update the title and link of the button after creation
 
-            var TitleIconButton = new Hig.Typography({ 
-                "text": "Updated Title, Link (Autodesk.com), Size (large), Type (secondary)", 
+            var TitleIconButton = new Hig.Typography({
+                "text": "Updated Title, Link (Autodesk.com), Size (large), Type (secondary)",
                 "type": "h3"
             });
             TitleIconButton.mount('.test-js-update');
@@ -199,15 +207,16 @@
 
             UpdateButton.mount(".test-js-update");
 
-            UpdateButton.setTitle("Updated Title, Link (Autodesk.com), Size (large), Type (secondary)");
+            UpdateButton.setTitle("Updated Title, Link (Autodesk.com), Icon (settings), Type (flat)");
             UpdateButton.setLink("http://autodesk.com");
             UpdateButton.setIcon("settings");
+            UpdateButton.setType("flat");
 
             // Unmount a Button
             // Remove a button from the DOM after creation, this button should not render
 
-            var TitleIconButton = new Hig.Typography({ 
-                "text": "You should not see this button!", 
+            var TitleIconButton = new Hig.Typography({
+                "text": "You should not see this button!",
                 "type": "h3"
             });
             TitleIconButton.mount('.test-js-unmount');

@@ -16,13 +16,15 @@
   min-width: 36px;
   font-size: 14px;
 
-  // states
-  &:visited {
-    color: color(hig-gray-70);
+  &.hig__icon-button--flat {
+    border-color: transparent;
+
+    svg * {
+      fill: color(hig-slate-70);
+    }
   }
 
   &:hover {
-    background: none;
     border-color: color(hig-turquoise-50);
   }
 
@@ -35,12 +37,11 @@
     svg * {
       fill: color(hig-white);
     }
-  }
 
-  > .hig__icon-button__icon {
-    @include vendor-prefix(transform, translateX(-50%) translateY(-50%));
-    position: absolute;
-    top: 50%; left: 50%;
+    &.hig__icon-button--flat {
+      background: color(hig-slate-40);
+      border-color: color(hig-slate-40);
+    }
   }
 
   &.hig__icon-button--disabled {
@@ -57,5 +58,17 @@
     svg {
       opacity: 0.2;
     }
+
+    &.hig__icon-button--flat,
+    &.hig__icon-button--flat:hover,
+    &.hig__icon-button--flat:focus {
+      border-color: transparent;
+    }
   }
+}
+
+.hig__icon-button__icon {
+  @include vendor-prefix(transform, translateX(-50%) translateY(-50%));
+  position: absolute;
+  top: 50%; left: 50%;
 }

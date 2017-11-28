@@ -1,6 +1,6 @@
 import { mount } from "enzyme";
 import React from "react";
-import * as HIG from "hig-vanilla";
+import { Table as VanillaTable } from "hig-vanilla";
 import SlotCellAdapter from "./SlotCellAdapter";
 
 describe("SlotCellAdapter", () => {
@@ -12,7 +12,7 @@ describe("SlotCellAdapter", () => {
         </SlotCellAdapter>
       );
     }).toImplementHIGInterfaceOf(
-      HIG.Table._partials.TableRow._partials.SlotCell
+      VanillaTable._partials.TableRow._partials.SlotCell
     );
   });
 });

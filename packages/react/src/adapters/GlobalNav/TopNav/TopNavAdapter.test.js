@@ -1,6 +1,6 @@
 import { mount } from "enzyme";
 import React from "react";
-import * as HIG from "hig-vanilla";
+import { GlobalNav as VanillaGlobalNav } from "hig-vanilla";
 import TopNavAdapter from "./TopNavAdapter";
 import ShortcutAdapter from "./ShortcutAdapter";
 import SearchAdapter from "./SearchAdapter";
@@ -26,6 +26,6 @@ describe("TopNavAdapter", () => {
           <ProjectAccountSwitcherAdapter />
         </TopNavAdapter>
       );
-    }).toImplementHIGInterfaceOf(HIG.GlobalNav._partials.TopNav);
+    }).toImplementHIGInterfaceOf(VanillaGlobalNav._partials.TopNav);
   });
 });

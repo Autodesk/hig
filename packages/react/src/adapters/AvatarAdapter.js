@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-import * as HIG from "hig-vanilla";
+import { Avatar as VanillaAvatar } from "hig-vanilla";
 import HIGAdapter, { MapsPropToMethod } from "./HIGAdapter";
 
 function AvatarAdapter(props) {
   return (
-    <HIGAdapter {...props} displayName="Avatar" HIGConstructor={HIG.Avatar}>
+    <HIGAdapter {...props} displayName="Avatar" HIGConstructor={VanillaAvatar}>
       {adapterProps => (
         <div>
           <MapsPropToMethod
@@ -31,7 +31,7 @@ function AvatarAdapter(props) {
 
 AvatarAdapter.propTypes = {
   name: PropTypes.string.isRequired,
-  size: PropTypes.oneOf(HIG.Avatar.AvailableSizes).isRequired,
+  size: PropTypes.oneOf(VanillaAvatar.AvailableSizes).isRequired,
   image: PropTypes.string
 };
 

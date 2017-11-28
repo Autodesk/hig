@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import * as HIG from "hig-vanilla";
+import { GlobalNav as VanillaGlobalNav } from "hig-vanilla";
 import HIGAdapter, {
   MapsEventListener,
   MapsPropToMethod
@@ -13,7 +13,7 @@ function OptionAdapter(props) {
       {...props}
       displayName="Option"
       HIGConstructor={
-        HIG.GlobalNav._partials.TopNav._partials.Help._partials.Option
+        VanillaGlobalNav._partials.TopNav._partials.Help._partials.Option
       }
     >
       {adapterProps => (

@@ -1,7 +1,7 @@
 import React from "react";
 import { mount } from "enzyme";
 
-import * as HIG from "hig-vanilla";
+import { TextCellContent as VanillaTextCellContent } from "hig-vanilla";
 import TextCellContentAdapter from "./TextCellContentAdapter";
 
 describe("TextCellAdapter", () => {
@@ -15,6 +15,6 @@ describe("TextCellAdapter", () => {
           alignment="left"
         />
       );
-    }).toImplementHIGInterfaceOf(HIG.TextCellContent);
+    }).toImplementHIGInterfaceOf(VanillaTextCellContent);
   });
 });

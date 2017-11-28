@@ -1,7 +1,6 @@
 import React from "react";
 import { mount } from "enzyme";
-
-import * as HIG from "hig-vanilla";
+import { Flyout as VanillaFlyout } from "hig-vanilla";
 import FlyoutAdapter from "./FlyoutAdapter";
 
 describe("FlyoutAdapter", () => {
@@ -18,6 +17,6 @@ describe("FlyoutAdapter", () => {
         </FlyoutAdapter>
       );
       mount(<FlyoutAdapter higInstance={mockInstance} open={false} />);
-    }).toImplementHIGInterfaceOf(HIG.Flyout);
+    }).toImplementHIGInterfaceOf(VanillaFlyout);
   });
 });

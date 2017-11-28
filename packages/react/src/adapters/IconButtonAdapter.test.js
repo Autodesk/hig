@@ -1,7 +1,7 @@
 import React from "react";
 import { mount } from "enzyme";
 
-import * as HIG from "hig-vanilla";
+import { IconButton as VanillaIconButton } from "hig-vanilla";
 import IconButtonAdapter from "./IconButtonAdapter";
 
 describe("IconButtonAdapter", () => {
@@ -14,6 +14,7 @@ describe("IconButtonAdapter", () => {
           title="Test"
           link="#"
           icon="settings"
+          type="flat"
           onClick={() => {}}
           onHover={() => {}}
           onFocus={() => {}}
@@ -24,16 +25,11 @@ describe("IconButtonAdapter", () => {
       mount(
         <IconButtonAdapter
           higInstance={mockInstance}
-          disabled={false}
           title="Test"
-          link="#"
           icon="settings"
-          onClick={() => {}}
-          onHover={() => {}}
-          onFocus={() => {}}
-          onBlur={() => {}}
+          disabled={false}
         />
       );
-    }).toImplementHIGInterfaceOf(HIG.IconButton);
+    }).toImplementHIGInterfaceOf(VanillaIconButton);
   });
 });

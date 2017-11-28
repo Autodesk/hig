@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import * as HIG from "hig-vanilla";
+import { Flyout as VanillaFlyout } from "hig-vanilla";
 import HIGAdapter, {
   MapsPropToMethod,
   MapsEventListener,
@@ -10,7 +10,7 @@ import HIGAdapter, {
 
 function FlyoutAdapter(props) {
   return (
-    <HIGAdapter displayName="Flyout" HIGConstructor={HIG.Flyout} {...props}>
+    <HIGAdapter displayName="Flyout" HIGConstructor={VanillaFlyout} {...props}>
       {adapterProps => (
         <div>
           <MapsPropToMethod
@@ -39,7 +39,7 @@ function FlyoutAdapter(props) {
 }
 
 FlyoutAdapter.propTypes = {
-  anchorPoint: PropTypes.oneOf(HIG.Flyout.AvailableAnchorPoints),
+  anchorPoint: PropTypes.oneOf(VanillaFlyout.AvailableAnchorPoints),
   onClickOutside: PropTypes.func,
   open: PropTypes.bool,
   content: PropTypes.node,

@@ -1,6 +1,6 @@
 import React from "react";
 import * as PropTypes from "prop-types";
-import * as HIG from "hig-vanilla";
+import { Modal as VanillaModal } from "hig-vanilla";
 import ModalAdapter from "../../adapters/ModalAdapter";
 import { Button } from "../../hig-react";
 
@@ -34,7 +34,7 @@ Modal.propTypes = {
   children: PropTypes.node,
   onClose: PropTypes.func,
   open: PropTypes.bool,
-  style: PropTypes.oneOf(HIG.Modal.AvailableStyles),
+  style: PropTypes.oneOf(VanillaModal.AvailableStyles),
   title: PropTypes.string
 };
 

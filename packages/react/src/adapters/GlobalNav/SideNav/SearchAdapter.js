@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import * as HIG from "hig-vanilla";
+import { GlobalNav as VanillaGlobalNav } from "hig-vanilla";
 import HIGAdapter, {
   MapsPropToMethod,
   MapsEventListener,
@@ -12,7 +12,7 @@ function SearchAdapter(props) {
   return (
     <HIGAdapter
       displayName="Search"
-      HIGConstructor={HIG.GlobalNav._partials.SideNav._partials.Search}
+      HIGConstructor={VanillaGlobalNav._partials.SideNav._partials.Search}
       {...props}
     >
       {adapterProps => (
