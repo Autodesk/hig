@@ -9,7 +9,11 @@ import HIGAdapter, {
 
 function TextAreaAdapter(props) {
   return (
-    <HIGAdapter {...props} displayName="TextArea" HIGConstructor={VanillaTextArea}>
+    <HIGAdapter
+      {...props}
+      displayName="TextArea"
+      HIGConstructor={VanillaTextArea}
+    >
       {adapterProps => (
         <div>
           <ControlsProp

@@ -5,7 +5,11 @@ import HIGAdapter, { MapsPropToMethod, MapsEventListener } from "./HIGAdapter";
 
 function TextLinkAdapter(props) {
   return (
-    <HIGAdapter {...props} displayName="TextLink" HIGConstructor={VanillaTextLink}>
+    <HIGAdapter
+      {...props}
+      displayName="TextLink"
+      HIGConstructor={VanillaTextLink}
+    >
       {adapterProps => (
         <div>
           <MapsEventListener

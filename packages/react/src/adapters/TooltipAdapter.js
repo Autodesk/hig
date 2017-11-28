@@ -10,7 +10,11 @@ import HIGAdapter, {
 
 function TooltipAdapter(props) {
   return (
-    <HIGAdapter displayName="Tooltip" HIGConstructor={VanillaTooltip} {...props}>
+    <HIGAdapter
+      displayName="Tooltip"
+      HIGConstructor={VanillaTooltip}
+      {...props}
+    >
       {adapterProps => (
         <div>
           <MapsPropToMethod
