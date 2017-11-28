@@ -101,6 +101,11 @@ class Playground extends React.Component {
     this.filterSearchInput(input.value);
   };
 
+  onSubmit = selection => {
+    this.setState({ searchInputValue: selection.value });
+    this.filterSearchInput(selection.value);
+  };
+
   filterSearchInput = value => {
     const filteredSearchOptions =
       value.length > 0
@@ -162,6 +167,7 @@ class Playground extends React.Component {
       onAccountClick: this.accountClicked,
       onProjectClick: this.projectClicked,
       onSearchInput: this.onSearchInput,
+      onSubmit: this.onSubmit,
       filteredSearchOptions: this.state.filteredSearchOptions,
       searchInputValue: this.state.searchInputValue,
       help: helpProps,

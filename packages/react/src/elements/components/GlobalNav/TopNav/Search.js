@@ -37,6 +37,10 @@ class Search extends Component {
     this.showOptions();
   };
 
+  onClick = value => {
+    this._submitInput(value);
+  };
+
   getDefaultValue() {
     const { defaultValue, value } = this.props;
 
@@ -88,12 +92,13 @@ class Search extends Component {
         this._arrowUp();
         break;
       case 13:
-        this._submitInput();
+        this._submitInput(
+          this.props.options[this.state.focusedOptionIndex].label
+        );
         break;
       default:
-        console.log("no focused option");
+        console.log("unsupported key code", event.keyCode);
     }
-    console.log("keycode", event.keyCode);
   };
 
   _setValue(value) {
@@ -129,9 +134,9 @@ class Search extends Component {
     }
   }
 
-  _submitInput() {
-    this.props.onSearchInput({
-      value: this.props.options[this.state.focusedOptionIndex].label
+  _submitInput(value) {
+    this.props.onSubmit({
+      value
     });
     this.hideOptions();
   }
@@ -156,10 +161,7 @@ class Search extends Component {
                 key={option.value}
                 focused={index === this.state.focusedOptionIndex}
                 {...option}
-                // selected={option.value === selectedOption.value}
-                onClick={() => {
-                  console.log("onClick");
-                }}
+                onClick={this.onClick}
                 onHover={() => {
                   console.log("onHover");
                 }}

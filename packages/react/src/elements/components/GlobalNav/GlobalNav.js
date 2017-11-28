@@ -84,6 +84,7 @@ class GlobalNav extends Component {
             <Search
               options={this.props.topNav.filteredSearchOptions}
               onSearchInput={this.props.topNav.onSearchInput}
+              onSubmit={this.props.topNav.onSubmit}
               showOptions={this.props.topNav.filteredSearchOptions.length > 0}
               value={this.props.topNav.searchInputValue}
             />
