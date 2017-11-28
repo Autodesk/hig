@@ -33,7 +33,7 @@ import TextLinkSection from "./sections/TextLinkSection";
 import TooltipSection from "./sections/TooltipSection";
 import TypographySection from "./sections/TypographySection";
 
-const searchOptions = [
+const defaultSearchOptions = [
   {
     label: "foo",
     value: "foo value"
@@ -55,8 +55,8 @@ class Playground extends React.Component {
       activeModuleId: "1-2-5",
       isHelpOpen: false,
       isSideNavOpen: true,
-      filteredSearchOptions: [],
-      searchInputValue: ""
+      searchOptions: [],
+      searchValue: ""
     };
   }
 
@@ -97,24 +97,24 @@ class Playground extends React.Component {
   };
 
   onSearchInput = input => {
-    this.setState({ searchInputValue: input.value });
+    this.setState({ searchValue: input.value });
     this.filterSearchInput(input.value);
   };
 
-  onSubmit = selection => {
-    this.setState({ searchInputValue: selection.value });
+  onSearchSubmit = selection => {
+    this.setState({ searchValue: selection.value });
     this.filterSearchInput(selection.value);
   };
 
   filterSearchInput = value => {
-    const filteredSearchOptions =
+    const searchOptions =
       value.length > 0
-        ? searchOptions.filter(option =>
+        ? defaultSearchOptions.filter(option =>
             option.label.toLowerCase().startsWith(value.toLowerCase())
           )
         : [];
 
-    this.setState({ filteredSearchOptions });
+    this.setState({ searchOptions });
   };
 
   render() {
@@ -167,9 +167,9 @@ class Playground extends React.Component {
       onAccountClick: this.accountClicked,
       onProjectClick: this.projectClicked,
       onSearchInput: this.onSearchInput,
-      onSubmit: this.onSubmit,
-      filteredSearchOptions: this.state.filteredSearchOptions,
-      searchInputValue: this.state.searchInputValue,
+      onSearchSubmit: this.onSearchSubmit,
+      searchOptions: this.state.searchOptions,
+      searchValue: this.state.searchValue,
       help: helpProps,
       logo,
       onLogoClick() {

@@ -19,11 +19,6 @@ function SearchAdapter(props) {
       {adapterProps => (
         <div>
           <MountedByHIGParent mounter="addSearch" {...adapterProps} />
-          {/* <MapsEventListener
-            listener="onInput"
-            handler={props.onInput}
-            {...adapterProps}
-          /> */}
           <ControlsProp
             listener="onInput"
             handler={props.onInput}

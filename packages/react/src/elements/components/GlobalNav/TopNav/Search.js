@@ -27,47 +27,23 @@ class Search extends Component {
 
     this.state = {
       showOptions: false,
-      value: this.getDefaultValue(),
+      value: undefined,
       controlled
     };
   }
 
   onInput = event => {
-    this.props.onSearchInput({ value: event.target.value });
-    this.showOptions();
+    this.props.onInput({ value: event.target.value });
+    this.setState({ showOptions: true });
   };
 
   onClick = value => {
     this._submitInput(value);
   };
 
-  getDefaultValue() {
-    const { defaultValue, value } = this.props;
-
-    if (value !== undefined) {
-      return value;
-    } else if (defaultValue !== undefined) {
-      return defaultValue;
-    }
-    return "";
-  }
-
-  getRenderedValue() {
-    const { value } = this.props;
-
-    if (value !== undefined) {
-      return value;
-    }
-    return this.state.value;
-  }
-
   hideOptions = () => {
     this.setState({ focusedOptionIndex: undefined });
     this.setState({ showOptions: false });
-  };
-
-  showOptions = () => {
-    this.setState({ showOptions: true });
   };
 
   hideClearIcon = () => {
@@ -80,7 +56,7 @@ class Search extends Component {
 
   handleClearIconClick = () => {
     this._setValue("");
-    this.props.onSearchInput({ value: "" });
+    this.props.onInput({ value: "" });
     this.setState({ focusedOptionIndex: undefined });
   };
 
@@ -88,17 +64,25 @@ class Search extends Component {
     switch (event.keyCode) {
       case 40:
         event.preventDefault();
-        this._arrowDown();
+        this._focusPrevious();
+        break;
+      case 37:
+        event.preventDefault();
+        this._focusPrevious();
         break;
       case 38:
         event.preventDefault();
-        this._arrowUp();
+        this._focusNext();
+        break;
+      case 39:
+        event.preventDefault();
+        this._focusNext();
         break;
       case 13:
         this._submitInput(event.target.value);
         break;
       default:
-        console.log("unsupported key code", event.keyCode);
+        break;
     }
   };
 
@@ -110,7 +94,7 @@ class Search extends Component {
     }
   }
 
-  _arrowDown() {
+  _focusPrevious() {
     if (
       this.state.focusedOptionIndex === undefined ||
       this.state.focusedOptionIndex >= this.props.options.length - 1
@@ -122,7 +106,7 @@ class Search extends Component {
     }
   }
 
-  _arrowUp() {
+  _focusNext() {
     if (
       this.state.focusedOptionIndex === undefined ||
       this.state.focusedOptionIndex <= 0
@@ -151,14 +135,14 @@ class Search extends Component {
     return (
       <SearchAdapter
         {...this.props}
-        value={this.getRenderedValue()}
+        value={this.props.value}
         onInput={this.onInput}
         showOptions={this.props.options.length > 0 && this.state.showOptions}
         onBlur={this.hideClearIcon}
         onFocus={this.showClearIcon}
         showClearIcon={this.state.clearIconVisible}
         onClearIconClick={this.handleClearIconClick}
-        onClickOutside={this.handleClearIconClick}
+        onClickOutside={this.hideOptions}
         onKeydown={this.handleKeydown}
       >
         {this.props.options.length > 0

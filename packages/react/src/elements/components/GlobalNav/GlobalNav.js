@@ -82,11 +82,10 @@ class GlobalNav extends Component {
             {...this.props.topNav}
           >
             <Search
-              options={this.props.topNav.filteredSearchOptions}
-              onSearchInput={this.props.topNav.onSearchInput}
-              onSubmit={this.props.topNav.onSubmit}
-              showOptions={this.props.topNav.filteredSearchOptions.length > 0}
-              value={this.props.topNav.searchInputValue}
+              options={this.props.topNav.searchOptions}
+              onInput={this.props.topNav.onSearchInput}
+              onSubmit={this.props.topNav.onSearchSubmit}
+              value={this.props.topNav.searchValue}
             />
             {this.showProjectAccountSwitcher() ? (
               <ProjectAccountSwitcher
