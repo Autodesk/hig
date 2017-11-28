@@ -62,6 +62,7 @@ class Search extends Component {
   }
 
   hideOptions = () => {
+    this.setState({ focusedOptionIndex: undefined });
     this.setState({ showOptions: false });
   };
 
@@ -86,15 +87,15 @@ class Search extends Component {
   handleKeydown = event => {
     switch (event.keyCode) {
       case 40:
+        event.preventDefault();
         this._arrowDown();
         break;
       case 38:
+        event.preventDefault();
         this._arrowUp();
         break;
       case 13:
-        this._submitInput(
-          this.props.options[this.state.focusedOptionIndex].label
-        );
+        this._submitInput(event.target.value);
         break;
       default:
         console.log("unsupported key code", event.keyCode);
@@ -134,7 +135,12 @@ class Search extends Component {
     }
   }
 
-  _submitInput(value) {
+  _submitInput(selectedValue) {
+    const value =
+      this.state.focusedOptionIndex !== undefined
+        ? this.props.options[this.state.focusedOptionIndex].label
+        : selectedValue;
+
     this.props.onSubmit({
       value
     });
@@ -162,9 +168,6 @@ class Search extends Component {
                 focused={index === this.state.focusedOptionIndex}
                 {...option}
                 onClick={this.onClick}
-                onHover={() => {
-                  console.log("onHover");
-                }}
               />
             ))
           : null}
