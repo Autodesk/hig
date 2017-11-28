@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-import * as HIG from "hig-vanilla";
+import { Icon as VanillaIcon } from "hig-vanilla";
 import HIGAdapter, { MapsPropToMethod } from "./HIGAdapter";
 
 function IconAdapter(props) {
   return (
-    <HIGAdapter {...props} displayName="Icon" HIGConstructor={HIG.Icon}>
+    <HIGAdapter {...props} displayName="Icon" HIGConstructor={VanillaIcon}>
       {adapterProps => (
         <MapsPropToMethod
           setter="setNameOrSVG"

@@ -1,5 +1,5 @@
 import React from "react";
-import * as HIG from "hig-vanilla";
+import { Table as VanillaTable } from "hig-vanilla";
 import * as PropTypes from "prop-types";
 import HIGAdapter, {
   MountsAnyChild,
@@ -11,7 +11,7 @@ function SlotCellAdapter(props) {
     <HIGAdapter
       {...props}
       displayName="Slot"
-      HIGConstructor={HIG.Table._partials.TableRow._partials.SlotCell}
+      HIGConstructor={VanillaTable._partials.TableRow._partials.SlotCell}
     >
       {adapterProps => (
         <div>

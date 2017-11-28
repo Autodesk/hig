@@ -1,4 +1,4 @@
-import * as HIG from "hig-vanilla";
+import { Table as VanillaTable } from "hig-vanilla";
 import * as PropTypes from "prop-types";
 import React, { Component } from "react";
 import HeaderCheckbox from "./HeaderCheckbox";
@@ -113,7 +113,7 @@ SelectableTable.__docgenInfo = {
 };
 
 SelectableTable.propTypes = {
-  density: PropTypes.oneOf(HIG.Table.AvailableDensities),
+  density: PropTypes.oneOf(VanillaTable.AvailableDensities),
   data: PropTypes.arrayOf(PropTypes.object),
   onRowSelectionChange: PropTypes.func,
   children: PropTypes.func,

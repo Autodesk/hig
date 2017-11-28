@@ -1,7 +1,7 @@
 import React from "react";
 import { mount } from "enzyme";
 
-import * as HIG from "hig-vanilla";
+import { GlobalNav as VanillaGlobalNav } from "hig-vanilla";
 import SubmoduleAdapter from "./SubmoduleAdapter";
 
 describe("SubmoduleAdapter", () => {
@@ -22,8 +22,8 @@ describe("SubmoduleAdapter", () => {
       mockInstance.deactivate();
       mockInstance.hide();
     }).toImplementHIGInterfaceOf(
-      HIG.GlobalNav._partials.SideNav._partials.Group._partials.Module._partials
-        .Submodule
+      VanillaGlobalNav._partials.SideNav._partials.Group._partials.Module
+        ._partials.Submodule
     );
   });
 });

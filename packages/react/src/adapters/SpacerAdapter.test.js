@@ -1,6 +1,6 @@
 import { mount } from "enzyme";
 import React from "react";
-import * as HIG from "hig-vanilla";
+import { Spacer as VanillaSpacer } from "hig-vanilla";
 import SpacerAdapter from "./SpacerAdapter";
 
 describe("SpacerAdapter", () => {
@@ -16,6 +16,6 @@ describe("SpacerAdapter", () => {
           <h1>Slot content</h1>
         </SpacerAdapter>
       );
-    }).toImplementHIGInterfaceOf(HIG.Spacer);
+    }).toImplementHIGInterfaceOf(VanillaSpacer);
   });
 });

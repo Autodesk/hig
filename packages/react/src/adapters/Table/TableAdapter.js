@@ -1,5 +1,5 @@
 import React from "react";
-import * as HIG from "hig-vanilla";
+import { Table as VanillaTable } from "hig-vanilla";
 
 import HIGAdapter, {
   MapsPropToMethod,
@@ -22,7 +22,7 @@ function TableAdapter(props) {
     React.Children.toArray(props.children)
   );
   return (
-    <HIGAdapter displayName="Table" HIGConstructor={HIG.Table} {...props}>
+    <HIGAdapter displayName="Table" HIGConstructor={VanillaTable} {...props}>
       {adapterProps => (
         <div>
           <MapsPropToMethod

@@ -1,6 +1,6 @@
 import React from "react";
 import { mount } from "enzyme";
-import * as Hig from "hig-vanilla";
+import { ProgressRing as VanillaProgressRing } from "hig-vanilla";
 import ProgressRingAdapter from "./ProgressRingAdapter";
 
 describe("ProgressRing", () => {
@@ -19,6 +19,6 @@ describe("ProgressRing", () => {
           percentComplete={0}
         />
       );
-    }).toImplementHIGInterfaceOf(Hig.ProgressRing);
+    }).toImplementHIGInterfaceOf(VanillaProgressRing);
   });
 });

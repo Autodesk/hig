@@ -1,7 +1,7 @@
 import React from "react";
 import { mount } from "enzyme";
 
-import * as HIG from "hig-vanilla";
+import { GlobalNav as VanillaGlobalNav } from "hig-vanilla";
 import GlobalNavAdapter from "./GlobalNavAdapter";
 import TopNavAdapter from "./TopNav/TopNavAdapter";
 import SideNavAdapter from "./SideNav/SideNavAdapter";
@@ -23,6 +23,6 @@ describe("GlobalNavAdapter", () => {
         </GlobalNavAdapter>
       );
       wrapper.props().higInstance.hideSideNav();
-    }).toImplementHIGInterfaceOf(HIG.GlobalNav);
+    }).toImplementHIGInterfaceOf(VanillaGlobalNav);
   });
 });

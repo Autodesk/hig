@@ -1,7 +1,7 @@
 import React from "react";
 import { mount } from "enzyme";
 
-import * as HIG from "hig-vanilla";
+import { Tooltip as VanillaTooltip } from "hig-vanilla";
 import TooltipAdapter from "./TooltipAdapter";
 
 describe("TooltipAdapter", () => {
@@ -19,6 +19,6 @@ describe("TooltipAdapter", () => {
         </TooltipAdapter>
       );
       mount(<TooltipAdapter higInstance={mockInstance} open={false} />);
-    }).toImplementHIGInterfaceOf(HIG.Tooltip);
+    }).toImplementHIGInterfaceOf(VanillaTooltip);
   });
 });

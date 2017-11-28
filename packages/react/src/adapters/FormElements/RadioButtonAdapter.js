@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import * as HIG from "hig-vanilla";
+import { RadioButton as VanillaRadioButton } from "hig-vanilla";
 import HIGAdapter, {
   MapsEventListener,
   MapsPropToMethod,
@@ -12,7 +12,7 @@ function RadioButtonAdapter(props) {
     <HIGAdapter
       {...props}
       displayName="RadioButton"
-      HIGConstructor={HIG.RadioButton}
+      HIGConstructor={VanillaRadioButton}
     >
       {adapterProps => (
         <div>

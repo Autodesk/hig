@@ -1,6 +1,6 @@
 import { mount } from "enzyme";
 import React from "react";
-import * as HIG from "hig-vanilla";
+import { Grid as VanillaGrid } from "hig-vanilla";
 import GridItemAdapter from "./GridItemAdapter";
 
 describe("GridItemAdapter", () => {
@@ -11,6 +11,6 @@ describe("GridItemAdapter", () => {
           <h1>Slot content</h1>
         </GridItemAdapter>
       );
-    }).toImplementHIGInterfaceOf(HIG.Grid._partials.GridItem);
+    }).toImplementHIGInterfaceOf(VanillaGrid._partials.GridItem);
   });
 });

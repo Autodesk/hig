@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import * as HIG from "hig-vanilla";
+import { Checkbox as VanillaCheckbox } from "hig-vanilla";
 import HIGAdapter, {
   MapsEventListener,
   MapsPropToMethod,
@@ -9,7 +9,11 @@ import HIGAdapter, {
 
 function CheckboxAdapter(props) {
   return (
-    <HIGAdapter {...props} displayName="Checkbox" HIGConstructor={HIG.Checkbox}>
+    <HIGAdapter
+      {...props}
+      displayName="Checkbox"
+      HIGConstructor={VanillaCheckbox}
+    >
       {adapterProps => (
         <div>
           <ControlsProp

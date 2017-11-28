@@ -1,7 +1,7 @@
 import React from "react";
 import { mount } from "enzyme";
 
-import * as HIG from "hig-vanilla";
+import { GlobalNav as VanillaGlobalNav } from "hig-vanilla";
 import GlobalNavAdapter from "../GlobalNavAdapter";
 import SideNavAdapter from "./SideNavAdapter";
 import GroupAdapter from "./GroupAdapter";
@@ -18,7 +18,7 @@ describe("ModuleAdapter", () => {
             <GroupAdapter>
               <ModuleAdapter
                 higInstance={mockInstance}
-                title="Foo"
+                title="GlobalNav"
                 icon="settings"
                 link="http://autodesk.com"
                 onClick={() => {}}
@@ -39,7 +39,7 @@ describe("ModuleAdapter", () => {
       mockInstance.show();
       mockInstance.hide();
     }).toImplementHIGInterfaceOf(
-      HIG.GlobalNav._partials.SideNav._partials.Group._partials.Module
+      VanillaGlobalNav._partials.SideNav._partials.Group._partials.Module
     );
   });
 });

@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-import * as HIG from "hig-vanilla";
+import { Button as VanillaButton } from "hig-vanilla";
 import HIGAdapter, { MapsPropToMethod, MapsEventListener } from "./HIGAdapter";
 
 function ButtonAdapter(props) {
   return (
-    <HIGAdapter displayName="Button" HIGConstructor={HIG.Button} {...props}>
+    <HIGAdapter displayName="Button" HIGConstructor={VanillaButton} {...props}>
       {adapterProps => (
         <div>
           <MapsPropToMethod
@@ -80,11 +80,11 @@ ButtonAdapter.propTypes = {
   onClick: PropTypes.func,
   onFocus: PropTypes.func,
   onHover: PropTypes.func,
-  size: PropTypes.oneOf(HIG.Button.AvailableSizes),
+  size: PropTypes.oneOf(VanillaButton.AvailableSizes),
   target: PropTypes.oneOf(["_self", "_blank", "_parent", "_top"]),
   title: PropTypes.string.isRequired,
-  type: PropTypes.oneOf(HIG.Button.AvailableTypes),
-  width: PropTypes.oneOf(HIG.Button.AvailableWidths),
+  type: PropTypes.oneOf(VanillaButton.AvailableTypes),
+  width: PropTypes.oneOf(VanillaButton.AvailableWidths),
   icon: PropTypes.string
 };
 

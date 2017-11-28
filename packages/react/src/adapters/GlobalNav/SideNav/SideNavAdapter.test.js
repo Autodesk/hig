@@ -1,7 +1,7 @@
 import React from "react";
 import { mount } from "enzyme";
 
-import * as HIG from "hig-vanilla";
+import { GlobalNav as VanillaGlobalNav } from "hig-vanilla";
 import SideNavAdapter from "./SideNavAdapter";
 import LinkAdapter from "./LinkAdapter";
 import SearchAdapter from "./SearchAdapter";
@@ -27,6 +27,6 @@ describe("SideNavAdapter", () => {
           <h1>Slot content</h1>
         </SideNavAdapter>
       );
-    }).toImplementHIGInterfaceOf(HIG.GlobalNav._partials.SideNav);
+    }).toImplementHIGInterfaceOf(VanillaGlobalNav._partials.SideNav);
   });
 });

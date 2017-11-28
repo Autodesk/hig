@@ -1,11 +1,11 @@
 import * as PropTypes from "prop-types";
 import React, { Component } from "react";
-import * as HIG from "hig-vanilla";
+import { Tooltip as VanillaTooltip } from "hig-vanilla";
 import TooltipAdapter from "../../adapters/TooltipAdapter";
 
 class Tooltip extends Component {
   static propTypes = {
-    anchorPoint: PropTypes.oneOf(HIG.Tooltip.AvailableAnchorPoints),
+    anchorPoint: PropTypes.oneOf(VanillaTooltip.AvailableAnchorPoints),
     children: PropTypes.node,
     content: PropTypes.string
   };

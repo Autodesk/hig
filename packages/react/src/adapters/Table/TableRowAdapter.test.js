@@ -1,7 +1,7 @@
 import React from "react";
 import { mount } from "enzyme";
 
-import * as HIG from "hig-vanilla";
+import { Table as VanillaTable } from "hig-vanilla";
 
 import TableRowAdapter from "./TableRowAdapter";
 import SlotCell from "./SlotCellAdapter";
@@ -27,6 +27,6 @@ describe("TableRowAdapter", () => {
           <TextCell text="test" detail="new detail" alignment="right" />
         </TableRowAdapter>
       );
-    }).toImplementHIGInterfaceOf(HIG.Table._partials.TableRow);
+    }).toImplementHIGInterfaceOf(VanillaTable._partials.TableRow);
   });
 });

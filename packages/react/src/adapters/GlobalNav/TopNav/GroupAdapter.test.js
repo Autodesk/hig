@@ -1,6 +1,6 @@
 import { mount } from "enzyme";
 import React from "react";
-import * as HIG from "hig-vanilla";
+import { GlobalNav as VanillaGlobalNav } from "hig-vanilla";
 import GroupAdapter from "./GroupAdapter";
 import OptionAdapter from "./OptionAdapter";
 
@@ -13,7 +13,7 @@ describe("Help GroupAdapter", () => {
         </GroupAdapter>
       );
     }).toImplementHIGInterfaceOf(
-      HIG.GlobalNav._partials.TopNav._partials.Help._partials.Group
+      VanillaGlobalNav._partials.TopNav._partials.Help._partials.Group
     );
   });
 });

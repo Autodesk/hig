@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import * as HIG from "hig-vanilla";
+import { GlobalNav as VanillaGlobalNav } from "hig-vanilla";
 import HIGAdapter, {
   MapsPropToMethod,
   MapsEventListener,
@@ -11,7 +11,7 @@ function LinkAdapter(props) {
   return (
     <HIGAdapter
       displayName="Link"
-      HIGConstructor={HIG.GlobalNav._partials.SideNav._partials.Link}
+      HIGConstructor={VanillaGlobalNav._partials.SideNav._partials.Link}
       {...props}
     >
       {adapterProps => (

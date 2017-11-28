@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import * as HIG from "hig-vanilla";
+import { GlobalNav as VanillaGlobalNav } from "hig-vanilla";
 import HIGAdapter, {
   MountedByHIGParent,
   MountsHIGChildList
@@ -10,7 +10,7 @@ function TabsAdapter(props) {
   return (
     <HIGAdapter
       displayName="Tabs"
-      HIGConstructor={HIG.GlobalNav._partials.SubNav._partials.Tabs}
+      HIGConstructor={VanillaGlobalNav._partials.SubNav._partials.Tabs}
       {...props}
     >
       {adapterProps => (

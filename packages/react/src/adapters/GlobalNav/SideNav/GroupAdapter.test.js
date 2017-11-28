@@ -1,7 +1,7 @@
 import React from "react";
 import { mount } from "enzyme";
 
-import * as HIG from "hig-vanilla";
+import { GlobalNav as VanillaGlobalNav } from "hig-vanilla";
 import GroupAdapter from "./GroupAdapter";
 import ModuleAdapter from "./ModuleAdapter";
 
@@ -18,7 +18,7 @@ describe("GroupAdapter", () => {
       mockInstance.show();
       mockInstance.hide();
     }).toImplementHIGInterfaceOf(
-      HIG.GlobalNav._partials.SideNav._partials.Group
+      VanillaGlobalNav._partials.SideNav._partials.Group
     );
   });
 });

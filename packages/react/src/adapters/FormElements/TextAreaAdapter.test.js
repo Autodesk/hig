@@ -1,6 +1,6 @@
 import React from "react";
 import { mount } from "enzyme";
-import * as HIG from "hig-vanilla";
+import { TextArea as VanillaTextArea } from "hig-vanilla";
 import TextAreaAdapter from "./TextAreaAdapter";
 
 describe("TextAreaAdapter", () => {
@@ -9,7 +9,7 @@ describe("TextAreaAdapter", () => {
       mount(
         <TextAreaAdapter
           higInstance={spiedInstance}
-          value="Foo"
+          value="TextArea"
           instructions="Type in your favorite word"
           placeholder="Fizz"
           label="Favorite word"
@@ -29,6 +29,6 @@ describe("TextAreaAdapter", () => {
           required=""
         />
       );
-    }).toImplementHIGInterfaceOf(HIG.TextArea);
+    }).toImplementHIGInterfaceOf(VanillaTextArea);
   });
 });

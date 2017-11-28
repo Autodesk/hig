@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import * as HIG from "hig-vanilla";
+import { Grid as VanillaGrid } from "hig-vanilla";
 import HIGAdapter, {
   MapsPropToMethod,
   MountedByHIGParentList,
@@ -12,7 +12,7 @@ function GridItemAdapter(props) {
     <HIGAdapter
       {...props}
       displayName="GridItem"
-      HIGConstructor={HIG.Grid._partials.GridItem}
+      HIGConstructor={VanillaGrid._partials.GridItem}
     >
       {adapterProps => (
         <div>
@@ -34,7 +34,7 @@ function GridItemAdapter(props) {
 }
 
 GridItemAdapter.propTypes = {
-  fraction: PropTypes.oneOf(HIG.Grid._partials.GridItem.AvailableFractions)
+  fraction: PropTypes.oneOf(VanillaGrid._partials.GridItem.AvailableFractions)
     .isRequired,
   children: PropTypes.node
 };

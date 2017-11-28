@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-import * as HIG from "hig-vanilla";
+import { Modal as VanillaModal, Button as VanillaButton } from "hig-vanilla";
 import HIGAdapter, {
   MapsPropToMethod,
   MapsEventListener,
@@ -21,7 +21,7 @@ class ModalAdapter extends Component {
     });
 
     this.buttons = nextButtons.map(buttonProps => {
-      const button = new HIG.Button(buttonProps);
+      const button = new VanillaButton(buttonProps);
 
       higInstance.addButton(button);
 
@@ -33,7 +33,7 @@ class ModalAdapter extends Component {
     return (
       <HIGAdapter
         displayName="Modal"
-        HIGConstructor={HIG.Modal}
+        HIGConstructor={VanillaModal}
         {...this.props}
       >
         {adapterProps => (
@@ -87,7 +87,7 @@ ModalAdapter.propTypes = {
   onCloseClick: PropTypes.func,
   onOverlayClick: PropTypes.func,
   open: PropTypes.bool,
-  style: PropTypes.oneOf(HIG.Modal.AvailableStyles),
+  style: PropTypes.oneOf(VanillaModal.AvailableStyles),
   title: PropTypes.string
 };
 

@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import * as HIG from "hig-vanilla";
+import { Typography as VanillaTypography } from "hig-vanilla";
 import HIGAdapter, { MapsPropToMethod } from "./HIGAdapter";
 
 function TypographyAdapter(props) {
@@ -8,7 +8,7 @@ function TypographyAdapter(props) {
     <HIGAdapter
       {...props}
       displayName="Typography"
-      HIGConstructor={HIG.Typography}
+      HIGConstructor={VanillaTypography}
     >
       {adapterProps => (
         <div>
