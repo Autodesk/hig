@@ -1,6 +1,6 @@
 {
   "name": "hig-vanilla",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "Stateless implementation in pure CSS, HTML and JS with no framework dependecies",
   "main": "lib/hig.js",
   "css": "lib/hig.css",
@@ -63,6 +63,6 @@
     "webpack": "^3.5.5"
   },
   "dependencies": {
-    "hig-interface": "^0.1.7"
+    "hig-interface": "^0.1.8"
   }
 }
