@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import * as HIG from "hig-vanilla";
+import { GlobalNav as VanillaGlobalNav } from "hig-vanilla";
 import HIGAdapter, {
   MapsPropToMethod,
   MapsEventListener,
@@ -11,7 +11,7 @@ function ShortcutAdapter(props) {
   return (
     <HIGAdapter
       displayName="Shortcut"
-      HIGConstructor={HIG.GlobalNav._partials.TopNav._partials.Shortcut}
+      HIGConstructor={VanillaGlobalNav._partials.TopNav._partials.Shortcut}
       {...props}
     >
       {adapterProps => (

@@ -1,6 +1,6 @@
 import { mount } from "enzyme";
 import React from "react";
-import * as HIG from "hig-vanilla";
+import { GlobalNav as VanillaGlobalNav } from "hig-vanilla";
 import LinkAdapter from "./LinkAdapter";
 
 describe("Help LinkAdapter", () => {
@@ -16,7 +16,7 @@ describe("Help LinkAdapter", () => {
         />
       );
     }).toImplementHIGInterfaceOf(
-      HIG.GlobalNav._partials.SideNav._partials.Link
+      VanillaGlobalNav._partials.SideNav._partials.Link
     );
   });
 });

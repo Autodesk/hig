@@ -1,11 +1,11 @@
 import * as PropTypes from "prop-types";
 import React, { Component } from "react";
-import * as HIG from "hig-vanilla";
+import { Flyout as VanillaFlyout } from "hig-vanilla";
 import FlyoutAdapter from "../../adapters/FlyoutAdapter";
 
 class Flyout extends Component {
   static propTypes = {
-    anchorPoint: PropTypes.oneOf(HIG.Flyout.AvailableAnchorPoints),
+    anchorPoint: PropTypes.oneOf(VanillaFlyout.AvailableAnchorPoints),
     children: PropTypes.node,
     content: PropTypes.node
   };

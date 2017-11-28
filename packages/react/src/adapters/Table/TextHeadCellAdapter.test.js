@@ -1,7 +1,7 @@
 import React from "react";
 import { mount } from "enzyme";
 
-import * as HIG from "hig-vanilla";
+import { Table as VanillaTable } from "hig-vanilla";
 import TextHeadCellAdapter from "./TextHeadCellAdapter";
 
 describe("TextHeadCellAdapter", () => {
@@ -16,7 +16,7 @@ describe("TextHeadCellAdapter", () => {
         />
       );
     }).toImplementHIGInterfaceOf(
-      HIG.Table._partials.TableHead._partials.TextHeadCell
+      VanillaTable._partials.TableHead._partials.TextHeadCell
     );
   });
 });

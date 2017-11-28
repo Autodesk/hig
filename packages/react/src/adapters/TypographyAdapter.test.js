@@ -1,7 +1,7 @@
 import React from "react";
 import { mount } from "enzyme";
 
-import * as HIG from "hig-vanilla";
+import { Typography as VanillaTypography } from "hig-vanilla";
 import TypographyAdapter from "./TypographyAdapter";
 
 describe("TypographyAdapter", () => {
@@ -17,6 +17,6 @@ describe("TypographyAdapter", () => {
 
       // Not implementing applyTypographyToElement
       mockInstance.applyTypographyToElement(document.createElement("div"));
-    }).toImplementHIGInterfaceOf(HIG.Typography);
+    }).toImplementHIGInterfaceOf(VanillaTypography);
   });
 });

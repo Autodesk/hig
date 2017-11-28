@@ -1,6 +1,6 @@
 import React from "react";
 import { mount } from "enzyme";
-import * as HIG from "hig-vanilla";
+import { RadioButton as VanillaRadioButton } from "hig-vanilla";
 import RadioButtonAdapter from "./RadioButtonAdapter";
 
 describe("RadioButtonAdapter", () => {
@@ -9,7 +9,7 @@ describe("RadioButtonAdapter", () => {
       mount(
         <RadioButtonAdapter
           higInstance={spiedInstance}
-          value="Foo"
+          value="RadioButton"
           label="Favorite word"
           name="favorite-word"
           checked
@@ -29,6 +29,6 @@ describe("RadioButtonAdapter", () => {
           checked={false}
         />
       );
-    }).toImplementHIGInterfaceOf(HIG.RadioButton);
+    }).toImplementHIGInterfaceOf(VanillaRadioButton);
   });
 });

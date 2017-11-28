@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import * as HIG from "hig-vanilla";
+import { GlobalNav as VanillaGlobalNav } from "hig-vanilla";
 import HIGAdapter, {
   MapsEventListener,
   MapsPropToMethod,
@@ -12,7 +12,7 @@ function SubmoduleAdapter(props) {
     <HIGAdapter
       displayName="Submodule"
       HIGConstructor={
-        HIG.GlobalNav._partials.SideNav._partials.Group._partials.Module
+        VanillaGlobalNav._partials.SideNav._partials.Group._partials.Module
           ._partials.Submodule
       }
       {...props}

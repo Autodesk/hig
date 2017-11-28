@@ -1,6 +1,6 @@
 import React from "react";
 import { mount } from "enzyme";
-import * as Hig from "hig-vanilla";
+import { ProgressBar as VanillaProgressBar } from "hig-vanilla";
 import ProgressBarAdapter from "./ProgressBarAdapter";
 
 describe("ProgressBar", () => {
@@ -9,6 +9,6 @@ describe("ProgressBar", () => {
       mount(
         <ProgressBarAdapter higInstance={mockInstance} percentComplete={0} />
       );
-    }).toImplementHIGInterfaceOf(Hig.ProgressBar);
+    }).toImplementHIGInterfaceOf(VanillaProgressBar);
   });
 });

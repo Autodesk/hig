@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import * as HIG from "hig-vanilla";
+import { Range as VanillaRange } from "hig-vanilla";
 import HIGAdapter, {
   MapsEventListener,
   MapsPropToMethod,
@@ -9,7 +9,7 @@ import HIGAdapter, {
 
 function RangeAdapter(props) {
   return (
-    <HIGAdapter {...props} displayName="Range" HIGConstructor={HIG.Range}>
+    <HIGAdapter {...props} displayName="Range" HIGConstructor={VanillaRange}>
       {adapterProps => (
         <div>
           <ControlsProp

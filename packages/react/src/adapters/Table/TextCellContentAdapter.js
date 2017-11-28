@@ -1,5 +1,5 @@
 import React from "react";
-import * as HIG from "hig-vanilla";
+import { TextCellContent as VanillaTextCellContent } from "hig-vanilla";
 import PropTypes from "prop-types";
 
 import HIGAdapter, { MapsPropToMethod } from "../HIGAdapter";
@@ -8,7 +8,7 @@ function TextCellContentAdapter(props) {
   return (
     <HIGAdapter
       displayName="TextCellContent"
-      HIGConstructor={HIG.TextCellContent}
+      HIGConstructor={VanillaTextCellContent}
       {...props}
     >
       {adapterProps => (
@@ -37,7 +37,7 @@ function TextCellContentAdapter(props) {
 TextCellContentAdapter.propTypes = {
   text: PropTypes.string,
   detail: PropTypes.string,
-  alignment: PropTypes.oneOf(HIG.TextCellContent.AvailableAlignments)
+  alignment: PropTypes.oneOf(VanillaTextCellContent.AvailableAlignments)
 };
 
 TextCellContentAdapter.defaultProps = {

@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import * as HIG from "hig-vanilla";
+import { TextField as VanillaTextField } from "hig-vanilla";
 import HIGAdapter, {
   MapsEventListener,
   MapsPropToMethod,
@@ -12,7 +12,7 @@ function TextFieldAdapter(props) {
     <HIGAdapter
       {...props}
       displayName="TextField"
-      HIGConstructor={HIG.TextField}
+      HIGConstructor={VanillaTextField}
     >
       {adapterProps => (
         <div>

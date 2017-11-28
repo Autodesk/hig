@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import * as HIG from "hig-vanilla";
+import { PasswordField as VanillaPasswordField } from "hig-vanilla";
 import HIGAdapter, {
   MapsEventListener,
   MapsPropToMethod,
@@ -12,7 +12,7 @@ function PasswordFieldAdapter(props) {
     <HIGAdapter
       {...props}
       displayName="PasswordField"
-      HIGConstructor={HIG.PasswordField}
+      HIGConstructor={VanillaPasswordField}
     >
       {adapterProps => (
         <div>

@@ -1,6 +1,6 @@
 import { mount } from "enzyme";
 import React from "react";
-import * as HIG from "hig-vanilla";
+import { GlobalNav as VanillaGlobalNav } from "hig-vanilla";
 import ShortcutAdapter from "./ShortcutAdapter";
 
 describe("ShortcutAdapter", () => {
@@ -16,7 +16,7 @@ describe("ShortcutAdapter", () => {
         />
       );
     }).toImplementHIGInterfaceOf(
-      HIG.GlobalNav._partials.TopNav._partials.Shortcut
+      VanillaGlobalNav._partials.TopNav._partials.Shortcut
     );
   });
 });

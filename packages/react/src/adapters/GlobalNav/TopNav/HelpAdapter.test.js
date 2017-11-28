@@ -1,6 +1,6 @@
 import { mount } from "enzyme";
 import React from "react";
-import * as HIG from "hig-vanilla";
+import { GlobalNav as VanillaGlobalNav } from "hig-vanilla";
 import HelpAdapter from "./HelpAdapter";
 import GroupAdapter from "./GroupAdapter";
 
@@ -19,6 +19,8 @@ describe("HelpAdapter", () => {
         </HelpAdapter>
       );
       mockInstance.close();
-    }).toImplementHIGInterfaceOf(HIG.GlobalNav._partials.TopNav._partials.Help);
+    }).toImplementHIGInterfaceOf(
+      VanillaGlobalNav._partials.TopNav._partials.Help
+    );
   });
 });

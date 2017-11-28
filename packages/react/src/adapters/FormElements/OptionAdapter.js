@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import * as HIG from "hig-vanilla";
+import { Dropdown as VanillaDropdown } from "hig-vanilla";
 import HIGAdapter, {
   MapsPropToMethod,
   MapsEventListener,
@@ -12,7 +12,7 @@ function OptionAdapter(props) {
     <HIGAdapter
       {...props}
       displayName="Option"
-      HIGConstructor={HIG.Dropdown._partials.Option}
+      HIGConstructor={VanillaDropdown._partials.Option}
     >
       {adapterProps => (
         <div>

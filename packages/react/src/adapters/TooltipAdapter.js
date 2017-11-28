@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import * as HIG from "hig-vanilla";
+import { Tooltip as VanillaTooltip } from "hig-vanilla";
 import HIGAdapter, {
   MapsPropToMethod,
   MapsEventListener,
@@ -10,7 +10,11 @@ import HIGAdapter, {
 
 function TooltipAdapter(props) {
   return (
-    <HIGAdapter displayName="Tooltip" HIGConstructor={HIG.Tooltip} {...props}>
+    <HIGAdapter
+      displayName="Tooltip"
+      HIGConstructor={VanillaTooltip}
+      {...props}
+    >
       {adapterProps => (
         <div>
           <MapsPropToMethod
@@ -41,7 +45,7 @@ function TooltipAdapter(props) {
 }
 
 TooltipAdapter.propTypes = {
-  anchorPoint: PropTypes.oneOf(HIG.Tooltip.AvailableAnchorPoints),
+  anchorPoint: PropTypes.oneOf(VanillaTooltip.AvailableAnchorPoints),
   onClickOutside: PropTypes.func,
   open: PropTypes.bool,
   target: PropTypes.node,

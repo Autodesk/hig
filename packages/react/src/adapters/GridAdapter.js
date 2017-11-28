@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-import * as HIG from "hig-vanilla";
+import { Grid as VanillaGrid } from "hig-vanilla";
 import HIGAdapter, { MountsHIGChildList } from "./HIGAdapter";
 
 function GridAdapter(props) {
   return (
-    <HIGAdapter {...props} displayName="Grid" HIGConstructor={HIG.Grid}>
+    <HIGAdapter {...props} displayName="Grid" HIGConstructor={VanillaGrid}>
       {adapterProps => (
         <MountsHIGChildList {...adapterProps}>
           {props.children}

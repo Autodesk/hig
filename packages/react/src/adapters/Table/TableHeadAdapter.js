@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import * as HIG from "hig-vanilla";
+import { Table as VanillaTable } from "hig-vanilla";
 
 import HIGAdapter, {
   MountedByHIGParent,
@@ -11,7 +11,7 @@ function TableHeadAdapter(props) {
   return (
     <HIGAdapter
       displayName="TableHead"
-      HIGConstructor={HIG.Table._partials.TableHead}
+      HIGConstructor={VanillaTable._partials.TableHead}
       {...props}
     >
       {adapterProps => (

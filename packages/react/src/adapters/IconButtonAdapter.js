@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import * as HIG from "hig-vanilla";
+import { IconButton as VanillaIconButton } from "hig-vanilla";
 
 import HIGAdapter, { MapsPropToMethod, MapsEventListener } from "./HIGAdapter";
 
@@ -8,7 +8,7 @@ function IconButtonAdapter(props) {
   return (
     <HIGAdapter
       displayName="IconButton"
-      HIGConstructor={HIG.IconButton}
+      HIGConstructor={VanillaIconButton}
       {...props}
     >
       {adapterProps => (
@@ -72,7 +72,7 @@ IconButtonAdapter.propTypes = {
   onClick: PropTypes.func,
   onFocus: PropTypes.func,
   onHover: PropTypes.func,
-  type: PropTypes.oneOf(HIG.IconButton.AvailableTypes)
+  type: PropTypes.oneOf(VanillaIconButton.AvailableTypes)
 };
 
 IconButtonAdapter.defaultProps = {

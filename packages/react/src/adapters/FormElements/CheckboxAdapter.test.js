@@ -1,6 +1,6 @@
 import React from "react";
 import { mount } from "enzyme";
-import * as HIG from "hig-vanilla";
+import { Checkbox as VanillaCheckbox } from "hig-vanilla";
 import CheckboxAdapter from "./CheckboxAdapter";
 
 describe("CheckboxAdapter", () => {
@@ -30,6 +30,6 @@ describe("CheckboxAdapter", () => {
           checked={false}
         />
       );
-    }).toImplementHIGInterfaceOf(HIG.Checkbox);
+    }).toImplementHIGInterfaceOf(VanillaCheckbox);
   });
 });

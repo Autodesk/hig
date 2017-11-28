@@ -1,7 +1,7 @@
 import React from "react";
 import { mount } from "enzyme";
 
-import * as HIG from "hig-vanilla";
+import { TextLink as VanillaTextLink } from "hig-vanilla";
 import TextLinkAdapter from "./TextLinkAdapter";
 
 describe("TextLinkAdapter", () => {
@@ -16,6 +16,6 @@ describe("TextLinkAdapter", () => {
           onClick={() => {}}
         />
       );
-    }).toImplementHIGInterfaceOf(HIG.TextLink);
+    }).toImplementHIGInterfaceOf(VanillaTextLink);
   });
 });

@@ -1,7 +1,7 @@
 import React from "react";
 import { mount } from "enzyme";
 
-import * as HIG from "hig-vanilla";
+import { IconButton as VanillaIconButton } from "hig-vanilla";
 import IconButtonAdapter from "./IconButtonAdapter";
 
 describe("IconButtonAdapter", () => {
@@ -30,6 +30,6 @@ describe("IconButtonAdapter", () => {
           disabled={false}
         />
       );
-    }).toImplementHIGInterfaceOf(HIG.IconButton);
+    }).toImplementHIGInterfaceOf(VanillaIconButton);
   });
 });

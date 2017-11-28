@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import * as HIG from "hig-vanilla";
+import { GlobalNav as VanillaGlobalNav } from "hig-vanilla";
 import HIGAdapter, {
   MountedByHIGParent,
   MapsPropToMethod,
@@ -32,7 +32,7 @@ function ProjectAccountSwitcherAdapter(props) {
     <HIGAdapter
       displayName="ProjectAccountSwitcher"
       HIGConstructor={
-        HIG.GlobalNav._partials.TopNav._partials.ProjectAccountSwitcher
+        VanillaGlobalNav._partials.TopNav._partials.ProjectAccountSwitcher
       }
       {...props}
     >

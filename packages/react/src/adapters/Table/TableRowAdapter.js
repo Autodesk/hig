@@ -1,5 +1,5 @@
 import React from "react";
-import * as HIG from "hig-vanilla";
+import { Table as VanillaTable } from "hig-vanilla";
 import * as PropTypes from "prop-types";
 
 import HIGAdapter, {
@@ -12,7 +12,7 @@ function TableRowAdapter(props) {
   return (
     <HIGAdapter
       displayName="TableRow"
-      HIGConstructor={HIG.Table._partials.TableRow}
+      HIGConstructor={VanillaTable._partials.TableRow}
       {...props}
     >
       {adapterProps => (

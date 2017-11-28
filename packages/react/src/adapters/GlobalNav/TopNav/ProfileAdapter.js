@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import * as HIG from "hig-vanilla";
+import { GlobalNav as VanillaGlobalNav } from "hig-vanilla";
 import HIGAdapter, {
   MountedByHIGParent,
   MapsPropToMethod,
@@ -12,7 +12,7 @@ function ProfileAdapter(props) {
     <HIGAdapter
       {...props}
       displayName="Profile"
-      HIGConstructor={HIG.GlobalNav._partials.TopNav._partials.Profile}
+      HIGConstructor={VanillaGlobalNav._partials.TopNav._partials.Profile}
     >
       {adapterProps => (
         <div>

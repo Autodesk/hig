@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import * as HIG from "hig-vanilla";
+import { Table as VanillaTable } from "hig-vanilla";
 
 import HIGAdapter, {
   MapsPropToMethod,
@@ -12,7 +12,7 @@ function TextCellAdapter(props) {
     <HIGAdapter
       {...props}
       displayName="TextCell"
-      HIGConstructor={HIG.Table._partials.TableRow._partials.TextCell}
+      HIGConstructor={VanillaTable._partials.TableRow._partials.TextCell}
     >
       {adapterProps => (
         <div>
@@ -42,7 +42,7 @@ TextCellAdapter.propTypes = {
   text: PropTypes.string,
   detail: PropTypes.string,
   alignment: PropTypes.oneOf(
-    HIG.Table._partials.TableRow._partials.TextCell.AvailableAlignments
+    VanillaTable._partials.TableRow._partials.TextCell.AvailableAlignments
   )
 };
 

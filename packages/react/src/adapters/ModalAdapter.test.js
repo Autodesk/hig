@@ -1,7 +1,7 @@
 import React from "react";
 import { mount } from "enzyme";
 
-import * as HIG from "hig-vanilla";
+import { Modal as VanillaModal } from "hig-vanilla";
 import ModalAdapter from "./ModalAdapter";
 
 describe("ModalAdapter", () => {
@@ -22,6 +22,6 @@ describe("ModalAdapter", () => {
         </ModalAdapter>
       );
       mount(<ModalAdapter higInstance={mockInstance} open={false} />);
-    }).toImplementHIGInterfaceOf(HIG.Modal);
+    }).toImplementHIGInterfaceOf(VanillaModal);
   });
 });
