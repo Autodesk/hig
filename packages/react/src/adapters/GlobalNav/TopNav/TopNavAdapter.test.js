@@ -3,7 +3,7 @@ import React from "react";
 import { GlobalNav as VanillaGlobalNav } from "hig-vanilla";
 import TopNavAdapter from "./TopNavAdapter";
 import ShortcutAdapter from "./ShortcutAdapter";
-import SearchAdapter from "./SearchAdapter";
+import Search from "../../../elements/components/GlobalNav/TopNav/Search";
 import ProfileAdapter from "./ProfileAdapter";
 import HelpAdapter from "./HelpAdapter";
 import ProjectAccountSwitcherAdapter from "./ProjectAccountSwitcherAdapter";
@@ -20,7 +20,7 @@ describe("TopNavAdapter", () => {
           onHamburgerClick={() => {}}
         >
           <ShortcutAdapter />
-          <SearchAdapter />
+          <Search />
           <ProfileAdapter />
           <HelpAdapter />
           <ProjectAccountSwitcherAdapter />

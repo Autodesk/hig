@@ -38,7 +38,11 @@ class Search extends Component {
   };
 
   onClick = value => {
-    this._submitInput(value);
+    const selectedOption = this.props.options.find(
+      option => option.value === value
+    );
+
+    this._submitInput(selectedOption.label);
   };
 
   hideOptions = () => {
@@ -52,6 +56,14 @@ class Search extends Component {
 
   showClearIcon = () => {
     this.setState({ clearIconVisible: true });
+  };
+
+  showOptions = () => {
+    const value =
+      this.props.options !== undefined
+        ? this.props.options.length > 0 && this.state.showOptions
+        : false;
+    return value;
   };
 
   handleClearIconClick = () => {
@@ -137,7 +149,7 @@ class Search extends Component {
         {...this.props}
         value={this.props.value}
         onInput={this.onInput}
-        showOptions={this.props.options.length > 0 && this.state.showOptions}
+        showOptions={this.showOptions()}
         onBlur={this.hideClearIcon}
         onFocus={this.showClearIcon}
         showClearIcon={this.state.clearIconVisible}
@@ -145,7 +157,7 @@ class Search extends Component {
         onClickOutside={this.hideOptions}
         onKeydown={this.handleKeydown}
       >
-        {this.props.options.length > 0
+        {this.props.options !== undefined && this.props.options.length > 0
           ? this.props.options.map((option, index) => (
               <Option
                 key={option.value}

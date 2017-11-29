@@ -7,6 +7,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  .hig__dropdown__option {
+    outline: none;
+  }
 }
 
 .hig__global-nav__top-nav__search__content {

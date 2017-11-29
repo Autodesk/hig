@@ -91,7 +91,8 @@ describe("<GlobalNav>", () => {
     it("passes logo", () => {
       const topNavProps = {
         logo: "https:/images/logo.png",
-        logoLink: "/"
+        logoLink: "/",
+        searchOptions: []
       };
       const wrapper = mount(<Context topNav={topNavProps} />);
       expect(wrapper.find(TopNav)).toHaveProp("logo", "https:/images/logo.png");

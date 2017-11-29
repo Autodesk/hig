@@ -1772,12 +1772,6 @@
                     "{String} placeholder - new placeholder"
                   ]
                 },
-                "setQuery": {
-                  "desc": "sets the search query",
-                  "params": [
-                    "{String} query - new query"
-                  ]
-                },
                 "showClearIcon": {
                   "desc": "show the clear input icon"
                 },
@@ -1796,11 +1790,6 @@
                 },
                 "onClickOutside": {
                   "desc": "Calls the provided callback when user clicks outside of the Help",
-                  "params": "HIG.abstract.EventObject.params",
-                  "returns": "HIG.abstract.EventObject.returns"
-                },
-                "onTargetClick": {
-                  "desc": "Calls the provided callback when user clicks on Search Input",
                   "params": "HIG.abstract.EventObject.params",
                   "returns": "HIG.abstract.EventObject.returns"
                 },

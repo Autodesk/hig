@@ -25,7 +25,6 @@ class Search extends Core {
   }
 
   addOption(option, referenceOption) {
-    console.log('add option');
     if (option instanceof Option) {
       const optionWrapper = this._findDOMEl('.hig__option__list', this.el);
       option.mount(optionWrapper);
@@ -37,13 +36,6 @@ class Search extends Core {
       '.hig__global-nav__top-nav__search__input',
       this.el
     ).setAttribute('placeholder', placeholder);
-  }
-
-  setQuery(query) {
-    this._findDOMEl(
-      '.hig__global-nav__top-nav__search__input',
-      this.el
-    ).value = query;
   }
 
   showClearIcon() {
@@ -108,15 +100,6 @@ class Search extends Core {
   onFocusOut(fn) {
     return this._attachListener(
       'focusout',
-      '.hig__global-nav__top-nav__search__input',
-      this.el,
-      fn
-    );
-  }
-
-  onTargetClick(fn) {
-    return this._attachListener(
-      'click',
       '.hig__global-nav__top-nav__search__input',
       this.el,
       fn

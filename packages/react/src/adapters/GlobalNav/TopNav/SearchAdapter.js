@@ -47,12 +47,6 @@ function SearchAdapter(props) {
             handler={props.onKeydown}
             {...adapterProps}
           />
-
-          <MapsPropToMethod
-            setter="setQuery"
-            value={props.query}
-            {...adapterProps}
-          />
           <MapsPropToMethod
             setter="setPlaceholder"
             value={props.placeholder}
@@ -83,7 +77,6 @@ function SearchAdapter(props) {
 }
 
 SearchAdapter.propTypes = {
-  query: PropTypes.string,
   placeholder: PropTypes.string,
   clearIconVisible: PropTypes.bool,
   onClearIconClick: PropTypes.func,
