@@ -1,5 +1,4 @@
 @import '../../basics/colors/colors.scss';
-
 @mixin tooltip-chevron-border() {
   content: '';
   position: absolute;
@@ -25,7 +24,6 @@
     border-top-width: 0;
     border-color: transparent transparent color(hig-cool-gray-50) transparent;
   }
-
   &::after {
     @include tooltip-chevron-bg();
     top: -6px;
@@ -41,7 +39,6 @@
     border-right-width: 0;
     border-color: transparent transparent transparent color(hig-cool-gray-50);
   }
-
   &::after {
     @include tooltip-chevron-bg();
     right: -6px;
@@ -57,7 +54,6 @@
     border-bottom-width: 0;
     border-color: color(hig-cool-gray-50) transparent transparent transparent;
   }
-
   &::after {
     @include tooltip-chevron-bg();
     bottom: -6px;
@@ -73,7 +69,6 @@
     border-left-width: 0;
     border-color: transparent color(hig-cool-gray-50) transparent transparent;
   }
-
   &::after {
     @include tooltip-chevron-bg();
     left: -6px;
@@ -82,17 +77,16 @@
   }
 }
 
-
-
 .hig__flyout--tooltip {
   .hig__flyout__panel {
     background-color: color(hig-cool-gray-50);
     color: color(hig-white);
     border: 1px solid color(hig-cool-gray-50);
-    width: inherit;
+    width: auto;
+    min-width: auto;
+    max-width: auto;
     padding: 0 0 0 0
   }
-
   .hig__flyout__tooltip__content {
     display: inline-block;
     padding: 6px 10px 6px 10px;
@@ -101,26 +95,22 @@
     white-space: nowrap;
     font-family: 'ArtifaktElement', sans-serif;
   }
-
   .hig__flyout__container {
     &--anchor-top-center {
       left: 50%;
       transform: translateX(-50%);
       margin-top: 3px;
     }
-
     &--anchor-right-center {
       transform: translateX(-100%) translateY(-50%);
       top: 50%;
       left: -3px;
     }
-
     &--anchor-bottom-center {
       top: -3px;
       left: 50%;
       transform: translateX(-50%) translateY(-100%);
     }
-
     &--anchor-left-center {
       left: 100%;
       top: 50%;
@@ -128,40 +118,32 @@
       margin-left: 3px;
     }
   }
-
-  .hig__flyout__container--anchor-top-center .hig__flyout__chevron  {
+  .hig__flyout__container--anchor-top-center .hig__flyout__chevron {
     @include tooltip-top-chevron;
-
     &::before,
     &::after {
       left: 50%;
       transform: translateX(-50%);
     }
   }
-
   .hig__flyout__container--anchor-right-center .hig__flyout__chevron {
     @include tooltip-right-chevron;
-
     &::before,
     &::after {
       top: 50%;
       transform: translateY(-50%);
     }
   }
-
   .hig__flyout__container--anchor-bottom-center .hig__flyout__chevron {
     @include tooltip-bottom-chevron;
-
     &::before,
     &::after {
       left: 50%;
       transform: translateX(-50%);
     }
   }
-
   .hig__flyout__container--anchor-left-center .hig__flyout__chevron {
     @include tooltip-left-chevron;
-
     &::before,
     &::after {
       top: 50%;
