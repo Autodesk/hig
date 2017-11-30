@@ -14,9 +14,8 @@
   &:hover {
     background-color: color(hig-blue-10);
   }
-
-  
 }
+
 
 .hig__dropdown__option__checkmark {
   display: none;
@@ -24,9 +23,10 @@
   top: 4px;
   right: 4px;
 
-  .hig__dropdown__option--selected > & {
-    display: block;
-  }
+}
+
+.hig__dropdown__option--checked {
+  display: block;
 }
 
 .hig__dropdown__option--focused {

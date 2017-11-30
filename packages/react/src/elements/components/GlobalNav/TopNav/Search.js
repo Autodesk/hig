@@ -11,13 +11,27 @@ class Search extends Component {
         label: PropTypes.string,
         value: PropTypes.string
       })
-    )
+    ),
+    onInput: PropTypes.func,
+    value: PropTypes.string,
+    showOptions: PropTypes.bool,
+    onBlur: PropTypes.func,
+    showClearIcon: PropTypes.bool,
+    onClearIconClick: PropTypes.func,
+    onClickOutside: PropTypes.func,
+    onKeydown: PropTypes.func
   };
 
   static defaultProps = {
     onInput: () => {},
     value: undefined,
-    defaultValue: undefined
+    showOptions: undefined,
+    onBlur: () => {},
+    onFocus: () => {},
+    showClearIcon: undefined,
+    onClearIconClick: () => {},
+    onClickOutside: () => {},
+    onKeydown: () => {}
   };
 
   constructor(props) {
@@ -171,5 +185,40 @@ class Search extends Component {
     );
   }
 }
+
+Search.__docgenInfo = {
+  props: {
+    value: {
+      description: "value of search input"
+    },
+    onInput: {
+      description:
+        "Calls the provided callback when user enters text in Search input"
+    },
+    showOptions: {
+      description: "shows fitered options"
+    },
+    onBlur: {
+      description: "calles the callback on Blur"
+    },
+    onFocus: {
+      description: "calls the callback on Focus"
+    },
+    showClearIcon: {
+      description: "show the clear input icon"
+    },
+    onClearIconClick: {
+      description: "Calls the provided callback when the Clear Icon is clicked"
+    },
+    onClickOutside: {
+      description:
+        "Calls the provided callback when user clicks outside of the Help"
+    },
+    onKeydown: {
+      description:
+        "Calls the provided callback when user pressed key down on Search Input"
+    }
+  }
+};
 
 export default Search;

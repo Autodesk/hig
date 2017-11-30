@@ -163,7 +163,13 @@
               "returns": "HIG.abstract.EventObject.returns"
             },
             "select": {
-              "description": "sets class ot show option as selected"
+              "description": "sets class to show option as selected"
+            },
+            "check": {
+              "description": "sets class to show option as checked"
+            },
+            "uncheck": {
+              "description": "sets class to show option as unchecked"
             },
             "setLabel": {
               "desc": "Sets the label for the option",
@@ -180,7 +186,7 @@
             "focus": {
               "description": "focuses the option"
             },
-            "unfocus":{
+            "unfocus": {
               "description": "removes focus from the options"
             }
           },

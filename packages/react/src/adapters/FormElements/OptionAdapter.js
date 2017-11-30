@@ -26,6 +26,11 @@ function OptionAdapter(props) {
             {(instance, value) =>
               value ? instance.select() : instance.deselect()}
           </MapsPropToMethod>
+
+          <MapsPropToMethod value={props.checked} {...adapterProps}>
+            {(instance, value) =>
+              value ? instance.check() : instance.uncheck()}
+          </MapsPropToMethod>
           <MapsPropToMethod value={props.focused} {...adapterProps}>
             {(instance, value) =>
               value ? instance.focus() : instance.unfocus()}

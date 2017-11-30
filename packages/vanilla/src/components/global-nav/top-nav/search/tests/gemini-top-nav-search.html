@@ -1,0 +1,55 @@
+<html>
+  
+  <head>
+      <link rel="stylesheet" href="../../../../../../lib/hig.css">
+      <script type="text/javascript" src="../../../../../../lib/hig.js"></script>
+  </head>
+
+  <body>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+    <script>
+      // Create TopNav Search
+      var GlobalNav = new Hig.GlobalNav();
+      GlobalNav.mount("body");
+
+      var TopNav = new GlobalNav.partials.TopNav({
+            "logo": "https://www.dexigner.com/images/news/xw/22856.jpg",
+            "logo_link": "#"
+      });
+      GlobalNav.addTopNav(TopNav);
+
+      TopNav.setLogo("../../../tests/bim-logo.png"); // Update logo
+      TopNav.setLogoLink("http://autodesk.com"); // update logo link
+
+      var Search = new TopNav.partials.Search
+
+      TopNav.addSearch(Search);
+
+      Search.setPlaceholder("Search");
+
+      Search.setValue("foo");
+
+      var Option1 = new Hig.Option()
+
+      Search.addOption(Option1);
+      Option1.setValue("foo");
+      Option1.setLabel("foo")
+
+
+      var Option2 = new Hig.Option
+
+      Search.addOption(Option2);
+      Option2.setValue("foo1");
+      Option2.setLabel("foo1")
+      Option2.focus();
+
+      Search.showOptions();
+    </script>
+  

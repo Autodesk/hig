@@ -35,7 +35,6 @@
             const FormElements = new Hig.FormElements();
             const Dropdown = FormElements.partials.Dropdown;
 
-
             // ----------------------------
             // DROPDOWN WITH DEFAULTS
             // ----------------------------
@@ -49,13 +48,30 @@
             DefaultDropdown.setSelectedOptionLabel('Penny slots');
 
             const DefaultDropdownOptionData = [
-                { label: 'Penny slots', selected: true },
-                { label: 'The drink' },
-                { label: 'Bubblegum' },
+                { label: 'Penny slots', value: 'Penny slots'},
+                { label: 'The drink', value: 'The Drink' },
+                { label: 'Bubblegum', value: "Bubblegum" },
             ];
-            DefaultDropdownOptionData.forEach(optionData => {
-                const option = new DefaultDropdown.partials.Option(optionData);
+
+            // const option1 = new Hig.Option();;
+            // option1.setValue(optionData.value);
+            // option1.setLabel(optionData.label);
+            // option1.select();
+            // option1.check();
+            // DefaultDropdown.addOption(option1);
+
+
+            DefaultDropdownOptionData.forEach((optionData, index) => {
+                const option = new Hig.Option({});
                 DefaultDropdown.addOption(option);
+                option.setValue(optionData.value);
+                option.setLabel(optionData.label);
+                if (index === 0) {
+                  option.select();
+                  option.check();
+                }
+
+              
             });
             DefaultDropdown.onTargetClick(() => {
                 DefaultDropdown.open();
