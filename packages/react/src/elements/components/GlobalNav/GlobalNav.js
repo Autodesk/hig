@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 import GlobalNavAdapter from "../../../adapters/GlobalNav/GlobalNavAdapter";
 import TopNavAdapter from "../../../adapters/GlobalNav/TopNav/TopNavAdapter";
+import Search from "./TopNav/Search";
 import SubNavAdapter from "../../../adapters/GlobalNav/SubNav/SubNavAdapter";
 import HelpAdapter from "../../../adapters/GlobalNav/TopNav/HelpAdapter";
 import GroupAdapter from "../../../adapters/GlobalNav/TopNav/GroupAdapter";
@@ -80,6 +81,12 @@ class GlobalNav extends Component {
             onHamburgerClick={this.handleHamburgerClick}
             {...this.props.topNav}
           >
+            <Search
+              options={this.props.topNav.searchOptions}
+              onInput={this.props.topNav.onSearchInput}
+              onSubmit={this.props.topNav.onSearchSubmit}
+              value={this.props.topNav.searchValue}
+            />
             {this.showProjectAccountSwitcher() ? (
               <ProjectAccountSwitcher
                 {...this.props.topNav.projectAccountSwitcher}

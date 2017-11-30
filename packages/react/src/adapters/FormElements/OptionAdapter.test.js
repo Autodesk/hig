@@ -1,6 +1,6 @@
 import { mount } from "enzyme";
 import React from "react";
-import { Dropdown as VanillaDropdown } from "hig-vanilla";
+import { Option as VanillaOption } from "hig-vanilla";
 import OptionAdapter from "./OptionAdapter";
 
 describe("OptionAdapter", () => {
@@ -11,12 +11,16 @@ describe("OptionAdapter", () => {
           higInstance={mockInstance}
           label="Option"
           selected
+          checked
           onClick={() => {}}
           onHover={() => {}}
           value="123"
+          focused
         />
       );
       mockInstance.deselect();
-    }).toImplementHIGInterfaceOf(VanillaDropdown._partials.Option);
+      mockInstance.uncheck();
+      mockInstance.unfocus();
+    }).toImplementHIGInterfaceOf(VanillaOption);
   });
 });
