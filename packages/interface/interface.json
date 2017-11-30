@@ -335,44 +335,6 @@
               "desc": "Sets the label on the dropdown button"
             }
           },
-          "partials": {
-            "Option": {
-              "methods": {
-                "deselect": {
-                  "description": "deselects the option"
-                },
-                "onClick": {
-                  "desc": "Calls the provided callback when user clicks on the option",
-                  "params": "HIG.abstract.EventObject.params",
-                  "returns": "HIG.abstract.EventObject.returns"
-                },
-                "onHover": {
-                  "desc": "Calls the provided callback when user hovers over the option",
-                  "params": "HIG.abstract.EventObject.params",
-                  "returns": "HIG.abstract.EventObject.returns"
-                },
-                "select": {
-                  "description": "sets class ot show option as selected"
-                },
-                "setLabel": {
-                  "desc": "Sets the label for the option",
-                  "params": [
-                    "{String} label - label identifying the option"
-                  ]
-                },
-                "setValue": {
-                  "desc": "Sets the value for the option",
-                  "params": [
-                    "{String} label - label identifying the option"
-                  ]
-                }
-              },
-              "defaults": {
-                "label": "",
-                "value": ""
-              }
-            }
-          },
           "defaults": {
             "label": "{String} label for our text field",
             "placeholder": "{String} placeholder text for our text field",
