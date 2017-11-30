@@ -2,7 +2,7 @@
 import React from "react";
 import "hig-vanilla/lib/hig.css";
 
-import { Button, Container, GlobalNav, breakpoints } from "../hig-react";
+import { Button, GlobalNav, breakpoints } from "../hig-react";
 
 import "./index.css";
 
@@ -178,32 +178,30 @@ class Playground extends React.Component {
         isSideNavOpen={this.state.isSideNavOpen}
         onHamburgerClick={this.toggleSideNav}
       >
-        <Container>
-          <ActionBarSection />
-          <ProgressBarSection />
-          <ProgressRingSection />
-          <TabsSection />
-          <ButtonSection />
-          <IconButtonSection />
-          <CheckboxSection />
-          <PasswordFieldSection />
-          <RadioButtonSection />
-          <RangeSection />
-          <TextFieldSection />
-          <TextAreaSection />
-          <ModalSection />
-          <DropdownSection />
-          <TypographySection />
-          <TableSection />
-          <TextLinkSection />
-          <FlyoutSection />
-          <TooltipSection />
-          <RichTextSection />
-          <AvatarSection />
-          <GridSection />
-          <IconSection />
-          <SelectableTableSection />
-        </Container>
+        <ActionBarSection />
+        <ProgressBarSection />
+        <ProgressRingSection />
+        <TabsSection />
+        <ButtonSection />
+        <IconButtonSection />
+        <CheckboxSection />
+        <PasswordFieldSection />
+        <RadioButtonSection />
+        <RangeSection />
+        <TextFieldSection />
+        <TextAreaSection />
+        <ModalSection />
+        <DropdownSection />
+        <TypographySection />
+        <TableSection />
+        <TextLinkSection />
+        <FlyoutSection />
+        <TooltipSection />
+        <RichTextSection />
+        <AvatarSection />
+        <GridSection />
+        <IconSection />
+        <SelectableTableSection />
       </GlobalNav>
     );
   }
