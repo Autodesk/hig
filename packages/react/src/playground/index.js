@@ -60,42 +60,6 @@ class Playground extends React.Component {
     };
   }
 
-  navigate = id => {
-    console.log("Go to", id);
-    this.setState({ activeModuleId: id });
-    if (window.innerWidth <= breakpoints.tablet) {
-      this.setState({ isSideNavOpen: false });
-    }
-  };
-
-  projectClicked = id => {
-    console.log("project clicked", id);
-  };
-
-  accountClicked = id => {
-    console.log("account clicked", id);
-  };
-
-  toggleSideNav = () => {
-    this.setState({ isSideNavOpen: !this.state.isSideNavOpen });
-  };
-
-  handleModuleClick = id => {
-    console.log(`module click ${id}`);
-  };
-
-  handleSubmoduleClick = id => {
-    console.log(`submodule click ${id}`);
-  };
-
-  openHelp = () => {
-    this.setState({ isHelpOpen: true });
-  };
-
-  closeHelp = () => {
-    this.setState({ isHelpOpen: false });
-  };
-
   onSearchInput = input => {
     this.setState({ searchValue: input.value });
     this.filterSearchInput(input.value);
@@ -104,6 +68,42 @@ class Playground extends React.Component {
   onSearchSubmit = selection => {
     this.setState({ searchValue: selection.value });
     this.filterSearchInput(selection.value);
+  };
+
+  toggleSideNav = () => {
+    this.setState({ isSideNavOpen: !this.state.isSideNavOpen });
+  };
+
+  navigate = id => {
+    console.log("Go to", id);
+    this.setState({ activeModuleId: id });
+    if (window.innerWidth <= breakpoints.tablet) {
+      this.setState({ isSideNavOpen: false });
+    }
+  };
+
+  closeHelp = () => {
+    this.setState({ isHelpOpen: false });
+  };
+
+  openHelp = () => {
+    this.setState({ isHelpOpen: true });
+  };
+
+  handleSubmoduleClick = id => {
+    console.log(`submodule click ${id}`);
+  };
+
+  handleModuleClick = id => {
+    console.log(`module click ${id}`);
+  };
+
+  accountClicked = id => {
+    console.log("account clicked", id);
+  };
+
+  projectClicked = id => {
+    console.log("project clicked", id);
   };
 
   filterSearchInput = value => {
