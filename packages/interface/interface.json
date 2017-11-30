@@ -834,29 +834,6 @@
     }
   },
   "components": {
-    "ActionBar": {
-      "defaults": {},
-      "methods": {},
-      "partials": {
-        "Group": {
-          "methods": {
-            "addAction": {
-              "desc": "adds an action to the group"
-            },
-            "setPosition": {
-              "desc": "",
-              "params": [
-                "{String} left or right"
-              ]
-            }
-          },
-          "defaults": {
-            "position": "{String} left or right"
-          }
-        },
-        "Search": {}
-      }
-    },
     "Avatar": {
       "defaults": {
         "name": "{String} the name for the avatar",
