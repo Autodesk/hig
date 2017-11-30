@@ -1,3 +1,6 @@
+export { default as ActionBar } from "./adapters/ActionBar/ActionBarAdapter";
+export { default as ActionBarGroup } from "./adapters/ActionBar/GroupAdapter";
+export { default as ActionBarSpacer } from "./adapters/ActionBar/SpacerAdapter";
 export { default as Avatar } from "./adapters/AvatarAdapter";
 export { breakpoints } from "hig-vanilla";
 export { default as Button } from "./adapters/ButtonAdapter";

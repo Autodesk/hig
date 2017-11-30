@@ -10,6 +10,7 @@ import logo from "./images/bim-logo.png";
 import { projects, accounts } from "./fixtures/topNavFixtures";
 import { modules, submodules, links } from "./fixtures/sideNavFixtures";
 
+import ActionBarSection from "./sections/ActionBarSection";
 import AvatarSection from "./sections/AvatarSection";
 import ButtonSection from "./sections/ButtonSection";
 import CheckboxSection from "./sections/CheckboxSection";
@@ -178,6 +179,7 @@ class Playground extends React.Component {
         onHamburgerClick={this.toggleSideNav}
       >
         <Container>
+          <ActionBarSection />
           <ProgressBarSection />
           <ProgressRingSection />
           <TabsSection />
