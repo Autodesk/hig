@@ -22,7 +22,7 @@ function checkDocgenInfo(Component) {
 function checkComponent(Component) {
   const propTypes = Component.propTypes;
 
-  if (propTypes === undefined || Object.keys(propTypes).length === 0) {
+  if (propTypes === undefined) {
     return { propTypes: undefined };
   }
 

@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { ActionBar as VanillaActionBar } from "hig-vanilla";
 
-class SpacerAdapter extends Component {
+class ActionBarSpacerAdapter extends Component {
   render() {
     return <div className={VanillaActionBar.spacerClassName} />;
   }
 }
 
-SpacerAdapter.propTypes = {};
+ActionBarSpacerAdapter.propTypes = {};
 
-export default SpacerAdapter;
+export default ActionBarSpacerAdapter;
