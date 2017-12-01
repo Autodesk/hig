@@ -6,7 +6,7 @@ import './dropdown.scss';
 import Template from './dropdown.html';
 
 import TextField from '../text-field/text-field';
-import Option from './option/option';
+import Option from '../option/option';
 
 const OPEN_CLASS = 'hig__dropdown--open';
 
@@ -114,8 +114,7 @@ class Dropdown extends Core {
       return;
     }
     if (
-      this.field.el.contains(event.target) ||
-      this.field.el === event.target
+      this.field.el.contains(event.target) || this.field.el === event.target
     ) {
       return;
     }
@@ -125,15 +124,12 @@ class Dropdown extends Core {
   }
 }
 
-Dropdown._interface =
-  Interface.basics.FormElements.partials.Dropdown;
+Dropdown._interface = Interface.basics.FormElements.partials.Dropdown;
 Dropdown._defaults = {
   label: '',
   placeholder: '',
   instructions: ''
 };
-Dropdown._partials = {
-  Option
-};
+Dropdown._partials = {};
 
 export default Dropdown;

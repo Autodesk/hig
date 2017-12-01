@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Dropdown as VanillaDropdown } from "hig-vanilla";
+import { Option as VanillaOption } from "hig-vanilla";
 import HIGAdapter, {
   MapsPropToMethod,
   MapsEventListener,
@@ -9,11 +9,7 @@ import HIGAdapter, {
 
 function OptionAdapter(props) {
   return (
-    <HIGAdapter
-      {...props}
-      displayName="Option"
-      HIGConstructor={VanillaDropdown._partials.Option}
-    >
+    <HIGAdapter {...props} displayName="Option" HIGConstructor={VanillaOption}>
       {adapterProps => (
         <div>
           <MapsPropToMethod
@@ -29,6 +25,15 @@ function OptionAdapter(props) {
           <MapsPropToMethod value={props.selected} {...adapterProps}>
             {(instance, value) =>
               value ? instance.select() : instance.deselect()}
+          </MapsPropToMethod>
+
+          <MapsPropToMethod value={props.checked} {...adapterProps}>
+            {(instance, value) =>
+              value ? instance.check() : instance.uncheck()}
+          </MapsPropToMethod>
+          <MapsPropToMethod value={props.focused} {...adapterProps}>
+            {(instance, value) =>
+              value ? instance.focus() : instance.unfocus()}
           </MapsPropToMethod>
           <MapsEventListener
             listener="onHover"

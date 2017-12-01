@@ -4,7 +4,9 @@ import { GlobalNav as VanillaGlobalNav } from "hig-vanilla";
 import HIGAdapter, {
   MountedByHIGParent,
   MapsPropToMethod,
-  MapsEventListener
+  MapsEventListener,
+  MountsHIGChildList,
+  ControlsProp
 } from "../../HIGAdapter";
 
 function SearchAdapter(props) {
@@ -17,9 +19,11 @@ function SearchAdapter(props) {
       {adapterProps => (
         <div>
           <MountedByHIGParent mounter="addSearch" {...adapterProps} />
-          <MapsEventListener
+          <ControlsProp
             listener="onInput"
             handler={props.onInput}
+            value={props.value}
+            setter="setValue"
             {...adapterProps}
           />
           <MapsEventListener
@@ -37,9 +41,10 @@ function SearchAdapter(props) {
             handler={props.onClearIconClick}
             {...adapterProps}
           />
-          <MapsPropToMethod
-            setter="setQuery"
-            value={props.query}
+
+          <MapsEventListener
+            listener="onKeydown"
+            handler={props.onKeydown}
             {...adapterProps}
           />
           <MapsPropToMethod
@@ -51,6 +56,20 @@ function SearchAdapter(props) {
             {(instance, value) =>
               value ? instance.showClearIcon() : instance.hideClearIcon()}
           </MapsPropToMethod>
+          <MapsPropToMethod value={props.showOptions} {...adapterProps}>
+            {(instance, value) =>
+              value ? instance.showOptions() : instance.hideOptions()}
+          </MapsPropToMethod>
+
+          <MapsEventListener
+            listener="onClickOutside"
+            handler={props.onClickOutside}
+            {...adapterProps}
+          />
+
+          <MountsHIGChildList {...adapterProps}>
+            {props.children}
+          </MountsHIGChildList>
         </div>
       )}
     </HIGAdapter>
@@ -58,14 +77,15 @@ function SearchAdapter(props) {
 }
 
 SearchAdapter.propTypes = {
-  query: PropTypes.string,
   placeholder: PropTypes.string,
   clearIconVisible: PropTypes.bool,
   onClearIconClick: PropTypes.func,
   onInput: PropTypes.func,
   onFocus: PropTypes.func,
   onBlur: PropTypes.func,
-  showClearIcon: PropTypes.bool
+  showClearIcon: PropTypes.bool,
+  showOptions: PropTypes.bool,
+  children: PropTypes.node
 };
 
 SearchAdapter.defaultProps = {
@@ -76,7 +96,9 @@ SearchAdapter.defaultProps = {
   onInput: undefined,
   onFocus: undefined,
   onBlur: undefined,
-  showClearIcon: undefined
+  showClearIcon: undefined,
+  showOptions: undefined,
+  children: undefined
 };
 
 export default SearchAdapter;

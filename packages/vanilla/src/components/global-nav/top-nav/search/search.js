@@ -3,7 +3,9 @@ import Core from '_core.js';
 import './search.scss';
 import Template from './search.html';
 import Icon from '../../../../basics/icon/icon';
+import Option from '../../../../basics/form-elements/option/option';
 
+const OPEN_CLASS = 'hig__option__list--show';
 /**
  * Creates an Search
  *
@@ -14,10 +16,19 @@ class Search extends Core {
   constructor(options) {
     super(options);
     this._render(Template, options);
+
+    this.initialOptions = options;
   }
 
   _componentDidMount() {
     this._setIcons();
+  }
+
+  addOption(option, referenceOption) {
+    if (option instanceof Option) {
+      const optionWrapper = this._findDOMEl('.hig__option__list', this.el);
+      option.mount(optionWrapper);
+    }
   }
 
   setPlaceholder(placeholder) {
@@ -25,13 +36,6 @@ class Search extends Core {
       '.hig__global-nav__top-nav__search__input',
       this.el
     ).setAttribute('placeholder', placeholder);
-  }
-
-  setQuery(query) {
-    this._findDOMEl(
-      '.hig__global-nav__top-nav__search__input',
-      this.el
-    ).value = query;
   }
 
   showClearIcon() {
@@ -66,6 +70,24 @@ class Search extends Core {
     );
   }
 
+  onKeydown(fn) {
+    return this._attachListener(
+      'keydown',
+      '.hig__global-nav__top-nav__search__input',
+      this.el,
+      fn
+    );
+  }
+
+  onClickOutside(fn) {
+    return this._attachListener(
+      'click',
+      window.document.body,
+      window.document.body,
+      this._callbackIfClickOutside.bind(this, fn)
+    );
+  }
+
   onFocusIn(fn) {
     return this._attachListener(
       'focusin',
@@ -84,18 +106,37 @@ class Search extends Core {
     );
   }
 
+  showOptions() {
+    this._findDOMEl('.hig__option__list', this.el).classList.add(OPEN_CLASS);
+  }
+
+  hideOptions() {
+    this._findDOMEl('.hig__option__list', this.el).classList.remove(OPEN_CLASS);
+  }
+
+  setValue(value) {
+    this._findDOMEl(
+      '.hig__global-nav__top-nav__search__input',
+      this.el
+    ).value = value;
+  }
+
   _setIcons() {
     const mountSearchIcon = this._findDOMEl(
       '.hig__global-nav__top-nav__search__icon',
       this.el
     );
-    this._findOrCreateIconComponent(mountSearchIcon, 'search').setNameOrSVG('search');
+    this._findOrCreateIconComponent(mountSearchIcon, 'search').setNameOrSVG(
+      'search'
+    );
 
     const mountClearIcon = this._findDOMEl(
       '.hig__global-nav__top-nav__search__clear',
       this.el
     );
-    this._findOrCreateIconComponent(mountClearIcon, 'clear').setNameOrSVG('close-small');
+    this._findOrCreateIconComponent(mountClearIcon, 'clear').setNameOrSVG(
+      'close-small'
+    );
   }
 
   _findOrCreateIconComponent(mountElOrSelector, name = 'icon') {
@@ -105,6 +146,21 @@ class Search extends Core {
     this[name] = new Icon({});
     this[name].mount(mountElOrSelector);
     return this[name];
+  }
+
+  _callbackIfClickOutside(callback, event) {
+    const higOptionList = this._findDOMEl('.hig__option__list', this.el);
+    if (this.el.contains(event.target) || this.el === event.target) {
+      return;
+    }
+    if (
+      higOptionList.contains(event.target) || higOptionList === event.target
+    ) {
+      return;
+    }
+    if (higOptionList.classList.contains(OPEN_CLASS)) {
+      callback();
+    }
   }
 }
 

@@ -147,6 +147,54 @@
             "name": ""
           }
         },
+        "Option": {
+          "methods": {
+            "deselect": {
+              "description": "deselects the option"
+            },
+            "onClick": {
+              "desc": "Calls the provided callback when user clicks on the option",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            },
+            "onHover": {
+              "desc": "Calls the provided callback when user hovers over the option",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            },
+            "select": {
+              "description": "sets class to show option as selected"
+            },
+            "check": {
+              "description": "sets class to show option as checked"
+            },
+            "uncheck": {
+              "description": "sets class to show option as unchecked"
+            },
+            "setLabel": {
+              "desc": "Sets the label for the option",
+              "params": [
+                "{String} label - label identifying the option"
+              ]
+            },
+            "setValue": {
+              "desc": "Sets the value for the option",
+              "params": [
+                "{String} label - label identifying the option"
+              ]
+            },
+            "focus": {
+              "description": "focuses the option"
+            },
+            "unfocus": {
+              "description": "removes focus from the options"
+            }
+          },
+          "defaults": {
+            "label": "",
+            "value": ""
+          }
+        },
         "RadioButton": {
           "methods": {
             "setLabel": {
@@ -285,44 +333,6 @@
             },
             "setSelectedOptionLabel": {
               "desc": "Sets the label on the dropdown button"
-            }
-          },
-          "partials": {
-            "Option": {
-              "methods": {
-                "deselect": {
-                  "description": "deselects the option"
-                },
-                "onClick": {
-                  "desc": "Calls the provided callback when user clicks on the option",
-                  "params": "HIG.abstract.EventObject.params",
-                  "returns": "HIG.abstract.EventObject.returns"
-                },
-                "onHover": {
-                  "desc": "Calls the provided callback when user hovers over the option",
-                  "params": "HIG.abstract.EventObject.params",
-                  "returns": "HIG.abstract.EventObject.returns"
-                },
-                "select": {
-                  "description": "sets class ot show option as selected"
-                },
-                "setLabel": {
-                  "desc": "Sets the label for the option",
-                  "params": [
-                    "{String} label - label identifying the option"
-                  ]
-                },
-                "setValue": {
-                  "desc": "Sets the value for the option",
-                  "params": [
-                    "{String} label - label identifying the option"
-                  ]
-                }
-              },
-              "defaults": {
-                "label": "",
-                "value": ""
-              }
             }
           },
           "defaults": {
@@ -1406,7 +1416,9 @@
             },
             "setLogoLink": {
               "desc": "sets the link of the logo",
-              "params": ["{String} link - new link"]
+              "params": [
+                "{String} link - new link"
+              ]
             }
           },
           "partials": {
@@ -1728,14 +1740,37 @@
                     "{String} placeholder - new placeholder"
                   ]
                 },
-                "setQuery": {
-                  "desc": "sets the search query",
-                  "params": [
-                    "{String} query - new query"
-                  ]
-                },
                 "showClearIcon": {
                   "desc": "show the clear input icon"
+                },
+                "showOptions": {
+                  "desc": "shows fitered options"
+                },
+                "hideOptions": {
+                  "desc": "hides filtered options"
+                },
+                "addOption": {
+                  "desc": "Adds an option to the search dropdown",
+                  "params": [
+                    "{Option} option - an instance of the Option partial",
+                    "{Option} [referenceOption] - (Optional) a reference option used when positioning the new option. New option will be added before the reference option."
+                  ]
+                },
+                "onClickOutside": {
+                  "desc": "Calls the provided callback when user clicks outside of the Help",
+                  "params": "HIG.abstract.EventObject.params",
+                  "returns": "HIG.abstract.EventObject.returns"
+                },
+                "setValue": {
+                  "desc": "sets the search value",
+                  "params": [
+                    "{String} value - new value"
+                  ]
+                },
+                "onKeydown": {
+                  "desc": "Calls the provided callback when user pressed key down on Search Input",
+                  "params": "HIG.abstract.EventObject.params",
+                  "returns": "HIG.abstract.EventObject.returns"
                 }
               }
             },
