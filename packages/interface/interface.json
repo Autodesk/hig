@@ -10,6 +10,20 @@
     }
   },
   "basics": {
+    "ContainerViewLeft": {
+      "open": {
+        "desc": "opens the container"
+      },  
+      "close": {
+        "desc": "closes the container"
+      },
+      "addSlot": {
+        "desc": "Content for the container view left",
+        "params": [
+          "{HTMLElement} HTMLElement"
+        ]
+      }
+    },
     "Flyout": {
       "methods": {
         "addSlot": {
