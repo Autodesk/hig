@@ -25,7 +25,7 @@ function DropdownAdapter(props) {
             listener="onClickOutside"
             handler={props.onClickOutside}
             {...adapterProps}
-          />
+          />  
           <MapsEventListener
             listener="onFocus"
             handler={props.onFocus}

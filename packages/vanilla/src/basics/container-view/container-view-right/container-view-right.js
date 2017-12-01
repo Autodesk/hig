@@ -1,3 +1,4 @@
+import Interface from 'interface.json';
 import Core from '_core.js';
 import './container-view-right.scss';
 import Template from './container-view-right.html';
@@ -8,18 +9,18 @@ import Template from './container-view-right.html';
 */
 
 class ContainerViewRight extends Core {
-  contructor(options = {}) {
+  constructor(options = {}) {
     super(options);
     this._render(Template, options);
     this.initialOptions = options;
   }
 
   open() {
-    this.el.classList.add('hig__container__view-right--show');
+    this.el.classList.add('hig__container__view-right--open');
   }
 
-  hide() {
-    this.el.classList.remove('hig__container__view-right--show');
+  close() {
+    this.el.classList.remove('hig__container__view-right--open');
   }
 
   addSlot(slotElement) {
@@ -27,5 +28,8 @@ class ContainerViewRight extends Core {
   }
 }
 
+ContainerViewRight._interface = Interface.basics.ContainerViewRight;
+ContainerViewRight._defaults = {};
+ContainerViewRight._partials = {};
 
 export default ContainerViewRight;

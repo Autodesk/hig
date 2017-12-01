@@ -14,6 +14,7 @@ import ActionBarSection from "./sections/ActionBarSection";
 import AvatarSection from "./sections/AvatarSection";
 import ButtonSection from "./sections/ButtonSection";
 import CheckboxSection from "./sections/CheckboxSection";
+import ContainerViewSection from "./sections/ContainerViewSection";
 import DropdownSection from "./sections/DropdownSection";
 import FlyoutSection from "./sections/FlyoutSection";
 import GridSection from "./sections/GridSection";

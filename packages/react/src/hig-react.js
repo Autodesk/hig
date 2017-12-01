@@ -13,6 +13,9 @@ export { colors } from "hig-vanilla";
 export { default as Container } from "./elements/components/Container";
 export { default as ContainerView } from "./adapters/ContainerViewAdapter";
 export {
+  default as ContainerViewContent
+} from "./adapters/ContainerViewContentAdapter";
+export {
   default as ContainerViewLeft
 } from "./adapters/ContainerViewLeftAdapter";
 export {
