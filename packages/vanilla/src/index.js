@@ -7,6 +7,7 @@ import colorMap from './basics/colors/colors';
 const sizes = { ...Spacer.SizeMap };
 const colors = { ...colorMap };
 
+export { default as ActionBar } from './components/action-bar/action-bar';
 export { default as Avatar } from './components/avatar/avatar';
 export { default as Button } from './components/button/button';
 export { default as Checkbox } from './basics/form-elements/checkbox/checkbox';

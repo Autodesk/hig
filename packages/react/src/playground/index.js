@@ -2,13 +2,15 @@
 import React from "react";
 import "hig-vanilla/lib/hig.css";
 
-import { Button, Container, GlobalNav, breakpoints } from "../hig-react";
+import { Button, GlobalNav, breakpoints } from "../hig-react";
+
 import "./index.css";
 
 import logo from "./images/bim-logo.png";
 import { projects, accounts } from "./fixtures/topNavFixtures";
 import { modules, submodules, links } from "./fixtures/sideNavFixtures";
 
+import ActionBarSection from "./sections/ActionBarSection";
 import AvatarSection from "./sections/AvatarSection";
 import ButtonSection from "./sections/ButtonSection";
 import CheckboxSection from "./sections/CheckboxSection";
@@ -218,31 +220,30 @@ class Playground extends React.Component {
         isSideNavOpen={this.state.isSideNavOpen}
         onHamburgerClick={this.toggleSideNav}
       >
-        <Container>
-          <ProgressBarSection />
-          <ProgressRingSection />
-          <TabsSection />
-          <ButtonSection />
-          <IconButtonSection />
-          <CheckboxSection />
-          <PasswordFieldSection />
-          <RadioButtonSection />
-          <RangeSection />
-          <TextFieldSection />
-          <TextAreaSection />
-          <ModalSection />
-          <DropdownSection />
-          <TypographySection />
-          <TableSection />
-          <TextLinkSection />
-          <FlyoutSection />
-          <TooltipSection />
-          <RichTextSection />
-          <AvatarSection />
-          <GridSection />
-          <IconSection />
-          <SelectableTableSection />
-        </Container>
+        <ActionBarSection />
+        <ProgressBarSection />
+        <ProgressRingSection />
+        <TabsSection />
+        <ButtonSection />
+        <IconButtonSection />
+        <CheckboxSection />
+        <PasswordFieldSection />
+        <RadioButtonSection />
+        <RangeSection />
+        <TextFieldSection />
+        <TextAreaSection />
+        <ModalSection />
+        <DropdownSection />
+        <TypographySection />
+        <TableSection />
+        <TextLinkSection />
+        <FlyoutSection />
+        <TooltipSection />
+        <RichTextSection />
+        <AvatarSection />
+        <GridSection />
+        <IconSection />
+        <SelectableTableSection />
       </GlobalNav>
     );
   }
