@@ -11,6 +11,14 @@ export { default as Button } from "./adapters/ButtonAdapter";
 export { default as Checkbox } from "./adapters/FormElements/CheckboxAdapter";
 export { colors } from "hig-vanilla";
 export { default as Container } from "./elements/components/Container";
+export { default as ContainerView } from "./adapters/ContainerViewAdapter";
+export {
+  default as ContainerViewLeft
+} from "./adapters/ContainerViewLeftAdapter";
+export {
+  default as ContainerViewRight
+} from "./adapters/ContainerViewRightAdapter";
+
 export {
   default as Dropdown
 } from "./elements/components/FormElements/Dropdown";

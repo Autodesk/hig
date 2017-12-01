@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import PlaygroundSection from "../PlaygroundSection";
 import { Button, Flyout } from "../../hig-react";
+import { Dropdown, Checkbox } from "../../hig-react";
+
 
 class FlyoutSection extends Component {
   render() {
