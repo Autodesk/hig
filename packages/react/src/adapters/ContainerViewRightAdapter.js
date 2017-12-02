@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { ContainerViewLeft as ContainerViewRightVanilla } from "hig-vanilla";
+import { ContainerViewRight as ContainerViewRightVanilla } from "hig-vanilla";
 import HIGAdapter, { MapsPropToMethod, MountsAnyChild } from "./HIGAdapter";
 
 function ContainerViewRightAdapter(props) {
   return (
     <HIGAdapter
       {...props}
-      displayName="ContainerViewLeft"
+      displayName="ContainerViewRight"
       HIGConstructor={ContainerViewRightVanilla}
     >
       {adapterProps => (

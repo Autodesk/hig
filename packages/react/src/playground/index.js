@@ -222,7 +222,6 @@ class Playground extends React.Component {
         onHamburgerClick={this.toggleSideNav}
       >
         <ActionBarSection />
-        <ContainerViewSection />
         <ProgressBarSection />
         <ProgressRingSection />
         <TabsSection />
@@ -246,6 +245,7 @@ class Playground extends React.Component {
         <GridSection />
         <IconSection />
         <SelectableTableSection />
+        <ContainerViewSection />
       </GlobalNav>
     );
   }
