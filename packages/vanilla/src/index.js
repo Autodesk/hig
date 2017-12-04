@@ -11,6 +11,19 @@ export { default as ActionBar } from './components/action-bar/action-bar';
 export { default as Avatar } from './components/avatar/avatar';
 export { default as Button } from './components/button/button';
 export { default as Checkbox } from './basics/form-elements/checkbox/checkbox';
+export {
+  default as ContainerView
+} from './basics/container-view/container-view';
+
+export {
+  default as ContainerViewContent
+} from './basics/container-view/container-view-content/container-view-content';
+export {
+  default as ContainerViewLeft
+} from './basics/container-view/container-view-left/container-view-left';
+export {
+  default as ContainerViewRight
+} from './basics/container-view/container-view-right/container-view-right';
 export { default as Dropdown } from './basics/form-elements/dropdown/dropdown';
 export { default as Flyout } from './basics/flyout/flyout';
 export { default as FormElements } from './basics/form-elements/form-elements';

@@ -10,6 +10,38 @@
     }
   },
   "basics": {
+    "ContainerViewLeft": {
+      "methods": {
+        "open": {
+          "desc": "opens the container"
+        },  
+        "close": {
+          "desc": "closes the container"
+        },
+        "addSlot": {
+          "desc": "Content for the container view left",
+          "params": [
+            "{HTMLElement} HTMLElement"
+          ]
+        }
+      }
+    },
+    "ContainerViewRight": {
+      "methods": {
+        "open": {
+          "desc": "opens the container"
+        },  
+        "close": {
+          "desc": "closes the container"
+        },
+        "addSlot": {
+          "desc": "Content for the container view right",
+          "params": [
+            "{HTMLElement} HTMLElement"
+          ]
+        }
+      }
+    },
     "Flyout": {
       "methods": {
         "addSlot": {
