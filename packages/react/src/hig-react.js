@@ -34,6 +34,7 @@ export { default as Grid } from "./adapters/GridAdapter";
 export { default as GridItem } from "./adapters/GridItemAdapter";
 export { default as Icon } from "./adapters/IconAdapter";
 export { default as IconButton } from "./adapters/IconButtonAdapter";
+export { default as Image } from "./adapters/ImageAdapter";
 export { default as Modal } from "./elements/components/Modal";
 export { default as Option } from "./adapters/FormElements/OptionAdapter";
 export {

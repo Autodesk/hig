@@ -21,6 +21,7 @@ import GridSection from "./sections/GridSection";
 import IconButtonSection from "./sections/IconButtonSection";
 import IconSection from "./sections/IconSection";
 import ModalSection from "./sections/ModalSection";
+import ImageSection from "./sections/ImageSection";
 import PasswordFieldSection from "./sections/PasswordFieldSection";
 import ProgressBarSection from "./sections/ProgressBarSection";
 import ProgressRingSection from "./sections/ProgressRingSection";
@@ -246,6 +247,7 @@ class Playground extends React.Component {
         <IconSection />
         <SelectableTableSection />
         <ContainerViewSection />
+        <ImageSection />
       </GlobalNav>
     );
   }
