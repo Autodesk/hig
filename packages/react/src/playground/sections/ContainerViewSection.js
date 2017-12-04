@@ -3,8 +3,10 @@ import PlaygroundSection from "../PlaygroundSection";
 import TableSection from "./TableSection";
 
 import TypographySection from "./TypographySection";
-import { Button, Tabs, Tab } from "../../hig-react";
 import {
+  Button,
+  Tabs,
+  Tab,
   ContainerView,
   ContainerViewContent,
   ContainerViewLeft,
