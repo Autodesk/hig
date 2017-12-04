@@ -34,4 +34,15 @@ ContainerViewRightAdapter.defaultProps = {
   children: undefined
 };
 
+ContainerViewRightAdapter.__docgenInfo = {
+  props: {
+    open: {
+      description: "{bool} sets whether container is open"
+    },
+    children: {
+      description: "content that is inside the container"
+    }
+  }
+};
+
 export default ContainerViewRightAdapter;
