@@ -14,7 +14,6 @@ export { default as Checkbox } from './basics/form-elements/checkbox/checkbox';
 export {
   default as ContainerView
 } from './basics/container-view/container-view';
-
 export {
   default as ContainerViewContent
 } from './basics/container-view/container-view-content/container-view-content';
@@ -25,6 +24,9 @@ export {
   default as ContainerViewRight
 } from './basics/container-view/container-view-right/container-view-right';
 export { default as Dropdown } from './basics/form-elements/dropdown/dropdown';
+export {
+  default as ExpandingFilterSection
+} from './components/expanding-filter-section/expanding-filter-section';
 export { default as Flyout } from './basics/flyout/flyout';
 export { default as FormElements } from './basics/form-elements/form-elements';
 export { default as GlobalNav } from './components/global-nav/global-nav';
@@ -41,11 +43,7 @@ export {
   default as ProgressRing
 } from './components/progress-ring/progress-ring';
 export { default as Modal } from './components/modal/modal';
-// export {
-//   default as Option
-// } from './basics/form-elements/dropdown/option/option';
 export { default as Option } from './basics/form-elements/option/option';
-
 export {
   default as PasswordField
 } from './basics/form-elements/password-field/password-field';
