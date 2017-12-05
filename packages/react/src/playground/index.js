@@ -30,6 +30,7 @@ import RangeSection from "./sections/RangeSection";
 import RichTextSection from "./sections/RichTextSection";
 import SectionLabelSection from "./sections/SectionLabelSection";
 import SelectableTableSection from "./sections/SelectableTableSection";
+import ShowMoreLessSection from "./sections/ShowMoreLessSection";
 import TableSection from "./sections/TableSection";
 import TabsSection from "./sections/TabsSection";
 import TextAreaSection from "./sections/TextAreaSection";
@@ -250,6 +251,7 @@ class Playground extends React.Component {
         <ContainerViewSection />
         <ImageSection />
         <SectionLabelSection />
+        <ShowMoreLessSection />
       </GlobalNav>
     );
   }
