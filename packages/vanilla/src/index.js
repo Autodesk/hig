@@ -32,6 +32,7 @@ export { default as Grid } from './basics/grid/grid';
 export { default as Icon } from './basics/icon/icon';
 export { default as IconButton } from './components/icon-button/icon-button';
 export { default as Icons } from './basics/icons/icons';
+export { default as Image } from './basics/image/image';
 export {
   default as InputButton
 } from './basics/form-elements/input-button/input-button';
@@ -43,9 +44,7 @@ export { default as Modal } from './components/modal/modal';
 // export {
 //   default as Option
 // } from './basics/form-elements/dropdown/option/option';
-export {
-  default as Option
-} from './basics/form-elements/option/option';
+export { default as Option } from './basics/form-elements/option/option';
 
 export {
   default as PasswordField
