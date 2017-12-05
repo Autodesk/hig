@@ -1,0 +1,16 @@
+@import '~basics/colors/colors.scss';
+
+.hig__section__label__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  border-bottom: 1px solid color(hig-gray-30);
+}
+
+.hig__section__label {
+  font-family: 'ArtifaktElement', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+}

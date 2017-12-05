@@ -14,7 +14,7 @@
       "methods": {
         "open": {
           "desc": "opens the container"
-        },  
+        },
         "close": {
           "desc": "closes the container"
         },
@@ -30,7 +30,7 @@
       "methods": {
         "open": {
           "desc": "opens the container"
-        },  
+        },
         "close": {
           "desc": "closes the container"
         },
@@ -1845,7 +1845,6 @@
     "IconButton": {
       "defaults": {
         "icon": "{String} (optional) ID of the icon",
-        "link": "{String} link of the button",
         "title": "{String} title of the button",
         "type": "{String} type of the button: primary (default), secondary or flat"
       },
@@ -1980,6 +1979,22 @@
         },
         "setSize": {
           "desc": "{String - xs, s, m, l} the size of the progress indicator"
+        }
+      }
+    },
+    "SectionLabel": {
+      "methods": {
+        "setLabel": {
+          "desc": "sets the label text",
+          "params": [
+            "{String} the label text"
+          ]
+        },
+        "addSlot": {
+          "desc": "Content for the section label",
+          "params": [
+            "{HTMLElement} HTMLElement"
+          ]
         }
       }
     },

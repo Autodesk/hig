@@ -18,6 +18,11 @@ function IconButtonAdapter(props) {
             setter="setTitle"
             {...adapterProps}
           />
+          <MapsEventListener
+            listener="onClick"
+            handler={props.onClick}
+            {...adapterProps}
+          />
           <MapsPropToMethod
             value={props.link}
             setter="setLink"
@@ -37,11 +42,7 @@ function IconButtonAdapter(props) {
             {(instance, value) =>
               value ? instance.disable() : instance.enable()}
           </MapsPropToMethod>
-          <MapsEventListener
-            listener="onClick"
-            handler={props.onBlur}
-            {...adapterProps}
-          />
+
           <MapsEventListener
             listener="onHover"
             handler={props.onHover}

@@ -23,6 +23,22 @@ class IconButton extends Core {
     if (this.initialOptions.icon) {
       this.setIcon(this.initialOptions.icon);
     }
+
+    if (this.initialOptions.size) {
+      this.setSize(this.initialOptions.size);
+    }
+
+    if (this.initialOptions.title) {
+      this.setTitle(this.initialOptions.title);
+    }
+    
+    if (this.initialOptions.link) {
+      this.setLink(this.initialOptions.link);
+    }
+
+    if (this.initialOptions.type) {
+      this.setType(this.initialOptions.type);
+    }
   }
 
   setTitle(title) {
@@ -45,7 +61,7 @@ class IconButton extends Core {
     } else {
       console.error(
         `Button type "${type}" not found, only these types are allowed: `,
-        AvailableTypes,
+        AvailableTypes
       );
     }
   }
@@ -95,7 +111,6 @@ class IconButton extends Core {
 IconButton._interface = Interface.components.IconButton;
 IconButton._defaults = {
   title: 'button',
-  link: false,
   icon: false,
   type: AvailableTypes[0]
 };

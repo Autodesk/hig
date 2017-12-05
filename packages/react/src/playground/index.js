@@ -28,6 +28,7 @@ import ProgressRingSection from "./sections/ProgressRingSection";
 import RadioButtonSection from "./sections/RadioButtonSection";
 import RangeSection from "./sections/RangeSection";
 import RichTextSection from "./sections/RichTextSection";
+import SectionLabelSection from "./sections/SectionLabelSection";
 import SelectableTableSection from "./sections/SelectableTableSection";
 import TableSection from "./sections/TableSection";
 import TabsSection from "./sections/TabsSection";
@@ -248,6 +249,7 @@ class Playground extends React.Component {
         <SelectableTableSection />
         <ContainerViewSection />
         <ImageSection />
+        <SectionLabelSection />
       </GlobalNav>
     );
   }
