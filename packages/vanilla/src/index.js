@@ -55,6 +55,9 @@ export {
 export { default as Range } from './basics/form-elements/range/range';
 export { default as RichText } from './basics/rich-text/rich-text';
 export {
+  default as SectionLabel
+} from './components/section-label/section-label';
+export {
   default as SlotHeadCell
 } from './components/table/table-head/slot-head-cell/slot-head-cell';
 export { default as Spacer } from './basics/spacer/spacer';

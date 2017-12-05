@@ -47,6 +47,7 @@ export {
 } from "./adapters/FormElements/RadioButtonAdapter";
 export { default as Range } from "./adapters/FormElements/RangeAdapter";
 export { default as RichText } from "./elements/components/RichText";
+export { default as SectionLabel } from "./adapters/SectionLabelAdapter";
 export { default as SideNav } from "./elements/components/GlobalNav/SideNav";
 export { sizes } from "hig-vanilla";
 export { default as Spacer } from "./adapters/SpacerAdapter";
