@@ -25,6 +25,16 @@ class Button extends Core {
     if (this.initialOptions.icon) {
       this.setIcon(this.initialOptions.icon);
     }
+    if (this.initialOptions.title) {
+      this.setTitle(this.initialOptions.title);
+    }
+    if (this.initialOptions.size) {
+      this.setSize(this.initialOptions.size);
+    }
+
+    if (this.initialOptions.type) {
+      this.setType(this.initialOptions.type);
+    }
   }
 
   setTitle(title) {
