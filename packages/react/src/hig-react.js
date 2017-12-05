@@ -58,6 +58,7 @@ export {
 } from "./adapters/Table/TextCellContentAdapter";
 export { default as TextField } from "./adapters/FormElements/TextFieldAdapter";
 export { default as TextLink } from "./adapters/TextLinkAdapter";
+export { default as Timestamp } from "./adapters/TimestampAdapter";
 export { default as Table } from "./elements/components/Table";
 export { default as Tabs } from "./elements/components/Tabs";
 export { Tab } from "./elements/components/Tabs";

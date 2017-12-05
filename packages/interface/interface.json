@@ -816,6 +816,16 @@
         }
       }
     },
+    "Timestamp": {
+      "methods": {
+        "setTimestamp": {
+          "desc": "",
+          "params": [
+            "{Number} Seconds from the Unix epoch"
+          ]
+        }
+      }
+    },
     "TextLink": {
       "defaults": {
         "href": null,

@@ -1,0 +1,42 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="../../../../../lib/hig.css">
+  <script type="text/javascript" src="../../../../../lib/hig.js"></script>
+  <script type="text/javascript" src="../../../../../../src/helpers/test.js"></script>
+
+  <style>
+    body {
+      padding: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Time Stamp Labels</h2>
+  <div class="text-timestamp-minutes"></div>
+  <div class="text-timestamp-hours"></div>
+  <div class="text-timestamp-days"></div>
+  <div class="text-timestamp-weeks"></div>
+  <div class="text-timestamp-months"></div>
+</body>
+
+
+<script>
+  const timesToTest = {
+    "text-timestamp-minutes": (new Date().valueOf() / 1000) - (3 * 60), // 3 minutes
+    "text-timestamp-hours": (new Date().valueOf() / 1000) - (3 * 60 * 60), // 3 hours
+    "text-timestamp-days": (new Date().valueOf() / 1000) - (3 * 60 * 60 * 24), // 3 days
+    "text-timestamp-weeks": (new Date().valueOf() / 1000) - (3 * 60 * 60 * 24 * 7), // 3 weeks
+    "text-timestamp-months": (new Date().valueOf() / 1000) - (3 * 60 * 60 * 24 * (365 / 12)), // 3 weeks
+  }
+
+  Object.keys(timesToTest).map((key, i) => {
+    var timestamp = new Hig.Timestamp();
+    timestamp.mount("." + key);
+    timestamp.setTimestamp(timesToTest[key])
+  });
+
+</script>
+
+</html>
