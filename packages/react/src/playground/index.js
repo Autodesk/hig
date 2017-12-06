@@ -16,6 +16,7 @@ import ButtonSection from "./sections/ButtonSection";
 import CheckboxSection from "./sections/CheckboxSection";
 import ContainerViewSection from "./sections/ContainerViewSection";
 import DropdownSection from "./sections/DropdownSection";
+import ExpandingFilterSectionSection from "./sections/ExpandingFilterSectionSection";
 import FlyoutSection from "./sections/FlyoutSection";
 import GridSection from "./sections/GridSection";
 import IconButtonSection from "./sections/IconButtonSection";
@@ -225,6 +226,7 @@ class Playground extends React.Component {
         isSideNavOpen={this.state.isSideNavOpen}
         onHamburgerClick={this.toggleSideNav}
       >
+        <ExpandingFilterSectionSection />
         <ActionBarSection />
         <ProgressBarSection />
         <ProgressRingSection />

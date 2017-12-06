@@ -1,15 +1,18 @@
 @import '~basics/colors/colors.scss';
 @import '~helpers/css/mixins/spacing.scss';
-.hig__expanding-filter-section {}
+.hig__expanding-filter-section {
+  display: block;
+}
 
 .hig__expanding-filter-section__summary {
-  display: block;
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid color(hig-slate-30);
   line-height: 24px;
   padding: spacing(xs) 0;
   margin-bottom: spacing(m);
+  user-select: none;
+  cursor: pointer;
   &:focus {
     outline: none;
     border-bottom-color: color(hig-blue-60);
@@ -28,6 +31,7 @@
 }
 
 .hig__expanding-filter-section__label {
+  flex: 1 1 auto;
   font-family: 'ArtifaktElement', sans-serif;
   font-size: 18px;
   font-weight: 500;
@@ -37,6 +41,7 @@
 }
 
 .hig__expanding-filter-section__caret {
+  flex: 0 0 auto;
   transform: rotate(-90deg);
   .hig__expanding-filter-section--open>.hig__expanding-filter-section__summary>& {
     transform: rotate(0deg);

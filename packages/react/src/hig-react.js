@@ -25,6 +25,9 @@ export {
 export {
   default as Dropdown
 } from "./elements/components/FormElements/Dropdown";
+export {
+  default as ExpandingFilterSection
+} from "./elements/components/ExpandingFilterSection";
 export { default as Flyout } from "./elements/components/Flyout";
 export { default as Tooltip } from "./elements/components/Tooltip";
 export {
