@@ -816,6 +816,16 @@
         }
       }
     },
+    "Timestamp": {
+      "methods": {
+        "setTimestamp": {
+          "desc": "",
+          "params": [
+            "{String} timestamp string"
+          ]
+        }
+      }
+    },
     "TextLink": {
       "defaults": {
         "href": null,

@@ -74,6 +74,7 @@ export {
   default as TextField
 } from './basics/form-elements/text-field/text-field';
 export { default as TextLink } from './basics/text-link/text-link';
+export { default as Timestamp } from './basics/timestamp/timestamp';
 export { default as Tooltip } from './basics/tooltip/tooltip';
 export { default as Typography } from './basics/typography/typography';
 

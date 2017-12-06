@@ -36,6 +36,7 @@ import TabsSection from "./sections/TabsSection";
 import TextAreaSection from "./sections/TextAreaSection";
 import TextFieldSection from "./sections/TextFieldSection";
 import TextLinkSection from "./sections/TextLinkSection";
+import TimestampSection from "./sections/TimestampSection";
 import TooltipSection from "./sections/TooltipSection";
 import TypographySection from "./sections/TypographySection";
 
@@ -252,6 +253,7 @@ class Playground extends React.Component {
         <ImageSection />
         <SectionLabelSection />
         <ShowMoreLessSection />
+        <TimestampSection />
       </GlobalNav>
     );
   }
