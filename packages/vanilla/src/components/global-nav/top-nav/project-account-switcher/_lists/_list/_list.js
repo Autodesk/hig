@@ -1,6 +1,6 @@
 import Template from './_list.html';
 import Core from '_core.js';
-import Title from './_list-title/_list-title';
+import Title from 'components/global-nav/top-nav/project-account-switcher/_lists/_list/_list-title/_list-title';
 
 import './_list.scss';
 

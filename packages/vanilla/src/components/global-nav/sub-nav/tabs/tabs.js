@@ -2,7 +2,7 @@ import Interface from 'interface.json';
 import Core from '_core.js';
 import './tabs.scss';
 import Template from './tabs.html';
-import Tab from './tab/tab';
+import Tab from 'components/global-nav/sub-nav/tabs/tab/tab';
 
 /**
  * Creates a Tabs

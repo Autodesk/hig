@@ -2,12 +2,12 @@ import Interface from 'interface.json';
 import Core from '_core.js';
 import './top-nav.scss';
 import Template from './top-nav.html';
-import Profile from './profile/profile.js';
-import Shortcut from './shortcut/shortcut.js';
-import Help from './help/help.js';
-import ProjectAccountSwitcher from './project-account-switcher/project-account-switcher.js';
-import Search from './search/search.js';
-import Icon from '../../../basics/icon/icon.js';
+import Profile from 'components/global-nav/top-nav/profile/profile';
+import Shortcut from 'components/global-nav/top-nav/shortcut/shortcut';
+import Help from 'components/global-nav/top-nav/help/help';
+import ProjectAccountSwitcher from 'components/global-nav/top-nav/project-account-switcher/project-account-switcher';
+import Search from 'components/global-nav/top-nav/search/search';
+import Icon from 'basics/icon/icon';
 
 /**
  * Creates an TopNav

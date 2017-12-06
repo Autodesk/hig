@@ -4,7 +4,7 @@ import './module.scss';
 import Template from './module.html';
 import Submodule from './submodule/submodule';
 import Collapse from './collapse/collapse';
-import Icon from '../../../../../basics/icon/icon';
+import Icon from 'basics/icon/icon';
 
 /**
  * Creates an Module

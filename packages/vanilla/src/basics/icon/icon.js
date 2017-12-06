@@ -2,7 +2,7 @@ import Interface from 'interface.json';
 import Core from '_core.js';
 import './icon.scss';
 import Template from './icon.html';
-import Icons from '../icons/icons';
+import Icons from 'basics/icons/icons';
 
 const AvailableSizes = ['24', '16'];
 

@@ -1,6 +1,6 @@
 import Mustache from 'mustache';
-import Icons from '../../basics/icons/icons';
-import './polyfills.js';
+import Icons from 'basics/icons/icons';
+import 'helpers/js/polyfills';
 
 class Core {
   /**

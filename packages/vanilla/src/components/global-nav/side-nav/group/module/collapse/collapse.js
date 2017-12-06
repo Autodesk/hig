@@ -2,7 +2,7 @@ import Interface from 'interface.json';
 import Core from '_core.js';
 import './collapse.scss';
 import Template from './collapse.html';
-import Icon from '../../../../../../basics/icon/icon';
+import Icon from 'basics/icon/icon';
 
 
 /**

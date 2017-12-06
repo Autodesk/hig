@@ -1,5 +1,5 @@
 import Interface from 'interface.json';
-import Item from '../_item/item';
+import Item from 'components/global-nav/top-nav/project-account-switcher/_item/item';
 
 /**
  * Creates an Account

@@ -2,8 +2,8 @@ import Interface from 'interface.json';
 import Core from '_core.js';
 import './table-head.scss';
 import Template from './table-head.html';
-import TextHeadCell from './text-head-cell/text-head-cell.js';
-import SlotHeadCell from './slot-head-cell/slot-head-cell.js';
+import TextHeadCell from 'components/table/table-head/text-head-cell/text-head-cell';
+import SlotHeadCell from 'components/table/table-head/slot-head-cell/slot-head-cell';
 
 /**
  * Creates an Table

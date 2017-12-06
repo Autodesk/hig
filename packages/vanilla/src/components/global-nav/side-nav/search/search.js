@@ -2,7 +2,7 @@ import Interface from 'interface.json';
 import Core from '_core.js';
 import './search.scss';
 import Template from './search.html';
-import Icon from '../../../../basics/icon/icon';
+import Icon from 'basics/icon/icon';
 
 /**
  * Creates an Search

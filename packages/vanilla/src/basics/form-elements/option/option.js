@@ -2,7 +2,7 @@ import Interface from 'interface.json';
 import Core from '_core.js';
 import './option.scss';
 import Template from './option.html';
-import Icon from '../../../basics/icon/icon';
+import Icon from 'basics/icon/icon';
 
 /**
  * Creates a Option

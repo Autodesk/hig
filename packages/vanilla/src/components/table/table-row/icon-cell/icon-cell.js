@@ -2,7 +2,7 @@ import Interface from 'interface.json';
 import Core from '_core.js';
 import './icon-cell.scss';
 import Template from './icon-cell.html';
-import Icon from '../../../../basics/icon/icon.js';
+import Icon from 'basics/icon/icon.js';
 
 /**
  * Creates an Table

@@ -3,7 +3,7 @@ import Core from '_core.js';
 
 import './flyout.scss';
 
-import CSSTransition from '../../helpers/js/css-transition';
+import CSSTransition from 'helpers/js/css-transition';
 import Template from './flyout.html';
 
 const ANCHOR_POINTS = [
