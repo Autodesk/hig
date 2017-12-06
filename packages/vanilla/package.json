@@ -11,15 +11,15 @@
   "scripts": {
     "build-icons": "node src/basics/icons/build/build.js",
     "deploy": "npm run lib && surge .",
-    "dev-server": "webpack-dev-server --open",
+    "dev-server": "webpack-dev-server --open --config webpack.dev.js",
     "gemini": "concurrently 'http-server' 'gemini test dev/gemini/*' --kill-others",
     "gemini-ci": "gemini test dev/gemini/*",
     "gemini-report": "concurrently 'http-server' 'gemini test dev/gemini/* --reporter html --reporter flat' --kill-others",
     "gemini-update": "concurrently 'http-server' 'gemini update dev/gemini/*' --kill-others",
     "generate-index": "node ./dev/generate-index.js",
-    "lib": "NODE_ENV=production webpack -p",
+    "lib": "webpack -p --config webpack.prod.js",
     "test": "npm run gemini",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch --config webpack.dev.js"
   },
   "repository": {
     "type": "git",
@@ -62,7 +62,8 @@
     "svg-url-loader": "^2.3.0",
     "svgo": "^0.7.2",
     "webpack": "^3.5.5",
-    "webpack-dev-server": "^2.9.5"
+    "webpack-dev-server": "^2.9.5",
+    "webpack-merge": "^4.1.1"
   },
   "dependencies": {
     "hig-interface": "^0.1.8"
