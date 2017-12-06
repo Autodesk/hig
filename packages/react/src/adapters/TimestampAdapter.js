@@ -24,12 +24,12 @@ function TimestampAdapter(props) {
 }
 
 TimestampAdapter.propTypes = {
-  timestamp: PropTypes.number
+  timestamp: PropTypes.string
 };
 
 TimestampAdapter.__docgenInfo = {
   props: {
-    timestamp: { description: "{Number} Seconds from the Unix epoch" }
+    timestamp: { description: "{String} string timestamp" }
   }
 };
 

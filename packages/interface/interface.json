@@ -821,7 +821,7 @@
         "setTimestamp": {
           "desc": "",
           "params": [
-            "{Number} Seconds from the Unix epoch"
+            "{String} timestamp string"
           ]
         }
       }

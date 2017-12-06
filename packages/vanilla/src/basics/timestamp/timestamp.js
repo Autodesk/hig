@@ -23,14 +23,17 @@ class Timestamp extends Core {
   _pluralize = (word, count) => (count === 1 ? word : `${word}s`);
 
   _calculateTimestamp = (timestamp) => {
-    const asSeconds = timestamp; // TODO: handle future timestamps, or bad input?
+    const asSeconds = Date.parse(timestamp) / 1000; // TODO: handle future timestamps, or bad input?
     const nowAsSeconds = new Date().valueOf() / 1000;
 
     const timeDifference = nowAsSeconds - asSeconds;
     let distance;
     let timePassed;
 
-    if (timeDifference < 60 * 60) {
+    if (timeDifference < 60) {
+      distance = Math.round(timeDifference);
+      timePassed = `${distance} ${this._pluralize('second', distance)}`;
+    } else if (timeDifference < 60 * 60) {
       // 1 hour
       distance = Math.round(timeDifference / 60);
       timePassed = `${distance} ${this._pluralize('minute', distance)}`;
