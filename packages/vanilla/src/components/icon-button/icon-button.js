@@ -2,7 +2,7 @@ import Interface from 'interface.json';
 import Core from '_core.js';
 import './icon-button.scss';
 import Template from './icon-button.html';
-import Icon from '../../basics/icon/icon';
+import Icon from 'basics/icon/icon';
 
 const AvailableTypes = ['primary', 'flat'];
 
@@ -31,7 +31,7 @@ class IconButton extends Core {
     if (this.initialOptions.title) {
       this.setTitle(this.initialOptions.title);
     }
-    
+
     if (this.initialOptions.link) {
       this.setLink(this.initialOptions.link);
     }

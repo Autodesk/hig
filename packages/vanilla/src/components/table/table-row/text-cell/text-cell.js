@@ -2,7 +2,7 @@ import Interface from 'interface.json';
 import Core from '_core.js';
 import './text-cell.scss';
 import Template from './text-cell.html';
-import TextCellContent from '../text-cell-content/text-cell-content';
+import TextCellContent from 'components/table/table-row/text-cell-content/text-cell-content';
 
 const AvailableAlignments = ['left', 'right', 'center'];
 

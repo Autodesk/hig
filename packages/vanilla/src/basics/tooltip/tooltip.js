@@ -1,7 +1,7 @@
 import Interface from 'interface.json';
 import Core from '_core.js';
 import './tooltip.scss';
-import Flyout from '../flyout/flyout';
+import Flyout from 'basics/flyout/flyout';
 
 const ANCHOR_POINTS = [
   'top-center',

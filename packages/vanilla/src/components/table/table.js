@@ -2,8 +2,8 @@ import Interface from 'interface.json';
 import Core from '_core.js';
 import './table.scss';
 import Template from './table.html';
-import TableHead from './table-head/table-head';
-import TableRow from './table-row/table-row';
+import TableHead from 'components/table/table-head/table-head';
+import TableRow from 'components/table/table-row/table-row';
 
 let AvailableDensities = ['standard', 'compressed', 'large'];
 

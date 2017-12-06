@@ -2,7 +2,7 @@ import Interface from 'interface.json';
 import Core from '_core.js';
 import './text-field.scss';
 import Template from './text-field.html';
-import Icon from '../../icon/icon';
+import Icon from 'basics/icon/icon';
 
 /**
  * Creates an TextField

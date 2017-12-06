@@ -3,9 +3,10 @@ import Core from '_core.js';
 import './help.scss';
 import Template from './help.html';
 import Flyout from 'basics/flyout/flyout.js';
-import Shortcut from '../shortcut/shortcut.js';
-import Group from './group/group.js';
-import Option from './option/option.js';
+import Shortcut from 'components/global-nav/top-nav/shortcut/shortcut.js';
+
+import Group from 'components/global-nav/top-nav/help/group/group.js';
+import Option from 'components/global-nav/top-nav/help/option/option.js';
 
 /**
  * Creates a Help

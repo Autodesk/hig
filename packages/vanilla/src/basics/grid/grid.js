@@ -2,7 +2,7 @@ import Interface from 'interface.json';
 import Core from '_core.js';
 import './grid.scss';
 import Template from './grid.html';
-import GridItem from './grid-item/grid-item';
+import GridItem from 'basics/grid/grid-item/grid-item';
 
 /**
  * Creates a Grid

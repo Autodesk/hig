@@ -5,8 +5,8 @@ import './dropdown.scss';
 
 import Template from './dropdown.html';
 
-import TextField from '../text-field/text-field';
-import Option from '../option/option';
+import TextField from 'basics/form-elements/text-field/text-field';
+import Option from 'basics/form-elements/option/option';
 
 const OPEN_CLASS = 'hig__dropdown--open';
 

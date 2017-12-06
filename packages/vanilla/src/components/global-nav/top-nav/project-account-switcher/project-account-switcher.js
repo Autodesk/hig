@@ -2,12 +2,12 @@ import Interface from 'interface.json';
 import Core from '_core.js';
 import './project-account-switcher.scss';
 import Template from './project-account-switcher.html';
-import Button from '../../../button/button';
-import Flyout from '../../../../basics/flyout/flyout';
-import Project from './project/project';
-import Account from './account/account';
-import Lists from './_lists/lists';
-import Target from './_target/target';
+import Button from 'components/button/button';
+import Flyout from 'basics/flyout/flyout';
+import Project from 'components/global-nav/top-nav/project-account-switcher/project/project';
+import Account from 'components/global-nav/top-nav/project-account-switcher/account/account';
+import Lists from 'components/global-nav/top-nav/project-account-switcher/_lists/lists';
+import Target from 'components/global-nav/top-nav/project-account-switcher/_target/target';
 
 /**
  * Creates an ProjectAccountSwitcher

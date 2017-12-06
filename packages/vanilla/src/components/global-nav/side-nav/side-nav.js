@@ -2,9 +2,9 @@ import Interface from 'interface.json';
 import Core from '_core.js';
 import './side-nav.scss';
 import Template from './side-nav.html';
-import Link from './link/link';
-import Search from './search/search';
-import Group from './group/group';
+import Link from 'components/global-nav/side-nav/link/link';
+import Search from 'components/global-nav/side-nav/search/search';
+import Group from 'components/global-nav/side-nav/group/group';
 
 /**
  * Creates a SideNav

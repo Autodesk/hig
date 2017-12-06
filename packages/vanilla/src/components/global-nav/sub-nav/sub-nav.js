@@ -2,8 +2,8 @@ import Interface from 'interface.json';
 import Core from '_core.js';
 import './sub-nav.scss';
 import Template from './sub-nav.html';
-import Tabs from './tabs/tabs';
-import Icon from '../../../basics/icon/icon';
+import Tabs from 'components/global-nav/sub-nav/tabs/tabs';
+import Icon from 'basics/icon/icon';
 
 /**
  * Creates an SubNav

@@ -1,13 +1,13 @@
 import Interface from 'interface.json';
 import Core from '_core.js';
 
-import Checkbox from './checkbox/checkbox';
-import Dropdown from './dropdown/dropdown';
-import PasswordField from './password-field/password-field';
-import TextField from './text-field/text-field';
-import TextArea from './text-area/text-area';
-import Range from './range/range';
-import RadioButton from './radio-button/radio-button';
+import Checkbox from 'basics/form-elements/checkbox/checkbox';
+import Dropdown from 'basics/form-elements/dropdown/dropdown';
+import PasswordField from 'basics/form-elements/password-field/password-field';
+import TextField from 'basics/form-elements/text-field/text-field';
+import TextArea from 'basics/form-elements/text-area/text-area';
+import Range from 'basics/form-elements/range/range';
+import RadioButton from 'basics/form-elements/radio-button/radio-button';
 
 /**
  * Holder for FormElements

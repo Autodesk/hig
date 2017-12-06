@@ -2,7 +2,7 @@ import Interface from 'interface.json';
 import Core from '_core.js';
 import './group.scss';
 import Template from './group.html';
-import Module from './module/module';
+import Module from 'components/global-nav/side-nav/group/module/module';
 
 /**
  * Creates an Group in a section of the sidenav

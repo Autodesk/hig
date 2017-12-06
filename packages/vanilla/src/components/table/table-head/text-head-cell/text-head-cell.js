@@ -2,7 +2,7 @@ import Interface from 'interface.json';
 import Core from '_core.js';
 import './text-head-cell.scss';
 import Template from './text-head-cell.html';
-import frToPercentage from '../../../../helpers/js/_frtopercentage';
+import frToPercentage from 'helpers/js/_frtopercentage';
 
 const AvailableAlignments = ['left', 'right', 'center'];
 
