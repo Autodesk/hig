@@ -9,16 +9,17 @@
     "lib/hig.css"
   ],
   "scripts": {
-    "lib": "NODE_ENV=production webpack -p",
-    "watch": "webpack --watch",
-    "deploy": "npm run lib && surge .",
-    "generate-index": "node ./dev/generate-index.js",
     "build-icons": "node src/basics/icons/build/build.js",
+    "deploy": "npm run lib && surge .",
+    "dev-server": "webpack-dev-server --open",
     "gemini": "concurrently 'http-server' 'gemini test dev/gemini/*' --kill-others",
+    "gemini-ci": "gemini test dev/gemini/*",
     "gemini-report": "concurrently 'http-server' 'gemini test dev/gemini/* --reporter html --reporter flat' --kill-others",
     "gemini-update": "concurrently 'http-server' 'gemini update dev/gemini/*' --kill-others",
-    "gemini-ci": "gemini test dev/gemini/*",
-    "test": "npm run gemini"
+    "generate-index": "node ./dev/generate-index.js",
+    "lib": "NODE_ENV=production webpack -p",
+    "test": "npm run gemini",
+    "watch": "webpack --watch"
   },
   "repository": {
     "type": "git",
@@ -60,7 +61,8 @@
     "style-loader": "^0.13.1",
     "svg-url-loader": "^2.3.0",
     "svgo": "^0.7.2",
-    "webpack": "^3.5.5"
+    "webpack": "^3.5.5",
+    "webpack-dev-server": "^2.9.5"
   },
   "dependencies": {
     "hig-interface": "^0.1.8"
