@@ -15,10 +15,10 @@ Creating a new component (or subcomponent) consists of 2 parts:
 ```bash
 plop
 ```
-Use the arrows to select the `hig_skeleton`, type your component name (ex: `component123`), next type the location where you would want your component directory to live (ex: `src/components/component123_parent`). This will generate a `html`, `sass` and `js` file in the directory you provided, in our example it would create:
+Use the arrows to select the `hig_skeleton`, type your component name (ex: `component123`), next type the location where you would want your component directory to live (ex: `src/components/component123_parent`). This will generate a `html`, `scss` and `js` file in the directory you provided, in our example it would create:
 ```
 src/components/component123_parent/component123/component123.html
-src/components/component123_parent/component123/component123.sass
+src/components/component123_parent/component123/component123.scss
 src/components/component123_parent/component123/component123.js
 ```
 
