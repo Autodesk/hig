@@ -1,23 +1,26 @@
-## Getting Started
+# Developing
 
-in this directory simple run:
 ```
 npm install
-```
-
-To start developing, simply run:
-```
-npm run start
-```
-
-To start seeing React examples on our playground, run:
-```
 npm run playground
 ```
 
 To make a production build, run:
 ```
 npm run build
+```
+
+## Incorporating local `hig-vanilla` changes
+
+`hig-vanilla` is a dependency of `hig-react`. If you are simultaneously working on `hig-vanilla` and `hig-react`, you can use Lerna to import `hig-vanilla` from your working directory rather than use the published package:
+
+```
+cd ../..  # hig root directory
+npm run bootstrap
+cd packages/vanilla && npm run watch  # Let webpack compile hig-vanilla changes locally
+
+# In another tab...
+cd ../react && npm run playground
 ```
 
 ## Developing for HIG-React
