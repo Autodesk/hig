@@ -1,5 +1,36 @@
+@import '~basics/colors/colors.scss';
+@import '~helpers/css/mixins/spacing.scss';
 .hig__expanding-filter-section {}
 
-.hig__expanding-filter-section__label {}
+.hig__expanding-filter-section__summary {
+  display: block;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid color(hig-slate-30);
+  line-height: 24px;
+  padding: spacing(xs) 0;
+  &:focus {
+    outline: none;
+    border-bottom-color: color(hig-blue-60);
+    box-shadow: 0 1px 0 color(hig-blue-60);
+  }
+}
+
+.hig__expanding-filter-section__summary::-webkit-details-marker {
+  display: none;
+}
+
+.hig__expanding-filter-section__label {
+  font-family: 'ArtifaktElement', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.hig__expanding-filter-section__caret {
+  transform: rotate(-90deg);
+  .hig__expanding-filter-section[open] & {
+    transform: rotate(0deg);
+  }
+}
 
 .hig__expanding-filter-section__content {}
