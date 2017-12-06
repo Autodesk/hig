@@ -4,6 +4,8 @@ import './expanding-filter-section.scss';
 import Template from './expanding-filter-section.html';
 import Icon from '../../basics/icon/icon';
 
+const AvailableSizes = ['s', 'm'];
+
 class ExpandingFilterSection extends Core {
   constructor(options = {}) {
     super(options);
@@ -40,6 +42,18 @@ class ExpandingFilterSection extends Core {
     ).innerText = label;
   }
 
+  setSize(size) {
+    if (AvailableSizes.indexOf(size) > -1) {
+      this._clearAllSizes();
+      this.el.classList.add(`hig__expanding-filter-section--${size}`);
+    } else {
+      console.error(
+        `ExpandingFilterSection size "${size}" not found, only these sizes are allowed: `,
+        AvailableSizes
+      );
+    }
+  }
+
   addSlot(content) {
     this.el
       .querySelector('.hig__expanding-filter-section__content')
@@ -54,10 +68,17 @@ class ExpandingFilterSection extends Core {
     const icon = new Icon({ nameOrSVG: 'caret' });
     icon.mount(mountEl);
   }
+
+  _clearAllSizes() {
+    AvailableSizes.forEach((size) => {
+      this.el.classList.remove(`hig__expanding-filter-section--${size}`);
+    });
+  }
 }
 
 ExpandingFilterSection._interface = Interface.components.ExpandingFilterSection;
 ExpandingFilterSection._defaults = {};
 ExpandingFilterSection._partials = {};
+ExpandingFilterSection.AvailableSizes = AvailableSizes;
 
 export default ExpandingFilterSection;

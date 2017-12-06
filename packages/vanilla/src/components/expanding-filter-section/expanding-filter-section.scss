@@ -9,10 +9,17 @@
   border-bottom: 1px solid color(hig-slate-30);
   line-height: 24px;
   padding: spacing(xs) 0;
+  margin-bottom: spacing(m);
   &:focus {
     outline: none;
     border-bottom-color: color(hig-blue-60);
     box-shadow: 0 1px 0 color(hig-blue-60);
+  }
+  .hig__expanding-filter-section--s>& {
+    border-bottom: none;
+    box-shadow: none;
+    padding: 0;
+    margin-bottom: spacing(s);
   }
 }
 
@@ -24,13 +31,18 @@
   font-family: 'ArtifaktElement', sans-serif;
   font-size: 18px;
   font-weight: 500;
+  .hig__expanding-filter-section--s & {
+    font-size: 14px;
+  }
 }
 
 .hig__expanding-filter-section__caret {
   transform: rotate(-90deg);
-  .hig__expanding-filter-section[open] & {
+  .hig__expanding-filter-section--open>.hig__expanding-filter-section__summary>& {
     transform: rotate(0deg);
   }
 }
 
-.hig__expanding-filter-section__content {}
+.hig__expanding-filter-section__content {
+  margin-bottom: spacing(xl);
+}

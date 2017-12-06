@@ -895,12 +895,6 @@
         "close": {
           "desc": ""
         },
-        "setLabel": {
-          "desc": "",
-          "params": [
-            "{String} Short text describing the content"
-          ]
-        },
         "onClick": {
           "desc": "Calls the provided callback when user clicks on the label",
           "params": "HIG.abstract.EventObject.params",
@@ -908,6 +902,18 @@
         },
         "open": {
           "desc": ""
+        },
+        "setLabel": {
+          "desc": "Sets the label",
+          "params": [
+            "{String} Short text describing the content"
+          ]
+        },
+        "setSize": {
+          "desc": "Sets the size of the expanding fitler section",
+          "params": [
+            "{s, m} size of the expanding fitler section"
+          ]
         }
       }
     },

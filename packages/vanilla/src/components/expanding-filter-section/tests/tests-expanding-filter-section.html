@@ -33,13 +33,22 @@
 
     Title.mount('.title');
 
-    var content = document.createElement('h1');
-    content.innerText = 'content in my expandable filter section';
+    var content = document.createElement('div');
 
     var expandingFilterSection = new Hig.ExpandingFilterSection();
     expandingFilterSection.mount('.test-container');
     expandingFilterSection.addSlot(content);
     expandingFilterSection.setLabel('Filters');
+
+
+    var smallContent = document.createElement('h1');
+    smallContent.innerText = 'content in my expandable filter section';
+
+    var smallExpandingFilterSection = new Hig.ExpandingFilterSection();
+    smallExpandingFilterSection.mount(content);
+    smallExpandingFilterSection.addSlot(smallContent);
+    smallExpandingFilterSection.setSize('s');
+    smallExpandingFilterSection.setLabel('Current projects');
   </script>
 </body>
 
