@@ -1,6 +1,6 @@
 import Interface from 'interface.json';
-import Template from './checkbox.html';
 import InputButton from 'basics/form-elements/input-button/input-button';
+import Template from './checkbox.html';
 
 /**
  * Creates an Checkbox

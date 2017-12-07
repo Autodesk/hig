@@ -1,7 +1,6 @@
 import Interface from 'interface.json';
-import Template from './radio-button.html';
 import InputButton from 'basics/form-elements/input-button/input-button';
-
+import Template from './radio-button.html';
 
 // List all the fn you don't want to override so they can be defined in this prototype
 const inputButtonMethods = [

@@ -1,8 +1,8 @@
 import Interface from 'interface.json';
 import Core from '_core.js';
-import './tabs.scss';
-import Template from './tabs.html';
 import Tab from 'components/tabs/tab/tab';
+import Template from './tabs.html';
+import './tabs.scss';
 
 /**
  * Creates a Tabs

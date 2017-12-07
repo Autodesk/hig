@@ -1,12 +1,12 @@
 import Interface from 'interface.json';
 import Core from '_core.js';
-import './progress-ring.scss';
-import Template from './progress-ring.html';
 import ProgressRingIndeterminate from 'components/progress-ring/progress-ring-indeterminate';
 import ProgressRingDeterminate from 'components/progress-ring/progress-ring-determinate';
+import Template from './progress-ring.html';
 import extraSmallSVG from './progress-ring-xs.svg';
 import smallSVG from './progress-ring-s.svg';
 import mediumsSVG from './progress-ring-m.svg';
+import './progress-ring.scss';
 
 const AvailableSizes = ['xs', 's', 'm', 'l', 'xl'];
 

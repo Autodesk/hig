@@ -1,7 +1,7 @@
 import Core from '_core.js';
-import './profile-flyout-content.scss';
+import Button from 'components/button/button';
 import Template from './profile-flyout-content.html';
-import Button from 'components/button/button.js';
+import './profile-flyout-content.scss';
 
 /**
  * Creates an ProfileFlyoutContent

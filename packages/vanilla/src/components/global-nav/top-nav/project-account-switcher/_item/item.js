@@ -1,8 +1,8 @@
 import Interface from 'interface.json';
 import Core from '_core.js';
-import './item.scss';
-import Template from './item.html';
 import initials from 'helpers/js/_initials';
+import Template from './item.html';
+import './item.scss';
 
 const TYPES = ['account', 'project'];
 

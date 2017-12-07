@@ -1,8 +1,8 @@
 import Core from '_core.js';
-import './target.scss';
-import Template from './target.html';
 import Item from 'components/global-nav/top-nav/project-account-switcher/_item/item';
 import Icon from 'basics/icon/icon';
+import Template from './target.html';
+import './target.scss';
 
 /**
  * Creates an Target

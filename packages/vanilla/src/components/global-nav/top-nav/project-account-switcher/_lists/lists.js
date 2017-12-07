@@ -1,6 +1,6 @@
 import Core from '_core.js';
-import Template from './lists.html';
 import List from 'components/global-nav/top-nav/project-account-switcher/_lists/_list/_list';
+import Template from './lists.html';
 
 /**
  * Creates an Lists

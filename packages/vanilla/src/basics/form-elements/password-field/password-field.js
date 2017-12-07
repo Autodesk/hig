@@ -1,7 +1,7 @@
-import Template from './password-field.html';
 import Interface from 'interface.json';
 import Core from '_core.js';
 import TextField from 'basics/form-elements/text-field/text-field';
+import Template from './password-field.html';
 
 const textFieldMethods = [
   'setLabel',

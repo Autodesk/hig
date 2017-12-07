@@ -1,10 +1,10 @@
 import Interface from 'interface.json';
 import Core from '_core.js';
-import './module.scss';
+import Icon from 'basics/icon/icon';
 import Template from './module.html';
 import Submodule from './submodule/submodule';
 import Collapse from './collapse/collapse';
-import Icon from 'basics/icon/icon';
+import './module.scss';
 
 /**
  * Creates an Module

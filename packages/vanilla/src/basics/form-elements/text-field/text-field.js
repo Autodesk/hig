@@ -1,8 +1,8 @@
 import Interface from 'interface.json';
 import Core from '_core.js';
-import './text-field.scss';
-import Template from './text-field.html';
 import Icon from 'basics/icon/icon';
+import Template from './text-field.html';
+import './text-field.scss';
 
 /**
  * Creates an TextField

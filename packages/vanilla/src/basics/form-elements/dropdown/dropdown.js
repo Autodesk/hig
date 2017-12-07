@@ -1,12 +1,9 @@
 import Core from '_core.js';
 import Interface from 'interface.json';
-
-import './dropdown.scss';
-
-import Template from './dropdown.html';
-
 import TextField from 'basics/form-elements/text-field/text-field';
 import Option from 'basics/form-elements/option/option';
+import Template from './dropdown.html';
+import './dropdown.scss';
 
 const OPEN_CLASS = 'hig__dropdown--open';
 

@@ -1,7 +1,6 @@
-import './profile-image.scss';
-
-import Template from './profile-image.html';
 import Core from '_core.js';
+import Template from './profile-image.html';
+import './profile-image.scss';
 
 /**
  * Creates a ProfileImage

@@ -1,9 +1,9 @@
 import Interface from 'interface.json';
 import Core from '_core.js';
-import './search.scss';
-import Template from './search.html';
 import Icon from 'basics/icon/icon';
 import Option from 'basics/form-elements/option/option';
+import Template from './search.html';
+import './search.scss';
 
 const OPEN_CLASS = 'hig__option__list--show';
 /**

@@ -1,8 +1,8 @@
 import Interface from 'interface.json';
 import Core from '_core.js';
-import './button.scss';
-import Template from './button.html';
 import Icon from 'basics/icon/icon';
+import Template from './button.html';
+import './button.scss';
 
 const AvailableTypes = ['primary', 'secondary', 'flat'];
 const AvailableSizes = ['small', 'standard', 'large'];

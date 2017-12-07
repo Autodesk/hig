@@ -1,8 +1,8 @@
 import Interface from 'interface.json';
 import Core from '_core.js';
-import './shortcut.scss';
-import Template from './shortcut.html';
 import Icon from 'basics/icon/icon';
+import Template from './shortcut.html';
+import './shortcut.scss';
 
 /**
  * Creates an Shortcut

@@ -1,9 +1,9 @@
 import Interface from 'interface.json';
 import Core from '_core.js';
-import './modal.scss';
-import Template from './modal.html';
 import Button from 'components/button/button';
-import Icon from 'basics/icon/icon.js';
+import Icon from 'basics/icon/icon';
+import Template from './modal.html';
+import './modal.scss';
 
 const AvailableStyles = ['standard', 'alternate'];
 

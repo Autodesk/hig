@@ -1,10 +1,10 @@
 import Interface from 'interface.json';
 import Core from '_core.js';
-import './table-row.scss';
-import Template from './table-row.html';
 import TextCell from 'components/table/table-row/text-cell/text-cell';
 import SlotCell from 'components/table/table-row/slot-cell/slot-cell';
 import IconCell from 'components/table/table-row/icon-cell/icon-cell';
+import Template from './table-row.html';
+import './table-row.scss';
 
 /**
  * Creates an Table
