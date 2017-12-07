@@ -1,5 +1,4 @@
 let fs = require('fs'),
-  path = require('path'),
   SVGO = require('svgo');
 
 const svgo = new SVGO({
@@ -14,7 +13,7 @@ const svgo = new SVGO({
       accessibility: {
         type: 'full',
         active: true,
-        fn(data, params) {
+        fn(data, _params) {
           const svg = data.content[0];
 
           if (svg.isElem('svg')) {

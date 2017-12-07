@@ -7,14 +7,14 @@ gemini.suite('password field', (parent) => {
         this.field = find('.test-group-default .hig__text-field__input');
       })
       .capture('plain')
-      .capture('hovered', function (actions, find) {
+      .capture('hovered', function (actions, _find) {
         actions.mouseMove(this.field);
       })
-      .capture('focused', function (actions, find) {
+      .capture('focused', function (actions, _find) {
         actions.mouseDown(this.field);
         actions.mouseUp(this.field);
       })
-      .capture('with value', function (actions, find) {
+      .capture('with value', function (actions, _find) {
         actions.sendKeys(this.field, 'Now it has a value');
       });
   });
@@ -24,7 +24,7 @@ gemini.suite('password field', (parent) => {
       .before(function (actions, find) {
         this.revealButtonfield = find('.test-group-reveal .hig__text-field__input');
       })
-      .capture('with password reveal button', function (actions, find) {
+      .capture('with password reveal button', function (actions, _find) {
         actions.sendKeys(this.revealButtonfield, 'this-is-a-password-that-is-long-enough-to-overflow');
       })
       .capture('with password revealed', (actions, find) => {

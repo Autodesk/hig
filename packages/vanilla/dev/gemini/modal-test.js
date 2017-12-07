@@ -7,10 +7,10 @@ gemini.suite('modal', (parent) => {
         this.next = find('.hig__modal__close-button');
       })
       .capture('standard')
-      .capture('alternate', function (actions, find) {
+      .capture('alternate', function (actions, _find) {
         actions.click(this.next);
       })
-      .capture('scrollable', function (actions, find) {
+      .capture('scrollable', function (actions, _find) {
         actions.click(this.next);
       });
   });

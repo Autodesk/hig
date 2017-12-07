@@ -7,7 +7,7 @@ gemini.suite('range', (parent) => {
         this.field = find('.tests-range-defaults .hig__range__field');
       })
       .capture('plain')
-      .capture('focused', function (actions, find) {
+      .capture('focused', function (actions, _find) {
         actions.mouseDown(this.field);
       });
   });
@@ -16,16 +16,16 @@ gemini.suite('range', (parent) => {
       .before(function (actions, find) {
         this.field = find('.tests-range-setters .hig__range__field');
       })
-      .capture('setters', function (actions, find) {
+      .capture('setters', function (actions, _find) {
         actions.mouseDown(this.field);
       });
   });
-	 gemini.suite('disabled', (suite) => {
+  gemini.suite('disabled', (suite) => {
     suite.setCaptureElements('.test-group-disabled')
       .before(function (actions, find) {
         this.field = find('.tests-range-disabled .hig__range__field');
       })
-      .capture('disabled', function (actions, find) {
+      .capture('disabled', function (actions, _find) {
         actions.mouseDown(this.field);
       });
   });

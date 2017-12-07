@@ -7,11 +7,11 @@ gemini.suite('text link', (parent) => {
         this.field = find('.hig__text-link');
       })
       .capture('plain')
-      .capture('focused', function (actions, find) {
+      .capture('focused', function (actions, _find) {
         actions.mouseDown(this.field);
         actions.mouseUp(this.field);
       })
-      .capture('hovered', function (actions, find) {
+      .capture('hovered', function (actions, _find) {
         actions.mouseMove(this.field);
       });
   });
@@ -22,11 +22,11 @@ gemini.suite('text link', (parent) => {
         this.field = find('.hig__text-link');
       })
       .capture('plain')
-      .capture('focused', function (actions, find) {
+      .capture('focused', function (actions, _find) {
         actions.mouseDown(this.field);
         actions.mouseUp(this.field);
       })
-      .capture('hovered', function (actions, find) {
+      .capture('hovered', function (actions, _find) {
         actions.mouseMove(this.field);
       });
   });
@@ -37,11 +37,11 @@ gemini.suite('text link', (parent) => {
         this.field = find('.hig__text-link');
       })
       .capture('plain')
-      .capture('focused', function (actions, find) {
+      .capture('focused', function (actions, _find) {
         actions.mouseDown(this.field);
         actions.mouseUp(this.field);
       })
-      .capture('hovered', function (actions, find) {
+      .capture('hovered', function (actions, _find) {
         actions.mouseMove(this.field);
       });
   });
@@ -52,11 +52,11 @@ gemini.suite('text link', (parent) => {
         this.field = find('.hig__text-link');
       })
       .capture('plain')
-      .capture('focused', function (actions, find) {
+      .capture('focused', function (actions, _find) {
         actions.mouseDown(this.field);
         actions.mouseUp(this.field);
       })
-      .capture('hovered', function (actions, find) {
+      .capture('hovered', function (actions, _find) {
         actions.mouseMove(this.field);
       });
   });
@@ -67,11 +67,11 @@ gemini.suite('text link', (parent) => {
         this.field = find('.hig__text-link');
       })
       .capture('plain')
-      .capture('focused', function (actions, find) {
+      .capture('focused', function (actions, _find) {
         actions.mouseDown(this.field);
         actions.mouseUp(this.field);
       })
-      .capture('hovered', function (actions, find) {
+      .capture('hovered', function (actions, _find) {
         actions.mouseMove(this.field);
       });
   });
@@ -82,11 +82,11 @@ gemini.suite('text link', (parent) => {
         this.field = find('.hig__text-link');
       })
       .capture('plain')
-      .capture('focused', function (actions, find) {
+      .capture('focused', function (actions, _find) {
         actions.mouseDown(this.field);
         actions.mouseUp(this.field);
       })
-      .capture('hovered', function (actions, find) {
+      .capture('hovered', function (actions, _find) {
         actions.mouseMove(this.field);
       });
   });

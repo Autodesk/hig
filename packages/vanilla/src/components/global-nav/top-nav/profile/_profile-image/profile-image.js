@@ -1,7 +1,6 @@
 import './profile-image.scss';
 
 import Template from './profile-image.html';
-import Interface from 'interface.json';
 import Core from '_core.js';
 
 /**

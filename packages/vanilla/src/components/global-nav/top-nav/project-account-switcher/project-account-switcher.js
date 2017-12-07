@@ -2,7 +2,6 @@ import Interface from 'interface.json';
 import Core from '_core.js';
 import './project-account-switcher.scss';
 import Template from './project-account-switcher.html';
-import Button from 'components/button/button';
 import Flyout from 'basics/flyout/flyout';
 import Project from 'components/global-nav/top-nav/project-account-switcher/project/project';
 import Account from 'components/global-nav/top-nav/project-account-switcher/account/account';

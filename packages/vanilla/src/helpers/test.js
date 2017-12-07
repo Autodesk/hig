@@ -26,3 +26,5 @@ class TestHelpers {
     return { TopNav, GlobalNav };
   }
 }
+
+module.exports = TestHelpers;

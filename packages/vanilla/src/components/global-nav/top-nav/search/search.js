@@ -24,7 +24,7 @@ class Search extends Core {
     this._setIcons();
   }
 
-  addOption(option, referenceOption) {
+  addOption(option, _referenceOption) {
     if (option instanceof Option) {
       const optionWrapper = this._findDOMEl('.hig__option__list', this.el);
       option.mount(optionWrapper);

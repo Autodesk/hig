@@ -7,13 +7,13 @@ gemini.suite('text area', (parent) => {
         this.field = find('.hig__text-area__field');
       })
       .capture('plain')
-      .capture('hovered', function (actions, find) {
+      .capture('hovered', function (actions, _find) {
         actions.mouseMove(this.field);
       })
-      .capture('focused', function (actions, find) {
+      .capture('focused', function (actions, _find) {
         actions.mouseDown(this.field);
       })
-      .capture('with value', function (actions, find) {
+      .capture('with value', function (actions, _find) {
         actions.sendKeys(this.field, 'Now it has a value');
       });
   });

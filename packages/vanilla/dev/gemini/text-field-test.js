@@ -7,14 +7,14 @@ gemini.suite('text field', (parent) => {
         this.field = find('.test-group-default .hig__text-field__input');
       })
       .capture('plain')
-      .capture('hovered', function (actions, find) {
+      .capture('hovered', function (actions, _find) {
         actions.mouseMove(this.field);
       })
-      .capture('focused', function (actions, find) {
+      .capture('focused', function (actions, _find) {
         actions.mouseDown(this.field);
         actions.mouseUp(this.field);
       })
-      .capture('with value', function (actions, find) {
+      .capture('with value', function (actions, _find) {
         actions.sendKeys(this.field, 'Now it has a value');
       });
   });

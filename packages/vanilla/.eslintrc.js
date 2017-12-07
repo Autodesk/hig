@@ -22,6 +22,11 @@ module.exports = {
     'import/no-extraneous-dependencies': 0,
     'no-underscore-dangle': 0,
     'no-unused-expressions': ['error', { allowTernary: true }],
+    'no-unused-vars': ['error', {
+      'args': 'after-used',
+      'argsIgnorePattern': '^_',
+      'varsIgnorePattern': '^_',
+     }],
     'max-len': [1, { code: 100 }]
   }
 };

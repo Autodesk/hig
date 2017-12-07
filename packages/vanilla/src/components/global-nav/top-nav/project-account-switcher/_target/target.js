@@ -1,4 +1,3 @@
-import Interface from 'interface.json';
 import Core from '_core.js';
 import './target.scss';
 import Template from './target.html';
