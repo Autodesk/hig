@@ -18,6 +18,7 @@
     "gemini-update": "concurrently 'http-server' 'gemini update dev/gemini/*' --kill-others",
     "generate-index": "node ./dev/generate-index.js",
     "lib": "webpack -p --config webpack.prod.js",
+    "lint": "eslint --ext .jsx,.js dev src",
     "test": "npm run gemini",
     "watch": "webpack --watch --config webpack.dev.js"
   },
