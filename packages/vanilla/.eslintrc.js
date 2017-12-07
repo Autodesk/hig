@@ -1,5 +1,5 @@
 module.exports = {
-  'extends': './node_modules/eslint-config-airbnb/.eslintrc',
+  'extends': ["airbnb"],
   'parser': 'babel-eslint',
   'globals': {
     'document': true,
@@ -20,6 +20,6 @@ module.exports = {
     'import/no-extraneous-dependencies': 0,
     'no-underscore-dangle': 0,
     'no-unused-expressions': ['error', { allowTernary: true }],
-    'max-len': [2, { code: 100 }]
+    'max-len': [1, { code: 100 }]
   }
 };
