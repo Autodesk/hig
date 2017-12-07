@@ -42,7 +42,7 @@ export default function (plop) {
     prompts: [{
       type: 'input',
       name: 'name',
-      message: 'What\s the name of the component?',
+      message: "What's the name of the component?",
       validate(value) {
         if ((/.+/).test(value)) { return true; }
         return 'name is required';

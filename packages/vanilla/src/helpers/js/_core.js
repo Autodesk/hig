@@ -31,10 +31,10 @@ class Core {
       }, this);
 
       // CHECK IF ALL METHODS IN INTERFACE ARE IMPLEMENTED
-      for (const k in this._interface.methods) {
+      for (const k in this._interface.methods) { // eslint-disable-line no-restricted-syntax
         if (instanceMethods.indexOf(k) === -1) {
           console.error(
-            `METHOD: \"${this.constructor.name}.${k}\" IS NOT IMPLEMENTED BY THIS COMPONENT YET AND NEEDS AN IMPLEMENTATION`,
+            `METHOD: "${this.constructor.name}.${k}" IS NOT IMPLEMENTED BY THIS COMPONENT YET AND NEEDS AN IMPLEMENTATION`,
           );
         }
       }
@@ -46,10 +46,10 @@ class Core {
         `NO DEFAULTS SET FOR ${this.constructor.name}, PLEASE DEFINE DEFAULTS IN _defaults PROPERTY OF YOUR CLASS`,
       );
     } else {
-      for (const v in this._interface.defaults) {
+      for (const v in this._interface.defaults) { // eslint-disable-line no-restricted-syntax
         if (this._defaults[v] === undefined) {
           console.error(
-            `DEFAULT VALUE: \"${this.constructor.name}.${v}\" IS DEFINED IN THE INTERFACE BUT NOT IMPLEMENTED`,
+            `DEFAULT VALUE: "${this.constructor.name}.${v}" IS DEFINED IN THE INTERFACE BUT NOT IMPLEMENTED`,
             this,
           );
         }
@@ -60,8 +60,10 @@ class Core {
     if (options) {
       const defaults = this._defaults;
       if (defaults) {
-        for (const key in defaults) {
-          if (!defaults.hasOwnProperty(key)) continue; // skip loop if the property is from prototype
+        for (const key in defaults) { // eslint-disable-line no-restricted-syntax
+          // skip loop if the property is from prototype
+          if (!defaults.hasOwnProperty(key)) return; // eslint-disable-line no-prototype-builtins
+
           if (!options[key]) {
             options[key] = defaults[key];
           }
@@ -82,7 +84,7 @@ class Core {
       return this._el;
     }
 
-    throw `ELEMENT: You cannot access ${this.constructor.name}'s \`el\` property before it is mounted.`;
+    throw new Error(`ELEMENT: You cannot access ${this.constructor.name}'s \`el\` property before it is mounted.`);
   }
 
   set el(element) {
@@ -141,7 +143,7 @@ class Core {
      * @returns {HTMLElement} el - HTMLElement that is mounted to DOM
      */
 
-  mountPartialToComment(searchComment, mountNode, scopeNode) {
+  mountPartialToComment(searchComment, mountNode, scopeNode) { // eslint-disable-line consistent-return
     function filterNone() {
       return NodeFilter.FILTER_ACCEPT;
     }
@@ -155,7 +157,7 @@ class Core {
       false,
     ); // Fourth argument, which is actually obsolete according to the DOM4 standard, is required in IE 11
     let curNode;
-    while ((curNode = iterator.nextNode())) {
+    while ((curNode = iterator.nextNode())) { // eslint-disable-line no-cond-assign
       if (curNode.nodeValue === searchComment) {
         comment = curNode;
       }
@@ -176,7 +178,7 @@ class Core {
       return mountNode.el;
     }
     console.error(
-      `MOUNT PARTIAL TO COMMENT: ${this.constructor.name} has no comment \"${searchComment}\" to mount to.`,
+      `MOUNT PARTIAL TO COMMENT: ${this.constructor.name} has no comment "${searchComment}" to mount to.`,
     );
   }
 
@@ -208,7 +210,7 @@ class Core {
      * @returns {Function} disposeFunction - function to call to remove event listener, note: only returns dispose function when single eventType has been requested
      */
 
-  _attachListener(
+  _attachListener( // eslint-disable-line consistent-return
     eventTypes,
     targetClass,
     scopeElement,
@@ -216,17 +218,17 @@ class Core {
   ) {
     function childOf(/* child node */ c, /* parent node */ p) {
       // returns boolean
-      while ((c = c.parentNode) && c !== p);
+      while ((c = c.parentNode) && c !== p); // eslint-disable-line no-cond-assign
       return !!c;
     }
 
     const q = this._findDOMEl(targetClass, scopeElement);
-    let eventTarget,
-      eventFn;
+    let eventTarget;
+    let eventFn;
 
     const events = eventTypes.split(' ');
-    for (let i = 0; i < events.length; i++) {
-      var eventType = events[i];
+    for (let i = 0; i < events.length; i++) { // eslint-disable-line no-plusplus
+      let eventType = events[i];
 
       if (eventType === 'hover') {
         eventType = 'mouseenter';
@@ -249,7 +251,7 @@ class Core {
       eventTarget.addEventListener(eventType, eventFn);
 
       if (events.length === 1) {
-        const dispose = function () {
+        const dispose = function () { // eslint-disable-line no-loop-func, func-names
           eventTarget.removeEventListener(eventType, eventFn);
         };
 
@@ -302,7 +304,7 @@ class Core {
      * @returns null
      */
 
-  _removeElementIfFound(selector) {
+  _removeElementIfFound(selector) { // eslint-disable-line consistent-return
     const existingEl = this.el.querySelector(selector, this.el);
     if (existingEl) {
       return existingEl.remove();

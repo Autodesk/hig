@@ -37,7 +37,7 @@ class Icon extends Core {
     }
   }
 
-  _confirmNameOrSVG(icon, size) {
+  _confirmNameOrSVG(icon, size) { // eslint-disable-line consistent-return
     const isNamedIcon = Icons[`${icon}-${size}`];
     const isSVG = /^<svg/.test(icon);
 

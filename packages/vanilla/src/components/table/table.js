@@ -39,9 +39,7 @@ class Table extends Core {
   }
 
   _clearAllDensities() {
-    for (const density in AvailableDensities) {
-      this.el.classList.remove(`hig__table-${density}`);
-    }
+    AvailableDensities.forEach(density => this.el.classList.remove(`hig__table-${density}`));
   }
 }
 

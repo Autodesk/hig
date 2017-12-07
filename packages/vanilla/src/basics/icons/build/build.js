@@ -1,5 +1,5 @@
-let fs = require('fs'),
-  SVGO = require('svgo');
+const fs = require('fs');
+const SVGO = require('svgo');
 
 const svgo = new SVGO({
   plugins: [
