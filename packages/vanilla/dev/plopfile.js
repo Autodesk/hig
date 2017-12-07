@@ -3,35 +3,35 @@ const path = require('path');
 export default function (plop) {
   plop.addHelper('absPath', p => path.resolve(plop.getPlopfilePath(), p));
 
-  plop.addHelper('pathToBEM', (plop_path, name) => {
-    if (plop_path[plop_path.length] !== '/') plop_path += '/';
-    let s = plop_path.split('/').join('__');
+  plop.addHelper('pathToBEM', (plopPath, name) => {
+    if (plopPath[plopPath.length] !== '/') plopPath += '/';
+    let s = plopPath.split('/').join('__');
     s += plop.renderString('{{ dashCase name }}', { name });
     s = s.replace('src__web__components__', 'hig__');
     return s;
   });
 
-  plop.addHelper('pathToInterface', function (plop_path, name) {
-    const a = plop_path.split('/');
+  plop.addHelper('pathToInterface', function (plopPath, name) {
+    const a = plopPath.split('/');
     const properCasedName = plop.renderString('{{ properCase name }}', { name });
     a.push(properCasedName);
-    const new_a = [];
+    const newArr = [];
     a.forEach((element) => {
       if (element !== 'src' && element !== 'web') {
         if (element === 'components') {
-          new_a.push(element);
+          newArr.push(element);
         } else {
           const p = plop.renderString('{{ properCase element }}', { element });
-          new_a.push(p);
-          new_a.push('partials');
+          newArr.push(p);
+          newArr.push('partials');
         }
       }
     }, this);
 
-    new_a.pop(); // remove last "partials"
+    newArr.pop(); // remove last "partials"
 
     let s = "['";
-    s += new_a.join("']['");
+    s += newArr.join("']['");
     s += "']";
 
     return s;

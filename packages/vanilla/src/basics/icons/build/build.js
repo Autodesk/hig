@@ -62,15 +62,15 @@ fs.readdir(srcLocation, (err, filenames) => {
     // CLEANUP FILE AND MINIMIZE
     svgo.optimize(data, (result) => {
       // EXPORT TO JS FILE
-      let svg_string = `HIGIcons['${cleanFileName}'] = `;
-      svg_string +=
+      let svgString = `HIGIcons['${cleanFileName}'] = `;
+      svgString +=
         `"${
           result.data
             .replace('___###NAME###___', cleanFileName)
             .replace(/"/g, '\\"')
         }";\n`;
 
-      fs.appendFileSync(distfile, svg_string); // write to our dist file
+      fs.appendFileSync(distfile, svgString); // write to our dist file
     });
   });
 
