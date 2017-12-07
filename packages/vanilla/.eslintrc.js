@@ -8,7 +8,9 @@ module.exports = {
   'settings': {
     'import/resolver': {
       'babel-module': {},
-      'webpack': true
+      'webpack': {
+        config: 'webpack.dev.js',
+      }
     }
   },
   'globals': {
