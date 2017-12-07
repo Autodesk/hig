@@ -4,7 +4,7 @@ export default function (plop) {
   plop.addHelper('absPath', p => path.resolve(plop.getPlopfilePath(), p));
 
   plop.addHelper('pathToBEM', (plop_path, name) => {
-    if (plop_path[plop_path.length] != '/') plop_path += '/';
+    if (plop_path[plop_path.length] !== '/') plop_path += '/';
     let s = plop_path.split('/').join('__');
     s += plop.renderString('{{ dashCase name }}', { name });
     s = s.replace('src__web__components__', 'hig__');
@@ -17,8 +17,8 @@ export default function (plop) {
     a.push(properCasedName);
     const new_a = [];
     a.forEach((element) => {
-      if (element != 'src' && element != 'web') {
-        if (element == 'components') {
+      if (element !== 'src' && element !== 'web') {
+        if (element === 'components') {
           new_a.push(element);
         } else {
           const p = plop.renderString('{{ properCase element }}', { element });

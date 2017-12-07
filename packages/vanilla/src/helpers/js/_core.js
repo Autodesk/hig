@@ -22,7 +22,7 @@ class Core {
       // CHECK IF ALL METHODS IN COMPONENT ARE DEFINED IN INTERFACE
       instanceMethods.forEach(function (v, _i) {
         const coreMethodMissing = coreMethods.indexOf(v) === -1;
-        if (coreMethodMissing && v[0] != '_' && !this._interface.methods[v]) {
+        if (coreMethodMissing && v[0] !== '_' && !this._interface.methods[v]) {
           console.error(
             `METHOD: "${this.constructor.name}.${v}" IS NOT DEFINED AS INTERFACE OR IS NOT A VALID INTERFACE METHOD`,
           );
@@ -155,7 +155,7 @@ class Core {
     ); // Fourth argument, which is actually obsolete according to the DOM4 standard, is required in IE 11
     let curNode;
     while ((curNode = iterator.nextNode())) {
-      if (curNode.nodeValue == searchComment) {
+      if (curNode.nodeValue === searchComment) {
         comment = curNode;
       }
     }
@@ -227,11 +227,11 @@ class Core {
     for (let i = 0; i < events.length; i++) {
       var eventType = events[i];
 
-      if (eventType == 'hover') {
+      if (eventType === 'hover') {
         eventType = 'mouseenter';
       }
 
-      if (eventType == 'mouseenter' || eventType == 'scroll') {
+      if (eventType === 'mouseenter' || eventType === 'scroll') {
         eventFn = executeOnEventFunction;
         eventTarget = q;
       } else {

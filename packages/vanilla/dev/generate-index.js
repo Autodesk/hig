@@ -58,7 +58,7 @@ glob(testsGlob, (er, files) => {
   const fd = fs.openSync(indexOutputPath, 'w');
   const bytesWritten = fs.writeSync(fd, rendered);
 
-  if (bytesWritten == 0) {
+  if (bytesWritten === 0) {
     fs.closeSync(fd);
     throw new Error(`Could not write to ${indexOutputPath}`);
   }
