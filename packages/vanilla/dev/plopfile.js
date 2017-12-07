@@ -1,35 +1,32 @@
 const path = require('path');
 
 export default function (plop) {
-  plop.addHelper('absPath', (p) => {
-		return path.resolve(plop.getPlopfilePath(), p);
-	});
+  plop.addHelper('absPath', p => path.resolve(plop.getPlopfilePath(), p));
 
   plop.addHelper('pathToBEM', (plop_path, name) => {
-        if(plop_path[plop_path.length] != '/') plop_path += "/";
-        var s = plop_path.split("/").join("__");
-        s += plop.renderString("{{ dashCase name }}", { name: name });
-        s = s.replace('src__web__components__', 'hig__');
-        return s;
-	});
+    if (plop_path[plop_path.length] != '/') plop_path += '/';
+    let s = plop_path.split('/').join('__');
+    s += plop.renderString('{{ dashCase name }}', { name });
+    s = s.replace('src__web__components__', 'hig__');
+    return s;
+  });
 
   plop.addHelper('pathToInterface', function (plop_path, name) {
-    let a = plop_path.split('/');
-    let properCasedName = plop.renderString('{{ properCase name }}', { name });
+    const a = plop_path.split('/');
+    const properCasedName = plop.renderString('{{ properCase name }}', { name });
     a.push(properCasedName);
-    let new_a = [];
+    const new_a = [];
     a.forEach((element) => {
-            if(element != "src" && element != "web"){
-                if(element == "components"){
-                    new_a.push(element);
-                }else{
-                    var p = plop.renderString("{{ properCase element }}", { element: element });
-                    new_a.push(p);
-                    new_a.push("partials");
-                }
-
-            }
-        }, this);
+      if (element != 'src' && element != 'web') {
+        if (element == 'components') {
+          new_a.push(element);
+        } else {
+          const p = plop.renderString('{{ properCase element }}', { element });
+          new_a.push(p);
+          new_a.push('partials');
+        }
+      }
+    }, this);
 
     new_a.pop(); // remove last "partials"
 
@@ -46,64 +43,64 @@ export default function (plop) {
       type: 'input',
       name: 'name',
       message: 'What\s the name of the component?',
-      validate (value) {
-                if ((/.+/).test(value)) { return true; }
-                return 'name is required';
-            }
+      validate(value) {
+        if ((/.+/).test(value)) { return true; }
+        return 'name is required';
+      },
     }, {
       type: 'directory',
       name: 'path',
       message: 'where would you like to put this component?',
-      basePath: plop.getPlopfilePath()
+      basePath: plop.getPlopfilePath(),
     }],
     actions: [{
       type: 'add',
       path: '{{absPath path}}/{{ dashCase name }}/tests/tests-{{ dashCase name }}.html',
       templateFile: '../src/helpers/skeletons/skeleton-tests-template.html',
-      abortOnFail: true
+      abortOnFail: true,
     }, {
       type: 'add',
       path: '{{absPath path}}/{{ dashCase name }}/tests/gemini-{{ dashCase name }}.html',
       templateFile: '../src/helpers/skeletons/skeleton-gemini-template.html',
-      abortOnFail: true
+      abortOnFail: true,
     }, {
       type: 'add',
       path: 'gemini/{{ dashCase name }}-test.js',
       templateFile: '../src/helpers/skeletons/skeleton-gemini-test.js',
-      abortOnFail: true
+      abortOnFail: true,
     }, {
       type: 'add',
       path: '{{absPath path}}/{{ dashCase name }}/{{ dashCase name }}.html',
       templateFile: '../src/helpers/skeletons/skeleton-template.html',
-      abortOnFail: true
+      abortOnFail: true,
     }, {
       type: 'modify',
       path: '{{absPath path}}/{{ dashCase name }}/{{ dashCase name }}.html',
       pattern: /## replace css class here ##/gi,
       template: '{{ pathToBEM path name }}',
-      abortOnFail: true
+      abortOnFail: true,
     }, {
       type: 'add',
       path: '{{absPath path}}/{{ dashCase name }}/{{ dashCase name }}.scss',
       templateFile: '../src/helpers/skeletons/skeleton-template.scss',
-      abortOnFail: true
+      abortOnFail: true,
     }, {
       type: 'modify',
       path: '{{absPath path}}/{{ dashCase name }}/{{ dashCase name }}.scss',
       pattern: /## replace css class here ##/gi,
       template: '{{ pathToBEM path name }}',
-      abortOnFail: true
+      abortOnFail: true,
     }, {
       type: 'add',
       path: '{{absPath path}}/{{ dashCase name }}/{{ dashCase name }}.js',
       templateFile: '../src/helpers/skeletons/skeleton-template.js',
-      abortOnFail: true
+      abortOnFail: true,
     }, {
       type: 'modify',
       path: '{{absPath path}}/{{ dashCase name }}/{{ dashCase name }}.js',
       pattern: /## replace interface here ##/gi,
       template: '{{{ pathToInterface path name }}}',
-      abortOnFail: true
-    }]
+      abortOnFail: true,
+    }],
   });
 }

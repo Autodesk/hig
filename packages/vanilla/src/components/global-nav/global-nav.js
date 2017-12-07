@@ -58,7 +58,7 @@ GlobalNav._defaults = {};
 GlobalNav._partials = {
   SideNav,
   TopNav,
-  SubNav
+  SubNav,
 };
 
 export default GlobalNav;

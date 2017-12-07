@@ -125,7 +125,7 @@ TextArea._defaults = {
   placeholder: '',
   value: '',
   required: '',
-  name: ''
+  name: '',
 };
 TextArea._partials = {};
 

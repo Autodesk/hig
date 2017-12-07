@@ -18,7 +18,7 @@ class List extends Core {
 
   addTitle(title) {
     const t = new Title({
-      title
+      title,
     });
 
     this.mountPartialToComment('TITLE', t);
@@ -33,8 +33,8 @@ class List extends Core {
 List._interface = {
   methods: {
     addTitle: {},
-    addItem: {}
-  }
+    addItem: {},
+  },
 };
 List._defaults = {};
 List._partials = {};

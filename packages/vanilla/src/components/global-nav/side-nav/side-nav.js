@@ -88,12 +88,12 @@ SideNav._defaults = {
   headerLink: null,
   superHeaderLabel: null,
   superHeaderLink: null,
-  copyright: `${String.fromCharCode(169)} 2017 Autodesk, Inc.`
+  copyright: `${String.fromCharCode(169)} 2017 Autodesk, Inc.`,
 };
 SideNav._partials = {
   Group,
   Link,
-  Search
+  Search,
 };
 
 export default SideNav;

@@ -8,16 +8,16 @@ import Item from 'components/global-nav/top-nav/project-account-switcher/_item/i
  */
 
 class Account {
-  constructor(options){
+  constructor(options) {
     options._type = 'account';
     return new Item(options);
   }
 }
 
-Account._interface = Interface['components']['GlobalNav']['partials']['TopNav']['partials']['ProjectAccountSwitcher']['partials']['Account'];
+Account._interface = Interface.components.GlobalNav.partials.TopNav.partials.ProjectAccountSwitcher.partials.Account;
 Account._defaults = {
-  "image": "",
-  "label": "",
+  image: '',
+  label: '',
 };
 
 export default Account;

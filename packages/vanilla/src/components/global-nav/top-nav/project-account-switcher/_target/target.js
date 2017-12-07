@@ -42,18 +42,18 @@ class Target extends Core {
   addCaret() {
     this._findDOMEl(
       '.hig__global-nav__top-nav__project-account-switcher__target__caret',
-      this.el
+      this.el,
     ).classList.remove(
-      'hig__global-nav__top-nav__project-account-switcher__target__caret--hide'
+      'hig__global-nav__top-nav__project-account-switcher__target__caret--hide',
     );
   }
 
   removeCaret() {
     this._findDOMEl(
       '.hig__global-nav__top-nav__project-account-switcher__target__caret',
-      this.el
+      this.el,
     ).classList.add(
-      'hig__global-nav__top-nav__project-account-switcher__target__caret--hide'
+      'hig__global-nav__top-nav__project-account-switcher__target__caret--hide',
     );
   }
 
@@ -62,14 +62,13 @@ class Target extends Core {
     this._findOrCreateIconComponent(mountEl).setNameOrSVG('caret');
   }
 
-  _findOrCreateIconComponent(mountElOrSelector, name = "icon") {
+  _findOrCreateIconComponent(mountElOrSelector, name = 'icon') {
     if (this[name]) {
       return this[name];
     }
-      this[name] = new Icon({});
-      this[name].mount(mountElOrSelector);
-      return this[name];
-
+    this[name] = new Icon({});
+    this[name].mount(mountElOrSelector);
+    return this[name];
   }
 }
 
@@ -80,8 +79,8 @@ Target._interface = {
     setType: {},
     onClick: {},
     addCaret: {},
-    removeCaret: {}
-  }
+    removeCaret: {},
+  },
 };
 Target._defaults = {};
 Target._partials = {};

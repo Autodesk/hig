@@ -29,10 +29,10 @@ class ProfileImage extends Core {
 
 ProfileImage._interface = {
   methods: {
-    'onClick': {},
-    'setImage': {}
+    onClick: {},
+    setImage: {},
   },
-  defaults: {}
+  defaults: {},
 };
 ProfileImage._defaults = {};
 

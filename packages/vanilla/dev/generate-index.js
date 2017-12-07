@@ -20,7 +20,7 @@ const testsGlob = `${rootDir}/src/**/tests/test*.html`;
 const templatePath = `${thisDir}/index.template.html`;
 
 const indexMustacheTemplate = fs.readFileSync(templatePath, {
-  encoding: 'utf8'
+  encoding: 'utf8',
 });
 
 const indexOutputPath = `${rootDir}/index.html`;

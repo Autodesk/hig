@@ -34,7 +34,7 @@ class Group extends Core {
 Group._interface = Interface.components.GlobalNav.partials.SideNav.partials.Group;
 Group._defaults = {};
 Group._partials = {
-  Module
+  Module,
 };
 
 export default Group;

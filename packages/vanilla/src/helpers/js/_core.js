@@ -13,11 +13,11 @@ class Core {
     // CHECK INTERFACE COMPATIBILITY
     if (!this._interface) {
       console.warn(
-        'NO INTERFACE SET FOR CLASS, PLEASE DEFINE INTERFACE IN _interface PROPERTY OF YOUR CLASS'
+        'NO INTERFACE SET FOR CLASS, PLEASE DEFINE INTERFACE IN _interface PROPERTY OF YOUR CLASS',
       );
     } else {
       const instanceMethods = Object.getOwnPropertyNames(
-        Object.getPrototypeOf(this)
+        Object.getPrototypeOf(this),
       );
       const coreMethods = Object.getOwnPropertyNames(Core.prototype);
       // CHECK IF ALL METHODS IN COMPONENT ARE DEFINED IN INTERFACE
@@ -25,7 +25,7 @@ class Core {
         const coreMethodMissing = coreMethods.indexOf(v) === -1;
         if (coreMethodMissing && v[0] != '_' && !this._interface.methods[v]) {
           console.error(
-            `METHOD: "${this.constructor.name}.${v}" IS NOT DEFINED AS INTERFACE OR IS NOT A VALID INTERFACE METHOD`
+            `METHOD: "${this.constructor.name}.${v}" IS NOT DEFINED AS INTERFACE OR IS NOT A VALID INTERFACE METHOD`,
           );
         }
       }, this);
@@ -34,7 +34,7 @@ class Core {
       for (const k in this._interface.methods) {
         if (instanceMethods.indexOf(k) === -1) {
           console.error(
-            `METHOD: \"${this.constructor.name}.${k}\" IS NOT IMPLEMENTED BY THIS COMPONENT YET AND NEEDS AN IMPLEMENTATION`
+            `METHOD: \"${this.constructor.name}.${k}\" IS NOT IMPLEMENTED BY THIS COMPONENT YET AND NEEDS AN IMPLEMENTATION`,
           );
         }
       }
@@ -43,14 +43,14 @@ class Core {
     // CHECK DEFAULTS ARE DEFINED
     if (!this._defaults) {
       console.warn(
-        `NO DEFAULTS SET FOR ${this.constructor.name}, PLEASE DEFINE DEFAULTS IN _defaults PROPERTY OF YOUR CLASS`
+        `NO DEFAULTS SET FOR ${this.constructor.name}, PLEASE DEFINE DEFAULTS IN _defaults PROPERTY OF YOUR CLASS`,
       );
     } else {
       for (const v in this._interface.defaults) {
         if (this._defaults[v] === undefined) {
           console.error(
             `DEFAULT VALUE: \"${this.constructor.name}.${v}\" IS DEFINED IN THE INTERFACE BUT NOT IMPLEMENTED`,
-            this
+            this,
           );
         }
       }
@@ -106,7 +106,7 @@ class Core {
       this._rendered = elWrapper.firstChild;
     } else {
       console.error(
-        'RENDER ALREADY CALLED ON THIS COMPONENT, USE PROPER METHODS TO UPDATE CONTENT'
+        'RENDER ALREADY CALLED ON THIS COMPONENT, USE PROPER METHODS TO UPDATE CONTENT',
       );
     }
   }
@@ -152,7 +152,7 @@ class Core {
       this.el || document,
       NodeFilter.SHOW_COMMENT,
       filterNone,
-      false
+      false,
     ); // Fourth argument, which is actually obsolete according to the DOM4 standard, is required in IE 11
     let curNode;
     while ((curNode = iterator.nextNode())) {
@@ -166,7 +166,7 @@ class Core {
       if (mountNode._rendered) {
         mountNode.el = comment.parentNode.insertBefore(
           mountNode._rendered,
-          refNode
+          refNode,
         );
         mountNode._componentDidMount();
       } else {
@@ -176,7 +176,7 @@ class Core {
       return mountNode.el;
     }
     console.error(
-      `MOUNT PARTIAL TO COMMENT: ${this.constructor.name} has no comment \"${searchComment}\" to mount to.`
+      `MOUNT PARTIAL TO COMMENT: ${this.constructor.name} has no comment \"${searchComment}\" to mount to.`,
     );
   }
 
@@ -212,7 +212,7 @@ class Core {
     eventTypes,
     targetClass,
     scopeElement,
-    executeOnEventFunction
+    executeOnEventFunction,
   ) {
     function childOf(/* child node */ c, /* parent node */ p) {
       // returns boolean

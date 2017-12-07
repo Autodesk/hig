@@ -22,7 +22,7 @@ class Modal extends Core {
   _componentDidMount() {
     const scrollingElement = this._findDOMEl('.hig__modal__slot', this.el);
     this._attachListener('scroll', scrollingElement, scrollingElement, event =>
-      this._handleIsScrolling(event.target)
+      this._handleIsScrolling(event.target),
     );
     this._setIcon();
   }
@@ -82,7 +82,7 @@ class Modal extends Core {
       'click',
       '.hig__modal__close-button',
       this.el,
-      fn
+      fn,
     );
   }
 
@@ -91,7 +91,7 @@ class Modal extends Core {
       'click',
       '.hig__modal__overlay',
       this.el,
-      this._callbackIfOverlayClicked.bind(this, fn)
+      this._callbackIfOverlayClicked.bind(this, fn),
     );
   }
 
@@ -110,13 +110,13 @@ class Modal extends Core {
     if (!AvailableStyles.includes(style)) {
       console.error(
         `Modal cannot have style "${style}". Only these styles are allowed: `,
-        AvailableStyles
+        AvailableStyles,
       );
       return;
     }
     const windowEl = this._findDOMEl('.hig__modal__window', this.el);
     windowEl.classList.remove(
-      ...AvailableStyles.map(s => `hig__modal__window--${s}`)
+      ...AvailableStyles.map(s => `hig__modal__window--${s}`),
     );
     windowEl.classList.add(`hig__modal__window--${style}`);
   }
@@ -150,7 +150,7 @@ Modal._interface = Interface.components.Modal;
 Modal._defaults = {
   body: '',
   style: 'standard',
-  title: ''
+  title: '',
 };
 Modal._partials = {};
 

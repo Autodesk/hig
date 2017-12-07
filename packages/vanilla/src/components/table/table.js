@@ -5,7 +5,7 @@ import Template from './table.html';
 import TableHead from 'components/table/table-head/table-head';
 import TableRow from 'components/table/table-row/table-row';
 
-let AvailableDensities = ['standard', 'compressed', 'large'];
+const AvailableDensities = ['standard', 'compressed', 'large'];
 
 /**
  * Creates an Table
@@ -34,13 +34,13 @@ class Table extends Core {
   setDensity(density) {
     if (AvailableDensities.indexOf(density) > -1) {
       this._clearAllDensities();
-      this.el.classList.add('hig__table--' + density);
+      this.el.classList.add(`hig__table--${density}`);
     }
   }
 
   _clearAllDensities() {
-    for (let density in AvailableDensities) {
-      this.el.classList.remove('hig__table-' + density);
+    for (const density in AvailableDensities) {
+      this.el.classList.remove(`hig__table-${density}`);
     }
   }
 }
@@ -49,7 +49,7 @@ Table._interface = Interface.components.Table;
 Table._defaults = {};
 Table._partials = {
   TableHead,
-  TableRow
+  TableRow,
 };
 
 Table.AvailableDensities = AvailableDensities;

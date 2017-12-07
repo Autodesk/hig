@@ -28,7 +28,7 @@ TableHead._interface = Interface.components.Table.partials.TableHead;
 TableHead._defaults = {};
 TableHead._partials = {
   TextHeadCell,
-  SlotHeadCell
+  SlotHeadCell,
 };
 
 

@@ -46,7 +46,7 @@ TextHeadCell._interface =
 TextHeadCell._defaults = {
   text: '',
   alignment: '',
-  width: '1fr'
+  width: '1fr',
 };
 TextHeadCell.AvailableAlignments = AvailableAlignments;
 

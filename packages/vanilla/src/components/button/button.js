@@ -87,7 +87,7 @@ class Button extends Core {
       const mountEl = this._findOrAddElement(
         'ICON',
         'span',
-        '.hig__button__icon'
+        '.hig__button__icon',
       );
       this._findOrCreateIconComponent(mountEl).setNameOrSVG(icon);
     } else {
@@ -161,7 +161,7 @@ Button._defaults = {
   target: '_self',
   title: 'link',
   type: 'primary',
-  width: 'shrink'
+  width: 'shrink',
 };
 
 Button.AvailableSizes = AvailableSizes;

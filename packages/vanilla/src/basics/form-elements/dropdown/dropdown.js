@@ -69,7 +69,7 @@ class Dropdown extends Core {
       'click',
       window.document.body,
       window.document.body,
-      this._callbackIfClickOutside.bind(this, fn)
+      this._callbackIfClickOutside.bind(this, fn),
     );
   }
 
@@ -128,7 +128,7 @@ Dropdown._interface = Interface.basics.FormElements.partials.Dropdown;
 Dropdown._defaults = {
   label: '',
   placeholder: '',
-  instructions: ''
+  instructions: '',
 };
 Dropdown._partials = {};
 

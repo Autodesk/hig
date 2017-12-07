@@ -7,7 +7,7 @@ const ANCHOR_POINTS = [
   'top-center',
   'right-center',
   'bottom-center',
-  'left-center'
+  'left-center',
 ];
 
 
@@ -55,7 +55,7 @@ class Tooltip extends Core {
     if (!Tooltip.AvailableAnchorPoints.includes(anchorPoint)) {
       console.error(
         `Tooltip cannot have anchorPoint "${anchorPoint}". Only these inset anchorPoints are allowed: `,
-        Tooltip.AvailableAnchorPoints
+        Tooltip.AvailableAnchorPoints,
       );
     } else {
       this.flyout.setAnchorPoint(anchorPoint);
@@ -77,7 +77,7 @@ class Tooltip extends Core {
 Tooltip._interface = Interface.basics.Tooltip;
 
 Tooltip._defaults = {
-  anchorPoint: 'top-center'
+  anchorPoint: 'top-center',
 };
 
 Tooltip.AvailableAnchorPoints = ANCHOR_POINTS;

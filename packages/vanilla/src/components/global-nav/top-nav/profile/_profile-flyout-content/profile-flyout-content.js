@@ -21,7 +21,7 @@ class ProfileFlyoutContent extends Core {
       title: this.options.signOutLabel,
       link: this.options.signOutLink,
       size: 'small',
-      type: 'secondary'
+      type: 'secondary',
     });
     this.mountPartialToComment('SIGN_OUT_BUTTON', this.signOutButton);
 
@@ -29,7 +29,7 @@ class ProfileFlyoutContent extends Core {
       title: this.options.profileSettingsLabel,
       link: this.options.profileSettingsLink,
       size: 'small',
-      type: 'secondary'
+      type: 'secondary',
     });
     this.mountPartialToComment('SETTINGS_LINK', this.settingsLink);
   }
@@ -82,7 +82,7 @@ ProfileFlyoutContent._interface = {
     onProfileSettingsClick: {},
     onSignOutClick: {},
   },
-  defaults: {}
+  defaults: {},
 };
 ProfileFlyoutContent._defaults = {};
 

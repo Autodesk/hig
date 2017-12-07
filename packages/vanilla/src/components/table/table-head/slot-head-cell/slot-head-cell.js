@@ -35,7 +35,7 @@ class SlotHeadCell extends Core {
 SlotHeadCell._interface =
   Interface.components.Table.partials.TableHead.partials.SlotHeadCell;
 SlotHeadCell._defaults = {
-  width: '1fr'
+  width: '1fr',
 };
 
 export default SlotHeadCell;

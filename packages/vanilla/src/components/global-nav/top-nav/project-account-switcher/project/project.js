@@ -17,7 +17,7 @@ class Project {
 Project._interface = Interface.components.GlobalNav.partials.TopNav.partials.ProjectAccountSwitcher.partials.Project;
 Project._defaults = {
   image: '',
-  'label': '',
+  label: '',
 };
 
 export default Project;

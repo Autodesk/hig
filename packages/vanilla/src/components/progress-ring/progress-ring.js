@@ -14,34 +14,34 @@ const sizes = {
   xs: {
     svg: extraSmallSVG,
     size: 20,
-    scale: 1
+    scale: 1,
   },
   s: {
     svg: smallSVG,
     size: 28,
-    scale: 1
+    scale: 1,
   },
   m: {
     svg: mediumsSVG,
     size: 72,
-    scale: 1
+    scale: 1,
   },
   l: {
     svg: mediumsSVG,
     size: 144,
-    scale: 2
+    scale: 2,
   },
   xl: {
     svg: mediumsSVG,
     size: 242,
-    scale: 3.35
+    scale: 3.35,
   },
 };
 
 class ProgressRing extends Core {
   static _partials = {};
   static _defaults = {
-    size: AvailableSizes[2]
+    size: AvailableSizes[2],
   }
   static AvailableSizes = AvailableSizes;
 

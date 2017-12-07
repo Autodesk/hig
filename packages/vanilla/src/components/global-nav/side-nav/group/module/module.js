@@ -91,11 +91,11 @@ Module._interface = Interface.components.GlobalNav.partials.SideNav.partials.Gro
 Module._defaults = {
   icon: '',
   title: 'title',
-  link: '#'
+  link: '#',
 };
 Module._partials = {
   Submodule,
-  Collapse
+  Collapse,
 };
 
 export default Module;

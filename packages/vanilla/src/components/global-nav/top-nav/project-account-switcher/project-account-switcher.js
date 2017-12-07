@@ -23,11 +23,11 @@ class ProjectAccountSwitcher extends Core {
     this.target = new Target({
       label: options.activeLabel,
       image: options.activeImage,
-      _type: options.activeType
+      _type: options.activeType,
     });
     this.flyoutContent = new Lists({
       projectTitle: options.projectTitle,
-      accountTitle: options.accountTitle
+      accountTitle: options.accountTitle,
     });
 
     this._render(Template, options);
@@ -99,11 +99,11 @@ ProjectAccountSwitcher._defaults = {
   activeLabel: '',
   activeType: 'project',
   projectTitle: '',
-  accountTitle: ''
+  accountTitle: '',
 };
 ProjectAccountSwitcher._partials = {
   Account,
-  Project
+  Project,
 };
 
 export default ProjectAccountSwitcher;
