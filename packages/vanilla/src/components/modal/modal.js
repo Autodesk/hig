@@ -1,3 +1,4 @@
+/* globals document */
 import Interface from 'interface.json';
 import Core from '_core.js';
 import Button from 'components/button/button';

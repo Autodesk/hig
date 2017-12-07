@@ -1,3 +1,4 @@
+/* globals document, window */
 import Core from '_core.js';
 import Interface from 'interface.json';
 import TextField from 'basics/form-elements/text-field/text-field';

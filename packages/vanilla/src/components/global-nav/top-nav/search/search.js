@@ -1,3 +1,4 @@
+/* globals window */
 import Interface from 'interface.json';
 import Core from '_core.js';
 import Icon from 'basics/icon/icon';

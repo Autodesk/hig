@@ -1,3 +1,4 @@
+/* globals document, NodeFilter */
 import Mustache from 'mustache';
 import 'helpers/js/polyfills';
 

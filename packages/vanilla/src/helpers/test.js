@@ -1,3 +1,4 @@
+/* globals Hig, imagesPath */
 class TestHelpers {
   createFullNav() {
     // CREATE GLOBALNAV COMPONENT
