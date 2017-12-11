@@ -893,7 +893,7 @@
           "params": ["content to be shown when section is open"]
         },
         "close": {
-          "desc": ""
+          "desc": "Hides the expanding filter section content"
         },
         "onClick": {
           "desc": "Calls the provided callback when user clicks on the label",
@@ -901,7 +901,7 @@
           "returns": "HIG.abstract.EventObject.returns"
         },
         "open": {
-          "desc": ""
+          "desc": "Shows the expanding filter section content"
         },
         "setLabel": {
           "desc": "Sets the label",
@@ -910,7 +910,7 @@
           ]
         },
         "setSize": {
-          "desc": "Sets the size of the expanding fitler section",
+          "desc": "Sets the size of the expanding filter section",
           "params": [
             "{s, m} size of the expanding fitler section"
           ]
