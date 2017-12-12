@@ -1,10 +1,10 @@
 import Interface from 'interface.json';
 import Core from '_core.js';
-import './profile.scss';
-import Template from './profile.html';
 import Flyout from 'basics/flyout/flyout';
 import ProfileImage from 'components/global-nav/top-nav/profile/_profile-image/profile-image';
 import ProfileFlyoutContent from 'components/global-nav/top-nav/profile/_profile-flyout-content/profile-flyout-content';
+import Template from './profile.html';
+import './profile.scss';
 /**
  * Creates an Profile
  *
@@ -91,7 +91,7 @@ Profile._defaults = {
   profileSettingsLink: 'https://www.autodesk.com',
   profileSettingsLabel: 'Profile Settings',
   signOutLink: '#',
-  signOutLabel: 'Sign Out'
+  signOutLabel: 'Sign Out',
 };
 
 export default Profile;

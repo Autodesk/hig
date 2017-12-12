@@ -1,8 +1,8 @@
 import Interface from 'interface.json';
 import Core from '_core.js';
-import './option.scss';
-import Template from './option.html';
 import Icon from 'basics/icon/icon';
+import Template from './option.html';
+import './option.scss';
 
 /**
  * Creates a Option
@@ -38,14 +38,14 @@ class Option extends Core {
 
   check() {
     this._findDOMEl('.hig__dropdown__option__checkmark', this.el).classList.add(
-      'hig__dropdown__option--checked'
+      'hig__dropdown__option--checked',
     );
   }
 
   uncheck() {
     this._findDOMEl(
       '.hig__dropdown__option__checkmark',
-      this.el
+      this.el,
     ).classList.remove('hig__dropdown__option--checked');
   }
 
@@ -68,10 +68,10 @@ class Option extends Core {
   _setIcon() {
     const mountEl = this._findDOMEl(
       '.hig__dropdown__option__checkmark',
-      this.el
+      this.el,
     );
     this._findOrCreateIconComponent(mountEl).setNameOrSVG(
-      'checkmark-blue-dark'
+      'checkmark-blue-dark',
     );
   }
 
@@ -88,7 +88,7 @@ class Option extends Core {
 Option._interface = Interface.basics.FormElements.partials.Option;
 Option._defaults = {
   label: '',
-  value: ''
+  value: '',
 };
 Option._partials = {};
 

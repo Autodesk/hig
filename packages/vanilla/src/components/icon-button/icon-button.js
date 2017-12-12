@@ -1,8 +1,8 @@
 import Interface from 'interface.json';
 import Core from '_core.js';
-import './icon-button.scss';
-import Template from './icon-button.html';
 import Icon from 'basics/icon/icon';
+import Template from './icon-button.html';
+import './icon-button.scss';
 
 const AvailableTypes = ['primary', 'flat'];
 
@@ -61,7 +61,7 @@ class IconButton extends Core {
     } else {
       console.error(
         `Button type "${type}" not found, only these types are allowed: `,
-        AvailableTypes
+        AvailableTypes,
       );
     }
   }
@@ -112,7 +112,7 @@ IconButton._interface = Interface.components.IconButton;
 IconButton._defaults = {
   title: 'button',
   icon: false,
-  type: AvailableTypes[0]
+  type: AvailableTypes[0],
 };
 IconButton.AvailableTypes = AvailableTypes;
 

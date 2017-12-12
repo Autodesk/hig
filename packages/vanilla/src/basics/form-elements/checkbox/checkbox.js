@@ -1,6 +1,6 @@
 import Interface from 'interface.json';
-import Template from './checkbox.html';
 import InputButton from 'basics/form-elements/input-button/input-button';
+import Template from './checkbox.html';
 
 /**
  * Creates an Checkbox
@@ -21,7 +21,7 @@ const inputButtonMethods = [
   'uncheck',
   'onChange',
   'onFocus',
-  'onHover'
+  'onHover',
 ];
 
 class Checkbox extends InputButton {
@@ -39,7 +39,7 @@ inputButtonMethods.forEach((fn) => {
     configurable: false,
     enumerable: false,
     writable: true,
-    value: InputButton.prototype[fn]
+    value: InputButton.prototype[fn],
   });
 });
 
@@ -48,7 +48,7 @@ Checkbox._interface =
 Checkbox._defaults = {
   label: '',
   name: '',
-  value: ''
+  value: '',
 };
 Checkbox._partials = {};
 

@@ -1,4 +1,4 @@
-gemini.suite('spacer', parent => {
+gemini.suite('spacer', (parent) => {
   parent.setUrl('src/basics/spacer/tests/gemini-spacer.html');
 
   const examples = [
@@ -27,12 +27,12 @@ gemini.suite('spacer', parent => {
     'inset-m',
     'inset-l',
     'inset-xl',
-    'inset-xxl'
+    'inset-xxl',
   ];
 
-  examples.forEach(example => {
-    gemini.suite(example, suite => {
-      suite.setCaptureElements(`#${example}`).capture(example, actions => {
+  examples.forEach((example) => {
+    gemini.suite(example, (suite) => {
+      suite.setCaptureElements(`#${example}`).capture(example, (actions) => {
         actions.click(`#${example}-link`);
       });
     });

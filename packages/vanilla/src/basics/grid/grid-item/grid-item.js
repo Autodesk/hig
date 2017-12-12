@@ -25,7 +25,7 @@ const AvailableFractions = [
   'eight-twelfths',
   'nine-twelfths',
   'ten-twelfths',
-  'eleven-twelfths'
+  'eleven-twelfths',
 ];
 
 /**
@@ -53,7 +53,7 @@ class GridItem extends Core {
 
 GridItem._interface = Interface.basics.Grid.partials.GridItem;
 GridItem._defaults = {
-  fraction: 'one-whole'
+  fraction: 'one-whole',
 };
 
 GridItem.AvailableFractions = AvailableFractions;

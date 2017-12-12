@@ -1,7 +1,6 @@
-import Interface from 'interface.json';
 import Core from '_core.js';
-import Template from './lists.html';
 import List from 'components/global-nav/top-nav/project-account-switcher/_lists/_list/_list';
+import Template from './lists.html';
 
 /**
  * Creates an Lists
@@ -81,12 +80,12 @@ Lists._interface = {
     addAccount: {},
     addProject: {},
     setProjectTitle: {},
-    setAccountTitle: {}
-  }
+    setAccountTitle: {},
+  },
 };
 Lists._defaults = {
   projectTitle: '',
-  accountTitle: ''
+  accountTitle: '',
 };
 Lists._partials = {};
 

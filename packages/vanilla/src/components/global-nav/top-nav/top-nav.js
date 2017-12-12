@@ -1,13 +1,13 @@
 import Interface from 'interface.json';
 import Core from '_core.js';
-import './top-nav.scss';
-import Template from './top-nav.html';
 import Profile from 'components/global-nav/top-nav/profile/profile';
 import Shortcut from 'components/global-nav/top-nav/shortcut/shortcut';
 import Help from 'components/global-nav/top-nav/help/help';
 import ProjectAccountSwitcher from 'components/global-nav/top-nav/project-account-switcher/project-account-switcher';
 import Search from 'components/global-nav/top-nav/search/search';
 import Icon from 'basics/icon/icon';
+import Template from './top-nav.html';
+import './top-nav.scss';
 
 /**
  * Creates an TopNav
@@ -30,7 +30,7 @@ class TopNav extends Core {
       'click',
       '.hig__global-nav__top-nav__hamburger',
       this.el,
-      fn
+      fn,
     );
   }
 
@@ -39,7 +39,7 @@ class TopNav extends Core {
       'click',
       '.hig__global-nav__top-nav__logo',
       this.el,
-      fn
+      fn,
     );
   }
 
@@ -74,7 +74,7 @@ class TopNav extends Core {
       const shortcutContainer = this._findOrAddElement(
         'SHORTCUT',
         'div',
-        '.hig__global-nav__top-nav__item.hig__global-nav__top-nav__spacer-container'
+        '.hig__global-nav__top-nav__item.hig__global-nav__top-nav__spacer-container',
       );
       instance.mount(shortcutContainer, referenceInstance);
     }
@@ -85,7 +85,7 @@ class TopNav extends Core {
       const helpContainer = this._findOrAddElement(
         'SHORTCUT',
         'div',
-        '.hig__global-nav__top-nav__item.hig__global-nav__top-nav__spacer-container'
+        '.hig__global-nav__top-nav__item.hig__global-nav__top-nav__spacer-container',
       );
       instance.mount(helpContainer, referenceInstance);
     }
@@ -112,7 +112,7 @@ class TopNav extends Core {
 TopNav._interface = Interface.components.GlobalNav.partials.TopNav;
 TopNav._defaults = {
   logo: null,
-  logoLink: null
+  logoLink: null,
 };
 
 TopNav._partials = {
@@ -120,7 +120,7 @@ TopNav._partials = {
   ProjectAccountSwitcher,
   Shortcut,
   Help,
-  Search
+  Search,
 };
 
 export default TopNav;

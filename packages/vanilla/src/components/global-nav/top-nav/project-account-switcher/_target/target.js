@@ -1,9 +1,8 @@
-import Interface from 'interface.json';
 import Core from '_core.js';
-import './target.scss';
-import Template from './target.html';
 import Item from 'components/global-nav/top-nav/project-account-switcher/_item/item';
 import Icon from 'basics/icon/icon';
+import Template from './target.html';
+import './target.scss';
 
 /**
  * Creates an Target
@@ -42,18 +41,18 @@ class Target extends Core {
   addCaret() {
     this._findDOMEl(
       '.hig__global-nav__top-nav__project-account-switcher__target__caret',
-      this.el
+      this.el,
     ).classList.remove(
-      'hig__global-nav__top-nav__project-account-switcher__target__caret--hide'
+      'hig__global-nav__top-nav__project-account-switcher__target__caret--hide',
     );
   }
 
   removeCaret() {
     this._findDOMEl(
       '.hig__global-nav__top-nav__project-account-switcher__target__caret',
-      this.el
+      this.el,
     ).classList.add(
-      'hig__global-nav__top-nav__project-account-switcher__target__caret--hide'
+      'hig__global-nav__top-nav__project-account-switcher__target__caret--hide',
     );
   }
 
@@ -62,14 +61,13 @@ class Target extends Core {
     this._findOrCreateIconComponent(mountEl).setNameOrSVG('caret');
   }
 
-  _findOrCreateIconComponent(mountElOrSelector, name = "icon") {
+  _findOrCreateIconComponent(mountElOrSelector, name = 'icon') {
     if (this[name]) {
       return this[name];
     }
-      this[name] = new Icon({});
-      this[name].mount(mountElOrSelector);
-      return this[name];
-
+    this[name] = new Icon({});
+    this[name].mount(mountElOrSelector);
+    return this[name];
   }
 }
 
@@ -80,8 +78,8 @@ Target._interface = {
     setType: {},
     onClick: {},
     addCaret: {},
-    removeCaret: {}
-  }
+    removeCaret: {},
+  },
 };
 Target._defaults = {};
 Target._partials = {};

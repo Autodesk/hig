@@ -1,8 +1,8 @@
 import Interface from 'interface.json';
 import Core from '_core.js';
-import './shortcut.scss';
-import Template from './shortcut.html';
 import Icon from 'basics/icon/icon';
+import Template from './shortcut.html';
+import './shortcut.scss';
 
 /**
  * Creates an Shortcut
@@ -54,7 +54,7 @@ Shortcut._interface =
 Shortcut._defaults = {
   icon: '',
   title: '',
-  link: '#'
+  link: '#',
 };
 
 export default Shortcut;

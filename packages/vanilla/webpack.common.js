@@ -7,14 +7,14 @@ module.exports = {
     filename: 'hig.js',
     path: path.resolve(__dirname, 'lib'),
     library: 'Hig',
-    libraryTarget: 'umd'
+    libraryTarget: 'umd',
   },
   module: {
     rules: [
       {
         test: /\.js$/,
         use: 'babel-loader',
-        exclude: [/node_modules/]
+        exclude: [/node_modules/],
       },
       {
         test: /\.scss$/,
@@ -23,33 +23,33 @@ module.exports = {
           use: [
             { loader: 'css-loader' },
             { loader: 'sass-loader' },
-          ]
+          ],
         }),
       },
       {
         test: /\.(html|svg)$/,
         issuer: /\.js$/,
-        use: 'raw-loader'
+        use: 'raw-loader',
       },
       {
         test: /\.svg$/,
         issuer: /\.scss$/,
-        use: 'svg-url-loader'
-      }
-    ]
+        use: 'svg-url-loader',
+      },
+    ],
   },
   resolve: {
     alias: {
       'interface.json': 'hig-interface',
-      '_core.js': path.resolve(__dirname, 'src/helpers/js/_core.js')
+      '_core.js': path.resolve(__dirname, 'src/helpers/js/_core.js'),
     },
     extensions: ['.js', '.json'],
     modules: [
       path.resolve(__dirname, 'src'),
       'node_modules',
-    ]
+    ],
   },
   plugins: [
     new ExtractTextPlugin('hig.css'),
-  ]
+  ],
 };

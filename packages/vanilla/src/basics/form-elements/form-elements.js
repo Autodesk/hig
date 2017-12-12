@@ -15,9 +15,7 @@ import RadioButton from 'basics/form-elements/radio-button/radio-button';
  * @class
  */
 
-class FormElements extends Core {
-  constructor(options) { super(options); }
-}
+class FormElements extends Core {}
 
 FormElements._interface = Interface.basics.FormElements;
 FormElements._defaults = {};
@@ -28,7 +26,7 @@ FormElements._partials = {
   TextField,
   TextArea,
   Range,
-  RadioButton
+  RadioButton,
 };
 
 export default FormElements;

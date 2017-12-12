@@ -1,8 +1,8 @@
 import Interface from 'interface.json';
 import Core from '_core.js';
-import './icon.scss';
-import Template from './icon.html';
 import Icons from 'basics/icons/icons';
+import Template from './icon.html';
+import './icon.scss';
 
 const AvailableSizes = ['24', '16'];
 
@@ -32,12 +32,12 @@ class Icon extends Core {
     } else {
       console.error(
         `Icon named "${icon} size "${size}" not found, only these size are allowed: `,
-        AvailableSizes
+        AvailableSizes,
       );
     }
   }
 
-  _confirmNameOrSVG(icon, size) {
+  _confirmNameOrSVG(icon, size) { // eslint-disable-line consistent-return
     const isNamedIcon = Icons[`${icon}-${size}`];
     const isSVG = /^<svg/.test(icon);
 
@@ -52,7 +52,7 @@ class Icon extends Core {
 
 Icon._interface = Interface.basics.Icon;
 Icon._defaults = {
-  nameOrSVG: ''
+  nameOrSVG: '',
 };
 
 Icon.AvailableSizes = AvailableSizes;

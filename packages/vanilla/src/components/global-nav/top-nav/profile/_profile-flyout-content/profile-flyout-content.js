@@ -1,7 +1,7 @@
 import Core from '_core.js';
-import './profile-flyout-content.scss';
+import Button from 'components/button/button';
 import Template from './profile-flyout-content.html';
-import Button from 'components/button/button.js';
+import './profile-flyout-content.scss';
 
 /**
  * Creates an ProfileFlyoutContent
@@ -21,7 +21,7 @@ class ProfileFlyoutContent extends Core {
       title: this.options.signOutLabel,
       link: this.options.signOutLink,
       size: 'small',
-      type: 'secondary'
+      type: 'secondary',
     });
     this.mountPartialToComment('SIGN_OUT_BUTTON', this.signOutButton);
 
@@ -29,7 +29,7 @@ class ProfileFlyoutContent extends Core {
       title: this.options.profileSettingsLabel,
       link: this.options.profileSettingsLink,
       size: 'small',
-      type: 'secondary'
+      type: 'secondary',
     });
     this.mountPartialToComment('SETTINGS_LINK', this.settingsLink);
   }
@@ -82,7 +82,7 @@ ProfileFlyoutContent._interface = {
     onProfileSettingsClick: {},
     onSignOutClick: {},
   },
-  defaults: {}
+  defaults: {},
 };
 ProfileFlyoutContent._defaults = {};
 

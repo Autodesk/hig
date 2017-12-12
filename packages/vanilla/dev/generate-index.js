@@ -20,7 +20,7 @@ const testsGlob = `${rootDir}/src/**/tests/test*.html`;
 const templatePath = `${thisDir}/index.template.html`;
 
 const indexMustacheTemplate = fs.readFileSync(templatePath, {
-  encoding: 'utf8'
+  encoding: 'utf8',
 });
 
 const indexOutputPath = `${rootDir}/index.html`;
@@ -58,7 +58,7 @@ glob(testsGlob, (er, files) => {
   const fd = fs.openSync(indexOutputPath, 'w');
   const bytesWritten = fs.writeSync(fd, rendered);
 
-  if (bytesWritten == 0) {
+  if (bytesWritten === 0) {
     fs.closeSync(fd);
     throw new Error(`Could not write to ${indexOutputPath}`);
   }

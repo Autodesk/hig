@@ -1,12 +1,11 @@
 import Interface from 'interface.json';
 import Core from '_core.js';
+import Flyout from 'basics/flyout/flyout';
+import Shortcut from 'components/global-nav/top-nav/shortcut/shortcut';
+import Group from 'components/global-nav/top-nav/help/group/group';
+import Option from 'components/global-nav/top-nav/help/option/option';
 import './help.scss';
 import Template from './help.html';
-import Flyout from 'basics/flyout/flyout.js';
-import Shortcut from 'components/global-nav/top-nav/shortcut/shortcut.js';
-
-import Group from 'components/global-nav/top-nav/help/group/group.js';
-import Option from 'components/global-nav/top-nav/help/option/option.js';
 
 /**
  * Creates a Help
@@ -53,7 +52,7 @@ class Help extends Core {
     this.mountPartialToComment('FLYOUT', this.flyout, this.el);
     this.shortcut = new Shortcut({
       icon: 'help',
-      title: this.options.title
+      title: this.options.title,
     });
     this.shortcut.mount(this.el);
     this.flyout.addTarget(this.shortcut);
@@ -62,11 +61,11 @@ class Help extends Core {
 
 Help._interface = Interface.components.GlobalNav.partials.TopNav.partials.Help;
 Help._defaults = {
-  title: 'Help'
+  title: 'Help',
 };
 Help._partials = {
   Group,
-  Option
+  Option,
 };
 
 export default Help;

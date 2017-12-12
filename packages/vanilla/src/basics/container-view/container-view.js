@@ -6,7 +6,7 @@ import './container-view.scss';
 */
 
 const ContainerView = {
-  className: 'hig__container__view'
+  className: 'hig__container__view',
 };
 
 export default ContainerView;

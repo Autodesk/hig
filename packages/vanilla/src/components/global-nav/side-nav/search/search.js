@@ -1,8 +1,8 @@
 import Interface from 'interface.json';
 import Core from '_core.js';
-import './search.scss';
-import Template from './search.html';
 import Icon from 'basics/icon/icon';
+import Template from './search.html';
+import './search.scss';
 
 /**
  * Creates an Search
@@ -23,7 +23,7 @@ class Search extends Core {
   hideClearIcon() {
     this._findDOMEl(
       '.hig__global-nav__side-nav__search__clear',
-      this.el
+      this.el,
     ).classList.remove('hig__global-nav__side-nav__search__clear--show');
   }
 
@@ -32,7 +32,7 @@ class Search extends Core {
       'click',
       '.hig__global-nav__side-nav__search__clear',
       this.el,
-      fn
+      fn,
     );
   }
 
@@ -41,7 +41,7 @@ class Search extends Core {
       'focusin',
       '.hig__global-nav__side-nav__search__inputholder__input',
       this.el,
-      fn
+      fn,
     );
   }
 
@@ -50,7 +50,7 @@ class Search extends Core {
       'focusout',
       '.hig__global-nav__side-nav__search__inputholder__input',
       this.el,
-      fn
+      fn,
     );
   }
 
@@ -59,47 +59,47 @@ class Search extends Core {
       'input',
       '.hig__global-nav__side-nav__search__inputholder__input',
       this.el,
-      fn
+      fn,
     );
   }
 
   setPlaceholder(placeholder) {
     this._findDOMEl(
       '.hig__global-nav__side-nav__search__inputholder__input',
-      this.el
+      this.el,
     ).setAttribute('placeholder', placeholder);
   }
 
   setValue(value) {
     this._findDOMEl(
       '.hig__global-nav__side-nav__search__inputholder__input',
-      this.el
+      this.el,
     ).value = value;
   }
 
   showClearIcon() {
     this._findDOMEl(
       '.hig__global-nav__side-nav__search__clear',
-      this.el
+      this.el,
     ).classList.add('hig__global-nav__side-nav__search__clear--show');
   }
 
   _setIcons() {
     const mountSearchIcon = this._findDOMEl(
       '.hig__global-nav__side-nav__search__icon',
-      this.el
+      this.el,
     );
     this._findOrCreateIconComponent(mountSearchIcon, 'search').setNameOrSVG(
       'search',
-      '16'
+      '16',
     );
 
     const mountClearIcon = this._findDOMEl(
       '.hig__global-nav__side-nav__search__clear',
-      this.el
+      this.el,
     );
     this._findOrCreateIconComponent(mountClearIcon, 'clear').setNameOrSVG(
-      'close-small'
+      'close-small',
     );
   }
 
@@ -117,7 +117,7 @@ Search._interface =
   Interface.components.GlobalNav.partials.SideNav.partials.Search;
 Search._defaults = {
   value: '',
-  placeholder: 'Search'
+  placeholder: 'Search',
 };
 Search._partials = {};
 

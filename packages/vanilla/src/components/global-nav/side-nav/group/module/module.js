@@ -1,10 +1,10 @@
 import Interface from 'interface.json';
 import Core from '_core.js';
-import './module.scss';
+import Icon from 'basics/icon/icon';
 import Template from './module.html';
 import Submodule from './submodule/submodule';
 import Collapse from './collapse/collapse';
-import Icon from 'basics/icon/icon';
+import './module.scss';
 
 /**
  * Creates an Module
@@ -91,11 +91,11 @@ Module._interface = Interface.components.GlobalNav.partials.SideNav.partials.Gro
 Module._defaults = {
   icon: '',
   title: 'title',
-  link: '#'
+  link: '#',
 };
 Module._partials = {
   Submodule,
-  Collapse
+  Collapse,
 };
 
 export default Module;

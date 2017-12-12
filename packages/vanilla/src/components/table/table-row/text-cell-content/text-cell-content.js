@@ -38,7 +38,7 @@ TextCellContent._interface =
 TextCellContent._defaults = {
   text: '',
   alignment: '',
-  detail: ''
+  detail: '',
 };
 TextCellContent.AvailableAlignments = AvailableAlignments;
 
