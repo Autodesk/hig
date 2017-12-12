@@ -1,0 +1,9 @@
+{
+  "sample" : {
+    "hello_world": "你好，世界！"
+  },
+  "flyout" : {
+    "open_default_btn": "打开默认弹出",
+    "open_setter_btn": "打开二传手弹出"
+  }
+}
