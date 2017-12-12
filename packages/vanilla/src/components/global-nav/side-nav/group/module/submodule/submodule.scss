@@ -1,6 +1,5 @@
 @import '~basics/colors/colors.scss';
 @import '~helpers/css/mixins/spacing.scss';
-
 .hig__global-nav__side-nav__section__group__module__submodule {
   display: block;
   text-decoration: none;
@@ -10,27 +9,22 @@
   color: color(hig-cool-gray-50);
   user-select: none;
   padding-bottom: spacing(xs);
-
-  &:first-child{
-    margin-top: spacing(xs);;
+  &:first-child {
+    margin-top: spacing(xs);
   }
-
-  &:last-child{
-    margin-bottom: spacing(m);;
+  &:last-child {
+    margin-bottom: spacing(m);
   }
-
   &:hover,
   &--active,
   &--active:focus {
     color: color(hig-blue-50);
   }
-
   &:focus,
   &:active {
     outline: none;
     color: color(hig-blue-50);
   }
-
   &--hide {
     display: none;
   }

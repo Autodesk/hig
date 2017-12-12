@@ -886,6 +886,37 @@
     }
   },
   "components": {
+    "ExpandingFilterSection": {
+      "methods": {
+        "addSlot": {
+          "desc": "Adds content to the expanding filter section",
+          "params": ["content to be shown when section is open"]
+        },
+        "close": {
+          "desc": "Hides the expanding filter section content"
+        },
+        "onClick": {
+          "desc": "Calls the provided callback when user clicks on the label",
+          "params": "HIG.abstract.EventObject.params",
+          "returns": "HIG.abstract.EventObject.returns"
+        },
+        "open": {
+          "desc": "Shows the expanding filter section content"
+        },
+        "setLabel": {
+          "desc": "Sets the label",
+          "params": [
+            "{String} Short text describing the content"
+          ]
+        },
+        "setSize": {
+          "desc": "Sets the size of the expanding filter section",
+          "params": [
+            "{s, m} size of the expanding fitler section"
+          ]
+        }
+      }
+    },
     "Avatar": {
       "defaults": {
         "name": "{String} the name for the avatar",
