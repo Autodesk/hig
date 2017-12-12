@@ -34,22 +34,10 @@ export default function WithState(WrappedComponent) {
     constructor(props) {
       super(props);
 
-      const moduleStates = {};
-
-      const activeSubmodule = this.props.submodules.find(
-        s => s.id === this.props.activeModuleId
-      );
-      if (activeSubmodule) {
-        const activeModule = this.props.modules.find(
-          m => m.id === activeSubmodule.moduleId
-        );
-        moduleStates[activeModule.id] = { minimized: false };
-      }
-
       this.state = {
         query: "",
-        activeModuleId: "",
-        moduleStates
+        activeModuleId: this.props.activeModuleId,
+        moduleStates: this.initialModuleStates()
       };
     }
 
@@ -63,6 +51,33 @@ export default function WithState(WrappedComponent) {
       if (this.props.onModuleChange) {
         this.props.onModuleChange(id);
       }
+    };
+
+    _submodulesByModuleId = () =>
+      this.props.submodules.reduce((result, submodule) => {
+        const key = submodule.moduleId;
+
+        if (result[key]) {
+          result[key].push(submodule);
+        } else {
+          result[key] = [submodule]; // eslint-disable-line no-param-reassign
+        }
+        return result;
+      }, {});
+
+    initialModuleStates = () => {
+      const moduleStates = {};
+      const groupedSubmodules = this._submodulesByModuleId();
+      Object.keys(groupedSubmodules).forEach(moduleId => {
+        const isLargeModule = groupedSubmodules[moduleId].length > 5;
+        const isInactiveModule = moduleId !== this.props.activeModuleId;
+
+        moduleStates[moduleId] = {
+          minimized: isLargeModule && isInactiveModule
+        };
+      });
+
+      return moduleStates;
     };
 
     toggleModuleMinimized = id => {
@@ -83,7 +98,10 @@ export default function WithState(WrappedComponent) {
       const submodules = this.props.submodules.filter(s => s.moduleId === id);
 
       if (submodules.length > 0) {
-        this.toggleModuleMinimized(id);
+        if (submodules.length > 5) {
+          this.toggleModuleMinimized(id);
+        }
+
         this.setActiveModuleId(submodules[0].id);
       } else {
         this.setActiveModuleId(id);
