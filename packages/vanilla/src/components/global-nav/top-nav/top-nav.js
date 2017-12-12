@@ -3,7 +3,10 @@ import Core from '_core.js';
 import Profile from 'components/global-nav/top-nav/profile/profile';
 import Shortcut from 'components/global-nav/top-nav/shortcut/shortcut';
 import Help from 'components/global-nav/top-nav/help/help';
-import ProjectAccountSwitcher from 'components/global-nav/top-nav/project-account-switcher/project-account-switcher';
+import Notifications
+  from 'components/global-nav/top-nav/notifications/notifications';
+import ProjectAccountSwitcher
+  from 'components/global-nav/top-nav/project-account-switcher/project-account-switcher';
 import Search from 'components/global-nav/top-nav/search/search';
 import Icon from 'basics/icon/icon';
 import Template from './top-nav.html';
@@ -44,11 +47,23 @@ class TopNav extends Core {
   }
 
   setLogo(logo) {
-    this._findDOMEl('.hig__global-nav__top-nav__logo img', this.el).setAttribute('src', logo);
+    this._findDOMEl(
+      '.hig__global-nav__top-nav__logo img',
+      this.el
+    ).setAttribute('src', logo);
   }
 
   setLogoLink(link) {
-    this._findDOMEl('.hig__global-nav__top-nav__logo', this.el).setAttribute('href', link);
+    this._findDOMEl('.hig__global-nav__top-nav__logo', this.el).setAttribute(
+      'href',
+      link
+    );
+  }
+
+  addNotifications(notificationsInstance) {
+    if (notificationsInstance instanceof Notifications) {
+      this.mountPartialToComment('NOTIFICATIONS', notificationsInstance);
+    }
   }
 
   hideMenu(hidden) {
@@ -100,11 +115,23 @@ class TopNav extends Core {
   }
 
   _setIcons() {
-    const mountHamburgerIcon = this._findDOMEl('.hig__global-nav__top-nav__hamburger__hamburgericon', this.el);
-    this._findOrCreateIconComponent(mountHamburgerIcon, 'hamburger').setNameOrSVG('hamburger');
+    const mountHamburgerIcon = this._findDOMEl(
+      '.hig__global-nav__top-nav__hamburger__hamburgericon',
+      this.el
+    );
+    this._findOrCreateIconComponent(
+      mountHamburgerIcon,
+      'hamburger'
+    ).setNameOrSVG('hamburger');
 
-    const mountCloseIcon = this._findDOMEl('.hig__global-nav__top-nav__hamburger__closeicon', this.el);
-    this._findOrCreateIconComponent(mountCloseIcon, 'close-hamburger').setNameOrSVG('close-hamburger');
+    const mountCloseIcon = this._findDOMEl(
+      '.hig__global-nav__top-nav__hamburger__closeicon',
+      this.el
+    );
+    this._findOrCreateIconComponent(
+      mountCloseIcon,
+      'close-hamburger'
+    ).setNameOrSVG('close-hamburger');
   }
 
   _findOrCreateIconComponent(mountElOrSelector, name = 'icon') {
