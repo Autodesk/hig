@@ -1,7 +1,9 @@
 @import '~basics/colors/colors.scss';
+@import '~basics/responsive/responsive.scss';
 @import '~basics/shadows/shadows.scss';
 @import '~helpers/css/mixins/base.scss';
 @import '~helpers/css/mixins/spacing.scss';
+@import '../top-nav/top-nav.scss';
 
 $hig__global-nav__sidenav--width: 280px;
 
@@ -20,6 +22,12 @@ $hig__global-nav__sidenav--width: 280px;
   width: $hig__global-nav__sidenav--width;
 
   display: none; // Hide by default
+
+  margin-top: $hig__global-nav__top-nav--height;
+  z-index: 2;
+  @include tablet-breakpoint {
+    margin-top: 0;
+  }
 
   // Sidenav Scroll
   &__scroll {
