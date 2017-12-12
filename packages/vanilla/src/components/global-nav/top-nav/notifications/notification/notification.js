@@ -1,6 +1,7 @@
 import Interface from 'interface.json';
 import Core from '_core.js';
 import './notification.scss';
+import Timestamp from "basics/timestamp/timestamp";
 import Template from './notification.html';
 
 /**
@@ -18,20 +19,22 @@ class Notification extends Core {
     this.intialOptions = options;
   }
 
-  setContent(content) {
-    this._findDOMEL('.hig__notification__content', this.el).innerHTML = content;
+  setContent(notification) {
+    this._findDOMEl('.hig__notification__content').appendChild(notification);
   }
 
-  setTimestamp(timestamp) {
+  setCreatedAt(timestampString) {
+    const timestamp = new Timestamp({});
+    timestamp.setTimestamp(timestampString);
     this.mountPartialToComment('TIMESTAMP', timestamp);
   }
 
-  unread() {
-    this.el.classList.add('.hig__notification__unread');
+  markUnread() {
+    this.el.classList.add('hig__notification__unread');
   }
 
-  read() {
-    this.el.classList.remove('.hig__notification__unread');
+  markRead() {
+    this.el.classList.remove('hig__notification__unread');
   }
 }
 

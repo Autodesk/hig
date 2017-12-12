@@ -5,10 +5,7 @@ import Template from './notifications.html';
 import Flyout from 'basics/flyout/flyout';
 import Notification from './notification/notification';
 import Shortcut from 'components/global-nav/top-nav/shortcut/shortcut.js';
-import {
-  instanceOf
-} from '../../../../../../../../../../../Library/Caches/typescript/2.6/node_modules/@types/prop-types';
-
+import RichText from 'basics/rich-text/rich-text';
 /**
  * Creates notifications
  *
@@ -29,12 +26,20 @@ class Notifications extends Core {
   _componentDidMount() {
     this.mountPartialToComment('FLYOUT', this.flyout, this.el);
     this.shortcut = new Shortcut({
-      icon: 'favorite',
+      icon: 'notification',
       title: this.initialOptions.title
     });
 
     // this.shortcut.mount(this.el);
     this.flyout.addTarget(this.shortcut);
+    this.el.classList.add(RichText.className);
+  }
+
+  setUnreadCount(unreadCount) {
+    this._findDOMEl(
+      '.hig__notifications__unread__messages__count',
+      this.el
+    ).textContent = unreadCount;
   }
 
   open() {

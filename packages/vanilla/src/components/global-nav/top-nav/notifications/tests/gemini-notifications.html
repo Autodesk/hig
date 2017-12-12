@@ -29,19 +29,17 @@
             TopNav.setLogo("../../../tests/bim-logo.png"); // Update logo
             TopNav.setLogoLink("http://autodesk.com"); // update logo link
     
-            var Notifications = new TopNav.partials.Notifications({})
+            var Notifications1 = new TopNav.partials.Notifications({})
 
-            TopNav.addNotifications(Notifications);
+            TopNav.addNotifications(Notifications1);
 
-            const Notification1 = Notifications.partials.Notification({});
-            Notifications.addNotification(Notification1);
+            const myNotification =  new Notifications1.partials.Notification({});
+            Notifications1.addNotification(myNotification);
 
-            Notification1.setContent("<h4>H4, Sub1: example text</h4>")
-            
+            myNotification.setContent("<h4>H4, Sub1: example text</h4>")
+          
     
-            TopNav.addProjectAccountSwitcher(ProjectAccountSwitcher);
-    
-            Notifications.open()
+            Notifications1.open()
         </script>
     
     </body>

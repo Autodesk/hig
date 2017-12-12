@@ -156,6 +156,7 @@ TopNav._partials = {
   Shortcut,
   Help,
   Search,
+  Notifications
 };
 
 export default TopNav;

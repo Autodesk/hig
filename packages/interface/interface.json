@@ -1478,6 +1478,12 @@
               "params": [
                 "{Boolean} hidden - whether the icon should be hidden"
               ]
+            },   
+            "addNotifications": {
+              "desc": "Pass in an instance of a Notifications partial to mount it to the TopNav",
+              "params": [
+                "{Notifications} Notiducations - instance of a Notiducations partial"
+              ]
             },
             "onHamburgerClick": {
               "desc": "Calls the provided callback when user clicks on the hamburger icon",
@@ -1574,7 +1580,7 @@
                 }
               }
             },
-            "Notifiations": {
+            "Notifications": {
               "methods": {
                 "open": {
                   "desc": "opens the notifications flyout"
@@ -1586,6 +1592,12 @@
                   "desc": "Pass in an instance of a Notification",
                   "params": [
                     "{Notification}, [ReferenceNotification] - (Optional) reference node for insertBefore "
+                  ]
+                },
+                "setUnreadCount": {
+                  "desc": "Pass a value for number of notificatiosn that are unread",
+                  "params": [
+                    "{Integer}, count for number of unread notifications "
                   ]
                 },
                 "onClickOutside": {
@@ -1605,13 +1617,13 @@
                     "setContent": {
                       "desc": "sets content for the notification"
                     },
-                    "setTimestamp": {
+                    "setCreatedAt": {
                       "desc": "sets timestamp for notification"
                     },
-                    "undread": {
+                    "markUnread": {
                       "desc": "sets notification as unread"
                     },
-                    "read": {
+                    "markRead": {
                       "desc": "sets notification to read"
                     }
                   }, 
