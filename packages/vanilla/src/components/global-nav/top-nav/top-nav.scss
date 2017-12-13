@@ -17,25 +17,9 @@ $group-height: 56px;
   height: $group-height;
   line-height: $group-height;
   z-index: $top-nav-layer;
+  padding-left: 7px;
 
   @include shadow("dropshadow");
-}
-
-.hig__global-nav__top-nav__items {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  position: relative;
-  padding: 0 12px;
-
-  &:after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 12px;
-    bottom: 12px;
-    border-left: 1px solid color(hig-cool-gray-20);
-  }
 }
 
 .hig__global-nav__top-nav__item {
@@ -43,6 +27,15 @@ $group-height: 56px;
   flex-direction: row;
   align-items: stretch;
   position: relative;
+
+  &+&:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 12px;
+    bottom: 12px;
+    border-left: 1px solid color(hig-cool-gray-20);
+  }
 }
 
 .hig__global-nav__top-nav__spacer {
@@ -53,7 +46,7 @@ $group-height: 56px;
   display: flex;
   align-items: center;
   width: 30px;
-  padding-right: 5px;
+  padding: 0 5px;
   cursor: pointer;
 
   &__closeicon {
@@ -76,7 +69,7 @@ $group-height: 56px;
 .hig__global-nav__top-nav__logo {
   display: flex;
   align-items: center;
-  padding-left: 5px;
+  padding: 0 12px 0 5px;
   line-height: 0;
   cursor: pointer;
 
