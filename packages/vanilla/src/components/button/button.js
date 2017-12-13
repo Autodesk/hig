@@ -1,8 +1,8 @@
 import Interface from 'interface.json';
 import Core from '_core.js';
-import './button.scss';
+import Icon from 'basics/icon/icon';
 import Template from './button.html';
-import Icon from '../../basics/icon/icon';
+import './button.scss';
 
 const AvailableTypes = ['primary', 'secondary', 'flat'];
 const AvailableSizes = ['small', 'standard', 'large'];
@@ -24,6 +24,16 @@ class Button extends Core {
   _componentDidMount() {
     if (this.initialOptions.icon) {
       this.setIcon(this.initialOptions.icon);
+    }
+    if (this.initialOptions.title) {
+      this.setTitle(this.initialOptions.title);
+    }
+    if (this.initialOptions.size) {
+      this.setSize(this.initialOptions.size);
+    }
+
+    if (this.initialOptions.type) {
+      this.setType(this.initialOptions.type);
     }
   }
 
@@ -77,7 +87,7 @@ class Button extends Core {
       const mountEl = this._findOrAddElement(
         'ICON',
         'span',
-        '.hig__button__icon'
+        '.hig__button__icon',
       );
       this._findOrCreateIconComponent(mountEl).setNameOrSVG(icon);
     } else {
@@ -151,7 +161,7 @@ Button._defaults = {
   target: '_self',
   title: 'link',
   type: 'primary',
-  width: 'shrink'
+  width: 'shrink',
 };
 
 Button.AvailableSizes = AvailableSizes;

@@ -31,7 +31,7 @@ class Avatar extends Core {
   }
 
   _convertRange(value, r1, r2) {
-    return Number((value - r1[0]) * (r2[1] - r2[0]) / (r1[1] - r1[0]) + r2[0]).toFixed();
+    return Number((value - r1[0]) * (r2[1] - r2[0]) / (r1[1] - r1[0]) + r2[0]).toFixed(); // eslint-disable-line no-mixed-operators
   }
 
   setName(name) {
@@ -58,7 +58,7 @@ Avatar._interface = Interface.components.Avatar;
 Avatar._defaults = {
   name: '',
   size: 'large',
-  image: ''
+  image: '',
 };
 Avatar._partials = {};
 

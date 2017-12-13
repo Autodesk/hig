@@ -1,8 +1,8 @@
 import Interface from 'interface.json';
 import Core from '_core.js';
-import './grid.scss';
+import GridItem from 'basics/grid/grid-item/grid-item';
 import Template from './grid.html';
-import GridItem from './grid-item/grid-item';
+import './grid.scss';
 
 /**
  * Creates a Grid
@@ -24,7 +24,7 @@ class Grid extends Core {
 Grid._interface = Interface.basics.Grid;
 Grid._defaults = {};
 Grid._partials = {
-  GridItem
+  GridItem,
 };
 
 export default Grid;

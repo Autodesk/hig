@@ -1,8 +1,7 @@
-var fs   = require('fs'),
-    path = require('path'),
-    SVGO = require('svgo');
+const fs = require('fs');
+const SVGO = require('svgo');
 
-let svgo = new SVGO({
+const svgo = new SVGO({
   plugins: [
     { removeViewBox: false },
     { removeUselessStrokeAndFill: false },
@@ -12,70 +11,70 @@ let svgo = new SVGO({
     { convertShapeToPath: false },
     {
       accessibility: {
-        type: "full",
+        type: 'full',
         active: true,
-        fn(data, params) {
-          var svg = data.content[0];
+        fn(data, _params) {
+          const svg = data.content[0];
 
-          if (svg.isElem("svg")) {
-            if (!svg.hasAttr("role")) {
+          if (svg.isElem('svg')) {
+            if (!svg.hasAttr('role')) {
               svg.addAttr({
-                name: "role",
-                value: "img",
-                prefix: "",
-                local: "role"
+                name: 'role',
+                value: 'img',
+                prefix: '',
+                local: 'role',
               });
             }
-            if (!svg.hasAttr("title")) {
+            if (!svg.hasAttr('title')) {
               svg.addAttr({
-                name: "title",
-                value: "___###NAME###___",
-                prefix: "",
-                local: "title"
+                name: 'title',
+                value: '___###NAME###___',
+                prefix: '',
+                local: 'title',
               });
             }
           }
 
           return data;
-        }
-      }
-    }
-  ]
+        },
+      },
+    },
+  ],
 });
 
-let distLocation = `${__dirname}/../release/`;
+const distLocation = `${__dirname}/../release/`;
 if (!fs.existsSync(distLocation)) fs.mkdirSync(distLocation);
-let distfile = `${__dirname}/../release/hig-icons-bundle.js`;
-let srcLocation = `${__dirname}/../src/`;
+const distfile = `${__dirname}/../release/hig-icons-bundle.js`;
+const srcLocation = `${__dirname}/../src/`;
 
-fs.writeFileSync(distfile, "const HIGIcons = {}; \n");
+fs.writeFileSync(distfile, 'const HIGIcons = {}; \n');
 
 fs.readdir(srcLocation, (err, filenames) => {
   if (err) {
-    console.log("[x] ERROR: " + err);
+    console.log(`[x] ERROR: ${err}`);
     return;
   }
-  filenames.filter(f => f[0] !== ".").forEach(function(filename) {
-    var data = fs.readFileSync(srcLocation + filename, "utf8");
-    if (!data) console.log("[x] ERROR: NO DATA");
-    var cleanFileName = filename.replace(".svg", "");
+  filenames.filter(f => f[0] !== '.').forEach((filename) => {
+    const data = fs.readFileSync(srcLocation + filename, 'utf8');
+    if (!data) console.log('[x] ERROR: NO DATA');
+    const cleanFileName = filename.replace('.svg', '');
 
     // CLEANUP FILE AND MINIMIZE
-    svgo.optimize(data, function(result) {
+    svgo.optimize(data, (result) => {
       // EXPORT TO JS FILE
-      var svg_string = "HIGIcons['" + cleanFileName + "'] = ";
-      svg_string +=
-        '"' +
-        result.data
-          .replace("___###NAME###___", cleanFileName)
-          .replace(/"/g, '\\"') +
-        '";\n';
+      let svgString = `HIGIcons['${cleanFileName}'] = `;
+      svgString +=
+        `"${
+          result.data
+            .replace('___###NAME###___', cleanFileName)
+            .replace(/"/g, '\\"')
+        }";\n`;
 
-      fs.appendFileSync(distfile, svg_string); // write to our dist file
+      fs.appendFileSync(distfile, svgString); // write to our dist file
     });
   });
 
-  fs.appendFileSync(distfile, "export default HIGIcons; \n");
+  fs.appendFileSync(distfile, 'export default HIGIcons; \n');
 
-  console.log("Icons bundle created in: " + distfile);
+  console.log(`Icons bundle created in: ${distfile}`);
 });

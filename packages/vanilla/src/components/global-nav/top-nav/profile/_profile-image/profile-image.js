@@ -1,8 +1,6 @@
-import './profile-image.scss';
-
-import Template from './profile-image.html';
-import Interface from 'interface.json';
 import Core from '_core.js';
+import Template from './profile-image.html';
+import './profile-image.scss';
 
 /**
  * Creates a ProfileImage
@@ -29,10 +27,10 @@ class ProfileImage extends Core {
 
 ProfileImage._interface = {
   methods: {
-    'onClick': {},
-    'setImage': {}
+    onClick: {},
+    setImage: {},
   },
-  defaults: {}
+  defaults: {},
 };
 ProfileImage._defaults = {};
 

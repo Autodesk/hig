@@ -1,8 +1,8 @@
 import Interface from 'interface.json';
 import Core from '_core.js';
-import './icon-button.scss';
+import Icon from 'basics/icon/icon';
 import Template from './icon-button.html';
-import Icon from '../../basics/icon/icon';
+import './icon-button.scss';
 
 const AvailableTypes = ['primary', 'flat'];
 
@@ -22,6 +22,22 @@ class IconButton extends Core {
   _componentDidMount() {
     if (this.initialOptions.icon) {
       this.setIcon(this.initialOptions.icon);
+    }
+
+    if (this.initialOptions.size) {
+      this.setSize(this.initialOptions.size);
+    }
+
+    if (this.initialOptions.title) {
+      this.setTitle(this.initialOptions.title);
+    }
+
+    if (this.initialOptions.link) {
+      this.setLink(this.initialOptions.link);
+    }
+
+    if (this.initialOptions.type) {
+      this.setType(this.initialOptions.type);
     }
   }
 
@@ -95,9 +111,8 @@ class IconButton extends Core {
 IconButton._interface = Interface.components.IconButton;
 IconButton._defaults = {
   title: 'button',
-  link: false,
   icon: false,
-  type: AvailableTypes[0]
+  type: AvailableTypes[0],
 };
 IconButton.AvailableTypes = AvailableTypes;
 

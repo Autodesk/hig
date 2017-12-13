@@ -73,6 +73,7 @@ class Dropdown extends Component {
             key={option.value}
             {...option}
             selected={option.value === selectedOption.value}
+            checked={option.value === selectedOption.value}
             onClick={this.setSelectedValue}
           />
         ))}

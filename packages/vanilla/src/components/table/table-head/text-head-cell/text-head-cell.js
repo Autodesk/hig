@@ -1,8 +1,8 @@
 import Interface from 'interface.json';
 import Core from '_core.js';
-import './text-head-cell.scss';
+import frToPercentage from 'helpers/js/_frtopercentage';
 import Template from './text-head-cell.html';
-import frToPercentage from '../../../../helpers/js/_frtopercentage';
+import './text-head-cell.scss';
 
 const AvailableAlignments = ['left', 'right', 'center'];
 
@@ -46,7 +46,7 @@ TextHeadCell._interface =
 TextHeadCell._defaults = {
   text: '',
   alignment: '',
-  width: '1fr'
+  width: '1fr',
 };
 TextHeadCell.AvailableAlignments = AvailableAlignments;
 

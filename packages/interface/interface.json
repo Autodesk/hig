@@ -10,6 +10,38 @@
     }
   },
   "basics": {
+    "ContainerViewLeft": {
+      "methods": {
+        "open": {
+          "desc": "opens the container"
+        },
+        "close": {
+          "desc": "closes the container"
+        },
+        "addSlot": {
+          "desc": "Content for the container view left",
+          "params": [
+            "{HTMLElement} HTMLElement"
+          ]
+        }
+      }
+    },
+    "ContainerViewRight": {
+      "methods": {
+        "open": {
+          "desc": "opens the container"
+        },
+        "close": {
+          "desc": "closes the container"
+        },
+        "addSlot": {
+          "desc": "Content for the container view right",
+          "params": [
+            "{HTMLElement} HTMLElement"
+          ]
+        }
+      }
+    },
     "Flyout": {
       "methods": {
         "addSlot": {
@@ -145,6 +177,54 @@
             "label": "",
             "value": "",
             "name": ""
+          }
+        },
+        "Option": {
+          "methods": {
+            "deselect": {
+              "description": "deselects the option"
+            },
+            "onClick": {
+              "desc": "Calls the provided callback when user clicks on the option",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            },
+            "onHover": {
+              "desc": "Calls the provided callback when user hovers over the option",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            },
+            "select": {
+              "description": "sets class to show option as selected"
+            },
+            "check": {
+              "description": "sets class to show option as checked"
+            },
+            "uncheck": {
+              "description": "sets class to show option as unchecked"
+            },
+            "setLabel": {
+              "desc": "Sets the label for the option",
+              "params": [
+                "{String} label - label identifying the option"
+              ]
+            },
+            "setValue": {
+              "desc": "Sets the value for the option",
+              "params": [
+                "{String} label - label identifying the option"
+              ]
+            },
+            "focus": {
+              "description": "focuses the option"
+            },
+            "unfocus": {
+              "description": "removes focus from the options"
+            }
+          },
+          "defaults": {
+            "label": "",
+            "value": ""
           }
         },
         "RadioButton": {
@@ -285,44 +365,6 @@
             },
             "setSelectedOptionLabel": {
               "desc": "Sets the label on the dropdown button"
-            }
-          },
-          "partials": {
-            "Option": {
-              "methods": {
-                "deselect": {
-                  "description": "deselects the option"
-                },
-                "onClick": {
-                  "desc": "Calls the provided callback when user clicks on the option",
-                  "params": "HIG.abstract.EventObject.params",
-                  "returns": "HIG.abstract.EventObject.returns"
-                },
-                "onHover": {
-                  "desc": "Calls the provided callback when user hovers over the option",
-                  "params": "HIG.abstract.EventObject.params",
-                  "returns": "HIG.abstract.EventObject.returns"
-                },
-                "select": {
-                  "description": "sets class ot show option as selected"
-                },
-                "setLabel": {
-                  "desc": "Sets the label for the option",
-                  "params": [
-                    "{String} label - label identifying the option"
-                  ]
-                },
-                "setValue": {
-                  "desc": "Sets the value for the option",
-                  "params": [
-                    "{String} label - label identifying the option"
-                  ]
-                }
-              },
-              "defaults": {
-                "label": "",
-                "value": ""
-              }
             }
           },
           "defaults": {
@@ -774,6 +816,16 @@
         }
       }
     },
+    "Timestamp": {
+      "methods": {
+        "setTimestamp": {
+          "desc": "",
+          "params": [
+            "{String} timestamp string"
+          ]
+        }
+      }
+    },
     "TextLink": {
       "defaults": {
         "href": null,
@@ -834,6 +886,37 @@
     }
   },
   "components": {
+    "ExpandingFilterSection": {
+      "methods": {
+        "addSlot": {
+          "desc": "Adds content to the expanding filter section",
+          "params": ["content to be shown when section is open"]
+        },
+        "close": {
+          "desc": "Hides the expanding filter section content"
+        },
+        "onClick": {
+          "desc": "Calls the provided callback when user clicks on the label",
+          "params": "HIG.abstract.EventObject.params",
+          "returns": "HIG.abstract.EventObject.returns"
+        },
+        "open": {
+          "desc": "Shows the expanding filter section content"
+        },
+        "setLabel": {
+          "desc": "Sets the label",
+          "params": [
+            "{String} Short text describing the content"
+          ]
+        },
+        "setSize": {
+          "desc": "Sets the size of the expanding filter section",
+          "params": [
+            "{s, m} size of the expanding fitler section"
+          ]
+        }
+      }
+    },
     "Avatar": {
       "defaults": {
         "name": "{String} the name for the avatar",
@@ -1388,6 +1471,12 @@
                 "{Shortcut} Shortcut - instance of a Shortcut partial"
               ]
             },
+            "hideMenu": {
+              "desc": "Hide the hamburger menu icon",
+              "params": [
+                "{Boolean} hidden - whether the icon should be hidden"
+              ]
+            },
             "onHamburgerClick": {
               "desc": "Calls the provided callback when user clicks on the hamburger icon",
               "params": "HIG.abstract.EventObject.params",
@@ -1406,7 +1495,9 @@
             },
             "setLogoLink": {
               "desc": "sets the link of the logo",
-              "params": ["{String} link - new link"]
+              "params": [
+                "{String} link - new link"
+              ]
             }
           },
           "partials": {
@@ -1438,11 +1529,11 @@
                   ]
                 },
                 "setTitle": {
-                   "desc": "sets the hover title of the Help",
-                   "params": [
-                     "{String} title - new hover title"
-                   ]
-                 }
+                  "desc": "sets the hover title of the Help",
+                  "params": [
+                    "{String} title - new hover title"
+                  ]
+                }
               },
               "partials": {
                 "Group": {
@@ -1728,14 +1819,37 @@
                     "{String} placeholder - new placeholder"
                   ]
                 },
-                "setQuery": {
-                  "desc": "sets the search query",
-                  "params": [
-                    "{String} query - new query"
-                  ]
-                },
                 "showClearIcon": {
                   "desc": "show the clear input icon"
+                },
+                "showOptions": {
+                  "desc": "shows fitered options"
+                },
+                "hideOptions": {
+                  "desc": "hides filtered options"
+                },
+                "addOption": {
+                  "desc": "Adds an option to the search dropdown",
+                  "params": [
+                    "{Option} option - an instance of the Option partial",
+                    "{Option} [referenceOption] - (Optional) a reference option used when positioning the new option. New option will be added before the reference option."
+                  ]
+                },
+                "onClickOutside": {
+                  "desc": "Calls the provided callback when user clicks outside of the Help",
+                  "params": "HIG.abstract.EventObject.params",
+                  "returns": "HIG.abstract.EventObject.returns"
+                },
+                "setValue": {
+                  "desc": "sets the search value",
+                  "params": [
+                    "{String} value - new value"
+                  ]
+                },
+                "onKeydown": {
+                  "desc": "Calls the provided callback when user pressed key down on Search Input",
+                  "params": "HIG.abstract.EventObject.params",
+                  "returns": "HIG.abstract.EventObject.returns"
                 }
               }
             },
@@ -1778,7 +1892,6 @@
     "IconButton": {
       "defaults": {
         "icon": "{String} (optional) ID of the icon",
-        "link": "{String} link of the button",
         "title": "{String} title of the button",
         "type": "{String} type of the button: primary (default), secondary or flat"
       },
@@ -1916,6 +2029,22 @@
         }
       }
     },
+    "SectionLabel": {
+      "methods": {
+        "setLabel": {
+          "desc": "sets the label text",
+          "params": [
+            "{String} the label text"
+          ]
+        },
+        "addSlot": {
+          "desc": "Content for the section label",
+          "params": [
+            "{HTMLElement} HTMLElement"
+          ]
+        }
+      }
+    },
     "Table": {
       "methods": {
         "addTableHead": {},
@@ -2028,6 +2157,5 @@
         }
       }
     }
-
   }
 }

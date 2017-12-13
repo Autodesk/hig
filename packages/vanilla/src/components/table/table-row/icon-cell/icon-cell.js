@@ -1,8 +1,8 @@
 import Interface from 'interface.json';
 import Core from '_core.js';
-import './icon-cell.scss';
+import Icon from 'basics/icon/icon';
 import Template from './icon-cell.html';
-import Icon from '../../../../basics/icon/icon.js';
+import './icon-cell.scss';
 
 /**
  * Creates an Table
@@ -29,21 +29,20 @@ class IconCell extends Core {
     }
   }
 
-  _findOrCreateIconComponent(mountElOrSelector, name='icon') {
+  _findOrCreateIconComponent(mountElOrSelector, name = 'icon') {
     if (this[name]) {
-        return this[name];
+      return this[name];
     }
-        this[name] = new Icon({});
-        this[name].mount(mountElOrSelector);
-        return this[name];
-
+    this[name] = new Icon({});
+    this[name].mount(mountElOrSelector);
+    return this[name];
   }
 }
 
 IconCell._interface =
   Interface.components.Table.partials.TableRow.partials.IconCell;
 IconCell._defaults = {
-  icon: false
+  icon: false,
 };
 
 export default IconCell;

@@ -1,12 +1,16 @@
 import React, { PureComponent } from "react";
 import * as PropTypes from "prop-types";
+import { Container, H3, Spacer } from "../hig-react";
 
 class PlaygroundSection extends PureComponent {
   render() {
     return (
       <section>
-        <h3>{this.props.title}</h3>
-        {this.props.children}
+        <Container>
+          <H3>{this.props.title}</H3>
+          <Spacer width="m" />
+          {this.props.children}
+        </Container>
       </section>
     );
   }

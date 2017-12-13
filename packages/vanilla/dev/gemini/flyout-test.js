@@ -13,7 +13,7 @@ gemini.suite('flyout', (parent) => {
     'bottom-right',
     'left-top',
     'left-center',
-    'left-bottom'
+    'left-bottom',
   ];
 
   gemini.suite('flyout', (suite) => {
@@ -24,7 +24,7 @@ gemini.suite('flyout', (parent) => {
       });
 
     examples.forEach((example) => {
-      suite.capture(example, (actions, find) => {
+      suite.capture(example, (actions, _find) => {
         actions.click(this.next);
       });
     });

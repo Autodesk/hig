@@ -1,5 +1,5 @@
-import CSSTransition from '../../helpers/js/css-transition';
-import svg from './progress-ring-s.svg';
+/* globals window */
+import CSSTransition from 'helpers/js/css-transition';
 
 const CYCLE_DURATION = 1000;
 const FADE_DURATION = 416;

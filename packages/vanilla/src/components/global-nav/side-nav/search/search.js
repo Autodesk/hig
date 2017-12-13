@@ -1,9 +1,8 @@
 import Interface from 'interface.json';
 import Core from '_core.js';
-import './search.scss';
+import Icon from 'basics/icon/icon';
 import Template from './search.html';
-import Icon from '../../../../basics/icon/icon';
-
+import './search.scss';
 
 /**
  * Creates an Search
@@ -22,43 +21,86 @@ class Search extends Core {
   }
 
   hideClearIcon() {
-    this._findDOMEl('.hig__global-nav__side-nav__search__clear', this.el).classList.remove('hig__global-nav__side-nav__search__clear--show');
+    this._findDOMEl(
+      '.hig__global-nav__side-nav__search__clear',
+      this.el,
+    ).classList.remove('hig__global-nav__side-nav__search__clear--show');
   }
 
   onClearIconClick(fn) {
-    return this._attachListener('click', '.hig__global-nav__side-nav__search__clear', this.el, fn);
+    return this._attachListener(
+      'click',
+      '.hig__global-nav__side-nav__search__clear',
+      this.el,
+      fn,
+    );
   }
 
   onFocusIn(fn) {
-    return this._attachListener('focusin', '.hig__global-nav__side-nav__search__inputholder__input', this.el, fn);
+    return this._attachListener(
+      'focusin',
+      '.hig__global-nav__side-nav__search__inputholder__input',
+      this.el,
+      fn,
+    );
   }
 
   onFocusOut(fn) {
-    return this._attachListener('focusout', '.hig__global-nav__side-nav__search__inputholder__input', this.el, fn);
+    return this._attachListener(
+      'focusout',
+      '.hig__global-nav__side-nav__search__inputholder__input',
+      this.el,
+      fn,
+    );
   }
 
   onInput(fn) {
-    return this._attachListener('input', '.hig__global-nav__side-nav__search__inputholder__input', this.el, fn);
+    return this._attachListener(
+      'input',
+      '.hig__global-nav__side-nav__search__inputholder__input',
+      this.el,
+      fn,
+    );
   }
 
   setPlaceholder(placeholder) {
-    this._findDOMEl('.hig__global-nav__side-nav__search__inputholder__input', this.el).setAttribute('placeholder', placeholder);
+    this._findDOMEl(
+      '.hig__global-nav__side-nav__search__inputholder__input',
+      this.el,
+    ).setAttribute('placeholder', placeholder);
   }
 
   setValue(value) {
-    this._findDOMEl('.hig__global-nav__side-nav__search__inputholder__input', this.el).value = value;
+    this._findDOMEl(
+      '.hig__global-nav__side-nav__search__inputholder__input',
+      this.el,
+    ).value = value;
   }
 
   showClearIcon() {
-    this._findDOMEl('.hig__global-nav__side-nav__search__clear', this.el).classList.add('hig__global-nav__side-nav__search__clear--show');
+    this._findDOMEl(
+      '.hig__global-nav__side-nav__search__clear',
+      this.el,
+    ).classList.add('hig__global-nav__side-nav__search__clear--show');
   }
 
   _setIcons() {
-    const mountSearchIcon = this._findDOMEl('.hig__global-nav__side-nav__search__icon', this.el);
-    this._findOrCreateIconComponent(mountSearchIcon, 'search').setNameOrSVG('search', '16');
+    const mountSearchIcon = this._findDOMEl(
+      '.hig__global-nav__side-nav__search__icon',
+      this.el,
+    );
+    this._findOrCreateIconComponent(mountSearchIcon, 'search').setNameOrSVG(
+      'search',
+      '16',
+    );
 
-    const mountClearIcon = this._findDOMEl('.hig__global-nav__side-nav__search__clear', this.el);
-    this._findOrCreateIconComponent(mountClearIcon, 'clear').setNameOrSVG('close-small');
+    const mountClearIcon = this._findDOMEl(
+      '.hig__global-nav__side-nav__search__clear',
+      this.el,
+    );
+    this._findOrCreateIconComponent(mountClearIcon, 'clear').setNameOrSVG(
+      'close-small',
+    );
   }
 
   _findOrCreateIconComponent(mountElOrSelector, name = 'icon') {
@@ -71,10 +113,11 @@ class Search extends Core {
   }
 }
 
-Search._interface = Interface.components.GlobalNav.partials.SideNav.partials.Search;
+Search._interface =
+  Interface.components.GlobalNav.partials.SideNav.partials.Search;
 Search._defaults = {
   value: '',
-  placeholder: 'Search'
+  placeholder: 'Search',
 };
 Search._partials = {};
 

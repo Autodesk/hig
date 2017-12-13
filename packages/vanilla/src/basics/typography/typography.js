@@ -43,7 +43,7 @@ class Typography extends Core {
 
 Typography._interface = Interface.basics.Typography;
 Typography._defaults = {
-  text: 'text', type: 'body'
+  text: 'text', type: 'body',
 };
 
 export default Typography;

@@ -6,35 +6,35 @@ gemini.suite('checkbox', (parent) => {
 
   gemini.suite('basic', (suite) => {
     suite.setCaptureElements('.tests-checkbox')
-         .capture('basic');
+      .capture('basic');
   });
 
   gemini.suite('checked', (suite) => {
     suite.setCaptureElements('.tests-checkbox1')
-         .capture('checked');
+      .capture('checked');
   });
 
   gemini.suite('required', (suite) => {
     suite.setCaptureElements('.tests-checkbox2')
-         .capture('required');
+      .capture('required');
   });
   gemini.suite('disabled', (suite) => {
     suite.setCaptureElements('.tests-checkbox3')
-         .capture('disabled');
+      .capture('disabled');
   });
 
   gemini.suite('without label', (suite) => {
     suite.setCaptureElements('.tests-checkbox4')
-         .capture('without label');
+      .capture('without label');
   });
 
   gemini.suite('checked and disabled checkbox', (suite) => {
     suite.setCaptureElements('.tests-checkbox5')
-         .capture('checked and disabled Checkbox');
+      .capture('checked and disabled Checkbox');
   });
 
   gemini.suite('indeterminate checkbox', (suite) => {
     suite.setCaptureElements('.tests-checkbox6')
-         .capture('indeterminate Checkbox');
+      .capture('indeterminate Checkbox');
   });
 });

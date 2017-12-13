@@ -2,7 +2,7 @@
 import React from "react";
 import "hig-vanilla/lib/hig.css";
 
-import { Button, Container, GlobalNav, breakpoints } from "../hig-react";
+import { Button, GlobalNav, breakpoints } from "../hig-react";
 
 import "./index.css";
 
@@ -10,29 +10,51 @@ import logo from "./images/bim-logo.png";
 import { projects, accounts } from "./fixtures/topNavFixtures";
 import { modules, submodules, links } from "./fixtures/sideNavFixtures";
 
+import ActionBarSection from "./sections/ActionBarSection";
 import AvatarSection from "./sections/AvatarSection";
 import ButtonSection from "./sections/ButtonSection";
 import CheckboxSection from "./sections/CheckboxSection";
+import ContainerViewSection from "./sections/ContainerViewSection";
 import DropdownSection from "./sections/DropdownSection";
+import ExpandingFilterSectionSection from "./sections/ExpandingFilterSectionSection";
 import FlyoutSection from "./sections/FlyoutSection";
 import GridSection from "./sections/GridSection";
 import IconButtonSection from "./sections/IconButtonSection";
 import IconSection from "./sections/IconSection";
 import ModalSection from "./sections/ModalSection";
+import ImageSection from "./sections/ImageSection";
 import PasswordFieldSection from "./sections/PasswordFieldSection";
 import ProgressBarSection from "./sections/ProgressBarSection";
 import ProgressRingSection from "./sections/ProgressRingSection";
 import RadioButtonSection from "./sections/RadioButtonSection";
 import RangeSection from "./sections/RangeSection";
 import RichTextSection from "./sections/RichTextSection";
+import SectionLabelSection from "./sections/SectionLabelSection";
 import SelectableTableSection from "./sections/SelectableTableSection";
+import ShowMoreLessSection from "./sections/ShowMoreLessSection";
 import TableSection from "./sections/TableSection";
 import TabsSection from "./sections/TabsSection";
 import TextAreaSection from "./sections/TextAreaSection";
 import TextFieldSection from "./sections/TextFieldSection";
 import TextLinkSection from "./sections/TextLinkSection";
+import TimestampSection from "./sections/TimestampSection";
 import TooltipSection from "./sections/TooltipSection";
 import TypographySection from "./sections/TypographySection";
+
+const defaultSearchOptions = [
+  {
+    label: "foo",
+    value: "foo value"
+  },
+  {
+    label: "foo1",
+    value: "foo1 value"
+  },
+  {
+    label: "bar",
+    value: "bar value"
+  }
+];
 
 class Playground extends React.Component {
   constructor(props) {
@@ -40,9 +62,25 @@ class Playground extends React.Component {
     this.state = {
       activeModuleId: "1-2-5",
       isHelpOpen: false,
-      isSideNavOpen: true
+      isSideNavOpen: true,
+      searchOptions: [],
+      searchValue: ""
     };
   }
+
+  onSearchInput = input => {
+    this.setState({ searchValue: input.value });
+    this.filterSearchInput(input.value);
+  };
+
+  onSearchSubmit = selection => {
+    this.setState({ searchValue: selection.value });
+    this.filterSearchInput(selection.value);
+  };
+
+  toggleSideNav = () => {
+    this.setState({ isSideNavOpen: !this.state.isSideNavOpen });
+  };
 
   navigate = id => {
     console.log("Go to", id);
@@ -52,32 +90,39 @@ class Playground extends React.Component {
     }
   };
 
-  projectClicked = id => {
-    console.log("project clicked", id);
-  };
-
-  accountClicked = id => {
-    console.log("account clicked", id);
-  };
-
-  toggleSideNav = () => {
-    this.setState({ isSideNavOpen: !this.state.isSideNavOpen });
-  };
-
-  handleModuleClick = id => {
-    console.log(`module click ${id}`);
-  };
-
-  handleSubmoduleClick = id => {
-    console.log(`submodule click ${id}`);
+  closeHelp = () => {
+    this.setState({ isHelpOpen: false });
   };
 
   openHelp = () => {
     this.setState({ isHelpOpen: true });
   };
 
-  closeHelp = () => {
-    this.setState({ isHelpOpen: false });
+  handleSubmoduleClick = id => {
+    console.log(`submodule click ${id}`);
+  };
+
+  handleModuleClick = id => {
+    console.log(`module click ${id}`);
+  };
+
+  accountClicked = id => {
+    console.log("account clicked", id);
+  };
+
+  projectClicked = id => {
+    console.log("project clicked", id);
+  };
+
+  filterSearchInput = value => {
+    const searchOptions =
+      value.length > 0
+        ? defaultSearchOptions.filter(option =>
+            option.label.toLowerCase().startsWith(value.toLowerCase())
+          )
+        : [];
+
+    this.setState({ searchOptions });
   };
 
   render() {
@@ -129,7 +174,12 @@ class Playground extends React.Component {
       projectTitle: "Projects",
       onAccountClick: this.accountClicked,
       onProjectClick: this.projectClicked,
+      onSearchInput: this.onSearchInput,
+      onSearchSubmit: this.onSearchSubmit,
+      searchOptions: this.state.searchOptions,
+      searchValue: this.state.searchValue,
       help: helpProps,
+      hideHamburgerButton: true,
       logo,
       onLogoClick() {
         console.log("Logo clicked");
@@ -174,34 +224,40 @@ class Playground extends React.Component {
         topNav={topNavProps}
         activeModuleId={this.state.activeModuleId}
         showSubNav
+        sideNavOpen
         isSideNavOpen={this.state.isSideNavOpen}
         onHamburgerClick={this.toggleSideNav}
       >
-        <Container>
-          <ProgressBarSection />
-          <ProgressRingSection />
-          <TabsSection />
-          <ButtonSection />
-          <IconButtonSection />
-          <CheckboxSection />
-          <PasswordFieldSection />
-          <RadioButtonSection />
-          <RangeSection />
-          <TextFieldSection />
-          <TextAreaSection />
-          <ModalSection />
-          <DropdownSection />
-          <TypographySection />
-          <TableSection />
-          <TextLinkSection />
-          <FlyoutSection />
-          <TooltipSection />
-          <RichTextSection />
-          <AvatarSection />
-          <GridSection />
-          <IconSection />
-          <SelectableTableSection />
-        </Container>
+        <ExpandingFilterSectionSection />
+        <ActionBarSection />
+        <ProgressBarSection />
+        <ProgressRingSection />
+        <TabsSection />
+        <ButtonSection />
+        <IconButtonSection />
+        <CheckboxSection />
+        <PasswordFieldSection />
+        <RadioButtonSection />
+        <RangeSection />
+        <TextFieldSection />
+        <TextAreaSection />
+        <ModalSection />
+        <DropdownSection />
+        <TypographySection />
+        <TableSection />
+        <TextLinkSection />
+        <FlyoutSection />
+        <TooltipSection />
+        <RichTextSection />
+        <AvatarSection />
+        <GridSection />
+        <IconSection />
+        <SelectableTableSection />
+        <ContainerViewSection />
+        <ImageSection />
+        <SectionLabelSection />
+        <ShowMoreLessSection />
+        <TimestampSection />
       </GlobalNav>
     );
   }

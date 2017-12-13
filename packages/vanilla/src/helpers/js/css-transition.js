@@ -8,7 +8,7 @@ class CSSTransition {
     this.exitingClass = `${options.class}--exiting`;
     this.exitedClass = `${options.class}--exited`;
     this.animationClasses = [
-      this.enteringClass, this.enteredClass, this.exitingClass, this.exitedClass
+      this.enteringClass, this.enteredClass, this.exitingClass, this.exitedClass,
     ];
 
     this.state = 'exited';

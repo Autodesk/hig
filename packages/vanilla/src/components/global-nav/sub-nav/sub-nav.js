@@ -1,9 +1,9 @@
 import Interface from 'interface.json';
 import Core from '_core.js';
-import './sub-nav.scss';
+import Tabs from 'components/global-nav/sub-nav/tabs/tabs';
+import Icon from 'basics/icon/icon';
 import Template from './sub-nav.html';
-import Tabs from './tabs/tabs';
-import Icon from '../../../basics/icon/icon';
+import './sub-nav.scss';
 
 /**
  * Creates an SubNav
@@ -27,31 +27,31 @@ class SubNav extends Core {
   setModuleIndicatorName(name) {
     this._findDOMEl(
       '.hig__global-nav__sub-nav__module-indicator__name',
-      this.el
+      this.el,
     ).textContent = name;
     this._findDOMEl(
       '.hig__global-nav__sub-nav__module-indicator__name.hig__global-nav__sub-nav__spacer',
-      this.el
+      this.el,
     ).textContent = name;
   }
 
   setModuleIndicatorIcon(icon) {
     const mountIndicatorIcon = this._findDOMEl(
       '.hig__global-nav__sub-nav__module-indicator__icon',
-      this.el
+      this.el,
     );
     this._findOrCreateIconComponent(
       mountIndicatorIcon,
-      'indicator-icon'
+      'indicator-icon',
     ).setNameOrSVG(icon);
 
     const mountIndicatorIconSpacer = this._findDOMEl(
       '.hig__global-nav__sub-nav__module-indicator__icon.hig__global-nav__sub-nav__spacer',
-      this.el
+      this.el,
     );
     this._findOrCreateIconComponent(
       mountIndicatorIconSpacer,
-      'indicator-icon-spacer'
+      'indicator-icon-spacer',
     ).setNameOrSVG(icon);
   }
 
@@ -66,7 +66,7 @@ class SubNav extends Core {
       'click',
       '.hig__global-nav__sub-nav__module-indicator',
       this.el,
-      fn
+      fn,
     );
   }
 
@@ -83,10 +83,10 @@ class SubNav extends Core {
 SubNav._interface = Interface.components.GlobalNav.partials.SubNav;
 SubNav._defaults = {
   moduleIndicatorName: 'Module Name',
-  moduleIndicatorIcon: ''
+  moduleIndicatorIcon: '',
 };
 SubNav._partials = {
-  Tabs
+  Tabs,
 };
 
 export default SubNav;

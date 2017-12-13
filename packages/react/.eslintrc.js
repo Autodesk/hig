@@ -20,6 +20,7 @@ module.exports = {
   rules: {
     "class-methods-use-this": 0,
     "import/no-extraneous-dependencies": 0,
+    "jsx-a11y/alt-text": 0,
     "jsx-a11y/href-no-hash": "off",
     "max-len": [1, { code: 100 }],
     "no-underscore-dangle": 0,

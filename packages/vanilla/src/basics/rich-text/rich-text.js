@@ -29,7 +29,7 @@ class RichText extends Core {
 
 RichText._interface = Interface.basics.RichText;
 RichText._defaults = {
-  html: ''
+  html: '',
 };
 
 export default RichText;

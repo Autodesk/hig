@@ -1,8 +1,8 @@
 import Interface from 'interface.json';
 import Core from '_core.js';
-import './slot-head-cell.scss';
+import frToPercentage from 'helpers/js/_frtopercentage';
 import Template from './slot-head-cell.html';
-import frToPercentage from '../../../../helpers/js/_frtopercentage';
+import './slot-head-cell.scss';
 
 /**
  * Creates an Table
@@ -35,7 +35,7 @@ class SlotHeadCell extends Core {
 SlotHeadCell._interface =
   Interface.components.Table.partials.TableHead.partials.SlotHeadCell;
 SlotHeadCell._defaults = {
-  width: '1fr'
+  width: '1fr',
 };
 
 export default SlotHeadCell;

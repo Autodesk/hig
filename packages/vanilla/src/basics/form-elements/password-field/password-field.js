@@ -1,7 +1,7 @@
-import Template from './password-field.html';
 import Interface from 'interface.json';
 import Core from '_core.js';
-import TextField from '../text-field/text-field';
+import TextField from 'basics/form-elements/text-field/text-field';
+import Template from './password-field.html';
 
 const textFieldMethods = [
   'setLabel',
@@ -16,7 +16,7 @@ const textFieldMethods = [
   'onFocus',
   'onInput',
   'enable',
-  'disable'
+  'disable',
 ];
 
 /**
@@ -79,13 +79,13 @@ textFieldMethods.forEach((fn) => {
     writable: true,
     value() {
       return this.textField[fn].apply(this.textField, arguments);
-    }
+    },
   });
 });
 
 PasswordField._interface = Interface.basics.FormElements.partials.PasswordField;
 PasswordField._defaults = Object.assign({}, TextField._defaults, {
-  label: 'Password'
+  label: 'Password',
 });
 PasswordField._partials = {};
 

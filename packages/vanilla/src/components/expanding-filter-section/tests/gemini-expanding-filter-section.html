@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="../../../../lib/hig.css">
+  <script type="text/javascript" src="../../../../lib/hig.js"></script>
+
+  <style>
+    body {
+      margin: 30px;
+    }
+
+    .test-container {
+      padding: 12px;
+      width: 270px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class='title'></div>
+  <div class='test-container m-closed'></div>
+  <div class='test-container m-open'></div>
+  <div class='test-container s-closed'></div>
+  <div class='test-container s-open'></div>
+
+  <script>
+    var mClosed = new Hig.ExpandingFilterSection();
+    mClosed.mount('.m-closed');
+    mClosed.setLabel('Filters');
+
+    var mOpen = new Hig.ExpandingFilterSection();
+    mOpen.mount('.m-open');
+    mOpen.setLabel('Filters');
+    mOpen.open();
+
+    var sClosed = new Hig.ExpandingFilterSection();
+    sClosed.mount('.s-closed');
+    sClosed.setSize('s');
+    sClosed.setLabel('Current projects');
+
+    var sOpen = new Hig.ExpandingFilterSection();
+    sOpen.mount('.s-open');
+    sOpen.setSize('s');
+    sOpen.setLabel('Current projects');
+    sOpen.open();
+  </script>
+</body>
+
+</html>

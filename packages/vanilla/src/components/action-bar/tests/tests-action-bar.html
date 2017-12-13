@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="../../../../lib/hig.css">
+  <script type="text/javascript" src="../../../../lib/hig.js"></script>
+
+  <style>
+    body {
+      margin: 30px;
+    }
+
+    .test-container {
+      margin-bottom: 50px;
+    }
+
+    .test-container>div {
+      margin: 10px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class='title'></div>
+  <div class='test-container'>
+    <div class="hig__action-bar">
+      <div class="hig__action-bar__group group1"></div>
+      <div class="hig__action-bar__spacer"></div>
+      <div class="hig__action-bar__group group2"></div>
+      <div class="hig__action-bar__group group3"></div>
+    </div>
+  </div>
+
+  <script>
+    var Title = new Hig.Typography({
+      "text": "ActionBar",
+      "type": "h2"
+    });
+
+    Title.mount('.title');
+
+    var buttons = [{
+        group: "group1",
+        icon: "upload"
+      },
+      {
+        group: "group1",
+        icon: "add"
+      },
+      {
+        group: "group2",
+        icon: "search"
+      },
+      {
+        group: "group3",
+        icon: "grid"
+      }
+    ]
+
+    buttons.forEach(function (spec) {
+      var button = new Hig.IconButton({
+        icon: spec.icon,
+        type: 'flat'
+      });
+
+      button.mount('.' + spec.group);
+    });
+  </script>
+</body>
+
+</html>

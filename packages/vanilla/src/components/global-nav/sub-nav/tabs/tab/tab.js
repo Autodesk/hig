@@ -35,7 +35,7 @@ class Tab extends Core {
 
 Tab._interface = Interface.components.GlobalNav.partials.SubNav.partials.Tabs.partials.Tab;
 Tab._defaults = {
-  label: 'Tab'
+  label: 'Tab',
 };
 Tab._partials = {};
 

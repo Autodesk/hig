@@ -1,12 +1,10 @@
+/* globals document, window */
 import Core from '_core.js';
 import Interface from 'interface.json';
-
-import './dropdown.scss';
-
+import TextField from 'basics/form-elements/text-field/text-field';
+import Option from 'basics/form-elements/option/option';
 import Template from './dropdown.html';
-
-import TextField from '../text-field/text-field';
-import Option from './option/option';
+import './dropdown.scss';
 
 const OPEN_CLASS = 'hig__dropdown--open';
 
@@ -69,7 +67,7 @@ class Dropdown extends Core {
       'click',
       window.document.body,
       window.document.body,
-      this._callbackIfClickOutside.bind(this, fn)
+      this._callbackIfClickOutside.bind(this, fn),
     );
   }
 
@@ -114,8 +112,7 @@ class Dropdown extends Core {
       return;
     }
     if (
-      this.field.el.contains(event.target) ||
-      this.field.el === event.target
+      this.field.el.contains(event.target) || this.field.el === event.target
     ) {
       return;
     }
@@ -125,15 +122,12 @@ class Dropdown extends Core {
   }
 }
 
-Dropdown._interface =
-  Interface.basics.FormElements.partials.Dropdown;
+Dropdown._interface = Interface.basics.FormElements.partials.Dropdown;
 Dropdown._defaults = {
   label: '',
   placeholder: '',
-  instructions: ''
+  instructions: '',
 };
-Dropdown._partials = {
-  Option
-};
+Dropdown._partials = {};
 
 export default Dropdown;

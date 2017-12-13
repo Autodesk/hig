@@ -1,8 +1,8 @@
 import Interface from 'interface.json';
 import Core from '_core.js';
-import './tabs.scss';
+import Tab from 'components/tabs/tab/tab';
 import Template from './tabs.html';
-import Tab from './tab/tab.js';
+import './tabs.scss';
 
 /**
  * Creates a Tabs
@@ -26,7 +26,7 @@ class Tabs extends Core {
 Tabs._interface = Interface.components.Tabs;
 Tabs._defaults = {};
 Tabs._partials = {
-  Tab
+  Tab,
 };
 
 export default Tabs;

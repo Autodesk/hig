@@ -1,9 +1,8 @@
 import Interface from 'interface.json';
 import Core from '_core.js';
-import './collapse.scss';
+import Icon from 'basics/icon/icon';
 import Template from './collapse.html';
-import Icon from '../../../../../../basics/icon/icon';
-
+import './collapse.scss';
 
 /**
  * Creates an Collapse

@@ -59,6 +59,10 @@ jobs:
       - restore_cache:
           key: vanilla-build-{{ .Revision }}
       - run:
+          name: Lint (Vanilla)
+          command: npm run lint
+          working_directory: packages/vanilla
+      - run:
           name: Start Server (Vanilla)
           command: ./node_modules/http-server/bin/http-server
           background: true
@@ -67,6 +71,8 @@ jobs:
           name: Run Tests (Vanilla)
           command: npm run gemini-ci
           working_directory: packages/vanilla
+      - store_artifacts:
+          path: packages/vanilla/gemini-report
   react-test:
     <<: *defaults
     steps:

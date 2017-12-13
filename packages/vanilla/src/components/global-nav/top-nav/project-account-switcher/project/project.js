@@ -1,5 +1,5 @@
 import Interface from 'interface.json';
-import Item from '../_item/item';
+import Item from 'components/global-nav/top-nav/project-account-switcher/_item/item';
 
 /**
  * Creates an Project
@@ -17,7 +17,7 @@ class Project {
 Project._interface = Interface.components.GlobalNav.partials.TopNav.partials.ProjectAccountSwitcher.partials.Project;
 Project._defaults = {
   image: '',
-  'label': '',
+  label: '',
 };
 
 export default Project;

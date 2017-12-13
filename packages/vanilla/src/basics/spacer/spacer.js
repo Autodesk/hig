@@ -11,7 +11,7 @@ const SIZES = {
   m: 16,
   l: 24,
   xl: 32,
-  xxl: 64
+  xxl: 64,
 };
 
 const TYPES = ['stack', 'inline'];
@@ -79,7 +79,7 @@ Spacer._interface = Interface.basics.Spacer;
 Spacer._defaults = {
   type: 'stack',
   width: 'm',
-  inset: null
+  inset: null,
 };
 
 Spacer.SizeMap = SIZES;

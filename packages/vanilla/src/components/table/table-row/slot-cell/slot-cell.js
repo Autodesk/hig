@@ -1,6 +1,6 @@
-import Template from './slot-cell.html';
 import Interface from 'interface.json';
 import Core from '_core.js';
+import Template from './slot-cell.html';
 
 /**
  * Creates an Table

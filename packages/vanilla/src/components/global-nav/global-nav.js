@@ -1,10 +1,10 @@
 import Interface from 'interface.json';
 import Core from '_core.js';
-import './global-nav.scss';
+import SideNav from 'components/global-nav/side-nav/side-nav';
+import TopNav from 'components/global-nav/top-nav/top-nav';
+import SubNav from 'components/global-nav/sub-nav/sub-nav';
 import Template from './global-nav.html';
-import SideNav from './side-nav/side-nav.js';
-import TopNav from './top-nav/top-nav.js';
-import SubNav from './sub-nav/sub-nav.js';
+import './global-nav.scss';
 
 /**
  * Creates an GlobalNav
@@ -58,7 +58,7 @@ GlobalNav._defaults = {};
 GlobalNav._partials = {
   SideNav,
   TopNav,
-  SubNav
+  SubNav,
 };
 
 export default GlobalNav;
