@@ -17,6 +17,7 @@ $group-height: 56px;
   height: $group-height;
   line-height: $group-height;
   z-index: $top-nav-layer;
+  padding-left: 7px;
 
   @include shadow("dropshadow");
 }
@@ -45,7 +46,7 @@ $group-height: 56px;
   display: flex;
   align-items: center;
   width: 30px;
-  padding: 0 5px 0 12px;
+  padding: 0 5px;
   cursor: pointer;
 
   &__closeicon {
@@ -59,6 +60,10 @@ $group-height: 56px;
   .hig__global-nav--open &__closeicon {
     display: block;
   }
+}
+
+.hig__global-nav__top-nav__hamburger--hidden {
+  display: none;
 }
 
 .hig__global-nav__top-nav__logo {

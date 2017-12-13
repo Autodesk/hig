@@ -56,6 +56,11 @@ function TopNavAdapter(props) {
             setter="setLogoLink"
             {...adapterProps}
           />
+          <MapsPropToMethod
+            value={props.hideHamburgerButton}
+            setter="hideMenu"
+            {...adapterProps}
+          />
           <MapsEventListener
             handler={props.onLogoClick}
             listener="onLogoClick"
@@ -81,6 +86,7 @@ function TopNavAdapter(props) {
 
 TopNavAdapter.propTypes = {
   children: PropTypes.node,
+  hideHamburgerButton: PropTypes.bool,
   logo: PropTypes.string,
   logoLink: PropTypes.string,
   onLogoClick: PropTypes.func,
@@ -89,6 +95,7 @@ TopNavAdapter.propTypes = {
 
 TopNavAdapter.defaultProps = {
   children: undefined,
+  hideHamburgerButton: false,
   logo: undefined,
   logoLink: undefined,
   onLogoClick: undefined,
