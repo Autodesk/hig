@@ -42,4 +42,18 @@ NotificationAdapter.propTypes = {
   timestamp: PropTypes.oneOfType([PropTypes.string, PropTypes.instanceOf(Date)]) // ISO date string
 };
 
+NotificationAdapter.__docgenInfo = {
+  props: {
+    unread: {
+      description: "{Boolean to show specify whether notificaiton is read"
+    },
+    children: {
+      description: "content for notification"
+    },
+    timestamp: {
+      description: "timstamp for notification"
+    }
+  }
+};
+
 export default NotificationAdapter;
