@@ -1471,6 +1471,12 @@
                 "{Shortcut} Shortcut - instance of a Shortcut partial"
               ]
             },
+            "hideMenu": {
+              "desc": "Hide the hamburger menu icon",
+              "params": [
+                "{Boolean} hidden - whether the icon should be hidden"
+              ]
+            },
             "onHamburgerClick": {
               "desc": "Calls the provided callback when user clicks on the hamburger icon",
               "params": "HIG.abstract.EventObject.params",

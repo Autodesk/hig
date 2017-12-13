@@ -69,6 +69,10 @@ $group-height: 56px;
   }
 }
 
+.hig__global-nav__top-nav__hamburger--hidden {
+  display: none;
+}
+
 .hig__global-nav__top-nav__logo {
   display: flex;
   align-items: center;

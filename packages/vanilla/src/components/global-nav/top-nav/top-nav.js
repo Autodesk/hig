@@ -51,6 +51,14 @@ class TopNav extends Core {
     this._findDOMEl('.hig__global-nav__top-nav__logo', this.el).setAttribute('href', link);
   }
 
+  hideMenu(hidden) {
+    const hamburgerEl = this._findDOMEl('.hig__global-nav__top-nav__hamburger', this.el);
+
+    hidden ?
+      hamburgerEl.classList.add('hig__global-nav__top-nav__hamburger--hidden') :
+      hamburgerEl.classList.remove('hig__global-nav__top-nav__hamburger--hidden');
+  }
+
   addProfile(profileInstance) {
     if (profileInstance instanceof Profile) {
       this.mountPartialToComment('PROFILE', profileInstance);
