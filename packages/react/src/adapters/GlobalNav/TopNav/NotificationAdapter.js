@@ -39,7 +39,7 @@ function NotificationAdapter(props) {
 NotificationAdapter.propTypes = {
   unread: PropTypes.bool,
   children: PropTypes.node,
-  timestamp: PropTypes.string // ISO date string
+  timestamp: PropTypes.oneOfType([PropTypes.string, PropTypes.instanceOf(Date)]) // ISO date string
 };
 
 export default NotificationAdapter;

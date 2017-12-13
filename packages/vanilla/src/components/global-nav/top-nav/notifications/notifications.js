@@ -5,7 +5,7 @@ import Template from './notifications.html';
 import Flyout from 'basics/flyout/flyout';
 import Notification from './notification/notification';
 import Shortcut from 'components/global-nav/top-nav/shortcut/shortcut.js';
-import RichText from 'basics/rich-text/rich-text';
+
 /**
  * Creates notifications
  *
@@ -25,6 +25,7 @@ class Notifications extends Core {
 
   _componentDidMount() {
     this.mountPartialToComment('FLYOUT', this.flyout, this.el);
+    this.flyout.setAnchorPoint('top-left');
     this.shortcut = new Shortcut({
       icon: 'notification',
       title: this.initialOptions.title
@@ -32,12 +33,11 @@ class Notifications extends Core {
 
     // this.shortcut.mount(this.el);
     this.flyout.addTarget(this.shortcut);
-    this.el.classList.add(RichText.className);
   }
 
   setUnreadCount(unreadCount) {
     this._findDOMEl(
-      '.hig__notifications__unread__messages__count',
+      '.hig__notifications__unread-messages-count',
       this.el
     ).textContent = unreadCount;
   }
@@ -50,7 +50,7 @@ class Notifications extends Core {
     this.flyout.close();
   }
 
-  addNotification(notification) {
+  addNotification(notification, referenceGroup) {
     if (notification instanceof Notification) {
       this.flyout.addSlot(notification);
     }

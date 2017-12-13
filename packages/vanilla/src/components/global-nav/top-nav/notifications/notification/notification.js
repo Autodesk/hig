@@ -1,8 +1,9 @@
 import Interface from 'interface.json';
 import Core from '_core.js';
+import Timestamp from 'basics/timestamp/timestamp';
 import './notification.scss';
-import Timestamp from "basics/timestamp/timestamp";
 import Template from './notification.html';
+import RichText from 'basics/rich-text/rich-text';
 
 /**
  * Creates a notification
@@ -19,14 +20,17 @@ class Notification extends Core {
     this.intialOptions = options;
   }
 
+  _componentDidMount() {
+    this.timestamp = new Timestamp({});
+    this.mountPartialToComment('TIMESTAMP', this.timestamp, this.el);
+  }
   setContent(notification) {
-    this._findDOMEl('.hig__notification__content').appendChild(notification);
+    this.el.classList.add(RichText.className);
+    this._findDOMEl('.hig__notification__content', this.el).appendChild(notification);
   }
 
   setCreatedAt(timestampString) {
-    const timestamp = new Timestamp({});
-    timestamp.setTimestamp(timestampString);
-    this.mountPartialToComment('TIMESTAMP', timestamp);
+    this.timestamp.setTimestamp(timestampString);
   }
 
   markUnread() {

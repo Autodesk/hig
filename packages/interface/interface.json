@@ -1615,8 +1615,11 @@
                 "Notification": {
                   "methods": {
                     "setContent": {
-                      "desc": "sets content for the notification"
-                    },
+                      "desc": "sets content for the notification",
+                      "params": [
+                        "{Node} HTML content for notification"
+                      ]
+                    },  
                     "setCreatedAt": {
                       "desc": "sets timestamp for notification"
                     },

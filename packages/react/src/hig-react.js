@@ -41,7 +41,7 @@ export { default as Image } from "./adapters/ImageAdapter";
 export { default as Modal } from "./elements/components/Modal";
 export {
   default as Notifications
-} from "./adapters/GlobalNav/TopNav/NotificationsAdapter";
+} from "./elements/components/GlobalNav/TopNav/Notifications";
 export {
   default as Notification
 } from "./adapters/GlobalNav/TopNav/NotificationAdapter";

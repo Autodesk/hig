@@ -9,7 +9,7 @@ import HIGAdapter, {
 } from "../../HIGAdapter";
 import ShortcutAdapter from "./ShortcutAdapter";
 import Search from "../../../elements/components/GlobalNav/TopNav/Search";
-import NotificationsAdapter from "./NotificationsAdapter";
+import Notifications from "../../../elements/components/GlobalNav/TopNav/Notifications";
 import ProfileAdapter from "./ProfileAdapter";
 import HelpAdapter from "./HelpAdapter";
 import ProjectAccountSwitcherAdapter from "./ProjectAccountSwitcherAdapter";
@@ -17,7 +17,7 @@ import ProjectAccountSwitcher from "../../../elements/components/GlobalNav/TopNa
 
 function sortChildren(children) {
   return {
-    notifications: children.find(child => child.type === NotificationsAdapter),
+    notifications: children.find(child => child.type === Notifications),
     shortcut: children.find(child => child.type === ShortcutAdapter),
     search: children.find(child => child.type === Search),
     profile: children.find(child => child.type === ProfileAdapter),

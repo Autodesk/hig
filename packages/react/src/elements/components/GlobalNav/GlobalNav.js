@@ -11,7 +11,7 @@ import OptionAdapter from "../../../adapters/GlobalNav/TopNav/OptionAdapter";
 import SideNav from "./SideNav";
 import Tabs from "./SubNav/Tabs";
 import ProjectAccountSwitcher from "./TopNav/ProjectAccountSwitcher";
-import Notifications from "../../../adapters/GlobalNav/TopNav/NotificationsAdapter";
+import Notifications from "./TopNav/Notifications";
 import Notification from "../../../adapters/GlobalNav/TopNav/NotificationAdapter";
 
 class GlobalNav extends Component {
@@ -94,14 +94,6 @@ class GlobalNav extends Component {
                 {...this.props.topNav.projectAccountSwitcher}
               />
             ) : null}
-            <Notifications open unreadCount={3}>
-              <Notification unread>
-                <h1>This is our first notification</h1>
-              </Notification>
-              <Notification unread>
-                <h1>This is our second notification</h1>
-              </Notification>
-            </Notifications>
             {this.showHelp() ? (
               <HelpAdapter {...this.props.topNav.help}>
                 {(this.props.topNav.help.groups || []).map((groupProps, i) => (
