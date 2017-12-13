@@ -13,7 +13,7 @@
     "deploy": "npm run lib && surge .",
     "dev-server": "webpack-dev-server --open --config webpack.dev.js",
     "gemini": "concurrently 'http-server' 'gemini test dev/gemini/*' --kill-others",
-    "gemini-ci": "gemini test dev/gemini/*",
+    "gemini-ci": "gemini test dev/gemini/* --reporter html --reporter flat",
     "gemini-report": "concurrently 'http-server' 'gemini test dev/gemini/* --reporter html --reporter flat' --kill-others",
     "gemini-update": "concurrently 'http-server' 'gemini update dev/gemini/*' --kill-others",
     "generate-index": "node ./dev/generate-index.js",
