@@ -23,6 +23,7 @@
     "@types/jest": "^19.2.3",
     "@types/node": "^7.0.21",
     "@types/react": "^15.0.24",
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.1",
     "babel-plugin-react-docgen": "^1.7.0",
@@ -53,10 +54,11 @@
     "webpack": "^3.5.5"
   },
   "scripts": {
+    "babel": "babel --ignore test.js,Tests.js,test -d lib src",
     "build-playground": "react-scripts build",
     "deploy-playground": "react-scripts build && surge build",
     "generate-docs": "node ./scripts/generate-docs.js",
-    "lib": "webpack && NODE_ENV=production webpack",
+    "lib": "npm run babel && NODE_ENV=production webpack -p",
     "lint": "eslint ./src/** -c ./.eslintrc.js",
     "lint-fix": "eslint ./src/** -c ./.eslintrc.js --fix",
     "playground": "react-scripts start",
