@@ -27,7 +27,7 @@ class Notification extends Core {
   setContent(notification) {
     this.el.classList.add(RichText.className);
     this._findDOMEl('.hig__notification__content', this.el).appendChild(
-      notification,
+      notification
     );
   }
 
@@ -36,15 +36,16 @@ class Notification extends Core {
   }
 
   markUnread() {
-    this._findDOMEl('.hig__notification__unread').classList.add(
-      'hig__notification__unread--show',
+    const unreadElement = this._findDOMEl(
+      '.hig__notification__unread',
+      this.el
     );
+    unreadElement.classList.add('hig__notification__unread--show');
   }
 
   markRead() {
-    this._findDOMEl('.hig__notification__unread').classList.remove(
-      'hig__notification__unread--show',
-    );
+    const readElement = this._findDOMEl('.hig__notification__unread', this.el);
+    readElement.classList.remove('hig__notification__unread--show');
   }
 }
 

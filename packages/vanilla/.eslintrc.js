@@ -18,6 +18,9 @@ module.exports = {
   },
   'rules': {
     'class-methods-use-this': 0,
+    "comma-dangle": ["error", {
+      "functions": "never"
+    }],  
     'import/no-dynamic-require': 0,
     'import/no-extraneous-dependencies': 0,
     'jsx-a11y/href-no-hash': 0,

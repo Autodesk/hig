@@ -6,7 +6,6 @@ import './notifications.scss';
 import Template from './notifications.html';
 import Notification from './notification/notification';
 
-
 /**
  * Creates notifications
  *

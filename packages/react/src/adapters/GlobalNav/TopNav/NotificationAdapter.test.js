@@ -4,6 +4,7 @@ import { Notification as VanillaNotification } from "hig-vanilla";
 import NotificationAdapter from "./NotificationAdapter";
 
 describe("NotificationAdapter", () => {
+  const timestamp = new Date();
   it("implements the hig interface", () => {
     expect(mockInstance => {
       mount(
@@ -12,7 +13,7 @@ describe("NotificationAdapter", () => {
           onClick={() => {}}
           onClickOutside={() => {}}
           unreadCount={2}
-          timestamp={new Date()}
+          timestamp={timestamp}
           unread
         >
           <h1>This is our first notification</h1>
