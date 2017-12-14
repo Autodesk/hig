@@ -5,6 +5,7 @@ import Flyout from 'basics/flyout/flyout';
 import './notifications.scss';
 import Template from './notifications.html';
 import Notification from './notification/notification';
+import List from './_list/_list';
 
 /**
  * Creates notifications
@@ -30,9 +31,11 @@ class Notifications extends Core {
       icon: 'notification',
       title: this.initialOptions.title
     });
+    this.list = new List();
 
-    // this.shortcut.mount(this.el);
     this.flyout.addTarget(this.shortcut);
+    this.flyout.addSlot(this.list);
+    this.flyout.setAnchorPoint('top-right');
   }
 
   setUnreadCount(unreadCount) {
@@ -52,7 +55,7 @@ class Notifications extends Core {
 
   addNotification(notification) {
     if (notification instanceof Notification) {
-      this.flyout.addSlot(notification);
+      this.list.addItem(notification);
     }
   }
 
@@ -62,6 +65,14 @@ class Notifications extends Core {
 
   onClick(fn) {
     return this.shortcut.onClick(fn);
+  }
+
+  setLoading() {
+    this.list.setLoading();
+  }
+
+  setNotLoading() {
+    this.list.setNotLoading();
   }
 }
 
