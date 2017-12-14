@@ -11,8 +11,6 @@ import OptionAdapter from "../../../adapters/GlobalNav/TopNav/OptionAdapter";
 import SideNav from "./SideNav";
 import Tabs from "./SubNav/Tabs";
 import ProjectAccountSwitcher from "./TopNav/ProjectAccountSwitcher";
-import Notifications from "./TopNav/Notifications";
-import Notification from "../../../adapters/GlobalNav/TopNav/NotificationAdapter";
 
 class GlobalNav extends Component {
   constructor(props) {

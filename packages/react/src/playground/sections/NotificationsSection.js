@@ -25,12 +25,8 @@ class NotificationsSection extends PureComponent {
       <PlaygroundSection title="Notifications">
         <div style={{ width: "100px" }}>
           <Notifications
-            onClick={() => {
-              console.log("Notifications Clicked");
-            }}
-            onClickOutside={() => {
-              console.log("Notifications Click Outside");
-            }}
+            onClick={() => {}}
+            onClickOutside={() => {}}
             unreadCount={3}
           >
             <Notification unread>

@@ -61,7 +61,7 @@ Notifications.__docgenInfo = {
     },
     onClickOutside: {
       description:
-        "Calls the provided callback when the notifications dropdown is open and the user clicks outside the dropdown"
+        "Calls the provided callback when user clicks outside the dropdown"
     },
     onClick: {
       description:

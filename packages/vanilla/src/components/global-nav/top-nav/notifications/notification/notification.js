@@ -1,9 +1,10 @@
 import Interface from 'interface.json';
 import Core from '_core.js';
 import Timestamp from 'basics/timestamp/timestamp';
+import RichText from 'basics/rich-text/rich-text';
 import './notification.scss';
 import Template from './notification.html';
-import RichText from 'basics/rich-text/rich-text';
+
 
 /**
  * Creates a notification

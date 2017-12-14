@@ -49,14 +49,14 @@ class TopNav extends Core {
   setLogo(logo) {
     this._findDOMEl(
       '.hig__global-nav__top-nav__logo img',
-      this.el
+      this.el,
     ).setAttribute('src', logo);
   }
 
   setLogoLink(link) {
     this._findDOMEl('.hig__global-nav__top-nav__logo', this.el).setAttribute(
       'href',
-      link
+      link,
     );
   }
 
@@ -117,20 +117,20 @@ class TopNav extends Core {
   _setIcons() {
     const mountHamburgerIcon = this._findDOMEl(
       '.hig__global-nav__top-nav__hamburger__hamburgericon',
-      this.el
+      this.el,
     );
     this._findOrCreateIconComponent(
       mountHamburgerIcon,
-      'hamburger'
+      'hamburger',
     ).setNameOrSVG('hamburger');
 
     const mountCloseIcon = this._findDOMEl(
       '.hig__global-nav__top-nav__hamburger__closeicon',
-      this.el
+      this.el,
     );
     this._findOrCreateIconComponent(
       mountCloseIcon,
-      'close-hamburger'
+      'close-hamburger',
     ).setNameOrSVG('close-hamburger');
   }
 
@@ -156,7 +156,7 @@ TopNav._partials = {
   Shortcut,
   Help,
   Search,
-  Notifications
+  Notifications,
 };
 
 export default TopNav;

@@ -47,10 +47,10 @@ export { default as Modal } from './components/modal/modal';
 //   default as Option
 // } from './basics/form-elements/dropdown/option/option';
 export {
-  default as Notifications
+  default as Notifications,
 } from './components/global-nav/top-nav/notifications/notifications';
 export {
-  default as Notification
+  default as Notification,
 } from './components/global-nav/top-nav/notifications/notification/notification';
 export { default as Option } from './basics/form-elements/option/option';
 export {
