@@ -1,6 +1,5 @@
 const path = require("path");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-const babel = require("./webpack/babel");
 const minify = require("./webpack/minify");
 
 const externals = ["react", "react-dom", "prop-types"];
@@ -15,7 +14,18 @@ const debug = {
     libraryTarget: "umd"
   },
   module: {
-    rules: [babel({ plugins: ["react-docgen"] })]
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: [/node_modules/],
+        use: {
+          loader: 'babel-loader',
+          options: {
+            plugins: ['react-docgen']
+          }
+        }
+      }
+    ]
   },
   plugins: [],
   externals
@@ -30,7 +40,13 @@ const production = {
     libraryTarget: "umd"
   },
   module: {
-    rules: [babel()]
+    rules: [
+      {
+        test: /\.js$/,
+        use: 'babel-loader',
+        exclude: [/node_modules/]
+      }
+    ]
   },
   plugins: [
     minify(),
