@@ -25,6 +25,6 @@ class Group extends Core {
 Group._interface = Interface.components.GlobalNav.partials.TopNav.partials.Help.partials.Group;
 Group._defaults = {};
 Group._partials = {
-  Option,
+  Option
 };
 export default Group;

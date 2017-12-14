@@ -33,7 +33,7 @@ class Option extends Core {
 Option._interface = Interface.components.GlobalNav.partials.TopNav.partials.Help.partials.Option;
 Option._defaults = {
   name: '',
-  link: null,
+  link: null
 };
 Option._partials = {};
 

@@ -42,7 +42,7 @@ class IconCell extends Core {
 IconCell._interface =
   Interface.components.Table.partials.TableRow.partials.IconCell;
 IconCell._defaults = {
-  icon: false,
+  icon: false
 };
 
 export default IconCell;

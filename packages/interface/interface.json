@@ -24,7 +24,8 @@
             "{HTMLElement} HTMLElement"
           ]
         }
-      }
+      },
+      "defaults": {}
     },
     "ContainerViewRight": {
       "methods": {
@@ -40,7 +41,8 @@
             "{HTMLElement} HTMLElement"
           ]
         }
-      }
+      },
+      "defaults": {}
     },
     "Flyout": {
       "methods": {
@@ -1476,6 +1478,12 @@
               "params": [
                 "{Boolean} hidden - whether the icon should be hidden"
               ]
+            },   
+            "addNotifications": {
+              "desc": "Pass in an instance of a Notifications partial to mount it to the TopNav",
+              "params": [
+                "{Notifications} Notiducations - instance of a Notiducations partial"
+              ]
             },
             "onHamburgerClick": {
               "desc": "Calls the provided callback when user clicks on the hamburger icon",
@@ -1571,6 +1579,61 @@
                   }
                 }
               }
+            },
+            "Notifications": {
+              "methods": {
+                "open": {
+                  "desc": "opens the notifications flyout"
+                },
+                "close": {
+                  "desc": "closes the notifications flyout"
+                },
+                "addNotification": {
+                  "desc": "Pass in an instance of a Notification",
+                  "params": [
+                    "{Notification}, [ReferenceNotification] - (Optional) reference node for insertBefore "
+                  ]
+                },
+                "setUnreadCount": {
+                  "desc": "Pass a value for number of notificatiosn that are unread",
+                  "params": [
+                    "{Integer}, count for number of unread notifications "
+                  ]
+                },
+                "onClickOutside": {
+                  "desc": "Calls the provided callback when the notifications dropdown is open and the user clicks outside the dropdown",
+                  "params": "HIG.abstract.EventObject.params",
+                  "returns": "HIG.abstract.EventObject.returns"
+                },
+                "onClick": {
+                  "desc": "Calls the provided callback when user clicks on the noticatiosn icon in the top nav",
+                  "params": "HIG.abstract.EventObject.params",
+                  "returns": "HIG.abstract.EventObject.returns"
+                }
+              },
+              "partials": {
+                "Notification": {
+                  "methods": {
+                    "setContent": {
+                      "desc": "sets content for the notification",
+                      "params": [
+                        "{Node} HTML content for notification"
+                      ]
+                    },  
+                    "setCreatedAt": {
+                      "desc": "sets timestamp for notification"
+                    },
+                    "markUnread": {
+                      "desc": "sets notification as unread"
+                    },
+                    "markRead": {
+                      "desc": "sets notification to read"
+                    }
+                  }, 
+                  "defaults": {}
+                }
+              }, 
+              "defaults": {}
             },
             "Profile": {
               "defaults": {

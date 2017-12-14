@@ -32,7 +32,7 @@ class Icon extends Core {
     } else {
       console.error(
         `Icon named "${icon} size "${size}" not found, only these size are allowed: `,
-        AvailableSizes,
+        AvailableSizes
       );
     }
   }
@@ -52,7 +52,7 @@ class Icon extends Core {
 
 Icon._interface = Interface.basics.Icon;
 Icon._defaults = {
-  nameOrSVG: '',
+  nameOrSVG: ''
 };
 
 Icon.AvailableSizes = AvailableSizes;

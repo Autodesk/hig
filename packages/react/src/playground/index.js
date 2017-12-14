@@ -22,6 +22,7 @@ import GridSection from "./sections/GridSection";
 import IconButtonSection from "./sections/IconButtonSection";
 import IconSection from "./sections/IconSection";
 import ModalSection from "./sections/ModalSection";
+import NotificationsSection from "./sections/NotificationsSection";
 import ImageSection from "./sections/ImageSection";
 import PasswordFieldSection from "./sections/PasswordFieldSection";
 import ProgressBarSection from "./sections/ProgressBarSection";
@@ -229,6 +230,7 @@ class Playground extends React.Component {
         onHamburgerClick={this.toggleSideNav}
       >
         <ExpandingFilterSectionSection />
+        <NotificationsSection />
         <ActionBarSection />
         <ProgressBarSection />
         <ProgressRingSection />

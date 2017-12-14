@@ -80,12 +80,12 @@ Lists._interface = {
     addAccount: {},
     addProject: {},
     setProjectTitle: {},
-    setAccountTitle: {},
-  },
+    setAccountTitle: {}
+  }
 };
 Lists._defaults = {
   projectTitle: '',
-  accountTitle: '',
+  accountTitle: ''
 };
 Lists._partials = {};
 

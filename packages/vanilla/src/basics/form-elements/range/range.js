@@ -113,7 +113,7 @@ Range._defaults = {
   minValue: 0,
   maxValue: null,
   step: 1,
-  value: null,
+  value: null
 };
 
 Range._partials = {};

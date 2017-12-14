@@ -42,7 +42,7 @@ TableRow._defaults = {};
 TableRow._partials = {
   TextCell,
   SlotCell,
-  IconCell,
+  IconCell
 };
 
 export default TableRow;

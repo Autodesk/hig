@@ -61,7 +61,7 @@ class IconButton extends Core {
     } else {
       console.error(
         `Button type "${type}" not found, only these types are allowed: `,
-        AvailableTypes,
+        AvailableTypes
       );
     }
   }
@@ -112,7 +112,7 @@ IconButton._interface = Interface.components.IconButton;
 IconButton._defaults = {
   title: 'button',
   icon: false,
-  type: AvailableTypes[0],
+  type: AvailableTypes[0]
 };
 IconButton.AvailableTypes = AvailableTypes;
 

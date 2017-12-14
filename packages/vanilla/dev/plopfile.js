@@ -46,61 +46,61 @@ export default function (plop) {
       validate(value) {
         if ((/.+/).test(value)) { return true; }
         return 'name is required';
-      },
+      }
     }, {
       type: 'directory',
       name: 'path',
       message: 'where would you like to put this component?',
-      basePath: plop.getPlopfilePath(),
+      basePath: plop.getPlopfilePath()
     }],
     actions: [{
       type: 'add',
       path: '{{absPath path}}/{{ dashCase name }}/tests/tests-{{ dashCase name }}.html',
       templateFile: '../src/helpers/skeletons/skeleton-tests-template.html',
-      abortOnFail: true,
+      abortOnFail: true
     }, {
       type: 'add',
       path: '{{absPath path}}/{{ dashCase name }}/tests/gemini-{{ dashCase name }}.html',
       templateFile: '../src/helpers/skeletons/skeleton-gemini-template.html',
-      abortOnFail: true,
+      abortOnFail: true
     }, {
       type: 'add',
       path: 'gemini/{{ dashCase name }}-test.js',
       templateFile: '../src/helpers/skeletons/skeleton-gemini-test.js',
-      abortOnFail: true,
+      abortOnFail: true
     }, {
       type: 'add',
       path: '{{absPath path}}/{{ dashCase name }}/{{ dashCase name }}.html',
       templateFile: '../src/helpers/skeletons/skeleton-template.html',
-      abortOnFail: true,
+      abortOnFail: true
     }, {
       type: 'modify',
       path: '{{absPath path}}/{{ dashCase name }}/{{ dashCase name }}.html',
       pattern: /## replace css class here ##/gi,
       template: '{{ pathToBEM path name }}',
-      abortOnFail: true,
+      abortOnFail: true
     }, {
       type: 'add',
       path: '{{absPath path}}/{{ dashCase name }}/{{ dashCase name }}.scss',
       templateFile: '../src/helpers/skeletons/skeleton-template.scss',
-      abortOnFail: true,
+      abortOnFail: true
     }, {
       type: 'modify',
       path: '{{absPath path}}/{{ dashCase name }}/{{ dashCase name }}.scss',
       pattern: /## replace css class here ##/gi,
       template: '{{ pathToBEM path name }}',
-      abortOnFail: true,
+      abortOnFail: true
     }, {
       type: 'add',
       path: '{{absPath path}}/{{ dashCase name }}/{{ dashCase name }}.js',
       templateFile: '../src/helpers/skeletons/skeleton-template.js',
-      abortOnFail: true,
+      abortOnFail: true
     }, {
       type: 'modify',
       path: '{{absPath path}}/{{ dashCase name }}/{{ dashCase name }}.js',
       pattern: /## replace interface here ##/gi,
       template: '{{{ pathToInterface path name }}}',
-      abortOnFail: true,
-    }],
+      abortOnFail: true
+    }]
   });
 }

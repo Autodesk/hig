@@ -20,11 +20,11 @@ class Lists extends Core {
 
 Lists._interface = {
   methods: {
-    setTitle: {},
-  },
+    setTitle: {}
+  }
 };
 Lists._defaults = {
-  title: '',
+  title: ''
 };
 Lists._partials = {};
 

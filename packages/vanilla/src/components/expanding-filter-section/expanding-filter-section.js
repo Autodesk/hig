@@ -27,7 +27,7 @@ class ExpandingFilterSection extends Core {
       'click',
       '.hig__expanding-filter-section__label',
       this.el,
-      fn,
+      fn
     );
   }
 
@@ -38,7 +38,7 @@ class ExpandingFilterSection extends Core {
 
   setLabel(label) {
     this.el.querySelector(
-      '.hig__expanding-filter-section__label',
+      '.hig__expanding-filter-section__label'
     ).innerText = label;
   }
 
@@ -49,7 +49,7 @@ class ExpandingFilterSection extends Core {
     } else {
       console.error(
         `ExpandingFilterSection size "${size}" not found, only these sizes are allowed: `,
-        AvailableSizes,
+        AvailableSizes
       );
     }
   }
@@ -63,7 +63,7 @@ class ExpandingFilterSection extends Core {
   _addCaretIcon() {
     const mountEl = this._findDOMEl(
       '.hig__expanding-filter-section__caret',
-      this.el,
+      this.el
     );
     const icon = new Icon({ nameOrSVG: 'caret' });
     icon.mount(mountEl);

@@ -24,7 +24,7 @@ function TimestampAdapter(props) {
 }
 
 TimestampAdapter.propTypes = {
-  timestamp: PropTypes.string
+  timestamp: PropTypes.oneOfType([PropTypes.string, PropTypes.instanceOf(Date)])
 };
 
 TimestampAdapter.__docgenInfo = {

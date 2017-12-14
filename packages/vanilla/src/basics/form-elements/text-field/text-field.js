@@ -41,11 +41,11 @@ class TextField extends Core {
 
   showClearButton() {
     const buttonElement = this.el.querySelector(
-      '.hig__text-field__clear-button',
+      '.hig__text-field__clear-button'
     );
 
     this._findOrCreateIconComponent(buttonElement, 'clear-small').setNameOrSVG(
-      'clear-small',
+      'clear-small'
     );
     this.el.classList.add('hig__text-field--clear-button-visible');
   }
@@ -65,7 +65,7 @@ class TextField extends Core {
   setPlaceholder(placeholder) {
     this._findDOMEl('.hig__text-field__input', this.el).setAttribute(
       'placeholder',
-      placeholder,
+      placeholder
     );
   }
 
@@ -79,7 +79,7 @@ class TextField extends Core {
   setName(name) {
     this._findDOMEl('.hig__text-field__input', this.el).setAttribute(
       'name',
-      name,
+      name
     );
   }
 
@@ -93,7 +93,7 @@ class TextField extends Core {
       this._findOrAddElement(
         'ICON-SPACER',
         'div',
-        '.hig__text-field__icon-spacer',
+        '.hig__text-field__icon-spacer'
       );
     } else {
       iconEl.classList.remove('hig__text-field__icon--visible');
@@ -115,7 +115,7 @@ class TextField extends Core {
       const instructionsEl = this._findOrAddElement(
         'INSTRUCTIONS',
         'p',
-        '.hig__text-field__instructions',
+        '.hig__text-field__instructions'
       );
       instructionsEl.textContent = instructions;
     } else {
@@ -128,7 +128,7 @@ class TextField extends Core {
     const requiredNoticeEl = this._findOrAddElement(
       'REQUIRED-NOTICE',
       'p',
-      '.hig__text-field__required-notice',
+      '.hig__text-field__required-notice'
     );
     requiredNoticeEl.textContent = requiredLabelText;
   }
@@ -143,7 +143,7 @@ class TextField extends Core {
       'focusout',
       '.hig__text-field__input',
       this.el,
-      fn,
+      fn
     );
   }
 
@@ -152,7 +152,7 @@ class TextField extends Core {
       'change',
       '.hig__text-field__input',
       this.el,
-      fn,
+      fn
     );
   }
 
@@ -161,7 +161,7 @@ class TextField extends Core {
       'focusin',
       '.hig__text-field__input',
       this.el,
-      fn,
+      fn
     );
   }
 
@@ -170,7 +170,7 @@ class TextField extends Core {
       'input',
       '.hig__text-field__input',
       this.el,
-      fn,
+      fn
     );
   }
 
@@ -179,13 +179,13 @@ class TextField extends Core {
       'click',
       '.hig__text-field__clear-button',
       this.el,
-      fn,
+      fn
     );
   }
 
   enable() {
     this._findDOMEl('.hig__text-field__input', this.el).removeAttribute(
-      'disabled',
+      'disabled'
     );
     this.el.classList.remove('hig__text-field--disabled');
   }
@@ -193,7 +193,7 @@ class TextField extends Core {
   disable() {
     this._findDOMEl('.hig__text-field__input', this.el).setAttribute(
       'disabled',
-      'true',
+      'true'
     );
     this.el.classList.add('hig__text-field--disabled');
   }
@@ -224,7 +224,7 @@ class TextField extends Core {
 
   _showPasswordRevealButton() {
     const passwordButton = this.el.querySelector(
-      '.hig__text-field__password-reveal-button',
+      '.hig__text-field__password-reveal-button'
     );
     this._findOrCreateIconComponent(passwordButton).setNameOrSVG('hidden');
     passwordButton.classList.add('hig__text-field__extra--show');
@@ -233,7 +233,7 @@ class TextField extends Core {
 
   _hidePasswordRevealButton() {
     const passwordButton = this.el.querySelector(
-      '.hig__text-field__password-reveal-button',
+      '.hig__text-field__password-reveal-button'
     );
     passwordButton.classList.remove('hig__text-field__extra--show');
 
@@ -249,7 +249,7 @@ class TextField extends Core {
       'click',
       '.hig__text-field__input',
       this.el,
-      fn,
+      fn
     );
   }
 
@@ -258,17 +258,17 @@ class TextField extends Core {
       'mousedown',
       '.hig__text-field__password-reveal-button',
       this.el,
-      fn,
+      fn
     );
   }
 
   _showPasswordHideButton() {
     const passwordButton = this.el.querySelector(
-      '.hig__text-field__password-hide-button',
+      '.hig__text-field__password-hide-button'
     );
 
     this._findOrCreateIconComponent(passwordButton, 'visible').setNameOrSVG(
-      'visible',
+      'visible'
     );
     passwordButton.classList.add('hig__text-field__extra--show');
     this.el.classList.add('hig__text-field--password-button-visible');
@@ -276,7 +276,7 @@ class TextField extends Core {
 
   _hidePasswordHideButton() {
     const passwordButton = this.el.querySelector(
-      '.hig__text-field__password-hide-button',
+      '.hig__text-field__password-hide-button'
     );
     passwordButton.classList.remove('hig__text-field__extra--show');
     const passwordHideButton = this.el.querySelector('.hig__text-field__password-reveal-button');
@@ -291,7 +291,7 @@ class TextField extends Core {
       'mousedown',
       '.hig__text-field__password-hide-button',
       this.el,
-      fn,
+      fn
     );
   }
 
@@ -299,7 +299,7 @@ class TextField extends Core {
     const caretEl = this._findOrAddElement(
       'EXTRA',
       'span',
-      '.hig__text-field__extra.hig__text-field__extra--dropdown-caret',
+      '.hig__text-field__extra.hig__text-field__extra--dropdown-caret'
     );
     this._findOrCreateIconComponent(caretEl).setNameOrSVG('caret');
     caretEl.classList.add('hig__text-field__extra--show');
@@ -307,7 +307,7 @@ class TextField extends Core {
 
   _hideDropdownCaret() {
     this._removeElementIfFound(
-      '.hig__text-field__extra.hig__text-field__extra--dropdown-caret',
+      '.hig__text-field__extra.hig__text-field__extra--dropdown-caret'
     );
   }
 
@@ -327,7 +327,7 @@ TextField._defaults = {
   placeholder: '',
   required: '',
   value: '',
-  instructions: '',
+  instructions: ''
 };
 TextField._partials = {};
 

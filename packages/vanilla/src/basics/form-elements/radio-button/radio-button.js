@@ -15,7 +15,7 @@ const inputButtonMethods = [
   'uncheck',
   'onChange',
   'onFocus',
-  'onHover',
+  'onHover'
 ];
 
 /**
@@ -37,7 +37,7 @@ inputButtonMethods.forEach((fn) => {
     configurable: false,
     enumerable: false,
     writable: true,
-    value: InputButton.prototype[fn],
+    value: InputButton.prototype[fn]
   });
 });
 
@@ -45,7 +45,7 @@ RadioButton._interface = Interface.basics.FormElements.partials.RadioButton;
 RadioButton._defaults = {
   label: '',
   name: '',
-  value: '',
+  value: ''
 };
 RadioButton._partials = {};
 

@@ -1,13 +1,14 @@
 /* eslint-disable react/no-danger */
 import React from "react";
 import PropTypes from "prop-types";
+import { RichText as VanillaRichText } from "hig-vanilla";
 
 function RichText(props) {
   return props.children ? (
-    <div className="hig__rich-text">{props.children}</div>
+    <div className={VanillaRichText.className}>{props.children}</div>
   ) : (
     <div
-      className="hig__rich-text"
+      className={VanillaRichText.className}
       dangerouslySetInnerHTML={props.dangerouslySetInnerHTML}
     />
   );
