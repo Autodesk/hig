@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="../../../../../../lib/hig.css">
+    <script type="text/javascript" src="../../../../../../lib/hig.js"></script>
+</head>
+
+<body>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+    <script>
+        // CREATE GLOBALNAV COMPONENT
+        var GlobalNav = new Hig.GlobalNav();
+        GlobalNav.mount("body");
+
+        // ADD TOP GlobalNav
+        var TopNav = new GlobalNav.partials.TopNav({
+            "logo": "https://www.dexigner.com/images/news/xw/22856.jpg",
+            "logo_link": "#"
+        });
+        GlobalNav.addTopNav(TopNav);
+
+        TopNav.setLogo("../../../tests/bim-logo.png"); // Update logo
+        TopNav.setLogoLink("http://autodesk.com"); // update logo link
+
+        var Notifications1 = new TopNav.partials.Notifications({});
+
+        TopNav.addNotifications(Notifications1);
+
+        const myNotification = new Notifications1.partials.Notification({});
+        Notifications1.addNotification(myNotification);
+
+        const content = document.createElement('div');
+        content.classList.add('hig__rich-text');
+        content.innerHTML = "<h4>A thing happened</h4><p>Boy oh boy</p>";
+        myNotification.setContent(content);
+
+        Notifications1.setLoading();
+
+
+        Notifications1.open()
+    </script>
+
+</body>
+
+</html>
