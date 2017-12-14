@@ -17,7 +17,7 @@ class Account {
 Account._interface = Interface.components.GlobalNav.partials.TopNav.partials.ProjectAccountSwitcher.partials.Account;
 Account._defaults = {
   image: '',
-  label: '',
+  label: ''
 };
 
 export default Account;

@@ -24,7 +24,7 @@ class Grid extends Core {
 Grid._interface = Interface.basics.Grid;
 Grid._defaults = {};
 Grid._partials = {
-  GridItem,
+  GridItem
 };
 
 export default Grid;

@@ -17,12 +17,12 @@ const ANCHOR_POINTS = [
   'bottom-right',
   'left-top',
   'left-center',
-  'left-bottom',
+  'left-bottom'
 ];
 
 const AVAILABLE_TYPES = [
   'tooltip',
-  'default',
+  'default'
 ];
 
 /**
@@ -46,7 +46,7 @@ class Flyout extends Core {
       el: this.el,
       class: 'hig__flyout',
       enteringDuration: 300,
-      exitingDuration: 300,
+      exitingDuration: 300
     });
   }
 
@@ -62,13 +62,13 @@ class Flyout extends Core {
     if (!Flyout.AvailableTypes.includes(type)) {
       console.error(
         `Flyout cannot have type "${type}". Only these inset types are allowed: `,
-        Flyout.AvailableTypes,
+        Flyout.AvailableTypes
       );
       return;
     }
 
     this.el.classList.remove(
-      ...Flyout.AvailableTypes.map(s => `hig__flyout--${s}`),
+      ...Flyout.AvailableTypes.map(s => `hig__flyout--${s}`)
     );
 
     this.el.classList.add(`hig__flyout--${type}`);
@@ -79,7 +79,7 @@ class Flyout extends Core {
       'click',
       window.document.body,
       window.document.body,
-      this._callbackIfClickOutside.bind(this, fn),
+      this._callbackIfClickOutside.bind(this, fn)
     );
   }
 
@@ -95,7 +95,7 @@ class Flyout extends Core {
     if (!Flyout.AvailableAnchorPoints.includes(anchorPoint)) {
       console.error(
         `Flyout cannot have anchorPoint "${anchorPoint}". Only these inset anchorPoints are allowed: `,
-        Flyout.AvailableAnchorPoints,
+        Flyout.AvailableAnchorPoints
       );
       return;
     }
@@ -103,8 +103,8 @@ class Flyout extends Core {
     const container = this._findDOMEl('.hig__flyout__container', this.el);
     container.classList.remove(
       ...Flyout.AvailableAnchorPoints.map(
-        s => `hig__flyout__container--anchor-${s}`,
-      ),
+        s => `hig__flyout__container--anchor-${s}`
+      )
     );
     container.classList.add(`hig__flyout__container--anchor-${anchorPoint}`);
   }
@@ -124,7 +124,7 @@ Flyout._interface = Interface.basics.Flyout;
 Flyout._defaults = {
   title: 'link',
   link: '#',
-  anchorPoint: 'top-right',
+  anchorPoint: 'top-right'
 };
 
 Flyout.AvailableTypes = AVAILABLE_TYPES;

@@ -5,7 +5,7 @@ gemini.suite('tooltip', (parent) => {
     'top-center',
     'right-center',
     'bottom-center',
-    'left-center',
+    'left-center'
   ];
 
   gemini.suite('toolip', (suite) => {

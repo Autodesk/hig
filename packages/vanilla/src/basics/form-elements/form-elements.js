@@ -26,7 +26,7 @@ FormElements._partials = {
   TextField,
   TextArea,
   Range,
-  RadioButton,
+  RadioButton
 };
 
 export default FormElements;

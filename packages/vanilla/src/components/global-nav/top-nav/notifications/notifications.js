@@ -28,7 +28,7 @@ class Notifications extends Core {
     this.flyout.setAnchorPoint('top-left');
     this.shortcut = new Shortcut({
       icon: 'notification',
-      title: this.initialOptions.title,
+      title: this.initialOptions.title
     });
 
     // this.shortcut.mount(this.el);
@@ -38,7 +38,7 @@ class Notifications extends Core {
   setUnreadCount(unreadCount) {
     this._findDOMEl(
       '.hig__notifications__unread-messages-count',
-      this.el,
+      this.el
     ).textContent = unreadCount;
   }
 

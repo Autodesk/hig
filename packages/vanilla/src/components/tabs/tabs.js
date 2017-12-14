@@ -26,7 +26,7 @@ class Tabs extends Core {
 Tabs._interface = Interface.components.Tabs;
 Tabs._defaults = {};
 Tabs._partials = {
-  Tab,
+  Tab
 };
 
 export default Tabs;

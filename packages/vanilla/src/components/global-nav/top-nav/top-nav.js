@@ -33,7 +33,7 @@ class TopNav extends Core {
       'click',
       '.hig__global-nav__top-nav__hamburger',
       this.el,
-      fn,
+      fn
     );
   }
 
@@ -42,21 +42,21 @@ class TopNav extends Core {
       'click',
       '.hig__global-nav__top-nav__logo',
       this.el,
-      fn,
+      fn
     );
   }
 
   setLogo(logo) {
     this._findDOMEl(
       '.hig__global-nav__top-nav__logo img',
-      this.el,
+      this.el
     ).setAttribute('src', logo);
   }
 
   setLogoLink(link) {
     this._findDOMEl('.hig__global-nav__top-nav__logo', this.el).setAttribute(
       'href',
-      link,
+      link
     );
   }
 
@@ -97,7 +97,7 @@ class TopNav extends Core {
       const shortcutContainer = this._findOrAddElement(
         'SHORTCUT',
         'div',
-        '.hig__global-nav__top-nav__item.hig__global-nav__top-nav__spacer-container',
+        '.hig__global-nav__top-nav__item.hig__global-nav__top-nav__spacer-container'
       );
       instance.mount(shortcutContainer, referenceInstance);
     }
@@ -108,7 +108,7 @@ class TopNav extends Core {
       const helpContainer = this._findOrAddElement(
         'SHORTCUT',
         'div',
-        '.hig__global-nav__top-nav__item.hig__global-nav__top-nav__spacer-container',
+        '.hig__global-nav__top-nav__item.hig__global-nav__top-nav__spacer-container'
       );
       instance.mount(helpContainer, referenceInstance);
     }
@@ -117,20 +117,20 @@ class TopNav extends Core {
   _setIcons() {
     const mountHamburgerIcon = this._findDOMEl(
       '.hig__global-nav__top-nav__hamburger__hamburgericon',
-      this.el,
+      this.el
     );
     this._findOrCreateIconComponent(
       mountHamburgerIcon,
-      'hamburger',
+      'hamburger'
     ).setNameOrSVG('hamburger');
 
     const mountCloseIcon = this._findDOMEl(
       '.hig__global-nav__top-nav__hamburger__closeicon',
-      this.el,
+      this.el
     );
     this._findOrCreateIconComponent(
       mountCloseIcon,
-      'close-hamburger',
+      'close-hamburger'
     ).setNameOrSVG('close-hamburger');
   }
 
@@ -147,7 +147,7 @@ class TopNav extends Core {
 TopNav._interface = Interface.components.GlobalNav.partials.TopNav;
 TopNav._defaults = {
   logo: null,
-  logoLink: null,
+  logoLink: null
 };
 
 TopNav._partials = {
@@ -156,7 +156,7 @@ TopNav._partials = {
   Shortcut,
   Help,
   Search,
-  Notifications,
+  Notifications
 };
 
 export default TopNav;

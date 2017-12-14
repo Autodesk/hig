@@ -8,11 +8,11 @@ class TestHelpers {
     // ADD TOPNAV
     const TopNav = new GlobalNav.partials.TopNav({
       logo: 'https://www.dexigner.com/images/news/xw/22856.jpg',
-      logo_link: '#',
+      logo_link: '#'
     });
     GlobalNav.addTopNav(TopNav);
     const MyProfile1 = new TopNav.partials.Profile({
-      image: `${imagesPath}/egg.jpg`, name: 'Jenny Eishingdrelo', email: 'jenny.eishingdrelo@autodesk.com',
+      image: `${imagesPath}/egg.jpg`, name: 'Jenny Eishingdrelo', email: 'jenny.eishingdrelo@autodesk.com'
     });
 
     TopNav.addProfile(MyProfile1);
@@ -20,7 +20,7 @@ class TestHelpers {
     const ProjectAccountSwitcher = new TopNav.partials.ProjectAccountSwitcher({
       activeLabel: 'Global Construction / West Oakwood Medical Center',
       activeImage: `${imagesPath}/project-1.png`,
-      activeType: 'account',
+      activeType: 'account'
     });
 
     TopNav.addProjectAccountSwitcher(ProjectAccountSwitcher);

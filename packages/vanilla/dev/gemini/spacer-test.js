@@ -27,7 +27,7 @@ gemini.suite('spacer', (parent) => {
     'inset-m',
     'inset-l',
     'inset-xl',
-    'inset-xxl',
+    'inset-xxl'
   ];
 
   examples.forEach((example) => {

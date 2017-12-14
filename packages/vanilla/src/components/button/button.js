@@ -1,8 +1,9 @@
 import Interface from 'interface.json';
 import Core from '_core.js';
+import Icon from 'basics/icon/icon';
 import './button.scss';
 import Template from './button.html';
-import Icon from 'basics/icon/icon';
+
 
 const AvailableTypes = ['primary', 'secondary', 'flat'];
 const AvailableSizes = ['small', 'standard', 'large'];
@@ -53,7 +54,7 @@ class Button extends Core {
     } else {
       console.error(
         `Button type "${type}" not found, only these types are allowed: `,
-        AvailableTypes,
+        AvailableTypes
       );
     }
   }
@@ -65,7 +66,7 @@ class Button extends Core {
     } else {
       console.error(
         `Button type "${width}" not found, only these types are allowed: `,
-        AvailableWidths,
+        AvailableWidths
       );
     }
   }
@@ -77,7 +78,7 @@ class Button extends Core {
     } else {
       console.error(
         `Button size "${size}" not found, only these sizes are allowed: `,
-        AvailableSizes,
+        AvailableSizes
       );
     }
   }
@@ -161,7 +162,7 @@ Button._defaults = {
   target: '_self',
   title: 'link',
   type: 'primary',
-  width: 'shrink',
+  width: 'shrink'
 };
 
 Button.AvailableSizes = AvailableSizes;

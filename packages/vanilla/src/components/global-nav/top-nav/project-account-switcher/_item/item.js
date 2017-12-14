@@ -72,7 +72,7 @@ class Item extends Core {
 Item._interface = Interface.components.GlobalNav.partials.TopNav.partials.ProjectAccountSwitcher.partials.Project;
 Item._defaults = {
   label: '',
-  image: '',
+  image: ''
 };
 Item._partials = {};
 

@@ -1,6 +1,6 @@
 gemini.suite('expanding-filter-section', (parent) => {
   parent.setUrl(
-    'src/components/expanding-filter-section/tests/gemini-expanding-filter-section.html',
+    'src/components/expanding-filter-section/tests/gemini-expanding-filter-section.html'
   );
 
   gemini.suite('medium closed', (suite) => {

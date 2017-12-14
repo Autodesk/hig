@@ -5,7 +5,7 @@ import './image.scss';
  *
  */
 const Image = {
-  className: 'hig__image',
+  className: 'hig__image'
 };
 
 export default Image;

@@ -13,7 +13,7 @@ gemini.suite('flyout', (parent) => {
     'bottom-right',
     'left-top',
     'left-center',
-    'left-bottom',
+    'left-bottom'
   ];
 
   gemini.suite('flyout', (suite) => {

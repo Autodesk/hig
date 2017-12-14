@@ -54,7 +54,7 @@ Shortcut._interface =
 Shortcut._defaults = {
   icon: '',
   title: '',
-  link: '#',
+  link: '#'
 };
 
 export default Shortcut;

@@ -64,7 +64,7 @@ TextLink.AvailableTypes = TYPES;
 TextLink._defaults = {
   href: null,
   text: 'Text',
-  type: 'primary',
+  type: 'primary'
 };
 
 export default TextLink;

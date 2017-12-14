@@ -58,7 +58,7 @@ Avatar._interface = Interface.components.Avatar;
 Avatar._defaults = {
   name: '',
   size: 'large',
-  image: '',
+  image: ''
 };
 Avatar._partials = {};
 
