@@ -5,7 +5,6 @@ import RichText from 'basics/rich-text/rich-text';
 import './notification.scss';
 import Template from './notification.html';
 
-
 /**
  * Creates a notification
  *
@@ -27,7 +26,9 @@ class Notification extends Core {
   }
   setContent(notification) {
     this.el.classList.add(RichText.className);
-    this._findDOMEl('.hig__notification__content', this.el).appendChild(notification);
+    this._findDOMEl('.hig__notification__content', this.el).appendChild(
+      notification,
+    );
   }
 
   setCreatedAt(timestampString) {
@@ -35,11 +36,15 @@ class Notification extends Core {
   }
 
   markUnread() {
-    this.el.classList.add('hig__notification__unread');
+    this._findDOMEl('.hig__notification__unread').classList.add(
+      'hig__notification__unread--show',
+    );
   }
 
   markRead() {
-    this.el.classList.remove('hig__notification__unread');
+    this._findDOMEl('.hig__notification__unread').classList.remove(
+      'hig__notification__unread--show',
+    );
   }
 }
 
