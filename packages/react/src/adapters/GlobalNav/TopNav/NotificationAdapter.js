@@ -45,7 +45,7 @@ NotificationAdapter.propTypes = {
 NotificationAdapter.__docgenInfo = {
   props: {
     unread: {
-      description: "{Boolean to show specify whether notificaiton is read"
+      description: "{Boolean} to show specify whether notificaiton is read"
     },
     children: {
       description: "content for notification"

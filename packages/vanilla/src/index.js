@@ -43,9 +43,6 @@ export {
   default as ProgressRing
 } from './components/progress-ring/progress-ring';
 export { default as Modal } from './components/modal/modal';
-// export {
-//   default as Option
-// } from './basics/form-elements/dropdown/option/option';
 export {
   default as Notifications
 } from './components/global-nav/top-nav/notifications/notifications';

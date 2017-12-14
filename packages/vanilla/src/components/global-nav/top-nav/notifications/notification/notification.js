@@ -9,8 +9,8 @@ import Template from './notification.html';
  * Creates a notification
  *
  * @class
- * 
- * 
+ *
+ *
  */
 
 class Notification extends Core {

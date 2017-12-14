@@ -10,8 +10,8 @@ import Notification from './notification/notification';
  * Creates notifications
  *
  * @class
- * 
- * 
+ *
+ *
  */
 
 class Notifications extends Core {

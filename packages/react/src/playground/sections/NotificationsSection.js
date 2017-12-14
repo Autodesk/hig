@@ -3,23 +3,6 @@ import PlaygroundSection from "../PlaygroundSection";
 import { Notifications, Notification, TextLink } from "../../hig-react";
 
 class NotificationsSection extends PureComponent {
-  threeMinutesAgo = () => {
-    const currentDate = new Date();
-    const updatedDate = currentDate.setMinutes(currentDate.getMinutes() - 3);
-    return new Date(updatedDate);
-  };
-
-  threeHoursAgo = () => {
-    const currentDate = new Date();
-    const updatedDate = currentDate.setHours(currentDate.getHours() - 3);
-    return new Date(updatedDate);
-  };
-
-  threeMonthsAgo = () => {
-    const currentDate = new Date();
-    const updatedDate = currentDate.setMonth(currentDate.getMonth() - 3);
-    return new Date(updatedDate);
-  };
   render() {
     return (
       <PlaygroundSection title="Notifications">
