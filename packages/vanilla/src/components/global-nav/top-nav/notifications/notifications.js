@@ -67,6 +67,10 @@ class Notifications extends Core {
     return this.shortcut.onClick(fn);
   }
 
+  onScroll(fn) {
+    return this.flyout.onScroll(fn);
+  }
+
   setLoading() {
     this.list.setLoading();
   }

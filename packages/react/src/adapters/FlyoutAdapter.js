@@ -31,6 +31,11 @@ function FlyoutAdapter(props) {
             handler={props.onClickOutside}
             {...adapterProps}
           />
+          <MapsEventListener
+            listener="onScroll"
+            handler={props.onScroll}
+            {...adapterProps}
+          />
           <MountsAnyChild mounter="addTarget" {...adapterProps}>
             {props.children}
           </MountsAnyChild>
@@ -46,6 +51,7 @@ function FlyoutAdapter(props) {
 FlyoutAdapter.propTypes = {
   anchorPoint: PropTypes.oneOf(VanillaFlyout.AvailableAnchorPoints),
   onClickOutside: PropTypes.func,
+  onScroll: PropTypes.func,
   open: PropTypes.bool,
   content: PropTypes.node,
   children: PropTypes.node,
@@ -54,7 +60,8 @@ FlyoutAdapter.propTypes = {
 
 FlyoutAdapter.defaultProps = {
   anchorPoint: undefined,
-  onClickOutside: undefined,
+  onClickOutside: () => {},
+  onScroll: () => {},
   open: undefined,
   content: undefined,
   children: undefined

@@ -11,6 +11,7 @@ describe("FlyoutAdapter", () => {
           higInstance={mockInstance}
           open
           onClickOutside={() => {}}
+          onScroll={() => {}}
           content={<h1>Flyout content</h1>}
           maxHeight={123}
         >

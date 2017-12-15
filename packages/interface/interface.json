@@ -66,6 +66,11 @@
           "params": "HIG.abstract.EventObject.params",
           "returns": "HIG.abstract.EventObject.returns"
         },
+        "onScroll": {
+          "desc": "Calls the provided callback when the flyout content is scrolled",
+          "params": "HIG.abstract.EventObject.params",
+          "returns": "HIG.abstract.EventObject.returns"
+        },
         "open": {
           "desc": "opens the flyout"
         },
@@ -1488,7 +1493,7 @@
             "addNotifications": {
               "desc": "Pass in an instance of a Notifications partial to mount it to the TopNav",
               "params": [
-                "{Notifications} Notiducations - instance of a Notiducations partial"
+                "{Notifications} Notifications - instance of a Notifications partial"
               ]
             },
             "onHamburgerClick": {
@@ -1624,7 +1629,12 @@
                   "returns": "HIG.abstract.EventObject.returns"
                 },
                 "onClick": {
-                  "desc": "Calls the provided callback when user clicks on the noticatiosn icon in the top nav",
+                  "desc": "Calls the provided callback when user clicks on the notifications icon in the top nav",
+                  "params": "HIG.abstract.EventObject.params",
+                  "returns": "HIG.abstract.EventObject.returns"
+                },
+                "onScroll": {
+                  "desc": "Calls the provided callback when the notifications content is scrolled",
                   "params": "HIG.abstract.EventObject.params",
                   "returns": "HIG.abstract.EventObject.returns"
                 }
