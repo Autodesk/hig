@@ -50,7 +50,10 @@ Notifications.propTypes = {
   onClickOutside: PropTypes.func
 };
 
-Notifications.defaultProps = {};
+Notifications.defaultProps = {
+  onClick: () => {},
+  onClickOutside: () => {}
+};
 
 Notifications.__docgenInfo = {
   props: {

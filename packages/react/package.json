@@ -64,7 +64,6 @@
     "playground": "react-scripts start",
     "start": "react-scripts start",
     "test": "react-scripts test --env=jsdom",
-    "test-ci": "react-scripts test --env=jsdom --coverage --runInBand && npm run lint",
     "type-check": "tsc"
   },
   "dependencies": {

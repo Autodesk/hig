@@ -7,11 +7,7 @@ class NotificationsSection extends PureComponent {
     return (
       <PlaygroundSection title="Notifications">
         <div style={{ width: "100px" }}>
-          <Notifications
-            onClick={() => {}}
-            onClickOutside={() => {}}
-            unreadCount={24}
-          >
+          <Notifications unreadCount={24}>
             <Notification title="This is our first notification" unread>
               <p>This is our first notification</p>
               <div>
@@ -25,6 +21,9 @@ class NotificationsSection extends PureComponent {
               <p>This is our second notification</p>
             </Notification>
           </Notifications>
+        </div>
+        <div style={{ width: "100px" }}>
+          <Notifications />
         </div>
       </PlaygroundSection>
     );
