@@ -84,8 +84,12 @@ jobs:
       - restore_cache:
           key: react-build-{{ .Revision }}
       - run:
+          name: Lint (React)
+          command: npm run lint
+          working_directory: packages/react
+      - run:
           name: Run Tests (React)
-          command: npm run test-ci
+          command: npm run test -- --coverage --runInBand
           working_directory: packages/react
   packages-deploy:
     <<: *defaults
