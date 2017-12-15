@@ -39,6 +39,7 @@ class Flyout extends Core {
     this.setAnchorPoint(this.initialOptions.anchorPoint);
     this._setType(this.initialOptions.type);
     this.flyoutContainer = this._findDOMEl('.hig__flyout__container', this.el);
+    this.flyoutContent = this._findDOMEl('.hig__flyout__panel', this.el);
     this.containerAnimation = new CSSTransition({
       el: this.el,
       class: 'hig__flyout',
@@ -104,6 +105,12 @@ class Flyout extends Core {
       )
     );
     container.classList.add(`hig__flyout__container--anchor-${anchorPoint}`);
+  }
+
+  setMaxHeight(maxHeight) {
+    if (maxHeight) {
+      this.flyoutContent.style.maxHeight = `${maxHeight}px`;
+    }
   }
 
   _callbackIfClickOutside(callback, event) {

@@ -19,6 +19,7 @@ describe("NotificationsAdapter", () => {
           onClick={() => {}}
           onClickOutside={() => {}}
           unreadCount={2}
+          maxHeight={123}
           open
           loading
         >

@@ -18,6 +18,11 @@ function FlyoutAdapter(props) {
             setter="setAnchorPoint"
             {...adapterProps}
           />
+          <MapsPropToMethod
+            value={props.maxHeight}
+            setter="setMaxHeight"
+            {...adapterProps}
+          />
           <MapsPropToMethod value={props.open} {...adapterProps}>
             {(instance, value) => (value ? instance.open() : instance.close())}
           </MapsPropToMethod>
@@ -43,7 +48,8 @@ FlyoutAdapter.propTypes = {
   onClickOutside: PropTypes.func,
   open: PropTypes.bool,
   content: PropTypes.node,
-  children: PropTypes.node
+  children: PropTypes.node,
+  maxHeight: PropTypes.number
 };
 
 FlyoutAdapter.defaultProps = {

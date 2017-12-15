@@ -74,6 +74,12 @@
           "params": [
             "{String - 'top-right', 'top-center'} where the flyout anchors to the target"
           ]
+        },
+        "setMaxHeight": {
+          "desc": "sets the max height of the flyout content",
+          "params": [
+            "{Number} max height in pixels"
+          ]
         }
       },
       "defaults": {
@@ -1478,7 +1484,7 @@
               "params": [
                 "{Boolean} hidden - whether the icon should be hidden"
               ]
-            },   
+            },
             "addNotifications": {
               "desc": "Pass in an instance of a Notifications partial to mount it to the TopNav",
               "params": [
@@ -1606,6 +1612,12 @@
                 "setNotLoading": {
                   "desc": "removes loading indicator"
                 },
+                "setMaxHeight": {
+                  "desc": "sets the max height of the Notifications flyout content",
+                  "params": [
+                    "{Number} max height in pixels"
+                  ]
+                },
                 "onClickOutside": {
                   "desc": "Calls the provided callback when the notifications dropdown is open and the user clicks outside the dropdown",
                   "params": "HIG.abstract.EventObject.params",
@@ -1625,7 +1637,7 @@
                       "params": [
                         "{Node} HTML content for notification"
                       ]
-                    },  
+                    },
                     "setCreatedAt": {
                       "desc": "sets timestamp for notification"
                     },
@@ -1640,10 +1652,10 @@
                       "params": "HIG.abstract.EventObject.params",
                       "returns": "HIG.abstract.EventObject.returns"
                     }
-                  }, 
+                  },
                   "defaults": {}
                 }
-              }, 
+              },
               "defaults": {}
             },
             "Profile": {

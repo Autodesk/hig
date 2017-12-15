@@ -74,6 +74,10 @@ class Notifications extends Core {
   setNotLoading() {
     this.list.setNotLoading();
   }
+
+  setMaxHeight(maxHeight) {
+    this.flyout.setMaxHeight(maxHeight);
+  }
 }
 
 Notifications._interface =

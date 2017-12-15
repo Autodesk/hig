@@ -7,7 +7,8 @@ class Flyout extends Component {
   static propTypes = {
     anchorPoint: PropTypes.oneOf(VanillaFlyout.AvailableAnchorPoints),
     children: PropTypes.node,
-    content: PropTypes.node
+    content: PropTypes.node,
+    maxHeight: PropTypes.number
   };
 
   static __docgenInfo = {
@@ -16,7 +17,8 @@ class Flyout extends Component {
         description: "where the flyout will be anchored relative to target"
       },
       children: { description: "target component to open the flyout" },
-      content: { description: "content for the flyout" }
+      content: { description: "content for the flyout" },
+      maxHeight: { description: "max height of the flyout content, in pixels" }
     }
   };
 
@@ -45,6 +47,7 @@ class Flyout extends Component {
         open={this.state.open}
         onClickOutside={this.closeFlyout}
         content={this.props.content}
+        maxHeight={this.props.maxHeight}
       >
         {target}
       </FlyoutAdapter>

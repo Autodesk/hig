@@ -12,6 +12,7 @@ describe("FlyoutAdapter", () => {
           open
           onClickOutside={() => {}}
           content={<h1>Flyout content</h1>}
+          maxHeight={123}
         >
           <div>Click me to see the flyout</div>
         </FlyoutAdapter>
