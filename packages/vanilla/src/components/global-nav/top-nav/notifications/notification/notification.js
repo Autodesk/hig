@@ -40,6 +40,10 @@ class Notification extends Core {
     this.timestamp.setTimestamp(timestampString);
   }
 
+  onClick(fn) {
+    return this._attachListener('click', this.el, this.el, fn);
+  }
+
   markUnread() {
     this.el.classList.add('hig__notification--unread');
   }

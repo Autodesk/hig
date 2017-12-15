@@ -1595,10 +1595,16 @@
                   ]
                 },
                 "setUnreadCount": {
-                  "desc": "Pass a value for number of notificatiosn that are unread",
+                  "desc": "Pass a value for number of notifications that are unread",
                   "params": [
                     "{Integer}, count for number of unread notifications "
                   ]
+                },
+                "setLoading": {
+                  "desc": "sets the loading indicator"
+                },
+                "setNotLoading": {
+                  "desc": "removes loading indicator"
                 },
                 "onClickOutside": {
                   "desc": "Calls the provided callback when the notifications dropdown is open and the user clicks outside the dropdown",
@@ -1628,6 +1634,11 @@
                     },
                     "markRead": {
                       "desc": "sets notification to read"
+                    },
+                    "onClick": {
+                      "desc": "Calls the provided callback when user clicks on the notication",
+                      "params": "HIG.abstract.EventObject.params",
+                      "returns": "HIG.abstract.EventObject.returns"
                     }
                   }, 
                   "defaults": {}

@@ -44,7 +44,7 @@ export {
 } from "./elements/components/GlobalNav/TopNav/Notifications";
 export {
   default as Notification
-} from "./adapters/GlobalNav/TopNav/NotificationAdapter";
+} from "./elements/components/GlobalNav/TopNav/Notification";
 
 export { default as Option } from "./adapters/FormElements/OptionAdapter";
 export {

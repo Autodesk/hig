@@ -23,7 +23,6 @@ class Loading extends Core {
 
 Loading._interface = {
   methods: {
-    addItem: {}
   }
 };
 Loading._defaults = {};
