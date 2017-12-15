@@ -10,7 +10,6 @@ const translations = {};
 
 i18next.init({
   lng: 'en',
-  debug: true,
   resources: translations
 });
 
