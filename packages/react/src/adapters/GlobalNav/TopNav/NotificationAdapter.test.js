@@ -11,7 +11,6 @@ describe("NotificationAdapter", () => {
         <NotificationAdapter
           higInstance={mockInstance}
           onClick={() => {}}
-          onClickOutside={() => {}}
           unreadCount={2}
           timestamp={timestamp}
           title="foo"

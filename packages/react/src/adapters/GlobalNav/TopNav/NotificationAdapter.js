@@ -5,7 +5,8 @@ import { Notification as VanillaNotification } from "hig-vanilla";
 import HIGAdapter, {
   MountedByHIGParent,
   MapsPropToMethod,
-  MountsAnyChild
+  MountsAnyChild,
+  MapsEventListener
 } from "../../HIGAdapter";
 
 function NotificationAdapter(props) {
@@ -21,6 +22,11 @@ function NotificationAdapter(props) {
           <MapsPropToMethod
             value={props.timestamp}
             setter="setCreatedAt"
+            {...adapterProps}
+          />
+          <MapsEventListener
+            listener="onClick"
+            handler={props.onClick}
             {...adapterProps}
           />
           <MapsPropToMethod value={props.unread} {...adapterProps}>
@@ -42,6 +48,7 @@ function NotificationAdapter(props) {
 }
 
 NotificationAdapter.propTypes = {
+  onClick: PropTypes.func,
   unread: PropTypes.bool,
   children: PropTypes.node,
   timestamp: PropTypes.oneOfType([PropTypes.string, PropTypes.instanceOf(Date)]) // ISO date string
@@ -57,6 +64,10 @@ NotificationAdapter.__docgenInfo = {
     },
     timestamp: {
       description: "timstamp for notification"
+    },
+    onClick: {
+      description:
+        "Calls the provided callback when user clicks on the noticatiosn icon in the top nav"
     }
   }
 };
