@@ -33,6 +33,12 @@ function NotificationsAdapter(props) {
               value ? instance.setLoading() : instance.setNotLoading()}
           </MapsPropToMethod>
 
+          <MapsPropToMethod
+            value={props.title}
+            setter="setTitle"
+            {...adapterProps}
+          />
+
           <MapsPropToMethod value={props.open} {...adapterProps}>
             {(instance, value) => (value ? instance.open() : instance.close())}
           </MapsPropToMethod>

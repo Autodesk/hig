@@ -2,7 +2,7 @@
 import React from "react";
 import "hig-vanilla/lib/hig.css";
 
-import { Button, GlobalNav, breakpoints } from "../hig-react";
+import { Button, GlobalNav, breakpoints, TextLink } from "../hig-react";
 
 import "./index.css";
 
@@ -22,7 +22,6 @@ import GridSection from "./sections/GridSection";
 import IconButtonSection from "./sections/IconButtonSection";
 import IconSection from "./sections/IconSection";
 import ModalSection from "./sections/ModalSection";
-import NotificationsSection from "./sections/NotificationsSection";
 import ImageSection from "./sections/ImageSection";
 import PasswordFieldSection from "./sections/PasswordFieldSection";
 import ProgressBarSection from "./sections/ProgressBarSection";
@@ -186,9 +185,38 @@ class Playground extends React.Component {
         console.log("Logo clicked");
       },
       notifications: {
+        title: "Notifications",
+        onClick: () => {},
+        onClickOutside: () => {},
+        unreadCount: 24,
         notifications: [
-          { id: 1, title: "Something happened" },
-          { id: 2, title: "Something else happened" }
+          {
+            id: 1,
+            unread: true,
+            children: () => (
+              <div>
+                <p>This is our first notification</p>
+                <div>
+                  <TextLink
+                    href="https://github.com/Autodesk/hig"
+                    text="This is a primary text link"
+                  />
+                </div>
+              </div>
+            )
+          },
+          {
+            id: 2,
+            unread: true,
+            children: () => (
+              <div>
+                <p>
+                  <b>test title</b>
+                </p>
+                <p>this is regular text</p>
+              </div>
+            )
+          }
         ]
       }
     };
@@ -236,7 +264,6 @@ class Playground extends React.Component {
         onHamburgerClick={this.toggleSideNav}
       >
         <ExpandingFilterSectionSection />
-        <NotificationsSection />
         <ActionBarSection />
         <ProgressBarSection />
         <ProgressRingSection />

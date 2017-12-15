@@ -20,6 +20,7 @@ class List extends Core {
       '.hig__notifications__loading-container',
       this.el
     );
+    this.titleElement = this._findDOMEl('.hig__notification__title', this.el);
   }
 
   addItem(newInstance, referenceInstance) {
@@ -34,6 +35,10 @@ class List extends Core {
     this.loading.mount(this.loadingContainer);
   }
 
+  setTitle(title) {
+    this.titleElement.innerText = title;
+  }
+
   setNotLoading() {
     this.loading.unmount();
     this.loading = undefined;
@@ -44,7 +49,8 @@ List._interface = {
   methods: {
     addItem: {},
     setLoading: {},
-    setNotLoading: {}
+    setNotLoading: {},
+    setTitle: {}
   }
 };
 List._defaults = {};

@@ -83,6 +83,12 @@ class Notifications extends Core {
     this.list.setNotLoading();
   }
 
+  setTitle(title) {
+    if (this.list) {
+      this.list.setTitle(title);
+    }
+  }
+
   setMaxHeight(maxHeight) {
     this.flyoutMaxHeight = maxHeight;
     this.adjustFlyoutMaxHeight();

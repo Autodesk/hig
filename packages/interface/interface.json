@@ -1622,6 +1622,9 @@
                   "params": [
                     "{Number} max height in pixels"
                   ]
+                },  
+                "setTitle": {
+                  "desc": "sets title for notification list"
                 },
                 "onClickOutside": {
                   "desc": "Calls the provided callback when the notifications dropdown is open and the user clicks outside the dropdown",

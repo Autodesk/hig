@@ -18,9 +18,16 @@ class GlobalNav extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      sideNavOpen: this.props.sideNavOpenByDefault || false
+      sideNavOpen: this.props.sideNavOpenByDefault || false,
+      readIds: []
     };
   }
+
+  onNotificationClick = notificationId => {
+    this.setState({
+      readIds: [...new Set([...this.state.readIds, notificationId])]
+    });
+  };
 
   handleHamburgerClick = event => {
     this.props.onHamburgerClick(event);
@@ -117,9 +124,16 @@ class GlobalNav extends Component {
                 {(this.props.topNav.notifications.notifications || []
                 ).map(notificationProps => (
                   <Notification
+                    unread={!this.state.readIds.includes(notificationProps.id)}
                     key={notificationProps.id}
-                    {...notificationProps}
-                  />
+                    onClick={this.onNotificationClick}
+                    id={notificationProps.id}
+                    title={notificationProps.title}
+                  >
+                    {notificationProps.children instanceof Function
+                      ? notificationProps.children()
+                      : notificationProps.children}
+                  </Notification>
                 ))}
               </Notifications>
             ) : null}

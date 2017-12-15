@@ -33,11 +33,6 @@ function NotificationAdapter(props) {
             {(instance, value) =>
               value ? instance.markUnread() : instance.markRead()}
           </MapsPropToMethod>
-          <MapsPropToMethod
-            value={props.title}
-            setter="setTitle"
-            {...adapterProps}
-          />
           <MountsAnyChild mounter="setContent" {...adapterProps}>
             {props.children}
           </MountsAnyChild>

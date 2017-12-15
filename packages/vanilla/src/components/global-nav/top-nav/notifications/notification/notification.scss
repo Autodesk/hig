@@ -5,17 +5,14 @@
   position: relative;
   border-top: 1px solid color(hig-cool-gray-20);
   padding: spacing(s) spacing(l);
-  &:first-child {
-    border-top: none;
-  }
 }
 
 .hig__notification__title {
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 500;
   line-height: 16px;
-  margin-bottom: spacing(xs);
-
+  padding: spacing(s) 0 0 spacing(l);
+  margin-bottom: spacing(m);
 }
 
 .hig__notification__unread-marker {
