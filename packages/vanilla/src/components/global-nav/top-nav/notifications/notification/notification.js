@@ -23,9 +23,15 @@ class Notification extends Core {
   _componentDidMount() {
     this.timestamp = new Timestamp({});
     this.mountPartialToComment('TIMESTAMP', this.timestamp, this.el);
+    this.title = this._findDOMEl('.hig__notification__title', this.el);
     this.content = this._findDOMEl('.hig__notification__content', this.el);
-    this.content.classList.add(RichText.className);
+    this.content.classList.add(RichText.className, RichText.smallClassName);
   }
+
+  setTitle(title) {
+    this.title.innerText = title;
+  }
+
   setContent(notification) {
     this.content.appendChild(notification);
   }
@@ -35,16 +41,11 @@ class Notification extends Core {
   }
 
   markUnread() {
-    const unreadElement = this._findDOMEl(
-      '.hig__notification__unread',
-      this.el
-    );
-    unreadElement.classList.add('hig__notification__unread--show');
+    this.el.classList.add('hig__notification--unread');
   }
 
   markRead() {
-    const readElement = this._findDOMEl('.hig__notification__unread', this.el);
-    readElement.classList.remove('hig__notification__unread--show');
+    this.el.classList.remove('hig__notification--unread');
   }
 }
 

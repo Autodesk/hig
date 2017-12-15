@@ -2,7 +2,6 @@
 @import '~basics/colors/colors.scss';
 @import '~helpers/css/mixins/typography-base.scss';
 @import '~helpers/css/mixins/spacing.scss';
-
 .hig__typography,
 .hig__rich-text,
 .hig__rich-text p {
@@ -10,26 +9,28 @@
   margin-bottom: spacing(m);
 }
 
+.hig__rich-text--small p {
+  font-size: 12px;
+  line-height: 16px;
+  margin-bottom: spacing(xs);
+}
 
 // BOLD
 .hig__rich-text b,
 .hig__typography__bold {
   @include typography-base;
-
   font-weight: 700;
 }
 
 // DISABLED
 .hig__typography__disabled {
   @include typography-base;
-
   color: color('hig-cool-gray-40');
 }
 
 // CAPTION
 .hig__typography__caption {
   @include typography-base;
-
   font-size: 12px;
   line-height: 16px;
 }
@@ -38,7 +39,6 @@
 .hig__rich-text h1,
 .hig__typography__h1 {
   @include typography-base;
-
   display: block;
   font-weight: 400;
   font-size: 30px;
@@ -49,7 +49,6 @@
 .hig__rich-text h2,
 .hig__typography__h2 {
   @include typography-base;
-
   display: block;
   font-weight: 600;
   font-size: 24px;
@@ -60,7 +59,6 @@
 .hig__rich-text h3,
 .hig__typography__h3 {
   @include typography-base;
-
   display: block;
   font-weight: 600;
   font-size: 18px;
@@ -71,7 +69,6 @@
 .hig__rich-text h4,
 .hig__typography__sub1 {
   @include typography-base;
-
   display: block;
   font-weight: 700;
   font-size: 14px;
@@ -82,7 +79,6 @@
 .hig__rich-text h5,
 .hig__typography__sub2 {
   @include typography-base;
-
   display: block;
   font-weight: 700;
   font-size: 12px;

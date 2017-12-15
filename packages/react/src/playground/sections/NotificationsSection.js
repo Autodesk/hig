@@ -10,9 +10,9 @@ class NotificationsSection extends PureComponent {
           <Notifications
             onClick={() => {}}
             onClickOutside={() => {}}
-            unreadCount={3}
+            unreadCount={24}
           >
-            <Notification unread>
+            <Notification title="This is our first notification" unread>
               <p>This is our first notification</p>
               <div>
                 <TextLink
@@ -21,7 +21,7 @@ class NotificationsSection extends PureComponent {
                 />
               </div>
             </Notification>
-            <Notification unread>
+            <Notification>
               <p>This is our second notification</p>
             </Notification>
           </Notifications>

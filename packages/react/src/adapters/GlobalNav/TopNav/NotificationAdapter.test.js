@@ -14,6 +14,7 @@ describe("NotificationAdapter", () => {
           onClickOutside={() => {}}
           unreadCount={2}
           timestamp={timestamp}
+          title="foo"
           unread
         >
           <h1>This is our first notification</h1>

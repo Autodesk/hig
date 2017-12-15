@@ -1,14 +1,32 @@
 @import '~basics/colors/colors.scss';
 @import '~helpers/css/mixins/base.scss';
-
+@import '~helpers/css/mixins/spacing.scss';
 .hig__notification {
+  position: relative;
   border-top: 1px solid color(hig-cool-gray-20);
-  padding-bottom: 16px;
+  padding: spacing(s) spacing(l);
+  &:first-child {
+    border-top: none;
+  }
 }
 
-.hig__notification__unread {
-  background-color: color(hig-blue-50);
-  border-radius: 13px;
-  padding-top: 16px
+.hig__notification__title {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  margin-bottom: spacing(xs);
+}
 
+.hig__notification__unread-marker {
+  display: none;
+  position: absolute;
+  background-color: color(hig-blue-50);
+  border-radius: 100%;
+  width: 8px;
+  height: 8px;
+  top: 15px;
+  left: spacing(xs);
+  .hig__notification--unread>& {
+    display: block;
+  }
 }

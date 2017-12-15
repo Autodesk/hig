@@ -2,23 +2,17 @@
 @import '~basics/shadows/shadows.scss';
 @import '~helpers/css/mixins/base.scss';
 @import '~helpers/css/layers.scss';
-
 $group-height: 56px;
-
 .hig__global-nav__top-nav {
   @include reset;
-
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-
   position: relative;
   background: color(hig-white);
-  height: $group-height;
-  line-height: $group-height;
+  height: $group-height; // line-height: $group-height;
   z-index: $top-nav-layer;
   padding-left: 7px;
-
   @include shadow("dropshadow");
 }
 
@@ -27,7 +21,6 @@ $group-height: 56px;
   flex-direction: row;
   align-items: stretch;
   position: relative;
-
   &+&:before {
     content: '';
     position: absolute;
@@ -48,15 +41,12 @@ $group-height: 56px;
   width: 30px;
   padding: 0 5px;
   cursor: pointer;
-
   &__closeicon {
     display: none;
   }
-
   .hig__global-nav--open &__hamburgericon {
     display: none;
   }
-
   .hig__global-nav--open &__closeicon {
     display: block;
   }
@@ -72,7 +62,6 @@ $group-height: 56px;
   padding: 0 12px 0 5px;
   line-height: 0;
   cursor: pointer;
-
   & img {
     height: 24px;
     width: auto;
