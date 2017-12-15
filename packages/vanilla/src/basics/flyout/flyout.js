@@ -20,10 +20,7 @@ const ANCHOR_POINTS = [
   'left-bottom'
 ];
 
-const AVAILABLE_TYPES = [
-  'tooltip',
-  'default'
-];
+const AVAILABLE_TYPES = ['tooltip', 'default'];
 
 /**
  * Creates a flyout
@@ -109,13 +106,18 @@ class Flyout extends Core {
     container.classList.add(`hig__flyout__container--anchor-${anchorPoint}`);
   }
 
-
   _callbackIfClickOutside(callback, event) {
-    if (this.flyoutContainer.contains(event.target) || this.flyoutContainer === event.target) {
+    if (
+      this.flyoutContainer.contains(event.target) ||
+      this.flyoutContainer === event.target
+    ) {
       return;
     }
-    if (this.containerAnimation.isEntering() || this.containerAnimation.isEntered()) {
-      callback();
+    if (
+      this.containerAnimation.isEntering() ||
+      this.containerAnimation.isEntered()
+    ) {
+      callback(event);
     }
   }
 }
