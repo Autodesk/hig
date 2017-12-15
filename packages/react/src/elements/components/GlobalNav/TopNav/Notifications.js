@@ -12,12 +12,16 @@ class Notifications extends Component {
   }
 
   onClick = event => {
-    this.props.onClick(event);
+    if (this.props.onClick) {
+      this.props.onClick(event);
+    }
     this.setState({ open: true });
   };
 
   onClickOutside = event => {
-    this.props.onClickOutside(event);
+    if (this.props.onClickOutside) {
+      this.props.onClickOutside(event);
+    }
     this.setState({ open: false });
   };
 

@@ -7,7 +7,8 @@ import './rich-text.scss';
  */
 
 const RichText = {
-  className: 'hig__rich__text'
+  className: 'hig__rich-text',
+  smallClassName: 'hig__rich-text--small'
 };
 
 export default RichText;

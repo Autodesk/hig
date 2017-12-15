@@ -37,11 +37,15 @@
         Notifications1.addNotification(myNotification);
 
         const content = document.createElement('div');
-        content.classList.add('hig__rich-text');
-        content.innerHTML = "<h4>A thing happened</h4><p>Boy oh boy</p>";
+        content.innerHTML =
+            `<p>Lorem or reduce seats on your subscriptions and upcoming payments in your Account</p><p><a href="http://apple.com">Tell me more</a></p>`;
         myNotification.setContent(content);
+        myNotification.setTitle("Sample 2 line notification header. Sample 2 line headlineSample 2 line headline");
+        myNotification.setCreatedAt(Date.now());
+        myNotification.markUnread();
 
         Notifications1.setLoading();
+
 
 
         Notifications1.open()

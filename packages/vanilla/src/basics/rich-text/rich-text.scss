@@ -1,17 +1,22 @@
-.hig__rich-text{
-  ul{
+@import '~helpers/css/mixins/spacing.scss';
+.hig__rich-text {
+  ul {
     padding-left: 20px;
   }
-
   li {
     list-style: none;
   }
-
   li:before {
-    content:"·";
-    font-size:18px;
+    content: "·";
+    font-size: 18px;
     padding-right: 8px;
     vertical-align: middle;
     margin-left: -14px;
   }
+}
+
+.hig__rich-text--small {
+  font-size: 12px;
+  line-height: 16px;
+  margin-bottom: spacing(xs);
 }
