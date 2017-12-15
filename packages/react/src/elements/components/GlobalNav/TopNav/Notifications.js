@@ -55,7 +55,7 @@ Notifications.propTypes = {
 Notifications.defaultProps = {
   onClick: () => {},
   onClickOutside: () => {},
-  onScroll: () => {},
+  onScroll: () => {}
 };
 
 Notifications.__docgenInfo = {
