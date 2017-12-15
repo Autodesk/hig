@@ -23,6 +23,11 @@ function NotificationsAdapter(props) {
             value={props.unreadCount}
             {...adapterProps}
           />
+          <MapsPropToMethod value={props.loading} {...adapterProps}>
+            {(instance, value) =>
+              value ? instance.setLoading() : instance.setNotLoading()}
+          </MapsPropToMethod>
+
           <MapsPropToMethod value={props.open} {...adapterProps}>
             {(instance, value) => (value ? instance.open() : instance.close())}
           </MapsPropToMethod>

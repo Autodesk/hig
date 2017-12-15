@@ -45,6 +45,9 @@ Notification.defaultProps = {};
 
 Notification.__docgenInfo = {
   props: {
+    id: {
+      description: "Id for the notification"
+    },
     unread: {
       description: "{Boolean} to show specify whether notificaiton is read"
     },

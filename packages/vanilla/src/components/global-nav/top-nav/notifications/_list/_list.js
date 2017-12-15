@@ -42,7 +42,9 @@ class List extends Core {
 
 List._interface = {
   methods: {
-    addItem: {}
+    addItem: {},
+    setLoading: {},
+    setNotLoading: {}
   }
 };
 List._defaults = {};

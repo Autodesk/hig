@@ -6,6 +6,12 @@ import NotificationsAdapter from "./NotificationsAdapter";
 
 describe("NotificationsAdapter", () => {
   it("implements the hig interface", () => {
+    window.requestAnimationFrame = jest.fn();
+    window.cancelAnimationFrame = jest.fn();
+    window.performance = {
+      now: jest.fn()
+    };
+
     expect(mockInstance => {
       mount(
         <NotificationsAdapter
@@ -14,11 +20,13 @@ describe("NotificationsAdapter", () => {
           onClickOutside={() => {}}
           unreadCount={2}
           open
+          loading
         >
           <NotificationAdapter />
         </NotificationsAdapter>
       );
       mockInstance.close();
+      mockInstance.setNotLoading();
     }).toImplementHIGInterfaceOf(VanillaNotifications);
   });
 });

@@ -4,8 +4,8 @@ import { Notification as VanillaNotification } from "hig-vanilla";
 import NotificationAdapter from "./NotificationAdapter";
 
 describe("NotificationAdapter", () => {
-  const timestamp = new Date();
   it("implements the hig interface", () => {
+    const timestamp = new Date();
     expect(mockInstance => {
       mount(
         <NotificationAdapter
