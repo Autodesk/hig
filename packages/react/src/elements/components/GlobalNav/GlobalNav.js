@@ -11,6 +11,8 @@ import OptionAdapter from "../../../adapters/GlobalNav/TopNav/OptionAdapter";
 import SideNav from "./SideNav";
 import Tabs from "./SubNav/Tabs";
 import ProjectAccountSwitcher from "./TopNav/ProjectAccountSwitcher";
+import Notifications from "./TopNav/Notifications";
+import Notification from "./TopNav/Notification";
 
 class GlobalNav extends Component {
   constructor(props) {
@@ -39,6 +41,10 @@ class GlobalNav extends Component {
       this.props.topNav.help.groups &&
       this.props.topNav.help.groups.length > 0
     );
+  }
+
+  showNotifications() {
+    return true;
   }
 
   renderedSideNavOpen() {
@@ -102,6 +108,17 @@ class GlobalNav extends Component {
                   </GroupAdapter>
                 ))}
               </HelpAdapter>
+            ) : null}
+            {this.showNotifications() ? (
+              <Notifications {...this.props.topNav.notifications}>
+                {(this.props.topNav.notifications.notifications || []
+                ).map(notificationProps => (
+                  <Notification
+                    key={notificationProps.id}
+                    {...notificationProps}
+                  />
+                ))}
+              </Notifications>
             ) : null}
           </TopNavAdapter>
           <SideNav

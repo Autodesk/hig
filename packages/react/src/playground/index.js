@@ -184,6 +184,12 @@ class Playground extends React.Component {
       logo,
       onLogoClick() {
         console.log("Logo clicked");
+      },
+      notifications: {
+        notifications: [
+          { id: 1, title: "Something happened" },
+          { id: 2, title: "Something else happened" }
+        ]
       }
     };
 
