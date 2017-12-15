@@ -44,7 +44,10 @@ class GlobalNav extends Component {
   }
 
   showNotifications() {
-    return true;
+    return (
+      this.props.topNav.notifications &&
+      this.props.topNav.notifications.notifications
+    );
   }
 
   renderedSideNavOpen() {
