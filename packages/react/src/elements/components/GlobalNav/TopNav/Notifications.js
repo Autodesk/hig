@@ -13,7 +13,10 @@ class Notifications extends Component {
 
   onClick = event => {
     if (this.props.onClick) {
-      this.props.onClick(event);
+      this.props.onClick({
+        event,
+        seenNotificationIds: this._findSeenNotificationIds()
+      });
     }
     this.setState({ open: true });
   };
@@ -24,6 +27,10 @@ class Notifications extends Component {
     }
     this.setState({ open: false });
   };
+
+  _findSeenNotificationIds() {
+    return React.Children.map(this.props.children, child => child.props.id);
+  }
 
   render() {
     return (

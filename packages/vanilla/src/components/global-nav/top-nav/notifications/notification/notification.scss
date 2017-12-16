@@ -24,7 +24,14 @@
   height: 8px;
   top: 15px;
   left: spacing(xs);
-  .hig__notification--unread>& {
+  .hig__notification--unread > & {
     display: block;
+  }
+}
+
+.hig__notification--unread {
+  
+  &:hover{
+    background-color: transparentize($color: color(hig-blue-10), $amount: 0.5)
   }
 }

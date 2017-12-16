@@ -56,6 +56,36 @@ const defaultSearchOptions = [
   }
 ];
 
+const sampleNotifications = [
+  {
+    id: 1,
+    unread: true,
+    children: () => (
+      <div>
+        <p>This is our first notification</p>
+        <div>
+          <TextLink
+            href="https://github.com/Autodesk/hig"
+            text="This is a primary text link"
+          />
+        </div>
+      </div>
+    )
+  },
+  {
+    id: 2,
+    unread: true,
+    children: () => (
+      <div>
+        <p>
+          <b>test title</b>
+        </p>
+        <p>this is regular text</p>
+      </div>
+    )
+  }
+];
+
 class Playground extends React.Component {
   constructor(props) {
     super(props);
@@ -64,10 +94,23 @@ class Playground extends React.Component {
       isHelpOpen: false,
       isSideNavOpen: true,
       searchOptions: [],
-      searchValue: ""
+      searchValue: "",
+      seenNotifcationIds: [],
+      unreadCount: sampleNotifications.length
     };
   }
+  componentWillReceiveProps(props) {
+    const notificationProps = props.topNavProps.notifications;
+    if (notificationProps && notificationProps.length > 0) {
+      const newNotifications = notificationProps.map(
+        notification => notification.id
+      );
 
+      this.state.unreadCount
+
+
+    }
+  }
   onSearchInput = input => {
     this.setState({ searchValue: input.value });
     this.filterSearchInput(input.value);
@@ -81,6 +124,8 @@ class Playground extends React.Component {
   toggleSideNav = () => {
     this.setState({ isSideNavOpen: !this.state.isSideNavOpen });
   };
+
+  setUnreadCount = () => {};
 
   navigate = id => {
     console.log("Go to", id);
@@ -186,38 +231,12 @@ class Playground extends React.Component {
       },
       notifications: {
         title: "Notifications",
-        onClick: () => {},
+        onClick: eventInfo => {
+          this.setState({ seenNotifcationIds: eventInfo.seenNotifcationIds });
+        },
         onClickOutside: () => {},
-        unreadCount: 24,
-        notifications: [
-          {
-            id: 1,
-            unread: true,
-            children: () => (
-              <div>
-                <p>This is our first notification</p>
-                <div>
-                  <TextLink
-                    href="https://github.com/Autodesk/hig"
-                    text="This is a primary text link"
-                  />
-                </div>
-              </div>
-            )
-          },
-          {
-            id: 2,
-            unread: true,
-            children: () => (
-              <div>
-                <p>
-                  <b>test title</b>
-                </p>
-                <p>this is regular text</p>
-              </div>
-            )
-          }
-        ]
+        unreadCount: this.state.unreadCount,
+        notifications: sampleNotifications
       }
     };
 
