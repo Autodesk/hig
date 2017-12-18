@@ -95,22 +95,12 @@ class Playground extends React.Component {
       isSideNavOpen: true,
       searchOptions: [],
       searchValue: "",
-      seenNotifcationIds: [],
+      seenNotificationIds: [],
+      notifications: sampleNotifications,
       unreadCount: sampleNotifications.length
     };
   }
-  componentWillReceiveProps(props) {
-    const notificationProps = props.topNavProps.notifications;
-    if (notificationProps && notificationProps.length > 0) {
-      const newNotifications = notificationProps.map(
-        notification => notification.id
-      );
 
-      this.state.unreadCount
-
-
-    }
-  }
   onSearchInput = input => {
     this.setState({ searchValue: input.value });
     this.filterSearchInput(input.value);
@@ -125,7 +115,46 @@ class Playground extends React.Component {
     this.setState({ isSideNavOpen: !this.state.isSideNavOpen });
   };
 
-  setUnreadCount = () => {};
+  onNotificationsClick = eventInfo => {
+    this.setState({ seenNotificationIds: eventInfo.seenNotificationIds });
+  };
+
+  setUnreadCount = () => {
+    const notificationProps = this.state.notifications;
+    const seenNotifications = this.state.seenNotificationIds;
+
+    if (notificationProps && notificationProps.length > 0) {
+      const newNotifications = notificationProps.map(
+        notification => notification.id
+      );
+
+      const unseenNotifications = newNotifications.filter(
+        notification => seenNotifications.indexOf(notification) === -1
+      );
+
+      this.setState({ unreadCount: unseenNotifications.length });
+    }
+  };
+
+  addNotification = () => {
+    const newNotification = {
+      id: 3,
+      unread: true,
+      children: () => (
+        <div>
+          <p>
+            <b>test title</b>
+          </p>
+          <p>this is regular text</p>
+        </div>
+      )
+    };
+
+    this.setState({
+      notifications: [...this.state.notifications, newNotification],
+      unreadCount: this.state.unreadCount + 1
+    });
+  };
 
   navigate = id => {
     console.log("Go to", id);
@@ -231,12 +260,10 @@ class Playground extends React.Component {
       },
       notifications: {
         title: "Notifications",
-        onClick: eventInfo => {
-          this.setState({ seenNotifcationIds: eventInfo.seenNotifcationIds });
-        },
-        onClickOutside: () => {},
+        onClick: this.onNotificationsClick,
+        onClickOutside: this.setUnreadCount,
         unreadCount: this.state.unreadCount,
-        notifications: sampleNotifications
+        notifications: this.state.notifications
       }
     };
 
@@ -282,6 +309,11 @@ class Playground extends React.Component {
         isSideNavOpen={this.state.isSideNavOpen}
         onHamburgerClick={this.toggleSideNav}
       >
+        <Button
+          size="standard"
+          title="Add notification"
+          onClick={this.addNotification}
+        />
         <ExpandingFilterSectionSection />
         <ActionBarSection />
         <ProgressBarSection />

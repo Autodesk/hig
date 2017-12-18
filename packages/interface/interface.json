@@ -1611,6 +1611,19 @@
                     "{Integer}, count for number of unread notifications "
                   ]
                 },
+                "showNotificationsCount": {
+                  "desc": "show notifications count",
+                  "params": [
+                    "{Bool}, flag to show notifications count "
+                  ]
+
+                },
+                "hideNotificationsCount": {
+                  "desc": "hide notifications count",
+                  "params": [
+                    "{Bool}, flag to hide notifications count "
+                  ]
+                },
                 "setLoading": {
                   "desc": "sets the loading indicator"
                 },

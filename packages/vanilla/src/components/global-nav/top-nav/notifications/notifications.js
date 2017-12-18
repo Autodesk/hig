@@ -37,8 +37,12 @@ class Notifications extends Core {
     this.flyout.addTarget(this.shortcut);
     this.flyout.addSlot(this.list);
     this.flyout.setAnchorPoint('top-right');
+<<<<<<< 6fa2b84313f4338b1c89404a84e6b2c9a90eed55
 
     window.addEventListener('resize', this.adjustFlyoutMaxHeight.bind(this));
+=======
+    // this.showNotificationsCount();
+>>>>>>> allow for unread notifications count
   }
 
   setUnreadCount(unreadCount) {
@@ -102,6 +106,24 @@ class Notifications extends Core {
 
     const heightToSet = this.flyoutMaxHeight ? Math.min(this.flyoutMaxHeight, calculatedMaxHeight) : calculatedMaxHeight;
     this.flyout.setMaxHeight(heightToSet);
+  }
+
+  hideNotificationsCount() {
+    const unreadCount = this._findDOMEl(
+      '.hig__notifications__unread-messages-count'
+    );
+    unreadCount.classList.add(
+      'hig__notifications__unread-messages-count--hide'
+    );
+  }
+
+  showNotificationsCount() {
+    const unreadCount = this._findDOMEl(
+      '.hig__notifications__unread-messages-count'
+    );
+    unreadCount.classList.remove(
+      'hig__notifications__unread-messages-count--hide'
+    );
   }
 }
 

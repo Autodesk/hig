@@ -11,25 +11,44 @@ class Notifications extends Component {
     };
   }
 
+  componentDidMount = () => {
+    const showNotificationsCount = this.props.children.length > 0;
+    this.setState({ showNotificationsCount });
+  };
+
+  componentWillReceiveProps = nextProps => {
+    if (nextProps.children.length > this.props.children.length) {
+      this.props.onClick({
+        event: {},
+        seenNotificationIds: this._findSeenNotificationIds(nextProps.children)
+      });
+      this.setState({ showNotificationsCount: true });
+    } else {
+      this.setState({ showNotificationsCount: false });
+    }
+  };
+
   onClick = event => {
     if (this.props.onClick) {
       this.props.onClick({
         event,
-        seenNotificationIds: this._findSeenNotificationIds()
+        seenNotificationIds: this._findSeenNotificationIds(this.props.children)
       });
     }
-    this.setState({ open: true });
+    this.setState({ open: true, showNotificationsCount: true });
   };
 
   onClickOutside = event => {
     if (this.props.onClickOutside) {
-      this.props.onClickOutside(event);
+      this.props.onClickOutside({
+        event
+      });
     }
-    this.setState({ open: false });
+    this.setState({ open: false, showNotificationsCount: false });
   };
 
-  _findSeenNotificationIds() {
-    return React.Children.map(this.props.children, child => child.props.id);
+  _findSeenNotificationIds(props) {
+    return React.Children.map(props, child => child.props.id);
   }
 
   render() {
@@ -41,6 +60,7 @@ class Notifications extends Component {
         open={this.state.open}
         unreadCount={this.props.unreadCount}
         showUnreadBadge={false}
+        showNotificationsCount={this.state.showNotificationsCount}
       >
         {this.props.children}
       </NotificationsAdapter>
