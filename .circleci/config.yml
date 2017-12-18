@@ -89,7 +89,7 @@ jobs:
           working_directory: packages/react
       - run:
           name: Run Tests (React)
-          command: npm run test -- --coverage --runInBand
+          command: npm run test -- --coverage --runInBand --colors
           working_directory: packages/react
   packages-deploy:
     <<: *defaults

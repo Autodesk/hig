@@ -1,3 +1,4 @@
+/* globals window, document */
 import Interface from 'interface.json';
 import Core from '_core.js';
 import Shortcut from 'components/global-nav/top-nav/shortcut/shortcut';
@@ -36,6 +37,8 @@ class Notifications extends Core {
     this.flyout.addTarget(this.shortcut);
     this.flyout.addSlot(this.list);
     this.flyout.setAnchorPoint('top-right');
+
+    window.addEventListener('resize', this.adjustFlyoutMaxHeight.bind(this));
   }
 
   setUnreadCount(unreadCount) {
@@ -47,6 +50,7 @@ class Notifications extends Core {
 
   open() {
     this.flyout.open();
+    this.adjustFlyoutMaxHeight();
   }
 
   close() {
@@ -67,12 +71,31 @@ class Notifications extends Core {
     return this.shortcut.onClick(fn);
   }
 
+  onScroll(fn) {
+    return this.flyout.onScroll(fn);
+  }
+
   setLoading() {
     this.list.setLoading();
   }
 
   setNotLoading() {
     this.list.setNotLoading();
+  }
+
+  setMaxHeight(maxHeight) {
+    this.flyoutMaxHeight = maxHeight;
+    this.adjustFlyoutMaxHeight();
+  }
+
+  adjustFlyoutMaxHeight() {
+    const bufferFromBottom = 80;
+    const { bottom } = this.flyout.el.getBoundingClientRect();
+
+    const calculatedMaxHeight = document.body.clientHeight - bufferFromBottom - bottom;
+
+    const heightToSet = this.flyoutMaxHeight ? Math.min(this.flyoutMaxHeight, calculatedMaxHeight) : calculatedMaxHeight;
+    this.flyout.setMaxHeight(heightToSet);
   }
 }
 

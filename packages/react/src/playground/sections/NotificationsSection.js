@@ -2,21 +2,26 @@ import React, { PureComponent } from "react";
 import PlaygroundSection from "../PlaygroundSection";
 import { Notifications, Notification, TextLink } from "../../hig-react";
 
-const notificationProps = {
-  "1": {
-    unread: true,
-    children: () => (
+const sampleNotification = {
+  unread: true,
+  children: () => (
+    <div>
+      <p>This is a sample notification</p>
       <div>
-        <p>This is our first notification</p>
-        <div>
-          <TextLink
-            href="https://github.com/Autodesk/hig"
-            text="This is a primary text link"
-          />
-        </div>
+        <TextLink
+          href="https://github.com/Autodesk/hig"
+          text="This is a primary text link"
+        />
       </div>
-    )
-  }
+    </div>
+  )
+};
+
+const notificationProps = {
+  "1": sampleNotification,
+  "2": sampleNotification,
+  "3": sampleNotification,
+  "4": sampleNotification
 };
 
 class NotificationsSection extends PureComponent {
@@ -41,6 +46,7 @@ class NotificationsSection extends PureComponent {
             onClick={() => {}}
             onClickOutside={() => {}}
             unreadCount={24}
+            maxHeight={225}
           >
             {Object.keys(notificationProps).map(key => (
               <Notification

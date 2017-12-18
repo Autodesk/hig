@@ -1,18 +1,15 @@
 @import '~basics/colors/colors.scss';
 
-.hig__notifications__list {
-  width: 320px;
-}
-
 .hig__notifications__list-content {
   &:empty {
-    min-height: 240px;
+    max-height: 193px;
+    height: 193px;
 
     &:before {
       content: url("./bell.svg");
       display: flex;
       justify-content: center;
-      padding: 48px 0 24px 0;
+      padding: 24px 0;
     }
 
     &:after {

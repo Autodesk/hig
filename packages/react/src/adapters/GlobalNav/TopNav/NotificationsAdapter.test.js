@@ -18,7 +18,9 @@ describe("NotificationsAdapter", () => {
           higInstance={mockInstance}
           onClick={() => {}}
           onClickOutside={() => {}}
+          onScroll={() => {}}
           unreadCount={2}
+          maxHeight={123}
           open
           loading
         >

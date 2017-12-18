@@ -23,6 +23,11 @@ function NotificationsAdapter(props) {
             value={props.unreadCount}
             {...adapterProps}
           />
+          <MapsPropToMethod
+            setter="setMaxHeight"
+            value={props.maxHeight}
+            {...adapterProps}
+          />
           <MapsPropToMethod value={props.loading} {...adapterProps}>
             {(instance, value) =>
               value ? instance.setLoading() : instance.setNotLoading()}
@@ -41,6 +46,11 @@ function NotificationsAdapter(props) {
             handler={props.onClick}
             {...adapterProps}
           />
+          <MapsEventListener
+            listener="onScroll"
+            handler={props.onScroll}
+            {...adapterProps}
+          />
 
           <MountsHIGChildList {...adapterProps}>
             {props.children}
@@ -57,7 +67,8 @@ NotificationsAdapter.propTypes = {
   showUnreadBadge: PropTypes.bool,
   unreadCount: PropTypes.number,
   onClick: PropTypes.func,
-  onClickOutside: PropTypes.func
+  onClickOutside: PropTypes.func,
+  onScroll: PropTypes.func
 };
 
 NotificationsAdapter.defaultProps = {};

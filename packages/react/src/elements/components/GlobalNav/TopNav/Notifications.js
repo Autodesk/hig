@@ -44,15 +44,18 @@ class Notifications extends Component {
 Notifications.propTypes = {
   open: PropTypes.bool,
   loading: PropTypes.bool,
+  maxHeight: PropTypes.number,
   showUnreadBadge: PropTypes.bool,
   unreadCount: PropTypes.number,
   onClick: PropTypes.func,
-  onClickOutside: PropTypes.func
+  onClickOutside: PropTypes.func,
+  onScroll: PropTypes.func
 };
 
 Notifications.defaultProps = {
   onClick: () => {},
-  onClickOutside: () => {}
+  onClickOutside: () => {},
+  onScroll: () => {}
 };
 
 Notifications.__docgenInfo = {
@@ -64,7 +67,7 @@ Notifications.__docgenInfo = {
       description: "Pass in an instance of a Notification"
     },
     setUnreadCount: {
-      description: "Pass a value for number of notificatiosn that are unread"
+      description: "Pass a value for number of notifications that are unread"
     },
     onClickOutside: {
       description:
@@ -72,7 +75,11 @@ Notifications.__docgenInfo = {
     },
     onClick: {
       description:
-        "Calls the provided callback when user clicks on the noticatiosn icon in the top nav"
+        "Calls the provided callback when user clicks on the notifications icon in the top nav"
+    },
+    onScroll: {
+      description:
+        "Calls the provided callback when the notifications content is scrolled"
     },
     showUnreadBadge: {
       description: "Boolean on whether to show number of notifications or not"
@@ -82,6 +89,9 @@ Notifications.__docgenInfo = {
     },
     loading: {
       description: "show the loading indicator"
+    },
+    maxHeight: {
+      description: "the max height of the flyout content, in pixels"
     }
   }
 };
