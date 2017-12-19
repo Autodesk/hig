@@ -3,16 +3,25 @@
 @import '~helpers/css/mixins/spacing.scss';
 .hig__notification {
   position: relative;
-  border-top: 1px solid color(hig-cool-gray-20);
+  border-bottom: 1px solid color(hig-cool-gray-20);
   padding: spacing(s) spacing(l);
+
+  &:last-child {
+    border-bottom: none;
+  }
 }
 
 .hig__notification__title {
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
-  padding: spacing(s) 0 0 spacing(l);
-  margin-bottom: spacing(m);
+  padding: spacing(s) 0 spacing(m) spacing(l);
+
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: color(hig-white);
+  border-bottom: 1px solid color(hig-cool-gray-20);
 }
 
 .hig__notification__unread-marker {
@@ -30,7 +39,7 @@
 }
 
 .hig__notification--unread {
-  
+
   &:hover{
     background-color: transparentize($color: color(hig-blue-10), $amount: 0.5)
   }

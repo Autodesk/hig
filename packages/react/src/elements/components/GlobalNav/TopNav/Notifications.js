@@ -74,13 +74,15 @@ Notifications.propTypes = {
   unreadCount: PropTypes.number,
   onClick: PropTypes.func,
   onClickOutside: PropTypes.func,
-  onScroll: PropTypes.func
+  onScroll: PropTypes.func,
+  title: PropTypes.string
 };
 
 Notifications.defaultProps = {
   onClick: () => {},
   onClickOutside: () => {},
-  onScroll: () => {}
+  onScroll: () => {},
+  title: "Notifications"
 };
 
 Notifications.__docgenInfo = {
@@ -117,6 +119,9 @@ Notifications.__docgenInfo = {
     },
     maxHeight: {
       description: "the max height of the flyout content, in pixels"
+    },
+    title: {
+      description: "The title text that renders above the notifications list"
     }
   }
 };
