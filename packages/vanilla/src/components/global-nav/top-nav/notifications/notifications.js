@@ -38,6 +38,7 @@ class Notifications extends Core {
     this.flyout.addSlot(this.list);
     this.flyout.setAnchorPoint('top-right');
     window.addEventListener('resize', this._adjustFlyoutMaxHeight.bind(this));
+    window.addEventListener('scroll', this._adjustFlyoutMaxHeight.bind(this));
 
     this.unreadCount = this._findDOMEl(
       '.hig__notifications__unread-messages-count',
