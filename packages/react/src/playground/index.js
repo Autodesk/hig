@@ -40,6 +40,7 @@ import TextLinkSection from "./sections/TextLinkSection";
 import TimestampSection from "./sections/TimestampSection";
 import TooltipSection from "./sections/TooltipSection";
 import TypographySection from "./sections/TypographySection";
+import NotificationsSection from "./sections/NotificationsSection";
 
 const defaultSearchOptions = [
   {
@@ -314,6 +315,7 @@ class Playground extends React.Component {
           title="Add notification"
           onClick={this.addNotification}
         />
+        <NotificationsSection />
         <ExpandingFilterSectionSection />
         <ActionBarSection />
         <ProgressBarSection />

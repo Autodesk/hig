@@ -37,12 +37,8 @@ class Notifications extends Core {
     this.flyout.addTarget(this.shortcut);
     this.flyout.addSlot(this.list);
     this.flyout.setAnchorPoint('top-right');
-<<<<<<< 6fa2b84313f4338b1c89404a84e6b2c9a90eed55
 
-    window.addEventListener('resize', this.adjustFlyoutMaxHeight.bind(this));
-=======
-    // this.showNotificationsCount();
->>>>>>> allow for unread notifications count
+    window.addEventListener('resize', this._adjustFlyoutMaxHeight.bind(this));
   }
 
   setUnreadCount(unreadCount) {
@@ -54,7 +50,7 @@ class Notifications extends Core {
 
   open() {
     this.flyout.open();
-    this.adjustFlyoutMaxHeight();
+    this._adjustFlyoutMaxHeight();
   }
 
   close() {
@@ -95,10 +91,10 @@ class Notifications extends Core {
 
   setMaxHeight(maxHeight) {
     this.flyoutMaxHeight = maxHeight;
-    this.adjustFlyoutMaxHeight();
+    this._adjustFlyoutMaxHeight();
   }
 
-  adjustFlyoutMaxHeight() {
+  _adjustFlyoutMaxHeight() {
     const bufferFromBottom = 80;
     const { bottom } = this.flyout.el.getBoundingClientRect();
 

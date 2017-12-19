@@ -34,12 +34,12 @@ function NotificationsAdapter(props) {
           </MapsPropToMethod>
 
           <MapsPropToMethod
-            value={props.hideNotificationsCount}
+            value={props.showNotificationsCount}
             {...adapterProps}
           >
             {(instance, value) =>
               value
-                ? instance.showeNotificationsCount()
+                ? instance.showNotificationsCount()
                 : instance.hideNotificationsCount()}
           </MapsPropToMethod>
 

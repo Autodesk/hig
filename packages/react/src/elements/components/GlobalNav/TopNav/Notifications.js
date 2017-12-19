@@ -12,12 +12,13 @@ class Notifications extends Component {
   }
 
   componentDidMount = () => {
-    const showNotificationsCount = this.props.children.length > 0;
+    const showNotificationsCount =
+      this.props.children && this.props.children.length > 0;
     this.setState({ showNotificationsCount });
   };
 
   componentWillReceiveProps = nextProps => {
-    if (nextProps.children.length > this.props.children.length) {
+    if (nextProps && nextProps.children.length > this.props.children.length) {
       this.props.onClick({
         event: {},
         seenNotificationIds: this._findSeenNotificationIds(nextProps.children)
