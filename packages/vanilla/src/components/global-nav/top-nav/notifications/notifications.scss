@@ -31,4 +31,9 @@
   background-color: color(hig-blue-50);
   color: color(hig-white);
   font-size: 11px;
+  display: block;
+
+  &--hide{
+    display: none;
+  }
 }

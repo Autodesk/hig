@@ -23,13 +23,8 @@ class Notification extends Core {
   _componentDidMount() {
     this.timestamp = new Timestamp({});
     this.mountPartialToComment('TIMESTAMP', this.timestamp, this.el);
-    this.title = this._findDOMEl('.hig__notification__title', this.el);
     this.content = this._findDOMEl('.hig__notification__content', this.el);
     this.content.classList.add(RichText.className, RichText.smallClassName);
-  }
-
-  setTitle(title) {
-    this.title.innerText = title;
   }
 
   setContent(notification) {

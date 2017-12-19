@@ -38,7 +38,7 @@ Notification.propTypes = {
     PropTypes.instanceOf(Date)
   ]), // ISO date string
   onClick: PropTypes.func,
-  id: PropTypes.string
+  id: PropTypes.number
 };
 
 Notification.defaultProps = {};

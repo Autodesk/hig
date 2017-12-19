@@ -37,8 +37,12 @@ class Notifications extends Core {
     this.flyout.addTarget(this.shortcut);
     this.flyout.addSlot(this.list);
     this.flyout.setAnchorPoint('top-right');
+    window.addEventListener('resize', this._adjustFlyoutMaxHeight.bind(this));
 
-    window.addEventListener('resize', this.adjustFlyoutMaxHeight.bind(this));
+    this.unreadCount = this._findDOMEl(
+      '.hig__notifications__unread-messages-count',
+      this.el
+    );
   }
 
   setUnreadCount(unreadCount) {
@@ -50,7 +54,7 @@ class Notifications extends Core {
 
   open() {
     this.flyout.open();
-    this.adjustFlyoutMaxHeight();
+    this._adjustFlyoutMaxHeight();
   }
 
   close() {
@@ -83,19 +87,40 @@ class Notifications extends Core {
     this.list.setNotLoading();
   }
 
-  setMaxHeight(maxHeight) {
-    this.flyoutMaxHeight = maxHeight;
-    this.adjustFlyoutMaxHeight();
+  setTitle(title) {
+    if (this.list) {
+      this.list.setTitle(title);
+    }
   }
 
-  adjustFlyoutMaxHeight() {
+  setMaxHeight(maxHeight) {
+    this.flyoutMaxHeight = maxHeight;
+    this._adjustFlyoutMaxHeight();
+  }
+
+  _adjustFlyoutMaxHeight() {
     const bufferFromBottom = 80;
     const { bottom } = this.flyout.el.getBoundingClientRect();
 
-    const calculatedMaxHeight = document.body.clientHeight - bufferFromBottom - bottom;
+    const calculatedMaxHeight =
+      document.body.clientHeight - bufferFromBottom - bottom;
 
-    const heightToSet = this.flyoutMaxHeight ? Math.min(this.flyoutMaxHeight, calculatedMaxHeight) : calculatedMaxHeight;
+    const heightToSet = this.flyoutMaxHeight
+      ? Math.min(this.flyoutMaxHeight, calculatedMaxHeight)
+      : calculatedMaxHeight;
     this.flyout.setMaxHeight(heightToSet);
+  }
+
+  hideNotificationsCount() {
+    this.unreadCount.classList.add(
+      'hig__notifications__unread-messages-count--hide'
+    );
+  }
+
+  showNotificationsCount() {
+    this.unreadCount.classList.remove(
+      'hig__notifications__unread-messages-count--hide'
+    );
   }
 }
 

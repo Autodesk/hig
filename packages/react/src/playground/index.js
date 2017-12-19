@@ -2,7 +2,7 @@
 import React from "react";
 import "hig-vanilla/lib/hig.css";
 
-import { Button, GlobalNav, breakpoints } from "../hig-react";
+import { Button, GlobalNav, breakpoints, TextLink } from "../hig-react";
 
 import "./index.css";
 
@@ -22,7 +22,6 @@ import GridSection from "./sections/GridSection";
 import IconButtonSection from "./sections/IconButtonSection";
 import IconSection from "./sections/IconSection";
 import ModalSection from "./sections/ModalSection";
-import NotificationsSection from "./sections/NotificationsSection";
 import ImageSection from "./sections/ImageSection";
 import PasswordFieldSection from "./sections/PasswordFieldSection";
 import ProgressBarSection from "./sections/ProgressBarSection";
@@ -41,6 +40,7 @@ import TextLinkSection from "./sections/TextLinkSection";
 import TimestampSection from "./sections/TimestampSection";
 import TooltipSection from "./sections/TooltipSection";
 import TypographySection from "./sections/TypographySection";
+import NotificationsSection from "./sections/NotificationsSection";
 
 const defaultSearchOptions = [
   {
@@ -57,6 +57,36 @@ const defaultSearchOptions = [
   }
 ];
 
+const sampleNotifications = [
+  {
+    id: 1,
+    unread: true,
+    children: () => (
+      <div>
+        <p>This is our first notification</p>
+        <div>
+          <TextLink
+            href="https://github.com/Autodesk/hig"
+            text="This is a primary text link"
+          />
+        </div>
+      </div>
+    )
+  },
+  {
+    id: 2,
+    unread: true,
+    children: () => (
+      <div>
+        <p>
+          <b>test title</b>
+        </p>
+        <p>this is regular text</p>
+      </div>
+    )
+  }
+];
+
 class Playground extends React.Component {
   constructor(props) {
     super(props);
@@ -65,7 +95,10 @@ class Playground extends React.Component {
       isHelpOpen: false,
       isSideNavOpen: true,
       searchOptions: [],
-      searchValue: ""
+      searchValue: "",
+      seenNotificationIds: [],
+      notifications: sampleNotifications,
+      unreadCount: sampleNotifications.length
     };
   }
 
@@ -79,8 +112,49 @@ class Playground extends React.Component {
     this.filterSearchInput(selection.value);
   };
 
+  onNotificationsClick = eventInfo => {
+    this.setState({ seenNotificationIds: eventInfo.seenNotificationIds });
+  };
+
+  setUnreadCount = () => {
+    const notificationProps = this.state.notifications;
+    const seenNotifications = this.state.seenNotificationIds;
+
+    if (notificationProps && notificationProps.length > 0) {
+      const newNotifications = notificationProps.map(
+        notification => notification.id
+      );
+
+      const unseenNotifications = newNotifications.filter(
+        notification => seenNotifications.indexOf(notification) === -1
+      );
+
+      this.setState({ unreadCount: unseenNotifications.length });
+    }
+  };
+
   toggleSideNav = () => {
     this.setState({ isSideNavOpen: !this.state.isSideNavOpen });
+  };
+
+  addNotification = () => {
+    const newNotification = {
+      id: 3,
+      unread: true,
+      children: () => (
+        <div>
+          <p>
+            <b>test title</b>
+          </p>
+          <p>this is regular text</p>
+        </div>
+      )
+    };
+
+    this.setState({
+      notifications: [...this.state.notifications, newNotification],
+      unreadCount: this.state.unreadCount + 1
+    });
   };
 
   navigate = id => {
@@ -186,10 +260,11 @@ class Playground extends React.Component {
         console.log("Logo clicked");
       },
       notifications: {
-        notifications: [
-          { id: 1, title: "Something happened" },
-          { id: 2, title: "Something else happened" }
-        ]
+        title: "Notifications",
+        onClick: this.onNotificationsClick,
+        onClickOutside: this.setUnreadCount,
+        unreadCount: this.state.unreadCount,
+        notifications: this.state.notifications
       }
     };
 
@@ -235,8 +310,13 @@ class Playground extends React.Component {
         isSideNavOpen={this.state.isSideNavOpen}
         onHamburgerClick={this.toggleSideNav}
       >
-        <ExpandingFilterSectionSection />
+        <Button
+          size="standard"
+          title="Add notification"
+          onClick={this.addNotification}
+        />
         <NotificationsSection />
+        <ExpandingFilterSectionSection />
         <ActionBarSection />
         <ProgressBarSection />
         <ProgressRingSection />

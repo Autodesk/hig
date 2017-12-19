@@ -18,10 +18,10 @@ const sampleNotification = {
 };
 
 const notificationProps = {
-  "1": sampleNotification,
-  "2": sampleNotification,
-  "3": sampleNotification,
-  "4": sampleNotification
+  1: sampleNotification,
+  2: sampleNotification,
+  3: sampleNotification,
+  4: sampleNotification
 };
 
 class NotificationsSection extends PureComponent {
