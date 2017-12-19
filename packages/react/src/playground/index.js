@@ -112,10 +112,6 @@ class Playground extends React.Component {
     this.filterSearchInput(selection.value);
   };
 
-  toggleSideNav = () => {
-    this.setState({ isSideNavOpen: !this.state.isSideNavOpen });
-  };
-
   onNotificationsClick = eventInfo => {
     this.setState({ seenNotificationIds: eventInfo.seenNotificationIds });
   };
@@ -135,6 +131,10 @@ class Playground extends React.Component {
 
       this.setState({ unreadCount: unseenNotifications.length });
     }
+  };
+
+  toggleSideNav = () => {
+    this.setState({ isSideNavOpen: !this.state.isSideNavOpen });
   };
 
   addNotification = () => {
