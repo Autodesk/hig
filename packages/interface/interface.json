@@ -1678,11 +1678,6 @@
                       "desc": "Calls the provided callback when user clicks on the notication",
                       "params": "HIG.abstract.EventObject.params",
                       "returns": "HIG.abstract.EventObject.returns"
-                    },
-                    "onDismissed": {
-                      "desc": "Calls the provided callback when user closes a featured notification",
-                      "params": "HIG.abstract.EventObject.params",
-                      "returns": "HIG.abstract.EventObject.returns"
                     }
                   },
                   "defaults": {}

@@ -29,12 +29,6 @@ function NotificationAdapter(props) {
             handler={props.onClick}
             {...adapterProps}
           />
-
-          <MapsEventListener
-            listener="onDismissed"
-            handler={props.onDismissed}
-            {...adapterProps}
-          />
           <MapsPropToMethod value={props.unread} {...adapterProps}>
             {(instance, value) =>
               value ? instance.markUnread() : instance.markRead()}
@@ -75,10 +69,6 @@ NotificationAdapter.__docgenInfo = {
     onClick: {
       description:
         "Calls the provided callback when user clicks on the noticatiosn icon in the top nav"
-    },
-    onDismissed: {
-      description:
-        "Calls the provided callback when user closes a featured notification"
     }
   }
 };

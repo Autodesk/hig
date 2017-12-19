@@ -38,10 +38,6 @@ class Notification extends Core {
 
   setFeatured() {
     this.el.classList.add('hig__notification--featured');
-
-    /*
-      on hover, dismiss icon
-    */
   }
 
   removeFeatured() {
@@ -50,10 +46,6 @@ class Notification extends Core {
 
   onClick(fn) {
     return this._attachListener('click', this.el, this.el, fn);
-  }
-
-  onDismissed(fn) {
-    // return this._attachListener('click', , this.el, fn);
   }
 
   markUnread() {

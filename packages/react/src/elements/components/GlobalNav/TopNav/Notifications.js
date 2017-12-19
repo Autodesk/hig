@@ -79,7 +79,7 @@ class Notifications extends Component {
             <IconButtonAdapter
               title="Dismiss"
               icon="close-notification"
-              onClick={() => console.log("TODO")}
+              onClick={this.props.featuredNotification.onDismissed}
               type="flat"
             />
           </Notification>

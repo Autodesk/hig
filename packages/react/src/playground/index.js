@@ -87,20 +87,6 @@ const sampleNotifications = [
   }
 ];
 
-const featuredNotification = {
-  id: 3,
-  unread: true,
-  children: () => (
-    <div>
-      <p>
-        <b>Featured Notification</b>
-      </p>
-      <p>this is regular text</p>
-    </div>
-  ),
-  onDismissed: () => console.log("I was dismissed")
-};
-
 class Playground extends React.Component {
   constructor(props) {
     super(props);
@@ -112,7 +98,8 @@ class Playground extends React.Component {
       searchValue: "",
       seenNotificationIds: [],
       notifications: sampleNotifications,
-      unreadCount: sampleNotifications.length
+      unreadCount: sampleNotifications.length,
+      featuredNotification: this.featuredNotification()
     };
   }
 
@@ -169,6 +156,24 @@ class Playground extends React.Component {
       notifications: [...this.state.notifications, newNotification],
       unreadCount: this.state.unreadCount + 1
     });
+  };
+
+  featuredNotification = () => ({
+    id: 3,
+    unread: true,
+    children: () => (
+      <div>
+        <p>
+          <b>Featured Notification</b>
+        </p>
+        <p>this is regular text</p>
+      </div>
+    ),
+    onDismissed: this.featuredNotificationDismissed
+  });
+
+  featuredNotificationDismissed = _event => {
+    this.setState({ featuredNotification: null });
   };
 
   navigate = id => {
@@ -279,7 +284,7 @@ class Playground extends React.Component {
         onClickOutside: this.setUnreadCount,
         unreadCount: this.state.unreadCount,
         notifications: this.state.notifications,
-        featuredNotification
+        featuredNotification: this.state.featuredNotification
       }
     };
 
