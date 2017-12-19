@@ -87,6 +87,20 @@ const sampleNotifications = [
   }
 ];
 
+const featuredNotification = {
+  id: 3,
+  unread: true,
+  children: () => (
+    <div>
+      <p>
+        <b>Featured Notification</b>
+      </p>
+      <p>this is regular text</p>
+    </div>
+  ),
+  onDismissed: () => console.log("I was dismissed")
+};
+
 class Playground extends React.Component {
   constructor(props) {
     super(props);
@@ -264,7 +278,8 @@ class Playground extends React.Component {
         onClick: this.onNotificationsClick,
         onClickOutside: this.setUnreadCount,
         unreadCount: this.state.unreadCount,
-        notifications: this.state.notifications
+        notifications: this.state.notifications,
+        featuredNotification
       }
     };
 

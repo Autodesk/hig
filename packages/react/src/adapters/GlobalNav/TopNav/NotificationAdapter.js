@@ -29,9 +29,19 @@ function NotificationAdapter(props) {
             handler={props.onClick}
             {...adapterProps}
           />
+
+          <MapsEventListener
+            listener="onDismissed"
+            handler={props.onDismissed}
+            {...adapterProps}
+          />
           <MapsPropToMethod value={props.unread} {...adapterProps}>
             {(instance, value) =>
               value ? instance.markUnread() : instance.markRead()}
+          </MapsPropToMethod>
+          <MapsPropToMethod value={props.featured} {...adapterProps}>
+            {(instance, value) =>
+              value ? instance.setFeatured() : instance.removeFeatured()}
           </MapsPropToMethod>
           <MountsAnyChild mounter="setContent" {...adapterProps}>
             {props.children}
@@ -44,7 +54,9 @@ function NotificationAdapter(props) {
 
 NotificationAdapter.propTypes = {
   onClick: PropTypes.func,
+  onDismissed: PropTypes.func,
   unread: PropTypes.bool,
+  featured: PropTypes.bool,
   children: PropTypes.node,
   timestamp: PropTypes.oneOfType([PropTypes.string, PropTypes.instanceOf(Date)]) // ISO date string
 };
@@ -63,6 +75,10 @@ NotificationAdapter.__docgenInfo = {
     onClick: {
       description:
         "Calls the provided callback when user clicks on the noticatiosn icon in the top nav"
+    },
+    onDismissed: {
+      description:
+        "Calls the provided callback when user closes a featured notification"
     }
   }
 };

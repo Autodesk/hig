@@ -11,6 +11,22 @@
   }
 }
 
+.hig__notification--featured {
+  background-color: color(hig-turquoise-20);
+
+  &:hover {
+    .hig__icon-button { display: block; }
+  }
+
+  .hig__icon-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    display: none;
+  }
+}
+
 .hig__notification__title {
   font-size: 14px;
   font-weight: 500;

@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
+import IconButtonAdapter from "../../../../adapters/IconButtonAdapter";
 import NotificationsAdapter from "../../../../adapters/GlobalNav/TopNav/NotificationsAdapter";
+import Notification from "./Notification";
 
 class Notifications extends Component {
   constructor(props) {
@@ -64,6 +66,24 @@ class Notifications extends Component {
         showUnreadBadge={false}
         showNotificationsCount={this._showNotificationsCount()}
       >
+        {this.props.featuredNotification ? (
+          <Notification
+            featured
+            onClick={() => {}}
+            {...this.props.featuredNotification}
+            unread={false}
+          >
+            {this.props.featuredNotification.children instanceof Function
+              ? this.props.featuredNotification.children()
+              : this.props.featuredNotification.children}
+            <IconButtonAdapter
+              title="Dismiss"
+              icon="close-notification"
+              onClick={() => console.log("TODO")}
+              type="flat"
+            />
+          </Notification>
+        ) : null}
         {this.props.children}
       </NotificationsAdapter>
     );

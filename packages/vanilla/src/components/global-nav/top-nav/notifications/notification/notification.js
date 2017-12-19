@@ -2,6 +2,7 @@ import Interface from 'interface.json';
 import Core from '_core.js';
 import Timestamp from 'basics/timestamp/timestamp';
 import RichText from 'basics/rich-text/rich-text';
+import IconButton from 'components/icon-button/icon-button';
 import './notification.scss';
 import Template from './notification.html';
 
@@ -35,8 +36,24 @@ class Notification extends Core {
     this.timestamp.setTimestamp(timestampString);
   }
 
+  setFeatured() {
+    this.el.classList.add('hig__notification--featured');
+
+    /*
+      on hover, dismiss icon
+    */
+  }
+
+  removeFeatured() {
+    this.el.classList.remove('hig__notification--featured');
+  }
+
   onClick(fn) {
     return this._attachListener('click', this.el, this.el, fn);
+  }
+
+  onDismissed(fn) {
+    // return this._attachListener('click', , this.el, fn);
   }
 
   markUnread() {

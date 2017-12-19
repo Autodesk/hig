@@ -43,7 +43,6 @@ function NotificationsAdapter(props) {
             setter="setTitle"
             {...adapterProps}
           />
-
           <MapsPropToMethod value={props.open} {...adapterProps}>
             {(instance, value) => (value ? instance.open() : instance.close())}
           </MapsPropToMethod>
