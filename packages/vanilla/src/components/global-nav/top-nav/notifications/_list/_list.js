@@ -21,6 +21,7 @@ class List extends Core {
       this.el
     );
     this.titleElement = this._findDOMEl('.hig__notification__title', this.el);
+    this.listContent = this._findDOMEl('.hig__notifications__list-content', this.el);
   }
 
   addItem(newInstance, referenceInstance) {
@@ -43,6 +44,12 @@ class List extends Core {
     this.loading.unmount();
     this.loading = undefined;
   }
+
+  setContentMaxHeight(maxHeight) {
+    if (maxHeight) {
+      this.listContent.style.maxHeight = `${maxHeight}px`;
+    }
+  }
 }
 
 List._interface = {
@@ -50,7 +57,8 @@ List._interface = {
     addItem: {},
     setLoading: {},
     setNotLoading: {},
-    setTitle: {}
+    setTitle: {},
+    setContentMaxHeight: {}
   }
 };
 List._defaults = {};

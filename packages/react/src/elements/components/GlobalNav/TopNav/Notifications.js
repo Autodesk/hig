@@ -18,7 +18,11 @@ class Notifications extends Component {
   };
 
   componentWillReceiveProps = nextProps => {
-    if (nextProps && nextProps.children.length > this.props.children.length) {
+    if (
+      nextProps.children &&
+      this.props.children &&
+      nextProps.children.length > this.props.children.length
+    ) {
       this.setState({ showNotificationsCount: true });
     }
   };
@@ -69,18 +73,19 @@ class Notifications extends Component {
 Notifications.propTypes = {
   open: PropTypes.bool,
   loading: PropTypes.bool,
-  maxHeight: PropTypes.number,
   showUnreadBadge: PropTypes.bool,
   unreadCount: PropTypes.number,
   onClick: PropTypes.func,
   onClickOutside: PropTypes.func,
-  onScroll: PropTypes.func
+  onScroll: PropTypes.func,
+  title: PropTypes.string
 };
 
 Notifications.defaultProps = {
   onClick: () => {},
   onClickOutside: () => {},
-  onScroll: () => {}
+  onScroll: () => {},
+  title: "Notifications"
 };
 
 Notifications.__docgenInfo = {
@@ -117,6 +122,9 @@ Notifications.__docgenInfo = {
     },
     maxHeight: {
       description: "the max height of the flyout content, in pixels"
+    },
+    title: {
+      description: "The title text that renders above the notifications list"
     }
   }
 };

@@ -1630,12 +1630,6 @@
                 "setNotLoading": {
                   "desc": "removes loading indicator"
                 },
-                "setMaxHeight": {
-                  "desc": "sets the max height of the Notifications flyout content",
-                  "params": [
-                    "{Number} max height in pixels"
-                  ]
-                },  
                 "setTitle": {
                   "desc": "sets title for notification list"
                 },
