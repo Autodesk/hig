@@ -18,7 +18,11 @@ class Notifications extends Component {
   };
 
   componentWillReceiveProps = nextProps => {
-    if (nextProps && nextProps.children.length > this.props.children.length) {
+    if (
+      nextProps.children &&
+      this.props.children &&
+      nextProps.children.length > this.props.children.length
+    ) {
       this.setState({ showNotificationsCount: true });
     }
   };
