@@ -93,11 +93,6 @@ class Notifications extends Core {
     }
   }
 
-  setMaxHeight(maxHeight) {
-    this.flyoutMaxHeight = maxHeight;
-    this._adjustFlyoutMaxHeight();
-  }
-
   _adjustFlyoutMaxHeight() {
     const bufferFromBottom = 80;
     const { bottom } = this.flyout.el.getBoundingClientRect();
@@ -105,10 +100,7 @@ class Notifications extends Core {
     const calculatedMaxHeight =
       document.body.clientHeight - bufferFromBottom - bottom;
 
-    const heightToSet = this.flyoutMaxHeight
-      ? Math.min(this.flyoutMaxHeight, calculatedMaxHeight)
-      : calculatedMaxHeight;
-    this.flyout.setMaxHeight(heightToSet);
+    this.flyout.setMaxHeight(calculatedMaxHeight);
   }
 
   hideNotificationsCount() {

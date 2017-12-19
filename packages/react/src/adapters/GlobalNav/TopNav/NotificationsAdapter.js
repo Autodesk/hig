@@ -23,11 +23,6 @@ function NotificationsAdapter(props) {
             value={props.unreadCount}
             {...adapterProps}
           />
-          <MapsPropToMethod
-            setter="setMaxHeight"
-            value={props.maxHeight}
-            {...adapterProps}
-          />
           <MapsPropToMethod value={props.loading} {...adapterProps}>
             {(instance, value) =>
               value ? instance.setLoading() : instance.setNotLoading()}

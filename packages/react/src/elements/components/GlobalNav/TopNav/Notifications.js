@@ -69,7 +69,6 @@ class Notifications extends Component {
 Notifications.propTypes = {
   open: PropTypes.bool,
   loading: PropTypes.bool,
-  maxHeight: PropTypes.number,
   showUnreadBadge: PropTypes.bool,
   unreadCount: PropTypes.number,
   onClick: PropTypes.func,
