@@ -21,12 +21,16 @@ describe("NotificationsAdapter", () => {
           onScroll={() => {}}
           unreadCount={2}
           maxHeight={123}
-          open
+          showNotificationsCount
           loading
+          open
+          title="notifications"
         >
           <NotificationAdapter />
         </NotificationsAdapter>
       );
+
+      mockInstance.hideNotificationsCount();
       mockInstance.close();
       mockInstance.setNotLoading();
     }).toImplementHIGInterfaceOf(VanillaNotifications);

@@ -37,8 +37,12 @@ class Notifications extends Core {
     this.flyout.addTarget(this.shortcut);
     this.flyout.addSlot(this.list);
     this.flyout.setAnchorPoint('top-right');
-
     window.addEventListener('resize', this._adjustFlyoutMaxHeight.bind(this));
+
+    this.unreadCount = this._findDOMEl(
+      '.hig__notifications__unread-messages-count',
+      this.el
+    );
   }
 
   setUnreadCount(unreadCount) {
@@ -98,26 +102,23 @@ class Notifications extends Core {
     const bufferFromBottom = 80;
     const { bottom } = this.flyout.el.getBoundingClientRect();
 
-    const calculatedMaxHeight = document.body.clientHeight - bufferFromBottom - bottom;
+    const calculatedMaxHeight =
+      document.body.clientHeight - bufferFromBottom - bottom;
 
-    const heightToSet = this.flyoutMaxHeight ? Math.min(this.flyoutMaxHeight, calculatedMaxHeight) : calculatedMaxHeight;
+    const heightToSet = this.flyoutMaxHeight
+      ? Math.min(this.flyoutMaxHeight, calculatedMaxHeight)
+      : calculatedMaxHeight;
     this.flyout.setMaxHeight(heightToSet);
   }
 
   hideNotificationsCount() {
-    const unreadCount = this._findDOMEl(
-      '.hig__notifications__unread-messages-count'
-    );
-    unreadCount.classList.add(
+    this.unreadCount.classList.add(
       'hig__notifications__unread-messages-count--hide'
     );
   }
 
   showNotificationsCount() {
-    const unreadCount = this._findDOMEl(
-      '.hig__notifications__unread-messages-count'
-    );
-    unreadCount.classList.remove(
+    this.unreadCount.classList.remove(
       'hig__notifications__unread-messages-count--hide'
     );
   }

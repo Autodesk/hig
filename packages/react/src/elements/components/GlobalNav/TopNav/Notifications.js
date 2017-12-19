@@ -23,9 +23,6 @@ class Notifications extends Component {
         event: {},
         seenNotificationIds: this._findSeenNotificationIds(nextProps.children)
       });
-      this.setState({ showNotificationsCount: true });
-    } else {
-      this.setState({ showNotificationsCount: false });
     }
   };
 
@@ -52,6 +49,9 @@ class Notifications extends Component {
     return React.Children.map(props, child => child.props.id);
   }
 
+  _showNotificationsCount = () =>
+    this.state.showNotificationsCount && this.props.unreadCount > 0;
+
   render() {
     return (
       <NotificationsAdapter
@@ -61,7 +61,7 @@ class Notifications extends Component {
         open={this.state.open}
         unreadCount={this.props.unreadCount}
         showUnreadBadge={false}
-        showNotificationsCount={this.state.showNotificationsCount}
+        showNotificationsCount={this._showNotificationsCount}
       >
         {this.props.children}
       </NotificationsAdapter>
