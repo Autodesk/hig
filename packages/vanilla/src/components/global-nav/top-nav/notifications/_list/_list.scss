@@ -1,6 +1,8 @@
 @import '~basics/colors/colors.scss';
 
 .hig__notifications__list-content {
+  overflow-y: auto;
+
   &:empty {
     max-height: 193px;
     height: 193px;

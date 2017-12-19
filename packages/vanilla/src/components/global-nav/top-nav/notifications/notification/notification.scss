@@ -15,12 +15,7 @@
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
-  padding: spacing(s) 0 spacing(m) spacing(l);
-
-  position: sticky;
-  top: 0;
-  z-index: 2;
-  background: color(hig-white);
+  padding: spacing(s) spacing(l) spacing(m);
   border-bottom: 1px solid color(hig-cool-gray-20);
 }
 

@@ -96,12 +96,14 @@ class Notifications extends Core {
 
   _adjustFlyoutMaxHeight() {
     const bufferFromBottom = 80;
-    const { bottom } = this.flyout.el.getBoundingClientRect();
+    const { bottom } = this.list.titleElement.getBoundingClientRect();
 
+    // Distance between the bottom of the notifications title and 80px from the bottom of the screen
     const calculatedMaxHeight =
       document.body.clientHeight - bufferFromBottom - bottom;
 
-    this.flyout.setMaxHeight(calculatedMaxHeight);
+    this.flyout.flyoutContent.style.maxHeight = 'inherit'; // Override flyout's default max height
+    this.list.setContentMaxHeight(calculatedMaxHeight);
   }
 
   hideNotificationsCount() {
