@@ -19,10 +19,7 @@ class Notifications extends Component {
 
   componentWillReceiveProps = nextProps => {
     if (nextProps && nextProps.children.length > this.props.children.length) {
-      this.props.onClick({
-        event: {},
-        seenNotificationIds: this._findSeenNotificationIds(nextProps.children)
-      });
+      this.setState({ showNotificationsCount: true });
     }
   };
 
@@ -61,7 +58,7 @@ class Notifications extends Component {
         open={this.state.open}
         unreadCount={this.props.unreadCount}
         showUnreadBadge={false}
-        showNotificationsCount={this._showNotificationsCount}
+        showNotificationsCount={this._showNotificationsCount()}
       >
         {this.props.children}
       </NotificationsAdapter>
