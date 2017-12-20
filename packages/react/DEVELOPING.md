@@ -1,13 +1,13 @@
 # Developing
 
 ```
-npm install
-npm run playground
+yarn
+yarn playground
 ```
 
 To make a production build, run:
 ```
-npm run build
+yarn build
 ```
 
 ## Incorporating local `hig-vanilla` changes
@@ -16,11 +16,11 @@ npm run build
 
 ```
 cd ../..  # hig root directory
-npm run bootstrap
-cd packages/vanilla && npm run watch  # Let webpack compile hig-vanilla changes locally
+yarn bootstrap
+cd packages/vanilla && yarn watch  # Let webpack compile hig-vanilla changes locally
 
 # In another tab...
-cd ../react && npm run playground
+cd ../react && yarn playground
 ```
 
 ## Developing for HIG-React
@@ -28,7 +28,7 @@ cd ../react && npm run playground
 HIG React components can be divided into two groups. Adapters and Components.
 
 ### Adapters
-Consider the Button. It has a few properties (e.g. title, size) and a few event handlers (e.g. onClick). It does not have complext state. In order to use the vanilla Button in React, we create an adapter for it. See `ButtonAdapter.js`.
+Consider the Button. It has a few properties (e.g. title, size) and a few event handlers (e.g. onClick). It does not have complex state. In order to use the vanilla Button in React, we create an adapter for it. See `ButtonAdapter.js`.
 
 Adapters are a special type of React component that allow a vanilla component to be used in a React app. They map props in the React world to methods on a component in the vanilla world. Adapters do the following work:
 - Map react props to methods on a vanilla component
@@ -64,6 +64,6 @@ Core committers follow these steps when deploying a new version of the library:
 - Commit the changes to `package.json` and `package-lock.json` made by the previous step.
 - Tag the commit at the new version `git tag <new version>` (E.g. `git tag v0.28.8`)
 - Push this change up to origin
-- Create a pull request of `development` againt `master`.
+- Create a pull request of `development` against `master`.
 - Once the `development` build passes on CircleCI, merge the PR.
 - CircleCI will run a build again on the `master` branch. If all the checks pass it will publish the new version to NPM.

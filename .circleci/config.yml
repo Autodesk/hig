@@ -13,7 +13,7 @@ jobs:
           key: dependencies-{{ checksum "package.json" }}-{{ checksum "packages/react/package.json" }}-{{ checksum "packages/vanilla/package.json" }}
       - run:
           name: Lerna bootstrap
-          command: npm install && npm run bootstrap
+          command: yarn && yarn bootstrap
       - save_cache:
           key: dependencies-{{ checksum "package.json" }}-{{ checksum "packages/react/package.json" }}-{{ checksum "packages/vanilla/package.json" }}
           paths:
@@ -28,7 +28,7 @@ jobs:
           key: dependencies-{{ checksum "package.json" }}-{{ checksum "packages/react/package.json" }}-{{ checksum "packages/vanilla/package.json" }}
       - run:
           name: Build (Vanilla)
-          command: npm run lib
+          command: yarn lib
           working_directory: packages/vanilla
       - save_cache:
           key: vanilla-build-{{ .Revision }}
@@ -44,7 +44,7 @@ jobs:
           key: vanilla-build-{{ .Revision }}
       - run:
           name: Build (React)
-          command: npm run lib
+          command: yarn lib
           working_directory:  packages/react
       - save_cache:
           key: react-build-{{ .Revision }}
@@ -60,7 +60,7 @@ jobs:
           key: vanilla-build-{{ .Revision }}
       - run:
           name: Lint (Vanilla)
-          command: npm run lint
+          command: yarn lint
           working_directory: packages/vanilla
       - run:
           name: Start Server (Vanilla)
@@ -69,7 +69,7 @@ jobs:
           working_directory: packages/vanilla
       - run:
           name: Run Tests (Vanilla)
-          command: npm run gemini-ci
+          command: yarn gemini-ci
           working_directory: packages/vanilla
       - store_artifacts:
           path: packages/vanilla/gemini-report
@@ -85,11 +85,11 @@ jobs:
           key: react-build-{{ .Revision }}
       - run:
           name: Lint (React)
-          command: npm run lint
+          command: yarn lint
           working_directory: packages/react
       - run:
           name: Run Tests (React)
-          command: npm run test -- --coverage --runInBand --colors
+          command: yarn test --coverage --runInBand --colors
           working_directory: packages/react
   packages-deploy:
     <<: *defaults

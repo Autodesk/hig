@@ -3,9 +3,11 @@ The HIG Web implementation consists of `html`, `css` and `js`. You can opt to on
 
 ## Install
 
+We use [Yarn](https://yarnpkg.com) for development.
+
 ```bash
-npm install
-npm run lib # compiles library into lib/
+yarn
+yarn lib # compiles library into lib/
 ```
 
 ## Consuming Basic Example: Button

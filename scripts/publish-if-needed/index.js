@@ -33,7 +33,7 @@ function getHighestVersion(version1, version2) {
 // Exit the script with a success message
 function exitPublish() {
   info("Publishing");
-  exec(`(cd ${packagePath} && npm publish)`);
+  exec(`(cd ${packagePath} && yarn publish)`);
   info("Finished");
   return process.exit(0);
 }
