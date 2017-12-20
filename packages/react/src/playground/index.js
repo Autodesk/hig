@@ -114,25 +114,25 @@ class Playground extends React.Component {
   };
 
   onNotificationsClick = eventInfo => {
-    this.setState({ seenNotificationIds: eventInfo.seenNotificationIds });
+    console.log("on notifications click", eventInfo);
   };
 
-  setUnreadCount = () => {
-    const notificationProps = this.state.notifications;
-    const seenNotifications = this.state.seenNotificationIds;
+  // setUnreadCount = () => {
+  //   const notificationProps = this.state.notifications;
+  //   const seenNotifications = this.state.seenNotificationIds;
 
-    if (notificationProps && notificationProps.length > 0) {
-      const newNotifications = notificationProps.map(
-        notification => notification.id
-      );
+  //   if (notificationProps && notificationProps.length > 0) {
+  //     const newNotifications = notificationProps.map(
+  //       notification => notification.id
+  //     );
 
-      const unseenNotifications = newNotifications.filter(
-        notification => seenNotifications.indexOf(notification) === -1
-      );
+  //     const unseenNotifications = newNotifications.filter(
+  //       notification => seenNotifications.indexOf(notification) === -1
+  //     );
 
-      this.setState({ unreadCount: unseenNotifications.length });
-    }
-  };
+  //     this.setState({ unreadCount: unseenNotifications.length });
+  //   }
+  // };
 
   toggleSideNav = () => {
     this.setState({ isSideNavOpen: !this.state.isSideNavOpen });
@@ -153,8 +153,7 @@ class Playground extends React.Component {
     };
 
     this.setState({
-      notifications: [...this.state.notifications, newNotification],
-      unreadCount: this.state.unreadCount + 1
+      notifications: [...this.state.notifications, newNotification]
     });
   };
 
@@ -281,7 +280,9 @@ class Playground extends React.Component {
       notifications: {
         title: "Notifications",
         onClick: this.onNotificationsClick,
-        onClickOutside: this.setUnreadCount,
+        onClickOutside: event => {
+          console.log("notifications on click outside", event);
+        },
         unreadCount: this.state.unreadCount,
         notifications: this.state.notifications,
         featuredNotification: this.state.featuredNotification
@@ -335,7 +336,7 @@ class Playground extends React.Component {
           title="Add notification"
           onClick={this.addNotification}
         />
-        <NotificationsSection />
+        {/* <NotificationsSection /> */}
         <ExpandingFilterSectionSection />
         <ActionBarSection />
         <ProgressBarSection />

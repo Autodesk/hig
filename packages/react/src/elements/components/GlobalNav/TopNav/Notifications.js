@@ -8,7 +8,9 @@ class Notifications extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      open: this.props.open
+      open: this.props.open,
+      seenNotificationIds: [],
+      unreadCount: this.props.unreadCount
     };
   }
 
@@ -24,27 +26,57 @@ class Notifications extends Component {
       this.props.children &&
       nextProps.children.length > this.props.children.length
     ) {
-      this.setState({ showNotificationsCount: true });
+      this.setState({
+        showNotificationsCount: true,
+        unreadCount: this.setUnreadCount(nextProps)
+      });
     }
   };
 
   onClick = event => {
     if (this.props.onClick) {
       this.props.onClick({
-        event,
-        seenNotificationIds: this._findSeenNotificationIds(this.props.children)
-      });
-    }
-    this.setState({ open: true, showNotificationsCount: true });
-  };
-
-  onClickOutside = event => {
-    if (this.props.onClickOutside) {
-      this.props.onClickOutside({
         event
       });
     }
-    this.setState({ open: false, showNotificationsCount: false });
+
+    const seenNotificationIds = this._findSeenNotificationIds(
+      this.props.children
+    );
+
+    this.setState({
+      open: true,
+      showNotificationsCount: true,
+      seenNotificationIds
+    });
+  };
+
+  onClickOutside = event => {
+    this.setState({
+      open: false,
+      showNotificationsCount: false,
+      unreadCount: this.setUnreadCount(this.props)
+    });
+
+    if (this.props.onClickOutside) {
+      this.props.onClickOutside(event);
+    }
+  };
+
+  setUnreadCount = props => {
+    const notifications = props.children;
+    const seenNotificationsIds = this.state.seenNotificationIds;
+    if (notifications && notifications.length > 0) {
+      const notificationIds = notifications.map(
+        notification => notification.props.id
+      );
+
+      const unseenNotifications = notificationIds.filter(
+        notification => seenNotificationsIds.indexOf(notification) === -1
+      );
+
+      return unseenNotifications.length;
+    }
   };
 
   _findSeenNotificationIds(props) {
@@ -52,7 +84,7 @@ class Notifications extends Component {
   }
 
   _showNotificationsCount = () =>
-    this.state.showNotificationsCount && this.props.unreadCount > 0;
+    this.state.showNotificationsCount && this.state.unreadCount > 0;
 
   render() {
     return (
@@ -61,7 +93,7 @@ class Notifications extends Component {
         onClick={this.onClick}
         onClickOutside={this.onClickOutside}
         open={this.state.open}
-        unreadCount={this.props.unreadCount}
+        unreadCount={this.state.unreadCount}
         showUnreadBadge={false}
         showNotificationsCount={this._showNotificationsCount()}
       >
