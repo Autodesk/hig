@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-import IconButtonAdapter from "../../../../adapters/IconButtonAdapter";
 import NotificationsAdapter from "../../../../adapters/GlobalNav/TopNav/NotificationsAdapter";
 import Notification from "./Notification";
 

@@ -172,7 +172,7 @@ class Playground extends React.Component {
     onFeaturedClick: this.featuredNotificationDismissed
   });
 
-  featuredNotificationDismissed = _event => {
+  featuredNotificationDismissed = () => {
     console.log("Feature notification dismissed");
   };
 
