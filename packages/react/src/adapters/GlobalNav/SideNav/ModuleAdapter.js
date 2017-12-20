@@ -68,7 +68,8 @@ function ModuleAdapter(props) {
           />
           <MapsPropToMethod value={props.active} {...adapterProps}>
             {(instance, value) =>
-              value ? instance.activate() : instance.deactivate()}
+              value ? instance.activate() : instance.deactivate()
+            }
           </MapsPropToMethod>
           <MountsHIGChild {...adapterProps}>{collapse}</MountsHIGChild>
           {submodules.length > 0 ? (

@@ -25,7 +25,8 @@ function RadioButtonAdapter(props) {
             {...adapterProps}
           >
             {(instance, value) =>
-              value ? instance.check() : instance.uncheck()}
+              value ? instance.check() : instance.uncheck()
+            }
           </ControlsProp>
           <MapsEventListener
             listener="onFocus"
@@ -54,11 +55,13 @@ function RadioButtonAdapter(props) {
           />
           <MapsPropToMethod value={props.disabled} {...adapterProps}>
             {(instance, value) =>
-              value ? instance.disable() : instance.enable()}
+              value ? instance.disable() : instance.enable()
+            }
           </MapsPropToMethod>
           <MapsPropToMethod value={props.required} {...adapterProps}>
             {(instance, value) =>
-              value ? instance.required(value) : instance.noLongerRequired()}
+              value ? instance.required(value) : instance.noLongerRequired()
+            }
           </MapsPropToMethod>
         </div>
       )}

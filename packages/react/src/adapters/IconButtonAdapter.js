@@ -40,7 +40,8 @@ function IconButtonAdapter(props) {
           />
           <MapsPropToMethod value={props.disabled} {...adapterProps}>
             {(instance, value) =>
-              value ? instance.disable() : instance.enable()}
+              value ? instance.disable() : instance.enable()
+            }
           </MapsPropToMethod>
 
           <MapsEventListener
