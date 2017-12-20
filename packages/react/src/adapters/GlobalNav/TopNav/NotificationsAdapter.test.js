@@ -19,7 +19,7 @@ describe("NotificationsAdapter", () => {
           onClick={() => {}}
           onClickOutside={() => {}}
           onScroll={() => {}}
-          unreadCount={2}
+          unseenCount={2}
           showNotificationsCount
           loading
           open

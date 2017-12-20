@@ -2,12 +2,15 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 import NotificationsAdapter from "../../../../adapters/GlobalNav/TopNav/NotificationsAdapter";
+import Notification from "./Notification";
 
 class Notifications extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      open: this.props.open
+      open: this.props.open,
+      seenNotificationIds: [],
+      unseenCount: this._setInitialUnseenCount(this.props.children)
     };
   }
 
@@ -23,27 +26,70 @@ class Notifications extends Component {
       this.props.children &&
       nextProps.children.length > this.props.children.length
     ) {
-      this.setState({ showNotificationsCount: true });
+      this.setState({
+        showNotificationsCount: true,
+        unseenCount: this.setUnseenCount(nextProps)
+      });
     }
   };
 
   onClick = event => {
     if (this.props.onClick) {
       this.props.onClick({
-        event,
-        seenNotificationIds: this._findSeenNotificationIds(this.props.children)
-      });
-    }
-    this.setState({ open: true, showNotificationsCount: true });
-  };
-
-  onClickOutside = event => {
-    if (this.props.onClickOutside) {
-      this.props.onClickOutside({
         event
       });
     }
-    this.setState({ open: false, showNotificationsCount: false });
+
+    const seenNotificationIds = this._findSeenNotificationIds(
+      this.props.children
+    );
+
+    this.setState({
+      open: true,
+      showNotificationsCount: true,
+      seenNotificationIds
+    });
+  };
+
+  onClickOutside = event => {
+    this.setState({
+      open: false,
+      showNotificationsCount: false,
+      unseenCount: this.setUnseenCount(this.props)
+    });
+
+    if (this.props.onClickOutside) {
+      this.props.onClickOutside(event);
+    }
+  };
+
+  setUnseenCount = props => {
+    let unseenNotifications = [];
+    const notifications = props.children;
+    const seenNotificationsIds = this.state.seenNotificationIds;
+    if (notifications && notifications.length > 0) {
+      const notificationIds = notifications.map(
+        notification => notification.props.id
+      );
+
+      unseenNotifications = notificationIds.filter(
+        notification => seenNotificationsIds.indexOf(notification) === -1
+      );
+    }
+    return unseenNotifications.length;
+  };
+
+  _setInitialUnseenCount = children => {
+    const unreadFeatureCount = this.props.featuredNotification ? 1 : 0;
+    let regularNotificationCount = 0;
+
+    if (children && children.length > 0) {
+      regularNotificationCount = children.filter(
+        notification => notification.props.unread
+      ).length;
+    }
+
+    return unreadFeatureCount + regularNotificationCount;
   };
 
   _findSeenNotificationIds(props) {
@@ -51,7 +97,9 @@ class Notifications extends Component {
   }
 
   _showNotificationsCount = () =>
-    this.state.showNotificationsCount && this.props.unreadCount > 0;
+    this.state.showNotificationsCount && this.state.unseenCount > 0;
+
+  _setUnseenCount = () => Math.min(this.state.unseenCount, 99);
 
   render() {
     return (
@@ -60,10 +108,22 @@ class Notifications extends Component {
         onClick={this.onClick}
         onClickOutside={this.onClickOutside}
         open={this.state.open}
-        unreadCount={this.props.unreadCount}
+        unseenCount={this._setUnseenCount()}
         showUnreadBadge={false}
         showNotificationsCount={this._showNotificationsCount()}
       >
+        {this.props.featuredNotification ? (
+          <Notification
+            featured
+            onClick={() => {}}
+            {...this.props.featuredNotification}
+            unread={false}
+          >
+            {this.props.featuredNotification.children instanceof Function
+              ? this.props.featuredNotification.children()
+              : this.props.featuredNotification.children}
+          </Notification>
+        ) : null}
         {this.props.children}
       </NotificationsAdapter>
     );
@@ -96,7 +156,7 @@ Notifications.__docgenInfo = {
     addNotification: {
       description: "Pass in an instance of a Notification"
     },
-    setUnreadCount: {
+    setUnseenCount: {
       description: "Pass a value for number of notifications that are unread"
     },
     onClickOutside: {

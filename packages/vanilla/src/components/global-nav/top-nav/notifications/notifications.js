@@ -46,7 +46,7 @@ class Notifications extends Core {
     );
   }
 
-  setUnreadCount(unreadCount) {
+  setUnseenCount(unreadCount) {
     this._findDOMEl(
       '.hig__notifications__unread-messages-count',
       this.el

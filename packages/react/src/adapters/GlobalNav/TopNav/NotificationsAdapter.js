@@ -19,8 +19,8 @@ function NotificationsAdapter(props) {
         <div>
           <MountedByHIGParent mounter="addNotifications" {...adapterProps} />
           <MapsPropToMethod
-            setter="setUnreadCount"
-            value={props.unreadCount}
+            setter="setUnseenCount"
+            value={props.unseenCount}
             {...adapterProps}
           />
           <MapsPropToMethod value={props.loading} {...adapterProps}>
@@ -43,7 +43,6 @@ function NotificationsAdapter(props) {
             setter="setTitle"
             {...adapterProps}
           />
-
           <MapsPropToMethod value={props.open} {...adapterProps}>
             {(instance, value) => (value ? instance.open() : instance.close())}
           </MapsPropToMethod>
@@ -76,7 +75,7 @@ NotificationsAdapter.propTypes = {
   open: PropTypes.bool,
   loading: PropTypes.bool,
   showUnreadBadge: PropTypes.bool,
-  unreadCount: PropTypes.number,
+  unseenCount: PropTypes.number,
   onClick: PropTypes.func,
   onClickOutside: PropTypes.func,
   onScroll: PropTypes.func

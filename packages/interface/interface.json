@@ -903,7 +903,9 @@
       "methods": {
         "addSlot": {
           "desc": "Adds content to the expanding filter section",
-          "params": ["content to be shown when section is open"]
+          "params": [
+            "content to be shown when section is open"
+          ]
         },
         "close": {
           "desc": "Hides the expanding filter section content"
@@ -1605,7 +1607,7 @@
                     "{Notification}, [ReferenceNotification] - (Optional) reference node for insertBefore "
                   ]
                 },
-                "setUnreadCount": {
+                "setUnseenCount": {
                   "desc": "Pass a value for number of notifications that are unread",
                   "params": [
                     "{Integer}, count for number of unread notifications "
@@ -1616,7 +1618,6 @@
                   "params": [
                     "{Bool}, flag to show notifications count "
                   ]
-
                 },
                 "hideNotificationsCount": {
                   "desc": "hide notifications count",
@@ -1661,6 +1662,12 @@
                     "setCreatedAt": {
                       "desc": "sets timestamp for notification"
                     },
+                    "setFeatured": {
+                      "desc": "sets featured style for notification"
+                    },
+                    "removeFeatured": {
+                      "desc": "removes featured style for notification"
+                    },
                     "markUnread": {
                       "desc": "sets notification as unread"
                     },
@@ -1669,6 +1676,11 @@
                     },
                     "onClick": {
                       "desc": "Calls the provided callback when user clicks on the notication",
+                      "params": "HIG.abstract.EventObject.params",
+                      "returns": "HIG.abstract.EventObject.returns"
+                    },
+                    "onFeaturedClick": {
+                      "desc": "Calls the provided callback when user clicks on the featured notication",
                       "params": "HIG.abstract.EventObject.params",
                       "returns": "HIG.abstract.EventObject.returns"
                     }

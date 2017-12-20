@@ -38,7 +38,8 @@ Notification.propTypes = {
     PropTypes.instanceOf(Date)
   ]), // ISO date string
   onClick: PropTypes.func,
-  id: PropTypes.number
+  id: PropTypes.number.isRequired,
+  featured: PropTypes.bool
 };
 
 Notification.defaultProps = {};
@@ -60,6 +61,9 @@ Notification.__docgenInfo = {
     onClick: {
       description:
         "Calls the provided callback when user clicks on the noticatiosn icon in the top nav"
+    },
+    featured: {
+      description: "{Boolean} specifies a featured notification"
     }
   }
 };

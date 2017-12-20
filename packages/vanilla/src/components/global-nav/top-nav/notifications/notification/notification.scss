@@ -9,6 +9,44 @@
   &:last-child {
     border-bottom: none;
   }
+
+  .hig__icon-button {
+    display: none;
+  }
+}
+
+@keyframes notification-fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.hig__notification--exiting {
+  animation-name: notification-fade-out;
+  animation-duration: .5s;
+}
+
+.hig__notification--exited {
+  display: none;
+}
+
+.hig__notification--featured {
+  background-color: color(hig-turquoise-20);
+
+  &:hover {
+    .hig__icon-button { display: block; }
+  }
+
+  .hig__icon-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    display: none;
+  }
 }
 
 .hig__notification__title {
@@ -20,7 +58,7 @@
 }
 
 .hig__notification__unread-marker {
-  display: none;
+  opacity: 0;
   position: absolute;
   background-color: color(hig-blue-50);
   border-radius: 100%;
@@ -28,8 +66,10 @@
   height: 8px;
   top: 15px;
   left: spacing(xs);
+  transition: opacity .2s linear;
+
   .hig__notification--unread > & {
-    display: block;
+    opacity: 1;
   }
 }
 
@@ -38,4 +78,5 @@
   &:hover{
     background-color: transparentize($color: color(hig-blue-10), $amount: 0.5)
   }
+
 }
