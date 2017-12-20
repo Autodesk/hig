@@ -24,6 +24,7 @@ describe("NotificationsAdapter", () => {
           loading
           open
           title="notifications"
+          
         >
           <NotificationAdapter />
         </NotificationsAdapter>

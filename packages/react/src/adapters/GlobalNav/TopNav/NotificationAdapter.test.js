@@ -15,11 +15,14 @@ describe("NotificationAdapter", () => {
           timestamp={timestamp}
           title="foo"
           unread
+          featured
+          onFeaturedClick={() => {}}
         >
           <h1>This is our first notification</h1>
         </NotificationAdapter>
       );
       mockInstance.markRead();
+      mockInstance.removeFeatured();
     }).toImplementHIGInterfaceOf(VanillaNotification);
   });
 });
