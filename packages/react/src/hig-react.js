@@ -39,6 +39,13 @@ export { default as Icon } from "./adapters/IconAdapter";
 export { default as IconButton } from "./adapters/IconButtonAdapter";
 export { default as Image } from "./adapters/ImageAdapter";
 export { default as Modal } from "./elements/components/Modal";
+export {
+  default as Notifications
+} from "./elements/components/GlobalNav/TopNav/Notifications";
+export {
+  default as Notification
+} from "./elements/components/GlobalNav/TopNav/Notification";
+
 export { default as Option } from "./adapters/FormElements/OptionAdapter";
 export {
   default as PasswordField

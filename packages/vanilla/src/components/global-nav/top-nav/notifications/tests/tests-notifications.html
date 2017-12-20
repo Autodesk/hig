@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="../../../../../../lib/hig.css">
+    <script type="text/javascript" src="../../../../../../lib/hig.js"></script>
+</head>
+
+<body>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+    <script>
+        // CREATE GLOBALNAV COMPONENT
+        var GlobalNav = new Hig.GlobalNav();
+        GlobalNav.mount("body");
+
+        // ADD TOP GlobalNav
+        var TopNav = new GlobalNav.partials.TopNav({
+            "logo": "https://www.dexigner.com/images/news/xw/22856.jpg",
+            "logo_link": "#"
+        });
+        GlobalNav.addTopNav(TopNav);
+
+        TopNav.setLogo("../../../tests/bim-logo.png"); // Update logo
+        TopNav.setLogoLink("http://autodesk.com"); // update logo link
+
+        var Notifications1 = new TopNav.partials.Notifications({});
+
+        TopNav.addNotifications(Notifications1);
+
+        const myNotification = new Notifications1.partials.Notification({});
+        Notifications1.addNotification(myNotification);
+
+        const content = document.createElement('div');
+        content.innerHTML =
+            `<p>Lorem or reduce seats on your subscriptions and upcoming payments in your Account</p><p><a href="http://apple.com">Tell me more</a></p>`;
+        myNotification.setContent(content);
+        myNotification.setTitle("Sample 2 line notification header. Sample 2 line headlineSample 2 line headline");
+        myNotification.setCreatedAt(Date.now());
+        myNotification.markUnread();
+
+        Notifications1.setLoading();
+
+
+
+        Notifications1.open()
+    </script>
+
+</body>
+
+</html>

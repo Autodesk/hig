@@ -16,7 +16,7 @@ class ProgressRingIndeterminate {
       el: this.el,
       class: 'hig__progress-ring',
       enteringDuration: 650,
-      exitingDuration: 466,
+      exitingDuration: 466
     });
     this.containerAnimation.enter();
   }

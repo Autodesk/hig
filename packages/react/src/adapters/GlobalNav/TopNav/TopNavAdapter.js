@@ -9,6 +9,7 @@ import HIGAdapter, {
 } from "../../HIGAdapter";
 import ShortcutAdapter from "./ShortcutAdapter";
 import Search from "../../../elements/components/GlobalNav/TopNav/Search";
+import Notifications from "../../../elements/components/GlobalNav/TopNav/Notifications";
 import ProfileAdapter from "./ProfileAdapter";
 import HelpAdapter from "./HelpAdapter";
 import ProjectAccountSwitcherAdapter from "./ProjectAccountSwitcherAdapter";
@@ -16,6 +17,7 @@ import ProjectAccountSwitcher from "../../../elements/components/GlobalNav/TopNa
 
 function sortChildren(children) {
   return {
+    notifications: children.find(child => child.type === Notifications),
     shortcut: children.find(child => child.type === ShortcutAdapter),
     search: children.find(child => child.type === Search),
     profile: children.find(child => child.type === ProfileAdapter),
@@ -30,6 +32,7 @@ function sortChildren(children) {
 
 function TopNavAdapter(props) {
   const {
+    notifications,
     shortcut,
     search,
     profile,
@@ -74,6 +77,7 @@ function TopNavAdapter(props) {
           <MountsHIGChild {...adapterProps}>{shortcut}</MountsHIGChild>
           <MountsHIGChild {...adapterProps}>{search}</MountsHIGChild>
           <MountsHIGChild {...adapterProps}>{profile}</MountsHIGChild>
+          <MountsHIGChild {...adapterProps}>{notifications}</MountsHIGChild>
           <MountsHIGChild {...adapterProps}>{help}</MountsHIGChild>
           <MountsHIGChild {...adapterProps}>
             {projectAccountSwitcher}

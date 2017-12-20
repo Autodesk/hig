@@ -13,7 +13,7 @@ class ProgressBar extends Core {
   _componentDidMount() {
     this.bar = this._findDOMEl(
       '.hig__progress-bar__bar',
-      this.el,
+      this.el
     );
   }
 

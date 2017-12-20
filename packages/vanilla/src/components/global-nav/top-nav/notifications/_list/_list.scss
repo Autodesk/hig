@@ -1,0 +1,24 @@
+@import '~basics/colors/colors.scss';
+
+.hig__notifications__list-content {
+  overflow-y: auto;
+
+  &:empty {
+    max-height: 193px;
+    height: 193px;
+
+    &:before {
+      content: url("./bell.svg");
+      display: flex;
+      justify-content: center;
+      padding: 24px 0;
+    }
+
+    &:after {
+      content: 'You currently have no notifications';
+      display: flex;
+      justify-content: center;
+      color: color(hig-gray-40);
+    }
+  }
+}

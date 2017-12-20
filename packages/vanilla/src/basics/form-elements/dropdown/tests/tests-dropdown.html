@@ -1,79 +1,90 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="../../../../../lib/hig.css">
-        <script type="text/javascript" src="../../../../../lib/hig.js"></script>
 
-        <style>
-            body {
-                margin: 30px;
-            }
+<head>
+    <link rel="stylesheet" href="../../../../../lib/hig.css">
+    <script type="text/javascript" src="../../../../../lib/hig.js"></script>
 
-            .test-container {
-                margin-bottom: 50px;
-            }
+    <style>
+        body {
+            margin: 30px;
+        }
 
-            .test-container > div {
-                margin: 10px 0;
-            }
-        </style>
-    </head>
-    <body>
-        <div class='test-container'>
-            <div class='test-heading-default'></div>
-            <div class='test-mount-default'></div>
-        </div>
+        .test-container {
+            margin-bottom: 50px;
+        }
 
-        <div class='test-container'>
-            <div class='test-heading-disabled'></div>
-            <div class='test-mount-disabled'></div>
-        </div>
+        .test-container>div {
+            margin: 10px 0;
+        }
+    </style>
+</head>
 
-        <div class='test-container'>
-            <div class='test-heading-setters'></div>
-            <div class='test-mount-setters'></div>
-        </div>
+<body>
+    <div class='test-container'>
+        <div class='test-heading-default'></div>
+        <div class='test-mount-default'></div>
+    </div>
 
-        <div class='test-container'>
-            <div class='test-heading-events'></div>
-            <div class='test-mount-events'></div>
-        </div>
+    <div class='test-container'>
+        <div class='test-heading-disabled'></div>
+        <div class='test-mount-disabled'></div>
+    </div>
 
-        <script>
+    <div class='test-container'>
+        <div class='test-heading-setters'></div>
+        <div class='test-mount-setters'></div>
+    </div>
 
-            const FormElements = new Hig.FormElements();
-            const Dropdown = FormElements.partials.Dropdown;
+    <div class='test-container'>
+        <div class='test-heading-events'></div>
+        <div class='test-mount-events'></div>
+    </div>
 
-            // ----------------------------
-            // DROPDOWN WITH DEFAULTS
-            // ----------------------------
+    <script>
+        const FormElements = new Hig.FormElements();
+        const Dropdown = FormElements.partials.Dropdown;
 
-            const TitleDefaultDropdown = new Hig.Typography({
-                "text": "Dropdown configured with defaults",
-                "type": "h2"
-            });
+        // ----------------------------
+        // DROPDOWN WITH DEFAULTS
+        // ----------------------------
 
-            TitleDefaultDropdown.mount('.test-heading-default');
+        const TitleDefaultDropdown = new Hig.Typography({
+            "text": "Dropdown configured with defaults",
+            "type": "h2"
+        });
 
-            const DefaultDropdown = new Dropdown({
-                label: 'Favorite vice',
-                placeholder: "Choose your poison",
-                instructions: "Despite offering these choices, we in no way condone them.",
-            });
+        TitleDefaultDropdown.mount('.test-heading-default');
 
-            DefaultDropdown.mount(".test-mount-default");
-            const defaultDropdownOptionData = [
-                { label: 'Penny slots', value: 'penny-slots' },
-                { label: 'The drink', value: 'the-drink' },
-                { label: 'Bubblegum', value: 'bubblegum' },
-            ];
-            const defaultDropdownOptionComponents =
-              defaultDropdownOptionData.map(function(optionData) {
-                const option = new DefaultDropdown.partials.Option(optionData);
+        const DefaultDropdown = new Dropdown({
+            label: 'Favorite vice',
+            placeholder: "Choose your poison",
+            instructions: "Despite offering these choices, we in no way condone them.",
+        });
+
+        DefaultDropdown.mount(".test-mount-default");
+        const defaultDropdownOptionData = [{
+                label: 'Penny slots',
+                value: 'penny-slots'
+            },
+            {
+                label: 'The drink',
+                value: 'the-drink'
+            },
+            {
+                label: 'Bubblegum',
+                value: 'bubblegum'
+            },
+        ];
+        const defaultDropdownOptionComponents =
+            defaultDropdownOptionData.map(function (optionData) {
+                const option = new Hig.Option();
                 DefaultDropdown.addOption(option);
-                option.onClick(function(event, element) {
+                option.setValue(optionData.value);
+                option.setLabel(optionData.label);
+                option.onClick(function (event, element) {
                     const value = optionData.value;
 
-                    defaultDropdownOptionComponents.forEach(function(option)  {
+                    defaultDropdownOptionComponents.forEach(function (option) {
                         if (option.el.dataset.value === value) {
                             option.select()
                             DefaultDropdown.setSelectedOptionLabel(option.el.innerText);
@@ -87,114 +98,136 @@
                 return option;
             });
 
-            DefaultDropdown.onTargetClick(function(e) {
-                DefaultDropdown.open();
-            });
+        DefaultDropdown.onTargetClick(function (e) {
+            DefaultDropdown.open();
+        });
 
-            DefaultDropdown.onClickOutside(function(e) {
-                DefaultDropdown.close();
-            });
-
-
-            // ----------------------------
-            // DISABLED DROPDOWN
-            // ----------------------------
-
-            const TitleDisabledDropdown = new Hig.Typography({
-                "text": "Disabled Dropdown",
-                "type": "h2"
-            });
-
-            TitleDisabledDropdown.mount('.test-heading-disabled');
-
-            const DisabledDropdown = new Dropdown({
-                label: "Can't touch this",
-            });
-
-            DisabledDropdown.mount(".test-mount-disabled");
-            DisabledDropdown.setSelectedOptionLabel('Vaping');
-            DisabledDropdown.disable();
+        DefaultDropdown.onClickOutside(function (e) {
+            DefaultDropdown.close();
+        });
 
 
+        // ----------------------------
+        // DISABLED DROPDOWN
+        // ----------------------------
 
-            // ----------------------------
-            // DROPDOWN CONFIGURED WITH SETTERS
-            // ----------------------------
+        const TitleDisabledDropdown = new Hig.Typography({
+            "text": "Disabled Dropdown",
+            "type": "h2"
+        });
 
-            const TitleSetterDropdown = new Hig.Typography({
-                "text": "Dropdown configured with setters",
-                "type": "h2"
-            });
+        TitleDisabledDropdown.mount('.test-heading-disabled');
 
-            TitleSetterDropdown.mount('.test-heading-setters');
+        const DisabledDropdown = new Dropdown({
+            label: "Can't touch this",
+        });
 
-            const SetterDropdown = new Dropdown();
-
-            SetterDropdown.mount(".test-mount-setters");
-
-            [
-                { label: 'Uncommitted', value: 'foo' },
-                { label: 'Imperceptible', value: 'bar', selected: true },
-                { label: 'Arguable', value: 'baz' },
-            ].forEach(function(optionData)  {
-                const option = new SetterDropdown.partials.Option(optionData);
-                SetterDropdown.addOption(option);
-            });
-            SetterDropdown.setSelectedOptionLabel('Imperceptible');
-            SetterDropdown.setLabel('Favorite type of change');
-            SetterDropdown.setInstructions('Changing your mind is not permitted.');
-            SetterDropdown.required('I must insist that you choose one.');
-
-            SetterDropdown.onTargetClick(function(e) {
-                SetterDropdown.open();
-            });
-
-            SetterDropdown.onClickOutside(function(e) {
-                SetterDropdown.close();
-            });
+        DisabledDropdown.mount(".test-mount-disabled");
+        DisabledDropdown.setSelectedOptionLabel('Vaping');
+        DisabledDropdown.disable();
 
 
 
-            // ----------------------------
-            // DROPDOWN WITH LOTS OF EVENT LISTENERS
-            // ----------------------------
+        // ----------------------------
+        // DROPDOWN CONFIGURED WITH SETTERS
+        // ----------------------------
 
-            const TitleEventsDropdown = new Hig.Typography({
-                "text": "Dropdown that logs lots of events to the console",
-                "type": "h2"
-            });
+        const TitleSetterDropdown = new Hig.Typography({
+            "text": "Dropdown configured with setters",
+            "type": "h2"
+        });
 
-            TitleEventsDropdown.mount('.test-heading-events');
+        TitleSetterDropdown.mount('.test-heading-setters');
 
-            const EventsDropdown = new Dropdown();
+        const SetterDropdown = new Dropdown();
 
-            EventsDropdown.mount(".test-mount-events");
-            EventsDropdown.setSelectedOptionLabel('Imperceptible');
+        SetterDropdown.mount(".test-mount-setters");
 
-            function log(componentName, eventType) {
-                const message = componentName + " triggered an " + eventType + " event";
-                console.log(message);
-            }
+        [{
+                label: 'Uncommitted',
+                value: 'foo'
+            },
+            {
+                label: 'Imperceptible',
+                value: 'bar',
+                selected: true
+            },
+            {
+                label: 'Arguable',
+                value: 'baz'
+            },
+        ].forEach(function (optionData) {
+            const option = new Hig.Option();
+            SetterDropdown.addOption(option);
+            option.setValue(optionData.value);
+            option.setLabel(optionData.label);
+        });
+        SetterDropdown.setSelectedOptionLabel('Imperceptible');
+        SetterDropdown.setLabel('Favorite type of change');
+        SetterDropdown.setInstructions('Changing your mind is not permitted.');
+        SetterDropdown.required('I must insist that you choose one.');
 
-            EventsDropdown.onClickOutside(log.bind(this, 'Dropdown', 'onClickOutside'));
-            EventsDropdown.onBlur(log.bind(this, 'Dropdown', 'onBlur'));
-            EventsDropdown.onFocus(log.bind(this, 'Dropdown', 'onFocus'));
-            EventsDropdown.onTargetClick(log.bind(this, 'Dropdown', 'onTargetClick'));
-            EventsDropdown.onKeypress(log.bind(this, 'Dropdown', 'onKeypress'));
+        SetterDropdown.onTargetClick(function (e) {
+            SetterDropdown.open();
+        });
 
-            [
-                { label: 'Uncommitted', value: 'foo' },
-                { label: 'Imperceptible', value: 'bar', selected: true },
-                { label: 'Arguable', value: 'baz' },
-            ].forEach(function(optionData)  {
-                const option = new EventsDropdown.partials.Option(optionData);
-                EventsDropdown.addOption(option);
-                option.onClick(log.bind(this, "Option " + optionData.label,  'onClick'));
-                option.onHover(log.bind(this, "Option" + optionData.label, 'onHover'));
-            });
-            EventsDropdown.open();
+        SetterDropdown.onClickOutside(function (e) {
+            SetterDropdown.close();
+        });
 
-        </script>
 
-    </body>
+
+        // ----------------------------
+        // DROPDOWN WITH LOTS OF EVENT LISTENERS
+        // ----------------------------
+
+        const TitleEventsDropdown = new Hig.Typography({
+            "text": "Dropdown that logs lots of events to the console",
+            "type": "h2"
+        });
+
+        TitleEventsDropdown.mount('.test-heading-events');
+
+        const EventsDropdown = new Dropdown();
+
+        EventsDropdown.mount(".test-mount-events");
+        EventsDropdown.setSelectedOptionLabel('Imperceptible');
+
+        function log(componentName, eventType) {
+            const message = componentName + " triggered an " + eventType + " event";
+            console.log(message);
+        }
+
+        EventsDropdown.onClickOutside(log.bind(this, 'Dropdown', 'onClickOutside'));
+        EventsDropdown.onBlur(log.bind(this, 'Dropdown', 'onBlur'));
+        EventsDropdown.onFocus(log.bind(this, 'Dropdown', 'onFocus'));
+        EventsDropdown.onTargetClick(log.bind(this, 'Dropdown', 'onTargetClick'));
+        EventsDropdown.onKeypress(log.bind(this, 'Dropdown', 'onKeypress'));
+
+        [{
+                label: 'Uncommitted',
+                value: 'foo'
+            },
+            {
+                label: 'Imperceptible',
+                value: 'bar',
+                selected: true
+            },
+            {
+                label: 'Arguable',
+                value: 'baz'
+            },
+        ].forEach(function (optionData) {
+            const option = new Hig.Option();
+            EventsDropdown.addOption(option);
+            option.setValue(optionData.value);
+            option.setLabel(optionData.label);
+            option.onClick(log.bind(this, "Option " + optionData.label, 'onClick'));
+            option.onHover(log.bind(this, "Option" + optionData.label, 'onHover'));
+        });
+        EventsDropdown.open();
+    </script>
+
+</body>
+
 </html>

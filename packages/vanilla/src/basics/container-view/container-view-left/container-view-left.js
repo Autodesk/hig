@@ -29,6 +29,7 @@ class ContainerViewLeft extends Core {
 }
 
 ContainerViewLeft._interface = Interface.basics.ContainerViewLeft;
-ContainerViewLeft._defaults = {};
+ContainerViewLeft._defaults = {
+};
 ContainerViewLeft._partials = {};
 export default ContainerViewLeft;

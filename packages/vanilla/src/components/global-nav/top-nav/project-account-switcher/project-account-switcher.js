@@ -1,10 +1,14 @@
 import Interface from 'interface.json';
 import Core from '_core.js';
 import Flyout from 'basics/flyout/flyout';
-import Project from 'components/global-nav/top-nav/project-account-switcher/project/project';
-import Account from 'components/global-nav/top-nav/project-account-switcher/account/account';
-import Lists from 'components/global-nav/top-nav/project-account-switcher/_lists/lists';
-import Target from 'components/global-nav/top-nav/project-account-switcher/_target/target';
+import Project
+  from 'components/global-nav/top-nav/project-account-switcher/project/project';
+import Account
+  from 'components/global-nav/top-nav/project-account-switcher/account/account';
+import Lists
+  from 'components/global-nav/top-nav/project-account-switcher/_lists/lists';
+import Target
+  from 'components/global-nav/top-nav/project-account-switcher/_target/target';
 import Template from './project-account-switcher.html';
 import './project-account-switcher.scss';
 
@@ -22,11 +26,11 @@ class ProjectAccountSwitcher extends Core {
     this.target = new Target({
       label: options.activeLabel,
       image: options.activeImage,
-      _type: options.activeType,
+      _type: options.activeType
     });
     this.flyoutContent = new Lists({
       projectTitle: options.projectTitle,
-      accountTitle: options.accountTitle,
+      accountTitle: options.accountTitle
     });
 
     this._render(Template, options);
@@ -98,11 +102,11 @@ ProjectAccountSwitcher._defaults = {
   activeLabel: '',
   activeType: 'project',
   projectTitle: '',
-  accountTitle: '',
+  accountTitle: ''
 };
 ProjectAccountSwitcher._partials = {
   Account,
-  Project,
+  Project
 };
 
 export default ProjectAccountSwitcher;

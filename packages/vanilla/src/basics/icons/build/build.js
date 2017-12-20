@@ -22,7 +22,7 @@ const svgo = new SVGO({
                 name: 'role',
                 value: 'img',
                 prefix: '',
-                local: 'role',
+                local: 'role'
               });
             }
             if (!svg.hasAttr('title')) {
@@ -30,16 +30,16 @@ const svgo = new SVGO({
                 name: 'title',
                 value: '___###NAME###___',
                 prefix: '',
-                local: 'title',
+                local: 'title'
               });
             }
           }
 
           return data;
-        },
-      },
-    },
-  ],
+        }
+      }
+    }
+  ]
 });
 
 const distLocation = `${__dirname}/../release/`;

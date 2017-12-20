@@ -35,7 +35,7 @@ class Link extends Core {
 Link._interface = Interface.components.GlobalNav.partials.SideNav.partials.Link;
 Link._defaults = {
   title: 'link',
-  link: '#',
+  link: '#'
 };
 
 export default Link;

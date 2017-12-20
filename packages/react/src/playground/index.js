@@ -2,7 +2,7 @@
 import React from "react";
 import "hig-vanilla/lib/hig.css";
 
-import { Button, GlobalNav, breakpoints } from "../hig-react";
+import { Button, GlobalNav, breakpoints, TextLink } from "../hig-react";
 
 import "./index.css";
 
@@ -56,6 +56,36 @@ const defaultSearchOptions = [
   }
 ];
 
+const sampleNotifications = [
+  {
+    id: 1,
+    unread: true,
+    children: () => (
+      <div>
+        <p>This is our first notification</p>
+        <div>
+          <TextLink
+            href="https://github.com/Autodesk/hig"
+            text="This is a primary text link"
+          />
+        </div>
+      </div>
+    )
+  },
+  {
+    id: 2,
+    unread: true,
+    children: () => (
+      <div>
+        <p>
+          <b>test title</b>
+        </p>
+        <p>this is regular text</p>
+      </div>
+    )
+  }
+];
+
 class Playground extends React.Component {
   constructor(props) {
     super(props);
@@ -64,7 +94,11 @@ class Playground extends React.Component {
       isHelpOpen: false,
       isSideNavOpen: true,
       searchOptions: [],
-      searchValue: ""
+      searchValue: "",
+      seenNotificationIds: [],
+      notifications: sampleNotifications,
+      readIds: this._initialReadNotifications(sampleNotifications),
+      featuredNotification: this.featuredNotification()
     };
   }
 
@@ -78,8 +112,63 @@ class Playground extends React.Component {
     this.filterSearchInput(selection.value);
   };
 
+  onNotificationsClick = eventInfo => {
+    console.log("on notifications click", eventInfo);
+  };
+
+  onNotificationClick = notificationId => {
+    this.setState({
+      readIds: [...new Set([...this.state.readIds, notificationId])]
+    });
+  };
+
   toggleSideNav = () => {
     this.setState({ isSideNavOpen: !this.state.isSideNavOpen });
+  };
+
+  transformedNotifications = notifications =>
+    notifications.map(notification =>
+      Object.assign({}, notification, {
+        onClick: this.onNotificationClick,
+        unread: !this.state.readIds.includes(notification.id)
+      })
+    );
+
+  addNotification = () => {
+    const newNotification = {
+      id: 1,
+      unread: true,
+      onClick: this.onNotificationClick,
+      children: () => (
+        <div>
+          <p>
+            <b>test title</b>
+          </p>
+          <p>this is regular text</p>
+        </div>
+      )
+    };
+
+    this.setState({
+      notifications: [...this.state.notifications, newNotification]
+    });
+  };
+
+  featuredNotification = () => ({
+    id: 3,
+    children: () => (
+      <div>
+        <p>
+          <b>Featured Notification</b>
+        </p>
+        <p>this is regular text</p>
+      </div>
+    ),
+    onFeaturedClick: this.featuredNotificationDismissed
+  });
+
+  featuredNotificationDismissed = () => {
+    console.log("Feature notification dismissed");
   };
 
   navigate = id => {
@@ -124,6 +213,12 @@ class Playground extends React.Component {
 
     this.setState({ searchOptions });
   };
+
+  _initialReadNotifications(notifications) {
+    return notifications
+      .filter(notification => !notification.unread)
+      .map(notification => notification.id);
+  }
 
   render() {
     const helpProps = {
@@ -183,6 +278,16 @@ class Playground extends React.Component {
       logo,
       onLogoClick() {
         console.log("Logo clicked");
+      },
+      notifications: {
+        title: "Notifications",
+        onClick: this.onNotificationsClick,
+        onClickOutside: event => {
+          console.log("notifications on click outside", event);
+        },
+        unreadCount: this.state.unreadCount,
+        notifications: this.transformedNotifications(this.state.notifications),
+        featuredNotification: this.state.featuredNotification
       }
     };
 
@@ -228,6 +333,11 @@ class Playground extends React.Component {
         isSideNavOpen={this.state.isSideNavOpen}
         onHamburgerClick={this.toggleSideNav}
       >
+        <Button
+          size="standard"
+          title="Add notification"
+          onClick={this.addNotification}
+        />
         <ExpandingFilterSectionSection />
         <ActionBarSection />
         <ProgressBarSection />

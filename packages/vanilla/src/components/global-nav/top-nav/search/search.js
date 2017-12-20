@@ -35,21 +35,21 @@ class Search extends Core {
   setPlaceholder(placeholder) {
     this._findDOMEl(
       '.hig__global-nav__top-nav__search__input',
-      this.el,
+      this.el
     ).setAttribute('placeholder', placeholder);
   }
 
   showClearIcon() {
     this._findDOMEl(
       '.hig__global-nav__top-nav__search__clear',
-      this.el,
+      this.el
     ).classList.add('hig__global-nav__top-nav__search__clear--show');
   }
 
   hideClearIcon() {
     this._findDOMEl(
       '.hig__global-nav__top-nav__search__clear',
-      this.el,
+      this.el
     ).classList.remove('hig__global-nav__top-nav__search__clear--show');
   }
 
@@ -58,7 +58,7 @@ class Search extends Core {
       'click',
       '.hig__global-nav__top-nav__search__clear',
       this.el,
-      fn,
+      fn
     );
   }
 
@@ -67,7 +67,7 @@ class Search extends Core {
       'input',
       '.hig__global-nav__top-nav__search__input',
       this.el,
-      fn,
+      fn
     );
   }
 
@@ -76,7 +76,7 @@ class Search extends Core {
       'keydown',
       '.hig__global-nav__top-nav__search__input',
       this.el,
-      fn,
+      fn
     );
   }
 
@@ -85,7 +85,7 @@ class Search extends Core {
       'click',
       window.document.body,
       window.document.body,
-      this._callbackIfClickOutside.bind(this, fn),
+      this._callbackIfClickOutside.bind(this, fn)
     );
   }
 
@@ -94,7 +94,7 @@ class Search extends Core {
       'focusin',
       '.hig__global-nav__top-nav__search__input',
       this.el,
-      fn,
+      fn
     );
   }
 
@@ -103,7 +103,7 @@ class Search extends Core {
       'focusout',
       '.hig__global-nav__top-nav__search__input',
       this.el,
-      fn,
+      fn
     );
   }
 
@@ -118,25 +118,25 @@ class Search extends Core {
   setValue(value) {
     this._findDOMEl(
       '.hig__global-nav__top-nav__search__input',
-      this.el,
+      this.el
     ).value = value;
   }
 
   _setIcons() {
     const mountSearchIcon = this._findDOMEl(
       '.hig__global-nav__top-nav__search__icon',
-      this.el,
+      this.el
     );
     this._findOrCreateIconComponent(mountSearchIcon, 'search').setNameOrSVG(
-      'search',
+      'search'
     );
 
     const mountClearIcon = this._findDOMEl(
       '.hig__global-nav__top-nav__search__clear',
-      this.el,
+      this.el
     );
     this._findOrCreateIconComponent(mountClearIcon, 'clear').setNameOrSVG(
-      'close-small',
+      'close-small'
     );
   }
 
@@ -169,7 +169,7 @@ Search._interface =
   Interface.components.GlobalNav.partials.TopNav.partials.Search;
 Search._defaults = {
   query: '',
-  placeholder: 'Search',
+  placeholder: 'Search'
 };
 Search._partials = {};
 

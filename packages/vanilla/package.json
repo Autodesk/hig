@@ -1,6 +1,6 @@
 {
   "name": "hig-vanilla",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "description": "Stateless implementation in pure CSS, HTML and JS with no framework dependecies",
   "main": "lib/hig.js",
   "css": "lib/hig.css",
@@ -19,6 +19,7 @@
     "generate-index": "node ./dev/generate-index.js",
     "lib": "webpack -p --config webpack.prod.js",
     "lint": "eslint --ext .jsx,.js dev src",
+    "lint-fix": "eslint --ext .jsx,.js dev src --fix",
     "test": "npm run gemini",
     "watch": "webpack --watch --config webpack.dev.js"
   },
@@ -35,7 +36,7 @@
     "babel-loader": "^7.1.1",
     "babel-plugin-module-resolver": "^2.7.1",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
-    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
     "babel-preset-stage-2": "^6.24.1",
     "concurrently": "^3.4.0",
     "css-loader": "^0.26.1",
@@ -67,6 +68,6 @@
     "webpack-merge": "^4.1.1"
   },
   "dependencies": {
-    "hig-interface": "^0.1.9"
+    "hig-interface": "^0.1.10"
   }
 }

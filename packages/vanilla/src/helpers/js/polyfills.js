@@ -71,7 +71,7 @@ if (!Array.prototype.includes) {
 
       // 8. Return false
       return false;
-    },
+    }
   });
 }
 

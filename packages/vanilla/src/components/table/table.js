@@ -47,7 +47,7 @@ Table._interface = Interface.components.Table;
 Table._defaults = {};
 Table._partials = {
   TableHead,
-  TableRow,
+  TableRow
 };
 
 Table.AvailableDensities = AvailableDensities;

@@ -7,6 +7,7 @@ import Search from "../../../elements/components/GlobalNav/TopNav/Search";
 import ProfileAdapter from "./ProfileAdapter";
 import HelpAdapter from "./HelpAdapter";
 import ProjectAccountSwitcherAdapter from "./ProjectAccountSwitcherAdapter";
+import Notifications from "../../../elements/components/GlobalNav/TopNav/Notifications";
 
 describe("TopNavAdapter", () => {
   it("implements the hig interface", () => {
@@ -24,6 +25,7 @@ describe("TopNavAdapter", () => {
           <ProfileAdapter />
           <HelpAdapter />
           <ProjectAccountSwitcherAdapter />
+          <Notifications />
         </TopNavAdapter>
       );
     }).toImplementHIGInterfaceOf(VanillaGlobalNav._partials.TopNav);
