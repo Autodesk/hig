@@ -40,7 +40,6 @@ import TextLinkSection from "./sections/TextLinkSection";
 import TimestampSection from "./sections/TimestampSection";
 import TooltipSection from "./sections/TooltipSection";
 import TypographySection from "./sections/TypographySection";
-import NotificationsSection from "./sections/NotificationsSection";
 
 const defaultSearchOptions = [
   {
@@ -75,7 +74,7 @@ const sampleNotifications = [
   },
   {
     id: 2,
-    unread: true,
+    unread: false,
     children: () => (
       <div>
         <p>
@@ -98,7 +97,7 @@ class Playground extends React.Component {
       searchValue: "",
       seenNotificationIds: [],
       notifications: sampleNotifications,
-      unreadCount: sampleNotifications.length,
+      readIds: this._initialReadNotifications(sampleNotifications),
       featuredNotification: this.featuredNotification()
     };
   }
@@ -117,31 +116,29 @@ class Playground extends React.Component {
     console.log("on notifications click", eventInfo);
   };
 
-  // setUnreadCount = () => {
-  //   const notificationProps = this.state.notifications;
-  //   const seenNotifications = this.state.seenNotificationIds;
-
-  //   if (notificationProps && notificationProps.length > 0) {
-  //     const newNotifications = notificationProps.map(
-  //       notification => notification.id
-  //     );
-
-  //     const unseenNotifications = newNotifications.filter(
-  //       notification => seenNotifications.indexOf(notification) === -1
-  //     );
-
-  //     this.setState({ unreadCount: unseenNotifications.length });
-  //   }
-  // };
+  onNotificationClick = notificationId => {
+    this.setState({
+      readIds: [...new Set([...this.state.readIds, notificationId])]
+    });
+  };
 
   toggleSideNav = () => {
     this.setState({ isSideNavOpen: !this.state.isSideNavOpen });
   };
 
+  transformedNotifications = notifications =>
+    notifications.map(notification =>
+      Object.assign({}, notification, {
+        onClick: this.onNotificationClick,
+        unread: !this.state.readIds.includes(notification.id)
+      })
+    );
+
   addNotification = () => {
     const newNotification = {
-      id: 3,
+      id: 1,
       unread: true,
+      onClick: this.onNotificationClick,
       children: () => (
         <div>
           <p>
@@ -159,7 +156,6 @@ class Playground extends React.Component {
 
   featuredNotification = () => ({
     id: 3,
-    unread: true,
     children: () => (
       <div>
         <p>
@@ -217,6 +213,12 @@ class Playground extends React.Component {
 
     this.setState({ searchOptions });
   };
+
+  _initialReadNotifications(notifications) {
+    return notifications
+      .filter(notification => notification.unread)
+      .map(notification => notification.id);
+  }
 
   render() {
     const helpProps = {
@@ -284,7 +286,7 @@ class Playground extends React.Component {
           console.log("notifications on click outside", event);
         },
         unreadCount: this.state.unreadCount,
-        notifications: this.state.notifications,
+        notifications: this.transformedNotifications(this.state.notifications),
         featuredNotification: this.state.featuredNotification
       }
     };
@@ -336,7 +338,6 @@ class Playground extends React.Component {
           title="Add notification"
           onClick={this.addNotification}
         />
-        {/* <NotificationsSection /> */}
         <ExpandingFilterSectionSection />
         <ActionBarSection />
         <ProgressBarSection />

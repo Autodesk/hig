@@ -18,8 +18,7 @@ class GlobalNav extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      sideNavOpen: this.props.sideNavOpenByDefault || false,
-      readIds: []
+      sideNavOpen: this.props.sideNavOpenByDefault || false
     };
   }
 
@@ -124,9 +123,9 @@ class GlobalNav extends Component {
                 {(this.props.topNav.notifications.notifications || []
                 ).map(notificationProps => (
                   <Notification
-                    unread={!this.state.readIds.includes(notificationProps.id)}
+                    unread={notificationProps.unread}
                     key={notificationProps.id}
-                    onClick={this.onNotificationClick}
+                    onClick={notificationProps.onClick}
                     id={notificationProps.id}
                     title={notificationProps.title}
                   >

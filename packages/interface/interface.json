@@ -1607,7 +1607,7 @@
                     "{Notification}, [ReferenceNotification] - (Optional) reference node for insertBefore "
                   ]
                 },
-                "setUnreadCount": {
+                "setUnseenCount": {
                   "desc": "Pass a value for number of notifications that are unread",
                   "params": [
                     "{Integer}, count for number of unread notifications "
