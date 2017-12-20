@@ -76,12 +76,6 @@ class Notifications extends Component {
             {this.props.featuredNotification.children instanceof Function
               ? this.props.featuredNotification.children()
               : this.props.featuredNotification.children}
-            <IconButtonAdapter
-              title="Dismiss"
-              icon="close-notification"
-              onClick={this.props.featuredNotification.onDismissed}
-              type="flat"
-            />
           </Notification>
         ) : null}
         {this.props.children}

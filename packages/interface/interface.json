@@ -1678,6 +1678,11 @@
                       "desc": "Calls the provided callback when user clicks on the notication",
                       "params": "HIG.abstract.EventObject.params",
                       "returns": "HIG.abstract.EventObject.returns"
+                    },
+                    "onFeaturedClick": {
+                      "desc": "Calls the provided callback when user clicks on the featured notication",
+                      "params": "HIG.abstract.EventObject.params",
+                      "returns": "HIG.abstract.EventObject.returns"
                     }
                   },
                   "defaults": {}

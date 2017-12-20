@@ -29,6 +29,11 @@ function NotificationAdapter(props) {
             handler={props.onClick}
             {...adapterProps}
           />
+          <MapsEventListener
+            listener="onFeaturedClick"
+            handler={props.onFeaturedClick}
+            {...adapterProps}
+          />
           <MapsPropToMethod value={props.unread} {...adapterProps}>
             {(instance, value) =>
               value ? instance.markUnread() : instance.markRead()}

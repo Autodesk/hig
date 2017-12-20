@@ -169,11 +169,11 @@ class Playground extends React.Component {
         <p>this is regular text</p>
       </div>
     ),
-    onDismissed: this.featuredNotificationDismissed
+    onFeaturedClick: this.featuredNotificationDismissed
   });
 
   featuredNotificationDismissed = _event => {
-    this.setState({ featuredNotification: null });
+    console.log("Feature notification dismissed");
   };
 
   navigate = id => {

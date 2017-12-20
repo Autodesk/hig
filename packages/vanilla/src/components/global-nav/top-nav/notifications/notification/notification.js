@@ -1,5 +1,6 @@
 import Interface from 'interface.json';
 import Core from '_core.js';
+import CSSTransition from 'helpers/js/css-transition';
 import Timestamp from 'basics/timestamp/timestamp';
 import RichText from 'basics/rich-text/rich-text';
 import IconButton from 'components/icon-button/icon-button';
@@ -24,8 +25,21 @@ class Notification extends Core {
   _componentDidMount() {
     this.timestamp = new Timestamp({});
     this.mountPartialToComment('TIMESTAMP', this.timestamp, this.el);
+    this.iconButton = new IconButton({
+      title: 'Dismiss',
+      icon: 'close-notification',
+      type: 'flat'
+    });
+    this.mountPartialToComment('BUTTON', this.iconButton, this.el);
     this.content = this._findDOMEl('.hig__notification__content', this.el);
     this.content.classList.add(RichText.className, RichText.smallClassName);
+    this.featuredNotificationAnimation = new CSSTransition({
+      el: this.el,
+      class: 'hig__notification',
+      enteringDuration: 300,
+      exitingDuration: 300
+    });
+    this.featuredNotificationAnimation.enter();
   }
 
   setContent(notification) {
@@ -54,6 +68,13 @@ class Notification extends Core {
 
   markRead() {
     this.el.classList.remove('hig__notification--unread');
+  }
+
+  onFeaturedClick(fn) {
+    this.iconButton.onClick(() => {
+      this.featuredNotificationAnimation.exit();
+      fn();
+    });
   }
 }
 
