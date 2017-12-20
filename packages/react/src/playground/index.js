@@ -74,7 +74,7 @@ const sampleNotifications = [
   },
   {
     id: 2,
-    unread: false,
+    unread: true,
     children: () => (
       <div>
         <p>
@@ -216,7 +216,7 @@ class Playground extends React.Component {
 
   _initialReadNotifications(notifications) {
     return notifications
-      .filter(notification => notification.unread)
+      .filter(notification => !notification.unread)
       .map(notification => notification.id);
   }
 

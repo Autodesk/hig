@@ -37,7 +37,7 @@ describe("<Notifications", () => {
       });
     });
 
-    describe("on opening the notifications", () => {
+    describe("on closing the notifications", () => {
       let wrapper;
       beforeEach(() => {
         wrapper = mount(
@@ -47,7 +47,7 @@ describe("<Notifications", () => {
           </Notifications>
         );
       });
-      it("shows unseen count of incoming notifications", () => {
+      it("resets unseen count of notifications", () => {
         wrapper.instance().onClick();
         expect(wrapper.find(NotificationsAdapter)).toHaveProp("unseenCount", 1);
         wrapper.instance().onClickOutside();
