@@ -11,5 +11,5 @@
     "react",
     "stage-2"
   ],
-  "plugins": []
+  "plugins": ["react-docgen"]
 }
