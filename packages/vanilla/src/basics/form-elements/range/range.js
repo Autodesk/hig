@@ -51,12 +51,18 @@ class Range extends Core {
 
   setMax(maxValue) {
     this._findDOMEl('.hig__range__field', this.el).setAttribute('max', maxValue);
-    this._findDOMEl('.hig__range__field__range-values', this.el).dataset.rangeMax = maxValue;
+    const dataset = this._findDOMEl('.hig__range__field__range-values', this.el).dataset;
+    if (dataset) {
+      dataset.rangeMax = maxValue;
+    }
   }
 
   setMin(minValue) {
     this._findDOMEl('.hig__range__field', this.el).setAttribute('min', minValue);
-    this._findDOMEl('.hig__range__field__range-values', this.el).dataset.rangeMin = minValue;
+    const dataset = this._findDOMEl('.hig__range__field__range-values', this.el).dataset;
+    if (dataset) {
+      dataset.rangeMin = minValue;
+    }
   }
 
   setStep(value) {
