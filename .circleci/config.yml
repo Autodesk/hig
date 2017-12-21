@@ -89,7 +89,7 @@ jobs:
           working_directory: packages/react
       - run:
           name: Run Tests (React)
-          command: yarn test --coverage --runInBand --colors
+          command: yarn test-ci
           working_directory: packages/react
   packages-deploy:
     <<: *defaults

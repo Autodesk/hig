@@ -63,7 +63,8 @@
     "lint-fix": "eslint ./src/** -c ./.eslintrc.js --fix",
     "playground": "react-scripts start",
     "start": "react-scripts start",
-    "test": "jest",
+    "test": "jest --watch",
+    "test-ci": "jest --coverage --runInBand --colors",
     "type-check": "tsc"
   },
   "dependencies": {
