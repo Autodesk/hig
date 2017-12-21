@@ -4,22 +4,6 @@ import { Tooltip as VanillaTooltip } from "hig-vanilla";
 import TooltipAdapter from "../../adapters/TooltipAdapter";
 
 class Tooltip extends Component {
-  static propTypes = {
-    anchorPoint: PropTypes.oneOf(VanillaTooltip.AvailableAnchorPoints),
-    children: PropTypes.node,
-    content: PropTypes.string
-  };
-
-  static __docgenInfo = {
-    props: {
-      anchorPoint: {
-        description: "where the tooltip will be anchored relative to target"
-      },
-      children: { description: "target component to open the tooltip" },
-      content: { description: "content for the tooltip" }
-    }
-  };
-
   constructor(props) {
     super(props);
     this.state = {
@@ -51,5 +35,21 @@ class Tooltip extends Component {
     );
   }
 }
+
+Tooltip.propTypes = {
+  anchorPoint: PropTypes.oneOf(VanillaTooltip.AvailableAnchorPoints),
+  children: PropTypes.node,
+  content: PropTypes.string
+};
+
+Tooltip.__docgenInfo = {
+  props: {
+    anchorPoint: {
+      description: "where the tooltip will be anchored relative to target"
+    },
+    children: { description: "target component to open the tooltip" },
+    content: { description: "content for the tooltip" }
+  }
+};
 
 export default Tooltip;

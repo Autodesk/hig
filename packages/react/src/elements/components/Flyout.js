@@ -4,24 +4,6 @@ import { Flyout as VanillaFlyout } from "hig-vanilla";
 import FlyoutAdapter from "../../adapters/FlyoutAdapter";
 
 class Flyout extends Component {
-  static propTypes = {
-    anchorPoint: PropTypes.oneOf(VanillaFlyout.AvailableAnchorPoints),
-    children: PropTypes.node,
-    content: PropTypes.node,
-    maxHeight: PropTypes.number
-  };
-
-  static __docgenInfo = {
-    props: {
-      anchorPoint: {
-        description: "where the flyout will be anchored relative to target"
-      },
-      children: { description: "target component to open the flyout" },
-      content: { description: "content for the flyout" },
-      maxHeight: { description: "max height of the flyout content, in pixels" }
-    }
-  };
-
   constructor(props) {
     super(props);
     this.state = {
@@ -54,5 +36,23 @@ class Flyout extends Component {
     );
   }
 }
+
+Flyout.propTypes = {
+  anchorPoint: PropTypes.oneOf(VanillaFlyout.AvailableAnchorPoints),
+  children: PropTypes.node,
+  content: PropTypes.node,
+  maxHeight: PropTypes.number
+};
+
+Flyout.__docgenInfo = {
+  props: {
+    anchorPoint: {
+      description: "where the flyout will be anchored relative to target"
+    },
+    children: { description: "target component to open the flyout" },
+    content: { description: "content for the flyout" },
+    maxHeight: { description: "max height of the flyout content, in pixels" }
+  }
+};
 
 export default Flyout;
