@@ -63,29 +63,10 @@
     "lint-fix": "eslint ./src/** -c ./.eslintrc.js --fix",
     "playground": "react-scripts start",
     "start": "react-scripts start",
-    "test": "react-scripts test --env=jsdom",
+    "test": "jest",
     "type-check": "tsc"
   },
   "dependencies": {
     "hig-vanilla": "^0.1.15"
-  },
-  "jest": {
-    "collectCoverageFrom": [
-      "!src/index.js",
-      "src/**/*.{js,jsx}",
-      "!src/**/*.story.{js,jsx}",
-      "!src/fixtures/**/*",
-      "!src/stories/**/*",
-      "!src/playground/**/*",
-      "!**/node_modules/**"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "branches": 60,
-        "functions": 60,
-        "lines": 60,
-        "statements": 60
-      }
-    }
   }
 }
