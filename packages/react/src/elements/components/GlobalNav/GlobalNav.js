@@ -22,12 +22,6 @@ class GlobalNav extends Component {
     };
   }
 
-  onNotificationClick = notificationId => {
-    this.setState({
-      readIds: [...new Set([...this.state.readIds, notificationId])]
-    });
-  };
-
   handleHamburgerClick = event => {
     this.props.onHamburgerClick(event);
     this.setState({ sideNavOpen: !this.state.sideNavOpen });

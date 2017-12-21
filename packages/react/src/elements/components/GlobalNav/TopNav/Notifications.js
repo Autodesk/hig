@@ -138,7 +138,8 @@ Notifications.propTypes = {
   onClick: PropTypes.func,
   onClickOutside: PropTypes.func,
   onScroll: PropTypes.func,
-  title: PropTypes.string
+  title: PropTypes.string,
+  featuredNotification: PropTypes.shape(Notification.propTypes)
 };
 
 Notifications.defaultProps = {
@@ -185,6 +186,10 @@ Notifications.__docgenInfo = {
     },
     title: {
       description: "The title text that renders above the notifications list"
+    },
+    featuredNotification: {
+      description:
+        "An object containing props for a Notification, to be styled as a featured notification"
     }
   }
 };
