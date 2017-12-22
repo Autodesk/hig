@@ -285,6 +285,7 @@ class Playground extends React.Component {
         onClickOutside: event => {
           console.log("notifications on click outside", event);
         },
+        onScroll: event => console.log("Notifications scrolling: ", event),
         unreadCount: this.state.unreadCount,
         notifications: this.transformedNotifications(this.state.notifications),
         featuredNotification: this.state.featuredNotification

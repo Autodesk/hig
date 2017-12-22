@@ -33,6 +33,8 @@ export default class Notifications extends Component {
     }
   };
 
+  onScroll = event => this.props.onScroll && this.props.onScroll(event);
+
   onClick = event => {
     if (this.props.onClick) {
       this.props.onClick({
@@ -107,6 +109,7 @@ export default class Notifications extends Component {
         {...this.props}
         onClick={this.onClick}
         onClickOutside={this.onClickOutside}
+        onScroll={this.onScroll}
         open={this.state.open}
         unseenCount={this._setUnseenCount()}
         showUnreadBadge={false}
