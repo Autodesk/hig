@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-import * as PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import { Container, H3, Spacer } from "../hig-react";
 
 class PlaygroundSection extends PureComponent {

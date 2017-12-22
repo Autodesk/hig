@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import TextLinkAdapter from "../../adapters/TextLinkAdapter";
 
-class ShowMoreLess extends Component {
+export default class ShowMoreLess extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -68,23 +68,16 @@ ShowMoreLess.defaultProps = {
 };
 
 ShowMoreLess.propTypes = {
+  /**
+   * {Number} Max height for content container
+   */
   maxHeight: PropTypes.number,
+  /**
+   * {String} content for label in expanded content container
+   */
   showLessLabel: PropTypes.string,
+  /**
+   * {String} content for label in collapsed content container
+   */
   showMoreLabel: PropTypes.string
 };
-
-ShowMoreLess.__docgenInfo = {
-  props: {
-    maxHeight: {
-      description: "{Number} Max height for content container"
-    },
-    showLessLabel: {
-      description: "{String} content for label in expanded content container"
-    },
-    showMoreLabel: {
-      description: "{String} content for label in collapsed content container"
-    }
-  }
-};
-
-export default ShowMoreLess;

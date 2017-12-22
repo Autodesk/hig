@@ -1,55 +1,45 @@
-import React from "react";
+import React, { Component } from "react";
 import { Table as VanillaTable } from "hig-vanilla";
-import * as PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import HIGAdapter, {
   MapsPropToMethod,
   MountsAnyChild,
   MountedByHIGParentList
 } from "../HIGAdapter";
 
-function SlotHeadCellAdapter(props) {
-  return (
-    <HIGAdapter
-      {...props}
-      displayName="Slot"
-      HIGConstructor={VanillaTable._partials.TableHead._partials.SlotHeadCell}
-    >
-      {adapterProps => (
-        <div>
-          <MapsPropToMethod
-            value={props.width}
-            setter="setWidth"
-            {...adapterProps}
-          />
-          <MountedByHIGParentList mounter="addCell" {...adapterProps} />
-          <MountsAnyChild mounter="addSlot" {...adapterProps}>
-            {props.children}
-          </MountsAnyChild>
-        </div>
-      )}
-    </HIGAdapter>
-  );
+export default class SlotHeadCellAdapter extends Component {
+  render() {
+    return (
+      <HIGAdapter
+        {...this.props}
+        displayName="Slot"
+        HIGConstructor={VanillaTable._partials.TableHead._partials.SlotHeadCell}
+      >
+        {adapterProps => (
+          <div>
+            <MapsPropToMethod
+              value={this.props.width}
+              setter="setWidth"
+              {...adapterProps}
+            />
+            <MountedByHIGParentList mounter="addCell" {...adapterProps} />
+            <MountsAnyChild mounter="addSlot" {...adapterProps}>
+              {this.props.children}
+            </MountsAnyChild>
+          </div>
+        )}
+      </HIGAdapter>
+    );
+  }
 }
 
 SlotHeadCellAdapter.propTypes = {
+  /**
+   * Content for slot cell
+   */
   children: PropTypes.node,
+  /**
+   * Sets {String} width of the cell
+   */
   width: PropTypes.string
 };
-
-SlotHeadCellAdapter.defaultProps = {
-  children: undefined,
-  width: undefined
-};
-
-SlotHeadCellAdapter.__docgenInfo = {
-  props: {
-    children: {
-      description: "content for slot cell"
-    },
-    width: {
-      description: "sets {String} width of the cell"
-    }
-  }
-};
-
-export default SlotHeadCellAdapter;

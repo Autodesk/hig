@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import * as PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import SideNavAdapter from "../../../../adapters/GlobalNav/SideNav/SideNavAdapter";
 import Submodule from "./Submodule";
 import Group from "../../../../adapters/GlobalNav/SideNav/GroupAdapter";

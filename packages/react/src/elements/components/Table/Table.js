@@ -1,5 +1,5 @@
 import { Table as VanillaTable } from "hig-vanilla";
-import * as PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import React, { Component } from "react";
 import TableAdapter from "../../../adapters/Table/TableAdapter";
 import TableHeadAdapter from "../../../adapters/Table/TableHeadAdapter";
@@ -51,18 +51,13 @@ function getHeadCell(props) {
   );
 }
 
-class Table extends Component {
+export default class Table extends Component {
   static defaultProps = {
     columns: [],
     data: [],
     selectable: false,
     density: undefined
   };
-
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
 
   renderTable(columns, data, density) {
     return (
@@ -106,6 +101,9 @@ class Table extends Component {
 }
 
 Table.propTypes = {
+  /**
+   * Provides content for header cells
+   */
   columns: PropTypes.arrayOf(
     PropTypes.shape({
       Header: PropTypes.string,
@@ -115,33 +113,24 @@ Table.propTypes = {
       Cell: PropTypes.any
     })
   ),
+  /**
+   * Provides content table cells
+   */
   data: PropTypes.arrayOf(PropTypes.object),
+  /**
+   * Sets the size of the table
+   */
   density: PropTypes.oneOf(VanillaTable.AvailableDensities),
+  /**
+   * Called when user selects or deselects a row
+   */
+  onRowSelectionChange: PropTypes.func,
+  /**
+   * Called when user checks or unchecks the select-all checkbox
+   */
+  onSelectAllSelectionChange: PropTypes.func,
+  /**
+   * When true, adds checkboxes to each row, and a select-all checkbox to the header
+   */
   selectable: PropTypes.bool
 };
-
-Table.__docgenInfo = {
-  props: {
-    columns: {
-      description: "provides content for header cells"
-    },
-    data: {
-      description: "provides content table cells"
-    },
-    density: {
-      description: "sets the size of the table"
-    },
-    onRowSelectionChange: {
-      description: "called when user selects or deselects a row"
-    },
-    onSelectAllSelectionChange: {
-      description: "called when user checks or unchecks the select-all checkbox"
-    },
-    selectable: {
-      description:
-        "when true adds checkboxes to each row, and a select-all checkbox to the header"
-    }
-  }
-};
-
-export default Table;

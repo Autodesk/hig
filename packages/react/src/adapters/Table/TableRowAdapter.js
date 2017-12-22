@@ -1,6 +1,6 @@
 import React from "react";
 import { Table as VanillaTable } from "hig-vanilla";
-import * as PropTypes from "prop-types";
+import PropTypes from "prop-types";
 
 import HIGAdapter, {
   MapsPropToMethod,

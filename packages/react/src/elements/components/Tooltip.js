@@ -1,9 +1,9 @@
-import * as PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { Tooltip as VanillaTooltip } from "hig-vanilla";
 import TooltipAdapter from "../../adapters/TooltipAdapter";
 
-class Tooltip extends Component {
+export default class Tooltip extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -37,19 +37,16 @@ class Tooltip extends Component {
 }
 
 Tooltip.propTypes = {
+  /**
+   * Where the tooltip will be anchored relative to target
+   */
   anchorPoint: PropTypes.oneOf(VanillaTooltip.AvailableAnchorPoints),
+  /**
+   * Target component to open the tooltip
+   */
   children: PropTypes.node,
+  /**
+   * Content for the tooltip
+   */
   content: PropTypes.string
 };
-
-Tooltip.__docgenInfo = {
-  props: {
-    anchorPoint: {
-      description: "where the tooltip will be anchored relative to target"
-    },
-    children: { description: "target component to open the tooltip" },
-    content: { description: "content for the tooltip" }
-  }
-};
-
-export default Tooltip;
