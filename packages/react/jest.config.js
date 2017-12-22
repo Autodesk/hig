@@ -9,15 +9,15 @@ module.exports = {
     "!**/node_modules/**"
   ],
   coverageThreshold: {
-    "global": {
-      "branches": 60,
-      "functions": 60,
-      "lines": 60,
-      "statements": 60
+    global: {
+      branches: 60,
+      functions: 60,
+      lines: 60,
+      statements: 60
     }
   },
   modulePaths: ["node_modules", "<rootDir>/src"],
   moduleFileExtensions: ["js", "jsx", "json"],
-  setupTestFrameworkScriptFile: "<rootDir>/src/setupTests.js",
+  setupTestFrameworkScriptFile: "<rootDir>/support/setupTests.js",
   unmockedModulePathPatterns: ["<rootDir>/node_modules"]
 };

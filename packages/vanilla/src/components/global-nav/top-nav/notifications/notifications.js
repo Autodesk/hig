@@ -77,7 +77,7 @@ class Notifications extends Core {
   }
 
   onScroll(fn) {
-    return this.flyout.onScroll(fn);
+    return this.list.onScroll(fn);
   }
 
   setLoading() {

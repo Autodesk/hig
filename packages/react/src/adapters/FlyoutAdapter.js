@@ -31,11 +31,6 @@ function FlyoutAdapter(props) {
             handler={props.onClickOutside}
             {...adapterProps}
           />
-          <MapsEventListener
-            listener="onScroll"
-            handler={props.onScroll}
-            {...adapterProps}
-          />
           <MountsAnyChild mounter="addTarget" {...adapterProps}>
             {props.children}
           </MountsAnyChild>

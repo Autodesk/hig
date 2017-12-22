@@ -81,15 +81,6 @@ class Flyout extends Core {
     );
   }
 
-  onScroll(fn) {
-    return this._attachListener(
-      'scroll',
-      this.flyoutContent,
-      this.el,
-      fn
-    );
-  }
-
   addSlot(slotElement) {
     this.mountPartialToComment('SLOT', slotElement);
   }
