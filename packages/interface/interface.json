@@ -66,11 +66,6 @@
           "params": "HIG.abstract.EventObject.params",
           "returns": "HIG.abstract.EventObject.returns"
         },
-        "onScroll": {
-          "desc": "Calls the provided callback when the flyout content is scrolled",
-          "params": "HIG.abstract.EventObject.params",
-          "returns": "HIG.abstract.EventObject.returns"
-        },
         "open": {
           "desc": "opens the flyout"
         },

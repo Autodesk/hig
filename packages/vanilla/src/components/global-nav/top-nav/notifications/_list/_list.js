@@ -50,11 +50,21 @@ class List extends Core {
       this.listContent.style.maxHeight = `${maxHeight}px`;
     }
   }
+
+  onScroll(fn) {
+    return this._attachListener(
+      'scroll',
+      this.listContent,
+      this.el,
+      fn
+    );
+  }
 }
 
 List._interface = {
   methods: {
     addItem: {},
+    onScroll: {},
     setLoading: {},
     setNotLoading: {},
     setTitle: {},
