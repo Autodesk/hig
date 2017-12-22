@@ -13,6 +13,7 @@ class Notification extends Component {
   }
 
   onClick = () => {
+    this.setState({ unread: false });
     this.props.onClick(this.props.id);
   };
 
@@ -22,7 +23,7 @@ class Notification extends Component {
         {...this.props}
         onClick={this.onClick}
         id={this.props.id}
-        unread={this.props.unread}
+        unread={this.state.unread}
       >
         {this.props.children}
       </NotificationAdapter>
@@ -50,7 +51,7 @@ Notification.__docgenInfo = {
       description: "Id for the notification"
     },
     unread: {
-      description: "{Boolean} to show specify whether notificaiton is read"
+      description: "{Boolean} initializes whether the notification is read"
     },
     children: {
       description: "content for notification"
