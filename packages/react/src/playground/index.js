@@ -98,7 +98,8 @@ class Playground extends React.Component {
       seenNotificationIds: [],
       notifications: sampleNotifications,
       readIds: this._initialReadNotifications(sampleNotifications),
-      featuredNotification: this.featuredNotification()
+      featuredNotification: this.featuredNotification(),
+      notificationsLoading: false
     };
   }
 
@@ -114,6 +115,14 @@ class Playground extends React.Component {
 
   onNotificationsClick = eventInfo => {
     console.log("on notifications click", eventInfo);
+  };
+
+  onNotificationsScroll = eventInfo => {
+    if (eventInfo.percentageScrolled > 0.5) {
+      this.setState({ notificationsLoading: true }, () =>
+        setTimeout(() => this.setState({ notificationsLoading: false }), 3000)
+      );
+    }
   };
 
   onNotificationClick = notificationId => {
@@ -285,10 +294,11 @@ class Playground extends React.Component {
         onClickOutside: event => {
           console.log("notifications on click outside", event);
         },
-        onScroll: event => console.log("Notifications scrolling: ", event),
+        onScroll: this.onNotificationsScroll,
         unreadCount: this.state.unreadCount,
         notifications: this.transformedNotifications(this.state.notifications),
-        featuredNotification: this.state.featuredNotification
+        featuredNotification: this.state.featuredNotification,
+        loading: this.state.notificationsLoading
       }
     };
 

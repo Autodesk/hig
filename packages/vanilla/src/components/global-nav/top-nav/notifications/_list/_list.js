@@ -42,6 +42,9 @@ class List extends Core {
   }
 
   setNotLoading() {
+    if (!this.loading) {
+      return;
+    }
     this.loading.unmount();
     this.loading = undefined;
   }
