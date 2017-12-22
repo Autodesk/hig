@@ -129,8 +129,7 @@ class Playground extends React.Component {
   transformedNotifications = notifications =>
     notifications.map(notification =>
       Object.assign({}, notification, {
-        onClick: this.onNotificationClick,
-        unread: !this.state.readIds.includes(notification.id)
+        onClick: this.onNotificationClick
       })
     );
 
