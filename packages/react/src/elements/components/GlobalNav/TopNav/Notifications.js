@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import NotificationsAdapter from "../../../../adapters/GlobalNav/TopNav/NotificationsAdapter";
 import Notification from "./Notification";
 
-class Notifications extends Component {
+export default class Notifications extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -131,14 +131,41 @@ class Notifications extends Component {
 }
 
 Notifications.propTypes = {
+  /**
+   * Opens the notifications flyout
+   */
   open: PropTypes.bool,
+  /**
+   * Show the loading indicator
+   */
   loading: PropTypes.bool,
+  /**
+   * Whether to show number of notifications or not
+   */
   showUnreadBadge: PropTypes.bool,
+  /**
+   * Number of unread messages
+   */
   unreadCount: PropTypes.number,
+  /**
+   * Calls the provided callback when user clicks on the notifications icon in the top nav
+   */
   onClick: PropTypes.func,
+  /**
+   * Calls the provided callback when user clicks outside the dropdown
+   */
   onClickOutside: PropTypes.func,
+  /**
+   * Calls the provided callback when the notifications content is scrolled
+   */
   onScroll: PropTypes.func,
+  /**
+   * The title text that renders above the notifications list
+   */
   title: PropTypes.string,
+  /**
+   * An object containing props for a Notification, to be styled as a featured notification
+   */
   featuredNotification: PropTypes.shape(Notification.propTypes)
 };
 
@@ -148,50 +175,3 @@ Notifications.defaultProps = {
   onScroll: () => {},
   title: "Notifications"
 };
-
-Notifications.__docgenInfo = {
-  props: {
-    open: {
-      description: "opens the notifications flyout"
-    },
-    addNotification: {
-      description: "Pass in an instance of a Notification"
-    },
-    setUnseenCount: {
-      description: "Pass a value for number of notifications that are unread"
-    },
-    onClickOutside: {
-      description:
-        "Calls the provided callback when user clicks outside the dropdown"
-    },
-    onClick: {
-      description:
-        "Calls the provided callback when user clicks on the notifications icon in the top nav"
-    },
-    onScroll: {
-      description:
-        "Calls the provided callback when the notifications content is scrolled"
-    },
-    showUnreadBadge: {
-      description: "Boolean on whether to show number of notifications or not"
-    },
-    unreadCount: {
-      description: "number of unreadmessages"
-    },
-    loading: {
-      description: "show the loading indicator"
-    },
-    maxHeight: {
-      description: "the max height of the flyout content, in pixels"
-    },
-    title: {
-      description: "The title text that renders above the notifications list"
-    },
-    featuredNotification: {
-      description:
-        "An object containing props for a Notification, to be styled as a featured notification"
-    }
-  }
-};
-
-export default Notifications;

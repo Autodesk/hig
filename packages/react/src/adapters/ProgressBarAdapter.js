@@ -1,37 +1,31 @@
-import React from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { ProgressBar } from "hig-vanilla";
 import HIGAdapter, { MapsPropToMethod } from "./HIGAdapter";
 
-function ProgressBarAdapter(props) {
-  return (
-    <HIGAdapter
-      {...props}
-      displayName="ProgressBar"
-      HIGConstructor={ProgressBar}
-    >
-      {higProps => (
-        <MapsPropToMethod
-          value={props.percentComplete}
-          setter="setPercentComplete"
-          {...higProps}
-        />
-      )}
-    </HIGAdapter>
-  );
+export default class ProgressBarAdapter extends Component {
+  render() {
+    return (
+      <HIGAdapter
+        {...this.props}
+        displayName="ProgressBar"
+        HIGConstructor={ProgressBar}
+      >
+        {higProps => (
+          <MapsPropToMethod
+            value={this.props.percentComplete}
+            setter="setPercentComplete"
+            {...higProps}
+          />
+        )}
+      </HIGAdapter>
+    );
+  }
 }
 
 ProgressBarAdapter.propTypes = {
+  /**
+   * An integer from 0 to 100 representing the percent the delayed operation has completed
+   */
   percentComplete: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 };
-
-ProgressBarAdapter.__docgenInfo = {
-  props: {
-    percentComplete: {
-      description:
-        "An integer from 0 to 100 representing the percent the delayed operation has completed"
-    }
-  }
-};
-
-export default ProgressBarAdapter;

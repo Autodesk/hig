@@ -1,27 +1,9 @@
-import * as PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { Flyout as VanillaFlyout } from "hig-vanilla";
 import FlyoutAdapter from "../../adapters/FlyoutAdapter";
 
-class Flyout extends Component {
-  static propTypes = {
-    anchorPoint: PropTypes.oneOf(VanillaFlyout.AvailableAnchorPoints),
-    children: PropTypes.node,
-    content: PropTypes.node,
-    maxHeight: PropTypes.number
-  };
-
-  static __docgenInfo = {
-    props: {
-      anchorPoint: {
-        description: "where the flyout will be anchored relative to target"
-      },
-      children: { description: "target component to open the flyout" },
-      content: { description: "content for the flyout" },
-      maxHeight: { description: "max height of the flyout content, in pixels" }
-    }
-  };
-
+export default class Flyout extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -55,4 +37,21 @@ class Flyout extends Component {
   }
 }
 
-export default Flyout;
+Flyout.propTypes = {
+  /**
+   * Where the flyout will be anchored relative to target
+   */
+  anchorPoint: PropTypes.oneOf(VanillaFlyout.AvailableAnchorPoints),
+  /**
+   * Target component to open the flyout
+   */
+  children: PropTypes.node,
+  /**
+   * Content for the flyout
+   */
+  content: PropTypes.node,
+  /**
+   * Max height of the flyout content, in pixels
+   */
+  maxHeight: PropTypes.number
+};

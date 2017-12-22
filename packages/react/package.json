@@ -26,7 +26,7 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.1",
-    "babel-plugin-react-docgen": "^1.7.0",
+    "babel-plugin-react-docgen": "^1.8.1",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
@@ -63,29 +63,11 @@
     "lint-fix": "eslint ./src/** -c ./.eslintrc.js --fix",
     "playground": "react-scripts start",
     "start": "react-scripts start",
-    "test": "react-scripts test --env=jsdom",
+    "test": "jest --watch",
+    "test-ci": "jest --coverage --runInBand --colors",
     "type-check": "tsc"
   },
   "dependencies": {
     "hig-vanilla": "^0.1.15"
-  },
-  "jest": {
-    "collectCoverageFrom": [
-      "!src/index.js",
-      "src/**/*.{js,jsx}",
-      "!src/**/*.story.{js,jsx}",
-      "!src/fixtures/**/*",
-      "!src/stories/**/*",
-      "!src/playground/**/*",
-      "!**/node_modules/**"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "branches": 60,
-        "functions": 60,
-        "lines": 60,
-        "statements": 60
-      }
-    }
   }
 }

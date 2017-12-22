@@ -45,7 +45,7 @@ Read [DEVELOPING](DEVELOPING.md) for more information about how to develop withi
 	- Ensure changes are tested
 	- Add to the playground for manual testing if needed
 	- Ensure branch meets testing, coverage, and linting standards
-		- `yarn test --coverage`
+		- `yarn test-ci`
 		- `yarn lint`
 
 #### Create a pull request

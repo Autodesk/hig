@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { ExpandingFilterSection as VanillaExpandingFilterSection } from "hig-vanilla";
 import ExpandingFilterSectionAdapter from "../../adapters/ExpandingFilterSectionAdapter";
 
-class ExpandingFilterSection extends Component {
+export default class ExpandingFilterSection extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -28,23 +28,16 @@ class ExpandingFilterSection extends Component {
 }
 
 ExpandingFilterSection.propTypes = {
+  /**
+   * Content to be shown when section is open
+   */
   children: PropTypes.node,
+  /**
+   * Short text describing the content
+   */
   label: PropTypes.string,
+  /**
+   * {s, m} size of the expanding filter section label
+   */
   size: PropTypes.oneOf(VanillaExpandingFilterSection.AvailableSizes)
 };
-
-ExpandingFilterSection.__docgenInfo = {
-  props: {
-    children: {
-      description: "Content to be shown when section is open"
-    },
-    label: {
-      description: "Short text describing the content"
-    },
-    size: {
-      description: "{s, m} size of the expanding fitler section label"
-    }
-  }
-};
-
-export default ExpandingFilterSection;
