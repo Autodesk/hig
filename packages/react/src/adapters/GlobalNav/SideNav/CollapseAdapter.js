@@ -26,7 +26,8 @@ function ModuleAdapter(props) {
           />
           <MapsPropToMethod value={props.minimized} {...adapterProps}>
             {(instance, value) =>
-              value ? instance.minimize() : instance.maximize()}
+              value ? instance.minimize() : instance.maximize()
+            }
           </MapsPropToMethod>
           <MapsPropToMethod value={props.hidden} {...adapterProps}>
             {(instance, value) => (value ? instance.hide() : instance.show())}

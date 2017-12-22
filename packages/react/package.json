@@ -58,7 +58,7 @@
     "build-playground": "react-scripts build",
     "deploy-playground": "react-scripts build && surge build",
     "generate-docs": "node ./scripts/generate-docs.js",
-    "lib": "npm run babel && NODE_ENV=production webpack -p",
+    "lib": "yarn babel && NODE_ENV=production webpack -p",
     "lint": "eslint ./src/** -c ./.eslintrc.js",
     "lint-fix": "eslint ./src/** -c ./.eslintrc.js --fix",
     "playground": "react-scripts start",

@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "build-icons": "node src/basics/icons/build/build.js",
-    "deploy": "npm run lib && surge .",
+    "deploy": "yarn lib && surge .",
     "dev-server": "webpack-dev-server --open --config webpack.dev.js",
     "gemini": "concurrently 'http-server' 'gemini test dev/gemini/*' --kill-others",
     "gemini-ci": "gemini test dev/gemini/* --reporter html --reporter flat",
@@ -20,7 +20,7 @@
     "lib": "webpack -p --config webpack.prod.js",
     "lint": "eslint --ext .jsx,.js dev src",
     "lint-fix": "eslint --ext .jsx,.js dev src --fix",
-    "test": "npm run gemini",
+    "test": "yarn gemini",
     "watch": "webpack --watch --config webpack.dev.js"
   },
   "repository": {

@@ -24,16 +24,19 @@ function OptionAdapter(props) {
           />
           <MapsPropToMethod value={props.selected} {...adapterProps}>
             {(instance, value) =>
-              value ? instance.select() : instance.deselect()}
+              value ? instance.select() : instance.deselect()
+            }
           </MapsPropToMethod>
 
           <MapsPropToMethod value={props.checked} {...adapterProps}>
             {(instance, value) =>
-              value ? instance.check() : instance.uncheck()}
+              value ? instance.check() : instance.uncheck()
+            }
           </MapsPropToMethod>
           <MapsPropToMethod value={props.focused} {...adapterProps}>
             {(instance, value) =>
-              value ? instance.focus() : instance.unfocus()}
+              value ? instance.focus() : instance.unfocus()
+            }
           </MapsPropToMethod>
           <MapsEventListener
             listener="onHover"

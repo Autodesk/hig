@@ -4,10 +4,10 @@ React components for the HIG
 
 ## Consume
 
-This project uses [node](http://nodejs.org) and [npm](https://npmjs.com). Go check them out if you don't have them locally installed.
+This project uses [node](http://nodejs.org) and [yarn](https://yarnpkg.com). Go check them out if you don't have them locally installed.
 
 ```sh
-$ npm install --save hig-react
+$ yarn add hig-react
 ```
 
 Then with a module bundler like [rollup](http://rollupjs.org/) or [webpack](https://webpack.js.org/), use as you would anything else:

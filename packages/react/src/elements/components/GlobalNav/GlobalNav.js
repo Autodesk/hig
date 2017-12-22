@@ -114,20 +114,21 @@ class GlobalNav extends Component {
             ) : null}
             {this.showNotifications() ? (
               <Notifications {...this.props.topNav.notifications}>
-                {(this.props.topNav.notifications.notifications || []
-                ).map(notificationProps => (
-                  <Notification
-                    unread={notificationProps.unread}
-                    key={notificationProps.id}
-                    onClick={notificationProps.onClick}
-                    id={notificationProps.id}
-                    title={notificationProps.title}
-                  >
-                    {notificationProps.children instanceof Function
-                      ? notificationProps.children()
-                      : notificationProps.children}
-                  </Notification>
-                ))}
+                {(this.props.topNav.notifications.notifications || []).map(
+                  notificationProps => (
+                    <Notification
+                      unread={notificationProps.unread}
+                      key={notificationProps.id}
+                      onClick={notificationProps.onClick}
+                      id={notificationProps.id}
+                      title={notificationProps.title}
+                    >
+                      {notificationProps.children instanceof Function
+                        ? notificationProps.children()
+                        : notificationProps.children}
+                    </Notification>
+                  )
+                )}
               </Notifications>
             ) : null}
           </TopNavAdapter>

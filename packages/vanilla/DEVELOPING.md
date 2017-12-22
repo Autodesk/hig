@@ -3,8 +3,8 @@
 So you want to help out? Great! Let's get you up and running:
 
 ```bash
-npm install
-npm run dev-server
+yarn
+yarn dev-server
 ```
 
 ## Writing a new component
@@ -26,18 +26,18 @@ src/components/component123_parent/component123/component123.js
 To add a new svg icon to our stack, simply add the `svg` file to the [src/basics/icons/src](src/basics/icons/src) directory.
 Next run the following command:
 ```bash
-npm run build-icons
+yarn build-icons
 ```
 which will trigger our build script to create an updated release file in [src/basics/icons/release](src/basics/icons/release). The build script in itself simply does a `SVGO` optimize of the svg, and stores the optimized svg as a string in a key-value object in our release file, read more about the script here: [src/basics/icons/build/build.js](src/basics/icons/build/build.js).
 
 # Visual Regression Tests
 
 1. Create a local file called `.env` and contact someone on the `#orion-hig-web-dev` slack channel for credentials. You'll need a `SAUCE_USERNAME=xxxxx` and a `SAUCE_ACCESS_KEY=xxxxx`
-1. Run the gemini tests and generate a report: `$ npm run gemini-report`
+1. Run the gemini tests and generate a report: `$ yarn gemini-report`
 1. View the report: `$ open ./gemini-report/index.html`
 
 ## Adding a Test / Updating a Test Snapshot
 
 1. Create your gemini test files: the HTML skeleton and actual test file at `dev/gemini/[your-component]-test.js`.
-1. Run `npm run gemini-update` to generate the snapshot.
+1. Run `yarn gemini-update` to generate the snapshot.
 1. Commit the screenshot as part of your feature branch.
