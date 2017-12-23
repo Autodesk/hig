@@ -61,6 +61,7 @@ const sampleNotifications = [
     id: 1,
     unread: true,
     children: () => (
+      <a href="https://www.google.com">
       <div>
         <p>This is our first notification</p>
         <div>
@@ -70,6 +71,7 @@ const sampleNotifications = [
           />
         </div>
       </div>
+    </a>
     )
   },
   {
