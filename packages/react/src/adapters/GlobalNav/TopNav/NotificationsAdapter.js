@@ -25,8 +25,7 @@ function NotificationsAdapter(props) {
           />
           <MapsPropToMethod value={props.loading} {...adapterProps}>
             {(instance, value) =>
-              value ? instance.setLoading() : instance.setNotLoading()
-            }
+              value ? instance.setLoading() : instance.setNotLoading()}
           </MapsPropToMethod>
 
           <MapsPropToMethod
@@ -36,8 +35,7 @@ function NotificationsAdapter(props) {
             {(instance, value) =>
               value
                 ? instance.showNotificationsCount()
-                : instance.hideNotificationsCount()
-            }
+                : instance.hideNotificationsCount()}
           </MapsPropToMethod>
 
           <MapsPropToMethod

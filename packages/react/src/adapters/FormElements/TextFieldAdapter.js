@@ -72,21 +72,18 @@ export default class TextFieldAdapter extends Component {
             />
             <MapsPropToMethod value={this.props.disabled} {...adapterProps}>
               {(instance, value) =>
-                value ? instance.disable() : instance.enable()
-              }
+                value ? instance.disable() : instance.enable()}
             </MapsPropToMethod>
             <MapsPropToMethod value={this.props.required} {...adapterProps}>
               {(instance, value) =>
-                value ? instance.required(value) : instance.noLongerRequired()
-              }
+                value ? instance.required(value) : instance.noLongerRequired()}
             </MapsPropToMethod>
             <MapsPropToMethod
               value={this.props.showClearButton}
               {...adapterProps}
             >
               {(instance, value) =>
-                value ? instance.showClearButton() : instance.hideClearButton()
-              }
+                value ? instance.showClearButton() : instance.hideClearButton()}
             </MapsPropToMethod>
           </div>
         )}

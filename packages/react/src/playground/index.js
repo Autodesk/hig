@@ -62,16 +62,16 @@ const sampleNotifications = [
     unread: true,
     children: () => (
       <a href="https://www.google.com">
-      <div>
-        <p>This is our first notification</p>
         <div>
-          <TextLink
-            href="https://github.com/Autodesk/hig"
-            text="This is a primary text link"
-          />
+          <p>This is our first notification</p>
+          <div>
+            <TextLink
+              href="https://github.com/Autodesk/hig"
+              text="This is a primary text link"
+            />
+          </div>
         </div>
-      </div>
-    </a>
+      </a>
     )
   },
   {

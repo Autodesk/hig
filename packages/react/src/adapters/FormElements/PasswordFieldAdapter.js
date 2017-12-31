@@ -70,18 +70,15 @@ function PasswordFieldAdapter(props) {
           />
           <MapsPropToMethod value={props.disabled} {...adapterProps}>
             {(instance, value) =>
-              value ? instance.disable() : instance.enable()
-            }
+              value ? instance.disable() : instance.enable()}
           </MapsPropToMethod>
           <MapsPropToMethod value={props.required} {...adapterProps}>
             {(instance, value) =>
-              value ? instance.required(value) : instance.noLongerRequired()
-            }
+              value ? instance.required(value) : instance.noLongerRequired()}
           </MapsPropToMethod>
           <MapsPropToMethod value={props.revealPassword} {...adapterProps}>
             {(instance, value) =>
-              value ? instance.revealPassword() : instance.hidePassword()
-            }
+              value ? instance.revealPassword() : instance.hidePassword()}
           </MapsPropToMethod>
           <MapsPropToMethod
             value={props.showPasswordHideButton}
@@ -90,8 +87,7 @@ function PasswordFieldAdapter(props) {
             {(instance, value) =>
               value
                 ? instance.showPasswordHideButton()
-                : instance.hidePasswordHideButton()
-            }
+                : instance.hidePasswordHideButton()}
           </MapsPropToMethod>
           <MapsPropToMethod
             value={props.showPasswordRevealButton}
@@ -100,8 +96,7 @@ function PasswordFieldAdapter(props) {
             {(instance, value) =>
               value
                 ? instance.showPasswordRevealButton()
-                : instance.hidePasswordRevealButton()
-            }
+                : instance.hidePasswordRevealButton()}
           </MapsPropToMethod>
         </div>
       )}
