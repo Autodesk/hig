@@ -283,7 +283,6 @@ class Playground extends React.Component {
       searchOptions: this.state.searchOptions,
       searchValue: this.state.searchValue,
       help: helpProps,
-      hideHamburgerButton: true,
       logo,
       onLogoClick() {
         console.log("Logo clicked");
@@ -340,7 +339,6 @@ class Playground extends React.Component {
         topNav={topNavProps}
         activeModuleId={this.state.activeModuleId}
         showSubNav
-        sideNavOpen
         isSideNavOpen={this.state.isSideNavOpen}
         onHamburgerClick={this.toggleSideNav}
       >

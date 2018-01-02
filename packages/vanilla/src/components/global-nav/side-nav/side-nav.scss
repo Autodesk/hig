@@ -11,17 +11,16 @@ $hig__global-nav__sidenav--width: 280px;
   @include reset;
   position: fixed;
   top: 0;
-  left: 0;
+  left: $hig__global-nav__sidenav--width * -1; // Hide offscreen by default
   bottom: 0;
   background: color(hig-white);
   border-right: 1px solid color(hig-cool-gray-20);
   overflow-x: hidden;
+  @include vendor-prefix('transition', 'left 150ms cubic-bezier(0.000, 0.775, 0.775, 0.680)');
 
   @include shadow("inner-right");
 
   width: $hig__global-nav__sidenav--width;
-
-  display: none; // Hide by default
 
   margin-top: $hig__global-nav__top-nav--height;
   z-index: 2;
@@ -71,7 +70,7 @@ $hig__global-nav__sidenav--width: 280px;
 }
 
 .hig__global-nav--open .hig__global-nav__sidenav {
-  display: block;
+  left: 0;
 }
 
 .hig__global-nav__sidenav__super-header,
