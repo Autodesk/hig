@@ -67,6 +67,9 @@ const sampleNotifications = [
           <TextLink
             href="https://github.com/Autodesk/hig"
             text="This is a primary text link"
+            onClick={() => {
+              console.log("notifications id 1");
+            }}
           />
         </div>
       </div>
@@ -125,7 +128,7 @@ class Playground extends React.Component {
     }
   };
 
-  onNotificationClick = notificationId => {
+  onNotificationLinkClick = notificationId => {
     this.setState({
       readIds: [...new Set([...this.state.readIds, notificationId])]
     });
@@ -138,7 +141,7 @@ class Playground extends React.Component {
   transformedNotifications = notifications =>
     notifications.map(notification =>
       Object.assign({}, notification, {
-        onClick: this.onNotificationClick,
+        onLinkClick: this.onNotificationLinkClick,
         unread: !this.state.readIds.includes(notification.id)
       })
     );
@@ -147,7 +150,7 @@ class Playground extends React.Component {
     const newNotification = {
       id: 1,
       unread: true,
-      onClick: this.onNotificationClick,
+      onLinkClick: this.onNotificationLinkClick,
       children: () => (
         <div>
           <p>
@@ -173,7 +176,7 @@ class Playground extends React.Component {
         <p>this is regular text</p>
       </div>
     ),
-    onFeaturedClick: this.featuredNotificationDismissed
+    onDismiss: this.featuredNotificationDismissed
   });
 
   featuredNotificationDismissed = () => {

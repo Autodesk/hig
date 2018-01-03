@@ -26,13 +26,13 @@ export default class NotificationAdapter extends Component {
               {...adapterProps}
             />
             <MapsEventListener
-              listener="onClick"
-              handler={this.props.onClick}
+              listener="onLinkClick"
+              handler={this.props.onLinkClick}
               {...adapterProps}
             />
             <MapsEventListener
-              listener="onFeaturedClick"
-              handler={this.props.onFeaturedClick}
+              listener="onDismiss"
+              handler={this.props.onDismiss}
               {...adapterProps}
             />
             <MapsPropToMethod value={this.props.unread} {...adapterProps}>
@@ -59,7 +59,7 @@ NotificationAdapter.propTypes = {
   /**
    * Calls the provided callback when user clicks on the noticatiosn icon in the top nav
    */
-  onClick: PropTypes.func,
+  onLinkClick: PropTypes.func,
   onDismissed: PropTypes.func,
   /**
    * {Boolean} to show specify whether notificaiton is read

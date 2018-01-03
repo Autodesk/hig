@@ -12,15 +12,15 @@ export default class Notification extends Component {
     this.initialProps = props;
   }
 
-  onClick = () => {
-    this.props.onClick(this.props.id);
+  onLinkClick = () => {
+    this.props.onLinkClick(this.props.id);
   };
 
   render() {
     return (
       <NotificationAdapter
         {...this.props}
-        onClick={this.onClick}
+        onLinkClick={this.onLinkClick}
         id={this.props.id}
         unread={this.props.unread}
       >
@@ -49,7 +49,7 @@ Notification.propTypes = {
   /**
    * Calls the provided callback when user clicks on the noticatiosn icon in the top nav
    */
-  onClick: PropTypes.func,
+  onLinkClick: PropTypes.func,
   /**
    * Id for the notification
    */
