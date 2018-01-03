@@ -58,24 +58,27 @@ const defaultSearchOptions = [
 
 const sampleNotifications = [
   {
-    id: 1,
+    id: 0,
     unread: true,
-    children: () => (
+    children: (
       <div>
         <p>This is our first notification</p>
         <div>
           <TextLink
             href="https://github.com/Autodesk/hig"
             text="This is a primary text link"
+            onClick={() => {
+              console.log("notifications id 1");
+            }}
           />
         </div>
       </div>
     )
   },
   {
-    id: 2,
+    id: 1,
     unread: true,
-    children: () => (
+    children: (
       <div>
         <p>
           <b>test title</b>
@@ -125,7 +128,7 @@ class Playground extends React.Component {
     }
   };
 
-  onNotificationClick = notificationId => {
+  onNotificationLinkClick = notificationId => {
     this.setState({
       readIds: [...new Set([...this.state.readIds, notificationId])]
     });
@@ -138,17 +141,17 @@ class Playground extends React.Component {
   transformedNotifications = notifications =>
     notifications.map(notification =>
       Object.assign({}, notification, {
-        onClick: this.onNotificationClick,
+        onLinkClick: this.onNotificationLinkClick,
         unread: !this.state.readIds.includes(notification.id)
       })
     );
 
   addNotification = () => {
     const newNotification = {
-      id: 1,
+      id: this.state.notifications.length,
       unread: true,
-      onClick: this.onNotificationClick,
-      children: () => (
+      onLinkClick: this.onNotificationLinkClick,
+      children: (
         <div>
           <p>
             <b>test title</b>
@@ -164,8 +167,8 @@ class Playground extends React.Component {
   };
 
   featuredNotification = () => ({
-    id: 3,
-    children: () => (
+    id: 2,
+    children: (
       <div>
         <p>
           <b>Featured Notification</b>
@@ -173,7 +176,7 @@ class Playground extends React.Component {
         <p>this is regular text</p>
       </div>
     ),
-    onFeaturedClick: this.featuredNotificationDismissed
+    onDismiss: this.featuredNotificationDismissed
   });
 
   featuredNotificationDismissed = () => {

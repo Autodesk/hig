@@ -40,6 +40,12 @@ class Notification extends Core {
       exitingDuration: 300
     });
     this.featuredNotificationAnimation.enter();
+    this._attachListener(
+      'click',
+      this.el,
+      this.el,
+      this._callBackIfTargetIsAnchor
+    );
   }
 
   setContent(notification) {
@@ -58,8 +64,8 @@ class Notification extends Core {
     this.el.classList.remove('hig__notification--featured');
   }
 
-  onClick(fn) {
-    return this._attachListener('click', this.el, this.el, fn);
+  onLinkClick(fn) {
+    this.onClickCallback = fn;
   }
 
   markUnread() {
@@ -70,12 +76,18 @@ class Notification extends Core {
     this.el.classList.remove('hig__notification--unread');
   }
 
-  onFeaturedClick(fn) {
+  onDismiss(fn) {
     this.iconButton.onClick(() => {
       this.featuredNotificationAnimation.exit();
       fn();
     });
   }
+
+  _callBackIfTargetIsAnchor = (event) => {
+    if (this.onClickCallback && event.target.tagName === 'A') {
+      this.onClickCallback(event);
+    }
+  };
 }
 
 Notification._interface =

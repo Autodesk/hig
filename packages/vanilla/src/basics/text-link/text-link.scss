@@ -19,11 +19,21 @@
   &:hover {
     color: color(hig-blue-60);
   }
+  &:active,
+  &:focus {
+    outline: none;
+    color: color(hig-blue-70);
+  }
 }
 
 .hig__text-link--secondary {
   color: color(hig-cool-gray-50);
   &:hover {
     color: color(hig-blue-50);
+  }
+  &:active,
+  &:focus {
+    outline: none;
+    color: color(hig-blue-70);
   }
 }

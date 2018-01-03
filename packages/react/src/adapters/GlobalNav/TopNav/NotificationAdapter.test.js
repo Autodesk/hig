@@ -10,13 +10,13 @@ describe("NotificationAdapter", () => {
       mount(
         <NotificationAdapter
           higInstance={mockInstance}
-          onClick={() => {}}
+          onLinkClick={() => {}}
           unreadCount={2}
           timestamp={timestamp}
           title="foo"
           unread
           featured
-          onFeaturedClick={() => {}}
+          onDismiss={() => {}}
         >
           <h1>This is our first notification</h1>
         </NotificationAdapter>

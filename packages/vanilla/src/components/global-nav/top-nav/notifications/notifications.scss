@@ -1,6 +1,13 @@
 @import '~basics/colors/colors.scss';
 @import '~helpers/css/mixins/base.scss';
 .hig__notifications {
+
+  .hig__icon {
+    &:hover {
+      fill: color(hig-blue-50);
+    }
+  }
+  
   .hig__flyout__panel {
     padding: 0;
     width: 320px;
@@ -9,10 +16,11 @@
     top: 50%;
     position: relative;
     transform: translateY(-50%);
+    padding-right: 6px;
   }
   .hig__flyout__container {
     top: 55px;
-    right: -14px;
+    right: -8px;
   }
 }
 

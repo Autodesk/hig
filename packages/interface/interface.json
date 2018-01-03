@@ -1669,12 +1669,12 @@
                     "markRead": {
                       "desc": "sets notification to read"
                     },
-                    "onClick": {
+                    "onLinkClick": {
                       "desc": "Calls the provided callback when user clicks on the notication",
                       "params": "HIG.abstract.EventObject.params",
                       "returns": "HIG.abstract.EventObject.returns"
                     },
-                    "onFeaturedClick": {
+                    "onDismiss": {
                       "desc": "Calls the provided callback when user clicks on the featured notication",
                       "params": "HIG.abstract.EventObject.params",
                       "returns": "HIG.abstract.EventObject.returns"

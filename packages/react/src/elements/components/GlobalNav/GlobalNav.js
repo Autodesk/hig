@@ -119,13 +119,13 @@ export default class GlobalNav extends Component {
                     <Notification
                       unread={notificationProps.unread}
                       key={notificationProps.id}
-                      onClick={notificationProps.onClick}
+                      onLinkClick={notificationProps.onLinkClick}
                       id={notificationProps.id}
                       title={notificationProps.title}
                     >
-                      {notificationProps.children instanceof Function
-                        ? notificationProps.children()
-                        : notificationProps.children}
+                      {notificationProps.children
+                        ? notificationProps.children
+                        : null}
                     </Notification>
                   )
                 )}
