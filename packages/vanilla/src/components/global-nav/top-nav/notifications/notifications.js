@@ -38,7 +38,6 @@ class Notifications extends Core {
     this.flyout.addSlot(this.list);
     this.flyout.setAnchorPoint('top-right');
     window.addEventListener('resize', this._adjustFlyoutMaxHeight.bind(this));
-    window.addEventListener('scroll', this._adjustFlyoutMaxHeight.bind(this));
 
     this.unreadCount = this._findDOMEl(
       '.hig__notifications__unread-messages-count',
@@ -99,8 +98,7 @@ class Notifications extends Core {
     const { bottom } = this.list.titleElement.getBoundingClientRect();
 
     // Distance between the bottom of the notifications title and 80px from the bottom of the screen
-    const calculatedMaxHeight =
-      document.body.clientHeight - bufferFromBottom - bottom;
+    const calculatedMaxHeight = window.innerHeight - bufferFromBottom - bottom;
 
     this.flyout.flyoutContent.style.maxHeight = 'inherit'; // Override flyout's default max height
     this.list.setContentMaxHeight(calculatedMaxHeight);
