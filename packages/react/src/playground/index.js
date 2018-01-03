@@ -58,9 +58,9 @@ const defaultSearchOptions = [
 
 const sampleNotifications = [
   {
-    id: 1,
+    id: 0,
     unread: true,
-    children: () => (
+    children: (
       <div>
         <p>This is our first notification</p>
         <div>
@@ -76,9 +76,9 @@ const sampleNotifications = [
     )
   },
   {
-    id: 2,
+    id: 1,
     unread: true,
-    children: () => (
+    children: (
       <div>
         <p>
           <b>test title</b>
@@ -148,10 +148,10 @@ class Playground extends React.Component {
 
   addNotification = () => {
     const newNotification = {
-      id: 1,
+      id: this.state.notifications.length,
       unread: true,
       onLinkClick: this.onNotificationLinkClick,
-      children: () => (
+      children: (
         <div>
           <p>
             <b>test title</b>
@@ -167,8 +167,8 @@ class Playground extends React.Component {
   };
 
   featuredNotification = () => ({
-    id: 3,
-    children: () => (
+    id: 2,
+    children: (
       <div>
         <p>
           <b>Featured Notification</b>

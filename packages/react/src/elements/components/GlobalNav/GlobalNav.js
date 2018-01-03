@@ -123,9 +123,9 @@ export default class GlobalNav extends Component {
                     id={notificationProps.id}
                     title={notificationProps.title}
                   >
-                    {notificationProps.children instanceof Function
-                      ? notificationProps.children()
-                      : notificationProps.children}
+                    {notificationProps.children
+                      ? notificationProps.children
+                      : null}
                   </Notification>
                 ))}
               </Notifications>

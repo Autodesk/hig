@@ -9,29 +9,9 @@ export default class Notifications extends Component {
     super(props);
     this.state = {
       open: this.props.open,
-      seenNotificationIds: [],
-      unseenCount: this._setInitialUnseenCount(this.props.children)
+      seenNotificationIds: this.readIds()
     };
   }
-
-  componentDidMount = () => {
-    const showNotificationsCount =
-      this.props.children && this.props.children.length > 0;
-    this.setState({ showNotificationsCount });
-  };
-
-  componentWillReceiveProps = nextProps => {
-    if (
-      nextProps.children &&
-      this.props.children &&
-      nextProps.children.length > this.props.children.length
-    ) {
-      this.setState({
-        showNotificationsCount: true,
-        unseenCount: this.setUnseenCount(nextProps)
-      });
-    }
-  };
 
   onScroll = event => this.props.onScroll && this.props.onScroll(event);
 
@@ -42,22 +22,15 @@ export default class Notifications extends Component {
       });
     }
 
-    const seenNotificationIds = this._findSeenNotificationIds(
-      this.props.children
-    );
-
     this.setState({
-      open: true,
-      showNotificationsCount: true,
-      seenNotificationIds
+      open: true
     });
   };
 
   onClickOutside = event => {
     this.setState({
       open: false,
-      showNotificationsCount: false,
-      unseenCount: this.setUnseenCount(this.props)
+      seenNotificationIds: this.notificationIds()
     });
 
     if (this.props.onClickOutside) {
@@ -65,45 +38,40 @@ export default class Notifications extends Component {
     }
   };
 
-  setUnseenCount = props => {
-    let unseenNotifications = [];
-    const notifications = props.children;
-    const seenNotificationsIds = this.state.seenNotificationIds;
-    if (notifications && notifications.length > 0) {
-      const notificationIds = notifications.map(
-        notification => notification.props.id
-      );
-
-      unseenNotifications = notificationIds.filter(
-        notification => seenNotificationsIds.indexOf(notification) === -1
-      );
-    }
-    return unseenNotifications.length;
-  };
-
-  _setInitialUnseenCount = children => {
-    const unreadFeatureCount = this.props.featuredNotification ? 1 : 0;
-    let regularNotificationCount = 0;
-
-    if (children && children.length > 0) {
-      regularNotificationCount = children.filter(
-        notification => notification.props.unread
-      ).length;
-    }
-
-    return unreadFeatureCount + regularNotificationCount;
-  };
-
-  _findSeenNotificationIds(props) {
-    return React.Children.map(props, child => child.props.id);
+  readIds() {
+    return React.Children
+      .toArray(this.props.children)
+      .filter(c => !c.props.unread)
+      .map(c => c.props.id);
   }
 
-  _showNotificationsCount = () =>
-    this.state.showNotificationsCount && this.state.unseenCount > 0;
+  unseenCount = () => {
+    let count = this.props.featuredNotification ? 1 : 0;
 
-  _setUnseenCount = () => Math.min(this.state.unseenCount, 99);
+    if (!this.props.children) {
+      return count;
+    }
+
+    count += this.notificationIds().filter(
+      id => this.state.seenNotificationIds.indexOf(id) === -1
+    ).length;
+
+    return Math.min(count, 99);
+  };
+
+  notificationIds() {
+    return React.Children.map(this.props.children, child => child.props.id);
+  }
+
+  showNotificationsCount() {
+    return (
+      this.state.seenNotificationIds.length !==
+      React.Children.toArray(this.props.children).length
+    );
+  }
 
   render() {
+    const unseenCount = this.unseenCount();
     return (
       <NotificationsAdapter
         {...this.props}
@@ -111,9 +79,8 @@ export default class Notifications extends Component {
         onClickOutside={this.onClickOutside}
         onScroll={this.onScroll}
         open={this.state.open}
-        unseenCount={this._setUnseenCount()}
-        showUnreadBadge={false}
-        showNotificationsCount={this._showNotificationsCount()}
+        unseenCount={unseenCount}
+        showNotificationsCount={this.showNotificationsCount()}
       >
         {this.props.featuredNotification ? (
           <Notification
@@ -122,9 +89,7 @@ export default class Notifications extends Component {
             {...this.props.featuredNotification}
             unread={false}
           >
-            {this.props.featuredNotification.children instanceof Function
-              ? this.props.featuredNotification.children()
-              : this.props.featuredNotification.children}
+            {this.props.featuredNotification.children}
           </Notification>
         ) : null}
         {this.props.children}
@@ -176,5 +141,6 @@ Notifications.defaultProps = {
   onClick: () => {},
   onClickOutside: () => {},
   onScroll: () => {},
-  title: "Notifications"
+  title: "Notifications",
+  children: null
 };
