@@ -15,8 +15,7 @@ export default class ContainerViewRightAdapter extends Component {
           <div>
             <MapsPropToMethod value={this.props.open} {...adapterProps}>
               {(instance, value) =>
-                value ? instance.open() : instance.close()
-              }
+                value ? instance.open() : instance.close()}
             </MapsPropToMethod>
             <MountsAnyChild mounter="addSlot" {...adapterProps}>
               {this.props.children}

@@ -36,8 +36,7 @@ function SearchAdapter(props) {
           />
           <MapsPropToMethod value={props.clearIconVisible} {...adapterProps}>
             {(instance, value) =>
-              value ? instance.showClearIcon() : instance.hideClearIcon()
-            }
+              value ? instance.showClearIcon() : instance.hideClearIcon()}
           </MapsPropToMethod>
           <MapsEventListener
             listener="onFocusOut"

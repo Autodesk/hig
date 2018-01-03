@@ -48,8 +48,7 @@ export default function GlobalNavAdapter(props) {
           />
           <MapsPropToMethod value={props.sideNavOpen} {...adapterProps}>
             {(instance, value) =>
-              value ? instance.showSideNav() : instance.hideSideNav()
-            }
+              value ? instance.showSideNav() : instance.hideSideNav()}
           </MapsPropToMethod>
           <MountsAnyChild mounter="addSlot" {...adapterProps}>
             {otherChildren}

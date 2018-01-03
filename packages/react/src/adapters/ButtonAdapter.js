@@ -50,8 +50,7 @@ export default class ButtonAdapter extends Component {
             />
             <MapsPropToMethod value={this.props.disabled} {...adapterProps}>
               {(instance, value) =>
-                value ? instance.disable() : instance.enable()
-              }
+                value ? instance.disable() : instance.enable()}
             </MapsPropToMethod>
             <MapsEventListener
               listener="onBlur"

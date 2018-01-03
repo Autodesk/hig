@@ -54,13 +54,11 @@ function SearchAdapter(props) {
           />
           <MapsPropToMethod value={props.showClearIcon} {...adapterProps}>
             {(instance, value) =>
-              value ? instance.showClearIcon() : instance.hideClearIcon()
-            }
+              value ? instance.showClearIcon() : instance.hideClearIcon()}
           </MapsPropToMethod>
           <MapsPropToMethod value={props.showOptions} {...adapterProps}>
             {(instance, value) =>
-              value ? instance.showOptions() : instance.hideOptions()
-            }
+              value ? instance.showOptions() : instance.hideOptions()}
           </MapsPropToMethod>
 
           <MapsEventListener
