@@ -30,7 +30,8 @@ export default class Notifications extends Component {
   onClickOutside = event => {
     this.setState({
       open: false,
-      seenNotificationIds: this.notificationIds()
+      seenNotificationIds: this.notificationIds(),
+      featuredNotificationSeen: true
     });
 
     if (this.props.onClickOutside) {
@@ -46,7 +47,10 @@ export default class Notifications extends Component {
   }
 
   unseenCount = () => {
-    let count = this.props.featuredNotification ? 1 : 0;
+    let count =
+      this.props.featuredNotification && !this.state.featuredNotificationSeen
+        ? 1
+        : 0;
 
     if (!this.props.children) {
       return count;
