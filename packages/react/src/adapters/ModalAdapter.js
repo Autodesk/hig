@@ -55,7 +55,8 @@ export default class ModalAdapter extends Component {
             />
             <MapsPropToMethod value={this.props.open} {...adapterProps}>
               {(instance, value) =>
-                value ? instance.open() : instance.close()}
+                value ? instance.open() : instance.close()
+              }
             </MapsPropToMethod>
             <MapsEventListener
               listener="onCloseClick"

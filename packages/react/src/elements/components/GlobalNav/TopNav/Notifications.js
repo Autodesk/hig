@@ -40,8 +40,7 @@ export default class Notifications extends Component {
   };
 
   readIds() {
-    return React.Children
-      .toArray(this.props.children)
+    return React.Children.toArray(this.props.children)
       .filter(c => !c.props.unread)
       .map(c => c.props.id);
   }

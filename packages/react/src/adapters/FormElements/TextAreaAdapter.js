@@ -62,11 +62,13 @@ export default class TextAreaAdapter extends Component {
             />
             <MapsPropToMethod value={this.props.disabled} {...adapterProps}>
               {(instance, value) =>
-                value ? instance.disable() : instance.enable()}
+                value ? instance.disable() : instance.enable()
+              }
             </MapsPropToMethod>
             <MapsPropToMethod value={this.props.required} {...adapterProps}>
               {(instance, value) =>
-                value ? instance.required(value) : instance.noLongerRequired()}
+                value ? instance.required(value) : instance.noLongerRequired()
+              }
             </MapsPropToMethod>
           </div>
         )}

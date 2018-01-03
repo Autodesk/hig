@@ -29,16 +29,19 @@ export default class OptionAdapter extends Component {
             />
             <MapsPropToMethod value={this.props.selected} {...adapterProps}>
               {(instance, value) =>
-                value ? instance.select() : instance.deselect()}
+                value ? instance.select() : instance.deselect()
+              }
             </MapsPropToMethod>
 
             <MapsPropToMethod value={this.props.checked} {...adapterProps}>
               {(instance, value) =>
-                value ? instance.check() : instance.uncheck()}
+                value ? instance.check() : instance.uncheck()
+              }
             </MapsPropToMethod>
             <MapsPropToMethod value={this.props.focused} {...adapterProps}>
               {(instance, value) =>
-                value ? instance.focus() : instance.unfocus()}
+                value ? instance.focus() : instance.unfocus()
+              }
             </MapsPropToMethod>
             <MapsEventListener
               listener="onHover"

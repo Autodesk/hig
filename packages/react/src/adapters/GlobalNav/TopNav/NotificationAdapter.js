@@ -37,11 +37,13 @@ export default class NotificationAdapter extends Component {
             />
             <MapsPropToMethod value={this.props.unread} {...adapterProps}>
               {(instance, value) =>
-                value ? instance.markUnread() : instance.markRead()}
+                value ? instance.markUnread() : instance.markRead()
+              }
             </MapsPropToMethod>
             <MapsPropToMethod value={this.props.featured} {...adapterProps}>
               {(instance, value) =>
-                value ? instance.setFeatured() : instance.removeFeatured()}
+                value ? instance.setFeatured() : instance.removeFeatured()
+              }
             </MapsPropToMethod>
             <MountsAnyChild mounter="setContent" {...adapterProps}>
               {this.props.children}

@@ -30,7 +30,8 @@ export default class CheckboxAdapter extends Component {
               {...adapterProps}
             >
               {(instance, value) =>
-                value ? instance.indeterminate() : instance.determinate()}
+                value ? instance.indeterminate() : instance.determinate()
+              }
             </ControlsProp>
 
             <ControlsProp
@@ -46,7 +47,8 @@ export default class CheckboxAdapter extends Component {
               {...adapterProps}
             >
               {(instance, value) =>
-                value ? instance.check() : instance.uncheck()}
+                value ? instance.check() : instance.uncheck()
+              }
             </ControlsProp>
 
             <MapsEventListener
@@ -76,12 +78,14 @@ export default class CheckboxAdapter extends Component {
             />
             <MapsPropToMethod value={this.props.disabled} {...adapterProps}>
               {(instance, value) =>
-                value ? instance.disable() : instance.enable()}
+                value ? instance.disable() : instance.enable()
+              }
             </MapsPropToMethod>
 
             <MapsPropToMethod value={this.props.required} {...adapterProps}>
               {(instance, value) =>
-                value ? instance.required(value) : instance.noLongerRequired()}
+                value ? instance.required(value) : instance.noLongerRequired()
+              }
             </MapsPropToMethod>
           </div>
         )}
