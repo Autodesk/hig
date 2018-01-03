@@ -7,6 +7,11 @@
 
 $hig__global-nav__sidenav--width: 280px;
 
+@function side-nav-transition($attribute) {
+  @return '#{$attribute} 150ms cubic-bezier(0.000, 0.775, 0.775, 0.680)';
+  // CSS animation tool: https://matthewlein.com/tools/ceaser
+}
+
 .hig__global-nav__sidenav {
   @include reset;
   position: fixed;
@@ -16,7 +21,7 @@ $hig__global-nav__sidenav--width: 280px;
   background: color(hig-white);
   border-right: 1px solid color(hig-cool-gray-20);
   overflow-x: hidden;
-  @include vendor-prefix('transition', 'left 150ms cubic-bezier(0.000, 0.775, 0.775, 0.680)');
+  @include vendor-prefix('transition', side-nav-transition('left'));
 
   @include shadow("inner-right");
 
