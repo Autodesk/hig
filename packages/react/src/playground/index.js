@@ -58,24 +58,27 @@ const defaultSearchOptions = [
 
 const sampleNotifications = [
   {
-    id: 1,
+    id: 0,
     unread: true,
-    children: () => (
+    children: (
       <div>
         <p>This is our first notification</p>
         <div>
           <TextLink
             href="https://github.com/Autodesk/hig"
             text="This is a primary text link"
+            onClick={() => {
+              console.log("notifications id 1");
+            }}
           />
         </div>
       </div>
     )
   },
   {
-    id: 2,
+    id: 1,
     unread: true,
-    children: () => (
+    children: (
       <div>
         <p>
           <b>test title</b>
@@ -98,7 +101,8 @@ class Playground extends React.Component {
       seenNotificationIds: [],
       notifications: sampleNotifications,
       readIds: this._initialReadNotifications(sampleNotifications),
-      featuredNotification: this.featuredNotification()
+      featuredNotification: this.featuredNotification(),
+      notificationsLoading: false
     };
   }
 
@@ -116,7 +120,15 @@ class Playground extends React.Component {
     console.log("on notifications click", eventInfo);
   };
 
-  onNotificationClick = notificationId => {
+  onNotificationsScroll = eventInfo => {
+    if (eventInfo.percentageScrolled > 0.5) {
+      this.setState({ notificationsLoading: true }, () =>
+        setTimeout(() => this.setState({ notificationsLoading: false }), 3000)
+      );
+    }
+  };
+
+  onNotificationLinkClick = notificationId => {
     this.setState({
       readIds: [...new Set([...this.state.readIds, notificationId])]
     });
@@ -129,17 +141,17 @@ class Playground extends React.Component {
   transformedNotifications = notifications =>
     notifications.map(notification =>
       Object.assign({}, notification, {
-        onClick: this.onNotificationClick,
+        onLinkClick: this.onNotificationLinkClick,
         unread: !this.state.readIds.includes(notification.id)
       })
     );
 
   addNotification = () => {
     const newNotification = {
-      id: 1,
+      id: this.state.notifications.length,
       unread: true,
-      onClick: this.onNotificationClick,
-      children: () => (
+      onLinkClick: this.onNotificationLinkClick,
+      children: (
         <div>
           <p>
             <b>test title</b>
@@ -155,8 +167,8 @@ class Playground extends React.Component {
   };
 
   featuredNotification = () => ({
-    id: 3,
-    children: () => (
+    id: 2,
+    children: (
       <div>
         <p>
           <b>Featured Notification</b>
@@ -164,7 +176,7 @@ class Playground extends React.Component {
         <p>this is regular text</p>
       </div>
     ),
-    onFeaturedClick: this.featuredNotificationDismissed
+    onDismiss: this.featuredNotificationDismissed
   });
 
   featuredNotificationDismissed = () => {
@@ -274,7 +286,6 @@ class Playground extends React.Component {
       searchOptions: this.state.searchOptions,
       searchValue: this.state.searchValue,
       help: helpProps,
-      hideHamburgerButton: true,
       logo,
       onLogoClick() {
         console.log("Logo clicked");
@@ -285,9 +296,11 @@ class Playground extends React.Component {
         onClickOutside: event => {
           console.log("notifications on click outside", event);
         },
+        onScroll: this.onNotificationsScroll,
         unreadCount: this.state.unreadCount,
         notifications: this.transformedNotifications(this.state.notifications),
-        featuredNotification: this.state.featuredNotification
+        featuredNotification: this.state.featuredNotification,
+        loading: this.state.notificationsLoading
       }
     };
 
@@ -329,7 +342,6 @@ class Playground extends React.Component {
         topNav={topNavProps}
         activeModuleId={this.state.activeModuleId}
         showSubNav
-        sideNavOpen
         isSideNavOpen={this.state.isSideNavOpen}
         onHamburgerClick={this.toggleSideNav}
       >

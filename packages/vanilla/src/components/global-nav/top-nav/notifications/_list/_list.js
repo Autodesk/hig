@@ -1,3 +1,4 @@
+/* globals window */
 import Core from '_core.js';
 import Template from './_list.html';
 import './_list.scss';
@@ -41,6 +42,9 @@ class List extends Core {
   }
 
   setNotLoading() {
+    if (!this.loading) {
+      return;
+    }
     this.loading.unmount();
     this.loading = undefined;
   }
@@ -50,11 +54,39 @@ class List extends Core {
       this.listContent.style.maxHeight = `${maxHeight}px`;
     }
   }
+
+  onScroll(fn) {
+    return this._attachListener(
+      'scroll',
+      this.listContent,
+      this.el,
+      this._optimizedOnScroll(fn)
+    );
+  }
+
+  _optimizedOnScroll = fn => () => {
+    let ticking = false;
+    if (!ticking) {
+      const lastKnownScrollPosition = this.listContent.scrollTop;
+      const { scrollHeight, clientHeight } = this.listContent;
+
+      const scrollableHeight = scrollHeight - clientHeight;
+      const percentageScrolled = lastKnownScrollPosition / scrollableHeight;
+
+      window.requestAnimationFrame(() => {
+        fn({ percentageScrolled });
+        ticking = false;
+      });
+
+      ticking = true;
+    }
+  }
 }
 
 List._interface = {
   methods: {
     addItem: {},
+    onScroll: {},
     setLoading: {},
     setNotLoading: {},
     setTitle: {},

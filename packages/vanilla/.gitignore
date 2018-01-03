@@ -54,5 +54,3 @@ nohup.out
 # VS Code
 .vscode/
 
-# Lock file
-package-lock.json

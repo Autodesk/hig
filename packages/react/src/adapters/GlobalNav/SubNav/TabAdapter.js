@@ -31,7 +31,8 @@ function TabsAdapter(props) {
           />
           <MapsPropToMethod value={props.active} {...adapterProps}>
             {(instance, value) =>
-              value ? instance.activate() : instance.deactivate()}
+              value ? instance.activate() : instance.deactivate()
+            }
           </MapsPropToMethod>
         </div>
       )}

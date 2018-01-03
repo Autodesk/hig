@@ -1,6 +1,6 @@
 {
   "name": "hig-vanilla",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "description": "Stateless implementation in pure CSS, HTML and JS with no framework dependecies",
   "main": "lib/hig.js",
   "css": "lib/hig.css",
@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "build-icons": "node src/basics/icons/build/build.js",
-    "deploy": "npm run lib && surge .",
+    "deploy": "yarn lib && surge .",
     "dev-server": "webpack-dev-server --open --config webpack.dev.js",
     "gemini": "concurrently 'http-server' 'gemini test dev/gemini/*' --kill-others",
     "gemini-ci": "gemini test dev/gemini/* --reporter html --reporter flat",
@@ -20,7 +20,7 @@
     "lib": "webpack -p --config webpack.prod.js",
     "lint": "eslint --ext .jsx,.js dev src",
     "lint-fix": "eslint --ext .jsx,.js dev src --fix",
-    "test": "npm run gemini",
+    "test": "yarn gemini",
     "watch": "webpack --watch --config webpack.dev.js"
   },
   "repository": {
@@ -28,7 +28,7 @@
     "url": "git@github.com:autodesk/hig.git"
   },
   "author": "Autodesk Inc.",
-  "license": "Apache 2.0",
+  "license": "Apache-2.0",
   "homepage": "http://hig.autodesk.com",
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -68,6 +68,6 @@
     "webpack-merge": "^4.1.1"
   },
   "dependencies": {
-    "hig-interface": "^0.1.10"
+    "hig-interface": "^0.1.11"
   }
 }

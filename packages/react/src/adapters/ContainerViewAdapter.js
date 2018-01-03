@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import { ContainerView as ContainerViewVanilla } from "hig-vanilla";
 
-class ContainerViewAdapter extends Component {
+export default class ContainerViewAdapter extends Component {
   render() {
     return (
       <div className={ContainerViewVanilla.className}>
@@ -14,15 +14,8 @@ class ContainerViewAdapter extends Component {
 }
 
 ContainerViewAdapter.propTypes = {
+  /**
+   * The content insdie of the content View
+   */
   children: PropTypes.node
 };
-
-ContainerViewAdapter.__docgenInfo = {
-  props: {
-    children: {
-      description: "the content insdie of the content View"
-    }
-  }
-};
-
-export default ContainerViewAdapter;

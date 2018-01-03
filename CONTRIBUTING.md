@@ -41,14 +41,15 @@ bugs/fix-readme-type-101
 ```
 
 #### Develop new functionality
-Read [DEVELOPING](DEVELOPING.md) for mor information about how to develop within this project. Once your changes are complete ensure your branch meets testing, coverage, and linting standards by running `npm run test-ci`.
+Read [DEVELOPING](DEVELOPING.md) for more information about how to develop within this project. Once your changes are complete ensure your branch meets testing, coverage, and linting standards.
 	- Ensure changes are tested
 	- Add to the playground for manual testing if needed
 	- Ensure branch meets testing, coverage, and linting standards
-		- `npm run test-ci`
+		- `yarn test-ci`
+		- `yarn lint`
 
 #### Create a pull request
-When you're ready for fedback, create a pull request against the `development` branch. The title of your pull request should be a concise descritpion of the changes within it. The description of the PR should include the reason behind your PR, a breif explaination of your approach, and highlights of any especially interesting or potentially surprising details. If the change is visual, add a screenshot or gif to the pull request descrption.
+When you're ready for feedback, create a pull request against the `development` branch. The title of your pull request should be a concise description of the changes within it. The description of the PR should include the reason behind your PR, a brief explanation of your approach, and highlights of any especially interesting or potentially surprising details. If the change is visual, add a screenshot or gif to the pull request description.
 
 When you create a pull request, our continuous integration system automatically runs tests,ensures test coverage stays above a threshold, and ensures code complies with linting standards. All CI checks must pass before the pull request is ready to merge.
 

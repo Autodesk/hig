@@ -1,56 +1,51 @@
-import React from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Avatar as VanillaAvatar } from "hig-vanilla";
 import HIGAdapter, { MapsPropToMethod } from "./HIGAdapter";
 
-function AvatarAdapter(props) {
-  return (
-    <HIGAdapter {...props} displayName="Avatar" HIGConstructor={VanillaAvatar}>
-      {adapterProps => (
-        <div>
-          <MapsPropToMethod
-            setter="setName"
-            value={props.name}
-            {...adapterProps}
-          />
-          <MapsPropToMethod
-            setter="setSize"
-            value={props.size}
-            {...adapterProps}
-          />
-          <MapsPropToMethod
-            setter="setImage"
-            value={props.image}
-            {...adapterProps}
-          />
-        </div>
-      )}
-    </HIGAdapter>
-  );
+export default class AvatarAdapter extends Component {
+  render() {
+    return (
+      <HIGAdapter
+        {...this.props}
+        displayName="Avatar"
+        HIGConstructor={VanillaAvatar}
+      >
+        {adapterProps => (
+          <div>
+            <MapsPropToMethod
+              setter="setName"
+              value={this.props.name}
+              {...adapterProps}
+            />
+            <MapsPropToMethod
+              setter="setSize"
+              value={this.props.size}
+              {...adapterProps}
+            />
+            <MapsPropToMethod
+              setter="setImage"
+              value={this.props.image}
+              {...adapterProps}
+            />
+          </div>
+        )}
+      </HIGAdapter>
+    );
+  }
 }
 
 AvatarAdapter.propTypes = {
+  /**
+   * The name for the avatar
+   */
   name: PropTypes.string.isRequired,
+  /**
+   * small, medium, large or extralarge
+   */
   size: PropTypes.oneOf(VanillaAvatar.AvailableSizes).isRequired,
+  /**
+   * Url to a profile image
+   */
   image: PropTypes.string
 };
-
-AvatarAdapter.__docgenInfo = {
-  props: {
-    name: {
-      description: "the name for the avatar"
-    },
-    size: {
-      description: "small, medium, large or extralarge"
-    },
-    image: {
-      description: "url to a profile image"
-    }
-  }
-};
-
-AvatarAdapter.defaultProps = {
-  image: undefined
-};
-
-export default AvatarAdapter;

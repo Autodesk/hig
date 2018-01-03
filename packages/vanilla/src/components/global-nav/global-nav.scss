@@ -1,5 +1,6 @@
 @import '~basics/colors/colors.scss';
 @import '~basics/responsive/responsive.scss';
+@import '~helpers/css/mixins/base.scss';
 @import 'side-nav/side-nav.scss';
 
 .hig__global-nav {
@@ -11,8 +12,7 @@
     min-height: 100%;
     background: color(hig-cool-gray-10);
     @include vendor-prefix('transform', 'scale(1)');
-    @include vendor-prefix('transition', 'margin 150ms cubic-bezier(0.000, 0.775, 0.775, 0.680)');
-    // CSS animation tool: https://matthewlein.com/tools/ceaser
+    @include vendor-prefix('transition', side-nav-transition('margin'));
   }
 
   &__slot{
@@ -21,5 +21,7 @@
 }
 
 .hig__global-nav--open .hig__global-nav__container {
-  margin-left: $hig__global-nav__sidenav--width;
+  @include tablet-breakpoint {
+    margin-left: $hig__global-nav__sidenav--width;
+  }
 }

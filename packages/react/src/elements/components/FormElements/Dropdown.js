@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import * as PropTypes from "prop-types";
+import PropTypes from "prop-types";
 
 import DropdownAdapter from "../../../adapters/FormElements/DropdownAdapter";
 import Option from "./Option";
 
-class Dropdown extends Component {
+export default class Dropdown extends Component {
   static defaultProps = {
     options: [],
     onChange: () => {}
@@ -83,68 +83,57 @@ class Dropdown extends Component {
 }
 
 Dropdown.propTypes = {
+  /**
+   * {string} label for the the dropdown
+   */
   label: PropTypes.string,
+  /**
+   * {string} instructions for the dropdown
+   */
   instructions: PropTypes.string,
+  /**
+   * {string} placeholder for the dropdown
+   */
   placeholder: PropTypes.string,
+  /**
+   * {bool} makes the dropdown disabled
+   */
   disabled: PropTypes.bool,
+  /**
+   * {string} makes the field required
+   */
   required: PropTypes.string,
+  /**
+   * {string} option that is selected on construction
+   */
   value: PropTypes.string,
+  /**
+   * {string} default selected option
+   */
   defaultValue: PropTypes.string,
+  /**
+   * {Array} array with objects, objects have a 'label' and a 'value'
+   */
   options: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string,
       value: PropTypes.string
     })
   ),
+  /**
+   * Calls the provided callback when option is changed
+   */
   onChange: PropTypes.func,
+  /**
+   * Calls the provided callback when focus moves away from the dropdown
+   */
   onBlur: PropTypes.func,
+  /**
+   * Calls the provided callback when the user focuses on the dropdown
+   */
   onFocus: PropTypes.func,
+  /**
+   * Calls the provided callback when the user presses a key while the dropdown has focus
+   */
   onKeypress: PropTypes.func
 };
-
-Dropdown.__docgenInfo = {
-  props: {
-    label: {
-      description: "{string} label for the the dropdown"
-    },
-    instructions: {
-      description: "{string} instructions for the dropdown"
-    },
-    placeholder: {
-      description: "{string} placeholder for the dropdown"
-    },
-    disabled: {
-      description: "{bool} makes the dropdown disabled"
-    },
-    required: {
-      description: "{string} makes the field required"
-    },
-    value: {
-      description: "{string} option that is selected on construction"
-    },
-    defaultValue: {
-      description: "{string} default selected option"
-    },
-    options: {
-      description:
-        "{Array} array with objects, objects have a 'label' and a 'value'"
-    },
-    onChange: {
-      description: "Calls the provided callback when option is changed"
-    },
-    onBlur: {
-      description:
-        "Calls the provided callback when focus moves away from the dropdown"
-    },
-    onFocus: {
-      description:
-        "Calls the provided callback when the user focuses on the dropdown"
-    },
-    onKeypress: {
-      description:
-        "Calls the provided callback when the user presses a key while the dropdown has focus"
-    }
-  }
-};
-
-export default Dropdown;

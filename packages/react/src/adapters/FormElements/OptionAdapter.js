@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Option as VanillaOption } from "hig-vanilla";
 import HIGAdapter, {
@@ -7,85 +7,79 @@ import HIGAdapter, {
   MountedByHIGParentList
 } from "../HIGAdapter";
 
-function OptionAdapter(props) {
-  return (
-    <HIGAdapter {...props} displayName="Option" HIGConstructor={VanillaOption}>
-      {adapterProps => (
-        <div>
-          <MapsPropToMethod
-            value={props.label}
-            setter="setLabel"
-            {...adapterProps}
-          />
-          <MapsPropToMethod
-            value={props.value}
-            setter="setValue"
-            {...adapterProps}
-          />
-          <MapsPropToMethod value={props.selected} {...adapterProps}>
-            {(instance, value) =>
-              value ? instance.select() : instance.deselect()}
-          </MapsPropToMethod>
+export default class OptionAdapter extends Component {
+  render() {
+    return (
+      <HIGAdapter
+        {...this.props}
+        displayName="Option"
+        HIGConstructor={VanillaOption}
+      >
+        {adapterProps => (
+          <div>
+            <MapsPropToMethod
+              value={this.props.label}
+              setter="setLabel"
+              {...adapterProps}
+            />
+            <MapsPropToMethod
+              value={this.props.value}
+              setter="setValue"
+              {...adapterProps}
+            />
+            <MapsPropToMethod value={this.props.selected} {...adapterProps}>
+              {(instance, value) =>
+                value ? instance.select() : instance.deselect()
+              }
+            </MapsPropToMethod>
 
-          <MapsPropToMethod value={props.checked} {...adapterProps}>
-            {(instance, value) =>
-              value ? instance.check() : instance.uncheck()}
-          </MapsPropToMethod>
-          <MapsPropToMethod value={props.focused} {...adapterProps}>
-            {(instance, value) =>
-              value ? instance.focus() : instance.unfocus()}
-          </MapsPropToMethod>
-          <MapsEventListener
-            listener="onHover"
-            handler={props.onHover}
-            {...adapterProps}
-          />
-          <MapsEventListener
-            listener="onClick"
-            handler={props.onClick}
-            {...adapterProps}
-          />
-          <MountedByHIGParentList mounter="addOption" {...adapterProps} />
-        </div>
-      )}
-    </HIGAdapter>
-  );
+            <MapsPropToMethod value={this.props.checked} {...adapterProps}>
+              {(instance, value) =>
+                value ? instance.check() : instance.uncheck()
+              }
+            </MapsPropToMethod>
+            <MapsPropToMethod value={this.props.focused} {...adapterProps}>
+              {(instance, value) =>
+                value ? instance.focus() : instance.unfocus()
+              }
+            </MapsPropToMethod>
+            <MapsEventListener
+              listener="onHover"
+              handler={this.props.onHover}
+              {...adapterProps}
+            />
+            <MapsEventListener
+              listener="onClick"
+              handler={this.props.onClick}
+              {...adapterProps}
+            />
+            <MountedByHIGParentList mounter="addOption" {...adapterProps} />
+          </div>
+        )}
+      </HIGAdapter>
+    );
+  }
 }
 
 OptionAdapter.propTypes = {
+  /**
+   * Called when user moves mouse over the option
+   */
   onHover: PropTypes.func,
+  /**
+   * Called when the user clicks the option
+   */
   onClick: PropTypes.func,
+  /**
+   * Text displayed on the option
+   */
   label: PropTypes.string,
+  /**
+   * Indicates the option is currently selected
+   */
   selected: PropTypes.bool,
+  /**
+   * Data represented by the option
+   */
   value: PropTypes.string
 };
-
-OptionAdapter.defaultProps = {
-  onHover: undefined,
-  onClick: undefined,
-  label: undefined,
-  selected: undefined,
-  value: undefined
-};
-
-OptionAdapter.__docgenInfo = {
-  props: {
-    onHover: {
-      description: "called when user moves mouse over the option"
-    },
-    onClick: {
-      description: "called when the user clicks the option"
-    },
-    label: {
-      description: "text displayed on the option"
-    },
-    selected: {
-      description: "indicates the option is currently selected"
-    },
-    value: {
-      description: "data represented by the option"
-    }
-  }
-};
-
-export default OptionAdapter;

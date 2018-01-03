@@ -14,19 +14,13 @@ import ProjectAccountSwitcher from "./TopNav/ProjectAccountSwitcher";
 import Notifications from "./TopNav/Notifications";
 import Notification from "./TopNav/Notification";
 
-class GlobalNav extends Component {
+export default class GlobalNav extends Component {
   constructor(props) {
     super(props);
     this.state = {
       sideNavOpen: this.props.sideNavOpenByDefault || false
     };
   }
-
-  onNotificationClick = notificationId => {
-    this.setState({
-      readIds: [...new Set([...this.state.readIds, notificationId])]
-    });
-  };
 
   handleHamburgerClick = event => {
     this.props.onHamburgerClick(event);
@@ -120,20 +114,21 @@ class GlobalNav extends Component {
             ) : null}
             {this.showNotifications() ? (
               <Notifications {...this.props.topNav.notifications}>
-                {(this.props.topNav.notifications.notifications || []
-                ).map(notificationProps => (
-                  <Notification
-                    unread={notificationProps.unread}
-                    key={notificationProps.id}
-                    onClick={notificationProps.onClick}
-                    id={notificationProps.id}
-                    title={notificationProps.title}
-                  >
-                    {notificationProps.children instanceof Function
-                      ? notificationProps.children()
-                      : notificationProps.children}
-                  </Notification>
-                ))}
+                {(this.props.topNav.notifications.notifications || []).map(
+                  notificationProps => (
+                    <Notification
+                      unread={notificationProps.unread}
+                      key={notificationProps.id}
+                      onLinkClick={notificationProps.onLinkClick}
+                      id={notificationProps.id}
+                      title={notificationProps.title}
+                    >
+                      {notificationProps.children
+                        ? notificationProps.children
+                        : null}
+                    </Notification>
+                  )
+                )}
               </Notifications>
             ) : null}
           </TopNavAdapter>
@@ -168,25 +163,55 @@ class GlobalNav extends Component {
 }
 
 GlobalNav.propTypes = {
+  /**
+   * Id of the active module or submodule
+   */
   activeModuleId: PropTypes.string,
+  /**
+   * Page content
+   */
   children: PropTypes.node,
+  /**
+   * Called when the user clicks on the 'hamburger' button in order to toggle the menu
+   */
   onHamburgerClick: PropTypes.func,
+  /**
+   * Called when the user selects a module or submodule
+   */
   onModuleChange: PropTypes.func.isRequired,
+  /**
+   * When true, shows the Subnav below the Topnav
+   */
   showSubNav: PropTypes.bool,
+  /**
+   * When true, Sidenav is open
+   */
   sideNavOpen: PropTypes.bool,
+  /**
+   * Initial open state of the side nav, user actions will override
+   */
   sideNavOpenByDefault: PropTypes.bool,
+  /**
+   * A list of modules to appear in the sidenav
+   */
   modules: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired
     })
   ),
+  /**
+   * A list of submodules to appear in the sidenav
+   */
   submodules: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired
     })
   ),
+  /**
+   * Options to configure the Topnav
+   */
   topNav: PropTypes.shape({
     logo: PropTypes.string,
     logoLink: PropTypes.string,
@@ -208,6 +233,9 @@ GlobalNav.propTypes = {
       )
     })
   }),
+  /**
+   * Options to configure the Sidenav
+   */
   sideNav: PropTypes.shape({
     copyright: PropTypes.string,
     headerLabel: PropTypes.string,
@@ -221,56 +249,9 @@ GlobalNav.propTypes = {
 };
 
 GlobalNav.defaultProps = {
-  activeModuleId: undefined,
-  children: undefined,
   modules: [],
   submodules: [],
   topNav: {},
   sideNav: {},
-  onHamburgerClick: () => {},
-  showSubNav: false,
-  sideNavOpen: undefined,
-  sideNavOpenByDefault: false
+  onHamburgerClick: () => {}
 };
-
-GlobalNav.__docgenInfo = {
-  props: {
-    activeModuleId: {
-      description: "id of the active module or submodule"
-    },
-    children: {
-      description: "page content"
-    },
-    onHamburgerClick: {
-      description:
-        "called when the user clicks on the 'hamburger' button in order to toggle the menu"
-    },
-    onModuleChange: {
-      description: "called when the user selects a module or submodule"
-    },
-    showSubNav: {
-      description: "when true, shows the Subnav below the Topnav"
-    },
-    sideNavOpen: {
-      description: "when true, Sidenav is open"
-    },
-    sideNavOpenByDefault: {
-      description:
-        "initial open state of the side nav, user actions will override"
-    },
-    modules: {
-      description: "a list of modules to appear in the sidenav"
-    },
-    submodules: {
-      description: "a list of submodules to appear in the sidenav"
-    },
-    topNav: {
-      description: "options to configure the Topnav"
-    },
-    sideNav: {
-      description: "options to configure the Sidenav"
-    }
-  }
-};
-
-export default GlobalNav;

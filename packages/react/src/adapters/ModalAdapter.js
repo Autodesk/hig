@@ -9,7 +9,7 @@ import HIGAdapter, {
 } from "./HIGAdapter";
 import { Button } from "../hig-react";
 
-class ModalAdapter extends Component {
+export default class ModalAdapter extends Component {
   constructor(props) {
     super(props);
     this.buttons = [];
@@ -55,7 +55,8 @@ class ModalAdapter extends Component {
             />
             <MapsPropToMethod value={this.props.open} {...adapterProps}>
               {(instance, value) =>
-                value ? instance.open() : instance.close()}
+                value ? instance.open() : instance.close()
+              }
             </MapsPropToMethod>
             <MapsEventListener
               listener="onCloseClick"
@@ -81,58 +82,40 @@ class ModalAdapter extends Component {
 }
 
 ModalAdapter.propTypes = {
+  /**
+   * Text or html string content of the modal
+   */
   body: PropTypes.string,
+  /**
+   * An array of props supported by the Button component
+   */
   buttons: PropTypes.arrayOf(PropTypes.shape(Button.propTypes)),
+  /**
+   * Supports adding any dom content to the body of the modal
+   */
   children: PropTypes.node,
+  /**
+   * Triggers when you click the close button
+   */
   onCloseClick: PropTypes.func,
+  /**
+   * Triggers when you click the overlay behind the modal
+   */
   onOverlayClick: PropTypes.func,
+  /**
+   * Modal is visible when true
+   */
   open: PropTypes.bool,
+  /**
+   * Style of the modal shell
+   */
   style: PropTypes.oneOf(VanillaModal.AvailableStyles),
+  /**
+   * Title of the modal
+   */
   title: PropTypes.string
-};
-
-ModalAdapter.defaultProps = {
-  body: undefined,
-  buttons: undefined,
-  children: undefined,
-  onCloseClick: undefined,
-  onOverlayClick: undefined,
-  open: undefined,
-  style: undefined,
-  title: undefined
-};
-
-ModalAdapter.__docgenInfo = {
-  props: {
-    body: {
-      description: "text or html string content of the modal"
-    },
-    buttons: {
-      description: "an array of props supported by the Button component"
-    },
-    style: {
-      description: "style of the modal shell"
-    },
-    onCloseClick: {
-      description: "triggers when you click the close button"
-    },
-    onOverlayClick: {
-      description: "triggers when you click the overlay behind the modal"
-    },
-    open: {
-      description: "modal is visible when true"
-    },
-    title: {
-      description: "title of the modal"
-    },
-    children: {
-      description: "supports add any dom content to the body of the modal"
-    }
-  }
 };
 
 ModalAdapter.defaultProps = {
   buttons: []
 };
-
-export default ModalAdapter;

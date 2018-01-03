@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import PasswordFieldAdapter from "../../../adapters/FormElements/PasswordFieldAdapter";
 
-class PasswordField extends Component {
+export default class PasswordField extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -52,17 +52,53 @@ class PasswordField extends Component {
 }
 
 PasswordField.propTypes = {
+  /**
+   * Disable the field, preventing user interaction
+   */
   disabled: PropTypes.bool,
+  /**
+   * Initial value of the field
+   */
   initialValue: PropTypes.string,
+  /**
+   * A short description or suggestion
+   */
   instructions: PropTypes.string,
+  /**
+   * Describes what the field controls
+   */
   label: PropTypes.string,
+  /**
+   * Set on the element's name attribute
+   */
   name: PropTypes.string,
+  /**
+   * Called when user moves focus away from the field
+   */
   onBlur: PropTypes.func,
+  /**
+   * Called when user enters a new value and moves focus away from the field
+   */
   onChange: PropTypes.func,
+  /**
+   * Called when user moves focus onto the field
+   */
   onFocus: PropTypes.func,
+  /**
+   * Called when user enters a new value
+   */
   onInput: PropTypes.func,
+  /**
+   * Data entry suggestions or formatting examples
+   */
   placeholder: PropTypes.string,
+  /**
+   * Indicates a field must be filled before the form may be completed
+   */
   required: PropTypes.string,
+  /**
+   * Controlled value of the field
+   */
   value: PropTypes.string
 };
 
@@ -72,30 +108,3 @@ PasswordField.defaultProps = {
   onChange: () => {},
   onInput: () => {}
 };
-
-PasswordField.__docgenInfo = {
-  props: {
-    disabled: { description: "disable the field, preventing user interaction" },
-    initialValue: { description: "initial value of the field" },
-    instructions: { description: "a short description or suggestion" },
-    label: { description: "describes what the field controls" },
-    name: { description: "set on the element's name attribute" },
-    onBlur: { description: "called when user moves focus away from the field" },
-    onChange: {
-      description:
-        "called when user enters a new value and moves focus away from the field"
-    },
-    onFocus: { description: "called when user moves focus onto the field" },
-    onInput: { description: "called when user enters a new value" },
-    placeholder: {
-      description: "data entry suggestions or formatting examples"
-    },
-    required: {
-      description:
-        "indicates a field must be filled before the form may be completed"
-    },
-    value: { description: "controlled value of the field" }
-  }
-};
-
-export default PasswordField;

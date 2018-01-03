@@ -1,9 +1,9 @@
-import React from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import TabsAdapter from "../../../adapters/Tabs/TabsAdapter";
 import Tab from "./Tab";
 
-class Tabs extends React.Component {
+export default class Tabs extends Component {
   state = {
     activeTabIndex: this.defaultActiveTabIndex()
   };
@@ -58,24 +58,16 @@ class Tabs extends React.Component {
 }
 
 Tabs.propTypes = {
+  /**
+   * Called when user activates a tab
+   */
   onTabChange: PropTypes.func,
+  /**
+   * Accepts Tab components
+   */
   children: PropTypes.node
 };
 
 Tabs.defaultProps = {
-  onTabChange: () => {},
-  children: null
+  onTabChange: () => {}
 };
-
-Tabs.__docgenInfo = {
-  props: {
-    children: {
-      description: "Accepts Tab components"
-    },
-    onTabChange: {
-      description: "Called when user activates a tab"
-    }
-  }
-};
-
-export default Tabs;

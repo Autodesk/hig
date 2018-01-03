@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Image as VanillaImage } from "hig-vanilla";
 
-class ImageAdapter extends Component {
+export default class ImageAdapter extends Component {
   render() {
     return (
       <img
@@ -15,14 +15,8 @@ class ImageAdapter extends Component {
 }
 
 ImageAdapter.propTypes = {
+  /**
+   * Path to image
+   */
   src: PropTypes.string
 };
-
-ImageAdapter.__docgenInfo = {
-  props: {
-    src: {
-      description: "path to image"
-    }
-  }
-};
-export default ImageAdapter;

@@ -26,7 +26,7 @@ describe("<Notifications", () => {
       let wrapper;
       beforeEach(() => {
         wrapper = mount(
-          <Notifications featuredNotification={<Notification />}>
+          <Notifications featuredNotification={{ id: 3 }}>
             <Notification unread id={1} />
             <Notification unread={false} id={2} />
           </Notifications>

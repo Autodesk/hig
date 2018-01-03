@@ -1,10 +1,10 @@
 import { Table as VanillaTable } from "hig-vanilla";
-import * as PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import React, { Component } from "react";
 import HeaderCheckbox from "./HeaderCheckbox";
 import RowCheckbox from "./RowCheckbox";
 
-class SelectableTable extends Component {
+export default class SelectableTable extends Component {
   static propTypes = {
     selectable: PropTypes.bool
   };
@@ -92,32 +92,27 @@ class SelectableTable extends Component {
   }
 }
 
-SelectableTable.__docgenInfo = {
-  props: {
-    columns: {
-      description: "provides content for header cells"
-    },
-    data: {
-      description: "provides content table cells"
-    },
-    density: {
-      description: "sets the size of the table"
-    },
-    onRowSelectionChange: {
-      description: "called when user selects or deselects a row"
-    },
-    onSelectAllSelectionChange: {
-      description: "called when user checks or unchecks the select-all checkbox"
-    }
-  }
-};
-
 SelectableTable.propTypes = {
+  /**
+   * Sets the size of the table
+   */
   density: PropTypes.oneOf(VanillaTable.AvailableDensities),
+  /**
+   * Provides content table cells
+   */
   data: PropTypes.arrayOf(PropTypes.object),
+  /**
+   * Called when user selects or deselects a row
+   */
   onRowSelectionChange: PropTypes.func,
   children: PropTypes.func,
+  /**
+   * Called when user checks or unchecks the select-all checkbox
+   */
   onSelectAllSelectionChange: PropTypes.func,
+  /**
+   * Provides content for header cells
+   */
   columns: PropTypes.arrayOf(
     PropTypes.shape({
       Header: PropTypes.string,
@@ -128,5 +123,3 @@ SelectableTable.propTypes = {
     })
   )
 };
-
-export default SelectableTable;

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import NotificationAdapter from "../../../../adapters/GlobalNav/TopNav/NotificationAdapter";
 
-class Notification extends Component {
+export default class Notification extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,15 +12,15 @@ class Notification extends Component {
     this.initialProps = props;
   }
 
-  onClick = () => {
-    this.props.onClick(this.props.id);
+  onLinkClick = () => {
+    this.props.onLinkClick(this.props.id);
   };
 
   render() {
     return (
       <NotificationAdapter
         {...this.props}
-        onClick={this.onClick}
+        onLinkClick={this.onLinkClick}
         id={this.props.id}
         unread={this.props.unread}
       >
@@ -31,41 +31,31 @@ class Notification extends Component {
 }
 
 Notification.propTypes = {
+  /**
+   * {Boolean} to show specify whether notification is read
+   */
   unread: PropTypes.bool,
+  /**
+   * Content for notification
+   */
   children: PropTypes.node,
+  /**
+   * Timestamp for notification (ISO date string or date instance)
+   */
   timestamp: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.instanceOf(Date)
-  ]), // ISO date string
-  onClick: PropTypes.func,
+  ]),
+  /**
+   * Calls the provided callback when user clicks on the noticatiosn icon in the top nav
+   */
+  onLinkClick: PropTypes.func,
+  /**
+   * Id for the notification
+   */
   id: PropTypes.number.isRequired,
+  /**
+   * {Boolean} specifies a featured notification
+   */
   featured: PropTypes.bool
 };
-
-Notification.defaultProps = {};
-
-Notification.__docgenInfo = {
-  props: {
-    id: {
-      description: "Id for the notification"
-    },
-    unread: {
-      description: "{Boolean} to show specify whether notificaiton is read"
-    },
-    children: {
-      description: "content for notification"
-    },
-    timestamp: {
-      description: "timstamp for notification"
-    },
-    onClick: {
-      description:
-        "Calls the provided callback when user clicks on the noticatiosn icon in the top nav"
-    },
-    featured: {
-      description: "{Boolean} specifies a featured notification"
-    }
-  }
-};
-
-export default Notification;

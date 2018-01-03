@@ -3,25 +3,7 @@ import PropTypes from "prop-types";
 import SearchAdapter from "../../../../adapters/GlobalNav/TopNav/SearchAdapter";
 import Option from "../../FormElements/Option";
 
-class Search extends Component {
-  static propTypes = {
-    placeholder: PropTypes.string,
-    options: PropTypes.arrayOf(
-      PropTypes.shape({
-        label: PropTypes.string,
-        value: PropTypes.string
-      })
-    ),
-    onInput: PropTypes.func,
-    value: PropTypes.string,
-    showOptions: PropTypes.bool,
-    onBlur: PropTypes.func,
-    showClearIcon: PropTypes.bool,
-    onClearIconClick: PropTypes.func,
-    onClickOutside: PropTypes.func,
-    onKeydown: PropTypes.func
-  };
-
+export default class Search extends Component {
   static defaultProps = {
     onInput: () => {},
     value: undefined,
@@ -186,39 +168,48 @@ class Search extends Component {
   }
 }
 
-Search.__docgenInfo = {
-  props: {
-    value: {
-      description: "value of search input"
-    },
-    onInput: {
-      description:
-        "Calls the provided callback when user enters text in Search input"
-    },
-    showOptions: {
-      description: "shows fitered options"
-    },
-    onBlur: {
-      description: "calles the callback on Blur"
-    },
-    onFocus: {
-      description: "calls the callback on Focus"
-    },
-    showClearIcon: {
-      description: "show the clear input icon"
-    },
-    onClearIconClick: {
-      description: "Calls the provided callback when the Clear Icon is clicked"
-    },
-    onClickOutside: {
-      description:
-        "Calls the provided callback when user clicks outside of the Help"
-    },
-    onKeydown: {
-      description:
-        "Calls the provided callback when user pressed key down on Search Input"
-    }
-  }
+Search.propTypes = {
+  placeholder: PropTypes.string,
+  options: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string,
+      value: PropTypes.string
+    })
+  ),
+  /**
+   * Calls the provided callback when user enters text in Search input
+   */
+  onInput: PropTypes.func,
+  /**
+   * Value of search input
+   */
+  value: PropTypes.string,
+  /**
+   * Shows filtered options
+   */
+  showOptions: PropTypes.bool,
+  /**
+   * Calls the callback on Blur
+   */
+  onBlur: PropTypes.func,
+  /**
+   * Calls the callback on Focus
+   */
+  onFocus: PropTypes.func,
+  /**
+   * Show the clear input icon
+   */
+  showClearIcon: PropTypes.bool,
+  /**
+   * Calls the provided callback when the Clear Icon is clicked
+   */
+  onClearIconClick: PropTypes.func,
+  /**
+   * Calls the provided callback when user clicks outside of the Help
+   */
+  onClickOutside: PropTypes.func,
+  /**
+   * Calls the provided callback when user pressed key down on Search Input
+   */
+  onKeydown: PropTypes.func
 };
-
-export default Search;

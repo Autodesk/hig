@@ -82,7 +82,8 @@ function ProjectAccountSwitcherAdapter(props) {
           </MapsPropToMethod>
           <MapsPropToMethod value={props.showCaret} {...adapterProps}>
             {(instance, value) =>
-              value ? instance.showCaret() : instance.hideCaret()}
+              value ? instance.showCaret() : instance.hideCaret()
+            }
           </MapsPropToMethod>
           <MountsHIGChildList {...adapterProps}>{projects}</MountsHIGChildList>
           <MountsHIGChildList {...adapterProps}>{accounts}</MountsHIGChildList>

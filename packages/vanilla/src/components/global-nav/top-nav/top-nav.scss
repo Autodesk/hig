@@ -2,7 +2,8 @@
 @import '~basics/shadows/shadows.scss';
 @import '~helpers/css/mixins/base.scss';
 @import '~helpers/css/layers.scss';
-$group-height: 56px;
+$hig__global-nav__top-nav--height: 56px;
+
 .hig__global-nav__top-nav {
   @include reset;
   display: flex;
@@ -10,7 +11,8 @@ $group-height: 56px;
   align-items: stretch;
   position: relative;
   background: color(hig-white);
-  height: $group-height; // line-height: $group-height;
+  height: $hig__global-nav__top-nav--height;
+  // line-height: $hig__global-nav__top-nav--height;
   z-index: $top-nav-layer;
   padding-left: 7px;
   @include shadow("dropshadow");

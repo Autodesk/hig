@@ -3,20 +3,21 @@ function checkDocgenInfo(Component) {
     return Object.keys(Component.propTypes);
   }
 
-  return Object.keys(
-    Component.propTypes
-  ).reduce((undocumentedProps, propName) => {
-    let description;
-    try {
-      description = Component.__docgenInfo.props[propName].description;
-    } catch (TypeError) {
+  return Object.keys(Component.propTypes).reduce(
+    (undocumentedProps, propName) => {
+      let description;
+      try {
+        description = Component.__docgenInfo.props[propName].description;
+      } catch (TypeError) {
+        return undocumentedProps.concat(propName);
+      }
+      if (description && description.length > 0) {
+        return undocumentedProps;
+      }
       return undocumentedProps.concat(propName);
-    }
-    if (description && description.length > 0) {
-      return undocumentedProps;
-    }
-    return undocumentedProps.concat(propName);
-  }, []);
+    },
+    []
+  );
 }
 
 function checkComponent(Component) {
