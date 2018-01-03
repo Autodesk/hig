@@ -28,7 +28,7 @@
     "url": "git@github.com:autodesk/hig.git"
   },
   "author": "Autodesk Inc.",
-  "license": "Apache 2.0",
+  "license": "Apache-2.0",
   "homepage": "http://hig.autodesk.com",
   "devDependencies": {
     "babel-core": "^6.26.0",

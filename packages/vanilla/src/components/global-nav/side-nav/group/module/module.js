@@ -15,9 +15,6 @@ import './module.scss';
 class Module extends Core {
   constructor(options) {
     super(options);
-    if (!options.icon) {
-      options['no-icon-class'] = 'hig__global-nav__side-nav__section__group__module__submodules--no-icon';
-    }
     this._render(Template, options);
     this.initialOptions = options;
   }
@@ -39,6 +36,9 @@ class Module extends Core {
   setIcon(icon) {
     const mountEl = this._findDOMEl('.hig__global-nav__side-nav__section__group__module__link__icon', this.el);
     this._findOrCreateIconComponent(mountEl).setNameOrSVG(icon);
+
+    const submodules = this._findDOMEl('.hig__global-nav__side-nav__section__group__module__submodules', this.el);
+    submodules.classList.remove('hig__global-nav__side-nav__section__group__module__submodules--no-icon');
   }
 
   setTitle(title) {
