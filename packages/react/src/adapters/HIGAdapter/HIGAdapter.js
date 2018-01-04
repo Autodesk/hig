@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { Themes } from "hig-vanilla";
 import HIGPropTypes from "./HIGPropTypes";
 
 class HIGAdapter extends Component {
@@ -8,16 +9,16 @@ class HIGAdapter extends Component {
     HIGConstructor: PropTypes.func.isRequired,
     displayName: PropTypes.string.isRequired,
     higInstance: HIGPropTypes.higInstance,
-    higTheme: PropTypes.oneOf(["light", "dark-blue"])
+    higTheme: PropTypes.oneOf(Themes.AvailableThemes)
   };
 
   static contextTypes = {
     higParent: PropTypes.object,
-    higTheme: PropTypes.oneOf(["light", "dark-blue"])
+    higTheme: PropTypes.oneOf(Themes.AvailableThemes)
   };
 
   static childContextTypes = {
-    higTheme: PropTypes.oneOf(["light", "dark-blue"])
+    higTheme: PropTypes.oneOf(Themes.AvailableThemes)
   };
 
   static defaultProps = {

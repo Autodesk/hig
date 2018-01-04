@@ -1,19 +1,7 @@
 /* globals document, NodeFilter */
 import Mustache from 'mustache';
+import Themes from 'helpers/js/_themes';
 import 'helpers/js/polyfills';
-
-const AvailableThemes = ['light', 'dark-blue'];
-const themeClasses = ['hig--light-theme', 'hig--dark-blue-theme'];
-function themeClassFor(theme) {
-  if (AvailableThemes.includes(theme)) {
-    return `hig--${theme}-theme`;
-  }
-  console.error(
-    `Theme "${theme}" not found, only these themes are allowed: `,
-    AvailableThemes
-  );
-  return '';
-}
 
 class Core {
   /**
@@ -346,9 +334,10 @@ class Core {
   }
 
   setTheme(theme) {
+    Themes.checkTheme(theme);
     this.themedElements.forEach((el) => {
-      el.classList.remove(themeClasses);
-      el.classList.add(themeClassFor(theme));
+      el.classList.remove(Themes.themeClasses);
+      el.classList.add(Themes.themeClassFor(theme));
     });
   }
 
