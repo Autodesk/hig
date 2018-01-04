@@ -9,7 +9,7 @@ export const modules = [
     id: "1-2",
     groupId: "2",
     icon: "collaboration",
-    title: "Authoring Collaboration"
+    title: "Beispiel eines extra langen Modulnamens"
   },
   {
     id: "1-3",
@@ -110,7 +110,7 @@ export const submodules = [
   {
     id: "1-1-3",
     moduleId: "1-1",
-    title: "Quality"
+    title: "Beispielsubmodul mit langem Umbruchnamen"
   },
   {
     id: "1-1-4",
