@@ -6,74 +6,91 @@
   position: relative;
   margin: spacing(xs) 0;
   user-select: none;
+}
 
-  &__row {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
+.hig__global-nav__side-nav__section__group__module__row {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  min-height: 32px;
+}
+
+.hig__global-nav__side-nav__section__group__module__link {
+  display: flex;
+  align-items: stretch;
+  padding-left: 2px;
+  flex: 1 1 auto;
+  color: color(hig-gray-70);
+  text-decoration: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    border-left: 2px solid transparent;
+    top: 0;
+    left: 0;
     height: 32px;
   }
 
-  &__link {
-    display: flex;
-    align-items: stretch;
-    border-left: 2px solid transparent;
-    flex: 1 1 auto;
-    color: color(hig-gray-70);
-    text-decoration: none;
+  &:active,
+  &:focus {
+    outline: none;
+    color: color(hig-blue-60);
 
-    &:active,
-    &:focus {
-      outline: none;
-      color: color(hig-blue-60);
+    &::before {
       border-left-color: color(hig-blue-60);
-
     }
+  }
 
-    &__icon {
-      padding-left: spacing(xs);
+  &:hover,
+  &--active {
+    color: color(hig-blue-50);
 
-      svg * {
-        fill: color(hig-gray-70);
-
-        &__link:hover &,
-        &__link--active & {
-          fill: color(hig-blue-50);
-        }
-
-        &__link:focus &,
-        &__link:active & {
-          fill: color(hig-blue-60);
-        }
-      }
-    }
-
-    &:hover,
-    &--active {
-      color: color(hig-blue-50);
+    &::before {
       border-left-color: color(hig-blue-50);
-      svg * {
-        fill: color(hig-blue-50);
-      }
     }
 
-    &__title {
-      font-weight: 700;
-      font-size: 15px;
-      padding-left: spacing(xs) - 2;
-      line-height: 32px;
+    svg * {
+      fill: color(hig-blue-50);
     }
   }
+}
 
-  &--hide {
-    display: none;
-  }
+.hig__global-nav__side-nav__section__group__module__link__icon {
+  padding-left: spacing(xs);
 
-  &__submodules{
-    padding-left: 48px;
+  svg * {
+    fill: color(hig-gray-70);
 
-    &--no-icon{
-      padding-left: spacing(m);;
+    &__link:hover &,
+    &__link--active & {
+      fill: color(hig-blue-50);
     }
+
+    &__link:focus &,
+    &__link:active & {
+      fill: color(hig-blue-60);
+    }
+  }
+}
+
+
+.hig__global-nav__side-nav__section__group__module__link__title {
+  font-weight: 700;
+  font-size: 14px;
+  padding-left: spacing(xs) - 2;
+  padding-top: 5px;
+  line-height: 20px;
+}
+
+.hig__global-nav__side-nav__section__group__module--hide {
+  display: none;
+}
+
+.hig__global-nav__side-nav__section__group__module__submodules {
+  padding-left: 48px;
+
+  &--no-icon{
+    padding-left: spacing(m);;
   }
 }
