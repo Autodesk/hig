@@ -17,15 +17,21 @@ class Collapse extends Core {
   }
 
   _componentDidMount() {
+    this.themedElements = [this.el];
+    this.setTheme('dark-blue');
     this._setIcon();
   }
 
   minimize() {
-    this.el.classList.add('hig__global-nav__side-nav__section__group__module__collapse--collapsed');
+    this.el.classList.add(
+      'hig__global-nav__side-nav__section__group__module__collapse--collapsed'
+    );
   }
 
   maximize() {
-    this.el.classList.remove('hig__global-nav__side-nav__section__group__module__collapse--collapsed');
+    this.el.classList.remove(
+      'hig__global-nav__side-nav__section__group__module__collapse--collapsed'
+    );
   }
 
   onClick(fn) {
@@ -33,11 +39,15 @@ class Collapse extends Core {
   }
 
   show() {
-    this.el.classList.remove('hig__global-nav__side-nav__section__group__module__collapse--hide');
+    this.el.classList.remove(
+      'hig__global-nav__side-nav__section__group__module__collapse--hide'
+    );
   }
 
   hide() {
-    this.el.classList.add('hig__global-nav__side-nav__section__group__module__collapse--hide');
+    this.el.classList.add(
+      'hig__global-nav__side-nav__section__group__module__collapse--hide'
+    );
   }
 
   _setIcon() {
@@ -54,7 +64,8 @@ class Collapse extends Core {
   }
 }
 
-Collapse._interface = Interface.components.GlobalNav.partials.SideNav.partials.Group.partials.Module.partials.Collapse;
+Collapse._interface =
+  Interface.components.GlobalNav.partials.SideNav.partials.Group.partials.Module.partials.Collapse;
 Collapse._defaults = {};
 Collapse._partials = {};
 
