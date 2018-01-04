@@ -17,7 +17,6 @@ class Link extends Core {
 
   _componentDidMount() {
     this.themedElements = [this.el];
-    this.setTheme('dark-blue');
   }
 
   onClick(fn) {

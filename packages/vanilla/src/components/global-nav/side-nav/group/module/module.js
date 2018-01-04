@@ -26,7 +26,6 @@ class Module extends Core {
         this.el
       )
     ];
-    this.setTheme('dark-blue');
     if (this.initialOptions.icon) {
       this.setIcon(this.initialOptions.icon);
     }

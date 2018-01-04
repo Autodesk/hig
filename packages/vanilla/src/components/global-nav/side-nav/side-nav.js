@@ -28,7 +28,6 @@ class SideNav extends Core {
       this._findDOMEl('.hig__global-nav__sidenav__header', this.el),
       this._findDOMEl('.hig__global-nav__sidenav__copyright', this.el)
     ];
-    this.setTheme('dark-blue');
   }
 
   addGroup(groupInstance, referenceInstance) {

@@ -18,7 +18,6 @@ class Collapse extends Core {
 
   _componentDidMount() {
     this.themedElements = [this.el];
-    this.setTheme('dark-blue');
     this._setIcon();
   }
 
