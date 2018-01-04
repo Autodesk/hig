@@ -93,6 +93,20 @@ export const modules = [
     groupId: "4",
     icon: "project-management",
     title: "Project Admin"
+  },
+  {
+    id: "1-17",
+    groupId: "5",
+    icon: "help",
+    title: "Knowledge Base",
+    link: "https://knowledge.autodesk.com/",
+    target: "_blank"
+  },
+  {
+    id: "1-18",
+    groupId: "5",
+    icon: "layout",
+    title: "Style Guide"
   }
 ];
 
@@ -252,6 +266,20 @@ export const submodules = [
     id: "1-9-31",
     moduleId: "1-9",
     title: "Activities"
+  },
+  {
+    id: "1-18-32",
+    moduleId: "1-18",
+    title: "Web",
+    link: "http://www.autodesk.com",
+    target: "_blank"
+  },
+  {
+    id: "1-18-33",
+    moduleId: "1-18",
+    title: "Desktop",
+    link: "http://www.autodesk.com",
+    target: "_blank"
   }
 ];
 
