@@ -201,10 +201,12 @@ class Playground extends React.Component {
 
   handleSubmoduleClick = id => {
     console.log(`submodule click ${id}`);
+    this.toggleSideNav();
   };
 
   handleModuleClick = id => {
     console.log(`module click ${id}`);
+    this.toggleSideNav();
   };
 
   accountClicked = id => {
@@ -342,7 +344,7 @@ class Playground extends React.Component {
         topNav={topNavProps}
         activeModuleId={this.state.activeModuleId}
         showSubNav
-        isSideNavOpen={this.state.isSideNavOpen}
+        sideNavOpen={this.state.isSideNavOpen}
         onHamburgerClick={this.toggleSideNav}
       >
         <Button
