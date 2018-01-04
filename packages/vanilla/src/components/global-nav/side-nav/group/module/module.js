@@ -71,6 +71,10 @@ class Module extends Core {
     this._findDOMEl('a', this.el).setAttribute('href', link);
   }
 
+  setTarget(target) {
+    this._findDOMEl('a', this.el).setAttribute('target', target);
+  }
+
   addSubmodule(SubmoduleInstance, referenceSubmodule) {
     if (SubmoduleInstance instanceof Submodule) {
       this.mountPartialToComment(

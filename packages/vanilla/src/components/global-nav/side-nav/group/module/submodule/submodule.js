@@ -35,6 +35,10 @@ class Submodule extends Core {
     this.el.setAttribute('href', link);
   }
 
+  setTarget(target) {
+    this.el.setAttribute('target', target);
+  }
+
   show() {
     this.el.classList.remove(
       'hig__global-nav__side-nav__section__group__module__submodule--hide'

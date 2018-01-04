@@ -1230,6 +1230,12 @@
                         "{String} title - new title"
                       ]
                     },
+                    "setTarget": {
+                      "desc": "sets the target attribute of a module",
+                      "params": [
+                        "{String} target value"
+                      ]
+                    },
                     "show": {
                       "desc": "show (used for filtering)"
                     }
@@ -1285,6 +1291,12 @@
                           "desc": "sets the title of an module",
                           "params": [
                             "{String} title - new title"
+                          ]
+                        },
+                        "setTarget": {
+                          "desc": "sets the target attribute of a module",
+                          "params": [
+                            "{String} target value"
                           ]
                         },
                         "setLink": {

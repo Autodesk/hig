@@ -43,6 +43,11 @@ function SubmoduleAdapter(props) {
             setter="setTitle"
             {...adapterProps}
           />
+          <MapsPropToMethod
+            value={props.target}
+            setter="setTarget"
+            {...adapterProps}
+          />
           <MapsPropToMethod value={props.active} {...adapterProps}>
             {(instance, value) =>
               value ? instance.activate() : instance.deactivate()
@@ -60,7 +65,8 @@ SubmoduleAdapter.propTypes = {
   onHover: PropTypes.func,
   link: PropTypes.string,
   show: PropTypes.bool,
-  title: PropTypes.string
+  title: PropTypes.string,
+  target: PropTypes.string
 };
 
 SubmoduleAdapter.defaultProps = {
