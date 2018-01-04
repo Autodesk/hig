@@ -8,6 +8,7 @@ export default class ImageAdapter extends Component {
       <img
         className={VanillaImage.className}
         src={this.props.src}
+        alt={this.props.alt}
         {...this.props}
       />
     );
