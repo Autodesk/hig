@@ -8,10 +8,11 @@
 }
 
 .hig__global-nav__sidenav__links__link {
-  display: block;
+  display: flex;
+  justify-content: space-between;
   text-decoration: none;
   color: color(hig-cool-gray-50);
-  padding-left: spacing(m);
+  padding: 0 spacing(m);
   &:hover {
     color: color(hig-blue-50);
   }
@@ -20,8 +21,14 @@
 // Light theme
 .hig__global-nav__sidenav__links__link {
   color: color(hig-cool-gray-50);
+  svg * { stroke: color(hig-cool-gray-50); }
+
   &:hover {
     color: color(hig-blue-50);
+
+    svg * {
+      stroke: color(hig-blue-50);
+    }
   }
 }
 
@@ -29,8 +36,14 @@
 .hig--dark-blue-theme {
   &.hig__global-nav__sidenav__links__link {
     color: color(hig-white);
+    svg * { stroke: color(hig-white); }
+
     &:hover {
       color: color(hig-blue-40);
+
+      svg * {
+      stroke: color(hig-blue-40);
+    }
     }
   }
 }
