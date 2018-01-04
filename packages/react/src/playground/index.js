@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
 import React from "react";
+import PropTypes from "prop-types";
 import "hig-vanilla/lib/hig.css";
 
 import { Button, GlobalNav, breakpoints, TextLink } from "../hig-react";
@@ -310,6 +311,8 @@ class Playground extends React.Component {
       superHeaderLabel: "HIG",
       headerLabel: "Playground",
       headerLink: "http://apple.com",
+      copyright: "2018",
+      higTheme: "dark-blue",
       links,
       onLogoClick: event => {
         event.preventDefault();
