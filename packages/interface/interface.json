@@ -1324,6 +1324,12 @@
                     "{String} link - new link"
                   ]
                 },
+                "setTarget": {
+                  "desc": "sets the target attribute",
+                  "params": [
+                    "{String} a valid target attribute"
+                  ]
+                },
                 "setTitle": {
                   "desc": "sets the title",
                   "params": [

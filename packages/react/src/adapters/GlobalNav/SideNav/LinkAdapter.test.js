@@ -13,6 +13,7 @@ describe("Help LinkAdapter", () => {
           onHover={() => {}}
           title="Autodesk"
           link="http://autodesk.com"
+          target="_blank"
         />
       );
     }).toImplementHIGInterfaceOf(

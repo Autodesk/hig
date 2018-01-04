@@ -34,6 +34,10 @@ class Link extends Core {
   setLink(link) {
     this.el.setAttribute('href', link);
   }
+
+  setTarget(target) {
+    this.el.setAttribute('target', target);
+  }
 }
 
 Link._interface = Interface.components.GlobalNav.partials.SideNav.partials.Link;

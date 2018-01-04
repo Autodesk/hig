@@ -262,10 +262,12 @@ export const links = [
   },
   {
     title: "AutoCAD",
-    link: "https://www.autodesk.com/products/autocad/overview"
+    link: "https://www.autodesk.com/products/autocad/overview",
+    target: "_blank"
   },
   {
     title: "Maya",
-    link: "https://www.autodesk.com/products/maya/overview"
+    link: "https://www.autodesk.com/products/maya/overview",
+    target: "_blank"
   }
 ];
