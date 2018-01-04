@@ -2,6 +2,19 @@
 import Mustache from 'mustache';
 import 'helpers/js/polyfills';
 
+const AvailableThemes = ['light', 'dark-blue'];
+const themeClasses = ['hig--light-theme', 'hig--dark-blue-theme'];
+function themeClassFor(theme) {
+  if (AvailableThemes.includes(theme)) {
+    return `hig--${theme}-theme`;
+  }
+  console.error(
+    `Theme "${theme}" not found, only these themes are allowed: `,
+    AvailableThemes
+  );
+  return '';
+}
+
 class Core {
   /**
      * Our constructor mixes the options with the defaults (_defaults function) provided by the implementation class
@@ -10,6 +23,8 @@ class Core {
      */
 
   constructor(options) {
+    this.themedElements = [];
+
     // CHECK INTERFACE COMPATIBILITY
     if (!this._interface) {
       console.warn(
@@ -328,6 +343,13 @@ class Core {
 
   defaults() {
     return this._defaults;
+  }
+
+  setTheme(theme) {
+    this.themedElements.forEach((el) => {
+      el.classList.remove(themeClasses);
+      el.classList.add(themeClassFor(theme));
+    });
   }
 
   get _interface() {

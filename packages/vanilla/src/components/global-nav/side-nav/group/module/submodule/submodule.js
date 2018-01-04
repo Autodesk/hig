@@ -15,6 +15,11 @@ class Submodule extends Core {
     this._render(Template, options);
   }
 
+  _componentDidMount() {
+    this.themedElements = [this.el];
+    this.setTheme('dark-blue');
+  }
+
   onClick(fn) {
     return this._attachListener('click', this.el, this.el, fn);
   }
@@ -32,23 +37,32 @@ class Submodule extends Core {
   }
 
   show() {
-    this.el.classList.remove('hig__global-nav__side-nav__section__group__module__submodule--hide');
+    this.el.classList.remove(
+      'hig__global-nav__side-nav__section__group__module__submodule--hide'
+    );
   }
 
   hide() {
-    this.el.classList.add('hig__global-nav__side-nav__section__group__module__submodule--hide');
+    this.el.classList.add(
+      'hig__global-nav__side-nav__section__group__module__submodule--hide'
+    );
   }
 
   activate() {
-    this.el.classList.add('hig__global-nav__side-nav__section__group__module__submodule--active');
+    this.el.classList.add(
+      'hig__global-nav__side-nav__section__group__module__submodule--active'
+    );
   }
 
   deactivate() {
-    this.el.classList.remove('hig__global-nav__side-nav__section__group__module__submodule--active');
+    this.el.classList.remove(
+      'hig__global-nav__side-nav__section__group__module__submodule--active'
+    );
   }
 }
 
-Submodule._interface = Interface.components.GlobalNav.partials.SideNav.partials.Group.partials.Module.partials.Submodule;
+Submodule._interface =
+  Interface.components.GlobalNav.partials.SideNav.partials.Group.partials.Module.partials.Submodule;
 Submodule._defaults = {
   title: '',
   link: ''
