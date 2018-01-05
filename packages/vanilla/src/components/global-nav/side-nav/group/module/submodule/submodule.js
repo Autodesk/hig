@@ -1,5 +1,6 @@
 import Interface from 'interface.json';
 import Core from '_core.js';
+import Icon from 'basics/icon/icon';
 import './submodule.scss';
 import Template from './submodule.html';
 
@@ -28,7 +29,7 @@ class Submodule extends Core {
   }
 
   setTitle(title) {
-    this.el.textContent = title;
+    this._findDOMEl('.hig__global-nav__side-nav__section__group__module__submodule__title', this.el).textContent = title;
   }
 
   setLink(link) {
@@ -37,6 +38,7 @@ class Submodule extends Core {
 
   setTarget(target) {
     this.el.setAttribute('target', target);
+    this._setExternalLinkIcon();
   }
 
   show() {
@@ -61,6 +63,27 @@ class Submodule extends Core {
     this.el.classList.remove(
       'hig__global-nav__side-nav__section__group__module__submodule--active'
     );
+  }
+
+  _setExternalLinkIcon() {
+    if (this.el.getAttribute('target') === '_blank') {
+      const mountEl = this._findDOMEl(
+        '.hig__global-nav__side-nav__section__group__module__submodule__external-link-icon',
+        this.el
+      );
+      const iconComponent = this._findOrCreateIconComponent(mountEl);
+      iconComponent.setSize('16');
+      iconComponent.setNameOrSVG('external-link');
+    }
+  }
+
+  _findOrCreateIconComponent(mountElOrSelector, name = 'icon') {
+    if (this[name]) {
+      return this[name];
+    }
+    this[name] = new Icon({});
+    this[name].mount(mountElOrSelector);
+    return this[name];
   }
 }
 
