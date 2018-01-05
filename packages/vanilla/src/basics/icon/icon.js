@@ -21,14 +21,31 @@ class Icon extends Core {
 
   _componentDidMount() {
     if (this.initialOptions.nameOrSVG) {
-      this.setNameOrSVG(this.initialOptions.nameOrSVG, this.initialOptions.size);
+      this.setNameOrSVG(this.initialOptions.nameOrSVG);
+    }
+
+    if (this.initialOptions.size) {
+      this.setSize(this.initialOptions.size);
     }
   }
 
-  setNameOrSVG(icon, size = '24') {
+  setNameOrSVG(icon) {
+    this.icon = icon;
+    this._setSizedIcon(this.icon, this.size);
+  }
+
+  setSize(size) {
+    this.el.classList.remove(`hig__icon--${this.size}-size`);
+    this.el.classList.add(`hig__icon--${size}-size`);
+
+    this.size = size;
+    this._setSizedIcon(this.icon, this.size);
+  }
+
+  _setSizedIcon(icon, size = '24') {
     if (AvailableSizes.indexOf(size) > -1) {
       const iconString = this._confirmNameOrSVG(icon, size);
-      this._el.innerHTML = iconString;
+      this.el.innerHTML = iconString;
     } else {
       console.error(
         `Icon named "${icon} size "${size}" not found, only these size are allowed: `,
@@ -52,7 +69,8 @@ class Icon extends Core {
 
 Icon._interface = Interface.basics.Icon;
 Icon._defaults = {
-  nameOrSVG: ''
+  nameOrSVG: '',
+  size: '24'
 };
 
 Icon.AvailableSizes = AvailableSizes;
