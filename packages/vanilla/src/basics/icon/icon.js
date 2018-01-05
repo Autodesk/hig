@@ -17,35 +17,39 @@ class Icon extends Core {
     super(options);
     this._render(Template, options);
     this.initialOptions = options;
+
+    this.size = this.initialOptions.size;
+    this.nameOrSVG = this.initialOptions.nameOrSVG;
   }
 
   _componentDidMount() {
-    if (this.initialOptions.nameOrSVG) {
-      this.setNameOrSVG(this.initialOptions.nameOrSVG);
-    }
-
-    if (this.initialOptions.size) {
-      this.setSize(this.initialOptions.size);
-    }
+    this._setSizedIcon();
   }
 
   setNameOrSVG(icon) {
-    this.icon = icon;
-    this._setSizedIcon(this.icon, this.size);
+    this.nameOrSVG = icon;
+    this._setSizedIcon();
   }
 
   setSize(size) {
-    this.el.classList.remove(`hig__icon--${this.size}-size`);
-    this.el.classList.add(`hig__icon--${size}-size`);
-
     this.size = size;
-    this._setSizedIcon(this.icon, this.size);
+    this._setSizedIcon();
   }
 
-  _setSizedIcon(icon, size = '24') {
+  _setSizedIcon() {
+    const icon = this.nameOrSVG;
+    const size = this.size;
+
+    if (!(icon && size)) {
+      return; // Silently return until name and size are set
+    }
+
     if (AvailableSizes.indexOf(size) > -1) {
       const iconString = this._confirmNameOrSVG(icon, size);
       this.el.innerHTML = iconString;
+
+      AvailableSizes.forEach(availableSize => this.el.classList.remove(`hig__icon--${availableSize}-size`));
+      this.el.classList.add(`hig__icon--${size}-size`);
     } else {
       console.error(
         `Icon named "${icon} size "${size}" not found, only these size are allowed: `,

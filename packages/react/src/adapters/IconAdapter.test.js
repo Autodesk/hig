@@ -6,7 +6,13 @@ import IconAdapter from "./IconAdapter";
 describe("IconAdapter", () => {
   it("implements the hig interface", () => {
     expect(spiedInstance => {
-      mount(<IconAdapter higInstance={spiedInstance} nameOrSVG="settings" />);
+      mount(
+        <IconAdapter
+          higInstance={spiedInstance}
+          nameOrSVG="settings"
+          size="16"
+        />
+      );
     }).toImplementHIGInterfaceOf(VanillaIcon);
   });
 });
