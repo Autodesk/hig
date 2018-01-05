@@ -8,8 +8,7 @@ class Module extends Component {
     onClick: PropTypes.func.isRequired
   };
 
-  handleClick = event => {
-    event.preventDefault();
+  handleClick = () => {
     this.props.onClick(this.props.id);
   };
 

@@ -22,6 +22,11 @@ function LinkAdapter(props) {
             {...adapterProps}
           />
           <MapsPropToMethod
+            value={props.target}
+            setter="setTarget"
+            {...adapterProps}
+          />
+          <MapsPropToMethod
             value={props.title}
             setter="setTitle"
             {...adapterProps}
@@ -45,16 +50,10 @@ function LinkAdapter(props) {
 
 LinkAdapter.propTypes = {
   link: PropTypes.string,
+  target: PropTypes.string,
   title: PropTypes.string,
   onClick: PropTypes.func,
   onHover: PropTypes.func
-};
-
-LinkAdapter.defaultProps = {
-  link: undefined,
-  title: undefined,
-  onClick: undefined,
-  onHover: undefined
 };
 
 export default LinkAdapter;

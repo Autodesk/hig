@@ -1175,7 +1175,6 @@
                 "Module": {
                   "defaults": {
                     "icon": "{String} icon identifier",
-                    "link": "{String} link behind the module",
                     "title": "{String} the string of our SideNav module"
                   },
                   "methods": {
@@ -1230,6 +1229,12 @@
                         "{String} title - new title"
                       ]
                     },
+                    "setTarget": {
+                      "desc": "sets the target attribute of a module",
+                      "params": [
+                        "{String} target value"
+                      ]
+                    },
                     "show": {
                       "desc": "show (used for filtering)"
                     }
@@ -1258,7 +1263,6 @@
                     },
                     "Submodule": {
                       "defaults": {
-                        "link": "{String} link behind the submodule",
                         "title": "{String} the string of our SideNav submodule"
                       },
                       "methods": {
@@ -1285,6 +1289,12 @@
                           "desc": "sets the title of an module",
                           "params": [
                             "{String} title - new title"
+                          ]
+                        },
+                        "setTarget": {
+                          "desc": "sets the target attribute of a module",
+                          "params": [
+                            "{String} target value"
                           ]
                         },
                         "setLink": {
@@ -1322,6 +1332,12 @@
                   "desc": "sets the link",
                   "params": [
                     "{String} link - new link"
+                  ]
+                },
+                "setTarget": {
+                  "desc": "sets the target attribute",
+                  "params": [
+                    "{String} a valid target attribute"
                   ]
                 },
                 "setTitle": {

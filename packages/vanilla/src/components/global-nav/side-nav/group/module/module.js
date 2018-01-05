@@ -71,6 +71,11 @@ class Module extends Core {
     this._findDOMEl('a', this.el).setAttribute('href', link);
   }
 
+  setTarget(target) {
+    this._findDOMEl('a', this.el).setAttribute('target', target);
+    this._setExternalLinkIcon();
+  }
+
   addSubmodule(SubmoduleInstance, referenceSubmodule) {
     if (SubmoduleInstance instanceof Submodule) {
       this.mountPartialToComment(
@@ -121,6 +126,16 @@ class Module extends Core {
     );
   }
 
+  _setExternalLinkIcon() {
+    if (this._findDOMEl('a', this.el).getAttribute('target') === '_blank') {
+      const mountEl = this._findDOMEl(
+        '.hig__global-nav__side-nav__section__group__module__link__external-link-icon',
+        this.el
+      );
+      this._findOrCreateIconComponent(mountEl, 'external-link-icon').setNameOrSVG('external-link');
+    }
+  }
+
   _findOrCreateIconComponent(mountElOrSelector, name = 'icon') {
     if (this[name]) {
       return this[name];
@@ -135,8 +150,7 @@ Module._interface =
   Interface.components.GlobalNav.partials.SideNav.partials.Group.partials.Module;
 Module._defaults = {
   icon: '',
-  title: 'title',
-  link: '#'
+  title: 'title'
 };
 Module._partials = {
   Submodule,

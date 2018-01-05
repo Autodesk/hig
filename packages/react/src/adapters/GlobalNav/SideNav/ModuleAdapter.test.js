@@ -21,6 +21,7 @@ describe("ModuleAdapter", () => {
                 title="GlobalNav"
                 icon="settings"
                 link="http://autodesk.com"
+                target="_blank"
                 onClick={() => {}}
                 onHover={() => {}}
                 active
