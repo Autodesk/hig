@@ -139,8 +139,7 @@ Module._interface =
   Interface.components.GlobalNav.partials.SideNav.partials.Group.partials.Module;
 Module._defaults = {
   icon: '',
-  title: 'title',
-  link: '#'
+  title: 'title'
 };
 Module._partials = {
   Submodule,

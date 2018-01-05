@@ -1175,7 +1175,6 @@
                 "Module": {
                   "defaults": {
                     "icon": "{String} icon identifier",
-                    "link": "{String} link behind the module",
                     "title": "{String} the string of our SideNav module"
                   },
                   "methods": {
@@ -1264,7 +1263,6 @@
                     },
                     "Submodule": {
                       "defaults": {
-                        "link": "{String} link behind the submodule",
                         "title": "{String} the string of our SideNav submodule"
                       },
                       "methods": {
