@@ -775,6 +775,12 @@
           "params": [
             "String either SVG or name of icon"
           ]
+        },
+        "setSize": {
+          "desc": "Size of the icon, in pixels",
+          "params": [
+            "{String} either 24 or 16"
+          ]
         }
       }
     },
