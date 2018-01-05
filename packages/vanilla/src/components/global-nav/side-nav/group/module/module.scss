@@ -12,6 +12,7 @@
   flex-direction: row;
   align-items: stretch;
   min-height: 32px;
+  margin-right: spacing(xs);
 }
 
 .hig__global-nav__side-nav__section__group__module__link {
@@ -46,6 +47,12 @@
   line-height: 20px;
 }
 
+.hig__global-nav__side-nav__section__group__module__link__external-link-icon {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
 .hig__global-nav__side-nav__section__group__module--hide {
   display: none;
 }
@@ -60,8 +67,12 @@
 // Light theme
 .hig__global-nav__side-nav__section__group__module__link {
   color: color(hig-gray-70);
-  svg * {
+
+  .hig__global-nav__side-nav__section__group__module__link__icon svg * {
     fill: color(hig-gray-70);
+  }
+  .hig__global-nav__side-nav__section__group__module__link__external-link-icon svg * {
+    stroke: color(hig-gray-70);
   }
   &:active,
   &:focus {
@@ -69,8 +80,11 @@
     &::before {
       border-left-color: color(hig-blue-60);
     }
-    svg * {
+    .hig__global-nav__side-nav__section__group__module__link__icon svg * {
       fill: color(hig-blue-60);
+    }
+    .hig__global-nav__side-nav__section__group__module__link__external-link-icon svg * {
+      stroke: color(hig-blue-60);
     }
   }
   &:hover,
@@ -79,8 +93,11 @@
     &::before {
       border-left-color: color(hig-blue-50);
     }
-    svg * {
+    .hig__global-nav__side-nav__section__group__module__link__icon svg * {
       fill: color(hig-blue-50);
+    }
+    .hig__global-nav__side-nav__section__group__module__link__external-link-icon svg * {
+      stroke: color(hig-blue-50);
     }
   }
 }
@@ -89,17 +106,25 @@
 .hig--dark-blue-theme {
   &.hig__global-nav__side-nav__section__group__module__link {
     color: color(hig-white);
-    svg * {
+
+    .hig__global-nav__side-nav__section__group__module__link__icon svg * {
       fill: color(hig-white);
     }
+    .hig__global-nav__side-nav__section__group__module__link__external-link-icon svg * {
+      stroke: color(hig-white);
+    }
+
     &:active,
     &:focus {
       color: color(hig-blue-30);
       &::before {
         border-left-color: color(hig-blue-30);
       }
-      svg * {
+      .hig__global-nav__side-nav__section__group__module__link__icon svg * {
         fill: color(hig-blue-30);
+      }
+      .hig__global-nav__side-nav__section__group__module__link__external-link-icon svg * {
+        stroke: color(hig-blue-30);
       }
     }
     &:hover,
@@ -108,8 +133,11 @@
       &::before {
         border-left-color: color(hig-blue-40);
       }
-      svg * {
+      .hig__global-nav__side-nav__section__group__module__link__icon svg * {
         fill: color(hig-blue-40);
+      }
+      .hig__global-nav__side-nav__section__group__module__link__external-link-icon svg * {
+        stroke: color(hig-blue-40);
       }
     }
   }
