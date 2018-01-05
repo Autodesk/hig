@@ -15,6 +15,10 @@ class Link extends Core {
     this._render(Template, options);
   }
 
+  _componentDidMount() {
+    this.themedElements = [this.el];
+  }
+
   onClick(fn) {
     return this._attachListener('click', this.el, this.el, fn);
   }

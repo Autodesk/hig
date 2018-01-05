@@ -18,6 +18,18 @@ class SideNav extends Core {
     this._render(Template, options);
   }
 
+  _componentDidMount() {
+    this.themedElements = [
+      this.el,
+      this._findDOMEl('.hig__global-nav__sidenav__scroll', this.el),
+      this._findDOMEl('.hig__global-nav__sidenav__super-header-link', this.el),
+      this._findDOMEl('.hig__global-nav__sidenav__header-link', this.el),
+      this._findDOMEl('.hig__global-nav__sidenav__super-header', this.el),
+      this._findDOMEl('.hig__global-nav__sidenav__header', this.el),
+      this._findDOMEl('.hig__global-nav__sidenav__copyright', this.el)
+    ];
+  }
+
   addGroup(groupInstance, referenceInstance) {
     if (groupInstance instanceof Group) {
       this.mountPartialToComment('GROUP', groupInstance, referenceInstance);
@@ -33,51 +45,81 @@ class SideNav extends Core {
   addSearch(searchInstance, referenceInstance) {
     if (searchInstance instanceof Search) {
       this.mountPartialToComment('SEARCH', searchInstance, referenceInstance);
-      this.el.querySelector('.hig__global-nav__sidenav__scroll').classList.add('hig__global-nav__sidenav__scroll--search');
+      this.el
+        .querySelector('.hig__global-nav__sidenav__scroll')
+        .classList.add('hig__global-nav__sidenav__scroll--search');
     }
   }
 
   addSlot(slotElement) {
-    this._findOrAddElement(
-      'SLOT',
-      'div',
-      '.hig__side-nav__slot'
-    ).appendChild(slotElement);
+    this._findOrAddElement('SLOT', 'div', '.hig__side-nav__slot').appendChild(
+      slotElement
+    );
   }
 
   onHeaderClick(fn) {
-    return this._attachListener('click', '.hig__global-nav__sidenav__header-link', this.el, fn);
+    return this._attachListener(
+      'click',
+      '.hig__global-nav__sidenav__header-link',
+      this.el,
+      fn
+    );
   }
 
   onSuperHeaderClick(fn) {
-    return this._attachListener('click', '.hig__global-nav__sidenav__super-header-link', this.el, fn);
+    return this._attachListener(
+      'click',
+      '.hig__global-nav__sidenav__super-header-link',
+      this.el,
+      fn
+    );
   }
 
   setCopyright(copyright) {
-    this.el.querySelector('.hig__global-nav__sidenav__copyright').innerText = copyright;
+    this.el.querySelector(
+      '.hig__global-nav__sidenav__copyright'
+    ).innerText = copyright;
   }
 
   setHeaderLabel(label) {
-    this._findDOMEl('.hig__global-nav__sidenav__header-link', this.el).textContent = label;
+    this._findDOMEl(
+      '.hig__global-nav__sidenav__header-link',
+      this.el
+    ).textContent = label;
   }
 
   setHeaderLink(link) {
     if (link) {
-      this._findDOMEl('.hig__global-nav__sidenav__header-link', this.el).setAttribute('href', link);
+      this._findDOMEl(
+        '.hig__global-nav__sidenav__header-link',
+        this.el
+      ).setAttribute('href', link);
     } else {
-      this._findDOMEl('.hig__global-nav__sidenav__header-link', this.el).removeAttribute('href');
+      this._findDOMEl(
+        '.hig__global-nav__sidenav__header-link',
+        this.el
+      ).removeAttribute('href');
     }
   }
 
   setSuperHeaderLabel(label) {
-    this._findDOMEl('.hig__global-nav__sidenav__super-header-link', this.el).textContent = label;
+    this._findDOMEl(
+      '.hig__global-nav__sidenav__super-header-link',
+      this.el
+    ).textContent = label;
   }
 
   setSuperHeaderLink(link) {
     if (link) {
-      this._findDOMEl('.hig__global-nav__sidenav__super-header-link', this.el).setAttribute('href', link);
+      this._findDOMEl(
+        '.hig__global-nav__sidenav__super-header-link',
+        this.el
+      ).setAttribute('href', link);
     } else {
-      this._findDOMEl('.hig__global-nav__sidenav__super-header-link', this.el).removeAttribute('href');
+      this._findDOMEl(
+        '.hig__global-nav__sidenav__super-header-link',
+        this.el
+      ).removeAttribute('href');
     }
   }
 }

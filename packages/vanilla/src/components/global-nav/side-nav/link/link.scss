@@ -1,11 +1,10 @@
 @import '~basics/colors/colors.scss';
 @import '~helpers/css/mixins/spacing.scss';
 @import '../side-nav.scss';
-
 .hig__global-nav__sidenav__links {
   font-size: 14px;
   line-height: 26px;
-  margin-bottom: spacing(xl)
+  margin: spacing(m) 0;
 }
 
 .hig__global-nav__sidenav__links__link {
@@ -13,8 +12,25 @@
   text-decoration: none;
   color: color(hig-cool-gray-50);
   padding-left: spacing(m);
-
   &:hover {
     color: color(hig-blue-50);
+  }
+}
+
+// Light theme
+.hig__global-nav__sidenav__links__link {
+  color: color(hig-cool-gray-50);
+  &:hover {
+    color: color(hig-blue-50);
+  }
+}
+
+// Dark blue theme
+.hig--dark-blue-theme {
+  &.hig__global-nav__sidenav__links__link {
+    color: color(hig-white);
+    &:hover {
+      color: color(hig-blue-40);
+    }
   }
 }

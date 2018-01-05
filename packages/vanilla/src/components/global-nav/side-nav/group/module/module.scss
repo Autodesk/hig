@@ -1,7 +1,6 @@
 @import '~basics/colors/colors.scss';
 @import '~helpers/css/mixins/spacing.scss';
 @import '~helpers/css/mixins/base.scss';
-
 .hig__global-nav__side-nav__section__group__module {
   position: relative;
   margin: spacing(xs) 0;
@@ -20,9 +19,7 @@
   align-items: stretch;
   padding-left: 2px;
   flex: 1 1 auto;
-  color: color(hig-gray-70);
   text-decoration: none;
-
   &::before {
     content: "";
     position: absolute;
@@ -31,49 +28,15 @@
     left: 0;
     height: 32px;
   }
-
   &:active,
   &:focus {
     outline: none;
-    color: color(hig-blue-60);
-
-    &::before {
-      border-left-color: color(hig-blue-60);
-    }
-  }
-
-  &:hover,
-  &--active {
-    color: color(hig-blue-50);
-
-    &::before {
-      border-left-color: color(hig-blue-50);
-    }
-
-    svg * {
-      fill: color(hig-blue-50);
-    }
   }
 }
 
 .hig__global-nav__side-nav__section__group__module__link__icon {
   padding-left: spacing(xs);
-
-  svg * {
-    fill: color(hig-gray-70);
-
-    &__link:hover &,
-    &__link--active & {
-      fill: color(hig-blue-50);
-    }
-
-    &__link:focus &,
-    &__link:active & {
-      fill: color(hig-blue-60);
-    }
-  }
 }
-
 
 .hig__global-nav__side-nav__section__group__module__link__title {
   font-weight: 700;
@@ -89,8 +52,65 @@
 
 .hig__global-nav__side-nav__section__group__module__submodules {
   padding-left: 48px;
+  &--no-icon {
+    padding-left: spacing(m);
+  }
+}
 
-  &--no-icon{
-    padding-left: spacing(m);;
+// Light theme
+.hig__global-nav__side-nav__section__group__module__link {
+  color: color(hig-gray-70);
+  svg * {
+    fill: color(hig-gray-70);
+  }
+  &:active,
+  &:focus {
+    color: color(hig-blue-60);
+    &::before {
+      border-left-color: color(hig-blue-60);
+    }
+    svg * {
+      fill: color(hig-blue-60);
+    }
+  }
+  &:hover,
+  &--active {
+    color: color(hig-blue-50);
+    &::before {
+      border-left-color: color(hig-blue-50);
+    }
+    svg * {
+      fill: color(hig-blue-50);
+    }
+  }
+}
+
+// Dark blue theme
+.hig--dark-blue-theme {
+  &.hig__global-nav__side-nav__section__group__module__link {
+    color: color(hig-white);
+    svg * {
+      fill: color(hig-white);
+    }
+    &:active,
+    &:focus {
+      color: color(hig-blue-30);
+      &::before {
+        border-left-color: color(hig-blue-30);
+      }
+      svg * {
+        fill: color(hig-blue-30);
+      }
+    }
+    &:hover,
+    &--active {
+      color: color(hig-blue-40);
+      &::before {
+        border-left-color: color(hig-blue-40);
+      }
+      svg * {
+        fill: color(hig-blue-40);
+      }
+    }
   }
 }

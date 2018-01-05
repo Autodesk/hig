@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { Themes } from "hig-vanilla";
 import HIGPropTypes from "./HIGPropTypes";
 
 class HIGAdapter extends Component {
@@ -7,11 +8,17 @@ class HIGAdapter extends Component {
     children: PropTypes.func,
     HIGConstructor: PropTypes.func.isRequired,
     displayName: PropTypes.string.isRequired,
-    higInstance: HIGPropTypes.higInstance
+    higInstance: HIGPropTypes.higInstance,
+    higTheme: PropTypes.oneOf(Themes.AvailableThemes)
   };
 
   static contextTypes = {
-    higParent: PropTypes.object
+    higParent: PropTypes.object,
+    higTheme: PropTypes.oneOf(Themes.AvailableThemes)
+  };
+
+  static childContextTypes = {
+    higTheme: PropTypes.oneOf(Themes.AvailableThemes)
   };
 
   static defaultProps = {
@@ -24,6 +31,12 @@ class HIGAdapter extends Component {
     this.state = {
       higInstance: props.higInstance || new props.HIGConstructor({}),
       mounted: false
+    };
+  }
+
+  getChildContext() {
+    return {
+      higTheme: this.props.higTheme || this.context.higTheme
     };
   }
 
@@ -57,7 +70,15 @@ class HIGAdapter extends Component {
     this._el = el;
   };
 
+  renderedTheme() {
+    return this.props.higTheme || this.context.higTheme;
+  }
+
   render() {
+    if (this.state.higInstance && this.renderedTheme()) {
+      this.state.higInstance.setTheme(this.renderedTheme());
+    }
+
     return React.createElement(
       `hig-${this.props.displayName.toLowerCase()}`,
       { ref: this.setEl },
