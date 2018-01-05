@@ -2,13 +2,20 @@
 import React from "react";
 import "hig-vanilla/lib/hig.css";
 
-import { Button, GlobalNav, breakpoints, TextLink } from "../hig-react";
+import {
+  Button,
+  Dropdown,
+  GlobalNav,
+  breakpoints,
+  TextLink
+} from "../hig-react";
 
 import "./index.css";
 
 import logo from "./images/bim-logo.png";
 import { projects, accounts } from "./fixtures/topNavFixtures";
 import { modules, submodules, links } from "./fixtures/sideNavFixtures";
+import PlaygroundSection from "./PlaygroundSection";
 
 import ActionBarSection from "./sections/ActionBarSection";
 import AvatarSection from "./sections/AvatarSection";
@@ -99,6 +106,7 @@ class Playground extends React.Component {
       searchOptions: [],
       searchValue: "",
       seenNotificationIds: [],
+      sideNavTheme: "light",
       notifications: sampleNotifications,
       readIds: this._initialReadNotifications(sampleNotifications),
       featuredNotification: this.featuredNotification(),
@@ -132,6 +140,10 @@ class Playground extends React.Component {
     this.setState({
       readIds: [...new Set([...this.state.readIds, notificationId])]
     });
+  };
+
+  setSideNavTheme = theme => {
+    this.setState({ sideNavTheme: theme });
   };
 
   toggleSideNav = () => {
@@ -311,7 +323,7 @@ class Playground extends React.Component {
       headerLabel: "Playground",
       headerLink: "http://apple.com",
       copyright: "2018",
-      higTheme: "dark-blue",
+      higTheme: this.state.sideNavTheme,
       links,
       onLogoClick: event => {
         event.preventDefault();
@@ -349,11 +361,22 @@ class Playground extends React.Component {
         sideNavOpen={this.state.isSideNavOpen}
         onHamburgerClick={this.toggleSideNav}
       >
-        <Button
-          size="standard"
-          title="Add notification"
-          onClick={this.addNotification}
-        />
+        <PlaygroundSection title="Miscellaneous">
+          <Button
+            size="standard"
+            title="Add notification"
+            onClick={this.addNotification}
+          />
+          <Dropdown
+            label="SideNav theme"
+            options={[
+              { label: "Light", id: "light", value: "light" },
+              { label: "Dark blue", id: "dark-blue", value: "dark-blue" }
+            ]}
+            value={this.state.sideNavTheme}
+            onChange={this.setSideNavTheme}
+          />
+        </PlaygroundSection>
         <ExpandingFilterSectionSection />
         <ActionBarSection />
         <ProgressBarSection />

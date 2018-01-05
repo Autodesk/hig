@@ -336,7 +336,7 @@ class Core {
   setTheme(theme) {
     Themes.checkTheme(theme);
     this.themedElements.forEach((el) => {
-      el.classList.remove(Themes.themeClasses);
+      el.classList.remove(...Themes.themeClasses);
       el.classList.add(Themes.themeClassFor(theme));
     });
   }

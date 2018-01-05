@@ -1,10 +1,10 @@
 const AvailableThemes = ['light', 'dark-blue'];
 
-const themeClasses = ['hig--light-theme', 'hig--dark-blue-theme'];
-
 function themeClassFor(theme) {
   return `hig--${theme}-theme`;
 }
+
+const themeClasses = AvailableThemes.map(themeClassFor);
 
 function checkTheme(theme) {
   if (!AvailableThemes.includes(theme)) {
