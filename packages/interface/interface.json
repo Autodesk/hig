@@ -2191,6 +2191,22 @@
         }
       }
     },
+    "SkeletonItem": {
+      "methods": {
+        "setMaxWidth": {
+          "desc": "sets the maximum width of the skeleton item",
+          "params": [
+            "{String} css value to set as the max width"
+          ]
+        },
+        "setMarginBottom": {
+          "desc": "sets the margin at the bottom of the skeleton item",
+          "params": [
+            "{String} css value to set as the margin bottom"
+          ]
+        }
+      }
+    },
     "Table": {
       "methods": {
         "addTableHead": {},
