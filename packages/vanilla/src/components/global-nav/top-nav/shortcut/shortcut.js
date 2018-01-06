@@ -53,8 +53,7 @@ Shortcut._interface =
   Interface.components.GlobalNav.partials.TopNav.partials.Shortcut;
 Shortcut._defaults = {
   icon: '',
-  title: '',
-  link: '#'
+  title: ''
 };
 
 export default Shortcut;

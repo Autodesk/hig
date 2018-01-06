@@ -1990,7 +1990,6 @@
             },
             "Shortcut": {
               "defaults": {
-                "link": "{String} link behind the Shortcut",
                 "icon": "{String} icon identifier",
                 "title": "{String} the title of the Shortcut to be shown on hover"
               },
