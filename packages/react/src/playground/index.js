@@ -69,16 +69,24 @@ const sampleNotifications = [
     unread: true,
     children: (
       <div>
-        <p>This is our first notification</p>
-        <div>
+        <p>
+          <b>Your subscription expires May 5</b>
+        </p>
+        <p>
+          Maya<br />
+          Media & Entertainment Collection<br />
+          Product Design Collection<br />
+          2 more
+        </p>
+        <p>
           <TextLink
             href="https://github.com/Autodesk/hig"
-            text="This is a primary text link"
+            text="Manage renewal"
             onClick={() => {
               console.log("notifications id 1");
             }}
           />
-        </div>
+        </p>
       </div>
     )
   },
@@ -88,9 +96,22 @@ const sampleNotifications = [
     children: (
       <div>
         <p>
-          <b>test title</b>
+          <b>Your subscription expires April 20</b>
         </p>
-        <p>this is regular text</p>
+        <p>
+          AutoCAD<br />
+          Architecture Construction Engineering Collection<br />
+          Product Design Collection<br />
+        </p>
+        <p>
+          <TextLink
+            href="https://github.com/Autodesk/hig"
+            text="Manage renewal"
+            onClick={() => {
+              console.log("notifications id 2");
+            }}
+          />
+        </p>
       </div>
     )
   }
@@ -166,9 +187,15 @@ class Playground extends React.Component {
       children: (
         <div>
           <p>
-            <b>test title</b>
+            You have 4 new seats of <b>Product Design Collection</b>{" "}
+            subscription, switched from <b>Building Design Suite Premium</b>
+            subscription.
           </p>
-          <p>this is regular text</p>
+          <p>
+            <TextLink text="Learn how to switch" />
+            {" or "}
+            <TextLink text="Assign users" />
+          </p>
         </div>
       )
     };
@@ -183,9 +210,17 @@ class Playground extends React.Component {
     children: (
       <div>
         <p>
-          <b>Featured Notification</b>
+          <b>New enhancements to subscription management lorum ipsom gas</b>
         </p>
-        <p>this is regular text</p>
+        <p>
+          Lorum reduce seats on your subscriptions and upcoming payments in your
+          account
+        </p>
+        <p>
+          <TextLink text="Primary link" />
+          {" or "}
+          <TextLink text="Secondary link" />
+        </p>
       </div>
     ),
     onDismiss: this.featuredNotificationDismissed
