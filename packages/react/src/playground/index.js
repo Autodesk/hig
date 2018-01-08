@@ -255,12 +255,10 @@ class Playground extends React.Component {
 
   handleSubmoduleClick = id => {
     console.log(`submodule click ${id}`);
-    this.toggleSideNav();
   };
 
   handleModuleClick = id => {
     console.log(`module click ${id}`);
-    this.toggleSideNav();
   };
 
   accountClicked = id => {
