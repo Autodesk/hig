@@ -2,16 +2,16 @@ import React from "react";
 import { mount } from "enzyme";
 
 import { GlobalNav as VanillaGlobalNav } from "hig-vanilla";
-import SideNavAdapter from "./SideNavAdapter";
+import SideNavFullAdapter from "./SideNavFullAdapter";
 import LinkAdapter from "./LinkAdapter";
 import SearchAdapter from "./SearchAdapter";
 import GroupAdapter from "./GroupAdapter";
 
-describe("SideNavAdapter", () => {
+describe("SideNavFullAdapter", () => {
   it("implements the hig interface", () => {
     expect(mockInstance => {
       mount(
-        <SideNavAdapter
+        <SideNavFullAdapter
           higInstance={mockInstance}
           headerLabel="Foo"
           superHeaderLabel="Foo"
@@ -25,8 +25,10 @@ describe("SideNavAdapter", () => {
           <GroupAdapter />
           <SearchAdapter />
           <h1>Slot content</h1>
-        </SideNavAdapter>
+        </SideNavFullAdapter>
       );
-    }).toImplementHIGInterfaceOf(VanillaGlobalNav._partials.SideNav);
+    }).toImplementHIGInterfaceOf(
+      VanillaGlobalNav._partials.SideNav._partials.SideNavFull
+    );
   });
 });

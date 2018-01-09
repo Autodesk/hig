@@ -29,20 +29,20 @@ function sortChildren(children) {
   };
 }
 
-export default function SideNavAdapter(props) {
+export default function SideNavFullAdapter(props) {
   const { groups, links, search, otherChildren } = sortChildren(
     React.Children.toArray(props.children)
   );
 
   return (
     <HIGAdapter
-      displayName="SideNav"
-      HIGConstructor={VanillaGlobalNav._partials.SideNav}
+      displayName="SideNavFull"
+      HIGConstructor={VanillaGlobalNav._partials.SideNav._partials.SideNavFull}
       {...props}
     >
       {adapterProps => (
         <div>
-          <MountedByHIGParent mounter="addSideNav" {...adapterProps} />
+          <MountedByHIGParent mounter="addContent" {...adapterProps} />
           <MapsEventListener
             listener="onHeaderClick"
             handler={props.onHeaderClick}
@@ -92,7 +92,7 @@ export default function SideNavAdapter(props) {
   );
 }
 
-SideNavAdapter.propTypes = {
+SideNavFullAdapter.propTypes = {
   children: PropTypes.node,
   copyright: PropTypes.string,
   onHeaderClick: PropTypes.func,
@@ -103,7 +103,7 @@ SideNavAdapter.propTypes = {
   superHeaderLink: PropTypes.string
 };
 
-SideNavAdapter.defaultProps = {
+SideNavFullAdapter.defaultProps = {
   children: undefined,
   copyright: undefined,
   onHeaderClick: undefined,
