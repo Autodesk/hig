@@ -128,7 +128,8 @@ class Playground extends React.Component {
       searchOptions: [],
       searchValue: "",
       seenNotificationIds: [],
-      sideNavTheme: "light",
+      sideNavTheme: "dark-blue",
+      sideNavType: "full",
       notifications: sampleNotifications,
       readIds: this._initialReadNotifications(sampleNotifications),
       featuredNotification: this.featuredNotification(),
@@ -166,6 +167,10 @@ class Playground extends React.Component {
 
   setSideNavTheme = theme => {
     this.setState({ sideNavTheme: theme });
+  };
+
+  setSideNavType = type => {
+    this.setState({ sideNavType: type });
   };
 
   toggleSideNav = () => {
@@ -360,6 +365,7 @@ class Playground extends React.Component {
       headerLink: "http://apple.com",
       copyright: "2018",
       higTheme: this.state.sideNavTheme,
+      loading: this.state.sideNavType === "loading",
       links,
       onLogoClick: event => {
         event.preventDefault();
@@ -411,6 +417,16 @@ class Playground extends React.Component {
             ]}
             value={this.state.sideNavTheme}
             onChange={this.setSideNavTheme}
+          />
+
+          <Dropdown
+            label="SideNav type"
+            options={[
+              { label: "Full", id: "full", value: "full" },
+              { label: "Skeleton", id: "loading", value: "loading" }
+            ]}
+            value={this.state.sideNavType}
+            onChange={this.setSideNavType}
           />
         </PlaygroundSection>
         <ExpandingFilterSectionSection />

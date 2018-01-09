@@ -1405,6 +1405,19 @@
                   }
                 }
               }
+            },
+            "SideNavSkeleton": {
+              "methods": {
+                "addSkeletonItem": {
+                  "desc": "Adds an skeleton item to the skeleton",
+                  "params": [
+                    "{SkeletonItem} - an instance of the SkeletonItem partial",
+                    "{SkeletonItem} [referenceItem] - (Optional) a reference option used when positioning the new SkeletonItem. New SkeletonItem will be added before the reference option."
+                  ]
+                }
+              },
+              "defaults": {
+              }
             }
           }
         },

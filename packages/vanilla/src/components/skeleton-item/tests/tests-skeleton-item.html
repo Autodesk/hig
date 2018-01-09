@@ -59,7 +59,7 @@
     ];
 
     items.forEach(function (itemSpec) {
-      var item = new Hig.SkeletonItem();
+      var item = new Hig.SkeletonItem({});
       item.mount('.test-container');
       item.setTheme('dark-blue');
       item.setMaxWidth(itemSpec.maxWidth);
