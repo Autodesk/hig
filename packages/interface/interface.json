@@ -1082,7 +1082,7 @@
             "addContent": {
               "desc": "Adds content to the SideNav",
               "params": [
-                "{SideNavFull, SideNavSkeleton, or SideNavCollapsed} an instance of SideNav content"
+                "{SideNavFull, SideNavSkeleton, or SideNavCompact} an instance of SideNav content"
               ]
             }
           },
@@ -1417,6 +1417,18 @@
                 }
               },
               "defaults": {
+              }
+            },
+            "SideNavCompact": {
+              "defaults": {},
+              "methods": {
+                "addGroup": {
+                  "desc": "Pass in an instance of a compact SideNav Group partial",
+                  "params": [
+                    "{Group} Group - instance of a Group partial",
+                    "{Group} [ReferenceGroup] - (Optional) reference node for insertBefore"
+                  ]
+                }
               }
             }
           }
