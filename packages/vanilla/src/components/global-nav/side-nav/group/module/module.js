@@ -132,7 +132,10 @@ class Module extends Core {
         '.hig__global-nav__side-nav__section__group__module__link__external-link-icon',
         this.el
       );
-      this._findOrCreateIconComponent(mountEl, 'external-link-icon').setNameOrSVG('external-link');
+      this._findOrCreateIconComponent(
+        mountEl,
+        'external-link-icon'
+      ).setNameOrSVG('external-link');
     }
   }
 
@@ -147,7 +150,7 @@ class Module extends Core {
 }
 
 Module._interface =
-  Interface.components.GlobalNav.partials.SideNav.partials.Group.partials.Module;
+  Interface.components.GlobalNav.partials.SideNav.partials.SideNavFull.partials.Group.partials.Module;
 Module._defaults = {
   icon: '',
   title: 'title'
