@@ -12,6 +12,8 @@ $hig__global-nav__sidenav--width: 280px;
 .hig__global-nav__sidenav {
   @include reset;
   position: fixed;
+  display: flex;
+  flex-direction: column;
   top: 0;
   left: $hig__global-nav__sidenav--width * -1; // Hide offscreen by default
   bottom: 0;
@@ -33,13 +35,10 @@ $hig__global-nav__sidenav--width: 280px;
 }
 
 .hig__global-nav__sidenav__scroll {
-  position: absolute;
-  top: 4px;
-  left: 0;
-  right: 4px;
-  bottom: 4px;
+  flex: 1 1 auto;
   @include vendor-prefix('box-sizing', 'border-box');
   padding: 14px 0;
+  margin: 4px 4px 4px 0;
   overflow-y: scroll;
   overflow-x: hidden;
   &::-webkit-scrollbar {
