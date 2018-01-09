@@ -15,3 +15,14 @@ body,
 section {
   margin-bottom: 16px;
 }
+
+.quick-links {
+  position: absolute;
+  opacity: 0.3;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 54px;
+  z-index: 3;
+  background-color: #024B6C;
+}

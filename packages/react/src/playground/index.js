@@ -462,21 +462,7 @@ class Playground extends React.Component {
       onMouseEnter: this.onSideNavMouseEnter,
       onMouseLeave: this.onSideNavMouseLeave,
       showVariantToggleButton: !this.state.changeSideNavOnHover,
-      slot: (
-        <div>
-          <Button
-            title="Designer Toolkit"
-            link="https://github.com/Autodesk/hig"
-          />
-          <p />
-          <Button
-            title="Git Repository"
-            type="secondary"
-            link="https://github.com/Autodesk/hig"
-            target="_blank"
-          />
-        </div>
-      ),
+      slot: <div className="quick-links" />,
       onModuleClick: this.handleModuleClick,
       onSubmoduleClick: this.handleSubmoduleClick,
       variant: this.state.sideNavVariant
