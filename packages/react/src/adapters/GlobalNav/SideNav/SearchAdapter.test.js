@@ -21,7 +21,7 @@ describe("SideNav SearchAdapter", () => {
       );
       wrapper.props().higInstance.hideClearIcon();
     }).toImplementHIGInterfaceOf(
-      VanillaGlobalNav._partials.SideNav._partials.Search
+      VanillaGlobalNav._partials.SideNav._partials.SideNavFull._partials.Search
     );
   });
 });

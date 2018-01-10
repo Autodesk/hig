@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { mount } from "enzyme";
 
 import GlobalNavAdapter from "../../../../adapters/GlobalNav/GlobalNavAdapter";
-import SideNavAdapter from "../../../../adapters/GlobalNav/SideNav/SideNavAdapter";
+import SideNavFullAdapter from "../../../../adapters/GlobalNav/SideNav/SideNavFullAdapter";
 import SideNav, { Link, Module, Submodule, Search } from "../SideNav";
 
 describe("<SideNav>", () => {
@@ -124,7 +124,7 @@ describe("<SideNav>", () => {
   describe("with other props", () => {
     it("passes headerLabel", () => {
       const wrapper = mount(<Context headerLabel="My Project" />);
-      expect(wrapper.find(SideNavAdapter)).toHaveProp(
+      expect(wrapper.find(SideNavFullAdapter)).toHaveProp(
         "headerLabel",
         "My Project"
       );
@@ -132,7 +132,7 @@ describe("<SideNav>", () => {
 
     it("passes superHeaderLabel", () => {
       const wrapper = mount(<Context superHeaderLabel="Global Construction" />);
-      expect(wrapper.find(SideNavAdapter)).toHaveProp(
+      expect(wrapper.find(SideNavFullAdapter)).toHaveProp(
         "superHeaderLabel",
         "Global Construction"
       );
@@ -140,7 +140,7 @@ describe("<SideNav>", () => {
 
     it("passes headerLink", () => {
       const wrapper = mount(<Context headerLink="https://my-project.com" />);
-      expect(wrapper.find(SideNavAdapter)).toHaveProp(
+      expect(wrapper.find(SideNavFullAdapter)).toHaveProp(
         "headerLink",
         "https://my-project.com"
       );
@@ -150,7 +150,7 @@ describe("<SideNav>", () => {
       const wrapper = mount(
         <Context superHeaderLink="https://my-account.com" />
       );
-      expect(wrapper.find(SideNavAdapter)).toHaveProp(
+      expect(wrapper.find(SideNavFullAdapter)).toHaveProp(
         "superHeaderLink",
         "https://my-account.com"
       );
@@ -159,7 +159,7 @@ describe("<SideNav>", () => {
     it("passes onHeaderClick", () => {
       const callback = jest.fn();
       const wrapper = mount(<Context onHeaderClick={callback} />);
-      expect(wrapper.find(SideNavAdapter)).toHaveProp(
+      expect(wrapper.find(SideNavFullAdapter)).toHaveProp(
         "onHeaderClick",
         callback
       );
@@ -168,7 +168,7 @@ describe("<SideNav>", () => {
     it("passes onSuperHeaderClick", () => {
       const callback = jest.fn();
       const wrapper = mount(<Context onSuperHeaderClick={callback} />);
-      expect(wrapper.find(SideNavAdapter)).toHaveProp(
+      expect(wrapper.find(SideNavFullAdapter)).toHaveProp(
         "onSuperHeaderClick",
         callback
       );

@@ -17,7 +17,7 @@ describe("Help LinkAdapter", () => {
         />
       );
     }).toImplementHIGInterfaceOf(
-      VanillaGlobalNav._partials.SideNav._partials.Link
+      VanillaGlobalNav._partials.SideNav._partials.SideNavFull._partials.Link
     );
   });
 });

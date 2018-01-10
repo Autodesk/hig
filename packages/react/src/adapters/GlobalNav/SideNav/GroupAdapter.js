@@ -10,7 +10,9 @@ function GroupAdapter(props) {
   return (
     <HIGAdapter
       displayName="Group"
-      HIGConstructor={VanillaGlobalNav._partials.SideNav._partials.Group}
+      HIGConstructor={
+        VanillaGlobalNav._partials.SideNav._partials.SideNavFull._partials.Group
+      }
       {...props}
     >
       {adapterProps => (
