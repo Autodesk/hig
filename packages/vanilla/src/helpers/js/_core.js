@@ -237,7 +237,7 @@ class Core {
         eventType = 'mouseenter';
       }
 
-      if (eventType === 'mouseenter' || eventType === 'scroll') {
+      if (eventType === 'mouseenter' || eventType === 'mouseleave' || eventType === 'scroll') {
         eventFn = executeOnEventFunction;
         eventTarget = q;
       } else {

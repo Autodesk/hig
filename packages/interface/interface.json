@@ -1084,6 +1084,16 @@
               "params": [
                 "{SideNavFull, SideNavSkeleton, or SideNavCompact} an instance of SideNav content"
               ]
+            },
+            "onMouseEnter": {
+              "desc": "Calls the provided callback when user starts hovering over the content",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            },
+            "onMouseLeave": {
+              "desc": "Calls the provided callback when user stops hovering over the content",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
             }
           },
           "partials": {

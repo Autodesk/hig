@@ -23,6 +23,24 @@ class SideNav extends Core {
     this.themedElements = [this.el];
   }
 
+  onMouseEnter(fn) {
+    return this._attachListener(
+      'mouseenter',
+      this.el,
+      this.el,
+      fn
+    );
+  }
+
+  onMouseLeave(fn) {
+    return this._attachListener(
+      'mouseleave',
+      this.el,
+      this.el,
+      fn
+    );
+  }
+
   addContent(instance) {
     if (instance instanceof SideNavFull || instance instanceof SideNavCompact || instance instanceof SideNavSkeleton) {
       instance.mount(this.el);

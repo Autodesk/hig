@@ -67,6 +67,12 @@ class SideNav extends Component {
         </SideNavAdapter>
       );
     }
+
+    const mouseEventProps = {
+      onMouseEnter: this.props.onMouseEnter,
+      onMouseLeave: this.props.onMouseLeave
+    };
+
     const sideNavProps = {
       copyright: this.props.copyright,
       headerLabel: this.props.headerLabel,
@@ -81,7 +87,7 @@ class SideNav extends Component {
     };
 
     return (
-      <SideNavAdapter higTheme={this.props.higTheme}>
+      <SideNavAdapter higTheme={this.props.higTheme} {...mouseEventProps}>
         <SideNavFullAdapter {...sideNavProps}>
           {this.props.groups.map(group => (
             <Group key={group.modules[0].id}>
