@@ -29,16 +29,13 @@
         TopNav.setLogo("../../../global-nav/tests/bim-logo.png"); // Update logo
         TopNav.setLogoLink("http://autodesk.com"); // update logo link
 
-        // CREATE PROFILE
-        var MyProfile1 = new TopNav.partials.Profile({
-            image: "../../../global-nav/tests/egg.jpg"
-        });
-
-        TopNav.addProfile(MyProfile1);
-
         // ADD A SIDENAV
-        var SideNav = new GlobalNav.partials.SideNav();
-        GlobalNav.addSideNav(SideNav);
+        var SideNavContainer = new GlobalNav.partials.SideNav();
+        GlobalNav.addSideNav(SideNavContainer);
+
+        console.dir(GlobalNav.partials.SideNav)
+        var SideNav = new SideNavContainer.partials.SideNavFull();
+        SideNavContainer.addContent(SideNav);
 
         SideNav.setSuperHeaderLabel('Global Construction');
         SideNav.setHeaderLabel('General Hospital');
@@ -90,6 +87,7 @@
         GlobalNav.showSideNav();
 
         document.body.addEventListener('click', function () {
+            SideNavContainer.setTheme('dark-blue');
             SideNav.setTheme('dark-blue');
             Group1_Module1.setTheme('dark-blue');
             Group1_Module2.setTheme('dark-blue');

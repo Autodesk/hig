@@ -64,7 +64,7 @@ class Collapse extends Core {
 }
 
 Collapse._interface =
-  Interface.components.GlobalNav.partials.SideNav.partials.Group.partials.Module.partials.Collapse;
+  Interface.components.GlobalNav.partials.SideNav.partials.SideNavFull.partials.Group.partials.Module.partials.Collapse;
 Collapse._defaults = {};
 Collapse._partials = {};
 

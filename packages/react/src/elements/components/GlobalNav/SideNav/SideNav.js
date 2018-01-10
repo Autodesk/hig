@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import SideNavAdapter from "../../../../adapters/GlobalNav/SideNav/SideNavAdapter";
+import SideNavFullAdapter from "../../../../adapters/GlobalNav/SideNav/SideNavFullAdapter";
 import Submodule from "./Submodule";
 import Group from "../../../../adapters/GlobalNav/SideNav/GroupAdapter";
 import Module from "./Module";
@@ -71,45 +72,47 @@ class SideNav extends Component {
     };
 
     return (
-      <SideNavAdapter {...sideNavProps}>
-        {this.props.groups.map(group => (
-          <Group key={group.modules[0].id}>
-            {group.modules.map(module => {
-              const showSubmodules =
-                this.props.disableCollapse || !module.minimized;
-              const hideCollapse =
-                this.props.disableCollapse || module.submodules.length === 0;
-              return (
-                <Module
-                  onClick={this.props.onModuleClick}
-                  key={module.id}
-                  {...module}
-                >
-                  <ModuleCollapse
-                    id={module.id}
-                    minimized={module.minimized}
-                    onClick={this.props.toggleModuleMinimized}
-                    hidden={hideCollapse}
-                  />
-                  {showSubmodules
-                    ? module.submodules.map(submodule => (
-                        <Submodule
-                          onClick={this.props.onSubmoduleClick}
-                          key={submodule.id}
-                          {...submodule}
-                        />
-                      ))
-                    : null}
-                </Module>
-              );
-            })}
-          </Group>
-        ))}
-        {this.props.slot ? this.props.slot : null}
-        {this.props.links.map(link => <Link {...link} key={link.title} />)}
-        {this.props.searchable ? (
-          <Search onInput={this.props.setQuery} value={this.props.query} />
-        ) : null}
+      <SideNavAdapter>
+        <SideNavFullAdapter {...sideNavProps}>
+          {this.props.groups.map(group => (
+            <Group key={group.modules[0].id}>
+              {group.modules.map(module => {
+                const showSubmodules =
+                  this.props.disableCollapse || !module.minimized;
+                const hideCollapse =
+                  this.props.disableCollapse || module.submodules.length === 0;
+                return (
+                  <Module
+                    onClick={this.props.onModuleClick}
+                    key={module.id}
+                    {...module}
+                  >
+                    <ModuleCollapse
+                      id={module.id}
+                      minimized={module.minimized}
+                      onClick={this.props.toggleModuleMinimized}
+                      hidden={hideCollapse}
+                    />
+                    {showSubmodules
+                      ? module.submodules.map(submodule => (
+                          <Submodule
+                            onClick={this.props.onSubmoduleClick}
+                            key={submodule.id}
+                            {...submodule}
+                          />
+                        ))
+                      : null}
+                  </Module>
+                );
+              })}
+            </Group>
+          ))}
+          {this.props.slot ? this.props.slot : null}
+          {this.props.links.map(link => <Link {...link} key={link.title} />)}
+          {this.props.searchable ? (
+            <Search onInput={this.props.setQuery} value={this.props.query} />
+          ) : null}
+        </SideNavFullAdapter>
       </SideNavAdapter>
     );
   }

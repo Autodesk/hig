@@ -12,8 +12,8 @@ function SubmoduleAdapter(props) {
     <HIGAdapter
       displayName="Submodule"
       HIGConstructor={
-        VanillaGlobalNav._partials.SideNav._partials.Group._partials.Module
-          ._partials.Submodule
+        VanillaGlobalNav._partials.SideNav._partials.SideNavFull._partials.Group
+          ._partials.Module._partials.Submodule
       }
       {...props}
     >

@@ -31,7 +31,8 @@ class Group extends Core {
   }
 }
 
-Group._interface = Interface.components.GlobalNav.partials.SideNav.partials.Group;
+Group._interface =
+  Interface.components.GlobalNav.partials.SideNav.partials.SideNavFull.partials.Group;
 Group._defaults = {};
 Group._partials = {
   Module

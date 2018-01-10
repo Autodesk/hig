@@ -34,7 +34,8 @@ function ModuleAdapter(props) {
     <HIGAdapter
       displayName="Module"
       HIGConstructor={
-        VanillaGlobalNav._partials.SideNav._partials.Group._partials.Module
+        VanillaGlobalNav._partials.SideNav._partials.SideNavFull._partials.Group
+          ._partials.Module
       }
       {...props}
     >

@@ -29,7 +29,10 @@ class Submodule extends Core {
   }
 
   setTitle(title) {
-    this._findDOMEl('.hig__global-nav__side-nav__section__group__module__submodule__title', this.el).textContent = title;
+    this._findDOMEl(
+      '.hig__global-nav__side-nav__section__group__module__submodule__title',
+      this.el
+    ).textContent = title;
   }
 
   setLink(link) {
@@ -88,7 +91,7 @@ class Submodule extends Core {
 }
 
 Submodule._interface =
-  Interface.components.GlobalNav.partials.SideNav.partials.Group.partials.Module.partials.Submodule;
+  Interface.components.GlobalNav.partials.SideNav.partials.SideNavFull.partials.Group.partials.Module.partials.Submodule;
 Submodule._defaults = {
   title: ''
 };

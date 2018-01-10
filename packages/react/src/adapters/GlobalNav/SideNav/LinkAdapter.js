@@ -11,7 +11,9 @@ function LinkAdapter(props) {
   return (
     <HIGAdapter
       displayName="Link"
-      HIGConstructor={VanillaGlobalNav._partials.SideNav._partials.Link}
+      HIGConstructor={
+        VanillaGlobalNav._partials.SideNav._partials.SideNavFull._partials.Link
+      }
       {...props}
     >
       {adapterProps => (

@@ -12,7 +12,10 @@ function SearchAdapter(props) {
   return (
     <HIGAdapter
       displayName="Search"
-      HIGConstructor={VanillaGlobalNav._partials.SideNav._partials.Search}
+      HIGConstructor={
+        VanillaGlobalNav._partials.SideNav._partials.SideNavFull._partials
+          .Search
+      }
       {...props}
     >
       {adapterProps => (

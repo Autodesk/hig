@@ -19,8 +19,8 @@ describe("CollapseAdapter", () => {
       mockInstance.maximize();
       mockInstance.hide();
     }).toImplementHIGInterfaceOf(
-      VanillaGlobalNav._partials.SideNav._partials.Group._partials.Module
-        ._partials.Collapse
+      VanillaGlobalNav._partials.SideNav._partials.SideNavFull._partials.Group
+        ._partials.Module._partials.Collapse
     );
   });
 });
