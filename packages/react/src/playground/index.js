@@ -131,11 +131,17 @@ class Playground extends React.Component {
       seenNotificationIds: [],
       sideNavTheme: "dark-blue",
       sideNavLoading: false,
+      sideNavVariant: "compact",
       notifications: sampleNotifications,
       readIds: this._initialReadNotifications(sampleNotifications),
       featuredNotification: this.featuredNotification(),
       notificationsLoading: false
     };
+  }
+
+  componentDidMount() {
+    this.responsivelyUpdateSideNavVariant();
+    window.addEventListener("resize", this.responsivelyUpdateSideNavVariant);
   }
 
   onSearchInput = input => {
@@ -166,12 +172,34 @@ class Playground extends React.Component {
     });
   };
 
+  onSideNavMouseEnter = () => {
+    if (window.innerWidth <= breakpoints.tablet) {
+      this.setState({ sideNavVariant: "full" });
+    }
+  };
+
+  onSideNavMouseLeave = () => {
+    if (window.innerWidth <= breakpoints.tablet) {
+      this.setState({ sideNavVariant: "compact" });
+    } else {
+      this.setState({ sideNavVariant: "full" });
+    }
+  };
+
   setSideNavTheme = theme => {
     this.setState({ sideNavTheme: theme });
   };
 
   setSideNavLoadingState = event => {
     this.setState({ sideNavLoading: event.target.checked });
+  };
+
+  responsivelyUpdateSideNavVariant = () => {
+    if (window.innerWidth > breakpoints.tablet) {
+      this.setState({ sideNavVariant: "full" });
+    } else {
+      this.setState({ sideNavVariant: "compact" });
+    }
   };
 
   toggleSideNav = () => {
@@ -365,11 +393,14 @@ class Playground extends React.Component {
       copyright: "2018",
       higTheme: this.state.sideNavTheme,
       loading: this.state.sideNavLoading,
+      compactUntilHover: this.state.sideNavAutoCompact,
       links,
       onLogoClick: event => {
         event.preventDefault();
         console.log("Logo clicked");
       },
+      onMouseEnter: this.onSideNavMouseEnter,
+      onMouseLeave: this.onSideNavMouseLeave,
       searchable: true,
       slot: (
         <div>
@@ -387,7 +418,8 @@ class Playground extends React.Component {
         </div>
       ),
       onModuleClick: this.handleModuleClick,
-      onSubmoduleClick: this.handleSubmoduleClick
+      onSubmoduleClick: this.handleSubmoduleClick,
+      variant: this.state.sideNavVariant
     };
 
     return (
