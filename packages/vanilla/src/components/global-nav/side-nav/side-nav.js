@@ -24,11 +24,7 @@ class SideNav extends Core {
   }
 
   addContent(instance) {
-    if (instance instanceof SideNavFull) {
-      instance.mount(this.el);
-    }
-
-    if (instance instanceof SideNavSkeleton) {
+    if (instance instanceof SideNavFull || instance instanceof SideNavCompact || instance instanceof SideNavSkeleton) {
       instance.mount(this.el);
     }
   }
