@@ -7,7 +7,8 @@ import {
   Dropdown,
   GlobalNav,
   breakpoints,
-  TextLink
+  TextLink,
+  Checkbox
 } from "../hig-react";
 
 import "./index.css";
@@ -129,7 +130,7 @@ class Playground extends React.Component {
       searchValue: "",
       seenNotificationIds: [],
       sideNavTheme: "dark-blue",
-      sideNavType: "full",
+      sideNavLoading: false,
       notifications: sampleNotifications,
       readIds: this._initialReadNotifications(sampleNotifications),
       featuredNotification: this.featuredNotification(),
@@ -169,8 +170,8 @@ class Playground extends React.Component {
     this.setState({ sideNavTheme: theme });
   };
 
-  setSideNavType = type => {
-    this.setState({ sideNavType: type });
+  setSideNavLoadingState = event => {
+    this.setState({ sideNavLoading: event.target.checked });
   };
 
   toggleSideNav = () => {
@@ -365,7 +366,7 @@ class Playground extends React.Component {
       headerLink: "http://apple.com",
       copyright: "2018",
       higTheme: this.state.sideNavTheme,
-      loading: this.state.sideNavType === "loading",
+      loading: this.state.sideNavLoading,
       links,
       onLogoClick: event => {
         event.preventDefault();
@@ -418,15 +419,10 @@ class Playground extends React.Component {
             value={this.state.sideNavTheme}
             onChange={this.setSideNavTheme}
           />
-
-          <Dropdown
-            label="SideNav type"
-            options={[
-              { label: "Full", id: "full", value: "full" },
-              { label: "Skeleton", id: "loading", value: "loading" }
-            ]}
-            value={this.state.sideNavType}
-            onChange={this.setSideNavType}
+          <Checkbox
+            label="loading"
+            checked={this.state.sideNavLoading}
+            onChange={this.setSideNavLoadingState}
           />
         </PlaygroundSection>
         <ExpandingFilterSectionSection />
