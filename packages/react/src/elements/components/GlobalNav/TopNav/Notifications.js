@@ -145,5 +145,5 @@ Notifications.defaultProps = {
   onClickOutside: () => {},
   onScroll: () => {},
   title: "Notifications",
-  children: null
+  children: []
 };

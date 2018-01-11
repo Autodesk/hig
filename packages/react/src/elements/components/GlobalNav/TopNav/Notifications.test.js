@@ -6,9 +6,10 @@ import Notification from "./Notification";
 import NotificationsAdapter from "../../../../adapters/GlobalNav/TopNav/NotificationsAdapter";
 
 describe("<Notifications", () => {
+  let wrapper;
+
   describe("unseenCount", () => {
     describe("on intial mount", () => {
-      let wrapper;
       beforeEach(() => {
         wrapper = mount(
           <Notifications>
@@ -23,7 +24,6 @@ describe("<Notifications", () => {
     });
 
     describe("given a featured notification", () => {
-      let wrapper;
       beforeEach(() => {
         wrapper = mount(
           <Notifications featuredNotification={{ id: 3 }}>
@@ -38,7 +38,6 @@ describe("<Notifications", () => {
     });
 
     describe("on closing the notifications", () => {
-      let wrapper;
       beforeEach(() => {
         wrapper = mount(
           <Notifications>
@@ -52,6 +51,18 @@ describe("<Notifications", () => {
         expect(wrapper.find(NotificationsAdapter)).toHaveProp("unseenCount", 1);
         wrapper.instance().onClickOutside();
         expect(wrapper.find(NotificationsAdapter)).toHaveProp("unseenCount", 0);
+      });
+    });
+  });
+
+  describe("with no children", () => {
+    describe("onClickOutside", () => {
+      beforeEach(() => {
+        wrapper = mount(<Notifications />);
+      });
+
+      it("does not throw an error", () => {
+        expect(wrapper.instance().onClickOutside).not.toThrow();
       });
     });
   });
