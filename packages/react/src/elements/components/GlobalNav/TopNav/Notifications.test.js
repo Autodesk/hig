@@ -8,8 +8,8 @@ import NotificationsAdapter from "../../../../adapters/GlobalNav/TopNav/Notifica
 describe("<Notifications", () => {
   let wrapper;
 
-  describe("unseenCount", () => {
-    describe("on intial mount", () => {
+  describe("the notifications badge count", () => {
+    describe("on initial mount", () => {
       beforeEach(() => {
         wrapper = mount(
           <Notifications>
@@ -20,6 +20,10 @@ describe("<Notifications", () => {
       });
       it("shows unseen count of incoming notifications", () => {
         expect(wrapper.find(NotificationsAdapter)).toHaveProp("unseenCount", 1);
+        expect(wrapper.find(NotificationsAdapter)).toHaveProp(
+          "showNotificationsCount",
+          true
+        );
       });
     });
 
@@ -34,6 +38,10 @@ describe("<Notifications", () => {
       });
       it("includes featured notification in the count", () => {
         expect(wrapper.find(NotificationsAdapter)).toHaveProp("unseenCount", 2);
+        expect(wrapper.find(NotificationsAdapter)).toHaveProp(
+          "showNotificationsCount",
+          true
+        );
       });
     });
 
@@ -49,8 +57,17 @@ describe("<Notifications", () => {
       it("resets unseen count of notifications", () => {
         wrapper.instance().onClick();
         expect(wrapper.find(NotificationsAdapter)).toHaveProp("unseenCount", 1);
+        expect(wrapper.find(NotificationsAdapter)).toHaveProp(
+          "showNotificationsCount",
+          true
+        );
+
         wrapper.instance().onClickOutside();
         expect(wrapper.find(NotificationsAdapter)).toHaveProp("unseenCount", 0);
+        expect(wrapper.find(NotificationsAdapter)).toHaveProp(
+          "showNotificationsCount",
+          false
+        );
       });
     });
   });
