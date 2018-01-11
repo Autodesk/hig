@@ -47,13 +47,17 @@ Notification.propTypes = {
     PropTypes.instanceOf(Date)
   ]),
   /**
-   * Calls the provided callback when user clicks on the noticatiosn icon in the top nav
+   * A callback called when user clicks on a link in the notification
    */
   onLinkClick: PropTypes.func,
   /**
-   * Id for the notification
+   * A callback called when user dismisses a featured notification
    */
-  id: PropTypes.number.isRequired,
+  onDismiss: PropTypes.func,
+  /**
+   * Unique Id for the notification
+   */
+  id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
   /**
    * {Boolean} specifies a featured notification
    */

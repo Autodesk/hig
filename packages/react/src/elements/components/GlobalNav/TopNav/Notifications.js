@@ -81,7 +81,6 @@ export default class Notifications extends Component {
         {this.props.featuredNotification ? (
           <Notification
             featured
-            onClick={() => {}}
             {...this.props.featuredNotification}
             unread={false}
           >
