@@ -1,5 +1,7 @@
 import Interface from 'interface.json';
 import Core from '_core.js';
+import SideNavSkeleton
+  from 'components/global-nav/side-nav/side-nav-skeleton/side-nav-skeleton';
 import SideNavFull from './side-nav-full/side-nav-full';
 import Template from './side-nav.html';
 import './side-nav.scss';
@@ -24,13 +26,18 @@ class SideNav extends Core {
     if (instance instanceof SideNavFull) {
       instance.mount(this.el);
     }
+
+    if (instance instanceof SideNavSkeleton) {
+      instance.mount(this.el);
+    }
   }
 }
 
 SideNav._interface = Interface.components.GlobalNav.partials.SideNav;
 SideNav._defaults = {};
 SideNav._partials = {
-  SideNavFull
+  SideNavFull,
+  SideNavSkeleton
 };
 
 export default SideNav;

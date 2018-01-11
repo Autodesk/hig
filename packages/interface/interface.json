@@ -1405,6 +1405,19 @@
                   }
                 }
               }
+            },
+            "SideNavSkeleton": {
+              "methods": {
+                "addSkeletonItem": {
+                  "desc": "Adds an skeleton item to the skeleton",
+                  "params": [
+                    "{SkeletonItem} - an instance of the SkeletonItem partial",
+                    "{SkeletonItem} [referenceItem] - (Optional) a reference option used when positioning the new SkeletonItem. New SkeletonItem will be added before the reference option."
+                  ]
+                }
+              },
+              "defaults": {
+              }
             }
           }
         },
@@ -2187,6 +2200,22 @@
           "desc": "Content for the section label",
           "params": [
             "{HTMLElement} HTMLElement"
+          ]
+        }
+      }
+    },
+    "SkeletonItem": {
+      "methods": {
+        "setMaxWidth": {
+          "desc": "sets the maximum width of the skeleton item",
+          "params": [
+            "{String} css value to set as the max width"
+          ]
+        },
+        "setMarginBottom": {
+          "desc": "sets the margin at the bottom of the skeleton item",
+          "params": [
+            "{String} css value to set as the margin bottom"
           ]
         }
       }

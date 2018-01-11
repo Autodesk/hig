@@ -7,7 +7,8 @@ import {
   Dropdown,
   GlobalNav,
   breakpoints,
-  TextLink
+  TextLink,
+  Checkbox
 } from "../hig-react";
 
 import "./index.css";
@@ -128,7 +129,8 @@ class Playground extends React.Component {
       searchOptions: [],
       searchValue: "",
       seenNotificationIds: [],
-      sideNavTheme: "light",
+      sideNavTheme: "dark-blue",
+      sideNavLoading: false,
       notifications: sampleNotifications,
       readIds: this._initialReadNotifications(sampleNotifications),
       featuredNotification: this.featuredNotification(),
@@ -166,6 +168,10 @@ class Playground extends React.Component {
 
   setSideNavTheme = theme => {
     this.setState({ sideNavTheme: theme });
+  };
+
+  setSideNavLoadingState = event => {
+    this.setState({ sideNavLoading: event.target.checked });
   };
 
   toggleSideNav = () => {
@@ -360,6 +366,7 @@ class Playground extends React.Component {
       headerLink: "http://apple.com",
       copyright: "2018",
       higTheme: this.state.sideNavTheme,
+      loading: this.state.sideNavLoading,
       links,
       onLogoClick: event => {
         event.preventDefault();
@@ -411,6 +418,11 @@ class Playground extends React.Component {
             ]}
             value={this.state.sideNavTheme}
             onChange={this.setSideNavTheme}
+          />
+          <Checkbox
+            label="loading"
+            checked={this.state.sideNavLoading}
+            onChange={this.setSideNavLoadingState}
           />
         </PlaygroundSection>
         <ExpandingFilterSectionSection />

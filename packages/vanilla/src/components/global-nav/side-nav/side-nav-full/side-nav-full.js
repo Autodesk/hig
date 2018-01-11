@@ -20,7 +20,6 @@ class SideNavFull extends Core {
 
   _componentDidMount() {
     this.themedElements = [
-      this.el,
       this._findDOMEl('.hig__global-nav__sidenav__scroll', this.el),
       this._findDOMEl('.hig__global-nav__sidenav__super-header-link', this.el),
       this._findDOMEl('.hig__global-nav__sidenav__header-link', this.el),

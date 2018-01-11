@@ -1,0 +1,71 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="../../../../lib/hig.css">
+  <script type="text/javascript" src="../../../../lib/hig.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .test-container {
+      padding: 20px;
+      width: 180px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class='test-container'>
+  </div>
+
+  <script>
+    var items = [{
+        maxWidth: '180px',
+        marginBottom: '36px'
+      },
+      {
+        maxWidth: '180px',
+        marginBottom: '24px'
+      },
+      {
+        maxWidth: '180px',
+        marginBottom: '24px'
+      },
+      {
+        maxWidth: '124px',
+        marginBottom: '36px'
+      },
+      {
+        maxWidth: '180px',
+        marginBottom: '16px'
+      },
+      {
+        maxWidth: '180px',
+        marginBottom: '16px'
+      },
+      {
+        maxWidth: '180px',
+        marginBottom: '16px'
+      },
+      {
+        maxWidth: '180px',
+        marginBottom: '16px'
+      },
+      {
+        maxWidth: '124px'
+      },
+    ];
+
+    items.forEach(function (itemSpec) {
+      var item = new Hig.SkeletonItem({});
+      item.mount('.test-container');
+      item.setTheme('dark-blue');
+      item.setMaxWidth(itemSpec.maxWidth);
+      item.setMarginBottom(itemSpec.marginBottom);
+    });
+  </script>
+</body>
+
+</html>

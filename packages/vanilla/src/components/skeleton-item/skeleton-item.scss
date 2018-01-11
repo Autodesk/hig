@@ -1,0 +1,45 @@
+@import '~basics/colors/colors.scss';
+.hig__skeleton-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  height: 16px;
+}
+
+.hig__skeleton-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  animation: 2s ease-in infinite shine;
+}
+
+@keyframes shine {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+// Light
+.hig__skeleton-item {
+  background-color: color(hig-gray-10);
+}
+
+.hig__skeleton-item::after {
+  background-image: linear-gradient(135deg, color(hig-gray-10) 0%, color(hig-gray-10) 40%, color(hig-white) 50%, color(hig-gray-10) 60%, color(hig-gray-10) 100%);
+}
+
+// Dark blue
+.hig--dark-blue-theme {
+  &.hig__skeleton-item {
+    background-color: color(hig-cool-gray-50);
+  }
+  &.hig__skeleton-item::after {
+    background-image: linear-gradient(135deg, color(hig-cool-gray-50) 0%, color(hig-cool-gray-50) 40%, color(hig-slate-40) 50%, color(hig-cool-gray-50) 60%, color(hig-cool-gray-50) 100%);
+  }
+}

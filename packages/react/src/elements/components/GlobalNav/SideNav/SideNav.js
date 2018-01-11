@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import SideNavAdapter from "../../../../adapters/GlobalNav/SideNav/SideNavAdapter";
 import SideNavFullAdapter from "../../../../adapters/GlobalNav/SideNav/SideNavFullAdapter";
+import SideNavSkeletonAdapter from "../../../../adapters/GlobalNav/SideNav/SideNavSkeletonAdapter";
 import Submodule from "./Submodule";
 import Group from "../../../../adapters/GlobalNav/SideNav/GroupAdapter";
 import Module from "./Module";
@@ -54,10 +55,18 @@ class SideNav extends Component {
     onSuperHeaderClick: null,
     query: "",
     superHeaderLabel: null,
-    superHeaderLink: null
+    superHeaderLink: null,
+    loading: false
   };
 
   render() {
+    if (this.props.loading) {
+      return (
+        <SideNavAdapter higTheme={this.props.higTheme}>
+          <SideNavSkeletonAdapter higTheme={this.props.higTheme} />
+        </SideNavAdapter>
+      );
+    }
     const sideNavProps = {
       copyright: this.props.copyright,
       headerLabel: this.props.headerLabel,
@@ -72,7 +81,7 @@ class SideNav extends Component {
     };
 
     return (
-      <SideNavAdapter>
+      <SideNavAdapter higTheme={this.props.higTheme}>
         <SideNavFullAdapter {...sideNavProps}>
           {this.props.groups.map(group => (
             <Group key={group.modules[0].id}>

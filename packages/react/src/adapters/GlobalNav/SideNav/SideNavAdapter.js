@@ -6,7 +6,7 @@ import HIGAdapter, {
   MountsHIGChild
 } from "../../HIGAdapter";
 
-export default function SideNavFullAdapter(props) {
+export default function SideNavAdapter(props) {
   return (
     <HIGAdapter
       displayName="SideNav"
@@ -23,10 +23,10 @@ export default function SideNavFullAdapter(props) {
   );
 }
 
-SideNavFullAdapter.propTypes = {
+SideNavAdapter.propTypes = {
   children: PropTypes.node
 };
 
-SideNavFullAdapter.defaultProps = {
+SideNavAdapter.defaultProps = {
   children: null
 };
