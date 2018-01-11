@@ -18,13 +18,13 @@ $hig__global-nav__sidenav--width: 280px;
   left: $hig__global-nav__sidenav--width * -1; // Hide offscreen by default
   bottom: 0;
   overflow-x: hidden;
+  max-width: $hig__global-nav__sidenav--width;
   @include vendor-prefix('transition', side-nav-transition('left'));
-  @include shadow("inner-right");
-  width: $hig__global-nav__sidenav--width;
   margin-top: $hig__global-nav__top-nav--height;
   z-index: 2;
   @include tablet-breakpoint {
     margin-top: 0;
+    @include shadow("inner-right");
   }
 }
 
