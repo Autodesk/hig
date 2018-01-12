@@ -30,6 +30,18 @@ export default class Notification extends Component {
   }
 }
 
+export function notificationElementPropType(props, propName) {
+  const value = props[propName];
+  if (value && value.type && value.type === Notification) {
+    return new Error("Expected an element of type Notification.");
+  }
+  return null;
+}
+
+Notification.defaultProps = {
+  onLinkClick: () => {}
+};
+
 Notification.propTypes = {
   /**
    * {Boolean} to show specify whether notification is read

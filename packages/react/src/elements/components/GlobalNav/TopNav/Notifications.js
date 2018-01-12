@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 import NotificationsAdapter from "../../../../adapters/GlobalNav/TopNav/NotificationsAdapter";
-import Notification from "./Notification";
+import { notificationElementPropType } from "./Notification";
 
 export default class Notifications extends Component {
   constructor(props) {
@@ -78,15 +78,11 @@ export default class Notifications extends Component {
         unseenCount={unseenCount}
         showNotificationsCount={unseenCount > 0}
       >
-        {this.props.featuredNotification ? (
-          <Notification
-            featured
-            {...this.props.featuredNotification}
-            unread={false}
-          >
-            {this.props.featuredNotification.children}
-          </Notification>
-        ) : null}
+        {this.props.featuredNotification &&
+          React.cloneElement(this.props.featuredNotification, {
+            featured: true,
+            unread: false // Hide unread indicator on featured notifications
+          })}
         {this.props.children}
       </NotificationsAdapter>
     );
@@ -119,9 +115,9 @@ Notifications.propTypes = {
    */
   title: PropTypes.string,
   /**
-   * An object containing props for a Notification, to be styled as a featured notification
+   * A Notification component, to be styled as a featured notification
    */
-  featuredNotification: PropTypes.shape(Notification.propTypes)
+  featuredNotification: notificationElementPropType
 };
 
 Notifications.defaultProps = {

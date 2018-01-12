@@ -63,7 +63,6 @@ class NotificationsSection extends PureComponent {
       seenNotificationIds: [],
       notifications: sampleNotifications,
       readIds: this._initialReadNotifications(sampleNotifications),
-      featuredNotification: this.featuredNotification(),
       notificationsLoading: false
     };
   }
@@ -120,9 +119,8 @@ class NotificationsSection extends PureComponent {
       })
     );
 
-  featuredNotification = () => ({
-    id: 2,
-    children: (
+  featuredNotification = () => (
+    <Notification id={2} onDismiss={this.featuredNotificationDismissed}>
       <div>
         <p>
           <b>New enhancements to subscription management lorum ipsom gas</b>
@@ -137,9 +135,8 @@ class NotificationsSection extends PureComponent {
           <TextLink text="Secondary link" />
         </p>
       </div>
-    ),
-    onDismiss: this.featuredNotificationDismissed
-  });
+    </Notification>
+  );
 
   featuredNotificationDismissed = () => {
     console.log("Feature notification dismissed");
@@ -172,7 +169,7 @@ class NotificationsSection extends PureComponent {
             notifications={this.transformedNotifications(
               this.state.notifications
             )}
-            featuredNotification={this.state.featuredNotification}
+            featuredNotification={this.featuredNotification()}
             loading={this.state.notificationsLoading}
           >
             {this.state.notifications.map(notification => (
