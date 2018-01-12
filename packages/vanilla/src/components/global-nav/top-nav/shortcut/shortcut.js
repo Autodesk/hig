@@ -36,7 +36,9 @@ class Shortcut extends Core {
   }
 
   setLink(link) {
-    this.el.setAttribute('href', link);
+    link === undefined || link === ''
+      ? this.el.removeAttribte('href')
+      : this.el.setAttribute('href', link);
   }
 
   _findOrCreateIconComponent(mountElOrSelector, name = 'icon') {

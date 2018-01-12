@@ -38,7 +38,9 @@ class Link extends Core {
   }
 
   setLink(link) {
-    this.el.setAttribute('href', link);
+    link === undefined || link === ''
+      ? this.el.removeAttribte('href')
+      : this.el.setAttribute('href', link);
   }
 
   setTarget(target) {
@@ -71,7 +73,7 @@ Link._interface =
   Interface.components.GlobalNav.partials.SideNav.partials.SideNavFull.partials.Link;
 Link._defaults = {
   title: 'link',
-  link: '#'
+  link: false
 };
 
 export default Link;

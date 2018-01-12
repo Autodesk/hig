@@ -68,7 +68,10 @@ class Module extends Core {
   }
 
   setLink(link) {
-    this._findDOMEl('a', this.el).setAttribute('href', link);
+    const anchorEl = this._findDOMEl('a', this.el);
+    link === undefined || link === ''
+      ? anchorEl.removeAttribte('href')
+      : anchorEl.setAttribute('href', link);
   }
 
   setTarget(target) {
