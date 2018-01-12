@@ -1,5 +1,8 @@
 export { default } from "./SideNav";
 export {
+  default as SideNavFull
+} from "../../../../adapters/GlobalNav/SideNav/SideNavFullAdapter";
+export {
   default as Link
 } from "../../../../adapters/GlobalNav/SideNav/LinkAdapter";
 export { default as Module } from "./Module";

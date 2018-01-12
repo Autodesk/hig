@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 import NotificationsAdapter from "../../../../adapters/GlobalNav/TopNav/NotificationsAdapter";
-import Notification from "./Notification";
+import { notificationElementPropType } from "./Notification";
 
 export default class Notifications extends Component {
   constructor(props) {
@@ -66,13 +66,6 @@ export default class Notifications extends Component {
     return React.Children.map(this.props.children, child => child.props.id);
   }
 
-  showNotificationsCount() {
-    return (
-      this.state.seenNotificationIds.length !==
-      React.Children.toArray(this.props.children).length
-    );
-  }
-
   render() {
     const unseenCount = this.unseenCount();
     return (
@@ -83,18 +76,13 @@ export default class Notifications extends Component {
         onScroll={this.onScroll}
         open={this.state.open}
         unseenCount={unseenCount}
-        showNotificationsCount={this.showNotificationsCount()}
+        showNotificationsCount={unseenCount > 0}
       >
-        {this.props.featuredNotification ? (
-          <Notification
-            featured
-            onClick={() => {}}
-            {...this.props.featuredNotification}
-            unread={false}
-          >
-            {this.props.featuredNotification.children}
-          </Notification>
-        ) : null}
+        {this.props.featuredNotification &&
+          React.cloneElement(this.props.featuredNotification, {
+            featured: true,
+            unread: false // Hide unread indicator on featured notifications
+          })}
         {this.props.children}
       </NotificationsAdapter>
     );
@@ -110,14 +98,6 @@ Notifications.propTypes = {
    * Show the loading indicator
    */
   loading: PropTypes.bool,
-  /**
-   * Whether to show number of notifications or not
-   */
-  showUnreadBadge: PropTypes.bool,
-  /**
-   * Number of unread messages
-   */
-  unreadCount: PropTypes.number,
   /**
    * Calls the provided callback when user clicks on the notifications icon in the top nav
    */
@@ -135,9 +115,9 @@ Notifications.propTypes = {
    */
   title: PropTypes.string,
   /**
-   * An object containing props for a Notification, to be styled as a featured notification
+   * A Notification component, to be styled as a featured notification
    */
-  featuredNotification: PropTypes.shape(Notification.propTypes)
+  featuredNotification: notificationElementPropType
 };
 
 Notifications.defaultProps = {
@@ -145,5 +125,5 @@ Notifications.defaultProps = {
   onClickOutside: () => {},
   onScroll: () => {},
   title: "Notifications",
-  children: null
+  children: []
 };

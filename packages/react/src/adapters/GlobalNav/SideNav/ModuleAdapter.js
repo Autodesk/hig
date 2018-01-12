@@ -34,7 +34,8 @@ function ModuleAdapter(props) {
     <HIGAdapter
       displayName="Module"
       HIGConstructor={
-        VanillaGlobalNav._partials.SideNav._partials.Group._partials.Module
+        VanillaGlobalNav._partials.SideNav._partials.SideNavFull._partials.Group
+          ._partials.Module
       }
       {...props}
     >
@@ -66,6 +67,11 @@ function ModuleAdapter(props) {
             setter="setTitle"
             {...adapterProps}
           />
+          <MapsPropToMethod
+            value={props.target}
+            setter="setTarget"
+            {...adapterProps}
+          />
           <MapsPropToMethod value={props.active} {...adapterProps}>
             {(instance, value) =>
               value ? instance.activate() : instance.deactivate()
@@ -88,6 +94,7 @@ ModuleAdapter.propTypes = {
   icon: PropTypes.string,
   link: PropTypes.string,
   title: PropTypes.string,
+  target: PropTypes.string,
   active: PropTypes.bool,
   onClick: PropTypes.func,
   onHover: PropTypes.func

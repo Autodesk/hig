@@ -57,14 +57,20 @@ export default class NotificationAdapter extends Component {
 
 NotificationAdapter.propTypes = {
   /**
-   * Calls the provided callback when user clicks on the noticatiosn icon in the top nav
+   * A callback called when user clicks on a link in the notification
    */
   onLinkClick: PropTypes.func,
-  onDismissed: PropTypes.func,
+  /**
+   * A callback called when user dismisses a featured notification
+   */
+  onDismiss: PropTypes.func,
   /**
    * {Boolean} to show specify whether notificaiton is read
    */
   unread: PropTypes.bool,
+  /**
+   * Indicates whether this is a featured notification
+   */
   featured: PropTypes.bool,
   /**
    * Content for notification

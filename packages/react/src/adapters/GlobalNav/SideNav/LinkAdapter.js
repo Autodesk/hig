@@ -11,7 +11,9 @@ function LinkAdapter(props) {
   return (
     <HIGAdapter
       displayName="Link"
-      HIGConstructor={VanillaGlobalNav._partials.SideNav._partials.Link}
+      HIGConstructor={
+        VanillaGlobalNav._partials.SideNav._partials.SideNavFull._partials.Link
+      }
       {...props}
     >
       {adapterProps => (
@@ -19,6 +21,11 @@ function LinkAdapter(props) {
           <MapsPropToMethod
             value={props.link}
             setter="setLink"
+            {...adapterProps}
+          />
+          <MapsPropToMethod
+            value={props.target}
+            setter="setTarget"
             {...adapterProps}
           />
           <MapsPropToMethod
@@ -45,16 +52,10 @@ function LinkAdapter(props) {
 
 LinkAdapter.propTypes = {
   link: PropTypes.string,
+  target: PropTypes.string,
   title: PropTypes.string,
   onClick: PropTypes.func,
   onHover: PropTypes.func
-};
-
-LinkAdapter.defaultProps = {
-  link: undefined,
-  title: undefined,
-  onClick: undefined,
-  onHover: undefined
 };
 
 export default LinkAdapter;

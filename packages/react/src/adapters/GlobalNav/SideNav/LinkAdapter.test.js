@@ -13,10 +13,11 @@ describe("Help LinkAdapter", () => {
           onHover={() => {}}
           title="Autodesk"
           link="http://autodesk.com"
+          target="_blank"
         />
       );
     }).toImplementHIGInterfaceOf(
-      VanillaGlobalNav._partials.SideNav._partials.Link
+      VanillaGlobalNav._partials.SideNav._partials.SideNavFull._partials.Link
     );
   });
 });

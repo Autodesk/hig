@@ -4,7 +4,6 @@ import Icon from 'basics/icon/icon';
 import './button.scss';
 import Template from './button.html';
 
-
 const AvailableTypes = ['primary', 'secondary', 'flat'];
 const AvailableSizes = ['small', 'standard', 'large'];
 const AvailableWidths = ['shrink', 'grow'];
@@ -44,7 +43,9 @@ class Button extends Core {
   }
 
   setLink(link) {
-    this.el.setAttribute('href', link);
+    !link || link === ''
+      ? this.el.removeAttribte('href')
+      : this.el.setAttribute('href', link);
   }
 
   setType(type) {
@@ -157,7 +158,7 @@ class Button extends Core {
 Button._interface = Interface.components.Button;
 Button._defaults = {
   icon: false,
-  link: false,
+  link: null,
   size: 'standard',
   target: '_self',
   title: 'link',

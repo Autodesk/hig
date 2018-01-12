@@ -12,6 +12,7 @@ describe("SubmoduleAdapter", () => {
           higInstance={mockInstance}
           title="Foo"
           link="http://autodesk.com"
+          target="_blank"
           onClick={() => {}}
           onHover={() => {}}
           active
@@ -22,8 +23,8 @@ describe("SubmoduleAdapter", () => {
       mockInstance.deactivate();
       mockInstance.hide();
     }).toImplementHIGInterfaceOf(
-      VanillaGlobalNav._partials.SideNav._partials.Group._partials.Module
-        ._partials.Submodule
+      VanillaGlobalNav._partials.SideNav._partials.SideNavFull._partials.Group
+        ._partials.Module._partials.Submodule
     );
   });
 });

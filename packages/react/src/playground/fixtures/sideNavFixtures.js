@@ -9,7 +9,7 @@ export const modules = [
     id: "1-2",
     groupId: "2",
     icon: "collaboration",
-    title: "Authoring Collaboration"
+    title: "Beispiel eines extra langen Modulnamens"
   },
   {
     id: "1-3",
@@ -93,6 +93,20 @@ export const modules = [
     groupId: "4",
     icon: "project-management",
     title: "Project Admin"
+  },
+  {
+    id: "1-17",
+    groupId: "5",
+    icon: "help",
+    title: "Knowledge Base",
+    link: "https://knowledge.autodesk.com/",
+    target: "_blank"
+  },
+  {
+    id: "1-18",
+    groupId: "5",
+    icon: "layout",
+    title: "Style Guide"
   }
 ];
 
@@ -110,7 +124,7 @@ export const submodules = [
   {
     id: "1-1-3",
     moduleId: "1-1",
-    title: "Quality"
+    title: "Beispielsubmodul mit langem Umbruchnamen"
   },
   {
     id: "1-1-4",
@@ -252,6 +266,20 @@ export const submodules = [
     id: "1-9-31",
     moduleId: "1-9",
     title: "Activities"
+  },
+  {
+    id: "1-18-32",
+    moduleId: "1-18",
+    title: "Web",
+    link: "http://www.autodesk.com",
+    target: "_blank"
+  },
+  {
+    id: "1-18-33",
+    moduleId: "1-18",
+    title: "Desktop",
+    link: "http://www.autodesk.com",
+    target: "_blank"
   }
 ];
 
@@ -262,10 +290,12 @@ export const links = [
   },
   {
     title: "AutoCAD",
-    link: "https://www.autodesk.com/products/autocad/overview"
+    link: "https://www.autodesk.com/products/autocad/overview",
+    target: "_blank"
   },
   {
     title: "Maya",
-    link: "https://www.autodesk.com/products/maya/overview"
+    link: "https://www.autodesk.com/products/maya/overview",
+    target: "_blank"
   }
 ];

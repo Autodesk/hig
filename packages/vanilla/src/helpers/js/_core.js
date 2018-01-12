@@ -1,5 +1,6 @@
 /* globals document, NodeFilter */
 import Mustache from 'mustache';
+import Themes from 'helpers/js/_themes';
 import 'helpers/js/polyfills';
 
 class Core {
@@ -10,6 +11,8 @@ class Core {
      */
 
   constructor(options) {
+    this.themedElements = [];
+
     // CHECK INTERFACE COMPATIBILITY
     if (!this._interface) {
       console.warn(
@@ -234,7 +237,7 @@ class Core {
         eventType = 'mouseenter';
       }
 
-      if (eventType === 'mouseenter' || eventType === 'scroll') {
+      if (eventType === 'mouseenter' || eventType === 'mouseleave' || eventType === 'scroll') {
         eventFn = executeOnEventFunction;
         eventTarget = q;
       } else {
@@ -328,6 +331,14 @@ class Core {
 
   defaults() {
     return this._defaults;
+  }
+
+  setTheme(theme) {
+    Themes.checkTheme(theme);
+    this.themedElements.forEach((el) => {
+      el.classList.remove(...Themes.themeClasses);
+      el.classList.add(Themes.themeClassFor(theme));
+    });
   }
 
   get _interface() {

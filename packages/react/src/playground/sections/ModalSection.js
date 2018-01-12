@@ -37,7 +37,7 @@ class ModalSection extends PureComponent {
           open={this.state.isOpen}
           buttons={buttonProps}
           body="This is the text body of my modal"
-          style="alternate"
+          style="alternate" // eslint-disable-line react/style-prop-object
           onClose={this.closeModal}
         >
           <h1>

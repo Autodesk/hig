@@ -1,6 +1,8 @@
 <a
   class='hig__global-nav__side-nav__section__group__module__submodule
          hig__global-nav__side-nav__section__group__module__submodule--hide'
-  href="{{ link }}">
-  {{ title }}
+  {{#link}}href={{link}}{{/link}}
+>
+  <div class='hig__global-nav__side-nav__section__group__module__submodule__title'>{{ title }}</div>
+  <div class='hig__global-nav__side-nav__section__group__module__submodule__external-link-icon'></div>
 </a>

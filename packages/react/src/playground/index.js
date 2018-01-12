@@ -2,13 +2,22 @@
 import React from "react";
 import "hig-vanilla/lib/hig.css";
 
-import { Button, GlobalNav, breakpoints, TextLink } from "../hig-react";
+import {
+  Button,
+  Dropdown,
+  GlobalNav,
+  breakpoints,
+  TextLink,
+  Checkbox,
+  Notification
+} from "../hig-react";
 
 import "./index.css";
 
 import logo from "./images/bim-logo.png";
 import { projects, accounts } from "./fixtures/topNavFixtures";
 import { modules, submodules, links } from "./fixtures/sideNavFixtures";
+import PlaygroundSection from "./PlaygroundSection";
 
 import ActionBarSection from "./sections/ActionBarSection";
 import AvatarSection from "./sections/AvatarSection";
@@ -22,6 +31,7 @@ import GridSection from "./sections/GridSection";
 import IconButtonSection from "./sections/IconButtonSection";
 import IconSection from "./sections/IconSection";
 import ModalSection from "./sections/ModalSection";
+import NotificationsSection from "./sections/NotificationsSection";
 import ImageSection from "./sections/ImageSection";
 import PasswordFieldSection from "./sections/PasswordFieldSection";
 import ProgressBarSection from "./sections/ProgressBarSection";
@@ -62,16 +72,24 @@ const sampleNotifications = [
     unread: true,
     children: (
       <div>
-        <p>This is our first notification</p>
-        <div>
+        <p>
+          <b>Your subscription expires May 5</b>
+        </p>
+        <p>
+          Maya<br />
+          Media & Entertainment Collection<br />
+          Product Design Collection<br />
+          2 more
+        </p>
+        <p>
           <TextLink
             href="https://github.com/Autodesk/hig"
-            text="This is a primary text link"
+            text="Manage renewal"
             onClick={() => {
               console.log("notifications id 1");
             }}
           />
-        </div>
+        </p>
       </div>
     )
   },
@@ -81,9 +99,22 @@ const sampleNotifications = [
     children: (
       <div>
         <p>
-          <b>test title</b>
+          <b>Your subscription expires April 20</b>
         </p>
-        <p>this is regular text</p>
+        <p>
+          AutoCAD<br />
+          Architecture Construction Engineering Collection<br />
+          Product Design Collection<br />
+        </p>
+        <p>
+          <TextLink
+            href="https://github.com/Autodesk/hig"
+            text="Manage renewal"
+            onClick={() => {
+              console.log("notifications id 2");
+            }}
+          />
+        </p>
       </div>
     )
   }
@@ -99,11 +130,18 @@ class Playground extends React.Component {
       searchOptions: [],
       searchValue: "",
       seenNotificationIds: [],
+      sideNavTheme: "dark-blue",
+      sideNavLoading: false,
+      sideNavVariant: "compact",
       notifications: sampleNotifications,
       readIds: this._initialReadNotifications(sampleNotifications),
-      featuredNotification: this.featuredNotification(),
       notificationsLoading: false
     };
+  }
+
+  componentDidMount() {
+    this.responsivelyUpdateSideNavVariant();
+    window.addEventListener("resize", this.responsivelyUpdateSideNavVariant);
   }
 
   onSearchInput = input => {
@@ -134,6 +172,36 @@ class Playground extends React.Component {
     });
   };
 
+  onSideNavMouseEnter = () => {
+    if (window.innerWidth <= breakpoints.tablet) {
+      this.setState({ sideNavVariant: "full" });
+    }
+  };
+
+  onSideNavMouseLeave = () => {
+    if (window.innerWidth <= breakpoints.tablet) {
+      this.setState({ sideNavVariant: "compact" });
+    } else {
+      this.setState({ sideNavVariant: "full" });
+    }
+  };
+
+  setSideNavTheme = theme => {
+    this.setState({ sideNavTheme: theme });
+  };
+
+  setSideNavLoadingState = event => {
+    this.setState({ sideNavLoading: event.target.checked });
+  };
+
+  responsivelyUpdateSideNavVariant = () => {
+    if (window.innerWidth > breakpoints.tablet) {
+      this.setState({ sideNavVariant: "full" });
+    } else {
+      this.setState({ sideNavVariant: "compact" });
+    }
+  };
+
   toggleSideNav = () => {
     this.setState({ isSideNavOpen: !this.state.isSideNavOpen });
   };
@@ -154,9 +222,15 @@ class Playground extends React.Component {
       children: (
         <div>
           <p>
-            <b>test title</b>
+            You have 4 new seats of <b>Product Design Collection</b>{" "}
+            subscription, switched from <b>Building Design Suite Premium</b>
+            subscription.
           </p>
-          <p>this is regular text</p>
+          <p>
+            <TextLink text="Learn how to switch" />
+            {" or "}
+            <TextLink text="Assign users" />
+          </p>
         </div>
       )
     };
@@ -166,18 +240,24 @@ class Playground extends React.Component {
     });
   };
 
-  featuredNotification = () => ({
-    id: 2,
-    children: (
+  featuredNotification = () => (
+    <Notification id={2} onDismiss={this.featuredNotificationDismissed}>
       <div>
         <p>
-          <b>Featured Notification</b>
+          <b>New enhancements to subscription management lorum ipsom gas</b>
         </p>
-        <p>this is regular text</p>
+        <p>
+          Lorum reduce seats on your subscriptions and upcoming payments in your
+          account
+        </p>
+        <p>
+          <TextLink text="Primary link" />
+          {" or "}
+          <TextLink text="Secondary link" />
+        </p>
       </div>
-    ),
-    onDismiss: this.featuredNotificationDismissed
-  });
+    </Notification>
+  );
 
   featuredNotificationDismissed = () => {
     console.log("Feature notification dismissed");
@@ -299,7 +379,7 @@ class Playground extends React.Component {
         onScroll: this.onNotificationsScroll,
         unreadCount: this.state.unreadCount,
         notifications: this.transformedNotifications(this.state.notifications),
-        featuredNotification: this.state.featuredNotification,
+        featuredNotification: this.featuredNotification(),
         loading: this.state.notificationsLoading
       }
     };
@@ -308,11 +388,17 @@ class Playground extends React.Component {
       superHeaderLabel: "HIG",
       headerLabel: "Playground",
       headerLink: "http://apple.com",
+      copyright: "2018",
+      higTheme: this.state.sideNavTheme,
+      loading: this.state.sideNavLoading,
+      compactUntilHover: this.state.sideNavAutoCompact,
       links,
       onLogoClick: event => {
         event.preventDefault();
         console.log("Logo clicked");
       },
+      onMouseEnter: this.onSideNavMouseEnter,
+      onMouseLeave: this.onSideNavMouseLeave,
       searchable: true,
       slot: (
         <div>
@@ -330,7 +416,8 @@ class Playground extends React.Component {
         </div>
       ),
       onModuleClick: this.handleModuleClick,
-      onSubmoduleClick: this.handleSubmoduleClick
+      onSubmoduleClick: this.handleSubmoduleClick,
+      variant: this.state.sideNavVariant
     };
 
     return (
@@ -342,14 +429,30 @@ class Playground extends React.Component {
         topNav={topNavProps}
         activeModuleId={this.state.activeModuleId}
         showSubNav
-        isSideNavOpen={this.state.isSideNavOpen}
+        sideNavOpen={this.state.isSideNavOpen}
         onHamburgerClick={this.toggleSideNav}
       >
-        <Button
-          size="standard"
-          title="Add notification"
-          onClick={this.addNotification}
-        />
+        <PlaygroundSection title="Miscellaneous">
+          <Button
+            size="standard"
+            title="Add notification"
+            onClick={this.addNotification}
+          />
+          <Dropdown
+            label="SideNav theme"
+            options={[
+              { label: "Light", id: "light", value: "light" },
+              { label: "Dark blue", id: "dark-blue", value: "dark-blue" }
+            ]}
+            value={this.state.sideNavTheme}
+            onChange={this.setSideNavTheme}
+          />
+          <Checkbox
+            label="loading"
+            checked={this.state.sideNavLoading}
+            onChange={this.setSideNavLoadingState}
+          />
+        </PlaygroundSection>
         <ExpandingFilterSectionSection />
         <ActionBarSection />
         <ProgressBarSection />
@@ -378,6 +481,7 @@ class Playground extends React.Component {
         <ContainerViewSection />
         <ImageSection />
         <SectionLabelSection />
+        <NotificationsSection />
         <ShowMoreLessSection />
         <TimestampSection />
       </GlobalNav>

@@ -4,6 +4,7 @@ import { mount } from "enzyme";
 
 import GlobalNavAdapter from "../../../../adapters/GlobalNav/GlobalNavAdapter";
 import SideNavAdapter from "../../../../adapters/GlobalNav/SideNav/SideNavAdapter";
+import SideNavFullAdapter from "../../../../adapters/GlobalNav/SideNav/SideNavFullAdapter";
 import GroupAdapter from "../../../../adapters/GlobalNav/SideNav/GroupAdapter";
 import Module from "./Module";
 
@@ -12,9 +13,11 @@ describe("Module", () => {
     return (
       <GlobalNavAdapter>
         <SideNavAdapter>
-          <GroupAdapter>
-            <Module icon="assets" {...props} />
-          </GroupAdapter>
+          <SideNavFullAdapter>
+            <GroupAdapter>
+              <Module icon="assets" {...props} />
+            </GroupAdapter>
+          </SideNavFullAdapter>
         </SideNavAdapter>
       </GlobalNavAdapter>
     );

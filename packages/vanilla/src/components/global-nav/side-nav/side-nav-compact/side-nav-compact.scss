@@ -1,0 +1,17 @@
+.hig__global-nav__sidenav-compact {
+  display: flex;
+  flex-flow: column;
+  overflow: hidden;
+
+  .hig__global-nav__side-nav__section__group__module__link__title { display: none; }
+  .hig__global-nav__side-nav__section__group__module__link__external-link-icon { display: none; }
+  .hig__global-nav__side-nav__section__group__module__collapse { display: none; }
+  .hig__global-nav__side-nav__section__group__module__submodules { display: none; }
+  .hig__global-nav__side-nav__section__group {
+    &:first-child {
+      &::before {
+        border: none;
+      }
+    }
+  }
+}

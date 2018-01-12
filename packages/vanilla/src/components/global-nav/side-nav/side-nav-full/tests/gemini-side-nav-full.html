@@ -1,0 +1,102 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="../../../../../../lib/hig.css">
+    <script type="text/javascript" src="../../../../../../lib/hig.js"></script>
+</head>
+
+<body>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+    <script>
+        // CREATE GLOBALNAV COMPONENT
+        var GlobalNav = new Hig.GlobalNav();
+        GlobalNav.mount("body");
+
+        // ADD TOPNAV
+        var TopNav = new GlobalNav.partials.TopNav({
+            "logo": "https://www.dexigner.com/images/news/xw/22856.jpg",
+            "logo_link": "#"
+        });
+        GlobalNav.addTopNav(TopNav);
+
+        TopNav.setLogo("../../../global-nav/tests/bim-logo.png"); // Update logo
+        TopNav.setLogoLink("http://autodesk.com"); // update logo link
+
+        // ADD A SIDENAV
+        var SideNavContainer = new GlobalNav.partials.SideNav();
+        GlobalNav.addSideNav(SideNavContainer);
+
+        console.dir(GlobalNav.partials.SideNav)
+        var SideNav = new SideNavContainer.partials.SideNavFull();
+        SideNavContainer.addContent(SideNav);
+
+        SideNav.setSuperHeaderLabel('Global Construction');
+        SideNav.setHeaderLabel('General Hospital');
+
+        // ADD A GROUP TO OUR SIDENAV
+        var Group1 = new SideNav.partials.Group();
+        SideNav.addGroup(Group1);
+
+        // ADD SOME ITEMS TO OUR GROUP
+        var Group1_Module1 = new Group1.partials.Module({
+            "icon": "project-management",
+            "title": "Module 1",
+        });
+        Group1.addModule(Group1_Module1);
+        Group1_Module1.activate();
+
+        var Group1_Module2 = new Group1.partials.Module({
+            "icon": "project-management",
+            "title": "Module 2",
+        });
+        Group1.addModule(Group1_Module2);
+
+        // ADD ANOTHER GROUP TO OUR SIDENAV
+        var Group2 = new SideNav.partials.Group();
+        SideNav.addGroup(Group2);
+
+        // ADD SOME ITEMS TO OUR GROUP
+        var Group2_Module1 = new Group2.partials.Module({
+            "icon": "project-management",
+            "title": "Module 3",
+        });
+        Group2.addModule(Group2_Module1);
+
+
+        // ADD LINKS TO SIDENAV
+
+        var Link1 = new SideNav.partials.Link({
+            title: "AutoDesk",
+            link: "http://www.autodesk.com"
+        });
+        var Link2 = new SideNav.partials.Link({
+            title: "AutoCAD",
+            link: "https://www.autodesk.com/products/autocad/overview'"
+        });
+        SideNav.addLink(Link1);
+        SideNav.addLink(Link2);
+
+        // OPEN THE SIDENAV
+        GlobalNav.showSideNav();
+
+        document.body.addEventListener('click', function () {
+            SideNavContainer.setTheme('dark-blue');
+            SideNav.setTheme('dark-blue');
+            Group1_Module1.setTheme('dark-blue');
+            Group1_Module2.setTheme('dark-blue');
+            Group2_Module1.setTheme('dark-blue');
+            Link1.setTheme('dark-blue');
+            Link2.setTheme('dark-blue');
+        })
+    </script>
+
+</body>
+
+</html>

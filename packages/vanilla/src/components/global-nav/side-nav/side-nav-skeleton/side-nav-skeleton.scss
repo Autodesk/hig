@@ -1,0 +1,8 @@
+@import '../side-nav.scss';
+
+.hig__side-nav-skeleton {
+  box-sizing: border-box;
+  padding-left: 24px;
+  padding-top: 28px;
+  width: $hig__global-nav__sidenav--width;
+}

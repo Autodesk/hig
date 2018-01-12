@@ -12,7 +12,7 @@ export default class TextLinkAdapter extends Component {
         HIGConstructor={VanillaTextLink}
       >
         {adapterProps => (
-          <div>
+          <span>
             <MapsEventListener
               listener="onClick"
               handler={this.props.onClick}
@@ -33,7 +33,7 @@ export default class TextLinkAdapter extends Component {
               value={this.props.text}
               {...adapterProps}
             />
-          </div>
+          </span>
         )}
       </HIGAdapter>
     );

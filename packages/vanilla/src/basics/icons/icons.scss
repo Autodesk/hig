@@ -1,13 +1,21 @@
 @import '~helpers/css/mixins/base.scss';
 
-.hig__icon{
+.hig__icon {
     position: relative;
-    width: 30px;
-    height: 30px;
 
     & svg {
 		@include vendor-prefix(transform, translateX(-50%) translateY(-50%));
 		position: absolute;
 		top: 50%; left: 50%;
 	}
+}
+
+.hig__icon--16-size {
+  width: 20px;
+  height: 20px;
+}
+
+.hig__icon--24-size {
+  width: 30px;
+  height: 30px;
 }

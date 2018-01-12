@@ -1,31 +1,24 @@
 @import '~basics/colors/colors.scss';
 @import '~helpers/css/mixins/base.scss';
 @import '../side-nav.scss';
-
-.hig__global-nav__side-nav__search{
-    position: absolute;
-    background: color(hig-white);
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 52px;
+.hig__global-nav__side-nav__search {
+    flex: 0 0 auto;
+    position: relative;
+    background: color(hig-white); // height: 52px;
     border-top: 1px solid color(hig-cool-gray-30);
-
-    &__icon{
+    &__icon {
         position: absolute;
         top: 11px;
         left: 14px;
-
-        &:hover{
+        &:hover {
             cursor: pointer;
         }
     }
-
-    &__inputholder{
+    &__inputholder {
         margin: 8px 10px;
         width: $hig__global-nav__sidenav--width - 20px - 2px;
-
-        &__input, &__input[type=text]{
+        &__input,
+        &__input[type=text] {
             @include reset;
             border: 1px solid color(hig-cool-gray-30);
             border-radius: 4px;
@@ -33,30 +26,25 @@
             padding: 6px 6px 6px 35px;
             width: 100%;
             font-weight: 500;
-
-            &::placeholder{
+            &::placeholder {
                 font-weight: normal;
                 color: color(hig-cool-gray-50);
             }
-
-            &:focus{
+            &:focus {
                 // border: none;
                 outline: none;
             }
         }
     }
-
-    &__clear{
+    &__clear {
         position: absolute;
         right: 12px;
         top: 11px;
         opacity: 0; // hide by opacity to enable event propagation with focusin/focusout events
-
-        &--show{
+        &--show {
             opacity: 1;
         }
-
-        &:hover{
+        &:hover {
             cursor: pointer;
         }
     }

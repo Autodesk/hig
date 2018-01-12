@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import SideNavAdapter from "../../../../adapters/GlobalNav/SideNav/SideNavAdapter";
+import SideNavCompactAdapter from "../../../../adapters/GlobalNav/SideNav/SideNavCompactAdapter";
+import SideNavFullAdapter from "../../../../adapters/GlobalNav/SideNav/SideNavFullAdapter";
+import SideNavSkeletonAdapter from "../../../../adapters/GlobalNav/SideNav/SideNavSkeletonAdapter";
 import Submodule from "./Submodule";
 import Group from "../../../../adapters/GlobalNav/SideNav/GroupAdapter";
 import Module from "./Module";
@@ -35,10 +38,13 @@ class SideNav extends Component {
     query: PropTypes.string,
     onModuleClick: PropTypes.func,
     onSubmoduleClick: PropTypes.func,
+    onMouseEnter: PropTypes.func,
+    onMouseLeave: PropTypes.func,
     searchable: PropTypes.bool,
     slot: PropTypes.node,
     superHeaderLabel: PropTypes.string,
-    superHeaderLink: PropTypes.string
+    superHeaderLink: PropTypes.string,
+    variant: PropTypes.oneOf(["full", "compact"])
   };
 
   static defaultProps = {
@@ -51,12 +57,29 @@ class SideNav extends Component {
     onSubmoduleClick: null,
     onHeaderClick: null,
     onSuperHeaderClick: null,
+    onMouseEnter: () => {},
+    onMouseLeave: () => {},
     query: "",
     superHeaderLabel: null,
-    superHeaderLink: null
+    superHeaderLink: null,
+    loading: false,
+    variant: "full"
   };
 
   render() {
+    if (this.props.loading) {
+      return (
+        <SideNavAdapter higTheme={this.props.higTheme}>
+          <SideNavSkeletonAdapter higTheme={this.props.higTheme} />
+        </SideNavAdapter>
+      );
+    }
+
+    const mouseEventProps = {
+      onMouseEnter: this.props.onMouseEnter,
+      onMouseLeave: this.props.onMouseLeave
+    };
+
     const sideNavProps = {
       copyright: this.props.copyright,
       headerLabel: this.props.headerLabel,
@@ -66,49 +89,57 @@ class SideNav extends Component {
       onSubmoduleClick: this.props.onSubmoduleClick,
       onSuperHeaderClick: this.props.onSuperHeaderClick,
       superHeaderLabel: this.props.superHeaderLabel,
-      superHeaderLink: this.props.superHeaderLink
+      superHeaderLink: this.props.superHeaderLink,
+      higTheme: this.props.higTheme
     };
 
+    const SideNavVariant =
+      this.props.variant === "compact"
+        ? SideNavCompactAdapter
+        : SideNavFullAdapter;
+
     return (
-      <SideNavAdapter {...sideNavProps}>
-        {this.props.groups.map(group => (
-          <Group key={group.modules[0].id}>
-            {group.modules.map(module => {
-              const showSubmodules =
-                this.props.disableCollapse || !module.minimized;
-              const hideCollapse =
-                this.props.disableCollapse || module.submodules.length === 0;
-              return (
-                <Module
-                  onClick={this.props.onModuleClick}
-                  key={module.id}
-                  {...module}
-                >
-                  <ModuleCollapse
-                    id={module.id}
-                    minimized={module.minimized}
-                    onClick={this.props.toggleModuleMinimized}
-                    hidden={hideCollapse}
-                  />
-                  {showSubmodules
-                    ? module.submodules.map(submodule => (
-                        <Submodule
-                          onClick={this.props.onSubmoduleClick}
-                          key={submodule.id}
-                          {...submodule}
-                        />
-                      ))
-                    : null}
-                </Module>
-              );
-            })}
-          </Group>
-        ))}
-        {this.props.slot ? this.props.slot : null}
-        {this.props.links.map(link => <Link {...link} key={link.title} />)}
-        {this.props.searchable ? (
-          <Search onInput={this.props.setQuery} value={this.props.query} />
-        ) : null}
+      <SideNavAdapter higTheme={this.props.higTheme} {...mouseEventProps}>
+        <SideNavVariant {...sideNavProps}>
+          {this.props.groups.map(group => (
+            <Group key={group.modules[0].id}>
+              {group.modules.map(module => {
+                const showSubmodules =
+                  this.props.disableCollapse || !module.minimized;
+                const hideCollapse =
+                  this.props.disableCollapse || module.submodules.length === 0;
+                return (
+                  <Module
+                    onClick={this.props.onModuleClick}
+                    key={module.id}
+                    {...module}
+                  >
+                    <ModuleCollapse
+                      id={module.id}
+                      minimized={module.minimized}
+                      onClick={this.props.toggleModuleMinimized}
+                      hidden={hideCollapse}
+                    />
+                    {showSubmodules
+                      ? module.submodules.map(submodule => (
+                          <Submodule
+                            onClick={this.props.onSubmoduleClick}
+                            key={submodule.id}
+                            {...submodule}
+                          />
+                        ))
+                      : null}
+                  </Module>
+                );
+              })}
+            </Group>
+          ))}
+          {this.props.slot ? this.props.slot : null}
+          {this.props.links.map(link => <Link {...link} key={link.title} />)}
+          {this.props.searchable ? (
+            <Search onInput={this.props.setQuery} value={this.props.query} />
+          ) : null}
+        </SideNavVariant>
       </SideNavAdapter>
     );
   }

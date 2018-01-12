@@ -1,31 +1,76 @@
 @import '~basics/colors/colors.scss';
 @import '~helpers/css/mixins/spacing.scss';
 .hig__global-nav__side-nav__section__group__module__submodule {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  padding-right: spacing(m);
   text-decoration: none;
   font-size: 14px;
   font-weight: 400;
-  line-height: 24px;
-  color: color(hig-cool-gray-50);
+  line-height: 20px;
   user-select: none;
-  padding-bottom: spacing(xs);
   &:first-child {
     margin-top: spacing(xs);
   }
   &:last-child {
     margin-bottom: spacing(m);
   }
-  &:hover,
-  &--active,
-  &--active:focus {
-    color: color(hig-blue-50);
-  }
+
   &:focus,
   &:active {
     outline: none;
     color: color(hig-blue-50);
   }
+
   &--hide {
     display: none;
+  }
+}
+
+// Light theme
+.hig__global-nav__side-nav__section__group__module__submodule {
+  color: color(hig-cool-gray-50);
+  svg * { stroke: color(hig-cool-gray-50); }
+
+  &:hover,
+  &--active,
+  &--active:focus {
+    color: color(hig-blue-50);
+    svg * {
+      stroke: color(hig-blue-50);
+    }
+  }
+  &:focus,
+  &:active {
+    color: color(hig-blue-50);
+    svg * {
+      stroke: color(hig-blue-50);
+    }
+  }
+}
+
+// Dark blue theme
+.hig--dark-blue-theme {
+  &.hig__global-nav__side-nav__section__group__module__submodule {
+    color: transparentize($color: color(hig-white), $amount: 0.25);
+    svg * { stroke: transparentize($color: color(hig-white), $amount: 0.25); }
+
+    &:hover,
+    &--active,
+    &--active:focus {
+      color: color(hig-blue-40);
+      svg * {
+        stroke: color(hig-blue-40);
+      }
+    }
+    &:focus,
+    &:active {
+      color: color(hig-blue-30);
+      svg * {
+        stroke: color(hig-blue-30);
+      }
+    }
   }
 }

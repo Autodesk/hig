@@ -114,7 +114,7 @@ class Search extends Core {
 }
 
 Search._interface =
-  Interface.components.GlobalNav.partials.SideNav.partials.Search;
+  Interface.components.GlobalNav.partials.SideNav.partials.SideNavFull.partials.Search;
 Search._defaults = {
   value: '',
   placeholder: 'Search'

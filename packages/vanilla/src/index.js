@@ -62,6 +62,9 @@ export {
   default as SectionLabel
 } from './components/section-label/section-label';
 export {
+  default as SkeletonItem
+} from './components/skeleton-item/skeleton-item';
+export {
   default as SlotHeadCell
 } from './components/table/table-head/slot-head-cell/slot-head-cell';
 export { default as Spacer } from './basics/spacer/spacer';
@@ -78,6 +81,7 @@ export {
   default as TextField
 } from './basics/form-elements/text-field/text-field';
 export { default as TextLink } from './basics/text-link/text-link';
+export { default as Themes } from 'helpers/js/_themes';
 export { default as Timestamp } from './basics/timestamp/timestamp';
 export { default as Tooltip } from './basics/tooltip/tooltip';
 export { default as Typography } from './basics/typography/typography';

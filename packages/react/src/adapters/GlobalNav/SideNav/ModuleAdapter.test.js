@@ -4,6 +4,7 @@ import { mount } from "enzyme";
 import { GlobalNav as VanillaGlobalNav } from "hig-vanilla";
 import GlobalNavAdapter from "../GlobalNavAdapter";
 import SideNavAdapter from "./SideNavAdapter";
+import SideNavFullAdapter from "./SideNavFullAdapter";
 import GroupAdapter from "./GroupAdapter";
 import ModuleAdapter from "./ModuleAdapter";
 import SubmoduleAdapter from "./SubmoduleAdapter";
@@ -15,20 +16,23 @@ describe("ModuleAdapter", () => {
       mount(
         <GlobalNavAdapter>
           <SideNavAdapter>
-            <GroupAdapter>
-              <ModuleAdapter
-                higInstance={mockInstance}
-                title="GlobalNav"
-                icon="settings"
-                link="http://autodesk.com"
-                onClick={() => {}}
-                onHover={() => {}}
-                active
-              >
-                <CollapseAdapter />
-                <SubmoduleAdapter />
-              </ModuleAdapter>
-            </GroupAdapter>
+            <SideNavFullAdapter>
+              <GroupAdapter>
+                <ModuleAdapter
+                  higInstance={mockInstance}
+                  title="GlobalNav"
+                  icon="settings"
+                  link="http://autodesk.com"
+                  target="_blank"
+                  onClick={() => {}}
+                  onHover={() => {}}
+                  active
+                >
+                  <CollapseAdapter />
+                  <SubmoduleAdapter />
+                </ModuleAdapter>
+              </GroupAdapter>
+            </SideNavFullAdapter>
           </SideNavAdapter>
         </GlobalNavAdapter>
       );
@@ -39,7 +43,8 @@ describe("ModuleAdapter", () => {
       mockInstance.show();
       mockInstance.hide();
     }).toImplementHIGInterfaceOf(
-      VanillaGlobalNav._partials.SideNav._partials.Group._partials.Module
+      VanillaGlobalNav._partials.SideNav._partials.SideNavFull._partials.Group
+        ._partials.Module
     );
   });
 });

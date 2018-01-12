@@ -19,7 +19,7 @@ class Option extends Core {
   }
 
   setLink(link) {
-    link === undefined
+    !link || link === ''
       ? this.el.removeAttribte('href')
       : this.el.setAttribute('href', link);
   }
@@ -30,7 +30,8 @@ class Option extends Core {
   }
 }
 
-Option._interface = Interface.components.GlobalNav.partials.TopNav.partials.Help.partials.Option;
+Option._interface =
+  Interface.components.GlobalNav.partials.TopNav.partials.Help.partials.Option;
 Option._defaults = {
   name: '',
   link: null
