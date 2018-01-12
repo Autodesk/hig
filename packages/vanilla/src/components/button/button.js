@@ -43,7 +43,7 @@ class Button extends Core {
   }
 
   setLink(link) {
-    link === undefined || link === ''
+    !link || link === ''
       ? this.el.removeAttribte('href')
       : this.el.setAttribute('href', link);
   }
@@ -158,7 +158,7 @@ class Button extends Core {
 Button._interface = Interface.components.Button;
 Button._defaults = {
   icon: false,
-  link: false,
+  link: null,
   size: 'standard',
   target: '_self',
   title: 'link',
