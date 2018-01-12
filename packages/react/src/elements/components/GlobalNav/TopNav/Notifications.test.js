@@ -30,7 +30,7 @@ describe("<Notifications", () => {
     describe("given a featured notification", () => {
       beforeEach(() => {
         wrapper = mount(
-          <Notifications featuredNotification={{ id: 3 }}>
+          <Notifications featuredNotification={<Notification id={3} />}>
             <Notification unread id={1} />
             <Notification unread={false} id={2} />
           </Notifications>

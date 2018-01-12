@@ -8,7 +8,8 @@ import {
   GlobalNav,
   breakpoints,
   TextLink,
-  Checkbox
+  Checkbox,
+  Notification
 } from "../hig-react";
 
 import "./index.css";
@@ -134,7 +135,6 @@ class Playground extends React.Component {
       sideNavVariant: "compact",
       notifications: sampleNotifications,
       readIds: this._initialReadNotifications(sampleNotifications),
-      featuredNotification: this.featuredNotification(),
       notificationsLoading: false
     };
   }
@@ -240,9 +240,8 @@ class Playground extends React.Component {
     });
   };
 
-  featuredNotification = () => ({
-    id: 2,
-    children: (
+  featuredNotification = () => (
+    <Notification id={2} onDismiss={this.featuredNotificationDismissed}>
       <div>
         <p>
           <b>New enhancements to subscription management lorum ipsom gas</b>
@@ -257,9 +256,8 @@ class Playground extends React.Component {
           <TextLink text="Secondary link" />
         </p>
       </div>
-    ),
-    onDismiss: this.featuredNotificationDismissed
-  });
+    </Notification>
+  );
 
   featuredNotificationDismissed = () => {
     console.log("Feature notification dismissed");
@@ -381,7 +379,7 @@ class Playground extends React.Component {
         onScroll: this.onNotificationsScroll,
         unreadCount: this.state.unreadCount,
         notifications: this.transformedNotifications(this.state.notifications),
-        featuredNotification: this.state.featuredNotification,
+        featuredNotification: this.featuredNotification(),
         loading: this.state.notificationsLoading
       }
     };
