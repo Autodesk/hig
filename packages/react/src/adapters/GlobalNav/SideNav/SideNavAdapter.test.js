@@ -9,7 +9,11 @@ describe("SideNavAdapter", () => {
   it("implements the hig interface", () => {
     expect(mockInstance => {
       mount(
-        <SideNavAdapter higInstance={mockInstance}>
+        <SideNavAdapter
+          higInstance={mockInstance}
+          onMouseEnter={() => {}}
+          onMouseLeave={() => {}}
+        >
           <SideNavFullAdapter />
         </SideNavAdapter>
       );

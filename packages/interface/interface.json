@@ -1082,8 +1082,18 @@
             "addContent": {
               "desc": "Adds content to the SideNav",
               "params": [
-                "{SideNavFull, SideNavSkeleton, or SideNavCollapsed} an instance of SideNav content"
+                "{SideNavFull, SideNavSkeleton, or SideNavCompact} an instance of SideNav content"
               ]
+            },
+            "onMouseEnter": {
+              "desc": "Calls the provided callback when user starts hovering over the content",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            },
+            "onMouseLeave": {
+              "desc": "Calls the provided callback when user stops hovering over the content",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
             }
           },
           "partials": {
@@ -1417,6 +1427,18 @@
                 }
               },
               "defaults": {
+              }
+            },
+            "SideNavCompact": {
+              "defaults": {},
+              "methods": {
+                "addGroup": {
+                  "desc": "Pass in an instance of a compact SideNav Group partial",
+                  "params": [
+                    "{Group} Group - instance of a Group partial",
+                    "{Group} [ReferenceGroup] - (Optional) reference node for insertBefore"
+                  ]
+                }
               }
             }
           }

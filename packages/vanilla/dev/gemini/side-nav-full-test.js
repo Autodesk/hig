@@ -1,9 +1,9 @@
-gemini.suite('side-nav', (parent) => {
+gemini.suite('side-nav-full', (parent) => {
   parent.setUrl(
-    'src/components/global-nav/side-nav/tests/gemini-side-nav.html'
+    'src/components/global-nav/side-nav/side-nav-full/tests/gemini-side-nav-full.html'
   );
 
-  gemini.suite('side-nav', (suite) => {
+  gemini.suite('side-nav-full', (suite) => {
     suite
       .setCaptureElements('body')
       .capture('light theme')

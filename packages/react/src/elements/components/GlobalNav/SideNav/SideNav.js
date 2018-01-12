@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import SideNavAdapter from "../../../../adapters/GlobalNav/SideNav/SideNavAdapter";
+import SideNavCompactAdapter from "../../../../adapters/GlobalNav/SideNav/SideNavCompactAdapter";
 import SideNavFullAdapter from "../../../../adapters/GlobalNav/SideNav/SideNavFullAdapter";
 import SideNavSkeletonAdapter from "../../../../adapters/GlobalNav/SideNav/SideNavSkeletonAdapter";
 import Submodule from "./Submodule";
@@ -37,10 +38,13 @@ class SideNav extends Component {
     query: PropTypes.string,
     onModuleClick: PropTypes.func,
     onSubmoduleClick: PropTypes.func,
+    onMouseEnter: PropTypes.func,
+    onMouseLeave: PropTypes.func,
     searchable: PropTypes.bool,
     slot: PropTypes.node,
     superHeaderLabel: PropTypes.string,
-    superHeaderLink: PropTypes.string
+    superHeaderLink: PropTypes.string,
+    variant: PropTypes.oneOf(["full", "compact"])
   };
 
   static defaultProps = {
@@ -53,10 +57,13 @@ class SideNav extends Component {
     onSubmoduleClick: null,
     onHeaderClick: null,
     onSuperHeaderClick: null,
+    onMouseEnter: () => {},
+    onMouseLeave: () => {},
     query: "",
     superHeaderLabel: null,
     superHeaderLink: null,
-    loading: false
+    loading: false,
+    variant: "full"
   };
 
   render() {
@@ -67,6 +74,12 @@ class SideNav extends Component {
         </SideNavAdapter>
       );
     }
+
+    const mouseEventProps = {
+      onMouseEnter: this.props.onMouseEnter,
+      onMouseLeave: this.props.onMouseLeave
+    };
+
     const sideNavProps = {
       copyright: this.props.copyright,
       headerLabel: this.props.headerLabel,
@@ -80,9 +93,14 @@ class SideNav extends Component {
       higTheme: this.props.higTheme
     };
 
+    const SideNavVariant =
+      this.props.variant === "compact"
+        ? SideNavCompactAdapter
+        : SideNavFullAdapter;
+
     return (
-      <SideNavAdapter higTheme={this.props.higTheme}>
-        <SideNavFullAdapter {...sideNavProps}>
+      <SideNavAdapter higTheme={this.props.higTheme} {...mouseEventProps}>
+        <SideNavVariant {...sideNavProps}>
           {this.props.groups.map(group => (
             <Group key={group.modules[0].id}>
               {group.modules.map(module => {
@@ -121,7 +139,7 @@ class SideNav extends Component {
           {this.props.searchable ? (
             <Search onInput={this.props.setQuery} value={this.props.query} />
           ) : null}
-        </SideNavFullAdapter>
+        </SideNavVariant>
       </SideNavAdapter>
     );
   }

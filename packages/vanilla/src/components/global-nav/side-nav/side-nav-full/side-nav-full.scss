@@ -3,7 +3,12 @@
 @import '~basics/shadows/shadows.scss';
 @import '~helpers/css/mixins/base.scss';
 @import '~helpers/css/mixins/spacing.scss';
+@import '~components/global-nav/side-nav/side-nav.scss';
 @import '../../top-nav/top-nav.scss';
+
+.hig__global-nav__sidenav-full {
+  width: $hig__global-nav__sidenav--width;
+}
 .hig__global-nav__sidenav__copyright {
   padding-left: spacing(m);
   margin-bottom: 40px;
