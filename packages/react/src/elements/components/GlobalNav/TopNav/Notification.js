@@ -30,6 +30,10 @@ export default class Notification extends Component {
   }
 }
 
+Notification.defaultProps = {
+  onLinkClick: () => {}
+};
+
 Notification.propTypes = {
   /**
    * {Boolean} to show specify whether notification is read
