@@ -66,13 +66,6 @@ export default class Notifications extends Component {
     return React.Children.map(this.props.children, child => child.props.id);
   }
 
-  showNotificationsCount() {
-    return (
-      this.state.seenNotificationIds.length !==
-      React.Children.toArray(this.props.children).length
-    );
-  }
-
   render() {
     const unseenCount = this.unseenCount();
     return (
@@ -83,12 +76,11 @@ export default class Notifications extends Component {
         onScroll={this.onScroll}
         open={this.state.open}
         unseenCount={unseenCount}
-        showNotificationsCount={this.showNotificationsCount()}
+        showNotificationsCount={unseenCount > 0}
       >
         {this.props.featuredNotification ? (
           <Notification
             featured
-            onClick={() => {}}
             {...this.props.featuredNotification}
             unread={false}
           >
@@ -110,14 +102,6 @@ Notifications.propTypes = {
    * Show the loading indicator
    */
   loading: PropTypes.bool,
-  /**
-   * Whether to show number of notifications or not
-   */
-  showUnreadBadge: PropTypes.bool,
-  /**
-   * Number of unread messages
-   */
-  unreadCount: PropTypes.number,
   /**
    * Calls the provided callback when user clicks on the notifications icon in the top nav
    */
@@ -145,5 +129,5 @@ Notifications.defaultProps = {
   onClickOutside: () => {},
   onScroll: () => {},
   title: "Notifications",
-  children: null
+  children: []
 };

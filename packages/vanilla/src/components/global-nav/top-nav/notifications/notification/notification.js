@@ -77,10 +77,17 @@ class Notification extends Core {
   }
 
   onDismiss(fn) {
-    this.iconButton.onClick(() => {
+    const handleDismissFn = () => {
       this.featuredNotificationAnimation.exit();
       fn();
-    });
+    };
+
+    return this._attachListener(
+      'click',
+      this.iconButton.el,
+      this.el,
+      handleDismissFn
+    );
   }
 
   _callBackIfTargetIsAnchor = (event) => {

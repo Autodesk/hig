@@ -154,7 +154,7 @@ class NotificationsSection extends PureComponent {
   render() {
     return (
       <PlaygroundSection title="Notifications">
-        <div style={{ display: "flex", "justify-content": "space-between" }}>
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
           <Button
             size="standard"
             title="Add notification"
