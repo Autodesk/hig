@@ -68,7 +68,10 @@ class Module extends Core {
   }
 
   setLink(link) {
-    this._findDOMEl('a', this.el).setAttribute('href', link);
+    const anchorEl = this._findDOMEl('a', this.el);
+    !link || link === ''
+      ? anchorEl.removeAttribte('href')
+      : anchorEl.setAttribute('href', link);
   }
 
   setTarget(target) {
@@ -153,7 +156,8 @@ Module._interface =
   Interface.components.GlobalNav.partials.SideNav.partials.SideNavFull.partials.Group.partials.Module;
 Module._defaults = {
   icon: '',
-  title: 'title'
+  title: 'title',
+  link: null
 };
 Module._partials = {
   Submodule,

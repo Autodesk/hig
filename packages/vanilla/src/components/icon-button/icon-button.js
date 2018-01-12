@@ -46,7 +46,9 @@ class IconButton extends Core {
   }
 
   setLink(link) {
-    this.el.setAttribute('href', link);
+    !link || link === ''
+      ? this.el.removeAttribte('href')
+      : this.el.setAttribute('href', link);
   }
 
   setIcon(icon) {
@@ -110,8 +112,9 @@ class IconButton extends Core {
 
 IconButton._interface = Interface.components.IconButton;
 IconButton._defaults = {
-  title: 'button',
   icon: false,
+  link: null,
+  title: 'button',
   type: AvailableTypes[0]
 };
 IconButton.AvailableTypes = AvailableTypes;

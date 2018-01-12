@@ -36,7 +36,9 @@ class Submodule extends Core {
   }
 
   setLink(link) {
-    this.el.setAttribute('href', link);
+    !link || link === ''
+      ? this.el.removeAttribte('href')
+      : this.el.setAttribute('href', link);
   }
 
   setTarget(target) {
@@ -93,7 +95,8 @@ class Submodule extends Core {
 Submodule._interface =
   Interface.components.GlobalNav.partials.SideNav.partials.SideNavFull.partials.Group.partials.Module.partials.Submodule;
 Submodule._defaults = {
-  title: ''
+  title: '',
+  link: null
 };
 Submodule._partials = {};
 
