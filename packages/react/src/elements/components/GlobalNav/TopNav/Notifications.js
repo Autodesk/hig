@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 import NotificationsAdapter from "../../../../adapters/GlobalNav/TopNav/NotificationsAdapter";
+import { notificationElementPropType } from "./Notification";
 
 export default class Notifications extends Component {
   constructor(props) {
@@ -116,7 +117,7 @@ Notifications.propTypes = {
   /**
    * A Notification component, to be styled as a featured notification
    */
-  featuredNotification: PropTypes.element
+  featuredNotification: notificationElementPropType
 };
 
 Notifications.defaultProps = {
