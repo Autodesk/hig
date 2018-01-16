@@ -32,7 +32,7 @@ export default class Notification extends Component {
 
 export function notificationElementPropType(props, propName) {
   const value = props[propName];
-  if (value && value.type && value.type === Notification) {
+  if (value && value.type && value.type === Notification.name) {
     return new Error("Expected an element of type Notification.");
   }
   return null;
