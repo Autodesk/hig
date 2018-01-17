@@ -1,4 +1,5 @@
 @import '~basics/colors/colors.scss';
+@import '~helpers/css/mixins/spacing.scss';
 
 .hig__global-nav__sidenav-compact {
   display: flex;
@@ -22,10 +23,22 @@
 
 .hig__global-nav__sidenav-compact__collapse {
   display: none;
+  position: relative;
 
   &--active {
     display: flex;
     justify-content: center;
+  }
+
+  &:before {
+    position: absolute;
+    top: 0;
+    height: 1px;
+    display: block;
+    content: '';
+    left: spacing(xs);
+    right: spacing(xs);
+    border-top: 1px solid color(hig-cool-gray-20);
   }
 }
 
