@@ -132,6 +132,7 @@ class Playground extends React.Component {
       seenNotificationIds: [],
       sideNavTheme: "dark-blue",
       sideNavLoading: false,
+      changeSideNavOnHover: false,
       sideNavVariant: "compact",
       notifications: sampleNotifications,
       readIds: this._initialReadNotifications(sampleNotifications),
@@ -172,18 +173,20 @@ class Playground extends React.Component {
     });
   };
 
-  onVariantToggleClick = () => {
-    console.log("sidenav variant toggled");
-  }
-
   onSideNavMouseEnter = () => {
-    if (window.innerWidth <= breakpoints.tablet) {
+    if (
+      this.state.changeSideNavOnHover &&
+      window.innerWidth <= breakpoints.tablet
+    ) {
       this.setState({ sideNavVariant: "full" });
     }
   };
 
   onSideNavMouseLeave = () => {
-    if (window.innerWidth <= breakpoints.tablet) {
+    if (
+      this.state.changeSideNavOnHover &&
+      window.innerWidth <= breakpoints.tablet
+    ) {
       this.setState({ sideNavVariant: "compact" });
     } else {
       this.setState({ sideNavVariant: "full" });
@@ -198,11 +201,23 @@ class Playground extends React.Component {
     this.setState({ sideNavLoading: event.target.checked });
   };
 
+  setSideNavHoverOption = event => {
+    this.setState({ changeSideNavOnHover: event.target.checked });
+  };
+
   responsivelyUpdateSideNavVariant = () => {
     if (window.innerWidth > breakpoints.tablet) {
       this.setState({ sideNavVariant: "full" });
     } else {
       this.setState({ sideNavVariant: "compact" });
+    }
+  };
+
+  toggleSideNavVariant = () => {
+    if (this.state.sideNavVariant === "full") {
+      this.setState({ sideNavVariant: "compact" });
+    } else {
+      this.setState({ sideNavVariant: "full" });
     }
   };
 
@@ -397,7 +412,7 @@ class Playground extends React.Component {
       loading: this.state.sideNavLoading,
       compactUntilHover: this.state.sideNavAutoCompact,
       links,
-      onVariantToggleClick: this.onVariantToggleClick,
+      onVariantToggleClick: this.toggleSideNavVariant,
       onLogoClick: event => {
         event.preventDefault();
         console.log("Logo clicked");
@@ -405,7 +420,7 @@ class Playground extends React.Component {
       onMouseEnter: this.onSideNavMouseEnter,
       onMouseLeave: this.onSideNavMouseLeave,
       searchable: true,
-      showVariantToggleButton: true,
+      showVariantToggleButton: !this.state.changeSideNavOnHover,
       slot: (
         <div>
           <Button
@@ -457,6 +472,11 @@ class Playground extends React.Component {
             label="loading"
             checked={this.state.sideNavLoading}
             onChange={this.setSideNavLoadingState}
+          />
+          <Checkbox
+            label="Automatically expand sidenav on hover"
+            checked={this.state.changeSideNavOnHover}
+            onChange={this.setSideNavHoverOption}
           />
         </PlaygroundSection>
         <ExpandingFilterSectionSection />
