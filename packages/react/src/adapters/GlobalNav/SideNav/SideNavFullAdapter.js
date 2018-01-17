@@ -78,6 +78,21 @@ export default function SideNavFullAdapter(props) {
             setter="setCopyright"
             {...adapterProps}
           />
+          <MapsPropToMethod
+            value={props.showVariantToggleButton}
+            {...adapterProps}
+          >
+            {(instance, value) =>
+              value
+                ? instance.showVariantToggleButton()
+                : instance.hideVariantToggleButton()
+            }
+          </MapsPropToMethod>
+          <MapsEventListener
+            listener="onVariantToggleClick"
+            handler={props.onVariantToggleClick}
+            {...adapterProps}
+          />
           {otherChildren.length > 0 ? (
             <MountsAnyChild mounter="addSlot" {...adapterProps}>
               {otherChildren}
@@ -97,9 +112,17 @@ SideNavFullAdapter.propTypes = {
   copyright: PropTypes.string,
   onHeaderClick: PropTypes.func,
   onSuperHeaderClick: PropTypes.func,
+  /**
+   * Calls the provided callback when user clicks on the expand button
+   */
+  onVariantToggleClick: PropTypes.func,
   headerLabel: PropTypes.string,
   superHeaderLabel: PropTypes.string,
   headerLink: PropTypes.string,
+  /**
+   * Show or hide the collapse button
+   */
+  showVariantToggleButton: PropTypes.bool,
   superHeaderLink: PropTypes.string
 };
 
@@ -111,5 +134,6 @@ SideNavFullAdapter.defaultProps = {
   headerLabel: undefined,
   superHeaderLabel: undefined,
   headerLink: undefined,
+  showVariantToggleButton: true,
   superHeaderLink: undefined
 };

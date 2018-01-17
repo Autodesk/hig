@@ -1,5 +1,6 @@
 @import '~helpers/css/mixins/spacing.scss';
 @import '~basics/colors/colors.scss';
+@import '~basics/responsive/responsive.scss';
 @import '../side-nav.scss';
 
 .hig__global-nav__side-nav__section__group {
@@ -13,9 +14,14 @@
     height: 1px;
     display: block;
     content: '';
-    left: spacing(m);
-    right: spacing(s);
+    left: spacing(xs);
+    right: spacing(xs);
     border-top: 1px solid color(hig-cool-gray-20);
+
+    @include tablet-breakpoint {
+      left: spacing(m);
+      right: spacing(s);
+    }
   }
 
   &:last-child::after {
