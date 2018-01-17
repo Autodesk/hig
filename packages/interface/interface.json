@@ -1449,6 +1449,17 @@
                     "{Group} Group - instance of a Group partial",
                     "{Group} [ReferenceGroup] - (Optional) reference node for insertBefore"
                   ]
+                },
+                "hideVariantToggleButton": {
+                  "desc": "makes the expand button invisible"
+                },
+                "onVariantToggleClick": {
+                  "desc": "Calls the provided callback when user clicks on the expand button",
+                  "params": "HIG.abstract.EventObject.params",
+                  "returns": "HIG.abstract.EventObject.returns"
+                },
+                "showVariantToggleButton": {
+                  "desc": "makes the expand button visible"
                 }
               }
             }
