@@ -1133,6 +1133,14 @@
                     "{HTMLElement} HTMLElement"
                   ]
                 },
+                "hideVariantToggleButton": {
+                  "desc": "makes the collapse button invisible"
+                },
+                "onVariantToggleClick": {
+                  "desc": "Calls the provided callback when user clicks on the collapse button",
+                  "params": "HIG.abstract.EventObject.params",
+                  "returns": "HIG.abstract.EventObject.returns"
+                },
                 "onHeaderClick": {
                   "desc": "Calls the provided callback when user clicks on the header",
                   "params": "HIG.abstract.EventObject.params",
@@ -1172,6 +1180,9 @@
                   "params": [
                     "{String} link - href for the super header"
                   ]
+                },
+                "showVariantToggleButton": {
+                  "desc": "makes the collapse button visible"
                 }
               },
               "partials": {

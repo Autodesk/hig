@@ -172,6 +172,10 @@ class Playground extends React.Component {
     });
   };
 
+  onVariantToggleClick = () => {
+    console.log("sidenav variant toggled");
+  }
+
   onSideNavMouseEnter = () => {
     if (window.innerWidth <= breakpoints.tablet) {
       this.setState({ sideNavVariant: "full" });
@@ -393,6 +397,7 @@ class Playground extends React.Component {
       loading: this.state.sideNavLoading,
       compactUntilHover: this.state.sideNavAutoCompact,
       links,
+      onVariantToggleClick: this.onVariantToggleClick,
       onLogoClick: event => {
         event.preventDefault();
         console.log("Logo clicked");
@@ -400,6 +405,7 @@ class Playground extends React.Component {
       onMouseEnter: this.onSideNavMouseEnter,
       onMouseLeave: this.onSideNavMouseLeave,
       searchable: true,
+      showVariantToggleButton: true,
       slot: (
         <div>
           <Button

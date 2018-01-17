@@ -1,5 +1,6 @@
 import Interface from 'interface.json';
 import Core from '_core.js';
+import IconButton from 'components/icon-button/icon-button';
 import Link from 'components/global-nav/side-nav/link/link';
 import Search from 'components/global-nav/side-nav/search/search';
 import Group from 'components/global-nav/side-nav/group/group';
@@ -25,8 +26,11 @@ class SideNavFull extends Core {
       this._findDOMEl('.hig__global-nav__sidenav__header-link', this.el),
       this._findDOMEl('.hig__global-nav__sidenav__super-header', this.el),
       this._findDOMEl('.hig__global-nav__sidenav__header', this.el),
-      this._findDOMEl('.hig__global-nav__sidenav__copyright', this.el)
+      this._findDOMEl('.hig__global-nav__sidenav__copyright', this.el),
+      this._findDOMEl('.hig__global-nav__side-nav__collapse', this.el)
     ];
+
+    this._setCollapseButton();
   }
 
   addGroup(groupInstance, referenceInstance) {
@@ -120,6 +124,42 @@ class SideNavFull extends Core {
         this.el
       ).removeAttribute('href');
     }
+  }
+
+  showVariantToggleButton() {
+    this._findDOMEl(
+      '.hig__global-nav__side-nav__collapse',
+      this.el
+    ).classList.add(
+      'hig__global-nav__side-nav__collapse--active'
+    );
+  }
+
+  hideVariantToggleButton() {
+    this._findDOMEl(
+      '.hig__global-nav__side-nav__collapse',
+      this.el
+    ).classList.remove(
+      'hig__global-nav__side-nav__collapse--active'
+    );
+  }
+
+  onVariantToggleClick(fn) {
+    return this._attachListener(
+      'click',
+      this.iconButton.el,
+      this.el,
+      fn
+    );
+  }
+
+  _setCollapseButton() {
+    this.iconButton = new IconButton({
+      title: 'Collapse',
+      icon: 'back',
+      type: 'flat'
+    });
+    this.mountPartialToComment('COLLAPSE', this.iconButton, this.el);
   }
 }
 

@@ -67,6 +67,19 @@
   margin-bottom: spacing(s);
 }
 
+.hig__global-nav__side-nav__collapse {
+  display: none;
+  &--active {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 4px;
+
+    @include tablet-breakpoint {
+      display: none;
+    }
+  }
+}
+
 .hig__side-nav__slot {
   padding: 32px 8px 32px 16px;
 }
@@ -114,5 +127,11 @@
   }
   &.hig__global-nav__sidenav__copyright {
     color: transparentize($color: color(hig-white), $amount: 0.5);
+  }
+
+  &.hig__global-nav__side-nav__collapse {
+    svg * {
+      fill: color(hig-white);
+    }
   }
 }
