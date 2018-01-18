@@ -400,6 +400,9 @@ class Playground extends React.Component {
         notifications: this.transformedNotifications(this.state.notifications),
         featuredNotification: this.featuredNotification(),
         loading: this.state.notificationsLoading
+      },
+      profile: {
+        image: "https://placekitten.com/g/50/50"
       }
     };
 

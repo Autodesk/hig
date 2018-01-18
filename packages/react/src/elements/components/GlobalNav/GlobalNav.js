@@ -8,6 +8,7 @@ import SubNavAdapter from "../../../adapters/GlobalNav/SubNav/SubNavAdapter";
 import HelpAdapter from "../../../adapters/GlobalNav/TopNav/HelpAdapter";
 import GroupAdapter from "../../../adapters/GlobalNav/TopNav/GroupAdapter";
 import OptionAdapter from "../../../adapters/GlobalNav/TopNav/OptionAdapter";
+import ProfileAdapter from "../../../adapters/GlobalNav/TopNav/ProfileAdapter";
 import SideNav from "./SideNav";
 import Tabs from "./SubNav/Tabs";
 import ProjectAccountSwitcher from "./TopNav/ProjectAccountSwitcher";
@@ -48,6 +49,10 @@ export default class GlobalNav extends Component {
       this.props.topNav.notifications &&
       this.props.topNav.notifications.notifications
     );
+  }
+
+  showProfile() {
+    return this.props.topNav.profile !== undefined;
   }
 
   renderedSideNavOpen() {
@@ -130,6 +135,9 @@ export default class GlobalNav extends Component {
                   )
                 )}
               </Notifications>
+            ) : null}
+            {this.showProfile() ? (
+              <ProfileAdapter {...this.props.topNav.profile} />
             ) : null}
           </TopNavAdapter>
           <SideNav
@@ -231,7 +239,8 @@ GlobalNav.propTypes = {
           name: PropTypes.string
         })
       )
-    })
+    }),
+    profile: PropTypes.shape(ProfileAdapter.propTypes)
   }),
   /**
    * Options to configure the Sidenav
