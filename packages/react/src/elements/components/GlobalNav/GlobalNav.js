@@ -99,6 +99,7 @@ export default class GlobalNav extends Component {
               options={this.props.topNav.searchOptions}
               onInput={this.props.topNav.onSearchInput}
               onSubmit={this.props.topNav.onSearchSubmit}
+              onOptionSelect={this.props.topNav.onSearchOptionSelect}
               value={this.props.topNav.searchValue}
             />
             {this.showProjectAccountSwitcher() ? (
