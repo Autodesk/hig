@@ -127,4 +127,9 @@
   &.hig__global-nav__sidenav__copyright {
     color: transparentize($color: color(hig-white), $amount: 0.5);
   }
+  &.hig__global-nav__side-nav__collapse {
+    svg * {
+      fill: color(hig-white);
+    }
+  }
 }
