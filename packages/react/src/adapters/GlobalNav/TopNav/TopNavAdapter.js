@@ -10,7 +10,7 @@ import HIGAdapter, {
 import ShortcutAdapter from "./ShortcutAdapter";
 import Search from "../../../elements/components/GlobalNav/TopNav/Search";
 import Notifications from "../../../elements/components/GlobalNav/TopNav/Notifications";
-import ProfileAdapter from "./ProfileAdapter";
+import Profile from "../../../elements/components/GlobalNav/TopNav/Profile";
 import HelpAdapter from "./HelpAdapter";
 import ProjectAccountSwitcherAdapter from "./ProjectAccountSwitcherAdapter";
 import ProjectAccountSwitcher from "../../../elements/components/GlobalNav/TopNav/ProjectAccountSwitcher"; // eslint-disable-line max-len
@@ -20,7 +20,7 @@ function sortChildren(children) {
     notifications: children.find(child => child.type === Notifications),
     shortcut: children.find(child => child.type === ShortcutAdapter),
     search: children.find(child => child.type === Search),
-    profile: children.find(child => child.type === ProfileAdapter),
+    profile: children.find(child => child.type === Profile),
     help: children.find(child => child.type === HelpAdapter),
     projectAccountSwitcher: children.find(child =>
       [ProjectAccountSwitcher, ProjectAccountSwitcherAdapter].includes(

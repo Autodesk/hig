@@ -132,13 +132,14 @@ class Playground extends React.Component {
       topNavSearchQueryValue: "",
       topNavSearchQueryType: undefined,
       seenNotificationIds: [],
-      sideNavTheme: "dark-blue",
+      sideNavTheme: "light",
       sideNavLoading: false,
       changeSideNavOnHover: false,
       sideNavVariant: "compact",
       notifications: sampleNotifications,
       readIds: this._initialReadNotifications(sampleNotifications),
-      notificationsLoading: false
+      notificationsLoading: false,
+      showHamburgerButton: true
     };
   }
 
@@ -202,8 +203,6 @@ class Playground extends React.Component {
       window.innerWidth <= breakpoints.tablet
     ) {
       this.setState({ sideNavVariant: "compact" });
-    } else {
-      this.setState({ sideNavVariant: "full" });
     }
   };
 
@@ -217,6 +216,10 @@ class Playground extends React.Component {
 
   setSideNavHoverOption = event => {
     this.setState({ changeSideNavOnHover: event.target.checked });
+  };
+
+  setShowHamburgerButton = event => {
+    this.setState({ showHamburgerButton: event.target.checked });
   };
 
   responsivelyUpdateSideNavVariant = () => {
@@ -410,6 +413,7 @@ class Playground extends React.Component {
       projects,
       accountTitle: "Accounts",
       projectTitle: "Projects",
+      hideHamburgerButton: !this.state.showHamburgerButton,
       onAccountClick: this.accountClicked,
       onProjectClick: this.projectClicked,
       onSearchInput: this.onSearchInput,
@@ -435,7 +439,9 @@ class Playground extends React.Component {
         loading: this.state.notificationsLoading
       },
       profile: {
-        image: "https://placekitten.com/g/50/50"
+        image: "https://placekitten.com/g/50/50",
+        name: "David Gonzalez",
+        email: "gonzalezd@autodesk.com"
       }
     };
 
@@ -455,7 +461,6 @@ class Playground extends React.Component {
       },
       onMouseEnter: this.onSideNavMouseEnter,
       onMouseLeave: this.onSideNavMouseLeave,
-      searchable: true,
       showVariantToggleButton: !this.state.changeSideNavOnHover,
       slot: (
         <div>
@@ -508,6 +513,11 @@ class Playground extends React.Component {
             label="Expand/Collapse SideNav on hover on narrow screens"
             checked={this.state.changeSideNavOnHover}
             onChange={this.setSideNavHoverOption}
+          />
+          <Checkbox
+            label="Show hamburger button"
+            checked={this.state.showHamburgerButton}
+            onChange={this.setShowHamburgerButton}
           />
           <TextField {...this.topNavQueryProps()} />
         </PlaygroundSection>

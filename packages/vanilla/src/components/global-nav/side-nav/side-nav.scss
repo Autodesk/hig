@@ -22,6 +22,7 @@ $hig__global-nav__sidenav--width: 280px;
   @include vendor-prefix('transition', side-nav-transition('left'));
   margin-top: $hig__global-nav__top-nav--height;
   z-index: 2;
+  box-shadow: inset -2px 2px 4px rgba(0, 0, 0, 0.15);
   @include tablet-breakpoint {
     margin-top: 0;
     @include shadow("inner-right");
@@ -30,14 +31,12 @@ $hig__global-nav__sidenav--width: 280px;
 
 // Light theme
 .hig__global-nav__sidenav {
-  background: color(hig-white);
-  border-right: 1px solid color(hig-cool-gray-20);
+  background: color(hig-white); // border-right: 1px solid color(hig-cool-gray-20);
 }
 
 // Dark Blue
 .hig--dark-blue-theme {
   &.hig__global-nav__sidenav {
-    background-color: color(hig-cool-gray-60);
-    border-right: 1px solid color(hig-cool-gray-60);
+    background-color: color(hig-cool-gray-60); // border-right: 1px solid color(hig-cool-gray-60);
   }
 }
