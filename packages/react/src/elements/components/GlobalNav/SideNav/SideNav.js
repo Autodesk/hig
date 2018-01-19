@@ -84,10 +84,12 @@ class SideNav extends Component {
       copyright: this.props.copyright,
       headerLabel: this.props.headerLabel,
       headerLink: this.props.headerLink,
+      onVariantToggleClick: this.props.onVariantToggleClick,
       onHeaderClick: this.props.onHeaderClick,
       onModuleClick: this.props.onModuleClick,
       onSubmoduleClick: this.props.onSubmoduleClick,
       onSuperHeaderClick: this.props.onSuperHeaderClick,
+      showVariantToggleButton: this.props.showVariantToggleButton,
       superHeaderLabel: this.props.superHeaderLabel,
       superHeaderLink: this.props.superHeaderLink,
       higTheme: this.props.higTheme

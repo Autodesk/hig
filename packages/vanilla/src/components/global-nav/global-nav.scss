@@ -2,26 +2,32 @@
 @import '~basics/responsive/responsive.scss';
 @import '~helpers/css/mixins/base.scss';
 @import 'side-nav/side-nav.scss';
-
 .hig__global-nav {
   position: relative;
   height: 100%;
+}
 
-  &__container {
-    position: relative;
-    min-height: 100%;
-    background: color(hig-cool-gray-10);
-    @include vendor-prefix('transform', 'scale(1)');
-    @include vendor-prefix('transition', side-nav-transition('margin'));
-  }
+.hig__global-nav__container {
+  position: relative;
+  min-height: 100vh;
+  background: color(hig-cool-gray-10);
+  @include vendor-prefix('transform', 'scale(1)');
+  @include vendor-prefix('transition', side-nav-transition('padding'));
+}
 
-  &__slot{
-    padding: 20px;
-  }
+.hig__global-nav__slot {
+  padding: 20px;
+  @include vendor-prefix('transition', side-nav-transition('margin'));
 }
 
 .hig__global-nav--open .hig__global-nav__container {
   @include tablet-breakpoint {
-    margin-left: $hig__global-nav__sidenav--width;
+    padding-left: $hig__global-nav__sidenav--width;
+  }
+  .hig__global-nav__slot {
+    margin-left: 48px;
+    @include tablet-breakpoint {
+      margin-left: 0;
+    }
   }
 }

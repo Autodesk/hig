@@ -1,6 +1,11 @@
+@import '~basics/colors/colors.scss';
+@import '~helpers/css/mixins/spacing.scss';
+
 .hig__global-nav__sidenav-compact {
   display: flex;
   flex-flow: column;
+  justify-content: space-between;
+  height: 100%;
   overflow: hidden;
 
   .hig__global-nav__side-nav__section__group__module__link__title { display: none; }
@@ -12,6 +17,35 @@
       &::before {
         border: none;
       }
+    }
+  }
+}
+
+.hig__global-nav__sidenav-compact__collapse {
+  display: none;
+  position: relative;
+
+  &--active {
+    display: flex;
+    justify-content: center;
+  }
+
+  &:before {
+    position: absolute;
+    top: 0;
+    height: 1px;
+    display: block;
+    content: '';
+    left: spacing(xs);
+    right: spacing(xs);
+    border-top: 1px solid color(hig-cool-gray-20);
+  }
+}
+
+.hig--dark-blue-theme {
+  &.hig__global-nav__sidenav-compact__collapse {
+    svg * {
+      fill: color(hig-white);
     }
   }
 }

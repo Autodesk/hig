@@ -5,10 +5,14 @@
 @import '~helpers/css/mixins/spacing.scss';
 @import '~components/global-nav/side-nav/side-nav.scss';
 @import '../../top-nav/top-nav.scss';
-
 .hig__global-nav__sidenav-full {
+  display: flex;
+  flex-flow: column;
   width: $hig__global-nav__sidenav--width;
+  height: 100vh;
+  overflow: hidden;
 }
+
 .hig__global-nav__sidenav__copyright {
   padding-left: spacing(m);
   margin-bottom: 40px;
@@ -17,6 +21,7 @@
 
 .hig__global-nav__sidenav__scroll {
   flex: 1 1 auto;
+  height: 100%;
   @include vendor-prefix('box-sizing', 'border-box');
   padding: 14px 0;
   margin: 4px 4px 4px 0;
@@ -29,9 +34,6 @@
     width: 5px;
     height: 200px;
     border-radius: 2px;
-  }
-  &--search {
-    bottom: 4px + 52px; // search at the bottom
   }
 }
 
@@ -63,6 +65,18 @@
 .hig__global-nav__sidenav__header {
   font-size: 16px;
   margin-bottom: spacing(s);
+}
+
+.hig__global-nav__side-nav__collapse {
+  display: none;
+  &--active {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 4px;
+    @include tablet-breakpoint {
+      display: none;
+    }
+  }
 }
 
 .hig__side-nav__slot {
@@ -112,5 +126,10 @@
   }
   &.hig__global-nav__sidenav__copyright {
     color: transparentize($color: color(hig-white), $amount: 0.5);
+  }
+  &.hig__global-nav__side-nav__collapse {
+    svg * {
+      fill: color(hig-white);
+    }
   }
 }

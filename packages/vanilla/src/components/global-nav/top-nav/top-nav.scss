@@ -3,7 +3,6 @@
 @import '~helpers/css/mixins/base.scss';
 @import '~helpers/css/layers.scss';
 $hig__global-nav__top-nav--height: 56px;
-
 .hig__global-nav__top-nav {
   @include reset;
   display: flex;
@@ -12,7 +11,6 @@ $hig__global-nav__top-nav--height: 56px;
   position: relative;
   background: color(hig-white);
   height: $hig__global-nav__top-nav--height;
-  // line-height: $hig__global-nav__top-nav--height;
   z-index: $top-nav-layer;
   padding-left: 7px;
   @include shadow("dropshadow");

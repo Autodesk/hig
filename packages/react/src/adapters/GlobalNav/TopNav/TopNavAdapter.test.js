@@ -4,7 +4,7 @@ import { GlobalNav as VanillaGlobalNav } from "hig-vanilla";
 import TopNavAdapter from "./TopNavAdapter";
 import ShortcutAdapter from "./ShortcutAdapter";
 import Search from "../../../elements/components/GlobalNav/TopNav/Search";
-import ProfileAdapter from "./ProfileAdapter";
+import Profile from "../../../elements/components/GlobalNav/TopNav/Profile";
 import HelpAdapter from "./HelpAdapter";
 import ProjectAccountSwitcherAdapter from "./ProjectAccountSwitcherAdapter";
 import Notifications from "../../../elements/components/GlobalNav/TopNav/Notifications";
@@ -22,7 +22,7 @@ describe("TopNavAdapter", () => {
         >
           <ShortcutAdapter />
           <Search />
-          <ProfileAdapter />
+          <Profile />
           <HelpAdapter />
           <ProjectAccountSwitcherAdapter />
           <Notifications />

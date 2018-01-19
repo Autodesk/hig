@@ -9,7 +9,8 @@ import {
   breakpoints,
   TextLink,
   Checkbox,
-  Notification
+  Notification,
+  TextField
 } from "../hig-react";
 
 import "./index.css";
@@ -51,7 +52,7 @@ import TimestampSection from "./sections/TimestampSection";
 import TooltipSection from "./sections/TooltipSection";
 import TypographySection from "./sections/TypographySection";
 
-const defaultSearchOptions = [
+const autocompleteSuggestionOptions = [
   {
     label: "foo",
     value: "foo value"
@@ -128,14 +129,17 @@ class Playground extends React.Component {
       isHelpOpen: false,
       isSideNavOpen: true,
       searchOptions: [],
-      searchValue: "",
+      topNavSearchQueryValue: "",
+      topNavSearchQueryType: undefined,
       seenNotificationIds: [],
-      sideNavTheme: "dark-blue",
+      sideNavTheme: "light",
       sideNavLoading: false,
+      changeSideNavOnHover: false,
       sideNavVariant: "compact",
       notifications: sampleNotifications,
       readIds: this._initialReadNotifications(sampleNotifications),
-      notificationsLoading: false
+      notificationsLoading: false,
+      showHamburgerButton: true
     };
   }
 
@@ -145,13 +149,25 @@ class Playground extends React.Component {
   }
 
   onSearchInput = input => {
-    this.setState({ searchValue: input.value });
-    this.filterSearchInput(input.value);
+    this.setState({
+      topNavSearchQueryValue: input.value,
+      topNavSearchQueryType: "text"
+    });
   };
 
   onSearchSubmit = selection => {
-    this.setState({ searchValue: selection.value });
-    this.filterSearchInput(selection.value);
+    this.setState({
+      topNavSearchQueryValue: selection.value,
+      topNavSearchQueryType: "text"
+    });
+  };
+
+  onSearchOptionSelect = selection => {
+    console.log(selection);
+    this.setState({
+      topNavSearchQueryValue: selection.label,
+      topNavSearchQueryType: "option"
+    });
   };
 
   onNotificationsClick = eventInfo => {
@@ -173,16 +189,20 @@ class Playground extends React.Component {
   };
 
   onSideNavMouseEnter = () => {
-    if (window.innerWidth <= breakpoints.tablet) {
+    if (
+      this.state.changeSideNavOnHover &&
+      window.innerWidth <= breakpoints.tablet
+    ) {
       this.setState({ sideNavVariant: "full" });
     }
   };
 
   onSideNavMouseLeave = () => {
-    if (window.innerWidth <= breakpoints.tablet) {
+    if (
+      this.state.changeSideNavOnHover &&
+      window.innerWidth <= breakpoints.tablet
+    ) {
       this.setState({ sideNavVariant: "compact" });
-    } else {
-      this.setState({ sideNavVariant: "full" });
     }
   };
 
@@ -194,11 +214,27 @@ class Playground extends React.Component {
     this.setState({ sideNavLoading: event.target.checked });
   };
 
+  setSideNavHoverOption = event => {
+    this.setState({ changeSideNavOnHover: event.target.checked });
+  };
+
+  setShowHamburgerButton = event => {
+    this.setState({ showHamburgerButton: event.target.checked });
+  };
+
   responsivelyUpdateSideNavVariant = () => {
     if (window.innerWidth > breakpoints.tablet) {
       this.setState({ sideNavVariant: "full" });
     } else {
       this.setState({ sideNavVariant: "compact" });
+    }
+  };
+
+  toggleSideNavVariant = () => {
+    if (this.state.sideNavVariant === "full") {
+      this.setState({ sideNavVariant: "compact" });
+    } else {
+      this.setState({ sideNavVariant: "full" });
     }
   };
 
@@ -295,22 +331,40 @@ class Playground extends React.Component {
     console.log("project clicked", id);
   };
 
-  filterSearchInput = value => {
-    const searchOptions =
-      value.length > 0
-        ? defaultSearchOptions.filter(option =>
-            option.label.toLowerCase().startsWith(value.toLowerCase())
-          )
-        : [];
-
-    this.setState({ searchOptions });
-  };
-
   _initialReadNotifications(notifications) {
     return notifications
       .filter(notification => !notification.unread)
       .map(notification => notification.id);
   }
+
+  topNavQueryProps = () => {
+    const props = {
+      disabled: true,
+      label: "TopNav search query"
+    };
+
+    if (!this.state.topNavSearchQueryValue) {
+      return props;
+    }
+
+    const value = `${this.state.topNavSearchQueryType} - ${
+      this.state.topNavSearchQueryValue
+    }`;
+    return {
+      ...props,
+      value
+    };
+  };
+
+  topNavSearchOptions = () =>
+    this.state.topNavSearchQueryValue &&
+    this.state.topNavSearchQueryValue.length > 0
+      ? autocompleteSuggestionOptions.filter(option =>
+          option.label
+            .toLowerCase()
+            .startsWith(this.state.topNavSearchQueryValue.toLowerCase())
+        )
+      : [];
 
   render() {
     const helpProps = {
@@ -359,12 +413,14 @@ class Playground extends React.Component {
       projects,
       accountTitle: "Accounts",
       projectTitle: "Projects",
+      hideHamburgerButton: !this.state.showHamburgerButton,
       onAccountClick: this.accountClicked,
       onProjectClick: this.projectClicked,
       onSearchInput: this.onSearchInput,
       onSearchSubmit: this.onSearchSubmit,
-      searchOptions: this.state.searchOptions,
-      searchValue: this.state.searchValue,
+      onSearchOptionSelect: this.onSearchOptionSelect,
+      searchOptions: this.topNavSearchOptions(),
+      searchValue: this.state.topNavSearchQueryValue,
       help: helpProps,
       logo,
       onLogoClick() {
@@ -381,6 +437,11 @@ class Playground extends React.Component {
         notifications: this.transformedNotifications(this.state.notifications),
         featuredNotification: this.featuredNotification(),
         loading: this.state.notificationsLoading
+      },
+      profile: {
+        image: "https://placekitten.com/g/50/50",
+        name: "David Gonzalez",
+        email: "gonzalezd@autodesk.com"
       }
     };
 
@@ -393,13 +454,14 @@ class Playground extends React.Component {
       loading: this.state.sideNavLoading,
       compactUntilHover: this.state.sideNavAutoCompact,
       links,
+      onVariantToggleClick: this.toggleSideNavVariant,
       onLogoClick: event => {
         event.preventDefault();
         console.log("Logo clicked");
       },
       onMouseEnter: this.onSideNavMouseEnter,
       onMouseLeave: this.onSideNavMouseLeave,
-      searchable: true,
+      showVariantToggleButton: !this.state.changeSideNavOnHover,
       slot: (
         <div>
           <Button
@@ -432,12 +494,7 @@ class Playground extends React.Component {
         sideNavOpen={this.state.isSideNavOpen}
         onHamburgerClick={this.toggleSideNav}
       >
-        <PlaygroundSection title="Miscellaneous">
-          <Button
-            size="standard"
-            title="Add notification"
-            onClick={this.addNotification}
-          />
+        <PlaygroundSection title="GlobalNav">
           <Dropdown
             label="SideNav theme"
             options={[
@@ -448,10 +505,21 @@ class Playground extends React.Component {
             onChange={this.setSideNavTheme}
           />
           <Checkbox
-            label="loading"
+            label="SideNav loading"
             checked={this.state.sideNavLoading}
             onChange={this.setSideNavLoadingState}
           />
+          <Checkbox
+            label="Expand/Collapse SideNav on hover on narrow screens"
+            checked={this.state.changeSideNavOnHover}
+            onChange={this.setSideNavHoverOption}
+          />
+          <Checkbox
+            label="Show hamburger button"
+            checked={this.state.showHamburgerButton}
+            onChange={this.setShowHamburgerButton}
+          />
+          <TextField {...this.topNavQueryProps()} />
         </PlaygroundSection>
         <ExpandingFilterSectionSection />
         <ActionBarSection />
