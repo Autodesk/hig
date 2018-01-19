@@ -5,15 +5,17 @@ import Option from "../../FormElements/Option";
 
 export default class Search extends Component {
   static defaultProps = {
-    onInput: () => {},
-    value: undefined,
-    showOptions: undefined,
     onBlur: () => {},
-    onFocus: () => {},
-    showClearIcon: undefined,
     onClearIconClick: () => {},
     onClickOutside: () => {},
-    onKeydown: () => {}
+    onFocus: () => {},
+    onInput: () => {},
+    onKeydown: () => {},
+    onOptionSelect: () => {},
+    onSubmit: () => {},
+    showClearIcon: undefined,
+    showOptions: undefined,
+    value: undefined
   };
 
   constructor(props) {
@@ -33,24 +35,30 @@ export default class Search extends Component {
     this.setState({ showOptions: true });
   };
 
-  onClick = value => {
-    const selectedOption = this.props.options.find(
-      option => option.value === value
-    );
+  setValue(value) {
+    if (this.state.controlled) {
+      this.setState({ value: this.state.value });
+    } else {
+      this.setState({ value });
+    }
+  }
 
-    this._submitInput(selectedOption.label);
+  handleOptionSelect = () => {
+    const selectedOption = this.props.options[this.state.focusedOptionIndex];
+
+    this.props.onOptionSelect(selectedOption);
+    this.hideOptions();
   };
 
   hideOptions = () => {
-    this.setState({ focusedOptionIndex: undefined });
-    this.setState({ showOptions: false });
+    this.setState({ showOptions: false, focusedOptionIndex: undefined });
   };
 
-  hideClearIcon = () => {
-    this.setState({ clearIconVisible: false });
+  handleFocusOut = () => {
+    this.setState({ clearIconVisible: false, focusedOptionIndex: undefined });
   };
 
-  showClearIcon = () => {
+  handleFocusIn = () => {
     this.setState({ clearIconVisible: true });
   };
 
@@ -63,7 +71,7 @@ export default class Search extends Component {
   };
 
   handleClearIconClick = () => {
-    this._setValue("");
+    this.setValue("");
     this.props.onInput({ value: "" });
     this.setState({ focusedOptionIndex: undefined });
   };
@@ -72,71 +80,61 @@ export default class Search extends Component {
     switch (event.keyCode) {
       case 40:
         event.preventDefault();
-        this._focusPrevious();
+        this.focusPrevious();
         break;
       case 37:
         event.preventDefault();
-        this._focusPrevious();
+        this.focusPrevious();
         break;
       case 38:
         event.preventDefault();
-        this._focusNext();
+        this.focusNext();
         break;
       case 39:
         event.preventDefault();
-        this._focusNext();
+        this.focusNext();
         break;
       case 13:
-        this._submitInput(event.target.value);
+        this.handleEnterPress(event.target.value);
         break;
       default:
         break;
     }
   };
 
-  _setValue(value) {
-    if (this.state.controlled) {
-      this.setState({ value: this.state.value });
-    } else {
-      this.setState({ value });
+  handleEnterPress(selectedValue) {
+    if (this.state.focusedOptionIndex !== undefined) {
+      this.handleOptionSelect(selectedValue);
+      return;
     }
+
+    this.props.onSubmit({ selectedValue });
+    this.hideOptions();
   }
 
-  _focusPrevious() {
+  focusPrevious() {
     if (
       this.state.focusedOptionIndex === undefined ||
       this.state.focusedOptionIndex >= this.props.options.length - 1
     ) {
-      this.setState({ focusedOptionIndex: 0 });
+      this.setState({ focusedOptionIndex: 0, showOptions: true });
     } else {
       const focusedOptionIndex = this.state.focusedOptionIndex + 1;
-      this.setState({ focusedOptionIndex });
+      this.setState({ focusedOptionIndex, showOptions: true });
     }
   }
 
-  _focusNext() {
+  focusNext() {
     if (
       this.state.focusedOptionIndex === undefined ||
       this.state.focusedOptionIndex <= 0
     ) {
       const focusedOptionIndex = this.props.options.length - 1;
-      this.setState({ focusedOptionIndex });
+      this.setState({ focusedOptionIndex, showOptions: true });
     } else {
       const focusedOptionIndex = this.state.focusedOptionIndex - 1;
-      this.setState({ focusedOptionIndex });
+      this.setState({ focusedOptionIndex, showOptions: true });
     }
-  }
-
-  _submitInput(selectedValue) {
-    const value =
-      this.state.focusedOptionIndex !== undefined
-        ? this.props.options[this.state.focusedOptionIndex].label
-        : selectedValue;
-
-    this.props.onSubmit({
-      value
-    });
-    this.hideOptions();
   }
 
   render() {
@@ -146,8 +144,8 @@ export default class Search extends Component {
         value={this.props.value}
         onInput={this.onInput}
         showOptions={this.showOptions()}
-        onBlur={this.hideClearIcon}
-        onFocus={this.showClearIcon}
+        onBlur={this.handleFocusOut}
+        onFocus={this.handleFocusIn}
         showClearIcon={this.state.clearIconVisible}
         onClearIconClick={this.handleClearIconClick}
         onClickOutside={this.hideOptions}
@@ -159,7 +157,7 @@ export default class Search extends Component {
                 key={option.value}
                 focused={index === this.state.focusedOptionIndex}
                 {...option}
-                onClick={this.onClick}
+                onClick={this.handleOptionSelect}
               />
             ))
           : null}
@@ -201,15 +199,23 @@ Search.propTypes = {
    */
   showClearIcon: PropTypes.bool,
   /**
-   * Calls the provided callback when the Clear Icon is clicked
+   * Calls the provided callback when the clear icon is clicked
    */
   onClearIconClick: PropTypes.func,
   /**
-   * Calls the provided callback when user clicks outside of the Help
+   * Calls the provided callback when user clicks outside of the auto-complete menu
    */
   onClickOutside: PropTypes.func,
   /**
-   * Calls the provided callback when user pressed key down on Search Input
+   * Calls the provided callback when user presses a key when the Search has focus
    */
-  onKeydown: PropTypes.func
+  onKeydown: PropTypes.func,
+  /**
+   * Calls the provided callback when user presses Enter key while the Search has focus
+   */
+  onSubmit: PropTypes.func,
+  /**
+   * Calls the provided callback when user selects an auto-complete option
+   */
+  onOptionSelect: PropTypes.func
 };

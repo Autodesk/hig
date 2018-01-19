@@ -5,7 +5,6 @@
 @import '~helpers/css/mixins/spacing.scss';
 @import '~components/global-nav/side-nav/side-nav.scss';
 @import '../../top-nav/top-nav.scss';
-
 .hig__global-nav__sidenav-full {
   display: flex;
   flex-flow: column;
@@ -13,6 +12,7 @@
   height: 100vh;
   overflow: hidden;
 }
+
 .hig__global-nav__sidenav__copyright {
   padding-left: spacing(m);
   margin-bottom: 40px;
@@ -73,7 +73,6 @@
     display: flex;
     justify-content: flex-end;
     margin: 0 4px;
-
     @include tablet-breakpoint {
       display: none;
     }
@@ -127,11 +126,5 @@
   }
   &.hig__global-nav__sidenav__copyright {
     color: transparentize($color: color(hig-white), $amount: 0.5);
-  }
-
-  &.hig__global-nav__side-nav__collapse {
-    svg * {
-      fill: color(hig-white);
-    }
   }
 }

@@ -9,7 +9,8 @@ import {
   breakpoints,
   TextLink,
   Checkbox,
-  Notification
+  Notification,
+  TextField
 } from "../hig-react";
 
 import "./index.css";
@@ -51,7 +52,7 @@ import TimestampSection from "./sections/TimestampSection";
 import TooltipSection from "./sections/TooltipSection";
 import TypographySection from "./sections/TypographySection";
 
-const defaultSearchOptions = [
+const autocompleteSuggestionOptions = [
   {
     label: "foo",
     value: "foo value"
@@ -128,7 +129,8 @@ class Playground extends React.Component {
       isHelpOpen: false,
       isSideNavOpen: true,
       searchOptions: [],
-      searchValue: "",
+      topNavSearchQueryValue: "",
+      topNavSearchQueryType: undefined,
       seenNotificationIds: [],
       sideNavTheme: "dark-blue",
       sideNavLoading: false,
@@ -146,13 +148,25 @@ class Playground extends React.Component {
   }
 
   onSearchInput = input => {
-    this.setState({ searchValue: input.value });
-    this.filterSearchInput(input.value);
+    this.setState({
+      topNavSearchQueryValue: input.value,
+      topNavSearchQueryType: "text"
+    });
   };
 
   onSearchSubmit = selection => {
-    this.setState({ searchValue: selection.value });
-    this.filterSearchInput(selection.value);
+    this.setState({
+      topNavSearchQueryValue: selection.value,
+      topNavSearchQueryType: "text"
+    });
+  };
+
+  onSearchOptionSelect = selection => {
+    console.log(selection);
+    this.setState({
+      topNavSearchQueryValue: selection.label,
+      topNavSearchQueryType: "option"
+    });
   };
 
   onNotificationsClick = eventInfo => {
@@ -314,22 +328,40 @@ class Playground extends React.Component {
     console.log("project clicked", id);
   };
 
-  filterSearchInput = value => {
-    const searchOptions =
-      value.length > 0
-        ? defaultSearchOptions.filter(option =>
-            option.label.toLowerCase().startsWith(value.toLowerCase())
-          )
-        : [];
-
-    this.setState({ searchOptions });
-  };
-
   _initialReadNotifications(notifications) {
     return notifications
       .filter(notification => !notification.unread)
       .map(notification => notification.id);
   }
+
+  topNavQueryProps = () => {
+    const props = {
+      disabled: true,
+      label: "TopNav search query"
+    };
+
+    if (!this.state.topNavSearchQueryValue) {
+      return props;
+    }
+
+    const value = `${this.state.topNavSearchQueryType} - ${
+      this.state.topNavSearchQueryValue
+    }`;
+    return {
+      ...props,
+      value
+    };
+  };
+
+  topNavSearchOptions = () =>
+    this.state.topNavSearchQueryValue &&
+    this.state.topNavSearchQueryValue.length > 0
+      ? autocompleteSuggestionOptions.filter(option =>
+          option.label
+            .toLowerCase()
+            .startsWith(this.state.topNavSearchQueryValue.toLowerCase())
+        )
+      : [];
 
   render() {
     const helpProps = {
@@ -382,8 +414,9 @@ class Playground extends React.Component {
       onProjectClick: this.projectClicked,
       onSearchInput: this.onSearchInput,
       onSearchSubmit: this.onSearchSubmit,
-      searchOptions: this.state.searchOptions,
-      searchValue: this.state.searchValue,
+      onSearchOptionSelect: this.onSearchOptionSelect,
+      searchOptions: this.topNavSearchOptions(),
+      searchValue: this.state.topNavSearchQueryValue,
       help: helpProps,
       logo,
       onLogoClick() {
@@ -456,12 +489,7 @@ class Playground extends React.Component {
         sideNavOpen={this.state.isSideNavOpen}
         onHamburgerClick={this.toggleSideNav}
       >
-        <PlaygroundSection title="Miscellaneous">
-          <Button
-            size="standard"
-            title="Add notification"
-            onClick={this.addNotification}
-          />
+        <PlaygroundSection title="GlobalNav">
           <Dropdown
             label="SideNav theme"
             options={[
@@ -472,15 +500,16 @@ class Playground extends React.Component {
             onChange={this.setSideNavTheme}
           />
           <Checkbox
-            label="loading"
+            label="SideNav loading"
             checked={this.state.sideNavLoading}
             onChange={this.setSideNavLoadingState}
           />
           <Checkbox
-            label="Automatically expand sidenav on hover"
+            label="Expand/Collapse SideNav on hover on narrow screens"
             checked={this.state.changeSideNavOnHover}
             onChange={this.setSideNavHoverOption}
           />
+          <TextField {...this.topNavQueryProps()} />
         </PlaygroundSection>
         <ExpandingFilterSectionSection />
         <ActionBarSection />
