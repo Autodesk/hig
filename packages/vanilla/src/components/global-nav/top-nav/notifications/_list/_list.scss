@@ -2,7 +2,14 @@
 
 .hig__notifications__list-content {
   overflow-y: auto;
+  border-bottom: 1px solid color(hig-cool-gray-20);
 
+  &:empty {
+    border-bottom: none;
+  }
+}
+
+.hig__notifications__list-content--loaded {
   &:empty {
     max-height: 193px;
     height: 193px;
