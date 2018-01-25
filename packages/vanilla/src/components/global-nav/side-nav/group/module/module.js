@@ -129,6 +129,24 @@ class Module extends Core {
     );
   }
 
+  activateChildren() {
+    this._findDOMEl(
+      '.hig__global-nav__side-nav__section__group__module__link',
+      this.el
+    ).classList.add(
+      'hig__global-nav__side-nav__section__group__module__link--active-children'
+    );
+  }
+
+  deactivateChildren() {
+    this._findDOMEl(
+      '.hig__global-nav__side-nav__section__group__module__link',
+      this.el
+    ).classList.remove(
+      'hig__global-nav__side-nav__section__group__module__link--active-children'
+    );
+  }
+
   _setExternalLinkIcon() {
     if (this._findDOMEl('a', this.el).getAttribute('target') === '_blank') {
       const mountEl = this._findDOMEl(
