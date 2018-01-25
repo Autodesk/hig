@@ -88,14 +88,18 @@
     }
   }
   &:hover,
-  &--active {
-    color: color(hig-blue-50);
+  &--active,
+  &--active-children {
     &::before {
       border-left-color: color(hig-blue-50);
     }
     .hig__global-nav__side-nav__section__group__module__link__icon svg * {
       fill: color(hig-blue-50);
     }
+  }
+  &:hover,
+  &--active {
+    color: color(hig-blue-50);
     .hig__global-nav__side-nav__section__group__module__link__external-link-icon svg * {
       stroke: color(hig-blue-50);
     }
@@ -128,14 +132,18 @@
       }
     }
     &:hover,
-    &--active {
-      color: color(hig-blue-40);
+    &--active,
+    &--active-children {
       &::before {
         border-left-color: color(hig-blue-40);
       }
       .hig__global-nav__side-nav__section__group__module__link__icon svg * {
         fill: color(hig-blue-40);
       }
+    }
+    &:hover,
+    &--active {
+      color: color(hig-blue-40);
       .hig__global-nav__side-nav__section__group__module__link__external-link-icon svg * {
         stroke: color(hig-blue-40);
       }

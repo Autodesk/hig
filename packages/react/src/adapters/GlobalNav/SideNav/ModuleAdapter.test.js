@@ -27,6 +27,7 @@ describe("ModuleAdapter", () => {
                   onClick={() => {}}
                   onHover={() => {}}
                   active
+                  activeChildren
                 >
                   <CollapseAdapter />
                   <SubmoduleAdapter />
@@ -38,6 +39,7 @@ describe("ModuleAdapter", () => {
       );
 
       mockInstance.deactivate();
+      mockInstance.deactivateChildren();
 
       // Doesn't implement show and hide.
       mockInstance.show();

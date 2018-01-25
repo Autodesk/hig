@@ -77,6 +77,13 @@ function ModuleAdapter(props) {
               value ? instance.activate() : instance.deactivate()
             }
           </MapsPropToMethod>
+          <MapsPropToMethod value={props.activeChildren} {...adapterProps}>
+            {(instance, value) =>
+              value
+                ? instance.activateChildren()
+                : instance.deactivateChildren()
+            }
+          </MapsPropToMethod>
           <MountsHIGChild {...adapterProps}>{collapse}</MountsHIGChild>
           {submodules.length > 0 ? (
             <MountsHIGChildList {...adapterProps}>
@@ -96,6 +103,7 @@ ModuleAdapter.propTypes = {
   title: PropTypes.string,
   target: PropTypes.string,
   active: PropTypes.bool,
+  activeChildren: PropTypes.bool,
   onClick: PropTypes.func,
   onHover: PropTypes.func
 };
@@ -105,7 +113,8 @@ ModuleAdapter.defaultProps = {
   icon: undefined,
   link: undefined,
   title: undefined,
-  active: undefined,
+  active: false,
+  activeChildren: false,
   onClick: undefined,
   onHover: undefined
 };
