@@ -302,9 +302,6 @@ class Playground extends React.Component {
   navigate = id => {
     console.log("Go to", id);
     this.setState({ activeModuleId: id });
-    if (window.innerWidth <= breakpoints.tablet) {
-      this.setState({ isSideNavOpen: false });
-    }
   };
 
   closeHelp = () => {
