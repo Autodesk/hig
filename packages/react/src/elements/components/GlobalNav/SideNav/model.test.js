@@ -102,21 +102,21 @@ describe("SideNav model", () => {
             state
           );
 
-          expect(result.modules[0].active).toBeTruthy();
+          expect(result.modules[0].active).toBeFalsy();
           expect(result.submodules[0].active).toBeTruthy();
         });
       });
     });
 
     describe("with an active submodule", () => {
-      it("sets active on the submodule and the parent module", () => {
+      it("sets active on the submodule but not the parent module", () => {
         const state = {
           activeModuleId: "A",
           moduleStates: {}
         };
         const result = mergeState(props, state);
 
-        expect(result.modules[0].active).toBeTruthy();
+        expect(result.modules[0].active).toBeFalsy();
         expect(result.submodules[0].active).toBeTruthy();
       });
     });

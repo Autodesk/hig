@@ -95,17 +95,9 @@ export default function WithState(WrappedComponent) {
     };
 
     handleModuleClick = id => {
-      const submodules = this.props.submodules.filter(s => s.moduleId === id);
+      this.toggleModuleMinimized(id);
+      this.setActiveModuleId(id);
 
-      if (submodules.length > 0) {
-        if (submodules.length > 5) {
-          this.toggleModuleMinimized(id);
-        }
-
-        this.setActiveModuleId(submodules[0].id);
-      } else {
-        this.setActiveModuleId(id);
-      }
       if (this.props.onModuleClick) {
         this.props.onModuleClick(id);
       }
