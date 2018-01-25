@@ -7,7 +7,7 @@ import Template from './side-nav-skeleton.html';
 const items = [
   {
     maxWidth: '180px',
-    marginBottom: '36px'
+    marginBottom: '48px'
   },
   {
     maxWidth: '180px',
@@ -19,23 +19,23 @@ const items = [
   },
   {
     maxWidth: '124px',
-    marginBottom: '36px'
+    marginBottom: '48px'
   },
   {
     maxWidth: '180px',
-    marginBottom: '16px'
+    marginBottom: '24px'
   },
   {
     maxWidth: '180px',
-    marginBottom: '16px'
+    marginBottom: '24px'
   },
   {
     maxWidth: '180px',
-    marginBottom: '16px'
+    marginBottom: '24px'
   },
   {
     maxWidth: '180px',
-    marginBottom: '16px'
+    marginBottom: '24px'
   },
   {
     maxWidth: '124px'

@@ -35,6 +35,12 @@ class List extends Core {
     }
     this.loading = new Loading();
     this.loading.mount(this.loadingContainer);
+
+    const listContent = this._findDOMEl(
+      '.hig__notifications__list-content',
+      this.el
+    );
+    listContent.classList.remove('hig__notifications__list-content--loaded');
   }
 
   setTitle(title) {
@@ -47,6 +53,12 @@ class List extends Core {
     }
     this.loading.unmount();
     this.loading = undefined;
+
+    const listContent = this._findDOMEl(
+      '.hig__notifications__list-content',
+      this.el
+    );
+    listContent.classList.add('hig__notifications__list-content--loaded');
   }
 
   setContentMaxHeight(maxHeight) {

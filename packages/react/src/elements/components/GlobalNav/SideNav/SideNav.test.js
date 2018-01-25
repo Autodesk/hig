@@ -89,10 +89,10 @@ describe("<SideNav>", () => {
     });
 
     describe("matching a submodule", () => {
-      it("passes active to the submodule and its parent", () => {
+      it("passes active to the submodule but not its parent", () => {
         const wrapper = mount(<Context activeModuleId="sub-1" />);
         expect(wrapper.find(Submodule).first()).toHaveProp("active", true);
-        expect(wrapper.find(Module).first()).toHaveProp("active", true);
+        expect(wrapper.find(Module).first()).toHaveProp("active", false);
       });
     });
   });
