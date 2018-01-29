@@ -2,44 +2,50 @@ import React from "react";
 import PropTypes from "prop-types";
 import Typography from "../../adapters/TypographyAdapter";
 
-function H1Component(props) {
-  return <Typography type="h1" text={props.children} />;
+function H1Component({ children, size, bold }) {
+  return <Typography type="h1" bold={bold} size={size} text={children} />;
 }
 
-function H2Component(props) {
-  return <Typography type="h2" text={props.children} />;
+function H2Component({ children, size, bold }) {
+  return <Typography type="h2" bold={bold} size={size} text={children} />;
 }
 
-function H3Component(props) {
-  return <Typography type="h3" text={props.children} />;
+function H3Component({ children, size, bold }) {
+  return <Typography type="h3" bold={bold} size={size} text={children} />;
 }
 
-function Sub1Component(props) {
-  return <Typography type="sub1" text={props.children} />;
+function Sub1Component({ children, size, bold }) {
+  return <Typography type="sub1" bold={bold} size={size} text={children} />;
 }
 
-function Sub2Component(props) {
-  return <Typography type="sub2" text={props.children} />;
+function Sub2Component({ children, size, bold }) {
+  return <Typography type="sub2" bold={bold} size={size} text={children} />;
 }
 
-function BodyComponent(props) {
-  return <Typography type="body" text={props.children} />;
+function BodyComponent({ children, size, bold }) {
+  return <Typography type="body" bold={bold} size={size} text={children} />;
 }
 
-function BoldComponent(props) {
-  return <Typography type="bold" text={props.children} />;
+function BoldComponent({ children, size, bold }) {
+  return <Typography type="bold" bold={bold} size={size} text={children} />;
 }
 
-function DisabledComponent(props) {
-  return <Typography type="disabled" text={props.children} />;
+function DisabledComponent({ children, size, bold }) {
+  return <Typography type="disabled" bold={bold} size={size} text={children} />;
 }
 
-function CaptionComponent(props) {
-  return <Typography type="caption" text={props.children} />;
+function CaptionComponent({ children, size, bold }) {
+  return <Typography type="caption" bold={bold} size={size} text={children} />;
 }
 
 const docgenInfo = {
   props: {
+    bold: {
+      description: "Whether to render bold text"
+    },
+    size: {
+      description: "One of: 'small', 'medium', 'large'"
+    },
     children: {
       description: "any content"
     }

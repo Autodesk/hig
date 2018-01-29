@@ -10,9 +10,9 @@ import Template from './typography.html';
  */
 
 const VALID_TYPES = ['h1', 'h2', 'h3', 'sub1', 'sub2', 'body', 'bold', 'disabled', 'caption'];
-const VALID_SIZES = ['small', 'large'];
+const VALID_SIZES = ['small', 'medium', 'large'];
 
-class Typography extends Core {
+export default class Typography extends Core {
   constructor(options) {
     super(options);
 
@@ -63,7 +63,6 @@ class Typography extends Core {
 Typography._interface = Interface.basics.Typography;
 Typography._defaults = {
   text: 'text',
-  type: 'body'
+  type: 'body',
+  size: 'medium'
 };
-
-export default Typography;

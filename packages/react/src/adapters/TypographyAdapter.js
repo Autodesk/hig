@@ -23,6 +23,16 @@ export default class TypographyAdapter extends Component {
               value={this.props.text}
               {...adapterProps}
             />
+            <MapsPropToMethod
+              setter="setSize"
+              value={this.props.size}
+              {...adapterProps}
+            />
+            <MapsPropToMethod value={this.props.bold} {...adapterProps}>
+              {(instance, value) =>
+                value ? instance.setBold() : instance.unsetBold()
+              }
+            </MapsPropToMethod>
           </div>
         )}
       </HIGAdapter>
@@ -30,13 +40,25 @@ export default class TypographyAdapter extends Component {
   }
 }
 
+TypographyAdapter.defaultProps = {
+  size: "medium"
+};
+
 TypographyAdapter.propTypes = {
   /**
-   * {String - 'stack', 'inline'} type of the typography
+   * Whether to render bold text
+   */
+  bold: PropTypes.bool,
+  /**
+   * One of: 'small', 'medium', 'large'
+   */
+  size: PropTypes.string.isRequired,
+  /**
+   * One of: 'h1', 'h2', 'h3', 'sub1', 'sub2', 'body', 'bold', 'disabled', 'caption'
    */
   type: PropTypes.string.isRequired,
   /**
-   * {String - styled or unstyled text to show inside the typography
+   * Styled or unstyled text to show inside the typography
    */
   text: PropTypes.string.isRequired
 };

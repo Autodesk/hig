@@ -21,7 +21,33 @@ class TypographySection extends PureComponent {
         <H3>H3 example text</H3>
         <Sub1>Sub1 example text</Sub1>
         <Sub2>Sub2 example text</Sub2>
-        <Body>Body example text</Body>
+        <div>
+          <Body>Body example text</Body>
+        </div>
+        <div>
+          <Body size="large">Large example text</Body>
+        </div>
+        <div>
+          <Body size="large" bold>
+            Large bold example text
+          </Body>
+        </div>
+        <div>
+          <Body size="medium">Medium example text</Body>
+        </div>
+        <div>
+          <Body size="medium" bold>
+            Medium bold example text
+          </Body>
+        </div>
+        <div>
+          <Body size="small">Small example text</Body>
+        </div>
+        <div>
+          <Body size="small" bold>
+            Small bold example text
+          </Body>
+        </div>
         <div>
           <Bold>Bold example text</Bold>
         </div>

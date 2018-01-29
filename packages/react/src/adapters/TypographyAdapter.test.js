@@ -11,7 +11,18 @@ describe("TypographyAdapter", () => {
         <TypographyAdapter
           higInstance={mockInstance}
           text="Foo"
-          type="primary"
+          type="body"
+          size="small"
+          bold
+        />
+      );
+
+      mount(
+        <TypographyAdapter
+          higInstance={mockInstance}
+          text="Foo"
+          type="h1"
+          bold={false}
         />
       );
 
