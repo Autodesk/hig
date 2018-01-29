@@ -12,8 +12,6 @@ $hig__global-nav__sidenav--width: 280px;
 .hig__global-nav__sidenav {
   @include reset;
   position: fixed;
-  display: flex;
-  flex-direction: column;
   top: 0;
   left: $hig__global-nav__sidenav--width * -1; // Hide offscreen by default
   bottom: 0;
