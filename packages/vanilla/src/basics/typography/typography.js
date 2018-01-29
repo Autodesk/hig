@@ -9,12 +9,14 @@ import Template from './typography.html';
  * @class
  */
 
+const VALID_TYPES = ['h1', 'h2', 'h3', 'sub1', 'sub2', 'body', 'bold', 'disabled', 'caption'];
+
 class Typography extends Core {
   constructor(options) {
     super(options);
 
     // Check for compliance
-    if (options && ['h1', 'h2', 'h3', 'sub1', 'sub2', 'body', 'bold', 'disabled', 'caption'].indexOf(options.type) === -1) {
+    if (options && VALID_TYPES.indexOf(options.type) === -1) {
       console.error('Not a valid typography type!');
     }
 
@@ -26,13 +28,12 @@ class Typography extends Core {
   }
 
   setType(type) {
-    // Note this assumes the type class is last in the list!
-    this._removeElLastClass();
+    VALID_TYPES.forEach(validType => this._unsetType(validType));
     this.el.classList.add(`hig__typography__${type}`);
   }
 
-  _removeElLastClass() {
-    this.el.classList.remove(this.el.classList.item(this.el.classList.length - 1));
+  _unsetType(type) {
+    this.el.classList.remove(`hig__typography__${type}`);
   }
 
   applyTypographyToElement(el) {
@@ -43,7 +44,8 @@ class Typography extends Core {
 
 Typography._interface = Interface.basics.Typography;
 Typography._defaults = {
-  text: 'text', type: 'body'
+  text: 'text',
+  type: 'body'
 };
 
 export default Typography;
