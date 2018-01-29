@@ -27,6 +27,9 @@
   @include typography-base;
   font-weight: 700;
 }
+.hig__typography--bold {
+  font-weight: 700;
+}
 
 // DISABLED
 .hig__typography__disabled {

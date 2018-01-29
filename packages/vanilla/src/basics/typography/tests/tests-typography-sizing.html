@@ -1,0 +1,105 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="../../../../lib/hig.css">
+  <script type="text/javascript" src="../../../../lib/hig.js"></script>
+
+  <style>
+    body {
+      margin: 30px;
+    }
+
+    .tests-typo-group {
+      margin: 50px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class='tests-typo-pagetitle'></div>
+  <div class='tests-typo-subpagetitle'></div>
+
+  <div class='tests-typo-group'>
+    <div class='tests-typo-sizing-title'></div>
+
+    <div class='tests-typo-large'></div>
+    <div class='tests-typo-large-bold'></div>
+    <div class='tests-typo-medium'></div>
+    <div class='tests-typo-medium-bold'></div>
+    <div class='tests-typo-small'></div>
+    <div class='tests-typo-small-bold'></div>
+  </div>
+
+  <script>
+    // ----
+    // SIZING
+    // ----
+    var Large = new Hig.Typography({
+      "text": "Large: The quick brown fox jumps over the lazy dog",
+      "type": "body"
+    });
+    Large.mount(".tests-typo-large");
+    Large.setSize("large")
+
+    var LargeBold = new Hig.Typography({
+      "text": "Large Bold: The quick brown fox jumps over the lazy dog",
+      "type": "body"
+    });
+    LargeBold.mount(".tests-typo-large-bold");
+    LargeBold.setSize("large");
+    LargeBold.setBold();
+
+    var Medium = new Hig.Typography({
+      "text": "Medium: The quick brown fox jumps over the lazy dog",
+      "type": "body"
+    });
+    Medium.mount(".tests-typo-medium");
+
+    var MediumBold = new Hig.Typography({
+      "text": "Medium Bold: The quick brown fox jumps over the lazy dog",
+      "type": "body"
+    });
+    MediumBold.mount(".tests-typo-medium-bold");
+    MediumBold.setBold();
+
+    var Small = new Hig.Typography({
+      "text": "Small: The quick brown fox jumps over the lazy dog",
+      "type": "body"
+    });
+    Small.mount(".tests-typo-small");
+    Small.setSize("small");
+
+    var SmallBold = new Hig.Typography({
+      "text": "Small Bold: The quick brown fox jumps over the lazy dog",
+      "type": "body"
+    });
+    SmallBold.mount(".tests-typo-small-bold");
+    SmallBold.setSize("small");
+    SmallBold.setBold();
+
+    // ---------------------------
+    // SPECIFIC TEST PAGE ELEMENTS
+    // ---------------------------
+
+    var PageTitle = new Hig.Typography({
+      "text": "Typography - HIG Light",
+      "type": "h2"
+    });
+    PageTitle.mount(".tests-typo-pagetitle");
+
+    var SubPageTitle = new Hig.Typography({
+      "text": "All fonts are Artifakt Element.",
+      "type": "sub1"
+    });
+    SubPageTitle.mount(".tests-typo-subpagetitle");
+
+    var SizingTitle = new Hig.Typography({
+      "text": "Body Sizing",
+      "type": "h2"
+    });
+    SizingTitle.mount(".tests-typo-sizing-title");
+  </script>
+
+</body>
+
+</html>

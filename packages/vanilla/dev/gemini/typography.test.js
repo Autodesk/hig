@@ -1,9 +1,21 @@
-gemini.suite('typography', (parent) => {
-  parent.setUrl(
-    'src/basics/typography/tests/tests-typography.html'
-  );
-
+gemini.suite('typography', () => {
   gemini.suite('default', (suite) => {
-    suite.setCaptureElements('body').capture('default');
+    suite.setUrl(
+      'src/basics/typography/tests/tests-typography.html'
+    );
+
+    suite
+      .setCaptureElements('body')
+      .capture('default');
+  });
+
+  gemini.suite('sizing', (suite) => {
+    suite.setUrl(
+      'src/basics/typography/tests/tests-typography-sizing.html'
+    );
+
+    suite
+      .setCaptureElements('body')
+      .capture('default');
   });
 });

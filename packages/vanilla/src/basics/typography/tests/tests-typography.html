@@ -1,168 +1,170 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="../../../../lib/hig.css">
-        <script type="text/javascript" src="../../../../lib/hig.js"></script>
 
-        <style>
-            body{
-                margin: 30px;
-            }
-            .tests-typo-group{
-                margin: 50px 0;
-            }
-        </style>
-    </head>
-    <body>
-        <div class='tests-typo-pagetitle'></div>
-        <div class='tests-typo-subpagetitle'></div>
+<head>
+  <link rel="stylesheet" href="../../../../lib/hig.css">
+  <script type="text/javascript" src="../../../../lib/hig.js"></script>
 
-        <div class='tests-typo-group'>
-            <div class='tests-typo-header-title'></div>
+  <style>
+    body {
+      margin: 30px;
+    }
 
-            <div class='tests-typo-headings-h1'></div>
-            <div class='tests-typo-headings-h2'></div>
-            <div class='tests-typo-headings-h3'></div>
-            <div class='tests-typo-headings-sub1'></div>
-            <div class='tests-typo-headings-sub2'></div>
+    .tests-typo-group {
+      margin: 50px 0;
+    }
+  </style>
+</head>
 
-        </div>
+<body>
+  <div class='tests-typo-pagetitle'></div>
+  <div class='tests-typo-subpagetitle'></div>
 
-        <div class='tests-typo-group'>
-            <div class='tests-typo-body-title'></div>
+  <div class='tests-typo-group'>
+    <div class='tests-typo-header-title'></div>
 
-            <div class='tests-typo-body'></div>
-            <div class='tests-typo-bodybold'></div>
-            <div class='tests-typo-disabled'></div>
-            <div class='tests-typo-caption'></div>
-        </div>
+    <div class='tests-typo-headings-h1'></div>
+    <div class='tests-typo-headings-h2'></div>
+    <div class='tests-typo-headings-h3'></div>
+    <div class='tests-typo-headings-sub1'></div>
+    <div class='tests-typo-headings-sub2'></div>
 
-        <div class='tests-typo-group'>
-            <div class='tests-typo-extendedbody-title'></div>
+  </div>
 
-            <div class='tests-typo-extendedbody'></div>
-        </div>
+  <div class='tests-typo-group'>
+    <div class='tests-typo-body-title'></div>
 
+    <div class='tests-typo-body'></div>
+    <div class='tests-typo-bodybold'></div>
+    <div class='tests-typo-disabled'></div>
+    <div class='tests-typo-caption'></div>
+  </div>
 
-        <script>
-            // ------
-            // HEADER
-            // ------
+  <div class='tests-typo-group'>
+    <div class='tests-typo-extendedbody-title'></div>
 
-            // H1
-            var H1 = new Hig.Typography({
-                "text": "H1: The quick brown fox jumps over the lazy dog",
-                "type": "h1"
-            });
-            H1.mount(".tests-typo-headings-h1");
+    <div class='tests-typo-extendedbody'></div>
+  </div>
 
-            // H2
-            var H2 = new Hig.Typography({
-                "text": "H2: The quick brown fox jumps over the lazy dog",
-                "type": "h2"
-            });
-            H2.mount(".tests-typo-headings-h2");
+  <script>
+    // ------
+    // HEADER
+    // ------
 
-            // H3
-            var H3 = new Hig.Typography({
-                "text": "H3: This text is wrong",
-                "type": "h2" // we're updating to h3 few lines below
-            });
-            H3.mount(".tests-typo-headings-h3");
+    // H1
+    var H1 = new Hig.Typography({
+      "text": "H1: The quick brown fox jumps over the lazy dog",
+      "type": "h1"
+    });
+    H1.mount(".tests-typo-headings-h1");
 
-            // Test setText and setSize update method
-            H3.setText("H3: The quick brown fox jumps over the lazy dog");
-            H3.setType("h3");
+    // H2
+    var H2 = new Hig.Typography({
+      "text": "H2: The quick brown fox jumps over the lazy dog",
+      "type": "h2"
+    });
+    H2.mount(".tests-typo-headings-h2");
 
-            // SUB 1
-            var Sub1 = new Hig.Typography({
-                "text": "Sub1: The quick brown fox jumps over the lazy dog",
-                "type": "sub1"
-            });
-            Sub1.mount(".tests-typo-headings-sub1");
+    // H3
+    var H3 = new Hig.Typography({
+      "text": "H3: This text is wrong",
+      "type": "h2" // we're updating to h3 few lines below
+    });
+    H3.mount(".tests-typo-headings-h3");
 
-            // SUB 2
-            var Sub2 = new Hig.Typography({
-                "text": "Sub2: The quick brown fox jumps over the lazy dog",
-                "type": "sub2"
-            });
-            Sub2.mount(".tests-typo-headings-sub2");
+    // Test setText and setSize update method
+    H3.setText("H3: The quick brown fox jumps over the lazy dog");
+    H3.setType("h3");
 
-            // ----
-            // BODY
-            // ----
+    // SUB 1
+    var Sub1 = new Hig.Typography({
+      "text": "Sub1: The quick brown fox jumps over the lazy dog",
+      "type": "sub1"
+    });
+    Sub1.mount(".tests-typo-headings-sub1");
 
-            var Body = new Hig.Typography({
-                "text": "Standard: The quick brown fox jumps over the lazy dog",
-                "type": "body"
-            });
-            Body.mount(".tests-typo-body");
+    // SUB 2
+    var Sub2 = new Hig.Typography({
+      "text": "Sub2: The quick brown fox jumps over the lazy dog",
+      "type": "sub2"
+    });
+    Sub2.mount(".tests-typo-headings-sub2");
 
-            // Bold
-            var BodyBold = new Hig.Typography({
-                "text": "Bold: The quick brown fox jumps over the lazy dog",
-                "type": "bold"
-            });
-            BodyBold.mount(".tests-typo-bodybold");
+    // ----
+    // BODY
+    // ----
 
-            // Disabled
-            var disabled = new Hig.Typography({
-                "text": "Disabled: The quick brown fox jumps over the lazy dog",
-                "type": "disabled"
-            });
-            disabled.mount(".tests-typo-disabled");
+    var Body = new Hig.Typography({
+      "text": "Standard: The quick brown fox jumps over the lazy dog",
+      "type": "body"
+    });
+    Body.mount(".tests-typo-body");
 
-            // Caption
-            var Caption = new Hig.Typography({
-                "text": "Caption: The quick brown fox jumps over the lazy dog",
-                "type": "caption"
-            });
-            Caption.mount(".tests-typo-caption");
+    // Bold
+    var BodyBold = new Hig.Typography({
+      "text": "Bold: The quick brown fox jumps over the lazy dog",
+      "type": "bold"
+    });
+    BodyBold.mount(".tests-typo-bodybold");
 
-            // ----------
-            // EXTENDED BODY
-            // ----------
+    // Disabled
+    var disabled = new Hig.Typography({
+      "text": "Disabled: The quick brown fox jumps over the lazy dog",
+      "type": "disabled"
+    });
+    disabled.mount(".tests-typo-disabled");
 
-            var ExtendedBody = new Hig.Typography({
-                "text": "Kombucha hella meggings DIY affogato hell of hashtag tumblr trust fund everyday carry fashion axe. Banjo bespoke direct trade, disrupt scenester everyday carry adaptogen mixtape drinking vinegar jean shorts fashion axe church-key. Chillwave normcore pork belly, chicharrones banjo scenester plaid taiyaki meditation air plant master cleanse beard. Leggings gochujang skateboard green juice subway tile selvage. Synth neutra pickled snackwave, vape pork belly celiac sustainable fixie next level disrupt try-hard literally tote bag deep v. Synth taxidermy banjo, swag vape butcher sriracha plaid live-edge tote bag tacos quinoa af. Tote bag palo santo hashtag subway tile echo park, pour-over small batch iceland kale chips wayfarers microdosing selfies. Paleo venmo edison bulb farm-to-table letterpress blog truffaut flannel stumptown cardigan wayfarers roof party freegan iPhone. Typewriter heirloom pok pok libillery, coloring book hoodie blog hammock keytar prism pabst polaroid af slow-carb viral. Copper mug raw denim gastropub pickled asymmetrical. Tumeric portland kickstarter, forage ennui godard organic kitsch subway tile mixtape. Dreamcatcher pug stumptown godard. Tumeric shabby chic before they sold out fingerstache. Gentrify cardigan beard tacos, etsy knausgaard bitters lomo. Keffiyeh raw denim ethical brunch offal blue bottle food truck post-ironic vaporware 90's occupy helvetica microdosing. Pour-over aesthetic seitan, readymade pork belly scenester iceland 90's trust fund vaporware austin unicorn prism tousled pinterest. Next level af marfa flannel chicharrones mixtape swag biodiesel tumblr pok pok shoreditch bespoke. Etsy hell of intelligentsia ennui. Irony woke neutra, church-key actually artisan prism VHS unicorn twee. Ugh banjo listicle hella messenger bag affogato cloud bread yuccie lo-fi neutra vape biodiesel dreamcatcher flexitarian artisan. Gochujang edison bulb listicle, hammock fam jean shorts twee vexillologist banjo humblebrag ethical iPhone. Dreamcatcher health goth kale chips jean shorts. Cred microdosing kinfolk, disrupt hot chicken wolf listicle irony mixtape neutra chia street art. Shabby chic biodiesel gochujang coloring book drinking vinegar lumbersexual mumblecore thundercats vape hexagon. Vape brunch kale chips taxidermy meggings affogato artisan gentrify aesthetic fam neutra franzen tumeric bushwick. Prism forage franzen meggings, man bun trust fund fingerstache. Mixtape narwhal kickstarter chillwave vice iPhone blue bottle shoreditch. Taiyaki activated charcoal kale chips snackwave forage edison bulb. Retro sriracha libillery, flannel franzen taxidermy tilde. Leggings meggings portland godard lyft hammock wolf adaptogen forage direct trade hexagon food truck. Humblebrag sriracha woke whatever, pop-up snackwave literally yr. Jianbing tumblr vaporware vexillologist vape ramps try-hard 3 wolf moon asymmetrical gastropub locavore. Mixtape yr cliche selfies cold-pressed viral. Butcher beard yr ennui hammock. Semiotics raw denim hammock bespoke typewriter pickled heirloom beard taxidermy irony. Kinfolk forage cornhole keytar leggings four dollar toast raclette blue bottle semiotics.8-bit health goth trust fund, tacos narwhal post-ironic portland VHS. Sartorial organic DIY, williamsburg pok pok squid gochujang hot chicken. Irony fanny pack DIY tofu tumblr. Hammock next level semiotics microdosing, food truck sartorial lyft portland vaporware heirloom cliche small batch tumblr. Small batch hexagon tumeric, bicycle rights cardigan 8-bit +1 vexillologist tattooed food truck hell of ennui woke vape. Pickled gluten-free portland shoreditch, woke XOXO lomo chicharrones lo-fi irony wayfarers. Vice truffaut pork belly, fashion axe letterpress banh mi helvetica williamsburg farm-to-table. Authentic poke pour-over green juice. Lo-fi pok pok vegan, tilde shoreditch live-edge pickled succulents hammock DIY cornhole. Tousled cliche vape man bun affogato literally, hammock subway tile franzen occupy blog mixtape cray tilde. Flannel libillery af marfa DIY, cliche deep v blog kale chips mlkshk austin. La croix umami selfies, hella everyday carry pork belly mixtape ethical meh gentrify keffiyeh VHS vape kinfolk. Adaptogen iPhone raw denim chartreuse cornhole butcher pinterest. Blog la croix direct trade 8-bit locavore raw denim tumblr actually selfies enamel pin disrupt. Retro blue bottle palo santo ennui master cleanse pitchfork offal sartorial locavore chillwave four dollar toast.",
-                "type": "body"
-            });
-            ExtendedBody.mount(".tests-typo-extendedbody");
+    // Caption
+    var Caption = new Hig.Typography({
+      "text": "Caption: The quick brown fox jumps over the lazy dog",
+      "type": "caption"
+    });
+    Caption.mount(".tests-typo-caption");
 
-            // ---------------------------
-            // SPECIFIC TEST PAGE ELEMENTS
-            // ---------------------------
+    // ----------
+    // EXTENDED BODY
+    // ----------
 
-            var PageTitle = new Hig.Typography({
-                "text": "Typography - HIG Light",
-                "type": "h2"
-            });
-            PageTitle.mount(".tests-typo-pagetitle");
+    var ExtendedBody = new Hig.Typography({
+      "text": "Kombucha hella meggings DIY affogato hell of hashtag tumblr trust fund everyday carry fashion axe. Banjo bespoke direct trade, disrupt scenester everyday carry adaptogen mixtape drinking vinegar jean shorts fashion axe church-key. Chillwave normcore pork belly, chicharrones banjo scenester plaid taiyaki meditation air plant master cleanse beard. Leggings gochujang skateboard green juice subway tile selvage. Synth neutra pickled snackwave, vape pork belly celiac sustainable fixie next level disrupt try-hard literally tote bag deep v. Synth taxidermy banjo, swag vape butcher sriracha plaid live-edge tote bag tacos quinoa af. Tote bag palo santo hashtag subway tile echo park, pour-over small batch iceland kale chips wayfarers microdosing selfies. Paleo venmo edison bulb farm-to-table letterpress blog truffaut flannel stumptown cardigan wayfarers roof party freegan iPhone. Typewriter heirloom pok pok libillery, coloring book hoodie blog hammock keytar prism pabst polaroid af slow-carb viral. Copper mug raw denim gastropub pickled asymmetrical. Tumeric portland kickstarter, forage ennui godard organic kitsch subway tile mixtape. Dreamcatcher pug stumptown godard. Tumeric shabby chic before they sold out fingerstache. Gentrify cardigan beard tacos, etsy knausgaard bitters lomo. Keffiyeh raw denim ethical brunch offal blue bottle food truck post-ironic vaporware 90's occupy helvetica microdosing. Pour-over aesthetic seitan, readymade pork belly scenester iceland 90's trust fund vaporware austin unicorn prism tousled pinterest. Next level af marfa flannel chicharrones mixtape swag biodiesel tumblr pok pok shoreditch bespoke. Etsy hell of intelligentsia ennui. Irony woke neutra, church-key actually artisan prism VHS unicorn twee. Ugh banjo listicle hella messenger bag affogato cloud bread yuccie lo-fi neutra vape biodiesel dreamcatcher flexitarian artisan. Gochujang edison bulb listicle, hammock fam jean shorts twee vexillologist banjo humblebrag ethical iPhone. Dreamcatcher health goth kale chips jean shorts. Cred microdosing kinfolk, disrupt hot chicken wolf listicle irony mixtape neutra chia street art. Shabby chic biodiesel gochujang coloring book drinking vinegar lumbersexual mumblecore thundercats vape hexagon. Vape brunch kale chips taxidermy meggings affogato artisan gentrify aesthetic fam neutra franzen tumeric bushwick. Prism forage franzen meggings, man bun trust fund fingerstache. Mixtape narwhal kickstarter chillwave vice iPhone blue bottle shoreditch. Taiyaki activated charcoal kale chips snackwave forage edison bulb. Retro sriracha libillery, flannel franzen taxidermy tilde. Leggings meggings portland godard lyft hammock wolf adaptogen forage direct trade hexagon food truck. Humblebrag sriracha woke whatever, pop-up snackwave literally yr. Jianbing tumblr vaporware vexillologist vape ramps try-hard 3 wolf moon asymmetrical gastropub locavore. Mixtape yr cliche selfies cold-pressed viral. Butcher beard yr ennui hammock. Semiotics raw denim hammock bespoke typewriter pickled heirloom beard taxidermy irony. Kinfolk forage cornhole keytar leggings four dollar toast raclette blue bottle semiotics.8-bit health goth trust fund, tacos narwhal post-ironic portland VHS. Sartorial organic DIY, williamsburg pok pok squid gochujang hot chicken. Irony fanny pack DIY tofu tumblr. Hammock next level semiotics microdosing, food truck sartorial lyft portland vaporware heirloom cliche small batch tumblr. Small batch hexagon tumeric, bicycle rights cardigan 8-bit +1 vexillologist tattooed food truck hell of ennui woke vape. Pickled gluten-free portland shoreditch, woke XOXO lomo chicharrones lo-fi irony wayfarers. Vice truffaut pork belly, fashion axe letterpress banh mi helvetica williamsburg farm-to-table. Authentic poke pour-over green juice. Lo-fi pok pok vegan, tilde shoreditch live-edge pickled succulents hammock DIY cornhole. Tousled cliche vape man bun affogato literally, hammock subway tile franzen occupy blog mixtape cray tilde. Flannel libillery af marfa DIY, cliche deep v blog kale chips mlkshk austin. La croix umami selfies, hella everyday carry pork belly mixtape ethical meh gentrify keffiyeh VHS vape kinfolk. Adaptogen iPhone raw denim chartreuse cornhole butcher pinterest. Blog la croix direct trade 8-bit locavore raw denim tumblr actually selfies enamel pin disrupt. Retro blue bottle palo santo ennui master cleanse pitchfork offal sartorial locavore chillwave four dollar toast.",
+      "type": "body"
+    });
+    ExtendedBody.mount(".tests-typo-extendedbody");
 
-            var SubPageTitle = new Hig.Typography({
-                "text": "All fonts are Artifakt Element.",
-                "type": "sub1"
-            });
-            SubPageTitle.mount(".tests-typo-subpagetitle");
+    // ---------------------------
+    // SPECIFIC TEST PAGE ELEMENTS
+    // ---------------------------
 
-            var HeaderTitle = new Hig.Typography({
-                "text": "Header",
-                "type": "h2"
-            });
-            HeaderTitle.mount(".tests-typo-header-title");
+    var PageTitle = new Hig.Typography({
+      "text": "Typography - HIG Light",
+      "type": "h2"
+    });
+    PageTitle.mount(".tests-typo-pagetitle");
 
-            var BodyTitle = new Hig.Typography({
-                "text": "Body",
-                "type": "h2"
-            });
-            BodyTitle.mount(".tests-typo-body-title");
+    var SubPageTitle = new Hig.Typography({
+      "text": "All fonts are Artifakt Element.",
+      "type": "sub1"
+    });
+    SubPageTitle.mount(".tests-typo-subpagetitle");
 
-            var ExtendedBodyTitle = new Hig.Typography({
-                "text": "Extended Body",
-                "type": "h2"
-            });
-            ExtendedBodyTitle.mount(".tests-typo-extendedbody-title");
+    var HeaderTitle = new Hig.Typography({
+      "text": "Header",
+      "type": "h2"
+    });
+    HeaderTitle.mount(".tests-typo-header-title");
 
-        </script>
+    var BodyTitle = new Hig.Typography({
+      "text": "Body",
+      "type": "h2"
+    });
+    BodyTitle.mount(".tests-typo-body-title");
 
-    </body>
+    var ExtendedBodyTitle = new Hig.Typography({
+      "text": "Extended Body",
+      "type": "h2"
+    });
+    ExtendedBodyTitle.mount(".tests-typo-extendedbody-title");
+  </script>
+
+</body>
+
 </html>

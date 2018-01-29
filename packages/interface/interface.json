@@ -874,6 +874,15 @@
     },
     "Typography": {
       "methods": {
+        "setBold": {
+          "desc": "adds boldness to the text within"
+        },
+        "setSize": {
+          "desc": "modifies the size of the text within",
+          "params": [
+            "{String} small or large"
+          ]
+        },
         "setText": {
           "desc": "sets the text",
           "params": [
@@ -885,6 +894,9 @@
           "params": [
             "{String} h1, h2, h3, sub1, sub2, body, bold, disabled or caption"
           ]
+        },
+        "unsetBold": {
+          "desc": "removes boldness from the text within"
         },
         "applyTypographyToElement": {
           "desc": "Apply HIG typography to input html element",

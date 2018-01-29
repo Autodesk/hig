@@ -10,6 +10,7 @@ import Template from './typography.html';
  */
 
 const VALID_TYPES = ['h1', 'h2', 'h3', 'sub1', 'sub2', 'body', 'bold', 'disabled', 'caption'];
+const VALID_SIZES = ['small', 'large'];
 
 class Typography extends Core {
   constructor(options) {
@@ -27,13 +28,30 @@ class Typography extends Core {
     this.el.textContent = text;
   }
 
+  setBold() {
+    this.el.classList.add('hig__typography--bold');
+  }
+
   setType(type) {
     VALID_TYPES.forEach(validType => this._unsetType(validType));
     this.el.classList.add(`hig__typography__${type}`);
   }
 
+  setSize(size) {
+    VALID_SIZES.forEach(validSize => this._unsetSize(validSize));
+    this.el.classList.add(`hig__typography--${size}`);
+  }
+
+  unsetBold() {
+    this.el.classList.remove('hig__typography--bold');
+  }
+
   _unsetType(type) {
     this.el.classList.remove(`hig__typography__${type}`);
+  }
+
+  _unsetSize(size) {
+    this.el.classList.remove(`hig__typography--${size}`);
   }
 
   applyTypographyToElement(el) {
