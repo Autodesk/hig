@@ -15,10 +15,10 @@
     <body>
         <div class='tests-typo-pagetitle'></div>
         <div class='tests-typo-subpagetitle'></div>
-        
+
         <div class='tests-typo-group'>
             <div class='tests-typo-header-title'></div>
-            
+
             <div class='tests-typo-headings-h1'></div>
             <div class='tests-typo-headings-h2'></div>
             <div class='tests-typo-headings-h3'></div>
@@ -37,16 +37,17 @@
         </div>
 
         <div class='tests-typo-group'>
-            <div class='tests-typo-largebody-title'></div>
+            <div class='tests-typo-extendedbody-title'></div>
 
-            <div class='tests-typo-largebody'></div>
+            <div class='tests-typo-extendedbody'></div>
         </div>
+
 
         <script>
             // ------
             // HEADER
             // ------
-            
+
             // H1
             var H1 = new Hig.Typography({
                 "text": "H1: The quick brown fox jumps over the lazy dog",
@@ -70,7 +71,7 @@
 
             // Test setText and setSize update method
             H3.setText("H3: The quick brown fox jumps over the lazy dog");
-            H3.setType("h3"); 
+            H3.setType("h3");
 
             // SUB 1
             var Sub1 = new Hig.Typography({
@@ -78,7 +79,7 @@
                 "type": "sub1"
             });
             Sub1.mount(".tests-typo-headings-sub1");
-            
+
             // SUB 2
             var Sub2 = new Hig.Typography({
                 "text": "Sub2: The quick brown fox jumps over the lazy dog",
@@ -118,15 +119,14 @@
             Caption.mount(".tests-typo-caption");
 
             // ----------
-            // LARGE BODY
+            // EXTENDED BODY
             // ----------
 
-            var LargeBody = new Hig.Typography({
+            var ExtendedBody = new Hig.Typography({
                 "text": "Kombucha hella meggings DIY affogato hell of hashtag tumblr trust fund everyday carry fashion axe. Banjo bespoke direct trade, disrupt scenester everyday carry adaptogen mixtape drinking vinegar jean shorts fashion axe church-key. Chillwave normcore pork belly, chicharrones banjo scenester plaid taiyaki meditation air plant master cleanse beard. Leggings gochujang skateboard green juice subway tile selvage. Synth neutra pickled snackwave, vape pork belly celiac sustainable fixie next level disrupt try-hard literally tote bag deep v. Synth taxidermy banjo, swag vape butcher sriracha plaid live-edge tote bag tacos quinoa af. Tote bag palo santo hashtag subway tile echo park, pour-over small batch iceland kale chips wayfarers microdosing selfies. Paleo venmo edison bulb farm-to-table letterpress blog truffaut flannel stumptown cardigan wayfarers roof party freegan iPhone. Typewriter heirloom pok pok libillery, coloring book hoodie blog hammock keytar prism pabst polaroid af slow-carb viral. Copper mug raw denim gastropub pickled asymmetrical. Tumeric portland kickstarter, forage ennui godard organic kitsch subway tile mixtape. Dreamcatcher pug stumptown godard. Tumeric shabby chic before they sold out fingerstache. Gentrify cardigan beard tacos, etsy knausgaard bitters lomo. Keffiyeh raw denim ethical brunch offal blue bottle food truck post-ironic vaporware 90's occupy helvetica microdosing. Pour-over aesthetic seitan, readymade pork belly scenester iceland 90's trust fund vaporware austin unicorn prism tousled pinterest. Next level af marfa flannel chicharrones mixtape swag biodiesel tumblr pok pok shoreditch bespoke. Etsy hell of intelligentsia ennui. Irony woke neutra, church-key actually artisan prism VHS unicorn twee. Ugh banjo listicle hella messenger bag affogato cloud bread yuccie lo-fi neutra vape biodiesel dreamcatcher flexitarian artisan. Gochujang edison bulb listicle, hammock fam jean shorts twee vexillologist banjo humblebrag ethical iPhone. Dreamcatcher health goth kale chips jean shorts. Cred microdosing kinfolk, disrupt hot chicken wolf listicle irony mixtape neutra chia street art. Shabby chic biodiesel gochujang coloring book drinking vinegar lumbersexual mumblecore thundercats vape hexagon. Vape brunch kale chips taxidermy meggings affogato artisan gentrify aesthetic fam neutra franzen tumeric bushwick. Prism forage franzen meggings, man bun trust fund fingerstache. Mixtape narwhal kickstarter chillwave vice iPhone blue bottle shoreditch. Taiyaki activated charcoal kale chips snackwave forage edison bulb. Retro sriracha libillery, flannel franzen taxidermy tilde. Leggings meggings portland godard lyft hammock wolf adaptogen forage direct trade hexagon food truck. Humblebrag sriracha woke whatever, pop-up snackwave literally yr. Jianbing tumblr vaporware vexillologist vape ramps try-hard 3 wolf moon asymmetrical gastropub locavore. Mixtape yr cliche selfies cold-pressed viral. Butcher beard yr ennui hammock. Semiotics raw denim hammock bespoke typewriter pickled heirloom beard taxidermy irony. Kinfolk forage cornhole keytar leggings four dollar toast raclette blue bottle semiotics.8-bit health goth trust fund, tacos narwhal post-ironic portland VHS. Sartorial organic DIY, williamsburg pok pok squid gochujang hot chicken. Irony fanny pack DIY tofu tumblr. Hammock next level semiotics microdosing, food truck sartorial lyft portland vaporware heirloom cliche small batch tumblr. Small batch hexagon tumeric, bicycle rights cardigan 8-bit +1 vexillologist tattooed food truck hell of ennui woke vape. Pickled gluten-free portland shoreditch, woke XOXO lomo chicharrones lo-fi irony wayfarers. Vice truffaut pork belly, fashion axe letterpress banh mi helvetica williamsburg farm-to-table. Authentic poke pour-over green juice. Lo-fi pok pok vegan, tilde shoreditch live-edge pickled succulents hammock DIY cornhole. Tousled cliche vape man bun affogato literally, hammock subway tile franzen occupy blog mixtape cray tilde. Flannel libillery af marfa DIY, cliche deep v blog kale chips mlkshk austin. La croix umami selfies, hella everyday carry pork belly mixtape ethical meh gentrify keffiyeh VHS vape kinfolk. Adaptogen iPhone raw denim chartreuse cornhole butcher pinterest. Blog la croix direct trade 8-bit locavore raw denim tumblr actually selfies enamel pin disrupt. Retro blue bottle palo santo ennui master cleanse pitchfork offal sartorial locavore chillwave four dollar toast.",
                 "type": "body"
             });
-            LargeBody.mount(".tests-typo-largebody");
-
+            ExtendedBody.mount(".tests-typo-extendedbody");
 
             // ---------------------------
             // SPECIFIC TEST PAGE ELEMENTS
@@ -156,11 +156,11 @@
             });
             BodyTitle.mount(".tests-typo-body-title");
 
-            var BodyLargeTitle = new Hig.Typography({
-                "text": "Large Body",
+            var ExtendedBodyTitle = new Hig.Typography({
+                "text": "Extended Body",
                 "type": "h2"
             });
-            BodyLargeTitle.mount(".tests-typo-largebody-title");
+            ExtendedBodyTitle.mount(".tests-typo-extendedbody-title");
 
         </script>
 
