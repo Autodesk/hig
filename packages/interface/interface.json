@@ -874,6 +874,30 @@
     },
     "Typography": {
       "methods": {
+        "setBold": {
+          "desc": "adds boldness to the text within"
+        },
+        "setColor": {
+          "desc": "applies color to text",
+          "params": [
+            "{String} a supported HIG color to apply to the text"
+          ]
+        },
+        "setDisabled": {
+          "desc": "renders text with disabled styling"
+        },
+        "setOpacity": {
+          "desc": "applies opacity to text color",
+          "params": [
+            "{Float} a valid opacity value between 0.0 and 1.0"
+          ]
+        },
+        "setSize": {
+          "desc": "modifies the size of the text within",
+          "params": [
+            "{String} small or large"
+          ]
+        },
         "setText": {
           "desc": "sets the text",
           "params": [
@@ -885,6 +909,12 @@
           "params": [
             "{String} h1, h2, h3, sub1, sub2, body, bold, disabled or caption"
           ]
+        },
+        "unsetBold": {
+          "desc": "removes boldness from the text within"
+        },
+        "unsetDisabled": {
+          "desc": "removes disabled styling from text"
         },
         "applyTypographyToElement": {
           "desc": "Apply HIG typography to input html element",

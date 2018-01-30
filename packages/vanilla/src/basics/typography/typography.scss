@@ -9,11 +9,25 @@
   margin-bottom: spacing(m);
 }
 
-.hig__rich-text--small p {
+.hig__typography--small {
   font-size: 12px;
-  line-height: 16px;
+  line-height: 18px;
+  font-weight: 500;
   margin-bottom: spacing(xs);
 }
+
+.hig__typography--large {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+// COLORS
+.hig__typography--hig-white { color: color('hig-white'); }
+.hig__typography--hig-cool-gray-70 { color: color('hig-cool-gray-70'); }
+.hig__typography--hig-blue-50 { color: color('hig-blue-50'); }
+.hig__typography--hig-green-good { color: color('hig-green-good'); }
+.hig__typography--hig-yellow-warning { color: color('hig-yellow-warning'); }
+.hig__typography--hig-red-alert { color: color('hig-red-alert'); }
 
 // BOLD
 .hig__rich-text b,
@@ -21,8 +35,14 @@
   @include typography-base;
   font-weight: 700;
 }
+.hig__typography--bold {
+  font-weight: 700;
+}
 
 // DISABLED
+.hig__typography--disabled {
+  opacity: .3;
+}
 .hig__typography__disabled {
   @include typography-base;
   color: color('hig-cool-gray-40');
@@ -40,9 +60,8 @@
 .hig__typography__h1 {
   @include typography-base;
   display: block;
-  font-weight: 400;
   font-size: 30px;
-  line-height: 48px;
+  line-height: 36px;
   color: color('hig-gray-70');
 }
 
@@ -50,9 +69,8 @@
 .hig__typography__h2 {
   @include typography-base;
   display: block;
-  font-weight: 600;
   font-size: 24px;
-  line-height: 32px;
+  line-height: 30px;
   color: color('hig-gray-70');
 }
 
@@ -62,7 +80,7 @@
   display: block;
   font-weight: 600;
   font-size: 18px;
-  line-height: 32px;
+  line-height: 26px;
   color: color('hig-gray-70');
 }
 

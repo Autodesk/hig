@@ -1,0 +1,77 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="../../../../lib/hig.css">
+  <script type="text/javascript" src="../../../../lib/hig.js"></script>
+
+  <style>
+    body {
+      margin: 30px;
+    }
+
+    .tests-typo-group {
+      margin: 50px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class='tests-typo-group'>
+    <div class='tests-typo-h1'></div>
+    <div class='tests-typo-h2'></div>
+    <div class='tests-typo-h3'></div>
+  </div>
+
+  <div class='tests-typo-group'>
+    <div class='tests-typo-large'></div>
+    <div class='tests-typo-large-bold'></div>
+    <div class='tests-typo-medium'></div>
+    <div class='tests-typo-medium-bold'></div>
+    <div class='tests-typo-small'></div>
+    <div class='tests-typo-small-bold'></div>
+  </div>
+
+  <script>
+    const H1 = new Hig.Typography({
+      "text": "[h1] Typography - HIG Light",
+      "type": "h1"
+    });
+    H1.mount(".tests-typo-h1");
+
+    const H2 = new Hig.Typography({
+      "text": "[h2] All fonts are Artifakt Element.",
+      "type": "h2"
+    });
+    H2.mount(".tests-typo-h2");
+
+    const H3 = new Hig.Typography({
+      "text": "[h3] Sizing Demonstration",
+      "type": "h3"
+    });
+    H3.mount(".tests-typo-h3");
+
+    [
+      'large',
+      'medium',
+      'small'
+    ].forEach(function (size) {
+      const typography = new Hig.Typography({
+        "text": `${size}: The quick brown fox jumps over the lazy dog`,
+        "type": "text"
+      });
+      typography.mount(`.tests-typo-${size}`);
+      typography.setSize(size);
+
+      const boldTypography = new Hig.Typography({
+        "text": `${size} bold: The quick brown fox jumps over the lazy dog`,
+        "type": "text"
+      });
+      boldTypography.mount(`.tests-typo-${size}-bold`);
+      boldTypography.setSize(size);
+      boldTypography.setBold();
+    });
+  </script>
+
+</body>
+
+</html>
