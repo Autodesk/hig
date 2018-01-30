@@ -58,6 +58,10 @@ class TypographySection extends PureComponent {
         <H2>H2 example text</H2>
         <H3>H3 example text</H3>
         <div>{this.renderTextExamples()}</div>
+
+        <hr />
+
+        <H1>Deprecated Examples</H1>
         <Sub1>Sub1 example text</Sub1>
         <Sub2>Sub2 example text</Sub2>
         <div>

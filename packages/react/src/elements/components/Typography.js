@@ -55,6 +55,9 @@ export function Text({ children, size, bold, color, disabled }) {
 }
 
 export function Sub1({ children, size, bold, color, disabled }) {
+  console.warn(
+    "Component Sub1 is deprecated and will be removed in the next version"
+  );
   return (
     <Typography
       type="sub1"
@@ -68,6 +71,9 @@ export function Sub1({ children, size, bold, color, disabled }) {
 }
 
 export function Sub2({ children, size, bold, color, disabled }) {
+  console.warn(
+    "Component Sub2 is deprecated and will be removed in the next version"
+  );
   return (
     <Typography
       type="sub2"
@@ -81,6 +87,9 @@ export function Sub2({ children, size, bold, color, disabled }) {
 }
 
 export function Body({ children, size, bold, color, disabled }) {
+  console.warn(
+    "Component Body is deprecated and will be removed in the next version"
+  );
   return (
     <Typography
       type="body"
@@ -94,6 +103,9 @@ export function Body({ children, size, bold, color, disabled }) {
 }
 
 export function Bold({ children, size, bold, color, disabled }) {
+  console.warn(
+    "Component Bold is deprecated and will be removed in the next version"
+  );
   return (
     <Typography
       type="bold"
@@ -107,6 +119,9 @@ export function Bold({ children, size, bold, color, disabled }) {
 }
 
 export function Disabled({ children, size, bold, color, disabled }) {
+  console.warn(
+    "Component Disabled is deprecated and will be removed in the next version"
+  );
   return (
     <Typography
       type="disabled"
@@ -120,6 +135,9 @@ export function Disabled({ children, size, bold, color, disabled }) {
 }
 
 export function Caption({ children, size, bold, color, disabled }) {
+  console.warn(
+    "Component Caption is deprecated and will be removed in the next version"
+  );
   return (
     <Typography
       type="caption"
