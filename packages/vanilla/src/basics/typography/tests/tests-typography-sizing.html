@@ -16,12 +16,13 @@
 </head>
 
 <body>
-  <div class='tests-typo-pagetitle'></div>
-  <div class='tests-typo-subpagetitle'></div>
+  <div class='tests-typo-group'>
+    <div class='tests-typo-h1'></div>
+    <div class='tests-typo-h2'></div>
+    <div class='tests-typo-h3'></div>
+  </div>
 
   <div class='tests-typo-group'>
-    <div class='tests-typo-sizing-title'></div>
-
     <div class='tests-typo-large'></div>
     <div class='tests-typo-large-bold'></div>
     <div class='tests-typo-medium'></div>
@@ -31,73 +32,44 @@
   </div>
 
   <script>
-    // ----
-    // SIZING
-    // ----
-    var Large = new Hig.Typography({
-      "text": "Large: The quick brown fox jumps over the lazy dog",
-      "type": "body"
+    const H1 = new Hig.Typography({
+      "text": "[h1] Typography - HIG Light",
+      "type": "h1"
     });
-    Large.mount(".tests-typo-large");
-    Large.setSize("large")
+    H1.mount(".tests-typo-h1");
 
-    var LargeBold = new Hig.Typography({
-      "text": "Large Bold: The quick brown fox jumps over the lazy dog",
-      "type": "body"
-    });
-    LargeBold.mount(".tests-typo-large-bold");
-    LargeBold.setSize("large");
-    LargeBold.setBold();
-
-    var Medium = new Hig.Typography({
-      "text": "Medium: The quick brown fox jumps over the lazy dog",
-      "type": "body"
-    });
-    Medium.mount(".tests-typo-medium");
-
-    var MediumBold = new Hig.Typography({
-      "text": "Medium Bold: The quick brown fox jumps over the lazy dog",
-      "type": "body"
-    });
-    MediumBold.mount(".tests-typo-medium-bold");
-    MediumBold.setBold();
-
-    var Small = new Hig.Typography({
-      "text": "Small: The quick brown fox jumps over the lazy dog",
-      "type": "body"
-    });
-    Small.mount(".tests-typo-small");
-    Small.setSize("small");
-
-    var SmallBold = new Hig.Typography({
-      "text": "Small Bold: The quick brown fox jumps over the lazy dog",
-      "type": "body"
-    });
-    SmallBold.mount(".tests-typo-small-bold");
-    SmallBold.setSize("small");
-    SmallBold.setBold();
-
-    // ---------------------------
-    // SPECIFIC TEST PAGE ELEMENTS
-    // ---------------------------
-
-    var PageTitle = new Hig.Typography({
-      "text": "Typography - HIG Light",
+    const H2 = new Hig.Typography({
+      "text": "[h2] All fonts are Artifakt Element.",
       "type": "h2"
     });
-    PageTitle.mount(".tests-typo-pagetitle");
+    H2.mount(".tests-typo-h2");
 
-    var SubPageTitle = new Hig.Typography({
-      "text": "All fonts are Artifakt Element.",
-      "type": "sub1"
+    const H3 = new Hig.Typography({
+      "text": "[h3] Sizing Demonstration",
+      "type": "h3"
     });
-    SubPageTitle.mount(".tests-typo-subpagetitle");
+    H3.mount(".tests-typo-h3");
 
-    var SizingTitle = new Hig.Typography({
-      "text": "Body Sizing",
-      "type": "h2"
+    [
+      'large',
+      'medium',
+      'small'
+    ].forEach(function (size) {
+      const typography = new Hig.Typography({
+        "text": `${size}: The quick brown fox jumps over the lazy dog`,
+        "type": "body"
+      });
+      typography.mount(`.tests-typo-${size}`);
+      typography.setSize(size);
+
+      const boldTypography = new Hig.Typography({
+        "text": `${size} bold: The quick brown fox jumps over the lazy dog`,
+        "type": "body"
+      });
+      boldTypography.mount(`.tests-typo-${size}-bold`);
+      boldTypography.setSize(size);
+      boldTypography.setBold();
     });
-    SizingTitle.mount(".tests-typo-sizing-title");
   </script>
 
 </body>
