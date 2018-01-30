@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import Typography from "../../adapters/TypographyAdapter";
 
 export function H1({ children, ...remainingProps }) {
@@ -84,39 +83,7 @@ const docgenInfo = {
   }
 };
 
-const propTypes = {
-  /**
-   * Whether to render bold text
-   */
-  bold: PropTypes.bool,
-  /**
-   * A color to apply to the containing text
-   */
-  color: PropTypes.oneOf([
-    "hig-white",
-    "hig-cool-gray-70",
-    "hig-blue-50",
-    "hig-green-good",
-    "hig-yellow-warning",
-    "hig-red-alert"
-  ]),
-  /**
-   * Whether to show text as disabled
-   */
-  disabled: PropTypes.bool,
-  /**
-   * An opacity value to modify the color, between 0.0 and 1.0
-   */
-  opacity: PropTypes.number,
-  /**
-   * A size to apply to the containing text
-   */
-  size: PropTypes.oneOf(["small", "medium", "large"]),
-  /**
-   * Text to render
-   */
-  children: PropTypes.node
-};
+const { type, text, ...propTypes } = Typography.propTypes;
 
 [H1, H2, H3, Text, Sub1, Sub2, Body, Bold, Disabled, Caption].forEach(
   componentClass => {

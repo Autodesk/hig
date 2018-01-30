@@ -9,30 +9,31 @@ import Template from './typography.html';
  * @class
  */
 
-const VALID_TYPES = [
-  'h1',
-  'h2',
-  'h3',
-  'text',
-  // Deprecated types start below
-  'sub1',
-  'sub2',
-  'body',
-  'bold',
-  'disabled',
-  'caption'
-];
-const VALID_SIZES = ['small', 'medium', 'large'];
-const VALID_COLORS = [
-  'hig-white',
-  'hig-cool-gray-70',
-  'hig-blue-50',
-  'hig-green-good',
-  'hig-yellow-warning',
-  'hig-red-alert'
-];
-
 export default class Typography extends Core {
+  static VALID_TYPES = [
+    'h1',
+    'h2',
+    'h3',
+    'text',
+    // Deprecated types start below
+    'sub1',
+    'sub2',
+    'body',
+    'bold',
+    'disabled',
+    'caption'
+  ];
+
+  static VALID_SIZES = ['small', 'medium', 'large'];
+  static VALID_COLORS = [
+    'hig-white',
+    'hig-cool-gray-70',
+    'hig-blue-50',
+    'hig-green-good',
+    'hig-yellow-warning',
+    'hig-red-alert'
+  ];
+
   constructor(options) {
     super(options);
     this._checkOptionsForCompliance(options);
@@ -53,7 +54,7 @@ export default class Typography extends Core {
   }
 
   setColor(color) {
-    VALID_COLORS.forEach(validColor => this._unsetColor(validColor));
+    Typography.VALID_COLORS.forEach(validColor => this._unsetColor(validColor));
     this.el.classList.add(`hig__typography--${color}`);
   }
 
@@ -71,12 +72,12 @@ export default class Typography extends Core {
   }
 
   setType(type) {
-    VALID_TYPES.forEach(validType => this._unsetType(validType));
+    Typography.VALID_TYPES.forEach(validType => this._unsetType(validType));
     this.el.classList.add(`hig__typography__${type}`);
   }
 
   setSize(size) {
-    VALID_SIZES.forEach(validSize => this._unsetSize(validSize));
+    Typography.VALID_SIZES.forEach(validSize => this._unsetSize(validSize));
     this.el.classList.add(`hig__typography--${size}`);
   }
 
@@ -101,15 +102,15 @@ export default class Typography extends Core {
   }
 
   _checkOptionsForCompliance(options) {
-    if (options && VALID_TYPES.indexOf(options.type) === -1) {
+    if (options && Typography.VALID_TYPES.indexOf(options.type) === -1) {
       console.error('Not a supported typography type!');
     }
 
-    if (options && VALID_SIZES.indexOf(options.size) === -1) {
+    if (options && Typography.VALID_SIZES.indexOf(options.size) === -1) {
       console.error('Not a supported size!');
     }
 
-    if (options && VALID_COLORS.indexOf(options.color) === -1) {
+    if (options && Typography.VALID_COLORS.indexOf(options.color) === -1) {
       console.error('Not a supported color!');
     }
   }

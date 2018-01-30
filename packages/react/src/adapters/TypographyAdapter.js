@@ -55,19 +55,15 @@ export default class TypographyAdapter extends Component {
   }
 }
 
-TypographyAdapter.defaultProps = {
-  size: "medium"
-};
-
 TypographyAdapter.propTypes = {
   /**
    * Whether to render bold text
    */
   bold: PropTypes.bool,
   /**
-   * One of: 'hig-white', 'hig-cool-gray-70', 'hig-blue-50', 'hig-green-good', 'hig-yellow-warning', 'hig-red-alert'
+   * Colors the text with one of the supported HIG colors
    */
-  color: PropTypes.string,
+  color: PropTypes.oneOf(VanillaTypography.VALID_COLORS),
   /**
    * Whether to show text as disabled
    */
@@ -77,13 +73,13 @@ TypographyAdapter.propTypes = {
    */
   opacity: PropTypes.number,
   /**
-   * One of: 'small', 'medium', 'large'
+   * Sizes the text with one of the supported modifiers
    */
-  size: PropTypes.string.isRequired,
+  size: PropTypes.oneOf(VanillaTypography.VALID_SIZES),
   /**
-   * One of: 'h1', 'h2', 'h3', 'text', 'sub1', 'sub2', 'body', 'bold', 'disabled', 'caption'
+   * Indicates the initial Typography style
    */
-  type: PropTypes.string.isRequired,
+  type: PropTypes.oneOf(VanillaTypography.VALID_TYPES).isRequired,
   /**
    * Styled or unstyled text to show inside the typography
    */
