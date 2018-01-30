@@ -18,4 +18,14 @@ gemini.suite('typography', () => {
       .setCaptureElements('body')
       .capture('default');
   });
+
+  gemini.suite('colors', (suite) => {
+    suite.setUrl(
+      'src/basics/typography/tests/tests-typography-colors.html'
+    );
+
+    suite
+      .setCaptureElements('body')
+      .capture('default');
+  });
 });

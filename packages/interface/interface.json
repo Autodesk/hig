@@ -877,6 +877,15 @@
         "setBold": {
           "desc": "adds boldness to the text within"
         },
+        "setColor": {
+          "desc": "applies color to text",
+          "params": [
+            "{String} a supported HIG color to apply to the text"
+          ]
+        },
+        "setDisabled": {
+          "desc": "renders text with disabled styling"
+        },
         "setSize": {
           "desc": "modifies the size of the text within",
           "params": [
@@ -897,6 +906,9 @@
         },
         "unsetBold": {
           "desc": "removes boldness from the text within"
+        },
+        "unsetDisabled": {
+          "desc": "removes disabled styling from text"
         },
         "applyTypographyToElement": {
           "desc": "Apply HIG typography to input html element",

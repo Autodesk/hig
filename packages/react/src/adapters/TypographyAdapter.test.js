@@ -13,7 +13,9 @@ describe("TypographyAdapter", () => {
           text="Foo"
           type="body"
           size="small"
+          color="hig-blue-50"
           bold
+          disabled
         />
       );
 
@@ -23,6 +25,7 @@ describe("TypographyAdapter", () => {
           text="Foo"
           type="h1"
           bold={false}
+          disabled={false}
         />
       );
 

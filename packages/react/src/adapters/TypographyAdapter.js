@@ -28,9 +28,19 @@ export default class TypographyAdapter extends Component {
               value={this.props.size}
               {...adapterProps}
             />
+            <MapsPropToMethod
+              setter="setColor"
+              value={this.props.color}
+              {...adapterProps}
+            />
             <MapsPropToMethod value={this.props.bold} {...adapterProps}>
               {(instance, value) =>
                 value ? instance.setBold() : instance.unsetBold()
+              }
+            </MapsPropToMethod>
+            <MapsPropToMethod value={this.props.disabled} {...adapterProps}>
+              {(instance, value) =>
+                value ? instance.setDisabled() : instance.unsetDisabled()
               }
             </MapsPropToMethod>
           </div>
@@ -49,6 +59,14 @@ TypographyAdapter.propTypes = {
    * Whether to render bold text
    */
   bold: PropTypes.bool,
+  /**
+   * One of: 'hig-white', 'hig-cool-gray-70', 'hig-blue-50', 'hig-green-good', 'hig-yellow-warning', 'hig-red-alert'
+   */
+  color: PropTypes.string,
+  /**
+   * Whether to show text as disabled
+   */
+  disabled: PropTypes.bool,
   /**
    * One of: 'small', 'medium', 'large'
    */
