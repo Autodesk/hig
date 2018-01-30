@@ -14,6 +14,7 @@ describe("TypographyAdapter", () => {
           type="text"
           size="small"
           color="hig-blue-50"
+          opacity={0.7}
           bold
           disabled
         />

@@ -2,152 +2,62 @@ import React from "react";
 import PropTypes from "prop-types";
 import Typography from "../../adapters/TypographyAdapter";
 
-export function H1({ children, size, bold, color, disabled }) {
-  return (
-    <Typography
-      type="h1"
-      bold={bold}
-      size={size}
-      color={color}
-      disabled={disabled}
-      text={children}
-    />
-  );
+export function H1({ children, ...remainingProps }) {
+  return <Typography type="h1" text={children} {...remainingProps} />;
 }
 
-export function H2({ children, size, bold, color, disabled }) {
-  return (
-    <Typography
-      type="h2"
-      bold={bold}
-      size={size}
-      color={color}
-      disabled={disabled}
-      text={children}
-    />
-  );
+export function H2({ children, ...remainingProps }) {
+  return <Typography type="h2" text={children} {...remainingProps} />;
 }
 
-export function H3({ children, size, bold, color, disabled }) {
-  return (
-    <Typography
-      type="h3"
-      bold={bold}
-      size={size}
-      color={color}
-      disabled={disabled}
-      text={children}
-    />
-  );
+export function H3({ children, ...remainingProps }) {
+  return <Typography type="h3" text={children} {...remainingProps} />;
 }
 
-export function Text({ children, size, bold, color, disabled }) {
-  return (
-    <Typography
-      type="text"
-      bold={bold}
-      size={size}
-      color={color}
-      disabled={disabled}
-      text={children}
-    />
-  );
+export function Text({ children, ...remainingProps }) {
+  return <Typography type="text" text={children} {...remainingProps} />;
 }
 
-export function Sub1({ children, size, bold, color, disabled }) {
+export function Sub1({ children, ...remainingProps }) {
   console.warn(
     "Component Sub1 is deprecated and will be removed in the next version"
   );
-  return (
-    <Typography
-      type="sub1"
-      bold={bold}
-      size={size}
-      color={color}
-      disabled={disabled}
-      text={children}
-    />
-  );
+  return <Typography type="sub1" text={children} {...remainingProps} />;
 }
 
-export function Sub2({ children, size, bold, color, disabled }) {
+export function Sub2({ children, ...remainingProps }) {
   console.warn(
     "Component Sub2 is deprecated and will be removed in the next version"
   );
-  return (
-    <Typography
-      type="sub2"
-      bold={bold}
-      size={size}
-      color={color}
-      disabled={disabled}
-      text={children}
-    />
-  );
+  return <Typography type="sub2" text={children} {...remainingProps} />;
 }
 
-export function Body({ children, size, bold, color, disabled }) {
+export function Body({ children, ...remainingProps }) {
   console.warn(
     "Component Body is deprecated and will be removed in the next version"
   );
-  return (
-    <Typography
-      type="body"
-      bold={bold}
-      size={size}
-      color={color}
-      disabled={disabled}
-      text={children}
-    />
-  );
+  return <Typography type="body" text={children} {...remainingProps} />;
 }
 
-export function Bold({ children, size, bold, color, disabled }) {
+export function Bold({ children, ...remainingProps }) {
   console.warn(
     "Component Bold is deprecated and will be removed in the next version"
   );
-  return (
-    <Typography
-      type="bold"
-      bold={bold}
-      size={size}
-      color={color}
-      disabled={disabled}
-      text={children}
-    />
-  );
+  return <Typography type="bold" text={children} {...remainingProps} />;
 }
 
-export function Disabled({ children, size, bold, color, disabled }) {
+export function Disabled({ children, ...remainingProps }) {
   console.warn(
     "Component Disabled is deprecated and will be removed in the next version"
   );
-  return (
-    <Typography
-      type="disabled"
-      bold={bold}
-      size={size}
-      color={color}
-      disabled={disabled}
-      text={children}
-    />
-  );
+  return <Typography type="disabled" text={children} {...remainingProps} />;
 }
 
-export function Caption({ children, size, bold, color, disabled }) {
+export function Caption({ children, ...remainingProps }) {
   console.warn(
     "Component Caption is deprecated and will be removed in the next version"
   );
-  return (
-    <Typography
-      type="caption"
-      bold={bold}
-      size={size}
-      color={color}
-      disabled={disabled}
-      text={children}
-    />
-  );
+  return <Typography type="caption" text={children} {...remainingProps} />;
 }
 
 const docgenInfo = {
@@ -161,6 +71,9 @@ const docgenInfo = {
     },
     disabled: {
       description: "Whether to show text as disabled"
+    },
+    opacity: {
+      description: "An opacity value to modify the color, between 0.0 and 1.0"
     },
     size: {
       description: "One of: 'small', 'medium', 'large'"
@@ -191,6 +104,10 @@ const propTypes = {
    * Whether to show text as disabled
    */
   disabled: PropTypes.bool,
+  /**
+   * An opacity value to modify the color, between 0.0 and 1.0
+   */
+  opacity: PropTypes.number,
   /**
    * A size to apply to the containing text
    */

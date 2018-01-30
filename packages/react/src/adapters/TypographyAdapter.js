@@ -33,6 +33,11 @@ export default class TypographyAdapter extends Component {
               value={this.props.color}
               {...adapterProps}
             />
+            <MapsPropToMethod
+              setter="setOpacity"
+              value={this.props.opacity}
+              {...adapterProps}
+            />
             <MapsPropToMethod value={this.props.bold} {...adapterProps}>
               {(instance, value) =>
                 value ? instance.setBold() : instance.unsetBold()
@@ -67,6 +72,10 @@ TypographyAdapter.propTypes = {
    * Whether to show text as disabled
    */
   disabled: PropTypes.bool,
+  /**
+   * An opacity value to modify the color, between 0.0 and 1.0
+   */
+  opacity: PropTypes.number,
   /**
    * One of: 'small', 'medium', 'large'
    */

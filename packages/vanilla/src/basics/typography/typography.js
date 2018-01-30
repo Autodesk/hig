@@ -61,6 +61,15 @@ export default class Typography extends Core {
     this.el.classList.add('hig__typography--disabled');
   }
 
+  setOpacity(opacity) {
+    /**
+     * N.B.: The intent is to apply opacity to the color. Typography components currently only render text, so
+     * applying opacity should have no side effects. If this component ever wraps styled content, we should reconsider
+     * this mechanism, because opacity in children nodes can be magnified by this parent node.
+     */
+    this.el.style.opacity = opacity;
+  }
+
   setType(type) {
     VALID_TYPES.forEach(validType => this._unsetType(validType));
     this.el.classList.add(`hig__typography__${type}`);
@@ -110,6 +119,7 @@ Typography._interface = Interface.basics.Typography;
 Typography._defaults = {
   color: 'hig-cool-gray-70',
   size: 'medium',
+  opacity: 1.0,
   text: 'text',
   type: 'text'
 };

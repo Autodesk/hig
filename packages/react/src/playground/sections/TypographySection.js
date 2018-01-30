@@ -33,6 +33,11 @@ class TypographySection extends PureComponent {
             </Text>
           </div>
           <div>
+            <Text size={size} color={color} opacity={0.7}>
+              {`${size} ${color} example at 70% opacity`}
+            </Text>
+          </div>
+          <div>
             <Text size={size} color={color} bold>
               {`${size} ${color} bold example`}
             </Text>

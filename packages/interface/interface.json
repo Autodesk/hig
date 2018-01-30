@@ -886,6 +886,12 @@
         "setDisabled": {
           "desc": "renders text with disabled styling"
         },
+        "setOpacity": {
+          "desc": "applies opacity to text color",
+          "params": [
+            "{Float} a valid opacity value between 0.0 and 1.0"
+          ]
+        },
         "setSize": {
           "desc": "modifies the size of the text within",
           "params": [
