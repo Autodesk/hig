@@ -57,14 +57,14 @@
     ].forEach(function (size) {
       const typography = new Hig.Typography({
         "text": `${size}: The quick brown fox jumps over the lazy dog`,
-        "type": "body"
+        "type": "text"
       });
       typography.mount(`.tests-typo-${size}`);
       typography.setSize(size);
 
       const boldTypography = new Hig.Typography({
         "text": `${size} bold: The quick brown fox jumps over the lazy dog`,
-        "type": "body"
+        "type": "text"
       });
       boldTypography.mount(`.tests-typo-${size}-bold`);
       boldTypography.setSize(size);

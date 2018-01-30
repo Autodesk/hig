@@ -46,14 +46,14 @@
     ].forEach(function(color) {
       const typography = new Hig.Typography({
         "text": `${color}: The quick brown fox jumps over the lazy dog`,
-        "type": "body"
+        "type": "text"
       });
       typography.mount(`.tests-typo-${color}`);
       typography.setColor(color);
 
       const disabledTypography = new Hig.Typography({
         "text": `${color} disabled: The quick brown fox jumps over the lazy dog`,
-        "type": "body"
+        "type": "text"
       });
       disabledTypography.mount(`.tests-typo-disabled-${color}`);
       disabledTypography.setColor(color);

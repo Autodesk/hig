@@ -72,7 +72,7 @@ TypographyAdapter.propTypes = {
    */
   size: PropTypes.string.isRequired,
   /**
-   * One of: 'h1', 'h2', 'h3', 'sub1', 'sub2', 'body', 'bold', 'disabled', 'caption'
+   * One of: 'h1', 'h2', 'h3', 'text', 'sub1', 'sub2', 'body', 'bold', 'disabled', 'caption'
    */
   type: PropTypes.string.isRequired,
   /**

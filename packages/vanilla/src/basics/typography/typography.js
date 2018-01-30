@@ -9,7 +9,19 @@ import Template from './typography.html';
  * @class
  */
 
-const VALID_TYPES = ['h1', 'h2', 'h3', 'sub1', 'sub2', 'body', 'bold', 'disabled', 'caption'];
+const VALID_TYPES = [
+  'h1',
+  'h2',
+  'h3',
+  'text',
+  // Deprecated types start below
+  'sub1',
+  'sub2',
+  'body',
+  'bold',
+  'disabled',
+  'caption'
+];
 const VALID_SIZES = ['small', 'medium', 'large'];
 const VALID_COLORS = [
   'hig-white',
@@ -99,5 +111,5 @@ Typography._defaults = {
   color: 'hig-cool-gray-70',
   size: 'medium',
   text: 'text',
-  type: 'body'
+  type: 'text'
 };

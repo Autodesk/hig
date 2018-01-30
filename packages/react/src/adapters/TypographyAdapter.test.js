@@ -11,7 +11,7 @@ describe("TypographyAdapter", () => {
         <TypographyAdapter
           higInstance={mockInstance}
           text="Foo"
-          type="body"
+          type="text"
           size="small"
           color="hig-blue-50"
           bold

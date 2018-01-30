@@ -41,6 +41,19 @@ export function H3({ children, size, bold, color, disabled }) {
   );
 }
 
+export function Text({ children, size, bold, color, disabled }) {
+  return (
+    <Typography
+      type="text"
+      bold={bold}
+      size={size}
+      color={color}
+      disabled={disabled}
+      text={children}
+    />
+  );
+}
+
 export function Sub1({ children, size, bold, color, disabled }) {
   return (
     <Typography
@@ -144,7 +157,7 @@ const propTypes = {
   children: PropTypes.node
 };
 
-[H1, H2, H3, Sub1, Sub2, Body, Bold, Disabled, Caption].forEach(
+[H1, H2, H3, Text, Sub1, Sub2, Body, Bold, Disabled, Caption].forEach(
   componentClass => {
     componentClass.__docgenInfo = docgenInfo; // eslint-disable-line no-param-reassign
     componentClass.propTypes = propTypes; // eslint-disable-line no-param-reassign
