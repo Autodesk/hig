@@ -154,6 +154,32 @@ const docgenInfo = {
 };
 
 const propTypes = {
+  /**
+   * Whether to render bold text
+   */
+  bold: PropTypes.bool,
+  /**
+   * A color to apply to the containing text
+   */
+  color: PropTypes.oneOf([
+    "hig-white",
+    "hig-cool-gray-70",
+    "hig-blue-50",
+    "hig-green-good",
+    "hig-yellow-warning",
+    "hig-red-alert"
+  ]),
+  /**
+   * Whether to show text as disabled
+   */
+  disabled: PropTypes.bool,
+  /**
+   * A size to apply to the containing text
+   */
+  size: PropTypes.oneOf(["small", "medium", "large"]),
+  /**
+   * Text to render
+   */
   children: PropTypes.node
 };
 
