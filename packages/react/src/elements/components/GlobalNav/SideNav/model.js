@@ -37,6 +37,7 @@ export function getModuleState(moduleStates, id) {
 export function mergeState({ modules, submodules, ...props }, state) {
   const activeModuleId = props.activeModuleId || state.activeModuleId;
   const activeModule = modules.find(m => m.id === activeModuleId) || {};
+  const activeSubmodule = submodules.find(m => m.id === activeModuleId) || {};
 
   return {
     ...props,
@@ -44,6 +45,7 @@ export function mergeState({ modules, submodules, ...props }, state) {
       const moduleWithState = {
         ...module,
         active: module.id === activeModule.id,
+        activeChildren: module.id === activeSubmodule.moduleId,
         ...getModuleState(state.moduleStates, module.id)
       };
 
