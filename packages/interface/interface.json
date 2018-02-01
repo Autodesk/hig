@@ -2383,6 +2383,12 @@
             "{Tab} Tab - instance of a Tab partial",
             "{Tab} [ReferenceTab] - (Optional) reference node for insertBefore"
           ]
+        },
+        "setAlignment": {
+          "desc": "Specifies how the tabs are justified relative to their container",
+          "params": [
+            "{String} 'left', 'center', or 'right'"
+          ]
         }
       },
       "partials": {

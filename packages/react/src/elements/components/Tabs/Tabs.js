@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { Tabs as VanillaTabs } from "hig-vanilla";
 import TabsAdapter from "../../../adapters/Tabs/TabsAdapter";
 import Tab from "./Tab";
 
@@ -40,7 +41,7 @@ export default class Tabs extends Component {
 
     return (
       <div>
-        <TabsAdapter>
+        <TabsAdapter align={this.props.align}>
           {tabs.map(({ active, tabProps, index }) => (
             <Tab
               {...tabProps}
@@ -59,6 +60,10 @@ export default class Tabs extends Component {
 
 Tabs.propTypes = {
   /**
+   * Specify how to justify the tabs within their container
+   */
+  align: PropTypes.oneOf(VanillaTabs.AvailableAlignments),
+  /**
    * Called when user activates a tab
    */
   onTabChange: PropTypes.func,
@@ -69,5 +74,6 @@ Tabs.propTypes = {
 };
 
 Tabs.defaultProps = {
+  align: "center",
   onTabChange: () => {}
 };

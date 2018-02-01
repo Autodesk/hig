@@ -27,9 +27,14 @@
   }
 
   &:first-child {
+    padding-left: 0;
     &:before {
       border: none;
     }
+  }
+
+  &:last-child {
+    padding-right: 0;
   }
 }
 
