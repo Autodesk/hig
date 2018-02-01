@@ -1,12 +1,18 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Tabs } from "hig-vanilla";
-import HIGAdaper, { MountsHIGChildList } from "../HIGAdapter";
+import HIGAdaper, { MountsHIGChildList, MapsPropToMethod } from "../HIGAdapter";
 
-function TabsAdapter(props) {
+export default function TabsAdapter(props) {
   return (
     <HIGAdaper {...props} displayName="Tabs" HIGConstructor={Tabs}>
       {adapterProps => (
         <div>
+          <MapsPropToMethod
+            setter="setAlignment"
+            value={props.align}
+            {...adapterProps}
+          />
           <MountsHIGChildList {...adapterProps}>
             {props.children}
           </MountsHIGChildList>
@@ -16,4 +22,10 @@ function TabsAdapter(props) {
   );
 }
 
-export default TabsAdapter;
+TabsAdapter.propTypes = {
+  align: PropTypes.oneOf(Tabs.AvailableAlignments)
+};
+
+TabsAdapter.defaultProps = {
+  align: "center"
+};

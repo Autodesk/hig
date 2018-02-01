@@ -5,7 +5,17 @@
   @include reset;
   flex-grow: 1;
   display: flex;
-  justify-content: center;
   line-height: 16px;
   padding: spacing(xxs) 0 spacing(xs) 0;
+}
+
+.hig__tabs--align-center {
+  justify-content: center;
+}
+
+.hig__tabs--align-left {
+  justify-content: flex-start;
+}
+.hig__tabs--align-right {
+  justify-content: flex-end;
 }

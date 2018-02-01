@@ -10,6 +10,8 @@ import './tabs.scss';
  * @class
  */
 
+const AvailableAlignments = ['left', 'center', 'right'];
+
 class Tabs extends Core {
   constructor(options) {
     super(options);
@@ -21,10 +23,27 @@ class Tabs extends Core {
       this.mountPartialToComment('TAB', tabInstance, referenceTab);
     }
   }
+
+  setAlignment(alignment) {
+    if (AvailableAlignments.indexOf(alignment) > -1) {
+      this._clearAlignments();
+      this.el.classList.add(`hig__tabs--align-${alignment}`);
+    }
+  }
+
+  _clearAlignments() {
+    AvailableAlignments.forEach((alignment) => {
+      this.el.classList.remove(`hig__tabs--align-${alignment}`);
+    });
+  }
 }
 
+Tabs.AvailableAlignments = AvailableAlignments;
+
 Tabs._interface = Interface.components.Tabs;
-Tabs._defaults = {};
+Tabs._defaults = {
+  align: 'center'
+};
 Tabs._partials = {
   Tab
 };
