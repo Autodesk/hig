@@ -33,9 +33,5 @@ Text.propTypes = {
   /**
    * Sizes the text with one of the supported modifiers
    */
-  size: PropTypes.oneOf(VanillaTypography.VALID_SIZES),
-  /**
-   * Indicates the initial Typography style
-   */
-  type: PropTypes.oneOf(VanillaTypography.VALID_TYPES).isRequired
+  size: PropTypes.oneOf(VanillaTypography.VALID_SIZES)
 };
