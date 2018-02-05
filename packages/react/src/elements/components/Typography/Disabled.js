@@ -9,7 +9,7 @@ export default class Disabled extends React.PureComponent {
       "Component Disabled is deprecated and will be removed in the next version"
     );
     const { children, ...remainingProps } = this.props;
-    return <Typography type="Disabled" text={children} {...remainingProps} />;
+    return <Typography type="disabled" text={children} {...remainingProps} />;
   }
 }
 Disabled.propTypes = {
