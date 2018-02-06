@@ -4,7 +4,8 @@ import { Option as VanillaOption } from "hig-vanilla";
 import HIGAdapter, {
   MapsPropToMethod,
   MapsEventListener,
-  MountedByHIGParentList
+  MountedByHIGParentList,
+  MountsAnyChild
 } from "../HIGAdapter";
 
 export default class OptionAdapter extends Component {
@@ -17,11 +18,6 @@ export default class OptionAdapter extends Component {
       >
         {adapterProps => (
           <div>
-            <MapsPropToMethod
-              value={this.props.label}
-              setter="setLabel"
-              {...adapterProps}
-            />
             <MapsPropToMethod
               value={this.props.value}
               setter="setValue"
@@ -53,6 +49,9 @@ export default class OptionAdapter extends Component {
               handler={this.props.onClick}
               {...adapterProps}
             />
+            <MountsAnyChild mounter="setLabel" {...adapterProps}>
+              {this.props.label}
+            </MountsAnyChild>
             <MountedByHIGParentList mounter="addOption" {...adapterProps} />
           </div>
         )}
@@ -71,9 +70,9 @@ OptionAdapter.propTypes = {
    */
   onClick: PropTypes.func,
   /**
-   * Text displayed on the option
+   * Text or HTML displayed for the option
    */
-  label: PropTypes.string,
+  label: PropTypes.node,
   /**
    * Indicates the option is currently selected
    */
