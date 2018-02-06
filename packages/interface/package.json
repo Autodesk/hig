@@ -1,5 +1,5 @@
 {
   "name": "hig-interface",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "main": "./interface.json"
 }
