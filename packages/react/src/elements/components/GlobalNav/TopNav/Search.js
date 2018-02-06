@@ -50,12 +50,15 @@ export default class Search extends Component {
     this.hideOptions();
   };
 
+  handleOptionHover = focusedOptionIndex => () =>
+    this.setState({ focusedOptionIndex });
+
   hideOptions = () => {
     this.setState({ showOptions: false, focusedOptionIndex: undefined });
   };
 
   handleFocusOut = () => {
-    this.setState({ clearIconVisible: false, focusedOptionIndex: undefined });
+    this.setState({ clearIconVisible: false });
   };
 
   handleFocusIn = () => {
@@ -158,6 +161,7 @@ export default class Search extends Component {
                 focused={index === this.state.focusedOptionIndex}
                 {...option}
                 onClick={this.handleOptionSelect}
+                onHover={this.handleOptionHover(index)}
               />
             ))
           : null}

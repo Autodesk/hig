@@ -1,11 +1,22 @@
 import React from "react";
 import { mount } from "enzyme";
 import Tabs, { Tab } from "./index";
+import TabsAdapter from "../../../adapters/Tabs/TabsAdapter";
 import InternalTab from "./Tab";
 
-function render({ activeTabIndex, onTabChange, tab1Active, tab2Active } = {}) {
+function render({
+  activeTabIndex,
+  align,
+  onTabChange,
+  tab1Active,
+  tab2Active
+} = {}) {
   return (
-    <Tabs activeTabIndex={activeTabIndex} onTabChange={onTabChange}>
+    <Tabs
+      activeTabIndex={activeTabIndex}
+      onTabChange={onTabChange}
+      align={align}
+    >
       <Tab label="Details" active={tab1Active}>
         <h1>Foo</h1>
       </Tab>
@@ -17,9 +28,16 @@ function render({ activeTabIndex, onTabChange, tab1Active, tab2Active } = {}) {
 }
 
 describe("Tabs", () => {
-  describe("with two tabs", () => {
-    let wrapper;
+  let wrapper;
 
+  describe("alignment", () => {
+    it("is passed to the TabsAdapter", () => {
+      wrapper = mount(render({ align: "left" }));
+      expect(wrapper.find(TabsAdapter)).toHaveProp("align", "left");
+    });
+  });
+
+  describe("with two tabs", () => {
     it("renders the tabs", () => {
       wrapper = mount(render());
       expect(wrapper.find(InternalTab).length).toEqual(2);
