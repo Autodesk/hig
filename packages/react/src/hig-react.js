@@ -61,6 +61,7 @@ export { default as SectionLabel } from "./adapters/SectionLabelAdapter";
 export { default as ShowMoreLess } from "./elements/components/ShowMoreLess";
 export { default as SideNav } from "./elements/components/GlobalNav/SideNav";
 export { sizes } from "hig-vanilla";
+export { default as SkeletonItem } from "./adapters/SkeletonItemAdapter";
 export { default as Spacer } from "./adapters/SpacerAdapter";
 export { default as TextArea } from "./adapters/FormElements/TextAreaAdapter";
 export {
