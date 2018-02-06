@@ -58,7 +58,11 @@ class Option extends Core {
   }
 
   setLabel(label) {
-    this._findDOMEl('.hig__option__label', this.el).textContent = label;
+    if (typeof label === 'string') {
+      this._findDOMEl('.hig__option__label', this.el).textContent = label;
+    } else {
+      this.mountPartialToComment('LABEL', label);
+    }
   }
 
   setValue(value) {

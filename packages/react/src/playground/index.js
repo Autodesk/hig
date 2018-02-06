@@ -54,11 +54,11 @@ import TypographySection from "./sections/TypographySection";
 
 const autocompleteSuggestionOptions = [
   {
-    label: "foo",
+    label: <strong>foo</strong>,
     value: "foo value"
   },
   {
-    label: "foo1",
+    label: <em>foo1</em>,
     value: "foo1 value"
   },
   {
@@ -357,9 +357,7 @@ class Playground extends React.Component {
     this.state.topNavSearchQueryValue &&
     this.state.topNavSearchQueryValue.length > 0
       ? autocompleteSuggestionOptions.filter(option =>
-          option.label
-            .toLowerCase()
-            .startsWith(this.state.topNavSearchQueryValue.toLowerCase())
+          option.value.match(new RegExp(this.state.topNavSearchQueryValue, "i"))
         )
       : [];
 
