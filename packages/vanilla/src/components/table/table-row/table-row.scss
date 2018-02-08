@@ -1,7 +1,9 @@
 @import '~basics/colors/colors.scss';
 @import '~basics/responsive/responsive.scss';
 
-.hig__table__row--selected,
+.hig__table__row--selected {
+  background-color: color(hig-blue-10)
+}
 .hig__table__row:hover {
-  background-color: color(hig-blue-10);
+  background-color: transparentize($color: color(hig-blue-10), $amount: 0.5);
 }
