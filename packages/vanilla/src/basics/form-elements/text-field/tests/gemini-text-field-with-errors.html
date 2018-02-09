@@ -1,0 +1,68 @@
+<html>
+<head>
+  <link rel="stylesheet" href="../../../../../lib/hig.css">
+  <script type="text/javascript" src="../../../../../lib/hig.js"></script>
+
+  <style>
+    * {
+      transition-duration: 0s !important;
+      transition-delay: 0s !important;
+    }
+
+    ::-webkit-input-placeholder {
+      transition-duration: 0s !important;
+      transition-delay: 0s !important;
+    }
+
+    ::moz-placeholder {
+      transition-duration: 0s !important;
+      transition-delay: 0s !important;
+    }
+
+    :-moz-placeholder {
+      transition-duration: 0s !important;
+      transition-delay: 0s !important;
+    }
+
+    :-ms-input-placeholder {
+      transition-duration: 0s !important;
+      transition-delay: 0s !important;
+    }
+
+    ::placeholder {
+      transition-duration: 0s !important;
+      transition-delay: 0s !important;
+    }
+
+    body {
+      padding: 30px;
+    }
+
+    .test-group {
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class='test-group test-group-with-errors'>
+    <div class='tests-text-field-with-errors'></div>
+  </div>
+
+  <script>
+    const FormElements = new Hig.FormElements();
+    const TextField = FormElements.partials.TextField;
+
+    // TEXT FIELD WITH BASIC ERRORS
+
+    const TextFieldWithErrors = new TextField({
+      label: "It's a label",
+      placeholder: "It's a placeholder",
+      value: "It's a value"
+    });
+
+    TextFieldWithErrors.mount('.tests-text-field-with-errors');
+    TextFieldWithErrors.setErrors("Error text");
+  </script>
+
+</body>
+</html>

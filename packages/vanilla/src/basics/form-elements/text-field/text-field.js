@@ -110,6 +110,21 @@ class TextField extends Core {
     return this[name];
   }
 
+  setErrors(errors) {
+    if (errors) {
+      this.el.classList.add('hig__text-field--with-errors');
+      const errorsEl = this._findOrAddElement(
+        'ERRORS',
+        'p',
+        '.hig__text-field__errors'
+      );
+      errorsEl.textContent = errors;
+    } else {
+      this.el.classList.remove('hig__text-field--with-errors');
+      this._removeElementIfFound('.hig__text-field__errors');
+    }
+  }
+
   setInstructions(instructions) {
     if (instructions) {
       const instructionsEl = this._findOrAddElement(
@@ -327,7 +342,8 @@ TextField._defaults = {
   placeholder: '',
   required: '',
   value: '',
-  instructions: ''
+  instructions: '',
+  errors: ''
 };
 TextField._partials = {};
 

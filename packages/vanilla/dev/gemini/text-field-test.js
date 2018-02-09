@@ -40,4 +40,11 @@ gemini.suite('text field', (parent) => {
         actions.click('#test-group-disabled-value');
       });
   });
+
+  gemini.suite('errors', (suite) => {
+    suite.setUrl('src/basics/form-elements/text-field/tests/gemini-text-field-with-errors.html');
+
+    suite.setCaptureElements('.test-group-with-errors')
+      .capture('basic');
+  });
 });
