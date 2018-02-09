@@ -63,7 +63,7 @@ class Core {
     if (options) {
       const defaults = this._defaults;
       if (defaults) {
-        for (const key in defaults) { // eslint-disable-line no-restricted-syntax
+        for (const key in defaults) { // eslint-disable-line no-restricted-syntax, guard-for-in
           // skip loop if the property is from prototype
           if (!defaults.hasOwnProperty(key)) return; // eslint-disable-line no-prototype-builtins
 
