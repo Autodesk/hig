@@ -569,6 +569,9 @@
                 "{String} error text for this text field"
               ]
             },
+            "unsetErrors": {
+              "desc": "removes error styling and error text"
+            },
             "setInstructions": {
               "desc": "sets the instructions",
               "params": [

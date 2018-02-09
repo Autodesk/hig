@@ -111,18 +111,18 @@ class TextField extends Core {
   }
 
   setErrors(errors) {
-    if (errors) {
-      this.el.classList.add('hig__text-field--with-errors');
-      const errorsEl = this._findOrAddElement(
-        'ERRORS',
-        'p',
-        '.hig__text-field__errors'
-      );
-      errorsEl.textContent = errors;
-    } else {
-      this.el.classList.remove('hig__text-field--with-errors');
-      this._removeElementIfFound('.hig__text-field__errors');
-    }
+    const errorsEl = this._findOrAddElement(
+      'ERRORS',
+      'p',
+      '.hig__text-field__errors'
+    );
+    errorsEl.textContent = errors;
+    this._setErrorStyles(true);
+  }
+
+  unsetErrors() {
+    this._removeElementIfFound('.hig__text-field__errors');
+    this._setErrorStyles(false);
   }
 
   setInstructions(instructions) {
@@ -331,6 +331,12 @@ class TextField extends Core {
     value
       ? field.setAttribute('readonly', true)
       : field.removeAttribute('readonly');
+  }
+
+  _setErrorStyles(value) {
+    value
+      ? this.el.classList.add('hig__text-field--with-errors')
+      : this.el.classList.remove('hig__text-field--with-errors');
   }
 }
 

@@ -46,5 +46,8 @@ gemini.suite('text field', (parent) => {
 
     suite.setCaptureElements('.test-group-with-errors')
       .capture('basic');
+
+    suite.setCaptureElements('.test-group-with-instructional-errors')
+      .capture('styling instructions');
   });
 });

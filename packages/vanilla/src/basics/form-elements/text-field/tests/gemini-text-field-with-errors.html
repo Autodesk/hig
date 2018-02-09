@@ -48,6 +48,10 @@
     <div class='tests-text-field-with-errors'></div>
   </div>
 
+  <div class='test-group test-group-with-instructional-errors'>
+    <div class='tests-text-field-with-instructional-errors'></div>
+  </div>
+
   <script>
     const FormElements = new Hig.FormElements();
     const TextField = FormElements.partials.TextField;
@@ -62,6 +66,18 @@
 
     TextFieldWithErrors.mount('.tests-text-field-with-errors');
     TextFieldWithErrors.setErrors("Error text");
+
+    // TEXT FIELD WITH INSTRUCTIONAL ERRORS
+
+    const TextFieldWithInstructionalErrors = new TextField({
+      label: "It's a label",
+      placeholder: "It's a placeholder",
+      value: "It's a value",
+      instructions: "Mind the gap"
+    });
+
+    TextFieldWithInstructionalErrors.mount('.tests-text-field-with-instructional-errors');
+    TextFieldWithInstructionalErrors.setErrors();
   </script>
 
 </body>
