@@ -80,6 +80,17 @@ export default class TextFieldAdapter extends Component {
                 value ? instance.required(value) : instance.noLongerRequired()
               }
             </MapsPropToMethod>
+            <MapsPropToMethod value={this.props.errors} {...adapterProps}>
+              {(instance, value) =>
+                value ? instance.setErrors(value) : instance.unsetErrors()
+              }
+            </MapsPropToMethod>
+            <MapsPropToMethod
+              value={this.props.hideInstructionsOnErrors}
+              {...adapterProps}
+            >
+              {(instance, value) => instance.setHideInstructionsOnErrors(value)}
+            </MapsPropToMethod>
             <MapsPropToMethod
               value={this.props.showClearButton}
               {...adapterProps}
@@ -104,6 +115,14 @@ TextFieldAdapter.propTypes = {
    * Prevents user actions on the field
    */
   disabled: PropTypes.bool,
+  /**
+   * Error text for the field. Setting this value applies error styling to the entire component.
+   */
+  errors: PropTypes.string,
+  /**
+   * When true, displays passed error text. When false, displays instructions with error styling.
+   */
+  hideInstructionsOnErrors: PropTypes.bool,
   /**
    * Icon for the field, either the name of an included icon, or an svg string of a custom icon
    */
