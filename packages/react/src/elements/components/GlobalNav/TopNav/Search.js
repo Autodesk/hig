@@ -32,7 +32,8 @@ export default class Search extends Component {
 
   onInput = event => {
     this.props.onInput({ value: event.target.value });
-    this.setState({ showOptions: true });
+    const clearIconVisible = event.target.value.length > 0;
+    this.setState({ showOptions: true, clearIconVisible });
   };
 
   setValue(value) {
@@ -55,14 +56,6 @@ export default class Search extends Component {
 
   hideOptions = () => {
     this.setState({ showOptions: false, focusedOptionIndex: undefined });
-  };
-
-  handleFocusOut = () => {
-    this.setState({ clearIconVisible: false });
-  };
-
-  handleFocusIn = () => {
-    this.setState({ clearIconVisible: true });
   };
 
   showOptions = () => {
@@ -147,8 +140,6 @@ export default class Search extends Component {
         value={this.props.value}
         onInput={this.onInput}
         showOptions={this.showOptions()}
-        onBlur={this.handleFocusOut}
-        onFocus={this.handleFocusIn}
         showClearIcon={this.state.clearIconVisible}
         onClearIconClick={this.handleClearIconClick}
         onClickOutside={this.hideOptions}
