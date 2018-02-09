@@ -104,9 +104,9 @@ jobs:
       - restore_cache:
           key: react-build-{{ .Revision }}
       - run:
-        name: Deploy hig-beta
-        command: yarn deploy-playground $PLAYGROUND_DOMAIN
-        working_directory: packages/react
+          name: Deploy hig-beta
+          command: yarn deploy-playground $PLAYGROUND_DOMAIN
+          working_directory: packages/react
   packages-deploy:
     <<: *defaults
     steps:
