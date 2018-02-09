@@ -339,6 +339,11 @@
               "params": "HIG.abstract.EventObject.params",
               "returns": "HIG.abstract.EventObject.returns"
             },
+            "onKeydown": {
+              "desc": "Calls the provided callback when the user presses a key while the dropdown has focus",
+              "params": "HIG.abstract.EventObject.params",
+              "returns": "HIG.abstract.EventObject.returns"
+            },
             "onTargetClick": {
               "desc": "Calls the provided callback when the user clicks on the dropdown button",
               "params": "HIG.abstract.EventObject.params",
