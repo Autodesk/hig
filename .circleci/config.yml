@@ -93,6 +93,20 @@ jobs:
           working_directory: packages/react
       - store_artifacts:
             path: packages/react/coverage
+  deploy-playground:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependencies-{{ checksum "yarn.lock" }}-{{ checksum "packages/react/yarn.lock" }}-{{ checksum "packages/vanilla/yarn.lock" }}
+      - restore_cache:
+          key: vanilla-build-{{ .Revision }}
+      - restore_cache:
+          key: react-build-{{ .Revision }}
+      - run:
+        name: Deploy hig-beta
+        command: yarn deploy-playground $PLAYGROUND_DOMAIN
+        working_directory: packages/react
   packages-deploy:
     <<: *defaults
     steps:
@@ -132,6 +146,13 @@ workflows:
       - react-test:
           requires:
             - react-build
+      - deploy-playground:
+          requires:
+            - vanilla-test
+            - react-test
+          filters:
+            branches:
+              only: development
       - packages-deploy:
           requires:
             - vanilla-test
