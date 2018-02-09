@@ -3,18 +3,18 @@ gemini.suite('text field', (parent) => {
 
   gemini.suite('regular', (suite) => {
     suite.setCaptureElements('.test-group-default')
-      .before(function (actions, find) {
+      .before((actions, find) => {
         this.field = find('.test-group-default .hig__text-field__input');
       })
       .capture('plain')
-      .capture('hovered', function (actions, _find) {
+      .capture('hovered', (actions, _find) => {
         actions.mouseMove(this.field);
       })
-      .capture('focused', function (actions, _find) {
+      .capture('focused', (actions, _find) => {
         actions.mouseDown(this.field);
         actions.mouseUp(this.field);
       })
-      .capture('with value', function (actions, _find) {
+      .capture('with value', (actions, _find) => {
         actions.sendKeys(this.field, 'Now it has a value');
       });
   });
