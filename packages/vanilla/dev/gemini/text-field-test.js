@@ -44,10 +44,19 @@ gemini.suite('text field', (parent) => {
   gemini.suite('errors', (suite) => {
     suite.setUrl('src/basics/form-elements/text-field/tests/gemini-text-field-with-errors.html');
 
-    suite.setCaptureElements('.test-group-with-errors')
-      .capture('basic');
+    gemini.suite('basic', (errorSuite) => {
+      errorSuite.setCaptureElements('.test-group-with-errors')
+        .capture('basic');
+    });
 
-    suite.setCaptureElements('.test-group-with-instructional-errors')
-      .capture('styling instructions');
+    gemini.suite('styling instructions', (errorSuite) => {
+      errorSuite.setCaptureElements('.test-group-with-instructional-errors')
+        .capture('styling instructions');
+    });
+
+    gemini.suite('errors replacing instructions', (errorSuite) => {
+      errorSuite.setCaptureElements('.test-group-with-hidden-instructions')
+        .capture('errors replacing instructions');
+    });
   });
 });

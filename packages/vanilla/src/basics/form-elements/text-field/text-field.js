@@ -120,6 +120,18 @@ class TextField extends Core {
     this._setErrorStyles(true);
   }
 
+  setHideInstructionsOnErrors(value) {
+    const instructionsEl = this.el.querySelector('.hig__text-field__instructions');
+
+    if (instructionsEl) {
+      if (value) {
+        instructionsEl.classList.add('hig__text-field__instructions--hide-on-error');
+      } else {
+        instructionsEl.classList.remove('hig__text-field__instructions--hide-on-error');
+      }
+    }
+  }
+
   unsetErrors() {
     this._removeElementIfFound('.hig__text-field__errors');
     this._setErrorStyles(false);

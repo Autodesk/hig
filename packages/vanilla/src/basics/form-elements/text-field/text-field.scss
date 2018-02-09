@@ -270,6 +270,11 @@
   }
 
   .hig__text-field__instructions {
+    font-weight: 600;
     color: color(hig-red-alert);
+  }
+
+  .hig__text-field__instructions--hide-on-error {
+    display: none;
   }
 }

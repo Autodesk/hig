@@ -52,6 +52,10 @@
     <div class='tests-text-field-with-instructional-errors'></div>
   </div>
 
+  <div class='test-group test-group-with-hidden-instructions'>
+    <div class='tests-text-field-with-hidden-instructions'></div>
+  </div>
+
   <script>
     const FormElements = new Hig.FormElements();
     const TextField = FormElements.partials.TextField;
@@ -78,6 +82,19 @@
 
     TextFieldWithInstructionalErrors.mount('.tests-text-field-with-instructional-errors');
     TextFieldWithInstructionalErrors.setErrors();
+
+    // TEXT FIELD WITH ERRORS AND HIDDEN INSTRUCTIONS
+
+    const TextFieldWithHiddenInstructions = new TextField({
+      label: "It's a label",
+      placeholder: "It's a placeholder",
+      value: "It's a value",
+      instructions: "Mind the gap"
+    });
+
+    TextFieldWithHiddenInstructions.mount('.tests-text-field-with-hidden-instructions');
+    TextFieldWithHiddenInstructions.setErrors("Custom error text");
+    TextFieldWithHiddenInstructions.setHideInstructionsOnErrors(true);
   </script>
 
 </body>
