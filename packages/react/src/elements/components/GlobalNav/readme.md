@@ -171,10 +171,10 @@ const submodules = [
 By default the Sidenav is closed when the page loads.
 If you want to have it open by default,
 but otherwise don't need to control it,
-pass `true` to `showSideNavByDefault`.
+pass `true` to `sideNavOpenByDefault`.
 
 ```js
-<GlobalNav showSideNavByDefault={true} />
+<GlobalNav sideNavOpenByDefault={true} />
 ```
 
 ### Controlling open/close state of the Sidenav<a name="side-nav-controlled"></a>
