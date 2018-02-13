@@ -480,7 +480,9 @@ If you need to override the copyright notice at the bottom of the Sidenav,
 for example, to display it in another language, provide a string to the `copyright` prop.
 
 ```js
-<GlobalNav copyright="© 2017 Autodesk, Inc." />
+<GlobalNav
+  sideNav={{copyright:"© 2017 Autodesk, Inc."}}
+/>
 ```
 
 ### Custom Sidenav content<a name="side-nav-slot"></a>
