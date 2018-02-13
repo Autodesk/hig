@@ -563,6 +563,21 @@
         },
         "TextField": {
           "methods": {
+            "setErrors": {
+              "desc": "applies error styling to the field and sets error text",
+              "params": [
+                "{String} error text for this text field"
+              ]
+            },
+            "unsetErrors": {
+              "desc": "removes error styling and error text"
+            },
+            "hideInstructionsOnErrors": {
+              "desc": "sets whether to show or hide instructions on errors",
+              "params": [
+                "{Boolean} hidden - whether instructions should be hidden"
+              ]
+            },
             "setInstructions": {
               "desc": "sets the instructions",
               "params": [

@@ -44,7 +44,7 @@
   position: relative;
   color: transparent;
   border: 1px solid color(hig-cool-gray-30);
-  background-color: color(hig-white);
+  background-color: transparent;
   text-align: center;
   font-size: 25px;
   line-height: 14px;
@@ -85,7 +85,7 @@
   .hig__input-button__input[disabled] + & {
     border-color: color(hig-cool-gray-30);
     border-style: dotted;
-    background-color: color(hig-white);
+    background-color: transparent;
     pointer-events: none;
   }
 
@@ -141,4 +141,3 @@
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
 }
-

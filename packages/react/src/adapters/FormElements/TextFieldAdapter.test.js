@@ -23,6 +23,8 @@ describe("TextFieldAdapter", () => {
           onClearButtonClick={() => {}}
           onFocus={() => {}}
           onInput={() => {}}
+          errors="Try again"
+          hideInstructionsOnErrors
         />
       );
       mount(
@@ -31,6 +33,8 @@ describe("TextFieldAdapter", () => {
           disabled={false}
           showClearButton={false}
           required=""
+          errors=""
+          hideInstructionsOnErrors={false}
         />
       );
     }).toImplementHIGInterfaceOf(VanillaTextField);
