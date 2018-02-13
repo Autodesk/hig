@@ -485,12 +485,26 @@ for example, to display it in another language, provide a string to the `copyrig
 
 ### Custom Sidenav content<a name="side-nav-slot"></a>
 
-You can display arbitrary markup with the Sidenav by passing rendered JSX to the `children` prop.
+You can display arbitrary markup with the Sidenav by passing rendered JSX to the `slot` prop.
 
 ```js
 <GlobalNav
   sideNav={{
-    children: <Button title="Special Sidenav button" link="http://hig.autodesk.com" />
+    slot: (
+				<div>
+					<Button
+						title="Designer Toolkit"
+						link="https://github.com/Autodesk/hig"
+					/>
+					<br/>
+					<Button
+						title="Git Repository"
+						type="secondary"
+						link="https://github.com/Autodesk/hig"
+						target="_blank"
+					/>
+				</div>
+		)
   }}
 />
 ```
