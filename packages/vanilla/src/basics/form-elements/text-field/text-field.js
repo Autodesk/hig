@@ -120,7 +120,7 @@ class TextField extends Core {
     this._setErrorStyles(true);
   }
 
-  setHideInstructionsOnErrors(value) {
+  hideInstructionsOnErrors(value) {
     const instructionsEl = this.el.querySelector('.hig__text-field__instructions');
 
     if (instructionsEl) {

@@ -572,7 +572,7 @@
             "unsetErrors": {
               "desc": "removes error styling and error text"
             },
-            "setHideInstructionsOnErrors": {
+            "hideInstructionsOnErrors": {
               "desc": "sets whether to show or hide instructions on errors",
               "params": [
                 "{Boolean} hidden - whether instructions should be hidden"

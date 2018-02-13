@@ -89,7 +89,7 @@ export default class TextFieldAdapter extends Component {
               value={this.props.hideInstructionsOnErrors}
               {...adapterProps}
             >
-              {(instance, value) => instance.setHideInstructionsOnErrors(value)}
+              {(instance, value) => instance.hideInstructionsOnErrors(value)}
             </MapsPropToMethod>
             <MapsPropToMethod
               value={this.props.showClearButton}
