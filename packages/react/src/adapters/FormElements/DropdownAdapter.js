@@ -56,6 +56,12 @@ function DropdownAdapter(props) {
             setter="setPlaceholder"
             {...adapterProps}
           />
+
+          <MapsEventListener
+            listener="onKeydown"
+            handler={props.onKeydown}
+            {...adapterProps}
+          />
           <MapsPropToMethod value={props.open} {...adapterProps}>
             {(instance, value) => (value ? instance.open() : instance.close())}
           </MapsPropToMethod>
