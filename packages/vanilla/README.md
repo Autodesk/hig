@@ -29,4 +29,4 @@ more advanced button examples can be found in [the components tests dir](src/com
 
 ## Contribute
 
-Please see [DEVELOPING.md](./DEVELOPING.md).
+Please see [DEVELOPING.md](./DEVELOPING.md) and [CONTRIBUTING.md](../../CONTRIBUTING.md).
