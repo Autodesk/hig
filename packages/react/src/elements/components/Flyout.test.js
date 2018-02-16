@@ -19,4 +19,13 @@ describe("<Flyout />", () => {
       expect(wrapper.find(FlyoutAdapter)).toHaveProp("open", true);
     });
   });
+
+  describe("initiallyOpen", () => {
+    it("initially opens the FlyoutAdapter", () => {
+      const wrapper = shallow(<Flyout initiallyOpen />);
+      expect(wrapper.find(FlyoutAdapter)).toHaveProp("open", true);
+      wrapper.instance().toggleFlyout();
+      expect(wrapper.find(FlyoutAdapter)).toHaveProp("open", false);
+    });
+  });
 });

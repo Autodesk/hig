@@ -7,8 +7,14 @@ export default class Flyout extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      open: false
+      open: this.props.initiallyOpen
     };
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (!this.state.open && this.state.open !== prevState.open) {
+      this.props.onClose();
+    }
   }
 
   closeFlyout = () => {
@@ -37,6 +43,11 @@ export default class Flyout extends Component {
   }
 }
 
+Flyout.defaultProps = {
+  initiallyOpen: false,
+  onClose: () => {}
+};
+
 Flyout.propTypes = {
   /**
    * Where the flyout will be anchored relative to target
@@ -51,7 +62,15 @@ Flyout.propTypes = {
    */
   content: PropTypes.node,
   /**
+   * When true, renders the flyout open on mount
+   */
+  initiallyOpen: PropTypes.bool,
+  /**
    * Max height of the flyout content, in pixels
    */
-  maxHeight: PropTypes.number
+  maxHeight: PropTypes.number,
+  /**
+   * Function to call when flyout closes
+   */
+  onClose: PropTypes.func
 };
