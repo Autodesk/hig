@@ -224,64 +224,64 @@
 .hig__flyout__chevron {
   .hig__flyout__container--anchor-top-left & {
     @include top-chevron;
-    &::before {
-      left: 14px;
-    }
-    &::after {
-      left: 15px;
-    }
+    // &::before {
+    //   left: 14px;
+    // }
+    // &::after {
+    //   left: 15px;
+    // }
   }
   .hig__flyout__container--anchor-top-center & {
     @include top-chevron;
     &::before,
     &::after {
-      left: 50%;
+      // left: 50%;
       transform: translateX(-50%);
     }
   }
   .hig__flyout__container--anchor-top-right & {
     @include top-chevron;
-    &::before {
-      right: 14px;
-    }
-    &::after {
-      right: 15px;
-    }
+    // &::before {
+    //   right: 14px;
+    // }
+    // &::after {
+    //   right: 15px;
+    // }
   }
   .hig__flyout__container--anchor-right-top & {
     @include right-chevron;
-    &::before {
-      top: 14px;
-    }
-    &::after {
-      top: 15px;
-    }
+    // &::before {
+    //   top: 14px;
+    // }
+    // &::after {
+    //   top: 15px;
+    // }
   }
   .hig__flyout__container--anchor-right-center & {
     @include right-chevron;
-    &::before,
-    &::after {
-      top: 50%;
-      transform: translateY(-50%);
-    }
+    // &::before,
+    // &::after {
+    //   top: 50%;
+    //   transform: translateY(-50%);
+    // }
   }
   .hig__flyout__container--anchor-right-bottom & {
     @include right-chevron;
-    &::before {
-      bottom: 14px;
-    }
-    &::after {
-      bottom: 15px;
-    }
+    // &::before {
+    //   bottom: 14px;
+    // }
+    // &::after {
+    //   bottom: 15px;
+    // }
   }
   .hig__flyout__container--anchor-bottom-left & {
     @include bottom-chevron;
-    &::before {
-      left: 14px;
-    }
-    &::after {
-      left: 15px;
-    }
+    // &::before {
+    //   left: 14px;
+    // }
+    // &::after {
+    //   left: 15px;
+    // }
   }
   .hig__flyout__container--anchor-bottom-center & {
     @include bottom-chevron;
@@ -293,38 +293,38 @@
   }
   .hig__flyout__container--anchor-bottom-right & {
     @include bottom-chevron;
-    &::before {
-      right: 14px;
-    }
-    &::after {
-      right: 15px;
-    }
+    // &::before {
+    //   right: 14px;
+    // }
+    // &::after {
+    //   right: 15px;
+    // }
   }
   .hig__flyout__container--anchor-left-top & {
     @include left-chevron;
-    &::before {
-      top: 14px;
-    }
-    &::after {
-      top: 15px;
-    }
+    // &::before {
+    //   top: 14px;
+    // }
+    // &::after {
+    //   top: 15px;
+    // }
   }
   .hig__flyout__container--anchor-left-center & {
     @include left-chevron;
-    &::before,
-    &::after {
-      top: 50%;
-      transform: translateY(-50%);
-    }
+    // &::before,
+    // &::after {
+    //   top: 50%;
+    //   transform: translateY(-50%);
+    // }
   }
   .hig__flyout__container--anchor-left-bottom & {
     @include left-chevron;
-    &::before {
-      bottom: 14px;
-    }
-    &::after {
-      bottom: 15px;
-    }
+    // &::before {
+    //   bottom: 14px;
+    // }
+    // &::after {
+    //   bottom: 15px;
+    // }
   }
 }
 

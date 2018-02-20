@@ -1,4 +1,4 @@
-/* globals window */
+/* globals window document */
 import Interface from 'interface.json';
 import Core from '_core.js';
 import CSSTransition from 'helpers/js/css-transition';
@@ -50,6 +50,7 @@ class Flyout extends Core {
 
   open() {
     this.containerAnimation.enter();
+    this.flyoutVisible();
   }
 
   close() {
@@ -105,6 +106,30 @@ class Flyout extends Core {
       )
     );
     container.classList.add(`hig__flyout__container--anchor-${anchorPoint}`);
+    this.flyoutVisible();
+  }
+
+  flyoutVisible() {
+    const viewPortWidth = document.documentElement.clientWidth;
+    const flyoutPanel = this._findDOMEl('.hig__flyout__panel', this.el);
+    const flyoutViewPortInfo = flyoutPanel.getBoundingClientRect();
+
+    const target = this.el.firstElementChild;
+    const chevron = this._findDOMEl('.hig__flyout__chevron', this.el);
+
+    const anchorDistanceFromLeft = target.getBoundingClientRect().right;
+    const chevronDistanceFromLeft = chevron.getBoundingClientRect().right;
+
+    const moveChevronDistance = (chevronDistanceFromLeft - anchorDistanceFromLeft) / 2;
+
+    if (viewPortWidth < flyoutViewPortInfo.right) {
+      const shiftDistance = (flyoutViewPortInfo.right - viewPortWidth) + 5;
+      flyoutPanel.style.position = 'absolute';
+      flyoutPanel.style.left = `-${shiftDistance}px`;
+
+      chevron.style.position = 'absolute';
+      chevron.style.left = `${moveChevronDistance}px`;
+    }
   }
 
   setMaxHeight(maxHeight) {

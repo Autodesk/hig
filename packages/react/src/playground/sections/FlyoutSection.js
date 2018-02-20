@@ -14,6 +14,7 @@ class FlyoutSection extends Component {
               <p>You can put what ever you want in here.</p>
             </div>
           }
+          open
         >
           <Button title="Open flyout" />
         </Flyout>

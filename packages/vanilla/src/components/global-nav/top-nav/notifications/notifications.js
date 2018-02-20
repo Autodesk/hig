@@ -1,4 +1,4 @@
-/* globals window */
+/* globals window document */
 import Interface from 'interface.json';
 import Core from '_core.js';
 import Shortcut from 'components/global-nav/top-nav/shortcut/shortcut';
@@ -36,7 +36,7 @@ class Notifications extends Core {
 
     this.flyout.addTarget(this.shortcut);
     this.flyout.addSlot(this.list);
-    this.flyout.setAnchorPoint('top-right');
+    this.flyout.setAnchorPoint('top-left');
     window.addEventListener('resize', this._adjustFlyoutMaxHeight.bind(this));
 
     this.unreadCount = this._findDOMEl(
