@@ -75,6 +75,15 @@ class Dropdown extends Core {
     return this.field._attachListener('keypress', this.el, this.el, fn);
   }
 
+  onKeydown(fn) {
+    return this._attachListener(
+      'keydown',
+      this.el,
+      this.el,
+      fn
+    );
+  }
+
   onFocus(fn) {
     return this.field.onFocus(fn);
   }

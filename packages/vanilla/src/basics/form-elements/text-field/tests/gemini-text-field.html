@@ -1,133 +1,130 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="../../../../../../../lib/hig.css">
-        <script type="text/javascript" src="../../../../../../../lib/hig.js"></script>
+<head>
+  <link rel="stylesheet" href="../../../../../lib/hig.css">
+  <script type="text/javascript" src="../../../../../lib/hig.js"></script>
 
-        <style>
-            * {
-                transition-duration: 0s !important;
-                transition-delay: 0s !important;
-            }
+  <style>
+    * {
+      transition-duration: 0s !important;
+      transition-delay: 0s !important;
+    }
 
-            ::-webkit-input-placeholder {
-                transition-duration: 0s !important;
-                transition-delay: 0s !important;
-            }
+    ::-webkit-input-placeholder {
+      transition-duration: 0s !important;
+      transition-delay: 0s !important;
+    }
 
-            ::moz-placeholder {
-                transition-duration: 0s !important;
-                transition-delay: 0s !important;
-            }
+    ::moz-placeholder {
+      transition-duration: 0s !important;
+      transition-delay: 0s !important;
+    }
 
-            :-moz-placeholder {
-                transition-duration: 0s !important;
-                transition-delay: 0s !important;
-            }
+    :-moz-placeholder {
+      transition-duration: 0s !important;
+      transition-delay: 0s !important;
+    }
 
-            :-ms-input-placeholder {
-                transition-duration: 0s !important;
-                transition-delay: 0s !important;
-            }
+    :-ms-input-placeholder {
+      transition-duration: 0s !important;
+      transition-delay: 0s !important;
+    }
 
-            ::placeholder {
-                transition-duration: 0s !important;
-                transition-delay: 0s !important;
-            }
+    ::placeholder {
+      transition-duration: 0s !important;
+      transition-delay: 0s !important;
+    }
 
-            body {
-                padding: 30px;
-            }
+    body {
+      padding: 30px;
+    }
 
-            .test-group {
-                padding: 10px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class='test-group test-group-default'>
-            <div class='tests-text-field'></div>
-        </div>
+    .test-group {
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class='test-group test-group-default'>
+    <div class='tests-text-field'></div>
+  </div>
 
-        <div class='test-group test-group-clear-button'>
-            <div class='tests-text-field-clear-button'></div>
-        </div>
+  <div class='test-group test-group-clear-button'>
+    <div class='tests-text-field-clear-button'></div>
+  </div>
 
-        <div class='test-group test-group-icon'>
-            <div class='tests-text-field-icon'></div>
-        </div>
+  <div class='test-group test-group-icon'>
+    <div class='tests-text-field-icon'></div>
+  </div>
 
-        <div class='test-group test-group-disabled'>
-            <div class='tests-text-field-disabled'></div>
-        </div>
+  <div class='test-group test-group-disabled'>
+    <div class='tests-text-field-disabled'></div>
+  </div>
 
-        <div class='test-group-disabled-value-anchor'>
-            <a id='test-group-disabled-value' href='#test-group-disabled-value'>Disabled with Value</a>
-        </div>
-        <div class='test-group test-group-disabled-value'>
-            <div class='tests-text-field-disabled-value'></div>
-        </div>
+  <div class='test-group-disabled-value-anchor'>
+    <a id='test-group-disabled-value' href='#test-group-disabled-value'>Disabled with Value</a>
+  </div>
+  <div class='test-group test-group-disabled-value'>
+    <div class='tests-text-field-disabled-value'></div>
+  </div>
 
-        <script>
-            const FormElements = new Hig.FormElements();
-            const TextField = FormElements.partials.TextField;
+  <script>
+    const FormElements = new Hig.FormElements();
+    const TextField = FormElements.partials.TextField;
 
-            // TEXT FIELD CONFIGURED WITH DEFAULTS
+    // TEXT FIELD CONFIGURED WITH DEFAULTS
 
-            const DefaultTextField = new TextField({
-                label: "Our label",
-                placeholder: "Our placeholder",
-                instructions: "Type your words into the text field"
-            });
+    const DefaultTextField = new TextField({
+      label: "Our label",
+      placeholder: "Our placeholder",
+      instructions: "Type your words into the text field"
+    });
 
-            DefaultTextField.mount('.tests-text-field');
+    DefaultTextField.mount('.tests-text-field');
 
-            // TEXT FIELD WITH CLEAR BUTTON
+    // TEXT FIELD WITH CLEAR BUTTON
 
-            const ClearButtonTextField = new TextField({
-                label: "This is a label",
-                placeholder: "This is a placeholder",
-                value: "This text is long enough to ensure no overlap with the clear button",
-                instructions: "Clear button will appear when you type here"
-            });
+    const ClearButtonTextField = new TextField({
+      label: "This is a label",
+      placeholder: "This is a placeholder",
+      value: "This text is long enough to ensure no overlap with the clear button",
+      instructions: "Clear button will appear when you type here"
+    });
 
-            ClearButtonTextField.mount('.tests-text-field-clear-button');
+    ClearButtonTextField.mount('.tests-text-field-clear-button');
 
-            ClearButtonTextField.showClearButton();
+    ClearButtonTextField.showClearButton();
 
-            // TEXT FIELD WITH ICON
+    // TEXT FIELD WITH ICON
 
-            const IconTextField = new TextField({
-                label: "Eye color",
-                icon: "visible"
-            });
+    const IconTextField = new TextField({
+      label: "Eye color",
+      icon: "visible"
+    });
 
-            IconTextField.mount('.tests-text-field-icon');
+    IconTextField.mount('.tests-text-field-icon');
 
-            // TEXT FIELD DISABLED
+    // TEXT FIELD DISABLED
 
-            const DisabledTextField = new TextField({
-                label: "It's a label",
-                placeholder: "It's a placeholder"
-            });
+    const DisabledTextField = new TextField({
+      label: "It's a label",
+      placeholder: "It's a placeholder"
+    });
 
-            DisabledTextField.mount('.tests-text-field-disabled');
-            DisabledTextField.disable();
+    DisabledTextField.mount('.tests-text-field-disabled');
+    DisabledTextField.disable();
 
-            // TEXT FIELD DISABLED WITH A VALUE
+    // TEXT FIELD DISABLED WITH A VALUE
 
-            const DisabledValueTextField = new TextField({
-                label: "It's a label",
-                placeholder: "It's a placeholder",
-                value: "It's a value"
-            });
+    const DisabledValueTextField = new TextField({
+      label: "It's a label",
+      placeholder: "It's a placeholder",
+      value: "It's a value"
+    });
 
-            DisabledValueTextField.mount('.tests-text-field-disabled-value');
+    DisabledValueTextField.mount('.tests-text-field-disabled-value');
+    DisabledValueTextField.showClearButton();
+    DisabledValueTextField.disable();
+  </script>
 
-            DisabledValueTextField.showClearButton();
-
-            DisabledValueTextField.disable();
-
-        </script>
-
-    </body>
+</body>
 </html>

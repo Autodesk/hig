@@ -22,16 +22,16 @@
   &__links {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
     margin-top: 10px;
     min-width: 225px;
+  }
 
-    .hig__button {
-      margin-top: 10px;
-    }
+  &__link {
+    margin-top: 10px;
+    margin-right: 10px;
 
-    .hig__button + .hig__button {
-      margin-left: unset;
+    &:last-child {
+      margin-right: unset;
     }
   }
 }

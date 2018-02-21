@@ -171,10 +171,10 @@ const submodules = [
 By default the Sidenav is closed when the page loads.
 If you want to have it open by default,
 but otherwise don't need to control it,
-pass `true` to `showSideNavByDefault`.
+pass `true` to `sideNavOpenByDefault`.
 
 ```js
-<GlobalNav showSideNavByDefault={true} />
+<GlobalNav sideNavOpenByDefault={true} />
 ```
 
 ### Controlling open/close state of the Sidenav<a name="side-nav-controlled"></a>
@@ -480,17 +480,33 @@ If you need to override the copyright notice at the bottom of the Sidenav,
 for example, to display it in another language, provide a string to the `copyright` prop.
 
 ```js
-<GlobalNav copyright="© 2017 Autodesk, Inc." />
+<GlobalNav
+  sideNav={{copyright:"© 2017 Autodesk, Inc."}}
+/>
 ```
 
 ### Custom Sidenav content<a name="side-nav-slot"></a>
 
-You can display arbitrary markup with the Sidenav by passing rendered JSX to the `children` prop.
+You can display arbitrary markup with the Sidenav by passing rendered JSX to the `slot` prop.
 
 ```js
 <GlobalNav
   sideNav={{
-    children: <Button title="Special Sidenav button" link="http://hig.autodesk.com" />
+    slot: (
+				<div>
+					<Button
+						title="Designer Toolkit"
+						link="https://github.com/Autodesk/hig"
+					/>
+					<br/>
+					<Button
+						title="Git Repository"
+						type="secondary"
+						link="https://github.com/Autodesk/hig"
+						target="_blank"
+					/>
+				</div>
+		)
   }}
 />
 ```

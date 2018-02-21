@@ -21,6 +21,7 @@ describe("DropdownAdapter", () => {
           onClickOutside={() => {}}
           onFocus={() => {}}
           onKeypress={() => {}}
+          onKeydown={() => {}}
           onTargetClick={() => {}}
         >
           <OptionAdapter value="123" />

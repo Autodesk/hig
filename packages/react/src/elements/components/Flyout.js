@@ -13,6 +13,7 @@ export default class Flyout extends Component {
 
   closeFlyout = () => {
     this.setState({ open: false });
+    this.props.onClickOutside();
   };
 
   toggleFlyout = () => {
@@ -26,7 +27,11 @@ export default class Flyout extends Component {
     return (
       <FlyoutAdapter
         anchorPoint={this.props.anchorPoint}
-        open={this.state.open}
+        open={
+          typeof this.props.open === "boolean"
+            ? this.props.open
+            : this.state.open
+        }
         onClickOutside={this.closeFlyout}
         content={this.props.content}
         maxHeight={this.props.maxHeight}
@@ -36,6 +41,10 @@ export default class Flyout extends Component {
     );
   }
 }
+
+Flyout.defaultProps = {
+  onClickOutside: () => {}
+};
 
 Flyout.propTypes = {
   /**
@@ -53,5 +62,13 @@ Flyout.propTypes = {
   /**
    * Max height of the flyout content, in pixels
    */
-  maxHeight: PropTypes.number
+  maxHeight: PropTypes.number,
+  /**
+   * Function to call when clicking outside of the flyout
+   */
+  onClickOutside: PropTypes.func,
+  /**
+   * When provided, it overrides the flyout's open state
+   */
+  open: PropTypes.bool
 };

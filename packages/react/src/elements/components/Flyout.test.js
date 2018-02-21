@@ -19,4 +19,24 @@ describe("<Flyout />", () => {
       expect(wrapper.find(FlyoutAdapter)).toHaveProp("open", true);
     });
   });
+
+  describe("open", () => {
+    describe("when true", () => {
+      it("keeps the Flyout open", () => {
+        const wrapper = shallow(<Flyout open />);
+        expect(wrapper.find(FlyoutAdapter)).toHaveProp("open", true);
+        wrapper.instance().toggleFlyout();
+        expect(wrapper.find(FlyoutAdapter)).toHaveProp("open", true);
+      });
+    });
+
+    describe("when false", () => {
+      it("keeps the Flyout closed", () => {
+        const wrapper = shallow(<Flyout open={false} />);
+        expect(wrapper.find(FlyoutAdapter)).toHaveProp("open", false);
+        wrapper.instance().toggleFlyout();
+        expect(wrapper.find(FlyoutAdapter)).toHaveProp("open", false);
+      });
+    });
+  });
 });

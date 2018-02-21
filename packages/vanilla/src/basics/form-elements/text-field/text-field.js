@@ -110,6 +110,33 @@ class TextField extends Core {
     return this[name];
   }
 
+  setErrors(errors) {
+    const errorsEl = this._findOrAddElement(
+      'ERRORS',
+      'p',
+      '.hig__text-field__errors'
+    );
+    errorsEl.textContent = errors;
+    this._setErrorStyles(true);
+  }
+
+  hideInstructionsOnErrors(value) {
+    const instructionsEl = this.el.querySelector('.hig__text-field__instructions');
+
+    if (instructionsEl) {
+      if (value) {
+        instructionsEl.classList.add('hig__text-field__instructions--hide-on-error');
+      } else {
+        instructionsEl.classList.remove('hig__text-field__instructions--hide-on-error');
+      }
+    }
+  }
+
+  unsetErrors() {
+    this._removeElementIfFound('.hig__text-field__errors');
+    this._setErrorStyles(false);
+  }
+
   setInstructions(instructions) {
     if (instructions) {
       const instructionsEl = this._findOrAddElement(
@@ -317,6 +344,12 @@ class TextField extends Core {
       ? field.setAttribute('readonly', true)
       : field.removeAttribute('readonly');
   }
+
+  _setErrorStyles(value) {
+    value
+      ? this.el.classList.add('hig__text-field--with-errors')
+      : this.el.classList.remove('hig__text-field--with-errors');
+  }
 }
 
 TextField._interface = Interface.basics.FormElements.partials.TextField;
@@ -327,7 +360,8 @@ TextField._defaults = {
   placeholder: '',
   required: '',
   value: '',
-  instructions: ''
+  instructions: '',
+  errors: ''
 };
 TextField._partials = {};
 
