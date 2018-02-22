@@ -1,7 +1,9 @@
 @import '~basics/colors/colors.scss';
 @import '~helpers/css/mixins/spacing.scss';
+@import '~helpers/css/mixins/typography.scss';
 
 .hig__tabs__tab {
+  @include typography-large;
   position: relative;
   display: flex;
   align-content: center;
@@ -13,8 +15,7 @@
 
   color: color(hig-gray-70);
   user-select: none;
-  font-size: 14px;
-  font-weight: 500;
+  font-weight: 700;
   text-align: center;
 
   &:before {
@@ -48,7 +49,7 @@
 .hig__tabs__tab--active {
   .hig__tabs__tab-label {
     padding: spacing(xxs) 0;
-    font-weight: 700;
-    border-bottom-color: color(hig-gray-70);
+    color: color(hig-blue-50);
+    border-bottom-color: color(hig-blue-50);
   }
 }
