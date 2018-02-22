@@ -86,17 +86,14 @@
   @include typography-base;
   display: block;
   font-weight: 700;
-  font-size: 14px;
-  line-height: 24px;
-  color: color('hig-cool-gray-40');
+  color: transparentize($typography-base-color, .5);
 }
 
 .hig__rich-text h5,
 .hig__typography__sub2 {
   @include typography-base;
+  @include typography-small;
   display: block;
   font-weight: 700;
-  font-size: 12px;
-  line-height: 16px;
-  color: color('hig-cool-gray-40');
+  color: transparentize($typography-base-color, .5);
 }
