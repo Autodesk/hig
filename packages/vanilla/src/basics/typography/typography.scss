@@ -1,6 +1,6 @@
 @import '~basics/fonts/fonts.scss';
 @import '~basics/colors/colors.scss';
-@import '~helpers/css/mixins/typography-base.scss';
+@import '~helpers/css/mixins/typography.scss';
 @import '~helpers/css/mixins/spacing.scss';
 .hig__typography,
 .hig__rich-text,
@@ -10,15 +10,12 @@
 }
 
 .hig__typography--small {
-  font-size: 12px;
-  line-height: 18px;
-  font-weight: 500;
+  @include typography-small;
   margin-bottom: spacing(xs);
 }
 
 .hig__typography--large {
-  font-size: 16px;
-  line-height: 22px;
+  @include typography-large;
 }
 
 // COLORS
