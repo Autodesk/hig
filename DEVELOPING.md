@@ -8,6 +8,8 @@ Find information about HIG-React here [DEVELOPING](packages/react/README.md)
 
 # Deployment
 
+1. Switch to `development` branch.
 1. `yarn update-packages  # Update package version numbers and adds tags and publish commit`
-2. Create a pull request to merge `development` into `master`.
-3. Merge.
+1. `git push --follow-tags  # Push development and new tags`
+1. Create a pull request to merge `development` into `master`.
+1. Merge.
