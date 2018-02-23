@@ -22,8 +22,6 @@ export default class SelectableTable extends Component {
       rows: {},
       allRowsSelected: false
     };
-
-    this.initialProps = props;
   }
 
   selectRow = rowInfo => {
@@ -87,8 +85,8 @@ export default class SelectableTable extends Component {
 
   render() {
     const columns = [this.checkboxHeader()].concat(this.props.columns);
-    const data = this.initialProps.data.map(this.mergeRowState);
-    return this.props.children(columns, data, this.props.density);
+    const enhancedData = this.props.data.map(this.mergeRowState);
+    return this.props.children(columns, enhancedData, this.props.density);
   }
 }
 
