@@ -185,6 +185,10 @@ class NotificationsSection extends PureComponent {
             ))}
           </Notifications>
         </div>
+        <hr />
+        <div style={{ display: "flex", justifyContent: "flex-end" }}>
+          <Notifications title="Empty Notifications" />
+        </div>
       </PlaygroundSection>
     );
   }
