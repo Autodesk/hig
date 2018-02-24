@@ -1,12 +1,13 @@
 @import '~basics/colors/colors.scss';
 @import '~helpers/css/mixins/base.scss';
+@import '~helpers/css/mixins/typography.scss';
 
 .hig__button {
   display: inline-block;
   @include vendor-prefix('box-sizing', 'border-box');
   @include vendor-prefix('user-select', 'none');
+  @include typography-base;
 
-  font-family: 'ArtifaktElement';
   font-weight: 700;
   text-decoration: none;
   text-align: center;
@@ -23,7 +24,6 @@
   height: 36px;
   line-height: 34px;
   min-width: 68px;
-  font-size: 14px;
 
   // always have a border to prevent box-sizing vertical spacing issues
   border: 1px solid transparent;
@@ -64,19 +64,21 @@
   // SIZES
 
   &--small{
+    @include typography-small;
+    font-weight: 700;
     height: 28px;
     line-height: 26px;
     min-width: 66px;
     padding: 0 16px;
-    font-size: 12px;
   }
 
   &--large{
+    @include typography-large;
+    font-weight: 700;
     height: 42px;
     line-height: 40px;
     min-width: 90px;
     padding: 0 24px;
-    font-size: 16px;
   }
 
   // WIDTH MODE

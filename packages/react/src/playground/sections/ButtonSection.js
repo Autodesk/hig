@@ -82,15 +82,35 @@ class ButtonSection extends PureComponent {
         <Button
           size="small"
           type="primary"
-          title="Standard Button with Icon"
+          title="Small Button with Icon"
           icon="settings"
           onClick={() => {
-            console.log("Button with icon on click");
+            console.log("Small button with icon on click");
           }}
         />
 
         <Button
-          size="small"
+          size="standard"
+          type="primary"
+          title="Standard Button with Icon"
+          icon="settings"
+          onClick={() => {
+            console.log("Standard button with icon on click");
+          }}
+        />
+
+        <Button
+          size="large"
+          type="primary"
+          title="Large Button with Icon"
+          icon="settings"
+          onClick={() => {
+            console.log("Large button with icon on click");
+          }}
+        />
+
+        <Button
+          size="standard"
           type="primary"
           title="Standard Button with Listeners Attached"
           onClick={() => {

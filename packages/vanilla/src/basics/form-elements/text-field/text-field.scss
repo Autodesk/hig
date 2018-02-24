@@ -1,5 +1,6 @@
 @import '~basics/colors/colors.scss';
 @import '~helpers/css/mixins/placeholder.scss';
+@import '~helpers/css/mixins/typography.scss';
 
 .hig__text-field {
   position: relative;
@@ -43,14 +44,12 @@
 }
 
 .hig__text-field__label {
+  @include typography-small;
+  color: transparentize($typography-base-color, .5);
+
   display: none;
   position: relative;
   padding-bottom: 8px;
-
-  color: color(hig-cool-gray-50);
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 14px;
 
   transition-property: top, font-size, line-height;
   transition-duration: 0.1s, 0.1s, 0.1s;
@@ -61,6 +60,7 @@
   }
 
   .hig__text-field__input:focus + & {
+    @include typography-small;
     color: color(hig-blue-60);
   }
 
@@ -71,15 +71,14 @@
   }
 
   .hig__text-field__input--no-value + & {
+    @include typography-medium;
     top: 22px;
     left: 1px;
-    font-size: 14px;
   }
 
   .hig__text-field__input--no-value.hig__text-field__input:focus + & {
     top: 0;
     left: 0;
-    font-size: 12px;
     transition-delay: 0s;
   }
 
@@ -87,7 +86,6 @@
     color: color(hig-cool-gray-20);
     pointer-events: none;
   }
-
 }
 
 .hig__text-field__input {

@@ -2,7 +2,7 @@ import React, { PureComponent } from "react";
 import PlaygroundSection from "../PlaygroundSection";
 import TableSection from "./TableSection";
 
-import TypographySection from "./TypographySection";
+import RichTextSection from "./RichTextSection";
 import {
   Button,
   Tabs,
@@ -50,7 +50,7 @@ class ContainerViewSection extends PureComponent {
         />
         <ContainerView>
           <ContainerViewLeft open={this.state.isContainerLeftOpen}>
-            <TypographySection />
+            <RichTextSection />
           </ContainerViewLeft>
           <ContainerViewContent>
             <TableSection />

@@ -1,4 +1,6 @@
 @import '~helpers/css/mixins/spacing.scss';
+@import '~helpers/css/mixins/typography.scss';
+
 .hig__rich-text {
   ul {
     padding-left: 20px;
@@ -16,24 +18,18 @@
 }
 
 .hig__rich-text--small {
-  font-size: 12px;
-  line-height: 18px;
-  font-weight: 500;
+  @include typography-small;
   margin-bottom: spacing(xs);
 
   b, p {
-    font-size: 12px;
-    line-height: 18px;
-    font-weight: 500;
+    @include typography-small;
   }
 }
 
 .hig__rich-text--large {
-  font-size: 16px;
-  line-height: 22px;
+  @include typography-large;
 
   p {
-    font-size: 16px;
-    line-height: 22px;
+    @include typography-large;
   }
 }
