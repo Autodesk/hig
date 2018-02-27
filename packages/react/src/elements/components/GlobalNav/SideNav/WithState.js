@@ -10,7 +10,8 @@ export default function WithState(WrappedComponent) {
       modules: PropTypes.arrayOf(
         PropTypes.shape({
           id: PropTypes.string.isRequired,
-          title: PropTypes.string.isRequired
+          title: PropTypes.string.isRequired,
+          minimized: PropTypes.bool
         })
       ),
       onModuleChange: PropTypes.func.isRequired,
@@ -72,8 +73,17 @@ export default function WithState(WrappedComponent) {
         const isLargeModule = groupedSubmodules[moduleId].length > 5;
         const isInactiveModule = moduleId !== this.props.activeModuleId;
 
+        const moduleProps = this.props.modules.find(
+          module => module.id === moduleId
+        );
+
+        const initialModuleState =
+          moduleProps && typeof moduleProps.minimized !== "undefined"
+            ? moduleProps.minimized
+            : isLargeModule && isInactiveModule;
+
         moduleStates[moduleId] = {
-          minimized: isLargeModule && isInactiveModule
+          minimized: initialModuleState
         };
       });
 

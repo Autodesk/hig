@@ -3,96 +3,112 @@ export const modules = [
     id: "1-1",
     groupId: "1",
     icon: "insight",
-    title: "Insight"
+    title: "Insight",
+    minimized: true
   },
   {
     id: "1-2",
     groupId: "2",
     icon: "collaboration",
-    title: "Beispiel eines extra langen Modulnamens"
+    title: "Beispiel eines extra langen Modulnamens",
+    minimized: true
   },
   {
     id: "1-3",
     groupId: "2",
     icon: "document-management",
-    title: "Document Management"
+    title: "Document Management",
+    minimized: true
   },
   {
     id: "1-4",
     groupId: "2",
     icon: "model-coordination",
-    title: "Model Coordination"
+    title: "Model Coordination",
+    minimized: true
   },
   {
     id: "1-5",
     groupId: "2",
     icon: "project-management",
-    title: "Project Management"
+    title: "Project Management",
+    minimized: true
   },
   {
     id: "1-6",
     groupId: "2",
     icon: "quantities",
-    title: "Quantities"
+    title: "Quantities",
+    minimized: true
   },
   {
     id: "1-7",
     groupId: "2",
     icon: "cost-control",
-    title: "Cost Control"
+    title: "Cost Control",
+    minimized: true
   },
   {
     id: "1-8",
     groupId: "2",
     icon: "document-management",
-    title: "Schedule"
+    title: "Schedule",
+    minimized: true
   },
   {
     id: "1-9",
     groupId: "2",
-    title: "Field"
+    title: "Field",
+    minimized: true
   },
   {
     id: "1-10",
     groupId: "2",
     icon: "layout",
-    title: "Layout"
+    title: "Layout",
+    minimized: true
   },
   {
     id: "1-11",
     groupId: "2",
     icon: "building-ops",
-    title: "Building Ops"
+    title: "Building Ops",
+    minimized: true
   },
   {
     id: "1-12",
     groupId: "3",
     icon: "file-document",
-    title: "Library"
+    title: "Library",
+    minimized: true
   },
   {
     id: "1-13",
     groupId: "3",
     icon: "photos",
-    title: "Photos"
+    title: "Photos",
+    minimized: true
   },
   {
     id: "1-14",
     groupId: "3",
     icon: "assets",
-    title: "Assets"
+    title: "Assets",
+    minimized: true
   },
   {
     id: "1-15",
     groupId: "3",
     icon: "location",
-    title: "Location"
+    title: "Location",
+    minimized: true
   },
   {
     id: "1-16",
     groupId: "4",
     icon: "project-management",
-    title: "Project Admin"
+    title: "Project Admin",
+    minimized: true
   },
   {
     id: "1-17",
@@ -100,13 +116,15 @@ export const modules = [
     icon: "help",
     title: "Knowledge Base",
     link: "https://knowledge.autodesk.com/",
-    target: "_blank"
+    target: "_blank",
+    minimized: true
   },
   {
     id: "1-18",
     groupId: "5",
     icon: "layout",
-    title: "Style Guide"
+    title: "Style Guide",
+    minimized: true
   }
 ];
 
