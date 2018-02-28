@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PlaygroundSection from "../PlaygroundSection";
 
-import { Table, Icon, TextCellContent } from "../../hig-react";
+import { Button, Table, Icon, TextCellContent } from "../../hig-react";
 
 const columns = [
   {
@@ -125,19 +125,11 @@ class SelectableTableSection extends Component {
   }
 
   onSelectionChange = selectedInfo => {
-    if (selectedInfo.selected) {
-      const updatedData = this.state.data.map(row => ({
-        ...row,
-        selected: true
-      }));
-      this.setState({ data: updatedData });
-    } else {
-      const updatedData = this.state.data.map(row => ({
-        ...row,
-        selected: true
-      }));
-      this.setState({ data: updatedData });
-    }
+    const updatedData = this.state.data.map(row => ({
+      ...row,
+      selected: selectedInfo.selected
+    }));
+    this.setState({ data: updatedData });
   };
 
   checkboxHandler = selectedInfo => {
@@ -149,9 +141,22 @@ class SelectableTableSection extends Component {
     this.setState({ data: existingData });
   };
 
+  randomizeSelections = () => {
+    const newData = this.state.data.map(row => ({
+      ...row,
+      selected: Math.random() > 0.5
+    }));
+    this.setState({ data: newData });
+  };
+
   render() {
     return (
       <PlaygroundSection title="Selectable Table">
+        <Button
+          size="standard"
+          title="Randomize selections"
+          onClick={this.randomizeSelections}
+        />
         <Table
           density="standard"
           columns={this.state.columns}

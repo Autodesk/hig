@@ -69,7 +69,7 @@ export default class Search extends Component {
   handleClearIconClick = () => {
     this.setValue("");
     this.props.onInput({ value: "" });
-    this.setState({ focusedOptionIndex: undefined });
+    this.setState({ focusedOptionIndex: undefined, clearIconVisible: false });
   };
 
   handleKeydown = event => {
@@ -165,7 +165,7 @@ Search.propTypes = {
   placeholder: PropTypes.string,
   options: PropTypes.arrayOf(
     PropTypes.shape({
-      label: PropTypes.string,
+      label: PropTypes.node,
       value: PropTypes.string
     })
   ),

@@ -1,6 +1,6 @@
 {
   "name": "hig-vanilla",
-  "version": "0.1.24",
+  "version": "0.1.25",
   "description": "Stateless implementation in pure CSS, HTML and JS with no framework dependecies",
   "main": "lib/hig.js",
   "css": "lib/hig.css",

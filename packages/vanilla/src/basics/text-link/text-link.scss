@@ -1,16 +1,15 @@
 @import '~basics/colors/colors.scss';
+@import '~helpers/css/mixins/typography.scss';
+
 .hig__rich-text a,
 .hig__text-link {
-  font-family: 'ArtifaktElement', sans-serif;
-  font-size: 14px;
-  line-height: 24px;
+  @include typography-base;
   text-decoration: none;
   cursor: pointer;
 }
 
 .hig__rich-text--small a {
-  font-size: 12px;
-  line-height: 16px;
+  @include typography-small;
 }
 
 .hig__rich-text a,
@@ -27,7 +26,8 @@
 }
 
 .hig__text-link--secondary {
-  color: color(hig-cool-gray-50);
+  color: transparentize($typography-base-color, .5);
+
   &:hover {
     color: color(hig-blue-50);
   }
