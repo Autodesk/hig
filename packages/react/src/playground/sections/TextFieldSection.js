@@ -15,6 +15,10 @@ class TextFieldSection extends PureComponent {
     this.setState({ value: event.target.value });
   };
 
+  clearValue = () => {
+    this.setState({ value: "" });
+  };
+
   logEvent(event) {
     let messageParts = [`TextField triggered an ${event.type} event`];
     if (event.target.value !== undefined) {
@@ -31,10 +35,12 @@ class TextFieldSection extends PureComponent {
           placeholder="Foo"
           onBlur={this.logEvent}
           onChange={this.logEvent}
+          onClearButtonClick={this.clearValue}
           onFocus={this.logEvent}
           onInput={this.setValue}
           value={this.state.value}
           required="This field is required."
+          showClearButton={this.state.value.length > 0}
         />
       </PlaygroundSection>
     );

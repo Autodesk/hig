@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import SearchAdapter from "../../../../adapters/GlobalNav/SideNav/SearchAdapter";
 
-class Search extends Component {
+export default class Search extends Component {
   static propTypes = {
     value: PropTypes.string,
     defaultValue: PropTypes.string,
@@ -26,6 +26,12 @@ class Search extends Component {
     };
   }
 
+  onInput = event => {
+    this.props.onInput(event);
+    const clearIconVisible = event.target.value.length > 0;
+    this.setState({ clearIconVisible });
+  };
+
   getDefaultValue() {
     const { defaultValue, value } = this.props;
 
@@ -46,15 +52,8 @@ class Search extends Component {
     return this.state.value;
   }
 
-  showClearIcon = () => {
-    this.setState({ clearIconVisible: true });
-  };
-
-  hideClearIcon = () => {
-    this.setState({ clearIconVisible: false });
-  };
-
   handleClearIconClick = event => {
+    this.setState({ clearIconVisible: false });
     this._setValue("");
     this.props.onInput(event);
   };
@@ -72,14 +71,10 @@ class Search extends Component {
       <SearchAdapter
         {...this.props}
         value={this.getRenderedValue()}
-        onInput={this.props.onInput}
-        onBlur={this.hideClearIcon}
-        onFocus={this.showClearIcon}
+        onInput={this.onInput}
         clearIconVisible={this.state.clearIconVisible}
         onClearIconClick={this.handleClearIconClick}
       />
     );
   }
 }
-
-export default Search;
