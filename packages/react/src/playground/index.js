@@ -456,6 +456,7 @@ class Playground extends React.Component {
       },
       onMouseEnter: this.onSideNavMouseEnter,
       onMouseLeave: this.onSideNavMouseLeave,
+      searchable: true,
       showVariantToggleButton: !this.state.changeSideNavOnHover,
       slot: (
         <div>
