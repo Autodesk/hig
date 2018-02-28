@@ -236,6 +236,10 @@
   width: 24px;
   height: 24px;
 
+  &:hover {
+    cursor: pointer;
+  }
+
   .hig__text-field--clear-button-visible & {
     display: block;
   }
@@ -249,7 +253,6 @@
     width: 30px;
     height: 30px;
     bottom: 3px;
-
   }
 }
 
