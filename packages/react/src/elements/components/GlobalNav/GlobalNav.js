@@ -36,6 +36,10 @@ export default class GlobalNav extends Component {
     return accounts.length > 0 || projects.length > 0;
   }
 
+  showSearch() {
+    return this.props.topNav.search;
+  }
+
   showHelp() {
     return (
       this.props.topNav.help &&
@@ -95,9 +99,7 @@ export default class GlobalNav extends Component {
             onHamburgerClick={this.handleHamburgerClick}
             {...this.props.topNav}
           >
-            {this.props.topNav.search && (
-              <Search {...this.props.topNav.search} />
-            )}
+            {this.showSearch() && <Search {...this.props.topNav.search} />}
             {this.showProjectAccountSwitcher() ? (
               <ProjectAccountSwitcher
                 {...this.props.topNav.projectAccountSwitcher}
