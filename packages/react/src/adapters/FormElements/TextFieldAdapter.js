@@ -82,7 +82,9 @@ export default class TextFieldAdapter extends Component {
             </MapsPropToMethod>
             <MapsPropToMethod value={this.props.errors} {...adapterProps}>
               {(instance, value) =>
-                value ? instance.setErrors(value) : instance.unsetErrors()
+                typeof value === "string"
+                  ? instance.setErrors(value)
+                  : instance.unsetErrors()
               }
             </MapsPropToMethod>
             <MapsPropToMethod
