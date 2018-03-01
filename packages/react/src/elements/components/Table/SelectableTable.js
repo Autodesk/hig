@@ -103,6 +103,9 @@ SelectableTable.propTypes = {
    * Called when user selects or deselects a row
    */
   onRowSelectionChange: PropTypes.func,
+  /**
+   * Function to render the table. Signature is fn(columns, data, density)
+   */
   children: PropTypes.func,
   /**
    * Called when user checks or unchecks the select-all checkbox
