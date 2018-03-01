@@ -411,11 +411,6 @@ class Playground extends React.Component {
       hideHamburgerButton: !this.state.showHamburgerButton,
       onAccountClick: this.accountClicked,
       onProjectClick: this.projectClicked,
-      onSearchInput: this.onSearchInput,
-      onSearchSubmit: this.onSearchSubmit,
-      onSearchOptionSelect: this.onSearchOptionSelect,
-      searchOptions: this.topNavSearchOptions(),
-      searchValue: this.state.topNavSearchQueryValue,
       help: helpProps,
       logo,
       onLogoClick() {
@@ -437,6 +432,13 @@ class Playground extends React.Component {
         image: "https://placekitten.com/g/50/50",
         name: "David Gonzalez",
         email: "gonzalezd@autodesk.com"
+      },
+      search: {
+        onInput: this.onSearchInput,
+        onSubmit: this.onSearchSubmit,
+        onOptionSelect: this.onSearchOptionSelect,
+        options: this.topNavSearchOptions(),
+        value: this.state.topNavSearchQueryValue
       }
     };
 

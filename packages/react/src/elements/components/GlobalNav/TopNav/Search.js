@@ -162,7 +162,9 @@ export default class Search extends Component {
 }
 
 Search.propTypes = {
-  placeholder: PropTypes.string,
+  /**
+   * Autocomplete options to present when begins typing their query
+   */
   options: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.node,

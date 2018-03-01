@@ -2,6 +2,7 @@ import React from "react";
 import { mount } from "enzyme";
 import GlobalNav, { SideNav, SubNav, Tabs } from "./index";
 import TopNav, { ProjectAccountSwitcher } from "./TopNav";
+import TopNavSearch from "./TopNav/Search";
 import TabAdapter from "../../../adapters/GlobalNav/SubNav/TabAdapter";
 import GlobalNavAdapter from "../../../adapters/GlobalNav/GlobalNavAdapter";
 
@@ -96,6 +97,81 @@ describe("<GlobalNav>", () => {
       const wrapper = mount(<Context topNav={topNavProps} />);
       expect(wrapper.find(TopNav)).toHaveProp("logo", "https:/images/logo.png");
       expect(wrapper.find(TopNav)).toHaveProp("logoLink", "/");
+    });
+
+    describe("Search", () => {
+      describe("without a top nav search configuration", () => {
+        it("does not render TopNav Search", () => {
+          const topNavProps = {};
+          const wrapper = mount(<Context topNav={topNavProps} />);
+          expect(wrapper.find(TopNavSearch)).toHaveLength(0);
+        });
+      });
+
+      describe("with a top nav search configuration", () => {
+        it("passes search options", () => {
+          const searchOptions = [
+            { label: "Foo", value: "foo" },
+            { label: "Bar", value: "bar" }
+          ];
+          const topNavProps = {
+            search: {
+              options: searchOptions
+            }
+          };
+          const wrapper = mount(<Context topNav={topNavProps} />);
+          expect(wrapper.find(TopNavSearch)).toHaveProp(
+            "options",
+            searchOptions
+          );
+        });
+
+        it("passes onInput handler", () => {
+          const onInput = jest.fn();
+          const topNavProps = {
+            search: {
+              onInput
+            }
+          };
+          const wrapper = mount(<Context topNav={topNavProps} />);
+          expect(wrapper.find(TopNavSearch)).toHaveProp("onInput", onInput);
+        });
+
+        it("passes onSubmit handler", () => {
+          const onSubmit = jest.fn();
+          const topNavProps = {
+            search: {
+              onSubmit
+            }
+          };
+          const wrapper = mount(<Context topNav={topNavProps} />);
+          expect(wrapper.find(TopNavSearch)).toHaveProp("onSubmit", onSubmit);
+        });
+
+        it("passes onOptionSelect handler", () => {
+          const onOptionSelect = jest.fn();
+          const topNavProps = {
+            search: {
+              onOptionSelect
+            }
+          };
+          const wrapper = mount(<Context topNav={topNavProps} />);
+          expect(wrapper.find(TopNavSearch)).toHaveProp(
+            "onOptionSelect",
+            onOptionSelect
+          );
+        });
+
+        it("passes value", () => {
+          const topNavProps = {
+            search: {
+              value: "foo"
+            }
+          };
+          const wrapper = mount(<Context topNav={topNavProps} />);
+          expect(wrapper.find(TopNavSearch)).toHaveProp("value", "foo");
+        });
+      });
     });
   });
 
