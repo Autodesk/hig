@@ -95,13 +95,9 @@ export default class GlobalNav extends Component {
             onHamburgerClick={this.handleHamburgerClick}
             {...this.props.topNav}
           >
-            <Search
-              options={this.props.topNav.searchOptions}
-              onInput={this.props.topNav.onSearchInput}
-              onSubmit={this.props.topNav.onSearchSubmit}
-              onOptionSelect={this.props.topNav.onSearchOptionSelect}
-              value={this.props.topNav.searchValue}
-            />
+            {this.props.topNav.search && (
+              <Search {...this.props.topNav.search} />
+            )}
             {this.showProjectAccountSwitcher() ? (
               <ProjectAccountSwitcher
                 {...this.props.topNav.projectAccountSwitcher}
@@ -241,6 +237,7 @@ GlobalNav.propTypes = {
         })
       )
     }),
+    search: PropTypes.shape(Search.propTypes),
     profile: PropTypes.shape(Profile.propTypes)
   }),
   /**
