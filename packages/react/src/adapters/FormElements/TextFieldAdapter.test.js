@@ -33,7 +33,7 @@ describe("TextFieldAdapter", () => {
           disabled={false}
           showClearButton={false}
           required=""
-          errors=""
+          errors={null}
           hideInstructionsOnErrors={false}
         />
       );
