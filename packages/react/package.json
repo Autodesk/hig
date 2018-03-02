@@ -37,6 +37,7 @@
     "react-dom": "^15.4.1"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^3.3.14",
     "@storybook/addon-info": "^3.3.14",
     "@storybook/react": "^3.3.14",
     "@types/jest": "^19.2.3",
