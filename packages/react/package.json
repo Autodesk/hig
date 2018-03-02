@@ -23,6 +23,7 @@
     "lint-fix": "eslint ./src/** -c ./.eslintrc.js --fix",
     "playground": "react-scripts start",
     "start": "react-scripts start",
+    "storybook": "start-storybook -p 9001 -c .storybook",
     "test": "jest --watch",
     "test-ci": "jest --coverage --runInBand --colors",
     "type-check": "tsc"
@@ -36,6 +37,7 @@
     "react-dom": "^15.4.1"
   },
   "devDependencies": {
+    "@storybook/react": "^3.3.14",
     "@types/jest": "^19.2.3",
     "@types/node": "^7.0.21",
     "@types/react": "^15.0.24",
