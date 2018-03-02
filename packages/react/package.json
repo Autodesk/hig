@@ -24,6 +24,7 @@
     "playground": "react-scripts start",
     "start": "react-scripts start",
     "storybook": "start-storybook -p 9001 -c .storybook",
+    "storybook-build": "build-storybook -c .storybook -o storybook-build",
     "test": "jest --watch",
     "test-ci": "jest --coverage --runInBand --colors",
     "type-check": "tsc"
