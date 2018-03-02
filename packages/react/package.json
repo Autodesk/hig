@@ -1,24 +1,40 @@
 {
   "name": "hig-react",
-  "version": "0.28.35",
-  "description": "hig components in react",
+  "description": "HIG components in React",
+  "author": "Autodesk Inc.",
+  "license": "Apache-2.0",
+  "homepage": "https://hig.autodesk.com",
   "repository": {
     "type": "git",
     "url": "https://github.com/Autodesk/hig"
   },
+  "version": "0.28.35",
   "main": "lib/hig-react.js",
-  "css": "lib/hig-react.css",
-  "author": "Autodesk Inc.",
-  "homepage": "http://hig.autodesk.com",
-  "license": "Apache-2.0",
+  "files": [
+    "lib/*"
+  ],
+  "scripts": {
+    "babel": "babel --ignore test.js,Tests.js,test -d lib src",
+    "build-playground": "react-scripts build",
+    "deploy-playground": "react-scripts build && surge build",
+    "generate-docs": "node ./scripts/generate-docs.js",
+    "lib": "yarn babel && NODE_ENV=production webpack -p",
+    "lint": "eslint ./src/** -c ./.eslintrc.js",
+    "lint-fix": "eslint ./src/** -c ./.eslintrc.js --fix",
+    "playground": "react-scripts start",
+    "start": "react-scripts start",
+    "test": "jest --watch",
+    "test-ci": "jest --coverage --runInBand --colors",
+    "type-check": "tsc"
+  },
+  "dependencies": {
+    "hig-vanilla": "^0.1.25"
+  },
   "peerDependencies": {
     "prop-types": "^15.5.10",
     "react": "^15.4.1",
     "react-dom": "^15.4.1"
   },
-  "files": [
-    "lib/*"
-  ],
   "devDependencies": {
     "@types/jest": "^19.2.3",
     "@types/node": "^7.0.21",
@@ -54,21 +70,5 @@
     "typescript": "^2.3.2",
     "webpack": "^3.5.5"
   },
-  "scripts": {
-    "babel": "babel --ignore test.js,Tests.js,test -d lib src",
-    "build-playground": "react-scripts build",
-    "deploy-playground": "react-scripts build && surge build",
-    "generate-docs": "node ./scripts/generate-docs.js",
-    "lib": "yarn babel && NODE_ENV=production webpack -p",
-    "lint": "eslint ./src/** -c ./.eslintrc.js",
-    "lint-fix": "eslint ./src/** -c ./.eslintrc.js --fix",
-    "playground": "react-scripts start",
-    "start": "react-scripts start",
-    "test": "jest --watch",
-    "test-ci": "jest --coverage --runInBand --colors",
-    "type-check": "tsc"
-  },
-  "dependencies": {
-    "hig-vanilla": "^0.1.25"
-  }
+  "css": "lib/hig-react.css"
 }
