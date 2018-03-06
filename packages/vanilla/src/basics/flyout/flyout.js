@@ -132,6 +132,28 @@ class Flyout extends Core {
     }
   }
 
+  // flyoutRightVisible(){
+  //   const flyoutPanel = this._findDOMEl('.hig__flyout__panel', this.el);
+  //   const flyoutViewPortInfo = flyoutPanel.getBoundingClientRect();
+
+  //   const target = this.el.firstElementChild;
+  //   const chevron = this._findDOMEl('.hig__flyout__chevron', this.el);
+
+  //   const anchorDistanceFromLeft = target.getBoundingClientRect().left
+  //   const chevronDistanceFromLeft = chevron.getBoundingClientRect().left;
+
+  //   if (chevronDistanceFromLeft < 0 ) {
+  //     chevron.style.position = 'absolute';
+  //     chevron.style.left =
+  //   }
+
+
+
+
+
+  // }
+
+
   setMaxHeight(maxHeight) {
     if (maxHeight) {
       this.flyoutContent.style.maxHeight = `${maxHeight}px`;
