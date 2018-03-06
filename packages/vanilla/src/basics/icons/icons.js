@@ -1,3 +1,3 @@
 import './icons.scss';
 
-export { default } from './release/hig-icons-bundle.js';
+export { default } from './release/hig-icons-bundle';

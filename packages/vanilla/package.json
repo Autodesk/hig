@@ -1,11 +1,16 @@
 {
   "name": "hig-vanilla",
-  "version": "0.1.25",
   "description": "Stateless implementation in pure CSS, HTML and JS with no framework dependecies",
+  "author": "Autodesk Inc.",
+  "license": "Apache-2.0",
+  "homepage": "http://hig.autodesk.com",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:autodesk/hig.git"
+  },
+  "version": "0.1.25",
   "main": "lib/hig.js",
-  "css": "lib/hig.css",
   "files": [
-    "lib/hig.js",
     "lib/hig.css"
   ],
   "scripts": {
@@ -23,13 +28,9 @@
     "test": "yarn gemini",
     "watch": "webpack --watch --config webpack.dev.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:autodesk/hig.git"
+  "dependencies": {
+    "hig-interface": "^0.1.18"
   },
-  "author": "Autodesk Inc.",
-  "license": "Apache-2.0",
-  "homepage": "http://hig.autodesk.com",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-eslint": "^7.2.3",
@@ -67,7 +68,5 @@
     "webpack-dev-server": "^2.9.5",
     "webpack-merge": "^4.1.1"
   },
-  "dependencies": {
-    "hig-interface": "^0.1.18"
-  }
+  "css": "lib/hig.css"
 }

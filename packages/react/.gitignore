@@ -3,3 +3,4 @@ coverage
 gemini-report
 lib
 node_modules
+storybook-build
