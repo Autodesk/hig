@@ -70,7 +70,7 @@ class Module extends Core {
   setLink(link) {
     const anchorEl = this._findDOMEl('a', this.el);
     !link || link === ''
-      ? anchorEl.removeAttribte('href')
+      ? anchorEl.removeAttribute('href')
       : anchorEl.setAttribute('href', link);
   }
 
