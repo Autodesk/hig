@@ -47,7 +47,7 @@ class IconButton extends Core {
 
   setLink(link) {
     !link || link === ''
-      ? this.el.removeAttribte('href')
+      ? this.el.removeAttribute('href')
       : this.el.setAttribute('href', link);
   }
 
