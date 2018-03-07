@@ -130,7 +130,7 @@ class Flyout extends Core {
     const chevronCenter = chevronInfo.x + chevronWidth;
 
     if (viewPortWidth < flyoutViewPortInfo.right) {
-      const shiftDistance = flyoutViewPortInfo.right - viewPortWidth + 5;
+      const shiftDistance = (flyoutViewPortInfo.right - viewPortWidth) + 5;
       flyoutPanel.style.position = 'absolute';
       flyoutPanel.style.left = `-${shiftDistance}px`;
       chevron.style.zIndex = '9998';

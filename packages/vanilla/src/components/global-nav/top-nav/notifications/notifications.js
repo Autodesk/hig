@@ -1,4 +1,4 @@
-/* globals window document */
+/* globals window */
 import Interface from 'interface.json';
 import Core from '_core.js';
 import Shortcut from 'components/global-nav/top-nav/shortcut/shortcut';
