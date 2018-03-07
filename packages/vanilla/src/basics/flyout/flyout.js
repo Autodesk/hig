@@ -120,12 +120,22 @@ class Flyout extends Core {
     const flyoutPanel = this._findDOMEl('.hig__flyout__panel', this.el);
     const flyoutViewPortInfo = flyoutPanel.getBoundingClientRect();
     const chevron = this._findDOMEl('.hig__flyout__chevron', this.el);
+    const target = this.el.firstElementChild;
+    const targetInfo = target.getBoundingClientRect();
+    const targetWidth = targetInfo.width / 2;
+    const targetCenter = targetInfo.x + targetWidth;
+
+    const chevronInfo = this._findDOMEl('.hig__flyout__chevron--dark', this.el).getBoundingClientRect();
+    const chevronWidth = chevronInfo.width / 2;
+    const chevronCenter = chevronInfo.x + chevronWidth;
 
     if (viewPortWidth < flyoutViewPortInfo.right) {
-      const shiftDistance = ((flyoutViewPortInfo.right - viewPortWidth) + 5);
+      const shiftDistance = flyoutViewPortInfo.right - viewPortWidth + 5;
       flyoutPanel.style.position = 'absolute';
       flyoutPanel.style.left = `-${shiftDistance}px`;
       chevron.style.zIndex = '9998';
+
+      chevron.style.left = `-${chevronCenter - targetCenter}px`;
     }
   }
 
@@ -143,31 +153,36 @@ class Flyout extends Core {
     }
   }
 
-
   _resetTopOrBottomFlyout(flyoutPanel, target, chevronContainer) {
     const updatedFlyoutViewportInfo = flyoutPanel.getBoundingClientRect();
     const targetInfo = target.getBoundingClientRect();
 
-    if (flyoutPanel.dataset.anchorPoint.includes('bottom-') || flyoutPanel.dataset.anchorPoint.includes('top-')) {
+    if (
+      flyoutPanel.dataset.anchorPoint.includes('bottom-') ||
+      flyoutPanel.dataset.anchorPoint.includes('top-')
+    ) {
       const shiftDistance = updatedFlyoutViewportInfo.left - targetInfo.left;
       flyoutPanel.style.left = `-${shiftDistance}px`;
 
       if (flyoutPanel.dataset.anchorPoint.includes('bottom-')) {
         flyoutPanel.style.bottom = '0px';
       }
-      this.updateChevronzIndex(chevronContainer);
+      this.updateChevronIndex(chevronContainer);
     }
   }
 
   _resetRightFlyout(flyoutPanel) {
     if (flyoutPanel.dataset.anchorPoint.includes('right-')) {
-      const updatedAnchorPoint = flyoutPanel.dataset.anchorPoint.replace(/right-/, 'left-');
+      const updatedAnchorPoint = flyoutPanel.dataset.anchorPoint.replace(
+        /right-/,
+        'left-'
+      );
       this.setAnchorPoint(updatedAnchorPoint);
       flyoutPanel.style.position = 'static';
     }
   }
 
-  _updateChevronzIndex(chevron) {
+  _updateChevronIndex(chevron) {
     chevron.style.zIndex = '9998';
   }
 
