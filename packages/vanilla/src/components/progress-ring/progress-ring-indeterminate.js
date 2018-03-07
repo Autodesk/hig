@@ -22,7 +22,7 @@ class ProgressRingIndeterminate {
   }
 
   initSegments() {
-    this.segments = this.el.querySelectorAll('.hig__progress-ring__segment');
+    this.segments = Array.from(this.el.querySelectorAll('.hig__progress-ring__segment'));
 
     this.SEGMENT_COUNT = this.segments.length;
     this.SEGMENT_DELAY_FACTOR = CYCLE_DURATION / this.SEGMENT_COUNT;
