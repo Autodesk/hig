@@ -477,7 +477,8 @@ class Playground extends React.Component {
       ),
       onModuleClick: this.handleModuleClick,
       onSubmoduleClick: this.handleSubmoduleClick,
-      variant: this.state.sideNavVariant
+      variant: this.state.sideNavVariant,
+      isOpen: false
     };
 
     return (
@@ -489,7 +490,7 @@ class Playground extends React.Component {
         topNav={topNavProps}
         activeModuleId={this.state.activeModuleId}
         showSubNav
-        sideNavOpen={this.state.isSideNavOpen}
+        sideNavOpen={false}
         onHamburgerClick={this.toggleSideNav}
       >
         <PlaygroundSection title="GlobalNav">

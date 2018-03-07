@@ -51,6 +51,7 @@ class Flyout extends Core {
   open() {
     this.containerAnimation.enter();
     this.flyoutVisible();
+    this.flyoutVisibleLeft();
   }
 
   close() {
@@ -120,39 +121,31 @@ class Flyout extends Core {
     const anchorDistanceFromLeft = target.getBoundingClientRect().right;
     const chevronDistanceFromLeft = chevron.getBoundingClientRect().right;
 
-    const moveChevronDistance = (chevronDistanceFromLeft - anchorDistanceFromLeft) / 2;
+    // const moveChevronDistance = (chevronDistanceFromLeft - anchorDistanceFromLeft) / 2;
 
     if (viewPortWidth < flyoutViewPortInfo.right) {
       const shiftDistance = (flyoutViewPortInfo.right - viewPortWidth) + 5;
       flyoutPanel.style.position = 'absolute';
       flyoutPanel.style.left = `-${shiftDistance}px`;
-
-      chevron.style.position = 'absolute';
-      chevron.style.left = `${moveChevronDistance}px`;
     }
   }
 
-  // flyoutRightVisible(){
-  //   const flyoutPanel = this._findDOMEl('.hig__flyout__panel', this.el);
-  //   const flyoutViewPortInfo = flyoutPanel.getBoundingClientRect();
 
-  //   const target = this.el.firstElementChild;
-  //   const chevron = this._findDOMEl('.hig__flyout__chevron', this.el);
+  flyoutVisibleLeft() {
+    const flyoutPanel = this._findDOMEl('.hig__flyout__panel', this.el);
+    const flyoutViewportInfo = flyoutPanel.getBoundingClientRect();
 
-  //   const anchorDistanceFromLeft = target.getBoundingClientRect().left
-  //   const chevronDistanceFromLeft = chevron.getBoundingClientRect().left;
+    if (flyoutViewportInfo.x < 0) {
+      flyoutPanel.style.position = 'absolute';
 
-  //   if (chevronDistanceFromLeft < 0 ) {
-  //     chevron.style.position = 'absolute';
-  //     chevron.style.left =
-  //   }
+      const updatedFlyoutViewportInfo = flyoutPanel.getBoundingClientRect();
+      const target = this.el.firstElementChild;
+      const targetInfo = target.getBoundingClientRect();
 
-
-
-
-
-  // }
-
+      const shiftDistance = (updatedFlyoutViewportInfo.left - targetInfo.left);
+      flyoutPanel.style.left = `-${shiftDistance}px`;
+    }
+  }
 
   setMaxHeight(maxHeight) {
     if (maxHeight) {
