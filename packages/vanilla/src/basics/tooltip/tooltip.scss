@@ -17,64 +17,62 @@
   border-width: 6px 6px 6px 6px;
 }
 
-@mixin tooltip-top-chevron() {
-  &::before {
-    @include tooltip-chevron-border();
-    top: -6px;
-    border-top-width: 0;
-    border-color: transparent transparent color(hig-cool-gray-50) transparent;
-  }
-  &::after {
-    @include tooltip-chevron-bg();
-    top: -6px;
-    border-top-width: 0;
-    border-color: transparent transparent color(hig-cool-gray-50) transparent;
-  }
+
+
+@mixin tooltip-top-chevron--dark() {
+  @include tooltip-chevron-border();
+  top: -6px;
+  border-top-width: 0;
+  border-color: transparent transparent color(hig-cool-gray-50) transparent;
 }
 
-@mixin tooltip-right-chevron() {
-  &::before {
+@mixin tooltip-top-chevron--light() {
+  @include tooltip-chevron-bg();
+  top: -6px;
+  border-top-width: 0;
+  border-color: transparent transparent color(hig-cool-gray-50) transparent;
+}
+
+@mixin tooltip-right-chevron--dark() {
     @include tooltip-chevron-border();
     right: -6px;
     border-right-width: 0;
     border-color: transparent transparent transparent color(hig-cool-gray-50);
-  }
-  &::after {
-    @include tooltip-chevron-bg();
+}
+
+@mixin tooltip-right-chevron--light(){
+  @include tooltip-chevron-bg();
     right: -6px;
     border-right-width: 0;
     border-color: transparent transparent transparent color(hig-cool-gray-50);
-  }
 }
 
-@mixin tooltip-bottom-chevron() {
-  &::before {
-    @include tooltip-chevron-border();
-    bottom: -7px;
-    border-bottom-width: 0;
-    border-color: color(hig-cool-gray-50) transparent transparent transparent;
-  }
-  &::after {
-    @include tooltip-chevron-bg();
-    bottom: -6px;
-    border-bottom-width: 0;
-    border-color: color(hig-cool-gray-50) transparent transparent transparent;
-  }
+@mixin tooltip-bottom-chevron--dark() {
+  @include tooltip-chevron-border();
+  bottom: -7px;
+  border-bottom-width: 0;
+  border-color: color(hig-cool-gray-50) transparent transparent transparent;
 }
 
-@mixin tooltip-left-chevron() {
-  &::before {
-    @include tooltip-chevron-border();
-    left: -6px;
-    border-left-width: 0;
-    border-color: transparent color(hig-cool-gray-50) transparent transparent;
-  }
-  &::after {
-    @include tooltip-chevron-bg();
-    left: -6px;
-    border-left-width: 0;
-    border-color: transparent color(hig-cool-gray-50) transparent transparent;
-  }
+@mixin tooltip-bottom-chevron--light() {
+  @include tooltip-chevron-bg();
+  bottom: -6px;
+  border-bottom-width: 0;
+  border-color: color(hig-cool-gray-50) transparent transparent transparent;
+}
+
+@mixin tooltip-left-chevron--dark() {
+  @include tooltip-chevron-border();
+  left: -6px;
+  border-left-width: 0;
+  border-color: transparent color(hig-cool-gray-50) transparent transparent;
+}
+
+@mixin tooltip-left-chevron--light() {
+  @include tooltip-chevron-bg();
+  left: -6px;
+  border-left-width: 0;
+  border-color: transparent color(hig-cool-gray-50) transparent transparent;
 }
 
 .hig__flyout--tooltip {
@@ -119,33 +117,61 @@
     }
   }
   .hig__flyout__container--anchor-top-center .hig__flyout__chevron {
-    @include tooltip-top-chevron;
-    &::before,
-    &::after {
+
+    .hig__flyout__chevron--dark{
+      @include tooltip-top-chevron--dark;
       left: 50%;
       transform: translateX(-50%);
     }
+
+    .hig__flyout__chevron--light{
+      @include tooltip-top-chevron--light;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
   }
   .hig__flyout__container--anchor-right-center .hig__flyout__chevron {
-    @include tooltip-right-chevron;
-    &::before,
-    &::after {
+
+    .hig__flyout__chevron--dark{
+      @include tooltip-right-chevron--dark;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .hig__flyout__chevron--light{
+      @include tooltip-right-chevron--light;
       top: 50%;
       transform: translateY(-50%);
     }
   }
+
+
   .hig__flyout__container--anchor-bottom-center .hig__flyout__chevron {
-    @include tooltip-bottom-chevron;
-    &::before,
-    &::after {
+    .hig__flyout__chevron--dark{
+      @include tooltip-bottom-chevron--dark;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .hig__flyout__chevron--light{
+      @include tooltip-bottom-chevron--light;
       left: 50%;
       transform: translateX(-50%);
     }
   }
+
+
   .hig__flyout__container--anchor-left-center .hig__flyout__chevron {
-    @include tooltip-left-chevron;
-    &::before,
-    &::after {
+
+    .hig__flyout__chevron--dark{
+      @include tooltip-left-chevron--dark;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .hig__flyout__chevron--light{
+      @include tooltip-left-chevron--light;
       top: 50%;
       transform: translateY(-50%);
     }

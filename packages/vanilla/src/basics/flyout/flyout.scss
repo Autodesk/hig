@@ -221,10 +221,7 @@
 
 .hig__flyout__chevron {
   position: absolute;
-
-
   .hig__flyout__container--anchor-top-left & {
-
     .hig__flyout__chevron--dark {
       left: 14px;
       @include top-chevron--dark;

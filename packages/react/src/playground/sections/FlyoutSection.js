@@ -7,7 +7,7 @@ class FlyoutSection extends Component {
     return (
       <PlaygroundSection title="Flyout">
         <Flyout
-          anchorPoint="right-center"
+          anchorPoint="top-left"
           content={
             <div>
               <h3>Important flyout information</h3>
