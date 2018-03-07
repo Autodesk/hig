@@ -19,65 +19,63 @@
   border-width: 10px 10px 10px 10px;
 }
 
-@mixin top-chevron() {
-  &::before {
-    @include chevron-border();
-    top: -11px;
-    border-top-width: 0;
-    border-color: transparent transparent color(hig-cool-gray-20) transparent;
-  }
-  &::after {
-    @include chevron-bg();
-    top: -9px;
-    border-top-width: 0;
-    border-color: transparent transparent white transparent;
-  }
+@mixin top-chevron--dark() {
+  @include chevron-border();
+  top: -11px;
+  border-top-width: 0;
+  border-color: transparent transparent color(hig-cool-gray-20) transparent;
 }
 
-@mixin right-chevron() {
-  &::before {
-    @include chevron-border();
-    right: -11px;
-    border-right-width: 0;
-    border-color: transparent transparent transparent color(hig-cool-gray-20);
-  }
-  &::after {
-    @include chevron-bg();
-    right: -9px;
-    border-right-width: 0;
-    border-color: transparent transparent transparent white;
-  }
+@mixin top-chevron--light(){
+  @include chevron-bg();
+  top: -9px;
+  border-top-width: 0;
+  border-color: transparent transparent white transparent;
 }
 
-@mixin bottom-chevron() {
-  &::before {
-    @include chevron-border();
-    bottom: -10px;
-    border-bottom-width: 0;
-    border-color: color(hig-cool-gray-20) transparent transparent transparent;
-  }
-  &::after {
-    @include chevron-bg();
-    bottom: -8px;
-    border-bottom-width: 0;
-    border-color: white transparent transparent transparent;
-  }
+@mixin right-chevron--dark() {
+  @include chevron-border();
+  right: -11px;
+  border-right-width: 0;
+  border-color: transparent transparent transparent color(hig-cool-gray-20);
 }
 
-@mixin left-chevron() {
-  &::before {
-    @include chevron-border();
-    left: -11px;
-    border-left-width: 0;
-    border-color: transparent color(hig-cool-gray-20) transparent transparent;
-  }
-  &::after {
-    @include chevron-bg();
-    left: -9px;
-    border-left-width: 0;
-    border-color: transparent white transparent transparent;
-  }
+@mixin right-chevron--light() {
+  @include chevron-bg();
+  right: -9px;
+  border-right-width: 0;
+  border-color: transparent transparent transparent white;
 }
+
+@mixin bottom-chevron--dark() {
+  @include chevron-border();
+  bottom: -10px;
+  border-bottom-width: 0;
+  border-color: color(hig-cool-gray-20) transparent transparent transparent;
+}
+
+@mixin bottom-chevron--light() {
+  @include chevron-bg();
+  bottom: -8px;
+  border-bottom-width: 0;
+  border-color: white transparent transparent transparent;
+}
+
+@mixin left-chevron--dark() {
+  @include chevron-border();
+  left: -11px;
+  border-left-width: 0;
+  border-color: transparent color(hig-cool-gray-20) transparent transparent;
+}
+
+@mixin left-chevron--light() {
+  @include chevron-bg();
+  left: -9px;
+  border-left-width: 0;
+  border-color: transparent white transparent transparent;
+}
+
+
 
 .hig__flyout {
   position: relative;
@@ -223,120 +221,173 @@
 
 .hig__flyout__chevron {
   position: absolute;
+
+
   .hig__flyout__container--anchor-top-left & {
-    @include top-chevron;
-    &::before {
+
+    .hig__flyout__chevron--dark {
       left: 14px;
+      @include top-chevron--dark;
     }
-    &::after {
+
+    .hig__flyout__chevron--light {
       left: 15px;
+      @include top-chevron--light;
     }
   }
+
+
   .hig__flyout__container--anchor-top-center & {
-    @include top-chevron;
     left: 50%;
-    &::before,
-    &::after {
+    .hig__flyout__chevron--dark {
+      left: 50%;
+      @include top-chevron--dark;
+      transform: translateX(-50%);
+    }
+
+    .hig__flyout__chevron--light {
+      left: 50%;
+      @include top-chevron--light;
       transform: translateX(-50%);
     }
   }
+
+
   .hig__flyout__container--anchor-top-right & {
-    @include top-chevron;
-    right: 0;
-    &::before {
+     right: 0;
+
+    .hig__flyout__chevron--dark {
       right: 14px;
+      @include top-chevron--dark;
     }
-    &::after {
+
+    .hig__flyout__chevron--light {
       right: 15px;
+      @include top-chevron--light;
     }
   }
+
   .hig__flyout__container--anchor-right-top & {
-    @include right-chevron;
     right: 0;
 
-    &::before {
+    .hig__flyout__chevron--dark {
+      @include right-chevron--dark;
       top: 14px;
     }
-    &::after {
+    .hig__flyout__chevron--light {
+      @include right-chevron--light;
       top: 15px;
     }
   }
   .hig__flyout__container--anchor-right-center & {
-    @include right-chevron;
     top: 50%;
     right: 0px;
-    &::before,
-    &::after {
+
+    .hig__flyout__chevron--dark {
+      @include right-chevron--dark;
       transform: translateY(-50%);
     }
+
+    .hig__flyout__chevron--light {
+      @include right-chevron--light;
+      transform: translateY(-50%);
+    }
+
   }
   .hig__flyout__container--anchor-right-bottom & {
     right: 0px;
     bottom: 0px;
-    @include right-chevron;
-    &::before {
+    .hig__flyout__chevron--dark {
+      @include right-chevron--dark;
       bottom: 14px;
     }
-    &::after {
+
+    .hig__flyout__chevron--light {
+      @include right-chevron--light;
       bottom: 15px;
     }
   }
+
   .hig__flyout__container--anchor-bottom-left & {
     bottom: 0px;
-    @include bottom-chevron;
-    &::before {
+
+    .hig__flyout__chevron--dark {
+      @include bottom-chevron--dark;
       left: 14px;
     }
-    &::after {
+
+    .hig__flyout__chevron--light {
+      @include bottom-chevron--light;
       left: 15px;
     }
   }
   .hig__flyout__container--anchor-bottom-center & {
-    @include bottom-chevron;
     left: 50%;
     bottom: 0px;
 
-    &::before,
-    &::after {
+    .hig__flyout__chevron--dark {
+      @include bottom-chevron--dark;
+      transform: translateX(-50%);
+    }
+
+    .hig__flyout__chevron--light {
+      @include bottom-chevron--light;
       transform: translateX(-50%);
     }
   }
   .hig__flyout__container--anchor-bottom-right & {
     right: 0px;
     bottom: 0px;
-    @include bottom-chevron;
-    &::before {
+
+    .hig__flyout__chevron--dark {
+      @include bottom-chevron--dark;
       right: 14px;
     }
-    &::after {
+
+    .hig__flyout__chevron--light {
+      @include bottom-chevron--light;
       right: 15px;
     }
   }
-  .hig__flyout__container--anchor-left-top & {
-    @include left-chevron;
 
-    &::before {
+
+  .hig__flyout__container--anchor-left-top & {
+    .hig__flyout__chevron--dark {
+      @include left-chevron--dark;
       top: 14px;
     }
-    &::after {
+
+    .hig__flyout__chevron--light {
+      @include left-chevron--light;
       top: 15px;
     }
   }
+
+
   .hig__flyout__container--anchor-left-center & {
     top: 50%;
-    @include left-chevron;
-    &::before,
-    &::after {
+
+    .hig__flyout__chevron--dark {
+      @include left-chevron--dark;
+      transform: translateY(-50%);
+    }
+
+    .hig__flyout__chevron--light {
+      @include left-chevron--light;
       transform: translateY(-50%);
     }
   }
+
   .hig__flyout__container--anchor-left-bottom & {
     bottom: 0px;
-    @include left-chevron;
-    &::before {
+
+    .hig__flyout__chevron--dark {
+      @include left-chevron--dark;
       bottom: 14px;
     }
-    &::after {
+
+    .hig__flyout__chevron--light {
+      @include left-chevron--light;
       bottom: 15px;
     }
   }

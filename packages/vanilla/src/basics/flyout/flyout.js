@@ -124,16 +124,17 @@ class Flyout extends Core {
     // const moveChevronDistance = (chevronDistanceFromLeft - anchorDistanceFromLeft) / 2;
 
     if (viewPortWidth < flyoutViewPortInfo.right) {
-      const shiftDistance = (flyoutViewPortInfo.right - viewPortWidth) + 5;
+      const shiftDistance = flyoutViewPortInfo.right - viewPortWidth + 5;
       flyoutPanel.style.position = 'absolute';
       flyoutPanel.style.left = `-${shiftDistance}px`;
     }
   }
 
-
   flyoutVisibleLeft() {
     const flyoutPanel = this._findDOMEl('.hig__flyout__panel', this.el);
     const flyoutViewportInfo = flyoutPanel.getBoundingClientRect();
+    const chevron = this._findDOMEl('.hig__flyout__chevron--dark', this.el);
+    const chevronInfo = chevron.getBoundingClientRect();
 
     if (flyoutViewportInfo.x < 0) {
       flyoutPanel.style.position = 'absolute';
@@ -142,8 +143,15 @@ class Flyout extends Core {
       const target = this.el.firstElementChild;
       const targetInfo = target.getBoundingClientRect();
 
-      const shiftDistance = (updatedFlyoutViewportInfo.left - targetInfo.left);
+      const shiftDistance = updatedFlyoutViewportInfo.left - targetInfo.left;
       flyoutPanel.style.left = `-${shiftDistance}px`;
+      if (this.flyoutContainer.classList.value.includes('bottom')) {
+        flyoutPanel.style.bottom = '0px';
+      }
+
+      if (this.flyoutContainer.classList.value.includes('-right-')) {
+        this.flyoutContainer.classList.value.replace(/-right-/, '-left-');
+      }
     }
   }
 
