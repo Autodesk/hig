@@ -4,7 +4,7 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { text, boolean, select } from "@storybook/addon-knobs/react";
 import { Button } from "../src/hig-react";
-import arrayToObject from "../.storybook/arrayToObject";
+import arrayToObject from "../.storybook/helpers/arrayToObject";
 
 storiesOf("Button", module).add("default, with event handlers", () => (
   <Button

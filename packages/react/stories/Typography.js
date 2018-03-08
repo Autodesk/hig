@@ -14,7 +14,7 @@ import {
   Sub1,
   Sub2
 } from "../src/hig-react";
-import arrayToObject from "../.storybook/arrayToObject";
+import arrayToObject from "../.storybook/helpers/arrayToObject";
 
 [H1, H2, H3, Text, Body, Bold, Caption, Disabled, Sub1, Sub2].forEach(
   Component => {
