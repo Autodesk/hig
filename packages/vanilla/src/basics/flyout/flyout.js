@@ -50,8 +50,8 @@ class Flyout extends Core {
 
   open() {
     this.containerAnimation.enter();
-    this._flyoutVisibleRight();
-    this._flyoutVisibleLeft();
+    this._ensureFlyoutLeftEdgeVisibility();
+    this._ensureFlyoutRightEdgeVisibility();
   }
 
   close() {
@@ -111,35 +111,33 @@ class Flyout extends Core {
     const panel = this._findDOMEl('.hig__flyout__panel', this.el);
     panel.setAttribute('data-anchor-point', anchorPoint);
 
-    this._flyoutVisibleRight();
-    this._flyoutVisibleLeft();
+    this._ensureFlyoutLeftEdgeVisibility();
+    this._ensureFlyoutRightEdgeVisibility();
   }
 
-  _flyoutVisibleRight() {
+  _ensureFlyoutLeftEdgeVisibility() {
     const viewPortWidth = document.documentElement.clientWidth;
     const flyoutPanel = this._findDOMEl('.hig__flyout__panel', this.el);
+
     const flyoutViewPortInfo = flyoutPanel.getBoundingClientRect();
     const chevron = this._findDOMEl('.hig__flyout__chevron', this.el);
-    const target = this.el.firstElementChild;
-    const targetInfo = target.getBoundingClientRect();
-    const targetWidth = targetInfo.width / 2;
-    const targetCenter = targetInfo.x + targetWidth;
 
-    const chevronInfo = this._findDOMEl('.hig__flyout__chevron--dark', this.el).getBoundingClientRect();
-    const chevronWidth = chevronInfo.width / 2;
-    const chevronCenter = chevronInfo.x + chevronWidth;
+    const target = this.el.firstElementChild;
+    const targetCenter = this._getXCenterCoordinate(target);
+
+    const chevronEl = this._findDOMEl('.hig__flyout__chevron--dark', this.el);
+    const chevronCenter = this._getXCenterCoordinate(chevronEl);
 
     if (viewPortWidth < flyoutViewPortInfo.right) {
-      const shiftDistance = (flyoutViewPortInfo.right - viewPortWidth) + 5;
+      const shiftDistance = (flyoutViewPortInfo.right - viewPortWidth) + 5; // 5 is added hear to account for scrollbar
       flyoutPanel.style.position = 'absolute';
       flyoutPanel.style.left = `-${shiftDistance}px`;
-      chevron.style.zIndex = '9998';
-
+      this._updateChevronIndex(chevron);
       chevron.style.left = `-${chevronCenter - targetCenter}px`;
     }
   }
 
-  _flyoutVisibleLeft() {
+  _ensureFlyoutRightEdgeVisibility() {
     const flyoutPanel = this._findDOMEl('.hig__flyout__panel', this.el);
     const flyoutViewportInfo = flyoutPanel.getBoundingClientRect();
 
@@ -167,8 +165,13 @@ class Flyout extends Core {
       if (flyoutPanel.dataset.anchorPoint.includes('bottom-')) {
         flyoutPanel.style.bottom = '0px';
       }
-      this.updateChevronIndex(chevronContainer);
+      this._updateChevronIndex(chevronContainer);
     }
+  }
+
+  _getXCenterCoordinate(el) {
+    const { width, x } = el.getBoundingClientRect();
+    return x + (width / 2);
   }
 
   _resetRightFlyout(flyoutPanel) {
