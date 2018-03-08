@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Themes } from "hig-vanilla";
+import "hig-vanilla/lib/hig.css";
 import HIGPropTypes from "./HIGPropTypes";
 
 class HIGAdapter extends Component {

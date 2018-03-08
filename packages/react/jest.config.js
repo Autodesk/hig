@@ -16,6 +16,9 @@ module.exports = {
       statements: 60
     }
   },
+  moduleNameMapper: {
+    "\\.(css|scss|svg)$": "<rootDir>/support/test/fileMock.js"
+  },
   modulePaths: ["node_modules", "<rootDir>/src"],
   moduleFileExtensions: ["js", "jsx", "json"],
   setupTestFrameworkScriptFile: "<rootDir>/support/setupTests.js",
