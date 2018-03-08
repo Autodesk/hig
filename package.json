@@ -7,7 +7,8 @@
   "version": "1.0.1",
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "update-packages": "lerna publish --skip-npm"
+    "update-packages": "lerna publish --skip-npm",
+    "publish-canary": "lerna publish --canary --yes --exact"
   },
   "devDependencies": {
     "lerna": "^2.4.0",
