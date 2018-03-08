@@ -36,7 +36,7 @@ class Notifications extends Core {
 
     this.flyout.addTarget(this.shortcut);
     this.flyout.addSlot(this.list);
-    this.flyout.setAnchorPoint('top-right');
+    this.flyout.setAnchorPoint('top-left');
     window.addEventListener('resize', this._adjustFlyoutMaxHeight.bind(this));
 
     this.unreadCount = this._findDOMEl(
