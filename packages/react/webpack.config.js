@@ -1,6 +1,8 @@
 const path = require("path");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
+const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const minify = require("./webpack/minify");
+const styles = require("./webpack/sass");
 
 const externals = ["react", "react-dom", "prop-types"];
 
@@ -19,12 +21,13 @@ const debug = {
         test: /\.js$/,
         exclude: [/node_modules/],
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
-            plugins: ['react-docgen']
+            plugins: ["react-docgen"]
           }
         }
-      }
+      },
+      styles
     ]
   },
   plugins: [],
@@ -43,19 +46,16 @@ const production = {
     rules: [
       {
         test: /\.js$/,
-        use: 'babel-loader',
+        use: "babel-loader",
         exclude: [/node_modules/]
-      }
+      },
+      styles
     ]
   },
   plugins: [
     minify(),
-    new CopyWebpackPlugin([
-      {
-        from: "../vanilla/lib/hig.css",
-        to: "hig-react.css"
-      }
-    ])
+    new ExtractTextPlugin("hig-react.css"),
+    new OptimizeCssAssetsPlugin()
   ],
   externals
 };
