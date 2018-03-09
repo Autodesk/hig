@@ -55,6 +55,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
+    "classnames": "^2.2.5",
     "css-loader": "^0.28.10",
     "enzyme": "^2.9.1",
     "eslint": "^4.9.0",

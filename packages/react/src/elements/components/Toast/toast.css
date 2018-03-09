@@ -12,6 +12,21 @@
   border-left: 3px solid transparent;
 }
 
+.hig__toast--primary {
+  border-color: #0696d7;
+}
+
+.hig__toast--success {
+  border-color: #87bc40;
+}
+
+.hig__toast--danger {
+  border-color: #ee4444;
+}
+.hig__toast--warning {
+  border-color: #faa21b;
+}
+
 .hig__toast__body {
   display: flex;
   align-items: flex-start;

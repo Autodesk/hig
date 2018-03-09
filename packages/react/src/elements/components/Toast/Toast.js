@@ -1,12 +1,15 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import cx from "classnames";
 import IconButton from "../../../adapters/IconButtonAdapter";
 import "./toast.css";
 
 export default class Toast extends Component {
   render() {
+    const toastClasses = cx("hig__toast", `hig__toast--${this.props.status}`);
+
     return (
-      <div className="hig__toast">
+      <div className={toastClasses}>
         <div className="hig__toast__body">
           <div className="hig__toast__message">{this.props.children}</div>
           <IconButton
@@ -21,6 +24,10 @@ export default class Toast extends Component {
   }
 }
 
+Toast.defaultProps = {
+  status: "primary"
+};
+
 Toast.propTypes = {
   /**
    * Message content for the Toast
@@ -29,5 +36,9 @@ Toast.propTypes = {
   /**
    * Function to call when Toast is dismissed
    */
-  onDismiss: PropTypes.func
+  onDismiss: PropTypes.func,
+  /**
+   * Indicates the style of toast notification
+   */
+  status: PropTypes.oneOf(["primary", "success", "danger", "warning"])
 };

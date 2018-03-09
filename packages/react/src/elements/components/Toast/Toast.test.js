@@ -17,4 +17,11 @@ describe("Toast", () => {
 
     expect(wrapper.find(IconButton)).toHaveProp("onClick", onDismissFn);
   });
+
+  describe("statuses", () => {
+    it("adds the appropriate style to the component", () => {
+      const wrapper = shallow(<Toast status="success">Who wants toast?</Toast>);
+      expect(wrapper).toHaveClassName("hig__toast--success");
+    });
+  });
 });
