@@ -1,13 +1,20 @@
 import React from "react";
 import { shallow } from "enzyme";
 import Toast from "./Toast";
-import ToastPresenter from "./ToastPresenter";
+import { IconButton } from "../../../hig-react";
 
 describe("Toast", () => {
-  it("renders a ToastPresenter", () => {
+  it("renders the message", () => {
     const wrapper = shallow(<Toast>Who wants toast?</Toast>);
-    expect(
-      wrapper.matchesElement(<ToastPresenter>Who wants toast?</ToastPresenter>)
-    ).toBe(true);
+    expect(wrapper).toIncludeText("Who wants toast?");
+  });
+
+  it("passes onDismiss to the dismiss IconButton", () => {
+    const onDismissFn = jest.fn();
+    const wrapper = shallow(
+      <Toast onDismiss={onDismissFn}>Who wants toast?</Toast>
+    );
+
+    expect(wrapper.find(IconButton)).toHaveProp("onClick", onDismissFn);
   });
 });

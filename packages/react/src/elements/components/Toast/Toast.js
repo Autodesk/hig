@@ -1,36 +1,33 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import ToastPresenter from "./ToastPresenter";
+import IconButton from "../../../adapters/IconButtonAdapter";
+import "./toast.css";
 
 export default class Toast extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      visible: true
-    };
-  }
-
-  onDismiss = () => {
-    this.setState({ visible: false });
-  };
-
   render() {
-    const { children, ...otherProps } = this.props;
     return (
-      <ToastPresenter
-        {...otherProps}
-        onDismiss={this.onDismiss}
-        visible={this.state.visible}
-      >
-        {children}
-      </ToastPresenter>
+      <div className="hig__toast">
+        <div className="hig__toast__body">
+          <div className="hig__toast__message">{this.props.children}</div>
+          <IconButton
+            title="Dismiss"
+            icon="close-notification"
+            type="flat"
+            onClick={this.props.onDismiss}
+          />
+        </div>
+      </div>
     );
   }
 }
 
 Toast.propTypes = {
   /**
-   * Content for the Toast
+   * Message content for the Toast
    */
-  children: PropTypes.node
+  children: PropTypes.node,
+  /**
+   * Function to call when Toast is dismissed
+   */
+  onDismiss: PropTypes.func
 };

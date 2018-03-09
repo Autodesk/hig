@@ -1,7 +1,10 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { Toast } from "../src/hig-react";
+import { action } from "@storybook/addon-actions";
+import { Toast, Text } from "../src/hig-react";
 
 storiesOf("Toast", module).add("default", () => (
-  <Toast>Who wants toast??</Toast>
+  <Toast onDismiss={action("Toast dismissed")}>
+    <Text>Who wants toast??</Text>
+  </Toast>
 ));
