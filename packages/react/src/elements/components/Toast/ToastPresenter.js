@@ -1,8 +1,16 @@
-import React from "react";
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 import "./toast.css";
 
-const ToastPresenter = props => (
-  <div className="hig__toast">{props.children}</div>
-);
+export default class ToastPresenter extends Component {
+  render() {
+    return <div className="hig__toast">{this.props.children}</div>;
+  }
+}
 
-export default ToastPresenter;
+ToastPresenter.propTypes = {
+  /**
+   * Content for the Toast
+   */
+  children: PropTypes.node
+};
