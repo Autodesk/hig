@@ -1,4 +1,23 @@
 .hig__toast {
   display: flex;
-  align-items: center;
+  flex-flow: column;
+  justify-content: center;
+
+  width: 340px;
+  min-height: 53px;
+  padding: 6px 6px 6px 28px;
+
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, .5); /* TODO: restore color map for hig-react */
+  border-radius: 4px;
+  border-left: 3px solid transparent;
+}
+
+.hig__toast__body {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.hig__toast__message {
+  line-height: 36px; /* TODO: temporarily to match the current height of the IconButton */
 }
