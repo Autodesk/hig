@@ -1,3 +1,4 @@
 .hig__toast {
-
+  display: flex;
+  align-items: center;
 }
