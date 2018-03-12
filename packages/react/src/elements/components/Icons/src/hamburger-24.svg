@@ -1,0 +1,14 @@
+<svg width="16px" height="12px" viewBox="0 0 16 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="hig-web-light/component/globalnav/topnav/hamburger+logolockup" transform="translate(-20.000000, -22.000000)" fill="#353636">
+            <g id="hig-web-light/basic/icon/hamburger" transform="translate(16.000000, 16.000000)">
+                <rect id="Rectangle" x="4" y="6" width="16" height="2"></rect>
+                <rect id="Rectangle" x="4" y="11" width="16" height="2"></rect>
+                <rect id="Rectangle" x="4" y="16" width="16" height="2"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -16,6 +16,7 @@
   "scripts": {
     "babel": "babel --ignore test.js,Tests.js,test -d lib src",
     "build-playground": "react-scripts build",
+    "build-icons": "node scripts/build-icons.js",
     "deploy-playground": "react-scripts build && surge build",
     "generate-docs": "node ./scripts/generate-docs.js",
     "lib": "yarn babel && NODE_ENV=production webpack -p",
@@ -82,6 +83,7 @@
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.2",
     "surge": "^0.19.0",
+    "svgo": "^0.7.2",
     "typescript": "^2.3.2",
     "webpack": "^3.5.5"
   },
