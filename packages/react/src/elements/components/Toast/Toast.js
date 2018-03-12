@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
 import IconButton from "../../../adapters/IconButtonAdapter";
-import "./toast.css";
+import "./toast.scss";
 
 export default class Toast extends Component {
   render() {
