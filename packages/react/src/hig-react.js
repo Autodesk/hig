@@ -63,6 +63,9 @@ export { default as SideNav } from "./elements/components/GlobalNav/SideNav";
 export { sizes } from "hig-vanilla";
 export { default as SkeletonItem } from "./adapters/SkeletonItemAdapter";
 export { default as Spacer } from "./adapters/SpacerAdapter";
+export { Tab } from "./elements/components/Tabs";
+export { default as Table } from "./elements/components/Table";
+export { default as Tabs } from "./elements/components/Tabs";
 export { default as TextArea } from "./adapters/FormElements/TextAreaAdapter";
 export {
   default as TextCellContent
@@ -70,7 +73,5 @@ export {
 export { default as TextField } from "./adapters/FormElements/TextFieldAdapter";
 export { default as TextLink } from "./adapters/TextLinkAdapter";
 export { default as Timestamp } from "./adapters/TimestampAdapter";
-export { default as Table } from "./elements/components/Table";
-export { default as Tabs } from "./elements/components/Tabs";
-export { Tab } from "./elements/components/Tabs";
+export { default as Toast } from "./elements/components/Toast/Toast";
 export * from "./elements/components/Typography";
