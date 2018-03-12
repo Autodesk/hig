@@ -1,4 +1,5 @@
 .hig__toast {
+  box-sizing: border-box;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -34,5 +35,5 @@
 }
 
 .hig__toast__message {
-  line-height: 36px; /* TODO: temporarily to match the current height of the IconButton */
+  padding: 7px 0; /* Aligns first line of message to match the IconButton height */
 }
