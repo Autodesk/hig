@@ -4,12 +4,8 @@
 //   background: color(hig-blue-50);
 // }
 
-@function color($color-name, $color-variant:null) {
-  @if ($color-variant != null) {
-    @return map-get(map-get($colors, $color-name), $color-variant);
-  } @else {
-    @return map-get($colors, $color-name);
-  }
+@function color($color-name) {
+  @return map-get($colors, $color-name);
 }
 
 // Our actual color map
@@ -50,12 +46,12 @@ $colors: (
   hig-green-60: rgba(107, 151, 51, 1),
   hig-green-70: rgba(86, 122, 40, 1),
 
-  hig-turquoise-20: #E2F9F7,
-  hig-turquoise-30: #BBF3ED,
-  hig-turquoise-40: #5CE1D3,
-  hig-turquoise-50: #0ED3BE,
-  hig-turquoise-60: #0CA899,
-  hig-turquoise-70: #0A8378,
+  hig-turquoise-20: rgba(226, 249, 247, 1),
+  hig-turquoise-30: rgba(187, 243, 237, 1),
+  hig-turquoise-40: rgba(92, 225, 211, 1),
+  hig-turquoise-50: rgba(14, 211, 190, 1),
+  hig-turquoise-60: rgba(12, 168, 153, 1),
+  hig-turquoise-70: rgba(10, 131, 120, 1),
 
   hig-indigo-20: rgba(226, 249, 247, 1),
   hig-indigo-30: rgba(209, 221, 238, 1),
@@ -106,11 +102,11 @@ $colors: (
   hig-red-alert: rgba(236, 74, 65, 1),
 );
 
-// Dynamicly create css classes that can be used with divs
-// this example will add "hig-blue-30" as background color to this div:
+// Dynamically create css classes that can be used with divs
+// This example will add "hig-blue-30" as background color to this div:
 // <div class='hig__colors__hig-blue-30--background'></div>
 
-@each $color_name, $color_value in $colors{
+@each $color_name, $color_value in $colors {
   :export {
     #{$color_name}: $color_value;
   }
