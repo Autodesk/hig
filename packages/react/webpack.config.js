@@ -31,6 +31,12 @@ const debug = {
     ]
   },
   plugins: [],
+  resolve: {
+    modules: [
+      path.resolve(__dirname, 'src'),
+      'node_modules',
+    ],
+  },
   externals
 };
 
@@ -57,6 +63,12 @@ const production = {
     new ExtractTextPlugin("hig-react.css"),
     new OptimizeCssAssetsPlugin()
   ],
+  resolve: {
+    modules: [
+      path.resolve(__dirname, 'src'),
+      'node_modules',
+    ],
+  },
   externals
 };
 

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <title>file-video-24</title>
+  <g id="assets">
+    <g>
+      <path d="M16,11H8a1,1,0,0,1-1-1V5A1,1,0,0,1,8,4h8a1,1,0,0,1,1,1v5A1,1,0,0,1,16,11Zm0-6H8v5h8Z"/>
+      <path d="M16,19H8a1,1,0,0,1-1-1V13a1,1,0,0,1,1-1h8a1,1,0,0,1,1,1v5A1,1,0,0,1,16,19Zm0-6H8v5h8Z"/>
+      <rect x="4" y="4" width="2" height="1"/>
+      <rect x="4" y="6" width="2" height="1"/>
+      <rect x="4" y="8" width="2" height="1"/>
+      <rect x="4" y="10" width="2" height="1"/>
+      <rect x="4" y="12" width="2" height="1"/>
+      <rect x="4" y="14" width="2" height="1"/>
+      <rect x="4" y="16" width="2" height="1"/>
+      <rect x="4" y="18" width="2" height="1"/>
+      <rect x="18" y="4" width="2" height="1"/>
+      <rect x="18" y="6" width="2" height="1"/>
+      <rect x="18" y="8" width="2" height="1"/>
+      <rect x="18" y="10" width="2" height="1"/>
+      <rect x="18" y="12" width="2" height="1"/>
+      <rect x="18" y="14" width="2" height="1"/>
+      <rect x="18" y="16" width="2" height="1"/>
+      <rect x="18" y="18" width="2" height="1"/>
+      <path d="M21,21H3a1,1,0,0,1-1-1V3A1,1,0,0,1,3,2H21a1,1,0,0,1,1,1V20A1,1,0,0,1,21,21ZM3,3V20H21V3Z"/>
+    </g>
+  </g>
+</svg>

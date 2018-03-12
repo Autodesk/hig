@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <title>print-24</title>
+  <g id="final">
+    <g id="print">
+      <g id="outline">
+        <rect x="6" y="3" width="12" height="4" fill="none"/>
+        <path d="M21,7H19V3a1,1,0,0,0-1-1H6A1,1,0,0,0,5,3V7H3A1,1,0,0,0,2,8v8a1,1,0,0,0,1,1H6v4a1.06,1.06,0,0,0,1.06,1h10A1,1,0,0,0,18,21V17h2.94A1.06,1.06,0,0,0,22,16V8A1,1,0,0,0,21,7ZM6,3H18V7H6ZM17,21H7V14H17Zm4-5H18V14a1,1,0,0,0-.94-1h-10A1.06,1.06,0,0,0,6,14v2H3V8H21Z" fill="#2e4258"/>
+        <rect x="7" y="14" width="10" height="7" fill="none"/>
+        <rect x="15" y="9" width="4" height="1" fill="#2e4258"/>
+        <rect x="8" y="16" width="8" height="1" fill="#2e4258"/>
+        <rect x="8" y="18" width="8" height="1" fill="#2e4258"/>
+      </g>
+    </g>
+  </g>
+</svg>

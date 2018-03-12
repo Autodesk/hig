@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <title>home-24</title>
+  <g id="final">
+    <g id="home">
+      <path id="outline" d="M19,21H15a1,1,0,0,1-1-1V15H10v5a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V14H3L2,12.26,11.29,3h1.41L22,12.26,21,14H20v6A1,1,0,0,1,19,21ZM9,14h6v6h4V13h1.25l.48-.64L12.29,4h-.59L3.27,12.36l.48.65H5v7H9Z" fill="#2e4258"/>
+    </g>
+  </g>
+</svg>
