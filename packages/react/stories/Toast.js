@@ -2,10 +2,31 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { text } from "@storybook/addon-knobs/react";
-import { Toast } from "../src/hig-react";
+import { Avatar, Toast } from "../src/hig-react";
 
-storiesOf("Toast", module).add("default", () => (
-  <Toast onDismiss={action("Toast dismissed")} status={text("Status")}>
-    {text("Children", "Who wants toast?")}
-  </Toast>
-));
+storiesOf("Toast", module)
+  .add("default", () => (
+    <Toast onDismiss={action("Toast dismissed")} status={text("Status")}>
+      {text("Children", "Who wants toast?")}
+    </Toast>
+  ))
+
+  .add("with an avatar", () => (
+    <Toast
+      image={<Avatar name="Jon Snow" size="large-48" />}
+      onDismiss={action("Toast dismissed")}
+      status={text("Status")}
+    >
+      {text("Children", "Who wants toast?")}
+    </Toast>
+  ))
+
+  .add("with a thumbnail", () => (
+    <Toast
+      image={<img src="http://placekitten.com/g/48/48" />}
+      onDismiss={action("Toast dismissed")}
+      status={text("Status")}
+    >
+      {text("Children", "Who wants toast?")}
+    </Toast>
+  ));

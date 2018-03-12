@@ -13,6 +13,9 @@ export default class Toast extends Component {
 
     return (
       <div className={toastClasses}>
+        {this.props.image && (
+          <div className="hig__toast__image-container">{this.props.image}</div>
+        )}
         <div className="hig__toast__body">
           <div className="hig__toast__message">
             <RichText>{this.props.children}</RichText>
@@ -36,6 +39,11 @@ Toast.propTypes = {
    * Message content for the Toast
    */
   children: PropTypes.node,
+  /**
+   * An Avatar or Thumbnail to precede the notification content.
+   * If not provided, the matching status icon will be rendered.
+   */
+  image: PropTypes.node,
   /**
    * Function to call when Toast is dismissed
    */

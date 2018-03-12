@@ -18,6 +18,17 @@ describe("Toast", () => {
     expect(wrapper.find(IconButton)).toHaveProp("onClick", onDismissFn);
   });
 
+  it("adds an image to the expected container", () => {
+    const thumbnail = <img src="placekitten.com/g/60/60" />;
+    const wrapper = mount(<Toast image={thumbnail}>Who wants toast?</Toast>);
+
+    expect(
+      wrapper.containsMatchingElement(
+        <div className="hig__toast__image-container">{thumbnail}</div>
+      )
+    ).toBe(true);
+  });
+
   describe("statuses", () => {
     it("adds the appropriate style to the component", () => {
       const withoutStatus = mount(<Toast>Who wants toast?</Toast>);
