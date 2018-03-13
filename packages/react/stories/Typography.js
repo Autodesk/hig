@@ -14,7 +14,6 @@ import {
   Sub1,
   Sub2
 } from "../src/hig-react";
-import arrayToObject from "../.storybook/helpers/arrayToObject";
 
 [H1, H2, H3, Text, Body, Bold, Caption, Disabled, Sub1, Sub2].forEach(
   Component => {
@@ -26,7 +25,7 @@ import arrayToObject from "../.storybook/helpers/arrayToObject";
         disabled={boolean("Disabled", false)}
         color={select(
           "Color",
-          arrayToObject(VanillaTypography.VALID_COLORS),
+          VanillaTypography.VALID_COLORS,
           "hig-cool-gray-70"
         )}
         opacity={number("Opacity", 1.0, {
@@ -35,11 +34,7 @@ import arrayToObject from "../.storybook/helpers/arrayToObject";
           max: 1.0,
           step: 0.1
         })}
-        size={select(
-          "Size",
-          arrayToObject(VanillaTypography.VALID_SIZES),
-          "medium"
-        )}
+        size={select("Size", VanillaTypography.VALID_SIZES, "medium")}
       >
         {`${name} example text`}
       </Component>
