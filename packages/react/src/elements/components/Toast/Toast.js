@@ -6,7 +6,9 @@ import "./toast.scss";
 
 export default class Toast extends Component {
   render() {
-    const toastClasses = cx("hig__toast", `hig__toast--${this.props.status}`);
+    const toastClasses = cx("hig__toast", {
+      [`hig__toast--${this.props.status}`]: this.props.status
+    });
 
     return (
       <div className={toastClasses}>
@@ -23,10 +25,6 @@ export default class Toast extends Component {
     );
   }
 }
-
-Toast.defaultProps = {
-  status: "primary"
-};
 
 Toast.propTypes = {
   /**

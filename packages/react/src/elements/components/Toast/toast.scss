@@ -8,7 +8,12 @@
 
   width: 340px;
   min-height: 53px;
-  padding: 6px 6px 6px 28px;
+  padding: {
+    top: 6px;
+    right: 6px;
+    bottom: 6px;
+    left: 0px;
+  }
 
   box-shadow: 0px 2px 4px 0px transparentize(color(hig-gray-70), .5);
   border-radius: 4px;
@@ -38,5 +43,9 @@
 }
 
 .hig__toast__message {
-  padding: 7px 0; /* Aligns first line of message to match the IconButton height */
+  padding: {
+    top: 7px; /* Aligns first line of message to match the IconButton height */
+    bottom: 7px;
+    left: 12px;
+  }
 }

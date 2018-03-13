@@ -20,8 +20,17 @@ describe("Toast", () => {
 
   describe("statuses", () => {
     it("adds the appropriate style to the component", () => {
-      const wrapper = shallow(<Toast status="success">Who wants toast?</Toast>);
-      expect(wrapper).toHaveClassName("hig__toast--success");
+      const withoutStatus = shallow(<Toast>Who wants toast?</Toast>);
+      expect(withoutStatus.find(".hig__toast")).not.toHaveClassName(
+        "hig__toast--success"
+      );
+
+      const withStatus = shallow(
+        <Toast status="success">Who wants toast?</Toast>
+      );
+      expect(withStatus.find(".hig__toast")).toHaveClassName(
+        "hig__toast--success"
+      );
     });
   });
 });
