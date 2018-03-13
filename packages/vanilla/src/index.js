@@ -90,4 +90,4 @@ export { default as breakpoints } from './basics/responsive/responsive';
 export { colors };
 export { sizes };
 
-export { default as i18next } from './helpers/js/i18n.js';
+export { default as i18next } from './helpers/js/i18n';

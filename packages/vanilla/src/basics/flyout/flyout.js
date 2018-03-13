@@ -1,4 +1,4 @@
-/* globals window */
+/* globals window document */
 import Interface from 'interface.json';
 import Core from '_core.js';
 import CSSTransition from 'helpers/js/css-transition';
@@ -50,6 +50,8 @@ class Flyout extends Core {
 
   open() {
     this.containerAnimation.enter();
+    this._ensureFlyoutLeftEdgeVisibility();
+    this._ensureFlyoutRightEdgeVisibility();
   }
 
   close() {
@@ -105,6 +107,86 @@ class Flyout extends Core {
       )
     );
     container.classList.add(`hig__flyout__container--anchor-${anchorPoint}`);
+
+    const panel = this._findDOMEl('.hig__flyout__panel', this.el);
+    panel.setAttribute('data-anchor-point', anchorPoint);
+
+    this._ensureFlyoutLeftEdgeVisibility();
+    this._ensureFlyoutRightEdgeVisibility();
+  }
+
+  _ensureFlyoutLeftEdgeVisibility() {
+    const viewPortWidth = document.documentElement.clientWidth;
+    const flyoutPanel = this._findDOMEl('.hig__flyout__panel', this.el);
+
+    const flyoutViewPortInfo = flyoutPanel.getBoundingClientRect();
+    const chevron = this._findDOMEl('.hig__flyout__chevron', this.el);
+
+    const target = this.el.firstElementChild;
+    const targetCenter = this._getXCenterCoordinate(target);
+
+    const chevronEl = this._findDOMEl('.hig__flyout__chevron--dark', this.el);
+    const chevronCenter = this._getXCenterCoordinate(chevronEl);
+
+    if (viewPortWidth < flyoutViewPortInfo.right) {
+      const shiftDistance = (flyoutViewPortInfo.right - viewPortWidth) + 5; // 5 is added hear to account for scrollbar
+      flyoutPanel.style.position = 'absolute';
+      flyoutPanel.style.left = `-${shiftDistance}px`;
+      this._updateChevronIndex(chevron);
+      chevron.style.left = `-${chevronCenter - targetCenter}px`;
+    }
+  }
+
+  _ensureFlyoutRightEdgeVisibility() {
+    const flyoutPanel = this._findDOMEl('.hig__flyout__panel', this.el);
+    const flyoutViewportInfo = flyoutPanel.getBoundingClientRect();
+
+    const target = this.el.firstElementChild;
+    const chevronContainer = this._findDOMEl('.hig__flyout__chevron', this.el);
+
+    if (flyoutViewportInfo.x < 0) {
+      flyoutPanel.style.position = 'absolute';
+      this._resetTopOrBottomFlyout(flyoutPanel, target, chevronContainer);
+      this._resetRightFlyout(flyoutPanel);
+    }
+  }
+
+  _resetTopOrBottomFlyout(flyoutPanel, target, chevronContainer) {
+    const updatedFlyoutViewportInfo = flyoutPanel.getBoundingClientRect();
+    const targetInfo = target.getBoundingClientRect();
+
+    if (
+      flyoutPanel.dataset.anchorPoint.includes('bottom-') ||
+      flyoutPanel.dataset.anchorPoint.includes('top-')
+    ) {
+      const shiftDistance = updatedFlyoutViewportInfo.left - targetInfo.left;
+      flyoutPanel.style.left = `-${shiftDistance}px`;
+
+      if (flyoutPanel.dataset.anchorPoint.includes('bottom-')) {
+        flyoutPanel.style.bottom = '0px';
+      }
+      this._updateChevronIndex(chevronContainer);
+    }
+  }
+
+  _getXCenterCoordinate(el) {
+    const { width, x } = el.getBoundingClientRect();
+    return x + (width / 2);
+  }
+
+  _resetRightFlyout(flyoutPanel) {
+    if (flyoutPanel.dataset.anchorPoint.includes('right-')) {
+      const updatedAnchorPoint = flyoutPanel.dataset.anchorPoint.replace(
+        /right-/,
+        'left-'
+      );
+      this.setAnchorPoint(updatedAnchorPoint);
+      flyoutPanel.style.position = 'static';
+    }
+  }
+
+  _updateChevronIndex(chevron) {
+    chevron.style.zIndex = '9998';
   }
 
   setMaxHeight(maxHeight) {

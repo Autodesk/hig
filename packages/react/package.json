@@ -1,36 +1,63 @@
 {
   "name": "hig-react",
-  "version": "0.28.35",
-  "description": "hig components in react",
+  "description": "HIG components in React",
+  "author": "Autodesk Inc.",
+  "license": "Apache-2.0",
+  "homepage": "https://hig.autodesk.com",
   "repository": {
     "type": "git",
     "url": "https://github.com/Autodesk/hig"
   },
+  "version": "0.28.36",
   "main": "lib/hig-react.js",
-  "css": "lib/hig-react.css",
-  "author": "Autodesk Inc.",
-  "homepage": "http://hig.autodesk.com",
-  "license": "Apache-2.0",
+  "files": [
+    "lib/*"
+  ],
+  "scripts": {
+    "babel": "babel --ignore test.js,Tests.js,test -d lib src",
+    "build-playground": "react-scripts build",
+    "build-icons": "node scripts/build-icons.js",
+    "deploy-playground": "react-scripts build && surge build",
+    "generate-docs": "node ./scripts/generate-docs.js",
+    "lib": "yarn babel && NODE_ENV=production webpack -p",
+    "lint": "eslint ./src/** -c ./.eslintrc.js",
+    "lint-fix": "eslint ./src/** -c ./.eslintrc.js --fix",
+    "playground": "react-scripts start",
+    "start": "react-scripts start",
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "storybook-build": "build-storybook -c .storybook -o storybook-build",
+    "test": "jest --watch",
+    "test-ci": "jest --coverage --runInBand --colors",
+    "type-check": "tsc"
+  },
+  "dependencies": {
+    "hig-vanilla": "^0.1.26"
+  },
   "peerDependencies": {
     "prop-types": "^15.5.10",
     "react": "^15.4.1",
     "react-dom": "^15.4.1"
   },
-  "files": [
-    "lib/*"
-  ],
   "devDependencies": {
+    "@storybook/addon-actions": "^3.3.15",
+    "@storybook/addon-info": "^3.3.15",
+    "@storybook/addon-knobs": "^3.3.15",
+    "@storybook/addon-notes": "^3.3.15",
+    "@storybook/addon-viewport": "^3.3.15",
+    "@storybook/addons": "^3.3.15",
+    "@storybook/react": "^3.3.15",
     "@types/jest": "^19.2.3",
     "@types/node": "^7.0.21",
     "@types/react": "^15.0.24",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.1",
+    "babel-loader": "^7.1.4",
     "babel-plugin-react-docgen": "^1.8.1",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
-    "copy-webpack-plugin": "^4.2.0",
+    "classnames": "^2.2.5",
+    "css-loader": "^0.28.10",
     "enzyme": "^2.9.1",
     "eslint": "^4.9.0",
     "eslint-config-airbnb": "^15.1.0",
@@ -39,36 +66,26 @@
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-prettier": "^2.3.1",
     "eslint-plugin-react": "^7.4.0",
-    "jest": "^20.0.4",
-    "jest-enzyme": "^3.7.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "jest": "^21.2.1",
+    "jest-enzyme": "^3.8.3",
     "node-fetch": "^1.7.3",
+    "node-sass": "^4.7.2",
+    "optimize-css-assets-webpack-plugin": "^3.2.0",
     "prettier": "^1.7.4",
-    "prop-types": "^15.5.10",
+    "prop-types": "^15.6.1",
     "react": "^15.4.1",
     "react-addons-test-utils": "^15.6.2",
     "react-devtools-core": "^2.0.12",
     "react-dom": "^15.6.1",
     "react-scripts": "1.0.14",
     "react-test-renderer": "^15.6.1",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.2",
     "surge": "^0.19.0",
+    "svgo": "^0.7.2",
     "typescript": "^2.3.2",
     "webpack": "^3.5.5"
   },
-  "scripts": {
-    "babel": "babel --ignore test.js,Tests.js,test -d lib src",
-    "build-playground": "react-scripts build",
-    "deploy-playground": "react-scripts build && surge build",
-    "generate-docs": "node ./scripts/generate-docs.js",
-    "lib": "yarn babel && NODE_ENV=production webpack -p",
-    "lint": "eslint ./src/** -c ./.eslintrc.js",
-    "lint-fix": "eslint ./src/** -c ./.eslintrc.js --fix",
-    "playground": "react-scripts start",
-    "start": "react-scripts start",
-    "test": "jest --watch",
-    "test-ci": "jest --coverage --runInBand --colors",
-    "type-check": "tsc"
-  },
-  "dependencies": {
-    "hig-vanilla": "^0.1.25"
-  }
+  "css": "lib/hig-react.css"
 }

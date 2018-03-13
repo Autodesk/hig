@@ -1,17 +1,18 @@
 {
   "name": "hig",
-  "version": "1.0.1",
   "description": "Autodesk design system",
   "author": "Autodesk Inc.",
-  "homepage": ".",
   "license": "Apache-2.0",
+  "homepage": "https://hig.autodesk.com",
+  "version": "1.0.1",
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "update-packages": "lerna publish --skip-npm",
+    "publish-canary": "lerna publish --canary --yes --exact"
+  },
   "devDependencies": {
     "lerna": "^2.4.0",
     "node-fetch": "^1.7.3",
     "registry-url": "^3.1.0"
-  },
-  "scripts": {
-    "update-packages": "lerna publish --skip-npm",
-    "bootstrap": "lerna bootstrap"
   }
 }
