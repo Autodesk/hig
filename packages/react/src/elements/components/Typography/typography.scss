@@ -3,9 +3,7 @@
 @import '~styles/mixins/typography.scss';
 @import '~styles/mixins/spacing.scss';
 
-.hig__typography,
-.hig__rich-text,
-.hig__rich-text p {
+.hig__typography {
   @include typography-base;
   margin-bottom: spacing(m);
 }
@@ -45,7 +43,6 @@
 }
 
 // BOLD
-.hig__rich-text b,
 .hig__typography__bold {
   @include typography-base;
   font-weight: 700;
@@ -73,47 +70,22 @@
 }
 
 // HEADER
-.hig__rich-text h1,
 .hig__typography__h1 {
-  @include typography-base;
-  display: block;
-  font-size: 30px;
-  line-height: 36px;
-  color: color('hig-gray-70');
+  @include typography-h1;
 }
 
-.hig__rich-text h2,
 .hig__typography__h2 {
-  @include typography-base;
-  display: block;
-  font-size: 24px;
-  line-height: 30px;
-  color: color('hig-gray-70');
+  @include typography-h2;
 }
 
-.hig__rich-text h3,
 .hig__typography__h3 {
-  @include typography-base;
-  display: block;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 26px;
-  color: color('hig-gray-70');
+  @include typography-h3;
 }
 
-.hig__rich-text h4,
 .hig__typography__sub1 {
-  @include typography-base;
-  display: block;
-  font-weight: 700;
-  color: transparentize($typography-base-color, .5);
+  @include typography-h4;
 }
 
-.hig__rich-text h5,
 .hig__typography__sub2 {
-  @include typography-base;
-  @include typography-small;
-  display: block;
-  font-weight: 700;
-  color: transparentize($typography-base-color, .5);
+  @include typography-h5;
 }
