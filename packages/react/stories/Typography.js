@@ -6,7 +6,7 @@ import {
   _VALID_COLORS,
   _VALID_SIZES,
   _VALID_TYPES
-} from "../src/elements/components/Typography";
+} from "../src/elements/components/Typography/_constants";
 import {
   H1,
   H2,

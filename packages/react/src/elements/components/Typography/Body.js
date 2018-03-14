@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Typography from "./Typography";
-import { _VALID_COLORS, _VALID_SIZES } from "./index";
+import { _VALID_COLORS, _VALID_SIZES } from "./_constants";
 
 export default class Body extends React.PureComponent {
   render() {

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
-import { _VALID_COLORS, _VALID_SIZES, _VALID_TYPES } from "./index";
+import { _VALID_COLORS, _VALID_SIZES, _VALID_TYPES } from "./_constants";
 import "./typography.scss";
 
 export default class Typography extends Component {
