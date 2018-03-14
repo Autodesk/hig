@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Typography as VanillaTypography } from "hig-vanilla";
-import Typography from "../../../adapters/TypographyAdapter";
+import Typography, { validColors, validSizes } from "./Typography";
 
 export default class Text extends React.PureComponent {
   render() {
@@ -21,7 +20,7 @@ Text.propTypes = {
   /**
    * Colors the text with one of the supported HIG colors
    */
-  color: PropTypes.oneOf(VanillaTypography.VALID_COLORS),
+  color: PropTypes.oneOf(validColors),
   /**
    * Whether to show text as disabled
    */
@@ -33,5 +32,5 @@ Text.propTypes = {
   /**
    * Sizes the text with one of the supported modifiers
    */
-  size: PropTypes.oneOf(VanillaTypography.VALID_SIZES)
+  size: PropTypes.oneOf(validSizes)
 };
