@@ -5,9 +5,6 @@ import Typography from "../../../adapters/TypographyAdapter";
 
 export default class Disabled extends React.PureComponent {
   render() {
-    console.warn(
-      "Component Disabled is deprecated and will be removed in the next version"
-    );
     const { children, ...remainingProps } = this.props;
     return <Typography type="disabled" text={children} {...remainingProps} />;
   }

@@ -5,9 +5,6 @@ import Typography from "../../../adapters/TypographyAdapter";
 
 export default class Body extends React.PureComponent {
   render() {
-    console.warn(
-      "Component Body is deprecated and will be removed in the next version"
-    );
     const { children, ...remainingProps } = this.props;
     return <Typography type="body" text={children} {...remainingProps} />;
   }

@@ -74,4 +74,4 @@ export { default as TextField } from "./adapters/FormElements/TextFieldAdapter";
 export { default as TextLink } from "./adapters/TextLinkAdapter";
 export { default as Timestamp } from "./adapters/TimestampAdapter";
 export { default as Toast } from "./elements/components/Toast/Toast";
-export * from "./elements/components/Typography";
+export * from "./elements/components/Typography/index";

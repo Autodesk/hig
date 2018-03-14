@@ -5,9 +5,6 @@ import Typography from "../../../adapters/TypographyAdapter";
 
 export default class Bold extends React.PureComponent {
   render() {
-    console.warn(
-      "Component Bold is deprecated and will be removed in the next version"
-    );
     const { children, ...remainingProps } = this.props;
     return <Typography type="bold" text={children} {...remainingProps} />;
   }

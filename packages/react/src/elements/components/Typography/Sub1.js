@@ -5,9 +5,6 @@ import Typography from "../../../adapters/TypographyAdapter";
 
 export default class Sub1 extends React.PureComponent {
   render() {
-    console.warn(
-      "Component Sub1 is deprecated and will be removed in the next version"
-    );
     const { children, ...remainingProps } = this.props;
     return <Typography type="sub1" text={children} {...remainingProps} />;
   }

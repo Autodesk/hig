@@ -5,9 +5,6 @@ import Typography from "../../../adapters/TypographyAdapter";
 
 export default class Caption extends React.PureComponent {
   render() {
-    console.warn(
-      "Component Caption is deprecated and will be removed in the next version"
-    );
     const { children, ...remainingProps } = this.props;
     return <Typography type="caption" text={children} {...remainingProps} />;
   }
