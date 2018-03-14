@@ -1,11 +1,12 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { number, boolean, select, text } from "@storybook/addon-knobs/react";
-import Typography, {
-  validColors,
-  validSizes,
-  validTypes
-} from "../src/elements/components/Typography/Typography";
+import Typography from "../src/elements/components/Typography/Typography";
+import {
+  _VALID_COLORS,
+  _VALID_SIZES,
+  _VALID_TYPES
+} from "../src/elements/components/Typography";
 import {
   H1,
   H2,
@@ -22,15 +23,15 @@ import {
 storiesOf("Typography", module).add("base component", () => (
   <Typography
     bold={boolean("Bold", false)}
-    color={select("Color", validColors, "hig-cool-gray-70")}
+    color={select("Color", _VALID_COLORS, "hig-cool-gray-70")}
     disabled={boolean("Disabled", false)}
     opacity={number("Opacity", 1.0, {
       min: 0.0,
       max: 1.0,
       step: 0.1
     })}
-    size={text("Size")}
-    type={select("Type", validTypes, "text")}
+    size={text("Size")} // TODO: keep text knob until select knob allows choosing a null value
+    type={select("Type", _VALID_TYPES, "text")}
     text={text("Text", "This should render nicely.")}
   />
 ));
@@ -42,14 +43,14 @@ storiesOf("Typography", module).add("base component", () => (
     storiesOf("Typography", module).add(name, () => (
       <Component
         bold={boolean("Bold", false)}
-        color={select("Color", validColors, "hig-cool-gray-70")}
+        color={select("Color", _VALID_COLORS, "hig-cool-gray-70")}
         disabled={boolean("Disabled", false)}
         opacity={number("Opacity", 1.0, {
           min: 0.0,
           max: 1.0,
           step: 0.1
         })}
-        size={select("Size", validSizes, "medium")}
+        size={select("Size", _VALID_SIZES, "medium")}
       >
         {`${name} example text`}
       </Component>

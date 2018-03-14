@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Typography, { validColors, validSizes } from "./Typography";
+import Typography from "./Typography";
+import { _VALID_COLORS, _VALID_SIZES } from "./index";
 
 export default class Sub1 extends React.PureComponent {
   render() {
@@ -20,7 +21,7 @@ Sub1.propTypes = {
   /**
    * Colors the text with one of the supported HIG colors
    */
-  color: PropTypes.oneOf(validColors),
+  color: PropTypes.oneOf(_VALID_COLORS),
   /**
    * Whether to show text as disabled
    */
@@ -32,5 +33,5 @@ Sub1.propTypes = {
   /**
    * Sizes the text with one of the supported modifiers
    */
-  size: PropTypes.oneOf(validSizes)
+  size: PropTypes.oneOf(_VALID_SIZES)
 };

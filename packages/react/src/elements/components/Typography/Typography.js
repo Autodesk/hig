@@ -1,32 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
+import { _VALID_COLORS, _VALID_SIZES, _VALID_TYPES } from "./index";
 import "./typography.scss";
-
-export const validColors = [
-  "hig-white",
-  "hig-cool-gray-70",
-  "hig-blue-50",
-  "hig-green-good",
-  "hig-yellow-warning",
-  "hig-red-alert"
-];
-
-export const validSizes = ["small", "medium", "large"];
-
-export const validTypes = [
-  "h1",
-  "h2",
-  "h3",
-  "text",
-  // Types below intended to be deprecated
-  "sub1",
-  "sub2",
-  "body",
-  "bold",
-  "disabled",
-  "caption"
-];
 
 export default class Typography extends Component {
   render() {
@@ -64,7 +40,7 @@ Typography.propTypes = {
   /**
    * Colors the text with one of the supported HIG colors
    */
-  color: PropTypes.oneOf(validColors),
+  color: PropTypes.oneOf(_VALID_COLORS),
   /**
    * Whether to show text as disabled
    */
@@ -76,11 +52,11 @@ Typography.propTypes = {
   /**
    * Sizes the text with one of the supported modifiers
    */
-  size: PropTypes.oneOf(validSizes),
+  size: PropTypes.oneOf(_VALID_SIZES),
   /**
    * Indicates the initial Typography style
    */
-  type: PropTypes.oneOf(validTypes).isRequired,
+  type: PropTypes.oneOf(_VALID_TYPES).isRequired,
   /**
    * Text to render styled based on provided type
    */
