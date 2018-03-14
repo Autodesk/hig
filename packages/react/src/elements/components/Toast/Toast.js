@@ -16,14 +16,14 @@ export default class Toast extends Component {
         <div className="hig__toast__body">
           <div className="hig__toast__message">
             <RichText>{this.props.children}</RichText>
-          </div>
-          <div className="hig__toast__dismiss-container">
-            <IconButton
-              title="Dismiss"
-              icon="close-notification"
-              type="flat"
-              onClick={this.props.onDismiss}
-            />
+            <div className="hig__toast__dismiss">
+              <IconButton
+                title="Dismiss"
+                icon="close-notification"
+                type="transparent"
+                onClick={this.props.onDismiss}
+              />
+            </div>
           </div>
         </div>
       </div>

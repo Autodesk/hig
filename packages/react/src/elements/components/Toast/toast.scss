@@ -43,10 +43,14 @@
 }
 
 .hig__toast__message {
+  flex-grow: 1;
+  display: flex;
+  position: relative;
   padding: {
     top: 7px; /* Aligns first line of message to match the IconButton height */
     bottom: 7px;
     left: 12px;
+    right: 36px;
   }
 
   .hig__rich-text {
@@ -54,7 +58,8 @@
   }
 }
 
-.hig__toast__dismiss-container {
-  align-self: flex-start;
-  display: flex;
+.hig__toast__dismiss {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
