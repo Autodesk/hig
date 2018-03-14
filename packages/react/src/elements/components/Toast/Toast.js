@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
 import IconButton from "../IconButton/IconButton";
+import RichText from "../RichText";
 import "./toast.scss";
 
 export default class Toast extends Component {
@@ -13,13 +14,17 @@ export default class Toast extends Component {
     return (
       <div className={toastClasses}>
         <div className="hig__toast__body">
-          <div className="hig__toast__message">{this.props.children}</div>
-          <IconButton
-            title="Dismiss"
-            icon="close-notification"
-            type="flat"
-            onClick={this.props.onDismiss}
-          />
+          <div className="hig__toast__message">
+            <RichText>{this.props.children}</RichText>
+          </div>
+          <div className="hig__toast__dismiss-container">
+            <IconButton
+              title="Dismiss"
+              icon="close-notification"
+              type="flat"
+              onClick={this.props.onDismiss}
+            />
+          </div>
         </div>
       </div>
     );

@@ -38,7 +38,7 @@
 
 .hig__toast__body {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -48,4 +48,13 @@
     bottom: 7px;
     left: 12px;
   }
+
+  .hig__rich-text {
+    margin: unset; /* Hacky until we have a better CSS reset */
+  }
+}
+
+.hig__toast__dismiss-container {
+  align-self: flex-start;
+  display: flex;
 }
