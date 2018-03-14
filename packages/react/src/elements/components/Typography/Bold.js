@@ -1,13 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Typography as VanillaTypography } from "hig-vanilla";
-import Typography from "../../../adapters/TypographyAdapter";
+import Typography from "./Typography";
+import { _VALID_COLORS, _VALID_SIZES } from "./_constants";
 
 export default class Bold extends React.PureComponent {
   render() {
-    console.warn(
-      "Component Bold is deprecated and will be removed in the next version"
-    );
     const { children, ...remainingProps } = this.props;
     return <Typography type="bold" text={children} {...remainingProps} />;
   }
@@ -24,7 +21,7 @@ Bold.propTypes = {
   /**
    * Colors the text with one of the supported HIG colors
    */
-  color: PropTypes.oneOf(VanillaTypography.VALID_COLORS),
+  color: PropTypes.oneOf(_VALID_COLORS),
   /**
    * Whether to show text as disabled
    */
@@ -36,5 +33,5 @@ Bold.propTypes = {
   /**
    * Sizes the text with one of the supported modifiers
    */
-  size: PropTypes.oneOf(VanillaTypography.VALID_SIZES)
+  size: PropTypes.oneOf(_VALID_SIZES)
 };
