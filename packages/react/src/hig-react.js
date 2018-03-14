@@ -56,7 +56,7 @@ export {
   default as RadioButton
 } from "./adapters/FormElements/RadioButtonAdapter";
 export { default as Range } from "./adapters/FormElements/RangeAdapter";
-export { default as RichText } from "./elements/components/RichText";
+export { default as RichText } from "./elements/components/RichText/RichText";
 export { default as SectionLabel } from "./adapters/SectionLabelAdapter";
 export { default as ShowMoreLess } from "./elements/components/ShowMoreLess";
 export { default as SideNav } from "./elements/components/GlobalNav/SideNav";
