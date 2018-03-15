@@ -18,17 +18,36 @@ describe("Toast", () => {
     expect(wrapper.find(IconButton)).toHaveProp("onClick", onDismissFn);
   });
 
-  it("adds an image to the expected container", () => {
-    const thumbnail = (
-      <img src="placekitten.com/g/60/60" alt="placekitten 60x60" />
-    );
-    const wrapper = mount(<Toast image={thumbnail}>Who wants toast?</Toast>);
+  describe("images", () => {
+    it("adds an image to the expected container", () => {
+      const thumbnail = (
+        <img src="placekitten.com/g/60/60" alt="placekitten 60x60" />
+      );
+      const wrapper = mount(<Toast image={thumbnail}>Who wants toast?</Toast>);
 
-    expect(
-      wrapper.containsMatchingElement(
-        <div className="hig__toast__image-container">{thumbnail}</div>
-      )
-    ).toBe(true);
+      expect(
+        wrapper.containsMatchingElement(
+          <div className="hig__toast__image-container">{thumbnail}</div>
+        )
+      ).toBe(true);
+    });
+
+    it("prefers rendering an image over a status icon", () => {
+      const thumbnail = (
+        <img src="placekitten.com/g/60/60" alt="placekitten 60x60" />
+      );
+      const wrapper = mount(
+        <Toast showStatusIcon image={thumbnail}>
+          Who wants toast?
+        </Toast>
+      );
+
+      expect(
+        wrapper.containsMatchingElement(
+          <div className="hig__toast__image-container">{thumbnail}</div>
+        )
+      ).toBe(true);
+    });
   });
 
   describe("statuses", () => {
@@ -49,6 +68,22 @@ describe("Toast", () => {
       expect(withStatus.find(".hig__toast")).toHaveClassName(
         "hig__toast--success"
       );
+    });
+  });
+
+  describe("status icons", () => {
+    it("renders an icon into the expected container", () => {
+      const withoutIcon = mount(
+        <Toast status="success">Who wants toast?</Toast>
+      );
+      expect(withoutIcon.find(".hig__toast__image-container")).toHaveLength(0);
+
+      const withIcon = mount(
+        <Toast status="success" showStatusIcon>
+          Who wants toast?
+        </Toast>
+      );
+      expect(withIcon.find(".hig__toast__image-container")).toHaveLength(1);
     });
   });
 });
