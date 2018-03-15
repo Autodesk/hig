@@ -12,6 +12,7 @@ module.exports = {
     describe: true,
     it: true,
     expect: true,
+    gemini: true,
     jest: true,
     beforeEach: true,
     document: true,

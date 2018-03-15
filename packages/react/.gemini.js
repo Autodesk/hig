@@ -3,7 +3,7 @@ const dotenv = require("dotenv");
 dotenv.config({ path: "./gemini/.env" });
 
 module.exports = {
-  rootUrl: "http://localhost:8080",
+  rootUrl: "http://localhost:9001",
   gridUrl: "http://ondemand.saucelabs.com/wd/hub",
   screenshotsDir: "./gemini/screens",
   windowSize: "1024x768",
@@ -25,6 +25,11 @@ module.exports = {
         platform: "macOs 10.12",
         name: "gemini visual regression tests"
       }
+    }
+  },
+  sets: {
+    chrome: {
+      files: ["gemini/suites"]
     }
   }
 };
