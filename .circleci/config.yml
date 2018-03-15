@@ -93,6 +93,16 @@ jobs:
           working_directory: packages/react
       - store_artifacts:
           path: packages/react/coverage
+  react-visual-test:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependencies-{{ checksum "yarn.lock" }}-{{ checksum "packages/react/yarn.lock" }}-{{ checksum "packages/vanilla/yarn.lock" }}
+      - restore_cache:
+          key: vanilla-build-{{ .Revision }}
+      - restore_cache:
+          key: react-build-{{ .Revision }}
       - run:
           name: Start Storybook Server (React)
           command: yarn storybook
@@ -173,10 +183,15 @@ workflows:
       - react-test:
           requires:
             - react-build
+      - react-visual-test:
+          requires:
+            - react-build
+            - vanilla-test
       - deploy-playground:
           requires:
             - vanilla-test
             - react-test
+            - react-visual-test
           filters:
             branches:
               only: development
@@ -189,10 +204,12 @@ workflows:
           requires:
             - vanilla-test
             - react-test
+            - react-visual-test
       - packages-deploy:
           requires:
             - vanilla-test
             - react-test
+            - react-visual-test
           filters:
             branches:
               only: master
