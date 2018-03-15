@@ -1,7 +1,7 @@
 defaults: &defaults
-      working_directory: ~/hig
-      docker:
-        - image: circleci/node:8.2.1
+  working_directory: ~/hig
+  docker:
+    - image: circleci/node:8.2.1
 
 version: 4
 jobs:
@@ -88,11 +88,22 @@ jobs:
           command: yarn lint
           working_directory: packages/react
       - run:
-          name: Run Tests (React)
+          name: Run Jest Tests (React)
           command: yarn test-ci
           working_directory: packages/react
       - store_artifacts:
-            path: packages/react/coverage
+          path: packages/react/coverage
+      - run:
+          name: Start Storybook Server (React)
+          command: yarn storybook
+          background: true
+          working_directory: packages/react
+      - run:
+          name: Run Visual Regression Tests (React)
+          command: yarn gemini-ci
+          working_directory: packages/react
+      - store_artifacts:
+          path: packages/react/gemini-report
   deploy-playground:
     <<: *defaults
     steps:

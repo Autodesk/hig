@@ -19,6 +19,7 @@
     "gemini":
       "concurrently 'yarn storybook' 'gemini test --reporter html --reporter flat' --kill-others --success first",
     "gemini-update": "concurrently 'yarn storybook' 'gemini update' --kill-others --success first",
+    "gemini-ci": "gemini test --reporter html --reporter flat",
     "generate-docs": "node ./scripts/generate-docs.js",
     "lib": "yarn babel && NODE_ENV=production webpack -p",
     "lint": "eslint ./src/** -c ./.eslintrc.js",
