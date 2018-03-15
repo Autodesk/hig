@@ -1,7 +1,6 @@
-gemini.suite("toast", parent => {
-  parent.setUrl("iframe.html?selectedKind=Toast&selectedStory=default");
-
-  gemini.suite("default", suite => {
-    suite.setCaptureElements("body").capture("body");
-  });
+gemini.suite("Toast", suite => {
+  suite
+    .setUrl("iframe.html?selectedKind=Toast&selectedStory=default")
+    .setCaptureElements(".storybook-component")
+    .capture("Default");
 });
