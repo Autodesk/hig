@@ -8,9 +8,9 @@
   width: 340px;
   min-height: 53px;
   padding: {
-    top: 6px;
+    top: 16px;
     right: 6px;
-    bottom: 6px;
+    bottom: 16px;
     left: 0px;
   }
 
@@ -37,7 +37,6 @@
 
 .hig__toast__image-container {
   display: flex;
-  align-items: center;
   justify-content: center;
 
   min-width: 64px;
@@ -58,8 +57,6 @@
   display: flex;
   position: relative;
   padding: {
-    top: 7px; /* Aligns first line of message to match the IconButton height */
-    bottom: 7px;
     left: 12px;
     right: 36px;
   }
@@ -71,6 +68,6 @@
 
 .hig__toast__dismiss {
   position: absolute;
-  top: 0;
+  top: -7.5px; /* Aligns first line of message to match the IconButton height */
   right: 0;
 }
