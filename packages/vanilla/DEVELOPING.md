@@ -32,6 +32,8 @@ which will trigger our build script to create an updated release file in [src/ba
 
 # Visual Regression Tests
 
+We use [Gemini](https://github.com/gemini-testing/gemini) with Sauce Labs to have a consistent browser to test against.
+
 1. Create a local file called `.env` and contact someone on the `#orion-hig-web-dev` slack channel for credentials. You'll need a `SAUCE_USERNAME=xxxxx` and a `SAUCE_ACCESS_KEY=xxxxx`
 1. Run the gemini tests and generate a report: `$ yarn gemini-report`
 1. View the report: `$ open ./gemini-report/index.html`
