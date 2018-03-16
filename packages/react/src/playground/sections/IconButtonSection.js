@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import React, { PureComponent } from "react";
 import PlaygroundSection from "../PlaygroundSection";
-import { IconButton, NewIconButton } from "../../hig-react";
+import { IconButton } from "../../hig-react";
 
 class IconButtonSection extends PureComponent {
   render() {
@@ -46,7 +46,7 @@ class IconButtonSection extends PureComponent {
           }}
         />
 
-        <NewIconButton
+        <IconButton
           title="Icon button"
           link="#"
           icon="settings"

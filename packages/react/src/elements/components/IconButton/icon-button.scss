@@ -16,31 +16,30 @@
   min-width: 36px;
   font-size: 14px;
 
+
+  svg * {
+    fill: color(hig-cool-gray-60);
+  }
+
   &.hig__icon-button--flat {
     border-color: transparent;
-
-    svg * {
-      fill: color(hig-slate-70);
-    }
   }
 
   &.hig__icon-button--transparent {
     border-color: transparent;
 
-    svg * {
-      fill: color(hig-cool-gray-60)
+    &:hover {
+      border-color: transparent;
+      svg * {
+        fill: color(hig-turquoise-50)
+      }
     }
 
     &:active,
     &:focus {
+      background-color: transparent;
       svg * {
         fill: color(hig-slate-40)
-      }
-    }
-
-    &:hover {
-      svg * {
-        fill: color(hig-turquoise-50)
       }
     }
   }
@@ -52,8 +51,8 @@
   &:active,
   &:focus {
     outline: none;
-    background: color(hig-turquoise-40);
-    border-color: color(hig-turquoise-40);
+    background: color(hig-slate-40);
+    border-color: color(hig-slate-40);
 
     svg * {
       fill: color(hig-white);
@@ -82,7 +81,11 @@
 
     &.hig__icon-button--flat,
     &.hig__icon-button--flat:hover,
-    &.hig__icon-button--flat:focus {
+    &.hig__icon-button--flat:focus,
+    &.hig__icon-button--transparent,
+    &.hig__icon-button--transparent:hover,
+    &.hig__icon-button--transparent:focus,
+    {
       border-color: transparent;
     }
   }
