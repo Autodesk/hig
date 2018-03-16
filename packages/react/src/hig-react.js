@@ -7,7 +7,7 @@ export {
 export {
   default as ActionBarSpacer
 } from "./adapters/ActionBar/ActionBarSpacerAdapter";
-export { default as Avatar } from "./adapters/AvatarAdapter";
+export { default as Avatar } from "./elements/components/Avatar";
 export { breakpoints } from "hig-vanilla";
 export { default as Button } from "./adapters/ButtonAdapter";
 export { default as Checkbox } from "./adapters/FormElements/CheckboxAdapter";
