@@ -10,14 +10,16 @@
   },
   "version": "0.28.36",
   "main": "lib/hig-react.js",
-  "files": [
-    "lib/*"
-  ],
+  "files": ["lib/*"],
   "scripts": {
     "babel": "babel --ignore test.js,Tests.js,test -d lib src",
     "build-playground": "react-scripts build",
     "build-icons": "node scripts/build-icons.js",
     "deploy-playground": "react-scripts build && surge build",
+    "gemini":
+      "concurrently 'yarn storybook' 'gemini test --reporter html --reporter flat' --kill-others --success first",
+    "gemini-update": "concurrently 'yarn storybook' 'gemini update' --kill-others --success first",
+    "gemini-ci": "gemini test --reporter html --reporter flat",
     "generate-docs": "node ./scripts/generate-docs.js",
     "lib": "yarn babel && NODE_ENV=production webpack -p",
     "lint": "eslint ./src/** -c ./.eslintrc.js",
@@ -57,7 +59,9 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "classnames": "^2.2.5",
+    "concurrently": "^3.5.1",
     "css-loader": "^0.28.10",
+    "dotenv": "^5.0.1",
     "enzyme": "^2.9.1",
     "eslint": "^4.9.0",
     "eslint-config-airbnb": "^15.1.0",
@@ -67,6 +71,8 @@
     "eslint-plugin-prettier": "^2.3.1",
     "eslint-plugin-react": "^7.4.0",
     "extract-text-webpack-plugin": "^3.0.2",
+    "gemini": "^4.19.3",
+    "gemini-sauce": "^1.0.1",
     "jest": "^21.2.1",
     "jest-enzyme": "^3.8.3",
     "node-fetch": "^1.7.3",

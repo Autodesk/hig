@@ -1,7 +1,7 @@
 defaults: &defaults
-      working_directory: ~/hig
-      docker:
-        - image: circleci/node:8.2.1
+  working_directory: ~/hig
+  docker:
+    - image: circleci/node:8.2.1
 
 version: 4
 jobs:
@@ -88,11 +88,32 @@ jobs:
           command: yarn lint
           working_directory: packages/react
       - run:
-          name: Run Tests (React)
+          name: Run Jest Tests (React)
           command: yarn test-ci
           working_directory: packages/react
       - store_artifacts:
-            path: packages/react/coverage
+          path: packages/react/coverage
+  react-visual-test:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependencies-{{ checksum "yarn.lock" }}-{{ checksum "packages/react/yarn.lock" }}-{{ checksum "packages/vanilla/yarn.lock" }}
+      - restore_cache:
+          key: vanilla-build-{{ .Revision }}
+      - restore_cache:
+          key: react-build-{{ .Revision }}
+      - run:
+          name: Start Storybook Server (React)
+          command: yarn storybook
+          background: true
+          working_directory: packages/react
+      - run:
+          name: Run Visual Regression Tests (React)
+          command: yarn gemini-ci
+          working_directory: packages/react
+      - store_artifacts:
+          path: packages/react/gemini-report
   deploy-playground:
     <<: *defaults
     steps:
@@ -162,10 +183,15 @@ workflows:
       - react-test:
           requires:
             - react-build
+      - react-visual-test:
+          requires:
+            - react-build
+            - vanilla-test
       - deploy-playground:
           requires:
             - vanilla-test
             - react-test
+            - react-visual-test
           filters:
             branches:
               only: development
@@ -178,10 +204,12 @@ workflows:
           requires:
             - vanilla-test
             - react-test
+            - react-visual-test
       - packages-deploy:
           requires:
             - vanilla-test
             - react-test
+            - react-visual-test
           filters:
             branches:
               only: master
