@@ -8,6 +8,7 @@ class IconButtonSection extends PureComponent {
     return (
       <PlaygroundSection title="IconButton">
         <IconButton
+          type="flat"
           title="Icon button"
           link="#"
           icon="settings"
@@ -30,6 +31,26 @@ class IconButtonSection extends PureComponent {
           title="Icon button"
           link="#"
           icon="settings"
+          type="primary"
+          onClick={() => {
+            console.log("Button with icon on click");
+          }}
+          onBlur={() => {
+            console.log("onblur");
+          }}
+          onFocus={() => {
+            console.log("focus");
+          }}
+          onHover={() => {
+            console.log("hover");
+          }}
+        />
+
+        <IconButton
+          title="Icon button"
+          link="#"
+          icon="settings"
+          type="transparent"
           onClick={() => {
             console.log("Button with icon on click");
           }}
