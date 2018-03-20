@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { text, select } from "@storybook/addon-knobs/react";
-import Avatar, { _AVAILABLE_SIZES } from "../src/elements/components/Avatar";
+import Avatar, { _AVAILABLE_SIZES } from "elements/components/Avatar";
 
 storiesOf("Avatar", module)
   .add("default", () => (

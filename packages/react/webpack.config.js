@@ -32,10 +32,7 @@ const debug = {
   },
   plugins: [],
   resolve: {
-    modules: [
-      path.resolve(__dirname, 'src'),
-      'node_modules',
-    ],
+    modules: [path.resolve(__dirname, "src"), "node_modules"]
   },
   externals
 };
@@ -64,10 +61,7 @@ const production = {
     new OptimizeCssAssetsPlugin()
   ],
   resolve: {
-    modules: [
-      path.resolve(__dirname, 'src'),
-      'node_modules',
-    ],
+    modules: [path.resolve(__dirname, "src"), "node_modules"]
   },
   externals
 };

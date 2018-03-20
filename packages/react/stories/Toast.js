@@ -2,8 +2,8 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { text, select } from "@storybook/addon-knobs/react";
-import { Avatar } from "../src/hig-react";
-import Toast, { _AVAILABLE_STATUSES } from "../src/elements/components/Toast";
+import Avatar from "elements/components/Avatar";
+import Toast, { _AVAILABLE_STATUSES } from "elements/components/Toast";
 
 storiesOf("Toast", module)
   .add("default", () => (
