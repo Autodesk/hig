@@ -11,7 +11,7 @@
     "update-packages": "lerna publish --skip-npm"
   },
   "devDependencies": {
-    "lerna": "^2.4.0",
+    "lerna": "^2.9.0",
     "node-fetch": "^1.7.3",
     "registry-url": "^3.1.0"
   },
