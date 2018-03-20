@@ -1,12 +1,10 @@
-@import '~styles/mixins/colors.scss';
+@import "../tokens/colors.scss";
 // Typography Base
 // Give an element standard typographic properties
 // Usage Example:
 // .selector {
 //   @include typography-base;
 // }
-
-$typography-base-color: color('hig-gray-70');
 
 @mixin typography-base() {
   @include typography-medium;
@@ -40,7 +38,7 @@ $typography-base-color: color('hig-gray-70');
   display: block;
   font-size: 30px;
   line-height: 36px;
-  color: color('hig-gray-70');
+  color: $typography-base-color;
 }
 
 @mixin typography-h2 {
@@ -48,7 +46,7 @@ $typography-base-color: color('hig-gray-70');
   display: block;
   font-size: 24px;
   line-height: 30px;
-  color: color('hig-gray-70');
+  color: $typography-base-color;
 }
 
 @mixin typography-h3 {
@@ -57,7 +55,7 @@ $typography-base-color: color('hig-gray-70');
   font-weight: 600;
   font-size: 18px;
   line-height: 26px;
-  color: color('hig-gray-70');
+  color: $typography-base-color;
 }
 
 @mixin typography-h4 {

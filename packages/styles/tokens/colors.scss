@@ -1,14 +1,3 @@
-// Color Function
-// Used to get a color value, for example:
-// div {
-//   background: color(hig-blue-50);
-// }
-
-@function color($color-name) {
-  @return map-get($colors, $color-name);
-}
-
-// Our actual color map
 // SASS map docs: http://sass-lang.com/documentation/file.SASS_REFERENCE.html#maps
 
 $colors: (
@@ -102,22 +91,4 @@ $colors: (
   hig-red-alert: rgba(236, 74, 65, 1),
 );
 
-// Dynamically create css classes that can be used with divs
-// This example will add "hig-blue-30" as background color to this div:
-// <div class='hig__colors__hig-blue-30--background'></div>
-
-@each $color_name, $color_value in $colors {
-  :export {
-    #{$color_name}: $color_value;
-  }
-
-  .hig__colors__#{$color_name}--color {
-    color: $color_value;
-  }
-  .hig__colors__#{$color_name}--background {
-    background-color: $color_value;
-  }
-  .hig__colors__#{$color_name}--border {
-    border-color: $color_value;
-  }
-}
+$typography-base-color: map-get($colors, 'hig-gray-70');

@@ -1,9 +1,7 @@
-@import '~styles/mixins/fonts';
-
 // Vendor Prefix
 // Usage Example:
 // .selector {
-//     @include vendor-prefix('box-sizing', 'border-box');
+//   @include vendor-prefix('box-sizing', 'border-box');
 // }
 
 @mixin vendor-prefix($name, $value) {
@@ -16,7 +14,7 @@
 // Make a parent element be at least as tall as its children, even if they have `position: float`.
 // Usage Example:
 // .selector {
-//     @include clearfix;
+//   @include clearfix;
 // }
 
 @mixin clearfix() {
@@ -33,10 +31,10 @@
 }
 
 // Reset
-// Set an element's properties to a known default state without poluting elements out of our control.
+// Set an element's properties to a known default state without polluting elements out of our control.
 // Usage Example:
 // .selector {
-//     @include reset;
+//   @include reset;
 // }
 
 @mixin reset() {

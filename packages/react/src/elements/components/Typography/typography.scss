@@ -1,7 +1,6 @@
-@import '~styles/mixins/fonts.scss';
-@import '~styles/mixins/colors.scss';
-@import '~styles/mixins/typography.scss';
-@import '~styles/mixins/spacing.scss';
+@import '~@hig/styles/mixins/colors.scss';
+@import '~@hig/styles/mixins/typography.scss';
+@import '~@hig/styles/mixins/spacing.scss';
 
 .hig__typography {
   @include typography-base;

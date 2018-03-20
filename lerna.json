@@ -4,7 +4,8 @@
     "init": {
       "independent": true
     }
-  }, 
+  },
+  "npmClient": "yarn",
   "packages": [
     "packages/*"
   ],
