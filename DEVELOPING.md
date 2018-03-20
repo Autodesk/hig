@@ -1,5 +1,11 @@
 # Developing - HIG
 
+We use Yarn workspaces and Lerna to manage interdependencies between packages. To get set up, run this from the project root:
+
+```bash
+yarn
+```
+
 ## Developing hig-vanilla
 Find information about HIG-Vanilla here [DEVELOPING](packages/vanilla/README.md)
 

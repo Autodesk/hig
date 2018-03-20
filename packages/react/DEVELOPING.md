@@ -13,11 +13,9 @@ yarn build
 
 ## Incorporating local `hig-vanilla` changes
 
-`hig-vanilla` is a dependency of `hig-react`. If you are simultaneously working on `hig-vanilla` and `hig-react`, you can use Lerna to import `hig-vanilla` from your working directory rather than use the published package:
+`hig-vanilla` is a dependency of `hig-react`. When developing locally, Lerna automatically uses the local, symlinked version of `hig-vanilla`. That way, you can make changes to `hig-vanilla` and have that quickly reflected in `hig-react`:
 
 ```bash
-cd ../..  # hig root directory
-yarn bootstrap
 cd packages/vanilla && yarn watch  # Let webpack compile hig-vanilla changes locally
 
 # In another tab...

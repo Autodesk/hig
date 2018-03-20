@@ -1,7 +1,7 @@
 defaults: &defaults
   working_directory: ~/hig
   docker:
-    - image: circleci/node:8.2.1
+    - image: circleci/node:8.10-stretch
 
 version: 4
 jobs:
@@ -12,8 +12,8 @@ jobs:
       - restore_cache:
           key: dependencies-{{ checksum "yarn.lock" }}-{{ checksum "packages/react/yarn.lock" }}-{{ checksum "packages/vanilla/yarn.lock" }}
       - run:
-          name: Lerna bootstrap
-          command: yarn && yarn bootstrap
+          name: Install NPM Dependencies
+          command: yarn
       - save_cache:
           key: dependencies-{{ checksum "yarn.lock" }}-{{ checksum "packages/react/yarn.lock" }}-{{ checksum "packages/vanilla/yarn.lock" }}
           paths:
@@ -64,7 +64,7 @@ jobs:
           working_directory: packages/vanilla
       - run:
           name: Start Server (Vanilla)
-          command: ./node_modules/http-server/bin/http-server
+          command: yarn run http-server
           background: true
           working_directory: packages/vanilla
       - run:

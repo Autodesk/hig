@@ -1,3 +1,5 @@
+import "@hig/styles/fonts.scss";
+
 export { default as ActionBar } from "./adapters/ActionBar/ActionBarAdapter";
 export {
   default as ActionBarGroup
