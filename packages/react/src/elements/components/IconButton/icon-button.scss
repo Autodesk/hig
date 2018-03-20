@@ -38,6 +38,7 @@
     &:active,
     &:focus {
       background-color: transparent;
+      border-color: transparent;
       svg * {
         fill: color(hig-slate-40)
       }
