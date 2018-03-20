@@ -1,9 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-// import { action } from "@storybook/addon-actions";
-// import { select } from "@storybook/addon-knobs/react";
-
-import { Icon } from "../src/hig-react";
+import Icon from "elements/components/Icon/Icon";
 
 const styles = {
   display: "flex",
@@ -191,7 +188,7 @@ storiesOf("Icon", module).add("size 24", () => (
   <div style={styles}>
     {iconKeys.map(key => (
       <div style={{ paddingRight: "5px" }} key={key}>
-        <Icon nameOrSVG={key} key={key} />
+        <Icon nameOrSVG={key} key={key} size="24" />
       </div>
     ))}
   </div>
@@ -201,7 +198,7 @@ storiesOf("Icon", module).add("size 16", () => (
   <div style={styles}>
     {iconKeys16.map(key => (
       <div style={{ paddingRight: "5px" }} key={key}>
-        <Icon nameOrSVG={key} key={key} />
+        <Icon nameOrSVG={key} key={key} size="16" />
       </div>
     ))}
   </div>

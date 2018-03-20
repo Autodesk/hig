@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { RichText } from "../src/hig-react";
+import RichText from "elements/components/RichText";
 
 storiesOf("RichText", module).add("default", () => (
   <RichText>

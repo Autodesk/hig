@@ -7,7 +7,7 @@ export {
 export {
   default as ActionBarSpacer
 } from "./adapters/ActionBar/ActionBarSpacerAdapter";
-export { default as Avatar } from "./adapters/AvatarAdapter";
+export { default as Avatar } from "./elements/components/Avatar";
 export { breakpoints } from "hig-vanilla";
 export { default as Button } from "./adapters/ButtonAdapter";
 export { default as Checkbox } from "./adapters/FormElements/CheckboxAdapter";
@@ -77,5 +77,5 @@ export {
 export { default as TextField } from "./adapters/FormElements/TextFieldAdapter";
 export { default as TextLink } from "./adapters/TextLinkAdapter";
 export { default as Timestamp } from "./adapters/TimestampAdapter";
-export { default as Toast } from "./elements/components/Toast/Toast";
+export { default as Toast } from "./elements/components/Toast";
 export * from "./elements/components/Typography";

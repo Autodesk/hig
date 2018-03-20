@@ -1,39 +1,73 @@
+@import "~@hig/styles/mixins/colors.scss";
+
 .hig__toast {
   box-sizing: border-box;
   display: flex;
-  flex-flow: column;
-  justify-content: center;
+  flex-flow: row;
 
   width: 340px;
   min-height: 53px;
-  padding: 6px 6px 6px 28px;
+  padding: {
+    top: 16px;
+    right: 6px;
+    bottom: 16px;
+    left: 0px;
+  }
 
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, .5); /* TODO: restore color map for hig-react */
+  box-shadow: 0px 2px 4px 0px transparentize(color(hig-gray-70), .5);
   border-radius: 4px;
   border-left: 3px solid transparent;
 }
 
 .hig__toast--primary {
-  border-color: #0696d7;
+  border-color: color(hig-blue-50);
 }
 
 .hig__toast--success {
-  border-color: #87bc40;
+  border-color: color(hig-green-good);
 }
 
 .hig__toast--danger {
-  border-color: #ee4444;
+  border-color: color(hig-red-alert);
 }
+
 .hig__toast--warning {
-  border-color: #faa21b;
+  border-color: color(hig-yellow-warning);
+}
+
+.hig__toast__image-container {
+  display: flex;
+  justify-content: center;
+
+  min-width: 64px;
+  padding: {
+    left: 6px;
+  }
 }
 
 .hig__toast__body {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
+  flex-grow: 1
 }
 
 .hig__toast__message {
-  padding: 7px 0; /* Aligns first line of message to match the IconButton height */
+  flex-grow: 1;
+  display: flex;
+  position: relative;
+  padding: {
+    left: 12px;
+    right: 36px;
+  }
+
+  .hig__rich-text {
+    margin: unset; /* Hacky until we have a better CSS reset */
+  }
+}
+
+.hig__toast__dismiss {
+  position: absolute;
+  top: -7.5px; /* Aligns first line of message to match the IconButton height */
+  right: 0;
 }

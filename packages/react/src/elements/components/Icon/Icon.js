@@ -1,5 +1,4 @@
-/* eslint consistent-return: 0 */
-
+/* eslint-disable consistent-return */
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
@@ -10,10 +9,6 @@ import Icons from "../Icons/icons";
 const AvailableSizes = ["24", "16"];
 
 export default class Icon extends Component {
-  // componentDidMount() {
-  //   this.setSizedIcon(this.props.nameOrSvg, (this.props.size = "24"));
-  // }
-
   setSizedIcon(icon, size) {
     if (!(icon && size)) {
       return; // Silently return until name and size are set
@@ -74,7 +69,9 @@ Icon.propTypes = {
    */
   nameOrSVG: PropTypes.string,
   /**
-   * Function to call when Toast is dismissed
+   * Size of the icon
    */
-  size: PropTypes.string
+  size: PropTypes.oneOf(AvailableSizes)
 };
+
+/* eslint-enable consistent-return */
