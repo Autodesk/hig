@@ -5,6 +5,8 @@ import IconButton from "../IconButton/IconButton";
 import RichText from "../RichText";
 import "./toast.scss";
 
+export const _AVAILABLE_STATUSES = ["primary", "success", "danger", "warning"];
+
 export default class Toast extends Component {
   render() {
     const toastClasses = cx("hig__toast", {
@@ -34,6 +36,10 @@ export default class Toast extends Component {
   }
 }
 
+Toast.defaultProps = {
+  status: "primary"
+};
+
 Toast.propTypes = {
   /**
    * Message content for the Toast
@@ -51,5 +57,5 @@ Toast.propTypes = {
   /**
    * Indicates the style of toast notification
    */
-  status: PropTypes.oneOf(["primary", "success", "danger", "warning"])
+  status: PropTypes.oneOf(_AVAILABLE_STATUSES)
 };

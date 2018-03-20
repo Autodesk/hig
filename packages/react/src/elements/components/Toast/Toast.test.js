@@ -1,6 +1,6 @@
 import React from "react";
 import { mount } from "enzyme";
-import Toast from "./Toast";
+import Toast from "./index";
 import { IconButton } from "../../../hig-react";
 
 describe("Toast", () => {
@@ -30,6 +30,11 @@ describe("Toast", () => {
   });
 
   describe("statuses", () => {
+    it("is primary by default", () => {
+      const wrapper = mount(<Toast>Who wants toast?</Toast>);
+      expect(wrapper).toHaveProp("status", "primary");
+    });
+
     it("adds the appropriate style to the component", () => {
       const withoutStatus = mount(<Toast>Who wants toast?</Toast>);
       expect(withoutStatus.find(".hig__toast")).not.toHaveClassName(
