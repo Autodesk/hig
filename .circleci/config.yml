@@ -10,12 +10,12 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependencies-{{ checksum "yarn.lock" }}-{{ checksum "packages/react/yarn.lock" }}-{{ checksum "packages/vanilla/yarn.lock" }}
+          key: dependencies-{{ checksum "yarn.lock" }}
       - run:
           name: Install NPM Dependencies
           command: yarn
       - save_cache:
-          key: dependencies-{{ checksum "yarn.lock" }}-{{ checksum "packages/react/yarn.lock" }}-{{ checksum "packages/vanilla/yarn.lock" }}
+          key: dependencies-{{ checksum "yarn.lock" }}
           paths:
             - node_modules
             - packages/vanilla/node_modules
@@ -25,7 +25,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependencies-{{ checksum "yarn.lock" }}-{{ checksum "packages/react/yarn.lock" }}-{{ checksum "packages/vanilla/yarn.lock" }}
+          key: dependencies-{{ checksum "yarn.lock" }}
       - run:
           name: Build (Vanilla)
           command: yarn lib
@@ -39,7 +39,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependencies-{{ checksum "yarn.lock" }}-{{ checksum "packages/react/yarn.lock" }}-{{ checksum "packages/vanilla/yarn.lock" }}
+          key: dependencies-{{ checksum "yarn.lock" }}
       - restore_cache:
           key: vanilla-build-{{ .Revision }}
       - run:
@@ -55,7 +55,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependencies-{{ checksum "yarn.lock" }}-{{ checksum "packages/react/yarn.lock" }}-{{ checksum "packages/vanilla/yarn.lock" }}
+          key: dependencies-{{ checksum "yarn.lock" }}
       - restore_cache:
           key: vanilla-build-{{ .Revision }}
       - run:
@@ -78,7 +78,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependencies-{{ checksum "yarn.lock" }}-{{ checksum "packages/react/yarn.lock" }}-{{ checksum "packages/vanilla/yarn.lock" }}
+          key: dependencies-{{ checksum "yarn.lock" }}
       - restore_cache:
           key: vanilla-build-{{ .Revision }}
       - restore_cache:
@@ -98,7 +98,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependencies-{{ checksum "yarn.lock" }}-{{ checksum "packages/react/yarn.lock" }}-{{ checksum "packages/vanilla/yarn.lock" }}
+          key: dependencies-{{ checksum "yarn.lock" }}
       - restore_cache:
           key: vanilla-build-{{ .Revision }}
       - restore_cache:
@@ -119,7 +119,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependencies-{{ checksum "yarn.lock" }}-{{ checksum "packages/react/yarn.lock" }}-{{ checksum "packages/vanilla/yarn.lock" }}
+          key: dependencies-{{ checksum "yarn.lock" }}
       - restore_cache:
           key: vanilla-build-{{ .Revision }}
       - restore_cache:
@@ -133,7 +133,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependencies-{{ checksum "yarn.lock" }}-{{ checksum "packages/react/yarn.lock" }}-{{ checksum "packages/vanilla/yarn.lock" }}
+          key: dependencies-{{ checksum "yarn.lock" }}
       - restore_cache:
           key: vanilla-build-{{ .Revision }}
       - restore_cache:
@@ -149,7 +149,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependencies-{{ checksum "yarn.lock" }}-{{ checksum "packages/react/yarn.lock" }}-{{ checksum "packages/vanilla/yarn.lock" }}
+          key: dependencies-{{ checksum "yarn.lock" }}
       - restore_cache:
           key: vanilla-build-{{ .Revision }}
       - restore_cache:
