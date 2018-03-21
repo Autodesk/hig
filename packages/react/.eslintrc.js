@@ -19,7 +19,6 @@ module.exports = {
     window: true
   },
   rules: {
-    "class-methods-use-this": 0,
     "import/no-extraneous-dependencies": 0,
     "max-len": [1, { code: 100 }],
     "no-underscore-dangle": 0,

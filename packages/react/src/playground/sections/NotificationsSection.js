@@ -142,11 +142,10 @@ class NotificationsSection extends PureComponent {
     console.log("Feature notification dismissed");
   };
 
-  _initialReadNotifications(notifications) {
-    return notifications
+  _initialReadNotifications = notifications =>
+    notifications
       .filter(notification => !notification.unread)
       .map(notification => notification.id);
-  }
 
   render() {
     return (

@@ -29,12 +29,12 @@ export default class MountedByHIGParent extends Component {
     this.mountToParent(nextProps);
   }
 
-  mountToParent(props) {
+  mountToParent = props => {
     if (props.higParent && !props.mounted) {
       props.higParent[props.mounter](props.higInstance);
       props.onMount();
     }
-  }
+  };
 
   render() {
     return null;

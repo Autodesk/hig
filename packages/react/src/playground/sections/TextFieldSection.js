@@ -19,13 +19,13 @@ class TextFieldSection extends PureComponent {
     this.setState({ value: "" });
   };
 
-  logEvent(event) {
+  logEvent = event => {
     let messageParts = [`TextField triggered an ${event.type} event`];
     if (event.target.value !== undefined) {
       messageParts = messageParts.concat(`: ${event.target.value}`);
     }
     console.log(messageParts.join(""));
-  }
+  };
 
   render() {
     return (

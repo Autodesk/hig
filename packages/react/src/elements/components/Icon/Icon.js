@@ -22,16 +22,15 @@ export default class Icon extends Component {
         );
   }
 
-  setIconClass(icon, size) {
-    return AvailableSizes.includes(size)
+  setIconClass = (icon, size) =>
+    AvailableSizes.includes(size)
       ? `hig__icon--${size}-size`
       : console.error(
           `Icon named "${icon} size "${size}" not found, only these size are allowed: `,
           AvailableSizes
         );
-  }
 
-  _confirmNameOrSVG(icon, size) {
+  _confirmNameOrSVG = (icon, size) => {
     const isNamedIcon = Icons[`${icon}-${size}`];
     const isSVG = /^<svg/.test(icon);
 
@@ -41,7 +40,7 @@ export default class Icon extends Component {
       return icon;
     }
     console.warn(`NO HIG ICON: ${icon}`);
-  }
+  };
 
   render() {
     const iconClasses = cx(
