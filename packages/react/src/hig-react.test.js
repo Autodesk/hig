@@ -2,16 +2,22 @@ import * as ReactHIG from "./hig-react";
 import availableComponents from "./_availableComponents";
 
 describe("hig-react", () => {
-  describe("exported components", () => {
+  it("it exports all of the available components", () => {
     availableComponents.forEach(componentName => {
-      describe(componentName, () => {
-        it("implements propTypes and docgenInfo", () => {
-          const Component = ReactHIG[componentName];
+      expect(ReactHIG[componentName]).toBeDefined();
+    });
+  });
 
-          expect(Component).toHavePropTypesAndDocGenInfo();
+  describe("exported components", () => {
+    Object.values(ReactHIG)
+      .filter(Component => typeof Component === "function")
+      .forEach(Component => {
+        describe(Component.name, () => {
+          it("implements propTypes and docgenInfo", () => {
+            expect(Component).toHavePropTypesAndDocGenInfo();
+          });
         });
       });
-    });
   });
 
   describe("other exports", () => {
