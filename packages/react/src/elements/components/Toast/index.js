@@ -1,2 +1,1 @@
-import ToastPresenter from "./ToastPresenter";
-export default ToastPresenter;
+export { default } from "./ToastAnimator";

@@ -1,0 +1,27 @@
+.hig__toast__animator-enter {
+  position: relative;
+
+  opacity: 0.01;
+  top: -50px;
+}
+
+.hig__toast__animator-enter.hig__toast__animator-enter-active {
+  transition: 1000ms ease-in-out;
+
+  opacity: 1;
+  top: 0px;
+}
+
+.hig__toast__animator-exit {
+  position: relative;
+
+  opacity: 1;
+  top: 0px;
+}
+
+.hig__toast__animator-exit.hig__toast__animator-exit-active {
+  transition: 1000ms ease-in-out;
+
+  opacity: 0.01;
+  top: -50px;
+}
