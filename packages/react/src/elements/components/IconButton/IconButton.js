@@ -6,7 +6,13 @@ import cx from "classnames";
 import "./icon-button.scss";
 import Icon from "../Icon/Icon";
 
-const AvailableTypes = ["primary", "flat", "transparent"];
+const types = Object.freeze({
+  PRIMARY: "primary",
+  FLAT: "flat",
+  TRANSPARENT: "transparent"
+});
+
+const availableTypes = Object.values(types);
 
 export default class IconButton extends Component {
   setTabIndex = buttonState => (buttonState ? -1 : 0);
@@ -35,8 +41,11 @@ export default class IconButton extends Component {
     );
   }
 }
+
+IconButton.types = types;
+
 IconButton.defaultProps = {
-  type: AvailableTypes[0],
+  type: types.PRIMARY,
   link: null,
   title: "button"
 };
@@ -77,5 +86,5 @@ IconButton.propTypes = {
   /**
    * 'primary' or 'flat'; the style of the button
    */
-  type: PropTypes.oneOf(AvailableTypes)
+  type: PropTypes.oneOf(availableTypes)
 };
