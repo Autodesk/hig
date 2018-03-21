@@ -5,10 +5,6 @@ import HeaderCheckbox from "./HeaderCheckbox";
 import RowCheckbox from "./RowCheckbox";
 
 export default class SelectableTable extends Component {
-  static propTypes = {
-    selectable: PropTypes.bool
-  };
-
   static defaultProps = {
     columns: [],
     data: [],

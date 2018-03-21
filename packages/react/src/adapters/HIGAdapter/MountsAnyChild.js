@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unused-prop-types */
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import HIGPropTypes from "./HIGPropTypes";
@@ -58,3 +59,4 @@ export default class MountsAnyChild extends Component {
     return <div ref={this.setEl}>{children}</div>;
   }
 }
+/* eslint-enable react/no-unused-prop-types */

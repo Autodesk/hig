@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unused-prop-types */
 import { Component } from "react";
 import PropTypes from "prop-types";
 import HIGPropTypes from "./HIGPropTypes";
@@ -40,3 +41,4 @@ export default class MountedByHIGParent extends Component {
     return null;
   }
 }
+/* eslint-enable react/no-unused-prop-types */

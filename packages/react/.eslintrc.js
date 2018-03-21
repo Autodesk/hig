@@ -24,9 +24,8 @@ module.exports = {
     "no-underscore-dangle": 0,
     "prettier/prettier": "error",
     "react/jsx-filename-extension": 0,
-    "react/no-unused-prop-types": 0,
     "react/prefer-stateless-function": 0,
-    "react/prop-types": 0,
+    "react/prop-types": "warn",
     "react/require-default-props": 0,
     "react/style-prop-object": 0
   }
