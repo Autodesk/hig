@@ -28,6 +28,7 @@
     "start": "react-scripts start",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "storybook-build": "build-storybook -c .storybook -o storybook-build",
+    "storybook-deploy": "build-storybook -c .storybook -o storybook-build && cd storybook-build && surge --project . --domain",
     "test": "jest --watch",
     "test-ci": "jest --coverage --runInBand --colors",
     "type-check": "tsc"
