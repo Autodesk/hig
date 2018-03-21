@@ -37,7 +37,11 @@ export default class Avatar extends Component {
       <div className={avatarClasses}>
         {this.props.image && (
           <div className="hig__avatar__image-wrapper">
-            <img className="hig__avatar__image" src={this.props.image} />
+            <img
+              className="hig__avatar__image"
+              src={this.props.image}
+              alt={`Avatar for ${this.props.name}`}
+            />
           </div>
         )}
         <div className="hig__avatar__initials">
