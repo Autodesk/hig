@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react";
 import Icon from "elements/components/Icon/Icon";
 
 const iconKeys = {
-  [Icon.sizes.STANDARD]: [
+  [Icon.sizes.PX_24]: [
     "add",
     "archive",
     "assets",
@@ -95,7 +95,7 @@ const iconKeys = {
     "visible",
     "x-close-gray"
   ],
-  [Icon.sizes.SMALL]: [
+  [Icon.sizes.PX_16]: [
     "add",
     "archive",
     "assets",
@@ -210,11 +210,11 @@ function IconStory({ size }) {
 const stories = [
   {
     label: "size 24",
-    size: Icon.sizes.STANDARD
+    size: Icon.sizes.PX_24
   },
   {
     label: "size 16",
-    size: Icon.sizes.SMALL
+    size: Icon.sizes.PX_16
   }
 ];
 

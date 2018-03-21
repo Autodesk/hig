@@ -6,7 +6,7 @@ import "./icon.scss";
 import Icons, { names } from "../Icons/icons";
 
 const COMPONENT_CLASS = "hig__icon";
-const sizes = Object.freeze({ STANDARD: "24", SMALL: "16" });
+const sizes = Object.freeze({ PX_24: "24", PX_16: "16" });
 /** @type {string[]} */
 const availableSizes = Object.values(sizes);
 
@@ -98,7 +98,7 @@ Icon.names = names;
 Icon.sizes = sizes;
 
 Icon.defaultProps = {
-  size: sizes.STANDARD
+  size: sizes.PX_24
 };
 
 Icon.propTypes = {

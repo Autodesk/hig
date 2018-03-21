@@ -14,7 +14,7 @@ describe("Icon", () => {
 
   it("renders correctly when using the `name` prop", () => {
     const tree = renderer
-      .create(<Icon name={Icon.names.SHARE} size={Icon.sizes.STANDARD} />)
+      .create(<Icon name={Icon.names.SHARE} size={Icon.sizes.PX_24} />)
       .toJSON();
 
     expect(tree).toMatchSnapshot();
@@ -26,7 +26,7 @@ describe("Icon", () => {
     </svg>`;
 
     const tree = renderer
-      .create(<Icon svg={svg} size={Icon.sizes.SMALL} />)
+      .create(<Icon svg={svg} size={Icon.sizes.PX_16} />)
       .toJSON();
 
     expect(tree).toMatchSnapshot();
