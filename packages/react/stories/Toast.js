@@ -3,7 +3,8 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { text, select } from "@storybook/addon-knobs/react";
 import Avatar from "elements/components/Avatar";
-import Toast, { _AVAILABLE_STATUSES } from "elements/components/Toast";
+import Toast from "elements/components/Toast";
+import { _AVAILABLE_STATUSES } from "elements/components/Toast/ToastPresenter";
 
 storiesOf("Toast", module)
   .add("default", () => (
