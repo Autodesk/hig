@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unused-prop-types */
 import { PureComponent } from "react";
 import PropTypes from "prop-types";
 import HIGPropTypes from "./HIGPropTypes";
@@ -35,3 +36,4 @@ export default class MountedByHIGParentList extends PureComponent {
     return null;
   }
 }
+/* eslint-enable react/no-unused-prop-types */

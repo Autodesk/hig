@@ -19,7 +19,9 @@ describe("Toast", () => {
   });
 
   it("adds an image to the expected container", () => {
-    const thumbnail = <img src="placekitten.com/g/60/60" />;
+    const thumbnail = (
+      <img src="placekitten.com/g/60/60" alt="placekitten 60x60" />
+    );
     const wrapper = mount(<Toast image={thumbnail}>Who wants toast?</Toast>);
 
     expect(

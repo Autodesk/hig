@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unused-prop-types */
 import { Component } from "react";
 import PropTypes from "prop-types";
 import throwIfNoHIGMethod from "./throwIfNoHIGMethod";
@@ -58,3 +59,4 @@ export default class MapsEventlistener extends Component {
     return null;
   }
 }
+/* eslint-enable react/no-unused-prop-types */

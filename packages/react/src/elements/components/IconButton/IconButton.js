@@ -9,19 +9,13 @@ import Icon from "../Icon/Icon";
 const AvailableTypes = ["primary", "flat", "transparent"];
 
 export default class IconButton extends Component {
-  setButtonStateClass(buttonState) {
-    return buttonState ? "hig__icon-button--disabled" : "";
-  }
-
-  setTabIndex(buttonState) {
-    return buttonState ? -1 : 0;
-  }
+  setTabIndex = buttonState => (buttonState ? -1 : 0);
 
   render() {
     const iconButtonClasses = cx(
       "hig__icon-button",
       `hig__icon-button--${this.props.type}`,
-      this.setButtonStateClass(this.props.disabled)
+      { "hig__icon-button--disabled": this.props.disabled }
     );
     return (
       <a

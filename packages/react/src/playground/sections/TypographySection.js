@@ -14,8 +14,8 @@ import {
 } from "../../hig-react";
 
 class TypographySection extends PureComponent {
-  renderTextExamples() {
-    return ["small", "medium", "large"].map(size =>
+  renderTextExamples = () =>
+    ["small", "medium", "large"].map(size =>
       [
         "hig-white",
         "hig-cool-gray-70",
@@ -55,7 +55,7 @@ class TypographySection extends PureComponent {
         </div>
       ))
     );
-  }
+
   render() {
     return (
       <PlaygroundSection title="TYPOGRAPHY">

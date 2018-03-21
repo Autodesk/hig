@@ -15,13 +15,13 @@ class PasswordFieldSection extends PureComponent {
     this.setState({ password: event.target.value });
   };
 
-  logEvent(event) {
+  logEvent = event => {
     let messageParts = [`PasswordField triggered an ${event.type} event`];
     if (event.target.value !== undefined) {
       messageParts = messageParts.concat(`: ${event.target.value}`);
     }
     console.log(messageParts.join(""));
-  }
+  };
 
   render() {
     return (
