@@ -50,6 +50,10 @@ export {
   default as Notification
 } from "./elements/components/GlobalNav/TopNav/Notification";
 
+export {
+  default as NewNotification
+} from "./elements/components/Notification/index";
+
 export { default as Option } from "./adapters/FormElements/OptionAdapter";
 export {
   default as PasswordField

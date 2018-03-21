@@ -1,6 +1,12 @@
 import React, { PureComponent } from "react";
 import PlaygroundSection from "../PlaygroundSection";
-import { Button, Notifications, Notification, TextLink } from "../../hig-react";
+import {
+  Button,
+  Notifications,
+  Notification,
+  NewNotification,
+  TextLink
+} from "../../hig-react";
 
 const sampleNotifications = [
   {
@@ -187,6 +193,12 @@ class NotificationsSection extends PureComponent {
         <hr />
         <div style={{ display: "flex", justifyContent: "flex-end" }}>
           <Notifications title="Empty Notifications" />
+        </div>
+
+        <hr />
+
+        <div style={{ display: "flex", justifyContent: "flex-end" }}>
+          <NewNotification content={sampleNotifications[0].children} />
         </div>
       </PlaygroundSection>
     );
