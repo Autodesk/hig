@@ -33,6 +33,8 @@ describe("Icon", () => {
   });
 
   describe("when using no props", () => {
+    const { warn } = console;
+
     beforeAll(() => {
       console.warn = jest.fn();
     });
@@ -42,7 +44,7 @@ describe("Icon", () => {
     });
 
     afterAll(() => {
-      console.warn.mockRestore();
+      console.warn = warn;
     });
 
     it("renders correctly with no props", () => {
