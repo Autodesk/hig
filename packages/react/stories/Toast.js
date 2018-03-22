@@ -9,6 +9,7 @@ import { _AVAILABLE_STATUSES } from "elements/components/Toast/ToastPresenter";
 storiesOf("Toast", module)
   .add("default", () => (
     <Toast
+      animateFrom={select("Animation Origin", ["top", "bottom"])}
       in={boolean("Visible (animate in/out)", true)}
       onDismiss={action("Toast dismissed")}
       status={select("Status", _AVAILABLE_STATUSES)}
@@ -22,6 +23,7 @@ storiesOf("Toast", module)
 
   .add("with an avatar", () => (
     <Toast
+      animateFrom={select("Animation Origin", ["top", "bottom"])}
       in={boolean("Visible (animate in/out)", true)}
       image={<Avatar name="Jon Snow" size="large-48" />}
       onDismiss={action("Toast dismissed")}
@@ -36,6 +38,7 @@ storiesOf("Toast", module)
 
   .add("with a thumbnail", () => (
     <Toast
+      animateFrom={select("Animation Origin", ["top", "bottom"])}
       in={boolean("Visible (animate in/out)", true)}
       image={
         <div style={{ width: "48px", height: "48px" }}>

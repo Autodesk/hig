@@ -9,7 +9,8 @@ export default class VerticallyFadeIn extends React.Component {
     return (
       <CSSTransition
         in={inProp}
-        classNames="hig__vertically-fade-in"
+        classNames={`hig__vertically-fade-in__from-${this.props.from}`}
+        timeout={1000}
         unmountOnExit={unmountOnExit}
       >
         {children}
@@ -18,11 +19,19 @@ export default class VerticallyFadeIn extends React.Component {
   }
 }
 
+VerticallyFadeIn.defaultProps = {
+  from: "top"
+};
+
 VerticallyFadeIn.propTypes = {
   /**
    * Content for the toast
    */
   children: PropTypes.node,
+  /**
+   * Direction to begin fading in from
+   */
+  from: PropTypes.oneOf(["top", "bottom"]),
   /**
    * Show the component; triggers the enter or exit states. Corresponds to the Transition `in` prop.
    */
