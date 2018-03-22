@@ -14,47 +14,53 @@ export default class Notification extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      in: false
+      in: true
     };
   }
   componentDidMount() {}
 
   onClickCapture(event) {
-    if (event.target.event.target.tagName === "A") {
+    if (event.target.tagName === "A") {
       this.props.onLinkClick(this.props.id);
     }
   }
 
-  dismissFeaturedNotification() {
-    this.props.dismissFeaturedNotification();
+  dismissFeaturedNotification = () => {
+    this.props.onDismiss();
     this.setState({ in: false });
-  }
+  };
 
   render() {
+    const notificationClasses = cx(`${COMPONENT_CLASS}`, {
+      [`hig__notification--unread`]: this.props.unread
+    });
+
     return (
       <div>
         {this.props.featuredNotification ? (
-          <Transition in={this.setState.inProp} timeout={300}>
-            <div
-              className={`${COMPONENT_CLASS} ${FEATURED_COMPONENT_CLASS}`}
-              onClickCapture={this.onClickCapture}
-            >
-              <div className={`${UNREAD_MARKER_CLASS}`} />
-              <div className={`${CONTENT_CLASS}`}>
-                <RichText>{this.props.content}</RichText>
-                <IconButton
-                  onClick={this.dismissFeaturedNotification}
-                  icon="close-notification"
-                  type="flat"
-                />
-              </div>
+          <Transition in={this.state.in} timeout={300}>
+            {state => (
+              <div
+                className={`${notificationClasses} hig__notification--${state} ${FEATURED_COMPONENT_CLASS}`}
+                onClickCapture={this.onClickCapture}
+              >
+                <div className={`${UNREAD_MARKER_CLASS}`} />
+                <div className={`${CONTENT_CLASS}`}>
+                  <RichText>{this.props.content}</RichText>
+                  <IconButton
+                    onClick={this.dismissFeaturedNotification}
+                    icon="close-notification"
+                    type="flat"
+                  />
+                </div>
 
-              {/* <Timestamp /> */}
-            </div>
+                {/* <Timestamp /> */}
+              </div>
+            )}
           </Transition>
         ) : (
           <div
-            className={`${COMPONENT_CLASS}`}
+            className={notificationClasses}
             onClickCapture={this.onClickCapture}
           >
             <div className={`${UNREAD_MARKER_CLASS}`} />

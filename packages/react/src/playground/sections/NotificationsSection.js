@@ -198,7 +198,14 @@ class NotificationsSection extends PureComponent {
         <hr />
 
         <div style={{ display: "flex", justifyContent: "flex-end" }}>
-          <NewNotification content={sampleNotifications[0].children} />
+          <NewNotification
+            content={sampleNotifications[0].children}
+            unread
+            featuredNotification
+            onDismiss={() => {
+              console.log("feaured notification dismissed");
+            }}
+          />
         </div>
       </PlaygroundSection>
     );
