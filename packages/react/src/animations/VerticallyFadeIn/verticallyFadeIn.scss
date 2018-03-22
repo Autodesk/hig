@@ -1,25 +1,25 @@
-.hig__toast__animator-enter {
+.hig__vertically-fade-in-enter {
   position: relative;
 
   opacity: 0.01;
   top: -50px;
 }
 
-.hig__toast__animator-enter.hig__toast__animator-enter-active {
+.hig__vertically-fade-in-enter.hig__vertically-fade-in-enter-active {
   transition: 1000ms ease-in-out;
 
   opacity: 1;
   top: 0px;
 }
 
-.hig__toast__animator-exit {
+.hig__vertically-fade-in-exit {
   position: relative;
 
   opacity: 1;
   top: 0px;
 }
 
-.hig__toast__animator-exit.hig__toast__animator-exit-active {
+.hig__vertically-fade-in-exit.hig__vertically-fade-in-exit-active {
   transition: 1000ms ease-in-out;
 
   opacity: 0.01;
