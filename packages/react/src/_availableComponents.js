@@ -1,3 +1,4 @@
+/** @todo Generate this list from the contents of a directory or package.json dependencies. */
 export default Object.freeze([
   "ActionBar",
   "ActionBarGroup",
