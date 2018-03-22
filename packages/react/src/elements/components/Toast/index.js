@@ -1,1 +1,1 @@
-export { default } from "./ToastAnimator";
+export { default } from "./Toast";

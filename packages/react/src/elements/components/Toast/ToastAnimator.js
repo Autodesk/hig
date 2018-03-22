@@ -1,24 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { CSSTransition } from "react-transition-group";
-import ToastPresenter from "./ToastPresenter";
 import "./toastAnimator.scss";
 
 export default class ToastAnimator extends React.Component {
   render() {
-    const {
-      in: inProp,
-      unmountOnExit,
-      children,
-      ...presenterProps
-    } = this.props;
+    const { in: inProp, unmountOnExit, children } = this.props;
     return (
       <CSSTransition
         in={inProp}
         classNames="hig__toast__animator"
         unmountOnExit={unmountOnExit}
       >
-        <ToastPresenter {...presenterProps}>{children}</ToastPresenter>
+        {children}
       </CSSTransition>
     );
   }
