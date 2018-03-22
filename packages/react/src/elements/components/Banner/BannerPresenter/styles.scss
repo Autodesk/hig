@@ -1,0 +1,122 @@
+.hig__banner {
+  @import "../variables.scss";
+
+  display: flex;
+  box-sizing: border-box;
+  min-height: $wrapper-min-height;
+  border-width: 1px 0;
+  border-style: solid;
+
+  &--bottom {
+    border-bottom-width: 0;
+  }
+
+  &--top {
+    border-top-width: 0;
+  }
+
+  &--error {
+    border-color: $border-color--error;
+    background-color: $background-color--error;
+  }
+
+  &--warning {
+    border-color: $border-color--warning;
+    background-color: $background-color--warning;
+  }
+
+  &--primary {
+    border-color: $border-color--primary;
+    background-color: $background-color--primary;
+  }
+
+  &--success {
+    border-color: $border-color--success;
+    background-color: $background-color--success;
+  }
+
+  &__content {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    align-items: center;
+    justify-content: space-between;
+    margin: $message-padding-y 0 0 $content-padding-x;
+    // Required for proper calculation of the width
+    overflow: hidden;
+
+    .hig__banner--wrap-content & {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__notification {
+    flex-basis: 50%;
+    min-width: $notification-width-min;
+    max-width: $notification-width-max;
+    padding-bottom: $message-padding-y;
+    margin: 0 auto 0 0;
+
+    .hig__banner--interactive & {
+      margin-right: $content-spacing-min;
+    }
+
+    .hig__banner--wrap-content & {
+      margin-right: 0;
+    }
+  }
+
+  &__dismiss-button {
+    display: flex;
+    align-items: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding-right: $dismiss-padding-right;
+
+    .hig__banner--interactive & {
+      padding-right: $dismiss-padding-right--interactive;
+    }
+
+    .hig__banner--wrap-content & {
+      align-items: flex-start;
+      padding-top: $dismiss-padding-top--wrapping;
+    }
+  }
+
+  &__icon-background {
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: $wrapper-min-height;
+    margin: 0;
+
+    svg * {
+      fill: color(hig-white);
+    }
+
+    .hig__banner--error & {
+      background-color: $icon-background-color--error;
+    }
+
+    .hig__banner--warning & {
+      background-color: $icon-background-color--warning;
+    }
+
+    .hig__banner--primary & {
+      background-color: $icon-background-color--primary;
+    }
+
+    .hig__banner--success & {
+      background-color: $icon-background-color--success;
+    }
+  }
+
+  &__interactions-wrapper {
+    flex-shrink: 0;
+    padding-right: $action-spacing-x;
+    padding-bottom: $interactions-wrapper-padding-y;
+  }
+}

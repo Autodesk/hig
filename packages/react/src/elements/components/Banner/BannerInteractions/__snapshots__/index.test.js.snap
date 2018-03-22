@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Banner/BannerInteractions renders while wrapping actions 1`] = `
+<div
+  className="hig__banner__interactions hig__banner__interactions--wrap-actions"
+/>
+`;
+
+exports[`Banner/BannerInteractions renders with children 1`] = `
+<div
+  className="hig__banner__interactions"
+>
+  foo
+</div>
+`;
+
+exports[`Banner/BannerInteractions renders without props 1`] = `
+<div
+  className="hig__banner__interactions"
+/>
+`;
