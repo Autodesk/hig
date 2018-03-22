@@ -1,18 +1,18 @@
 import React from "react";
 import { mount } from "enzyme";
-import Toast from "./index";
+import ToastPresenter from "./ToastPresenter";
 import { IconButton } from "../../../hig-react";
 
-describe("Toast", () => {
+describe("ToastPresenter", () => {
   it("renders the message", () => {
-    const wrapper = mount(<Toast>Who wants toast?</Toast>);
+    const wrapper = mount(<ToastPresenter>Who wants toast?</ToastPresenter>);
     expect(wrapper).toIncludeText("Who wants toast?");
   });
 
   it("passes onDismiss to the dismiss IconButton", () => {
     const onDismissFn = jest.fn();
     const wrapper = mount(
-      <Toast onDismiss={onDismissFn}>Who wants toast?</Toast>
+      <ToastPresenter onDismiss={onDismissFn}>Who wants toast?</ToastPresenter>
     );
 
     expect(wrapper.find(IconButton)).toHaveProp("onClick", onDismissFn);
@@ -22,7 +22,9 @@ describe("Toast", () => {
     const thumbnail = (
       <img src="placekitten.com/g/60/60" alt="placekitten 60x60" />
     );
-    const wrapper = mount(<Toast image={thumbnail}>Who wants toast?</Toast>);
+    const wrapper = mount(
+      <ToastPresenter image={thumbnail}>Who wants toast?</ToastPresenter>
+    );
 
     expect(
       wrapper.containsMatchingElement(
@@ -33,18 +35,20 @@ describe("Toast", () => {
 
   describe("statuses", () => {
     it("is primary by default", () => {
-      const wrapper = mount(<Toast>Who wants toast?</Toast>);
+      const wrapper = mount(<ToastPresenter>Who wants toast?</ToastPresenter>);
       expect(wrapper).toHaveProp("status", "primary");
     });
 
     it("adds the appropriate style to the component", () => {
-      const withoutStatus = mount(<Toast>Who wants toast?</Toast>);
+      const withoutStatus = mount(
+        <ToastPresenter>Who wants toast?</ToastPresenter>
+      );
       expect(withoutStatus.find(".hig__toast")).not.toHaveClassName(
         "hig__toast--success"
       );
 
       const withStatus = mount(
-        <Toast status="success">Who wants toast?</Toast>
+        <ToastPresenter status="success">Who wants toast?</ToastPresenter>
       );
       expect(withStatus.find(".hig__toast")).toHaveClassName(
         "hig__toast--success"
