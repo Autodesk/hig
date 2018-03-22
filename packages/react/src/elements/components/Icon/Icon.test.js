@@ -59,4 +59,30 @@ describe("Icon", () => {
       expect(console.warn).toHaveBeenCalled();
     });
   });
+
+  describe("names", () => {
+    it("is an object of constants", () => {
+      expect(Icon).toHavePropertyOfConstants("names");
+    });
+  });
+
+  describe("sizes", () => {
+    it("is an object of constants", () => {
+      expect(Icon).toHavePropertyOfConstants("sizes");
+    });
+  });
+
+  describe("AVAILABLE_NAMES", () => {
+    const ICON_NAME_MATCHER = /^[a-z0-9-]+$/;
+
+    it("is frozen", () => {
+      expect(Icon.AVAILABLE_NAMES).toBeFrozen();
+    });
+
+    it("contains icon names", () => {
+      Icon.AVAILABLE_NAMES.forEach(name => {
+        expect(name).toMatch(ICON_NAME_MATCHER);
+      });
+    });
+  });
 });

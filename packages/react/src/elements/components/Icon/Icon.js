@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import cx from "classnames";
 
 import "./icon.scss";
-import Icons, { names } from "../Icons/icons";
+import Icons, { AVAILABLE_NAMES, names } from "../Icons/icons";
 
 const COMPONENT_CLASS = "hig__icon";
 const sizes = Object.freeze({ PX_24: "24", PX_16: "16" });
@@ -12,8 +12,8 @@ const availableSizes = Object.values(sizes);
 
 /**
  * @typedef {Object} IconProps
- * @property {string} name
- * @property {string} svg
+ * @property {string} [name]
+ * @property {string} [svg]
  * @property {string} size
  * @property {string} [nameOrSVG]
  */
@@ -94,6 +94,7 @@ export default function Icon(props) {
   );
 }
 
+Icon.AVAILABLE_NAMES = AVAILABLE_NAMES;
 Icon.names = names;
 Icon.sizes = sizes;
 
@@ -106,9 +107,9 @@ Icon.propTypes = {
    * Name of the icon to be used
    */
   // eslint-disable-next-line react/no-unused-prop-types
-  name: PropTypes.oneOf(Object.values(names)),
+  name: PropTypes.oneOf(AVAILABLE_NAMES),
   /**
-   * SVG markup used for the icon.
+   * SVG markup used for the icon
    */
   // eslint-disable-next-line react/no-unused-prop-types
   svg: PropTypes.string,
