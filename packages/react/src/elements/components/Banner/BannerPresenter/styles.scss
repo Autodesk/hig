@@ -1,0 +1,118 @@
+@import "~@hig/styles/mixins/colors.scss";
+
+.hig__banner {
+  @import "../variables.scss";
+
+  display: flex;
+  box-sizing: border-box;
+  min-height: $base-dimension;
+  border-width: 1px 0;
+  border-style: solid;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    flex-shrink: 1;
+    justify-content: space-between;
+    flex-flow: wrap;
+    padding: $message-padding-vertical 0 0 $content-padding-horizontal;
+  }
+
+  &__notification {
+    max-width: 900px;
+    min-width: 200px;
+    margin: 0 auto 0 0;
+    padding-bottom: $message-padding-vertical;
+    flex-grow: 100;
+    flex-basis: 50%;
+  }
+
+  &__dismiss-button {
+    display: flex;
+    align-items: center;
+    padding-right: $dismiss-button-right-padding;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
+  &__icon-background {
+    display: flex;
+    width: $base-dimension;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    svg * {
+      fill: color(hig-white);
+    }
+  }
+
+  &__interactions-wrapper {
+    margin-right: $dismiss-button-right-padding-interactive;
+    padding-bottom: $interaction-padding-vertical;
+    flex-shrink: 0;
+  }
+
+  &--interactive {
+    .hig__banner__dismiss-button {
+      padding-right: $dismiss-button-right-padding-interactive;
+    }
+
+    .hig__banner__notification {
+      margin-right: $content-gutter;
+    }
+  }
+
+  &--wrapping {
+    .hig__banner__interactions-wrapper {
+      flex-grow: 1;
+    }
+  }
+
+  &--bottom {
+    border-bottom-width: 0;
+  }
+
+  &--top {
+    border-top-width: 0;
+  }
+
+  &--danger {
+    border-color: #ffad9e;
+    background-color: #ffefec;
+
+    .hig__banner__icon-background {
+      background-color: #ee4444;
+    }
+  }
+
+  &--warning {
+    border-color: #fdc36d;
+    background-color: #fef3e3;
+
+    .hig__banner__icon-background {
+      background-color: #ffa600;
+    }
+  }
+
+  &--primary {
+    border-color: #9bd5ef;
+    background-color: #e6f4fb;
+
+    .hig__banner__icon-background {
+      background-color: #0696d7;
+    }
+  }
+
+  &--success {
+    border-color: #abd079;
+    background-color: #f0f7e8;
+
+    .hig__banner__icon-background {
+      background-color: #91c150;
+    }
+  }
+}
