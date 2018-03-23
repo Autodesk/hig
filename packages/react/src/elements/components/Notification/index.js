@@ -19,11 +19,11 @@ export default class Notification extends Component {
   }
   componentDidMount() {}
 
-  onClickCapture(event) {
-    if (event.target.tagName === "A") {
+  onClickCapture = event => {
+    if (event.target.tagName === "A" && this.props.onLinkClick) {
       this.props.onLinkClick(this.props.id);
     }
-  }
+  };
 
   dismissFeaturedNotification = () => {
     this.props.onDismiss();
@@ -46,7 +46,7 @@ export default class Notification extends Component {
               >
                 <div className={`${UNREAD_MARKER_CLASS}`} />
                 <div className={`${CONTENT_CLASS}`}>
-                  <RichText>{this.props.content}</RichText>
+                  <RichText>{this.props.children}</RichText>
                   <IconButton
                     onClick={this.dismissFeaturedNotification}
                     icon="close-notification"
@@ -65,7 +65,7 @@ export default class Notification extends Component {
           >
             <div className={`${UNREAD_MARKER_CLASS}`} />
             <div className={`${CONTENT_CLASS}`}>
-              <RichText>{this.props.content}</RichText>
+              <RichText>{this.props.children}</RichText>
             </div>
 
             {/* <Timestamp /> */}
@@ -75,3 +75,30 @@ export default class Notification extends Component {
     );
   }
 }
+
+Notification.propTypes = {
+  /**
+   * A callback called when user clicks on a link in the notification
+   */
+  onLinkClick: PropTypes.func,
+  /**
+   * A callback called when user dismisses a featured notification
+   */
+  onDismiss: PropTypes.func,
+  /**
+   * {Boolean} to show specify whether notificaiton is read
+   */
+  unread: PropTypes.bool,
+  /**
+   * Indicates whether this is a featured notification
+   */
+  featured: PropTypes.bool,
+  /**
+   * Content for notification
+   */
+  children: PropTypes.node,
+  /**
+   * Timestamp for notification
+   */
+  timestamp: PropTypes.oneOfType([PropTypes.string, PropTypes.instanceOf(Date)]) // ISO date string
+};

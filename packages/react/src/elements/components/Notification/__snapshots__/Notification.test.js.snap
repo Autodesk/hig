@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`New Notification renders correctly with the unread prop 1`] = `
+<div>
+  <div
+    className="hig__icon hig__notification--unread"
+    onClickCapture={[Function]}
+  >
+    <div
+      className="hig__notification__unread-marker"
+    />
+    <div
+      className="hig__notification__content"
+    >
+      <div
+        className="hig__rich-text"
+      >
+        <div>
+          <p>
+            <b>
+              Your subscription expires May 5
+            </b>
+          </p>
+          <p>
+            Maya
+            <br />
+            Media & Entertainment Collection
+            <br />
+            Product Design Collection
+            <br />
+            2 more
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

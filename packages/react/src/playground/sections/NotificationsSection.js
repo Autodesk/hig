@@ -5,7 +5,8 @@ import {
   Notifications,
   Notification,
   NewNotification,
-  TextLink
+  TextLink,
+  Shortcut
 } from "../../hig-react";
 
 const sampleNotifications = [
@@ -199,12 +200,33 @@ class NotificationsSection extends PureComponent {
 
         <div style={{ display: "flex", justifyContent: "flex-end" }}>
           <NewNotification
-            content={sampleNotifications[0].children}
+            id={1}
             unread
             featuredNotification
+            onLinkClick={id => console.log("notification id", id)}
             onDismiss={() => {
               console.log("feaured notification dismissed");
             }}
+          >
+            {sampleNotifications[0].children}
+          </NewNotification>
+        </div>
+
+        <hr />
+
+        <div style={{ display: "flex", justifyContent: "flex-end" }}>
+          <Shortcut
+            icon="settings"
+            onClick={() => console.log("shortcut clicked")}
+            title="shortcut"
+          />
+        </div>
+
+        <div style={{ display: "flex", justifyContent: "flex-end" }}>
+          <Shortcut
+            icon="settings"
+            title="shortcut"
+            link={"http://www.autodesk.com"}
           />
         </div>
       </PlaygroundSection>
