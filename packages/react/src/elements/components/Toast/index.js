@@ -9,7 +9,7 @@ import "./toast.scss";
 const _STATUS_ICONS = {
   primary: "info",
   success: "complete",
-  danger: "error",
+  error: "error",
   warning: "issue"
 };
 
