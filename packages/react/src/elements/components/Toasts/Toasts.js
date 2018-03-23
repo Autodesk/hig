@@ -2,6 +2,8 @@ import React from "react";
 import FlipMove from "react-flip-move";
 import "./toasts.scss";
 
+const MAX_TOASTS_ONSCREEN = 3;
+
 export default class Toasts extends React.Component {
   constructor(props) {
     super(props);
@@ -23,7 +25,6 @@ export default class Toasts extends React.Component {
 
   render() {
     return (
-        {this.state.items.map(child =>
       <FlipMove
         className="hig__toasts"
         duration={1000}
@@ -31,6 +32,7 @@ export default class Toasts extends React.Component {
         enterAnimation="fade"
         leaveAnimation="fade"
       >
+        {this.state.items.slice(0, MAX_TOASTS_ONSCREEN).map(child =>
           React.cloneElement(child, {
             onDismiss: this.handleDismiss.bind(this, child.key)
           })
