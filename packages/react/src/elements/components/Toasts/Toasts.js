@@ -1,4 +1,5 @@
 import React from "react";
+import "./toasts.scss";
 
 export default class Toasts extends React.Component {
   constructor(props) {
