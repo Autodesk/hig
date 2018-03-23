@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "hig-vanilla": "^0.1.26",
+    "react-flip-move": "^3.0.1",
     "react-transition-group": "^2.3.0"
   },
   "peerDependencies": {
