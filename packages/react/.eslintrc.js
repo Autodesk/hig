@@ -14,7 +14,10 @@ module.exports = {
     expect: true,
     gemini: true,
     jest: true,
+    beforeAll: true,
     beforeEach: true,
+    afterEach: true,
+    afterAll: true,
     document: true,
     window: true
   },

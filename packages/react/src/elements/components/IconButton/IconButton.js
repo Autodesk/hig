@@ -6,10 +6,18 @@ import cx from "classnames";
 import "./icon-button.scss";
 import Icon from "../Icon/Icon";
 
-const AvailableTypes = ["primary", "flat", "transparent"];
+const types = Object.freeze({
+  PRIMARY: "primary",
+  FLAT: "flat",
+  TRANSPARENT: "transparent"
+});
+
+const availableTypes = Object.values(types);
 
 export default class IconButton extends Component {
-  setTabIndex = buttonState => (buttonState ? -1 : 0);
+  getTabIndex() {
+    return this.props.disabled ? "-1" : "0";
+  }
 
   render() {
     const iconButtonClasses = cx(
@@ -17,9 +25,10 @@ export default class IconButton extends Component {
       `hig__icon-button--${this.props.type}`,
       { "hig__icon-button--disabled": this.props.disabled }
     );
+
     return (
       <a
-        tabIndex={this.setTabIndex(this.props.disabled)}
+        tabIndex={this.getTabIndex()}
         className={iconButtonClasses}
         title={this.props.title}
         href={this.props.link}
@@ -29,14 +38,21 @@ export default class IconButton extends Component {
         onMouseEnter={this.props.onHover}
       >
         <div className="hig__icon-button__icon">
-          <Icon nameOrSVG={this.props.icon} />
+          <Icon
+            svg={this.props.svg}
+            name={this.props.name}
+            nameOrSVG={this.props.icon}
+          />
         </div>
       </a>
     );
   }
 }
+
+IconButton.types = types;
+
 IconButton.defaultProps = {
-  type: AvailableTypes[0],
+  type: types.PRIMARY,
   link: null,
   title: "button"
 };
@@ -51,7 +67,15 @@ IconButton.propTypes = {
    */
   link: PropTypes.string,
   /**
-   * Name of an included icon, or svg string of a custom icon
+   * Name of the icon to be used
+   */
+  name: PropTypes.oneOf(Icon.AVAILABLE_NAMES),
+  /**
+   * SVG markup used for the icon
+   */
+  svg: PropTypes.string,
+  /**
+   * Deprecated; use `name` or `svg` instead
    */
   icon: PropTypes.string.isRequired,
   /**
@@ -77,5 +101,5 @@ IconButton.propTypes = {
   /**
    * 'primary' or 'flat'; the style of the button
    */
-  type: PropTypes.oneOf(AvailableTypes)
+  type: PropTypes.oneOf(availableTypes)
 };
