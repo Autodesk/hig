@@ -1,4 +1,5 @@
 import React from "react";
+import FlipMove from "react-flip-move";
 import "./toasts.scss";
 
 export default class Toasts extends React.Component {
@@ -22,13 +23,19 @@ export default class Toasts extends React.Component {
 
   render() {
     return (
-      <div className="hig__toasts">
         {this.state.items.map(child =>
+      <FlipMove
+        className="hig__toasts"
+        duration={1000}
+        easing="ease-out"
+        enterAnimation="fade"
+        leaveAnimation="fade"
+      >
           React.cloneElement(child, {
             onDismiss: this.handleDismiss.bind(this, child.key)
           })
         )}
-      </div>
+      </FlipMove>
     );
   }
 }
