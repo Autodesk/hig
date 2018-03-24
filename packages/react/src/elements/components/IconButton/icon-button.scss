@@ -16,6 +16,10 @@
   min-width: 36px;
   font-size: 14px;
 
+  button {
+    -webkit-text-align: center;
+  }
+
 
   svg * {
     fill: color(hig-cool-gray-60);
