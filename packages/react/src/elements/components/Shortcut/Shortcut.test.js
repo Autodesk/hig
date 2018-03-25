@@ -3,7 +3,7 @@ import React from "react";
 import { Shortcut } from "../../../hig-react";
 
 describe("ShortCut", () => {
-  it("renders correctly with link property", () => {
+  it("renders correctly with link properly", () => {
     const tree = renderer
       .create(<Shortcut icon="help" link="www.autodesk.com" title="help" />)
       .toJSON();
@@ -15,7 +15,7 @@ describe("ShortCut", () => {
       .create(
         <Shortcut
           icon="help"
-          onClick={() => console.log("shortcute clicked")}
+          onClick={() => console.log("shortcut clicked")}
           title="help"
         />
       )

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ShortCut renders correctly with link property 1`] = `
+exports[`ShortCut renders correctly with link properly 1`] = `
 <div
   className="hig__shortcut"
   title="help"
