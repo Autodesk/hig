@@ -93,7 +93,7 @@
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.2",
     "surge": "^0.19.0",
-    "svgo": "^0.7.2",
+    "svgo": "^1.0.5",
     "typescript": "^2.3.2",
     "webpack": "^3.5.5"
   },

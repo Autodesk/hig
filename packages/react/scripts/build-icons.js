@@ -67,7 +67,7 @@ fs.readdir(srcLocation, (err, filenames) => {
     cleanFileNames.push(cleanFileName);
 
     // CLEANUP FILE AND MINIMIZE
-    svgo.optimize(data, result => {
+    svgo.optimize(data).then(result => {
       // EXPORT TO JS FILE
       let svgString = `HIGIcons['${cleanFileName}'] = `;
       svgString += `"${result.data
