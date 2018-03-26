@@ -21,7 +21,8 @@ module.exports = {
     chrome: {
       desiredCapabilities: {
         browserName: "chrome",
-        version: "54.0",
+        version: "65.0",
+        windowSize: "1024x768",
         platform: "macOs 10.12",
         name: "gemini visual regression tests"
       }

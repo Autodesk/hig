@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import cx from "classnames";
 import IconButton from "../IconButton/IconButton";
 import RichText from "../RichText";
-import Timestamp from "../Timestamp";
+// import Timestamp from "../Timestamp";
 
 const COMPONENT_CLASS = "hig__icon";
 const FEATURED_COMPONENT_CLASS = "hig__notification--featured";
