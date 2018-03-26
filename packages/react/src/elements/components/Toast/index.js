@@ -60,6 +60,7 @@ export default class Toast extends Component {
 }
 
 Toast.defaultProps = {
+  showStatusIcon: true,
   status: "primary"
 };
 

@@ -72,9 +72,16 @@ describe("Toast", () => {
   });
 
   describe("status icons", () => {
+    it("is true by default", () => {
+      const wrapper = mount(<Toast>Who wants toast?</Toast>);
+      expect(wrapper).toHaveProp("showStatusIcon", true);
+    });
+
     it("renders an icon into the expected container", () => {
       const withoutIcon = mount(
-        <Toast status="success">Who wants toast?</Toast>
+        <Toast status="success" showStatusIcon={false}>
+          Who wants toast?
+        </Toast>
       );
       expect(withoutIcon.find(".hig__toast__image-container")).toHaveLength(0);
 
