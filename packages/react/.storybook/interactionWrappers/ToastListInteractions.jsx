@@ -40,10 +40,13 @@ export default class ToastListInteractions extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={{
+        boxSizing: "border-box",
+        height: "calc(100vh - 48px - 16px)"  // Offset wrapper margin/padding and body margin
+      }}>
         <Button onClick={this.addRandomToast} title="Add Random Toast" />
-        <hr />
-        <ToastList>
+
+        <ToastList position={this.props.position}>
           {this.state.toasts.map(toast =>
             React.cloneElement(toast, {
               onDismiss: this.removeToast.bind(this, toast)

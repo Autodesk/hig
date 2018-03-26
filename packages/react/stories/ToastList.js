@@ -1,5 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
+import { select } from "@storybook/addon-knobs/react";
 import Avatar from "elements/components/Avatar";
 import Toast from "elements/components/Toast";
 import ToastList from "elements/components/ToastList";
@@ -8,11 +9,10 @@ import ToastListInteractions from "../.storybook/interactionWrappers/ToastListIn
 
 const exampleToasts = React.Children.toArray([
   <Toast image={<Avatar name="Jon Snow" size="large-48" />} status="primary">
-    Lorem ipsum dolor sit amet
+    First defined Toast notification. Lorem ipsum dolor sit amet.
   </Toast>,
   <Toast image={<Avatar name="Arya Stark" size="large-48" />} status="warning">
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-    aliquip ex ea commodo consequat.
+    Second defined Toast notification.
   </Toast>,
   <Toast
     image={
@@ -22,14 +22,20 @@ const exampleToasts = React.Children.toArray([
     }
     status="error"
   >
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-    eu fugiat nulla pariatur.
+    Third Toast notification.
   </Toast>,
-  <Toast>Simple English toast.</Toast>
+  <Toast>Simple English toast. Fourth in order.</Toast>
 ]);
 
 storiesOf("ToastList", module)
-  .add("default", () => <ToastList>{exampleToasts}</ToastList>)
+  .add("default", () => (
+    <ToastList position={select("Position", ["top", "bottom"], "top")}>
+      {exampleToasts}
+    </ToastList>
+  ))
   .add("demonstrate adding new children", () => (
-    <ToastListInteractions initialToasts={exampleToasts} />
+    <ToastListInteractions
+      initialToasts={exampleToasts}
+      position={select("Position", ["top", "bottom"], "top")}
+    />
   ));

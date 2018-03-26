@@ -1,5 +1,28 @@
+.hig__toast-list-wrapper {
+  position: absolute;
+  right: 10px;
+}
+
+.hig__toast-list-wrapper--position-top {
+  top: 10px;
+}
+
+.hig__toast-list-wrapper--position-bottom {
+  bottom: 10px;
+}
+
 .hig__toast-list {
+  display: flex;
+
   .hig__toast {
     margin-bottom: 10px;
   }
+}
+
+.hig__toast-list--position-top {
+  flex-direction: column-reverse;
+}
+
+.hig__toast-list--position-bottom {
+  flex-direction: column;
 }
