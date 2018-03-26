@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import cx from "classnames";
 
 export default class Timestamp extends Component {
   _pluralize = (word, count) => (count === 1 ? word : `${word}s`);

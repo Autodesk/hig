@@ -36,10 +36,8 @@ export default class IconButton extends Component {
       onMouseEnter: this.props.onMouseEnter
     };
 
-    this.props.link ? (props.href = this.props.link) : props;
-
     return this.props.link ? (
-      <a {...props}>
+      <a {...props} href={this.props.link}>
         <span className="hig__icon-button__icon">
           <Icon
             svg={this.props.svg}

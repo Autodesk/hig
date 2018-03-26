@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import cx from "classnames";
 import IconButton from "../IconButton/IconButton";
 import RichText from "../RichText";
+import Timestamp from "../Timestamp";
 
 const COMPONENT_CLASS = "hig__icon";
 const FEATURED_COMPONENT_CLASS = "hig__notification--featured";
@@ -54,7 +55,7 @@ export default class Notification extends Component {
                   />
                 </div>
 
-                {/* <Timestamp /> */}
+                {/* <Timestamp timestamp="" /> */}
               </div>
             )}
           </Transition>
@@ -92,13 +93,13 @@ Notification.propTypes = {
   /**
    * Indicates whether this is a featured notification
    */
-  featured: PropTypes.bool,
+  featuredNotification: PropTypes.bool,
   /**
    * Content for notification
    */
-  children: PropTypes.node,
+  children: PropTypes.node
   /**
    * Timestamp for notification
    */
-  timestamp: PropTypes.oneOfType([PropTypes.string, PropTypes.instanceOf(Date)]) // ISO date string
+  // timestamp: PropTypes.oneOfType([PropTypes.string, PropTypes.instanceOf(Date)]) // ISO date string
 };
