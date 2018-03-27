@@ -39,7 +39,11 @@ storiesOf("Toast", module)
     <Toast
       image={
         <div style={{ width: "48px", height: "48px" }}>
-          <img src="http://placekitten.com/g/48/48" alt="Place Kitten 48x48" />
+          <img
+            src="http://placekitten.com/g/48/48"
+            style={{ borderRadius: "4px" }} // To be replaced eventually by a Thumbnail component
+            alt="Place Kitten 48x48"
+          />
         </div>
       }
       onDismiss={action("Toast dismissed")}
