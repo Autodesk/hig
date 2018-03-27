@@ -66,7 +66,7 @@ Toast.defaultProps = {
 
 Toast.propTypes = {
   /**
-   * Message content for the Toast
+   * Message content for the Toast. It's recommended to keep the content to no more than 20 words.
    */
   children: PropTypes.node,
   /**
