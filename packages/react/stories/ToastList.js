@@ -35,7 +35,6 @@ storiesOf("ToastList", module)
   ))
   .add("demonstrate adding new children", () => (
     <ToastListInteractions
-      initialToasts={exampleToasts}
       position={select("Position", ["top", "bottom"], "top")}
     />
   ));

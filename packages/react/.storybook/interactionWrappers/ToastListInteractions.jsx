@@ -6,6 +6,10 @@ import Toast, { _AVAILABLE_STATUSES } from "elements/components/Toast";
 import ToastList from "elements/components/ToastList";
 
 export default class ToastListInteractions extends React.Component {
+  static defaultProps = {
+    initialToasts: []
+  };
+
   constructor(props) {
     super(props);
     this.state = {
@@ -32,18 +36,20 @@ export default class ToastListInteractions extends React.Component {
   _generateToast = () => (
     <Toast key={Math.random()} status={sample(_AVAILABLE_STATUSES)}>
       {loremIpsum({
-        count: 2,
-        unit: "sentences"
+        count: 20,
+        units: "words"
       })}
     </Toast>
   );
 
   render() {
     return (
-      <div style={{
-        boxSizing: "border-box",
-        height: "calc(100vh - 48px - 16px)"  // Offset wrapper margin/padding and body margin
-      }}>
+      <div
+        style={{
+          boxSizing: "border-box",
+          height: "calc(100vh - 48px - 16px)" // Offset wrapper margin/padding and body margin
+        }}
+      >
         <Button onClick={this.addRandomToast} title="Add Random Toast" />
 
         <ToastList position={this.props.position}>
