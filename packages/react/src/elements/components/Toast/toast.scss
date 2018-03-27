@@ -21,18 +21,34 @@
 
 .hig__toast--primary {
   border-color: color(hig-blue-50);
+
+  .hig__toast__image-container svg {
+    fill: color(hig-blue-50);
+  }
 }
 
 .hig__toast--success {
   border-color: color(hig-green-good);
+
+  .hig__toast__image-container svg {
+    fill: color(hig-green-good);
+  }
 }
 
-.hig__toast--danger {
+.hig__toast--error {
   border-color: color(hig-red-alert);
+
+  .hig__toast__image-container svg {
+    fill: color(hig-red-alert);
+  }
 }
 
 .hig__toast--warning {
   border-color: color(hig-yellow-warning);
+
+  .hig__toast__image-container svg {
+    fill: color(hig-yellow-warning);
+  }
 }
 
 .hig__toast__image-container {
