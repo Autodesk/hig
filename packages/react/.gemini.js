@@ -6,7 +6,6 @@ module.exports = {
   rootUrl: "http://localhost:9001",
   gridUrl: "http://ondemand.saucelabs.com/wd/hub",
   screenshotsDir: "./gemini/screens",
-  windowSize: "1024x768",
   compositeImage: true,
   sessionsPerBrowser: 3,
   system: {
@@ -22,7 +21,6 @@ module.exports = {
       desiredCapabilities: {
         browserName: "chrome",
         version: "65.0",
-        windowSize: "1024x768",
         platform: "macOs 10.12",
         name: "gemini visual regression tests"
       }

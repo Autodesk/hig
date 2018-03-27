@@ -45,7 +45,7 @@ exports[`New Notification renders correctly with the featured prop 1`] = `
           className="hig__icon hig__icon--24-size"
           dangerouslySetInnerHTML={
             Object {
-              "__html": "<svg width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-notification-24\\"><title>close-x</title><polygon fill-rule=\\"nonzero\\" points=\\"8.45 0.47 4.97 3.95 1.51 0.47 0.45 1.53 3.91 5.01 0.45 8.47 1.51 9.53 4.97 6.07 8.42 9.53 9.48 8.47 6.03 5.01 9.51 1.53\\" fill=\\"#2E4258\\"/></svg>",
+              "__html": "<svg width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-notification-24\\"><polygon fill-rule=\\"nonzero\\" points=\\"8.45 0.47 4.97 3.95 1.51 0.47 0.45 1.53 3.91 5.01 0.45 8.47 1.51 9.53 4.97 6.07 8.42 9.53 9.48 8.47 6.03 5.01 9.51 1.53\\" fill=\\"#2E4258\\"/></svg>",
             }
           }
         />
