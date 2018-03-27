@@ -4,8 +4,11 @@ import { action } from "@storybook/addon-actions";
 import { text, select, boolean } from "@storybook/addon-knobs/react";
 import Avatar from "elements/components/Avatar";
 import Toast, { _AVAILABLE_STATUSES } from "elements/components/Toast";
+
 import intlExamples from "./toast-intl-examples.json";
-import languageOptions from "./support/languageOptions";
+import languageOptions from "../support/languageOptions";
+import avatar from "./avatar.png";
+import greenhouseThumbnail from "./greenhouse.png";
 
 storiesOf("Toast", module)
   .add("default", () => (
@@ -14,24 +17,25 @@ storiesOf("Toast", module)
       status={select("Status", _AVAILABLE_STATUSES)}
       showStatusIcon={boolean("Show Status Icon", true)}
     >
-      {text(
-        "Children",
-        "It's probably useful in the long run to default to showing multiple lines of toast. Let's say, three?"
-      )}
+      <strong>Object Name</strong> {text("Children", "has new info about it.")}
     </Toast>
   ))
 
   .add("with an avatar", () => (
     <Toast
-      image={<Avatar name="Jon Snow" size="large-48" />}
+      image={
+        <Avatar
+          name="Jon Snow"
+          size="large-48"
+          image={text("Avatar URL", avatar)}
+        />
+      }
       onDismiss={action("Toast dismissed")}
       status={select("Status", _AVAILABLE_STATUSES)}
       showStatusIcon={boolean("Show Status Icon", true)}
     >
-      {text(
-        "Children",
-        "It's probably useful in the long run to default to showing multiple lines of toast. Let's say, three?"
-      )}
+      <strong>Person&#39;s Name</strong>{" "}
+      {text("Children", "made a change relevant to your project.")}
     </Toast>
   ))
 
@@ -40,9 +44,9 @@ storiesOf("Toast", module)
       image={
         <div style={{ width: "48px", height: "48px" }}>
           <img
-            src="http://placekitten.com/g/48/48"
+            src={greenhouseThumbnail}
             style={{ borderRadius: "4px" }} // To be replaced eventually by a Thumbnail component
-            alt="Place Kitten 48x48"
+            alt="greenhouse"
           />
         </div>
       }
@@ -50,10 +54,9 @@ storiesOf("Toast", module)
       status={select("Status", _AVAILABLE_STATUSES)}
       showStatusIcon={boolean("Show Status Icon", true)}
     >
-      {text(
-        "Children",
-        "It's probably useful in the long run to default to showing multiple lines of toast. Let's say, three?"
-      )}
+      <strong>Person&#39;s Name</strong>{" "}
+      {text("Children", "invited you to participate on ")}
+      <strong>Project Name</strong>
     </Toast>
   ))
 
@@ -69,7 +72,13 @@ storiesOf("Toast", module)
         )}
       >
         <Toast
-          image={<Avatar name={text("Name", lang.name)} size="large-48" />}
+          image={
+            <Avatar
+              name={text("Name", lang.name)}
+              size="large-48"
+              image={text("Avatar URL", avatar)}
+            />
+          }
           onDismiss={action("Toast dismissed")}
           status={select("Status", _AVAILABLE_STATUSES)}
         >
