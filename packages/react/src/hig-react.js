@@ -51,7 +51,7 @@ export {
 } from "./elements/components/GlobalNav/TopNav/Notification";
 
 export {
-  default as NewNotification
+  default as NotificationV1
 } from "./elements/components/Notification/index";
 
 export { default as Option } from "./adapters/FormElements/OptionAdapter";

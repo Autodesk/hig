@@ -3,8 +3,7 @@ import PlaygroundSection from "../PlaygroundSection";
 import {
   Button,
   Notifications,
-  Notification,
-  NewNotification,
+  NotificationV1,
   TextLink,
   Shortcut
 } from "../../hig-react";
@@ -127,7 +126,7 @@ class NotificationsSection extends PureComponent {
     );
 
   featuredNotification = () => (
-    <Notification id={2} onDismiss={this.featuredNotificationDismissed}>
+    <NotificationV1 id={2} onDismiss={this.featuredNotificationDismissed}>
       <div>
         <p>
           <b>New enhancements to subscription management lorum ipsom gas</b>
@@ -142,7 +141,7 @@ class NotificationsSection extends PureComponent {
           <TextLink text="Secondary link" />
         </p>
       </div>
-    </Notification>
+    </NotificationV1>
   );
 
   featuredNotificationDismissed = () => {
@@ -179,7 +178,7 @@ class NotificationsSection extends PureComponent {
             loading={this.state.notificationsLoading}
           >
             {this.state.notifications.map(notification => (
-              <Notification
+              <NotificationV1
                 unread={notification.unread}
                 key={notification.id}
                 onLinkClick={notification.onLinkClick}
@@ -187,7 +186,7 @@ class NotificationsSection extends PureComponent {
                 title={notification.title}
               >
                 {notification.children}
-              </Notification>
+              </NotificationV1>
             ))}
           </Notifications>
         </div>
@@ -199,17 +198,17 @@ class NotificationsSection extends PureComponent {
         <hr />
 
         <div style={{ display: "flex", justifyContent: "flex-end" }}>
-          <NewNotification
+          <NotificationV1
             id={1}
             unread
-            featuredNotification
+            featured
             onLinkClick={id => console.log("notification id", id)}
             onDismiss={() => {
               console.log("feaured notification dismissed");
             }}
           >
             {sampleNotifications[0].children}
-          </NewNotification>
+          </NotificationV1>
         </div>
 
         <hr />

@@ -38,7 +38,7 @@ export default class Notification extends Component {
 
     return (
       <div>
-        {this.props.featuredNotification ? (
+        {this.props.featured ? (
           <Transition in={this.state.in} timeout={300}>
             {state => (
               <div
@@ -51,7 +51,7 @@ export default class Notification extends Component {
                   <IconButton
                     onClick={this.dismissFeaturedNotification}
                     icon="close-notification"
-                    type="flat"
+                    type="transparent"
                   />
                 </div>
 
@@ -93,7 +93,7 @@ Notification.propTypes = {
   /**
    * Indicates whether this is a featured notification
    */
-  featuredNotification: PropTypes.bool,
+  featured: PropTypes.bool,
   /**
    * Content for notification
    */

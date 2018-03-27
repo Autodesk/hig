@@ -2,7 +2,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { text, boolean } from "@storybook/addon-knobs/react";
-import { NewNotification, TextLink } from "../src/hig-react";
+import { NotificationV1, TextLink } from "../src/hig-react";
 
 const sampleNotifications = [
   {
@@ -60,22 +60,22 @@ const sampleNotifications = [
 
 storiesOf("Notification", module)
   .add("default", () => (
-    <NewNotification
+    <NotificationV1
       id={1}
       unread={boolean("Unread", false)}
       onLinkClick={action("link clicked")}
       status={text("Status")}
     >
       {sampleNotifications[0].children}
-    </NewNotification>
+    </NotificationV1>
   ))
   .add("Featured Notification", () => (
-    <NewNotification
+    <NotificationV1
       id={1}
       onLinkClick={action("link clicked")}
-      featuredNotification={boolean("Featured", true)}
+      featured={boolean("Featured", true)}
       onDismiss={action("dimiss featured notification")}
     >
       {sampleNotifications[0].children}
-    </NewNotification>
+    </NotificationV1>
   ));

@@ -31,9 +31,11 @@
 
   &.hig__icon-button--transparent {
     border-color: transparent;
+    background-color: transparent;
 
     &:hover {
       border-color: transparent;
+      background-color: transparent;
       svg * {
         fill: color(hig-turquoise-50)
       }

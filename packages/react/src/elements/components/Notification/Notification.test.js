@@ -1,6 +1,6 @@
 import renderer from "react-test-renderer";
 import React from "react";
-import { NewNotification } from "../../../hig-react";
+import { NotificationV1 } from "../../../hig-react";
 
 const sampleNotifications = [
   {
@@ -42,9 +42,9 @@ describe("New Notification", () => {
   it("renders correctly with the unread prop", () => {
     const tree = renderer
       .create(
-        <NewNotification id={1} unread>
+        <NotificationV1 id={1} unread>
           {sampleNotifications[0].children}
-        </NewNotification>
+        </NotificationV1>
       )
       .toJSON();
     expect(tree).toMatchSnapshot();
