@@ -43,7 +43,7 @@ export default class Toast extends Component {
         {this._renderImage()}
         <div className="hig__toast__body">
           <div className="hig__toast__message">
-            <RichText>{this.props.children}</RichText>
+            <RichText size="small">{this.props.children}</RichText>
             <div className="hig__toast__dismiss">
               <IconButton
                 title="Dismiss"
