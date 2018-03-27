@@ -18,7 +18,6 @@ export default class Notification extends Component {
       in: true
     };
   }
-  componentDidMount() {}
 
   onClickCapture = event => {
     if (event.target.tagName === "A" && this.props.onLinkClick) {

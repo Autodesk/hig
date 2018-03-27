@@ -49,4 +49,15 @@ describe("New Notification", () => {
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it("renders correctly with the featured prop", () => {
+    const tree = renderer
+      .create(
+        <NotificationV1 id={1} featured>
+          {sampleNotifications[0].children}
+        </NotificationV1>
+      )
+      .toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });
