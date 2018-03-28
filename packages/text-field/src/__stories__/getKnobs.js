@@ -77,7 +77,7 @@ export default function getKnobs(props) {
     onFocus: action(knobLabels.onFocus),
     onInput: action(knobLabels.onInput),
     placeholder: text(knobLabels.placeholder, placeholder, knobGroupIds.basic),
-    required: boolean(knobLabels.required, required, knobGroupIds.basic),
+    required: text(knobLabels.required, required, knobGroupIds.basic),
     showClearButton: boolean(
       knobLabels.showClearButton,
       showClearButton,

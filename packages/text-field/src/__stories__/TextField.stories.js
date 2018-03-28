@@ -1,6 +1,5 @@
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
-
 import infoOptions from "./infoOptions";
 import renderStory from "./renderStory";
 import stories from "./stories";
