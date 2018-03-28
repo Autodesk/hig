@@ -126,7 +126,11 @@ class NotificationsSection extends PureComponent {
     );
 
   featuredNotification = () => (
-    <NotificationV1 id={2} onDismiss={this.featuredNotificationDismissed}>
+    <NotificationV1
+      id={2}
+      onDismiss={this.featuredNotificationDismissed}
+      onLinkClick={this.onNotificationLinkClick}
+    >
       <div>
         <p>
           <b>New enhancements to subscription management lorum ipsom gas</b>
@@ -170,18 +174,14 @@ class NotificationsSection extends PureComponent {
               console.log("notifications on click outside", event);
             }}
             onScroll={this.onNotificationsScroll}
-            unreadCount={this.state.unreadCount}
-            notifications={this.transformedNotifications(
-              this.state.notifications
-            )}
             featuredNotification={this.featuredNotification()}
             loading={this.state.notificationsLoading}
           >
             {this.state.notifications.map(notification => (
               <NotificationV1
-                unread={notification.unread}
+                unread={!this.state.readIds.includes(notification.id)}
                 key={notification.id}
-                onLinkClick={notification.onLinkClick}
+                onLinkClick={this.onNotificationLinkClick}
                 id={notification.id}
                 title={notification.title}
               >

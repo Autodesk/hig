@@ -4,9 +4,10 @@ import PropTypes from "prop-types";
 import cx from "classnames";
 import IconButton from "../IconButton/IconButton";
 import RichText from "../RichText";
+import "./notification.scss";
 // import Timestamp from "../Timestamp";
 
-const COMPONENT_CLASS = "hig__icon";
+const COMPONENT_CLASS = "hig__notification";
 const FEATURED_COMPONENT_CLASS = "hig__notification--featured";
 const UNREAD_MARKER_CLASS = "hig__notification__unread-marker";
 const CONTENT_CLASS = "hig__notification__content";
@@ -46,7 +47,7 @@ export default class Notification extends Component {
               >
                 <div className={`${UNREAD_MARKER_CLASS}`} />
                 <div className={`${CONTENT_CLASS}`}>
-                  <RichText>{this.props.children}</RichText>
+                  <RichText size="small">{this.props.children}</RichText>
                   <IconButton
                     onClick={this.dismissFeaturedNotification}
                     icon="close-notification"
@@ -65,7 +66,7 @@ export default class Notification extends Component {
           >
             <div className={`${UNREAD_MARKER_CLASS}`} />
             <div className={`${CONTENT_CLASS}`}>
-              <RichText>{this.props.children}</RichText>
+              <RichText size="small">{this.props.children}</RichText>
             </div>
 
             {/* <Timestamp /> */}
