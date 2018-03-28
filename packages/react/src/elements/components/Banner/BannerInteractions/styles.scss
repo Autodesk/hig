@@ -1,0 +1,7 @@
+@import "~@hig/styles/mixins/colors.scss";
+
+.hig__banner__interactions {
+  @import "../variables.scss";
+
+  display: flex;
+}

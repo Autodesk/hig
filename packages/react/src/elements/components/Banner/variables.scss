@@ -1,0 +1,18 @@
+$base-dimension: 50px;
+$content-padding-horizontal: 16px;
+$message-font-size: 14px;
+$message-line-height: 20px;
+// Minimum space between the message and actions
+$content-gutter: 125px;
+$dismiss-icon-width: 10px;
+$dismiss-icon-button-width: 36px;
+$action-spacing-horizontal: 24px;
+$action-padding-vertical: 4px;
+
+$content-spacing-vertical: ($base-dimension - $message-font-size) / 2;
+$message-padding-vertical: ($base-dimension - $message-line-height) / 2;
+$dismiss-right-gutter: $base-dimension;
+$interaction-padding-vertical: $content-spacing-vertical - $action-padding-vertical;
+$dismiss-right-gutter-interactive: $action-spacing-horizontal;
+$dismiss-button-right-padding: $dismiss-right-gutter - ($dismiss-icon-button-width - $dismiss-icon-width) / 2;
+$dismiss-button-right-padding-interactive: $dismiss-right-gutter-interactive - ($dismiss-icon-button-width - $dismiss-icon-width) / 2;

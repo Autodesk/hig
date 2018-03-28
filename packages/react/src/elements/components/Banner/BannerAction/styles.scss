@@ -1,0 +1,41 @@
+@import "~@hig/styles/mixins/colors.scss";
+
+.hig__banner__action {
+  @import "../variables.scss";
+
+  // Remove spacing caused by elements with inline-block
+  display: flex;
+  padding: $action-padding-vertical $action-spacing-horizontal
+    $action-padding-vertical 0;
+  border-right-width: 1px;
+  border-right-style: solid;
+  height: $base-dimension - 10px;
+  align-items: center;
+  margin-left: $action-spacing-horizontal;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &--danger {
+    border-right-color: #333;
+  }
+
+  &--warning {
+    border-right-color: #333;
+  }
+
+  &--primary {
+    border-right-color: #9bd5ef;
+  }
+
+  &--success {
+    border-right-color: #333;
+  }
+}
+
+.hig__banner__interactions--wrapping {
+  .hig__banner__action:last-child {
+    border-right: 0;
+  }
+}
