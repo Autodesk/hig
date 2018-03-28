@@ -1,7 +1,9 @@
+#! /usr/bin/env node
+
 const rollup = require('rollup');
 const babel = require('rollup-plugin-babel');
 const string = require('rollup-plugin-string');
-const collectSass = require('rollup-plugin-collect-sass');
+// const collectSass = require('rollup-plugin-collect-sass');
 const svg = require('rollup-plugin-svg');
 const rootImport = require('rollup-plugin-root-import');
 const resolve = require('rollup-plugin-node-resolve');
@@ -19,14 +21,29 @@ const inputOptions = {
       extensions: '.js'
     }),
     babel({
-      exclude: ['node_modules/**', '**/*.scss', '**/*.html', '**/*.svg', '**/*.json']
+      exclude: ['node_modules/**', '**/*.scss', '**/*.html', '**/*.svg', '**/*.json'],
+      "presets": [
+        [
+          ["env",
+            {
+              "modules": false,
+              "targets": {
+                "browser": ">1%"
+              }
+            }
+          ],
+        ],
+        "stage-2",
+        "react"
+      ],
+      "plugins": ["external-helpers"]
     }),
     json(),
-    collectSass({
-      include: '**/*.scss',
-      extract: 'lib/hig.css',
-      importOnce: true
-    }),
+    // collectSass({
+    //   include: '**/*.scss',
+    //   extract: 'lib/hig.css',
+    //   importOnce: true
+    // }),
     string({
       include: '**/*.html'
     }),
