@@ -9,7 +9,7 @@
   min-height: 53px;
   padding: {
     top: 16px;
-    right: 6px;
+    right: 0px;
     bottom: 16px;
     left: 0px;
   }
@@ -52,12 +52,14 @@
 }
 
 .hig__toast__image-container {
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
 
-  min-width: 64px;
+  min-width: 70px;
   padding: {
-    left: 6px;
+    left: 12px;
+    right: 10px;
   }
 }
 
@@ -65,7 +67,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-grow: 1
+  flex-grow: 1;
+
+  &:first-child {
+    margin: {
+      left: 16px;
+    }
+  }
 }
 
 .hig__toast__message {
@@ -73,7 +81,6 @@
   display: flex;
   position: relative;
   padding: {
-    left: 12px;
     right: 36px;
   }
 

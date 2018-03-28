@@ -43,7 +43,7 @@ export default class Toast extends Component {
         {this._renderImage()}
         <div className="hig__toast__body">
           <div className="hig__toast__message">
-            <RichText>{this.props.children}</RichText>
+            <RichText size="small">{this.props.children}</RichText>
             <div className="hig__toast__dismiss">
               <IconButton
                 title="Dismiss"
@@ -66,7 +66,7 @@ Toast.defaultProps = {
 
 Toast.propTypes = {
   /**
-   * Message content for the Toast
+   * Message content for the Toast. It's recommended to keep the content to no more than 20 words.
    */
   children: PropTypes.node,
   /**
