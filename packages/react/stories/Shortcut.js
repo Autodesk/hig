@@ -102,6 +102,6 @@ storiesOf("Shortcut", module).add("default", () => (
     title={text("Title", "Shortcut")}
     link={text("Link", "http://www.autodesk.com")}
     icon={select("Icon name", icons, "settings")}
-    onClick={action("onClick")} 
+    onClick={action("onClick")}
   />
 ));

@@ -3,7 +3,7 @@
 exports[`New Notification renders correctly with the featured prop 1`] = `
 <div>
   <div
-    className="hig__icon hig__notification--entered hig__notification--featured"
+    className="hig__notification hig__notification--entered hig__notification--featured"
     onClickCapture={[Function]}
   >
     <div
@@ -13,7 +13,7 @@ exports[`New Notification renders correctly with the featured prop 1`] = `
       className="hig__notification__content"
     >
       <div
-        className="hig__rich-text"
+        className="hig__rich-text hig__rich-text--small"
       >
         <div>
           <p>
@@ -58,7 +58,7 @@ exports[`New Notification renders correctly with the featured prop 1`] = `
 exports[`New Notification renders correctly with the unread prop 1`] = `
 <div>
   <div
-    className="hig__icon hig__notification--unread"
+    className="hig__notification hig__notification--unread"
     onClickCapture={[Function]}
   >
     <div
@@ -68,7 +68,7 @@ exports[`New Notification renders correctly with the unread prop 1`] = `
       className="hig__notification__content"
     >
       <div
-        className="hig__rich-text"
+        className="hig__rich-text hig__rich-text--small"
       >
         <div>
           <p>

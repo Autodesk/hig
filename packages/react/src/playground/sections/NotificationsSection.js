@@ -3,7 +3,7 @@ import PlaygroundSection from "../PlaygroundSection";
 import {
   Button,
   Notifications,
-  NotificationV1,
+  NotificationV1 as Notification,
   TextLink,
   Shortcut
 } from "../../hig-react";
@@ -126,7 +126,7 @@ class NotificationsSection extends PureComponent {
     );
 
   featuredNotification = () => (
-    <NotificationV1
+    <Notification
       id={2}
       onDismiss={this.featuredNotificationDismissed}
       onLinkClick={this.onNotificationLinkClick}
@@ -145,7 +145,7 @@ class NotificationsSection extends PureComponent {
           <TextLink text="Secondary link" />
         </p>
       </div>
-    </NotificationV1>
+    </Notification>
   );
 
   featuredNotificationDismissed = () => {
@@ -178,7 +178,7 @@ class NotificationsSection extends PureComponent {
             loading={this.state.notificationsLoading}
           >
             {this.state.notifications.map(notification => (
-              <NotificationV1
+              <Notification
                 unread={!this.state.readIds.includes(notification.id)}
                 key={notification.id}
                 onLinkClick={this.onNotificationLinkClick}
@@ -186,7 +186,7 @@ class NotificationsSection extends PureComponent {
                 title={notification.title}
               >
                 {notification.children}
-              </NotificationV1>
+              </Notification>
             ))}
           </Notifications>
         </div>
@@ -198,7 +198,7 @@ class NotificationsSection extends PureComponent {
         <hr />
 
         <div style={{ display: "flex", justifyContent: "flex-end" }}>
-          <NotificationV1
+          <Notification
             id={1}
             unread
             featured
@@ -208,7 +208,7 @@ class NotificationsSection extends PureComponent {
             }}
           >
             {sampleNotifications[0].children}
-          </NotificationV1>
+          </Notification>
         </div>
 
         <hr />
