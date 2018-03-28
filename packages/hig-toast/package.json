@@ -1,0 +1,19 @@
+{
+  "name": "@hig/toast",
+  "version": "0.1.0",
+  "description": "Floating message boxes that report a system occurrence",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Autodesk/hig.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Autodesk/hig/issues"
+  },
+  "homepage": "https://github.com/Autodesk/hig#readme"
+}
