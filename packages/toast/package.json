@@ -2,13 +2,11 @@
   "name": "@hig/toast",
   "version": "0.1.0",
   "description": "Floating message boxes that report a system occurrence",
-  "devDependencies": {
-    "@hig/styles": "^0.1.0-alpha"
-  },
+  "devDependencies": {},
   "main": "src/index.js",
   "scripts": {
     "test": "hig-scripts test",
-    "build": "@hig/hig-scripts build"
+    "build": "hig-scripts-build"
   },
   "repository": {
     "type": "git",

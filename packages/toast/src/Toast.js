@@ -16,7 +16,12 @@ const _STATUS_ICONS = {
 export const _AVAILABLE_STATUSES = Object.freeze(Object.keys(_STATUS_ICONS));
 
 export default class Toast extends Component {
-  _renderImage = () => {
+  constructor(props) {
+    super(props);
+    this._renderImage = this._renderImage.bind(this);
+  }
+
+  _renderImage() {
     const { showStatusIcon, image, status } = this.props;
     if (image) {
       return <div className="hig__toast__image-container">{image}</div>;
