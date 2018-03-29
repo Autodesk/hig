@@ -26,25 +26,34 @@ export default class IconButton extends Component {
       { "hig__icon-button--disabled": this.props.disabled }
     );
 
-    return (
-      <a
-        tabIndex={this.getTabIndex()}
-        className={iconButtonClasses}
-        title={this.props.title}
-        href={this.props.link}
-        onClick={this.props.onClick}
-        onBlur={this.props.onBlur}
-        onFocus={this.props.onFocus}
-        onMouseEnter={this.props.onHover}
-      >
-        <div className="hig__icon-button__icon">
+    const props = {
+      tabIndex: this.getTabIndex(),
+      className: iconButtonClasses,
+      title: this.props.title,
+      onClick: this.props.onClick,
+      onBlur: this.props.onBlur,
+      onFocus: this.props.onFocus,
+      onMouseEnter: this.props.onMouseEnter
+    };
+
+    return this.props.link ? (
+      <a {...props} href={this.props.link}>
+        <span className="hig__icon-button__icon">
           <Icon
             svg={this.props.svg}
             name={this.props.name}
             nameOrSVG={this.props.icon}
           />
-        </div>
+        </span>
       </a>
+    ) : (
+      <button {...props}>
+        <Icon
+          svg={this.props.svg}
+          name={this.props.name}
+          nameOrSVG={this.props.icon}
+        />
+      </button>
     );
   }
 }

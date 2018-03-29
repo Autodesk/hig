@@ -1,0 +1,7 @@
+@import '~@hig/styles/mixins/colors.scss';
+
+.hig__timestamp {
+  font-size: 12px;
+  color: color(hig-slate-50);
+  font-family: 'ArtifaktElement';
+}

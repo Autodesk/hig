@@ -1,0 +1,100 @@
+@import '~@hig/styles/mixins/colors.scss';
+@import '~@hig/styles/mixins/base.scss';
+@import '~@hig/styles/mixins/spacing.scss';
+.hig__notification {
+  position: relative;
+  border-bottom: 1px solid color(hig-cool-gray-20);
+  border-left: 3px solid color(hig-cool-gray-30);
+
+  padding: spacing(s) spacing(l);
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .hig__icon-button {
+    display: none;
+  }
+}
+
+.hig__notification--primary {
+  border-left: 3px solid color(hig-cool-gray-30);
+
+  &.hig__notification--unread {
+    border-left: 3px solid  color(hig-blue-50);
+ }
+}
+
+.hig__notification--success {
+  border-left: 3px solid color(hig-cool-gray-30);
+
+  &.hig__notification--unread {
+    border-left: 3px solid  color(hig-green-good);
+  }
+}
+
+.hig__notification--error {
+  border-left: 3px solid color(hig-cool-gray-30);
+
+  &.hig__notification--unread {
+    border-left: 3px solid  color(hig-red-alert);
+  }
+}
+
+.hig__notification--warning {
+  border-left: 3px solid color(hig-cool-gray-30);
+
+  &.hig__notification--unread {
+    border-left: 3px solid  color(hig-yellow-warning);
+  }
+}
+
+@keyframes notification-fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.hig__notification--exiting {
+  animation-name: notification-fade-out;
+  animation-duration: .5s;
+}
+
+.hig__notification--exited {
+  display: none;
+}
+
+.hig__notification--featured {
+  background-color: color(hig-turquoise-20);
+
+  &:hover {
+    .hig__icon-button { display: block; }
+  }
+
+  .hig__icon-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    display: none;
+  }
+}
+
+.hig__notification__title {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  padding: spacing(s) spacing(l) spacing(m);
+  border-bottom: 1px solid color(hig-cool-gray-20);
+}
+
+.hig__notification--unread {
+
+  &:hover{
+    background-color: transparentize($color: color(hig-blue-10), $amount: 0.5)
+  }
+
+}

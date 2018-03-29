@@ -50,6 +50,10 @@ export {
   default as Notification
 } from "./elements/components/GlobalNav/TopNav/Notification";
 
+export {
+  default as NotificationV1
+} from "./elements/components/Notification/index";
+
 export { default as Option } from "./adapters/FormElements/OptionAdapter";
 export {
   default as PasswordField
@@ -65,6 +69,7 @@ export { default as SectionLabel } from "./adapters/SectionLabelAdapter";
 export { default as ShowMoreLess } from "./elements/components/ShowMoreLess";
 export { default as SideNav } from "./elements/components/GlobalNav/SideNav";
 export { sizes } from "hig-vanilla";
+export { default as Shortcut } from "./elements/components/Shortcut";
 export { default as SkeletonItem } from "./adapters/SkeletonItemAdapter";
 export { default as Spacer } from "./adapters/SpacerAdapter";
 export { Tab } from "./elements/components/Tabs";

@@ -1,17 +1,29 @@
 import React, { PureComponent } from "react";
-import PlaygroundSection from "../PlaygroundSection";
-import {
-  Button,
+
+import {Button,
   Notifications,
   NotificationV1 as Notification,
   TextLink,
   Shortcut
-} from "../../hig-react";
+} from "../../src/hig-react";
+
+
+
+const minutesDate1 = new Date();
+const minutesDate2 = new Date();
+const minutesDate3 = new Date();
+const minutesDate4 = new Date();
+
+const updatedDate1 = minutesDate1.setMinutes(minutesDate1.getMinutes() - 3);
+const updatedDate2 = minutesDate2.setHours(minutesDate2.getHours() - 2);
+const updatedDate3 = minutesDate2.setHours(minutesDate3.getHours() - 24);
+const updatedDate4 = minutesDate4.setMinutes(minutesDate4.getMinutes() - 20);
 
 const sampleNotifications = [
   {
     id: 0,
     unread: true,
+    timestamp: new Date(updatedDate1),
     type: "primary",
     children: (
       <div>
@@ -39,6 +51,7 @@ const sampleNotifications = [
   {
     id: 1,
     unread: true,
+    timestamp: new Date(updatedDate2),
     type: "success",
     children: (
       <div>
@@ -65,6 +78,7 @@ const sampleNotifications = [
   {
     id: 3,
     unread: true,
+    timestamp: new Date(updatedDate3),
     type: "error",
     children: (
       <div>
@@ -91,6 +105,7 @@ const sampleNotifications = [
   {
     id: 4,
     unread: true,
+    timestamp: new Date(updatedDate4),
     type: "warning",
     children: (
       <div>
@@ -112,7 +127,7 @@ const sampleNotifications = [
   }
 ];
 
-class NotificationsSection extends PureComponent {
+class NotificationsInteraction extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -209,7 +224,6 @@ class NotificationsSection extends PureComponent {
 
   render() {
     return (
-      <PlaygroundSection title="Notifications">
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <Button
             size="standard"
@@ -235,53 +249,15 @@ class NotificationsSection extends PureComponent {
                 id={notification.id}
                 title={notification.title}
                 type={notification.type}
+                timestamp={notification.timestamp}
               >
                 {notification.children}
               </Notification>
             ))}
           </Notifications>
         </div>
-        <hr />
-        <div style={{ display: "flex", justifyContent: "flex-end" }}>
-          <Notifications title="Empty Notifications" />
-        </div>
-
-        <hr />
-
-        <div style={{ display: "flex", justifyContent: "flex-end" }}>
-          <Notification
-            id={1}
-            unread
-            featured
-            onLinkClick={id => console.log("notification id", id)}
-            onDismiss={() => {
-              console.log("feaured notification dismissed");
-            }}
-          >
-            {sampleNotifications[0].children}
-          </Notification>
-        </div>
-
-        <hr />
-
-        <div style={{ display: "flex", justifyContent: "flex-end" }}>
-          <Shortcut
-            icon="settings"
-            onClick={() => console.log("shortcut clicked")}
-            title="shortcut"
-          />
-        </div>
-
-        <div style={{ display: "flex", justifyContent: "flex-end" }}>
-          <Shortcut
-            icon="settings"
-            title="shortcut"
-            link={"http://www.autodesk.com"}
-          />
-        </div>
-      </PlaygroundSection>
     );
   }
 }
 
-export default NotificationsSection;
+export default NotificationsInteraction;

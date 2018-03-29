@@ -16,6 +16,10 @@
   min-width: 36px;
   font-size: 14px;
 
+  button {
+    -webkit-text-align: center;
+  }
+
 
   svg * {
     fill: color(hig-cool-gray-60);
@@ -27,9 +31,11 @@
 
   &.hig__icon-button--transparent {
     border-color: transparent;
+    background-color: transparent;
 
     &:hover {
       border-color: transparent;
+      background-color: transparent;
       svg * {
         fill: color(hig-turquoise-50)
       }

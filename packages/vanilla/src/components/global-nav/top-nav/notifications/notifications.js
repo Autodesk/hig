@@ -33,7 +33,6 @@ class Notifications extends Core {
       title: this.initialOptions.title
     });
     this.list = new List();
-
     this.flyout.addTarget(this.shortcut);
     this.flyout.addSlot(this.list);
     this.flyout.setAnchorPoint('top-left');
@@ -62,9 +61,7 @@ class Notifications extends Core {
   }
 
   addNotification(notification) {
-    if (notification instanceof Notification) {
-      this.list.addItem(notification);
-    }
+    this.list.addItem(notification);
   }
 
   onClickOutside(fn) {
