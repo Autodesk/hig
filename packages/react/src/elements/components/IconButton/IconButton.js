@@ -33,6 +33,7 @@ export default class IconButton extends Component {
         onBlur={this.props.onBlur}
         onFocus={this.props.onFocus}
         onMouseEnter={this.props.onHover}
+        onMouseLeave={this.props.onLeave}
       >
         <div className="hig__icon-button__icon">
           <Icon nameOrSVG={this.props.icon} />
@@ -80,6 +81,7 @@ IconButton.propTypes = {
    * Called when user moves the mouse over the button
    */
   onHover: PropTypes.func,
+  onLeave: PropTypes.func,
   /**
    * 'primary' or 'flat'; the style of the button
    */

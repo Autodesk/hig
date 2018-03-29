@@ -24,6 +24,9 @@ class IconButtonSection extends PureComponent {
           onHover={() => {
             console.log("hover");
           }}
+          onLeave={() => {
+            console.log("leave");
+          }}
         />
 
         <IconButton
@@ -36,13 +39,16 @@ class IconButtonSection extends PureComponent {
             console.log("Button with icon on click");
           }}
           onBlur={() => {
-            console.log("onblur");
+            console.log("will not happen as disabled - onblur");
           }}
           onFocus={() => {
-            console.log("focus");
+            console.log("will not happen as disabled - focus");
           }}
           onHover={() => {
-            console.log("hover");
+            console.log("will not happen as disabled - hover");
+          }}
+          onLeave={() => {
+            console.log("will not happen as disabled - leave");
           }}
         />
 
@@ -63,7 +69,10 @@ class IconButtonSection extends PureComponent {
           onHover={() => {
             console.log("hover");
           }}
-        />
+          onLeave={() => {
+            console.log("leave");
+          }}
+      />
       </PlaygroundSection>
     );
   }
