@@ -1,4 +1,5 @@
 @import "~@hig/styles/mixins/colors.scss";
+@import "~@hig/styles/mixins/spacing.scss";
 
 /*
  * Banner specific variables
@@ -7,14 +8,15 @@
 
 /* Dimensions */
 
-$action-padding-y: 4px;
-$action-spacing-x: 24px;
-$content-padding-x: 16px;
+$action-padding-y: spacing(xxs);
+$action-spacing-x: spacing(l);
+$content-padding-x: spacing(m);
 // Minimum space between the notification and actions
 $content-spacing-min: 125px;
 $dismiss-icon-button-width: 36px;
 $dismiss-icon-width: 10px;
 $dismiss-spacing-right: 50px;
+// Reference from typography tokens
 $message-font-size: 14px;
 $message-line-height: 20px;
 $notification-width-max: 900px;
