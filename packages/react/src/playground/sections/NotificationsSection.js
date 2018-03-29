@@ -12,6 +12,7 @@ const sampleNotifications = [
   {
     id: 0,
     unread: true,
+    type: "primary",
     children: (
       <div>
         <p>
@@ -38,6 +39,7 @@ const sampleNotifications = [
   {
     id: 1,
     unread: true,
+    type: "success",
     children: (
       <div>
         <p>
@@ -48,6 +50,54 @@ const sampleNotifications = [
           Architecture Construction Engineering Collection<br />
           Product Design Collection<br />
         </p>
+        <p>
+          <TextLink
+            href="https://github.com/Autodesk/hig"
+            text="Manage renewal"
+            onClick={() => {
+              console.log("notifications id 2");
+            }}
+          />
+        </p>
+      </div>
+    )
+  },
+  {
+    id: 3,
+    unread: true,
+    type: "error",
+    children: (
+      <div>
+        <p>
+          <b>Your subscription expires June 15</b>
+        </p>
+        <p>
+          AutoCAD<br />
+          Architecture Construction Engineering Collection<br />
+          HIG<br />
+        </p>
+        <p>
+          <TextLink
+            href="https://github.com/Autodesk/hig"
+            text="Manage renewal"
+            onClick={() => {
+              console.log("notifications id 2");
+            }}
+          />
+        </p>
+      </div>
+    )
+  },
+  {
+    id: 4,
+    unread: true,
+    type: "warning",
+    children: (
+      <div>
+        <p>
+          <b>Your subscription expires June 15</b>
+        </p>
+        <p>A new version of Autodesk Revit is available for download.</p>
         <p>
           <TextLink
             href="https://github.com/Autodesk/hig"
@@ -184,6 +234,7 @@ class NotificationsSection extends PureComponent {
                 onLinkClick={this.onNotificationLinkClick}
                 id={notification.id}
                 title={notification.title}
+                type={notification.type}
               >
                 {notification.children}
               </Notification>
