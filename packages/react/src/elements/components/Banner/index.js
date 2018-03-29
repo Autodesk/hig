@@ -51,7 +51,7 @@ export default class Banner extends Component {
     /** Animation; Determines the visibility of the banner */
     isVisible: PropTypes.bool,
     /** Banner actions; Any JSX, or a render prop function */
-    children: PropTypes.any // eslint-disable-line react/forbid-prop-types
+    children: PropTypes.oneOfType([PropTypes.node, PropTypes.func])
   };
 
   /** @type {BannerProps | any} */

@@ -35,5 +35,5 @@ BannerInteractions.defaultProps = {
 
 BannerInteractions.propTypes = {
   isWrappingActions: PropTypes.bool,
-  children: PropTypes.any // eslint-disable-line react/forbid-prop-types
+  children: PropTypes.node
 };

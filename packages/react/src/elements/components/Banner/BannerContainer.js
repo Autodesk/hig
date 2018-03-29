@@ -33,9 +33,9 @@ const ACTIONS_WRAPPING_THRESHOLD = 300;
 export default class BannerContainer extends Component {
   static propTypes = {
     /** Banner actions; Any JSX, or a render prop function */
-    actions: PropTypes.any, // eslint-disable-line react/forbid-prop-types
+    actions: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
     /** A render prop function to render a `BannerPresenter` */
-    children: PropTypes.func
+    children: PropTypes.func.isRequired
   };
 
   /** @type {BannerContainerState} */

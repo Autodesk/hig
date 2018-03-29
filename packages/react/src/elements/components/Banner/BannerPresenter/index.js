@@ -113,6 +113,6 @@ BannerPresenter.propTypes = {
   refNotification: PropTypes.func,
   /** References interactions wrapper element */
   refInteractionsWrapper: PropTypes.func,
-  /** A render prop; Renders banner interactions */
-  children: PropTypes.any // eslint-disable-line react/forbid-prop-types
+  /** Banner actions */
+  children: PropTypes.node
 };

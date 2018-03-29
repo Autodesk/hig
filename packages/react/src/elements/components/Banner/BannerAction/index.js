@@ -17,5 +17,5 @@ export default function BannerAction({ children }) {
 }
 
 BannerAction.propTypes = {
-  children: PropTypes.any // eslint-disable-line react/forbid-prop-types
+  children: PropTypes.node
 };
