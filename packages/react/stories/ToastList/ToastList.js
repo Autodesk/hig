@@ -5,30 +5,29 @@ import Avatar from "elements/components/Avatar";
 import Toast from "elements/components/Toast";
 import ToastList from "elements/components/ToastList";
 
-import ToastListInteractions from "../.storybook/interactionWrappers/ToastListInteractions";
+import ToastListInteractions from "./ToastListInteractions";
+import sampleAvatar from "../Avatar/avatar.png";
 
 const exampleToasts = React.Children.toArray([
-  <Toast image={<Avatar name="Jon Snow" size="large-48" />} status="primary">
-    First defined Toast notification. Lorem ipsum dolor sit amet.
+  <Toast status="primary">
+    <strong>Object Name</strong> was the first Toast notification to appear.
   </Toast>,
-  <Toast image={<Avatar name="Arya Stark" size="large-48" />} status="warning">
-    Second defined Toast notification.
+  <Toast status="warning">
+    <strong>Object Name</strong> was the second Toast notification to appear.
   </Toast>,
   <Toast
-    image={
-      <div style={{ width: "48px", height: "48px" }}>
-        <img src="http://placekitten.com/g/48/48" alt="Placekitten" />
-      </div>
-    }
+    image={<Avatar name="Arya Stark" size="large-48" image={sampleAvatar} />}
     status="error"
   >
-    Third Toast notification.
+    <strong>Object Name</strong> was the third Toast notification to appear.
   </Toast>,
-  <Toast>Simple English toast. Fourth in order.</Toast>
+  <Toast>
+    <strong>Object Name</strong> is last.
+  </Toast>
 ]);
 
 storiesOf("ToastList", module)
-  .add("default", () => (
+  .add("static", () => (
     <ToastList position={select("Position", ["top", "bottom"], "top")}>
       {exampleToasts}
     </ToastList>

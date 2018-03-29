@@ -1,6 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { sample } from "lodash";
-import loremIpsum from "lorem-ipsum";
 import Button from "adapters/ButtonAdapter";
 import Toast, { _AVAILABLE_STATUSES } from "elements/components/Toast";
 import ToastList from "elements/components/ToastList";
@@ -8,6 +8,11 @@ import ToastList from "elements/components/ToastList";
 export default class ToastListInteractions extends React.Component {
   static defaultProps = {
     initialToasts: []
+  };
+
+  static propTypes = {
+    initialToasts: PropTypes.arrayOf(PropTypes.node),
+    position: PropTypes.oneOf(["top", "bottom"])
   };
 
   constructor(props) {
@@ -24,7 +29,9 @@ export default class ToastListInteractions extends React.Component {
   };
 
   removeToast = ({ key }) => {
-    const childIndexToRemove = this.state.toasts.findIndex(el => el.key === key);
+    const childIndexToRemove = this.state.toasts.findIndex(
+      el => el.key === key
+    );
 
     if (childIndexToRemove > -1) {
       const nextToasts = this.state.toasts.slice();
@@ -33,23 +40,19 @@ export default class ToastListInteractions extends React.Component {
     }
   };
 
-  _generateToast = () => (
-    <Toast key={Math.random()} status={sample(_AVAILABLE_STATUSES)}>
-      {loremIpsum({
-        count: 20,
-        units: "words"
-      })}
-    </Toast>
-  );
+  _generateToast = () => {
+    const key = Math.random();
+    return (
+      <Toast key={key} status={sample(_AVAILABLE_STATUSES)}>
+        <strong>New Toast</strong> was generated with a unique key and random
+        status.
+      </Toast>
+    );
+  };
 
   render() {
     return (
-      <div
-        style={{
-          boxSizing: "border-box",
-          height: "calc(100vh - 48px - 16px)" // Offset wrapper margin/padding and body margin
-        }}
-      >
+      <div>
         <Button onClick={this.addRandomToast} title="Add Random Toast" />
 
         <ToastList position={this.props.position}>
