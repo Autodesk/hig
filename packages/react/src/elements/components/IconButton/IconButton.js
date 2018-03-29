@@ -81,6 +81,9 @@ IconButton.propTypes = {
    * Called when user moves the mouse over the button
    */
   onHover: PropTypes.func,
+  /**
+   * Called when user moves the mouse away from the button
+   */
   onLeave: PropTypes.func,
   /**
    * 'primary' or 'flat'; the style of the button
