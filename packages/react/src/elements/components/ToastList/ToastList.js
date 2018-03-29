@@ -13,10 +13,12 @@ export default class ToastList extends React.Component {
         .position
     });
 
+    const keyedChildren = React.Children.toArray(this.props.children);
+
     return (
       <div className={toastListWrapperClasses}>
         <ToastListAnimator position={this.props.position}>
-          {this.props.children.slice(0, MAX_TOASTS_ONSCREEN)}
+          {keyedChildren.slice(0, MAX_TOASTS_ONSCREEN)}
         </ToastListAnimator>
       </div>
     );

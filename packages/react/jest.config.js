@@ -21,6 +21,7 @@ module.exports = {
   },
   modulePaths: ["node_modules", "<rootDir>/src"],
   moduleFileExtensions: ["js", "jsx", "json"],
+  setupFiles: ["raf/polyfill"],
   setupTestFrameworkScriptFile: "<rootDir>/support/setupTests.js",
   unmockedModulePathPatterns: ["<rootDir>/node_modules"]
 };
