@@ -2,15 +2,16 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { text, boolean } from "@storybook/addon-knobs/react";
-import { Notifications, NotificationV1, TextLink } from "../src/hig-react";
+import {
+  Notifications,
+  NotificationV1 as Notification,
+  TextLink
+} from "../src/hig-react";
 import NotificationsInteraction from "../.storybook/interactionWrappers/NotificationsInteraction";
 
 function featuredNotification() {
   return (
-    <NotificationV1
-      id={2}
-      onDismiss={action("Featured Notification Dismissed")}
-    >
+    <Notification id={2} onDismiss={action("Featured Notification Dismissed")}>
       <div>
         <p>
           <b>New enhancements to subscription management lorum ipsom gas</b>
@@ -25,15 +26,26 @@ function featuredNotification() {
           <TextLink text="Secondary link" />
         </p>
       </div>
-    </NotificationV1>
+    </Notification>
   );
 }
+
+const minutesDate1 = new Date();
+const minutesDate2 = new Date();
+const minutesDate3 = new Date();
+const minutesDate4 = new Date();
+
+const updatedDate1 = minutesDate1.setMinutes(minutesDate1.getMinutes() - 3);
+const updatedDate2 = minutesDate2.setHours(minutesDate2.getHours() - 2);
+const updatedDate3 = minutesDate2.setHours(minutesDate3.getHours() - 24);
+const updatedDate4 = minutesDate4.setMinutes(minutesDate4.getMinutes() - 20);
 
 const sampleNotifications = [
   {
     id: 0,
     unread: true,
     type: "primary",
+    timestamp: new Date(updatedDate1),
     children: (
       <div>
         <p>
@@ -61,6 +73,7 @@ const sampleNotifications = [
     id: 1,
     unread: true,
     type: "success",
+    timestamp: new Date(updatedDate2),
     children: (
       <div>
         <p>
@@ -86,6 +99,7 @@ const sampleNotifications = [
   {
     id: 3,
     unread: true,
+    timestamp: new Date(updatedDate3),
     type: "error",
     children: (
       <div>
@@ -112,6 +126,7 @@ const sampleNotifications = [
   {
     id: 4,
     unread: true,
+    timestamp: new Date(updatedDate4),
     type: "warning",
     children: (
       <div>
@@ -146,16 +161,17 @@ storiesOf("Notifications", module)
       open
     >
       {sampleNotifications.map(notification => (
-        <NotificationV1
+        <Notification
           unread={notification.unread}
           key={notification.id}
           onLinkClick={action("Notification Link Clicked")}
           id={notification.id}
           title={notification.title}
           type={notification.type}
+          timestamp={notification.timestamp}
         >
           {notification.children}
-        </NotificationV1>
+        </Notification>
       ))}
     </Notifications>
   ))

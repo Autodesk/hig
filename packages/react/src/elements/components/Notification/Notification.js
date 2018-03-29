@@ -5,7 +5,7 @@ import cx from "classnames";
 import IconButton from "../IconButton/IconButton";
 import RichText from "../RichText";
 import "./notification.scss";
-// import Timestamp from "../Timestamp";
+import Timestamp from "../Timestamp";
 
 const COMPONENT_CLASS = "hig__notification";
 const FEATURED_COMPONENT_CLASS = "hig__notification--featured";
@@ -54,8 +54,9 @@ export default class Notification extends Component {
                 type="transparent"
               />
             </div>
-
-            {/* <Timestamp timestamp="" /> */}
+            {this.props.timestamp ? (
+              <Timestamp timestamp={this.props.timestamp} />
+            ) : null}
           </div>
         )}
       </Transition>
@@ -65,7 +66,9 @@ export default class Notification extends Component {
           <RichText size="small">{this.props.children}</RichText>
         </div>
 
-        {/* <Timestamp /> */}
+        {this.props.timestamp ? (
+          <Timestamp timestamp={this.props.timestamp} />
+        ) : null}
       </div>
     );
 
