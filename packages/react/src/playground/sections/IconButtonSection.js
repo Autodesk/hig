@@ -72,7 +72,7 @@ class IconButtonSection extends PureComponent {
           onLeave={() => {
             console.log("leave");
           }}
-      />
+        />
       </PlaygroundSection>
     );
   }
