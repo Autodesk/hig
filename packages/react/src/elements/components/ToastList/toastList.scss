@@ -1,5 +1,5 @@
 .hig__toast-list-wrapper {
-  position: absolute;
+  position: fixed;
   right: 10px;
 }
 
@@ -12,7 +12,10 @@
 }
 
 .hig__toast-list {
+  @import "../Toast/variables.scss";
+
   display: flex;
+  min-width: $container-width;
 
   .hig__toast {
     margin-bottom: 10px;

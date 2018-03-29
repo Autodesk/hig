@@ -1,12 +1,14 @@
 @import "~@hig/styles/mixins/colors.scss";
 
 .hig__toast {
+  @import "./variables.scss";
+
   box-sizing: border-box;
   display: flex;
   flex-flow: row;
 
-  width: 340px;
-  min-height: 53px;
+  width: $container-width;
+  min-height: $container-min-height;
   padding: {
     top: 16px;
     right: 0px;
