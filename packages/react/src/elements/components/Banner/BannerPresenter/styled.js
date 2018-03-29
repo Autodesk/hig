@@ -45,7 +45,7 @@ const wrapperModifiersByPlacement = {
 };
 
 /** @type {Object.<string, string>} */
-const wrapperModifiersByStatus = {
+const wrapperModifiersByType = {
   [types.PRIMARY]: classNames.wrapperPrimary,
   [types.SUCCESS]: classNames.wrapperSuccess,
   [types.WARNING]: classNames.wrapperWarning,
@@ -53,7 +53,7 @@ const wrapperModifiersByStatus = {
 };
 
 /** @type {Object.<string, string>} */
-const iconNamesByStatus = {
+const iconNamesByType = {
   [types.PRIMARY]: iconNames.INFO,
   [types.SUCCESS]: iconNames.COMPLETE,
   [types.WARNING]: iconNames.ISSUE,
@@ -92,7 +92,7 @@ export function Wrapper(props) {
 
   const classes = cx(
     classNames.wrapper,
-    wrapperModifiersByStatus[type],
+    wrapperModifiersByType[type],
     wrapperModifiersByPlacement[placement],
     hasActions ? classNames.wrapperInteractive : undefined,
     isWrappingContent ? classNames.wrapperWrapContent : undefined
@@ -153,7 +153,7 @@ export function DismissButton({ title, onClick }) {
 export function Icon({ type }) {
   return (
     <figure className={classNames.iconBackground}>
-      <BasicIcon name={iconNamesByStatus[type]} size={iconSizes.MEDIUM} />
+      <BasicIcon name={iconNamesByType[type]} size={iconSizes.MEDIUM} />
     </figure>
   );
 }
