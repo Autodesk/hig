@@ -1,6 +1,4 @@
-import React from "react";
 import PropTypes from "prop-types";
-import { CSSTransition } from "react-transition-group";
 
 import "./styles.scss";
 
@@ -16,11 +14,7 @@ import "./styles.scss";
  * @todo Complete implementation
  */
 export default function BannerAnimator({ isVisible, children }) {
-  return (
-    <CSSTransition in={isVisible} timeout={1000} classNames="hig__banner--">
-      {children}
-    </CSSTransition>
-  );
+  return isVisible ? children : null;
 }
 
 BannerAnimator.defaultProps = {
