@@ -20,7 +20,8 @@
 
 <script>
 
- †
+  var minutesDate = new Date();
+  const updatedDate = minutesDate.setMinutes(minutesDate.getMinutes() - 3);
 
   var timestamp = new Hig.Timestamp();
   timestamp.mount(".text-timestamp-minutes");
