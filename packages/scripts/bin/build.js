@@ -9,6 +9,7 @@ const postcss = require('rollup-plugin-postcss');
 // const resolve = require('rollup-plugin-node-resolve');
 // const commonjs = require('rollup-plugin-commonjs');
 const json = require('rollup-plugin-json');
+const postcssFuncitons = require('postcss-functions');
 
 const inputOptions = {
   input: 'src/index.js',
@@ -40,6 +41,7 @@ const inputOptions = {
     postcss({
       extract: true,
       output: "build/index.css",
+      plugins: [postcssFuncitons]
     }),
     // svg()
   ]
