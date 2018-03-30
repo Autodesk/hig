@@ -1,0 +1,15 @@
+{
+  "name": "@hig/scripts",
+  "version": "0.1.0",
+  "description": "Scripts for HIG React components",
+  "main": "index.js",
+  "repository": "https://github.com/Autodesk/hig",
+  "license": "MIT",
+  "private": true,
+  "bin": {
+    "hig-scripts-build": "bin/build.js"
+  },
+  "dependencies": {
+    "rollup": "^0.57.1"
+  }
+}
