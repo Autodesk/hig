@@ -86,7 +86,7 @@ IconButton.propTypes = {
   /**
    * Deprecated; use `name` or `svg` instead
    */
-  icon: PropTypes.string.isRequired,
+  icon: PropTypes.string,
   /**
    * Prevents user actions on the button
    */
