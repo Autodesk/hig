@@ -36,7 +36,7 @@
   },
   "dependencies": {
     "hig-vanilla": "^0.1.26",
-    "react-transition-group": "^2.2.1"
+    "react-transition-group": "^2.3.0"
   },
   "peerDependencies": {
     "prop-types": "^15.5.10",

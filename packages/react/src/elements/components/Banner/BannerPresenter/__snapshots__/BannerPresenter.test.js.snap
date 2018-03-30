@@ -1,0 +1,314 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`banner/BannerPresenter/BannerPresenter renders with a fragment as children 1`] = `
+<div
+  aria-labelledby={undefined}
+  className="hig__banner hig__banner--primary hig__banner--interactive"
+  role="alert"
+>
+  <figure
+    className="hig__banner__icon-background"
+  >
+    <div
+      className="hig__icon hig__icon--24-size"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" role=\\"img\\" title=\\"info-24\\"><path d=\\"M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,19a9,9,0,1,1,9-9A9,9,0,0,1,12,21Z\\"/><rect x=\\"11\\" y=\\"11\\" width=\\"2\\" height=\\"6\\"/><circle cx=\\"12\\" cy=\\"8\\" r=\\"1.25\\"/></svg>",
+        }
+      }
+    />
+  </figure>
+  <div
+    className="hig__banner__content"
+  >
+    <p
+      className="hig__banner__notification"
+    >
+      <span
+        className="hig__typography hig__typography__text hig__typography--hig-cool-gray-70"
+        style={Object {}}
+      >
+        Message
+      </span>
+    </p>
+    <div
+      className="hig__banner__interactions-wrapper"
+    >
+      <span>
+        bar
+      </span>
+      <div>
+        baz
+      </div>
+    </div>
+  </div>
+  <div
+    className="hig__banner__dismiss-button"
+  >
+    <button
+      className="hig__icon-button hig__icon-button--transparent"
+      onBlur={undefined}
+      onClick={undefined}
+      onFocus={undefined}
+      onMouseEnter={undefined}
+      tabIndex="0"
+      title="Dismiss"
+    >
+      <div
+        className="hig__icon hig__icon--24-size"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<svg width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-notification-24\\"><polygon fill-rule=\\"nonzero\\" points=\\"8.45 0.47 4.97 3.95 1.51 0.47 0.45 1.53 3.91 5.01 0.45 8.47 1.51 9.53 4.97 6.07 8.42 9.53 9.48 8.47 6.03 5.01 9.51 1.53\\" fill=\\"#2E4258\\"/></svg>",
+          }
+        }
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`banner/BannerPresenter/BannerPresenter renders with a label 1`] = `
+<div
+  aria-labelledby={undefined}
+  className="hig__banner hig__banner--urgent"
+  role="alert"
+>
+  <figure
+    className="hig__banner__icon-background"
+  >
+    <div
+      className="hig__icon hig__icon--24-size"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" role=\\"img\\" title=\\"error-24\\"><polygon points=\\"16.74 7.96 16.04 7.26 12 11.29 7.96 7.26 7.26 7.96 11.29 12 7.26 16.04 7.96 16.74 12 12.71 16.04 16.74 16.74 16.04 12.71 12 16.74 7.96\\"/><path d=\\"M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,19a9,9,0,1,1,9-9A9,9,0,0,1,12,21Z\\"/></svg>",
+        }
+      }
+    />
+  </figure>
+  <div
+    className="hig__banner__content"
+  >
+    <p
+      className="hig__banner__notification"
+    >
+      <span
+        className="hig__typography hig__typography__text hig__typography--hig-cool-gray-70"
+        style={Object {}}
+      >
+        HELLO: 
+      </span>
+      <span
+        className="hig__typography hig__typography__text hig__typography--hig-cool-gray-70"
+        style={Object {}}
+      >
+        World
+      </span>
+    </p>
+  </div>
+  <div
+    className="hig__banner__dismiss-button"
+  >
+    <button
+      className="hig__icon-button hig__icon-button--transparent"
+      onBlur={undefined}
+      onClick={undefined}
+      onFocus={undefined}
+      onMouseEnter={undefined}
+      tabIndex="0"
+      title="Dismiss"
+    >
+      <div
+        className="hig__icon hig__icon--24-size"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<svg width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-notification-24\\"><polygon fill-rule=\\"nonzero\\" points=\\"8.45 0.47 4.97 3.95 1.51 0.47 0.45 1.53 3.91 5.01 0.45 8.47 1.51 9.53 4.97 6.07 8.42 9.53 9.48 8.47 6.03 5.01 9.51 1.53\\" fill=\\"#2E4258\\"/></svg>",
+          }
+        }
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`banner/BannerPresenter/BannerPresenter renders with a node as children 1`] = `
+<div
+  aria-labelledby={undefined}
+  className="hig__banner hig__banner--primary hig__banner--interactive"
+  role="alert"
+>
+  <figure
+    className="hig__banner__icon-background"
+  >
+    <div
+      className="hig__icon hig__icon--24-size"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" role=\\"img\\" title=\\"info-24\\"><path d=\\"M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,19a9,9,0,1,1,9-9A9,9,0,0,1,12,21Z\\"/><rect x=\\"11\\" y=\\"11\\" width=\\"2\\" height=\\"6\\"/><circle cx=\\"12\\" cy=\\"8\\" r=\\"1.25\\"/></svg>",
+        }
+      }
+    />
+  </figure>
+  <div
+    className="hig__banner__content"
+  >
+    <p
+      className="hig__banner__notification"
+    >
+      <span
+        className="hig__typography hig__typography__text hig__typography--hig-cool-gray-70"
+        style={Object {}}
+      >
+        Message
+      </span>
+    </p>
+    <div
+      className="hig__banner__interactions-wrapper"
+    >
+      <span>
+        foo
+      </span>
+    </div>
+  </div>
+  <div
+    className="hig__banner__dismiss-button"
+  >
+    <button
+      className="hig__icon-button hig__icon-button--transparent"
+      onBlur={undefined}
+      onClick={undefined}
+      onFocus={undefined}
+      onMouseEnter={undefined}
+      tabIndex="0"
+      title="boom"
+    >
+      <div
+        className="hig__icon hig__icon--24-size"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<svg width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-notification-24\\"><polygon fill-rule=\\"nonzero\\" points=\\"8.45 0.47 4.97 3.95 1.51 0.47 0.45 1.53 3.91 5.01 0.45 8.47 1.51 9.53 4.97 6.07 8.42 9.53 9.48 8.47 6.03 5.01 9.51 1.53\\" fill=\\"#2E4258\\"/></svg>",
+          }
+        }
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`banner/BannerPresenter/BannerPresenter renders with a string as children 1`] = `
+<div
+  aria-labelledby={undefined}
+  className="hig__banner hig__banner--primary hig__banner--top hig__banner--interactive"
+  role="alert"
+>
+  <figure
+    className="hig__banner__icon-background"
+  >
+    <div
+      className="hig__icon hig__icon--24-size"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" role=\\"img\\" title=\\"info-24\\"><path d=\\"M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,19a9,9,0,1,1,9-9A9,9,0,0,1,12,21Z\\"/><rect x=\\"11\\" y=\\"11\\" width=\\"2\\" height=\\"6\\"/><circle cx=\\"12\\" cy=\\"8\\" r=\\"1.25\\"/></svg>",
+        }
+      }
+    />
+  </figure>
+  <div
+    className="hig__banner__content"
+  >
+    <p
+      className="hig__banner__notification"
+    >
+      <span
+        className="hig__typography hig__typography__text hig__typography--hig-cool-gray-70"
+        style={Object {}}
+      >
+        Message
+      </span>
+    </p>
+    <div
+      className="hig__banner__interactions-wrapper"
+    >
+      foobar
+    </div>
+  </div>
+  <div
+    className="hig__banner__dismiss-button"
+  >
+    <button
+      className="hig__icon-button hig__icon-button--transparent"
+      onBlur={undefined}
+      onClick={undefined}
+      onFocus={undefined}
+      onMouseEnter={undefined}
+      tabIndex="0"
+      title="Dismiss"
+    >
+      <div
+        className="hig__icon hig__icon--24-size"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<svg width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-notification-24\\"><polygon fill-rule=\\"nonzero\\" points=\\"8.45 0.47 4.97 3.95 1.51 0.47 0.45 1.53 3.91 5.01 0.45 8.47 1.51 9.53 4.97 6.07 8.42 9.53 9.48 8.47 6.03 5.01 9.51 1.53\\" fill=\\"#2E4258\\"/></svg>",
+          }
+        }
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`banner/BannerPresenter/BannerPresenter renders without props 1`] = `
+<div
+  aria-labelledby={undefined}
+  className="hig__banner hig__banner--primary"
+  role="alert"
+>
+  <figure
+    className="hig__banner__icon-background"
+  >
+    <div
+      className="hig__icon hig__icon--24-size"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" role=\\"img\\" title=\\"info-24\\"><path d=\\"M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,19a9,9,0,1,1,9-9A9,9,0,0,1,12,21Z\\"/><rect x=\\"11\\" y=\\"11\\" width=\\"2\\" height=\\"6\\"/><circle cx=\\"12\\" cy=\\"8\\" r=\\"1.25\\"/></svg>",
+        }
+      }
+    />
+  </figure>
+  <div
+    className="hig__banner__content"
+  >
+    <p
+      className="hig__banner__notification"
+    >
+      <span
+        className="hig__typography hig__typography__text hig__typography--hig-cool-gray-70"
+        style={Object {}}
+      >
+        Message
+      </span>
+    </p>
+  </div>
+  <div
+    className="hig__banner__dismiss-button"
+  >
+    <button
+      className="hig__icon-button hig__icon-button--transparent"
+      onBlur={undefined}
+      onClick={undefined}
+      onFocus={undefined}
+      onMouseEnter={undefined}
+      tabIndex="0"
+      title="Dismiss"
+    >
+      <div
+        className="hig__icon hig__icon--24-size"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<svg width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-notification-24\\"><polygon fill-rule=\\"nonzero\\" points=\\"8.45 0.47 4.97 3.95 1.51 0.47 0.45 1.53 3.91 5.01 0.45 8.47 1.51 9.53 4.97 6.07 8.42 9.53 9.48 8.47 6.03 5.01 9.51 1.53\\" fill=\\"#2E4258\\"/></svg>",
+          }
+        }
+      />
+    </button>
+  </div>
+</div>
+`;
