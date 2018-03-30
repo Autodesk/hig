@@ -3,7 +3,7 @@
 import React from "react";
 import cx from "classnames";
 
-import "./styles.scss";
+import "./banner-presenter.scss";
 
 import { placements } from "../placements";
 import { types } from "../types";
@@ -29,10 +29,10 @@ const classNames = Object.freeze({
   notification: "hig__banner__notification",
   wrapper: "hig__banner",
   wrapperBottom: "hig__banner--bottom",
-  wrapperError: "hig__banner--error",
+  wrapperUrgent: "hig__banner--urgent",
   wrapperInteractive: "hig__banner--interactive",
   wrapperPrimary: "hig__banner--primary",
-  wrapperSuccess: "hig__banner--success",
+  wrapperComplete: "hig__banner--complete",
   wrapperTop: "hig__banner--top",
   wrapperWarning: "hig__banner--warning",
   wrapperWrapContent: "hig__banner--wrap-content"
@@ -47,17 +47,17 @@ const wrapperModifiersByPlacement = {
 /** @type {Object.<string, string>} */
 const wrapperModifiersByType = {
   [types.PRIMARY]: classNames.wrapperPrimary,
-  [types.SUCCESS]: classNames.wrapperSuccess,
+  [types.COMPLETE]: classNames.wrapperComplete,
   [types.WARNING]: classNames.wrapperWarning,
-  [types.ERROR]: classNames.wrapperError
+  [types.URGENT]: classNames.wrapperUrgent
 };
 
 /** @type {Object.<string, string>} */
 const iconNamesByType = {
   [types.PRIMARY]: iconNames.INFO,
-  [types.SUCCESS]: iconNames.COMPLETE,
+  [types.COMPLETE]: iconNames.COMPLETE,
   [types.WARNING]: iconNames.ISSUE,
-  [types.ERROR]: iconNames.ERROR
+  [types.URGENT]: iconNames.ERROR
 };
 
 /**
@@ -132,7 +132,7 @@ export function DismissButton({ title, onClick }) {
     <div className={classNames.dismissButton}>
       <IconButton
         type={iconButtonTypes.TRANSPARENT}
-        icon={iconNames.CLOSE_NOTIFICATION}
+        name={iconNames.CLOSE_NOTIFICATION}
         title={title}
         aria-label={title}
         onClick={onClick}

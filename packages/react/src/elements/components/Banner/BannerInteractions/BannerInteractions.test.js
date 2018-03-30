@@ -1,9 +1,9 @@
 import React from "react";
 import renderer from "react-test-renderer";
 
-import BannerInteractions from "./index";
+import BannerInteractions from "./BannerInteractions";
 
-describe("Banner/BannerInteractions", () => {
+describe("banner/BannerInteractions/BannerInteractions", () => {
   [
     {
       description: "renders without props",

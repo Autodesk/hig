@@ -1,9 +1,9 @@
 import React from "react";
 import renderer from "react-test-renderer";
 
-import BannerAction from "./index";
+import BannerAction from "./BannerAction";
 
-describe("Banner/BannerAction", () => {
+describe("banner/BannerAction/BannerAction", () => {
   it("renders with children", () => {
     const action = <BannerAction>Hello</BannerAction>;
     const tree = renderer.create(action).toJSON();

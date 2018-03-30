@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Banner/BannerPresenter renders with a fragment as children 1`] = `
+exports[`banner/BannerPresenter/BannerPresenter renders with a fragment as children 1`] = `
 <div
   aria-labelledby={undefined}
   className="hig__banner hig__banner--primary hig__banner--interactive"
@@ -45,9 +45,8 @@ exports[`Banner/BannerPresenter renders with a fragment as children 1`] = `
   <div
     className="hig__banner__dismiss-button"
   >
-    <a
+    <button
       className="hig__icon-button hig__icon-button--transparent"
-      href={null}
       onBlur={undefined}
       onClick={undefined}
       onFocus={undefined}
@@ -56,26 +55,22 @@ exports[`Banner/BannerPresenter renders with a fragment as children 1`] = `
       title="Dismiss"
     >
       <div
-        className="hig__icon-button__icon"
-      >
-        <div
-          className="hig__icon hig__icon--24-size"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "<svg width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-notification-24\\"><polygon fill-rule=\\"nonzero\\" points=\\"8.45 0.47 4.97 3.95 1.51 0.47 0.45 1.53 3.91 5.01 0.45 8.47 1.51 9.53 4.97 6.07 8.42 9.53 9.48 8.47 6.03 5.01 9.51 1.53\\" fill=\\"#2E4258\\"/></svg>",
-            }
+        className="hig__icon hig__icon--24-size"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<svg width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-notification-24\\"><polygon fill-rule=\\"nonzero\\" points=\\"8.45 0.47 4.97 3.95 1.51 0.47 0.45 1.53 3.91 5.01 0.45 8.47 1.51 9.53 4.97 6.07 8.42 9.53 9.48 8.47 6.03 5.01 9.51 1.53\\" fill=\\"#2E4258\\"/></svg>",
           }
-        />
-      </div>
-    </a>
+        }
+      />
+    </button>
   </div>
 </div>
 `;
 
-exports[`Banner/BannerPresenter renders with a label 1`] = `
+exports[`banner/BannerPresenter/BannerPresenter renders with a label 1`] = `
 <div
   aria-labelledby={undefined}
-  className="hig__banner hig__banner--error"
+  className="hig__banner hig__banner--urgent"
   role="alert"
 >
   <figure
@@ -113,9 +108,8 @@ exports[`Banner/BannerPresenter renders with a label 1`] = `
   <div
     className="hig__banner__dismiss-button"
   >
-    <a
+    <button
       className="hig__icon-button hig__icon-button--transparent"
-      href={null}
       onBlur={undefined}
       onClick={undefined}
       onFocus={undefined}
@@ -124,23 +118,19 @@ exports[`Banner/BannerPresenter renders with a label 1`] = `
       title="Dismiss"
     >
       <div
-        className="hig__icon-button__icon"
-      >
-        <div
-          className="hig__icon hig__icon--24-size"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "<svg width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-notification-24\\"><polygon fill-rule=\\"nonzero\\" points=\\"8.45 0.47 4.97 3.95 1.51 0.47 0.45 1.53 3.91 5.01 0.45 8.47 1.51 9.53 4.97 6.07 8.42 9.53 9.48 8.47 6.03 5.01 9.51 1.53\\" fill=\\"#2E4258\\"/></svg>",
-            }
+        className="hig__icon hig__icon--24-size"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<svg width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-notification-24\\"><polygon fill-rule=\\"nonzero\\" points=\\"8.45 0.47 4.97 3.95 1.51 0.47 0.45 1.53 3.91 5.01 0.45 8.47 1.51 9.53 4.97 6.07 8.42 9.53 9.48 8.47 6.03 5.01 9.51 1.53\\" fill=\\"#2E4258\\"/></svg>",
           }
-        />
-      </div>
-    </a>
+        }
+      />
+    </button>
   </div>
 </div>
 `;
 
-exports[`Banner/BannerPresenter renders with a node as children 1`] = `
+exports[`banner/BannerPresenter/BannerPresenter renders with a node as children 1`] = `
 <div
   aria-labelledby={undefined}
   className="hig__banner hig__banner--primary hig__banner--interactive"
@@ -182,9 +172,8 @@ exports[`Banner/BannerPresenter renders with a node as children 1`] = `
   <div
     className="hig__banner__dismiss-button"
   >
-    <a
+    <button
       className="hig__icon-button hig__icon-button--transparent"
-      href={null}
       onBlur={undefined}
       onClick={undefined}
       onFocus={undefined}
@@ -193,23 +182,19 @@ exports[`Banner/BannerPresenter renders with a node as children 1`] = `
       title="boom"
     >
       <div
-        className="hig__icon-button__icon"
-      >
-        <div
-          className="hig__icon hig__icon--24-size"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "<svg width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-notification-24\\"><polygon fill-rule=\\"nonzero\\" points=\\"8.45 0.47 4.97 3.95 1.51 0.47 0.45 1.53 3.91 5.01 0.45 8.47 1.51 9.53 4.97 6.07 8.42 9.53 9.48 8.47 6.03 5.01 9.51 1.53\\" fill=\\"#2E4258\\"/></svg>",
-            }
+        className="hig__icon hig__icon--24-size"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<svg width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-notification-24\\"><polygon fill-rule=\\"nonzero\\" points=\\"8.45 0.47 4.97 3.95 1.51 0.47 0.45 1.53 3.91 5.01 0.45 8.47 1.51 9.53 4.97 6.07 8.42 9.53 9.48 8.47 6.03 5.01 9.51 1.53\\" fill=\\"#2E4258\\"/></svg>",
           }
-        />
-      </div>
-    </a>
+        }
+      />
+    </button>
   </div>
 </div>
 `;
 
-exports[`Banner/BannerPresenter renders with a string as children 1`] = `
+exports[`banner/BannerPresenter/BannerPresenter renders with a string as children 1`] = `
 <div
   aria-labelledby={undefined}
   className="hig__banner hig__banner--primary hig__banner--top hig__banner--interactive"
@@ -249,9 +234,8 @@ exports[`Banner/BannerPresenter renders with a string as children 1`] = `
   <div
     className="hig__banner__dismiss-button"
   >
-    <a
+    <button
       className="hig__icon-button hig__icon-button--transparent"
-      href={null}
       onBlur={undefined}
       onClick={undefined}
       onFocus={undefined}
@@ -260,23 +244,19 @@ exports[`Banner/BannerPresenter renders with a string as children 1`] = `
       title="Dismiss"
     >
       <div
-        className="hig__icon-button__icon"
-      >
-        <div
-          className="hig__icon hig__icon--24-size"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "<svg width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-notification-24\\"><polygon fill-rule=\\"nonzero\\" points=\\"8.45 0.47 4.97 3.95 1.51 0.47 0.45 1.53 3.91 5.01 0.45 8.47 1.51 9.53 4.97 6.07 8.42 9.53 9.48 8.47 6.03 5.01 9.51 1.53\\" fill=\\"#2E4258\\"/></svg>",
-            }
+        className="hig__icon hig__icon--24-size"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<svg width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-notification-24\\"><polygon fill-rule=\\"nonzero\\" points=\\"8.45 0.47 4.97 3.95 1.51 0.47 0.45 1.53 3.91 5.01 0.45 8.47 1.51 9.53 4.97 6.07 8.42 9.53 9.48 8.47 6.03 5.01 9.51 1.53\\" fill=\\"#2E4258\\"/></svg>",
           }
-        />
-      </div>
-    </a>
+        }
+      />
+    </button>
   </div>
 </div>
 `;
 
-exports[`Banner/BannerPresenter renders without props 1`] = `
+exports[`banner/BannerPresenter/BannerPresenter renders without props 1`] = `
 <div
   aria-labelledby={undefined}
   className="hig__banner hig__banner--primary"
@@ -311,9 +291,8 @@ exports[`Banner/BannerPresenter renders without props 1`] = `
   <div
     className="hig__banner__dismiss-button"
   >
-    <a
+    <button
       className="hig__icon-button hig__icon-button--transparent"
-      href={null}
       onBlur={undefined}
       onClick={undefined}
       onFocus={undefined}
@@ -322,18 +301,14 @@ exports[`Banner/BannerPresenter renders without props 1`] = `
       title="Dismiss"
     >
       <div
-        className="hig__icon-button__icon"
-      >
-        <div
-          className="hig__icon hig__icon--24-size"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "<svg width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-notification-24\\"><polygon fill-rule=\\"nonzero\\" points=\\"8.45 0.47 4.97 3.95 1.51 0.47 0.45 1.53 3.91 5.01 0.45 8.47 1.51 9.53 4.97 6.07 8.42 9.53 9.48 8.47 6.03 5.01 9.51 1.53\\" fill=\\"#2E4258\\"/></svg>",
-            }
+        className="hig__icon hig__icon--24-size"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<svg width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-notification-24\\"><polygon fill-rule=\\"nonzero\\" points=\\"8.45 0.47 4.97 3.95 1.51 0.47 0.45 1.53 3.91 5.01 0.45 8.47 1.51 9.53 4.97 6.07 8.42 9.53 9.48 8.47 6.03 5.01 9.51 1.53\\" fill=\\"#2E4258\\"/></svg>",
           }
-        />
-      </div>
-    </a>
+        }
+      />
+    </button>
   </div>
 </div>
 `;

@@ -5,9 +5,9 @@
 /** @type {Object.<string, string>} */
 export const types = Object.freeze({
   PRIMARY: "primary",
-  SUCCESS: "success",
-  ERROR: "error",
-  WARNING: "warning"
+  COMPLETE: "complete",
+  WARNING: "warning",
+  URGENT: "urgent"
 });
 
 /** @type {string[]} */

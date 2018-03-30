@@ -1,7 +1,5 @@
 import PropTypes from "prop-types";
 
-import "./styles.scss";
-
 /**
  * @typedef {Object} BannerAnimatorProps
  * @property {boolean} isVisible

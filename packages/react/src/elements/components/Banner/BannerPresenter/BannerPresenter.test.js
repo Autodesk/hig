@@ -3,9 +3,9 @@ import renderer from "react-test-renderer";
 
 import { placements } from "../placements";
 import { types } from "../types";
-import BannerPresenter from "./index";
+import BannerPresenter from "./BannerPresenter";
 
-describe("Banner/BannerPresenter", () => {
+describe.only("banner/BannerPresenter/BannerPresenter", () => {
   [
     {
       description: "renders without props",
@@ -14,7 +14,7 @@ describe("Banner/BannerPresenter", () => {
     {
       description: "renders with a label",
       props: {
-        type: types.ERROR,
+        type: types.URGENT,
         label: "HELLO",
         message: "World"
       }

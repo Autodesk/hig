@@ -3,7 +3,7 @@ import React from "react";
 
 import BannerContainer from "./BannerContainer";
 
-describe("Banner/BannerContainer", () => {
+describe("banner/BannerContainer", () => {
   const actionsRenderProp = jest.fn();
   const presenterRenderProp = jest.fn();
 

@@ -29,11 +29,11 @@ function getInvalidComponentConstantKeys(constants) {
 }
 
 /**
- * @param {Object.<string, string>} constants
+ * @param {string[]} values
  * @returns {string[]} An array of invalid constant values
  */
-function getInvalidComponentConstantValues(constants) {
-  return Object.values(constants).reduce((invalidValues, value) => {
+function getInvalidComponentConstantValues(values) {
+  return values.reduce((invalidValues, value) => {
     if (!isValidComponentConstantValue(value)) invalidValues.push(value);
     return invalidValues;
   }, []);
@@ -68,10 +68,12 @@ function getMessage(result) {
   return `expected ${label} to contain constants`;
 }
 
-function toBeAnObjectOfConstants(constants, label) {
+function toBeConstants(constants, label) {
+  const isArray = Array.isArray(constants);
   const isFrozen = Object.isFrozen(constants);
-  const invalidKeys = getInvalidComponentConstantKeys(constants);
-  const invalidValues = getInvalidComponentConstantValues(constants);
+  const invalidKeys = isArray ? [] : getInvalidComponentConstantKeys(constants);
+  const values = isArray ? constants : Object.values(constants);
+  const invalidValues = getInvalidComponentConstantValues(values);
   const hasValidKeys = invalidKeys.length === 0;
   const hasValidValues = invalidValues.length === 0;
   const pass = hasValidKeys && hasValidValues;
@@ -90,10 +92,10 @@ function toBeAnObjectOfConstants(constants, label) {
 function toHavePropertyOfConstants(Component, propertyName) {
   const constants = Component[propertyName];
 
-  return toBeAnObjectOfConstants(constants, propertyName);
+  return toBeConstants(constants, propertyName);
 }
 
 expect.extend({
-  toBeAnObjectOfConstants,
+  toBeConstants,
   toHavePropertyOfConstants
 });
