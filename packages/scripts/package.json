@@ -10,6 +10,12 @@
     "hig-scripts-build": "bin/build.js"
   },
   "dependencies": {
-    "rollup": "^0.57.1"
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "rollup": "^0.57.1",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-scss": "^0.4.0"
   }
 }

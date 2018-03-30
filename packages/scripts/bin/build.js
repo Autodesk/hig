@@ -1,9 +1,9 @@
 #! /usr/bin/env node
 
 const rollup = require('rollup');
-// const babel = require('rollup-plugin-babel');
+const babel = require('rollup-plugin-babel');
 // const string = require('rollup-plugin-string');
-// const collectSass = require('rollup-plugin-collect-sass');
+const scss = require('rollup-plugin-scss');
 // const svg = require('rollup-plugin-svg');
 // const rootImport = require('rollup-plugin-root-import');
 // const resolve = require('rollup-plugin-node-resolve');
@@ -20,48 +20,41 @@ const inputOptions = {
     //   useEntry: 'prepend',
     //   extensions: '.js'
     // }),
-    // babel({
-    //   exclude: ['node_modules/**', '**/*.scss', '**/*.html', '**/*.svg', '**/*.json'],
-    //   "presets": [
-    //     [
-    //       ["env",
-    //         {
-    //           "modules": false,
-    //           "targets": {
-    //             "browser": ">1%"
-    //           }
-    //         }
-    //       ],
-    //     ],
-    //     "stage-2",
-    //     "react"
-    //   ],
-    //   "plugins": ["external-helpers"]
-    // }),
+    babel({
+      exclude: ['node_modules/**', '**/*.scss', '**/*.html', '**/*.svg', '**/*.json'],
+      "presets": [
+        ["env",
+          {
+            "modules": false,
+            "targets": {
+              "browser": ">1%"
+            }
+          }
+        ],
+        "stage-2",
+        "react"
+      ],
+      "plugins": ["external-helpers"]
+    }),
     // json(),
-    // collectSass({
-    //   include: '**/*.scss',
-    //   extract: 'lib/hig.css',
-    //   importOnce: true
-    // }),
-    // string({
-    //   include: '**/*.html'
-    // }),
+    scss({
+      output: "build/index.css"
+    }),
     // svg()
   ]
 };
 
 const esModulesOutputOptions = {
   name: 'HIG',
-  file: 'build/hig.es.js',
+  file: 'build/index.es.js',
   format: 'es',
   external: ['hig-interface', 'mustache', 'i18next']
 };
 
 const browserFriendlyOutputOptions = {
   name: 'HIG',
-  file: 'build/hig.js',
-  format: 'umd'
+  file: 'build/index.js',
+  format: 'iife'
 };
 
 async function build() {
