@@ -1,7 +1,7 @@
 defaults: &defaults
   working_directory: ~/hig
   docker:
-    - image: circleci/node:8.2.1
+    - image: circleci/node:8.10-stretch
 
 version: 4
 jobs:
@@ -10,12 +10,12 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependencies-{{ checksum "yarn.lock" }}-{{ checksum "packages/react/yarn.lock" }}-{{ checksum "packages/vanilla/yarn.lock" }}
+          key: dependencies-{{ checksum "yarn.lock" }}
       - run:
-          name: Lerna bootstrap
-          command: yarn && yarn bootstrap
+          name: Install NPM Dependencies
+          command: yarn
       - save_cache:
-          key: dependencies-{{ checksum "yarn.lock" }}-{{ checksum "packages/react/yarn.lock" }}-{{ checksum "packages/vanilla/yarn.lock" }}
+          key: dependencies-{{ checksum "yarn.lock" }}
           paths:
             - node_modules
             - packages/vanilla/node_modules
@@ -25,7 +25,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependencies-{{ checksum "yarn.lock" }}-{{ checksum "packages/react/yarn.lock" }}-{{ checksum "packages/vanilla/yarn.lock" }}
+          key: dependencies-{{ checksum "yarn.lock" }}
       - run:
           name: Build (Vanilla)
           command: yarn lib
@@ -39,7 +39,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependencies-{{ checksum "yarn.lock" }}-{{ checksum "packages/react/yarn.lock" }}-{{ checksum "packages/vanilla/yarn.lock" }}
+          key: dependencies-{{ checksum "yarn.lock" }}
       - restore_cache:
           key: vanilla-build-{{ .Revision }}
       - run:
@@ -55,7 +55,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependencies-{{ checksum "yarn.lock" }}-{{ checksum "packages/react/yarn.lock" }}-{{ checksum "packages/vanilla/yarn.lock" }}
+          key: dependencies-{{ checksum "yarn.lock" }}
       - restore_cache:
           key: vanilla-build-{{ .Revision }}
       - run:
@@ -64,7 +64,7 @@ jobs:
           working_directory: packages/vanilla
       - run:
           name: Start Server (Vanilla)
-          command: ./node_modules/http-server/bin/http-server
+          command: yarn run http-server
           background: true
           working_directory: packages/vanilla
       - run:
@@ -78,7 +78,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependencies-{{ checksum "yarn.lock" }}-{{ checksum "packages/react/yarn.lock" }}-{{ checksum "packages/vanilla/yarn.lock" }}
+          key: dependencies-{{ checksum "yarn.lock" }}
       - restore_cache:
           key: vanilla-build-{{ .Revision }}
       - restore_cache:
@@ -98,7 +98,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependencies-{{ checksum "yarn.lock" }}-{{ checksum "packages/react/yarn.lock" }}-{{ checksum "packages/vanilla/yarn.lock" }}
+          key: dependencies-{{ checksum "yarn.lock" }}
       - restore_cache:
           key: vanilla-build-{{ .Revision }}
       - restore_cache:
@@ -119,7 +119,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependencies-{{ checksum "yarn.lock" }}-{{ checksum "packages/react/yarn.lock" }}-{{ checksum "packages/vanilla/yarn.lock" }}
+          key: dependencies-{{ checksum "yarn.lock" }}
       - restore_cache:
           key: vanilla-build-{{ .Revision }}
       - restore_cache:
@@ -133,7 +133,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependencies-{{ checksum "yarn.lock" }}-{{ checksum "packages/react/yarn.lock" }}-{{ checksum "packages/vanilla/yarn.lock" }}
+          key: dependencies-{{ checksum "yarn.lock" }}
       - restore_cache:
           key: vanilla-build-{{ .Revision }}
       - restore_cache:
@@ -144,12 +144,26 @@ jobs:
       - run:
           name: Deploy hig-react-branch
           command: npm run publish-canary
+  packages-deploy-storybook-on-branch:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependencies-{{ checksum "yarn.lock" }}
+      - restore_cache:
+          key: vanilla-build-{{ .Revision }}
+      - restore_cache:
+          key: react-build-{{ .Revision }}
+      - run:
+          name: Deploy Storybook
+          command: npm run storybook-deploy `echo hig-$CIRCLE_BRANCH.surge.sh | awk 'echo gsub(/\//, "-")'`
+          working_directory: packages/react
   packages-deploy:
     <<: *defaults
     steps:
       - checkout
       - restore_cache:
-          key: dependencies-{{ checksum "yarn.lock" }}-{{ checksum "packages/react/yarn.lock" }}-{{ checksum "packages/vanilla/yarn.lock" }}
+          key: dependencies-{{ checksum "yarn.lock" }}
       - restore_cache:
           key: vanilla-build-{{ .Revision }}
       - restore_cache:
@@ -196,6 +210,16 @@ workflows:
             branches:
               only: development
       - packages-deploy-on-branch:
+          filters:
+            branches:
+              ignore:
+                - development
+                - master
+          requires:
+            - vanilla-test
+            - react-test
+            - react-visual-test
+      - packages-deploy-storybook-on-branch:
           filters:
             branches:
               ignore:

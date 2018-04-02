@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`New Notification renders correctly with the featured prop 1`] = `
+<div
+  className="hig__notification hig__notification--entered hig__notification--featured"
+  onClickCapture={[Function]}
+>
+  <div
+    className="hig__notification__content"
+  >
+    <div
+      className="hig__rich-text hig__rich-text--small"
+    >
+      <div>
+        <p>
+          <b>
+            Your subscription expires May 5
+          </b>
+        </p>
+        <p>
+          Maya
+          <br />
+          Media & Entertainment Collection
+          <br />
+          Product Design Collection
+          <br />
+          2 more
+        </p>
+      </div>
+    </div>
+    <button
+      className="hig__icon-button hig__icon-button--transparent"
+      onBlur={undefined}
+      onClick={[Function]}
+      onFocus={undefined}
+      onMouseEnter={undefined}
+      tabIndex="0"
+      title="button"
+    >
+      <div
+        className="hig__icon hig__icon--24-size"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<svg width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-notification-24\\"><polygon fill-rule=\\"nonzero\\" points=\\"8.45 0.47 4.97 3.95 1.51 0.47 0.45 1.53 3.91 5.01 0.45 8.47 1.51 9.53 4.97 6.07 8.42 9.53 9.48 8.47 6.03 5.01 9.51 1.53\\" fill=\\"#2E4258\\"/></svg>",
+          }
+        }
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`New Notification renders correctly with the unread prop 1`] = `
+<div
+  className="hig__notification hig__notification--unread"
+  onClickCapture={[Function]}
+>
+  <div
+    className="hig__notification__content"
+  >
+    <div
+      className="hig__rich-text hig__rich-text--small"
+    >
+      <div>
+        <p>
+          <b>
+            Your subscription expires May 5
+          </b>
+        </p>
+        <p>
+          Maya
+          <br />
+          Media & Entertainment Collection
+          <br />
+          Product Design Collection
+          <br />
+          2 more
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

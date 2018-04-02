@@ -53,3 +53,6 @@ nohup.out
 
 # VS Code
 .vscode/
+
+# compiled build stuff
+build/

@@ -6,8 +6,8 @@ import Checkbox from "../../../adapters/FormElements/CheckboxAdapter";
 
 class HeaderCheckbox extends React.Component {
   static propTypes = {
-    checked: PropTypes.bool,
-    onChange: PropTypes.func
+    selected: PropTypes.bool,
+    onSelectAllSelectionChange: PropTypes.func
   };
 
   constructor(props) {

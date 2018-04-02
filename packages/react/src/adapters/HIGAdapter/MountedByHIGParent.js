@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unused-prop-types */
 import { Component } from "react";
 import PropTypes from "prop-types";
 import HIGPropTypes from "./HIGPropTypes";
@@ -29,14 +30,15 @@ export default class MountedByHIGParent extends Component {
     this.mountToParent(nextProps);
   }
 
-  mountToParent(props) {
+  mountToParent = props => {
     if (props.higParent && !props.mounted) {
       props.higParent[props.mounter](props.higInstance);
       props.onMount();
     }
-  }
+  };
 
   render() {
     return null;
   }
 }
+/* eslint-enable react/no-unused-prop-types */

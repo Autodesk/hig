@@ -1,12 +1,12 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { number, boolean, select, text } from "@storybook/addon-knobs/react";
-import Typography from "../src/elements/components/Typography/Typography";
+import Typography from "elements/components/Typography/Typography";
 import {
   _VALID_COLORS,
   _VALID_SIZES,
   _VALID_TYPES
-} from "../src/elements/components/Typography/_constants";
+} from "elements/components/Typography/_constants";
 import {
   H1,
   H2,
@@ -18,7 +18,7 @@ import {
   Disabled,
   Sub1,
   Sub2
-} from "../src/hig-react";
+} from "elements/components/Typography";
 
 storiesOf("Typography", module).add("base component", () => (
   <Typography
@@ -30,7 +30,7 @@ storiesOf("Typography", module).add("base component", () => (
       max: 1.0,
       step: 0.1
     })}
-    size={text("Size")} // TODO: keep text knob until select knob allows choosing a null value
+    size={select("Size", _VALID_SIZES, "medium")}
     type={select("Type", _VALID_TYPES, "text")}
     text={text("Text", "This should render nicely.")}
   />

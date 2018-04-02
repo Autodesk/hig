@@ -59,22 +59,20 @@ export default class Table extends Component {
     density: undefined
   };
 
-  renderTable(columns, data, density) {
-    return (
-      <TableAdapter density={density}>
-        <TableHeadAdapter>
-          {columns.map((column, index) => getHeadCell({ column, index }))}
-        </TableHeadAdapter>
-        {data.map(row => (
-          <TableRowAdapter key={row.id} selected={row.selected}>
-            {columns.map((column, index) =>
-              getCell({ column, data: row, index })
-            )}
-          </TableRowAdapter>
-        ))}
-      </TableAdapter>
-    );
-  }
+  renderTable = (columns, data, density) => (
+    <TableAdapter density={density}>
+      <TableHeadAdapter>
+        {columns.map((column, index) => getHeadCell({ column, index }))}
+      </TableHeadAdapter>
+      {data.map(row => (
+        <TableRowAdapter key={row.id} selected={row.selected}>
+          {columns.map((column, index) =>
+            getCell({ column, data: row, index })
+          )}
+        </TableRowAdapter>
+      ))}
+    </TableAdapter>
+  );
 
   render() {
     const isSelectable = this.props.selectable;

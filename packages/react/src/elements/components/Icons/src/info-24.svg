@@ -1,0 +1,8 @@
+<svg id="assets" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <title>info-24</title>
+  <g>
+    <path d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,19a9,9,0,1,1,9-9A9,9,0,0,1,12,21Z"/>
+    <rect x="11" y="11" width="2" height="6"/>
+    <circle cx="12" cy="8" r="1.25"/>
+  </g>
+</svg>

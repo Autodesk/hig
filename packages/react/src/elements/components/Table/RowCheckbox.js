@@ -6,7 +6,7 @@ import Checkbox from "../../../adapters/FormElements/CheckboxAdapter";
 
 class RowCheckbox extends React.Component {
   static propTypes = {
-    checked: PropTypes.bool,
+    selected: PropTypes.bool,
     onChange: PropTypes.func
   };
 

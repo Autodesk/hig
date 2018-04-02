@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Notifications as VanillaNotifications } from "hig-vanilla";
 import HIGAdapter, {
-  MountsHIGChildList,
+  MountsAnyChild,
   MountedByHIGParent,
   MapsPropToMethod,
   MapsEventListener
@@ -64,9 +64,9 @@ function NotificationsAdapter(props) {
             {...adapterProps}
           />
 
-          <MountsHIGChildList {...adapterProps}>
+          <MountsAnyChild mounter="addNotification" {...adapterProps}>
             {props.children}
-          </MountsHIGChildList>
+          </MountsAnyChild>
         </div>
       )}
     </HIGAdapter>

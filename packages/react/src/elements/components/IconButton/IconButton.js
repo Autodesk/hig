@@ -6,44 +6,63 @@ import cx from "classnames";
 import "./icon-button.scss";
 import Icon from "../Icon/Icon";
 
-const AvailableTypes = ["primary", "flat", "transparent"];
+const types = Object.freeze({
+  PRIMARY: "primary",
+  FLAT: "flat",
+  TRANSPARENT: "transparent"
+});
+
+const availableTypes = Object.values(types);
 
 export default class IconButton extends Component {
-  setButtonStateClass(buttonState) {
-    return buttonState ? "hig__icon-button--disabled" : "";
-  }
-
-  setTabIndex(buttonState) {
-    return buttonState ? -1 : 0;
+  getTabIndex() {
+    return this.props.disabled ? "-1" : "0";
   }
 
   render() {
     const iconButtonClasses = cx(
       "hig__icon-button",
       `hig__icon-button--${this.props.type}`,
-      this.setButtonStateClass(this.props.disabled)
+      { "hig__icon-button--disabled": this.props.disabled }
     );
-    return (
-      <a
-        tabIndex={this.setTabIndex(this.props.disabled)}
-        className={iconButtonClasses}
-        title={this.props.title}
-        href={this.props.link}
-        onClick={this.props.onClick}
-        onBlur={this.props.onBlur}
-        onFocus={this.props.onFocus}
-        onMouseEnter={this.props.onHover}
-        onMouseLeave={this.props.onLeave}
-      >
-        <div className="hig__icon-button__icon">
-          <Icon nameOrSVG={this.props.icon} />
-        </div>
+
+    const props = {
+      tabIndex: this.getTabIndex(),
+      className: iconButtonClasses,
+      title: this.props.title,
+      onClick: this.props.onClick,
+      onBlur: this.props.onBlur,
+      onFocus: this.props.onFocus,
+      onMouseEnter: this.props.onMouseEnter,
+      onMouseLeave: this.props.onLeave
+    };
+
+    return this.props.link ? (
+      <a {...props} href={this.props.link}>
+        <span className="hig__icon-button__icon">
+          <Icon
+            svg={this.props.svg}
+            name={this.props.name}
+            nameOrSVG={this.props.icon}
+          />
+        </span>
       </a>
+    ) : (
+      <button {...props}>
+        <Icon
+          svg={this.props.svg}
+          name={this.props.name}
+          nameOrSVG={this.props.icon}
+        />
+      </button>
     );
   }
 }
+
+IconButton.types = types;
+
 IconButton.defaultProps = {
-  type: AvailableTypes[0],
+  type: types.PRIMARY,
   link: null,
   title: "button"
 };
@@ -58,9 +77,17 @@ IconButton.propTypes = {
    */
   link: PropTypes.string,
   /**
-   * Name of an included icon, or svg string of a custom icon
+   * Name of the icon to be used
    */
-  icon: PropTypes.string.isRequired,
+  name: PropTypes.oneOf(Icon.AVAILABLE_NAMES),
+  /**
+   * SVG markup used for the icon
+   */
+  svg: PropTypes.string,
+  /**
+   * Deprecated; use `name` or `svg` instead
+   */
+  icon: PropTypes.string,
   /**
    * Prevents user actions on the button
    */
@@ -88,5 +115,5 @@ IconButton.propTypes = {
   /**
    * 'primary' or 'flat'; the style of the button
    */
-  type: PropTypes.oneOf(AvailableTypes)
+  type: PropTypes.oneOf(availableTypes)
 };

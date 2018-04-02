@@ -1,3 +1,5 @@
+import "@hig/styles/fonts.scss";
+
 export { default as ActionBar } from "./adapters/ActionBar/ActionBarAdapter";
 export {
   default as ActionBarGroup
@@ -5,7 +7,8 @@ export {
 export {
   default as ActionBarSpacer
 } from "./adapters/ActionBar/ActionBarSpacerAdapter";
-export { default as Avatar } from "./adapters/AvatarAdapter";
+export { default as Avatar } from "./elements/components/Avatar";
+export { default as Banner } from "./elements/components/Banner";
 export { breakpoints } from "hig-vanilla";
 export { default as Button } from "./adapters/ButtonAdapter";
 export { default as Checkbox } from "./adapters/FormElements/CheckboxAdapter";
@@ -48,6 +51,10 @@ export {
   default as Notification
 } from "./elements/components/GlobalNav/TopNav/Notification";
 
+export {
+  default as NotificationV1
+} from "./elements/components/Notification/index";
+
 export { default as Option } from "./adapters/FormElements/OptionAdapter";
 export {
   default as PasswordField
@@ -63,6 +70,7 @@ export { default as SectionLabel } from "./adapters/SectionLabelAdapter";
 export { default as ShowMoreLess } from "./elements/components/ShowMoreLess";
 export { default as SideNav } from "./elements/components/GlobalNav/SideNav";
 export { sizes } from "hig-vanilla";
+export { default as Shortcut } from "./elements/components/Shortcut";
 export { default as SkeletonItem } from "./adapters/SkeletonItemAdapter";
 export { default as Spacer } from "./adapters/SpacerAdapter";
 export { Tab } from "./elements/components/Tabs";
@@ -75,5 +83,5 @@ export {
 export { default as TextField } from "./adapters/FormElements/TextFieldAdapter";
 export { default as TextLink } from "./adapters/TextLinkAdapter";
 export { default as Timestamp } from "./adapters/TimestampAdapter";
-export { default as Toast } from "./elements/components/Toast/Toast";
+export { default as Toast } from "./elements/components/Toast";
 export * from "./elements/components/Typography";

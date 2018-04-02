@@ -328,11 +328,10 @@ class Playground extends React.Component {
     console.log("project clicked", id);
   };
 
-  _initialReadNotifications(notifications) {
-    return notifications
+  _initialReadNotifications = notifications =>
+    notifications
       .filter(notification => !notification.unread)
       .map(notification => notification.id);
-  }
 
   topNavQueryProps = () => {
     const props = {

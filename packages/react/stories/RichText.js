@@ -1,9 +1,12 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { RichText } from "../src/hig-react";
+import { select } from "@storybook/addon-knobs/react";
+import RichText, {
+  _AVAILABLE_SIZES
+} from "elements/components/RichText/RichText";
 
 storiesOf("RichText", module).add("default", () => (
-  <RichText>
+  <RichText size={select("Size", _AVAILABLE_SIZES.concat(null))}>
     The RichText component lets me include any React children, including:
     <ul>
       <li>

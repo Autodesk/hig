@@ -1,6 +1,13 @@
 import * as ReactHIG from "./hig-react";
+import availableComponents from "./_availableComponents";
 
 describe("hig-react", () => {
+  it("it exports all of the available components", () => {
+    availableComponents.forEach(componentName => {
+      expect(ReactHIG[componentName]).toBeDefined();
+    });
+  });
+
   describe("exported components", () => {
     Object.values(ReactHIG)
       .filter(Component => typeof Component === "function")
