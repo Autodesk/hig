@@ -4,7 +4,8 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { text, select } from "@storybook/addon-knobs/react";
 
-import { Banner, Button } from "hig-react";
+import { Button } from "hig-react";
+import Banner from "../Banner";
 
 function getBannerKnobs(props) {
   const {
@@ -55,7 +56,8 @@ const stories = [
       type: Banner.types.WARNING,
       label: "PROCESS COMPLETE",
       // eslint-disable-next-line max-len
-      message: "Changes have been made to you document. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",
+      message:
+        "Changes have been made to you document. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",
       /** @todo Cleanup/refactor */
       children: ({ isWrappingActions }) => (
         <Banner.Interactions isWrappingActions={isWrappingActions}>
