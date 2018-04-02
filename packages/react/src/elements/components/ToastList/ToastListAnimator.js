@@ -4,6 +4,8 @@ import cx from "classnames";
 import FlipMove from "react-flip-move";
 import "./toastList.scss";
 
+const _ANIMATION_DURATION = 1000;
+const _ANIMATION_STAGGER_DELAY_BY = 1000;
 export default class ToastListAnimator extends React.Component {
   render() {
     const toastListClasses = cx("hig__toast-list", {
@@ -15,7 +17,7 @@ export default class ToastListAnimator extends React.Component {
         transform: `translateY(${
           this.props.position === "top" ? "-1in" : "1in"
         })`,
-        opacity: 0.1
+        opacity: 0.0
       },
       to: {
         transform: ""
@@ -30,14 +32,15 @@ export default class ToastListAnimator extends React.Component {
         transform: `translateY(${
           this.props.position === "top" ? "-1in" : "1in"
         })`,
-        opacity: 0.1
+        opacity: 0.0
       }
     };
 
     return (
       <FlipMove
         className={toastListClasses}
-        duration={1000}
+        duration={_ANIMATION_DURATION}
+        staggerDelayBy={_ANIMATION_STAGGER_DELAY_BY}
         easing="ease-out"
         appearAnimation={enterAnimation}
         enterAnimation={enterAnimation}
