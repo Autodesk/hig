@@ -4,6 +4,7 @@ import { select } from "@storybook/addon-knobs/react";
 import Avatar from "elements/components/Avatar";
 import Toast from "elements/components/Toast";
 import ToastList from "elements/components/ToastList";
+import { AVAILABLE_PLACEMENTS } from "elements/components/ToastList/placements";
 
 import ToastListInteractions from "./ToastListInteractions";
 import sampleAvatar from "../Avatar/avatar.png";
@@ -28,12 +29,12 @@ const exampleToasts = React.Children.toArray([
 
 storiesOf("ToastList", module)
   .add("static", () => (
-    <ToastList position={select("Position", ["top", "bottom"], "top")}>
+    <ToastList placement={select("Placement", AVAILABLE_PLACEMENTS, "top")}>
       {exampleToasts}
     </ToastList>
   ))
   .add("demonstrate adding new children", () => (
     <ToastListInteractions
-      position={select("Position", ["top", "bottom"], "top")}
+      placement={select("Placement", AVAILABLE_PLACEMENTS, "top")}
     />
   ));

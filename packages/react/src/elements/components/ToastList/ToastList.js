@@ -2,22 +2,32 @@ import React from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
 import ToastListAnimator from "./ToastListAnimator";
+import classNames from "./classNames";
+import { placements, AVAILABLE_PLACEMENTS } from "./placements";
 import "./toastList.scss";
 
 const MAX_TOASTS_ONSCREEN = 3;
 
+const wrapperModifiersByPlacement = {
+  [placements.BOTTOM]: classNames.wrapperBottom,
+  [placements.TOP]: classNames.wrapperTop
+};
+
 export default class ToastList extends React.Component {
+  static AVAILABLE_PLACEMENTS = AVAILABLE_PLACEMENTS;
+  static placements = placements;
+
   render() {
-    const toastListWrapperClasses = cx("hig__toast-list-wrapper", {
-      [`hig__toast-list-wrapper--position-${this.props.position}`]: this.props
-        .position
-    });
+    const classes = cx(
+      classNames.wrapper,
+      wrapperModifiersByPlacement[this.props.placement]
+    );
 
     const keyedChildren = React.Children.toArray(this.props.children);
 
     return (
-      <div className={toastListWrapperClasses}>
-        <ToastListAnimator position={this.props.position}>
+      <div className={classes}>
+        <ToastListAnimator placement={this.props.placement}>
           {keyedChildren.slice(0, MAX_TOASTS_ONSCREEN)}
         </ToastListAnimator>
       </div>
@@ -27,11 +37,11 @@ export default class ToastList extends React.Component {
 
 ToastList.propTypes = {
   /**
-   * Whether to render the list of notifications at the top or bottom of the screen.
+   * Determines the placement of the ToastList.
    * The list will be sorted such that the most recently added notification will
    *  appear closest to the page edge.
    */
-  position: PropTypes.oneOf(["top", "bottom"]),
+  placement: PropTypes.oneOf(AVAILABLE_PLACEMENTS),
   /**
    * A list of Toast elements to render
    */

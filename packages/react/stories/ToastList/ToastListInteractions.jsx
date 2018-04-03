@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { sample } from "lodash";
 import Button from "adapters/ButtonAdapter";
 import Toast, { _AVAILABLE_STATUSES } from "elements/components/Toast";
-import ToastList from "elements/components/ToastList";
+import ToastList, { AVAILABLE_PLACEMENTS } from "elements/components/ToastList";
 
 export default class ToastListInteractions extends React.Component {
   static defaultProps = {
@@ -12,7 +12,7 @@ export default class ToastListInteractions extends React.Component {
 
   static propTypes = {
     initialToasts: PropTypes.arrayOf(PropTypes.node),
-    position: PropTypes.oneOf(["top", "bottom"])
+    placement: PropTypes.oneOf(AVAILABLE_PLACEMENTS)
   };
 
   constructor(props) {
@@ -55,7 +55,7 @@ export default class ToastListInteractions extends React.Component {
       <div>
         <Button onClick={this.addRandomToast} title="Add Random Toast" />
 
-        <ToastList position={this.props.position}>
+        <ToastList placement={this.props.placement}>
           {this.state.toasts.map(toast =>
             React.cloneElement(toast, {
               onDismiss: this.removeToast.bind(this, toast)

@@ -2,7 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
 import FlipMove from "react-flip-move";
-import "./toastList.scss";
+import classNames from "../classNames";
+import { placements, AVAILABLE_PLACEMENTS } from "../placements";
+import "./toastListAnimator.scss";
 
 const _ANIMATION_DURATION = 1000;
 const _ANIMATION_STAGGER_DELAY_BY = 1000;
@@ -16,11 +18,17 @@ const onScreenStyles = () => ({
   transform: ""
 });
 
+const contentModifiersByPlacement = {
+  [placements.BOTTOM]: classNames.contentBottom,
+  [placements.TOP]: classNames.contentTop
+};
+
 export default class ToastListAnimator extends React.Component {
   render() {
-    const toastListClasses = cx("hig__toast-list", {
-      [`hig__toast-list--position-${this.props.position}`]: this.props.position
-    });
+    const classes = cx(
+      classNames.content,
+      contentModifiersByPlacement[this.props.placement]
+    );
 
     const enterAnimation = {
       from: offScreenStyles(this.props),
@@ -34,7 +42,7 @@ export default class ToastListAnimator extends React.Component {
 
     return (
       <FlipMove
-        className={toastListClasses}
+        className={classes}
         duration={_ANIMATION_DURATION}
         staggerDelayBy={_ANIMATION_STAGGER_DELAY_BY}
         easing="ease-out"
@@ -50,11 +58,11 @@ export default class ToastListAnimator extends React.Component {
 
 ToastListAnimator.propTypes = {
   /**
-   * Whether to render the list of notifications at the top or bottom of the screen.
+   * Determines the placement of the ToastList.
    * The list will be sorted such that the most recently added notification will
    *  appear closest to the page edge.
    */
-  position: PropTypes.oneOf(["top", "bottom"]),
+  placement: PropTypes.oneOf(AVAILABLE_PLACEMENTS),
   /**
    * A list of Toast elements to render
    */

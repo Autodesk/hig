@@ -3,29 +3,10 @@
   right: 10px;
 }
 
-.hig__toast-list-wrapper--position-top {
+.hig__toast-list-wrapper--placement-top {
   top: 10px;
 }
 
-.hig__toast-list-wrapper--position-bottom {
+.hig__toast-list-wrapper--placement-bottom {
   bottom: 10px;
-}
-
-.hig__toast-list {
-  @import "../Toast/variables.scss";
-
-  display: flex;
-  min-width: $container-width;
-
-  .hig__toast {
-    margin-bottom: 10px;
-  }
-}
-
-.hig__toast-list--position-top {
-  flex-direction: column-reverse;
-}
-
-.hig__toast-list--position-bottom {
-  flex-direction: column;
 }
