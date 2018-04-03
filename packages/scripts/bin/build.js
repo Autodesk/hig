@@ -9,9 +9,19 @@ const postcss = require("rollup-plugin-postcss");
 const json = require("rollup-plugin-json");
 const postcssFuncitons = require("postcss-functions");
 
-const pkg = require(path.resolve(process.cwd(), "package.json"));
-const external = Object.keys(pkg.peerDependencies).concat(
-  Object.keys(pkg.dependencies)
+const packageMeta = require(path.resolve(process.cwd(), "package.json"));
+
+const {
+  name: packageName,
+  version: packageVersion,
+  peerDependencies = {},
+  dependencies = {},
+  module: esOutputFile = "build/index.es.js",
+  css: cssOutputFile = "build/index.es.css"
+} = packageMeta;
+
+const external = Object.keys(peerDependencies).concat(
+  Object.keys(dependencies)
 );
 
 const inputOptions = {
@@ -46,7 +56,7 @@ const inputOptions = {
     json(),
     postcss({
       extract: true,
-      output: pkg.css,
+      output: cssOutputFile,
       plugins: [postcssFuncitons]
     })
   ]
@@ -54,12 +64,12 @@ const inputOptions = {
 
 const esModulesOutputOptions = {
   name: "HIG",
-  file: pkg.module,
+  file: esOutputFile,
   format: "es"
 };
 
 async function build() {
-  console.log(`Bundling ${pkg.name} v${pkg.version}.`);
+  console.log(`Bundling ${packageName} v${packageVersion}.`);
 
   try {
     const bundle = await rollup.rollup(inputOptions);
