@@ -33,7 +33,8 @@ export default class IconButton extends Component {
       onClick: this.props.onClick,
       onBlur: this.props.onBlur,
       onFocus: this.props.onFocus,
-      onMouseEnter: this.props.onMouseEnter
+      onMouseEnter: this.props.onMouseEnter,
+      onMouseLeave: this.props.onLeave
     };
 
     return this.props.link ? (
@@ -107,6 +108,10 @@ IconButton.propTypes = {
    * Called when user moves the mouse over the button
    */
   onHover: PropTypes.func,
+  /**
+   * Called when user moves the mouse away from the button
+   */
+  onLeave: PropTypes.func,
   /**
    * 'primary' or 'flat'; the style of the button
    */
