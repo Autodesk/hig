@@ -1,11 +1,11 @@
 {
+  "private": true,
   "name": "@hig/scripts",
   "version": "0.1.0",
   "description": "Scripts for HIG React components",
   "main": "index.js",
   "repository": "https://github.com/Autodesk/hig",
-  "license": "MIT",
-  "private": true,
+  "license": "Apache-2.0",
   "bin": {
     "hig-scripts-build": "bin/build.js"
   },
@@ -18,7 +18,9 @@
     "postcss-functions": "^3.0.0",
     "rollup": "^0.57.1",
     "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-commonjs": "^9.1.0",
     "rollup-plugin-json": "^2.3.0",
+    "rollup-plugin-node-resolve": "^3.3.0",
     "rollup-plugin-postcss": "^1.4.1"
   }
 }

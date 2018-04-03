@@ -3,14 +3,11 @@
 import React from "react";
 import cx from "classnames";
 
-import "./banner-presenter.scss";
+import { Icon as BasicIcon, IconButton, Text } from "hig-react";
 
+import "./banner-presenter.scss";
 import { placements } from "../placements";
 import { types } from "../types";
-
-import BasicIcon from "../../Icon/Icon";
-import IconButton from "../../IconButton/IconButton";
-import Text from "../../Typography/Text";
 
 /** @todo Reference from constant on `Text` component */
 const TEXT_COLOR = "hig-cool-gray-70";

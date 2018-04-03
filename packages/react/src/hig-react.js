@@ -8,7 +8,6 @@ export {
   default as ActionBarSpacer
 } from "./adapters/ActionBar/ActionBarSpacerAdapter";
 export { default as Avatar } from "./elements/components/Avatar";
-export { default as Banner } from "./elements/components/Banner";
 export { breakpoints } from "hig-vanilla";
 export { default as Button } from "./adapters/ButtonAdapter";
 export { default as Checkbox } from "./adapters/FormElements/CheckboxAdapter";

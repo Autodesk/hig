@@ -1,50 +1,69 @@
 #! /usr/bin/env node
 
-const rollup = require('rollup');
-const babel = require('rollup-plugin-babel');
-const postcss = require('rollup-plugin-postcss');
-const json = require('rollup-plugin-json');
-const postcssFuncitons = require('postcss-functions');
+const path = require("path");
+const rollup = require("rollup");
+const babel = require("rollup-plugin-babel");
+const commonjs = require("rollup-plugin-commonjs");
+const nodeResolve = require("rollup-plugin-node-resolve");
+const postcss = require("rollup-plugin-postcss");
+const json = require("rollup-plugin-json");
+const postcssFuncitons = require("postcss-functions");
+
+const pkg = require(path.resolve(process.cwd(), "package.json"));
+const external = Object.keys(pkg.peerDependencies).concat(
+  Object.keys(pkg.dependencies)
+);
 
 const inputOptions = {
-  input: 'src/index.js',
+  input: "src/index.js",
+  external,
   plugins: [
+    nodeResolve(),
     babel({
-      exclude: ['node_modules/**', '**/*.scss', '**/*.html', '**/*.svg', '**/*.json'],
-      "presets": [
-        ["env",
+      exclude: [
+        "**/node_modules/**",
+        "**/*.css",
+        "**/*.scss",
+        "**/*.html",
+        "**/*.svg",
+        "**/*.json"
+      ],
+      presets: [
+        [
+          "env",
           {
-            "modules": false,
-            "targets": {
-              "browser": ">1%"
+            modules: false,
+            targets: {
+              browser: ">1%"
             }
           }
         ],
         "stage-2",
         "react"
-      ],
-      "plugins": ["external-helpers"]
+      ]
     }),
+    commonjs(),
     json(),
     postcss({
       extract: true,
-      output: "build/index.css",
+      output: pkg.css,
       plugins: [postcssFuncitons]
-    }),
+    })
   ]
 };
 
 const esModulesOutputOptions = {
-  name: 'HIG',
-  file: 'build/index.es.js',
-  format: 'es',
-  external: ['hig-interface', 'mustache', 'i18next']
+  name: "HIG",
+  file: pkg.module,
+  format: "es"
 };
 
 async function build() {
-  let bundle;
+  console.log(`Bundling ${pkg.name} v${pkg.version}.`);
+
   try {
-    bundle = await rollup.rollup(inputOptions);
+    const bundle = await rollup.rollup(inputOptions);
+
     bundle.write(esModulesOutputOptions);
   } catch (e) {
     console.log(e);
