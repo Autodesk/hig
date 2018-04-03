@@ -34,6 +34,7 @@ exports[`New Notification renders correctly with the featured prop 1`] = `
       onClick={[Function]}
       onFocus={undefined}
       onMouseEnter={undefined}
+      onMouseLeave={undefined}
       tabIndex="0"
       title="button"
     >

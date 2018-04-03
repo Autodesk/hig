@@ -12,6 +12,7 @@ exports[`ShortCut renders correctly with link properly 1`] = `
     onClick={undefined}
     onFocus={undefined}
     onMouseEnter={undefined}
+    onMouseLeave={undefined}
     tabIndex="0"
     title="button"
   >
@@ -42,6 +43,7 @@ exports[`ShortCut renders correctly with onClick property 1`] = `
     onClick={[Function]}
     onFocus={undefined}
     onMouseEnter={undefined}
+    onMouseLeave={undefined}
     tabIndex="0"
     title="button"
   >

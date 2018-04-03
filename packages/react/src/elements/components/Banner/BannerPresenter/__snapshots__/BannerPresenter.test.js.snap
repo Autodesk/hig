@@ -51,6 +51,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a fragment as child
       onClick={undefined}
       onFocus={undefined}
       onMouseEnter={undefined}
+      onMouseLeave={undefined}
       tabIndex="0"
       title="Dismiss"
     >
@@ -114,6 +115,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a label 1`] = `
       onClick={undefined}
       onFocus={undefined}
       onMouseEnter={undefined}
+      onMouseLeave={undefined}
       tabIndex="0"
       title="Dismiss"
     >
@@ -178,6 +180,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a node as children 
       onClick={undefined}
       onFocus={undefined}
       onMouseEnter={undefined}
+      onMouseLeave={undefined}
       tabIndex="0"
       title="boom"
     >
@@ -240,6 +243,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a string as childre
       onClick={undefined}
       onFocus={undefined}
       onMouseEnter={undefined}
+      onMouseLeave={undefined}
       tabIndex="0"
       title="Dismiss"
     >
@@ -297,6 +301,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders without props 1`] = `
       onClick={undefined}
       onFocus={undefined}
       onMouseEnter={undefined}
+      onMouseLeave={undefined}
       tabIndex="0"
       title="Dismiss"
     >
