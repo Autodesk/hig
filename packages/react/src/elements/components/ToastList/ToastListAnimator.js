@@ -6,6 +6,16 @@ import "./toastList.scss";
 
 const _ANIMATION_DURATION = 1000;
 const _ANIMATION_STAGGER_DELAY_BY = 1000;
+
+const offScreenStyles = ({ placement }) => ({
+  transform: `translateY(${placement === "top" ? "-1in" : "1in"})`,
+  opacity: 0
+});
+
+const onScreenStyles = () => ({
+  transform: ""
+});
+
 export default class ToastListAnimator extends React.Component {
   render() {
     const toastListClasses = cx("hig__toast-list", {
@@ -13,27 +23,13 @@ export default class ToastListAnimator extends React.Component {
     });
 
     const enterAnimation = {
-      from: {
-        transform: `translateY(${
-          this.props.position === "top" ? "-1in" : "1in"
-        })`,
-        opacity: 0.0
-      },
-      to: {
-        transform: ""
-      }
+      from: offScreenStyles(this.props),
+      to: onScreenStyles()
     };
 
     const leaveAnimation = {
-      from: {
-        transform: ""
-      },
-      to: {
-        transform: `translateY(${
-          this.props.position === "top" ? "-1in" : "1in"
-        })`,
-        opacity: 0.0
-      }
+      from: onScreenStyles(),
+      to: offScreenStyles(this.props)
     };
 
     return (
