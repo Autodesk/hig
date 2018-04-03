@@ -10,7 +10,7 @@ const _ANIMATION_DURATION = 1000;
 const _ANIMATION_STAGGER_DELAY_BY = 1000;
 
 const offScreenStyles = ({ placement }) => ({
-  transform: `translateY(${placement === "top" ? "-1in" : "1in"})`,
+  transform: `translateY(${placement === "top" ? "-36px" : "36px"})`,
   opacity: 0
 });
 
