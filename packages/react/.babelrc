@@ -4,7 +4,7 @@
       "env",
       {
         "targets": {
-          "browsers": "> 1%",
+          "browsers": "> 1%"
         }
       }
     ],
