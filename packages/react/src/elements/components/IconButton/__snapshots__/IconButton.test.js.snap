@@ -7,6 +7,7 @@ exports[`IconButton renders correctly 1`] = `
   onClick={undefined}
   onFocus={undefined}
   onMouseEnter={undefined}
+  onMouseLeave={undefined}
   tabIndex="0"
   title="button"
 >
@@ -29,6 +30,7 @@ exports[`IconButton renders correctly with a link 1`] = `
   onClick={undefined}
   onFocus={undefined}
   onMouseEnter={undefined}
+  onMouseLeave={undefined}
   tabIndex="0"
   title="Settings"
 >
@@ -54,6 +56,7 @@ exports[`IconButton renders correctly with the \`icon\` prop 1`] = `
   onClick={undefined}
   onFocus={undefined}
   onMouseEnter={undefined}
+  onMouseLeave={undefined}
   tabIndex="0"
   title="button"
 >
