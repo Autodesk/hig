@@ -8,7 +8,9 @@
   "version": "1.0.1",
   "scripts": {
     "publish-canary": "lerna publish --canary --yes --exact",
-    "storybook": "start-storybook -p 9001",
+    "storybook": "start-storybook -p 9001 -c .storybook/development",
+    "storybook-build": "build-storybook -c .storybook/development",
+    "storybook-test": "start-storybook -p 9876 -c .storybook/test",
     "update-packages": "lerna publish --skip-npm"
   },
   "devDependencies": {
