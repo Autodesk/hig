@@ -1,3 +1,5 @@
+const path = require("path");
+
 module.exports = {
   module: {
     rules: [
@@ -7,11 +9,49 @@ module.exports = {
       },
       {
         test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2)(\?.*)?$/,
-        loader: require.resolve("file-loader"),
-        query: {
-          name: "static/media/[name].[hash:8].[ext]"
-        }
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "static/media/[name].[hash:8].[ext]"
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(html|svg)$/,
+        issuer: /\.js$/,
+        use: "raw-loader",
+      },
+      {
+        test: /\.svg$/,
+        issuer: /\.scss$/,
+        use: "svg-url-loader",
       }
+    ]
+  },
+  resolve: {
+    alias: {
+      "hig-react": path.resolve(
+        __dirname,
+        "../../packages/react/src/hig-react.js"
+      ),
+      "hig-vanilla": path.resolve(
+        __dirname,
+        "../../packages/vanilla/src/index.js"
+      ),
+      "interface.json": path.resolve(
+        __dirname,
+        "../../packages/interface/interface.json"
+      ),
+      "_core.js": path.resolve(
+        __dirname,
+        "../../packages/vanilla/src/helpers/js/_core.js"
+      ),
+    },
+    modules: [
+      path.resolve(__dirname, "../../packages/vanilla/src"),
+      "node_modules"
     ]
   }
 };

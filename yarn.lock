@@ -11635,7 +11635,7 @@ svg-tag-names@^1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/svg-tag-names/-/svg-tag-names-1.1.1.tgz#9641b29ef71025ee094c7043f7cdde7d99fbd50a"
 
-svg-url-loader@^2.3.0:
+svg-url-loader@^2.3.0, svg-url-loader@^2.3.2:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/svg-url-loader/-/svg-url-loader-2.3.2.tgz#dd86b26c19fe3b914f04ea10ef39594eade04464"
   dependencies:
