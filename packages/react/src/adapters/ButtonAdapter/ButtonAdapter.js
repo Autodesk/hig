@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Button as VanillaButton } from "hig-vanilla";
-import HIGAdapter, { MapsPropToMethod, MapsEventListener } from "./HIGAdapter";
+import HIGAdapter, { MapsPropToMethod, MapsEventListener } from "../HIGAdapter";
 
 export default class ButtonAdapter extends Component {
   render() {
