@@ -14,7 +14,6 @@
     "lib/*"
   ],
   "scripts": {
-    "babel": "babel --ignore test.js,Tests.js,test -d lib src",
     "build-playground": "react-scripts build",
     "build-icons": "node scripts/build-icons.js",
     "deploy-playground": "react-scripts build && surge build",
@@ -22,7 +21,7 @@
     "gemini-update": "concurrently 'yarn storybook' 'gemini update' --kill-others --success first",
     "gemini-ci": "gemini test --reporter html --reporter flat",
     "generate-docs": "node ./scripts/generate-docs.js",
-    "lib": "yarn babel && NODE_ENV=production webpack -p",
+    "lib": "NODE_ENV=production webpack -p",
     "lint": "eslint ./src/** -c ./.eslintrc.js",
     "lint-fix": "eslint ./src/** -c ./.eslintrc.js --fix",
     "playground": "react-scripts start",
