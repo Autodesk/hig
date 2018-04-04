@@ -32,9 +32,18 @@ module.exports = {
   },
   resolve: {
     alias: {
+      /**
+       * @TODO: move storybook inside of packages to benefit from symlinked node_modules
+       * Alternatively, auto-generate the aliases by iterating through packages and resolve [package_name]
+       * to [package]/src/indexj.s
+       */
       "hig-react": path.resolve(
         __dirname,
         "../../packages/react/src/hig-react.js"
+      ),
+      "hig-vanilla/lib/hig.css$": path.resolve(
+        __dirname,
+        "../../packages/vanilla/lib/hig.css"
       ),
       "hig-vanilla": path.resolve(
         __dirname,
