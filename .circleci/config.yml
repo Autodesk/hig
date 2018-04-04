@@ -156,8 +156,7 @@ jobs:
           key: react-build-{{ .Revision }}
       - run:
           name: Deploy Storybook
-          command: npm run storybook-deploy `echo hig-$CIRCLE_BRANCH.surge.sh | awk 'echo gsub(/\//, "-")'`
-          working_directory: packages/react
+          command: yarn storybook-deploy --domain `echo hig-$CIRCLE_BRANCH.surge.sh | awk 'echo gsub(/\//, "-")'`
   packages-deploy:
     <<: *defaults
     steps:

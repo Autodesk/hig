@@ -10,6 +10,7 @@
     "publish-canary": "lerna publish --canary --yes --exact",
     "storybook": "start-storybook -p 9001 -c .storybook/development",
     "storybook-build": "build-storybook -c .storybook/development",
+    "storybook-deploy": "build-storybook -c .storybook/development && surge --project storybook-static",
     "storybook-test": "start-storybook -p 9876 -c .storybook/test",
     "update-packages": "lerna publish --skip-npm"
   },
