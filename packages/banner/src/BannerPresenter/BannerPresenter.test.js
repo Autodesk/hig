@@ -1,7 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
 
-import { placements } from "../placements";
 import { types } from "../types";
 import BannerPresenter from "./BannerPresenter";
 
@@ -22,7 +21,6 @@ describe.only("banner/BannerPresenter/BannerPresenter", () => {
     {
       description: "renders with a string as children",
       props: {
-        placement: placements.TOP,
         children: "foobar"
       }
     },

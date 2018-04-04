@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import { types, AVAILABLE_TYPES } from "../types";
-import { placements, AVAILABLE_PLACEMENTS } from "../placements";
 
 import {
   Content,
@@ -18,7 +17,6 @@ import {
 /**
  * @typedef {Object} BannerPresenterProps
  * @property {string} [type]
- * @property {string} [placement]
  * @property {string} [label]
  * @property {string} [message]
  * @property {string} [dismissButtonTitle]
@@ -39,7 +37,6 @@ import {
 export default function BannerPresenter(props) {
   const {
     type,
-    placement,
     label,
     message,
     dismissButtonTitle,
@@ -59,7 +56,6 @@ export default function BannerPresenter(props) {
   return (
     <Wrapper
       type={type}
-      placement={placement}
       hasActions={hasActions}
       isWrappingContent={isWrappingContent}
       labelledBy={wrapperLabelledBy}
@@ -84,7 +80,6 @@ export default function BannerPresenter(props) {
 /** @type {BannerPresenterProps} */
 BannerPresenter.defaultProps = {
   type: types.PRIMARY,
-  placement: placements.STANDARD,
   message: "Message",
   dismissButtonTitle: "Dismiss",
   isWrappingContent: false
@@ -93,8 +88,6 @@ BannerPresenter.defaultProps = {
 BannerPresenter.propTypes = {
   /** Indicates the style of banner */
   type: PropTypes.oneOf(AVAILABLE_TYPES),
-  /** Determines the intended placement of banner */
-  placement: PropTypes.oneOf(AVAILABLE_PLACEMENTS),
   /** The label of the message displayed */
   label: PropTypes.string,
   /** The displayed message */

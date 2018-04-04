@@ -6,7 +6,6 @@ import cx from "classnames";
 import { Icon as BasicIcon, IconButton, Text } from "hig-react";
 
 import "./banner-presenter.scss";
-import { placements } from "../placements";
 import { types } from "../types";
 
 /** @todo Reference from constant on `Text` component */
@@ -36,12 +35,6 @@ const classNames = Object.freeze({
 });
 
 /** @type {Object.<string, string>} */
-const wrapperModifiersByPlacement = {
-  [placements.BOTTOM]: classNames.wrapperBottom,
-  [placements.TOP]: classNames.wrapperTop
-};
-
-/** @type {Object.<string, string>} */
 const wrapperModifiersByType = {
   [types.PRIMARY]: classNames.wrapperPrimary,
   [types.COMPLETE]: classNames.wrapperComplete,
@@ -66,7 +59,6 @@ const iconNamesByType = {
 /**
  * @typedef {Object} WrapperProps
  * @property {string} type
- * @property {string} placement
  * @property {boolean} hasActions
  * @property {string | undefined} [labelledBy]
  * @property {boolean} isWrappingContent
@@ -80,7 +72,6 @@ const iconNamesByType = {
 export function Wrapper(props) {
   const {
     type,
-    placement,
     hasActions,
     labelledBy,
     isWrappingContent,
@@ -90,7 +81,6 @@ export function Wrapper(props) {
   const classes = cx(
     classNames.wrapper,
     wrapperModifiersByType[type],
-    wrapperModifiersByPlacement[placement],
     hasActions ? classNames.wrapperInteractive : undefined,
     isWrappingContent ? classNames.wrapperWrapContent : undefined
   );
