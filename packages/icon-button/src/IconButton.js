@@ -28,7 +28,8 @@ export default class IconButton extends Component {
       onClick: this.props.onClick,
       onBlur: this.props.onBlur,
       onFocus: this.props.onFocus,
-      onMouseEnter: this.props.onMouseEnter
+      onMouseEnter: this.props.onMouseEnter,
+      onMouseLeave: this.props.onMouseLeave
     };
 
     return this.props.link ? (
