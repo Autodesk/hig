@@ -13,8 +13,6 @@ import { types } from "../types";
 /** @todo Reference from constant on `Text` component */
 const TEXT_COLOR = "hig-cool-gray-70";
 
-const {  } = IconButton;
-
 /** @type {Object.<string, string>} */
 const classNames = Object.freeze({
   action: "hig__banner__action",
