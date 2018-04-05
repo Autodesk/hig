@@ -10,31 +10,29 @@ import Banner from "../Banner";
 function getBannerKnobs(props) {
   const {
     type,
-    placement,
+    children,
     label,
-    message,
     dismissButtonTitle,
     onDismiss,
     ...otherProps
   } = props;
 
   return {
+    ...otherProps,
     type: select("Type", Banner.AVAILABLE_TYPES, type),
-    placement: select("Placement", Banner.AVAILABLE_PLACEMENTS, placement),
+    children: text("Message", children),
     label: text("Label", label),
-    message: text("Message", message),
     dismissButtonTitle: text("Dismiss title", dismissButtonTitle),
-    onDismiss: action("Banner dismissed", onDismiss),
-    labelId: "unique-id",
-    isVisible: true,
-    ...otherProps
+    onDismiss: action("Banner dismissed", onDismiss)
   };
 }
 
-function BannerDemo({ children, ...props }) {
+function BannerDemo(props) {
+  const { children, ...otherProps } = getBannerKnobs(props);
+
   return (
     <div style={{ marginBottom: "15px" }}>
-      <Banner {...getBannerKnobs(props)}>{children}</Banner>
+      <Banner {...otherProps}>{children}</Banner>
     </div>
   );
 }
@@ -42,8 +40,6 @@ function BannerDemo({ children, ...props }) {
 function BannerStory({ props }) {
   return <BannerDemo {...props} />;
 }
-
-const bannerStories = storiesOf("Banner", module);
 
 const stories = [
   {
@@ -54,12 +50,11 @@ const stories = [
     description: "verbose, with interactions",
     props: {
       type: Banner.types.WARNING,
-      label: "PROCESS COMPLETE",
-      // eslint-disable-next-line max-len
-      message:
-        "Changes have been made to you document. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",
+      children:
+        // eslint-disable-next-line max-len
+        "PROCESS COMPLETE: Changes have been made to you document. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",
       /** @todo Cleanup/refactor */
-      children: ({ isWrappingActions }) => (
+      actions: ({ isWrappingActions }) => (
         <Banner.Interactions isWrappingActions={isWrappingActions}>
           <Banner.Action>
             <Button
@@ -82,6 +77,8 @@ const stories = [
     }
   }
 ];
+
+const bannerStories = storiesOf("Banner", module);
 
 stories.forEach(({ description, props }) => {
   bannerStories.add(description, () => <BannerStory props={props} />);
