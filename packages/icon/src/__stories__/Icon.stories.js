@@ -1,8 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
-
-import Icon from "../index";
+import Icon from "../Icon";
 
 const iconKeys = {
   [Icon.sizes.PX_24]: [

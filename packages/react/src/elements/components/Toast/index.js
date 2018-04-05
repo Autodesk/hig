@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
-import Icon from "../Icon/Icon";
 import IconButton from "../IconButton/IconButton";
+import Icon from "@hig/icon";
 import RichText from "../RichText";
 import "./toast.scss";
 
