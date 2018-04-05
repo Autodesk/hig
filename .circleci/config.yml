@@ -104,16 +104,19 @@ jobs:
       - restore_cache:
           key: react-build-{{ .Revision }}
       - run:
-          name: Start Storybook Server (React)
-          command: yarn storybook
-          background: true
-          working_directory: packages/react
+          name: Install Dependencies
+          command: yarn
       - run:
-          name: Run Visual Regression Tests (React)
+          name: Start Test Storybook Server
+          command: yarn storybook-test
+          background: true
+          working_directory: packages/storybook
+      - run:
+          name: Run Visual Regression Tests
           command: yarn gemini-ci
-          working_directory: packages/react
+          working_directory: packages/storybook
       - store_artifacts:
-          path: packages/react/gemini-report
+          path: packages/storybook/gemini-report
   deploy-playground:
     <<: *defaults
     steps:
