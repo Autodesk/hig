@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { sample } from "lodash";
-import Button from "adapters/ButtonAdapter";
-import Toast, { _AVAILABLE_STATUSES } from "elements/components/Toast";
-import ToastList, { AVAILABLE_PLACEMENTS } from "elements/components/ToastList";
+import Toast, { _AVAILABLE_STATUSES } from "../../Toast";
+import ToastList, { AVAILABLE_PLACEMENTS } from "../index";
+import Button from "../../../../adapters/ButtonAdapter"; // TODO: Swap out for Button
 
 export default class ToastListInteractions extends React.Component {
   static defaultProps = {

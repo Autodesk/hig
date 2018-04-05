@@ -3,6 +3,7 @@ module.exports = {
     "!src/index.js",
     "src/**/*.{js,jsx}",
     "!src/**/*.story.{js,jsx}",
+    "!src/**/*/__stories__/*",
     "!src/fixtures/**/*",
     "!src/stories/**/*",
     "!src/playground/**/*",

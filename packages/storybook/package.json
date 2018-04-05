@@ -1,0 +1,36 @@
+{
+  "private": true,
+  "name": "@hig/storybook",
+  "description": "Autodesk design system",
+  "author": "Autodesk Inc.",
+  "license": "Apache-2.0",
+  "homepage": "https://hig.autodesk.com",
+  "version": "1.0.0",
+  "scripts": {
+    "storybook": "start-storybook -p 9001 -c .storybook/development",
+    "storybook-build": "build-storybook -c .storybook/development",
+    "storybook-deploy": "build-storybook -c .storybook/development && surge --project storybook-static",
+    "storybook-test": "start-storybook -p 9876 -c .storybook/test"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.4.0",
+    "@storybook/addon-info": "^3.4.0",
+    "@storybook/addon-knobs": "^3.4.0",
+    "@storybook/addon-notes": "^3.4.0",
+    "@storybook/addon-options": "^3.4.0",
+    "@storybook/addon-viewport": "^3.4.0",
+    "@storybook/addons": "^3.4.0",
+    "@storybook/react": "^3.4.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-runtime": "^6.26.0",
+    "file-loader": "^1.1.11",
+    "lodash": "^4.17.5",
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2",
+    "surge": "^0.20.1"
+  }
+}

@@ -1,13 +1,13 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { select } from "@storybook/addon-knobs/react";
-import Avatar from "elements/components/Avatar";
-import Toast from "elements/components/Toast";
-import ToastList from "elements/components/ToastList";
-import { AVAILABLE_PLACEMENTS } from "elements/components/ToastList/placements";
+import Avatar from "../../Avatar";
+import Toast from "../../Toast";
+import ToastList from "..";
+import { AVAILABLE_PLACEMENTS } from "../placements";
 
 import ToastListInteractions from "./ToastListInteractions";
-import sampleAvatar from "../Avatar/avatar.png";
+import sampleAvatar from "./chris-reynolds-avatar.png";
 
 const exampleToasts = React.Children.toArray([
   <Toast status="primary">

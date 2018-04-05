@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import Icon from "elements/components/Icon/Icon";
+import Icon from "../index";
 
 const iconKeys = {
   [Icon.sizes.PX_24]: [

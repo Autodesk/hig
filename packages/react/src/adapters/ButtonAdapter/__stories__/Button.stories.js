@@ -3,7 +3,7 @@ import { Button as VanillaButton } from "hig-vanilla";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { text, boolean, select } from "@storybook/addon-knobs/react";
-import Button from "adapters/ButtonAdapter";
+import Button from "../index";
 
 storiesOf("Button", module).add("default, with event handlers", () => (
   <Button

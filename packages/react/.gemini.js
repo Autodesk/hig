@@ -3,7 +3,7 @@ const dotenv = require("dotenv");
 dotenv.config({ path: "./gemini/.env" });
 
 module.exports = {
-  rootUrl: "http://localhost:9001",
+  rootUrl: "http://localhost:9876",
   gridUrl: "http://ondemand.saucelabs.com/wd/hub",
   screenshotsDir: "./gemini/screens",
   compositeImage: true,

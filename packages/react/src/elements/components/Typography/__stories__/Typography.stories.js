@@ -1,12 +1,8 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { number, boolean, select, text } from "@storybook/addon-knobs/react";
-import Typography from "elements/components/Typography/Typography";
-import {
-  _VALID_COLORS,
-  _VALID_SIZES,
-  _VALID_TYPES
-} from "elements/components/Typography/_constants";
+import Typography from "../Typography";
+import { _VALID_COLORS, _VALID_SIZES, _VALID_TYPES } from "../_constants";
 import {
   H1,
   H2,
@@ -18,7 +14,7 @@ import {
   Disabled,
   Sub1,
   Sub2
-} from "elements/components/Typography";
+} from "..";
 
 storiesOf("Typography", module).add("base component", () => (
   <Typography

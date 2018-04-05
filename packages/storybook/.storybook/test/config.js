@@ -1,12 +1,12 @@
 import { configure, addDecorator } from "@storybook/react";
+import "../shared/config";
 import TestDecorator from "./TestDecorator";
-import "hig-vanilla/lib/hig.css";
 
-const req = require.context("../stories", true);
+addDecorator(TestDecorator);
+
+const req = require.context("../../../", true, /stories-test.js$/);
 function loadStories() {
   req.keys().forEach(req);
 }
-
-addDecorator(TestDecorator);
 
 configure(loadStories, module);

@@ -56,3 +56,4 @@ nohup.out
 
 # compiled build stuff
 build/
+storybook-static/

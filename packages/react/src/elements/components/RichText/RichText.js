@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
 import "./rich-text.scss";
-
-export const _AVAILABLE_SIZES = Object.freeze(["small", "large"]);
+import _AVAILABLE_SIZES from "./sizes";
 
 const COMPONENT_CLASS = "hig__rich-text";
 export default class RichText extends Component {

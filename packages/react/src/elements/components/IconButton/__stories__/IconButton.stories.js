@@ -2,7 +2,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { select, text, boolean } from "@storybook/addon-knobs/react";
-import Shortcut from "elements/components/Shortcut/index";
+import IconButton from "../index";
 
 const icons = [
   "add",
@@ -97,11 +97,20 @@ const icons = [
   "x-close-gray"
 ];
 
-storiesOf("Shortcut", module).add("default", () => (
-  <Shortcut
-    title={text("Title", "Shortcut")}
+storiesOf("IconButton", module).add("default", () => (
+  <IconButton
+    type={select("Type", {
+      primary: "primary",
+      flat: "flat",
+      transparent: "transparent"
+    })}
+    title={text("Title", "Icon button")}
     link={text("Link", "http://www.autodesk.com")}
+    disabled={boolean("Disabled", false)}
     icon={select("Icon name", icons, "settings")}
     onClick={action("onClick")}
+    onBlur={action("onBlur")}
+    onFocus={action("onFocus")}
+    onHover={action("onHover")}
   />
 ));
