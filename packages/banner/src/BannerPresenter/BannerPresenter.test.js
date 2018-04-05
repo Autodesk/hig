@@ -1,7 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
 
-import { placements } from "../placements";
 import { types } from "../types";
 import BannerPresenter from "./BannerPresenter";
 
@@ -16,27 +15,26 @@ describe.only("banner/BannerPresenter/BannerPresenter", () => {
       props: {
         type: types.URGENT,
         label: "HELLO",
-        message: "World"
+        children: "World"
       }
     },
     {
-      description: "renders with a string as children",
+      description: "renders with a string as actions",
       props: {
-        placement: placements.TOP,
-        children: "foobar"
+        actions: "foobar"
       }
     },
     {
-      description: "renders with a node as children",
+      description: "renders with a node as actions",
       props: {
         dismissButtonTitle: "boom",
-        children: <span>foo</span>
+        actions: <span>foo</span>
       }
     },
     {
-      description: "renders with a fragment as children",
+      description: "renders with a fragment as actions",
       props: {
-        children: [<span key="0">bar</span>, <div key="1">baz</div>]
+        actions: [<span key="0">bar</span>, <div key="1">baz</div>]
       }
     }
   ].forEach(({ description, props: { children, ...otherProps } }) => {

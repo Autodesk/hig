@@ -4,49 +4,44 @@ import React from "react";
 import Banner from "./Banner";
 
 describe("banner/Banner", () => {
-  describe("Action", () => {
-    it("exposes the `Action` component", () => {
-      expect(Banner).toHaveProperty("Action", expect.any(Function));
-    });
-  });
+  const exposedComponents = ["Action", "Interactions", "Presenter"];
+  const componentMatcher = expect.any(Function);
 
-  describe("Interactions", () => {
-    it("exposes the `Interactions` component", () => {
-      expect(Banner).toHaveProperty("Interactions", expect.any(Function));
-    });
-  });
-
-  describe("Presenter", () => {
-    it("exposes the `Presenter` component", () => {
-      expect(Banner).toHaveProperty("Presenter", expect.any(Function));
+  exposedComponents.forEach(componentName => {
+    describe(componentName, () => {
+      it(`exposes the \`${componentName}\` component`, () => {
+        expect(Banner).toHaveProperty(componentName, componentMatcher);
+      });
     });
   });
 
   describe("rendering", () => {
+    const renderedComponents = [
+      "BannerAnimator",
+      "BannerContainer",
+      "BannerPresenter"
+    ];
+
+    let wrapper;
+
     beforeAll(() => {
       window.requestAnimationFrame = jest.fn();
+    });
+
+    beforeEach(() => {
+      wrapper = mount(<Banner />);
     });
 
     afterAll(() => {
       delete window.requestAnimationFrame;
     });
 
-    it("renders the `BannerAnimator`", () => {
-      const wrapper = mount(<Banner />);
-
-      expect(wrapper.find("BannerAnimator")).toBePresent();
-    });
-
-    it("renders the `BannerContainer`", () => {
-      const wrapper = mount(<Banner />);
-
-      expect(wrapper.find("BannerContainer")).toBePresent();
-    });
-
-    it("renders the `BannerPresenter`", () => {
-      const wrapper = mount(<Banner />);
-
-      expect(wrapper.find("BannerPresenter")).toBePresent();
+    renderedComponents.forEach(componentName => {
+      describe(componentName, () => {
+        it(`renders a \`${componentName}\` component`, () => {
+          expect(wrapper.find(componentName)).toBePresent();
+        });
+      });
     });
   });
 });

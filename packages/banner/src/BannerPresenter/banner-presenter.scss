@@ -7,14 +7,6 @@
   border-width: 1px 0;
   border-style: solid;
 
-  &.hig__banner--bottom {
-    border-bottom-width: 0;
-  }
-
-  &.hig__banner--top {
-    border-top-width: 0;
-  }
-
   &.hig__banner--urgent {
     border-color: $banner-border-color--urgent;
     background-color: $banner-background-color--urgent;
@@ -52,12 +44,13 @@
   }
 }
 
-.hig__banner__notification {
+.hig__banner__message {
   flex-basis: 50%;
   min-width: $banner-notification-width-min;
   max-width: $banner-notification-width-max;
   padding-bottom: $banner-message-padding-y;
   margin: 0 auto 0 0;
+  text-align: left;
 
   .hig__banner--interactive & {
     margin-right: $banner-content-spacing-min;

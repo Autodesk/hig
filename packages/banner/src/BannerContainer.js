@@ -190,7 +190,7 @@ export default class BannerContainer extends Component {
       refContent,
       refNotification,
       refInteractionsWrapper,
-      children: this.renderActions()
+      actions: this.renderActions()
     };
   }
 

@@ -25,7 +25,7 @@ describe("banner/BannerContainer", () => {
     const [[presenterBag]] = presenterRenderProp.mock.calls;
 
     expect(presenterBag).toMatchObject({
-      children: "foobar",
+      actions: "foobar",
       isWrappingContent: false,
       refContent: expect.any(Function),
       refInteractionsWrapper: expect.any(Function),

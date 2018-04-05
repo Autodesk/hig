@@ -14,10 +14,10 @@ import BannerPresenter from "./BannerPresenter";
  * @property {string} [type]
  * @property {string} [placement]
  * @property {string} [label]
- * @property {string} [message]
+ * @property {string} [labelledBy]
+ * @property {any} [actions]
  * @property {string} [dismissButtonTitle]
  * @property {Function} [onDismiss]
- * @property {string} [labelId]
  * @property {boolean} [isVisible]
  * @property {any} [children]
  */
@@ -40,18 +40,18 @@ export default class Banner extends Component {
     placement: PropTypes.oneOf(AVAILABLE_PLACEMENTS),
     /** The label of the message displayed */
     label: PropTypes.string,
-    /** The displayed message */
-    message: PropTypes.string,
+    /** The ID used for ARIA labeling */
+    labelledBy: PropTypes.string,
+    /** Banner actions; Any JSX, or a render prop function */
+    actions: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
     /** Accessibility text for the dismiss button */
     dismissButtonTitle: PropTypes.string,
     /** Called when the banner is dismissed */
     onDismiss: PropTypes.func,
-    /** The ID used for ARIA labeling */
-    labelId: PropTypes.string,
     /** Animation; Determines the visibility of the banner */
     isVisible: PropTypes.bool,
-    /** Banner actions; Any JSX, or a render prop function */
-    children: PropTypes.oneOfType([PropTypes.node, PropTypes.func])
+    /** The displayed message */
+    children: PropTypes.string
   };
 
   /** @type {BannerProps | any} */
@@ -68,7 +68,7 @@ export default class Banner extends Component {
   };
 
   render() {
-    const { isVisible, children: actions } = this.props;
+    const { isVisible, actions } = this.props;
     const { renderPresenter } = this;
 
     return (

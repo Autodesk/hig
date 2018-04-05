@@ -6,7 +6,6 @@ import cx from "classnames";
 import { Icon as BasicIcon, IconButton, Text } from "hig-react";
 
 import "./banner-presenter.scss";
-import { placements } from "../placements";
 import { types } from "../types";
 
 /** @todo Reference from constant on `Text` component */
@@ -23,7 +22,7 @@ const classNames = Object.freeze({
   dismissButton: "hig__banner__dismiss-button",
   iconBackground: "hig__banner__icon-background",
   interactionsWrapper: "hig__banner__interactions-wrapper",
-  notification: "hig__banner__notification",
+  notification: "hig__banner__message",
   wrapper: "hig__banner",
   wrapperBottom: "hig__banner--bottom",
   wrapperUrgent: "hig__banner--urgent",
@@ -34,12 +33,6 @@ const classNames = Object.freeze({
   wrapperWarning: "hig__banner--warning",
   wrapperWrapContent: "hig__banner--wrap-content"
 });
-
-/** @type {Object.<string, string>} */
-const wrapperModifiersByPlacement = {
-  [placements.BOTTOM]: classNames.wrapperBottom,
-  [placements.TOP]: classNames.wrapperTop
-};
 
 /** @type {Object.<string, string>} */
 const wrapperModifiersByType = {
@@ -66,7 +59,6 @@ const iconNamesByType = {
 /**
  * @typedef {Object} WrapperProps
  * @property {string} type
- * @property {string} placement
  * @property {boolean} hasActions
  * @property {string | undefined} [labelledBy]
  * @property {boolean} isWrappingContent
@@ -80,8 +72,8 @@ const iconNamesByType = {
 export function Wrapper(props) {
   const {
     type,
-    placement,
     hasActions,
+    label,
     labelledBy,
     isWrappingContent,
     children
@@ -90,13 +82,17 @@ export function Wrapper(props) {
   const classes = cx(
     classNames.wrapper,
     wrapperModifiersByType[type],
-    wrapperModifiersByPlacement[placement],
     hasActions ? classNames.wrapperInteractive : undefined,
     isWrappingContent ? classNames.wrapperWrapContent : undefined
   );
 
   return (
-    <div role="alert" aria-labelledby={labelledBy} className={classes}>
+    <div
+      role="alert"
+      aria-label={label}
+      aria-labelledby={labelledBy}
+      className={classes}
+    >
       {children}
     </div>
   );
@@ -168,30 +164,12 @@ export function Notification({ innerRef, children }) {
 }
 
 /**
- * @typedef {Object} LabelProps
- * @property {string} [id]
- * @property {any} [children]
- */
-
-/**
- * @param {LabelProps} props
- * @returns {JSX.Element}
- */
-export function Label({ id, children }) {
-  return <Text color={TEXT_COLOR} id={id}>{`${children}: `}</Text>;
-}
-
-/**
  * @param {StyledProps} props
  * @returns {JSX.Element}
  */
 export function Message({ children }) {
   if (typeof children === "string") {
     return <Text color={TEXT_COLOR}>{children}</Text>;
-  }
-
-  if (typeof children === "function") {
-    return children();
   }
 
   return children;

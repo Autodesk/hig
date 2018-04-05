@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import { types, AVAILABLE_TYPES } from "../types";
-import { placements, AVAILABLE_PLACEMENTS } from "../placements";
 
 import {
   Content,
@@ -18,12 +17,11 @@ import {
 /**
  * @typedef {Object} BannerPresenterProps
  * @property {string} [type]
- * @property {string} [placement]
  * @property {string} [label]
- * @property {string} [message]
+ * @property {string} [labelledBy]
+ * @property {any} [actions]
  * @property {string} [dismissButtonTitle]
  * @property {Function} [onDismiss]
- * @property {string} [labelId]
  * @property {boolean} [isWrappingContent]
  * @property {function(HTMLDivElement): any} [refContent]
  * @property {function(HTMLParagraphElement): any} [refNotification]
@@ -39,40 +37,36 @@ import {
 export default function BannerPresenter(props) {
   const {
     type,
-    placement,
     label,
-    message,
+    labelledBy,
+    actions,
     dismissButtonTitle,
     onDismiss,
-    labelId,
     isWrappingContent,
     refContent,
     refNotification,
     refInteractionsWrapper,
-    children
+    children: message,
   } = props;
 
-  const hasLabel = !!label;
-  const hasActions = React.Children.count(children) > 0;
-  const wrapperLabelledBy = hasLabel ? labelId : undefined;
+  const hasActions = React.Children.count(actions) > 0;
 
   return (
     <Wrapper
       type={type}
-      placement={placement}
       hasActions={hasActions}
       isWrappingContent={isWrappingContent}
-      labelledBy={wrapperLabelledBy}
+      label={label}
+      labelledBy={labelledBy}
     >
       <Icon type={type} />
       <Content innerRef={refContent}>
         <Notification innerRef={refNotification}>
-          {hasLabel ? <Label id={labelId}>{label}</Label> : null}
           <Message>{message}</Message>
         </Notification>
         {hasActions ? (
           <InteractionsWrapper innerRef={refInteractionsWrapper}>
-            {children}
+            {actions}
           </InteractionsWrapper>
         ) : null}
       </Content>
@@ -84,27 +78,24 @@ export default function BannerPresenter(props) {
 /** @type {BannerPresenterProps} */
 BannerPresenter.defaultProps = {
   type: types.PRIMARY,
-  placement: placements.STANDARD,
-  message: "Message",
   dismissButtonTitle: "Dismiss",
-  isWrappingContent: false
+  isWrappingContent: false,
+  children: "Message"
 };
 
 BannerPresenter.propTypes = {
   /** Indicates the style of banner */
   type: PropTypes.oneOf(AVAILABLE_TYPES),
-  /** Determines the intended placement of banner */
-  placement: PropTypes.oneOf(AVAILABLE_PLACEMENTS),
   /** The label of the message displayed */
   label: PropTypes.string,
-  /** The displayed message */
-  message: PropTypes.string,
+  /** The ID used for ARIA labeling */
+  labelledBy: PropTypes.string,
+  /** Banner actions */
+  actions: PropTypes.node,
   /** Accessibility text for the dismiss button */
   dismissButtonTitle: PropTypes.string,
   /** Called when the banner is dismissed */
   onDismiss: PropTypes.func,
-  /** The ID used for ARIA labeling */
-  labelId: PropTypes.string,
   /** Determines whether the banner content wraps */
   isWrappingContent: PropTypes.bool,
   /** References content element */
@@ -113,6 +104,6 @@ BannerPresenter.propTypes = {
   refNotification: PropTypes.func,
   /** References interactions wrapper element */
   refInteractionsWrapper: PropTypes.func,
-  /** Banner actions */
+  /** The displayed message */
   children: PropTypes.node
 };
