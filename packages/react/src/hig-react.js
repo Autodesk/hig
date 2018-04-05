@@ -37,10 +37,10 @@ export {
 } from "./elements/components/GlobalNav/GlobalNav";
 export { default as Grid } from "./adapters/GridAdapter";
 export { default as GridItem } from "./adapters/GridItemAdapter";
-export { default as Icon } from "./elements/components/Icon/Icon";
 export {
   default as IconButton
 } from "./elements/components/IconButton/IconButton";
+export { default as Icon } from "@hig/icon";
 export { default as Image } from "./adapters/ImageAdapter";
 export { default as Modal } from "./elements/components/Modal";
 export {
