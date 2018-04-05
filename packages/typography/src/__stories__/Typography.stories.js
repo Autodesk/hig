@@ -17,7 +17,7 @@ import {
   Disabled,
   Sub1,
   Sub2
-} from "elements/components/Typography";
+} from "../index";
 
 storiesOf("Typography", module).add(
   "base component",
