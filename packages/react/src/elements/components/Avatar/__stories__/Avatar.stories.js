@@ -1,8 +1,8 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { text, select } from "@storybook/addon-knobs/react";
+import avatarImage from "@hig/storybook/storybook-support/fixtures/avatar/chris-reynolds.png";
 import Avatar, { _AVAILABLE_SIZES } from "../index";
-import avatarImage from "./avatar.png";
 
 storiesOf("Avatar", module)
   .add("default", () => (

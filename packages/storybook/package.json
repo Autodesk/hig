@@ -6,6 +6,7 @@
   "license": "Apache-2.0",
   "homepage": "https://hig.autodesk.com",
   "version": "1.0.0",
+  "files": ["*"],
   "scripts": {
     "gemini": "yarn storybook-test-build && concurrently 'yarn storybook-test-serve' 'yarn vanilla-test-serve' 'gemini test --reporter html --reporter flat' --kill-others --success first",
     "gemini-update": "yarn storybook-test-build && concurrently 'yarn storybook-test-serve' 'yarn vanilla-test-serve' 'gemini update --reporter html --reporter flat' --kill-others --success first",
