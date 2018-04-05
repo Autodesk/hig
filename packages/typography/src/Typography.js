@@ -1,10 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
+
 import { _VALID_COLORS, _VALID_SIZES, _VALID_TYPES } from "./_constants";
 import "./typography.scss";
 
-export default class Typography extends Component {
+export default class Typography extends React.Component {
   render() {
     const classes = cx("hig__typography", {
       [`hig__typography__${this.props.type}`]: this.props.type,
