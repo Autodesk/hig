@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "@hig/icon": "0.1.0-alpha",
+    "@hig/icon-button": "0.1.0-alpha",
     "@hig/icons": "0.1.0-alpha",
     "hig-vanilla": "^0.1.26",
     "react-flip-move": "^3.0.1",

@@ -4,15 +4,10 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
 import "./icon-button.scss";
-import Icon from "../Icon/Icon";
-
-const types = Object.freeze({
-  PRIMARY: "primary",
-  FLAT: "flat",
-  TRANSPARENT: "transparent"
-});
-
-const availableTypes = Object.values(types);
+import Icon from "@hig/icon";
+import { AVAILABLE_NAMES as AVAILABLE_ICON_NAMES } from '@hig/icons';
+import types from "./types";
+import AVAILABLE_TYPES from './availableTypes';
 
 export default class IconButton extends Component {
   getTabIndex() {
@@ -33,8 +28,7 @@ export default class IconButton extends Component {
       onClick: this.props.onClick,
       onBlur: this.props.onBlur,
       onFocus: this.props.onFocus,
-      onMouseEnter: this.props.onMouseEnter,
-      onMouseLeave: this.props.onLeave
+      onMouseEnter: this.props.onMouseEnter
     };
 
     return this.props.link ? (
@@ -59,8 +53,6 @@ export default class IconButton extends Component {
   }
 }
 
-IconButton.types = types;
-
 IconButton.defaultProps = {
   type: types.PRIMARY,
   link: null,
@@ -79,7 +71,7 @@ IconButton.propTypes = {
   /**
    * Name of the icon to be used
    */
-  name: PropTypes.oneOf(Icon.AVAILABLE_NAMES),
+  name: PropTypes.oneOf(AVAILABLE_ICON_NAMES),
   /**
    * SVG markup used for the icon
    */
@@ -109,11 +101,7 @@ IconButton.propTypes = {
    */
   onHover: PropTypes.func,
   /**
-   * Called when user moves the mouse away from the button
-   */
-  onLeave: PropTypes.func,
-  /**
    * 'primary' or 'flat'; the style of the button
    */
-  type: PropTypes.oneOf(availableTypes)
+  type: PropTypes.oneOf(AVAILABLE_TYPES)
 };
