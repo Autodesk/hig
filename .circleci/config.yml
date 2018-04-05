@@ -50,29 +50,6 @@ jobs:
           key: react-build-{{ .Revision }}
           paths:
             - packages/react/lib
-  vanilla-test:
-    <<: *defaults
-    steps:
-      - checkout
-      - restore_cache:
-          key: dependencies-{{ checksum "yarn.lock" }}
-      - restore_cache:
-          key: vanilla-build-{{ .Revision }}
-      - run:
-          name: Lint (Vanilla)
-          command: yarn lint
-          working_directory: packages/vanilla
-      - run:
-          name: Start Server (Vanilla)
-          command: yarn run http-server
-          background: true
-          working_directory: packages/vanilla
-      - run:
-          name: Run Tests (Vanilla)
-          command: yarn gemini-ci
-          working_directory: packages/vanilla
-      - store_artifacts:
-          path: packages/vanilla/gemini-report
   react-test:
     <<: *defaults
     steps:
@@ -93,7 +70,7 @@ jobs:
           working_directory: packages/storybook
       - store_artifacts:
           path: packages/storybook/coverage
-  react-visual-test:
+  visual-test:
     <<: *defaults
     steps:
       - checkout
@@ -207,21 +184,16 @@ workflows:
       - react-build:
           requires:
             - vanilla-build
-      - vanilla-test:
-          requires:
-            - vanilla-build
       - react-test:
           requires:
             - react-build
-      - react-visual-test:
+      - visual-test:
           requires:
             - react-build
-            - vanilla-test
       - deploy-playground:
           requires:
-            - vanilla-test
             - react-test
-            - react-visual-test
+            - visual-test
           filters:
             branches:
               only: development
@@ -232,9 +204,8 @@ workflows:
                 - development
                 - master
           requires:
-            - vanilla-test
             - react-test
-            - react-visual-test
+            - visual-test
       - packages-deploy-storybook-on-branch:
           filters:
             branches:
@@ -242,14 +213,12 @@ workflows:
                 - development
                 - master
           requires:
-            - vanilla-test
             - react-test
-            - react-visual-test
+            - visual-test
       - packages-deploy:
           requires:
-            - vanilla-test
             - react-test
-            - react-visual-test
+            - visual-test
           filters:
             branches:
               only: master
