@@ -21,7 +21,10 @@
     "lint": "eslint ./src/**/*"
   },
   "dependencies": {
-    "hig-react": "^0.29.0-alpha"
+    "@hig/icon": "^0.1.0-alpha",
+    "@hig/icon-button": "^0.1.0-alpha",
+    "@hig/icons": "^0.1.0-alpha",
+    "@hig/typography": "^0.1.0-alpha"
   },
   "eslintConfig": { "extends": "@hig" },
   "eslintIgnore": ["*.scss", "*.json"]
