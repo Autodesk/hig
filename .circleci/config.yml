@@ -155,6 +155,10 @@ jobs:
       - restore_cache:
           key: react-build-{{ .Revision }}
       - run:
+          name: Install Dependencies
+          command: yarn
+          working_directory: packages/storybook
+      - run:
           name: Deploy Storybook
           command: yarn storybook-deploy --domain `echo hig-$CIRCLE_BRANCH.surge.sh | awk 'echo gsub(/\//, "-")'`
           working_directory: packages/storybook
