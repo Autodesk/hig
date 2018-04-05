@@ -7,8 +7,8 @@
   "homepage": "https://hig.autodesk.com",
   "version": "1.0.0",
   "scripts": {
-    "gemini": "concurrently 'yarn storybook-test' 'gemini test --reporter html --reporter flat' --kill-others --success first",
-    "gemini-update": "concurrently 'yarn storybook-test' 'gemini update --reporter html --reporter flat' --kill-others --success first",
+    "gemini": "concurrently 'yarn storybook-test' 'http-server ../vanilla' 'gemini test --reporter html --reporter flat' --kill-others --success first",
+    "gemini-update": "concurrently 'yarn storybook-test' 'http-server ../vanilla' 'gemini update --reporter html --reporter flat' --kill-others --success first",
     "gemini-ci": "gemini test --reporter html --reporter flat",
     "storybook": "start-storybook -p 9001 -c .storybook/development",
     "storybook-build": "build-storybook -c .storybook/development",
@@ -37,6 +37,7 @@
     "file-loader": "^1.1.11",
     "gemini": "^4.19.3",
     "gemini-sauce": "^1.0.1",
+    "http-server": "^0.11.1",
     "jest": "^21.2.1",
     "jest-enzyme": "^3.8.3",
     "jest-extended": "^0.6.0",

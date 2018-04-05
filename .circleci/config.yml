@@ -112,6 +112,11 @@ jobs:
           background: true
           working_directory: packages/storybook
       - run:
+          name: Start HTTP Server
+          command: yarn http-server
+          background: true
+          working_directory: packages/vanilla
+      - run:
           name: Run Visual Regression Tests
           command: yarn gemini-ci
           working_directory: packages/storybook
