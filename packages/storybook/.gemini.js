@@ -28,7 +28,7 @@ module.exports = {
   },
   sets: {
     chrome: {
-      files: []
+      files: ["../**/*.gemini.js"]
     }
   }
 };
