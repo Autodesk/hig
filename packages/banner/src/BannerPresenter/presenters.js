@@ -3,7 +3,9 @@
 import React from "react";
 import cx from "classnames";
 
-import { Icon as BasicIcon, IconButton, Text } from "hig-react";
+import { default as BasicIcon, names as iconNames, sizes as iconSizes } from '@hig/icon';
+import IconButton, { types as iconButtonTypes } from '@hig/icon-button';
+import { Text } from '@hig/typography';
 
 import "./banner-presenter.scss";
 import { types } from "../types";
@@ -11,8 +13,7 @@ import { types } from "../types";
 /** @todo Reference from constant on `Text` component */
 const TEXT_COLOR = "hig-cool-gray-70";
 
-const { types: iconButtonTypes } = IconButton;
-const { names: iconNames, sizes: iconSizes } = BasicIcon;
+const {  } = IconButton;
 
 /** @type {Object.<string, string>} */
 const classNames = Object.freeze({
