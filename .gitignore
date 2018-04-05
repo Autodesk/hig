@@ -57,3 +57,4 @@ nohup.out
 # compiled build stuff
 build/
 storybook-static/
+storybook-gemini-test/

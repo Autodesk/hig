@@ -107,15 +107,19 @@ jobs:
           name: Install Dependencies
           command: yarn
       - run:
-          name: Start Test Storybook Server
-          command: yarn storybook-test
+          name: Build Test Storybook Server
+          command: yarn storybook-test-build
+          working_directory: packages/storybook
+      - run:
+          name: Serve Test Storybook
+          command: yarn storybook-test-serve
           background: true
           working_directory: packages/storybook
       - run:
           name: Start HTTP Server
-          command: yarn http-server
+          command: yarn vanilla-test-serve
           background: true
-          working_directory: packages/vanilla
+          working_directory: packages/storybook
       - run:
           name: Run Visual Regression Tests
           command: yarn gemini-ci

@@ -7,15 +7,18 @@
   "homepage": "https://hig.autodesk.com",
   "version": "1.0.0",
   "scripts": {
-    "gemini": "concurrently 'yarn storybook-test' 'http-server ../vanilla' 'gemini test --reporter html --reporter flat' --kill-others --success first",
-    "gemini-update": "concurrently 'yarn storybook-test' 'http-server ../vanilla' 'gemini update --reporter html --reporter flat' --kill-others --success first",
+    "gemini": "yarn storybook-test-build && concurrently 'yarn storybook-test-serve' 'yarn vanilla-test-serve' 'gemini test --reporter html --reporter flat' --kill-others --success first",
+    "gemini-update": "yarn storybook-test-build && concurrently 'yarn storybook-test-serve' 'yarn vanilla-test-serve' 'gemini update --reporter html --reporter flat' --kill-others --success first",
     "gemini-ci": "gemini test --reporter html --reporter flat",
     "storybook": "start-storybook -p 9001 -c .storybook/development",
     "storybook-build": "build-storybook -c .storybook/development",
     "storybook-deploy": "build-storybook -c .storybook/development && surge --project storybook-static",
     "storybook-test": "start-storybook -p 9876 -c .storybook/test",
+    "storybook-test-build": "build-storybook -c .storybook/test -o storybook-gemini-test",
+    "storybook-test-serve": "http-server storybook-gemini-test -p 9876",
     "test": "jest",
-    "test-ci": "jest --coverage --runInBand --colors"
+    "test-ci": "jest --coverage --runInBand --colors",
+    "vanilla-test-serve": "http-server ../vanilla -p 8080"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.4.0",
