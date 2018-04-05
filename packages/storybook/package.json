@@ -46,5 +46,9 @@
     "react-dom": "^15.6.2",
     "react-test-renderer": "^15.6.1",
     "surge": "^0.20.1"
+  },
+  "dependencies": {
+    "@hig/banner": "^0.1.0-alpha",
+    "hig-react": "^0.29.0-alpha"
   }
 }
