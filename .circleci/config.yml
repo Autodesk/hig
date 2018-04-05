@@ -157,6 +157,7 @@ jobs:
       - run:
           name: Deploy Storybook
           command: yarn storybook-deploy --domain `echo hig-$CIRCLE_BRANCH.surge.sh | awk 'echo gsub(/\//, "-")'`
+          working_directory: packages/storybook
   packages-deploy:
     <<: *defaults
     steps:

@@ -8,32 +8,12 @@
   "version": "1.0.1",
   "scripts": {
     "publish-canary": "lerna publish --canary --yes --exact",
-    "storybook": "start-storybook -p 9001 -c .storybook/development",
-    "storybook-build": "build-storybook -c .storybook/development",
-    "storybook-deploy": "build-storybook -c .storybook/development && surge --project storybook-static",
-    "storybook-test": "start-storybook -p 9876 -c .storybook/test",
     "update-packages": "lerna publish --skip-npm"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^3.4.0",
-    "@storybook/addon-info": "^3.4.0",
-    "@storybook/addon-knobs": "^3.4.0",
-    "@storybook/addon-notes": "^3.4.0",
-    "@storybook/addon-options": "^3.4.0",
-    "@storybook/addon-viewport": "^3.4.0",
-    "@storybook/addons": "^3.4.0",
-    "@storybook/react": "^3.4.0",
-    "babel-core": "^6.26.0",
-    "babel-runtime": "^6.26.0",
-    "file-loader": "^1.1.11",
     "lerna": "^2.9.0",
-    "lodash": "^4.17.5",
     "node-fetch": "^1.7.3",
-    "raw-loader": "^0.5.1",
-    "react": "^15.6.2",
-    "react-dom": "^15.6.2",
-    "registry-url": "^3.1.0",
-    "svg-url-loader": "^2.3.2"
+    "registry-url": "^3.1.0"
   },
   "workspaces": [
     "packages/*"
