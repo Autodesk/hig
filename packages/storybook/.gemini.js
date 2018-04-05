@@ -2,8 +2,15 @@ const dotenv = require("dotenv");
 
 dotenv.config({ path: ".env" });
 
+const chromeCapabilities = {
+  browserName: "chrome",
+  version: "65.0",
+  platform: "macOs 10.12",
+  name: "Gemini visual regression tests"
+};
+
 module.exports = {
-  rootUrl: "http://localhost:9876",
+  rootUrl: "http://www.example.com",
   gridUrl: "http://ondemand.saucelabs.com/wd/hub",
   screenshotsDir: "./gemini/screens",
   compositeImage: true,
@@ -17,18 +24,18 @@ module.exports = {
     }
   },
   browsers: {
-    chrome: {
-      desiredCapabilities: {
-        browserName: "chrome",
-        version: "65.0",
-        platform: "macOs 10.12",
-        name: "gemini visual regression tests"
-      }
+    chromeReact: {
+      rootUrl: "http://localhost:9876",
+      screenshotsDir: "./gemini/chromeReact",
+      desiredCapabilities: chromeCapabilities
+    },
     }
   },
   sets: {
-    chrome: {
-      files: ["../**/*.gemini.js"]
+    react: {
+      files: ["../**/*.gemini.js"],
+      browsers: ["chromeReact"]
+    },
     }
   }
 };
