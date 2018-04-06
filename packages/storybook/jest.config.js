@@ -7,5 +7,6 @@ module.exports = {
   rootDir: "../../",
   setupFiles: ["raf/polyfill"],
   setupTestFrameworkScriptFile: "<rootDir>/packages/storybook/support/jest/setupTests.js",
+  testPathIgnorePatterns: ["<rootDir>/packages/vanilla"],
   unmockedModulePathPatterns: ["node_modules"]
 };
