@@ -1,5 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
+import { withInfo } from "@storybook/addon-info";
+
 import Icon from "../index";
 
 const iconKeys = {
@@ -221,5 +223,8 @@ const stories = [
 ];
 
 stories.forEach(({ label, size }) => {
-  storiesOf("Icon", module).add(label, () => <IconStory size={size} />);
+  storiesOf("Icon", module).add(
+    label,
+    withInfo()(() => <IconStory size={size} />)
+  );
 });

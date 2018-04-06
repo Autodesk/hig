@@ -2,6 +2,8 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { select, text } from "@storybook/addon-knobs/react";
+import { withInfo } from "@storybook/addon-info";
+
 import Shortcut from "../index";
 
 const icons = [
@@ -97,11 +99,14 @@ const icons = [
   "x-close-gray"
 ];
 
-storiesOf("Shortcut", module).add("default", () => (
-  <Shortcut
-    title={text("Title", "Shortcut")}
-    link={text("Link", "http://www.autodesk.com")}
-    icon={select("Icon name", icons, "settings")}
-    onClick={action("onClick")}
-  />
-));
+storiesOf("Shortcut", module).add(
+  "default",
+  withInfo()(() => (
+    <Shortcut
+      title={text("Title", "Shortcut")}
+      link={text("Link", "http://www.autodesk.com")}
+      icon={select("Icon name", icons, "settings")}
+      onClick={action("onClick")}
+    />
+  ))
+);

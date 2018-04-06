@@ -2,6 +2,8 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { text, boolean } from "@storybook/addon-knobs/react";
+import { withInfo } from "@storybook/addon-info";
+
 import Notification from "../index";
 import Notifications from "../../GlobalNav/TopNav/Notifications"; // TODO: Swap out for Notifications
 import TextLink from "../../../../adapters/TextLinkAdapter"; // TODO: Swap out for TextLink
@@ -41,7 +43,7 @@ const updatedDate4 = minutesDate4.setMinutes(minutesDate4.getMinutes() - 20);
 
 const sampleNotifications = [
   {
-    id: 0,
+    id: 1,
     unread: true,
     type: "primary",
     timestamp: new Date(updatedDate1),
@@ -60,16 +62,14 @@ const sampleNotifications = [
           <TextLink
             href="https://github.com/Autodesk/hig"
             text="Manage renewal"
-            onClick={() => {
-              console.log("notifications id 1");
-            }}
+            onClick={action("notifications id 1")}
           />
         </p>
       </div>
     )
   },
   {
-    id: 1,
+    id: 2,
     unread: true,
     type: "success",
     timestamp: new Date(updatedDate2),
@@ -87,9 +87,7 @@ const sampleNotifications = [
           <TextLink
             href="https://github.com/Autodesk/hig"
             text="Manage renewal"
-            onClick={() => {
-              console.log("notifications id 2");
-            }}
+            onClick={action("notifications id 2")}
           />
         </p>
       </div>
@@ -114,9 +112,7 @@ const sampleNotifications = [
           <TextLink
             href="https://github.com/Autodesk/hig"
             text="Manage renewal"
-            onClick={() => {
-              console.log("notifications id 2");
-            }}
+            onClick={action("notifications id 3")}
           />
         </p>
       </div>
@@ -137,9 +133,7 @@ const sampleNotifications = [
           <TextLink
             href="https://github.com/Autodesk/hig"
             text="Manage renewal"
-            onClick={() => {
-              console.log("notifications id 2");
-            }}
+            onClick={action("notifications id 4")}
           />
         </p>
       </div>
@@ -148,30 +142,33 @@ const sampleNotifications = [
 ];
 
 storiesOf("Notifications", module)
-  .add("V1", () => (
-    <Notifications
-      title="Notifications"
-      onClick={action("Notifications on click")}
-      onClickOutside={action("Notifications onClickOutside")}
-      onScroll={action("Notifications onScroll")}
-      unreadCount={text("Unread count", 3)}
-      featuredNotification={featuredNotification()}
-      loading={boolean("Loading Indicator", false)}
-      open
-    >
-      {sampleNotifications.map(notification => (
-        <Notification
-          unread={notification.unread}
-          key={notification.id}
-          onLinkClick={action("Notification Link Clicked")}
-          id={notification.id}
-          title={notification.title}
-          type={notification.type}
-          timestamp={notification.timestamp}
-        >
-          {notification.children}
-        </Notification>
-      ))}
-    </Notifications>
-  ))
-  .add("interactive V1", () => <NotificationsInteraction />);
+  .add(
+    "V1",
+    withInfo()(() => (
+      <Notifications
+        title="Notifications"
+        onClick={action("Notifications on click")}
+        onClickOutside={action("Notifications onClickOutside")}
+        onScroll={action("Notifications onScroll")}
+        unreadCount={text("Unread count", 3)}
+        featuredNotification={featuredNotification()}
+        loading={boolean("Loading Indicator", false)}
+        open
+      >
+        {sampleNotifications.map(notification => (
+          <Notification
+            unread={notification.unread}
+            key={notification.id}
+            onLinkClick={action("Notification Link Clicked")}
+            id={notification.id}
+            title={notification.title}
+            type={notification.type}
+            timestamp={notification.timestamp}
+          >
+            {notification.children}
+          </Notification>
+        ))}
+      </Notifications>
+    ))
+  )
+  .add("interactive V1", withInfo()(() => <NotificationsInteraction />));

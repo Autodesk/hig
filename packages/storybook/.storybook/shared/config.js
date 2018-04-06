@@ -1,6 +1,9 @@
 import { addDecorator } from "@storybook/react";
-import { withInfo } from "@storybook/addon-info";
 import { withKnobs } from "@storybook/addon-knobs/react";
+import { setDefaults } from '@storybook/addon-info';
 
-addDecorator((story, context) => withInfo({ header: true })(story)(context));
 addDecorator(withKnobs);
+
+setDefaults({
+  header: true,
+});
