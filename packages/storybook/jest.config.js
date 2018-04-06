@@ -1,7 +1,6 @@
 module.exports = {
   collectCoverageFrom: [
-    "**/src/**/*.{js,jsx}",
-    "!**/index.js",
+    "**/src/**/*.{js,jsx}"
   ],
   coverageDirectory: "<rootDir>/packages/storybook/coverage",
   coveragePathIgnorePatterns: [
