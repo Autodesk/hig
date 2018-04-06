@@ -1,4 +1,25 @@
 module.exports = {
+  collectCoverageFrom: [
+    "**/src/**/*.{js,jsx}",
+    "!**/index.js",
+  ],
+  coverageDirectory: "<rootDir>/packages/storybook/coverage",
+  coveragePathIgnorePatterns: [
+    "node_modules",
+    "packages\/vanilla",
+    "src\/playground",
+    "examples\/redux",
+    "__stories__",
+    "__gemini__"
+  ],
+  coverageThreshold: {
+    global: {
+      branches: 60,
+      functions: 60,
+      lines: 60,
+      statements: 60
+    }
+  },
   moduleNameMapper: {
     "\\.(css|scss|svg)$": "<rootDir>/packages/storybook/support/jest/fileMock.js"
   },
