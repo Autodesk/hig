@@ -116,5 +116,7 @@ const stories = [
 const bannerStories = storiesOf("Banner", module);
 
 stories.forEach(({ description, props }) => {
-  bannerStories.add(description, withInfo()(() => <BannerStory props={props} />));
+  bannerStories.add(description, withInfo({
+    propTables: [Banner]
+  })(() => <BannerStory props={props} />));
 });
