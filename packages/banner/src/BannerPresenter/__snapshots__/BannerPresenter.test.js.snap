@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`banner/BannerPresenter/BannerPresenter renders with a fragment as children 1`] = `
+exports[`banner/BannerPresenter/BannerPresenter renders with a fragment as actions 1`] = `
 <div
+  aria-label={undefined}
   aria-labelledby={undefined}
   className="hig__banner hig__banner--primary hig__banner--interactive"
   role="alert"
@@ -22,7 +23,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a fragment as child
     className="hig__banner__content"
   >
     <p
-      className="hig__banner__notification"
+      className="hig__banner__message"
     >
       <span
         className="hig__typography hig__typography__text hig__typography--hig-cool-gray-70"
@@ -70,6 +71,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a fragment as child
 
 exports[`banner/BannerPresenter/BannerPresenter renders with a label 1`] = `
 <div
+  aria-label="HELLO"
   aria-labelledby={undefined}
   className="hig__banner hig__banner--urgent"
   role="alert"
@@ -90,14 +92,8 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a label 1`] = `
     className="hig__banner__content"
   >
     <p
-      className="hig__banner__notification"
+      className="hig__banner__message"
     >
-      <span
-        className="hig__typography hig__typography__text hig__typography--hig-cool-gray-70"
-        style={Object {}}
-      >
-        HELLO: 
-      </span>
       <span
         className="hig__typography hig__typography__text hig__typography--hig-cool-gray-70"
         style={Object {}}
@@ -132,8 +128,9 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a label 1`] = `
 </div>
 `;
 
-exports[`banner/BannerPresenter/BannerPresenter renders with a node as children 1`] = `
+exports[`banner/BannerPresenter/BannerPresenter renders with a node as actions 1`] = `
 <div
+  aria-label={undefined}
   aria-labelledby={undefined}
   className="hig__banner hig__banner--primary hig__banner--interactive"
   role="alert"
@@ -154,7 +151,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a node as children 
     className="hig__banner__content"
   >
     <p
-      className="hig__banner__notification"
+      className="hig__banner__message"
     >
       <span
         className="hig__typography hig__typography__text hig__typography--hig-cool-gray-70"
@@ -197,10 +194,11 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a node as children 
 </div>
 `;
 
-exports[`banner/BannerPresenter/BannerPresenter renders with a string as children 1`] = `
+exports[`banner/BannerPresenter/BannerPresenter renders with a string as actions 1`] = `
 <div
+  aria-label={undefined}
   aria-labelledby={undefined}
-  className="hig__banner hig__banner--primary hig__banner--top hig__banner--interactive"
+  className="hig__banner hig__banner--primary hig__banner--interactive"
   role="alert"
 >
   <figure
@@ -219,7 +217,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a string as childre
     className="hig__banner__content"
   >
     <p
-      className="hig__banner__notification"
+      className="hig__banner__message"
     >
       <span
         className="hig__typography hig__typography__text hig__typography--hig-cool-gray-70"
@@ -262,6 +260,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a string as childre
 
 exports[`banner/BannerPresenter/BannerPresenter renders without props 1`] = `
 <div
+  aria-label={undefined}
   aria-labelledby={undefined}
   className="hig__banner hig__banner--primary"
   role="alert"
@@ -282,7 +281,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders without props 1`] = `
     className="hig__banner__content"
   >
     <p
-      className="hig__banner__notification"
+      className="hig__banner__message"
     >
       <span
         className="hig__typography hig__typography__text hig__typography--hig-cool-gray-70"
