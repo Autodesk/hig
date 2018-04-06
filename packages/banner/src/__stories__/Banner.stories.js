@@ -2,15 +2,38 @@ import React from "react";
 
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import { text, select } from "@storybook/addon-knobs/react";
+import { text, select, boolean } from "@storybook/addon-knobs/react";
+import { makeSelectOptions } from "@hig/storybook/utils";
 
 import { Button } from "hig-react";
 import Banner from "../Banner";
 
+const typeOptions = makeSelectOptions(Banner.types);
+const placementOptions = makeSelectOptions(Banner.placements);
+
+const knobGroupIds = {
+  basic: "Basic",
+  animation: "Animation",
+  a11y: "Accessibility",
+  actions: "Actions"
+};
+
+const knobLabels = {
+  type: "Style",
+  children: "Message",
+  placement: "Placement",
+  isVisible: "Visible",
+  label: "Label",
+  dismissButtonTitle: "Dismiss title",
+  onDismiss: "Banner dismissed"
+};
+
 function getBannerKnobs(props) {
   const {
     type,
+    placement,
     children,
+    isVisible = true,
     label,
     dismissButtonTitle,
     onDismiss,
@@ -19,11 +42,22 @@ function getBannerKnobs(props) {
 
   return {
     ...otherProps,
-    type: select("Type", Banner.AVAILABLE_TYPES, type),
-    children: text("Message", children),
-    label: text("Label", label),
-    dismissButtonTitle: text("Dismiss title", dismissButtonTitle),
-    onDismiss: action("Banner dismissed", onDismiss)
+    type: select(knobLabels.type, typeOptions, type, knobGroupIds.basic),
+    children: text(knobLabels.children, children, knobGroupIds.basic),
+    placement: select(
+      knobLabels.placement,
+      placementOptions,
+      placement,
+      knobGroupIds.animation
+    ),
+    isVisible: boolean(knobLabels.isVisible, isVisible, knobGroupIds.animation),
+    label: text(knobLabels.label, label, knobLabels.a11y),
+    dismissButtonTitle: text(
+      knobLabels.dismissButtonTitle,
+      dismissButtonTitle,
+      knobGroupIds.a11y
+    ),
+    onDismiss: action(knobLabels.onDismiss, onDismiss, knobGroupIds.actions)
   };
 }
 
