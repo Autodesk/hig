@@ -13,6 +13,10 @@ module.exports = (storybookBaseConfig) => {
       use: ["style-loader", "css-loader", "sass-loader"]
     },
     {
+      test: /\.(json)$/,
+      use: ["json-loader"]
+    },
+    {
       test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2)(\?.*)?$/,
       use: [
         {
