@@ -62,29 +62,20 @@ function getBannerKnobs(props) {
   };
 }
 
-function BannerDemo(props) {
-  const { children, ...otherProps } = getBannerKnobs(props);
+const bannerStories = storiesOf("Banner", module);
 
-  return (
-    <div style={{ marginBottom: "15px" }}>
-      <Banner {...otherProps}>{children}</Banner>
-    </div>
-  );
-}
+bannerStories.add("default", withInfo({
+  propTables: [Banner]
+})(() => {
+  const { children, ...otherProps } = getBannerKnobs({});
+  return (<Banner {...otherProps}>{children}</Banner>)
+}));
 
-function BannerStory({ props }) {
-  return <BannerDemo {...props} />;
-}
-
-const stories = [
-  {
-    description: "default",
-    props: {}
-  },
-  {
-    description: "verbose, with interactions",
-    props: {
-      type: Banner.types.WARNING,
+bannerStories.add("verbose, with interactions", withInfo({
+  propTables: [Banner]
+})(() => {
+  const props = {
+    type: Banner.types.WARNING,
       children:
         // eslint-disable-next-line max-len
         "PROCESS COMPLETE: Changes have been made to you document. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",
@@ -109,14 +100,7 @@ const stories = [
           </Banner.Action>
         </Banner.Interactions>
       )
-    }
   }
-];
-
-const bannerStories = storiesOf("Banner", module);
-
-stories.forEach(({ description, props }) => {
-  bannerStories.add(description, withInfo({
-    propTables: [Banner]
-  })(() => <BannerStory props={props} />));
-});
+  const { children, ...otherProps } = getBannerKnobs(props);
+  return (<Banner {...otherProps}>{children}</Banner>)
+}));
