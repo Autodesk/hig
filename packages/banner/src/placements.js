@@ -1,8 +1,9 @@
 /** @type {Object.<string, string>} */
 export const placements = Object.freeze({
-  STANDARD: "standard",
-  TOP: "top",
-  BOTTOM: "bottom"
+  ABOVE: "above",
+  ABOVE_OVERLAY: "above-overlay",
+  BETWEEN: "between",
+  BELOW_OVERLAY: "below-overlay"
 });
 
 /** @type {string[]} */

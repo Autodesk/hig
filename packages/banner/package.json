@@ -10,7 +10,8 @@
   "devDependencies": {
     "@hig/scripts": "^0.1.0",
     "@hig/styles": "^0.1.0-alpha",
-    "@hig/eslint-config": "0.1.0"
+    "@hig/eslint-config": "0.1.0",
+    "hig-react": "^0.29.0-alpha"
   },
   "peerDependencies": {
     "prop-types": "^15.5.10",
@@ -24,8 +25,9 @@
     "@hig/icon": "^0.1.0-alpha",
     "@hig/icon-button": "^0.1.0-alpha",
     "@hig/icons": "^0.1.0-alpha",
-    "@hig/typography": "^0.1.0-alpha"
+    "@hig/typography": "^0.1.0-alpha",
+    "react-lifecycles-compat": "^2.0.0"
   },
   "eslintConfig": { "extends": "@hig" },
-  "eslintIgnore": ["*.scss", "*.json", "*.js.snap"]
+  "eslintIgnore": ["*.scss", "*.json"]
 }
