@@ -61,20 +61,6 @@ function getBannerKnobs(props) {
   };
 }
 
-function BannerDemo(props) {
-  const { children, ...otherProps } = getBannerKnobs(props);
-
-  return (
-    <div style={{ marginBottom: "15px" }}>
-      <Banner {...otherProps}>{children}</Banner>
-    </div>
-  );
-}
-
-function BannerStory({ props }) {
-  return <BannerDemo {...props} />;
-}
-
 const stories = [
   {
     description: "default",
@@ -115,5 +101,6 @@ const stories = [
 const bannerStories = storiesOf("Banner", module);
 
 stories.forEach(({ description, props }) => {
-  bannerStories.add(description, () => <BannerStory props={props} />);
+  const { children, ...otherProps } = getBannerKnobs(props);
+  bannerStories.add(description, () => <Banner {...otherProps}>{children}</Banner>);
 });
