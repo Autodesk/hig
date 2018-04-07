@@ -4,7 +4,8 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { text, select, boolean } from "@storybook/addon-knobs/react";
 import { withInfo } from "@storybook/addon-info";
-import { makeSelectOptions } from "@hig/storybook/utils";
+import { makeSelectOptions, translate as t } from "@hig/storybook/utils";
+import * as languages from './i18n';
 
 import { Button } from "hig-react";
 import Banner from "../Banner";
@@ -16,7 +17,8 @@ const knobGroupIds = {
   basic: "Basic",
   animation: "Animation",
   a11y: "Accessibility",
-  actions: "Actions"
+  actions: "Actions",
+  i18n: "i18n"
 };
 
 const knobLabels = {
@@ -26,7 +28,8 @@ const knobLabels = {
   isVisible: "Visible",
   label: "Label",
   dismissButtonTitle: "Dismiss title",
-  onDismiss: "Banner dismissed"
+  onDismiss: "Banner dismissed",
+  language: "Language"
 };
 
 function getBannerKnobs(props) {
@@ -74,11 +77,16 @@ bannerStories.add("default", withInfo({
 bannerStories.add("verbose, with interactions", withInfo({
   propTables: [Banner]
 })(() => {
+  const chosenLanguage = select(
+    knobLabels.language,
+    languages.languageOptions,
+    "en",
+    knobGroupIds.i18n
+  );
   const props = {
     type: Banner.types.WARNING,
       children:
-        // eslint-disable-next-line max-len
-        "PROCESS COMPLETE: Changes have been made to you document. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",
+        t(languages, chosenLanguage, "BANNER_MESSAGE"),
       /** @todo Cleanup/refactor */
       actions: ({ isWrappingActions }) => (
         <Banner.Interactions isWrappingActions={isWrappingActions}>
@@ -87,7 +95,7 @@ bannerStories.add("verbose, with interactions", withInfo({
               type="secondary"
               size="small"
               width={isWrappingActions ? "grow" : "shrink"}
-              title={text("Resolve text", "Accept Changes")}
+              title={text("Resolve text", t(languages, chosenLanguage, "BANNER_RESOLVE_BUTTON_TEXT"))}
             />
           </Banner.Action>
           <Banner.Action>
@@ -95,7 +103,7 @@ bannerStories.add("verbose, with interactions", withInfo({
               type="secondary"
               size="small"
               width={isWrappingActions ? "grow" : "shrink"}
-              title={text("Reject text", "Reject Changes")}
+              title={text("Reject text", t(languages, chosenLanguage, "BANNER_REJECT_BUTTON_TEXT"))}
             />
           </Banner.Action>
         </Banner.Interactions>

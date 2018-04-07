@@ -1,4 +1,4 @@
-function translate({ languages, language, key }) {
+function translate(languages, language, key) {
   return languages[language][key];
 }
 
