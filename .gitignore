@@ -40,7 +40,7 @@ jspm_packages
 .node_repl_history
 
 # Gemini Report
-/gemini-report
+gemini-report/
 
 # Files created by CircleCI
 nohup.out
@@ -57,3 +57,4 @@ nohup.out
 # compiled build stuff
 build/
 storybook-static/
+storybook-gemini-test/

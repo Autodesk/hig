@@ -4,7 +4,7 @@ import TestDecorator from "./TestDecorator";
 
 addDecorator(TestDecorator);
 
-const req = require.context("../../../", true, /stories-test.js$/);
+const req = require.context("../../../", true, /stories\-test\.js$/);
 function loadStories() {
   req.keys().forEach(req);
 }

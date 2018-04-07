@@ -3,6 +3,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { text, select, boolean } from "@storybook/addon-knobs/react";
+import { withInfo } from "@storybook/addon-info";
 import { makeSelectOptions } from "@hig/storybook/utils";
 
 import { Button } from "hig-react";
@@ -115,5 +116,7 @@ const stories = [
 const bannerStories = storiesOf("Banner", module);
 
 stories.forEach(({ description, props }) => {
-  bannerStories.add(description, () => <BannerStory props={props} />);
+  bannerStories.add(description, withInfo({
+    propTables: [Banner]
+  })(() => <BannerStory props={props} />));
 });

@@ -1,13 +1,16 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { select } from "@storybook/addon-knobs/react";
+import { withInfo } from "@storybook/addon-info";
+
+import sampleAvatar from "@hig/storybook/storybook-support/fixtures/avatar/chris-reynolds.png";
+
 import Avatar from "../../Avatar";
 import Toast from "../../Toast";
 import ToastList from "..";
 import { AVAILABLE_PLACEMENTS } from "../placements";
 
 import ToastListInteractions from "./ToastListInteractions";
-import sampleAvatar from "./chris-reynolds-avatar.png";
 
 const exampleToasts = React.Children.toArray([
   <Toast status="primary">
@@ -28,13 +31,19 @@ const exampleToasts = React.Children.toArray([
 ]);
 
 storiesOf("ToastList", module)
-  .add("static", () => (
-    <ToastList placement={select("Placement", AVAILABLE_PLACEMENTS, "top")}>
-      {exampleToasts}
-    </ToastList>
-  ))
-  .add("demonstrate adding new children", () => (
-    <ToastListInteractions
-      placement={select("Placement", AVAILABLE_PLACEMENTS, "top")}
-    />
-  ));
+  .add(
+    "static",
+    withInfo()(() => (
+      <ToastList placement={select("Placement", AVAILABLE_PLACEMENTS, "top")}>
+        {exampleToasts}
+      </ToastList>
+    ))
+  )
+  .add(
+    "demonstrate adding new children",
+    withInfo()(() => (
+      <ToastListInteractions
+        placement={select("Placement", AVAILABLE_PLACEMENTS, "top")}
+      />
+    ))
+  );

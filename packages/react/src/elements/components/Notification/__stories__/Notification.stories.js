@@ -2,81 +2,56 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { text, boolean } from "@storybook/addon-knobs/react";
+import { withInfo } from "@storybook/addon-info";
+
 import Notification from "../index";
 import TextLink from "../../../../adapters/TextLinkAdapter"; // TODO: Swap out for TextLink
 
-const sampleNotifications = [
-  {
-    id: 0,
-    unread: true,
-    children: (
-      <div>
-        <p>
-          <b>Your subscription expires May 5</b>
-        </p>
-        <p>
-          Maya<br />
-          Media & Entertainment Collection<br />
-          Product Design Collection<br />
-          2 more
-        </p>
-        <p>
-          <TextLink
-            href="https://github.com/Autodesk/hig"
-            text="Manage renewal"
-            onClick={() => {
-              console.log("notifications id 1");
-            }}
-          />
-        </p>
-      </div>
-    )
-  },
-  {
-    id: 1,
-    unread: true,
-    children: (
-      <div>
-        <p>
-          <b>Your subscription expires April 20</b>
-        </p>
-        <p>
-          AutoCAD<br />
-          Architecture Construction Engineering Collection<br />
-          Product Design Collection<br />
-        </p>
-        <p>
-          <TextLink
-            href="https://github.com/Autodesk/hig"
-            text="Manage renewal"
-            onClick={() => {
-              console.log("notifications id 2");
-            }}
-          />
-        </p>
-      </div>
-    )
-  }
-];
+const sampleNotification = (
+  <div>
+    <p>
+      <b>Your subscription expires May 5</b>
+    </p>
+    <p>
+      Maya<br />
+      Media & Entertainment Collection<br />
+      Product Design Collection<br />
+      2 more
+    </p>
+    <p>
+      <TextLink
+        href="https://github.com/Autodesk/hig"
+        text="Manage renewal"
+        onClick={action("notifications id 1")}
+      />
+    </p>
+  </div>
+);
 
 storiesOf("Notification", module)
-  .add("default", () => (
-    <Notification
-      id={1}
-      unread={boolean("Unread", false)}
-      onLinkClick={action("link clicked")}
-      status={text("Status")}
-    >
-      {sampleNotifications[0].children}
-    </Notification>
-  ))
-  .add("Featured Notification", () => (
-    <Notification
-      id={1}
-      onLinkClick={action("link clicked")}
-      featured={boolean("Featured", true)}
-      onDismiss={action("dimiss featured notification")}
-    >
-      {sampleNotifications[0].children}
-    </Notification>
-  ));
+  .add(
+    "default",
+    withInfo()(() => (
+      <Notification
+        id={1}
+        unread={boolean("Unread", false)}
+        onLinkClick={action("link clicked")}
+        status={text("Status")}
+      >
+        {sampleNotification}
+      </Notification>
+    ))
+  )
+  .add(
+    "Featured Notification",
+    withInfo()(() => (
+      <Notification
+        id={1}
+        onLinkClick={action("link clicked")}
+        featured={boolean("Featured", true)}
+        onDismiss={action("dimiss featured notification")}
+      >
+        {sampleNotification}
+      </Notification>
+    ))
+  );
