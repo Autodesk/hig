@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
-import Icon from "@hig/icon";
+import Icon, { sizes as iconSizes } from "@hig/icon";
 import IconButton from "@hig/icon-button";
 import RichText from "../RichText";
 import "./toast.scss";
@@ -25,7 +25,7 @@ export default class Toast extends Component {
     if (showStatusIcon && _STATUS_ICONS[status]) {
       return (
         <div className="hig__toast__image-container">
-          {<Icon name={_STATUS_ICONS[status]} size={Icon.sizes.PX_24} />}
+          {<Icon name={_STATUS_ICONS[status]} size={iconSizes.PX_24} />}
         </div>
       );
     }

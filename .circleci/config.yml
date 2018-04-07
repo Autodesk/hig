@@ -1,5 +1,4 @@
 defaults: &defaults
-  working_directory: ~/hig
   docker:
     - image: circleci/node:8.10-stretch
 
@@ -10,22 +9,33 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependencies-{{ checksum "yarn.lock" }}
+          key: v1-dependencies-{{ checksum "yarn.lock" }}
       - run:
           name: Install NPM Dependencies
           command: yarn
+      - run:
+          name: Build (components)
+          command: yarn build
       - save_cache:
-          key: dependencies-{{ checksum "yarn.lock" }}
+          key: v1-dependencies-{{ checksum "yarn.lock" }}
           paths:
             - node_modules
-            - packages/vanilla/node_modules
-            - packages/react/node_modules
+            - packages/banner/node_modules
+            - packages/icon/node_modules
+            - packages/icon-button/node_modules
+            - packages/icons/node_modules
+            - packages/typography/node_modules
+            - packages/banner/build
+            - packages/icon/build
+            - packages/icon-button/build
+            - packages/icons/build
+            - packages/typography/build
   vanilla-build:
     <<: *defaults
     steps:
       - checkout
       - restore_cache:
-          key: dependencies-{{ checksum "yarn.lock" }}
+          key: v1-dependencies-{{ checksum "yarn.lock" }}
       - run:
           name: Build (Vanilla)
           command: yarn lib
@@ -39,7 +49,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependencies-{{ checksum "yarn.lock" }}
+          key: v1-dependencies-{{ checksum "yarn.lock" }}
       - restore_cache:
           key: vanilla-build-{{ .Revision }}
       - run:
@@ -55,7 +65,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependencies-{{ checksum "yarn.lock" }}
+          key: v1-dependencies-{{ checksum "yarn.lock" }}
       - restore_cache:
           key: vanilla-build-{{ .Revision }}
       - restore_cache:
@@ -75,7 +85,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependencies-{{ checksum "yarn.lock" }}
+          key: v1-dependencies-{{ checksum "yarn.lock" }}
       - restore_cache:
           key: vanilla-build-{{ .Revision }}
       - restore_cache:
@@ -108,7 +118,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependencies-{{ checksum "yarn.lock" }}
+          key: v1-dependencies-{{ checksum "yarn.lock" }}
       - restore_cache:
           key: vanilla-build-{{ .Revision }}
       - restore_cache:
@@ -122,7 +132,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependencies-{{ checksum "yarn.lock" }}
+          key: v1-dependencies-{{ checksum "yarn.lock" }}
       - restore_cache:
           key: vanilla-build-{{ .Revision }}
       - restore_cache:
@@ -138,7 +148,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependencies-{{ checksum "yarn.lock" }}
+          key: v1-dependencies-{{ checksum "yarn.lock" }}
       - restore_cache:
           key: vanilla-build-{{ .Revision }}
       - restore_cache:
@@ -156,7 +166,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependencies-{{ checksum "yarn.lock" }}
+          key: v1-dependencies-{{ checksum "yarn.lock" }}
       - restore_cache:
           key: vanilla-build-{{ .Revision }}
       - restore_cache:
