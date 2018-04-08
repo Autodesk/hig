@@ -14,11 +14,11 @@
     "lib/*"
   ],
   "scripts": {
+    "build": "NODE_ENV=production webpack -p",
     "build-playground": "react-scripts build",
     "build-icons": "node scripts/build-icons.js",
     "deploy-playground": "react-scripts build && surge build",
     "generate-docs": "node ./scripts/generate-docs.js",
-    "lib": "NODE_ENV=production webpack -p",
     "lint": "eslint ./src/** -c ./.eslintrc.js",
     "lint-fix": "eslint ./src/** -c ./.eslintrc.js --fix",
     "playground": "react-scripts start",
