@@ -1,8 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[
-  `banner/BannerPresenter/BannerPresenter renders with a fragment as actions 1`
-] = `
+exports[`banner/BannerPresenter/BannerPresenter renders with a fragment as actions 1`] = `
 <div
   aria-label={undefined}
   aria-labelledby={undefined}
@@ -130,9 +128,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a label 1`] = `
 </div>
 `;
 
-exports[
-  `banner/BannerPresenter/BannerPresenter renders with a node as actions 1`
-] = `
+exports[`banner/BannerPresenter/BannerPresenter renders with a node as actions 1`] = `
 <div
   aria-label={undefined}
   aria-labelledby={undefined}
@@ -198,9 +194,7 @@ exports[
 </div>
 `;
 
-exports[
-  `banner/BannerPresenter/BannerPresenter renders with a string as actions 1`
-] = `
+exports[`banner/BannerPresenter/BannerPresenter renders with a string as actions 1`] = `
 <div
   aria-label={undefined}
   aria-labelledby={undefined}

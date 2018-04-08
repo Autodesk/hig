@@ -2,11 +2,11 @@ import renderer from "react-test-renderer";
 import React from "react";
 
 import { names } from "@hig/icons";
-import IconButton from "./IconButton";
+import IconButton, { types as iconButtonTypes } from "./IconButton";
 
 describe("IconButton", () => {
   it("has type constants", () => {
-    expect(IconButton).toHavePropertyOfConstants("types");
+    expect(iconButtonTypes).toBeDefined();
   });
 
   it("renders correctly", () => {
