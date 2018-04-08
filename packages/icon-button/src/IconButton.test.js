@@ -1,7 +1,7 @@
 import renderer from "react-test-renderer";
 import React from "react";
 
-import { names } from "../Icons/icons";
+import { names } from "@hig/icons";
 import IconButton from "./IconButton";
 
 describe("IconButton", () => {
