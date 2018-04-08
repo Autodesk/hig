@@ -1,4 +1,4 @@
-import * as icons from "./icons";
+import * as icons from "./index";
 
 describe("icons", () => {
   describe("default", () => {

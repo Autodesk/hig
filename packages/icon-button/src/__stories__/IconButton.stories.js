@@ -2,8 +2,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { select, text, boolean } from "@storybook/addon-knobs/react";
-import { withInfo } from "@storybook/addon-info";
-import IconButton from "../index";
+import IconButton from "../IconButton";
 
 const icons = [
   "add",
@@ -98,23 +97,20 @@ const icons = [
   "x-close-gray"
 ];
 
-storiesOf("IconButton", module).add(
-  "default",
-  withInfo()(() => (
-    <IconButton
-      type={select("Type", {
-        primary: "primary",
-        flat: "flat",
-        transparent: "transparent"
-      })}
-      title={text("Title", "Icon button")}
-      link={text("Link", "http://www.autodesk.com")}
-      disabled={boolean("Disabled", false)}
-      icon={select("Icon name", icons, "settings")}
-      onClick={action("onClick")}
-      onBlur={action("onBlur")}
-      onFocus={action("onFocus")}
-      onHover={action("onHover")}
-    />
-  ))
-);
+storiesOf("IconButton", module).add("default", () => (
+  <IconButton
+    type={select("Type", {
+      primary: "primary",
+      flat: "flat",
+      transparent: "transparent"
+    })}
+    title={text("Title", "Icon button")}
+    link={text("Link", "http://www.autodesk.com")}
+    disabled={boolean("Disabled", false)}
+    icon={select("Icon name", icons, "settings")}
+    onClick={action("onClick")}
+    onBlur={action("onBlur")}
+    onFocus={action("onFocus")}
+    onHover={action("onHover")}
+  />
+));
