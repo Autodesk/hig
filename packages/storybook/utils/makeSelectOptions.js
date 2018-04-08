@@ -2,7 +2,7 @@
  * @param {Object.<string, string>} constants
  * @returns {Object.<string, string>}
  */
-export function makeSelectOptions(constants) {
+export default function makeSelectOptions(constants) {
   return Object.keys(constants).reduce((options, constantKey) => {
     const key = constants[constantKey];
     const capitalize = str => str.charAt(0) + str.substr(1).toLowerCase();
