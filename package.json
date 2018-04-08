@@ -9,7 +9,8 @@
   "scripts": {
     "publish-canary": "lerna publish --canary --yes --exact",
     "update-packages": "lerna publish --skip-npm",
-    "lint": "lerna run lint"
+    "lint": "lerna run lint",
+    "build": "lerna run build"
   },
   "devDependencies": {
     "lerna": "^2.9.0",

@@ -1,5 +1,4 @@
 defaults: &defaults
-  working_directory: ~/hig
   docker:
     - image: circleci/node:8.10-stretch
 
@@ -14,13 +13,28 @@ jobs:
       - run:
           name: Install NPM Dependencies
           command: yarn
+      - run:
+          name: Build (components)
+          command: yarn build
       - save_cache:
           key: v2-dependencies-{{ checksum "yarn.lock" }}
           paths:
             - node_modules
-            - packages/vanilla/node_modules
-            - packages/react/node_modules
+            - packages/banner/node_modules
             - packages/eslint-banner/node_modules
+            - packages/icon/node_modules
+            - packages/icon-button/node_modules
+            - packages/icons/node_modules
+            - packages/react/node_modules
+            - packages/themes/node_modules
+            - packages/typography/node_modules
+            - packages/vanilla/node_modules
+            - packages/banner/build
+            - packages/icon/build
+            - packages/icon-button/build
+            - packages/icons/build
+            - packages/themes/build
+            - packages/typography/build
   vanilla-build:
     <<: *defaults
     steps:
