@@ -6,12 +6,12 @@ import { types, AVAILABLE_TYPES } from "../types";
 import {
   Content,
   DismissButton,
-  Icon,
   InteractionsWrapper,
   Message,
   Notification,
   Wrapper
 } from "./presenters";
+import IconBackground from '../presenters/IconBackground';
 
 /**
  * @typedef {Object} BannerPresenterProps
@@ -58,7 +58,7 @@ export default function BannerPresenter(props) {
       label={label}
       labelledBy={labelledBy}
     >
-      <Icon type={type} />
+      <IconBackground type={type} />
       <Content innerRef={refContent}>
         <Notification innerRef={refNotification}>
           <Message>{message}</Message>

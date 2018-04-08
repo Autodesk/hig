@@ -25,11 +25,11 @@ exports[`banner/Banner snapshot tests renders with no props 1`] = `
       aria-label={undefined}
       aria-labelledby={undefined}
       aria-live="polite"
-      className="hig__banner hig__banner--primary"
+      className="hig__banner hig__banner--primary hig--light-theme"
       role="alert"
     >
       <figure
-        className="hig__banner__icon-background"
+        className="hig__banner__icon-background hig--light-theme"
       >
         <div
           className="hig__icon hig__icon--24-size"

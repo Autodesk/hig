@@ -29,17 +29,36 @@ $banner-message-padding-y: ($banner-wrapper-min-height - $banner-message-line-he
 
 /* Colors */
 
-$banner-border-color--urgent: color(hig-salmon-40);
-$banner-border-color--warning: color(hig-gold-40);
-$banner-border-color--primary: color(hig-blue-30);
-$banner-border-color--complete: color(hig-green-40);
+$banner-hig-light-theme: (
+  border-color--urgent: color(hig-salmon-40),
+  border-color--warning: color(hig-gold-40),
+  border-color--primary: color(hig-blue-30),
+  border-color--complete: color(hig-green-40),
 
-$banner-background-color--urgent: color(hig-salmon-20);
-$banner-background-color--warning: color(hig-gold-20);
-$banner-background-color--primary: color(hig-blue-10);
-$banner-background-color--complete: color(hig-green-20);
+  background-color--urgent: color(hig-salmon-20),
+  background-color--warning: color(hig-gold-20),
+  background-color--primary: color(hig-blue-10),
+  background-color--complete: color(hig-green-20),
 
-$banner-icon-background-color--urgent: color(hig-red-alert);
-$banner-icon-background-color--warning: color(hig-gold-50);
-$banner-icon-background-color--primary: color(hig-blue-50);
-$banner-icon-background-color--complete: color(hig-green-50);
+  icon-background-color--urgent: color(hig-red-alert),
+  icon-background-color--warning: color(hig-gold-50),
+  icon-background-color--primary: color(hig-blue-50),
+  icon-background-color--complete: color(hig-green-50),
+);
+
+$banner-matrix-theme: (
+  border-color--urgent: color(matrix-pink-40),
+  border-color--warning: color(matrix-gold-40),
+  border-color--primary: color(matrix-blue-40),
+  border-color--complete: color(matrix-green-40),
+
+  background-color--urgent: color(matrix-pink-20),
+  background-color--warning: color(matrix-gold-20),
+  background-color--primary: color(matrix-blue-20),
+  background-color--complete: color(matrix-green-20),
+
+  icon-background-color--urgent: color(matrix-pink-50),
+  icon-background-color--warning: color(matrix-gold-50),
+  icon-background-color--primary: color(matrix-blue-50),
+  icon-background-color--complete: color(matrix-green-50),
+);
