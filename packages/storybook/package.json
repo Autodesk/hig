@@ -54,7 +54,7 @@
     "surge": "^0.20.1"
   },
   "dependencies": {
-    "@hig/banner": "^0.1.0-alpha",
+    "@hig/banner": "^0.1.1-alpha",
     "hig-react": "^0.29.0-alpha"
   }
 }
