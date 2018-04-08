@@ -5,10 +5,10 @@ import { action } from "@storybook/addon-actions";
 import { text, select, boolean } from "@storybook/addon-knobs/react";
 import { withInfo } from "@storybook/addon-info";
 import { makeSelectOptions, translate as t } from "@hig/storybook/utils";
-import * as languages from './i18n';
-
 import { Button } from "hig-react";
+
 import Banner from "../Banner";
+import * as languages from "./i18n";
 
 const typeOptions = makeSelectOptions(Banner.types);
 const placementOptions = makeSelectOptions(Banner.placements);
@@ -67,26 +67,30 @@ function getBannerKnobs(props) {
 
 const bannerStories = storiesOf("Banner", module);
 
-bannerStories.add("default", withInfo({
-  propTables: [Banner]
-})(() => {
-  const { children, ...otherProps } = getBannerKnobs({});
-  return (<Banner {...otherProps}>{children}</Banner>)
-}));
+bannerStories.add(
+  "default",
+  withInfo({
+    propTables: [Banner]
+  })(() => {
+    const { children, ...otherProps } = getBannerKnobs({});
+    return <Banner {...otherProps}>{children}</Banner>;
+  })
+);
 
-bannerStories.add("verbose, with interactions", withInfo({
-  propTables: [Banner]
-})(() => {
-  const chosenLanguage = select(
-    knobLabels.language,
-    languages.languageOptions,
-    "en",
-    knobGroupIds.i18n
-  );
-  const props = {
-    type: Banner.types.WARNING,
-      children:
-        t(languages, chosenLanguage, "BANNER_MESSAGE"),
+bannerStories.add(
+  "verbose, with interactions",
+  withInfo({
+    propTables: [Banner]
+  })(() => {
+    const chosenLanguage = select(
+      knobLabels.language,
+      languages.languageOptions,
+      "en",
+      knobGroupIds.i18n
+    );
+    const props = {
+      type: Banner.types.WARNING,
+      children: t(languages, chosenLanguage, "BANNER_MESSAGE"),
       /** @todo Cleanup/refactor */
       actions: ({ isWrappingActions }) => (
         <Banner.Interactions isWrappingActions={isWrappingActions}>
@@ -95,7 +99,10 @@ bannerStories.add("verbose, with interactions", withInfo({
               type="secondary"
               size="small"
               width={isWrappingActions ? "grow" : "shrink"}
-              title={text("Resolve text", t(languages, chosenLanguage, "BANNER_RESOLVE_BUTTON_TEXT"))}
+              title={text(
+                "Resolve text",
+                t(languages, chosenLanguage, "BANNER_RESOLVE_BUTTON_TEXT")
+              )}
             />
           </Banner.Action>
           <Banner.Action>
@@ -103,12 +110,16 @@ bannerStories.add("verbose, with interactions", withInfo({
               type="secondary"
               size="small"
               width={isWrappingActions ? "grow" : "shrink"}
-              title={text("Reject text", t(languages, chosenLanguage, "BANNER_REJECT_BUTTON_TEXT"))}
+              title={text(
+                "Reject text",
+                t(languages, chosenLanguage, "BANNER_REJECT_BUTTON_TEXT")
+              )}
             />
           </Banner.Action>
         </Banner.Interactions>
       )
-  }
-  const { children, ...otherProps } = getBannerKnobs(props);
-  return (<Banner {...otherProps}>{children}</Banner>)
-}));
+    };
+    const { children, ...otherProps } = getBannerKnobs(props);
+    return <Banner {...otherProps}>{children}</Banner>;
+  })
+);
