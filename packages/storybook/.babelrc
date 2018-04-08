@@ -11,7 +11,25 @@
     "react",
     "stage-2"
   ],
-  "plugins": [
-    "transform-object-rest-spread"
-  ]
+  "plugins": ["transform-object-rest-spread"],
+  "env": {
+    "test": {
+      "presets": [
+        [
+          "env",
+          {
+            "node": "current"
+          }
+        ],
+        "react",
+        "stage-2"
+      ]
+    },
+    "production": {
+      "presets": [["env", { "modules": false }], "react", "stage-2"]
+    },
+    "development": {
+      "presets": [["env", { "modules": false }], "react", "stage-2"]
+    }
+  }
 }
