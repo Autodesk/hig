@@ -1,4 +1,14 @@
 {
+  "env": {
+    "test": {
+      "presets": [
+        ["env", { "modules": "umd" }],
+        "react",
+        "stage-2"
+      ],
+      "plugins": ["react-docgen"]
+    }
+  },
   "presets": [
     [
       "env",
