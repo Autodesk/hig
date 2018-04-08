@@ -6,11 +6,11 @@ exports[
 <div
   aria-label={undefined}
   aria-labelledby={undefined}
-  className="hig__banner hig__banner--primary hig__banner--interactive"
+  className="hig__banner hig__banner--primary hig__banner--interactive hig--light-theme"
   role="alert"
 >
   <figure
-    className="hig__banner__icon-background"
+    className="hig__banner__icon-background hig--light-theme"
   >
     <div
       className="hig__icon hig__icon--24-size"
@@ -75,11 +75,11 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a label 1`] = `
 <div
   aria-label="HELLO"
   aria-labelledby={undefined}
-  className="hig__banner hig__banner--urgent"
+  className="hig__banner hig__banner--urgent hig--light-theme"
   role="alert"
 >
   <figure
-    className="hig__banner__icon-background"
+    className="hig__banner__icon-background hig--light-theme"
   >
     <div
       className="hig__icon hig__icon--24-size"
@@ -136,11 +136,11 @@ exports[
 <div
   aria-label={undefined}
   aria-labelledby={undefined}
-  className="hig__banner hig__banner--primary hig__banner--interactive"
+  className="hig__banner hig__banner--primary hig__banner--interactive hig--light-theme"
   role="alert"
 >
   <figure
-    className="hig__banner__icon-background"
+    className="hig__banner__icon-background hig--light-theme"
   >
     <div
       className="hig__icon hig__icon--24-size"
@@ -204,11 +204,11 @@ exports[
 <div
   aria-label={undefined}
   aria-labelledby={undefined}
-  className="hig__banner hig__banner--primary hig__banner--interactive"
+  className="hig__banner hig__banner--primary hig__banner--interactive hig--light-theme"
   role="alert"
 >
   <figure
-    className="hig__banner__icon-background"
+    className="hig__banner__icon-background hig--light-theme"
   >
     <div
       className="hig__icon hig__icon--24-size"
@@ -268,11 +268,11 @@ exports[`banner/BannerPresenter/BannerPresenter renders without props 1`] = `
 <div
   aria-label={undefined}
   aria-labelledby={undefined}
-  className="hig__banner hig__banner--primary"
+  className="hig__banner hig__banner--primary hig--light-theme"
   role="alert"
 >
   <figure
-    className="hig__banner__icon-background"
+    className="hig__banner__icon-background hig--light-theme"
   >
     <div
       className="hig__icon hig__icon--24-size"

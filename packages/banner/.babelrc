@@ -2,7 +2,9 @@
   "env": {
     "test": {
       "presets": [
-        ["env", { "modules": "umd" }]
+        ["env", { "modules": "umd" }],
+        "react",
+        "stage-2"
       ]
     }
   },

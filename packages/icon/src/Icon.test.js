@@ -1,7 +1,7 @@
 import renderer from "react-test-renderer";
 import React from "react";
 
-import Icon from "./Icon";
+import Icon, { sizes as iconSizes, names as iconNames, AVAILABLE_NAMES } from "./Icon";
 
 describe("Icon", () => {
   it("renders correctly when using the `nameOrSVG` prop", () => {
@@ -14,7 +14,7 @@ describe("Icon", () => {
 
   it("renders correctly when using the `name` prop", () => {
     const tree = renderer
-      .create(<Icon name={Icon.names.SHARE} size={Icon.sizes.PX_24} />)
+      .create(<Icon name={iconNames.SHARE} size={iconSizes.PX_24} />)
       .toJSON();
 
     expect(tree).toMatchSnapshot();
@@ -26,7 +26,7 @@ describe("Icon", () => {
     </svg>`;
 
     const tree = renderer
-      .create(<Icon svg={svg} size={Icon.sizes.PX_16} />)
+      .create(<Icon svg={svg} size={iconSizes.PX_16} />)
       .toJSON();
 
     expect(tree).toMatchSnapshot();
@@ -62,13 +62,13 @@ describe("Icon", () => {
 
   describe("names", () => {
     it("is an object of constants", () => {
-      expect(Icon).toHavePropertyOfConstants("names");
+      expect(iconNames).toBeDefined();
     });
   });
 
   describe("sizes", () => {
     it("is an object of constants", () => {
-      expect(Icon).toHavePropertyOfConstants("sizes");
+      expect(iconSizes).toBeDefined();
     });
   });
 
@@ -76,7 +76,7 @@ describe("Icon", () => {
     const ICON_NAME_MATCHER = /^[a-z0-9-]+$/;
 
     it("is frozen", () => {
-      expect(Icon.AVAILABLE_NAMES).toBeFrozen();
+      expect(AVAILABLE_NAMES).toBeFrozen();
     });
 
     it("contains icon names", () => {
