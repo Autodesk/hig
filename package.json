@@ -8,7 +8,8 @@
   "version": "1.0.1",
   "scripts": {
     "publish-canary": "lerna publish --canary --yes --exact",
-    "update-packages": "lerna publish --skip-npm"
+    "update-packages": "lerna publish --skip-npm",
+    "lint": "lerna run lint"
   },
   "devDependencies": {
     "lerna": "^2.9.0",

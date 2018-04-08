@@ -1,4 +1,5 @@
 {
+  "private": true,
   "name": "@hig/eslint-config",
   "description": "HIG ESLint config",
   "author": "Autodesk Inc.",
