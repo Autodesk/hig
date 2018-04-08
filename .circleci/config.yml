@@ -76,6 +76,9 @@ jobs:
       - restore_cache:
           key: react-build-{{ .Revision }}
       - run:
+          name: Rerun yarn to re-link peer packages
+          command: yarn build
+      - run:
           name: Lint (React)
           command: yarn lint
       - run:
