@@ -1,10 +1,10 @@
-import React from 'react';
-import { ThemeContext } from '@hig/themes';
-import Icon, { names as iconNames, sizes as iconSizes } from '@hig/icon';
+import React from "react";
+import { ThemeContext } from "@hig/themes";
+import Icon, { names as iconNames, sizes as iconSizes } from "@hig/icon";
 
-import './icon-background.scss';
-import classNames from '../classNames';
-import { types } from '../../types';
+import "./icon-background.scss";
+import classNames from "../classNames";
+import { types } from "../../types";
 
 /** @type {Object.<string, string>} */
 const iconNamesByType = {
@@ -27,7 +27,7 @@ export function IconBackground({ type }) {
   return (
     <ThemeContext.Consumer>
       {({ themeClass }) => (
-        <figure className={[classNames.iconBackground, themeClass].join(' ')}>
+        <figure className={[classNames.iconBackground, themeClass].join(" ")}>
           <Icon name={iconNamesByType[type]} size={iconSizes.MEDIUM} />
         </figure>
       )}

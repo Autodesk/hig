@@ -3,14 +3,14 @@
 import React from "react";
 import cx from "classnames";
 
-import { names as iconNames } from '@hig/icon';
-import IconButton, { types as iconButtonTypes } from '@hig/icon-button';
-import { Text } from '@hig/typography';
-import { ThemeContext } from '@hig/themes';
+import { names as iconNames } from "@hig/icon";
+import IconButton, { types as iconButtonTypes } from "@hig/icon-button";
+import { Text } from "@hig/typography";
+import { ThemeContext } from "@hig/themes";
 
 import "./banner-presenter.scss";
 import { types } from "../types";
-import classNames from '../presenters/classNames';
+import classNames from "../presenters/classNames";
 
 /** @todo Reference from constant on `Text` component */
 const TEXT_COLOR = "hig-cool-gray-70";
@@ -59,20 +59,22 @@ export function Wrapper(props) {
       hasActions ? classNames.wrapperInteractive : undefined,
       isWrappingContent ? classNames.wrapperWrapContent : undefined,
       themeClass
-    )
-  };
+    );
+  }
 
   return (
-    <ThemeContext.Consumer>{({ themeClass }) => (
-      <div
-      role="alert"
-      aria-label={label}
-      aria-labelledby={labelledBy}
-      className={classes(themeClass)}
-    >
-      {children}
-    </div>
-    )}</ThemeContext.Consumer>
+    <ThemeContext.Consumer>
+      {({ themeClass }) => (
+        <div
+          role="alert"
+          aria-label={label}
+          aria-labelledby={labelledBy}
+          className={classes(themeClass)}
+        >
+          {children}
+        </div>
+      )}
+    </ThemeContext.Consumer>
   );
 }
 
