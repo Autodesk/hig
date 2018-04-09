@@ -16,6 +16,7 @@ const {
   version: packageVersion,
   peerDependencies = {},
   dependencies = {},
+  main: mainOutputFile = "build/index.js",
   module: esOutputFile = "build/index.es.js",
   css: cssOutputFile = "build/index.es.css"
 } = packageMeta;
@@ -30,6 +31,7 @@ const inputOptions = {
   plugins: [
     nodeResolve(),
     babel({
+      babelrc: false,
       exclude: [
         "**/node_modules/**",
         "**/*.css",
@@ -68,6 +70,11 @@ const esModulesOutputOptions = {
   format: "es"
 };
 
+const cjsOutputOptions = {
+  file: mainOutputFile,
+  format: "cjs"
+}
+
 async function build() {
   console.log(`Bundling ${packageName} v${packageVersion}.`);
 
@@ -75,6 +82,7 @@ async function build() {
     const bundle = await rollup.rollup(inputOptions);
 
     bundle.write(esModulesOutputOptions);
+    bundle.write(cjsOutputOptions);
   } catch (e) {
     console.log(e);
   }
