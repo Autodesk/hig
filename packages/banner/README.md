@@ -2,7 +2,7 @@
 
 Banners are notifications alerting an event that requires a user action. They are similar toasts except banners are not sparked by the user’s action, therefore they require a different design.  Banners are primarily used for global messages about the system that can be simply informational (blue) or color coded to signal success (green), warning (yellow) and error (red).
 
-Read more about the Banner component [here](https://wiki.autodesk.com/display/HIG/Banners).
+Read more about when and how to use the Banner component [on the internal wiki](https://wiki.autodesk.com/display/HIG/Banners).
 
 ## Basic usage
 

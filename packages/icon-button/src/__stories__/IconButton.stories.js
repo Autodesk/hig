@@ -3,6 +3,8 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { select, text, boolean } from "@storybook/addon-knobs/react";
 import IconButton from "../IconButton";
+import { RichText } from "hig-react";
+import readme from "../../README.md";
 
 const icons = [
   "add",
@@ -97,7 +99,10 @@ const icons = [
   "x-close-gray"
 ];
 
-storiesOf("IconButton", module).add("default", () => (
+storiesOf("IconButton", module).add("default", withInfo({
+  propTables: [Icon],
+  text: <RichText dangerouslySetInnerHTML={{ __html: readme }} />
+})() => (
   <IconButton
     type={select("Type", {
       primary: "primary",

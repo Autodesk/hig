@@ -2,6 +2,8 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
 import Icon, { sizes as iconSizes } from "../Icon";
+import { RichText } from "hig-react";
+import readme from "../../README.md";
 
 const iconKeys = {
   [iconSizes.PX_24]: [
@@ -224,6 +226,9 @@ const stories = [
 stories.forEach(({ label, size }) => {
   storiesOf("Icon", module).add(
     label,
-    withInfo()(() => <IconStory size={size} />)
+    withInfo({
+      propTables: [Icon],
+      text: <RichText dangerouslySetInnerHTML={{ __html: readme }} />
+    })(() => <IconStory size={size} />)
   );
 });
