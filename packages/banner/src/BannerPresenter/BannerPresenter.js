@@ -8,7 +8,6 @@ import {
   DismissButton,
   Icon,
   InteractionsWrapper,
-  Label,
   Message,
   Notification,
   Wrapper
@@ -46,7 +45,7 @@ export default function BannerPresenter(props) {
     refContent,
     refNotification,
     refInteractionsWrapper,
-    children: message,
+    children: message
   } = props;
 
   const hasActions = React.Children.count(actions) > 0;
