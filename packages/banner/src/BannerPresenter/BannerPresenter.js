@@ -11,7 +11,7 @@ import {
   Notification,
   Wrapper
 } from "./presenters";
-import IconBackground from '../presenters/IconBackground';
+import IconBackground from "../presenters/IconBackground";
 
 /**
  * @typedef {Object} BannerPresenterProps
