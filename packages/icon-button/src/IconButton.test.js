@@ -2,7 +2,8 @@ import renderer from "react-test-renderer";
 import React from "react";
 
 import { names } from "@hig/icons";
-import IconButton, { types as iconButtonTypes } from "./IconButton";
+import IconButton from "./IconButton";
+import { default as iconButtonTypes } from "./types";
 
 describe("IconButton", () => {
   it("has type constants", () => {

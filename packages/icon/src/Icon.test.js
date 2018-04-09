@@ -80,7 +80,7 @@ describe("Icon", () => {
     });
 
     it("contains icon names", () => {
-      Icon.AVAILABLE_NAMES.forEach(name => {
+      AVAILABLE_NAMES.forEach(name => {
         expect(name).toMatch(ICON_NAME_MATCHER);
       });
     });

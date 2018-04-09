@@ -7,7 +7,7 @@ import HIGAdapter, {
   MapsEventListener,
   MountsAnyChild
 } from "./HIGAdapter";
-import { Button } from "../hig-react";
+import Button from "./ButtonAdapter";
 
 export default class ModalAdapter extends Component {
   constructor(props) {
