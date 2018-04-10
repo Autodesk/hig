@@ -52,6 +52,9 @@ const inputOptions = {
         ],
         "stage-2",
         "react"
+      ],
+      plugins: [
+        "react-docgen"
       ]
     }),
     commonjs(),
