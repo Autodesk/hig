@@ -1,7 +1,8 @@
 import renderer from "react-test-renderer";
 import React from "react";
 
-import Icon, { sizes as iconSizes, names as iconNames, AVAILABLE_NAMES } from "./Icon";
+import Icon from "./Icon";
+import { names as iconNames, sizes as iconSizes } from "./index";
 
 describe("Icon", () => {
   it("renders correctly when using the `nameOrSVG` prop", () => {
@@ -57,32 +58,6 @@ describe("Icon", () => {
       renderer.create(<Icon />);
 
       expect(console.warn).toHaveBeenCalled();
-    });
-  });
-
-  describe("names", () => {
-    it("is an object of constants", () => {
-      expect(iconNames).toBeDefined();
-    });
-  });
-
-  describe("sizes", () => {
-    it("is an object of constants", () => {
-      expect(iconSizes).toBeDefined();
-    });
-  });
-
-  describe("AVAILABLE_NAMES", () => {
-    const ICON_NAME_MATCHER = /^[a-z0-9-]+$/;
-
-    it("is frozen", () => {
-      expect(AVAILABLE_NAMES).toBeFrozen();
-    });
-
-    it("contains icon names", () => {
-      AVAILABLE_NAMES.forEach(name => {
-        expect(name).toMatch(ICON_NAME_MATCHER);
-      });
     });
   });
 });

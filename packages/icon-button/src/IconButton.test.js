@@ -3,13 +3,8 @@ import React from "react";
 
 import { names } from "@hig/icons";
 import IconButton from "./IconButton";
-import { default as iconButtonTypes } from "./types";
 
 describe("IconButton", () => {
-  it("has type constants", () => {
-    expect(iconButtonTypes).toBeDefined();
-  });
-
   it("renders correctly", () => {
     const tree = renderer.create(<IconButton name={names.SETTINGS} />).toJSON();
 

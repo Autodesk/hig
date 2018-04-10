@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
-import Icons, { AVAILABLE_NAMES, names } from "@hig/icons";
+import Icons, { AVAILABLE_NAMES } from "@hig/icons";
 
 import "./icon.scss";
 import sizes from "./sizes";
@@ -92,8 +92,6 @@ export default function Icon(props) {
     <div className={classes} dangerouslySetInnerHTML={{ __html: iconMarkup }} />
   );
 }
-
-export { AVAILABLE_NAMES, names, sizes };
 
 Icon.defaultProps = {
   size: sizes.PX_24
