@@ -27,5 +27,5 @@
     "@hig/typography": "^0.1.0-alpha"
   },
   "eslintConfig": { "extends": "@hig" },
-  "eslintIgnore": ["*.scss", "*.json"]
+  "eslintIgnore": ["*.scss", "*.json", "*.js.snap"]
 }

@@ -3,9 +3,9 @@
 import React from "react";
 import cx from "classnames";
 
-import { default as BasicIcon, names as iconNames, sizes as iconSizes } from '@hig/icon';
-import IconButton, { types as iconButtonTypes } from '@hig/icon-button';
-import { Text } from '@hig/typography';
+import BasicIcon, { names as iconNames, sizes as iconSizes } from "@hig/icon";
+import IconButton, { types as iconButtonTypes } from "@hig/icon-button";
+import { Text } from "@hig/typography";
 
 import "./banner-presenter.scss";
 import { types } from "../types";
