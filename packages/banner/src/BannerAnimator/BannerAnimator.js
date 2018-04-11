@@ -44,6 +44,10 @@ class BannerAnimator extends Component {
     const { isVisible } = nextProps;
     const { status } = prevState;
 
+    if (!status) {
+      return isVisible ? endExpand() : endCollapse();
+    }
+
     switch (status) {
       case statuses.COLLAPSED:
       case statuses.COLLAPSING:
@@ -52,7 +56,9 @@ class BannerAnimator extends Component {
       case statuses.EXPANDING:
         return isVisible ? null : startCollapse();
       default:
-        return isVisible ? endExpand() : endCollapse();
+        // eslint-disable-next-line no-console
+        console.warn("Invalid status", { status });
+        return null;
     }
   }
 
@@ -136,9 +142,8 @@ class BannerAnimator extends Component {
   /** @param {TransitionEvent} event */
   handleTransitionEnd = event => {
     const { innerWrapper } = this.state;
-    const expectedTarget = innerWrapper;
 
-    if (event.target !== expectedTarget) return;
+    if (event.target !== innerWrapper) return;
 
     const { status } = this.state;
 
