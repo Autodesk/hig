@@ -18,11 +18,14 @@ import {
 /** @typedef {function(BannerAnimatorState, BannerAnimatorProps): BannerAnimatorState} BannerAnimatorUpdater */
 
 /**
- * @param {BannerAnimatorState} prevState
- * @param {BannerAnimatorProps} props
+ * @param {BannerAnimatorState} [prevState]
+ * @param {BannerAnimatorProps} [props]
  * @returns {import("./styles").StyleUpdaterParams}
  */
-function getParams({ innerWrapper }, { hasPush, hasBounce, position }) {
+function getParams(prevState = {}, props = {}) {
+  const { innerWrapper } = prevState;
+  const { hasPush, hasBounce, position } = props;
+
   return {
     innerWrapper,
     hasBounce,

@@ -8,6 +8,8 @@ const OVERLAY_HEIGHT_BUFFER = 20;
 const TRANSITION_DURATION = 300;
 /** Milliseconds; wait time for the inner wrapper to expand after the wrapper expands */
 const PUSH_DELAY = 300;
+/** Pixels; default banner height used when the component isn't mounted */
+const DEFAULT_HEIGHT = 50;
 
 /**
  * @typedef {Object} StyleUpdaterParams
@@ -20,6 +22,14 @@ const PUSH_DELAY = 300;
 /**
  * @typedef {function(StyleUpdaterParams): string} StyleUpdater
  */
+
+/**
+ * @param {HTMLDivElement} [innerWrapper]
+ * @returns {number}
+ */
+function getInnerWrapperheight(innerWrapper) {
+  return innerWrapper ? innerWrapper.offsetHeight : DEFAULT_HEIGHT;
+}
 
 /** @returns {Object.<string, string>} */
 export function getWrapperReset() {
@@ -64,9 +74,9 @@ export function getInnerWrapperCollapsingTransition() {
 
 /** @type {StyleUpdater} */
 export function getWrapperExpandedHeight({ hasBounce, innerWrapper }) {
-  const { offsetHeight } = innerWrapper;
+  const innerWrapperHeight = getInnerWrapperheight(innerWrapper);
   const offset = hasBounce ? OVERLAY_HEIGHT_BUFFER : 0;
-  const result = offsetHeight + offset;
+  const result = innerWrapperHeight + offset;
 
   return `${result}px`;
 }
@@ -75,7 +85,8 @@ export function getWrapperExpandedHeight({ hasBounce, innerWrapper }) {
 export function getWrapperCollapsedHeight({ hasPush, innerWrapper }) {
   if (hasPush) return "0";
 
-  const result = innerWrapper.offsetHeight + OVERLAY_HEIGHT_BUFFER;
+  const innerWrapperHeight = getInnerWrapperheight(innerWrapper);
+  const result = innerWrapperHeight + OVERLAY_HEIGHT_BUFFER;
 
   return `${result}px`;
 }
@@ -85,7 +96,8 @@ export function getInnerWrapperCollapsedTransform({ innerWrapper, position }) {
   const isBottomPlacement = position === positions.BOTTOM;
   const modifier = isBottomPlacement ? 1 : -1;
   const offset = isBottomPlacement ? OVERLAY_HEIGHT_BUFFER : 0;
-  const result = innerWrapper.offsetHeight * modifier + offset;
+  const innerWrapperHeight = getInnerWrapperheight(innerWrapper);
+  const result = innerWrapperHeight * modifier + offset;
 
   return `translateY(${result}px)`;
 }
