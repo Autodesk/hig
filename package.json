@@ -7,9 +7,10 @@
   "homepage": "https://hig.autodesk.com",
   "version": "1.0.1",
   "scripts": {
+    "build": "lerna run build",
+    "lint": "lerna run lint",
     "publish-canary": "lerna publish --canary --yes --exact",
-    "update-packages": "lerna publish --skip-npm",
-    "lint": "lerna run lint"
+    "update-packages": "lerna publish --skip-npm"
   },
   "devDependencies": {
     "lerna": "^2.9.0",

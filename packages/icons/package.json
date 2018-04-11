@@ -1,0 +1,20 @@
+{
+  "name": "@hig/icons",
+  "version": "0.1.0-alpha",
+  "description": "HIG icon assets",
+  "author": "Autodesk Inc.",
+  "license": "Apache-2.0",
+  "homepage": "https://hig.autodesk.com",
+  "main": "build/index.js",
+  "module": "build/index.es.js",
+  "devDependencies": {
+    "@hig/scripts": "^0.1.0",
+    "@hig/styles": "^0.1.0-alpha"
+  },
+  "peerDependencies": {
+    "react": "^15.4.1"
+  },
+  "scripts": {
+    "build": "hig-scripts-build"
+  }
+}

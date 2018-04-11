@@ -1,14 +1,10 @@
 import renderer from "react-test-renderer";
 import React from "react";
 
-import { names } from "../Icons/icons";
+import { names } from "@hig/icons";
 import IconButton from "./IconButton";
 
 describe("IconButton", () => {
-  it("has type constants", () => {
-    expect(IconButton).toHavePropertyOfConstants("types");
-  });
-
   it("renders correctly", () => {
     const tree = renderer.create(<IconButton name={names.SETTINGS} />).toJSON();
 

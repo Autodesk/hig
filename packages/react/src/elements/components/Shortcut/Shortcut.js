@@ -4,7 +4,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-import IconButton from "../IconButton/IconButton";
+import IconButton from "@hig/icon-button";
 
 const COMPONENT_CLASS = "hig__shortcut";
 

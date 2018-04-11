@@ -5,7 +5,8 @@ import { action } from "@storybook/addon-actions";
 import { text, select, boolean } from "@storybook/addon-knobs/react";
 import { withInfo } from "@storybook/addon-info";
 import { makeSelectOptions, translate as t } from "@hig/storybook/utils";
-import { Button } from "hig-react";
+import { Button, RichText } from "hig-react";
+import readme from "../../README.md";
 
 import Banner from "../Banner";
 import * as languages from "./i18n";
@@ -70,7 +71,8 @@ const bannerStories = storiesOf("Banner", module);
 bannerStories.add(
   "default",
   withInfo({
-    propTables: [Banner]
+    propTables: [Banner],
+    text: <RichText dangerouslySetInnerHTML={{ __html: readme }} />
   })(() => {
     const { children, ...otherProps } = getBannerKnobs({});
     return <Banner {...otherProps}>{children}</Banner>;
@@ -80,7 +82,8 @@ bannerStories.add(
 bannerStories.add(
   "verbose, with interactions",
   withInfo({
-    propTables: [Banner]
+    propTables: [Banner],
+    text: <RichText dangerouslySetInnerHTML={{ __html: readme }} />
   })(() => {
     const chosenLanguage = select(
       knobLabels.language,

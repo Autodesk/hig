@@ -6,10 +6,7 @@
         "react",
         "stage-2"
       ],
-      "plugins": [
-        "transform-object-rest-spread",
-        "react-docgen"
-      ]
+      "plugins": ["react-docgen"]
     }
   }
 }

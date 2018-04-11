@@ -1,5 +1,4 @@
 defaults: &defaults
-  working_directory: ~/hig
   docker:
     - image: circleci/node:8.10-stretch
 
@@ -10,57 +9,52 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: v2-dependencies-{{ checksum "yarn.lock" }}
+          key: hig-dependencies-{{ checksum "yarn.lock" }}
       - run:
-          name: Install NPM Dependencies
+          name: Install Dependencies
           command: yarn
       - save_cache:
-          key: v2-dependencies-{{ checksum "yarn.lock" }}
+          key: hig-dependencies-{{ checksum "yarn.lock" }}
           paths:
             - node_modules
-            - packages/vanilla/node_modules
+            - packages/banner/node_modules
+            - packages/eslint-config/node_modules
+            - packages/icon/node_modules
+            - packages/icon-button/node_modules
+            - packages/icons/node_modules
             - packages/react/node_modules
-            - packages/eslint-banner/node_modules
-  vanilla-build:
+            - packages/storybook/node_modules
+            - packages/themes/node_modules
+            - packages/typography/node_modules
+            - packages/vanilla/node_modules
+  package-build:
     <<: *defaults
     steps:
       - checkout
       - restore_cache:
-          key: v2-dependencies-{{ checksum "yarn.lock" }}
+          key: hig-dependencies-{{ checksum "yarn.lock" }}
       - run:
-          name: Build (Vanilla)
-          command: yarn lib
-          working_directory: packages/vanilla
+          name: Build all packages
+          command: yarn build
       - save_cache:
-          key: vanilla-build-{{ .Revision }}
+          key: package-build-{{ .Revision }}
           paths:
-            - packages/vanilla/lib
-  react-build:
-    <<: *defaults
-    steps:
-      - checkout
-      - restore_cache:
-          key: v2-dependencies-{{ checksum "yarn.lock" }}
-      - restore_cache:
-          key: vanilla-build-{{ .Revision }}
-      - run:
-          name: Build (React)
-          command: yarn lib
-          working_directory:  packages/react
-      - save_cache:
-          key: react-build-{{ .Revision }}
-          paths:
+            - packages/banner/build
+            - packages/icon/build
+            - packages/icon-button/build
+            - packages/icons/build
+            - packages/themes/build
+            - packages/typography/build
             - packages/react/lib
+            - packages/vanilla/lib
   react-test:
     <<: *defaults
     steps:
       - checkout
       - restore_cache:
-          key: v2-dependencies-{{ checksum "yarn.lock" }}
+          key: hig-dependencies-{{ checksum "yarn.lock" }}
       - restore_cache:
-          key: vanilla-build-{{ .Revision }}
-      - restore_cache:
-          key: react-build-{{ .Revision }}
+          key: package-build-{{ .Revision }}
       - run:
           name: Lint (React)
           command: yarn lint
@@ -75,14 +69,9 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: v2-dependencies-{{ checksum "yarn.lock" }}
+          key: hig-dependencies-{{ checksum "yarn.lock" }}
       - restore_cache:
-          key: vanilla-build-{{ .Revision }}
-      - restore_cache:
-          key: react-build-{{ .Revision }}
-      - run:
-          name: Install Dependencies
-          command: yarn
+          key: package-build-{{ .Revision }}
       - run:
           name: Build Test Storybook Server
           command: yarn storybook-test-build
@@ -108,13 +97,11 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: v2-dependencies-{{ checksum "yarn.lock" }}
+          key: hig-dependencies-{{ checksum "yarn.lock" }}
       - restore_cache:
-          key: vanilla-build-{{ .Revision }}
-      - restore_cache:
-          key: react-build-{{ .Revision }}
+          key: package-build-{{ .Revision }}
       - run:
-          name: Deploy hig-beta
+          name: Deploy React playground website
           command: yarn deploy-playground $PLAYGROUND_DOMAIN
           working_directory: packages/react
   packages-deploy-on-branch:
@@ -122,31 +109,23 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: v2-dependencies-{{ checksum "yarn.lock" }}
+          key: hig-dependencies-{{ checksum "yarn.lock" }}
       - restore_cache:
-          key: vanilla-build-{{ .Revision }}
-      - restore_cache:
-          key: react-build-{{ .Revision }}
+          key: package-build-{{ .Revision }}
       - run:
           name: Add auth token
           command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
       - run:
-          name: Deploy hig-react-branch
-          command: npm run publish-canary
+          name: Deploy pre-release versions of packages
+          command: yarn publish-canary
   packages-deploy-storybook-on-branch:
     <<: *defaults
     steps:
       - checkout
       - restore_cache:
-          key: v2-dependencies-{{ checksum "yarn.lock" }}
+          key: hig-dependencies-{{ checksum "yarn.lock" }}
       - restore_cache:
-          key: vanilla-build-{{ .Revision }}
-      - restore_cache:
-          key: react-build-{{ .Revision }}
-      - run:
-          name: Install Dependencies
-          command: yarn
-          working_directory: packages/storybook
+          key: package-build-{{ .Revision }}
       - run:
           name: Deploy Storybook
           command: yarn storybook-deploy --domain `echo hig-$CIRCLE_BRANCH.surge.sh | awk 'echo gsub(/\//, "-")'`
@@ -156,11 +135,9 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: v2-dependencies-{{ checksum "yarn.lock" }}
+          key: hig-dependencies-{{ checksum "yarn.lock" }}
       - restore_cache:
-          key: vanilla-build-{{ .Revision }}
-      - restore_cache:
-          key: react-build-{{ .Revision }}
+          key: package-build-{{ .Revision }}
       - run:
           name: Add auth token
           command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
@@ -178,18 +155,15 @@ workflows:
   build-test-validate-and-deploy:
     jobs:
       - bootstrap
-      - vanilla-build:
+      - package-build:
           requires:
             - bootstrap
-      - react-build:
-          requires:
-            - vanilla-build
       - react-test:
           requires:
-            - react-build
+            - package-build
       - visual-test:
           requires:
-            - react-build
+            - package-build
       - deploy-playground:
           requires:
             - react-test

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Transition from "react-transition-group/Transition";
 import PropTypes from "prop-types";
 import cx from "classnames";
-import IconButton from "../IconButton/IconButton";
+import IconButton from "@hig/icon-button";
 import RichText from "../RichText";
 import "./notification.scss";
 import Timestamp from "../Timestamp";

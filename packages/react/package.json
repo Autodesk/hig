@@ -14,11 +14,11 @@
     "lib/*"
   ],
   "scripts": {
+    "build": "NODE_ENV=production webpack -p",
     "build-playground": "react-scripts build",
     "build-icons": "node scripts/build-icons.js",
     "deploy-playground": "react-scripts build && surge build",
     "generate-docs": "node ./scripts/generate-docs.js",
-    "lib": "NODE_ENV=production webpack -p",
     "lint": "eslint ./src/** -c ./.eslintrc.js",
     "lint-fix": "eslint ./src/** -c ./.eslintrc.js --fix",
     "playground": "react-scripts start",
@@ -28,6 +28,10 @@
     "type-check": "tsc"
   },
   "dependencies": {
+    "@hig/icon": "0.1.0-alpha",
+    "@hig/icon-button": "0.1.0-alpha",
+    "@hig/icons": "0.1.0-alpha",
+    "@hig/typography": "0.1.0-alpha",
     "hig-vanilla": "^0.1.26",
     "react-flip-move": "^3.0.1",
     "react-transition-group": "^2.3.0"

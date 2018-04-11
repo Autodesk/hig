@@ -1,14 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
+import Icons, { AVAILABLE_NAMES } from "@hig/icons";
 
 import "./icon.scss";
-import Icons, { AVAILABLE_NAMES, names } from "../Icons/icons";
+import sizes from "./sizes";
+import AVAILABLE_SIZES from './availableSizes';
 
 const COMPONENT_CLASS = "hig__icon";
-const sizes = Object.freeze({ PX_24: "24", PX_16: "16" });
-/** @type {string[]} */
-const availableSizes = Object.values(sizes);
 
 /**
  * @typedef {Object} IconProps
@@ -23,7 +22,7 @@ const availableSizes = Object.values(sizes);
  * @returns {boolean}
  */
 function isValidSize(size) {
-  return availableSizes.includes(size);
+  return AVAILABLE_SIZES.includes(size);
 }
 
 /**
@@ -94,10 +93,6 @@ export default function Icon(props) {
   );
 }
 
-Icon.AVAILABLE_NAMES = AVAILABLE_NAMES;
-Icon.names = names;
-Icon.sizes = sizes;
-
 Icon.defaultProps = {
   size: sizes.PX_24
 };
@@ -121,5 +116,5 @@ Icon.propTypes = {
   /**
    * The size of the icon
    */
-  size: PropTypes.oneOf(availableSizes).isRequired
+  size: PropTypes.oneOf(AVAILABLE_SIZES).isRequired
 };
