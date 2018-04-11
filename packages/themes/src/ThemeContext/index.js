@@ -1,6 +1,8 @@
-import Provider from "./Provider";
-import Consumer from "./Consumer";
+import createReactContext from "create-react-context";
 
-export { default as Provider } from "./Provider";
-export { default as Consumer } from "./Consumer";
+import HIGLightTheme from "../themes/HIGLightTheme";
+
+const { Provider, Consumer } = createReactContext(HIGLightTheme);
+
+export { Provider, Consumer };
 export default { Provider, Consumer };
