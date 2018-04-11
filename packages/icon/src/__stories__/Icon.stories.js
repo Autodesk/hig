@@ -3,10 +3,11 @@ import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
 import { RichText } from "hig-react";
 
-import { default as iconSizes } from "../sizes";
 import Icon from "../Icon";
+import iconSizes from "../sizes";
 import readme from "../../README.md";
 
+/** @todo Generate this from build script */
 const iconKeys = {
   [iconSizes.PX_24]: [
     "add",
