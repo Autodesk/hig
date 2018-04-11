@@ -1,5 +1,6 @@
 import { mount } from "enzyme";
 import React from "react";
+import renderer from "react-test-renderer";
 
 import Banner from "./Banner";
 
@@ -15,7 +16,7 @@ describe("banner/Banner", () => {
     });
   });
 
-  describe("rendering", () => {
+  describe("sub-component rendering", () => {
     const renderedComponents = [
       "BannerAnimator",
       "BannerContainer",
@@ -24,16 +25,8 @@ describe("banner/Banner", () => {
 
     let wrapper;
 
-    beforeAll(() => {
-      window.requestAnimationFrame = jest.fn();
-    });
-
     beforeEach(() => {
       wrapper = mount(<Banner />);
-    });
-
-    afterAll(() => {
-      delete window.requestAnimationFrame;
     });
 
     renderedComponents.forEach(componentName => {
@@ -41,6 +34,24 @@ describe("banner/Banner", () => {
         it(`renders a \`${componentName}\` component`, () => {
           expect(wrapper.find(componentName)).toBePresent();
         });
+      });
+    });
+  });
+
+  describe("snapshot tests", () => {
+    const cases = [
+      {
+        description: "renders with no props",
+        props: {}
+      }
+    ];
+
+    cases.forEach(({ description, props: { children, ...otherProps } }) => {
+      it(description, () => {
+        const wrapper = <Banner {...otherProps}>{children}</Banner>;
+        const tree = renderer.create(wrapper).toJSON();
+
+        expect(tree).toMatchSnapshot();
       });
     });
   });

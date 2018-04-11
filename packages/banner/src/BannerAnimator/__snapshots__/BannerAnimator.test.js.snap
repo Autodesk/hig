@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`banner/BannerAnimator/BannerAnimator snapshot tests renders hidden 1`] = `
+<div
+  aria-busy={false}
+  aria-expanded={false}
+  onTransitionEnd={[Function]}
+  style={
+    Object {
+      "height": "0",
+      "overflow": "hidden",
+      "transition": "",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "transform": "translateY(-50px)",
+        "transition": "",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`banner/BannerAnimator/BannerAnimator snapshot tests renders in the bottom position 1`] = `
+<div
+  aria-busy={false}
+  aria-expanded={true}
+  onTransitionEnd={[Function]}
+  style={
+    Object {
+      "height": "",
+      "overflow": "",
+      "transition": "",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "transform": "",
+        "transition": "",
+      }
+    }
+  >
+    <div />
+  </div>
+</div>
+`;
+
+exports[`banner/BannerAnimator/BannerAnimator snapshot tests renders with only children 1`] = `
+<div
+  aria-busy={false}
+  aria-expanded={true}
+  onTransitionEnd={[Function]}
+  style={
+    Object {
+      "height": "",
+      "overflow": "",
+      "transition": "",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "transform": "",
+        "transition": "",
+      }
+    }
+  >
+    <div />
+  </div>
+</div>
+`;
