@@ -8,11 +8,11 @@
   "main": "build/index.js",
   "module": "build/index.es.js",
   "dependencies": {
-    "@hig/styles": "^0.1.0-alpha",
     "@hig/banner": "^0.1.1-alpha"
   },
   "devDependencies": {
-    "@hig/scripts": "^0.1.0"
+    "@hig/scripts": "^0.1.0",
+    "@hig/styles": "^0.1.0-alpha"
   },
   "peerDependencies": {
     "react": "^15.4.1",

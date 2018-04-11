@@ -1,4 +1,5 @@
 import React from "react";
+import cx from "classnames";
 import { ThemeContext } from "@hig/themes";
 import Icon, { names as iconNames, sizes as iconSizes } from "@hig/icon";
 
@@ -27,7 +28,7 @@ export function IconBackground({ type }) {
   return (
     <ThemeContext.Consumer>
       {({ themeClass }) => (
-        <figure className={[classNames.iconBackground, themeClass].join(" ")}>
+        <figure className={cx(classNames.iconBackground, themeClass)}>
           <Icon name={iconNamesByType[type]} size={iconSizes.MEDIUM} />
         </figure>
       )}

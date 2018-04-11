@@ -9,7 +9,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a fragment as actio
   role="alert"
 >
   <figure
-    className="hig__banner__icon-background "
+    className="hig__banner__icon-background"
   >
     <div
       className="hig__icon hig__icon--24-size"
@@ -79,7 +79,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a label 1`] = `
   role="alert"
 >
   <figure
-    className="hig__banner__icon-background "
+    className="hig__banner__icon-background"
   >
     <div
       className="hig__icon hig__icon--24-size"
@@ -139,7 +139,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a node as actions 1
   role="alert"
 >
   <figure
-    className="hig__banner__icon-background "
+    className="hig__banner__icon-background"
   >
     <div
       className="hig__icon hig__icon--24-size"
@@ -206,7 +206,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a string as actions
   role="alert"
 >
   <figure
-    className="hig__banner__icon-background "
+    className="hig__banner__icon-background"
   >
     <div
       className="hig__icon hig__icon--24-size"
@@ -271,7 +271,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders without props 1`] = `
   role="alert"
 >
   <figure
-    className="hig__banner__icon-background "
+    className="hig__banner__icon-background"
   >
     <div
       className="hig__icon hig__icon--24-size"

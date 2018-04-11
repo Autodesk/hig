@@ -29,7 +29,7 @@ exports[`banner/Banner snapshot tests renders with no props 1`] = `
       role="alert"
     >
       <figure
-        className="hig__banner__icon-background "
+        className="hig__banner__icon-background"
       >
         <div
           className="hig__icon hig__icon--24-size"
