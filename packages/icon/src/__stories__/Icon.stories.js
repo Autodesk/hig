@@ -1,8 +1,10 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
-import Icon, { sizes as iconSizes } from "../Icon";
 import { RichText } from "hig-react";
+
+import { default as iconSizes } from "../sizes";
+import Icon from "../Icon";
 import readme from "../../README.md";
 
 const iconKeys = {
