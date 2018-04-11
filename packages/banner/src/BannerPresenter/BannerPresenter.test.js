@@ -4,7 +4,7 @@ import renderer from "react-test-renderer";
 import { types } from "../types";
 import BannerPresenter from "./BannerPresenter";
 
-describe.only("banner/BannerPresenter/BannerPresenter", () => {
+describe("banner/BannerPresenter/BannerPresenter", () => {
   [
     {
       description: "renders without props",

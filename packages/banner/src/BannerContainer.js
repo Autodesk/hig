@@ -13,6 +13,7 @@ import PropTypes from "prop-types";
 /**
  * @typedef {Object} BannerContainerProps
  * @property {any} [actions]
+ * @property {Function} [onReady]
  * @property {function(PresenterBag): any} [children]
  */
 
@@ -34,6 +35,8 @@ export default class BannerContainer extends Component {
   static propTypes = {
     /** Banner actions; Any JSX, or a render prop function */
     actions: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+    /** Called after the component has been mounted, and dynamically resized */
+    onReady: PropTypes.func,
     /** A render prop function to render a `BannerPresenter` */
     children: PropTypes.func.isRequired
   };
@@ -46,7 +49,7 @@ export default class BannerContainer extends Component {
 
   componentDidMount() {
     this.bindResize();
-    this.updateWrapping();
+    this.updateWrapping(this.props.onReady);
   }
 
   componentWillUnmount() {
@@ -135,33 +138,42 @@ export default class BannerContainer extends Component {
     return contentChildrenWidth > contentWidth;
   }
 
-  updateContentWrapping = () => {
+  /**
+   * @param {Function} callback
+   */
+  updateContentWrapping = callback => {
     const update = { isWrappingContent: this.shouldWrapContent() };
 
     this.setState(update, () => {
       delete this.wrappingFrame;
+
+      if (callback) callback();
     });
   };
 
-  updateActionWrapping = () => {
+  /**
+   * @param {Function} callback
+   */
+  updateActionWrapping = callback => {
     const update = { isWrappingActions: this.shouldWrapActions() };
 
     this.setState(update, () => {
-      this.wrappingFrame = window.requestAnimationFrame(
-        this.updateContentWrapping
-      );
+      this.wrappingFrame = window.requestAnimationFrame(() => {
+        this.updateContentWrapping(callback);
+      });
     });
   };
 
   /**
    * Asynchronously updates the wrapping behavior of the presenter
+   * @param {Function} callback
    */
-  updateWrapping() {
+  updateWrapping(callback) {
     if (this.wrappingFrame !== undefined) return;
 
-    this.wrappingFrame = window.requestAnimationFrame(
-      this.updateActionWrapping
-    );
+    this.wrappingFrame = window.requestAnimationFrame(() => {
+      this.updateActionWrapping(callback);
+    });
   }
 
   cancelWrappingUpdate() {

@@ -90,6 +90,7 @@ export function Wrapper(props) {
       role="alert"
       aria-label={label}
       aria-labelledby={labelledBy}
+      aria-live={type === types.URGENT ? "assertive" : "polite"}
       className={classes}
     >
       {children}

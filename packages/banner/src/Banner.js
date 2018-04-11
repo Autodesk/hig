@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 import { placements, AVAILABLE_PLACEMENTS } from "./placements";
 import { types, AVAILABLE_TYPES } from "./types";
+import animatorPropsByPlacement from "./animatorPropsByPlacement";
 import BannerAction from "./BannerAction";
 import BannerAnimator from "./BannerAnimator";
 import BannerContainer from "./BannerContainer";
@@ -67,13 +68,30 @@ export default class Banner extends Component {
     return <BannerPresenter {...otherProps}>{children}</BannerPresenter>;
   };
 
-  render() {
-    const { isVisible, actions } = this.props;
+  /**
+   * @param {import("./BannerAnimator").ContainerBag} containerBag
+   */
+  renderContainer = ({ handleReady }) => {
+    const { actions } = this.props;
     const { renderPresenter } = this;
 
     return (
-      <BannerAnimator isVisible={isVisible}>
-        <BannerContainer actions={actions}>{renderPresenter}</BannerContainer>
+      <BannerContainer actions={actions} onReady={handleReady}>
+        {renderPresenter}
+      </BannerContainer>
+    );
+  };
+
+  render() {
+    const { isVisible, placement } = this.props;
+    const { renderContainer } = this;
+
+    return (
+      <BannerAnimator
+        isVisible={isVisible}
+        {...animatorPropsByPlacement[placement]}
+      >
+        {renderContainer}
       </BannerAnimator>
     );
   }
