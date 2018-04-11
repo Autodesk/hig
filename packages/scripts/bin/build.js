@@ -18,7 +18,7 @@ const {
   dependencies = {},
   main: mainOutputFile = "build/index.js",
   module: esOutputFile = "build/index.es.js",
-  css: cssOutputFile = "build/index.es.css"
+  css: cssOutputFile = "build/index.css"
 } = packageMeta;
 
 const external = Object.keys(peerDependencies).concat(
