@@ -26,6 +26,7 @@
     "@hig/icon": "^0.1.0-alpha",
     "@hig/icon-button": "^0.1.0-alpha",
     "@hig/icons": "^0.1.0-alpha",
+    "@hig/themes": "^0.1.0-alpha",
     "@hig/typography": "^0.1.0-alpha",
     "react-lifecycles-compat": "^2.0.0"
   },

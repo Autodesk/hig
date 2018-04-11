@@ -3,35 +3,17 @@
 import React from "react";
 import cx from "classnames";
 
-import BasicIcon, { names as iconNames, sizes as iconSizes } from "@hig/icon";
+import { names as iconNames } from "@hig/icon";
 import IconButton, { types as iconButtonTypes } from "@hig/icon-button";
 import { Text } from "@hig/typography";
+import { ThemeContext } from "@hig/themes";
 
 import "./banner-presenter.scss";
 import { types } from "../types";
+import classNames from "../presenters/classNames";
 
 /** @todo Reference from constant on `Text` component */
 const TEXT_COLOR = "hig-cool-gray-70";
-
-/** @type {Object.<string, string>} */
-const classNames = Object.freeze({
-  action: "hig__banner__action",
-  actionsWrapper: "hig__banner__action-wrapper",
-  content: "hig__banner__content",
-  dismissButton: "hig__banner__dismiss-button",
-  iconBackground: "hig__banner__icon-background",
-  interactionsWrapper: "hig__banner__interactions-wrapper",
-  notification: "hig__banner__message",
-  wrapper: "hig__banner",
-  wrapperBottom: "hig__banner--bottom",
-  wrapperUrgent: "hig__banner--urgent",
-  wrapperInteractive: "hig__banner--interactive",
-  wrapperPrimary: "hig__banner--primary",
-  wrapperComplete: "hig__banner--complete",
-  wrapperTop: "hig__banner--top",
-  wrapperWarning: "hig__banner--warning",
-  wrapperWrapContent: "hig__banner--wrap-content"
-});
 
 /** @type {Object.<string, string>} */
 const wrapperModifiersByType = {
@@ -39,14 +21,6 @@ const wrapperModifiersByType = {
   [types.COMPLETE]: classNames.wrapperComplete,
   [types.WARNING]: classNames.wrapperWarning,
   [types.URGENT]: classNames.wrapperUrgent
-};
-
-/** @type {Object.<string, string>} */
-const iconNamesByType = {
-  [types.PRIMARY]: iconNames.INFO,
-  [types.COMPLETE]: iconNames.COMPLETE,
-  [types.WARNING]: iconNames.ISSUE,
-  [types.URGENT]: iconNames.ERROR
 };
 
 /**
@@ -78,23 +52,30 @@ export function Wrapper(props) {
     children
   } = props;
 
-  const classes = cx(
-    classNames.wrapper,
-    wrapperModifiersByType[type],
-    hasActions ? classNames.wrapperInteractive : undefined,
-    isWrappingContent ? classNames.wrapperWrapContent : undefined
-  );
+  function classes(themeClass) {
+    return cx(
+      classNames.wrapper,
+      wrapperModifiersByType[type],
+      hasActions ? classNames.wrapperInteractive : undefined,
+      isWrappingContent ? classNames.wrapperWrapContent : undefined,
+      themeClass
+    );
+  }
 
   return (
-    <div
-      role="alert"
-      aria-label={label}
-      aria-labelledby={labelledBy}
-      aria-live={type === types.URGENT ? "assertive" : "polite"}
-      className={classes}
-    >
-      {children}
-    </div>
+    <ThemeContext.Consumer>
+      {({ themeClass }) => (
+        <div
+          role="alert"
+          aria-label={label}
+          aria-labelledby={labelledBy}
+          aria-live={type === types.URGENT ? "assertive" : "polite"}
+          className={classes(themeClass)}
+        >
+          {children}
+        </div>
+      )}
+    </ThemeContext.Consumer>
   );
 }
 
@@ -131,23 +112,6 @@ export function DismissButton({ title, onClick }) {
         onClick={onClick}
       />
     </div>
-  );
-}
-
-/**
- * @typedef {Object} IconProps
- * @property {string} type
- */
-
-/**
- * @param {IconProps} props
- * @returns {JSX.Element}
- */
-export function Icon({ type }) {
-  return (
-    <figure className={classNames.iconBackground}>
-      <BasicIcon name={iconNamesByType[type]} size={iconSizes.MEDIUM} />
-    </figure>
   );
 }
 

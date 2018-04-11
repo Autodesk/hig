@@ -89,6 +89,23 @@ $colors: (
   hig-green-good: rgba(135, 188, 64, 1),
   hig-yellow-warning: rgba(245, 183, 35, 1),
   hig-red-alert: rgba(236, 74, 65, 1),
+
+  // Matrix colors
+  matrix-green-20: rgba(241, 247, 233, 1),
+  matrix-green-40: rgba(170, 209, 119, 1),
+  matrix-green-50: rgba(138, 204, 51, 1),
+
+  matrix-blue-20: rgba(230, 244, 255, 1),
+  matrix-blue-40: rgba(158, 211, 255, 1),
+  matrix-blue-50: rgba(8, 124, 217, 1),
+
+  matrix-gold-20: rgba(255, 241, 227, 1),
+  matrix-gold-40: rgba(255, 193, 130, 1),
+  matrix-gold-50: rgba(255, 128, 0, 1),
+
+  matrix-pink-20: rgba(255, 237, 239, 1),
+  matrix-pink-40: rgba(247, 171, 178, 1),
+  matrix-pink-50: rgba(255, 73, 92, 1),
 );
 
 $typography-base-color: map-get($colors, 'hig-gray-70');
