@@ -14,6 +14,7 @@ import {
 
 /** @typedef {import("./BannerAnimator").BannerAnimatorState} BannerAnimatorState */
 /** @typedef {import("./BannerAnimator").BannerAnimatorProps} BannerAnimatorProps */
+// eslint-disable-next-line max-len
 /** @typedef {function(BannerAnimatorState, BannerAnimatorProps): BannerAnimatorState} BannerAnimatorUpdater */
 
 /**

@@ -26,6 +26,7 @@ export default [
       children:
         // eslint-disable-next-line max-len
         "PROCESS COMPLETE: Changes have been made to you document. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",
+      // eslint-disable-next-line react/prop-types
       actions: ({ isWrappingActions }) => (
         <Banner.Interactions isWrappingActions={isWrappingActions}>
           <Banner.Action>
