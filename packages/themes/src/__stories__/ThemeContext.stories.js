@@ -8,8 +8,9 @@ import { makeSelectOptions } from "@hig/storybook/utils";
 
 import Banner from "@hig/banner";
 import readme from '../../README.md';
-import { ThemeContext, HIGLightTheme, MatrixTheme } from '@hig/themes';
-
+import ThemeContext from "../ThemeContext";
+import HIGLightTheme from "../themes/HIGLightTheme";
+import MatrixTheme from "../themes/MatrixTheme";
 
 const typeOptions = makeSelectOptions(Banner.types);
 const themeOptions = {

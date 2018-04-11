@@ -5,11 +5,11 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a fragment as actio
   aria-label={undefined}
   aria-labelledby={undefined}
   aria-live="polite"
-  className="hig__banner hig__banner--primary hig__banner--interactive hig--light-theme"
+  className="hig__banner hig__banner--primary hig__banner--interactive"
   role="alert"
 >
   <figure
-    className="hig__banner__icon-background hig--light-theme"
+    className="hig__banner__icon-background "
   >
     <div
       className="hig__icon hig__icon--24-size"
@@ -75,11 +75,11 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a label 1`] = `
   aria-label="HELLO"
   aria-labelledby={undefined}
   aria-live="assertive"
-  className="hig__banner hig__banner--urgent hig--light-theme"
+  className="hig__banner hig__banner--urgent"
   role="alert"
 >
   <figure
-    className="hig__banner__icon-background hig--light-theme"
+    className="hig__banner__icon-background "
   >
     <div
       className="hig__icon hig__icon--24-size"
@@ -135,11 +135,11 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a node as actions 1
   aria-label={undefined}
   aria-labelledby={undefined}
   aria-live="polite"
-  className="hig__banner hig__banner--primary hig__banner--interactive hig--light-theme"
+  className="hig__banner hig__banner--primary hig__banner--interactive"
   role="alert"
 >
   <figure
-    className="hig__banner__icon-background hig--light-theme"
+    className="hig__banner__icon-background "
   >
     <div
       className="hig__icon hig__icon--24-size"
@@ -202,11 +202,11 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a string as actions
   aria-label={undefined}
   aria-labelledby={undefined}
   aria-live="polite"
-  className="hig__banner hig__banner--primary hig__banner--interactive hig--light-theme"
+  className="hig__banner hig__banner--primary hig__banner--interactive"
   role="alert"
 >
   <figure
-    className="hig__banner__icon-background hig--light-theme"
+    className="hig__banner__icon-background "
   >
     <div
       className="hig__icon hig__icon--24-size"
@@ -267,11 +267,11 @@ exports[`banner/BannerPresenter/BannerPresenter renders without props 1`] = `
   aria-label={undefined}
   aria-labelledby={undefined}
   aria-live="polite"
-  className="hig__banner hig__banner--primary hig--light-theme"
+  className="hig__banner hig__banner--primary"
   role="alert"
 >
   <figure
-    className="hig__banner__icon-background hig--light-theme"
+    className="hig__banner__icon-background "
   >
     <div
       className="hig__icon hig__icon--24-size"
