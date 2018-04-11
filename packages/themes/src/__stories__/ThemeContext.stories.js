@@ -7,6 +7,7 @@ import { withInfo } from "@storybook/addon-info";
 import { makeSelectOptions } from "@hig/storybook/utils";
 
 import Banner from "@hig/banner";
+import readme from '../../README.md';
 import { ThemeContext, HIGLightTheme, MatrixTheme } from '@hig/themes';
 
 
@@ -26,7 +27,7 @@ const themeContextStories = storiesOf("ThemeContext", module);
 themeContextStories.add("themable", withInfo({
   propTables: [ThemeContext.Provider, ThemeContext.Consumer],
   propTablesExclude: [Banner],
-  inline: true
+  text: <div dangerouslySetInnerHTML={{__html: readme}}></div>,
 })(() => {
   const theme = select('Theme', themeOptions, 'hig-light');
   const bannerType = select("Banner type", typeOptions, Banner.types[0]);
