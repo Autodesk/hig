@@ -2,8 +2,10 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { select, text, boolean } from "@storybook/addon-knobs/react";
-import IconButton from "../IconButton";
+import { withInfo } from "@storybook/addon-info";
 import { RichText } from "hig-react";
+
+import IconButton from "../IconButton";
 import readme from "../../README.md";
 
 const icons = [
@@ -99,23 +101,26 @@ const icons = [
   "x-close-gray"
 ];
 
-storiesOf("IconButton", module).add("default", withInfo({
-  propTables: [Icon],
-  text: <RichText dangerouslySetInnerHTML={{ __html: readme }} />
-})() => (
-  <IconButton
-    type={select("Type", {
-      primary: "primary",
-      flat: "flat",
-      transparent: "transparent"
-    })}
-    title={text("Title", "Icon button")}
-    link={text("Link", "http://www.autodesk.com")}
-    disabled={boolean("Disabled", false)}
-    icon={select("Icon name", icons, "settings")}
-    onClick={action("onClick")}
-    onBlur={action("onBlur")}
-    onFocus={action("onFocus")}
-    onHover={action("onHover")}
-  />
-));
+storiesOf("IconButton", module).add(
+  "default",
+  withInfo({
+    propTables: [IconButton],
+    text: <RichText dangerouslySetInnerHTML={{ __html: readme }} />
+  })(() => (
+    <IconButton
+      type={select("Type", {
+        primary: "primary",
+        flat: "flat",
+        transparent: "transparent"
+      })}
+      title={text("Title", "Icon button")}
+      link={text("Link", "http://www.autodesk.com")}
+      disabled={boolean("Disabled", false)}
+      icon={select("Icon name", icons, "settings")}
+      onClick={action("onClick")}
+      onBlur={action("onBlur")}
+      onFocus={action("onFocus")}
+      onHover={action("onHover")}
+    />
+  ))
+);
