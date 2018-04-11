@@ -8,6 +8,7 @@ const nodeResolve = require("rollup-plugin-node-resolve");
 const postcss = require("rollup-plugin-postcss");
 const json = require("rollup-plugin-json");
 const postcssFuncitons = require("postcss-functions");
+const postcssImport = require("postcss-import");
 
 const packageMeta = require(path.resolve(process.cwd(), "package.json"));
 
@@ -62,7 +63,7 @@ const inputOptions = {
     postcss({
       extract: true,
       output: cssOutputFile,
-      plugins: [postcssFuncitons]
+      plugins: [postcssFuncitons, postcssImport]
     })
   ]
 };
