@@ -7,7 +7,9 @@
   "homepage": "https://hig.autodesk.com",
   "main": "build/index.js",
   "module": "build/index.es.js",
-  "dependendies": {
+  "style": "build/index.css",
+  "files": ["build/*"],
+  "dependencies": {
     "@hig/icons": "^0.1.0-alpha"
   },
   "devDependencies": {

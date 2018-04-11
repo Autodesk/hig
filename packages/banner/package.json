@@ -6,7 +6,8 @@
   "license": "Apache-2.0",
   "main": "build/index.js",
   "module": "build/index.es.js",
-  "css": "build/index.es.css",
+  "style": "build/index.css",
+  "files": ["build/*"],
   "devDependencies": {
     "@hig/scripts": "^0.1.0",
     "@hig/styles": "^0.1.0-alpha",
