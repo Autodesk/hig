@@ -12,6 +12,7 @@ export default class Consumer extends Component {
   static contextTypes = themeContextShape;
 
   render() {
-    return this.props.children(this.context || HIGLightTheme);
+    const theme = (this.context.themeId && this.context.themeClass) ? this.context : HIGLightTheme;
+    return this.props.children(theme);
   }
 }
