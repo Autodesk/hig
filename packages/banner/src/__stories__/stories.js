@@ -8,6 +8,14 @@ import Banner from "../Banner";
 import * as languages from "./i18n";
 
 /**
+ * @param {string} language
+ * @returns {string} The message pulled from translations
+ */
+export function getMessage(language) {
+  return text("Message", t(languages, language, "BANNER_MESSAGE"));
+}
+
+/**
  * @typedef {Object} BannerStory
  * @property {string} description
  * @property {function({ language: string; }): JSX.Element} getProps
@@ -17,15 +25,15 @@ import * as languages from "./i18n";
 export default [
   {
     description: "default",
-    getProps: () => ({})
+    getProps: ({ language }) => ({
+      children: getMessage(language)
+    })
   },
   {
     description: "verbose, with interactions",
     getProps: ({ language }) => ({
       type: Banner.types.WARNING,
-      children:
-        // eslint-disable-next-line max-len
-        "PROCESS COMPLETE: Changes have been made to you document. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",
+      children: getMessage(language),
       // eslint-disable-next-line react/prop-types
       actions: ({ isWrappingActions }) => (
         <Banner.Interactions isWrappingActions={isWrappingActions}>
