@@ -8,16 +8,15 @@
   "main": "build/index.js",
   "module": "build/index.es.js",
   "dependencies": {
-    "create-react-context": "^0.2.1"
+    "@hig/banner": "^0.1.1-alpha"
   },
   "devDependencies": {
-    "@hig/banner": "^0.1.1-alpha",
     "@hig/scripts": "^0.1.0",
     "@hig/styles": "^0.1.0-alpha"
   },
   "peerDependencies": {
-    "prop-types": "^15.6.1",
-    "react": "^15.4.1"
+    "react": "^15.4.1",
+    "prop-types": "^15.6.1"
   },
   "scripts": {
     "build": "hig-scripts-build"
