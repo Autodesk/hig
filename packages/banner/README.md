@@ -4,6 +4,19 @@ Banners are notifications alerting an event that requires a user action. They ar
 
 Read more about when and how to use the Banner component [on the internal wiki](https://wiki.autodesk.com/display/HIG/Banners).
 
+## Getting started
+
+```
+yarn add @hig/banner
+```
+
+## Import the component and CSS
+
+```
+import Banner from '@hig/banner';
+import '@hig/banner/build/index.css';
+```
+
 ## Basic usage
 
 ```jsx
