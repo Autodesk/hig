@@ -4,6 +4,7 @@
 .hig__icon-button {
   display: inline-block;
   position: relative;
+  cursor: pointer;
   @include vendor-prefix('box-sizing', 'border-box');
 
   border: 1px solid color(hig-cool-gray-30);
@@ -19,7 +20,6 @@
   button {
     -webkit-text-align: center;
   }
-
 
   svg * {
     fill: color(hig-cool-gray-60);
