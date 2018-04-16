@@ -92,7 +92,7 @@ jobs:
           working_directory: packages/storybook
       - store_artifacts:
           path: packages/storybook/gemini-report
-  deploy-playground:
+  playground-deploy:
     <<: *defaults
     steps:
       - checkout
@@ -104,7 +104,7 @@ jobs:
           name: Deploy React playground website
           command: yarn deploy-playground $PLAYGROUND_DOMAIN
           working_directory: packages/react
-  packages-deploy-on-branch:
+  canary-packages-deploy:
     <<: *defaults
     steps:
       - checkout
@@ -118,7 +118,7 @@ jobs:
       - run:
           name: Deploy pre-release versions of packages
           command: yarn publish-canary
-  packages-deploy-storybook-on-branch:
+  storybook-branch-deploy:
     <<: *defaults
     steps:
       - checkout
@@ -164,23 +164,22 @@ workflows:
       - visual-test:
           requires:
             - package-build
-      - deploy-playground:
+      - playground-deploy:
           requires:
             - react-test
             - visual-test
           filters:
             branches:
               only: development
-      - packages-deploy-on-branch:
+      - canary-packages-deploy:
           filters:
             branches:
               ignore:
-                - development
                 - master
           requires:
             - react-test
             - visual-test
-      - packages-deploy-storybook-on-branch:
+      - storybook-branch-deploy:
           filters:
             branches:
               ignore:

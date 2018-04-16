@@ -4,35 +4,36 @@ Autodesk tool icons have a distinctive style. Although they don’t need to comm
 
 Read more about where and how to use icons on [the website](https://hig.autodesk.com/web/basics/icons).
 
+## Getting started
+
+```
+yarn add @hig/icon
+```
+
+## Import the component and CSS
+
+```
+import Icon from '@hig/icon';
+import '@hig/icon/build/index.css';
+```
+
 ## Typical usage
 
 Use the `name` prop to render a provided icon by name.
 
 ```jsx
-import Icon from '@hig/icon`;
-import '@hig/icon/build/index.css';
-
-function MyComponent() {
-  return <Icon name="assets" />
-}
+<Icon name="assets" />
 ```
 
 ## Specifying a smaller size
 
 ```jsx
-import Icon from '@hig/icon`;
-import '@hig/icon/build/index.css';
-
-function MyComponent() {
-  return <Icon name="assets" size="16" />
-}
+<Icon name="assets" size="16" />
 ```
 
 ## Providing a custom SVG
 
 ```jsx
-import Icon from '@hig/icon`;
-import '@hig/icon/build/index.css';
 import myIcon from 'my-icon.svg';
 
 function MyComponent() {

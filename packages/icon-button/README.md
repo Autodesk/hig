@@ -4,14 +4,24 @@ Action buttons that include an icon only, with no background. Useful for compact
 
 Read more about where and how to use IconButton on [the website](https://hig.autodesk.com/web/components/buttons).
 
+## Getting started
+
+```
+yarn add @hig/icon-button
+```
+
+## Import the component and CSS
+
+```
+import IconButton from '@hig/icon-button';
+import '@hig/icon-button/build/index.css';
+```
+
 ## Typical usage
 
 Use the `name` prop to render a provided icon by name.
 
 ```jsx
-import Icon from '@hig/icon-button`;
-import '@hig/icon-button/build/index.css';
-
 function MyComponent() {
   return (
     <IconButton
@@ -25,8 +35,6 @@ function MyComponent() {
 ## Providing a custom SVG
 
 ```jsx
-import Icon from '@hig/icon-button`;
-import '@hig/icon-button/build/index.css';
 import myIcon from 'my-icon.svg';
 
 function MyComponent() {
