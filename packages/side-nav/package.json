@@ -1,0 +1,31 @@
+{
+  "name": "@hig/side-nav",
+  "version": "0.1.0-alpha",
+  "description": "HIG SideNav components",
+  "author": "Autodesk Inc.",
+  "license": "Apache-2.0",
+  "homepage": "https://hig.autodesk.com",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "build/index.js",
+  "module": "build/index.es.js",
+  "style": "build/index.css",
+  "files": ["build/*"],
+  "dependencies": {
+    "@hig/skeleton-item": "^0.1.0-alpha",
+    "@hig/themes": "^0.1.0-alpha"
+  },
+  "devDependencies": {
+    "@hig/babel-preset": "0.1.0",
+    "@hig/scripts": "^0.1.0",
+    "@hig/styles": "^0.1.0-alpha"
+  },
+  "peerDependencies": {
+    "react": "^15.4.1",
+    "prop-types": "^15.6.1"
+  },
+  "scripts": {
+    "build": "hig-scripts-build"
+  }
+}
