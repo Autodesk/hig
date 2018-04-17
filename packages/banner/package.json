@@ -4,6 +4,9 @@
   "description": "HIG Banner",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "build/index.js",
   "module": "build/index.es.js",
   "style": "build/index.css",

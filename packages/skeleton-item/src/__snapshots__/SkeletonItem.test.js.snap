@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`skeleton-item/SkeletonItem snapshot tests renders with no props 1`] = `
+<div
+  className="hig__skeleton-item hig--light-theme"
+  style={
+    Object {
+      "marginBottom": undefined,
+      "maxWidth": undefined,
+    }
+  }
+/>
+`;
