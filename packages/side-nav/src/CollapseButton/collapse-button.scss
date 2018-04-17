@@ -1,0 +1,36 @@
+@import "~@hig/styles/mixins/base.scss";
+@import "~@hig/styles/mixins/colors.scss";
+
+.hig__global-nav__side-nav__section__group__module__collapse-button {
+  &:hover {
+    cursor: pointer;
+  }
+
+  .hig__icon {
+    @include vendor-prefix("transform", "rotate(0deg)");
+  }
+}
+
+.hig__global-nav__side-nav__section__group__module__collapse-button--collapsed {
+  .hig__icon {
+    @include vendor-prefix("transform", "rotate(-90deg)");
+  }
+}
+
+// Light theme
+.hig--light-theme {
+  &.hig__global-nav__side-nav__section__group__module__collapse-button {
+    svg * {
+      stroke: color(hig-cool-gray-50);
+    }
+  }
+}
+
+// Dark blue theme
+.hig--dark-blue-theme {
+  &.hig__global-nav__side-nav__section__group__module__collapse-button {
+    svg * {
+      stroke: color(hig-white);
+    }
+  }
+}
