@@ -12,10 +12,12 @@
   "module": "build/index.es.js",
   "style": "build/index.css",
   "files": ["build/*"],
+  "dependencies": {
+    "@hig/themes": "^0.1.0-alpha"
+  },
   "devDependencies": {
     "@hig/scripts": "^0.1.0",
-    "@hig/styles": "^0.1.0-alpha",
-    "@hig/themes": "^0.1.0-alpha"
+    "@hig/styles": "^0.1.0-alpha"
   },
   "peerDependencies": {
     "react": "^15.4.1",
