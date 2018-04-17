@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import cx from "classnames";
+import { ThemeContext } from "@hig/themes";
 
 import "./skeleton-item.scss";
 
@@ -13,7 +15,11 @@ export default class SkeletonItem extends Component {
 
   render() {
     return (
-      <div className="hig__skeleton-item" style={{ maxWidth: this.props.maxWidth, marginBottom: this.props.marginBottom }} />
+      <ThemeContext.Consumer>
+        {({ themeClass }) => (
+          <div className={cx("hig__skeleton-item", themeClass)} style={{ maxWidth: this.props.maxWidth, marginBottom: this.props.marginBottom }} />
+        )}
+      </ThemeContext.Consumer>
     );
   }
 }

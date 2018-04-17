@@ -32,11 +32,13 @@
 // Light
 $light-shine-outer: #f2f2f2;
 $light-shine-inner: #f7f7f7;
-.hig__skeleton-item {
-  background-color: $light-shine-outer;
+.hig--light-theme {
+  .hig__skeleton-item {
+    background-color: $light-shine-outer;
 
-  &:after {
-    background-image: linear-gradient(135deg, $light-shine-outer 0%, $light-shine-outer 40%, $light-shine-inner 50%, $light-shine-outer 60%, $light-shine-outer 100%);
+    &:after {
+      background-image: linear-gradient(135deg, $light-shine-outer 0%, $light-shine-outer 40%, $light-shine-inner 50%, $light-shine-outer 60%, $light-shine-outer 100%);
+    }
   }
 }
 
