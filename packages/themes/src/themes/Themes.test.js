@@ -1,6 +1,6 @@
-import { HIGLightTheme, MatrixTheme } from "./index";
+import { HIGLightTheme, HIGDarkBlueTheme, MatrixTheme } from "./index";
 
-[HIGLightTheme, MatrixTheme].forEach(theme => {
+[HIGLightTheme, HIGDarkBlueTheme, MatrixTheme].forEach(theme => {
   describe(`${theme}`, () => {
     it("has a themeId", () => {
       expect(theme).toHaveProperty("themeId", expect.any(String));
