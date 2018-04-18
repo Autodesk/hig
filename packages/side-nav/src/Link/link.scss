@@ -1,0 +1,43 @@
+@import "~@hig/styles/mixins/colors.scss";
+@import "~@hig/styles/mixins/spacing.scss";
+@import "~@hig/styles/mixins/typography.scss";
+
+.hig__global-nav__sidenav__link {
+  @include typography-base;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  padding: 0 spacing(m);
+}
+
+// Light theme
+.hig--light-theme {
+  &.hig__global-nav__sidenav__link {
+    color: color(hig-cool-gray-50);
+    svg * { stroke: color(hig-cool-gray-50); }
+
+    &:hover {
+      color: color(hig-blue-50);
+
+      svg * {
+        stroke: color(hig-blue-50);
+      }
+    }
+  }
+}
+
+// Dark blue theme
+.hig--dark-blue-theme {
+  &.hig__global-nav__sidenav__link {
+    color: color(hig-white);
+    svg * { stroke: color(hig-white); }
+
+    &:hover {
+      color: color(hig-blue-40);
+
+      svg * {
+        stroke: color(hig-blue-40);
+      }
+    }
+  }
+}

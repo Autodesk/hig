@@ -5,6 +5,7 @@ import { action } from "@storybook/addon-actions";
 import { boolean, select, text } from "@storybook/addon-knobs/react";
 import { ThemeContext, HIGLightTheme, HIGDarkBlueTheme } from "@hig/themes";
 import CollapseButton from "../CollapseButton";
+import Link from "../Link";
 import Submodule from "../Submodule";
 
 const themeOptions = {
@@ -31,6 +32,25 @@ storiesOf("SideNav/_CollapseButton", module).add(
     );
   })
 );
+
+storiesOf("SideNav/_Link", module).add(
+  "default",
+  withInfo()(() => {
+    const theme = select("Theme", themeOptions, "hig-light");
+    return (
+      <ThemeContext.Provider value={themes[theme]}>
+        <Link
+          onClick={action("onClick")}
+          onHover={action("onHover")}
+          title={text("Title", "SideNav Link")}
+          link={text("Link", "https://www.autodesk.com")}
+          target={select("Link Target", ["_self", "_blank", "_parent", "_top"])}
+        />
+      </ThemeContext.Provider>
+    )
+  })
+);
+
 
 storiesOf("SideNav/_Submodule", module).add(
   "default",

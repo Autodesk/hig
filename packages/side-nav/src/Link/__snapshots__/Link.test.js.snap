@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`side-nav/Link snapshot tests renders with no props 1`] = `
+<a
+  className="hig--light-theme hig__global-nav__sidenav__link"
+  href={undefined}
+  onClick={[Function]}
+  onHover={[Function]}
+  target={undefined}
+/>
+`;
