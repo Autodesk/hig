@@ -42,6 +42,7 @@
     "react-dom": "^15.4.1"
   },
   "devDependencies": {
+    "@hig/babel-preset": "0.1.0",
     "@hig/styles": "^0.1.0-alpha",
     "@types/jest": "^19.2.3",
     "@types/node": "^7.0.21",
