@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "name": "@hig/babel-preset",
+  "description": "HIG Babel preset",
+  "author": "Autodesk Inc.",
+  "license": "Apache-2.0",
+  "homepage": "https://hig.autodesk.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Autodesk/hig"
+  },
+  "version": "0.1.0",
+  "main": "index.js",
+  "peerDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-react-docgen": "^1.8.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1"
+  }
+}
