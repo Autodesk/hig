@@ -8,7 +8,9 @@ jobs:
     <<: *defaults
     steps:
       - checkout
-      - run: yarn run create-dependency-hash
+      - run:
+          name: Create dependency hash
+          command: yarn run create-dependency-hash
       - restore_cache:
           key: hig-dependencies-{{ checksum ".dependency-hash" }}
       - run:
@@ -33,7 +35,9 @@ jobs:
     <<: *defaults
     steps:
       - checkout
-      - run: yarn run create-dependency-hash
+      - run:
+          name: Create dependency hash
+          command: yarn run create-dependency-hash
       - restore_cache:
           key: hig-dependencies-{{ checksum ".dependency-hash" }}
       - run:
@@ -54,7 +58,9 @@ jobs:
     <<: *defaults
     steps:
       - checkout
-      - run: yarn run create-dependency-hash
+      - run:
+          name: Create dependency hash
+          command: yarn run create-dependency-hash
       - restore_cache:
           key: hig-dependencies-{{ checksum ".dependency-hash" }}
       - restore_cache:
@@ -72,7 +78,9 @@ jobs:
     <<: *defaults
     steps:
       - checkout
-      - run: yarn run create-dependency-hash
+      - run:
+          name: Create dependency hash
+          command: yarn run create-dependency-hash
       - restore_cache:
           key: hig-dependencies-{{ checksum ".dependency-hash" }}
       - restore_cache:
@@ -101,7 +109,9 @@ jobs:
     <<: *defaults
     steps:
       - checkout
-      - run: yarn run create-dependency-hash
+      - run:
+          name: Create dependency hash
+          command: yarn run create-dependency-hash
       - restore_cache:
           key: hig-dependencies-{{ checksum ".dependency-hash" }}
       - restore_cache:
@@ -114,7 +124,9 @@ jobs:
     <<: *defaults
     steps:
       - checkout
-      - run: yarn run create-dependency-hash
+      - run:
+          name: Create dependency hash
+          command: yarn run create-dependency-hash
       - restore_cache:
           key: hig-dependencies-{{ checksum ".dependency-hash" }}
       - restore_cache:
@@ -129,6 +141,9 @@ jobs:
     <<: *defaults
     steps:
       - checkout
+      - run:
+          name: Create dependency hash
+          command: yarn run create-dependency-hash
       - restore_cache:
           key: hig-dependencies-{{ checksum ".dependency-hash" }}
       - restore_cache:
@@ -141,7 +156,9 @@ jobs:
     <<: *defaults
     steps:
       - checkout
-      - run: yarn run create-dependency-hash
+      - run:
+          name: Create dependency hash
+          command: yarn run create-dependency-hash
       - restore_cache:
           key: hig-dependencies-{{ checksum ".dependency-hash" }}
       - restore_cache:
