@@ -16,6 +16,7 @@
     "@hig/themes": "^0.1.0-alpha"
   },
   "devDependencies": {
+    "@hig/babel-preset": "0.1.0",
     "@hig/scripts": "^0.1.0",
     "@hig/styles": "^0.1.0-alpha"
   },

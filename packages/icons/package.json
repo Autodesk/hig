@@ -12,6 +12,7 @@
   "module": "build/index.es.js",
   "files": ["build/*"],
   "devDependencies": {
+    "@hig/babel-preset": "0.1.0",
     "@hig/scripts": "^0.1.0",
     "@hig/styles": "^0.1.0-alpha"
   },

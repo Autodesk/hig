@@ -9,6 +9,7 @@ const postcss = require("rollup-plugin-postcss");
 const json = require("rollup-plugin-json");
 const postcssFuncitons = require("postcss-functions");
 const postcssImport = require("postcss-import");
+const createBuildPreset = require('@hig/babel-preset/build');
 
 const packageMeta = require(path.resolve(process.cwd(), "package.json"));
 
@@ -33,30 +34,7 @@ const inputOptions = {
     nodeResolve(),
     babel({
       babelrc: false,
-      exclude: [
-        "**/node_modules/**",
-        "**/*.css",
-        "**/*.scss",
-        "**/*.html",
-        "**/*.svg",
-        "**/*.json"
-      ],
-      presets: [
-        [
-          "env",
-          {
-            modules: false,
-            targets: {
-              browser: ">1%"
-            }
-          }
-        ],
-        "stage-2",
-        "react"
-      ],
-      plugins: [
-        "react-docgen"
-      ]
+      ...createBuildPreset()
     }),
     commonjs(),
     json(),

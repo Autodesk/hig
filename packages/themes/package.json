@@ -11,6 +11,7 @@
   "main": "build/index.js",
   "module": "build/index.es.js",
   "devDependencies": {
+    "@hig/babel-preset": "0.1.0",
     "@hig/scripts": "^0.1.0",
     "@hig/styles": "^0.1.0-alpha"
   },
