@@ -5,7 +5,9 @@ import { action } from "@storybook/addon-actions";
 import { boolean, select, text } from "@storybook/addon-knobs/react";
 import KnobbedThemeProvider from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
 import CollapseButton from "../CollapseButton";
+import Group from "../Group";
 import Link from "../Link";
+import Module from "../Module";
 import Submodule from "../Submodule";
 
 storiesOf("SideNav/_CollapseButton", module)
@@ -48,5 +50,28 @@ storiesOf("SideNav/_Submodule", module)
       link={text("Link", "https://www.autodesk.com")}
       target={select("Link Target", ["_self", "_blank", "_parent", "_top"])}
       />
+    ))
+  );
+
+storiesOf("SideNav/_Group", module)
+  .addDecorator(KnobbedThemeProvider)
+  .add(
+    "default",
+    withInfo()(() => (
+      <Group>
+        <Module title="Module 1" activeChildren>
+          <Submodule title="Submodule 1" />
+          <Submodule title="Submodule 2" active />
+        </Module>
+        <Module title="Module 2">
+          <Submodule title="Submodule 1" />
+          <Submodule title="Submodule 2" />
+        </Module>
+        <Module
+          title="Module 3"
+          link="https://www.autodesk.com"
+          target="_blank"
+        />
+      </Group>
     ))
   );

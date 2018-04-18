@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`side-nav/Module snapshot tests renders with minimal props 1`] = `
+<div
+  className="hig--light-theme hig__global-nav__side-nav__module"
+  onHover={[Function]}
+>
+  <div
+    className="hig__global-nav__side-nav__module__row"
+  >
+    <a
+      className="hig--light-theme hig__global-nav__side-nav__module__link"
+      href={undefined}
+      onClick={[Function]}
+      target="_self"
+    >
+      <div
+        className="hig__global-nav__side-nav__module__link__icon"
+      />
+      <div
+        className="hig__global-nav__side-nav__module__link__title"
+      >
+        Module
+      </div>
+      <div
+        className="hig__global-nav__side-nav__module__link__external-link-icon"
+      />
+    </a>
+  </div>
+  <div
+    className="hig__global-nav__side-nav__module__submodules hig__global-nav__side-nav__module__submodules--no-icon"
+  />
+</div>
+`;
