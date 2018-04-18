@@ -11,7 +11,7 @@
     "url": "https://github.com/Autodesk/hig"
   },
   "main": "index.js",
-  "peerDependencies": {
+  "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
