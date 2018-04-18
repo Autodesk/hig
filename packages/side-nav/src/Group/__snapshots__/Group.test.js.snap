@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`side-nav/Group snapshot tests renders with no props 1`] = `
+<section
+  className="hig--light-theme hig__global-nav__sidenav__group"
+/>
+`;
