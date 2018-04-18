@@ -45,6 +45,9 @@ gemini-report/
 # Files created by CircleCI
 nohup.out
 
+# Files generated during CI
+.dependency-hash
+
 # Environment Variables
 .env
 

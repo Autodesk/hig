@@ -8,14 +8,16 @@ jobs:
     <<: *defaults
     steps:
       - checkout
+      - run: yarn run create-dependency-hash
       - restore_cache:
-          key: hig-dependencies-{{ checksum "yarn.lock" }}
+          key: hig-dependencies-{{ checksum ".dependency-hash" }}
       - run:
           name: Install Dependencies
           command: yarn
       - save_cache:
-          key: hig-dependencies-{{ checksum "yarn.lock" }}
+          key: hig-dependencies-{{ checksum ".dependency-hash" }}
           paths:
+            - .dependency-hash
             - node_modules
             - packages/banner/node_modules
             - packages/eslint-config/node_modules
@@ -31,8 +33,9 @@ jobs:
     <<: *defaults
     steps:
       - checkout
+      - run: yarn run create-dependency-hash
       - restore_cache:
-          key: hig-dependencies-{{ checksum "yarn.lock" }}
+          key: hig-dependencies-{{ checksum ".dependency-hash" }}
       - run:
           name: Build all packages
           command: yarn build
@@ -51,8 +54,9 @@ jobs:
     <<: *defaults
     steps:
       - checkout
+      - run: yarn run create-dependency-hash
       - restore_cache:
-          key: hig-dependencies-{{ checksum "yarn.lock" }}
+          key: hig-dependencies-{{ checksum ".dependency-hash" }}
       - restore_cache:
           key: package-build-{{ .Revision }}
       - run:
@@ -68,8 +72,9 @@ jobs:
     <<: *defaults
     steps:
       - checkout
+      - run: yarn run create-dependency-hash
       - restore_cache:
-          key: hig-dependencies-{{ checksum "yarn.lock" }}
+          key: hig-dependencies-{{ checksum ".dependency-hash" }}
       - restore_cache:
           key: package-build-{{ .Revision }}
       - run:
@@ -96,8 +101,9 @@ jobs:
     <<: *defaults
     steps:
       - checkout
+      - run: yarn run create-dependency-hash
       - restore_cache:
-          key: hig-dependencies-{{ checksum "yarn.lock" }}
+          key: hig-dependencies-{{ checksum ".dependency-hash" }}
       - restore_cache:
           key: package-build-{{ .Revision }}
       - run:
@@ -108,8 +114,9 @@ jobs:
     <<: *defaults
     steps:
       - checkout
+      - run: yarn run create-dependency-hash
       - restore_cache:
-          key: hig-dependencies-{{ checksum "yarn.lock" }}
+          key: hig-dependencies-{{ checksum ".dependency-hash" }}
       - restore_cache:
           key: package-build-{{ .Revision }}
       - run:
@@ -123,7 +130,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: hig-dependencies-{{ checksum "yarn.lock" }}
+          key: hig-dependencies-{{ checksum ".dependency-hash" }}
       - restore_cache:
           key: package-build-{{ .Revision }}
       - run:
@@ -134,8 +141,9 @@ jobs:
     <<: *defaults
     steps:
       - checkout
+      - run: yarn run create-dependency-hash
       - restore_cache:
-          key: hig-dependencies-{{ checksum "yarn.lock" }}
+          key: hig-dependencies-{{ checksum ".dependency-hash" }}
       - restore_cache:
           key: package-build-{{ .Revision }}
       - run:

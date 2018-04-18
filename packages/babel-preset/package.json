@@ -1,6 +1,7 @@
 {
   "private": true,
   "name": "@hig/babel-preset",
+  "version": "0.1.0",
   "description": "HIG Babel preset",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -9,7 +10,6 @@
     "type": "git",
     "url": "https://github.com/Autodesk/hig"
   },
-  "version": "0.1.0",
   "main": "index.js",
   "peerDependencies": {
     "babel-cli": "^6.26.0",
