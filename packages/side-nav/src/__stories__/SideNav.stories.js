@@ -3,70 +3,50 @@ import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
 import { action } from "@storybook/addon-actions";
 import { boolean, select, text } from "@storybook/addon-knobs/react";
-import { ThemeContext, HIGLightTheme, HIGDarkBlueTheme } from "@hig/themes";
+import KnobbedThemeProvider from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
 import CollapseButton from "../CollapseButton";
 import Link from "../Link";
 import Submodule from "../Submodule";
 
-const themeOptions = {
-  "hig-light": "HIG Light",
-  "hig-dark-blue": "HIG Dark Blue",
-}
+storiesOf("SideNav/_CollapseButton", module)
+  .addDecorator(KnobbedThemeProvider)
+  .add(
+    "default",
+    withInfo()(() => (
+      <CollapseButton
+      onClick={action("onClick")}
+      minimized={boolean("Minimized", false)}
+      />
+    ))
+  );
 
-const themes = {
-  "hig-light": HIGLightTheme,
-  "hig-dark-blue": HIGDarkBlueTheme,
-}
+storiesOf("SideNav/_Link", module)
+  .addDecorator(KnobbedThemeProvider)
+  .add(
+    "default",
+    withInfo()(() => (
+      <Link
+      onClick={action("onClick")}
+      onHover={action("onHover")}
+      title={text("Title", "SideNav Link")}
+      link={text("Link", "https://www.autodesk.com")}
+      target={select("Link Target", ["_self", "_blank", "_parent", "_top"])}
+      />
+    ))
+  );
 
-storiesOf("SideNav/_CollapseButton", module).add(
-  "default",
-  withInfo()(() => {
-    const theme = select("Theme", themeOptions, "hig-light");
-    return (
-      <ThemeContext.Provider value={themes[theme]}>
-        <CollapseButton
-          onClick={action("onClick")}
-          minimized={boolean("Minimized", false)}
-        />
-      </ThemeContext.Provider>
-    );
-  })
-);
-
-storiesOf("SideNav/_Link", module).add(
-  "default",
-  withInfo()(() => {
-    const theme = select("Theme", themeOptions, "hig-light");
-    return (
-      <ThemeContext.Provider value={themes[theme]}>
-        <Link
-          onClick={action("onClick")}
-          onHover={action("onHover")}
-          title={text("Title", "SideNav Link")}
-          link={text("Link", "https://www.autodesk.com")}
-          target={select("Link Target", ["_self", "_blank", "_parent", "_top"])}
-        />
-      </ThemeContext.Provider>
-    )
-  })
-);
-
-
-storiesOf("SideNav/_Submodule", module).add(
-  "default",
-  withInfo()(() => {
-    const theme = select("Theme", themeOptions, "hig-light");
-    return (
-      <ThemeContext.Provider value={themes[theme]}>
-        <Submodule
-          active={boolean("Active", true)}
-          onClick={action("onClick")}
-          onHover={action("onHover")}
-          title={text("Title", "Submodule")}
-          link={text("Link", "https://www.autodesk.com")}
-          target={select("Link Target", ["_self", "_blank", "_parent", "_top"])}
-        />
-      </ThemeContext.Provider>
-    )
-  })
-);
+storiesOf("SideNav/_Submodule", module)
+  .addDecorator(KnobbedThemeProvider)
+  .add(
+    "default",
+    withInfo()(() => (
+      <Submodule
+      active={boolean("Active", true)}
+      onClick={action("onClick")}
+      onHover={action("onHover")}
+      title={text("Title", "Submodule")}
+      link={text("Link", "https://www.autodesk.com")}
+      target={select("Link Target", ["_self", "_blank", "_parent", "_top"])}
+      />
+    ))
+  );

@@ -12,6 +12,7 @@
   "module": "build/index.es.js",
   "devDependencies": {
     "@hig/babel-preset": "0.1.0",
+    "@hig/banner": "^0.1.1-alpha",
     "@hig/scripts": "^0.1.0",
     "@hig/styles": "^0.1.0-alpha"
   },
