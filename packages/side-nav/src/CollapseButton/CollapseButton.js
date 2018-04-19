@@ -24,9 +24,9 @@ export default class CollapseButton extends Component {
     const { minimized, onClick } = this.props;
     const classes = (themeClass) => cx(
       themeClass,
-      "hig__global-nav__side-nav__section__group__module__collapse-button",
+      "hig__side-nav__module__collapse-button",
       {
-        "hig__global-nav__side-nav__section__group__module__collapse-button--collapsed": minimized
+        "hig__side-nav__module__collapse-button--collapsed": minimized
       }
     );
 

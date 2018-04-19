@@ -48,22 +48,22 @@ export default class Module extends Component {
     const { children, icon, link, title, target, active, activeChildren, onClick, onHover } = this.props;
     const classes = (themeClass) => cx(
       themeClass,
-      "hig__global-nav__side-nav__module"
+      "hig__side-nav__module"
     );
 
     const linkClasses = (themeClass) => cx(
       themeClass,
-      "hig__global-nav__side-nav__module__link",
+      "hig__side-nav__module__link",
       {
-        "hig__global-nav__side-nav__module__link--active": active,
-        "hig__global-nav__side-nav__module__link--active-children": activeChildren
+        "hig__side-nav__module__link--active": active,
+        "hig__side-nav__module__link--active-children": activeChildren
       }
     );
 
     const submodulesClasses = cx(
-      "hig__global-nav__side-nav__module__submodules",
+      "hig__side-nav__module__submodules",
       {
-        "hig__global-nav__side-nav__module__submodules--no-icon": !icon
+        "hig__side-nav__module__submodules--no-icon": !icon
       }
     );
 
@@ -74,15 +74,15 @@ export default class Module extends Component {
             className={classes(themeClass)}
             onHover={onHover}
           >
-            <div className="hig__global-nav__side-nav__module__row">
+            <div className="hig__side-nav__module__row">
               <a className={linkClasses(themeClass)}
                 href={link}
                 onClick={onClick}
                 target={target}
               >
-                <div className="hig__global-nav__side-nav__module__link__icon">{icon}</div>
-                <div className="hig__global-nav__side-nav__module__link__title">{title}</div>
-                <div className="hig__global-nav__side-nav__module__link__external-link-icon">
+                <div className="hig__side-nav__module__link__icon">{icon}</div>
+                <div className="hig__side-nav__module__link__title">{title}</div>
+                <div className="hig__side-nav__module__link__external-link-icon">
                   {this._renderExternalLinkIcon()}
                 </div>
               </a>

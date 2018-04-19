@@ -3,14 +3,14 @@
 @import "~@hig/styles/mixins/spacing.scss";
 @import "~@hig/styles/mixins/typography.scss";
 
-.hig__global-nav__side-nav__module {
+.hig__side-nav__module {
   @include typography-base;
   position: relative;
   margin: spacing(xs) 0;
   user-select: none;
 }
 
-.hig__global-nav__side-nav__module__row {
+.hig__side-nav__module__row {
   display: flex;
   flex-direction: row;
   align-items: stretch;
@@ -18,7 +18,7 @@
   margin-right: spacing(xs);
 }
 
-.hig__global-nav__side-nav__module__link {
+.hig__side-nav__module__link {
   display: flex;
   align-items: stretch;
   padding-left: 2px;
@@ -40,11 +40,11 @@
   }
 }
 
-.hig__global-nav__side-nav__module__link__icon {
+.hig__side-nav__module__link__icon {
   padding-left: spacing(xs);
 }
 
-.hig__global-nav__side-nav__module__link__title {
+.hig__side-nav__module__link__title {
   font-weight: 700;
   font-size: 14px;
   padding-left: spacing(xs) - 2;
@@ -52,13 +52,13 @@
   line-height: 20px;
 }
 
-.hig__global-nav__side-nav__module__link__external-link-icon {
+.hig__side-nav__module__link__external-link-icon {
   display: flex;
   align-items: center;
   margin-left: auto;
 }
 
-.hig__global-nav__side-nav__module__submodules {
+.hig__side-nav__module__submodules {
   padding-left: 46px;
 
   &--no-icon {
@@ -68,14 +68,14 @@
 
 // Light theme
 .hig--light-theme {
-  &.hig__global-nav__side-nav__module__link {
+  &.hig__side-nav__module__link {
     color: color(hig-gray-70);
 
-    .hig__global-nav__side-nav__module__link__icon svg * {
+    .hig__side-nav__module__link__icon svg * {
       fill: color(hig-gray-70);
     }
 
-    .hig__global-nav__side-nav__module__link__external-link-icon svg * {
+    .hig__side-nav__module__link__external-link-icon svg * {
       stroke: color(hig-gray-70);
     }
 
@@ -87,11 +87,11 @@
         border-left-color: color(hig-blue-60);
       }
 
-      .hig__global-nav__side-nav__module__link__icon svg * {
+      .hig__side-nav__module__link__icon svg * {
         fill: color(hig-blue-60);
       }
 
-      .hig__global-nav__side-nav__module__link__external-link-icon svg * {
+      .hig__side-nav__module__link__external-link-icon svg * {
         stroke: color(hig-blue-60);
       }
     }
@@ -103,7 +103,7 @@
         border-left-color: color(hig-blue-50);
       }
 
-      .hig__global-nav__side-nav__module__link__icon svg * {
+      .hig__side-nav__module__link__icon svg * {
         fill: color(hig-blue-50);
       }
     }
@@ -112,7 +112,7 @@
     &--active {
       color: color(hig-blue-50);
 
-      .hig__global-nav__side-nav__module__link__external-link-icon svg * {
+      .hig__side-nav__module__link__external-link-icon svg * {
         stroke: color(hig-blue-50);
       }
     }
@@ -121,14 +121,14 @@
 
 // Dark blue theme
 .hig--dark-blue-theme {
-  &.hig__global-nav__side-nav__module__link {
+  &.hig__side-nav__module__link {
     color: color(hig-white);
 
-    .hig__global-nav__side-nav__module__link__icon svg * {
+    .hig__side-nav__module__link__icon svg * {
       fill: color(hig-white);
     }
 
-    .hig__global-nav__side-nav__module__link__external-link-icon svg * {
+    .hig__side-nav__module__link__external-link-icon svg * {
       stroke: color(hig-white);
     }
 
@@ -140,11 +140,11 @@
         border-left-color: color(hig-blue-30);
       }
 
-      .hig__global-nav__side-nav__module__link__icon svg * {
+      .hig__side-nav__module__link__icon svg * {
         fill: color(hig-blue-30);
       }
 
-      .hig__global-nav__side-nav__module__link__external-link-icon svg * {
+      .hig__side-nav__module__link__external-link-icon svg * {
         stroke: color(hig-blue-30);
       }
     }
@@ -156,7 +156,7 @@
         border-left-color: color(hig-blue-40);
       }
 
-      .hig__global-nav__side-nav__module__link__icon svg * {
+      .hig__side-nav__module__link__icon svg * {
         fill: color(hig-blue-40);
       }
     }
@@ -164,7 +164,7 @@
     &--active {
       color: color(hig-blue-40);
 
-      .hig__global-nav__side-nav__module__link__external-link-icon svg * {
+      .hig__side-nav__module__link__external-link-icon svg * {
         stroke: color(hig-blue-40);
       }
     }

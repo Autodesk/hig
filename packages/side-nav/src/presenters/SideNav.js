@@ -30,26 +30,26 @@ export default class SideNav extends Component {
 
     const classes = (themeClass) => cx(
       themeClass,
-      "hig__global-nav__sidenav-full"
+      "hig__side-nav"
     );
 
     return (
       <ThemeContext.Consumer>
         {({ themeClass }) => (
           <nav className={classes(themeClass)}>
-            <div className="hig__global-nav__sidenav__overflow">
+            <div className="hig__side-nav__overflow">
               <div className="hig__side-nav__headers">
-                <h3 className="hig__global-nav__sidenav__super-header">
+                <h3 className="hig__side-nav__super-header">
                   <a
-                    className="hig__global-nav__sidenav__super-header-link"
+                    className="hig__side-nav__super-header-link"
                     href={superHeaderLink}
                   >
                     {superHeaderLabel}
                   </a>
                 </h3>
-                <h4 className="hig__global-nav__sidenav__header">
+                <h4 className="hig__side-nav__header">
                   <a
-                    className="hig__global-nav__sidenav__header-link"
+                    className="hig__side-nav__header-link"
                     href={headerLink}
                   >
                     {headerLabel}
@@ -59,7 +59,7 @@ export default class SideNav extends Component {
 
               {
                 groups && (
-                  <div className="hig__global-nav__sidenav__groups">
+                  <div className="hig__side-nav__groups">
                     {groups}
                   </div>
                 )
@@ -75,7 +75,7 @@ export default class SideNav extends Component {
 
               {
                 links && (
-                  <div className="hig__global-nav__sidenav__links">
+                  <div className="hig__side-nav__links">
                     {links}
                   </div>
                 )
@@ -83,7 +83,7 @@ export default class SideNav extends Component {
 
               {
                 copyright && (
-                  <div className="hig__global-nav__sidenav__copyright">
+                  <div className="hig__side-nav__copyright">
                     {copyright}
                   </div>
                 )
@@ -91,7 +91,7 @@ export default class SideNav extends Component {
             </div>
 
             {/* <!--SEARCH--> */}
-            <div className="hig__global-nav__side-nav__collapse">
+            <div className="hig__side-nav__collapse">
               {/* <!--COLLAPSE--> */}
             </div>
           </nav>

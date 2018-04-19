@@ -2,7 +2,7 @@
 
 exports[`side-nav/CollapseButton snapshot tests renders minimized 1`] = `
 <div
-  className="hig--light-theme hig__global-nav__side-nav__section__group__module__collapse-button hig__global-nav__side-nav__section__group__module__collapse-button--collapsed"
+  className="hig--light-theme hig__side-nav__module__collapse-button hig__side-nav__module__collapse-button--collapsed"
   onClick={[Function]}
 >
   <div
@@ -18,7 +18,7 @@ exports[`side-nav/CollapseButton snapshot tests renders minimized 1`] = `
 
 exports[`side-nav/CollapseButton snapshot tests renders with no props 1`] = `
 <div
-  className="hig--light-theme hig__global-nav__side-nav__section__group__module__collapse-button"
+  className="hig--light-theme hig__side-nav__module__collapse-button"
   onClick={[Function]}
 >
   <div

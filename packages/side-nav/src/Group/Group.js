@@ -14,7 +14,7 @@ export default class Group extends Component {
   render() {
     const classes = (themeClass) => cx(
       themeClass,
-      "hig__global-nav__sidenav__group"
+      "hig__side-nav__group"
     );
 
     return (

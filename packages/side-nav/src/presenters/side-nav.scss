@@ -6,7 +6,7 @@
 
 @import "../tokens.scss";
 
-.hig__global-nav__sidenav-full {
+.hig__side-nav {
   display: flex;
   flex-flow: column;
   width: $side-nav-max-width;
@@ -14,7 +14,7 @@
   overflow: hidden;
 }
 
-.hig__global-nav__sidenav__overflow {
+.hig__side-nav__overflow {
   @include vendor-prefix('box-sizing', 'border-box');
   flex: 1 1 auto;
   height: 100%;
@@ -38,18 +38,18 @@
   margin-bottom: spacing(s);
 }
 
-.hig__global-nav__sidenav__super-header {
+.hig__side-nav__super-header {
   @include typography-base;
   font-size: 12px;
 }
 
-.hig__global-nav__sidenav__header {
+.hig__side-nav__header {
   @include typography-base;
   font-size: 16px;
 }
 
-.hig__global-nav__sidenav__super-header-link,
-.hig__global-nav__sidenav__header-link {
+.hig__side-nav__super-header-link,
+.hig__side-nav__header-link {
   padding: 0 spacing(s) 0 spacing(m);
   font-weight: 600;
   text-decoration: none;
@@ -62,13 +62,19 @@
   padding: 32px 8px 32px 16px;
 }
 
-.hig__global-nav__sidenav__copyright {
+.hig__side-nav__links {
+  font-size: 14px;
+  line-height: 26px;
+  margin: spacing(m) 0;
+}
+
+.hig__side-nav__copyright {
   padding-left: spacing(m);
   margin-bottom: 40px;
   font-size: 12px;
 }
 
-.hig__global-nav__side-nav__collapse {
+.hig__side-nav__collapse {
   display: none;
 
   &--active {
@@ -83,16 +89,16 @@
 
 // Light theme
 .hig--light-theme {
-  &.hig__global-nav__sidenav-full {
+  &.hig__side-nav {
     background: color(hig-white);
   }
 
-  .hig__global-nav__sidenav__overflow::-webkit-scrollbar-thumb {
+  .hig__side-nav__overflow::-webkit-scrollbar-thumb {
     background-color: color(hig-cool-gray-50);
   }
 
-  .hig__global-nav__sidenav__super-header-link,
-  .hig__global-nav__sidenav__header-link {
+  .hig__side-nav__super-header-link,
+  .hig__side-nav__header-link {
     color: color(hig-gray-70);
 
     &[href]:hover {
@@ -100,47 +106,47 @@
     }
   }
 
-  .hig__global-nav__sidenav__super-header {
+  .hig__side-nav__super-header {
     color: color(hig-cool-gray-50);
   }
 
-  .hig__global-nav__sidenav__header {
+  .hig__side-nav__header {
     color: color(hig-gray-70);
   }
 
-  .hig__global-nav__sidenav__copyright {
+  .hig__side-nav__copyright {
     color: color(hig-cool-gray-50);
   }
 }
 
 // Dark Blue
 .hig--dark-blue-theme {
-  &.hig__global-nav__sidenav-full {
+  &.hig__side-nav {
     background-color: color(hig-cool-gray-60);
   }
 
-  .hig__global-nav__sidenav__overflow::-webkit-scrollbar-thumb {
+  .hig__side-nav__overflow::-webkit-scrollbar-thumb {
     background-color: color(hig-cool-gray-40);
   }
 
-  .hig__global-nav__sidenav__super-header-link,
-  .hig__global-nav__sidenav__header-link {
+  .hig__side-nav__super-header-link,
+  .hig__side-nav__header-link {
     color: color(hig-white);
     &[href]:hover {
       color: color(hig-blue-40);
     }
   }
 
-  .hig__global-nav__sidenav__super-header,
-  .hig__global-nav__sidenav__header {
+  .hig__side-nav__super-header,
+  .hig__side-nav__header {
     color: color(hig-white);
   }
 
-  .hig__global-nav__sidenav__copyright {
+  .hig__side-nav__copyright {
     color: transparentize($color: color(hig-white), $amount: 0.5);
   }
 
-  .hig__global-nav__side-nav__collapse {
+  .hig__side-nav__collapse {
     svg * {
       fill: color(hig-white);
     }

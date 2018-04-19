@@ -36,7 +36,7 @@ export default class Link extends Component {
     const { title, link, onClick, onHover, target } = this.props;
     const classes = (themeClass) => cx(
       themeClass,
-      "hig__global-nav__sidenav__link"
+      "hig__side-nav__link"
     );
 
     return (
