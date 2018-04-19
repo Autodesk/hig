@@ -6,6 +6,7 @@ import { boolean, select, text } from "@storybook/addon-knobs/react";
 import KnobbedThemeProvider from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
 
 import SideNav from "../presenters/SideNav";
+import Docked from "../containers/Docked";
 
 import Icon, { names as iconNames, sizes as iconSizes } from "@hig/icon";
 import CollapseButton from "../CollapseButton";
@@ -171,54 +172,58 @@ storiesOf("SideNav/SideNav", module)
   .addDecorator(KnobbedThemeProvider)
   .add(
     "with icons",
-    withInfo({ source: true })(() => (
-      <SideNav
-        headerLabel={text("Header Label", "Storybook")}
-        headerLink={text("Header Link", "https://www.autodesk.com")}
-        onMinimize={action("onMinimize")}
-        showMinimizeButton={boolean("Show Minimize Button", false)}
-        superHeaderLabel={text("Superheader Label", "HIG")}
-        superHeaderLink={text("Superheader Link", "https://www.autodesk.com")}
-        groups={
-          <Group>
-            <Module
-              title="Module 1"
-              icon={<Icon name={iconNames.INSIGHT} size={iconSizes.PX_24} />}
-              activeChildren
-            >
-              <Submodule title="Submodule 1" />
-              <Submodule title="Submodule 2" active />
-            </Module>
-            <Module
-              title="Module 2"
-              icon={<Icon svg={cubeIcon} size={iconSizes.PX_24} />}
-              minimized
-            >
-              <Submodule title="Submodule 1" />
-              <Submodule title="Submodule 2" />
-            </Module>
-            <Module
-              title="Module 3"
-              icon={<Icon name={iconNames.COLLABORATION} size={iconSizes.PX_24} />}
-              link="https://www.autodesk.com"
-              target="_blank"
-            />
-          </Group>
-        }
-        links={[
-          <Link
-            key="Autodesk Home"
-            title="Autodesk Home"
-            link="https://www.autodesk.com"
-          />,
-          <Link
-            key="Github"
-            title="Github"
-            link="https://www.github.com/Autodesk/hig"
-            target="_blank"
+    withInfo({ source: true, inline: false })(() => (
+      <div>
+        <Docked>
+          <SideNav
+            headerLabel={text("Header Label", "Storybook")}
+            headerLink={text("Header Link", "https://www.autodesk.com")}
+            onMinimize={action("onMinimize")}
+            showMinimizeButton={boolean("Show Minimize Button", false)}
+            superHeaderLabel={text("Superheader Label", "HIG")}
+            superHeaderLink={text("Superheader Link", "https://www.autodesk.com")}
+            groups={
+              <Group>
+                <Module
+                  title="Module 1"
+                  icon={<Icon name={iconNames.INSIGHT} size={iconSizes.PX_24} />}
+                  activeChildren
+                >
+                  <Submodule title="Submodule 1" />
+                  <Submodule title="Submodule 2" active />
+                </Module>
+                <Module
+                  title="Module 2"
+                  icon={<Icon svg={cubeIcon} size={iconSizes.PX_24} />}
+                  minimized
+                >
+                  <Submodule title="Submodule 1" />
+                  <Submodule title="Submodule 2" />
+                </Module>
+                <Module
+                  title="Module 3"
+                  icon={<Icon name={iconNames.COLLABORATION} size={iconSizes.PX_24} />}
+                  link="https://www.autodesk.com"
+                  target="_blank"
+                />
+              </Group>
+            }
+            links={[
+              <Link
+                key="Autodesk Home"
+                title="Autodesk Home"
+                link="https://www.autodesk.com"
+              />,
+              <Link
+                key="Github"
+                title="Github"
+                link="https://www.github.com/Autodesk/hig"
+                target="_blank"
+              />
+            ]}
+            copyright="© 2018 Autodesk Inc."
           />
-        ]}
-        copyright="© 2018 Autodesk Inc."
-      />
+        </Docked>
+      </div>
     ))
   );
