@@ -175,6 +175,8 @@ storiesOf("SideNav/SideNav", module)
       <SideNav
         headerLabel={text("Header Label", "Storybook")}
         headerLink={text("Header Link", "https://www.autodesk.com")}
+        onMinimize={action("onMinimize")}
+        showMinimizeButton={boolean("Show Minimize Button", false)}
         superHeaderLabel={text("Superheader Label", "HIG")}
         superHeaderLink={text("Superheader Link", "https://www.autodesk.com")}
         groups={
@@ -202,6 +204,13 @@ storiesOf("SideNav/SideNav", module)
               target="_blank"
             />
           </Group>
+        }
+        links={
+          <Link
+            title="Github"
+            link="https://www.github.com/Autodesk/hig"
+            target="_blank"
+          />
         }
       />
     ))

@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
 import { ThemeContext } from "@hig/themes";
+import { names as iconNames } from "@hig/icon";
+import IconButton, { types as iconButtonTypes } from "@hig/icon-button";
 
 import "./side-nav.scss";
 
@@ -19,14 +21,23 @@ export default class SideNav extends Component {
     headerLink: PropTypes.string,
     /** 0 or more SideNav Links */
     links: PropTypes.node,
+    /** Called when minimize button is clicked */
+    onMinimize: PropTypes.func,
+    /** Renders a button to minimize the SideNav */
+    showMinimizeButton: PropTypes.bool,
     /** Title at the top of the SideNav */
     superHeaderLabel: PropTypes.string,
     /** An href for the SideNav Title */
     superHeaderLink: PropTypes.string,
   }
 
+  static defaultProps = {
+    onMinimize: () => {},
+    showMinimizeButton: false,
+  }
+
   render() {
-    const { children, copyright, groups, headerLabel, headerLink, links, superHeaderLabel, superHeaderLink } = this.props;
+    const { children, copyright, groups, headerLabel, headerLink, links, onMinimize, showMinimizeButton, superHeaderLabel, superHeaderLink } = this.props;
 
     const classes = (themeClass) => cx(
       themeClass,
@@ -91,9 +102,20 @@ export default class SideNav extends Component {
             </div>
 
             {/* <!--SEARCH--> */}
-            <div className="hig__side-nav__collapse">
-              {/* <!--COLLAPSE--> */}
-            </div>
+
+            {
+              showMinimizeButton && (
+                <div className="hig__side-nav__minimize">
+                  <IconButton
+                    type={iconButtonTypes.TRANSPARENT}
+                    name={iconNames.BACK}
+                    title="Minimize"
+                    aria-label="Minimize"
+                    onClick={onMinimize}
+                  />
+                </div>
+              )
+            }
           </nav>
         )}
       </ThemeContext.Consumer>
