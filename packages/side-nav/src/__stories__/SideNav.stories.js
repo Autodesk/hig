@@ -5,6 +5,8 @@ import { action } from "@storybook/addon-actions";
 import { boolean, select, text } from "@storybook/addon-knobs/react";
 import KnobbedThemeProvider from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
 
+import SideNav from "../presenters/SideNav";
+
 import Icon, { names as iconNames, sizes as iconSizes } from "@hig/icon";
 import CollapseButton from "../CollapseButton";
 import Group from "../Group";
@@ -162,5 +164,45 @@ storiesOf("SideNav/_Group", module)
           target="_blank"
         />
       </Group>
+    ))
+  );
+
+storiesOf("SideNav/SideNav", module)
+  .addDecorator(KnobbedThemeProvider)
+  .add(
+    "with icons",
+    withInfo({ source: true })(() => (
+      <SideNav
+        headerLabel={text("Header Label", "Storybook")}
+        headerLink={text("Header Link", "https://www.autodesk.com")}
+        superHeaderLabel={text("Superheader Label", "HIG")}
+        superHeaderLink={text("Superheader Link", "https://www.autodesk.com")}
+        groups={
+          <Group>
+            <Module
+              title="Module 1"
+              icon={<Icon name={iconNames.INSIGHT} size={iconSizes.PX_24} />}
+              activeChildren
+            >
+              <Submodule title="Submodule 1" />
+              <Submodule title="Submodule 2" active />
+            </Module>
+            <Module
+              title="Module 2"
+              icon={<Icon svg={cubeIcon} size={iconSizes.PX_24} />}
+              minimized
+            >
+              <Submodule title="Submodule 1" />
+              <Submodule title="Submodule 2" />
+            </Module>
+            <Module
+              title="Module 3"
+              icon={<Icon name={iconNames.COLLABORATION} size={iconSizes.PX_24} />}
+              link="https://www.autodesk.com"
+              target="_blank"
+            />
+          </Group>
+        }
+      />
     ))
   );
