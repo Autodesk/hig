@@ -13,8 +13,13 @@ module.exports = (storybookBaseConfig) => {
       use: ["style-loader", "css-loader", "sass-loader"]
     },
     {
-      test: /\.(json)$/,
+      test: /\.json$/,
       use: ["json-loader"]
+    },
+    {
+      test: /\.svg$/,
+      issuer: /\.js$/,
+      use: ["raw-loader"],
     },
     {
       test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2)(\?.*)?$/,

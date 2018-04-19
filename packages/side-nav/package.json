@@ -13,6 +13,7 @@
   "style": "build/index.css",
   "files": ["build/*"],
   "dependencies": {
+    "@hig/icon": "^0.1.0-alpha",
     "@hig/skeleton-item": "^0.1.0-alpha",
     "@hig/themes": "^0.1.0-alpha"
   },
