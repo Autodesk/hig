@@ -63,12 +63,11 @@
 }
 
 .hig__side-nav__links {
-  font-size: 14px;
-  line-height: 26px;
   margin: spacing(m) 0;
 }
 
 .hig__side-nav__copyright {
+  @include typography-base;
   padding-left: spacing(m);
   margin-bottom: 40px;
   font-size: 12px;

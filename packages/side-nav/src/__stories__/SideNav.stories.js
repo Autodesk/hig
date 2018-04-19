@@ -205,13 +205,20 @@ storiesOf("SideNav/SideNav", module)
             />
           </Group>
         }
-        links={
+        links={[
           <Link
+            key="Autodesk Home"
+            title="Autodesk Home"
+            link="https://www.autodesk.com"
+          />,
+          <Link
+            key="Github"
             title="Github"
             link="https://www.github.com/Autodesk/hig"
             target="_blank"
           />
-        }
+        ]}
+        copyright="© 2018 Autodesk Inc."
       />
     ))
   );

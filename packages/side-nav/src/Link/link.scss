@@ -4,6 +4,7 @@
 
 .hig__side-nav__link {
   @include typography-base;
+  line-height: 26px;
   display: flex;
   justify-content: space-between;
   text-decoration: none;
