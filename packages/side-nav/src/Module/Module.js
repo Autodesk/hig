@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import cx from "classnames";
 import Icon, { names as iconNames, sizes as iconSizes } from "@hig/icon";
 import { ThemeContext } from "@hig/themes";
+import CollapseButton from "../CollapseButton";
 
 import "./module.scss";
 
@@ -18,6 +19,8 @@ export default class Module extends Component {
     icon: PropTypes.node,
     /** URL to navigate to when clicking this module */
     link: PropTypes.string,
+    /** Indicates whether to display nested submodules */
+    minimized: PropTypes.bool,
     /** Called when clicking on the title */
     onClick: PropTypes.func,
     /** Called when hovering over the title */
@@ -29,6 +32,7 @@ export default class Module extends Component {
   }
 
   static defaultProps = {
+    minimized: false,
     onClick: () => {},
     onHover: () => {},
     target: "_self",
@@ -82,11 +86,19 @@ export default class Module extends Component {
                   {this._renderExternalLinkIcon()}
                 </div>
               </a>
-              {/* <!--MODULE-COLLAPSE--> */}
+              {
+                this.props.children && (
+                  <CollapseButton minimized={this.props.minimized} />
+                )
+              }
             </div>
-            <div className={submodulesClasses}>
-              {children}
-            </div>
+            {
+              !this.props.minimized && (
+                <div className={submodulesClasses}>
+                  {children}
+                </div>
+              )
+            }
           </div>
         )}
       </ThemeContext.Consumer>

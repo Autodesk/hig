@@ -20,8 +20,8 @@ storiesOf("SideNav/_CollapseButton", module)
     "default",
     withInfo()(() => (
       <CollapseButton
-      onClick={action("onClick")}
-      minimized={boolean("Minimized", false)}
+        onClick={action("onClick")}
+        minimized={boolean("Minimized", false)}
       />
     ))
   );
@@ -32,11 +32,11 @@ storiesOf("SideNav/_Link", module)
     "default",
     withInfo()(() => (
       <Link
-      onClick={action("onClick")}
-      onHover={action("onHover")}
-      title={text("Title", "SideNav Link")}
-      link={text("Link", "https://www.autodesk.com")}
-      target={select("Link Target", ["_self", "_blank", "_parent", "_top"])}
+        onClick={action("onClick")}
+        onHover={action("onHover")}
+        title={text("Title", "SideNav Link")}
+        link={text("Link", "https://www.autodesk.com")}
+        target={select("Link Target", ["_self", "_blank", "_parent", "_top"])}
       />
     ))
   );
@@ -47,13 +47,65 @@ storiesOf("SideNav/_Submodule", module)
     "default",
     withInfo()(() => (
       <Submodule
-      active={boolean("Active", true)}
-      onClick={action("onClick")}
-      onHover={action("onHover")}
-      title={text("Title", "Submodule")}
-      link={text("Link", "https://www.autodesk.com")}
-      target={select("Link Target", ["_self", "_blank", "_parent", "_top"])}
+        active={boolean("Active", true)}
+        onClick={action("onClick")}
+        onHover={action("onHover")}
+        title={text("Title", "Submodule")}
+        link={text("Link", "https://www.autodesk.com")}
+        target={select("Link Target", ["_self", "_blank", "_parent", "_top"])}
       />
+    ))
+  );
+
+storiesOf("SideNav/_Module", module)
+  .addDecorator(KnobbedThemeProvider)
+  .add(
+    "with icon",
+    withInfo()(() => (
+      <Module
+        active={boolean("Active", true)}
+        activeChildren={boolean("Active Children", false)}
+        icon={<Icon name={iconNames.INSIGHT} size={iconSizes.PX_24} />}
+        link={text("Link", "https://www.autodesk.com")}
+        minimized={boolean("Minimized", false)}
+        onClick={action("onClick")}
+        onHover={action("onHover")}
+        target={select("Link Target", ["_self", "_blank", "_parent", "_top"])}
+        title={text("Title", "Module")}
+      />
+    ))
+  )
+  .add(
+    "without icon",
+    withInfo()(() => (
+      <Module
+        active={boolean("Active", true)}
+        activeChildren={boolean("Active Children", false)}
+        link={text("Link", "https://www.autodesk.com")}
+        minimized={boolean("Minimized", false)}
+        onClick={action("onClick")}
+        onHover={action("onHover")}
+        target={select("Link Target", ["_self", "_blank", "_parent", "_top"])}
+        title={text("Title", "Module")}
+      />
+    ))
+  )
+  .add(
+    "with submodules",
+    withInfo()(() => (
+      <Module
+        active={boolean("Active", true)}
+        activeChildren={boolean("Active Children", false)}
+        link={text("Link", "https://www.autodesk.com")}
+        minimized={boolean("Minimized", false)}
+        onClick={action("onClick")}
+        onHover={action("onHover")}
+        target={select("Link Target", ["_self", "_blank", "_parent", "_top"])}
+        title={text("Title", "Module")}
+      >
+        <Submodule title="Submodule 1" />
+        <Submodule title="Submodule 2" />
+      </Module>
     ))
   );
 
@@ -74,6 +126,7 @@ storiesOf("SideNav/_Group", module)
         <Module
           title="Module 2"
           icon={<Icon svg={cubeIcon} size={iconSizes.PX_24} />}
+          minimized
         >
           <Submodule title="Submodule 1" />
           <Submodule title="Submodule 2" />
@@ -99,7 +152,7 @@ storiesOf("SideNav/_Group", module)
           <Submodule title="Submodule 1" />
           <Submodule title="Submodule 2" active />
         </Module>
-        <Module title="Module 2">
+        <Module title="Module 2" minimized>
           <Submodule title="Submodule 1" />
           <Submodule title="Submodule 2" />
         </Module>
