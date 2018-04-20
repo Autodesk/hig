@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import themeContextShape from './shape';
+import { Component } from "react";
+import PropTypes from "prop-types";
+import themeContextShape from "./shape";
 import HIGLightTheme from "../themes/HIGLightTheme";
 
 export default class Provider extends Component {
@@ -9,13 +9,13 @@ export default class Provider extends Component {
     value: PropTypes.shape(themeContextShape),
     /** Content within will be provided with the passed theme */
     children: PropTypes.node.isRequired
-  }
+  };
 
   static childContextTypes = themeContextShape;
 
   static defaultProps = {
     value: HIGLightTheme
-  }
+  };
 
   getChildContext() {
     return { ...this.props.value };

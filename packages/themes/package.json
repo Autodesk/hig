@@ -21,6 +21,8 @@
     "prop-types": "^15.6.1"
   },
   "scripts": {
-    "build": "hig-scripts-build"
-  }
+    "build": "hig-scripts-build",
+    "lint": "eslint src --ext .js,.jsx"
+  },
+  "eslintConfig": { "extends": "@hig" }
 }
