@@ -5,7 +5,7 @@ import Icons, { AVAILABLE_NAMES } from "@hig/icons";
 
 import "./icon.scss";
 import sizes from "./sizes";
-import AVAILABLE_SIZES from './availableSizes';
+import AVAILABLE_SIZES from "./availableSizes";
 
 const COMPONENT_CLASS = "hig__icon";
 
