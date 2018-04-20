@@ -2,7 +2,7 @@
 
 exports[`side-nav/Submodule snapshot tests renders with no props 1`] = `
 <a
-  className="hig--light-theme hig__global-nav__side-nav__section__group__module__submodule"
+  className="hig--light-theme hig__side-nav__submodule"
   href={undefined}
   onClick={undefined}
   onMouseOver={undefined}

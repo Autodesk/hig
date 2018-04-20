@@ -2,7 +2,7 @@
 @import "~@hig/styles/mixins/spacing.scss";
 @import "~@hig/styles/mixins/typography.scss";
 
-.hig__global-nav__side-nav__section__group__module__submodule {
+.hig__side-nav__submodule {
   @include typography-base;
   display: flex;
   align-items: center;
@@ -28,7 +28,7 @@
 
 // Light theme
 .hig--light-theme {
-  &.hig__global-nav__side-nav__section__group__module__submodule {
+  &.hig__side-nav__submodule {
     color: color(hig-cool-gray-50);
     svg * {
       stroke: color(hig-cool-gray-50);
@@ -49,7 +49,7 @@
 
 // Dark blue theme
 .hig--dark-blue-theme {
-  &.hig__global-nav__side-nav__section__group__module__submodule {
+  &.hig__side-nav__submodule {
     color: transparentize($color: color(hig-white), $amount: 0.25);
     svg * {
       stroke: transparentize($color: color(hig-white), $amount: 0.25);

@@ -33,9 +33,9 @@ export default class Submodule extends Component {
 
     const classes = (themeClass) => cx(
       themeClass,
-      "hig__global-nav__side-nav__section__group__module__submodule",
+      "hig__side-nav__submodule",
       {
-        "hig__global-nav__side-nav__section__group__module__submodule--active": active
+        "hig__side-nav__submodule--active": active
       }
     );
 
