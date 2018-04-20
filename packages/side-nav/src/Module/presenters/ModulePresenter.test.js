@@ -2,22 +2,22 @@ import { shallow } from "enzyme";
 import React from "react";
 import renderer from "react-test-renderer";
 
-import Module from "./Module";
+import ModulePresenter from "./ModulePresenter";
 
-describe("side-nav/Module", () => {
+describe("side-nav/Module/presenters/ModulePresenter", () => {
   describe("snapshot tests", () => {
     const cases = [
       {
         description: "renders with minimal props",
         props: {
-          title: "Module"
+          title: "ModulePresenter"
         }
       },
     ];
 
     cases.forEach(({ description, props: { children, ...otherProps } }) => {
       it(description, () => {
-        const wrapper = <Module {...otherProps}>{children}</Module>;
+        const wrapper = <ModulePresenter {...otherProps}>{children}</ModulePresenter>;
         const tree = renderer.create(wrapper).toJSON();
 
         expect(tree).toMatchSnapshot();
