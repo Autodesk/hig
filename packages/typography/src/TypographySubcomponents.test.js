@@ -20,12 +20,11 @@ import {
       it("is a Typography component of the correct type", () => {
         const wrapper = shallow(<Component>Test text</Component>);
 
-        expect(wrapper.containsMatchingElement(
-          <Typography
-            type={Component.name.toLowerCase()}
-            text="Test text"
-          />
-        )).toEqual(true);
+        expect(
+          wrapper.containsMatchingElement(
+            <Typography type={Component.name.toLowerCase()} text="Test text" />
+          )
+        ).toEqual(true);
       });
     });
   }
