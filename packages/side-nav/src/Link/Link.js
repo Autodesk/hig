@@ -14,7 +14,7 @@ export default class Link extends Component {
     /** Called when link is clicked  */
     onClick: PropTypes.func,
     /** Called when hovering over the link */
-    onHover: PropTypes.func,
+    onMouseOver: PropTypes.func,
     /** Corresponds to the anchor tag's target */
     target: PropTypes.oneOf(["_self", "_blank", "_parent", "_top"]),
     /** Link text */
@@ -23,7 +23,7 @@ export default class Link extends Component {
 
   static defaultProps = {
     onClick: () => {},
-    onHover: () => {},
+    onMouseOver: () => {},
   }
 
   _renderExternalLinkIcon = () => {
@@ -33,7 +33,7 @@ export default class Link extends Component {
   }
 
   render() {
-    const { title, link, onClick, onHover, target } = this.props;
+    const { title, link, onClick, onMouseOver, target } = this.props;
     const classes = (themeClass) => cx(
       themeClass,
       "hig__side-nav__link"
@@ -47,7 +47,7 @@ export default class Link extends Component {
             href={link}
             target={target}
             onClick={onClick}
-            onHover={onHover}
+            onMouseOver={onMouseOver}
           >
             {title}
             { this._renderExternalLinkIcon() }

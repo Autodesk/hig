@@ -3,7 +3,7 @@
 exports[`side-nav/Module snapshot tests renders with minimal props 1`] = `
 <div
   className="hig--light-theme hig__side-nav__module"
-  onHover={[Function]}
+  onMouseOver={[Function]}
 >
   <div
     className="hig__side-nav__module__row"

@@ -15,7 +15,7 @@ export default class Submodule extends Component {
     /** Called when clicking on the submodule */
     onClick: PropTypes.func,
     /** Called when hovering over the submodule */
-    onHover: PropTypes.func,
+    onMouseOver: PropTypes.func,
     /** Anchor target. Applicable only if link is provided */
     target: PropTypes.oneOf(["_self", "_blank", "_parent", "_top"]),
     /** Text to render */
@@ -29,7 +29,7 @@ export default class Submodule extends Component {
   }
 
   render() {
-    const { active, title, link, onClick, onHover, target } = this.props;
+    const { active, title, link, onClick, onMouseOver, target } = this.props;
 
     const classes = (themeClass) => cx(
       themeClass,
@@ -47,7 +47,7 @@ export default class Submodule extends Component {
             href={link}
             target={target}
             onClick={onClick}
-            onHover={onHover}
+            onMouseOver={onMouseOver}
           >
             {title}
             {this._renderExternalLinkIcon()}

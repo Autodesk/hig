@@ -5,7 +5,7 @@ exports[`side-nav/Link snapshot tests renders with no props 1`] = `
   className="hig--light-theme hig__side-nav__link"
   href={undefined}
   onClick={[Function]}
-  onHover={[Function]}
+  onMouseOver={[Function]}
   target={undefined}
 />
 `;

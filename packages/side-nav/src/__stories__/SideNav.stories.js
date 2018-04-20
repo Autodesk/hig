@@ -36,7 +36,7 @@ storiesOf("SideNav/_Link", module)
     withInfo()(() => (
       <Link
         onClick={action("onClick")}
-        onHover={action("onHover")}
+        onMouseOver={action("onMouseOver")}
         title={text("Title", "SideNav Link")}
         link={text("Link", "https://www.autodesk.com")}
         target={select("Link Target", ["_self", "_blank", "_parent", "_top"])}
@@ -52,7 +52,7 @@ storiesOf("SideNav/_Submodule", module)
       <Submodule
         active={boolean("Active", true)}
         onClick={action("onClick")}
-        onHover={action("onHover")}
+        onMouseOver={action("onMouseOver")}
         title={text("Title", "Submodule")}
         link={text("Link", "https://www.autodesk.com")}
         target={select("Link Target", ["_self", "_blank", "_parent", "_top"])}
@@ -72,7 +72,7 @@ storiesOf("SideNav/_Module", module)
         link={text("Link", "https://www.autodesk.com")}
         minimized={boolean("Minimized", false)}
         onClick={action("onClick")}
-        onHover={action("onHover")}
+        onMouseOver={action("onMouseOver")}
         target={select("Link Target", ["_self", "_blank", "_parent", "_top"])}
         title={text("Title", "Module")}
       />
@@ -87,7 +87,7 @@ storiesOf("SideNav/_Module", module)
         link={text("Link", "https://www.autodesk.com")}
         minimized={boolean("Minimized", false)}
         onClick={action("onClick")}
-        onHover={action("onHover")}
+        onMouseOver={action("onMouseOver")}
         target={select("Link Target", ["_self", "_blank", "_parent", "_top"])}
         title={text("Title", "Module")}
       />
@@ -102,7 +102,7 @@ storiesOf("SideNav/_Module", module)
         link={text("Link", "https://www.autodesk.com")}
         minimized={boolean("Minimized", false)}
         onClick={action("onClick")}
-        onHover={action("onHover")}
+        onMouseOver={action("onMouseOver")}
         target={select("Link Target", ["_self", "_blank", "_parent", "_top"])}
         title={text("Title", "Module")}
       >

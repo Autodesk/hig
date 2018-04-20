@@ -24,7 +24,7 @@ export default class Module extends Component {
     /** Called when clicking on the title */
     onClick: PropTypes.func,
     /** Called when hovering over the title */
-    onHover: PropTypes.func,
+    onMouseOver: PropTypes.func,
     /** A label for rendering this Module */
     title: PropTypes.string.isRequired,
     /** Anchor target. Applicable only if link is provided */
@@ -34,7 +34,7 @@ export default class Module extends Component {
   static defaultProps = {
     minimized: false,
     onClick: () => {},
-    onHover: () => {},
+    onMouseOver: () => {},
     target: "_self",
   }
 
@@ -45,7 +45,7 @@ export default class Module extends Component {
   }
 
   render() {
-    const { children, icon, link, title, target, active, activeChildren, onClick, onHover } = this.props;
+    const { children, icon, link, title, target, active, activeChildren, onClick, onMouseOver } = this.props;
     const classes = (themeClass) => cx(
       themeClass,
       "hig__side-nav__module"
@@ -72,7 +72,7 @@ export default class Module extends Component {
         {({ themeClass }) => (
           <div
             className={classes(themeClass)}
-            onHover={onHover}
+            onMouseOver={onMouseOver}
           >
             <div className="hig__side-nav__module__row">
               <a className={linkClasses(themeClass)}
