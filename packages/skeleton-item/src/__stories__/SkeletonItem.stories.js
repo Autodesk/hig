@@ -8,18 +8,18 @@ import SkeletonItem from "../SkeletonItem";
 
 const themeOptions = {
   "hig-light": "HIG Light",
-  "hig-dark-blue": "HIG Dark Blue",
-}
+  "hig-dark-blue": "HIG Dark Blue"
+};
 
 const themes = {
   "hig-light": HIGLightTheme,
-  "hig-dark-blue": HIGDarkBlueTheme,
-}
+  "hig-dark-blue": HIGDarkBlueTheme
+};
 
 storiesOf("SkeletonItem", module).add(
   "default",
   withInfo()(() => {
-    const theme = select('Theme', themeOptions, 'hig-light');
+    const theme = select("Theme", themeOptions, "hig-light");
     return (
       <ThemeContext.Provider value={themes[theme]}>
         <div>
@@ -27,12 +27,9 @@ storiesOf("SkeletonItem", module).add(
             maxWidth={text("Max Width", "400px")}
             marginBottom={text("Margin Bottom", "24px")}
           />
-          <SkeletonItem
-            maxWidth="240px"
-            marginBottom="24px"
-          />
+          <SkeletonItem maxWidth="240px" marginBottom="24px" />
         </div>
       </ThemeContext.Provider>
-    )
+    );
   })
 );

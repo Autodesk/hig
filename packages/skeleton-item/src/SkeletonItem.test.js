@@ -8,12 +8,16 @@ describe("skeleton-item/SkeletonItem", () => {
   describe("style props", () => {
     it("allows overriding maxWidth", () => {
       const wrapper = mount(<SkeletonItem maxWidth="100px" />);
-      expect(wrapper.find(".hig__skeleton-item").prop("style")).toMatchObject({ maxWidth: "100px" });
+      expect(wrapper.find(".hig__skeleton-item").prop("style")).toMatchObject({
+        maxWidth: "100px"
+      });
     });
 
     it("allows overriding marginBottom", () => {
       const wrapper = mount(<SkeletonItem marginBottom="12px" />);
-      expect(wrapper.find(".hig__skeleton-item").prop("style")).toMatchObject({ marginBottom: "12px" });
+      expect(wrapper.find(".hig__skeleton-item").prop("style")).toMatchObject({
+        marginBottom: "12px"
+      });
     });
   });
 
