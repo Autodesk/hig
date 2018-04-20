@@ -2,19 +2,15 @@
 @import "~@hig/styles/mixins/colors.scss";
 
 .hig__side-nav__module__collapse-button {
+  @include vendor-prefix("transform", "rotate(0deg)");
+
   &:hover {
     cursor: pointer;
-  }
-
-  .hig__icon {
-    @include vendor-prefix("transform", "rotate(0deg)");
   }
 }
 
 .hig__side-nav__module__collapse-button--collapsed {
-  .hig__icon {
-    @include vendor-prefix("transform", "rotate(-90deg)");
-  }
+  @include vendor-prefix("transform", "rotate(-90deg)");
 }
 
 // Light theme
