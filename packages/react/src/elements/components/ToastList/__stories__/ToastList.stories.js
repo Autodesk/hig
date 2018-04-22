@@ -2,10 +2,9 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { select } from "@storybook/addon-knobs/react";
 import { withInfo } from "@storybook/addon-info";
-
+import Avatar from "@hig/avatar";
 import sampleAvatar from "@hig/storybook/storybook-support/fixtures/avatar/chris-reynolds.png";
 
-import Avatar from "../../Avatar";
 import Toast from "../../Toast";
 import ToastList from "..";
 import { AVAILABLE_PLACEMENTS } from "../placements";

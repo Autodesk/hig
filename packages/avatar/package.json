@@ -1,0 +1,38 @@
+{
+  "name": "@hig/avatar",
+  "version": "0.1.0-alpha",
+  "description": "HIG Avatar",
+  "author": "Autodesk Inc.",
+  "license": "Apache-2.0",
+  "publishConfig": { "access": "public" },
+  "main": "build/index.js",
+  "module": "build/index.es.js",
+  "style": "build/index.css",
+  "files": ["build/*"],
+  "dependencies": {
+    "classnames": "^2.2.5"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.5.10",
+    "react": "^15.4.1"
+  },
+  "devDependencies": {
+    "@hig/babel-preset": "0.1.0",
+    "@hig/scripts": "^0.1.0",
+    "@hig/styles": "^0.1.0-alpha",
+    "@hig/eslint-config": "0.1.0"
+  },
+  "scripts": {
+    "build": "hig-scripts-build",
+    "lint": "eslint ./src/**/*"
+  },
+  "eslintConfig": { "extends": "@hig" },
+  "eslintIgnore": ["*.scss", "*.json"],
+  "babel": {
+    "env": {
+      "test": {
+        "presets": ["@hig/babel-preset/test"]
+      }
+    }
+  }
+}

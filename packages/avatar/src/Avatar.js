@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
+
 import "./avatar.scss";
 import _AVAILABLE_SIZES from "./sizes";
 

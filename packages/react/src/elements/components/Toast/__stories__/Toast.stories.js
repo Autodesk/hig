@@ -3,12 +3,12 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { text, select, boolean } from "@storybook/addon-knobs/react";
 import { withInfo } from "@storybook/addon-info";
+import Avatar from "@hig/avatar";
 
 import languageOptions from "@hig/storybook/storybook-support/languageOptions";
 import avatar from "@hig/storybook/storybook-support/fixtures/avatar/chris-reynolds.png";
 import greenhouseThumbnail from "@hig/storybook/storybook-support/fixtures/thumbnail/greenhouse.png";
 
-import Avatar from "../../Avatar";
 import Toast, { _AVAILABLE_STATUSES } from "../index";
 
 import intlExamples from "./toast-intl-examples.json";
