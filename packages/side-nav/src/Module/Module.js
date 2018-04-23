@@ -55,7 +55,8 @@ export default class Module extends Component {
 
     return {
       minimized,
-      onClickCollapseButton: this.handleModuleMinimizeToggle
+      onClickCollapseButton: this.handleModuleMinimizeToggle,
+      onClickTitle: this.handleModuleMinimizeToggle
     };
   }
 
