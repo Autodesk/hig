@@ -3,11 +3,11 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
-import "./icon-button.scss";
 import Icon from "@hig/icon";
-import { AVAILABLE_NAMES as AVAILABLE_ICON_NAMES } from '@hig/icons';
+import { AVAILABLE_NAMES as AVAILABLE_ICON_NAMES } from "@hig/icons";
+import "./icon-button.scss";
 import types from "./types";
-import AVAILABLE_TYPES from './availableTypes';
+import AVAILABLE_TYPES from "./availableTypes";
 
 export default class IconButton extends Component {
   getTabIndex() {

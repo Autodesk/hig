@@ -1,4 +1,4 @@
-import { sizes as iconSizes, names as iconNames, AVAILABLE_NAMES } from "./index";
+import { sizes as iconSizes, names as iconNames } from "./index";
 
 describe("Icon/index", () => {
   describe("names", () => {

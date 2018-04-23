@@ -1,4 +1,4 @@
-import sizes from './sizes';
+import sizes from "./sizes";
 
 /** @type {string[]} */
 const availableSizes = Object.values(sizes);

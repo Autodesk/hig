@@ -24,7 +24,7 @@
   },
   "scripts": {
     "build": "hig-scripts-build",
-    "lint": "eslint ./src/**/*"
+    "lint": "eslint src --ext .js,.jsx"
   },
   "dependencies": {
     "@hig/icon": "^0.1.0-alpha",
@@ -34,6 +34,5 @@
     "@hig/typography": "^0.1.0-alpha",
     "react-lifecycles-compat": "^2.0.0"
   },
-  "eslintConfig": { "extends": "@hig" },
-  "eslintIgnore": ["*.scss", "*.json"]
+  "eslintConfig": { "extends": "@hig" }
 }
