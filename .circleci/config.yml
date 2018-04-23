@@ -21,6 +21,7 @@ jobs:
           paths:
             - .dependency-hash
             - node_modules
+            - packages/avatar/node_modules
             - packages/banner/node_modules
             - packages/eslint-config/node_modules
             - packages/icon/node_modules
@@ -48,6 +49,7 @@ jobs:
       - save_cache:
           key: package-build-{{ .Revision }}
           paths:
+            - packages/avatar/build
             - packages/banner/build
             - packages/icon/build
             - packages/icon-button/build
