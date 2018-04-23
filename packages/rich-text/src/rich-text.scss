@@ -1,0 +1,54 @@
+@import '~@hig/styles/mixins/typography.scss';
+@import '~@hig/styles/mixins/spacing.scss';
+
+.hig__rich-text {
+  ul {
+    padding-left: 20px;
+  }
+  li {
+    list-style: none;
+  }
+  li:before {
+    content: "·";
+    font-size: 18px;
+    padding-right: 8px;
+    vertical-align: middle;
+    margin-left: -14px;
+  }
+}
+
+.hig__rich-text--small {
+  @include typography-small;
+  margin-bottom: spacing(xs);
+  b,
+  p {
+    @include typography-small;
+  }
+}
+
+.hig__rich-text--large {
+  @include typography-large;
+  p {
+    @include typography-large;
+  }
+}
+
+.hig__rich-text h1 {
+  @include typography-h1;
+}
+
+.hig__rich-text h2 {
+  @include typography-h2;
+}
+
+.hig__rich-text h3 {
+  @include typography-h3;
+}
+
+.hig__rich-text h4 {
+  @include typography-h4;
+}
+
+.hig__rich-text h5 {
+  @include typography-h5;
+}
