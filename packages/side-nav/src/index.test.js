@@ -3,27 +3,19 @@ import * as index from "./index";
 describe("side-nav/index", () => {
   [
     {
+      name: "default",
+      value: expect.any(Function)
+    },
+    {
       name: "SideNavSkeleton",
       value: expect.any(Function)
     },
     {
-      name: "CollapseButton",
+      name: "BelowTopNav",
       value: expect.any(Function)
     },
     {
-      name: "Group",
-      value: expect.any(Function)
-    },
-    {
-      name: "Link",
-      value: expect.any(Function)
-    },
-    {
-      name: "Module",
-      value: expect.any(Function)
-    },
-    {
-      name: "Submodule",
+      name: "Docked",
       value: expect.any(Function)
     }
   ].forEach(({ name, value }) => {
