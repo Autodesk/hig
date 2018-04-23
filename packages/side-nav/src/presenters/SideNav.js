@@ -36,18 +36,49 @@ export default class SideNav extends Component {
     showMinimizeButton: false
   };
 
+  _renderHeaders = () => {
+    const {
+      headerLabel,
+      headerLink,
+      superHeaderLabel,
+      superHeaderLink
+    } = this.props;
+
+    if (!(superHeaderLabel || headerLabel)) {
+      return null;
+    }
+
+    return (
+      <div className="hig__side-nav__headers">
+        {superHeaderLabel && (
+          <h3 className="hig__side-nav__super-header">
+            <a
+              className="hig__side-nav__super-header-link"
+              href={superHeaderLink}
+            >
+              {superHeaderLabel}
+            </a>
+          </h3>
+        )}
+        {headerLabel && (
+          <h4 className="hig__side-nav__header">
+            <a className="hig__side-nav__header-link" href={headerLink}>
+              {headerLabel}
+            </a>
+          </h4>
+        )}
+      </div>
+    );
+  };
+
   render() {
     const {
       children,
       copyright,
       groups,
-      headerLabel,
-      headerLink,
       links,
       onMinimize,
-      showMinimizeButton,
-      superHeaderLabel,
-      superHeaderLink
+      showMinimizeButton
     } = this.props;
 
     const classes = themeClass => cx(themeClass, "hig__side-nav");
@@ -57,21 +88,7 @@ export default class SideNav extends Component {
         {({ themeClass }) => (
           <nav className={classes(themeClass)}>
             <div className="hig__side-nav__overflow">
-              <div className="hig__side-nav__headers">
-                <h3 className="hig__side-nav__super-header">
-                  <a
-                    className="hig__side-nav__super-header-link"
-                    href={superHeaderLink}
-                  >
-                    {superHeaderLabel}
-                  </a>
-                </h3>
-                <h4 className="hig__side-nav__header">
-                  <a className="hig__side-nav__header-link" href={headerLink}>
-                    {headerLabel}
-                  </a>
-                </h4>
-              </div>
+              {this._renderHeaders()}
 
               {groups && <div className="hig__side-nav__groups">{groups}</div>}
 

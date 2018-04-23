@@ -9,6 +9,13 @@ describe("side-nav/presenters/SideNav", () => {
       {
         description: "renders without props",
         props: {}
+      },
+      {
+        description: "renders with headers",
+        props: {
+          headerLabel: "Storybook",
+          superHeaderLabel: "HIG"
+        }
       }
     ];
 

@@ -3,6 +3,7 @@
 @import "~@hig/styles/mixins/colors.scss";
 @import "~@hig/styles/mixins/spacing.scss";
 @import "~@hig/styles/mixins/typography.scss";
+@import "../mixins.scss";
 
 .hig__side-nav {
   display: flex;
@@ -17,7 +18,6 @@
   @include vendor-prefix('box-sizing', 'border-box');
   flex: 1 1 auto;
   height: 100%;
-  padding: 14px 0;
   margin: 4px 4px 4px 0;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -34,7 +34,9 @@
 }
 
 .hig__side-nav__headers {
-  margin-bottom: spacing(s);
+  @include group-separator;
+  position: relative;
+  padding: spacing(s) 0;
 }
 
 .hig__side-nav__super-header {
