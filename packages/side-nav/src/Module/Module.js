@@ -25,39 +25,31 @@ export default class Module extends Component {
     /** A label for rendering this Module */
     title: PropTypes.string.isRequired,
     /** Anchor target. Applicable only if link is provided */
-    target: PropTypes.oneOf(["_self", "_blank", "_parent", "_top"]),
+    target: PropTypes.oneOf(["_self", "_blank", "_parent", "_top"])
   };
 
   static defaultProps = {
-    minimized: false,
-  }
+    minimized: false
+  };
 
   constructor(props) {
     super(props);
 
     this.state = {
       minimized: props.minimized
-    }
+    };
   }
 
-  handleModuleMinimizeToggle = e => {
-    this.setState({ minimized: !this.state.minimized });
-    this.props.onClickCollapseButton && this.props.onClickCollapseButton(e);
-  }
+  handleModuleMinimizeToggle = e =>
+    this.setState(
+      { minimized: !this.state.minimized },
+      () =>
+        this.props.onClickCollapseButton && this.props.onClickCollapseButton(e)
+    );
 
   /**
-  * @param {PresenterBag}
-  */
-  renderPresenter = presenterBag => {
-    const presenterProps = { ...this.props, ...presenterBag };
-    const { children, ...otherProps } = presenterProps;
-
-    return <ModulePresenter {...otherProps}>{children}</ModulePresenter>;
-  };
-
-  /**
-  * @returns {PresenterBag}
-  */
+   * @returns {PresenterBag}
+   */
   createPresenterBag() {
     const { minimized } = this.state;
 
@@ -66,6 +58,16 @@ export default class Module extends Component {
       onClickCollapseButton: this.handleModuleMinimizeToggle
     };
   }
+
+  /**
+   * @param {PresenterBag}
+   */
+  renderPresenter = presenterBag => {
+    const presenterProps = { ...this.props, ...presenterBag };
+    const { children, ...otherProps } = presenterProps;
+
+    return <ModulePresenter {...otherProps}>{children}</ModulePresenter>;
+  };
 
   render() {
     const presenterBag = this.createPresenterBag();

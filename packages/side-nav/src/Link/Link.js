@@ -18,26 +18,22 @@ export default class Link extends Component {
     /** Corresponds to the anchor tag's target */
     target: PropTypes.oneOf(["_self", "_blank", "_parent", "_top"]),
     /** Link text */
-    title: PropTypes.string,
-  }
+    title: PropTypes.string
+  };
 
   static defaultProps = {
     onClick: () => {},
-    onMouseOver: () => {},
-  }
+    onMouseOver: () => {}
+  };
 
-  _renderExternalLinkIcon = () => {
-    return this.props.target === "_blank" && (
+  _renderExternalLinkIcon = () =>
+    this.props.target === "_blank" && (
       <Icon name={iconNames.EXTERNAL_LINK} size={iconSizes.PX_16} />
     );
-  }
 
   render() {
     const { title, link, onClick, onMouseOver, target } = this.props;
-    const classes = (themeClass) => cx(
-      themeClass,
-      "hig__side-nav__link"
-    );
+    const classes = themeClass => cx(themeClass, "hig__side-nav__link");
 
     return (
       <ThemeContext.Consumer>
@@ -50,7 +46,7 @@ export default class Link extends Component {
             onMouseOver={onMouseOver}
           >
             {title}
-            { this._renderExternalLinkIcon() }
+            {this._renderExternalLinkIcon()}
           </a>
         )}
       </ThemeContext.Consumer>

@@ -5,7 +5,7 @@ import { ThemeContext } from "@hig/themes";
 
 import "./side-nav-skeleton.scss";
 
-const skeletonItemStyles = [
+const skeletonItemStyles = Object.freeze([
   {
     maxWidth: "180px",
     marginBottom: "48px"
@@ -41,7 +41,7 @@ const skeletonItemStyles = [
   {
     maxWidth: "124px"
   }
-];
+]);
 
 export default class SideNavSkeleton extends Component {
   render() {
@@ -50,7 +50,8 @@ export default class SideNavSkeleton extends Component {
         {({ themeClass }) => (
           <div className={cx("hig__side-nav-skeleton", themeClass)}>
             {skeletonItemStyles.map((style, index) => (
-              <SkeletonItem key={index} { ...style } />
+              // eslint-disable-next-line react/no-array-index-key
+              <SkeletonItem key={index} {...style} />
             ))}
           </div>
         )}

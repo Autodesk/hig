@@ -4,11 +4,10 @@ import { withInfo } from "@storybook/addon-info";
 import { action } from "@storybook/addon-actions";
 import { boolean, select, text } from "@storybook/addon-knobs/react";
 import KnobbedThemeProvider from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
+import Icon, { names as iconNames, sizes as iconSizes } from "@hig/icon";
 
 import SideNav from "../presenters/SideNav";
 import Docked from "../containers/Docked";
-
-import Icon, { names as iconNames, sizes as iconSizes } from "@hig/icon";
 import CollapseButton from "../CollapseButton";
 import Group from "../Group";
 import Link from "../Link";
@@ -148,10 +147,7 @@ storiesOf("SideNav/_Group", module)
     "without icons",
     withInfo({ source: true })(() => (
       <Group>
-        <Module
-          title="Module 1"
-          activeChildren
-        >
+        <Module title="Module 1" activeChildren>
           <Submodule title="Submodule 1" />
           <Submodule title="Submodule 2" active />
         </Module>
@@ -181,12 +177,17 @@ storiesOf("SideNav/SideNav", module)
             onMinimize={action("onMinimize")}
             showMinimizeButton={boolean("Show Minimize Button", false)}
             superHeaderLabel={text("Superheader Label", "HIG")}
-            superHeaderLink={text("Superheader Link", "https://www.autodesk.com")}
+            superHeaderLink={text(
+              "Superheader Link",
+              "https://www.autodesk.com"
+            )}
             groups={
               <Group>
                 <Module
                   title="Module 1"
-                  icon={<Icon name={iconNames.INSIGHT} size={iconSizes.PX_24} />}
+                  icon={
+                    <Icon name={iconNames.INSIGHT} size={iconSizes.PX_24} />
+                  }
                   activeChildren
                 >
                   <Submodule title="Submodule 1" />
@@ -202,7 +203,12 @@ storiesOf("SideNav/SideNav", module)
                 </Module>
                 <Module
                   title="Module 3"
-                  icon={<Icon name={iconNames.COLLABORATION} size={iconSizes.PX_24} />}
+                  icon={
+                    <Icon
+                      name={iconNames.COLLABORATION}
+                      size={iconSizes.PX_24}
+                    />
+                  }
                   link="https://www.autodesk.com"
                   target="_blank"
                 />

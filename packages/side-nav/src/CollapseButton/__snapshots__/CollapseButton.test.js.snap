@@ -4,6 +4,8 @@ exports[`side-nav/CollapseButton snapshot tests renders minimized 1`] = `
 <div
   className="hig--light-theme hig__side-nav__module__collapse-button hig__side-nav__module__collapse-button--collapsed"
   onClick={[Function]}
+  role="button"
+  tabIndex={0}
 >
   <div
     className="hig__icon hig__icon--24-size"
@@ -20,6 +22,8 @@ exports[`side-nav/CollapseButton snapshot tests renders with no props 1`] = `
 <div
   className="hig--light-theme hig__side-nav__module__collapse-button"
   onClick={[Function]}
+  role="button"
+  tabIndex={0}
 >
   <div
     className="hig__icon hig__icon--24-size"

@@ -19,25 +19,21 @@ export default class Submodule extends Component {
     /** Anchor target. Applicable only if link is provided */
     target: PropTypes.oneOf(["_self", "_blank", "_parent", "_top"]),
     /** Text to render */
-    title: PropTypes.string,
-  }
+    title: PropTypes.string
+  };
 
-  _renderExternalLinkIcon = () => {
-    return this.props.target === "_blank" && (
+  _renderExternalLinkIcon = () =>
+    this.props.target === "_blank" && (
       <Icon name={iconNames.EXTERNAL_LINK} size={iconSizes.PX_16} />
     );
-  }
 
   render() {
     const { active, title, link, onClick, onMouseOver, target } = this.props;
 
-    const classes = (themeClass) => cx(
-      themeClass,
-      "hig__side-nav__submodule",
-      {
+    const classes = themeClass =>
+      cx(themeClass, "hig__side-nav__submodule", {
         "hig__side-nav__submodule--active": active
-      }
-    );
+      });
 
     return (
       <ThemeContext.Consumer>

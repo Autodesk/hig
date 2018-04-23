@@ -1,1 +1,1 @@
-export { default as SideNavSkeleton } from "./SideNavSkeleton"
+export { default as SideNavSkeleton } from "./SideNavSkeleton";

@@ -1,4 +1,3 @@
-import { shallow } from "enzyme";
 import React from "react";
 import renderer from "react-test-renderer";
 
@@ -12,12 +11,14 @@ describe("side-nav/Module/presenters/ModulePresenter", () => {
         props: {
           title: "ModulePresenter"
         }
-      },
+      }
     ];
 
     cases.forEach(({ description, props: { children, ...otherProps } }) => {
       it(description, () => {
-        const wrapper = <ModulePresenter {...otherProps}>{children}</ModulePresenter>;
+        const wrapper = (
+          <ModulePresenter {...otherProps}>{children}</ModulePresenter>
+        );
         const tree = renderer.create(wrapper).toJSON();
 
         expect(tree).toMatchSnapshot();
