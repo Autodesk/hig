@@ -16,7 +16,8 @@
     "@hig/icon": "^0.1.0-alpha",
     "@hig/icon-button": "^0.1.0-alpha",
     "@hig/skeleton-item": "^0.1.0-alpha",
-    "@hig/themes": "^0.1.0-alpha"
+    "@hig/themes": "^0.1.0-alpha",
+    "classnames": "^2.2.5"
   },
   "devDependencies": {
     "@hig/babel-preset": "0.1.0",
