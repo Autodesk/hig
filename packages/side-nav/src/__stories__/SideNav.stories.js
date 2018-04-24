@@ -6,7 +6,7 @@ import { boolean, select, text } from "@storybook/addon-knobs/react";
 import KnobbedThemeProvider from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
 import Icon, { names as iconNames } from "@hig/icon";
 
-import SideNav, { Docked, BelowTopNav } from "../index";
+import SideNav, { Docked, BelowTopNav, BelowTopNavCompact } from "../index";
 import cubeIcon from "./cube.svg";
 
 const FullSideNav = (
@@ -262,5 +262,17 @@ storiesOf("SideNav/containers", module)
       >
         {FullSideNav}
       </BelowTopNav>
+    ))
+  )
+
+  .add(
+    "BelowTopNavCompact",
+    withInfo({ inline: false })(() => (
+      <BelowTopNavCompact
+        onMouseEnter={action("BelowTopNavCompact onMouseEnter")}
+        onMouseLeave={action("BelowTopNavCompact onMouseLeave")}
+      >
+        {FullSideNav}
+      </BelowTopNavCompact>
     ))
   );

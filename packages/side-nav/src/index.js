@@ -15,4 +15,5 @@ SideNav.Submodule = Submodule;
 export { default as SideNavSkeleton } from "./SideNavSkeleton";
 export { default as Docked } from "./containers/Docked";
 export { default as BelowTopNav } from "./containers/BelowTopNav";
+export { default as BelowTopNavCompact } from "./containers/BelowTopNavCompact";
 export default SideNav;

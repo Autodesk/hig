@@ -4,27 +4,27 @@
 @import "../tokens.scss";
 
 // @TODO: DRY with other containers
-.hig__side-nav-container--below-top-nav {
+.hig__side-nav-container--below-top-nav-compact {
   @include reset;
 
   position: absolute;
   top: 56px; // @TODO: share TopNav height token here
   bottom: 0;
   height: calc(100vh - 56px);
-  width: $side-nav-max-width;
+  max-width: $side-nav-max-width;
   z-index: 2;
 
   overflow-x: hidden;
 }
 
 .hig--light-theme {
-  &.hig__side-nav-container--below-top-nav {
+  &.hig__side-nav-container--below-top-nav-compact {
     background: color(hig-white);
   }
 }
 
 .hig--dark-blue-theme {
-  &.hig__side-nav-container--below-top-nav {
+  &.hig__side-nav-container--below-top-nav-compact {
     background-color: color(hig-cool-gray-60);
   }
 }
