@@ -1,0 +1,133 @@
+@import "~@hig/styles/mixins/base.scss";
+@import "~@hig/styles/mixins/colors.scss";
+@import "~@hig/styles/mixins/shadows.scss";
+
+.hig__top-nav {
+  @import "./tokens.scss";
+
+  @include reset;
+  @include shadow("dropshadow");
+
+  display: flex;
+  position: relative;
+  height: $top-nav-height;
+  padding-left: 7px;
+  justify-content: space-between;
+  align-items: stretch;
+  z-index: $top-nav-layer;
+  background: color(hig-white);
+}
+
+.hig__top-nav__item {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: stretch;
+
+  & + &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 12px;
+    bottom: 12px;
+    border-left: 1px solid color(hig-cool-gray-20);
+  }
+}
+
+.hig__top-nav__spacer {
+  flex: 1 1 0;
+}
+
+.hig__top-nav__logo-wrapper {
+  display: flex;
+  padding: 0 12px 0 5px;
+  align-items: center;
+  line-height: 0;
+}
+
+.hig__top-nav__logo {
+  display: flex;
+  cursor: pointer;
+
+  > img,
+  > svg {
+    height: 24px;
+    width: auto;
+  }
+}
+
+.hig__top-nav__interactions {
+  display: flex;
+  align-items: center;
+}
+
+.hig__top-nav__action {
+  height: 56px;
+  display: flex;
+  align-items: center;
+}
+
+.hig__top-nav__help-action {
+  display: flex;
+  width: 24px;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 12px;
+  border: 0;
+  background: none;
+  outline: 0;
+  cursor: pointer;
+
+  // This is required since the IconButton styles are too restrictive,
+  // and our Icons have predefined fills.
+  // TODO: Refactor IconButton styles, cleanup icons, and then remove this.
+  &:hover > .hig__icon > svg * {
+    fill: #0696d7;
+  }
+}
+
+.hig__top-nav__profile-action {
+  padding: 0 0 0 12px;
+  margin: 12px 12px 12px 0;
+  border-width: 0 0 0 1px;
+  border-color: #ccc;
+  border-style: solid;
+  background: none;
+  outline: 0;
+  cursor: pointer;
+}
+
+.hig__top-nav__profile-flyout-content {
+  @include reset;
+
+  &__name {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    font-size: 16px;
+  }
+
+  &__email {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    font-size: 12px;
+    color: color(hig-cool-gray-50);
+  }
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    min-width: 225px;
+  }
+
+  &__link {
+    margin-top: 10px;
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: unset;
+    }
+  }
+}
