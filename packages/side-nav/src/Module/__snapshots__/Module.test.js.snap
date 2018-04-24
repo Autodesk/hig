@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`side-nav/Module snapshot tests renders without props 1`] = `
+exports[`side-nav/Module snapshot tests renders with mionimal props 1`] = `
 <div
   className="hig--light-theme hig__side-nav__module"
   onMouseOver={[Function]}
@@ -19,7 +19,9 @@ exports[`side-nav/Module snapshot tests renders without props 1`] = `
       />
       <div
         className="hig__side-nav__module__link__title"
-      />
+      >
+        Module
+      </div>
       <div
         className="hig__side-nav__module__link__external-link-icon"
       />

@@ -7,8 +7,10 @@ describe("side-nav/Module", () => {
   describe("snapshot tests", () => {
     const cases = [
       {
-        description: "renders without props",
-        props: {}
+        description: "renders with mionimal props",
+        props: {
+          title: "Module"
+        }
       }
     ];
 
