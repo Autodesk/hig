@@ -3,5 +3,7 @@
 exports[`side-nav/containers/Docked snapshot tests renders without props 1`] = `
 <div
   className="hig--light-theme hig__side-nav-container--docked"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
 />
 `;

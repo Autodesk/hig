@@ -243,10 +243,24 @@ storiesOf("SideNav/containers", module)
   .addDecorator(KnobbedThemeProvider)
   .add(
     "Docked",
-    withInfo({ inline: false })(() => <Docked>{FullSideNav}</Docked>)
+    withInfo({ inline: false })(() => (
+      <Docked
+        onMouseEnter={action("Docked onMouseEnter")}
+        onMouseLeave={action("Docked onMouseLeave")}
+      >
+        {FullSideNav}
+      </Docked>
+    ))
   )
 
   .add(
     "BelowTopNav",
-    withInfo({ inline: false })(() => <BelowTopNav>{FullSideNav}</BelowTopNav>)
+    withInfo({ inline: false })(() => (
+      <BelowTopNav
+        onMouseEnter={action("BelowTopNav onMouseEnter")}
+        onMouseLeave={action("BelowTopNav onMouseLeave")}
+      >
+        {FullSideNav}
+      </BelowTopNav>
+    ))
   );

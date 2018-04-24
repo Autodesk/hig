@@ -1,6 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
+import { action } from "@storybook/addon-actions";
 import KnobbedThemeProvider from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
 import Icon, { names as iconNames } from "@hig/icon";
 import SideNav, { BelowTopNav } from "../index";
@@ -47,6 +48,11 @@ storiesOf("SideNav/SideNavCompact", module)
   .add(
     "positioned below the TopNav",
     withInfo({ inline: false, propTables: [SideNav.ModuleCompact] })(() => (
-      <BelowTopNav>{compactSideNav}</BelowTopNav>
+      <BelowTopNav
+        onMouseEnter={action("BelowTopNav onMouseEnter")}
+        onMouseLeave={action("BelowTopNav onMouseLeave")}
+      >
+        {compactSideNav}
+      </BelowTopNav>
     ))
   );
