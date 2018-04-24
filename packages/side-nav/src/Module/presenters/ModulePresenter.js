@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
-import Icon, { names as iconNames, sizes as iconSizes } from "@hig/icon";
 import { ThemeContext } from "@hig/themes";
 import CollapseButton from "../../CollapseButton";
+import ExternalLinkIcon from "../../presenters/ExternalLinkIcon";
 
 import "./module.scss";
 
@@ -42,9 +42,7 @@ export default class Module extends Component {
   };
 
   _renderExternalLinkIcon = () =>
-    this.props.target === "_blank" && (
-      <Icon name={iconNames.EXTERNAL_LINK} size={iconSizes.PX_24} />
-    );
+    this.props.target === "_blank" && <ExternalLinkIcon />;
 
   render() {
     const {

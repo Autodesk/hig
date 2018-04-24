@@ -4,7 +4,7 @@ import { withInfo } from "@storybook/addon-info";
 import { action } from "@storybook/addon-actions";
 import { boolean, select, text } from "@storybook/addon-knobs/react";
 import KnobbedThemeProvider from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
-import Icon, { names as iconNames, sizes as iconSizes } from "@hig/icon";
+import Icon, { names as iconNames } from "@hig/icon";
 
 import SideNav, { Docked, BelowTopNav } from "../index";
 import cubeIcon from "./cube.svg";
@@ -21,7 +21,7 @@ const FullSideNav = (
       <SideNav.Group>
         <SideNav.Module
           title="Module 1"
-          icon={<Icon name={iconNames.INSIGHT} size={iconSizes.PX_24} />}
+          icon={<Icon name={iconNames.INSIGHT} />}
           activeChildren
         >
           <SideNav.Submodule title="Submodule 1" />
@@ -29,7 +29,7 @@ const FullSideNav = (
         </SideNav.Module>
         <SideNav.Module
           title="Module 2"
-          icon={<Icon svg={cubeIcon} size={iconSizes.PX_24} />}
+          icon={<Icon svg={cubeIcon} />}
           minimized
         >
           <SideNav.Submodule title="Submodule 1" />
@@ -37,7 +37,7 @@ const FullSideNav = (
         </SideNav.Module>
         <SideNav.Module
           title="Module 3"
-          icon={<Icon name={iconNames.COLLABORATION} size={iconSizes.PX_24} />}
+          icon={<Icon name={iconNames.COLLABORATION} />}
           link="https://www.autodesk.com"
           target="_blank"
         />
@@ -111,7 +111,7 @@ storiesOf("SideNav/SideNav.Module", module)
       <SideNav.Module
         active={boolean("Active", true)}
         activeChildren={boolean("Active Children", false)}
-        icon={<Icon name={iconNames.INSIGHT} size={iconSizes.PX_24} />}
+        icon={<Icon name={iconNames.INSIGHT} />}
         link={text("Link", "https://www.autodesk.com")}
         minimized={boolean("Minimized", false)}
         onClick={action("onClick")}
@@ -163,7 +163,7 @@ storiesOf("SideNav/SideNav.Group", module)
       <SideNav.Group>
         <SideNav.Module
           title="Module 1"
-          icon={<Icon name={iconNames.INSIGHT} size={iconSizes.PX_24} />}
+          icon={<Icon name={iconNames.INSIGHT} />}
           activeChildren
         >
           <SideNav.Submodule title="Submodule 1" />
@@ -171,7 +171,7 @@ storiesOf("SideNav/SideNav.Group", module)
         </SideNav.Module>
         <SideNav.Module
           title="Module 2"
-          icon={<Icon svg={cubeIcon} size={iconSizes.PX_24} />}
+          icon={<Icon svg={cubeIcon} />}
           minimized
         >
           <SideNav.Submodule title="Submodule 1" />
@@ -179,7 +179,7 @@ storiesOf("SideNav/SideNav.Group", module)
         </SideNav.Module>
         <SideNav.Module
           title="Module 3"
-          icon={<Icon name={iconNames.COLLABORATION} size={iconSizes.PX_24} />}
+          icon={<Icon name={iconNames.COLLABORATION} />}
           link="https://www.autodesk.com"
           target="_blank"
         />

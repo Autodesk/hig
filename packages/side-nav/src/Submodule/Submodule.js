@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
-import Icon, { names as iconNames, sizes as iconSizes } from "@hig/icon";
+import { sizes as iconSizes } from "@hig/icon";
 import { ThemeContext } from "@hig/themes";
+import ExternalLinkIcon from "../presenters/ExternalLinkIcon";
 
 import "./submodule.scss";
 
@@ -24,7 +25,7 @@ export default class Submodule extends Component {
 
   _renderExternalLinkIcon = () =>
     this.props.target === "_blank" && (
-      <Icon name={iconNames.EXTERNAL_LINK} size={iconSizes.PX_16} />
+      <ExternalLinkIcon size={iconSizes.PX_16} />
     );
 
   render() {
