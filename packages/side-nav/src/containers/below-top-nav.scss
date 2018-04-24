@@ -11,7 +11,7 @@
   top: 56px; // @TODO: share TopNav height token here
   bottom: 0;
   height: calc(100vh - 56px);
-  width: $side-nav-max-width;
+  max-width: $side-nav-max-width;
   z-index: 2;
 
   overflow-x: hidden;

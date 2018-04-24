@@ -155,6 +155,21 @@ storiesOf("SideNav/SideNav.Module", module)
     ))
   );
 
+storiesOf("SideNav/SideNav.ModuleCompact", module)
+  .addDecorator(KnobbedThemeProvider)
+  .add(
+    "default",
+    withInfo()(() => (
+      <SideNav.ModuleCompact
+        active={boolean("Active", true)}
+        activeChildren={boolean("Active Children", false)}
+        icon={<Icon name={iconNames.INSIGHT} />}
+        onClickTitle={action("onClick")}
+        onMouseOver={action("onMouseOver")}
+      />
+    ))
+  );
+
 storiesOf("SideNav/SideNav.Group", module)
   .addDecorator(KnobbedThemeProvider)
   .add(
