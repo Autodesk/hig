@@ -48,23 +48,29 @@ export default class SideNav extends Component {
       return null;
     }
 
+    const SuperHeaderWrapper = superHeaderLink ? "a" : "div";
+    const HeaderWrapper = headerLink ? "a" : "div";
+
     return (
       <div className="hig__side-nav__headers">
         {superHeaderLabel && (
           <h3 className="hig__side-nav__super-header">
-            <a
+            <SuperHeaderWrapper
               className="hig__side-nav__super-header-link"
               href={superHeaderLink}
             >
               {superHeaderLabel}
-            </a>
+            </SuperHeaderWrapper>
           </h3>
         )}
         {headerLabel && (
           <h4 className="hig__side-nav__header">
-            <a className="hig__side-nav__header-link" href={headerLink}>
+            <HeaderWrapper
+              className="hig__side-nav__header-link"
+              href={headerLink}
+            >
               {headerLabel}
-            </a>
+            </HeaderWrapper>
           </h4>
         )}
       </div>

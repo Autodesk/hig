@@ -45,14 +45,14 @@ export default class ModuleCompact extends Component {
         {({ themeClass }) => (
           <div className={classes(themeClass)} onMouseOver={onMouseOver}>
             <div className="hig__side-nav__module__row">
-              <a
+              <div
                 className={linkClasses(themeClass)}
                 onClick={onClickTitle}
                 role="button"
                 tabIndex={0}
               >
                 <div className="hig__side-nav__module__link__icon">{icon}</div>
-              </a>
+              </div>
             </div>
           </div>
         )}

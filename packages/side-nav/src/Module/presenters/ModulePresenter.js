@@ -68,12 +68,14 @@ export default class Module extends Component {
       "hig__side-nav__module__submodules--no-icon": !icon
     });
 
+    const Wrapper = link ? "a" : "div";
+
     return (
       <ThemeContext.Consumer>
         {({ themeClass }) => (
           <div className={classes(themeClass)} onMouseOver={onMouseOver}>
             <div className="hig__side-nav__module__row">
-              <a
+              <Wrapper
                 className={linkClasses(themeClass)}
                 href={link}
                 onClick={onClickTitle}
@@ -86,7 +88,7 @@ export default class Module extends Component {
                 <div className="hig__side-nav__module__link__external-link-icon">
                   {this._renderExternalLinkIcon()}
                 </div>
-              </a>
+              </Wrapper>
               {this.props.children && (
                 <CollapseButton
                   minimized={this.props.minimized}

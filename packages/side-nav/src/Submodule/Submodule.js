@@ -36,10 +36,12 @@ export default class Submodule extends Component {
         "hig__side-nav__submodule--active": active
       });
 
+    const Wrapper = link ? "a" : "div";
+
     return (
       <ThemeContext.Consumer>
         {({ themeClass }) => (
-          <a
+          <Wrapper
             className={classes(themeClass)}
             href={link}
             target={target}
@@ -48,7 +50,7 @@ export default class Submodule extends Component {
           >
             {title}
             {this._renderExternalLinkIcon()}
-          </a>
+          </Wrapper>
         )}
       </ThemeContext.Consumer>
     );

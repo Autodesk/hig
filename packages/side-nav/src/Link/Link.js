@@ -36,10 +36,12 @@ export default class Link extends Component {
     const { title, link, onClick, onMouseOver, target } = this.props;
     const classes = themeClass => cx(themeClass, "hig__side-nav__link");
 
+    const Wrapper = link ? "a" : "div";
+
     return (
       <ThemeContext.Consumer>
         {({ themeClass }) => (
-          <a
+          <Wrapper
             className={classes(themeClass)}
             href={link}
             target={target}
@@ -48,7 +50,7 @@ export default class Link extends Component {
           >
             {title}
             {this._renderExternalLinkIcon()}
-          </a>
+          </Wrapper>
         )}
       </ThemeContext.Consumer>
     );

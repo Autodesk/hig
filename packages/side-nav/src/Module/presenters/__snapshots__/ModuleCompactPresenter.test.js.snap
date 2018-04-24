@@ -8,7 +8,7 @@ exports[`side-nav/Module/presenters/ModuleCompactPresenter snapshot tests render
   <div
     className="hig__side-nav__module__row"
   >
-    <a
+    <div
       className="hig--light-theme hig__side-nav__module__link"
       onClick={[Function]}
       role="button"
@@ -26,7 +26,7 @@ exports[`side-nav/Module/presenters/ModuleCompactPresenter snapshot tests render
           }
         />
       </div>
-    </a>
+    </div>
   </div>
 </div>
 `;

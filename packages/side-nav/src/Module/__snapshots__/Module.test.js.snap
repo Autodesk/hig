@@ -8,7 +8,7 @@ exports[`side-nav/Module snapshot tests renders with mionimal props 1`] = `
   <div
     className="hig__side-nav__module__row"
   >
-    <a
+    <div
       className="hig--light-theme hig__side-nav__module__link"
       href={undefined}
       onClick={[Function]}
@@ -25,7 +25,7 @@ exports[`side-nav/Module snapshot tests renders with mionimal props 1`] = `
       <div
         className="hig__side-nav__module__link__external-link-icon"
       />
-    </a>
+    </div>
   </div>
   <div
     className="hig__side-nav__module__submodules hig__side-nav__module__submodules--no-icon"
