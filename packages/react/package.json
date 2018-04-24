@@ -14,7 +14,8 @@
     "lib/*"
   ],
   "scripts": {
-    "build": "NODE_ENV=production webpack -p",
+    "build": "yarn babel && NODE_ENV=production webpack -p",
+    "babel": "babel --ignore test.js,Tests.js,test,__gemini__,__stories__,playground -d lib src",
     "build-playground": "react-scripts build",
     "build-icons": "node scripts/build-icons.js",
     "deploy-playground": "react-scripts build && surge build",
