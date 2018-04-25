@@ -110,35 +110,24 @@
 .hig__top-nav__profile-flyout-content {
   @include reset;
 
+  padding: 4px 14px;
+
   &__name {
     font-weight: bold;
     white-space: nowrap;
     text-overflow: ellipsis;
-    overflow-x: hidden;
+    overflow: hidden;
     font-size: 16px;
+    line-height: 24px;
+    color: #222934;
   }
 
   &__email {
     white-space: nowrap;
     text-overflow: ellipsis;
-    overflow-x: hidden;
+    overflow: hidden;
+    color: #565C5F;
+    line-height: 16px;
     font-size: 12px;
-    color: color(hig-cool-gray-50);
-  }
-
-  &__links {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 10px;
-    min-width: 225px;
-  }
-
-  &__link {
-    margin-top: 10px;
-    margin-right: 10px;
-
-    &:last-child {
-      margin-right: unset;
-    }
   }
 }

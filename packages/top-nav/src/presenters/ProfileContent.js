@@ -11,9 +11,7 @@ export default function ProfileContent(props) {
       <div className="hig__top-nav__profile-flyout-content__email">
         {profileEmail}
       </div>
-      <div className="hig__top-nav__profile-flyout-content__links">
-        {children}
-      </div>
+      {children}
     </div>
   );
 }
