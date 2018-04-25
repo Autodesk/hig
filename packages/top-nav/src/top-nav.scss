@@ -86,6 +86,16 @@
   }
 }
 
+// This is required since the flyout wraps children in DIV elements
+// without any classes.
+// It's neccessary to break encapsulation here, due to the Flyout component
+// still being in Vanilla.
+// TODO: Migrate the Flyout component into its own package, and stop rendering useless DIVs.
+.hig__top-nav .hig__flyout__panel > div:not([class]) {
+  display: flex;
+  flex-direction: column;
+}
+
 .hig__top-nav__profile-action {
   padding: 0 0 0 12px;
   margin: 12px 12px 12px 0;
@@ -101,6 +111,7 @@
   @include reset;
 
   &__name {
+    font-weight: bold;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow-x: hidden;
