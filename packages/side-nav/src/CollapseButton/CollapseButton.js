@@ -12,23 +12,20 @@ export default class CollapseButton extends Component {
     /** Presents the icon in a minimized state: caret pointing right */
     minimized: PropTypes.bool,
     /** Called when element is clicked */
-    onClick: PropTypes.func,
-  }
+    onClick: PropTypes.func
+  };
 
   static defaultProps = {
     onClick: () => {},
     minimized: false
-  }
+  };
 
   render() {
     const { minimized, onClick } = this.props;
-    const classes = (themeClass) => cx(
-      themeClass,
-      "hig__side-nav__module__collapse-button",
-      {
+    const classes = themeClass =>
+      cx(themeClass, "hig__side-nav__module__collapse-button", {
         "hig__side-nav__module__collapse-button--collapsed": minimized
-      }
-    );
+      });
 
     return (
       <ThemeContext.Consumer>
@@ -37,6 +34,8 @@ export default class CollapseButton extends Component {
           <div
             className={classes(themeClass)}
             onClick={onClick}
+            role="button"
+            tabIndex={0}
           >
             <Icon name={iconNames.CARET} size={iconSizes.PX_24} />
           </div>

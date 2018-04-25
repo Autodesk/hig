@@ -1,21 +1,23 @@
 import React from "react";
 import renderer from "react-test-renderer";
 
-import SideNavSkeleton from "./SideNavSkeleton";
+import ModulePresenter from "./ModulePresenter";
 
-describe("side-nav/SideNavSkeleton", () => {
+describe("side-nav/Module/presenters/ModulePresenter", () => {
   describe("snapshot tests", () => {
     const cases = [
       {
-        description: "renders with no props",
-        props: {}
+        description: "renders with minimal props",
+        props: {
+          title: "ModulePresenter"
+        }
       }
     ];
 
     cases.forEach(({ description, props: { children, ...otherProps } }) => {
       it(description, () => {
         const wrapper = (
-          <SideNavSkeleton {...otherProps}>{children}</SideNavSkeleton>
+          <ModulePresenter {...otherProps}>{children}</ModulePresenter>
         );
         const tree = renderer.create(wrapper).toJSON();
 

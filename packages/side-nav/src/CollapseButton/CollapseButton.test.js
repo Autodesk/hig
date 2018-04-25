@@ -1,4 +1,3 @@
-import { shallow } from "enzyme";
 import React from "react";
 import renderer from "react-test-renderer";
 
@@ -21,7 +20,9 @@ describe("side-nav/CollapseButton", () => {
 
     cases.forEach(({ description, props: { children, ...otherProps } }) => {
       it(description, () => {
-        const wrapper = <CollapseButton {...otherProps}>{children}</CollapseButton>;
+        const wrapper = (
+          <CollapseButton {...otherProps}>{children}</CollapseButton>
+        );
         const tree = renderer.create(wrapper).toJSON();
 
         expect(tree).toMatchSnapshot();

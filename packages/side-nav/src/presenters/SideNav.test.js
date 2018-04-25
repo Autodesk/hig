@@ -1,4 +1,3 @@
-import { shallow } from "enzyme";
 import React from "react";
 import renderer from "react-test-renderer";
 
@@ -11,6 +10,13 @@ describe("side-nav/presenters/SideNav", () => {
         description: "renders without props",
         props: {}
       },
+      {
+        description: "renders with headers",
+        props: {
+          headerLabel: "Storybook",
+          superHeaderLabel: "HIG"
+        }
+      }
     ];
 
     cases.forEach(({ description, props: { children, ...otherProps } }) => {

@@ -1,4 +1,3 @@
-import { shallow } from "enzyme";
 import React from "react";
 import renderer from "react-test-renderer";
 
@@ -8,11 +7,11 @@ describe("side-nav/Module", () => {
   describe("snapshot tests", () => {
     const cases = [
       {
-        description: "renders with minimal props",
+        description: "renders with mionimal props",
         props: {
           title: "Module"
         }
-      },
+      }
     ];
 
     cases.forEach(({ description, props: { children, ...otherProps } }) => {

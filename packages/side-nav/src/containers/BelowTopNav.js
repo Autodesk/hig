@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import cx from "classnames";
 import { ThemeContext } from "@hig/themes";
 
-import "./docked.scss";
+import "./below-top-nav.scss";
 
-export default class Docked extends Component {
+export default class BelowTopNav extends Component {
   static propTypes = {
     /** A SideNav element */
     children: PropTypes.node,
@@ -15,16 +15,11 @@ export default class Docked extends Component {
     onMouseLeave: PropTypes.func
   };
 
-  static defaultProps = {
-    onMouseLeave: () => {},
-    onMouseEnter: () => {}
-  };
-
   render() {
     const { children, onMouseLeave, onMouseEnter } = this.props;
 
     const classes = themeClass =>
-      cx(themeClass, "hig__side-nav-container--docked");
+      cx(themeClass, "hig__side-nav-container--below-top-nav");
 
     return (
       <ThemeContext.Consumer>

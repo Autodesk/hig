@@ -28,94 +28,100 @@ export default class SideNav extends Component {
     /** Title at the top of the SideNav */
     superHeaderLabel: PropTypes.string,
     /** An href for the SideNav Title */
-    superHeaderLink: PropTypes.string,
-  }
+    superHeaderLink: PropTypes.string
+  };
 
   static defaultProps = {
     onMinimize: () => {},
-    showMinimizeButton: false,
-  }
+    showMinimizeButton: false
+  };
+
+  _renderHeaders = () => {
+    const {
+      headerLabel,
+      headerLink,
+      superHeaderLabel,
+      superHeaderLink
+    } = this.props;
+
+    if (!(superHeaderLabel || headerLabel)) {
+      return null;
+    }
+
+    const SuperHeaderWrapper = superHeaderLink ? "a" : "div";
+    const HeaderWrapper = headerLink ? "a" : "div";
+
+    return (
+      <div className="hig__side-nav__headers">
+        {superHeaderLabel && (
+          <h3 className="hig__side-nav__super-header">
+            <SuperHeaderWrapper
+              className="hig__side-nav__super-header-link"
+              href={superHeaderLink}
+            >
+              {superHeaderLabel}
+            </SuperHeaderWrapper>
+          </h3>
+        )}
+        {headerLabel && (
+          <h4 className="hig__side-nav__header">
+            <HeaderWrapper
+              className="hig__side-nav__header-link"
+              href={headerLink}
+            >
+              {headerLabel}
+            </HeaderWrapper>
+          </h4>
+        )}
+      </div>
+    );
+  };
 
   render() {
-    const { children, copyright, groups, headerLabel, headerLink, links, onMinimize, showMinimizeButton, superHeaderLabel, superHeaderLink } = this.props;
+    const {
+      children,
+      copyright,
+      groups,
+      links,
+      onMinimize,
+      showMinimizeButton
+    } = this.props;
 
-    const classes = (themeClass) => cx(
-      themeClass,
-      "hig__side-nav"
-    );
+    const classes = themeClass => cx(themeClass, "hig__side-nav");
 
     return (
       <ThemeContext.Consumer>
         {({ themeClass }) => (
           <nav className={classes(themeClass)}>
             <div className="hig__side-nav__overflow">
-              <div className="hig__side-nav__headers">
-                <h3 className="hig__side-nav__super-header">
-                  <a
-                    className="hig__side-nav__super-header-link"
-                    href={superHeaderLink}
-                  >
-                    {superHeaderLabel}
-                  </a>
-                </h3>
-                <h4 className="hig__side-nav__header">
-                  <a
-                    className="hig__side-nav__header-link"
-                    href={headerLink}
-                  >
-                    {headerLabel}
-                  </a>
-                </h4>
-              </div>
+              {this._renderHeaders()}
 
-              {
-                groups && (
-                  <div className="hig__side-nav__groups">
-                    {groups}
-                  </div>
-                )
-              }
+              {groups && <div className="hig__side-nav__groups">{groups}</div>}
 
-              {
-                children && (
-                  <div className="hig__side-nav__slot">
-                    {children}
-                  </div>
-                )
-              }
+              {children && (
+                <div className="hig__side-nav__slot">{children}</div>
+              )}
 
-              {
-                links && (
-                  <div className="hig__side-nav__links">
-                    {links}
-                  </div>
-                )
-              }
+              {links && <div className="hig__side-nav__links">{links}</div>}
 
-              {
-                copyright && (
-                  <div className="hig__side-nav__copyright">
-                    {copyright}
-                  </div>
-                )
-              }
+              {copyright && (
+                <div className="hig__side-nav__copyright">{copyright}</div>
+              )}
             </div>
 
             {/* <!--SEARCH--> */}
 
-            {
-              showMinimizeButton && (
-                <div className="hig__side-nav__minimize">
-                  <IconButton
-                    type={iconButtonTypes.TRANSPARENT}
-                    name={iconNames.BACK}
-                    title="Minimize"
-                    aria-label="Minimize"
-                    onClick={onMinimize}
-                  />
-                </div>
-              )
-            }
+            {showMinimizeButton && (
+              <div className="hig__side-nav__minimize">
+                <IconButton
+                  type={iconButtonTypes.TRANSPARENT}
+                  name={iconNames.BACK}
+                  title="Minimize"
+                  aria-label="Minimize"
+                  onClick={onMinimize}
+                />
+              </div>
+            )}
           </nav>
         )}
       </ThemeContext.Consumer>

@@ -16,7 +16,8 @@
     "@hig/icon": "^0.1.0-alpha",
     "@hig/icon-button": "^0.1.0-alpha",
     "@hig/skeleton-item": "^0.1.0-alpha",
-    "@hig/themes": "^0.1.0-alpha"
+    "@hig/themes": "^0.1.0-alpha",
+    "classnames": "^2.2.5"
   },
   "devDependencies": {
     "@hig/babel-preset": "0.1.0",
@@ -28,6 +29,8 @@
     "prop-types": "^15.6.1"
   },
   "scripts": {
-    "build": "hig-scripts-build"
-  }
+    "build": "hig-scripts-build",
+    "lint": "eslint src --ext .js,.jsx"
+  },
+  "eslintConfig": { "extends": "@hig" }
 }

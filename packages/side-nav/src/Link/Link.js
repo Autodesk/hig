@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
-import Icon, { names as iconNames, sizes as iconSizes } from "@hig/icon";
+import { sizes as iconSizes } from "@hig/icon";
 import { ThemeContext } from "@hig/themes";
+import ExternalLinkIcon from "../presenters/ExternalLinkIcon";
 
 import "./link.scss";
 
@@ -18,31 +19,29 @@ export default class Link extends Component {
     /** Corresponds to the anchor tag's target */
     target: PropTypes.oneOf(["_self", "_blank", "_parent", "_top"]),
     /** Link text */
-    title: PropTypes.string,
-  }
+    title: PropTypes.string
+  };
 
   static defaultProps = {
     onClick: () => {},
-    onMouseOver: () => {},
-  }
+    onMouseOver: () => {}
+  };
 
-  _renderExternalLinkIcon = () => {
-    return this.props.target === "_blank" && (
-      <Icon name={iconNames.EXTERNAL_LINK} size={iconSizes.PX_16} />
+  _renderExternalLinkIcon = () =>
+    this.props.target === "_blank" && (
+      <ExternalLinkIcon size={iconSizes.PX_16} />
     );
-  }
 
   render() {
     const { title, link, onClick, onMouseOver, target } = this.props;
-    const classes = (themeClass) => cx(
-      themeClass,
-      "hig__side-nav__link"
-    );
+    const classes = themeClass => cx(themeClass, "hig__side-nav__link");
+
+    const Wrapper = link ? "a" : "div";
 
     return (
       <ThemeContext.Consumer>
         {({ themeClass }) => (
-          <a
+          <Wrapper
             className={classes(themeClass)}
             href={link}
             target={target}
@@ -50,8 +49,8 @@ export default class Link extends Component {
             onMouseOver={onMouseOver}
           >
             {title}
-            { this._renderExternalLinkIcon() }
-          </a>
+            {this._renderExternalLinkIcon()}
+          </Wrapper>
         )}
       </ThemeContext.Consumer>
     );

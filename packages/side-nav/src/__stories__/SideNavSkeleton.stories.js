@@ -6,7 +6,4 @@ import SideNavSkeleton from "../SideNavSkeleton";
 
 storiesOf("SideNav/SideNavSkeleton", module)
   .addDecorator(KnobbedThemeProvider)
-  .add(
-    "default",
-    withInfo()(() => <SideNavSkeleton />)
-  );
+  .add("default", withInfo()(() => <SideNavSkeleton />));
