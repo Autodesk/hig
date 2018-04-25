@@ -14,12 +14,14 @@
   "devDependencies": {
     "@hig/babel-preset": "0.1.0",
     "@hig/scripts": "^0.1.0",
-    "@hig/styles": "^0.1.0-alpha"
+    "@hig/styles": "^0.1.0-alpha",
+    "svgo": "^1.0.5"
   },
   "peerDependencies": {
     "react": "^15.4.1"
   },
   "scripts": {
-    "build": "hig-scripts-build"
+    "build": "hig-scripts-build",
+    "build-icons": "node scripts/build-icons.js"
   }
 }
