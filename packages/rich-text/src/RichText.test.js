@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import RichText from "./index";
+import RichText, { sizes } from "./index";
 
 describe("RichText", () => {
   describe("sizes", () => {
@@ -10,7 +10,9 @@ describe("RichText", () => {
         "hig__rich-text--small"
       );
 
-      const withSize = shallow(<RichText size="small">Rich content</RichText>);
+      const withSize = shallow(
+        <RichText size={sizes.SMALL}>Rich content</RichText>
+      );
       expect(withSize.find(".hig__rich-text")).toHaveClassName(
         "hig__rich-text--small"
       );

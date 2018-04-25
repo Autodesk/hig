@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
 import "./rich-text.scss";
-import _AVAILABLE_SIZES from "./sizes";
+import AVAILABLE_SIZES from "./availableSizes";
 
 const COMPONENT_CLASS = "hig__rich-text";
 export default class RichText extends Component {
@@ -35,5 +35,5 @@ RichText.propTypes = {
   /**
    * String which specifies which size of RichText will be used
    */
-  size: PropTypes.oneOf(_AVAILABLE_SIZES)
+  size: PropTypes.oneOf(AVAILABLE_SIZES)
 };

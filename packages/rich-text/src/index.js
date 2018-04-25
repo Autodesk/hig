@@ -1,2 +1,3 @@
 export { default } from "./RichText";
-export { default as _AVAILABLE_SIZES } from "./sizes";
+export { default as sizes } from "./sizes";
+export { default as availableSizes } from "./availableSizes";
