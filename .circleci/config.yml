@@ -31,6 +31,7 @@ jobs:
             - packages/side-nav/node_modules
             - packages/skeleton-item/node_modules
             - packages/storybook/node_modules
+            - packages/top-nav/node_modules
             - packages/themes/node_modules
             - packages/typography/node_modules
             - packages/vanilla/node_modules
@@ -56,6 +57,7 @@ jobs:
             - packages/icons/build
             - packages/side-nav/build
             - packages/skeleton-item/build
+            - packages/top-nav/build
             - packages/themes/build
             - packages/typography/build
             - packages/react/lib

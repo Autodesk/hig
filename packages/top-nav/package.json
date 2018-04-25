@@ -1,0 +1,43 @@
+{
+  "name": "@hig/top-nav",
+  "version": "0.1.0-alpha",
+  "description": "HIG Top Navigation",
+  "author": "Autodesk Inc.",
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "build/index.js",
+  "module": "build/index.es.js",
+  "style": "build/index.css",
+  "files": ["build/*"],
+  "devDependencies": {
+    "@hig/babel-preset": "0.1.0",
+    "@hig/eslint-config": "0.1.0",
+    "@hig/scripts": "^0.1.0",
+    "@hig/styles": "^0.1.0-alpha"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.5.10",
+    "react": "^15.4.1"
+  },
+  "scripts": {
+    "build": "hig-scripts-build",
+    "lint": "eslint src --ext .js,.jsx"
+  },
+  "dependencies": {
+    "@hig/avatar": "^0.1.0-alpha",
+    "@hig/icon": "^0.1.0-alpha",
+    "classnames": "^2.2.5",
+    "hig-react": "0.28.35"
+  },
+  "eslintConfig": { "extends": "@hig" },
+  "eslintIgnore": ["*.scss", "*.json"],
+  "babel": {
+    "env": {
+      "test": {
+        "presets": ["@hig/babel-preset/test"]
+      }
+    }
+  }
+}

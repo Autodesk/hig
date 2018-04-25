@@ -1,0 +1,19 @@
+@at-root {
+  @import "../mixins/shadows.scss";
+
+  .hig__shadows__common {
+    @include shadow("common");
+  }
+
+  .hig__shadows__dropshadow {
+    @include shadow("dropshadow");
+  }
+
+  .hig__shadows__inner-right {
+    @include shadow("inner-right");
+  }
+
+  .hig__shadows__inner-left {
+    @include shadow("inner-left");
+  }
+}
