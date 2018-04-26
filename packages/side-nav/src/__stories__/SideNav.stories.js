@@ -114,7 +114,8 @@ storiesOf("SideNav/SideNav.Module", module)
         icon={<Icon name={iconNames.INSIGHT} />}
         link={text("Link", "https://www.autodesk.com")}
         minimized={boolean("Minimized", false)}
-        onClick={action("onClick")}
+        onClickCollapseButton={action("onClickCollapseButton")}
+        onClickTitle={action("onClickTitle")}
         onMouseOver={action("onMouseOver")}
         target={select("Link Target", ["_self", "_blank", "_parent", "_top"])}
         title={text("Title", "Module")}
@@ -129,7 +130,8 @@ storiesOf("SideNav/SideNav.Module", module)
         activeChildren={boolean("Active Children", false)}
         link={text("Link", "https://www.autodesk.com")}
         minimized={boolean("Minimized", false)}
-        onClick={action("onClick")}
+        onClickCollapseButton={action("onClickCollapseButton")}
+        onClickTitle={action("onClickTitle")}
         onMouseOver={action("onMouseOver")}
         target={select("Link Target", ["_self", "_blank", "_parent", "_top"])}
         title={text("Title", "Module")}
@@ -144,7 +146,8 @@ storiesOf("SideNav/SideNav.Module", module)
         activeChildren={boolean("Active Children", false)}
         link={text("Link", "https://www.autodesk.com")}
         minimized={boolean("Minimized", false)}
-        onClick={action("onClick")}
+        onClickCollapseButton={action("onClickCollapseButton")}
+        onClickTitle={action("onClickTitle")}
         onMouseOver={action("onMouseOver")}
         target={select("Link Target", ["_self", "_blank", "_parent", "_top"])}
         title={text("Title", "Module")}
