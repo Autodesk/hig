@@ -3,12 +3,12 @@ import { storiesOf } from "@storybook/react";
 import { select } from "@storybook/addon-knobs/react";
 import { withInfo } from "@storybook/addon-info";
 
-import RichText, { _AVAILABLE_SIZES } from "../index";
+import RichText, { availableSizes } from "../index";
 
 storiesOf("RichText", module).add(
   "default",
   withInfo()(() => (
-    <RichText size={select("Size", _AVAILABLE_SIZES.concat(null))}>
+    <RichText size={select("Size", availableSizes)}>
       The RichText component lets me include any React children, including:
       <ul>
         <li>
