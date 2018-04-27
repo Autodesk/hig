@@ -17,9 +17,13 @@ storybook.add("accounts", () => (
         label="Autodesk Accounts"
         title="Autodesk Accounts"
         link="https://autodesk.com"
-        // eslint-disable-next-line react/no-danger
-        dangerouslySetInnerHTML={{ __html: accountLogo }}
-      />
+      >
+        <figure
+          style={{ width: "auto", height: "24px", margin: "0" }}
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{ __html: accountLogo }}
+        />
+      </TopNav.Logo>
     }
     rightActions={
       <TopNav.Interactions>
