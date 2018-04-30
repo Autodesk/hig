@@ -56,7 +56,7 @@ storiesOf("Typography", module).add(
           })}
           size={select("Size", _VALID_SIZES, "medium")}
         >
-          {`${name} example text`}
+          {text("Children", `${name} example text`)}
         </Component>
       ))
     );
