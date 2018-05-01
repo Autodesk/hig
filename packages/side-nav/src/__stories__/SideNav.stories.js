@@ -6,76 +6,29 @@ import { boolean, select, text } from "@storybook/addon-knobs/react";
 import KnobbedThemeProvider from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
 import Icon, { names as iconNames } from "@hig/icon";
 
-import SideNav, { Docked, BelowTopNav, BelowTopNavCompact } from "../index";
+import SideNav from "../index";
+import ExampleSideNav from "./ExampleSideNav";
 
-const FullSideNav = (
-  <SideNav
-    headerLabel={text("Header Label", "Storybook")}
-    headerLink={text("Header Link", "https://www.autodesk.com")}
-    onMinimize={action("onMinimize")}
-    showMinimizeButton={boolean("Show Minimize Button", false)}
-    superHeaderLabel={text("Superheader Label", "HIG")}
-    superHeaderLink={text("Superheader Link", "https://www.autodesk.com")}
-    groups={
-      <SideNav.Group>
-        <SideNav.Module
-          title="Module 1"
-          icon={<Icon name={iconNames.INSIGHT} />}
-          activeChildren
-        >
-          <SideNav.Submodule title="Submodule 1" />
-          <SideNav.Submodule title="Submodule 2" active />
-        </SideNav.Module>
-        <SideNav.Module
-          title="Module 2"
-          icon={<Icon name={iconNames.PRODUCTS_AND_SERVICES} />}
-          minimized
-        >
-          <SideNav.Submodule title="Submodule 1" />
-          <SideNav.Submodule title="Submodule 2" />
-        </SideNav.Module>
-        <SideNav.Module
-          title="Module 3"
-          icon={<Icon name={iconNames.COLLABORATION} />}
-          link="https://www.autodesk.com"
-          target="_blank"
-        />
-      </SideNav.Group>
-    }
-    links={[
-      <SideNav.Link
-        key="Autodesk Home"
-        title="Autodesk Home"
-        link="https://www.autodesk.com"
-      />,
-      <SideNav.Link
-        key="Github"
-        title="Github"
-        link="https://www.github.com/Autodesk/hig"
-        target="_blank"
-      />
-    ]}
-    copyright="© 2018 Autodesk Inc."
-  />
-);
-
-storiesOf("SideNav/SideNav.CollapseButton", module)
-  .addDecorator(KnobbedThemeProvider)
-  .add(
-    "default",
-    withInfo()(() => (
+storiesOf("SideNav/SideNav.CollapseButton", module).add(
+  "default",
+  withInfo({
+    propTablesExclude: [KnobbedThemeProvider]
+  })(() => (
+    <KnobbedThemeProvider>
       <SideNav.CollapseButton
         onClick={action("onClick")}
         minimized={boolean("Minimized", false)}
       />
-    ))
-  );
+    </KnobbedThemeProvider>
+  ))
+);
 
-storiesOf("SideNav/SideNav.Link", module)
-  .addDecorator(KnobbedThemeProvider)
-  .add(
-    "default",
-    withInfo()(() => (
+storiesOf("SideNav/SideNav.Link", module).add(
+  "default",
+  withInfo({
+    propTablesExclude: [KnobbedThemeProvider]
+  })(() => (
+    <KnobbedThemeProvider>
       <SideNav.Link
         onClick={action("onClick")}
         onMouseOver={action("onMouseOver")}
@@ -83,14 +36,16 @@ storiesOf("SideNav/SideNav.Link", module)
         link={text("Link", "https://www.autodesk.com")}
         target={select("Link Target", ["_self", "_blank", "_parent", "_top"])}
       />
-    ))
-  );
+    </KnobbedThemeProvider>
+  ))
+);
 
-storiesOf("SideNav/SideNav.Submodule", module)
-  .addDecorator(KnobbedThemeProvider)
-  .add(
-    "default",
-    withInfo()(() => (
+storiesOf("SideNav/SideNav.Submodule", module).add(
+  "default",
+  withInfo({
+    propTablesExclude: [KnobbedThemeProvider]
+  })(() => (
+    <KnobbedThemeProvider>
       <SideNav.Submodule
         active={boolean("Active", true)}
         onClick={action("onClick")}
@@ -99,69 +54,82 @@ storiesOf("SideNav/SideNav.Submodule", module)
         link={text("Link", "https://www.autodesk.com")}
         target={select("Link Target", ["_self", "_blank", "_parent", "_top"])}
       />
-    ))
-  );
+    </KnobbedThemeProvider>
+  ))
+);
 
 storiesOf("SideNav/SideNav.Module", module)
-  .addDecorator(KnobbedThemeProvider)
   .add(
     "with icon",
-    withInfo()(() => (
-      <SideNav.Module
-        active={boolean("Active", true)}
-        activeChildren={boolean("Active Children", false)}
-        icon={<Icon name={iconNames.INSIGHT} />}
-        link={text("Link", "https://www.autodesk.com")}
-        minimized={boolean("Minimized", false)}
-        onClickCollapseButton={action("onClickCollapseButton")}
-        onClickTitle={action("onClickTitle")}
-        onMouseOver={action("onMouseOver")}
-        target={select("Link Target", ["_self", "_blank", "_parent", "_top"])}
-        title={text("Title", "Module")}
-      />
+    withInfo({
+      propTablesExclude: [KnobbedThemeProvider]
+    })(() => (
+      <KnobbedThemeProvider>
+        <SideNav.Module
+          active={boolean("Active", true)}
+          activeChildren={boolean("Active Children", false)}
+          icon={<Icon name={iconNames.INSIGHT} />}
+          link={text("Link", "https://www.autodesk.com")}
+          minimized={boolean("Minimized", false)}
+          onClickCollapseButton={action("onClickCollapseButton")}
+          onClickTitle={action("onClickTitle")}
+          onMouseOver={action("onMouseOver")}
+          target={select("Link Target", ["_self", "_blank", "_parent", "_top"])}
+          title={text("Title", "Module")}
+        />
+      </KnobbedThemeProvider>
     ))
   )
   .add(
     "without icon",
-    withInfo()(() => (
-      <SideNav.Module
-        active={boolean("Active", true)}
-        activeChildren={boolean("Active Children", false)}
-        link={text("Link", "https://www.autodesk.com")}
-        minimized={boolean("Minimized", false)}
-        onClickCollapseButton={action("onClickCollapseButton")}
-        onClickTitle={action("onClickTitle")}
-        onMouseOver={action("onMouseOver")}
-        target={select("Link Target", ["_self", "_blank", "_parent", "_top"])}
-        title={text("Title", "Module")}
-      />
+    withInfo({
+      propTablesExclude: [KnobbedThemeProvider]
+    })(() => (
+      <KnobbedThemeProvider>
+        <SideNav.Module
+          active={boolean("Active", true)}
+          activeChildren={boolean("Active Children", false)}
+          link={text("Link", "https://www.autodesk.com")}
+          minimized={boolean("Minimized", false)}
+          onClickCollapseButton={action("onClickCollapseButton")}
+          onClickTitle={action("onClickTitle")}
+          onMouseOver={action("onMouseOver")}
+          target={select("Link Target", ["_self", "_blank", "_parent", "_top"])}
+          title={text("Title", "Module")}
+        />
+      </KnobbedThemeProvider>
     ))
   )
   .add(
     "with submodules",
-    withInfo()(() => (
-      <SideNav.Module
-        active={boolean("Active", true)}
-        activeChildren={boolean("Active Children", false)}
-        link={text("Link", "https://www.autodesk.com")}
-        minimized={boolean("Minimized", false)}
-        onClickCollapseButton={action("onClickCollapseButton")}
-        onClickTitle={action("onClickTitle")}
-        onMouseOver={action("onMouseOver")}
-        target={select("Link Target", ["_self", "_blank", "_parent", "_top"])}
-        title={text("Title", "Module")}
-      >
-        <SideNav.Submodule title="Submodule 1" />
-        <SideNav.Submodule title="Submodule 2" />
-      </SideNav.Module>
+    withInfo({
+      propTablesExclude: [KnobbedThemeProvider]
+    })(() => (
+      <KnobbedThemeProvider>
+        <SideNav.Module
+          active={boolean("Active", true)}
+          activeChildren={boolean("Active Children", false)}
+          link={text("Link", "https://www.autodesk.com")}
+          minimized={boolean("Minimized", false)}
+          onClickCollapseButton={action("onClickCollapseButton")}
+          onClickTitle={action("onClickTitle")}
+          onMouseOver={action("onMouseOver")}
+          target={select("Link Target", ["_self", "_blank", "_parent", "_top"])}
+          title={text("Title", "Module")}
+        >
+          <SideNav.Submodule title="Submodule 1" />
+          <SideNav.Submodule title="Submodule 2" />
+        </SideNav.Module>
+      </KnobbedThemeProvider>
     ))
   );
 
-storiesOf("SideNav/SideNav.ModuleCompact", module)
-  .addDecorator(KnobbedThemeProvider)
-  .add(
-    "default",
-    withInfo()(() => (
+storiesOf("SideNav/SideNav.ModuleCompact", module).add(
+  "default",
+  withInfo({
+    propTablesExclude: [KnobbedThemeProvider]
+  })(() => (
+    <KnobbedThemeProvider>
       <SideNav.ModuleCompact
         active={boolean("Active", true)}
         activeChildren={boolean("Active Children", false)}
@@ -169,44 +137,52 @@ storiesOf("SideNav/SideNav.ModuleCompact", module)
         onClickTitle={action("onClick")}
         onMouseOver={action("onMouseOver")}
       />
-    ))
-  );
+    </KnobbedThemeProvider>
+  ))
+);
 
 storiesOf("SideNav/SideNav.Group", module)
-  .addDecorator(KnobbedThemeProvider)
   .add(
     "with icons",
-    withInfo({ source: true })(() => (
-      <SideNav.Group>
-        <SideNav.Module
-          title="Module 1"
-          icon={<Icon name={iconNames.INSIGHT} />}
-          activeChildren
-        >
-          <SideNav.Submodule title="Submodule 1" />
-          <SideNav.Submodule title="Submodule 2" active />
-        </SideNav.Module>
-        <SideNav.Module
-          title="Module 2"
-          icon={<Icon name={iconNames.PRODUCTS_AND_SERVICES} />}
-          minimized
-        >
-          <SideNav.Submodule title="Submodule 1" />
-          <SideNav.Submodule title="Submodule 2" />
-        </SideNav.Module>
-        <SideNav.Module
-          title="Module 3"
-          icon={<Icon name={iconNames.COLLABORATION} />}
-          link="https://www.autodesk.com"
-          target="_blank"
-        />
-      </SideNav.Group>
+    withInfo({
+      source: true,
+      propTablesExclude: [KnobbedThemeProvider]
+    })(() => (
+      <KnobbedThemeProvider>
+        <SideNav.Group>
+          <SideNav.Module
+            title="Module 1"
+            icon={<Icon name={iconNames.INSIGHT} />}
+            activeChildren
+          >
+            <SideNav.Submodule title="Submodule 1" />
+            <SideNav.Submodule title="Submodule 2" active />
+          </SideNav.Module>
+          <SideNav.Module
+            title="Module 2"
+            icon={<Icon name={iconNames.PRODUCTS_AND_SERVICES} />}
+            minimized
+          >
+            <SideNav.Submodule title="Submodule 1" />
+            <SideNav.Submodule title="Submodule 2" />
+          </SideNav.Module>
+          <SideNav.Module
+            title="Module 3"
+            icon={<Icon name={iconNames.COLLABORATION} />}
+            link="https://www.autodesk.com"
+            target="_blank"
+          />
+        </SideNav.Group>
+      </KnobbedThemeProvider>
     ))
   )
 
   .add(
     "without icons",
-    withInfo({ source: true })(() => (
+    withInfo({
+      source: true,
+      propTablesExclude: [KnobbedThemeProvider]
+    })(() => (
       <SideNav.Group>
         <SideNav.Module title="Module 1" activeChildren>
           <SideNav.Submodule title="Submodule 1" />
@@ -225,56 +201,17 @@ storiesOf("SideNav/SideNav.Group", module)
     ))
   );
 
-storiesOf("SideNav", module)
-  .addDecorator(KnobbedThemeProvider)
-  .add(
-    "with icons",
-    withInfo({
-      source: true,
-      propTables: [
-        SideNav.CollapseButton,
-        SideNav.Group,
-        SideNav.Link,
-        SideNav.Module,
-        SideNav.Submodule
-      ]
-    })(() => FullSideNav)
-  );
-
-storiesOf("SideNav/containers", module)
-  .addDecorator(KnobbedThemeProvider)
-  .add(
-    "Docked",
-    withInfo({ inline: false })(() => (
-      <Docked
-        onMouseEnter={action("Docked onMouseEnter")}
-        onMouseLeave={action("Docked onMouseLeave")}
-      >
-        {FullSideNav}
-      </Docked>
-    ))
-  )
-
-  .add(
-    "BelowTopNav",
-    withInfo({ inline: false })(() => (
-      <BelowTopNav
-        onMouseEnter={action("BelowTopNav onMouseEnter")}
-        onMouseLeave={action("BelowTopNav onMouseLeave")}
-      >
-        {FullSideNav}
-      </BelowTopNav>
-    ))
-  )
-
-  .add(
-    "BelowTopNavCompact",
-    withInfo({ inline: false })(() => (
-      <BelowTopNavCompact
-        onMouseEnter={action("BelowTopNavCompact onMouseEnter")}
-        onMouseLeave={action("BelowTopNavCompact onMouseLeave")}
-      >
-        {FullSideNav}
-      </BelowTopNavCompact>
-    ))
-  );
+storiesOf("SideNav", module).add(
+  "with icons",
+  withInfo({
+    source: true,
+    propTables: [
+      SideNav.CollapseButton,
+      SideNav.Group,
+      SideNav.Link,
+      SideNav.Module,
+      SideNav.Submodule
+    ],
+    propTablesExclude: [KnobbedThemeProvider]
+  })(() => <KnobbedThemeProvider>{ExampleSideNav()}</KnobbedThemeProvider>)
+);

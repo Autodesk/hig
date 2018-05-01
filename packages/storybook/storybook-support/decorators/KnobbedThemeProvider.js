@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { select } from "@storybook/addon-knobs/react";
 import {
   ThemeContext,
@@ -19,14 +20,18 @@ const themes = {
   matrix: MatrixTheme
 };
 
-const KnobbedThemeProvider = story => {
+const KnobbedThemeProvider = ({ children }) => {
   const knobGroup = "Theme";
   const theme = select("Theme", themeOptions, "hig-light", knobGroup);
   return (
     <ThemeContext.Provider value={themes[theme]}>
-      {story()}
+      {children}
     </ThemeContext.Provider>
   );
+};
+
+KnobbedThemeProvider.propTypes = {
+  children: PropTypes.node
 };
 
 export default KnobbedThemeProvider;
