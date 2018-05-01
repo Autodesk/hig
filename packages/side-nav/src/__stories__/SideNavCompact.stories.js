@@ -5,7 +5,6 @@ import { action } from "@storybook/addon-actions";
 import KnobbedThemeProvider from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
 import Icon, { names as iconNames } from "@hig/icon";
 import SideNav, { BelowTopNavCompact } from "../index";
-import cubeIcon from "./cube.svg";
 
 const compactSideNav = (
   <SideNav
@@ -21,7 +20,7 @@ const compactSideNav = (
         </SideNav.ModuleCompact>
         <SideNav.ModuleCompact
           title="Module 2"
-          icon={<Icon svg={cubeIcon} />}
+          icon={<Icon name={iconNames.PRODUCTS_AND_SERVICES} />}
           minimized
         >
           <SideNav.Submodule title="Submodule 1" />
