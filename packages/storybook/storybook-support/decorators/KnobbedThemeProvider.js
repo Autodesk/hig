@@ -1,18 +1,23 @@
 import React from "react";
 import { select } from "@storybook/addon-knobs/react";
-import { ThemeContext, HIGLightTheme, HIGDarkBlueTheme, MatrixTheme } from "@hig/themes";
+import {
+  ThemeContext,
+  HIGLightTheme,
+  HIGDarkBlueTheme,
+  MatrixTheme
+} from "@hig/themes";
 
 const themeOptions = {
   "hig-light": "HIG Light",
   "hig-dark-blue": "HIG Dark Blue",
-  "matrix": "BIM360 Matrix",
-}
+  matrix: "BIM360 Matrix"
+};
 
 const themes = {
   "hig-light": HIGLightTheme,
   "hig-dark-blue": HIGDarkBlueTheme,
-  "matrix": MatrixTheme,
-}
+  matrix: MatrixTheme
+};
 
 const KnobbedThemeProvider = story => {
   const knobGroup = "Theme";
@@ -21,7 +26,7 @@ const KnobbedThemeProvider = story => {
     <ThemeContext.Provider value={themes[theme]}>
       {story()}
     </ThemeContext.Provider>
-  )
-}
+  );
+};
 
 export default KnobbedThemeProvider;
