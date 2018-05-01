@@ -1,2 +1,2 @@
 export { default } from "./Avatar";
-export { default as _AVAILABLE_SIZES } from "./sizes";
+export { sizes, AVAILABLE_SIZES } from "./sizes";

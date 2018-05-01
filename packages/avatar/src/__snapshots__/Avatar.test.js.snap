@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar when an image URL is not provided renders initials 1`] = `
+<figure
+  aria-label="Avatar for Jon Snow"
+  className="hig__avatarV2 hig__avatarV2--size--large hig__avatarV2__background--4"
+>
+  <div
+    aria-hidden="true"
+    className="hig__avatarV2__initials"
+  >
+    JS
+  </div>
+</figure>
+`;
+
+exports[`Avatar when an image URL is provided renders an image 1`] = `
+<figure
+  aria-label="Avatar for Jon Snow"
+  className="hig__avatarV2 hig__avatarV2--size--large hig__avatarV2__background--4"
+>
+  <div
+    className="hig__avatarV2__image-wrapper"
+  >
+    <img
+      alt="Avatar image of Jon Snow"
+      className="hig__avatarV2__image"
+      src="http://placekitten.com/g/64/64"
+    />
+  </div>
+</figure>
+`;

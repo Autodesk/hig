@@ -11,6 +11,7 @@ export default function makeSelectOptions(constants) {
       .map(capitalize)
       .join(" ");
 
+    // eslint-disable-next-line no-param-reassign
     options[key] = value;
 
     return options;
