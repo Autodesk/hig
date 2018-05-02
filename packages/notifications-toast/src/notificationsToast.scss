@@ -1,7 +1,7 @@
 @import "~@hig/styles/mixins/colors.scss";
 
 .hig__toast {
-  @import "./variables.scss";
+  @import "./tokens.scss";
 
   box-sizing: border-box;
   display: flex;

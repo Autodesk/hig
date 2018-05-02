@@ -9,29 +9,29 @@ import languageOptions from "@hig/storybook/storybook-support/languageOptions";
 import avatar from "@hig/storybook/storybook-support/fixtures/avatar/chris-reynolds.png";
 import greenhouseThumbnail from "@hig/storybook/storybook-support/fixtures/thumbnail/greenhouse.png";
 
-import Toast, { _AVAILABLE_STATUSES } from "../index";
+import NotificationsToast, { _AVAILABLE_STATUSES } from "../index";
 
-import intlExamples from "./toast-intl-examples.json";
+import intlExamples from "./notifications-toast-intl-examples.json";
 
-storiesOf("Toast", module)
+storiesOf("NotificationsToast", module)
   .add(
     "default",
     withInfo()(() => (
-      <Toast
+      <NotificationsToast
         onDismiss={action("Toast dismissed")}
         status={select("Status", _AVAILABLE_STATUSES)}
         showStatusIcon={boolean("Show Status Icon", true)}
       >
         <strong>Object Name</strong>{" "}
         {text("Children", "has new info about it.")}
-      </Toast>
+      </NotificationsToast>
     ))
   )
 
   .add(
     "with an avatar",
     withInfo()(() => (
-      <Toast
+      <NotificationsToast
         image={
           <Avatar
             name="Jon Snow"
@@ -45,14 +45,14 @@ storiesOf("Toast", module)
       >
         <strong>Person&#39;s Name</strong>{" "}
         {text("Children", "made a change relevant to your project.")}
-      </Toast>
+      </NotificationsToast>
     ))
   )
 
   .add(
     "with a thumbnail",
     withInfo()(() => (
-      <Toast
+      <NotificationsToast
         image={
           <div style={{ width: "48px", height: "48px" }}>
             <img
@@ -69,7 +69,7 @@ storiesOf("Toast", module)
         <strong>Person&#39;s Name</strong>{" "}
         {text("Children", "invited you to participate on ")}
         <strong>Project Name</strong>
-      </Toast>
+      </NotificationsToast>
     ))
   )
 
@@ -88,7 +88,7 @@ storiesOf("Toast", module)
             lang.textDirection
           )}
         >
-          <Toast
+          <NotificationsToast
             image={
               <Avatar
                 name={text("Name", lang.name)}
@@ -100,7 +100,7 @@ storiesOf("Toast", module)
             status={select("Status", _AVAILABLE_STATUSES)}
           >
             {text("Children", lang.children)}
-          </Toast>
+          </NotificationsToast>
         </div>
       );
     })
