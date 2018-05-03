@@ -1,11 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { sample } from "lodash";
-import Toast, { _AVAILABLE_STATUSES } from "../../Toast";
-import ToastList, { AVAILABLE_PLACEMENTS } from "../index";
-import Button from "../../../../adapters/ButtonAdapter"; // TODO: Swap out for Button
+import Button from "@hig/button";
+import NotificationsToast from "../NotificationsToast";
+import { AVAILABLE_STATUSES } from "../statuses";
+import NotificationsToastList, {
+  AVAILABLE_PLACEMENTS
+} from "../NotificationsToastList";
 
-export default class ToastListInteractions extends React.Component {
+export default class NotificationsToastListInteractions extends React.Component {
   static defaultProps = {
     initialToasts: []
   };
@@ -43,10 +46,10 @@ export default class ToastListInteractions extends React.Component {
   _generateToast = () => {
     const key = Math.random();
     return (
-      <Toast key={key} status={sample(_AVAILABLE_STATUSES)}>
+      <NotificationsToast key={key} status={sample(AVAILABLE_STATUSES)}>
         <strong>New Toast</strong> was generated with a unique key and random
         status.
-      </Toast>
+      </NotificationsToast>
     );
   };
 
@@ -55,13 +58,13 @@ export default class ToastListInteractions extends React.Component {
       <div>
         <Button onClick={this.addRandomToast} title="Add Random Toast" />
 
-        <ToastList placement={this.props.placement}>
+        <NotificationsToastList placement={this.props.placement}>
           {this.state.toasts.map(toast =>
             React.cloneElement(toast, {
               onDismiss: this.removeToast.bind(this, toast)
             })
           )}
-        </ToastList>
+        </NotificationsToastList>
       </div>
     );
   }

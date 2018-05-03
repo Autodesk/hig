@@ -1,6 +1,6 @@
 import * as placements from "./placements";
 
-describe("ToastList/placements", () => {
+describe("NotificationsToastList/placements", () => {
   it("has an array of available placements", () => {
     expect(placements).toHavePropertyOfConstants("AVAILABLE_PLACEMENTS");
   });

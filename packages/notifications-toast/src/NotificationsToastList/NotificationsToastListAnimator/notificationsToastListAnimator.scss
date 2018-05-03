@@ -1,5 +1,5 @@
 .hig__toast-list {
-  @import "../../Toast/variables.scss";
+  @import "../../tokens.scss";
 
   display: flex;
   min-width: $container-width;

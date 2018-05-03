@@ -5,43 +5,44 @@ import { withInfo } from "@storybook/addon-info";
 import Avatar from "@hig/avatar";
 import sampleAvatar from "@hig/storybook/storybook-support/fixtures/avatar/chris-reynolds.png";
 
-import Toast from "../../Toast";
-import ToastList from "..";
-import { AVAILABLE_PLACEMENTS } from "../placements";
+import NotificationsToast, { NotificationsToastList } from "../index";
+import { AVAILABLE_PLACEMENTS } from "../NotificationsToastList";
 
-import ToastListInteractions from "./ToastListInteractions";
+import NotificationsToastListInteractions from "./NotificationsToastListInteractions";
 
 const exampleToasts = React.Children.toArray([
-  <Toast status="primary">
+  <NotificationsToast status="primary">
     <strong>Object Name</strong> was the first Toast notification to appear.
-  </Toast>,
-  <Toast status="warning">
+  </NotificationsToast>,
+  <NotificationsToast status="warning">
     <strong>Object Name</strong> was the second Toast notification to appear.
-  </Toast>,
-  <Toast
+  </NotificationsToast>,
+  <NotificationsToast
     image={<Avatar name="Arya Stark" size="large-48" image={sampleAvatar} />}
     status="error"
   >
     <strong>Object Name</strong> was the third Toast notification to appear.
-  </Toast>,
-  <Toast>
+  </NotificationsToast>,
+  <NotificationsToast>
     <strong>Object Name</strong> is last.
-  </Toast>
+  </NotificationsToast>
 ]);
 
-storiesOf("ToastList", module)
+storiesOf("NotificationsToastList", module)
   .add(
     "static",
     withInfo()(() => (
-      <ToastList placement={select("Placement", AVAILABLE_PLACEMENTS, "top")}>
+      <NotificationsToastList
+        placement={select("Placement", AVAILABLE_PLACEMENTS, "top")}
+      >
         {exampleToasts}
-      </ToastList>
+      </NotificationsToastList>
     ))
   )
   .add(
     "demonstrate adding new children",
     withInfo()(() => (
-      <ToastListInteractions
+      <NotificationsToastListInteractions
         placement={select("Placement", AVAILABLE_PLACEMENTS, "top")}
       />
     ))

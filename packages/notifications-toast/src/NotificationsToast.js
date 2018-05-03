@@ -4,16 +4,10 @@ import cx from "classnames";
 import Icon, { sizes as iconSizes } from "@hig/icon";
 import IconButton from "@hig/icon-button";
 import RichText from "@hig/rich-text";
+
+import { STATUS_ICONS, AVAILABLE_STATUSES } from "./statuses";
+
 import "./notificationsToast.scss";
-
-const _STATUS_ICONS = {
-  primary: "info",
-  success: "complete",
-  error: "error",
-  warning: "issue"
-};
-
-export const _AVAILABLE_STATUSES = Object.freeze(Object.keys(_STATUS_ICONS));
 
 export default class NotificationsToast extends Component {
   static propTypes = {
@@ -38,7 +32,7 @@ export default class NotificationsToast extends Component {
     /**
      * Indicates the style of toast notification
      */
-    status: PropTypes.oneOf(_AVAILABLE_STATUSES)
+    status: PropTypes.oneOf(AVAILABLE_STATUSES)
   };
 
   static defaultProps = {
@@ -52,10 +46,10 @@ export default class NotificationsToast extends Component {
       return <div className="hig__toast__image-container">{image}</div>;
     }
 
-    if (showStatusIcon && _STATUS_ICONS[status]) {
+    if (showStatusIcon && STATUS_ICONS[status]) {
       return (
         <div className="hig__toast__image-container">
-          {<Icon name={_STATUS_ICONS[status]} size={iconSizes.PX_24} />}
+          {<Icon name={STATUS_ICONS[status]} size={iconSizes.PX_24} />}
         </div>
       );
     }
