@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import cx from "classnames";
+import { ThemeContext } from "@hig/themes";
 import Icon, { names as iconNames } from "@hig/icon";
 
 import "./search.scss";
 
 export default class Search extends Component {
   static propTypes = {
-    clearIconVisible: PropTypes.bool,
     onBlur: PropTypes.func,
     onClearIconClick: PropTypes.func,
     onFocus: PropTypes.func,
@@ -15,25 +16,66 @@ export default class Search extends Component {
     value: PropTypes.string
   };
 
+  static defaultProps = {
+    value: ""
+  };
+
+  state = {
+    value: this.props.value
+  };
+
+  handleChange = event => {
+    this.setState(
+      { value: event.target.value },
+      () => this.props.onInput && this.props.onInput(event)
+    );
+  };
+
+  handleClear = () =>
+    this.setState(
+      { value: "" },
+      () => this.props.onClearIconClick && this.props.onClearIconClick()
+    );
+
   render() {
-    const { placeholder, value } = this.props;
+    const { onBlur, onFocus, placeholder } = this.props;
+
     return (
-      <div className="hig__side-nav__search">
-        <div className="hig__global-nav__side-nav__search__icon">
-          <Icon name={iconNames.SEARCH} />
-        </div>
-        <div className="hig__side-nav__search__inputholder">
-          <input
-            className="hig__side-nav__search__input"
-            type="text"
-            placeholder={placeholder}
-            value={value}
-          />
-        </div>
-        <div className="hig__side-nav__search__clear">
-          <Icon name={iconNames.CLEAR_SMALL} />
-        </div>
-      </div>
+      <ThemeContext.Consumer>
+        {({ themeClass }) => (
+          <div className={cx(themeClass, "hig__side-nav__search")}>
+            <div className={cx(themeClass, "hig__side-nav__search__icon")}>
+              <Icon name={iconNames.SEARCH} />
+            </div>
+
+            <div
+              className={cx(themeClass, "hig__side-nav__search__input-wrapper")}
+            >
+              <input
+                className={cx(themeClass, "hig__side-nav__search__input")}
+                type="text"
+                onBlur={onBlur}
+                onFocus={onFocus}
+                onInput={this.handleChange}
+                placeholder={placeholder}
+                value={this.state.value}
+              />
+            </div>
+
+            {this.state.value &&
+              this.state.value.length > 0 && (
+                <div
+                  className={cx(themeClass, "hig__side-nav__search__clear")}
+                  onClick={this.handleClear}
+                  role="button"
+                  tabIndex={0}
+                >
+                  <Icon name={iconNames.CLEAR_SMALL} />
+                </div>
+              )}
+          </div>
+        )}
+      </ThemeContext.Consumer>
     );
   }
 }

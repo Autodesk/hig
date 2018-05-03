@@ -207,7 +207,12 @@ storiesOf("SideNav/SideNav.Search", module).add(
   })(() => (
     <KnobbedThemeProvider>
       <SideNav.Search
-
+        onBlur={action("onBlur")}
+        onClearIconClick={action("onClearIconClick")}
+        onFocus={action("onFocus")}
+        onInput={action("onInput")}
+        placeholder={text("Placeholder")}
+        value={text("Value")}
       />
     </KnobbedThemeProvider>
   ))
