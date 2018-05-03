@@ -1,0 +1,59 @@
+@import "~@hig/styles/mixins/base.scss";
+@import "~@hig/styles/mixins/colors.scss";
+@import "../tokens.scss";
+
+.hig__side-nav__search {
+  flex: 0 0 auto;
+  position: relative;
+  border-top: 1px solid color(hig-cool-gray-30);
+  margin-right: 4px;
+}
+
+.hig__side-nav__search__icon {
+  position: absolute;
+  top: 11px;
+  left: 14px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.hig__side-nav__search__inputholder {
+  margin: 8px 10px;
+  width: $side-nav-max-width - 20px - 2px;
+}
+
+.hig__side-nav__search__input {
+  @include reset;
+  border: 1px solid color(hig-cool-gray-30);
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 6px 6px 6px 35px;
+  width: 100%;
+  font-weight: 500;
+
+  &:placeholder {
+    font-weight: normal;
+    color: color(hig-cool-gray-50);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.hig__side-nav__search__clear {
+  position: absolute;
+  right: 12px;
+  top: 11px;
+  opacity: 0; // hide by opacity to enable event propagation with focusin/focusout events
+
+  &--show {
+    opacity: 1;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

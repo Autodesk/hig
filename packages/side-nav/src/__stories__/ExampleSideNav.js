@@ -52,6 +52,7 @@ const ExampleSideNav = () => (
         target="_blank"
       />
     ]}
+    search={<SideNav.Search />}
     copyright="© 2018 Autodesk Inc."
   />
 );
