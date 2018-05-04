@@ -1,0 +1,39 @@
+{
+  "name": "@hig/button",
+  "version": "0.1.0-alpha",
+  "description": "HIG Button",
+  "author": "Autodesk Inc.",
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "build/index.js",
+  "module": "build/index.es.js",
+  "style": "build/index.css",
+  "files": ["build/*"],
+  "devDependencies": {
+    "@hig/babel-preset": "0.1.0",
+    "@hig/scripts": "^0.1.0",
+    "@hig/styles": "^0.1.0-alpha",
+    "@hig/eslint-config": "0.1.0"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.5.10",
+    "react": "^15.4.1"
+  },
+  "scripts": {
+    "build": "hig-scripts-build",
+    "lint": "eslint src --ext .js,.jsx"
+  },
+  "dependencies": {
+    "@hig/themes": "^0.1.0-alpha"
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "presets": ["@hig/babel-preset/test"]
+      }
+    }
+  },
+  "eslintConfig": { "extends": "@hig" }
+}
