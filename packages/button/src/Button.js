@@ -87,15 +87,40 @@ export default class Button extends Component {
       width
     } = this.props;
 
-    const linkProps = link ? { tabIndex: "0", href: link, target } : {};
+    const linkProps = link
+      ? {
+          tabIndex: disabled ? "-1" : "0",
+          href: link,
+          target
+        }
+      : {};
 
     const Element = link ? "a" : "button";
+
+    const buttonClasses = themeClass =>
+      cx(themeClass, "hig__button-v1", {
+        "hig__button-v1--disabled": disabled,
+        [`hig__button-v1--size-${size}`]: size,
+        [`hig__button-v1--type-${type}`]: type,
+        [`hig__button-v1--width-${width}`]: width
+      });
 
     return (
       <ThemeContext.Consumer>
         {({ themeClass }) => (
-          <Element className={cx(themeClass, "hig__button")} {...linkProps}>
-            {icon}
+          <Element
+            className={buttonClasses(themeClass)}
+            {...linkProps}
+            onBlur={onBlur}
+            onClick={onClick}
+            onFocus={onFocus}
+            onMouseOver={onHover}
+          >
+            {icon && (
+              <div className={cx(themeClass, "hig__button-v1__icon")}>
+                {icon}
+              </div>
+            )}
 
             <span className={cx("hig__button__title")}>{title}</span>
           </Element>
