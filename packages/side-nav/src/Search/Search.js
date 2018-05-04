@@ -11,7 +11,7 @@ export default class Search extends Component {
     onBlur: PropTypes.func,
     onClearIconClick: PropTypes.func,
     onFocus: PropTypes.func,
-    onInput: PropTypes.func,
+    onChange: PropTypes.func,
     placeholder: PropTypes.string,
     value: PropTypes.string
   };
@@ -27,7 +27,7 @@ export default class Search extends Component {
   handleChange = event => {
     this.setState(
       { value: event.target.value },
-      () => this.props.onInput && this.props.onInput(event)
+      () => this.props.onChange && this.props.onChange(event)
     );
   };
 
@@ -56,7 +56,7 @@ export default class Search extends Component {
                 type="text"
                 onBlur={onBlur}
                 onFocus={onFocus}
-                onInput={this.handleChange}
+                onChange={this.handleChange}
                 placeholder={placeholder}
                 value={this.state.value}
               />
