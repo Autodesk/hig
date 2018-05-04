@@ -8,11 +8,29 @@ import "./search.scss";
 
 export default class Search extends Component {
   static propTypes = {
+    /**
+     * Called when search input loses focus.
+     */
     onBlur: PropTypes.func,
+    /**
+     * Called when clicking icon to clear input.
+     */
     onClearIconClick: PropTypes.func,
+    /**
+     * Called when search input gains focus.
+     */
     onFocus: PropTypes.func,
+    /**
+     * Called when input changes.
+     */
     onChange: PropTypes.func,
+    /**
+     * Placeholder text for the input field.
+     */
     placeholder: PropTypes.string,
+    /**
+     * Value of the input field. Can be changed after mount to update the input value.
+     */
     value: PropTypes.string
   };
 
