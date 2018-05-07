@@ -34,19 +34,19 @@ describe("Avatar", () => {
   });
 
   describe("when an image URL is provided", () => {
-    it("renders an image", () => {
+    it("renders initials and the image", () => {
       snapshotTest(imageProps);
     });
 
     describe("when an error occurs on the image", () => {
-      it("renders initials", () => {
+      it("doesn't render the image", () => {
         const wrapper = mount(<Avatar {...imageProps} />);
 
-        expect(wrapper.find("Initials")).not.toBePresent();
+        expect(wrapper.find("img")).toBePresent();
 
         wrapper.find("img").simulate("error");
 
-        expect(wrapper.find("Initials")).toBePresent();
+        expect(wrapper.find("img")).not.toBePresent();
       });
     });
   });

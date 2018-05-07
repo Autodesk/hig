@@ -152,11 +152,10 @@ class Avatar extends Component {
 
     return (
       <figure className={classes} aria-label={label}>
-        {showImage ? (
+        {!showImage ? null : (
           <Image image={imageUrl} name={name} onError={handleImageError} />
-        ) : (
-          <Initials name={name} />
         )}
+        <Initials name={name} />
       </figure>
     );
   }

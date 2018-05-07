@@ -3,7 +3,7 @@
 @import "~@hig/styles/mixins/spacing.scss";
 
 .hig__avatarV2 {
-  display: flex;
+  position: relative;
   margin: 0;
   overflow: hidden;
   color: color(hig-gray-70);
@@ -12,6 +12,8 @@
 }
 
 .hig__avatarV2__image-wrapper {
+  position: absolute;
+  display: flex;
   z-index: 2;
 }
 
@@ -21,6 +23,7 @@
 
 .hig__avatarV2__initials {
   @include typography-base;
+  position: absolute;
   text-align: center;
 }
 
