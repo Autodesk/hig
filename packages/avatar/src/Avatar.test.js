@@ -15,6 +15,11 @@ const basicProps = {
   size: sizes.LARGE_36
 };
 
+const imageProps = {
+  ...basicProps,
+  image: "http://placekitten.com/g/64/64"
+};
+
 describe("Avatar", () => {
   describe("when an image URL is not provided", () => {
     it("renders initials", () => {
@@ -22,17 +27,26 @@ describe("Avatar", () => {
     });
 
     it("renders initials based on the provided name", () => {
-      const wrapper = mount(<Avatar {...basicProps} />).find("Initials");
+      const wrapper = mount(<Avatar {...basicProps} />);
 
-      expect(wrapper).toIncludeText("JS");
+      expect(wrapper.find("Initials")).toIncludeText("JS");
     });
   });
 
   describe("when an image URL is provided", () => {
     it("renders an image", () => {
-      snapshotTest({
-        ...basicProps,
-        image: "http://placekitten.com/g/64/64"
+      snapshotTest(imageProps);
+    });
+
+    describe("when an error occurs on the image", () => {
+      it("renders initials", () => {
+        const wrapper = mount(<Avatar {...imageProps} />);
+
+        expect(wrapper.find("Initials")).not.toBePresent();
+
+        wrapper.find("img").simulate("error");
+
+        expect(wrapper.find("Initials")).toBePresent();
       });
     });
   });

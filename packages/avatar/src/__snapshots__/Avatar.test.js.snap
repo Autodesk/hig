@@ -25,6 +25,7 @@ exports[`Avatar when an image URL is provided renders an image 1`] = `
     <img
       alt="Avatar image of Jon Snow"
       className="hig__avatarV2__image"
+      onError={[Function]}
       src="http://placekitten.com/g/64/64"
     />
   </div>

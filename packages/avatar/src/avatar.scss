@@ -3,10 +3,12 @@
 @import "~@hig/styles/mixins/spacing.scss";
 
 .hig__avatarV2 {
+  display: flex;
   margin: 0;
-  border-radius: 50%;
+  overflow: hidden;
   color: color(hig-gray-70);
   background: color(hig-purple-40);
+  border-radius: 50%;
 }
 
 .hig__avatarV2__image-wrapper {
