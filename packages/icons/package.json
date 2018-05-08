@@ -10,18 +10,31 @@
   },
   "main": "build/index.js",
   "module": "build/index.es.js",
-  "files": ["build/*"],
+  "files": [
+    "build/*"
+  ],
   "devDependencies": {
     "@hig/babel-preset": "0.1.0",
+    "@hig/eslint-config": "0.1.0",
     "@hig/scripts": "^0.1.0",
     "@hig/styles": "^0.1.0-alpha",
     "svgo": "^1.0.5"
   },
   "peerDependencies": {
-    "react": "^15.4.1"
+    "react": "^15.4.1 || ^16.3.2"
   },
   "scripts": {
     "build": "hig-scripts-build",
     "build-icons": "node scripts/build-icons.js"
+  },
+  "eslintConfig": {
+    "extends": "@hig"
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "presets": ["@hig/babel-preset/test"]
+      }
+    }
   }
 }
