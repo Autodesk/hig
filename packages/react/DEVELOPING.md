@@ -3,7 +3,6 @@
 ```bash
 yarn
 yarn playground  # Run the example Playground app for development
-yarn storybook  # Alternatively, use storybook to see individual components and their docgen info
 ```
 
 To make a production build, run:

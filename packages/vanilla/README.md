@@ -1,4 +1,7 @@
 # hig-vanilla
+
+# DEPRECATION WARNING: this package is no longer getting updates. Use the component packages published in the @hig namespace, and browse their source at [`packages`](..).
+
 The HIG Web implementation consists of `html`, `css` and `js`. You can opt to only consume the `html` and `css` part and write the wrapper against the `interface.json` yourself (hard) or opt to use our `js` wrapper directly (easy).
 
 ## Install
@@ -25,7 +28,7 @@ Button.onClick(function(e){
 });
 ```
 
-more advanced button examples can be found in [the components tests dir](src/components/button/tests/tests-button.html)
+More examples can be found in each components' test directories.
 
 ## Contribute
 

@@ -6,12 +6,6 @@ We use Yarn workspaces and Lerna to manage interdependencies between packages. T
 yarn
 ```
 
-## Developing hig-vanilla
-Find information about HIG-Vanilla here [DEVELOPING](packages/vanilla/README.md)
-
-## Developing hig-react
-Find information about HIG-React here [DEVELOPING](packages/react/README.md)
-
 # Deployment
 
 1. Switch to `development` branch.
