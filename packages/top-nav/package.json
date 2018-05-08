@@ -26,7 +26,7 @@
     "lint": "eslint src --ext .js,.jsx"
   },
   "dependencies": {
-    "@hig/avatar": "^0.1.0-alpha",
+    "@hig/avatar": "^0.1.0-alpha.59de67eb",
     "@hig/icon": "^0.1.0-alpha",
     "classnames": "^2.2.5",
     "hig-react": "0.28.35"
