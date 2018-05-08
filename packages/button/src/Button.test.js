@@ -2,65 +2,83 @@ import React from "react";
 import { mount } from "enzyme";
 import Button from "./Button";
 
-const subject = (props = {}) => mount(<Button title="Button" {...props} />);
-
 describe("Button", () => {
+  const subject = (props = {}) => mount(<Button title="Button" {...props} />);
+  let wrapper;
+
   describe("event handlers", () => {
+    let eventHandler;
+
     describe("onBlur", () => {
+      beforeEach(() => {
+        eventHandler = jest.fn();
+        wrapper = subject({ onBlur: eventHandler });
+      });
+
       it("is triggered on blur", () => {
-        const blurHandler = jest.fn();
-        const wrapper = subject({ onBlur: blurHandler });
-
         wrapper.simulate("blur");
-
-        expect(blurHandler).toBeCalled();
+        expect(eventHandler).toBeCalled();
       });
     });
 
     describe("onClick", () => {
+      beforeEach(() => {
+        eventHandler = jest.fn();
+        wrapper = subject({ onClick: eventHandler });
+      });
+
       it("is triggered on click", () => {
-        const clickHandler = jest.fn();
-        const wrapper = subject({ onClick: clickHandler });
-
         wrapper.simulate("click");
-
-        expect(clickHandler).toBeCalled();
+        expect(eventHandler).toBeCalled();
       });
     });
 
     describe("onFocus", () => {
+      beforeEach(() => {
+        eventHandler = jest.fn();
+        wrapper = subject({ onFocus: eventHandler });
+      });
+
       it("is triggered on focus", () => {
-        const focusHandler = jest.fn();
-        const wrapper = subject({ onFocus: focusHandler });
-
         wrapper.simulate("focus");
-
-        expect(focusHandler).toBeCalled();
+        expect(eventHandler).toBeCalled();
       });
     });
 
     describe("onHover", () => {
+      beforeEach(() => {
+        eventHandler = jest.fn();
+        wrapper = subject({ onHover: eventHandler });
+      });
+
       it("is triggered on mouseover", () => {
-        const hoverHandler = jest.fn();
-        const wrapper = subject({ onHover: hoverHandler });
-
         wrapper.simulate("mouseover");
-
-        expect(hoverHandler).toBeCalled();
+        expect(eventHandler).toBeCalled();
       });
     });
   });
 
   describe("the element rendered", () => {
-    it("is an <a> tag given a link", () => {
-      const link = "https://www.autodesk.com";
-      const wrapper = subject({ link });
-      expect(wrapper.matchesElement(<a href={link}>Button</a>));
+    let link;
+    describe("given a link", () => {
+      beforeEach(() => {
+        link = "https://www.autodesk.com";
+        wrapper = subject({ link });
+      });
+
+      it("is an <a> tag", () => {
+        expect(wrapper.matchesElement(<a href={link}>Button</a>));
+      });
     });
 
-    it("is a <button> tag without a link", () => {
-      const wrapper = subject();
-      expect(wrapper.matchesElement(<button>Button</button>));
+    describe("without a link", () => {
+      beforeEach(() => {
+        wrapper = subject();
+      });
+
+      it("is a <button> tag", () => {
+        expect(wrapper.matchesElement(<button>Button</button>));
+      });
     });
   });
 });
