@@ -10,7 +10,8 @@
   "style": "build/index.css",
   "files": ["build/*"],
   "dependencies": {
-    "classnames": "^2.2.5"
+    "classnames": "^2.2.5",
+    "react-lifecycles-compat": "^3.0.2"
   },
   "peerDependencies": {
     "prop-types": "^15.5.10",
@@ -18,16 +19,15 @@
   },
   "devDependencies": {
     "@hig/babel-preset": "0.1.0",
+    "@hig/eslint-config": "0.1.0",
     "@hig/scripts": "^0.1.0",
-    "@hig/styles": "^0.1.0-alpha",
-    "@hig/eslint-config": "0.1.0"
+    "@hig/styles": "^0.1.0-alpha"
   },
   "scripts": {
     "build": "hig-scripts-build",
-    "lint": "eslint ./src/**/*"
+    "lint": "eslint src --ext .js,.jsx"
   },
   "eslintConfig": { "extends": "@hig" },
-  "eslintIgnore": ["*.scss", "*.json"],
   "babel": {
     "env": {
       "test": {

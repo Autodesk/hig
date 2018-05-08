@@ -32,7 +32,6 @@
     "hig-react": "0.28.35"
   },
   "eslintConfig": { "extends": "@hig" },
-  "eslintIgnore": ["*.scss", "*.json"],
   "babel": {
     "env": {
       "test": {

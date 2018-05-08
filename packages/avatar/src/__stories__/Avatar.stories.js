@@ -2,9 +2,12 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { text, select } from "@storybook/addon-knobs/react";
 import { withInfo } from "@storybook/addon-info";
-
+import { makeSelectOptions } from "@hig/storybook/utils";
 import avatarImage from "@hig/storybook/storybook-support/fixtures/avatar/chris-reynolds.png";
-import Avatar, { _AVAILABLE_SIZES } from "../index";
+
+import Avatar, { sizes } from "../index";
+
+const sizeOptions = makeSelectOptions(sizes);
 
 storiesOf("Avatar", module)
   .add(
@@ -12,7 +15,7 @@ storiesOf("Avatar", module)
     withInfo()(() => (
       <Avatar
         name={text("Name", "Jon Snow")}
-        size={select("Size", _AVAILABLE_SIZES, "large")}
+        size={select("Size", sizeOptions, sizes.LARGE_36)}
       />
     ))
   )
@@ -22,7 +25,7 @@ storiesOf("Avatar", module)
     withInfo()(() => (
       <Avatar
         name={text("Name", "Maria McCaplin")}
-        size={select("Size", _AVAILABLE_SIZES, "large")}
+        size={select("Size", sizeOptions, sizes.LARGE_36)}
         image={text("Image URL", avatarImage)}
       />
     ))

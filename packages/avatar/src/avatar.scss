@@ -1,24 +1,27 @@
-@import '~@hig/styles/mixins/colors.scss';
-@import '~@hig/styles/mixins/typography.scss';
-@import '~@hig/styles/mixins/spacing.scss';
+@import "~@hig/styles/mixins/colors.scss";
+@import "~@hig/styles/mixins/typography.scss";
+@import "~@hig/styles/mixins/spacing.scss";
 
-.hig__avatar {
+.hig__avatarV2 {
   position: relative;
-  border-radius: 50%;
+  margin: 0;
+  overflow: hidden;
   color: color(hig-gray-70);
   background: color(hig-purple-40);
+  border-radius: 50%;
 }
 
-.hig__avatar__image-wrapper {
+.hig__avatarV2__image-wrapper {
   position: absolute;
+  display: flex;
   z-index: 2;
 }
 
-.hig__avatar__image {
- border-radius: 50%;
+.hig__avatarV2__image {
+  border-radius: 50%;
 }
 
-.hig__avatar__initials {
+.hig__avatarV2__initials {
   @include typography-base;
   position: absolute;
   text-align: center;
@@ -34,9 +37,9 @@ $sizes: (
 );
 
 @each $sizeName, $sizeValue in $sizes {
-  .hig__avatar--size--#{$sizeName},
-  .hig__avatar--size--#{$sizeName} .hig__avatar__image,
-  .hig__avatar--size--#{$sizeName} .hig__avatar__initials {
+  .hig__avatarV2--size--#{$sizeName},
+  .hig__avatarV2--size--#{$sizeName} .hig__avatarV2__image,
+  .hig__avatarV2--size--#{$sizeName} .hig__avatarV2__initials {
     width: $sizeValue;
     height: $sizeValue;
     line-height: $sizeValue;
@@ -57,7 +60,7 @@ $backgroundColors: (
 );
 
 @each $backgroundName, $backgroundValue in $backgroundColors {
-  .hig__avatar__background--#{$backgroundName} {
+  .hig__avatarV2__background--#{$backgroundName} {
     background-color: $backgroundValue;
   }
 }
