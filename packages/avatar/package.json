@@ -25,10 +25,9 @@
   },
   "scripts": {
     "build": "hig-scripts-build",
-    "lint": "eslint ./src/**/*"
+    "lint": "eslint src --ext .js,.jsx"
   },
   "eslintConfig": { "extends": "@hig" },
-  "eslintIgnore": ["*.scss", "*.json"],
   "babel": {
     "env": {
       "test": {
