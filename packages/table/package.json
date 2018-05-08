@@ -15,6 +15,7 @@
     "classnames": "^2.2.3",
     "lodash": "^4.17.5",
     "react-draggable": "^3.0.5",
+    "react-lifecycles-compat": "^3.0.2",
     "react-virtualized": "^9.18.5"
   },
   "peerDependencies": {

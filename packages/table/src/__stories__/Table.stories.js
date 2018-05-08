@@ -6,7 +6,7 @@ import { withInfo } from "@storybook/addon-info";
 import generateColumns from "./generateColumns";
 import generateData from "./generateData";
 
-import Table from "../index";
+import Table, { AutoResizer } from "../index";
 
 const tableStories = storiesOf("Table", module);
 
@@ -17,5 +17,16 @@ tableStories.add(
   "default",
   withInfo()(() => (
     <Table width={800} height={800} columns={columns} data={data} />
+  ))
+);
+
+tableStories.add(
+  "with auto-resizer",
+  withInfo()(() => (
+    <AutoResizer>
+      {({ width, height }) => (
+        <Table width={width} height={height} columns={columns} data={data} />
+      )}
+    </AutoResizer>
   ))
 );
