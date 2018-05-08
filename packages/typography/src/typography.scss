@@ -3,13 +3,12 @@
 @import '~@hig/styles/mixins/spacing.scss';
 
 .hig__typography {
+  display: inline-block;
   @include typography-base;
-  margin-bottom: spacing(m);
 }
 
 .hig__typography--small {
   @include typography-small;
-  margin-bottom: spacing(xs);
 }
 
 .hig__typography--large {

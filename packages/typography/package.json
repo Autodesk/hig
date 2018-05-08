@@ -25,5 +25,14 @@
     "build": "hig-scripts-build",
     "lint": "eslint src --ext .js,.jsx"
   },
-  "eslintConfig": { "extends": "@hig" }
+  "eslintConfig": { "extends": "@hig" },
+  "babel": {
+    "env": {
+      "test": {
+        "presets": [
+          "@hig/babel-preset/test"
+        ]
+      }
+    }
+  }
 }
