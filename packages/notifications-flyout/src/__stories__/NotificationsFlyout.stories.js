@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import { text, boolean } from "@storybook/addon-knobs/react";
+import { boolean, number } from "@storybook/addon-knobs/react";
 import { withInfo } from "@storybook/addon-info";
 import { Notifications, TextLink } from "hig-react";
 
@@ -34,30 +34,41 @@ storiesOf("NotificationsFlyout", module)
   .add(
     "V1",
     withInfo()(() => (
-      <Notifications
-        title="Notifications"
-        onClick={action("Notifications on click")}
-        onClickOutside={action("Notifications onClickOutside")}
-        onScroll={action("Notifications onScroll")}
-        unreadCount={text("Unread count", 3)}
-        featuredNotification={featuredNotification()}
-        loading={boolean("Loading Indicator", false)}
-        open
-      >
-        {sampleNotifications.map(notification => (
-          <Notification
-            unread={notification.unread}
-            key={notification.id}
-            onLinkClick={action("Notification Link Clicked")}
-            id={notification.id}
-            title={notification.title}
-            type={notification.type}
-            timestamp={notification.timestamp}
-          >
-            {notification.children}
-          </Notification>
-        ))}
-      </Notifications>
+      <div style={{ fontFamily: "ArtifaktElement" }}>
+        {/* @TODO: Remove wrapper when Notifications is ported */}
+        <Notifications
+          title="Notifications"
+          onClick={action("Notifications on click")}
+          onClickOutside={action("Notifications onClickOutside")}
+          onScroll={action("Notifications onScroll")}
+          unreadCount={number("Unread count", 3)}
+          featuredNotification={featuredNotification()}
+          loading={boolean("Loading Indicator", false)}
+          open
+        >
+          {sampleNotifications.map(notification => (
+            <Notification
+              unread={notification.unread}
+              key={notification.id}
+              onLinkClick={action("Notification Link Clicked")}
+              id={notification.id}
+              title={notification.title}
+              type={notification.type}
+              timestamp={notification.timestamp}
+            >
+              {notification.children}
+            </Notification>
+          ))}
+        </Notifications>
+      </div>
     ))
   )
-  .add("interactive V1", withInfo()(() => <NotificationsFlyoutInteraction />));
+  .add(
+    "interactive V1",
+    withInfo()(() => (
+      <div style={{ fontFamily: "ArtifaktElement" }}>
+        {/* @TODO: Remove wrapper when Notifications is ported */}
+        <NotificationsFlyoutInteraction />
+      </div>
+    ))
+  );

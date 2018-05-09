@@ -5,9 +5,8 @@ import { action } from "@storybook/addon-actions";
 import KnobbedThemeProvider from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
 import Icon, { names as iconNames } from "@hig/icon";
 import SideNav, { BelowTopNavCompact } from "../index";
-import cubeIcon from "./cube.svg";
 
-const compactSideNav = (
+const compactSideNav = () => (
   <SideNav
     groups={
       <SideNav.Group>
@@ -21,7 +20,7 @@ const compactSideNav = (
         </SideNav.ModuleCompact>
         <SideNav.ModuleCompact
           title="Module 2"
-          icon={<Icon svg={cubeIcon} />}
+          icon={<Icon name={iconNames.PRODUCTS_AND_SERVICES} />}
           minimized
         >
           <SideNav.Submodule title="Submodule 1" />
@@ -39,20 +38,28 @@ const compactSideNav = (
 );
 
 storiesOf("SideNav/SideNavCompact", module)
-  .addDecorator(KnobbedThemeProvider)
   .add(
     "SideNav with compact modules",
-    withInfo({ propTables: [SideNav.ModuleCompact] })(() => compactSideNav)
+    withInfo({
+      propTables: [SideNav.ModuleCompact],
+      propTablesExclude: [KnobbedThemeProvider]
+    })(() => <KnobbedThemeProvider>{compactSideNav()}</KnobbedThemeProvider>)
   )
 
   .add(
     "positioned below the TopNav",
-    withInfo({ inline: false, propTables: [SideNav.ModuleCompact] })(() => (
-      <BelowTopNavCompact
-        onMouseEnter={action("BelowTopNav onMouseEnter")}
-        onMouseLeave={action("BelowTopNav onMouseLeave")}
-      >
-        {compactSideNav}
-      </BelowTopNavCompact>
+    withInfo({
+      inline: false,
+      propTables: [SideNav.ModuleCompact],
+      propTablesExclude: [KnobbedThemeProvider]
+    })(() => (
+      <KnobbedThemeProvider>
+        <BelowTopNavCompact
+          onMouseEnter={action("BelowTopNav onMouseEnter")}
+          onMouseLeave={action("BelowTopNav onMouseLeave")}
+        >
+          {compactSideNav()}
+        </BelowTopNavCompact>
+      </KnobbedThemeProvider>
     ))
   );

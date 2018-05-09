@@ -23,6 +23,8 @@ export default class SideNav extends Component {
     links: PropTypes.node,
     /** Called when minimize button is clicked */
     onMinimize: PropTypes.func,
+    /** A SideNav Search element */
+    search: PropTypes.node,
     /** Renders a button to minimize the SideNav */
     showMinimizeButton: PropTypes.bool,
     /** Title at the top of the SideNav */
@@ -84,6 +86,7 @@ export default class SideNav extends Component {
       groups,
       links,
       onMinimize,
+      search,
       showMinimizeButton
     } = this.props;
 
@@ -109,7 +112,7 @@ export default class SideNav extends Component {
               )}
             </div>
 
-            {/* <!--SEARCH--> */}
+            {search}
 
             {showMinimizeButton && (
               <div className="hig__side-nav__minimize">
