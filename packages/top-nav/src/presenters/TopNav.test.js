@@ -1,4 +1,3 @@
-import { mount } from "enzyme";
 import React from "react";
 import renderer from "react-test-renderer";
 
@@ -22,8 +21,7 @@ describe("top-nav/TopNav", () => {
 
   cases.forEach(({ description, props }) => {
     it(description, () => {
-      const wrapper = <TopNav {...props} />;
-      const tree = renderer.create(wrapper).toJSON();
+      const tree = renderer.create(<TopNav {...props} />).toJSON();
 
       expect(tree).toMatchSnapshot();
     });
