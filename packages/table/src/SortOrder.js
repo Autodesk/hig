@@ -1,5 +1,6 @@
 /**
  * Sort order for the Table
+ * @todo Rename to `sortOrder`. The object is neither a component nor a class.
  */
 const SortOrder = {
   /**
