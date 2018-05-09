@@ -67,18 +67,19 @@ class ColumnResizer extends React.PureComponent {
 
     const { column } = this.props;
     if (column.maxWidth && this.width >= column.maxWidth) return true;
+    /** @todo Allow value of `0` as column.minWidth */
     if (this.width <= (column.minWidth || MIN_WIDTH)) return true;
 
     return this.props.onResize(this.props.column, this.width);
   }
 
-  _handleStart(e, data) {
+  _handleStart() {
     this.lastX = INVALID_VALUE;
     this.width = this.props.column.width;
     return this.props.onResizeStart(this.props.column);
   }
 
-  _handleStop(e, data) {
+  _handleStop() {
     return this.props.onResizeStop(this.props.column);
   }
 
