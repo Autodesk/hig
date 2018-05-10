@@ -246,3 +246,29 @@
     background-color: $column-resizer-color;
   }
 }
+
+.hig__table__expand-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  font-size: 16px;
+  text-align: center;
+  outline: none;
+}
+
+.hig__table__column-resizer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  cursor: ew-resize;
+  border-right-style: solid;
+}
+
+.hig__table__resizing-line {
+  @import "./tokens.scss";
+
+  width: $resizing-line-width;
+  transform: translateX(-$resizing-line-width);
+}

@@ -1,5 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
+import cx from "classnames";
+import { ThemeContext } from "@hig/themes";
 
 /**
  * Header component for the Table
@@ -29,9 +31,13 @@ class TableHeader extends React.PureComponent {
         );
 
     return (
-      <div className={className} style={style}>
-        {cells}
-      </div>
+      <ThemeContext.Consumer>
+        {({ themeClass }) => (
+          <div className={cx(className, themeClass)} style={style}>
+            {cells}
+          </div>
+        )}
+      </ThemeContext.Consumer>
     );
   }
 }

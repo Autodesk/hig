@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import cn from "classnames";
+import cx from "classnames";
 import Grid from "react-virtualized/dist/commonjs/Grid";
+import { ThemeContext } from "@hig/themes";
 
 /**
  * A wrapper of the Grid for internal only
@@ -139,40 +140,47 @@ class GridTable extends React.PureComponent {
     } = this.props;
     const headerHeight = hideHeader ? 0 : this.props.headerHeight;
     const frozenRowsHeight = this.getFrozenRowsHeight();
-    const cls = cn("hig__table__table", className);
     const containerProps = containerStyle ? { style: containerStyle } : null;
+
     return (
-      <div className={cls} {...containerProps}>
-        {headerHeight + frozenRowsHeight > 0 && (
-          <Grid
-            {...rest}
-            className="hig__table__header"
-            ref={this._setHeaderRef}
-            width={width}
-            height={Math.min(headerHeight + frozenRowsHeight, height)}
-            rowHeight={this._headerRowHeight}
-            rowCount={1 + frozenRowCount}
-            columnWidth={headerWidth}
-            columnCount={1}
-            cellRenderer={this.renderHeaderRow}
-          />
+      <ThemeContext.Consumer>
+        {({ themeClass }) => (
+          <div
+            className={cx("hig__table__table", themeClass, className)}
+            {...containerProps}
+          >
+            {headerHeight + frozenRowsHeight > 0 && (
+              <Grid
+                {...rest}
+                className={cx("hig__table__header", themeClass)}
+                ref={this._setHeaderRef}
+                width={width}
+                height={Math.min(headerHeight + frozenRowsHeight, height)}
+                rowHeight={this._headerRowHeight}
+                rowCount={1 + frozenRowCount}
+                columnWidth={headerWidth}
+                columnCount={1}
+                cellRenderer={this.renderHeaderRow}
+              />
+            )}
+            <Grid
+              {...rest}
+              className={cx("hig__table__body", themeClass)}
+              ref={this._setBodyRef}
+              width={width}
+              height={Math.max(height - headerHeight - frozenRowsHeight, 0)}
+              rowHeight={this._rowHeight}
+              rowCount={this.props.data.length - frozenRowCount}
+              columnWidth={bodyWidth}
+              columnCount={1}
+              cellRenderer={this.renderRow}
+              onScroll={onScroll}
+              onSectionRendered={this._handleSectionRendered}
+              onScrollbarPresenceChange={onScrollbarPresenceChange}
+            />
+          </div>
         )}
-        <Grid
-          {...rest}
-          className="hig__table__body"
-          ref={this._setBodyRef}
-          width={width}
-          height={Math.max(height - headerHeight - frozenRowsHeight, 0)}
-          rowHeight={this._rowHeight}
-          rowCount={this.props.data.length - frozenRowCount}
-          columnWidth={bodyWidth}
-          columnCount={1}
-          cellRenderer={this.renderRow}
-          onScroll={onScroll}
-          onSectionRendered={this._handleSectionRendered}
-          onScrollbarPresenceChange={onScrollbarPresenceChange}
-        />
-      </div>
+      </ThemeContext.Consumer>
     );
   }
 
