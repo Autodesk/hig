@@ -1,6 +1,6 @@
 {
   "name": "@hig/table",
-  "version": "0.1.0-alpha",
+  "version": "0.1.0",
   "description": "HIG Table",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -15,7 +15,6 @@
   ],
   "dependencies": {
     "classnames": "^2.2.3",
-    "delay": "^2.0.0",
     "lodash": "^4.17.5",
     "react-draggable": "^3.0.5",
     "react-lifecycles-compat": "^3.0.2",
@@ -29,7 +28,8 @@
     "@hig/babel-preset": "0.1.0",
     "@hig/eslint-config": "0.1.0",
     "@hig/scripts": "^0.1.0",
-    "@hig/styles": "^0.1.0-alpha"
+    "@hig/styles": "^0.1.0-alpha",
+    "delay": "^2.0.0"
   },
   "scripts": {
     "build": "hig-scripts-build",
