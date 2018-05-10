@@ -5,17 +5,13 @@ exports[`ColumnResizer renders with only a width 1`] = `
   data-mock="DraggableCore"
 >
   <div
-    className="hig__table__column-resizer"
+    aria-orientation="vertical"
+    className="hig__table__column-resizer hig--light-theme"
     onClick={[Function]}
+    role="separator"
     style={
       Object {
-        "borderRightStyle": "solid",
         "borderRightWidth": 50,
-        "bottom": 0,
-        "cursor": "ew-resize",
-        "position": "absolute",
-        "right": 0,
-        "top": 0,
       }
     }
   />
