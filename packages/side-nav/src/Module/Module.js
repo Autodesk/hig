@@ -40,12 +40,16 @@ export default class Module extends Component {
     };
   }
 
-  handleModuleMinimizeToggle = e =>
+  /**
+   * @param {Function} callback, function to call after minimize state has been toggled
+   * @returns {Function}
+   */
+  createMinimizeToggler = callback => () => {
     this.setState(
       { minimized: !this.state.minimized },
-      () =>
-        this.props.onClickCollapseButton && this.props.onClickCollapseButton(e)
+      () => callback && callback()
     );
+  };
 
   /**
    * @returns {PresenterBag}
@@ -55,8 +59,10 @@ export default class Module extends Component {
 
     return {
       minimized,
-      onClickCollapseButton: this.handleModuleMinimizeToggle,
-      onClickTitle: this.handleModuleMinimizeToggle
+      onClickCollapseButton: this.createMinimizeToggler(
+        this.props.onClickCollapseButton
+      ),
+      onClickTitle: this.createMinimizeToggler(this.props.onClickTitle)
     };
   }
 
