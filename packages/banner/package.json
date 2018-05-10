@@ -27,7 +27,7 @@
   },
   "scripts": {
     "build": "hig-scripts-build",
-    "lint": "eslint src --ext .js,.jsx"
+    "lint": "eslint src --color --ext .js,.jsx"
   },
   "dependencies": {
     "@hig/icon": "^0.1.0-alpha",
