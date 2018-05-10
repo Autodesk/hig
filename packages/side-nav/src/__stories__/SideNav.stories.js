@@ -5,10 +5,12 @@ import KnobbedThemeProvider from "@hig/storybook/storybook-support/decorators/Kn
 
 import SideNav from "../index";
 import ExampleSideNav from "./ExampleSideNav";
+import infoOptions from "./infoOptions";
 
 storiesOf("SideNav", module).add(
   "with icons",
   withInfo({
+    ...infoOptions,
     source: true,
     propTables: [
       SideNav.CollapseButton,
