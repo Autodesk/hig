@@ -13,7 +13,7 @@
     "gemini": "yarn storybook-test-build && concurrently 'yarn storybook-test-serve' 'yarn vanilla-test-serve' 'gemini test --reporter html --reporter flat' --kill-others --success first",
     "gemini-update": "yarn storybook-test-build && concurrently 'yarn storybook-test-serve' 'yarn vanilla-test-serve' 'gemini update --reporter html --reporter flat' --kill-others --success first",
     "gemini-ci": "gemini test --reporter html --reporter flat",
-    "lint": "eslint src --ext .js,.jsx",
+    "lint": "eslint src --color --ext .js,.jsx",
     "storybook": "start-storybook -p 9001 -c .storybook/development",
     "storybook-build": "build-storybook -c .storybook/development",
     "storybook-deploy": "build-storybook -c .storybook/development && surge --project storybook-static",

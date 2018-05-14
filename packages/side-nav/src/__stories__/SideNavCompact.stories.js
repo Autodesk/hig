@@ -5,6 +5,7 @@ import { action } from "@storybook/addon-actions";
 import KnobbedThemeProvider from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
 import Icon, { names as iconNames } from "@hig/icon";
 import SideNav, { BelowTopNavCompact } from "../index";
+import infoOptions from "./infoOptions";
 
 const compactSideNav = () => (
   <SideNav
@@ -41,6 +42,7 @@ storiesOf("SideNav/SideNavCompact", module)
   .add(
     "SideNav with compact modules",
     withInfo({
+      ...infoOptions,
       propTables: [SideNav.ModuleCompact],
       propTablesExclude: [KnobbedThemeProvider]
     })(() => <KnobbedThemeProvider>{compactSideNav()}</KnobbedThemeProvider>)
@@ -49,6 +51,7 @@ storiesOf("SideNav/SideNavCompact", module)
   .add(
     "positioned below the TopNav",
     withInfo({
+      ...infoOptions,
       inline: false,
       propTables: [SideNav.ModuleCompact],
       propTablesExclude: [KnobbedThemeProvider]

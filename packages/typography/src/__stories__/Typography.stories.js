@@ -18,10 +18,11 @@ import {
   Sub1,
   Sub2
 } from "../index";
+import infoOptions from "./infoOptions";
 
 storiesOf("Typography", module).add(
   "base component",
-  withInfo()(() => (
+  withInfo(infoOptions)(() => (
     <Typography
       bold={boolean("Bold", false)}
       color={select("Color", _VALID_COLORS, "hig-cool-gray-70")}
@@ -44,7 +45,7 @@ storiesOf("Typography", module).add(
 
     storiesOf("Typography", module).add(
       name,
-      withInfo()(() => (
+      withInfo(infoOptions)(() => (
         <Component
           bold={boolean("Bold", false)}
           color={select("Color", _VALID_COLORS, "hig-cool-gray-70")}

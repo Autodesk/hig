@@ -5,11 +5,13 @@ import { action } from "@storybook/addon-actions";
 import KnobbedThemeProvider from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
 import { Docked, BelowTopNav } from "../index";
 import ExampleSideNav from "./ExampleSideNav";
+import infoOptions from "./infoOptions";
 
 storiesOf("SideNav/containers", module)
   .add(
     "Docked",
     withInfo({
+      ...infoOptions,
       inline: false,
       propTablesExclude: [KnobbedThemeProvider]
     })(() => (
@@ -27,6 +29,7 @@ storiesOf("SideNav/containers", module)
   .add(
     "BelowTopNav",
     withInfo({
+      ...infoOptions,
       inline: false,
       propTablesExclude: [KnobbedThemeProvider]
     })(() => (

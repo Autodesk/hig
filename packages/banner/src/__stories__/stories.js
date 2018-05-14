@@ -1,7 +1,7 @@
 import React from "react";
 
 import { text } from "@storybook/addon-knobs/react";
-import { Button } from "hig-react";
+import Button from "@hig/button";
 import { translate as t } from "@hig/storybook/utils";
 
 import Banner from "../Banner";

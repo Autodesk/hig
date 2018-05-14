@@ -6,6 +6,7 @@ import { withInfo } from "@storybook/addon-info";
 import { TextLink } from "hig-react";
 
 import { Notification } from "../index";
+import infoOptions from "./infoOptions";
 
 const sampleNotification = (
   <div>
@@ -31,7 +32,7 @@ const sampleNotification = (
 storiesOf("NotificationsFlyout/Notification", module)
   .add(
     "default",
-    withInfo()(() => (
+    withInfo(infoOptions)(() => (
       <Notification
         id={1}
         unread={boolean("Unread", false)}
@@ -44,7 +45,7 @@ storiesOf("NotificationsFlyout/Notification", module)
   )
   .add(
     "Featured Notification",
-    withInfo()(() => (
+    withInfo(infoOptions)(() => (
       <Notification
         id={1}
         onLinkClick={action("link clicked")}

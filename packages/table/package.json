@@ -33,7 +33,7 @@
   },
   "scripts": {
     "build": "hig-scripts-build",
-    "lint": "eslint src --ext .js,.jsx"
+    "lint": "eslint src --color --ext .js,.jsx"
   },
   "eslintConfig": {
     "extends": "@hig",

@@ -7,12 +7,11 @@ import KnobbedThemeProvider from "@hig/storybook/storybook-support/decorators/Kn
 import Icon, { names as iconNames } from "@hig/icon";
 
 import SideNav from "../index";
+import infoOptions from "./infoOptions";
 
 storiesOf("SideNav/SideNav.CollapseButton", module).add(
   "default",
-  withInfo({
-    propTablesExclude: [KnobbedThemeProvider]
-  })(() => (
+  withInfo(infoOptions)(() => (
     <KnobbedThemeProvider>
       <SideNav.CollapseButton
         onClick={action("onClick")}
@@ -24,9 +23,7 @@ storiesOf("SideNav/SideNav.CollapseButton", module).add(
 
 storiesOf("SideNav/SideNav.Link", module).add(
   "default",
-  withInfo({
-    propTablesExclude: [KnobbedThemeProvider]
-  })(() => (
+  withInfo(infoOptions)(() => (
     <KnobbedThemeProvider>
       <SideNav.Link
         onClick={action("onClick")}
@@ -41,9 +38,7 @@ storiesOf("SideNav/SideNav.Link", module).add(
 
 storiesOf("SideNav/SideNav.Submodule", module).add(
   "default",
-  withInfo({
-    propTablesExclude: [KnobbedThemeProvider]
-  })(() => (
+  withInfo(infoOptions)(() => (
     <KnobbedThemeProvider>
       <SideNav.Submodule
         active={boolean("Active", true)}
@@ -60,9 +55,7 @@ storiesOf("SideNav/SideNav.Submodule", module).add(
 storiesOf("SideNav/SideNav.Module", module)
   .add(
     "with icon",
-    withInfo({
-      propTablesExclude: [KnobbedThemeProvider]
-    })(() => (
+    withInfo(infoOptions)(() => (
       <KnobbedThemeProvider>
         <SideNav.Module
           active={boolean("Active", true)}
@@ -81,9 +74,7 @@ storiesOf("SideNav/SideNav.Module", module)
   )
   .add(
     "without icon",
-    withInfo({
-      propTablesExclude: [KnobbedThemeProvider]
-    })(() => (
+    withInfo(infoOptions)(() => (
       <KnobbedThemeProvider>
         <SideNav.Module
           active={boolean("Active", true)}
@@ -101,9 +92,7 @@ storiesOf("SideNav/SideNav.Module", module)
   )
   .add(
     "with submodules",
-    withInfo({
-      propTablesExclude: [KnobbedThemeProvider]
-    })(() => (
+    withInfo(infoOptions)(() => (
       <KnobbedThemeProvider>
         <SideNav.Module
           active={boolean("Active", true)}
@@ -125,9 +114,7 @@ storiesOf("SideNav/SideNav.Module", module)
 
 storiesOf("SideNav/SideNav.ModuleCompact", module).add(
   "default",
-  withInfo({
-    propTablesExclude: [KnobbedThemeProvider]
-  })(() => (
+  withInfo(infoOptions)(() => (
     <KnobbedThemeProvider>
       <SideNav.ModuleCompact
         active={boolean("Active", true)}
@@ -144,8 +131,8 @@ storiesOf("SideNav/SideNav.Group", module)
   .add(
     "with icons",
     withInfo({
-      source: true,
-      propTablesExclude: [KnobbedThemeProvider]
+      ...infoOptions,
+      source: true
     })(() => (
       <KnobbedThemeProvider>
         <SideNav.Group>
@@ -179,8 +166,8 @@ storiesOf("SideNav/SideNav.Group", module)
   .add(
     "without icons",
     withInfo({
-      source: true,
-      propTablesExclude: [KnobbedThemeProvider]
+      ...infoOptions,
+      source: true
     })(() => (
       <SideNav.Group>
         <SideNav.Module title="Module 1" activeChildren>
@@ -202,9 +189,7 @@ storiesOf("SideNav/SideNav.Group", module)
 
 storiesOf("SideNav/SideNav.Search", module).add(
   "default",
-  withInfo({
-    propTablesExclude: [KnobbedThemeProvider]
-  })(() => (
+  withInfo(infoOptions)(() => (
     <KnobbedThemeProvider>
       <SideNav.Search
         onBlur={action("onBlur")}

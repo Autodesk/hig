@@ -1,8 +1,6 @@
 # Avatar
 
-Avatars are [...].
-
-<!-- TODO: Write description -->
+Avatars are a visual representation of a customer's identity. These may be small thumbnails as part of a menu or more prominent, standalone elements on account and management views.
 
 Initials are dynamically generated from the provided name and always rendered. This allows the initials to serve as a placeholder while the image is loading.
 
@@ -19,10 +17,15 @@ yarn add @hig/avatar
 ### Import the component and CSS
 
 ```js
-import Avatar from '@hig/avatar';
+import Avatar, { sizes } from '@hig/avatar';
 import '@hig/avatar/build/index.css';
 ```
 
 ## Basic usage
 
-<!-- TODO: Write usage description -->
+```jsx
+<Avatar
+  name="David Gonzales"
+  size={sizes.LARGE_36}
+/>
+```

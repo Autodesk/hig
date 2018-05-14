@@ -19,16 +19,17 @@
   },
   "devDependencies": {
     "@hig/babel-preset": "0.1.0",
+    "@hig/eslint-config": "0.1.0",
     "@hig/scripts": "^0.1.0",
     "@hig/styles": "^0.1.0-alpha"
   },
   "peerDependencies": {
     "prop-types": "^15.6.1",
-    "react": "^15.4.1"
+    "react": "^15.4.1 || ^16.3.2"
   },
   "scripts": {
     "build": "hig-scripts-build",
-    "lint": "eslint src --ext .js,.jsx"
+    "lint": "eslint src --color --ext .js,.jsx"
   },
   "eslintConfig": {
     "extends": "@hig"
