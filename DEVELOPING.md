@@ -6,6 +6,27 @@ We use Yarn workspaces and Lerna to manage interdependencies between packages. T
 yarn
 ```
 
+# Testing
+
+## Unit Tests
+
+Currently, to run Jest tests, run this from the project root:
+
+```bash
+cd packages/storybook
+yarn test
+```
+
+## Visual Regression Tests
+
+We use Gemini to ensure that changes do not break the visual presentation of components. We use Storybook to render an example of a component, then save a screenshot of the example to the repository.
+
+```bash
+cd packages/storybook
+yarn gemini-update  # Update snapshots
+yarn gemini         # Check components against committed snapshots
+```
+
 # Deployment
 
 1. Switch to `development` branch.
