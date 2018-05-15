@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import cx from "classnames";
 import { ThemeContext } from "@hig/themes";
 
+import targets from "./targets";
 import { types, AVAILABLE_TYPES } from "./types";
 import classNames from "./classNames";
 import "./text-link.scss";
@@ -20,6 +21,8 @@ export default class TextLink extends Component {
     link: PropTypes.string.isRequired,
     /** Called when link is clicked */
     onClick: PropTypes.func,
+    /** Specify the anchor tag's target */
+    target: PropTypes.oneOf(targets),
     /** Indicates the style of link */
     type: PropTypes.oneOf(AVAILABLE_TYPES)
   };
@@ -29,14 +32,19 @@ export default class TextLink extends Component {
   };
 
   render() {
-    const { children, link, onClick, type } = this.props;
+    const { children, link, onClick, target, type } = this.props;
     const linkClasses = themeClass =>
       cx(themeClass, classNames.wrapper, wrapperModifiersByType[type]);
 
     return (
       <ThemeContext.Consumer>
         {({ themeClass }) => (
-          <a href={link} onClick={onClick} className={linkClasses(themeClass)}>
+          <a
+            href={link}
+            onClick={onClick}
+            className={linkClasses(themeClass)}
+            target={target}
+          >
             {children}
           </a>
         )}

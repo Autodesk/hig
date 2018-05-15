@@ -35,4 +35,16 @@ describe("TextLink", () => {
       ).toHaveClassName("hig__text-link--primary");
     });
   });
+
+  describe("target", () => {
+    it("adds a target attribute", () => {
+      expect(
+        mount(
+          <TextLink link="https://www.autodesk.com/" target="_parent">
+            Link
+          </TextLink>
+        )
+      ).toHaveProp("target", "_parent");
+    });
+  });
 });
