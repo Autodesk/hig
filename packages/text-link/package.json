@@ -15,7 +15,6 @@
   ],
   "dependencies": {
     "classnames": "^2.2.5",
-    "hig-react": "^0.29.0-alpha",
     "react-lifecycles-compat": "^3.0.2"
   },
   "peerDependencies": {

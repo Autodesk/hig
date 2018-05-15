@@ -1,1 +1,34 @@
-@import "~hig-react/lib/hig-react.css";
+@import "~@hig/styles/mixins/colors.scss";
+@import "~@hig/styles/mixins/typography.scss";
+@import "~@hig/styles/tokens/colors.scss";
+
+.hig__text-link {
+  @include typography-base;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.hig__text-link--primary {
+  color: color(hig-blue-50);
+  &:hover {
+    color: color(hig-blue-60);
+  }
+  &:active,
+  &:focus {
+    outline: none;
+    color: color(hig-blue-70);
+  }
+}
+
+.hig__text-link--secondary {
+  color: transparentize($typography-base-color, .5);
+
+  &:hover {
+    color: color(hig-blue-50);
+  }
+  &:active,
+  &:focus {
+    outline: none;
+    color: color(hig-blue-70);
+  }
+}
