@@ -10,7 +10,8 @@
 
 .hig__side-nav-container--docked {
   @include reset;
-  @include vendor-prefix('transition', side-nav-transition('left'));
+  @include vendor-prefix("transition", side-nav-transition("left"));
+  @include shadow("inner-right");
 
   position: fixed;
   top: 0;
@@ -18,10 +19,10 @@
   bottom: 0;
   height: 100vh;
   width: $side-nav-max-width;
+  padding-right: 4px;
   z-index: 2;
 
   overflow-x: hidden;
-  @include shadow("inner-right");
 }
 
 .hig--light-theme {
