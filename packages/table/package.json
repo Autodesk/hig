@@ -22,7 +22,6 @@
     "react-virtualized": "^9.19.1"
   },
   "peerDependencies": {
-    "prop-types": "^15.5.10",
     "react": "^15.4.1"
   },
   "devDependencies": {
@@ -30,7 +29,8 @@
     "@hig/eslint-config": "^0.1.0",
     "@hig/scripts": "^0.1.0",
     "@hig/styles": "^0.1.1",
-    "delay": "^2.0.0"
+    "delay": "^2.0.0",
+    "prop-types": "^15.6.1"
   },
   "scripts": {
     "build": "hig-scripts-build",
