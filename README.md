@@ -2,22 +2,58 @@
 
 HIG is Autodesk's unified design system, so we can build better products faster.
 
-## Design Patterns
+## Getting started
 
-HIG identifies 4 levels of detail in a UI:
-- `Basics`: These are the most basic building blocks of the design: color, typography, icons, buttons, form elements, etc.
-- `Components`: These are distinct pieces of the product experience, things like dialog boxes, navigation bars, toolbars and inspectors.
-- `Page Types`: Think of these as specific types of views or screens within our products. This includes canvas views, list or grid indexes, dashboards and item details.
-- `Mini-Experiences`: These are collections of components or pages that create a small, discrete experience within our products: sign-in, trial, sharing, in-product learning.
+Add a component to your app:
+```jsx
+yarn add @hig/button
+```
 
-## Implementations
+Import and render the component:
+```jsx
+import Button from '@hig/button';
+
+function MyComponent() {
+  return <Button title="Hello, world!" />
+}
+```
+
+## Basics
+- Typography - typography and rich text
+- Layout - spacer and grid
+- Icons
+
+## Components
 
 Each HIG pattern is implemented as a set of React components. Each pattern is published to NPM individually under the @hig namespace, to allow you to import only what you'll use.
 
-This repository also holds 3 deprecated packages:
-- `hig-interface`: [packages/interface](packages/interface)
-- `hig-vanilla`: [packages/vanilla](packages/vanilla)
-- `hig-react`: [packages/react](packages/react)
+- [`<Avatar>`](./packages/avatar/README.md) - A visual representation of a customer's identity
+- [`<Banner>`](./packages/banner/README.md) - An alert that requires a user action
+- [`<Button>`](./packages/button/README.md) - Trigger actions or changes
+- [`<Checkbox>`](./packages/checkbox/README.md) - A control to select from non-exclusive options
+- [`<Dropdown>`](./packages/dropdown/README.md) - A menu to select one or many from a list
+- [`<Flyout>`](./packages/flyout/README.md) - A lightweight popup container
+- [`<Icon>`](./packages/icon/README.md) - Represents a concept in graphical form
+- [`<IconButton>`](./packages/icon-button/README.md) - Action buttons that include an icon only
+- [`<Modal>`](./packages/modal/README.md) - An overlay that focuses the customer's attention
+- [`<ProfileFlyout>`](./packages/profile-flyout/README.md) - A flyout containing customer's name, email, and account info
+- [`<ProgressBar>`](./packages/progress-bar/README.md) - An indication of content loading, presented horizontally
+- [`<ProgressRing>`](./packages/progress-ring/README.md) - An indication of content loading, presented circularly
+- [`<ProjectAccountSwitcher>`](./packages/project-account-switcher/README.md) - Switches the context to different projects or accounts
+- [`<RadioButton>`](./packages/radio-button/README.md) - A control to select one exclusively from a list
+- [`<RichText>`](./packages/rich-text/README.md) - Applies the HIG typography styles to whatever is passed to it
+- [`<SideNav>`](./packages/side-nav/README.md) - Provides high-level navigation
+- [`<SkeletonItem>`](./packages/skeleton-item/README.md) - A placeholder for loading content
+- [`<Slider>`](./packages/slider/README.md) - A control for selecting a single numeric value from a range
+- [`<Table>`](./packages/table/README.md) - Represents tabular data in columns and rows
+- [`<Tabs>`](./packages/tabs/README.md) - Keeps related content in a single container
+- [`<TextArea>`](./packages/text-area/README.md) - A control to provide a large amount of freeform text
+- [`<TextField>`](./packages/text-field/README.md) - A control to provide a small amount of freeform text
+- [`<TextLink>`](./packages/text-link/README.md) - Directs visitors to another location
+- [`<Timestamp>`](./packages/timestamp/README.md) - Presents a date with humanized phrasing
+- [`<Tooltip>`](./packages/tooltip/README.md) - Provides context in a small popup container
+- [`<TopNav>`](./packages/top-nav/README.md) - Navigation across the top of the screen
+- [`<Typography>`](./packages/typography/README.md) - A set of components in many typographical variations
 
 ## Contributing
 

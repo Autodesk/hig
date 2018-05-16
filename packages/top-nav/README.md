@@ -1,6 +1,6 @@
 # TopNav <sup><sub>(Top Navigation)</sub></sup>
 
-The top navigation component is [...]. <!-- TODO: Finish writing.  -->
+The primary navigation across the top of the screen. This piece contains the product name/icon, search bar, project/account switcher, and avatar.
 
 Read more about when and how to use the TopNav component [on the internal wiki](https://wiki.autodesk.com/x/8cvzEw).
 
