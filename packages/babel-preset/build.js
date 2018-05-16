@@ -21,6 +21,6 @@ module.exports = function createBuildPreset() {
       "stage-2",
       "react"
     ],
-    plugins: ["react-docgen"]
+    plugins: ["external-helpers", "react-docgen"]
   };
 };
