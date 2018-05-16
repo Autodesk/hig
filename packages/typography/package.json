@@ -14,6 +14,9 @@
   "files": [
     "build/*"
   ],
+  "dependencies": {
+    "classnames": "^2.2.5"
+  },
   "devDependencies": {
     "@hig/babel-preset": "0.1.0",
     "@hig/eslint-config": "0.1.0",
