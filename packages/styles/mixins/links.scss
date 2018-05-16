@@ -1,0 +1,21 @@
+@import "./typography.scss";
+
+@mixin base-link {
+  @include typography-base;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@mixin primary-link {
+  color: color(hig-blue-50);
+
+  &:hover {
+    color: color(hig-blue-60);
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    color: color(hig-blue-70);
+  }
+}

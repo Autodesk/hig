@@ -1,7 +1,7 @@
 {
-  "name": "@hig/text-link",
+  "name": "@hig/text-area",
   "version": "0.1.0-alpha",
-  "description": "HIG Text Link",
+  "description": "HIG Text Area",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
   "publishConfig": {
@@ -15,7 +15,7 @@
   ],
   "dependencies": {
     "classnames": "^2.2.5",
-    "react-lifecycles-compat": "^3.0.2"
+    "hig-react": "^0.29.0-alpha"
   },
   "peerDependencies": {
     "prop-types": "^15.5.10",

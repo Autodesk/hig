@@ -20,8 +20,7 @@ import '@hig/text-link/build/index.css';
 ## Basic usage
 
 ```jsx
-<TextLink
-  href="https://github.com/Autodesk/hig"
-  text="This is a primary text link"
-/>
+<TextLink link="https://github.com/Autodesk/hig">
+  This is a primary text link
+</TextLink>
 ```
