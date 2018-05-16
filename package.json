@@ -11,9 +11,11 @@
     "create-dependency-hash": "cat yarn.lock > .dependency-hash && ls ./packages >> .dependency-hash",
     "lint": "lerna run lint --stream",
     "publish-canary": "lerna publish --canary --yes --exact",
-    "update-packages": "lerna publish --skip-npm"
+    "update-packages": "lerna publish --skip-npm",
+    "prepush": "node scripts/update-circleci-cache-config.js && bash scripts/commit-circleci-cache-update.sh"
   },
   "devDependencies": {
+    "husky": "^0.14.3",
     "js-yaml": "^3.11.0",
     "lerna": "^2.9.0",
     "lodash.clonedeep": "^4.5.0",
