@@ -67,15 +67,3 @@
     }
   }
 }
-
-@each $breakpoint_name, $breakpoint_value in $breakpoints {
-  :export {
-    #{$breakpoint_name}: $breakpoint_value;
-  }
-
-  @include breakpoint($breakpoint_name) {
-    .hig__responsive__#{$breakpoint_name}--hide {
-      display: none;
-    }
-  }
-}

@@ -11,6 +11,32 @@
   },
   "version": "0.1.0-alpha",
   "files": [
-    "*"
-  ]
+    "build/*",
+    "mixins/*",
+    "tokens/*"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@hig/babel-preset": "0.1.0",
+    "@hig/eslint-config": "0.1.0",
+    "@hig/scripts": "^0.1.0",
+    "mkdirp": "^0.5.1",
+    "node-sass": "^4.9.0"
+  },
+  "scripts": {
+    "build": "node ./scripts/build.js",
+    "lint": "eslint src --color --ext .js,.jsx"
+  },
+  "eslintConfig": {
+    "extends": "@hig"
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "presets": [
+          "@hig/babel-preset/test"
+        ]
+      }
+    }
+  }
 }
