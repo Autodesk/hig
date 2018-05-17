@@ -1,15 +1,15 @@
 {
-  "private": true,
   "name": "@hig/styles",
+  "version": "0.1.0",
   "description": "HIG Styles",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
-  "homepage": "https://hig.autodesk.com",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Autodesk/hig"
+  "publishConfig": {
+    "access": "public"
   },
-  "version": "0.1.0-alpha",
+  "main": "build/index.js",
+  "module": "build/index.es.js",
+  "style": "build/index.css",
   "files": [
     "build/*",
     "mixins/*",
