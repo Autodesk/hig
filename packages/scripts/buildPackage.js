@@ -34,17 +34,17 @@ const inputOptions = {
   external: createExternalDeterminer(externalDependencies),
   plugins: [
     nodeResolve(),
+    postcss({
+      extract: true,
+      output: cssOutputFile,
+      plugins: [postcssFunctions, postcssImport]
+    }),
     babel({
       babelrc: false,
       ...createBuildPreset()
     }),
     commonjs(),
-    json(),
-    postcss({
-      extract: true,
-      output: cssOutputFile,
-      plugins: [postcssFunctions, postcssImport]
-    })
+    json()
   ]
 };
 
