@@ -6,7 +6,9 @@ import IconButton from "./IconButton";
 
 describe("IconButton", () => {
   it("renders correctly", () => {
-    const tree = renderer.create(<IconButton name={names.SETTINGS} />).toJSON();
+    const tree = renderer
+      .create(<IconButton title="Settings" name={names.SETTINGS} />)
+      .toJSON();
 
     expect(tree).toMatchSnapshot();
   });
@@ -26,7 +28,9 @@ describe("IconButton", () => {
   });
 
   it("renders correctly with the `icon` prop", () => {
-    const tree = renderer.create(<IconButton icon={names.SETTINGS} />).toJSON();
+    const tree = renderer
+      .create(<IconButton title="Settings" icon={names.SETTINGS} />)
+      .toJSON();
 
     expect(tree).toMatchSnapshot();
   });
