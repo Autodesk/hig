@@ -62,12 +62,8 @@ const cjsOutputOptions = {
 module.exports = async function buildPackage() {
   console.log(`Bundling ${packageName} v${packageVersion}.`);
 
-  try {
-    const bundle = await rollup.rollup(inputOptions);
+  const bundle = await rollup.rollup(inputOptions);
 
-    bundle.write(esModulesOutputOptions);
-    bundle.write(cjsOutputOptions);
-  } catch (e) {
-    console.log(e);
-  }
+  bundle.write(esModulesOutputOptions);
+  bundle.write(cjsOutputOptions);
 };
