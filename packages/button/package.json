@@ -10,7 +10,9 @@
   "main": "build/index.js",
   "module": "build/index.es.js",
   "style": "build/index.css",
-  "files": ["build/*"],
+  "files": [
+    "build/*"
+  ],
   "devDependencies": {
     "@hig/babel-preset": "0.1.0",
     "@hig/eslint-config": "0.1.0",
@@ -20,11 +22,11 @@
   },
   "peerDependencies": {
     "prop-types": "^15.5.10",
-    "react": "^15.4.1"
+    "react": "^15.4.1 || ^16.3.2"
   },
   "scripts": {
     "build": "hig-scripts-build",
-    "lint": "eslint src --ext .js,.jsx"
+    "lint": "eslint src --color --ext .js,.jsx"
   },
   "dependencies": {
     "@hig/themes": "^0.1.0-alpha"

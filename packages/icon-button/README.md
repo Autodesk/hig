@@ -1,4 +1,4 @@
-# IconButton
+# Icon Button
 
 Action buttons that include an icon only, with no background. Useful for compact displays or toolbars with a number of related controls.
 

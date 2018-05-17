@@ -1,0 +1,45 @@
+{
+  "name": "@hig/profile-flyout",
+  "version": "0.1.0-alpha",
+  "description": "HIG Profile Flyout",
+  "author": "Autodesk Inc.",
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "build/index.js",
+  "module": "build/index.es.js",
+  "style": "build/index.css",
+  "files": [
+    "build/*"
+  ],
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "hig-react": "^0.29.0-alpha",
+    "react-lifecycles-compat": "^3.0.2"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.5.10",
+    "react": "^15.4.1 || ^16.3.2"
+  },
+  "devDependencies": {
+    "@hig/babel-preset": "0.1.0",
+    "@hig/eslint-config": "0.1.0",
+    "@hig/scripts": "^0.1.0",
+    "@hig/styles": "^0.1.0-alpha"
+  },
+  "scripts": {
+    "build": "hig-scripts-build",
+    "lint": "eslint src --color --ext .js,.jsx"
+  },
+  "eslintConfig": {
+    "extends": "@hig"
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "presets": ["@hig/babel-preset/test"]
+      }
+    }
+  }
+}

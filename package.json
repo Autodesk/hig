@@ -7,9 +7,9 @@
   "homepage": "https://hig.autodesk.com",
   "version": "1.0.1",
   "scripts": {
-    "build": "lerna run build",
+    "build": "lerna run build --stream",
     "create-dependency-hash": "cat yarn.lock > .dependency-hash && ls ./packages >> .dependency-hash",
-    "lint": "lerna run lint",
+    "lint": "lerna run lint --stream",
     "publish-canary": "lerna publish --canary --yes --exact",
     "update-packages": "lerna publish --skip-npm"
   },

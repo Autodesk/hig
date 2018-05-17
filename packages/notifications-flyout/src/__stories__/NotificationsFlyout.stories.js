@@ -8,6 +8,7 @@ import { Notifications, TextLink } from "hig-react";
 import { Notification } from "../index";
 import sampleNotifications from "./notificationFixtures";
 import NotificationsFlyoutInteraction from "./NotificationsFlyoutInteraction";
+import infoOptions from "./infoOptions";
 
 function featuredNotification() {
   return (
@@ -33,7 +34,10 @@ function featuredNotification() {
 storiesOf("NotificationsFlyout", module)
   .add(
     "V1",
-    withInfo()(() => (
+    withInfo({
+      ...infoOptions,
+      inline: false
+    })(() => (
       <div style={{ fontFamily: "ArtifaktElement" }}>
         {/* @TODO: Remove wrapper when Notifications is ported */}
         <Notifications
@@ -65,7 +69,7 @@ storiesOf("NotificationsFlyout", module)
   )
   .add(
     "interactive V1",
-    withInfo()(() => (
+    withInfo(infoOptions)(() => (
       <div style={{ fontFamily: "ArtifaktElement" }}>
         {/* @TODO: Remove wrapper when Notifications is ported */}
         <NotificationsFlyoutInteraction />

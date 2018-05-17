@@ -1,5 +1,7 @@
 # hig-react
 
+# DEPRECATION WARNING: this package is no longer getting updates. Use the component packages published in the @hig namespace, and browse their source at [`packages`](..).
+
 React components for the HIG
 
 ## Consume

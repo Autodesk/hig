@@ -1,5 +1,5 @@
 import React from "react";
-import { RichText } from "hig-react";
+import RichText from "@hig/rich-text";
 
 import Banner from "../Banner";
 import readme from "../../README.md";

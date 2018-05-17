@@ -11,11 +11,12 @@ import Button, {
   availableTypes,
   availableWidths
 } from "../index";
+import infoOptions from "./infoOptions";
 
 storiesOf("Button", module)
   .add(
     "default",
-    withInfo()(() => (
+    withInfo(infoOptions)(() => (
       <Button
         disabled={boolean("Disabled")}
         link={text("Link", "https://www.autodesk.com")}
@@ -33,7 +34,7 @@ storiesOf("Button", module)
   )
   .add(
     "with icon",
-    withInfo()(() => (
+    withInfo(infoOptions)(() => (
       <Button
         icon={<Icon name={iconNames.SETTINGS} />}
         disabled={boolean("Disabled")}
