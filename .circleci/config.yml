@@ -44,6 +44,7 @@ jobs:
             - packages/skeleton-item/node_modules
             - packages/slider/node_modules
             - packages/storybook/node_modules
+            - packages/styles/node_modules
             - packages/table/node_modules
             - packages/tabs/node_modules
             - packages/text-field/node_modules
@@ -89,6 +90,7 @@ jobs:
             - packages/side-nav/build
             - packages/skeleton-item/build
             - packages/slider/build
+            - packages/styles/build
             - packages/table/build
             - packages/tabs/build
             - packages/text-field/build
