@@ -13,6 +13,15 @@
   "files": [
     "build/*"
   ],
+  "dependencies": {
+    "@hig/icon": "^0.1.0-alpha",
+    "@hig/icon-button": "^0.1.0-alpha",
+    "@hig/icons": "^0.1.0-alpha",
+    "@hig/themes": "^0.1.0-alpha",
+    "@hig/typography": "^0.1.0-alpha",
+    "classnames": "^2.2.5",
+    "react-lifecycles-compat": "^2.0.0"
+  },
   "devDependencies": {
     "@hig/babel-preset": "0.1.0",
     "@hig/button": "^0.1.0-alpha",
@@ -28,14 +37,6 @@
   "scripts": {
     "build": "hig-scripts-build",
     "lint": "eslint src --color --ext .js,.jsx"
-  },
-  "dependencies": {
-    "@hig/icon": "^0.1.0-alpha",
-    "@hig/icon-button": "^0.1.0-alpha",
-    "@hig/icons": "^0.1.0-alpha",
-    "@hig/themes": "^0.1.0-alpha",
-    "@hig/typography": "^0.1.0-alpha",
-    "react-lifecycles-compat": "^2.0.0"
   },
   "eslintConfig": { "extends": "@hig" },
   "babel": {

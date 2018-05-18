@@ -1,53 +1,72 @@
 import React from "react";
 import PropTypes from "prop-types";
-import cn from "classnames";
+import cx from "classnames";
+import { ThemeContext } from "@hig/themes";
 
 /**
  * Default expand icon for the Table
  */
 class DefaultExpandIcon extends React.PureComponent {
-  constructor(props) {
-    super(props);
+  /**
+   * @param {string} themeClass
+   */
+  getWrapperProps(themeClass) {
+    const { expandable, expanded, indentSize, depth, onExpand } = this.props;
+    const isInteractive = expandable && onExpand;
+    const role = isInteractive ? "button" : "presentation";
+    const tabIndex = isInteractive ? 0 : undefined;
+    const onClick = isInteractive ? this.handleClick : null;
+    const style = { marginLeft: depth * indentSize };
+    const className = cx(
+      "hig__table__expand-icon",
+      { "hig__table__expand-icon--expanded": expanded },
+      themeClass
+    );
 
-    this._handleClick = this._handleClick.bind(this);
+    return { className, role, tabIndex, onClick, style };
+  }
+
+  /**
+   * @param {MouseEvent} event
+   */
+  handleClick = event => {
+    const { onExpand, expanded } = this.props;
+
+    event.stopPropagation();
+
+    if (onExpand) onExpand(!expanded);
+  };
+
+  /**
+   * @returns {boolean}
+   * @todo Why is `indentSize` checked here?
+   */
+  isVisible() {
+    const { expandable, indentSize } = this.props;
+
+    return !expandable && indentSize === 0;
+  }
+
+  /**
+   * @returns {string|null}
+   */
+  renderIcon() {
+    const { expandable, expanded } = this.props;
+    const expandableIcon = expanded ? "-" : "+";
+
+    return expandable ? expandableIcon : null;
   }
 
   render() {
-    const { expandable, expanded, indentSize, depth, onExpand } = this.props;
-    if (!expandable && indentSize === 0) return null;
+    if (!this.isVisible()) return null;
 
-    const cls = cn("hig__table__expand-icon", {
-      "hig__table__expand-icon--expanded": expanded
-    });
-    const a11yProps = {
-      role: "button",
-      tabIndex: 0
-    };
     return (
-      <div
-        {...expandable && onExpand && a11yProps}
-        className={cls}
-        onClick={expandable && onExpand ? this._handleClick : null}
-        style={{
-          display: "inline-block",
-          outline: "none",
-          width: "16px",
-          height: "16px",
-          lineHeight: "16px",
-          fontSize: "16px",
-          textAlign: "center",
-          marginLeft: depth * indentSize
-        }}
-      >
-        {expandable && (expanded ? "-" : "+")}
-      </div>
+      <ThemeContext.Consumer>
+        {({ themeClass }) => (
+          <div {...this.getWrapperProps(themeClass)}>{this.renderIcon()}</div>
+        )}
+      </ThemeContext.Consumer>
     );
-  }
-
-  _handleClick(e) {
-    e.stopPropagation();
-    const { onExpand, expanded } = this.props;
-    onExpand(!expanded);
   }
 }
 
