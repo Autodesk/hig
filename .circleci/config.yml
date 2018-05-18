@@ -1,35 +1,35 @@
-defaults: &defaults
-  docker:
-    - image: circleci/node:8.10-stretch
-
+defaults:
+  docker: &ref_0
+    - image: 'circleci/node:8.10-stretch'
 version: 4
 jobs:
   bootstrap:
-    <<: *defaults
+    docker: *ref_0
     steps:
       - checkout
       - run:
           name: Create dependency hash
           command: yarn run create-dependency-hash
       - restore_cache:
-          key: hig-dependencies-{{ checksum ".dependency-hash" }}
+          key: 'hig-dependencies-{{ checksum ".dependency-hash" }}'
       - run:
           name: Install Dependencies
           command: yarn
       - save_cache:
-          key: hig-dependencies-{{ checksum ".dependency-hash" }}
+          key: 'hig-dependencies-{{ checksum ".dependency-hash" }}'
           paths:
             - .dependency-hash
             - node_modules
             - packages/avatar/node_modules
+            - packages/babel-preset/node_modules
             - packages/banner/node_modules
             - packages/button/node_modules
             - packages/checkbox/node_modules
             - packages/dropdown/node_modules
             - packages/eslint-config/node_modules
             - packages/flyout/node_modules
-            - packages/icon/node_modules
             - packages/icon-button/node_modules
+            - packages/icon/node_modules
             - packages/icons/node_modules
             - packages/modal/node_modules
             - packages/notifications-flyout/node_modules
@@ -40,12 +40,14 @@ jobs:
             - packages/radio-button/node_modules
             - packages/react/node_modules
             - packages/rich-text/node_modules
+            - packages/scripts/node_modules
             - packages/side-nav/node_modules
             - packages/skeleton-item/node_modules
             - packages/slider/node_modules
             - packages/storybook/node_modules
             - packages/table/node_modules
             - packages/tabs/node_modules
+            - packages/text-area/node_modules
             - packages/text-field/node_modules
             - packages/text-link/node_modules
             - packages/themes/node_modules
@@ -55,19 +57,19 @@ jobs:
             - packages/typography/node_modules
             - packages/vanilla/node_modules
   package-build:
-    <<: *defaults
+    docker: *ref_0
     steps:
       - checkout
       - run:
           name: Create dependency hash
           command: yarn run create-dependency-hash
       - restore_cache:
-          key: hig-dependencies-{{ checksum ".dependency-hash" }}
+          key: 'hig-dependencies-{{ checksum ".dependency-hash" }}'
       - run:
           name: Build all packages
           command: yarn build
       - save_cache:
-          key: package-build-{{ .Revision }}
+          key: 'package-build-{{ .Revision }}'
           paths:
             - packages/avatar/build
             - packages/banner/build
@@ -75,8 +77,8 @@ jobs:
             - packages/checkbox/build
             - packages/dropdown/build
             - packages/flyout/build
-            - packages/icon/build
             - packages/icon-button/build
+            - packages/icon/build
             - packages/icons/build
             - packages/modal/build
             - packages/notifications-flyout/build
@@ -85,12 +87,14 @@ jobs:
             - packages/progress-ring/build
             - packages/project-account-switcher/build
             - packages/radio-button/build
+            - packages/react/lib
             - packages/rich-text/build
             - packages/side-nav/build
             - packages/skeleton-item/build
             - packages/slider/build
             - packages/table/build
             - packages/tabs/build
+            - packages/text-area/build
             - packages/text-field/build
             - packages/text-link/build
             - packages/themes/build
@@ -98,19 +102,18 @@ jobs:
             - packages/tooltip/build
             - packages/top-nav/build
             - packages/typography/build
-            - packages/react/lib
             - packages/vanilla/lib
   react-test:
-    <<: *defaults
+    docker: *ref_0
     steps:
       - checkout
       - run:
           name: Create dependency hash
           command: yarn run create-dependency-hash
       - restore_cache:
-          key: hig-dependencies-{{ checksum ".dependency-hash" }}
+          key: 'hig-dependencies-{{ checksum ".dependency-hash" }}'
       - restore_cache:
-          key: package-build-{{ .Revision }}
+          key: 'package-build-{{ .Revision }}'
       - run:
           name: Lint (React)
           command: yarn lint
@@ -121,16 +124,16 @@ jobs:
       - store_artifacts:
           path: packages/storybook/coverage
   visual-test:
-    <<: *defaults
+    docker: *ref_0
     steps:
       - checkout
       - run:
           name: Create dependency hash
           command: yarn run create-dependency-hash
       - restore_cache:
-          key: hig-dependencies-{{ checksum ".dependency-hash" }}
+          key: 'hig-dependencies-{{ checksum ".dependency-hash" }}'
       - restore_cache:
-          key: package-build-{{ .Revision }}
+          key: 'package-build-{{ .Revision }}'
       - run:
           name: Build Test Storybook Server
           command: yarn storybook-test-build
@@ -152,66 +155,66 @@ jobs:
       - store_artifacts:
           path: packages/storybook/gemini-report
   playground-deploy:
-    <<: *defaults
+    docker: *ref_0
     steps:
       - checkout
       - run:
           name: Create dependency hash
           command: yarn run create-dependency-hash
       - restore_cache:
-          key: hig-dependencies-{{ checksum ".dependency-hash" }}
+          key: 'hig-dependencies-{{ checksum ".dependency-hash" }}'
       - restore_cache:
-          key: package-build-{{ .Revision }}
+          key: 'package-build-{{ .Revision }}'
       - run:
           name: Deploy React playground website
           command: yarn deploy-playground $PLAYGROUND_DOMAIN
           working_directory: packages/react
   canary-packages-deploy:
-    <<: *defaults
+    docker: *ref_0
     steps:
       - checkout
       - run:
           name: Create dependency hash
           command: yarn run create-dependency-hash
       - restore_cache:
-          key: hig-dependencies-{{ checksum ".dependency-hash" }}
+          key: 'hig-dependencies-{{ checksum ".dependency-hash" }}'
       - restore_cache:
-          key: package-build-{{ .Revision }}
+          key: 'package-build-{{ .Revision }}'
       - run:
           name: Add auth token
-          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+          command: 'echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc'
       - run:
           name: Deploy pre-release versions of packages
           command: yarn publish-canary
   storybook-branch-deploy:
-    <<: *defaults
+    docker: *ref_0
     steps:
       - checkout
       - run:
           name: Create dependency hash
           command: yarn run create-dependency-hash
       - restore_cache:
-          key: hig-dependencies-{{ checksum ".dependency-hash" }}
+          key: 'hig-dependencies-{{ checksum ".dependency-hash" }}'
       - restore_cache:
-          key: package-build-{{ .Revision }}
+          key: 'package-build-{{ .Revision }}'
       - run:
           name: Deploy Storybook
-          command: yarn storybook-deploy --domain `echo hig-$CIRCLE_BRANCH.surge.sh | awk 'echo gsub(/\//, "-")'`
+          command: 'yarn storybook-deploy --domain `echo hig-$CIRCLE_BRANCH.surge.sh | awk ''echo gsub(/\//, "-")''`'
           working_directory: packages/storybook
   packages-deploy:
-    <<: *defaults
+    docker: *ref_0
     steps:
       - checkout
       - run:
           name: Create dependency hash
           command: yarn run create-dependency-hash
       - restore_cache:
-          key: hig-dependencies-{{ checksum ".dependency-hash" }}
+          key: 'hig-dependencies-{{ checksum ".dependency-hash" }}'
       - restore_cache:
-          key: package-build-{{ .Revision }}
+          key: 'package-build-{{ .Revision }}'
       - run:
           name: Add auth token
-          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+          command: 'echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc'
       - run:
           name: Deploy hig-react
           command: node ./scripts/publish-if-needed/index.js react
@@ -267,4 +270,4 @@ workflows:
             branches:
               only: master
             tags:
-              only: /v[0-9]+(\.[0-9]+)*/
+              only: '/v[0-9]+(\.[0-9]+)*/'

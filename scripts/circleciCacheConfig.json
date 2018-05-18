@@ -1,0 +1,18 @@
+{
+  "excludePackageNames": [
+    "@hig/styles",
+    "hig-interface",
+    "hig-react",
+    "hig-vanilla"
+  ],
+  "includeBuildPaths": [
+    "packages/react/lib",
+    "packages/vanilla/lib"
+  ],
+  "includeDependencyPaths": [
+    ".dependency-hash",
+    "node_modules",
+    "packages/react/node_modules",
+    "packages/vanilla/node_modules"
+  ]
+}
