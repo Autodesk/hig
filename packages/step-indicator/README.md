@@ -22,9 +22,69 @@ import '@hig/step-indicator/build/index.css';
 ## Basic usage
 
 ```jsx
-<StepIndicator activeStepIndex={this.props.activeStepIndex} onStepChange={this.props.onStepChange}>
+<StepIndicator>
   {this.props.steps.map(step => (
-    <StepIndicator.Step />
+    <StepIndicator.Step
+      complete={step.complete}
+      active={step.id === this.props.activeStepId}
+    />
+  ))}
+</StepIndicator>
+```
+
+## With numbered steps
+
+```jsx
+<StepIndicator>
+  {this.props.steps.map((step, i) => (
+    <StepIndicator.Step
+      complete={step.complete}
+      active={step.id === this.props.activeStepId}
+      badge={`${i + 1}`}
+    />
+  ))}
+</StepIndicator>
+```
+
+## With labels
+
+```jsx
+<StepIndicator>
+  {this.props.steps.map(step => (
+    <StepIndicator.Step
+      complete={step.complete}
+      active={step.id === this.props.activeStepId}
+      label={step.label}
+    />
+  ))}
+</StepIndicator>
+```
+
+## With labels above
+
+```jsx
+<StepIndicator>
+  {this.props.steps.map(step => (
+    <StepIndicator.Step
+      complete={step.complete}
+      active={step.id === this.props.activeStepId}
+      label={step.label}
+      labelPosition="above"
+    />
+  ))}
+</StepIndicator>
+```
+
+## With non-linear step navigation
+
+```jsx
+<StepIndicator>
+  {this.props.steps.map(step => (
+    <StepIndicator.Step
+      complete={step.complete}
+      active={step.id === this.props.activeStepId}
+      onActivate={this.props.onStepActivate} // Click or keyboard Enter when step has focus
+    />
   ))}
 </StepIndicator>
 ```
@@ -32,16 +92,15 @@ import '@hig/step-indicator/build/index.css';
 ## PropTypes
 
 ```js
-StepIndicator.proptypes = {
-  onStepChange: PropTypes.func,
-  activeStepIndex: PropTypes.number,
-  numbered: PropTypes.bool
-}
+StepIndicator.proptypes = {}
 
 Step.proptypes = {
+  active: PropTypes.bool, // The currently active step
+  complete: PropTypes.bool,
   label: PropTypes.string,
+  labelPosition: PropTypes.oneOf(['above', 'below']),
+  badge: PropTypes.string,
+  onActivate: PropTypes.func,
   state: PropTypes.oneOf(['unstarted', 'started', 'complete']),
-  active: PropTypes.bool, // The step with
-  children: PropTypes.node // Optional, content to be displayed under a vertical step
 }
 ```
