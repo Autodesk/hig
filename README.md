@@ -12,6 +12,7 @@ yarn add @hig/button
 Import and render the component:
 ```jsx
 import Button from '@hig/button';
+import '@hig/button/build/index.css';
 
 function MyComponent() {
   return <Button title="Hello, world!" />
