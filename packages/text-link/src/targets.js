@@ -1,2 +1,8 @@
-const targets = Object.freeze(["_self", "_blank", "_parent", "_top"]);
-export default targets;
+export const targets = Object.freeze({
+  SELF: "_self",
+  BLANK: "_blank",
+  PARENT: "_parent",
+  TOP: "_top"
+});
+
+export const availableTargets = Object.freeze(Object.values(targets));

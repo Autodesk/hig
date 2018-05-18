@@ -1,8 +1,11 @@
-import targets from "./targets";
+import * as targets from "./targets";
 
-describe("text-link/targets", () => {
-  it("has an array of available types", () => {
-    const validTargets = ["_self", "_blank", "_parent", "_top"];
-    expect(targets).toEqual(expect.arrayContaining(validTargets));
+describe("text-link/constants", () => {
+  it("has an array of available targets", () => {
+    expect(targets).toHavePropertyOfConstants("availableTargets");
+  });
+
+  it("has constants for targets", () => {
+    expect(targets).toHavePropertyOfConstants("targets");
   });
 });
