@@ -1,53 +1,18 @@
-import React from "react";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
-import { action } from "@storybook/addon-actions";
-import { boolean, select, text } from "@storybook/addon-knobs/react";
-import Icon, { names as iconNames } from "@hig/icon";
 
-import Button, {
-  availableSizes,
-  availableTargets,
-  availableTypes,
-  availableWidths
-} from "../index";
 import infoOptions from "./infoOptions";
+import renderStory from "./renderStory";
+import stories from "./stories";
 
-storiesOf("Button", module)
-  .add(
-    "default",
-    withInfo(infoOptions)(() => (
-      <Button
-        disabled={boolean("Disabled")}
-        link={text("Link", "https://www.autodesk.com")}
-        onBlur={action("onBlur")}
-        onClick={action("onClick")}
-        onFocus={action("onFocus")}
-        onHover={action("onHover")}
-        size={select("Size", availableSizes)}
-        target={select("Target", availableTargets)}
-        title={text("Title", "Button Title")}
-        type={select("Type", availableTypes)}
-        width={select("Width", availableWidths)}
-      />
-    ))
-  )
-  .add(
-    "with icon",
-    withInfo(infoOptions)(() => (
-      <Button
-        icon={<Icon name={iconNames.SETTINGS} />}
-        disabled={boolean("Disabled")}
-        link={text("Link", "https://www.autodesk.com")}
-        onBlur={action("onBlur")}
-        onClick={action("onClick")}
-        onFocus={action("onFocus")}
-        onHover={action("onHover")}
-        size={select("Size", availableSizes)}
-        target={select("Target", availableTargets)}
-        title={text("Title", "Button Title")}
-        type={select("Type", availableTypes)}
-        width={select("Width", availableWidths)}
-      />
-    ))
+const storybook = storiesOf("Button", module);
+
+stories.forEach(({ description, getProps }) => {
+  storybook.add(
+    description,
+    withInfo(infoOptions)(() => {
+      const props = getProps();
+      return renderStory(props);
+    })
   );
+});

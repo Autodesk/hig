@@ -25,6 +25,10 @@
     fill: color(hig-cool-gray-60);
   }
 
+  &.hig__icon-button--primary {
+    background-color: color(hig-white);
+  }
+
   &.hig__icon-button--flat {
     border-color: transparent;
   }
