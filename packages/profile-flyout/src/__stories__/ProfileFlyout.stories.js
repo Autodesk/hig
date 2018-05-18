@@ -1,16 +1,18 @@
-import React from "react";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
-import ProfileFlyout from "../index";
-import infoOptions from "./infoOptions";
 
-storiesOf("ProfileFlyout", module).add(
-  "default",
-  withInfo(infoOptions)(() => (
-    <ProfileFlyout
-      image="https://placekitten.com/g/50/50"
-      name="David Gonzalez"
-      email="gonzalezd@autodesk.com"
-    />
-  ))
-);
+import infoOptions from "./infoOptions";
+import renderStory from "./renderStory";
+import stories from "./stories";
+
+const storybook = storiesOf("ProfileFlyout", module);
+
+stories.forEach(({ description, getProps }) => {
+  storybook.add(
+    description,
+    withInfo(infoOptions)(() => {
+      const props = getProps();
+      return renderStory(props);
+    })
+  );
+});
