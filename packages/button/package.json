@@ -22,7 +22,7 @@
     "@hig/eslint-config": "0.1.0",
     "@hig/icon": "0.1.0-alpha",
     "@hig/scripts": "^0.1.0",
-    "@hig/styles": "^0.1.0-alpha"
+    "@hig/styles": "^0.1.0"
   },
   "peerDependencies": {
     "prop-types": "^15.5.10",

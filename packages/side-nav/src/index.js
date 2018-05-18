@@ -1,3 +1,5 @@
+import "@hig/styles/build/fonts.css";
+
 import CollapseButton from "./CollapseButton";
 import Group from "./Group";
 import Link from "./Link";

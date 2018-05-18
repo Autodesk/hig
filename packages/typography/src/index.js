@@ -1,3 +1,5 @@
+import "@hig/styles/build/fonts.css";
+
 export { default } from "./Typography";
 
 export { default as H1 } from "./H1";
