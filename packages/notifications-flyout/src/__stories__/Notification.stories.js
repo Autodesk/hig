@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { text, boolean } from "@storybook/addon-knobs/react";
 import { withInfo } from "@storybook/addon-info";
-import { TextLink } from "hig-react";
+import TextLink from "@hig/text-link";
 
 import { Notification } from "../index";
 import infoOptions from "./infoOptions";
@@ -22,9 +22,10 @@ const sampleNotification = (
     <p>
       <TextLink
         href="https://github.com/Autodesk/hig"
-        text="Manage renewal"
         onClick={action("notifications id 1")}
-      />
+      >
+        Manage renewal
+      </TextLink>
     </p>
   </div>
 );

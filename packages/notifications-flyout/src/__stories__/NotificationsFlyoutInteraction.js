@@ -1,5 +1,7 @@
 import React, { PureComponent } from "react";
-import { Button, Notifications, TextLink } from "hig-react";
+import Button from "@hig/button";
+import TextLink from "@hig/text-link";
+import { Notifications } from "hig-react";
 
 import { Notification } from "../index";
 import sampleNotifications from "./notificationFixtures";
@@ -46,9 +48,9 @@ export default class NotificationsInteraction extends PureComponent {
             subscription.
           </p>
           <p>
-            <TextLink text="Learn how to switch" />
+            <TextLink>Learn how to switch</TextLink>
             {" or "}
-            <TextLink text="Assign users" />
+            <TextLink>Assign users</TextLink>
           </p>
         </div>
       )
@@ -82,9 +84,9 @@ export default class NotificationsInteraction extends PureComponent {
           account
         </p>
         <p>
-          <TextLink text="Primary link" />
+          <TextLink>Primary link</TextLink>
           {" or "}
-          <TextLink text="Secondary link" />
+          <TextLink>Secondary link</TextLink>
         </p>
       </div>
     </Notification>
