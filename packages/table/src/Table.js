@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import cn from "classnames";
-
+import cx from "classnames";
 import noop from "lodash/noop";
 import get from "lodash/get";
 import toString from "lodash/toString";
+import { ThemeContext } from "@hig/themes";
 
 import "./table.scss";
 
@@ -18,6 +18,18 @@ import DefaultExpandIcon from "./DefaultExpandIcon";
 import DefaultSortIndicator from "./DefaultSortIndicator";
 import ColumnManager from "./ColumnManager";
 import { normalizeColumns, callOrReturn, hasChildren } from "./utils";
+
+function getTableClasses({ themeClass, className, disabled, isFrozen }) {
+  return cx(
+    "hig__table",
+    className,
+    {
+      "hig__table--with-frozen-rows": isFrozen,
+      "hig__table--disabled": disabled
+    },
+    themeClass
+  );
+}
 
 /**
  * Table component based on react-virtualized
@@ -235,7 +247,7 @@ class Table extends React.Component {
     const rowStyleObject = callOrReturn(rowStyle, { rowData, rowIndex });
     const rowKey = rowData[this.props.rowKey];
 
-    const className = cn("hig__table__row", rowClass, {
+    const className = cx("hig__table__row", rowClass, {
       [`hig__table__row--depth-${depth}`]: !!expandColumnKey,
       "hig__table__row--expanded": this.state.expandedRowKeys.includes(rowKey),
       "hig__table__row--hovered":
@@ -296,18 +308,21 @@ class Table extends React.Component {
           overflow: "hidden"
         };
         expandedRows = (
-          <div
-            key={`${key}-expanded`}
-            className="hig__table__row-expanded"
-            style={expandedStyle}
-          >
-            {this.props.renderRowExpanded({
-              isScrolling,
-              columns,
-              rowData,
-              rowIndex
-            })}
-          </div>
+          <ThemeContext.Consumer key={`${key}-expanded`}>
+            {({ themeClass }) => (
+              <div
+                className={cx("hig__table__row-expanded", themeClass)}
+                style={expandedStyle}
+              >
+                {this.props.renderRowExpanded({
+                  isScrolling,
+                  columns,
+                  rowData,
+                  rowIndex
+                })}
+              </div>
+            )}
+          </ThemeContext.Consumer>
         );
       } else {
         let top = style.top + this.props.rowHeight;
@@ -359,29 +374,45 @@ class Table extends React.Component {
         isScrolling
       })
     ) : (
-      <div className="hig__table__row-column-text">{toString(cellData)}</div>
+      <ThemeContext.Consumer>
+        {({ themeClass }) => (
+          <div className={cx("hig__table__row-column-text", themeClass)}>
+            {toString(cellData)}
+          </div>
+        )}
+      </ThemeContext.Consumer>
     );
 
-    const cls = cn("hig__table__row-column", className, {
-      "hig__table__row-column--align-center": column.align === "center",
-      "hig__table__row-column--align-right": column.align === "right"
-    });
+    const getRowCellClasses = themeClass =>
+      cx(
+        "hig__table__row-column",
+        className,
+        {
+          "hig__table__row-column--align-center": column.align === "center",
+          "hig__table__row-column--align-right": column.align === "right"
+        },
+        themeClass
+      );
+
     return (
-      <div
-        key={`Row${rowIndex}-Col${columnIndex}`}
-        className={cls}
-        style={this.columnManager.getColumnStyle(column.key)}
-      >
-        {expandIcon}
-        {cell}
-      </div>
+      <ThemeContext.Consumer key={`Row${rowIndex}-Col${columnIndex}`}>
+        {({ themeClass }) => (
+          <div
+            className={getRowCellClasses(themeClass)}
+            style={this.columnManager.getColumnStyle(column.key)}
+          >
+            {expandIcon}
+            {cell}
+          </div>
+        )}
+      </ThemeContext.Consumer>
     );
   }
 
   renderHeader({ key, isScrolling, columns, style }) {
     const { headerClassName, headerStyle, renderHeader } = this.props;
 
-    const className = cn("hig__table__header-row", headerClassName, {
+    const className = cx("hig__table__header-row", headerClassName, {
       "hig__table__header-row--resizing": !!this.state.resizingKey,
       "hig__table__header-row--customized": renderHeader
     });
@@ -413,51 +444,63 @@ class Table extends React.Component {
     const cell = renderHeader ? (
       renderHeader({ column, columnIndex, isScrolling })
     ) : (
-      <div className="hig__table__header-column-text">{title}</div>
+      <ThemeContext.Consumer>
+        {({ themeClass }) => (
+          <div className={cx("hig__table__header-column-text", themeClass)}>
+            {title}
+          </div>
+        )}
+      </ThemeContext.Consumer>
     );
 
     const { sort, components } = this.props;
     const { SortIndicator } = components;
     const sorting = column.key === sort.key;
     const sortOrder = sorting ? sort.order : SortOrder.ASC;
-    const cls = cn("hig__table__header-column", className, {
-      "hig__table__header-column--align-center": column.align === "center",
-      "hig__table__header-column--align-right": column.align === "right",
-      "hig__table__header-column--sortable": column.sortable,
-      "hig__table__header-column--sorting": sorting,
-      "hig__table__header-column--resizing":
-        column.key === this.state.resizingKey
-    });
+    const getHeaderCellClasses = themeClass =>
+      cx("hig__table__header-column", themeClass, className, {
+        "hig__table__header-column--align-center": column.align === "center",
+        "hig__table__header-column--align-right": column.align === "right",
+        "hig__table__header-column--sortable": column.sortable,
+        "hig__table__header-column--sorting": sorting,
+        "hig__table__header-column--resizing":
+          column.key === this.state.resizingKey
+      });
+
     return (
-      <div
-        key={`Header-Col${columnIndex}`}
-        role="button"
-        className={cls}
-        style={this.columnManager.getColumnStyle(column.key)}
-        onClick={column.sortable ? this._handleColumnSort(column) : null}
-      >
-        {expandIcon}
-        {cell}
-        {column.sortable && (
-          <SortIndicator
-            sortOrder={sortOrder}
-            className={cn("hig__table__sort-indicator", {
-              "hig__table__sort-indicator--descending":
-                sortOrder === SortOrder.DESC
-            })}
-          />
+      <ThemeContext.Consumer key={`Header-Col${columnIndex}`}>
+        {({ themeClass }) => (
+          <div
+            role="button"
+            tabIndex="-1"
+            className={getHeaderCellClasses(themeClass)}
+            style={this.columnManager.getColumnStyle(column.key)}
+            onClick={column.sortable ? this._handleColumnSort(column) : null}
+          >
+            {expandIcon}
+            {cell}
+            {column.sortable && (
+              <SortIndicator
+                sortOrder={sortOrder}
+                className={cx("hig__table__sort-indicator", {
+                  "hig__table__sort-indicator--descending":
+                    sortOrder === SortOrder.DESC
+                })}
+              />
+            )}
+            {column.resizable && (
+              <ColumnResizer
+                className="hig__table__column-resizer"
+                handleClassName="hig__table__column-resizer-handle"
+                column={column}
+                onResizeStart={this._handleColumnResizeStart}
+                onResizeStop={this._handleColumnResizeStop}
+                onResize={this._handleColumnResize}
+              />
+            )}
+          </div>
         )}
-        {column.resizable && (
-          <ColumnResizer
-            className="hig__table__column-resizer"
-            handleClassName="hig__table__column-resizer-handle"
-            column={column}
-            onResizeStart={this._handleColumnResizeStart}
-            onResizeStop={this._handleColumnResizeStop}
-            onResize={this._handleColumnResize}
-          />
-        )}
-      </div>
+      </ThemeContext.Consumer>
     );
   }
 
@@ -561,11 +604,20 @@ class Table extends React.Component {
 
   renderFooter() {
     const { footerHeight, renderFooter } = this.props;
+
     if (footerHeight === 0) return null;
+
     return (
-      <div className="hig__table__footer" style={{ height: footerHeight }}>
-        {renderFooter()}
-      </div>
+      <ThemeContext.Consumer>
+        {({ themeClass }) => (
+          <div
+            className={cx("hig__table__footer", themeClass)}
+            style={{ height: footerHeight }}
+          >
+            {renderFooter()}
+          </div>
+        )}
+      </ThemeContext.Consumer>
     );
   }
 
@@ -573,13 +625,18 @@ class Table extends React.Component {
     const { data, headerHeight, footerHeight, renderEmpty } = this.props;
 
     if (data && data.length) return null;
+
     return (
-      <div
-        className="hig__table__empty-layer"
-        style={{ top: headerHeight, bottom: footerHeight }}
-      >
-        {renderEmpty()}
-      </div>
+      <ThemeContext.Consumer>
+        {({ themeClass }) => (
+          <div
+            className={cx("hig__table__empty-layer", themeClass)}
+            style={{ top: headerHeight, bottom: footerHeight }}
+          >
+            {renderEmpty()}
+          </div>
+        )}
+      </ThemeContext.Consumer>
     );
   }
 
@@ -593,6 +650,7 @@ class Table extends React.Component {
     let left = this.columnManager.recomputeColumnsWidth(
       columns.slice(0, idx + 1)
     );
+
     if (!column.frozen) {
       left -= this._scroll.scrollLeft;
     } else if (column.frozen === "right") {
@@ -601,13 +659,22 @@ class Table extends React.Component {
         scrollbarWidth -
         this.columnManager.recomputeColumnsWidth(columns.slice(idx + 1));
     }
+
     const style = {
       left,
-      width: 3,
-      transform: "translateX(-3px)",
       height: height - this.state.horizontalScrollbarWidth
     };
-    return <div className="hig__table__resizing-line" style={style} />;
+
+    return (
+      <ThemeContext.Consumer>
+        {({ themeClass }) => (
+          <div
+            className={cx("hig__table__resizing-line", themeClass)}
+            style={style}
+          />
+        )}
+      </ThemeContext.Consumer>
+    );
   }
 
   renderTable({ width, height }) {
@@ -618,26 +685,33 @@ class Table extends React.Component {
       footerHeight,
       frozenRowCount
     } = this.props;
-    const cls = cn("hig__table", className, {
-      "hig__table--with-frozen-rows": frozenRowCount > 0,
-      "hig__table--disabled": disabled
-    });
     const size = {
       width,
       height: height - footerHeight
     };
+    const isFrozen = frozenRowCount > 0;
+
     return (
-      <div
-        className={cls}
-        style={{ ...style, width, height, position: "relative" }}
-      >
-        {this.renderFooter()}
-        {this.renderMainTable(size)}
-        {this.renderLeftTable(size)}
-        {this.renderRightTable(size)}
-        {this.renderResizingLine(size)}
-        {this.renderEmptyLayer()}
-      </div>
+      <ThemeContext.Consumer>
+        {({ themeClass }) => (
+          <div
+            className={getTableClasses({
+              themeClass,
+              className,
+              disabled,
+              isFrozen
+            })}
+            style={{ ...style, width, height, position: "relative" }}
+          >
+            {this.renderFooter()}
+            {this.renderMainTable(size)}
+            {this.renderLeftTable(size)}
+            {this.renderRightTable(size)}
+            {this.renderResizingLine(size)}
+            {this.renderEmptyLayer()}
+          </div>
+        )}
+      </ThemeContext.Consumer>
     );
   }
   // endregion

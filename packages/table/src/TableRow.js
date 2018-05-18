@@ -1,5 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { ThemeContext } from "@hig/themes";
+import cx from "classnames";
 
 /**
  * Row component for the Table
@@ -100,10 +102,19 @@ class TableRow extends React.PureComponent {
         );
 
     const eventHandlers = this._getEventHandlers(rowEventHandlers);
+
     return (
-      <div className={className} style={style} {...eventHandlers}>
-        {cells}
-      </div>
+      <ThemeContext.Consumer>
+        {({ themeClass }) => (
+          <div
+            className={cx(className, themeClass)}
+            style={style}
+            {...eventHandlers}
+          >
+            {cells}
+          </div>
+        )}
+      </ThemeContext.Consumer>
     );
   }
 }

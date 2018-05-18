@@ -151,6 +151,7 @@ export default class ColumnManager {
     // workaround for Flex bug on IE: https://github.com/philipwalton/flexbugs#flexbug-7
     const flexValue = `${flexGrow} ${flexShrink} auto`;
 
+    /** @todo Remove unnecessary cross-browser flexbox properties */
     const style = {
       ...column.style,
       flex: flexValue,

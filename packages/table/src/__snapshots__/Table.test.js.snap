@@ -2,7 +2,7 @@
 
 exports[`Table renders correctly 1`] = `
 <div
-  className="hig__table"
+  className="hig__table hig--light-theme"
   style={
     Object {
       "height": 100,
@@ -12,12 +12,12 @@ exports[`Table renders correctly 1`] = `
   }
 >
   <div
-    className="hig__table__table hig__table__table-main"
+    className="hig__table__table hig--light-theme hig__table__table-main"
   >
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__header"
+      className="ReactVirtualized__Grid hig__table__header hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -52,7 +52,7 @@ exports[`Table renders correctly 1`] = `
         }
       >
         <div
-          className="hig__table__header-row"
+          className="hig__table__header-row hig--light-theme"
           style={
             Object {
               "headerStyle": undefined,
@@ -66,7 +66,7 @@ exports[`Table renders correctly 1`] = `
           }
         >
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -78,15 +78,16 @@ exports[`Table renders correctly 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               code
             </div>
           </div>
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -98,9 +99,10 @@ exports[`Table renders correctly 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               name
             </div>
@@ -111,7 +113,7 @@ exports[`Table renders correctly 1`] = `
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__body"
+      className="ReactVirtualized__Grid hig__table__body hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -146,7 +148,7 @@ exports[`Table renders correctly 1`] = `
         }
       >
         <div
-          className="hig__table__row"
+          className="hig__table__row hig--light-theme"
           style={
             Object {
               "height": 50,
@@ -159,7 +161,7 @@ exports[`Table renders correctly 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -171,13 +173,13 @@ exports[`Table renders correctly 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -189,14 +191,14 @@ exports[`Table renders correctly 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
         </div>
         <div
-          className="hig__table__row"
+          className="hig__table__row hig--light-theme"
           style={
             Object {
               "height": 50,
@@ -209,7 +211,7 @@ exports[`Table renders correctly 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -221,13 +223,13 @@ exports[`Table renders correctly 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -239,7 +241,7 @@ exports[`Table renders correctly 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>
@@ -253,7 +255,7 @@ exports[`Table renders correctly 1`] = `
 
 exports[`Table table can be set to disabled 1`] = `
 <div
-  className="hig__table hig__table--disabled"
+  className="hig__table hig__table--disabled hig--light-theme"
   style={
     Object {
       "height": 100,
@@ -263,12 +265,12 @@ exports[`Table table can be set to disabled 1`] = `
   }
 >
   <div
-    className="hig__table__table hig__table__table-main"
+    className="hig__table__table hig--light-theme hig__table__table-main"
   >
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__header"
+      className="ReactVirtualized__Grid hig__table__header hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -303,7 +305,7 @@ exports[`Table table can be set to disabled 1`] = `
         }
       >
         <div
-          className="hig__table__header-row"
+          className="hig__table__header-row hig--light-theme"
           style={
             Object {
               "headerStyle": undefined,
@@ -317,7 +319,7 @@ exports[`Table table can be set to disabled 1`] = `
           }
         >
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -329,15 +331,16 @@ exports[`Table table can be set to disabled 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               code
             </div>
           </div>
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -349,9 +352,10 @@ exports[`Table table can be set to disabled 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               name
             </div>
@@ -362,7 +366,7 @@ exports[`Table table can be set to disabled 1`] = `
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__body"
+      className="ReactVirtualized__Grid hig__table__body hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -397,7 +401,7 @@ exports[`Table table can be set to disabled 1`] = `
         }
       >
         <div
-          className="hig__table__row"
+          className="hig__table__row hig--light-theme"
           style={
             Object {
               "height": 50,
@@ -410,7 +414,7 @@ exports[`Table table can be set to disabled 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -422,13 +426,13 @@ exports[`Table table can be set to disabled 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -440,14 +444,14 @@ exports[`Table table can be set to disabled 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
         </div>
         <div
-          className="hig__table__row"
+          className="hig__table__row hig--light-theme"
           style={
             Object {
               "height": 50,
@@ -460,7 +464,7 @@ exports[`Table table can be set to disabled 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -472,13 +476,13 @@ exports[`Table table can be set to disabled 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -490,7 +494,7 @@ exports[`Table table can be set to disabled 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>
@@ -504,7 +508,7 @@ exports[`Table table can be set to disabled 1`] = `
 
 exports[`Table table can be set to fixed 1`] = `
 <div
-  className="hig__table"
+  className="hig__table hig--light-theme"
   style={
     Object {
       "height": 100,
@@ -514,12 +518,12 @@ exports[`Table table can be set to fixed 1`] = `
   }
 >
   <div
-    className="hig__table__table hig__table__table-main"
+    className="hig__table__table hig--light-theme hig__table__table-main"
   >
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__header"
+      className="ReactVirtualized__Grid hig__table__header hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -554,7 +558,7 @@ exports[`Table table can be set to fixed 1`] = `
         }
       >
         <div
-          className="hig__table__header-row"
+          className="hig__table__header-row hig--light-theme"
           style={
             Object {
               "headerStyle": undefined,
@@ -568,7 +572,7 @@ exports[`Table table can be set to fixed 1`] = `
           }
         >
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -580,15 +584,16 @@ exports[`Table table can be set to fixed 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               code
             </div>
           </div>
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -600,9 +605,10 @@ exports[`Table table can be set to fixed 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               name
             </div>
@@ -613,7 +619,7 @@ exports[`Table table can be set to fixed 1`] = `
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__body"
+      className="ReactVirtualized__Grid hig__table__body hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -648,7 +654,7 @@ exports[`Table table can be set to fixed 1`] = `
         }
       >
         <div
-          className="hig__table__row"
+          className="hig__table__row hig--light-theme"
           style={
             Object {
               "height": 50,
@@ -661,7 +667,7 @@ exports[`Table table can be set to fixed 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 0 auto",
@@ -673,13 +679,13 @@ exports[`Table table can be set to fixed 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 0 auto",
@@ -691,14 +697,14 @@ exports[`Table table can be set to fixed 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
         </div>
         <div
-          className="hig__table__row"
+          className="hig__table__row hig--light-theme"
           style={
             Object {
               "height": 50,
@@ -711,7 +717,7 @@ exports[`Table table can be set to fixed 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 0 auto",
@@ -723,13 +729,13 @@ exports[`Table table can be set to fixed 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 0 auto",
@@ -741,7 +747,7 @@ exports[`Table table can be set to fixed 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>
@@ -755,7 +761,7 @@ exports[`Table table can be set to fixed 1`] = `
 
 exports[`Table table can freeze rows 1`] = `
 <div
-  className="hig__table hig__table--with-frozen-rows"
+  className="hig__table hig__table--with-frozen-rows hig--light-theme"
   style={
     Object {
       "height": 100,
@@ -765,12 +771,12 @@ exports[`Table table can freeze rows 1`] = `
   }
 >
   <div
-    className="hig__table__table hig__table__table-main"
+    className="hig__table__table hig--light-theme hig__table__table-main"
   >
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__header"
+      className="ReactVirtualized__Grid hig__table__header hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -805,7 +811,7 @@ exports[`Table table can freeze rows 1`] = `
         }
       >
         <div
-          className="hig__table__header-row"
+          className="hig__table__header-row hig--light-theme"
           style={
             Object {
               "headerStyle": undefined,
@@ -819,7 +825,7 @@ exports[`Table table can freeze rows 1`] = `
           }
         >
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -831,15 +837,16 @@ exports[`Table table can freeze rows 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               code
             </div>
           </div>
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -851,16 +858,17 @@ exports[`Table table can freeze rows 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               name
             </div>
           </div>
         </div>
         <div
-          className="hig__table__row hig__table__row--frozen"
+          className="hig__table__row hig__table__row--frozen hig--light-theme"
           style={
             Object {
               "height": 50,
@@ -873,7 +881,7 @@ exports[`Table table can freeze rows 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -885,13 +893,13 @@ exports[`Table table can freeze rows 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -903,7 +911,7 @@ exports[`Table table can freeze rows 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
@@ -914,7 +922,7 @@ exports[`Table table can freeze rows 1`] = `
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__body"
+      className="ReactVirtualized__Grid hig__table__body hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -939,7 +947,7 @@ exports[`Table table can freeze rows 1`] = `
 
 exports[`Table table can hide the header 1`] = `
 <div
-  className="hig__table"
+  className="hig__table hig--light-theme"
   style={
     Object {
       "height": 100,
@@ -949,12 +957,12 @@ exports[`Table table can hide the header 1`] = `
   }
 >
   <div
-    className="hig__table__table hig__table__table-main"
+    className="hig__table__table hig--light-theme hig__table__table-main"
   >
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__body"
+      className="ReactVirtualized__Grid hig__table__body hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -989,7 +997,7 @@ exports[`Table table can hide the header 1`] = `
         }
       >
         <div
-          className="hig__table__row"
+          className="hig__table__row hig--light-theme"
           style={
             Object {
               "height": 50,
@@ -1002,7 +1010,7 @@ exports[`Table table can hide the header 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -1014,13 +1022,13 @@ exports[`Table table can hide the header 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -1032,14 +1040,14 @@ exports[`Table table can hide the header 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
         </div>
         <div
-          className="hig__table__row"
+          className="hig__table__row hig--light-theme"
           style={
             Object {
               "height": 50,
@@ -1052,7 +1060,7 @@ exports[`Table table can hide the header 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -1064,13 +1072,13 @@ exports[`Table table can hide the header 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -1082,7 +1090,7 @@ exports[`Table table can hide the header 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>
@@ -1096,7 +1104,7 @@ exports[`Table table can hide the header 1`] = `
 
 exports[`Table table can receive an renderEmpty callback 1`] = `
 <div
-  className="hig__table"
+  className="hig__table hig--light-theme"
   style={
     Object {
       "height": 100,
@@ -1106,12 +1114,12 @@ exports[`Table table can receive an renderEmpty callback 1`] = `
   }
 >
   <div
-    className="hig__table__table hig__table__table-main"
+    className="hig__table__table hig--light-theme hig__table__table-main"
   >
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__header"
+      className="ReactVirtualized__Grid hig__table__header hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -1146,7 +1154,7 @@ exports[`Table table can receive an renderEmpty callback 1`] = `
         }
       >
         <div
-          className="hig__table__header-row"
+          className="hig__table__header-row hig--light-theme"
           style={
             Object {
               "headerStyle": undefined,
@@ -1160,7 +1168,7 @@ exports[`Table table can receive an renderEmpty callback 1`] = `
           }
         >
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -1172,15 +1180,16 @@ exports[`Table table can receive an renderEmpty callback 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               code
             </div>
           </div>
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -1192,9 +1201,10 @@ exports[`Table table can receive an renderEmpty callback 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               name
             </div>
@@ -1205,7 +1215,7 @@ exports[`Table table can receive an renderEmpty callback 1`] = `
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__body"
+      className="ReactVirtualized__Grid hig__table__body hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -1240,7 +1250,7 @@ exports[`Table table can receive an renderEmpty callback 1`] = `
         }
       >
         <div
-          className="hig__table__row"
+          className="hig__table__row hig--light-theme"
           style={
             Object {
               "height": 50,
@@ -1253,7 +1263,7 @@ exports[`Table table can receive an renderEmpty callback 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -1265,13 +1275,13 @@ exports[`Table table can receive an renderEmpty callback 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -1283,14 +1293,14 @@ exports[`Table table can receive an renderEmpty callback 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
         </div>
         <div
-          className="hig__table__row"
+          className="hig__table__row hig--light-theme"
           style={
             Object {
               "height": 50,
@@ -1303,7 +1313,7 @@ exports[`Table table can receive an renderEmpty callback 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -1315,13 +1325,13 @@ exports[`Table table can receive an renderEmpty callback 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -1333,7 +1343,7 @@ exports[`Table table can receive an renderEmpty callback 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>
@@ -1347,7 +1357,7 @@ exports[`Table table can receive an renderEmpty callback 1`] = `
 
 exports[`Table table can receive an renderHeader callback 1`] = `
 <div
-  className="hig__table"
+  className="hig__table hig--light-theme"
   style={
     Object {
       "height": 100,
@@ -1357,12 +1367,12 @@ exports[`Table table can receive an renderHeader callback 1`] = `
   }
 >
   <div
-    className="hig__table__table hig__table__table-main"
+    className="hig__table__table hig--light-theme hig__table__table-main"
   >
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__header"
+      className="ReactVirtualized__Grid hig__table__header hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -1397,7 +1407,7 @@ exports[`Table table can receive an renderHeader callback 1`] = `
         }
       >
         <div
-          className="hig__table__header-row hig__table__header-row--customized"
+          className="hig__table__header-row hig__table__header-row--customized hig--light-theme"
           style={
             Object {
               "headerStyle": undefined,
@@ -1415,7 +1425,7 @@ exports[`Table table can receive an renderHeader callback 1`] = `
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__body"
+      className="ReactVirtualized__Grid hig__table__body hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -1450,7 +1460,7 @@ exports[`Table table can receive an renderHeader callback 1`] = `
         }
       >
         <div
-          className="hig__table__row"
+          className="hig__table__row hig--light-theme"
           style={
             Object {
               "height": 50,
@@ -1463,7 +1473,7 @@ exports[`Table table can receive an renderHeader callback 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -1475,13 +1485,13 @@ exports[`Table table can receive an renderHeader callback 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -1493,14 +1503,14 @@ exports[`Table table can receive an renderHeader callback 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
         </div>
         <div
-          className="hig__table__row"
+          className="hig__table__row hig--light-theme"
           style={
             Object {
               "height": 50,
@@ -1513,7 +1523,7 @@ exports[`Table table can receive an renderHeader callback 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -1525,13 +1535,13 @@ exports[`Table table can receive an renderHeader callback 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -1543,7 +1553,7 @@ exports[`Table table can receive an renderHeader callback 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>
@@ -1557,7 +1567,7 @@ exports[`Table table can receive an renderHeader callback 1`] = `
 
 exports[`Table table can receive an renderRow callback 1`] = `
 <div
-  className="hig__table"
+  className="hig__table hig--light-theme"
   style={
     Object {
       "height": 100,
@@ -1567,12 +1577,12 @@ exports[`Table table can receive an renderRow callback 1`] = `
   }
 >
   <div
-    className="hig__table__table hig__table__table-main"
+    className="hig__table__table hig--light-theme hig__table__table-main"
   >
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__header"
+      className="ReactVirtualized__Grid hig__table__header hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -1607,7 +1617,7 @@ exports[`Table table can receive an renderRow callback 1`] = `
         }
       >
         <div
-          className="hig__table__header-row"
+          className="hig__table__header-row hig--light-theme"
           style={
             Object {
               "headerStyle": undefined,
@@ -1621,7 +1631,7 @@ exports[`Table table can receive an renderRow callback 1`] = `
           }
         >
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -1633,15 +1643,16 @@ exports[`Table table can receive an renderRow callback 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               code
             </div>
           </div>
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -1653,9 +1664,10 @@ exports[`Table table can receive an renderRow callback 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               name
             </div>
@@ -1666,7 +1678,7 @@ exports[`Table table can receive an renderRow callback 1`] = `
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__body"
+      className="ReactVirtualized__Grid hig__table__body hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -1701,7 +1713,7 @@ exports[`Table table can receive an renderRow callback 1`] = `
         }
       >
         <div
-          className="hig__table__row hig__table__row--customized"
+          className="hig__table__row hig__table__row--customized hig--light-theme"
           style={
             Object {
               "height": 50,
@@ -1714,7 +1726,7 @@ exports[`Table table can receive an renderRow callback 1`] = `
           }
         />
         <div
-          className="hig__table__row hig__table__row--customized"
+          className="hig__table__row hig__table__row--customized hig--light-theme"
           style={
             Object {
               "height": 50,
@@ -1734,7 +1746,7 @@ exports[`Table table can receive an renderRow callback 1`] = `
 
 exports[`Table table can receive children 1`] = `
 <div
-  className="hig__table"
+  className="hig__table hig--light-theme"
   style={
     Object {
       "height": 100,
@@ -1744,12 +1756,12 @@ exports[`Table table can receive children 1`] = `
   }
 >
   <div
-    className="hig__table__table hig__table__table-main"
+    className="hig__table__table hig--light-theme hig__table__table-main"
   >
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__header"
+      className="ReactVirtualized__Grid hig__table__header hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -1784,7 +1796,7 @@ exports[`Table table can receive children 1`] = `
         }
       >
         <div
-          className="hig__table__header-row"
+          className="hig__table__header-row hig--light-theme"
           style={
             Object {
               "headerStyle": undefined,
@@ -1798,7 +1810,7 @@ exports[`Table table can receive children 1`] = `
           }
         >
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -1810,15 +1822,16 @@ exports[`Table table can receive children 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               code
             </div>
           </div>
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -1830,9 +1843,10 @@ exports[`Table table can receive children 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               name
             </div>
@@ -1843,7 +1857,7 @@ exports[`Table table can receive children 1`] = `
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__body"
+      className="ReactVirtualized__Grid hig__table__body hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -1878,7 +1892,7 @@ exports[`Table table can receive children 1`] = `
         }
       >
         <div
-          className="hig__table__row"
+          className="hig__table__row hig--light-theme"
           style={
             Object {
               "height": 50,
@@ -1891,7 +1905,7 @@ exports[`Table table can receive children 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -1903,13 +1917,13 @@ exports[`Table table can receive children 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -1921,14 +1935,14 @@ exports[`Table table can receive children 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
         </div>
         <div
-          className="hig__table__row"
+          className="hig__table__row hig--light-theme"
           style={
             Object {
               "height": 50,
@@ -1941,7 +1955,7 @@ exports[`Table table can receive children 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -1953,13 +1967,13 @@ exports[`Table table can receive children 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -1971,7 +1985,7 @@ exports[`Table table can receive children 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>
@@ -1985,7 +1999,7 @@ exports[`Table table can receive children 1`] = `
 
 exports[`Table table can receive className 1`] = `
 <div
-  className="hig__table custom-class"
+  className="hig__table custom-class hig--light-theme"
   style={
     Object {
       "height": 100,
@@ -1995,12 +2009,12 @@ exports[`Table table can receive className 1`] = `
   }
 >
   <div
-    className="hig__table__table hig__table__table-main"
+    className="hig__table__table hig--light-theme hig__table__table-main"
   >
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__header"
+      className="ReactVirtualized__Grid hig__table__header hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -2035,7 +2049,7 @@ exports[`Table table can receive className 1`] = `
         }
       >
         <div
-          className="hig__table__header-row"
+          className="hig__table__header-row hig--light-theme"
           style={
             Object {
               "headerStyle": undefined,
@@ -2049,7 +2063,7 @@ exports[`Table table can receive className 1`] = `
           }
         >
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -2061,15 +2075,16 @@ exports[`Table table can receive className 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               code
             </div>
           </div>
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -2081,9 +2096,10 @@ exports[`Table table can receive className 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               name
             </div>
@@ -2094,7 +2110,7 @@ exports[`Table table can receive className 1`] = `
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__body"
+      className="ReactVirtualized__Grid hig__table__body hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -2129,7 +2145,7 @@ exports[`Table table can receive className 1`] = `
         }
       >
         <div
-          className="hig__table__row"
+          className="hig__table__row hig--light-theme"
           style={
             Object {
               "height": 50,
@@ -2142,7 +2158,7 @@ exports[`Table table can receive className 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -2154,13 +2170,13 @@ exports[`Table table can receive className 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -2172,14 +2188,14 @@ exports[`Table table can receive className 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
         </div>
         <div
-          className="hig__table__row"
+          className="hig__table__row hig--light-theme"
           style={
             Object {
               "height": 50,
@@ -2192,7 +2208,7 @@ exports[`Table table can receive className 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -2204,13 +2220,13 @@ exports[`Table table can receive className 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -2222,7 +2238,7 @@ exports[`Table table can receive className 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>
@@ -2236,7 +2252,7 @@ exports[`Table table can receive className 1`] = `
 
 exports[`Table table can receive defaultExpandedRowKeys 1`] = `
 <div
-  className="hig__table"
+  className="hig__table hig--light-theme"
   style={
     Object {
       "height": 100,
@@ -2246,12 +2262,12 @@ exports[`Table table can receive defaultExpandedRowKeys 1`] = `
   }
 >
   <div
-    className="hig__table__table hig__table__table-main"
+    className="hig__table__table hig--light-theme hig__table__table-main"
   >
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__header"
+      className="ReactVirtualized__Grid hig__table__header hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -2286,7 +2302,7 @@ exports[`Table table can receive defaultExpandedRowKeys 1`] = `
         }
       >
         <div
-          className="hig__table__header-row"
+          className="hig__table__header-row hig--light-theme"
           style={
             Object {
               "headerStyle": undefined,
@@ -2300,7 +2316,7 @@ exports[`Table table can receive defaultExpandedRowKeys 1`] = `
           }
         >
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -2312,15 +2328,16 @@ exports[`Table table can receive defaultExpandedRowKeys 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               code
             </div>
           </div>
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -2332,9 +2349,10 @@ exports[`Table table can receive defaultExpandedRowKeys 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               name
             </div>
@@ -2345,7 +2363,7 @@ exports[`Table table can receive defaultExpandedRowKeys 1`] = `
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__body"
+      className="ReactVirtualized__Grid hig__table__body hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -2380,7 +2398,7 @@ exports[`Table table can receive defaultExpandedRowKeys 1`] = `
         }
       >
         <div
-          className="hig__table__row hig__table__row--expanded"
+          className="hig__table__row hig__table__row--expanded hig--light-theme"
           style={
             Object {
               "height": 50,
@@ -2393,7 +2411,7 @@ exports[`Table table can receive defaultExpandedRowKeys 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -2405,13 +2423,13 @@ exports[`Table table can receive defaultExpandedRowKeys 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -2423,14 +2441,14 @@ exports[`Table table can receive defaultExpandedRowKeys 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
         </div>
         <div
-          className="hig__table__row"
+          className="hig__table__row hig--light-theme"
           style={
             Object {
               "height": 50,
@@ -2443,7 +2461,7 @@ exports[`Table table can receive defaultExpandedRowKeys 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -2455,13 +2473,13 @@ exports[`Table table can receive defaultExpandedRowKeys 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -2473,7 +2491,7 @@ exports[`Table table can receive defaultExpandedRowKeys 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>
@@ -2487,7 +2505,7 @@ exports[`Table table can receive defaultExpandedRowKeys 1`] = `
 
 exports[`Table table can receive empty data 1`] = `
 <div
-  className="hig__table"
+  className="hig__table hig--light-theme"
   style={
     Object {
       "height": 100,
@@ -2497,12 +2515,12 @@ exports[`Table table can receive empty data 1`] = `
   }
 >
   <div
-    className="hig__table__table hig__table__table-main"
+    className="hig__table__table hig--light-theme hig__table__table-main"
   >
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__header"
+      className="ReactVirtualized__Grid hig__table__header hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -2537,7 +2555,7 @@ exports[`Table table can receive empty data 1`] = `
         }
       >
         <div
-          className="hig__table__header-row"
+          className="hig__table__header-row hig--light-theme"
           style={
             Object {
               "headerStyle": undefined,
@@ -2551,7 +2569,7 @@ exports[`Table table can receive empty data 1`] = `
           }
         >
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -2563,15 +2581,16 @@ exports[`Table table can receive empty data 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               code
             </div>
           </div>
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -2583,9 +2602,10 @@ exports[`Table table can receive empty data 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               name
             </div>
@@ -2596,7 +2616,7 @@ exports[`Table table can receive empty data 1`] = `
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__body"
+      className="ReactVirtualized__Grid hig__table__body hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -2617,7 +2637,7 @@ exports[`Table table can receive empty data 1`] = `
     />
   </div>
   <div
-    className="hig__table__empty-layer"
+    className="hig__table__empty-layer hig--light-theme"
     style={
       Object {
         "bottom": 0,
@@ -2630,7 +2650,7 @@ exports[`Table table can receive empty data 1`] = `
 
 exports[`Table table can receive expandColumnKey 1`] = `
 <div
-  className="hig__table"
+  className="hig__table hig--light-theme"
   style={
     Object {
       "height": 100,
@@ -2640,12 +2660,12 @@ exports[`Table table can receive expandColumnKey 1`] = `
   }
 >
   <div
-    className="hig__table__table hig__table__table-main"
+    className="hig__table__table hig--light-theme hig__table__table-main"
   >
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__header"
+      className="ReactVirtualized__Grid hig__table__header hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -2680,7 +2700,7 @@ exports[`Table table can receive expandColumnKey 1`] = `
         }
       >
         <div
-          className="hig__table__header-row"
+          className="hig__table__header-row hig--light-theme"
           style={
             Object {
               "headerStyle": undefined,
@@ -2694,7 +2714,7 @@ exports[`Table table can receive expandColumnKey 1`] = `
           }
         >
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -2706,31 +2726,16 @@ exports[`Table table can receive expandColumnKey 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__expand-icon"
-              onClick={null}
-              style={
-                Object {
-                  "display": "inline-block",
-                  "fontSize": "16px",
-                  "height": "16px",
-                  "lineHeight": "16px",
-                  "marginLeft": 0,
-                  "outline": "none",
-                  "textAlign": "center",
-                  "width": "16px",
-                }
-              }
-            />
-            <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               code
             </div>
           </div>
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -2742,9 +2747,10 @@ exports[`Table table can receive expandColumnKey 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               name
             </div>
@@ -2755,7 +2761,7 @@ exports[`Table table can receive expandColumnKey 1`] = `
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__body"
+      className="ReactVirtualized__Grid hig__table__body hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -2790,7 +2796,7 @@ exports[`Table table can receive expandColumnKey 1`] = `
         }
       >
         <div
-          className="hig__table__row hig__table__row--depth-0"
+          className="hig__table__row hig__table__row--depth-0 hig--light-theme"
           style={
             Object {
               "height": 50,
@@ -2803,7 +2809,7 @@ exports[`Table table can receive expandColumnKey 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -2815,29 +2821,13 @@ exports[`Table table can receive expandColumnKey 1`] = `
             }
           >
             <div
-              className="hig__table__expand-icon"
-              onClick={null}
-              style={
-                Object {
-                  "display": "inline-block",
-                  "fontSize": "16px",
-                  "height": "16px",
-                  "lineHeight": "16px",
-                  "marginLeft": 0,
-                  "outline": "none",
-                  "textAlign": "center",
-                  "width": "16px",
-                }
-              }
-            />
-            <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -2849,14 +2839,14 @@ exports[`Table table can receive expandColumnKey 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
         </div>
         <div
-          className="hig__table__row hig__table__row--depth-0"
+          className="hig__table__row hig__table__row--depth-0 hig--light-theme"
           style={
             Object {
               "height": 50,
@@ -2869,7 +2859,7 @@ exports[`Table table can receive expandColumnKey 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -2881,29 +2871,13 @@ exports[`Table table can receive expandColumnKey 1`] = `
             }
           >
             <div
-              className="hig__table__expand-icon"
-              onClick={null}
-              style={
-                Object {
-                  "display": "inline-block",
-                  "fontSize": "16px",
-                  "height": "16px",
-                  "lineHeight": "16px",
-                  "marginLeft": 0,
-                  "outline": "none",
-                  "textAlign": "center",
-                  "width": "16px",
-                }
-              }
-            />
-            <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -2915,7 +2889,7 @@ exports[`Table table can receive expandColumnKey 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>
@@ -2929,7 +2903,7 @@ exports[`Table table can receive expandColumnKey 1`] = `
 
 exports[`Table table can receive expandedRowKeys 1`] = `
 <div
-  className="hig__table"
+  className="hig__table hig--light-theme"
   style={
     Object {
       "height": 100,
@@ -2939,12 +2913,12 @@ exports[`Table table can receive expandedRowKeys 1`] = `
   }
 >
   <div
-    className="hig__table__table hig__table__table-main"
+    className="hig__table__table hig--light-theme hig__table__table-main"
   >
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__header"
+      className="ReactVirtualized__Grid hig__table__header hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -2979,7 +2953,7 @@ exports[`Table table can receive expandedRowKeys 1`] = `
         }
       >
         <div
-          className="hig__table__header-row"
+          className="hig__table__header-row hig--light-theme"
           style={
             Object {
               "headerStyle": undefined,
@@ -2993,7 +2967,7 @@ exports[`Table table can receive expandedRowKeys 1`] = `
           }
         >
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -3005,15 +2979,16 @@ exports[`Table table can receive expandedRowKeys 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               code
             </div>
           </div>
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -3025,9 +3000,10 @@ exports[`Table table can receive expandedRowKeys 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               name
             </div>
@@ -3038,7 +3014,7 @@ exports[`Table table can receive expandedRowKeys 1`] = `
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__body"
+      className="ReactVirtualized__Grid hig__table__body hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -3073,7 +3049,7 @@ exports[`Table table can receive expandedRowKeys 1`] = `
         }
       >
         <div
-          className="hig__table__row hig__table__row--expanded"
+          className="hig__table__row hig__table__row--expanded hig--light-theme"
           style={
             Object {
               "height": 50,
@@ -3086,7 +3062,7 @@ exports[`Table table can receive expandedRowKeys 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -3098,13 +3074,13 @@ exports[`Table table can receive expandedRowKeys 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -3116,14 +3092,14 @@ exports[`Table table can receive expandedRowKeys 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
         </div>
         <div
-          className="hig__table__row"
+          className="hig__table__row hig--light-theme"
           style={
             Object {
               "height": 50,
@@ -3136,7 +3112,7 @@ exports[`Table table can receive expandedRowKeys 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -3148,13 +3124,13 @@ exports[`Table table can receive expandedRowKeys 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -3166,7 +3142,7 @@ exports[`Table table can receive expandedRowKeys 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>
@@ -3180,7 +3156,7 @@ exports[`Table table can receive expandedRowKeys 1`] = `
 
 exports[`Table table can receive headerClassName 1`] = `
 <div
-  className="hig__table"
+  className="hig__table hig--light-theme"
   style={
     Object {
       "height": 100,
@@ -3190,12 +3166,12 @@ exports[`Table table can receive headerClassName 1`] = `
   }
 >
   <div
-    className="hig__table__table hig__table__table-main"
+    className="hig__table__table hig--light-theme hig__table__table-main"
   >
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__header"
+      className="ReactVirtualized__Grid hig__table__header hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -3230,7 +3206,7 @@ exports[`Table table can receive headerClassName 1`] = `
         }
       >
         <div
-          className="hig__table__header-row custom-class"
+          className="hig__table__header-row custom-class hig--light-theme"
           style={
             Object {
               "headerStyle": undefined,
@@ -3244,7 +3220,7 @@ exports[`Table table can receive headerClassName 1`] = `
           }
         >
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -3256,15 +3232,16 @@ exports[`Table table can receive headerClassName 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               code
             </div>
           </div>
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -3276,9 +3253,10 @@ exports[`Table table can receive headerClassName 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               name
             </div>
@@ -3289,7 +3267,7 @@ exports[`Table table can receive headerClassName 1`] = `
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__body"
+      className="ReactVirtualized__Grid hig__table__body hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -3324,7 +3302,7 @@ exports[`Table table can receive headerClassName 1`] = `
         }
       >
         <div
-          className="hig__table__row"
+          className="hig__table__row hig--light-theme"
           style={
             Object {
               "height": 50,
@@ -3337,7 +3315,7 @@ exports[`Table table can receive headerClassName 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -3349,13 +3327,13 @@ exports[`Table table can receive headerClassName 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -3367,14 +3345,14 @@ exports[`Table table can receive headerClassName 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
         </div>
         <div
-          className="hig__table__row"
+          className="hig__table__row hig--light-theme"
           style={
             Object {
               "height": 50,
@@ -3387,7 +3365,7 @@ exports[`Table table can receive headerClassName 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -3399,13 +3377,13 @@ exports[`Table table can receive headerClassName 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -3417,7 +3395,7 @@ exports[`Table table can receive headerClassName 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>
@@ -3431,7 +3409,7 @@ exports[`Table table can receive headerClassName 1`] = `
 
 exports[`Table table can receive headerHeight 1`] = `
 <div
-  className="hig__table"
+  className="hig__table hig--light-theme"
   style={
     Object {
       "height": 100,
@@ -3441,12 +3419,12 @@ exports[`Table table can receive headerHeight 1`] = `
   }
 >
   <div
-    className="hig__table__table hig__table__table-main"
+    className="hig__table__table hig--light-theme hig__table__table-main"
   >
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__header"
+      className="ReactVirtualized__Grid hig__table__header hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -3481,7 +3459,7 @@ exports[`Table table can receive headerHeight 1`] = `
         }
       >
         <div
-          className="hig__table__header-row"
+          className="hig__table__header-row hig--light-theme"
           style={
             Object {
               "headerStyle": undefined,
@@ -3495,7 +3473,7 @@ exports[`Table table can receive headerHeight 1`] = `
           }
         >
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -3507,15 +3485,16 @@ exports[`Table table can receive headerHeight 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               code
             </div>
           </div>
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -3527,9 +3506,10 @@ exports[`Table table can receive headerHeight 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               name
             </div>
@@ -3540,7 +3520,7 @@ exports[`Table table can receive headerHeight 1`] = `
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__body"
+      className="ReactVirtualized__Grid hig__table__body hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -3575,7 +3555,7 @@ exports[`Table table can receive headerHeight 1`] = `
         }
       >
         <div
-          className="hig__table__row"
+          className="hig__table__row hig--light-theme"
           style={
             Object {
               "height": 50,
@@ -3588,7 +3568,7 @@ exports[`Table table can receive headerHeight 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -3600,13 +3580,13 @@ exports[`Table table can receive headerHeight 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -3618,14 +3598,14 @@ exports[`Table table can receive headerHeight 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
         </div>
         <div
-          className="hig__table__row"
+          className="hig__table__row hig--light-theme"
           style={
             Object {
               "height": 50,
@@ -3638,7 +3618,7 @@ exports[`Table table can receive headerHeight 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -3650,13 +3630,13 @@ exports[`Table table can receive headerHeight 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -3668,7 +3648,7 @@ exports[`Table table can receive headerHeight 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>
@@ -3682,7 +3662,7 @@ exports[`Table table can receive headerHeight 1`] = `
 
 exports[`Table table can receive headerStyle 1`] = `
 <div
-  className="hig__table"
+  className="hig__table hig--light-theme"
   style={
     Object {
       "height": 100,
@@ -3692,12 +3672,12 @@ exports[`Table table can receive headerStyle 1`] = `
   }
 >
   <div
-    className="hig__table__table hig__table__table-main"
+    className="hig__table__table hig--light-theme hig__table__table-main"
   >
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__header"
+      className="ReactVirtualized__Grid hig__table__header hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -3732,7 +3712,7 @@ exports[`Table table can receive headerStyle 1`] = `
         }
       >
         <div
-          className="hig__table__header-row"
+          className="hig__table__header-row hig--light-theme"
           style={
             Object {
               "headerStyle": Object {
@@ -3748,7 +3728,7 @@ exports[`Table table can receive headerStyle 1`] = `
           }
         >
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -3760,15 +3740,16 @@ exports[`Table table can receive headerStyle 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               code
             </div>
           </div>
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -3780,9 +3761,10 @@ exports[`Table table can receive headerStyle 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               name
             </div>
@@ -3793,7 +3775,7 @@ exports[`Table table can receive headerStyle 1`] = `
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__body"
+      className="ReactVirtualized__Grid hig__table__body hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -3828,7 +3810,7 @@ exports[`Table table can receive headerStyle 1`] = `
         }
       >
         <div
-          className="hig__table__row"
+          className="hig__table__row hig--light-theme"
           style={
             Object {
               "height": 50,
@@ -3841,7 +3823,7 @@ exports[`Table table can receive headerStyle 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -3853,13 +3835,13 @@ exports[`Table table can receive headerStyle 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -3871,14 +3853,14 @@ exports[`Table table can receive headerStyle 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
         </div>
         <div
-          className="hig__table__row"
+          className="hig__table__row hig--light-theme"
           style={
             Object {
               "height": 50,
@@ -3891,7 +3873,7 @@ exports[`Table table can receive headerStyle 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -3903,13 +3885,13 @@ exports[`Table table can receive headerStyle 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -3921,7 +3903,7 @@ exports[`Table table can receive headerStyle 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>
@@ -3935,7 +3917,7 @@ exports[`Table table can receive headerStyle 1`] = `
 
 exports[`Table table can receive height 1`] = `
 <div
-  className="hig__table"
+  className="hig__table hig--light-theme"
   style={
     Object {
       "height": 100,
@@ -3945,12 +3927,12 @@ exports[`Table table can receive height 1`] = `
   }
 >
   <div
-    className="hig__table__table hig__table__table-main"
+    className="hig__table__table hig--light-theme hig__table__table-main"
   >
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__header"
+      className="ReactVirtualized__Grid hig__table__header hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -3985,7 +3967,7 @@ exports[`Table table can receive height 1`] = `
         }
       >
         <div
-          className="hig__table__header-row"
+          className="hig__table__header-row hig--light-theme"
           style={
             Object {
               "headerStyle": undefined,
@@ -3999,7 +3981,7 @@ exports[`Table table can receive height 1`] = `
           }
         >
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -4011,15 +3993,16 @@ exports[`Table table can receive height 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               code
             </div>
           </div>
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -4031,9 +4014,10 @@ exports[`Table table can receive height 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               name
             </div>
@@ -4044,7 +4028,7 @@ exports[`Table table can receive height 1`] = `
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__body"
+      className="ReactVirtualized__Grid hig__table__body hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -4079,7 +4063,7 @@ exports[`Table table can receive height 1`] = `
         }
       >
         <div
-          className="hig__table__row"
+          className="hig__table__row hig--light-theme"
           style={
             Object {
               "height": 50,
@@ -4092,7 +4076,7 @@ exports[`Table table can receive height 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -4104,13 +4088,13 @@ exports[`Table table can receive height 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -4122,14 +4106,14 @@ exports[`Table table can receive height 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
         </div>
         <div
-          className="hig__table__row"
+          className="hig__table__row hig--light-theme"
           style={
             Object {
               "height": 50,
@@ -4142,7 +4126,7 @@ exports[`Table table can receive height 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -4154,13 +4138,13 @@ exports[`Table table can receive height 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -4172,7 +4156,7 @@ exports[`Table table can receive height 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>
@@ -4186,7 +4170,7 @@ exports[`Table table can receive height 1`] = `
 
 exports[`Table table can receive rowClassName 1`] = `
 <div
-  className="hig__table"
+  className="hig__table hig--light-theme"
   style={
     Object {
       "height": 100,
@@ -4196,12 +4180,12 @@ exports[`Table table can receive rowClassName 1`] = `
   }
 >
   <div
-    className="hig__table__table hig__table__table-main"
+    className="hig__table__table hig--light-theme hig__table__table-main"
   >
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__header"
+      className="ReactVirtualized__Grid hig__table__header hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -4236,7 +4220,7 @@ exports[`Table table can receive rowClassName 1`] = `
         }
       >
         <div
-          className="hig__table__header-row"
+          className="hig__table__header-row hig--light-theme"
           style={
             Object {
               "headerStyle": undefined,
@@ -4250,7 +4234,7 @@ exports[`Table table can receive rowClassName 1`] = `
           }
         >
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -4262,15 +4246,16 @@ exports[`Table table can receive rowClassName 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               code
             </div>
           </div>
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -4282,9 +4267,10 @@ exports[`Table table can receive rowClassName 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               name
             </div>
@@ -4295,7 +4281,7 @@ exports[`Table table can receive rowClassName 1`] = `
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__body"
+      className="ReactVirtualized__Grid hig__table__body hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -4330,7 +4316,7 @@ exports[`Table table can receive rowClassName 1`] = `
         }
       >
         <div
-          className="hig__table__row custom-class"
+          className="hig__table__row custom-class hig--light-theme"
           style={
             Object {
               "height": 50,
@@ -4343,7 +4329,7 @@ exports[`Table table can receive rowClassName 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -4355,13 +4341,13 @@ exports[`Table table can receive rowClassName 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -4373,14 +4359,14 @@ exports[`Table table can receive rowClassName 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
         </div>
         <div
-          className="hig__table__row custom-class"
+          className="hig__table__row custom-class hig--light-theme"
           style={
             Object {
               "height": 50,
@@ -4393,7 +4379,7 @@ exports[`Table table can receive rowClassName 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -4405,13 +4391,13 @@ exports[`Table table can receive rowClassName 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -4423,7 +4409,7 @@ exports[`Table table can receive rowClassName 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>
@@ -4437,7 +4423,7 @@ exports[`Table table can receive rowClassName 1`] = `
 
 exports[`Table table can receive rowHeight 1`] = `
 <div
-  className="hig__table"
+  className="hig__table hig--light-theme"
   style={
     Object {
       "height": 100,
@@ -4447,12 +4433,12 @@ exports[`Table table can receive rowHeight 1`] = `
   }
 >
   <div
-    className="hig__table__table hig__table__table-main"
+    className="hig__table__table hig--light-theme hig__table__table-main"
   >
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__header"
+      className="ReactVirtualized__Grid hig__table__header hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -4487,7 +4473,7 @@ exports[`Table table can receive rowHeight 1`] = `
         }
       >
         <div
-          className="hig__table__header-row"
+          className="hig__table__header-row hig--light-theme"
           style={
             Object {
               "headerStyle": undefined,
@@ -4501,7 +4487,7 @@ exports[`Table table can receive rowHeight 1`] = `
           }
         >
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -4513,15 +4499,16 @@ exports[`Table table can receive rowHeight 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               code
             </div>
           </div>
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -4533,9 +4520,10 @@ exports[`Table table can receive rowHeight 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               name
             </div>
@@ -4546,7 +4534,7 @@ exports[`Table table can receive rowHeight 1`] = `
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__body"
+      className="ReactVirtualized__Grid hig__table__body hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -4581,7 +4569,7 @@ exports[`Table table can receive rowHeight 1`] = `
         }
       >
         <div
-          className="hig__table__row"
+          className="hig__table__row hig--light-theme"
           style={
             Object {
               "height": 30,
@@ -4594,7 +4582,7 @@ exports[`Table table can receive rowHeight 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -4606,13 +4594,13 @@ exports[`Table table can receive rowHeight 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -4624,14 +4612,14 @@ exports[`Table table can receive rowHeight 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
         </div>
         <div
-          className="hig__table__row"
+          className="hig__table__row hig--light-theme"
           style={
             Object {
               "height": 30,
@@ -4644,7 +4632,7 @@ exports[`Table table can receive rowHeight 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -4656,13 +4644,13 @@ exports[`Table table can receive rowHeight 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -4674,7 +4662,7 @@ exports[`Table table can receive rowHeight 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>
@@ -4688,7 +4676,7 @@ exports[`Table table can receive rowHeight 1`] = `
 
 exports[`Table table can receive rowStyle 1`] = `
 <div
-  className="hig__table"
+  className="hig__table hig--light-theme"
   style={
     Object {
       "height": 100,
@@ -4698,12 +4686,12 @@ exports[`Table table can receive rowStyle 1`] = `
   }
 >
   <div
-    className="hig__table__table hig__table__table-main"
+    className="hig__table__table hig--light-theme hig__table__table-main"
   >
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__header"
+      className="ReactVirtualized__Grid hig__table__header hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -4738,7 +4726,7 @@ exports[`Table table can receive rowStyle 1`] = `
         }
       >
         <div
-          className="hig__table__header-row"
+          className="hig__table__header-row hig--light-theme"
           style={
             Object {
               "headerStyle": undefined,
@@ -4752,7 +4740,7 @@ exports[`Table table can receive rowStyle 1`] = `
           }
         >
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -4764,15 +4752,16 @@ exports[`Table table can receive rowStyle 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               code
             </div>
           </div>
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -4784,9 +4773,10 @@ exports[`Table table can receive rowStyle 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               name
             </div>
@@ -4797,7 +4787,7 @@ exports[`Table table can receive rowStyle 1`] = `
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__body"
+      className="ReactVirtualized__Grid hig__table__body hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -4832,7 +4822,7 @@ exports[`Table table can receive rowStyle 1`] = `
         }
       >
         <div
-          className="hig__table__row"
+          className="hig__table__row hig--light-theme"
           style={
             Object {
               "color": "red",
@@ -4846,7 +4836,7 @@ exports[`Table table can receive rowStyle 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -4858,13 +4848,13 @@ exports[`Table table can receive rowStyle 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -4876,14 +4866,14 @@ exports[`Table table can receive rowStyle 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
         </div>
         <div
-          className="hig__table__row"
+          className="hig__table__row hig--light-theme"
           style={
             Object {
               "color": "red",
@@ -4897,7 +4887,7 @@ exports[`Table table can receive rowStyle 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -4909,13 +4899,13 @@ exports[`Table table can receive rowStyle 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -4927,7 +4917,7 @@ exports[`Table table can receive rowStyle 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>
@@ -4941,7 +4931,7 @@ exports[`Table table can receive rowStyle 1`] = `
 
 exports[`Table table can receive style 1`] = `
 <div
-  className="hig__table"
+  className="hig__table hig--light-theme"
   style={
     Object {
       "color": "red",
@@ -4952,12 +4942,12 @@ exports[`Table table can receive style 1`] = `
   }
 >
   <div
-    className="hig__table__table hig__table__table-main"
+    className="hig__table__table hig--light-theme hig__table__table-main"
   >
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__header"
+      className="ReactVirtualized__Grid hig__table__header hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -4993,7 +4983,7 @@ exports[`Table table can receive style 1`] = `
         }
       >
         <div
-          className="hig__table__header-row"
+          className="hig__table__header-row hig--light-theme"
           style={
             Object {
               "headerStyle": undefined,
@@ -5007,7 +4997,7 @@ exports[`Table table can receive style 1`] = `
           }
         >
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -5019,15 +5009,16 @@ exports[`Table table can receive style 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               code
             </div>
           </div>
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -5039,9 +5030,10 @@ exports[`Table table can receive style 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               name
             </div>
@@ -5052,7 +5044,7 @@ exports[`Table table can receive style 1`] = `
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__body"
+      className="ReactVirtualized__Grid hig__table__body hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -5088,7 +5080,7 @@ exports[`Table table can receive style 1`] = `
         }
       >
         <div
-          className="hig__table__row"
+          className="hig__table__row hig--light-theme"
           style={
             Object {
               "height": 50,
@@ -5101,7 +5093,7 @@ exports[`Table table can receive style 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -5113,13 +5105,13 @@ exports[`Table table can receive style 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -5131,14 +5123,14 @@ exports[`Table table can receive style 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
         </div>
         <div
-          className="hig__table__row"
+          className="hig__table__row hig--light-theme"
           style={
             Object {
               "height": 50,
@@ -5151,7 +5143,7 @@ exports[`Table table can receive style 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -5163,13 +5155,13 @@ exports[`Table table can receive style 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -5181,7 +5173,7 @@ exports[`Table table can receive style 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>
@@ -5195,7 +5187,7 @@ exports[`Table table can receive style 1`] = `
 
 exports[`Table table can receive width 1`] = `
 <div
-  className="hig__table"
+  className="hig__table hig--light-theme"
   style={
     Object {
       "height": 100,
@@ -5205,12 +5197,12 @@ exports[`Table table can receive width 1`] = `
   }
 >
   <div
-    className="hig__table__table hig__table__table-main"
+    className="hig__table__table hig--light-theme hig__table__table-main"
   >
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__header"
+      className="ReactVirtualized__Grid hig__table__header hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -5245,7 +5237,7 @@ exports[`Table table can receive width 1`] = `
         }
       >
         <div
-          className="hig__table__header-row"
+          className="hig__table__header-row hig--light-theme"
           style={
             Object {
               "headerStyle": undefined,
@@ -5259,7 +5251,7 @@ exports[`Table table can receive width 1`] = `
           }
         >
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -5271,15 +5263,16 @@ exports[`Table table can receive width 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               code
             </div>
           </div>
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -5291,9 +5284,10 @@ exports[`Table table can receive width 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               name
             </div>
@@ -5304,7 +5298,7 @@ exports[`Table table can receive width 1`] = `
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__body"
+      className="ReactVirtualized__Grid hig__table__body hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -5339,7 +5333,7 @@ exports[`Table table can receive width 1`] = `
         }
       >
         <div
-          className="hig__table__row"
+          className="hig__table__row hig--light-theme"
           style={
             Object {
               "height": 50,
@@ -5352,7 +5346,7 @@ exports[`Table table can receive width 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -5364,13 +5358,13 @@ exports[`Table table can receive width 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -5382,14 +5376,14 @@ exports[`Table table can receive width 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
         </div>
         <div
-          className="hig__table__row"
+          className="hig__table__row hig--light-theme"
           style={
             Object {
               "height": 50,
@@ -5402,7 +5396,7 @@ exports[`Table table can receive width 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -5414,13 +5408,13 @@ exports[`Table table can receive width 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -5432,7 +5426,7 @@ exports[`Table table can receive width 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>
@@ -5446,7 +5440,7 @@ exports[`Table table can receive width 1`] = `
 
 exports[`Table table can specific a different rowKey 1`] = `
 <div
-  className="hig__table"
+  className="hig__table hig--light-theme"
   style={
     Object {
       "height": 100,
@@ -5456,12 +5450,12 @@ exports[`Table table can specific a different rowKey 1`] = `
   }
 >
   <div
-    className="hig__table__table hig__table__table-main"
+    className="hig__table__table hig--light-theme hig__table__table-main"
   >
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__header"
+      className="ReactVirtualized__Grid hig__table__header hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -5496,7 +5490,7 @@ exports[`Table table can specific a different rowKey 1`] = `
         }
       >
         <div
-          className="hig__table__header-row"
+          className="hig__table__header-row hig--light-theme"
           style={
             Object {
               "headerStyle": undefined,
@@ -5510,7 +5504,7 @@ exports[`Table table can specific a different rowKey 1`] = `
           }
         >
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -5522,15 +5516,16 @@ exports[`Table table can specific a different rowKey 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               code
             </div>
           </div>
           <div
-            className="hig__table__header-column"
+            className="hig__table__header-column hig--light-theme"
             onClick={null}
             role="button"
             style={
@@ -5542,9 +5537,10 @@ exports[`Table table can specific a different rowKey 1`] = `
                 "width": 50,
               }
             }
+            tabIndex="-1"
           >
             <div
-              className="hig__table__header-column-text"
+              className="hig__table__header-column-text hig--light-theme"
             >
               name
             </div>
@@ -5555,7 +5551,7 @@ exports[`Table table can specific a different rowKey 1`] = `
     <div
       aria-label="grid"
       aria-readonly={true}
-      className="ReactVirtualized__Grid hig__table__body"
+      className="ReactVirtualized__Grid hig__table__body hig--light-theme"
       id={undefined}
       onScroll={[Function]}
       role="grid"
@@ -5590,7 +5586,7 @@ exports[`Table table can specific a different rowKey 1`] = `
         }
       >
         <div
-          className="hig__table__row"
+          className="hig__table__row hig--light-theme"
           style={
             Object {
               "height": 50,
@@ -5603,7 +5599,7 @@ exports[`Table table can specific a different rowKey 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -5615,13 +5611,13 @@ exports[`Table table can specific a different rowKey 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -5633,14 +5629,14 @@ exports[`Table table can specific a different rowKey 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               1
             </div>
           </div>
         </div>
         <div
-          className="hig__table__row"
+          className="hig__table__row hig--light-theme"
           style={
             Object {
               "height": 50,
@@ -5653,7 +5649,7 @@ exports[`Table table can specific a different rowKey 1`] = `
           }
         >
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -5665,13 +5661,13 @@ exports[`Table table can specific a different rowKey 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>
           </div>
           <div
-            className="hig__table__row-column"
+            className="hig__table__row-column hig--light-theme"
             style={
               Object {
                 "WebkitFlex": "0 1 auto",
@@ -5683,7 +5679,7 @@ exports[`Table table can specific a different rowKey 1`] = `
             }
           >
             <div
-              className="hig__table__row-column-text"
+              className="hig__table__row-column-text hig--light-theme"
             >
               2
             </div>

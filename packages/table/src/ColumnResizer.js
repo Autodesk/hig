@@ -1,7 +1,10 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+
 import React from "react";
 import PropTypes from "prop-types";
-import cn from "classnames";
+import cx from "classnames";
 import { DraggableCore } from "react-draggable";
+import { ThemeContext } from "@hig/themes";
 import throttle from "lodash/throttle";
 import noop from "lodash/noop";
 
@@ -10,81 +13,80 @@ const MIN_WIDTH = 16;
 const THROTTLE_WAIT = 50;
 
 /**
- * default ColumnResizer for the Table
+ * Default ColumnResizer
  */
 class ColumnResizer extends React.PureComponent {
-  constructor(props) {
-    super(props);
+  /** @todo Don't store component state on class properties */
+  lastX = INVALID_VALUE;
+  width = 0;
 
-    this.lastX = INVALID_VALUE;
-    this.width = 0;
-
-    this._handleDrag = this._handleDrag.bind(this);
-    this._handleStart = this._handleStart.bind(this);
-    this._handleStop = this._handleStop.bind(this);
-    this._handleClick = this._handleClick.bind(this);
-  }
-
-  render() {
-    const { className, style, width, disabled } = this.props;
-
-    const cls = cn("hig__table__column-resizer", className);
-    return (
-      <DraggableCore
-        axis="x"
-        disabled={disabled}
-        onStart={this._handleStart}
-        onDrag={throttle(this._handleDrag, THROTTLE_WAIT)}
-        onStop={this._handleStop}
-      >
-        <div
-          className={cls}
-          onClick={this._handleClick}
-          style={{
-            position: "absolute",
-            top: 0,
-            bottom: 0,
-            right: 0,
-            cursor: "ew-resize",
-            borderRightStyle: "solid",
-            ...style,
-            borderRightWidth: width
-          }}
-        />
-      </DraggableCore>
-    );
-  }
-
-  _handleDrag(e, data) {
+  handleDrag = (e, data) => {
     if (this.lastX === INVALID_VALUE) {
       this.lastX = data.lastX;
+
       return true;
     }
+
     const movedX = data.x - this.lastX;
+
     if (!movedX) return true;
+
     this.lastX = data.x;
     this.width = this.width + movedX;
 
-    const { column } = this.props;
+    const { column, onResize } = this.props;
+
     if (column.maxWidth && this.width >= column.maxWidth) return true;
     /** @todo Allow value of `0` as column.minWidth */
     if (this.width <= (column.minWidth || MIN_WIDTH)) return true;
 
-    return this.props.onResize(this.props.column, this.width);
-  }
+    return onResize(column, this.width);
+  };
 
-  _handleStart() {
+  handleStart = () => {
     this.lastX = INVALID_VALUE;
     this.width = this.props.column.width;
+
     return this.props.onResizeStart(this.props.column);
-  }
+  };
 
-  _handleStop() {
-    return this.props.onResizeStop(this.props.column);
-  }
+  handleStop = () => this.props.onResizeStop(this.props.column);
 
-  _handleClick(e) {
+  handleClick = e => {
     e.stopPropagation();
+  };
+
+  render() {
+    const { className, style, width, disabled } = this.props;
+
+    return (
+      <ThemeContext.Consumer>
+        {({ themeClass }) => (
+          <DraggableCore
+            axis="x"
+            disabled={disabled}
+            onStart={this.handleStart}
+            onDrag={throttle(this.handleDrag, THROTTLE_WAIT)}
+            onStop={this.handleStop}
+          >
+            <div
+              role="separator"
+              aria-orientation="vertical"
+              className={cx(
+                "hig__table__column-resizer",
+                themeClass,
+                className
+              )}
+              onClick={this.handleClick}
+              style={{
+                ...style,
+                borderRightWidth: width
+              }}
+            />
+          </DraggableCore>
+        )}
+      </ThemeContext.Consumer>
+    );
   }
 }
 
