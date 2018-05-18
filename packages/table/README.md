@@ -1,6 +1,6 @@
 # Table
 
-Tables are [...].
+Tables represent tabular data in columns and rows.
 
 <!-- TODO: Write description -->
 
