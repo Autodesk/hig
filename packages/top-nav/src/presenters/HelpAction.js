@@ -4,6 +4,9 @@ import Icon, { names } from "@hig/icon";
 /** @todo Move flyout into its own package */
 import Flyout from "hig-react/lib/elements/components/Flyout";
 
+import "@hig/icon/build/index.css";
+import "hig-react/lib/hig-react.css";
+
 import Action from "./Action";
 
 export default function HelpAction({ children }) {
