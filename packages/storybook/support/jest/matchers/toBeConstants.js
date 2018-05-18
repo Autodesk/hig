@@ -1,5 +1,5 @@
 const CONSTANT_MATCHER = /^[A-Z0-9_]+$/;
-const VALUE_MATCHER = /^[a-z0-9-]+$/;
+const VALUE_MATCHER = /^[a-z0-9-_]+$/;
 
 /**
  * @param {string} key
