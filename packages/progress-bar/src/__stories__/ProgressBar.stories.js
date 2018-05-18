@@ -1,12 +1,18 @@
-import React from "react";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
-import ProgressBar from "../index";
-import infoOptions from "./infoOptions";
 
-storiesOf("ProgressBar", module)
-  .add("indeterminate", withInfo(infoOptions)(() => <ProgressBar />))
-  .add(
-    "determinate",
-    withInfo(infoOptions)(() => <ProgressBar percentComplete={33} />)
+import infoOptions from "./infoOptions";
+import renderStory from "./renderStory";
+import stories from "./stories";
+
+const storybook = storiesOf("ProgressBar", module);
+
+stories.forEach(({ description, getProps }) => {
+  storybook.add(
+    description,
+    withInfo(infoOptions)(() => {
+      const props = getProps();
+      return renderStory(props);
+    })
   );
+});
