@@ -1,11 +1,9 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-
 import HigNotifications from "hig-react/lib/elements/components/GlobalNav/TopNav/Notifications";
 import Notification from "hig-react/lib/elements/components/GlobalNav/TopNav/Notification";
 
 import TopNav from "../index";
-
 import accountLogo from "./accounts-logo.svg";
 
 const storybook = storiesOf("TopNav", module);
@@ -50,6 +48,24 @@ storybook.add("accounts", () => (
           </TopNav.ProfileContent>
         </TopNav.ProfileAction>
       </TopNav.Interactions>
+    }
+  />
+));
+
+storybook.add("with text logo", () => (
+  <TopNav
+    logo={<TopNav.Logo link="https://autodesk.com">Autodesk HIG</TopNav.Logo>}
+  />
+));
+
+storybook.add("using TopNav.LogoText", () => (
+  <TopNav
+    logo={
+      <TopNav.Logo link="https://autodesk.com" label="Autodesk HIG">
+        <TopNav.LogoText>
+          AUTODESK <strong>HIG</strong>
+        </TopNav.LogoText>
+      </TopNav.Logo>
     }
   />
 ));

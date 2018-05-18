@@ -1,6 +1,7 @@
 @import "~@hig/styles/mixins/base.scss";
 @import "~@hig/styles/mixins/colors.scss";
 @import "~@hig/styles/mixins/shadows.scss";
+@import "~@hig/styles/mixins/typography.scss";
 
 .hig__top-nav {
   @import "./tokens.scss";
@@ -47,7 +48,18 @@
 
 .hig__top-nav__logo {
   display: flex;
+  text-decoration: none;
   cursor: pointer;
+}
+
+.hig__top-nav__logo-text {
+  @include typography-base;
+
+  display: inline-block;
+  margin: 0;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
 }
 
 .hig__top-nav__interactions {
@@ -120,7 +132,7 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-    color: #565C5F;
+    color: #565c5f;
     line-height: 16px;
     font-size: 12px;
   }

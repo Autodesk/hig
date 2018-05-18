@@ -1,3 +1,5 @@
+import "@hig/styles/build/fonts.css";
+
 import Action from "./presenters/Action";
 import HelpAction from "./presenters/HelpAction";
 import Interactions from "./presenters/Interactions";
