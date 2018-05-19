@@ -1,6 +1,6 @@
 import React from "react";
+import TextLink from "@hig/text-link";
 import Timestamp from "@hig/timestamp";
-import { TextLink } from "hig-react";
 
 const minutesDate1 = new Date();
 const minutesDate2 = new Date();
@@ -32,11 +32,12 @@ const sampleNotifications = [
         <p>
           <TextLink
             href="https://github.com/Autodesk/hig"
-            text="Manage renewal"
             onClick={() => {
               console.log("notifications id 1");
             }}
-          />
+          >
+            Manage renewal
+          </TextLink>
         </p>
       </div>
     )
@@ -59,11 +60,12 @@ const sampleNotifications = [
         <p>
           <TextLink
             href="https://github.com/Autodesk/hig"
-            text="Manage renewal"
             onClick={() => {
               console.log("notifications id 2");
             }}
-          />
+          >
+            Manage renewal
+          </TextLink>
         </p>
       </div>
     )
@@ -86,11 +88,12 @@ const sampleNotifications = [
         <p>
           <TextLink
             href="https://github.com/Autodesk/hig"
-            text="Manage renewal"
             onClick={() => {
               console.log("notifications id 2");
             }}
-          />
+          >
+            Manage Renewal
+          </TextLink>
         </p>
       </div>
     )
@@ -109,11 +112,12 @@ const sampleNotifications = [
         <p>
           <TextLink
             href="https://github.com/Autodesk/hig"
-            text="Manage renewal"
             onClick={() => {
               console.log("notifications id 2");
             }}
-          />
+          >
+            Manage renewal
+          </TextLink>
         </p>
       </div>
     )

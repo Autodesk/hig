@@ -1,16 +1,18 @@
-import React from "react";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
-import TextArea from "../index";
-import infoOptions from "./infoOptions";
 
-storiesOf("TextArea", module).add(
-  "default",
-  withInfo(infoOptions)(() => (
-    <TextArea
-      label="Tab title"
-      placeholder="Foo"
-      required="This field is required."
-    />
-  ))
-);
+import infoOptions from "./infoOptions";
+import renderStory from "./renderStory";
+import stories from "./stories";
+
+const storybook = storiesOf("TextArea", module);
+
+stories.forEach(({ description, getProps }) => {
+  storybook.add(
+    description,
+    withInfo(infoOptions)(() => {
+      const props = getProps();
+      return renderStory(props);
+    })
+  );
+});

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import cx from "classnames";
 import { ThemeContext } from "@hig/themes";
 
-import targets from "./targets";
+import { availableTargets } from "./targets";
 import { types, AVAILABLE_TYPES } from "./types";
 import classNames from "./classNames";
 import "./text-link.scss";
@@ -22,7 +22,7 @@ export default class TextLink extends Component {
     /** Called when link is clicked */
     onClick: PropTypes.func,
     /** Specify the anchor tag's target */
-    target: PropTypes.oneOf(targets),
+    target: PropTypes.oneOf(availableTargets),
     /** Indicates the style of link */
     type: PropTypes.oneOf(AVAILABLE_TYPES)
   };

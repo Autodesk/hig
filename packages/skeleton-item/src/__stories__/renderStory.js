@@ -1,0 +1,16 @@
+import React from "react";
+import KnobbedThemeProvider from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
+import DefaultExport from "../index";
+import getKnobs from "./getKnobs";
+
+export default function renderStory(props) {
+  const { children, ...otherProps } = getKnobs(props);
+
+  return (
+    <KnobbedThemeProvider>
+      <div>
+        <DefaultExport {...otherProps}>{children}</DefaultExport>
+      </div>
+    </KnobbedThemeProvider>
+  );
+}

@@ -1,24 +1,18 @@
-import React from "react";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
-import RadioButton from "../index";
-import infoOptions from "./infoOptions";
 
-storiesOf("RadioButton", module)
-  .add("default", withInfo(infoOptions)(() => <RadioButton label="Default" />))
-  .add(
-    "required",
-    withInfo(infoOptions)(() => (
-      <RadioButton label="Required" required="You must check this box" />
-    ))
-  )
-  .add(
-    "disabled",
-    withInfo(infoOptions)(() => <RadioButton label="Disabled" disabled />)
-  )
-  .add(
-    "disabled and checked",
-    withInfo(infoOptions)(() => (
-      <RadioButton label="Disabled and Checked" disabled checked />
-    ))
+import infoOptions from "./infoOptions";
+import renderStory from "./renderStory";
+import stories from "./stories";
+
+const storybook = storiesOf("RadioButton", module);
+
+stories.forEach(({ description, getProps }) => {
+  storybook.add(
+    description,
+    withInfo(infoOptions)(() => {
+      const props = getProps();
+      return renderStory(props);
+    })
   );
+});

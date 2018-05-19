@@ -3,7 +3,8 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { boolean, number } from "@storybook/addon-knobs/react";
 import { withInfo } from "@storybook/addon-info";
-import { Notifications, TextLink } from "hig-react";
+import TextLink from "@hig/text-link";
+import { Notifications } from "hig-react";
 
 import { Notification } from "../index";
 import sampleNotifications from "./notificationFixtures";
@@ -22,9 +23,9 @@ function featuredNotification() {
           account
         </p>
         <p>
-          <TextLink text="Primary link" />
+          <TextLink>Primary link</TextLink>
           {" or "}
-          <TextLink text="Secondary link" />
+          <TextLink>Secondary link</TextLink>
         </p>
       </div>
     </Notification>
