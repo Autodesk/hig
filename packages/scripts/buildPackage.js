@@ -56,7 +56,8 @@ const esModulesOutputOptions = {
 
 const cjsOutputOptions = {
   file: mainOutputFile,
-  format: "cjs"
+  format: "cjs",
+  exports: "named"
 };
 
 module.exports = async function buildPackage() {
@@ -64,6 +65,8 @@ module.exports = async function buildPackage() {
 
   const bundle = await rollup.rollup(inputOptions);
 
-  bundle.write(esModulesOutputOptions);
-  bundle.write(cjsOutputOptions);
+  return Promise.all([
+    bundle.write(esModulesOutputOptions),
+    bundle.write(cjsOutputOptions)
+  ]);
 };
