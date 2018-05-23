@@ -14,4 +14,11 @@ gemini.suite("TextField", () => {
         actions.focus("body");
       });
   });
+
+  gemini.suite("disabled", suite => {
+    suite
+      .setUrl("iframe.html?selectedKind=TextField&selectedStory=disabled")
+      .setCaptureElements(".storybook-component")
+      .capture("disabled");
+  });
 });

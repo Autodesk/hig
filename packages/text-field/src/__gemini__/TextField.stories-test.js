@@ -3,11 +3,13 @@ import { storiesOf } from "@storybook/react";
 
 import TextField from "../index";
 
-storiesOf("TextField", module).add("basic", () => (
-  <TextField
-    label="Username"
-    placeholder="email@example.com"
-    instructions="This is typically your email address."
-    required="Required"
-  />
-));
+const defaultProps = {
+  label: "Username",
+  placeholder: "email@example.com",
+  instructions: "This is typically your email address.",
+  required: "Required"
+};
+
+storiesOf("TextField", module)
+  .add("basic", () => <TextField {...defaultProps} />)
+  .add("disabled", () => <TextField {...defaultProps} disabled />);
