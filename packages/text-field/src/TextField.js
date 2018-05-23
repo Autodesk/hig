@@ -92,6 +92,11 @@ export default class TextField extends Component {
     };
   }
 
+  handleChange = event => {
+    this.setState({ value: event.target.value });
+    return this.props.onChange && this.props.onChange(event);
+  };
+
   render() {
     return (
       <div
@@ -118,7 +123,7 @@ export default class TextField extends Component {
               placeholder={this.props.placeholder}
               value={this.state.value}
               onBlur={this.props.onBlur}
-              onChange={this.props.onChange}
+              onChange={this.handleChange}
               onFocus={this.props.onFocus}
               onInput={this.props.onInput}
             />
