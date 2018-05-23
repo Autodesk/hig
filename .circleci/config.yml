@@ -25,6 +25,7 @@ jobs:
             - packages/banner/node_modules
             - packages/button/node_modules
             - packages/checkbox/node_modules
+            - packages/components/node_modules
             - packages/dropdown/node_modules
             - packages/eslint-config/node_modules
             - packages/flyout/node_modules
@@ -74,6 +75,7 @@ jobs:
             - packages/banner/build
             - packages/button/build
             - packages/checkbox/build
+            - packages/components/build
             - packages/dropdown/build
             - packages/flyout/build
             - packages/icon/build
