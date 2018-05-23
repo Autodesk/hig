@@ -48,6 +48,7 @@ jobs:
             - packages/styles/node_modules
             - packages/table/node_modules
             - packages/tabs/node_modules
+            - packages/text-area/node_modules
             - packages/text-field/node_modules
             - packages/text-link/node_modules
             - packages/themes/node_modules
@@ -95,6 +96,7 @@ jobs:
             - packages/styles/build
             - packages/table/build
             - packages/tabs/build
+            - packages/text-area/build
             - packages/text-field/build
             - packages/text-link/build
             - packages/themes/build
