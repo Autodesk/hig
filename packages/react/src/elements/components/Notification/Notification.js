@@ -51,6 +51,7 @@ export default class Notification extends Component {
               <IconButton
                 onClick={this.dismissFeaturedNotification}
                 icon="close-notification"
+                title="Dismiss featured notification"
                 type="transparent"
               />
             </div>
