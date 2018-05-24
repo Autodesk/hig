@@ -136,34 +136,15 @@
   }
 }
 
-.hig__text-field__clear-button {
-  background: none;
-  border: none;
-  outline: none;
+.hig__text-field__clear {
   position: absolute;
-  display: none;
   top: 14px;
   right: 14px;
   width: 24px;
   height: 24px;
 
-  &:hover {
-    cursor: pointer;
-  }
-
-  .hig__text-field--clear-button-visible & {
-    display: block;
-  }
-
   .hig__text-field--disabled & {
     display: none;
-  }
-
-  .hig__icon {
-    position: relative;
-    width: 30px;
-    height: 30px;
-    bottom: 3px;
   }
 }
 

@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
+import IconButton from "@hig/icon-button";
 import Input from "./presenters/Input";
+
+import "./text-field.scss";
 
 export default class TextField extends Component {
   static propTypes = {
@@ -98,11 +101,25 @@ export default class TextField extends Component {
     return this.props.onChange && this.props.onChange(event);
   };
 
+  handleInputClear = event => {
+    this.setState({ value: "" });
+    // @TODO: seems we should also trigger the onChange handler?
+    return (
+      this.props.onClearButtonClick && this.props.onClearButtonClick(event)
+    );
+  };
+
+  hasClearableInput = () =>
+    this.props.showClearButton &&
+    this.state.value &&
+    this.state.value.length > 0;
+
   render() {
     return (
       <div
         className={cx("hig__text-field", {
-          "hig__text-field--required": this.props.required
+          "hig__text-field--required": this.props.required,
+          "hig__text-field--clear-button-visible": this.hasClearableInput()
         })}
       >
         {this.props.icon && (
@@ -137,11 +154,15 @@ export default class TextField extends Component {
               </label>
             )}
 
-            {this.props.showClearButton && (
-              <button
-                className="hig__text-field__clear-button hig__text-field--clear-button-visible"
-                onClick={this.props.onClearButtonClick}
-              />
+            {this.hasClearableInput() && (
+              <span className="hig__text-field__clear">
+                <IconButton
+                  type="transparent"
+                  icon="close"
+                  title="Clear field"
+                  onClick={this.handleInputClear}
+                />
+              </span>
             )}
           </div>
 

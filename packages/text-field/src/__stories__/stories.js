@@ -4,7 +4,8 @@ export default [
     getProps: () => ({
       label: "Comments",
       placeholder: "Enter your comments here.",
-      required: "This field is required."
+      required: "This field is required.",
+      showClearButton: true
     })
   },
   {

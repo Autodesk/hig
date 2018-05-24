@@ -7,7 +7,8 @@ const defaultProps = {
   label: "Username",
   placeholder: "email@example.com",
   instructions: "This is typically your email address.",
-  required: "Required"
+  required: "Required",
+  showClearButton: true
 };
 
 storiesOf("TextField", module)
