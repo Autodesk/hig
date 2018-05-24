@@ -6,6 +6,10 @@ import Input from "./presenters/Input";
 
 import "./text-field.scss";
 
+function generatedId() {
+  return `text-field-${Math.floor(Math.random() * 100000, 5)}`;
+}
+
 export default class TextField extends Component {
   static propTypes = {
     /**
@@ -24,6 +28,10 @@ export default class TextField extends Component {
      * When true, displays passed error text. When false, displays instructions with error styling.
      */
     hideInstructionsOnErrors: PropTypes.bool,
+    /**
+     * HTML ID attribute
+     */
+    id: PropTypes.string,
     /**
      * Icon for the field, either the name of an included icon, or an svg string of a custom icon
      */
@@ -83,18 +91,13 @@ export default class TextField extends Component {
   };
 
   static defaultProps = {
+    id: generatedId(),
     type: "text"
   };
 
-  constructor(props) {
-    super(props);
-
-    const generatedId = Math.floor(Math.random() * 100000, 5);
-    this.state = {
-      id: `text-field-${generatedId}`,
-      value: this.props.defaultValue || this.props.value
-    };
-  }
+  state = {
+    value: this.props.defaultValue || this.props.value
+  };
 
   handleChange = event => {
     this.setState({ value: event.target.value });
@@ -128,10 +131,10 @@ export default class TextField extends Component {
 
         <div className="hig__text-field__content">
           <div className="hig__text-field__input-wrapper">
-            <label className="hig__text-field__icon" htmlFor={this.state.id} />
+            <label className="hig__text-field__icon" htmlFor={this.props.id} />
 
             <Input
-              id={this.state.id}
+              id={this.props.id}
               value={this.state.value}
               onChange={this.handleChange}
               name={this.props.name}
@@ -145,7 +148,7 @@ export default class TextField extends Component {
 
             {this.props.label && (
               <label
-                htmlFor={this.state.id}
+                htmlFor={this.props.id}
                 className={cx("hig__text-field__label", {
                   "hig__text-field__label--visible": this.props.label
                 })}
