@@ -47,6 +47,7 @@ nohup.out
 
 # Files generated during CI
 .dependency-hash
+.archives
 
 # Environment Variables
 .env

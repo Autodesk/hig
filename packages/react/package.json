@@ -56,7 +56,6 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "classnames": "^2.2.5",
-    "concurrently": "^3.5.1",
     "css-loader": "^0.28.10",
     "dotenv": "^5.0.1",
     "enzyme": "^2.9.1",
