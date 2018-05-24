@@ -1,6 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import LogoText from "./LogoText";
+
+function renderChildren(children) {
+  if (typeof children === "string") {
+    return <LogoText>{children}</LogoText>;
+  }
+
+  return children;
+}
+
 export default function Logo({
   label,
   link,
@@ -20,7 +30,7 @@ export default function Logo({
       onClick={onClick}
       dangerouslySetInnerHTML={dangerouslySetInnerHTML}
     >
-      {children}
+      {renderChildren(children)}
     </Wrapper>
   );
 }
