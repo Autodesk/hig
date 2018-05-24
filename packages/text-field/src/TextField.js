@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
+import Input from "./presenters/Input";
 
 export default class TextField extends Component {
   static propTypes = {
@@ -112,18 +113,15 @@ export default class TextField extends Component {
           <div className="hig__text-field__input-wrapper">
             <label className="hig__text-field__icon" htmlFor={this.state.id} />
 
-            <input
-              name={this.props.name}
+            <Input
               id={this.state.id}
-              className={cx("hig__text-field__input", {
-                "hig__text-field__input--no-value": !this.state.value
-              })}
+              value={this.state.value}
+              onChange={this.handleChange}
+              name={this.props.name}
               type={this.props.type}
               disabled={this.props.disabled}
               placeholder={this.props.placeholder}
-              value={this.state.value}
               onBlur={this.props.onBlur}
-              onChange={this.handleChange}
               onFocus={this.props.onFocus}
               onInput={this.props.onInput}
             />
