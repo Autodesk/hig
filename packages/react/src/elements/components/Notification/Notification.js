@@ -3,9 +3,9 @@ import Transition from "react-transition-group/Transition";
 import PropTypes from "prop-types";
 import cx from "classnames";
 import IconButton from "@hig/icon-button";
+import Timestamp from "@hig/timestamp";
 import RichText from "../RichText";
 import "./notification.scss";
-import Timestamp from "../Timestamp";
 
 const COMPONENT_CLASS = "hig__notification";
 const FEATURED_COMPONENT_CLASS = "hig__notification--featured";
@@ -104,9 +104,9 @@ Notification.propTypes = {
   /**
    * Content for notification
    */
-  children: PropTypes.node
+  children: PropTypes.node,
   /**
    * Timestamp for notification
    */
-  // timestamp: PropTypes.oneOfType([PropTypes.string, PropTypes.instanceOf(Date)]) // ISO date string
+  timestamp: PropTypes.string // ISO date string
 };
