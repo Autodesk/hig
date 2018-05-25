@@ -1,18 +1,27 @@
 import React from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
+import isEqual from "lodash/isEqual";
 import { ThemeContext } from "@hig/themes";
 
 /**
  * Header component for the Table
  */
-class TableHeader extends React.PureComponent {
+class TableHeader extends React.Component {
+  shouldComponentUpdate(nextProps, nextState) {
+    return (
+      nextProps.className !== this.props.className ||
+      !isEqual(nextProps.style, this.props.style) ||
+      nextProps.columns !== this.props.columns ||
+      nextProps.renderCell !== this.props.renderCell
+    );
+  }
+
   render() {
     const {
       className,
       style,
       columns,
-      isScrolling,
       expandColumnKey,
       renderHeader,
       renderCell,
@@ -20,12 +29,11 @@ class TableHeader extends React.PureComponent {
     } = this.props;
 
     const cells = renderHeader
-      ? renderHeader({ isScrolling, columns })
+      ? renderHeader({ columns })
       : columns.map((column, columnIndex) =>
           renderCell({
             column,
             columnIndex,
-            isScrolling,
             expandIcon: column.key === expandColumnKey && <ExpandIcon />
           })
         );
@@ -46,7 +54,6 @@ TableHeader.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
   columns: PropTypes.arrayOf(PropTypes.object).isRequired,
-  isScrolling: PropTypes.bool,
   expandColumnKey: PropTypes.string,
   renderHeader: PropTypes.func,
   renderCell: PropTypes.func,
