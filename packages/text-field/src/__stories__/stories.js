@@ -1,3 +1,6 @@
+import React from "react";
+import Icon from "@hig/icon";
+
 export default [
   {
     description: "default",
@@ -14,6 +17,15 @@ export default [
       label: "Comments",
       placeholder: "Enter your comments here.",
       disabled: true
+    })
+  },
+  {
+    description: "with preceding icon",
+    getProps: () => ({
+      label: "Comments",
+      placeholder: "Enter your comments here.",
+      required: "This field is required.",
+      icon: <Icon name="visible" />
     })
   }
 ];

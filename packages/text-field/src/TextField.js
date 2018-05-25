@@ -33,9 +33,9 @@ export default class TextField extends Component {
      */
     id: PropTypes.string,
     /**
-     * Icon for the field, either the name of an included icon, or an svg string of a custom icon
+     * Icon element that precedes the input.
      */
-    icon: PropTypes.string,
+    icon: PropTypes.node,
     /**
      * Instructional text for the field
      */
@@ -125,13 +125,22 @@ export default class TextField extends Component {
           "hig__text-field--clear-button-visible": this.hasClearableInput()
         })}
       >
-        {this.props.icon && (
-          <div className="hig__text-field__icon-spacer">{this.props.icon}</div>
-        )}
-
-        <div className="hig__text-field__content">
+        <div
+          className={cx("hig__text-field__content", {
+            "hig__text-field__content--with-icon": this.props.icon
+          })}
+        >
           <div className="hig__text-field__input-wrapper">
-            <label className="hig__text-field__icon" htmlFor={this.props.id} />
+            {this.props.icon && (
+              <label
+                className={cx("hig__text-field__icon-v1", {
+                  "hig__text-field__icon-v1--disabled": this.props.disabled
+                })}
+                htmlFor={this.props.id}
+              >
+                {this.props.icon}
+              </label>
+            )}
 
             <Input
               id={this.props.id}

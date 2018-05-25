@@ -13,7 +13,6 @@ const knobLabels = {
   errors: "Error Message",
   hideInstructionsOnErrors: "Hide Instructions for Errors",
   id: "ID",
-  icon: "Icon Name",
   instructions: "Instructions",
   label: "Label",
   name: "Name",
@@ -34,7 +33,6 @@ export default function getKnobs(props) {
     disabled,
     errors,
     hideInstructionsOnErrors,
-    icon,
     id,
     instructions,
     label,
@@ -65,7 +63,6 @@ export default function getKnobs(props) {
       hideInstructionsOnErrors,
       knobGroupIds.errorHandling
     ),
-    icon: text(knobLabels.icon, icon, knobGroupIds.basic),
     id: text(knobLabels.id, id, knobGroupIds.form),
     instructions: text(
       knobLabels.instructions,

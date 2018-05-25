@@ -21,4 +21,13 @@ gemini.suite("TextField", () => {
       .setCaptureElements(".storybook-component")
       .capture("disabled");
   });
+
+  gemini.suite("with preceding icon", suite => {
+    suite
+      .setUrl(
+        "iframe.html?selectedKind=TextField&selectedStory=with%20preceding%20icon"
+      )
+      .setCaptureElements(".storybook-component")
+      .capture("with preceding icon");
+  });
 });
