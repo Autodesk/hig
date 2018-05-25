@@ -13,7 +13,7 @@
   "files": ["build/*"],
   "dependencies": {
     "@hig/avatar": "^0.1.0-alpha",
-    "@hig/banner": "^0.1.0-alpha",
+    "@hig/banner": "^0.1.1-alpha",
     "@hig/button": "^0.1.0-alpha",
     "@hig/checkbox": "^0.1.0-alpha",
     "@hig/dropdown": "^0.1.0-alpha",
