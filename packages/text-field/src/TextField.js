@@ -117,6 +117,17 @@ export default class TextField extends Component {
     this.state.value &&
     this.state.value.length > 0;
 
+  shouldShowInstructions = () => {
+    if (this.props.instructions) {
+      if (this.props.errors) {
+        return !this.props.hideInstructionsOnErrors;
+      }
+      return true;
+    }
+
+    return false;
+  };
+
   render() {
     return (
       <div
@@ -178,8 +189,7 @@ export default class TextField extends Component {
             )}
           </div>
 
-          {(this.props.instructions ||
-            (this.props.errors && !this.props.hideInstructionsOnErrors)) && (
+          {this.shouldShowInstructions() && (
             <p className="hig__text-field__instructions">
               {this.props.instructions}
             </p>

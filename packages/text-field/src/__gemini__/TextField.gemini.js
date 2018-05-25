@@ -22,12 +22,21 @@ gemini.suite("TextField", () => {
       .capture("disabled");
   });
 
-  gemini.suite("with preceding icon", suite => {
+  gemini.suite("errors", suite => {
     suite
       .setUrl(
-        "iframe.html?selectedKind=TextField&selectedStory=with%20preceding%20icon"
+        "iframe.html?selectedKind=TextField&selectedStory=with%20error%20message"
       )
       .setCaptureElements(".storybook-component")
-      .capture("with preceding icon");
+      .capture("with error message");
+  });
+
+  gemini.suite("with errors replacing instructions", suite => {
+    suite
+      .setUrl(
+        "iframe.html?selectedKind=TextField&selectedStory=with%20errors%20replacing%20instructions"
+      )
+      .setCaptureElements(".storybook-component")
+      .capture("with errors replacing instructions");
   });
 });

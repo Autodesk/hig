@@ -17,4 +17,33 @@ describe("TextField", () => {
       expect(wrapper.find(Input).prop("id")).toEqual("important-field");
     });
   });
+
+  describe("when displaying instructions", () => {
+    const sampleInstructions = "Fill this out.";
+
+    it("displays instructions without errors", () => {
+      const wrapper = mount(<TextField instructions={sampleInstructions} />);
+      expect(wrapper.text()).toEqual(expect.stringMatching(sampleInstructions));
+    });
+
+    it("displays instructions alongside errors", () => {
+      const wrapper = mount(
+        <TextField errors="Errors!" instructions={sampleInstructions} />
+      );
+      expect(wrapper.text()).toEqual(expect.stringMatching(sampleInstructions));
+    });
+
+    it("hides instructions when specifically configured to", () => {
+      const wrapper = mount(
+        <TextField
+          instructions={sampleInstructions}
+          errors="Errors!"
+          hideInstructionsOnErrors
+        />
+      );
+      expect(wrapper.text()).not.toEqual(
+        expect.stringMatching(sampleInstructions)
+      );
+    });
+  });
 });

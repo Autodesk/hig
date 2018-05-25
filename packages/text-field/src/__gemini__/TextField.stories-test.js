@@ -17,4 +17,17 @@ storiesOf("TextField", module)
   .add("disabled", () => <TextField {...defaultProps} disabled />)
   .add("with preceding icon", () => (
     <TextField {...defaultProps} icon={<Icon name="visible" />} />
+  ))
+  .add("with error message", () => (
+    <TextField
+      {...defaultProps}
+      errors="This username has already been taken."
+    />
+  ))
+  .add("with errors replacing instructions", () => (
+    <TextField
+      {...defaultProps}
+      errors="This username has already been taken."
+      hideInstructionsOnErrors
+    />
   ));
