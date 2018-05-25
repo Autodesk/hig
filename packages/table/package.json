@@ -19,7 +19,7 @@
     "lodash": "^4.17.5",
     "react-draggable": "^3.0.5",
     "react-lifecycles-compat": "^3.0.2",
-    "react-virtualized": "^9.19.1"
+    "react-virtualized": "^9.18.5"
   },
   "peerDependencies": {
     "prop-types": "^15.5.10",
