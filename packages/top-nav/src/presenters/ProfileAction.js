@@ -4,6 +4,8 @@ import Avatar from "@hig/avatar";
 /** @todo Move flyout into its own package */
 import Flyout from "hig-react/lib/elements/components/Flyout";
 
+import "@hig/avatar/build/index.css";
+
 import Action from "./Action";
 
 export default function ProfileAction({ avatarName, avatarImage, children }) {

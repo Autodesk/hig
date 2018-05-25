@@ -23,6 +23,12 @@
     classnames "^2.2.5"
     react-lifecycles-compat "^3.0.2"
 
+"@hig/banner@^0.1.0-alpha":
+  version "0.1.0-alpha"
+  resolved "https://registry.yarnpkg.com/@hig/banner/-/banner-0.1.0-alpha.tgz#8fff5de637a9584750eb389c9205ffdba8e9d020"
+  dependencies:
+    hig-react "^0.28.36"
+
 "@storybook/addon-actions@3.4.0", "@storybook/addon-actions@^3.4.0":
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-3.4.0.tgz#8f6f869f708856845dff210af9340e54b443f346"
@@ -292,9 +298,17 @@
   version "0.0.38"
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.38.tgz#c1be40aa933723c608820a99a373a16d215a1ca2"
 
+"@types/estree@0.0.39":
+  version "0.0.39"
+  resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.39.tgz#e177e699ee1b8c22d23174caaa7422644389509f"
+
 "@types/jest@^19.2.3":
   version "19.2.4"
   resolved "https://registry.yarnpkg.com/@types/jest/-/jest-19.2.4.tgz#543651712535962b7dc615e18e4a381fc2687442"
+
+"@types/node@*":
+  version "10.1.2"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.1.2.tgz#1b928a0baa408fc8ae3ac012cc81375addc147c6"
 
 "@types/node@^7.0.21":
   version "7.0.56"
@@ -2604,7 +2618,7 @@ classnames@^2.2.3, classnames@^2.2.5:
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.5.tgz#fb3801d453467649ef3603c7d61a02bd129bde6d"
 
-clean-css@4.1.x:
+clean-css@4.1.x, clean-css@^4.1.11:
   version "4.1.11"
   resolved "https://registry.yarnpkg.com/clean-css/-/clean-css-4.1.11.tgz#2ecdf145aba38f54740f26cefd0ff3e03e125d6a"
   dependencies:
@@ -5806,6 +5820,12 @@ hig-react@0.28.35:
   resolved "https://registry.yarnpkg.com/hig-react/-/hig-react-0.28.35.tgz#20c48dbec466daa085186dc64af8ee807139c746"
   dependencies:
     hig-vanilla "^0.1.25"
+
+hig-react@^0.28.36:
+  version "0.28.36"
+  resolved "https://registry.yarnpkg.com/hig-react/-/hig-react-0.28.36.tgz#8b5b90970d376e76aef0399e54309b69727b4cd3"
+  dependencies:
+    hig-vanilla "^0.1.26"
 
 hmac-drbg@^1.0.0:
   version "1.0.1"
@@ -10969,6 +10989,13 @@ rollup@^0.57.1:
     rollup-pluginutils "^2.0.1"
     signal-exit "^3.0.2"
     sourcemap-codec "^1.4.1"
+
+rollup@^0.59.2:
+  version "0.59.2"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-0.59.2.tgz#37011ed83947e4e1071b66f9e7d0574b144affc9"
+  dependencies:
+    "@types/estree" "0.0.39"
+    "@types/node" "*"
 
 run-async@^2.2.0:
   version "2.3.0"
