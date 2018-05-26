@@ -2,7 +2,7 @@ defaults: &defaults
   docker:
     - image: circleci/node:8.10-stretch
 
-version: 4
+version: 2
 jobs:
   bootstrap:
     <<: *defaults
