@@ -33,17 +33,14 @@ class GridTable extends React.PureComponent {
     return frozenRowsHeight;
   }
 
-  getColumnsTotalWidth() {
-    return this.bodyRef
-      ? this.bodyRef._columnSizeAndPositionManager.getTotalSize()
-      : 0;
+  getTotalColumnsWidth() {
+    return this.bodyRef ? this.bodyRef.getTotalColumnsWidth() : 0;
   }
 
-  getRowsTotalHeight() {
+  getTotalRowsHeight() {
     return (
-      (this.bodyRef
-        ? this.bodyRef._rowSizeAndPositionManager.getTotalSize()
-        : 0) + this.getFrozenRowsHeight()
+      (this.bodyRef ? this.bodyRef.getTotalRowsHeight() : 0) +
+      this.getFrozenRowsHeight()
     );
   }
 
