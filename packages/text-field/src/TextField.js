@@ -101,23 +101,24 @@ export default class TextField extends Component {
 
   handleChange = event => {
     this.setState({ value: event.target.value });
-    return this.props.onChange && this.props.onChange(event);
+    if (this.props.onChange) this.props.onChange(event);
   };
 
   handleInputClear = event => {
     this.setState({ value: "" });
     // @TODO: seems we should also trigger the onChange handler?
-    return (
-      this.props.onClearButtonClick && this.props.onClearButtonClick(event)
-    );
+    if (this.props.onClearButtonClick) this.props.onClearButtonClick(event);
   };
 
-  hasClearableInput = () =>
-    this.props.showClearButton &&
-    this.state.value &&
-    this.state.value.length > 0;
+  hasClearableInput() {
+    return (
+      this.props.showClearButton &&
+      this.state.value &&
+      this.state.value.length > 0
+    );
+  }
 
-  shouldShowInstructions = () => {
+  shouldShowInstructions() {
     if (this.props.instructions) {
       if (this.props.errors) {
         return !this.props.hideInstructionsOnErrors;
@@ -126,14 +127,16 @@ export default class TextField extends Component {
     }
 
     return false;
-  };
+  }
 
   render() {
+    const hasClearableInput = this.hasClearableInput();
+
     return (
       <div
         className={cx("hig__text-field", {
           "hig__text-field--required": this.props.required,
-          "hig__text-field--clear-button-visible": this.hasClearableInput()
+          "hig__text-field--clear-button-visible": hasClearableInput
         })}
       >
         <div
@@ -175,7 +178,7 @@ export default class TextField extends Component {
               </label>
             )}
 
-            {this.hasClearableInput() && (
+            {hasClearableInput && (
               <span className="hig__text-field__clear">
                 <IconButton
                   type="transparent"
