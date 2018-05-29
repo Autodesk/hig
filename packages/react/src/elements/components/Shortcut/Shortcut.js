@@ -14,6 +14,7 @@ export default class Shortcut extends Component {
       <div className={COMPONENT_CLASS} title={this.props.title}>
         <IconButton
           type="transparent"
+          title={this.props.title}
           icon={this.props.icon}
           onClick={this.props.onClick}
           link={this.props.link}
