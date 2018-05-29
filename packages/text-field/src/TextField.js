@@ -169,9 +169,7 @@ export default class TextField extends Component {
             {this.props.label && (
               <label
                 htmlFor={this.props.id}
-                className={cx("hig__text-field__label", {
-                  "hig__text-field__label--visible": this.props.label
-                })}
+                className="hig__text-field__label-v1"
               >
                 {this.props.label}
               </label>

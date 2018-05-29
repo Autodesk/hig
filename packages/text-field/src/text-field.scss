@@ -30,19 +30,14 @@
   opacity: 0.3;
 }
 
-.hig__text-field__label {
+.hig__text-field__label-v1 {
   @include typography-small;
   color: transparentize($typography-base-color, .5);
-  display: none;
   position: relative;
   padding-bottom: 8px;
   transition-property: top, font-size, line-height;
   transition-duration: 0.1s, 0.1s, 0.1s;
   transition-delay: 0.1s;
-
-  &.hig__text-field__label--visible {
-    display: block;
-  }
 
   .hig__text-field__input:focus+& {
     @include typography-small;
