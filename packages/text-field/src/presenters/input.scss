@@ -1,0 +1,65 @@
+@import "~@hig/styles/mixins/colors.scss";
+@import "~@hig/styles/mixins/placeholder.scss";
+@import "~@hig/styles/mixins/typography.scss";
+
+.hig__text-field__input {
+  @include typography-base;
+  @include placeholder {
+    transition: color 0.2s;
+    color: color(hig-cool-gray-50);
+    font-size: 14px;
+  }
+
+  display: block;
+  height: 25px;
+  padding-bottom: 13px;
+  padding-right: 0px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid color(hig-cool-gray-30);
+
+  &:hover {
+    border: none;
+    border-bottom: 1px solid color(hig-turquoise-50);
+    box-shadow: 0 1px 0 color(hig-turquoise-50);
+  }
+
+  &:focus {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid color(hig-blue-60);
+    box-shadow: 0 1px 0 color(hig-blue-60);
+    @include placeholder {
+      color: color(hig-cool-gray-50);
+      font-size: 14px;
+      transition-delay: 0.2s;
+    }
+  }
+
+  &[disabled] {
+    border-bottom-style: dashed;
+    border-bottom-color: color(hig-cool-gray-20);
+    color: color(hig-cool-gray-20);
+    &:hover {
+      box-shadow: none;
+    }
+  }
+
+  &[type=password] {
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+
+  &[type=password].hig__text-field__input--no-value {
+    font-size: 14px;
+    letter-spacing: 0;
+  }
+
+  &.hig__text-field__input--no-value {
+    @include placeholder {
+      color: transparent;
+    }
+  }
+}
