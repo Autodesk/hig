@@ -1,6 +1,6 @@
 {
   "name": "@hig/styles",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "HIG Styles",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -15,10 +15,9 @@
     "mixins/*",
     "tokens/*"
   ],
-  "dependencies": {},
   "devDependencies": {
-    "@hig/babel-preset": "0.1.0",
-    "@hig/eslint-config": "0.1.0",
+    "@hig/babel-preset": "^0.1.0",
+    "@hig/eslint-config": "^0.1.0",
     "@hig/scripts": "^0.1.0",
     "mkdirp": "^0.5.1",
     "node-sass": "^4.9.0"

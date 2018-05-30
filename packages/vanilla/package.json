@@ -8,7 +8,7 @@
     "type": "git",
     "url": "git@github.com:autodesk/hig.git"
   },
-  "version": "0.1.26",
+  "version": "0.1.27",
   "main": "lib/hig.js",
   "files": [
     "lib/hig.css"
@@ -24,7 +24,7 @@
     "watch": "webpack --watch --config webpack.dev.js"
   },
   "dependencies": {
-    "hig-interface": "^0.1.18"
+    "hig-interface": "^0.1.19"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

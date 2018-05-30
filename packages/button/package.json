@@ -1,6 +1,6 @@
 {
   "name": "@hig/button",
-  "version": "0.1.0-alpha",
+  "version": "0.1.0",
   "description": "HIG Button",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -14,15 +14,15 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/themes": "^0.1.0-alpha",
+    "@hig/themes": "^0.1.0",
     "classnames": "^2.2.5"
   },
   "devDependencies": {
-    "@hig/babel-preset": "0.1.0",
-    "@hig/eslint-config": "0.1.0",
-    "@hig/icon": "0.1.0-alpha",
+    "@hig/babel-preset": "^0.1.0",
+    "@hig/eslint-config": "^0.1.0",
+    "@hig/icon": "^0.1.0",
     "@hig/scripts": "^0.1.0",
-    "@hig/styles": "^0.1.0"
+    "@hig/styles": "^0.1.1"
   },
   "peerDependencies": {
     "prop-types": "^15.5.10",
@@ -35,9 +35,13 @@
   "babel": {
     "env": {
       "test": {
-        "presets": ["@hig/babel-preset/test"]
+        "presets": [
+          "@hig/babel-preset/test"
+        ]
       }
     }
   },
-  "eslintConfig": { "extends": "@hig" }
+  "eslintConfig": {
+    "extends": "@hig"
+  }
 }

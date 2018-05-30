@@ -1,6 +1,6 @@
 {
   "name": "@hig/banner",
-  "version": "0.1.1-alpha",
+  "version": "0.1.1",
   "description": "HIG Banner",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -14,21 +14,21 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/icon": "^0.1.0-alpha",
-    "@hig/icon-button": "^0.1.0-alpha",
-    "@hig/icons": "^0.1.0-alpha",
-    "@hig/themes": "^0.1.0-alpha",
-    "@hig/typography": "^0.1.0-alpha",
+    "@hig/icon": "^0.1.0",
+    "@hig/icon-button": "^0.1.0",
+    "@hig/icons": "^0.1.0",
+    "@hig/themes": "^0.1.0",
+    "@hig/typography": "^0.1.0",
     "classnames": "^2.2.5",
     "react-lifecycles-compat": "^2.0.0"
   },
   "devDependencies": {
-    "@hig/babel-preset": "0.1.0",
-    "@hig/button": "^0.1.0-alpha",
-    "@hig/eslint-config": "0.1.0",
-    "@hig/rich-text": "^0.1.0-alpha",
+    "@hig/babel-preset": "^0.1.0",
+    "@hig/button": "^0.1.0",
+    "@hig/eslint-config": "^0.1.0",
+    "@hig/rich-text": "^0.1.0",
     "@hig/scripts": "^0.1.0",
-    "@hig/styles": "^0.1.0"
+    "@hig/styles": "^0.1.1"
   },
   "peerDependencies": {
     "prop-types": "^15.5.10",
@@ -38,11 +38,15 @@
     "build": "hig-scripts-build",
     "lint": "eslint src --color --ext .js,.jsx"
   },
-  "eslintConfig": { "extends": "@hig" },
+  "eslintConfig": {
+    "extends": "@hig"
+  },
   "babel": {
     "env": {
       "test": {
-        "presets": ["@hig/babel-preset/test"]
+        "presets": [
+          "@hig/babel-preset/test"
+        ]
       }
     }
   }

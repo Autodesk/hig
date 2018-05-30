@@ -1,6 +1,6 @@
 {
   "name": "@hig/icons",
-  "version": "0.1.0-alpha",
+  "version": "0.1.0",
   "description": "HIG icon assets",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -14,10 +14,10 @@
     "build/*"
   ],
   "devDependencies": {
-    "@hig/babel-preset": "0.1.0",
-    "@hig/eslint-config": "0.1.0",
+    "@hig/babel-preset": "^0.1.0",
+    "@hig/eslint-config": "^0.1.0",
     "@hig/scripts": "^0.1.0",
-    "@hig/styles": "^0.1.0",
+    "@hig/styles": "^0.1.1",
     "svgo": "^1.0.5"
   },
   "peerDependencies": {
@@ -33,7 +33,9 @@
   "babel": {
     "env": {
       "test": {
-        "presets": ["@hig/babel-preset/test"]
+        "presets": [
+          "@hig/babel-preset/test"
+        ]
       }
     }
   }

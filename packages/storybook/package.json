@@ -61,8 +61,8 @@
     "surge": "^0.20.1"
   },
   "dependencies": {
-    "@hig/themes": "^0.1.0-alpha",
-    "hig-react": "^0.29.0-alpha"
+    "@hig/themes": "^0.1.0",
+    "hig-react": "^0.29.0"
   },
   "eslintConfig": {
     "extends": "@hig"

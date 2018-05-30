@@ -1,6 +1,6 @@
 {
   "name": "@hig/text-field",
-  "version": "0.1.0-alpha",
+  "version": "0.1.0",
   "description": "HIG Text Field",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -14,9 +14,9 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/icon-button": "^0.1.0-alpha",
+    "@hig/icon-button": "^0.1.0",
     "classnames": "^2.2.5",
-    "hig-react": "^0.29.0-alpha",
+    "hig-react": "^0.29.0",
     "react-lifecycles-compat": "^3.0.2"
   },
   "peerDependencies": {
@@ -24,10 +24,10 @@
     "react": "^15.4.1 || ^16.3.2"
   },
   "devDependencies": {
-    "@hig/babel-preset": "0.1.0",
-    "@hig/eslint-config": "0.1.0",
+    "@hig/babel-preset": "^0.1.0",
+    "@hig/eslint-config": "^0.1.0",
     "@hig/scripts": "^0.1.0",
-    "@hig/styles": "^0.1.0"
+    "@hig/styles": "^0.1.1"
   },
   "scripts": {
     "build": "hig-scripts-build",
@@ -39,7 +39,9 @@
   "babel": {
     "env": {
       "test": {
-        "presets": ["@hig/babel-preset/test"]
+        "presets": [
+          "@hig/babel-preset/test"
+        ]
       }
     }
   }

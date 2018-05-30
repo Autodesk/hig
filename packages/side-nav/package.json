@@ -1,6 +1,6 @@
 {
   "name": "@hig/side-nav",
-  "version": "0.1.0-alpha",
+  "version": "0.1.0",
   "description": "HIG SideNav components",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -15,17 +15,17 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/icon": "^0.1.0-alpha",
-    "@hig/icon-button": "^0.1.0-alpha",
-    "@hig/skeleton-item": "^0.1.0-alpha",
-    "@hig/themes": "^0.1.0-alpha",
+    "@hig/icon": "^0.1.0",
+    "@hig/icon-button": "^0.1.0",
+    "@hig/skeleton-item": "^0.1.0",
+    "@hig/themes": "^0.1.0",
     "classnames": "^2.2.5"
   },
   "devDependencies": {
-    "@hig/babel-preset": "0.1.0",
-    "@hig/eslint-config": "0.1.0",
+    "@hig/babel-preset": "^0.1.0",
+    "@hig/eslint-config": "^0.1.0",
     "@hig/scripts": "^0.1.0",
-    "@hig/styles": "^0.1.0"
+    "@hig/styles": "^0.1.1"
   },
   "peerDependencies": {
     "prop-types": "^15.6.1",
