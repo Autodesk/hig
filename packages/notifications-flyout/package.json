@@ -1,0 +1,51 @@
+{
+  "name": "@hig/notifications-flyout",
+  "version": "0.1.0-alpha",
+  "description": "HIG NotificationsFlyout",
+  "author": "Autodesk Inc.",
+  "license": "Apache-2.0",
+  "homepage": "https://hig.autodesk.com",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "build/index.js",
+  "module": "build/index.es.js",
+  "style": "build/index.css",
+  "files": [
+    "build/*"
+  ],
+  "dependencies": {
+    "@hig/icon-button": "^0.1.0",
+    "@hig/rich-text": "^0.1.0",
+    "classnames": "^2.2.5",
+    "react-transition-group": "^2.3.0"
+  },
+  "devDependencies": {
+    "@hig/babel-preset": "^0.1.0",
+    "@hig/eslint-config": "^0.1.0",
+    "@hig/scripts": "^0.1.0",
+    "@hig/styles": "^0.1.1",
+    "@hig/timestamp": "^0.1.0",
+    "hig-react": "^0.29.0"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.6.1",
+    "react": "^15.4.1 || ^16.3.2"
+  },
+  "scripts": {
+    "build": "hig-scripts-build",
+    "lint": "eslint src --color --ext .js,.jsx"
+  },
+  "eslintConfig": {
+    "extends": "@hig"
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "presets": [
+          "@hig/babel-preset/test"
+        ]
+      }
+    }
+  }
+}

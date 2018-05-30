@@ -68,7 +68,8 @@ In the event the Tech Lead is unable to perform his or her duties, or abdicates,
 In the event there are no Core Committers, Autodesk Inc. will appoint one.
 Core Committers:
 
-- Tech Lead: Thijs Bernolet (@recyclerobot)
+- Tech Lead: Sean Durham (@nfiniteset)
+- Core Committer: Morris Allison (@morrisallison)
 
 ### See Also
 

@@ -1,11 +1,18 @@
 import React, { PureComponent } from "react";
 import PlaygroundSection from "../PlaygroundSection";
-import { Button, Notifications, Notification, TextLink } from "../../hig-react";
+import {
+  Button,
+  Notifications,
+  NotificationV1 as Notification,
+  TextLink,
+  Shortcut
+} from "../../hig-react";
 
 const sampleNotifications = [
   {
     id: 0,
     unread: true,
+    type: "primary",
     children: (
       <div>
         <p>
@@ -32,6 +39,7 @@ const sampleNotifications = [
   {
     id: 1,
     unread: true,
+    type: "success",
     children: (
       <div>
         <p>
@@ -42,6 +50,54 @@ const sampleNotifications = [
           Architecture Construction Engineering Collection<br />
           Product Design Collection<br />
         </p>
+        <p>
+          <TextLink
+            href="https://github.com/Autodesk/hig"
+            text="Manage renewal"
+            onClick={() => {
+              console.log("notifications id 2");
+            }}
+          />
+        </p>
+      </div>
+    )
+  },
+  {
+    id: 3,
+    unread: true,
+    type: "error",
+    children: (
+      <div>
+        <p>
+          <b>Your subscription expires June 15</b>
+        </p>
+        <p>
+          AutoCAD<br />
+          Architecture Construction Engineering Collection<br />
+          HIG<br />
+        </p>
+        <p>
+          <TextLink
+            href="https://github.com/Autodesk/hig"
+            text="Manage renewal"
+            onClick={() => {
+              console.log("notifications id 2");
+            }}
+          />
+        </p>
+      </div>
+    )
+  },
+  {
+    id: 4,
+    unread: true,
+    type: "warning",
+    children: (
+      <div>
+        <p>
+          <b>Your subscription expires June 15</b>
+        </p>
+        <p>A new version of Autodesk Revit is available for download.</p>
         <p>
           <TextLink
             href="https://github.com/Autodesk/hig"
@@ -120,7 +176,11 @@ class NotificationsSection extends PureComponent {
     );
 
   featuredNotification = () => (
-    <Notification id={2} onDismiss={this.featuredNotificationDismissed}>
+    <Notification
+      id={2}
+      onDismiss={this.featuredNotificationDismissed}
+      onLinkClick={this.onNotificationLinkClick}
+    >
       <div>
         <p>
           <b>New enhancements to subscription management lorum ipsom gas</b>
@@ -142,11 +202,10 @@ class NotificationsSection extends PureComponent {
     console.log("Feature notification dismissed");
   };
 
-  _initialReadNotifications(notifications) {
-    return notifications
+  _initialReadNotifications = notifications =>
+    notifications
       .filter(notification => !notification.unread)
       .map(notification => notification.id);
-  }
 
   render() {
     return (
@@ -165,20 +224,17 @@ class NotificationsSection extends PureComponent {
               console.log("notifications on click outside", event);
             }}
             onScroll={this.onNotificationsScroll}
-            unreadCount={this.state.unreadCount}
-            notifications={this.transformedNotifications(
-              this.state.notifications
-            )}
             featuredNotification={this.featuredNotification()}
             loading={this.state.notificationsLoading}
           >
             {this.state.notifications.map(notification => (
               <Notification
-                unread={notification.unread}
+                unread={!this.state.readIds.includes(notification.id)}
                 key={notification.id}
-                onLinkClick={notification.onLinkClick}
+                onLinkClick={this.onNotificationLinkClick}
                 id={notification.id}
                 title={notification.title}
+                type={notification.type}
               >
                 {notification.children}
               </Notification>
@@ -188,6 +244,40 @@ class NotificationsSection extends PureComponent {
         <hr />
         <div style={{ display: "flex", justifyContent: "flex-end" }}>
           <Notifications title="Empty Notifications" />
+        </div>
+
+        <hr />
+
+        <div style={{ display: "flex", justifyContent: "flex-end" }}>
+          <Notification
+            id={1}
+            unread
+            featured
+            onLinkClick={id => console.log("notification id", id)}
+            onDismiss={() => {
+              console.log("feaured notification dismissed");
+            }}
+          >
+            {sampleNotifications[0].children}
+          </Notification>
+        </div>
+
+        <hr />
+
+        <div style={{ display: "flex", justifyContent: "flex-end" }}>
+          <Shortcut
+            icon="settings"
+            onClick={() => console.log("shortcut clicked")}
+            title="shortcut"
+          />
+        </div>
+
+        <div style={{ display: "flex", justifyContent: "flex-end" }}>
+          <Shortcut
+            icon="settings"
+            title="shortcut"
+            link={"http://www.autodesk.com"}
+          />
         </div>
       </PlaygroundSection>
     );

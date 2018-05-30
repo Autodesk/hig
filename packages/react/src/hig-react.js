@@ -1,3 +1,5 @@
+import "@hig/styles/build/fonts.css";
+
 export { default as ActionBar } from "./adapters/ActionBar/ActionBarAdapter";
 export {
   default as ActionBarGroup
@@ -5,7 +7,7 @@ export {
 export {
   default as ActionBarSpacer
 } from "./adapters/ActionBar/ActionBarSpacerAdapter";
-export { default as Avatar } from "./adapters/AvatarAdapter";
+export { default as Avatar } from "@hig/avatar";
 export { breakpoints } from "hig-vanilla";
 export { default as Button } from "./adapters/ButtonAdapter";
 export { default as Checkbox } from "./adapters/FormElements/CheckboxAdapter";
@@ -35,8 +37,8 @@ export {
 } from "./elements/components/GlobalNav/GlobalNav";
 export { default as Grid } from "./adapters/GridAdapter";
 export { default as GridItem } from "./adapters/GridItemAdapter";
-export { default as Icon } from "./adapters/IconAdapter";
-export { default as IconButton } from "./adapters/IconButtonAdapter";
+export { default as Icon } from "@hig/icon";
+export { default as IconButton } from "@hig/icon-button";
 export { default as Image } from "./adapters/ImageAdapter";
 export { default as Modal } from "./elements/components/Modal";
 export {
@@ -45,6 +47,10 @@ export {
 export {
   default as Notification
 } from "./elements/components/GlobalNav/TopNav/Notification";
+
+export {
+  default as NotificationV1
+} from "./elements/components/Notification/index";
 
 export { default as Option } from "./adapters/FormElements/OptionAdapter";
 export {
@@ -61,6 +67,7 @@ export { default as SectionLabel } from "./adapters/SectionLabelAdapter";
 export { default as ShowMoreLess } from "./elements/components/ShowMoreLess";
 export { default as SideNav } from "./elements/components/GlobalNav/SideNav";
 export { sizes } from "hig-vanilla";
+export { default as Shortcut } from "./elements/components/Shortcut";
 export { default as SkeletonItem } from "./adapters/SkeletonItemAdapter";
 export { default as Spacer } from "./adapters/SpacerAdapter";
 export { Tab } from "./elements/components/Tabs";
@@ -72,6 +79,6 @@ export {
 } from "./adapters/Table/TextCellContentAdapter";
 export { default as TextField } from "./adapters/FormElements/TextFieldAdapter";
 export { default as TextLink } from "./adapters/TextLinkAdapter";
-export { default as Timestamp } from "./adapters/TimestampAdapter";
-export { default as Toast } from "./elements/components/Toast/Toast";
-export * from "./elements/components/Typography";
+export { default as Timestamp } from "@hig/timestamp";
+export { default as Toast } from "./elements/components/Toast";
+export * from "@hig/typography";

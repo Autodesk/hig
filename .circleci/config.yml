@@ -1,138 +1,180 @@
 defaults: &defaults
-      working_directory: ~/hig
-      docker:
-        - image: circleci/node:8.2.1
+  docker:
+    - image: circleci/node:8.10-stretch
 
-version: 4
+version: 2
 jobs:
   bootstrap:
     <<: *defaults
     steps:
       - checkout
-      - restore_cache:
-          key: dependencies-{{ checksum "yarn.lock" }}-{{ checksum "packages/react/yarn.lock" }}-{{ checksum "packages/vanilla/yarn.lock" }}
       - run:
-          name: Lerna bootstrap
-          command: yarn && yarn bootstrap
+          name: Create dependency hash
+          command: yarn run create-dependency-hash
+      - restore_cache:
+          key: v1-dependencies-{{ checksum ".dependency-hash" }}
+      - run:
+          name: Extract dependencies
+          command: yarn run extract:dependencies
+      - run:
+          name: Install Dependencies
+          command: yarn
+      - run:
+          name: Archive dependencies
+          command: yarn run archive:dependencies
       - save_cache:
-          key: dependencies-{{ checksum "yarn.lock" }}-{{ checksum "packages/react/yarn.lock" }}-{{ checksum "packages/vanilla/yarn.lock" }}
+          key: v1-dependencies-{{ checksum ".dependency-hash" }}
           paths:
-            - node_modules
-            - packages/vanilla/node_modules
-            - packages/react/node_modules
-  vanilla-build:
+            - .archives/dependencies.tgz
+  package-build:
     <<: *defaults
     steps:
       - checkout
-      - restore_cache:
-          key: dependencies-{{ checksum "yarn.lock" }}-{{ checksum "packages/react/yarn.lock" }}-{{ checksum "packages/vanilla/yarn.lock" }}
       - run:
-          name: Build (Vanilla)
-          command: yarn lib
-          working_directory: packages/vanilla
+          name: Create dependency hash
+          command: yarn run create-dependency-hash
+      - restore_cache:
+          key: v1-dependencies-{{ checksum ".dependency-hash" }}
+      - run:
+          name: Extract dependencies
+          command: yarn run extract:dependencies
+      - run:
+          name: Build all packages
+          command: yarn build
+      - run:
+          name: Archive builds
+          command: yarn run archive:builds
       - save_cache:
-          key: vanilla-build-{{ .Revision }}
+          key: v1-package-builds-{{ .Revision }}
           paths:
-            - packages/vanilla/lib
-  react-build:
-    <<: *defaults
-    steps:
-      - checkout
-      - restore_cache:
-          key: dependencies-{{ checksum "yarn.lock" }}-{{ checksum "packages/react/yarn.lock" }}-{{ checksum "packages/vanilla/yarn.lock" }}
-      - restore_cache:
-          key: vanilla-build-{{ .Revision }}
-      - run:
-          name: Build (React)
-          command: yarn lib
-          working_directory:  packages/react
-      - save_cache:
-          key: react-build-{{ .Revision }}
-          paths:
-            - packages/react/lib
-  vanilla-test:
-    <<: *defaults
-    steps:
-      - checkout
-      - restore_cache:
-          key: dependencies-{{ checksum "yarn.lock" }}-{{ checksum "packages/react/yarn.lock" }}-{{ checksum "packages/vanilla/yarn.lock" }}
-      - restore_cache:
-          key: vanilla-build-{{ .Revision }}
-      - run:
-          name: Lint (Vanilla)
-          command: yarn lint
-          working_directory: packages/vanilla
-      - run:
-          name: Start Server (Vanilla)
-          command: ./node_modules/http-server/bin/http-server
-          background: true
-          working_directory: packages/vanilla
-      - run:
-          name: Run Tests (Vanilla)
-          command: yarn gemini-ci
-          working_directory: packages/vanilla
-      - store_artifacts:
-          path: packages/vanilla/gemini-report
+            - .archives/builds.tgz
   react-test:
     <<: *defaults
     steps:
       - checkout
+      - run:
+          name: Create dependency hash
+          command: yarn run create-dependency-hash
       - restore_cache:
-          key: dependencies-{{ checksum "yarn.lock" }}-{{ checksum "packages/react/yarn.lock" }}-{{ checksum "packages/vanilla/yarn.lock" }}
+          key: v1-dependencies-{{ checksum ".dependency-hash" }}
       - restore_cache:
-          key: vanilla-build-{{ .Revision }}
-      - restore_cache:
-          key: react-build-{{ .Revision }}
+          key: v1-package-builds-{{ .Revision }}
+      - run:
+          name: Extract dependencies and builds
+          command: yarn run extract
       - run:
           name: Lint (React)
           command: yarn lint
-          working_directory: packages/react
       - run:
-          name: Run Tests (React)
+          name: Run Jest Tests
           command: yarn test-ci
-          working_directory: packages/react
+          working_directory: packages/storybook
       - store_artifacts:
-            path: packages/react/coverage
-  deploy-playground:
+          path: packages/storybook/coverage
+  visual-test:
     <<: *defaults
     steps:
       - checkout
-      - restore_cache:
-          key: dependencies-{{ checksum "yarn.lock" }}-{{ checksum "packages/react/yarn.lock" }}-{{ checksum "packages/vanilla/yarn.lock" }}
-      - restore_cache:
-          key: vanilla-build-{{ .Revision }}
-      - restore_cache:
-          key: react-build-{{ .Revision }}
       - run:
-          name: Deploy hig-beta
+          name: Create dependency hash
+          command: yarn run create-dependency-hash
+      - restore_cache:
+          key: v1-dependencies-{{ checksum ".dependency-hash" }}
+      - restore_cache:
+          key: v1-package-builds-{{ .Revision }}
+      - run:
+          name: Extract dependencies and builds
+          command: yarn run extract
+      - run:
+          name: Build Test Storybook Server
+          command: yarn storybook-test-build
+          working_directory: packages/storybook
+      - run:
+          name: Serve Test Storybook
+          command: yarn storybook-test-serve
+          background: true
+          working_directory: packages/storybook
+      - run:
+          name: Start HTTP Server
+          command: yarn vanilla-test-serve
+          background: true
+          working_directory: packages/storybook
+      - run:
+          name: Run Visual Regression Tests
+          command: yarn gemini-ci
+          working_directory: packages/storybook
+      - store_artifacts:
+          path: packages/storybook/gemini-report
+  playground-deploy:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: Create dependency hash
+          command: yarn run create-dependency-hash
+      - restore_cache:
+          key: v1-dependencies-{{ checksum ".dependency-hash" }}
+      - restore_cache:
+          key: v1-package-builds-{{ .Revision }}
+      - run:
+          name: Extract dependencies and builds
+          command: yarn run extract
+      - run:
+          name: Deploy React playground website
           command: yarn deploy-playground $PLAYGROUND_DOMAIN
           working_directory: packages/react
-  packages-deploy-on-branch:
+  canary-packages-deploy:
     <<: *defaults
     steps:
       - checkout
+      - run:
+          name: Create dependency hash
+          command: yarn run create-dependency-hash
       - restore_cache:
-          key: dependencies-{{ checksum "yarn.lock" }}-{{ checksum "packages/react/yarn.lock" }}-{{ checksum "packages/vanilla/yarn.lock" }}
+          key: v1-dependencies-{{ checksum ".dependency-hash" }}
       - restore_cache:
-          key: vanilla-build-{{ .Revision }}
-      - restore_cache:
-          key: react-build-{{ .Revision }}
+          key: v1-package-builds-{{ .Revision }}
+      - run:
+          name: Extract dependencies and builds
+          command: yarn run extract
       - run:
           name: Add auth token
           command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
       - run:
-          name: Deploy hig-react-branch
-          command: npm run publish-canary
+          name: Deploy pre-release versions of packages
+          command: yarn publish-canary
+  storybook-branch-deploy:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: Create dependency hash
+          command: yarn run create-dependency-hash
+      - restore_cache:
+          key: v1-dependencies-{{ checksum ".dependency-hash" }}
+      - restore_cache:
+          key: v1-package-builds-{{ .Revision }}
+      - run:
+          name: Extract dependencies and builds
+          command: yarn run extract
+      - run:
+          name: Deploy Storybook
+          command: yarn storybook-deploy --domain `echo hig-$CIRCLE_BRANCH.surge.sh | awk 'echo gsub(/\//, "-")'`
+          working_directory: packages/storybook
   packages-deploy:
     <<: *defaults
     steps:
       - checkout
+      - run:
+          name: Create dependency hash
+          command: yarn run create-dependency-hash
       - restore_cache:
-          key: dependencies-{{ checksum "yarn.lock" }}-{{ checksum "packages/react/yarn.lock" }}-{{ checksum "packages/vanilla/yarn.lock" }}
+          key: v1-dependencies-{{ checksum ".dependency-hash" }}
       - restore_cache:
-          key: vanilla-build-{{ .Revision }}
-      - restore_cache:
-          key: react-build-{{ .Revision }}
+          key: v1-package-builds-{{ .Revision }}
+      - run:
+          name: Extract dependencies and builds
+          command: yarn run extract
       - run:
           name: Add auth token
           command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
@@ -150,38 +192,43 @@ workflows:
   build-test-validate-and-deploy:
     jobs:
       - bootstrap
-      - vanilla-build:
+      - package-build:
           requires:
             - bootstrap
-      - react-build:
-          requires:
-            - vanilla-build
-      - vanilla-test:
-          requires:
-            - vanilla-build
       - react-test:
           requires:
-            - react-build
-      - deploy-playground:
+            - package-build
+      - visual-test:
           requires:
-            - vanilla-test
+            - package-build
+      - playground-deploy:
+          requires:
             - react-test
+            - visual-test
           filters:
             branches:
               only: development
-      - packages-deploy-on-branch:
+      - canary-packages-deploy:
+          filters:
+            branches:
+              ignore:
+                - master
+          requires:
+            - react-test
+            - visual-test
+      - storybook-branch-deploy:
           filters:
             branches:
               ignore:
                 - development
                 - master
           requires:
-            - vanilla-test
             - react-test
+            - visual-test
       - packages-deploy:
           requires:
-            - vanilla-test
             - react-test
+            - visual-test
           filters:
             branches:
               only: master

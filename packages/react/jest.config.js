@@ -3,6 +3,7 @@ module.exports = {
     "!src/index.js",
     "src/**/*.{js,jsx}",
     "!src/**/*.story.{js,jsx}",
+    "!src/**/*/__stories__/*",
     "!src/fixtures/**/*",
     "!src/stories/**/*",
     "!src/playground/**/*",
@@ -21,6 +22,7 @@ module.exports = {
   },
   modulePaths: ["node_modules", "<rootDir>/src"],
   moduleFileExtensions: ["js", "jsx", "json"],
+  setupFiles: ["raf/polyfill"],
   setupTestFrameworkScriptFile: "<rootDir>/support/setupTests.js",
   unmockedModulePathPatterns: ["<rootDir>/node_modules"]
 };

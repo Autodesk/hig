@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`side-nav/SideNavSkeleton snapshot tests renders with no props 1`] = `
+<div
+  className="hig__side-nav-skeleton hig--light-theme"
+>
+  <div
+    className="hig__skeleton-item hig--light-theme"
+    style={
+      Object {
+        "marginBottom": "48px",
+        "maxWidth": "180px",
+      }
+    }
+  />
+  <div
+    className="hig__skeleton-item hig--light-theme"
+    style={
+      Object {
+        "marginBottom": "24px",
+        "maxWidth": "180px",
+      }
+    }
+  />
+  <div
+    className="hig__skeleton-item hig--light-theme"
+    style={
+      Object {
+        "marginBottom": "24px",
+        "maxWidth": "180px",
+      }
+    }
+  />
+  <div
+    className="hig__skeleton-item hig--light-theme"
+    style={
+      Object {
+        "marginBottom": "48px",
+        "maxWidth": "124px",
+      }
+    }
+  />
+  <div
+    className="hig__skeleton-item hig--light-theme"
+    style={
+      Object {
+        "marginBottom": "24px",
+        "maxWidth": "180px",
+      }
+    }
+  />
+  <div
+    className="hig__skeleton-item hig--light-theme"
+    style={
+      Object {
+        "marginBottom": "24px",
+        "maxWidth": "180px",
+      }
+    }
+  />
+  <div
+    className="hig__skeleton-item hig--light-theme"
+    style={
+      Object {
+        "marginBottom": "24px",
+        "maxWidth": "180px",
+      }
+    }
+  />
+  <div
+    className="hig__skeleton-item hig--light-theme"
+    style={
+      Object {
+        "marginBottom": "24px",
+        "maxWidth": "180px",
+      }
+    }
+  />
+  <div
+    className="hig__skeleton-item hig--light-theme"
+    style={
+      Object {
+        "marginBottom": undefined,
+        "maxWidth": "124px",
+      }
+    }
+  />
+</div>
+`;

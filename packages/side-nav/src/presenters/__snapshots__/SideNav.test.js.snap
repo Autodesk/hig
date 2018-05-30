@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`side-nav/presenters/SideNav snapshot tests renders with headers 1`] = `
+<nav
+  className="hig--light-theme hig__side-nav"
+>
+  <div
+    className="hig__side-nav__overflow"
+  >
+    <div
+      className="hig__side-nav__headers"
+    >
+      <h3
+        className="hig__side-nav__super-header"
+      >
+        <div
+          className="hig__side-nav__super-header-link"
+          href={undefined}
+        >
+          HIG
+        </div>
+      </h3>
+      <h4
+        className="hig__side-nav__header"
+      >
+        <div
+          className="hig__side-nav__header-link"
+          href={undefined}
+        >
+          Storybook
+        </div>
+      </h4>
+    </div>
+  </div>
+</nav>
+`;
+
+exports[`side-nav/presenters/SideNav snapshot tests renders without props 1`] = `
+<nav
+  className="hig--light-theme hig__side-nav"
+>
+  <div
+    className="hig__side-nav__overflow"
+  />
+</nav>
+`;

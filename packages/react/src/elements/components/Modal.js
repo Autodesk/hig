@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Modal as VanillaModal } from "hig-vanilla";
 import ModalAdapter from "../../adapters/ModalAdapter";
-import { Button } from "../../hig-react";
+import Button from "../../adapters/ButtonAdapter";
 
 export default class Modal extends React.Component {
   constructor(props) {

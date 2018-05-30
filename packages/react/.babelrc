@@ -1,10 +1,16 @@
 {
+  "env": {
+    "test": {
+      "presets": ["@hig/babel-preset/test"]
+    }
+  },
   "presets": [
     [
       "env",
       {
+        "modules": false,
         "targets": {
-          "browsers": "> 1%",
+          "browsers": "> 1%"
         }
       }
     ],

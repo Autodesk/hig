@@ -1,6 +1,8 @@
 const fs = require("fs");
 const SVGO = require("svgo");
 
+const writeIconNamesModule = require("./_writeIconNamesModule");
+
 const svgo = new SVGO({
   plugins: [
     { removeViewBox: false },
@@ -50,6 +52,8 @@ const srcLocation = `${__dirname}/../src/elements/components/Icons/src/`;
 fs.writeFileSync(distfile, "const HIGIcons = {}; \n");
 
 fs.readdir(srcLocation, (err, filenames) => {
+  const cleanFileNames = [];
+
   if (err) {
     console.log(`[x] ERROR: ${err}`);
     return;
@@ -60,8 +64,10 @@ fs.readdir(srcLocation, (err, filenames) => {
     if (!data) console.log("[x] ERROR: NO DATA");
     const cleanFileName = filename.replace(".svg", "");
 
+    cleanFileNames.push(cleanFileName);
+
     // CLEANUP FILE AND MINIMIZE
-    svgo.optimize(data, result => {
+    svgo.optimize(data).then(result => {
       // EXPORT TO JS FILE
       let svgString = `HIGIcons['${cleanFileName}'] = `;
       svgString += `"${result.data
@@ -75,4 +81,6 @@ fs.readdir(srcLocation, (err, filenames) => {
   fs.appendFileSync(distfile, "export default HIGIcons; \n");
 
   console.log(`Icons bundle created in: ${distfile}`);
+
+  writeIconNamesModule(cleanFileNames);
 });

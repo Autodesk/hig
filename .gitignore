@@ -40,10 +40,14 @@ jspm_packages
 .node_repl_history
 
 # Gemini Report
-/gemini-report
+gemini-report/
 
 # Files created by CircleCI
 nohup.out
+
+# Files generated during CI
+.dependency-hash
+.archives
 
 # Environment Variables
 .env
@@ -53,3 +57,8 @@ nohup.out
 
 # VS Code
 .vscode/
+
+# compiled build stuff
+build/
+storybook-static/
+storybook-gemini-test/

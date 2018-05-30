@@ -85,7 +85,6 @@ class Profile extends Core {
 Profile._interface = Interface.components.GlobalNav.partials.TopNav.partials.Profile;
 
 Profile._defaults = {
-  image: 'https://placekitten.com/g/50/50',
   email: 'email@example.com',
   name: 'name',
   profileSettingsLink: 'https://www.autodesk.com',

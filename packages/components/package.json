@@ -1,0 +1,71 @@
+{
+  "name": "@hig/components",
+  "version": "0.1.0",
+  "description": "HIG Components",
+  "author": "Autodesk Inc.",
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "build/index.js",
+  "module": "build/index.es.js",
+  "style": "build/index.css",
+  "files": [
+    "build/*"
+  ],
+  "dependencies": {
+    "@hig/avatar": "^0.1.0",
+    "@hig/banner": "^0.1.1",
+    "@hig/button": "^0.1.0",
+    "@hig/checkbox": "^0.1.0-alpha",
+    "@hig/dropdown": "^0.1.0-alpha",
+    "@hig/flyout": "^0.1.0-alpha",
+    "@hig/icon": "^0.1.0",
+    "@hig/icon-button": "^0.1.0",
+    "@hig/icons": "^0.1.0",
+    "@hig/modal": "^0.1.0-alpha",
+    "@hig/progress-bar": "^0.1.0-alpha",
+    "@hig/progress-ring": "^0.1.0-alpha",
+    "@hig/radio-button": "^0.1.0-alpha",
+    "@hig/rich-text": "^0.1.0",
+    "@hig/side-nav": "^0.1.0",
+    "@hig/skeleton-item": "^0.1.0",
+    "@hig/slider": "^0.1.0-alpha",
+    "@hig/table": "^0.2.1",
+    "@hig/tabs": "^0.1.0-alpha",
+    "@hig/text-area": "^0.1.0-alpha",
+    "@hig/text-field": "^0.1.0",
+    "@hig/text-link": "^0.1.0",
+    "@hig/themes": "^0.1.0",
+    "@hig/timestamp": "^0.1.0",
+    "@hig/tooltip": "^0.1.0-alpha",
+    "@hig/typography": "^0.1.0"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.5.10",
+    "react": "^15.4.1 || ^16.3.2"
+  },
+  "devDependencies": {
+    "@hig/babel-preset": "^0.1.0",
+    "@hig/eslint-config": "^0.1.0",
+    "clean-css": "^4.1.11",
+    "mkdirp": "^0.5.1",
+    "rollup": "^0.59.2"
+  },
+  "scripts": {
+    "build": "node scripts/build.js",
+    "lint": "eslint src --color --ext .js,.jsx"
+  },
+  "eslintConfig": {
+    "extends": "@hig"
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "presets": [
+          "@hig/babel-preset/test"
+        ]
+      }
+    }
+  }
+}

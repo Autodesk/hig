@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`side-nav/containers/BelowTopNavCompact snapshot tests renders without props 1`] = `
+<div
+  className="hig--light-theme hig__side-nav-container--below-top-nav-compact"
+  onMouseEnter={undefined}
+  onMouseLeave={undefined}
+/>
+`;

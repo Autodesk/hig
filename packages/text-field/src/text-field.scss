@@ -1,0 +1,156 @@
+@import "~@hig/styles/mixins/colors.scss";
+@import "~@hig/styles/mixins/placeholder.scss";
+@import "~@hig/styles/mixins/typography.scss";
+
+.hig__text-field {
+  position: relative;
+  display: flex;
+  font-family: 'ArtifaktElement', sans-serif;
+  font-weight: 500;
+  margin: 30px 0;
+  min-width: 300px;
+  max-width: 450px;
+}
+
+.hig__text-field__content {
+  flex: 1 1 auto;
+}
+
+.hig__text-field__content--with-icon {
+  margin-left: 26px;
+}
+
+.hig__text-field__icon-v1 {
+  position: absolute;
+  left: -28px;
+  bottom: 6px;
+}
+
+.hig__text-field__icon-v1--disabled {
+  opacity: 0.3;
+}
+
+.hig__text-field__label-v1 {
+  @include typography-small;
+  color: transparentize($typography-base-color, .5);
+  position: relative;
+  padding-bottom: 8px;
+  transition-property: top, font-size, line-height;
+  transition-duration: 0.1s, 0.1s, 0.1s;
+  transition-delay: 0.1s;
+
+  .hig__text-field__input:focus+& {
+    @include typography-small;
+    color: color(hig-blue-60);
+  }
+
+  .hig__text-field--required &::after {
+    content: '*';
+    display: inline-block;
+    margin-left: 5px;
+  }
+
+  .hig__text-field__input--no-value+& {
+    @include typography-medium;
+    top: 22px;
+    left: 1px;
+  }
+
+  .hig__text-field__input--no-value.hig__text-field__input:focus+& {
+    top: 0;
+    left: 0;
+    transition-delay: 0s;
+  }
+
+  .hig__text-field__input[disabled]+& {
+    color: color(hig-cool-gray-20);
+    pointer-events: none;
+  }
+}
+
+.hig__text-field--clear-button-visible,
+.hig__text-field--password-button-visible {
+  .hig__text-field__input {
+    padding-right: 36px;
+  }
+}
+
+.hig__text-field__instructions,
+.hig__text-field__required-notice {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  color: color(hig-cool-gray-50);
+}
+
+.hig__text-field__required-notice::before {
+  content: '*';
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.hig__text-field__input-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 10px;
+}
+
+.hig__text-field__extra {
+  display: none;
+  position: absolute;
+  bottom: 3px;
+  right: 0;
+  border: none;
+  background: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.hig__text-field__extra--show {
+    display: block;
+  }
+
+  .hig__text-field--disabled & {
+    opacity: 0.3;
+  }
+}
+
+.hig__text-field__clear {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 24px;
+  height: 24px;
+
+  .hig__text-field--disabled & {
+    display: none;
+  }
+}
+
+.hig__text-field__errors {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 14px;
+  color: color(hig-red-alert);
+}
+
+.hig__text-field--with-errors {
+  .hig__text-field__input {
+    border-bottom: 2px solid color(hig-red-alert);
+  }
+
+  .hig__text-field__instructions {
+    font-weight: 600;
+    color: color(hig-red-alert);
+  }
+
+  .hig__text-field__instructions--hide-on-error {
+    display: none;
+  }
+}

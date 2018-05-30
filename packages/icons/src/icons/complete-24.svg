@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <title>complete-24</title>
+  <g id="final">
+    <g id="complete">
+      <g id="outline">
+        <path d="M12,22A10,10,0,1,1,22,12,10,10,0,0,1,12,22ZM12,3a9,9,0,1,0,9,9A9,9,0,0,0,12,3Z"/>
+        <polygon points="11.34 13.92 8.96 11.93 8 13.07 11.57 16.08 17.07 8.96 15.89 8.04 11.34 13.92"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`banner/Banner snapshot tests renders with no props 1`] = `
+<div
+  aria-busy={false}
+  aria-expanded={true}
+  onTransitionEnd={[Function]}
+  style={
+    Object {
+      "height": "",
+      "overflow": "",
+      "transition": "",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "transform": "",
+        "transition": "",
+      }
+    }
+  >
+    <div
+      aria-label={undefined}
+      aria-labelledby={undefined}
+      aria-live="polite"
+      className="hig__banner hig__banner--primary hig--light-theme"
+      role="alert"
+    >
+      <figure
+        className="hig__banner__icon-background hig--light-theme"
+      >
+        <div
+          className="hig__icon hig__icon--24-size"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" role=\\"img\\" title=\\"info-24\\"><path d=\\"M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,19a9,9,0,1,1,9-9A9,9,0,0,1,12,21Z\\"/><rect x=\\"11\\" y=\\"11\\" width=\\"2\\" height=\\"6\\"/><circle cx=\\"12\\" cy=\\"8\\" r=\\"1.25\\"/></svg>",
+            }
+          }
+        />
+      </figure>
+      <div
+        className="hig__banner__content"
+      >
+        <p
+          className="hig__banner__message"
+        >
+          <span
+            className="hig__typography hig__typography__text hig__typography--hig-cool-gray-70"
+            style={Object {}}
+          >
+            Message
+          </span>
+        </p>
+      </div>
+      <div
+        className="hig__banner__dismiss-button"
+      >
+        <button
+          className="hig__icon-button hig__icon-button--transparent"
+          onBlur={undefined}
+          onClick={undefined}
+          onFocus={undefined}
+          onMouseEnter={undefined}
+          onMouseLeave={undefined}
+          title="Dismiss"
+        >
+          <span
+            className="hig__icon-button__icon"
+          >
+            <div
+              className="hig__icon hig__icon--24-size"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<svg width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-notification-24\\"><polygon fill-rule=\\"nonzero\\" points=\\"8.45 0.47 4.97 3.95 1.51 0.47 0.45 1.53 3.91 5.01 0.45 8.47 1.51 9.53 4.97 6.07 8.42 9.53 9.48 8.47 6.03 5.01 9.51 1.53\\" fill=\\"#2E4258\\"/></svg>",
+                }
+              }
+            />
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

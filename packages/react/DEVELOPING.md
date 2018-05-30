@@ -1,22 +1,20 @@
 # Developing
 
-```
+```bash
 yarn
-yarn playground
+yarn playground  # Run the example Playground app for development
 ```
 
 To make a production build, run:
-```
+```bash
 yarn build
 ```
 
 ## Incorporating local `hig-vanilla` changes
 
-`hig-vanilla` is a dependency of `hig-react`. If you are simultaneously working on `hig-vanilla` and `hig-react`, you can use Lerna to import `hig-vanilla` from your working directory rather than use the published package:
+`hig-vanilla` is a dependency of `hig-react`. When developing locally, Lerna automatically uses the local, symlinked version of `hig-vanilla`. That way, you can make changes to `hig-vanilla` and have that quickly reflected in `hig-react`:
 
-```
-cd ../..  # hig root directory
-yarn bootstrap
+```bash
 cd packages/vanilla && yarn watch  # Let webpack compile hig-vanilla changes locally
 
 # In another tab...
@@ -54,6 +52,13 @@ Components do the following work:
 #### Testing
 Components are tested as any React component is tested. Use Jest to ensure that given a set of props or state, the component passes the appropriate props to the components it renders. Read up on Jest and React testing for more information on testing components.
 
+# Visual Regression Tests
+
+We use [Gemini](https://github.com/gemini-testing/gemini) with Sauce Labs to have a consistent browser to test against.
+
+1. Create a local file called `.env` and contact someone on the `#design-hig-dev` slack channel for credentials. You'll need a `SAUCE_USERNAME=xxxxx` and a `SAUCE_ACCESS_KEY=xxxxx`
+1. Run the gemini tests and generate a report: `$ yarn gemini`
+1. View the report: `$ open ./gemini-report/index.html`
 
 ## Publishing a new version to NPM
 Core committers follow these steps when deploying a new version of the library:

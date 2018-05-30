@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`side-nav/CollapseButton snapshot tests renders minimized 1`] = `
+<div
+  className="hig--light-theme hig__side-nav__module__collapse-button hig__side-nav__module__collapse-button--collapsed"
+  onClick={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <div
+    className="hig__icon hig__icon--24-size"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret-24\\"><polyline transform=\\"rotate(45 9.828 3)\\" points=\\"8 2 8 8 2 8\\" stroke=\\"#2E4258\\" stroke-width=\\"1.15\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"/></svg>",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`side-nav/CollapseButton snapshot tests renders with no props 1`] = `
+<div
+  className="hig--light-theme hig__side-nav__module__collapse-button"
+  onClick={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <div
+    className="hig__icon hig__icon--24-size"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret-24\\"><polyline transform=\\"rotate(45 9.828 3)\\" points=\\"8 2 8 8 2 8\\" stroke=\\"#2E4258\\" stroke-width=\\"1.15\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"/></svg>",
+      }
+    }
+  />
+</div>
+`;

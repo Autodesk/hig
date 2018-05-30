@@ -1,0 +1,16 @@
+@import '~@hig/styles/mixins/colors.scss';
+
+.hig__shortcut {
+  margin: 0 1px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &:first-child {
+    padding-left: 8px;
+  }
+
+  &:last-child {
+    padding-right: 8px;
+  }
+}
