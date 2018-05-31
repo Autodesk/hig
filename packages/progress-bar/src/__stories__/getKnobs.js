@@ -1,4 +1,4 @@
-import { text } from "@storybook/addon-knobs/react";
+import { number } from "@storybook/addon-knobs/react";
 
 const knobGroupIds = {
   basic: "Basic"
@@ -13,7 +13,7 @@ export default function getKnobs(props) {
 
   return {
     ...otherProps,
-    percentComplete: text(
+    percentComplete: number(
       knobLabels.percentComplete,
       percentComplete,
       knobGroupIds.basic
