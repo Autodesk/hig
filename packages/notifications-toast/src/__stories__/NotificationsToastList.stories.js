@@ -9,6 +9,7 @@ import NotificationsToast, { NotificationsToastList } from "../index";
 import { AVAILABLE_PLACEMENTS } from "../NotificationsToastList";
 
 import NotificationsToastListInteractions from "./NotificationsToastListInteractions";
+import infoOptions from "./infoOptions";
 
 const exampleToasts = React.Children.toArray([
   <NotificationsToast status="primary">
@@ -31,7 +32,10 @@ const exampleToasts = React.Children.toArray([
 storiesOf("NotificationsToastList", module)
   .add(
     "static",
-    withInfo()(() => (
+    withInfo({
+      ...infoOptions,
+      propTablesExclude: [NotificationsToastListInteractions]
+    })(() => (
       <NotificationsToastList
         placement={select("Placement", AVAILABLE_PLACEMENTS, "top")}
       >
@@ -41,7 +45,10 @@ storiesOf("NotificationsToastList", module)
   )
   .add(
     "demonstrate adding new children",
-    withInfo()(() => (
+    withInfo({
+      ...infoOptions,
+      propTablesExclude: [NotificationsToastListInteractions]
+    })(() => (
       <NotificationsToastListInteractions
         placement={select("Placement", AVAILABLE_PLACEMENTS, "top")}
       />

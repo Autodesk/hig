@@ -12,11 +12,12 @@ import greenhouseThumbnail from "@hig/storybook/storybook-support/fixtures/thumb
 import NotificationsToast, { _AVAILABLE_STATUSES } from "../index";
 
 import intlExamples from "./notifications-toast-intl-examples.json";
+import infoOptions from "./infoOptions";
 
 storiesOf("NotificationsToast", module)
   .add(
     "default",
-    withInfo()(() => (
+    withInfo(infoOptions)(() => (
       <NotificationsToast
         onDismiss={action("Toast dismissed")}
         status={select("Status", _AVAILABLE_STATUSES)}
@@ -30,7 +31,7 @@ storiesOf("NotificationsToast", module)
 
   .add(
     "with an avatar",
-    withInfo()(() => (
+    withInfo(infoOptions)(() => (
       <NotificationsToast
         image={
           <Avatar
@@ -51,7 +52,7 @@ storiesOf("NotificationsToast", module)
 
   .add(
     "with a thumbnail",
-    withInfo()(() => (
+    withInfo(infoOptions)(() => (
       <NotificationsToast
         image={
           <div style={{ width: "48px", height: "48px" }}>
@@ -75,7 +76,7 @@ storiesOf("NotificationsToast", module)
 
   .add(
     "international",
-    withInfo()(() => {
+    withInfo(infoOptions)(() => {
       const lang =
         intlExamples[
           select("Language", languageOptions(intlExamples), "german")
