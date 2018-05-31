@@ -25,7 +25,7 @@
   },
   "scripts": {
     "build": "hig-scripts-build",
-    "build-icons": "node scripts/build-icons.js"
+    "build-icons": "node scripts/build/index.js"
   },
   "eslintConfig": {
     "extends": "@hig"
@@ -38,5 +38,9 @@
         ]
       }
     }
-  }
+  },
+  "iconSets": [
+    { "name": "regular", "size": "24" },
+    { "name": "information-dense", "size": "16" }
+  ]
 }
