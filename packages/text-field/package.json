@@ -17,6 +17,7 @@
     "@hig/icon-button": "^0.1.0",
     "classnames": "^2.2.5",
     "hig-react": "^0.29.0",
+    "prop-types": "^15.6.1",
     "react-lifecycles-compat": "^3.0.2"
   },
   "peerDependencies": {
@@ -26,8 +27,7 @@
     "@hig/babel-preset": "^0.1.0",
     "@hig/eslint-config": "^0.1.0",
     "@hig/scripts": "^0.1.0",
-    "@hig/styles": "^0.1.1",
-    "prop-types": "^15.6.1"
+    "@hig/styles": "^0.1.1"
   },
   "scripts": {
     "build": "hig-scripts-build",

@@ -18,6 +18,7 @@
     "@hig/icon-button": "^0.1.0",
     "@hig/rich-text": "^0.1.0",
     "classnames": "^2.2.5",
+    "prop-types": "^15.6.1",
     "react-transition-group": "^2.3.0"
   },
   "devDependencies": {
@@ -26,8 +27,7 @@
     "@hig/scripts": "^0.1.0",
     "@hig/styles": "^0.1.1",
     "@hig/timestamp": "^0.1.0",
-    "hig-react": "^0.29.0",
-    "prop-types": "^15.6.1"
+    "hig-react": "^0.29.0"
   },
   "peerDependencies": {
     "react": "^15.4.1 || ^16.3.2"

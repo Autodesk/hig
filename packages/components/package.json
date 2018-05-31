@@ -42,7 +42,6 @@
     "@hig/typography": "^0.1.0"
   },
   "peerDependencies": {
-    "prop-types": "^15.6.1",
     "react": "^15.4.1 || ^16.3.2"
   },
   "devDependencies": {
