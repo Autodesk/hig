@@ -16,13 +16,6 @@
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
-"@hig/avatar@^0.1.0-alpha.59de67eb":
-  version "0.1.0-alpha.59de67eb"
-  resolved "https://registry.yarnpkg.com/@hig/avatar/-/avatar-0.1.0-alpha.59de67eb.tgz#e9491f84429fe60a84d63af5b1923d00423db7c7"
-  dependencies:
-    classnames "^2.2.5"
-    react-lifecycles-compat "^3.0.2"
-
 "@storybook/addon-actions@3.4.0", "@storybook/addon-actions@^3.4.0":
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-3.4.0.tgz#8f6f869f708856845dff210af9340e54b443f346"
