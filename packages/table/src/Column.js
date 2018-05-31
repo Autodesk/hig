@@ -90,12 +90,12 @@ class Column extends React.Component {
     sortable: PropTypes.bool,
     /**
      * Custom column header renderer
-     * The callback is of the shape of `({ column, columnIndex, isScrolling, rowData, rowIndex, depth }) => *`
+     * The callback is of the shape of `({ column, columnIndex, rowData, rowIndex, depth }) => *`
      */
     renderHeader: PropTypes.func,
     /**
      * Custom column cell renderer
-     * The callback is of the shape of `({ column, columnIndex, isScrolling, rowData, rowIndex, depth }) => *`
+     * The callback is of the shape of `({ column, columnIndex, rowData, rowIndex, depth }) => *`
      */
     renderCell: PropTypes.func
   };
