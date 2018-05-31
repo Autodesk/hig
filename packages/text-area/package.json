@@ -15,10 +15,10 @@
   ],
   "dependencies": {
     "classnames": "^2.2.5",
-    "hig-react": "^0.29.0"
+    "hig-react": "^0.29.0",
+    "prop-types": "^15.6.1"
   },
   "peerDependencies": {
-    "prop-types": "^15.5.10",
     "react": "^15.4.1 || ^16.3.2"
   },
   "devDependencies": {

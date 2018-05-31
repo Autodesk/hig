@@ -20,6 +20,7 @@
     "@hig/themes": "^0.1.0",
     "@hig/typography": "^0.1.0",
     "classnames": "^2.2.5",
+    "prop-types": "^15.6.1",
     "react-lifecycles-compat": "^2.0.0"
   },
   "devDependencies": {
@@ -31,7 +32,6 @@
     "@hig/styles": "^0.1.1"
   },
   "peerDependencies": {
-    "prop-types": "^15.5.10",
     "react": "^15.4.1 || ^16.3.2"
   },
   "scripts": {
