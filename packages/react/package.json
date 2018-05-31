@@ -29,12 +29,12 @@
     "type-check": "tsc"
   },
   "dependencies": {
-    "@hig/avatar": "^0.1.0",
-    "@hig/icon": "^0.1.0",
-    "@hig/icon-button": "^0.1.0",
+    "@hig/avatar": "^0.1.1",
+    "@hig/icon": "^0.1.1",
+    "@hig/icon-button": "^0.1.1",
     "@hig/icons": "^0.1.0",
-    "@hig/timestamp": "^0.1.0",
-    "@hig/typography": "^0.1.0",
+    "@hig/timestamp": "^0.1.1",
+    "@hig/typography": "^0.1.1",
     "hig-vanilla": "^0.1.27",
     "react-flip-move": "^3.0.1",
     "react-transition-group": "^2.3.0"

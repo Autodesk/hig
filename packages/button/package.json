@@ -1,6 +1,6 @@
 {
   "name": "@hig/button",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "HIG Button",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -14,14 +14,14 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/themes": "^0.1.0",
+    "@hig/themes": "^0.1.1",
     "classnames": "^2.2.5",
     "prop-types": "^15.6.1"
   },
   "devDependencies": {
     "@hig/babel-preset": "^0.1.0",
     "@hig/eslint-config": "^0.1.0",
-    "@hig/icon": "^0.1.0",
+    "@hig/icon": "^0.1.1",
     "@hig/scripts": "^0.1.0",
     "@hig/styles": "^0.1.1"
   },

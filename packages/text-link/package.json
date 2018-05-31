@@ -1,6 +1,6 @@
 {
   "name": "@hig/text-link",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "HIG Text Link",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -14,7 +14,7 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/themes": "^0.1.0",
+    "@hig/themes": "^0.1.1",
     "classnames": "^2.2.5",
     "prop-types": "^15.6.1",
     "react-lifecycles-compat": "^3.0.2"

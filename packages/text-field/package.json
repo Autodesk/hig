@@ -1,6 +1,6 @@
 {
   "name": "@hig/text-field",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "HIG Text Field",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -14,7 +14,7 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/icon-button": "^0.1.0",
+    "@hig/icon-button": "^0.1.1",
     "classnames": "^2.2.5",
     "hig-react": "^0.29.0",
     "prop-types": "^15.6.1",
