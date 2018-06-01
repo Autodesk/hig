@@ -108,17 +108,17 @@ export default class Slider extends Component {
 
     return (
       <div
-        className={cx("hig__range", {
-          "hig__range--disabled": disabled,
-          "hig__range--required": required
+        className={cx("hig__slider", {
+          "hig__slider--disabled": disabled,
+          "hig__slider--required": required
         })}
       >
         <div
-          className="hig__range__field__range-values"
+          className="hig__slider__wrapper"
           data-range-min={min}
           data-range-max={max}
         >
-          <span className="hig__range__field__current-value">{value}</span>
+          <span className="hig__slider__current-value">{value}</span>
 
           <Input
             id={id}
@@ -135,17 +135,17 @@ export default class Slider extends Component {
           />
 
           {label && (
-            <label htmlFor={id} className="hig__range__label">
+            <label htmlFor={id} className="hig__slider__label">
               {label}
             </label>
           )}
         </div>
 
         {instructions && (
-          <p className="hig__range__instructions">{instructions}</p>
+          <p className="hig__slider__instructions">{instructions}</p>
         )}
 
-        {required && <p className="hig__range__required-notice">{required}</p>}
+        {required && <p className="hig__slider__required-notice">{required}</p>}
       </div>
     );
   }

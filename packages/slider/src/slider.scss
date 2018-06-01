@@ -1,7 +1,7 @@
 @import '~@hig/styles/mixins/colors.scss';
 @import '~@hig/styles/mixins/typography.scss';
 
-.hig__range {
+.hig__slider {
   @include typography-base;
 
   position: relative;
@@ -9,7 +9,7 @@
   width: 300px;
 }
 
-.hig__range__label {
+.hig__slider__label {
   display: block;
   margin-bottom: 15px;
 
@@ -21,18 +21,18 @@
     color: color(hig-blue-60);
   }
 
-  .hig__range--required &::after {
-      content: '*';
-      display: inline-block;
-      margin-left: 5px;
+  .hig__slider--required &:after {
+    content: '*';
+    display: inline-block;
+    margin-left: 5px;
   }
 }
 
-.hig__range__required-notice {
+.hig__slider__required-notice {
   margin-top: 10px;
   font-size: 12px;
   line-height: 14px;
-  color: #939ca5;
+  color: color(hig-cool-gray-40);
 
   &:before {
     content: "*";
@@ -40,7 +40,7 @@
   }
 }
 
-.hig__range__field__range-values {
+.hig__slider__wrapper {
   position: relative;
   display: flex;
   flex-direction: column-reverse;
@@ -52,7 +52,7 @@
     color: color(hig-cool-gray-50);
     font-size: 12px;
 
-    .hig__range--disabled & {
+    .hig__slider--disabled & {
       color: color(hig-cool-gray-20);
     }
   }
@@ -67,19 +67,19 @@
   }
 }
 
-.hig__range__field__current-value {
+.hig__slider__current-value {
   color: color(hig-gray-70);
   position: absolute;
   margin: auto;
   top: 24px;
   text-align: left;
 
-  .hig__range--disabled & {
+  .hig__slider--disabled & {
     color: color(hig-cool-gray-20);
   }
 }
 
-.hig__range__instructions {
+.hig__slider__instructions {
   margin-top: 10px;
   font-size: 12px;
   line-height: 14px;
