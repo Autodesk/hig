@@ -21,7 +21,7 @@ const sampleNotification = (
     </p>
     <p>
       <TextLink
-        href="https://github.com/Autodesk/hig"
+        link="https://github.com/Autodesk/hig"
         onClick={action("notifications id 1")}
       >
         Manage renewal
