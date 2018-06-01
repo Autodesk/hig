@@ -1,7 +1,7 @@
 const path = require("path");
 const fs = require("fs");
 
-const pkg = require("../../package.json");
+const sets = require("../../src/sets");
 
 function loadSvg(dirPath, fileName) {
   const fullPath = path.resolve(dirPath, fileName);
@@ -19,9 +19,9 @@ function svgsForDir(dirPath, size) {
 }
 
 function readSvgs(srcDir) {
-  return pkg.iconSets.reduce(
-    (acc, { name, size }) =>
-      acc.concat(svgsForDir(path.join(srcDir, name), size)),
+  return sets.reduce(
+    (acc, { dirName, size }) =>
+      acc.concat(svgsForDir(path.join(srcDir, dirName), size)),
     []
   );
 }

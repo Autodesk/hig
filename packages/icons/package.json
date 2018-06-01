@@ -38,9 +38,5 @@
         ]
       }
     }
-  },
-  "iconSets": [
-    { "name": "regular", "size": "24" },
-    { "name": "information-dense", "size": "16" }
-  ]
+  }
 }

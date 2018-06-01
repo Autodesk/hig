@@ -14,7 +14,7 @@ function createNameMap(svgs) {
 /**
  * @param {Object.<string, string>} svgs with metadata
  */
-function writeIconNamesModule(svgs, filePath) {
+function writeIconNames(svgs, filePath) {
   const nameMap = createNameMap(svgs);
 
   const bundleData = JSON.stringify(nameMap);
@@ -23,4 +23,4 @@ function writeIconNamesModule(svgs, filePath) {
   console.log(`Icon name constants bundle created in: ${filePath}`);
 }
 
-module.exports = writeIconNamesModule;
+module.exports = writeIconNames;
