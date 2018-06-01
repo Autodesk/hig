@@ -10,8 +10,8 @@ function getNameConstant(iconName) {
 }
 
 /**
- * @param {string[]} iconNames
- * @returns {Object.<string, object>}
+ * @param {{ title: string }} svg SVG with metadata
+ * @returns {{ title: string, nameConstant: string }}
  */
 function addNameConstant(svg) {
   return Object.assign(svg, { nameConstant: getNameConstant(svg.title) });

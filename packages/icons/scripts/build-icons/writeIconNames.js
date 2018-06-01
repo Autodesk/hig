@@ -12,7 +12,8 @@ function createNameMap(svgs) {
 }
 
 /**
- * @param {Object.<string, string>} svgs with metadata
+ * @param {Object[]} svgs with metadata
+ * @param {string} filePath path where file will be written
  */
 function writeIconNames(svgs, filePath) {
   const nameMap = createNameMap(svgs);

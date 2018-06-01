@@ -2,7 +2,7 @@ const fs = require("fs");
 const sets = require("../../src/sets");
 
 /**
- * @param {string[]} iconNames
+ * @param {Object[]} iconNames
  * @returns {Object.<string, string>}
  */
 function createSetMap(svgs) {
@@ -14,7 +14,8 @@ function createSetMap(svgs) {
 }
 
 /**
- * @param {Object.<string, string>} svgs with metadata
+ * @param {Object[]} svgs with metadata
+ * @param {string} filePath path where file will be written
  */
 function writeIconSets(svgs, filePath) {
   const setMap = createSetMap(svgs);
