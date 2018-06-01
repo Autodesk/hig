@@ -1,19 +1,28 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
+import Input from "./presenters/Input";
 
 import "./slider.scss";
+
+function generatedId() {
+  return `slider-${Math.floor(Math.random() * 100000, 5)}`;
+}
 
 export default class Slider extends Component {
   static propTypes = {
     /**
      * Initial value of the field. User action will override
      */
-    defaultValue: PropTypes.string,
+    defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     /**
      * Prevents user actions on the field
      */
     disabled: PropTypes.bool,
+    /**
+     * HTML ID attribute
+     */
+    id: PropTypes.string,
     /**
      * Instructional text for the field
      */
@@ -22,6 +31,14 @@ export default class Slider extends Component {
      * Text describing what the field represents
      */
     label: PropTypes.string,
+    /**
+     * Minimum value of the slider
+     */
+    min: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    /**
+     * Maximum value of the slider
+     */
+    max: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     /**
      * Name of the field when submitted with a form
      */
@@ -47,13 +64,46 @@ export default class Slider extends Component {
      */
     required: PropTypes.string,
     /**
+     * The granularity of each step on the slider
+     */
+    step: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    /**
      * Value of the field
      */
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
   };
 
+  static defaultProps = {
+    id: generatedId(),
+    min: "0",
+    max: "100",
+    step: "1"
+  };
+
+  state = {
+    value: this.props.defaultValue || this.props.value
+  };
+
+  handleChange = event => {
+    this.setState({ value: event.target.value });
+    if (this.props.onChange) this.props.onChange(event);
+  };
+
   render() {
-    const { value, id, step, label, instructions, min, max } = this.props;
+    const {
+      id,
+      disabled,
+      step,
+      label,
+      instructions,
+      min,
+      max,
+      name,
+      onBlur,
+      onFocus,
+      onInput
+    } = this.props;
+    const { value } = this.state;
 
     return (
       <div
@@ -67,18 +117,21 @@ export default class Slider extends Component {
           data-range-max={max}
         >
           <span className="hig__range__field__current-value">{value}</span>
-          <input
+
+          <Input
             id={id}
-            className="hig__range__field"
-            type="range"
+            onChange={this.handleChange}
+            disabled={disabled}
+            name={name}
             min={min}
             max={max}
             step={step}
             value={value}
-            aria-valuemin={min}
-            aria-valuemax={max}
-            aria-valuenow={value}
+            onBlur={onBlur}
+            onFocus={onFocus}
+            onInput={onInput}
           />
+
           <label htmlFor={id} className="hig__range__label">
             {label}
           </label>

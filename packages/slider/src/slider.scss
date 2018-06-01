@@ -9,92 +9,6 @@
   width: 300px;
 }
 
-.hig__range__field {
-  -webkit-appearance: none;
-  width: 100%; /* Specific width is required for Firefox. */
-  background-color: transparent; /* Otherwise white in Chrome */
-  box-sizing: content-box;
-  height: 60px;
-  margin: 0;
-  position: relative;
-
-  @each $vendor in ('-webkit-slider-thumb', '-moz-range-thumb', '-ms-thumb') {
-
-    &:hover::#{$vendor} {
-      background-color: color(hig-turquoise-50);
-    }
-
-    &:focus::#{$vendor} {
-      background-color: color(hig-blue-50);
-    }
-
-    &:active::#{$vendor} {
-      background-color: color(hig-blue-60);
-    }
-
-    &[disabled]::#{$vendor} {
-      background-color: color(hig-white);
-      border: 2px dotted color(hig-cool-gray-20);
-      outline: 2px solid color(hig-white);
-    }
-  }
-
-  @each $vendor in ('-webkit-slider-thumb', '-moz-range-thumb') {
-    &::#{$vendor} {
-      box-sizing: content-box;
-      -webkit-appearance: none;
-      height: 16px;
-      width: 16px;
-      background: color(hig-cool-gray-20);
-      border-radius: 50%;
-      cursor: pointer;
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-      border: 2px solid color(hig-white);
-    }
-  }
-
-  &::-ms-thumb {
-    -webkit-appearance: none;
-    height: 16px;
-    width: 16px;
-    background: color(hig-cool-gray-20);
-    border-radius: 50%;
-    cursor: pointer;
-    position: relative;
-    border: 2px solid color(hig-white);
-  }
-
-  &::-ms-fill-upper, &::-ms-fill-lower {
-    border: none;
-    background-color: color(hig-cool-gray-20);
-  }
-
-  &::-ms-tooltip {
-    display: none;
-  }
-
-  @each $vendor in ('-webkit-slider-runnable-track', '-moz-range-track', '-ms-track') {
-    &::#{$vendor} {
-      width: 100%;
-      height: 2px;
-      border: none;
-      background: color(hig-cool-gray-20);
-      cursor: pointer;
-      color: transparent;
-    }
-
-    &[disabled]::#{$vendor} {
-      background-color: color(hig-cool-gray-10);
-    }
-  }
-
-  &:focus {
-    outline: none;
-  }
-}
-
 .hig__range__label {
   display: block;
   margin-bottom: 15px;
@@ -103,7 +17,7 @@
   font-size: 12px;
   line-height: 14px;
 
-  .hig__range__field:focus + & {
+  .hig__slider__input:focus + & {
     color: color(hig-blue-60);
   }
 
