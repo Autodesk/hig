@@ -178,14 +178,8 @@ jobs:
           name: Add auth token
           command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
       - run:
-          name: Deploy hig-react
-          command: node ./scripts/publish-if-needed/index.js react
-      - run:
-          name: Deploy hig-interface
-          command: node ./scripts/publish-if-needed/index.js interface
-      - run:
-          name: Deploy hig-vanilla
-          command: node ./scripts/publish-if-needed/index.js vanilla
+          name: Release
+          command: yarn run release
 workflows:
   version: 2
   build-test-validate-and-deploy:
@@ -231,5 +225,3 @@ workflows:
           filters:
             branches:
               only: master
-            tags:
-              only: /v[0-9]+(\.[0-9]+)*/
