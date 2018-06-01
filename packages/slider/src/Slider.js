@@ -92,13 +92,14 @@ export default class Slider extends Component {
   render() {
     const {
       id,
-      disabled,
-      step,
+      name,
       label,
       instructions,
+      required,
+      disabled,
       min,
       max,
-      name,
+      step,
       onBlur,
       onFocus,
       onInput
@@ -108,7 +109,8 @@ export default class Slider extends Component {
     return (
       <div
         className={cx("hig__range", {
-          "hig__range--disabled": disabled
+          "hig__range--disabled": disabled,
+          "hig__range--required": required
         })}
       >
         <div
@@ -132,12 +134,18 @@ export default class Slider extends Component {
             onInput={onInput}
           />
 
-          <label htmlFor={id} className="hig__range__label">
-            {label}
-          </label>
+          {label && (
+            <label htmlFor={id} className="hig__range__label">
+              {label}
+            </label>
+          )}
         </div>
 
-        <p className="hig__range__instructions">{instructions}</p>
+        {instructions && (
+          <p className="hig__range__instructions">{instructions}</p>
+        )}
+
+        {required && <p className="hig__range__required-notice">{required}</p>}
       </div>
     );
   }
