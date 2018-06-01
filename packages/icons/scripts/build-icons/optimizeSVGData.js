@@ -27,7 +27,7 @@ const svgo = new SVGO({
             if (!svg.hasAttr("title")) {
               svg.addAttr({
                 name: "title",
-                value: options.title,
+                value: `${options.title}-${options.size}`,
                 prefix: "",
                 local: "title"
               });
