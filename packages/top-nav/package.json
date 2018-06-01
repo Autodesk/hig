@@ -1,6 +1,6 @@
 {
   "name": "@hig/top-nav",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "HIG Top Navigation",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -20,7 +20,6 @@
     "@hig/styles": "^0.1.1"
   },
   "peerDependencies": {
-    "prop-types": "^15.5.10",
     "react": "^15.4.1 || ^16.3.2"
   },
   "scripts": {
@@ -28,10 +27,11 @@
     "lint": "eslint src --color --ext .js,.jsx"
   },
   "dependencies": {
-    "@hig/avatar": "^0.1.0-alpha.59de67eb",
-    "@hig/icon": "^0.1.0",
+    "@hig/avatar": "^0.1.1",
+    "@hig/icon": "^0.1.1",
     "classnames": "^2.2.5",
-    "hig-react": "0.28.35"
+    "hig-react": "0.28.35",
+    "prop-types": "^15.6.1"
   },
   "eslintConfig": {
     "extends": "@hig"

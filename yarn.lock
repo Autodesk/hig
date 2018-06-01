@@ -16,13 +16,6 @@
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
-"@hig/avatar@^0.1.0-alpha.59de67eb":
-  version "0.1.0-alpha.59de67eb"
-  resolved "https://registry.yarnpkg.com/@hig/avatar/-/avatar-0.1.0-alpha.59de67eb.tgz#e9491f84429fe60a84d63af5b1923d00423db7c7"
-  dependencies:
-    classnames "^2.2.5"
-    react-lifecycles-compat "^3.0.2"
-
 "@storybook/addon-actions@3.4.0", "@storybook/addon-actions@^3.4.0":
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-3.4.0.tgz#8f6f869f708856845dff210af9340e54b443f346"
@@ -7570,9 +7563,9 @@ lcid@^1.0.0:
   dependencies:
     invert-kv "^1.0.0"
 
-lerna@^2.9.0:
-  version "2.9.0"
-  resolved "https://registry.yarnpkg.com/lerna/-/lerna-2.9.0.tgz#303f70bc50b1c4541bdcf54eda13c36fe54401f3"
+lerna@^2.11.0:
+  version "2.11.0"
+  resolved "https://registry.yarnpkg.com/lerna/-/lerna-2.11.0.tgz#89b5681e286d388dda5bbbdbbf6b84c8094eff65"
   dependencies:
     async "^1.5.0"
     chalk "^2.1.0"

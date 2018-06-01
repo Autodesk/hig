@@ -1,6 +1,6 @@
 {
   "name": "@hig/timestamp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "HIG Timestamp",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -15,7 +15,8 @@
     "build/*"
   ],
   "dependencies": {
-    "classnames": "^2.2.5"
+    "classnames": "^2.2.5",
+    "prop-types": "^15.6.1"
   },
   "devDependencies": {
     "@hig/babel-preset": "^0.1.0",
@@ -25,7 +26,6 @@
     "mockdate": "^2.0.2"
   },
   "peerDependencies": {
-    "prop-types": "^15.6.1",
     "react": "^15.4.1 || ^16.3.2"
   },
   "scripts": {

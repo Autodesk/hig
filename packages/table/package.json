@@ -1,6 +1,6 @@
 {
   "name": "@hig/table",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "HIG Table",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -14,15 +14,15 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/themes": "^0.1.0",
+    "@hig/themes": "^0.1.1",
     "classnames": "^2.2.3",
     "lodash": "^4.17.5",
+    "prop-types": "^15.6.1",
     "react-draggable": "^3.0.5",
     "react-lifecycles-compat": "^3.0.2",
     "react-virtualized": "^9.19.1"
   },
   "peerDependencies": {
-    "prop-types": "^15.5.10",
     "react": "^15.4.1"
   },
   "devDependencies": {
