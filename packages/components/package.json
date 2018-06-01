@@ -4,6 +4,10 @@
   "description": "HIG Components",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Autodesk/hig.git"
+  },
   "publishConfig": {
     "access": "public"
   },
@@ -47,16 +51,22 @@
   "devDependencies": {
     "@hig/babel-preset": "^0.1.0",
     "@hig/eslint-config": "^0.1.0",
+    "@hig/scripts": "^0.1.0",
+    "@hig/semantic-release-config": "^0.1.0",
     "clean-css": "^4.1.11",
     "mkdirp": "^0.5.1",
     "rollup": "^0.59.2"
   },
   "scripts": {
     "build": "node scripts/build.js",
-    "lint": "eslint src --color --ext .js,.jsx"
+    "lint": "hig-scripts-lint",
+    "release": "hig-scripts-release"
   },
   "eslintConfig": {
     "extends": "@hig"
+  },
+  "release": {
+    "extends": "@hig/semantic-release-config"
   },
   "babel": {
     "env": {
