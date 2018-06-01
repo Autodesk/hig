@@ -12,7 +12,7 @@ const svgo = new SVGO({
       accessibility: {
         type: "full",
         active: true,
-        fn(data, _params) {
+        fn(data, _, options) {
           const svg = data.content[0];
 
           if (svg.isElem("svg")) {
@@ -22,6 +22,14 @@ const svgo = new SVGO({
                 value: "img",
                 prefix: "",
                 local: "role"
+              });
+            }
+            if (!svg.hasAttr("title")) {
+              svg.addAttr({
+                name: "title",
+                value: options.title,
+                prefix: "",
+                local: "title"
               });
             }
           }
@@ -34,12 +42,12 @@ const svgo = new SVGO({
 });
 
 function optimizeSVG(svg) {
-  return new Promise(((fullfill, reject) => {
-    return svgo.optimize(svg.data, (result) => {
-      const optimizedSvg = Object.assign(svg, { data: result.data} );
-      return fullfill(optimizedSvg, reject)
-    });
-  }));
+  return new Promise((fullfill, reject) =>
+    svgo.optimize(svg.data, svg).then(result => {
+      const optimizedSvg = Object.assign(svg, { data: result.data });
+      return fullfill(optimizedSvg, reject);
+    })
+  );
 }
 
 module.exports = optimizeSVG;

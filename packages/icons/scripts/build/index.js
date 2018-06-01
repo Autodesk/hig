@@ -8,10 +8,9 @@ const srcDir = path.resolve(__dirname, "../../src/icons");
 
 async function run() {
   const svgs = await readSVGs(srcDir);
-  // const optimized = await Promise.all(svgs.map(optimize));
-  // console.log(optimized);
+  const optimizedSvgs = await Promise.all(svgs.map(optimize));
 
-  writeBundle(svgs, buildDir, "icons.json");
+  writeBundle(optimizedSvgs, buildDir, "icons.json");
 }
 
 run();
