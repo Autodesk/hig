@@ -23,14 +23,14 @@ describe("TextField", () => {
   });
 
   describe("id", () => {
-    it("passes the ID prop to the underlying input", () => {
+    it("generates an ID when one is not provided", () => {
       const wrapper = mount(<TextField />);
       expect(wrapper.find(Input).prop("id")).toEqual(
         expect.stringMatching("text-field-")
       );
     });
 
-    it("generates an ID when one is not provided", () => {
+    it("passes the ID prop to the underlying input", () => {
       const wrapper = mount(<TextField id="important-field" />);
       expect(wrapper.find(Input).prop("id")).toEqual("important-field");
     });
