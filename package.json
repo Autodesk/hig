@@ -10,6 +10,8 @@
     "build": "lerna run build --stream",
     "create-dependency-hash": "cat yarn.lock > .dependency-hash && ls ./packages >> .dependency-hash",
     "lint": "lerna run lint --stream",
+    "test": "cd packages/storybook && yarn run test",
+    "test-ci": "cd packages/storybook && yarn run test-ci",
     "publish-canary": "lerna publish --canary --yes --exact",
     "update-packages": "lerna publish --skip-npm",
     "extract": "yarn run extract:dependencies && yarn run extract:builds",
