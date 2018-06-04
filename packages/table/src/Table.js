@@ -225,15 +225,7 @@ class Table extends React.Component {
   // endregion
 
   // region Renders
-  renderRow({
-    key,
-    columns,
-    rowData,
-    rowIndex,
-    style,
-    depth = 0,
-    rootIndex
-  }) {
+  renderRow({ key, columns, rowData, rowIndex, style, depth = 0, rootIndex }) {
     const {
       rowClassName,
       rowStyle,
