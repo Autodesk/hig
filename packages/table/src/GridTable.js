@@ -4,6 +4,8 @@ import cx from "classnames";
 import Grid from "react-virtualized/dist/commonjs/Grid";
 import { ThemeContext } from "@hig/themes";
 
+import cellRangeRenderer from "./cellRangeRenderer";
+
 /**
  * A wrapper of the Grid for internal only
  */
@@ -158,6 +160,7 @@ class GridTable extends React.PureComponent {
                 columnWidth={headerWidth}
                 columnCount={1}
                 cellRenderer={this.renderHeaderRow}
+                cellRangeRenderer={cellRangeRenderer}
               />
             )}
             <Grid
@@ -174,6 +177,7 @@ class GridTable extends React.PureComponent {
               onScroll={onScroll}
               onSectionRendered={this._handleSectionRendered}
               onScrollbarPresenceChange={onScrollbarPresenceChange}
+              cellRangeRenderer={cellRangeRenderer}
             />
           </div>
         )}

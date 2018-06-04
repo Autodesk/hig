@@ -225,16 +225,7 @@ class Table extends React.Component {
   // endregion
 
   // region Renders
-  renderRow({
-    key,
-    isScrolling,
-    columns,
-    rowData,
-    rowIndex,
-    style,
-    depth = 0,
-    rootIndex
-  }) {
+  renderRow({ key, columns, rowData, rowIndex, style, depth = 0, rootIndex }) {
     const {
       rowClassName,
       rowStyle,
@@ -250,8 +241,7 @@ class Table extends React.Component {
     const className = cx("hig__table__row", rowClass, {
       [`hig__table__row--depth-${depth}`]: !!expandColumnKey,
       "hig__table__row--expanded": this.state.expandedRowKeys.includes(rowKey),
-      "hig__table__row--hovered":
-        !isScrolling && rowKey === this.state.hoveredRowKey,
+      "hig__table__row--hovered": rowKey === this.state.hoveredRowKey,
       "hig__table__row--frozen":
         depth === 0 && rowIndex < this.props.frozenRowCount,
       "hig__table__row--customized": renderRow
@@ -275,7 +265,6 @@ class Table extends React.Component {
       className,
       style: flattenedStyle,
       columns,
-      isScrolling,
       rowIndex,
       rowData,
       rowKey,
@@ -315,7 +304,6 @@ class Table extends React.Component {
                 style={expandedStyle}
               >
                 {this.props.renderRowExpanded({
-                  isScrolling,
                   columns,
                   rowData,
                   rowIndex
@@ -329,7 +317,6 @@ class Table extends React.Component {
         expandedRows = rowData.children.map((expandData, expandIndex) => {
           const expandRow = this.renderRow({
             key: `${key}-${expandIndex}`,
-            isScrolling,
             columns,
             rowData: expandData,
             rowIndex: expandIndex,
@@ -342,23 +329,10 @@ class Table extends React.Component {
         });
       }
     }
-    if (!React.Fragment) return [row, expandedRows];
-    return (
-      <React.Fragment key={key}>
-        {row}
-        {expandedRows}
-      </React.Fragment>
-    );
+    return [row, expandedRows];
   }
 
-  renderRowCell({
-    column,
-    columnIndex,
-    isScrolling,
-    rowData,
-    rowIndex,
-    expandIcon
-  }) {
+  renderRowCell({ column, columnIndex, rowData, rowIndex, expandIcon }) {
     const { className, dataKey, dataGetter, renderCell } = column;
     const cellData = dataGetter
       ? dataGetter({ column, columnIndex, rowData, rowIndex })
@@ -370,8 +344,7 @@ class Table extends React.Component {
         column,
         columnIndex,
         rowData,
-        rowIndex,
-        isScrolling
+        rowIndex
       })
     ) : (
       <ThemeContext.Consumer>
@@ -409,7 +382,7 @@ class Table extends React.Component {
     );
   }
 
-  renderHeader({ key, isScrolling, columns, style }) {
+  renderHeader({ key, columns, style }) {
     const { headerClassName, headerStyle, renderHeader } = this.props;
 
     const className = cx("hig__table__header-row", headerClassName, {
@@ -428,7 +401,6 @@ class Table extends React.Component {
       className,
       style: flattenedStyle,
       columns,
-      isScrolling,
       expandColumnKey: this.props.expandColumnKey,
       renderHeader,
       renderCell: this.renderHeaderCell,
@@ -438,11 +410,11 @@ class Table extends React.Component {
     return <TableHeader {...headerProps} />;
   }
 
-  renderHeaderCell({ column, columnIndex, isScrolling, expandIcon }) {
+  renderHeaderCell({ column, columnIndex, expandIcon }) {
     const { headerClassName: className, title, renderHeader } = column;
 
     const cell = renderHeader ? (
-      renderHeader({ column, columnIndex, isScrolling })
+      renderHeader({ column, columnIndex })
     ) : (
       <ThemeContext.Consumer>
         {({ themeClass }) => (
@@ -1085,17 +1057,17 @@ Table.propTypes = {
   renderFooter: PropTypes.func,
   /**
    * Custom header renderer
-   * The callback is of the shape of `({ isScrolling, columns }) => *`
+   * The callback is of the shape of `({ columns }) => *`
    */
   renderHeader: PropTypes.func,
   /**
    * Custom row renderer
-   * The callback is of the shape of `({ isScrolling, columns, rowData, rowIndex, depth }) => *`
+   * The callback is of the shape of `({ columns, rowData, rowIndex, depth }) => *`
    */
   renderRow: PropTypes.func,
   /**
    * Custom extra part of the expanded row renderer
-   * The callback is of the shape of `({ isScrolling, columns, rowData, rowIndex }) => *`
+   * The callback is of the shape of `({ columns, rowData, rowIndex }) => *`
    */
   renderRowExpanded: PropTypes.func,
   /**
