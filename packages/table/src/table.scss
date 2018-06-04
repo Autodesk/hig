@@ -36,11 +36,6 @@
   &__table {
     position: absolute;
     top: 0;
-    box-sizing: border-box;
-
-    & * {
-      box-sizing: inherit;
-    }
 
     &-main {
       @include table-edge-padding($table-padding-left, $table-padding-right);
@@ -112,18 +107,20 @@
     outline: none;
   }
 
-  &__header-row {
+  &__header-row,
+  &__row {
     display: flex;
     align-items: center;
     border-bottom: $border;
+    box-sizing: border-box;
+  }
+
+  &__header-row {
     background-color: $header-background-color;
     font-weight: $header-font-weight;
   }
 
   &__row {
-    display: flex;
-    align-items: center;
-    border-bottom: $border;
     background-color: $background-color;
 
     &:hover,
@@ -143,6 +140,7 @@
     display: flex;
     align-items: center;
     padding: 0 $column-padding;
+    box-sizing: border-box;
 
     &--align-center {
       justify-content: center;
