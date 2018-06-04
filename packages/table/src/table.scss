@@ -36,6 +36,11 @@
   &__table {
     position: absolute;
     top: 0;
+    box-sizing: border-box;
+
+    & * {
+      box-sizing: inherit;
+    }
 
     &-main {
       @include table-edge-padding($table-padding-left, $table-padding-right);
@@ -159,6 +164,10 @@
   &__header-column {
     position: relative;
     cursor: default;
+
+    .hig__table__sort-indicator {
+      display: none;
+    }
 
     &--sortable {
       &:hover {

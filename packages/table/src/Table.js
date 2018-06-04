@@ -24,7 +24,7 @@ function getTableClasses({ themeClass, className, disabled, isFrozen }) {
     "hig__table",
     className,
     {
-      "hig__table--with-frozen-rows": isFrozen,
+      "hig__table--has-frozen-rows": isFrozen,
       "hig__table--disabled": disabled
     },
     themeClass

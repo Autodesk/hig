@@ -43,6 +43,7 @@
     "babel-runtime": "^6.26.0",
     "concurrently": "^3.5.1",
     "enzyme": "^2.9.1",
+    "faker": "^4.1.0",
     "file-loader": "^1.1.11",
     "gemini": "^4.19.3",
     "gemini-sauce": "^1.0.1",
