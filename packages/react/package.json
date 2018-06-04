@@ -36,7 +36,6 @@
     "@hig/timestamp": "^0.1.1",
     "@hig/typography": "^0.1.1",
     "hig-vanilla": "^0.1.27",
-    "react-flip-move": "^3.0.1",
     "react-transition-group": "^2.3.0"
   },
   "peerDependencies": {
