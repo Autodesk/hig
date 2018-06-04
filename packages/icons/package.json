@@ -25,7 +25,7 @@
   },
   "scripts": {
     "build": "hig-scripts-build",
-    "build-icons": "node scripts/build-icons.js"
+    "build-icons": "node scripts/build-icons/index.js"
   },
   "eslintConfig": {
     "extends": "@hig"

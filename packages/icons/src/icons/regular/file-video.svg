@@ -1,0 +1,14 @@
+<svg id="assets" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <title>file-video-24</title>
+  <g>
+    <path d="M20,2H4A1,1,0,0,0,3,3V20a1,1,0,0,0,1,1H20a1,1,0,0,0,1-1V3A1,1,0,0,0,20,2ZM16,3v8H8V3ZM6,20V18H5v2H4V3H5V5H6V3H7V20Zm2,0V12h8v8Zm12,0H19V18H18v2H17V3h1V5h1V3h1Z"/>
+    <rect x="18" y="6" width="1" height="2"/>
+    <rect x="18" y="9" width="1" height="2"/>
+    <rect x="18" y="12" width="1" height="2"/>
+    <rect x="18" y="15" width="1" height="2"/>
+    <rect x="5" y="6" width="1" height="2"/>
+    <rect x="5" y="9" width="1" height="2"/>
+    <rect x="5" y="12" width="1" height="2"/>
+    <rect x="5" y="15" width="1" height="2"/>
+  </g>
+</svg>
