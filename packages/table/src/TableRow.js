@@ -2,11 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import { ThemeContext } from "@hig/themes";
 import cx from "classnames";
+import isEqual from "lodash/isEqual";
 
 /**
  * Row component for the Table
  */
-class TableRow extends React.PureComponent {
+class TableRow extends React.Component {
   constructor(props) {
     super(props);
 
@@ -63,11 +64,22 @@ class TableRow extends React.PureComponent {
     return eventHandlers;
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    return (
+      nextProps.className !== this.props.className ||
+      !isEqual(nextProps.style, this.props.style) ||
+      nextProps.columns !== this.props.columns ||
+      nextProps.rowData !== this.props.rowData ||
+      nextProps.rowIndex !== this.props.rowIndex ||
+      nextProps.onRowHover !== this.props.onRowHover ||
+      nextProps.rowEventHandlers !== this.props.rowEventHandlers
+    );
+  }
+
   render() {
     const {
       className,
       style,
-      isScrolling,
       columns,
       rowData,
       rowIndex,
@@ -82,12 +94,11 @@ class TableRow extends React.PureComponent {
     } = this.props;
 
     const cells = renderRow
-      ? renderRow({ isScrolling, columns, rowData, rowIndex, depth })
+      ? renderRow({ columns, rowData, rowIndex, depth })
       : columns.map((column, columnIndex) =>
           renderCell({
             column,
             columnIndex,
-            isScrolling,
             rowData,
             rowIndex,
             expandIcon: column.key === expandColumnKey && (
@@ -123,7 +134,6 @@ TableRow.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
   columns: PropTypes.arrayOf(PropTypes.object).isRequired,
-  isScrolling: PropTypes.bool,
   rowData: PropTypes.object.isRequired,
   rowIndex: PropTypes.number.isRequired,
   rowKey: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
