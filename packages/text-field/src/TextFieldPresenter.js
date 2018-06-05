@@ -10,7 +10,7 @@ function generatedId() {
   return `text-field-${Math.floor(Math.random() * 100000, 5)}`;
 }
 
-export default class TextField extends Component {
+export default class TextFieldPresenter extends Component {
   static propTypes = {
     /**
      * Prevents user actions on the field

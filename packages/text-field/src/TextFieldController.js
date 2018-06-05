@@ -5,7 +5,6 @@ export default class TextFieldController extends Component {
   static propTypes = {
     /**
      * A render prop function
-     *
      */
     children: PropTypes.func,
     /**
@@ -44,8 +43,8 @@ export default class TextFieldController extends Component {
   render() {
     return this.props.children({
       value: this.state.value,
-      onChange: this.handleChange,
-      onClearButtonClick: this.handleInputClear
+      handleChange: this.handleChange,
+      handleInputClear: this.handleInputClear
     });
   }
 }

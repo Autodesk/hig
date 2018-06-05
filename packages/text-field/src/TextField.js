@@ -82,25 +82,33 @@ export default class TextField extends Component {
      */
     type: PropTypes.string,
     /**
-     * Value of the field
+     * Initial value of the field
      */
     value: PropTypes.string
   };
 
   render() {
+    const {
+      defaultValue,
+      onChange,
+      onClearButtonClick,
+      value: initialValue,
+      ...otherProps
+    } = this.props;
+
     return (
       <TextFieldController
-        defaultValue={this.props.defaultValue}
-        onChange={this.props.onChange}
-        onClearButtonClick={this.props.onClearButtonClick}
-        value={this.props.value}
+        defaultValue={defaultValue}
+        onChange={onChange}
+        onClearButtonClick={onClearButtonClick}
+        value={initialValue}
       >
-        {({ value, onChange, onClearButtonClick }) => (
+        {({ value, handleChange, handleInputClear }) => (
           <TextFieldPresenter
-            {...this.props}
+            {...otherProps}
             value={value}
-            onChange={onChange}
-            onClearButtonClick={onClearButtonClick}
+            onChange={handleChange}
+            onClearButtonClick={handleInputClear}
           />
         )}
       </TextFieldController>
