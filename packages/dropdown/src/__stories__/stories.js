@@ -1,10 +1,10 @@
 export default [
   {
-    description: "uncontrolled",
+    description: "default",
     getProps: () => ({
-      label: "Uncontrolled Dropdown",
-      instructions: "instructions for regular Uncontrolled dropdown",
-      placeholder: "placeholder for regular Uncontrolled dropdown",
+      label: "HIG Theme",
+      instructions: "Choose one HIG theme to apply to your entire app.",
+      placeholder: "Select a theme",
       options: [
         {
           label: "foo",

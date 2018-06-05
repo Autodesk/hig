@@ -18,6 +18,7 @@
     "build/*"
   ],
   "dependencies": {
+    "@hig/text-field": "^0.2.0",
     "classnames": "^2.2.5",
     "downshift": "^1.31.15",
     "hig-react": "^0.29.0",

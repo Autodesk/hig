@@ -20,6 +20,28 @@
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/@hig/styles/-/styles-0.1.1.tgz#02e85ee888b46767072ee040c286d4f80ed92ef2"
 
+"@hig/table@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@hig/table/-/table-0.2.2.tgz#994e9ebf89abcdfa0da23f55c312cd3c8661399a"
+  dependencies:
+    "@hig/themes" "^0.1.1"
+    classnames "^2.2.3"
+    lodash "^4.17.5"
+    prop-types "^15.6.1"
+    react-draggable "^3.0.5"
+    react-lifecycles-compat "^3.0.2"
+    react-virtualized "^9.19.1"
+
+"@hig/text-field@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@hig/text-field/-/text-field-0.1.1.tgz#ce7b7c3b655c77f069720b612d9a054da30e2295"
+  dependencies:
+    "@hig/icon-button" "^0.1.1"
+    classnames "^2.2.5"
+    hig-react "^0.29.0"
+    prop-types "^15.6.1"
+    react-lifecycles-compat "^3.0.2"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
