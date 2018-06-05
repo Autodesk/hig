@@ -39,6 +39,10 @@ export default class Input extends Component {
      */
     placeholder: PropTypes.string,
     /**
+     * Marks input as read-only
+     */
+    readOnly: PropTypes.bool,
+    /**
      * Corresponds to the type attribute of an <input>. Relevant for designating a password field, for example.
      */
     type: PropTypes.string,

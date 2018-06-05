@@ -73,6 +73,10 @@ export default class TextField extends Component {
      */
     placeholder: PropTypes.string,
     /**
+     * Marks input as read-only
+     */
+    readOnly: PropTypes.bool,
+    /**
      * Text describing why the field is required
      */
     required: PropTypes.string,
@@ -163,6 +167,7 @@ export default class TextField extends Component {
               name={this.props.name}
               type={this.props.type}
               disabled={this.props.disabled}
+              readOnly={this.props.readOnly}
               placeholder={this.props.placeholder}
               onBlur={this.props.onBlur}
               onFocus={this.props.onFocus}
