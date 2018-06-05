@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "name": "@hig/semantic-release-config",
+  "version": "0.1.0",
+  "description": "Semantic Release configuration for HIG packages",
+  "main": "index.js",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@semantic-release/changelog": "^2.0.2",
+    "@semantic-release/git": "^5.0.0",
+    "@semantic-release/npm": "^3.2.0",
+    "read-pkg": "^3.0.0",
+    "semantic-release-monorepo": "^6.0.3"
+  }
+}

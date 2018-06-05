@@ -182,7 +182,7 @@ export default class TextField extends Component {
               <span className="hig__text-field__clear">
                 <IconButton
                   type="transparent"
-                  icon="close"
+                  icon="clear-small"
                   title="Clear field"
                   onClick={this.handleInputClear}
                 />

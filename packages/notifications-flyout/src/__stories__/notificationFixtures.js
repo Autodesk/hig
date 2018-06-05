@@ -31,7 +31,7 @@ const sampleNotifications = [
         </p>
         <p>
           <TextLink
-            href="https://github.com/Autodesk/hig"
+            link="https://github.com/Autodesk/hig"
             onClick={() => {
               console.log("notifications id 1");
             }}
@@ -59,7 +59,7 @@ const sampleNotifications = [
         </p>
         <p>
           <TextLink
-            href="https://github.com/Autodesk/hig"
+            link="https://github.com/Autodesk/hig"
             onClick={() => {
               console.log("notifications id 2");
             }}
@@ -87,7 +87,7 @@ const sampleNotifications = [
         </p>
         <p>
           <TextLink
-            href="https://github.com/Autodesk/hig"
+            link="https://github.com/Autodesk/hig"
             onClick={() => {
               console.log("notifications id 2");
             }}
@@ -111,7 +111,7 @@ const sampleNotifications = [
         <p>A new version of Autodesk Revit is available for download.</p>
         <p>
           <TextLink
-            href="https://github.com/Autodesk/hig"
+            link="https://github.com/Autodesk/hig"
             onClick={() => {
               console.log("notifications id 2");
             }}

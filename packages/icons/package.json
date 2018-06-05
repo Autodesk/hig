@@ -5,6 +5,10 @@
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
   "homepage": "https://hig.autodesk.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Autodesk/hig.git"
+  },
   "publishConfig": {
     "access": "public"
   },
@@ -17,6 +21,7 @@
     "@hig/babel-preset": "^0.1.0",
     "@hig/eslint-config": "^0.1.0",
     "@hig/scripts": "^0.1.0",
+    "@hig/semantic-release-config": "^0.1.0",
     "@hig/styles": "^0.1.1",
     "svgo": "^1.0.5"
   },
@@ -25,10 +30,13 @@
   },
   "scripts": {
     "build": "hig-scripts-build",
-    "build-icons": "node scripts/build-icons.js"
+    "build-icons": "node scripts/build-icons/index.js"
   },
   "eslintConfig": {
     "extends": "@hig"
+  },
+  "release": {
+    "extends": "@hig/semantic-release-config"
   },
   "babel": {
     "env": {

@@ -26,8 +26,8 @@ import '@hig/slider/build/index.css';
   label="What is your age?"
   instructions="You must be 21 or older."
   required="Age is required."
-  minValue={21}
-  maxValue={99}
+  min={21}
+  max={99}
   step={1}
 />
 ```

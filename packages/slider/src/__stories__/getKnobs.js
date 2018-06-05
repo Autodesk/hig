@@ -56,7 +56,7 @@ export default function getKnobs(props) {
     onChange: action(knobLabels.onChange),
     onFocus: action(knobLabels.onFocus),
     onInput: action(knobLabels.onInput),
-    required: boolean(knobLabels.required, required, knobGroupIds.basic),
+    required: text(knobLabels.required, required, knobGroupIds.basic),
     step: number(knobLabels.step, step, knobGroupIds.basic),
     value: text(knobLabels.value, value, knobGroupIds.form)
   };

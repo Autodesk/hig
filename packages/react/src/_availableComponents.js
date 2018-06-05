@@ -42,6 +42,5 @@ export default Object.freeze([
   "TextCellContent",
   "TextField",
   "TextLink",
-  "Timestamp",
-  "Toast"
+  "Timestamp"
 ]);
