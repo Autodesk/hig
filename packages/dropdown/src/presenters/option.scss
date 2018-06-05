@@ -1,0 +1,24 @@
+@import "~@hig/styles/mixins/colors.scss";
+@import "~@hig/styles/mixins/typography.scss";
+
+.hig__dropdown-option {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 36px;
+  padding: 0 8px;
+
+  cursor: pointer;
+  font-size: 14px;
+
+  &:hover {
+    background-color: color(hig-blue-10);
+  }
+}
+
+.hig__dropdown-option--focused {
+  background-color: color(hig-blue-10);
+}

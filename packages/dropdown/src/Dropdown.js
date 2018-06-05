@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Downshift from "downshift";
 import { TextFieldPresenter } from "@hig/text-field";
-import { Option } from "hig-react";
+import Option from "./presenters/Option";
 
 import "./dropdown.scss";
 
@@ -79,9 +79,8 @@ export default class Dropdown extends Component {
             />
             {isOpen && (
               <div className="hig__dropdown-v1__menu">
-                {JSON.stringify(isOpen)}
+                <Option value={JSON.stringify(isOpen)}>{JSON.stringify(isOpen)}</Option>
               </div>
-              // @TODO: render options
             )}
           </div>
         )}

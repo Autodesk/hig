@@ -18,10 +18,10 @@
     "build/*"
   ],
   "dependencies": {
+    "@hig/icon": "^0.1.1",
     "@hig/text-field": "^0.2.0",
     "classnames": "^2.2.5",
     "downshift": "^1.31.15",
-    "hig-react": "^0.29.0",
     "prop-types": "^15.6.1",
     "react-lifecycles-compat": "^3.0.2"
   },
