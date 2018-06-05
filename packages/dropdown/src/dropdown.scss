@@ -1,5 +1,6 @@
 @import "~@hig/styles/tokens/layers.scss";
 @import "~@hig/styles/mixins/colors.scss";
+@import "./tokens.scss";
 
 .hig__dropdown {
   min-width: 300px;
@@ -21,7 +22,9 @@
 .hig__dropdown-v1__menu {
   position: relative;
   min-width: 240px;
-  top: -40px; // Offsets TextField margin
+  max-height: $menu-max-height;
+  top: $menu-top-offset;
+  overflow: auto;
   z-index: $dropdown-layer;
 
   border: 1px solid color(hig-cool-gray-30);
