@@ -22,6 +22,7 @@ const knobLabels = {
   onFocus: "onFocus",
   onInput: "onInput",
   placeholder: "Placeholder",
+  readOnly: "Read-only",
   required: "Required",
   showClearButton: "Show Clear Button",
   value: "Value"
@@ -43,6 +44,7 @@ export default function getKnobs(props) {
     onFocus,
     onInput,
     placeholder,
+    readOnly,
     required,
     showClearButton,
     value,
@@ -77,6 +79,7 @@ export default function getKnobs(props) {
     onFocus: action(knobLabels.onFocus),
     onInput: action(knobLabels.onInput),
     placeholder: text(knobLabels.placeholder, placeholder, knobGroupIds.basic),
+    readOnly: boolean(knobLabels.readOnly, readOnly, knobGroupIds.basic),
     required: text(knobLabels.required, required, knobGroupIds.basic),
     showClearButton: boolean(
       knobLabels.showClearButton,
