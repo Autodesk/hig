@@ -39,7 +39,7 @@ export default class Dropdown extends Component {
       })
     ),
     /**
-     * Called after user changes the value of the field
+     * Called after user changes the value of the field. Called with the entire object that was selected.
      */
     onChange: PropTypes.func,
     /**
@@ -60,12 +60,16 @@ export default class Dropdown extends Component {
       required,
       disabled,
       onBlur,
+      onChange,
       onFocus,
       options
     } = this.props;
 
     return (
-      <Downshift itemToString={item => (item ? item.label : "")}>
+      <Downshift
+        onChange={onChange}
+        itemToString={item => (item ? item.label : "")}
+      >
         {({
           getInputProps,
           getItemProps,
