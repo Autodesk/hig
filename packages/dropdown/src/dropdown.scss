@@ -16,6 +16,21 @@
   }
 }
 
+.hig__dropdown__input-wrapper {
+  position: relative;
+}
+
+.hig__dropdown__input-caret {
+  position: absolute;
+  top: calc(#{$menu-top-offset} - 30px); // 30px = the height of the icon element
+  right: 7px;
+  z-index: -1;
+
+  .hig__dropdown--disabled & {
+    opacity: 0.3;
+  }
+}
+
 .hig__dropdown-v1__menu {
   position: absolute;
   min-width: 240px;

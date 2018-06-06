@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import cx from "classnames";
 import Downshift from "downshift";
 import { TextFieldPresenter } from "@hig/text-field";
+import Icon from "@hig/icon";
 import Option from "./presenters/Option";
 import composeEventHandlers from "./composeEventHandlers";
 
@@ -77,19 +79,30 @@ export default class Dropdown extends Component {
           selectedItem,
           toggleMenu
         }) => (
-          <div className="hig__dropdown">
-            <TextFieldPresenter
-              {...getInputProps({
-                label,
-                instructions,
-                required,
-                placeholder,
-                disabled,
-                onBlur,
-                onFocus: composeEventHandlers(toggleMenu, onFocus),
-                readOnly: true // @TODO: toggle based on desired type of Dropdown
-              })}
-            />
+          <div
+            className={cx("hig__dropdown", {
+              "hig__dropdown--disabled": disabled
+            })}
+          >
+            <div className="hig__dropdown__input-wrapper">
+              <TextFieldPresenter
+                {...getInputProps({
+                  label,
+                  instructions,
+                  required,
+                  placeholder,
+                  disabled,
+                  onBlur,
+                  onFocus: composeEventHandlers(toggleMenu, onFocus),
+                  readOnly: true // @TODO: toggle based on desired type of Dropdown
+                })}
+              />
+              <span className="hig__dropdown__input-caret">
+                {/* @TODO: there are variations of the TextField with multiple icons at the end of the input. These icon nodes should be passed as props to TextField. */}
+                <Icon name="caret" />
+              </span>
+            </div>
+
             {isOpen && (
               <div className="hig__dropdown-v1__menu">
                 {options.map((option, index) => (
