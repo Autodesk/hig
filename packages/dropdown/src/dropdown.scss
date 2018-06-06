@@ -3,6 +3,7 @@
 @import "./tokens.scss";
 
 .hig__dropdown {
+  position: relative;
   min-width: 300px;
   max-width: 450px;
 
@@ -15,12 +16,8 @@
   }
 }
 
-.hig__dropdown__menu-wrapper {
-  position: relative;
-}
-
 .hig__dropdown-v1__menu {
-  position: relative;
+  position: absolute;
   min-width: 240px;
   max-height: $menu-max-height;
   top: $menu-top-offset;
