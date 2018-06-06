@@ -12,6 +12,18 @@ export default class Option extends Component {
      */
     children: PropTypes.node,
     /**
+     * Called when user finishes clicking on an option
+     */
+    onClick: PropTypes.func,
+    /**
+     * Called when user begins clicking on an option
+     */
+    onMouseDown: PropTypes.func,
+    /**
+     * Called when user moves mouse over the option
+     */
+    onMouseMove: PropTypes.func,
+    /**
      * Called when user moves mouse over the option
      */
     onHover: PropTypes.func,
@@ -30,13 +42,14 @@ export default class Option extends Component {
   };
 
   render() {
-    const { children, selected } = this.props;
+    const { children, selected, ...otherProps } = this.props;
 
     return (
       <div
         className={cx("hig__dropdown-option", {
           "hig__dropdown-option--selected": selected
         })}
+        {...otherProps}
       >
         <span className="hig__dropdown-option__label">{children}</span>
 

@@ -37,10 +37,14 @@ export default class Dropdown extends Component {
      */
     defaultValue: PropTypes.string,
     /**
-     * An array of objects to choose from. These can take any shape, provided
-     *  that you also use a compatible Option presenter and itemToString to function.
+     * An array of objects to choose from.
      */
-    options: PropTypes.array, // eslint-disable-line react/forbid-prop-types
+    options: PropTypes.arrayOf(
+      PropTypes.shape({
+        label: PropTypes.string,
+        value: PropTypes.string
+      })
+    ),
     /**
      * Called after user changes the value of the field
      */
@@ -56,30 +60,39 @@ export default class Dropdown extends Component {
   };
 
   render() {
-    const { label } = this.props;
+    const { label, options } = this.props;
 
     return (
-      <Downshift>
+      <Downshift itemToString={item => (item ? item.label : "")}>
         {({
           getInputProps,
           getItemProps,
-          getLabelProps,
           isOpen,
-          inputValue,
-          highlightedIndex,
           selectedItem,
           toggleMenu
         }) => (
           <div className="hig__dropdown">
             <TextFieldPresenter
-              label={label}
-              {...getInputProps()}
-              onFocus={toggleMenu}
-              readOnly // @TODO: toggle based on desired type of Dropdown
+              {...getInputProps({
+                label,
+                onFocus: toggleMenu,
+                readOnly: true // @TODO: toggle based on desired type of Dropdown
+              })}
             />
             {isOpen && (
               <div className="hig__dropdown-v1__menu">
-                <Option value={JSON.stringify(isOpen)}>{JSON.stringify(isOpen)}</Option>
+                {options.map((option, index) => (
+                  <Option
+                    {...getItemProps({
+                      key: option.value,
+                      index,
+                      item: option,
+                      selected: selectedItem === option
+                    })}
+                  >
+                    {option.label}
+                  </Option>
+                ))}
               </div>
             )}
           </div>
