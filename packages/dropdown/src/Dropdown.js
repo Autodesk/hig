@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import Downshift from "downshift";
 import { TextFieldPresenter } from "@hig/text-field";
 import Option from "./presenters/Option";
+import composeEventHandlers from "./composeEventHandlers";
 
 import "./dropdown.scss";
 
@@ -29,14 +30,6 @@ export default class Dropdown extends Component {
      */
     required: PropTypes.string,
     /**
-     * Initial value of the field
-     */
-    value: PropTypes.string,
-    /**
-     * Initial value of the field
-     */
-    defaultValue: PropTypes.string,
-    /**
      * An array of objects to choose from.
      */
     options: PropTypes.arrayOf(
@@ -60,7 +53,16 @@ export default class Dropdown extends Component {
   };
 
   render() {
-    const { label, options } = this.props;
+    const {
+      label,
+      instructions,
+      placeholder,
+      required,
+      disabled,
+      onBlur,
+      onFocus,
+      options
+    } = this.props;
 
     return (
       <Downshift itemToString={item => (item ? item.label : "")}>
@@ -75,7 +77,12 @@ export default class Dropdown extends Component {
             <TextFieldPresenter
               {...getInputProps({
                 label,
-                onFocus: toggleMenu,
+                instructions,
+                required,
+                placeholder,
+                disabled,
+                onBlur,
+                onFocus: composeEventHandlers(toggleMenu, onFocus),
                 readOnly: true // @TODO: toggle based on desired type of Dropdown
               })}
             />
