@@ -16,6 +16,10 @@
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
+"@hig/styles@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@hig/styles/-/styles-0.1.1.tgz#02e85ee888b46767072ee040c286d4f80ed92ef2"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
