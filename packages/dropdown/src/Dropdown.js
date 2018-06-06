@@ -12,6 +12,10 @@ import "./dropdown.scss";
 export default class Dropdown extends Component {
   static propTypes = {
     /**
+     * HTML ID attribute
+     */
+    id: PropTypes.string,
+    /**
      * Text describing what the field represents
      */
     label: PropTypes.string,
@@ -56,6 +60,7 @@ export default class Dropdown extends Component {
 
   render() {
     const {
+      id,
       label,
       instructions,
       placeholder,
@@ -87,6 +92,7 @@ export default class Dropdown extends Component {
             <div className="hig__dropdown__input-wrapper">
               <TextFieldPresenter
                 {...getInputProps({
+                  id,
                   label,
                   instructions,
                   required,
