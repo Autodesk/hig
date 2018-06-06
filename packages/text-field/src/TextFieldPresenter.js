@@ -117,50 +117,50 @@ export default class TextFieldPresenter extends Component {
   render() {
     const hasClearableInput = this.hasClearableInput();
 
+    const {
+      errors,
+      hideInstructionsOnErrors,
+      icon,
+      instructions,
+      label,
+      onClearButtonClick,
+      required,
+      showClearButton,
+      ...inputProps
+    } = this.props;
+
     return (
       <div
         className={cx("hig__text-field", {
-          "hig__text-field--required": this.props.required,
+          "hig__text-field--required": required,
           "hig__text-field--clear-button-visible": hasClearableInput
         })}
       >
         <div
           className={cx("hig__text-field__content", {
-            "hig__text-field__content--with-icon": this.props.icon
+            "hig__text-field__content--with-icon": icon
           })}
         >
           <div className="hig__text-field__input-wrapper">
-            {this.props.icon && (
+            {icon && (
               <label
                 className={cx("hig__text-field__icon-v1", {
                   "hig__text-field__icon-v1--disabled": this.props.disabled
                 })}
                 htmlFor={this.props.id}
               >
-                {this.props.icon}
+                {icon}
               </label>
             )}
 
-            <Input
-              id={this.props.id}
-              value={this.props.value}
-              onChange={this.props.onChange}
-              name={this.props.name}
-              type={this.props.type}
-              disabled={this.props.disabled}
-              readOnly={this.props.readOnly}
-              placeholder={this.props.placeholder}
-              onBlur={this.props.onBlur}
-              onFocus={this.props.onFocus}
-              onInput={this.props.onInput}
-            />
+            <Input {...inputProps} />
 
-            {this.props.label && (
+            {label && (
               <label
                 htmlFor={this.props.id}
                 className="hig__text-field__label-v1"
               >
-                {this.props.label}
+                {label}
               </label>
             )}
 
@@ -170,26 +170,20 @@ export default class TextFieldPresenter extends Component {
                   type="transparent"
                   icon="clear-small"
                   title="Clear field"
-                  onClick={this.props.onClearButtonClick}
+                  onClick={onClearButtonClick}
                 />
               </span>
             )}
           </div>
 
           {this.shouldShowInstructions() && (
-            <p className="hig__text-field__instructions">
-              {this.props.instructions}
-            </p>
+            <p className="hig__text-field__instructions">{instructions}</p>
           )}
 
-          {this.props.errors && (
-            <p className="hig__text-field__errors">{this.props.errors}</p>
-          )}
+          {errors && <p className="hig__text-field__errors">{errors}</p>}
 
-          {this.props.required && (
-            <p className="hig__text-field__required-notice">
-              {this.props.required}
-            </p>
+          {required && (
+            <p className="hig__text-field__required-notice">{required}</p>
           )}
         </div>
       </div>
