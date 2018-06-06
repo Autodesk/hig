@@ -141,7 +141,7 @@ export default class TextFieldPresenter extends Component {
             "hig__text-field__content--with-icon": icon
           })}
         >
-          <div className="hig__text-field__input-wrapper">
+          <div className="hig__text-field-v1__input-wrapper">
             {icon && (
               <label
                 className={cx("hig__text-field__icon-v1", {
@@ -153,12 +153,14 @@ export default class TextFieldPresenter extends Component {
               </label>
             )}
 
+            {label && <span className="hig__text-field-v1__label-spacer" />}
+
             <Input {...inputProps} />
 
             {label && (
               <label
                 htmlFor={this.props.id}
-                className="hig__text-field__label-v1"
+                className="hig__text-field-v1__label"
               >
                 {label}
               </label>

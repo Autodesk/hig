@@ -1,6 +1,7 @@
 @import "~@hig/styles/mixins/colors.scss";
 @import "~@hig/styles/mixins/placeholder.scss";
 @import "~@hig/styles/mixins/typography.scss";
+@import "./tokens.scss";
 
 .hig__text-field {
   position: relative;
@@ -30,11 +31,14 @@
   opacity: 0.3;
 }
 
-.hig__text-field__label-v1 {
+.hig__text-field-v1__label-spacer {
+  height: $label-height;
+}
+
+.hig__text-field-v1__label {
   @include typography-small;
   color: transparentize($typography-base-color, .5);
-  position: relative;
-  padding-bottom: 8px;
+  position: absolute;
   transition-property: top, font-size, line-height;
   transition-duration: 0.1s, 0.1s, 0.1s;
   transition-delay: 0.1s;
@@ -52,7 +56,7 @@
 
   .hig__text-field__input--no-value+& {
     @include typography-medium;
-    top: 22px;
+    top: $label-height;
     left: 1px;
   }
 
@@ -91,10 +95,10 @@
   margin-right: 5px;
 }
 
-.hig__text-field__input-wrapper {
+.hig__text-field-v1__input-wrapper {
   position: relative;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   margin-bottom: 10px;
 }
 
