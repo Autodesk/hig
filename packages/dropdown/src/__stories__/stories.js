@@ -7,15 +7,18 @@ export default [
       placeholder: "Select a theme",
       options: [
         {
-          label: "foo",
-          value: "foo value"
+          label: "HIG Light Theme",
+          value: "HIGLightTheme"
         },
         {
-          label: "bar",
-          value: "bar value"
+          label: "HIG Dark Blue Theme",
+          value: "HIGDarkBlueTheme"
+        },
+        {
+          label: "Matrix Theme",
+          value: "MatrixTheme"
         }
-      ],
-      defaultValue: "bar value"
+      ]
     })
   },
   {
