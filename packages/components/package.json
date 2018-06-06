@@ -54,6 +54,7 @@
     "@hig/scripts": "^0.1.0",
     "@hig/semantic-release-config": "^0.1.0",
     "clean-css": "^4.1.11",
+    "esprima": "^4.0.0",
     "mkdirp": "^0.5.1",
     "rollup": "^0.59.2"
   },
