@@ -145,16 +145,16 @@ export default class TextFieldPresenter extends Component {
 
     return (
       <div
-        className={cx("hig__text-field", {
-          "hig__text-field--required": required,
-          "hig__text-field--disabled": this.props.disabled,
-          "hig__text-field--clear-button-visible": hasClearableInput,
-          "hig__text-field--with-errors": errors
+        className={cx("hig__text-field-v1", {
+          "hig__text-field-v1--required": required,
+          "hig__text-field-v1--disabled": this.props.disabled,
+          "hig__text-field-v1--clear-button-visible": hasClearableInput,
+          "hig__text-field-v1--with-errors": errors
         })}
       >
         <div
-          className={cx("hig__text-field__content", {
-            "hig__text-field__content--with-icon": icon
+          className={cx("hig__text-field-v1__content", {
+            "hig__text-field-v1__content--with-icon": icon
           })}
         >
           <div className="hig__text-field-v1__input-wrapper">
@@ -177,8 +177,8 @@ export default class TextFieldPresenter extends Component {
             <div className="hig__text-field-v1__input-row">
               {icon && (
                 <label
-                  className={cx("hig__text-field__icon-v1", {
-                    "hig__text-field__icon-v1--disabled": this.props.disabled
+                  className={cx("hig__text-field-v1__icon", {
+                    "hig__text-field-v1__icon--disabled": this.props.disabled
                   })}
                   htmlFor={this.props.id}
                 >
@@ -193,7 +193,7 @@ export default class TextFieldPresenter extends Component {
               />
 
               {hasClearableInput && (
-                <span className="hig__text-field__clear">
+                <span className="hig__text-field-v1__clear">
                   <IconButton
                     type="transparent"
                     icon="clear-small"
@@ -206,13 +206,13 @@ export default class TextFieldPresenter extends Component {
           </div>
 
           {this.shouldShowInstructions() && (
-            <p className="hig__text-field__instructions">{instructions}</p>
+            <p className="hig__text-field-v1__instructions">{instructions}</p>
           )}
 
-          {errors && <p className="hig__text-field__errors">{errors}</p>}
+          {errors && <p className="hig__text-field-v1__errors">{errors}</p>}
 
           {required && (
-            <p className="hig__text-field__required-notice">{required}</p>
+            <p className="hig__text-field-v1__required-notice">{required}</p>
           )}
         </div>
       </div>
