@@ -123,14 +123,11 @@
 .hig__text-field--with-errors {
   .hig__text-field-v1__input {
     border-bottom: 2px solid color(hig-red-alert);
+    box-shadow: none;
   }
 
   .hig__text-field__instructions {
     font-weight: 600;
     color: color(hig-red-alert);
-  }
-
-  .hig__text-field__instructions--hide-on-error {
-    display: none;
   }
 }

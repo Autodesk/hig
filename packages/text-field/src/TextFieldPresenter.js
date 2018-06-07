@@ -133,7 +133,8 @@ export default class TextFieldPresenter extends Component {
       <div
         className={cx("hig__text-field", {
           "hig__text-field--required": required,
-          "hig__text-field--clear-button-visible": hasClearableInput
+          "hig__text-field--clear-button-visible": hasClearableInput,
+          "hig__text-field--with-errors": errors
         })}
       >
         <div
