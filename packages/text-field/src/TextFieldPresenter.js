@@ -95,6 +95,20 @@ export default class TextFieldPresenter extends Component {
     type: "text"
   };
 
+  state = {
+    focused: false
+  };
+
+  handleFocus = event => {
+    this.setState({ focused: true });
+    if (this.props.onFocus) this.props.onFocus(event);
+  };
+
+  handleBlur = event => {
+    this.setState({ focused: false });
+    if (this.props.onBlur) this.props.onBlur(event);
+  };
+
   hasClearableInput() {
     return (
       this.props.showClearButton &&
@@ -133,6 +147,7 @@ export default class TextFieldPresenter extends Component {
       <div
         className={cx("hig__text-field", {
           "hig__text-field--required": required,
+          "hig__text-field--disabled": this.props.disabled,
           "hig__text-field--clear-button-visible": hasClearableInput,
           "hig__text-field--with-errors": errors
         })}
@@ -148,7 +163,12 @@ export default class TextFieldPresenter extends Component {
             {label && (
               <label
                 htmlFor={this.props.id}
-                className="hig__text-field-v1__label"
+                className={cx("hig__text-field-v1__label", {
+                  "hig__text-field-v1__label--input-focused": this.state
+                    .focused,
+                  "hig__text-field-v1__label--required": required,
+                  "hig__text-field-v1__label--with-value": this.props.value
+                })}
               >
                 {label}
               </label>
@@ -166,7 +186,11 @@ export default class TextFieldPresenter extends Component {
                 </label>
               )}
 
-              <Input {...inputProps} />
+              <Input
+                {...inputProps}
+                onBlur={this.handleBlur}
+                onFocus={this.handleFocus}
+              />
 
               {hasClearableInput && (
                 <span className="hig__text-field__clear">

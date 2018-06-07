@@ -36,39 +36,32 @@
 }
 
 .hig__text-field-v1__label {
-  @include typography-small;
+  @include typography-medium;
+  top: $label-height;
   color: transparentize($typography-base-color, .5);
   position: absolute;
   transition-property: top, font-size, line-height;
   transition-duration: 0.1s, 0.1s, 0.1s;
   transition-delay: 0.1s;
 
-  .hig__text-field-v1__input:focus + & {
-    @include typography-small;
-    color: color(hig-blue-60);
+  .hig__text-field--disabled & {
+    color: color(hig-cool-gray-20);
+    pointer-events: none;
   }
+}
 
-  .hig__text-field--required &::after {
+.hig__text-field-v1__label--input-focused,
+.hig__text-field-v1__label--with-value {
+  @include typography-small;
+  color: color(hig-blue-60);
+  top: 0;
+}
+
+.hig__text-field-v1__label--required {
+  &:after {
     content: '*';
     display: inline-block;
     margin-left: 5px;
-  }
-
-  .hig__text-field-v1__input--no-value + & {
-    @include typography-medium;
-    top: $label-height;
-    left: 1px;
-  }
-
-  .hig__text-field-v1__input--no-value.hig__text-field-v1__input:focus + & {
-    top: 0;
-    left: 0;
-    transition-delay: 0s;
-  }
-
-  .hig__text-field-v1__input[disabled] + & {
-    color: color(hig-cool-gray-20);
-    pointer-events: none;
   }
 }
 
