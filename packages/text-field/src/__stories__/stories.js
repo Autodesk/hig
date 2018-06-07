@@ -25,7 +25,7 @@ export default [
       label: "Comments",
       placeholder: "Enter your comments here.",
       required: "This field is required.",
-      icon: <Icon name="visible" />,
+      icon: <Icon name="location" />,
       showClearButton: true
     })
   }

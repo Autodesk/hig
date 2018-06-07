@@ -16,7 +16,7 @@ storiesOf("TextField", module)
   .add("basic", () => <TextField {...defaultProps} />)
   .add("disabled", () => <TextField {...defaultProps} disabled />)
   .add("with preceding icon", () => (
-    <TextField {...defaultProps} icon={<Icon name="visible" />} />
+    <TextField {...defaultProps} icon={<Icon name="location" />} />
   ))
   .add("with error message", () => (
     <TextField
