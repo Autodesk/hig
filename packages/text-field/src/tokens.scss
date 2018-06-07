@@ -1,1 +1,2 @@
-$label-height: 28px;
+$label-to-input-spacing: 3px;
+$label-height: calc(12px + #{$label-to-input-spacing}); // 12px from Typography Small font size

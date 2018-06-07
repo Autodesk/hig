@@ -1,6 +1,7 @@
 @import "~@hig/styles/mixins/colors.scss";
 @import "~@hig/styles/mixins/placeholder.scss";
 @import "~@hig/styles/mixins/typography.scss";
+@import "../tokens.scss";
 
 .hig__text-field-v1__input {
   @include typography-base;
@@ -10,7 +11,7 @@
   }
 
   display: block;
-  padding: 3px 0;
+  padding: $label-to-input-spacing 0;
   width: 100%;
   box-sizing: border-box;
   background-color: transparent;
