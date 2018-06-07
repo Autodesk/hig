@@ -142,20 +142,7 @@ export default class TextFieldPresenter extends Component {
           })}
         >
           <div className="hig__text-field-v1__input-wrapper">
-            {icon && (
-              <label
-                className={cx("hig__text-field__icon-v1", {
-                  "hig__text-field__icon-v1--disabled": this.props.disabled
-                })}
-                htmlFor={this.props.id}
-              >
-                {icon}
-              </label>
-            )}
-
             {label && <span className="hig__text-field-v1__label-spacer" />}
-
-            <Input {...inputProps} />
 
             {label && (
               <label
@@ -166,16 +153,31 @@ export default class TextFieldPresenter extends Component {
               </label>
             )}
 
-            {hasClearableInput && (
-              <span className="hig__text-field__clear">
-                <IconButton
-                  type="transparent"
-                  icon="clear-small"
-                  title="Clear field"
-                  onClick={onClearButtonClick}
-                />
-              </span>
-            )}
+            <div className="hig__text-field-v1__input-row">
+              {icon && (
+                <label
+                  className={cx("hig__text-field__icon-v1", {
+                    "hig__text-field__icon-v1--disabled": this.props.disabled
+                  })}
+                  htmlFor={this.props.id}
+                >
+                  {icon}
+                </label>
+              )}
+
+              <Input {...inputProps} />
+
+              {hasClearableInput && (
+                <span className="hig__text-field__clear">
+                  <IconButton
+                    type="transparent"
+                    icon="clear-small"
+                    title="Clear field"
+                    onClick={onClearButtonClick}
+                  />
+                </span>
+              )}
+            </div>
           </div>
 
           {this.shouldShowInstructions() && (

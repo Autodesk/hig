@@ -7,13 +7,10 @@
   @include placeholder {
     transition: color 0.2s;
     color: color(hig-cool-gray-50);
-    font-size: 14px;
   }
 
   display: block;
-  height: 25px;
-  padding-bottom: 13px;
-  padding-right: 0px;
+  padding: 3px 0;
   width: 100%;
   box-sizing: border-box;
   background-color: transparent;
