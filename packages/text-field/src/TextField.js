@@ -1,19 +1,12 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import cx from "classnames";
-import IconButton from "@hig/icon-button";
-import Input from "./presenters/Input";
-
-import "./text-field.scss";
-
-function generatedId() {
-  return `text-field-${Math.floor(Math.random() * 100000, 5)}`;
-}
+import TextFieldController from "./TextFieldController";
+import TextFieldPresenter from "./TextFieldPresenter";
 
 export default class TextField extends Component {
   static propTypes = {
     /**
-     * Initial value of the field, user actions will override
+     * Initial value of the field
      */
     defaultValue: PropTypes.string,
     /**
@@ -73,6 +66,10 @@ export default class TextField extends Component {
      */
     placeholder: PropTypes.string,
     /**
+     * Marks input as read-only
+     */
+    readOnly: PropTypes.bool,
+    /**
      * Text describing why the field is required
      */
     required: PropTypes.string,
@@ -85,128 +82,36 @@ export default class TextField extends Component {
      */
     type: PropTypes.string,
     /**
-     * Value of the field
+     * Initial value of the field
      */
     value: PropTypes.string
   };
 
-  static defaultProps = {
-    id: generatedId(),
-    type: "text"
-  };
-
-  state = {
-    value: this.props.defaultValue || this.props.value
-  };
-
-  handleChange = event => {
-    this.setState({ value: event.target.value });
-    if (this.props.onChange) this.props.onChange(event);
-  };
-
-  handleInputClear = event => {
-    this.setState({ value: "" });
-    // @TODO: seems we should also trigger the onChange handler?
-    if (this.props.onClearButtonClick) this.props.onClearButtonClick(event);
-  };
-
-  hasClearableInput() {
-    return (
-      this.props.showClearButton &&
-      this.state.value &&
-      this.state.value.length > 0
-    );
-  }
-
-  shouldShowInstructions() {
-    if (this.props.instructions) {
-      if (this.props.errors) {
-        return !this.props.hideInstructionsOnErrors;
-      }
-      return true;
-    }
-
-    return false;
-  }
-
   render() {
-    const hasClearableInput = this.hasClearableInput();
+    const {
+      defaultValue,
+      onChange,
+      onClearButtonClick,
+      value: initialValue,
+      ...otherProps
+    } = this.props;
 
     return (
-      <div
-        className={cx("hig__text-field", {
-          "hig__text-field--required": this.props.required,
-          "hig__text-field--clear-button-visible": hasClearableInput
-        })}
+      <TextFieldController
+        defaultValue={defaultValue}
+        onChange={onChange}
+        onClearButtonClick={onClearButtonClick}
+        value={initialValue}
       >
-        <div
-          className={cx("hig__text-field__content", {
-            "hig__text-field__content--with-icon": this.props.icon
-          })}
-        >
-          <div className="hig__text-field__input-wrapper">
-            {this.props.icon && (
-              <label
-                className={cx("hig__text-field__icon-v1", {
-                  "hig__text-field__icon-v1--disabled": this.props.disabled
-                })}
-                htmlFor={this.props.id}
-              >
-                {this.props.icon}
-              </label>
-            )}
-
-            <Input
-              id={this.props.id}
-              value={this.state.value}
-              onChange={this.handleChange}
-              name={this.props.name}
-              type={this.props.type}
-              disabled={this.props.disabled}
-              placeholder={this.props.placeholder}
-              onBlur={this.props.onBlur}
-              onFocus={this.props.onFocus}
-              onInput={this.props.onInput}
-            />
-
-            {this.props.label && (
-              <label
-                htmlFor={this.props.id}
-                className="hig__text-field__label-v1"
-              >
-                {this.props.label}
-              </label>
-            )}
-
-            {hasClearableInput && (
-              <span className="hig__text-field__clear">
-                <IconButton
-                  type="transparent"
-                  icon="clear-small"
-                  title="Clear field"
-                  onClick={this.handleInputClear}
-                />
-              </span>
-            )}
-          </div>
-
-          {this.shouldShowInstructions() && (
-            <p className="hig__text-field__instructions">
-              {this.props.instructions}
-            </p>
-          )}
-
-          {this.props.errors && (
-            <p className="hig__text-field__errors">{this.props.errors}</p>
-          )}
-
-          {this.props.required && (
-            <p className="hig__text-field__required-notice">
-              {this.props.required}
-            </p>
-          )}
-        </div>
-      </div>
+        {({ value, handleChange, handleInputClear }) => (
+          <TextFieldPresenter
+            {...otherProps}
+            value={value}
+            onChange={handleChange}
+            onClearButtonClick={handleInputClear}
+          />
+        )}
+      </TextFieldController>
     );
   }
 }

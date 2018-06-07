@@ -12,6 +12,18 @@ describe("Input", () => {
     expect(tree).toMatchSnapshot();
   });
 
+  describe("input attributes", () => {
+    it("permits the disabled attribute", () => {
+      wrapper = subject({ disabled: true });
+      expect(wrapper.containsMatchingElement(<input disabled />)).toEqual(true);
+    });
+
+    it("permits the readonly attribute", () => {
+      wrapper = subject({ readOnly: true });
+      expect(wrapper.containsMatchingElement(<input readOnly />)).toEqual(true);
+    });
+  });
+
   describe("event handlers", () => {
     let eventHandler;
 
