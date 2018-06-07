@@ -43,7 +43,7 @@
   transition-duration: 0.1s, 0.1s, 0.1s;
   transition-delay: 0.1s;
 
-  .hig__text-field__input:focus+& {
+  .hig__text-field-v1__input:focus + & {
     @include typography-small;
     color: color(hig-blue-60);
   }
@@ -54,19 +54,19 @@
     margin-left: 5px;
   }
 
-  .hig__text-field__input--no-value+& {
+  .hig__text-field-v1__input--no-value + & {
     @include typography-medium;
     top: $label-height;
     left: 1px;
   }
 
-  .hig__text-field__input--no-value.hig__text-field__input:focus+& {
+  .hig__text-field-v1__input--no-value.hig__text-field-v1__input:focus + & {
     top: 0;
     left: 0;
     transition-delay: 0s;
   }
 
-  .hig__text-field__input[disabled]+& {
+  .hig__text-field-v1__input[disabled] + & {
     color: color(hig-cool-gray-20);
     pointer-events: none;
   }
@@ -74,7 +74,7 @@
 
 .hig__text-field--clear-button-visible,
 .hig__text-field--password-button-visible {
-  .hig__text-field__input {
+  .hig__text-field-v1__input {
     padding-right: 36px;
   }
 }
@@ -145,7 +145,7 @@
 }
 
 .hig__text-field--with-errors {
-  .hig__text-field__input {
+  .hig__text-field-v1__input {
     border-bottom: 2px solid color(hig-red-alert);
   }
 

@@ -55,8 +55,8 @@ export default class Input extends Component {
   render() {
     return (
       <input
-        className={cx("hig__text-field__input", {
-          "hig__text-field__input--no-value": !this.props.value
+        className={cx("hig__text-field-v1__input", {
+          "hig__text-field-v1__input--no-value": !this.props.value
         })}
         {...this.props}
       />

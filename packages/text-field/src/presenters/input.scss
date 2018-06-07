@@ -2,7 +2,7 @@
 @import "~@hig/styles/mixins/placeholder.scss";
 @import "~@hig/styles/mixins/typography.scss";
 
-.hig__text-field__input {
+.hig__text-field-v1__input {
   @include typography-base;
   @include placeholder {
     transition: color 0.2s;
@@ -52,14 +52,14 @@
     letter-spacing: 1px;
   }
 
-  &[type=password].hig__text-field__input--no-value {
+  &[type=password].hig__text-field-v1__input--no-value {
     font-size: 14px;
     letter-spacing: 0;
   }
+}
 
-  &.hig__text-field__input--no-value {
-    @include placeholder {
-      color: transparent;
-    }
+.hig__text-field-v1__input--no-value {
+  @include placeholder {
+    color: transparent;
   }
 }
