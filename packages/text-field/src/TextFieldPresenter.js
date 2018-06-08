@@ -147,7 +147,7 @@ export default class TextFieldPresenter extends Component {
       <div
         className={cx("hig__text-field-v1", {
           "hig__text-field-v1--required": required,
-          "hig__text-field-v1--disabled": this.props.disabled,
+          "hig__text-field-v1--disabled": inputProps.disabled,
           "hig__text-field-v1--clear-button-visible": hasClearableInput,
           "hig__text-field-v1--with-errors": errors
         })}
@@ -157,7 +157,13 @@ export default class TextFieldPresenter extends Component {
             "hig__text-field-v1__content--with-icon": icon
           })}
         >
-          <div className="hig__text-field-v1__input-wrapper">
+          <div
+            className={cx("hig__text-field-v1__input-wrapper", {
+              "hig__text-field-v1__input-wrapper--focused": this.state.focused,
+              "hig__text-field-v1__input-wrapper--with-errors": errors,
+              "hig__text-field-v1__input-wrapper--disabled": inputProps.disabled
+            })}
+          >
             {label && <span className="hig__text-field-v1__label-spacer" />}
 
             {label && (

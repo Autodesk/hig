@@ -3,6 +3,18 @@
 @import "~@hig/styles/mixins/typography.scss";
 @import "./tokens.scss";
 
+@mixin styled-border($border-color, $hover-border-color: $border-color) {
+  border: {
+    bottom: 1px solid $border-color;
+  }
+  box-shadow: 0 1px 0 $border-color;
+
+  &:hover {
+    border-color: $hover-border-color;
+    box-shadow: 0 1px 0 $hover-border-color;
+  }
+}
+
 .hig__text-field-v1 {
   position: relative;
   display: flex;
@@ -92,10 +104,32 @@
 }
 
 .hig__text-field-v1__input-wrapper {
+  @include styled-border(color(hig-cool-gray-30), color(hig-turquoise-50));
   position: relative;
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
+  box-shadow: none;
+}
+
+.hig__text-field-v1__input-wrapper--focused {
+  @include styled-border(color(hig-blue-60));
+}
+
+.hig__text-field-v1__input-wrapper--disabled {
+  @include styled-border(color(hig-cool-gray-20));
+
+  border-bottom-style: dashed;
+  color: color(hig-cool-gray-20);
+  box-shadow: none;
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.hig__text-field-v1__input-wrapper--with-errors {
+  @include styled-border(color(hig-red-alert));
 }
 
 .hig__text-field-v1__clear {
@@ -117,11 +151,6 @@
 }
 
 .hig__text-field-v1--with-errors {
-  .hig__text-field-v1__input {
-    border-bottom: 2px solid color(hig-red-alert);
-    box-shadow: none;
-  }
-
   .hig__text-field-v1__instructions {
     font-weight: 600;
     color: color(hig-red-alert);
