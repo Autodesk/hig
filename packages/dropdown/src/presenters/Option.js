@@ -12,6 +12,10 @@ export default class Option extends Component {
      */
     children: PropTypes.node,
     /**
+     * Indicates the option is currently highlighted. This is comparable to hover state, but useful when interacting by keyboard.
+     */
+    highlighted: PropTypes.bool,
+    /**
      * Called when user finishes clicking on an option
      */
     onClick: PropTypes.func,
@@ -42,12 +46,13 @@ export default class Option extends Component {
   };
 
   render() {
-    const { children, selected, ...otherProps } = this.props;
+    const { children, highlighted, selected, ...otherProps } = this.props;
 
     return (
       <div
         className={cx("hig__dropdown-option", {
-          "hig__dropdown-option--selected": selected
+          "hig__dropdown-option--selected": selected,
+          "hig__dropdown-option--highlighted": highlighted
         })}
         {...otherProps}
       >

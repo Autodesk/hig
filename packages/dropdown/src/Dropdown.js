@@ -81,6 +81,7 @@ export default class Dropdown extends Component {
           getInputProps,
           getItemProps,
           isOpen,
+          highlightedIndex,
           selectedItem,
           toggleMenu
         }) => (
@@ -117,7 +118,8 @@ export default class Dropdown extends Component {
                       key: option.value,
                       index,
                       item: option,
-                      selected: selectedItem === option
+                      selected: selectedItem === option,
+                      highlighted: highlightedIndex === index
                     })}
                   >
                     {option.label}

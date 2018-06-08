@@ -1,6 +1,10 @@
 @import "~@hig/styles/mixins/colors.scss";
 @import "~@hig/styles/mixins/typography.scss";
 
+@mixin highlighted() {
+  background-color: color(hig-blue-10);
+}
+
 .hig__dropdown-option {
   @include typography-base;
   @import "../tokens.scss";
@@ -17,8 +21,12 @@
   cursor: pointer;
 
   &:hover {
-    background-color: color(hig-blue-10);
+    @include highlighted;
   }
+}
+
+.hig__dropdown-option--highlighted {
+  @include highlighted;
 }
 
 .hig__dropdown-option--focused {
