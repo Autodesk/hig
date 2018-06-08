@@ -187,6 +187,9 @@ export default class TextFieldPresenter extends Component {
               )}
 
               <Input
+                ref={input => {
+                  this.input = input;
+                }}
                 {...inputProps}
                 onBlur={this.handleBlur}
                 onFocus={this.handleFocus}

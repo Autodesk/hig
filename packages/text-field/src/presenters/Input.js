@@ -52,9 +52,16 @@ export default class Input extends Component {
     value: PropTypes.string
   };
 
+  focus = () => {
+    this.input.focus();
+  };
+
   render() {
     return (
       <input
+        ref={input => {
+          this.input = input;
+        }}
         className={cx("hig__text-field-v1__input", {
           "hig__text-field-v1__input--no-value": !this.props.value
         })}
