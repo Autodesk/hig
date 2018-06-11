@@ -180,6 +180,13 @@ jobs:
       - run:
           name: Release
           command: yarn run release
+  update-development:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: Update development branch
+          command: yarn run update-development
 workflows:
   version: 2
   build-test-validate-and-deploy:
@@ -222,6 +229,12 @@ workflows:
           requires:
             - react-test
             - visual-test
+          filters:
+            branches:
+              only: master
+      - update-development:
+          requires:
+            - packages-deploy
           filters:
             branches:
               only: master
