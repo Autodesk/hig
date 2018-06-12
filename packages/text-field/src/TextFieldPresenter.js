@@ -95,6 +95,20 @@ export default class TextFieldPresenter extends Component {
     type: "text"
   };
 
+  state = {
+    focused: false
+  };
+
+  handleFocus = event => {
+    this.setState({ focused: true });
+    if (this.props.onFocus) this.props.onFocus(event);
+  };
+
+  handleBlur = event => {
+    this.setState({ focused: false });
+    if (this.props.onBlur) this.props.onBlur(event);
+  };
+
   hasClearableInput() {
     return (
       this.props.showClearButton &&
@@ -117,79 +131,97 @@ export default class TextFieldPresenter extends Component {
   render() {
     const hasClearableInput = this.hasClearableInput();
 
+    const {
+      errors,
+      hideInstructionsOnErrors,
+      icon,
+      instructions,
+      label,
+      onClearButtonClick,
+      required,
+      showClearButton,
+      ...inputProps
+    } = this.props;
+
     return (
       <div
-        className={cx("hig__text-field", {
-          "hig__text-field--required": this.props.required,
-          "hig__text-field--clear-button-visible": hasClearableInput
+        className={cx("hig__text-field-v1", {
+          "hig__text-field-v1--required": required,
+          "hig__text-field-v1--disabled": inputProps.disabled,
+          "hig__text-field-v1--clear-button-visible": hasClearableInput,
+          "hig__text-field-v1--with-errors": errors
         })}
       >
         <div
-          className={cx("hig__text-field__content", {
-            "hig__text-field__content--with-icon": this.props.icon
+          className={cx("hig__text-field-v1__content", {
+            "hig__text-field-v1__content--with-icon": icon
           })}
         >
-          <div className="hig__text-field__input-wrapper">
-            {this.props.icon && (
+          <div
+            className={cx("hig__text-field-v1__input-wrapper", {
+              "hig__text-field-v1__input-wrapper--focused": this.state.focused,
+              "hig__text-field-v1__input-wrapper--with-errors": errors,
+              "hig__text-field-v1__input-wrapper--disabled": inputProps.disabled
+            })}
+          >
+            {label && <span className="hig__text-field-v1__label-spacer" />}
+
+            {label && (
               <label
-                className={cx("hig__text-field__icon-v1", {
-                  "hig__text-field__icon-v1--disabled": this.props.disabled
+                htmlFor={this.props.id}
+                className={cx("hig__text-field-v1__label", {
+                  "hig__text-field-v1__label--input-focused": this.state
+                    .focused,
+                  "hig__text-field-v1__label--required": required,
+                  "hig__text-field-v1__label--with-value": this.props.value
                 })}
-                htmlFor={this.props.id}
               >
-                {this.props.icon}
+                {label}
               </label>
             )}
 
-            <Input
-              id={this.props.id}
-              value={this.props.value}
-              onChange={this.props.onChange}
-              name={this.props.name}
-              type={this.props.type}
-              disabled={this.props.disabled}
-              readOnly={this.props.readOnly}
-              placeholder={this.props.placeholder}
-              onBlur={this.props.onBlur}
-              onFocus={this.props.onFocus}
-              onInput={this.props.onInput}
-            />
+            <div className="hig__text-field-v1__input-row">
+              {icon && (
+                <label
+                  className={cx("hig__text-field-v1__icon", {
+                    "hig__text-field-v1__icon--disabled": this.props.disabled
+                  })}
+                  htmlFor={this.props.id}
+                >
+                  {icon}
+                </label>
+              )}
 
-            {this.props.label && (
-              <label
-                htmlFor={this.props.id}
-                className="hig__text-field__label-v1"
-              >
-                {this.props.label}
-              </label>
-            )}
+              <Input
+                ref={input => {
+                  this.input = input;
+                }}
+                {...inputProps}
+                onBlur={this.handleBlur}
+                onFocus={this.handleFocus}
+              />
 
-            {hasClearableInput && (
-              <span className="hig__text-field__clear">
-                <IconButton
-                  type="transparent"
-                  icon="clear-small"
-                  title="Clear field"
-                  onClick={this.props.onClearButtonClick}
-                />
-              </span>
-            )}
+              {hasClearableInput && (
+                <span className="hig__text-field-v1__clear">
+                  <IconButton
+                    type="transparent"
+                    icon="clear-small"
+                    title="Clear field"
+                    onClick={onClearButtonClick}
+                  />
+                </span>
+              )}
+            </div>
           </div>
 
           {this.shouldShowInstructions() && (
-            <p className="hig__text-field__instructions">
-              {this.props.instructions}
-            </p>
+            <p className="hig__text-field-v1__instructions">{instructions}</p>
           )}
 
-          {this.props.errors && (
-            <p className="hig__text-field__errors">{this.props.errors}</p>
-          )}
+          {errors && <p className="hig__text-field-v1__errors">{errors}</p>}
 
-          {this.props.required && (
-            <p className="hig__text-field__required-notice">
-              {this.props.required}
-            </p>
+          {required && (
+            <p className="hig__text-field-v1__required-notice">{required}</p>
           )}
         </div>
       </div>

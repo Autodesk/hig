@@ -54,7 +54,7 @@ describe("TextField", () => {
           showClearButton
         />
       );
-      wrapper.find(".hig__text-field__clear button").simulate("click");
+      wrapper.find(".hig__text-field-v1__clear button").simulate("click");
       expect(eventHandler).toHaveBeenCalled();
     });
   });

@@ -4,7 +4,8 @@ gemini.suite("TextField", () => {
       .setUrl("iframe.html?selectedKind=TextField&selectedStory=basic")
       .setCaptureElements(".storybook-component")
       .capture("unfocused without input")
-      .capture("focused without input", actions => {
+      // Small differences in placeholder text can easily generate false negatives
+      .capture("focused without input", { tolerance: 5 }, actions => {
         actions.focus("input");
       })
       .capture("focused with input", (actions, find) => {
@@ -38,5 +39,14 @@ gemini.suite("TextField", () => {
       )
       .setCaptureElements(".storybook-component")
       .capture("with errors replacing instructions");
+  });
+
+  gemini.suite("with preceding icon", suite => {
+    suite
+      .setUrl(
+        "iframe.html?selectedKind=TextField&selectedStory=with%20preceding%20icon"
+      )
+      .setCaptureElements(".storybook-component")
+      .capture("with preceding icon");
   });
 });
