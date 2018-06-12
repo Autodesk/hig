@@ -18,7 +18,8 @@
     "extract:builds": "bash scripts/extract-builds.sh",
     "extract:dependencies": "bash scripts/extract-dependencies.sh",
     "archive:builds": "node scripts/archive-builds.js",
-    "archive:dependencies": "node scripts/archive-dependencies.js"
+    "archive:dependencies": "node scripts/archive-dependencies.js",
+    "update-development": "bash scripts/update-development.sh"
   },
   "devDependencies": {
     "archiver": "^2.1.1",
