@@ -211,8 +211,8 @@ workflows:
       - canary-packages-deploy:
           filters:
             branches:
-              ignore:
-                - master
+              only:
+                - /canary-.*/
           requires:
             - react-test
             - visual-test
