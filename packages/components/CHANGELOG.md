@@ -4,4 +4,6 @@
 
 ### Features
 
-* **components:** Add components ([82c749c](https://github.com/Autodesk/hig/commit/82c749c))
+* **components:** The following components have been added: ([82c749c](https://github.com/Autodesk/hig/commit/82c749c))
+  - `@hig/notifications-flyout`
+  - `@hig/notifications-toast`
