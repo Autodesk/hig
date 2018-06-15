@@ -1,82 +1,94 @@
 @import "~@hig/styles/mixins/colors.scss";
 @import "~@hig/styles/mixins/placeholder.scss";
 @import "~@hig/styles/mixins/typography.scss";
+@import "./tokens.scss";
 
-.hig__text-field {
+@mixin styled-border($border-color, $hover-border-color: $border-color) {
+  border: {
+    bottom: 1px solid $border-color;
+  }
+  box-shadow: 0 1px 0 $border-color;
+
+  &:hover {
+    border-color: $hover-border-color;
+    box-shadow: 0 1px 0 $hover-border-color;
+  }
+}
+
+.hig__text-field-v1 {
   position: relative;
   display: flex;
   font-family: 'ArtifaktElement', sans-serif;
   font-weight: 500;
-  margin: 30px 0;
   min-width: 300px;
   max-width: 450px;
 }
 
-.hig__text-field__content {
-  flex: 1 1 auto;
+.hig__text-field-v1__content {
+  width: 100%;
 }
 
-.hig__text-field__content--with-icon {
+.hig__text-field-v1__content--with-icon {
   margin-left: 26px;
 }
 
-.hig__text-field__icon-v1 {
-  position: absolute;
-  left: -28px;
-  bottom: 6px;
+.hig__text-field-v1__input-row {
+  display: flex;
+  align-items: center;
 }
 
-.hig__text-field__icon-v1--disabled {
+.hig__text-field-v1__icon {
+  position: absolute;
+  left: -28px;
+}
+
+.hig__text-field-v1__icon--disabled {
   opacity: 0.3;
 }
 
-.hig__text-field__label-v1 {
-  @include typography-small;
+.hig__text-field-v1__label-spacer {
+  height: $label-height;
+}
+
+.hig__text-field-v1__label {
+  @include typography-medium;
+  top: $label-height;
   color: transparentize($typography-base-color, .5);
-  position: relative;
-  padding-bottom: 8px;
+  position: absolute;
   transition-property: top, font-size, line-height;
   transition-duration: 0.1s, 0.1s, 0.1s;
   transition-delay: 0.1s;
 
-  .hig__text-field__input:focus+& {
-    @include typography-small;
-    color: color(hig-blue-60);
-  }
-
-  .hig__text-field--required &::after {
-    content: '*';
-    display: inline-block;
-    margin-left: 5px;
-  }
-
-  .hig__text-field__input--no-value+& {
-    @include typography-medium;
-    top: 22px;
-    left: 1px;
-  }
-
-  .hig__text-field__input--no-value.hig__text-field__input:focus+& {
-    top: 0;
-    left: 0;
-    transition-delay: 0s;
-  }
-
-  .hig__text-field__input[disabled]+& {
+  .hig__text-field-v1--disabled & {
     color: color(hig-cool-gray-20);
     pointer-events: none;
   }
 }
 
-.hig__text-field--clear-button-visible,
-.hig__text-field--password-button-visible {
-  .hig__text-field__input {
+.hig__text-field-v1__label--input-focused,
+.hig__text-field-v1__label--with-value {
+  @include typography-small;
+  color: color(hig-blue-60);
+  top: 0;
+}
+
+.hig__text-field-v1__label--required {
+  &:after {
+    content: '*';
+    display: inline-block;
+    margin-left: 5px;
+  }
+}
+
+.hig__text-field-v1--clear-button-visible,
+.hig__text-field-v1--password-button-visible {
+  .hig__text-field-v1__input {
     padding-right: 36px;
   }
 }
 
-.hig__text-field__instructions,
-.hig__text-field__required-notice {
+.hig__text-field-v1__instructions,
+.hig__text-field-v1__required-notice {
   margin-top: 0;
   margin-bottom: 8px;
   font-size: 12px;
@@ -85,53 +97,51 @@
   color: color(hig-cool-gray-50);
 }
 
-.hig__text-field__required-notice::before {
+.hig__text-field-v1__required-notice::before {
   content: '*';
   display: inline-block;
   margin-right: 5px;
 }
 
-.hig__text-field__input-wrapper {
+.hig__text-field-v1__input-wrapper {
+  @include styled-border(color(hig-cool-gray-30), color(hig-turquoise-50));
   position: relative;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   margin-bottom: 10px;
+  box-shadow: none;
 }
 
-.hig__text-field__extra {
-  display: none;
-  position: absolute;
-  bottom: 3px;
-  right: 0;
-  border: none;
-  background: none;
+.hig__text-field-v1__input-wrapper--focused {
+  @include styled-border(color(hig-blue-60));
+}
 
-  &:focus {
-    outline: none;
-  }
+.hig__text-field-v1__input-wrapper--disabled {
+  @include styled-border(color(hig-cool-gray-20));
 
-  &.hig__text-field__extra--show {
-    display: block;
-  }
+  border-bottom-style: dashed;
+  color: color(hig-cool-gray-20);
+  box-shadow: none;
 
-  .hig__text-field--disabled & {
-    opacity: 0.3;
+  &:hover {
+    box-shadow: none;
   }
 }
 
-.hig__text-field__clear {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  width: 24px;
-  height: 24px;
+.hig__text-field-v1__input-wrapper--with-errors {
+  @include styled-border(color(hig-red-alert));
+}
 
-  .hig__text-field--disabled & {
+.hig__text-field-v1__clear {
+  position: absolute;
+  right: 0px;
+
+  .hig__text-field-v1--disabled & {
     display: none;
   }
 }
 
-.hig__text-field__errors {
+.hig__text-field-v1__errors {
   margin-top: 0;
   margin-bottom: 8px;
   font-size: 12px;
@@ -140,17 +150,9 @@
   color: color(hig-red-alert);
 }
 
-.hig__text-field--with-errors {
-  .hig__text-field__input {
-    border-bottom: 2px solid color(hig-red-alert);
-  }
-
-  .hig__text-field__instructions {
+.hig__text-field-v1--with-errors {
+  .hig__text-field-v1__instructions {
     font-weight: 600;
     color: color(hig-red-alert);
-  }
-
-  .hig__text-field__instructions--hide-on-error {
-    display: none;
   }
 }
