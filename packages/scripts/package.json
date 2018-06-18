@@ -33,5 +33,17 @@
     "rollup-plugin-postcss": "^1.4.1",
     "semantic-release": "^15.5.0",
     "semver": "^5.5.0"
+  },
+  "eslintConfig": {
+    "extends": "@hig"
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "presets": [
+          "@hig/babel-preset/test"
+        ]
+      }
+    }
   }
 }
