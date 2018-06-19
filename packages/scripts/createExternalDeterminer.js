@@ -9,8 +9,10 @@ module.exports = function createExternalDeterminer(externalDependencies) {
    * @returns {boolean}
    */
   return function external(moduleName) {
-    const packageName = moduleName.split("/").shift();
-
-    return externalDependencies.includes(packageName);
+    return Boolean(
+      externalDependencies.find(dependencyName =>
+        moduleName.startsWith(dependencyName)
+      )
+    );
   };
 };

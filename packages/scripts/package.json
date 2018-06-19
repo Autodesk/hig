@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@hig/scripts",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Scripts for HIG React components",
   "main": "index.js",
   "repository": "https://github.com/Autodesk/hig",
@@ -33,5 +33,17 @@
     "rollup-plugin-postcss": "^1.4.1",
     "semantic-release": "^15.5.0",
     "semver": "^5.5.0"
+  },
+  "eslintConfig": {
+    "extends": "@hig"
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "presets": [
+          "@hig/babel-preset/test"
+        ]
+      }
+    }
   }
 }
