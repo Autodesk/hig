@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`flyout/Flyout renders children from the given render function 1`] = `
+<div
+  className="hig__flyout-v1 hig__flyout-v1--exited hig__flyout-v1--top-right"
+>
+  <div
+    className="hig__flyout-v1__action"
+  >
+    <button
+      className="hig--light-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+      onBlur={undefined}
+      onClick={[Function]}
+      onFocus={undefined}
+      onMouseOver={undefined}
+    >
+      <span
+        className="hig__button__title"
+      >
+        Render prop
+      </span>
+    </button>
+  </div>
+  <div
+    className="hig__flyout-v1__container"
+    style={
+      Object {
+        "left": undefined,
+        "top": undefined,
+      }
+    }
+  >
+    <div
+      className="hig__flyout-v1__chevron"
+    />
+    <div
+      className="hig__flyout-v1__panel"
+      onScroll={undefined}
+      style={
+        Object {
+          "maxHeight": undefined,
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`flyout/Flyout renders with all props 1`] = `
+<div
+  className="hig__flyout-v1 hig__flyout-v1--top-right"
+>
+  <div
+    className="hig__flyout-v1__action"
+  >
+    <button
+      className="hig--light-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+      onBlur={undefined}
+      onClick={[Function]}
+      onFocus={undefined}
+      onMouseOver={undefined}
+    >
+      <span
+        className="hig__button__title"
+      >
+        Hello
+      </span>
+    </button>
+  </div>
+  <div
+    className="hig__flyout-v1__container"
+    style={
+      Object {
+        "left": undefined,
+        "top": undefined,
+      }
+    }
+  >
+    <div
+      className="hig__flyout-v1__chevron"
+    />
+    <div
+      className="hig__flyout-v1__panel"
+      onScroll={[Function]}
+      style={
+        Object {
+          "maxHeight": 150,
+        }
+      }
+    >
+      World
+    </div>
+  </div>
+</div>
+`;
+
+exports[`flyout/Flyout renders without props 1`] = `
+<div
+  className="hig__flyout-v1 hig__flyout-v1--exited hig__flyout-v1--top-right"
+>
+  <div
+    className="hig__flyout-v1__action"
+  />
+  <div
+    className="hig__flyout-v1__container"
+    style={
+      Object {
+        "left": undefined,
+        "top": undefined,
+      }
+    }
+  >
+    <div
+      className="hig__flyout-v1__chevron"
+    />
+    <div
+      className="hig__flyout-v1__panel"
+      onScroll={undefined}
+      style={
+        Object {
+          "maxHeight": undefined,
+        }
+      }
+    />
+  </div>
+</div>
+`;
