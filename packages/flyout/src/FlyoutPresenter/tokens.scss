@@ -1,0 +1,19 @@
+@import "~@hig/styles/mixins/colors.scss";
+@import "~@hig/styles/mixins/spacing.scss";
+
+$container-transition-distance: 4px;
+$container-transition-duration: 250ms;
+// Bounce effect
+$container-transition-easing: cubic-bezier(0.77, 0, 0.265, 2);
+
+$panel-background-color: color("hig-white");
+$panel-border-radius: 4px;
+$panel-border-width: 1px;
+$panel-padding: spacing("s");
+
+$chevron-size: 14px;
+$chevron-centering-position: calc(50% - #{$chevron-size / 2});
+$chevron-shadow-color: color("hig-cool-gray-20");
+$chevron-shadow-offset: 2px;
+$chevron-side-position: -(14px / 2 - $panel-border-width);
+$chevron-spacing: 14px;

@@ -15,15 +15,15 @@ yarn add @hig/flyout
 ### Import the component and CSS
 
 ```js
-import Flyout from '@hig/flyout';
-import '@hig/flyout/build/index.css';
+import Flyout, { anchorPoints } from "@hig/flyout";
+import "@hig/flyout/build/index.css";
 ```
 
 ## Basic usage
 
 ```jsx
 <Flyout
-  anchorPoint="right-top"
+  anchorPoint={anchorPoints.RIGHT_TOP}
   content={
     <div>
       <h3>Important flyout information</h3>
@@ -32,5 +32,24 @@ import '@hig/flyout/build/index.css';
   }
 >
   <Button title="Open flyout" />
+</Flyout>
+```
+
+### Render prop `children`
+
+```jsx
+<Flyout
+  content={
+    <div>
+      <h3>Important flyout information</h3>
+      <p>Any content can go in here.</p>
+    </div>
+  }
+>
+  ({ handleClick }) => (
+    <CustomWrapper>
+      <CustomButton onClick={handleClick} />
+    </CustomWrapper>
+  )
 </Flyout>
 ```
