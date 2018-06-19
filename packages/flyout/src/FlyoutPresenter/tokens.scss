@@ -1,4 +1,5 @@
 @import "~@hig/styles/mixins/colors.scss";
+@import "~@hig/styles/mixins/spacing.scss";
 
 $container-transition-distance: 4px;
 $container-transition-duration: 250ms;
@@ -8,7 +9,7 @@ $container-transition-easing: cubic-bezier(0.77, 0, 0.265, 2);
 $panel-background-color: color("hig-white");
 $panel-border-radius: 4px;
 $panel-border-width: 1px;
-$panel-padding: 10px;
+$panel-padding: spacing("s");
 
 $chevron-size: 14px;
 $chevron-centering-position: calc(50% - #{$chevron-size / 2});
