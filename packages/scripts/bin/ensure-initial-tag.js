@@ -41,7 +41,6 @@ async function getInitialCommitHash() {
   const args = [
     "log",
     "--diff-filter=A",
-    "--follow",
     "--pretty=format:%H",
     packageJsonPath
   ];
@@ -69,7 +68,7 @@ async function createInitialTag(packageName, commitHash) {
  * @returns {Promise<void>}
  */
 async function start() {
-  const { name: packageName, version } = await readPkg();
+  const { name: packageName } = await readPkg();
 
   if (await hasStableVersion(packageName)) return;
 
