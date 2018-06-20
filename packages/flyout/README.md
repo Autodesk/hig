@@ -15,7 +15,7 @@ yarn add @hig/flyout
 ### Import the component and CSS
 
 ```js
-import Flyout, { anchorPoints } from "@hig/flyout";
+import Flyout from "@hig/flyout";
 import "@hig/flyout/build/index.css";
 ```
 
@@ -23,7 +23,7 @@ import "@hig/flyout/build/index.css";
 
 ```jsx
 <Flyout
-  anchorPoint={anchorPoints.RIGHT_TOP}
+  anchorPoint="right-top"
   content={
     <div>
       <h3>Important flyout information</h3>
