@@ -1,3 +1,11 @@
+<a name="@hig/styles-v0.2.2"></a>
+# [@hig/styles-v0.2.2](https://github.com/Autodesk/hig/compare/@hig/styles@0.2.1...@hig/styles@0.2.2) (2018-06-20)
+
+
+### Bug Fixes
+
+* **bundle:** Fix package bundles ([a1b479d](https://github.com/Autodesk/hig/commit/a1b479d))
+
 <a name="@hig/styles-v0.2.1"></a>
 # [@hig/styles-v0.2.1](https://github.com/Autodesk/hig/compare/@hig/styles@0.2.0...@hig/styles@0.2.1) (2018-06-07)
 
