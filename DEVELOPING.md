@@ -48,6 +48,7 @@ To get set up, run the following commands:
 git clone https://github.com/Autodesk/hig
 cd hig
 yarn
+yarn build
 ```
 
 ## Project structure
