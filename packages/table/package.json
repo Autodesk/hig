@@ -1,6 +1,6 @@
 {
   "name": "@hig/table",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "HIG Table",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -32,7 +32,7 @@
   "devDependencies": {
     "@hig/babel-preset": "^0.1.0",
     "@hig/eslint-config": "^0.1.0",
-    "@hig/scripts": "^0.1.0",
+    "@hig/scripts": "^0.1.1",
     "@hig/semantic-release-config": "^0.1.0",
     "@hig/styles": "^0.1.1",
     "delay": "^2.0.0"
