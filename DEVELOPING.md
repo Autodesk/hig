@@ -28,9 +28,9 @@
 
 The following dependencies must be available to be begin project development.
 
-* [Unix-like][] operating system _— Windows Subsystem for Linux _should_ also work_
+* [Unix-like][] operating system _— [Windows Subsystem for Linux][] also works_
 * [Git][]
-* [Node][] `>=9.7.1`
+* [Node][] `^9.7.1`
 * [Yarn][] `>=1.5.1`
 * [Python][] `^2.7` _— Some dependencies require `node-gyp` which uses Python_
 
@@ -39,6 +39,7 @@ The following dependencies must be available to be begin project development.
 [Python]: https://www.python.org
 [Unix-like]: https://en.wikipedia.org/wiki/Unix-like
 [Yarn]: https://yarnpkg.com
+[Windows Subsystem for Linux]: https://docs.microsoft.com/en-us/windows/wsl/about
 
 ## Getting Started
 
