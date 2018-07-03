@@ -3,9 +3,12 @@ import Reference from "./Reference";
 import ColorExample from "./ColorExample";
 import LengthExample from "./LengthExample";
 import FontWeightExample from "./FontWeightExample";
+import FontSizeExample from "./FontSizeExample";
+import FontFamilyExample from "./FontFamilyExample";
 import BorderWidthExample from "./BorderWidthExample";
 import BorderRadiusExample from "./BorderRadiusExample";
 import ShadowExample from "./ShadowExample";
+import SpacingExample from "./SpacingExample";
 
 const SCHEMA_TYPES = {
   COLOR: "color",
@@ -16,7 +19,8 @@ const SCHEMA_TYPES = {
   FONT_SIZE: "fontSize",
   FONT_WEIGHT: "fontWeight",
   LINE_HEIGHT: "lineHeight",
-  SHADOW: "shadow"
+  SHADOW: "shadow",
+  SPACING: "spacing"
 };
 
 function renderTypeExample(props) {
@@ -34,10 +38,10 @@ function renderTypeExample(props) {
       return <BorderWidthExample {...props} />;
     }
     case SCHEMA_TYPES.FONT_FAMILY: {
-      return <LengthExample {...props} />;
+      return <FontFamilyExample {...props} />;
     }
     case SCHEMA_TYPES.FONT_SIZE: {
-      return <LengthExample {...props} />;
+      return <FontSizeExample {...props} />;
     }
     case SCHEMA_TYPES.FONT_WEIGHT: {
       return <FontWeightExample {...props} />;
@@ -47,6 +51,9 @@ function renderTypeExample(props) {
     }
     case SCHEMA_TYPES.SHADOW: {
       return <ShadowExample {...props} />;
+    }
+    case SCHEMA_TYPES.SPACING: {
+      return <SpacingExample {...props} />;
     }
     default: {
       throw new Error(`Unrecognized role type ${props.schema.type}`);

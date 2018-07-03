@@ -1,12 +1,12 @@
 import React from "react";
+import Spacing from "./Spacing";
 import Value from "./Value";
-import FontSample from "./FontSample";
 
-export default function FontWeightExample({ role, theme }) {
+export default function SpacingExample({ role, theme }) {
   const value = theme[role];
   return (
     <div>
-      <FontSample fontWeight={value} theme={theme} />
+      <Spacing length={value} theme={theme} />
       <Value>{value}</Value>
     </div>
   );
