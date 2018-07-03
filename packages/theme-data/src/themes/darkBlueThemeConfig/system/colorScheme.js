@@ -16,5 +16,16 @@ export default {
   COMPONENT_BACKGROUND_COLOR: {
     ref: "BASICS.COLORS.SURFACE_DARK_BLUE_LEVEL_1_5"
   },
-  TEXT_COLOR: { ref: "BASICS.COLORS.TEXT_AGAINST_DARK" }
+  TEXT_COLOR: { ref: "BASICS.COLORS.TEXT_AGAINST_DARK" },
+  DIVIDER_DIM_COLOR: {
+    ref: "BASICS.COLORS.WHITE",
+    transform: { alpha: 0.1 }
+  },
+  DIVIDER_REGULAR_COLOR: {
+    ref: "BASICS.COLORS.WHITE",
+    transform: { alpha: 0.25 }
+  },
+  DIVIDER_BOLD_COLOR: {
+    ref: "COLOR_SCHEME.ACCENT_COLOR_500"
+  }
 };
