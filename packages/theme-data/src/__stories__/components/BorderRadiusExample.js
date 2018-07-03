@@ -6,11 +6,7 @@ export default function BorderRadiusExample({ role, theme }) {
   const value = theme[role];
   return (
     <div>
-      <Swatch
-        color={theme["BASICS.COLORS.WHITE"]}
-        theme={theme}
-        borderRadius={value}
-      />
+      <Swatch theme={theme} borderRadius={value} />
       <Value>{value}</Value>
     </div>
   );
