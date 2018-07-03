@@ -1,10 +1,17 @@
 import React from "react";
 
-export default function Swatch({ color, theme, borderWidth, borderRadius }) {
+export default function Swatch({
+  color,
+  theme,
+  borderWidth,
+  borderRadius,
+  boxShadow
+}) {
   const renderedBackgroundColor =
     color || theme["COLOR_SCHEME.SURFACE_LEVEL_1_COLOR"];
   const renderedBorderWidth = borderWidth || theme["BASICS.BORDER_WIDTHS.S"];
   const renderedBorderRadius = borderRadius || theme["BASICS.BORDER_RADII.M"];
+  const renderedBoxShadow = boxShadow || "0 0 0 rgba(0, 0, 0, 0)";
   return (
     <div
       style={{
@@ -16,7 +23,7 @@ export default function Swatch({ color, theme, borderWidth, borderRadius }) {
         }`,
         boxShadow: `0 0 0 ${renderedBorderWidth} ${
           theme["COLOR_SCHEME.SURFACE_LEVEL_4_COLOR"]
-        }`,
+        }, ${renderedBoxShadow}`,
         marginBottom: theme["BASICS.SPACINGS.XS"]
       }}
     />

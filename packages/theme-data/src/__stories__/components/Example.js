@@ -5,6 +5,7 @@ import LengthExample from "./LengthExample";
 import FontWeightExample from "./FontWeightExample";
 import BorderWidthExample from "./BorderWidthExample";
 import BorderRadiusExample from "./BorderRadiusExample";
+import ShadowExample from "./ShadowExample";
 
 const SCHEMA_TYPES = {
   COLOR: "color",
@@ -45,7 +46,7 @@ function renderTypeExample(props) {
       return <LengthExample {...props} />;
     }
     case SCHEMA_TYPES.SHADOW: {
-      return <LengthExample {...props} />;
+      return <ShadowExample {...props} />;
     }
     default: {
       throw new Error(`Unrecognized role type ${props.schema.type}`);
