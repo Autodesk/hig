@@ -1,16 +1,17 @@
 import React from "react";
 import Swatch from "./Swatch";
-import Reference from "./Reference";
-import { Text } from "@hig/typography";
+import Value from "./Value";
 
-export default function ColorExample({ role, schema, themeConfig, theme }) {
+export default function ColorExample({ role, theme, basics }) {
+  const value = theme[role];
+  const colorName = Object.keys(basics.COLORS).find(
+    key => basics.COLORS[key] === value
+  );
   return (
     <div>
-      <Swatch color={theme[role]} />
-      <Text>{theme[role]}</Text>
-      {themeConfig[role].ref ? (
-        <Reference>{themeConfig[role].ref}</Reference>
-      ) : null}
+      <Swatch color={value} theme={theme} />
+      <Value>{value}</Value>
+      {colorName ? <Value>{colorName}</Value> : null}
     </div>
   );
 }

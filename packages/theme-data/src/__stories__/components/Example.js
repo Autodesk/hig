@@ -2,6 +2,9 @@ import React from "react";
 import Reference from "./Reference";
 import ColorExample from "./ColorExample";
 import LengthExample from "./LengthExample";
+import FontWeightExample from "./FontWeightExample";
+import BorderWidthExample from "./BorderWidthExample";
+import BorderRadiusExample from "./BorderRadiusExample";
 
 const SCHEMA_TYPES = {
   COLOR: "color",
@@ -24,10 +27,10 @@ function renderTypeExample(props) {
       return <LengthExample {...props} />;
     }
     case SCHEMA_TYPES.BORDER_RADIUS: {
-      return <LengthExample {...props} />;
+      return <BorderRadiusExample {...props} />;
     }
     case SCHEMA_TYPES.BORDER_WIDTH: {
-      return <LengthExample {...props} />;
+      return <BorderWidthExample {...props} />;
     }
     case SCHEMA_TYPES.FONT_FAMILY: {
       return <LengthExample {...props} />;
@@ -36,7 +39,7 @@ function renderTypeExample(props) {
       return <LengthExample {...props} />;
     }
     case SCHEMA_TYPES.FONT_WEIGHT: {
-      return <LengthExample {...props} />;
+      return <FontWeightExample {...props} />;
     }
     case SCHEMA_TYPES.LINE_HEIGHT: {
       return <LengthExample {...props} />;
@@ -51,10 +54,11 @@ function renderTypeExample(props) {
 }
 
 export default function Example(props) {
+  const ref = props.themeConfig[props.role].ref;
   return (
     <div>
       {renderTypeExample(props)}
-      {props.themeConfig.ref ? <Reference ref={props.themeConfig.ref} /> : null}
+      {ref ? <Reference>{ref}</Reference> : null}
     </div>
   );
 }

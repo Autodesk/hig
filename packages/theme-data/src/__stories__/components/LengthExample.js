@@ -1,12 +1,6 @@
 import React from "react";
-import Reference from "./Reference";
-import { Text } from "@hig/typography";
+import Value from "./Value";
 
-export default function LengthExample({ role, schema, themeConfig, theme }) {
-  return (
-    <div>
-      <Text>{theme[role]}</Text>
-      {themeConfig.ref ? <Reference ref={themeConfig.ref} /> : null}
-    </div>
-  );
+export default function LengthExample({ role, theme }) {
+  return <Value>{theme[role]}</Value>;
 }

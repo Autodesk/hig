@@ -8,6 +8,7 @@ import Role from "./components/Role";
 import theme from "../themes/lightGrayThemeConfig/theme";
 import themeConfig from "../themes/lightGrayThemeConfig/themeConfig";
 import schema from "../theme-schema";
+import basics from "../basics";
 
 const storybook = storiesOf("Theme data", module);
 
@@ -20,6 +21,7 @@ storybook.add(
         schema={schema[role]}
         theme={theme}
         themeConfig={themeConfig}
+        basics={basics}
       />
     ))
   )
