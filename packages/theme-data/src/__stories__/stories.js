@@ -72,5 +72,25 @@ export default [
     description: "Density",
     schema: filterMatchByKey(schema, "DENSITY"),
     readme: densityReadme
+  },
+  {
+    description: "Component - Checkbox",
+    schema: filterMatchByKey(schema, /^CHECKBOX_/),
+    readme: undefined
+  },
+  {
+    description: "Component - Input",
+    schema: filterMatchByKey(schema, /^INPUT_/),
+    readme: undefined
+  },
+  {
+    description: "Component - Label",
+    schema: filterMatchByKey(schema, /^LABEL_/),
+    readme: undefined
+  },
+  {
+    description: "Component - Menu",
+    schema: filterMatchByKey(schema, /^MENU_/),
+    readme: undefined
   }
 ];
