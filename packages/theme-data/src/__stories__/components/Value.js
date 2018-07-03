@@ -1,11 +1,12 @@
 import React from "react";
 import { Text } from "@hig/typography";
+import InlineCode from "./InlineCode";
 
 export default function Value({ children }) {
   return (
     <div>
       <Text>
-        <code>{children}</code>
+        <InlineCode>{children}</InlineCode>
       </Text>
     </div>
   );
