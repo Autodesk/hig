@@ -1,0 +1,66 @@
+{
+  "name": "@hig/theme-data-poc",
+  "version": "0.0.6-alpha",
+  "description": "HIG Theme Data",
+  "author": "Autodesk Inc.",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Autodesk/hig.git"
+  },
+  "module": "build/index.es.js",
+  "files": [
+    "build/*"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "react-scripts test --env=jsdom",
+    "build": "hig-scripts-build && babel-node scripts/buildThemes",
+    "lint": "hig-scripts-lint"
+  },
+  "devDependencies": {
+    "@hig/babel-preset": "^0.1.0",
+    "@hig/eslint-config": "^0.1.0",
+    "@hig/scripts": "^0.1.0",
+    "@hig/typography": "^0.1.1",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "eslint": "^4.19.1",
+    "eslint-plugin-prettier": "^2.6.0",
+    "execa": "^0.10.0",
+    "node-sass": "^4.8.3",
+    "postcss-functions": "^3.0.0",
+    "postcss-import": "^11.1.0",
+    "react-scripts": "^1.1.4",
+    "read-pkg": "^3.0.0",
+    "rollup": "^0.57.1",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-commonjs": "^9.1.0",
+    "rollup-plugin-json": "^2.3.0",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-postcss": "^1.4.1",
+    "semantic-release": "^15.5.0",
+    "semver": "^5.5.0"
+  },
+  "dependencies": {
+    "tinycolor2": "^1.4.1"
+  },
+  "eslintConfig": {
+    "extends": "@hig"
+  },
+  "babel": {
+    "presets": [ "env", "stage-2" ],
+    "env": {
+      "test": {
+        "presets": [
+          "@hig/babel-preset/test"
+        ]
+      }
+    }
+  }
+}
