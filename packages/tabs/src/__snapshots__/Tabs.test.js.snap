@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tabs/Tabs renders tabs 1`] = `
+<div
+  data-hig="fragment"
+>
+  <ul
+    className="hig__tabs hig__tabs--align-right"
+  >
+    <li
+      className="hig__tabs__tab"
+    >
+      <span
+        className="hig__tabs__tab-label"
+        onClick={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        foo
+      </span>
+    </li>
+    <li
+      className="hig__tabs__tab hig__tabs__tab--active"
+    >
+      <span
+        className="hig__tabs__tab-label"
+        onClick={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        hello
+      </span>
+    </li>
+    <button />
+  </ul>
+  world
+</div>
+`;

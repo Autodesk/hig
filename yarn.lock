@@ -41,9 +41,28 @@
     react-lifecycles-compat "^3.0.2"
     react-virtualized "^9.19.1"
 
+"@hig/tabs@^0.1.1-alpha":
+  version "0.1.1-alpha"
+  resolved "https://registry.yarnpkg.com/@hig/tabs/-/tabs-0.1.1-alpha.tgz#e92af8b4aebb0451a56b326ebd20c645a33833ef"
+  dependencies:
+    classnames "^2.2.5"
+    hig-react "^0.29.0"
+    prop-types "^15.6.1"
+    react-lifecycles-compat "^3.0.2"
+
 "@hig/text-field@^0.1.1":
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/@hig/text-field/-/text-field-0.1.1.tgz#ce7b7c3b655c77f069720b612d9a054da30e2295"
+  dependencies:
+    "@hig/icon-button" "^0.1.1"
+    classnames "^2.2.5"
+    hig-react "^0.29.0"
+    prop-types "^15.6.1"
+    react-lifecycles-compat "^3.0.2"
+
+"@hig/text-field@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@hig/text-field/-/text-field-0.2.0.tgz#d34c031606a7fe6d51819555bce18097016d4b04"
   dependencies:
     "@hig/icon-button" "^0.1.1"
     classnames "^2.2.5"
@@ -11465,6 +11484,10 @@ remark@^5.0.1:
 remove-trailing-separator@^1.0.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/remove-trailing-separator/-/remove-trailing-separator-1.1.0.tgz#c24bce2a283adad5bc3f58e0d48249b92379d8ef"
+
+render-fragment@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/render-fragment/-/render-fragment-0.1.1.tgz#b231f259b7eee333d34256aee0ef3169be7bef30"
 
 renderkid@^2.0.1:
   version "2.0.1"
