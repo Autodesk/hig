@@ -1,13 +1,26 @@
-import React from "React";
+import React from "react";
 
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
 
-const storybook = storiesOf("TextLink", module);
+import infoOptions from "./infoOptions";
+import Role from "./components/Role";
+import theme from "../themes/lightGrayThemeConfig/theme";
+import themeConfig from "../themes/lightGrayThemeConfig/themeConfig";
+import schema from "../theme-schema";
+
+const storybook = storiesOf("Theme data", module);
 
 storybook.add(
-  description,
-  withInfo(infoOptions)(() => (
-    <Role role={"BASICS.COLORS.AUTODESK_BLUE_500"} schema={{ type: "color" }} />
-  ))
+  "Basics",
+  withInfo(infoOptions)(() =>
+    Object.keys(schema).map(role => (
+      <Role
+        role={role}
+        schema={schema[role]}
+        theme={theme}
+        themeConfig={themeConfig}
+      />
+    ))
+  )
 );
