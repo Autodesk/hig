@@ -137,6 +137,9 @@ export default {
   "BASICS.FONT_FAMILIES.MAIN": {
     type: "fontFamily"
   },
+  "BASICS.FONT_FAMILIES.MONOSPACE": {
+    type: "fontFamily"
+  },
   "BASICS.FONT_SIZES.S": { type: "fontSize" },
   "BASICS.FONT_SIZES.M": { type: "fontSize" },
   "BASICS.FONT_SIZES.L": { type: "fontSize" },
