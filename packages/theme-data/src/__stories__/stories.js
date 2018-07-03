@@ -1,4 +1,7 @@
 import schema from "../theme-schema";
+import basicsReadme from "../basics/README.md";
+import densityReadme from "./DENSITY_README.md";
+import colorSchemeReadme from "./COLOR_SCHEME_README.md";
 
 function filterMatchByKey(o, keyFragment) {
   return Object.keys(o).reduce((acc, key) => {
@@ -12,50 +15,62 @@ function filterMatchByKey(o, keyFragment) {
 export default [
   {
     description: "Basics - Border radii",
-    schema: filterMatchByKey(schema, "BASICS.BORDER_RADII")
+    schema: filterMatchByKey(schema, "BASICS.BORDER_RADII"),
+    readme: basicsReadme
   },
   {
     description: "Basics - Border widths",
-    schema: filterMatchByKey(schema, "BASICS.BORDER_WIDTHS")
+    schema: filterMatchByKey(schema, "BASICS.BORDER_WIDTHS"),
+    readme: basicsReadme
   },
   {
     description: "Basics - Breakpoints",
-    schema: filterMatchByKey(schema, "BASICS.BREAKPOINTS")
+    schema: filterMatchByKey(schema, "BASICS.BREAKPOINTS"),
+    readme: basicsReadme
   },
   {
     description: "Basics - Colors",
-    schema: filterMatchByKey(schema, "BASICS.COLORS")
+    schema: filterMatchByKey(schema, "BASICS.COLORS"),
+    readme: basicsReadme
   },
   {
     description: "Basics - Font families",
-    schema: filterMatchByKey(schema, "BASICS.FONT_FAMILIES")
+    schema: filterMatchByKey(schema, "BASICS.FONT_FAMILIES"),
+    readme: basicsReadme
   },
   {
     description: "Basics - Font sizes",
-    schema: filterMatchByKey(schema, "BASICS.FONT_SIZES")
+    schema: filterMatchByKey(schema, "BASICS.FONT_SIZES"),
+    readme: basicsReadme
   },
   {
     description: "Basics - Font weights",
-    schema: filterMatchByKey(schema, "BASICS.FONT_WEIGHTS")
+    schema: filterMatchByKey(schema, "BASICS.FONT_WEIGHTS"),
+    readme: basicsReadme
   },
   {
     description: "Basics - Line heights",
-    schema: filterMatchByKey(schema, "BASICS.LINE_HEIGHTS")
+    schema: filterMatchByKey(schema, "BASICS.LINE_HEIGHTS"),
+    readme: basicsReadme
   },
   {
     description: "Basics - Shadows",
-    schema: filterMatchByKey(schema, "BASICS.SHADOWS")
+    schema: filterMatchByKey(schema, "BASICS.SHADOWS"),
+    readme: basicsReadme
   },
   {
     description: "Basics - Spacings",
-    schema: filterMatchByKey(schema, "BASICS.SPACINGS")
+    schema: filterMatchByKey(schema, "BASICS.SPACINGS"),
+    readme: basicsReadme
   },
   {
     description: "Color scheme",
-    schema: filterMatchByKey(schema, "COLOR_SCHEME")
+    schema: filterMatchByKey(schema, "COLOR_SCHEME"),
+    readme: colorSchemeReadme
   },
   {
     description: "Density",
-    schema: filterMatchByKey(schema, "DENSITY")
+    schema: filterMatchByKey(schema, "DENSITY"),
+    readme: densityReadme
   }
 ];
