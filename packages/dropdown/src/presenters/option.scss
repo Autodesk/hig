@@ -1,0 +1,34 @@
+@import "~@hig/styles/mixins/colors.scss";
+@import "~@hig/styles/mixins/typography.scss";
+
+@mixin highlighted() {
+  background-color: color(hig-blue-10);
+}
+
+.hig__dropdown-option {
+  @include typography-base;
+  @import "../tokens.scss";
+  box-sizing: border-box;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: $option-height;
+  padding: 0 8px;
+
+  cursor: pointer;
+
+  &:hover {
+    @include highlighted;
+  }
+}
+
+.hig__dropdown-option--highlighted {
+  @include highlighted;
+}
+
+.hig__dropdown-option--focused {
+  background-color: color(hig-blue-10);
+}

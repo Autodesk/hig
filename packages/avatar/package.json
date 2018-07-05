@@ -1,10 +1,16 @@
 {
   "name": "@hig/avatar",
-  "version": "0.1.0-alpha",
+  "version": "0.1.2",
   "description": "HIG Avatar",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
-  "publishConfig": { "access": "public" },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Autodesk/hig.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "build/index.js",
   "module": "build/index.es.js",
   "style": "build/index.css",
@@ -13,29 +19,36 @@
   ],
   "dependencies": {
     "classnames": "^2.2.5",
+    "prop-types": "^15.6.1",
     "react-lifecycles-compat": "^3.0.2"
   },
   "peerDependencies": {
-    "prop-types": "^15.5.10",
     "react": "^15.4.1 || ^16.3.2"
   },
   "devDependencies": {
-    "@hig/babel-preset": "0.1.0",
-    "@hig/eslint-config": "0.1.0",
-    "@hig/scripts": "^0.1.0",
-    "@hig/styles": "^0.1.0"
+    "@hig/babel-preset": "^0.1.0",
+    "@hig/eslint-config": "^0.1.0",
+    "@hig/scripts": "^0.1.1",
+    "@hig/semantic-release-config": "^0.1.0",
+    "@hig/styles": "^0.1.1"
   },
   "scripts": {
     "build": "hig-scripts-build",
-    "lint": "eslint src --color --ext .js,.jsx"
+    "lint": "hig-scripts-lint",
+    "release": "hig-scripts-release"
   },
   "eslintConfig": {
     "extends": "@hig"
   },
+  "release": {
+    "extends": "@hig/semantic-release-config"
+  },
   "babel": {
     "env": {
       "test": {
-        "presets": ["@hig/babel-preset/test"]
+        "presets": [
+          "@hig/babel-preset/test"
+        ]
       }
     }
   }

@@ -12,6 +12,7 @@
   display: flex;
   position: relative;
   height: $top-nav-height;
+  min-height: $top-nav-height;
   padding-left: 7px;
   justify-content: space-between;
   align-items: stretch;

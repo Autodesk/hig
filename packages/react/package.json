@@ -8,7 +8,7 @@
     "type": "git",
     "url": "https://github.com/Autodesk/hig"
   },
-  "version": "0.29.0-alpha",
+  "version": "0.29.0",
   "main": "lib/hig-react.js",
   "files": [
     "lib/*"
@@ -29,12 +29,13 @@
     "type-check": "tsc"
   },
   "dependencies": {
-    "@hig/icon": "0.1.0-alpha",
-    "@hig/icon-button": "0.1.0-alpha",
-    "@hig/icons": "0.1.0-alpha",
-    "@hig/typography": "0.1.0-alpha",
-    "hig-vanilla": "^0.1.26",
-    "react-flip-move": "^3.0.1",
+    "@hig/avatar": "^0.1.1",
+    "@hig/icon": "^0.1.1",
+    "@hig/icon-button": "^0.1.1",
+    "@hig/icons": "^0.1.0",
+    "@hig/timestamp": "^0.1.1",
+    "@hig/typography": "^0.1.1",
+    "hig-vanilla": "^0.1.27",
     "react-transition-group": "^2.3.0"
   },
   "peerDependencies": {
@@ -43,8 +44,8 @@
     "react-dom": "^15.4.1"
   },
   "devDependencies": {
-    "@hig/babel-preset": "0.1.0",
-    "@hig/styles": "^0.1.0",
+    "@hig/babel-preset": "^0.1.0",
+    "@hig/styles": "^0.1.1",
     "@types/jest": "^19.2.3",
     "@types/node": "^7.0.21",
     "@types/react": "^15.0.24",
@@ -56,7 +57,6 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "classnames": "^2.2.5",
-    "concurrently": "^3.5.1",
     "css-loader": "^0.28.10",
     "dotenv": "^5.0.1",
     "enzyme": "^2.9.1",

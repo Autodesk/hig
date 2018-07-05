@@ -1,10 +1,14 @@
 {
   "name": "@hig/notifications-flyout",
-  "version": "0.1.0-alpha",
+  "version": "0.1.1-alpha",
   "description": "HIG NotificationsFlyout",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
   "homepage": "https://hig.autodesk.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Autodesk/hig.git"
+  },
   "publishConfig": {
     "access": "public"
   },
@@ -15,29 +19,34 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/icon-button": "^0.1.0-alpha",
-    "@hig/rich-text": "^0.1.0-alpha",
+    "@hig/icon-button": "^0.1.1",
+    "@hig/rich-text": "^0.1.1",
     "classnames": "^2.2.5",
+    "prop-types": "^15.6.1",
     "react-transition-group": "^2.3.0"
   },
   "devDependencies": {
-    "@hig/babel-preset": "0.1.0",
-    "@hig/eslint-config": "0.1.0",
-    "@hig/scripts": "^0.1.0",
-    "@hig/styles": "^0.1.0",
-    "@hig/timestamp": "^0.1.0-alpha",
-    "hig-react": "^0.29.0-alpha"
+    "@hig/babel-preset": "^0.1.0",
+    "@hig/eslint-config": "^0.1.0",
+    "@hig/scripts": "^0.1.1",
+    "@hig/semantic-release-config": "^0.1.0",
+    "@hig/styles": "^0.1.1",
+    "@hig/timestamp": "^0.1.1",
+    "hig-react": "^0.29.0"
   },
   "peerDependencies": {
-    "prop-types": "^15.6.1",
     "react": "^15.4.1 || ^16.3.2"
   },
   "scripts": {
     "build": "hig-scripts-build",
-    "lint": "eslint src --color --ext .js,.jsx"
+    "lint": "hig-scripts-lint",
+    "release": "hig-scripts-release"
   },
   "eslintConfig": {
     "extends": "@hig"
+  },
+  "release": {
+    "extends": "@hig/semantic-release-config"
   },
   "babel": {
     "env": {

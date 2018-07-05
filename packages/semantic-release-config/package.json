@@ -1,0 +1,46 @@
+{
+  "private": true,
+  "name": "@hig/semantic-release-config",
+  "version": "0.1.0",
+  "description": "Semantic Release configuration for HIG packages",
+  "author": "Autodesk Inc.",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Autodesk/hig.git"
+  },
+  "files": [
+    "build/*"
+  ],
+  "dependencies": {
+    "@semantic-release/changelog": "^2.0.2",
+    "@semantic-release/git": "^5.0.0",
+    "@semantic-release/github": "^4.2.17",
+    "@semantic-release/npm": "^3.2.0",
+    "read-pkg": "^3.0.0",
+    "semantic-release-monorepo": "^6.0.3",
+    "upgrade-dependents": "^1.0.0"
+  },
+  "devDependencies": {
+    "@hig/babel-preset": "^0.1.0",
+    "@hig/eslint-config": "^0.1.0",
+    "@hig/scripts": "^0.1.1",
+    "lodash.template": "^4.4.0"
+  },
+  "scripts": {
+    "build": "hig-scripts-build",
+    "lint": "hig-scripts-lint"
+  },
+  "eslintConfig": {
+    "extends": "@hig"
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "presets": [
+          "@hig/babel-preset/test"
+        ]
+      }
+    }
+  }
+}

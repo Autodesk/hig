@@ -5,7 +5,7 @@
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
   "homepage": "https://hig.autodesk.com",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "files": [
     "*"
   ],
@@ -13,7 +13,7 @@
     "gemini": "yarn storybook-test-build && concurrently 'yarn storybook-test-serve' 'yarn vanilla-test-serve' 'gemini test --reporter html --reporter flat' --kill-others --success first",
     "gemini-update": "yarn storybook-test-build && concurrently 'yarn storybook-test-serve' 'yarn vanilla-test-serve' 'gemini update --reporter html --reporter flat' --kill-others --success first",
     "gemini-ci": "gemini test --reporter html --reporter flat",
-    "lint": "eslint src --color --ext .js,.jsx",
+    "lint": "hig-scripts-lint",
     "storybook": "start-storybook -p 9001 -c .storybook/development",
     "storybook-build": "build-storybook -c .storybook/development",
     "storybook-deploy": "build-storybook -c .storybook/development && surge --project storybook-static",
@@ -25,6 +25,7 @@
     "vanilla-test-serve": "http-server ../vanilla -p 8080"
   },
   "devDependencies": {
+    "@hig/scripts": "^0.1.1",
     "@storybook/addon-actions": "^3.4.0",
     "@storybook/addon-info": "^3.4.0",
     "@storybook/addon-knobs": "^3.4.0",
@@ -41,7 +42,9 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "babel-runtime": "^6.26.0",
+    "concurrently": "^3.5.1",
     "enzyme": "^2.9.1",
+    "faker": "^4.1.0",
     "file-loader": "^1.1.11",
     "gemini": "^4.19.3",
     "gemini-sauce": "^1.0.1",
@@ -51,7 +54,6 @@
     "jest-extended": "^0.6.0",
     "json-loader": "^0.5.7",
     "lodash": "^4.17.5",
-    "prop-types": "^15.6.1",
     "raf": "^3.4.0",
     "raw-loader": "^0.5.1",
     "react": "^15.6.2",
@@ -60,8 +62,9 @@
     "surge": "^0.20.1"
   },
   "dependencies": {
-    "@hig/themes": "^0.1.0-alpha",
-    "hig-react": "^0.29.0-alpha"
+    "@hig/themes": "^0.1.1",
+    "hig-react": "^0.29.0",
+    "prop-types": "^15.6.1"
   },
   "eslintConfig": {
     "extends": "@hig"
