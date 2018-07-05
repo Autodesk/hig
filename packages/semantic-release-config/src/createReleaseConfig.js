@@ -7,6 +7,7 @@ export default function createReleaseConfig({ packageName }) {
     prepare: [
       "@semantic-release/changelog",
       "@semantic-release/npm",
+      "upgrade-dependents/semantic-release",
       "@semantic-release/git"
     ],
     success: []
