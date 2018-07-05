@@ -25,7 +25,7 @@
     "vanilla-test-serve": "http-server ../vanilla -p 8080"
   },
   "devDependencies": {
-    "@hig/scripts": "^0.1.1",
+    "@hig/scripts": "^0.1.2",
     "@storybook/addon-actions": "^3.4.0",
     "@storybook/addon-info": "^3.4.0",
     "@storybook/addon-knobs": "^3.4.0",
