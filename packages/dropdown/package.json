@@ -1,6 +1,6 @@
 {
   "name": "@hig/dropdown",
-  "version": "0.1.1-alpha",
+  "version": "0.1.0-alpha.3",
   "description": "HIG Dropdown",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -18,8 +18,8 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/icon": "^0.1.1",
-    "@hig/text-field": "^0.2.0",
+    "@hig/icon": "^0.1.2",
+    "@hig/text-field": "^0.3.1",
     "classnames": "^2.2.5",
     "downshift": "^1.31.15",
     "prop-types": "^15.6.1",
@@ -31,7 +31,7 @@
   "devDependencies": {
     "@hig/babel-preset": "^0.1.0",
     "@hig/eslint-config": "^0.1.0",
-    "@hig/scripts": "^0.1.1",
+    "@hig/scripts": "^0.1.2",
     "@hig/semantic-release-config": "^0.1.0",
     "@hig/styles": "^0.1.1"
   },

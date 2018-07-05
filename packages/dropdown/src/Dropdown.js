@@ -4,9 +4,11 @@ import cx from "classnames";
 import Downshift from "downshift";
 import { TextFieldPresenter } from "@hig/text-field";
 import Icon from "@hig/icon";
+import "@hig/text-field/build/index.css";
+import "@hig/icon/build/index.css";
+
 import Option from "./presenters/Option";
 import composeEventHandlers from "./composeEventHandlers";
-
 import "./dropdown.scss";
 
 export default class Dropdown extends Component {
