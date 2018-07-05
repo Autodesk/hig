@@ -111,12 +111,12 @@ export default class TextFieldPresenter extends Component {
   };
 
   handleFocus = event => {
-    this.setState({focused: true});
+    this.setState({ focused: true });
     if (this.props.onFocus) this.props.onFocus(event);
   };
 
   handleBlur = event => {
-    this.setState({focused: false});
+    this.setState({ focused: false });
     if (this.props.onBlur) this.props.onBlur(event);
   };
 
