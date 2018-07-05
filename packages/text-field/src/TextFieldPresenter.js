@@ -91,13 +91,19 @@ export default class TextFieldPresenter extends Component {
     /**
      *  focus animation on/off
      */
-    focusAnimation: PropTypes.bool
+    focusAnimation: PropTypes.bool,
+    /**
+     *  value animation on/off
+     */
+    valueAnimation: PropTypes.bool
   };
 
   static defaultProps = {
     id: generatedId(),
     type: "text",
-    focusAnimation: true
+    focusAnimation: true,
+    valueAnimation: true 
+  };
   };
 
   state = {
@@ -146,6 +152,7 @@ export default class TextFieldPresenter extends Component {
       required,
       showClearButton,
       focusAnimation,
+      valueAnimation,
       ...inputProps
     } = this.props;
 
@@ -178,7 +185,7 @@ export default class TextFieldPresenter extends Component {
                 className={cx("hig__text-field-v1__label", {
                   "hig__text-field-v1__label--input-focused": this.props.focusAnimation && this.state.focused,
                   "hig__text-field-v1__label--required": required,
-                  "hig__text-field-v1__label--with-value": this.props.value
+                  "hig__text-field-v1__label--with-value": this.props.valueAnimation && this.props.value
                 })}
               >
                 {label}
