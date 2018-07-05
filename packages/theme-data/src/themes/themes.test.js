@@ -1,12 +1,15 @@
-import lightGrayThemeData from "./lightGrayThemeConfig/theme";
-import darkBlueThemeData from "./darkBlueThemeConfig/theme";
+import lightGrayTheme from "./lightGrayTheme";
+import darkBlueTheme from "./darkBlueTheme";
+import webLightTheme from "./webLightTheme";
+
 import themeSchema from "../theme-schema";
 import "../../support/jest/matchers/toBeAValidTheme";
 
 describe("Theme", () => {
   [
-    { description: "light gray theme", theme: lightGrayThemeData },
-    { description: "dark blue theme", theme: darkBlueThemeData }
+    { description: "light gray theme", theme: lightGrayTheme },
+    { description: "dark blue theme", theme: darkBlueTheme },
+    { description: "web light theme", theme: webLightTheme }
   ].forEach(({ description, theme }) => {
     describe(description, () => {
       it("implements the theme schema", () => {

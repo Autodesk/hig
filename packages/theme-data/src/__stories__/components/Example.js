@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Reference from "./Reference";
 import ColorExample from "./ColorExample";
 import LengthExample from "./LengthExample";
@@ -23,50 +24,50 @@ const SCHEMA_TYPES = {
   SPACING: "spacing"
 };
 
-function renderTypeExample(props) {
-  switch (props.schema.type) {
-    case SCHEMA_TYPES.COLOR: {
-      return <ColorExample {...props} />;
-    }
-    case SCHEMA_TYPES.LENGTH: {
-      return <LengthExample {...props} />;
-    }
-    case SCHEMA_TYPES.BORDER_RADIUS: {
-      return <BorderRadiusExample {...props} />;
-    }
-    case SCHEMA_TYPES.BORDER_WIDTH: {
-      return <BorderWidthExample {...props} />;
-    }
-    case SCHEMA_TYPES.FONT_FAMILY: {
-      return <FontFamilyExample {...props} />;
-    }
-    case SCHEMA_TYPES.FONT_SIZE: {
-      return <FontSizeExample {...props} />;
-    }
-    case SCHEMA_TYPES.FONT_WEIGHT: {
-      return <FontWeightExample {...props} />;
-    }
-    case SCHEMA_TYPES.LINE_HEIGHT: {
-      return <LengthExample {...props} />;
-    }
-    case SCHEMA_TYPES.SHADOW: {
-      return <ShadowExample {...props} />;
-    }
-    case SCHEMA_TYPES.SPACING: {
-      return <SpacingExample {...props} />;
-    }
-    default: {
-      throw new Error(`Unrecognized role type ${props.schema.type}`);
-    }
+const examplesBySchemaType = {
+  [SCHEMA_TYPES.COLOR]: ColorExample,
+  [SCHEMA_TYPES.LENGTH]: LengthExample,
+  [SCHEMA_TYPES.BORDER_RADIUS]: BorderRadiusExample,
+  [SCHEMA_TYPES.BORDER_WIDTH]: BorderWidthExample,
+  [SCHEMA_TYPES.FONT_FAMILY]: FontFamilyExample,
+  [SCHEMA_TYPES.FONT_SIZE]: FontSizeExample,
+  [SCHEMA_TYPES.FONT_WEIGHT]: FontWeightExample,
+  [SCHEMA_TYPES.LINE_HEIGHT]: LengthExample,
+  [SCHEMA_TYPES.SHADOW]: ShadowExample,
+  [SCHEMA_TYPES.SPACING]: SpacingExample
+};
+
+function TypeExample(props) {
+  const TheExample = examplesBySchemaType[props.schema.type];
+
+  if (!TheExample) {
+    throw new Error(`Unrecognized role type ${props.schema.type}`);
   }
+
+  return <TheExample value={props.theme[props.role]} {...props} />;
 }
 
-export default function Example(props) {
+TypeExample.propTypes = {
+  theme: PropTypes.shape,
+  role: PropTypes.sring,
+  schema: PropTypes.shape({
+    type: PropTypes.string
+  })
+};
+
+function Example(props) {
   const ref = props.themeConfig[props.role].ref;
   return (
     <div>
-      {renderTypeExample(props)}
+      <TypeExample {...props} />
       {ref ? <Reference>{ref}</Reference> : null}
     </div>
   );
 }
+
+Example.propTypes = {
+  themeConfig: PropTypes.obj,
+  role: PropTypes.string
+};
+
+export default Example;

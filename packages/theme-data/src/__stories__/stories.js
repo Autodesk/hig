@@ -24,11 +24,6 @@ export default [
     readme: basicsReadme
   },
   {
-    description: "Basics - Breakpoints",
-    schema: filterMatchByKey(schema, "BASICS.BREAKPOINTS"),
-    readme: basicsReadme
-  },
-  {
     description: "Basics - Colors",
     schema: filterMatchByKey(schema, "BASICS.COLORS"),
     readme: basicsReadme
@@ -75,22 +70,22 @@ export default [
   },
   {
     description: "Component - Checkbox",
-    schema: filterMatchByKey(schema, /^CHECKBOX_/),
+    schema: filterMatchByKey(schema, /^CHECKBOX./),
     readme: undefined
   },
   {
     description: "Component - Input",
-    schema: filterMatchByKey(schema, /^INPUT_/),
+    schema: filterMatchByKey(schema, /^INPUT./),
     readme: undefined
   },
   {
     description: "Component - Label",
-    schema: filterMatchByKey(schema, /^LABEL_/),
+    schema: filterMatchByKey(schema, /^LABEL./),
     readme: undefined
   },
   {
     description: "Component - Menu",
-    schema: filterMatchByKey(schema, /^MENU_/),
+    schema: filterMatchByKey(schema, /^MENU./),
     readme: undefined
   }
 ];

@@ -8,11 +8,10 @@ import overallReadme from "../../README.md";
 import stories from "./stories";
 import Role from "./components/Role";
 import Header from "./components/Header";
-import theme from "../themes/lightGrayThemeConfig/theme";
-import themeConfig from "../themes/lightGrayThemeConfig/themeConfig";
+import theme, { config as themeConfig } from "../themes/lightGrayTheme";
 import basics from "../basics";
 
-const storybook = storiesOf("Theme data", module);
+const storybook = storiesOf("Theming|Theme data", module);
 
 storybook.add(
   "Readme",

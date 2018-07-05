@@ -22,12 +22,12 @@ console.log(Object.keys(lightGrayTheme));
 
 #### Extend a theme to make a new variation
 ```js
-import { extendTheme, serializeTheme } from '@hig/theme-data-poc';
+import { extendTheme, resolveTheme } from '@hig/theme-data-poc';
 import lightGrayThemeConfig from '@hig/theme-data-poc/build/lightGrayThemeConfig';
 const redAccentedThemeConfig = extendTheme(lightGrayThemeConfig, {
     "COLOR_SCHEME.ACCENT_COLOR": "#F00",
 });
-const redAccentedTheme = serializeTheme(redAccentedThemeConfig);
+const redAccentedTheme = resolveTheme(redAccentedThemeConfig);
 console.log(redAccentedTheme);
 ```
 
@@ -52,7 +52,7 @@ console.log(redAccentedTheme);
 Named values (colors, spacings, typographic specifications, etc.) from which most (all?) other values in a theme are derived
 
 ### Role
-A property of a component provided by a theme. E.g. Divider is a component. '1px' is a border width. `DIVIDER_BORDER_WIDTH` is a role mapping a width to the border width property of the divider component.
+A property of a component provided by a theme. E.g. Divider is a component. '1px' is a border width. `DIVIDER.BORDER_WIDTH` is a role mapping a width to the border width property of the divider component.
 
 ### Theme schema
 A set of roles and types which define the properties of the design language
@@ -66,7 +66,7 @@ Data defining a primitive value (e.g. “#0696D7” or “16px”) for each role
 Data defining a primitive value or reference for each role in the theme schema.
 
 ### Reference
-References in a theme configuration may point to a basic value or another role. References may point to roles defined with another reference. For example, `TEXT_AREA_FOCUS_COLOR` may refer to `INPUT_FOCUS_COLOR`, which refers to `ACCENT_COLOR`, which refers to `BASICS_COLORS_BLUE_60`.
+References in a theme configuration may point to a basic value or another role. References may point to roles defined with another reference. For example, `TEXT_AREA_FOCUS.COLOR` may refer to `INPUT.FOCUS.COLOR`, which refers to `ACCENT_COLOR`, which refers to `BASICS_COLORS_BLUE_60`.
 
 ### Theme generator
 The theme generator is javascript code that overrides values in a theme, adds new roles and values to a theme, and replaces references with primitive values.
@@ -88,7 +88,7 @@ Theme
                     - Property: value
 ```
 
-In data we model the theme as a flat map of key-value pairs. We represent the hierarchy in the key, but only as much as is needed to disambiguate one key from another. e.g. a role in the theme may have a key such as `TEXT_AREA_DISABLED_TEXT_COLOR`. The key uses component name, state name, and property name but does not describe a category.
+In data we model the theme as a flat map of key-value pairs. We represent the hierarchy in the key, but only as much as is needed to disambiguate one key from another. e.g. a role in the theme may have a key such as `TEXT_AREA_DISABLED.TEXT_COLOR`. The key uses component name, state name, and property name but does not describe a category.
 
 ## Ideas discussed but not advanced at this time
 - Stylesheet factories: Functions that map a theme and state to a stylesheet for a component

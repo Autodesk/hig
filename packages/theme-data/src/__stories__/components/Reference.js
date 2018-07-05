@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Text } from "@hig/typography";
 
 export default function Reference({ children }) {
@@ -10,3 +11,7 @@ export default function Reference({ children }) {
     </div>
   );
 }
+
+Reference.propTypes = {
+  children: PropTypes.node
+};

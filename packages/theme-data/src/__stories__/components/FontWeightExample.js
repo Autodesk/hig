@@ -1,13 +1,17 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Value from "./Value";
 import FontSample from "./FontSample";
 
-export default function FontWeightExample({ role, theme }) {
-  const value = theme[role];
+export default function FontWeightExample({ value }) {
   return (
     <div>
-      <FontSample fontWeight={value} theme={theme} />
+      <FontSample fontWeight={value} />
       <Value>{value}</Value>
     </div>
   );
 }
+
+FontWeightExample.propTypes = {
+  value: PropTypes.string
+};

@@ -32,18 +32,4 @@ describe("extendTheme", () => {
       });
     });
   });
-
-  describe("in strict mode", () => {
-    describe("when providing a new key", () => {
-      it("throws an error", () => {
-        expect(() => {
-          extendTheme(
-            { COOL_KEY: "#00F" },
-            { UNCOOL_KEY: "#F00" },
-            { strict: true }
-          );
-        }).toThrow(/UNCOOL_KEY/);
-      });
-    });
-  });
 });

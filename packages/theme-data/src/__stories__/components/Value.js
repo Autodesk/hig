@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Text } from "@hig/typography";
 import InlineCode from "./InlineCode";
 
@@ -11,3 +12,7 @@ export default function Value({ children }) {
     </div>
   );
 }
+
+Value.propTypes = {
+  children: PropTypes.node
+};
