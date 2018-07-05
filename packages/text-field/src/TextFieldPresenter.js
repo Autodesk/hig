@@ -87,12 +87,23 @@ export default class TextFieldPresenter extends Component {
     /**
      * Value of the field
      */
-    value: PropTypes.string
+    value: PropTypes.string,
+    /**
+     *  focus animation on/off
+     */
+    focusAnimation: PropTypes.bool,
+    /**
+     *  value animation on/off
+     */
+    valueAnimation: PropTypes.bool
   };
 
   static defaultProps = {
     id: generatedId(),
-    type: "text"
+    type: "text",
+    focusAnimation: true,
+    valueAnimation: true 
+  };
   };
 
   state = {
@@ -140,6 +151,8 @@ export default class TextFieldPresenter extends Component {
       onClearButtonClick,
       required,
       showClearButton,
+      focusAnimation,
+      valueAnimation,
       ...inputProps
     } = this.props;
 
@@ -159,21 +172,20 @@ export default class TextFieldPresenter extends Component {
         >
           <div
             className={cx("hig__text-field-v1__input-wrapper", {
-              "hig__text-field-v1__input-wrapper--focused": this.state.focused,
+              "hig__text-field-v1__input-wrapper--focused": this.props.focusAnimation && this.state.focused,
               "hig__text-field-v1__input-wrapper--with-errors": errors,
               "hig__text-field-v1__input-wrapper--disabled": inputProps.disabled
             })}
           >
-            {label && <span className="hig__text-field-v1__label-spacer" />}
+            {label && <span className="hig__text-field-v1__label-spacer"/>}
 
             {label && (
               <label
                 htmlFor={this.props.id}
                 className={cx("hig__text-field-v1__label", {
-                  "hig__text-field-v1__label--input-focused": this.state
-                    .focused,
+                  "hig__text-field-v1__label--input-focused": this.props.focusAnimation && this.state.focused,
                   "hig__text-field-v1__label--required": required,
-                  "hig__text-field-v1__label--with-value": this.props.value
+                  "hig__text-field-v1__label--with-value": this.props.valueAnimation && this.props.value
                 })}
               >
                 {label}
@@ -228,3 +240,4 @@ export default class TextFieldPresenter extends Component {
     );
   }
 }
+
