@@ -4,4 +4,4 @@ export const alignments = Object.freeze({
   RIGHT: "right"
 });
 
-export const availableAlignments = Object.freeze(Object.values(alignments));
+export const AVAILABLE_ALIGNMENTS = Object.freeze(Object.values(alignments));

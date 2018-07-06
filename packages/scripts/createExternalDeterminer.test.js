@@ -31,7 +31,7 @@ describe("scripts/createExternalDeterminer", () => {
       },
       {
         moduleName: "foo/module-random.css",
-        isExternal: true
+        isExternal: false
       },
       {
         moduleName: "dependency/module-random.js",

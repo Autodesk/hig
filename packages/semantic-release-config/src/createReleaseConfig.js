@@ -1,7 +1,5 @@
 import monorepoConfig from "semantic-release-monorepo";
 
-import createGitHubSuccessComment from "./createGitHubSuccessComment";
-
 export default function createReleaseConfig({ packageName }) {
   return {
     ...monorepoConfig,
@@ -9,13 +7,9 @@ export default function createReleaseConfig({ packageName }) {
     prepare: [
       "@semantic-release/changelog",
       "@semantic-release/npm",
+      "upgrade-dependents/semantic-release",
       "@semantic-release/git"
     ],
-    success: [
-      {
-        path: "@semantic-release/github",
-        successComment: createGitHubSuccessComment({ packageName })
-      }
-    ]
+    success: []
   };
 }

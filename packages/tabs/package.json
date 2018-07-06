@@ -1,6 +1,6 @@
 {
   "name": "@hig/tabs",
-  "version": "0.1.1-alpha",
+  "version": "0.1.0",
   "description": "HIG Tabs",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -18,18 +18,20 @@
     "build/*"
   ],
   "dependencies": {
+    "@hig/typography": "^0.1.2",
     "classnames": "^2.2.5",
-    "hig-react": "^0.29.0",
     "prop-types": "^15.6.1",
-    "react-lifecycles-compat": "^3.0.2"
+    "react-lifecycles-compat": "^3.0.2",
+    "render-fragment": "^0.1.1"
   },
   "peerDependencies": {
     "react": "^15.4.1 || ^16.3.2"
   },
   "devDependencies": {
     "@hig/babel-preset": "^0.1.0",
+    "@hig/button": "^0.1.2",
     "@hig/eslint-config": "^0.1.0",
-    "@hig/scripts": "^0.1.1",
+    "@hig/scripts": "^0.1.2",
     "@hig/semantic-release-config": "^0.1.0",
     "@hig/styles": "^0.1.1"
   },

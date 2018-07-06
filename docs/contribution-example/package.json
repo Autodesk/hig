@@ -1,0 +1,55 @@
+{
+  "private": true,
+  "name": "@hig/contribution-example",
+  "version": "0.1.0-alpha",
+  "description": "",
+  "author": "Autodesk Inc.",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Autodesk/hig.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "build/index.js",
+  "module": "build/index.es.js",
+  "style": "build/index.css",
+  "files": [
+    "build/*"
+  ],
+  "dependencies": {
+    "prop-types": "^15.6.1",
+    "react-lifecycles-compat": "^2.0.0"
+  },
+  "devDependencies": {
+    "@hig/babel-preset": "^0.1.0",
+    "@hig/eslint-config": "^0.1.0",
+    "@hig/scripts": "^0.1.2",
+    "@hig/semantic-release-config": "^0.1.0",
+    "@hig/styles": "^0.1.1"
+  },
+  "peerDependencies": {
+    "react": "^15.4.1 || ^16.3.2"
+  },
+  "scripts": {
+    "build": "hig-scripts-build",
+    "lint": "hig-scripts-lint",
+    "release": "hig-scripts-release"
+  },
+  "eslintConfig": {
+    "extends": "@hig"
+  },
+  "release": {
+    "extends": "@hig/semantic-release-config"
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "presets": [
+          "@hig/babel-preset/test"
+        ]
+      }
+    }
+  }
+}

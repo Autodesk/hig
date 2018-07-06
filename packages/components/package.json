@@ -22,7 +22,7 @@
     "@hig/banner": "^0.1.2",
     "@hig/button": "^0.1.1",
     "@hig/checkbox": "^0.1.1-alpha",
-    "@hig/dropdown": "^0.1.1-alpha",
+    "@hig/dropdown": "^0.1.0-alpha.3",
     "@hig/flyout": "^0.1.1-alpha",
     "@hig/icon": "^0.1.1",
     "@hig/icon-button": "^0.1.1",
@@ -53,7 +53,7 @@
   "devDependencies": {
     "@hig/babel-preset": "^0.1.0",
     "@hig/eslint-config": "^0.1.0",
-    "@hig/scripts": "^0.1.1",
+    "@hig/scripts": "^0.1.2",
     "@hig/semantic-release-config": "^0.1.0",
     "clean-css": "^4.1.11",
     "esprima": "^4.0.0",
