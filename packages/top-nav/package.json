@@ -1,6 +1,6 @@
 {
   "name": "@hig/top-nav",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "HIG Top Navigation",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -33,8 +33,8 @@
     "release": "hig-scripts-release"
   },
   "dependencies": {
-    "@hig/avatar": "^0.1.1",
-    "@hig/icon": "^0.1.1",
+    "@hig/avatar": "^0.1.3",
+    "@hig/icon": "^0.1.3",
     "classnames": "^2.2.5",
     "hig-react": "0.28.35",
     "prop-types": "^15.6.1"
