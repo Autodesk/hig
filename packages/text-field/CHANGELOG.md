@@ -1,3 +1,11 @@
+<a name="@hig/text-field-v0.3.2"></a>
+# [@hig/text-field-v0.3.2](https://github.com/Autodesk/hig/compare/@hig/text-field@0.3.1...@hig/text-field@0.3.2) (2018-07-06)
+
+
+### Bug Fixes
+
+* **bundle:** include dependency CSS ([f5a4a62](https://github.com/Autodesk/hig/commit/f5a4a62))
+
 <a name="@hig/text-field-v0.3.1"></a>
 # [@hig/text-field-v0.3.1](https://github.com/Autodesk/hig/compare/@hig/text-field@0.3.0...@hig/text-field@0.3.1) (2018-06-20)
 
