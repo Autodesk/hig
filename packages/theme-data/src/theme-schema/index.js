@@ -210,6 +210,8 @@ export default {
   INPUT_BORDER_BOTTOM_WIDTH: { type: "length" },
   INPUT_BORDER_BOTTOM_HOVER_COLOR: { type: "color" },
   INPUT_BORDER_BOTTOM_FOCUS_COLOR: { type: "color" },
+  INPUT_FONT_COLOR: { type: "color" },
+  INPUT_DISABLED_FONT_COLOR: { type: "color" },
   INPUT_HALO_COLOR: { type: "color" },
   INPUT_HALO_HOVER_WIDTH: { type: "length" },
   INPUT_HALO_FOCUS_WIDTH: { type: "length" },

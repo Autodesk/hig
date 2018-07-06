@@ -7,6 +7,11 @@ export default {
   INPUT_BORDER_BOTTOM_WIDTH: { ref: "BASICS.BORDER_WIDTHS.S" },
   INPUT_BORDER_BOTTOM_HOVER_COLOR: { abstract: true },
   INPUT_BORDER_BOTTOM_FOCUS_COLOR: { abstract: true },
+  INPUT_FONT_COLOR: { ref: "COLOR_SCHEME.TEXT_COLOR" },
+  INPUT_DISABLED_FONT_COLOR: {
+    ref: "COLOR_SCHEME.TEXT_COLOR",
+    transform: { alpha: 0.2 }
+  },
   INPUT_HALO_COLOR: { abstract: true },
   INPUT_HALO_HOVER_WIDTH: { ref: "BASICS.BORDER_WIDTHS.L" },
   INPUT_HALO_FOCUS_WIDTH: { ref: "BASICS.BORDER_WIDTHS.L" },
