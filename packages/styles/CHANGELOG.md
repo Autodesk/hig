@@ -1,3 +1,11 @@
+<a name="@hig/styles-v0.2.3"></a>
+# [@hig/styles-v0.2.3](https://github.com/Autodesk/hig/compare/@hig/styles@0.2.2...@hig/styles@0.2.3) (2018-07-06)
+
+
+### Bug Fixes
+
+* **bundle:** include dependency CSS ([f5a4a62](https://github.com/Autodesk/hig/commit/f5a4a62))
+
 <a name="@hig/styles-v0.2.2"></a>
 # [@hig/styles-v0.2.2](https://github.com/Autodesk/hig/compare/@hig/styles@0.2.1...@hig/styles@0.2.2) (2018-06-20)
 

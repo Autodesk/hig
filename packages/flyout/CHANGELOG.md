@@ -1,3 +1,11 @@
+<a name="@hig/flyout-v0.1.1"></a>
+# [@hig/flyout-v0.1.1](https://github.com/Autodesk/hig/compare/@hig/flyout@0.1.0...@hig/flyout@0.1.1) (2018-07-06)
+
+
+### Bug Fixes
+
+* **bundle:** include dependency CSS ([f5a4a62](https://github.com/Autodesk/hig/commit/f5a4a62))
+
 <a name="@hig/flyout-v0.1.0"></a>
 # [@hig/flyout-v0.1.0](https://github.com/Autodesk/hig/compare/@hig/flyout@0.0.0...@hig/flyout@0.1.0) (2018-06-19)
 

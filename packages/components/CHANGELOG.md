@@ -1,3 +1,12 @@
+<a name="@hig/components-v0.2.2"></a>
+# [@hig/components-v0.2.2](https://github.com/Autodesk/hig/compare/@hig/components@0.2.1...@hig/components@0.2.2) (2018-07-06)
+
+
+### Bug Fixes
+
+* **bundle:** include dependency CSS ([f5a4a62](https://github.com/Autodesk/hig/commit/f5a4a62))
+* **style:** update [@hig](https://github.com/hig)/dropdown ([928398a](https://github.com/Autodesk/hig/commit/928398a))
+
 <a name="@hig/components-v0.2.1"></a>
 # [@hig/components-v0.2.1](https://github.com/Autodesk/hig/compare/@hig/components@0.2.0...@hig/components@0.2.1) (2018-06-20)
 
