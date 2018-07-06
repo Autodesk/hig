@@ -77,6 +77,7 @@
 
   .hig__input-buttonV1--checkbox .hig__input-buttonV1__input:indeterminate + & {
     //background: no-repeat color(hig-slate-40) url('../../../vanilla/src/basics/icons/src/checkmark-indeterminate-16.svg') center;
+    font-size: 1000%;
     border-color: color(hig-slate-40);
   }
 

@@ -52,17 +52,16 @@ export default class Checkbox extends Component {
   };
 
   render() {
+    const {
+      checked,
+      defaultChecked,
+      disabled,
+      indeterminate,
+      label,
+      name
+    } = this.props;
 
-    // const {
-    //   // checked,
-    //   // disabled,
-    //   // indeterminate,
-    //   // label,
-    //   // name,
-    //   // value,
-    // } = this.props;
-
-    return (<CheckboxPresenter/>);
+    return (<CheckboxPresenter {...this.props}/>);
 
   }
 }

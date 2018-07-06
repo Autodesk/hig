@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-// import cx from "classnames";
+import cx from "classnames";
 import FormInput from "./FormInput";
 
 import "./CheckboxPresenter.scss";
@@ -8,7 +8,7 @@ import "./CheckboxPresenter.scss";
 export default function CheckboxPresenter(props) {
   const labelClasses = "hig__checkbox-v1";
 
-  const {name, label} = props;
+  const {name, label, checked, disabled, indeterminate} = props;
 
   return (
     <FormInput>
@@ -16,7 +16,11 @@ export default function CheckboxPresenter(props) {
          <input
           type="checkbox"
           className="hig__input-button__input"
-          name={name}/>
+          name={name}
+          checked={checked}
+          disabled={disabled}
+          ref={elem => elem && (elem.indeterminate = indeterminate)}
+         />
         <span className="hig__input-button__input-wrapper" />
         <label className={labelClasses}>
           {label}</label>
@@ -77,12 +81,12 @@ CheckboxPresenter.propTypes = {
 };
 
 CheckboxPresenter.defaultProps = {
-    checked: false,
-    disabled: false,
-    indeterminate: false,
-    name: "checkbox",
-    value: "value",
-    label: "label"
+  checked: true,
+  disabled: false,
+  indeterminate: false,
+  name: "checkbox",
+  value: "value",
+  label: "label"
 };
 
 

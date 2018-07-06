@@ -1,9 +1,18 @@
+import { default as Checkbox } from "../Checkbox";
+
 export default [
   {
     description: "default",
     getProps: () => ({
-      defaultChecked: true,
+      ...Checkbox.defaultProps,
       label: "Default checkbox"
+    })
+  },
+  {
+    description: "checked",
+    getProps: () => ({
+      label: "Checked",
+      checked: true
     })
   },
   {
@@ -18,14 +27,6 @@ export default [
     getProps: () => ({
       disabled: true,
       label: "Disabled"
-    })
-  },
-  {
-    description: "disabled and checked",
-    getProps: () => ({
-      checked: true,
-      disabled: true,
-      label: "Disabled and Checked"
     })
   },
   {
