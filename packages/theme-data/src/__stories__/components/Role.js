@@ -10,7 +10,7 @@ function Role(props) {
         display: "flex",
         marginBottom: props.basics.SPACINGS.XL,
         borderTop: `${props.basics.BORDER_WIDTHS.S} solid ${
-          props.theme["COLOR_SCHEME.DIVIDER_DIM_COLOR"]
+          props.theme["COLOR_SCHEME.DIVIDER.DIM_COLOR"]
         }`,
         paddingTop: props.basics.SPACINGS.M
       }}

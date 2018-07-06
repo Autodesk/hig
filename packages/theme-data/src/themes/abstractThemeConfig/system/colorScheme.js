@@ -13,9 +13,9 @@ export default {
   ACCENT_COLOR_700: { abstract: true },
   ACCENT_COLOR_800: { abstract: true },
   ACCENT_COLOR_900: { abstract: true },
-  COMPONENT_BACKGROUND_COLOR: { abstract: true },
+  "COMPONENT.BACKGROUND_COLOR": { abstract: true },
   TEXT_COLOR: { abstract: true },
-  DIVIDER_DIM_COLOR: { abstract: true },
-  DIVIDER_REGULAR_COLOR: { abstract: true },
-  DIVIDER_BOLD_COLOR: { abstract: true }
+  "DIVIDER.DIM_COLOR": { abstract: true },
+  "DIVIDER.REGULAR_COLOR": { abstract: true },
+  "DIVIDER.BOLD_COLOR": { abstract: true }
 };

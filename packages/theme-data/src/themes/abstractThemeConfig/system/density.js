@@ -7,7 +7,7 @@ export default {
   "FONT_SIZES.S": { abstract: true },
   "FONT_SIZES.M": { abstract: true },
   "FONT_SIZES.L": { abstract: true },
-  INPUT_MIN_HEIGHT: { abstract: true },
-  INPUT_VERTICAL_PADDING: { abstract: true },
-  MENU_ITEM_MIN_HEIGHT: { abstract: true }
+  "INPUT.MIN_HEIGHT": { abstract: true },
+  "INPUT.VERTICAL_PADDING": { abstract: true },
+  "MENU.ITEM.MIN_HEIGHT": { abstract: true }
 };

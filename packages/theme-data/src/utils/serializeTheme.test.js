@@ -29,13 +29,13 @@ describe("serializeTheme", () => {
     it("flattens the references", () => {
       const theme = {
         ACCENT_COLOR: "#F00",
-        INPUT_FOCUS_COLOR: { ref: "ACCENT_COLOR" },
-        TEXTAREA_FOCUS_COLOR: { ref: "INPUT_FOCUS_COLOR" }
+        "INPUT.FOCUS.COLOR": { ref: "ACCENT_COLOR" },
+        TEXTAREA_FOCUS.COLOR: { ref: "INPUT.FOCUS.COLOR" }
       };
       expect(serializeTheme(theme)).toEqual({
         ACCENT_COLOR: "#F00",
-        INPUT_FOCUS_COLOR: "#F00",
-        TEXTAREA_FOCUS_COLOR: "#F00"
+        "INPUT.FOCUS.COLOR": "#F00",
+        TEXTAREA_FOCUS.COLOR: "#F00"
       });
     });
   });

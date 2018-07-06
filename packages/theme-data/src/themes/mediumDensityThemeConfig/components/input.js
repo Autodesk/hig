@@ -1,4 +1,4 @@
 export default {
-  INPUT_MIN_HEIGHT: "24px",
-  INPUT_VERTICAL_PADDING: "5px"
+  "INPUT.MIN_HEIGHT": "24px",
+  "INPUT.VERTICAL_PADDING": "5px"
 };

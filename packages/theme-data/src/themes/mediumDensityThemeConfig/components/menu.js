@@ -1,3 +1,3 @@
 export default {
-  MENU_ITEM_MIN_HEIGHT: "35px"
+  "MENU.ITEM.MIN_HEIGHT": "35px"
 };

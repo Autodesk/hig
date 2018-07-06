@@ -1,13 +1,13 @@
 export default function stylesheet(props, themeData) {
   return {
     label: {
-      fontSize: themeData.LABEL_FONT_SIZE,
-      fontFamily: themeData.LABEL_FONT_FAMILY,
-      fontWeight: themeData.LABEL_FONT_WEIGHT,
-      lineHeight: themeData.LABEL_LINE_HEIGHT,
+      fontSize: themeData["LABEL.FONT_SIZE"],
+      fontFamily: themeData["LABEL.FONT_FAMILY"],
+      fontWeight: themeData["LABEL.FONT_WEIGHT"],
+      lineHeight: themeData["LABEL.LINE_HEIGHT"],
       color: props.disabled
-        ? themeData.LABEL_DISABLED_FONT_COLOR
-        : themeData.LABEL_FONT_COLOR
+        ? themeData["LABEL.DISABLED.FONT_COLOR"]
+        : themeData["LABEL.FONT_COLOR"]
     }
   };
 }

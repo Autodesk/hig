@@ -1,7 +1,7 @@
 function inputStyles({ isDisabled, hasFocus, hasHover }, themeData) {
   const defaults = {
-    borderBottomColor: themeData.INPUT_BORDER_BOTTOM_COLOR,
-    color: themeData.INPUT_FONT_COLOR,
+    borderBottomColor: themeData["INPUT.BORDER_BOTTOM_COLOR"],
+    color: themeData["INPUT.FONT_COLOR"],
     transitionProperty: "color",
     transitionDuration: "0.3s"
   };
@@ -9,22 +9,22 @@ function inputStyles({ isDisabled, hasFocus, hasHover }, themeData) {
   if (isDisabled) {
     return {
       ...defaults,
-      borderBottomColor: themeData.INPUT_BORDER_BOTTOM_DISABLED_COLOR,
-      color: themeData.INPUT_DISABLED_FONT_COLOR
+      borderBottomColor: themeData["INPUT.DISABLED.BORDER_BOTTOM_COLOR"],
+      color: themeData["INPUT.DISABLED.FONT_COLOR"]
     };
   }
   if (hasFocus) {
     return {
       ...defaults,
-      borderBottomColor: themeData.INPUT_BORDER_BOTTOM_FOCUS_COLOR,
-      transitionDuration: "0"
+      borderBottomColor: themeData["INPUT.FOCUS.BORDER_BOTTOM_COLOR"],
+      transitionDuration: "0.1s"
     };
   }
   if (hasHover) {
     return {
       ...defaults,
-      borderBottomColor: themeData.INPUT_BORDER_BOTTOM_HOVER_COLOR,
-      transitionDuration: "0"
+      borderBottomColor: themeData["INPUT.HOVER.BORDER_BOTTOM_COLOR"],
+      transitionDuration: "0.1s"
     };
   }
   return defaults;
@@ -33,7 +33,7 @@ function inputStyles({ isDisabled, hasFocus, hasHover }, themeData) {
 function haloStyles({ isDisabled, hasFocus, hasHover }, themeData) {
   const defaults = {
     height: 0,
-    backgroundColor: themeData.INPUT_HALO_COLOR,
+    backgroundColor: themeData["INPUT.HALO.COLOR"],
     transitionProperty: "height, color",
     transitionDuration: "0.3s, 0.3s"
   };
@@ -43,16 +43,16 @@ function haloStyles({ isDisabled, hasFocus, hasHover }, themeData) {
   }
   if (hasFocus) {
     return {
-      height: themeData.INPUT_HALO_FOCUS_WIDTH,
-      backgroundColor: themeData.INPUT_HALO_FOCUS_COLOR,
-      transitionDuration: "0, 0"
+      height: themeData["INPUT.FOCUS.HALO.WIDTH"],
+      backgroundColor: themeData["INPUT.FOCUS.HALO.COLOR"],
+      transitionDuration: "0.1s, 0.1s"
     };
   }
   if (hasHover) {
     return {
       ...defaults,
-      height: themeData.INPUT_HALO_HOVER_WIDTH,
-      transitionDuration: "0, 0"
+      height: themeData["INPUT.HOVER.HALO.WIDTH"],
+      transitionDuration: "0.1s, 0.1s"
     };
   }
   return defaults;
@@ -67,12 +67,12 @@ export default function stylesheet(props, themeData) {
     input: {
       boxSizing: "border-box",
       appearance: "none",
-      minHeight: themeData.INPUT_MIN_HEIGHT,
-      paddingTop: themeData["DENSITY.INPUT_VERTICAL_PADDING"],
-      paddingBottom: themeData["DENSITY.INPUT_VERTICAL_PADDING"],
+      minHeight: themeData["INPUT.MIN_HEIGHT"],
+      paddingTop: themeData["DENSITY.INPUT.VERTICAL_PADDING"],
+      paddingBottom: themeData["DENSITY.INPUT.VERTICAL_PADDING"],
       borderTop: "none",
       borderRight: "none",
-      borderBottomWidth: themeData.INPUT_BORDER_BOTTOM_WIDTH,
+      borderBottomWidth: themeData["INPUT.BORDER_BOTTOM_WIDTH"],
       borderLeft: "none",
       outline: "none",
       fontSize: themeData["DENSITY.FONT_SIZES.M"],
