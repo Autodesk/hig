@@ -2,7 +2,7 @@
 @import '~@hig/styles/mixins/colors.scss';
 @import '~@hig/styles/tokens/layers.scss';
 
-.hig__input-buttonV1 {
+.hig__input-button {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -10,7 +10,7 @@
   padding: 0 10px;
 }
 
-.hig__input-buttonV1__input {
+.hig__input-button__inputV1 {
   opacity: 0;
   position: absolute;
   width: 100%;
@@ -20,7 +20,7 @@
   z-index: $checkbox-layer;
 }
 
-.hig__input-buttonV1__label {
+.hig__input-button__label {
   font-size: 14px;
   font-weight: normal;
   font-family: 'ArtifaktElement', sans-serif;
@@ -29,16 +29,19 @@
   margin: 8px;
   line-height: 14px;
 
-  .hig__input-buttonV1--required &::after {
+  .hig__input-button--required &::after {
     content: '*';
+  }
+  .hig__input-button--checked & {
   }
 }
 
-.hig__input-buttonV1__input:checked[disabled], .hig__input-buttonV1__input[disabled]  ~ .hig__input-buttonV1__label {
+.hig__input-button__inputV1:checked[disabled], .hig__input-button__inputV1[disabled]  ~ .hig__input-button__label {
   color: color(hig-cool-gray-30);
 }
 
-.hig__input-buttonV1__input-wrapper {
+
+.hig__input-button__input-wrapper {
   position: relative;
   color: transparent;
   border: 1px solid color(hig-cool-gray-30);
@@ -50,45 +53,88 @@
   width: 16px;
   border-radius: 3px;
 
-  .hig__input-buttonV1__input:hover + & {
+  .check--indeterminate,
+  .check--disabled,
+  .check,
+  &.checked.disabled .check,
+  &.indeterminate .check,
+  &.indeterminate .check--disabled,
+  &.indeterminate.checked .check,
+  &.indeterminate.checked .check--disabled,
+  &.indeterminate.checked.disabled .check,
+  &.indeterminate.checked.disabled .check--disabled {
+    display: none;
+  }
+
+  &.checked .check,
+  &.checked.disabled .check--disabled,
+  &.indeterminate .check--indeterminate {
+    display: block;
+  }
+
+  // workaround for image sizes
+
+  &.checked .check {
+    svg {
+      top: -2px;
+      position: relative;
+    }
+  }
+
+  &.checked .check--disabled {
+    svg {
+      top: -3px;
+      position: relative;
+    }
+  }
+
+  .check--indeterminate {
+    svg {
+      top: -6px;
+      position: relative;
+    }
+  }
+
+  // end workaround
+
+  .hig__input-button__inputV1:hover + & {
     border-color: color(hig-turquoise-50);
   }
 
-  .hig__input-buttonV1--checkbox .hig__input-buttonV1__input:checked + &  {
-    //background: no-repeat  color(hig-slate-40) url('../../../vanilla/src/basics/icons/src/check-white-24.svg') center;
+  .hig__input-button--checkbox .hig__input-button__inputV1:checked + &  {
+    background-color: color(hig-slate-40);
     border-color: color(hig-slate-40);
   }
 
-  .hig__input-buttonV1--checkbox .hig__input-buttonV1__input:focus:checked + & {
-    //background: no-repeat   color(hig-blue-60) url('../../../vanilla/src/basics/icons/src/check-white-24.svg') center;
+  .hig__input-button--checkbox .hig__input-button__inputV1:focus:checked + & {
+    background-color: color(hig-blue-60);
     border-color: color(hig-blue-60);
   }
 
 
-  .hig__input-buttonV1--checkbox .hig__input-buttonV1__input:indeterminate:focus + & {
-    //background: no-repeat color(hig-blue-60) url('../../../vanilla/src/basics/icons/src/checkmark-indeterminate-16.svg') center;
+  .hig__input-button--checkbox .hig__input-button__inputV1:indeterminate:focus + & {
+    background-color: color(hig-blue-60);
     border-color: color(hig-blue-60);
   }
 
-  .hig__input-buttonV1--checkbox .hig__input-buttonV1__input:indeterminate:checked + & {
-    //background: no-repeat color(hig-slate-40) url('../../../vanilla/src/basics/icons/src/checkmark-indeterminate-16.svg') center;
+  .hig__input-button--checkbox .hig__input-button__inputV1:indeterminate:checked + & {
+    background-color: color(hig-slate-40);
     border-color: color(hig-slate-40);
   }
 
-  .hig__input-buttonV1--checkbox .hig__input-buttonV1__input:indeterminate + & {
-    //background: no-repeat color(hig-slate-40) url('../../../vanilla/src/basics/icons/src/checkmark-indeterminate-16.svg') center;
-    font-size: 1000%;
+  .hig__input-button--checkbox .hig__input-button__inputV1:indeterminate + & {
+    background-color: color(hig-slate-40);
     border-color: color(hig-slate-40);
   }
 
-  .hig__input-buttonV1__input[disabled] + & {
+  .hig__input-button__inputV1[disabled] + & {
     border-color: color(hig-cool-gray-30);
     border-style: dotted;
     background-color: transparent;
     pointer-events: none;
   }
 
-  .hig__input-buttonV1__input:focus + & {
+  .hig__input-button__inputV1:focus + & {
     outline: none;
     border-color: color(hig-blue-60);
   }
@@ -97,44 +143,14 @@
     position: initial;
   }
 
-  .hig__input-buttonV1--checkbox .hig__input-buttonV1__input:checked[disabled] + & {
-    //background: no-repeat url('../../../vanilla/src/basics/icons/src/check-disabled-16.svg') center;
-    border-color: color(hig-cool-gray-30);
-    border-style: dotted;
-  }
-
-  .hig__input-buttonV1--radio & {
-    border-radius: 50%;
-  }
-
-  .hig__input-buttonV1--radio .hig__input-buttonV1__input:focus:checked + & {
-    border-color: color(hig-blue-60);
-    background-color: color(hig-blue-60);
-    box-shadow: inset 0 0 0 3px color(hig-white);
-  }
-
-  .hig__input-buttonV1--radio .hig__input-buttonV1__input:checked + & {
-    background: none;
-    border-color: color(hig-slate-40);
-    background-color: color(hig-slate-40);
-    box-shadow: inset 0 0 0 3px color(hig-white);
-  }
-
-  .hig__input-buttonV1--radio .hig__input-buttonV1__input:checked[disabled] + & {
-    background: none;
-    background-color: color(hig-cool-gray-30);
-    border-color: color(hig-cool-gray-30);
-    border-style: dotted;
-  }
-
-  .hig__input-buttonV1--radio .hig__input-buttonV1__input[disabled] + & {
-    background: none;
+  .hig__input-button--checkbox .hig__input-button__inputV1:checked[disabled] + & {
+    background-color: transparent;
     border-color: color(hig-cool-gray-30);
     border-style: dotted;
   }
 }
 
-.hig__input-buttonV1__input-wrapper > svg {
+.hig__input-button__input-wrapper > svg {
   position: absolute;
   top: 50%;
   left: 50%;

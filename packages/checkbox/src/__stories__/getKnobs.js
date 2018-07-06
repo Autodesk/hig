@@ -7,8 +7,6 @@ const knobGroupIds = {
 };
 
 const knobLabels = {
-  checked: "Checked",
-  defaultChecked: "Initially checked",
   disabled: "Disabled",
   indeterminate: "Indeterminate",
   label: "Label",
@@ -22,8 +20,6 @@ const knobLabels = {
 
 export default function getKnobs(props) {
   const {
-    checked,
-    defaultChecked,
     disabled,
     indeterminate,
     label,
@@ -35,12 +31,6 @@ export default function getKnobs(props) {
 
   return {
     ...otherProps,
-    checked: boolean(knobLabels.checked, checked, knobGroupIds.basic),
-    defaultChecked: boolean(
-      knobLabels.defaultChecked,
-      defaultChecked,
-      knobGroupIds.basic
-    ),
     disabled: boolean(knobLabels.disabled, disabled, knobGroupIds.basic),
     indeterminate: boolean(
       knobLabels.indeterminate,
