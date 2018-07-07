@@ -16,6 +16,6 @@ export default {
   "INPUT.HOVER.HALO.WIDTH": { ref: "BASICS.BORDER_WIDTHS.L" },
   "INPUT.FOCUS.HALO.WIDTH": { ref: "BASICS.BORDER_WIDTHS.L" },
   "INPUT.FOCUS.HALO.COLOR": { abstract: true },
-  "INPUT.ACTIVE_HALO.WIDTH": { ref: "BASICS.BORDER_WIDTHS.L" },
-  "INPUT.ACTIVE_HALO.COLOR": { abstract: true }
+  "INPUT.ACTIVE.HALO.WIDTH": { ref: "BASICS.BORDER_WIDTHS.L" },
+  "INPUT.ACTIVE.HALO.COLOR": { abstract: true }
 };

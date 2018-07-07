@@ -30,12 +30,12 @@ describe("serializeTheme", () => {
       const theme = {
         ACCENT_COLOR: "#F00",
         "INPUT.FOCUS.COLOR": { ref: "ACCENT_COLOR" },
-        TEXTAREA_FOCUS.COLOR: { ref: "INPUT.FOCUS.COLOR" }
+        "TEXTAREA.FOCUS.COLOR": { ref: "INPUT.FOCUS.COLOR" }
       };
       expect(serializeTheme(theme)).toEqual({
         ACCENT_COLOR: "#F00",
         "INPUT.FOCUS.COLOR": "#F00",
-        TEXTAREA_FOCUS.COLOR: "#F00"
+        "TEXTAREA.FOCUS.COLOR": "#F00"
       });
     });
   });

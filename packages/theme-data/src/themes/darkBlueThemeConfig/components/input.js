@@ -13,7 +13,7 @@ export default {
     ref: "COLOR_SCHEME.ACCENT_COLOR_500",
     transform: { alpha: 0.25 }
   },
-  "INPUT.ACTIVE_HALO.COLOR": {
+  "INPUT.ACTIVE.HALO.COLOR": {
     ref: "COLOR_SCHEME.ACCENT_COLOR_500",
     transform: { alpha: 0.25 }
   }
