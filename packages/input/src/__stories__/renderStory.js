@@ -1,11 +1,17 @@
 import React from "react";
-import { HIGLightGrayTheme, HIGDarkBlueTheme, ThemeContext } from "@hig/themes";
+import {
+  HIGLightTheme,
+  HIGLightGrayTheme,
+  HIGDarkBlueTheme,
+  ThemeContext
+} from "@hig/themes";
 import DefaultExport from "../index";
 import getKnobs from "./getKnobs";
 
 const themes = {
   "hig-light-gray": HIGLightGrayTheme,
-  "hig-dark-blue": HIGDarkBlueTheme
+  "hig-dark-blue": HIGDarkBlueTheme,
+  "hig-light": HIGLightTheme
 };
 
 export default function renderStory(props) {

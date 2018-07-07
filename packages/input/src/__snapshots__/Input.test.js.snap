@@ -35,7 +35,7 @@ exports[`Input renders children 1`] = `
     value="jon.snow@winterfell.com"
   />
   <div
-    className="css-1chyvfj"
+    className="css-v5j8f1"
   />
 </div>
 `;

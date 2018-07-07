@@ -12,7 +12,8 @@ const knobLabels = {
 
 const themeOptions = {
   "hig-light-gray": "Light Gray",
-  "hig-dark-blue": "Dark Blue"
+  "hig-dark-blue": "Dark Blue",
+  "hig-light": "Web Light"
 };
 
 export default function getKnobs(props) {
