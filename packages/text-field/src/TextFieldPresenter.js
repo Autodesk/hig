@@ -101,7 +101,7 @@ export default class TextFieldPresenter extends Component {
   };
 
   state = {
-    focused: false
+    focused: this.props.stayFocused   
   };
 
   handleFocus = event => {
