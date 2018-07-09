@@ -81,6 +81,10 @@ export default class TextFieldPresenter extends Component {
      */
     showClearButton: PropTypes.bool,
     /**
+     * Allow the field to stay focused at all time.
+     */
+    stayFocused: PropTypes.bool,
+    /**
      * Corresponds to the type attribute of an <input>. Relevant for designating a password field, for example.
      */
     type: PropTypes.string,
@@ -92,7 +96,8 @@ export default class TextFieldPresenter extends Component {
 
   static defaultProps = {
     id: generatedId(),
-    type: "text"
+    type: "text",
+    stayFocused: false
   };
 
   state = {
@@ -100,13 +105,17 @@ export default class TextFieldPresenter extends Component {
   };
 
   handleFocus = event => {
-    this.setState({ focused: true });
-    if (this.props.onFocus) this.props.onFocus(event);
+    if(!this.props.stayFcoused) { 
+      this.setState({ focused: true });
+      if (this.props.onFocus) this.props.onFocus(event);
+    }
   };
 
   handleBlur = event => {
-    this.setState({ focused: false });
-    if (this.props.onBlur) this.props.onBlur(event);
+    if(!this.props.stayFcoused) { 
+      this.setState({ focused: false });
+      if (this.props.onBlur) this.props.onBlur(event);
+    }
   };
 
   hasClearableInput() {
@@ -140,6 +149,7 @@ export default class TextFieldPresenter extends Component {
       onClearButtonClick,
       required,
       showClearButton,
+      stayFocused,
       ...inputProps
     } = this.props;
 
