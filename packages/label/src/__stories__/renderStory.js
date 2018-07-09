@@ -1,19 +1,20 @@
 import React from "react";
-import { HIGLightGrayTheme, HIGDarkBlueTheme, ThemeContext } from "@hig/themes";
+import KnobbedThemeProvider, {
+  THEMES
+} from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
 import DefaultExport from "../index";
 import getKnobs from "./getKnobs";
 
-const themes = {
-  "hig-light-gray": HIGLightGrayTheme,
-  "hig-dark-blue": HIGDarkBlueTheme
-};
-
 export default function renderStory(props) {
-  const { children, theme, ...otherProps } = getKnobs(props);
+  const { children, ...otherProps } = getKnobs(props);
 
   return (
-    <ThemeContext.Provider value={themes[theme]}>
-      <DefaultExport {...otherProps}>{children}</DefaultExport>
-    </ThemeContext.Provider>
+    <KnobbedThemeProvider
+      supportedThemes={[THEMES.WEB_LIGHT, THEMES.DARK_BLUE]}
+    >
+      <div>
+        <DefaultExport {...otherProps}>{children}</DefaultExport>
+      </div>
+    </KnobbedThemeProvider>
   );
 }
