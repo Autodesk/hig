@@ -81,7 +81,7 @@ export default class TextFieldPresenter extends Component {
      */
     showClearButton: PropTypes.bool,
     /**
-     * Allow the field to stay focused at all time.
+     * Allow the field to stay focused persistently.
      */
     stayFocused: PropTypes.bool,
     /**
@@ -101,18 +101,18 @@ export default class TextFieldPresenter extends Component {
   };
 
   state = {
-    focused: this.props.stayFocused   
+    focused: this.props.stayFocused
   };
 
   handleFocus = event => {
-    if(!this.props.stayFcoused) { 
+    if (!this.props.stayFocused) {
       this.setState({ focused: true });
       if (this.props.onFocus) this.props.onFocus(event);
     }
   };
 
   handleBlur = event => {
-    if(!this.props.stayFcoused) { 
+    if (!this.props.stayFocused) {
       this.setState({ focused: false });
       if (this.props.onBlur) this.props.onBlur(event);
     }
