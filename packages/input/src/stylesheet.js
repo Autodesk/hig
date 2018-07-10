@@ -65,6 +65,7 @@ export default function stylesheet(props, themeData) {
       width: "300px"
     },
     input: {
+      backgroundColor: "transparent",
       boxSizing: "border-box",
       appearance: "none",
       minHeight: themeData["INPUT.MIN_HEIGHT"],

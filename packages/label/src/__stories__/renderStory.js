@@ -10,7 +10,7 @@ export default function renderStory(props) {
 
   return (
     <KnobbedThemeProvider
-      supportedThemes={[THEMES.WEB_LIGHT, THEMES.DARK_BLUE]}
+      supportedThemes={[THEMES.LIGHT_GRAY, THEMES.WEB_LIGHT, THEMES.DARK_BLUE]}
     >
       <div>
         <DefaultExport {...otherProps}>{children}</DefaultExport>
