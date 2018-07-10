@@ -16,15 +16,6 @@
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
-"@hig/flyout@^0.1.1-alpha":
-  version "0.1.1-alpha"
-  resolved "https://registry.yarnpkg.com/@hig/flyout/-/flyout-0.1.1-alpha.tgz#2ee37a643118a3547d21e58d00ea20ae7e7714fa"
-  dependencies:
-    classnames "^2.2.5"
-    hig-react "^0.29.0"
-    prop-types "^15.6.1"
-    react-lifecycles-compat "^3.0.2"
-
 "@hig/styles@^0.1.1":
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/@hig/styles/-/styles-0.1.1.tgz#02e85ee888b46767072ee040c286d4f80ed92ef2"
@@ -53,16 +44,6 @@
 "@hig/text-field@^0.1.1":
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/@hig/text-field/-/text-field-0.1.1.tgz#ce7b7c3b655c77f069720b612d9a054da30e2295"
-  dependencies:
-    "@hig/icon-button" "^0.1.1"
-    classnames "^2.2.5"
-    hig-react "^0.29.0"
-    prop-types "^15.6.1"
-    react-lifecycles-compat "^3.0.2"
-
-"@hig/text-field@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@hig/text-field/-/text-field-0.2.0.tgz#d34c031606a7fe6d51819555bce18097016d4b04"
   dependencies:
     "@hig/icon-button" "^0.1.1"
     classnames "^2.2.5"

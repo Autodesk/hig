@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import cx from "classnames";
 import Icon, { names } from "@hig/icon";
 
-import "./option.scss";
+import "./Option.scss";
 
 export default class Option extends Component {
   static propTypes = {
