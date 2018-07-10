@@ -22,12 +22,12 @@ console.log(Object.keys(lightGrayTheme));
 
 #### Extend a theme to make a new variation
 ```js
-import { extendTheme, serializeTheme } from '@hig/theme-data-poc';
+import { extendTheme, resolveTheme } from '@hig/theme-data-poc';
 import lightGrayThemeConfig from '@hig/theme-data-poc/build/lightGrayThemeConfig';
 const redAccentedThemeConfig = extendTheme(lightGrayThemeConfig, {
     "COLOR_SCHEME.ACCENT_COLOR": "#F00",
 });
-const redAccentedTheme = serializeTheme(redAccentedThemeConfig);
+const redAccentedTheme = resolveTheme(redAccentedThemeConfig);
 console.log(redAccentedTheme);
 ```
 

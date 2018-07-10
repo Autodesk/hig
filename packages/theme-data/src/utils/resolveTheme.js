@@ -59,7 +59,7 @@ function destructureValues(theme, role) {
   return theme[role].value;
 }
 
-export default function serializeTheme(theme) {
+export default function resolveTheme(theme) {
   return [
     structureValues,
     dereferenceValues,

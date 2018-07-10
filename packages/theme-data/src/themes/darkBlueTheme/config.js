@@ -1,8 +1,8 @@
 import extendTheme from "../../utils/extendTheme";
 import mapKeys from "../../utils/mapKeys";
-import abstractThemeConfig from "../abstractThemeConfig";
 import system from "./system";
-import { config as mediumDensityThemeConfig } from "../mediumDensityThemeConfig";
+import { config as abstractThemeConfig } from "../abstractTheme";
+import { config as mediumDensityThemeConfig } from "../mediumDensityTheme";
 import input from "./components/input";
 import label from "./components/label";
 

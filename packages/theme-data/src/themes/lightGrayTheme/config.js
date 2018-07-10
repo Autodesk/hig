@@ -1,12 +1,12 @@
 import extendTheme from "../../utils/extendTheme";
 import mapKeys from "../../utils/mapKeys";
-import abstractThemeConfig from "../abstractThemeConfig";
+import { config as abstractThemeConfig } from "../abstractTheme";
+import { config as mediumDensityThemeConfig } from "../mediumDensityTheme";
 import system from "./system";
-import { config as mediumDensityThemeConfig } from "../mediumDensityThemeConfig";
 import input from "./components/input";
 import label from "./components/label";
 
-const lightGrayThemeConfig = extendTheme(
+const lightGrayConfig = extendTheme(
   abstractThemeConfig,
   Object.assign(
     {},
@@ -17,4 +17,4 @@ const lightGrayThemeConfig = extendTheme(
   )
 );
 
-export default lightGrayThemeConfig;
+export default lightGrayConfig;

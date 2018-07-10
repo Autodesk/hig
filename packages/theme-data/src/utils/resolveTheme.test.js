@@ -1,13 +1,13 @@
-import serializeTheme from "./serializeTheme";
+import resolveTheme from "./resolveTheme";
 
-describe("serializeTheme", () => {
+describe("resolveTheme", () => {
   describe("with a reference", () => {
     it("flattens the reference", () => {
       const theme = {
         ACCENT_COLOR: "#F00",
         TEXT_COLOR: { ref: "ACCENT_COLOR" }
       };
-      expect(serializeTheme(theme)).toEqual({
+      expect(resolveTheme(theme)).toEqual({
         ACCENT_COLOR: "#F00",
         TEXT_COLOR: "#F00"
       });
@@ -19,7 +19,7 @@ describe("serializeTheme", () => {
           ACCENT_COLOR: { ref: "GLITTER_BOMB" }
         };
         expect(() => {
-          serializeTheme(theme);
+          resolveTheme(theme);
         }).toThrow(/GLITTER_BOMB/);
       });
     });
@@ -32,7 +32,7 @@ describe("serializeTheme", () => {
         "INPUT.FOCUS.COLOR": { ref: "ACCENT_COLOR" },
         "TEXTAREA.FOCUS.COLOR": { ref: "INPUT.FOCUS.COLOR" }
       };
-      expect(serializeTheme(theme)).toEqual({
+      expect(resolveTheme(theme)).toEqual({
         ACCENT_COLOR: "#F00",
         "INPUT.FOCUS.COLOR": "#F00",
         "TEXTAREA.FOCUS.COLOR": "#F00"
@@ -46,7 +46,7 @@ describe("serializeTheme", () => {
         ACCENT_COLOR: { abstract: true }
       };
       expect(() => {
-        serializeTheme(theme);
+        resolveTheme(theme);
       }).toThrow(/ACCENT_COLOR/);
     });
   });
@@ -54,7 +54,7 @@ describe("serializeTheme", () => {
   describe("with an alpha transformation", () => {
     describe("with a valid color value", () => {
       it("transforms the alpha value", () => {
-        const theme = serializeTheme({
+        const theme = resolveTheme({
           "BASICS.COLORS_RED_ALERT": "#FF0000",
           ACCENT_COLOR: {
             ref: "BASICS.COLORS_RED_ALERT",
@@ -72,7 +72,7 @@ describe("serializeTheme", () => {
           ACCENT_COLOR: { ref: "BASICS.SPACINGS_M", transform: { alpha: 0.5 } }
         };
         expect(() => {
-          serializeTheme(theme);
+          resolveTheme(theme);
         }).toThrow(/ACCENT_COLOR/);
       });
     });

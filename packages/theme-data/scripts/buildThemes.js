@@ -1,13 +1,16 @@
 import path from "path";
 import fs from "fs";
 
-import lightGrayTheme from "../src/themes/lightGrayThemeConfig/theme";
-import lightGrayThemeConfig from "../src/themes/lightGrayThemeConfig/themeConfig";
-import webLightTheme from "../src/themes/webLightTheme/data";
-import webLightThemeConfig from "../src/themes/webLightTheme/config";
-import darkBlueTheme from "../src/themes/darkBlueThemeConfig/theme";
-import darkBlueThemeConfig from "../src/themes/darkBlueThemeConfig/themeConfig";
-import abstractThemeConfig from "../src/themes/abstractThemeConfig";
+import { config as abstractThemeConfig } from "../src/themes/abstractTheme";
+import lightGrayTheme, {
+  config as lightGrayThemeConfig
+} from "../src/themes/lightGrayTheme";
+import webLightTheme, {
+  config as webLightThemeConfig
+} from "../src/themes/webLightTheme";
+import darkBlueTheme, {
+  config as darkBlueThemeConfig
+} from "../src/themes/darkBlueTheme";
 
 const buildPath = path.join(process.cwd(), "build");
 

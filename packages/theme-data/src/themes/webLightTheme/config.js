@@ -1,5 +1,5 @@
 import extendTheme from "../../utils/extendTheme";
-import lightGrayThemeConfig from "../lightGrayThemeConfig/themeConfig";
+import { config as lightGrayThemeConfig } from "../lightGrayTheme";
 
 const oldBasics = {
   colors: {

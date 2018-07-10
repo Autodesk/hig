@@ -5,7 +5,7 @@ exports[` 1`] = `
   className="css-a2gl53"
 >
   <input
-    className="css-1u581wj"
+    className="css-93ae2i"
     disabled={true}
     onBlur={[Function]}
     onChange={undefined}
@@ -25,7 +25,7 @@ exports[`Input renders children 1`] = `
   className="css-a2gl53"
 >
   <input
-    className="css-1ccg76c"
+    className="css-kqzj2d"
     disabled={undefined}
     onBlur={[Function]}
     onChange={undefined}
