@@ -10,8 +10,8 @@
     "build": "lerna run build --stream",
     "create-dependency-hash": "cat yarn.lock > .dependency-hash && ls ./packages >> .dependency-hash",
     "lint": "lerna run lint --stream",
-    "test": "cd packages/storybook && yarn run test",
-    "test-ci": "cd packages/storybook && yarn run test-ci",
+    "test": "jest --watch",
+    "test-ci": "jest --coverage --runInBand --colors",
     "publish-canary": "lerna publish --canary --yes --exact",
     "release": "lerna run release --concurrency 1 --scope @hig/*",
     "extract": "yarn run extract:dependencies && yarn run extract:builds",
@@ -32,5 +32,8 @@
   },
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "jest": {
+    "preset": "@hig/jest-preset"
+  }
 }
