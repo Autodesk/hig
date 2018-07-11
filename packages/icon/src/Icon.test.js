@@ -22,9 +22,7 @@ describe("Icon", () => {
   });
 
   it("renders correctly when using the `svg` prop", () => {
-    const svg = `<svg width="16px" height="16px" viewBox="0 0 16 16">
-      <rect x="2" y="2" width="12" height="12" fill="none" stroke="red" stroke-width="2"></rect>
-    </svg>`;
+    const svg = '<svg width="16px" height="16px" viewBox="0 0 16 16"></svg>';
 
     const tree = renderer
       .create(<Icon svg={svg} size={iconSizes.PX_16} />)
