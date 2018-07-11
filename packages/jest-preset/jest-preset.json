@@ -1,0 +1,36 @@
+{
+  "collectCoverageFrom": ["**/src/**/*.{js,jsx}"],
+  "coverageDirectory": "<rootDir>/coverage",
+  "coveragePathIgnorePatterns": [
+    "__gemini__",
+    "__stories__",
+    "docs",
+    "examples/redux",
+    "node_modules",
+    "packages/jest-preset",
+    "packages/vanilla",
+    "src/playground"
+  ],
+  "coverageThreshold": {
+    "global": {
+      "branches": 50,
+      "functions": 50,
+      "lines": 50,
+      "statements": 50
+    }
+  },
+  "moduleNameMapper": {
+    "\\.(css|scss|svg)$": "@hig/jest-preset/fileMock.js"
+  },
+  "modulePaths": ["node_modules"],
+  "moduleFileExtensions": ["js", "jsx", "json"],
+  "setupFiles": ["raf/polyfill"],
+  "setupTestFrameworkScriptFile": "@hig/jest-preset/setupTests.js",
+  "testPathIgnorePatterns": [
+    "docs",
+    "packages/babel-preset",
+    "packages/jest-preset",
+    "packages/vanilla"
+  ],
+  "unmockedModulePathPatterns": ["node_modules"]
+}
