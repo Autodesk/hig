@@ -39,6 +39,9 @@
   "eslintConfig": {
     "extends": "@hig"
   },
+  "jest": {
+    "preset": "@hig/jest-preset"
+  },
   "babel": {
     "env": {
       "test": {

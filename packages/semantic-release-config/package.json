@@ -24,6 +24,7 @@
   "devDependencies": {
     "@hig/babel-preset": "^0.1.0",
     "@hig/eslint-config": "^0.1.0",
+    "@hig/jest-preset": "^0.1.0",
     "@hig/scripts": "^0.1.2",
     "lodash.template": "^4.4.0"
   },
@@ -33,6 +34,9 @@
   },
   "eslintConfig": {
     "extends": "@hig"
+  },
+  "jest": {
+    "preset": "@hig/jest-preset"
   },
   "babel": {
     "env": {
