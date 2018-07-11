@@ -1,6 +1,6 @@
 // @import '~@hig/styles/mixins/states.scss';
-@import '~@hig/styles/mixins/colors.scss';
-@import '~@hig/styles/tokens/layers.scss';
+@import '../../../../node_modules/@hig/styles/mixins/colors';
+@import '../../../../node_modules/@hig/styles/tokens/layers';
 
 .hig__input-button {
   position: relative;

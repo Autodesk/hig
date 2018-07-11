@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-import CheckboxPresenter from "./presenters/CheckboxPresenter";
+import CheckboxPresenter from "./CheckboxPresenter/CheckboxPresenter";
 
 export default class Checkbox extends Component {
   static propTypes = {
@@ -51,10 +51,6 @@ export default class Checkbox extends Component {
    * @param {MouseEvent} event
    */
   handleClick = event => {
-    if (this.props.onClick) {
-      this.props.onClick(event);
-    }
-
     this.setState({
       checked: !this.state.checked
     });

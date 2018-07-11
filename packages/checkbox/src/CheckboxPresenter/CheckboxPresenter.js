@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
-import FormInput from "./FormInput";
+import FormInput from "../presenters/FormInput";
 
 import icons from '@hig/icons';
 
@@ -37,6 +37,9 @@ export default class CheckboxPresenter extends Component {
      * Called when user moves focus from the field
      */
     onBlur: PropTypes.func,
+    /**
+     * Called when user clicks on the checkbox
+     */
     onClick: PropTypes.func,
     /**
      * Called when user changes the value of the field
