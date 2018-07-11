@@ -135,6 +135,11 @@ export default class TextFieldPresenter extends Component {
   render() {
     const hasClearableInput = this.hasClearableInput();
 
+    const isFocused =
+      this.props.focused !== undefined
+        ? this.props.focused
+        : this.state.focused;
+
     const {
       errors,
       focused,
@@ -164,10 +169,7 @@ export default class TextFieldPresenter extends Component {
         >
           <div
             className={cx("hig__text-field-v1__input-wrapper", {
-              "hig__text-field-v1__input-wrapper--focused":
-                this.props.focused !== undefined
-                  ? this.props.focused
-                  : this.state.focused,
+              "hig__text-field-v1__input-wrapper--focused": isFocused,
               "hig__text-field-v1__input-wrapper--with-errors": errors,
               "hig__text-field-v1__input-wrapper--disabled": inputProps.disabled
             })}
@@ -178,10 +180,7 @@ export default class TextFieldPresenter extends Component {
               <label
                 htmlFor={this.props.id}
                 className={cx("hig__text-field-v1__label", {
-                  "hig__text-field-v1__label--input-focused":
-                    this.props.focused !== undefined
-                      ? this.props.focused
-                      : this.state.focused,
+                  "hig__text-field-v1__label--input-focused": isFocused,
                   "hig__text-field-v1__label--required": required,
                   "hig__text-field-v1__label--with-value": this.props.value
                 })}
