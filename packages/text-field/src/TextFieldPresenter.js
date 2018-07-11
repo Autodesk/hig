@@ -21,7 +21,7 @@ export default class TextFieldPresenter extends Component {
      */
     errors: PropTypes.string,
     /**
-     * Allow managing field's focus externally via prop
+     * Allows managing field's focus via prop. Setting this value overrides the internal focus management.
      */
     focused: PropTypes.bool,
     /**
