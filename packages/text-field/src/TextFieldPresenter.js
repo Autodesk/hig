@@ -21,6 +21,10 @@ export default class TextFieldPresenter extends Component {
      */
     errors: PropTypes.string,
     /**
+     * Allow managing field's focus externally via prop
+     */
+    focused: PropTypes.bool,
+    /**
      * When true, displays passed error text. When false, displays instructions with error styling.
      */
     hideInstructionsOnErrors: PropTypes.bool,
@@ -81,10 +85,6 @@ export default class TextFieldPresenter extends Component {
      */
     showClearButton: PropTypes.bool,
     /**
-     * Allow the field to stay focused persistently.
-     */
-    stayFocused: PropTypes.bool,
-    /**
      * Corresponds to the type attribute of an <input>. Relevant for designating a password field, for example.
      */
     type: PropTypes.string,
@@ -96,26 +96,21 @@ export default class TextFieldPresenter extends Component {
 
   static defaultProps = {
     id: generatedId(),
-    type: "text",
-    stayFocused: false
+    type: "text"
   };
 
   state = {
-    focused: this.props.stayFocused
+    focused: false
   };
 
   handleFocus = event => {
-    if (!this.props.stayFocused) {
-      this.setState({ focused: true });
-      if (this.props.onFocus) this.props.onFocus(event);
-    }
+    this.setState({ focused: true });
+    if (this.props.onFocus) this.props.onFocus(event);
   };
 
   handleBlur = event => {
-    if (!this.props.stayFocused) {
-      this.setState({ focused: false });
-      if (this.props.onBlur) this.props.onBlur(event);
-    }
+    this.setState({ focused: false });
+    if (this.props.onBlur) this.props.onBlur(event);
   };
 
   hasClearableInput() {
@@ -142,6 +137,7 @@ export default class TextFieldPresenter extends Component {
 
     const {
       errors,
+      focused,
       hideInstructionsOnErrors,
       icon,
       instructions,
@@ -149,7 +145,6 @@ export default class TextFieldPresenter extends Component {
       onClearButtonClick,
       required,
       showClearButton,
-      stayFocused,
       ...inputProps
     } = this.props;
 
@@ -169,7 +164,10 @@ export default class TextFieldPresenter extends Component {
         >
           <div
             className={cx("hig__text-field-v1__input-wrapper", {
-              "hig__text-field-v1__input-wrapper--focused": this.state.focused,
+              "hig__text-field-v1__input-wrapper--focused":
+                this.props.focused !== undefined
+                  ? this.props.focused
+                  : this.state.focused,
               "hig__text-field-v1__input-wrapper--with-errors": errors,
               "hig__text-field-v1__input-wrapper--disabled": inputProps.disabled
             })}
@@ -180,8 +178,10 @@ export default class TextFieldPresenter extends Component {
               <label
                 htmlFor={this.props.id}
                 className={cx("hig__text-field-v1__label", {
-                  "hig__text-field-v1__label--input-focused": this.state
-                    .focused,
+                  "hig__text-field-v1__label--input-focused":
+                    this.props.focused !== undefined
+                      ? this.props.focused
+                      : this.state.focused,
                   "hig__text-field-v1__label--required": required,
                   "hig__text-field-v1__label--with-value": this.props.value
                 })}
