@@ -19,7 +19,9 @@
   ],
   "dependencies": {
     "@hig/icon": "^0.1.2",
+    "@hig/multi-downshift": "^0.1.0-alpha",
     "@hig/text-field": "^0.3.1",
+    "@hig/utils": "^0.1.0",
     "classnames": "^2.2.5",
     "downshift": "^1.31.15",
     "prop-types": "^15.6.1",

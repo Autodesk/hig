@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import cx from "classnames";
 import Icon, { names } from "@hig/icon";
 
-import "./Option.scss";
+import "./OptionPresenter.scss";
 
-export default class Option extends Component {
+export default class OptionPresenter extends Component {
   static propTypes = {
     /**
      * Visual representation of the option

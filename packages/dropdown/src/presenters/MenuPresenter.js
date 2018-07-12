@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-import "./Menu.scss";
+import "./MenuPresenter.scss";
 
-export default class Menu extends Component {
+export default class MenuPresenter extends Component {
   static propTypes = {
     /**
-     * Rendered options
+     * Options
      */
     children: PropTypes.node
   };

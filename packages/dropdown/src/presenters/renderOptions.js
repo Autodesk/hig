@@ -1,6 +1,6 @@
 import React from "react";
 
-import Option from "./Option";
+import OptionPresenter from "./OptionPresenter";
 
 /**
  * @typedef {Object} OptionMeta
@@ -39,7 +39,7 @@ function createOptionRenderer(downshift) {
       highlighted: highlightedIndex === index
     });
 
-    return <Option {...itemProps}>{label}</Option>;
+    return <OptionPresenter {...itemProps}>{label}</OptionPresenter>;
   };
 }
 

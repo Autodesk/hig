@@ -4,9 +4,9 @@ import { TextFieldPresenter } from "@hig/text-field";
 import "@hig/icon/build/index.css";
 import "@hig/text-field/build/index.css";
 
-import "./Input.scss";
+import "./InputPresenter.scss";
 
-export default function Input(props) {
+export default function InputPresenter(props) {
   return (
     <div className="hig__dropdown__input-wrapper">
       <TextFieldPresenter {...props} type="text" readOnly />
@@ -18,8 +18,10 @@ export default function Input(props) {
   );
 }
 
-Input.propTypes = {
-  ...TextFieldPresenter.propTypes,
-  type: undefined,
-  readOnly: undefined
-};
+function createPropTypes() {
+  const { type, readOnly, ...otherPropTypes } = TextFieldPresenter.propTypes;
+
+  return otherPropTypes;
+}
+
+InputPresenter.propTypes = createPropTypes();
