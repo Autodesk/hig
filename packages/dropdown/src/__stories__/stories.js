@@ -20,14 +20,5 @@ export default [
         }
       ]
     })
-  },
-  {
-    description: "disabled",
-    getProps: () => ({
-      label: "Disabled Dropdown",
-      instructions: "instructions for disabled dropdown",
-      placeholder: "placeholder for disabled dropdown",
-      disabled: true
-    })
   }
 ];
