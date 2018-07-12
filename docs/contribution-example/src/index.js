@@ -1,1 +1,1 @@
-export default function noop() {}
+export { default } from "./ContributionExample";
