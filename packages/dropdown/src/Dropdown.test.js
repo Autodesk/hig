@@ -5,7 +5,9 @@ import Dropdown from "./Dropdown";
 
 describe("Dropdown", () => {
   it("renders correctly", () => {
-    const tree = renderer.create(<Dropdown label="HIG Themes" />).toJSON();
+    const tree = renderer
+      .create(<Dropdown id="whoaBuddy" label="HIG Themes" />)
+      .toJSON();
 
     expect(tree).toMatchSnapshot();
   });
