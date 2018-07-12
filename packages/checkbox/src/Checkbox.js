@@ -51,6 +51,10 @@ export default class Checkbox extends Component {
    * @param {MouseEvent} event
    */
   handleClick = event => {
+    if (this.props.onChange !== undefined) {
+      this.props.onChange(event);
+    }
+
     this.setState({
       checked: !this.state.checked
     });

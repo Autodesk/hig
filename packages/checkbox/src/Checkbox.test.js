@@ -1,10 +1,26 @@
 import React from "react";
-import { mount } from "enzyme";
+import { mount, render } from "enzyme";
 import Checkbox from "./Checkbox";
 
 describe("Checkbox", () => {
   const subject = (props = {}) => mount(<Checkbox title="Checkbox" {...props} />);
   let wrapper;
+  let checkbox;
+
+  describe("integration", () => {
+    beforeEach(() => {
+      wrapper = render(<Checkbox checked={true}/>);
+      checkbox = wrapper.find(".hig__input-button");
+    });
+
+    it("renders a presenter", () => {
+      expect(checkbox.length).not.toBe(0);
+    });
+
+    it("input element has checked class when props.checked is true", () => {
+      expect(checkbox.hasClass("hig__input-button--checked"));
+    });
+  });
 
   describe("event handlers", () => {
     let eventHandler;
