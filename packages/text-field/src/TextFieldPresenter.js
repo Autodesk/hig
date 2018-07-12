@@ -21,6 +21,10 @@ export default class TextFieldPresenter extends Component {
      */
     errors: PropTypes.string,
     /**
+     * Allows managing field's focus via prop. Setting this value overrides the internal focus state management.
+     */
+    focused: PropTypes.bool,
+    /**
      * When true, displays passed error text. When false, displays instructions with error styling.
      */
     hideInstructionsOnErrors: PropTypes.bool,
@@ -131,8 +135,14 @@ export default class TextFieldPresenter extends Component {
   render() {
     const hasClearableInput = this.hasClearableInput();
 
+    const isFocused =
+      this.props.focused !== undefined
+        ? this.props.focused
+        : this.state.focused;
+
     const {
       errors,
+      focused,
       hideInstructionsOnErrors,
       icon,
       instructions,
@@ -159,7 +169,7 @@ export default class TextFieldPresenter extends Component {
         >
           <div
             className={cx("hig__text-field-v1__input-wrapper", {
-              "hig__text-field-v1__input-wrapper--focused": this.state.focused,
+              "hig__text-field-v1__input-wrapper--focused": isFocused,
               "hig__text-field-v1__input-wrapper--with-errors": errors,
               "hig__text-field-v1__input-wrapper--disabled": inputProps.disabled
             })}
@@ -170,8 +180,7 @@ export default class TextFieldPresenter extends Component {
               <label
                 htmlFor={this.props.id}
                 className={cx("hig__text-field-v1__label", {
-                  "hig__text-field-v1__label--input-focused": this.state
-                    .focused,
+                  "hig__text-field-v1__label--input-focused": isFocused,
                   "hig__text-field-v1__label--required": required,
                   "hig__text-field-v1__label--with-value": this.props.value
                 })}
