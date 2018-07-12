@@ -65,7 +65,6 @@ export default class CheckboxPresenter extends Component {
     indeterminate: false,
     name: "checkbox",
     value: "value",
-    label: "label"
   };
 
   setIndeterminate = input => {

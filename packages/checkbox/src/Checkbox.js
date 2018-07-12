@@ -6,6 +6,14 @@ import CheckboxPresenter from "./CheckboxPresenter/CheckboxPresenter";
 export default class Checkbox extends Component {
   static propTypes = {
     /**
+     * Checks the checkbox
+     */
+    checked: PropTypes.bool,
+    /**
+     * Initially checks the checkbox, but allows user action to change it
+     */
+    defaultChecked: PropTypes.bool,
+    /**
      * Prevents user actions on the checkbox
      */
     disabled: PropTypes.bool,
@@ -47,6 +55,17 @@ export default class Checkbox extends Component {
     checked: false
   };
 
+  static defaultProps = {
+    defaultChecked: true
+  }
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      checked: props.defaultChecked || Checkbox.defaultProps.defaultChecked
+    };
+  }
+
   /**
    * @param {MouseEvent} event
    */
@@ -60,12 +79,19 @@ export default class Checkbox extends Component {
     });
   };
 
+  renderChecked() {
+    if (this.props.checked !== undefined) {
+      return this.props.checked;
+    }
+    return this.state.checked;
+  }
+
   render() {
     return (
       <CheckboxPresenter
         {...this.props}
-        checked={this.state.checked}
-        onClick={this.handleClick}
+        checked={this.renderChecked()}
+        onChange={this.handleClick}
       />
     );
   }

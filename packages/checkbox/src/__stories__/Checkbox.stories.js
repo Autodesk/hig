@@ -11,7 +11,15 @@ const stories = [
   {
     description: "default",
     getProps: () => ({
+      ...Checkbox.defaultProps,
       label: "Default checkbox"
+    })
+  },
+  {
+    description: "checked",
+    getProps: () => ({
+      label: "Checked",
+      checked: true
     })
   },
   {
@@ -37,12 +45,15 @@ const stories = [
   }
 ];
 
+
 const knobGroupIds = {
   basic: "Basic",
   form: "Form Attributes"
 };
 
 const knobLabels = {
+  checked: "Checked",
+  defaultChecked: "Initially Checked",
   disabled: "Disabled",
   indeterminate: "Indeterminate",
   label: "Label",
@@ -56,6 +67,8 @@ const knobLabels = {
 
 function getKnobs(props) {
   const {
+    checked,
+    defaultChecked,
     disabled,
     indeterminate,
     label,
@@ -67,6 +80,8 @@ function getKnobs(props) {
 
   return {
     ...otherProps,
+    checked: boolean(knobLabels.checked, checked, knobGroupIds.basic),
+    defaultChecked: boolean(knobLabels.defaultChecked, defaultChecked, knobGroupIds.basic),
     disabled: boolean(knobLabels.disabled, disabled, knobGroupIds.basic),
     indeterminate: boolean(
       knobLabels.indeterminate,
