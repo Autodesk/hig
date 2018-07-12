@@ -11,6 +11,7 @@ const knobLabels = {
   placeholder: "Placeholder",
   disabled: "Disabled",
   required: "Required",
+  multiple: "Multiple",
   onBlur: "onBlur",
   onChange: "onChange",
   onClickOutside: "onClickOutside",
@@ -25,6 +26,7 @@ export default function getKnobs(props) {
     placeholder,
     disabled,
     required,
+    multiple,
     options,
     ...otherProps
   } = props;
@@ -40,6 +42,7 @@ export default function getKnobs(props) {
     placeholder: text(knobLabels.placeholder, placeholder, knobGroupIds.basic),
     disabled: boolean(knobLabels.disabled, disabled, knobGroupIds.basic),
     required: text(knobLabels.required, required, knobGroupIds.basic),
+    multiple: boolean(knobLabels.multiple, multiple, knobGroupIds.basic),
     onBlur: action(knobLabels.onBlur),
     onChange: action(knobLabels.onChange),
     onClickOutside: action(knobLabels.onClickOutside),
