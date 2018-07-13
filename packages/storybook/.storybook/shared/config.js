@@ -10,6 +10,8 @@ import infoStyles from './infoStyles';
 setOptions({
   name: "Autodesk HIG",
   url: "https://hig.autodesk.com",
+  hierarchySeparator: /\/|\./,
+  hierarchyRootSeparator: /\|/,
 });
 
 addDecorator(withKnobs);

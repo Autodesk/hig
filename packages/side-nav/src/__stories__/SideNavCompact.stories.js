@@ -38,7 +38,7 @@ const compactSideNav = () => (
   />
 );
 
-storiesOf("SideNav/SideNavCompact", module)
+storiesOf("GlobalNav|SideNav/SideNavCompact", module)
   .add(
     "SideNav with compact modules",
     withInfo({

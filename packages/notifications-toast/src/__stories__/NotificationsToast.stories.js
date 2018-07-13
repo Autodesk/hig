@@ -14,7 +14,7 @@ import NotificationsToast, { _AVAILABLE_STATUSES } from "../index";
 import intlExamples from "./notifications-toast-intl-examples.json";
 import infoOptions from "./infoOptions";
 
-storiesOf("NotificationsToast", module)
+storiesOf("Notifications|Toast", module)
   .add(
     "default",
     withInfo(infoOptions)(() => (
