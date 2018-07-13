@@ -9,7 +9,7 @@ import "./InputPresenter.scss";
 export default function InputPresenter(props) {
   return (
     <div className="hig__dropdown__input-wrapper">
-      <TextFieldPresenter {...props} type="text" readOnly />
+      <TextFieldPresenter {...props} type="button" readOnly />
       <span className="hig__dropdown__input-caret">
         {/* @TODO: there are variations of the TextField with multiple icons at the end of the input. These icon nodes should be passed as props to TextField. */}
         <Icon name="caret" />
