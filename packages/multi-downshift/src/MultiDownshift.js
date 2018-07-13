@@ -54,7 +54,7 @@ export default class MultiDownshift extends React.Component {
      */
     const handleRemoveButtonClick = event => {
       event.stopPropagation();
-      this.removeItem(item);
+      this.unselectItem(item);
     };
 
     const handleClick = combineEventHandlers(onClick, handleRemoveButtonClick);
@@ -69,7 +69,7 @@ export default class MultiDownshift extends React.Component {
    * @returns {import("downshift").ControllerStateAndHelpers}
    */
   getDownshiftProps() {
-    const { children, selectedItem, ...passThruProps } = this.props;
+    const { children, ...passThruProps } = this.props;
 
     return {
       ...passThruProps,
@@ -120,14 +120,15 @@ export default class MultiDownshift extends React.Component {
     const triggerChange = this.createChangeTrigger(downshift);
 
     if (selectedItems.includes(selectedItem)) {
-      this.removeItem(selectedItem, triggerChange);
+      this.unselectItem(selectedItem, triggerChange);
     } else {
-      this.addSelectedItem(selectedItem, triggerChange);
+      this.selectItem(selectedItem, triggerChange);
     }
   };
 
   /**
    * @returns {string}
+   * @todo Add intelligent formatting
    */
   selectedItemsToString() {
     const { itemToString } = this.props;
@@ -148,27 +149,27 @@ export default class MultiDownshift extends React.Component {
   }
 
   /**
-   * @param {any} removedItem
+   * @param {any} item
    * @param {Function} done
    */
-  removeItem(removedItem, done) {
+  unselectItem(item, done) {
     const { selectedItems } = this.state;
-    const newItems = selectedItems.filter(
-      selectedItem => selectedItem !== removedItem
+    const nextSelectedItems = selectedItems.filter(
+      selectedItem => selectedItem !== item
     );
 
-    this.setState({ selectedItems: newItems }, done);
+    this.setState({ selectedItems: nextSelectedItems }, done);
   }
 
   /**
    * @param {any} removedItem
    * @param {Function} done
    */
-  addSelectedItem(addedItem, done) {
+  selectItem(item, done) {
     const { selectedItems } = this.state;
-    const newItems = [...selectedItems, addedItem];
+    const nextSelectedItems = [...selectedItems, item];
 
-    this.setState({ selectedItems: newItems }, done);
+    this.setState({ selectedItems: nextSelectedItems }, done);
   }
 
   /**

@@ -8,7 +8,7 @@ describe("multi-downshift/MultiDownshift", () => {
     return JSON.stringify(item);
   }
 
-  it("call the `children` render prop", () => {
+  it("calls the `children` render prop with state and helpers", () => {
     const renderPresenter = jest.fn();
 
     mount(
