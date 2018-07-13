@@ -5,7 +5,7 @@ import infoOptions from "./infoOptions";
 import renderStory from "./renderStory";
 import stories from "./stories";
 
-const storybook = storiesOf("RichText", module);
+const storybook = storiesOf("Basics|RichText", module);
 
 stories.forEach(({ description, getProps }) => {
   storybook.add(

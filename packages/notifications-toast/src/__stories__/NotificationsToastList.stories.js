@@ -29,7 +29,7 @@ const exampleToasts = React.Children.toArray([
   </NotificationsToast>
 ]);
 
-storiesOf("NotificationsToastList", module)
+storiesOf("Notifications|ToastList", module)
   .add(
     "static",
     withInfo({

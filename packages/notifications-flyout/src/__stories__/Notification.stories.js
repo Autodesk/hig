@@ -30,7 +30,7 @@ const sampleNotification = (
   </div>
 );
 
-storiesOf("NotificationsFlyout/Notification", module)
+storiesOf("Notifications|Flyout/Notification", module)
   .add(
     "default",
     withInfo(infoOptions)(() => (

@@ -6,7 +6,7 @@ import Notification from "hig-react/lib/elements/components/GlobalNav/TopNav/Not
 import TopNav from "../index";
 import accountLogo from "./accounts-logo.svg";
 
-const storybook = storiesOf("TopNav", module);
+const storybook = storiesOf("GlobalNav|TopNav", module);
 
 storybook.add("accounts", () => (
   <TopNav

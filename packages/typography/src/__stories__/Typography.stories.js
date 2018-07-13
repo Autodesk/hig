@@ -20,7 +20,7 @@ import {
 } from "../index";
 import infoOptions from "./infoOptions";
 
-storiesOf("Typography", module).add(
+storiesOf("Basics|Typography", module).add(
   "base component",
   withInfo(infoOptions)(() => (
     <Typography
@@ -43,7 +43,7 @@ storiesOf("Typography", module).add(
   Component => {
     const name = Component.name;
 
-    storiesOf("Typography", module).add(
+    storiesOf("Basics|Typography", module).add(
       name,
       withInfo(infoOptions)(() => (
         <Component

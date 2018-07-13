@@ -23,7 +23,7 @@ const themes = {
   matrix: MatrixTheme
 };
 
-const themeContextStories = storiesOf("ThemeContext", module);
+const themeContextStories = storiesOf("Theming|ThemeContext", module);
 
 themeContextStories.add(
   "themable",
