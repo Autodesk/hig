@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Downshift from "downshift";
 import MultiDownshift from "@hig/multi-downshift";
-import { combineEventHandlers } from "@hig/utils";
 
 import InputPresenter from "./presenters/InputPresenter";
 import MenuPresenter from "./presenters/MenuPresenter";
@@ -116,7 +115,8 @@ export default class Dropdown extends Component {
       disabled,
       required,
       onBlur,
-      onFocus: combineEventHandlers(toggleMenu, onFocus)
+      onFocus,
+      onClick: toggleMenu
     });
 
     return <InputPresenter {...inputProps} />;
