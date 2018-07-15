@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Dropdown renders correctly 1`] = `
+exports[`Dropdown renders with a label and an ID 1`] = `
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
-  aria-labelledby="downshift-0-label"
+  aria-labelledby="whoaBuddy-label"
   aria-owns={null}
   className="hig__dropdown"
   role="combobox"
@@ -13,7 +13,7 @@ exports[`Dropdown renders correctly 1`] = `
     className="hig__dropdown__input-wrapper"
   >
     <div
-      className="hig__text-field-v1"
+      className="hig__text-field-v1 hig__text-field-v1--button"
     >
       <div
         className="hig__text-field-v1__content"
@@ -37,18 +37,82 @@ exports[`Dropdown renders correctly 1`] = `
               aria-activedescendant={null}
               aria-autocomplete="list"
               aria-controls={null}
-              aria-labelledby="downshift-0-label"
+              aria-labelledby="whoaBuddy-label"
               autoComplete="nope"
               className="hig__text-field-v1__input hig__text-field-v1__input--no-value"
               disabled={undefined}
               id="whoaBuddy"
               onBlur={[Function]}
               onChange={[Function]}
+              onClick={[Function]}
               onFocus={[Function]}
               onKeyDown={[Function]}
               placeholder={undefined}
               readOnly={true}
-              type="text"
+              type="button"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <span
+      className="hig__dropdown__input-caret"
+    >
+      <div
+        className="hig__icon hig__icon--24-size"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret-24\\"><polyline transform=\\"rotate(45 9.828 3)\\" points=\\"8 2 8 8 2 8\\" stroke=\\"#2E4258\\" stroke-width=\\"1.15\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"/></svg>",
+          }
+        }
+      />
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Dropdown renders without props 1`] = `
+<div
+  aria-expanded={false}
+  aria-haspopup="listbox"
+  aria-labelledby="downshift-0-label"
+  aria-owns={null}
+  className="hig__dropdown"
+  role="combobox"
+>
+  <div
+    className="hig__dropdown__input-wrapper"
+  >
+    <div
+      className="hig__text-field-v1 hig__text-field-v1--button"
+    >
+      <div
+        className="hig__text-field-v1__content"
+      >
+        <div
+          className="hig__text-field-v1__input-wrapper"
+        >
+          <div
+            className="hig__text-field-v1__input-row"
+          >
+            <input
+              aria-activedescendant={null}
+              aria-autocomplete="list"
+              aria-controls={null}
+              aria-labelledby="downshift-0-label"
+              autoComplete="nope"
+              className="hig__text-field-v1__input hig__text-field-v1__input--no-value"
+              disabled={undefined}
+              id="downshift-0"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              placeholder={undefined}
+              readOnly={true}
+              type="button"
               value=""
             />
           </div>

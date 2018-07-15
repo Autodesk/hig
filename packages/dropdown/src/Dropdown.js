@@ -94,10 +94,9 @@ export default class Dropdown extends Component {
    * @returns {JSX.Element}
    */
   renderInput(downshift) {
-    const { toggleMenu, getInputProps } = downshift;
+    const { id, toggleMenu, getInputProps } = downshift;
 
     const {
-      id,
       label,
       instructions,
       placeholder,
@@ -172,11 +171,15 @@ export default class Dropdown extends Component {
   };
 
   render() {
-    const { multiple } = this.props;
+    const { id, multiple } = this.props;
     const Behavior = multiple ? MultiDownshift : Downshift;
 
     return (
-      <Behavior onChange={this.handleChange} itemToString={stringifyOption}>
+      <Behavior
+        id={id}
+        onChange={this.handleChange}
+        itemToString={stringifyOption}
+      >
         {this.renderPresenter}
       </Behavior>
     );
