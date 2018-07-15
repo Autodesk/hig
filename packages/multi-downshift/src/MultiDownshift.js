@@ -74,7 +74,7 @@ export default class MultiDownshift extends React.Component {
     return {
       ...passThruProps,
       stateReducer: this.stateReducer,
-      onChange: this.handleChange
+      onSelect: this.handleSelect
     };
   }
 
@@ -115,7 +115,7 @@ export default class MultiDownshift extends React.Component {
    * @param {any} selectedItem
    * @param {import("downshift").ControllerStateAndHelpers} downshift
    */
-  handleChange = (selectedItem, downshift) => {
+  handleSelect = (selectedItem, downshift) => {
     const { selectedItems } = this.state;
     const triggerChange = this.createChangeTrigger(downshift);
 

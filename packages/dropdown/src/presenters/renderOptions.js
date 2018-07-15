@@ -18,7 +18,13 @@ import OptionPresenter from "./OptionPresenter";
 function createSelectedDeterminer(downshift) {
   const { selectedItem, selectedItems } = downshift;
 
-  return option => option === selectedItem || selectedItems.includes(option);
+  return option => {
+    if (selectedItems) {
+      return selectedItems.includes(option);
+    }
+
+    return option === selectedItem;
+  };
 }
 
 /**
