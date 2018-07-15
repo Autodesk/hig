@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`multi-downshift/MultiDownshift call the \`children\` render prop 1`] = `
+exports[`multi-downshift/MultiDownshift calls the \`children\` render prop with state and helpers 1`] = `
 Object {
   "clearItems": [Function],
   "clearSelection": [Function],
