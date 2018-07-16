@@ -32,7 +32,7 @@ describe("Dropdown", () => {
     {
       desc: "renders non-undefined values as options",
       props: {
-        options: ["foo", 1, true, false, null, [], {}, new Map(), new Date()]
+        options: ["foo", 1, true, false, null, [], {}, new Map()]
       }
     }
   ].forEach(({ desc, props }) => {

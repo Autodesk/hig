@@ -186,21 +186,6 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
         [object Map]
       </span>
     </div>
-    <div
-      aria-selected={false}
-      className="hig__dropdown-option"
-      id="downshift-2-item-8"
-      onClick={[Function]}
-      onMouseDown={[Function]}
-      onMouseMove={[Function]}
-      role="option"
-    >
-      <span
-        className="hig__dropdown-option__label"
-      >
-        Mon Jul 16 2018 13:26:57 GMT-0700 (PDT)
-      </span>
-    </div>
   </div>
 </div>
 `;
