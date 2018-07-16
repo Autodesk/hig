@@ -11,9 +11,6 @@ import renderOptions from "./presenters/renderOptions";
 /** @typedef {import("./presenters/renderOptions").OptionMeta} OptionMeta */
 /** @typedef {import("downshift").ControllerStateAndHelpers} DownshiftHelpers */
 
-const OptionPropType = PropTypes.any;
-const OptionsPropType = PropTypes.arrayOf(OptionPropType);
-
 export default class Dropdown extends Component {
   static propTypes = {
     /**
@@ -47,11 +44,14 @@ export default class Dropdown extends Component {
     /**
      * An array of objects to choose from
      */
-    value: PropTypes.oneOfType([OptionPropType, OptionsPropType]),
+    value: PropTypes.oneOfType([
+      PropTypes.any,
+      PropTypes.arrayOf(PropTypes.any)
+    ]),
     /**
      * An array of unique values of any type except `undefined`
      */
-    options: OptionsPropType,
+    options: PropTypes.arrayOf(PropTypes.any),
     /**
      * Called with the selected option when the value changes
      */
