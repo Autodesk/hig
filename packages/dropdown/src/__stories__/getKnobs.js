@@ -21,13 +21,13 @@ const knobLabels = {
 
 export default function getKnobs(props) {
   const {
-    label,
-    instructions,
-    placeholder,
-    disabled,
-    required,
-    multiple,
-    options,
+    label = "",
+    instructions = "",
+    placeholder = "",
+    disabled = false,
+    required = "",
+    multiple = false,
+    options = [],
     ...otherProps
   } = props;
 

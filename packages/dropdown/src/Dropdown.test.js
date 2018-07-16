@@ -4,6 +4,12 @@ import React from "react";
 import Dropdown from "./Dropdown";
 
 describe("Dropdown", () => {
+  const i18n = {
+    foo: "Foo",
+    bar: "Bar",
+    baz: "Baz"
+  };
+
   [
     {
       desc: "renders without props",
@@ -19,7 +25,14 @@ describe("Dropdown", () => {
     {
       desc: "renders with custom option formatting",
       props: {
-        formatOption: option => JSON.stringify(option)
+        options: Object.keys(i18n).sort(),
+        formatOption: key => i18n[key]
+      }
+    },
+    {
+      desc: "renders non-undefined values as options",
+      props: {
+        options: ["foo", 1, true, false, null, [], {}, new Map(), new Date()]
       }
     }
   ].forEach(({ desc, props }) => {

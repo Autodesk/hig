@@ -3,10 +3,7 @@ import React from "react";
 import OptionPresenter from "./OptionPresenter";
 
 /**
- * @typedef {Object} OptionMeta
- * @property {string} label Displayed value
- * @property {string} value
- * @property {Function} [toJSON] Value serialization
+ * @typedef {any} OptionMeta
  */
 
 /** @typedef {import("downshift").ControllerStateAndHelpers} DownshiftHelpers */
@@ -32,20 +29,21 @@ function createSelectedDeterminer(downshift) {
  * @returns {function(OptionMeta, number): JSX.Element}
  */
 function createOptionRenderer(downshift) {
-  const { getItemProps, highlightedIndex } = downshift;
+  const { formatOption, getItemProps, highlightedIndex } = downshift;
   const isSelected = createSelectedDeterminer(downshift);
 
   return (option, index) => {
-    const { label, value } = option;
     const itemProps = getItemProps({
       index,
-      key: value,
+      key: `option-${index}`,
       item: option,
       selected: isSelected(option),
       highlighted: highlightedIndex === index
     });
 
-    return <OptionPresenter {...itemProps}>{label}</OptionPresenter>;
+    return (
+      <OptionPresenter {...itemProps}>{formatOption(option)}</OptionPresenter>
+    );
   };
 }
 
@@ -59,12 +57,14 @@ function createOptionRenderer(downshift) {
 export default function renderOptions(props) {
   const {
     options = [],
+    formatOption = option => String(option),
     getItemProps = itemProps => itemProps,
     highlightedIndex,
     selectedItem,
     selectedItems = []
   } = props;
   const downshift = {
+    formatOption,
     getItemProps,
     highlightedIndex,
     selectedItem,

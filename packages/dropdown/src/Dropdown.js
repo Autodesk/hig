@@ -11,6 +11,9 @@ import renderOptions from "./presenters/renderOptions";
 /** @typedef {import("./presenters/renderOptions").OptionMeta} OptionMeta */
 /** @typedef {import("downshift").ControllerStateAndHelpers} DownshiftHelpers */
 
+const OptionPropType = PropTypes.any;
+const OptionsPropType = PropTypes.arrayOf(OptionPropType);
+
 export default class Dropdown extends Component {
   static propTypes = {
     /**
@@ -44,12 +47,11 @@ export default class Dropdown extends Component {
     /**
      * An array of objects to choose from
      */
-    options: PropTypes.arrayOf(
-      PropTypes.shape({
-        label: PropTypes.string.isRequired,
-        value: PropTypes.string.isRequired
-      })
-    ),
+    value: PropTypes.oneOfType([OptionPropType, OptionsPropType]),
+    /**
+     * An array of unique values of any type except `undefined`
+     */
+    options: OptionsPropType,
     /**
      * Called with the selected option when the value changes
      */
@@ -74,7 +76,7 @@ export default class Dropdown extends Component {
      * @returns {string}
      */
     formatOption(option) {
-      return option ? option.label : "";
+      return option ? String(option) : "";
     }
   };
 
@@ -141,9 +143,10 @@ export default class Dropdown extends Component {
       selectedItems
     } = downshift;
     const menuProps = getMenuProps({ isOpen });
-    const { options } = this.props;
+    const { options, formatOption } = this.props;
     const children = renderOptions({
       options,
+      formatOption,
       getItemProps,
       highlightedIndex,
       selectedItem,
