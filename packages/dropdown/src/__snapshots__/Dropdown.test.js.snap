@@ -69,6 +69,12 @@ exports[`Dropdown renders with a label and an ID 1`] = `
       />
     </span>
   </div>
+  <div
+    aria-labelledby="whoaBuddy-label"
+    className="hig__dropdown-v1__menu"
+    id="whoaBuddy-menu"
+    role="listbox"
+  />
 </div>
 `;
 
@@ -132,6 +138,12 @@ exports[`Dropdown renders with custom option formatting 1`] = `
       />
     </span>
   </div>
+  <div
+    aria-labelledby="downshift-1-label"
+    className="hig__dropdown-v1__menu"
+    id="downshift-1-menu"
+    role="listbox"
+  />
 </div>
 `;
 
@@ -195,5 +207,11 @@ exports[`Dropdown renders without props 1`] = `
       />
     </span>
   </div>
+  <div
+    aria-labelledby="downshift-0-label"
+    className="hig__dropdown-v1__menu"
+    id="downshift-0-menu"
+    role="listbox"
+  />
 </div>
 `;

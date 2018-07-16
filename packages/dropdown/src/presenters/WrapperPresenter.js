@@ -22,24 +22,16 @@ import "./WrapperPresenter.scss";
  * @see https://github.com/paypal/downshift#getrootprops
  */
 export default function WrapperPresenter(props) {
-  const { isOpen, disabled, input, menu } = props;
+  const { children, disabled } = props;
 
   const containerClasses = cx("hig__dropdown", {
     "hig__dropdown--disabled": disabled
   });
 
-  return (
-    <div className={containerClasses}>
-      {input}
-      {isOpen ? menu : null}
-    </div>
-  );
+  return <div className={containerClasses}>{children}</div>;
 }
 
 WrapperPresenter.propTypes = {
-  input: PropTypes.node,
-  menu: PropTypes.node,
   disabled: PropTypes.bool,
-  /** @see https://github.com/paypal/downshift#isopen */
-  isOpen: PropTypes.bool
+  children: PropTypes.node
 };

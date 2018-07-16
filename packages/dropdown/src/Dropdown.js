@@ -124,7 +124,7 @@ export default class Dropdown extends Component {
       onClick: toggleMenu
     });
 
-    return <InputPresenter {...inputProps} />;
+    return <InputPresenter key="input" {...inputProps} />;
   }
 
   /**
@@ -140,11 +140,8 @@ export default class Dropdown extends Component {
       selectedItem,
       selectedItems
     } = downshift;
-
-    if (!isOpen) return null;
-
+    const menuProps = getMenuProps({ isOpen });
     const { options } = this.props;
-
     const children = renderOptions({
       options,
       getItemProps,
@@ -153,7 +150,11 @@ export default class Dropdown extends Component {
       selectedItems
     });
 
-    return <MenuPresenter {...getMenuProps()}>{children}</MenuPresenter>;
+    return (
+      <MenuPresenter key="menu" {...menuProps}>
+        {children}
+      </MenuPresenter>
+    );
   }
 
   /**
@@ -161,7 +162,6 @@ export default class Dropdown extends Component {
    * @returns {JSX.Element}
    */
   renderPresenter = downshift => {
-    const { isOpen } = downshift;
     const { disabled } = this.props;
 
     /**
@@ -169,10 +169,8 @@ export default class Dropdown extends Component {
      * @see https://github.com/paypal/downshift#getrootprops
      */
     return renderWrapper({
-      isOpen,
       disabled,
-      input: this.renderInput(downshift),
-      menu: this.renderMenu(downshift)
+      children: [this.renderInput(downshift), this.renderMenu(downshift)]
     });
   };
 
