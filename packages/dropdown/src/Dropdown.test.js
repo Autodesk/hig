@@ -4,17 +4,29 @@ import React from "react";
 import Dropdown from "./Dropdown";
 
 describe("Dropdown", () => {
-  it("renders without props", () => {
-    const tree = renderer.create(<Dropdown />).toJSON();
+  [
+    {
+      desc: "renders without props",
+      props: {}
+    },
+    {
+      desc: "renders with a label and an ID",
+      props: {
+        id: "whoaBuddy",
+        label: "HIG Themes"
+      }
+    },
+    {
+      desc: "renders with custom option formatting",
+      props: {
+        formatOption: option => JSON.stringify(option)
+      }
+    }
+  ].forEach(({ desc, props }) => {
+    it(desc, () => {
+      const tree = renderer.create(<Dropdown {...props} />).toJSON();
 
-    expect(tree).toMatchSnapshot();
-  });
-
-  it("renders with a label and an ID", () => {
-    const tree = renderer
-      .create(<Dropdown id="whoaBuddy" label="HIG Themes" />)
-      .toJSON();
-
-    expect(tree).toMatchSnapshot();
+      expect(tree).toMatchSnapshot();
+    });
   });
 });

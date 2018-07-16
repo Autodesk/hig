@@ -11,14 +11,6 @@ import renderOptions from "./presenters/renderOptions";
 /** @typedef {import("./presenters/renderOptions").OptionMeta} OptionMeta */
 /** @typedef {import("downshift").ControllerStateAndHelpers} DownshiftHelpers */
 
-/**
- * @param {OptionMeta} option
- * @returns {string}
- */
-function stringifyOption(option) {
-  return option ? option.label : "";
-}
-
 export default class Dropdown extends Component {
   static propTypes = {
     /**
@@ -69,7 +61,21 @@ export default class Dropdown extends Component {
     /**
      * Called when the text field is focused
      */
-    onFocus: PropTypes.func
+    onFocus: PropTypes.func,
+    /**
+     * Used to format options into human readable strings
+     */
+    formatOption: PropTypes.func
+  };
+
+  static defaultProps = {
+    /**
+     * @param {OptionMeta} option
+     * @returns {string}
+     */
+    formatOption(option) {
+      return option ? option.label : "";
+    }
   };
 
   /**
@@ -171,14 +177,14 @@ export default class Dropdown extends Component {
   };
 
   render() {
-    const { id, multiple } = this.props;
+    const { id, multiple, formatOption } = this.props;
     const Behavior = multiple ? MultiDownshift : Downshift;
 
     return (
       <Behavior
         id={id}
         onChange={this.handleChange}
-        itemToString={stringifyOption}
+        itemToString={formatOption}
       >
         {this.renderPresenter}
       </Behavior>
