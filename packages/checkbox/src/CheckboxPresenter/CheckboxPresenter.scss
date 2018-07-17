@@ -1,6 +1,5 @@
-// @import '~@hig/styles/mixins/states.scss';
-@import '../../../../node_modules/@hig/styles/mixins/colors';
-@import '../../../../node_modules/@hig/styles/tokens/layers';
+@import '~@hig/styles/mixins/colors';
+@import '~@hig/styles/tokens/layers';
 
 .hig__input-button {
   position: relative;
@@ -31,8 +30,6 @@
 
   .hig__input-button--required &::after {
     content: '*';
-  }
-  .hig__input-button--checked & {
   }
 }
 

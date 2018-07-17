@@ -52,25 +52,18 @@ export default class Checkbox extends Component {
   };
 
   state = {
-    checked: false
+    checked: this.props.defaultChecked
   };
 
   static defaultProps = {
     defaultChecked: true
   };
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      checked: props.defaultChecked || Checkbox.defaultProps.defaultChecked
-    };
-  }
-
   /**
    * @param {MouseEvent} event
    */
   handleClick = event => {
-    if (this.props.onChange !== undefined) {
+    if (this.props.onChange) {
       this.props.onChange(event);
     }
 

@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
-import FormInput from "../presenters/FormInput";
-
 import icons from "@hig/icons";
+import FormInput from "../presenters/FormInput";
 
 import "./CheckboxPresenter.scss";
 
