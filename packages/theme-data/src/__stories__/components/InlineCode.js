@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import BASICS from "../../basics";
 
 export default function InlineCode({ children }) {
@@ -8,3 +9,7 @@ export default function InlineCode({ children }) {
     </code>
   );
 }
+
+InlineCode.propTypes = {
+  children: PropTypes.node
+};

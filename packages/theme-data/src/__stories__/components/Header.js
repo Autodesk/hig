@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { H1, H2 } from "@hig/typography";
 import BASICS from "../../basics";
 
@@ -18,3 +19,7 @@ export default function Header({ title }) {
     </div>
   );
 }
+
+Header.propTypes = {
+  title: PropTypes.string
+};

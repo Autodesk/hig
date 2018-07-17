@@ -1,13 +1,19 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Swatch from "./Swatch";
 import Value from "./Value";
 
-export default function BorderRadiusExample({ role, theme }) {
-  const value = theme[role];
+function BorderWidthExample({ value }) {
   return (
     <div>
-      <Swatch theme={theme} borderWidth={value} />
+      <Swatch borderWidth={value} />
       <Value>{value}</Value>
     </div>
   );
 }
+
+BorderWidthExample.propTypes = {
+  value: PropTypes.string
+};
+
+export default BorderWidthExample;

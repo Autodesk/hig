@@ -1,13 +1,24 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-export default function Swatch({ length, theme }) {
+import { ThemeContext } from "@hig/themes";
+
+export default function Swatch({ length }) {
   return (
-    <div
-      style={{
-        height: length,
-        width: length,
-        backgroundColor: theme["COLOR_SCHEME.ACCENT_COLOR_500"]
-      }}
-    />
+    <ThemeContext.Consumer>
+      {({ themeData }) => (
+        <div
+          style={{
+            height: length,
+            width: length,
+            backgroundColor: themeData["COLOR_SCHEME.ACCENT_COLOR_500"]
+          }}
+        />
+      )}
+    </ThemeContext.Consumer>
   );
 }
+
+Swatch.propTypes = {
+  length: PropTypes.string
+};

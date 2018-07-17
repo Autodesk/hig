@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Reference from "./Reference";
 import ColorExample from "./ColorExample";
 import LengthExample from "./LengthExample";
@@ -36,22 +37,37 @@ const examplesBySchemaType = {
   [SCHEMA_TYPES.SPACING]: SpacingExample
 };
 
-function renderTypeExample(props) {
-  const TypeExample = examplesBySchemaType[props.schema.type];
+function TypeExample(props) {
+  const TheExample = examplesBySchemaType[props.schema.type];
 
-  if (!TypeExample) {
+  if (!TheExample) {
     throw new Error(`Unrecognized role type ${props.schema.type}`);
   }
 
-  return <TypeExample {...props} />;
+  return <TheExample value={props.theme[props.role]} {...props} />;
 }
 
-export default function Example(props) {
+TypeExample.propTypes = {
+  theme: PropTypes.shape,
+  role: PropTypes.sring,
+  schema: PropTypes.shape({
+    type: PropTypes.string
+  })
+};
+
+function Example(props) {
   const ref = props.themeConfig[props.role].ref;
   return (
     <div>
-      {renderTypeExample(props)}
+      <TypeExample {...props} />
       {ref ? <Reference>{ref}</Reference> : null}
     </div>
   );
 }
+
+Example.propTypes = {
+  themeConfig: PropTypes.obj,
+  role: PropTypes.string
+};
+
+export default Example;
