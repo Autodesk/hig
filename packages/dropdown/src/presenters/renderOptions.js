@@ -13,15 +13,10 @@ import OptionPresenter from "./OptionPresenter";
  * @returns {function(OptionMeta): boolean}
  */
 function createSelectedDeterminer(downshift) {
-  const { selectedItem, selectedItems } = downshift;
+  const { multiple, selectedItem, selectedItems } = downshift;
 
-  return option => {
-    if (selectedItems) {
-      return selectedItems.includes(option);
-    }
-
-    return option === selectedItem;
-  };
+  return option =>
+    multiple ? selectedItems.includes(option) : option === selectedItem;
 }
 
 /**
@@ -50,13 +45,13 @@ function createOptionRenderer(downshift) {
 /** @typedef {DownshiftHelpers & { options: OptionMeta[] }} RenderOptionsProps */
 
 /**
- *
  * @param {RenderOptionsProps} props
  * @todo Convert into a functional component once `React.Fragment` can be used
  */
 export default function renderOptions(props) {
   const {
     options = [],
+    multiple = false,
     formatOption = option => String(option),
     getItemProps = itemProps => itemProps,
     highlightedIndex,
@@ -64,6 +59,7 @@ export default function renderOptions(props) {
     selectedItems = []
   } = props;
   const downshift = {
+    multiple,
     formatOption,
     getItemProps,
     highlightedIndex,
