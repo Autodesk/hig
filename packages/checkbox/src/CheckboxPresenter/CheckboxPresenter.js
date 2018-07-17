@@ -107,8 +107,7 @@ export default class CheckboxPresenter extends Component {
       }
     ]);
 
-    /** TODO: Generate ID */
-    const ID = "nvdwhgnekl";
+    const ID = `checkbox-${Math.floor(Math.random() * 100000, 5)}`;
 
     return (
       <FormInput>
