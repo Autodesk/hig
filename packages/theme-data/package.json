@@ -9,6 +9,7 @@
     "url": "https://github.com/Autodesk/hig.git"
   },
   "module": "build/index.es.js",
+  "main": "build/index.js",
   "files": [
     "build/*"
   ],
