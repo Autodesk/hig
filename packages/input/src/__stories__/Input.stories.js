@@ -5,7 +5,7 @@ import infoOptions from "./infoOptions";
 import renderStory from "./renderStory";
 import stories from "./stories";
 
-const storybook = storiesOf("Input", module);
+const storybook = storiesOf("Theming|Themable Input", module);
 
 stories.forEach(({ description, getProps }) => {
   storybook.add(

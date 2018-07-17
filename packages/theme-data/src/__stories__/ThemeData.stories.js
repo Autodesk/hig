@@ -11,7 +11,7 @@ import Header from "./components/Header";
 import theme, { config as themeConfig } from "../themes/lightGrayTheme";
 import basics from "../basics";
 
-const storybook = storiesOf("Theme data", module);
+const storybook = storiesOf("Theming|Theme data", module);
 
 storybook.add(
   "Readme",

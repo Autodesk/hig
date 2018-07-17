@@ -5,7 +5,7 @@ import infoOptions from "./infoOptions";
 import renderStory from "./renderStory";
 import stories from "./stories";
 
-const storybook = storiesOf("Label", module);
+const storybook = storiesOf("Theming|Themable Label", module);
 
 stories.forEach(({ description, getProps }) => {
   storybook.add(
