@@ -14,6 +14,10 @@ describe("themes/index", () => {
       value: expect.any(Object)
     },
     {
+      name: "HIGLightGrayTheme",
+      value: expect.any(Object)
+    },
+    {
       name: "HIGDarkBlueTheme",
       value: expect.any(Object)
     },
