@@ -6,8 +6,8 @@ export default function Header({ title }) {
   return (
     <div>
       <H1>{title}</H1>
-      <div style={{ height: BASICS.SPACINGS.M }} />
-      <div style={{ display: "flex", marginBottom: BASICS.SPACINGS.M }}>
+      <div style={{ height: BASICS.SPACINGS.MEDIUM_M }} />
+      <div style={{ display: "flex", marginBottom: BASICS.SPACINGS.MEDIUM_M }}>
         <div style={{ flex: "1 1 0" }}>
           <H2>Role</H2>
         </div>

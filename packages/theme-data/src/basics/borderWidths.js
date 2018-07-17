@@ -1,5 +1,5 @@
 export default {
-  HAIRLINE: "1px",
+  NONE: "0",
   S: "1px",
   M: "2px",
   L: "4px"

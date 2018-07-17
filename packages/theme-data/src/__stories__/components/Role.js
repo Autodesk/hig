@@ -8,11 +8,11 @@ function Role(props) {
     <div
       style={{
         display: "flex",
-        marginBottom: props.basics.SPACINGS.XL,
+        marginBottom: props.basics.SPACINGS.MEDIUM_XL,
         borderTop: `${props.basics.BORDER_WIDTHS.S} solid ${
           props.theme["COLOR_SCHEME.DIVIDER.DIM_COLOR"]
         }`,
-        paddingTop: props.basics.SPACINGS.M
+        paddingTop: props.basics.SPACINGS.MEDIUM_M
       }}
     >
       <div style={{ flex: "1 1 0" }}>

@@ -13,7 +13,6 @@ const abstractThemeConfig = extendTheme(
     {},
     mapKeys(BASICS.BORDER_RADII, key => `BASICS.BORDER_RADII.${key}`),
     mapKeys(BASICS.BORDER_WIDTHS, key => `BASICS.BORDER_WIDTHS.${key}`),
-    mapKeys(BASICS.BREAKPOINTS, key => `BASICS.BREAKPOINTS.${key}`),
     mapKeys(BASICS.COLORS, key => `BASICS.COLORS.${key}`),
     mapKeys(BASICS.FONT_FAMILIES, key => `BASICS.FONT_FAMILIES.${key}`),
     mapKeys(BASICS.FONT_SIZES, key => `BASICS.FONT_SIZES.${key}`),

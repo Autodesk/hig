@@ -1,6 +1,5 @@
 import BORDER_RADII from "./borderRadii";
 import BORDER_WIDTHS from "./borderWidths";
-import BREAKPOINTS from "./breakpoints";
 import COLORS from "./colors";
 import FONT_FAMILIES from "./fontFamilies";
 import FONT_SIZES from "./fontSizes";
@@ -12,7 +11,6 @@ import SPACINGS from "./spacings";
 export default {
   BORDER_RADII,
   BORDER_WIDTHS,
-  BREAKPOINTS,
   COLORS,
   FONT_FAMILIES,
   FONT_SIZES,

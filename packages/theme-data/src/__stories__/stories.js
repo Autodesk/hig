@@ -24,11 +24,6 @@ export default [
     readme: basicsReadme
   },
   {
-    description: "Basics - Breakpoints",
-    schema: filterMatchByKey(schema, "BASICS.BREAKPOINTS"),
-    readme: basicsReadme
-  },
-  {
     description: "Basics - Colors",
     schema: filterMatchByKey(schema, "BASICS.COLORS"),
     readme: basicsReadme
