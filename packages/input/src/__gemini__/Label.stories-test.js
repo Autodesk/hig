@@ -1,6 +1,8 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 
-import Label from "../index";
+import Input from "../index";
 
-storiesOf("Label", module).add("default", () => <Label>Email</Label>);
+storiesOf("Input", module).add("default", () => (
+  <Input value="spam.me@example.com" />
+));
