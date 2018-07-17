@@ -1,9 +1,9 @@
 import React from "react";
 import RichText from "@hig/rich-text";
+import { ThemeContext } from "@hig/themes";
 
 import DefaultExport from "../index";
 import readme from "../../README.md";
-import { ThemeContext } from "@hig/themes";
 
 export default {
   propTables: [DefaultExport],
