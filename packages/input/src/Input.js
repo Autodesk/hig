@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { polyfill } from "react-lifecycles-compat";
 
 import InputBehavior from "./InputBehavior";
 import InputPresenter from "./InputPresenter";
@@ -40,4 +39,4 @@ class Input extends Component {
   }
 }
 
-export default polyfill(Input);
+export default Input;

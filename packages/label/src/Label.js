@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { polyfill } from "react-lifecycles-compat";
 import { ThemeContext } from "@hig/themes";
 
 import stylesheet from "./stylesheet";
@@ -32,4 +31,4 @@ class Label extends Component {
   }
 }
 
-export default polyfill(Label);
+export default Label;

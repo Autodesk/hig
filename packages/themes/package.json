@@ -18,7 +18,8 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/theme-data-poc": "^0.0.6-alpha"
+    "@hig/theme-data-poc": "^0.0.6-alpha",
+    "prop-types": "^15.6.1"
   },
   "devDependencies": {
     "@hig/babel-preset": "^0.1.0",
@@ -30,8 +31,7 @@
     "@hig/styles": "^0.1.1"
   },
   "peerDependencies": {
-    "react": "^15.4.1 || ^16.3.2",
-    "prop-types": "^15.6.1"
+    "react": "^15.4.1 || ^16.3.2"
   },
   "scripts": {
     "build": "hig-scripts-build",

@@ -25,6 +25,6 @@ const buildPath = path.join(process.cwd(), "build");
 ].forEach(options => {
   fs.writeFileSync(
     path.join(buildPath, `${options.name}.json`),
-    JSON.stringify(options.data)
+    JSON.stringify(options.data, null, 2)
   );
 });

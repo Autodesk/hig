@@ -23,42 +23,27 @@ const SCHEMA_TYPES = {
   SPACING: "spacing"
 };
 
+const examplesBySchemaType = {
+  [SCHEMA_TYPES.COLOR]: ColorExample,
+  [SCHEMA_TYPES.LENGTH]: LengthExample,
+  [SCHEMA_TYPES.BORDER_RADIUS]: BorderRadiusExample,
+  [SCHEMA_TYPES.BORDER_WIDTH]: BorderWidthExample,
+  [SCHEMA_TYPES.FONT_FAMILY]: FontFamilyExample,
+  [SCHEMA_TYPES.FONT_SIZE]: FontSizeExample,
+  [SCHEMA_TYPES.FONT_WEIGHT]: FontWeightExample,
+  [SCHEMA_TYPES.LINE_HEIGHT]: LengthExample,
+  [SCHEMA_TYPES.SHADOW]: ShadowExample,
+  [SCHEMA_TYPES.SPACING]: SpacingExample
+};
+
 function renderTypeExample(props) {
-  switch (props.schema.type) {
-    case SCHEMA_TYPES.COLOR: {
-      return <ColorExample {...props} />;
-    }
-    case SCHEMA_TYPES.LENGTH: {
-      return <LengthExample {...props} />;
-    }
-    case SCHEMA_TYPES.BORDER_RADIUS: {
-      return <BorderRadiusExample {...props} />;
-    }
-    case SCHEMA_TYPES.BORDER_WIDTH: {
-      return <BorderWidthExample {...props} />;
-    }
-    case SCHEMA_TYPES.FONT_FAMILY: {
-      return <FontFamilyExample {...props} />;
-    }
-    case SCHEMA_TYPES.FONT_SIZE: {
-      return <FontSizeExample {...props} />;
-    }
-    case SCHEMA_TYPES.FONT_WEIGHT: {
-      return <FontWeightExample {...props} />;
-    }
-    case SCHEMA_TYPES.LINE_HEIGHT: {
-      return <LengthExample {...props} />;
-    }
-    case SCHEMA_TYPES.SHADOW: {
-      return <ShadowExample {...props} />;
-    }
-    case SCHEMA_TYPES.SPACING: {
-      return <SpacingExample {...props} />;
-    }
-    default: {
-      throw new Error(`Unrecognized role type ${props.schema.type}`);
-    }
+  const TypeExample = examplesBySchemaType[props.schema.type];
+
+  if (!TypeExample) {
+    throw new Error(`Unrecognized role type ${props.schema.type}`);
   }
+
+  return <TypeExample {...props} />;
 }
 
 export default function Example(props) {

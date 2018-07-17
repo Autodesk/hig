@@ -16,6 +16,7 @@ export default class FocusBehavior extends Component {
   constructor(props) {
     super(props);
 
+    // Binding in the constructor because performance
     this.handleFocus = this.handleFocus.bind(this);
     this.handleBlur = this.handleBlur.bind(this);
 
