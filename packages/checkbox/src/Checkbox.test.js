@@ -1,30 +1,22 @@
 import React from "react";
 import { mount, render } from "enzyme";
 import Checkbox from "./Checkbox";
+import renderer from "react-test-renderer";
 
 describe("Checkbox", () => {
-  const subject = (props = {}) =>
-    mount(<Checkbox title="Checkbox" {...props} />);
-  let wrapper;
-  let checkbox;
-
   describe("integration", () => {
-    beforeEach(() => {
-      wrapper = render(<Checkbox checked={true} />);
-      checkbox = wrapper.find(".hig__input-button");
-    });
+    it("renders correctly", () => {
+      const tree = renderer.create(<Checkbox label="HIG Checkbox" />).toJSON();
 
-    it("renders a presenter", () => {
-      expect(checkbox.length).not.toBe(0);
-    });
-
-    it("input element has checked class when props.checked is true", () => {
-      expect(checkbox.hasClass("hig__input-button--checked"));
+      expect(tree).toMatchSnapshot();
     });
   });
 
   describe("event handlers", () => {
     let eventHandler;
+    const subject = (props = {}) =>
+      mount(<Checkbox title="Checkbox" {...props} />);
+    let wrapper;
 
     beforeEach(() => {
       eventHandler = jest.fn();
