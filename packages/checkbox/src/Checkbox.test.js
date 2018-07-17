@@ -26,9 +26,13 @@ describe("Checkbox", () => {
   describe("event handlers", () => {
     let eventHandler;
 
+    beforeEach(() => {
+      eventHandler = jest.fn();
+      eventHandler.mockReset();
+    });
+
     describe("onBlur", () => {
       beforeEach(() => {
-        eventHandler = jest.fn();
         wrapper = mount(<Checkbox onBlur={eventHandler} />);
       });
 
@@ -40,7 +44,6 @@ describe("Checkbox", () => {
 
     describe("onChange", () => {
       beforeEach(() => {
-        eventHandler = jest.fn();
         wrapper = mount(<Checkbox onChange={eventHandler} />);
       });
 
@@ -53,7 +56,6 @@ describe("Checkbox", () => {
 
     describe("onFocus", () => {
       beforeEach(() => {
-        eventHandler = jest.fn();
         wrapper = subject({ onFocus: eventHandler });
       });
 
