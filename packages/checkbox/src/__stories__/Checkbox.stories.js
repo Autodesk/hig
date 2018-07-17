@@ -45,7 +45,6 @@ const stories = [
   }
 ];
 
-
 const knobGroupIds = {
   basic: "Basic",
   form: "Form Attributes"
@@ -81,7 +80,11 @@ function getKnobs(props) {
   return {
     ...otherProps,
     checked: boolean(knobLabels.checked, checked, knobGroupIds.basic),
-    defaultChecked: boolean(knobLabels.defaultChecked, defaultChecked, knobGroupIds.basic),
+    defaultChecked: boolean(
+      knobLabels.defaultChecked,
+      defaultChecked,
+      knobGroupIds.basic
+    ),
     disabled: boolean(knobLabels.disabled, disabled, knobGroupIds.basic),
     indeterminate: boolean(
       knobLabels.indeterminate,

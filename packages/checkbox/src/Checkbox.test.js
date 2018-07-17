@@ -3,13 +3,14 @@ import { mount, render } from "enzyme";
 import Checkbox from "./Checkbox";
 
 describe("Checkbox", () => {
-  const subject = (props = {}) => mount(<Checkbox title="Checkbox" {...props} />);
+  const subject = (props = {}) =>
+    mount(<Checkbox title="Checkbox" {...props} />);
   let wrapper;
   let checkbox;
 
   describe("integration", () => {
     beforeEach(() => {
-      wrapper = render(<Checkbox checked={true}/>);
+      wrapper = render(<Checkbox checked={true} />);
       checkbox = wrapper.find(".hig__input-button");
     });
 

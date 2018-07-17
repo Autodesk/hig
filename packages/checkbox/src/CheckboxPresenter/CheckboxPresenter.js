@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import cx from "classnames";
 import FormInput from "../presenters/FormInput";
 
-import icons from '@hig/icons';
+import icons from "@hig/icons";
 
 import "./CheckboxPresenter.scss";
 
@@ -64,7 +64,7 @@ export default class CheckboxPresenter extends Component {
     disabled: false,
     indeterminate: false,
     name: "checkbox",
-    value: "value",
+    value: "value"
   };
 
   setIndeterminate = input => {
@@ -101,9 +101,9 @@ export default class CheckboxPresenter extends Component {
     const iconClasses = cx([
       "hig__input-button__input-wrapper",
       {
-        "checked": checked,
-        "indeterminate": indeterminate,
-        "disabled": disabled
+        checked: checked,
+        indeterminate: indeterminate,
+        disabled: disabled
       }
     ]);
 
@@ -126,9 +126,20 @@ export default class CheckboxPresenter extends Component {
             type="checkbox"
           />
           <span className={iconClasses}>
-            <span className="check" dangerouslySetInnerHTML={{ __html: icons['check-white-24'] }}/>
-            <span className="check--indeterminate" dangerouslySetInnerHTML={{ __html: icons['checkmark-indeterminate-16'] }}/>
-            <span className="check--disabled" dangerouslySetInnerHTML={{ __html: icons['check-disabled-16'] }}/>
+            <span
+              className="check"
+              dangerouslySetInnerHTML={{ __html: icons["check-white-24"] }}
+            />
+            <span
+              className="check--indeterminate"
+              dangerouslySetInnerHTML={{
+                __html: icons["checkmark-indeterminate-16"]
+              }}
+            />
+            <span
+              className="check--disabled"
+              dangerouslySetInnerHTML={{ __html: icons["check-disabled-16"] }}
+            />
           </span>
           <label htmlFor={ID} className={labelClasses}>
             {label}

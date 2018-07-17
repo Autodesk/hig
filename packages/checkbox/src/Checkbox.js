@@ -57,7 +57,7 @@ export default class Checkbox extends Component {
 
   static defaultProps = {
     defaultChecked: true
-  }
+  };
 
   constructor(props) {
     super(props);

@@ -16,13 +16,13 @@ describe("Checkbox/CheckboxPresenter/CheckboxPresenter", () => {
         id: "id",
         indeterminate: false,
         label: "HELLO",
-        name: 'checkbox',
+        name: "checkbox",
         onBlur: function onBlur() {},
         onClick: function onClick() {},
         onChange: function onChange() {},
         onFocus: function onFocus() {},
-        required: 'required helper text',
-        value: 'value'
+        required: "required helper text",
+        value: "value"
       }
     }
   ].forEach(({ description, props: { children, ...otherProps } }) => {
