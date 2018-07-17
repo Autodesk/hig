@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
 import icons from "@hig/icons";
-import FormInput from "../presenters/FormInput";
 
 import "./CheckboxPresenter.scss";
 
@@ -109,42 +108,40 @@ export default class CheckboxPresenter extends Component {
     const ID = `checkbox-${Math.floor(Math.random() * 100000, 5)}`;
 
     return (
-      <FormInput>
-        <div className={wrapperClasses}>
-          <input
-            id={ID}
-            checked={checked}
-            className="hig__input-button__inputV1"
-            disabled={disabled}
-            name={name}
-            onBlur={onBlur}
-            onChange={onChange}
-            onClick={onClick}
-            onFocus={onFocus}
-            ref={this.setIndeterminate}
-            type="checkbox"
+      <div className={wrapperClasses}>
+        <input
+          id={ID}
+          checked={checked}
+          className="hig__input-button__inputV1"
+          disabled={disabled}
+          name={name}
+          onBlur={onBlur}
+          onChange={onChange}
+          onClick={onClick}
+          onFocus={onFocus}
+          ref={this.setIndeterminate}
+          type="checkbox"
+        />
+        <span className={iconClasses}>
+          <span
+            className="check"
+            dangerouslySetInnerHTML={{ __html: icons["check-white-24"] }}
           />
-          <span className={iconClasses}>
-            <span
-              className="check"
-              dangerouslySetInnerHTML={{ __html: icons["check-white-24"] }}
-            />
-            <span
-              className="check--indeterminate"
-              dangerouslySetInnerHTML={{
-                __html: icons["checkmark-indeterminate-16"]
-              }}
-            />
-            <span
-              className="check--disabled"
-              dangerouslySetInnerHTML={{ __html: icons["check-disabled-16"] }}
-            />
-          </span>
-          <label htmlFor={ID} className={labelClasses}>
-            {label}
-          </label>
-        </div>
-      </FormInput>
+          <span
+            className="check--indeterminate"
+            dangerouslySetInnerHTML={{
+              __html: icons["checkmark-indeterminate-16"]
+            }}
+          />
+          <span
+            className="check--disabled"
+            dangerouslySetInnerHTML={{ __html: icons["check-disabled-16"] }}
+          />
+        </span>
+        <label htmlFor={ID} className={labelClasses}>
+          {label}
+        </label>
+      </div>
     );
   }
 }
