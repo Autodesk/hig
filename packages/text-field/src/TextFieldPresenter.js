@@ -141,6 +141,7 @@ export default class TextFieldPresenter extends Component {
         : this.state.focused;
 
     const {
+      type,
       errors,
       focused,
       hideInstructionsOnErrors,
@@ -153,15 +154,16 @@ export default class TextFieldPresenter extends Component {
       ...inputProps
     } = this.props;
 
+    const wrapperClasses = cx("hig__text-field-v1", {
+      "hig__text-field-v1--button": type === "button",
+      "hig__text-field-v1--required": required,
+      "hig__text-field-v1--disabled": inputProps.disabled,
+      "hig__text-field-v1--clear-button-visible": hasClearableInput,
+      "hig__text-field-v1--with-errors": errors
+    });
+
     return (
-      <div
-        className={cx("hig__text-field-v1", {
-          "hig__text-field-v1--required": required,
-          "hig__text-field-v1--disabled": inputProps.disabled,
-          "hig__text-field-v1--clear-button-visible": hasClearableInput,
-          "hig__text-field-v1--with-errors": errors
-        })}
-      >
+      <div className={wrapperClasses}>
         <div
           className={cx("hig__text-field-v1__content", {
             "hig__text-field-v1__content--with-icon": icon
@@ -202,9 +204,7 @@ export default class TextFieldPresenter extends Component {
               )}
 
               <Input
-                ref={input => {
-                  this.input = input;
-                }}
+                type={type}
                 {...inputProps}
                 onBlur={this.handleBlur}
                 onFocus={this.handleFocus}

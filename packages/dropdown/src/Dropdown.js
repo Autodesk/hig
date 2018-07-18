@@ -1,23 +1,15 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Downshift from "downshift";
+import MultiDownshift from "@hig/multi-downshift";
 
-import composeEventHandlers from "./composeEventHandlers";
-import Input from "./presenters/Input";
-import Menu from "./presenters/Menu";
-import renderWrapper from "./presenters/Wrapper";
+import InputPresenter from "./presenters/InputPresenter";
+import MenuPresenter from "./presenters/MenuPresenter";
+import renderWrapper from "./presenters/WrapperPresenter";
 import renderOptions from "./presenters/renderOptions";
 
 /** @typedef {import("./presenters/renderOptions").OptionMeta} OptionMeta */
 /** @typedef {import("downshift").ControllerStateAndHelpers} DownshiftHelpers */
-
-/**
- * @param {OptionMeta} option
- * @returns {string}
- */
-function stringifyOption(option) {
-  return option ? option.label : "";
-}
 
 export default class Dropdown extends Component {
   static propTypes = {
@@ -38,6 +30,10 @@ export default class Dropdown extends Component {
      */
     placeholder: PropTypes.string,
     /**
+     * Enables multiple selection
+     */
+    multiple: PropTypes.bool,
+    /**
      * Prevents user actions on the field
      */
     disabled: PropTypes.bool,
@@ -48,12 +44,14 @@ export default class Dropdown extends Component {
     /**
      * An array of objects to choose from
      */
-    options: PropTypes.arrayOf(
-      PropTypes.shape({
-        label: PropTypes.string.isRequired,
-        value: PropTypes.string.isRequired
-      })
-    ),
+    value: PropTypes.oneOfType([
+      PropTypes.any,
+      PropTypes.arrayOf(PropTypes.any)
+    ]),
+    /**
+     * An array of unique values of any type except `undefined`
+     */
+    options: PropTypes.arrayOf(PropTypes.any),
     /**
      * Called with the selected option when the value changes
      */
@@ -65,7 +63,21 @@ export default class Dropdown extends Component {
     /**
      * Called when the text field is focused
      */
-    onFocus: PropTypes.func
+    onFocus: PropTypes.func,
+    /**
+     * Used to format options into human readable strings
+     */
+    formatOption: PropTypes.func
+  };
+
+  static defaultProps = {
+    /**
+     * @param {OptionMeta} option
+     * @returns {string}
+     */
+    formatOption(option) {
+      return option ? String(option) : "";
+    }
   };
 
   /**
@@ -74,14 +86,14 @@ export default class Dropdown extends Component {
    *  Downshift provides all of it's helpers and state to `onChange`.
    *  We don't want to expose the entire Downshift API to consumers.
    *
-   * @param {selectedItem} OptionMeta
+   * @param {OptionMeta | OptionMeta[]} value
    * @param {DownshiftHelpers} downshift
    */
-  handleChange = selectedItem => {
+  handleChange = value => {
     const { onChange } = this.props;
 
     if (onChange) {
-      onChange(selectedItem);
+      onChange(value);
     }
   };
 
@@ -90,10 +102,9 @@ export default class Dropdown extends Component {
    * @returns {JSX.Element}
    */
   renderInput(downshift) {
-    const { toggleMenu, getInputProps } = downshift;
+    const { id, toggleMenu, getInputProps } = downshift;
 
     const {
-      id,
       label,
       instructions,
       placeholder,
@@ -111,10 +122,11 @@ export default class Dropdown extends Component {
       disabled,
       required,
       onBlur,
-      onFocus: composeEventHandlers(toggleMenu, onFocus)
+      onFocus,
+      onClick: toggleMenu
     });
 
-    return <Input {...inputProps} />;
+    return <InputPresenter key="input" {...inputProps} />;
   }
 
   /**
@@ -125,24 +137,28 @@ export default class Dropdown extends Component {
     const {
       isOpen,
       getItemProps,
+      getMenuProps,
       highlightedIndex,
       selectedItem,
       selectedItems
     } = downshift;
-
-    if (!isOpen) return null;
-
-    const { options } = this.props;
-
+    const menuProps = getMenuProps({ isOpen });
+    const { multiple, options, formatOption } = this.props;
     const children = renderOptions({
+      multiple,
       options,
+      formatOption,
       getItemProps,
       highlightedIndex,
       selectedItem,
       selectedItems
     });
 
-    return <Menu>{children}</Menu>;
+    return (
+      <MenuPresenter key="menu" {...menuProps}>
+        {children}
+      </MenuPresenter>
+    );
   }
 
   /**
@@ -150,7 +166,6 @@ export default class Dropdown extends Component {
    * @returns {JSX.Element}
    */
   renderPresenter = downshift => {
-    const { isOpen } = downshift;
     const { disabled } = this.props;
 
     /**
@@ -158,18 +173,23 @@ export default class Dropdown extends Component {
      * @see https://github.com/paypal/downshift#getrootprops
      */
     return renderWrapper({
-      isOpen,
       disabled,
-      input: this.renderInput(downshift),
-      menu: this.renderMenu(downshift)
+      children: [this.renderInput(downshift), this.renderMenu(downshift)]
     });
   };
 
   render() {
+    const { id, multiple, formatOption } = this.props;
+    const Behavior = multiple ? MultiDownshift : Downshift;
+
     return (
-      <Downshift onChange={this.handleChange} itemToString={stringifyOption}>
+      <Behavior
+        id={id}
+        onChange={this.handleChange}
+        itemToString={formatOption}
+      >
         {this.renderPresenter}
-      </Downshift>
+      </Behavior>
     );
   }
 }

@@ -1,12 +1,9 @@
 import React from "react";
 
-import Option from "./Option";
+import OptionPresenter from "./OptionPresenter";
 
 /**
- * @typedef {Object} OptionMeta
- * @property {string} label Displayed value
- * @property {string} value
- * @property {Function} [toJSON] Value serialization
+ * @typedef {any} OptionMeta
  */
 
 /** @typedef {import("downshift").ControllerStateAndHelpers} DownshiftHelpers */
@@ -16,9 +13,10 @@ import Option from "./Option";
  * @returns {function(OptionMeta): boolean}
  */
 function createSelectedDeterminer(downshift) {
-  const { selectedItem, selectedItems } = downshift;
+  const { multiple, selectedItem, selectedItems } = downshift;
 
-  return option => option === selectedItem || selectedItems.includes(option);
+  return option =>
+    multiple ? selectedItems.includes(option) : option === selectedItem;
 }
 
 /**
@@ -26,39 +24,43 @@ function createSelectedDeterminer(downshift) {
  * @returns {function(OptionMeta, number): JSX.Element}
  */
 function createOptionRenderer(downshift) {
-  const { getItemProps, highlightedIndex } = downshift;
+  const { formatOption, getItemProps, highlightedIndex } = downshift;
   const isSelected = createSelectedDeterminer(downshift);
 
   return (option, index) => {
-    const { label, value } = option;
     const itemProps = getItemProps({
       index,
-      key: value,
+      key: `option-${index}`,
       item: option,
       selected: isSelected(option),
       highlighted: highlightedIndex === index
     });
 
-    return <Option {...itemProps}>{label}</Option>;
+    return (
+      <OptionPresenter {...itemProps}>{formatOption(option)}</OptionPresenter>
+    );
   };
 }
 
 /** @typedef {DownshiftHelpers & { options: OptionMeta[] }} RenderOptionsProps */
 
 /**
- *
  * @param {RenderOptionsProps} props
  * @todo Convert into a functional component once `React.Fragment` can be used
  */
 export default function renderOptions(props) {
   const {
     options = [],
+    multiple = false,
+    formatOption = option => String(option),
     getItemProps = itemProps => itemProps,
     highlightedIndex,
     selectedItem,
     selectedItems = []
   } = props;
   const downshift = {
+    multiple,
+    formatOption,
     getItemProps,
     highlightedIndex,
     selectedItem,

@@ -1,7 +1,7 @@
 {
-  "name": "@hig/dropdown",
+  "name": "@hig/multi-downshift",
   "version": "0.1.0",
-  "description": "HIG Dropdown",
+  "description": "Multi-selection support for Downshift",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
   "repository": {
@@ -13,29 +13,22 @@
   },
   "main": "build/index.js",
   "module": "build/index.es.js",
-  "style": "build/index.css",
   "files": [
     "build/*"
   ],
   "dependencies": {
-    "@hig/icon": "^0.1.2",
-    "@hig/multi-downshift": "^0.1.0-alpha",
-    "@hig/text-field": "^0.3.1",
-    "classnames": "^2.2.5",
+    "@hig/utils": "^0.1.0",
     "downshift": "^2.0.12",
-    "prop-types": "^15.6.1",
-    "react-lifecycles-compat": "^3.0.2"
-  },
-  "peerDependencies": {
-    "react": "^15.4.1 || ^16.3.2"
+    "prop-types": "^15.6.1"
   },
   "devDependencies": {
     "@hig/babel-preset": "^0.1.0",
     "@hig/eslint-config": "^0.1.0",
-    "@hig/jest-preset": "^0.1.0",
     "@hig/scripts": "^0.1.2",
-    "@hig/semantic-release-config": "^0.1.0",
-    "@hig/styles": "^0.1.1"
+    "@hig/semantic-release-config": "^0.1.0"
+  },
+  "peerDependencies": {
+    "react": "^15.4.1 || ^16.3.2"
   },
   "scripts": {
     "build": "hig-scripts-build",

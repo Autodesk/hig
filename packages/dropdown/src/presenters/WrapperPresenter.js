@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
 
-import "./Wrapper.scss";
+import "./WrapperPresenter.scss";
 
 /**
  * @typedef {Object} WrapperProps
@@ -21,25 +21,17 @@ import "./Wrapper.scss";
  * @returns {JSX.Element}
  * @see https://github.com/paypal/downshift#getrootprops
  */
-export default function Wrapper(props) {
-  const { isOpen, disabled, input, menu } = props;
+export default function WrapperPresenter(props) {
+  const { children, disabled } = props;
 
   const containerClasses = cx("hig__dropdown", {
     "hig__dropdown--disabled": disabled
   });
 
-  return (
-    <div className={containerClasses}>
-      {input}
-      {isOpen ? menu : null}
-    </div>
-  );
+  return <div className={containerClasses}>{children}</div>;
 }
 
-Wrapper.propTypes = {
-  input: PropTypes.node,
-  menu: PropTypes.node,
+WrapperPresenter.propTypes = {
   disabled: PropTypes.bool,
-  /** @see https://github.com/paypal/downshift#isopen */
-  isOpen: PropTypes.bool
+  children: PropTypes.node
 };
