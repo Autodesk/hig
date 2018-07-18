@@ -51,12 +51,12 @@ export default class Checkbox extends Component {
     value: PropTypes.string
   };
 
-  state = {
-    checked: this.props.defaultChecked
-  };
-
   static defaultProps = {
     defaultChecked: true
+  };
+
+  state = {
+    checked: this.props.defaultChecked
   };
 
   /**

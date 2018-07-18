@@ -1,6 +1,6 @@
-import { storiesOf } from "@storybook/react";
 import React from "react";
-import { default as CheckboxPresenter } from "../CheckboxPresenter/CheckboxPresenter";
+import { storiesOf } from "@storybook/react";
+import CheckboxPresenter from "../CheckboxPresenter/CheckboxPresenter";
 
 storiesOf("CheckboxPresenter", module)
   .add("default", () => <CheckboxPresenter label={"Default checkbox"} />)

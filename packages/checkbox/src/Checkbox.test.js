@@ -1,7 +1,7 @@
+import { mount } from "enzyme";
 import React from "react";
-import { mount, render } from "enzyme";
-import Checkbox from "./Checkbox";
 import renderer from "react-test-renderer";
+import Checkbox from "./Checkbox";
 
 describe("Checkbox", () => {
   describe("integration", () => {

@@ -1,4 +1,4 @@
-import { default as Checkbox } from "../Checkbox";
+import Checkbox from "../Checkbox";
 
 export default [
   {

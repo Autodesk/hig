@@ -1,11 +1,11 @@
+import React from "react";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
 import { action } from "@storybook/addon-actions";
 import { boolean, text } from "@storybook/addon-knobs/react";
 
 import infoOptions from "./infoOptions";
-import React from "react";
-import { default as Checkbox } from "../Checkbox";
+import Checkbox from "../Checkbox";
 
 const stories = [
   {

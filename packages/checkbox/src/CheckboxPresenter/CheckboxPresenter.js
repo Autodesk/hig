@@ -16,10 +16,6 @@ export default class CheckboxPresenter extends Component {
      */
     disabled: PropTypes.bool,
     /**
-     * HTML ID attribute
-     */
-    id: PropTypes.string,
-    /**
      * Sets indeterminate state for checkbox
      */
     indeterminate: PropTypes.bool,
@@ -67,6 +63,8 @@ export default class CheckboxPresenter extends Component {
 
   setIndeterminate = input => {
     if (input) {
+      // Workaround for https://github.com/facebook/react/issues/1798
+      // eslint-disable-next-line no-param-reassign
       input.indeterminate = this.props.indeterminate;
     }
   };
@@ -82,7 +80,8 @@ export default class CheckboxPresenter extends Component {
       onClick,
       onChange,
       onFocus,
-      required
+      required,
+      value
     } = this.props;
 
     const labelClasses = cx(["hig__checkbox__label"]);
@@ -93,15 +92,6 @@ export default class CheckboxPresenter extends Component {
       {
         "hig__checkbox--required": required,
         "hig__checkbox--checked": checked
-      }
-    ]);
-
-    const iconClasses = cx([
-      "hig__checkbox__wrapper",
-      {
-        checked: checked,
-        indeterminate: indeterminate,
-        disabled: disabled
       }
     ]);
 
@@ -121,6 +111,7 @@ export default class CheckboxPresenter extends Component {
           onFocus={onFocus}
           ref={this.setIndeterminate}
           type="checkbox"
+          value={value}
         />
         <CheckPresenter
           checked={checked}
