@@ -48,8 +48,8 @@ function TypeExample(props) {
 }
 
 TypeExample.propTypes = {
-  theme: PropTypes.shape,
-  role: PropTypes.sring,
+  theme: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+  role: PropTypes.string,
   schema: PropTypes.shape({
     type: PropTypes.string
   })
@@ -66,7 +66,7 @@ function Example(props) {
 }
 
 Example.propTypes = {
-  themeConfig: PropTypes.obj,
+  themeConfig: PropTypes.object, // eslint-disable-line react/forbid-prop-types
   role: PropTypes.string
 };
 

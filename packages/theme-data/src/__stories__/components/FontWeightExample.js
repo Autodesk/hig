@@ -13,5 +13,5 @@ export default function FontWeightExample({ value }) {
 }
 
 FontWeightExample.propTypes = {
-  value: PropTypes.string
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 };

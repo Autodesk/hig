@@ -7,11 +7,12 @@ import InputPresenter from "./InputPresenter";
 class Input extends Component {
   static propTypes = {
     value: PropTypes.string,
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
+    onChange: PropTypes.func
   };
 
   render() {
-    const { value, disabled } = this.props;
+    const { value, disabled, onChange } = this.props;
 
     return (
       <InputBehavior>
@@ -30,6 +31,7 @@ class Input extends Component {
             onBlur={onBlur}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
+            onChange={onChange}
             hasHover={hasHover}
             hasFocus={hasFocus}
           />

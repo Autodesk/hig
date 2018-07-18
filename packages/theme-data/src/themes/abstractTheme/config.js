@@ -3,9 +3,12 @@ import extendTheme from "../../utils/extendTheme";
 import BASICS from "../../basics";
 import SYSTEM from "./system";
 import checkbox from "./components/checkbox";
+import formField from "./components/formField";
 import input from "./components/input";
+import textarea from "./components/textarea";
 import label from "./components/label";
 import menu from "./components/menu";
+import icon from "./components/icon";
 
 const abstractThemeConfig = extendTheme(
   {},
@@ -23,9 +26,12 @@ const abstractThemeConfig = extendTheme(
     mapKeys(SYSTEM.COLOR_SCHEME, key => `COLOR_SCHEME.${key}`),
     mapKeys(SYSTEM.DENSITY, key => `DENSITY.${key}`),
     checkbox,
+    formField,
     input,
+    textarea,
     label,
-    menu
+    menu,
+    icon
   )
 );
 

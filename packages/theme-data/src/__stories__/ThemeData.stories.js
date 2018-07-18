@@ -3,6 +3,9 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
 import RichText from "@hig/rich-text";
+import KnobbedThemeProvider, {
+  THEMES
+} from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
 
 import overallReadme from "../../README.md";
 import stories from "./stories";
@@ -26,24 +29,32 @@ stories.forEach(({ description, schema, readme }) => {
   storybook.add(
     description,
     withInfo({
-      propTablesExclude: [Role, Header],
+      propTablesExclude: [Role, Header, KnobbedThemeProvider],
       source: false,
       text: readme ? (
         <RichText dangerouslySetInnerHTML={{ __html: readme }} />
       ) : null
     })(() => (
-      <div>
-        <Header title={description} />
-        {Object.keys(schema).map(role => (
-          <Role
-            role={role}
-            schema={schema[role]}
-            theme={theme}
-            themeConfig={themeConfig}
-            basics={basics}
-          />
-        ))}
-      </div>
+      <KnobbedThemeProvider
+        supportedThemes={[
+          THEMES.LIGHT_GRAY,
+          THEMES.WEB_LIGHT,
+          THEMES.DARK_BLUE
+        ]}
+      >
+        <div>
+          <Header title={description} />
+          {Object.keys(schema).map(role => (
+            <Role
+              role={role}
+              schema={schema[role]}
+              theme={theme}
+              themeConfig={themeConfig}
+              basics={basics}
+            />
+          ))}
+        </div>
+      </KnobbedThemeProvider>
     ))
   );
 });

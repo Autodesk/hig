@@ -1,4 +1,5 @@
-import { text, select, boolean } from "@storybook/addon-knobs/react";
+import { action } from "@storybook/addon-actions";
+import { text, boolean } from "@storybook/addon-knobs/react";
 
 const knobGroupIds = {
   basic: "Basic"
@@ -7,13 +8,7 @@ const knobGroupIds = {
 const knobLabels = {
   value: "Value",
   disabled: "Disabled",
-  theme: "Theme"
-};
-
-const themeOptions = {
-  "hig-light-gray": "Light Gray",
-  "hig-dark-blue": "Dark Blue",
-  "hig-light": "Web Light"
+  onChange: "onChange"
 };
 
 export default function getKnobs(props) {
@@ -21,13 +16,8 @@ export default function getKnobs(props) {
 
   return {
     ...otherProps,
+    onChange: action(knobLabels.onChange),
     value: text(knobLabels.value, value, knobGroupIds.basic),
-    disabled: boolean(knobLabels.disabled, disabled, knobGroupIds.basic),
-    theme: select(
-      knobLabels.theme,
-      themeOptions,
-      Object.keys(themeOptions)[0],
-      knobGroupIds.basic
-    )
+    disabled: boolean(knobLabels.disabled, disabled, knobGroupIds.basic)
   };
 }
