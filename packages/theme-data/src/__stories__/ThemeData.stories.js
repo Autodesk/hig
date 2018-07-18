@@ -29,7 +29,7 @@ stories.forEach(({ description, schema, readme }) => {
   storybook.add(
     description,
     withInfo({
-      propTablesExclude: [Role, Header],
+      propTablesExclude: [Role, Header, KnobbedThemeProvider],
       source: false,
       text: readme ? (
         <RichText dangerouslySetInnerHTML={{ __html: readme }} />
