@@ -2,7 +2,8 @@ export default [
   {
     description: "default",
     getProps: () => ({
-      value: "jon.snow@winterfell.gov"
+      value: "jon.snow@winterfell.gov",
+      disabled: false
     })
   },
   {

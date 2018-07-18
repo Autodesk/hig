@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { H3 } from "@hig/typography";
 import { ThemeContext } from "@hig/themes";
 import Example from "./Example";
 import InlineCode from "./InlineCode";
@@ -20,9 +19,7 @@ function Role(props) {
           }}
         >
           <div style={{ flex: "1 1 0" }}>
-            <H3>
-              <InlineCode>{props.role}</InlineCode>
-            </H3>
+            <InlineCode>{props.role}</InlineCode>
           </div>
           <div style={{ flex: "1 1 0" }}>{<Example {...props} />}</div>
         </div>
