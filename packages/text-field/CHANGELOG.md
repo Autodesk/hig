@@ -1,3 +1,12 @@
+<a name="@hig/text-field-v0.4.0"></a>
+# [@hig/text-field-v0.4.0](https://github.com/Autodesk/hig/compare/@hig/text-field@0.3.2...@hig/text-field@0.4.0) (2018-07-18)
+
+
+### Features
+
+* **behavior:** add focused prop to `TextFieldPresenter` ([a66a1b9](https://github.com/Autodesk/hig/commit/a66a1b9))
+* **presentation:** add support for the "button" type ([3de117c](https://github.com/Autodesk/hig/commit/3de117c))
+
 <a name="@hig/text-field-v0.3.2"></a>
 # [@hig/text-field-v0.3.2](https://github.com/Autodesk/hig/compare/@hig/text-field@0.3.1...@hig/text-field@0.3.2) (2018-07-06)
 

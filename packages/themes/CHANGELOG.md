@@ -1,3 +1,12 @@
+<a name="@hig/themes-v0.2.0"></a>
+# [@hig/themes-v0.2.0](https://github.com/Autodesk/hig/compare/@hig/themes@0.1.3...@hig/themes@0.2.0) (2018-07-18)
+
+
+### Features
+
+* **themability:** add exploratory themable components ([7e3d70b](https://github.com/Autodesk/hig/commit/7e3d70b))
+* **themability:** ThemeContext provides theme data ([4778ea5](https://github.com/Autodesk/hig/commit/4778ea5))
+
 <a name="@hig/themes-v0.1.3"></a>
 # [@hig/themes-v0.1.3](https://github.com/Autodesk/hig/compare/@hig/themes@0.1.2...@hig/themes@0.1.3) (2018-07-06)
 
