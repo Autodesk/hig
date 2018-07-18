@@ -12,6 +12,7 @@ setOptions({
   url: "https://hig.autodesk.com",
   hierarchySeparator: /\/|\./,
   hierarchyRootSeparator: /\|/,
+  addonPanelInRight: true
 });
 
 addDecorator(withKnobs);
