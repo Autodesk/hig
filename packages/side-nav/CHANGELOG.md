@@ -1,3 +1,11 @@
+<a name="@hig/side-nav-v0.1.4"></a>
+# [@hig/side-nav-v0.1.4](https://github.com/Autodesk/hig/compare/@hig/side-nav@0.1.3...@hig/side-nav@0.1.4) (2018-07-18)
+
+
+### Bug Fixes
+
+* **presentation:** add a pointer cursor to SideNav.Module ([#1024](https://github.com/Autodesk/hig/issues/1024)) ([30e5f2a](https://github.com/Autodesk/hig/commit/30e5f2a))
+
 <a name="@hig/side-nav-v0.1.3"></a>
 # [@hig/side-nav-v0.1.3](https://github.com/Autodesk/hig/compare/@hig/side-nav@0.1.2...@hig/side-nav@0.1.3) (2018-07-06)
 
