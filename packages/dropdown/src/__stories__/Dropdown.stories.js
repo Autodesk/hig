@@ -5,7 +5,7 @@ import infoOptions from "./infoOptions";
 import renderStory from "./renderStory";
 import stories from "./stories";
 
-const storybook = storiesOf("Dropdown", module);
+const storybook = storiesOf("Forms|Dropdown", module);
 
 stories.forEach(({ description, getProps }) => {
   storybook.add(

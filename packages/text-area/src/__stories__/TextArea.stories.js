@@ -5,7 +5,7 @@ import infoOptions from "./infoOptions";
 import renderStory from "./renderStory";
 import stories from "./stories";
 
-const storybook = storiesOf("TextArea", module);
+const storybook = storiesOf("Forms|TextArea", module);
 
 stories.forEach(({ description, getProps }) => {
   storybook.add(

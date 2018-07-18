@@ -39,12 +39,12 @@ const inputOptions = {
       output: cssOutputFile,
       plugins: [postcssFunctions, postcssImport]
     }),
+    json(),
     babel({
       babelrc: false,
       ...createBuildPreset()
     }),
-    commonjs(),
-    json()
+    commonjs()
   ]
 };
 

@@ -7,7 +7,7 @@ import { Docked, BelowTopNav } from "../index";
 import ExampleSideNav from "./ExampleSideNav";
 import infoOptions from "./infoOptions";
 
-storiesOf("SideNav/containers", module)
+storiesOf("GlobalNav|SideNav/containers", module)
   .add(
     "Docked",
     withInfo({

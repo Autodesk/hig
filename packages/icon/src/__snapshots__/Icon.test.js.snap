@@ -27,9 +27,7 @@ exports[`Icon renders correctly when using the \`svg\` prop 1`] = `
   className="hig__icon hig__icon--16-size"
   dangerouslySetInnerHTML={
     Object {
-      "__html": "<svg width=\\"16px\\" height=\\"16px\\" viewBox=\\"0 0 16 16\\">
-          <rect x=\\"2\\" y=\\"2\\" width=\\"12\\" height=\\"12\\" fill=\\"none\\" stroke=\\"red\\" stroke-width=\\"2\\"></rect>
-        </svg>",
+      "__html": "<svg width=\\"16px\\" height=\\"16px\\" viewBox=\\"0 0 16 16\\"></svg>",
     }
   }
 />

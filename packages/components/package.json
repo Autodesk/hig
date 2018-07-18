@@ -53,6 +53,7 @@
   "devDependencies": {
     "@hig/babel-preset": "^0.1.0",
     "@hig/eslint-config": "^0.1.0",
+    "@hig/jest-preset": "^0.1.0",
     "@hig/scripts": "^0.1.2",
     "@hig/semantic-release-config": "^0.1.0",
     "clean-css": "^4.1.11",
@@ -63,10 +64,14 @@
   "scripts": {
     "build": "node scripts/build.js",
     "lint": "hig-scripts-lint",
+    "test": "hig-scripts-test",
     "release": "hig-scripts-release"
   },
   "eslintConfig": {
     "extends": "@hig"
+  },
+  "jest": {
+    "preset": "@hig/jest-preset"
   },
   "release": {
     "extends": "@hig/semantic-release-config"

@@ -7,7 +7,7 @@ import SideNav from "../index";
 import ExampleSideNav from "./ExampleSideNav";
 import infoOptions from "./infoOptions";
 
-storiesOf("SideNav", module).add(
+storiesOf("GlobalNav|SideNav", module).add(
   "with icons",
   withInfo({
     ...infoOptions,

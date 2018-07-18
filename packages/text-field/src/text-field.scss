@@ -18,7 +18,7 @@
 .hig__text-field-v1 {
   position: relative;
   display: flex;
-  font-family: 'ArtifaktElement', sans-serif;
+  font-family: "ArtifaktElement", sans-serif;
   font-weight: 500;
   min-width: 300px;
   max-width: 450px;
@@ -50,10 +50,21 @@
   height: $label-height;
 }
 
+.hig__text-field-v1__input {
+  .hig__text-field-v1--clear-button-visible &,
+  .hig__text-field-v1--password-button-visible & {
+    padding-right: 36px;
+  }
+
+  .hig__text-field-v1--button & {
+    text-align: left;
+  }
+}
+
 .hig__text-field-v1__label {
   @include typography-medium;
   top: $label-height;
-  color: transparentize($typography-base-color, .5);
+  color: transparentize($typography-base-color, 0.5);
   position: absolute;
   transition-property: top, font-size, line-height;
   transition-duration: 0.1s, 0.1s, 0.1s;
@@ -74,16 +85,9 @@
 
 .hig__text-field-v1__label--required {
   &:after {
-    content: '*';
+    content: "*";
     display: inline-block;
     margin-left: 5px;
-  }
-}
-
-.hig__text-field-v1--clear-button-visible,
-.hig__text-field-v1--password-button-visible {
-  .hig__text-field-v1__input {
-    padding-right: 36px;
   }
 }
 
@@ -98,7 +102,7 @@
 }
 
 .hig__text-field-v1__required-notice::before {
-  content: '*';
+  content: "*";
   display: inline-block;
   margin-right: 5px;
 }

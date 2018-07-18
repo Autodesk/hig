@@ -1,6 +1,6 @@
 {
   "name": "@hig/dropdown",
-  "version": "0.1.0-alpha.3",
+  "version": "0.1.0",
   "description": "HIG Dropdown",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -19,9 +19,10 @@
   ],
   "dependencies": {
     "@hig/icon": "^0.1.2",
+    "@hig/multi-downshift": "^0.1.0-alpha",
     "@hig/text-field": "^0.3.1",
     "classnames": "^2.2.5",
-    "downshift": "^1.31.15",
+    "downshift": "^2.0.12",
     "prop-types": "^15.6.1",
     "react-lifecycles-compat": "^3.0.2"
   },
@@ -31,6 +32,7 @@
   "devDependencies": {
     "@hig/babel-preset": "^0.1.0",
     "@hig/eslint-config": "^0.1.0",
+    "@hig/jest-preset": "^0.1.0",
     "@hig/scripts": "^0.1.2",
     "@hig/semantic-release-config": "^0.1.0",
     "@hig/styles": "^0.1.1"
@@ -38,10 +40,14 @@
   "scripts": {
     "build": "hig-scripts-build",
     "lint": "hig-scripts-lint",
+    "test": "hig-scripts-test",
     "release": "hig-scripts-release"
   },
   "eslintConfig": {
     "extends": "@hig"
+  },
+  "jest": {
+    "preset": "@hig/jest-preset"
   },
   "release": {
     "extends": "@hig/semantic-release-config"
