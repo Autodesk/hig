@@ -85,19 +85,19 @@ export default class CheckboxPresenter extends Component {
       required
     } = this.props;
 
-    const labelClasses = cx(["hig__input-button__label"]);
+    const labelClasses = cx(["hig__checkbox__label"]);
 
     const wrapperClasses = cx([
-      "hig__input-button",
-      "hig__input-button--checkbox",
+      "hig__checkbox",
+      "hig__checkbox--checkbox",
       {
-        "hig__input-button--required": required,
-        "hig__input-button--checked": checked
+        "hig__checkbox--required": required,
+        "hig__checkbox--checked": checked
       }
     ]);
 
     const iconClasses = cx([
-      "hig__input-button__input-wrapper",
+      "hig__checkbox__wrapper",
       {
         checked: checked,
         indeterminate: indeterminate,
@@ -112,7 +112,7 @@ export default class CheckboxPresenter extends Component {
         <input
           id={ID}
           checked={checked}
-          className="hig__input-button__inputV1"
+          className="hig__checkbox__input"
           disabled={disabled}
           name={name}
           onBlur={onBlur}
