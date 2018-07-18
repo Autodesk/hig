@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
-import icons from "@hig/icons";
+import CheckPresenter from "../CheckPresenter/CheckPresenter";
 
 import "./CheckboxPresenter.scss";
 
@@ -122,22 +122,11 @@ export default class CheckboxPresenter extends Component {
           ref={this.setIndeterminate}
           type="checkbox"
         />
-        <span className={iconClasses}>
-          <span
-            className="check"
-            dangerouslySetInnerHTML={{ __html: icons["check-white-24"] }}
-          />
-          <span
-            className="check--indeterminate"
-            dangerouslySetInnerHTML={{
-              __html: icons["checkmark-indeterminate-16"]
-            }}
-          />
-          <span
-            className="check--disabled"
-            dangerouslySetInnerHTML={{ __html: icons["check-disabled-16"] }}
-          />
-        </span>
+        <CheckPresenter
+          checked={checked}
+          disabled={disabled}
+          indeterminate={indeterminate}
+        />
         <label htmlFor={ID} className={labelClasses}>
           {label}
         </label>

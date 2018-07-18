@@ -1,0 +1,70 @@
+@import '~@hig/styles/mixins/colors';
+
+.hig__input-button__input-wrapper__check--indeterminate,
+.hig__input-button__input-wrapper__check--disabled,
+.hig__input-button__input-wrapper__check {
+  display: none;
+}
+
+.hig__input-button__input-wrapper--checked {
+  .hig__input-button__input-wrapper__check {
+    display: block;
+  }
+}
+
+.hig__input-button__input-wrapper--checked.hig__input-button__input-wrapper--disabled {
+  .hig__input-button__input-wrapper__check {
+    display: none;
+  }
+
+  .hig__input-button__input-wrapper__check--disabled {
+    display: block;
+  }
+}
+
+.hig__input-button__input-wrapper--indeterminate,
+.hig__input-button__input-wrapper--indeterminate.hig__input-button__input-wrapper--checked {
+  .hig__input-button__input-wrapper__check--indeterminate {
+    display: block;
+    background-color: color(hig-slate-40);
+  }
+
+  .hig__input-button__input-wrapper__check {
+    display: none;
+  }
+
+}
+
+.hig__input-button__inputV1:focus + .hig__input-button__input-wrapper {
+  .hig__input-button__input-wrapper__check--indeterminate {
+    background-color: color(hig-blue-60);
+  }
+}
+
+
+// workaround for image sizes
+
+.hig__input-button__input-wrapper--checked .hig__input-button__input-wrapper__check {
+  svg {
+    top: -2px;
+    position: relative;
+  }
+}
+
+.hig__input-button__input-wrapper--checked .hig__input-button__input-wrapper__check--disabled {
+  svg {
+    top: -3px;
+    position: relative;
+  }
+}
+
+.hig__input-button__input-wrapper__check--indeterminate {
+  width: 16px;
+  height: 16px;
+  svg {
+    top: -6px;
+    position: relative;
+  }
+}
+
+// end workaround
