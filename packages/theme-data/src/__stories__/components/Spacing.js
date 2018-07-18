@@ -11,7 +11,8 @@ export default function Swatch({ length }) {
           style={{
             height: length,
             width: length,
-            backgroundColor: themeData["COLOR_SCHEME.ACCENT_COLOR_500"]
+            backgroundColor: themeData["COLOR_SCHEME.ACCENT_COLOR_500"],
+            marginBottom: themeData["DENSITY.SPACINGS.S"]
           }}
         />
       )}

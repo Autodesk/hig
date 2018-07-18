@@ -6,13 +6,22 @@ import RichText from "@hig/rich-text";
 import KnobbedThemeProvider, {
   THEMES
 } from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
+import { ThemeContext } from "@hig/themes";
 
 import overallReadme from "../../README.md";
 import stories from "./stories";
 import Role from "./components/Role";
 import Header from "./components/Header";
-import theme, { config as themeConfig } from "../themes/lightGrayTheme";
+import { config as lightGrayThemeConfig } from "../themes/lightGrayTheme";
+import { config as darkBlueThemeConfig } from "../themes/darkBlueTheme";
+import { config as webLightThemeConfig } from "../themes/webLightTheme";
 import basics from "../basics";
+
+const themeConfigs = {
+  "hig-light": webLightThemeConfig,
+  "hig-light-gray": lightGrayThemeConfig,
+  "hig-dark-blue": darkBlueThemeConfig
+};
 
 const storybook = storiesOf("Theming|Theme data", module);
 
@@ -42,18 +51,22 @@ stories.forEach(({ description, schema, readme }) => {
           THEMES.DARK_BLUE
         ]}
       >
-        <div>
-          <Header title={description} />
-          {Object.keys(schema).map(role => (
-            <Role
-              role={role}
-              schema={schema[role]}
-              theme={theme}
-              themeConfig={themeConfig}
-              basics={basics}
-            />
-          ))}
-        </div>
+        <ThemeContext.Consumer>
+          {({ themeData, themeId }) => (
+            <div>
+              <Header title={description} />
+              {Object.keys(schema).map(role => (
+                <Role
+                  role={role}
+                  schema={schema[role]}
+                  theme={themeData}
+                  themeConfig={themeConfigs[themeId]}
+                  basics={basics}
+                />
+              ))}
+            </div>
+          )}
+        </ThemeContext.Consumer>
       </KnobbedThemeProvider>
     ))
   );
