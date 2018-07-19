@@ -1,3 +1,11 @@
+<a name="@hig/tabs-v0.1.1"></a>
+# [@hig/tabs-v0.1.1](https://github.com/Autodesk/hig/compare/@hig/tabs@0.1.0...@hig/tabs@0.1.1) (2018-07-19)
+
+
+### Bug Fixes
+
+* **behavior:** remove invalid prop from Fragment ([8366190](https://github.com/Autodesk/hig/commit/8366190))
+
 <a name="@hig/tabs-v0.1.0"></a>
 # [@hig/tabs-v0.1.0](https://github.com/Autodesk/hig/compare/@hig/tabs@0.0.0...@hig/tabs@0.1.0) (2018-07-06)
 
