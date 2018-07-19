@@ -171,7 +171,7 @@ class Tabs extends Component {
 
   render() {
     return (
-      <Fragment data-hig="fragment">
+      <Fragment>
         {this.renderTabs()}
         {this.renderContent()}
       </Fragment>

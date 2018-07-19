@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tabs/Tabs renders tabs 1`] = `
-<div
-  data-hig="fragment"
->
+<div>
   <ul
     className="hig__tabs hig__tabs--align-right"
   >
