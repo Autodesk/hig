@@ -1,3 +1,11 @@
+<a name="@hig/components-v0.3.1"></a>
+# [@hig/components-v0.3.1](https://github.com/Autodesk/hig/compare/@hig/components@0.3.0...@hig/components@0.3.1) (2018-07-19)
+
+
+### Bug Fixes
+
+* **package:** upgrade [@hig](https://github.com/hig)/themes to fix failed imports ([3553acf](https://github.com/Autodesk/hig/commit/3553acf))
+
 <a name="@hig/components-v0.3.0"></a>
 # [@hig/components-v0.3.0](https://github.com/Autodesk/hig/compare/@hig/components@0.2.2...@hig/components@0.3.0) (2018-07-19)
 
