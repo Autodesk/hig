@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RadioButton integration renders correctly 1`] = `
+<div
+  className="hig__radio-button"
+>
+  <input
+    checked={false}
+    className="hig__radio-button__input"
+    disabled={false}
+    id="radio-button-38904"
+    name="radiobutton"
+    onBlur={undefined}
+    onChange={[Function]}
+    onClick={undefined}
+    onFocus={undefined}
+    type="radio"
+    value="value"
+  />
+  <span
+    className="hig__radio-button__wrapper"
+  >
+    <span
+      className="hig__radio-button__wrapper__button"
+    />
+    <span
+      className="hig__radio-button__wrapper__button--indeterminate"
+    />
+    <span
+      className="hig__radio-button__wrapper__button--disabled"
+    />
+  </span>
+  <label
+    className="hig__radio-button__label"
+    htmlFor="radio-button-38904"
+  >
+    HIG RadioButton
+  </label>
+</div>
+`;
