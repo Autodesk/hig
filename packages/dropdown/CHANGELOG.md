@@ -1,3 +1,11 @@
+<a name="@hig/dropdown-v0.1.1"></a>
+# [@hig/dropdown-v0.1.1](https://github.com/Autodesk/hig/compare/@hig/dropdown@0.1.0...@hig/dropdown@0.1.1) (2018-07-19)
+
+
+### Bug Fixes
+
+* upgrade dependencies to recieve fixes ([b96e706](https://github.com/Autodesk/hig/commit/b96e706))
+
 <a name="@hig/dropdown-v0.1.0"></a>
 # [@hig/dropdown-v0.1.0](https://github.com/Autodesk/hig/compare/@hig/dropdown@0.0.0...@hig/dropdown@0.1.0) (2018-07-18)
 
