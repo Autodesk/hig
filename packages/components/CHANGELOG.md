@@ -1,3 +1,11 @@
+<a name="@hig/components-v0.3.0"></a>
+# [@hig/components-v0.3.0](https://github.com/Autodesk/hig/compare/@hig/components@0.2.2...@hig/components@0.3.0) (2018-07-19)
+
+
+### Features
+
+* **package:** upgrade components ([00a63ec](https://github.com/Autodesk/hig/commit/00a63ec))
+
 <a name="@hig/components-v0.2.2"></a>
 # [@hig/components-v0.2.2](https://github.com/Autodesk/hig/compare/@hig/components@0.2.1...@hig/components@0.2.2) (2018-07-06)
 
