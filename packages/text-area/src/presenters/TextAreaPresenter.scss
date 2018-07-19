@@ -1,5 +1,4 @@
-@import '~@hig/styles/build/fonts.scss';
-@import '~@hig/styles/mixins/fonts.scss';
+@import '~@hig/styles/build/fonts.css';
 @import '~@hig/styles/mixins/base.scss';
 @import '~@hig/styles/mixins/placeholder.scss';
 @import '~@hig/styles/mixins/typography.scss';
@@ -13,6 +12,16 @@
   *::selection {
     background-color: color(hig-turquoise-30);
   }
+}
+
+.hig__text-area--required {
+  .hig__text-area__required-notice {
+    display: block;
+  }
+}
+
+.hig__text-area__instructions.hig__text-area__instructions--visible {
+  display: block;
 }
 
 .hig__text-area__label {
@@ -112,6 +121,7 @@
 
 .hig__text-area__instructions,
 .hig__text-area__required-notice {
+  display: none;
   margin-top: 10px;
   font-size: 12px;
   line-height: 14px;

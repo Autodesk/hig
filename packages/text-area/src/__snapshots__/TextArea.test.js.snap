@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextArea integration renders correctly 1`] = `
+<div
+  className="hig__text-area hig__text-area--required"
+>
+  <textarea
+    className="hig__text-area__field hig__text-area__field--no-value"
+    defaultValue={undefined}
+    disabled={undefined}
+    id="text-area-45113"
+    name={undefined}
+    onBlur={undefined}
+    onChange={[Function]}
+    onFocus={undefined}
+    onInput={undefined}
+    placeholder="Enter your comments here."
+    required="This field is required."
+    type={undefined}
+  />
+  <label
+    className="hig__text-area__label hig__text-area__label--visible"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "HIG Text Area",
+      }
+    }
+    htmlFor="text-area-45113"
+  />
+  <p
+    className=""
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+  />
+  <p
+    className="hig__text-area__required-notice"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "This field is required.",
+      }
+    }
+  />
+</div>
+`;

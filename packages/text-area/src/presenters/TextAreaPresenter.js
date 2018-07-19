@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import cx from "classnames";
 // import FormInput from "./FormInput";
 
-//import "./TextAreaPresenter.scss";
+import "./TextAreaPresenter.scss";
 
 export default class TextAreaPresenter extends Component {
   static propTypes = {
@@ -64,10 +64,15 @@ export default class TextAreaPresenter extends Component {
   static defaultProps = {
     label: "Comments",
     placeholder: "Enter your comments here.",
-    required: "This field is required.",
-    instructions: "Pretend that instructions are here by default"
+    required: "This field is required."
   };
 
+  hasValue() {
+    if (this.props.defaultValue || this.props.value) {
+      return true;
+    }
+    return false;
+  }
 
   render() {
     const {
@@ -86,7 +91,7 @@ export default class TextAreaPresenter extends Component {
       value
     } = this.props;
 
-
+    const hasValue = this.hasValue();
 
     const wrapperClasses = cx([
       "hig__text-area",
@@ -99,30 +104,35 @@ export default class TextAreaPresenter extends Component {
     const textAreaClasses = cx([
       "hig__text-area__field",
       {
-        "hig__text-area__field--no-value": !defaultValue || !value
+        "hig__text-area__field--no-value": !hasValue,
+        "hig__text-area__field--has-value": hasValue
       }
-    ])
+    ]);
 
     const labelClasses = cx([
       "hig__text-area__label",
       {
-        "hig__text-area__label--visible": label,
+        "hig__text-area__label--visible": label
       }
-    ])
+    ]);
 
     const instructionClasses = cx([
+      "hig__text-area__instructions",
       {
-        "hig__text-area__instructions": instructions
+        "hig__text-area__instructions--visible": instructions
       }
-    ])
+    ]);
 
-    const requiredClasses = cx([
-      {
-        "hig__text-area__required-notice": required
-      }
-    ])
+    const requiredClasses = cx(["hig__text-area__required-notice"]);
 
     const ID = `text-area-${Math.floor(Math.random() * 100000, 5)}`;
+
+    function createRequiredMarkup() {
+      // if (required) {
+      return { __html: required };
+      // }
+      // return false;
+    }
 
     return (
       <div className={wrapperClasses}>
@@ -144,17 +154,16 @@ export default class TextAreaPresenter extends Component {
         <label
           htmlFor={ID}
           className={labelClasses}
-          dangerouslySetInnerHTML={{__html: label}}
+          dangerouslySetInnerHTML={{ __html: label }}
         />
         <p
           className={instructionClasses}
-          dangerouslySetInnerHTML={{__html: instructions}}
+          dangerouslySetInnerHTML={{ __html: instructions }}
         />
         <p
           className={requiredClasses}
-          dangerouslySetInnerHTML={{__html: required}}
+          dangerouslySetInnerHTML={createRequiredMarkup()}
         />
-
       </div>
     );
   }

@@ -58,10 +58,6 @@ export default class TextArea extends Component {
      */
     placeholder: PropTypes.string,
     /**
-     * Marks input as read-only
-     */
-    readOnly: PropTypes.bool,
-    /**
      * Text describing why the field is required
      */
     required: PropTypes.string,
@@ -75,9 +71,34 @@ export default class TextArea extends Component {
     value: PropTypes.string
   };
 
-  // state = {}; ?????? unclear on what attributes are handled by props vs state.
+  state = {
+    value: this.props.defaultValue
+  };
+
+  handleChange = event => {
+    if (this.props.onChange) {
+      this.props.onChange(event);
+    }
+
+    this.setState({
+      value: event.target.value
+    });
+  };
+
+  renderValue() {
+    if (this.props.value !== undefined) {
+      return this.props.value;
+    }
+    return this.state.value;
+  }
 
   render() {
-    return (<TextAreaPresenter/>);
+    return (
+      <TextAreaPresenter
+        {...this.props}
+        value={this.renderValue()}
+        onChange={this.handleChange}
+      />
+    );
   }
 }
