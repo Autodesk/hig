@@ -64,7 +64,8 @@ export default class TextAreaPresenter extends Component {
   static defaultProps = {
     label: "Comments",
     placeholder: "Enter your comments here.",
-    required: "This field is required."
+    required: "This field is required.",
+    instructions: "Pretend that instructions are here by default"
   };
 
 
@@ -85,6 +86,8 @@ export default class TextAreaPresenter extends Component {
       value
     } = this.props;
 
+
+
     const wrapperClasses = cx([
       "hig__text-area",
       {
@@ -92,6 +95,13 @@ export default class TextAreaPresenter extends Component {
         "hig__text-area--disabled": disabled
       }
     ]);
+
+    const textAreaClasses = cx([
+      "hig__text-area__field",
+      {
+        "hig__text-area__field--no-value": !defaultValue || !value
+      }
+    ])
 
     const labelClasses = cx([
       "hig__text-area__label",
@@ -117,11 +127,10 @@ export default class TextAreaPresenter extends Component {
     return (
       <div className={wrapperClasses}>
         <textarea
+          className={textAreaClasses}
           id={ID}
           defaultValue={defaultValue}
           disabled={disabled}
-          instructions={instructions}
-          label={label}
           name={name}
           onBlur={onBlur}
           onChange={onChange}
@@ -133,13 +142,18 @@ export default class TextAreaPresenter extends Component {
           value={value}
         />
         <label
-          for={ID}
+          htmlFor={ID}
           className={labelClasses}
+          dangerouslySetInnerHTML={{__html: label}}
         />
         <p
           className={instructionClasses}
+          dangerouslySetInnerHTML={{__html: instructions}}
         />
-        <p className={requiredClasses} />
+        <p
+          className={requiredClasses}
+          dangerouslySetInnerHTML={{__html: required}}
+        />
 
       </div>
     );
