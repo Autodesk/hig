@@ -1,3 +1,11 @@
+<a name="@hig/themes-v0.2.1"></a>
+# [@hig/themes-v0.2.1](https://github.com/Autodesk/hig/compare/@hig/themes@0.2.0...@hig/themes@0.2.1) (2018-07-19)
+
+
+### Bug Fixes
+
+* **package:** upgrade [@hig](https://github.com/hig)/theme-data-poc to fix failed imports ([0afb8f8](https://github.com/Autodesk/hig/commit/0afb8f8))
+
 <a name="@hig/themes-v0.2.0"></a>
 # [@hig/themes-v0.2.0](https://github.com/Autodesk/hig/compare/@hig/themes@0.1.3...@hig/themes@0.2.0) (2018-07-18)
 
