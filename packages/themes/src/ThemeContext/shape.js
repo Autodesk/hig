@@ -8,5 +8,7 @@ export default {
   /** A theme's human-readable name */
   themeName: PropTypes.string,
   /** Data describing presentation of the theme */
-  themeData: PropTypes.object
+  themeData: PropTypes.object,
+  /** Data describing density level of the theme */
+  density: PropTypes.string
 };

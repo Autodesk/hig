@@ -57,6 +57,7 @@ stories.forEach(({ description, schema, readme }) => {
               <Header title={description} />
               {Object.keys(schema).map(role => (
                 <Role
+                  key={role}
                   role={role}
                   schema={schema[role]}
                   theme={themeData}
