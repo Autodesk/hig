@@ -16,8 +16,6 @@
   "files": [
     "build/*"
   ],
-  "dependencies": {
-  },
   "devDependencies": {
     "@hig/babel-preset": "^0.1.0",
     "@hig/eslint-config": "^0.1.0",
