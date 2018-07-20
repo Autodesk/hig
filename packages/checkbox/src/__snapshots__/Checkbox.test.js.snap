@@ -8,13 +8,14 @@ exports[`Checkbox integration renders correctly 1`] = `
     checked={true}
     className="hig__checkbox__input"
     disabled={false}
-    id="checkbox-15600"
+    id="checkbox-1"
     name="checkbox"
     onBlur={undefined}
     onChange={[Function]}
     onClick={undefined}
     onFocus={undefined}
     type="checkbox"
+    value="value"
   />
   <span
     className="hig__checkbox__wrapper hig__checkbox__wrapper--checked"
@@ -46,7 +47,7 @@ exports[`Checkbox integration renders correctly 1`] = `
   </span>
   <label
     className="hig__checkbox__label"
-    htmlFor="checkbox-15600"
+    htmlFor="checkbox-1"
   >
     HIG Checkbox
   </label>

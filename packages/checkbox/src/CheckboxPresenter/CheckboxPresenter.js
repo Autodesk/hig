@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
+import { generateId } from "@hig/utils";
 import CheckPresenter from "../CheckPresenter/CheckPresenter";
 
 import "./CheckboxPresenter.scss";
@@ -95,12 +96,12 @@ export default class CheckboxPresenter extends Component {
       }
     ]);
 
-    const ID = `checkbox-${Math.floor(Math.random() * 100000, 5)}`;
+    const id = generateId("checkbox");
 
     return (
       <div className={wrapperClasses}>
         <input
-          id={ID}
+          id={id}
           checked={checked}
           className="hig__checkbox__input"
           disabled={disabled}
@@ -118,7 +119,7 @@ export default class CheckboxPresenter extends Component {
           disabled={disabled}
           indeterminate={indeterminate}
         />
-        <label htmlFor={ID} className={labelClasses}>
+        <label htmlFor={id} className={labelClasses}>
           {label}
         </label>
       </div>
