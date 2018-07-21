@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import Text from "./Text";
 import InlineCode from "./InlineCode";
-import { text } from "../../../../../node_modules/@storybook/addon-knobs/dist/react";
 
 export default function Reference({ children }) {
   return (
