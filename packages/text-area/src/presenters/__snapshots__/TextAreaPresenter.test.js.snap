@@ -8,7 +8,7 @@ exports[`TextArea/TextAreaPresenter renders with all props 1`] = `
     className="hig__text-area__field hig__text-area__field--has-value"
     defaultValue={undefined}
     disabled={false}
-    id="text-area-4607"
+    id="text-area-1"
     name="text area"
     onBlur={undefined}
     onChange={undefined}
@@ -26,7 +26,7 @@ exports[`TextArea/TextAreaPresenter renders with all props 1`] = `
         "__html": "this is a text area",
       }
     }
-    htmlFor="text-area-4607"
+    htmlFor="text-area-1"
   />
   <p
     className="hig__text-area__instructions hig__text-area__instructions--visible"
@@ -41,53 +41,6 @@ exports[`TextArea/TextAreaPresenter renders with all props 1`] = `
     dangerouslySetInnerHTML={
       Object {
         "__html": "this information is required",
-      }
-    }
-  />
-</div>
-`;
-
-exports[`TextArea/TextAreaPresenter renders without props 1`] = `
-<div
-  className="hig__text-area hig__text-area--required"
->
-  <textarea
-    className="hig__text-area__field hig__text-area__field--no-value"
-    defaultValue={undefined}
-    disabled={undefined}
-    id="text-area-23570"
-    name={undefined}
-    onBlur={undefined}
-    onChange={undefined}
-    onFocus={undefined}
-    onInput={undefined}
-    placeholder="Enter your comments here."
-    required="This field is required."
-    type={undefined}
-    value={undefined}
-  />
-  <label
-    className="hig__text-area__label hig__text-area__label--visible"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "Comments",
-      }
-    }
-    htmlFor="text-area-23570"
-  />
-  <p
-    className="hig__text-area__instructions"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-  />
-  <p
-    className="hig__text-area__required-notice"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "This field is required.",
       }
     }
   />

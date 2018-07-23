@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
-// import FormInput from "./FormInput";
+import { generateId } from "@hig/utils";
 
 import "./TextAreaPresenter.scss";
 
@@ -125,20 +125,13 @@ export default class TextAreaPresenter extends Component {
 
     const requiredClasses = cx(["hig__text-area__required-notice"]);
 
-    const ID = `text-area-${Math.floor(Math.random() * 100000, 5)}`;
-
-    function createRequiredMarkup() {
-      // if (required) {
-      return { __html: required };
-      // }
-      // return false;
-    }
+    const id = generateId("text-area");
 
     return (
       <div className={wrapperClasses}>
         <textarea
           className={textAreaClasses}
-          id={ID}
+          id={id}
           defaultValue={defaultValue}
           disabled={disabled}
           name={name}
@@ -152,7 +145,7 @@ export default class TextAreaPresenter extends Component {
           value={value}
         />
         <label
-          htmlFor={ID}
+          htmlFor={id}
           className={labelClasses}
           dangerouslySetInnerHTML={{ __html: label }}
         />
@@ -162,7 +155,7 @@ export default class TextAreaPresenter extends Component {
         />
         <p
           className={requiredClasses}
-          dangerouslySetInnerHTML={createRequiredMarkup()}
+          dangerouslySetInnerHTML={{ __html: required }}
         />
       </div>
     );

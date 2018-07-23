@@ -8,7 +8,7 @@ exports[`TextArea integration renders correctly 1`] = `
     className="hig__text-area__field hig__text-area__field--no-value"
     defaultValue={undefined}
     disabled={undefined}
-    id="text-area-11735"
+    id="text-area-1"
     name={undefined}
     onBlur={undefined}
     onChange={[Function]}
@@ -26,7 +26,7 @@ exports[`TextArea integration renders correctly 1`] = `
         "__html": "HIG Text Area",
       }
     }
-    htmlFor="text-area-11735"
+    htmlFor="text-area-1"
   />
   <p
     className="hig__text-area__instructions"

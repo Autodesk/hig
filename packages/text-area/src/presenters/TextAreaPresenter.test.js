@@ -1,11 +1,15 @@
 import React from "react";
 import renderer from "react-test-renderer";
+import { generateId } from "@hig/utils";
 import TextAreaPresenter from "./TextAreaPresenter";
-import { mount } from "enzyme/build/index";
 
 describe("TextArea/TextAreaPresenter", () => {
+  afterEach(() => {
+    generateId.mockReset();
+  });
+
   [
-    {
+    ({
       description: "renders without props",
       props: {}
     },
@@ -13,7 +17,6 @@ describe("TextArea/TextAreaPresenter", () => {
       description: "renders with all props",
       props: {
         disabled: false,
-        id: "id",
         instructions: "write stuff in me",
         label: "this is a text area",
         name: "text area",
@@ -22,7 +25,7 @@ describe("TextArea/TextAreaPresenter", () => {
         type: "a type of checkbox",
         value: "value!"
       }
-    }
+    })
   ].forEach(({ description, props: { children, ...otherProps } }) => {
     it(description, () => {
       const presenter = (
