@@ -9,6 +9,7 @@ describe("Dropdown", () => {
     bar: "Bar",
     baz: "Baz"
   };
+  const options = Object.keys(i18n).sort();
 
   [
     {
@@ -25,7 +26,7 @@ describe("Dropdown", () => {
     {
       desc: "renders with custom option formatting",
       props: {
-        options: Object.keys(i18n).sort(),
+        options,
         formatOption: key => i18n[key]
       }
     },
@@ -33,6 +34,35 @@ describe("Dropdown", () => {
       desc: "renders non-undefined values as options",
       props: {
         options: ["foo", 1, true, false, null, [], {}, new Map()]
+      }
+    },
+    {
+      desc: "renders with default value",
+      props: {
+        options,
+        defaultValue: "foo"
+      }
+    },
+    {
+      desc: "renders with multiple selection",
+      props: {
+        options,
+        multiple: true
+      }
+    },
+    {
+      desc: "renders with a controlled value",
+      props: {
+        options,
+        value: "foo"
+      }
+    },
+    {
+      desc: "renders with multiple selection and a controlled value",
+      props: {
+        options,
+        multiple: true,
+        value: ["foo", "bar"]
       }
     }
   ].forEach(({ desc, props }) => {

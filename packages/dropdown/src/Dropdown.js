@@ -42,6 +42,13 @@ export default class Dropdown extends Component {
      */
     required: PropTypes.string,
     /**
+     * The default value when the component is uncontrolled
+     */
+    defaultValue: PropTypes.oneOfType([
+      PropTypes.any,
+      PropTypes.arrayOf(PropTypes.any)
+    ]),
+    /**
      * An array of objects to choose from
      */
     value: PropTypes.oneOfType([
@@ -80,6 +87,35 @@ export default class Dropdown extends Component {
     }
   };
 
+  getBehaviorProps() {
+    const { id, multiple, formatOption, value, defaultValue } = this.props;
+    const valuePropName = multiple ? "selectedItems" : "selectedItem";
+    const defaultValuePropName = multiple
+      ? "defaultSelectedItems"
+      : "defaultSelectedItem";
+
+    return {
+      id,
+      onChange: this.handleChange,
+      itemToString: formatOption,
+      [valuePropName]: value,
+      [defaultValuePropName]: defaultValue,
+      inputValue: this.getInputValue()
+    };
+  }
+
+  getInputValue() {
+    const { multiple, formatOption, value } = this.props;
+
+    if (!value) return undefined;
+
+    if (multiple) {
+      return value.map(formatOption).join(", ");
+    }
+
+    return formatOption(value);
+  }
+
   /**
    * > Why not just pass the `props.onChange` directly to Downshift?
    *
@@ -103,7 +139,6 @@ export default class Dropdown extends Component {
    */
   renderInput(downshift) {
     const { id, toggleMenu, getInputProps } = downshift;
-
     const {
       label,
       instructions,
@@ -179,17 +214,11 @@ export default class Dropdown extends Component {
   };
 
   render() {
-    const { id, multiple, formatOption } = this.props;
+    const { multiple } = this.props;
     const Behavior = multiple ? MultiDownshift : Downshift;
 
     return (
-      <Behavior
-        id={id}
-        onChange={this.handleChange}
-        itemToString={formatOption}
-      >
-        {this.renderPresenter}
-      </Behavior>
+      <Behavior {...this.getBehaviorProps()}>{this.renderPresenter}</Behavior>
     );
   }
 }
