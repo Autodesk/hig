@@ -104,11 +104,17 @@ export default class Dropdown extends Component {
     };
   }
 
+  /**
+   * The controlled value for the input element
+   * @see https://github.com/paypal/downshift#inputvalue
+   * @returns {string|undefined}
+   */
   getInputValue() {
     const { multiple, formatOption, value } = this.props;
 
-    if (!value) return undefined;
-
+    if (value === undefined) {
+      return undefined;
+    }
     if (multiple) {
       return value.map(formatOption).join(", ");
     }

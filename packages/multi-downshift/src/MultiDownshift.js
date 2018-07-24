@@ -35,6 +35,9 @@ export default class MultiDownshift extends React.Component {
     selectedItems: this.props.defaultSelectedItems
   };
 
+  /**
+   * @returns {any[]}
+   */
   getSelectedItems() {
     const { selectedItems: controlledSelectedItems } = this.props;
     const { selectedItems } = this.state;
@@ -84,11 +87,13 @@ export default class MultiDownshift extends React.Component {
    * @returns {import("downshift").ControllerStateAndHelpers}
    */
   getDownshiftProps() {
-    const { children, ...otherProps } = this.props;
+    const { children, inputValue, ...otherProps } = this.props;
+    const controlledInputValue =
+      inputValue !== undefined ? inputValue : this.selectedItemsToString();
 
     return {
       ...otherProps,
-      inputValue: this.selectedItemsToString(),
+      inputValue: controlledInputValue,
       onSelect: this.handleSelect,
       stateReducer: this.stateReducer
     };
