@@ -74,6 +74,11 @@ export default [
     readme: undefined
   },
   {
+    description: "Component - Forms",
+    schema: filterMatchByKey(schema, /^FORM_FIELD./),
+    readme: undefined
+  },
+  {
     description: "Component - Input",
     schema: filterMatchByKey(schema, /^INPUT./),
     readme: undefined
@@ -86,6 +91,11 @@ export default [
   {
     description: "Component - Menu",
     schema: filterMatchByKey(schema, /^MENU./),
+    readme: undefined
+  },
+  {
+    description: "Component - Text area",
+    schema: filterMatchByKey(schema, /^TEXT_AREA./),
     readme: undefined
   }
 ];
