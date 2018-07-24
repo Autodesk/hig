@@ -6,19 +6,36 @@ import {
   HIGLightTheme,
   HIGLightGrayTheme,
   HIGDarkBlueTheme,
+  HIGLightHighDensityTheme,
+  HIGLightGrayHighDensityTheme,
+  HIGDarkBlueHighDensityTheme,
   MatrixTheme
 } from "@hig/themes";
 
-const themes = {
-  "hig-light": HIGLightTheme,
-  "hig-light-gray": HIGLightGrayTheme,
-  "hig-dark-blue": HIGDarkBlueTheme,
-  matrix: MatrixTheme
+const densityThemes = {
+  "high-density": {
+    "hig-light": HIGLightHighDensityTheme,
+    "hig-light-gray": HIGLightGrayHighDensityTheme,
+    "hig-dark-blue": HIGDarkBlueHighDensityTheme,
+    matrix: MatrixTheme
+  },
+  "medium-density": {
+    "hig-light": HIGLightTheme,
+    "hig-light-gray": HIGLightGrayTheme,
+    "hig-dark-blue": HIGDarkBlueTheme,
+    matrix: MatrixTheme
+  }
+};
+
+const densityOptions = {
+  "high-density": "High",
+  "medium-density": "Medium"
 };
 
 const DEFAULT_THEME_ID = "hig-light";
+const DEFAULT_DENSITY = "medium-density";
 
-const THEME_IDS = {
+const COLOR_THEME_IDS = {
   WEB_LIGHT: "hig-light",
   LIGHT_GRAY: "hig-light-gray",
   DARK_BLUE: "hig-dark-blue",
@@ -27,7 +44,7 @@ const THEME_IDS = {
 
 function themeOptions(themeIds) {
   return themeIds.reduce((acc, themeId) => {
-    const theme = themes[themeId];
+    const theme = densityThemes["medium-density"][themeId];
     return {
       ...acc,
       [theme.themeId]: theme.themeName
@@ -63,12 +80,18 @@ Surface.propTypes = {
 const KnobbedThemeProvider = ({ children, supportedThemes }) => {
   const knobGroup = "Theme";
   const themeId = select(
-    "Theme",
+    "Color scheme",
     themeOptions(supportedThemes),
     DEFAULT_THEME_ID,
     knobGroup
   );
-  const theme = themes[themeId];
+  const densityId = select(
+    "Density",
+    densityOptions,
+    DEFAULT_DENSITY,
+    knobGroup
+  );
+  const theme = densityThemes[densityId][themeId];
 
   return (
     <ThemeContext.Provider value={theme}>
@@ -79,12 +102,15 @@ const KnobbedThemeProvider = ({ children, supportedThemes }) => {
 
 KnobbedThemeProvider.propTypes = {
   children: PropTypes.node.isRequired,
-  supportedThemes: PropTypes.arrayOf(PropTypes.oneOf(Object.values(THEME_IDS)))
+  supportedThemes: PropTypes.arrayOf(
+    PropTypes.oneOf(Object.values(COLOR_THEME_IDS))
+  )
 };
 
 KnobbedThemeProvider.defaultProps = {
-  supportedThemes: [DEFAULT_THEME_ID]
+  supportedThemes: [DEFAULT_THEME_ID],
+  supportedDensities: [DEFAULT_DENSITY]
 };
 
 export default KnobbedThemeProvider;
-export { THEME_IDS as THEMES };
+export { COLOR_THEME_IDS as THEMES };

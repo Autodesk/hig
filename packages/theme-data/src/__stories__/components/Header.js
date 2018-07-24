@@ -1,22 +1,55 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { H1, H2 } from "@hig/typography";
-import BASICS from "../../basics";
+import { ThemeContext } from "@hig/themes";
+import Text from "./Text";
 
 export default function Header({ title }) {
   return (
-    <div>
-      <H1>{title}</H1>
-      <div style={{ height: BASICS.SPACINGS.MEDIUM_M }} />
-      <div style={{ display: "flex", marginBottom: BASICS.SPACINGS.MEDIUM_M }}>
-        <div style={{ flex: "1 1 0" }}>
-          <H2>Role</H2>
+    <ThemeContext.Consumer>
+      {({ themeData }) => (
+        <div>
+          <Text
+            fontSize={Text.FONT_SIZES.XL}
+            fontWeight={Text.FONT_WEIGHTS.MEDIUM}
+            fontFamily={Text.FONT_FAMILIES.MAIN}
+            lineHeight={Text.LINE_HEIGHTS.S}
+            color={Text.DEFAULT_TEXT_COLOR}
+          >
+            {title}
+          </Text>
+          <div style={{ height: themeData["DENSITY.SPACINGS.M"] }} />
+          <div
+            style={{
+              display: "flex",
+              marginBottom: themeData["DENSITY.SPACINGS.M"]
+            }}
+          >
+            <div style={{ flex: "1 1 0" }}>
+              <Text
+                fontSize={Text.FONT_SIZES.L}
+                fontWeight={Text.FONT_WEIGHTS.MEDIUM}
+                fontFamily={Text.FONT_FAMILIES.MAIN}
+                lineHeight={Text.LINE_HEIGHTS.S}
+                color={Text.DEFAULT_TEXT_COLOR}
+              >
+                Role
+              </Text>
+            </div>
+            <div style={{ flex: "1 1 0" }}>
+              <Text
+                fontSize={Text.FONT_SIZES.L}
+                fontWeight={Text.FONT_WEIGHTS.MEDIUM}
+                fontFamily={Text.FONT_FAMILIES.MAIN}
+                lineHeight={Text.LINE_HEIGHTS.S}
+                color={Text.DEFAULT_TEXT_COLOR}
+              >
+                Example
+              </Text>
+            </div>
+          </div>
         </div>
-        <div style={{ flex: "1 1 0" }}>
-          <H2>Example</H2>
-        </div>
-      </div>
-    </div>
+      )}
+    </ThemeContext.Consumer>
   );
 }
 

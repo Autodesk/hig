@@ -31,7 +31,7 @@ export default function Swatch({
               boxShadow: `0 0 0 ${renderedBorderWidth} ${
                 themeData["COLOR_SCHEME.SURFACE_LEVEL_4_COLOR"]
               }, ${renderedBoxShadow}`,
-              marginBottom: themeData["BASICS.SPACINGS.XS"]
+              marginBottom: themeData["DENSITY.SPACINGS.S"]
             }}
           />
         );
