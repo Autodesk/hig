@@ -53,26 +53,3 @@ themes.forEach(theme => {
     writeFile(`${theme.name}${density.name}ThemeConfig`, densityThemeConfig);
   });
 });
-
-// abstract config
-
-// light gray data
-// light gray config
-// light gray low density data
-// light gray low density config
-// light gray high density data
-// light gray high density config
-
-// dark blue data
-// dark blue config
-// dark blue low density data
-// dark blue low density config
-// dark blue high density data
-// dark blue high density config
-
-// web light data
-// web light config
-// web light low density data
-// web light low density config
-// web light high density data
-// web light high density config

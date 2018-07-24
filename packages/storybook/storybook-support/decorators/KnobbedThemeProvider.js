@@ -92,7 +92,6 @@ const KnobbedThemeProvider = ({ children, supportedThemes }) => {
     knobGroup
   );
   const theme = densityThemes[densityId][themeId];
-  console.log(theme);
 
   return (
     <ThemeContext.Provider value={theme}>
