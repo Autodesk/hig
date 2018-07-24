@@ -1,8 +1,13 @@
 import React from "react";
 import renderer from "react-test-renderer";
+import { generateId } from "@hig/utils";
 import CheckboxPresenter from "./CheckboxPresenter";
 
 describe("Checkbox/CheckboxPresenter/CheckboxPresenter", () => {
+  afterEach(() => {
+    generateId.mockReset();
+  });
+
   [
     {
       description: "renders without props",
@@ -13,7 +18,6 @@ describe("Checkbox/CheckboxPresenter/CheckboxPresenter", () => {
       props: {
         checked: true,
         disabled: true,
-        id: "id",
         indeterminate: false,
         label: "HELLO",
         name: "checkbox",

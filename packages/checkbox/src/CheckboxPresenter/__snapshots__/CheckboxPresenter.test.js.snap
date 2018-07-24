@@ -8,13 +8,14 @@ exports[`Checkbox/CheckboxPresenter/CheckboxPresenter renders with all props 1`]
     checked={true}
     className="hig__checkbox__input"
     disabled={true}
-    id="checkbox-86089"
+    id={undefined}
     name="checkbox"
     onBlur={[Function]}
     onChange={[Function]}
     onClick={[Function]}
     onFocus={[Function]}
     type="checkbox"
+    value="value"
   />
   <span
     className="hig__checkbox__wrapper hig__checkbox__wrapper--checked hig__checkbox__wrapper--disabled"
@@ -46,7 +47,7 @@ exports[`Checkbox/CheckboxPresenter/CheckboxPresenter renders with all props 1`]
   </span>
   <label
     className="hig__checkbox__label"
-    htmlFor="checkbox-86089"
+    htmlFor={undefined}
   >
     HELLO
   </label>
@@ -61,13 +62,14 @@ exports[`Checkbox/CheckboxPresenter/CheckboxPresenter renders without props 1`] 
     checked={false}
     className="hig__checkbox__input"
     disabled={false}
-    id="checkbox-9606"
+    id="checkbox-1"
     name="checkbox"
     onBlur={undefined}
     onChange={undefined}
     onClick={undefined}
     onFocus={undefined}
     type="checkbox"
+    value="value"
   />
   <span
     className="hig__checkbox__wrapper"
@@ -99,7 +101,7 @@ exports[`Checkbox/CheckboxPresenter/CheckboxPresenter renders without props 1`] 
   </span>
   <label
     className="hig__checkbox__label"
-    htmlFor="checkbox-9606"
+    htmlFor="checkbox-1"
   />
 </div>
 `;
