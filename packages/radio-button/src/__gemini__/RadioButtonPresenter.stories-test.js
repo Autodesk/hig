@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import RadioButtonPresenter from "../RadioButtonPresenter/RadioButtonPresenter";
+import RadioButtonPresenter from "../presenters/RadioButtonPresenter";
 
 storiesOf("RadioButtonPresenter", module)
   .add("default", () => <RadioButtonPresenter label={"Default checkbox"} />)

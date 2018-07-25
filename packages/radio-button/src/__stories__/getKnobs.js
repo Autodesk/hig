@@ -21,14 +21,13 @@ const knobLabels = {
 
 export default function getKnobs(props) {
   const {
-    checked,
-    defaultChecked,
-    disabled,
-    indeterminate,
-    label,
-    name,
-    required,
-    value,
+    checked = false,
+    defaultChecked = false,
+    disabled = false,
+    label = "",
+    name = "",
+    required = "",
+    value = "",
     ...otherProps
   } = props;
 

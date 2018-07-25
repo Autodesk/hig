@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`RadioButton/RadioButtonPresenter/RadioButtonPresenter renders with all props 1`] = `
+exports[`radio-button/presenters/RadioButtonPresenter renders with all props 1`] = `
 <div
   className="hig__radio-button hig__radio-button--required hig__radio-button--checked"
 >
@@ -36,7 +36,7 @@ exports[`RadioButton/RadioButtonPresenter/RadioButtonPresenter renders with all 
 </div>
 `;
 
-exports[`RadioButton/RadioButtonPresenter/RadioButtonPresenter renders without props 1`] = `
+exports[`radio-button/presenters/RadioButtonPresenter renders without props 1`] = `
 <div
   className="hig__radio-button"
 >

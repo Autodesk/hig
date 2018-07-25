@@ -2,7 +2,7 @@ import React from "react";
 import renderer from "react-test-renderer";
 import ButtonPresenter from "./ButtonPresenter";
 
-describe("RadioButton/CheckPresenter/CheckPresenter", () => {
+describe("radio-button/presenters/ButtonPresenter", () => {
   [
     {
       description: "renders without props",

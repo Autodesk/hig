@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
 import { generateId } from "@hig/utils";
-import ButtonPresenter from "../ButtonPresenter/ButtonPresenter";
 
+import ButtonPresenter from "./ButtonPresenter";
 import "./RadioButtonPresenter.scss";
 
 export default class RadioButtonPresenter extends Component {
@@ -32,6 +32,10 @@ export default class RadioButtonPresenter extends Component {
      * Called when user changes the value of the field
      */
     onChange: PropTypes.func,
+    /**
+     * Called when user clicks on the field
+     */
+    onClick: PropTypes.func,
     /**
      * Called when user puts focus on the field
      */

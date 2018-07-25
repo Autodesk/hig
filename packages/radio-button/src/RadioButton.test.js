@@ -3,7 +3,7 @@ import React from "react";
 import renderer from "react-test-renderer";
 import RadioButton from "./RadioButton";
 
-describe("RadioButton", () => {
+describe("radio-button/RadioButton", () => {
   describe("integration", () => {
     it("renders correctly", () => {
       const tree = renderer

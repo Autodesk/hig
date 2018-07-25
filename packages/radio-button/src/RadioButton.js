@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-import RadioButtonPresenter from "./RadioButtonPresenter/RadioButtonPresenter";
+import RadioButtonPresenter from "./presenters/RadioButtonPresenter";
 
 export default class RadioButton extends Component {
   static propTypes = {
@@ -68,7 +68,7 @@ export default class RadioButton extends Component {
     });
   };
 
-  renderChecked() {
+  isChecked() {
     if (this.props.checked !== undefined) {
       return this.props.checked;
     }
@@ -79,7 +79,7 @@ export default class RadioButton extends Component {
     return (
       <RadioButtonPresenter
         {...this.props}
-        checked={this.renderChecked()}
+        checked={this.isChecked()}
         onChange={this.handleClick}
       />
     );

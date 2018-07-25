@@ -3,7 +3,7 @@ import renderer from "react-test-renderer";
 import { generateId } from "@hig/utils";
 import RadioButtonPresenter from "./RadioButtonPresenter";
 
-describe("RadioButton/RadioButtonPresenter/RadioButtonPresenter", () => {
+describe("radio-button/presenters/RadioButtonPresenter", () => {
   afterEach(() => {
     generateId.mockReset();
   });

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`RadioButton integration renders correctly 1`] = `
+exports[`radio-button/RadioButton integration renders correctly 1`] = `
 <div
   className="hig__radio-button"
 >
