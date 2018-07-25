@@ -15,15 +15,12 @@ describe("RadioButton", () => {
   });
 
   describe("event handlers", () => {
-    let eventHandler;
     const subject = (props = {}) =>
       mount(<RadioButton title="RadioButton" {...props} />);
     let wrapper;
 
-    beforeEach(() => {
-      eventHandler = jest.fn();
-      eventHandler.mockReset();
-    });
+    const eventHandler = jest.fn();
+    eventHandler.mockReset();
 
     describe("onBlur", () => {
       beforeEach(() => {
