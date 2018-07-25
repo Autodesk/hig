@@ -30,6 +30,10 @@ export default class RadioButton extends Component {
      */
     onBlur: PropTypes.func,
     /**
+     * Called when user clicks on the field
+     */
+    onClick: PropTypes.func,
+    /**
      * Called when user changes the value of the field
      */
     onChange: PropTypes.func,
@@ -55,32 +59,50 @@ export default class RadioButton extends Component {
     checked: this.props.defaultChecked
   };
 
+  isControlled() {
+    return this.props.checked !== undefined;
+  }
+
+  isChecked() {
+    if (this.isControlled()) {
+      return this.props.checked;
+    }
+
+    return this.state.checked;
+  }
+
+  toggleChecked() {
+    const { onChange } = this.props;
+    const checked = !this.state.checked;
+
+    if (onChange) {
+      onChange(checked);
+    }
+
+    this.setState({ checked });
+  }
+
   /**
    * @param {MouseEvent} event
    */
   handleClick = event => {
-    if (this.props.onChange) {
-      this.props.onChange(event);
+    const { onClick } = this.props;
+
+    if (onClick) {
+      onClick(event);
     }
 
-    this.setState({
-      checked: !this.state.checked
-    });
+    if (!this.isControlled()) {
+      this.toggleChecked();
+    }
   };
-
-  isChecked() {
-    if (this.props.checked !== undefined) {
-      return this.props.checked;
-    }
-    return this.state.checked;
-  }
 
   render() {
     return (
       <RadioButtonPresenter
         {...this.props}
         checked={this.isChecked()}
-        onChange={this.handleClick}
+        onClick={this.handleClick}
       />
     );
   }
