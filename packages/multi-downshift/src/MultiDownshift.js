@@ -39,7 +39,7 @@ export default class MultiDownshift extends React.Component {
    * @returns {any[]}
    */
   getSelectedItems() {
-    const { selectedItems: controlledSelectedItems } = this.props;
+    const controlledSelectedItems = this.props.selectedItems;
     const { selectedItems } = this.state;
 
     return controlledSelectedItems !== undefined
