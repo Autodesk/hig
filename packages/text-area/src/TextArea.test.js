@@ -13,13 +13,12 @@ describe("TextArea", () => {
   });
 
   describe("event handlers", () => {
-    let eventHandler;
+    const eventHandler = jest.fn();
     const subject = (props = {}) =>
       mount(<TextArea title="TextArea" {...props} />);
     let wrapper;
 
     beforeEach(() => {
-      eventHandler = jest.fn();
       eventHandler.mockReset();
     });
 
