@@ -1,6 +1,8 @@
 import path from "path";
 import fs from "fs";
 
+import extendTheme from "../src/utils/extendTheme";
+import resolveTheme from "../src/utils/resolveTheme";
 import { config as abstractThemeConfig } from "../src/themes/abstractTheme";
 import lightGrayTheme, {
   config as lightGrayThemeConfig
@@ -11,22 +13,43 @@ import webLightTheme, {
 import darkBlueTheme, {
   config as darkBlueThemeConfig
 } from "../src/themes/darkBlueTheme";
+import { config as lowDensityThemeConfig } from "../src/themes/lowDensityTheme";
+import { config as highDensityThemeConfig } from "../src/themes/highDensityTheme";
 
 const buildPath = path.join(process.cwd(), "build");
 
-[
-  { name: "lightGrayTheme", data: lightGrayTheme },
-  { name: "lightGrayThemeConfig", data: lightGrayThemeConfig },
-  { name: "webLightTheme", data: webLightTheme },
-  { name: "webLightThemeConfig", data: webLightThemeConfig },
-  { name: "darkBlueTheme", data: darkBlueTheme },
-  { name: "darkBlueThemeConfig", data: darkBlueThemeConfig },
-  { name: "abstractThemeConfig", data: abstractThemeConfig },
-  { name: "webLightTheme", data: webLightTheme },
-  { name: "webLightThemeConfig", data: webLightThemeConfig }
-].forEach(options => {
+function writeFile(name, json) {
   fs.writeFileSync(
-    path.join(buildPath, `${options.name}.json`),
-    JSON.stringify(options.data, null, 2)
+    path.join(buildPath, `${name}.json`),
+    JSON.stringify(json, null, 2)
   );
+}
+
+const themes = [
+  {
+    name: "lightGray",
+    data: lightGrayTheme,
+    config: lightGrayThemeConfig
+  },
+  { name: "darkBlue", data: darkBlueTheme, config: darkBlueThemeConfig },
+  { name: "webLight", data: webLightTheme, config: webLightThemeConfig }
+];
+
+const densities = [
+  { name: "LowDensity", config: lowDensityThemeConfig },
+  { name: "HighDensity", config: highDensityThemeConfig }
+];
+
+writeFile("abstractThemeConfig", abstractThemeConfig);
+
+themes.forEach(theme => {
+  writeFile(`${theme.name}Theme`, theme.data);
+  writeFile(`${theme.name}ThemeConfig`, theme.config);
+
+  densities.forEach(density => {
+    const densityThemeConfig = extendTheme(theme.config, density.config);
+    const densityThemeData = resolveTheme(densityThemeConfig);
+    writeFile(`${theme.name}${density.name}Theme`, densityThemeData);
+    writeFile(`${theme.name}${density.name}ThemeConfig`, densityThemeConfig);
+  });
 });

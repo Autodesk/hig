@@ -1,12 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import BASICS from "../../basics";
+import Text from "./Text";
 
 export default function InlineCode({ children }) {
   return (
-    <code style={{ fontFamily: BASICS.FONT_FAMILIES.MONOSPACE }}>
+    <Text
+      fontFamily={Text.FONT_FAMILIES.MONOSPACE}
+      layout={Text.LAYOUTS.INLINE}
+    >
       {children}
-    </code>
+    </Text>
   );
 }
 
