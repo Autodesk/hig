@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
+import { generateId } from "@hig/utils";
 import ButtonPresenter from "../ButtonPresenter/ButtonPresenter";
 
 import "./RadioButtonPresenter.scss";
@@ -76,12 +77,12 @@ export default class RadioButtonPresenter extends Component {
       }
     ]);
 
-    const ID = `radio-button-${Math.floor(Math.random() * 100000, 5)}`;
+    const id = generateId("radio-button");
 
     return (
       <div className={wrapperClasses}>
         <input
-          id={ID}
+          id={id}
           checked={checked}
           className="hig__radio-button__input"
           disabled={disabled}
@@ -94,7 +95,7 @@ export default class RadioButtonPresenter extends Component {
           value={value}
         />
         <ButtonPresenter checked={checked} disabled={disabled} />
-        <label htmlFor={ID} className={labelClasses}>
+        <label htmlFor={id} className={labelClasses}>
           {label}
         </label>
       </div>

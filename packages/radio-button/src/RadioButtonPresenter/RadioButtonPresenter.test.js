@@ -1,8 +1,13 @@
 import React from "react";
 import renderer from "react-test-renderer";
+import { generateId } from "@hig/utils";
 import RadioButtonPresenter from "./RadioButtonPresenter";
 
 describe("RadioButton/RadioButtonPresenter/RadioButtonPresenter", () => {
+  afterEach(() => {
+    generateId.mockReset();
+  });
+
   [
     {
       description: "renders without props",
@@ -13,7 +18,6 @@ describe("RadioButton/RadioButtonPresenter/RadioButtonPresenter", () => {
       props: {
         checked: true,
         disabled: true,
-        id: "id",
         label: "HELLO",
         name: "RadioButton",
         onBlur: function onBlur() {},

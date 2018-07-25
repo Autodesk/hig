@@ -11,5 +11,4 @@ storiesOf("RadioButtonPresenter", module)
       required={"You must check this box"}
     />
   ))
-  .add("disabled", () => <RadioButtonPresenter label={"Disabled"} disabled />)
-);
+  .add("disabled", () => <RadioButtonPresenter label={"Disabled"} disabled />);

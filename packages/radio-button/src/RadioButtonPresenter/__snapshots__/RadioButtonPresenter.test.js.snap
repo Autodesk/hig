@@ -8,7 +8,7 @@ exports[`RadioButton/RadioButtonPresenter/RadioButtonPresenter renders with all 
     checked={true}
     className="hig__radio-button__input"
     disabled={true}
-    id="radio-button-67033"
+    id={undefined}
     name="RadioButton"
     onBlur={[Function]}
     onChange={[Function]}
@@ -24,15 +24,12 @@ exports[`RadioButton/RadioButtonPresenter/RadioButtonPresenter renders with all 
       className="hig__radio-button__wrapper__button"
     />
     <span
-      className="hig__radio-button__wrapper__button--indeterminate"
-    />
-    <span
       className="hig__radio-button__wrapper__button--disabled"
     />
   </span>
   <label
     className="hig__radio-button__label"
-    htmlFor="radio-button-67033"
+    htmlFor={undefined}
   >
     HELLO
   </label>
@@ -47,7 +44,7 @@ exports[`RadioButton/RadioButtonPresenter/RadioButtonPresenter renders without p
     checked={false}
     className="hig__radio-button__input"
     disabled={false}
-    id="radio-button-85485"
+    id="radio-button-1"
     name="radiobutton"
     onBlur={undefined}
     onChange={undefined}
@@ -63,15 +60,12 @@ exports[`RadioButton/RadioButtonPresenter/RadioButtonPresenter renders without p
       className="hig__radio-button__wrapper__button"
     />
     <span
-      className="hig__radio-button__wrapper__button--indeterminate"
-    />
-    <span
       className="hig__radio-button__wrapper__button--disabled"
     />
   </span>
   <label
     className="hig__radio-button__label"
-    htmlFor="radio-button-85485"
+    htmlFor="radio-button-1"
   />
 </div>
 `;

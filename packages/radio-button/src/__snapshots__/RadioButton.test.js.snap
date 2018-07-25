@@ -8,7 +8,7 @@ exports[`RadioButton integration renders correctly 1`] = `
     checked={false}
     className="hig__radio-button__input"
     disabled={false}
-    id="radio-button-38904"
+    id="radio-button-1"
     name="radiobutton"
     onBlur={undefined}
     onChange={[Function]}
@@ -24,15 +24,12 @@ exports[`RadioButton integration renders correctly 1`] = `
       className="hig__radio-button__wrapper__button"
     />
     <span
-      className="hig__radio-button__wrapper__button--indeterminate"
-    />
-    <span
       className="hig__radio-button__wrapper__button--disabled"
     />
   </span>
   <label
     className="hig__radio-button__label"
-    htmlFor="radio-button-38904"
+    htmlFor="radio-button-1"
   >
     HIG RadioButton
   </label>
