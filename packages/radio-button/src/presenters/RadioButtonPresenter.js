@@ -29,10 +29,6 @@ export default class RadioButtonPresenter extends Component {
      */
     onBlur: PropTypes.func,
     /**
-     * Called when user changes the value of the field
-     */
-    onChange: PropTypes.func,
-    /**
      * Called when user clicks on the field
      */
     onClick: PropTypes.func,
@@ -65,7 +61,6 @@ export default class RadioButtonPresenter extends Component {
       name,
       onBlur,
       onClick,
-      onChange,
       onFocus,
       required,
       value
@@ -92,7 +87,6 @@ export default class RadioButtonPresenter extends Component {
           disabled={disabled}
           name={name}
           onBlur={onBlur}
-          onChange={onChange}
           onClick={onClick}
           onFocus={onFocus}
           type="radio"
