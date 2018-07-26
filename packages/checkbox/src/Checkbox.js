@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 import CheckboxPresenter from "./presenters/CheckboxPresenter";
+import CheckboxBehavior from "./behaviors/CheckboxBehavior";
 
 export default class Checkbox extends Component {
   static propTypes = {
@@ -38,6 +39,10 @@ export default class Checkbox extends Component {
      */
     onChange: PropTypes.func,
     /**
+     * Called when user clicks on the checkbox
+     */
+    onClick: PropTypes.func,
+    /**
      * Called when user puts focus on the field
      */
     onFocus: PropTypes.func,
@@ -51,41 +56,44 @@ export default class Checkbox extends Component {
     value: PropTypes.string
   };
 
-  static defaultProps = {
-    defaultChecked: true
-  };
-
-  state = {
-    checked: this.props.defaultChecked
-  };
-
-  /**
-   * @param {MouseEvent} event
-   */
-  handleClick = event => {
-    if (this.props.onChange) {
-      this.props.onChange(event);
-    }
-
-    this.setState({
-      checked: !this.state.checked
-    });
-  };
-
-  renderChecked() {
-    if (this.props.checked !== undefined) {
-      return this.props.checked;
-    }
-    return this.state.checked;
-  }
-
   render() {
+    const {
+      checked: controlledChecked,
+      defaultChecked,
+      disabled,
+      indeterminate,
+      label,
+      name,
+      onBlur,
+      onChange,
+      onClick,
+      onFocus,
+      required,
+      value
+    } = this.props;
+
     return (
-      <CheckboxPresenter
-        {...this.props}
-        checked={this.renderChecked()}
-        onChange={this.handleClick}
-      />
+      <CheckboxBehavior
+        checked={controlledChecked}
+        defaultChecked={defaultChecked}
+        onChange={onChange}
+        onClick={onClick}
+      >
+        {({ checked, handleClick }) => (
+          <CheckboxPresenter
+            checked={checked}
+            disabled={disabled}
+            indeterminate={indeterminate}
+            label={label}
+            name={name}
+            onBlur={onBlur}
+            onClick={handleClick}
+            onFocus={onFocus}
+            required={required}
+            value={value}
+          />
+        )}
+      </CheckboxBehavior>
     );
   }
 }

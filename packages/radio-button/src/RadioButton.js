@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { CheckboxBehavior } from "@hig/checkbox";
 
 import RadioButtonPresenter from "./presenters/RadioButtonPresenter";
 
@@ -51,59 +52,42 @@ export default class RadioButton extends Component {
     value: PropTypes.string
   };
 
-  static defaultProps = {
-    defaultChecked: false
-  };
-
-  state = {
-    checked: this.props.defaultChecked
-  };
-
-  isControlled() {
-    return this.props.checked !== undefined;
-  }
-
-  isChecked() {
-    if (this.isControlled()) {
-      return this.props.checked;
-    }
-
-    return this.state.checked;
-  }
-
-  toggleChecked() {
-    const { onChange } = this.props;
-    const checked = !this.state.checked;
-
-    if (onChange) {
-      onChange(checked);
-    }
-
-    this.setState({ checked });
-  }
-
-  /**
-   * @param {MouseEvent} event
-   */
-  handleClick = event => {
-    const { onClick } = this.props;
-
-    if (onClick) {
-      onClick(event);
-    }
-
-    if (!this.isControlled()) {
-      this.toggleChecked();
-    }
-  };
-
   render() {
+    const {
+      checked: controlledChecked,
+      defaultChecked,
+      disabled,
+      label,
+      name,
+      onBlur,
+      onChange,
+      onClick,
+      onFocus,
+      required,
+      value
+    } = this.props;
+
     return (
-      <RadioButtonPresenter
-        {...this.props}
-        checked={this.isChecked()}
-        onClick={this.handleClick}
-      />
+      <CheckboxBehavior
+        checked={controlledChecked}
+        defaultChecked={defaultChecked}
+        onChange={onChange}
+        onClick={onClick}
+      >
+        {({ checked, handleClick }) => (
+          <RadioButtonPresenter
+            checked={checked}
+            disabled={disabled}
+            label={label}
+            name={name}
+            onBlur={onBlur}
+            onClick={handleClick}
+            onFocus={onFocus}
+            required={required}
+            value={value}
+          />
+        )}
+      </CheckboxBehavior>
     );
   }
 }
