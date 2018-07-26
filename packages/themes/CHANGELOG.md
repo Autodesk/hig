@@ -1,3 +1,11 @@
+<a name="@hig/themes-v0.3.0"></a>
+# [@hig/themes-v0.3.0](https://github.com/Autodesk/hig/compare/@hig/themes@0.2.1...@hig/themes@0.3.0) (2018-07-26)
+
+
+### Features
+
+* publish low and high density themes ([ebe4b71](https://github.com/Autodesk/hig/commit/ebe4b71))
+
 <a name="@hig/themes-v0.2.1"></a>
 # [@hig/themes-v0.2.1](https://github.com/Autodesk/hig/compare/@hig/themes@0.2.0...@hig/themes@0.2.1) (2018-07-19)
 
