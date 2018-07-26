@@ -3,7 +3,7 @@ import React from "react";
 import renderer from "react-test-renderer";
 import Checkbox from "./Checkbox";
 
-describe("Checkbox", () => {
+describe("checkbox/Checkbox", () => {
   describe("integration", () => {
     it("renders correctly", () => {
       const tree = renderer.create(<Checkbox label="HIG Checkbox" />).toJSON();

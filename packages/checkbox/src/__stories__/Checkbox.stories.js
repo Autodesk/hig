@@ -3,6 +3,7 @@ import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
 import { action } from "@storybook/addon-actions";
 import { boolean, text } from "@storybook/addon-knobs/react";
+import { controlledBool } from "@hig/storybook/utils";
 
 import infoOptions from "./infoOptions";
 import Checkbox from "../Checkbox";
@@ -13,34 +14,6 @@ const stories = [
     getProps: () => ({
       ...Checkbox.defaultProps,
       label: "Default checkbox"
-    })
-  },
-  {
-    description: "checked",
-    getProps: () => ({
-      label: "Checked",
-      checked: true
-    })
-  },
-  {
-    description: "required",
-    getProps: () => ({
-      label: "Required",
-      required: "You must check this box"
-    })
-  },
-  {
-    description: "disabled",
-    getProps: () => ({
-      disabled: true,
-      label: "Disabled"
-    })
-  },
-  {
-    description: "indeterminate",
-    getProps: () => ({
-      indeterminate: true,
-      label: "Indeterminate"
     })
   }
 ];
@@ -67,19 +40,19 @@ const knobLabels = {
 function getKnobs(props) {
   const {
     checked,
-    defaultChecked,
-    disabled,
-    indeterminate,
-    label,
-    name,
-    required,
-    value,
+    defaultChecked = false,
+    indeterminate = false,
+    disabled = false,
+    label = "",
+    name = "",
+    required = "",
+    value = "",
     ...otherProps
   } = props;
 
   return {
     ...otherProps,
-    checked: boolean(knobLabels.checked, checked, knobGroupIds.basic),
+    checked: controlledBool(knobLabels.checked, checked, knobGroupIds.basic),
     defaultChecked: boolean(
       knobLabels.defaultChecked,
       defaultChecked,
