@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import cx from "classnames";
 import { generateId } from "@hig/utils";
 
+import Input from "./presenters/Input";
 import "./slider.scss";
 
 export default class Slider extends Component {
@@ -70,19 +71,59 @@ export default class Slider extends Component {
   };
 
   static defaultProps = {
-    id: generatedId(),
+    defaultValue: "",
+    id: generateId("slider"),
     min: "0",
     max: "100",
     step: "1"
   };
 
+  /**
+   * @type {Object}
+   * @property {string|number} value
+   */
   state = {
-    value: this.props.defaultValue || this.props.value
+    value: this.props.defaultValue
   };
 
+  /**
+   * @returns {string|number}
+   */
+  getValue() {
+    if (this.isControlled()) {
+      return this.props.value;
+    }
+
+    return this.state.value;
+  }
+
+  /**
+   * @returns {boolean}
+   */
+  isControlled() {
+    return this.props.value !== undefined;
+  }
+
+  /**
+   * @param {string|number} value
+   */
+  updateValue(value) {
+    const { onChange } = this.props;
+
+    if (onChange) {
+      onChange(value);
+    }
+
+    this.setState({ value });
+  }
+
+  /**
+   * @param {event} Event
+   */
   handleChange = event => {
-    this.setState({ value: event.target.value });
-    if (this.props.onChange) this.props.onChange(event);
+    if (!this.isControlled()) {
+      this.updateValue(event.target.value);
+    }
   };
 
   render() {
@@ -100,7 +141,7 @@ export default class Slider extends Component {
       onFocus,
       onInput
     } = this.props;
-    const { value } = this.state;
+    const value = this.getValue();
 
     return (
       <div
