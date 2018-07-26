@@ -1,3 +1,11 @@
+<a name="@hig/components-v0.4.0"></a>
+# [@hig/components-v0.4.0](https://github.com/Autodesk/hig/compare/@hig/components@0.3.1...@hig/components@0.4.0) (2018-07-26)
+
+
+### Features
+
+* upgrade form elements ([190db28](https://github.com/Autodesk/hig/commit/190db28))
+
 <a name="@hig/components-v0.3.1"></a>
 # [@hig/components-v0.3.1](https://github.com/Autodesk/hig/compare/@hig/components@0.3.0...@hig/components@0.3.1) (2018-07-19)
 
