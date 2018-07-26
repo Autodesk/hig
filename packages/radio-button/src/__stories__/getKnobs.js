@@ -1,5 +1,5 @@
 import { action } from "@storybook/addon-actions";
-import { boolean, text } from "@storybook/addon-knobs/react";
+import { boolean, select, text } from "@storybook/addon-knobs/react";
 
 const knobGroupIds = {
   basic: "Basic",
@@ -19,22 +19,40 @@ const knobLabels = {
   value: "Value"
 };
 
+const checkedOptions = {
+  uncontrolled: "(uncontrolled)",
+  true: "Yes",
+  false: "No"
+};
+
+const checkValuesByCheckedOption = {
+  uncontrolled: undefined,
+  true: true,
+  false: false
+};
+
 export default function getKnobs(props) {
   const {
     checked,
-    defaultChecked,
-    disabled,
-    indeterminate,
-    label,
-    name,
-    required,
-    value,
+    defaultChecked = false,
+    disabled = false,
+    label = "",
+    name = "",
+    required = "",
+    value = "",
     ...otherProps
   } = props;
 
+  const checkedOption = select(
+    knobLabels.checked,
+    checkedOptions,
+    checked,
+    knobGroupIds.animation
+  );
+
   return {
     ...otherProps,
-    checked: boolean(knobLabels.checked, checked, knobGroupIds.basic),
+    checked: checkValuesByCheckedOption[checkedOption],
     defaultChecked: boolean(
       knobLabels.defaultChecked,
       defaultChecked,
