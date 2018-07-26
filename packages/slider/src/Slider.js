@@ -1,13 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
-import Input from "./presenters/Input";
+import { generateId } from "@hig/utils";
 
 import "./slider.scss";
-
-function generatedId() {
-  return `slider-${Math.floor(Math.random() * 100000, 5)}`;
-}
 
 export default class Slider extends Component {
   static propTypes = {
