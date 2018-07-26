@@ -66,6 +66,8 @@ export default class CheckboxPresenter extends Component {
     }
   };
 
+  id = generateId("checkbox");
+
   render() {
     const {
       checked,
@@ -91,7 +93,7 @@ export default class CheckboxPresenter extends Component {
       }
     ]);
 
-    const id = generateId("checkbox");
+    const { id } = this;
 
     return (
       <div className={wrapperClasses}>

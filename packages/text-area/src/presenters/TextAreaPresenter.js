@@ -67,6 +67,8 @@ export default class TextAreaPresenter extends Component {
     required: "This field is required."
   };
 
+  id = generateId("text-area");
+
   hasValue() {
     if (this.props.defaultValue || this.props.value) {
       return true;
@@ -125,7 +127,7 @@ export default class TextAreaPresenter extends Component {
 
     const requiredClasses = cx(["hig__text-area__required-notice"]);
 
-    const id = generateId("text-area");
+    const { id } = this;
 
     return (
       <div className={wrapperClasses}>

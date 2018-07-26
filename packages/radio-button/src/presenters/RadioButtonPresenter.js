@@ -53,6 +53,8 @@ export default class RadioButtonPresenter extends Component {
     value: "value"
   };
 
+  id = generateId("radio-button");
+
   render() {
     const {
       checked,
@@ -76,7 +78,7 @@ export default class RadioButtonPresenter extends Component {
       }
     ]);
 
-    const id = generateId("radio-button");
+    const { id } = this;
 
     return (
       <div className={wrapperClasses}>
