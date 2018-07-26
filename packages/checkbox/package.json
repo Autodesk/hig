@@ -1,6 +1,6 @@
 {
   "name": "@hig/checkbox",
-  "version": "0.1.1-alpha",
+  "version": "0.1.0",
   "description": "HIG Checkbox",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -18,6 +18,7 @@
     "build/*"
   ],
   "dependencies": {
+    "@hig/utils": "^0.2.0",
     "classnames": "^2.2.5",
     "hig-react": "^0.29.0",
     "prop-types": "^15.6.1",

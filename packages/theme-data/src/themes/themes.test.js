@@ -1,9 +1,17 @@
-import lightGrayTheme from "./lightGrayTheme";
+import lightGrayTheme, {
+  config as lightGrayThemeConfig
+} from "./lightGrayTheme";
 import darkBlueTheme from "./darkBlueTheme";
 import webLightTheme from "./webLightTheme";
 
+import { config as lowDensityThemeConfig } from "./lowDensityTheme";
+import { config as mediumDensityThemeConfig } from "./mediumDensityTheme";
+import { config as highDensityThemeConfig } from "./highDensityTheme";
+
 import themeSchema from "../theme-schema";
 import "../../support/jest/matchers/toBeAValidTheme";
+import extendTheme from "../utils/extendTheme";
+import resolveTheme from "../utils/resolveTheme";
 
 describe("Theme", () => {
   [
@@ -14,6 +22,31 @@ describe("Theme", () => {
     describe(description, () => {
       it("implements the theme schema", () => {
         expect(theme).toBeAValidTheme(themeSchema);
+      });
+    });
+  });
+
+  describe("densities", () => {
+    [
+      {
+        description: "low density theme",
+        density: lowDensityThemeConfig
+      },
+      {
+        description: "medium density theme",
+        density: mediumDensityThemeConfig
+      },
+      {
+        description: "high density theme",
+        density: highDensityThemeConfig
+      }
+    ].forEach(({ description, density }) => {
+      describe(description, () => {
+        it("implements the theme schema", () => {
+          const densityThemeConfig = extendTheme(lightGrayThemeConfig, density);
+          const densityThemeData = resolveTheme(densityThemeConfig);
+          expect(densityThemeData).toBeAValidTheme(themeSchema);
+        });
       });
     });
   });

@@ -1,9 +1,11 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Downshift from "downshift";
 import { combineEventHandlers } from "@hig/utils";
 
 /**
  * @typedef {import("downshift").DownshiftProps<any>} Props
+ * @property {any[]} selectedItems
  */
 
 /**
@@ -20,27 +22,43 @@ import { combineEventHandlers } from "@hig/utils";
 
 export default class MultiDownshift extends React.Component {
   static propTypes = {
-    ...Downshift.propTypes
+    ...Downshift.propTypes,
+    selectedItems: PropTypes.arrayOf(PropTypes.any),
+    defaultSelectedItems: PropTypes.arrayOf(PropTypes.any)
+  };
+
+  static defaultProps = {
+    defaultSelectedItems: []
   };
 
   state = {
-    selectedItems: []
+    selectedItems: this.props.defaultSelectedItems
   };
+
+  /**
+   * @returns {any[]}
+   */
+  getSelectedItems() {
+    const controlledSelectedItems = this.props.selectedItems;
+    const { selectedItems } = this.state;
+
+    return controlledSelectedItems !== undefined
+      ? controlledSelectedItems
+      : selectedItems;
+  }
 
   /**
    * @param {import("downshift").ControllerStateAndHelpers<any>} downshift
    * @returns {ControllerStateAndHelpers}
    */
   getStateAndHelpers(downshift) {
-    const { selectedItems } = this.state;
+    const selectedItems = this.getSelectedItems();
     const { getRemoveButtonProps } = this;
-    const getInputProps = this.createInputPropsGetter(downshift);
 
     return {
       ...downshift,
       getRemoveButtonProps,
-      selectedItems,
-      getInputProps
+      selectedItems
     };
   }
 
@@ -69,12 +87,15 @@ export default class MultiDownshift extends React.Component {
    * @returns {import("downshift").ControllerStateAndHelpers}
    */
   getDownshiftProps() {
-    const { children, ...passThruProps } = this.props;
+    const { children, inputValue, ...otherProps } = this.props;
+    const controlledInputValue =
+      inputValue !== undefined ? inputValue : this.selectedItemsToString();
 
     return {
-      ...passThruProps,
-      stateReducer: this.stateReducer,
-      onSelect: this.handleSelect
+      ...otherProps,
+      inputValue: controlledInputValue,
+      onSelect: this.handleSelect,
+      stateReducer: this.stateReducer
     };
   }
 
@@ -103,7 +124,7 @@ export default class MultiDownshift extends React.Component {
 
     return () => {
       const { onChange } = this.props;
-      const { selectedItems } = this.state;
+      const selectedItems = this.getSelectedItems();
 
       if (onChange) {
         onChange(selectedItems, multiDownshift);
@@ -116,7 +137,7 @@ export default class MultiDownshift extends React.Component {
    * @param {import("downshift").ControllerStateAndHelpers} downshift
    */
   handleSelect = (selectedItem, downshift) => {
-    const { selectedItems } = this.state;
+    const selectedItems = this.getSelectedItems();
     const triggerChange = this.createChangeTrigger(downshift);
 
     if (selectedItems.includes(selectedItem)) {
@@ -132,20 +153,9 @@ export default class MultiDownshift extends React.Component {
    */
   selectedItemsToString() {
     const { itemToString } = this.props;
-    const { selectedItems } = this.state;
+    const selectedItems = this.getSelectedItems();
 
     return selectedItems.map(itemToString).join(", ");
-  }
-
-  /**
-   * @param {import("downshift").ControllerStateAndHelpers} downshift
-   * @returns {function(import("downshift").GetInputPropsOptions): any}
-   */
-  createInputPropsGetter({ getInputProps }) {
-    return props => ({
-      ...getInputProps(props),
-      value: this.selectedItemsToString()
-    });
   }
 
   /**
@@ -153,7 +163,7 @@ export default class MultiDownshift extends React.Component {
    * @param {Function} done
    */
   unselectItem(item, done) {
-    const { selectedItems } = this.state;
+    const selectedItems = this.getSelectedItems();
     const nextSelectedItems = selectedItems.filter(
       selectedItem => selectedItem !== item
     );
@@ -166,7 +176,7 @@ export default class MultiDownshift extends React.Component {
    * @param {Function} done
    */
   selectItem(item, done) {
-    const { selectedItems } = this.state;
+    const selectedItems = this.getSelectedItems();
     const nextSelectedItems = [...selectedItems, item];
 
     this.setState({ selectedItems: nextSelectedItems }, done);

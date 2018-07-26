@@ -1,6 +1,6 @@
 {
   "name": "@hig/themes",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "HIG theme definitions and supporting components",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -18,7 +18,7 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/theme-data-poc": "^0.0.7-alpha",
+    "@hig/theme-data-poc": "^0.0.8-alpha",
     "prop-types": "^15.6.1"
   },
   "devDependencies": {

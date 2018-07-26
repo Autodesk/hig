@@ -8,27 +8,48 @@ HIG theme data is a representation of the HIG visual design language in the form
 yarn add @hig/theme-data-poc
 ```
 
-#### Access basics values as structured data
+#### Access theme data as json
 ```js
-import { basics } from '@hig/theme-data-poc';
-console.log(basics.colors);
+import lightGrayTheme from '@hig/theme-data-poc/build/lightGrayTheme.json';
+
+console.log(lightGrayTheme);
+// {
+//  "BASICS.BORDER_RADII.NONE": "0",
+//  "BASICS.BORDER_RADII.S":  "0"
+//  "BASICS.BORDER_RADII.M":  "2px"
+// ...
+// }
 ```
 
-#### Access theme data
+#### Access theme data as javascript
 ```js
-import lightGrayTheme from '@hig/theme-data-poc/build/lightGrayTheme';
-console.log(Object.keys(lightGrayTheme));
+import { lightGrayTheme } from '@hig/theme-data-poc';
+
+console.log(lightGrayTheme.data);
+// {
+//  "BASICS.BORDER_RADII.NONE": "0",
+//  "BASICS.BORDER_RADII.S":  "0"
+//  "BASICS.BORDER_RADII.M":  "2px"
+// ...
+// }
 ```
 
 #### Extend a theme to make a new variation
 ```js
-import { extendTheme, resolveTheme } from '@hig/theme-data-poc';
-import lightGrayThemeConfig from '@hig/theme-data-poc/build/lightGrayThemeConfig';
-const redAccentedThemeConfig = extendTheme(lightGrayThemeConfig, {
+import { extendTheme, resolveTheme, lightGrayTheme } from '@hig/theme-data-poc';
+
+const redAccentedThemeConfig = extendTheme(lightGrayTheme.config, {
     "COLOR_SCHEME.ACCENT_COLOR": "#F00",
 });
 const redAccentedTheme = resolveTheme(redAccentedThemeConfig);
+
 console.log(redAccentedTheme);
+// {
+// ...
+//  "COLOR_SCHEME.ACCENT_COLOR": "#F00",
+//  "INPUT.FOCUS.BORDER_BOTTOM_COLOR": "#F00"
+// ...
+// }
 ```
 
 
@@ -66,9 +87,9 @@ Data defining a primitive value (e.g. “#0696D7” or “16px”) for each role
 Data defining a primitive value or reference for each role in the theme schema.
 
 ### Reference
-References in a theme configuration may point to a basic value or another role. References may point to roles defined with another reference. For example, `TEXT_AREA_FOCUS.COLOR` may refer to `INPUT.FOCUS.COLOR`, which refers to `ACCENT_COLOR`, which refers to `BASICS_COLORS_BLUE_60`.
+References in a theme configuration may point to a basic value or another role. References may point to roles defined with another reference. For example, `TEXT_AREA.FOCUS.COLOR` may refer to `INPUT.FOCUS.COLOR`, which refers to `ACCENT_COLOR`, which refers to `BASICS.COLORS.AUTODESK_BLUE_600`.
 
-### Theme generator
+### `Theme generator`
 The theme generator is javascript code that overrides values in a theme, adds new roles and values to a theme, and replaces references with primitive values.
 
 ## Thoughts on modeling a theme

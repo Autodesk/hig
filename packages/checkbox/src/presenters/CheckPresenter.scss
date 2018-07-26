@@ -1,0 +1,70 @@
+@import '~@hig/styles/mixins/colors';
+
+.hig__checkbox__wrapper__check--indeterminate,
+.hig__checkbox__wrapper__check--disabled,
+.hig__checkbox__wrapper__check {
+  display: none;
+}
+
+.hig__checkbox__wrapper--checked {
+  .hig__checkbox__wrapper__check {
+    display: block;
+  }
+}
+
+.hig__checkbox__wrapper--checked.hig__checkbox__wrapper--disabled {
+  .hig__checkbox__wrapper__check {
+    display: none;
+  }
+
+  .hig__checkbox__wrapper__check--disabled {
+    display: block;
+  }
+}
+
+.hig__checkbox__wrapper--indeterminate,
+.hig__checkbox__wrapper--indeterminate.hig__checkbox__wrapper--checked {
+  .hig__checkbox__wrapper__check--indeterminate {
+    display: block;
+    background-color: color(hig-slate-40);
+  }
+
+  .hig__checkbox__wrapper__check {
+    display: none;
+  }
+
+}
+
+.hig__checkbox__inputV1:focus + .hig__checkbox__wrapper {
+  .hig__checkbox__wrapper__check--indeterminate {
+    background-color: color(hig-blue-60);
+  }
+}
+
+
+// workaround for image sizes
+
+.hig__checkbox__wrapper--checked .hig__checkbox__wrapper__check {
+  svg {
+    top: -2px;
+    position: relative;
+  }
+}
+
+.hig__checkbox__wrapper--checked .hig__checkbox__wrapper__check--disabled {
+  svg {
+    top: -3px;
+    position: relative;
+  }
+}
+
+.hig__checkbox__wrapper__check--indeterminate {
+  width: 16px;
+  height: 16px;
+  svg {
+    top: -6px;
+    position: relative;
+  }
+}
+
+// end workaround

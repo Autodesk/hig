@@ -1,5 +1,6 @@
 import { action } from "@storybook/addon-actions";
 import { boolean, text } from "@storybook/addon-knobs/react";
+import { controlledBool } from "@hig/storybook/utils";
 
 const knobGroupIds = {
   basic: "Basic",
@@ -22,19 +23,18 @@ const knobLabels = {
 export default function getKnobs(props) {
   const {
     checked,
-    defaultChecked,
-    disabled,
-    indeterminate,
-    label,
-    name,
-    required,
-    value,
+    defaultChecked = false,
+    disabled = false,
+    label = "",
+    name = "",
+    required = "",
+    value = "",
     ...otherProps
   } = props;
 
   return {
     ...otherProps,
-    checked: boolean(knobLabels.checked, checked, knobGroupIds.basic),
+    checked: controlledBool(knobLabels.checked, checked, knobGroupIds.basic),
     defaultChecked: boolean(
       knobLabels.defaultChecked,
       defaultChecked,

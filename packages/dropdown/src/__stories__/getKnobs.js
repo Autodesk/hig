@@ -2,7 +2,8 @@ import { action } from "@storybook/addon-actions";
 import { boolean, object, text } from "@storybook/addon-knobs/react";
 
 const knobGroupIds = {
-  basic: "Basic"
+  basic: "Basic",
+  advanced: "Advanced"
 };
 
 const knobLabels = {
@@ -16,7 +17,8 @@ const knobLabels = {
   onChange: "onChange",
   onClickOutside: "onClickOutside",
   onFocus: "onFocus",
-  options: "Options"
+  options: "Options",
+  value: "Value"
 };
 
 export default function getKnobs(props) {
@@ -28,8 +30,15 @@ export default function getKnobs(props) {
     required = "",
     multiple = false,
     options = [],
+    value,
     ...otherProps
   } = props;
+
+  /**
+   * We're using `text` instead of `object` so that we can provide `undefined`
+   * when an empty string is given.
+   */
+  const valueText = text(knobLabels.value, value, knobGroupIds.advanced);
 
   return {
     ...otherProps,
@@ -47,6 +56,7 @@ export default function getKnobs(props) {
     onChange: action(knobLabels.onChange),
     onClickOutside: action(knobLabels.onClickOutside),
     onFocus: action(knobLabels.onFocus),
-    options: object(knobLabels.options, options, knobGroupIds.basic)
+    options: object(knobLabels.options, options, knobGroupIds.basic),
+    value: valueText ? JSON.parse(valueText) : undefined
   };
 }
