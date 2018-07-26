@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-import CheckboxPresenter from "./CheckboxPresenter/CheckboxPresenter";
+import CheckboxPresenter from "./presenters/CheckboxPresenter";
 
 export default class Checkbox extends Component {
   static propTypes = {

@@ -2,7 +2,7 @@ import React from "react";
 import renderer from "react-test-renderer";
 import CheckPresenter from "./CheckPresenter";
 
-describe("Checkbox/CheckPresenter/CheckPresenter", () => {
+describe("checkbox/presenters/CheckPresenter", () => {
   [
     {
       description: "renders without props",

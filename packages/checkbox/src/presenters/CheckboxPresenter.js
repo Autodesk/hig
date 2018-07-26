@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
 import { generateId } from "@hig/utils";
-import CheckPresenter from "../CheckPresenter/CheckPresenter";
+import CheckPresenter from "./CheckPresenter";
 
 import "./CheckboxPresenter.scss";
 

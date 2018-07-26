@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Checkbox integration renders correctly 1`] = `
+exports[`checkbox/Checkbox integration renders correctly 1`] = `
 <div
   className="hig__checkbox hig__checkbox--checkbox hig__checkbox--checked"
 >

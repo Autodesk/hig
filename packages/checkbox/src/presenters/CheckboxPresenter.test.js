@@ -3,7 +3,7 @@ import renderer from "react-test-renderer";
 import { generateId } from "@hig/utils";
 import CheckboxPresenter from "./CheckboxPresenter";
 
-describe("Checkbox/CheckboxPresenter/CheckboxPresenter", () => {
+describe("checkbox/presenters/CheckboxPresenter", () => {
   afterEach(() => {
     generateId.mockReset();
   });

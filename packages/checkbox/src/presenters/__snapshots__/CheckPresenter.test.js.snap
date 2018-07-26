@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Checkbox/CheckPresenter/CheckPresenter renders with all props 1`] = `
+exports[`checkbox/presenters/CheckPresenter renders with all props 1`] = `
 <span
   className="hig__checkbox__wrapper hig__checkbox__wrapper--checked hig__checkbox__wrapper--disabled"
 >
@@ -31,7 +31,7 @@ exports[`Checkbox/CheckPresenter/CheckPresenter renders with all props 1`] = `
 </span>
 `;
 
-exports[`Checkbox/CheckPresenter/CheckPresenter renders without props 1`] = `
+exports[`checkbox/presenters/CheckPresenter renders without props 1`] = `
 <span
   className="hig__checkbox__wrapper"
 >
