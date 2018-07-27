@@ -1,2 +1,2 @@
 #!/bin/bash
-eslint src --color --ext .js,.jsx
+eslint src --color --ext .js,.jsx --fix
