@@ -24,7 +24,9 @@ class Flyout extends Component {
     /** Function called when the flyout panel is scrolled */
     onScroll: PropTypes.func,
     /** When provided, it overrides the flyout's open state */
-    open: PropTypes.bool
+    open: PropTypes.bool,
+    /** Width of the flyout content with one of the supported modifiers */
+    size: PropTypes.oneOf(Object.freeze(["small", "medium", "large"])),
   };
 
   static defaultProps = {
@@ -142,7 +144,7 @@ class Flyout extends Component {
   }
 
   createPresenterProps(transitionStatus) {
-    const { content, maxHeight, onScroll } = this.props;
+    const { content, maxHeight, onScroll, size } = this.props;
     const { refContainer, refPanel, refAction, refWrapper } = this;
     const {
       anchorPoint,
@@ -156,6 +158,7 @@ class Flyout extends Component {
       leftOffset,
       content,
       maxHeight,
+      size,
       refAction,
       refContainer,
       refPanel,

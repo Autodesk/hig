@@ -38,6 +38,7 @@ export default function FlyoutPresenter(props) {
     anchorPoint,
     content,
     maxHeight,
+    size,
     topOffset,
     leftOffset,
     refAction,
@@ -69,7 +70,7 @@ export default function FlyoutPresenter(props) {
       >
         <div className="hig__flyout-v1__chevron" />
         <div
-          className="hig__flyout-v1__panel"
+          className={cx("hig__flyout-v1__panel", { [`hig__flyout-v1__panel--${size}`]: !!size })}
           ref={refPanel}
           style={panelStyle}
           onScroll={onScroll}
