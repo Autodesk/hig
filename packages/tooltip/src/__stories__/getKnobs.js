@@ -28,7 +28,7 @@ export default function getKnobs(props) {
       anchorPoint,
       knobGroupIds.basic
     ),
-    content: text(knobLabels.content, content, knobGroupIds.basic),
+    title: text(knobLabels.content, content, knobGroupIds.basic),
     onClickOutside: action(knobLabels.onClickOutside),
     onScroll: action(knobLabels.onScroll),
     open: boolean(knobLabels.open, open, knobGroupIds.basic)
