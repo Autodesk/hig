@@ -111,7 +111,7 @@ export default class Slider extends Component {
     const { onChange } = this.props;
 
     if (onChange) {
-      onChange(value);
+      onChange(Number(value));
     }
 
     this.setState({ value });
