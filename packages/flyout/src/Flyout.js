@@ -26,7 +26,7 @@ class Flyout extends Component {
     /** When provided, it overrides the flyout's open state */
     open: PropTypes.bool,
     /** Width of the flyout content with one of the supported modifiers */
-    size: PropTypes.oneOf(Object.freeze(["small", "medium", "large"])),
+    size: PropTypes.oneOf(Object.freeze(["small", "medium", "large"]))
   };
 
   static defaultProps = {

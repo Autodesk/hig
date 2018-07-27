@@ -35,7 +35,7 @@ describe("flyout/FlyoutPresenter/FlyoutPresenter", () => {
         anchorPoint: anchorPoints.TOP_CENTER,
         content: "World",
         maxHeight: 150,
-        size: 'medium',
+        size: "medium",
         topOffset: 42,
         leftOffset: 42,
         refAction: function refAction() {},
