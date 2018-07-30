@@ -1,5 +1,6 @@
 import { action } from "@storybook/addon-actions";
 import { boolean, number, text } from "@storybook/addon-knobs/react";
+import { controlledText } from "@hig/storybook/utils";
 
 const knobGroupIds = {
   basic: "Basic",
@@ -58,6 +59,6 @@ export default function getKnobs(props) {
     onInput: action(knobLabels.onInput),
     required: text(knobLabels.required, required, knobGroupIds.basic),
     step: number(knobLabels.step, step, knobGroupIds.basic),
-    value: text(knobLabels.value, value, knobGroupIds.form)
+    value: controlledText(knobLabels.value, value, knobGroupIds.form)
   };
 }
