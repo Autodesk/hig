@@ -1,3 +1,11 @@
+<a name="@hig/slider-v0.1.1"></a>
+# [@hig/slider-v0.1.1](https://github.com/Autodesk/hig/compare/@hig/slider@0.1.0...@hig/slider@0.1.1) (2018-07-30)
+
+
+### Bug Fixes
+
+* **package:** Upgrade dependency for missing feature ([ec11db3](https://github.com/Autodesk/hig/commit/ec11db3))
+
 <a name="@hig/slider-v0.1.0"></a>
 # [@hig/slider-v0.1.0](https://github.com/Autodesk/hig/compare/@hig/slider@0.0.0...@hig/slider@0.1.0) (2018-07-30)
 
