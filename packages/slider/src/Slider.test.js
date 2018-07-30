@@ -3,23 +3,14 @@ import { mount } from "enzyme";
 import Slider from "./index";
 import Input from "./presenters/Input";
 
-describe("Slider", () => {
+describe("slider/Slider", () => {
   it("allows value to be changed by onChange", () => {
-    const wrapper = mount(<Slider value="10" />);
+    const wrapper = mount(<Slider defaultValue="10" />);
     const input = wrapper.find("input");
 
     expect(input.prop("value")).toEqual("10");
     input.simulate("change", { target: { value: "20" } });
     expect(input.prop("value")).toEqual("20");
-  });
-
-  it("ignores changes to the value prop", () => {
-    const wrapper = mount(<Slider value="10" />);
-    const input = wrapper.find("input");
-
-    expect(input.prop("value")).toEqual("10");
-    wrapper.setProps({ value: "20" });
-    expect(input.prop("value")).toEqual("10");
   });
 
   describe("id", () => {
@@ -62,5 +53,25 @@ describe("Slider", () => {
     const requiredMsg = "You must provide your age.";
     const wrapper = mount(<Slider required={requiredMsg} />);
     expect(wrapper.text()).toEqual(expect.stringMatching(requiredMsg));
+  });
+
+  describe("when controlled", () => {
+    it("doesn't allow the value to be changed by onChange", () => {
+      const wrapper = mount(<Slider value="10" />);
+      const input = wrapper.find("input");
+
+      expect(input.prop("value")).toEqual("10");
+      input.simulate("change", { target: { value: "20" } });
+      expect(input.prop("value")).toEqual("10");
+    });
+
+    it("recognizes changes to the value prop", () => {
+      const wrapper = mount(<Slider value="10" />);
+      const input = wrapper.find("input");
+
+      expect(input.prop("value")).toEqual("10");
+      wrapper.setProps({ value: "20" });
+      expect(input.prop("value")).toEqual("20");
+    });
   });
 });
