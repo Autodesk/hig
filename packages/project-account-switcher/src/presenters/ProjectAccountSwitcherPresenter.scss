@@ -4,20 +4,20 @@
   padding: 0px 10px 10px 10px;
 }
 
-.hig__global-nav__top-nav__project-account-switcher {
+.project-account-switcher {
 
-  .hig__global-nav__top-nav__project-account-switcher__item__label:hover {
+  .project-account-switcher__item__label:hover {
     color: color(hig-blue-50);
     text-decoration: none;
   }
 }
 
 
-.hig__global-nav__top-nav__project-account-switcher__target {
+.project-account-switcher__target {
   height: 100%;
 }
 
-.hig__global-nav__top-nav__project-account-switcher__item {
+.project-account-switcher__item {
   display: flex;
   height: 34px;
   line-height: 34px;
@@ -40,12 +40,12 @@
     text-align: center;
     background-color: color(hig-cool-gray-10);
 
-    .hig__global-nav__top-nav__project-account-switcher__item--project & {
+    .project-account-switcher__item--project & {
       width: 32px;
       height: 32px;
     }
 
-    .hig__global-nav__top-nav__project-account-switcher__item--account & {
+    .project-account-switcher__item--account & {
       width: 60px;
       height: 30px;
     }
@@ -64,12 +64,12 @@
       display: none;
     }
 
-    .hig__global-nav__top-nav__project-account-switcher__item--project & {
+    .project-account-switcher__item--project & {
       width: 32px;
       height: 32px;
     }
 
-    .hig__global-nav__top-nav__project-account-switcher__item--account & {
+    .project-account-switcher__item--account & {
       width: 60px;
       height: 30px;
     }
@@ -84,8 +84,59 @@
     cursor: pointer;
     padding-left: 10px;
 
-    .hig__global-nav__top-nav__project-account-switcher__item--active > & {
+    .project-account-switcher__item--active > & {
       color: color(hig-blue-50);
     }
   }
+}
+
+.project-account-switcher__list {
+  margin-top: 30px;
+  margin-bottom: 10px;
+
+  &:first-child{
+    margin-top: 10px;
+  }
+  &:last-child{
+    margin-bottom: 0;
+  }
+
+  & .project-account-switcher__item{
+    padding-top: 8px;
+
+    &:first-child{
+      padding-top: 0;
+    }
+  }
+
+  &__title{
+    font-size: 11px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: color(hig-cool-gray-50);
+  }
+}
+
+
+.project-account-switcher__target {
+  display: flex;
+  align-items: center;
+  padding: 0 12px 0 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  height: 100%;
+}
+
+.project-account-switcher__target__caret {
+  display: inline-block;
+
+  .hig__icon {
+    height: 24px;
+    width: 10px;
+    margin-left: 12px;
+  }
+}
+
+.project-account-switcher__target__caret--hide {
+  display: none;
 }
