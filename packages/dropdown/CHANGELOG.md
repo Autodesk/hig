@@ -1,3 +1,11 @@
+<a name="@hig/dropdown-v0.2.1"></a>
+# [@hig/dropdown-v0.2.1](https://github.com/Autodesk/hig/compare/@hig/dropdown@0.2.0...@hig/dropdown@0.2.1) (2018-07-31)
+
+
+### Bug Fixes
+
+* Suppress ref check error to account for new ref validation in Downshift 2.0.20 ([12cfc18](https://github.com/Autodesk/hig/commit/12cfc18))
+
 <a name="@hig/dropdown-v0.2.0"></a>
 # [@hig/dropdown-v0.2.0](https://github.com/Autodesk/hig/compare/@hig/dropdown@0.1.1...@hig/dropdown@0.2.0) (2018-07-26)
 
