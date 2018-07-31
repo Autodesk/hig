@@ -183,7 +183,14 @@ export default class Dropdown extends Component {
       selectedItem,
       selectedItems
     } = downshift;
-    const menuProps = getMenuProps({ isOpen });
+    const menuProps = getMenuProps(
+      {
+        isOpen
+      },
+      {
+        suppressRefError: true
+      }
+    );
     const { multiple, options, formatOption } = this.props;
     const children = renderOptions({
       multiple,
