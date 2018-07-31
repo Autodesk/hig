@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+<div
+  className="css-a2gl53"
+>
+  <input
+    className="css-jcjpcn"
+    disabled={true}
+    onBlur={[Function]}
+    onChange={undefined}
+    onFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    value="bran.stark@winterfell.com"
+  />
+  <div
+    className="css-1e2ir1l"
+  />
+</div>
+`;
+
+exports[`Input renders children 1`] = `
+<div
+  className="css-a2gl53"
+>
+  <input
+    className="css-1dy8dab"
+    disabled={undefined}
+    onBlur={[Function]}
+    onChange={undefined}
+    onFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    value="jon.snow@winterfell.com"
+  />
+  <div
+    className="css-v5j8f1"
+  />
+</div>
+`;

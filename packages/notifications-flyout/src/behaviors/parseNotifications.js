@@ -52,7 +52,8 @@ function parseNotification(value, index) {
     id = index.toString(),
     unread = true,
     ...props
-  } = otherValues.props || otherValues;
+  } =
+    otherValues.props || otherValues;
 
   return {
     id,

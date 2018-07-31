@@ -1,0 +1,445 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter renders with all props 1`] = `
+<div
+  className="project-account-switcher"
+>
+  <div
+    className="hig__flyout-v1 hig__flyout-v1--exited hig__flyout-v1--top-right"
+  >
+    <div
+      className="hig__flyout-v1__action"
+    >
+      <div
+        className="project-account-switcher__target"
+        onClick={[Function]}
+      >
+        <div
+          className="project-account-switcher__item"
+        >
+          <span
+            className="project-account-switcher__item__image-wrapper"
+          >
+            <img
+              className="project-account-switcher__item__image"
+            />
+            <span
+              className="project-account-switcher__item__image-placeholder"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "A1/P2",
+                }
+              }
+            />
+          </span>
+          <span
+            className="project-account-switcher__item__label"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "Account 1 / Project 2",
+              }
+            }
+          />
+        </div>
+        <span
+          className="project-account-switcher__target__caret"
+        >
+          <div
+            className="hig__icon hig__icon--24-size"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret-24\\"><polyline transform=\\"rotate(45 9.828 3)\\" points=\\"8 2 8 8 2 8\\" stroke=\\"#2E4258\\" stroke-width=\\"1.15\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"/></svg>",
+              }
+            }
+          />
+        </span>
+      </div>
+    </div>
+    <div
+      className="hig__flyout-v1__container"
+      style={
+        Object {
+          "left": undefined,
+          "top": undefined,
+        }
+      }
+    >
+      <div
+        className="hig__flyout-v1__chevron"
+      />
+      <div
+        className="hig__flyout-v1__panel"
+        onScroll={undefined}
+        style={
+          Object {
+            "maxHeight": undefined,
+          }
+        }
+      >
+        <div
+          className="project-account-switcher__lists"
+        >
+          <div
+            className="project-account-switcher__list"
+          >
+            <div
+              className="project-account-switcher__list__title"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "Accounts",
+                }
+              }
+            />
+            <div
+              className="project-account-switcher__item project-account-switcher__item--account project-account-switcher__item--active"
+              data-account-id="1"
+              onClick={[Function]}
+            >
+              <span
+                className="project-account-switcher__item__image-wrapper"
+              >
+                <span
+                  className="project-account-switcher__item__image-placeholder"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "A1",
+                    }
+                  }
+                  data-account-id="1"
+                />
+              </span>
+              <span
+                className="project-account-switcher__item__label"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "Account 1",
+                  }
+                }
+                data-account-id="1"
+              />
+            </div>
+            <div
+              className="project-account-switcher__item project-account-switcher__item--account project-account-switcher__item--active"
+              data-account-id="2"
+              onClick={[Function]}
+            >
+              <span
+                className="project-account-switcher__item__image-wrapper"
+              >
+                <span
+                  className="project-account-switcher__item__image-placeholder"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "A2",
+                    }
+                  }
+                  data-account-id="2"
+                />
+              </span>
+              <span
+                className="project-account-switcher__item__label"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "Account 2",
+                  }
+                }
+                data-account-id="2"
+              />
+            </div>
+          </div>
+          <div
+            className="project-account-switcher__list"
+          >
+            <div
+              className="project-account-switcher__list__title"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "Projects",
+                }
+              }
+            />
+            <div
+              className="project-account-switcher__item project-account-switcher__item--project project-account-switcher__item--active"
+              data-project-id="1"
+              onClick={[Function]}
+            >
+              <span
+                className="project-account-switcher__item__image-wrapper"
+              >
+                <span
+                  className="project-account-switcher__item__image-placeholder"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "P1",
+                    }
+                  }
+                  data-project-id="1"
+                />
+              </span>
+              <span
+                className="project-account-switcher__item__label"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "Project 1",
+                  }
+                }
+                data-project-id="1"
+              />
+            </div>
+            <div
+              className="project-account-switcher__item project-account-switcher__item--project project-account-switcher__item--active"
+              data-project-id="2"
+              onClick={[Function]}
+            >
+              <span
+                className="project-account-switcher__item__image-wrapper"
+              >
+                <span
+                  className="project-account-switcher__item__image-placeholder"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "P2",
+                    }
+                  }
+                  data-project-id="2"
+                />
+              </span>
+              <span
+                className="project-account-switcher__item__label"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "Project 2",
+                  }
+                }
+                data-project-id="2"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter renders without props 1`] = `
+<div
+  className="project-account-switcher"
+>
+  <div
+    className="hig__flyout-v1 hig__flyout-v1--exited hig__flyout-v1--top-right"
+  >
+    <div
+      className="hig__flyout-v1__action"
+    >
+      <div
+        className="project-account-switcher__target"
+        onClick={[Function]}
+      >
+        <div
+          className="project-account-switcher__item"
+        >
+          <span
+            className="project-account-switcher__item__image-wrapper"
+          >
+            <img
+              className="project-account-switcher__item__image"
+            />
+            <span
+              className="project-account-switcher__item__image-placeholder"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "A2/P2",
+                }
+              }
+            />
+          </span>
+          <span
+            className="project-account-switcher__item__label"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "Account 2 / Project 2",
+              }
+            }
+          />
+        </div>
+        <span
+          className="project-account-switcher__target__caret"
+        >
+          <div
+            className="hig__icon hig__icon--24-size"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "<svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret-24\\"><polyline transform=\\"rotate(45 9.828 3)\\" points=\\"8 2 8 8 2 8\\" stroke=\\"#2E4258\\" stroke-width=\\"1.15\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"/></svg>",
+              }
+            }
+          />
+        </span>
+      </div>
+    </div>
+    <div
+      className="hig__flyout-v1__container"
+      style={
+        Object {
+          "left": undefined,
+          "top": undefined,
+        }
+      }
+    >
+      <div
+        className="hig__flyout-v1__chevron"
+      />
+      <div
+        className="hig__flyout-v1__panel"
+        onScroll={undefined}
+        style={
+          Object {
+            "maxHeight": undefined,
+          }
+        }
+      >
+        <div
+          className="project-account-switcher__lists"
+        >
+          <div
+            className="project-account-switcher__list"
+          >
+            <div
+              className="project-account-switcher__list__title"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "Accounts",
+                }
+              }
+            />
+            <div
+              className="project-account-switcher__item project-account-switcher__item--account project-account-switcher__item--active"
+              data-account-id="1"
+              onClick={undefined}
+            >
+              <span
+                className="project-account-switcher__item__image-wrapper"
+              >
+                <span
+                  className="project-account-switcher__item__image-placeholder"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "A1",
+                    }
+                  }
+                  data-account-id="1"
+                />
+              </span>
+              <span
+                className="project-account-switcher__item__label"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "Account 1",
+                  }
+                }
+                data-account-id="1"
+              />
+            </div>
+            <div
+              className="project-account-switcher__item project-account-switcher__item--account project-account-switcher__item--active"
+              data-account-id="2"
+              onClick={undefined}
+            >
+              <span
+                className="project-account-switcher__item__image-wrapper"
+              >
+                <span
+                  className="project-account-switcher__item__image-placeholder"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "A2",
+                    }
+                  }
+                  data-account-id="2"
+                />
+              </span>
+              <span
+                className="project-account-switcher__item__label"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "Account 2",
+                  }
+                }
+                data-account-id="2"
+              />
+            </div>
+          </div>
+          <div
+            className="project-account-switcher__list"
+          >
+            <div
+              className="project-account-switcher__list__title"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "Projects",
+                }
+              }
+            />
+            <div
+              className="project-account-switcher__item project-account-switcher__item--project project-account-switcher__item--active"
+              data-project-id="1"
+              onClick={undefined}
+            >
+              <span
+                className="project-account-switcher__item__image-wrapper"
+              >
+                <span
+                  className="project-account-switcher__item__image-placeholder"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "P1",
+                    }
+                  }
+                  data-project-id="1"
+                />
+              </span>
+              <span
+                className="project-account-switcher__item__label"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "Project 1",
+                  }
+                }
+                data-project-id="1"
+              />
+            </div>
+            <div
+              className="project-account-switcher__item project-account-switcher__item--project project-account-switcher__item--active"
+              data-project-id="2"
+              onClick={undefined}
+            >
+              <span
+                className="project-account-switcher__item__image-wrapper"
+              >
+                <span
+                  className="project-account-switcher__item__image-placeholder"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "P2",
+                    }
+                  }
+                  data-project-id="2"
+                />
+              </span>
+              <span
+                className="project-account-switcher__item__label"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "Project 2",
+                  }
+                }
+                data-project-id="2"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
