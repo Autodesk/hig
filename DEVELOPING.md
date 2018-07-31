@@ -20,6 +20,8 @@
 - [Git commits](#git-commits)
 - [Package versioning](#package-versioning)
 - [Deployment](#deployment)
+  - [Storybook](#storybook)
+  - [Component packages](#component-packages)
   - [How to deploy](#how-to-deploy)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -129,11 +131,22 @@ Package versioning is automated via [Semantic Release][] and determined by commi
 
 ## Deployment
 
+### Storybook
+
+[Storybook][] is deployed when changes are merged into the `master` branch. [Storybook Staging][] is deployed when changes are merged into the `development` branch.
+
+[Storybook]: http://storybook.hig.autodesk.com/
+[Storybook Staging]: http://storybook-staging.hig.autodesk.com/
+
+### Component packages
+
 Packages are published via [Semantic Release][].
 
 ### How to deploy
 
 1. Create a pull request (PR) to merge `development` into `master`.
+    * Begin the PR title with `Release:` for consistency.
+    * Add the `release` issue label for discovery.
 1. Wait for the PR to receive approval and all automation to finish.
 1. Merge the PR with a **merge commit**
     * Merging with a merge commit ensures there's no loss of commit information.
