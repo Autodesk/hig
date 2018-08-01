@@ -1,3 +1,6 @@
 export default {
-  "ICON.WIDTH": "24px"
+  "ICON.WIDTH": {
+    type: "length",
+    value: "24px"
+  }
 };

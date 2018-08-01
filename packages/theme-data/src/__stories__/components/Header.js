@@ -43,7 +43,7 @@ export default function Header({ title }) {
                 lineHeight={Text.LINE_HEIGHTS.S}
                 color={Text.DEFAULT_TEXT_COLOR}
               >
-                Example
+                Value
               </Text>
             </div>
           </div>

@@ -31,13 +31,27 @@ const themes = [
     data: lightGrayTheme,
     config: lightGrayThemeConfig
   },
-  { name: "darkBlue", data: darkBlueTheme, config: darkBlueThemeConfig },
-  { name: "webLight", data: webLightTheme, config: webLightThemeConfig }
+  {
+    name: "darkBlue",
+    data: darkBlueTheme,
+    config: darkBlueThemeConfig
+  },
+  {
+    name: "webLight",
+    data: webLightTheme,
+    config: webLightThemeConfig
+  }
 ];
 
 const densities = [
-  { name: "LowDensity", config: lowDensityThemeConfig },
-  { name: "HighDensity", config: highDensityThemeConfig }
+  {
+    name: "LowDensity",
+    config: lowDensityThemeConfig
+  },
+  {
+    name: "HighDensity",
+    config: highDensityThemeConfig
+  }
 ];
 
 writeFile("baseThemeConfig", baseThemeConfig);

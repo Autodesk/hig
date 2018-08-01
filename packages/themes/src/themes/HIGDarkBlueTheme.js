@@ -1,11 +1,11 @@
-import darkBlueThemeData from "@hig/theme-data-poc/build/darkBlueTheme.json";
+import themeData from "@hig/theme-data-poc/build/darkBlueTheme.json";
+import themeConfig from "@hig/theme-data-poc/build/darkBlueThemeConfig.json";
 
-const HIGDarkBlueTheme = {
+export default {
   density: "medium",
   themeName: "Dark Blue",
   themeId: "hig-dark-blue",
   themeClass: "hig--dark-blue-theme",
-  themeData: darkBlueThemeData
+  themeData,
+  themeConfig
 };
-
-export default HIGDarkBlueTheme;

@@ -1,9 +1,39 @@
 export default {
-  "LABEL.FONT_SIZE": { ref: "DENSITY.FONT_SIZES.S" },
-  "LABEL.FONT_WEIGHT": { ref: "BASICS.FONT_WEIGHTS.REGULAR" },
-  "LABEL.FONT_FAMILY": { ref: "BASICS.FONT_FAMILIES.MAIN" },
-  "LABEL.FONT_COLOR": { abstract: true },
-  "LABEL.LINE_HEIGHT": { ref: "BASICS.LINE_HEIGHTS.M" },
-  "LABEL.HOVER.FONT_COLOR": { abstract: true },
-  "LABEL.DISABLED.FONT_COLOR": { abstract: true }
+  "LABEL.FONT_SIZE": {
+    type: "fontSize",
+    value: {
+      ref: "DENSITY.FONT_SIZES.S"
+    }
+  },
+  "LABEL.FONT_WEIGHT": {
+    type: "fontWeight",
+    value: {
+      ref: "BASICS.FONT_WEIGHTS.REGULAR"
+    }
+  },
+  "LABEL.FONT_FAMILY": {
+    type: "fontFamily",
+    value: {
+      ref: "BASICS.FONT_FAMILIES.MAIN"
+    }
+  },
+  "LABEL.FONT_COLOR": {
+    type: "color"
+  },
+  "LABEL.LINE_HEIGHT": {
+    type: "lineHeight",
+    value: {
+      ref: "BASICS.LINE_HEIGHTS.M"
+    }
+  },
+
+  // Hover
+  "LABEL.HOVER.FONT_COLOR": {
+    type: "color"
+  },
+
+  // Disabled
+  "LABEL.DISABLED.FONT_COLOR": {
+    type: "color"
+  }
 };

@@ -1,36 +1,137 @@
 export default {
-  "INPUT.MIN_HEIGHT": { ref: "DENSITY.INPUT.MIN_HEIGHT" },
-  "INPUT.VERTICAL_PADDING": { ref: "DENSITY.INPUT.VERTICAL_PADDING" },
-  "INPUT.DENSITY_MEDIUM_MIN_HEIGHT": "24px",
-  "INPUT.GRID_GUTTER_WIDTH": { ref: "DENSITY.SPACINGS.S" },
-  "INPUT.BORDER_RADIUS": { ref: "BASICS.BORDER_RADII.S" },
+  "INPUT.HORIZONTAL_PADDING": {
+    type: "length",
+    value: 0
+  },
+  "INPUT.VERTICAL_PADDING": {
+    type: "length",
+    value: {
+      ref: "DENSITY.SPACINGS.XXS"
+    }
+  },
+  "INPUT.BORDER_RADIUS": {
+    type: "borderRadius",
+    value: {
+      ref: "BASICS.BORDER_RADII.S"
+    }
+  },
   "INPUT.BORDER_COLOR": {
-    ref: "COLOR_SCHEME.SURFACE_LEVEL_1_5_COLOR"
+    type: "color",
+    value: {
+      ref: "COLOR_SCHEME.SURFACE_LEVEL_1_5_COLOR"
+    }
   },
+  "INPUT.BORDER_BOTTOM_COLOR": {
+    type: "color"
+  },
+  "INPUT.BORDER_BOTTOM_WIDTH": {
+    type: "borderWidth",
+    value: {
+      ref: "BASICS.BORDER_WIDTHS.S"
+    }
+  },
+  "INPUT.FONT_COLOR": {
+    type: "color",
+    value: {
+      ref: "COLOR_SCHEME.TEXT_COLOR"
+    }
+  },
+  "INPUT.FONT_WEIGHT": {
+    type: "fontWeight",
+    value: {
+      ref: "BASICS.FONT_WEIGHTS.MEDIUM"
+    }
+  },
+  "INPUT.FONT_FAMILY": {
+    type: "fontFamily",
+    value: {
+      ref: "BASICS.FONT_FAMILIES.MAIN"
+    }
+  },
+  "INPUT.FONT_SIZE": {
+    type: "fontSize",
+    value: {
+      ref: "DENSITY.FONT_SIZES.M"
+    }
+  },
+  "INPUT.LINE_HEIGHT": {
+    type: "lineHeight",
+    value: {
+      ref: "BASICS.LINE_HEIGHTS.M"
+    }
+  },
+  "INPUT.HALO.COLOR": {
+    type: "color"
+  },
+  "INPUT.HALO.WIDTH": {
+    type: "length",
+    value: {
+      ref: "BASICS.BORDER_WIDTHS.NONE"
+    }
+  },
+  "INPUT.GUTTER_WIDTH": {
+    type: "length",
+    value: {
+      ref: "DENSITY.SPACINGS.XS"
+    }
+  },
+  "INPUT.PLACEHOLDER.FONT_COLOR": {
+    type: "color",
+    value: {
+      ref: "COLOR_SCHEME.TEXT_COLOR_DIM"
+    }
+  },
+
+  // Hover
+  "INPUT.HOVER.BORDER_BOTTOM_COLOR": {
+    type: "color"
+  },
+  "INPUT.HOVER.HALO.WIDTH": {
+    type: "length",
+    value: {
+      ref: "BASICS.BORDER_WIDTHS.L"
+    }
+  },
+
+  // Focus
+  "INPUT.FOCUS.BORDER_BOTTOM_COLOR": {
+    type: "color"
+  },
+  "INPUT.FOCUS.HALO.WIDTH": {
+    type: "length",
+    value: {
+      ref: "BASICS.BORDER_WIDTHS.L"
+    }
+  },
+  "INPUT.FOCUS.HALO.COLOR": {
+    type: "color"
+  },
+
+  // Active
+  "INPUT.ACTIVE.HALO.WIDTH": {
+    type: "length",
+    value: {
+      ref: "BASICS.BORDER_WIDTHS.L"
+    }
+  },
+  "INPUT.ACTIVE.HALO.COLOR": {
+    type: "color"
+  },
+
+  // Disabled
   "INPUT.DISABLED.BORDER_COLOR": {
-    ref: "COLOR_SCHEME.SURFACE_LEVEL_1_5_COLOR"
+    type: "color",
+    value: {
+      ref: "COLOR_SCHEME.SURFACE_LEVEL_1_5_COLOR"
+    }
   },
-  "INPUT.BORDER_BOTTOM_COLOR": { abstract: true },
-  "INPUT.BORDER_BOTTOM_WIDTH": { ref: "BASICS.BORDER_WIDTHS.S" },
-  "INPUT.HOVER.BORDER_BOTTOM_COLOR": { abstract: true },
-  "INPUT.FOCUS.BORDER_BOTTOM_COLOR": { abstract: true },
-  "INPUT.FONT_COLOR": { ref: "COLOR_SCHEME.TEXT_COLOR" },
   "INPUT.DISABLED.FONT_COLOR": {
-    ref: "COLOR_SCHEME.TEXT_COLOR",
-    transform: { alpha: 0.2 }
-  },
-  "INPUT.HALO.COLOR": { abstract: true },
-  "INPUT.HALO.WIDTH": { ref: "BASICS.BORDER_WIDTHS.NONE" },
-  "INPUT.HOVER.HALO.WIDTH": { ref: "BASICS.BORDER_WIDTHS.L" },
-  "INPUT.FOCUS.HALO.WIDTH": { ref: "BASICS.BORDER_WIDTHS.L" },
-  "INPUT.FOCUS.HALO.COLOR": { abstract: true },
-  "INPUT.ACTIVE.HALO.WIDTH": { ref: "BASICS.BORDER_WIDTHS.L" },
-  "INPUT.ACTIVE.HALO.COLOR": { abstract: true },
-  "INPUT.FONT_WEIGHT": { ref: "BASICS.FONT_WEIGHTS.MEDIUM" },
-  "INPUT.FONT_FAMILY": { ref: "BASICS.FONT_FAMILIES.MAIN" },
-  "INPUT.HORIZONTAL_PADDING": 0,
-  "INPUT.GUTTER_WIDTH": { ref: "DENSITY.SPACINGS.XS" },
-  "INPUT.FONT_SIZE": { ref: "DENSITY.FONT_SIZES.M" },
-  "INPUT.LINE_HEIGHT": { ref: "BASICS.LINE_HEIGHTS.M" },
-  "INPUT.PLACEHOLDER.FONT_COLOR": { ref: "COLOR_SCHEME.TEXT_COLOR_DIM" }
+    type: "color",
+    value: {
+      ref: "COLOR_SCHEME.TEXT_COLOR"
+    },
+    transform: {
+      alpha: 0.2
+    }
+  }
 };
