@@ -37,5 +37,5 @@ import '@hig/top-nav/build/index.css';
 ## Basic usage
 
 ```jsx
-<TopNav />
+<TopNav logo={<Logo />} />
 ```
