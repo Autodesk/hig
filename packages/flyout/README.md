@@ -24,32 +24,33 @@ import "@hig/flyout/build/index.css";
 ```jsx
 <Flyout
   anchorPoint={anchorPoints.RIGHT_TOP}
-  content={
-    <div>
-      <h3>Important flyout information</h3>
-      <p>Any content can go in here.</p>
-    </div>
-  }
+  content={<p>Any content can go in here.</p>}
 >
   <Button title="Open flyout" />
 </Flyout>
 ```
 
-### Render prop `children`
+### Using render props for additional customization
 
 ```jsx
 <Flyout
-  content={
+  content={({ hideFlyout }) => (
     <div>
-      <h3>Important flyout information</h3>
-      <p>Any content can go in here.</p>
+      <button type="button" onClick={hideFlyout}>
+        Click to close
+      </button>
     </div>
-  }
+  )}
+  panel={({ content, handleScroll, hideFlyout, innerRef, maxHeight }) => (
+    <Flyout.Panel innerRef={innerRef} maxHeight={maxHeight}>
+      <CustomContainer onScroll={handleScroll}>{content}</CustomContainer>
+    </Flyout.Panel>
+  )}
 >
-  ({ handleClick }) => (
+  {({ handleClick }) => (
     <CustomWrapper>
       <CustomButton onClick={handleClick} />
     </CustomWrapper>
-  )
+  )}
 </Flyout>
 ```
