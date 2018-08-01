@@ -1,12 +1,12 @@
 import extendTheme from "../../utils/extendTheme";
 import mapKeys from "../../utils/mapKeys";
-import abstractTheme from "../abstractTheme";
+import baseTheme from "../baseTheme";
 import system from "./system";
 import input from "./components/input";
 import menu from "./components/menu";
 
 const lightGrayThemeConfig = extendTheme(
-  abstractTheme.config,
+  baseTheme.config,
   Object.assign(
     {},
     mapKeys(system.density, key => `DENSITY.${key}`),

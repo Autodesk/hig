@@ -3,7 +3,7 @@ import fs from "fs";
 
 import extendTheme from "../src/utils/extendTheme";
 import resolveTheme from "../src/utils/resolveTheme";
-import { config as abstractThemeConfig } from "../src/themes/abstractTheme";
+import { config as baseThemeConfig } from "../src/themes/baseTheme";
 import lightGrayTheme, {
   config as lightGrayThemeConfig
 } from "../src/themes/lightGrayTheme";
@@ -40,7 +40,7 @@ const densities = [
   { name: "HighDensity", config: highDensityThemeConfig }
 ];
 
-writeFile("abstractThemeConfig", abstractThemeConfig);
+writeFile("baseThemeConfig", baseThemeConfig);
 
 themes.forEach(theme => {
   writeFile(`${theme.name}Theme`, theme.data);
