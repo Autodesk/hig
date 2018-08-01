@@ -18,7 +18,8 @@
   flex: 1 1 auto;
   height: 100%;
   margin: 4px 0;
-  overflow-y: scroll;
+  overflow-y: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
   overflow-x: hidden;
 
   &::-webkit-scrollbar {
