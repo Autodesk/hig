@@ -4,8 +4,8 @@ describe("resolveTheme", () => {
   describe("with a reference", () => {
     it("flattens the reference", () => {
       const theme = {
-        ACCENT_COLOR: "#F00",
-        TEXT_COLOR: { ref: "ACCENT_COLOR" }
+        ACCENT_COLOR: { value: "#F00" },
+        TEXT_COLOR: { value: { ref: "ACCENT_COLOR" } }
       };
       expect(resolveTheme(theme)).toEqual({
         ACCENT_COLOR: "#F00",
@@ -16,7 +16,7 @@ describe("resolveTheme", () => {
     describe("to an unknown role", () => {
       it("throws an error", () => {
         const theme = {
-          ACCENT_COLOR: { ref: "GLITTER_BOMB" }
+          ACCENT_COLOR: { value: { ref: "GLITTER_BOMB" } }
         };
         expect(() => {
           resolveTheme(theme);
@@ -28,9 +28,9 @@ describe("resolveTheme", () => {
   describe("with a reference to another reference", () => {
     it("flattens the references", () => {
       const theme = {
-        ACCENT_COLOR: "#F00",
-        "INPUT.FOCUS.COLOR": { ref: "ACCENT_COLOR" },
-        "TEXTAREA.FOCUS.COLOR": { ref: "INPUT.FOCUS.COLOR" }
+        ACCENT_COLOR: { value: "#F00" },
+        "INPUT.FOCUS.COLOR": { value: { ref: "ACCENT_COLOR" } },
+        "TEXTAREA.FOCUS.COLOR": { value: { ref: "INPUT.FOCUS.COLOR" } }
       };
       expect(resolveTheme(theme)).toEqual({
         ACCENT_COLOR: "#F00",
@@ -43,7 +43,7 @@ describe("resolveTheme", () => {
   describe("with an abstract value", () => {
     it("throws an error", () => {
       const theme = {
-        ACCENT_COLOR: { abstract: true }
+        ACCENT_COLOR: { value: null }
       };
       expect(() => {
         resolveTheme(theme);
@@ -55,9 +55,9 @@ describe("resolveTheme", () => {
     describe("with a valid color value", () => {
       it("transforms the alpha value", () => {
         const theme = resolveTheme({
-          "BASICS.COLORS_RED_ALERT": "#FF0000",
+          "BASICS.COLORS_RED_ALERT": { value: "#FF0000" },
           ACCENT_COLOR: {
-            ref: "BASICS.COLORS_RED_ALERT",
+            value: { ref: "BASICS.COLORS_RED_ALERT" },
             transform: { alpha: 0.5 }
           }
         });
@@ -68,8 +68,11 @@ describe("resolveTheme", () => {
     describe("with an invalid color value", () => {
       it("throws an error", () => {
         const theme = {
-          "BASICS.SPACINGS_M": "16px",
-          ACCENT_COLOR: { ref: "BASICS.SPACINGS_M", transform: { alpha: 0.5 } }
+          "BASICS.SPACINGS_M": { value: "16px" },
+          ACCENT_COLOR: {
+            value: { ref: "BASICS.SPACINGS_M" },
+            transform: { alpha: 0.5 }
+          }
         };
         expect(() => {
           resolveTheme(theme);

@@ -8,29 +8,25 @@ function errorMsg(msg, referencingRole) {
   return msg;
 }
 
-function structureValues(theme, role) {
-  const value = theme[role];
-  if (typeof value === "string" || typeof value === "number") {
-    return { value: theme[role] };
-  }
-  return value;
-}
-
-function dereferenceValues(theme, role, referencingRole) {
+function dereferenceValue(theme, role, referencingRole) {
   const valueData = theme[role];
-  if (!valueData) {
+  if (valueData === undefined) {
     throw new Error(
       errorMsg(`Role "${role}" is not present in theme`, referencingRole)
     );
   }
-  if (valueData.abstract) {
+  if (valueData.value === null) {
     throw new Error(
       errorMsg(`You must provide a value for role "${role}"`, referencingRole)
     );
   }
-  const dereferencedValue = valueData.ref
-    ? { ...valueData, ...dereferenceValues(theme, valueData.ref, role) }
-    : valueData;
+  const dereferencedValue =
+    valueData.value && valueData.value.ref
+      ? {
+          ...valueData,
+          ...dereferenceValue(theme, valueData.value.ref, role)
+        }
+      : valueData;
   return dereferencedValue;
 }
 
@@ -42,7 +38,7 @@ function transformAlpha(role, valueData) {
   return color.setAlpha(valueData.transform.alpha).toRgbString();
 }
 
-function transformColors(theme, role) {
+function transformColorValue(theme, role) {
   const valueData = theme[role];
   const hasAlphaTransform =
     valueData.transform && valueData.transform.alpha !== undefined;
@@ -55,15 +51,13 @@ function transformColors(theme, role) {
   };
 }
 
-function destructureValues(theme, role) {
+function destructureValue(theme, role) {
   return theme[role].value;
 }
 
 export default function resolveTheme(theme) {
-  return [
-    structureValues,
-    dereferenceValues,
-    transformColors,
-    destructureValues
-  ].reduce((acc, fn) => mapValues(acc, fn), theme);
+  return [dereferenceValue, transformColorValue, destructureValue].reduce(
+    (acc, fn) => mapValues(acc, fn),
+    theme
+  );
 }
