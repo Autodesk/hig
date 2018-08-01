@@ -11,6 +11,13 @@ describe("<Flyout />", () => {
     });
   });
 
+  describe("with a width", () => {
+    it("passes width", () => {
+      const wrapper = shallow(<Flyout width="small" />);
+      expect(wrapper.find(FlyoutAdapter)).toHaveProp("width", "small");
+    });
+  });
+
   describe("toggleFlyout", () => {
     it("alternates between opening and closing the FlyoutAdapter", () => {
       const wrapper = shallow(<Flyout />);

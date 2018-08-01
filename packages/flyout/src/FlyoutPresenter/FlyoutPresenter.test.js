@@ -13,11 +13,29 @@ describe("flyout/FlyoutPresenter/FlyoutPresenter", () => {
       props: {}
     },
     {
+      description: "renders without size prop",
+      props: {
+        anchorPoint: anchorPoints.TOP_CENTER,
+        content: "World",
+        maxHeight: 150,
+        topOffset: 42,
+        leftOffset: 42,
+        refAction: function refAction() {},
+        refContainer: function refContainer() {},
+        refPanel: function refPanel() {},
+        refWrapper: function refWrapper() {},
+        onScroll: function onScroll() {},
+        transitionStatus: ENTERED,
+        children: <Button title="Hello" />
+      }
+    },
+    {
       description: "renders with all props",
       props: {
         anchorPoint: anchorPoints.TOP_CENTER,
         content: "World",
         maxHeight: 150,
+        size: "medium",
         topOffset: 42,
         leftOffset: 42,
         refAction: function refAction() {},

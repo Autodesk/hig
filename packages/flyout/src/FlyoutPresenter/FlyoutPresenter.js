@@ -38,6 +38,7 @@ export default function FlyoutPresenter(props) {
     anchorPoint,
     content,
     maxHeight,
+    size,
     topOffset,
     leftOffset,
     refAction,
@@ -69,7 +70,9 @@ export default function FlyoutPresenter(props) {
       >
         <div className="hig__flyout-v1__chevron" />
         <div
-          className="hig__flyout-v1__panel"
+          className={cx("hig__flyout-v1__panel", {
+            [`hig__flyout-v1__panel--${size}`]: !!size
+          })}
           ref={refPanel}
           style={panelStyle}
           onScroll={onScroll}
@@ -107,6 +110,8 @@ FlyoutPresenter.propTypes = {
   refWrapper: PropTypes.func,
   /** Function called when the flyout panel is scrolled */
   onScroll: PropTypes.func,
+  /** Width of the flyout content with one of the supported modifiers */
+  size: PropTypes.oneOf(Object.freeze(["small", "medium", "large"])),
   /** The status of the container transition */
   transitionStatus: PropTypes.oneOf(availableTransitionStatuses).isRequired,
   /** Target component to open the flyout */

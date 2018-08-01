@@ -90,6 +90,16 @@
   border: $panel-border-width solid color(hig-cool-gray-20);
   background-color: $panel-background-color;
   border-radius: $panel-border-radius;
+
+  &.hig__flyout-v1__panel--small {
+    width: 200px;
+  }
+  &.hig__flyout-v1__panel--medium {
+    width: 300px;
+  }
+  &.hig__flyout-v1__panel--large {
+    width: 400px;
+  }
 }
 
 .hig__flyout-v1__chevron {
