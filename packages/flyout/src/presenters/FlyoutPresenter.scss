@@ -1,5 +1,4 @@
 @import "~@hig/styles/mixins/colors.scss";
-@import "~@hig/styles/mixins/shadows.scss";
 @import "~@hig/styles/tokens/layers.scss";
 
 .hig__flyout-v1 {
@@ -8,10 +7,10 @@
 }
 
 .hig__flyout-v1__container {
-  @import "./tokens.scss";
+  @import "../tokens.scss";
 
   position: absolute;
-  // Resolves issues with negative positions and contaier overflow
+  // Resolves issues with negative positions and container overflow
   display: table;
   width: 100%;
   z-index: $flyout-container-layer;
@@ -37,7 +36,7 @@
 
 .hig__flyout-v1--exiting,
 .hig__flyout-v1--exited {
-  @import "./tokens.scss";
+  @import "../tokens.scss";
 
   .hig__flyout-v1__container {
     opacity: 0;
@@ -76,24 +75,8 @@
   }
 }
 
-.hig__flyout-v1__panel {
-  @import "./tokens.scss";
-  @include shadow("common");
-
-  box-sizing: border-box;
-  min-width: 200px;
-  max-width: 400px;
-  max-height: 360px;
-  padding: $panel-padding;
-  overflow-y: auto;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-  border: $panel-border-width solid color(hig-cool-gray-20);
-  background-color: $panel-background-color;
-  border-radius: $panel-border-radius;
-}
-
 .hig__flyout-v1__chevron {
-  @import "./tokens.scss";
+  @import "../tokens.scss";
 
   position: absolute;
   width: $chevron-size;
@@ -190,8 +173,8 @@
   }
 }
 
-.hig__flyout-v1__container::after {
-  @import "./tokens.scss";
+.hig__flyout-v1__chevron-cover {
+  @import "../tokens.scss";
 
   content: "";
   position: absolute;

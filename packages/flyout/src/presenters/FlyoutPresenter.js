@@ -9,7 +9,7 @@ import {
 } from "react-transition-group/Transition";
 
 import { anchorPoints, availableAnchorPoints } from "../anchorPoints";
-import "./flyout.scss";
+import "./FlyoutPresenter.scss";
 
 const availableTransitionStatuses = [EXITED, ENTERING, ENTERED, EXITING];
 
@@ -36,21 +36,17 @@ const anchorPointToModifier = {
 export default function FlyoutPresenter(props) {
   const {
     anchorPoint,
-    content,
-    maxHeight,
-    topOffset,
+    children,
     leftOffset,
+    panel,
     refAction,
     refContainer,
-    refPanel,
     refWrapper,
-    onScroll,
-    transitionStatus,
-    children
+    topOffset,
+    transitionStatus
   } = props;
 
   const containerStyle = { top: topOffset, left: leftOffset };
-  const panelStyle = { maxHeight };
   const wrapperClasses = cx([
     "hig__flyout-v1",
     transitionStateToModifier[transitionStatus],
@@ -67,15 +63,17 @@ export default function FlyoutPresenter(props) {
         style={containerStyle}
         ref={refContainer}
       >
-        <div className="hig__flyout-v1__chevron" />
         <div
-          className="hig__flyout-v1__panel"
-          ref={refPanel}
-          style={panelStyle}
-          onScroll={onScroll}
-        >
-          {content}
-        </div>
+          className="hig__flyout-v1__chevron"
+          role="presentation"
+          aria-hidden="true"
+        />
+        <div
+          className="hig__flyout-v1__chevron-cover"
+          role="presentation"
+          aria-hidden="true"
+        />
+        {panel}
       </div>
     </div>
   );
@@ -90,9 +88,7 @@ FlyoutPresenter.propTypes = {
   /** Where the flyout will be anchored relative to target */
   anchorPoint: PropTypes.oneOf(availableAnchorPoints).isRequired,
   /** Content for the flyout */
-  content: PropTypes.node,
-  /** Max height of the flyout content, in pixels */
-  maxHeight: PropTypes.number,
+  panel: PropTypes.node,
   /** Top position of the container relative to the action */
   topOffset: PropTypes.number,
   /** Left position of the container relative to the action */
@@ -101,12 +97,8 @@ FlyoutPresenter.propTypes = {
   refAction: PropTypes.func,
   /** Reference the container element */
   refContainer: PropTypes.func,
-  /** Reference the panel element */
-  refPanel: PropTypes.func,
   /** Reference the wrapper element */
   refWrapper: PropTypes.func,
-  /** Function called when the flyout panel is scrolled */
-  onScroll: PropTypes.func,
   /** The status of the container transition */
   transitionStatus: PropTypes.oneOf(availableTransitionStatuses).isRequired,
   /** Target component to open the flyout */

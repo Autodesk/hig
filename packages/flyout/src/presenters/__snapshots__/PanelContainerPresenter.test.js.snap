@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`flyout/presenters/PanelContainerPresenter renders with all props 1`] = `
+<div
+  className="hig__flyout-v1__panel-container"
+  style={
+    Object {
+      "maxHeight": 150,
+    }
+  }
+>
+  <div
+    className="hig__flyout-v1__panel-container__inner"
+  >
+    Hello World
+  </div>
+</div>
+`;
+
+exports[`flyout/presenters/PanelContainerPresenter renders without props 1`] = `
+<div
+  className="hig__flyout-v1__panel-container"
+  style={
+    Object {
+      "maxHeight": undefined,
+    }
+  }
+>
+  <div
+    className="hig__flyout-v1__panel-container__inner"
+  />
+</div>
+`;
