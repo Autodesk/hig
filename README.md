@@ -1,5 +1,7 @@
 # Human Interface Guidelines
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Autodesk/hig.svg)](https://greenkeeper.io/)
+
 HIG is Autodesk's unified design system, so we can build better products faster.
 
 ## Getting started

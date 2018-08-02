@@ -1,5 +1,5 @@
 export default {
-  REGULAR: 400,
-  MEDIUM: 600,
-  BOLD: 700
+  REGULAR: { value: 400, type: "fontWeight" },
+  MEDIUM: { value: 600, type: "fontWeight" },
+  BOLD: { value: 700, type: "fontWeight" }
 };

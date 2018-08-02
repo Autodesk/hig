@@ -26,7 +26,7 @@ export default function FontSample({ fontWeight, fontSize, fontFamily }) {
 }
 
 FontSample.propTypes = {
-  fontWeight: PropTypes.string,
+  fontWeight: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   fontSize: PropTypes.string,
   fontFamily: PropTypes.string
 };

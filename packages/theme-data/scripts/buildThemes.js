@@ -3,7 +3,7 @@ import fs from "fs";
 
 import extendTheme from "../src/utils/extendTheme";
 import resolveTheme from "../src/utils/resolveTheme";
-import { config as abstractThemeConfig } from "../src/themes/abstractTheme";
+import { config as baseThemeConfig } from "../src/themes/baseTheme";
 import lightGrayTheme, {
   config as lightGrayThemeConfig
 } from "../src/themes/lightGrayTheme";
@@ -31,16 +31,30 @@ const themes = [
     data: lightGrayTheme,
     config: lightGrayThemeConfig
   },
-  { name: "darkBlue", data: darkBlueTheme, config: darkBlueThemeConfig },
-  { name: "webLight", data: webLightTheme, config: webLightThemeConfig }
+  {
+    name: "darkBlue",
+    data: darkBlueTheme,
+    config: darkBlueThemeConfig
+  },
+  {
+    name: "webLight",
+    data: webLightTheme,
+    config: webLightThemeConfig
+  }
 ];
 
 const densities = [
-  { name: "LowDensity", config: lowDensityThemeConfig },
-  { name: "HighDensity", config: highDensityThemeConfig }
+  {
+    name: "LowDensity",
+    config: lowDensityThemeConfig
+  },
+  {
+    name: "HighDensity",
+    config: highDensityThemeConfig
+  }
 ];
 
-writeFile("abstractThemeConfig", abstractThemeConfig);
+writeFile("baseThemeConfig", baseThemeConfig);
 
 themes.forEach(theme => {
   writeFile(`${theme.name}Theme`, theme.data);

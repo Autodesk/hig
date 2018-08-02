@@ -10,7 +10,7 @@ import label from "./components/label";
 import menu from "./components/menu";
 import icon from "./components/icon";
 
-const abstractThemeConfig = extendTheme(
+const baseThemeConfig = extendTheme(
   {},
   Object.assign(
     {},
@@ -35,4 +35,4 @@ const abstractThemeConfig = extendTheme(
   )
 );
 
-export default abstractThemeConfig;
+export default baseThemeConfig;

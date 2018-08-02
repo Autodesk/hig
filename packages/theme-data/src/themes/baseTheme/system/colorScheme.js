@@ -1,0 +1,21 @@
+export default {
+  SURFACE_LEVEL_1_COLOR: { type: "color" },
+  SURFACE_LEVEL_1_5_COLOR: { type: "color" },
+  SURFACE_LEVEL_2_COLOR: { type: "color" },
+  SURFACE_LEVEL_3_COLOR: { type: "color" },
+  SURFACE_LEVEL_4_COLOR: { type: "color" },
+  ACCENT_COLOR_100: { type: "color" },
+  ACCENT_COLOR_200: { type: "color" },
+  ACCENT_COLOR_300: { type: "color" },
+  ACCENT_COLOR_400: { type: "color" },
+  ACCENT_COLOR_500: { type: "color" },
+  ACCENT_COLOR_600: { type: "color" },
+  ACCENT_COLOR_700: { type: "color" },
+  ACCENT_COLOR_800: { type: "color" },
+  ACCENT_COLOR_900: { type: "color" },
+  "COMPONENT.BACKGROUND_COLOR": { type: "color" },
+  TEXT_COLOR: { type: "color" },
+  TEXT_COLOR_DIM: { type: "color" },
+  LOW_SHADOW_COLOR: { type: "color" },
+  HIGH_SHADOW_COLOR: { type: "color" }
+};

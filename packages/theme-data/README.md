@@ -39,14 +39,14 @@ console.log(lightGrayTheme.data);
 import { extendTheme, resolveTheme, lightGrayTheme } from '@hig/theme-data-poc';
 
 const redAccentedThemeConfig = extendTheme(lightGrayTheme.config, {
-    "COLOR_SCHEME.ACCENT_COLOR": "#F00",
+    "COLOR_SCHEME.ACCENT_COLOR_500": "#F00",
 });
 const redAccentedTheme = resolveTheme(redAccentedThemeConfig);
 
 console.log(redAccentedTheme);
 // {
 // ...
-//  "COLOR_SCHEME.ACCENT_COLOR": "#F00",
+//  "COLOR_SCHEME.ACCENT_COLOR_500": "#F00",
 //  "INPUT.FOCUS.BORDER_BOTTOM_COLOR": "#F00"
 // ...
 // }

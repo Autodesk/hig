@@ -11,7 +11,7 @@
     "create-dependency-hash": "cat yarn.lock > .dependency-hash && ls ./packages >> .dependency-hash",
     "lint": "lerna run lint --stream",
     "test": "jest --watch",
-    "test-ci": "jest --coverage --runInBand --colors",
+    "test-ci": "jest --coverage -w=2 --colors",
     "publish-canary": "lerna publish --canary --yes --exact",
     "release": "lerna run release --stream --concurrency 1 --scope @hig/*",
     "extract": "yarn run extract:dependencies && yarn run extract:builds",
@@ -27,8 +27,8 @@
     "doctoc": "^1.3.1",
     "lerna": "^2.11.0",
     "mkdirp": "^0.5.1",
-    "node-fetch": "^1.7.3",
-    "registry-url": "^3.1.0"
+    "node-fetch": "^2.2.0",
+    "registry-url": "^4.0.0"
   },
   "workspaces": [
     "packages/*"

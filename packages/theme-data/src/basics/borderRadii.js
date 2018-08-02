@@ -1,8 +1,8 @@
 export default {
-  NONE: "0",
-  S: "0",
-  M: "2px",
-  L: "4px",
-  ELLIPSE: "50%",
-  PILL: "1000em"
+  NONE: { value: "0", type: "borderRadius" },
+  S: { value: "0", type: "borderRadius" },
+  M: { value: "2px", type: "borderRadius" },
+  L: { value: "4px", type: "borderRadius" },
+  ELLIPSE: { value: "50%", type: "borderRadius" },
+  PILL: { value: "1000em", type: "borderRadius" }
 };
