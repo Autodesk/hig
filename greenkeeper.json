@@ -29,7 +29,6 @@
         "packages/progress-ring/package.json",
         "packages/project-account-switcher/package.json",
         "packages/radio-button/package.json",
-        "packages/react/package.json",
         "packages/rich-text/package.json",
         "packages/scripts/package.json",
         "packages/semantic-release-config/package.json",
@@ -49,8 +48,7 @@
         "packages/tooltip/package.json",
         "packages/top-nav/package.json",
         "packages/typography/package.json",
-        "packages/utils/package.json",
-        "packages/vanilla/package.json"
+        "packages/utils/package.json"
       ]
     }
   }
