@@ -1,14 +1,14 @@
 import extendTheme from "../../utils/extendTheme";
 import mapKeys from "../../utils/mapKeys";
 import system from "./system";
-import { config as abstractThemeConfig } from "../abstractTheme";
+import { config as baseThemeConfig } from "../baseTheme";
 import { config as mediumDensityThemeConfig } from "../mediumDensityTheme";
 import formField from "./components/formField";
 import input from "./components/input";
 import label from "./components/label";
 
 const darkBlueThemeConfig = extendTheme(
-  abstractThemeConfig,
+  baseThemeConfig,
   Object.assign(
     {},
     mediumDensityThemeConfig,

@@ -1,14 +1,62 @@
 export default {
-  "SPACINGS.XXS": { ref: "BASICS.SPACINGS.HIGH_XXS" },
-  "SPACINGS.XS": { ref: "BASICS.SPACINGS.HIGH_XS" },
-  "SPACINGS.S": { ref: "BASICS.SPACINGS.HIGH_S" },
-  "SPACINGS.M": { ref: "BASICS.SPACINGS.HIGH_M" },
-  "SPACINGS.L": { ref: "BASICS.SPACINGS.HIGH_L" },
-  "SPACINGS.XL": { ref: "BASICS.SPACINGS.HIGH_XL" },
-  "SPACINGS.XXL": { ref: "BASICS.SPACINGS.HIGH_XXL" },
-  "FONT_SIZES.S": { ref: "BASICS.FONT_SIZES.HIGH_S" },
-  "FONT_SIZES.M": { ref: "BASICS.FONT_SIZES.HIGH_M" },
-  "FONT_SIZES.L": { ref: "BASICS.FONT_SIZES.HIGH_L" },
-  "FONT_SIZES.XL": { ref: "BASICS.FONT_SIZES.HIGH_XL" },
-  "FONT_SIZES.XXL": { ref: "BASICS.FONT_SIZES.HIGH_XXL" }
+  "SPACINGS.XXS": {
+    value: {
+      ref: "BASICS.SPACINGS.HIGH_XXS"
+    }
+  },
+  "SPACINGS.XS": {
+    value: {
+      ref: "BASICS.SPACINGS.HIGH_XS"
+    }
+  },
+  "SPACINGS.S": {
+    value: {
+      ref: "BASICS.SPACINGS.HIGH_S"
+    }
+  },
+  "SPACINGS.M": {
+    value: {
+      ref: "BASICS.SPACINGS.HIGH_M"
+    }
+  },
+  "SPACINGS.L": {
+    value: {
+      ref: "BASICS.SPACINGS.HIGH_L"
+    }
+  },
+  "SPACINGS.XL": {
+    value: {
+      ref: "BASICS.SPACINGS.HIGH_XL"
+    }
+  },
+  "SPACINGS.XXL": {
+    value: {
+      ref: "BASICS.SPACINGS.HIGH_XXL"
+    }
+  },
+  "FONT_SIZES.S": {
+    value: {
+      ref: "BASICS.FONT_SIZES.HIGH_S"
+    }
+  },
+  "FONT_SIZES.M": {
+    value: {
+      ref: "BASICS.FONT_SIZES.HIGH_M"
+    }
+  },
+  "FONT_SIZES.L": {
+    value: {
+      ref: "BASICS.FONT_SIZES.HIGH_L"
+    }
+  },
+  "FONT_SIZES.XL": {
+    value: {
+      ref: "BASICS.FONT_SIZES.HIGH_XL"
+    }
+  },
+  "FONT_SIZES.XXL": {
+    value: {
+      ref: "BASICS.FONT_SIZES.HIGH_XXL"
+    }
+  }
 };

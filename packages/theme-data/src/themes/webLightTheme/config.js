@@ -8,13 +8,37 @@ const oldBasics = {
 };
 
 const webLightThemeConfig = extendTheme(lightGrayThemeConfig, {
-  "INPUT.HOVER.BORDER_BOTTOM_COLOR": oldBasics.colors["hig-turquoise-50"],
-  "INPUT.HOVER.HALO.WIDTH": { ref: "BASICS.BORDER_WIDTHS.S" },
-  "INPUT.HALO.COLOR": oldBasics.colors["hig-turquoise-50"],
-  "INPUT.FOCUS.HALO.WIDTH": { ref: "BASICS.BORDER_WIDTHS.S" },
-  "INPUT.FOCUS.HALO.COLOR": { ref: "COLOR_SCHEME.ACCENT_COLOR_500" },
-  "INPUT.ACTIVE.HALO.WIDTH": { ref: "BASICS.BORDER_WIDTHS.S" },
-  "INPUT.ACTIVE.HALO.COLOR": { ref: "COLOR_SCHEME.ACCENT_COLOR_500" }
+  "INPUT.HOVER.BORDER_BOTTOM_COLOR": {
+    value: oldBasics.colors["hig-turquoise-50"]
+  },
+  "INPUT.HOVER.HALO.WIDTH": {
+    value: {
+      ref: "BASICS.BORDER_WIDTHS.S"
+    }
+  },
+  "INPUT.HALO.COLOR": {
+    value: oldBasics.colors["hig-turquoise-50"]
+  },
+  "INPUT.FOCUS.HALO.WIDTH": {
+    value: {
+      ref: "BASICS.BORDER_WIDTHS.S"
+    }
+  },
+  "INPUT.FOCUS.HALO.COLOR": {
+    value: {
+      ref: "COLOR_SCHEME.ACCENT_COLOR_500"
+    }
+  },
+  "INPUT.ACTIVE.HALO.WIDTH": {
+    value: {
+      ref: "BASICS.BORDER_WIDTHS.S"
+    }
+  },
+  "INPUT.ACTIVE.HALO.COLOR": {
+    value: {
+      ref: "COLOR_SCHEME.ACCENT_COLOR_500"
+    }
+  }
 });
 
 export default webLightThemeConfig;

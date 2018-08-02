@@ -1,11 +1,11 @@
-import webLightThemeData from "@hig/theme-data-poc/build/webLightTheme.json";
+import themeData from "@hig/theme-data-poc/build/webLightTheme.json";
+import themeConfig from "@hig/theme-data-poc/build/webLightThemeConfig.json";
 
-const HIGLightTheme = {
+export default {
   density: "medium",
   themeName: "Web Light",
   themeId: "hig-light",
   themeClass: "hig--light-theme",
-  themeData: webLightThemeData
+  themeData,
+  themeConfig
 };
-
-export default HIGLightTheme;

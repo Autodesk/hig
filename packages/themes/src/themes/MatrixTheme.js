@@ -5,7 +5,8 @@ const MatrixTheme = {
   themeName: "BIM360 Matrix",
   themeId: "matrix",
   themeClass: "hig--matrix-theme",
-  themeData: HIGWebLight
+  themeData: HIGWebLight.themeData,
+  themeConfig: HIGWebLight.themeConfig
 };
 
 export default MatrixTheme;

@@ -79,7 +79,7 @@ export default class Checkbox extends Component {
         onChange={onChange}
         onClick={onClick}
       >
-        {({ checked, handleClick }) => (
+        {({ checked, handleChange, handleClick }) => (
           <CheckboxPresenter
             checked={checked}
             disabled={disabled}
@@ -87,6 +87,7 @@ export default class Checkbox extends Component {
             label={label}
             name={name}
             onBlur={onBlur}
+            onChange={handleChange}
             onClick={handleClick}
             onFocus={onFocus}
             required={required}
