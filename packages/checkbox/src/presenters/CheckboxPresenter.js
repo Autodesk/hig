@@ -33,6 +33,10 @@ export default class CheckboxPresenter extends Component {
      */
     onBlur: PropTypes.func,
     /**
+     * Called when the checkbox is changed
+     */
+    onChange: PropTypes.func,
+    /**
      * Called when user clicks on the checkbox
      */
     onClick: PropTypes.func,
@@ -76,6 +80,7 @@ export default class CheckboxPresenter extends Component {
       label,
       name,
       onBlur,
+      onChange,
       onClick,
       onFocus,
       required,
@@ -104,6 +109,7 @@ export default class CheckboxPresenter extends Component {
           disabled={disabled}
           name={name}
           onBlur={onBlur}
+          onChange={onChange}
           onClick={onClick}
           onFocus={onFocus}
           ref={this.setIndeterminate}
