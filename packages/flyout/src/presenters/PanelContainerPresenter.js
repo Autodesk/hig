@@ -18,7 +18,10 @@ export default function PanelContainerPresenter(props) {
 }
 
 PanelContainerPresenter.propTypes = {
+  /** A required ref that's used to position the flyout */
+  innerRef: PropTypes.func.isRequired,
+  /** The panel content */
   children: PropTypes.node,
-  innerRef: PropTypes.func,
+  /** Max height of the panel */
   maxHeight: PropTypes.number
 };
