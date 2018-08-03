@@ -2,13 +2,11 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
 import IconButton from "@hig/icon-button";
-import Input from "./presenters/Input";
+import { generateId } from "@hig/utils";
 
-import "./text-field.scss";
+import Input from "./Input";
 
-function generatedId() {
-  return `text-field-${Math.floor(Math.random() * 100000, 5)}`;
-}
+import "./TextFieldPresenter.scss";
 
 export default class TextFieldPresenter extends Component {
   static propTypes = {
@@ -95,13 +93,14 @@ export default class TextFieldPresenter extends Component {
   };
 
   static defaultProps = {
-    id: generatedId(),
     type: "text"
   };
 
   state = {
     focused: false
   };
+
+  id = generateId("text-field");
 
   handleFocus = event => {
     this.setState({ focused: true });
@@ -141,6 +140,7 @@ export default class TextFieldPresenter extends Component {
         : this.state.focused;
 
     const {
+      id = this.id,
       type,
       errors,
       focused,
@@ -180,7 +180,7 @@ export default class TextFieldPresenter extends Component {
 
             {label && (
               <label
-                htmlFor={this.props.id}
+                htmlFor={id}
                 className={cx("hig__text-field-v1__label", {
                   "hig__text-field-v1__label--input-focused": isFocused,
                   "hig__text-field-v1__label--required": required,
@@ -197,13 +197,14 @@ export default class TextFieldPresenter extends Component {
                   className={cx("hig__text-field-v1__icon", {
                     "hig__text-field-v1__icon--disabled": this.props.disabled
                   })}
-                  htmlFor={this.props.id}
+                  htmlFor={id}
                 >
                   {icon}
                 </label>
               )}
 
               <Input
+                id={id}
                 type={type}
                 {...inputProps}
                 onBlur={this.handleBlur}

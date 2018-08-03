@@ -1,2 +1,2 @@
 export { default } from "./TextField";
-export { default as TextFieldPresenter } from "./TextFieldPresenter";
+export { default as TextFieldPresenter } from "./presenters/TextFieldPresenter";
