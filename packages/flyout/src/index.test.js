@@ -13,6 +13,14 @@ describe("flyout/index", () => {
     {
       name: "anchorPoints",
       value: expect.any(Object)
+    },
+    {
+      name: "Panel",
+      value: expect.any(Function)
+    },
+    {
+      name: "default.Panel",
+      value: expect.any(Function)
     }
   ].forEach(({ name, value }) => {
     it(`exports ${name}`, () => {

@@ -4,10 +4,21 @@ import Transition from "react-transition-group/Transition";
 import { polyfill } from "react-lifecycles-compat";
 
 import { anchorPoints, availableAnchorPoints } from "./anchorPoints";
-import FlyoutPresenter from "./FlyoutPresenter";
+import FlyoutPresenter from "./presenters/FlyoutPresenter";
 import getFlyoutPosition from "./getFlyoutPosition";
+import PanelPresenter from "./presenters/PanelPresenter";
+import PanelContainerPresenter from "./presenters/PanelContainerPresenter";
 
 const TRANSITION_DURATION = 300;
+
+/**
+ * @typedef {Object} PanelRendererPayload
+ * @property {function(HTMLElement): void} innerRef
+ * @property {function(): void} hideFlyout
+ * @property {JSX} [content]
+ * @property {function(UIEvent): void} [handleScroll]
+ * @property {number} [maxHeight]
+ */
 
 class Flyout extends Component {
   static propTypes = {
@@ -15,8 +26,10 @@ class Flyout extends Component {
     anchorPoint: PropTypes.oneOf(availableAnchorPoints),
     /** Target component to open the flyout. Can be either a node or a render function */
     children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
-    /** Content for the flyout */
-    content: PropTypes.node,
+    /** Content for the flyout. Can be either a node or a render function */
+    content: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+    /** Use to render a custom flyout panel. Can be either a node or a render function */
+    panel: PropTypes.func,
     /** Max height of the flyout content, in pixels */
     maxHeight: PropTypes.number,
     /** Function called when the flyout is open, and a click event occurs outside the flyout */
@@ -28,7 +41,17 @@ class Flyout extends Component {
   };
 
   static defaultProps = {
-    anchorPoint: anchorPoints.RIGHT_TOP
+    anchorPoint: anchorPoints.RIGHT_TOP,
+    /**
+     * @param {PanelRendererPayload} payload
+     */
+    panel({ innerRef, content, handleScroll, maxHeight }) {
+      return (
+        <PanelContainerPresenter innerRef={innerRef} maxHeight={maxHeight}>
+          <PanelPresenter onScroll={handleScroll}>{content}</PanelPresenter>
+        </PanelContainerPresenter>
+      );
+    }
   };
 
   /**
@@ -45,6 +68,10 @@ class Flyout extends Component {
     return { isVisible: open };
   }
 
+  /**
+   * @type {Object}
+   * @property {boolean} isVisible Used to direct the flyout's transition behavior
+   */
   state = {
     isVisible: false
   };
@@ -58,12 +85,12 @@ class Flyout extends Component {
   }
 
   getPresenterPositionProps() {
-    const { action, panel } = this;
+    const { actionRef, panelRef } = this;
 
-    if (!action || !panel) return { top: 0, left: 0 };
+    if (!actionRef || !panelRef) return { top: 0, left: 0 };
 
-    const actionRect = action.getBoundingClientRect();
-    const panelRect = panel.getBoundingClientRect();
+    const actionRect = actionRef.getBoundingClientRect();
+    const panelRect = panelRef.getBoundingClientRect();
     const viewportRect = window.document.documentElement.getBoundingClientRect();
     const { anchorPoint } = this.props;
 
@@ -76,16 +103,16 @@ class Flyout extends Component {
   }
 
   /** @type {HTMLElement} */
-  action;
+  actionRef;
 
   /** @type {HTMLDivElement} */
-  container;
+  containerRef;
+
+  /** @type {HTMLElement} */
+  panelRef;
 
   /** @type {HTMLDivElement} */
-  panel;
-
-  /** @type {HTMLDivElement} */
-  wrapper;
+  wrapperRef;
 
   handleChildClick = () => {
     this.toggleVisibility();
@@ -95,11 +122,11 @@ class Flyout extends Component {
    * @param {MouseEvent} event
    */
   handleBodyClick = event => {
-    const { wrapper } = this;
+    const { wrapperRef } = this;
     const { isVisible } = this.state;
     const { onClickOutside } = this.props;
     const flyoutClicked =
-      event.target === wrapper || wrapper.contains(event.target);
+      event.target === wrapperRef || wrapperRef.contains(event.target);
 
     if (flyoutClicked || !isVisible) return;
     if (onClickOutside) onClickOutside(event);
@@ -108,31 +135,37 @@ class Flyout extends Component {
   };
 
   /**
-   * @param {HTMLElement} action
+   * @param {HTMLElement} actionRef
    */
-  refAction = action => {
-    this.action = action;
+  refAction = actionRef => {
+    this.actionRef = actionRef;
   };
 
   /**
-   * @param {HTMLDivElement} container
+   * @param {HTMLDivElement} containerRef
    */
-  refContainer = container => {
-    this.container = container;
+  refContainer = containerRef => {
+    this.containerRef = containerRef;
   };
 
   /**
-   * @param {HTMLDivElement} panel
+   * @param {HTMLElement} panelRef
    */
-  refPanel = panel => {
-    this.panel = panel;
+  refPanel = panelRef => {
+    this.panelRef = panelRef;
   };
 
   /**
-   * @param {HTMLDivElement} wrapper
+   * @param {HTMLDivElement} wrapperRef
    */
-  refWrapper = wrapper => {
-    this.wrapper = wrapper;
+  refWrapper = wrapperRef => {
+    this.wrapperRef = wrapperRef;
+  };
+
+  hideFlyout = () => {
+    this.setState({
+      isVisible: false
+    });
   };
 
   toggleVisibility() {
@@ -142,8 +175,8 @@ class Flyout extends Component {
   }
 
   createPresenterProps(transitionStatus) {
-    const { content, maxHeight, onScroll } = this.props;
-    const { refContainer, refPanel, refAction, refWrapper } = this;
+    const { refContainer, refAction, refWrapper } = this;
+    const panel = this.renderPanel();
     const {
       anchorPoint,
       topOffset,
@@ -152,17 +185,51 @@ class Flyout extends Component {
 
     return {
       anchorPoint,
-      topOffset,
       leftOffset,
-      content,
-      maxHeight,
+      panel,
       refAction,
       refContainer,
-      refPanel,
       refWrapper,
-      transitionStatus,
-      onScroll
+      topOffset,
+      transitionStatus
     };
+  }
+
+  /**
+   * @returns {PanelRendererPayload}
+   */
+  createPanelPayload() {
+    const { hideFlyout } = this;
+    const { maxHeight, onScroll } = this.props;
+
+    return {
+      hideFlyout,
+      maxHeight,
+      content: this.renderContent(),
+      handleScroll: onScroll,
+      innerRef: this.refPanel
+    };
+  }
+
+  renderContent() {
+    const { content } = this.props;
+    const { hideFlyout } = this;
+
+    if (typeof content === "function") {
+      return content({ hideFlyout });
+    }
+
+    return content;
+  }
+
+  renderPanel() {
+    const { panel } = this.props;
+
+    if (typeof panel === "function") {
+      return panel(this.createPanelPayload());
+    }
+
+    return panel;
   }
 
   renderChildren() {
@@ -180,16 +247,14 @@ class Flyout extends Component {
     return children;
   }
 
-  renderPresenter = transitionStatus => (
-    <FlyoutPresenter {...this.createPresenterProps(transitionStatus)}>
-      {this.renderChildren()}
-    </FlyoutPresenter>
-  );
-
   render() {
     return (
       <Transition in={this.state.isVisible} timeout={TRANSITION_DURATION}>
-        {this.renderPresenter}
+        {transitionStatus => (
+          <FlyoutPresenter {...this.createPresenterProps(transitionStatus)}>
+            {this.renderChildren()}
+          </FlyoutPresenter>
+        )}
       </Transition>
     );
   }
