@@ -13,11 +13,11 @@ const TRANSITION_DURATION = 300;
 
 /**
  * @typedef {Object} PanelRendererPayload
- * @property {JSX} [content]
- * @property {function(UIEvent): void} handleScroll
- * @property {function(): void} hideFlyout
- * @property {number} [maxHeight]
  * @property {function(HTMLElement): void} innerRef
+ * @property {function(): void} hideFlyout
+ * @property {JSX} [content]
+ * @property {function(UIEvent): void} [handleScroll]
+ * @property {number} [maxHeight]
  */
 
 class Flyout extends Component {
