@@ -31,19 +31,15 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders with all props 1`] = `
     }
   >
     <div
+      aria-hidden="true"
       className="hig__flyout-v1__chevron"
+      role="presentation"
     />
     <div
-      className="hig__flyout-v1__panel"
-      onScroll={[Function]}
-      style={
-        Object {
-          "maxHeight": 150,
-        }
-      }
-    >
-      World
-    </div>
+      aria-hidden="true"
+      className="hig__flyout-v1__chevron-cover"
+      role="presentation"
+    />
   </div>
 </div>
 `;
@@ -65,16 +61,14 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders without props 1`] = `
     }
   >
     <div
+      aria-hidden="true"
       className="hig__flyout-v1__chevron"
+      role="presentation"
     />
     <div
-      className="hig__flyout-v1__panel"
-      onScroll={undefined}
-      style={
-        Object {
-          "maxHeight": undefined,
-        }
-      }
+      aria-hidden="true"
+      className="hig__flyout-v1__chevron-cover"
+      role="presentation"
     />
   </div>
 </div>

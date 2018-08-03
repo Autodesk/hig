@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`flyout/presenters/PanelPresenter renders with all props 1`] = `
+<div
+  className="hig__flyout-v1__panel"
+  onScroll={[Function]}
+>
+  Hello World
+</div>
+`;
+
+exports[`flyout/presenters/PanelPresenter renders without props 1`] = `
+<div
+  className="hig__flyout-v1__panel"
+  onScroll={undefined}
+/>
+`;
