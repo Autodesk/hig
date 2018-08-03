@@ -62,7 +62,7 @@ When a function is provided to `props.panel`, it will be given a payload contain
 
 * `innerRef {function(HTMLElement)}`
     - A required [ref][] that's used to position the flyout
-    - **`innerRef`** must be set properly for the flyout to render correctly.
+    - **`innerRef` must be set properly for the flyout to render correctly.**
 * `hideFlyout {function()}`
     - An action that will hide the flyout when called
 * `[content] {JSX}`
