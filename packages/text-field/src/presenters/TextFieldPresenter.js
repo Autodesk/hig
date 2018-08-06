@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import cx from "classnames";
 import IconButton, { names, types } from "@hig/icon-button";
 import { generateId } from "@hig/utils";
+import "@hig/icon-button/build/index.css";
 
 import Input from "./Input";
-
 import "./TextFieldPresenter.scss";
 
 export default class TextFieldPresenter extends Component {
