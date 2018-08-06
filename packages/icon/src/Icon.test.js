@@ -1,8 +1,9 @@
 import renderer from "react-test-renderer";
 import React from "react";
 
+import { names } from "@hig/icons";
+import { sizes } from "./sizes";
 import Icon from "./Icon";
-import { names as iconNames, sizes as iconSizes } from "./index";
 
 describe("Icon", () => {
   it("renders correctly when using the `nameOrSVG` prop", () => {
@@ -15,7 +16,7 @@ describe("Icon", () => {
 
   it("renders correctly when using the `name` prop", () => {
     const tree = renderer
-      .create(<Icon name={iconNames.SHARE} size={iconSizes.PX_24} />)
+      .create(<Icon name={names.SHARE} size={sizes.PX_24} />)
       .toJSON();
 
     expect(tree).toMatchSnapshot();
@@ -25,7 +26,7 @@ describe("Icon", () => {
     const svg = '<svg width="16px" height="16px" viewBox="0 0 16 16"></svg>';
 
     const tree = renderer
-      .create(<Icon svg={svg} size={iconSizes.PX_16} />)
+      .create(<Icon svg={svg} size={sizes.PX_16} />)
       .toJSON();
 
     expect(tree).toMatchSnapshot();

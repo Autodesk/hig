@@ -1,3 +1,3 @@
-export { AVAILABLE_NAMES, names } from "@hig/icons";
 export { default } from "./Icon";
-export { default as sizes } from "./sizes";
+export { names, AVAILABLE_NAMES } from "@hig/icons";
+export { sizes, AVAILABLE_SIZES } from "./sizes";

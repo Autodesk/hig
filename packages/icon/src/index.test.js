@@ -1,15 +1,30 @@
-import { sizes as iconSizes, names as iconNames } from "./index";
+import * as index from "./index";
 
-describe("Icon/index", () => {
-  describe("names", () => {
-    it("is an object of constants", () => {
-      expect(iconNames).toBeDefined();
-    });
-  });
-
-  describe("sizes", () => {
-    it("is an object of constants", () => {
-      expect(iconSizes).toBeDefined();
+describe("icon-button/index", () => {
+  [
+    {
+      name: "default",
+      value: expect.any(Function)
+    },
+    {
+      name: "AVAILABLE_NAMES",
+      value: expect.any(Array)
+    },
+    {
+      name: "names",
+      value: expect.any(Object)
+    },
+    {
+      name: "AVAILABLE_SIZES",
+      value: expect.any(Array)
+    },
+    {
+      name: "sizes",
+      value: expect.any(Object)
+    }
+  ].forEach(({ name, value }) => {
+    it(`exports ${name}`, () => {
+      expect(index).toHaveProperty(name, value);
     });
   });
 });
