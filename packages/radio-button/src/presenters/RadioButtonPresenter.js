@@ -29,6 +29,10 @@ export default class RadioButtonPresenter extends Component {
      */
     onBlur: PropTypes.func,
     /**
+     * Called when user changes the value of the field
+     */
+    onChange: PropTypes.func,
+    /**
      * Called when user clicks on the field
      */
     onClick: PropTypes.func,
@@ -47,7 +51,6 @@ export default class RadioButtonPresenter extends Component {
   };
 
   static defaultProps = {
-    checked: false,
     disabled: false,
     name: "radiobutton",
     value: "value"
@@ -58,10 +61,12 @@ export default class RadioButtonPresenter extends Component {
   render() {
     const {
       checked,
+      defaultChecked,
       disabled,
       label,
       name,
       onBlur,
+      onChange,
       onClick,
       onFocus,
       required,
@@ -86,9 +91,11 @@ export default class RadioButtonPresenter extends Component {
           id={id}
           checked={checked}
           className="hig__radio-button__input"
+          defaultChecked={defaultChecked}
           disabled={disabled}
           name={name}
           onBlur={onBlur}
+          onChange={onChange}
           onClick={onClick}
           onFocus={onFocus}
           type="radio"

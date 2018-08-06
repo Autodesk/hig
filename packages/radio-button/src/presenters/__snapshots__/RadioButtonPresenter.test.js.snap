@@ -11,6 +11,7 @@ exports[`radio-button/presenters/RadioButtonPresenter renders with all props 1`]
     id={undefined}
     name="RadioButton"
     onBlur={[Function]}
+    onChange={[Function]}
     onClick={[Function]}
     onFocus={[Function]}
     type="radio"
@@ -46,6 +47,7 @@ exports[`radio-button/presenters/RadioButtonPresenter renders without props 1`] 
     id="radio-button-1"
     name="radiobutton"
     onBlur={undefined}
+    onChange={undefined}
     onClick={undefined}
     onFocus={undefined}
     type="radio"

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { CheckboxBehavior } from "@hig/checkbox";
 
 import RadioButtonPresenter from "./presenters/RadioButtonPresenter";
 
@@ -53,41 +52,10 @@ export default class RadioButton extends Component {
   };
 
   render() {
-    const {
-      checked: controlledChecked,
-      defaultChecked,
-      disabled,
-      label,
-      name,
-      onBlur,
-      onChange,
-      onClick,
-      onFocus,
-      required,
-      value
-    } = this.props;
-
     return (
-      <CheckboxBehavior
-        checked={controlledChecked}
-        defaultChecked={defaultChecked}
-        onChange={onChange}
-        onClick={onClick}
-      >
-        {({ checked, handleClick }) => (
-          <RadioButtonPresenter
-            checked={checked}
-            disabled={disabled}
-            label={label}
-            name={name}
-            onBlur={onBlur}
-            onClick={handleClick}
-            onFocus={onFocus}
-            required={required}
-            value={value}
-          />
-        )}
-      </CheckboxBehavior>
+      <RadioButtonPresenter
+        {...this.props}
+      />
     );
   }
 }
