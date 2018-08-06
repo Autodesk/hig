@@ -1,3 +1,10 @@
+# [@hig/flyout-v0.2.0](https://github.com/Autodesk/hig/compare/@hig/flyout@0.1.1...@hig/flyout@0.2.0) (2018-08-06)
+
+
+### Features
+
+* **behavior:** add support for customization via render props ([c0cd151](https://github.com/Autodesk/hig/commit/c0cd151))
+
 <a name="@hig/flyout-v0.1.1"></a>
 # [@hig/flyout-v0.1.1](https://github.com/Autodesk/hig/compare/@hig/flyout@0.1.0...@hig/flyout@0.1.1) (2018-07-06)
 
