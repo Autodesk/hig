@@ -19,7 +19,7 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/icon-button": "^0.1.1",
+    "@hig/icon-button": "^0.2.0",
     "@hig/rich-text": "^0.1.3",
     "classnames": "^2.2.5",
     "prop-types": "^15.6.1",
