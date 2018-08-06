@@ -11,7 +11,6 @@
         "packages/checkbox/package.json",
         "packages/components/package.json",
         "packages/dropdown/package.json",
-        "packages/eslint-config/package.json",
         "packages/flyout/package.json",
         "packages/icon-button/package.json",
         "packages/icon/package.json",
@@ -30,8 +29,6 @@
         "packages/project-account-switcher/package.json",
         "packages/radio-button/package.json",
         "packages/rich-text/package.json",
-        "packages/scripts/package.json",
-        "packages/semantic-release-config/package.json",
         "packages/side-nav/package.json",
         "packages/skeleton-item/package.json",
         "packages/slider/package.json",
@@ -51,5 +48,14 @@
         "packages/utils/package.json"
       ]
     }
-  }
+  },
+  "ignore": [
+    "enzyme",
+    "gemini",
+    "gemini-sauce",
+    "jest-enzyme",
+    "react",
+    "react-dom",
+    "react-test-renderer"
+  ]
 }

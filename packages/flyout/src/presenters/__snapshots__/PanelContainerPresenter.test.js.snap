@@ -17,7 +17,7 @@ exports[`flyout/presenters/PanelContainerPresenter renders with all props 1`] = 
 </div>
 `;
 
-exports[`flyout/presenters/PanelContainerPresenter renders without props 1`] = `
+exports[`flyout/presenters/PanelContainerPresenter renders with only \`innerRef\` 1`] = `
 <div
   className="hig__flyout-v1__panel-container"
   style={

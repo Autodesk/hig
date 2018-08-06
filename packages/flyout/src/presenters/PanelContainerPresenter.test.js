@@ -4,16 +4,20 @@ import renderer from "react-test-renderer";
 import PanelContainerPresenter from "./PanelContainerPresenter";
 
 describe("flyout/presenters/PanelContainerPresenter", () => {
+  function innerRef() {}
+
   [
     {
-      description: "renders without props",
-      props: {}
+      description: "renders with only `innerRef`",
+      props: {
+        innerRef
+      }
     },
     {
       description: "renders with all props",
       props: {
+        innerRef,
         maxHeight: 150,
-        innerRef: function innerRef() {},
         children: "Hello World"
       }
     }

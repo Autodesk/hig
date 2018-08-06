@@ -32,5 +32,6 @@
     "packages/jest-preset",
     "packages/vanilla"
   ],
-  "unmockedModulePathPatterns": ["node_modules"]
+  "unmockedModulePathPatterns": ["node_modules"],
+  "testURL": "http://localhost/"
 }

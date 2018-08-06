@@ -27,7 +27,7 @@
     "react-virtualized": "^9.19.1"
   },
   "peerDependencies": {
-    "react": "^15.4.1"
+    "react": "^15.4.1 || ^16.3.2"
   },
   "devDependencies": {
     "@hig/babel-preset": "^0.1.0",

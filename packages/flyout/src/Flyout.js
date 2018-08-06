@@ -55,6 +55,14 @@ class Flyout extends Component {
   };
 
   /**
+   * @type {Object}
+   * @property {boolean} isVisible Used to direct the flyout's transition behavior
+   */
+  state = {
+    isVisible: false
+  };
+
+  /**
    * @param {FlyoutProps} nextProps
    * @param {FlyoutState} prevState
    * @returns {FlyoutState | null}
@@ -67,14 +75,6 @@ class Flyout extends Component {
 
     return { isVisible: open };
   }
-
-  /**
-   * @type {Object}
-   * @property {boolean} isVisible Used to direct the flyout's transition behavior
-   */
-  state = {
-    isVisible: false
-  };
 
   componentDidMount() {
     window.document.body.addEventListener("click", this.handleBodyClick);

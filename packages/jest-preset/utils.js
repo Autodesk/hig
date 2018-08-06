@@ -1,5 +1,3 @@
-jest.mock("@hig/utils", () => {
-  return {
-    generateId: jest.fn(key => `${key}-1`)
-  };
-});
+jest.mock("@hig/utils", () => ({
+  generateId: jest.fn(key => `${key}-1`)
+}));

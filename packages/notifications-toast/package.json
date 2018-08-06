@@ -22,7 +22,7 @@
     "react-flip-move": "^3.0.1"
   },
   "peerDependencies": {
-    "react": "^15.4.1"
+    "react": "^15.4.1 || ^16.3.2"
   },
   "devDependencies": {
     "@hig/avatar": "^0.1.3",

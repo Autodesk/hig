@@ -62,6 +62,16 @@ class Tabs extends Component {
     onTabChange: PropTypes.func
   };
 
+  static defaultProps = {
+    align: alignments.CENTER,
+    onTabChange: () => {}
+  };
+
+  /** @type {TabsState} */
+  state = {
+    activeTabIndex: FIRST_TAB_INDEX
+  };
+
   /**
    * @param {TabsProps} nextProps
    * @param {TabsState} prevState
@@ -86,16 +96,6 @@ class Tabs extends Component {
       activeTabIndex: nextActiveTabIndex
     };
   }
-
-  static defaultProps = {
-    align: alignments.CENTER,
-    onTabChange: () => {}
-  };
-
-  /** @type {TabsState} */
-  state = {
-    activeTabIndex: FIRST_TAB_INDEX
-  };
 
   /** @returns {TabMeta[]} */
   getTabs() {
