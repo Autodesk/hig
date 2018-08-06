@@ -1,3 +1,10 @@
+# [@hig/checkbox-v0.1.1](https://github.com/Autodesk/hig/compare/@hig/checkbox@0.1.0...@hig/checkbox@0.1.1) (2018-08-06)
+
+
+### Bug Fixes
+
+* **behavior:** add handler to respond to `change` events ([9c4b14f](https://github.com/Autodesk/hig/commit/9c4b14f))
+
 <a name="@hig/checkbox-v0.1.0"></a>
 # [@hig/checkbox-v0.1.0](https://github.com/Autodesk/hig/compare/@hig/checkbox@0.0.0...@hig/checkbox@0.1.0) (2018-07-26)
 

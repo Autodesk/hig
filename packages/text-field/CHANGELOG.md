@@ -1,3 +1,10 @@
+# [@hig/text-field-v0.4.1](https://github.com/Autodesk/hig/compare/@hig/text-field@0.4.0...@hig/text-field@0.4.1) (2018-08-06)
+
+
+### Bug Fixes
+
+* **behavior:** replace broken controlled behavior ([d7a168f](https://github.com/Autodesk/hig/commit/d7a168f))
+
 <a name="@hig/text-field-v0.4.0"></a>
 # [@hig/text-field-v0.4.0](https://github.com/Autodesk/hig/compare/@hig/text-field@0.3.2...@hig/text-field@0.4.0) (2018-07-18)
 
