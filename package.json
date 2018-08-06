@@ -9,7 +9,7 @@
   "scripts": {
     "build": "lerna run build --stream",
     "create-dependency-hash": "cat yarn.lock > .dependency-hash && ls ./packages >> .dependency-hash",
-    "lint": "lerna run lint --stream",
+    "lint": "lerna run lint --stream --scope @hig/*",
     "test": "jest --watch",
     "test-ci": "jest --coverage -w=2 --colors",
     "publish-canary": "lerna publish --canary --yes --exact",
