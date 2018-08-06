@@ -1,5 +1,6 @@
 import { action } from "@storybook/addon-actions";
 import { boolean, text } from "@storybook/addon-knobs/react";
+import { controlledText } from "@hig/storybook/utils";
 
 const knobGroupIds = {
   basic: "Basic",
@@ -86,6 +87,6 @@ export default function getKnobs(props) {
       showClearButton,
       knobGroupIds.basic
     ),
-    value: text(knobLabels.value, value, knobGroupIds.form)
+    value: controlledText(knobLabels.value, value, knobGroupIds.form)
   };
 }

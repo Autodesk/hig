@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import TextFieldController from "./TextFieldController";
-import TextFieldPresenter from "./TextFieldPresenter";
+import TextFieldBehavior from "./behaviors/TextFieldBehavior";
+import TextFieldPresenter from "./presenters/TextFieldPresenter";
 
 export default class TextField extends Component {
   static propTypes = {
@@ -92,26 +92,26 @@ export default class TextField extends Component {
       defaultValue,
       onChange,
       onClearButtonClick,
-      value: initialValue,
-      ...otherProps
+      value: controlledValue,
+      ...presenterProps
     } = this.props;
 
     return (
-      <TextFieldController
+      <TextFieldBehavior
         defaultValue={defaultValue}
         onChange={onChange}
         onClearButtonClick={onClearButtonClick}
-        value={initialValue}
+        value={controlledValue}
       >
         {({ value, handleChange, handleInputClear }) => (
           <TextFieldPresenter
-            {...otherProps}
+            {...presenterProps}
             value={value}
             onChange={handleChange}
             onClearButtonClick={handleInputClear}
           />
         )}
-      </TextFieldController>
+      </TextFieldBehavior>
     );
   }
 }
