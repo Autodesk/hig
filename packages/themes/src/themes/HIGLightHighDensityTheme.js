@@ -1,11 +1,11 @@
-import webLightThemeData from "@hig/theme-data-poc/build/webLightHighDensityTheme.json";
+import themeData from "@hig/theme-data-poc/build/webLightHighDensityTheme.json";
+import themeConfig from "@hig/theme-data-poc/build/webLightHighDensityThemeConfig.json";
 
-const HIGLightHighDensityTheme = {
+export default {
   density: "high",
   themeName: "Web Light",
   themeId: "hig-light",
   themeClass: "hig--light-theme",
-  themeData: webLightThemeData
+  themeData,
+  themeConfig
 };
-
-export default HIGLightHighDensityTheme;

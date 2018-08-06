@@ -1,6 +1,6 @@
 export default {
-  NONE: "0",
-  S: "1px",
-  M: "2px",
-  L: "4px"
+  NONE: { value: "0", type: "borderWidth" },
+  S: { value: "1px", type: "borderWidth" },
+  M: { value: "2px", type: "borderWidth" },
+  L: { value: "4px", type: "borderWidth" }
 };

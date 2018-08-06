@@ -8,7 +8,7 @@ import { config as lowDensityThemeConfig } from "./lowDensityTheme";
 import { config as mediumDensityThemeConfig } from "./mediumDensityTheme";
 import { config as highDensityThemeConfig } from "./highDensityTheme";
 
-import themeSchema from "../theme-schema";
+import { config as baseThemeConfig } from "../themes/baseTheme";
 import "../../support/jest/matchers/toBeAValidTheme";
 import extendTheme from "../utils/extendTheme";
 import resolveTheme from "../utils/resolveTheme";
@@ -21,7 +21,7 @@ describe("Theme", () => {
   ].forEach(({ description, theme }) => {
     describe(description, () => {
       it("implements the theme schema", () => {
-        expect(theme).toBeAValidTheme(themeSchema);
+        expect(theme).toBeAValidTheme(baseThemeConfig);
       });
     });
   });
@@ -45,7 +45,7 @@ describe("Theme", () => {
         it("implements the theme schema", () => {
           const densityThemeConfig = extendTheme(lightGrayThemeConfig, density);
           const densityThemeData = resolveTheme(densityThemeConfig);
-          expect(densityThemeData).toBeAValidTheme(themeSchema);
+          expect(densityThemeData).toBeAValidTheme(baseThemeConfig);
         });
       });
     });

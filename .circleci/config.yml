@@ -4,6 +4,36 @@ defaults: &defaults
 
 version: 2
 jobs:
+  lockfile-update:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: Install greenkeeper-lockfile
+          command: 'sudo yarn global add greenkeeper-lockfile@2'
+      - run:
+          name: Update lockfile
+          command: 'greenkeeper-lockfile-update'
+      - save_cache:
+          key: v1-lockfile-{{ .Revision }}
+          paths:
+            # save the git commit
+            - ".git"
+  lockfile-upload:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          key: v1-lockfile-{{ .Revision }}
+      - run:
+          name: Install greenkeeper-lockfile
+          command: 'sudo yarn global add greenkeeper-lockfile@2'
+      - run:
+          name: SSH Avoid hosts unknown
+          command: 'mkdir -p ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config'
+      - run:
+          name: Upload lockfile changes
+          command: 'greenkeeper-lockfile-upload'
   bootstrap:
     <<: *defaults
     steps:
@@ -191,7 +221,10 @@ workflows:
   version: 2
   build-test-validate-and-deploy:
     jobs:
-      - bootstrap
+      - lockfile-update
+      - bootstrap:
+          requires:
+            - lockfile-update
       - package-build:
           requires:
             - bootstrap
@@ -201,6 +234,10 @@ workflows:
       - visual-test:
           requires:
             - package-build
+      - lockfile-upload:
+          requires:
+            - react-test
+            - visual-test
       - playground-deploy:
           requires:
             - react-test

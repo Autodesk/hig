@@ -9,13 +9,13 @@ import NotificationsToastList, {
 } from "../NotificationsToastList";
 
 export default class NotificationsToastListInteractions extends React.Component {
-  static defaultProps = {
-    initialToasts: []
-  };
-
   static propTypes = {
     initialToasts: PropTypes.arrayOf(PropTypes.node),
     placement: PropTypes.oneOf(AVAILABLE_PLACEMENTS)
+  };
+
+  static defaultProps = {
+    initialToasts: []
   };
 
   constructor(props) {

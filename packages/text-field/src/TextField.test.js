@@ -4,8 +4,8 @@ import TextField from "./index";
 import Input from "./presenters/Input";
 
 describe("TextField", () => {
-  it("allows value to be changed by onChange", () => {
-    const wrapper = mount(<TextField value="foo" />);
+  it("allows value to be changed by change events", () => {
+    const wrapper = mount(<TextField defaultValue="foo" />);
     const input = wrapper.find("input");
 
     expect(input.prop("value")).toEqual("foo");
@@ -13,25 +13,27 @@ describe("TextField", () => {
     expect(input.prop("value")).toEqual("bar");
   });
 
-  it("ignores changes to the value prop", () => {
-    const wrapper = mount(<TextField value="foo" />);
-    const input = wrapper.find("input");
+  describe("when controlled", () => {
+    it("ignores change events", () => {
+      const wrapper = mount(<TextField value="foo" />);
+      const input = wrapper.find("input");
 
-    expect(input.prop("value")).toEqual("foo");
-    wrapper.setProps({ value: "baz" });
-    expect(input.prop("value")).toEqual("foo");
+      expect(input.prop("value")).toEqual("foo");
+      input.simulate("change", { target: { value: "bar" } });
+      expect(input.prop("value")).toEqual("foo");
+    });
   });
 
   describe("id", () => {
     it("generates an ID when one is not provided", () => {
       const wrapper = mount(<TextField />);
-      expect(wrapper.find(Input).prop("id")).toEqual(
-        expect.stringMatching("text-field-")
-      );
+
+      expect(wrapper.find(Input).prop("id")).toEqual("text-field-1");
     });
 
     it("passes the ID prop to the underlying input", () => {
       const wrapper = mount(<TextField id="important-field" />);
+
       expect(wrapper.find(Input).prop("id")).toEqual("important-field");
     });
   });
@@ -40,6 +42,7 @@ describe("TextField", () => {
     it("calls onChange when provided", () => {
       const eventHandler = jest.fn();
       const wrapper = mount(<TextField onChange={eventHandler} />);
+
       wrapper.find("input").simulate("change", { target: { value: "foo" } });
 
       expect(eventHandler).toHaveBeenCalled();
@@ -54,7 +57,9 @@ describe("TextField", () => {
           showClearButton
         />
       );
+
       wrapper.find(".hig__text-field-v1__clear button").simulate("click");
+
       expect(eventHandler).toHaveBeenCalled();
     });
   });

@@ -23,11 +23,11 @@
     "lodash": "^4.17.5",
     "prop-types": "^15.6.1",
     "react-draggable": "^3.0.5",
-    "react-lifecycles-compat": "^3.0.2",
+    "react-lifecycles-compat": "^3.0.4",
     "react-virtualized": "^9.19.1"
   },
   "peerDependencies": {
-    "react": "^15.4.1"
+    "react": "^15.4.1 || ^16.3.2"
   },
   "devDependencies": {
     "@hig/babel-preset": "^0.1.0",
@@ -35,8 +35,8 @@
     "@hig/jest-preset": "^0.1.0",
     "@hig/scripts": "^0.1.2",
     "@hig/semantic-release-config": "^0.1.0",
-    "@hig/styles": "^0.1.1",
-    "delay": "^2.0.0"
+    "@hig/styles": "^0.2.3",
+    "delay": "^3.0.0"
   },
   "scripts": {
     "build": "hig-scripts-build",

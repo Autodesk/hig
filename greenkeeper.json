@@ -1,0 +1,61 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "docs/contribution-example/package.json",
+        "package.json",
+        "packages/avatar/package.json",
+        "packages/babel-preset/package.json",
+        "packages/banner/package.json",
+        "packages/button/package.json",
+        "packages/checkbox/package.json",
+        "packages/components/package.json",
+        "packages/dropdown/package.json",
+        "packages/flyout/package.json",
+        "packages/icon-button/package.json",
+        "packages/icon/package.json",
+        "packages/icons/package.json",
+        "packages/input/package.json",
+        "packages/interface/package.json",
+        "packages/jest-preset/package.json",
+        "packages/label/package.json",
+        "packages/modal/package.json",
+        "packages/multi-downshift/package.json",
+        "packages/notifications-flyout/package.json",
+        "packages/notifications-toast/package.json",
+        "packages/profile-flyout/package.json",
+        "packages/progress-bar/package.json",
+        "packages/progress-ring/package.json",
+        "packages/project-account-switcher/package.json",
+        "packages/radio-button/package.json",
+        "packages/rich-text/package.json",
+        "packages/side-nav/package.json",
+        "packages/skeleton-item/package.json",
+        "packages/slider/package.json",
+        "packages/storybook/package.json",
+        "packages/styles/package.json",
+        "packages/table/package.json",
+        "packages/tabs/package.json",
+        "packages/text-area/package.json",
+        "packages/text-field/package.json",
+        "packages/text-link/package.json",
+        "packages/theme-data/package.json",
+        "packages/themes/package.json",
+        "packages/timestamp/package.json",
+        "packages/tooltip/package.json",
+        "packages/top-nav/package.json",
+        "packages/typography/package.json",
+        "packages/utils/package.json"
+      ]
+    }
+  },
+  "ignore": [
+    "enzyme",
+    "gemini",
+    "gemini-sauce",
+    "jest-enzyme",
+    "react",
+    "react-dom",
+    "react-test-renderer"
+  ]
+}

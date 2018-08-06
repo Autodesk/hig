@@ -9,6 +9,8 @@ export default {
   themeName: PropTypes.string,
   /** Data describing presentation of the theme */
   themeData: PropTypes.object,
+  /** Data describing configuration of the theme */
+  themeConfig: PropTypes.object,
   /** Data describing density level of the theme */
   density: PropTypes.string
 };

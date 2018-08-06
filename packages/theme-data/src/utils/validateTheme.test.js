@@ -1,6 +1,6 @@
 import validateTheme from "./validateTheme";
 
-const themeSchema = {
+const themeConfig = {
   FOO_COLOR: { type: "color" },
   BAR_LENGTH: { type: "length" }
 };
@@ -9,14 +9,14 @@ function describeValuesForType({ types, validValues, invalidValues }) {
   types.forEach(type => {
     describe(`with a role of type ${type}`, () => {
       const myType = type;
-      const mySchema = {
+      const myConfig = {
         MY_ROLE: { type: myType }
       };
 
       validValues.forEach(value => {
         describe(value, () => {
           it("is valid", () => {
-            const result = validateTheme({ MY_ROLE: value }, mySchema);
+            const result = validateTheme({ MY_ROLE: value }, myConfig);
             expect(result.valid).toEqual(true);
           });
         });
@@ -25,7 +25,7 @@ function describeValuesForType({ types, validValues, invalidValues }) {
       invalidValues.forEach(value => {
         describe(value, () => {
           it("is invalid", () => {
-            const result = validateTheme({ MY_ROLE: value }, mySchema);
+            const result = validateTheme({ MY_ROLE: value }, myConfig);
             expect(result.errors).toBeTruthy();
             expect(result.valid).toEqual(false);
             expect(result.errors[0].message).toMatch(/MY_ROLE/);
@@ -44,7 +44,7 @@ describe("validateTheme", () => {
     };
 
     it("returns undefined", () => {
-      const result = validateTheme(happyTheme, themeSchema);
+      const result = validateTheme(happyTheme, themeConfig);
       expect(result.errors).toBeFalsy();
       expect(result.valid).toEqual(true);
     });
@@ -56,7 +56,7 @@ describe("validateTheme", () => {
     };
 
     it("returns an error message", () => {
-      const result = validateTheme(missingRoleTheme, themeSchema);
+      const result = validateTheme(missingRoleTheme, themeConfig);
       expect(result.errors).toBeTruthy();
       expect(result.errors[0].message).toMatch(/BAR_LENGTH/);
     });
@@ -70,7 +70,7 @@ describe("validateTheme", () => {
     };
 
     it("returns an error message", () => {
-      const result = validateTheme(extraRoleTheme, themeSchema);
+      const result = validateTheme(extraRoleTheme, themeConfig);
       expect(result.errors).toBeTruthy();
       expect(result.errors[0].message).toMatch(/BAZ_COLOR/);
     });

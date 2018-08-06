@@ -31,11 +31,11 @@ import {
     });
 
     it("has a themeData", () => {
-      expect(theme).toHaveProperty("themeData", expect.any(String));
+      expect(theme).toHaveProperty("themeData", expect.any(Object));
     });
 
     it("has a themeConfig", () => {
-      expect(theme).toHaveProperty("themeConfig", expect.any(String));
+      expect(theme).toHaveProperty("themeConfig", expect.any(Object));
     });
   });
 });

@@ -1,11 +1,11 @@
-import lightGrayThemeData from "@hig/theme-data-poc/build/lightGrayTheme.json";
+import themeData from "@hig/theme-data-poc/build/lightGrayTheme.json";
+import themeConfig from "@hig/theme-data-poc/build/lightGrayThemeConfig.json";
 
-const HIGLightGrayTheme = {
+export default {
   density: "medium",
   themeName: "Light Gray",
   themeId: "hig-light-gray",
   themeClass: "hig--light-gray-theme",
-  themeData: lightGrayThemeData
+  themeData,
+  themeConfig
 };
-
-export default HIGLightGrayTheme;

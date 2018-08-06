@@ -2,23 +2,23 @@
 
 exports[`checkbox/Checkbox integration renders correctly 1`] = `
 <div
-  className="hig__checkbox hig__checkbox--checkbox hig__checkbox--checked"
+  className="hig__checkbox hig__checkbox--checkbox"
 >
   <input
-    checked={true}
+    checked={false}
     className="hig__checkbox__input"
     disabled={false}
     id="checkbox-1"
     name="checkbox"
     onBlur={undefined}
     onChange={[Function]}
-    onClick={undefined}
+    onClick={[Function]}
     onFocus={undefined}
     type="checkbox"
     value="value"
   />
   <span
-    className="hig__checkbox__wrapper hig__checkbox__wrapper--checked"
+    className="hig__checkbox__wrapper"
   >
     <span
       className="hig__checkbox__wrapper__check"
