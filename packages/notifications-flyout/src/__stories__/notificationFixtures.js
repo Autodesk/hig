@@ -24,10 +24,12 @@ const sampleNotifications = [
           <b>Your subscription expires May 5</b>
         </p>
         <p>
-          Maya<br />
-          Media & Entertainment Collection<br />
-          Product Design Collection<br />
-          2 more
+          Maya
+          <br />
+          Media & Entertainment Collection
+          <br />
+          Product Design Collection
+          <br />2 more
         </p>
         <p>
           <TextLink
@@ -53,9 +55,12 @@ const sampleNotifications = [
           <b>Your subscription expires April 20</b>
         </p>
         <p>
-          AutoCAD<br />
-          Architecture Construction Engineering Collection<br />
-          Product Design Collection<br />
+          AutoCAD
+          <br />
+          Architecture Construction Engineering Collection
+          <br />
+          Product Design Collection
+          <br />
         </p>
         <p>
           <TextLink
@@ -81,9 +86,12 @@ const sampleNotifications = [
           <b>Your subscription expires June 15</b>
         </p>
         <p>
-          AutoCAD<br />
-          Architecture Construction Engineering Collection<br />
-          HIG<br />
+          AutoCAD
+          <br />
+          Architecture Construction Engineering Collection
+          <br />
+          HIG
+          <br />
         </p>
         <p>
           <TextLink

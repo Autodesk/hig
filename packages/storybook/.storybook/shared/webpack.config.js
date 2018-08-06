@@ -1,11 +1,9 @@
-const path = require('path');
+const path = require("path");
 
-module.exports = (storybookBaseConfig) => {
+module.exports = storybookBaseConfig => {
   // Ensure Babel transpiles story source in adjacent packages
   const babelRule = storybookBaseConfig.module.rules[0];
-  babelRule.include = [
-    path.resolve(__dirname, '../../../../packages')
-  ];
+  babelRule.include = [path.resolve(__dirname, "../../../../packages")];
 
   storybookBaseConfig.module.rules.push(
     {
@@ -19,7 +17,7 @@ module.exports = (storybookBaseConfig) => {
     {
       test: /\.svg$/,
       issuer: /\.js$/,
-      use: ["raw-loader"],
+      use: ["raw-loader"]
     },
     {
       test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2)(\?.*)?$/,
@@ -35,10 +33,7 @@ module.exports = (storybookBaseConfig) => {
   );
 
   storybookBaseConfig.resolve.modules.push(
-    path.resolve(
-      __dirname,
-      "../../../../packages"
-    )
+    path.resolve(__dirname, "../../../../packages")
   );
 
   return storybookBaseConfig;
