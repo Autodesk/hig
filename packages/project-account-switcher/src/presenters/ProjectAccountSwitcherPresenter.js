@@ -154,36 +154,38 @@ export default class ProjectAccountSwitcherPresenter extends Component {
 
   render() {
     return (
-      <Flyout
-        content={this.flyoutContent()}
-        anchorPoint={anchorPoints.TOP_RIGHT}
-      >
-        <div className="project-account-switcher__target">
-          <div className="project-account-switcher__item">
-            <span className="project-account-switcher__item__image-wrapper">
-              <img className="project-account-switcher__item__image" />
+      <div className="project-account-switcher">
+        <Flyout
+          content={this.flyoutContent()}
+          anchorPoint={anchorPoints.TOP_RIGHT}
+        >
+          <div className="project-account-switcher__target">
+            <div className="project-account-switcher__item">
+              <span className="project-account-switcher__item__image-wrapper">
+                <img className="project-account-switcher__item__image" />
+                <span
+                  className="project-account-switcher__item__image-placeholder"
+                  dangerouslySetInnerHTML={{
+                    __html: this.constructLabelPlaceholder()
+                  }}
+                />
+              </span>
               <span
-                className="project-account-switcher__item__image-placeholder"
+                className="project-account-switcher__item__label"
+                dangerouslySetInnerHTML={{ __html: this.constructLabel() }}
+              />
+            </div>
+            <span className="project-account-switcher__target__caret">
+              <div
+                className="hig__icon hig__icon--24-size"
                 dangerouslySetInnerHTML={{
-                  __html: this.constructLabelPlaceholder()
+                  __html: icons["caret-24"]
                 }}
               />
             </span>
-            <span
-              className="project-account-switcher__item__label"
-              dangerouslySetInnerHTML={{ __html: this.constructLabel() }}
-            />
           </div>
-          <span className="project-account-switcher__target__caret">
-            <div
-              className="hig__icon hig__icon--24-size"
-              dangerouslySetInnerHTML={{
-                __html: icons["caret-24"]
-              }}
-            />
-          </span>
-        </div>
-      </Flyout>
+        </Flyout>
+      </div>
     );
   }
 }
