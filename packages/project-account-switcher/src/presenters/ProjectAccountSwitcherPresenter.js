@@ -25,7 +25,9 @@ export default class ProjectAccountSwitcherPresenter extends Component {
     activeProjectId: PropTypes.string,
     onAccountClick: PropTypes.func,
     onProjectClick: PropTypes.func,
+    onTargetClick: PropTypes.func,
     /** Menu heading title for the list of Projects */
+    open: PropTypes.bool,
     projectTitle: PropTypes.string,
     /** List of Projects */
     projects: PropTypes.arrayOf(
@@ -45,6 +47,7 @@ export default class ProjectAccountSwitcherPresenter extends Component {
     ],
     activeAccountId: "2",
     activeProjectId: "2",
+    open: false,
     projectTitle: "Projects",
     projects: [{ id: "1", label: "Project 1" }, { id: "2", label: "Project 2" }]
   };
@@ -154,10 +157,14 @@ export default class ProjectAccountSwitcherPresenter extends Component {
 
   render() {
     return (
-      <div className="project-account-switcher">
+      <div
+        className="project-account-switcher"
+        onClick={this.props.onTargetClick}
+      >
         <Flyout
           content={this.flyoutContent()}
           anchorPoint={anchorPoints.TOP_RIGHT}
+          open={this.props.open}
         >
           <div className="project-account-switcher__target">
             <div className="project-account-switcher__item">

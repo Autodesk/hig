@@ -16,6 +16,8 @@ export default class ProjectAccountSwitcherBehavior extends Component {
     defaultActiveAccountId: PropTypes.string,
     defaultActiveProjectId: PropTypes.string,
     onClick: PropTypes.func,
+    onTargetClick: PropTypes.func,
+    open: PropTypes.bool,
     projects: PropTypes.arrayOf(
       PropTypes.shape({
         id: PropTypes.string,
@@ -27,12 +29,14 @@ export default class ProjectAccountSwitcherBehavior extends Component {
 
   static defaultProps = {
     defaultActiveAccountId: "1",
-    defaultActiveProjectId: "1"
+    defaultActiveProjectId: "1",
+    open: false
   };
 
   state = {
     activeAccountId: this.props.defaultActiveAccountId,
-    activeProjectId: this.props.defaultActiveProjectId
+    activeProjectId: this.props.defaultActiveProjectId,
+    open: this.props.open
   };
 
   isControlled() {
@@ -41,6 +45,18 @@ export default class ProjectAccountSwitcherBehavior extends Component {
       this.props.activeProjectId !== undefined
     );
   }
+
+  handleTargetClick = event => {
+    const { onClick } = this.props;
+
+    if (onClick) {
+      onClick(event);
+    }
+
+    this.setState({
+      open: !this.state.open
+    });
+  };
 
   handleAccountClick = event => {
     const { onClick } = this.props;
@@ -81,7 +97,9 @@ export default class ProjectAccountSwitcherBehavior extends Component {
       activeAccountId: this.state.activeAccountId,
       activeProjectId: this.state.activeProjectId,
       handleAccountClick: this.handleAccountClick,
-      handleProjectClick: this.handleProjectClick
+      handleTargetClick: this.handleTargetClick,
+      handleProjectClick: this.handleProjectClick,
+      open: this.state.open
     });
   }
 }
