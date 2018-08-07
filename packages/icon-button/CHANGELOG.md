@@ -1,3 +1,10 @@
+# [@hig/icon-button-v0.2.0](https://github.com/Autodesk/hig/compare/@hig/icon-button@0.1.3...@hig/icon-button@0.2.0) (2018-08-07)
+
+
+### Features
+
+* update icon set ([80bf8c6](https://github.com/Autodesk/hig/commit/80bf8c6))
+
 <a name="@hig/icon-button-v0.1.3"></a>
 # [@hig/icon-button-v0.1.3](https://github.com/Autodesk/hig/compare/@hig/icon-button@0.1.2...@hig/icon-button@0.1.3) (2018-07-06)
 
