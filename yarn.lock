@@ -75,6 +75,35 @@
   version "0.8.1"
   resolved "https://registry.yarnpkg.com/@emotion/utils/-/utils-0.8.1.tgz#f3a81587ad8d0ef33cdad6f3b4310774fcc1053e"
 
+"@hig/flyout@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@hig/flyout/-/flyout-0.1.1.tgz#2a223b931f0aeeebc9afd12128a82bab06d1fcde"
+  dependencies:
+    classnames "^2.2.5"
+    prop-types "^15.6.1"
+    react-lifecycles-compat "^3.0.2"
+    react-transition-group "^2.3.1"
+
+"@hig/icon-button@^0.1.1":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@hig/icon-button/-/icon-button-0.1.3.tgz#d77690d86c11c1718f4ef82e4942754a3f32614e"
+  dependencies:
+    "@hig/icon" "^0.1.3"
+    classnames "^2.2.5"
+    prop-types "^15.6.1"
+
+"@hig/icon@^0.1.1", "@hig/icon@^0.1.3":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@hig/icon/-/icon-0.1.3.tgz#544dc3f4b3cec52d1782bac8620a91e6de42f7a1"
+  dependencies:
+    "@hig/icons" "^0.1.0"
+    classnames "^2.2.5"
+    prop-types "^15.6.1"
+
+"@hig/icons@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@hig/icons/-/icons-0.1.0.tgz#f33de7287675a2b3e9b88658a2221f8e552f81b3"
+
 "@hig/styles@^0.1.1":
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/@hig/styles/-/styles-0.1.1.tgz#02e85ee888b46767072ee040c286d4f80ed92ef2"
@@ -11324,7 +11353,7 @@ react-inspector@^2.2.2:
     babel-runtime "^6.26.0"
     is-dom "^1.0.9"
 
-react-lifecycles-compat@^3.0.0, react-lifecycles-compat@^3.0.4:
+react-lifecycles-compat@^3.0.0, react-lifecycles-compat@^3.0.2, react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
 

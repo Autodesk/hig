@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
-import IconButton from "@hig/icon-button";
+import IconButton, { names, types } from "@hig/icon-button";
 import { generateId } from "@hig/utils";
+import "@hig/icon-button/build/index.css";
 
 import Input from "./Input";
-
 import "./TextFieldPresenter.scss";
 
 export default class TextFieldPresenter extends Component {
@@ -93,6 +93,7 @@ export default class TextFieldPresenter extends Component {
   };
 
   static defaultProps = {
+    clearButtonTitle: "Clear field",
     type: "text"
   };
 
@@ -151,6 +152,7 @@ export default class TextFieldPresenter extends Component {
       onClearButtonClick,
       required,
       showClearButton,
+      clearButtonTitle,
       ...inputProps
     } = this.props;
 
@@ -214,9 +216,9 @@ export default class TextFieldPresenter extends Component {
               {hasClearableInput && (
                 <span className="hig__text-field-v1__clear">
                   <IconButton
-                    type="transparent"
-                    icon="clear-small"
-                    title="Clear field"
+                    type={types.TRANSPARENT}
+                    icon={names.CLEAR_SMALL}
+                    title={clearButtonTitle}
                     onClick={onClearButtonClick}
                   />
                 </span>

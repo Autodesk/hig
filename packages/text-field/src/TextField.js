@@ -66,6 +66,10 @@ export default class TextField extends Component {
      */
     placeholder: PropTypes.string,
     /**
+     * Accessible title of the clear button
+     */
+    clearButtonTitle: PropTypes.string,
+    /**
      * Marks input as read-only
      */
     readOnly: PropTypes.bool,

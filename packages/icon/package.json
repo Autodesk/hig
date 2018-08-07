@@ -1,6 +1,6 @@
 {
   "name": "@hig/icon",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "HIG Icon component",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -19,7 +19,7 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/icons": "^0.1.0",
+    "@hig/icons": "^0.2.0",
     "classnames": "^2.2.5",
     "prop-types": "^15.6.1"
   },
