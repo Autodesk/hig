@@ -1,3 +1,11 @@
+# [@hig/text-field-v0.4.2](https://github.com/Autodesk/hig/compare/@hig/text-field@0.4.1...@hig/text-field@0.4.2) (2018-08-07)
+
+
+### Bug Fixes
+
+* add missing `IconButton` styles ([a45ef0c](https://github.com/Autodesk/hig/commit/a45ef0c))
+* update icon sets ([9281451](https://github.com/Autodesk/hig/commit/9281451))
+
 # [@hig/text-field-v0.4.1](https://github.com/Autodesk/hig/compare/@hig/text-field@0.4.0...@hig/text-field@0.4.1) (2018-08-06)
 
 
