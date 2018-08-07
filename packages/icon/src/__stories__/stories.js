@@ -1,16 +1,16 @@
-import iconSizes from "../sizes";
+import { sizes } from "../sizes";
 
 export default [
   {
     description: "size 24",
     getProps: () => ({
-      size: iconSizes.PX_24
+      size: sizes.PX_24
     })
   },
   {
     description: "size 16",
     getProps: () => ({
-      size: iconSizes.PX_16
+      size: sizes.PX_16
     })
   }
 ];
