@@ -1,3 +1,10 @@
+# [@hig/button-v0.1.4](https://github.com/Autodesk/hig/compare/@hig/button@0.1.3...@hig/button@0.1.4) (2018-08-07)
+
+
+### Bug Fixes
+
+* update icon sets ([9281451](https://github.com/Autodesk/hig/commit/9281451))
+
 <a name="@hig/button-v0.1.3"></a>
 # [@hig/button-v0.1.3](https://github.com/Autodesk/hig/compare/@hig/button@0.1.2...@hig/button@0.1.3) (2018-07-06)
 
