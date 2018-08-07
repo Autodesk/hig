@@ -1,9 +1,9 @@
 import React from "react";
 import renderer from "react-test-renderer";
 import { generateId } from "@hig/utils";
-import ModalPresenter from "./ModalPresenter";
+import ModalHeaderPresenter from "./ModalHeaderPresenter";
 
-describe("checkbox/presenters/ModalPresenter", () => {
+describe("checkbox/presenters/ModalHeaderPresenter", () => {
   afterEach(() => {
     generateId.mockReset();
   });
@@ -14,25 +14,22 @@ describe("checkbox/presenters/ModalPresenter", () => {
       props: {}
     },
     {
-      description: "renders with header children",
+      description: "renders with children",
       props: {
-        children: [<p key={"p"}>Body</p>],
-        headerChildren: [<h1 key={"h1"}>Title</h1>],
-        onCloseClick: function onCloseClick() {}
+        children: [<p key={"p"}>Title</p>]
       }
     },
     {
       description: "renders with all props",
       props: {
-        children: [<p key={"p"}>Body</p>],
-        title: "Title",
+        title: "HELLO",
         onCloseClick: function onCloseClick() {}
       }
     }
   ].forEach(({ description, props: { children, ...otherProps } }) => {
     it(description, () => {
       const presenter = (
-        <ModalPresenter {...otherProps}>{children}</ModalPresenter>
+        <ModalHeaderPresenter {...otherProps}>{children}</ModalHeaderPresenter>
       );
       const tree = renderer.create(presenter).toJSON();
 

@@ -4,15 +4,13 @@ export default [
   {
     description: "default",
     getProps: () => ({
-      title: "Are you sure?",
+      title: "Default Modal",
       open: true,
-      style: "alternate",
+      style: "standard",
       children: [
-        <h1 key="h1">
-          <u>This is my HTML title</u>
-        </h1>,
         <p key="p">
-          <i>This is my HTML content.</i>
+          Curabitur id auctor leo, ut posuere felis. Aliquam erat volutpat.
+          Nullam id lorem in metus fermentum aliquam.
         </p>
       ]
     })

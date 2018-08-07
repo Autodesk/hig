@@ -1,59 +1,42 @@
 import { mount } from "enzyme";
 import React from "react";
-import renderer from "react-test-renderer";
 import Modal from "./Modal";
 
-describe("modal/ModalModal", () => {
+describe("modal/Modal", () => {
   describe("integration", () => {
     it("renders correctly", () => {
-      const tree = mount(
-        <Modal title="HIG Modal" open={true} body={"Hi"} />
-      ).html();
+      const tree = mount(<Modal title="HIG Modal" open body={"Hi"} />).html();
 
       expect(tree).toMatchSnapshot();
     });
   });
 
   describe("event handlers", () => {
-    let eventHandler;
-    const subject = (props = {}) => mount(<Modal title="Modal" {...props} />);
     let wrapper;
 
-    eventHandler = jest.fn();
+    const eventHandler = jest.fn();
     eventHandler.mockReset();
 
-    describe("onBlur", () => {
+    describe("onCloseClick", () => {
       beforeEach(() => {
-        wrapper = mount(<Modal onBlur={eventHandler} />);
-        console.log(wrapper.html());
+        wrapper = mount(<Modal open onCloseClick={eventHandler} />);
       });
 
       it("is triggered on blur", () => {
-        wrapper.find("Button").simulate("blur");
+        wrapper.find("IconButton").simulate("click");
         expect(eventHandler).toBeCalled();
       });
     });
 
-    describe("onChange", () => {
+    describe("onOverlayClick", () => {
       beforeEach(() => {
-        wrapper = mount(<Modal onChange={eventHandler} />);
+        wrapper = mount(<Modal open onOverlayClick={eventHandler} />);
       });
 
       it("is triggered on change", () => {
-        wrapper.find("div.hig__modal__overlay").simulate("change");
+        wrapper.find("a.hig__modal-V1__overlay").simulate("click");
 
         expect(eventHandler).toHaveBeenCalled();
-      });
-    });
-
-    describe("onFocus", () => {
-      beforeEach(() => {
-        wrapper = subject({ onFocus: eventHandler });
-      });
-
-      it("is triggered on focus", () => {
-        wrapper.find("div.hig__modal__overlay").simulate("focus");
-        expect(eventHandler).toBeCalled();
       });
     });
   });
