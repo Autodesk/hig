@@ -1,3 +1,10 @@
+# [@hig/side-nav-v0.1.6](https://github.com/Autodesk/hig/compare/@hig/side-nav@0.1.5...@hig/side-nav@0.1.6) (2018-08-07)
+
+
+### Bug Fixes
+
+* update icon sets ([9281451](https://github.com/Autodesk/hig/commit/9281451))
+
 <a name="@hig/side-nav-v0.1.5"></a>
 # [@hig/side-nav-v0.1.5](https://github.com/Autodesk/hig/compare/@hig/side-nav@0.1.4...@hig/side-nav@0.1.5) (2018-08-01)
 
