@@ -1,5 +1,4 @@
-import renderer from "react-test-renderer";
-import React from "react";
+import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
 
 import Dropdown from "./Dropdown";
 
@@ -10,8 +9,12 @@ describe("Dropdown", () => {
     baz: "Baz"
   };
   const options = Object.keys(i18n).sort();
-
-  [
+  const rendererOptions = {
+    createNodeMock(element) {
+      return document.createElement(element.type);
+    }
+  };
+  const cases = [
     {
       desc: "renders without props",
       props: {}
@@ -65,11 +68,7 @@ describe("Dropdown", () => {
         value: ["foo", "bar"]
       }
     }
-  ].forEach(({ desc, props }) => {
-    it(desc, () => {
-      const tree = renderer.create(<Dropdown {...props} />).toJSON();
+  ];
 
-      expect(tree).toMatchSnapshot();
-    });
-  });
+  takeSnapshotsOf(Dropdown, cases, rendererOptions);
 });
