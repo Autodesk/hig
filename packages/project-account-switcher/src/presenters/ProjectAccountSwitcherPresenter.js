@@ -6,6 +6,7 @@ import Flyout from "@hig/flyout";
 import icons from "../../../icons/build";
 import { anchorPoints } from "../../../flyout/src/anchorPoints";
 
+import "@hig/flyout/build/index.css";
 import "./ProjectAccountSwitcherPresenter.scss";
 
 export default class ProjectAccountSwitcherPresenter extends Component {

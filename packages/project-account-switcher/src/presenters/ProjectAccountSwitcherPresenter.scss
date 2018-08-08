@@ -12,20 +12,8 @@
     text-decoration: none;
   }
 
-  .hig__flyout-v1__action {
-    display: flex;
-    align-items: center;
-    padding: 0 12px 0 10px;
-    box-sizing: border-box;
-    cursor: pointer;
-  }
-
-  .hig__flyout-v1__panel {
-    padding: 0px 10px 10px 10px;
-    background-color: color(hig-white);
-    border: 1px solid color(hig-cool-gray-20);
-    border-radius: 4px;
-    box-shadow: 0 0 4px color(hig-cool-gray-30);
+  .hig__flyout-v1__container {
+    width: 200px;
   }
 }
 
@@ -46,6 +34,8 @@
     position: relative;
     flex: 0 0 auto;
     overflow: hidden;
+    height: 32px;
+    width: 32px;
 
     border-radius: 2px;
     border: 1px solid color(hig-cool-gray-30);
