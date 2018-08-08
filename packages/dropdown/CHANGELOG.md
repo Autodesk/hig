@@ -1,3 +1,10 @@
+# [@hig/dropdown-v0.2.3](https://github.com/Autodesk/hig/compare/@hig/dropdown@0.2.2...@hig/dropdown@0.2.3) (2018-08-08)
+
+
+### Bug Fixes
+
+* correct set Downshift menu ref ([c4d15c3](https://github.com/Autodesk/hig/commit/c4d15c3))
+
 # [@hig/dropdown-v0.2.2](https://github.com/Autodesk/hig/compare/@hig/dropdown@0.2.1...@hig/dropdown@0.2.2) (2018-08-07)
 
 
