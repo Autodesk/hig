@@ -26,6 +26,7 @@ describe("checkbox/presenters/ModalPresenter", () => {
       props: {
         children: [<p key="p">Body</p>],
         title: "Title",
+        type: "alternate",
         onCloseClick: function onCloseClick() {}
       }
     }

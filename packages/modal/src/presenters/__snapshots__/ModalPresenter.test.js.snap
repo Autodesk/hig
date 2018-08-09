@@ -11,7 +11,7 @@ exports[`checkbox/presenters/ModalPresenter renders with all props 1`] = `
     tabIndex="0"
   >
     <a
-      className="hig__modal-V1__window hig__modal-V1__window--standard"
+      className="hig__modal-V1__window hig__modal-V1__window--alternate"
       onClick={undefined}
       role="button"
       tabIndex="0"

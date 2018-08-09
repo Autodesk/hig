@@ -37,13 +37,13 @@ export default class ModalPresenter extends Component {
      */
     open: PropTypes.bool,
     /**
-     * Style of the modal shell
-     */
-    style: PropTypes.string,
-    /**
      * Title of the modal
      */
-    title: PropTypes.string
+    title: PropTypes.string,
+    /**
+     * Style of the modal shell
+     */
+    type: PropTypes.string
   };
 
   setScrolling = element => {
@@ -59,15 +59,15 @@ export default class ModalPresenter extends Component {
       onOverlayClick,
       onWindowClick,
       open,
-      style,
-      title
+      title,
+      type
     } = this.props;
 
-    const styleKey = style || "standard";
+    const typeKey = type || "standard";
 
     const windowClasses = cx([
       "hig__modal-V1__window",
-      `hig__modal-V1__window--${styleKey}`
+      `hig__modal-V1__window--${typeKey}`
     ]);
 
     const wrapperClasses = cx([

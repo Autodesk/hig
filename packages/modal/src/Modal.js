@@ -32,13 +32,13 @@ export default class Modal extends Component {
      */
     open: PropTypes.bool,
     /**
-     * Style of the modal shell
-     */
-    style: PropTypes.string,
-    /**
      * Title of the modal
      */
-    title: PropTypes.string
+    title: PropTypes.string,
+    /**
+     * Style of the modal shell
+     */
+    type: PropTypes.string
   };
 
   render() {
@@ -49,8 +49,8 @@ export default class Modal extends Component {
       onCloseClick,
       onOverlayClick,
       open,
-      style,
-      title
+      title,
+      type
     } = this.props;
 
     return (
@@ -67,8 +67,8 @@ export default class Modal extends Component {
             onOverlayClick={handleOverlayClick}
             onWindowClick={handleWindowClick}
             open={open}
-            style={style}
             title={title}
+            type={type}
           >
             {children}
           </ModalPresenter>
