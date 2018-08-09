@@ -46,17 +46,28 @@ export default class ModalPresenter extends Component {
   };
 
   render() {
-    const style = this.props.style || "standard";
+    const {
+      children,
+      headerChildren,
+      onCloseClick,
+      onOverlayClick,
+      onWindowClick,
+      open,
+      style,
+      title
+    } = this.props;
+
+    const styleKey = style || "standard";
 
     const windowClasses = cx([
       "hig__modal-V1__window",
-      `hig__modal-V1__window--${style}`
+      `hig__modal-V1__window--${styleKey}`
     ]);
 
     const wrapperClasses = cx([
       "hig__modal-V1",
       {
-        "hig__modal-V1--open": this.props.open
+        "hig__modal-V1--open": open
       }
     ]);
 
@@ -64,24 +75,21 @@ export default class ModalPresenter extends Component {
       <div className={wrapperClasses}>
         <a
           className="hig__modal-V1__overlay"
-          onClick={this.props.onOverlayClick}
+          onClick={onOverlayClick}
           role="button"
           tabIndex="0"
         >
           <a
             className={windowClasses}
-            onClick={this.props.onWindowClick}
+            onClick={onWindowClick}
             role="button"
             tabIndex="0"
           >
-            <ModalHeaderPresenter
-              onCloseClick={this.props.onCloseClick}
-              title={this.props.title}
-            >
-              {this.props.headerChildren}
+            <ModalHeaderPresenter onCloseClick={onCloseClick} title={title}>
+              {headerChildren}
             </ModalHeaderPresenter>
             <div className="hig__modal-V1__body">
-              <div className="hig__modal-V1__slot">{this.props.children}</div>
+              <div className="hig__modal-V1__slot">{children}</div>
             </div>
           </a>
         </a>

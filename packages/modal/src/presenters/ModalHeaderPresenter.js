@@ -27,17 +27,19 @@ export default class ModalHeaderPresenter extends Component {
   }
 
   render() {
-    return this.props.children ? (
+    const { children, onCloseClick, title } = this.props;
+
+    return children ? (
       this.renderChildren()
     ) : (
       <header className="hig__modal-V1__header">
         <IconButton
           aria-label="close"
           name={names.X_CLOSE_GRAY}
-          onClick={this.props.onCloseClick}
+          onClick={onCloseClick}
           title="Close"
         />
-        <span className="hig__modal-V1__header-title">{this.props.title}</span>
+        <span className="hig__modal-V1__header-title">{title}</span>
       </header>
     );
   }
