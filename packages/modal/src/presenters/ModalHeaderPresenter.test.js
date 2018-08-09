@@ -16,7 +16,7 @@ describe("checkbox/presenters/ModalHeaderPresenter", () => {
     {
       description: "renders with children",
       props: {
-        children: [<p key={"p"}>Title</p>]
+        children: [<p key="p">Title</p>]
       }
     },
     {

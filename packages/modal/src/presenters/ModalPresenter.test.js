@@ -16,15 +16,15 @@ describe("checkbox/presenters/ModalPresenter", () => {
     {
       description: "renders with header children",
       props: {
-        children: [<p key={"p"}>Body</p>],
-        headerChildren: [<h1 key={"h1"}>Title</h1>],
+        children: [<p key="p">Body</p>],
+        headerChildren: [<h1 key="h1">Title</h1>],
         onCloseClick: function onCloseClick() {}
       }
     },
     {
       description: "renders with all props",
       props: {
-        children: [<p key={"p"}>Body</p>],
+        children: [<p key="p">Body</p>],
         title: "Title",
         onCloseClick: function onCloseClick() {}
       }
