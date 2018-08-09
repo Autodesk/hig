@@ -6,6 +6,9 @@ import ProjectAccountSwitcherBehavior from "./behavior/ProjectAccountSwitcherBeh
 
 export default class ProjectAccountSwitcher extends Component {
   static propTypes = {
+    /** Heading title for the list of Accounts */
+    accountTitle: PropTypes.string,
+    /** List of Accounts */
     accounts: PropTypes.arrayOf(
       PropTypes.shape({
         id: PropTypes.string,
@@ -13,9 +16,17 @@ export default class ProjectAccountSwitcher extends Component {
         label: PropTypes.string
       })
     ),
-    accountTitle: PropTypes.string,
+    /** Currently selected Account */
     activeAccountId: PropTypes.string,
+    /** Currently selected Project */
     activeProjectId: PropTypes.string,
+    /** Called when a the element changes */
+    onChange: PropTypes.func,
+    /** Called when a user clicks on the element */
+    onClick: PropTypes.func,
+    /** Called when a user clicks on the target element */
+    onTargetClick: PropTypes.func,
+    /** List of Projects */
     projects: PropTypes.arrayOf(
       PropTypes.shape({
         id: PropTypes.string,
@@ -23,10 +34,8 @@ export default class ProjectAccountSwitcher extends Component {
         label: PropTypes.string
       })
     ),
-    projectTitle: PropTypes.string,
-    onChange: PropTypes.func,
-    onClick: PropTypes.func,
-    onTargetClick: PropTypes.func
+    /** Heading title for the list of Projects */
+    projectTitle: PropTypes.string
   };
 
   render() {

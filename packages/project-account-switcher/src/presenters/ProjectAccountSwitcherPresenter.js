@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import cx from "classnames";
-import { generateId } from "@hig/utils";
 import Flyout from "@hig/flyout";
 import icons from "../../../icons/build";
 import { anchorPoints } from "../../../flyout/src/anchorPoints";
@@ -21,14 +19,21 @@ export default class ProjectAccountSwitcherPresenter extends Component {
         label: PropTypes.string
       })
     ),
+    /** Currently selected Account */
     activeAccountId: PropTypes.string,
+    /** Label for selected Accounts and Projects */
     activeLabel: PropTypes.string,
+    /** Currently selected Project */
     activeProjectId: PropTypes.string,
+    /** Handles Account selection, passed from Behavior */
     onAccountClick: PropTypes.func,
+    /** Handles Project selection, passed from Behavior */
     onProjectClick: PropTypes.func,
+    /** Handles Flyout display, passed from Behavior */
     onTargetClick: PropTypes.func,
     /** Menu heading title for the list of Projects */
     open: PropTypes.bool,
+    /** Heading title for the list of Projects */
     projectTitle: PropTypes.string,
     /** List of Projects */
     projects: PropTypes.arrayOf(

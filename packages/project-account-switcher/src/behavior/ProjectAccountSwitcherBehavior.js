@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 export default class ProjectAccountSwitcherBehavior extends Component {
   static propTypes = {
+    /** List of Accounts */
     accounts: PropTypes.arrayOf(
       PropTypes.shape({
         id: PropTypes.string,
@@ -10,14 +11,23 @@ export default class ProjectAccountSwitcherBehavior extends Component {
         label: PropTypes.string
       })
     ),
+    /** Currently selected Account */
     activeAccountId: PropTypes.string,
+    /** Currently selected Project */
     activeProjectId: PropTypes.string,
+    /** Render prop */
     children: PropTypes.func,
+    /** Initially sets the selected Account, but allows user action to change it */
     defaultActiveAccountId: PropTypes.string,
+    /** Initially sets the selected Project, but allows user action to change it */
     defaultActiveProjectId: PropTypes.string,
+    /** Called when a user clicks on the element */
     onClick: PropTypes.func,
+    /** Called when a user clicks on the target element */
     onTargetClick: PropTypes.func,
+    /** Opens the Flyout */
     open: PropTypes.bool,
+    /** List of Projects */
     projects: PropTypes.arrayOf(
       PropTypes.shape({
         id: PropTypes.string,
