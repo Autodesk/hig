@@ -6,13 +6,13 @@ exports[`checkbox/presenters/ModalPresenter renders with all props 1`] = `
 >
   <a
     className="hig__modal-V1__overlay"
-    onClick={[Function]}
+    onClick={undefined}
     role="button"
     tabIndex="0"
   >
     <a
       className="hig__modal-V1__window hig__modal-V1__window--standard"
-      onClick={[Function]}
+      onClick={undefined}
       role="button"
       tabIndex="0"
     >
@@ -69,13 +69,13 @@ exports[`checkbox/presenters/ModalPresenter renders with header children 1`] = `
 >
   <a
     className="hig__modal-V1__overlay"
-    onClick={[Function]}
+    onClick={undefined}
     role="button"
     tabIndex="0"
   >
     <a
       className="hig__modal-V1__window hig__modal-V1__window--standard"
-      onClick={[Function]}
+      onClick={undefined}
       role="button"
       tabIndex="0"
     >
@@ -108,13 +108,13 @@ exports[`checkbox/presenters/ModalPresenter renders without props 1`] = `
 >
   <a
     className="hig__modal-V1__overlay"
-    onClick={[Function]}
+    onClick={undefined}
     role="button"
     tabIndex="0"
   >
     <a
       className="hig__modal-V1__window hig__modal-V1__window--standard"
-      onClick={[Function]}
+      onClick={undefined}
       role="button"
       tabIndex="0"
     >
@@ -124,7 +124,7 @@ exports[`checkbox/presenters/ModalPresenter renders without props 1`] = `
         <button
           className="hig__icon-button hig__icon-button--primary"
           onBlur={undefined}
-          onClick={[Function]}
+          onClick={undefined}
           onFocus={undefined}
           onMouseEnter={undefined}
           onMouseLeave={undefined}

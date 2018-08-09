@@ -64,13 +64,13 @@ export default class ModalPresenter extends Component {
       <div className={wrapperClasses}>
         <a
           className="hig__modal-V1__overlay"
-          onClick={event => this.props.onOverlayClick(event)}
+          onClick={this.props.onOverlayClick}
           role="button"
           tabIndex="0"
         >
           <a
             className={windowClasses}
-            onClick={event => this.props.onWindowClick(event)}
+            onClick={this.props.onWindowClick}
             role="button"
             tabIndex="0"
           >

@@ -34,7 +34,7 @@ export default class ModalHeaderPresenter extends Component {
         <IconButton
           aria-label="close"
           name={names.X_CLOSE_GRAY}
-          onClick={event => this.props.onCloseClick(event)}
+          onClick={this.props.onCloseClick}
           title="Close"
         />
         <span className="hig__modal-V1__header-title">{this.props.title}</span>

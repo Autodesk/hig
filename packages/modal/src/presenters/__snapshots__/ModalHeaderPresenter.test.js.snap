@@ -51,7 +51,7 @@ exports[`checkbox/presenters/ModalHeaderPresenter renders without props 1`] = `
   <button
     className="hig__icon-button hig__icon-button--primary"
     onBlur={undefined}
-    onClick={[Function]}
+    onClick={undefined}
     onFocus={undefined}
     onMouseEnter={undefined}
     onMouseLeave={undefined}
