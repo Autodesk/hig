@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
 
-import { ThemeContext } from "@hig/themes";
+import { ThemeContext } from "../../../themes/build";
 
-import stylesheet from "./stylesheet";
+import stylesheet from "./InputPresenter.stylesheet";
 
 export default function InputPresenter({
   disabled,
@@ -26,19 +26,16 @@ export default function InputPresenter({
         );
 
         return (
-          <div className={css(styles.inputWrapper)}>
-            <input
-              className={css(styles.input)}
-              value={value}
-              disabled={disabled}
-              onFocus={onFocus}
-              onBlur={onBlur}
-              onMouseEnter={onMouseEnter}
-              onMouseLeave={onMouseLeave}
-              onChange={onChange}
-            />
-            <div className={css(styles.halo)} />
-          </div>
+          <input
+            className={css(styles.input)}
+            value={value}
+            disabled={disabled}
+            onFocus={onFocus}
+            onBlur={onBlur}
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+            onChange={onChange}
+          />
         );
       }}
     </ThemeContext.Consumer>

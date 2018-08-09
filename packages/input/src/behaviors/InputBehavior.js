@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-import FocusBehavior from "./behaviors/FocusBehavior";
-import HoverBehavior from "./behaviors/HoverBehavior";
+import FocusBehavior from "./FocusBehavior";
+import HoverBehavior from "./HoverBehavior";
 
 class InputBehavior extends Component {
   static propTypes = {

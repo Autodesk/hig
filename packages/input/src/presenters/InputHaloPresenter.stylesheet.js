@@ -1,9 +1,6 @@
-function inputStyles({ isDisabled, hasFocus, hasHover }, themeData) {
+function borderBottomStyles({ isDisabled, hasFocus, hasHover }, themeData) {
   const defaults = {
-    borderBottomColor: themeData["INPUT.BORDER_BOTTOM_COLOR"],
-    color: themeData["INPUT.FONT_COLOR"],
-    transitionProperty: "color",
-    transitionDuration: "0.3s"
+    borderBottomColor: themeData["INPUT.BORDER_BOTTOM_COLOR"]
   };
 
   if (isDisabled) {
@@ -16,15 +13,13 @@ function inputStyles({ isDisabled, hasFocus, hasHover }, themeData) {
   if (hasFocus) {
     return {
       ...defaults,
-      borderBottomColor: themeData["INPUT.FOCUS.BORDER_BOTTOM_COLOR"],
-      transitionDuration: "0.1s"
+      borderBottomColor: themeData["INPUT.FOCUS.BORDER_BOTTOM_COLOR"]
     };
   }
   if (hasHover) {
     return {
       ...defaults,
-      borderBottomColor: themeData["INPUT.HOVER.BORDER_BOTTOM_COLOR"],
-      transitionDuration: "0.1s"
+      borderBottomColor: themeData["INPUT.HOVER.BORDER_BOTTOM_COLOR"]
     };
   }
   return defaults;
@@ -58,30 +53,13 @@ function haloStyles({ isDisabled, hasFocus, hasHover }, themeData) {
   return defaults;
 }
 
-export default function stylesheet(props, themeData) {
+export default function(props, themeData) {
   return {
-    inputWrapper: {
+    wrapper: {
       position: "relative",
-      width: "300px"
-    },
-    input: {
-      backgroundColor: "transparent",
-      boxSizing: "border-box",
-      appearance: "none",
-      minHeight: themeData["INPUT.MIN_HEIGHT"],
-      paddingLeft: themeData["DENSITY.INPUT.HORIZONTAL_PADDING"],
-      paddingRight: themeData["DENSITY.INPUT.HORIZONTAL_PADDING"],
-      borderTop: "none",
-      borderRight: "none",
+      borderBottomStyle: "solid",
       borderBottomWidth: themeData["INPUT.BORDER_BOTTOM_WIDTH"],
-      borderLeft: "none",
-      outline: "none",
-      fontSize: themeData["DENSITY.FONT_SIZES.M"],
-      fontFamily: themeData["INPUT.FONT_FAMILY"],
-      fontWeight: themeData["INPUT.FONT_WEIGHT"],
-      lineHeight: themeData["INPUT.LINE_HEIGHT"],
-      width: "100%",
-      ...inputStyles(props, themeData)
+      ...borderBottomStyles(props, themeData)
     },
     halo: {
       position: "absolute",
