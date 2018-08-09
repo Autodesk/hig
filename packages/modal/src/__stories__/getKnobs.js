@@ -1,11 +1,9 @@
 import { action } from "@storybook/addon-actions";
 import { boolean, select, text } from "@storybook/addon-knobs/react";
 import { makeSelectOptions } from "@hig/storybook/utils";
+import { types } from "../types";
 
-const typeOptions = makeSelectOptions({
-  Standard: "standard",
-  Alternate: "alternate"
-});
+const typeOptions = makeSelectOptions(types);
 
 const knobGroupIds = {
   basic: "Basic"
