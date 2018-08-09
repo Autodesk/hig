@@ -1,160 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`checkbox/presenters/ModalPresenter renders with all props 1`] = `
-<div
-  className="hig__modal-V1"
+exports[`checkbox/presenters/ModalPresenter  1`] = `
+<header
+  className="hig__modal-V1__header"
 >
-  <a
-    className="hig__modal-V1__overlay"
+  <button
+    className="hig__icon-button hig__icon-button--primary"
+    onBlur={undefined}
     onClick={undefined}
-    role="button"
-    tabIndex="0"
+    onFocus={undefined}
+    onMouseEnter={undefined}
+    onMouseLeave={undefined}
+    title="Close"
   >
-    <a
-      className="hig__modal-V1__window hig__modal-V1__window--alternate"
-      onClick={undefined}
-      role="button"
-      tabIndex="0"
+    <span
+      className="hig__icon-button__icon"
     >
-      <header
-        className="hig__modal-V1__header"
-      >
-        <button
-          className="hig__icon-button hig__icon-button--primary"
-          onBlur={undefined}
-          onClick={[Function]}
-          onFocus={undefined}
-          onMouseEnter={undefined}
-          onMouseLeave={undefined}
-          title="Close"
-        >
-          <span
-            className="hig__icon-button__icon"
-          >
-            <div
-              className="hig__icon hig__icon--24-size"
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "<svg width=\\"19\\" height=\\"19\\" viewBox=\\"0 0 19 19\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"x-close-gray-24\\"><g fill=\\"#949DA2\\" fill-rule=\\"evenodd\\"><rect transform=\\"rotate(45 9.192 9.192)\\" x=\\"-2.808\\" y=\\"8.192\\" width=\\"24\\" height=\\"2\\"/><rect transform=\\"rotate(135 9.192 9.192)\\" x=\\"-2.808\\" y=\\"8.192\\" width=\\"24\\" height=\\"2\\"/></g></svg>",
-                }
-              }
-            />
-          </span>
-        </button>
-        <span
-          className="hig__modal-V1__header-title"
-        >
-          Title
-        </span>
-      </header>
       <div
-        className="hig__modal-V1__body"
-      >
-        <div
-          className="hig__modal-V1__slot"
-        >
-          <p>
-            Body
-          </p>
-        </div>
-      </div>
-    </a>
-  </a>
-</div>
+        className="hig__icon hig__icon--24-size"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<svg width=\\"19\\" height=\\"19\\" viewBox=\\"0 0 19 19\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"x-close-gray-24\\"><g fill=\\"#949DA2\\" fill-rule=\\"evenodd\\"><rect transform=\\"rotate(45 9.192 9.192)\\" x=\\"-2.808\\" y=\\"8.192\\" width=\\"24\\" height=\\"2\\"/><rect transform=\\"rotate(135 9.192 9.192)\\" x=\\"-2.808\\" y=\\"8.192\\" width=\\"24\\" height=\\"2\\"/></g></svg>",
+          }
+        }
+      />
+    </span>
+  </button>
+  <span
+    className="hig__modal-V1__header-title"
+  />
+</header>
 `;
 
-exports[`checkbox/presenters/ModalPresenter renders with header children 1`] = `
-<div
-  className="hig__modal-V1"
+exports[`checkbox/presenters/ModalPresenter  2`] = `
+<header
+  className="hig__modal-V1__header"
 >
-  <a
-    className="hig__modal-V1__overlay"
-    onClick={undefined}
-    role="button"
-    tabIndex="0"
-  >
-    <a
-      className="hig__modal-V1__window hig__modal-V1__window--standard"
-      onClick={undefined}
-      role="button"
-      tabIndex="0"
-    >
-      <header
-        className="hig__modal-V1__header"
-      >
-        <h1>
-          Title
-        </h1>
-      </header>
-      <div
-        className="hig__modal-V1__body"
-      >
-        <div
-          className="hig__modal-V1__slot"
-        >
-          <p>
-            Body
-          </p>
-        </div>
-      </div>
-    </a>
-  </a>
-</div>
+  <p>
+    Body
+  </p>
+</header>
 `;
 
-exports[`checkbox/presenters/ModalPresenter renders without props 1`] = `
-<div
-  className="hig__modal-V1"
+exports[`checkbox/presenters/ModalPresenter  3`] = `
+<header
+  className="hig__modal-V1__header"
 >
-  <a
-    className="hig__modal-V1__overlay"
-    onClick={undefined}
-    role="button"
-    tabIndex="0"
-  >
-    <a
-      className="hig__modal-V1__window hig__modal-V1__window--standard"
-      onClick={undefined}
-      role="button"
-      tabIndex="0"
-    >
-      <header
-        className="hig__modal-V1__header"
-      >
-        <button
-          className="hig__icon-button hig__icon-button--primary"
-          onBlur={undefined}
-          onClick={undefined}
-          onFocus={undefined}
-          onMouseEnter={undefined}
-          onMouseLeave={undefined}
-          title="Close"
-        >
-          <span
-            className="hig__icon-button__icon"
-          >
-            <div
-              className="hig__icon hig__icon--24-size"
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "<svg width=\\"19\\" height=\\"19\\" viewBox=\\"0 0 19 19\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"x-close-gray-24\\"><g fill=\\"#949DA2\\" fill-rule=\\"evenodd\\"><rect transform=\\"rotate(45 9.192 9.192)\\" x=\\"-2.808\\" y=\\"8.192\\" width=\\"24\\" height=\\"2\\"/><rect transform=\\"rotate(135 9.192 9.192)\\" x=\\"-2.808\\" y=\\"8.192\\" width=\\"24\\" height=\\"2\\"/></g></svg>",
-                }
-              }
-            />
-          </span>
-        </button>
-        <span
-          className="hig__modal-V1__header-title"
-        />
-      </header>
-      <div
-        className="hig__modal-V1__body"
-      >
-        <div
-          className="hig__modal-V1__slot"
-        />
-      </div>
-    </a>
-  </a>
-</div>
+  <p>
+    Body
+  </p>
+</header>
 `;

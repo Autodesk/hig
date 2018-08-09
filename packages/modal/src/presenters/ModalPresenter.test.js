@@ -1,7 +1,7 @@
 import React from "react";
-import renderer from "react-test-renderer";
 import { generateId } from "@hig/utils";
-import ModalPresenter from "./ModalPresenter";
+import { takeSnapshotsOf } from "../../../jest-preset/helpers";
+import ModalHeaderPresenter from "./ModalHeaderPresenter";
 
 describe("checkbox/presenters/ModalPresenter", () => {
   afterEach(() => {
@@ -30,14 +30,7 @@ describe("checkbox/presenters/ModalPresenter", () => {
         onCloseClick: function onCloseClick() {}
       }
     }
-  ].forEach(({ description, props: { children, ...otherProps } }) => {
-    it(description, () => {
-      const presenter = (
-        <ModalPresenter {...otherProps}>{children}</ModalPresenter>
-      );
-      const tree = renderer.create(presenter).toJSON();
-
-      expect(tree).toMatchSnapshot();
-    });
+  ].forEach(({ desc, props }) => {
+    takeSnapshotsOf(ModalHeaderPresenter, [{ desc, props }]);
   });
 });
