@@ -4,27 +4,28 @@ import inputPropTypes from "./inputPropTypes";
 import InputBehavior from "./behaviors/InputBehavior";
 import InputPresenter from "./presenters/InputPresenter";
 
-function Input({ value, disabled, onChange }) {
+function Input({ value, disabled, onInput, onChange, onFocus, onBlur }) {
   return (
-    <InputBehavior>
+    <InputBehavior onBlur={onBlur} onFocus={onFocus}>
       {({
-        hasHover,
-        onMouseEnter,
-        onMouseLeave,
+        handleBlur,
+        handleFocus,
         hasFocus,
-        onFocus,
-        onBlur
+        hasHover,
+        handleMouseEnter,
+        handleMouseLeave
       }) => (
         <InputPresenter
           value={value}
           disabled={disabled}
-          onFocus={onFocus}
-          onBlur={onBlur}
-          onMouseEnter={onMouseEnter}
-          onMouseLeave={onMouseLeave}
-          onChange={onChange}
           hasHover={hasHover}
           hasFocus={hasFocus}
+          onBlur={handleBlur}
+          onChange={onChange}
+          onFocus={handleFocus}
+          onInput={onInput}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         />
       )}
     </InputBehavior>
