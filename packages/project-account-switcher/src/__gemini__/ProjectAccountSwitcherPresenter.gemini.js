@@ -2,12 +2,17 @@ gemini.suite("ProjectAccountSwitcherPresenter", () => {
   gemini.suite("default", suite => {
     suite
       .setUrl(
-        "iframe.html?&selectedKind=GlobalNav%7CProjectAccountSwitcher&selectedStory=default"
+        "iframe.html?selectedKind=ProjectAccountSwitcherPresenter&selectedStory=default"
       )
       .setCaptureElements(".storybook-component")
       .capture("default - unfocused");
-    ///.capture("default - clicked", actions => {
-    //  actions.click(".project-account-switcher__target");
-    // });
+  });
+  gemini.suite("open", suite => {
+    suite
+      .setUrl(
+        "iframe.html?selectedKind=ProjectAccountSwitcherPresenter&selectedStory=open"
+      )
+      .setCaptureElements(".storybook-component")
+      .capture("flyout opened");
   });
 });

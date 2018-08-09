@@ -1,19 +1,18 @@
 @import "~@hig/styles/mixins/colors.scss";
 
 .project-account-switcher {
-
+  font-family: 'ArtifaktElement';
   display: flex;
   flex-direction: row;
   align-items: stretch;
   position: relative;
 
-  .project-account-switcher__item__label:hover {
-    color: color(hig-blue-50);
-    text-decoration: none;
-  }
-
   .hig__flyout-v1__container {
     width: 200px;
+  }
+
+  .hig__flyout-v1__panel {
+    padding: 0px 10px 10px 10px;
   }
 }
 
