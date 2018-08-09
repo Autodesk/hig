@@ -11,6 +11,11 @@ export default class Modal extends Component {
      */
     children: PropTypes.node,
     /**
+     * ARIA label attribute for the close button if/when headerChildren
+     * are not utilized
+     */
+    closeButtonAriaLabel: PropTypes.string,
+    /**
      * Supports adding any dom content to the header of the modal
      */
     headerChildren: PropTypes.node,
@@ -39,6 +44,7 @@ export default class Modal extends Component {
   render() {
     const {
       children,
+      closeButtonAriaLabel,
       headerChildren,
       onCloseClick,
       onOverlayClick,
@@ -55,6 +61,7 @@ export default class Modal extends Component {
       >
         {({ handleCloseClick, handleOverlayClick, handleWindowClick }) => (
           <ModalPresenter
+            closeButtonAriaLabel={closeButtonAriaLabel}
             headerChildren={headerChildren}
             onCloseClick={handleCloseClick}
             onOverlayClick={handleOverlayClick}

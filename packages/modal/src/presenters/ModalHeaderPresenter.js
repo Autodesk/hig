@@ -11,6 +11,11 @@ export default class ModalHeaderPresenter extends Component {
      */
     children: PropTypes.node,
     /**
+     * ARIA label attribute for the close button if/when children
+     * are not utilized
+     */
+    closeButtonAriaLabel: PropTypes.string,
+    /**
      * Triggers when one clicks the close button
      */
     onCloseClick: PropTypes.func,
@@ -20,6 +25,10 @@ export default class ModalHeaderPresenter extends Component {
     title: PropTypes.string
   };
 
+  static defaultProps = {
+    closeButtonAriaLabel: "close"
+  };
+
   renderChildren() {
     return (
       <header className="hig__modal-V1__header">{this.props.children}</header>
@@ -27,14 +36,14 @@ export default class ModalHeaderPresenter extends Component {
   }
 
   render() {
-    const { children, onCloseClick, title } = this.props;
+    const { children, closeButtonAriaLabel, onCloseClick, title } = this.props;
 
     return children ? (
       this.renderChildren()
     ) : (
       <header className="hig__modal-V1__header">
         <IconButton
-          aria-label="close"
+          aria-label={closeButtonAriaLabel}
           name={names.X_CLOSE_GRAY}
           onClick={onCloseClick}
           title="Close"
