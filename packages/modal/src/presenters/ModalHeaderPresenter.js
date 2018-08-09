@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import IconButton from "@hig/icon-button";
+import IconButton, { names } from "@hig/icon-button";
 
 import "./ModalHeaderPresenter.scss";
 
@@ -33,7 +33,7 @@ export default class ModalHeaderPresenter extends Component {
       <header className="hig__modal-V1__header">
         <IconButton
           aria-label="close"
-          name="x-close-gray"
+          name={names.X_CLOSE_GRAY}
           onClick={event => this.props.onCloseClick(event)}
           title="Close"
         />
