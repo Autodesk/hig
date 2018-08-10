@@ -1,13 +1,16 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Flyout from "@hig/flyout";
+import "@hig/flyout/build/index.css";
 import icons from "../../../icons/build";
 import { anchorPoints } from "../../../flyout/src/anchorPoints";
-
-import "@hig/flyout/build/index.css";
 import "./ProjectAccountSwitcherPresenter.scss";
 
 export default class ProjectAccountSwitcherPresenter extends Component {
+  static constructPlaceholder(label) {
+    return label.match(/\b(\w)/g).join("");
+  }
+
   static propTypes = {
     /** Heading title for the list of Accounts */
     accountTitle: PropTypes.string,
@@ -58,32 +61,32 @@ export default class ProjectAccountSwitcherPresenter extends Component {
     projects: [{ id: "1", label: "Project 1" }, { id: "2", label: "Project 2" }]
   };
 
-  constructPlaceholder(label) {
-    return label.match(/\b(\w)/g).join("");
-  }
-
   constructLabel() {
+    // eslint-disable-next-line react/no-shadow
     const activeAccount = this.props.accounts.filter(
       account => account.id === this.props.activeAccountId
     )[0];
+    // eslint-disable-next-line react/no-shadow
     const activeProject = this.props.projects.filter(
       project => project.id === this.props.activeProjectId
     )[0];
-    return activeAccount.label + " / " + activeProject.label;
+    return `${activeAccount.label} / ${activeProject.label}`;
   }
 
   constructLabelPlaceholder() {
+    // eslint-disable-next-line react/no-shadow
     const activeAccount = this.props.accounts.filter(
       account => account.id === this.props.activeAccountId
     )[0];
+    // eslint-disable-next-line react/no-shadow
     const activeProject = this.props.projects.filter(
       project => project.id === this.props.activeProjectId
     )[0];
-    return (
-      this.constructPlaceholder(activeAccount.label) +
-      "/" +
-      this.constructPlaceholder(activeProject.label)
-    );
+    return `${ProjectAccountSwitcherPresenter.constructPlaceholder(
+      activeAccount.label
+    )}/${ProjectAccountSwitcherPresenter.constructPlaceholder(
+      activeProject.label
+    )}`;
   }
 
   accountsList() {
@@ -94,13 +97,17 @@ export default class ProjectAccountSwitcherPresenter extends Component {
                       project-account-switcher__item--active"
         data-account-id={account.id}
         onClick={this.props.onAccountClick}
+        role="button"
+        tabIndex="0"
       >
         <span className="project-account-switcher__item__image-wrapper">
           <span
             className="project-account-switcher__item__image-placeholder"
             data-account-id={account.id}
             dangerouslySetInnerHTML={{
-              __html: this.constructPlaceholder(account.label)
+              __html: ProjectAccountSwitcherPresenter.constructPlaceholder(
+                account.label
+              )
             }}
           />
         </span>
@@ -121,13 +128,17 @@ export default class ProjectAccountSwitcherPresenter extends Component {
                       project-account-switcher__item--active"
         data-project-id={project.id}
         onClick={this.props.onProjectClick}
+        role="button"
+        tabIndex="0"
       >
         <span className="project-account-switcher__item__image-wrapper">
           <span
             className="project-account-switcher__item__image-placeholder"
             data-project-id={project.id}
             dangerouslySetInnerHTML={{
-              __html: this.constructPlaceholder(project.label)
+              __html: ProjectAccountSwitcherPresenter.constructPlaceholder(
+                project.label
+              )
             }}
           />
         </span>
@@ -162,10 +173,15 @@ export default class ProjectAccountSwitcherPresenter extends Component {
   }
 
   render() {
+    const activeLabel = this.props.activeLabel
+      ? this.props.activeLabel
+      : this.constructLabel();
     return (
       <div
         className="project-account-switcher"
         onClick={this.props.onTargetClick}
+        role="button"
+        tabIndex="0"
       >
         <Flyout
           content={this.flyoutContent()}
@@ -175,7 +191,11 @@ export default class ProjectAccountSwitcherPresenter extends Component {
           <div className="project-account-switcher__target">
             <div className="project-account-switcher__item">
               <span className="project-account-switcher__item__image-wrapper">
-                <img className="project-account-switcher__item__image" />
+                <img
+                  className="project-account-switcher__item__image"
+                  alt={activeLabel}
+                  src={""} // TODO: replace with var
+                />
                 <span
                   className="project-account-switcher__item__image-placeholder"
                   dangerouslySetInnerHTML={{
@@ -185,7 +205,7 @@ export default class ProjectAccountSwitcherPresenter extends Component {
               </span>
               <span
                 className="project-account-switcher__item__label"
-                dangerouslySetInnerHTML={{ __html: this.constructLabel() }}
+                dangerouslySetInnerHTML={{ __html: activeLabel }}
               />
             </div>
             <span className="project-account-switcher__target__caret">

@@ -7,6 +7,10 @@
   align-items: stretch;
   position: relative;
 
+  &:focus {
+    outline: none;
+  }
+
   .hig__flyout-v1__container {
     width: 200px;
   }

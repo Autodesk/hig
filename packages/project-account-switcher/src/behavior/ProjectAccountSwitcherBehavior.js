@@ -57,10 +57,10 @@ export default class ProjectAccountSwitcherBehavior extends Component {
   }
 
   handleTargetClick = event => {
-    const { onClick } = this.props;
+    const { onTargetClick } = this.props;
 
-    if (onClick) {
-      onClick(event);
+    if (onTargetClick) {
+      onTargetClick(event);
     }
 
     this.setState({

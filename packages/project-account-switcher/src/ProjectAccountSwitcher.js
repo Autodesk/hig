@@ -4,6 +4,8 @@ import PropTypes from "prop-types";
 import ProjectAccountSwitcherPresenter from "./presenters/ProjectAccountSwitcherPresenter";
 import ProjectAccountSwitcherBehavior from "./behavior/ProjectAccountSwitcherBehavior";
 
+/* eslint no-shadow: "off" */
+
 export default class ProjectAccountSwitcher extends Component {
   static propTypes = {
     /** Heading title for the list of Accounts */
