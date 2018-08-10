@@ -52,10 +52,6 @@ export default class RadioButton extends Component {
   };
 
   render() {
-    return (
-      <RadioButtonPresenter
-        {...this.props}
-      />
-    );
+    return <RadioButtonPresenter {...this.props} />;
   }
 }

@@ -7,14 +7,15 @@ export default function renderStory(props) {
 
   return (
     <form>
-        <DefaultExport {...otherProps}>{children}</DefaultExport>
-        <DefaultExport 
-            {...otherProps} 
-            defaultChecked={null} 
-            label="Secondary" 
-            value="Secondary">
-            {children}
-        </DefaultExport>
+      <DefaultExport {...otherProps}>{children}</DefaultExport>
+      <DefaultExport
+        {...otherProps}
+        defaultChecked={null}
+        label="Secondary"
+        value="Secondary"
+      >
+        {children}
+      </DefaultExport>
     </form>
   );
 }

@@ -5,14 +5,15 @@ exports[`radio-button/RadioButton integration renders correctly 1`] = `
   className="hig__radio-button"
 >
   <input
-    checked={false}
+    checked={undefined}
     className="hig__radio-button__input"
+    defaultChecked={undefined}
     disabled={false}
     id="radio-button-1"
     name="radiobutton"
     onBlur={undefined}
-    onChange={[Function]}
-    onClick={[Function]}
+    onChange={undefined}
+    onClick={undefined}
     onFocus={undefined}
     type="radio"
     value="value"

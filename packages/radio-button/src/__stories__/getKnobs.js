@@ -15,11 +15,7 @@ const knobLabels = {
 };
 
 export default function getKnobs(props) {
-  const {
-    disabled = false,
-    label = "",
-    ...otherProps
-  } = props;
+  const { disabled = false, label = "", ...otherProps } = props;
 
   return {
     ...otherProps,

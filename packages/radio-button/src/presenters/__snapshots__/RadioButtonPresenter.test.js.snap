@@ -7,6 +7,7 @@ exports[`radio-button/presenters/RadioButtonPresenter renders with all props 1`]
   <input
     checked={true}
     className="hig__radio-button__input"
+    defaultChecked={undefined}
     disabled={true}
     id={undefined}
     name="RadioButton"
@@ -41,8 +42,9 @@ exports[`radio-button/presenters/RadioButtonPresenter renders without props 1`] 
   className="hig__radio-button"
 >
   <input
-    checked={false}
+    checked={undefined}
     className="hig__radio-button__input"
+    defaultChecked={undefined}
     disabled={false}
     id="radio-button-1"
     name="radiobutton"

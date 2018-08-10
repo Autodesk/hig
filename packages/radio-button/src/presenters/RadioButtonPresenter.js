@@ -13,6 +13,10 @@ export default class RadioButtonPresenter extends Component {
      */
     checked: PropTypes.bool,
     /**
+     * Initially checks the checkbox, but allows user action to change it
+     */
+    defaultChecked: PropTypes.bool,
+    /**
      * Prevents user actions on the radio button
      */
     disabled: PropTypes.bool,
