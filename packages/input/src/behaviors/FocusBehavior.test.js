@@ -61,7 +61,7 @@ describe("FocusBehavior", () => {
       expect(renderPropArgs.hasFocus).toBeFalse();
     });
 
-    it("calls onFocus callback", () => {
+    it("calls onBlur callback", () => {
       const onBlurSpy = sinon.spy();
       const { wrapper } = renderExample({
         onBlur: onBlurSpy
