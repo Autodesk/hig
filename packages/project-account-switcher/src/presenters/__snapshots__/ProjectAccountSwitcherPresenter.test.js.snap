@@ -3,6 +3,9 @@
 exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter renders with all props 1`] = `
 <div
   className="project-account-switcher"
+  onClick={undefined}
+  role="button"
+  tabIndex="0"
 >
   <div
     className="hig__flyout-v1 hig__flyout-v1--exited hig__flyout-v1--top-right"
@@ -21,7 +24,9 @@ exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter ren
             className="project-account-switcher__item__image-wrapper"
           >
             <img
+              alt="Account 1 / Project 2"
               className="project-account-switcher__item__image"
+              src=""
             />
             <span
               className="project-account-switcher__item__image-placeholder"
@@ -94,6 +99,8 @@ exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter ren
               className="project-account-switcher__item project-account-switcher__item--account project-account-switcher__item--active"
               data-account-id="1"
               onClick={[Function]}
+              role="button"
+              tabIndex="0"
             >
               <span
                 className="project-account-switcher__item__image-wrapper"
@@ -122,6 +129,8 @@ exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter ren
               className="project-account-switcher__item project-account-switcher__item--account project-account-switcher__item--active"
               data-account-id="2"
               onClick={[Function]}
+              role="button"
+              tabIndex="0"
             >
               <span
                 className="project-account-switcher__item__image-wrapper"
@@ -162,6 +171,8 @@ exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter ren
               className="project-account-switcher__item project-account-switcher__item--project project-account-switcher__item--active"
               data-project-id="1"
               onClick={[Function]}
+              role="button"
+              tabIndex="0"
             >
               <span
                 className="project-account-switcher__item__image-wrapper"
@@ -190,6 +201,8 @@ exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter ren
               className="project-account-switcher__item project-account-switcher__item--project project-account-switcher__item--active"
               data-project-id="2"
               onClick={[Function]}
+              role="button"
+              tabIndex="0"
             >
               <span
                 className="project-account-switcher__item__image-wrapper"
@@ -225,6 +238,9 @@ exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter ren
 exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter renders without props 1`] = `
 <div
   className="project-account-switcher"
+  onClick={undefined}
+  role="button"
+  tabIndex="0"
 >
   <div
     className="hig__flyout-v1 hig__flyout-v1--exited hig__flyout-v1--top-right"
@@ -243,7 +259,9 @@ exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter ren
             className="project-account-switcher__item__image-wrapper"
           >
             <img
+              alt="Account 2 / Project 2"
               className="project-account-switcher__item__image"
+              src=""
             />
             <span
               className="project-account-switcher__item__image-placeholder"
@@ -316,6 +334,8 @@ exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter ren
               className="project-account-switcher__item project-account-switcher__item--account project-account-switcher__item--active"
               data-account-id="1"
               onClick={undefined}
+              role="button"
+              tabIndex="0"
             >
               <span
                 className="project-account-switcher__item__image-wrapper"
@@ -344,6 +364,8 @@ exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter ren
               className="project-account-switcher__item project-account-switcher__item--account project-account-switcher__item--active"
               data-account-id="2"
               onClick={undefined}
+              role="button"
+              tabIndex="0"
             >
               <span
                 className="project-account-switcher__item__image-wrapper"
@@ -384,6 +406,8 @@ exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter ren
               className="project-account-switcher__item project-account-switcher__item--project project-account-switcher__item--active"
               data-project-id="1"
               onClick={undefined}
+              role="button"
+              tabIndex="0"
             >
               <span
                 className="project-account-switcher__item__image-wrapper"
@@ -412,6 +436,8 @@ exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter ren
               className="project-account-switcher__item project-account-switcher__item--project project-account-switcher__item--active"
               data-project-id="2"
               onClick={undefined}
+              role="button"
+              tabIndex="0"
             >
               <span
                 className="project-account-switcher__item__image-wrapper"
