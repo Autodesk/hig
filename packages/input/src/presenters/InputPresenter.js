@@ -5,36 +5,40 @@ import { css } from "emotion";
 import { ThemeContext } from "../../../themes/build";
 
 import stylesheet from "./InputPresenter.stylesheet";
+import { availableTypes } from "../constants";
 
 export default function InputPresenter({
   disabled,
   hasFocus,
   hasHover,
-  value,
-  onFocus,
   onBlur,
+  onChange,
+  onFocus,
+  onInput,
   onMouseEnter,
   onMouseLeave,
-  onChange
+  value,
+  type
 }) {
   return (
     <ThemeContext.Consumer>
       {({ themeData }) => {
         const styles = stylesheet(
-          { isDisabled: disabled, hasFocus, hasHover },
+          { isDisabled: disabled, hasFocus, hasHover, type },
           themeData
         );
 
         return (
           <input
             className={css(styles.input)}
-            value={value}
             disabled={disabled}
-            onFocus={onFocus}
             onBlur={onBlur}
+            onChange={onChange}
+            onFocus={onFocus}
+            onInput={onInput}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
-            onChange={onChange}
+            value={value}
           />
         );
       }}
@@ -46,10 +50,12 @@ InputPresenter.propTypes = {
   disabled: PropTypes.bool,
   hasFocus: PropTypes.bool,
   hasHover: PropTypes.bool,
-  value: PropTypes.string,
-  onFocus: PropTypes.func,
   onBlur: PropTypes.func,
+  onChange: PropTypes.func,
+  onFocus: PropTypes.func,
+  onInput: PropTypes.func,
   onMouseEnter: PropTypes.func,
   onMouseLeave: PropTypes.func,
-  onChange: PropTypes.func
+  value: PropTypes.string,
+  type: PropTypes.oneOf(availableTypes)
 };

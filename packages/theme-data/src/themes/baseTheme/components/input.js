@@ -21,6 +21,12 @@ export default {
       ref: "COLOR_SCHEME.SURFACE_LEVEL_1_5_COLOR"
     }
   },
+  "INPUT.BORDER_WIDTH": {
+    type: "borderWidth",
+    value: {
+      ref: "BASICS.BORDER_WIDTHS.S"
+    }
+  },
   "INPUT.BORDER_BOTTOM_COLOR": {
     type: "color"
   },

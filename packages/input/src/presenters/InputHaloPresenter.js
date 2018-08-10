@@ -6,12 +6,18 @@ import { ThemeContext } from "../../../themes/build";
 
 import stylesheet from "./InputHaloPresenter.stylesheet";
 
-function InputHaloPresenter({ isDisabled, hasFocus, hasHover, children }) {
+function InputHaloPresenter({
+  isDisabled,
+  hasFocus,
+  hasHover,
+  type,
+  children
+}) {
   return (
     <ThemeContext.Consumer>
       {({ themeData }) => {
         const styles = stylesheet(
-          { isDisabled, hasFocus, hasHover },
+          { isDisabled, hasFocus, hasHover, type },
           themeData
         );
 

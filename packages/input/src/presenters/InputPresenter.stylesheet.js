@@ -1,3 +1,5 @@
+import { types } from "../constants";
+
 function inputStyles({ isDisabled, hasFocus, hasHover }, themeData) {
   const defaults = {
     color: themeData["INPUT.FONT_COLOR"],
@@ -34,8 +36,16 @@ export default function stylesheet(props, themeData) {
       border: "none",
       appearance: "none",
       minHeight: themeData["INPUT.MIN_HEIGHT"],
-      paddingLeft: themeData["DENSITY.INPUT.HORIZONTAL_PADDING"],
-      paddingRight: themeData["DENSITY.INPUT.HORIZONTAL_PADDING"],
+      paddingTop: themeData["INPUT.VERTICAL_PADDING"],
+      paddingRight:
+        props.type === types.BOX
+          ? themeData["INPUT.BOX_TYPE.HORIZONTAL_PADDING"]
+          : themeData["INPUT.HORIZONTAL_PADDING"],
+      paddingBottom: themeData["INPUT.VERTICAL_PADDING"],
+      paddingLeft:
+        props.type === types.BOX
+          ? themeData["INPUT.BOX_TYPE.HORIZONTAL_PADDING"]
+          : themeData["INPUT.HORIZONTAL_PADDING"],
       outline: "none",
       fontSize: themeData["DENSITY.FONT_SIZES.M"],
       fontFamily: themeData["INPUT.FONT_FAMILY"],

@@ -1,37 +1,62 @@
 import React from "react";
-
-import inputPropTypes from "./inputPropTypes";
+import PropTypes from "prop-types";
 import InputBehavior from "./behaviors/InputBehavior";
 import InputPresenter from "./presenters/InputPresenter";
+import InputHaloPresenter from "./presenters/InputHaloPresenter";
 
-function Input({ value, disabled, onInput, onChange, onFocus, onBlur }) {
+import { types, availableTypes } from "./constants";
+
+const wrappers = {
+  [types.LINE]: InputHaloPresenter,
+  [types.BOX]: InputHaloPresenter,
+  [types.PLAIN]: "div"
+};
+
+function Input({ type, value, disabled, onChange }) {
+  const Wrapper = wrappers[type];
   return (
-    <InputBehavior onBlur={onBlur} onFocus={onFocus}>
+    <InputBehavior>
       {({
-        handleBlur,
-        handleFocus,
-        hasFocus,
         hasHover,
-        handleMouseEnter,
-        handleMouseLeave
+        onMouseEnter,
+        onMouseLeave,
+        hasFocus,
+        onFocus,
+        onBlur
       }) => (
-        <InputPresenter
-          value={value}
-          disabled={disabled}
-          hasHover={hasHover}
+        <Wrapper
+          isDisabled={disabled}
           hasFocus={hasFocus}
-          onBlur={handleBlur}
-          onChange={onChange}
-          onFocus={handleFocus}
-          onInput={onInput}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-        />
+          hasHover={hasHover}
+          type={type}
+        >
+          <InputPresenter
+            value={value}
+            disabled={disabled}
+            onFocus={onFocus}
+            onBlur={onBlur}
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+            onChange={onChange}
+            hasHover={hasHover}
+            hasFocus={hasFocus}
+            type={type}
+          />
+        </Wrapper>
       )}
     </InputBehavior>
   );
 }
 
-Input.propTypes = inputPropTypes;
+Input.propTypes = {
+  type: PropTypes.oneOf(availableTypes),
+  value: PropTypes.string,
+  disabled: PropTypes.bool,
+  onChange: PropTypes.func
+};
+
+Input.defaultProps = {
+  type: types.LINE
+};
 
 export default Input;

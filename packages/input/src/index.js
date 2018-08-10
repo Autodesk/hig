@@ -1,4 +1,4 @@
 import "@hig/styles/build/fonts.css";
 
-export { default } from "./UnderlineInput";
-export { Input } from "./Input";
+export { default } from "./Input";
+export * from "./constants";

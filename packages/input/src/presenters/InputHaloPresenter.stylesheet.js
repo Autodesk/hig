@@ -1,6 +1,25 @@
+import { types } from "../constants";
+
+function borderStyles({ type }, themeData) {
+  const defaults = {
+    borderStyle: "solid",
+    borderColor: "transparent",
+    borderWidth: themeData["INPUT.BORDER_WIDTH"]
+  };
+
+  return type === types.BOX
+    ? {
+        ...defaults,
+        borderColor: themeData["INPUT.BORDER_COLOR"]
+      }
+    : defaults;
+}
+
 function borderBottomStyles({ isDisabled, hasFocus, hasHover }, themeData) {
   const defaults = {
-    borderBottomColor: themeData["INPUT.BORDER_BOTTOM_COLOR"]
+    borderBottomStyle: "solid",
+    borderBottomColor: themeData["INPUT.BORDER_BOTTOM_COLOR"],
+    borderBottomWidth: themeData["INPUT.BORDER_BOTTOM_WIDTH"]
   };
 
   if (isDisabled) {
@@ -57,8 +76,7 @@ export default function(props, themeData) {
   return {
     wrapper: {
       position: "relative",
-      borderBottomStyle: "solid",
-      borderBottomWidth: themeData["INPUT.BORDER_BOTTOM_WIDTH"],
+      ...borderStyles(props, themeData),
       ...borderBottomStyles(props, themeData)
     },
     halo: {
