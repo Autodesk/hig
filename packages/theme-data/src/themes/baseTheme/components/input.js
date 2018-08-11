@@ -1,7 +1,11 @@
 export default {
   "INPUT.HORIZONTAL_PADDING": {
     type: "length",
-    value: 0
+    value: { ref: "BASICS.SPACINGS.NONE" }
+  },
+  "INPUT.BOX_TYPE.HORIZONTAL_PADDING": {
+    type: "length",
+    value: { ref: "DENSITY.SPACINGS.XS" }
   },
   "INPUT.VERTICAL_PADDING": {
     type: "length",

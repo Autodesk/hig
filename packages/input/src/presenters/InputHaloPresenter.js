@@ -2,9 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
 
-import { ThemeContext } from "../../../themes/build";
+import { ThemeContext } from "@hig/themes";
 
 import stylesheet from "./InputHaloPresenter.stylesheet";
+import { availableTypes } from "../constants";
 
 function InputHaloPresenter({
   isDisabled,
@@ -36,6 +37,7 @@ InputHaloPresenter.propTypes = {
   isDisabled: PropTypes.bool,
   hasFocus: PropTypes.bool,
   hasHover: PropTypes.bool,
+  type: PropTypes.oneOf(availableTypes),
   children: PropTypes.node
 };
 
