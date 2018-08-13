@@ -1,3 +1,10 @@
+# [@hig/radio-button-v0.1.1](https://github.com/Autodesk/hig/compare/@hig/radio-button@0.1.0...@hig/radio-button@0.1.1) (2018-08-13)
+
+
+### Bug Fixes
+
+* **behavior:** remove checkbox behavior add change event handler ([5f705d8](https://github.com/Autodesk/hig/commit/5f705d8))
+
 <a name="@hig/radio-button-v0.1.0"></a>
 # [@hig/radio-button-v0.1.0](https://github.com/Autodesk/hig/compare/@hig/radio-button@0.0.0...@hig/radio-button@0.1.0) (2018-07-26)
 
