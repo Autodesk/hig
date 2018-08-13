@@ -14,7 +14,7 @@ import { AVAILABLE_SIZES } from "./sizes";
  */
 function convertRanges(value, range1, range2) {
   return Number(
-    (value - range1[0]) * (range2[1] - range2[0]) / (range1[1] - range1[0]) +
+    ((value - range1[0]) * (range2[1] - range2[0])) / (range1[1] - range1[0]) +
       range2[0]
   ).toFixed();
 }
@@ -101,6 +101,12 @@ class Avatar extends Component {
     onImageError: PropTypes.func
   };
 
+  /** @type {AvatarState} */
+  state = {
+    hasImageError: false,
+    imageUrl: undefined
+  };
+
   /**
    * @param {AvatarProps} nextProps
    * @param {AvatarState} prevState
@@ -117,12 +123,6 @@ class Avatar extends Component {
       imageUrl: image
     };
   }
-
-  /** @type {AvatarState} */
-  state = {
-    hasImageError: false,
-    imageUrl: undefined
-  };
 
   /**
    * @param {Event} errorEvent

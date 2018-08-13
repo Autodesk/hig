@@ -2,8 +2,38 @@ defaults: &defaults
   docker:
     - image: circleci/node:8.10-stretch
 
-version: 4
+version: 2
 jobs:
+  lockfile-update:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: Install greenkeeper-lockfile
+          command: 'sudo yarn global add greenkeeper-lockfile@2'
+      - run:
+          name: Update lockfile
+          command: 'greenkeeper-lockfile-update'
+      - save_cache:
+          key: v1-lockfile-{{ .Revision }}
+          paths:
+            # save the git commit
+            - ".git"
+  lockfile-upload:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          key: v1-lockfile-{{ .Revision }}
+      - run:
+          name: Install greenkeeper-lockfile
+          command: 'sudo yarn global add greenkeeper-lockfile@2'
+      - run:
+          name: SSH Avoid hosts unknown
+          command: 'mkdir -p ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config'
+      - run:
+          name: Upload lockfile changes
+          command: 'greenkeeper-lockfile-upload'
   bootstrap:
     <<: *defaults
     steps:
@@ -12,51 +42,20 @@ jobs:
           name: Create dependency hash
           command: yarn run create-dependency-hash
       - restore_cache:
-          key: hig-dependencies-{{ checksum ".dependency-hash" }}
+          key: v1-dependencies-{{ checksum ".dependency-hash" }}
+      - run:
+          name: Extract dependencies
+          command: yarn run extract:dependencies
       - run:
           name: Install Dependencies
           command: yarn
+      - run:
+          name: Archive dependencies
+          command: yarn run archive:dependencies
       - save_cache:
-          key: hig-dependencies-{{ checksum ".dependency-hash" }}
+          key: v1-dependencies-{{ checksum ".dependency-hash" }}
           paths:
-            - .dependency-hash
-            - node_modules
-            - packages/avatar/node_modules
-            - packages/banner/node_modules
-            - packages/button/node_modules
-            - packages/checkbox/node_modules
-            - packages/components/node_modules
-            - packages/dropdown/node_modules
-            - packages/eslint-config/node_modules
-            - packages/flyout/node_modules
-            - packages/icon/node_modules
-            - packages/icon-button/node_modules
-            - packages/icons/node_modules
-            - packages/modal/node_modules
-            - packages/notifications-flyout/node_modules
-            - packages/profile-flyout/node_modules
-            - packages/progress-bar/node_modules
-            - packages/progress-ring/node_modules
-            - packages/project-account-switcher/node_modules
-            - packages/radio-button/node_modules
-            - packages/react/node_modules
-            - packages/rich-text/node_modules
-            - packages/side-nav/node_modules
-            - packages/skeleton-item/node_modules
-            - packages/slider/node_modules
-            - packages/storybook/node_modules
-            - packages/styles/node_modules
-            - packages/table/node_modules
-            - packages/tabs/node_modules
-            - packages/text-area/node_modules
-            - packages/text-field/node_modules
-            - packages/text-link/node_modules
-            - packages/themes/node_modules
-            - packages/timestamp/node_modules
-            - packages/tooltip/node_modules
-            - packages/top-nav/node_modules
-            - packages/typography/node_modules
-            - packages/vanilla/node_modules
+            - .archives/dependencies.tgz
   package-build:
     <<: *defaults
     steps:
@@ -65,47 +64,20 @@ jobs:
           name: Create dependency hash
           command: yarn run create-dependency-hash
       - restore_cache:
-          key: hig-dependencies-{{ checksum ".dependency-hash" }}
+          key: v1-dependencies-{{ checksum ".dependency-hash" }}
+      - run:
+          name: Extract dependencies
+          command: yarn run extract:dependencies
       - run:
           name: Build all packages
           command: yarn build
+      - run:
+          name: Archive builds
+          command: yarn run archive:builds
       - save_cache:
-          key: package-build-{{ .Revision }}
+          key: v1-package-builds-{{ .Revision }}
           paths:
-            - packages/avatar/build
-            - packages/banner/build
-            - packages/button/build
-            - packages/checkbox/build
-            - packages/components/build
-            - packages/dropdown/build
-            - packages/flyout/build
-            - packages/icon/build
-            - packages/icon-button/build
-            - packages/icons/build
-            - packages/modal/build
-            - packages/notifications-flyout/build
-            - packages/profile-flyout/build
-            - packages/progress-bar/build
-            - packages/progress-ring/build
-            - packages/project-account-switcher/build
-            - packages/radio-button/build
-            - packages/rich-text/build
-            - packages/side-nav/build
-            - packages/skeleton-item/build
-            - packages/slider/build
-            - packages/styles/build
-            - packages/table/build
-            - packages/tabs/build
-            - packages/text-area/build
-            - packages/text-field/build
-            - packages/text-link/build
-            - packages/themes/build
-            - packages/timestamp/build
-            - packages/tooltip/build
-            - packages/top-nav/build
-            - packages/typography/build
-            - packages/react/lib
-            - packages/vanilla/lib
+            - .archives/builds.tgz
   react-test:
     <<: *defaults
     steps:
@@ -114,16 +86,18 @@ jobs:
           name: Create dependency hash
           command: yarn run create-dependency-hash
       - restore_cache:
-          key: hig-dependencies-{{ checksum ".dependency-hash" }}
+          key: v1-dependencies-{{ checksum ".dependency-hash" }}
       - restore_cache:
-          key: package-build-{{ .Revision }}
+          key: v1-package-builds-{{ .Revision }}
+      - run:
+          name: Extract dependencies and builds
+          command: yarn run extract
       - run:
           name: Lint (React)
           command: yarn lint
       - run:
           name: Run Jest Tests
           command: yarn test-ci
-          working_directory: packages/storybook
       - store_artifacts:
           path: packages/storybook/coverage
   visual-test:
@@ -134,9 +108,12 @@ jobs:
           name: Create dependency hash
           command: yarn run create-dependency-hash
       - restore_cache:
-          key: hig-dependencies-{{ checksum ".dependency-hash" }}
+          key: v1-dependencies-{{ checksum ".dependency-hash" }}
       - restore_cache:
-          key: package-build-{{ .Revision }}
+          key: v1-package-builds-{{ .Revision }}
+      - run:
+          name: Extract dependencies and builds
+          command: yarn run extract
       - run:
           name: Build Test Storybook Server
           command: yarn storybook-test-build
@@ -165,9 +142,12 @@ jobs:
           name: Create dependency hash
           command: yarn run create-dependency-hash
       - restore_cache:
-          key: hig-dependencies-{{ checksum ".dependency-hash" }}
+          key: v1-dependencies-{{ checksum ".dependency-hash" }}
       - restore_cache:
-          key: package-build-{{ .Revision }}
+          key: v1-package-builds-{{ .Revision }}
+      - run:
+          name: Extract dependencies and builds
+          command: yarn run extract
       - run:
           name: Deploy React playground website
           command: yarn deploy-playground $PLAYGROUND_DOMAIN
@@ -180,9 +160,12 @@ jobs:
           name: Create dependency hash
           command: yarn run create-dependency-hash
       - restore_cache:
-          key: hig-dependencies-{{ checksum ".dependency-hash" }}
+          key: v1-dependencies-{{ checksum ".dependency-hash" }}
       - restore_cache:
-          key: package-build-{{ .Revision }}
+          key: v1-package-builds-{{ .Revision }}
+      - run:
+          name: Extract dependencies and builds
+          command: yarn run extract
       - run:
           name: Add auth token
           command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
@@ -197,9 +180,12 @@ jobs:
           name: Create dependency hash
           command: yarn run create-dependency-hash
       - restore_cache:
-          key: hig-dependencies-{{ checksum ".dependency-hash" }}
+          key: v1-dependencies-{{ checksum ".dependency-hash" }}
       - restore_cache:
-          key: package-build-{{ .Revision }}
+          key: v1-package-builds-{{ .Revision }}
+      - run:
+          name: Extract dependencies and builds
+          command: yarn run extract
       - run:
           name: Deploy Storybook
           command: yarn storybook-deploy --domain `echo hig-$CIRCLE_BRANCH.surge.sh | awk 'echo gsub(/\//, "-")'`
@@ -212,26 +198,33 @@ jobs:
           name: Create dependency hash
           command: yarn run create-dependency-hash
       - restore_cache:
-          key: hig-dependencies-{{ checksum ".dependency-hash" }}
+          key: v1-dependencies-{{ checksum ".dependency-hash" }}
       - restore_cache:
-          key: package-build-{{ .Revision }}
+          key: v1-package-builds-{{ .Revision }}
+      - run:
+          name: Extract dependencies and builds
+          command: yarn run extract
       - run:
           name: Add auth token
           command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
       - run:
-          name: Deploy hig-react
-          command: node ./scripts/publish-if-needed/index.js react
+          name: Release
+          command: yarn run release
+  update-development:
+    <<: *defaults
+    steps:
+      - checkout
       - run:
-          name: Deploy hig-interface
-          command: node ./scripts/publish-if-needed/index.js interface
-      - run:
-          name: Deploy hig-vanilla
-          command: node ./scripts/publish-if-needed/index.js vanilla
+          name: Update development branch
+          command: yarn run update-development
 workflows:
   version: 2
   build-test-validate-and-deploy:
     jobs:
-      - bootstrap
+      - lockfile-update
+      - bootstrap:
+          requires:
+            - lockfile-update
       - package-build:
           requires:
             - bootstrap
@@ -241,6 +234,10 @@ workflows:
       - visual-test:
           requires:
             - package-build
+      - lockfile-upload:
+          requires:
+            - react-test
+            - visual-test
       - playground-deploy:
           requires:
             - react-test
@@ -251,8 +248,8 @@ workflows:
       - canary-packages-deploy:
           filters:
             branches:
-              ignore:
-                - master
+              only:
+                - /canary-.*/
           requires:
             - react-test
             - visual-test
@@ -272,5 +269,9 @@ workflows:
           filters:
             branches:
               only: master
-            tags:
-              only: /v[0-9]+(\.[0-9]+)*/
+      - update-development:
+          requires:
+            - packages-deploy
+          filters:
+            branches:
+              only: master

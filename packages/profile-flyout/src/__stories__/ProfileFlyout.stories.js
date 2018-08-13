@@ -5,7 +5,7 @@ import infoOptions from "./infoOptions";
 import renderStory from "./renderStory";
 import stories from "./stories";
 
-const storybook = storiesOf("ProfileFlyout", module);
+const storybook = storiesOf("GlobalNav|ProfileFlyout", module);
 
 stories.forEach(({ description, getProps }) => {
   storybook.add(

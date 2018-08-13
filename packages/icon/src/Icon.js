@@ -4,8 +4,7 @@ import cx from "classnames";
 import Icons, { AVAILABLE_NAMES } from "@hig/icons";
 
 import "./icon.scss";
-import sizes from "./sizes";
-import AVAILABLE_SIZES from "./availableSizes";
+import { sizes, AVAILABLE_SIZES } from "./sizes";
 
 const COMPONENT_CLASS = "hig__icon";
 

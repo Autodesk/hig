@@ -761,7 +761,7 @@ exports[`Table table can be set to fixed 1`] = `
 
 exports[`Table table can freeze rows 1`] = `
 <div
-  className="hig__table hig__table--with-frozen-rows hig--light-theme"
+  className="hig__table hig__table--has-frozen-rows hig--light-theme"
   style={
     Object {
       "height": 100,

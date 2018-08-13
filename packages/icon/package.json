@@ -1,10 +1,14 @@
 {
   "name": "@hig/icon",
-  "version": "0.1.0-alpha",
+  "version": "0.2.0",
   "description": "HIG Icon component",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
   "homepage": "https://hig.autodesk.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Autodesk/hig.git"
+  },
   "publishConfig": {
     "access": "public"
   },
@@ -15,30 +19,42 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/icons": "^0.1.0-alpha",
-    "classnames": "^2.2.5"
+    "@hig/icons": "^0.2.0",
+    "classnames": "^2.2.5",
+    "prop-types": "^15.6.1"
   },
   "devDependencies": {
-    "@hig/babel-preset": "0.1.0",
-    "@hig/eslint-config": "0.1.0",
-    "@hig/scripts": "^0.1.0",
-    "@hig/styles": "^0.1.0"
+    "@hig/babel-preset": "^0.1.0",
+    "@hig/eslint-config": "^0.1.0",
+    "@hig/jest-preset": "^0.1.0",
+    "@hig/scripts": "^0.1.2",
+    "@hig/semantic-release-config": "^0.1.0",
+    "@hig/styles": "^0.2.3"
   },
   "peerDependencies": {
-    "prop-types": "^15.6.1",
     "react": "^15.4.1 || ^16.3.2"
   },
   "scripts": {
     "build": "hig-scripts-build",
-    "lint": "eslint src --color --ext .js,.jsx"
+    "lint": "hig-scripts-lint",
+    "test": "hig-scripts-test",
+    "release": "hig-scripts-release"
   },
   "eslintConfig": {
     "extends": "@hig"
   },
+  "jest": {
+    "preset": "@hig/jest-preset"
+  },
+  "release": {
+    "extends": "@hig/semantic-release-config"
+  },
   "babel": {
     "env": {
       "test": {
-        "presets": ["@hig/babel-preset/test"]
+        "presets": [
+          "@hig/babel-preset/test"
+        ]
       }
     }
   }

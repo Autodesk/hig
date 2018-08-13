@@ -14,7 +14,7 @@ exports[`ShortCut renders correctly with link properly 1`] = `
     onMouseEnter={undefined}
     onMouseLeave={undefined}
     tabIndex="0"
-    title={undefined}
+    title="help"
   >
     <span
       className="hig__icon-button__icon"
@@ -44,7 +44,7 @@ exports[`ShortCut renders correctly with onClick property 1`] = `
     onFocus={undefined}
     onMouseEnter={undefined}
     onMouseLeave={undefined}
-    title={undefined}
+    title="help"
   >
     <span
       className="hig__icon-button__icon"

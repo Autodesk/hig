@@ -32,7 +32,7 @@ function featuredNotification() {
   );
 }
 
-storiesOf("NotificationsFlyout", module)
+storiesOf("Notifications|Flyout", module)
   .add(
     "V1",
     withInfo({

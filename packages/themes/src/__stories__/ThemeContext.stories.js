@@ -1,29 +1,24 @@
 import React from "react";
-
 import { storiesOf } from "@storybook/react";
 import { select } from "@storybook/addon-knobs/react";
 import { withInfo } from "@storybook/addon-info";
-
 import Banner, { AVAILABLE_TYPES as BANNER_TYPES } from "@hig/banner";
 import readme from "../../README.md";
 import ThemeContext from "../ThemeContext";
 import HIGLightTheme from "../themes/HIGLightTheme";
-import HIGDarkBlueTheme from "../themes/HIGDarkBlueTheme";
 import MatrixTheme from "../themes/MatrixTheme";
 
 const themeOptions = {
   "hig-light": "HIG Light",
-  "hig-dark-blue": "HIG Dark Blue",
   matrix: "BIM360 Matrix"
 };
 
 const themes = {
   "hig-light": HIGLightTheme,
-  "hig-dark-blue": HIGDarkBlueTheme,
   matrix: MatrixTheme
 };
 
-const themeContextStories = storiesOf("ThemeContext", module);
+const themeContextStories = storiesOf("Theming|ThemeContext", module);
 
 themeContextStories.add(
   "themable",

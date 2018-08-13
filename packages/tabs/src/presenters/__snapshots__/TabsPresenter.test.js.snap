@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tabs/TabsPresenter renders aligned left 1`] = `
+<ul
+  className="hig__tabs hig__tabs--align-left"
+/>
+`;
+
+exports[`tabs/TabsPresenter renders aligned right 1`] = `
+<ul
+  className="hig__tabs hig__tabs--align-right"
+/>
+`;
+
+exports[`tabs/TabsPresenter renders with all props 1`] = `
+<ul
+  className="hig__tabs hig__tabs--align-center"
+>
+  Hello World
+</ul>
+`;
+
+exports[`tabs/TabsPresenter renders without props 1`] = `
+<ul
+  className="hig__tabs hig__tabs--align-center"
+/>
+`;

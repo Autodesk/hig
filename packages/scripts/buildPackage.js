@@ -13,6 +13,7 @@ const createBuildPreset = require("@hig/babel-preset/build");
 
 const createExternalDeterminer = require("./createExternalDeterminer");
 
+/* eslint-disable-next-line import/no-dynamic-require */
 const packageMeta = require(path.resolve(process.cwd(), "package.json"));
 
 const {
@@ -39,12 +40,12 @@ const inputOptions = {
       output: cssOutputFile,
       plugins: [postcssFunctions, postcssImport]
     }),
+    json(),
     babel({
       babelrc: false,
       ...createBuildPreset()
     }),
-    commonjs(),
-    json()
+    commonjs()
   ]
 };
 
@@ -61,6 +62,7 @@ const cjsOutputOptions = {
 };
 
 module.exports = async function buildPackage() {
+  /* eslint-disable-next-line no-console */
   console.log(`Bundling ${packageName} v${packageVersion}.`);
 
   const bundle = await rollup.rollup(inputOptions);

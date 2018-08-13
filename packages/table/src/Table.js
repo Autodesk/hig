@@ -24,7 +24,7 @@ function getTableClasses({ themeClass, className, disabled, isFrozen }) {
     "hig__table",
     className,
     {
-      "hig__table--with-frozen-rows": isFrozen,
+      "hig__table--has-frozen-rows": isFrozen,
       "hig__table--disabled": disabled
     },
     themeClass
@@ -117,8 +117,8 @@ class Table extends React.Component {
   /**
    * Get the total width of all columns.
    */
-  getColumnsTotalWidth() {
-    return this.table ? this.table.getColumnsTotalWidth() : 0;
+  getTotalColumnsWidth() {
+    return this.table ? this.table.getTotalColumnsWidth() : 0;
   }
 
   /**
@@ -126,8 +126,8 @@ class Table extends React.Component {
    * The value is estimated initially, as rows are measured, the value will be updated.
    * This method is useful to implement auto growable height when adding/removing/expanding rows.
    */
-  getRowsTotalHeight() {
-    return this.table ? this.table.getRowsTotalHeight() : 0;
+  getTotalRowsHeight() {
+    return this.table ? this.table.getTotalRowsHeight() : 0;
   }
 
   /**
@@ -831,7 +831,7 @@ class Table extends React.Component {
     const { height, maxHeight, headerHeight, footerHeight } = this.props;
     if (!height && maxHeight) {
       const totalHeight =
-        headerHeight + footerHeight + this.getRowsTotalHeight();
+        headerHeight + footerHeight + this.getTotalRowsHeight();
       const tableHeight = Math.min(totalHeight, maxHeight);
       if (tableHeight !== this.state.tableHeight) {
         this.setState({ tableHeight });
@@ -859,7 +859,7 @@ class Table extends React.Component {
       frozenRowCount
     } = this.props;
     const { scrollTop } = this._scroll;
-    const scrollHeight = this.getRowsTotalHeight();
+    const scrollHeight = this.getTotalRowsHeight();
     const clientHeight = this._getClientHeight();
     const { horizontalScrollbarWidth } = this.state;
     // onEndReached is not available is maxHeight is set

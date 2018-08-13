@@ -5,7 +5,7 @@ import infoOptions from "./infoOptions";
 import renderStory from "./renderStory";
 import stories from "./stories";
 
-const storybook = storiesOf("ProjectAccountSwitcher", module);
+const storybook = storiesOf("GlobalNav|ProjectAccountSwitcher", module);
 
 stories.forEach(({ description, getProps }) => {
   storybook.add(

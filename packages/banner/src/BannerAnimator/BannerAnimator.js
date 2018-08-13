@@ -35,6 +35,31 @@ import {
 
 /** @type {Component<BannerAnimatorProps, BannerAnimatorState>} */
 class BannerAnimator extends Component {
+  static propTypes = {
+    /* eslint-disable react/no-unused-prop-types */
+    /** Determines the visibility of the banner */
+    isVisible: PropTypes.bool.isRequired,
+    /** Determines the type of animation used */
+    hasBounce: PropTypes.bool.isRequired,
+    /** Determines the type of animation used */
+    hasPush: PropTypes.bool.isRequired,
+    /** Determines the direction of the animation */
+    position: PropTypes.oneOf(AVAILABLE_POSITIONS),
+    /* eslint-enable react/no-unused-prop-types */
+    /** A render prop, that renders the component to be animated */
+    children: PropTypes.func.isRequired
+  };
+
+  static defaultProps = {
+    isVisible: true,
+    hasBounce: true,
+    hasPush: true,
+    position: positions.TOP
+  };
+
+  /** @type {BannerAnimatorState} */
+  state = {};
+
   /**
    * @param {BannerAnimatorProps} nextProps
    * @param {BannerAnimatorState} prevState
@@ -61,31 +86,6 @@ class BannerAnimator extends Component {
         return null;
     }
   }
-
-  static defaultProps = {
-    isVisible: true,
-    hasBounce: true,
-    hasPush: true,
-    position: positions.TOP
-  };
-
-  static propTypes = {
-    /* eslint-disable react/no-unused-prop-types */
-    /** Determines the visibility of the banner */
-    isVisible: PropTypes.bool.isRequired,
-    /** Determines the type of animation used */
-    hasBounce: PropTypes.bool.isRequired,
-    /** Determines the type of animation used */
-    hasPush: PropTypes.bool.isRequired,
-    /** Determines the direction of the animation */
-    position: PropTypes.oneOf(AVAILABLE_POSITIONS),
-    /* eslint-enable react/no-unused-prop-types */
-    /** A render prop, that renders the component to be animated */
-    children: PropTypes.func.isRequired
-  };
-
-  /** @type {BannerAnimatorState} */
-  state = {};
 
   /**
    * @param {BannerAnimatorProps} prevProps

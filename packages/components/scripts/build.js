@@ -1,5 +1,6 @@
 /* eslint-disable no-console, global-require, import/no-dynamic-require */
 const CleanCss = require("clean-css");
+const esprima = require("esprima");
 const fs = require("fs");
 const path = require("path");
 const util = require("util");
@@ -44,6 +45,38 @@ function isScopedComponentPackage(packageName) {
 }
 
 /**
+ * @param {ExportNamedDeclaration} exportDeclaration
+ * @returns {string[]}
+ */
+function getNamesFromDeclaration(exportDeclaration) {
+  return exportDeclaration.specifiers.map(specifier => specifier.exported.name);
+}
+
+/**
+ * Parsed the package's main module and returns all of the export names
+ * @param {string} packageName
+ * @returns {string[]}
+ */
+function getPackageExportNames(packagePath) {
+  const packageMeta = getPackageMeta(packagePath);
+  const packageModulePath = path.join(packagePath, packageMeta.module);
+  const moduleFileSource = fs.readFileSync(packageModulePath, "utf8");
+  const { body } = esprima.parseModule(moduleFileSource);
+
+  return body.reduce((result, statement) => {
+    if (statement.type === "ExportDefaultDeclaration") {
+      return result.concat(["default"]);
+    }
+
+    if (statement.type === "ExportNamedDeclaration") {
+      return result.concat(getNamesFromDeclaration(statement));
+    }
+
+    return result;
+  }, []);
+}
+
+/**
  * @returns {string[]}
  */
 function getScopedPackages() {
@@ -53,7 +86,7 @@ function getScopedPackages() {
     if (isScopedComponentPackage(packageName)) {
       const packagePath = getPackagePath(packageName);
       const packageMeta = getPackageMeta(packagePath);
-      const packageExportNames = Object.keys(require(packagePath));
+      const packageExportNames = getPackageExportNames(packagePath);
 
       result.push({ packagePath, packageMeta, packageExportNames });
     }
@@ -243,10 +276,18 @@ async function start() {
   const scopedPackages = getScopedPackages();
 
   await mkdirp(BUILD_PATH);
+  console.log("Generating modules...");
   await generateModules(scopedPackages);
+  console.log("Transforming modules...");
   await transformModules(scopedPackages);
+  console.log("Building index stylesheet...");
   await buildIndexStylesheet(scopedPackages);
+  console.log("Copying component stylesheets...");
   await copyComponentStylesheets(scopedPackages);
+  console.log("Build complete.");
 }
 
-start().catch(console.error);
+start().catch(error => {
+  console.error("Build failed.", error);
+  process.exit(1);
+});

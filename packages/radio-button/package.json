@@ -1,9 +1,13 @@
 {
   "name": "@hig/radio-button",
-  "version": "0.1.0-alpha",
+  "version": "0.1.0",
   "description": "HIG Radio Button",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Autodesk/hig.git"
+  },
   "publishConfig": {
     "access": "public"
   },
@@ -14,31 +18,45 @@
     "build/*"
   ],
   "dependencies": {
+    "@hig/checkbox": "^0.1.0",
+    "@hig/utils": "^0.2.0",
     "classnames": "^2.2.5",
-    "hig-react": "^0.29.0-alpha",
-    "react-lifecycles-compat": "^3.0.2"
+    "hig-react": "0.29.0",
+    "prop-types": "^15.6.1",
+    "react-lifecycles-compat": "^3.0.4"
   },
   "peerDependencies": {
-    "prop-types": "^15.5.10",
     "react": "^15.4.1 || ^16.3.2"
   },
   "devDependencies": {
-    "@hig/babel-preset": "0.1.0",
-    "@hig/eslint-config": "0.1.0",
-    "@hig/scripts": "^0.1.0",
-    "@hig/styles": "^0.1.0"
+    "@hig/babel-preset": "^0.1.0",
+    "@hig/eslint-config": "^0.1.0",
+    "@hig/jest-preset": "^0.1.0",
+    "@hig/scripts": "^0.1.2",
+    "@hig/semantic-release-config": "^0.1.0",
+    "@hig/styles": "^0.2.3"
   },
   "scripts": {
     "build": "hig-scripts-build",
-    "lint": "eslint src --color --ext .js,.jsx"
+    "lint": "hig-scripts-lint",
+    "test": "hig-scripts-test",
+    "release": "hig-scripts-release"
   },
   "eslintConfig": {
     "extends": "@hig"
   },
+  "jest": {
+    "preset": "@hig/jest-preset"
+  },
+  "release": {
+    "extends": "@hig/semantic-release-config"
+  },
   "babel": {
     "env": {
       "test": {
-        "presets": ["@hig/babel-preset/test"]
+        "presets": [
+          "@hig/babel-preset/test"
+        ]
       }
     }
   }

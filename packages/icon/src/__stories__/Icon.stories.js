@@ -5,7 +5,7 @@ import infoOptions from "./infoOptions";
 import renderStory from "./renderStory";
 import stories from "./stories";
 
-const storybook = storiesOf("Icon", module);
+const storybook = storiesOf("Basics|Icon", module);
 
 stories.forEach(({ description, getProps }) => {
   storybook.add(

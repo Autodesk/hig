@@ -1,0 +1,54 @@
+{
+  "name": "@hig/notifications-toast",
+  "version": "0.1.0-alpha",
+  "description": "HIG Toast",
+  "author": "Autodesk Inc.",
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "build/index.js",
+  "module": "build/index.es.js",
+  "style": "build/index.css",
+  "files": [
+    "build/*"
+  ],
+  "dependencies": {
+    "@hig/icon": "^0.2.0",
+    "@hig/icon-button": "^0.2.0",
+    "@hig/rich-text": "^0.1.3",
+    "classnames": "^2.2.5",
+    "prop-types": "^15.6.1",
+    "react-flip-move": "^3.0.1"
+  },
+  "peerDependencies": {
+    "react": "^15.4.1 || ^16.3.2"
+  },
+  "devDependencies": {
+    "@hig/avatar": "^0.1.3",
+    "@hig/babel-preset": "^0.1.0",
+    "@hig/button": "^0.1.3",
+    "@hig/eslint-config": "0.1.0",
+    "@hig/scripts": "^0.1.2",
+    "@hig/styles": "^0.2.3"
+  },
+  "scripts": {
+    "build": "hig-scripts-build",
+    "lint": "eslint src --ext .js,.jsx"
+  },
+  "eslintConfig": {
+    "extends": "@hig"
+  },
+  "jest": {
+    "preset": "@hig/jest-preset"
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "presets": [
+          "@hig/babel-preset/test"
+        ]
+      }
+    }
+  }
+}
