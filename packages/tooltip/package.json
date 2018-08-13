@@ -14,19 +14,22 @@
     "build/*"
   ],
   "dependencies": {
+    "@hig/flyout": "^0.2.0",
+    "@hig/styles": "^0.1.0",
     "classnames": "^2.2.5",
-    "hig-react": "^0.29.0-alpha",
+    "emotion": "^9.2.4",
+    "prop-types": "^15.5.10",
+    "rc-tooltip": "^3.7.2",
+    "react-emotion": "^9.2.4",
     "react-lifecycles-compat": "^3.0.2"
   },
   "peerDependencies": {
-    "prop-types": "^15.5.10",
     "react": "^15.4.1 || ^16.3.2"
   },
   "devDependencies": {
     "@hig/babel-preset": "0.1.0",
     "@hig/eslint-config": "0.1.0",
-    "@hig/scripts": "^0.1.0",
-    "@hig/styles": "^0.1.0"
+    "@hig/scripts": "^0.1.0"
   },
   "scripts": {
     "build": "hig-scripts-build",
