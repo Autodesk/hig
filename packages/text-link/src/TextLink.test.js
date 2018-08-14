@@ -47,4 +47,21 @@ describe("TextLink", () => {
       ).toHaveProp("target", "_parent");
     });
   });
+
+  describe("the element rendered", () => {
+    describe("given a link", () => {
+      it("it is an <a> tag", () => {
+        expect(
+          mount(
+            <TextLink link="https://www.autodesk.com/">Link</TextLink>
+          ).find("a")
+        ).toHaveLength(1);
+      });
+    });
+    describe("if link is not given", () => {
+      it("it is a <span> tag", () => {
+        expect(mount(<TextLink>Link</TextLink>).find("span")).toHaveLength(1);
+      });
+    });
+  });
 });
