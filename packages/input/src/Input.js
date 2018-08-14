@@ -5,17 +5,29 @@ import InputPresenter from "./presenters/InputPresenter";
 import InputHaloPresenter from "./presenters/InputHaloPresenter";
 
 import { types, availableTypes } from "./constants";
+import htmlInputPropTypes from "./htmlInputPropTypes";
 
-const wrappers = {
-  [types.LINE]: InputHaloPresenter,
-  [types.BOX]: InputHaloPresenter,
-  [types.PLAIN]: "div"
+function Wrapper(props) {
+  if (props.type === "plain") {
+    return props.children;
+  }
+
+  return <InputHaloPresenter {...props} />;
+}
+
+Wrapper.propTypes = {
+  children: PropTypes.node,
+  type: PropTypes.oneOf(availableTypes)
 };
 
-function Input({ type, value, disabled, onChange }) {
-  const Wrapper = wrappers[type];
+function Input(props) {
   return (
-    <InputBehavior>
+    <InputBehavior
+      onFocus={props.onFocus}
+      onBlur={props.onBlur}
+      onMouseEnter={props.onMouseEnter}
+      onMouseLeave={props.onMouseLeave}
+    >
       {({
         hasHover,
         onMouseEnter,
@@ -25,22 +37,33 @@ function Input({ type, value, disabled, onChange }) {
         onBlur
       }) => (
         <Wrapper
-          isDisabled={disabled}
+          isDisabled={props.disabled}
           hasFocus={hasFocus}
           hasHover={hasHover}
-          type={type}
+          type={props.type}
         >
           <InputPresenter
-            value={value}
-            disabled={disabled}
-            onFocus={onFocus}
+            autoComplete={props.autoComplete}
+            defaultValue={props.defaultValue}
+            disabled={props.disabled}
+            hasFocus={hasFocus}
+            hasHover={hasHover}
+            inputMode={props.inputMode}
+            maxLength={props.maxLength}
+            minLength={props.minLength}
+            name={props.name}
             onBlur={onBlur}
+            onChange={props.onChange}
+            onFocus={onFocus}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
-            onChange={onChange}
-            hasHover={hasHover}
-            hasFocus={hasFocus}
-            type={type}
+            pattern={props.pattern}
+            readOnly={props.readOnly}
+            required={props.required}
+            spellCheck={props.spellCheck}
+            tabIndex={props.tabIndex}
+            type={props.type}
+            value={props.value}
           />
         </Wrapper>
       )}
@@ -50,9 +73,7 @@ function Input({ type, value, disabled, onChange }) {
 
 Input.propTypes = {
   type: PropTypes.oneOf(availableTypes),
-  value: PropTypes.string,
-  disabled: PropTypes.bool,
-  onChange: PropTypes.func
+  ...htmlInputPropTypes
 };
 
 Input.defaultProps = {

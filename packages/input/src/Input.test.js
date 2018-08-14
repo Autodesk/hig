@@ -1,76 +1,113 @@
 import React from "react";
-import renderer from "react-test-renderer";
 import { mount } from "enzyme";
 import sinon from "sinon";
 
-import Input from "./index";
-
-function snapshotTest(props) {
-  const tree = renderer.create(<Input {...props} />).toJSON();
-
-  expect(tree).toMatchSnapshot();
-}
+import Input from "./Input";
+import InputPresenter from "./presenters/InputPresenter";
+import InputHaloPresenter from "./presenters/InputHaloPresenter";
+import behavesLikeFocusBehavior from "./__test__/behavesLikeFocusBehavior";
+import behavesLikeHoverBehavior from "./__test__/behavesLikeHoverBehavior";
+import behavesLikeInputPropPasser from "./__test__/behavesLikeInputPropPasser";
 
 describe("Input", () => {
-  it("renders children", () => {
-    snapshotTest({
-      value: "jon.snow@winterfell.com",
-      onChange: () => {},
-      onFocus: () => {},
-      onBlur: () => {},
-      onInput: () => {}
+  behavesLikeFocusBehavior(<Input />);
+  behavesLikeHoverBehavior(<Input />);
+  behavesLikeInputPropPasser({
+    Subject: Input,
+    Receiver: InputPresenter
+  });
+
+  describe("rendering types", () => {
+    describe("when type='line'", () => {
+      it("renders the line-style input", () => {
+        const wrapper = mount(<Input type="line" />);
+
+        const decoration = wrapper.find(InputHaloPresenter);
+        expect(decoration).toHaveProp("type", "line");
+      });
+    });
+
+    describe("when type='box'", () => {
+      it("renders the box-style  input", () => {
+        const wrapper = mount(<Input type="box" />);
+
+        const decoration = wrapper.find(InputHaloPresenter);
+        expect(decoration).toHaveProp("type", "box");
+      });
+    });
+
+    describe("when type='plain'", () => {
+      it("renders a plain input", () => {
+        const wrapper = mount(<Input type="plain" />);
+
+        expect(wrapper).not.toContain(InputHaloPresenter);
+      });
     });
   });
 
-  describe("events", () => {
-    it("on focus calls the onFocus callback", () => {
-      const spy = sinon.spy();
-      const wrapper = mount(<Input onFocus={spy} />);
+  describe("when controlled", () => {
+    let onChangeSpy;
+    let wrapper;
+    let interactiveElement;
 
-      wrapper
-        .find("input")
-        .first()
-        .simulate("click");
-
-      expect(spy.calledOnce).toBe(true);
+    beforeEach(() => {
+      onChangeSpy = sinon.spy();
+      wrapper = mount(<Input value="foo" onChange={onChangeSpy} />);
+      interactiveElement = wrapper.find("input");
     });
 
-    it("on blur calls the onBlur callback", () => {
-      const spy = sinon.spy();
-      const wrapper = mount(<Input onBlur={spy} />);
-
-      wrapper
-        .find("input")
-        .first()
-        .simulate("click")
-        .simulate("blur");
-
-      expect(spy.calledOnce).toBe(true);
+    it("sets the value", () => {
+      expect(interactiveElement).toHaveProp("value", "foo");
     });
 
-    it("on keypress calls the onInput callback", () => {
-      const spy = sinon.spy();
-      const wrapper = mount(<Input onInput={spy} />);
+    describe("typing into the field", () => {
+      beforeEach(() => {
+        interactiveElement.getDOMNode().value = "bar";
+        interactiveElement.simulate("change");
+      });
 
-      wrapper
-        .find("input")
-        .first()
-        .simulate("keypress", { key: "f" });
+      it("calls the callback", () => {
+        expect(onChangeSpy.called).toBeTrue();
+      });
 
-      expect(spy.calledOnce).toBe(true);
+      describe("the interactive element", () => {
+        it("keeps the value from the value prop", () => {
+          expect(interactiveElement.getDOMNode().value).toEqual("foo");
+        });
+      });
+    });
+  });
+
+  describe("when uncontrolled", () => {
+    let onChangeSpy;
+    let wrapper;
+    let interactiveElement;
+
+    beforeEach(() => {
+      onChangeSpy = sinon.spy();
+      wrapper = mount(<Input defaultValue="foo" onChange={onChangeSpy} />);
+      interactiveElement = wrapper.find("input");
     });
 
-    it("on change calls the onChange callback", () => {
-      const spy = sinon.spy();
-      const wrapper = mount(<Input onChange={spy} />);
+    it("sets the defaultValue", () => {
+      expect(interactiveElement).toHaveProp("defaultValue", "foo");
+    });
 
-      wrapper
-        .find("input")
-        .first()
-        .simulate("keypress", { key: "f" })
-        .simulate("blur");
+    describe("typing into the field", () => {
+      beforeEach(() => {
+        interactiveElement.getDOMNode().value = "bar";
+        interactiveElement.simulate("change");
+      });
 
-      expect(spy.calledOnce).toBe(true);
+      it("calls the callback", () => {
+        expect(onChangeSpy.called).toBeTrue();
+      });
+
+      describe("the interactive element", () => {
+        it("gets the typed value", () => {
+          expect(interactiveElement.getDOMNode().value).toEqual("bar");
+        });
+      });
     });
   });
 });

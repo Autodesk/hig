@@ -3,8 +3,14 @@ import renderer from "react-test-renderer";
 import { mount } from "enzyme";
 
 import InputPresenter from "./InputPresenter";
+import behavesLikeInputPropPasser from "../__test__/behavesLikeInputPropPasser";
 
 describe("InputPresenter", () => {
+  behavesLikeInputPropPasser({
+    Subject: InputPresenter,
+    Receiver: "input"
+  });
+
   it("renders by default", () => {
     expect(renderer.create(<InputPresenter />).toJSON()).toMatchSnapshot();
   });
@@ -27,7 +33,7 @@ describe("InputPresenter", () => {
     ).toMatchSnapshot();
   });
 
-  it("sets props on the input", () => {
+  it("sets event handlers on the input", () => {
     const onInputHandler = () => {};
     const onChangeHandler = () => {};
     const onFocusHandler = () => {};

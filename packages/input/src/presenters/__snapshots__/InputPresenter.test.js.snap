@@ -8,6 +8,10 @@ exports[`InputPresenter renders by default 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  padding-top: 4px;
+  padding-right: 0px;
+  padding-bottom: 4px;
+  padding-left: 0px;
   outline: none;
   font-size: 14px;
   font-family: ArtifaktElement,sans-serif;
@@ -22,14 +26,25 @@ exports[`InputPresenter renders by default 1`] = `
 }
 
 <input
+  autoComplete={undefined}
   className="emotion-0"
+  defaultValue={undefined}
   disabled={undefined}
+  inputMode={undefined}
+  maxLength={undefined}
+  minLength={undefined}
+  name={undefined}
   onBlur={undefined}
   onChange={undefined}
   onFocus={undefined}
   onInput={undefined}
   onMouseEnter={undefined}
   onMouseLeave={undefined}
+  pattern={undefined}
+  readOnly={undefined}
+  required={undefined}
+  spellCheck={undefined}
+  tabIndex={undefined}
   value={undefined}
 />
 `;
@@ -42,6 +57,10 @@ exports[`InputPresenter renders when disabled 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  padding-top: 4px;
+  padding-right: 0px;
+  padding-bottom: 4px;
+  padding-left: 0px;
   outline: none;
   font-size: 14px;
   font-family: ArtifaktElement,sans-serif;
@@ -56,14 +75,25 @@ exports[`InputPresenter renders when disabled 1`] = `
 }
 
 <input
+  autoComplete={undefined}
   className="emotion-0"
+  defaultValue={undefined}
   disabled={undefined}
+  inputMode={undefined}
+  maxLength={undefined}
+  minLength={undefined}
+  name={undefined}
   onBlur={undefined}
   onChange={undefined}
   onFocus={undefined}
   onInput={undefined}
   onMouseEnter={undefined}
   onMouseLeave={undefined}
+  pattern={undefined}
+  readOnly={undefined}
+  required={undefined}
+  spellCheck={undefined}
+  tabIndex={undefined}
   value={undefined}
 />
 `;
@@ -76,6 +106,10 @@ exports[`InputPresenter renders with focus 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  padding-top: 4px;
+  padding-right: 0px;
+  padding-bottom: 4px;
+  padding-left: 0px;
   outline: none;
   font-size: 14px;
   font-family: ArtifaktElement,sans-serif;
@@ -90,14 +124,25 @@ exports[`InputPresenter renders with focus 1`] = `
 }
 
 <input
+  autoComplete={undefined}
   className="emotion-0"
+  defaultValue={undefined}
   disabled={undefined}
+  inputMode={undefined}
+  maxLength={undefined}
+  minLength={undefined}
+  name={undefined}
   onBlur={undefined}
   onChange={undefined}
   onFocus={undefined}
   onInput={undefined}
   onMouseEnter={undefined}
   onMouseLeave={undefined}
+  pattern={undefined}
+  readOnly={undefined}
+  required={undefined}
+  spellCheck={undefined}
+  tabIndex={undefined}
   value={undefined}
 />
 `;
@@ -110,6 +155,10 @@ exports[`InputPresenter renders with hover 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  padding-top: 4px;
+  padding-right: 0px;
+  padding-bottom: 4px;
+  padding-left: 0px;
   outline: none;
   font-size: 14px;
   font-family: ArtifaktElement,sans-serif;
@@ -124,14 +173,25 @@ exports[`InputPresenter renders with hover 1`] = `
 }
 
 <input
+  autoComplete={undefined}
   className="emotion-0"
+  defaultValue={undefined}
   disabled={undefined}
+  inputMode={undefined}
+  maxLength={undefined}
+  minLength={undefined}
+  name={undefined}
   onBlur={undefined}
   onChange={undefined}
   onFocus={undefined}
   onInput={undefined}
   onMouseEnter={undefined}
   onMouseLeave={undefined}
+  pattern={undefined}
+  readOnly={undefined}
+  required={undefined}
+  spellCheck={undefined}
+  tabIndex={undefined}
   value={undefined}
 />
 `;

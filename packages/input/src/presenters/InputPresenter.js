@@ -2,23 +2,35 @@ import React from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
 
-import { ThemeContext } from "../../../themes/build";
+import { ThemeContext } from "@hig/themes";
 
 import stylesheet from "./InputPresenter.stylesheet";
 import { availableTypes } from "../constants";
+import htmlInputPropTypes from "../htmlInputPropTypes";
 
 export default function InputPresenter({
+  autoComplete,
+  defaultValue,
   disabled,
   hasFocus,
   hasHover,
+  inputMode,
+  maxLength,
+  minLength,
+  name,
   onBlur,
   onChange,
   onFocus,
   onInput,
   onMouseEnter,
   onMouseLeave,
-  value,
-  type
+  pattern,
+  readOnly,
+  required,
+  spellCheck,
+  tabIndex,
+  type,
+  value
 }) {
   return (
     <ThemeContext.Consumer>
@@ -30,14 +42,25 @@ export default function InputPresenter({
 
         return (
           <input
+            autoComplete={autoComplete}
             className={css(styles.input)}
+            defaultValue={defaultValue}
             disabled={disabled}
+            inputMode={inputMode}
+            maxLength={maxLength}
+            minLength={minLength}
+            name={name}
             onBlur={onBlur}
             onChange={onChange}
             onFocus={onFocus}
             onInput={onInput}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
+            pattern={pattern}
+            readOnly={readOnly}
+            required={required}
+            spellCheck={spellCheck}
+            tabIndex={tabIndex}
             value={value}
           />
         );
@@ -47,7 +70,7 @@ export default function InputPresenter({
 }
 
 InputPresenter.propTypes = {
-  disabled: PropTypes.bool,
+  ...htmlInputPropTypes,
   hasFocus: PropTypes.bool,
   hasHover: PropTypes.bool,
   onBlur: PropTypes.func,
@@ -56,6 +79,5 @@ InputPresenter.propTypes = {
   onInput: PropTypes.func,
   onMouseEnter: PropTypes.func,
   onMouseLeave: PropTypes.func,
-  value: PropTypes.string,
   type: PropTypes.oneOf(availableTypes)
 };

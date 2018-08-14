@@ -3,6 +3,7 @@ import { mount } from "enzyme";
 import sinon from "sinon";
 
 import FocusBehavior from "./FocusBehavior";
+import behavesLikeFocusBehavior from "../__test__/behavesLikeFocusBehavior";
 
 function renderExample(exampleProps) {
   const renderPropSpy = sinon.spy(({ onFocus, onBlur }) => (
@@ -19,6 +20,14 @@ function renderExample(exampleProps) {
 }
 
 describe("FocusBehavior", () => {
+  describe("when passing handlers to an input", () => {
+    behavesLikeFocusBehavior(
+      <FocusBehavior>
+        {({ onFocus, onBlur }) => <input onFocus={onFocus} onBlur={onBlur} />}
+      </FocusBehavior>
+    );
+  });
+
   describe("by default", () => {
     it("passes hasFocus=false to the render prop", () => {
       const { renderPropSpy } = renderExample();
@@ -38,16 +47,6 @@ describe("FocusBehavior", () => {
 
       expect(renderPropArgs.hasFocus).toBeTrue();
     });
-
-    it("calls onFocus callback", () => {
-      const onFocusSpy = sinon.spy();
-      const { wrapper } = renderExample({
-        onFocus: onFocusSpy
-      });
-      wrapper.find("input").simulate("focus");
-
-      expect(onFocusSpy.calledOnce).toBeTrue();
-    });
   });
 
   describe("when losing focus", () => {
@@ -59,17 +58,6 @@ describe("FocusBehavior", () => {
       const renderPropArgs = renderPropSpy.lastCall.args[0];
 
       expect(renderPropArgs.hasFocus).toBeFalse();
-    });
-
-    it("calls onBlur callback", () => {
-      const onBlurSpy = sinon.spy();
-      const { wrapper } = renderExample({
-        onBlur: onBlurSpy
-      });
-      wrapper.find("input").simulate("focus");
-      wrapper.find("input").simulate("blur");
-
-      expect(onBlurSpy.calledOnce).toBeTrue();
     });
   });
 });
