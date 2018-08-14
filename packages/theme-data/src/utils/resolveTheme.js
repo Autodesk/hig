@@ -24,7 +24,7 @@ function dereferenceValue(theme, role, referencingRole) {
     valueData.value && valueData.value.ref
       ? {
           ...valueData,
-          ...dereferenceValue(theme, valueData.value.ref, role)
+          value: dereferenceValue(theme, valueData.value.ref, role).value
         }
       : valueData;
   return dereferencedValue;
