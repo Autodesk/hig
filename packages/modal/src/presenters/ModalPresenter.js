@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import cx from "classnames";
 
 import ModalHeaderPresenter from "./ModalHeaderPresenter";
+import { types } from "../types";
 import "./ModalPresenter.scss";
 
 export default class ModalPresenter extends Component {
@@ -46,6 +47,10 @@ export default class ModalPresenter extends Component {
     type: PropTypes.string
   };
 
+  static defaultProps = {
+    type: types.STANDARD
+  };
+
   setScrolling = element => {
     this.hasScrolling = element.scrollHeight > element.clientHeight;
   };
@@ -63,11 +68,9 @@ export default class ModalPresenter extends Component {
       type
     } = this.props;
 
-    const typeKey = type || "standard";
-
     const windowClasses = cx([
       "hig__modal-V1__window",
-      `hig__modal-V1__window--${typeKey}`
+      `hig__modal-V1__window--${type}`
     ]);
 
     const wrapperClasses = cx([
