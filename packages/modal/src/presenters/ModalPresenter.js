@@ -7,6 +7,11 @@ import { types } from "../types";
 import "./ModalPresenter.scss";
 
 export default class ModalPresenter extends Component {
+  static modifiersByType = {
+    [types.STANDARD]: "hig__modal-V1__window--standard",
+    [types.ALTERNATE]: "hig__modal-V1__window--alternate"
+  };
+
   static propTypes = {
     /**
      * Supports adding any dom content to the body of the modal
@@ -68,10 +73,10 @@ export default class ModalPresenter extends Component {
       type
     } = this.props;
 
-    const windowClasses = cx([
+    const windowClasses = cx(
       "hig__modal-V1__window",
-      `hig__modal-V1__window--${type}`
-    ]);
+      ModalPresenter.modifiersByType[type]
+    );
 
     const wrapperClasses = cx([
       "hig__modal-V1",
