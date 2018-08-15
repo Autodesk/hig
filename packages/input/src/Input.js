@@ -72,6 +72,9 @@ function Input(props) {
 }
 
 Input.propTypes = {
+  /**
+   * The visual variant of the input
+   */
   type: PropTypes.oneOf(availableTypes),
   ...htmlInputPropTypes
 };
