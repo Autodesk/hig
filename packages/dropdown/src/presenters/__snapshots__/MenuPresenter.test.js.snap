@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dropdown/presenters/MenuPresenter renders with all props 1`] = `
+<div
+  className="hig__dropdown-v1__menu hig__dropdown-v1__menu--open"
+>
+  <p>
+    hi
+  </p>
+</div>
+`;
+
+exports[`Dropdown/presenters/MenuPresenter renders with only required props 1`] = `
+<div
+  className="hig__dropdown-v1__menu"
+/>
+`;
