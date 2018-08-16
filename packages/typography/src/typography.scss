@@ -15,31 +15,6 @@
   @include typography-large;
 }
 
-// COLORS
-.hig__typography--hig-white {
-  color: color('hig-white');
-}
-
-.hig__typography--hig-cool-gray-70 {
-  color: color('hig-cool-gray-70');
-}
-
-.hig__typography--hig-blue-50 {
-  color: color('hig-blue-50');
-}
-
-.hig__typography--hig-green-good {
-  color: color('hig-green-good');
-}
-
-.hig__typography--hig-yellow-warning {
-  color: color('hig-yellow-warning');
-}
-
-.hig__typography--hig-red-alert {
-  color: color('hig-red-alert');
-}
-
 // BOLD
 .hig__typography__bold {
   @include typography-base;
@@ -86,4 +61,29 @@
 
 .hig__typography__sub2 {
   @include typography-h5;
+}
+
+// COLORS
+.hig__typography--hig-white {
+  color: color('hig-white');
+}
+
+.hig__typography--hig-cool-gray-70 {
+  color: color('hig-cool-gray-70');
+}
+
+.hig__typography--hig-blue-50 {
+  color: color('hig-blue-50');
+}
+
+.hig__typography--hig-green-good {
+  color: color('hig-green-good');
+}
+
+.hig__typography--hig-yellow-warning {
+  color: color('hig-yellow-warning');
+}
+
+.hig__typography--hig-red-alert {
+  color: color('hig-red-alert');
 }
