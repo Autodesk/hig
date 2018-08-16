@@ -58,6 +58,9 @@ nohup.out
 # VS Code
 .vscode/
 
+# Jetbrains IDE
+.idea/
+
 # compiled build stuff
 build/
 storybook-static/
