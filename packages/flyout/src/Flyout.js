@@ -34,6 +34,10 @@ class Flyout extends Component {
     maxHeight: PropTypes.number,
     /** Function called when the flyout is open, and a click event occurs outside the flyout */
     onClickOutside: PropTypes.func,
+    /** Function called when the flyout closes */
+    onClose: PropTypes.func,
+    /** Function called when the flyout opens */
+    onOpen: PropTypes.func,
     /** Function called when the flyout panel is scrolled */
     onScroll: PropTypes.func,
     /** When provided, it overrides the flyout's open state */
@@ -56,25 +60,11 @@ class Flyout extends Component {
 
   /**
    * @type {Object}
-   * @property {boolean} isVisible Used to direct the flyout's transition behavior
+   * @property {boolean} open Used to direct the flyout's transition behavior
    */
   state = {
-    isVisible: false
+    open: false
   };
-
-  /**
-   * @param {FlyoutProps} nextProps
-   * @param {FlyoutState} prevState
-   * @returns {FlyoutState | null}
-   */
-  static getDerivedStateFromProps(nextProps, prevState) {
-    const { open } = nextProps;
-    const { isVisible } = prevState;
-
-    if (open === isVisible) return null;
-
-    return { isVisible: open };
-  }
 
   componentDidMount() {
     window.document.body.addEventListener("click", this.handleBodyClick);
@@ -102,6 +92,29 @@ class Flyout extends Component {
     });
   }
 
+  /**
+   * @param {boolean} open
+   */
+  setOpen(open) {
+    const { onClose, onOpen } = this.props;
+
+    if (open && onOpen) {
+      onOpen();
+    } else if (!open && onClose) {
+      onClose();
+    }
+
+    this.setState({ open });
+  }
+
+  isOpenControlled() {
+    return this.props.open !== undefined;
+  }
+
+  isOpen() {
+    return this.isOpenControlled() ? this.props.open : this.state.open;
+  }
+
   /** @type {HTMLElement} */
   actionRef;
 
@@ -115,7 +128,9 @@ class Flyout extends Component {
   wrapperRef;
 
   handleChildClick = () => {
-    this.toggleVisibility();
+    if (!this.isOpenControlled()) {
+      this.toggleOpen();
+    }
   };
 
   /**
@@ -123,15 +138,13 @@ class Flyout extends Component {
    */
   handleBodyClick = event => {
     const { wrapperRef } = this;
-    const { isVisible } = this.state;
     const { onClickOutside } = this.props;
     const flyoutClicked =
       event.target === wrapperRef || wrapperRef.contains(event.target);
 
-    if (flyoutClicked || !isVisible) return;
+    if (flyoutClicked || !this.isOpen()) return;
     if (onClickOutside) onClickOutside(event);
-
-    this.toggleVisibility();
+    if (!this.isOpenControlled()) this.toggleOpen();
   };
 
   /**
@@ -163,15 +176,11 @@ class Flyout extends Component {
   };
 
   hideFlyout = () => {
-    this.setState({
-      isVisible: false
-    });
+    this.setOpen(false);
   };
 
-  toggleVisibility() {
-    this.setState({
-      isVisible: !this.state.isVisible
-    });
+  toggleOpen() {
+    this.setOpen(!this.state.open);
   }
 
   createPresenterProps(transitionStatus) {
@@ -249,7 +258,7 @@ class Flyout extends Component {
 
   render() {
     return (
-      <Transition in={this.state.isVisible} timeout={TRANSITION_DURATION}>
+      <Transition in={this.isOpen()} timeout={TRANSITION_DURATION}>
         {transitionStatus => (
           <FlyoutPresenter {...this.createPresenterProps(transitionStatus)}>
             {this.renderChildren()}
