@@ -217,7 +217,7 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
       className="hig__flyout-v1__panel-container"
       style={
         Object {
-          "maxHeight": "undefinedpx",
+          "maxHeight": undefined,
         }
       }
     >
@@ -334,7 +334,7 @@ exports[`flyout/Flyout snapshots renders without props 1`] = `
       className="hig__flyout-v1__panel-container"
       style={
         Object {
-          "maxHeight": "undefinedpx",
+          "maxHeight": undefined,
         }
       }
     >
