@@ -8,7 +8,7 @@ import { types, availableTypes } from "./constants";
 import htmlInputPropTypes from "./htmlInputPropTypes";
 
 function Wrapper(props) {
-  if (props.type === "plain") {
+  if (props.type === types.PLAIN) {
     return props.children;
   }
 
