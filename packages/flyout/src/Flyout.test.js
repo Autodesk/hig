@@ -111,6 +111,8 @@ describe("flyout/Flyout", () => {
       expect(wrapper.state()).toHaveProperty("open", false);
       handleChildClick();
       expect(wrapper.state()).toHaveProperty("open", true);
+      handleChildClick();
+      expect(wrapper.state()).toHaveProperty("open", false);
     });
 
     it("calls the `onOpen` handler when the flyout is opened", () => {
