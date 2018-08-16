@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dropdown/presenters/OptionPresenter renders with all props 1`] = `
+<div
+  className="hig__dropdown-option hig__dropdown-option--selected hig__dropdown-option--highlighted"
+  onClick={[Function]}
+  onHover={[Function]}
+  onMouseDown={[Function]}
+  onMouseMove={[Function]}
+  onSelect={[Function]}
+  value="my value"
+>
+  <span
+    className="hig__dropdown-option__label"
+  >
+    <p>
+      hi
+    </p>
+  </span>
+  <div
+    className="hig__dropdown-option__checkmark"
+  >
+    <div
+      className="hig__icon hig__icon--24-size"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"checkmark-blue-dark-24\\"><polygon fill=\\"#087AAD\\" points=\\"10.1802137 16 6 12.1129 7.29586623 10.8214 10.1569902 13.4647 16.6790525 7 18 8.2681\\" fill-rule=\\"evenodd\\"/></svg>",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`Dropdown/presenters/OptionPresenter renders without props 1`] = `
+<div
+  className="hig__dropdown-option"
+>
+  <span
+    className="hig__dropdown-option__label"
+  />
+</div>
+`;
