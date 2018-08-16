@@ -5,6 +5,7 @@ exports[`skeleton-item/SkeletonItem snapshot tests renders with no props 1`] = `
   className="hig__skeleton-item hig--light-theme"
   style={
     Object {
+      "height": undefined,
       "marginBottom": undefined,
       "maxWidth": undefined,
     }
