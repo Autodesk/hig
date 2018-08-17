@@ -25,12 +25,13 @@ const themes = [
   }
 ];
 
-gemini.suite("Input", parent => {
-  parent.setCaptureElements(".storybook-component");
-
+gemini.suite("Input", () => {
   themes.forEach(({ name, url }) => {
     gemini.suite(name, child => {
-      child.setUrl(url).capture(name);
+      child
+        .setUrl(url)
+        .setCaptureElements(".storybook-component")
+        .capture(name);
     });
   });
 });
