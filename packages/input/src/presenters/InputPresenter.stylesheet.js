@@ -1,4 +1,4 @@
-import { types } from "../constants";
+import { variants } from "../constants";
 
 function inputStyles({ isDisabled, hasFocus, hasHover }, themeData) {
   const defaults = {
@@ -38,12 +38,12 @@ export default function stylesheet(props, themeData) {
       minHeight: themeData["INPUT.MIN_HEIGHT"],
       paddingTop: themeData["INPUT.VERTICAL_PADDING"],
       paddingRight:
-        props.type === types.BOX
+        props.variant === variants.BOX
           ? themeData["INPUT.BOX_TYPE.HORIZONTAL_PADDING"]
           : themeData["INPUT.HORIZONTAL_PADDING"],
       paddingBottom: themeData["INPUT.VERTICAL_PADDING"],
       paddingLeft:
-        props.type === types.BOX
+        props.variant === variants.BOX
           ? themeData["INPUT.BOX_TYPE.HORIZONTAL_PADDING"]
           : themeData["INPUT.HORIZONTAL_PADDING"],
       outline: "none",

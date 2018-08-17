@@ -5,7 +5,7 @@ import { css } from "emotion";
 import { ThemeContext } from "@hig/themes";
 
 import stylesheet from "./InputPresenter.stylesheet";
-import { availableTypes, availableInputModes } from "../constants";
+import { availableVariants, availableInputModes } from "../constants";
 
 export default function InputPresenter({
   autoComplete,
@@ -28,14 +28,14 @@ export default function InputPresenter({
   required,
   spellCheck,
   tabIndex,
-  type,
-  value
+  value,
+  variant
 }) {
   return (
     <ThemeContext.Consumer>
       {({ themeData }) => {
         const styles = stylesheet(
-          { isDisabled: disabled, hasFocus, hasHover, type },
+          { isDisabled: disabled, hasFocus, hasHover, variant },
           themeData
         );
 
@@ -89,6 +89,6 @@ InputPresenter.propTypes = {
   required: PropTypes.bool,
   spellCheck: PropTypes.bool,
   tabIndex: PropTypes.string,
-  type: PropTypes.oneOf(availableTypes),
-  value: PropTypes.string
+  value: PropTypes.string,
+  variant: PropTypes.oneOf(availableVariants)
 };

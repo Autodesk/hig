@@ -1,10 +1,10 @@
-export const types = Object.freeze({
+export const variants = Object.freeze({
   LINE: "line",
   BOX: "box",
   PLAIN: "plain"
 });
 
-export const availableTypes = Object.freeze(Object.values(types));
+export const availableVariants = Object.freeze(Object.values(variants));
 
 export const availableInputModes = Object.freeze([
   "none",

@@ -4,10 +4,10 @@ import InputBehavior from "./behaviors/InputBehavior";
 import InputPresenter from "./presenters/InputPresenter";
 import InputHaloPresenter from "./presenters/InputHaloPresenter";
 
-import { types, availableTypes, availableInputModes } from "./constants";
+import { variants, availableVariants, availableInputModes } from "./constants";
 
 function Wrapper(props) {
-  if (props.type === types.PLAIN) {
+  if (props.variant === variants.PLAIN) {
     return props.children;
   }
 
@@ -16,7 +16,7 @@ function Wrapper(props) {
 
 Wrapper.propTypes = {
   children: PropTypes.node,
-  type: PropTypes.oneOf(availableTypes)
+  variant: PropTypes.oneOf(availableVariants)
 };
 
 function Input(props) {
@@ -39,7 +39,7 @@ function Input(props) {
           isDisabled={props.disabled}
           hasFocus={hasFocus}
           hasHover={hasHover}
-          type={props.type}
+          variant={props.variant}
         >
           <InputPresenter
             autoComplete={props.autoComplete}
@@ -61,7 +61,7 @@ function Input(props) {
             required={props.required}
             spellCheck={props.spellCheck}
             tabIndex={props.tabIndex}
-            type={props.type}
+            variant={props.variant}
             value={props.value}
           />
         </Wrapper>
@@ -142,7 +142,7 @@ Input.propTypes = {
   /**
    * The visual variant of the input
    */
-  type: PropTypes.oneOf(availableTypes),
+  variant: PropTypes.oneOf(availableVariants),
   /**
    * The value of the control
    */
@@ -150,7 +150,7 @@ Input.propTypes = {
 };
 
 Input.defaultProps = {
-  type: types.LINE
+  variant: variants.LINE
 };
 
 export default Input;

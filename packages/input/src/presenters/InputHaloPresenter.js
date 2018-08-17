@@ -5,20 +5,20 @@ import { css } from "emotion";
 import { ThemeContext } from "@hig/themes";
 
 import stylesheet from "./InputHaloPresenter.stylesheet";
-import { availableTypes } from "../constants";
+import { availableVariants } from "../constants";
 
 function InputHaloPresenter({
-  isDisabled,
+  children,
   hasFocus,
   hasHover,
-  type,
-  children
+  isDisabled,
+  variant
 }) {
   return (
     <ThemeContext.Consumer>
       {({ themeData }) => {
         const styles = stylesheet(
-          { isDisabled, hasFocus, hasHover, type },
+          { isDisabled, hasFocus, hasHover, variant },
           themeData
         );
 
@@ -34,11 +34,11 @@ function InputHaloPresenter({
 }
 
 InputHaloPresenter.propTypes = {
-  isDisabled: PropTypes.bool,
+  children: PropTypes.node,
   hasFocus: PropTypes.bool,
   hasHover: PropTypes.bool,
-  type: PropTypes.oneOf(availableTypes),
-  children: PropTypes.node
+  isDisabled: PropTypes.bool,
+  variant: PropTypes.oneOf(availableVariants)
 };
 
 export default InputHaloPresenter;

@@ -1,13 +1,13 @@
-import { types } from "../constants";
+import { variants } from "../constants";
 
-function borderStyles({ type }, themeData) {
+function borderStyles({ variant }, themeData) {
   const defaults = {
     borderStyle: "solid",
     borderColor: "transparent",
     borderWidth: themeData["INPUT.BORDER_WIDTH"]
   };
 
-  return type === types.BOX
+  return variant === variants.BOX
     ? {
         ...defaults,
         borderColor: themeData["INPUT.BORDER_COLOR"]

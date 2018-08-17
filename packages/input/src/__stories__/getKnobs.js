@@ -13,17 +13,17 @@ const knobLabels = {
   onBlur: "onBlur",
   onMouseEnter: "onMouseEnter",
   onMouseLeave: "onMouseLeave",
-  type: "Type"
+  variant: "variant"
 };
 
-const typeOptions = {
+const variantOptions = {
   line: "Line",
   box: "Box",
   plain: "Plain"
 };
 
 export default function getKnobs(props) {
-  const { value, type, disabled, ...otherProps } = props;
+  const { value, variant, disabled, ...otherProps } = props;
 
   return {
     ...otherProps,
@@ -33,7 +33,12 @@ export default function getKnobs(props) {
     onFocus: action(knobLabels.onFocus),
     onMouseEnter: action(knobLabels.onMouseEnter),
     onMouseLeave: action(knobLabels.onMouseLeave),
-    type: select(knobLabels.type, typeOptions, type, knobGroupIds.basic),
+    variant: select(
+      knobLabels.variant,
+      variantOptions,
+      variant,
+      knobGroupIds.basic
+    ),
     value: text(knobLabels.value, value, knobGroupIds.basic)
   };
 }

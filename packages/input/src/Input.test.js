@@ -16,28 +16,28 @@ describe("Input", () => {
     Receiver: InputPresenter
   });
 
-  describe("rendering types", () => {
-    describe("when type='line'", () => {
+  describe("rendering variants", () => {
+    describe("when variant='line'", () => {
       it("renders the line-style input", () => {
-        const wrapper = mount(<Input type="line" />);
+        const wrapper = mount(<Input variant="line" />);
 
         const decoration = wrapper.find(InputHaloPresenter);
-        expect(decoration).toHaveProp("type", "line");
+        expect(decoration).toHaveProp("variant", "line");
       });
     });
 
-    describe("when type='box'", () => {
+    describe("when variant='box'", () => {
       it("renders the box-style  input", () => {
-        const wrapper = mount(<Input type="box" />);
+        const wrapper = mount(<Input variant="box" />);
 
         const decoration = wrapper.find(InputHaloPresenter);
-        expect(decoration).toHaveProp("type", "box");
+        expect(decoration).toHaveProp("variant", "box");
       });
     });
 
-    describe("when type='plain'", () => {
+    describe("when variant='plain'", () => {
       it("renders a plain input", () => {
-        const wrapper = mount(<Input type="plain" />);
+        const wrapper = mount(<Input variant="plain" />);
 
         expect(wrapper).not.toContain(InputHaloPresenter);
       });
