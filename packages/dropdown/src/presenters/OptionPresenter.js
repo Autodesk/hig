@@ -20,6 +20,10 @@ export default class OptionPresenter extends Component {
      */
     onClick: PropTypes.func,
     /**
+     * Called when user moves mouse over the option
+     */
+    onHover: PropTypes.func,
+    /**
      * Called when user begins clicking on an option
      */
     onMouseDown: PropTypes.func,
@@ -27,10 +31,6 @@ export default class OptionPresenter extends Component {
      * Called when user moves mouse over the option
      */
     onMouseMove: PropTypes.func,
-    /**
-     * Called when user moves mouse over the option
-     */
-    onHover: PropTypes.func,
     /**
      * Called when the user selects the option by clicking or keyboard interaction
      */

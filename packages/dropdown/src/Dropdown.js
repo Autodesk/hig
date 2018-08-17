@@ -14,34 +14,6 @@ import renderOptions from "./presenters/renderOptions";
 export default class Dropdown extends Component {
   static propTypes = {
     /**
-     * HTML ID attribute
-     */
-    id: PropTypes.string,
-    /**
-     * Text describing what the field represents
-     */
-    label: PropTypes.string,
-    /**
-     * Instructional text for the field
-     */
-    instructions: PropTypes.string,
-    /**
-     * Placeholder text to render when an option has not been selected
-     */
-    placeholder: PropTypes.string,
-    /**
-     * Enables multiple selection
-     */
-    multiple: PropTypes.bool,
-    /**
-     * Prevents user actions on the field
-     */
-    disabled: PropTypes.bool,
-    /**
-     * Text describing why the field is required
-     */
-    required: PropTypes.string,
-    /**
      * The default value when the component is uncontrolled
      */
     defaultValue: PropTypes.oneOfType([
@@ -49,32 +21,73 @@ export default class Dropdown extends Component {
       PropTypes.arrayOf(PropTypes.any)
     ]),
     /**
-     * An array of objects to choose from
+     * Prevents user actions on the field
      */
-    value: PropTypes.oneOfType([
-      PropTypes.any,
-      PropTypes.arrayOf(PropTypes.any)
-    ]),
+    disabled: PropTypes.bool,
     /**
-     * An array of unique values of any type except `undefined`
+     * Used to format options into human readable strings
+     *
+     * Note that if both formatOption and renderOption are provided,
+     * renderOption will take precedence
      */
-    options: PropTypes.arrayOf(PropTypes.any),
+    formatOption: PropTypes.func,
     /**
-     * Called with the selected option when the value changes
+     * HTML ID attribute
      */
-    onChange: PropTypes.func,
+    id: PropTypes.string,
+    /**
+     * Instructional text for the field
+     */
+    instructions: PropTypes.string,
+    /**
+     * Text describing what the field represents
+     */
+    label: PropTypes.string,
+    /**
+     * Enables multiple selection
+     */
+    multiple: PropTypes.bool,
     /**
      * Called when the text field is blurred
      */
     onBlur: PropTypes.func,
     /**
+     * Called with the selected option when the value changes
+     */
+    onChange: PropTypes.func,
+    /**
      * Called when the text field is focused
      */
     onFocus: PropTypes.func,
     /**
-     * Used to format options into human readable strings
+     * An array of unique values of any type except `undefined`
      */
-    formatOption: PropTypes.func
+    options: PropTypes.arrayOf(PropTypes.any),
+    /**
+     * Placeholder text to render when an option has not been selected
+     */
+    placeholder: PropTypes.string,
+    /**
+     * When present, this function is used to render each option.  Each
+     * option is passed as an argument. If any option has Option.render
+     * prop present, that will take precedence and this
+     * function will not be called for that option.
+     *
+     * Similarly if both formatOption and renderOption are provided,
+     * renderOption will take precedence
+     */
+    renderOption: PropTypes.func,
+    /**
+     * Text describing why the field is required
+     */
+    required: PropTypes.string,
+    /**
+     * An array of objects to choose from
+     */
+    value: PropTypes.oneOfType([
+      PropTypes.any,
+      PropTypes.arrayOf(PropTypes.any)
+    ])
   };
 
   static defaultProps = {
@@ -176,21 +189,22 @@ export default class Dropdown extends Component {
    */
   renderMenu(downshift) {
     const {
-      isOpen,
       getItemProps,
       getMenuProps,
       highlightedIndex,
+      isOpen,
       selectedItem,
       selectedItems
     } = downshift;
     const menuProps = getMenuProps({ isOpen, refKey: "innerRef" });
-    const { multiple, options, formatOption } = this.props;
+    const { formatOption, multiple, options, renderOption } = this.props;
     const children = renderOptions({
-      multiple,
-      options,
       formatOption,
       getItemProps,
       highlightedIndex,
+      multiple,
+      options,
+      renderOption,
       selectedItem,
       selectedItems
     });
