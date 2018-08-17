@@ -149,14 +149,17 @@ export default class TextAreaPresenter extends Component {
         <label
           htmlFor={id}
           className={labelClasses}
+          /* eslint-disable-next-line react/no-danger */
           dangerouslySetInnerHTML={{ __html: label }}
         />
         <p
           className={instructionClasses}
+          /* eslint-disable-next-line react/no-danger */
           dangerouslySetInnerHTML={{ __html: instructions }}
         />
         <p
           className={requiredClasses}
+          /* eslint-disable-next-line react/no-danger */
           dangerouslySetInnerHTML={{ __html: required }}
         />
       </div>

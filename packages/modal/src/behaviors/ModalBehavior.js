@@ -10,7 +10,11 @@ export default class ModalBehavior extends Component {
     /**
      * Triggers when you click the overlay behind the modal
      */
-    onOverlayClick: PropTypes.func
+    onOverlayClick: PropTypes.func,
+    /**
+     * A function to render content of the modal
+     */
+    children: PropTypes.func
   };
 
   /**
