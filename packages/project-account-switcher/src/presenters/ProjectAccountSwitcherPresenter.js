@@ -154,20 +154,20 @@ export default class ProjectAccountSwitcherPresenter extends Component {
   flyoutContent() {
     return (
       <div className="project-account-switcher__lists">
-        <div className="project-account-switcher__list">
-          <div
+        <ul className="project-account-switcher__list">
+          <li
             className="project-account-switcher__list__title"
             dangerouslySetInnerHTML={{ __html: this.props.accountTitle }}
           />
           {this.accountsList()}
-        </div>
-        <div className="project-account-switcher__list">
-          <div
+        </ul>
+        <ul className="project-account-switcher__list">
+          <li
             className="project-account-switcher__list__title"
             dangerouslySetInnerHTML={{ __html: this.props.projectTitle }}
           />
           {this.projectsList()}
-        </div>
+        </ul>
       </div>
     );
   }

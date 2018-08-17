@@ -97,10 +97,10 @@ exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter ren
             <div
               className="project-account-switcher__lists"
             >
-              <div
+              <ul
                 className="project-account-switcher__list"
               >
-                <div
+                <li
                   className="project-account-switcher__list__title"
                   dangerouslySetInnerHTML={
                     Object {
@@ -168,11 +168,11 @@ exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter ren
                     data-account-id="2"
                   />
                 </div>
-              </div>
-              <div
+              </ul>
+              <ul
                 className="project-account-switcher__list"
               >
-                <div
+                <li
                   className="project-account-switcher__list__title"
                   dangerouslySetInnerHTML={
                     Object {
@@ -240,7 +240,7 @@ exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter ren
                     data-project-id="2"
                   />
                 </div>
-              </div>
+              </ul>
             </div>
           </div>
         </div>
@@ -347,10 +347,10 @@ exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter ren
             <div
               className="project-account-switcher__lists"
             >
-              <div
+              <ul
                 className="project-account-switcher__list"
               >
-                <div
+                <li
                   className="project-account-switcher__list__title"
                   dangerouslySetInnerHTML={
                     Object {
@@ -418,11 +418,11 @@ exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter ren
                     data-account-id="2"
                   />
                 </div>
-              </div>
-              <div
+              </ul>
+              <ul
                 className="project-account-switcher__list"
               >
-                <div
+                <li
                   className="project-account-switcher__list__title"
                   dangerouslySetInnerHTML={
                     Object {
@@ -490,7 +490,7 @@ exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter ren
                     data-project-id="2"
                   />
                 </div>
-              </div>
+              </ul>
             </div>
           </div>
         </div>
