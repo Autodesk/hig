@@ -1,8 +1,9 @@
 import React from "react";
 import { mount } from "enzyme";
 
-import HoverBehavior from "./HoverBehavior";
 import { lastCallOfMock } from "@hig/jest-preset/helpers";
+
+import HoverBehavior from "./HoverBehavior";
 
 function renderExample(exampleProps) {
   const renderPropSpy = jest.fn(({ onMouseEnter, onMouseLeave }) => (

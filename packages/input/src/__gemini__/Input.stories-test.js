@@ -20,7 +20,7 @@ const themes = [
   { name: "Web light", theme: HIGLightTheme }
 ];
 
-function Example({ theme, name }) {
+function Example({ theme, name }) /* eslint-disable-line react/prop-types */ {
   return (
     <ThemeContext.Provider value={theme}>
       <div
