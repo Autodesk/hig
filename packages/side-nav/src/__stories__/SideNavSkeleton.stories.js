@@ -5,7 +5,7 @@ import KnobbedThemeProvider from "@hig/storybook/storybook-support/decorators/Kn
 import SideNavSkeleton from "../SideNavSkeleton";
 import infoOptions from "./infoOptions";
 
-storiesOf("SideNav/SideNavSkeleton", module).add(
+storiesOf("GlobalNav|SideNav/SideNavSkeleton", module).add(
   "default",
   withInfo({
     ...infoOptions,

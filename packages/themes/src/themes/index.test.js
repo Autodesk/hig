@@ -7,7 +7,23 @@ describe("themes/themes/index", () => {
       value: expect.any(Object)
     },
     {
+      name: "HIGLightGrayTheme",
+      value: expect.any(Object)
+    },
+    {
       name: "HIGDarkBlueTheme",
+      value: expect.any(Object)
+    },
+    {
+      name: "HIGLightHighDensityTheme",
+      value: expect.any(Object)
+    },
+    {
+      name: "HIGLightGrayHighDensityTheme",
+      value: expect.any(Object)
+    },
+    {
+      name: "HIGDarkBlueHighDensityTheme",
       value: expect.any(Object)
     },
     {

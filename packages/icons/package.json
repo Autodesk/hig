@@ -1,10 +1,14 @@
 {
   "name": "@hig/icons",
-  "version": "0.1.0-alpha",
+  "version": "0.2.0",
   "description": "HIG icon assets",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
   "homepage": "https://hig.autodesk.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Autodesk/hig.git"
+  },
   "publishConfig": {
     "access": "public"
   },
@@ -14,10 +18,12 @@
     "build/*"
   ],
   "devDependencies": {
-    "@hig/babel-preset": "0.1.0",
-    "@hig/eslint-config": "0.1.0",
-    "@hig/scripts": "^0.1.0",
-    "@hig/styles": "^0.1.0",
+    "@hig/babel-preset": "^0.1.0",
+    "@hig/eslint-config": "^0.1.0",
+    "@hig/jest-preset": "^0.1.0",
+    "@hig/scripts": "^0.1.2",
+    "@hig/semantic-release-config": "^0.1.0",
+    "@hig/styles": "^0.2.3",
     "svgo": "^1.0.5"
   },
   "peerDependencies": {
@@ -25,15 +31,26 @@
   },
   "scripts": {
     "build": "hig-scripts-build",
-    "build-icons": "node scripts/build-icons.js"
+    "build-icons": "node scripts/build-icons/index.js",
+    "lint": "hig-scripts-lint",
+    "test": "hig-scripts-test",
+    "release": "hig-scripts-release"
   },
   "eslintConfig": {
     "extends": "@hig"
   },
+  "jest": {
+    "preset": "@hig/jest-preset"
+  },
+  "release": {
+    "extends": "@hig/semantic-release-config"
+  },
   "babel": {
     "env": {
       "test": {
-        "presets": ["@hig/babel-preset/test"]
+        "presets": [
+          "@hig/babel-preset/test"
+        ]
       }
     }
   }

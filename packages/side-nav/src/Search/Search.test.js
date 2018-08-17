@@ -14,4 +14,17 @@ describe("side-nav/Search", () => {
     wrapper.setProps({ value: "baz" });
     expect(input.prop("value")).toEqual("bar"); // Incoming props are ignored
   });
+
+  it("renders a button to clear input", () => {
+    const wrapper = mount(<Search />);
+    const input = wrapper.find("input");
+
+    expect(wrapper.find(".hig__side-nav__search__clear")).toHaveLength(0);
+    input.simulate("change", { target: { value: "bar" } });
+    expect(wrapper.find(".hig__side-nav__search__clear")).toHaveLength(1);
+
+    wrapper.find(".hig__side-nav__search__clear").simulate("click");
+    expect(input.prop("value")).toEqual("");
+    expect(wrapper.find(".hig__side-nav__search__clear")).toHaveLength(0);
+  });
 });

@@ -1,16 +1,18 @@
 import React from "react";
-import KnobbedThemeProvider from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
+import KnobbedThemeProvider, {
+  THEMES
+} from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
 import DefaultExport from "../index";
 import getKnobs from "./getKnobs";
 
 export default function renderStory(props) {
-  const { children, ...otherProps } = getKnobs(props);
+  const { children, theme, ...otherProps } = getKnobs(props);
 
   return (
-    <KnobbedThemeProvider>
-      <div>
-        <DefaultExport {...otherProps}>{children}</DefaultExport>
-      </div>
+    <KnobbedThemeProvider
+      supportedThemes={[THEMES.WEB_LIGHT, THEMES.DARK_BLUE]}
+    >
+      <DefaultExport {...otherProps}>{children}</DefaultExport>
     </KnobbedThemeProvider>
   );
 }

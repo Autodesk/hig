@@ -15,8 +15,8 @@ yarn add @hig/tabs
 ### Import the component and CSS
 
 ```js
-import { Tabs, Tab } from '@hig/tabs';
-import '@hig/tabs/build/index.css';
+import Tabs, { Tab } from "@hig/tabs";
+import "@hig/tabs/build/index.css";
 ```
 
 ## Basic usage

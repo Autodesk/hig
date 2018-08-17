@@ -7,46 +7,22 @@ const knobGroupIds = {
 };
 
 const knobLabels = {
-  checked: "Checked",
-  defaultChecked: "Initially checked",
   disabled: "Disabled",
   label: "Label",
-  name: "Name",
   onBlur: "onBlur",
   onChange: "onChange",
-  onFocus: "onFocus",
-  required: "Required",
-  value: "Value"
+  onFocus: "onFocus"
 };
 
 export default function getKnobs(props) {
-  const {
-    checked,
-    defaultChecked,
-    disabled,
-    indeterminate,
-    label,
-    name,
-    required,
-    value,
-    ...otherProps
-  } = props;
+  const { disabled = false, label = "", ...otherProps } = props;
 
   return {
     ...otherProps,
-    checked: boolean(knobLabels.checked, checked, knobGroupIds.basic),
-    defaultChecked: boolean(
-      knobLabels.defaultChecked,
-      defaultChecked,
-      knobGroupIds.basic
-    ),
     disabled: boolean(knobLabels.disabled, disabled, knobGroupIds.basic),
     label: text(knobLabels.label, label, knobGroupIds.basic),
-    name: text(knobLabels.name, name, knobGroupIds.form),
     onBlur: action(knobLabels.onBlur),
     onChange: action(knobLabels.onChange),
-    onFocus: action(knobLabels.onFocus),
-    required: text(knobLabels.required, required, knobGroupIds.basic),
-    value: text(knobLabels.value, value, knobGroupIds.form)
+    onFocus: action(knobLabels.onFocus)
   };
 }

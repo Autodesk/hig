@@ -8,7 +8,7 @@
     "type": "git",
     "url": "git@github.com:autodesk/hig.git"
   },
-  "version": "0.1.26",
+  "version": "0.1.27",
   "main": "lib/hig.js",
   "files": [
     "lib/hig.css"
@@ -24,7 +24,7 @@
     "watch": "webpack --watch --config webpack.dev.js"
   },
   "dependencies": {
-    "hig-interface": "^0.1.18"
+    "hig-interface": "^0.1.19"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -34,7 +34,6 @@
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-2": "^6.24.1",
-    "concurrently": "^3.4.0",
     "css-loader": "^0.26.1",
     "dotenv": "^4.0.0",
     "eslint": "^4.4.1",

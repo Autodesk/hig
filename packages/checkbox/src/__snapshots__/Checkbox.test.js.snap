@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`checkbox/Checkbox integration renders correctly 1`] = `
+<div
+  className="hig__checkbox hig__checkbox--checkbox"
+>
+  <input
+    checked={false}
+    className="hig__checkbox__input"
+    disabled={false}
+    id="checkbox-1"
+    name="checkbox"
+    onBlur={undefined}
+    onChange={[Function]}
+    onClick={[Function]}
+    onFocus={undefined}
+    type="checkbox"
+    value="value"
+  />
+  <span
+    className="hig__checkbox__wrapper"
+  >
+    <span
+      className="hig__checkbox__wrapper__check"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<svg width=\\"11\\" height=\\"9\\" viewBox=\\"0 0 11 9\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"check-white-24\\"><polygon points=\\"7.13516024 12 4 8.9767 4.97189967 7.9722 7.11774268 10.0281 12.0092894 5 13 5.9863\\" transform=\\"translate(-3 -4)\\" stroke-width=\\".5\\" stroke=\\"#FFF\\" fill=\\"#FFF\\" fill-rule=\\"evenodd\\"/></svg>",
+        }
+      }
+    />
+    <span
+      className="hig__checkbox__wrapper__check--indeterminate"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<svg width=\\"8\\" height=\\"2\\" viewBox=\\"0 0 8 2\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"checkmark-indeterminate-16\\"><rect x=\\"4\\" y=\\"7\\" width=\\"8\\" height=\\"2\\" transform=\\"translate(-4 -7)\\" fill=\\"#FFF\\" fill-rule=\\"evenodd\\"/></svg>",
+        }
+      }
+    />
+    <span
+      className="hig__checkbox__wrapper__check--disabled"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<svg width=\\"10\\" height=\\"8\\" viewBox=\\"0 0 10 8\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"check-disabled-16\\"><polygon points=\\"2.95073905 6.58823529 2.274e-13 3.74277647 0.914729106 2.79736471 2.93434606 4.73232941 7.5381547 2.274e-13 8.47058824 0.928282353\\" transform=\\"translate(1 1)\\" stroke-width=\\".5\\" stroke=\\"#D1DDEE\\" fill=\\"#D1DDEE\\" fill-rule=\\"evenodd\\"/></svg>",
+        }
+      }
+    />
+  </span>
+  <label
+    className="hig__checkbox__label"
+    htmlFor="checkbox-1"
+  >
+    HIG Checkbox
+  </label>
+</div>
+`;

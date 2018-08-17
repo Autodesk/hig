@@ -35,7 +35,7 @@ exports[`New Notification renders correctly with the featured prop 1`] = `
       onFocus={undefined}
       onMouseEnter={undefined}
       onMouseLeave={undefined}
-      title={undefined}
+      title="Dismiss featured notification"
     >
       <span
         className="hig__icon-button__icon"

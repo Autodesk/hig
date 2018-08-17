@@ -9,7 +9,7 @@ import Icon, { names as iconNames } from "@hig/icon";
 import SideNav from "../index";
 import infoOptions from "./infoOptions";
 
-storiesOf("SideNav/SideNav.CollapseButton", module).add(
+storiesOf("GlobalNav|SideNav.CollapseButton", module).add(
   "default",
   withInfo(infoOptions)(() => (
     <KnobbedThemeProvider>
@@ -21,7 +21,7 @@ storiesOf("SideNav/SideNav.CollapseButton", module).add(
   ))
 );
 
-storiesOf("SideNav/SideNav.Link", module).add(
+storiesOf("GlobalNav|SideNav.Link", module).add(
   "default",
   withInfo(infoOptions)(() => (
     <KnobbedThemeProvider>
@@ -36,7 +36,7 @@ storiesOf("SideNav/SideNav.Link", module).add(
   ))
 );
 
-storiesOf("SideNav/SideNav.Submodule", module).add(
+storiesOf("GlobalNav|SideNav.Submodule", module).add(
   "default",
   withInfo(infoOptions)(() => (
     <KnobbedThemeProvider>
@@ -52,7 +52,7 @@ storiesOf("SideNav/SideNav.Submodule", module).add(
   ))
 );
 
-storiesOf("SideNav/SideNav.Module", module)
+storiesOf("GlobalNav|SideNav.Module", module)
   .add(
     "with icon",
     withInfo(infoOptions)(() => (
@@ -112,7 +112,7 @@ storiesOf("SideNav/SideNav.Module", module)
     ))
   );
 
-storiesOf("SideNav/SideNav.ModuleCompact", module).add(
+storiesOf("GlobalNav|SideNav.ModuleCompact", module).add(
   "default",
   withInfo(infoOptions)(() => (
     <KnobbedThemeProvider>
@@ -127,7 +127,7 @@ storiesOf("SideNav/SideNav.ModuleCompact", module).add(
   ))
 );
 
-storiesOf("SideNav/SideNav.Group", module)
+storiesOf("GlobalNav|SideNav.Group", module)
   .add(
     "with icons",
     withInfo({
@@ -187,7 +187,7 @@ storiesOf("SideNav/SideNav.Group", module)
     ))
   );
 
-storiesOf("SideNav/SideNav.Search", module).add(
+storiesOf("GlobalNav|SideNav.Search", module).add(
   "default",
   withInfo(infoOptions)(() => (
     <KnobbedThemeProvider>

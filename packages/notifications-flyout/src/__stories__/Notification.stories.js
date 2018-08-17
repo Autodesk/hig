@@ -14,14 +14,16 @@ const sampleNotification = (
       <b>Your subscription expires May 5</b>
     </p>
     <p>
-      Maya<br />
-      Media & Entertainment Collection<br />
-      Product Design Collection<br />
-      2 more
+      Maya
+      <br />
+      Media & Entertainment Collection
+      <br />
+      Product Design Collection
+      <br />2 more
     </p>
     <p>
       <TextLink
-        href="https://github.com/Autodesk/hig"
+        link="https://github.com/Autodesk/hig"
         onClick={action("notifications id 1")}
       >
         Manage renewal
@@ -30,7 +32,7 @@ const sampleNotification = (
   </div>
 );
 
-storiesOf("NotificationsFlyout/Notification", module)
+storiesOf("Notifications|Flyout/Notification", module)
   .add(
     "default",
     withInfo(infoOptions)(() => (

@@ -7,6 +7,8 @@ import "./skeleton-item.scss";
 
 export default class SkeletonItem extends Component {
   static propTypes = {
+    /** Sets height of the skeleton item */
+    height: PropTypes.string,
     /** Sets max width of the skeleton item */
     maxWidth: PropTypes.string,
     /** Sets spacing below the skeleton item */
@@ -21,7 +23,8 @@ export default class SkeletonItem extends Component {
             className={cx("hig__skeleton-item", themeClass)}
             style={{
               maxWidth: this.props.maxWidth,
-              marginBottom: this.props.marginBottom
+              marginBottom: this.props.marginBottom,
+              height: this.props.height
             }}
           />
         )}

@@ -1,28 +1,52 @@
 {
   "private": true,
   "name": "@hig/scripts",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Scripts for HIG React components",
   "main": "index.js",
   "repository": "https://github.com/Autodesk/hig",
   "license": "Apache-2.0",
   "bin": {
-    "hig-scripts-build": "bin/build.js"
+    "hig-scripts-build": "bin/build.js",
+    "hig-scripts-lint": "bin/lint.sh",
+    "hig-scripts-test": "bin/test.sh",
+    "hig-scripts-release": "bin/release.sh",
+    "hig-scripts-is-stable-package": "bin/is-stable-package.js",
+    "hig-scripts-ensure-initial-tag": "bin/ensure-initial-tag.js"
   },
   "dependencies": {
-    "@hig/babel-preset": "0.1.0",
+    "@hig/babel-preset": "^0.1.0",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
+    "eslint": "^4.19.1",
+    "execa": "^0.10.0",
+    "jest": "^22.4.3",
+    "jest-environment-jsdom": "^22.4.3",
     "node-sass": "^4.8.3",
     "postcss-functions": "^3.0.0",
     "postcss-import": "^11.1.0",
+    "read-pkg": "^3.0.0",
     "rollup": "^0.57.1",
     "rollup-plugin-babel": "^3.0.3",
     "rollup-plugin-commonjs": "^9.1.0",
     "rollup-plugin-json": "^2.3.0",
     "rollup-plugin-node-resolve": "^3.3.0",
-    "rollup-plugin-postcss": "^1.4.1"
+    "rollup-plugin-postcss": "^1.4.1",
+    "semantic-release": "15.5.0",
+    "semver": "^5.5.0"
+  },
+  "eslintConfig": {
+    "extends": "@hig"
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "presets": [
+          "@hig/babel-preset/test"
+        ]
+      }
+    }
   }
 }

@@ -81,4 +81,14 @@ describe("Button", () => {
       });
     });
   });
+
+  describe("when a disabled link", () => {
+    beforeEach(() => {
+      wrapper = subject({ link: "https://www.autodesk.com", disabled: true });
+    });
+
+    it("is not tabbable", () => {
+      expect(wrapper.matchesElement(<a tabIndex="-1">Button</a>));
+    });
+  });
 });

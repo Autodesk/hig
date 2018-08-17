@@ -1,39 +1,48 @@
 import { action } from "@storybook/addon-actions";
-import { boolean, text } from "@storybook/addon-knobs/react";
+import { boolean, object, text } from "@storybook/addon-knobs/react";
+import { controlledObject } from "@hig/storybook/utils";
 
 const knobGroupIds = {
-  basic: "Basic"
+  basic: "Basic",
+  advanced: "Advanced"
 };
 
 const knobLabels = {
   label: "Label",
   instructions: "Instructions",
   placeholder: "Placeholder",
-  open: "Open",
   disabled: "Disabled",
   required: "Required",
+  multiple: "Multiple",
   onBlur: "onBlur",
+  onChange: "onChange",
   onClickOutside: "onClickOutside",
   onFocus: "onFocus",
-  onKeypress: "onKeypress",
-  onTargetClick: "onTargetClick",
-  selectedOptionLabel: "Selected Option Label"
+  options: "Options",
+  value: "Value"
 };
 
 export default function getKnobs(props) {
   const {
-    label,
-    instructions,
-    placeholder,
-    open,
-    disabled,
-    required,
-    selectedOptionLabel,
+    label = "",
+    instructions = "",
+    placeholder = "",
+    disabled = false,
+    required = "",
+    multiple = false,
+    options = [],
+    value,
     ...otherProps
   } = props;
 
+  /**
+   * We're using `text` instead of `object` so that we can provide `undefined`
+   * when an empty string is given.
+   */
+
   return {
     ...otherProps,
+    value: controlledObject(knobLabels.value, value, knobGroupIds.advanced),
     label: text(knobLabels.label, label, knobGroupIds.basic),
     instructions: text(
       knobLabels.instructions,
@@ -41,18 +50,13 @@ export default function getKnobs(props) {
       knobGroupIds.basic
     ),
     placeholder: text(knobLabels.placeholder, placeholder, knobGroupIds.basic),
-    open: boolean(knobLabels.open, open, knobGroupIds.basic),
     disabled: boolean(knobLabels.disabled, disabled, knobGroupIds.basic),
     required: text(knobLabels.required, required, knobGroupIds.basic),
+    multiple: boolean(knobLabels.multiple, multiple, knobGroupIds.basic),
     onBlur: action(knobLabels.onBlur),
+    onChange: action(knobLabels.onChange),
     onClickOutside: action(knobLabels.onClickOutside),
     onFocus: action(knobLabels.onFocus),
-    onKeypress: action(knobLabels.onKeypress),
-    onTargetClick: action(knobLabels.onTargetClick),
-    selectedOptionLabel: text(
-      knobLabels.selectedOptionLabel,
-      selectedOptionLabel,
-      knobGroupIds.basic
-    )
+    options: object(knobLabels.options, options, knobGroupIds.basic)
   };
 }

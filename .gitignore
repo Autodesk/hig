@@ -47,6 +47,7 @@ nohup.out
 
 # Files generated during CI
 .dependency-hash
+.archives
 
 # Environment Variables
 .env
@@ -56,6 +57,9 @@ nohup.out
 
 # VS Code
 .vscode/
+
+# Jetbrains IDE
+.idea/
 
 # compiled build stuff
 build/

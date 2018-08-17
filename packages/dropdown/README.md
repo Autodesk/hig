@@ -15,8 +15,8 @@ yarn add @hig/dropdown
 ### Import the component and CSS
 
 ```js
-import Dropdown from '@hig/dropdown';
-import '@hig/dropdown/build/index.css';
+import Dropdown from "@hig/dropdown";
+import "@hig/dropdown/build/index.css";
 ```
 
 ## Basic usage
@@ -26,15 +26,6 @@ import '@hig/dropdown/build/index.css';
   label="Uncontrolled Dropdown"
   instructions="instructions for regular Uncontrolled dropdown"
   placeholder="placeholder for regular Uncontrolled dropdown"
-  options={[
-    {
-      label: "foo",
-      value: "foo value"
-    },
-    {
-      label: "bar",
-      value: "bar value"
-    }
-  ]}
+  options={["Foo", "Bar"]}
 />
 ```

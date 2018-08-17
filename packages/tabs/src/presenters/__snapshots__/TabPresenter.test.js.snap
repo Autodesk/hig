@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tabs/TabPresenter renders with all props 1`] = `
+<li
+  className="hig__tabs__tab hig__tabs__tab--active"
+>
+  <span
+    className="hig__tabs__tab-label"
+    onClick={[Function]}
+    role="button"
+    tabIndex="0"
+  >
+    Hello World
+  </span>
+</li>
+`;
+
+exports[`tabs/TabPresenter renders without props 1`] = `
+<li
+  className="hig__tabs__tab"
+>
+  <span
+    className="hig__tabs__tab-label"
+    onClick={undefined}
+    role="button"
+    tabIndex="0"
+  />
+</li>
+`;

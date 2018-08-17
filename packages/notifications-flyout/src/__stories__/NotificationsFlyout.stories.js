@@ -23,16 +23,20 @@ function featuredNotification() {
           account
         </p>
         <p>
-          <TextLink>Primary link</TextLink>
+          <TextLink link="https://github.com/Autodesk/hig">
+            Primary link
+          </TextLink>
           {" or "}
-          <TextLink>Secondary link</TextLink>
+          <TextLink link="https://github.com/Autodesk/hig">
+            Secondary link
+          </TextLink>
         </p>
       </div>
     </Notification>
   );
 }
 
-storiesOf("NotificationsFlyout", module)
+storiesOf("Notifications|Flyout", module)
   .add(
     "V1",
     withInfo({

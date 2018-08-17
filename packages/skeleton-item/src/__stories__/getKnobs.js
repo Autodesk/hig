@@ -6,11 +6,12 @@ const knobGroupIds = {
 
 const knobLabels = {
   marginBottom: "Margin Bottom",
-  maxWidth: "Max Width"
+  maxWidth: "Max Width",
+  height: "Height"
 };
 
 export default function getKnobs(props) {
-  const { marginBottom, maxWidth, ...otherProps } = props;
+  const { marginBottom, maxWidth, height, ...otherProps } = props;
 
   return {
     ...otherProps,
@@ -19,6 +20,7 @@ export default function getKnobs(props) {
       marginBottom,
       knobGroupIds.basic
     ),
-    maxWidth: text(knobLabels.maxWidth, maxWidth, knobGroupIds.basic)
+    maxWidth: text(knobLabels.maxWidth, maxWidth, knobGroupIds.basic),
+    height: text(knobLabels.height, height, knobGroupIds.basic)
   };
 }

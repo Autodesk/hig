@@ -3,4 +3,4 @@ export const types = Object.freeze({
   ALTERNATE: "alternate"
 });
 
-export const availableTypes = Object.freeze(Object.values(types));
+export const AVAILABLE_TYPES = Object.freeze(Object.values(types));

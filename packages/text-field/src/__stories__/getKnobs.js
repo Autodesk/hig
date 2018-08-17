@@ -1,5 +1,6 @@
 import { action } from "@storybook/addon-actions";
 import { boolean, text } from "@storybook/addon-knobs/react";
+import { controlledText } from "@hig/storybook/utils";
 
 const knobGroupIds = {
   basic: "Basic",
@@ -12,7 +13,7 @@ const knobLabels = {
   disabled: "Disabled",
   errors: "Error Message",
   hideInstructionsOnErrors: "Hide Instructions for Errors",
-  icon: "Icon Name",
+  id: "ID",
   instructions: "Instructions",
   label: "Label",
   name: "Name",
@@ -22,6 +23,7 @@ const knobLabels = {
   onFocus: "onFocus",
   onInput: "onInput",
   placeholder: "Placeholder",
+  readOnly: "Read-only",
   required: "Required",
   showClearButton: "Show Clear Button",
   value: "Value"
@@ -33,7 +35,7 @@ export default function getKnobs(props) {
     disabled,
     errors,
     hideInstructionsOnErrors,
-    icon,
+    id,
     instructions,
     label,
     name,
@@ -43,6 +45,7 @@ export default function getKnobs(props) {
     onFocus,
     onInput,
     placeholder,
+    readOnly,
     required,
     showClearButton,
     value,
@@ -63,7 +66,7 @@ export default function getKnobs(props) {
       hideInstructionsOnErrors,
       knobGroupIds.errorHandling
     ),
-    icon: text(knobLabels.icon, icon, knobGroupIds.basic),
+    id: text(knobLabels.id, id, knobGroupIds.form),
     instructions: text(
       knobLabels.instructions,
       instructions,
@@ -77,12 +80,13 @@ export default function getKnobs(props) {
     onFocus: action(knobLabels.onFocus),
     onInput: action(knobLabels.onInput),
     placeholder: text(knobLabels.placeholder, placeholder, knobGroupIds.basic),
-    required: boolean(knobLabels.required, required, knobGroupIds.basic),
+    readOnly: boolean(knobLabels.readOnly, readOnly, knobGroupIds.basic),
+    required: text(knobLabels.required, required, knobGroupIds.basic),
     showClearButton: boolean(
       knobLabels.showClearButton,
       showClearButton,
       knobGroupIds.basic
     ),
-    value: text(knobLabels.value, value, knobGroupIds.form)
+    value: controlledText(knobLabels.value, value, knobGroupIds.form)
   };
 }

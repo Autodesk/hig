@@ -79,6 +79,5 @@ export {
 } from "./adapters/Table/TextCellContentAdapter";
 export { default as TextField } from "./adapters/FormElements/TextFieldAdapter";
 export { default as TextLink } from "./adapters/TextLinkAdapter";
-export { default as Timestamp } from "./adapters/TimestampAdapter";
-export { default as Toast } from "./elements/components/Toast";
+export { default as Timestamp } from "@hig/timestamp";
 export * from "@hig/typography";

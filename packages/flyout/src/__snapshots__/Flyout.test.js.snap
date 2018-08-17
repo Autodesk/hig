@@ -1,0 +1,352 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`flyout/Flyout renders children from the given render function 1`] = `
+<div
+  className="hig__flyout-v1 hig__flyout-v1--top-right"
+>
+  <div
+    className="hig__flyout-v1__action"
+  >
+    <button
+      className="hig--light-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+      onBlur={undefined}
+      onClick={[Function]}
+      onFocus={undefined}
+      onMouseOver={undefined}
+    >
+      <span
+        className="hig__button__title"
+      >
+        Render prop
+      </span>
+    </button>
+  </div>
+  <div
+    className="hig__flyout-v1__container"
+    style={
+      Object {
+        "left": undefined,
+        "top": undefined,
+      }
+    }
+  >
+    <div
+      aria-hidden="true"
+      className="hig__flyout-v1__chevron"
+      role="presentation"
+    />
+    <div
+      aria-hidden="true"
+      className="hig__flyout-v1__chevron-cover"
+      role="presentation"
+    />
+    <div
+      className="hig__flyout-v1__panel-container"
+      style={
+        Object {
+          "maxHeight": 150,
+        }
+      }
+    >
+      <div
+        className="hig__flyout-v1__panel-container__inner"
+      >
+        <div
+          className="hig__flyout-v1__panel"
+          onScroll={[Function]}
+        >
+          Hello World
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`flyout/Flyout renders content from the given render function 1`] = `
+<div
+  className="hig__flyout-v1 hig__flyout-v1--top-right"
+>
+  <div
+    className="hig__flyout-v1__action"
+  >
+    <button
+      className="hig--light-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+      onBlur={undefined}
+      onClick={[Function]}
+      onFocus={undefined}
+      onMouseOver={undefined}
+    >
+      <span
+        className="hig__button__title"
+      >
+        Click Me
+      </span>
+    </button>
+  </div>
+  <div
+    className="hig__flyout-v1__container"
+    style={
+      Object {
+        "left": undefined,
+        "top": undefined,
+      }
+    }
+  >
+    <div
+      aria-hidden="true"
+      className="hig__flyout-v1__chevron"
+      role="presentation"
+    />
+    <div
+      aria-hidden="true"
+      className="hig__flyout-v1__chevron-cover"
+      role="presentation"
+    />
+    <div
+      className="hig__flyout-v1__panel-container"
+      style={
+        Object {
+          "maxHeight": 150,
+        }
+      }
+    >
+      <div
+        className="hig__flyout-v1__panel-container__inner"
+      >
+        <div
+          className="hig__flyout-v1__panel"
+          onScroll={[Function]}
+        >
+          Content from render prop
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`flyout/Flyout renders the panel from a basic render function 1`] = `
+<div
+  className="hig__flyout-v1 hig__flyout-v1--top-right"
+>
+  <div
+    className="hig__flyout-v1__action"
+  >
+    <button
+      className="hig--light-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+      onBlur={undefined}
+      onClick={[Function]}
+      onFocus={undefined}
+      onMouseOver={undefined}
+    >
+      <span
+        className="hig__button__title"
+      >
+        Click Me
+      </span>
+    </button>
+  </div>
+  <div
+    className="hig__flyout-v1__container"
+    style={
+      Object {
+        "left": undefined,
+        "top": undefined,
+      }
+    }
+  >
+    <div
+      aria-hidden="true"
+      className="hig__flyout-v1__chevron"
+      role="presentation"
+    />
+    <div
+      aria-hidden="true"
+      className="hig__flyout-v1__chevron-cover"
+      role="presentation"
+    />
+    <div>
+      Hello World
+    </div>
+  </div>
+</div>
+`;
+
+exports[`flyout/Flyout renders the panel from a complex render function 1`] = `
+<div
+  className="hig__flyout-v1 hig__flyout-v1--top-right"
+>
+  <div
+    className="hig__flyout-v1__action"
+  >
+    <button
+      className="hig--light-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+      onBlur={undefined}
+      onClick={[Function]}
+      onFocus={undefined}
+      onMouseOver={undefined}
+    >
+      <span
+        className="hig__button__title"
+      >
+        Render prop
+      </span>
+    </button>
+  </div>
+  <div
+    className="hig__flyout-v1__container"
+    style={
+      Object {
+        "left": undefined,
+        "top": undefined,
+      }
+    }
+  >
+    <div
+      aria-hidden="true"
+      className="hig__flyout-v1__chevron"
+      role="presentation"
+    />
+    <div
+      aria-hidden="true"
+      className="hig__flyout-v1__chevron-cover"
+      role="presentation"
+    />
+    <div
+      className="hig__flyout-v1__panel-container"
+      style={
+        Object {
+          "maxHeight": undefined,
+        }
+      }
+    >
+      <div
+        className="hig__flyout-v1__panel-container__inner"
+      >
+        <div
+          data-mock="MyCustomContainer"
+          onScroll={[Function]}
+          style={
+            Object {
+              "maxHeight": undefined,
+            }
+          }
+        >
+          Content from render prop
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`flyout/Flyout renders with a basic set of props 1`] = `
+<div
+  className="hig__flyout-v1 hig__flyout-v1--top-right"
+>
+  <div
+    className="hig__flyout-v1__action"
+  >
+    <button
+      className="hig--light-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+      onBlur={undefined}
+      onClick={[Function]}
+      onFocus={undefined}
+      onMouseOver={undefined}
+    >
+      <span
+        className="hig__button__title"
+      >
+        Click Me
+      </span>
+    </button>
+  </div>
+  <div
+    className="hig__flyout-v1__container"
+    style={
+      Object {
+        "left": undefined,
+        "top": undefined,
+      }
+    }
+  >
+    <div
+      aria-hidden="true"
+      className="hig__flyout-v1__chevron"
+      role="presentation"
+    />
+    <div
+      aria-hidden="true"
+      className="hig__flyout-v1__chevron-cover"
+      role="presentation"
+    />
+    <div
+      className="hig__flyout-v1__panel-container"
+      style={
+        Object {
+          "maxHeight": 150,
+        }
+      }
+    >
+      <div
+        className="hig__flyout-v1__panel-container__inner"
+      >
+        <div
+          className="hig__flyout-v1__panel"
+          onScroll={[Function]}
+        >
+          Hello World
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`flyout/Flyout renders without props 1`] = `
+<div
+  className="hig__flyout-v1 hig__flyout-v1--exited hig__flyout-v1--top-right"
+>
+  <div
+    className="hig__flyout-v1__action"
+  />
+  <div
+    className="hig__flyout-v1__container"
+    style={
+      Object {
+        "left": undefined,
+        "top": undefined,
+      }
+    }
+  >
+    <div
+      aria-hidden="true"
+      className="hig__flyout-v1__chevron"
+      role="presentation"
+    />
+    <div
+      aria-hidden="true"
+      className="hig__flyout-v1__chevron-cover"
+      role="presentation"
+    />
+    <div
+      className="hig__flyout-v1__panel-container"
+      style={
+        Object {
+          "maxHeight": undefined,
+        }
+      }
+    >
+      <div
+        className="hig__flyout-v1__panel-container__inner"
+      >
+        <div
+          className="hig__flyout-v1__panel"
+          onScroll={undefined}
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
