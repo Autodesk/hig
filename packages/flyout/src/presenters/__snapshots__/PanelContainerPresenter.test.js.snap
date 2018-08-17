@@ -5,7 +5,7 @@ exports[`flyout/presenters/PanelContainerPresenter renders with all props 1`] = 
   className="hig__flyout-v1__panel-container"
   style={
     Object {
-      "maxHeight": 150,
+      "maxHeight": "150px",
     }
   }
 >
