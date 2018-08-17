@@ -5,3 +5,14 @@ export const types = Object.freeze({
 });
 
 export const availableTypes = Object.freeze(Object.values(types));
+
+export const availableInputModes = Object.freeze([
+  "none",
+  "text",
+  "decimal",
+  "numeric",
+  "tel",
+  "search",
+  "email",
+  "url"
+]);

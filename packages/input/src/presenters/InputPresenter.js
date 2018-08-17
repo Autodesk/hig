@@ -5,8 +5,7 @@ import { css } from "emotion";
 import { ThemeContext } from "@hig/themes";
 
 import stylesheet from "./InputPresenter.stylesheet";
-import { availableTypes } from "../constants";
-import htmlInputPropTypes from "../htmlInputPropTypes";
+import { availableTypes, availableInputModes } from "../constants";
 
 export default function InputPresenter({
   autoComplete,
@@ -70,14 +69,26 @@ export default function InputPresenter({
 }
 
 InputPresenter.propTypes = {
-  ...htmlInputPropTypes,
+  autoComplete: PropTypes.bool,
+  defaultValue: PropTypes.string,
+  disabled: PropTypes.bool,
   hasFocus: PropTypes.bool,
   hasHover: PropTypes.bool,
+  inputMode: PropTypes.oneOf(availableInputModes),
+  maxLength: PropTypes.string,
+  minLength: PropTypes.string,
+  name: PropTypes.string,
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
   onFocus: PropTypes.func,
   onInput: PropTypes.func,
   onMouseEnter: PropTypes.func,
   onMouseLeave: PropTypes.func,
-  type: PropTypes.oneOf(availableTypes)
+  pattern: PropTypes.string,
+  readOnly: PropTypes.bool,
+  required: PropTypes.bool,
+  spellCheck: PropTypes.bool,
+  tabIndex: PropTypes.string,
+  type: PropTypes.oneOf(availableTypes),
+  value: PropTypes.string
 };
