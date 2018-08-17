@@ -1,8 +1,12 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 
-import Typography from "../index";
-import { _VALID_COLORS, _VALID_SIZES, _VALID_TYPES } from "../_constants";
+import Typography from "@hig/typography/src";
+import {
+  _VALID_COLORS,
+  _VALID_SIZES,
+  _VALID_TYPES
+} from "@hig/typography/src/_constants";
 
 _VALID_TYPES.map(type =>
   storiesOf("Typography", module).add(`${type}`, () => (
