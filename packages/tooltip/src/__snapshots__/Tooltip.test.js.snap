@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tooltip Snapshot tests tooltip with click 1`] = `
+<Tooltip
+  align={Object {}}
+  arrowContent={null}
+  content={
+    <div>
+      test
+    </div>
+  }
+  description="test"
+  destroyTooltipOnHide={true}
+  linkTitle="test"
+  linkURL="www.autodesk.com"
+  mouseEnterDelay={0.5}
+  mouseLeaveDelay={0.1}
+  overlay={[Function]}
+  overlayClassName="css-d70g0l"
+  placement="right"
+  prefixCls="hig__tooltip"
+  title="test"
+  trigger="click"
+  width={300}
+>
+  <div
+    className="hig__tooltip-children-wrapper"
+  >
+    <button>
+      tooltip
+    </button>
+  </div>
+</Tooltip>
+`;
+
+exports[`Tooltip Snapshot tests tooltip with focus 1`] = `
+<Tooltip
+  align={Object {}}
+  arrowContent={null}
+  destroyTooltipOnHide={true}
+  mouseEnterDelay={0.5}
+  mouseLeaveDelay={0.1}
+  overlay={[Function]}
+  overlayClassName="css-d70g0l"
+  placement="right"
+  prefixCls="hig__tooltip"
+  title="test"
+  trigger="focus"
+  width={300}
+>
+  <div
+    className="hig__tooltip-children-wrapper"
+  >
+    <button>
+      tooltip
+    </button>
+  </div>
+</Tooltip>
+`;
+
+exports[`Tooltip Snapshot tests tooltip with full content 1`] = `
+<Tooltip
+  align={Object {}}
+  arrowContent={null}
+  content={
+    <div>
+      test
+    </div>
+  }
+  description="test"
+  destroyTooltipOnHide={true}
+  linkTitle="test"
+  linkURL="www.test.com"
+  mouseEnterDelay={0.5}
+  mouseLeaveDelay={0.1}
+  overlay={[Function]}
+  overlayClassName="css-d70g0l"
+  placement="right"
+  prefixCls="hig__tooltip"
+  title="test"
+  trigger="click"
+  width={300}
+>
+  <div
+    className="hig__tooltip-children-wrapper"
+  >
+    <button>
+      tooltip
+    </button>
+  </div>
+</Tooltip>
+`;
+
+exports[`Tooltip Snapshot tests tooltip with hover 1`] = `
+<Tooltip
+  align={Object {}}
+  arrowContent={null}
+  content={
+    <div>
+      test
+    </div>
+  }
+  description="test"
+  destroyTooltipOnHide={true}
+  linkTitle="test"
+  linkURL="www.autodesk.com"
+  mouseEnterDelay={0.5}
+  mouseLeaveDelay={0.1}
+  overlay={[Function]}
+  overlayClassName="css-d70g0l"
+  placement="right"
+  prefixCls="hig__tooltip"
+  title="test"
+  trigger="click"
+  width={300}
+>
+  <div
+    className="hig__tooltip-children-wrapper"
+  >
+    <button>
+      tooltip
+    </button>
+  </div>
+</Tooltip>
+`;
