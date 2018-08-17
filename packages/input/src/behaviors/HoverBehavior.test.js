@@ -1,11 +1,11 @@
 import React from "react";
 import { mount } from "enzyme";
-import sinon from "sinon";
 
 import HoverBehavior from "./HoverBehavior";
+import { lastCallOfMock } from "@hig/jest-preset/helpers";
 
 function renderExample(exampleProps) {
-  const renderPropSpy = sinon.spy(({ onMouseEnter, onMouseLeave }) => (
+  const renderPropSpy = jest.fn(({ onMouseEnter, onMouseLeave }) => (
     <input onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} />
   ));
   const wrapper = mount(
@@ -23,7 +23,7 @@ describe("HoverBehavior", () => {
     it("passes hasHover=false to the render prop", () => {
       const { renderPropSpy } = renderExample();
 
-      const renderPropArgs = renderPropSpy.lastCall.args[0];
+      const renderPropArgs = lastCallOfMock(renderPropSpy)[0];
 
       expect(renderPropArgs.hasHover).toBeFalse();
     });
@@ -34,19 +34,19 @@ describe("HoverBehavior", () => {
       const { renderPropSpy, wrapper } = renderExample();
       wrapper.find("input").simulate("mouseenter");
 
-      const renderPropArgs = renderPropSpy.lastCall.args[0];
+      const renderPropArgs = lastCallOfMock(renderPropSpy)[0];
 
       expect(renderPropArgs.hasHover).toBeTrue();
     });
 
     it("calls onMouseEnter callback", () => {
-      const onMouseEnterSpy = sinon.spy();
+      const onMouseEnterSpy = jest.fn();
       const { wrapper } = renderExample({
         onMouseEnter: onMouseEnterSpy
       });
       wrapper.find("input").simulate("mouseenter");
 
-      expect(onMouseEnterSpy.calledOnce).toBeTrue();
+      expect(onMouseEnterSpy.mock.calls.length).toEqual(1);
     });
   });
 
@@ -56,20 +56,20 @@ describe("HoverBehavior", () => {
       wrapper.find("input").simulate("mouseenter");
       wrapper.find("input").simulate("mouseleave");
 
-      const renderPropArgs = renderPropSpy.lastCall.args[0];
+      const renderPropArgs = lastCallOfMock(renderPropSpy)[0];
 
       expect(renderPropArgs.hasHover).toBeFalse();
     });
 
     it("calls onMouseLeave callback", () => {
-      const onMouseLeaveSpy = sinon.spy();
+      const onMouseLeaveSpy = jest.fn();
       const { wrapper } = renderExample({
         onMouseLeave: onMouseLeaveSpy
       });
       wrapper.find("input").simulate("mouseenter");
       wrapper.find("input").simulate("mouseleave");
 
-      expect(onMouseLeaveSpy.calledOnce).toBeTrue();
+      expect(onMouseLeaveSpy.mock.calls.length).toEqual(1);
     });
   });
 });

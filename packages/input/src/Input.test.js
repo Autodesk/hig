@@ -1,6 +1,5 @@
 import React from "react";
 import { mount } from "enzyme";
-import sinon from "sinon";
 
 import Input from "./Input";
 import InputPresenter from "./presenters/InputPresenter";
@@ -51,7 +50,7 @@ describe("Input", () => {
     let interactiveElement;
 
     beforeEach(() => {
-      onChangeSpy = sinon.spy();
+      onChangeSpy = jest.fn();
       wrapper = mount(<Input value="foo" onChange={onChangeSpy} />);
       interactiveElement = wrapper.find("input");
     });
@@ -67,7 +66,7 @@ describe("Input", () => {
       });
 
       it("calls the callback", () => {
-        expect(onChangeSpy.called).toBeTrue();
+        expect(onChangeSpy.mock.calls.length).toEqual(1);
       });
 
       describe("the interactive element", () => {
@@ -84,7 +83,7 @@ describe("Input", () => {
     let interactiveElement;
 
     beforeEach(() => {
-      onChangeSpy = sinon.spy();
+      onChangeSpy = jest.fn();
       wrapper = mount(<Input defaultValue="foo" onChange={onChangeSpy} />);
       interactiveElement = wrapper.find("input");
     });
@@ -100,7 +99,7 @@ describe("Input", () => {
       });
 
       it("calls the callback", () => {
-        expect(onChangeSpy.called).toBeTrue();
+        expect(onChangeSpy.mock.calls.length).toEqual(1);
       });
 
       describe("the interactive element", () => {

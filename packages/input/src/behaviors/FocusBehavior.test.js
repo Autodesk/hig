@@ -1,12 +1,12 @@
 import React from "react";
 import { mount } from "enzyme";
-import sinon from "sinon";
 
 import FocusBehavior from "./FocusBehavior";
 import behavesLikeFocusBehavior from "../__test__/behavesLikeFocusBehavior";
+import { lastCallOfMock } from "@hig/jest-preset/helpers";
 
 function renderExample(exampleProps) {
-  const renderPropSpy = sinon.spy(({ onFocus, onBlur }) => (
+  const renderPropSpy = jest.fn(({ onFocus, onBlur }) => (
     <input onFocus={onFocus} onBlur={onBlur} />
   ));
   const wrapper = mount(
@@ -32,7 +32,7 @@ describe("FocusBehavior", () => {
     it("passes hasFocus=false to the render prop", () => {
       const { renderPropSpy } = renderExample();
 
-      const renderPropArgs = renderPropSpy.lastCall.args[0];
+      const renderPropArgs = lastCallOfMock(renderPropSpy)[0];
 
       expect(renderPropArgs.hasFocus).toBeFalse();
     });
@@ -43,7 +43,7 @@ describe("FocusBehavior", () => {
       const { renderPropSpy, wrapper } = renderExample();
       wrapper.find("input").simulate("focus");
 
-      const renderPropArgs = renderPropSpy.lastCall.args[0];
+      const renderPropArgs = lastCallOfMock(renderPropSpy)[0];
 
       expect(renderPropArgs.hasFocus).toBeTrue();
     });
@@ -55,7 +55,7 @@ describe("FocusBehavior", () => {
       wrapper.find("input").simulate("focus");
       wrapper.find("input").simulate("blur");
 
-      const renderPropArgs = renderPropSpy.lastCall.args[0];
+      const renderPropArgs = lastCallOfMock(renderPropSpy)[0];
 
       expect(renderPropArgs.hasFocus).toBeFalse();
     });

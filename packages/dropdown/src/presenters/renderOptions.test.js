@@ -1,6 +1,5 @@
 import React from "react";
 import { mount } from "enzyme";
-import sinon from "sinon";
 import renderOptions from "./renderOptions";
 import OptionPresenter from "./OptionPresenter";
 
@@ -38,7 +37,7 @@ describe("Dropdown/presenters/renderOptions", () => {
     let result;
 
     beforeEach(() => {
-      formatOptionFunction = sinon.spy();
+      formatOptionFunction = jest.fn();
       options = [1, 2, 3, 4];
       props = {
         options,
@@ -52,11 +51,11 @@ describe("Dropdown/presenters/renderOptions", () => {
     });
 
     it("uses formatOption function", () => {
-      expect(formatOptionFunction.called).toBeTrue();
+      expect(formatOptionFunction).toHaveBeenCalled();
     });
 
     it("uses formatOption function to render each option", () => {
-      expect(formatOptionFunction.callCount).toEqual(options.length);
+      expect(formatOptionFunction.mock.calls.length).toEqual(options.length);
     });
 
     it("returns an OptionPresenter for each option", () => {
@@ -72,7 +71,7 @@ describe("Dropdown/presenters/renderOptions", () => {
 
     beforeEach(() => {
       options = [1, 2, 3, 4];
-      renderOptionFunction = sinon.spy();
+      renderOptionFunction = jest.fn();
       props = {
         options,
         renderOption: renderOptionFunction
@@ -91,11 +90,11 @@ describe("Dropdown/presenters/renderOptions", () => {
     });
 
     it("uses renderOption function", () => {
-      expect(renderOptionFunction.called).toBeTrue();
+      expect(renderOptionFunction).toHaveBeenCalled();
     });
 
     it("uses renderOption function to render each option", () => {
-      expect(renderOptionFunction.callCount).toEqual(options.length);
+      expect(renderOptionFunction.mock.calls.length).toEqual(options.length);
     });
   });
 
@@ -106,7 +105,7 @@ describe("Dropdown/presenters/renderOptions", () => {
     let result;
 
     beforeEach(() => {
-      renderFunction = sinon.spy();
+      renderFunction = jest.fn();
       options = [
         { label: "Red", value: "#ff0000", render: renderFunction },
         { label: "Green", value: "#00ff00", render: renderFunction },
@@ -127,11 +126,11 @@ describe("Dropdown/presenters/renderOptions", () => {
     });
 
     it("uses render function", () => {
-      expect(renderFunction.called).toBeTrue();
+      expect(renderFunction).toHaveBeenCalled();
     });
 
     it("uses render function to render each option", () => {
-      expect(renderFunction.callCount).toEqual(options.length);
+      expect(renderFunction.mock.calls.length).toEqual(options.length);
     });
   });
 });

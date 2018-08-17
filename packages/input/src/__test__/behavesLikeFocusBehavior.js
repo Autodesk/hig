@@ -1,6 +1,5 @@
 import React from "react";
 import { mount } from "enzyme";
-import sinon from "sinon";
 
 function renderExample(subject, exampleProps) {
   return {
@@ -11,26 +10,26 @@ function renderExample(subject, exampleProps) {
 export default function behavesLikeFocusBehavior(subject) {
   describe("when gaining focus", () => {
     it("calls onFocus callback", () => {
-      const onFocusSpy = sinon.spy();
+      const onFocusSpy = jest.fn();
       const { wrapper } = renderExample(subject, {
         onFocus: onFocusSpy
       });
       wrapper.find("input").simulate("focus");
 
-      expect(onFocusSpy.calledOnce).toBeTrue();
+      expect(onFocusSpy.mock.calls.length).toEqual(1);
     });
   });
 
   describe("when losing focus", () => {
     it("calls onBlur callback", () => {
-      const onBlurSpy = sinon.spy();
+      const onBlurSpy = jest.fn();
       const { wrapper } = renderExample(subject, {
         onBlur: onBlurSpy
       });
       wrapper.find("input").simulate("focus");
       wrapper.find("input").simulate("blur");
 
-      expect(onBlurSpy.calledOnce).toBeTrue();
+      expect(onBlurSpy.mock.calls.length).toEqual(1);
     });
   });
 }
