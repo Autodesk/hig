@@ -20,6 +20,15 @@ const TRANSITION_DURATION = 300;
  * @property {number} [maxHeight]
  */
 
+/**
+ * @typedef {Object} State
+ * @property {HTMLElement} [actionRef]
+ * @property {HTMLDivElement} [containerRef]
+ * @property {boolean} open Used to direct the flyout's transition behavior
+ * @property {HTMLElement} [panelRef]
+ * @property {HTMLDivElement} [wrapperRef]
+ */
+
 class Flyout extends Component {
   static propTypes = {
     /** Where the flyout will be anchored relative to target */
@@ -58,12 +67,13 @@ class Flyout extends Component {
     }
   };
 
-  /**
-   * @type {Object}
-   * @property {boolean} open Used to direct the flyout's transition behavior
-   */
+  /** @type {State} */
   state = {
-    open: false
+    actionRef: undefined,
+    containerRef: undefined,
+    open: false,
+    panelRef: undefined,
+    wrapperRef: undefined
   };
 
   componentDidMount() {
@@ -74,15 +84,18 @@ class Flyout extends Component {
     window.document.body.removeEventListener("click", this.handleBodyClick);
   }
 
+  /**
+   * @returns {import("./getFlyoutPosition").FlyoutPosition}
+   */
   getPresenterPositionProps() {
-    const { actionRef, panelRef } = this;
+    const { anchorPoint } = this.props;
+    const { actionRef, panelRef } = this.state;
 
     if (!actionRef || !panelRef) return { top: 0, left: 0 };
 
     const actionRect = actionRef.getBoundingClientRect();
     const panelRect = panelRef.getBoundingClientRect();
     const viewportRect = window.document.documentElement.getBoundingClientRect();
-    const { anchorPoint } = this.props;
 
     return getFlyoutPosition({
       anchorPoint,
@@ -115,18 +128,6 @@ class Flyout extends Component {
     return this.isOpenControlled() ? this.props.open : this.state.open;
   }
 
-  /** @type {HTMLElement} */
-  actionRef;
-
-  /** @type {HTMLDivElement} */
-  containerRef;
-
-  /** @type {HTMLElement} */
-  panelRef;
-
-  /** @type {HTMLDivElement} */
-  wrapperRef;
-
   handleChildClick = () => {
     if (!this.isOpenControlled()) {
       this.toggleOpen();
@@ -137,7 +138,7 @@ class Flyout extends Component {
    * @param {MouseEvent} event
    */
   handleBodyClick = event => {
-    const { wrapperRef } = this;
+    const { wrapperRef } = this.state;
     const { onClickOutside } = this.props;
     const flyoutClicked =
       event.target === wrapperRef || wrapperRef.contains(event.target);
@@ -151,28 +152,28 @@ class Flyout extends Component {
    * @param {HTMLElement} actionRef
    */
   refAction = actionRef => {
-    this.actionRef = actionRef;
+    this.setState({ actionRef });
   };
 
   /**
    * @param {HTMLDivElement} containerRef
    */
   refContainer = containerRef => {
-    this.containerRef = containerRef;
+    this.setState({ containerRef });
   };
 
   /**
    * @param {HTMLElement} panelRef
    */
   refPanel = panelRef => {
-    this.panelRef = panelRef;
+    this.setState({ panelRef });
   };
 
   /**
    * @param {HTMLDivElement} wrapperRef
    */
   refWrapper = wrapperRef => {
-    this.wrapperRef = wrapperRef;
+    this.setState({ wrapperRef });
   };
 
   hideFlyout = () => {
