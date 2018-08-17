@@ -1,5 +1,5 @@
 import React from "react";
-import renderer from "react-test-renderer";
+import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
 import ProjectAccountSwitcherPresenter from "./ProjectAccountSwitcherPresenter";
 
 describe("project-account-switcher/presenters/ProjectAccountSwitcherPresenter", () => {
@@ -27,16 +27,9 @@ describe("project-account-switcher/presenters/ProjectAccountSwitcherPresenter", 
         ]
       }
     }
-  ].forEach(({ description, props: { children, ...otherProps } }) => {
-    it(description, () => {
-      const presenter = (
-        <ProjectAccountSwitcherPresenter {...otherProps}>
-          {children}
-        </ProjectAccountSwitcherPresenter>
-      );
-      const tree = renderer.create(presenter).toJSON();
-
-      expect(tree).toMatchSnapshot();
-    });
+  ].forEach(({ description, props }) => {
+    takeSnapshotsOf(ProjectAccountSwitcherPresenter, [
+      { desc: description, props: props }
+    ]);
   });
 });
