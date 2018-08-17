@@ -9,8 +9,10 @@ const knobLabels = {
   value: "Value",
   disabled: "Disabled",
   onChange: "onChange",
-  onInput: "onInput",
-  onKeypress: "onKeypress",
+  onFocus: "onFocus",
+  onBlur: "onBlur",
+  onMouseEnter: "onMouseEnter",
+  onMouseLeave: "onMouseLeave",
   type: "Type"
 };
 
@@ -25,11 +27,13 @@ export default function getKnobs(props) {
 
   return {
     ...otherProps,
+    disabled: boolean(knobLabels.disabled, disabled, knobGroupIds.basic),
+    onBlur: action(knobLabels.onBlur),
     onChange: action(knobLabels.onChange),
-    onInput: action(knobLabels.onInput),
-    onKeypress: action(knobLabels.onKeypress),
-    value: text(knobLabels.value, value, knobGroupIds.basic),
+    onFocus: action(knobLabels.onFocus),
+    onMouseEnter: action(knobLabels.onMouseEnter),
+    onMouseLeave: action(knobLabels.onMouseLeave),
     type: select(knobLabels.type, typeOptions, type, knobGroupIds.basic),
-    disabled: boolean(knobLabels.disabled, disabled, knobGroupIds.basic)
+    value: text(knobLabels.value, value, knobGroupIds.basic)
   };
 }
