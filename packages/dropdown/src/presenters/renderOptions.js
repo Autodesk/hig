@@ -21,24 +21,33 @@ function createSelectedDeterminer(downshift) {
 
 /**
  * @param {DownshiftHelpers} downshift
+ * @param {function(Object)} renderOption
  * @returns {function(OptionMeta, number): JSX.Element}
  */
-function createOptionRenderer(downshift) {
+function createOptionRenderer(downshift, renderOption) {
   const { formatOption, getItemProps, highlightedIndex } = downshift;
   const isSelected = createSelectedDeterminer(downshift);
 
   return (option, index) => {
-    const itemProps = getItemProps({
-      index,
-      key: `option-${index}`,
-      item: option,
-      selected: isSelected(option),
-      highlighted: highlightedIndex === index
-    });
+    let result;
+    if (option && option.render !== undefined) {
+      result = option.render(option);
+    } else if (renderOption !== undefined) {
+      result = renderOption(option);
+    } else {
+      const itemProps = getItemProps({
+        index,
+        key: `option-${index}`,
+        item: option,
+        selected: isSelected(option),
+        highlighted: highlightedIndex === index
+      });
 
-    return (
-      <OptionPresenter {...itemProps}>{formatOption(option)}</OptionPresenter>
-    );
+      result = (
+        <OptionPresenter {...itemProps}>{formatOption(option)}</OptionPresenter>
+      );
+    }
+    return result;
   };
 }
 
@@ -50,23 +59,25 @@ function createOptionRenderer(downshift) {
  */
 export default function renderOptions(props) {
   const {
-    options = [],
-    multiple = false,
     formatOption = option => String(option),
     getItemProps = itemProps => itemProps,
     highlightedIndex,
+    multiple = false,
+    options = [],
+    renderOption,
     selectedItem,
     selectedItems = []
   } = props;
   const downshift = {
-    multiple,
     formatOption,
     getItemProps,
     highlightedIndex,
+    multiple,
     selectedItem,
     selectedItems
   };
-  const renderOption = createOptionRenderer(downshift);
 
-  return options.map(renderOption);
+  const optionRenderer = createOptionRenderer(downshift, renderOption);
+
+  return options.map(optionRenderer);
 }

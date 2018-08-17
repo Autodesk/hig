@@ -11,6 +11,10 @@ describe("flyout/index", () => {
       value: expect.any(Array)
     },
     {
+      name: "AVAILABLE_ANCHOR_POINTS",
+      value: expect.any(Array)
+    },
+    {
       name: "anchorPoints",
       value: expect.any(Object)
     },
