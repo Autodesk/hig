@@ -91,7 +91,13 @@ class Flyout extends Component {
     const { anchorPoint } = this.props;
     const { actionRef, panelRef } = this.state;
 
-    if (!actionRef || !panelRef) return { top: 0, left: 0 };
+    if (!actionRef || !panelRef) {
+      return {
+        anchorPoint,
+        top: 0,
+        left: 0
+      };
+    }
 
     const actionRect = actionRef.getBoundingClientRect();
     const panelRect = panelRef.getBoundingClientRect();
