@@ -95,7 +95,6 @@ class Tooltip extends React.Component {
         overlayClassName={tooltipWidth}
         placement={placements[anchorPoint]}
         prefixCls="hig__tooltip"
-        transitionName="fade"
         trigger={trigger}
         {...otherProps}
       >
