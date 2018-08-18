@@ -11,6 +11,10 @@ import "./TextFieldPresenter.scss";
 export default class TextFieldPresenter extends Component {
   static propTypes = {
     /**
+     * Title attribute for the clear button. Used for accessibility purposes
+     */
+    clearButtonTitle: PropTypes.string,
+    /**
      * Prevents user actions on the field
      */
     disabled: PropTypes.bool,
