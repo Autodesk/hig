@@ -1,29 +1,112 @@
 import React from "react";
-import renderer from "react-test-renderer";
+import { mount } from "enzyme";
 
-import Input from "./index";
-
-function snapshotTest(props) {
-  const tree = renderer.create(<Input {...props} />).toJSON();
-
-  expect(tree).toMatchSnapshot();
-}
-
-const basicProps = {
-  value: "jon.snow@winterfell.com"
-};
-
-const disabledProps = {
-  value: "bran.stark@winterfell.com",
-  disabled: true
-};
+import Input from "./Input";
+import InputPresenter from "./presenters/InputPresenter";
+import InputHaloPresenter from "./presenters/InputHaloPresenter";
+import behavesLikeFocusBehavior from "./__test__/behavesLikeFocusBehavior";
+import behavesLikeHoverBehavior from "./__test__/behavesLikeHoverBehavior";
+import behavesLikeInputPropPasser from "./__test__/behavesLikeInputPropPasser";
 
 describe("Input", () => {
-  it("renders children", () => {
-    snapshotTest(basicProps);
+  behavesLikeFocusBehavior(<Input />);
+  behavesLikeHoverBehavior(<Input />);
+  behavesLikeInputPropPasser({
+    Subject: Input,
+    Receiver: InputPresenter
   });
 
-  describe("when disabled", () => {
-    snapshotTest(disabledProps);
+  describe("rendering variants", () => {
+    describe("when variant='line'", () => {
+      it("renders the line-style input", () => {
+        const wrapper = mount(<Input variant="line" />);
+
+        const decoration = wrapper.find(InputHaloPresenter);
+        expect(decoration).toHaveProp("variant", "line");
+      });
+    });
+
+    describe("when variant='box'", () => {
+      it("renders the box-style  input", () => {
+        const wrapper = mount(<Input variant="box" />);
+
+        const decoration = wrapper.find(InputHaloPresenter);
+        expect(decoration).toHaveProp("variant", "box");
+      });
+    });
+
+    describe("when variant='plain'", () => {
+      it("renders a plain input", () => {
+        const wrapper = mount(<Input variant="plain" />);
+
+        expect(wrapper).not.toContain(InputHaloPresenter);
+      });
+    });
+  });
+
+  describe("when controlled", () => {
+    let onChangeSpy;
+    let wrapper;
+    let interactiveElement;
+
+    beforeEach(() => {
+      onChangeSpy = jest.fn();
+      wrapper = mount(<Input value="foo" onChange={onChangeSpy} />);
+      interactiveElement = wrapper.find("input");
+    });
+
+    it("sets the value", () => {
+      expect(interactiveElement).toHaveProp("value", "foo");
+    });
+
+    describe("typing into the field", () => {
+      beforeEach(() => {
+        interactiveElement.getDOMNode().value = "bar";
+        interactiveElement.simulate("change");
+      });
+
+      it("calls the callback", () => {
+        expect(onChangeSpy.mock.calls.length).toEqual(1);
+      });
+
+      describe("the interactive element", () => {
+        it("keeps the value from the value prop", () => {
+          expect(interactiveElement.getDOMNode().value).toEqual("foo");
+        });
+      });
+    });
+  });
+
+  describe("when uncontrolled", () => {
+    let onChangeSpy;
+    let wrapper;
+    let interactiveElement;
+
+    beforeEach(() => {
+      onChangeSpy = jest.fn();
+      wrapper = mount(<Input defaultValue="foo" onChange={onChangeSpy} />);
+      interactiveElement = wrapper.find("input");
+    });
+
+    it("sets the defaultValue", () => {
+      expect(interactiveElement).toHaveProp("defaultValue", "foo");
+    });
+
+    describe("typing into the field", () => {
+      beforeEach(() => {
+        interactiveElement.getDOMNode().value = "bar";
+        interactiveElement.simulate("change");
+      });
+
+      it("calls the callback", () => {
+        expect(onChangeSpy.mock.calls.length).toEqual(1);
+      });
+
+      describe("the interactive element", () => {
+        it("gets the typed value", () => {
+          expect(interactiveElement.getDOMNode().value).toEqual("bar");
+        });
+      });
+    });
   });
 });
