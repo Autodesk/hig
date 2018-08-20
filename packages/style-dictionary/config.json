@@ -1,9 +1,12 @@
 {
   "source": [
-    "properties/**/*.json"
+    "properties/basics/*.json",
+    "themes/light-gray.json",
+    "themes/medium-density.json",
+    "properties/components/*.json"
   ],
   "platforms": {
-    "staticStyleGuide-js": {
+    "light-gray-medium-density": {
       "transformGroup": "web",
       "buildPath": "build/js/",
       "files": [{

@@ -1,75 +1,37 @@
 {
   "color-scheme": {
     "surface": {
-      "level-1-color": {
-        "type": "color"
-      },
-      "level-1-5-color": {
-        "type": "color"
-      },
-      "level-2-color": {
-        "type": "color"
-      },
-      "level-3-color": {
-        "type": "color"
-      },
-      "level-4-color": {
-        "type": "color"
-      }
+      "level-1": {},
+      "level-1-5": {},
+      "level-2": {},
+      "level-3": {},
+      "level-4": {}
     },
 
-    "accent-color": {
-      "100": {
-        "type": "color"
-      },
-      "200": {
-        "type": "color"
-      },
-      "300": {
-        "type": "color"
-      },
-      "400": {
-        "type": "color"
-      },
-      "500": {
-        "type": "color"
-      },
-      "600": {
-        "type": "color"
-      },
-      "700": {
-        "type": "color"
-      },
-      "800": {
-        "type": "color"
-      },
-      "900": {
-        "type": "color"
-      }
+    "accent": {
+      "100": {},
+      "200": {},
+      "300": {},
+      "400": {},
+      "500": {},
+      "600": {},
+      "700": {},
+      "800": {},
+      "900": {}
     },
 
     "component": {
-      "background-color": {
-        "type": "color"
-      }
+      "background-color": {}
     },
 
     "text": {
-      "color": {
-        "type": "color"
-      },
-      "color-dim": {
-        "type": "color"
-      }
+      "color": {},
+      "color-dim": {}
     },
 
     "shadow": {
-      "low-color": {
-        "type": "color"
-      },
-      "high-color": {
-        "type": "color"
-      }
+      "low-color": {},
+      "high-color": {}
     }
   }
 }

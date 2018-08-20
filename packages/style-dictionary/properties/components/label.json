@@ -1,0 +1,25 @@
+{
+  "label": {
+    "font-size": {
+      "value": "{density.font-size.s.value}"
+    },
+    "font-weight": {
+      "value": "{basic.font-weight.regular.value}"
+    },
+    "font-family": {
+      "value": "{basic.font-family.main.value}"
+    },
+    "font-color": {},
+    "line-height": {
+      "value": "{basic.line-height.m.value}"
+    },
+
+    "hover": {
+      "font-color": {}
+    },
+
+    "disabled": {
+      "font-color": {}
+    }
+  }
+}
