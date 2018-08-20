@@ -22,12 +22,21 @@ colorSchemes.forEach(colorScheme => {
           }]
         },
         js: {
-          transformGroup: "web",
+          transformGroup: "js",
           buildPath: "build/js/",
           files: [{
             name: "__style_properties",
             destination: `${colorScheme}-${density}-properties.js`,
-            format: "javascript/object"
+            format: "javascript/es6"
+          }]
+        },
+        json: {
+          transformGroup: "web",
+          buildPath: "build/json/",
+          files: [{
+            name: "__style_properties",
+            destination: `${colorScheme}-${density}-properties.json`,
+            format: "json"
           }]
         }
       }
