@@ -1,0 +1,16 @@
+{
+  "source": [
+    "properties/**/*.json"
+  ],
+  "platforms": {
+    "staticStyleGuide-js": {
+      "transformGroup": "web",
+      "buildPath": "build/js/",
+      "files": [{
+        "name": "__style_properties",
+        "destination": "style-dictionary-properties.js",
+        "format": "javascript/object"
+      }]
+    }
+  }
+}

@@ -5834,7 +5834,7 @@ fs-extra@^5.0.0:
     jsonfile "^4.0.0"
     universalify "^0.1.0"
 
-fs-extra@^6.0.0:
+fs-extra@^6.0.0, fs-extra@^6.0.1:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-6.0.1.tgz#8abc128f7946e310135ddc93b98bddb410e7a34b"
   dependencies:
@@ -13183,6 +13183,18 @@ structured-source@^3.0.2:
   resolved "https://registry.yarnpkg.com/structured-source/-/structured-source-3.0.2.tgz#dd802425e0f53dc4a6e7aca3752901a1ccda7af5"
   dependencies:
     boundary "^1.0.1"
+
+style-dictionary@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/style-dictionary/-/style-dictionary-2.3.0.tgz#fe351c6f7a15449b53fcb291690e16d1d4d8cb48"
+  dependencies:
+    chalk "^2.4.1"
+    commander "^2.9.0"
+    fs-extra "^6.0.1"
+    glob "^7.1.1"
+    lodash "^4.16.4"
+    resolve-cwd "^2.0.0"
+    tinycolor2 "^1.4.1"
 
 style-inject@^0.3.0:
   version "0.3.0"

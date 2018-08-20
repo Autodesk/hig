@@ -1,0 +1,25 @@
+{
+  "name": "@hig/style-dictionary",
+  "version": "0.0.1",
+  "description": "HIG Style Dictionary",
+  "author": "Autodesk Inc.",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Autodesk/hig.git"
+  },
+  "main": "build.js",
+  "scripts": {
+    "build": "node_modules/.bin/style-dictionary build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "hig-scripts-lint"
+  },
+  "devDependencies": {
+    "@hig/eslint-config": "^0.1.0",
+    "@hig/scripts": "^0.1.2",
+    "style-dictionary": "^2.3.0"
+  },
+  "eslintConfig": {
+    "extends": "@hig"
+  }
+}

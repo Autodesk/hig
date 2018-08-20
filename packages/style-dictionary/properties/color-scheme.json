@@ -1,0 +1,75 @@
+{
+  "color-scheme": {
+    "surface": {
+      "level-1-color": {
+        "type": "color"
+      },
+      "level-1-5-color": {
+        "type": "color"
+      },
+      "level-2-color": {
+        "type": "color"
+      },
+      "level-3-color": {
+        "type": "color"
+      },
+      "level-4-color": {
+        "type": "color"
+      }
+    },
+
+    "accent-color": {
+      "100": {
+        "type": "color"
+      },
+      "200": {
+        "type": "color"
+      },
+      "300": {
+        "type": "color"
+      },
+      "400": {
+        "type": "color"
+      },
+      "500": {
+        "type": "color"
+      },
+      "600": {
+        "type": "color"
+      },
+      "700": {
+        "type": "color"
+      },
+      "800": {
+        "type": "color"
+      },
+      "900": {
+        "type": "color"
+      }
+    },
+
+    "component": {
+      "background-color": {
+        "type": "color"
+      }
+    },
+
+    "text": {
+      "color": {
+        "type": "color"
+      },
+      "color-dim": {
+        "type": "color"
+      }
+    },
+
+    "shadow": {
+      "low-color": {
+        "type": "color"
+      },
+      "high-color": {
+        "type": "color"
+      }
+    }
+  }
+}
