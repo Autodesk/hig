@@ -10,7 +10,7 @@
   },
   "main": "build.js",
   "scripts": {
-    "build": "node_modules/.bin/style-dictionary build",
+    "build": "node scripts/build.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "hig-scripts-lint"
   },

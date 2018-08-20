@@ -1,10 +1,4 @@
 {
-  "source": [
-    "properties/basics/*.json",
-    "themes/light-gray.json",
-    "themes/medium-density.json",
-    "properties/components/*.json"
-  ],
   "platforms": {
     "light-gray-medium-density": {
       "transformGroup": "web",
