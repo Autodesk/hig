@@ -25,7 +25,7 @@
 }
 
 .hig__notification-v1__content {
-  padding: spacing(s) spacing(l);
+  display: flex;
   border-bottom: 1px solid color(hig-cool-gray-20);
   border-left: 3px solid color(hig-cool-gray-30);
 
@@ -73,4 +73,12 @@
       );
     }
   }
+}
+
+.hig__notification-v1__content-image {
+  margin: 14px 0 14px 14px;
+}
+
+.hig__notification-v1__content-text {
+  margin: 14px;
 }

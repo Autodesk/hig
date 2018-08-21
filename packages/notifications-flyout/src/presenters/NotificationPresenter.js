@@ -32,6 +32,7 @@ export default function NotificationPresenter(props) {
     dismissButtonTitle,
     featured,
     height,
+    image,
     innerRef,
     onDismissButtonClick,
     showDismissButton,
@@ -63,14 +64,19 @@ export default function NotificationPresenter(props) {
       style={{ height }}
     >
       <div className={contentClasses}>
-        <RichText size="small">{children}</RichText>
-        {timestamp}
-        {showDismissButton ? (
-          <DismissButtonPresenter
-            onClick={onDismissButtonClick}
-            title={dismissButtonTitle}
-          />
+        {image ? (
+          <div className="hig__notification-v1__content-image">{image}</div>
         ) : null}
+        <div className="hig__notification-v1__content-text">
+          <RichText size="small">{children}</RichText>
+          {timestamp}
+          {showDismissButton ? (
+            <DismissButtonPresenter
+              onClick={onDismissButtonClick}
+              title={dismissButtonTitle}
+            />
+          ) : null}
+        </div>
       </div>
     </div>
   );
@@ -81,6 +87,7 @@ NotificationPresenter.propTypes = {
   dismissButtonTitle: PropTypes.string,
   featured: PropTypes.bool,
   height: PropTypes.string,
+  image: PropTypes.node,
   innerRef: PropTypes.func,
   onDismissButtonClick: PropTypes.func,
   showDismissButton: PropTypes.bool,

@@ -12,6 +12,8 @@ export default class Notification extends Component {
     featured: PropTypes.bool,
     /** An action provided hide the flyout. This is provided to the `children` render prop */
     hideFlyout: PropTypes.func.isRequired,
+    /** An image to display such as an avatar or and icon */
+    image: PropTypes.node,
     /** A callback called when user dismisses a featured notification */
     onDismiss: PropTypes.func,
     /** Determines whether the dismiss button is shown */
@@ -52,6 +54,7 @@ export default class Notification extends Component {
   render() {
     const {
       featured,
+      image,
       onDismiss,
       // Featured notifications show the dismiss button by default
       showDismissButton = featured,
@@ -66,6 +69,7 @@ export default class Notification extends Component {
           <NotificationPresenter
             featured={featured}
             height={height}
+            image={image}
             innerRef={innerRef}
             onDismissButtonClick={handleDismissButtonClick}
             showDismissButton={showDismissButton}
