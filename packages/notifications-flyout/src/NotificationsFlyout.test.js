@@ -31,7 +31,7 @@ describe("notifications-flyout/NotificationsFlyout", () => {
         heading: "Hello",
         indicatorTitle: "World",
         loading: true,
-        notifications: [{}, <Notification />],
+        notifications: [{ id: "1" }, <Notification />],
         onClickOutside: function handleClickOutside() {},
         onScroll: function handleScroll() {},
         open: true,
