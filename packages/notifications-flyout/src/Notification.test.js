@@ -43,11 +43,11 @@ const sampleNotifications = [
   }
 ];
 
-describe("Notification", () => {
+describe("notifications-flyout/Notification", () => {
   it("renders correctly with the unread prop", () => {
     const tree = renderer
       .create(
-        <Notification id={1} unread>
+        <Notification id="1" unread>
           {sampleNotifications[0].children}
         </Notification>
       )
@@ -58,7 +58,7 @@ describe("Notification", () => {
   it("renders correctly with the featured prop", () => {
     const tree = renderer
       .create(
-        <Notification id={1} featured>
+        <Notification id="1" featured>
           {sampleNotifications[0].children}
         </Notification>
       )

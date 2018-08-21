@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`notification-flyout/behaviors/NotificationFlyoutBehavior render prop payload normalizes notifications 1`] = `
+Array [
+  Object {
+    "content": "Featured",
+    "featured": true,
+    "hideFlyout": [Function],
+    "id": "1",
+    "key": ".0",
+    "unread": true,
+  },
+  Object {
+    "content": "Foo",
+    "hideFlyout": [Function],
+    "id": "2",
+    "key": ".1",
+    "unread": true,
+  },
+  Object {
+    "content": "Bar",
+    "hideFlyout": [Function],
+    "id": "3",
+    "key": ".2",
+    "unread": true,
+  },
+]
+`;
+
+exports[`notification-flyout/behaviors/NotificationFlyoutBehavior render prop payload provides a payload to the \`children\` render prop 1`] = `
+Array [
+  Object {
+    "content": "Featured",
+    "featured": true,
+    "hideFlyout": [Function],
+    "id": "1",
+    "key": ".0",
+    "unread": true,
+  },
+  Object {
+    "content": "Foo",
+    "hideFlyout": [Function],
+    "id": "2",
+    "key": ".1",
+    "unread": true,
+  },
+  Object {
+    "content": "Bar",
+    "hideFlyout": [Function],
+    "id": "3",
+    "key": ".2",
+    "unread": true,
+  },
+]
+`;

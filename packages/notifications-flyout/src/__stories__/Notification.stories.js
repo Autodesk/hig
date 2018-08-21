@@ -1,61 +1,73 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import { text, boolean } from "@storybook/addon-knobs/react";
+import { boolean, select } from "@storybook/addon-knobs/react";
 import { withInfo } from "@storybook/addon-info";
+import { controlledBool, makeSelectOptions } from "@hig/storybook/utils";
 import TextLink from "@hig/text-link";
+import Timestamp from "@hig/timestamp";
 
-import { Notification } from "../index";
-import infoOptions from "./infoOptions";
+import { createNotificationInfoOptions } from "./infoOptions";
+import { types } from "../types";
+import Notification from "../Notification";
 
-const sampleNotification = (
-  <div>
-    <p>
-      <b>Your subscription expires May 5</b>
-    </p>
-    <p>
-      Maya
-      <br />
-      Media & Entertainment Collection
-      <br />
-      Product Design Collection
-      <br />2 more
-    </p>
-    <p>
-      <TextLink
-        link="https://github.com/Autodesk/hig"
-        onClick={action("notifications id 1")}
-      >
-        Manage renewal
-      </TextLink>
-    </p>
-  </div>
+const infoOptions = createNotificationInfoOptions();
+const typeOptions = makeSelectOptions(types);
+
+const groups = {
+  actions: "Actions",
+  basic: "Basic"
+};
+
+const labels = {
+  featured: "Featured",
+  onDismiss: "Notification dismissed",
+  showDismissButton: "Show dismiss button",
+  type: "Variant",
+  unread: "Unread"
+};
+
+const defaults = {
+  featured: false,
+  showDismissButton: undefined,
+  type: types.PRIMARY,
+  unread: true
+};
+
+storiesOf("Notifications|Flyout/Notification", module).add(
+  "default",
+  withInfo(infoOptions)(() => (
+    <Notification
+      id="1"
+      timestamp={<Timestamp timestamp={new Date().toISOString()} />}
+      featured={boolean(labels.featured, defaults.featured, groups.basic)}
+      onDismiss={action(labels.onDismiss)}
+      showDismissButton={controlledBool(
+        labels.showDismissButton,
+        defaults.showDismissButton,
+        groups.actions
+      )}
+      type={select(labels.type, typeOptions, defaults.type, groups.basic)}
+      unread={boolean(labels.unread, defaults.unread, groups.basic)}
+    >
+      <div>
+        <p>
+          <b>Your subscription expires May 5</b>
+        </p>
+        <p>
+          Maya
+          <br />
+          Media & Entertainment Collection
+          <br />
+          Product Design Collection
+          <br />2 more
+        </p>
+        <p>
+          <TextLink link="https://github.com/Autodesk/hig">
+            Manage renewal
+          </TextLink>
+        </p>
+      </div>
+    </Notification>
+  ))
 );
-
-storiesOf("Notifications|Flyout/Notification", module)
-  .add(
-    "default",
-    withInfo(infoOptions)(() => (
-      <Notification
-        id={1}
-        unread={boolean("Unread", false)}
-        onLinkClick={action("link clicked")}
-        status={text("Status")}
-      >
-        {sampleNotification}
-      </Notification>
-    ))
-  )
-  .add(
-    "Featured Notification",
-    withInfo(infoOptions)(() => (
-      <Notification
-        id={1}
-        onLinkClick={action("link clicked")}
-        featured={boolean("Featured", true)}
-        onDismiss={action("dimiss featured notification")}
-      >
-        {sampleNotification}
-      </Notification>
-    ))
-  );

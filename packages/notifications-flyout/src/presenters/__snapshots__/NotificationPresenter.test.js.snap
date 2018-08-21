@@ -1,38 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`notifications-flyout/Notification renders correctly with the featured prop 1`] = `
+exports[`notifications-flyout/presenters/NotificationPresenter renders with all props 1`] = `
 <div
   className="hig__notification-v1"
   role="listitem"
   style={
     Object {
-      "height": "",
+      "height": "3000px",
     }
   }
 >
   <div
-    className="hig__notification-v1__content hig__notification-v1__content--featured"
+    className="hig__notification-v1__content hig__notification-v1__content--success hig__notification-v1__content--featured hig__notification-v1__content--unread"
   >
     <div
       className="hig__rich-text hig__rich-text--small"
     >
-      <div>
-        <p>
-          <b>
-            Your subscription expires May 5
-          </b>
-        </p>
-        <p>
-          Maya
-          <br />
-          Media & Entertainment Collection
-          <br />
-          Product Design Collection
-          <br />
-          2 more
-        </p>
-      </div>
+      foobar
     </div>
+    2018-08-17
     <div
       className="hig__notification-v1__dismiss-button"
     >
@@ -43,7 +29,7 @@ exports[`notifications-flyout/Notification renders correctly with the featured p
         onFocus={undefined}
         onMouseEnter={undefined}
         onMouseLeave={undefined}
-        title="Dismiss featured notification"
+        title="hello world"
       >
         <span
           className="hig__icon-button__icon"
@@ -63,39 +49,23 @@ exports[`notifications-flyout/Notification renders correctly with the featured p
 </div>
 `;
 
-exports[`notifications-flyout/Notification renders correctly with the unread prop 1`] = `
+exports[`notifications-flyout/presenters/NotificationPresenter renders without props 1`] = `
 <div
   className="hig__notification-v1"
   role="listitem"
   style={
     Object {
-      "height": "",
+      "height": undefined,
     }
   }
 >
   <div
-    className="hig__notification-v1__content hig__notification-v1__content--unread"
+    className="hig__notification-v1__content"
   >
     <div
       className="hig__rich-text hig__rich-text--small"
-    >
-      <div>
-        <p>
-          <b>
-            Your subscription expires May 5
-          </b>
-        </p>
-        <p>
-          Maya
-          <br />
-          Media & Entertainment Collection
-          <br />
-          Product Design Collection
-          <br />
-          2 more
-        </p>
-      </div>
-    </div>
+      dangerouslySetInnerHTML={undefined}
+    />
   </div>
 </div>
 `;
