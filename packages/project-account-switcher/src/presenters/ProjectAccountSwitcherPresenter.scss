@@ -11,11 +11,8 @@
     outline: none;
   }
 
-  .hig__flyout-v1__container {
+  &--custom-width-and-padding {
     width: 200px;
-  }
-
-  .hig__flyout-v1__panel {
     padding: 0px 10px 10px 10px;
   }
 }

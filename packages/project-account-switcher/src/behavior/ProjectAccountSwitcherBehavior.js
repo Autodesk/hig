@@ -18,10 +18,6 @@ export default class ProjectAccountSwitcherBehavior extends Component {
     /** Render prop */
     children: PropTypes.func,
     /** Initially sets the selected Account, but allows user action to change it */
-    defaultActiveAccountId: PropTypes.string,
-    /** Initially sets the selected Project, but allows user action to change it */
-    defaultActiveProjectId: PropTypes.string,
-    /** Called when a user clicks on the element */
     onClick: PropTypes.func,
     /** Called when a user clicks on the target element */
     onTargetClick: PropTypes.func,
@@ -38,22 +34,25 @@ export default class ProjectAccountSwitcherBehavior extends Component {
   };
 
   static defaultProps = {
-    defaultActiveAccountId: "1",
-    defaultActiveProjectId: "1",
     open: false
   };
 
   state = {
-    activeAccountId: this.props.defaultActiveAccountId,
-    activeProjectId: this.props.defaultActiveProjectId,
+    activeAccount: this.getAccount(this.props.activeAccountId),
+    activeProject: this.getProject(this.props.activeProjectId),
     open: this.props.open
   };
 
-  isControlled() {
-    return (
-      this.props.activeAccountId !== undefined &&
-      this.props.activeProjectId !== undefined
-    );
+  getAccount(accountId) {
+    const { accounts = [] } = this.props;
+
+    return accounts.find(({ id }) => id === accountId);
+  }
+
+  getProject(projectId) {
+    const { projects = [] } = this.props;
+
+    return projects.find(({ id }) => id === projectId);
   }
 
   handleTargetClick = event => {
@@ -75,14 +74,9 @@ export default class ProjectAccountSwitcherBehavior extends Component {
       onClick(event);
     }
 
-    if (!this.isControlled()) {
-      const selectedAccount = event.target.dataset.accountId;
-      this.setState({
-        activeAccountId: this.props.accounts.filter(
-          account => account.id === selectedAccount
-        )[0].id
-      });
-    }
+    this.setState({
+      activeAccount: this.getAccount(event.target.dataset.accountId)
+    });
   };
 
   handleProjectClick = event => {
@@ -92,20 +86,15 @@ export default class ProjectAccountSwitcherBehavior extends Component {
       onClick(event);
     }
 
-    if (!this.isControlled()) {
-      const selectedProject = event.target.dataset.projectId;
-      this.setState({
-        activeProjectId: this.props.projects.filter(
-          project => project.id === selectedProject
-        )[0].id
-      });
-    }
+    this.setState({
+      activeProject: this.getProject(event.target.dataset.projectId)
+    });
   };
 
   render() {
     return this.props.children({
-      activeAccountId: this.state.activeAccountId,
-      activeProjectId: this.state.activeProjectId,
+      activeAccount: this.state.activeAccount,
+      activeProject: this.state.activeProject,
       handleAccountClick: this.handleAccountClick,
       handleTargetClick: this.handleTargetClick,
       handleProjectClick: this.handleProjectClick,

@@ -6,6 +6,12 @@ import icons from "../../../icons/build";
 import { anchorPoints } from "../../../flyout/src/anchorPoints";
 import "./ProjectAccountSwitcherPresenter.scss";
 
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable react/no-danger */
+/* eslint-disable object-shorthand */
+/* eslint-disable no-unused-vars */
+
 export default class ProjectAccountSwitcherPresenter extends Component {
   static constructPlaceholder(label) {
     return label.match(/\b(\w)/g).join("");
@@ -23,11 +29,19 @@ export default class ProjectAccountSwitcherPresenter extends Component {
       })
     ),
     /** Currently selected Account */
-    activeAccountId: PropTypes.string,
+    activeAccount: PropTypes.shape({
+      id: PropTypes.string,
+      image: PropTypes.string,
+      label: PropTypes.string
+    }),
     /** Label for selected Accounts and Projects */
     activeLabel: PropTypes.string,
     /** Currently selected Project */
-    activeProjectId: PropTypes.string,
+    activeProject: PropTypes.shape({
+      id: PropTypes.string,
+      image: PropTypes.string,
+      label: PropTypes.string
+    }),
     /** Handles Account selection, passed from Behavior */
     onAccountClick: PropTypes.func,
     /** Handles Project selection, passed from Behavior */
@@ -50,143 +64,157 @@ export default class ProjectAccountSwitcherPresenter extends Component {
 
   static defaultProps = {
     accountTitle: "Accounts",
-    accounts: [
-      { id: "1", label: "Account 1" },
-      { id: "2", label: "Account 2" }
-    ],
-    activeAccountId: "2",
-    activeProjectId: "2",
     open: false,
-    projectTitle: "Projects",
-    projects: [{ id: "1", label: "Project 1" }, { id: "2", label: "Project 2" }]
+    projectTitle: "Projects"
   };
 
   constructLabel() {
-    // eslint-disable-next-line react/no-shadow
-    const activeAccount = this.props.accounts.filter(
-      account => account.id === this.props.activeAccountId
-    )[0];
-    // eslint-disable-next-line react/no-shadow
-    const activeProject = this.props.projects.filter(
-      project => project.id === this.props.activeProjectId
-    )[0];
-    return `${activeAccount.label} / ${activeProject.label}`;
+    const labels = [];
+    if (this.props.activeAccount) {
+      labels.push(this.props.activeAccount.label);
+    }
+    if (this.props.activeProject) {
+      labels.push(this.props.activeProject.label);
+    }
+    return labels.join(" / ");
   }
 
+  // this method constructs the image placeholder for the combination of
+  // the current activeAccount and/or activeProject,
+  // in lieu of an image for either
   constructLabelPlaceholder() {
-    // eslint-disable-next-line react/no-shadow
-    const activeAccount = this.props.accounts.filter(
-      account => account.id === this.props.activeAccountId
-    )[0];
-    // eslint-disable-next-line react/no-shadow
-    const activeProject = this.props.projects.filter(
-      project => project.id === this.props.activeProjectId
-    )[0];
-    return `${ProjectAccountSwitcherPresenter.constructPlaceholder(
-      activeAccount.label
-    )}/${ProjectAccountSwitcherPresenter.constructPlaceholder(
-      activeProject.label
-    )}`;
+    const placeholders = [];
+    if (this.props.activeAccount) {
+      placeholders.push(
+        ProjectAccountSwitcherPresenter.constructPlaceholder(
+          this.props.activeAccount.label
+        )
+      );
+    }
+    if (this.props.activeProject) {
+      placeholders.push(
+        ProjectAccountSwitcherPresenter.constructPlaceholder(
+          this.props.activeProject.label
+        )
+      );
+    }
+    return placeholders.join("/");
   }
 
   accountsList() {
     return this.props.accounts.map(account => (
-      <div
+      /* eslint-list-disable-next-line jsx-a11y/no-noninteractive-element-interactions */
+      <li
         className="project-account-switcher__item
                       project-account-switcher__item--account
                       project-account-switcher__item--active"
         data-account-id={account.id}
         onClick={this.props.onAccountClick}
-        role="button"
-        tabIndex="0"
       >
         <span className="project-account-switcher__item__image-wrapper">
           <span
             className="project-account-switcher__item__image-placeholder"
             data-account-id={account.id}
-            dangerouslySetInnerHTML={{
-              __html: ProjectAccountSwitcherPresenter.constructPlaceholder(
-                account.label
-              )
-            }}
-          />
+          >
+            {ProjectAccountSwitcherPresenter.constructPlaceholder(
+              account.label
+            )}
+          </span>
         </span>
         <span
           className="project-account-switcher__item__label"
           data-account-id={account.id}
-          dangerouslySetInnerHTML={{ __html: account.label }}
-        />
-      </div>
+        >
+          {account.label}
+        </span>
+      </li>
     ));
   }
 
   projectsList() {
     return this.props.projects.map(project => (
-      <div
+      /* eslint-list-disable-next-line jsx-a11y/no-noninteractive-element-interactions */
+      <li
         className="project-account-switcher__item
                       project-account-switcher__item--project
                       project-account-switcher__item--active"
         data-project-id={project.id}
         onClick={this.props.onProjectClick}
-        role="button"
-        tabIndex="0"
       >
         <span className="project-account-switcher__item__image-wrapper">
           <span
             className="project-account-switcher__item__image-placeholder"
             data-project-id={project.id}
-            dangerouslySetInnerHTML={{
-              __html: ProjectAccountSwitcherPresenter.constructPlaceholder(
-                project.label
-              )
-            }}
-          />
+          >
+            {ProjectAccountSwitcherPresenter.constructPlaceholder(
+              project.label
+            )}
+          </span>
         </span>
         <span
           className="project-account-switcher__item__label"
           data-project-id={project.id}
-          dangerouslySetInnerHTML={{ __html: project.label }}
-        />
-      </div>
+        >
+          {project.label}
+        </span>
+      </li>
     ));
   }
 
   flyoutContent() {
     return (
       <div className="project-account-switcher__lists">
-        <ul className="project-account-switcher__list">
-          <li
-            className="project-account-switcher__list__title"
-            dangerouslySetInnerHTML={{ __html: this.props.accountTitle }}
-          />
-          {this.accountsList()}
-        </ul>
-        <ul className="project-account-switcher__list">
-          <li
-            className="project-account-switcher__list__title"
-            dangerouslySetInnerHTML={{ __html: this.props.projectTitle }}
-          />
-          {this.projectsList()}
-        </ul>
+        {this.props.accounts.length > 0 && (
+          <ul className="project-account-switcher__list">
+            <span className="project-account-switcher__list__title">
+              {this.props.accountTitle}
+            </span>
+            {this.accountsList()}
+          </ul>
+        )}
+        {this.props.projects.length > 0 && (
+          <ul className="project-account-switcher__list">
+            <span className="project-account-switcher__list__title">
+              {this.props.projectTitle}
+            </span>
+            {this.projectsList()}
+          </ul>
+        )}
       </div>
     );
   }
 
+  componentHasNoLists() {
+    const { accounts = [], projects = [] } = this.props;
+
+    return !accounts.length && !projects.length;
+  }
+
   render() {
+    if (this.componentHasNoLists()) {
+      console.warn("You must provide a list of accounts or projects");
+      return null;
+    }
+
     const activeLabel = this.props.activeLabel
       ? this.props.activeLabel
       : this.constructLabel();
     return (
+      /* eslint-list-disable-next-line react/no-danger */
       <div
         className="project-account-switcher"
         onClick={this.props.onTargetClick}
-        role="button"
-        tabIndex="0"
       >
         <Flyout
-          content={this.flyoutContent()}
           anchorPoint={anchorPoints.TOP_RIGHT}
           open={this.props.open}
+          panel={({ innerRef }) => (
+            <Flyout.Panel innerRef={innerRef}>
+              <div className="project-account-switcher--custom-width-and-padding">
+                {this.flyoutContent()}
+              </div>
+            </Flyout.Panel>
+          )}
         >
           <div className="project-account-switcher__target">
             <div className="project-account-switcher__item">
@@ -194,19 +222,15 @@ export default class ProjectAccountSwitcherPresenter extends Component {
                 <img
                   className="project-account-switcher__item__image"
                   alt={activeLabel}
-                  src={""} // TODO: replace with var
+                  src={""}
                 />
-                <span
-                  className="project-account-switcher__item__image-placeholder"
-                  dangerouslySetInnerHTML={{
-                    __html: this.constructLabelPlaceholder()
-                  }}
-                />
+                <span className="project-account-switcher__item__image-placeholder">
+                  {this.constructLabelPlaceholder()}
+                </span>
               </span>
-              <span
-                className="project-account-switcher__item__label"
-                dangerouslySetInnerHTML={{ __html: activeLabel }}
-              />
+              <span className="project-account-switcher__item__label">
+                {activeLabel}
+              </span>
             </div>
             <span className="project-account-switcher__target__caret">
               <div

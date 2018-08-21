@@ -4,8 +4,6 @@ import PropTypes from "prop-types";
 import ProjectAccountSwitcherPresenter from "./presenters/ProjectAccountSwitcherPresenter";
 import ProjectAccountSwitcherBehavior from "./behavior/ProjectAccountSwitcherBehavior";
 
-/* eslint no-shadow: "off" */
-
 export default class ProjectAccountSwitcher extends Component {
   static propTypes = {
     /** Heading title for the list of Accounts */
@@ -44,8 +42,6 @@ export default class ProjectAccountSwitcher extends Component {
     const {
       accounts,
       accountTitle,
-      activeAccountId,
-      activeProjectId,
       projects,
       projectTitle,
       onChange,
@@ -56,16 +52,16 @@ export default class ProjectAccountSwitcher extends Component {
     return (
       <ProjectAccountSwitcherBehavior
         accounts={accounts}
-        activeAccountId={activeAccountId}
-        activeProjectId={activeProjectId}
+        activeAccountId={this.props.activeAccountId}
+        activeProjectId={this.props.activeProjectId}
         onChange={onChange}
         onClick={onClick}
         onTargetClick={onTargetClick}
         projects={projects}
       >
         {({
-          activeAccountId,
-          activeProjectId,
+          activeAccount,
+          activeProject,
           handleAccountClick,
           handleProjectClick,
           handleTargetClick,
@@ -74,8 +70,8 @@ export default class ProjectAccountSwitcher extends Component {
           <ProjectAccountSwitcherPresenter
             accounts={accounts}
             accountTitle={accountTitle}
-            activeAccountId={activeAccountId}
-            activeProjectId={activeProjectId}
+            activeAccount={activeAccount}
+            activeProject={activeProject}
             onAccountClick={handleAccountClick}
             onProjectClick={handleProjectClick}
             onTargetClick={handleTargetClick}
