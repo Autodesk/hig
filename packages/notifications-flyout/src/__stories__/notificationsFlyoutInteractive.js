@@ -3,27 +3,30 @@ import { anchorPoints } from "@hig/flyout";
 import { generateId } from "@hig/utils";
 import Button from "@hig/button";
 import TextLink from "@hig/text-link";
+import { Text } from "@hig/typography";
 import "@hig/button/build/index.css";
 import "@hig/text-link/build/index.css";
+import "@hig/typography/build/index.css";
 
-import createSampleNotifications from "../__fixtures__/createSampleNotifications";
 import NotificationsFlyout from "../NotificationsFlyout";
 import NotificationsFlyoutLayout from "./NotificationsFlyoutLayout";
 
 function createNotification() {
   return {
     id: generateId("notification"),
+    type: "primary",
     content: (
       <div>
         <p>
           You have 4 new seats of <b>Product Design Collection</b> subscription,
-          switched from <b>Building Design Suite Premium</b>
-          subscription.
+          switched from <b>Building Design Suite Premium</b> subscription.
         </p>
         <p>
           <TextLink>Learn how to switch</TextLink>
-          {" or "}
-          <TextLink>Assign users</TextLink>
+          &ensp;
+          <Text size="large">or</Text>
+          &ensp;
+          <TextLink type="secondary">Assign users</TextLink>
         </p>
       </div>
     )
@@ -36,7 +39,7 @@ class App extends Component {
   };
 
   state = {
-    notifications: createSampleNotifications()
+    notifications: []
   };
 
   handleButtonClick = () => {

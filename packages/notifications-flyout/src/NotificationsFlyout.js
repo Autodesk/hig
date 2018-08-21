@@ -4,8 +4,9 @@ import PropTypes from "prop-types";
 import Flyout, { AVAILABLE_ANCHOR_POINTS } from "@hig/flyout";
 import "@hig/flyout/build/index.css";
 
-import NotificationFlyoutBehavior from "./behaviors/NotificationFlyoutBehavior";
+import EmptyStatePresenter from "./presenters/EmptyStatePresenter";
 import IndicatorPresenter from "./presenters/IndicatorPresenter";
+import NotificationFlyoutBehavior from "./behaviors/NotificationFlyoutBehavior";
 
 import Notification from "./Notification";
 import Panel from "./Panel";
@@ -28,6 +29,7 @@ function createNotificationRenderer({ hideFlyout, dismissNotification }) {
 }
 
 function createPanelRenderer({
+  emptyMessage,
   dismissNotification,
   notifications,
   loading,
@@ -35,6 +37,8 @@ function createPanelRenderer({
 }) {
   /* eslint-disable-next-line react/prop-types */
   return function renderPanel({ hideFlyout, handleScroll, innerRef }) {
+    const isEmpty = notifications.length === 0;
+
     return (
       <Panel
         heading={heading}
@@ -42,8 +46,12 @@ function createPanelRenderer({
         loading={loading}
         onScroll={handleScroll}
       >
-        {notifications.map(
-          createNotificationRenderer({ hideFlyout, dismissNotification })
+        {isEmpty ? (
+          <EmptyStatePresenter message={emptyMessage} />
+        ) : (
+          notifications.map(
+            createNotificationRenderer({ hideFlyout, dismissNotification })
+          )
         )}
       </Panel>
     );
@@ -54,6 +62,7 @@ export default function NotificationsFlyout(props) {
   const {
     anchorPoint,
     children,
+    emptyMessage,
     heading,
     indicatorTitle,
     loading,
@@ -83,6 +92,7 @@ export default function NotificationsFlyout(props) {
           onScroll={onScroll}
           open={open}
           panel={createPanelRenderer({
+            emptyMessage,
             dismissNotification,
             notifications,
             loading,
@@ -108,6 +118,8 @@ NotificationsFlyout.propTypes = {
   anchorPoint: PropTypes.oneOf(AVAILABLE_ANCHOR_POINTS),
   /** Rendered notifications. It can contain one or more <Notification /> components. */
   children: PropTypes.node,
+  /** The message displayed when there are no notifications */
+  emptyMessage: PropTypes.string,
   /** Flyout panel heading */
   heading: PropTypes.string,
   /** Indicator button title */
