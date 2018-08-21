@@ -6,7 +6,7 @@ import { withInfo } from "@storybook/addon-info";
 
 import TopNav from "../index";
 import accountLogo from "./accounts-logo.svg";
-import infoOptions from "../../../top-nav/src/__stories__/infoOptions";
+import infoOptions from "./infoOptions";
 
 const storybook = storiesOf("GlobalNav|TopNav", module);
 
