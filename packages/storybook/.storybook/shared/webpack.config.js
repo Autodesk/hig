@@ -15,9 +15,21 @@ module.exports = storybookBaseConfig => {
       use: ["json-loader"]
     },
     {
-      test: /\.svg$/,
+      test: /vanilla\/.*\.svg$/,
       issuer: /\.js$/,
       use: ["raw-loader"]
+    },
+    {
+      test: /\.svg$/,
+      issuer: /\.js$/,
+      use: [
+        {
+          loader: "babel-loader"
+        },
+        {
+          loader: "react-svg-loader"
+        }
+      ]
     },
     {
       test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2)(\?.*)?$/,
