@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`notifications-flyout/presenters/EmptyStatePresenter renders with all props 1`] = `
+<div
+  className="hig__notification-flyout-v1__empty-state"
+>
+  <test-file-stub
+    className="hig__notification-flyout-v1__empty-state-image"
+    role="presentation"
+  />
+  <p
+    className="hig__notification-flyout-v1__empty-state-message"
+  >
+    hello world
+  </p>
+</div>
+`;
+
+exports[`notifications-flyout/presenters/EmptyStatePresenter renders without props 1`] = `
+<div
+  className="hig__notification-flyout-v1__empty-state"
+>
+  <test-file-stub
+    className="hig__notification-flyout-v1__empty-state-image"
+    role="presentation"
+  />
+  <p
+    className="hig__notification-flyout-v1__empty-state-message"
+  >
+    You currently have no notifications
+  </p>
+</div>
+`;

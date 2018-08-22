@@ -466,7 +466,21 @@ exports[`notifications-flyout/NotificationsFlyout renders without props 1`] = `
           <div
             onScroll={undefined}
             role="list"
-          />
+          >
+            <div
+              className="hig__notification-flyout-v1__empty-state"
+            >
+              <test-file-stub
+                className="hig__notification-flyout-v1__empty-state-image"
+                role="presentation"
+              />
+              <p
+                className="hig__notification-flyout-v1__empty-state-message"
+              >
+                You currently have no notifications
+              </p>
+            </div>
+          </div>
         </section>
         <footer
           className="hig__notifications-flyout__panel__loading"
