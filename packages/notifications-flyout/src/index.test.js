@@ -11,15 +11,7 @@ describe("notifications-flyout/index", () => {
       value: expect.any(Function)
     },
     {
-      name: "default.Notifications",
-      value: expect.any(Function)
-    },
-    {
       name: "Notification",
-      value: expect.any(Function)
-    },
-    {
-      name: "Notifications",
       value: expect.any(Function)
     },
     {

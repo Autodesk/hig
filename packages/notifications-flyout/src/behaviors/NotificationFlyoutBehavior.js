@@ -6,7 +6,7 @@ import { polyfill } from "react-lifecycles-compat";
 
 import parseNotifications from "./parseNotifications";
 
-/** @typedef {import("./parseNotifications").Input} RawNotifications */
+/** @typedef {import("./parseNotifications").Input} NotificationsInput */
 /** @typedef {import("./parseNotifications").ParsedNotification} ParsedNotification */
 /** @typedef {import("./NotificationBehavior").Payload} NotificationBehaviorPayload */
 
@@ -21,7 +21,7 @@ import parseNotifications from "./parseNotifications";
 /**
  * @typedef {Object} Props
  * @property {function(Payload): import("react").ReactElement} [children]
- * @property {import("./parseNotifications").Input} [notifications]
+ * @property {NotificationsInput} [notifications]
  * @property {number} [unreadCount]
  */
 

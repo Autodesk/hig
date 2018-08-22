@@ -53,21 +53,21 @@ function createPanelRenderer({
 export default function NotificationsFlyout(props) {
   const {
     anchorPoint,
+    children,
     heading,
     indicatorTitle,
     loading,
     onClickOutside,
     onScroll,
     open,
-    children,
-    unreadCount: controlledUnreadCount,
-    notifications: rawNotifications = children
+    notifications: notificationsInput = children,
+    unreadCount: controlledUnreadCount
   } = props;
 
   return (
     <NotificationFlyoutBehavior
       unreadCount={controlledUnreadCount}
-      notifications={rawNotifications}
+      notifications={notificationsInput}
     >
       {({
         dismissNotification,
@@ -106,7 +106,7 @@ export default function NotificationsFlyout(props) {
 NotificationsFlyout.propTypes = {
   /** Where the flyout will be anchored relative to target */
   anchorPoint: PropTypes.oneOf(AVAILABLE_ANCHOR_POINTS),
-  /** Rendered notifications */
+  /** Rendered notifications. It can contain one or more <Notification /> components. */
   children: PropTypes.node,
   /** Flyout panel heading */
   heading: PropTypes.string,
@@ -114,9 +114,14 @@ NotificationsFlyout.propTypes = {
   indicatorTitle: PropTypes.string,
   /** Determines whether the loading animation is shown */
   loading: PropTypes.bool,
-  /** Rendered notifications */
+  /**
+   * Rendered notifications.
+   * It takes precedent over `children`, and accepts an array
+   * containing any combination of <Notification /> components
+   * and Notification models
+   */
   notifications: PropTypes.arrayOf(
-    PropTypes.oneOfType([PropTypes.node, PropTypes.shape({})])
+    PropTypes.oneOfType([PropTypes.node, PropTypes.object])
   ),
   /** Function called when the flyout is open, and a click event occurs outside the flyout */
   onClickOutside: PropTypes.func,

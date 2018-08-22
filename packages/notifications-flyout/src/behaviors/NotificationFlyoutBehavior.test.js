@@ -1,9 +1,8 @@
 import React from "react";
 import { mount } from "enzyme";
 
-import NotificationFlyoutBehavior from "./NotificationFlyoutBehavior";
 import Notification from "../Notification";
-import NotificationsFacade from "../facades/NotificationsFacade";
+import NotificationFlyoutBehavior from "./NotificationFlyoutBehavior";
 
 describe("notification-flyout/behaviors/NotificationFlyoutBehavior", () => {
   const children = jest.fn();
@@ -11,15 +10,17 @@ describe("notification-flyout/behaviors/NotificationFlyoutBehavior", () => {
   function mountBehavior() {
     return mount(
       <NotificationFlyoutBehavior
-        notifications={
-          <NotificationsFacade>
-            <Notification id="1" featured>
-              Featured
-            </Notification>
-            <Notification id="2">Foo</Notification>
-            <Notification id="3">Bar</Notification>
-          </NotificationsFacade>
-        }
+        notifications={[
+          <Notification id="1" key="0" featured>
+            Featured
+          </Notification>,
+          <Notification id="2" key="1">
+            Foo
+          </Notification>,
+          <Notification id="3" key="2">
+            Bar
+          </Notification>
+        ]}
       >
         {children}
       </NotificationFlyoutBehavior>

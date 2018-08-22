@@ -34,13 +34,11 @@ const defaults = {
 };
 
 export default function notificationsFlyoutDefault() {
-  const notifications = createSampleNotifications();
-
   return () => (
     <NotificationsFlyoutLayout>
       <NotificationsFlyout
         anchorPoint={anchorPoints.TOP_CENTER}
-        notifications={notifications}
+        notifications={createSampleNotifications()}
         heading={text(labels.heading, defaults.heading, groups.i18n)}
         indicatorTitle={text(
           labels.indicatorTitle,

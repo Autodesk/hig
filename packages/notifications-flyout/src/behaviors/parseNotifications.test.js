@@ -2,7 +2,6 @@ import React from "react";
 
 import parseNotifications from "./parseNotifications";
 import Notification from "../Notification";
-import Notifications from "../facades/NotificationsFacade";
 import { types } from "../types";
 
 describe("notification-flyout/behaviors/parseNotifications", () => {
@@ -39,19 +38,6 @@ describe("notification-flyout/behaviors/parseNotifications", () => {
       expected: [
         { id: "1", showDismissButton: true },
         { id: "2", onDismiss: handleDismiss }
-      ]
-    },
-    {
-      desc: "returns notifications when given a Notifications element",
-      input: (
-        <Notifications>
-          <Notification key="foo" id="1" featured />
-          <Notification id="2">Hello World</Notification>
-        </Notifications>
-      ),
-      expected: [
-        { id: "1", key: ".$foo", featured: true },
-        { id: "2", content: "Hello World" }
       ]
     },
     {
