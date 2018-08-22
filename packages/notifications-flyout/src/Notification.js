@@ -1,108 +1,83 @@
-import React, { Component } from "react";
-import Transition from "react-transition-group/Transition";
 import PropTypes from "prop-types";
-import cx from "classnames";
-import IconButton from "@hig/icon-button";
-import RichText from "@hig/rich-text";
-import "./notification.scss";
+import React, { Component } from "react";
 
-const COMPONENT_CLASS = "hig__notification";
-const FEATURED_COMPONENT_CLASS = "hig__notification--featured";
-const CONTENT_CLASS = "hig__notification__content";
+import NotificationBehavior from "./behaviors/NotificationBehavior";
+import NotificationPresenter from "./presenters/NotificationPresenter";
 
 export default class Notification extends Component {
   static propTypes = {
-    /**
-     * A callback called when user clicks on a link in the notification
-     */
-    onLinkClick: PropTypes.func,
-    /**
-     * A callback called when user dismisses a featured notification
-     */
-    onDismiss: PropTypes.func,
-    /**
-     * {Boolean} to show specify whether notificaiton is read
-     */
-    unread: PropTypes.bool,
-    /**
-     * Indicates whether this is a featured notification
-     */
+    /** Notification content */
+    children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+    /** Determines whether the notification is featured */
     featured: PropTypes.bool,
-    /**
-     * specifies type of notification
-     */
+    /** An action provided hide the flyout. This is provided to the `children` render prop */
+    hideFlyout: PropTypes.func.isRequired,
+    /** A callback called when user dismisses a featured notification */
+    onDismiss: PropTypes.func,
+    /** Determines whether the dismiss button is shown */
+    showDismissButton: PropTypes.bool,
+    /** Timestamp component */
+    timestamp: PropTypes.node,
+    /** Determines notification variant */
     type: PropTypes.string,
-    /**
-     * id for notification
-     */
-    id: PropTypes.number,
-    /**
-     * Content for notification
-     */
-    children: PropTypes.node,
-    /**
-     * Timestamp component
-     */
-    timestamp: PropTypes.node
+    /** Determines whether notification has not been read */
+    unread: PropTypes.bool
   };
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      in: true
-    };
+  static defaultProps = {
+    hideFlyout: () => {}
+  };
+
+  dismiss = () => {
+    const { onDismiss } = this.props;
+
+    if (onDismiss) onDismiss();
+  };
+
+  /**
+   * @param {NotificationShape} shape
+   * @returns {import("react").ReactElement}
+   */
+  renderChildren() {
+    const { children, hideFlyout } = this.props;
+    const { dismiss } = this;
+
+    if (typeof children !== "function") {
+      return children;
+    }
+
+    return children({ dismiss, hideFlyout });
   }
 
-  onClickCapture = event => {
-    if (event.target.tagName === "A" && this.props.onLinkClick) {
-      this.props.onLinkClick(this.props.id);
-    }
-  };
-
-  dismissFeaturedNotification = () => {
-    this.props.onDismiss();
-    this.setState({ in: false });
-  };
-
   render() {
-    const notificationClasses = cx(
-      `${COMPONENT_CLASS}`,
-      { [`hig__notification--${this.props.type}`]: this.props.type },
-      {
-        [`hig__notification--unread`]: this.props.unread
-      }
-    );
+    const {
+      featured,
+      onDismiss,
+      // Featured notifications show the dismiss button by default
+      showDismissButton = featured,
+      timestamp,
+      type,
+      unread
+    } = this.props;
 
-    const notification = this.props.featured ? (
-      <Transition in={this.state.in} timeout={300}>
-        {state => (
-          <div
-            className={`${notificationClasses} hig__notification--${state} ${FEATURED_COMPONENT_CLASS}`}
-            onClickCapture={this.onClickCapture}
+    return (
+      <NotificationBehavior onDismiss={onDismiss}>
+        {({ handleDismissButtonClick, height, innerRef, transitionStatus }) => (
+          <NotificationPresenter
+            featured={featured}
+            height={height}
+            innerRef={innerRef}
+            onDismissButtonClick={handleDismissButtonClick}
+            showDismissButton={showDismissButton}
+            timestamp={timestamp}
+            transitionStatus={transitionStatus}
+            type={type}
+            unread={unread}
           >
-            <div className={`${CONTENT_CLASS}`}>
-              <RichText size="small">{this.props.children}</RichText>
-              <IconButton
-                onClick={this.dismissFeaturedNotification}
-                icon="close-notification"
-                title="Dismiss featured notification"
-                type="transparent"
-              />
-            </div>
-            {this.props.timestamp}
-          </div>
+            {this.renderChildren()}
+          </NotificationPresenter>
         )}
-      </Transition>
-    ) : (
-      <div className={notificationClasses} onClickCapture={this.onClickCapture}>
-        <div className={`${CONTENT_CLASS}`}>
-          <RichText size="small">{this.props.children}</RichText>
-        </div>
-
-        {this.props.timestamp}
-      </div>
+      </NotificationBehavior>
     );
-
-    return notification;
   }
 }
