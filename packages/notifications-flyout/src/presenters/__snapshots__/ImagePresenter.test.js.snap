@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`notifications-flyout/presenters/ImagePresenter renders with img props 1`] = `
+<img
+  alt="hello"
+  className="hig__notification-v1__image"
+  data-something="anything"
+  src="//example.com/random.png"
+/>
+`;

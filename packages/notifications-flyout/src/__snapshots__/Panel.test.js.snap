@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`notifications-flyout/Panel renders with all props 1`] = `
+<div
+  className="hig__flyout-v1__panel-container"
+  style={
+    Object {
+      "maxHeight": undefined,
+    }
+  }
+>
+  <div
+    className="hig__flyout-v1__panel-container__inner"
+  >
+    <header
+      className="hig__notifications-flyout__panel__title"
+    >
+      hello
+    </header>
+    <section
+      className="hig__notifications-flyout__panel__container"
+      style={
+        Object {
+          "maxHeight": "",
+        }
+      }
+    >
+      <div
+        onScroll={[Function]}
+        role="list"
+      >
+        foobar
+      </div>
+    </section>
+    <footer
+      className="hig__notifications-flyout__panel__loading hig__notifications-flyout__panel__loading--open"
+    >
+      <div
+        data-props="{
+  \\"size\\": \\"s\\"
+}"
+      />
+    </footer>
+  </div>
+</div>
+`;
+
+exports[`notifications-flyout/Panel renders without props 1`] = `
+<div
+  className="hig__flyout-v1__panel-container"
+  style={
+    Object {
+      "maxHeight": undefined,
+    }
+  }
+>
+  <div
+    className="hig__flyout-v1__panel-container__inner"
+  >
+    <header
+      className="hig__notifications-flyout__panel__title"
+    >
+      Notifications
+    </header>
+    <section
+      className="hig__notifications-flyout__panel__container"
+      style={
+        Object {
+          "maxHeight": "",
+        }
+      }
+    >
+      <div
+        onScroll={undefined}
+        role="list"
+      />
+    </section>
+    <footer
+      className="hig__notifications-flyout__panel__loading"
+    >
+      <div
+        data-props="{
+  \\"size\\": \\"s\\"
+}"
+      />
+    </footer>
+  </div>
+</div>
+`;
