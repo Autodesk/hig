@@ -14,36 +14,40 @@ exports[`notifications-flyout/presenters/NotificationPresenter renders with all 
     className="hig__notification-v1__content hig__notification-v1__content--success hig__notification-v1__content--featured hig__notification-v1__content--unread"
   >
     <div
-      className="hig__rich-text hig__rich-text--small"
+      className="hig__notification-v1__content-text"
     >
-      foobar
-    </div>
-    2018-08-17
-    <div
-      className="hig__notification-v1__dismiss-button"
-    >
-      <button
-        className="hig__icon-button hig__icon-button--transparent"
-        onBlur={undefined}
-        onClick={[Function]}
-        onFocus={undefined}
-        onMouseEnter={undefined}
-        onMouseLeave={undefined}
-        title="hello world"
+      <div
+        className="hig__rich-text hig__rich-text--small"
       >
-        <span
-          className="hig__icon-button__icon"
+        foobar
+      </div>
+      2018-08-17
+      <div
+        className="hig__notification-v1__dismiss-button"
+      >
+        <button
+          className="hig__icon-button hig__icon-button--transparent"
+          onBlur={undefined}
+          onClick={[Function]}
+          onFocus={undefined}
+          onMouseEnter={undefined}
+          onMouseLeave={undefined}
+          title="hello world"
         >
-          <div
-            className="hig__icon hig__icon--24-size"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "<svg width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-notification-24\\"><polygon fill-rule=\\"nonzero\\" points=\\"8.45 0.47 4.97 3.95 1.51 0.47 0.45 1.53 3.91 5.01 0.45 8.47 1.51 9.53 4.97 6.07 8.42 9.53 9.48 8.47 6.03 5.01 9.51 1.53\\" fill=\\"#2E4258\\"/></svg>",
+          <span
+            className="hig__icon-button__icon"
+          >
+            <div
+              className="hig__icon hig__icon--24-size"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<svg width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-notification-24\\"><polygon fill-rule=\\"nonzero\\" points=\\"8.45 0.47 4.97 3.95 1.51 0.47 0.45 1.53 3.91 5.01 0.45 8.47 1.51 9.53 4.97 6.07 8.42 9.53 9.48 8.47 6.03 5.01 9.51 1.53\\" fill=\\"#2E4258\\"/></svg>",
+                }
               }
-            }
-          />
-        </span>
-      </button>
+            />
+          </span>
+        </button>
+      </div>
     </div>
   </div>
 </div>
@@ -63,9 +67,13 @@ exports[`notifications-flyout/presenters/NotificationPresenter renders without p
     className="hig__notification-v1__content"
   >
     <div
-      className="hig__rich-text hig__rich-text--small"
-      dangerouslySetInnerHTML={undefined}
-    />
+      className="hig__notification-v1__content-text"
+    >
+      <div
+        className="hig__rich-text hig__rich-text--small"
+        dangerouslySetInnerHTML={undefined}
+      />
+    </div>
   </div>
 </div>
 `;

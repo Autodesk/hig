@@ -99,9 +99,13 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
                 className="hig__notification-v1__content hig__notification-v1__content--unread"
               >
                 <div
-                  className="hig__rich-text hig__rich-text--small"
-                  dangerouslySetInnerHTML={undefined}
-                />
+                  className="hig__notification-v1__content-text"
+                >
+                  <div
+                    className="hig__rich-text hig__rich-text--small"
+                    dangerouslySetInnerHTML={undefined}
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -220,9 +224,13 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
                 className="hig__notification-v1__content hig__notification-v1__content--unread"
               >
                 <div
-                  className="hig__rich-text hig__rich-text--small"
-                  dangerouslySetInnerHTML={undefined}
-                />
+                  className="hig__notification-v1__content-text"
+                >
+                  <div
+                    className="hig__rich-text hig__rich-text--small"
+                    dangerouslySetInnerHTML={undefined}
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -341,9 +349,13 @@ exports[`notifications-flyout/NotificationsFlyout renders with all props 1`] = `
                 className="hig__notification-v1__content hig__notification-v1__content--unread"
               >
                 <div
-                  className="hig__rich-text hig__rich-text--small"
-                  dangerouslySetInnerHTML={undefined}
-                />
+                  className="hig__notification-v1__content-text"
+                >
+                  <div
+                    className="hig__rich-text hig__rich-text--small"
+                    dangerouslySetInnerHTML={undefined}
+                  />
+                </div>
               </div>
             </div>
             <div
@@ -359,9 +371,13 @@ exports[`notifications-flyout/NotificationsFlyout renders with all props 1`] = `
                 className="hig__notification-v1__content hig__notification-v1__content--unread"
               >
                 <div
-                  className="hig__rich-text hig__rich-text--small"
-                  dangerouslySetInnerHTML={undefined}
-                />
+                  className="hig__notification-v1__content-text"
+                >
+                  <div
+                    className="hig__rich-text hig__rich-text--small"
+                    dangerouslySetInnerHTML={undefined}
+                  />
+                </div>
               </div>
             </div>
           </div>

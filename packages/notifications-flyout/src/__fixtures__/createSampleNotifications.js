@@ -1,7 +1,14 @@
 /* eslint-disable no-console */
 import React from "react";
+import Avatar, { sizes } from "@hig/avatar";
 import TextLink from "@hig/text-link";
 import Timestamp from "@hig/timestamp";
+import avatarImagePath from "@hig/storybook/storybook-support/fixtures/avatar/chris-reynolds.png";
+import "@hig/avatar/build/index.css";
+import "@hig/text-link/build/index.css";
+import "@hig/timestamp/build/index.css";
+
+import ImagePresenter from "../presenters/ImagePresenter";
 
 export default function createSampleNotifications() {
   const baseDate = new Date();
@@ -16,6 +23,13 @@ export default function createSampleNotifications() {
       featured: true,
       unread: true,
       timestamp: <Timestamp timestamp={new Date(updatedDate1).toISOString()} />,
+      image: (
+        <Avatar
+          name="Peter Parker"
+          image={avatarImagePath}
+          size={sizes.LARGE_48}
+        />
+      ),
       content: (
         <div>
           <p>
@@ -46,6 +60,7 @@ export default function createSampleNotifications() {
       id: "0",
       unread: true,
       timestamp: <Timestamp timestamp={new Date(updatedDate1).toISOString()} />,
+      image: <ImagePresenter alt="Mr. Fluffy" src="//placekitten.com/48/48" />,
       type: "primary",
       content: (
         <div>
