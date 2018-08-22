@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Icon, { names } from "@hig/icon";
+import { combineEventHandlers } from "@hig/utils";
 /** @todo Move flyout into its own package */
 import Flyout from "hig-react/lib/elements/components/Flyout";
 
@@ -9,13 +10,18 @@ import "hig-react/lib/hig-react.css";
 
 import Action from "./Action";
 
-export default function HelpAction({ children }) {
+export default function HelpAction({ children, onClick }) {
   return (
     <Action>
       <Flyout anchorPoint="top-right" content={children}>
-        <button className="hig__top-nav__help-action">
-          <Icon name={names.HELP} />
-        </button>
+        {({ handleClick }) => (
+          <button
+            className="hig__top-nav__help-action"
+            onClick={combineEventHandlers(onClick, handleClick)}
+          >
+            <Icon name={names.HELP} />
+          </button>
+        )}
       </Flyout>
     </Action>
   );
@@ -23,5 +29,7 @@ export default function HelpAction({ children }) {
 
 HelpAction.propTypes = {
   /** Content to render inside the help flyout */
-  children: PropTypes.node
+  children: PropTypes.node,
+  /** Callback when the flyout is opened */
+  onClick: PropTypes.func
 };
