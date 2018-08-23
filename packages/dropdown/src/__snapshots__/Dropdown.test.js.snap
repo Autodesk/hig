@@ -206,7 +206,7 @@ exports[`Dropdown renders with a controlled value 1`] = `
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
-  aria-labelledby="downshift-9-label"
+  aria-labelledby="downshift-10-label"
   aria-owns={null}
   className="hig__dropdown"
   role="combobox"
@@ -230,11 +230,11 @@ exports[`Dropdown renders with a controlled value 1`] = `
               aria-activedescendant={null}
               aria-autocomplete="list"
               aria-controls={null}
-              aria-labelledby="downshift-9-label"
+              aria-labelledby="downshift-10-label"
               autoComplete="off"
               className="hig__text-field-v1__input"
               disabled={undefined}
-              id="downshift-9"
+              id="downshift-10"
               onBlur={[Function]}
               onChange={[Function]}
               onClick={[Function]}
@@ -263,15 +263,15 @@ exports[`Dropdown renders with a controlled value 1`] = `
     </span>
   </div>
   <div
-    aria-labelledby="downshift-9-label"
+    aria-labelledby="downshift-10-label"
     className="hig__dropdown-v1__menu"
-    id="downshift-9-menu"
+    id="downshift-10-menu"
     role="listbox"
   >
     <div
       aria-selected={false}
       className="hig__dropdown-option"
-      id="downshift-9-item-0"
+      id="downshift-10-item-0"
       onClick={[Function]}
       onMouseDown={[Function]}
       onMouseMove={[Function]}
@@ -286,7 +286,7 @@ exports[`Dropdown renders with a controlled value 1`] = `
     <div
       aria-selected={false}
       className="hig__dropdown-option"
-      id="downshift-9-item-1"
+      id="downshift-10-item-1"
       onClick={[Function]}
       onMouseDown={[Function]}
       onMouseMove={[Function]}
@@ -301,7 +301,7 @@ exports[`Dropdown renders with a controlled value 1`] = `
     <div
       aria-selected={true}
       className="hig__dropdown-option hig__dropdown-option--selected"
-      id="downshift-9-item-2"
+      id="downshift-10-item-2"
       onClick={[Function]}
       onMouseDown={[Function]}
       onMouseMove={[Function]}
@@ -741,7 +741,7 @@ exports[`Dropdown renders with multiple selection 1`] = `
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
-  aria-labelledby="downshift-8-label"
+  aria-labelledby="downshift-9-label"
   aria-owns={null}
   className="hig__dropdown"
   role="combobox"
@@ -765,11 +765,11 @@ exports[`Dropdown renders with multiple selection 1`] = `
               aria-activedescendant={null}
               aria-autocomplete="list"
               aria-controls={null}
-              aria-labelledby="downshift-8-label"
+              aria-labelledby="downshift-9-label"
               autoComplete="off"
               className="hig__text-field-v1__input hig__text-field-v1__input--no-value"
               disabled={undefined}
-              id="downshift-8"
+              id="downshift-9"
               onBlur={[Function]}
               onChange={[Function]}
               onClick={[Function]}
@@ -798,15 +798,15 @@ exports[`Dropdown renders with multiple selection 1`] = `
     </span>
   </div>
   <div
-    aria-labelledby="downshift-8-label"
+    aria-labelledby="downshift-9-label"
     className="hig__dropdown-v1__menu"
-    id="downshift-8-menu"
+    id="downshift-9-menu"
     role="listbox"
   >
     <div
       aria-selected={false}
       className="hig__dropdown-option"
-      id="downshift-8-item-0"
+      id="downshift-9-item-0"
       onClick={[Function]}
       onMouseDown={[Function]}
       onMouseMove={[Function]}
@@ -821,7 +821,7 @@ exports[`Dropdown renders with multiple selection 1`] = `
     <div
       aria-selected={false}
       className="hig__dropdown-option"
-      id="downshift-8-item-1"
+      id="downshift-9-item-1"
       onClick={[Function]}
       onMouseDown={[Function]}
       onMouseMove={[Function]}
@@ -836,7 +836,7 @@ exports[`Dropdown renders with multiple selection 1`] = `
     <div
       aria-selected={false}
       className="hig__dropdown-option"
-      id="downshift-8-item-2"
+      id="downshift-9-item-2"
       onClick={[Function]}
       onMouseDown={[Function]}
       onMouseMove={[Function]}
@@ -856,7 +856,7 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
-  aria-labelledby="downshift-10-label"
+  aria-labelledby="downshift-11-label"
   aria-owns={null}
   className="hig__dropdown"
   role="combobox"
@@ -880,11 +880,11 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
               aria-activedescendant={null}
               aria-autocomplete="list"
               aria-controls={null}
-              aria-labelledby="downshift-10-label"
+              aria-labelledby="downshift-11-label"
               autoComplete="off"
               className="hig__text-field-v1__input"
               disabled={undefined}
-              id="downshift-10"
+              id="downshift-11"
               onBlur={[Function]}
               onChange={[Function]}
               onClick={[Function]}
@@ -913,15 +913,15 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
     </span>
   </div>
   <div
-    aria-labelledby="downshift-10-label"
+    aria-labelledby="downshift-11-label"
     className="hig__dropdown-v1__menu"
-    id="downshift-10-menu"
+    id="downshift-11-menu"
     role="listbox"
   >
     <div
       aria-selected={false}
       className="hig__dropdown-option hig__dropdown-option--selected"
-      id="downshift-10-item-0"
+      id="downshift-11-item-0"
       onClick={[Function]}
       onMouseDown={[Function]}
       onMouseMove={[Function]}
@@ -948,7 +948,7 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
     <div
       aria-selected={false}
       className="hig__dropdown-option"
-      id="downshift-10-item-1"
+      id="downshift-11-item-1"
       onClick={[Function]}
       onMouseDown={[Function]}
       onMouseMove={[Function]}
@@ -963,7 +963,7 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
     <div
       aria-selected={false}
       className="hig__dropdown-option hig__dropdown-option--selected"
-      id="downshift-10-item-2"
+      id="downshift-11-item-2"
       onClick={[Function]}
       onMouseDown={[Function]}
       onMouseMove={[Function]}
@@ -1313,6 +1313,120 @@ exports[`Dropdown renders with option specific, general and format rendering 1`]
     </div>
     <div>
       BLUE
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Dropdown renders with text entry 1`] = `
+<div
+  aria-expanded={false}
+  aria-haspopup="listbox"
+  aria-labelledby="downshift-8-label"
+  aria-owns={null}
+  className="hig__dropdown"
+  role="combobox"
+>
+  <div
+    className="hig__dropdown__input-wrapper"
+  >
+    <div
+      className="hig__text-field-v1"
+    >
+      <div
+        className="hig__text-field-v1__content"
+      >
+        <div
+          className="hig__text-field-v1__input-wrapper"
+        >
+          <div
+            className="hig__text-field-v1__input-row"
+          >
+            <input
+              aria-activedescendant={null}
+              aria-autocomplete="list"
+              aria-controls={null}
+              aria-labelledby="downshift-8-label"
+              autoComplete="off"
+              className="hig__text-field-v1__input hig__text-field-v1__input--no-value"
+              disabled={undefined}
+              id="downshift-8"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              placeholder={undefined}
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <span
+      className="hig__dropdown__input-caret"
+    >
+      <div
+        className="hig__icon hig__icon--24-size"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret-24\\"><polyline transform=\\"rotate(45 9.828 3)\\" points=\\"8 2 8 8 2 8\\" stroke=\\"#2E4258\\" stroke-width=\\"1.15\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"/></svg>",
+          }
+        }
+      />
+    </span>
+  </div>
+  <div
+    aria-labelledby="downshift-8-label"
+    className="hig__dropdown-v1__menu"
+    id="downshift-8-menu"
+    role="listbox"
+  >
+    <div
+      aria-selected={false}
+      className="hig__dropdown-option"
+      id="downshift-8-item-0"
+      onClick={[Function]}
+      onMouseDown={[Function]}
+      onMouseMove={[Function]}
+      role="option"
+    >
+      <span
+        className="hig__dropdown-option__label"
+      >
+        bar
+      </span>
+    </div>
+    <div
+      aria-selected={false}
+      className="hig__dropdown-option"
+      id="downshift-8-item-1"
+      onClick={[Function]}
+      onMouseDown={[Function]}
+      onMouseMove={[Function]}
+      role="option"
+    >
+      <span
+        className="hig__dropdown-option__label"
+      >
+        baz
+      </span>
+    </div>
+    <div
+      aria-selected={false}
+      className="hig__dropdown-option"
+      id="downshift-8-item-2"
+      onClick={[Function]}
+      onMouseDown={[Function]}
+      onMouseMove={[Function]}
+      role="option"
+    >
+      <span
+        className="hig__dropdown-option__label"
+      >
+        foo
+      </span>
     </div>
   </div>
 </div>
