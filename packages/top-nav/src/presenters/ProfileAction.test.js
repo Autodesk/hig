@@ -1,10 +1,10 @@
 import React from "react";
-import renderer from "react-test-renderer";
+import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
 
 import ProfileAction from "./ProfileAction";
 
-describe("top-nav/ProfileAction", () => {
-  const cases = [
+describe("top-nav/presenters/ProfileAction", () => {
+  takeSnapshotsOf(ProfileAction, [
     {
       description: "renders with avatarName",
       props: {
@@ -27,13 +27,5 @@ describe("top-nav/ProfileAction", () => {
         onClick: () => {}
       }
     }
-  ];
-
-  cases.forEach(({ description, props }) => {
-    it(description, () => {
-      const tree = renderer.create(<ProfileAction {...props} />).toJSON();
-
-      expect(tree).toMatchSnapshot();
-    });
-  });
+  ]);
 });
