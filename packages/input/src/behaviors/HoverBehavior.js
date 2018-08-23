@@ -8,14 +8,10 @@ export default class HoverBehavior extends Component {
     onMouseLeave: PropTypes.func
   };
 
-  static defaultProps = {
-    onMouseEnter: () => {},
-    onMouseLeave: () => {}
-  };
-
   constructor(props) {
     super(props);
 
+    // Binding in the constructor because performance
     this.handleFocus = this.handleFocus.bind(this);
     this.handleBlur = this.handleBlur.bind(this);
 
@@ -26,12 +22,18 @@ export default class HoverBehavior extends Component {
 
   handleFocus(event) {
     this.setState({ hasHover: true });
-    this.props.onMouseEnter(event);
+
+    if (this.props.onMouseEnter) {
+      this.props.onMouseEnter(event);
+    }
   }
 
   handleBlur(event) {
     this.setState({ hasHover: false });
-    this.props.onMouseLeave(event);
+
+    if (this.props.onMouseLeave) {
+      this.props.onMouseLeave(event);
+    }
   }
 
   render() {

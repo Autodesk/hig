@@ -5,8 +5,8 @@ import Notification from "hig-react/lib/elements/components/GlobalNav/TopNav/Not
 import { withInfo } from "@storybook/addon-info";
 
 import TopNav from "../index";
-import accountLogo from "./accounts-logo.svg";
-import infoOptions from "../../../top-nav/src/__stories__/infoOptions";
+import AccountLogo from "./accounts-logo.svg";
+import infoOptions from "./infoOptions";
 
 const storybook = storiesOf("GlobalNav|TopNav", module);
 
@@ -20,11 +20,7 @@ storybook.add(
           title="Autodesk Accounts"
           link="https://autodesk.com"
         >
-          <figure
-            style={{ width: "auto", height: "24px", margin: "0" }}
-            // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{ __html: accountLogo }}
-          />
+          <AccountLogo style={{ width: "auto", height: "24px", margin: "0" }} />
         </TopNav.Logo>
       }
       rightActions={

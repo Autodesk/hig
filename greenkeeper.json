@@ -3,7 +3,6 @@
     "default": {
       "packages": [
         "docs/contribution-example/package.json",
-        "package.json",
         "packages/avatar/package.json",
         "packages/babel-preset/package.json",
         "packages/banner/package.json",

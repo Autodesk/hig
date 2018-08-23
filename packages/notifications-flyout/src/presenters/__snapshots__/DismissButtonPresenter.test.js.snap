@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`notifications-flyout/presenters/DismissButtonPresenter renders with all props 1`] = `
+<div
+  className="hig__notification-v1__dismiss-button"
+>
+  <button
+    className="hig__icon-button hig__icon-button--transparent"
+    onBlur={undefined}
+    onClick={[Function]}
+    onFocus={undefined}
+    onMouseEnter={undefined}
+    onMouseLeave={undefined}
+    title="HELLO"
+  >
+    <span
+      className="hig__icon-button__icon"
+    >
+      <div
+        className="hig__icon hig__icon--24-size"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<svg width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-notification-24\\"><polygon fill-rule=\\"nonzero\\" points=\\"8.45 0.47 4.97 3.95 1.51 0.47 0.45 1.53 3.91 5.01 0.45 8.47 1.51 9.53 4.97 6.07 8.42 9.53 9.48 8.47 6.03 5.01 9.51 1.53\\" fill=\\"#2E4258\\"/></svg>",
+          }
+        }
+      />
+    </span>
+  </button>
+</div>
+`;
+
+exports[`notifications-flyout/presenters/DismissButtonPresenter renders without props 1`] = `
+<div
+  className="hig__notification-v1__dismiss-button"
+>
+  <button
+    className="hig__icon-button hig__icon-button--transparent"
+    onBlur={undefined}
+    onClick={undefined}
+    onFocus={undefined}
+    onMouseEnter={undefined}
+    onMouseLeave={undefined}
+    title="Dismiss featured notification"
+  >
+    <span
+      className="hig__icon-button__icon"
+    >
+      <div
+        className="hig__icon hig__icon--24-size"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<svg width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-notification-24\\"><polygon fill-rule=\\"nonzero\\" points=\\"8.45 0.47 4.97 3.95 1.51 0.47 0.45 1.53 3.91 5.01 0.45 8.47 1.51 9.53 4.97 6.07 8.42 9.53 9.48 8.47 6.03 5.01 9.51 1.53\\" fill=\\"#2E4258\\"/></svg>",
+          }
+        }
+      />
+    </span>
+  </button>
+</div>
+`;

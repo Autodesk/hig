@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import cx from "classnames";
 import { ThemeContext } from "@hig/themes";
 import Icon, { names as iconNames, sizes as iconSizes } from "@hig/icon";
@@ -35,5 +36,9 @@ export function IconBackground({ type }) {
     </ThemeContext.Consumer>
   );
 }
+
+IconBackground.propTypes = {
+  type: PropTypes.oneOf(Object.keys(iconNamesByType))
+};
 
 export default IconBackground;

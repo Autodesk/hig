@@ -9,6 +9,7 @@ const postcss = require("rollup-plugin-postcss");
 const json = require("rollup-plugin-json");
 const postcssFunctions = require("postcss-functions");
 const postcssImport = require("postcss-import");
+const reactSvg = require("rollup-plugin-react-svg");
 const createBuildPreset = require("@hig/babel-preset/build");
 
 const createExternalDeterminer = require("./createExternalDeterminer");
@@ -35,6 +36,11 @@ const inputOptions = {
   external: createExternalDeterminer(externalDependencies),
   plugins: [
     nodeResolve(),
+    reactSvg({
+      svgo: {
+        multipass: true
+      }
+    }),
     postcss({
       extract: true,
       output: cssOutputFile,

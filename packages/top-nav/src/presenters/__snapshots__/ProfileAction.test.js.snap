@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`top-nav/ProfileAction renders with all props 1`] = `
+<div
+  className="hig__top-nav__action"
+>
+  <div
+    data-mock="flyout"
+  >
+    <div
+      data-mock="flyout-content"
+    >
+      <div
+        className="logo"
+      />
+    </div>
+    <div
+      data-mock="flyout-children"
+    />
+  </div>
+</div>
+`;
+
+exports[`top-nav/ProfileAction renders with avatarName 1`] = `
+<div
+  className="hig__top-nav__action"
+>
+  <div
+    data-mock="flyout"
+  >
+    <div
+      data-mock="flyout-content"
+    />
+    <div
+      data-mock="flyout-children"
+    />
+  </div>
+</div>
+`;
+
+exports[`top-nav/ProfileAction renders with children and avatarName 1`] = `
+<div
+  className="hig__top-nav__action"
+>
+  <div
+    data-mock="flyout"
+  >
+    <div
+      data-mock="flyout-content"
+    >
+      <div
+        className="logo"
+      />
+    </div>
+    <div
+      data-mock="flyout-children"
+    />
+  </div>
+</div>
+`;

@@ -13,6 +13,13 @@ describe("skeleton-item/SkeletonItem", () => {
       });
     });
 
+    it("allows overriding height", () => {
+      const wrapper = mount(<SkeletonItem height="100px" />);
+      expect(wrapper.find(".hig__skeleton-item").prop("style")).toMatchObject({
+        height: "100px"
+      });
+    });
+
     it("allows overriding marginBottom", () => {
       const wrapper = mount(<SkeletonItem marginBottom="12px" />);
       expect(wrapper.find(".hig__skeleton-item").prop("style")).toMatchObject({

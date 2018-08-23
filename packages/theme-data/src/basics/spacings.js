@@ -1,4 +1,6 @@
 export default {
+  NONE: { value: "0", type: "spacing" },
+
   HIGH_XXS: { value: "2px", type: "spacing" },
   HIGH_XS: { value: "4px", type: "spacing" },
   HIGH_S: { value: "8px", type: "spacing" },

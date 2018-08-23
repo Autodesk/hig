@@ -8,6 +8,7 @@ exports[`side-nav/SideNavSkeleton snapshot tests renders with no props 1`] = `
     className="hig__skeleton-item hig--light-theme"
     style={
       Object {
+        "height": undefined,
         "marginBottom": "48px",
         "maxWidth": "180px",
       }
@@ -17,6 +18,7 @@ exports[`side-nav/SideNavSkeleton snapshot tests renders with no props 1`] = `
     className="hig__skeleton-item hig--light-theme"
     style={
       Object {
+        "height": undefined,
         "marginBottom": "24px",
         "maxWidth": "180px",
       }
@@ -26,6 +28,7 @@ exports[`side-nav/SideNavSkeleton snapshot tests renders with no props 1`] = `
     className="hig__skeleton-item hig--light-theme"
     style={
       Object {
+        "height": undefined,
         "marginBottom": "24px",
         "maxWidth": "180px",
       }
@@ -35,6 +38,7 @@ exports[`side-nav/SideNavSkeleton snapshot tests renders with no props 1`] = `
     className="hig__skeleton-item hig--light-theme"
     style={
       Object {
+        "height": undefined,
         "marginBottom": "48px",
         "maxWidth": "124px",
       }
@@ -44,6 +48,7 @@ exports[`side-nav/SideNavSkeleton snapshot tests renders with no props 1`] = `
     className="hig__skeleton-item hig--light-theme"
     style={
       Object {
+        "height": undefined,
         "marginBottom": "24px",
         "maxWidth": "180px",
       }
@@ -53,6 +58,7 @@ exports[`side-nav/SideNavSkeleton snapshot tests renders with no props 1`] = `
     className="hig__skeleton-item hig--light-theme"
     style={
       Object {
+        "height": undefined,
         "marginBottom": "24px",
         "maxWidth": "180px",
       }
@@ -62,6 +68,7 @@ exports[`side-nav/SideNavSkeleton snapshot tests renders with no props 1`] = `
     className="hig__skeleton-item hig--light-theme"
     style={
       Object {
+        "height": undefined,
         "marginBottom": "24px",
         "maxWidth": "180px",
       }
@@ -71,6 +78,7 @@ exports[`side-nav/SideNavSkeleton snapshot tests renders with no props 1`] = `
     className="hig__skeleton-item hig--light-theme"
     style={
       Object {
+        "height": undefined,
         "marginBottom": "24px",
         "maxWidth": "180px",
       }
@@ -80,6 +88,7 @@ exports[`side-nav/SideNavSkeleton snapshot tests renders with no props 1`] = `
     className="hig__skeleton-item hig--light-theme"
     style={
       Object {
+        "height": undefined,
         "marginBottom": undefined,
         "maxWidth": "124px",
       }

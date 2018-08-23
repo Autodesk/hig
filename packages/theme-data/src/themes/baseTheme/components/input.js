@@ -1,7 +1,11 @@
 export default {
   "INPUT.HORIZONTAL_PADDING": {
     type: "length",
-    value: 0
+    value: { ref: "BASICS.SPACINGS.NONE" }
+  },
+  "INPUT.BOX_TYPE.HORIZONTAL_PADDING": {
+    type: "length",
+    value: { ref: "DENSITY.SPACINGS.XS" }
   },
   "INPUT.VERTICAL_PADDING": {
     type: "length",
@@ -19,6 +23,12 @@ export default {
     type: "color",
     value: {
       ref: "COLOR_SCHEME.SURFACE_LEVEL_1_5_COLOR"
+    }
+  },
+  "INPUT.BORDER_WIDTH": {
+    type: "borderWidth",
+    value: {
+      ref: "BASICS.BORDER_WIDTHS.S"
     }
   },
   "INPUT.BORDER_BOTTOM_COLOR": {
