@@ -14,6 +14,7 @@ export default function HelpAction({ children, onClick }) {
       <Flyout anchorPoint={anchorPoints.TOP_RIGHT} content={children}>
         {({ handleClick }) => (
           <button
+            type="button"
             className="hig__top-nav__help-action"
             onClick={combineEventHandlers(onClick, handleClick)}
           >
