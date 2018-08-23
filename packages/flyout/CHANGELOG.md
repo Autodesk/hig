@@ -1,3 +1,16 @@
+# [@hig/flyout-v0.3.0](https://github.com/Autodesk/hig/compare/@hig/flyout@0.2.0...@hig/flyout@0.3.0) (2018-08-23)
+
+
+### Bug Fixes
+
+* move refs inside state to trigger render updates ([a1cc220](https://github.com/Autodesk/hig/commit/a1cc220))
+* provide anchorPoint to presenter when no refs are available ([afa9ef6](https://github.com/Autodesk/hig/commit/afa9ef6))
+
+
+### Features
+
+* **behavior:** correct controlled behavior ([b2bc76a](https://github.com/Autodesk/hig/commit/b2bc76a))
+
 # [@hig/flyout-v0.2.0](https://github.com/Autodesk/hig/compare/@hig/flyout@0.1.1...@hig/flyout@0.2.0) (2018-08-06)
 
 
