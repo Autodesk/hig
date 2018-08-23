@@ -1,3 +1,10 @@
+# [@hig/dropdown-v0.3.0](https://github.com/Autodesk/hig/compare/@hig/dropdown@0.2.3...@hig/dropdown@0.3.0) (2018-08-23)
+
+
+### Features
+
+* Add Dropdown.renderOption and Option.render for optionally rendering dropdown options with custom behavior ([ade7b24](https://github.com/Autodesk/hig/commit/ade7b24))
+
 # [@hig/dropdown-v0.2.3](https://github.com/Autodesk/hig/compare/@hig/dropdown@0.2.2...@hig/dropdown@0.2.3) (2018-08-08)
 
 
