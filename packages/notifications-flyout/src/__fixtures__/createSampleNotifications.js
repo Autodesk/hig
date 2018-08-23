@@ -4,6 +4,7 @@ import Avatar, { sizes } from "@hig/avatar";
 import TextLink from "@hig/text-link";
 import Timestamp from "@hig/timestamp";
 import avatarImagePath from "@hig/storybook/storybook-support/fixtures/avatar/chris-reynolds.png";
+import thumbnailImagePath from "@hig/storybook/storybook-support/fixtures/thumbnail/greenhouse.png";
 import "@hig/avatar/build/index.css";
 import "@hig/text-link/build/index.css";
 import "@hig/timestamp/build/index.css";
@@ -60,7 +61,7 @@ export default function createSampleNotifications() {
       id: "0",
       unread: true,
       timestamp: <Timestamp timestamp={new Date(updatedDate1).toISOString()} />,
-      image: <ImagePresenter alt="Mr. Fluffy" src="//placekitten.com/48/48" />,
+      image: <ImagePresenter alt="greenhouse" src={thumbnailImagePath} />,
       type: "primary",
       content: (
         <div>
