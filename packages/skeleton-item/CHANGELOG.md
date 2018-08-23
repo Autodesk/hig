@@ -1,3 +1,11 @@
+# [@hig/skeleton-item-v0.3.0](https://github.com/Autodesk/hig/compare/@hig/skeleton-item@0.2.0...@hig/skeleton-item@0.3.0) (2018-08-23)
+
+
+### Features
+
+* **skeleton-item:** Add height prop to manage variable height skeleton items ([e5f6145](https://github.com/Autodesk/hig/commit/e5f6145))
+* **skeleton-item:** Add height prop to manage variable height skeleton items ([c668834](https://github.com/Autodesk/hig/commit/c668834))
+
 <a name="@hig/skeleton-item-v0.2.0"></a>
 # [@hig/skeleton-item-v0.2.0](https://github.com/Autodesk/hig/compare/@hig/skeleton-item@0.1.3...@hig/skeleton-item@0.2.0) (2018-07-18)
 

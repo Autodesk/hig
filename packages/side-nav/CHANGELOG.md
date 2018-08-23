@@ -1,3 +1,10 @@
+# [@hig/side-nav-v0.1.7](https://github.com/Autodesk/hig/compare/@hig/side-nav@0.1.6...@hig/side-nav@0.1.7) (2018-08-23)
+
+
+### Bug Fixes
+
+* **snapshots:** Fix SideNav skeleton items snapshot ([03acf57](https://github.com/Autodesk/hig/commit/03acf57))
+
 # [@hig/side-nav-v0.1.6](https://github.com/Autodesk/hig/compare/@hig/side-nav@0.1.5...@hig/side-nav@0.1.6) (2018-08-07)
 
 

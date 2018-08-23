@@ -1,3 +1,15 @@
+# [@hig/top-nav-v0.2.0](https://github.com/Autodesk/hig/compare/@hig/top-nav@0.1.4...@hig/top-nav@0.2.0) (2018-08-23)
+
+
+### Bug Fixes
+
+* **storybook:** top nav stories not appearing ([3d20875](https://github.com/Autodesk/hig/commit/3d20875))
+
+
+### Features
+
+* **top-nav-actions:** Add onClick handlers to the HelpAction and the ProfileAction ([1edd261](https://github.com/Autodesk/hig/commit/1edd261))
+
 <a name="@hig/top-nav-v0.1.4"></a>
 # [@hig/top-nav-v0.1.4](https://github.com/Autodesk/hig/compare/@hig/top-nav@0.1.3...@hig/top-nav@0.1.4) (2018-07-06)
 
