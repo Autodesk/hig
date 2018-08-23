@@ -1,3 +1,10 @@
+# [@hig/typography-v0.1.4](https://github.com/Autodesk/hig/compare/@hig/typography@0.1.3...@hig/typography@0.1.4) (2018-08-23)
+
+
+### Bug Fixes
+
+* headers can have colors ([f49276f](https://github.com/Autodesk/hig/commit/f49276f))
+
 <a name="@hig/typography-v0.1.3"></a>
 # [@hig/typography-v0.1.3](https://github.com/Autodesk/hig/compare/@hig/typography@0.1.2...@hig/typography@0.1.3) (2018-07-06)
 
