@@ -1,3 +1,4 @@
+/* eslint-disable-next-line no-unused-vars */
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Flyout from "@hig/flyout";
@@ -6,15 +7,12 @@ import icons from "../../../icons/build";
 import { anchorPoints } from "../../../flyout/src/anchorPoints";
 import "./ProjectAccountSwitcherPresenter.scss";
 
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable object-shorthand */
-/* eslint-disable no-unused-vars */
-
 export default class ProjectAccountSwitcherPresenter extends Component {
   static constructPlaceholder(label) {
     return label.match(/\b(\w)/g).join("");
   }
 
+  /* eslint-disable-next-line object-shorthand */
   static propTypes = {
     /** Heading title for the list of Accounts */
     accountTitle: PropTypes.string,
@@ -162,7 +160,7 @@ export default class ProjectAccountSwitcherPresenter extends Component {
   flyoutContent() {
     return (
       <div className="project-account-switcher__lists">
-        {this.props.accounts.length > 0 && (
+        {this.props.accounts && (
           <ul className="project-account-switcher__list">
             <span className="project-account-switcher__list__title">
               {this.props.accountTitle}
@@ -170,7 +168,7 @@ export default class ProjectAccountSwitcherPresenter extends Component {
             {this.accountsList()}
           </ul>
         )}
-        {this.props.projects.length > 0 && (
+        {this.props.projects && (
           <ul className="project-account-switcher__list">
             <span className="project-account-switcher__list__title">
               {this.props.projectTitle}
@@ -189,9 +187,9 @@ export default class ProjectAccountSwitcherPresenter extends Component {
   }
 
   activeImage() {
-    if (this.props.activeAccount.image) {
+    if (this.props.activeAccount && this.props.activeAccount.image) {
       return this.props.activeAccount.image;
-    } else if (this.props.activeProject.image) {
+    } else if (this.props.activeProject && this.props.activeProject.image) {
       return this.props.activeProject.image;
     }
     return "";
