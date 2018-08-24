@@ -1,3 +1,10 @@
+# [@hig/text-area-v0.1.1](https://github.com/Autodesk/hig/compare/@hig/text-area@0.1.0...@hig/text-area@0.1.1) (2018-08-24)
+
+
+### Bug Fixes
+
+* **behavior:** bump [@hig](https://github.com/hig)/utils dependents to v0.2.1 ([48b74d0](https://github.com/Autodesk/hig/commit/48b74d0))
+
 <a name="@hig/text-area-v0.1.0"></a>
 # [@hig/text-area-v0.1.0](https://github.com/Autodesk/hig/compare/@hig/text-area@0.0.0...@hig/text-area@0.1.0) (2018-07-26)
 
