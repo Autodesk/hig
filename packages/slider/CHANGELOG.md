@@ -1,3 +1,10 @@
+# [@hig/slider-v0.1.2](https://github.com/Autodesk/hig/compare/@hig/slider@0.1.1...@hig/slider@0.1.2) (2018-08-24)
+
+
+### Bug Fixes
+
+* **behavior:** bump [@hig](https://github.com/hig)/utils dependents to v0.2.1 ([48b74d0](https://github.com/Autodesk/hig/commit/48b74d0))
+
 <a name="@hig/slider-v0.1.1"></a>
 # [@hig/slider-v0.1.1](https://github.com/Autodesk/hig/compare/@hig/slider@0.1.0...@hig/slider@0.1.1) (2018-07-30)
 

@@ -1,3 +1,12 @@
+# [@hig/top-nav-v0.2.1](https://github.com/Autodesk/hig/compare/@hig/top-nav@0.2.0...@hig/top-nav@0.2.1) (2018-08-24)
+
+
+### Bug Fixes
+
+* add missing type prop to button ([a9484ec](https://github.com/Autodesk/hig/commit/a9484ec))
+* correct flyout dependency ([b939f0d](https://github.com/Autodesk/hig/commit/b939f0d))
+* **behavior:** bump [@hig](https://github.com/hig)/utils dependents to v0.2.1 ([48b74d0](https://github.com/Autodesk/hig/commit/48b74d0))
+
 # [@hig/top-nav-v0.2.0](https://github.com/Autodesk/hig/compare/@hig/top-nav@0.1.4...@hig/top-nav@0.2.0) (2018-08-23)
 
 
