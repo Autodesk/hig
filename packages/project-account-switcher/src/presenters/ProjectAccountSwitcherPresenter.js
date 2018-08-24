@@ -6,9 +6,7 @@ import icons from "../../../icons/build";
 import { anchorPoints } from "../../../flyout/src/anchorPoints";
 import "./ProjectAccountSwitcherPresenter.scss";
 
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable react/no-danger */
 /* eslint-disable object-shorthand */
 /* eslint-disable no-unused-vars */
 
@@ -190,6 +188,15 @@ export default class ProjectAccountSwitcherPresenter extends Component {
     return !accounts.length && !projects.length;
   }
 
+  activeImage() {
+    if (this.props.activeAccount.image) {
+      return this.props.activeAccount.image;
+    } else if (this.props.activeProject.image) {
+      return this.props.activeProject.image;
+    }
+    return "";
+  }
+
   render() {
     if (this.componentHasNoLists()) {
       console.warn("You must provide a list of accounts or projects");
@@ -222,7 +229,7 @@ export default class ProjectAccountSwitcherPresenter extends Component {
                 <img
                   className="project-account-switcher__item__image"
                   alt={activeLabel}
-                  src={""}
+                  src={this.activeImage()}
                 />
                 <span className="project-account-switcher__item__image-placeholder">
                   {this.constructLabelPlaceholder()}
