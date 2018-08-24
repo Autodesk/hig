@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`top-nav/LogoText renders with children 1`] = `
+exports[`top-nav/presenters/LogoText  1`] = `
 <h1
   className="hig__top-nav__logo-text"
 >
