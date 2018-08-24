@@ -105,6 +105,8 @@ export default class ProjectAccountSwitcherPresenter extends Component {
                       project-account-switcher__item--account
                       project-account-switcher__item--active"
         data-account-id={account.id}
+        role="menuitem"
+        tabIndex="0"
         onClick={this.props.onAccountClick}
       >
         <span className="project-account-switcher__item__image-wrapper">
@@ -129,12 +131,13 @@ export default class ProjectAccountSwitcherPresenter extends Component {
 
   projectsList() {
     return this.props.projects.map(project => (
-      /* eslint-list-disable-next-line jsx-a11y/no-noninteractive-element-interactions */
       <li
         className="project-account-switcher__item
-                      project-account-switcher__item--project
-                      project-account-switcher__item--active"
+                     project-account-switcher__item--project
+                     project-account-switcher__item--active"
         data-project-id={project.id}
+        role="menuitem"
+        tabIndex="0"
         onClick={this.props.onProjectClick}
       >
         <span className="project-account-switcher__item__image-wrapper">
@@ -205,8 +208,9 @@ export default class ProjectAccountSwitcherPresenter extends Component {
       ? this.props.activeLabel
       : this.constructLabel();
     return (
-      /* eslint-list-disable-next-line react/no-danger */
       <div
+        role="button"
+        tabIndex="0"
         className="project-account-switcher"
         onClick={this.props.onTargetClick}
       >
@@ -240,6 +244,7 @@ export default class ProjectAccountSwitcherPresenter extends Component {
             <span className="project-account-switcher__target__caret">
               <div
                 className="hig__icon hig__icon--24-size"
+                /* eslint-disable-next-line react/no-danger */
                 dangerouslySetInnerHTML={{
                   __html: icons["caret-24"]
                 }}
