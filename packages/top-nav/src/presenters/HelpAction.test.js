@@ -1,10 +1,10 @@
 import React from "react";
-import renderer from "react-test-renderer";
+import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
 
 import HelpAction from "./HelpAction";
 
-describe("top-nav/HelpAction", () => {
-  const cases = [
+describe("top-nav/presenters/HelpAction", () => {
+  takeSnapshotsOf(HelpAction, [
     {
       description: "renders with no props",
       props: {}
@@ -22,13 +22,5 @@ describe("top-nav/HelpAction", () => {
         onClick: () => {}
       }
     }
-  ];
-
-  cases.forEach(({ description, props }) => {
-    it(description, () => {
-      const tree = renderer.create(<HelpAction {...props} />).toJSON();
-
-      expect(tree).toMatchSnapshot();
-    });
-  });
+  ]);
 });

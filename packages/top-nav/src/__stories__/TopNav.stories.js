@@ -1,8 +1,8 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import HigNotifications from "hig-react/lib/elements/components/GlobalNav/TopNav/Notifications";
-import Notification from "hig-react/lib/elements/components/GlobalNav/TopNav/Notification";
 import { withInfo } from "@storybook/addon-info";
+import NotificationsFlyout, { Notification } from "@hig/notifications-flyout";
+import "@hig/notifications-flyout/build/index.css";
 
 import TopNav from "../index";
 import AccountLogo from "./accounts-logo.svg";
@@ -25,14 +25,14 @@ storybook.add(
       }
       rightActions={
         <TopNav.Interactions>
-          <HigNotifications>
-            <Notification key="1" id="1">
+          <NotificationsFlyout>
+            <Notification id="1">
               <div>
                 <strong>First Notification</strong>
                 <p>You can put what ever you want in here.</p>
               </div>
             </Notification>
-          </HigNotifications>
+          </NotificationsFlyout>
           <TopNav.HelpAction>
             <div>
               <h3>Help</h3>

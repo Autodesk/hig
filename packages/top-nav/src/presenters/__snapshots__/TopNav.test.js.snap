@@ -1,6 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`top-nav/TopNav renders with actions and logo 1`] = `
+exports[`top-nav/presenters/TopNav  1`] = `
+<div
+  className="hig__top-nav"
+>
+  <div
+    className="hig__top-nav__item"
+  >
+    <div
+      className="hig__top-nav__logo-wrapper"
+    />
+  </div>
+  <div
+    className="hig__top-nav__spacer"
+  />
+</div>
+`;
+
+exports[`top-nav/presenters/TopNav  2`] = `
 <div
   className="hig__top-nav"
 >
@@ -23,23 +40,6 @@ exports[`top-nav/TopNav renders with actions and logo 1`] = `
   />
   <div
     className="rightActions"
-  />
-</div>
-`;
-
-exports[`top-nav/TopNav renders with no props 1`] = `
-<div
-  className="hig__top-nav"
->
-  <div
-    className="hig__top-nav__item"
-  >
-    <div
-      className="hig__top-nav__logo-wrapper"
-    />
-  </div>
-  <div
-    className="hig__top-nav__spacer"
   />
 </div>
 `;

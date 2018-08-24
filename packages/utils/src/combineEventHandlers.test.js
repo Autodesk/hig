@@ -5,15 +5,41 @@ describe("utils/combineEventHandlers", () => {
     expect(combineEventHandlers()).toEqual(expect.any(Function));
   });
 
-  it("returns a function", () => {
-    const values = [{}, 1, "2", true];
-    const handlers = [jest.fn(), jest.fn()];
-    const result = combineEventHandlers(...handlers);
+  describe("combined event handler", () => {
+    const args = [{}, 1, "2", true];
+    const handler1 = jest.fn();
+    const handler2 = jest.fn();
 
-    result(...values);
+    beforeEach(() => {
+      jest.resetAllMocks();
+    });
 
-    handlers.forEach(handler => {
-      expect(handler).toBeCalledWith(...values);
+    it("calls each handler with the given arguments", () => {
+      const result = combineEventHandlers(handler1, handler2);
+
+      result(...args);
+
+      expect(handler1).toBeCalledWith(...args);
+      expect(handler2).toBeCalledWith(...args);
+      expect(handler1).toHaveBeenCalledTimes(1);
+      expect(handler2).toHaveBeenCalledTimes(1);
+    });
+
+    it("ignores falsy values for handlers", () => {
+      const result = combineEventHandlers(
+        undefined,
+        handler1,
+        null,
+        handler2,
+        false
+      );
+
+      result(...args);
+
+      expect(handler1).toBeCalledWith(...args);
+      expect(handler2).toBeCalledWith(...args);
+      expect(handler1).toHaveBeenCalledTimes(1);
+      expect(handler2).toHaveBeenCalledTimes(1);
     });
   });
 });

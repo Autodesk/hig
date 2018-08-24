@@ -1,10 +1,10 @@
 import React from "react";
-import renderer from "react-test-renderer";
+import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
 
 import TopNav from "./TopNav";
 
-describe("top-nav/TopNav", () => {
-  const cases = [
+describe("top-nav/presenters/TopNav", () => {
+  takeSnapshotsOf(TopNav, [
     {
       description: "renders with no props",
       props: {}
@@ -17,13 +17,5 @@ describe("top-nav/TopNav", () => {
         logo: <div className="logo" />
       }
     }
-  ];
-
-  cases.forEach(({ description, props }) => {
-    it(description, () => {
-      const tree = renderer.create(<TopNav {...props} />).toJSON();
-
-      expect(tree).toMatchSnapshot();
-    });
-  });
+  ]);
 });
