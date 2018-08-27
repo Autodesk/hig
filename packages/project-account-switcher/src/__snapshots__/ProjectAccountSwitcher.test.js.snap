@@ -100,7 +100,6 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders cor
                 </span>
                 <li
                   className="project-account-switcher__item project-account-switcher__item--account project-account-switcher__item--active"
-                  data-account-id="1"
                   onClick={[Function]}
                   role="menuitem"
                   tabIndex="0"
@@ -110,21 +109,18 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders cor
                   >
                     <span
                       className="project-account-switcher__item__image-placeholder"
-                      data-account-id="1"
                     >
                       A1
                     </span>
                   </span>
                   <span
                     className="project-account-switcher__item__label"
-                    data-account-id="1"
                   >
                     Account 1
                   </span>
                 </li>
                 <li
                   className="project-account-switcher__item project-account-switcher__item--account project-account-switcher__item--active"
-                  data-account-id="2"
                   onClick={[Function]}
                   role="menuitem"
                   tabIndex="0"
@@ -134,14 +130,12 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders cor
                   >
                     <span
                       className="project-account-switcher__item__image-placeholder"
-                      data-account-id="2"
                     >
                       A2
                     </span>
                   </span>
                   <span
                     className="project-account-switcher__item__label"
-                    data-account-id="2"
                   >
                     Account 2
                   </span>
@@ -157,7 +151,6 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders cor
                 </span>
                 <li
                   className="project-account-switcher__item project-account-switcher__item--project project-account-switcher__item--active"
-                  data-project-id="1"
                   onClick={[Function]}
                   role="menuitem"
                   tabIndex="0"
@@ -167,21 +160,18 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders cor
                   >
                     <span
                       className="project-account-switcher__item__image-placeholder"
-                      data-project-id="1"
                     >
                       P1
                     </span>
                   </span>
                   <span
                     className="project-account-switcher__item__label"
-                    data-project-id="1"
                   >
                     Project 1
                   </span>
                 </li>
                 <li
                   className="project-account-switcher__item project-account-switcher__item--project project-account-switcher__item--active"
-                  data-project-id="2"
                   onClick={[Function]}
                   role="menuitem"
                   tabIndex="0"
@@ -191,14 +181,12 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders cor
                   >
                     <span
                       className="project-account-switcher__item__image-placeholder"
-                      data-project-id="2"
                     >
                       P2
                     </span>
                   </span>
                   <span
                     className="project-account-switcher__item__label"
-                    data-project-id="2"
                   >
                     Project 2
                   </span>

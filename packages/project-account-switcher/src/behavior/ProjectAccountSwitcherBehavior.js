@@ -67,7 +67,7 @@ export default class ProjectAccountSwitcherBehavior extends Component {
     });
   };
 
-  handleAccountClick = event => {
+  handleAccountClick = (event, id) => {
     const { onClick } = this.props;
 
     if (onClick) {
@@ -75,11 +75,11 @@ export default class ProjectAccountSwitcherBehavior extends Component {
     }
 
     this.setState({
-      activeAccount: this.getAccount(event.target.dataset.accountId)
+      activeAccount: this.getAccount(id)
     });
   };
 
-  handleProjectClick = event => {
+  handleProjectClick = (event, id) => {
     const { onClick } = this.props;
 
     if (onClick) {
@@ -87,7 +87,7 @@ export default class ProjectAccountSwitcherBehavior extends Component {
     }
 
     this.setState({
-      activeProject: this.getProject(event.target.dataset.projectId)
+      activeProject: this.getProject(id)
     });
   };
 

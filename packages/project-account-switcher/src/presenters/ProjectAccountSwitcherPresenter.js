@@ -99,30 +99,23 @@ export default class ProjectAccountSwitcherPresenter extends Component {
 
   accountsList() {
     return this.props.accounts.map(account => (
-      /* eslint-list-disable-next-line jsx-a11y/no-noninteractive-element-interactions */
       <li
         className="project-account-switcher__item
                       project-account-switcher__item--account
                       project-account-switcher__item--active"
-        data-account-id={account.id}
         role="menuitem"
         tabIndex="0"
-        onClick={this.props.onAccountClick}
+        /* eslint-disable-next-line no-undef */
+        onClick={() => this.props.onAccountClick(event, account.id)}
       >
         <span className="project-account-switcher__item__image-wrapper">
-          <span
-            className="project-account-switcher__item__image-placeholder"
-            data-account-id={account.id}
-          >
+          <span className="project-account-switcher__item__image-placeholder">
             {ProjectAccountSwitcherPresenter.constructPlaceholder(
               account.label
             )}
           </span>
         </span>
-        <span
-          className="project-account-switcher__item__label"
-          data-account-id={account.id}
-        >
+        <span className="project-account-switcher__item__label">
           {account.label}
         </span>
       </li>
@@ -135,25 +128,19 @@ export default class ProjectAccountSwitcherPresenter extends Component {
         className="project-account-switcher__item
                      project-account-switcher__item--project
                      project-account-switcher__item--active"
-        data-project-id={project.id}
         role="menuitem"
         tabIndex="0"
-        onClick={this.props.onProjectClick}
+        /* eslint-disable-next-line no-undef */
+        onClick={() => this.props.onProjectClick(event, project.id)}
       >
         <span className="project-account-switcher__item__image-wrapper">
-          <span
-            className="project-account-switcher__item__image-placeholder"
-            data-project-id={project.id}
-          >
+          <span className="project-account-switcher__item__image-placeholder">
             {ProjectAccountSwitcherPresenter.constructPlaceholder(
               project.label
             )}
           </span>
         </span>
-        <span
-          className="project-account-switcher__item__label"
-          data-project-id={project.id}
-        >
+        <span className="project-account-switcher__item__label">
           {project.label}
         </span>
       </li>
