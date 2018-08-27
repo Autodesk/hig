@@ -10,8 +10,10 @@
     }
   },
   "label": {
-    "font-color": {
-      "value": "{color-scheme.text.color.value}"
+    "default": {
+      "font-color": {
+        "value": "{color-scheme.text.color.value}"
+      }
     },
     "hover": {
       "font-color": {
@@ -20,7 +22,10 @@
     },
     "disabled": {
       "font-color": {
-        "value": "{color-scheme.text.color-dim.value}"
+        "value": "{color-scheme.text.color.value}",
+        "transform": {
+          "alpha": "0.2"
+        }
       }
     }
   }
