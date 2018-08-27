@@ -47,6 +47,7 @@ function Input(props) {
             disabled={props.disabled}
             hasFocus={hasFocus}
             hasHover={hasHover}
+            id={props.id}
             inputMode={props.inputMode}
             maxLength={props.maxLength}
             minLength={props.minLength}
@@ -83,6 +84,10 @@ Input.propTypes = {
    * Prevents the user from interacting with the input
    */
   disabled: PropTypes.bool,
+  /**
+   * HTML ID attribute
+   */
+  id: PropTypes.string,
   /**
    * A hint to browsers for which virtual keyboard to display
    */
@@ -140,13 +145,13 @@ Input.propTypes = {
    */
   tabIndex: PropTypes.string,
   /**
-   * The visual variant of the input
-   */
-  variant: PropTypes.oneOf(availableVariants),
-  /**
    * The value of the control
    */
-  value: PropTypes.string
+  value: PropTypes.string,
+  /**
+   * The visual variant of the input
+   */
+  variant: PropTypes.oneOf(availableVariants)
 };
 
 Input.defaultProps = {
