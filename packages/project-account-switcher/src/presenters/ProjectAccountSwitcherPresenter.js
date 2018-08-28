@@ -100,22 +100,22 @@ export default class ProjectAccountSwitcherPresenter extends Component {
   accountsList() {
     return this.props.accounts.map(account => (
       <li
-        className="project-account-switcher__item
-                      project-account-switcher__item--account
-                      project-account-switcher__item--active"
+        className="hig__project-account-switcher__item
+                      hig__project-account-switcher__item--account
+                      hig__project-account-switcher__item--active"
         role="menuitem"
         tabIndex="0"
         /* eslint-disable-next-line no-undef */
         onClick={() => this.props.onAccountClick(event, account.id)}
       >
-        <span className="project-account-switcher__item__image-wrapper">
-          <span className="project-account-switcher__item__image-placeholder">
+        <span className="hig__project-account-switcher__item__image-wrapper">
+          <span className="hig__project-account-switcher__item__image-placeholder">
             {ProjectAccountSwitcherPresenter.constructPlaceholder(
               account.label
             )}
           </span>
         </span>
-        <span className="project-account-switcher__item__label">
+        <span className="hig__project-account-switcher__item__label">
           {account.label}
         </span>
       </li>
@@ -125,22 +125,22 @@ export default class ProjectAccountSwitcherPresenter extends Component {
   projectsList() {
     return this.props.projects.map(project => (
       <li
-        className="project-account-switcher__item
-                     project-account-switcher__item--project
-                     project-account-switcher__item--active"
+        className="hig__project-account-switcher__item
+                     hig__project-account-switcher__item--project
+                     hig__project-account-switcher__item--active"
         role="menuitem"
         tabIndex="0"
         /* eslint-disable-next-line no-undef */
         onClick={() => this.props.onProjectClick(event, project.id)}
       >
-        <span className="project-account-switcher__item__image-wrapper">
-          <span className="project-account-switcher__item__image-placeholder">
+        <span className="hig__project-account-switcher__item__image-wrapper">
+          <span className="hig__project-account-switcher__item__image-placeholder">
             {ProjectAccountSwitcherPresenter.constructPlaceholder(
               project.label
             )}
           </span>
         </span>
-        <span className="project-account-switcher__item__label">
+        <span className="hig__project-account-switcher__item__label">
           {project.label}
         </span>
       </li>
@@ -149,18 +149,18 @@ export default class ProjectAccountSwitcherPresenter extends Component {
 
   flyoutContent() {
     return (
-      <div className="project-account-switcher__lists">
+      <div className="hig__project-account-switcher__lists">
         {this.props.accounts && (
-          <ul className="project-account-switcher__list">
-            <span className="project-account-switcher__list__title">
+          <ul className="hig__project-account-switcher__list">
+            <span className="hig__project-account-switcher__list__title">
               {this.props.accountTitle}
             </span>
             {this.accountsList()}
           </ul>
         )}
         {this.props.projects && (
-          <ul className="project-account-switcher__list">
-            <span className="project-account-switcher__list__title">
+          <ul className="hig__project-account-switcher__list">
+            <span className="hig__project-account-switcher__list__title">
               {this.props.projectTitle}
             </span>
             {this.projectsList()}
@@ -198,7 +198,7 @@ export default class ProjectAccountSwitcherPresenter extends Component {
       <div
         role="button"
         tabIndex="0"
-        className="project-account-switcher"
+        className="hig__project-account-switcher"
         onClick={this.props.onTargetClick}
       >
         <Flyout
@@ -206,29 +206,29 @@ export default class ProjectAccountSwitcherPresenter extends Component {
           open={this.props.open}
           panel={({ innerRef }) => (
             <Flyout.Panel innerRef={innerRef}>
-              <div className="project-account-switcher--custom-width-and-padding">
+              <div className="hig__project-account-switcher--custom-width-and-padding">
                 {this.flyoutContent()}
               </div>
             </Flyout.Panel>
           )}
         >
-          <div className="project-account-switcher__target">
-            <div className="project-account-switcher__item">
-              <span className="project-account-switcher__item__image-wrapper">
+          <div className="hig__project-account-switcher__target">
+            <div className="hig__project-account-switcher__item">
+              <span className="hig__project-account-switcher__item__image-wrapper">
                 <img
-                  className="project-account-switcher__item__image"
+                  className="hig__project-account-switcher__item__image"
                   alt={activeLabel}
                   src={this.activeImage()}
                 />
-                <span className="project-account-switcher__item__image-placeholder">
+                <span className="hig__project-account-switcher__item__image-placeholder">
                   {this.constructLabelPlaceholder()}
                 </span>
               </span>
-              <span className="project-account-switcher__item__label">
+              <span className="hig__project-account-switcher__item__label">
                 {activeLabel}
               </span>
             </div>
-            <span className="project-account-switcher__target__caret">
+            <span className="hig__project-account-switcher__target__caret">
               <div
                 className="hig__icon hig__icon--24-size"
                 /* eslint-disable-next-line react/no-danger */

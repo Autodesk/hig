@@ -2,7 +2,7 @@
 
 exports[`project-account-switcher/ProjectAccountSwitcher integration renders correctly 1`] = `
 <div
-  className="project-account-switcher"
+  className="hig__project-account-switcher"
   onClick={[Function]}
   role="button"
   tabIndex="0"
@@ -14,34 +14,34 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders cor
       className="hig__flyout-v1__action"
     >
       <div
-        className="project-account-switcher__target"
+        className="hig__project-account-switcher__target"
         onClick={[Function]}
       >
         <div
-          className="project-account-switcher__item"
+          className="hig__project-account-switcher__item"
         >
           <span
-            className="project-account-switcher__item__image-wrapper"
+            className="hig__project-account-switcher__item__image-wrapper"
           >
             <img
               alt="Account 1 / Project 2"
-              className="project-account-switcher__item__image"
+              className="hig__project-account-switcher__item__image"
               src=""
             />
             <span
-              className="project-account-switcher__item__image-placeholder"
+              className="hig__project-account-switcher__item__image-placeholder"
             >
               A1/P2
             </span>
           </span>
           <span
-            className="project-account-switcher__item__label"
+            className="hig__project-account-switcher__item__label"
           >
             Account 1 / Project 2
           </span>
         </div>
         <span
-          className="project-account-switcher__target__caret"
+          className="hig__project-account-switcher__target__caret"
         >
           <div
             className="hig__icon hig__icon--24-size"
@@ -85,108 +85,108 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders cor
           className="hig__flyout-v1__panel-container__inner"
         >
           <div
-            className="project-account-switcher--custom-width-and-padding"
+            className="hig__project-account-switcher--custom-width-and-padding"
           >
             <div
-              className="project-account-switcher__lists"
+              className="hig__project-account-switcher__lists"
             >
               <ul
-                className="project-account-switcher__list"
+                className="hig__project-account-switcher__list"
               >
                 <span
-                  className="project-account-switcher__list__title"
+                  className="hig__project-account-switcher__list__title"
                 >
                   Accounts
                 </span>
                 <li
-                  className="project-account-switcher__item project-account-switcher__item--account project-account-switcher__item--active"
+                  className="hig__project-account-switcher__item hig__project-account-switcher__item--account hig__project-account-switcher__item--active"
                   onClick={[Function]}
                   role="menuitem"
                   tabIndex="0"
                 >
                   <span
-                    className="project-account-switcher__item__image-wrapper"
+                    className="hig__project-account-switcher__item__image-wrapper"
                   >
                     <span
-                      className="project-account-switcher__item__image-placeholder"
+                      className="hig__project-account-switcher__item__image-placeholder"
                     >
                       A1
                     </span>
                   </span>
                   <span
-                    className="project-account-switcher__item__label"
+                    className="hig__project-account-switcher__item__label"
                   >
                     Account 1
                   </span>
                 </li>
                 <li
-                  className="project-account-switcher__item project-account-switcher__item--account project-account-switcher__item--active"
+                  className="hig__project-account-switcher__item hig__project-account-switcher__item--account hig__project-account-switcher__item--active"
                   onClick={[Function]}
                   role="menuitem"
                   tabIndex="0"
                 >
                   <span
-                    className="project-account-switcher__item__image-wrapper"
+                    className="hig__project-account-switcher__item__image-wrapper"
                   >
                     <span
-                      className="project-account-switcher__item__image-placeholder"
+                      className="hig__project-account-switcher__item__image-placeholder"
                     >
                       A2
                     </span>
                   </span>
                   <span
-                    className="project-account-switcher__item__label"
+                    className="hig__project-account-switcher__item__label"
                   >
                     Account 2
                   </span>
                 </li>
               </ul>
               <ul
-                className="project-account-switcher__list"
+                className="hig__project-account-switcher__list"
               >
                 <span
-                  className="project-account-switcher__list__title"
+                  className="hig__project-account-switcher__list__title"
                 >
                   Projects
                 </span>
                 <li
-                  className="project-account-switcher__item project-account-switcher__item--project project-account-switcher__item--active"
+                  className="hig__project-account-switcher__item hig__project-account-switcher__item--project hig__project-account-switcher__item--active"
                   onClick={[Function]}
                   role="menuitem"
                   tabIndex="0"
                 >
                   <span
-                    className="project-account-switcher__item__image-wrapper"
+                    className="hig__project-account-switcher__item__image-wrapper"
                   >
                     <span
-                      className="project-account-switcher__item__image-placeholder"
+                      className="hig__project-account-switcher__item__image-placeholder"
                     >
                       P1
                     </span>
                   </span>
                   <span
-                    className="project-account-switcher__item__label"
+                    className="hig__project-account-switcher__item__label"
                   >
                     Project 1
                   </span>
                 </li>
                 <li
-                  className="project-account-switcher__item project-account-switcher__item--project project-account-switcher__item--active"
+                  className="hig__project-account-switcher__item hig__project-account-switcher__item--project hig__project-account-switcher__item--active"
                   onClick={[Function]}
                   role="menuitem"
                   tabIndex="0"
                 >
                   <span
-                    className="project-account-switcher__item__image-wrapper"
+                    className="hig__project-account-switcher__item__image-wrapper"
                   >
                     <span
-                      className="project-account-switcher__item__image-placeholder"
+                      className="hig__project-account-switcher__item__image-placeholder"
                     >
                       P2
                     </span>
                   </span>
                   <span
-                    className="project-account-switcher__item__label"
+                    className="hig__project-account-switcher__item__label"
                   >
                     Project 2
                   </span>
