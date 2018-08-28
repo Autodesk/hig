@@ -7,6 +7,8 @@ const knobGroupIds = {
 
 const knobLabels = {
   accounts: "Accounts",
+  activeAccountId: "Active Account Id",
+  activeProjectId: "Active Project Id",
   projects: "Projects",
   projectTitle: "Project List Label",
   accountTitle: "Account List Label",
@@ -30,6 +32,16 @@ export default function getKnobs(props) {
   return {
     ...otherProps,
     accounts: object(knobLabels.accounts, accounts, knobGroupIds.basic),
+    activeAccountId: object(
+      knobLabels.activeAccountId,
+      activeAccountId,
+      knobGroupIds.basic
+    ),
+    activeProjectId: object(
+      knobLabels.activeProjectId,
+      activeProjectId,
+      knobGroupIds.basic
+    ),
     projects: object(knobLabels.projects, projects, knobGroupIds.basic),
     projectTitle: text(
       knobLabels.projectTitle,
