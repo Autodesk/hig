@@ -1,18 +1,16 @@
-/* eslint-disable-next-line no-unused-vars */
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import Flyout from "@hig/flyout";
+import Flyout, { anchorPoints } from "@hig/flyout";
+import icons from "@hig/icons";
 import "@hig/flyout/build/index.css";
-import icons from "../../../icons/build";
-import { anchorPoints } from "../../../flyout/src/anchorPoints";
+
 import "./ProjectAccountSwitcherPresenter.scss";
 
-export default class ProjectAccountSwitcherPresenter extends Component {
-  static constructPlaceholder(label) {
-    return label.match(/\b(\w)/g).join("");
-  }
+function constructPlaceholder(label) {
+  return label.match(/\b(\w)/g).join("");
+}
 
-  /* eslint-disable-next-line object-shorthand */
+export default class ProjectAccountSwitcherPresenter extends Component {
   static propTypes = {
     /** Heading title for the list of Accounts */
     accountTitle: PropTypes.string,
@@ -81,67 +79,59 @@ export default class ProjectAccountSwitcherPresenter extends Component {
   constructLabelPlaceholder() {
     const placeholders = [];
     if (this.props.activeAccount) {
-      placeholders.push(
-        ProjectAccountSwitcherPresenter.constructPlaceholder(
-          this.props.activeAccount.label
-        )
-      );
+      placeholders.push(constructPlaceholder(this.props.activeAccount.label));
     }
     if (this.props.activeProject) {
-      placeholders.push(
-        ProjectAccountSwitcherPresenter.constructPlaceholder(
-          this.props.activeProject.label
-        )
-      );
+      placeholders.push(constructPlaceholder(this.props.activeProject.label));
     }
     return placeholders.join("/");
   }
 
   accountsList() {
-    return this.props.accounts.map(account => (
+    return this.props.accounts.map(({ id, label }) => (
       <li
-        className="hig__project-account-switcher__item
-                      hig__project-account-switcher__item--account
-                      hig__project-account-switcher__item--active"
+        key={`account-${id}`}
+        className={[
+          "hig__project-account-switcher__item",
+          "hig__project-account-switcher__item--account",
+          "hig__project-account-switcher__item--active"
+        ].join(" ")}
         role="menuitem"
         tabIndex="0"
-        /* eslint-disable-next-line no-undef */
-        onClick={() => this.props.onAccountClick(event, account.id)}
+        onClick={event => this.props.onAccountClick(event, id)}
       >
         <span className="hig__project-account-switcher__item__image-wrapper">
           <span className="hig__project-account-switcher__item__image-placeholder">
-            {ProjectAccountSwitcherPresenter.constructPlaceholder(
-              account.label
-            )}
+            {constructPlaceholder(label)}
           </span>
         </span>
         <span className="hig__project-account-switcher__item__label">
-          {account.label}
+          {label}
         </span>
       </li>
     ));
   }
 
   projectsList() {
-    return this.props.projects.map(project => (
+    return this.props.projects.map(({ id, label }) => (
       <li
-        className="hig__project-account-switcher__item
-                     hig__project-account-switcher__item--project
-                     hig__project-account-switcher__item--active"
+        key={`project-${id}`}
+        className={[
+          "hig__project-account-switcher__item",
+          "hig__project-account-switcher__item--project",
+          "hig__project-account-switcher__item--active"
+        ].join(" ")}
         role="menuitem"
         tabIndex="0"
-        /* eslint-disable-next-line no-undef */
-        onClick={() => this.props.onProjectClick(event, project.id)}
+        onClick={event => this.props.onProjectClick(event, id)}
       >
         <span className="hig__project-account-switcher__item__image-wrapper">
           <span className="hig__project-account-switcher__item__image-placeholder">
-            {ProjectAccountSwitcherPresenter.constructPlaceholder(
-              project.label
-            )}
+            {constructPlaceholder(label)}
           </span>
         </span>
         <span className="hig__project-account-switcher__item__label">
-          {project.label}
+          {label}
         </span>
       </li>
     ));
