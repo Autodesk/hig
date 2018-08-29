@@ -13,6 +13,7 @@ export default function InputPresenter({
   disabled,
   hasFocus,
   hasHover,
+  id,
   inputMode,
   maxLength,
   minLength,
@@ -45,6 +46,7 @@ export default function InputPresenter({
             className={css(styles.input)}
             defaultValue={defaultValue}
             disabled={disabled}
+            id={id}
             inputMode={inputMode}
             maxLength={maxLength}
             minLength={minLength}
@@ -74,6 +76,7 @@ InputPresenter.propTypes = {
   disabled: PropTypes.bool,
   hasFocus: PropTypes.bool,
   hasHover: PropTypes.bool,
+  id: PropTypes.string,
   inputMode: PropTypes.oneOf(availableInputModes),
   maxLength: PropTypes.string,
   minLength: PropTypes.string,

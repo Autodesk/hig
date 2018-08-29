@@ -15,6 +15,12 @@ describe("InputPresenter", () => {
     expect(renderer.create(<InputPresenter />).toJSON()).toMatchSnapshot();
   });
 
+  it("renders with id", () => {
+    expect(
+      renderer.create(<InputPresenter id="my_id" />).toJSON()
+    ).toMatchSnapshot();
+  });
+
   it("renders with hover", () => {
     expect(
       renderer.create(<InputPresenter hasHover />).toJSON()

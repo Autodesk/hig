@@ -33,11 +33,11 @@ module.exports = {
     "react/require-default-props": 0,
     "react/style-prop-object": 0
   },
-  "overrides": [
+  overrides: [
     {
-      "files": ["*test.js", "**/__stories__/*.js"],
-      "rules": {
-        "react/prop-types": 0,
+      files: ["*test.js", "**/__stories__/*.js"],
+      rules: {
+        "react/prop-types": 0
       }
     }
   ]
