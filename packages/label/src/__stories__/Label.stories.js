@@ -1,18 +1,22 @@
-import { storiesOf } from "@storybook/react";
+import React from "react";
 import { withInfo } from "@storybook/addon-info";
+import { storiesOf } from "@storybook/react";
 
+import getKnobs from "./getKnobs";
+import Label from "../index";
 import infoOptions from "./infoOptions";
-import renderStory from "./renderStory";
-import stories from "./stories";
+import withThemeProvider from "./withThemeProvider";
 
 const storybook = storiesOf("Theming|Themable Label", module);
 
-stories.forEach(({ description, getProps }) => {
-  storybook.add(
-    description,
-    withInfo(infoOptions)(() => {
-      const props = getProps();
-      return renderStory(props);
-    })
-  );
-});
+storybook.add(
+  "default",
+  withInfo(infoOptions)(() => {
+    const props = {
+      children: "Email"
+    };
+    const { children, theme, ...otherProps } = getKnobs(props);
+
+    return withThemeProvider(<Label {...otherProps}>{children}</Label>);
+  })
+);
