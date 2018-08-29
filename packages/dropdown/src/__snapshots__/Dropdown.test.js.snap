@@ -1414,6 +1414,7 @@ exports[`Dropdown renders with text entry 1`] = `
       onMouseDown={[Function]}
       onMouseMove={[Function]}
       role="option"
+      tabIndex="0"
     >
       <span
         className="hig__dropdown-option__label"
@@ -1429,6 +1430,7 @@ exports[`Dropdown renders with text entry 1`] = `
       onMouseDown={[Function]}
       onMouseMove={[Function]}
       role="option"
+      tabIndex="0"
     >
       <span
         className="hig__dropdown-option__label"
@@ -1444,6 +1446,7 @@ exports[`Dropdown renders with text entry 1`] = `
       onMouseDown={[Function]}
       onMouseMove={[Function]}
       role="option"
+      tabIndex="0"
     >
       <span
         className="hig__dropdown-option__label"
