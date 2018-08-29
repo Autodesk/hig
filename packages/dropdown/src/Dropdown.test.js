@@ -120,6 +120,14 @@ describe("Dropdown", () => {
       }
     },
     {
+      desc: "renders with text entry",
+      props: {
+        options,
+        hasTextEntry: true,
+        onTextEntryChange: () => {}
+      }
+    },
+    {
       desc: "renders with multiple selection",
       props: {
         options,

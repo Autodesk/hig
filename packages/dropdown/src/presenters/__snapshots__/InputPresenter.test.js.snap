@@ -17,7 +17,7 @@ exports[`Dropdown/presenters/InputPresenter renders with all props (that dropdow
           className="hig__text-field-v1__label-spacer"
         />
         <label
-          className="hig__text-field-v1__label hig__text-field-v1__label--required"
+          className="hig__text-field-v1__label hig__text-field-v1__label--required hig__text-field-v1__label--with-value"
           htmlFor="id"
         >
           label
@@ -26,15 +26,17 @@ exports[`Dropdown/presenters/InputPresenter renders with all props (that dropdow
           className="hig__text-field-v1__input-row"
         >
           <input
-            className="hig__text-field-v1__input hig__text-field-v1__input--no-value"
+            className="hig__text-field-v1__input"
             disabled={true}
             id="id"
             onBlur={[Function]}
+            onChange={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
             placeholder="placeholder"
             readOnly={true}
             type="button"
+            value="the selected item's value"
           />
         </div>
       </div>
@@ -85,9 +87,11 @@ exports[`Dropdown/presenters/InputPresenter renders without props 1`] = `
             className="hig__text-field-v1__input hig__text-field-v1__input--no-value"
             id="text-field-1"
             onBlur={[Function]}
+            onChange={[Function]}
             onFocus={[Function]}
             readOnly={true}
             type="button"
+            value=""
           />
         </div>
       </div>

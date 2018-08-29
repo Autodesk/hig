@@ -2,11 +2,13 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Downshift from "downshift";
 import MultiDownshift from "@hig/multi-downshift";
+import { combineEventHandlers } from "@hig/utils";
 
 import InputPresenter from "./presenters/InputPresenter";
 import MenuPresenter from "./presenters/MenuPresenter";
 import renderWrapper from "./presenters/WrapperPresenter";
 import renderOptions from "./presenters/renderOptions";
+import TextInputBehavior from "./behaviors/TextInputBehavior";
 
 /** @typedef {import("./presenters/renderOptions").OptionMeta} OptionMeta */
 /** @typedef {import("downshift").ControllerStateAndHelpers} DownshiftHelpers */
@@ -31,6 +33,10 @@ export default class Dropdown extends Component {
      * renderOption will take precedence
      */
     formatOption: PropTypes.func,
+    /**
+     * Enables user to focus and type into the dropdown text field
+     */
+    hasTextEntry: PropTypes.bool,
     /**
      * HTML ID attribute
      */
@@ -59,6 +65,10 @@ export default class Dropdown extends Component {
      * Called when the text field is focused
      */
     onFocus: PropTypes.func,
+    /**
+     * Called when user types into the dropdown text field
+     */
+    onTextEntryChange: PropTypes.func,
     /**
      * An array of unique values of any type except `undefined`
      */
@@ -97,23 +107,24 @@ export default class Dropdown extends Component {
      */
     formatOption(option) {
       return option ? String(option) : "";
-    }
+    },
+    hasTextEntry: false
   };
 
   getBehaviorProps() {
-    const { id, multiple, formatOption, value, defaultValue } = this.props;
-    const valuePropName = multiple ? "selectedItems" : "selectedItem";
+    const { id, defaultValue, formatOption, multiple, value } = this.props;
     const defaultValuePropName = multiple
       ? "defaultSelectedItems"
       : "defaultSelectedItem";
+    const valuePropName = multiple ? "selectedItems" : "selectedItem";
 
     return {
       id,
-      onChange: this.handleChange,
+      inputValue: this.getInputValue(),
       itemToString: formatOption,
-      [valuePropName]: value,
+      onChange: this.handleChange,
       [defaultValuePropName]: defaultValue,
-      inputValue: this.getInputValue()
+      [valuePropName]: value
     };
   }
 
@@ -156,31 +167,49 @@ export default class Dropdown extends Component {
    * @param {DownshiftHelpers} downshift
    * @returns {JSX.Element}
    */
-  renderInput(downshift) {
-    const { id, toggleMenu, getInputProps } = downshift;
+  renderInput(downshift, handleTextEntryChange, textEntryValue) {
+    const { getInputProps, id, toggleMenu } = downshift;
     const {
-      label,
-      instructions,
-      placeholder,
       disabled,
-      required,
+      hasTextEntry,
+      instructions,
+      label,
       onBlur,
-      onFocus
+      onFocus,
+      placeholder,
+      required
     } = this.props;
 
     const inputProps = getInputProps({
-      id,
-      label,
-      instructions,
-      placeholder,
       disabled,
+      id,
+      instructions,
+      label,
+      placeholder,
       required,
       onBlur,
-      onFocus,
-      onClick: toggleMenu
+      onClick: toggleMenu,
+      onFocus
     });
 
-    return <InputPresenter key="input" {...inputProps} />;
+    const { downshiftOnChange } = inputProps;
+    const onChange = combineEventHandlers(
+      downshiftOnChange,
+      handleTextEntryChange
+    );
+    const valueForPresentation = hasTextEntry
+      ? textEntryValue
+      : inputProps.value;
+
+    return (
+      <InputPresenter
+        {...inputProps}
+        hasTextEntry={hasTextEntry}
+        key="input"
+        value={valueForPresentation}
+        onChange={onChange}
+      />
+    );
   }
 
   /**
@@ -220,7 +249,7 @@ export default class Dropdown extends Component {
    * @param {DownshiftHelpers} downshift
    * @returns {JSX.Element}
    */
-  renderPresenter = downshift => {
+  renderPresenter = (downshift, handleTextEntryChange, textFieldValue) => {
     const { disabled } = this.props;
 
     /**
@@ -229,16 +258,32 @@ export default class Dropdown extends Component {
      */
     return renderWrapper({
       disabled,
-      children: [this.renderInput(downshift), this.renderMenu(downshift)]
+      children: [
+        this.renderInput(downshift, handleTextEntryChange, textFieldValue),
+        this.renderMenu(downshift)
+      ]
     });
   };
 
   render() {
-    const { multiple } = this.props;
-    const Behavior = multiple ? MultiDownshift : Downshift;
+    const { defaultValue, multiple, onTextEntryChange, value } = this.props;
+    const DropdownBehavior = multiple ? MultiDownshift : Downshift;
+    const downshiftProps = this.getBehaviorProps();
 
     return (
-      <Behavior {...this.getBehaviorProps()}>{this.renderPresenter}</Behavior>
+      <TextInputBehavior
+        defaultValue={defaultValue}
+        onChange={onTextEntryChange}
+        value={value}
+      >
+        {({ valueFromBehavior, handleChange }) => (
+          <DropdownBehavior {...downshiftProps}>
+            {downshift =>
+              this.renderPresenter(downshift, handleChange, valueFromBehavior)
+            }
+          </DropdownBehavior>
+        )}
+      </TextInputBehavior>
     );
   }
 }
