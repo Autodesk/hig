@@ -192,7 +192,7 @@ export default class Dropdown extends Component {
       onFocus
     });
 
-    const { downshiftOnChange } = inputProps;
+    const { onChange: downshiftOnChange } = inputProps;
     const onChange = combineEventHandlers(
       downshiftOnChange,
       handleTextEntryChange
