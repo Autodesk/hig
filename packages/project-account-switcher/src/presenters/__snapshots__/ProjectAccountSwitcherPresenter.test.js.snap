@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[` 1`] = `null`;
+exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter  1`] = `null`;
 
-exports[` 2`] = `
+exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter  2`] = `
 <div
   className="hig__project-account-switcher"
   onClick={undefined}
