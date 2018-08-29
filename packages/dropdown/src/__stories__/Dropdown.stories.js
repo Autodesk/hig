@@ -1,17 +1,43 @@
+import React from "react";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
 
-import infoOptions from "./infoOptions";
-import getKnobs from "./getKnobs";
 import Dropdown from "../index";
-import React from "react";
+import getKnobs from "./getKnobs";
+import infoOptions from "./infoOptions";
 
 const storybook = storiesOf("Forms|Dropdown", module);
+
+class Sample extends React.Component {
+  state = {
+    selected: false
+  };
+
+  handleChange = event => {
+    console.log(event);
+    this.setState({ selected: event.target.value });
+  };
+
+  render() {
+    return (
+      <Dropdown
+        {...this.props}
+        onChange={event => {
+          console.log(event);
+        }}
+        onTextEntryChange={event => {
+          console.log(event);
+        }}
+      />
+    );
+  }
+}
 
 storybook.add(
   "default",
   withInfo(infoOptions)(() => {
     const props = {
+      hasTextEntry: true,
       instructions: "Choose one HIG theme to apply to your entire app.",
       label: "HIG Theme",
       options: ["HIG Light Theme", "HIG Dark Blue Theme", "Matrix Theme"],
@@ -19,6 +45,6 @@ storybook.add(
     };
     const { children, ...otherProps } = getKnobs(props);
 
-    return <Dropdown {...otherProps}>{children}</Dropdown>;
+    return <Sample {...otherProps} />;
   })
 );
