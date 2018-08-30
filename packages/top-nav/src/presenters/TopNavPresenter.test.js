@@ -1,10 +1,10 @@
 import React from "react";
 import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
 
-import TopNav from "./TopNav";
+import TopNavPresenter from "./TopNavPresenter";
 
-describe("top-nav/presenters/TopNav", () => {
-  takeSnapshotsOf(TopNav, [
+describe("top-nav/presenters/TopNavPresenter", () => {
+  takeSnapshotsOf(TopNavPresenter, [
     {
       description: "renders with no props",
       props: {}

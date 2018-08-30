@@ -1,11 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export default function LogoText({ children }) {
+import "./LogoTextPresenter.scss";
+
+export default function LogoTextPresenter({ children }) {
   return <h1 className="hig__top-nav__logo-text">{children}</h1>;
 }
 
-LogoText.propTypes = {
+LogoTextPresenter.propTypes = {
   /** Logo content */
   children: PropTypes.node
 };

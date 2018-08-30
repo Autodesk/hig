@@ -1,10 +1,10 @@
 import React from "react";
 import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
 
-import LogoText from "./LogoText";
+import LogoTextPresenter from "./LogoTextPresenter";
 
-describe("top-nav/presenters/LogoText", () => {
-  takeSnapshotsOf(LogoText, [
+describe("top-nav/presenters/LogoTextPresenter", () => {
+  takeSnapshotsOf(LogoTextPresenter, [
     {
       description: "renders with children",
       props: {

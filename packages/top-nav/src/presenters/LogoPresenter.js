@@ -1,17 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import LogoText from "./LogoText";
+import LogoTextPresenter from "./LogoTextPresenter";
+import "./LogoPresenter.scss";
 
 function renderChildren(children) {
   if (typeof children === "string") {
-    return <LogoText>{children}</LogoText>;
+    return <LogoTextPresenter>{children}</LogoTextPresenter>;
   }
 
   return children;
 }
 
-export default function Logo({
+export default function LogoPresenter({
   label,
   link,
   title,
@@ -35,7 +36,7 @@ export default function Logo({
   );
 }
 
-Logo.propTypes = {
+LogoPresenter.propTypes = {
   /** A11y label */
   label: PropTypes.string,
   /** URL to link to */

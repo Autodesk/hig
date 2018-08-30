@@ -1,9 +1,9 @@
 import React from "react";
 import renderer from "react-test-renderer";
 
-import Logo from "./Logo";
+import LogoPresenter from "./LogoPresenter";
 
-describe("top-nav/Logo", () => {
+describe("top-nav/presenters/LogoPresenter", () => {
   const cases = [
     {
       description: "renders without props",
@@ -44,7 +44,7 @@ describe("top-nav/Logo", () => {
 
   cases.forEach(({ description, props }) => {
     it(description, () => {
-      const tree = renderer.create(<Logo {...props} />).toJSON();
+      const tree = renderer.create(<LogoPresenter {...props} />).toJSON();
 
       expect(tree).toMatchSnapshot();
     });
