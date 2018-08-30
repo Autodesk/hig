@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import Transition from "react-transition-group/Transition";
 import { polyfill } from "react-lifecycles-compat";
 
-import { anchorPoints, AVAILABLE_ANCHOR_POINTS } from "./anchorPoints";
+import { AVAILABLE_ANCHOR_POINTS } from "./anchorPoints";
 import FlyoutPresenter from "./presenters/FlyoutPresenter";
-import getCoordinates, { getDefaultCoordinates } from "./getCoordinates";
+import getCoordinates, { DEFAULT_COORDINATES } from "./getCoordinates";
 import PanelPresenter from "./presenters/PanelPresenter";
 import PanelContainerPresenter from "./presenters/PanelContainerPresenter";
 
@@ -66,7 +66,7 @@ class Flyout extends Component {
   };
 
   static defaultProps = {
-    anchorPoint: anchorPoints.RIGHT_TOP,
+    anchorPoint: DEFAULT_COORDINATES.anchorPoint,
     fallbackAnchorPoints: AVAILABLE_ANCHOR_POINTS,
     /**
      * @param {PanelRendererPayload} payload
@@ -105,7 +105,7 @@ class Flyout extends Component {
     const { actionRef, panelRef } = this.state;
 
     if (!actionRef || !panelRef || typeof window === "undefined") {
-      return getDefaultCoordinates();
+      return DEFAULT_COORDINATES;
     }
 
     const actionRect = actionRef.getBoundingClientRect();

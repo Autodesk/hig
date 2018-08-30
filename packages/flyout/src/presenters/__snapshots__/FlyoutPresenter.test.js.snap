@@ -52,7 +52,7 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders with all props 1`] = `
 
 exports[`flyout/FlyoutPresenter/FlyoutPresenter renders without props 1`] = `
 <div
-  className="hig__flyout-v1 hig__flyout-v1--exited hig__flyout-v1--top-right"
+  className="hig__flyout-v1 hig__flyout-v1--exited hig__flyout-v1--top-left"
 >
   <div
     className="hig__flyout-v1__action"

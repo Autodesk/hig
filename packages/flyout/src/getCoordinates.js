@@ -39,6 +39,23 @@ const {
 } = anchorPoints;
 
 /**
+ * @type {Position}
+ */
+export const DEFAULT_POSITION = Object.freeze({
+  top: 0,
+  left: 0
+});
+
+/**
+ * @type {Coordinates}
+ */
+export const DEFAULT_COORDINATES = Object.freeze({
+  anchorPoint: anchorPoints.TOP_LEFT,
+  containerPosition: DEFAULT_POSITION,
+  pointerPosition: DEFAULT_POSITION
+});
+
+/**
  * @param {Payload} payload
  * @returns {number}
  */
@@ -62,7 +79,7 @@ function calculatePointerTopOffset({ anchorPoint, actionRect, panelRect }) {
     case RIGHT_TOP:
       return actionRect.height / 2 - CARET_SIZE / 2;
     default:
-      return 0;
+      return DEFAULT_COORDINATES.pointerPosition.top;
   }
 }
 
@@ -90,7 +107,7 @@ function calculatePointerLeftOffset({ anchorPoint, actionRect, panelRect }) {
     case BOTTOM_RIGHT:
       return panelRect.width - (actionRect.width / 2 + CARET_SIZE / 2);
     default:
-      return 0;
+      return DEFAULT_COORDINATES.pointerPosition.left;
   }
 }
 
@@ -122,7 +139,7 @@ function calculatePanelContainerTopOffset({
     case RIGHT_BOTTOM:
       return -1 * (panelRect.height - actionRect.height);
     default:
-      return 0;
+      return DEFAULT_COORDINATES.containerPosition.top;
   }
 }
 
@@ -154,7 +171,7 @@ function calculatePanelContainerLeftOffset({
     case BOTTOM_RIGHT:
       return -1 * (panelRect.width - actionRect.width);
     default:
-      return 0;
+      return DEFAULT_COORDINATES.containerPosition.top;
   }
 }
 
@@ -242,21 +259,4 @@ export default function getCoordinates(payload) {
   const fallbackCoordinates = getFallbackCoordinates(payload);
 
   return fallbackCoordinates || coordinates;
-}
-
-/**
- * @returns {Coordinates}
- */
-export function getDefaultCoordinates() {
-  return {
-    anchorPoint: anchorPoints.TOP_LEFT,
-    containerPosition: {
-      top: 0,
-      left: 0
-    },
-    pointerPosition: {
-      top: 0,
-      left: 0
-    }
-  };
 }

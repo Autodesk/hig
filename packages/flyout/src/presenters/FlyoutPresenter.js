@@ -9,9 +9,15 @@ import {
 } from "react-transition-group/Transition";
 
 import { anchorPoints, AVAILABLE_ANCHOR_POINTS } from "../anchorPoints";
+import { DEFAULT_COORDINATES } from "../getCoordinates";
 import "./FlyoutPresenter.scss";
 
-const availableTransitionStatuses = [EXITED, ENTERING, ENTERED, EXITING];
+const AVAILABLE_TRANSITION_STATUSES = Object.freeze([
+  EXITED,
+  ENTERING,
+  ENTERED,
+  EXITING
+]);
 
 const transitionStateToModifier = {
   [EXITED]: "hig__flyout-v1--exited",
@@ -93,15 +99,15 @@ export default function FlyoutPresenter(props) {
 }
 
 FlyoutPresenter.defaultProps = {
-  anchorPoint: anchorPoints.TOP_RIGHT,
-  containerPosition: { top: 0, left: 0 },
-  pointerPosition: { top: 0, left: 0 },
+  anchorPoint: DEFAULT_COORDINATES.anchorPoint,
+  containerPosition: DEFAULT_COORDINATES.containerPosition,
+  pointerPosition: DEFAULT_COORDINATES.pointerPosition,
   transitionStatus: EXITED
 };
 
 FlyoutPresenter.propTypes = {
   /** Where the flyout will be anchored relative to target */
-  anchorPoint: PropTypes.oneOf(AVAILABLE_ANCHOR_POINTS).isRequired,
+  anchorPoint: PropTypes.oneOf(AVAILABLE_ANCHOR_POINTS),
   /** Content for the flyout */
   panel: PropTypes.node,
   /** Top position of the container relative to the action */
@@ -121,7 +127,7 @@ FlyoutPresenter.propTypes = {
   /** Reference the wrapper element */
   refWrapper: PropTypes.func,
   /** The status of the container transition */
-  transitionStatus: PropTypes.oneOf(availableTransitionStatuses).isRequired,
+  transitionStatus: PropTypes.oneOf(AVAILABLE_TRANSITION_STATUSES),
   /** Target component to open the flyout */
   children: PropTypes.node
 };
