@@ -1,22 +1,28 @@
 import React from "react";
 import renderer from "react-test-renderer";
-
-import Label from "./index";
-
-function snapshotTest(props) {
-  const tree = renderer.create(<Label {...props} />).toJSON();
-
-  expect(tree).toMatchSnapshot();
-}
-
-const basicProps = {
-  children: "Jon Snow"
-};
+import Label from "./Label";
 
 describe("Label", () => {
-  describe("when an image URL is not provided", () => {
-    it("renders children", () => {
-      snapshotTest(basicProps);
+  [
+    {
+      description: "renders without props",
+      props: {}
+    },
+    {
+      description: "renders with all props",
+      props: {
+        children: "I am a label",
+        disabled: true,
+        form: "a_form",
+        htmlFor: "a_field"
+      }
+    }
+  ].forEach(({ description, props: { children, ...otherProps } }) => {
+    it(description, () => {
+      const presenter = <Label {...otherProps}>{children}</Label>;
+      const tree = renderer.create(presenter).toJSON();
+
+      expect(tree).toMatchSnapshot();
     });
   });
 });
