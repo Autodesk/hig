@@ -23,9 +23,12 @@ export default class TextInputBehavior extends Component {
      */
     onChange: PropTypes.func,
     /**
-     * Initial value of the field
+     * An object or array of objects to choose from
      */
-    value: PropTypes.string
+    value: PropTypes.oneOfType([
+      PropTypes.any,
+      PropTypes.arrayOf(PropTypes.any)
+    ])
   };
 
   state = {
