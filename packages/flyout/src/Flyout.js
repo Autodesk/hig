@@ -36,7 +36,7 @@ class Flyout extends Component {
     /** Manipulate flyout coordinates before rendering */
     alterCoordinates: PropTypes.func,
     /** Where the flyout will be anchored relative to target */
-    anchorPoint: PropTypes.oneOf(AVAILABLE_ANCHOR_POINTS).isRequired,
+    anchorPoint: PropTypes.oneOf(AVAILABLE_ANCHOR_POINTS),
     /** Target component to open the flyout. Can be either a node or a render function */
     children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
     /** Content for the flyout. Can be either a node or a render function */
