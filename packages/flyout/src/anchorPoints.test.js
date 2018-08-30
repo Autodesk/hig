@@ -1,11 +1,13 @@
-import * as anchorPoints from "./anchorPoints";
+import * as anchorPointsModule from "./anchorPoints";
 
 describe("flyout/anchorPoints", () => {
-  it("has an array of available anchorPoints", () => {
-    expect(anchorPoints).toHavePropertyOfConstants("availableAnchorPoints");
+  it("has an array of available anchor points", () => {
+    expect(anchorPointsModule).toHavePropertyOfConstants(
+      "AVAILABLE_ANCHOR_POINTS"
+    );
   });
 
-  it("has constants for anchorPoints", () => {
-    expect(anchorPoints).toHavePropertyOfConstants("anchorPoints");
+  it("has constants for anchor points", () => {
+    expect(anchorPointsModule).toHavePropertyOfConstants("anchorPoints");
   });
 });
