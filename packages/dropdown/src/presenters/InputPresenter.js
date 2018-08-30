@@ -90,12 +90,20 @@ export default class InputPresenter extends Component {
   render() {
     let textFieldPresenter;
     const { hasTextEntry, ...inputProps } = this.props;
+    const label = this.props.label.length == 0 ? " " : this.props.label;
 
     if (hasTextEntry) {
-      textFieldPresenter = <TextFieldPresenter {...inputProps} type="text" />;
+      textFieldPresenter = (
+        <TextFieldPresenter {...inputProps} label={label} type="text" />
+      );
     } else {
       textFieldPresenter = (
-        <TextFieldPresenter {...inputProps} type="button" readOnly />
+        <TextFieldPresenter
+          {...inputProps}
+          label={label}
+          readOnly
+          type="button"
+        />
       );
     }
 
