@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Icon from "@hig/icon";
-import TextFieldPresenter from "@hig/text-field";
+import { TextFieldPresenter } from "@hig/text-field";
 import "@hig/icon/build/index.css";
 import "@hig/text-field/build/index.css";
 import PropTypes from "prop-types";
