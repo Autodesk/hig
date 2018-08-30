@@ -2,7 +2,7 @@
 
 exports[`flyout/Flyout snapshots renders children from the given render function 1`] = `
 <div
-  className="hig__flyout-v1 hig__flyout-v1--top-center"
+  className="hig__flyout-v1 hig__flyout-v1--top-left"
 >
   <div
     className="hig__flyout-v1__action"
@@ -25,19 +25,25 @@ exports[`flyout/Flyout snapshots renders children from the given render function
     className="hig__flyout-v1__container"
     style={
       Object {
-        "left": undefined,
-        "top": undefined,
+        "left": "0px",
+        "top": "0px",
       }
     }
   >
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__chevron"
+      className="hig__flyout-v1__pointer"
       role="presentation"
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
     />
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__chevron-cover"
+      className="hig__flyout-v1__pointer-cover"
       role="presentation"
     />
     <div
@@ -65,7 +71,7 @@ exports[`flyout/Flyout snapshots renders children from the given render function
 
 exports[`flyout/Flyout snapshots renders content from the given render function 1`] = `
 <div
-  className="hig__flyout-v1 hig__flyout-v1--top-center"
+  className="hig__flyout-v1 hig__flyout-v1--top-left"
 >
   <div
     className="hig__flyout-v1__action"
@@ -88,19 +94,25 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
     className="hig__flyout-v1__container"
     style={
       Object {
-        "left": undefined,
-        "top": undefined,
+        "left": "0px",
+        "top": "0px",
       }
     }
   >
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__chevron"
+      className="hig__flyout-v1__pointer"
       role="presentation"
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
     />
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__chevron-cover"
+      className="hig__flyout-v1__pointer-cover"
       role="presentation"
     />
     <div
@@ -128,7 +140,7 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
 
 exports[`flyout/Flyout snapshots renders the panel from a basic render function 1`] = `
 <div
-  className="hig__flyout-v1 hig__flyout-v1--top-center"
+  className="hig__flyout-v1 hig__flyout-v1--top-left"
 >
   <div
     className="hig__flyout-v1__action"
@@ -151,19 +163,25 @@ exports[`flyout/Flyout snapshots renders the panel from a basic render function 
     className="hig__flyout-v1__container"
     style={
       Object {
-        "left": undefined,
-        "top": undefined,
+        "left": "0px",
+        "top": "0px",
       }
     }
   >
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__chevron"
+      className="hig__flyout-v1__pointer"
       role="presentation"
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
     />
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__chevron-cover"
+      className="hig__flyout-v1__pointer-cover"
       role="presentation"
     />
     <div>
@@ -175,7 +193,7 @@ exports[`flyout/Flyout snapshots renders the panel from a basic render function 
 
 exports[`flyout/Flyout snapshots renders the panel from a complex render function 1`] = `
 <div
-  className="hig__flyout-v1 hig__flyout-v1--top-center"
+  className="hig__flyout-v1 hig__flyout-v1--top-left"
 >
   <div
     className="hig__flyout-v1__action"
@@ -198,19 +216,25 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
     className="hig__flyout-v1__container"
     style={
       Object {
-        "left": undefined,
-        "top": undefined,
+        "left": "0px",
+        "top": "0px",
       }
     }
   >
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__chevron"
+      className="hig__flyout-v1__pointer"
       role="presentation"
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
     />
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__chevron-cover"
+      className="hig__flyout-v1__pointer-cover"
       role="presentation"
     />
     <div
@@ -243,7 +267,7 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
 
 exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
 <div
-  className="hig__flyout-v1 hig__flyout-v1--top-center"
+  className="hig__flyout-v1 hig__flyout-v1--top-left"
 >
   <div
     className="hig__flyout-v1__action"
@@ -266,19 +290,25 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
     className="hig__flyout-v1__container"
     style={
       Object {
-        "left": undefined,
-        "top": undefined,
+        "left": "0px",
+        "top": "0px",
       }
     }
   >
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__chevron"
+      className="hig__flyout-v1__pointer"
       role="presentation"
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
     />
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__chevron-cover"
+      className="hig__flyout-v1__pointer-cover"
       role="presentation"
     />
     <div
@@ -306,7 +336,7 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
 
 exports[`flyout/Flyout snapshots renders without props 1`] = `
 <div
-  className="hig__flyout-v1 hig__flyout-v1--exited hig__flyout-v1--right-top"
+  className="hig__flyout-v1 hig__flyout-v1--exited hig__flyout-v1--top-left"
 >
   <div
     className="hig__flyout-v1__action"
@@ -315,19 +345,25 @@ exports[`flyout/Flyout snapshots renders without props 1`] = `
     className="hig__flyout-v1__container"
     style={
       Object {
-        "left": undefined,
-        "top": undefined,
+        "left": "0px",
+        "top": "0px",
       }
     }
   >
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__chevron"
+      className="hig__flyout-v1__pointer"
       role="presentation"
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
     />
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__chevron-cover"
+      className="hig__flyout-v1__pointer-cover"
       role="presentation"
     />
     <div

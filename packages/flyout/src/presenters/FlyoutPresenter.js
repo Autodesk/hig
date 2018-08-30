@@ -8,7 +8,7 @@ import {
   EXITING
 } from "react-transition-group/Transition";
 
-import { anchorPoints, availableAnchorPoints } from "../anchorPoints";
+import { anchorPoints, AVAILABLE_ANCHOR_POINTS } from "../anchorPoints";
 import "./FlyoutPresenter.scss";
 
 const availableTransitionStatuses = [EXITED, ENTERING, ENTERED, EXITING];
@@ -33,20 +33,32 @@ const anchorPointToModifier = {
   [anchorPoints.LEFT_BOTTOM]: "hig__flyout-v1--left-bottom"
 };
 
+/**
+ * @param {import("../getCoordinates").Position} position
+ * @returns {import("react").CSSProperties}
+ */
+function positionToStyle({ top, left }) {
+  return {
+    top: `${top}px`,
+    left: `${left}px`
+  };
+}
+
 export default function FlyoutPresenter(props) {
   const {
     anchorPoint,
     children,
-    leftOffset,
     panel,
+    containerPosition,
+    pointerPosition,
     refAction,
     refContainer,
     refWrapper,
-    topOffset,
     transitionStatus
   } = props;
 
-  const containerStyle = { top: topOffset, left: leftOffset };
+  const containerStyle = positionToStyle(containerPosition);
+  const pointerStyle = positionToStyle(pointerPosition);
   const wrapperClasses = cx([
     "hig__flyout-v1",
     transitionStateToModifier[transitionStatus],
@@ -60,16 +72,17 @@ export default function FlyoutPresenter(props) {
       </div>
       <div
         className="hig__flyout-v1__container"
-        style={containerStyle}
         ref={refContainer}
+        style={containerStyle}
       >
         <div
-          className="hig__flyout-v1__chevron"
-          role="presentation"
           aria-hidden="true"
+          className="hig__flyout-v1__pointer"
+          role="presentation"
+          style={pointerStyle}
         />
         <div
-          className="hig__flyout-v1__chevron-cover"
+          className="hig__flyout-v1__pointer-cover"
           role="presentation"
           aria-hidden="true"
         />
@@ -81,18 +94,26 @@ export default function FlyoutPresenter(props) {
 
 FlyoutPresenter.defaultProps = {
   anchorPoint: anchorPoints.TOP_RIGHT,
+  containerPosition: { top: 0, left: 0 },
+  pointerPosition: { top: 0, left: 0 },
   transitionStatus: EXITED
 };
 
 FlyoutPresenter.propTypes = {
   /** Where the flyout will be anchored relative to target */
-  anchorPoint: PropTypes.oneOf(availableAnchorPoints).isRequired,
+  anchorPoint: PropTypes.oneOf(AVAILABLE_ANCHOR_POINTS).isRequired,
   /** Content for the flyout */
   panel: PropTypes.node,
   /** Top position of the container relative to the action */
-  topOffset: PropTypes.number,
+  containerPosition: PropTypes.shape({
+    top: PropTypes.number,
+    left: PropTypes.number
+  }),
   /** Left position of the container relative to the action */
-  leftOffset: PropTypes.number,
+  pointerPosition: PropTypes.shape({
+    top: PropTypes.number,
+    left: PropTypes.number
+  }),
   /** Reference the action element */
   refAction: PropTypes.func,
   /** Reference the container element */

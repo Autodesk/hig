@@ -17,9 +17,9 @@ describe("flyout/FlyoutPresenter/FlyoutPresenter", () => {
       props: {
         anchorPoint: anchorPoints.TOP_CENTER,
         content: "World",
+        containerPosition: { top: 42, left: 42 },
+        pointerPosition: { top: 42, left: 42 },
         maxHeight: 150,
-        topOffset: 42,
-        leftOffset: 42,
         refAction: function refAction() {},
         refContainer: function refContainer() {},
         refPanel: function refPanel() {},

@@ -25,19 +25,25 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders with all props 1`] = `
     className="hig__flyout-v1__container"
     style={
       Object {
-        "left": 42,
-        "top": 42,
+        "left": "42px",
+        "top": "42px",
       }
     }
   >
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__chevron"
+      className="hig__flyout-v1__pointer"
       role="presentation"
+      style={
+        Object {
+          "left": "42px",
+          "top": "42px",
+        }
+      }
     />
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__chevron-cover"
+      className="hig__flyout-v1__pointer-cover"
       role="presentation"
     />
   </div>
@@ -55,19 +61,25 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders without props 1`] = `
     className="hig__flyout-v1__container"
     style={
       Object {
-        "left": undefined,
-        "top": undefined,
+        "left": "0px",
+        "top": "0px",
       }
     }
   >
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__chevron"
+      className="hig__flyout-v1__pointer"
       role="presentation"
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
     />
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__chevron-cover"
+      className="hig__flyout-v1__pointer-cover"
       role="presentation"
     />
   </div>

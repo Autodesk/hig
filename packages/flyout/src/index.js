@@ -6,6 +6,11 @@ Flyout.Panel = Panel;
 export { Flyout as default, Panel };
 export {
   anchorPoints,
-  availableAnchorPoints,
-  availableAnchorPoints as AVAILABLE_ANCHOR_POINTS
+  AVAILABLE_ANCHOR_POINTS,
+  /** @todo Remove alias */
+  AVAILABLE_ANCHOR_POINTS as availableAnchorPoints
 } from "./anchorPoints";
+export {
+  offsetContainerVertical,
+  offsetPanelHorizontal
+} from "./coordinateHelpers";

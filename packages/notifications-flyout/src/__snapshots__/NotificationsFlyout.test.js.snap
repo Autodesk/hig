@@ -2,7 +2,7 @@
 
 exports[`notifications-flyout/NotificationsFlyout renders a notification with the \`children\` prop 1`] = `
 <div
-  className="hig__flyout-v1 hig__flyout-v1--exited hig__flyout-v1--right-top"
+  className="hig__flyout-v1 hig__flyout-v1--exited hig__flyout-v1--top-left"
 >
   <div
     className="hig__flyout-v1__action"
@@ -43,19 +43,25 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
     className="hig__flyout-v1__container"
     style={
       Object {
-        "left": undefined,
-        "top": undefined,
+        "left": "0px",
+        "top": "0px",
       }
     }
   >
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__chevron"
+      className="hig__flyout-v1__pointer"
       role="presentation"
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
     />
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__chevron-cover"
+      className="hig__flyout-v1__pointer-cover"
       role="presentation"
     />
     <div
@@ -127,7 +133,7 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
 
 exports[`notifications-flyout/NotificationsFlyout renders a notification with the \`notifications\` prop 1`] = `
 <div
-  className="hig__flyout-v1 hig__flyout-v1--exited hig__flyout-v1--right-top"
+  className="hig__flyout-v1 hig__flyout-v1--exited hig__flyout-v1--top-left"
 >
   <div
     className="hig__flyout-v1__action"
@@ -168,19 +174,25 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
     className="hig__flyout-v1__container"
     style={
       Object {
-        "left": undefined,
-        "top": undefined,
+        "left": "0px",
+        "top": "0px",
       }
     }
   >
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__chevron"
+      className="hig__flyout-v1__pointer"
       role="presentation"
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
     />
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__chevron-cover"
+      className="hig__flyout-v1__pointer-cover"
       role="presentation"
     />
     <div
@@ -252,7 +264,7 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
 
 exports[`notifications-flyout/NotificationsFlyout renders with all props 1`] = `
 <div
-  className="hig__flyout-v1 hig__flyout-v1--right-bottom"
+  className="hig__flyout-v1 hig__flyout-v1--top-left"
 >
   <div
     className="hig__flyout-v1__action"
@@ -293,19 +305,25 @@ exports[`notifications-flyout/NotificationsFlyout renders with all props 1`] = `
     className="hig__flyout-v1__container"
     style={
       Object {
-        "left": undefined,
-        "top": undefined,
+        "left": "0px",
+        "top": "0px",
       }
     }
   >
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__chevron"
+      className="hig__flyout-v1__pointer"
       role="presentation"
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
     />
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__chevron-cover"
+      className="hig__flyout-v1__pointer-cover"
       role="presentation"
     />
     <div
@@ -399,7 +417,7 @@ exports[`notifications-flyout/NotificationsFlyout renders with all props 1`] = `
 
 exports[`notifications-flyout/NotificationsFlyout renders without props 1`] = `
 <div
-  className="hig__flyout-v1 hig__flyout-v1--exited hig__flyout-v1--right-top"
+  className="hig__flyout-v1 hig__flyout-v1--exited hig__flyout-v1--top-left"
 >
   <div
     className="hig__flyout-v1__action"
@@ -440,19 +458,25 @@ exports[`notifications-flyout/NotificationsFlyout renders without props 1`] = `
     className="hig__flyout-v1__container"
     style={
       Object {
-        "left": undefined,
-        "top": undefined,
+        "left": "0px",
+        "top": "0px",
       }
     }
   >
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__chevron"
+      className="hig__flyout-v1__pointer"
       role="presentation"
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
     />
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__chevron-cover"
+      className="hig__flyout-v1__pointer-cover"
       role="presentation"
     />
     <div

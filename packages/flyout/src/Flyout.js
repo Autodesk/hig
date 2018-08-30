@@ -3,13 +3,15 @@ import PropTypes from "prop-types";
 import Transition from "react-transition-group/Transition";
 import { polyfill } from "react-lifecycles-compat";
 
-import { anchorPoints, availableAnchorPoints } from "./anchorPoints";
+import { anchorPoints, AVAILABLE_ANCHOR_POINTS } from "./anchorPoints";
 import FlyoutPresenter from "./presenters/FlyoutPresenter";
-import getFlyoutPosition from "./getFlyoutPosition";
+import getCoordinates, { getDefaultCoordinates } from "./getCoordinates";
 import PanelPresenter from "./presenters/PanelPresenter";
 import PanelContainerPresenter from "./presenters/PanelContainerPresenter";
 
 const TRANSITION_DURATION = 300;
+
+/** @typedef {import("./getCoordinates").Coordinates} Coordinates */
 
 /**
  * @typedef {Object} PanelRendererPayload
@@ -31,12 +33,22 @@ const TRANSITION_DURATION = 300;
 
 class Flyout extends Component {
   static propTypes = {
+    /** Manipulate flyout coordinates before rendering */
+    alterCoordinates: PropTypes.func,
     /** Where the flyout will be anchored relative to target */
-    anchorPoint: PropTypes.oneOf(availableAnchorPoints),
+    anchorPoint: PropTypes.oneOf(AVAILABLE_ANCHOR_POINTS).isRequired,
     /** Target component to open the flyout. Can be either a node or a render function */
     children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
     /** Content for the flyout. Can be either a node or a render function */
     content: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+    /**
+     * When the flyout overflows the viewport, it'll attempt to
+     * use the given anchor points in order to keep the flyout
+     * within the viewport.
+     */
+    fallbackAnchorPoints: PropTypes.arrayOf(
+      PropTypes.oneOf(AVAILABLE_ANCHOR_POINTS)
+    ).isRequired,
     /** Use to render a custom flyout panel. Can be either a node or a render function */
     panel: PropTypes.func,
     /** Max height of the flyout content, in pixels */
@@ -55,6 +67,7 @@ class Flyout extends Component {
 
   static defaultProps = {
     anchorPoint: anchorPoints.RIGHT_TOP,
+    fallbackAnchorPoints: AVAILABLE_ANCHOR_POINTS,
     /**
      * @param {PanelRendererPayload} payload
      */
@@ -85,30 +98,38 @@ class Flyout extends Component {
   }
 
   /**
-   * @returns {import("./getFlyoutPosition").FlyoutPosition}
+   * @returns {Coordinates}
    */
-  getPresenterPositionProps() {
-    const { anchorPoint } = this.props;
+  getCoordinates() {
+    const { alterCoordinates, anchorPoint, fallbackAnchorPoints } = this.props;
     const { actionRef, panelRef } = this.state;
 
-    if (!actionRef || !panelRef) {
-      return {
-        anchorPoint,
-        top: 0,
-        left: 0
-      };
+    if (!actionRef || !panelRef || typeof window === "undefined") {
+      return getDefaultCoordinates();
     }
 
     const actionRect = actionRef.getBoundingClientRect();
     const panelRect = panelRef.getBoundingClientRect();
     const viewportRect = window.document.documentElement.getBoundingClientRect();
-
-    return getFlyoutPosition({
+    const coordinates = getCoordinates({
       anchorPoint,
       actionRect,
+      fallbackAnchorPoints,
       panelRect,
       viewportRect
     });
+
+    if (alterCoordinates) {
+      const context = {
+        actionRect,
+        panelRect,
+        viewportRect
+      };
+
+      return alterCoordinates(coordinates, context);
+    }
+
+    return coordinates;
   }
 
   /**
@@ -190,27 +211,6 @@ class Flyout extends Component {
     this.setOpen(!this.state.open);
   }
 
-  createPresenterProps(transitionStatus) {
-    const { refContainer, refAction, refWrapper } = this;
-    const panel = this.renderPanel();
-    const {
-      anchorPoint,
-      topOffset,
-      leftOffset
-    } = this.getPresenterPositionProps();
-
-    return {
-      anchorPoint,
-      leftOffset,
-      panel,
-      refAction,
-      refContainer,
-      refWrapper,
-      topOffset,
-      transitionStatus
-    };
-  }
-
   /**
    * @returns {PanelRendererPayload}
    */
@@ -263,14 +263,35 @@ class Flyout extends Component {
     return children;
   }
 
+  renderPresenter = transitionStatus => {
+    const { refContainer, refAction, refWrapper } = this;
+    const panel = this.renderPanel();
+    const {
+      anchorPoint,
+      containerPosition,
+      pointerPosition
+    } = this.getCoordinates();
+
+    return (
+      <FlyoutPresenter
+        anchorPoint={anchorPoint}
+        panel={panel}
+        containerPosition={containerPosition}
+        pointerPosition={pointerPosition}
+        refAction={refAction}
+        refContainer={refContainer}
+        refWrapper={refWrapper}
+        transitionStatus={transitionStatus}
+      >
+        {this.renderChildren()}
+      </FlyoutPresenter>
+    );
+  };
+
   render() {
     return (
       <Transition in={this.isOpen()} timeout={TRANSITION_DURATION}>
-        {transitionStatus => (
-          <FlyoutPresenter {...this.createPresenterProps(transitionStatus)}>
-            {this.renderChildren()}
-          </FlyoutPresenter>
-        )}
+        {this.renderPresenter}
       </Transition>
     );
   }

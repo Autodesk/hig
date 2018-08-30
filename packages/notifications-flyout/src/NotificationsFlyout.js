@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import Flyout, { AVAILABLE_ANCHOR_POINTS } from "@hig/flyout";
+import Flyout, { anchorPoints, AVAILABLE_ANCHOR_POINTS } from "@hig/flyout";
 import "@hig/flyout/build/index.css";
 
 import EmptyStatePresenter from "./presenters/EmptyStatePresenter";
@@ -60,9 +60,11 @@ function createPanelRenderer({
 
 export default function NotificationsFlyout(props) {
   const {
+    alterCoordinates,
     anchorPoint,
     children,
     emptyMessage,
+    fallbackAnchorPoints,
     heading,
     indicatorTitle,
     loading,
@@ -86,7 +88,9 @@ export default function NotificationsFlyout(props) {
         unreadCount
       }) => (
         <Flyout
+          alterCoordinates={alterCoordinates}
           anchorPoint={anchorPoint}
+          fallbackAnchorPoints={fallbackAnchorPoints}
           onClickOutside={onClickOutside}
           onClose={handleClose}
           onScroll={onScroll}
@@ -113,13 +117,27 @@ export default function NotificationsFlyout(props) {
   );
 }
 
+NotificationsFlyout.defaultProps = {
+  anchorPoint: anchorPoints.TOP_RIGHT
+};
+
 NotificationsFlyout.propTypes = {
+  /** Manipulate flyout coordinates before each render */
+  alterCoordinates: PropTypes.func,
   /** Where the flyout will be anchored relative to target */
   anchorPoint: PropTypes.oneOf(AVAILABLE_ANCHOR_POINTS),
   /** Rendered notifications. It can contain one or more <Notification /> components. */
   children: PropTypes.node,
   /** The message displayed when there are no notifications */
   emptyMessage: PropTypes.string,
+  /**
+   * When the flyout overflows the viewport, it'll attempt to
+   * use the given anchor points in order to keep the flyout
+   * within the viewport.
+   */
+  fallbackAnchorPoints: PropTypes.arrayOf(
+    PropTypes.oneOf(AVAILABLE_ANCHOR_POINTS)
+  ),
   /** Flyout panel heading */
   heading: PropTypes.string,
   /** Indicator button title */
