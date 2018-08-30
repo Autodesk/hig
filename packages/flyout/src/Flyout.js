@@ -120,13 +120,13 @@ class Flyout extends Component {
     });
 
     if (alterCoordinates) {
-      const context = {
+      const rects = {
         actionRect,
         panelRect,
         viewportRect
       };
 
-      return alterCoordinates(coordinates, context);
+      return alterCoordinates(coordinates, rects);
     }
 
     return coordinates;
