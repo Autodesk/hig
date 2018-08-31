@@ -3,6 +3,8 @@ import { offsetContainerVertical, offsetPanelHorizontal } from "@hig/flyout";
 import NotificationsFlyout, { anchorPoints } from "@hig/notifications-flyout";
 import "@hig/notifications-flyout/build/index.css";
 
+import ActionPresenter from "./presenters/ActionPresenter";
+
 /** @typedef {import("@hig/flyout").Coordinates} Coordinates */
 
 export default class NotificationsAction extends Component {
@@ -24,7 +26,9 @@ export default class NotificationsAction extends Component {
     const { children, ...otherProps } = this.props;
 
     return (
-      <NotificationsFlyout {...otherProps}>{children}</NotificationsFlyout>
+      <ActionPresenter>
+        <NotificationsFlyout {...otherProps}>{children}</NotificationsFlyout>
+      </ActionPresenter>
     );
   }
 }
