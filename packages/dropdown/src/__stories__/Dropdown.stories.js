@@ -10,24 +10,37 @@ const storybook = storiesOf("Forms|Dropdown", module);
 
 class Sample extends React.Component {
   state = {
-    selected: false
+    item: "HIG Light Theme",
+    filter: ""
   };
 
-  handleChange = event => {
-    console.log(event);
-    this.setState({ selected: event.target.value });
+  handleOptionChange = optionValue => {
+    console.log("option changed: ", optionValue);
+    this.setState({ item: optionValue, filter: "" });
   };
+
+  handleTextEntryChange = inputValue => {
+    console.log("input value changed: ", inputValue);
+    this.setState({ item: inputValue, filter: inputValue });
+  };
+
+  filterOptions = () =>
+    this.props.options.filter(o =>
+      o.toLowerCase().match(this.state.filter.toLowerCase())
+    );
 
   render() {
+    const options = this.filterOptions();
     return (
       <Dropdown
         {...this.props}
-        onChange={event => {
-          console.log(event);
-        }}
-        onTextEntryChange={event => {
-          console.log(event);
-        }}
+        options={options}
+        onChange={this.handleOptionChange}
+        inputValue={
+          this.state.filter.length > 0 ? this.state.filter : this.state.item
+        }
+        onInputValueChange={this.handleTextEntryChange}
+        value={this.state.item}
       />
     );
   }
@@ -37,7 +50,7 @@ storybook.add(
   "default",
   withInfo(infoOptions)(() => {
     const props = {
-      hasTextEntry: true,
+      hasTextEntry: false,
       instructions: "Choose one HIG theme to apply to your entire app.",
       label: "HIG Theme",
       options: ["HIG Light Theme", "HIG Dark Blue Theme", "Matrix Theme"],
