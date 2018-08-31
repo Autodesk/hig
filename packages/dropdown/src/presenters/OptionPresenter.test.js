@@ -21,10 +21,7 @@ describe("Dropdown/presenters/OptionPresenter", () => {
         onClick: () => {},
         onMouseDown: () => {},
         onMouseMove: () => {},
-        onHover: () => {},
-        onSelect: () => {},
         selected: true,
-        value: "my value",
         children: <p key="p">hi</p>
       }
     }

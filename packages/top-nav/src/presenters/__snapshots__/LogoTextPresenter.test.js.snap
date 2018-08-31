@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`top-nav/presenters/LogoTextPresenter  1`] = `
+<h1
+  className="hig__top-nav__logo-text"
+>
+  <span>
+    Autodesk HIG
+  </span>
+</h1>
+`;

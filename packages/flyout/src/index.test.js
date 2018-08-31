@@ -25,6 +25,14 @@ describe("flyout/index", () => {
     {
       name: "default.Panel",
       value: expect.any(Function)
+    },
+    {
+      name: "offsetContainerVertical",
+      value: expect.any(Function)
+    },
+    {
+      name: "offsetPanelHorizontal",
+      value: expect.any(Function)
     }
   ].forEach(({ name, value }) => {
     it(`exports ${name}`, () => {
