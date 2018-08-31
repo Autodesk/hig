@@ -1,6 +1,7 @@
 /** @typedef {import("./getCoordinates").Coordinates} Coordinates */
 
 /**
+ * Vertically offsets the container
  * @param {Coordinates} coordinates
  * @param {number} diff
  * @returns {Coordinates}
@@ -16,6 +17,7 @@ export function offsetContainerVertical(coordinates, diff) {
 }
 
 /**
+ * Horizontally offsets the panel while maintaining the equivalent pointer position
  * @param {Coordinates} coordinates
  * @param {number} diff
  * @returns {Coordinates}
