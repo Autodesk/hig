@@ -2,7 +2,7 @@
 
 exports[`notifications-flyout/NotificationsFlyout renders a notification with the \`children\` prop 1`] = `
 <div
-  className="hig__flyout-v1 hig__flyout-v1--exited hig__flyout-v1--top-left"
+  className="hig__flyout-v1 hig__flyout-v1--exited hig__flyout-v1--top-left hig__flyout-v1--hidden"
 >
   <div
     className="hig__flyout-v1__action"
@@ -133,7 +133,7 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
 
 exports[`notifications-flyout/NotificationsFlyout renders a notification with the \`notifications\` prop 1`] = `
 <div
-  className="hig__flyout-v1 hig__flyout-v1--exited hig__flyout-v1--top-left"
+  className="hig__flyout-v1 hig__flyout-v1--exited hig__flyout-v1--top-left hig__flyout-v1--hidden"
 >
   <div
     className="hig__flyout-v1__action"
@@ -417,7 +417,7 @@ exports[`notifications-flyout/NotificationsFlyout renders with all props 1`] = `
 
 exports[`notifications-flyout/NotificationsFlyout renders without props 1`] = `
 <div
-  className="hig__flyout-v1 hig__flyout-v1--exited hig__flyout-v1--top-left"
+  className="hig__flyout-v1 hig__flyout-v1--exited hig__flyout-v1--top-left hig__flyout-v1--hidden"
 >
   <div
     className="hig__flyout-v1__action"
