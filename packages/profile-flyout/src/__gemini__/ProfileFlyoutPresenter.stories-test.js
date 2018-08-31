@@ -50,6 +50,7 @@ storiesOf("ProfileFlyoutPresenter", module)
       name={"Shuri Wright"}
       image={"http://placekitten.com/g/32/32"}
       open
-      children={renderChildren()}
-    />
+    >
+      {renderChildren()}
+    </ProfileFlyoutPresenter>
   ));

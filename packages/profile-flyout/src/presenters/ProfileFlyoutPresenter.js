@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import Avatar, { AVAILABLE_SIZES } from "@hig/avatar";
-// import Button, { availableSizes, availableTypes } from "@hig/button";
+import Avatar from "@hig/avatar";
 import Flyout, { anchorPoints } from "@hig/flyout";
 import "@hig/flyout/build/index.css";
 
@@ -31,7 +30,7 @@ export default class ProfileFlyoutPresenter extends Component {
   };
 
   render() {
-    const { image, name, open } = this.props;
+    const { children, image, name, open } = this.props;
 
     return (
       <div
@@ -42,19 +41,26 @@ export default class ProfileFlyoutPresenter extends Component {
       >
         <Flyout
           anchorPoint={anchorPoints.TOP_LEFT}
+          onClickOutside={this.props.onProfileClickOutside}
           open={open}
           panel={({ innerRef }) => (
             <Flyout.Panel innerRef={innerRef}>
               <ProfileContent
                 profileName={this.props.name}
                 profileEmail={this.props.email}
-                children={this.props.children}
-              />
+              >
+                {children}
+              </ProfileContent>
             </Flyout.Panel>
           )}
         >
           <div className="hig__profile-flyout__profile-image">
-            <Avatar image={image} name={name} size={"medium-32"} />
+            <Avatar
+              image={image}
+              name={name}
+              size={"medium-32"}
+              onClick={this.props.onProfileImageClick}
+            />
           </div>
         </Flyout>
       </div>

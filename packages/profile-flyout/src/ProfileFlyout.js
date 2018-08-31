@@ -29,29 +29,27 @@ export default class ProfileFlyout extends Component {
       image,
       name,
       onProfileClickOutside,
-      onProfileImageClick
+      onProfileImageClick,
+      open
     } = this.props;
 
     return (
       <ProfileFlyoutBehavior
         onProfileClickOutside={onProfileClickOutside}
         onProfileImageClick={onProfileImageClick}
+        open={open}
       >
-        {({
-          handleProfileClickOutside,
-          handleProfileImageClick,
-
-          open
-        }) => (
+        {({ handleProfileClickOutside, handleProfileImageClick }) => (
           <ProfileFlyoutPresenter
-            children={children}
             email={email}
             image={image}
             name={name}
             onProfileClickOutside={handleProfileClickOutside}
             onProfileImageClick={handleProfileImageClick}
             open={open}
-          />
+          >
+            {children}
+          </ProfileFlyoutPresenter>
         )}
       </ProfileFlyoutBehavior>
     );

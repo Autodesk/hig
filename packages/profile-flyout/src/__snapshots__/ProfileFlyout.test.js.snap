@@ -8,7 +8,7 @@ exports[`profile-flyout/ProfileFlyout integration renders correctly 1`] = `
   tabIndex="0"
 >
   <div
-    className="hig__flyout-v1 hig__flyout-v1--exited hig__flyout-v1--top-left"
+    className="hig__flyout-v1 hig__flyout-v1--top-left"
   >
     <div
       className="hig__flyout-v1__action"

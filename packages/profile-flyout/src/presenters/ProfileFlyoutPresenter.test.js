@@ -1,4 +1,3 @@
-import React from "react";
 import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
 import ProfileFlyoutPresenter from "./ProfileFlyoutPresenter";
 
@@ -17,11 +16,7 @@ takeSnapshotsOf(ProfileFlyoutPresenter, [
       onProfileImageClick: function onProfileImageClick() {},
       onProfileSettingsClick: function onProfileSettingsClick() {},
       onSignOutClick: function onSignOutClick() {},
-      open: true,
-      profileSettingsLabel: "Profile Settings",
-      profileSettingsLink: "https://www.autodesk.com/",
-      signOutLabel: "Sign Out",
-      signOutLink: "https://www.autodesk.com/"
+      open: true
     }
   }
 ]);
