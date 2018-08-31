@@ -1,3 +1,16 @@
+# [@hig/top-nav-v0.3.0](https://github.com/Autodesk/hig/compare/@hig/top-nav@0.2.1...@hig/top-nav@0.3.0) (2018-08-31)
+
+
+### Bug Fixes
+
+* correct profile action avatar alignment ([f92b9c4](https://github.com/Autodesk/hig/commit/f92b9c4))
+* wrap `NotificationAction` in `ActionPresenter` ([ab09b42](https://github.com/Autodesk/hig/commit/ab09b42))
+
+
+### Features
+
+* correct alignment of flyouts ([21b3f0a](https://github.com/Autodesk/hig/commit/21b3f0a))
+
 # [@hig/top-nav-v0.2.1](https://github.com/Autodesk/hig/compare/@hig/top-nav@0.2.0...@hig/top-nav@0.2.1) (2018-08-24)
 
 
