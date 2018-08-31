@@ -54,8 +54,9 @@ export default function FlyoutPresenter(props) {
   const {
     anchorPoint,
     children,
-    panel,
     containerPosition,
+    isVisible,
+    panel,
     pointerPosition,
     refAction,
     refContainer,
@@ -68,7 +69,8 @@ export default function FlyoutPresenter(props) {
   const wrapperClasses = cx([
     "hig__flyout-v1",
     transitionStateToModifier[transitionStatus],
-    anchorPointToModifier[anchorPoint]
+    anchorPointToModifier[anchorPoint],
+    { "hig__flyout-v1--hidden": !isVisible }
   ]);
 
   return (
@@ -115,6 +117,8 @@ FlyoutPresenter.propTypes = {
     top: PropTypes.number,
     left: PropTypes.number
   }),
+  /** Determines whether the flyout container is visible */
+  isVisible: PropTypes.bool,
   /** Left position of the container relative to the action */
   pointerPosition: PropTypes.shape({
     top: PropTypes.number,

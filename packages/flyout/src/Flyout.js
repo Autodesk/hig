@@ -1,15 +1,12 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import Transition from "react-transition-group/Transition";
-import { polyfill } from "react-lifecycles-compat";
 
 import { AVAILABLE_ANCHOR_POINTS } from "./anchorPoints";
+import ContainerTransition from "./behaviors/ContainerTransition";
 import FlyoutPresenter from "./presenters/FlyoutPresenter";
 import getCoordinates, { DEFAULT_COORDINATES } from "./getCoordinates";
-import PanelPresenter from "./presenters/PanelPresenter";
 import PanelContainerPresenter from "./presenters/PanelContainerPresenter";
-
-const TRANSITION_DURATION = 300;
+import PanelPresenter from "./presenters/PanelPresenter";
 
 /** @typedef {import("./getCoordinates").Coordinates} Coordinates */
 
@@ -31,7 +28,7 @@ const TRANSITION_DURATION = 300;
  * @property {HTMLDivElement} [wrapperRef]
  */
 
-class Flyout extends Component {
+export default class Flyout extends Component {
   static propTypes = {
     /** Manipulate flyout coordinates before rendering */
     alterCoordinates: PropTypes.func,
@@ -263,7 +260,7 @@ class Flyout extends Component {
     return children;
   }
 
-  renderPresenter = transitionStatus => {
+  renderPresenter = ({ transitionStatus, isVisible }) => {
     const { refContainer, refAction, refWrapper } = this;
     const panel = this.renderPanel();
     const {
@@ -275,8 +272,9 @@ class Flyout extends Component {
     return (
       <FlyoutPresenter
         anchorPoint={anchorPoint}
-        panel={panel}
         containerPosition={containerPosition}
+        isVisible={isVisible}
+        panel={panel}
         pointerPosition={pointerPosition}
         refAction={refAction}
         refContainer={refContainer}
@@ -290,11 +288,9 @@ class Flyout extends Component {
 
   render() {
     return (
-      <Transition in={this.isOpen()} timeout={TRANSITION_DURATION}>
+      <ContainerTransition open={this.isOpen()}>
         {this.renderPresenter}
-      </Transition>
+      </ContainerTransition>
     );
   }
 }
-
-export default polyfill(Flyout);

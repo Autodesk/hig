@@ -19,12 +19,14 @@
   // Bounce effect
   transition-timing-function: $container-transition-easing;
 
-  .hig__flyout-v1--exited & {
-    width: 0;
-    height: 0;
-    overflow: hidden;
+  .hig__flyout-v1--exited &,
+  .hig__flyout-v1--exiting & {
     touch-action: none;
     pointer-events: none;
+  }
+
+  .hig__flyout-v1--hidden & {
+    display: none;
   }
 }
 
