@@ -9,7 +9,6 @@ const knobGroupIds = {
 
 const knobLabels = {
   label: "Label",
-  hasTextEntry: "Has Text Entry",
   instructions: "Instructions",
   placeholder: "Placeholder",
   disabled: "Disabled",
@@ -19,7 +18,6 @@ const knobLabels = {
   onChange: "onChange",
   onClickOutside: "onClickOutside",
   onFocus: "onFocus",
-  onTextEntryChange: "onTextEntryChange",
   options: "Options",
   value: "Value"
 };
@@ -27,7 +25,6 @@ const knobLabels = {
 export default function getKnobs(props) {
   const {
     label = "",
-    hasTextEntry = false,
     instructions = "",
     placeholder = "",
     disabled = false,
@@ -55,17 +52,11 @@ export default function getKnobs(props) {
     placeholder: text(knobLabels.placeholder, placeholder, knobGroupIds.basic),
     disabled: boolean(knobLabels.disabled, disabled, knobGroupIds.basic),
     required: text(knobLabels.required, required, knobGroupIds.basic),
-    hasTextEntry: boolean(
-      knobLabels.hasTextEntry,
-      hasTextEntry,
-      knobGroupIds.basic
-    ),
     multiple: boolean(knobLabels.multiple, multiple, knobGroupIds.basic),
     onBlur: action(knobLabels.onBlur),
     onChange: action(knobLabels.onChange),
     onClickOutside: action(knobLabels.onClickOutside),
     onFocus: action(knobLabels.onFocus),
-    onTextEntryChange: action(knobLabels.onTextEntryChange),
     options: object(knobLabels.options, options, knobGroupIds.basic)
   };
 }

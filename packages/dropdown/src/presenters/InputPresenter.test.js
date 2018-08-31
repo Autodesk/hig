@@ -24,10 +24,8 @@ describe("Dropdown/presenters/InputPresenter", () => {
         disabled: true,
         required: "this is required",
         onBlur: () => {},
-        onChange: () => {},
         onFocus: () => {},
-        onClick: () => {},
-        value: "the selected item's value"
+        onClick: () => {}
       }
     }
   ];
