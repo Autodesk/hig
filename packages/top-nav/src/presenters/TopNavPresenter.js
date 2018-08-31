@@ -1,14 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import "./TopNavPresenter.scss";
+
 export default function TopNav({ leftActions, rightActions, logo }) {
   return (
     <div className="hig__top-nav">
       {leftActions}
-      <div className="hig__top-nav__item">
-        <div className="hig__top-nav__logo-wrapper">{logo}</div>
-      </div>
-      <div className="hig__top-nav__spacer" />
+      <div className="hig__top-nav__logo-wrapper">{logo}</div>
+      <div role="presentation" aria-hidden className="hig__top-nav__spacer" />
       {rightActions}
     </div>
   );

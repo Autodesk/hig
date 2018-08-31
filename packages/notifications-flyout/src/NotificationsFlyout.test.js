@@ -28,6 +28,8 @@ describe("notifications-flyout/NotificationsFlyout", () => {
       desc: "renders with all props",
       props: {
         anchorPoint: anchorPoints.RIGHT_BOTTOM,
+        alterCoordinates: coordinates => coordinates,
+        fallbackAnchorPoints: [anchorPoints.LEFT_TOP],
         heading: "Hello",
         indicatorTitle: "World",
         loading: true,

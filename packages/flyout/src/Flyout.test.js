@@ -88,10 +88,6 @@ describe("flyout/Flyout", () => {
     const handleOpen = jest.fn();
     const handleClose = jest.fn();
 
-    afterEach(() => {
-      jest.resetAllMocks();
-    });
-
     function getHandler() {
       let handleChildClick;
       const wrapper = mount(
@@ -104,6 +100,11 @@ describe("flyout/Flyout", () => {
 
       return { handleChildClick, wrapper };
     }
+
+    afterEach(() => {
+      handleOpen.mockReset();
+      handleClose.mockReset();
+    });
 
     it("toggles the flyout between open and closed", () => {
       const { handleChildClick, wrapper } = getHandler();
@@ -131,6 +132,56 @@ describe("flyout/Flyout", () => {
       expect(handleClose).not.toHaveBeenCalled();
       handleChildClick();
       expect(handleClose).toHaveBeenCalled();
+    });
+  });
+
+  describe("alterCoordinates", () => {
+    const alterCoordinates = jest.fn();
+
+    beforeEach(() => {
+      alterCoordinates.mockImplementation(coordinates => coordinates);
+    });
+
+    afterEach(() => {
+      alterCoordinates.mockReset();
+    });
+
+    it("is called when rendering", () => {
+      mount(<Flyout alterCoordinates={alterCoordinates} />);
+
+      expect(alterCoordinates).toHaveBeenCalledWith(
+        {
+          anchorPoint: "top-left",
+          containerPosition: { left: 0, top: 7 },
+          pointerPosition: { left: -7, top: -5 }
+        },
+        {
+          actionRect: {
+            bottom: 0,
+            height: 0,
+            left: 0,
+            right: 0,
+            top: 0,
+            width: 0
+          },
+          panelRect: {
+            bottom: 0,
+            height: 0,
+            left: 0,
+            right: 0,
+            top: 0,
+            width: 0
+          },
+          viewportRect: {
+            bottom: 0,
+            height: 0,
+            left: 0,
+            right: 0,
+            top: 0,
+            width: 0
+          }
+        }
+      );
     });
   });
 });

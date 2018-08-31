@@ -1,11 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export default function Action({ children }) {
+import "./ActionPresenter.scss";
+
+export default function ActionPresenter({ children }) {
   return <div className="hig__top-nav__action">{children}</div>;
 }
 
-Action.propTypes = {
+ActionPresenter.propTypes = {
   /** Content to render inside an action */
   children: PropTypes.node
 };

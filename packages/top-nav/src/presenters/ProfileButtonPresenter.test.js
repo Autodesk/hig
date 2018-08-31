@@ -1,10 +1,10 @@
 import React from "react";
 import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
 
-import ProfileAction from "./ProfileAction";
+import ProfileButtonPresenter from "./ProfileButtonPresenter";
 
-describe("top-nav/presenters/ProfileAction", () => {
-  takeSnapshotsOf(ProfileAction, [
+describe("top-nav/presenters/ProfileButtonPresenter", () => {
+  takeSnapshotsOf(ProfileButtonPresenter, [
     {
       description: "renders with avatarName",
       props: {

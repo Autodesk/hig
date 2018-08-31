@@ -1,10 +1,10 @@
 import React from "react";
 import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
 
-import HelpAction from "./HelpAction";
+import HelpButtonPresenter from "./HelpButtonPresenter";
 
-describe("top-nav/presenters/HelpAction", () => {
-  takeSnapshotsOf(HelpAction, [
+describe("top-nav/presenters/HelpButtonPresenter", () => {
+  takeSnapshotsOf(HelpButtonPresenter, [
     {
       description: "renders with no props",
       props: {}

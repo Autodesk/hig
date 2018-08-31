@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`top-nav/Logo dangerously sets inner HTML 1`] = `
+exports[`top-nav/presenters/LogoPresenter dangerously sets inner HTML 1`] = `
 <div
   aria-label={undefined}
   className="hig__top-nav__logo"
@@ -15,7 +15,7 @@ exports[`top-nav/Logo dangerously sets inner HTML 1`] = `
 />
 `;
 
-exports[`top-nav/Logo renders as a link when a link is provided 1`] = `
+exports[`top-nav/presenters/LogoPresenter renders as a link when a link is provided 1`] = `
 <a
   aria-label={undefined}
   className="hig__top-nav__logo"
@@ -26,7 +26,7 @@ exports[`top-nav/Logo renders as a link when a link is provided 1`] = `
 />
 `;
 
-exports[`top-nav/Logo renders attributes for a11y 1`] = `
+exports[`top-nav/presenters/LogoPresenter renders attributes for a11y 1`] = `
 <div
   aria-label="a11y label"
   className="hig__top-nav__logo"
@@ -37,7 +37,7 @@ exports[`top-nav/Logo renders attributes for a11y 1`] = `
 />
 `;
 
-exports[`top-nav/Logo renders children that are strings with semantic markup 1`] = `
+exports[`top-nav/presenters/LogoPresenter renders children that are strings with semantic markup 1`] = `
 <div
   aria-label={undefined}
   className="hig__top-nav__logo"
@@ -54,7 +54,7 @@ exports[`top-nav/Logo renders children that are strings with semantic markup 1`]
 </div>
 `;
 
-exports[`top-nav/Logo renders with child components 1`] = `
+exports[`top-nav/presenters/LogoPresenter renders with child components 1`] = `
 <div
   aria-label={undefined}
   className="hig__top-nav__logo"
@@ -69,7 +69,7 @@ exports[`top-nav/Logo renders with child components 1`] = `
 </div>
 `;
 
-exports[`top-nav/Logo renders without props 1`] = `
+exports[`top-nav/presenters/LogoPresenter renders without props 1`] = `
 <div
   aria-label={undefined}
   className="hig__top-nav__logo"

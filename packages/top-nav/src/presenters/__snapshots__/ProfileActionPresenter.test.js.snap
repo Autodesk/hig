@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`top-nav/presenters/ProfileActionPresenter  1`] = `
+<div
+  className="hig__top-nav__profile-action"
+>
+  Peter Parker
+</div>
+`;
