@@ -1,3 +1,10 @@
+# [@hig/components-v0.7.0](https://github.com/Autodesk/hig/compare/@hig/components@0.6.0...@hig/components@0.7.0) (2018-08-31)
+
+
+### Features
+
+* upgrade dependencies for release ([036dcce](https://github.com/Autodesk/hig/commit/036dcce))
+
 # [@hig/components-v0.6.0](https://github.com/Autodesk/hig/compare/@hig/components@0.5.0...@hig/components@0.6.0) (2018-08-24)
 
 
