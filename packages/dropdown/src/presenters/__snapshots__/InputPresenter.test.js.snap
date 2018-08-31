@@ -87,11 +87,9 @@ exports[`Dropdown/presenters/InputPresenter renders without props 1`] = `
             className="hig__text-field-v1__input hig__text-field-v1__input--no-value"
             id="text-field-1"
             onBlur={[Function]}
-            onChange={[Function]}
             onFocus={[Function]}
             readOnly={true}
             type="button"
-            value=""
           />
         </div>
       </div>
