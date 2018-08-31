@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`profile-flyout/ProfileFlyout integration renders correctly 1`] = `
+<div
+  className="hig__profile-flyout"
+  onClick={[Function]}
+  role="button"
+  tabIndex="0"
+>
+  <div
+    className="hig__flyout-v1 hig__flyout-v1--exited hig__flyout-v1--top-left"
+  >
+    <div
+      className="hig__flyout-v1__action"
+    >
+      <div
+        className="hig__profile-flyout__profile-image"
+        onClick={[Function]}
+      >
+        <figure
+          aria-label="Avatar for Thelma Dickinson"
+          className="hig__avatarV2 hig__avatarV2--size--medium-32 hig__avatarV2__background--7"
+        >
+          <div
+            className="hig__avatarV2__image-wrapper"
+          >
+            <img
+              alt="Avatar image of Thelma Dickinson"
+              className="hig__avatarV2__image"
+              onError={[Function]}
+              src="http://placekitten.com/g/32/32"
+            />
+          </div>
+          <div
+            aria-hidden="true"
+            className="hig__avatarV2__initials"
+          >
+            TD
+          </div>
+        </figure>
+      </div>
+    </div>
+    <div
+      className="hig__flyout-v1__container"
+      style={
+        Object {
+          "left": undefined,
+          "top": undefined,
+        }
+      }
+    >
+      <div
+        aria-hidden="true"
+        className="hig__flyout-v1__chevron"
+        role="presentation"
+      />
+      <div
+        aria-hidden="true"
+        className="hig__flyout-v1__chevron-cover"
+        role="presentation"
+      />
+      <div
+        className="hig__flyout-v1__panel-container"
+        style={
+          Object {
+            "maxHeight": undefined,
+          }
+        }
+      >
+        <div
+          className="hig__flyout-v1__panel-container__inner"
+        >
+          <div
+            className="hig__profile-flyout__content"
+          >
+            <div
+              className="hig__profile-flyout__content__name"
+            >
+              Thelma Dickinson
+            </div>
+            <div
+              className="hig__profile-flyout__content__email"
+            >
+              thelma@autodesk.com
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
