@@ -1,3 +1,17 @@
+# [@hig/flyout-v0.4.0](https://github.com/Autodesk/hig/compare/@hig/flyout@0.3.0...@hig/flyout@0.4.0) (2018-08-31)
+
+
+### Bug Fixes
+
+* correct default anchor points ([5d44e45](https://github.com/Autodesk/hig/commit/5d44e45))
+* hide flyout container box model when fully exited ([6bbcd59](https://github.com/Autodesk/hig/commit/6bbcd59))
+* remove unused dependency ([ae8058c](https://github.com/Autodesk/hig/commit/ae8058c))
+
+
+### Features
+
+* add props for positioning ([e50a0fd](https://github.com/Autodesk/hig/commit/e50a0fd))
+
 # [@hig/flyout-v0.3.0](https://github.com/Autodesk/hig/compare/@hig/flyout@0.2.0...@hig/flyout@0.3.0) (2018-08-23)
 
 
