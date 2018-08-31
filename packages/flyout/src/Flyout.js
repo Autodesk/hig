@@ -260,7 +260,7 @@ export default class Flyout extends Component {
     return children;
   }
 
-  renderPresenter = ({ transitionStatus, isVisible }) => {
+  renderPresenter = transitionStatus => {
     const { refContainer, refAction, refWrapper } = this;
     const panel = this.renderPanel();
     const {
@@ -273,7 +273,6 @@ export default class Flyout extends Component {
       <FlyoutPresenter
         anchorPoint={anchorPoint}
         containerPosition={containerPosition}
-        isVisible={isVisible}
         panel={panel}
         pointerPosition={pointerPosition}
         refAction={refAction}

@@ -1,8 +1,8 @@
 import React from "react";
 import renderer from "react-test-renderer";
 import Button from "@hig/button";
-import { ENTERED } from "react-transition-group/Transition";
 
+import { transitionStatuses } from "../transitionStatuses";
 import { anchorPoints } from "../anchorPoints";
 import FlyoutPresenter from "./FlyoutPresenter";
 
@@ -25,7 +25,7 @@ describe("flyout/FlyoutPresenter/FlyoutPresenter", () => {
         refPanel: function refPanel() {},
         refWrapper: function refWrapper() {},
         onScroll: function onScroll() {},
-        transitionStatus: ENTERED,
+        transitionStatus: transitionStatuses.ENTERED,
         children: <Button title="Hello" />
       }
     }

@@ -8,7 +8,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders cor
   tabIndex="0"
 >
   <div
-    className="hig__flyout-v1 hig__flyout-v1--exited hig__flyout-v1--top-left hig__flyout-v1--hidden"
+    className="hig__flyout-v1 hig__flyout-v1--hidden hig__flyout-v1--top-left"
   >
     <div
       className="hig__flyout-v1__action"

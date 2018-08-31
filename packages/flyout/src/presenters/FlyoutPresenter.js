@@ -1,27 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
-import {
-  EXITED,
-  ENTERING,
-  ENTERED,
-  EXITING
-} from "react-transition-group/Transition";
-
 import { anchorPoints, AVAILABLE_ANCHOR_POINTS } from "../anchorPoints";
 import { DEFAULT_COORDINATES } from "../getCoordinates";
+import {
+  transitionStatuses,
+  AVAILABLE_TRANSITION_STATUSES
+} from "../transitionStatuses";
 import "./FlyoutPresenter.scss";
 
-const AVAILABLE_TRANSITION_STATUSES = Object.freeze([
-  EXITED,
-  ENTERING,
-  ENTERED,
-  EXITING
-]);
-
 const transitionStateToModifier = {
-  [EXITED]: "hig__flyout-v1--exited",
-  [EXITING]: "hig__flyout-v1--exiting"
+  [transitionStatuses.EXITED]: "hig__flyout-v1--exited",
+  [transitionStatuses.EXITING]: "hig__flyout-v1--exiting",
+  [transitionStatuses.HIDDEN]: "hig__flyout-v1--hidden"
 };
 
 const anchorPointToModifier = {
@@ -55,7 +46,6 @@ export default function FlyoutPresenter(props) {
     anchorPoint,
     children,
     containerPosition,
-    isVisible,
     panel,
     pointerPosition,
     refAction,
@@ -69,8 +59,7 @@ export default function FlyoutPresenter(props) {
   const wrapperClasses = cx([
     "hig__flyout-v1",
     transitionStateToModifier[transitionStatus],
-    anchorPointToModifier[anchorPoint],
-    { "hig__flyout-v1--hidden": !isVisible }
+    anchorPointToModifier[anchorPoint]
   ]);
 
   return (
@@ -104,7 +93,7 @@ FlyoutPresenter.defaultProps = {
   anchorPoint: DEFAULT_COORDINATES.anchorPoint,
   containerPosition: DEFAULT_COORDINATES.containerPosition,
   pointerPosition: DEFAULT_COORDINATES.pointerPosition,
-  transitionStatus: EXITED
+  transitionStatus: transitionStatuses.EXITED
 };
 
 FlyoutPresenter.propTypes = {
@@ -117,8 +106,6 @@ FlyoutPresenter.propTypes = {
     top: PropTypes.number,
     left: PropTypes.number
   }),
-  /** Determines whether the flyout container is visible */
-  isVisible: PropTypes.bool,
   /** Left position of the container relative to the action */
   pointerPosition: PropTypes.shape({
     top: PropTypes.number,
