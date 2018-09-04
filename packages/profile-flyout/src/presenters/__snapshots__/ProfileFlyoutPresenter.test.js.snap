@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[` 1`] = `
+exports[`profile-flyout/presenters/ProfileFlyoutPresenter  1`] = `
 <div
   className="hig__profile-flyout"
   onClick={undefined}
@@ -79,7 +79,7 @@ exports[` 1`] = `
 </div>
 `;
 
-exports[` 2`] = `
+exports[`profile-flyout/presenters/ProfileFlyoutPresenter  2`] = `
 <div
   className="hig__profile-flyout"
   onClick={[Function]}

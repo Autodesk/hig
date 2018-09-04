@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "@hig/button";
+import avatarImagePath from "@hig/storybook/storybook-support/fixtures/avatar/chris-reynolds.png";
 
 function renderChildren() {
   return (
@@ -30,7 +31,7 @@ export default [
     getProps: () => ({
       children: renderChildren(),
       email: "gonzalezd@autodesk.com",
-      image: "https://placekitten.com/g/50/50",
+      image: avatarImagePath,
       name: "David Gonzalez",
       profileSettingsLabel: "Profile Settings",
       profileSettingsLink: "https://www.autodesk.com/",

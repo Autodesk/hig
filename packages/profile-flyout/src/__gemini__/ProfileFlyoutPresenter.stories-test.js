@@ -1,6 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import Button from "@hig/button";
+import avatarImagePath from "@hig/storybook/storybook-support/fixtures/avatar/chris-reynolds.png";
 import ProfileFlyoutPresenter from "../presenters/ProfileFlyoutPresenter";
 
 import "./ProfileFlyoutPresenter.stories-test.scss";
@@ -33,14 +34,14 @@ storiesOf("ProfileFlyoutPresenter", module)
     <ProfileFlyoutPresenter
       email={"shuri@wakanda.gov"}
       name={"Shuri Wright"}
-      image={"http://placekitten.com/g/32/32"}
+      image={avatarImagePath}
     />
   ))
   .add("open", () => (
     <ProfileFlyoutPresenter
       email={"shuri@wakanda.gov"}
       name={"Shuri Wright"}
-      image={"http://placekitten.com/g/32/32"}
+      image={avatarImagePath}
       open
     />
   ))
@@ -48,7 +49,7 @@ storiesOf("ProfileFlyoutPresenter", module)
     <ProfileFlyoutPresenter
       email={"shuri@wakanda.gov"}
       name={"Shuri Wright"}
-      image={"http://placekitten.com/g/32/32"}
+      image={avatarImagePath}
       open
     >
       {renderChildren()}
