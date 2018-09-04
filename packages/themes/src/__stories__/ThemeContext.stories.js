@@ -25,6 +25,7 @@ themeContextStories.add(
   withInfo({
     propTables: [ThemeContext.Provider, ThemeContext.Consumer],
     propTablesExclude: [Banner],
+    /* eslint-disable-next-line react/no-danger */
     text: <div dangerouslySetInnerHTML={{ __html: readme }} />
   })(() => {
     const theme = select("Theme", themeOptions, "hig-light");

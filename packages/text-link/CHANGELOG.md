@@ -1,3 +1,10 @@
+# [@hig/text-link-v0.2.0](https://github.com/Autodesk/hig/compare/@hig/text-link@0.1.3...@hig/text-link@0.2.0) (2018-08-16)
+
+
+### Features
+
+* make textlink link prop optional and render a span tag if not provided ([af412b3](https://github.com/Autodesk/hig/commit/af412b3))
+
 <a name="@hig/text-link-v0.1.3"></a>
 # [@hig/text-link-v0.1.3](https://github.com/Autodesk/hig/compare/@hig/text-link@0.1.2...@hig/text-link@0.1.3) (2018-07-06)
 

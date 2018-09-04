@@ -1,6 +1,6 @@
 {
   "name": "@hig/side-nav",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "HIG SideNav components",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -21,7 +21,7 @@
   "dependencies": {
     "@hig/icon": "^0.2.0",
     "@hig/icon-button": "^0.2.0",
-    "@hig/skeleton-item": "^0.2.0",
+    "@hig/skeleton-item": "^0.3.0",
     "@hig/themes": "^0.3.0",
     "classnames": "^2.2.5",
     "prop-types": "^15.6.1"

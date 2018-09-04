@@ -18,7 +18,7 @@ export default class TextLink extends Component {
     /** Text content of the link */
     children: PropTypes.string,
     /** The href to link to. Note that this was previously 'href' in the version distributed with hig-react. */
-    link: PropTypes.string.isRequired,
+    link: PropTypes.string,
     /** Called when link is clicked */
     onClick: PropTypes.func,
     /** Specify the anchor tag's target */
@@ -36,17 +36,24 @@ export default class TextLink extends Component {
     const linkClasses = themeClass =>
       cx(themeClass, classNames.wrapper, wrapperModifiersByType[type]);
 
+    const Element = link ? "a" : "span";
+    const linkProps = link
+      ? {
+          href: link,
+          target
+        }
+      : { role: "button" };
+
     return (
       <ThemeContext.Consumer>
         {({ themeClass }) => (
-          <a
-            href={link}
+          <Element
+            {...linkProps}
             onClick={onClick}
             className={linkClasses(themeClass)}
-            target={target}
           >
             {children}
-          </a>
+          </Element>
         )}
       </ThemeContext.Consumer>
     );

@@ -1,5 +1,5 @@
 import { action } from "@storybook/addon-actions";
-import { text, boolean } from "@storybook/addon-knobs/react";
+import { text, boolean, select } from "@storybook/addon-knobs/react";
 
 const knobGroupIds = {
   basic: "Basic"
@@ -8,16 +8,37 @@ const knobGroupIds = {
 const knobLabels = {
   value: "Value",
   disabled: "Disabled",
-  onChange: "onChange"
+  onChange: "onChange",
+  onFocus: "onFocus",
+  onBlur: "onBlur",
+  onMouseEnter: "onMouseEnter",
+  onMouseLeave: "onMouseLeave",
+  variant: "variant"
+};
+
+const variantOptions = {
+  line: "Line",
+  box: "Box",
+  plain: "Plain"
 };
 
 export default function getKnobs(props) {
-  const { value, disabled, ...otherProps } = props;
+  const { value, variant, disabled, ...otherProps } = props;
 
   return {
     ...otherProps,
+    disabled: boolean(knobLabels.disabled, disabled, knobGroupIds.basic),
+    onBlur: action(knobLabels.onBlur),
     onChange: action(knobLabels.onChange),
-    value: text(knobLabels.value, value, knobGroupIds.basic),
-    disabled: boolean(knobLabels.disabled, disabled, knobGroupIds.basic)
+    onFocus: action(knobLabels.onFocus),
+    onMouseEnter: action(knobLabels.onMouseEnter),
+    onMouseLeave: action(knobLabels.onMouseLeave),
+    variant: select(
+      knobLabels.variant,
+      variantOptions,
+      variant,
+      knobGroupIds.basic
+    ),
+    value: text(knobLabels.value, value, knobGroupIds.basic)
   };
 }

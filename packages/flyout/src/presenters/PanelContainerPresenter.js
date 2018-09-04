@@ -5,12 +5,13 @@ import "./PanelContainerPresenter.scss";
 
 export default function PanelContainerPresenter(props) {
   const { children, innerRef, maxHeight } = props;
+  const maxHeightInPixels = maxHeight ? `${maxHeight}px` : undefined;
 
   return (
     <div
       className="hig__flyout-v1__panel-container"
       ref={innerRef}
-      style={{ maxHeight }}
+      style={{ maxHeight: maxHeightInPixels }}
     >
       <div className="hig__flyout-v1__panel-container__inner">{children}</div>
     </div>

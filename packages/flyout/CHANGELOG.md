@@ -1,3 +1,30 @@
+# [@hig/flyout-v0.4.0](https://github.com/Autodesk/hig/compare/@hig/flyout@0.3.0...@hig/flyout@0.4.0) (2018-08-31)
+
+
+### Bug Fixes
+
+* correct default anchor points ([5d44e45](https://github.com/Autodesk/hig/commit/5d44e45))
+* hide flyout container box model when fully exited ([6bbcd59](https://github.com/Autodesk/hig/commit/6bbcd59))
+* remove unused dependency ([ae8058c](https://github.com/Autodesk/hig/commit/ae8058c))
+
+
+### Features
+
+* add props for positioning ([e50a0fd](https://github.com/Autodesk/hig/commit/e50a0fd))
+
+# [@hig/flyout-v0.3.0](https://github.com/Autodesk/hig/compare/@hig/flyout@0.2.0...@hig/flyout@0.3.0) (2018-08-23)
+
+
+### Bug Fixes
+
+* move refs inside state to trigger render updates ([a1cc220](https://github.com/Autodesk/hig/commit/a1cc220))
+* provide anchorPoint to presenter when no refs are available ([afa9ef6](https://github.com/Autodesk/hig/commit/afa9ef6))
+
+
+### Features
+
+* **behavior:** correct controlled behavior ([b2bc76a](https://github.com/Autodesk/hig/commit/b2bc76a))
+
 # [@hig/flyout-v0.2.0](https://github.com/Autodesk/hig/compare/@hig/flyout@0.1.1...@hig/flyout@0.2.0) (2018-08-06)
 
 

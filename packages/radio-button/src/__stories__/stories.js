@@ -2,7 +2,10 @@ export default [
   {
     description: "default",
     getProps: () => ({
-      label: "Default"
+      defaultChecked: true,
+      label: "Default",
+      value: "Default",
+      name: "radiobutton"
     })
   }
 ];

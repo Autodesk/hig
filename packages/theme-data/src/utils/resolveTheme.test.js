@@ -63,6 +63,21 @@ describe("resolveTheme", () => {
         });
         expect(theme.ACCENT_COLOR).toEqual("rgba(255, 0, 0, 0.5)");
       });
+
+      it("allows the alpha to be overridden by the referencer", () => {
+        const theme = resolveTheme({
+          "BASICS.COLORS_RED_ALERT": {
+            value: "#FF0000",
+            transform: { alpha: 0.75 }
+          },
+          ACCENT_COLOR: {
+            value: { ref: "BASICS.COLORS_RED_ALERT" },
+            // overriding the transform here
+            transform: { alpha: 0.5 }
+          }
+        });
+        expect(theme.ACCENT_COLOR).toEqual("rgba(255, 0, 0, 0.5)");
+      });
     });
 
     describe("with an invalid color value", () => {

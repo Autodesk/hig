@@ -1,0 +1,256 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputPresenter renders by default 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  box-sizing: border-box;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  min-height: 24px;
+  padding-top: 5px;
+  padding-right: 0;
+  padding-bottom: 5px;
+  padding-left: 0;
+  outline: none;
+  font-size: 14px;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 600;
+  line-height: 1.4;
+  width: 100%;
+  color: #3c3c3c;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+<input
+  autoComplete={undefined}
+  className="emotion-0"
+  defaultValue={undefined}
+  disabled={undefined}
+  id={undefined}
+  inputMode={undefined}
+  maxLength={undefined}
+  minLength={undefined}
+  name={undefined}
+  onBlur={undefined}
+  onChange={undefined}
+  onFocus={undefined}
+  onInput={undefined}
+  onMouseEnter={undefined}
+  onMouseLeave={undefined}
+  pattern={undefined}
+  readOnly={undefined}
+  required={undefined}
+  spellCheck={undefined}
+  tabIndex={undefined}
+  value={undefined}
+/>
+`;
+
+exports[`InputPresenter renders when disabled 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  box-sizing: border-box;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  min-height: 24px;
+  padding-top: 5px;
+  padding-right: 0;
+  padding-bottom: 5px;
+  padding-left: 0;
+  outline: none;
+  font-size: 14px;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 600;
+  line-height: 1.4;
+  width: 100%;
+  color: #3c3c3c;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+<input
+  autoComplete={undefined}
+  className="emotion-0"
+  defaultValue={undefined}
+  disabled={undefined}
+  id={undefined}
+  inputMode={undefined}
+  maxLength={undefined}
+  minLength={undefined}
+  name={undefined}
+  onBlur={undefined}
+  onChange={undefined}
+  onFocus={undefined}
+  onInput={undefined}
+  onMouseEnter={undefined}
+  onMouseLeave={undefined}
+  pattern={undefined}
+  readOnly={undefined}
+  required={undefined}
+  spellCheck={undefined}
+  tabIndex={undefined}
+  value={undefined}
+/>
+`;
+
+exports[`InputPresenter renders with focus 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  box-sizing: border-box;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  min-height: 24px;
+  padding-top: 5px;
+  padding-right: 0;
+  padding-bottom: 5px;
+  padding-left: 0;
+  outline: none;
+  font-size: 14px;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 600;
+  line-height: 1.4;
+  width: 100%;
+  color: #3c3c3c;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+}
+
+<input
+  autoComplete={undefined}
+  className="emotion-0"
+  defaultValue={undefined}
+  disabled={undefined}
+  id={undefined}
+  inputMode={undefined}
+  maxLength={undefined}
+  minLength={undefined}
+  name={undefined}
+  onBlur={undefined}
+  onChange={undefined}
+  onFocus={undefined}
+  onInput={undefined}
+  onMouseEnter={undefined}
+  onMouseLeave={undefined}
+  pattern={undefined}
+  readOnly={undefined}
+  required={undefined}
+  spellCheck={undefined}
+  tabIndex={undefined}
+  value={undefined}
+/>
+`;
+
+exports[`InputPresenter renders with hover 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  box-sizing: border-box;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  min-height: 24px;
+  padding-top: 5px;
+  padding-right: 0;
+  padding-bottom: 5px;
+  padding-left: 0;
+  outline: none;
+  font-size: 14px;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 600;
+  line-height: 1.4;
+  width: 100%;
+  color: #3c3c3c;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+}
+
+<input
+  autoComplete={undefined}
+  className="emotion-0"
+  defaultValue={undefined}
+  disabled={undefined}
+  id={undefined}
+  inputMode={undefined}
+  maxLength={undefined}
+  minLength={undefined}
+  name={undefined}
+  onBlur={undefined}
+  onChange={undefined}
+  onFocus={undefined}
+  onInput={undefined}
+  onMouseEnter={undefined}
+  onMouseLeave={undefined}
+  pattern={undefined}
+  readOnly={undefined}
+  required={undefined}
+  spellCheck={undefined}
+  tabIndex={undefined}
+  value={undefined}
+/>
+`;
+
+exports[`InputPresenter renders with id 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  box-sizing: border-box;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  min-height: 24px;
+  padding-top: 5px;
+  padding-right: 0;
+  padding-bottom: 5px;
+  padding-left: 0;
+  outline: none;
+  font-size: 14px;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 600;
+  line-height: 1.4;
+  width: 100%;
+  color: #3c3c3c;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+<input
+  autoComplete={undefined}
+  className="emotion-0"
+  defaultValue={undefined}
+  disabled={undefined}
+  id="my_id"
+  inputMode={undefined}
+  maxLength={undefined}
+  minLength={undefined}
+  name={undefined}
+  onBlur={undefined}
+  onChange={undefined}
+  onFocus={undefined}
+  onInput={undefined}
+  onMouseEnter={undefined}
+  onMouseLeave={undefined}
+  pattern={undefined}
+  readOnly={undefined}
+  required={undefined}
+  spellCheck={undefined}
+  tabIndex={undefined}
+  value={undefined}
+/>
+`;

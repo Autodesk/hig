@@ -11,6 +11,10 @@ describe("flyout/index", () => {
       value: expect.any(Array)
     },
     {
+      name: "AVAILABLE_ANCHOR_POINTS",
+      value: expect.any(Array)
+    },
+    {
       name: "anchorPoints",
       value: expect.any(Object)
     },
@@ -20,6 +24,14 @@ describe("flyout/index", () => {
     },
     {
       name: "default.Panel",
+      value: expect.any(Function)
+    },
+    {
+      name: "offsetContainerVertical",
+      value: expect.any(Function)
+    },
+    {
+      name: "offsetPanelHorizontal",
       value: expect.any(Function)
     }
   ].forEach(({ name, value }) => {
