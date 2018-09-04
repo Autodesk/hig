@@ -2,7 +2,7 @@
 
 Checkboxes provide a control to select from a list of non-exclusive options.
 
-Read more about when and how to use the Checkbox component [on the website](https://hig.autodesk.com/web/components/form-elements).
+Read more about when and how to use the Checkbox component [on the website](https://hig.autodesk.com/web/components/inputs-and-controls#checkboxes).
 
 ## Getting started
 
