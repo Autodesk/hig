@@ -6,6 +6,10 @@
   display: inline-block;
 }
 
+.hig__flyout-v1__action {
+  display: flex;
+}
+
 .hig__flyout-v1__container {
   @import "../tokens.scss";
 
