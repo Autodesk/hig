@@ -6,7 +6,7 @@ export default [
     description: "default",
     getProps: () => ({
       anchorPoint: "top-center",
-      content: "Testing tooltip",
+      title: "Testing tooltip",
       children: <Button title="Open Tooltip" />
     })
   }

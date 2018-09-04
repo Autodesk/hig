@@ -1,1 +1,197 @@
-@import "~hig-react/lib/hig-react.css";
+@import "~@hig/styles/build/index.css";
+@import "~@hig/styles/mixins/colors.scss";
+@import "~@hig/styles/mixins/shadows.scss";
+@import "~@hig/styles/tokens/layers.scss";
+@import "./tokens.scss";
+
+$tooltip-placement-padding: 8px;
+$tooltip-arrow-distance: 3px;
+$tooltip-arrow-border-width: 5px;
+$tooltip-arrow-margin-top: -4px;
+
+.hig__tooltip {
+  font-family: $hig-font-family;
+  position: absolute;
+  display: inline-block;
+  list-style: none;
+  visibility: visible;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  z-index: 1070;
+
+  // to override user-agent styling for inputs
+  button, select {
+    font-family: $hig-font-family;
+  }
+}
+
+.hig__tooltip-inner {
+  color: $hig-tooltip-font-color;
+  background-color: $hig-tooltip-background-color;
+  padding: 6px 12px;
+  text-align: left;
+  border-radius: $hig-tooltip-border-radius;
+
+  img {
+    margin: auto;
+    height: 100%;
+    width: 100%;
+  }
+
+  .line {
+    border-top: 2px solid #000000;
+    padding-bottom: 6px;
+  }
+
+  a {
+    color: $hig-tooltip-font-color;
+    text-decoration: none;
+  }
+
+  .hig__tooltip-title {
+    font-weight: bold;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  .hig__tooltip-description {
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  .hig__tooltip-link {
+    text-align: right;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+}
+
+.hig__tooltip-children-wrapper {
+  display: inline-block;
+}
+
+.hig__tooltip-arrow {
+  position: absolute;
+  border: 0 solid transparent;
+  overflow: hidden;
+}
+
+.hig__tooltip-placement-top,
+.hig__tooltip-placement-topLeft,
+.hig__tooltip-placement-topRight {
+  padding: $tooltip-placement-padding 0 $tooltip-placement-padding 0;
+  @include fade_top_animation
+}
+
+.hig__tooltip-placement-right,
+.hig__tooltip-placement-rightTop,
+.hig__tooltip-placement-rightBottom {
+  padding: 0 $tooltip-placement-padding 0 $tooltip-placement-padding;
+  @include fade_right_animation
+}
+
+.hig__tooltip-placement-bottom,
+.hig__tooltip-placement-bottomLeft,
+.hig__tooltip-placement-bottomRight {
+  padding: $tooltip-placement-padding 0 $tooltip-placement-padding 0;
+  @include fade_bottom_animation;
+}
+
+.hig__tooltip-placement-left,
+.hig__tooltip-placement-leftTop,
+.hig__tooltip-placement-leftBottom {
+  padding: 0 $tooltip-placement-padding 0 $tooltip-placement-padding;
+  @include fade_left_animation
+}
+
+// arrow styles
+.hig__tooltip-placement-top .hig__tooltip-arrow,
+.hig__tooltip-placement-topLeft .hig__tooltip-arrow,
+.hig__tooltip-placement-topRight .hig__tooltip-arrow {
+  bottom: $tooltip-arrow-distance;
+  margin-left: $tooltip-arrow-margin-top;
+  border-width: $tooltip-arrow-border-width $tooltip-arrow-border-width 0;
+  border-top-color: $hig-tooltip-background-color;
+}
+
+.hig__tooltip-placement-bottom .hig__tooltip-arrow,
+.hig__tooltip-placement-bottomLeft .hig__tooltip-arrow,
+.hig__tooltip-placement-bottomRight .hig__tooltip-arrow {
+  top: $tooltip-arrow-distance;
+  margin-left: $tooltip-arrow-margin-top;
+  border-width: 0 $tooltip-arrow-border-width $tooltip-arrow-border-width;
+  border-bottom-color: $hig-tooltip-background-color;
+}
+
+.hig__tooltip-placement-right .hig__tooltip-arrow,
+.hig__tooltip-placement-rightTop .hig__tooltip-arrow,
+.hig__tooltip-placement-rightBottom .hig__tooltip-arrow {
+  left: $tooltip-arrow-distance;
+  margin-top: $tooltip-arrow-margin-top;
+  border-width: $tooltip-arrow-border-width $tooltip-arrow-border-width $tooltip-arrow-border-width 0;
+  border-right-color: $hig-tooltip-background-color;
+}
+
+.hig__tooltip-placement-left .hig__tooltip-arrow,
+.hig__tooltip-placement-leftTop .hig__tooltip-arrow,
+.hig__tooltip-placement-leftBottom .hig__tooltip-arrow {
+  right: $tooltip-arrow-distance;
+  margin-top: $tooltip-arrow-margin-top;
+  border-width: $tooltip-arrow-border-width 0 $tooltip-arrow-border-width $tooltip-arrow-border-width;
+  border-left-color: $hig-tooltip-background-color;
+}
+
+// tooltip positioning
+.hig__tooltip-placement-top .hig__tooltip-arrow {
+  left: 50%;
+}
+
+.hig__tooltip-placement-topLeft .hig__tooltip-arrow {
+  left: 15%;
+}
+
+.hig__tooltip-placement-topRight .hig__tooltip-arrow {
+  right: 15%;
+}
+
+.hig__tooltip-placement-right .hig__tooltip-arrow {
+  top: 50%;
+}
+
+.hig__tooltip-placement-rightTop .hig__tooltip-arrow {
+  top: 15%;
+  margin-top: 0
+}
+
+.hig__tooltip-placement-rightBottom .hig__tooltip-arrow {
+  bottom: 15%;
+}
+
+.hig__tooltip-placement-left .hig__tooltip-arrow {
+  top: 50%;
+}
+
+.hig__tooltip-placement-leftTop .hig__tooltip-arrow {
+  top: 15%;
+  margin-top: 0
+}
+
+.hig__tooltip-placement-leftBottom .hig__tooltip-arrow {
+  bottom: 15%;
+}
+
+.hig__tooltip-placement-bottom .hig__tooltip-arrow {
+  left: 50%;
+}
+
+.hig__tooltip-placement-bottomLeft .hig__tooltip-arrow {
+  left: 15%;
+}
+
+.hig__tooltip-placement-bottomRight .hig__tooltip-arrow {
+  right: 15%;
+}
+

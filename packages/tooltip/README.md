@@ -22,7 +22,7 @@ import '@hig/tooltip/build/index.css';
 ## Basic usage
 
 ```jsx
-<Tooltip anchorPoint="top-center" content="Testing tooltip">
+<Tooltip anchorPoint="top-center" title="Testing tooltip">
   <Button title="Open Tooltip" />
 </Tooltip>
 ```

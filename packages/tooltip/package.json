@@ -1,13 +1,9 @@
 {
   "name": "@hig/tooltip",
-  "version": "0.1.1-alpha",
+  "version": "0.1.0-alpha",
   "description": "HIG Tooltip",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Autodesk/hig.git"
-  },
   "publishConfig": {
     "access": "public"
   },
@@ -18,43 +14,34 @@
     "build/*"
   ],
   "dependencies": {
+    "@hig/flyout": "^0.2.0",
+    "@hig/styles": "^0.1.0",
     "classnames": "^2.2.5",
-    "hig-react": "0.29.0",
-    "prop-types": "^15.6.1",
-    "react-lifecycles-compat": "^3.0.4"
+    "emotion": "^9.2.4",
+    "prop-types": "^15.5.10",
+    "rc-tooltip": "^3.7.2",
+    "react-emotion": "^9.2.4",
+    "react-lifecycles-compat": "^3.0.2"
   },
   "peerDependencies": {
     "react": "^15.4.1 || ^16.3.2"
   },
   "devDependencies": {
-    "@hig/babel-preset": "^0.1.0",
-    "@hig/eslint-config": "^0.1.0",
-    "@hig/jest-preset": "^0.1.0",
-    "@hig/scripts": "^0.1.2",
-    "@hig/semantic-release-config": "^0.1.0",
-    "@hig/styles": "^0.2.3"
+    "@hig/babel-preset": "0.1.0",
+    "@hig/eslint-config": "0.1.0",
+    "@hig/scripts": "^0.1.0"
   },
   "scripts": {
     "build": "hig-scripts-build",
-    "lint": "hig-scripts-lint",
-    "test": "hig-scripts-test",
-    "release": "hig-scripts-release"
+    "lint": "eslint src --color --ext .js,.jsx"
   },
   "eslintConfig": {
     "extends": "@hig"
   },
-  "jest": {
-    "preset": "@hig/jest-preset"
-  },
-  "release": {
-    "extends": "@hig/semantic-release-config"
-  },
   "babel": {
     "env": {
       "test": {
-        "presets": [
-          "@hig/babel-preset/test"
-        ]
+        "presets": ["@hig/babel-preset/test"]
       }
     }
   }
