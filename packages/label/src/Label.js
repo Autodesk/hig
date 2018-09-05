@@ -6,9 +6,21 @@ import stylesheet from "./stylesheet";
 
 class Label extends Component {
   static propTypes = {
+    /**
+     * Content of the label, including the label text
+     */
     children: PropTypes.node,
-    disabled: PropTypes.bool, // eslint-disable-line react/no-unused-prop-types
+    /**
+     * Dims label text, signifying the related input or control is disabled
+     */
+    disabled: PropTypes.bool,
+    /**
+     * Reference to the HTML ID of the form element that this label represents
+     */
     htmlFor: PropTypes.string,
+    /**
+     * Reference to the HTML ID of the form that contains this label
+     */
     form: PropTypes.string
   };
 
