@@ -1,3 +1,10 @@
+# [@hig/flyout-v0.4.1](https://github.com/Autodesk/hig/compare/@hig/flyout@0.4.0...@hig/flyout@0.4.1) (2018-09-06)
+
+
+### Bug Fixes
+
+* flyout action alignment ([b7f242d](https://github.com/Autodesk/hig/commit/b7f242d))
+
 # [@hig/flyout-v0.4.0](https://github.com/Autodesk/hig/compare/@hig/flyout@0.3.0...@hig/flyout@0.4.0) (2018-08-31)
 
 

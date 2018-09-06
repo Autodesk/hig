@@ -1,3 +1,10 @@
+# [@hig/notifications-flyout-v0.1.1](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@0.1.0...@hig/notifications-flyout@0.1.1) (2018-09-06)
+
+
+### Bug Fixes
+
+* flyout action alignment ([b7f242d](https://github.com/Autodesk/hig/commit/b7f242d))
+
 # [@hig/notifications-flyout-v0.1.0](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@0.0.0...@hig/notifications-flyout@0.1.0) (2018-08-31)
 
 
