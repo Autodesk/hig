@@ -19,7 +19,7 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/flyout": "^0.4.0",
+    "@hig/flyout": "^0.4.1",
     "@hig/icon-button": "^0.2.0",
     "@hig/progress-ring": "^0.1.1-alpha",
     "@hig/rich-text": "^0.1.3",
