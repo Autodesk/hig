@@ -1,3 +1,10 @@
+# [@hig/top-nav-v0.3.1](https://github.com/Autodesk/hig/compare/@hig/top-nav@0.3.0...@hig/top-nav@0.3.1) (2018-09-06)
+
+
+### Bug Fixes
+
+* update dependencies to fix action alignment ([d464388](https://github.com/Autodesk/hig/commit/d464388))
+
 # [@hig/top-nav-v0.3.0](https://github.com/Autodesk/hig/compare/@hig/top-nav@0.2.1...@hig/top-nav@0.3.0) (2018-08-31)
 
 
