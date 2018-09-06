@@ -5,22 +5,18 @@ const knobGroupIds = {
 };
 
 const knobLabels = {
-  marginBottom: "Margin Bottom",
-  maxWidth: "Max Width",
-  height: "Height"
+  size: "Size",
+  spacing: "Spacing",
+  display: "Display"
 };
 
 export default function getKnobs(props) {
-  const { marginBottom, maxWidth, height, ...otherProps } = props;
+  const { size, spacing, display, ...otherProps } = props;
 
   return {
     ...otherProps,
-    marginBottom: text(
-      knobLabels.marginBottom,
-      marginBottom,
-      knobGroupIds.basic
-    ),
-    maxWidth: text(knobLabels.maxWidth, maxWidth, knobGroupIds.basic),
-    height: text(knobLabels.height, height, knobGroupIds.basic)
+    size: text(knobLabels.size, size, knobGroupIds.basic),
+    spacing: text(knobLabels.spacing, spacing, knobGroupIds.basic),
+    display: text(knobLabels.display, display, knobGroupIds.basic)
   };
 }

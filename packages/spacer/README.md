@@ -1,22 +1,21 @@
-# Skeleton Item
+# Spacer
 
-The Skeleton Item component renders a rectangular loading indicator, meant to serve as a placeholder until your actual content is ready to be rendered.
+The Spacer component renders a square of empty space, meant to add space around and in other components.
 
 ## Getting started
 
 ```
-yarn add @hig/skeleton-item
+yarn add @hig/spacer
 ```
 
-## Import the component and CSS
+## Import the component
 
 ```
-import SkeletonItem from '@hig/skeleton-item';
-import '@hig/skeleton-item/build/index.css';
+import Spacer from '@hig/spacer';
 ```
 
 ## Basic usage
 
 ```jsx
-<SkeletonItem maxWidth="400px" marginBottom="24px" />
+<Spacer spacing="xxl"/>
 ```
