@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tooltip/presenters/TextPresenter renders with children 1`] = `
+<div
+  className="hig__tooltip-v1__content"
+>
+  <span
+    className="hig__tooltip-v1__text-content"
+  >
+    <span
+      className="hig__typography hig__typography__text hig__typography--hig-white"
+      style={Object {}}
+    >
+      hi
+    </span>
+  </span>
+</div>
+`;
+
+exports[`tooltip/presenters/TextPresenter renders without props 1`] = `
+<div
+  className="hig__tooltip-v1__content"
+>
+  <span
+    className="hig__tooltip-v1__text-content"
+  >
+    <span
+      className="hig__typography hig__typography__text hig__typography--hig-white"
+      style={Object {}}
+    >
+      
+    </span>
+  </span>
+</div>
+`;

@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tooltip/presenters/PanelPresenter renders with all props 1`] = `
+<div
+  className="hig__tooltip-v1__panel"
+  onScroll={[Function]}
+  style={
+    Object {
+      "maxHeight": "42px",
+    }
+  }
+>
+  <div
+    className="hig__tooltip-v1__panel__inner"
+  >
+    Hello
+  </div>
+</div>
+`;
+
+exports[`tooltip/presenters/PanelPresenter renders without props 1`] = `
+<div
+  className="hig__tooltip-v1__panel"
+  onScroll={undefined}
+  style={
+    Object {
+      "maxHeight": undefined,
+    }
+  }
+>
+  <div
+    className="hig__tooltip-v1__panel__inner"
+  />
+</div>
+`;
