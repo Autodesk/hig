@@ -33,6 +33,14 @@ describe("flyout/index", () => {
       value: expect.any(Function)
     },
     {
+      name: "dislocateContainer",
+      value: expect.any(Function)
+    },
+    {
+      name: "offsetContainerHorizontal",
+      value: expect.any(Function)
+    },
+    {
       name: "offsetContainerVertical",
       value: expect.any(Function)
     },
