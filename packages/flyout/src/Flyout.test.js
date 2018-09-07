@@ -80,6 +80,13 @@ describe("flyout/Flyout", () => {
           content: renderContent,
           panel: renderPanelComplex
         }
+      },
+      {
+        desc: "renders a custom pointer",
+        props: {
+          ...basicProps,
+          pointer: <span>my custom pointer</span>
+        }
       }
     ]);
   });
@@ -149,39 +156,7 @@ describe("flyout/Flyout", () => {
     it("is called when rendering", () => {
       mount(<Flyout alterCoordinates={alterCoordinates} />);
 
-      expect(alterCoordinates).toHaveBeenCalledWith(
-        {
-          anchorPoint: "top-left",
-          containerPosition: { left: 0, top: 7 },
-          pointerPosition: { left: -7, top: -5 }
-        },
-        {
-          actionRect: {
-            bottom: 0,
-            height: 0,
-            left: 0,
-            right: 0,
-            top: 0,
-            width: 0
-          },
-          panelRect: {
-            bottom: 0,
-            height: 0,
-            left: 0,
-            right: 0,
-            top: 0,
-            width: 0
-          },
-          viewportRect: {
-            bottom: 0,
-            height: 0,
-            left: 0,
-            right: 0,
-            top: 0,
-            width: 0
-          }
-        }
-      );
+      expect(alterCoordinates).toMatchSnapshot();
     });
   });
 });

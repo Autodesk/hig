@@ -14,3 +14,4 @@ export {
   offsetContainerVertical,
   offsetPanelHorizontal
 } from "./coordinateHelpers";
+export { default as Pointer } from "./presenters/PointerPresenter";

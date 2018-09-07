@@ -32,7 +32,7 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders with all props 1`] = `
   >
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__pointer"
+      className="hig__flyout-v1__pointer-wrapper"
       role="presentation"
       style={
         Object {
@@ -40,12 +40,11 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders with all props 1`] = `
           "top": "42px",
         }
       }
-    />
-    <div
-      aria-hidden="true"
-      className="hig__flyout-v1__pointer-cover"
-      role="presentation"
-    />
+    >
+      <div>
+        I am a custom pointer
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -68,7 +67,7 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders without props 1`] = `
   >
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__pointer"
+      className="hig__flyout-v1__pointer-wrapper"
       role="presentation"
       style={
         Object {
@@ -76,12 +75,22 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders without props 1`] = `
           "top": "0px",
         }
       }
-    />
-    <div
-      aria-hidden="true"
-      className="hig__flyout-v1__pointer-cover"
-      role="presentation"
-    />
+    >
+      <svg
+        height="24"
+        viewBox="0 0 24 24"
+        width="24"
+      >
+        <polygon
+          fill="#d4dbe1"
+          points="0,12 12,0 24,12"
+        />
+        <polygon
+          fill="#fff"
+          points="2.5,12 12,2.5 21.5,12"
+        />
+      </svg>
+    </div>
   </div>
 </div>
 `;

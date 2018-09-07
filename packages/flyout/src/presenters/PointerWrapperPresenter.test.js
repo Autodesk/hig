@@ -1,0 +1,23 @@
+import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
+
+import PointerWrapperPresenter from "./PointerWrapperPresenter";
+
+describe("flyout/presenters/PointerWrapperPresenter", () => {
+  takeSnapshotsOf(PointerWrapperPresenter, [
+    {
+      description: "renders without props",
+      props: {}
+    },
+    {
+      description: "renders with all props",
+      props: {
+        children: "whoa there",
+        innerRef: function handleRef() {},
+        style: {
+          top: "1px",
+          left: "23px"
+        }
+      }
+    }
+  ]);
+});

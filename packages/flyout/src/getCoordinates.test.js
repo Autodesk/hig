@@ -20,6 +20,10 @@ describe("flyout/getCoordinates", () => {
       height: 150,
       top: 100,
       left: 100
+    },
+    pointerRect: {
+      width: 12,
+      height: 24
     }
   };
 
@@ -27,17 +31,7 @@ describe("flyout/getCoordinates", () => {
     it("calculates the position of the flyout container", () => {
       const result = getCoordinates(basicPayload);
 
-      expect(result).toMatchObject({
-        anchorPoint: basicPayload.anchorPoint,
-        containerPosition: {
-          top: 157,
-          left: -25
-        },
-        pointerPosition: {
-          top: -5,
-          left: 93
-        }
-      });
+      expect(result).toMatchSnapshot();
     });
 
     describe("when the declared anchor point doesn't fit in the viewport", () => {
@@ -52,17 +46,7 @@ describe("flyout/getCoordinates", () => {
           }
         });
 
-        expect(result).toMatchObject({
-          anchorPoint: anchorPoints.TOP_LEFT,
-          containerPosition: {
-            top: 157,
-            left: 0
-          },
-          pointerPosition: {
-            top: -5,
-            left: 68
-          }
-        });
+        expect(result).toMatchSnapshot();
       });
 
       describe("when none of the anchor points fit in the viewport", () => {
@@ -77,17 +61,7 @@ describe("flyout/getCoordinates", () => {
             }
           });
 
-          expect(result).toMatchObject({
-            anchorPoint: basicPayload.anchorPoint,
-            containerPosition: {
-              top: 157,
-              left: -25
-            },
-            pointerPosition: {
-              top: -5,
-              left: 93
-            }
-          });
+          expect(result).toMatchSnapshot();
         });
       });
     });
