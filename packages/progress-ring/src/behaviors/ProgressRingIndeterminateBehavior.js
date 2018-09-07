@@ -5,7 +5,7 @@ import { CSSTransition } from "react-transition-group";
 const CYCLE_DURATION = 1000;
 const FADE_DURATION = 416;
 
-export default class ProgressRingDeterminateBehavior extends Component {
+export default class ProgressRingIndeterminateBehavior extends Component {
   static propTypes = {
     /** Render prop */
     children: PropTypes.func.isRequired

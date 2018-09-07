@@ -29,9 +29,11 @@ export default class ProgressRing extends Component {
       percentComplete === undefined
         ? ProgressRingIndeterminateBehavior
         : ProgressRingDeterminateBehavior;
+    const behaviorProps =
+      percentComplete === undefined ? {} : { percentComplete };
 
     return (
-      <ProgressRingBehavior percentComplete={percentComplete}>
+      <ProgressRingBehavior {...behaviorProps}>
         {({ innerRef }) => (
           <ProgressRingPresenter
             innerRef={innerRef}

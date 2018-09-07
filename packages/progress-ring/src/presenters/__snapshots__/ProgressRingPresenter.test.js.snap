@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`progress-ring/presenters/ProgressRingPresenter renders with all props 1`] = `
+<div
+  aria-valuemax="100"
+  aria-valuemin="0"
+  aria-valuenow={33}
+  className="hig__progress-ring"
+  role="progressbar"
+>
+  <test-file-stub
+    height={28}
+    width={28}
+  />
+</div>
+`;
+
+exports[`progress-ring/presenters/ProgressRingPresenter renders without props 1`] = `
+<div
+  aria-valuemax="100"
+  aria-valuemin="0"
+  aria-valuenow={undefined}
+  className="hig__progress-ring"
+  role="progressbar"
+>
+  <test-file-stub
+    height={72}
+    width={72}
+  />
+</div>
+`;
