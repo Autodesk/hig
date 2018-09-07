@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import "./ProfileContentPresenter.scss";
+import "./ProfileContent.scss";
 
 export default function ProfileContent(props) {
   const { profileName, profileEmail, children } = props;

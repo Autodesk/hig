@@ -18,24 +18,14 @@ exports[`profile-flyout/ProfileFlyout integration renders correctly 1`] = `
         onClick={[Function]}
       >
         <figure
-          aria-label="Avatar for Thelma Dickinson"
-          className="hig__avatarV2 hig__avatarV2--size--medium-32 hig__avatarV2__background--7"
+          aria-label="Avatar for "
+          className="hig__avatarV2 hig__avatarV2--size--medium-32 hig__avatarV2__background--NaN"
         >
-          <div
-            className="hig__avatarV2__image-wrapper"
-          >
-            <img
-              alt="Avatar image of Thelma Dickinson"
-              className="hig__avatarV2__image"
-              onError={[Function]}
-              src="http://placekitten.com/g/32/32"
-            />
-          </div>
           <div
             aria-hidden="true"
             className="hig__avatarV2__initials"
           >
-            TD
+            
           </div>
         </figure>
       </div>
@@ -69,22 +59,7 @@ exports[`profile-flyout/ProfileFlyout integration renders correctly 1`] = `
       >
         <div
           className="hig__flyout-v1__panel-container__inner"
-        >
-          <div
-            className="hig__profile-flyout__content"
-          >
-            <div
-              className="hig__profile-flyout__content__name"
-            >
-              Thelma Dickinson
-            </div>
-            <div
-              className="hig__profile-flyout__content__email"
-            >
-              thelma@autodesk.com
-            </div>
-          </div>
-        </div>
+        />
       </div>
     </div>
   </div>

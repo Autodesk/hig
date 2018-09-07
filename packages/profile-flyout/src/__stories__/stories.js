@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "@hig/button";
 import avatarImagePath from "@hig/storybook/storybook-support/fixtures/avatar/chris-reynolds.png";
+import ProfileContent from "../presenters/ProfileContent";
 
 function renderChildren() {
   return (
@@ -25,18 +26,24 @@ function renderChildren() {
   );
 }
 
+function renderProfileContent() {
+  return (
+    <ProfileContent
+      profileName={"David Gonzalez"}
+      profileEmail={"gonzalezd@autodesk.com"}
+    >
+      {renderChildren()}
+    </ProfileContent>
+  );
+}
+
 export default [
   {
     description: "default",
     getProps: () => ({
-      children: renderChildren(),
-      email: "gonzalezd@autodesk.com",
-      image: avatarImagePath,
-      name: "David Gonzalez",
-      profileSettingsLabel: "Profile Settings",
-      profileSettingsLink: "https://www.autodesk.com/",
-      signOutLabel: "Sign Out",
-      signOutLink: "https://www.autodesk.com/"
+      children: renderProfileContent(),
+      avatarImage: avatarImagePath,
+      avatarName: "David Gonzalez"
     })
   }
 ];

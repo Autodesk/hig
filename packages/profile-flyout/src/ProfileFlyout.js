@@ -6,14 +6,12 @@ import ProfileFlyoutBehavior from "./behaviors/ProfileFlyoutBehavior";
 
 export default class ProfileFlyout extends Component {
   static propTypes = {
-    /** Content to be rendered inside the flyout, other than name and email */
-    children: PropTypes.node,
-    /** Signed-in user's email address */
-    email: PropTypes.string,
     /** Url pointing to signed in user's avatar image */
-    image: PropTypes.string,
+    avatarImage: PropTypes.string,
     /** Signed-in user's name */
-    name: PropTypes.string,
+    avatarName: PropTypes.string,
+    /** Content to be rendered inside the flyout */
+    children: PropTypes.node,
     /** Called when user clicks away from the profile flyout */
     onProfileClickOutside: PropTypes.func,
     /** Called when user clicks the profile image */
@@ -24,10 +22,9 @@ export default class ProfileFlyout extends Component {
 
   render() {
     const {
+      avatarImage,
+      avatarName,
       children,
-      email,
-      image,
-      name,
       onProfileClickOutside,
       onProfileImageClick,
       open
@@ -41,9 +38,8 @@ export default class ProfileFlyout extends Component {
       >
         {({ handleProfileClickOutside, handleProfileImageClick }) => (
           <ProfileFlyoutPresenter
-            email={email}
-            image={image}
-            name={name}
+            image={avatarImage}
+            name={avatarName}
             onProfileClickOutside={handleProfileClickOutside}
             onProfileImageClick={handleProfileImageClick}
             open={open}

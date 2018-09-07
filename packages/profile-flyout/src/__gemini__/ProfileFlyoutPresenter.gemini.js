@@ -8,19 +8,10 @@ gemini.suite("ProfileFlyoutPresenter", () => {
       .capture("default");
   });
 
-  gemini.suite("open", suite => {
-    suite
-      .setUrl(
-        "iframe.html?selectedKind=ProfileFlyoutPresenter&selectedStory=open"
-      )
-      .setCaptureElements(".storybook-component")
-      .capture("open");
-  });
-
   gemini.suite("with children", suite => {
     suite
       .setUrl(
-        "iframe.html?selectedKind=ProfileFlyoutPresenter&selectedStory=with%20children"
+        "iframe.html?selectedKind=ProfileFlyoutPresenter&selectedStory=open%20with%20children"
       )
       .setCaptureElements(".storybook-component")
       .capture("with children");

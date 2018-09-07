@@ -4,15 +4,12 @@ import Avatar from "@hig/avatar";
 import Flyout, { anchorPoints } from "@hig/flyout";
 import "@hig/flyout/build/index.css";
 
-import ProfileContent from "./ProfileContentPresenter";
 import "./ProfileFlyoutPresenter.scss";
 
 export default class ProfileFlyoutPresenter extends Component {
   static propTypes = {
     /** Content to be rendered inside the flyout, other than name and email */
     children: PropTypes.node,
-    /** Signed-in user's email address */
-    email: PropTypes.string,
     /** Url pointing to signed in user's avatar image */
     image: PropTypes.string,
     /** Signed-in user's name */
@@ -44,14 +41,7 @@ export default class ProfileFlyoutPresenter extends Component {
           onClickOutside={this.props.onProfileClickOutside}
           open={open}
           panel={({ innerRef }) => (
-            <Flyout.Panel innerRef={innerRef}>
-              <ProfileContent
-                profileName={this.props.name}
-                profileEmail={this.props.email}
-              >
-                {children}
-              </ProfileContent>
-            </Flyout.Panel>
+            <Flyout.Panel innerRef={innerRef}>{children}</Flyout.Panel>
           )}
         >
           <div className="hig__profile-flyout__profile-image">

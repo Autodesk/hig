@@ -59,20 +59,7 @@ exports[`profile-flyout/presenters/ProfileFlyoutPresenter  1`] = `
       >
         <div
           className="hig__flyout-v1__panel-container__inner"
-        >
-          <div
-            className="hig__profile-flyout__content"
-          >
-            <div
-              className="hig__profile-flyout__content__name"
-            >
-              
-            </div>
-            <div
-              className="hig__profile-flyout__content__email"
-            />
-          </div>
-        </div>
+        />
       </div>
     </div>
   </div>
@@ -148,22 +135,7 @@ exports[`profile-flyout/presenters/ProfileFlyoutPresenter  2`] = `
       >
         <div
           className="hig__flyout-v1__panel-container__inner"
-        >
-          <div
-            className="hig__profile-flyout__content"
-          >
-            <div
-              className="hig__profile-flyout__content__name"
-            >
-              Thelma Dickinson
-            </div>
-            <div
-              className="hig__profile-flyout__content__email"
-            >
-              thelma@autodesk.com
-            </div>
-          </div>
-        </div>
+        />
       </div>
     </div>
   </div>

@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react";
 import Button from "@hig/button";
 import avatarImagePath from "@hig/storybook/storybook-support/fixtures/avatar/chris-reynolds.png";
 import ProfileFlyoutPresenter from "../presenters/ProfileFlyoutPresenter";
-
+import ProfileContent from "../presenters/ProfileContent";
 import "./ProfileFlyoutPresenter.stories-test.scss";
 
 function renderChildren() {
@@ -29,29 +29,30 @@ function renderChildren() {
   );
 }
 
+function renderProfileContent() {
+  return (
+    <ProfileContent
+      profileName={"Shuri Wright"}
+      profileEmail={"shuri@wakanda.gov"}
+    >
+      {renderChildren()}
+    </ProfileContent>
+  );
+}
+
 storiesOf("ProfileFlyoutPresenter", module)
   .add("default", () => (
     <ProfileFlyoutPresenter
-      email={"shuri@wakanda.gov"}
-      name={"Shuri Wright"}
-      image={avatarImagePath}
+      avatarName={"Shuri Wright"}
+      avatarImage={avatarImagePath}
     />
   ))
-  .add("open", () => (
+  .add("open with children", () => (
     <ProfileFlyoutPresenter
-      email={"shuri@wakanda.gov"}
-      name={"Shuri Wright"}
-      image={avatarImagePath}
-      open
-    />
-  ))
-  .add("with children", () => (
-    <ProfileFlyoutPresenter
-      email={"shuri@wakanda.gov"}
-      name={"Shuri Wright"}
-      image={avatarImagePath}
+      avatarName={"Shuri Wright"}
+      avatarImage={avatarImagePath}
       open
     >
-      {renderChildren()}
+      {renderProfileContent()}
     </ProfileFlyoutPresenter>
   ));
