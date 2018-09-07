@@ -58,6 +58,9 @@ export default class ProgressRingDeterminateBehavior extends Component {
     this.segments = Array.from(
       this.containerRef.querySelectorAll(".hig__progress-ring__segment")
     );
+    this.containerRef.querySelector(
+      ".hig__progress-ring__mask"
+    ).style.opacity = null;
     this.SEGMENT_COUNT = this.segments.length;
     this.FADE_DELAY_FACTOR = 1 / this.SEGMENT_COUNT;
   }

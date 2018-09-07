@@ -1,44 +1,42 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import Medium from "./progress-ring-m.svg";
-import Small from "./progress-ring-s.svg";
-import ExtraSmall from "./progress-ring-xs.svg";
+import SVGPresenter from "./SVGPresenter";
 
+import Small from "./smallSVG";
+import Medium from "./mediumSVG";
+import ExtraSmall from "./xsmallSVG";
 import availableSizes from "../availableSizes";
+
 import "./ProgressRingPresenter.scss";
 
 const sizes = {
   xs: {
     svg: ExtraSmall,
-    size: 20,
-    scale: 1
+    size: 20
   },
   s: {
     svg: Small,
-    size: 28,
-    scale: 1
+    size: 28
   },
   m: {
     svg: Medium,
-    size: 72,
-    scale: 1
+    size: 72
   },
   l: {
     svg: Medium,
-    size: 144,
-    scale: 2
+    size: 144
   },
   xl: {
     svg: Medium,
-    size: 242,
-    scale: 3.35
+    size: 242
   }
 };
 
 export default function ProgressRingPresenter(props) {
   const { innerRef, percentComplete, size } = props;
   const SVG = sizes[size].svg;
+  const originalSize = sizes[size].svg === Medium ? 72 : sizes[size].size;
 
   return (
     <div
@@ -49,7 +47,12 @@ export default function ProgressRingPresenter(props) {
       aria-valuenow={percentComplete}
       ref={innerRef}
     >
-      <SVG width={sizes[size].size} height={sizes[size].size} />
+      <SVGPresenter
+        height={sizes[size].size}
+        width={sizes[size].size}
+        original={originalSize}
+        svgData={SVG}
+      />
     </div>
   );
 }

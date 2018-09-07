@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`progress-ring/presenters/SVGPresenter renders with all props 1`] = `
+<svg
+  height={72}
+  version="1.1"
+  viewBox="0 0 72 72"
+  width={72}
+  xmlns="http://www.w3.org/2000/svg"
+  xmlnsXlink="http://www.w3.org/1999/xlink"
+/>
+`;

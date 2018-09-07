@@ -43,6 +43,9 @@ export default class ProgressRingIndeterminateBehavior extends Component {
       this.containerRef.querySelectorAll(".hig__progress-ring__segment")
     );
 
+    this.containerRef.querySelector(
+      ".hig__progress-ring__mask"
+    ).style.opacity = null;
     this.SEGMENT_COUNT = this.segments.length;
     this.SEGMENT_DELAY_FACTOR = CYCLE_DURATION / this.SEGMENT_COUNT;
   }
