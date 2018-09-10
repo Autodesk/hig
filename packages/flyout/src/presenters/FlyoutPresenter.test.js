@@ -26,6 +26,7 @@ describe("flyout/FlyoutPresenter/FlyoutPresenter", () => {
         refWrapper: function refWrapper() {},
         onScroll: function onScroll() {},
         transitionStatus: transitionStatuses.ENTERED,
+        pointer: <div>I am a custom pointer</div>,
         children: <Button title="Hello" />
       }
     }

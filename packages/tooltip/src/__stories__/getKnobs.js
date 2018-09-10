@@ -1,8 +1,12 @@
 import { action } from "@storybook/addon-actions";
-import { boolean, select, text } from "@storybook/addon-knobs/react";
-import { makeSelectOptions } from "@hig/storybook/utils";
+import { select } from "@storybook/addon-knobs/react";
+import {
+  controlledBool,
+  controlledNumber,
+  makeSelectOptions
+} from "@hig/storybook/utils";
 
-import { anchorPoints } from "../anchorPoints";
+import { anchorPoints } from "@hig/flyout";
 
 const anchorPointOptions = makeSelectOptions(anchorPoints);
 
@@ -12,13 +16,19 @@ const knobGroupIds = {
 
 const knobLabels = {
   anchorPoint: "Anchor Point",
-  content: "Content",
+  maxHeight: "Max Height",
   onClickOutside: "onClickOutside",
+  onScroll: "onScroll",
   open: "Open"
 };
 
 export default function getKnobs(props) {
-  const { anchorPoint, content, open, ...otherProps } = props;
+  const {
+    anchorPoint = anchorPoints.TOP_CENTER,
+    maxHeight,
+    open,
+    ...otherProps
+  } = props;
 
   return {
     ...otherProps,
@@ -28,9 +38,13 @@ export default function getKnobs(props) {
       anchorPoint,
       knobGroupIds.basic
     ),
-    content: text(knobLabels.content, content, knobGroupIds.basic),
+    maxHeight: controlledNumber(
+      knobLabels.maxHeight,
+      maxHeight,
+      knobGroupIds.basic
+    ),
     onClickOutside: action(knobLabels.onClickOutside),
     onScroll: action(knobLabels.onScroll),
-    open: boolean(knobLabels.open, open, knobGroupIds.basic)
+    open: controlledBool(knobLabels.open, open, knobGroupIds.basic)
   };
 }

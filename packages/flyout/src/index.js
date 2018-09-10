@@ -11,6 +11,9 @@ export {
   AVAILABLE_ANCHOR_POINTS as availableAnchorPoints
 } from "./anchorPoints";
 export {
+  dislocateContainer,
+  offsetContainerHorizontal,
   offsetContainerVertical,
   offsetPanelHorizontal
 } from "./coordinateHelpers";
+export { default as Pointer } from "./presenters/PointerPresenter";

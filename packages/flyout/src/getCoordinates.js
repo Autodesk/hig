@@ -5,6 +5,7 @@ import { anchorPoints } from "./anchorPoints";
  * @property {string} anchorPoint
  * @property {DOMRect} actionRect
  * @property {DOMRect} panelRect
+ * @property {DOMRect} pointerRect
  * @property {DOMRect} viewportRect
  */
 
@@ -21,8 +22,8 @@ import { anchorPoints } from "./anchorPoints";
  * @property {Position} pointerPosition
  */
 
-const CARET_SIZE = 14;
-const CARET_OVERLAP = 5;
+const ACTION_OVERLAP = 5;
+const POINTER_OVERLAP = 1;
 const {
   TOP_LEFT,
   TOP_CENTER,
@@ -59,25 +60,32 @@ export const DEFAULT_COORDINATES = Object.freeze({
  * @param {Payload} payload
  * @returns {number}
  */
-function calculatePointerTopOffset({ anchorPoint, actionRect, panelRect }) {
+function calculatePointerTopOffset({
+  anchorPoint,
+  actionRect,
+  panelRect,
+  pointerRect
+}) {
   switch (anchorPoint) {
     case TOP_CENTER:
     case TOP_LEFT:
     case TOP_RIGHT:
-      return -CARET_OVERLAP;
+      return (
+        -1 * (pointerRect.height - (pointerRect.height / 2 + POINTER_OVERLAP))
+      );
     case BOTTOM_CENTER:
     case BOTTOM_LEFT:
     case BOTTOM_RIGHT:
-      return panelRect.height - CARET_SIZE + CARET_OVERLAP;
+      return panelRect.height - (pointerRect.height / 2 + POINTER_OVERLAP);
     case LEFT_BOTTOM:
     case RIGHT_BOTTOM:
-      return panelRect.height - (actionRect.height / 2 + CARET_SIZE / 2);
+      return panelRect.height - actionRect.height / 2 - pointerRect.height / 2;
     case LEFT_CENTER:
     case RIGHT_CENTER:
-      return panelRect.height / 2 - CARET_SIZE / 2;
+      return panelRect.height / 2 - pointerRect.height / 2;
     case LEFT_TOP:
     case RIGHT_TOP:
-      return actionRect.height / 2 - CARET_SIZE / 2;
+      return actionRect.height / 2 - pointerRect.height / 2;
     default:
       return DEFAULT_COORDINATES.pointerPosition.top;
   }
@@ -87,25 +95,32 @@ function calculatePointerTopOffset({ anchorPoint, actionRect, panelRect }) {
  * @param {Payload} payload
  * @returns {number}
  */
-function calculatePointerLeftOffset({ anchorPoint, actionRect, panelRect }) {
+function calculatePointerLeftOffset({
+  anchorPoint,
+  actionRect,
+  panelRect,
+  pointerRect
+}) {
   switch (anchorPoint) {
     case LEFT_BOTTOM:
     case LEFT_CENTER:
     case LEFT_TOP:
-      return -CARET_OVERLAP;
+      return (
+        -1 * (pointerRect.width - (pointerRect.width / 2 + POINTER_OVERLAP))
+      );
     case RIGHT_BOTTOM:
     case RIGHT_CENTER:
     case RIGHT_TOP:
-      return panelRect.width - CARET_SIZE + CARET_OVERLAP;
+      return panelRect.width - (pointerRect.width / 2 + POINTER_OVERLAP);
     case TOP_CENTER:
     case BOTTOM_CENTER:
-      return panelRect.width / 2 - CARET_SIZE / 2;
+      return panelRect.width / 2 - pointerRect.width / 2;
     case TOP_LEFT:
     case BOTTOM_LEFT:
-      return actionRect.width / 2 - CARET_SIZE / 2;
+      return actionRect.width / 2 - pointerRect.width / 2;
     case TOP_RIGHT:
     case BOTTOM_RIGHT:
-      return panelRect.width - (actionRect.width / 2 + CARET_SIZE / 2);
+      return panelRect.width - (actionRect.width / 2 + pointerRect.width / 2);
     default:
       return DEFAULT_COORDINATES.pointerPosition.left;
   }
@@ -118,17 +133,18 @@ function calculatePointerLeftOffset({ anchorPoint, actionRect, panelRect }) {
 function calculatePanelContainerTopOffset({
   anchorPoint,
   actionRect,
-  panelRect
+  panelRect,
+  pointerRect
 }) {
   switch (anchorPoint) {
     case TOP_LEFT:
     case TOP_CENTER:
     case TOP_RIGHT:
-      return actionRect.height + CARET_SIZE / 2;
+      return actionRect.height + pointerRect.height / 2 - ACTION_OVERLAP;
     case BOTTOM_LEFT:
     case BOTTOM_CENTER:
     case BOTTOM_RIGHT:
-      return -1 * panelRect.height - CARET_SIZE / 2;
+      return -1 * panelRect.height - pointerRect.height / 2 + ACTION_OVERLAP;
     case LEFT_TOP:
     case RIGHT_TOP:
       return 0;
@@ -150,23 +166,24 @@ function calculatePanelContainerTopOffset({
 function calculatePanelContainerLeftOffset({
   anchorPoint,
   actionRect,
-  panelRect
+  panelRect,
+  pointerRect
 }) {
   switch (anchorPoint) {
     case LEFT_TOP:
     case LEFT_CENTER:
     case LEFT_BOTTOM:
-      return actionRect.width + CARET_SIZE / 2;
+      return actionRect.width + pointerRect.width / 2 - ACTION_OVERLAP;
     case RIGHT_TOP:
     case RIGHT_CENTER:
     case RIGHT_BOTTOM:
-      return -1 * panelRect.width - CARET_SIZE / 2;
+      return -1 * panelRect.width - pointerRect.width / 2 + ACTION_OVERLAP;
     case TOP_LEFT:
     case BOTTOM_LEFT:
       return 0;
     case TOP_CENTER:
     case BOTTOM_CENTER:
-      return (panelRect.width - actionRect.width) / -2;
+      return -1 * ((panelRect.width - actionRect.width) / 2);
     case TOP_RIGHT:
     case BOTTOM_RIGHT:
       return -1 * (panelRect.width - actionRect.width);

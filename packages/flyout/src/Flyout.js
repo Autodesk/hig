@@ -22,9 +22,9 @@ import PanelPresenter from "./presenters/PanelPresenter";
 /**
  * @typedef {Object} State
  * @property {HTMLElement} [actionRef]
- * @property {HTMLDivElement} [containerRef]
  * @property {boolean} open Used to direct the flyout's transition behavior
  * @property {HTMLElement} [panelRef]
+ * @property {SVGSVGElement} [pointerRef]
  * @property {HTMLDivElement} [wrapperRef]
  */
 
@@ -48,6 +48,8 @@ export default class Flyout extends Component {
     ).isRequired,
     /** Use to render a custom flyout panel. Can be either a node or a render function */
     panel: PropTypes.func,
+    /** A custom pointer */
+    pointer: PropTypes.node,
     /** Max height of the flyout content, in pixels */
     maxHeight: PropTypes.number,
     /** Function called when the flyout is open, and a click event occurs outside the flyout */
@@ -79,11 +81,7 @@ export default class Flyout extends Component {
 
   /** @type {State} */
   state = {
-    actionRef: undefined,
-    containerRef: undefined,
-    open: false,
-    panelRef: undefined,
-    wrapperRef: undefined
+    open: false
   };
 
   componentDidMount() {
@@ -99,20 +97,27 @@ export default class Flyout extends Component {
    */
   getCoordinates() {
     const { alterCoordinates, anchorPoint, fallbackAnchorPoints } = this.props;
-    const { actionRef, panelRef } = this.state;
+    const { actionRef, panelRef, pointerRef } = this.state;
 
-    if (!actionRef || !panelRef || typeof window === "undefined") {
+    if (
+      !actionRef ||
+      !panelRef ||
+      !pointerRef ||
+      typeof window === "undefined"
+    ) {
       return DEFAULT_COORDINATES;
     }
 
     const actionRect = actionRef.getBoundingClientRect();
     const panelRect = panelRef.getBoundingClientRect();
+    const pointerRect = pointerRef.getBoundingClientRect();
     const viewportRect = window.document.documentElement.getBoundingClientRect();
     const coordinates = getCoordinates({
       anchorPoint,
       actionRect,
       fallbackAnchorPoints,
       panelRect,
+      pointerRect,
       viewportRect
     });
 
@@ -120,6 +125,7 @@ export default class Flyout extends Component {
       const rects = {
         actionRect,
         panelRect,
+        pointerRect,
         viewportRect
       };
 
@@ -180,10 +186,10 @@ export default class Flyout extends Component {
   };
 
   /**
-   * @param {HTMLDivElement} containerRef
+   * @param {SVGSVGElement} pointerRef
    */
-  refContainer = containerRef => {
-    this.setState({ containerRef });
+  refPointer = pointerRef => {
+    this.setState({ pointerRef });
   };
 
   /**
@@ -261,7 +267,8 @@ export default class Flyout extends Component {
   }
 
   renderPresenter = transitionStatus => {
-    const { refContainer, refAction, refWrapper } = this;
+    const { refAction, refPointer, refWrapper } = this;
+    const { pointer } = this.props;
     const panel = this.renderPanel();
     const {
       anchorPoint,
@@ -274,9 +281,10 @@ export default class Flyout extends Component {
         anchorPoint={anchorPoint}
         containerPosition={containerPosition}
         panel={panel}
+        pointer={pointer}
         pointerPosition={pointerPosition}
         refAction={refAction}
-        refContainer={refContainer}
+        refPointer={refPointer}
         refWrapper={refWrapper}
         transitionStatus={transitionStatus}
       >
