@@ -1,8 +1,9 @@
+/* eslint-disable react/no-unused-prop-types */
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
 import { ThemeContext } from "@hig/themes";
-import { AVAILABLE_SPACINGS } from "@hig/theme-data-poc";
+import { AVAILABLE_SPACINGS } from "./constants";
 import stylesheet from "./stylesheet";
 
 export default class Spacer extends Component {
