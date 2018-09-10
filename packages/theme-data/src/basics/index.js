@@ -1,3 +1,4 @@
+import AVAILABLE_SPACINGS from "./availableSpacings";
 import BORDER_RADII from "./borderRadii";
 import BORDER_WIDTHS from "./borderWidths";
 import COLORS from "./colors";
@@ -9,6 +10,7 @@ import SHADOWS from "./shadows";
 import SPACINGS from "./spacings";
 
 export default {
+  AVAILABLE_SPACINGS,
   BORDER_RADII,
   BORDER_WIDTHS,
   COLORS,

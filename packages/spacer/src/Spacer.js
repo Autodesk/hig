@@ -1,42 +1,29 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import cx from "classnames";
+import { css } from "emotion";
 import { ThemeContext } from "@hig/themes";
-
+import { AVAILABLE_SPACINGS } from "@hig/theme-data-poc";
 import stylesheet from "./stylesheet";
 
 export default class Spacer extends Component {
   static propTypes = {
-    /** Sets display type for element  */
-    display: PropTypes.oneOf(["block", "flex", "inline-block"]),
     /** Used for passing custom values to the spacer, in lieu of a fixed amount */
     size: PropTypes.string,
     /** Sets the size of the spacer */
-    spacing: PropTypes.oneOf(["xxs", "s", "m", "l", "xl", "xxl"])
+    spacing: PropTypes.oneOf(AVAILABLE_SPACINGS)
   };
 
   static defaultProps = {
-    spacing: "m",
-    display: "flex"
+    spacing: "m"
   };
 
   render() {
-    const { display, size, spacing } = this.props;
-
     return (
       <ThemeContext.Consumer>
         {({ themeData }) => {
           const styles = stylesheet(this.props, themeData);
 
-          return (
-            <div
-              className={cx("hig__spacer-v1", themeData)}
-              display={display}
-              size={size}
-              spacing={spacing}
-              style={styles.spacer}
-            />
-          );
+          return <div className={css(styles.spacer)} />;
         }}
       </ThemeContext.Consumer>
     );

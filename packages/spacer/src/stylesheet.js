@@ -7,7 +7,7 @@ export default function stylesheet(props, themeData) {
     spacer: {
       width: props.size ? props.size : getSpacing(props.spacing, themeData),
       height: props.size ? props.size : getSpacing(props.spacing, themeData),
-      display: props.display
+      display: "block"
     }
   };
 }

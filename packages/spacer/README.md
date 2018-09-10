@@ -19,3 +19,10 @@ import Spacer from '@hig/spacer';
 ```jsx
 <Spacer spacing="xxl"/>
 ```
+## With a specific size
+
+```jsx
+<Spacer size="32px"/>
+```
+
+If both properties are provided, `size` will override the `spacing` value.

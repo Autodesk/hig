@@ -8,7 +8,7 @@ exports[`spacer/Spacer snapshot tests renders with no props 1`] = `
   spacing="m"
   style={
     Object {
-      "display": "flex",
+      "display": "block",
       "height": "16px",
       "width": "16px",
     }
@@ -24,7 +24,7 @@ exports[`spacer/Spacer snapshot tests renders with size 1`] = `
   spacing="m"
   style={
     Object {
-      "display": "flex",
+      "display": "block",
       "height": "40px",
       "width": "40px",
     }
@@ -40,7 +40,7 @@ exports[`spacer/Spacer snapshot tests renders with size and spacing 1`] = `
   spacing="m"
   style={
     Object {
-      "display": "flex",
+      "display": "block",
       "height": "40px",
       "width": "40px",
     }
@@ -56,7 +56,7 @@ exports[`spacer/Spacer snapshot tests renders with spacing 1`] = `
   spacing="m"
   style={
     Object {
-      "display": "flex",
+      "display": "block",
       "height": "16px",
       "width": "16px",
     }
