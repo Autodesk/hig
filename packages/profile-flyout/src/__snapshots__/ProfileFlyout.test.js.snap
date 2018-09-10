@@ -34,21 +34,37 @@ exports[`profile-flyout/ProfileFlyout integration renders correctly 1`] = `
       className="hig__flyout-v1__container"
       style={
         Object {
-          "left": undefined,
-          "top": undefined,
+          "left": "0px",
+          "top": "0px",
         }
       }
     >
       <div
         aria-hidden="true"
-        className="hig__flyout-v1__chevron"
+        className="hig__flyout-v1__pointer-wrapper"
         role="presentation"
-      />
-      <div
-        aria-hidden="true"
-        className="hig__flyout-v1__chevron-cover"
-        role="presentation"
-      />
+        style={
+          Object {
+            "left": "0px",
+            "top": "0px",
+          }
+        }
+      >
+        <svg
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+        >
+          <polygon
+            fill="#d4dbe1"
+            points="0,12 12,0 24,12"
+          />
+          <polygon
+            fill="#fff"
+            points="2.5,12 12,2.5 21.5,12"
+          />
+        </svg>
+      </div>
       <div
         className="hig__flyout-v1__panel-container"
         style={

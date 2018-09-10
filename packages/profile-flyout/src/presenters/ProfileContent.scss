@@ -25,20 +25,4 @@
     line-height: 16px;
     font-size: 12px;
   }
-
-  &__links {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 10px;
-    min-width: 225px;
-  }
-
-  &__link {
-    margin-top: 10px;
-    margin-right: 10px;
-
-    &:last-child {
-      margin-right: unset;
-    }
-  }
 }
