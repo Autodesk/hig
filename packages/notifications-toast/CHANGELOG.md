@@ -1,3 +1,10 @@
+# [@hig/notifications-toast-v0.1.1](https://github.com/Autodesk/hig/compare/@hig/notifications-toast@0.1.0...@hig/notifications-toast@0.1.1) (2018-09-11)
+
+
+### Bug Fixes
+
+* import missing dependency styles ([e806451](https://github.com/Autodesk/hig/commit/e806451))
+
 # [@hig/notifications-toast-v0.1.0](https://github.com/Autodesk/hig/compare/@hig/notifications-toast@0.0.0...@hig/notifications-toast@0.1.0) (2018-09-11)
 
 
