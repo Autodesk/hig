@@ -1,3 +1,10 @@
+# [@hig/modal-v0.1.1](https://github.com/Autodesk/hig/compare/@hig/modal@0.1.0...@hig/modal@0.1.1) (2018-09-11)
+
+
+### Bug Fixes
+
+* add missing `[@hig](https://github.com/hig)/icon-button` dependency ([01ccb76](https://github.com/Autodesk/hig/commit/01ccb76))
+
 # [@hig/modal-v0.1.0](https://github.com/Autodesk/hig/compare/@hig/modal@0.0.0...@hig/modal@0.1.0) (2018-09-11)
 
 

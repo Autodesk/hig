@@ -1,3 +1,10 @@
+# [@hig/components-v0.8.1](https://github.com/Autodesk/hig/compare/@hig/components@0.8.0...@hig/components@0.8.1) (2018-09-11)
+
+
+### Bug Fixes
+
+* update packages ([49caaa2](https://github.com/Autodesk/hig/commit/49caaa2))
+
 # [@hig/components-v0.8.0](https://github.com/Autodesk/hig/compare/@hig/components@0.7.0...@hig/components@0.8.0) (2018-09-11)
 
 
