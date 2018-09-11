@@ -1,14 +1,21 @@
 import { mount } from "enzyme";
 import React from "react";
+import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
+
 import Modal from "./Modal";
 
 describe("modal/Modal", () => {
   describe("integration", () => {
-    it("renders correctly", () => {
-      const tree = mount(<Modal title="HIG Modal" open body={"Hi"} />).html();
-
-      expect(tree).toMatchSnapshot();
-    });
+    takeSnapshotsOf(Modal, [
+      {
+        desc: "renders correctly",
+        props: {
+          body: "Hi",
+          open: true,
+          title: "HIG Modal"
+        }
+      }
+    ]);
   });
 
   describe("event handlers", () => {
@@ -34,7 +41,7 @@ describe("modal/Modal", () => {
       });
 
       it("is triggered on change", () => {
-        wrapper.find("a.hig__modal-V1__overlay").simulate("click");
+        wrapper.find(".hig__modal-V1__overlay").simulate("click");
 
         expect(eventHandler).toHaveBeenCalled();
       });

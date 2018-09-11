@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
+import { generateId } from "@hig/utils";
 
 import ModalHeaderPresenter from "./ModalHeaderPresenter";
 import { types } from "../types";
@@ -60,6 +61,8 @@ export default class ModalPresenter extends Component {
     this.hasScrolling = element.scrollHeight > element.clientHeight;
   };
 
+  titleId = generateId("modal-title");
+
   render() {
     const {
       children,
@@ -85,33 +88,42 @@ export default class ModalPresenter extends Component {
       }
     ]);
 
+    /*
+     * The "no-noninteractive-element-interactions" rule is disabled for this block.
+     * This is due to the modal being is a special case where its containers are to be considered
+     * as non-interactive, static content by screen-readers, but must also respond to `click` events.
+     * Additionally, even though they respond to `click` events, they're not focusable.
+     */
+    /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
     return (
       <div className={wrapperClasses}>
-        <a
+        <div
+          aria-labelledby={this.titleId}
           className="hig__modal-V1__overlay"
           onClick={onOverlayClick}
-          role="button"
-          tabIndex="0"
+          role="dialog"
+          tabIndex="-1"
         >
-          <a
+          <article
             className={windowClasses}
             onClick={onWindowClick}
-            role="button"
-            tabIndex="0"
+            role="document"
           >
             <ModalHeaderPresenter
+              id={this.titleId}
               closeButtonAriaLabel={closeButtonAriaLabel}
               onCloseClick={onCloseClick}
               title={title}
             >
               {headerChildren}
             </ModalHeaderPresenter>
-            <div className="hig__modal-V1__body">
+            <section className="hig__modal-V1__body">
               <div className="hig__modal-V1__slot">{children}</div>
-            </div>
-          </a>
-        </a>
+            </section>
+          </article>
+        </div>
       </div>
     );
+    /* eslint-enable jsx-a11y/no-noninteractive-element-interactions */
   }
 }
