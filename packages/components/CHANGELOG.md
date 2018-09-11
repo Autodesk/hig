@@ -1,3 +1,12 @@
+# [@hig/components-v0.8.0](https://github.com/Autodesk/hig/compare/@hig/components@0.7.0...@hig/components@0.8.0) (2018-09-11)
+
+
+### Features
+
+* **package:** upgrade dependencies ([1ab1cb9](https://github.com/Autodesk/hig/commit/1ab1cb9))
+* upgrade `[@hig](https://github.com/hig)/modal` ([8a49e4e](https://github.com/Autodesk/hig/commit/8a49e4e))
+* upgrade dependencies ([fea933f](https://github.com/Autodesk/hig/commit/fea933f))
+
 # [@hig/components-v0.7.0](https://github.com/Autodesk/hig/compare/@hig/components@0.6.0...@hig/components@0.7.0) (2018-08-31)
 
 
