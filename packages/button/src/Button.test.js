@@ -56,6 +56,30 @@ describe("Button", () => {
         expect(eventHandler).toBeCalled();
       });
     });
+
+    describe("onMouseEnter", () => {
+      beforeEach(() => {
+        eventHandler = jest.fn();
+        wrapper = subject({ onMouseEnter: eventHandler });
+      });
+
+      it("is triggered on mouse enter", () => {
+        wrapper.simulate("mouseenter");
+        expect(eventHandler).toBeCalled();
+      });
+    });
+
+    describe("onMouseLeave", () => {
+      beforeEach(() => {
+        eventHandler = jest.fn();
+        wrapper = subject({ onMouseLeave: eventHandler });
+      });
+
+      it("is triggered on mouse leave", () => {
+        wrapper.simulate("mouseleave");
+        expect(eventHandler).toBeCalled();
+      });
+    });
   });
 
   describe("the element rendered", () => {

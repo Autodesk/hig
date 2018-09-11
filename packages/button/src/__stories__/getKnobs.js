@@ -21,6 +21,8 @@ const knobLabels = {
   onClick: "onClick",
   onFocus: "onFocus",
   onHover: "onHover",
+  onMouseEnter: "onMouseEnter",
+  onMouseLeave: "onMouseLeave",
   size: "Size",
   target: "Target",
   title: "Title",
@@ -48,6 +50,8 @@ export default function getKnobs(props) {
     onClick: action(knobLabels.onClick),
     onFocus: action(knobLabels.onFocus),
     onHover: action(knobLabels.onHover),
+    onMouseEnter: action(knobLabels.onMouseEnter),
+    onMouseLeave: action(knobLabels.onMouseLeave),
     size: select(knobLabels.size, sizeOptions, size, knobGroupIds.basic),
     target: select(
       knobLabels.target,

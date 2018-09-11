@@ -12,6 +12,8 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders with all props 1`] = `
       onBlur={undefined}
       onClick={undefined}
       onFocus={undefined}
+      onMouseEnter={undefined}
+      onMouseLeave={undefined}
       onMouseOver={undefined}
     >
       <span
