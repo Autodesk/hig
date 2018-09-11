@@ -1,3 +1,10 @@
+# [@hig/top-nav-v0.3.2](https://github.com/Autodesk/hig/compare/@hig/top-nav@0.3.1...@hig/top-nav@0.3.2) (2018-09-11)
+
+
+### Bug Fixes
+
+* upgrade flyout in dependants ([ea3bedd](https://github.com/Autodesk/hig/commit/ea3bedd))
+
 # [@hig/top-nav-v0.3.1](https://github.com/Autodesk/hig/compare/@hig/top-nav@0.3.0...@hig/top-nav@0.3.1) (2018-09-06)
 
 
