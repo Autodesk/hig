@@ -1,3 +1,13 @@
+# [@hig/flyout-v0.5.0](https://github.com/Autodesk/hig/compare/@hig/flyout@0.4.1...@hig/flyout@0.5.0) (2018-09-11)
+
+
+### Features
+
+* Add onMouseEnter and onMouseLeave events to Button for more control of custom hover events ([a2b2cc1](https://github.com/Autodesk/hig/commit/a2b2cc1))
+* **behavior:** add `defaultOpen` prop to support uncontrolled flyout's that are open by default ([7a4e91c](https://github.com/Autodesk/hig/commit/7a4e91c))
+* **behavior:** add `dislocateContainer` and `offsetContainerHorizontal` helpers ([97afdc2](https://github.com/Autodesk/hig/commit/97afdc2))
+* **presentation:** add support for rendering custom pointers ([d6e6c92](https://github.com/Autodesk/hig/commit/d6e6c92))
+
 # [@hig/flyout-v0.4.1](https://github.com/Autodesk/hig/compare/@hig/flyout@0.4.0...@hig/flyout@0.4.1) (2018-09-06)
 
 
