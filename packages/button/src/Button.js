@@ -43,6 +43,14 @@ export default class Button extends Component {
      */
     onHover: PropTypes.func,
     /**
+     * Triggers when the user's mouse is over the button
+     */
+    onMouseEnter: PropTypes.func,
+    /**
+     * Triggers when the user's mouse is no longer over the button
+     */
+    onMouseLeave: PropTypes.func,
+    /**
      * Specifies size of button
      */
     size: PropTypes.oneOf(availableSizes),
@@ -80,6 +88,8 @@ export default class Button extends Component {
       onClick,
       onFocus,
       onHover,
+      onMouseEnter,
+      onMouseLeave,
       size,
       target,
       title,
@@ -114,6 +124,8 @@ export default class Button extends Component {
             onBlur={onBlur}
             onClick={onClick}
             onFocus={onFocus}
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
             onMouseOver={onHover}
           >
             {icon && (
