@@ -48,6 +48,12 @@ describe("flyout/Flyout", () => {
         props: {}
       },
       {
+        desc: "renders open by default",
+        props: {
+          defaultOpen: true
+        }
+      },
+      {
         desc: "renders with a basic set of props",
         props: basicProps
       },
@@ -95,10 +101,10 @@ describe("flyout/Flyout", () => {
     const handleOpen = jest.fn();
     const handleClose = jest.fn();
 
-    function getHandler() {
+    function getHandler(props) {
       let handleChildClick;
       const wrapper = mount(
-        <Flyout onOpen={handleOpen} onClose={handleClose}>
+        <Flyout {...props} onOpen={handleOpen} onClose={handleClose}>
           {({ handleClick }) => {
             handleChildClick = handleClick;
           }}
@@ -136,6 +142,14 @@ describe("flyout/Flyout", () => {
 
       expect(handleClose).not.toHaveBeenCalled();
       handleChildClick();
+      expect(handleClose).not.toHaveBeenCalled();
+      handleChildClick();
+      expect(handleClose).toHaveBeenCalled();
+    });
+
+    it("calls the `onClose` handler when the flyout open by default", () => {
+      const { handleChildClick } = getHandler({ defaultOpen: true });
+
       expect(handleClose).not.toHaveBeenCalled();
       handleChildClick();
       expect(handleClose).toHaveBeenCalled();

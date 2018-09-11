@@ -38,6 +38,8 @@ export default class Flyout extends Component {
     children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
     /** Content for the flyout. Can be either a node or a render function */
     content: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+    /** Default uncontrolled open state */
+    defaultOpen: PropTypes.bool,
     /**
      * When the flyout overflows the viewport, it'll attempt to
      * use the given anchor points in order to keep the flyout
@@ -66,6 +68,7 @@ export default class Flyout extends Component {
 
   static defaultProps = {
     anchorPoint: DEFAULT_COORDINATES.anchorPoint,
+    defaultOpen: false,
     fallbackAnchorPoints: AVAILABLE_ANCHOR_POINTS,
     /**
      * @param {PanelRendererPayload} payload
@@ -81,7 +84,7 @@ export default class Flyout extends Component {
 
   /** @type {State} */
   state = {
-    open: false
+    open: this.props.defaultOpen
   };
 
   componentDidMount() {
