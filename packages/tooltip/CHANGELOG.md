@@ -1,3 +1,10 @@
+# [@hig/tooltip-v0.1.1](https://github.com/Autodesk/hig/compare/@hig/tooltip@0.1.0...@hig/tooltip@0.1.1) (2018-09-11)
+
+
+### Bug Fixes
+
+* import missing dependency styles ([0f4cd53](https://github.com/Autodesk/hig/commit/0f4cd53))
+
 # [@hig/tooltip-v0.1.0](https://github.com/Autodesk/hig/compare/@hig/tooltip@0.0.0...@hig/tooltip@0.1.0) (2018-09-11)
 
 
