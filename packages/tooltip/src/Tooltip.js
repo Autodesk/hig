@@ -37,7 +37,11 @@ Tooltip.defaultProps = {
   pointer: <PointerPresenter />
 };
 
-/** Should be the same as `Flyout` */
+/**
+ * This should be the same as `Flyout`,
+ * but we need to copypasta since docgen
+ * doesn't understand references.
+ */
 Tooltip.propTypes = {
   /** Manipulate flyout coordinates before rendering */
   alterCoordinates: PropTypes.func,
@@ -47,6 +51,8 @@ Tooltip.propTypes = {
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
   /** Content for the flyout. Can be either a node or a render function */
   content: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+  /** Default uncontrolled open state */
+  defaultOpen: PropTypes.bool,
   /**
    * When the flyout overflows the viewport, it'll attempt to
    * use the given anchor points in order to keep the flyout

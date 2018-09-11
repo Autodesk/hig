@@ -280,6 +280,69 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
 </div>
 `;
 
+exports[`flyout/Flyout snapshots renders open by default 1`] = `
+<div
+  className="hig__flyout-v1 hig__flyout-v1--top-left"
+>
+  <div
+    className="hig__flyout-v1__action"
+  />
+  <div
+    className="hig__flyout-v1__container"
+    style={
+      Object {
+        "left": "0px",
+        "top": "0px",
+      }
+    }
+  >
+    <div
+      aria-hidden="true"
+      className="hig__flyout-v1__pointer-wrapper"
+      role="presentation"
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
+    >
+      <svg
+        height="24"
+        viewBox="0 0 24 24"
+        width="24"
+      >
+        <polygon
+          fill="#d4dbe1"
+          points="0,12 12,0 24,12"
+        />
+        <polygon
+          fill="#fff"
+          points="2.5,12 12,2.5 21.5,12"
+        />
+      </svg>
+    </div>
+    <div
+      className="hig__flyout-v1__panel-container"
+      style={
+        Object {
+          "maxHeight": undefined,
+        }
+      }
+    >
+      <div
+        className="hig__flyout-v1__panel-container__inner"
+      >
+        <div
+          className="hig__flyout-v1__panel"
+          onScroll={undefined}
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`flyout/Flyout snapshots renders the panel from a basic render function 1`] = `
 <div
   className="hig__flyout-v1 hig__flyout-v1--top-left"
