@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import IconButton, { names } from "@hig/icon-button";
+import "@hig/icon-button/build/index.css";
 
 import "./ModalHeaderPresenter.scss";
 
