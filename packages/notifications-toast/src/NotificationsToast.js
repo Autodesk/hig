@@ -4,6 +4,9 @@ import cx from "classnames";
 import Icon, { sizes as iconSizes } from "@hig/icon";
 import IconButton from "@hig/icon-button";
 import RichText from "@hig/rich-text";
+import "@hig/icon/build/index.css";
+import "@hig/icon-button/build/index.css";
+import "@hig/rich-text/build/index.css";
 
 import { STATUS_ICONS, AVAILABLE_STATUSES } from "./statuses";
 
