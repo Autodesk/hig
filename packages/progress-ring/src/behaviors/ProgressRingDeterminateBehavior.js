@@ -40,8 +40,7 @@ export default class ProgressRingDeterminateBehavior extends Component {
     this.targetValue = percent / 100;
 
     if (!this.prevTimestamp) {
-      // eslint-disable-next-line
-      this.prevTimestamp = performance.now();
+      this.prevTimestamp = window.performance.now();
     }
     window.requestAnimationFrame(this.step);
   }
@@ -116,8 +115,7 @@ export default class ProgressRingDeterminateBehavior extends Component {
   }
 
   wait() {
-    // eslint-disable-next-line
-    this.prevTimestamp = performance.now();
+    this.prevTimestamp = window.performance.now();
     window.requestAnimationFrame(this.step);
   }
 
