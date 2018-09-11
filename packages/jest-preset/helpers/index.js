@@ -1,5 +1,6 @@
 /* eslint-disable global-require */
 module.exports = {
-  takeSnapshotsOf: require("./takeSnapshotsOf"),
-  lastCallOfMock: require("@hig/jest-preset/helpers/lastCallOfMock")
+  hasExports: require("./hasExports"),
+  lastCallOfMock: require("./lastCallOfMock"),
+  takeSnapshotsOf: require("./takeSnapshotsOf")
 };

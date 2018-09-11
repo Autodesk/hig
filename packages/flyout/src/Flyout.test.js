@@ -48,6 +48,12 @@ describe("flyout/Flyout", () => {
         props: {}
       },
       {
+        desc: "renders open by default",
+        props: {
+          defaultOpen: true
+        }
+      },
+      {
         desc: "renders with a basic set of props",
         props: basicProps
       },
@@ -80,6 +86,13 @@ describe("flyout/Flyout", () => {
           content: renderContent,
           panel: renderPanelComplex
         }
+      },
+      {
+        desc: "renders a custom pointer",
+        props: {
+          ...basicProps,
+          pointer: <span>my custom pointer</span>
+        }
       }
     ]);
   });
@@ -88,10 +101,10 @@ describe("flyout/Flyout", () => {
     const handleOpen = jest.fn();
     const handleClose = jest.fn();
 
-    function getHandler() {
+    function getHandler(props) {
       let handleChildClick;
       const wrapper = mount(
-        <Flyout onOpen={handleOpen} onClose={handleClose}>
+        <Flyout {...props} onOpen={handleOpen} onClose={handleClose}>
           {({ handleClick }) => {
             handleChildClick = handleClick;
           }}
@@ -133,6 +146,14 @@ describe("flyout/Flyout", () => {
       handleChildClick();
       expect(handleClose).toHaveBeenCalled();
     });
+
+    it("calls the `onClose` handler when the flyout open by default", () => {
+      const { handleChildClick } = getHandler({ defaultOpen: true });
+
+      expect(handleClose).not.toHaveBeenCalled();
+      handleChildClick();
+      expect(handleClose).toHaveBeenCalled();
+    });
   });
 
   describe("alterCoordinates", () => {
@@ -149,39 +170,7 @@ describe("flyout/Flyout", () => {
     it("is called when rendering", () => {
       mount(<Flyout alterCoordinates={alterCoordinates} />);
 
-      expect(alterCoordinates).toHaveBeenCalledWith(
-        {
-          anchorPoint: "top-left",
-          containerPosition: { left: 0, top: 7 },
-          pointerPosition: { left: -7, top: -5 }
-        },
-        {
-          actionRect: {
-            bottom: 0,
-            height: 0,
-            left: 0,
-            right: 0,
-            top: 0,
-            width: 0
-          },
-          panelRect: {
-            bottom: 0,
-            height: 0,
-            left: 0,
-            right: 0,
-            top: 0,
-            width: 0
-          },
-          viewportRect: {
-            bottom: 0,
-            height: 0,
-            left: 0,
-            right: 0,
-            top: 0,
-            width: 0
-          }
-        }
-      );
+      expect(alterCoordinates).toMatchSnapshot();
     });
   });
 });

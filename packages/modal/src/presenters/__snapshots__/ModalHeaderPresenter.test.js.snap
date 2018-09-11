@@ -3,6 +3,7 @@
 exports[`checkbox/presenters/ModalHeaderPresenter  1`] = `
 <header
   className="hig__modal-V1__header"
+  id={undefined}
 >
   <button
     className="hig__icon-button hig__icon-button--primary"
@@ -35,6 +36,7 @@ exports[`checkbox/presenters/ModalHeaderPresenter  1`] = `
 exports[`checkbox/presenters/ModalHeaderPresenter  2`] = `
 <header
   className="hig__modal-V1__header"
+  id={undefined}
 >
   <p>
     Title
@@ -45,6 +47,7 @@ exports[`checkbox/presenters/ModalHeaderPresenter  2`] = `
 exports[`checkbox/presenters/ModalHeaderPresenter  3`] = `
 <header
   className="hig__modal-V1__header"
+  id={undefined}
 >
   <button
     className="hig__icon-button hig__icon-button--primary"

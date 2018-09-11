@@ -1,0 +1,211 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`flyout/coordinateHelpers dislocateContainer when the anchorPoint is bottom-center moves the container away from the target in the respective direction 1`] = `
+Object {
+  "anchorPoint": "bottom-center",
+  "containerPosition": Object {
+    "left": 0,
+    "top": -42,
+  },
+  "pointerPosition": Object {
+    "left": 0,
+    "top": 0,
+  },
+}
+`;
+
+exports[`flyout/coordinateHelpers dislocateContainer when the anchorPoint is bottom-left moves the container away from the target in the respective direction 1`] = `
+Object {
+  "anchorPoint": "bottom-left",
+  "containerPosition": Object {
+    "left": 0,
+    "top": -42,
+  },
+  "pointerPosition": Object {
+    "left": 0,
+    "top": 0,
+  },
+}
+`;
+
+exports[`flyout/coordinateHelpers dislocateContainer when the anchorPoint is bottom-right moves the container away from the target in the respective direction 1`] = `
+Object {
+  "anchorPoint": "bottom-right",
+  "containerPosition": Object {
+    "left": 0,
+    "top": -42,
+  },
+  "pointerPosition": Object {
+    "left": 0,
+    "top": 0,
+  },
+}
+`;
+
+exports[`flyout/coordinateHelpers dislocateContainer when the anchorPoint is left-bottom moves the container away from the target in the respective direction 1`] = `
+Object {
+  "anchorPoint": "left-bottom",
+  "containerPosition": Object {
+    "left": 42,
+    "top": 0,
+  },
+  "pointerPosition": Object {
+    "left": 0,
+    "top": 0,
+  },
+}
+`;
+
+exports[`flyout/coordinateHelpers dislocateContainer when the anchorPoint is left-center moves the container away from the target in the respective direction 1`] = `
+Object {
+  "anchorPoint": "left-center",
+  "containerPosition": Object {
+    "left": 42,
+    "top": 0,
+  },
+  "pointerPosition": Object {
+    "left": 0,
+    "top": 0,
+  },
+}
+`;
+
+exports[`flyout/coordinateHelpers dislocateContainer when the anchorPoint is left-top moves the container away from the target in the respective direction 1`] = `
+Object {
+  "anchorPoint": "left-top",
+  "containerPosition": Object {
+    "left": 42,
+    "top": 0,
+  },
+  "pointerPosition": Object {
+    "left": 0,
+    "top": 0,
+  },
+}
+`;
+
+exports[`flyout/coordinateHelpers dislocateContainer when the anchorPoint is right-bottom moves the container away from the target in the respective direction 1`] = `
+Object {
+  "anchorPoint": "right-bottom",
+  "containerPosition": Object {
+    "left": -42,
+    "top": 0,
+  },
+  "pointerPosition": Object {
+    "left": 0,
+    "top": 0,
+  },
+}
+`;
+
+exports[`flyout/coordinateHelpers dislocateContainer when the anchorPoint is right-center moves the container away from the target in the respective direction 1`] = `
+Object {
+  "anchorPoint": "right-center",
+  "containerPosition": Object {
+    "left": -42,
+    "top": 0,
+  },
+  "pointerPosition": Object {
+    "left": 0,
+    "top": 0,
+  },
+}
+`;
+
+exports[`flyout/coordinateHelpers dislocateContainer when the anchorPoint is right-top moves the container away from the target in the respective direction 1`] = `
+Object {
+  "anchorPoint": "right-top",
+  "containerPosition": Object {
+    "left": -42,
+    "top": 0,
+  },
+  "pointerPosition": Object {
+    "left": 0,
+    "top": 0,
+  },
+}
+`;
+
+exports[`flyout/coordinateHelpers dislocateContainer when the anchorPoint is top-center moves the container away from the target in the respective direction 1`] = `
+Object {
+  "anchorPoint": "top-center",
+  "containerPosition": Object {
+    "left": 0,
+    "top": 42,
+  },
+  "pointerPosition": Object {
+    "left": 0,
+    "top": 0,
+  },
+}
+`;
+
+exports[`flyout/coordinateHelpers dislocateContainer when the anchorPoint is top-left moves the container away from the target in the respective direction 1`] = `
+Object {
+  "anchorPoint": "top-left",
+  "containerPosition": Object {
+    "left": 0,
+    "top": 42,
+  },
+  "pointerPosition": Object {
+    "left": 0,
+    "top": 0,
+  },
+}
+`;
+
+exports[`flyout/coordinateHelpers dislocateContainer when the anchorPoint is top-right moves the container away from the target in the respective direction 1`] = `
+Object {
+  "anchorPoint": "top-right",
+  "containerPosition": Object {
+    "left": 0,
+    "top": 42,
+  },
+  "pointerPosition": Object {
+    "left": 0,
+    "top": 0,
+  },
+}
+`;
+
+exports[`flyout/coordinateHelpers offsetContainerHorizontal horizontally offsets the container 1`] = `
+Object {
+  "anchorPoint": "top-left",
+  "containerPosition": Object {
+    "left": 42,
+    "top": 0,
+  },
+  "pointerPosition": Object {
+    "left": 0,
+    "top": 0,
+  },
+}
+`;
+
+exports[`flyout/coordinateHelpers offsetContainerVertical vertically offsets the container 1`] = `
+Object {
+  "anchorPoint": "top-left",
+  "containerPosition": Object {
+    "left": 0,
+    "top": 42,
+  },
+  "pointerPosition": Object {
+    "left": 0,
+    "top": 0,
+  },
+}
+`;
+
+exports[`flyout/coordinateHelpers offsetPanelHorizontal horizontally offsets the panel while maintaining the equivalent pointer position 1`] = `
+Object {
+  "anchorPoint": "top-left",
+  "containerPosition": Object {
+    "left": 42,
+    "top": 0,
+  },
+  "pointerPosition": Object {
+    "left": -42,
+    "top": 0,
+  },
+}
+`;

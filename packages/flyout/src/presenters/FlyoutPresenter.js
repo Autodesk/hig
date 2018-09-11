@@ -8,6 +8,8 @@ import {
   AVAILABLE_TRANSITION_STATUSES
 } from "../transitionStatuses";
 import "./FlyoutPresenter.scss";
+import PointerPresenter from "./PointerPresenter";
+import PointerWrapperPresenter from "./PointerWrapperPresenter";
 
 const transitionStateToModifier = {
   [transitionStatuses.EXITED]: "hig__flyout-v1--exited",
@@ -47,9 +49,10 @@ export default function FlyoutPresenter(props) {
     children,
     containerPosition,
     panel,
+    pointer,
     pointerPosition,
     refAction,
-    refContainer,
+    refPointer,
     refWrapper,
     transitionStatus
   } = props;
@@ -67,22 +70,10 @@ export default function FlyoutPresenter(props) {
       <div className="hig__flyout-v1__action" ref={refAction}>
         {children}
       </div>
-      <div
-        className="hig__flyout-v1__container"
-        ref={refContainer}
-        style={containerStyle}
-      >
-        <div
-          aria-hidden="true"
-          className="hig__flyout-v1__pointer"
-          role="presentation"
-          style={pointerStyle}
-        />
-        <div
-          className="hig__flyout-v1__pointer-cover"
-          role="presentation"
-          aria-hidden="true"
-        />
+      <div className="hig__flyout-v1__container" style={containerStyle}>
+        <PointerWrapperPresenter innerRef={refPointer} style={pointerStyle}>
+          {pointer}
+        </PointerWrapperPresenter>
         {panel}
       </div>
     </div>
@@ -92,6 +83,7 @@ export default function FlyoutPresenter(props) {
 FlyoutPresenter.defaultProps = {
   anchorPoint: DEFAULT_COORDINATES.anchorPoint,
   containerPosition: DEFAULT_COORDINATES.containerPosition,
+  pointer: <PointerPresenter />,
   pointerPosition: DEFAULT_COORDINATES.pointerPosition,
   transitionStatus: transitionStatuses.EXITED
 };
@@ -101,6 +93,8 @@ FlyoutPresenter.propTypes = {
   anchorPoint: PropTypes.oneOf(AVAILABLE_ANCHOR_POINTS),
   /** Content for the flyout */
   panel: PropTypes.node,
+  /** Pointer for the flyout */
+  pointer: PropTypes.node,
   /** Top position of the container relative to the action */
   containerPosition: PropTypes.shape({
     top: PropTypes.number,
@@ -113,8 +107,8 @@ FlyoutPresenter.propTypes = {
   }),
   /** Reference the action element */
   refAction: PropTypes.func,
-  /** Reference the container element */
-  refContainer: PropTypes.func,
+  /** Reference the pointer element */
+  refPointer: PropTypes.func,
   /** Reference the wrapper element */
   refWrapper: PropTypes.func,
   /** The status of the container transition */

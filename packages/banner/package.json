@@ -29,7 +29,6 @@
   },
   "devDependencies": {
     "@hig/babel-preset": "^0.1.0",
-    "@hig/button": "^0.1.4",
     "@hig/eslint-config": "^0.1.0",
     "@hig/jest-preset": "^0.1.0",
     "@hig/rich-text": "^0.1.3",

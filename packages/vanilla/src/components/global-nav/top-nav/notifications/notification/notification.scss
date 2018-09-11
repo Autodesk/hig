@@ -1,9 +1,13 @@
-@import '~basics/colors/colors.scss';
-@import '~helpers/css/mixins/base.scss';
-@import '~helpers/css/mixins/spacing.scss';
+@import '~@hig/styles/mixins/base.scss';
+@import '~@hig/styles/mixins/colors.scss';
+@import '~@hig/styles/mixins/spacing.scss';
+@import '~@hig/styles/mixins/typography.scss';
+
 .hig__notification {
   position: relative;
   border-bottom: 1px solid color(hig-cool-gray-20);
+  border-left: 3px solid color(hig-cool-gray-30);
+
   padding: spacing(s) spacing(l);
 
   &:last-child {
@@ -12,6 +16,38 @@
 
   .hig__icon-button {
     display: none;
+  }
+}
+
+.hig__notification--primary {
+  border-left: 3px solid color(hig-cool-gray-30);
+
+  &.hig__notification--unread {
+    border-left: 3px solid  color(hig-blue-50);
+ }
+}
+
+.hig__notification--success {
+  border-left: 3px solid color(hig-cool-gray-30);
+
+  &.hig__notification--unread {
+    border-left: 3px solid  color(hig-green-good);
+  }
+}
+
+.hig__notification--error {
+  border-left: 3px solid color(hig-cool-gray-30);
+
+  &.hig__notification--unread {
+    border-left: 3px solid  color(hig-red-alert);
+  }
+}
+
+.hig__notification--warning {
+  border-left: 3px solid color(hig-cool-gray-30);
+
+  &.hig__notification--unread {
+    border-left: 3px solid  color(hig-yellow-warning);
   }
 }
 
@@ -50,27 +86,9 @@
 }
 
 .hig__notification__title {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 16px;
-  padding: spacing(s) spacing(l) spacing(m);
+  @include typography-base;
+  padding: spacing(s) spacing(l);
   border-bottom: 1px solid color(hig-cool-gray-20);
-}
-
-.hig__notification__unread-marker {
-  opacity: 0;
-  position: absolute;
-  background-color: color(hig-blue-50);
-  border-radius: 100%;
-  width: 8px;
-  height: 8px;
-  top: 15px;
-  left: spacing(xs);
-  transition: opacity .2s linear;
-
-  .hig__notification--unread > & {
-    opacity: 1;
-  }
 }
 
 .hig__notification--unread {

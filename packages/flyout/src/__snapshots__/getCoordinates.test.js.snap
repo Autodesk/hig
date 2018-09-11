@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`flyout/getCoordinates calculations calculates the position of the flyout container 1`] = `
+Object {
+  "anchorPoint": "top-center",
+  "containerPosition": Object {
+    "left": -25,
+    "top": 157,
+  },
+  "pointerPosition": Object {
+    "left": 94,
+    "top": -11,
+  },
+}
+`;
+
+exports[`flyout/getCoordinates calculations when the declared anchor point doesn't fit in the viewport provides a position for another anchor point that's in the viewport 1`] = `
+Object {
+  "anchorPoint": "top-left",
+  "containerPosition": Object {
+    "left": 0,
+    "top": 157,
+  },
+  "pointerPosition": Object {
+    "left": 69,
+    "top": -11,
+  },
+}
+`;
+
+exports[`flyout/getCoordinates calculations when the declared anchor point doesn't fit in the viewport when none of the anchor points fit in the viewport provides a position at the declared anchor point 1`] = `
+Object {
+  "anchorPoint": "top-center",
+  "containerPosition": Object {
+    "left": -25,
+    "top": 157,
+  },
+  "pointerPosition": Object {
+    "left": 94,
+    "top": -11,
+  },
+}
+`;

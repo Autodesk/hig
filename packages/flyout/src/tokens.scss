@@ -10,10 +10,3 @@ $panel-background-color: color("hig-white");
 $panel-border-radius: 4px;
 $panel-border-width: 1px;
 $panel-padding: spacing("s");
-
-$pointer-size: 14px;
-$pointer-centering-position: calc(50% - #{$pointer-size / 2});
-$pointer-shadow-color: color("hig-cool-gray-20");
-$pointer-shadow-offset: 2px;
-$pointer-side-position: -(14px / 2 - $panel-border-width);
-$pointer-spacing: 14px;

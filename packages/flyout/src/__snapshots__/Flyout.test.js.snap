@@ -1,5 +1,129 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`flyout/Flyout alterCoordinates is called when rendering 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      Object {
+        "anchorPoint": "top-left",
+        "containerPosition": Object {
+          "left": 0,
+          "top": -5,
+        },
+        "pointerPosition": Object {
+          "left": 0,
+          "top": 1,
+        },
+      },
+      Object {
+        "actionRect": Object {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+        },
+        "panelRect": Object {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+        },
+        "pointerRect": Object {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+        },
+        "viewportRect": Object {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+        },
+      },
+    ],
+  ],
+}
+`;
+
+exports[`flyout/Flyout snapshots renders a custom pointer 1`] = `
+<div
+  className="hig__flyout-v1 hig__flyout-v1--top-left"
+>
+  <div
+    className="hig__flyout-v1__action"
+  >
+    <button
+      className="hig--light-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+      onBlur={undefined}
+      onClick={[Function]}
+      onFocus={undefined}
+      onMouseEnter={undefined}
+      onMouseLeave={undefined}
+      onMouseOver={undefined}
+    >
+      <span
+        className="hig__button__title"
+      >
+        Click Me
+      </span>
+    </button>
+  </div>
+  <div
+    className="hig__flyout-v1__container"
+    style={
+      Object {
+        "left": "0px",
+        "top": "0px",
+      }
+    }
+  >
+    <div
+      aria-hidden="true"
+      className="hig__flyout-v1__pointer-wrapper"
+      role="presentation"
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
+    >
+      <span>
+        my custom pointer
+      </span>
+    </div>
+    <div
+      className="hig__flyout-v1__panel-container"
+      style={
+        Object {
+          "maxHeight": "150px",
+        }
+      }
+    >
+      <div
+        className="hig__flyout-v1__panel-container__inner"
+      >
+        <div
+          className="hig__flyout-v1__panel"
+          onScroll={[Function]}
+        >
+          Hello World
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`flyout/Flyout snapshots renders children from the given render function 1`] = `
 <div
   className="hig__flyout-v1 hig__flyout-v1--top-left"
@@ -12,6 +136,8 @@ exports[`flyout/Flyout snapshots renders children from the given render function
       onBlur={undefined}
       onClick={[Function]}
       onFocus={undefined}
+      onMouseEnter={undefined}
+      onMouseLeave={undefined}
       onMouseOver={undefined}
     >
       <span
@@ -32,7 +158,7 @@ exports[`flyout/Flyout snapshots renders children from the given render function
   >
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__pointer"
+      className="hig__flyout-v1__pointer-wrapper"
       role="presentation"
       style={
         Object {
@@ -40,12 +166,22 @@ exports[`flyout/Flyout snapshots renders children from the given render function
           "top": "0px",
         }
       }
-    />
-    <div
-      aria-hidden="true"
-      className="hig__flyout-v1__pointer-cover"
-      role="presentation"
-    />
+    >
+      <svg
+        height="24"
+        viewBox="0 0 24 24"
+        width="24"
+      >
+        <polygon
+          fill="#d4dbe1"
+          points="0,12 12,0 24,12"
+        />
+        <polygon
+          fill="#fff"
+          points="2.5,12 12,2.5 21.5,12"
+        />
+      </svg>
+    </div>
     <div
       className="hig__flyout-v1__panel-container"
       style={
@@ -81,6 +217,8 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
       onBlur={undefined}
       onClick={[Function]}
       onFocus={undefined}
+      onMouseEnter={undefined}
+      onMouseLeave={undefined}
       onMouseOver={undefined}
     >
       <span
@@ -101,7 +239,7 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
   >
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__pointer"
+      className="hig__flyout-v1__pointer-wrapper"
       role="presentation"
       style={
         Object {
@@ -109,12 +247,22 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
           "top": "0px",
         }
       }
-    />
-    <div
-      aria-hidden="true"
-      className="hig__flyout-v1__pointer-cover"
-      role="presentation"
-    />
+    >
+      <svg
+        height="24"
+        viewBox="0 0 24 24"
+        width="24"
+      >
+        <polygon
+          fill="#d4dbe1"
+          points="0,12 12,0 24,12"
+        />
+        <polygon
+          fill="#fff"
+          points="2.5,12 12,2.5 21.5,12"
+        />
+      </svg>
+    </div>
     <div
       className="hig__flyout-v1__panel-container"
       style={
@@ -138,6 +286,69 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
 </div>
 `;
 
+exports[`flyout/Flyout snapshots renders open by default 1`] = `
+<div
+  className="hig__flyout-v1 hig__flyout-v1--top-left"
+>
+  <div
+    className="hig__flyout-v1__action"
+  />
+  <div
+    className="hig__flyout-v1__container"
+    style={
+      Object {
+        "left": "0px",
+        "top": "0px",
+      }
+    }
+  >
+    <div
+      aria-hidden="true"
+      className="hig__flyout-v1__pointer-wrapper"
+      role="presentation"
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
+    >
+      <svg
+        height="24"
+        viewBox="0 0 24 24"
+        width="24"
+      >
+        <polygon
+          fill="#d4dbe1"
+          points="0,12 12,0 24,12"
+        />
+        <polygon
+          fill="#fff"
+          points="2.5,12 12,2.5 21.5,12"
+        />
+      </svg>
+    </div>
+    <div
+      className="hig__flyout-v1__panel-container"
+      style={
+        Object {
+          "maxHeight": undefined,
+        }
+      }
+    >
+      <div
+        className="hig__flyout-v1__panel-container__inner"
+      >
+        <div
+          className="hig__flyout-v1__panel"
+          onScroll={undefined}
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`flyout/Flyout snapshots renders the panel from a basic render function 1`] = `
 <div
   className="hig__flyout-v1 hig__flyout-v1--top-left"
@@ -150,6 +361,8 @@ exports[`flyout/Flyout snapshots renders the panel from a basic render function 
       onBlur={undefined}
       onClick={[Function]}
       onFocus={undefined}
+      onMouseEnter={undefined}
+      onMouseLeave={undefined}
       onMouseOver={undefined}
     >
       <span
@@ -170,7 +383,7 @@ exports[`flyout/Flyout snapshots renders the panel from a basic render function 
   >
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__pointer"
+      className="hig__flyout-v1__pointer-wrapper"
       role="presentation"
       style={
         Object {
@@ -178,12 +391,22 @@ exports[`flyout/Flyout snapshots renders the panel from a basic render function 
           "top": "0px",
         }
       }
-    />
-    <div
-      aria-hidden="true"
-      className="hig__flyout-v1__pointer-cover"
-      role="presentation"
-    />
+    >
+      <svg
+        height="24"
+        viewBox="0 0 24 24"
+        width="24"
+      >
+        <polygon
+          fill="#d4dbe1"
+          points="0,12 12,0 24,12"
+        />
+        <polygon
+          fill="#fff"
+          points="2.5,12 12,2.5 21.5,12"
+        />
+      </svg>
+    </div>
     <div>
       Hello World
     </div>
@@ -203,6 +426,8 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
       onBlur={undefined}
       onClick={[Function]}
       onFocus={undefined}
+      onMouseEnter={undefined}
+      onMouseLeave={undefined}
       onMouseOver={undefined}
     >
       <span
@@ -223,7 +448,7 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
   >
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__pointer"
+      className="hig__flyout-v1__pointer-wrapper"
       role="presentation"
       style={
         Object {
@@ -231,12 +456,22 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
           "top": "0px",
         }
       }
-    />
-    <div
-      aria-hidden="true"
-      className="hig__flyout-v1__pointer-cover"
-      role="presentation"
-    />
+    >
+      <svg
+        height="24"
+        viewBox="0 0 24 24"
+        width="24"
+      >
+        <polygon
+          fill="#d4dbe1"
+          points="0,12 12,0 24,12"
+        />
+        <polygon
+          fill="#fff"
+          points="2.5,12 12,2.5 21.5,12"
+        />
+      </svg>
+    </div>
     <div
       className="hig__flyout-v1__panel-container"
       style={
@@ -277,6 +512,8 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
       onBlur={undefined}
       onClick={[Function]}
       onFocus={undefined}
+      onMouseEnter={undefined}
+      onMouseLeave={undefined}
       onMouseOver={undefined}
     >
       <span
@@ -297,7 +534,7 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
   >
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__pointer"
+      className="hig__flyout-v1__pointer-wrapper"
       role="presentation"
       style={
         Object {
@@ -305,12 +542,22 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
           "top": "0px",
         }
       }
-    />
-    <div
-      aria-hidden="true"
-      className="hig__flyout-v1__pointer-cover"
-      role="presentation"
-    />
+    >
+      <svg
+        height="24"
+        viewBox="0 0 24 24"
+        width="24"
+      >
+        <polygon
+          fill="#d4dbe1"
+          points="0,12 12,0 24,12"
+        />
+        <polygon
+          fill="#fff"
+          points="2.5,12 12,2.5 21.5,12"
+        />
+      </svg>
+    </div>
     <div
       className="hig__flyout-v1__panel-container"
       style={
@@ -352,7 +599,7 @@ exports[`flyout/Flyout snapshots renders without props 1`] = `
   >
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__pointer"
+      className="hig__flyout-v1__pointer-wrapper"
       role="presentation"
       style={
         Object {
@@ -360,12 +607,22 @@ exports[`flyout/Flyout snapshots renders without props 1`] = `
           "top": "0px",
         }
       }
-    />
-    <div
-      aria-hidden="true"
-      className="hig__flyout-v1__pointer-cover"
-      role="presentation"
-    />
+    >
+      <svg
+        height="24"
+        viewBox="0 0 24 24"
+        width="24"
+      >
+        <polygon
+          fill="#d4dbe1"
+          points="0,12 12,0 24,12"
+        />
+        <polygon
+          fill="#fff"
+          points="2.5,12 12,2.5 21.5,12"
+        />
+      </svg>
+    </div>
     <div
       className="hig__flyout-v1__panel-container"
       style={
