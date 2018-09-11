@@ -1,3 +1,10 @@
+# [@hig/project-account-switcher-v0.1.1](https://github.com/Autodesk/hig/compare/@hig/project-account-switcher@0.1.0...@hig/project-account-switcher@0.1.1) (2018-09-11)
+
+
+### Bug Fixes
+
+* upgrade flyout in dependants ([ea3bedd](https://github.com/Autodesk/hig/commit/ea3bedd))
+
 # [@hig/project-account-switcher-v0.1.0](https://github.com/Autodesk/hig/compare/@hig/project-account-switcher@0.0.0...@hig/project-account-switcher@0.1.0) (2018-08-31)
 
 
