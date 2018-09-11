@@ -1,3 +1,11 @@
+# [@hig/notifications-flyout-v0.1.2](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@0.1.1...@hig/notifications-flyout@0.1.2) (2018-09-11)
+
+
+### Bug Fixes
+
+* upgrade flyout in dependants ([ea3bedd](https://github.com/Autodesk/hig/commit/ea3bedd))
+* **bundle:** upgrade `[@hig](https://github.com/hig)/progress-ring` to remove vanilla dependency ([d756a13](https://github.com/Autodesk/hig/commit/d756a13))
+
 # [@hig/notifications-flyout-v0.1.1](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@0.1.0...@hig/notifications-flyout@0.1.1) (2018-09-06)
 
 
