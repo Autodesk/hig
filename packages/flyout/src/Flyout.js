@@ -5,6 +5,7 @@ import { AVAILABLE_ANCHOR_POINTS } from "./anchorPoints";
 import ContainerTransition from "./behaviors/ContainerTransition";
 import FlyoutPresenter from "./presenters/FlyoutPresenter";
 import getCoordinates, { DEFAULT_COORDINATES } from "./getCoordinates";
+import HoverBehavior from "./behaviors/HoverBehavior";
 import PanelContainerPresenter from "./presenters/PanelContainerPresenter";
 import PanelPresenter from "./presenters/PanelPresenter";
 
@@ -63,7 +64,9 @@ export default class Flyout extends Component {
     /** Function called when the flyout panel is scrolled */
     onScroll: PropTypes.func,
     /** When provided, it overrides the flyout's open state */
-    open: PropTypes.bool
+    open: PropTypes.bool,
+    /** Whether flyout should open when the target is hovered over */
+    openOnHover: PropTypes.bool
   };
 
   static defaultProps = {
@@ -161,6 +164,18 @@ export default class Flyout extends Component {
     return this.isOpenControlled() ? this.props.open : this.state.open;
   }
 
+  handleChildMouseEnter = () => {
+    if (this.props.openOnHover) {
+      this.setOpen(true);
+    }
+  };
+
+  handleChildMouseLeave = () => {
+    if (this.props.openOnHover) {
+      this.setOpen(false);
+    }
+  };
+
   handleChildClick = () => {
     if (!this.isOpenControlled()) {
       this.toggleOpen();
@@ -254,7 +269,7 @@ export default class Flyout extends Component {
     return panel;
   }
 
-  renderChildren() {
+  renderChildren(hasHover, onMouseEnter, onMouseLeave) {
     const { children } = this.props;
     const { handleChildClick } = this;
 
@@ -263,15 +278,26 @@ export default class Flyout extends Component {
     }
 
     if (React.Children.count(children) === 1) {
-      return React.cloneElement(children, { onClick: handleChildClick });
+      return React.cloneElement(children, {
+        hasHover,
+        onClick: handleChildClick,
+        onMouseEnter,
+        onMouseLeave
+      });
     }
 
     return children;
   }
 
   renderPresenter = transitionStatus => {
-    const { refAction, refPointer, refWrapper } = this;
-    const { pointer } = this.props;
+    const {
+      handleChildMouseEnter,
+      handleChildMouseLeave,
+      refAction,
+      refPointer,
+      refWrapper
+    } = this;
+    const { openOnHover, pointer } = this.props;
     const panel = this.renderPanel();
     const {
       anchorPoint,
@@ -280,19 +306,27 @@ export default class Flyout extends Component {
     } = this.getCoordinates();
 
     return (
-      <FlyoutPresenter
-        anchorPoint={anchorPoint}
-        containerPosition={containerPosition}
-        panel={panel}
-        pointer={pointer}
-        pointerPosition={pointerPosition}
-        refAction={refAction}
-        refPointer={refPointer}
-        refWrapper={refWrapper}
-        transitionStatus={transitionStatus}
+      <HoverBehavior
+        onMouseEnter={handleChildMouseEnter}
+        onMouseLeave={handleChildMouseLeave}
+        openOnHover={openOnHover}
       >
-        {this.renderChildren()}
-      </FlyoutPresenter>
+        {({ hasHover, onMouseEnter, onMouseLeave }) => (
+          <FlyoutPresenter
+            anchorPoint={anchorPoint}
+            containerPosition={containerPosition}
+            panel={panel}
+            pointer={pointer}
+            pointerPosition={pointerPosition}
+            refAction={refAction}
+            refPointer={refPointer}
+            refWrapper={refWrapper}
+            transitionStatus={transitionStatus}
+          >
+            {this.renderChildren(hasHover, onMouseEnter, onMouseLeave)}
+          </FlyoutPresenter>
+        )}
+      </HoverBehavior>
     );
   };
 
