@@ -78,5 +78,7 @@ Tooltip.propTypes = {
   /** Function called when the flyout panel is scrolled */
   onScroll: PropTypes.func,
   /** When provided, it overrides the flyout's open state */
-  open: PropTypes.bool
+  open: PropTypes.bool,
+  /** Whether flyout should open when the target is hovered over */
+  openOnHover: PropTypes.bool
 };
