@@ -38,6 +38,22 @@ const webLightThemeConfig = extendTheme(lightGrayThemeConfig, {
     value: {
       ref: "COLOR_SCHEME.ACCENT_COLOR_500"
     }
+  },
+  "SKELETON_ITEM.BACKGROUND_COLOR": {
+    value: {
+      ref: "BASICS.COLORS.BLACK"
+    },
+    transform: {
+      alpha: 0.01
+    }
+  },
+  "SKELETON_ITEM.HIGHLIGHT_COLOR": {
+    value: {
+      ref: "BASICS.COLORS.WHITE"
+    },
+    transform: {
+      alpha: 0.2
+    }
   }
 });
 

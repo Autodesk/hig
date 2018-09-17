@@ -21,6 +21,7 @@
   "dependencies": {
     "@hig/themes": "^0.3.0",
     "classnames": "^2.2.5",
+    "emotion": "^9.2.4",
     "prop-types": "^15.6.1"
   },
   "devDependencies": {
