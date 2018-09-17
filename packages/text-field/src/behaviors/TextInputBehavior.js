@@ -37,11 +37,15 @@ export default class TextInputBehavior extends Component {
     value: PropTypes.string
   };
 
+  static defaultProps = {
+    defaultValue: ""
+  };
+
   /**
    * @type {State}
    */
   state = {
-    value: this.props.defaultValue || ""
+    value: this.props.defaultValue
   };
 
   /**
