@@ -20,7 +20,7 @@ export default class SkeletonItem extends Component {
       <ThemeContext.Consumer>
         {({ themeClass }) => (
           <div
-            className={cx("hig__skeleton-item", themeClass)}
+            className={cx("hig__skeleton-itemV1", themeClass)}
             style={{
               maxWidth: this.props.maxWidth,
               marginBottom: this.props.marginBottom,

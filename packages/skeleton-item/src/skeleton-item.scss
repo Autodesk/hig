@@ -12,7 +12,7 @@
   }
 }
 
-.hig__skeleton-item {
+.hig__skeleton-itemV1 {
   position: relative;
   overflow: hidden;
   border-radius: 4px;
@@ -33,7 +33,7 @@
 $light-shine-outer: #f2f2f2;
 $light-shine-inner: #f7f7f7;
 .hig--light-theme {
-  .hig__skeleton-item {
+  &.hig__skeleton-itemV1 {
     background-color: $light-shine-outer;
 
     &:after {
@@ -46,7 +46,7 @@ $light-shine-inner: #f7f7f7;
 $dark-blue-shine-outer: #555E6C;
 $dark-blue-shine-inner: #606976;
 .hig--dark-blue-theme {
-  &.hig__skeleton-item {
+  &.hig__skeleton-itemV1 {
     background-color: $dark-blue-shine-outer;
 
     &:after {
