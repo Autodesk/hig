@@ -8,6 +8,11 @@ import PropTypes from "prop-types";
  * @property {function(): void} clear
  */
 
+/**
+ * @typedef {Object} State
+ * @property {string} value
+ */
+
 export default class TextInputBehavior extends Component {
   static propTypes = {
     /**
@@ -32,10 +37,16 @@ export default class TextInputBehavior extends Component {
     value: PropTypes.string
   };
 
+  /**
+   * @type {State}
+   */
   state = {
     value: this.props.defaultValue || ""
   };
 
+  /**
+   * @returns {string}
+   */
   getValue() {
     if (this.isControlled()) {
       return this.props.value;
@@ -44,20 +55,33 @@ export default class TextInputBehavior extends Component {
     return this.state.value;
   }
 
+  /**
+   * @param {string} value
+   */
   setValue(value) {
     const { onChange } = this.props;
 
-    if (onChange) {
-      onChange(value);
-    }
+    if (onChange) onChange(value);
 
-    this.setState({ value });
+    if (!this.isControlled()) {
+      this.setState({ value });
+    }
   }
 
+  isControlled() {
+    return this.props.value !== undefined;
+  }
+
+  /**
+   * @param {event} Event
+   */
   handleChange = event => {
-    this.setValue(this.isControlled() ? this.props.value : event.target.value);
+    this.setValue(event.target.value);
   };
 
+  /**
+   * An action that empties the value
+   */
   clear = () => {
     const { onClear } = this.props;
 
@@ -65,12 +89,8 @@ export default class TextInputBehavior extends Component {
       onClear();
     }
 
-    this.setValue("");
+      this.setValue("");
   };
-
-  isControlled() {
-    return this.props.value !== undefined;
-  }
 
   render() {
     return this.props.children({
