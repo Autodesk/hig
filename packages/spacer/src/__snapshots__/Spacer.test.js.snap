@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`spacer/Spacer snapshot tests renders with no props 1`] = `
+.emotion-0 {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+<div
+  className="emotion-0"
+/>
+`;
+
+exports[`spacer/Spacer snapshot tests renders with size 1`] = `
+.emotion-0 {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+<div
+  className="emotion-0"
+/>
+`;
+
+exports[`spacer/Spacer snapshot tests renders with size and spacing 1`] = `
+.emotion-0 {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+<div
+  className="emotion-0"
+/>
+`;
+
+exports[`spacer/Spacer snapshot tests renders with spacing 1`] = `
+.emotion-0 {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+<div
+  className="emotion-0"
+/>
+`;
