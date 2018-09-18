@@ -1,0 +1,28 @@
+@import "~@hig/styles/mixins/base.scss";
+
+.hig__profile-flyout__content {
+  @include reset;
+
+  padding: 10px;
+  font-family: ArtifaktElement;
+  line-height: 1.6;
+  padding: 10px;
+
+  &__name {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 16px;
+    line-height: 24px;
+    color: #222934;
+  }
+
+  &__email {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #565c5f;
+    line-height: 16px;
+    font-size: 12px;
+  }
+}

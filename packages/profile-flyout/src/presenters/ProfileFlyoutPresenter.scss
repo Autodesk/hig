@@ -1,0 +1,12 @@
+@import '~@hig/styles/mixins/colors';
+@import '~@hig/styles/tokens/layers';
+
+.hig__profile-flyout {
+  &:focus{
+    outline: none;
+  }
+
+  &__profile-image {
+    padding: 0px 12px;
+  }
+}
