@@ -21,6 +21,7 @@ describe("slider/Slider", () => {
     const wrapper = mount(<Slider required={requiredMsg} />);
     expect(wrapper.text()).toEqual(expect.stringMatching(requiredMsg));
   });
+
   describe("props", () => {
     describe("id", () => {
       it("generates an ID when one is not provided", () => {
