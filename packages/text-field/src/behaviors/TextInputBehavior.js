@@ -89,7 +89,9 @@ export default class TextInputBehavior extends Component {
       onClear();
     }
 
+    if (!this.isControlled()) {
       this.setValue("");
+    }
   };
 
   render() {
