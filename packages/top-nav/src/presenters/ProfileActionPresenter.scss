@@ -1,5 +1,13 @@
+@import "~@hig/styles/mixins/spacing";
+
 .hig__top-nav__profile-action {
   display: flex;
   align-items: center;
   box-sizing: border-box;
+}
+
+.hig__top-nav__profile-action__button-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 0 spacing(s) / 2;
 }

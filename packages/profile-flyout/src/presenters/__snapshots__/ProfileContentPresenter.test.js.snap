@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`profile-flyout/presenters/ProfileContentPresenter  1`] = `
+<div
+  className="hig__profile-flyout__content"
+/>
+`;
+
+exports[`profile-flyout/presenters/ProfileContentPresenter  2`] = `
+<div
+  className="hig__profile-flyout__content"
+>
+  <div
+    className="hig__profile-flyout__content__name"
+  >
+    Pete Parker
+  </div>
+</div>
+`;
+
+exports[`profile-flyout/presenters/ProfileContentPresenter  3`] = `
+<div
+  className="hig__profile-flyout__content"
+>
+  <div
+    className="hig__profile-flyout__content__email"
+  >
+    spyder-man@autodesk.com
+  </div>
+</div>
+`;
+
+exports[`profile-flyout/presenters/ProfileContentPresenter  4`] = `
+<div
+  className="hig__profile-flyout__content"
+>
+  <div
+    className="hig__profile-flyout__content__name"
+  >
+    Pete Parker
+  </div>
+  <div
+    className="hig__profile-flyout__content__email"
+  >
+    spyder-man@autodesk.com
+  </div>
+  <span />
+</div>
+`;

@@ -3,14 +3,14 @@ import PropTypes from "prop-types";
 import cx from "classnames";
 import { polyfill } from "react-lifecycles-compat";
 
-import "./avatar.scss";
-import { AVAILABLE_SIZES } from "./sizes";
+import { sizes, AVAILABLE_SIZES } from "./sizes";
+import "./Avatar.scss";
 
 /**
  * @param {number} value
  * @param {number[]} range1
  * @param {number[]} range2
- * @returns {number}
+ * @returns {string}
  */
 function convertRanges(value, range1, range2) {
   return Number(
@@ -21,7 +21,7 @@ function convertRanges(value, range1, range2) {
 
 /**
  * @param {string} name
- * @returns {number}
+ * @returns {string}
  */
 function backgroundIdFromName(name) {
   return convertRanges(name.charCodeAt(0) - 65, [0, 26], [1, 9]);
@@ -48,14 +48,14 @@ function Image({ image, name, onError }) {
   const alt = `Avatar image of ${name}`;
 
   return (
-    <div className="hig__avatarV2__image-wrapper">
+    <span className="hig__avatarV2__image-wrapper">
       <img
         className="hig__avatarV2__image"
         src={image}
         alt={alt}
         onError={onError}
       />
-    </div>
+    </span>
   );
 }
 
@@ -67,22 +67,41 @@ function Image({ image, name, onError }) {
 // eslint-disable-next-line react/prop-types
 function Initials({ name }) {
   return (
-    <div className="hig__avatarV2__initials" aria-hidden="true">
+    <span className="hig__avatarV2__initials" aria-hidden="true">
       {initialsFromName(name)}
-    </div>
+    </span>
   );
 }
 
+const modifiersBySize = {
+  [sizes.SMALL_16]: "hig__avatarV2--size--small",
+  [sizes.MEDIUM_24]: "hig__avatarV2--size--medium",
+  [sizes.MEDIUM_32]: "hig__avatarV2--size--medium-32",
+  [sizes.LARGE_36]: "hig__avatarV2--size--large",
+  [sizes.LARGE_48]: "hig__avatarV2--size--large-48",
+  [sizes.XLARGE_64]: "hig__avatarV2--size--extralarge"
+};
+
+const modifiersByBackgroundId = {
+  "1": "hig__avatarV2__background--turquoise",
+  "2": "hig__avatarV2__background--purple",
+  "3": "hig__avatarV2__background--pink",
+  "4": "hig__avatarV2__background--salmon",
+  "5": "hig__avatarV2__background--blue",
+  "6": "hig__avatarV2__background--green",
+  "7": "hig__avatarV2__background--turquoise",
+  "8": "hig__avatarV2__background--indigo",
+  "9": "hig__avatarV2__background--gold"
+};
+
 /**
  * @typedef {Object} AvatarProps
- * @param {string} name
- * @param {string} size
+ * @param {string} [name]
+ * @param {string} [size]
  * @param {string} [image]
  * @param {Function} [onImageError]
 
 /**
- *
- *
  * @typedef {Object} AvatarState
  * @property {boolean} hasImageError
  * @property {string} [imageUrl]
@@ -91,14 +110,19 @@ function Initials({ name }) {
 class Avatar extends Component {
   static propTypes = {
     /** The name for the avatar */
-    name: PropTypes.string.isRequired,
+    name: PropTypes.string,
     /** Set the size of the avatar */
-    size: PropTypes.oneOf(AVAILABLE_SIZES).isRequired,
+    size: PropTypes.oneOf(AVAILABLE_SIZES),
     /** URL to a profile image */
     // eslint-disable-next-line react/no-unused-prop-types
     image: PropTypes.string,
     /** Called when an error occurs on the image  */
     onImageError: PropTypes.func
+  };
+
+  static defaultProps = {
+    name: "Anonymous User",
+    size: sizes.MEDIUM_32
   };
 
   /** @type {AvatarState} */
@@ -142,21 +166,22 @@ class Avatar extends Component {
     const { size, name } = this.props;
     const { imageUrl, hasImageError } = this.state;
     const { handleImageError } = this;
+    const backgroundId = backgroundIdFromName(name);
     const label = `Avatar for ${name}`;
     const showImage = imageUrl && !hasImageError;
     const classes = cx(
       "hig__avatarV2",
-      `hig__avatarV2--size--${size}`,
-      `hig__avatarV2__background--${backgroundIdFromName(name)}`
+      modifiersBySize[size],
+      modifiersByBackgroundId[backgroundId]
     );
 
     return (
-      <figure className={classes} aria-label={label}>
+      <span aria-label={label} className={classes} role="img">
         {!showImage ? null : (
           <Image image={imageUrl} name={name} onError={handleImageError} />
         )}
         <Initials name={name} />
-      </figure>
+      </span>
     );
   }
 }

@@ -1,3 +1,4 @@
+import { ProfileContent } from "@hig/profile-flyout";
 import "@hig/styles/build/fonts.css";
 
 import ActionPresenter from "./presenters/ActionPresenter";
@@ -7,7 +8,6 @@ import LogoPresenter from "./presenters/LogoPresenter";
 import LogoTextPresenter from "./presenters/LogoTextPresenter";
 import NotificationsAction from "./NotificationsAction";
 import ProfileAction from "./ProfileAction";
-import ProfileContentPresenter from "./presenters/ProfileContentPresenter";
 import SeparatorPresenter from "./presenters/SeparatorPresenter";
 import TopNavPresenter from "./presenters/TopNavPresenter";
 
@@ -28,7 +28,7 @@ TopNavPresenter.Separator = SeparatorPresenter;
  * and for the sake of consistency neither should HelpAction` and `ProfileAction`.
  */
 TopNavPresenter.HelpAction = HelpAction;
-TopNavPresenter.ProfileContent = ProfileContentPresenter;
+TopNavPresenter.ProfileContent = ProfileContent;
 TopNavPresenter.ProfileAction = ProfileAction;
 
 export {
@@ -36,10 +36,10 @@ export {
   Interactions,
   NotificationsAction,
   ProfileAction,
+  ProfileContent,
   ActionPresenter as Action,
   LogoPresenter as Logo,
   LogoTextPresenter as LogoText,
-  ProfileContentPresenter as ProfileContent,
   SeparatorPresenter as Separator
 };
 

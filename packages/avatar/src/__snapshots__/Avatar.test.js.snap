@@ -1,25 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Avatar when an image URL is not provided renders initials 1`] = `
-<figure
+exports[`avatar/Avatar renders with a name 1`] = `
+<span
   aria-label="Avatar for Jon Snow"
-  className="hig__avatarV2 hig__avatarV2--size--large hig__avatarV2__background--4"
+  className="hig__avatarV2 hig__avatarV2--size--medium-32 hig__avatarV2__background--salmon"
+  role="img"
 >
-  <div
+  <span
     aria-hidden="true"
     className="hig__avatarV2__initials"
   >
     JS
-  </div>
-</figure>
+  </span>
+</span>
 `;
 
-exports[`Avatar when an image URL is provided renders initials and the image 1`] = `
-<figure
+exports[`avatar/Avatar renders with all props 1`] = `
+<span
   aria-label="Avatar for Jon Snow"
-  className="hig__avatarV2 hig__avatarV2--size--large hig__avatarV2__background--4"
+  className="hig__avatarV2 hig__avatarV2--size--large hig__avatarV2__background--salmon"
+  role="img"
 >
-  <div
+  <span
     className="hig__avatarV2__image-wrapper"
   >
     <img
@@ -28,12 +30,52 @@ exports[`Avatar when an image URL is provided renders initials and the image 1`]
       onError={[Function]}
       src="http://placekitten.com/g/64/64"
     />
-  </div>
-  <div
+  </span>
+  <span
     aria-hidden="true"
     className="hig__avatarV2__initials"
   >
     JS
-  </div>
-</figure>
+  </span>
+</span>
+`;
+
+exports[`avatar/Avatar renders with an image 1`] = `
+<span
+  aria-label="Avatar for Anonymous User"
+  className="hig__avatarV2 hig__avatarV2--size--medium-32 hig__avatarV2__background--turquoise"
+  role="img"
+>
+  <span
+    className="hig__avatarV2__image-wrapper"
+  >
+    <img
+      alt="Avatar image of Anonymous User"
+      className="hig__avatarV2__image"
+      onError={[Function]}
+      src="http://placekitten.com/g/64/64"
+    />
+  </span>
+  <span
+    aria-hidden="true"
+    className="hig__avatarV2__initials"
+  >
+    AU
+  </span>
+</span>
+`;
+
+exports[`avatar/Avatar renders without props 1`] = `
+<span
+  aria-label="Avatar for Anonymous User"
+  className="hig__avatarV2 hig__avatarV2--size--medium-32 hig__avatarV2__background--turquoise"
+  role="img"
+>
+  <span
+    aria-hidden="true"
+    className="hig__avatarV2__initials"
+  >
+    AU
+  </span>
+</span>
 `;
