@@ -6,6 +6,15 @@ import { generateId } from "@hig/utils";
 import Input from "./presenters/Input";
 import "./slider.scss";
 
+/**
+ * @typedef {string|number} Value
+ */
+
+/**
+ * @typedef {Object} State
+ * @property {Value} value
+ */
+
 export default class Slider extends Component {
   static propTypes = {
     /**
@@ -79,15 +88,14 @@ export default class Slider extends Component {
   };
 
   /**
-   * @type {Object}
-   * @property {string|number} value
+   * @type {State}
    */
   state = {
     value: this.props.defaultValue
   };
 
   /**
-   * @returns {string|number}
+   * @returns {Value}
    */
   getValue() {
     if (this.isControlled()) {
@@ -98,32 +106,27 @@ export default class Slider extends Component {
   }
 
   /**
-   * @returns {boolean}
+   * @param {Value} value
    */
-  isControlled() {
-    return this.props.value !== undefined;
-  }
-
-  /**
-   * @param {string|number} value
-   */
-  updateValue(value) {
+  setValue(value) {
     const { onChange } = this.props;
 
-    if (onChange) {
-      onChange(Number(value));
-    }
+    if (onChange) onChange(Number(value));
 
-    this.setState({ value });
+    if (!this.isControlled()) {
+      this.setState({ value });
+    }
+  }
+
+  isControlled() {
+    return this.props.value !== undefined;
   }
 
   /**
    * @param {event} Event
    */
   handleChange = event => {
-    if (!this.isControlled()) {
-      this.updateValue(event.target.value);
-    }
+    this.setValue(event.target.value);
   };
 
   render() {
