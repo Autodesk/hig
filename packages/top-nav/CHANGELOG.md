@@ -1,3 +1,10 @@
+# [@hig/top-nav-v0.4.0](https://github.com/Autodesk/hig/compare/@hig/top-nav@0.3.2...@hig/top-nav@0.4.0) (2018-09-19)
+
+
+### Features
+
+* update `ProfileAction` to use `[@hig](https://github.com/hig)/profile-flyout` ([5385fec](https://github.com/Autodesk/hig/commit/5385fec))
+
 # [@hig/top-nav-v0.3.2](https://github.com/Autodesk/hig/compare/@hig/top-nav@0.3.1...@hig/top-nav@0.3.2) (2018-09-11)
 
 
