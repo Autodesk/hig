@@ -1,7 +1,7 @@
 export default {
   "SKELETON_ITEM.BACKGROUND_COLOR": {
     value: {
-      ref: "BASICS.COLORS.BLACK"
+      ref: "BASICS.COLORS.WHITE"
     },
     transform: {
       alpha: 0.1
