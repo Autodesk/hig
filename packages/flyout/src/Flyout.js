@@ -48,7 +48,7 @@ export default class Flyout extends Component {
     fallbackAnchorPoints: PropTypes.arrayOf(
       PropTypes.oneOf(AVAILABLE_ANCHOR_POINTS)
     ).isRequired,
-    /** Use to render a custom flyout panel. Can be either a node or a render function */
+    /** Renders a custom flyout panel. Can be either a node or a render function */
     panel: PropTypes.func,
     /** A custom pointer */
     pointer: PropTypes.node,
