@@ -1,3 +1,10 @@
+# [@hig/checkbox-v0.1.3](https://github.com/Autodesk/hig/compare/@hig/checkbox@0.1.2...@hig/checkbox@0.1.3) (2018-09-19)
+
+
+### Bug Fixes
+
+* **behavior:** call `onChange` handlers when controlled ([af9c176](https://github.com/Autodesk/hig/commit/af9c176))
+
 # [@hig/checkbox-v0.1.2](https://github.com/Autodesk/hig/compare/@hig/checkbox@0.1.1...@hig/checkbox@0.1.2) (2018-08-24)
 
 

@@ -1,3 +1,11 @@
+# [@hig/text-field-v0.4.4](https://github.com/Autodesk/hig/compare/@hig/text-field@0.4.3...@hig/text-field@0.4.4) (2018-09-19)
+
+
+### Bug Fixes
+
+* **behavior:** call `onChange` handlers when controlled ([af9c176](https://github.com/Autodesk/hig/commit/af9c176))
+* **behavior:** prevent value from being cleared when controlled ([fe0af95](https://github.com/Autodesk/hig/commit/fe0af95))
+
 # [@hig/text-field-v0.4.3](https://github.com/Autodesk/hig/compare/@hig/text-field@0.4.2...@hig/text-field@0.4.3) (2018-08-24)
 
 
