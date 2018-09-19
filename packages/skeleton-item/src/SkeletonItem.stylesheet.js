@@ -11,13 +11,9 @@ export default function stylesheet(props, themeData) {
       maxWidth,
       "&:after": {
         animation: "3s ease-in infinite shine",
-        backgroundImage: `linear-gradient(135deg, ${
-          themeData["SKELETON_ITEM.BACKGROUND_COLOR"]
-        } 0%, ${themeData["SKELETON_ITEM.BACKGROUND_COLOR"]} 40%, ${
+        backgroundImage: `linear-gradient(135deg, transparent 0%, transparent 40%, ${
           themeData["SKELETON_ITEM.HIGHLIGHT_COLOR"]
-        } 50%, ${themeData["SKELETON_ITEM.BACKGROUND_COLOR"]} 60%, ${
-          themeData["SKELETON_ITEM.BACKGROUND_COLOR"]
-        } 100%)`,
+        } 50%, transparent 60%, transparent 100%)`,
         bottom: 0,
         content: '""',
         left: 0,
