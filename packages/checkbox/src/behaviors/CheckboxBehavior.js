@@ -1,6 +1,11 @@
 import { Component } from "react";
 import PropTypes from "prop-types";
 
+/**
+ * @typedef {Object} State
+ * @property {boolean} checked
+ */
+
 export default class CheckboxBehavior extends Component {
   static propTypes = {
     /**
@@ -29,32 +34,17 @@ export default class CheckboxBehavior extends Component {
     defaultChecked: false
   };
 
+  /**
+   * @type {State}
+   */
   state = {
     checked: this.props.defaultChecked
   };
 
   /**
-   * @param {boolean} checked
+   * @returns {boolean}
    */
-  setChecked(checked) {
-    const { onChange } = this.props;
-
-    if (onChange) {
-      onChange(checked);
-    }
-
-    this.setState({ checked });
-  }
-
-  toggleChecked() {
-    this.setChecked(!this.state.checked);
-  }
-
-  isControlled() {
-    return this.props.checked !== undefined;
-  }
-
-  isChecked() {
+  getChecked() {
     if (this.isControlled()) {
       return this.props.checked;
     }
@@ -63,32 +53,47 @@ export default class CheckboxBehavior extends Component {
   }
 
   /**
+   * @param {boolean} checked
+   */
+  setChecked(checked) {
+    const { onChange } = this.props;
+
+    if (onChange) onChange(checked);
+
+    if (!this.isControlled()) {
+      this.setState({ checked });
+    }
+  }
+
+  toggleChecked() {
+    this.setChecked(!this.getChecked());
+  }
+
+  isControlled() {
+    return this.props.checked !== undefined;
+  }
+
+  /**
    * @param {MouseEvent} event
    */
   handleClick = event => {
     const { onClick } = this.props;
 
-    if (onClick) {
-      onClick(event);
-    }
+    if (onClick) onClick(event);
 
-    if (!this.isControlled()) {
-      this.toggleChecked();
-    }
+    this.toggleChecked();
   };
 
   /**
    * @param {UIEvent} event
    */
   handleChange = event => {
-    if (!this.isControlled()) {
-      this.setChecked(event.target.checked);
-    }
+    this.setChecked(event.target.checked);
   };
 
   render() {
     const { handleChange, handleClick } = this;
-    const checked = this.isChecked();
+    const checked = this.getChecked();
 
     return this.props.children({
       checked,
