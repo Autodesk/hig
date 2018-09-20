@@ -5,7 +5,7 @@ import { AVAILABLE_ANCHOR_POINTS } from "./anchorPoints";
 import ContainerTransition from "./behaviors/ContainerTransition";
 import FlyoutPresenter from "./presenters/FlyoutPresenter";
 import getCoordinates, { DEFAULT_COORDINATES } from "./getCoordinates";
-import HoverBehavior from "./behaviors/HoverBehavior";
+import DelayedHoverBehavior from "./behaviors/DelayedHoverBehavior";
 import PanelContainerPresenter from "./presenters/PanelContainerPresenter";
 import PanelPresenter from "./presenters/PanelPresenter";
 
@@ -313,7 +313,7 @@ export default class Flyout extends Component {
     } = this.getCoordinates();
 
     return (
-      <HoverBehavior
+      <DelayedHoverBehavior
         onMouseEnter={handleChildMouseEnter}
         onMouseLeave={handleChildMouseLeave}
         openOnHoverDelay={openOnHoverDelay}
@@ -333,7 +333,7 @@ export default class Flyout extends Component {
             {this.renderChildren(hasHover, onMouseEnter, onMouseLeave)}
           </FlyoutPresenter>
         )}
-      </HoverBehavior>
+      </DelayedHoverBehavior>
     );
   };
 

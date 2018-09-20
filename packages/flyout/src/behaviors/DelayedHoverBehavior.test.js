@@ -1,14 +1,16 @@
 import { lastCallOfMock } from "@hig/jest-preset/helpers";
 import { mount } from "enzyme";
 import React from "react";
-import HoverBehavior from "./HoverBehavior";
+import DelayedHoverBehavior from "./DelayedHoverBehavior";
 
 function renderExample(exampleProps) {
   const renderPropSpy = jest.fn(({ onMouseEnter, onMouseLeave }) => (
     <input onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} />
   ));
   const wrapper = mount(
-    <HoverBehavior {...exampleProps}>{renderPropSpy}</HoverBehavior>
+    <DelayedHoverBehavior {...exampleProps}>
+      {renderPropSpy}
+    </DelayedHoverBehavior>
   );
 
   return {
@@ -17,7 +19,7 @@ function renderExample(exampleProps) {
   };
 }
 
-describe("HoverBehavior", () => {
+describe("DelayedHoverBehavior", () => {
   describe("by default", () => {
     it("passes hasHover=false to the render prop", () => {
       const { renderPropSpy } = renderExample();
