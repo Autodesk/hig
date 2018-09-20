@@ -42,6 +42,7 @@ describe("HoverBehavior", () => {
       jest.useFakeTimers();
       const onMouseEnterSpy = jest.fn();
       const { wrapper } = renderExample({
+        openOnHoverDelay: 500,
         onMouseEnter: onMouseEnterSpy
       });
       wrapper.find("input").simulate("mouseenter");
@@ -66,6 +67,7 @@ describe("HoverBehavior", () => {
     it("calls onMouseLeave callback", () => {
       const onMouseLeaveSpy = jest.fn();
       const { wrapper } = renderExample({
+        openOnHoverDelay: 500,
         onMouseLeave: onMouseLeaveSpy
       });
       wrapper.find("input").simulate("mouseenter");

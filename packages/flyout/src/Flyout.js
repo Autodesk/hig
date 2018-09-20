@@ -66,13 +66,20 @@ export default class Flyout extends Component {
     /** When provided, it overrides the flyout's open state */
     open: PropTypes.bool,
     /** Whether flyout should open when the target is hovered over */
-    openOnHover: PropTypes.bool
+    openOnHover: PropTypes.bool,
+    /**
+     * If openOnHover is true, this prop will determine the delay
+     * from when mouseEnter begins until the flyout visually opens
+     */
+    openOnHoverDelay: PropTypes.number
   };
 
   static defaultProps = {
     anchorPoint: DEFAULT_COORDINATES.anchorPoint,
     defaultOpen: false,
     fallbackAnchorPoints: AVAILABLE_ANCHOR_POINTS,
+    openOnHover: false,
+    openOnHoverDelay: 500,
     /**
      * @param {PanelRendererPayload} payload
      */
@@ -297,7 +304,7 @@ export default class Flyout extends Component {
       refPointer,
       refWrapper
     } = this;
-    const { openOnHover, pointer } = this.props;
+    const { openOnHoverDelay, pointer } = this.props;
     const panel = this.renderPanel();
     const {
       anchorPoint,
@@ -310,6 +317,7 @@ export default class Flyout extends Component {
         onMouseEnter={handleChildMouseEnter}
         onMouseLeave={handleChildMouseLeave}
         openOnHover={openOnHover}
+        openOnHoverDelay={openOnHoverDelay}
       >
         {({ hasHover, onMouseEnter, onMouseLeave }) => (
           <FlyoutPresenter

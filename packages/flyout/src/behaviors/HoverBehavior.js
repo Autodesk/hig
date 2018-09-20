@@ -1,14 +1,17 @@
 import { Component } from "react";
 import PropTypes from "prop-types";
 
-const HOVER_DELAY = 500;
-
 export default class HoverBehavior extends Component {
   static propTypes = {
     /**
      * Generally the Flyout target and presenter
      */
     children: PropTypes.func.isRequired,
+    /**
+     * Amount of time between mouse enter is reported and when
+     * onMouseEnter event should fire
+     */
+    openOnHoverDelay: PropTypes.number,
     /**
      * Function called when the user enters the visual space
      * occupied by the component
@@ -34,11 +37,13 @@ export default class HoverBehavior extends Component {
   }
 
   handleFocus(event) {
-    if (this.props.onMouseEnter) {
+    const { openOnHoverDelay, onMouseEnter } = this.props;
+
+    if (onMouseEnter) {
       this.focusTimeout = setTimeout(() => {
         this.setState({ hasHover: true });
-        this.props.onMouseEnter(event);
-      }, HOVER_DELAY);
+        onMouseEnter(event);
+      }, openOnHoverDelay);
     }
 
     this.setState({ hasHover: true });

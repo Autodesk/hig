@@ -1,5 +1,5 @@
 import { action } from "@storybook/addon-actions";
-import { boolean, select } from "@storybook/addon-knobs/react";
+import { boolean, number, select } from "@storybook/addon-knobs/react";
 import {
   controlledBool,
   controlledNumber,
@@ -20,7 +20,8 @@ const knobLabels = {
   onClickOutside: "onClickOutside",
   onScroll: "onScroll",
   open: "Open",
-  openOnHover: "openOnHover"
+  openOnHover: "openOnHover",
+  openOnHoverDelay: "openOnHoverDelay"
 };
 
 export default function getKnobs(props) {
@@ -29,6 +30,7 @@ export default function getKnobs(props) {
     maxHeight,
     open,
     openOnHover,
+    openOnHoverDelay,
     ...otherProps
   } = props;
 
@@ -51,6 +53,11 @@ export default function getKnobs(props) {
     openOnHover: boolean(
       knobLabels.openOnHover,
       openOnHover,
+      knobGroupIds.basic
+    ),
+    openOnHoverDelay: number(
+      knobLabels.openOnHoverDelay,
+      openOnHoverDelay,
       knobGroupIds.basic
     )
   };
