@@ -50,12 +50,12 @@ export default class HoverBehavior extends Component {
   }
 
   handleBlur(event) {
+    clearTimeout(this.focusTimeout);
+    this.setState({ hasHover: false });
+
     if (this.props.onMouseLeave) {
-      clearTimeout(this.focusTimeout);
       this.props.onMouseLeave(event);
     }
-
-    this.setState({ hasHover: false });
   }
 
   render() {
