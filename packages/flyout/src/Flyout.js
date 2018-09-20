@@ -316,7 +316,6 @@ export default class Flyout extends Component {
       <HoverBehavior
         onMouseEnter={handleChildMouseEnter}
         onMouseLeave={handleChildMouseLeave}
-        openOnHover={openOnHover}
         openOnHoverDelay={openOnHoverDelay}
       >
         {({ hasHover, onMouseEnter, onMouseLeave }) => (
