@@ -49,7 +49,6 @@
   "dependencies": {
     "@hig/themes": "^0.3.0",
     "faker": "^4.1.0",
-    "hig-react": "0.29.0",
     "prop-types": "^15.6.1"
   },
   "eslintConfig": {
