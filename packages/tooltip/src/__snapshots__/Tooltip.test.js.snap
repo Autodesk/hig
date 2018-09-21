@@ -71,8 +71,8 @@ exports[`tooltip/Tooltip  2`] = `
       onBlur={undefined}
       onClick={[Function]}
       onFocus={undefined}
-      onMouseEnter={undefined}
-      onMouseLeave={undefined}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
       onMouseOver={undefined}
     >
       <span
