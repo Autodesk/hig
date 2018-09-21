@@ -35,8 +35,13 @@ function createPanelRenderer({
   loading,
   heading
 }) {
-  /* eslint-disable-next-line react/prop-types */
-  return function renderPanel({ hideFlyout, handleScroll, innerRef }) {
+  return function renderPanel({
+    /* eslint-disable react/prop-types */
+    hideFlyout,
+    handleScroll,
+    innerRef,
+    transitionStatus
+  }) {
     const isEmpty = notifications.length === 0;
 
     return (
@@ -45,6 +50,7 @@ function createPanelRenderer({
         innerRef={innerRef}
         loading={loading}
         onScroll={handleScroll}
+        transitionStatus={transitionStatus}
       >
         {isEmpty ? (
           <EmptyStatePresenter message={emptyMessage} />

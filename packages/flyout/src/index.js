@@ -17,3 +17,7 @@ export {
   offsetPanelHorizontal
 } from "./coordinateHelpers";
 export { default as Pointer } from "./presenters/PointerPresenter";
+export {
+  transitionStatuses,
+  AVAILABLE_TRANSITION_STATUSES
+} from "./transitionStatuses";
