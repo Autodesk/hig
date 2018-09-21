@@ -2,6 +2,9 @@
 
 exports[`side-nav/SideNavSkeleton snapshot tests renders with no props 1`] = `
 .emotion-0 {
+  background-color: rgba(0,0,0,0.06);
+  border-radius: 2px;
+  height: 16px;
   overflow: hidden;
   position: relative;
   margin-bottom: 48px;
@@ -11,7 +14,7 @@ exports[`side-nav/SideNavSkeleton snapshot tests renders with no props 1`] = `
 .emotion-0:after {
   -webkit-animation: 3s ease-in infinite shine;
   animation: 3s ease-in infinite shine;
-  background-image: linear-gradient(135deg,undefined 0%,undefined 40%,undefined 50%,undefined 60%,undefined 100%);
+  background-image: linear-gradient(135deg,transparent 0%,transparent 40%,rgba(255,255,255,0.3) 50%,transparent 60%,transparent 100%);
   bottom: 0;
   content: "";
   left: 0;
@@ -61,6 +64,9 @@ exports[`side-nav/SideNavSkeleton snapshot tests renders with no props 1`] = `
 }
 
 .emotion-1 {
+  background-color: rgba(0,0,0,0.06);
+  border-radius: 2px;
+  height: 16px;
   overflow: hidden;
   position: relative;
   margin-bottom: 24px;
@@ -70,7 +76,7 @@ exports[`side-nav/SideNavSkeleton snapshot tests renders with no props 1`] = `
 .emotion-1:after {
   -webkit-animation: 3s ease-in infinite shine;
   animation: 3s ease-in infinite shine;
-  background-image: linear-gradient(135deg,undefined 0%,undefined 40%,undefined 50%,undefined 60%,undefined 100%);
+  background-image: linear-gradient(135deg,transparent 0%,transparent 40%,rgba(255,255,255,0.3) 50%,transparent 60%,transparent 100%);
   bottom: 0;
   content: "";
   left: 0;
@@ -120,6 +126,9 @@ exports[`side-nav/SideNavSkeleton snapshot tests renders with no props 1`] = `
 }
 
 .emotion-3 {
+  background-color: rgba(0,0,0,0.06);
+  border-radius: 2px;
+  height: 16px;
   overflow: hidden;
   position: relative;
   margin-bottom: 48px;
@@ -129,7 +138,7 @@ exports[`side-nav/SideNavSkeleton snapshot tests renders with no props 1`] = `
 .emotion-3:after {
   -webkit-animation: 3s ease-in infinite shine;
   animation: 3s ease-in infinite shine;
-  background-image: linear-gradient(135deg,undefined 0%,undefined 40%,undefined 50%,undefined 60%,undefined 100%);
+  background-image: linear-gradient(135deg,transparent 0%,transparent 40%,rgba(255,255,255,0.3) 50%,transparent 60%,transparent 100%);
   bottom: 0;
   content: "";
   left: 0;
@@ -179,6 +188,9 @@ exports[`side-nav/SideNavSkeleton snapshot tests renders with no props 1`] = `
 }
 
 .emotion-8 {
+  background-color: rgba(0,0,0,0.06);
+  border-radius: 2px;
+  height: 16px;
   overflow: hidden;
   position: relative;
   max-width: 124px;
@@ -187,7 +199,7 @@ exports[`side-nav/SideNavSkeleton snapshot tests renders with no props 1`] = `
 .emotion-8:after {
   -webkit-animation: 3s ease-in infinite shine;
   animation: 3s ease-in infinite shine;
-  background-image: linear-gradient(135deg,undefined 0%,undefined 40%,undefined 50%,undefined 60%,undefined 100%);
+  background-image: linear-gradient(135deg,transparent 0%,transparent 40%,rgba(255,255,255,0.3) 50%,transparent 60%,transparent 100%);
   bottom: 0;
   content: "";
   left: 0;
