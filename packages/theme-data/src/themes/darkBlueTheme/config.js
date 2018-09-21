@@ -6,6 +6,7 @@ import { config as mediumDensityThemeConfig } from "../mediumDensityTheme";
 import formField from "./components/formField";
 import input from "./components/input";
 import label from "./components/label";
+import skeletonItem from "./components/skeletonItem";
 
 const darkBlueThemeConfig = extendTheme(
   baseThemeConfig,
@@ -15,7 +16,8 @@ const darkBlueThemeConfig = extendTheme(
     mapKeys(system.colorScheme, key => `COLOR_SCHEME.${key}`),
     formField,
     input,
-    label
+    label,
+    skeletonItem
   )
 );
 
