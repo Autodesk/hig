@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 import Flyout, { anchorPoints, AVAILABLE_ANCHOR_POINTS } from "@hig/flyout";
 import "@hig/flyout/build/index.css";
+import { combineEventHandlers } from "@hig/utils";
 
 import EmptyStatePresenter from "./presenters/EmptyStatePresenter";
 import IndicatorPresenter from "./presenters/IndicatorPresenter";
@@ -106,10 +107,7 @@ export default function NotificationsFlyout(props) {
         >
           {({ handleClick }) => (
             <IndicatorPresenter
-              onClick={() => {
-                onClick();
-                handleClick();
-              }}
+              onClick={combineEventHandlers(onClick, handleClick)}
               count={unreadCount}
               showCount={showUnreadCount}
               title={indicatorTitle}
