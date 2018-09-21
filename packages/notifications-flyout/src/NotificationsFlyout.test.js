@@ -34,6 +34,7 @@ describe("notifications-flyout/NotificationsFlyout", () => {
         indicatorTitle: "World",
         loading: true,
         notifications: [{ id: "1" }, <Notification />],
+        onClick: function handleClick() {},
         onClickOutside: function handleClickOutside() {},
         onScroll: function handleScroll() {},
         open: true,

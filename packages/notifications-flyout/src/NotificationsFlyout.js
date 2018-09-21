@@ -68,6 +68,7 @@ export default function NotificationsFlyout(props) {
     heading,
     indicatorTitle,
     loading,
+    onClick,
     onClickOutside,
     onScroll,
     open,
@@ -105,7 +106,10 @@ export default function NotificationsFlyout(props) {
         >
           {({ handleClick }) => (
             <IndicatorPresenter
-              onClick={handleClick}
+              onClick={() => {
+                onClick();
+                handleClick();
+              }}
               count={unreadCount}
               showCount={showUnreadCount}
               title={indicatorTitle}
@@ -153,6 +157,8 @@ NotificationsFlyout.propTypes = {
   notifications: PropTypes.arrayOf(
     PropTypes.oneOfType([PropTypes.node, PropTypes.object])
   ),
+  /** Function called when the flyout is opened */
+  onClick: PropTypes.func,
   /** Function called when the flyout is open, and a click event occurs outside the flyout */
   onClickOutside: PropTypes.func,
   /** Function called when the flyout panel is scrolled */
