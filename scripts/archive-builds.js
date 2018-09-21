@@ -4,7 +4,7 @@ async function start() {
   console.log("Archiving builds...");
 
   const archivePath = await createArchive(
-    ["packages/+(react|vanilla)/lib/**/*", "packages/*/build/**/*"],
+    ["packages/*/build/**/*"],
     "builds.tgz"
   );
 

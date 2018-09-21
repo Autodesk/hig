@@ -15,11 +15,6 @@ module.exports = storybookBaseConfig => {
       use: ["json-loader"]
     },
     {
-      test: /vanilla\/.*\.svg$/,
-      issuer: /\.js$/,
-      use: ["raw-loader"]
-    },
-    {
       test: /\.svg$/,
       issuer: /\.js$/,
       use: [
