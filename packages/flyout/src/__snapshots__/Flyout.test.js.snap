@@ -66,8 +66,8 @@ exports[`flyout/Flyout snapshots renders a custom pointer 1`] = `
       onBlur={undefined}
       onClick={[Function]}
       onFocus={undefined}
-      onMouseEnter={undefined}
-      onMouseLeave={undefined}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
       onMouseOver={undefined}
     >
       <span
@@ -217,8 +217,8 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
       onBlur={undefined}
       onClick={[Function]}
       onFocus={undefined}
-      onMouseEnter={undefined}
-      onMouseLeave={undefined}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
       onMouseOver={undefined}
     >
       <span
@@ -361,8 +361,8 @@ exports[`flyout/Flyout snapshots renders the panel from a basic render function 
       onBlur={undefined}
       onClick={[Function]}
       onFocus={undefined}
-      onMouseEnter={undefined}
-      onMouseLeave={undefined}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
       onMouseOver={undefined}
     >
       <span
@@ -512,8 +512,8 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
       onBlur={undefined}
       onClick={[Function]}
       onFocus={undefined}
-      onMouseEnter={undefined}
-      onMouseLeave={undefined}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
       onMouseOver={undefined}
     >
       <span

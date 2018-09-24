@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* eslint-disable no-console */
 const readPkg = require("read-pkg");
 const isStableVersion = require("@hig/scripts/isStableVersion");
 

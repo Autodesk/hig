@@ -18,7 +18,7 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/theme-data-poc": "^0.0.8-alpha",
+    "@hig/theme-data-poc": "^0.0.9-alpha",
     "prop-types": "^15.6.1"
   },
   "devDependencies": {

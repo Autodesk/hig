@@ -6,6 +6,7 @@ import system from "./system";
 import formField from "./components/formField";
 import input from "./components/input";
 import label from "./components/label";
+import skeletonItem from "./components/skeletonItem";
 
 const lightGrayConfig = extendTheme(
   baseThemeConfig,
@@ -15,7 +16,8 @@ const lightGrayConfig = extendTheme(
     mapKeys(system.colorScheme, key => `COLOR_SCHEME.${key}`),
     formField,
     input,
-    label
+    label,
+    skeletonItem
   )
 );
 
