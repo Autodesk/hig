@@ -1,9 +1,0 @@
-@import '~basics/colors/colors.scss';
-@import '~helpers/css/mixins/spacing.scss';
-.hig__notifications__loading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: color(white);
-  padding: spacing(xs);
-}
