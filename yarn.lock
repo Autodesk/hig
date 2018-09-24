@@ -135,12 +135,6 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.2"
 
-"@hig/theme-data-poc@^0.0.8-alpha":
-  version "0.0.8-alpha"
-  resolved "https://registry.yarnpkg.com/@hig/theme-data-poc/-/theme-data-poc-0.0.8-alpha.tgz#a690b7c8f9b4d7c4b6ff6a56eec0d2795be9b8e7"
-  dependencies:
-    tinycolor2 "^1.4.1"
-
 "@hig/themes@^0.1.3":
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/@hig/themes/-/themes-0.1.3.tgz#5c47989387be930904fa13dc9499172ea4b7ca32"

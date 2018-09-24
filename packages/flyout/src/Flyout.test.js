@@ -16,7 +16,8 @@ describe("flyout/Flyout", () => {
       maxHeight: 150,
       onClickOutside: function onClickOutside() {},
       onScroll: function onScroll() {},
-      open: true
+      open: true,
+      openOnHover: false
     };
     const MyCustomContainer = jest.fn(({ children, onScroll, maxHeight }) => (
       <div

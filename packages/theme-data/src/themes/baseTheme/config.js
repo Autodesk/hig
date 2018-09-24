@@ -5,6 +5,7 @@ import SYSTEM from "./system";
 import checkbox from "./components/checkbox";
 import formField from "./components/formField";
 import input from "./components/input";
+import skeletonItem from "./components/skeletonItem";
 import textarea from "./components/textarea";
 import label from "./components/label";
 import menu from "./components/menu";
@@ -28,6 +29,7 @@ const baseThemeConfig = extendTheme(
     checkbox,
     formField,
     input,
+    skeletonItem,
     textarea,
     label,
     menu,
