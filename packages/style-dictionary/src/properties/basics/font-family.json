@@ -1,0 +1,12 @@
+{
+  "basic": {
+    "font-family": {
+      "main": {
+        "value": "ArtifaktElement, sans-serif"
+      },
+      "monospace": {
+        "value": "\"Source Code Pro\", monospace"
+      }
+    }
+  }
+}

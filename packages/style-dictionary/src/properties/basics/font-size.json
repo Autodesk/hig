@@ -1,0 +1,16 @@
+{
+  "basic": {
+    "font-size": {
+      "medium": {
+        "s": {
+          "value": "12"
+        }
+      },
+      "high": {
+        "s": {
+          "value": "11"
+        }
+      }
+    }
+  }
+}

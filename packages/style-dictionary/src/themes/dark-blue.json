@@ -1,0 +1,32 @@
+{
+  "color-scheme": {
+    "text": {
+      "color": {
+        "value": "{basic.color.text.against-dark.value}"
+      },
+      "color-dim": {
+        "value": "{basic.color.text.against-dark.value}"
+      }
+    }
+  },
+  "label": {
+    "default": {
+      "font-color": {
+        "value": "{color-scheme.text.color.value}"
+      }
+    },
+    "hover": {
+      "font-color": {
+        "value": "{color-scheme.text.color.value}"
+      }
+    },
+    "disabled": {
+      "font-color": {
+        "value": "{color-scheme.text.color.value}",
+        "transform": {
+          "alpha": "0.2"
+        }
+      }
+    }
+  }
+}
