@@ -12,11 +12,11 @@ function Role(props) {
         <div
           style={{
             display: "flex",
-            marginBottom: themeData["DENSITY.SPACINGS.XL"],
-            borderTop: `${themeData["BASICS.BORDER_WIDTHS.S"]} solid ${
-              themeData["COLOR_SCHEME.DIVIDER.DIM_COLOR"]
+            marginBottom: themeData["density.spacings.xl"],
+            borderTop: `${themeData["basics.borderWidths.s"]} solid ${
+              themeData["colorScheme.divider.dimColor"]
             }`,
-            paddingTop: themeData["DENSITY.SPACINGS.M"]
+            paddingTop: themeData["density.spacings.m"]
           }}
         >
           <div style={{ flex: "1 1 0" }}>

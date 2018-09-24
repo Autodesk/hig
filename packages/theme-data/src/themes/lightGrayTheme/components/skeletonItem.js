@@ -1,15 +1,15 @@
 export default {
-  "SKELETON_ITEM.BACKGROUND_COLOR": {
+  "skeletonItem.backgroundColor": {
     value: {
-      ref: "BASICS.COLORS.BLACK"
+      ref: "basics.colors.black"
     },
     transform: {
       alpha: 0.06
     }
   },
-  "SKELETON_ITEM.HIGHLIGHT_COLOR": {
+  "skeletonItem.highlightColor": {
     value: {
-      ref: "BASICS.COLORS.WHITE"
+      ref: "basics.colors.white"
     },
     transform: {
       alpha: 0.3

@@ -1,33 +1,33 @@
 export default {
-  "FORM_FIELD.INSTRUCTIONAL_TEXT.FONT_SIZE": {
+  "formField.instructionalText.fontSize": {
     type: "fontSize",
-    value: { ref: "DENSITY.FONT_SIZES.S" }
+    value: { ref: "density.fontSizes.s" }
   },
-  "FORM_FIELD.INSTRUCTIONAL_TEXT.FONT_WEIGHT": {
+  "formField.instructionalText.fontWeight": {
     type: "fontWeight",
-    value: { ref: "BASICS.FONT_WEIGHTS.REGULAR" }
+    value: { ref: "basics.fontWeights.regular" }
   },
-  "FORM_FIELD.INSTRUCTIONAL_TEXT.FONT_FAMILY": {
+  "formField.instructionalText.fontFamily": {
     type: "fontFamily",
-    value: { ref: "BASICS.FONT_FAMILIES.MAIN" }
+    value: { ref: "basics.fontFamilies.main" }
   },
-  "FORM_FIELD.INSTRUCTIONAL_TEXT.FONT_COLOR": {
+  "formField.instructionalText.fontColor": {
     type: "color"
   },
-  "FORM_FIELD.INSTRUCTIONAL_TEXT.LINE_HEIGHT": {
+  "formField.instructionalText.lineHeight": {
     type: "lineHeight",
-    value: { ref: "BASICS.LINE_HEIGHTS.M" }
+    value: { ref: "basics.lineHeights.m" }
   },
-  "FORM_FIELD.ICON.WIDTH": {
+  "formField.icon.width": {
     type: "length",
-    value: { ref: "ICON.WIDTH" }
+    value: { ref: "icon.width" }
   },
-  "FORM_FIELD.ICON.PADDING_RIGHT": {
+  "formField.icon.paddingRight": {
     type: "length",
-    value: { ref: "DENSITY.SPACINGS.S" }
+    value: { ref: "density.spacings.s" }
   },
-  "FORM_FIELD.ICON.COLOR": {
+  "formField.icon.color": {
     type: "color",
-    value: { ref: "COLOR_SCHEME.TEXT_COLOR" }
+    value: { ref: "colorScheme.textColor" }
   }
 };

@@ -8,35 +8,35 @@ const oldBasics = {
 };
 
 const webLightThemeConfig = extendTheme(lightGrayThemeConfig, {
-  "INPUT.HOVER.BORDER_BOTTOM_COLOR": {
+  "input.hover.borderBottomColor": {
     value: oldBasics.colors["hig-turquoise-50"]
   },
-  "INPUT.HOVER.HALO.WIDTH": {
+  "input.hover.halo.width": {
     value: {
-      ref: "BASICS.BORDER_WIDTHS.S"
+      ref: "basics.borderWidths.s"
     }
   },
-  "INPUT.HALO.COLOR": {
+  "input.halo.color": {
     value: oldBasics.colors["hig-turquoise-50"]
   },
-  "INPUT.FOCUS.HALO.WIDTH": {
+  "input.focus.halo.width": {
     value: {
-      ref: "BASICS.BORDER_WIDTHS.S"
+      ref: "basics.borderWidths.s"
     }
   },
-  "INPUT.FOCUS.HALO.COLOR": {
+  "input.focus.halo.color": {
     value: {
-      ref: "COLOR_SCHEME.ACCENT_COLOR_500"
+      ref: "colorScheme.accentColor500"
     }
   },
-  "INPUT.ACTIVE.HALO.WIDTH": {
+  "input.active.halo.width": {
     value: {
-      ref: "BASICS.BORDER_WIDTHS.S"
+      ref: "basics.borderWidths.s"
     }
   },
-  "INPUT.ACTIVE.HALO.COLOR": {
+  "input.active.halo.color": {
     value: {
-      ref: "COLOR_SCHEME.ACCENT_COLOR_500"
+      ref: "colorScheme.accentColor500"
     }
   }
 });

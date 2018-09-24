@@ -1,39 +1,39 @@
 export default {
-  "LABEL.FONT_SIZE": {
+  "label.fontSize": {
     type: "fontSize",
     value: {
-      ref: "DENSITY.FONT_SIZES.S"
+      ref: "density.fontSizes.s"
     }
   },
-  "LABEL.FONT_WEIGHT": {
+  "label.fontWeight": {
     type: "fontWeight",
     value: {
-      ref: "BASICS.FONT_WEIGHTS.REGULAR"
+      ref: "basics.fontWeights.regular"
     }
   },
-  "LABEL.FONT_FAMILY": {
+  "label.fontFamily": {
     type: "fontFamily",
     value: {
-      ref: "BASICS.FONT_FAMILIES.MAIN"
+      ref: "basics.fontFamilies.main"
     }
   },
-  "LABEL.FONT_COLOR": {
+  "label.fontColor": {
     type: "color"
   },
-  "LABEL.LINE_HEIGHT": {
+  "label.lineHeight": {
     type: "lineHeight",
     value: {
-      ref: "BASICS.LINE_HEIGHTS.M"
+      ref: "basics.lineHeights.m"
     }
   },
 
   // Hover
-  "LABEL.HOVER.FONT_COLOR": {
+  "label.hover.fontColor": {
     type: "color"
   },
 
   // Disabled
-  "LABEL.DISABLED.FONT_COLOR": {
+  "label.disabled.fontColor": {
     type: "color"
   }
 };

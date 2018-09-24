@@ -4,23 +4,23 @@ describe("resolveTheme", () => {
   describe("with a reference", () => {
     it("flattens the reference", () => {
       const theme = {
-        ACCENT_COLOR: { value: "#F00" },
-        TEXT_COLOR: { value: { ref: "ACCENT_COLOR" } }
+        "accentColor": { value: "#F00" },
+        "textColor": { value: { ref: "accentColor" } }
       };
       expect(resolveTheme(theme)).toEqual({
-        ACCENT_COLOR: "#F00",
-        TEXT_COLOR: "#F00"
+        "accentColor": "#F00",
+        "textColor": "#F00"
       });
     });
 
     describe("to an unknown role", () => {
       it("throws an error", () => {
         const theme = {
-          ACCENT_COLOR: { value: { ref: "GLITTER_BOMB" } }
+          "accentColor": { value: { ref: "glitterBomb" } }
         };
         expect(() => {
           resolveTheme(theme);
-        }).toThrow(/GLITTER_BOMB/);
+        }).toThrow(/glitterBomb/);
       });
     });
   });
@@ -28,14 +28,14 @@ describe("resolveTheme", () => {
   describe("with a reference to another reference", () => {
     it("flattens the references", () => {
       const theme = {
-        ACCENT_COLOR: { value: "#F00" },
-        "INPUT.FOCUS.COLOR": { value: { ref: "ACCENT_COLOR" } },
-        "TEXTAREA.FOCUS.COLOR": { value: { ref: "INPUT.FOCUS.COLOR" } }
+        "accentColor": { value: "#F00" },
+        "input.focus.color": { value: { ref: "accentColor" } },
+        "textarea.focus.color": { value: { ref: "input.focus.color" } }
       };
       expect(resolveTheme(theme)).toEqual({
-        ACCENT_COLOR: "#F00",
-        "INPUT.FOCUS.COLOR": "#F00",
-        "TEXTAREA.FOCUS.COLOR": "#F00"
+        "accentColor": "#F00",
+        "input.focus.color": "#F00",
+        "textarea.focus.color": "#F00"
       });
     });
   });
@@ -43,11 +43,11 @@ describe("resolveTheme", () => {
   describe("with an abstract value", () => {
     it("throws an error", () => {
       const theme = {
-        ACCENT_COLOR: { value: null }
+        "accentColor": { value: null }
       };
       expect(() => {
         resolveTheme(theme);
-      }).toThrow(/ACCENT_COLOR/);
+      }).toThrow(/accentColor/);
     });
   });
 
@@ -55,43 +55,43 @@ describe("resolveTheme", () => {
     describe("with a valid color value", () => {
       it("transforms the alpha value", () => {
         const theme = resolveTheme({
-          "BASICS.COLORS_RED_ALERT": { value: "#FF0000" },
-          ACCENT_COLOR: {
-            value: { ref: "BASICS.COLORS_RED_ALERT" },
+          "basics.colorsRedAlert": { value: "#FF0000" },
+          "accentColor": {
+            value: { ref: "basics.colorsRedAlert" },
             transform: { alpha: 0.5 }
           }
         });
-        expect(theme.ACCENT_COLOR).toEqual("rgba(255, 0, 0, 0.5)");
+        expect(theme.accentColor).toEqual("rgba(255, 0, 0, 0.5)");
       });
 
       it("allows the alpha to be overridden by the referencer", () => {
         const theme = resolveTheme({
-          "BASICS.COLORS_RED_ALERT": {
+          "basics.colorsRedAlert": {
             value: "#FF0000",
             transform: { alpha: 0.75 }
           },
-          ACCENT_COLOR: {
-            value: { ref: "BASICS.COLORS_RED_ALERT" },
+          "accentColor": {
+            value: { ref: "basics.colorsRedAlert" },
             // overriding the transform here
             transform: { alpha: 0.5 }
           }
         });
-        expect(theme.ACCENT_COLOR).toEqual("rgba(255, 0, 0, 0.5)");
+        expect(theme.accentColor).toEqual("rgba(255, 0, 0, 0.5)");
       });
     });
 
     describe("with an invalid color value", () => {
       it("throws an error", () => {
         const theme = {
-          "BASICS.SPACINGS_M": { value: "16px" },
-          ACCENT_COLOR: {
-            value: { ref: "BASICS.SPACINGS_M" },
+          "basics.spacingsM": { value: "16px" },
+          "accentColor": {
+            value: { ref: "basics.spacingsM" },
             transform: { alpha: 0.5 }
           }
         };
         expect(() => {
           resolveTheme(theme);
-        }).toThrow(/ACCENT_COLOR/);
+        }).toThrow(/accentColor/);
       });
     });
   });

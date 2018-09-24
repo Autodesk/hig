@@ -7,28 +7,28 @@ import { ThemeContext } from "@hig/themes";
 import stylesheet from "./stylesheet";
 
 const FONT_SIZES = {
-  S: "DENSITY.FONT_SIZES.S",
-  M: "DENSITY.FONT_SIZES.M",
-  L: "DENSITY.FONT_SIZES.L",
-  XL: "DENSITY.FONT_SIZES.XL",
-  XXL: "DENSITY.FONT_SIZES.XXL"
+  S: "density.fontSizes.s",
+  M: "density.fontSizes.m",
+  L: "density.fontSizes.l",
+  XL: "density.fontSizes.xl",
+  XXL: "density.fontSizes.xxl"
 };
 
 const FONT_WEIGHTS = {
-  REGULAR: "BASICS.FONT_WEIGHTS.REGULAR",
-  MEDIUM: "BASICS.FONT_WEIGHTS.MEDIUM",
-  BOLD: "BASICS.FONT_WEIGHTS.BOLD"
+  REGULAR: "basics.fontWeights.regular",
+  MEDIUM: "basics.fontWeights.medium",
+  BOLD: "basics.fontWeights.bold"
 };
 
 const FONT_FAMILIES = {
-  MAIN: "BASICS.FONT_FAMILIES.MAIN",
-  MONOSPACE: "BASICS.FONT_FAMILIES.MONOSPACE"
+  MAIN: "basics.fontFamilies.main",
+  MONOSPACE: "basics.fontFamilies.monospace"
 };
 
 const LINE_HEIGHTS = {
-  S: "BASICS.LINE_HEIGHTS.S",
-  M: "BASICS.LINE_HEIGHTS.M",
-  L: "BASICS.LINE_HEIGHTS.L"
+  S: "basics.lineHeights.s",
+  M: "basics.lineHeights.m",
+  L: "basics.lineHeights.l"
 };
 
 const LAYOUTS = {
@@ -56,7 +56,7 @@ function Text({
             fontWeight,
             color:
               color === DEFAULT_TEXT_COLOR
-                ? themeData["COLOR_SCHEME.TEXT_COLOR"]
+                ? themeData["colorScheme.textColor"]
                 : color,
             fontFamily,
             lineHeight,

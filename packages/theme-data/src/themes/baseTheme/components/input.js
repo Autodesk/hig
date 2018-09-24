@@ -1,144 +1,144 @@
 export default {
-  "INPUT.HORIZONTAL_PADDING": {
+  "input.horizontalPadding": {
     type: "length",
-    value: { ref: "BASICS.SPACINGS.NONE" }
+    value: { ref: "basics.spacings.none" }
   },
-  "INPUT.BOX_TYPE.HORIZONTAL_PADDING": {
+  "input.boxType.horizontalPadding": {
     type: "length",
-    value: { ref: "DENSITY.SPACINGS.XS" }
+    value: { ref: "density.spacings.xs" }
   },
-  "INPUT.VERTICAL_PADDING": {
+  "input.verticalPadding": {
     type: "length",
     value: {
-      ref: "DENSITY.SPACINGS.XXS"
+      ref: "density.spacings.xxs"
     }
   },
-  "INPUT.BORDER_RADIUS": {
+  "input.borderRadius": {
     type: "borderRadius",
     value: {
-      ref: "BASICS.BORDER_RADII.S"
+      ref: "basics.borderRadii.s"
     }
   },
-  "INPUT.BORDER_COLOR": {
+  "input.borderColor": {
     type: "color",
     value: {
-      ref: "COLOR_SCHEME.SURFACE_LEVEL_1_5_COLOR"
+      ref: "colorScheme.surfaceLevel15Color"
     }
   },
-  "INPUT.BORDER_WIDTH": {
+  "input.borderWidth": {
     type: "borderWidth",
     value: {
-      ref: "BASICS.BORDER_WIDTHS.S"
+      ref: "basics.borderWidths.s"
     }
   },
-  "INPUT.BORDER_BOTTOM_COLOR": {
+  "input.borderBottomColor": {
     type: "color"
   },
-  "INPUT.BORDER_BOTTOM_WIDTH": {
+  "input.borderBottomWidth": {
     type: "borderWidth",
     value: {
-      ref: "BASICS.BORDER_WIDTHS.S"
+      ref: "basics.borderWidths.s"
     }
   },
-  "INPUT.FONT_COLOR": {
+  "input.fontColor": {
     type: "color",
     value: {
-      ref: "COLOR_SCHEME.TEXT_COLOR"
+      ref: "colorScheme.textColor"
     }
   },
-  "INPUT.FONT_WEIGHT": {
+  "input.fontWeight": {
     type: "fontWeight",
     value: {
-      ref: "BASICS.FONT_WEIGHTS.MEDIUM"
+      ref: "basics.fontWeights.medium"
     }
   },
-  "INPUT.FONT_FAMILY": {
+  "input.fontFamily": {
     type: "fontFamily",
     value: {
-      ref: "BASICS.FONT_FAMILIES.MAIN"
+      ref: "basics.fontFamilies.main"
     }
   },
-  "INPUT.FONT_SIZE": {
+  "input.fontSize": {
     type: "fontSize",
     value: {
-      ref: "DENSITY.FONT_SIZES.M"
+      ref: "density.fontSizes.m"
     }
   },
-  "INPUT.LINE_HEIGHT": {
+  "input.lineHeight": {
     type: "lineHeight",
     value: {
-      ref: "BASICS.LINE_HEIGHTS.M"
+      ref: "basics.lineHeights.m"
     }
   },
-  "INPUT.HALO.COLOR": {
+  "input.halo.color": {
     type: "color"
   },
-  "INPUT.HALO.WIDTH": {
+  "input.halo.width": {
     type: "length",
     value: {
-      ref: "BASICS.BORDER_WIDTHS.NONE"
+      ref: "basics.borderWidths.none"
     }
   },
-  "INPUT.GUTTER_WIDTH": {
+  "input.gutterWidth": {
     type: "length",
     value: {
-      ref: "DENSITY.SPACINGS.XS"
+      ref: "density.spacings.xs"
     }
   },
-  "INPUT.PLACEHOLDER.FONT_COLOR": {
+  "input.placeholder.fontColor": {
     type: "color",
     value: {
-      ref: "COLOR_SCHEME.TEXT_COLOR_DIM"
+      ref: "colorScheme.textColorDim"
     }
   },
 
   // Hover
-  "INPUT.HOVER.BORDER_BOTTOM_COLOR": {
+  "input.hover.borderBottomColor": {
     type: "color"
   },
-  "INPUT.HOVER.HALO.WIDTH": {
+  "input.hover.halo.width": {
     type: "length",
     value: {
-      ref: "BASICS.BORDER_WIDTHS.L"
+      ref: "basics.borderWidths.l"
     }
   },
 
   // Focus
-  "INPUT.FOCUS.BORDER_BOTTOM_COLOR": {
+  "input.focus.borderBottomColor": {
     type: "color"
   },
-  "INPUT.FOCUS.HALO.WIDTH": {
+  "input.focus.halo.width": {
     type: "length",
     value: {
-      ref: "BASICS.BORDER_WIDTHS.L"
+      ref: "basics.borderWidths.l"
     }
   },
-  "INPUT.FOCUS.HALO.COLOR": {
+  "input.focus.halo.color": {
     type: "color"
   },
 
   // Active
-  "INPUT.ACTIVE.HALO.WIDTH": {
+  "input.active.halo.width": {
     type: "length",
     value: {
-      ref: "BASICS.BORDER_WIDTHS.L"
+      ref: "basics.borderWidths.l"
     }
   },
-  "INPUT.ACTIVE.HALO.COLOR": {
+  "input.active.halo.color": {
     type: "color"
   },
 
   // Disabled
-  "INPUT.DISABLED.BORDER_COLOR": {
+  "input.disabled.borderColor": {
     type: "color",
     value: {
-      ref: "COLOR_SCHEME.SURFACE_LEVEL_1_5_COLOR"
+      ref: "colorScheme.surfaceLevel15Color"
     }
   },
-  "INPUT.DISABLED.FONT_COLOR": {
+  "input.disabled.fontColor": {
     type: "color",
     value: {
-      ref: "COLOR_SCHEME.TEXT_COLOR"
+      ref: "colorScheme.textColor"
     },
     transform: {
       alpha: 0.2

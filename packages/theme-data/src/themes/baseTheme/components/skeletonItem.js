@@ -1,11 +1,11 @@
 export default {
-  "SKELETON_ITEM.BORDER_RADIUS": {
+  "skeletonItem.borderRadius": {
     type: "borderRadius",
-    value: { ref: "BASICS.BORDER_RADII.M" }
+    value: { ref: "basics.borderRadii.m" }
   },
-  "SKELETON_ITEM.DEFAULT_HEIGHT": {
-    value: { ref: "DENSITY.SPACINGS.M" }
+  "skeletonItem.defaultHeight": {
+    value: { ref: "density.spacings.m" }
   },
-  "SKELETON_ITEM.BACKGROUND_COLOR": {},
-  "SKELETON_ITEM.HIGHLIGHT_COLOR": {}
+  "skeletonItem.backgroundColor": {},
+  "skeletonItem.highlightColor": {}
 };

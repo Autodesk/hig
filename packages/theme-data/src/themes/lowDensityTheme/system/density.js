@@ -1,62 +1,62 @@
 export default {
-  "SPACINGS.XXS": {
+  "spacings.xxs": {
     value: {
-      ref: "BASICS.SPACINGS.LOW_XXS"
+      ref: "basics.spacings.lowXXS"
     }
   },
-  "SPACINGS.XS": {
+  "spacings.xs": {
     value: {
-      ref: "BASICS.SPACINGS.LOW_XS"
+      ref: "basics.spacings.lowXS"
     }
   },
-  "SPACINGS.S": {
+  "spacings.s": {
     value: {
-      ref: "BASICS.SPACINGS.LOW_S"
+      ref: "basics.spacings.lowS"
     }
   },
-  "SPACINGS.M": {
+  "spacings.m": {
     value: {
-      ref: "BASICS.SPACINGS.LOW_M"
+      ref: "basics.spacings.lowM"
     }
   },
-  "SPACINGS.L": {
+  "spacings.l": {
     value: {
-      ref: "BASICS.SPACINGS.LOW_L"
+      ref: "basics.spacings.lowL"
     }
   },
-  "SPACINGS.XL": {
+  "spacings.xl": {
     value: {
-      ref: "BASICS.SPACINGS.LOW_XL"
+      ref: "basics.spacings.lowXL"
     }
   },
-  "SPACINGS.XXL": {
+  "spacings.xxl": {
     value: {
-      ref: "BASICS.SPACINGS.LOW_XXL"
+      ref: "basics.spacings.lowXXL"
     }
   },
-  "FONT_SIZES.S": {
+  "fontSizes.s": {
     value: {
-      ref: "BASICS.FONT_SIZES.LOW_S"
+      ref: "basics.fontSizes.lowS"
     }
   },
-  "FONT_SIZES.M": {
+  "fontSizes.m": {
     value: {
-      ref: "BASICS.FONT_SIZES.LOW_M"
+      ref: "basics.fontSizes.lowM"
     }
   },
-  "FONT_SIZES.L": {
+  "fontSizes.l": {
     value: {
-      ref: "BASICS.FONT_SIZES.LOW_L"
+      ref: "basics.fontSizes.lowL"
     }
   },
-  "FONT_SIZES.XL": {
+  "fontSizes.xl": {
     value: {
-      ref: "BASICS.FONT_SIZES.LOW_XL"
+      ref: "basics.fontSizes.lowXL"
     }
   },
-  "FONT_SIZES.XXL": {
+  "fontSizes.xxl": {
     value: {
-      ref: "BASICS.FONT_SIZES.LOW_XXL"
+      ref: "basics.fontSizes.lowXXL"
     }
   }
 };

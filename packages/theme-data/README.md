@@ -14,9 +14,9 @@ import lightGrayTheme from '@hig/theme-data-poc/build/lightGrayTheme.json';
 
 console.log(lightGrayTheme);
 // {
-//  "BASICS.BORDER_RADII.NONE": "0",
-//  "BASICS.BORDER_RADII.S":  "0"
-//  "BASICS.BORDER_RADII.M":  "2px"
+//  "basics.borderRadii.none": "0",
+//  "basics.borderRadii.s":  "0"
+//  "basics.borderRadii.m":  "2px"
 // ...
 // }
 ```
@@ -27,9 +27,9 @@ import { lightGrayTheme } from '@hig/theme-data-poc';
 
 console.log(lightGrayTheme.data);
 // {
-//  "BASICS.BORDER_RADII.NONE": "0",
-//  "BASICS.BORDER_RADII.S":  "0"
-//  "BASICS.BORDER_RADII.M":  "2px"
+//  "basics.borderRadii.none": "0",
+//  "basics.borderRadii.s":  "0"
+//  "basics.borderRadii.m":  "2px"
 // ...
 // }
 ```
@@ -39,15 +39,15 @@ console.log(lightGrayTheme.data);
 import { extendTheme, resolveTheme, lightGrayTheme } from '@hig/theme-data-poc';
 
 const redAccentedThemeConfig = extendTheme(lightGrayTheme.config, {
-    "COLOR_SCHEME.ACCENT_COLOR_500": "#F00",
+    "colorScheme.accentColor500": "#F00",
 });
 const redAccentedTheme = resolveTheme(redAccentedThemeConfig);
 
 console.log(redAccentedTheme);
 // {
 // ...
-//  "COLOR_SCHEME.ACCENT_COLOR_500": "#F00",
-//  "INPUT.FOCUS.BORDER_BOTTOM_COLOR": "#F00"
+//  "colorScheme.accentColor500": "#F00",
+//  "input.focus.borderBottomColor": "#F00"
 // ...
 // }
 ```

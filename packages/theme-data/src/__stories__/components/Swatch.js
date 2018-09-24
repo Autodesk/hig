@@ -13,11 +13,11 @@ export default function Swatch({
     <ThemeContext.Consumer>
       {({ themeData }) => {
         const renderedBackgroundColor =
-          color || themeData["COLOR_SCHEME.SURFACE_LEVEL_1_COLOR"];
+          color || themeData["colorScheme.surfaceLevel1Color"];
         const renderedBorderWidth =
-          borderWidth || themeData["BASICS.BORDER_WIDTHS.S"];
+          borderWidth || themeData["basics.borderWidths.s"];
         const renderedBorderRadius =
-          borderRadius || themeData["BASICS.BORDER_RADII.M"];
+          borderRadius || themeData["basics.borderRadii.m"];
         const renderedBoxShadow = boxShadow || "0 0 0 rgba(0, 0, 0, 0)";
         return (
           <div
@@ -25,13 +25,13 @@ export default function Swatch({
               height: "32px",
               backgroundColor: renderedBackgroundColor,
               borderRadius: renderedBorderRadius,
-              border: `${themeData["BASICS.BORDER_WIDTHS.S"]} solid ${
-                themeData["COLOR_SCHEME.SURFACE_LEVEL_1_COLOR"]
+              border: `${themeData["basics.borderWidths.s"]} solid ${
+                themeData["colorScheme.surfaceLevel1Color"]
               }`,
               boxShadow: `0 0 0 ${renderedBorderWidth} ${
-                themeData["COLOR_SCHEME.SURFACE_LEVEL_4_COLOR"]
+                themeData["colorScheme.surfaceLevel4Color"]
               }, ${renderedBoxShadow}`,
-              marginBottom: themeData["DENSITY.SPACINGS.S"]
+              marginBottom: themeData["density.spacings.s"]
             }}
           />
         );
