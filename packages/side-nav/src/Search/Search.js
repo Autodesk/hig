@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import cx from "classnames";
 import { ThemeContext } from "@hig/themes";
 import Icon, { names as iconNames } from "@hig/icon";
+import { memoizeCreateButtonEventHandlers } from "@hig/utils";
 
 import "./search.scss";
 
@@ -42,6 +43,8 @@ export default class Search extends Component {
     value: this.props.value
   };
 
+  createEventHandlers = memoizeCreateButtonEventHandlers();
+
   handleChange = event => {
     this.setState(
       { value: event.target.value },
@@ -57,6 +60,9 @@ export default class Search extends Component {
 
   render() {
     const { onBlur, onFocus, placeholder } = this.props;
+    const { handleClick, handleKeyDown } = this.createEventHandlers(
+      this.handleClear
+    );
 
     return (
       <ThemeContext.Consumer>
@@ -84,7 +90,8 @@ export default class Search extends Component {
               this.state.value.length > 0 && (
                 <div
                   className={cx(themeClass, "hig__side-nav__search__clear")}
-                  onClick={this.handleClear}
+                  onClick={handleClick}
+                  onKeyDown={handleKeyDown}
                   role="button"
                   tabIndex={0}
                 >
