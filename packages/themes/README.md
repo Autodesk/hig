@@ -27,9 +27,9 @@ function MyThemedComponent() {
   <ThemeContext.Consumer>{({ themeData, themeName }) => (
     <div style={{
       backgroundColor: themeData["colorScheme.surfaceLevel2Color"],
-      borderRadius: themeData["basics.borderRadii.s"],
+      borderRadius: themeData["basics.borderRadii.S"],
       color: themeData["colorScheme.textColor"],
-      padding: themeData["density.spacings.m"],
+      padding: themeData["density.spacings.M"],
     }}>
       The current theme is "{themeName}".
     </div>

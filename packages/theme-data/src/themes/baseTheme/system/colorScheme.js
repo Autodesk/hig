@@ -1,6 +1,6 @@
 export default {
   "surfaceLevel1Color": { type: "color" },
-  "surfaceLevel15Color": { type: "color" },
+  "surfaceLevel1_5Color": { type: "color" },
   "surfaceLevel2Color": { type: "color" },
   "surfaceLevel3Color": { type: "color" },
   "surfaceLevel4Color": { type: "color" },

@@ -1,14 +1,14 @@
 export default {
-  "spacings.xxs": { type: "spacing" },
-  "spacings.xs": { type: "spacing" },
-  "spacings.s": { type: "spacing" },
-  "spacings.m": { type: "spacing" },
-  "spacings.l": { type: "spacing" },
-  "spacings.xl": { type: "spacing" },
-  "spacings.xxl": { type: "spacing" },
-  "fontSizes.s": { type: "fontSize" },
-  "fontSizes.m": { type: "fontSize" },
-  "fontSizes.l": { type: "fontSize" },
-  "fontSizes.xl": { type: "fontSize" },
-  "fontSizes.xxl": { type: "fontSize" }
+  "spacings.XXS": { type: "spacing" },
+  "spacings.XS": { type: "spacing" },
+  "spacings.S": { type: "spacing" },
+  "spacings.M": { type: "spacing" },
+  "spacings.L": { type: "spacing" },
+  "spacings.XL": { type: "spacing" },
+  "spacings.XXL": { type: "spacing" },
+  "fontSizes.S": { type: "fontSize" },
+  "fontSizes.M": { type: "fontSize" },
+  "fontSizes.L": { type: "fontSize" },
+  "fontSizes.XL": { type: "fontSize" },
+  "fontSizes.XXL": { type: "fontSize" }
 };

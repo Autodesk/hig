@@ -4,7 +4,7 @@ export default {
       ref: "basics.colors.surfaceDarkBlueLevel1"
     }
   },
-  "surfaceLevel15Color": {
+  "surfaceLevel1_5Color": {
     value: {
       ref: "basics.colors.surfaceDarkBlueLevel1_5"
     }

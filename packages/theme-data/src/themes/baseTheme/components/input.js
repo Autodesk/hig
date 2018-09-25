@@ -5,30 +5,30 @@ export default {
   },
   "input.boxType.horizontalPadding": {
     type: "length",
-    value: { ref: "density.spacings.xs" }
+    value: { ref: "density.spacings.XS" }
   },
   "input.verticalPadding": {
     type: "length",
     value: {
-      ref: "density.spacings.xxs"
+      ref: "density.spacings.XXS"
     }
   },
   "input.borderRadius": {
     type: "borderRadius",
     value: {
-      ref: "basics.borderRadii.s"
+      ref: "basics.borderRadii.S"
     }
   },
   "input.borderColor": {
     type: "color",
     value: {
-      ref: "colorScheme.surfaceLevel15Color"
+      ref: "colorScheme.surfaceLevel1_5Color"
     }
   },
   "input.borderWidth": {
     type: "borderWidth",
     value: {
-      ref: "basics.borderWidths.s"
+      ref: "basics.borderWidths.S"
     }
   },
   "input.borderBottomColor": {
@@ -37,7 +37,7 @@ export default {
   "input.borderBottomWidth": {
     type: "borderWidth",
     value: {
-      ref: "basics.borderWidths.s"
+      ref: "basics.borderWidths.S"
     }
   },
   "input.fontColor": {
@@ -61,13 +61,13 @@ export default {
   "input.fontSize": {
     type: "fontSize",
     value: {
-      ref: "density.fontSizes.m"
+      ref: "density.fontSizes.M"
     }
   },
   "input.lineHeight": {
     type: "lineHeight",
     value: {
-      ref: "basics.lineHeights.m"
+      ref: "basics.lineHeights.M"
     }
   },
   "input.halo.color": {
@@ -82,7 +82,7 @@ export default {
   "input.gutterWidth": {
     type: "length",
     value: {
-      ref: "density.spacings.xs"
+      ref: "density.spacings.XS"
     }
   },
   "input.placeholder.fontColor": {
@@ -99,7 +99,7 @@ export default {
   "input.hover.halo.width": {
     type: "length",
     value: {
-      ref: "basics.borderWidths.l"
+      ref: "basics.borderWidths.L"
     }
   },
 
@@ -110,7 +110,7 @@ export default {
   "input.focus.halo.width": {
     type: "length",
     value: {
-      ref: "basics.borderWidths.l"
+      ref: "basics.borderWidths.L"
     }
   },
   "input.focus.halo.color": {
@@ -121,7 +121,7 @@ export default {
   "input.active.halo.width": {
     type: "length",
     value: {
-      ref: "basics.borderWidths.l"
+      ref: "basics.borderWidths.L"
     }
   },
   "input.active.halo.color": {
@@ -132,7 +132,7 @@ export default {
   "input.disabled.borderColor": {
     type: "color",
     value: {
-      ref: "colorScheme.surfaceLevel15Color"
+      ref: "colorScheme.surfaceLevel1_5Color"
     }
   },
   "input.disabled.fontColor": {

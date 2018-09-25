@@ -13,7 +13,7 @@ const webLightThemeConfig = extendTheme(lightGrayThemeConfig, {
   },
   "input.hover.halo.width": {
     value: {
-      ref: "basics.borderWidths.s"
+      ref: "basics.borderWidths.S"
     }
   },
   "input.halo.color": {
@@ -21,7 +21,7 @@ const webLightThemeConfig = extendTheme(lightGrayThemeConfig, {
   },
   "input.focus.halo.width": {
     value: {
-      ref: "basics.borderWidths.s"
+      ref: "basics.borderWidths.S"
     }
   },
   "input.focus.halo.color": {
@@ -31,7 +31,7 @@ const webLightThemeConfig = extendTheme(lightGrayThemeConfig, {
   },
   "input.active.halo.width": {
     value: {
-      ref: "basics.borderWidths.s"
+      ref: "basics.borderWidths.S"
     }
   },
   "input.active.halo.color": {

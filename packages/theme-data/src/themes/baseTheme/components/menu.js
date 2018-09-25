@@ -8,7 +8,7 @@ export default {
   "menu.borderRadius": {
     type: "borderRadius",
     value: {
-      ref: "basics.borderRadii.m"
+      ref: "basics.borderRadii.M"
     }
   },
   "menu.topFlushBorderTopRadius": {
@@ -50,7 +50,7 @@ export default {
   "menu.item.horizontalPadding": {
     type: "spacing",
     value: {
-      ref: "density.spacings.xs"
+      ref: "density.spacings.XS"
     }
   },
   "menu.item.verticalPadding": {
@@ -62,7 +62,7 @@ export default {
   "menu.item.minHeight": {
     type: "length",
     value: {
-      ref: "density.spacings.l"
+      ref: "density.spacings.L"
     }
   },
   "menu.item.gutterWidth": {

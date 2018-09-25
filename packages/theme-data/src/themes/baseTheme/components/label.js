@@ -2,7 +2,7 @@ export default {
   "label.fontSize": {
     type: "fontSize",
     value: {
-      ref: "density.fontSizes.s"
+      ref: "density.fontSizes.S"
     }
   },
   "label.fontWeight": {
@@ -23,7 +23,7 @@ export default {
   "label.lineHeight": {
     type: "lineHeight",
     value: {
-      ref: "basics.lineHeights.m"
+      ref: "basics.lineHeights.M"
     }
   },
 

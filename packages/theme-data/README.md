@@ -15,8 +15,8 @@ import lightGrayTheme from '@hig/theme-data-poc/build/lightGrayTheme.json';
 console.log(lightGrayTheme);
 // {
 //  "basics.borderRadii.none": "0",
-//  "basics.borderRadii.s":  "0"
-//  "basics.borderRadii.m":  "2px"
+//  "basics.borderRadii.S":  "0"
+//  "basics.borderRadii.M":  "2px"
 // ...
 // }
 ```
@@ -28,8 +28,8 @@ import { lightGrayTheme } from '@hig/theme-data-poc';
 console.log(lightGrayTheme.data);
 // {
 //  "basics.borderRadii.none": "0",
-//  "basics.borderRadii.s":  "0"
-//  "basics.borderRadii.m":  "2px"
+//  "basics.borderRadii.S":  "0"
+//  "basics.borderRadii.M":  "2px"
 // ...
 // }
 ```

@@ -17,11 +17,11 @@ export default function Header({ title }) {
           >
             {title}
           </Text>
-          <div style={{ height: themeData["density.spacings.m"] }} />
+          <div style={{ height: themeData["density.spacings.M"] }} />
           <div
             style={{
               display: "flex",
-              marginBottom: themeData["density.spacings.m"]
+              marginBottom: themeData["density.spacings.M"]
             }}
           >
             <div style={{ flex: "1 1 0" }}>

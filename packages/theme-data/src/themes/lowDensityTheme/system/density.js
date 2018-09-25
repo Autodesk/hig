@@ -1,60 +1,60 @@
 export default {
-  "spacings.xxs": {
+  "spacings.XXS": {
     value: {
       ref: "basics.spacings.lowXXS"
     }
   },
-  "spacings.xs": {
+  "spacings.XS": {
     value: {
       ref: "basics.spacings.lowXS"
     }
   },
-  "spacings.s": {
+  "spacings.S": {
     value: {
       ref: "basics.spacings.lowS"
     }
   },
-  "spacings.m": {
+  "spacings.M": {
     value: {
       ref: "basics.spacings.lowM"
     }
   },
-  "spacings.l": {
+  "spacings.L": {
     value: {
       ref: "basics.spacings.lowL"
     }
   },
-  "spacings.xl": {
+  "spacings.XL": {
     value: {
       ref: "basics.spacings.lowXL"
     }
   },
-  "spacings.xxl": {
+  "spacings.XXL": {
     value: {
       ref: "basics.spacings.lowXXL"
     }
   },
-  "fontSizes.s": {
+  "fontSizes.S": {
     value: {
       ref: "basics.fontSizes.lowS"
     }
   },
-  "fontSizes.m": {
+  "fontSizes.M": {
     value: {
       ref: "basics.fontSizes.lowM"
     }
   },
-  "fontSizes.l": {
+  "fontSizes.L": {
     value: {
       ref: "basics.fontSizes.lowL"
     }
   },
-  "fontSizes.xl": {
+  "fontSizes.XL": {
     value: {
       ref: "basics.fontSizes.lowXL"
     }
   },
-  "fontSizes.xxl": {
+  "fontSizes.XXL": {
     value: {
       ref: "basics.fontSizes.lowXXL"
     }
