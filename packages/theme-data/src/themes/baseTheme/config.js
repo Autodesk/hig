@@ -1,7 +1,7 @@
 import mapKeys from "../../utils/mapKeys";
 import extendTheme from "../../utils/extendTheme";
-import BASICS from "../../basics";
-import SYSTEM from "./system";
+import basics from "../../basics";
+import system from "./system";
 import checkbox from "./components/checkbox";
 import formField from "./components/formField";
 import input from "./components/input";
@@ -15,17 +15,17 @@ const baseThemeConfig = extendTheme(
   {},
   Object.assign(
     {},
-    mapKeys(BASICS.BORDER_RADII, key => `basics.borderRadii.${key}`),
-    mapKeys(BASICS.BORDER_WIDTHS, key => `basics.borderWidths.${key}`),
-    mapKeys(BASICS.COLORS, key => `basics.colors.${key}`),
-    mapKeys(BASICS.FONT_FAMILIES, key => `basics.fontFamilies.${key}`),
-    mapKeys(BASICS.FONT_SIZES, key => `basics.fontSizes.${key}`),
-    mapKeys(BASICS.FONT_WEIGHTS, key => `basics.fontWeights.${key}`),
-    mapKeys(BASICS.LINE_HEIGHTS, key => `basics.lineHeights.${key}`),
-    mapKeys(BASICS.SHADOWS, key => `basics.shadows.${key}`),
-    mapKeys(BASICS.SPACINGS, key => `basics.spacings.${key}`),
-    mapKeys(SYSTEM.COLOR_SCHEME, key => `colorScheme.${key}`),
-    mapKeys(SYSTEM.DENSITY, key => `density.${key}`),
+    mapKeys(basics.borderRadii, key => `basics.borderRadii.${key}`),
+    mapKeys(basics.borderWidths, key => `basics.borderWidths.${key}`),
+    mapKeys(basics.colors, key => `basics.colors.${key}`),
+    mapKeys(basics.fontFamilies, key => `basics.fontFamilies.${key}`),
+    mapKeys(basics.fontSizes, key => `basics.fontSizes.${key}`),
+    mapKeys(basics.fontWeights, key => `basics.fontWeights.${key}`),
+    mapKeys(basics.lineHeights, key => `basics.lineHeights.${key}`),
+    mapKeys(basics.shadows, key => `basics.shadows.${key}`),
+    mapKeys(basics.spacings, key => `basics.spacings.${key}`),
+    mapKeys(system.colorScheme, key => `colorScheme.${key}`),
+    mapKeys(system.density, key => `density.${key}`),
     checkbox,
     formField,
     input,

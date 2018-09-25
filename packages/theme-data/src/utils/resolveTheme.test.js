@@ -4,19 +4,19 @@ describe("resolveTheme", () => {
   describe("with a reference", () => {
     it("flattens the reference", () => {
       const theme = {
-        "accentColor": { value: "#F00" },
-        "textColor": { value: { ref: "accentColor" } }
+        accentColor: { value: "#F00" },
+        textColor: { value: { ref: "accentColor" } }
       };
       expect(resolveTheme(theme)).toEqual({
-        "accentColor": "#F00",
-        "textColor": "#F00"
+        accentColor: "#F00",
+        textColor: "#F00"
       });
     });
 
     describe("to an unknown role", () => {
       it("throws an error", () => {
         const theme = {
-          "accentColor": { value: { ref: "glitterBomb" } }
+          accentColor: { value: { ref: "glitterBomb" } }
         };
         expect(() => {
           resolveTheme(theme);
@@ -28,12 +28,12 @@ describe("resolveTheme", () => {
   describe("with a reference to another reference", () => {
     it("flattens the references", () => {
       const theme = {
-        "accentColor": { value: "#F00" },
+        accentColor: { value: "#F00" },
         "input.focus.color": { value: { ref: "accentColor" } },
         "textarea.focus.color": { value: { ref: "input.focus.color" } }
       };
       expect(resolveTheme(theme)).toEqual({
-        "accentColor": "#F00",
+        accentColor: "#F00",
         "input.focus.color": "#F00",
         "textarea.focus.color": "#F00"
       });
@@ -43,7 +43,7 @@ describe("resolveTheme", () => {
   describe("with an abstract value", () => {
     it("throws an error", () => {
       const theme = {
-        "accentColor": { value: null }
+        accentColor: { value: null }
       };
       expect(() => {
         resolveTheme(theme);
@@ -56,7 +56,7 @@ describe("resolveTheme", () => {
       it("transforms the alpha value", () => {
         const theme = resolveTheme({
           "basics.colorsRedAlert": { value: "#FF0000" },
-          "accentColor": {
+          accentColor: {
             value: { ref: "basics.colorsRedAlert" },
             transform: { alpha: 0.5 }
           }
@@ -70,7 +70,7 @@ describe("resolveTheme", () => {
             value: "#FF0000",
             transform: { alpha: 0.75 }
           },
-          "accentColor": {
+          accentColor: {
             value: { ref: "basics.colorsRedAlert" },
             // overriding the transform here
             transform: { alpha: 0.5 }
@@ -84,7 +84,7 @@ describe("resolveTheme", () => {
       it("throws an error", () => {
         const theme = {
           "basics.spacingsM": { value: "16px" },
-          "accentColor": {
+          accentColor: {
             value: { ref: "basics.spacingsM" },
             transform: { alpha: 0.5 }
           }

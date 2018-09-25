@@ -1,30 +1,30 @@
 export default {
-  "surfaceLevel1Color": {
+  surfaceLevel1Color: {
     value: {
       ref: "basics.colors.surfaceDarkBlueLevel1"
     }
   },
-  "surfaceLevel1_5Color": {
+  surfaceLevel1_5Color: {
     value: {
       ref: "basics.colors.surfaceDarkBlueLevel1_5"
     }
   },
-  "surfaceLevel2Color": {
+  surfaceLevel2Color: {
     value: {
       ref: "basics.colors.surfaceDarkBlueLevel2"
     }
   },
-  "surfaceLevel3Color": {
+  surfaceLevel3Color: {
     value: {
       ref: "basics.colors.surfaceDarkBlueLevel3"
     }
   },
-  "surfaceLevel4Color": {
+  surfaceLevel4Color: {
     value: {
       ref: "basics.colors.surfaceDarkBlueLevel4"
     }
   },
-  "lowShadowColor": {
+  lowShadowColor: {
     value: {
       ref: "basics.colors.surfaceDarkBlueShadow"
     },
@@ -32,7 +32,7 @@ export default {
       alpha: 0.8
     }
   },
-  "highShadowColor": {
+  highShadowColor: {
     value: {
       ref: "basics.colors.surfaceDarkBlueShadow"
     },
@@ -40,47 +40,47 @@ export default {
       alpha: 0.5
     }
   },
-  "accentColor100": {
+  accentColor100: {
     value: {
       ref: "basics.colors.autodeskBlue100"
     }
   },
-  "accentColor200": {
+  accentColor200: {
     value: {
       ref: "basics.colors.autodeskBlue200"
     }
   },
-  "accentColor300": {
+  accentColor300: {
     value: {
       ref: "basics.colors.autodeskBlue300"
     }
   },
-  "accentColor400": {
+  accentColor400: {
     value: {
       ref: "basics.colors.autodeskBlue400"
     }
   },
-  "accentColor500": {
+  accentColor500: {
     value: {
       ref: "basics.colors.autodeskBlue500"
     }
   },
-  "accentColor600": {
+  accentColor600: {
     value: {
       ref: "basics.colors.autodeskBlue600"
     }
   },
-  "accentColor700": {
+  accentColor700: {
     value: {
       ref: "basics.colors.autodeskBlue700"
     }
   },
-  "accentColor800": {
+  accentColor800: {
     value: {
       ref: "basics.colors.autodeskBlue800"
     }
   },
-  "accentColor900": {
+  accentColor900: {
     value: {
       ref: "basics.colors.autodeskBlue900"
     }
@@ -90,12 +90,12 @@ export default {
       ref: "basics.colors.surfaceDarkBlueLevel1_5"
     }
   },
-  "textColor": {
+  textColor: {
     value: {
       ref: "basics.colors.textAgainstDark"
     }
   },
-  "textColorDim": {
+  textColorDim: {
     value: {
       ref: "basics.colors.textAgainstDark"
     },
