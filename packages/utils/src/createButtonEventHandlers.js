@@ -1,5 +1,3 @@
-import memoize from "lodash.memoize";
-
 /**
  * @typedef {Object} ButtonEventHandlers
  * @property {function(MouseEvent, ...any): void} handleClick
@@ -38,8 +36,4 @@ export default function createButtonEventHandlers(handler, options = {}) {
       handler(event, ...args);
     }
   };
-}
-
-export function memoizeCreateButtonEventHandlers() {
-  return memoize(createButtonEventHandlers);
 }

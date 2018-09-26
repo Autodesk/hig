@@ -1,4 +1,3 @@
-import memoize from "lodash.memoize";
 /**
  * @param {Array<function(...any): void>} handlers the event handler functions
  * @returns {function(...any): void} An event handler to add to an element
@@ -23,8 +22,4 @@ function createAggregateEventHandler(handlers) {
  */
 export default function combineEventHandlers(...handlers) {
   return createAggregateEventHandler(handlers);
-}
-
-export function memoizeCombineEventHandlers() {
-  return memoize(combineEventHandlers);
 }
