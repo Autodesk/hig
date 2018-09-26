@@ -1,3 +1,11 @@
+# [@hig/themes-v0.4.0](https://github.com/Autodesk/hig/compare/@hig/themes@0.3.0...@hig/themes@0.4.0) (2018-09-26)
+
+
+### Features
+
+* Change theme data keys to non capitalized camel case ([4693f7d](https://github.com/Autodesk/hig/commit/4693f7d))
+* Migrate all abbreviation tokens to uppercase ([6a30ba5](https://github.com/Autodesk/hig/commit/6a30ba5))
+
 <a name="@hig/themes-v0.3.0"></a>
 # [@hig/themes-v0.3.0](https://github.com/Autodesk/hig/compare/@hig/themes@0.2.1...@hig/themes@0.3.0) (2018-07-26)
 
