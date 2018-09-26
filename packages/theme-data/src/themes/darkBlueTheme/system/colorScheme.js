@@ -1,103 +1,103 @@
 export default {
-  SURFACE_LEVEL_1_COLOR: {
+  surfaceLevel1Color: {
     value: {
-      ref: "BASICS.COLORS.SURFACE_DARK_BLUE_LEVEL_1"
+      ref: "basics.colors.surfaceDarkBlueLevel1"
     }
   },
-  SURFACE_LEVEL_1_5_COLOR: {
+  surfaceLevel1_5Color: {
     value: {
-      ref: "BASICS.COLORS.SURFACE_DARK_BLUE_LEVEL_1_5"
+      ref: "basics.colors.surfaceDarkBlueLevel1_5"
     }
   },
-  SURFACE_LEVEL_2_COLOR: {
+  surfaceLevel2Color: {
     value: {
-      ref: "BASICS.COLORS.SURFACE_DARK_BLUE_LEVEL_2"
+      ref: "basics.colors.surfaceDarkBlueLevel2"
     }
   },
-  SURFACE_LEVEL_3_COLOR: {
+  surfaceLevel3Color: {
     value: {
-      ref: "BASICS.COLORS.SURFACE_DARK_BLUE_LEVEL_3"
+      ref: "basics.colors.surfaceDarkBlueLevel3"
     }
   },
-  SURFACE_LEVEL_4_COLOR: {
+  surfaceLevel4Color: {
     value: {
-      ref: "BASICS.COLORS.SURFACE_DARK_BLUE_LEVEL_4"
+      ref: "basics.colors.surfaceDarkBlueLevel4"
     }
   },
-  LOW_SHADOW_COLOR: {
+  lowShadowColor: {
     value: {
-      ref: "BASICS.COLORS.SURFACE_DARK_BLUE_SHADOW"
+      ref: "basics.colors.surfaceDarkBlueShadow"
     },
     transform: {
       alpha: 0.8
     }
   },
-  HIGH_SHADOW_COLOR: {
+  highShadowColor: {
     value: {
-      ref: "BASICS.COLORS.SURFACE_DARK_BLUE_SHADOW"
+      ref: "basics.colors.surfaceDarkBlueShadow"
     },
     transform: {
       alpha: 0.5
     }
   },
-  ACCENT_COLOR_100: {
+  accentColor100: {
     value: {
-      ref: "BASICS.COLORS.AUTODESK_BLUE_100"
+      ref: "basics.colors.autodeskBlue100"
     }
   },
-  ACCENT_COLOR_200: {
+  accentColor200: {
     value: {
-      ref: "BASICS.COLORS.AUTODESK_BLUE_200"
+      ref: "basics.colors.autodeskBlue200"
     }
   },
-  ACCENT_COLOR_300: {
+  accentColor300: {
     value: {
-      ref: "BASICS.COLORS.AUTODESK_BLUE_300"
+      ref: "basics.colors.autodeskBlue300"
     }
   },
-  ACCENT_COLOR_400: {
+  accentColor400: {
     value: {
-      ref: "BASICS.COLORS.AUTODESK_BLUE_400"
+      ref: "basics.colors.autodeskBlue400"
     }
   },
-  ACCENT_COLOR_500: {
+  accentColor500: {
     value: {
-      ref: "BASICS.COLORS.AUTODESK_BLUE_500"
+      ref: "basics.colors.autodeskBlue500"
     }
   },
-  ACCENT_COLOR_600: {
+  accentColor600: {
     value: {
-      ref: "BASICS.COLORS.AUTODESK_BLUE_600"
+      ref: "basics.colors.autodeskBlue600"
     }
   },
-  ACCENT_COLOR_700: {
+  accentColor700: {
     value: {
-      ref: "BASICS.COLORS.AUTODESK_BLUE_700"
+      ref: "basics.colors.autodeskBlue700"
     }
   },
-  ACCENT_COLOR_800: {
+  accentColor800: {
     value: {
-      ref: "BASICS.COLORS.AUTODESK_BLUE_800"
+      ref: "basics.colors.autodeskBlue800"
     }
   },
-  ACCENT_COLOR_900: {
+  accentColor900: {
     value: {
-      ref: "BASICS.COLORS.AUTODESK_BLUE_900"
+      ref: "basics.colors.autodeskBlue900"
     }
   },
-  "COMPONENT.BACKGROUND_COLOR": {
+  "component.backgroundColor": {
     value: {
-      ref: "BASICS.COLORS.SURFACE_DARK_BLUE_LEVEL_1_5"
+      ref: "basics.colors.surfaceDarkBlueLevel1_5"
     }
   },
-  TEXT_COLOR: {
+  textColor: {
     value: {
-      ref: "BASICS.COLORS.TEXT_AGAINST_DARK"
+      ref: "basics.colors.textAgainstDark"
     }
   },
-  TEXT_COLOR_DIM: {
+  textColorDim: {
     value: {
-      ref: "BASICS.COLORS.TEXT_AGAINST_DARK"
+      ref: "basics.colors.textAgainstDark"
     },
     transform: {
       alpha: 0.6

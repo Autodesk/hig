@@ -13,7 +13,7 @@ const lightGrayConfig = extendTheme(
   Object.assign(
     {},
     mediumDensityThemeConfig,
-    mapKeys(system.colorScheme, key => `COLOR_SCHEME.${key}`),
+    mapKeys(system.colorScheme, key => `colorScheme.${key}`),
     formField,
     input,
     label,
