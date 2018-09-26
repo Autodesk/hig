@@ -1,3 +1,10 @@
+# [@hig/project-account-switcher-v0.2.0](https://github.com/Autodesk/hig/compare/@hig/project-account-switcher@0.1.1...@hig/project-account-switcher@0.2.0) (2018-09-26)
+
+
+### Features
+
+* Add prop openOnHover to Flyout.  When enabled, flyout will open when target is hovered over for .5s ([65893f3](https://github.com/Autodesk/hig/commit/65893f3))
+
 # [@hig/project-account-switcher-v0.1.1](https://github.com/Autodesk/hig/compare/@hig/project-account-switcher@0.1.0...@hig/project-account-switcher@0.1.1) (2018-09-11)
 
 

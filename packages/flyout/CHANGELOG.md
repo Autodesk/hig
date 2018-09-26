@@ -1,3 +1,16 @@
+# [@hig/flyout-v0.6.0](https://github.com/Autodesk/hig/compare/@hig/flyout@0.5.0...@hig/flyout@0.6.0) (2018-09-26)
+
+
+### Bug Fixes
+
+*  max-height calc on notifications-flyout ([4581856](https://github.com/Autodesk/hig/commit/4581856))
+
+
+### Features
+
+* Add prop openOnHover to Flyout.  When enabled, flyout will open when target is hovered over for .5s ([65893f3](https://github.com/Autodesk/hig/commit/65893f3))
+* timeout should be cleared no matter whether on mouse leave event exists ([7b3a300](https://github.com/Autodesk/hig/commit/7b3a300))
+
 # [@hig/flyout-v0.5.0](https://github.com/Autodesk/hig/compare/@hig/flyout@0.4.1...@hig/flyout@0.5.0) (2018-09-11)
 
 
