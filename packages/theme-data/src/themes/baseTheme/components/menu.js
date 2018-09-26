@@ -1,74 +1,74 @@
 export default {
-  "MENU.BACKGROUND_COLOR": {
+  "menu.backgroundColor": {
     type: "color",
     value: {
-      ref: "COLOR_SCHEME.COMPONENT.BACKGROUND_COLOR"
+      ref: "colorScheme.component.backgroundColor"
     }
   },
-  "MENU.BORDER_RADIUS": {
+  "menu.borderRadius": {
     type: "borderRadius",
     value: {
-      ref: "BASICS.BORDER_RADII.M"
+      ref: "basics.borderRadii.M"
     }
   },
-  "MENU.TOP_FLUSH_BORDER_TOP_RADIUS": {
+  "menu.topFlushBorderTopRadius": {
     type: "borderRadius",
     value: {
-      ref: "BASICS.BORDER_RADII.NONE"
+      ref: "basics.borderRadii.none"
     }
   },
-  "MENU.ITEM.BACKGROUND_COLOR": {
+  "menu.item.backgroundColor": {
     type: "color",
     value: {
-      ref: "COLOR_SCHEME.COMPONENT.BACKGROUND_COLOR"
+      ref: "colorScheme.component.backgroundColor"
     }
   },
-  "MENU.ITEM.HOVER.BACKGROUND_COLOR": {
+  "menu.item.hover.backgroundColor": {
     type: "color",
     value: {
-      ref: "BASICS.COLORS.CHARCOAL_600"
+      ref: "basics.colors.charcoal600"
     },
     transform: {
       alpha: 0.1
     }
   },
-  "MENU.ITEM.FOCUS.BACKGROUND_COLOR": {
+  "menu.item.focus.backgroundColor": {
     type: "color",
     value: {
-      ref: "MENU.ITEM.HOVER.BACKGROUND_COLOR"
+      ref: "menu.item.hover.backgroundColor"
     }
   },
-  "MENU.ITEM.ACTIVE.BACKGROUND_COLOR": {
+  "menu.item.active.backgroundColor": {
     type: "color",
     value: {
-      ref: "COLOR_SCHEME.ACCENT_COLOR_500"
+      ref: "colorScheme.accentColor500"
     },
     transform: {
       alpha: 0.1
     }
   },
-  "MENU.ITEM.HORIZONTAL_PADDING": {
+  "menu.item.horizontalPadding": {
     type: "spacing",
     value: {
-      ref: "DENSITY.SPACINGS.XS"
+      ref: "density.spacings.XS"
     }
   },
-  "MENU.ITEM.VERTICAL_PADDING": {
+  "menu.item.verticalPadding": {
     type: "spacing",
     value: {
-      ref: "BASICS.SPACINGS.MEDIUM_S"
+      ref: "basics.spacings.mediumS"
     }
   },
-  "MENU.ITEM.MIN_HEIGHT": {
+  "menu.item.minHeight": {
     type: "length",
     value: {
-      ref: "DENSITY.SPACINGS.L"
+      ref: "density.spacings.L"
     }
   },
-  "MENU.ITEM.GUTTER_WIDTH": {
+  "menu.item.gutterWidth": {
     type: "spacing",
     value: {
-      ref: "BASICS.SPACINGS.MEDIUM_S"
+      ref: "basics.spacings.mediumS"
     }
   }
 };

@@ -2,7 +2,7 @@ import { variants } from "../constants";
 
 function inputStyles({ isDisabled, hasFocus, hasHover }, themeData) {
   const defaults = {
-    color: themeData["INPUT.FONT_COLOR"],
+    color: themeData["input.fontColor"],
     transitionProperty: "color",
     transitionDuration: "0.3s"
   };
@@ -10,7 +10,7 @@ function inputStyles({ isDisabled, hasFocus, hasHover }, themeData) {
   if (isDisabled) {
     return {
       ...defaults,
-      color: themeData["INPUT.DISABLED.FONT_COLOR"]
+      color: themeData["input.disabled.fontColor"]
     };
   }
   if (hasFocus) {
@@ -35,22 +35,22 @@ export default function stylesheet(props, themeData) {
       boxSizing: "border-box",
       border: "none",
       appearance: "none",
-      minHeight: themeData["INPUT.MIN_HEIGHT"],
-      paddingTop: themeData["INPUT.VERTICAL_PADDING"],
+      minHeight: themeData["input.minHeight"],
+      paddingTop: themeData["input.verticalPadding"],
       paddingRight:
         props.variant === variants.BOX
-          ? themeData["INPUT.BOX_TYPE.HORIZONTAL_PADDING"]
-          : themeData["INPUT.HORIZONTAL_PADDING"],
-      paddingBottom: themeData["INPUT.VERTICAL_PADDING"],
+          ? themeData["input.boxType.horizontalPadding"]
+          : themeData["input.horizontalPadding"],
+      paddingBottom: themeData["input.verticalPadding"],
       paddingLeft:
         props.variant === variants.BOX
-          ? themeData["INPUT.BOX_TYPE.HORIZONTAL_PADDING"]
-          : themeData["INPUT.HORIZONTAL_PADDING"],
+          ? themeData["input.boxType.horizontalPadding"]
+          : themeData["input.horizontalPadding"],
       outline: "none",
-      fontSize: themeData["DENSITY.FONT_SIZES.M"],
-      fontFamily: themeData["INPUT.FONT_FAMILY"],
-      fontWeight: themeData["INPUT.FONT_WEIGHT"],
-      lineHeight: themeData["INPUT.LINE_HEIGHT"],
+      fontSize: themeData["density.fontSizes.M"],
+      fontFamily: themeData["input.fontFamily"],
+      fontWeight: themeData["input.fontWeight"],
+      lineHeight: themeData["input.lineHeight"],
       width: "100%",
       ...inputStyles(props, themeData)
     }

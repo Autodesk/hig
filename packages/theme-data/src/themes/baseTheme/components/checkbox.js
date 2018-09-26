@@ -1,152 +1,152 @@
 export default {
-  "CHECKBOX.BACKGROUND_COLOR": {
+  "checkbox.backgroundColor": {
     type: "color",
     value: {
-      ref: "COLOR_SCHEME.COMPONENT.BACKGROUND_COLOR"
+      ref: "colorScheme.component.backgroundColor"
     }
   },
-  "CHECKBOX.BORDER_COLOR": {
+  "checkbox.borderColor": {
     type: "color",
     transform: {
       alpha: 0.5
     },
     value: {
-      ref: "BASICS.COLORS.CHARCOAL_600"
+      ref: "basics.colors.charcoal600"
     }
   },
-  "CHECKBOX.BORDER_WIDTH": {
+  "checkbox.borderWidth": {
     type: "borderWidth",
     value: {
-      ref: "INPUT.BORDER_BOTTOM_WIDTH"
+      ref: "input.borderBottomWidth"
     }
   },
-  "CHECKBOX.BORDER_RADIUS": {
+  "checkbox.borderRadius": {
     type: "borderRadius",
     value: {
-      ref: "BASICS.BORDER_RADII.S"
+      ref: "basics.borderRadii.S"
     }
   },
-  "CHECKBOX.HALO.COLOR": {
+  "checkbox.halo.color": {
     type: "color",
     value: {
-      ref: "INPUT.HALO.COLOR"
+      ref: "input.halo.color"
     }
   },
-  "CHECKBOX.HALO.WIDTH": {
+  "checkbox.halo.width": {
     type: "length",
     value: {
-      ref: "INPUT.HALO.WIDTH"
+      ref: "input.halo.width"
     }
   },
-  "CHECKBOX.LABEL_SPACING": {
+  "checkbox.labelSpacing": {
     type: "length",
     value: {
-      ref: "DENSITY.SPACINGS.S"
+      ref: "density.spacings.S"
     }
   },
 
   // Hover
-  "CHECKBOX.HOVER.BORDER_COLOR": {
+  "checkbox.hover.borderColor": {
     type: "color",
     value: {
-      ref: "BASICS.COLORS.CHARCOAL_600"
+      ref: "basics.colors.charcoal600"
     },
     transform: {
       alpha: 0.5
     }
   },
-  "CHECKBOX.HOVER.HALO.WIDTH": {
+  "checkbox.hover.halo.width": {
     type: "length",
     value: {
-      ref: "INPUT.HOVER.HALO.WIDTH"
+      ref: "input.hover.halo.width"
     }
   },
-  "CHECKBOX.HOVER.HALO.COLOR": {
+  "checkbox.hover.halo.color": {
     type: "color",
     value: {
-      ref: "INPUT.HALO.COLOR"
+      ref: "input.halo.color"
     }
   },
 
   // Focus
-  "CHECKBOX.FOCUS.BORDER_COLOR": {
+  "checkbox.focus.borderColor": {
     type: "color",
     value: {
-      ref: "BASICS.COLORS.CHARCOAL_600"
+      ref: "basics.colors.charcoal600"
     },
     transform: {
       alpha: 0.5
     }
   },
-  "CHECKBOX.FOCUS.HALO.COLOR": {
+  "checkbox.focus.halo.color": {
     type: "color",
     value: {
-      ref: "INPUT.FOCUS.HALO.COLOR"
+      ref: "input.focus.halo.color"
     }
   },
-  "CHECKBOX.FOCUS.HALO.WIDTH": {
+  "checkbox.focus.halo.width": {
     type: "length",
     value: {
-      ref: "INPUT.FOCUS.HALO.WIDTH"
+      ref: "input.focus.halo.width"
     }
   },
 
   // Active
-  "CHECKBOX.ACTIVE.BORDER_COLOR": {
+  "checkbox.active.borderColor": {
     type: "color",
     value: {
-      ref: "BASICS.COLORS.CHARCOAL_600"
+      ref: "basics.colors.charcoal600"
     },
     transform: {
       alpha: 0.5
     }
   },
-  "CHECKBOX.ACTIVE.HALO.COLOR": {
+  "checkbox.active.halo.color": {
     type: "color",
     value: {
-      ref: "INPUT.ACTIVE.HALO.COLOR"
+      ref: "input.active.halo.color"
     }
   },
-  "CHECKBOX.ACTIVE.HALO.WIDTH": {
+  "checkbox.active.halo.width": {
     type: "length",
     value: {
-      ref: "INPUT.ACTIVE.HALO.WIDTH"
+      ref: "input.active.halo.width"
     }
   },
 
   // Checked
-  "CHECKBOX.CHECKED.BORDER_COLOR": {
+  "checkbox.checked.borderColor": {
     type: "color",
     value: {
-      ref: "BASICS.COLORS.CHARCOAL_600"
+      ref: "basics.colors.charcoal600"
     }
   },
-  "CHECKBOX.CHECKED.ICON_COLOR": {
+  "checkbox.checked.iconColor": {
     type: "color",
     value: {
-      ref: "BASICS.COLORS.WHITE"
+      ref: "basics.colors.white"
     }
   },
-  "CHECKBOX.CHECKED.BACKGROUND_COLOR": {
+  "checkbox.checked.backgroundColor": {
     type: "color",
     value: {
-      ref: "BASICS.COLORS.CHARCOAL_600"
+      ref: "basics.colors.charcoal600"
     }
   },
 
   // Disabled
-  "CHECKBOX.DISABLED.BORDER_COLOR": {
+  "checkbox.disabled.borderColor": {
     type: "color",
     value: {
-      ref: "INPUT.DISABLED.BORDER_COLOR"
+      ref: "input.disabled.borderColor"
     }
   },
 
   // Disabled + Checked
-  "CHECKBOX.DISABLED.CHECKED.BACKGROUND_COLOR": {
+  "checkbox.disabled.checked.backgroundColor": {
     type: "color",
     value: {
-      ref: "BASICS.COLORS.CHARCOAL_600"
+      ref: "basics.colors.charcoal600"
     },
     transform: {
       alhpa: 0.5

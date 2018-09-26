@@ -1,4 +1,4 @@
 export default {
-  MAIN: { value: "ArtifaktElement, sans-serif", type: "fontFamily" },
-  MONOSPACE: { value: "'Source Code Pro', monospace", type: "fontFamily" }
+  main: { value: "ArtifaktElement, sans-serif", type: "fontFamily" },
+  monospace: { value: "'Source Code Pro', monospace", type: "fontFamily" }
 };
