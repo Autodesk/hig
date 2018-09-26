@@ -28,8 +28,15 @@ const ExampleSideNav = () => (
           icon={<Icon name={iconNames.PRODUCTS_AND_SERVICES} />}
           minimized
         >
-          <SideNav.Submodule title="Submodule 1" />
-          <SideNav.Submodule title="Submodule 2" />
+          <SideNav.Submodule
+            title="Submodule 1"
+            link="https://www.autodesk.com"
+          />
+          <SideNav.Submodule
+            title="Submodule 2"
+            link="https://www.autodesk.com"
+            target="_blank"
+          />
         </SideNav.Module>
         <SideNav.Module
           title="Module 3"

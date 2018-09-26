@@ -1,10 +1,28 @@
-import * as index from ".";
+import { hasExports } from "@hig/jest-preset/helpers";
+
+import * as index from "./index";
 
 describe("utils/index", () => {
-  it(`exports combineEventHandlers`, () => {
-    expect(index).toHaveProperty("combineEventHandlers", expect.any(Function));
-  });
-  it(`exports generateId`, () => {
-    expect(index).toHaveProperty("generateId", expect.any(Function));
-  });
+  hasExports(index, [
+    {
+      name: "combineEventHandlers",
+      value: expect.any(Function)
+    },
+    {
+      name: "memoizeCombineEventHandlers",
+      value: expect.any(Function)
+    },
+    {
+      name: "createButtonEventHandlers",
+      value: expect.any(Function)
+    },
+    {
+      name: "memoizeCreateButtonEventHandlers",
+      value: expect.any(Function)
+    },
+    {
+      name: "generateId",
+      value: expect.any(Function)
+    }
+  ]);
 });

@@ -3,8 +3,9 @@ import PropTypes from "prop-types";
 import cx from "classnames";
 import { sizes as iconSizes } from "@hig/icon";
 import { ThemeContext } from "@hig/themes";
-import ExternalLinkIcon from "../presenters/ExternalLinkIcon";
 
+import { AVAILABLE_TARGETS } from "../targets";
+import ExternalLinkIcon from "../presenters/ExternalLinkIcon";
 import "./link.scss";
 
 /** @todo Consider extending TextLink */
@@ -17,7 +18,7 @@ export default class Link extends Component {
     /** Called when hovering over the link */
     onMouseOver: PropTypes.func,
     /** Corresponds to the anchor tag's target */
-    target: PropTypes.oneOf(["_self", "_blank", "_parent", "_top"]),
+    target: PropTypes.oneOf(AVAILABLE_TARGETS),
     /** Link text */
     title: PropTypes.string
   };

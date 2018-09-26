@@ -3,7 +3,7 @@
 exports[`side-nav/Module/presenters/ModulePresenter snapshot tests renders with minimal props 1`] = `
 <div
   className="hig--light-theme hig__side-nav__module"
-  onMouseOver={[Function]}
+  onMouseOver={undefined}
 >
   <div
     className="hig__side-nav__module__row"
@@ -11,8 +11,11 @@ exports[`side-nav/Module/presenters/ModulePresenter snapshot tests renders with 
     <div
       className="hig--light-theme hig__side-nav__module__link"
       href={undefined}
-      onClick={[Function]}
-      target="_self"
+      onClick={undefined}
+      onKeyDown={undefined}
+      role="button"
+      tabIndex="0"
+      target={undefined}
     >
       <div
         className="hig__side-nav__module__link__icon"
@@ -22,9 +25,6 @@ exports[`side-nav/Module/presenters/ModulePresenter snapshot tests renders with 
       >
         ModulePresenter
       </div>
-      <div
-        className="hig__side-nav__module__link__external-link-icon"
-      />
     </div>
   </div>
   <div

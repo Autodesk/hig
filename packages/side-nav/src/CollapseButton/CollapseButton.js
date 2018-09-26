@@ -3,10 +3,15 @@ import PropTypes from "prop-types";
 import cx from "classnames";
 import Icon, { names as iconNames, sizes as iconSizes } from "@hig/icon";
 import { ThemeContext } from "@hig/themes";
+import { memoizeCreateButtonEventHandlers } from "@hig/utils";
 
 import "./collapse-button.scss";
 
-/** @todo Consider replacing with an IconButton */
+/**
+ * @todo Replace with an `IconButton` once it's themeable
+ * @todo Deprecate `minimized` prop, and replace it with "pressed" for ARIA consistency.
+ * Also, this button shouldn't be concerned with the minimized state of its parent components.
+ */
 export default class CollapseButton extends Component {
   static propTypes = {
     /** Presents the icon in a minimized state: caret pointing right */
@@ -16,12 +21,14 @@ export default class CollapseButton extends Component {
   };
 
   static defaultProps = {
-    onClick: () => {},
     minimized: false
   };
 
+  createEventHandlers = memoizeCreateButtonEventHandlers();
+
   render() {
     const { minimized, onClick } = this.props;
+    const { handleClick, handleKeyDown } = this.createEventHandlers(onClick);
     const classes = themeClass =>
       cx(themeClass, "hig__side-nav__module__collapse-button", {
         "hig__side-nav__module__collapse-button--collapsed": minimized
@@ -30,10 +37,11 @@ export default class CollapseButton extends Component {
     return (
       <ThemeContext.Consumer>
         {({ themeClass }) => (
-          /** @todo replace with a semantic HTML tag */
           <div
+            aria-pressed={!minimized}
             className={classes(themeClass)}
-            onClick={onClick}
+            onClick={handleClick}
+            onKeyDown={handleKeyDown}
             role="button"
             tabIndex={0}
           >
