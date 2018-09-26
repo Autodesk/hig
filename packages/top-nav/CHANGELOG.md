@@ -1,3 +1,10 @@
+# [@hig/top-nav-v0.5.0](https://github.com/Autodesk/hig/compare/@hig/top-nav@0.4.0...@hig/top-nav@0.5.0) (2018-09-26)
+
+
+### Features
+
+* **package:** propagate dependency features ([4904930](https://github.com/Autodesk/hig/commit/4904930))
+
 # [@hig/top-nav-v0.4.0](https://github.com/Autodesk/hig/compare/@hig/top-nav@0.3.2...@hig/top-nav@0.4.0) (2018-09-19)
 
 
