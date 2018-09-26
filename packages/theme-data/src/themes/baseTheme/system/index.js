@@ -1,7 +1,7 @@
-import DENSITY from "./density";
-import COLOR_SCHEME from "./colorScheme";
+import density from "./density";
+import colorScheme from "./colorScheme";
 
 export default {
-  DENSITY,
-  COLOR_SCHEME
+  density,
+  colorScheme
 };

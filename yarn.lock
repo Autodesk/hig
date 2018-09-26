@@ -122,6 +122,14 @@
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/@hig/icons/-/icons-0.1.0.tgz#f33de7287675a2b3e9b88658a2221f8e552f81b3"
 
+"@hig/skeleton-item@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@hig/skeleton-item/-/skeleton-item-0.3.0.tgz#9c151cfe771108cc304b51bedd796c1579076500"
+  dependencies:
+    "@hig/themes" "^0.3.0"
+    classnames "^2.2.5"
+    prop-types "^15.6.1"
+
 "@hig/styles@^0.1.1":
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/@hig/styles/-/styles-0.1.1.tgz#02e85ee888b46767072ee040c286d4f80ed92ef2"
@@ -134,12 +142,6 @@
     classnames "^2.2.5"
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.2"
-
-"@hig/theme-data-poc@^0.0.8-alpha":
-  version "0.0.8-alpha"
-  resolved "https://registry.yarnpkg.com/@hig/theme-data-poc/-/theme-data-poc-0.0.8-alpha.tgz#a690b7c8f9b4d7c4b6ff6a56eec0d2795be9b8e7"
-  dependencies:
-    tinycolor2 "^1.4.1"
 
 "@hig/themes@^0.1.3":
   version "0.1.3"

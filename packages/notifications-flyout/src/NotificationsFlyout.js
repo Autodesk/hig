@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 import Flyout, { anchorPoints, AVAILABLE_ANCHOR_POINTS } from "@hig/flyout";
 import "@hig/flyout/build/index.css";
+import { combineEventHandlers } from "@hig/utils";
 
 import EmptyStatePresenter from "./presenters/EmptyStatePresenter";
 import IndicatorPresenter from "./presenters/IndicatorPresenter";
@@ -35,8 +36,13 @@ function createPanelRenderer({
   loading,
   heading
 }) {
-  /* eslint-disable-next-line react/prop-types */
-  return function renderPanel({ hideFlyout, handleScroll, innerRef }) {
+  return function renderPanel({
+    /* eslint-disable react/prop-types */
+    hideFlyout,
+    handleScroll,
+    innerRef,
+    transitionStatus
+  }) {
     const isEmpty = notifications.length === 0;
 
     return (
@@ -45,6 +51,7 @@ function createPanelRenderer({
         innerRef={innerRef}
         loading={loading}
         onScroll={handleScroll}
+        transitionStatus={transitionStatus}
       >
         {isEmpty ? (
           <EmptyStatePresenter message={emptyMessage} />
@@ -68,6 +75,7 @@ export default function NotificationsFlyout(props) {
     heading,
     indicatorTitle,
     loading,
+    onClick,
     onClickOutside,
     onScroll,
     open,
@@ -105,7 +113,7 @@ export default function NotificationsFlyout(props) {
         >
           {({ handleClick }) => (
             <IndicatorPresenter
-              onClick={handleClick}
+              onClick={combineEventHandlers(onClick, handleClick)}
               count={unreadCount}
               showCount={showUnreadCount}
               title={indicatorTitle}
@@ -153,6 +161,8 @@ NotificationsFlyout.propTypes = {
   notifications: PropTypes.arrayOf(
     PropTypes.oneOfType([PropTypes.node, PropTypes.object])
   ),
+  /** Function called when the flyout is opened */
+  onClick: PropTypes.func,
   /** Function called when the flyout is open, and a click event occurs outside the flyout */
   onClickOutside: PropTypes.func,
   /** Function called when the flyout panel is scrolled */

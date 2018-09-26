@@ -5,10 +5,17 @@ import PanelBehavior from "./behaviors/PanelBehavior";
 import PanelPresenter from "./presenters/PanelPresenter";
 
 export default function Panel(props) {
-  const { children, heading, innerRef, loading, onScroll } = props;
+  const {
+    children,
+    heading,
+    innerRef,
+    loading,
+    onScroll,
+    transitionStatus
+  } = props;
 
   return (
-    <PanelBehavior loading={loading}>
+    <PanelBehavior loading={loading} transitionStatus={transitionStatus}>
       {({ listMaxHeight, loadingTransitionState, refListWrapper }) => (
         <PanelPresenter
           heading={heading}
@@ -30,5 +37,6 @@ Panel.propTypes = {
   heading: PropTypes.string,
   innerRef: PropTypes.func.isRequired,
   loading: PropTypes.bool,
-  onScroll: PropTypes.func
+  onScroll: PropTypes.func,
+  transitionStatus: PropTypes.string
 };

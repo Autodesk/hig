@@ -2,8 +2,10 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
 import { ThemeContext } from "@hig/themes";
+
 import CollapseButton from "../../CollapseButton";
-import ExternalLinkIcon from "../../presenters/ExternalLinkIcon";
+import TitlePresenter from "./TitlePresenter";
+import { targets, AVAILABLE_TARGETS } from "../../targets";
 
 import "./module.scss";
 
@@ -30,75 +32,64 @@ export default class Module extends Component {
     /** A label for rendering this Module */
     title: PropTypes.string.isRequired,
     /** Anchor target. Applicable only if link is provided */
-    target: PropTypes.oneOf(["_self", "_blank", "_parent", "_top"])
+    target: PropTypes.oneOf(AVAILABLE_TARGETS)
   };
 
   static defaultProps = {
     minimized: false,
-    onClickCollapseButton: () => {},
-    onClickTitle: () => {},
-    onMouseOver: () => {},
-    target: "_self"
+    target: targets.SELF
   };
-
-  _renderExternalLinkIcon = () =>
-    this.props.target === "_blank" && <ExternalLinkIcon />;
 
   render() {
     const {
+      active,
+      activeChildren,
       children,
       icon,
       link,
-      title,
-      target,
-      active,
-      activeChildren,
+      minimized,
+      onClickCollapseButton,
       onClickTitle,
-      onMouseOver
+      onMouseOver,
+      target,
+      title
     } = this.props;
     const classes = themeClass => cx(themeClass, "hig__side-nav__module");
-
-    const linkClasses = themeClass =>
-      cx(themeClass, "hig__side-nav__module__link", {
-        "hig__side-nav__module__link--active": active,
-        "hig__side-nav__module__link--active-children": activeChildren
-      });
 
     const submodulesClasses = cx("hig__side-nav__module__submodules", {
       "hig__side-nav__module__submodules--no-icon": !icon
     });
 
-    const Wrapper = link ? "a" : "div";
+    const isCollapsible = !!children;
+    /**
+     * The title should always be focusable, but shouldn't be in
+     * the keyboard sequence if the collapse button is rendered.
+     */
+    const titleTabIndex = isCollapsible ? "-1" : "0";
 
     return (
       <ThemeContext.Consumer>
         {({ themeClass }) => (
           <div className={classes(themeClass)} onMouseOver={onMouseOver}>
             <div className="hig__side-nav__module__row">
-              <Wrapper
-                className={linkClasses(themeClass)}
-                href={link}
+              <TitlePresenter
+                active={active}
+                activeChildren={activeChildren}
+                icon={icon}
+                link={link}
                 onClick={onClickTitle}
+                tabIndex={titleTabIndex}
                 target={target}
-              >
-                <div className="hig__side-nav__module__link__icon">{icon}</div>
-                <div className="hig__side-nav__module__link__title">
-                  {title}
-                </div>
-                <div className="hig__side-nav__module__link__external-link-icon">
-                  {this._renderExternalLinkIcon()}
-                </div>
-              </Wrapper>
-              {this.props.children && (
+                title={title}
+              />
+              {isCollapsible && (
                 <CollapseButton
-                  minimized={this.props.minimized}
-                  onClick={this.props.onClickCollapseButton}
+                  minimized={minimized}
+                  onClick={onClickCollapseButton}
                 />
               )}
             </div>
-            {!this.props.minimized && (
-              <div className={submodulesClasses}>{children}</div>
-            )}
+            {!minimized && <div className={submodulesClasses}>{children}</div>}
           </div>
         )}
       </ThemeContext.Consumer>

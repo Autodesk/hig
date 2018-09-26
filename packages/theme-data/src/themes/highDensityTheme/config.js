@@ -3,7 +3,7 @@ import system from "./system";
 
 const highDensityThemeConfig = Object.assign(
   {},
-  mapKeys(system.density, key => `DENSITY.${key}`)
+  mapKeys(system.density, key => `density.${key}`)
 );
 
 export default highDensityThemeConfig;

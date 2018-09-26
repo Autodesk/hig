@@ -8,6 +8,7 @@ import Icon, { names as iconNames } from "@hig/icon";
 
 import SideNav from "../index";
 import infoOptions from "./infoOptions";
+import { AVAILABLE_TARGETS } from "../targets";
 
 storiesOf("GlobalNav|SideNav.CollapseButton", module).add(
   "default",
@@ -30,7 +31,7 @@ storiesOf("GlobalNav|SideNav.Link", module).add(
         onMouseOver={action("onMouseOver")}
         title={text("Title", "SideNav Link")}
         link={text("Link", "https://www.autodesk.com")}
-        target={select("Link Target", ["_self", "_blank", "_parent", "_top"])}
+        target={select("Link Target", AVAILABLE_TARGETS)}
       />
     </KnobbedThemeProvider>
   ))
@@ -46,7 +47,7 @@ storiesOf("GlobalNav|SideNav.Submodule", module).add(
         onMouseOver={action("onMouseOver")}
         title={text("Title", "Submodule")}
         link={text("Link", "https://www.autodesk.com")}
-        target={select("Link Target", ["_self", "_blank", "_parent", "_top"])}
+        target={select("Link Target", AVAILABLE_TARGETS)}
       />
     </KnobbedThemeProvider>
   ))
@@ -66,7 +67,7 @@ storiesOf("GlobalNav|SideNav.Module", module)
           onClickCollapseButton={action("onClickCollapseButton")}
           onClickTitle={action("onClickTitle")}
           onMouseOver={action("onMouseOver")}
-          target={select("Link Target", ["_self", "_blank", "_parent", "_top"])}
+          target={select("Link Target", AVAILABLE_TARGETS)}
           title={text("Title", "Module")}
         />
       </KnobbedThemeProvider>
@@ -84,7 +85,7 @@ storiesOf("GlobalNav|SideNav.Module", module)
           onClickCollapseButton={action("onClickCollapseButton")}
           onClickTitle={action("onClickTitle")}
           onMouseOver={action("onMouseOver")}
-          target={select("Link Target", ["_self", "_blank", "_parent", "_top"])}
+          target={select("Link Target", AVAILABLE_TARGETS)}
           title={text("Title", "Module")}
         />
       </KnobbedThemeProvider>
@@ -102,7 +103,7 @@ storiesOf("GlobalNav|SideNav.Module", module)
           onClickCollapseButton={action("onClickCollapseButton")}
           onClickTitle={action("onClickTitle")}
           onMouseOver={action("onMouseOver")}
-          target={select("Link Target", ["_self", "_blank", "_parent", "_top"])}
+          target={select("Link Target", AVAILABLE_TARGETS)}
           title={text("Title", "Module")}
         >
           <SideNav.Submodule title="Submodule 1" />

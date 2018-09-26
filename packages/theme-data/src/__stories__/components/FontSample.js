@@ -13,7 +13,7 @@ export default function FontSample({ fontWeight, fontSize, fontFamily }) {
           fontWeight: fontWeight || BASICS.FONT_WEIGHTS.NORMAL,
           fontSize: fontSize || BASICS.FONT_SIZES.M,
           fontFamily: fontFamily || BASICS.FONT_FAMILIES.MAIN,
-          marginBottom: themeData["BASICS.SPACINGS.XS"]
+          marginBottom: themeData["basics.spacings.XS"]
         };
         return (
           <div style={style}>

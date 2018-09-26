@@ -5,6 +5,7 @@ import { AVAILABLE_ANCHOR_POINTS } from "./anchorPoints";
 import ContainerTransition from "./behaviors/ContainerTransition";
 import FlyoutPresenter from "./presenters/FlyoutPresenter";
 import getCoordinates, { DEFAULT_COORDINATES } from "./getCoordinates";
+import DelayedHoverBehavior from "./behaviors/DelayedHoverBehavior";
 import PanelContainerPresenter from "./presenters/PanelContainerPresenter";
 import PanelPresenter from "./presenters/PanelPresenter";
 
@@ -63,13 +64,22 @@ export default class Flyout extends Component {
     /** Function called when the flyout panel is scrolled */
     onScroll: PropTypes.func,
     /** When provided, it overrides the flyout's open state */
-    open: PropTypes.bool
+    open: PropTypes.bool,
+    /** Whether flyout should open when the target is hovered over */
+    openOnHover: PropTypes.bool,
+    /**
+     * If openOnHover is true, this prop will determine the delay
+     * from when mouseEnter begins until the flyout visually opens
+     */
+    openOnHoverDelay: PropTypes.number
   };
 
   static defaultProps = {
     anchorPoint: DEFAULT_COORDINATES.anchorPoint,
     defaultOpen: false,
     fallbackAnchorPoints: AVAILABLE_ANCHOR_POINTS,
+    openOnHover: false,
+    openOnHoverDelay: 500,
     /**
      * @param {PanelRendererPayload} payload
      */
@@ -161,6 +171,18 @@ export default class Flyout extends Component {
     return this.isOpenControlled() ? this.props.open : this.state.open;
   }
 
+  handleChildMouseEnter = () => {
+    if (this.props.openOnHover) {
+      this.setOpen(true);
+    }
+  };
+
+  handleChildMouseLeave = () => {
+    if (this.props.openOnHover) {
+      this.setOpen(false);
+    }
+  };
+
   handleChildClick = () => {
     if (!this.isOpenControlled()) {
       this.toggleOpen();
@@ -244,17 +266,20 @@ export default class Flyout extends Component {
     return content;
   }
 
-  renderPanel() {
+  renderPanel({ transitionStatus }) {
     const { panel } = this.props;
 
     if (typeof panel === "function") {
-      return panel(this.createPanelPayload());
+      return panel({
+        ...this.createPanelPayload(),
+        transitionStatus
+      });
     }
 
     return panel;
   }
 
-  renderChildren() {
+  renderChildren(hasHover, onMouseEnter, onMouseLeave) {
     const { children } = this.props;
     const { handleChildClick } = this;
 
@@ -263,16 +288,27 @@ export default class Flyout extends Component {
     }
 
     if (React.Children.count(children) === 1) {
-      return React.cloneElement(children, { onClick: handleChildClick });
+      return React.cloneElement(children, {
+        hasHover,
+        onClick: handleChildClick,
+        onMouseEnter,
+        onMouseLeave
+      });
     }
 
     return children;
   }
 
   renderPresenter = transitionStatus => {
-    const { refAction, refPointer, refWrapper } = this;
-    const { pointer } = this.props;
-    const panel = this.renderPanel();
+    const {
+      handleChildMouseEnter,
+      handleChildMouseLeave,
+      refAction,
+      refPointer,
+      refWrapper
+    } = this;
+    const { openOnHoverDelay, pointer } = this.props;
+    const panel = this.renderPanel({ transitionStatus });
     const {
       anchorPoint,
       containerPosition,
@@ -280,19 +316,27 @@ export default class Flyout extends Component {
     } = this.getCoordinates();
 
     return (
-      <FlyoutPresenter
-        anchorPoint={anchorPoint}
-        containerPosition={containerPosition}
-        panel={panel}
-        pointer={pointer}
-        pointerPosition={pointerPosition}
-        refAction={refAction}
-        refPointer={refPointer}
-        refWrapper={refWrapper}
-        transitionStatus={transitionStatus}
+      <DelayedHoverBehavior
+        onMouseEnter={handleChildMouseEnter}
+        onMouseLeave={handleChildMouseLeave}
+        openOnHoverDelay={openOnHoverDelay}
       >
-        {this.renderChildren()}
-      </FlyoutPresenter>
+        {({ hasHover, onMouseEnter, onMouseLeave }) => (
+          <FlyoutPresenter
+            anchorPoint={anchorPoint}
+            containerPosition={containerPosition}
+            panel={panel}
+            pointer={pointer}
+            pointerPosition={pointerPosition}
+            refAction={refAction}
+            refPointer={refPointer}
+            refWrapper={refWrapper}
+            transitionStatus={transitionStatus}
+          >
+            {this.renderChildren(hasHover, onMouseEnter, onMouseLeave)}
+          </FlyoutPresenter>
+        )}
+      </DelayedHoverBehavior>
     );
   };
 

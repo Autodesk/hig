@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Transition from "react-transition-group/Transition";
+import { transitionStatuses, AVAILABLE_TRANSITION_STATUSES } from "@hig/flyout";
 
 /** 50px per the design spec plus 30px for the height of the title */
 const BOTTOM_SPACING = 80;
@@ -29,6 +30,17 @@ export default class PanelBehavior extends Component {
   componentDidMount() {
     this.bindResize();
     this.updateMaxHeight();
+  }
+
+  componentDidUpdate(previousProps) {
+    if (
+      previousProps.transitionStatus === transitionStatuses.HIDDEN &&
+      this.props.transitionStatus === transitionStatuses.EXITED
+    ) {
+      window.requestAnimationFrame(() => {
+        this.updateMaxHeight();
+      });
+    }
   }
 
   componentWillUnmount() {
@@ -86,7 +98,8 @@ export default class PanelBehavior extends Component {
 
 PanelBehavior.propTypes = {
   children: PropTypes.func.isRequired,
-  loading: PropTypes.bool
+  loading: PropTypes.bool,
+  transitionStatus: PropTypes.oneOf(AVAILABLE_TRANSITION_STATUSES)
 };
 
 PanelBehavior.defaultProps = {
