@@ -7,7 +7,7 @@ function getMessage(result) {
 function toBeAValidTheme(theme, schema) {
   const result = validateTheme(theme, schema);
   const pass = result.valid;
-  return { pass, message: () => getMessage(result, theme, schema) };
+  return { pass, message: () => getMessage(result) };
 }
 
 expect.extend({ toBeAValidTheme });

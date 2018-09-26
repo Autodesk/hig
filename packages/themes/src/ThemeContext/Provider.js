@@ -1,7 +1,9 @@
 import { Component } from "react";
 import PropTypes from "prop-types";
+import metadata from "@hig/theme-data-poc/build/json/lightGrayMediumDensityTheme/resolvedRoles.json";
+import resolvedRoles from "@hig/theme-data-poc/build/json/lightGrayMediumDensityTheme/metadata.json";
+
 import themeContextShape from "./shape";
-import HIGLightTheme from "../themes/HIGLightTheme";
 
 export default class Provider extends Component {
   static propTypes = {
@@ -14,7 +16,7 @@ export default class Provider extends Component {
   static childContextTypes = themeContextShape;
 
   static defaultProps = {
-    value: HIGLightTheme
+    value: { metadata, resolvedRoles }
   };
 
   getChildContext() {
