@@ -18,7 +18,7 @@
   },
   "scripts": {
     "test": "hig-scripts-test",
-    "build": "hig-scripts-build && babel-node scripts/buildThemes",
+    "build": "hig-scripts-build && babel-node scripts/buildThemes && node scripts/buildSCSS.js",
     "lint": "hig-scripts-lint"
   },
   "devDependencies": {
