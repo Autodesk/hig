@@ -1,40 +1,45 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
-import { sizes as iconSizes } from "@hig/icon";
+
 import { ThemeContext } from "@hig/themes";
 import { memoizeCreateButtonEventHandlers } from "@hig/utils";
 
-import { AVAILABLE_TARGETS, targets } from "../targets";
-import ExternalLinkIcon from "../presenters/ExternalLinkIcon";
-import "./submodule.scss";
+import { targets, AVAILABLE_TARGETS } from "../../targets";
+import ExternalLinkIcon from "../../presenters/ExternalLinkIcon";
 
-function getClassName({ active, themeClass }) {
-  return cx(themeClass, "hig__side-nav__submodule", {
-    "hig__side-nav__submodule--active": active
+function getClassName({ active, activeChildren, themeClass }) {
+  return cx(themeClass, "hig__side-nav__module__link", {
+    "hig__side-nav__module__link--active": active,
+    "hig__side-nav__module__link--active-children": activeChildren
   });
 }
 
-export default class Submodule extends Component {
+export default class TitlePresenter extends Component {
   static propTypes = {
-    /** Indicates this submodule is currently active */
     active: PropTypes.bool,
-    /** URL to navigate to when clicking this submodule */
+    activeChildren: PropTypes.bool,
+    icon: PropTypes.node,
     link: PropTypes.string,
-    /** Called when clicking on the submodule */
     onClick: PropTypes.func,
-    /** Called when hovering over the submodule */
-    onMouseOver: PropTypes.func,
-    /** Anchor target. Applicable only if link is provided */
+    tabIndex: PropTypes.string.isRequired,
     target: PropTypes.oneOf(AVAILABLE_TARGETS),
-    /** Text to render */
-    title: PropTypes.string
+    title: PropTypes.string.isRequired
   };
 
   createEventHandlers = memoizeCreateButtonEventHandlers();
 
   render() {
-    const { active, title, link, onClick, onMouseOver, target } = this.props;
+    const {
+      active,
+      activeChildren,
+      icon,
+      link,
+      onClick,
+      tabIndex,
+      target,
+      title
+    } = this.props;
     const { handleClick, handleKeyDown } = this.createEventHandlers(onClick, {
       // Allow default on hyperlinks to trigger navigation
       preventDefault: !link
@@ -48,18 +53,20 @@ export default class Submodule extends Component {
       <ThemeContext.Consumer>
         {({ themeClass }) => (
           <Wrapper
-            className={getClassName({ active, themeClass })}
+            className={getClassName({ active, activeChildren, themeClass })}
             href={link}
             onClick={handleClick}
             onKeyDown={handleKeyDown}
-            onMouseOver={onMouseOver}
             role={role}
-            tabIndex="0"
+            tabIndex={tabIndex}
             target={wrapperTarget}
           >
-            {title}
+            <div className="hig__side-nav__module__link__icon">{icon}</div>
+            <div className="hig__side-nav__module__link__title">{title}</div>
             {isExternalLink ? (
-              <ExternalLinkIcon size={iconSizes.PX_16} />
+              <div className="hig__side-nav__module__link__external-link-icon">
+                <ExternalLinkIcon />
+              </div>
             ) : null}
           </Wrapper>
         )}

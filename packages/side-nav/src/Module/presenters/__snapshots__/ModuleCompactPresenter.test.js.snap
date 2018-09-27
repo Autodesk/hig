@@ -11,6 +11,7 @@ exports[`side-nav/Module/presenters/ModuleCompactPresenter snapshot tests render
     <div
       className="hig--light-theme hig__side-nav__module__link"
       onClick={[Function]}
+      onKeyDown={[Function]}
       role="button"
       tabIndex={0}
     >

@@ -266,11 +266,14 @@ export default class Flyout extends Component {
     return content;
   }
 
-  renderPanel() {
+  renderPanel({ transitionStatus }) {
     const { panel } = this.props;
 
     if (typeof panel === "function") {
-      return panel(this.createPanelPayload());
+      return panel({
+        ...this.createPanelPayload(),
+        transitionStatus
+      });
     }
 
     return panel;
@@ -305,7 +308,7 @@ export default class Flyout extends Component {
       refWrapper
     } = this;
     const { openOnHoverDelay, pointer } = this.props;
-    const panel = this.renderPanel();
+    const panel = this.renderPanel({ transitionStatus });
     const {
       anchorPoint,
       containerPosition,

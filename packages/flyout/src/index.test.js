@@ -47,6 +47,14 @@ describe("flyout/index", () => {
     {
       name: "offsetPanelHorizontal",
       value: expect.any(Function)
+    },
+    {
+      name: "transitionStatuses",
+      value: expect.any(Object)
+    },
+    {
+      name: "AVAILABLE_TRANSITION_STATUSES",
+      value: expect.any(Array)
     }
   ]);
 });

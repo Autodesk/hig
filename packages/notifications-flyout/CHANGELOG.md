@@ -1,3 +1,16 @@
+# [@hig/notifications-flyout-v0.2.0](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@0.1.2...@hig/notifications-flyout@0.2.0) (2018-09-26)
+
+
+### Bug Fixes
+
+* **utils:** Use combineEventHandlers for onClick passthrough ([116dacb](https://github.com/Autodesk/hig/commit/116dacb))
+*  max-height calc on notifications-flyout ([4581856](https://github.com/Autodesk/hig/commit/4581856))
+
+
+### Features
+
+* **notifications-flyout:** Allow onClick prop passthrough ([56d0bb4](https://github.com/Autodesk/hig/commit/56d0bb4))
+
 # [@hig/notifications-flyout-v0.1.2](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@0.1.1...@hig/notifications-flyout@0.1.2) (2018-09-11)
 
 

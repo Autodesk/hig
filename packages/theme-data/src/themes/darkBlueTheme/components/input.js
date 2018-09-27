@@ -1,41 +1,41 @@
 export default {
-  "INPUT.BORDER_BOTTOM_COLOR": {
+  "input.borderBottomColor": {
     value: {
-      ref: "BASICS.COLORS.CHARCOAL_600"
+      ref: "basics.colors.charcoal600"
     },
     transform: {
       alpha: 0.5
     }
   },
-  "INPUT.HOVER.BORDER_BOTTOM_COLOR": {
+  "input.hover.borderBottomColor": {
     value: {
-      ref: "BASICS.COLORS.CHARCOAL_600"
+      ref: "basics.colors.charcoal600"
     }
   },
-  "INPUT.FOCUS.BORDER_BOTTOM_COLOR": {
+  "input.focus.borderBottomColor": {
     value: {
-      ref: "COLOR_SCHEME.ACCENT_COLOR_500"
+      ref: "colorScheme.accentColor500"
     }
   },
-  "INPUT.HALO.COLOR": {
+  "input.halo.color": {
     value: {
-      ref: "BASICS.COLORS.CHARCOAL_600"
+      ref: "basics.colors.charcoal600"
     },
     transform: {
       alpha: 0.15
     }
   },
-  "INPUT.FOCUS.HALO.COLOR": {
+  "input.focus.halo.color": {
     value: {
-      ref: "COLOR_SCHEME.ACCENT_COLOR_500"
+      ref: "colorScheme.accentColor500"
     },
     transform: {
       alpha: 0.25
     }
   },
-  "INPUT.ACTIVE.HALO.COLOR": {
+  "input.active.halo.color": {
     value: {
-      ref: "COLOR_SCHEME.ACCENT_COLOR_500"
+      ref: "colorScheme.accentColor500"
     },
     transform: {
       alpha: 0.25

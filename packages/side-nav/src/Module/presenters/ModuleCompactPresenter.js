@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
 import { ThemeContext } from "@hig/themes";
+import { memoizeCreateButtonEventHandlers } from "@hig/utils";
 
 import "./module.scss";
 
@@ -24,6 +25,8 @@ export default class ModuleCompact extends Component {
     onMouseOver: () => {}
   };
 
+  createEventHandlers = memoizeCreateButtonEventHandlers();
+
   render() {
     const {
       active,
@@ -33,6 +36,9 @@ export default class ModuleCompact extends Component {
       onMouseOver
     } = this.props;
     const classes = themeClass => cx(themeClass, "hig__side-nav__module");
+    const { handleClick, handleKeyDown } = this.createEventHandlers(
+      onClickTitle
+    );
 
     const linkClasses = themeClass =>
       cx(themeClass, "hig__side-nav__module__link", {
@@ -47,7 +53,8 @@ export default class ModuleCompact extends Component {
             <div className="hig__side-nav__module__row">
               <div
                 className={linkClasses(themeClass)}
-                onClick={onClickTitle}
+                onClick={handleClick}
+                onKeyDown={handleKeyDown}
                 role="button"
                 tabIndex={0}
               >

@@ -1,3 +1,10 @@
+# [@hig/side-nav-v0.1.8](https://github.com/Autodesk/hig/compare/@hig/side-nav@0.1.7...@hig/side-nav@0.1.8) (2018-09-26)
+
+
+### Bug Fixes
+
+* **a11y:** add missing keyboard interactions to buttons ([4c5d474](https://github.com/Autodesk/hig/commit/4c5d474))
+
 # [@hig/side-nav-v0.1.7](https://github.com/Autodesk/hig/compare/@hig/side-nav@0.1.6...@hig/side-nav@0.1.7) (2018-08-23)
 
 
