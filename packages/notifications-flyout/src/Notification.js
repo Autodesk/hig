@@ -11,7 +11,7 @@ export default class Notification extends Component {
     /** Determines whether the notification is featured */
     featured: PropTypes.bool,
     /** An action provided hide the flyout. This is provided to the `children` render prop */
-    hideFlyout: PropTypes.func.isRequired,
+    hideFlyout: PropTypes.func,
     /** An image to display such as an avatar or and icon */
     image: PropTypes.node,
     /** A callback called when user dismisses a featured notification */
@@ -27,6 +27,10 @@ export default class Notification extends Component {
   };
 
   static defaultProps = {
+    /**
+     * This is an action that's provided to the consumer,
+     * as a result a value must always be available.
+     */
     hideFlyout: () => {}
   };
 
