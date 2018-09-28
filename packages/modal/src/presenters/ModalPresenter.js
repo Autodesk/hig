@@ -94,7 +94,11 @@ export default class ModalPresenter extends Component {
      * as non-interactive, static content by screen-readers, but must also respond to `click` events.
      * Additionally, even though they respond to `click` events, they're not focusable.
      */
-    /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+    /*
+      eslint-disable
+      jsx-a11y/no-noninteractive-element-interactions,
+      jsx-a11y/click-events-have-key-events
+    */
     return (
       <div className={wrapperClasses}>
         <div
@@ -124,6 +128,10 @@ export default class ModalPresenter extends Component {
         </div>
       </div>
     );
-    /* eslint-enable jsx-a11y/no-noninteractive-element-interactions */
+    /*
+      eslint-enable
+      jsx-a11y/no-noninteractive-element-interactions,
+      jsx-a11y/click-events-have-key-events
+    */
   }
 }
