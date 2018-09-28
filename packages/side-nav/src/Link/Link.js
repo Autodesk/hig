@@ -15,6 +15,8 @@ export default class Link extends Component {
     link: PropTypes.string,
     /** Called when link is clicked  */
     onClick: PropTypes.func,
+    /** Called when link is focused  */
+    onFocus: PropTypes.func,
     /** Called when hovering over the link */
     onMouseOver: PropTypes.func,
     /** Corresponds to the anchor tag's target */
@@ -34,7 +36,7 @@ export default class Link extends Component {
     );
 
   render() {
-    const { title, link, onClick, onMouseOver, target } = this.props;
+    const { title, link, onClick, onFocus, onMouseOver, target } = this.props;
     const classes = themeClass => cx(themeClass, "hig__side-nav__link");
 
     const Wrapper = link ? "a" : "div";
@@ -47,6 +49,7 @@ export default class Link extends Component {
             href={link}
             target={target}
             onClick={onClick}
+            onFocus={onFocus}
             onMouseOver={onMouseOver}
           >
             {title}
