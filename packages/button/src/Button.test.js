@@ -107,12 +107,20 @@ describe("Button", () => {
   });
 
   describe("when a disabled link", () => {
+    const link = "https://www.autodesk.com";
+
     beforeEach(() => {
-      wrapper = subject({ link: "https://www.autodesk.com", disabled: true });
+      wrapper = subject({ link, disabled: true });
     });
 
     it("is not tabbable", () => {
-      expect(wrapper.matchesElement(<a tabIndex="-1">Button</a>));
+      expect(
+        wrapper.matchesElement(
+          <a href={link} tabIndex="-1">
+            Button
+          </a>
+        )
+      );
     });
   });
 });
