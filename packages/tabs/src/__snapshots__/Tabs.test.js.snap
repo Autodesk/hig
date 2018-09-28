@@ -11,6 +11,7 @@ exports[`tabs/Tabs renders tabs 1`] = `
       <span
         className="hig__tabs__tab-label"
         onClick={[Function]}
+        onKeyDown={[Function]}
         role="button"
         tabIndex="0"
       >
@@ -23,6 +24,7 @@ exports[`tabs/Tabs renders tabs 1`] = `
       <span
         className="hig__tabs__tab-label"
         onClick={[Function]}
+        onKeyDown={[Function]}
         role="button"
         tabIndex="0"
       >
