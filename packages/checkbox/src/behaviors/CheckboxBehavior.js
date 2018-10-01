@@ -65,24 +65,9 @@ export default class CheckboxBehavior extends Component {
     }
   }
 
-  toggleChecked() {
-    this.setChecked(!this.getChecked());
-  }
-
   isControlled() {
     return this.props.checked !== undefined;
   }
-
-  /**
-   * @param {MouseEvent} event
-   */
-  handleClick = event => {
-    const { onClick } = this.props;
-
-    if (onClick) onClick(event);
-
-    this.toggleChecked();
-  };
 
   /**
    * @param {UIEvent} event
@@ -92,7 +77,8 @@ export default class CheckboxBehavior extends Component {
   };
 
   render() {
-    const { handleChange, handleClick } = this;
+    const { handleChange } = this;
+    const { onClick: handleClick } = this.props;
     const checked = this.getChecked();
 
     return this.props.children({
