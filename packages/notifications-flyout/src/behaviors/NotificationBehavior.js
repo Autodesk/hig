@@ -39,18 +39,14 @@ export default class NotificationBehavior extends Component {
   };
 
   handleExit = () => {
-    this.dismiss();
+    const { onDismiss } = this.props;
+
+    if (onDismiss) onDismiss();
   };
 
   handleDismissButtonClick = () => {
     this.hide();
   };
-
-  dismiss() {
-    const { onDismiss } = this.props;
-
-    if (onDismiss) onDismiss();
-  }
 
   /**
    * Sets the current height of the notification
