@@ -7,7 +7,7 @@ import {
   HIGDarkBlueTheme,
   HIGLightGrayHighDensityTheme,
   HIGDarkBlueHighDensityTheme
-} from "@hig/themes";
+} from "@hig/themes-poc";
 
 import InputPresenter from "@hig/input/src/presenters/InputPresenter";
 import InputHaloPresenter from "@hig/input/src/presenters/InputHaloPresenter";

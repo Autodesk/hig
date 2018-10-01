@@ -18,7 +18,7 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/themes": "^1.0.0-alpha",
+    "@hig/themes-poc": "^1.0.0-alpha",
     "prop-types": "^15.6.1"
   },
   "peerDependencies": {

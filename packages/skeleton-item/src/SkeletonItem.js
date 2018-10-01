@@ -1,7 +1,7 @@
 import { css, cx } from "emotion";
 import PropTypes from "prop-types";
 import React, { Component } from "react";
-import { ThemeContext } from "@hig/themes";
+import { ThemeContext } from "@hig/themes-poc";
 
 import stylesheet from "./SkeletonItem.stylesheet";
 
