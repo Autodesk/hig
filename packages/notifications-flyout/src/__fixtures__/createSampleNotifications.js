@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
 import React from "react";
+import { action } from "@storybook/addon-actions";
 import Avatar, { sizes } from "@hig/avatar";
 import TextLink from "@hig/text-link";
 import Timestamp from "@hig/timestamp";
@@ -23,6 +24,7 @@ export default function createSampleNotifications() {
       id: "featured",
       featured: true,
       unread: true,
+      onDismiss: action("Notification dismissed"),
       timestamp: <Timestamp timestamp={new Date(updatedDate1).toISOString()} />,
       image: (
         <Avatar
