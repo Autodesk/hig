@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
 
-import { ThemeContext } from "@hig/themes";
+import { ThemeContext } from "@hig/themes-poc";
 
 import stylesheet from "./InputPresenter.stylesheet";
 import { availableVariants, availableInputModes } from "../constants";
