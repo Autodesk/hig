@@ -1,3 +1,10 @@
+# [@hig/checkbox-v0.1.4](https://github.com/Autodesk/hig/compare/@hig/checkbox@0.1.3...@hig/checkbox@0.1.4) (2018-10-02)
+
+
+### Bug Fixes
+
+* **behavior:**  remove unnecessary click handler ([539c746](https://github.com/Autodesk/hig/commit/539c746))
+
 # [@hig/checkbox-v0.1.3](https://github.com/Autodesk/hig/compare/@hig/checkbox@0.1.2...@hig/checkbox@0.1.3) (2018-09-19)
 
 

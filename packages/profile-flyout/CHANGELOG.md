@@ -1,3 +1,10 @@
+# [@hig/profile-flyout-v0.1.1](https://github.com/Autodesk/hig/compare/@hig/profile-flyout@0.1.0...@hig/profile-flyout@0.1.1) (2018-10-02)
+
+
+### Bug Fixes
+
+* top nav profile name needs to be bold ([ebe2d0e](https://github.com/Autodesk/hig/commit/ebe2d0e))
+
 # [@hig/profile-flyout-v0.1.0](https://github.com/Autodesk/hig/compare/@hig/profile-flyout@0.0.0...@hig/profile-flyout@0.1.0) (2018-09-19)
 
 
