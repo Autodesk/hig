@@ -1,7 +1,9 @@
 import React, { Component, Children } from "react";
 import Fragment from "render-fragment";
 import PropTypes from "prop-types";
+import { createButtonEventHandlers } from "@hig/utils";
 import { polyfill } from "react-lifecycles-compat";
+import memoize from "lodash.memoize";
 
 import { AVAILABLE_ALIGNMENTS, alignments } from "./alignments";
 import TabsPresenter from "./presenters/TabsPresenter";
@@ -122,15 +124,9 @@ class Tabs extends Component {
     this.setState({ activeTabIndex: nextActiveTabIndex });
   }
 
-  /**
-   * @param {number} index
-   * @returns {Function}
-   */
-  createTabClickHandler(index) {
-    return () => {
-      this.setActiveTab(index);
-    };
-  }
+  createTabEventHandlers = memoize(index =>
+    createButtonEventHandlers(() => this.setActiveTab(index))
+  );
 
   /**
    * @param {TabMeta} tab
@@ -145,7 +141,7 @@ class Tabs extends Component {
       key,
       label,
       active: activeTabIndex === index,
-      handleClick: this.createTabClickHandler(index)
+      ...this.createTabEventHandlers(index)
     };
 
     return render(payload);
