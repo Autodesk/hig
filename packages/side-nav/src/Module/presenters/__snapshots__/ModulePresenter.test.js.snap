@@ -3,6 +3,7 @@
 exports[`side-nav/Module/presenters/ModulePresenter snapshot tests renders with minimal props 1`] = `
 <div
   className="hig--light-theme hig__side-nav__module"
+  onFocus={undefined}
   onMouseOver={undefined}
 >
   <div

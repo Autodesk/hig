@@ -23,6 +23,8 @@ export default class Submodule extends Component {
     link: PropTypes.string,
     /** Called when clicking on the submodule */
     onClick: PropTypes.func,
+    /** Called when link is focused  */
+    onFocus: PropTypes.func,
     /** Called when hovering over the submodule */
     onMouseOver: PropTypes.func,
     /** Anchor target. Applicable only if link is provided */
@@ -34,7 +36,15 @@ export default class Submodule extends Component {
   createEventHandlers = memoizeCreateButtonEventHandlers();
 
   render() {
-    const { active, title, link, onClick, onMouseOver, target } = this.props;
+    const {
+      active,
+      link,
+      onClick,
+      onFocus,
+      onMouseOver,
+      target,
+      title
+    } = this.props;
     const { handleClick, handleKeyDown } = this.createEventHandlers(onClick, {
       // Allow default on hyperlinks to trigger navigation
       preventDefault: !link
@@ -51,6 +61,7 @@ export default class Submodule extends Component {
             className={getClassName({ active, themeClass })}
             href={link}
             onClick={handleClick}
+            onFocus={onFocus}
             onKeyDown={handleKeyDown}
             onMouseOver={onMouseOver}
             role={role}

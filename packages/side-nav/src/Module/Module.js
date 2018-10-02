@@ -22,6 +22,8 @@ export default class Module extends Component {
     onClickCollapseButton: PropTypes.func,
     /** Called when clicking on the title */
     onClickTitle: PropTypes.func,
+    /** Called when link is focused  */
+    onFocus: PropTypes.func,
     /** Called when hovering over the title */
     onMouseOver: PropTypes.func,
     /** A label for rendering this Module */
