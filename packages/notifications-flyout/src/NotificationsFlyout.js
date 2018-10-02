@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import { combineEventHandlers } from "@hig/utils";
 import Flyout, { anchorPoints, AVAILABLE_ANCHOR_POINTS } from "@hig/flyout";
 import "@hig/flyout/build/index.css";
-import { combineEventHandlers } from "@hig/utils";
 
 import EmptyStatePresenter from "./presenters/EmptyStatePresenter";
 import IndicatorPresenter from "./presenters/IndicatorPresenter";
@@ -12,16 +12,43 @@ import NotificationFlyoutBehavior from "./behaviors/NotificationFlyoutBehavior";
 import Notification from "./Notification";
 import Panel from "./Panel";
 
+/** @typedef {import("./behaviors/parseNotifications").ParsedNotification} ParsedNotification */
+
+/**
+ * @param {Object} payload
+ * @returns {function(ParsedNotification): JSX}
+ */
 function createNotificationRenderer({ hideFlyout, dismissNotification }) {
   /* eslint-disable-next-line react/prop-types */
-  return function renderNotification({ id, key, content, ...otherProps }) {
+  return function renderNotification(notification) {
+    const {
+      content,
+      featured,
+      id,
+      image,
+      key,
+      onDismiss,
+      showDismissButton,
+      timestamp,
+      type,
+      unread
+    } = notification;
+
+    const handleDismiss = combineEventHandlers(onDismiss, () =>
+      dismissNotification(id)
+    );
+
     return (
       <Notification
-        {...otherProps}
+        featured={featured}
         hideFlyout={hideFlyout}
-        id={id}
+        image={image}
         key={key}
-        onDismiss={() => dismissNotification(id)}
+        onDismiss={handleDismiss}
+        showDismissButton={showDismissButton}
+        timestamp={timestamp}
+        type={type}
+        unread={unread}
       >
         {content}
       </Notification>

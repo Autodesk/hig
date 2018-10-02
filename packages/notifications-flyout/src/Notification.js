@@ -30,19 +30,12 @@ export default class Notification extends Component {
     hideFlyout: () => {}
   };
 
-  dismiss = () => {
-    const { onDismiss } = this.props;
-
-    if (onDismiss) onDismiss();
-  };
-
   /**
    * @param {NotificationShape} shape
    * @returns {import("react").ReactElement}
    */
   renderChildren() {
-    const { children, hideFlyout } = this.props;
-    const { dismiss } = this;
+    const { children, hideFlyout, onDismiss: dismiss } = this.props;
 
     if (typeof children !== "function") {
       return children;
