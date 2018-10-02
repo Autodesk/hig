@@ -61,16 +61,7 @@ describe("checkbox/behaviors/CheckboxBehavior", () => {
   });
 
   describe("payload", () => {
-    const clickEvent = {};
     const checkedChangeEvent = { target: { checked: true } };
-
-    function assertOnClickHandler() {
-      const { handleClick } = getPayload();
-
-      expect(onClick).not.toHaveBeenCalled();
-      handleClick(clickEvent);
-      expect(onClick).toHaveBeenCalledWith(clickEvent);
-    }
 
     function assertOnChangeHandler() {
       const { handleChange } = getPayload();
@@ -105,48 +96,6 @@ describe("checkbox/behaviors/CheckboxBehavior", () => {
           render({ checked: false });
           expect(getPayload()).toHaveProperty("checked", false);
           getPayload().handleChange(checkedChangeEvent);
-          expect(getPayload()).toHaveProperty("checked", false);
-        });
-      });
-    });
-
-    describe("handleClick", () => {
-      describe("when uncontrolled", () => {
-        it("calls the `onClick` handler", () => {
-          render();
-          assertOnClickHandler();
-        });
-
-        it("calls the `onChange` handler", () => {
-          render();
-          assertOnChangeHandler();
-        });
-
-        it("toggles the checked value", () => {
-          render();
-          expect(getPayload()).toHaveProperty("checked", false);
-          getPayload().handleClick(clickEvent);
-          expect(getPayload()).toHaveProperty("checked", true);
-          getPayload().handleClick(clickEvent);
-          expect(getPayload()).toHaveProperty("checked", false);
-        });
-      });
-
-      describe("when controlled", () => {
-        it("calls the `onClick` handler", () => {
-          render({ checked: false });
-          assertOnClickHandler();
-        });
-
-        it("calls the `onChange` handler with the controlled value", () => {
-          render({ checked: false });
-          assertOnChangeHandler();
-        });
-
-        it("doesn't toggle the checked value", () => {
-          render({ checked: false });
-          expect(getPayload()).toHaveProperty("checked", false);
-          getPayload().handleClick(clickEvent);
           expect(getPayload()).toHaveProperty("checked", false);
         });
       });
