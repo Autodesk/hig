@@ -1,3 +1,10 @@
+# [@hig/notifications-flyout-v0.2.1](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@0.2.0...@hig/notifications-flyout@0.2.1) (2018-10-02)
+
+
+### Bug Fixes
+
+* **behavior:** combine event handlers to call the notification `onDismiss` event handler ([4ab1798](https://github.com/Autodesk/hig/commit/4ab1798))
+
 # [@hig/notifications-flyout-v0.2.0](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@0.1.2...@hig/notifications-flyout@0.2.0) (2018-09-26)
 
 
