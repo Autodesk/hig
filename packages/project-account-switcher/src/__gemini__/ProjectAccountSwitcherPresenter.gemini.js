@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 gemini.suite("ProjectAccountSwitcherPresenter", () => {
   gemini.suite("default", suite => {
     suite

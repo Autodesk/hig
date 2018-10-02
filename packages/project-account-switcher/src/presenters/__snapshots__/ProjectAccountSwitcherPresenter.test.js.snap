@@ -5,9 +5,6 @@ exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter  1`
 exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter  2`] = `
 <div
   className="hig__project-account-switcher"
-  onClick={undefined}
-  role="button"
-  tabIndex="0"
 >
   <div
     className="hig__flyout-v1 hig__flyout-v1--hidden hig__flyout-v1--top-left"
@@ -19,8 +16,11 @@ exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter  2`
         className="hig__project-account-switcher__target"
         hasHover={false}
         onClick={[Function]}
+        onKeyDown={undefined}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
+        role="button"
+        tabIndex="0"
       >
         <div
           className="hig__project-account-switcher__item"
@@ -122,6 +122,7 @@ exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter  2`
                 <li
                   className="hig__project-account-switcher__item hig__project-account-switcher__item--account hig__project-account-switcher__item--active"
                   onClick={[Function]}
+                  onKeyDown={[Function]}
                   role="menuitem"
                   tabIndex="0"
                 >
@@ -143,6 +144,7 @@ exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter  2`
                 <li
                   className="hig__project-account-switcher__item hig__project-account-switcher__item--account hig__project-account-switcher__item--active"
                   onClick={[Function]}
+                  onKeyDown={[Function]}
                   role="menuitem"
                   tabIndex="0"
                 >
@@ -173,6 +175,7 @@ exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter  2`
                 <li
                   className="hig__project-account-switcher__item hig__project-account-switcher__item--project hig__project-account-switcher__item--active"
                   onClick={[Function]}
+                  onKeyDown={[Function]}
                   role="menuitem"
                   tabIndex="0"
                 >
@@ -194,6 +197,7 @@ exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter  2`
                 <li
                   className="hig__project-account-switcher__item hig__project-account-switcher__item--project hig__project-account-switcher__item--active"
                   onClick={[Function]}
+                  onKeyDown={[Function]}
                   role="menuitem"
                   tabIndex="0"
                 >

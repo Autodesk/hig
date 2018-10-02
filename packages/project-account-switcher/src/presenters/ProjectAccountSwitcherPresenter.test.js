@@ -3,6 +3,7 @@ import ProjectAccountSwitcherPresenter from "./ProjectAccountSwitcherPresenter";
 
 describe("project-account-switcher/presenters/ProjectAccountSwitcherPresenter", () => {
   beforeAll(() => {
+    /* eslint-disable-next-line no-console */
     console.warn = jest.fn();
   });
 

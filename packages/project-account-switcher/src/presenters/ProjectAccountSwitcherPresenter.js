@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import cx from "classnames";
 import Flyout, { anchorPoints } from "@hig/flyout";
+import {
+  createButtonEventHandlers,
+  memoizeCreateButtonEventHandlers
+} from "@hig/utils";
+import memoize from "lodash.memoize";
 import icons from "@hig/icons";
 import "@hig/flyout/build/index.css";
 
@@ -87,54 +93,78 @@ export default class ProjectAccountSwitcherPresenter extends Component {
     return placeholders.join("/");
   }
 
+  createAccountListItemHandlers = memoize(id =>
+    createButtonEventHandlers(event => this.props.onAccountClick(event, id))
+  );
+
+  createProjectListItemHandlers = memoize(id =>
+    createButtonEventHandlers(event => this.props.onProjectClick(event, id))
+  );
+
   accountsList() {
-    return this.props.accounts.map(({ id, label }) => (
-      <li
-        key={`account-${id}`}
-        className={[
-          "hig__project-account-switcher__item",
-          "hig__project-account-switcher__item--account",
-          "hig__project-account-switcher__item--active"
-        ].join(" ")}
-        role="menuitem"
-        tabIndex="0"
-        onClick={event => this.props.onAccountClick(event, id)}
-      >
-        <span className="hig__project-account-switcher__item__image-wrapper">
-          <span className="hig__project-account-switcher__item__image-placeholder">
-            {constructPlaceholder(label)}
+    const classes = cx(
+      "hig__project-account-switcher__item",
+      "hig__project-account-switcher__item--account",
+      "hig__project-account-switcher__item--active"
+    );
+
+    return this.props.accounts.map(({ id, label }) => {
+      const { handleClick, handleKeyDown } = this.createAccountListItemHandlers(
+        id
+      );
+
+      return (
+        <li
+          key={`account-${id}`}
+          className={classes}
+          role="menuitem"
+          tabIndex="0"
+          onClick={handleClick}
+          onKeyDown={handleKeyDown}
+        >
+          <span className="hig__project-account-switcher__item__image-wrapper">
+            <span className="hig__project-account-switcher__item__image-placeholder">
+              {constructPlaceholder(label)}
+            </span>
           </span>
-        </span>
-        <span className="hig__project-account-switcher__item__label">
-          {label}
-        </span>
-      </li>
-    ));
+          <span className="hig__project-account-switcher__item__label">
+            {label}
+          </span>
+        </li>
+      );
+    });
   }
 
   projectsList() {
-    return this.props.projects.map(({ id, label }) => (
-      <li
-        key={`project-${id}`}
-        className={[
-          "hig__project-account-switcher__item",
-          "hig__project-account-switcher__item--project",
-          "hig__project-account-switcher__item--active"
-        ].join(" ")}
-        role="menuitem"
-        tabIndex="0"
-        onClick={event => this.props.onProjectClick(event, id)}
-      >
-        <span className="hig__project-account-switcher__item__image-wrapper">
-          <span className="hig__project-account-switcher__item__image-placeholder">
-            {constructPlaceholder(label)}
+    return this.props.projects.map(({ id, label }) => {
+      const { handleClick, handleKeyDown } = this.createProjectListItemHandlers(
+        id
+      );
+
+      return (
+        <li
+          key={`project-${id}`}
+          className={cx(
+            "hig__project-account-switcher__item",
+            "hig__project-account-switcher__item--project",
+            "hig__project-account-switcher__item--active"
+          )}
+          role="menuitem"
+          tabIndex="0"
+          onClick={handleClick}
+          onKeyDown={handleKeyDown}
+        >
+          <span className="hig__project-account-switcher__item__image-wrapper">
+            <span className="hig__project-account-switcher__item__image-placeholder">
+              {constructPlaceholder(label)}
+            </span>
           </span>
-        </span>
-        <span className="hig__project-account-switcher__item__label">
-          {label}
-        </span>
-      </li>
-    ));
+          <span className="hig__project-account-switcher__item__label">
+            {label}
+          </span>
+        </li>
+      );
+    });
   }
 
   flyoutContent() {
@@ -175,8 +205,11 @@ export default class ProjectAccountSwitcherPresenter extends Component {
     return "";
   }
 
+  createTargetHandlers = memoizeCreateButtonEventHandlers();
+
   render() {
     if (this.componentHasNoLists()) {
+      /* eslint-disable-next-line no-console */
       console.warn("You must provide a list of accounts or projects");
       return null;
     }
@@ -184,13 +217,14 @@ export default class ProjectAccountSwitcherPresenter extends Component {
     const activeLabel = this.props.activeLabel
       ? this.props.activeLabel
       : this.constructLabel();
+
+    const {
+      handleClick: handleTargetClick,
+      handleKeyDown: handleTargetKeyDown
+    } = this.createTargetHandlers(this.props.onTargetClick);
+
     return (
-      <div
-        role="button"
-        tabIndex="0"
-        className="hig__project-account-switcher"
-        onClick={this.props.onTargetClick}
-      >
+      <div className="hig__project-account-switcher">
         <Flyout
           anchorPoint={anchorPoints.TOP_RIGHT}
           open={this.props.open}
@@ -202,7 +236,13 @@ export default class ProjectAccountSwitcherPresenter extends Component {
             </Flyout.Panel>
           )}
         >
-          <div className="hig__project-account-switcher__target">
+          <div
+            className="hig__project-account-switcher__target"
+            onClick={handleTargetClick}
+            onKeyDown={handleTargetKeyDown}
+            role="button"
+            tabIndex="0"
+          >
             <div className="hig__project-account-switcher__item">
               <span className="hig__project-account-switcher__item__image-wrapper">
                 <img
