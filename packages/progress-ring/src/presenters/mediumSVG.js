@@ -2,6 +2,7 @@ const mediumSVG = [
   {
     className: "hig__progress-ring__background",
     points:
+      /* eslint-disable-next-line max-len */
       "54.81 10.11 36 4 17.19 10.11 5.57 26.11 5.57 45.89 17.19 61.89 36 68 54.81 61.89 66.43 45.89 66.43 26.11"
   },
   {
@@ -129,6 +130,7 @@ const mediumSVG = [
     fill: "#FFFFFF",
     fillRule: "nonzero",
     points:
+      /* eslint-disable-next-line max-len */
       "60.43 43.94 51.1 56.78 36 61.69 20.9 56.78 11.57 43.94 11.57 28.06 20.9 15.22 36 10.31 51.1 15.22 60.43 28.07"
   }
 ];

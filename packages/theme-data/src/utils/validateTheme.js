@@ -20,7 +20,7 @@ function validateLength(value) {
 }
 
 function validateFontWeight(value) {
-  return !isNaN(value);
+  return !Number.isNaN(Number(value));
 }
 
 function invalidRoles(types, validator, theme, schema) {
