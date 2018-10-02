@@ -22,11 +22,6 @@ export default class ModuleCompact extends Component {
     onMouseOver: PropTypes.func
   };
 
-  static defaultProps = {
-    onClickTitle: () => {},
-    onMouseOver: () => {}
-  };
-
   createEventHandlers = memoizeCreateButtonEventHandlers();
 
   render() {
