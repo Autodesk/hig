@@ -77,7 +77,7 @@
     }
 
     .hig__side-nav__module__link__external-link-icon svg * {
-      stroke: color(hig-gray-70);
+      fill: color(hig-gray-70);
     }
 
     &:active,
@@ -93,7 +93,7 @@
       }
 
       .hig__side-nav__module__link__external-link-icon svg * {
-        stroke: color(hig-blue-60);
+        fill: color(hig-blue-60);
       }
     }
 
@@ -114,7 +114,7 @@
       color: color(hig-blue-50);
 
       .hig__side-nav__module__link__external-link-icon svg * {
-        stroke: color(hig-blue-50);
+        fill: color(hig-blue-50);
       }
     }
   }
