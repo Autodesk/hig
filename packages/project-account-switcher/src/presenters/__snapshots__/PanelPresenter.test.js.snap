@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`project-account-switcher/presenters/PanelPresenter  1`] = `
+<div
+  className="hig__flyout-v1__panel-container"
+  style={
+    Object {
+      "maxHeight": undefined,
+    }
+  }
+>
+  <div
+    className="hig__flyout-v1__panel-container__inner"
+  >
+    <div
+      className="hig__project-account-switcher__panel"
+    />
+  </div>
+</div>
+`;
+
+exports[`project-account-switcher/presenters/PanelPresenter  2`] = `
+<div
+  className="hig__flyout-v1__panel-container"
+  style={
+    Object {
+      "maxHeight": undefined,
+    }
+  }
+>
+  <div
+    className="hig__flyout-v1__panel-container__inner"
+  >
+    <div
+      className="hig__project-account-switcher__panel"
+    >
+      hello
+    </div>
+  </div>
+</div>
+`;
