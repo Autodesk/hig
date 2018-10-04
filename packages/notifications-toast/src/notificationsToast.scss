@@ -1,6 +1,8 @@
 @import "~@hig/styles/mixins/colors.scss";
+@import '~@hig/styles/mixins/typography.scss';
 
 .hig__toast {
+  @include typography-base;
   @import "./tokens.scss";
 
   box-sizing: border-box;
