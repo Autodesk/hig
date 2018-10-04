@@ -1,4 +1,7 @@
+@import "~@hig/styles/mixins/typography.scss";
+
 .hig__project-account-switcher__target {
+  @include typography-base;
   display: flex;
   align-items: center;
   cursor: pointer;
