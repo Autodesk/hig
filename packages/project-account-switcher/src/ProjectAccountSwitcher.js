@@ -17,11 +17,23 @@ export default class ProjectAccountSwitcher extends Component {
       })
     ),
     /** Currently selected Account */
-    activeAccountId: PropTypes.string,
+    activeAccount: PropTypes.shape({
+      id: PropTypes.string,
+      image: PropTypes.string,
+      label: PropTypes.string
+    }),
     /** Currently selected Project */
-    activeProjectId: PropTypes.string,
-    /** Called when a the element changes */
+    activeProject: PropTypes.shape({
+      id: PropTypes.string,
+      image: PropTypes.string,
+      label: PropTypes.string
+    }),
+    /** Called when the selected Account or the selected Project changes, the new selected Account and Project will be passed as parameters: (account, project) */
     onChange: PropTypes.func,
+    /** Called when the selected Account changes, the new selected Account will be passed as parameter */
+    onAccountChange: PropTypes.func,
+    /** Called when the selected Project changes, the new selected Project will be passed as parameter */
+    onProjectChange: PropTypes.func,
     /** Called when a user clicks on the element */
     onClick: PropTypes.func,
     /** Called when a user clicks on the target element */
@@ -45,6 +57,8 @@ export default class ProjectAccountSwitcher extends Component {
       projects,
       projectTitle,
       onChange,
+      onAccountChange,
+      onProjectChange,
       onClick,
       onTargetClick
     } = this.props;
@@ -52,9 +66,11 @@ export default class ProjectAccountSwitcher extends Component {
     return (
       <ProjectAccountSwitcherBehavior
         accounts={accounts}
-        activeAccountId={this.props.activeAccountId}
-        activeProjectId={this.props.activeProjectId}
+        activeAccount={this.props.activeAccount}
+        activeProject={this.props.activeProject}
         onChange={onChange}
+        onAccountChange={onAccountChange}
+        onProjectChange={onProjectChange}
         onClick={onClick}
         onTargetClick={onTargetClick}
         projects={projects}

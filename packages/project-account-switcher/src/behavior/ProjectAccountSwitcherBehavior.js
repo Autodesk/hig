@@ -12,13 +12,27 @@ export default class ProjectAccountSwitcherBehavior extends Component {
       })
     ),
     /** Currently selected Account */
-    activeAccountId: PropTypes.string,
+    activeAccount: PropTypes.shape({
+      id: PropTypes.string,
+      image: PropTypes.string,
+      label: PropTypes.string
+    }),
     /** Currently selected Project */
-    activeProjectId: PropTypes.string,
+    activeProject: PropTypes.shape({
+      id: PropTypes.string,
+      image: PropTypes.string,
+      label: PropTypes.string
+    }),
     /** Render prop */
     children: PropTypes.func,
     /** Initially sets the selected Account, but allows user action to change it */
     onClick: PropTypes.func,
+    /** Called when the selected Account or the selected Project changes, the new selected Account and Project will be passed as parameters: (account, project) */
+    onChange: PropTypes.func,
+    /** Called when the selected Account changes, the new selected Account will be passed as parameter */
+    onAccountChange: PropTypes.func,
+    /** Called when the selected Project changes, the new selected Project will be passed as parameter */
+    onProjectChange: PropTypes.func,
     /** Called when a user clicks on the target element */
     onTargetClick: PropTypes.func,
     /** Opens the Flyout */
@@ -38,10 +52,15 @@ export default class ProjectAccountSwitcherBehavior extends Component {
   };
 
   state = {
-    activeAccount: this.getAccount(this.props.activeAccountId),
-    activeProject: this.getProject(this.props.activeProjectId),
+    activeAccount: this.props.activeAccount,
+    activeProject: this.props.activeProject,
     open: this.props.open
   };
+
+  componentWillReceiveProps(nextProps) {
+    let modifiedState = {activeAccount: nextProps.activeAccount, activeProject: nextProps.activeProject};
+    this.setState( modifiedState );
+  }
 
   getAccount(accountId) {
     const { accounts = [] } = this.props;
@@ -68,27 +87,52 @@ export default class ProjectAccountSwitcherBehavior extends Component {
   };
 
   handleAccountClick = (event, id) => {
-    const { onClick } = this.props;
+    const { onAccountChange, onChange, onClick } = this.props;
+
+    const newActiveAccount = this.getAccount(id);
+    
+    if (newActiveAccount !== this.state.activeAccount) {
+      if (onAccountChange) {
+        onAccountChange(newActiveAccount);
+      }
+      
+      if (onChange) {
+        onChange(newActiveAccount, this.state.activeProject);
+      }
+    }
 
     if (onClick) {
       onClick(event);
     }
 
     this.setState({
-      activeAccount: this.getAccount(id)
+      activeAccount: newActiveAccount
     });
   };
 
   handleProjectClick = (event, id) => {
-    const { onClick } = this.props;
+    const { onChange, onClick, onProjectChange } = this.props;
+    
+    const newActiveProject = this.getProject(id);
+    
+    if (newActiveProject !== this.state.activeProject) {
+      if (onProjectChange) {
+        onProjectChange(newActiveProject);
+      }
+      
+      if (onChange) {
+        onChange(this.state.activeAccount, newActiveProject);
+      }
+    }
 
     if (onClick) {
       onClick(event);
     }
-
+    
     this.setState({
-      activeProject: this.getProject(id)
+      activeProject: newActiveProject
     });
+    
   };
 
   render() {
