@@ -55,7 +55,7 @@ exports[`notifications-flyout/Notification renders correctly with the featured p
               className="hig__icon hig__icon--24-size"
               dangerouslySetInnerHTML={
                 Object {
-                  "__html": "<svg width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"close-notification-24\\"><polygon fill-rule=\\"nonzero\\" points=\\"8.45 0.47 4.97 3.95 1.51 0.47 0.45 1.53 3.91 5.01 0.45 8.47 1.51 9.53 4.97 6.07 8.42 9.53 9.48 8.47 6.03 5.01 9.51 1.53\\" fill=\\"#2E4258\\"/></svg>",
+                  "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 16 16\\" role=\\"img\\" title=\\"close-notification-24\\"><polygon points=\\"11.4,5.4 10.6,4.6 8,7.3 5.4,4.6 4.6,5.4 7.3,8 4.6,10.6 5.4,11.4 8,8.7 10.6,11.4 11.4,10.6 8.7,8\\"/></svg>",
                 }
               }
             />

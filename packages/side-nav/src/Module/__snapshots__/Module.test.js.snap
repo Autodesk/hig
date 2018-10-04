@@ -43,7 +43,7 @@ exports[`side-nav/Module snapshot tests renders a expanded menu with active chil
         className="hig__icon hig__icon--24-size"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret-24\\"><polyline transform=\\"rotate(45 9.828 3)\\" points=\\"8 2 8 8 2 8\\" stroke=\\"#2E4258\\" stroke-width=\\"1.15\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"/></svg>",
+            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" role=\\"img\\" title=\\"caret-24\\"><path d=\\"M8.71,3.22a.75.75,0,0,0-1.06,0L5,5.87,2.35,3.22a.75.75,0,0,0-1.06,0,.74.74,0,0,0,0,1.06L4.65,7.64a.5.5,0,0,0,.7,0L8.71,4.28A.74.74,0,0,0,8.71,3.22Z\\"/></svg>",
           }
         }
       />
@@ -164,7 +164,7 @@ exports[`side-nav/Module snapshot tests renders an external link 1`] = `
           className="hig__icon hig__icon--24-size"
           dangerouslySetInnerHTML={
             Object {
-              "__html": "<svg width=\\"9\\" height=\\"8\\" viewBox=\\"0 0 9 8\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"external-link-24\\"><g stroke=\\"#2E4258\\" fill=\\"none\\" fill-rule=\\"evenodd\\"><polyline points=\\"7.7074 6.4303 7.7074 0.5003 1.7904 0.5003\\"/><path d=\\"M1.08617072,7.11062928 L7.6864,0.5104\\"/></g></svg>",
+              "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"9\\" height=\\"8\\" viewBox=\\"0 0 9 8\\" role=\\"img\\" title=\\"external-link-24\\"><polygon points=\\"7 0 2 0 2 1.46 2 2 5.54 2 1 6.54 2.46 8 7 3.46 7 7 7.54 7 9 7 9 2 9 0 7 0\\"/></svg>",
             }
           }
         />

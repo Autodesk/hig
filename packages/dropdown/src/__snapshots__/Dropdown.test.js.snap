@@ -54,7 +54,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
         className="hig__icon hig__icon--24-size"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret-24\\"><polyline transform=\\"rotate(45 9.828 3)\\" points=\\"8 2 8 8 2 8\\" stroke=\\"#2E4258\\" stroke-width=\\"1.15\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"/></svg>",
+            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" role=\\"img\\" title=\\"caret-24\\"><path d=\\"M8.71,3.22a.75.75,0,0,0-1.06,0L5,5.87,2.35,3.22a.75.75,0,0,0-1.06,0,.74.74,0,0,0,0,1.06L4.65,7.64a.5.5,0,0,0,.7,0L8.71,4.28A.74.74,0,0,0,8.71,3.22Z\\"/></svg>",
           }
         }
       />
@@ -272,7 +272,7 @@ exports[`Dropdown renders with a controlled value 1`] = `
         className="hig__icon hig__icon--24-size"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret-24\\"><polyline transform=\\"rotate(45 9.828 3)\\" points=\\"8 2 8 8 2 8\\" stroke=\\"#2E4258\\" stroke-width=\\"1.15\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"/></svg>",
+            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" role=\\"img\\" title=\\"caret-24\\"><path d=\\"M8.71,3.22a.75.75,0,0,0-1.06,0L5,5.87,2.35,3.22a.75.75,0,0,0-1.06,0,.74.74,0,0,0,0,1.06L4.65,7.64a.5.5,0,0,0,.7,0L8.71,4.28A.74.74,0,0,0,8.71,3.22Z\\"/></svg>",
           }
         }
       />
@@ -414,7 +414,7 @@ exports[`Dropdown renders with a label and an ID 1`] = `
         className="hig__icon hig__icon--24-size"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret-24\\"><polyline transform=\\"rotate(45 9.828 3)\\" points=\\"8 2 8 8 2 8\\" stroke=\\"#2E4258\\" stroke-width=\\"1.15\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"/></svg>",
+            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" role=\\"img\\" title=\\"caret-24\\"><path d=\\"M8.71,3.22a.75.75,0,0,0-1.06,0L5,5.87,2.35,3.22a.75.75,0,0,0-1.06,0,.74.74,0,0,0,0,1.06L4.65,7.64a.5.5,0,0,0,.7,0L8.71,4.28A.74.74,0,0,0,8.71,3.22Z\\"/></svg>",
           }
         }
       />
@@ -483,7 +483,7 @@ exports[`Dropdown renders with custom option formatting 1`] = `
         className="hig__icon hig__icon--24-size"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret-24\\"><polyline transform=\\"rotate(45 9.828 3)\\" points=\\"8 2 8 8 2 8\\" stroke=\\"#2E4258\\" stroke-width=\\"1.15\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"/></svg>",
+            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" role=\\"img\\" title=\\"caret-24\\"><path d=\\"M8.71,3.22a.75.75,0,0,0-1.06,0L5,5.87,2.35,3.22a.75.75,0,0,0-1.06,0,.74.74,0,0,0,0,1.06L4.65,7.64a.5.5,0,0,0,.7,0L8.71,4.28A.74.74,0,0,0,8.71,3.22Z\\"/></svg>",
           }
         }
       />
@@ -604,7 +604,7 @@ exports[`Dropdown renders with custom option render function 1`] = `
         className="hig__icon hig__icon--24-size"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret-24\\"><polyline transform=\\"rotate(45 9.828 3)\\" points=\\"8 2 8 8 2 8\\" stroke=\\"#2E4258\\" stroke-width=\\"1.15\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"/></svg>",
+            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" role=\\"img\\" title=\\"caret-24\\"><path d=\\"M8.71,3.22a.75.75,0,0,0-1.06,0L5,5.87,2.35,3.22a.75.75,0,0,0-1.06,0,.74.74,0,0,0,0,1.06L4.65,7.64a.5.5,0,0,0,.7,0L8.71,4.28A.74.74,0,0,0,8.71,3.22Z\\"/></svg>",
           }
         }
       />
@@ -692,7 +692,7 @@ exports[`Dropdown renders with default value 1`] = `
         className="hig__icon hig__icon--24-size"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret-24\\"><polyline transform=\\"rotate(45 9.828 3)\\" points=\\"8 2 8 8 2 8\\" stroke=\\"#2E4258\\" stroke-width=\\"1.15\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"/></svg>",
+            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" role=\\"img\\" title=\\"caret-24\\"><path d=\\"M8.71,3.22a.75.75,0,0,0-1.06,0L5,5.87,2.35,3.22a.75.75,0,0,0-1.06,0,.74.74,0,0,0,0,1.06L4.65,7.64a.5.5,0,0,0,.7,0L8.71,4.28A.74.74,0,0,0,8.71,3.22Z\\"/></svg>",
           }
         }
       />
@@ -825,7 +825,7 @@ exports[`Dropdown renders with multiple selection 1`] = `
         className="hig__icon hig__icon--24-size"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret-24\\"><polyline transform=\\"rotate(45 9.828 3)\\" points=\\"8 2 8 8 2 8\\" stroke=\\"#2E4258\\" stroke-width=\\"1.15\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"/></svg>",
+            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" role=\\"img\\" title=\\"caret-24\\"><path d=\\"M8.71,3.22a.75.75,0,0,0-1.06,0L5,5.87,2.35,3.22a.75.75,0,0,0-1.06,0,.74.74,0,0,0,0,1.06L4.65,7.64a.5.5,0,0,0,.7,0L8.71,4.28A.74.74,0,0,0,8.71,3.22Z\\"/></svg>",
           }
         }
       />
@@ -946,7 +946,7 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
         className="hig__icon hig__icon--24-size"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret-24\\"><polyline transform=\\"rotate(45 9.828 3)\\" points=\\"8 2 8 8 2 8\\" stroke=\\"#2E4258\\" stroke-width=\\"1.15\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"/></svg>",
+            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" role=\\"img\\" title=\\"caret-24\\"><path d=\\"M8.71,3.22a.75.75,0,0,0-1.06,0L5,5.87,2.35,3.22a.75.75,0,0,0-1.06,0,.74.74,0,0,0,0,1.06L4.65,7.64a.5.5,0,0,0,.7,0L8.71,4.28A.74.74,0,0,0,8.71,3.22Z\\"/></svg>",
           }
         }
       />
@@ -1091,7 +1091,7 @@ exports[`Dropdown renders with option specific and general option render functio
         className="hig__icon hig__icon--24-size"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret-24\\"><polyline transform=\\"rotate(45 9.828 3)\\" points=\\"8 2 8 8 2 8\\" stroke=\\"#2E4258\\" stroke-width=\\"1.15\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"/></svg>",
+            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" role=\\"img\\" title=\\"caret-24\\"><path d=\\"M8.71,3.22a.75.75,0,0,0-1.06,0L5,5.87,2.35,3.22a.75.75,0,0,0-1.06,0,.74.74,0,0,0,0,1.06L4.65,7.64a.5.5,0,0,0,.7,0L8.71,4.28A.74.74,0,0,0,8.71,3.22Z\\"/></svg>",
           }
         }
       />
@@ -1188,7 +1188,7 @@ exports[`Dropdown renders with option specific render function 1`] = `
         className="hig__icon hig__icon--24-size"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret-24\\"><polyline transform=\\"rotate(45 9.828 3)\\" points=\\"8 2 8 8 2 8\\" stroke=\\"#2E4258\\" stroke-width=\\"1.15\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"/></svg>",
+            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" role=\\"img\\" title=\\"caret-24\\"><path d=\\"M8.71,3.22a.75.75,0,0,0-1.06,0L5,5.87,2.35,3.22a.75.75,0,0,0-1.06,0,.74.74,0,0,0,0,1.06L4.65,7.64a.5.5,0,0,0,.7,0L8.71,4.28A.74.74,0,0,0,8.71,3.22Z\\"/></svg>",
           }
         }
       />
@@ -1321,7 +1321,7 @@ exports[`Dropdown renders with option specific, general and format rendering 1`]
         className="hig__icon hig__icon--24-size"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret-24\\"><polyline transform=\\"rotate(45 9.828 3)\\" points=\\"8 2 8 8 2 8\\" stroke=\\"#2E4258\\" stroke-width=\\"1.15\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"/></svg>",
+            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" role=\\"img\\" title=\\"caret-24\\"><path d=\\"M8.71,3.22a.75.75,0,0,0-1.06,0L5,5.87,2.35,3.22a.75.75,0,0,0-1.06,0,.74.74,0,0,0,0,1.06L4.65,7.64a.5.5,0,0,0,.7,0L8.71,4.28A.74.74,0,0,0,8.71,3.22Z\\"/></svg>",
           }
         }
       />
@@ -1418,7 +1418,7 @@ exports[`Dropdown renders without props 1`] = `
         className="hig__icon hig__icon--24-size"
         dangerouslySetInnerHTML={
           Object {
-            "__html": "<svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret-24\\"><polyline transform=\\"rotate(45 9.828 3)\\" points=\\"8 2 8 8 2 8\\" stroke=\\"#2E4258\\" stroke-width=\\"1.15\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"/></svg>",
+            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" role=\\"img\\" title=\\"caret-24\\"><path d=\\"M8.71,3.22a.75.75,0,0,0-1.06,0L5,5.87,2.35,3.22a.75.75,0,0,0-1.06,0,.74.74,0,0,0,0,1.06L4.65,7.64a.5.5,0,0,0,.7,0L8.71,4.28A.74.74,0,0,0,8.71,3.22Z\\"/></svg>",
           }
         }
       />
