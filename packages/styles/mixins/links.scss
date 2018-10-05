@@ -1,9 +1,14 @@
+@import "./colors.scss";
 @import "./typography.scss";
+
+@mixin default-link {
+  text-decoration: none;
+  cursor: pointer;
+}
 
 @mixin base-link {
   @include typography-base;
-  text-decoration: none;
-  cursor: pointer;
+  @include default-link;
 }
 
 @mixin primary-link {
