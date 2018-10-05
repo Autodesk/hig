@@ -47,10 +47,6 @@ class NotificationFlyoutBehavior extends Component {
     unreadCount: PropTypes.number
   };
 
-  static defaultProps = {
-    title: "Notifications"
-  };
-
   /** @type {State} */
   state = {
     dismissedNotifications: [],

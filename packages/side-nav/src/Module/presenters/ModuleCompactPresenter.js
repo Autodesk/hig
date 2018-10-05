@@ -16,13 +16,10 @@ export default class ModuleCompact extends Component {
     icon: PropTypes.node.isRequired,
     /** Called when clicking on the title */
     onClickTitle: PropTypes.func,
+    /** Called when link is focused  */
+    onFocus: PropTypes.func,
     /** Called when hovering over the icon */
     onMouseOver: PropTypes.func
-  };
-
-  static defaultProps = {
-    onClickTitle: () => {},
-    onMouseOver: () => {}
   };
 
   createEventHandlers = memoizeCreateButtonEventHandlers();
@@ -33,6 +30,7 @@ export default class ModuleCompact extends Component {
       activeChildren,
       icon,
       onClickTitle,
+      onFocus,
       onMouseOver
     } = this.props;
     const classes = themeClass => cx(themeClass, "hig__side-nav__module");
@@ -49,7 +47,11 @@ export default class ModuleCompact extends Component {
     return (
       <ThemeContext.Consumer>
         {({ themeClass }) => (
-          <div className={classes(themeClass)} onMouseOver={onMouseOver}>
+          <div
+            className={classes(themeClass)}
+            onFocus={onFocus}
+            onMouseOver={onMouseOver}
+          >
             <div className="hig__side-nav__module__row">
               <div
                 className={linkClasses(themeClass)}

@@ -124,34 +124,11 @@ jobs:
           background: true
           working_directory: packages/storybook
       - run:
-          name: Start HTTP Server
-          command: yarn vanilla-test-serve
-          background: true
-          working_directory: packages/storybook
-      - run:
           name: Run Visual Regression Tests
           command: yarn gemini-ci
           working_directory: packages/storybook
       - store_artifacts:
           path: packages/storybook/gemini-report
-  playground-deploy:
-    <<: *defaults
-    steps:
-      - checkout
-      - run:
-          name: Create dependency hash
-          command: yarn run create-dependency-hash
-      - restore_cache:
-          key: v2-dependencies-{{ checksum ".dependency-hash" }}
-      - restore_cache:
-          key: v1-package-builds-{{ .Revision }}
-      - run:
-          name: Extract dependencies and builds
-          command: yarn run extract
-      - run:
-          name: Deploy React playground website
-          command: yarn deploy-playground $PLAYGROUND_DOMAIN
-          working_directory: packages/react
   canary-packages-deploy:
     <<: *defaults
     steps:
@@ -238,13 +215,6 @@ workflows:
           requires:
             - react-test
             - visual-test
-      - playground-deploy:
-          requires:
-            - react-test
-            - visual-test
-          filters:
-            branches:
-              only: development
       - canary-packages-deploy:
           filters:
             branches:

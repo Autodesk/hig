@@ -9,13 +9,14 @@ import "./TabPresenter.scss";
  * @property {boolean} [active]
  * @property {string} label
  * @property {Function} [onClick]
+ * @property {Function} [onKeyDown]
  */
 
 /**
  * @param {TabPresenterProps} props
  * @returns {JSX.Element}
  */
-export default function TabPresenter({ active, label, onClick }) {
+export default function TabPresenter({ active, label, onClick, onKeyDown }) {
   const classes = cx("hig__tabs__tab", {
     "hig__tabs__tab--active": active
   });
@@ -24,9 +25,10 @@ export default function TabPresenter({ active, label, onClick }) {
     <li className={classes}>
       <span
         className="hig__tabs__tab-label"
+        onClick={onClick}
+        onKeyDown={onKeyDown}
         role="button"
         tabIndex="0"
-        onClick={onClick}
       >
         {label}
       </span>
@@ -37,5 +39,6 @@ export default function TabPresenter({ active, label, onClick }) {
 TabPresenter.propTypes = {
   active: PropTypes.bool,
   label: PropTypes.string,
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  onKeyDown: PropTypes.func
 };

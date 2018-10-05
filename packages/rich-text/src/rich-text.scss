@@ -1,8 +1,11 @@
-@import '~@hig/styles/mixins/links.scss';
-@import '~@hig/styles/mixins/typography.scss';
-@import '~@hig/styles/mixins/spacing.scss';
+@import "~@hig/styles/mixins/links.scss";
+@import "~@hig/styles/mixins/typography.scss";
+@import "~@hig/styles/mixins/spacing.scss";
 
 .hig__rich-text {
+  @include typography-base;
+  margin-bottom: spacing(m);
+
   ul {
     padding-left: 20px;
   }
@@ -23,6 +26,7 @@
 .hig__rich-text--small {
   @include typography-small;
   margin-bottom: spacing(xs);
+
   b,
   p {
     @include typography-small;
@@ -31,6 +35,7 @@
 
 .hig__rich-text--large {
   @include typography-large;
+
   p {
     @include typography-large;
   }
@@ -59,4 +64,15 @@
 .hig__rich-text a {
   @include base-link;
   @include primary-link;
+}
+
+.hig__rich-text p {
+  margin: 0 0 spacing(m) 0;
+}
+
+.hig__rich-text {
+  b,
+  strong {
+    font-weight: 700;
+  }
 }

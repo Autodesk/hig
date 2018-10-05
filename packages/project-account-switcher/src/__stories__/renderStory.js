@@ -5,10 +5,5 @@ import getKnobs from "./getKnobs";
 export default function renderStory(props) {
   const { children, ...otherProps } = getKnobs(props);
 
-  return (
-    <div style={{ fontFamily: "ArtifaktElement" }}>
-      {/* @TODO: Remove wrapper when component is ported */}
-      <DefaultExport {...otherProps}>{children}</DefaultExport>
-    </div>
-  );
+  return <DefaultExport {...otherProps}>{children}</DefaultExport>;
 }

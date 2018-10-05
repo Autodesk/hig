@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
 import Icon, { names } from "@hig/icon";
+import { createButtonEventHandlers } from "@hig/utils";
 
 import "./OptionPresenter.scss";
 
@@ -21,12 +22,15 @@ function OptionWrapper(props) {
     "hig__dropdown-option--highlighted": highlighted
   });
 
+  const { handleClick, handleKeyDown } = createButtonEventHandlers(onClick);
+
   return (
     <div
       aria-selected={selected}
       className={classes}
       id={id}
-      onClick={onClick}
+      onClick={handleClick}
+      onKeyDown={handleKeyDown}
       onMouseDown={onMouseDown}
       onMouseMove={onMouseMove}
       role="option"

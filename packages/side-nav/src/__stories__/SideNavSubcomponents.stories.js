@@ -28,6 +28,7 @@ storiesOf("GlobalNav|SideNav.Link", module).add(
     <KnobbedThemeProvider>
       <SideNav.Link
         onClick={action("onClick")}
+        onFocus={action("onFocus")}
         onMouseOver={action("onMouseOver")}
         title={text("Title", "SideNav Link")}
         link={text("Link", "https://www.autodesk.com")}
@@ -44,6 +45,7 @@ storiesOf("GlobalNav|SideNav.Submodule", module).add(
       <SideNav.Submodule
         active={boolean("Active", true)}
         onClick={action("onClick")}
+        onFocus={action("onFocus")}
         onMouseOver={action("onMouseOver")}
         title={text("Title", "Submodule")}
         link={text("Link", "https://www.autodesk.com")}
@@ -66,6 +68,7 @@ storiesOf("GlobalNav|SideNav.Module", module)
           minimized={boolean("Minimized", false)}
           onClickCollapseButton={action("onClickCollapseButton")}
           onClickTitle={action("onClickTitle")}
+          onFocus={action("onFocus")}
           onMouseOver={action("onMouseOver")}
           target={select("Link Target", AVAILABLE_TARGETS)}
           title={text("Title", "Module")}
@@ -84,6 +87,7 @@ storiesOf("GlobalNav|SideNav.Module", module)
           minimized={boolean("Minimized", false)}
           onClickCollapseButton={action("onClickCollapseButton")}
           onClickTitle={action("onClickTitle")}
+          onFocus={action("onFocus")}
           onMouseOver={action("onMouseOver")}
           target={select("Link Target", AVAILABLE_TARGETS)}
           title={text("Title", "Module")}
@@ -102,6 +106,7 @@ storiesOf("GlobalNav|SideNav.Module", module)
           minimized={boolean("Minimized", false)}
           onClickCollapseButton={action("onClickCollapseButton")}
           onClickTitle={action("onClickTitle")}
+          onFocus={action("onFocus")}
           onMouseOver={action("onMouseOver")}
           target={select("Link Target", AVAILABLE_TARGETS)}
           title={text("Title", "Module")}
@@ -122,6 +127,7 @@ storiesOf("GlobalNav|SideNav.ModuleCompact", module).add(
         activeChildren={boolean("Active Children", false)}
         icon={<Icon name={iconNames.INSIGHT} />}
         onClickTitle={action("onClick")}
+        onFocus={action("onFocus")}
         onMouseOver={action("onMouseOver")}
       />
     </KnobbedThemeProvider>
