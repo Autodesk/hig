@@ -1,6 +1,10 @@
 .hig__table {
+  @import "~@hig/styles/mixins/typography.scss";
+
   @import "./table-edge-padding.scss";
   @import "./tokens.scss";
+
+  @include typography-base;
 
   border-radius: $table-border-radius;
   box-shadow: 0 $box-shadow-offset $box-shadow-blur 0 $box-shadow-color;
