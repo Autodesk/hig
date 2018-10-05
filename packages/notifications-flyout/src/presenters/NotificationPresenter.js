@@ -9,6 +9,7 @@ import {
   ENTERED,
   EXITING
 } from "react-transition-group/Transition";
+import "@hig/rich-text/build/index.css";
 
 import { types, AVAILABLE_TYPES } from "../types";
 import DismissButtonPresenter from "./DismissButtonPresenter";
