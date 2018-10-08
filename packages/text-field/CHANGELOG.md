@@ -1,3 +1,10 @@
+# [@hig/text-field-v0.4.5](https://github.com/Autodesk/hig/compare/@hig/text-field@0.4.4...@hig/text-field@0.4.5) (2018-10-08)
+
+
+### Bug Fixes
+
+* update dependencies ([70fb27c](https://github.com/Autodesk/hig/commit/70fb27c))
+
 # [@hig/text-field-v0.4.4](https://github.com/Autodesk/hig/compare/@hig/text-field@0.4.3...@hig/text-field@0.4.4) (2018-09-19)
 
 
