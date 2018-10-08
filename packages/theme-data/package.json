@@ -18,7 +18,7 @@
   },
   "scripts": {
     "test": "hig-scripts-test",
-    "build": "hig-scripts-build && babel-node scripts/buildThemes",
+    "build": "hig-scripts-build && babel-node scripts/buildThemes && node scripts/buildSCSS.js",
     "lint": "hig-scripts-lint"
   },
   "devDependencies": {
@@ -27,7 +27,8 @@
     "@hig/jest-preset": "^0.1.0",
     "@hig/scripts": "^0.1.2",
     "@hig/typography": "^0.1.3",
-    "babel-cli": "^6.26.0"
+    "babel-cli": "^6.26.0",
+    "style-dictionary": "^2.4.0"
   },
   "dependencies": {
     "tinycolor2": "^1.4.1"
