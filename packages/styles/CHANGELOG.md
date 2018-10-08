@@ -1,3 +1,10 @@
+# [@hig/styles-v0.3.0](https://github.com/Autodesk/hig/compare/@hig/styles@0.2.3...@hig/styles@0.3.0) (2018-10-08)
+
+
+### Features
+
+* add `default-link` mixin ([ca807fb](https://github.com/Autodesk/hig/commit/ca807fb))
+
 <a name="@hig/styles-v0.2.3"></a>
 # [@hig/styles-v0.2.3](https://github.com/Autodesk/hig/compare/@hig/styles@0.2.2...@hig/styles@0.2.3) (2018-07-06)
 
