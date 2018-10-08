@@ -1,6 +1,6 @@
 import monorepoConfig from "semantic-release-monorepo";
 
-export default function createReleaseConfig({ packageName }) {
+function createProductionReleaseConfig({ packageName }) {
   return {
     ...monorepoConfig,
     tagFormat: `${packageName}@\${version}`,
@@ -12,4 +12,24 @@ export default function createReleaseConfig({ packageName }) {
     ],
     success: []
   };
+}
+
+function createDryRunReleaseConfig(payload) {
+  return {
+    ...createProductionReleaseConfig(payload),
+    dryRun: true,
+    ci: false,
+    branch: "development",
+    verifyConditions: [],
+    prepare: [],
+    publish: []
+  };
+}
+
+export default function createReleaseConfig(payload) {
+  if (process.env.RELEASE_DRY_RUN) {
+    return createDryRunReleaseConfig(payload);
+  }
+
+  return createProductionReleaseConfig(payload);
 }
