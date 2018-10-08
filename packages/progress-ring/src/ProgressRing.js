@@ -19,7 +19,7 @@ export default class ProgressRing extends Component {
     size: PropTypes.oneOf(availableSizes)
   };
 
-  defaultProps = {
+  static defaultProps = {
     size: "m"
   };
 
