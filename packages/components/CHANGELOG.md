@@ -1,3 +1,15 @@
+# [@hig/components-v0.11.0](https://github.com/Autodesk/hig/compare/@hig/components@0.10.0...@hig/components@0.11.0) (2018-10-08)
+
+
+### Bug Fixes
+
+* update dependencies ([70fb27c](https://github.com/Autodesk/hig/commit/70fb27c))
+
+
+### Features
+
+* add Project Account Switcher to `[@hig](https://github.com/hig)/components` ([4b5bcd7](https://github.com/Autodesk/hig/commit/4b5bcd7))
+
 # [@hig/components-v0.10.0](https://github.com/Autodesk/hig/compare/@hig/components@0.9.0...@hig/components@0.10.0) (2018-09-26)
 
 

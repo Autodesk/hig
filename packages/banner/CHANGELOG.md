@@ -1,3 +1,10 @@
+# [@hig/banner-v0.1.6](https://github.com/Autodesk/hig/compare/@hig/banner@0.1.5...@hig/banner@0.1.6) (2018-10-08)
+
+
+### Bug Fixes
+
+* update dependencies ([70fb27c](https://github.com/Autodesk/hig/commit/70fb27c))
+
 # [@hig/banner-v0.1.5](https://github.com/Autodesk/hig/compare/@hig/banner@0.1.4...@hig/banner@0.1.5) (2018-08-07)
 
 

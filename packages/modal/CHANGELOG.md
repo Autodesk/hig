@@ -1,3 +1,10 @@
+# [@hig/modal-v0.1.2](https://github.com/Autodesk/hig/compare/@hig/modal@0.1.1...@hig/modal@0.1.2) (2018-10-08)
+
+
+### Bug Fixes
+
+* update dependencies ([70fb27c](https://github.com/Autodesk/hig/commit/70fb27c))
+
 # [@hig/modal-v0.1.1](https://github.com/Autodesk/hig/compare/@hig/modal@0.1.0...@hig/modal@0.1.1) (2018-09-11)
 
 

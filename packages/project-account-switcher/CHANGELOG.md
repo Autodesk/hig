@@ -1,3 +1,10 @@
+# [@hig/project-account-switcher-v0.3.1](https://github.com/Autodesk/hig/compare/@hig/project-account-switcher@0.3.0...@hig/project-account-switcher@0.3.1) (2018-10-08)
+
+
+### Bug Fixes
+
+* update dependencies ([70fb27c](https://github.com/Autodesk/hig/commit/70fb27c))
+
 # [@hig/project-account-switcher-v0.3.0](https://github.com/Autodesk/hig/compare/@hig/project-account-switcher@0.2.0...@hig/project-account-switcher@0.3.0) (2018-10-08)
 
 
