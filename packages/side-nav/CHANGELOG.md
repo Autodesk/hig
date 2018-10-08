@@ -1,3 +1,15 @@
+# [@hig/side-nav-v0.2.0](https://github.com/Autodesk/hig/compare/@hig/side-nav@0.1.8...@hig/side-nav@0.2.0) (2018-10-08)
+
+
+### Bug Fixes
+
+* update checkbox and sidenav styles for new icons ([d0d661b](https://github.com/Autodesk/hig/commit/d0d661b))
+
+
+### Features
+
+* add `onFocus` prop for a11y ([f964b41](https://github.com/Autodesk/hig/commit/f964b41))
+
 # [@hig/side-nav-v0.1.8](https://github.com/Autodesk/hig/compare/@hig/side-nav@0.1.7...@hig/side-nav@0.1.8) (2018-09-26)
 
 
