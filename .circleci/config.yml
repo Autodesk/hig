@@ -187,6 +187,23 @@ jobs:
       - run:
           name: Release
           command: yarn run release
+  packages-deploy-dry-run:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: Create dependency hash
+          command: yarn run create-dependency-hash
+      - restore_cache:
+          key: v2-dependencies-{{ checksum ".dependency-hash" }}
+      - restore_cache:
+          key: v1-package-builds-{{ .Revision }}
+      - run:
+          name: Extract dependencies and builds
+          command: yarn run extract
+      - run:
+          name: Release dry run
+          command: yarn run release:dry-run
   update-development:
     <<: *defaults
     steps:
@@ -239,6 +256,13 @@ workflows:
           filters:
             branches:
               only: master
+      - packages-deploy-dry-run:
+          requires:
+            - react-test
+            - visual-test
+          filters:
+            branches:
+              only: development
       - update-development:
           requires:
             - packages-deploy
