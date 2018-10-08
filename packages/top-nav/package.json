@@ -1,6 +1,6 @@
 {
   "name": "@hig/top-nav",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "HIG Top Navigation",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -19,9 +19,9 @@
   ],
   "dependencies": {
     "@hig/flyout": "^0.6.0",
-    "@hig/icon-button": "^0.2.0",
-    "@hig/notifications-flyout": "^0.2.0",
-    "@hig/profile-flyout": "^0.1.0",
+    "@hig/icon-button": "^0.2.1",
+    "@hig/notifications-flyout": "^0.2.3",
+    "@hig/profile-flyout": "^0.1.1",
     "@hig/utils": "^0.3.0",
     "classnames": "^2.2.5",
     "prop-types": "^15.6.1"
