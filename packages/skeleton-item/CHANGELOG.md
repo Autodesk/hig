@@ -1,3 +1,11 @@
+# [@hig/skeleton-item-v0.3.1](https://github.com/Autodesk/hig/compare/@hig/skeleton-item@0.3.0...@hig/skeleton-item@0.3.1) (2018-10-08)
+
+
+### Bug Fixes
+
+* **presentation:** correct broken css ([948cc05e26d9545f2976c154db64d46a08404f93](https://github.com/Autodesk/hig/commit/948cc05e26d9545f2976c154db64d46a08404f93))
+
+<a name="@hig/skeleton-item-v0.3.0"></a>
 # [@hig/skeleton-item-v0.3.0](https://github.com/Autodesk/hig/compare/@hig/skeleton-item@0.2.0...@hig/skeleton-item@0.3.0) (2018-08-23)
 
 
