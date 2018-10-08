@@ -18,9 +18,9 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/icon": "^0.2.0",
-    "@hig/multi-downshift": "^0.1.0",
-    "@hig/text-field": "^0.4.2",
+    "@hig/icon": "^0.2.1",
+    "@hig/multi-downshift": "^0.1.1",
+    "@hig/text-field": "^0.4.5",
     "classnames": "^2.2.5",
     "downshift": "^2.0.12",
     "prop-types": "^15.6.1",
