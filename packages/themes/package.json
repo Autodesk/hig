@@ -23,7 +23,6 @@
   },
   "devDependencies": {
     "@hig/babel-preset": "^0.1.0",
-    "@hig/banner": "^0.1.4",
     "@hig/eslint-config": "^0.1.0",
     "@hig/jest-preset": "^0.1.0",
     "@hig/scripts": "^0.1.2",
