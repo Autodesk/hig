@@ -1,3 +1,10 @@
+# [@hig/side-nav-v0.2.1](https://github.com/Autodesk/hig/compare/@hig/side-nav@0.2.0...@hig/side-nav@0.2.1) (2018-10-08)
+
+
+### Bug Fixes
+
+* update dependencies ([70fb27c](https://github.com/Autodesk/hig/commit/70fb27c))
+
 # [@hig/side-nav-v0.2.0](https://github.com/Autodesk/hig/compare/@hig/side-nav@0.1.8...@hig/side-nav@0.2.0) (2018-10-08)
 
 
