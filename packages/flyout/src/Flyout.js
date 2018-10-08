@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import Transition from "react-transition-group/Transition";
-import { polyfill } from "react-lifecycles-compat";
 
-import { anchorPoints, availableAnchorPoints } from "./anchorPoints";
+import { AVAILABLE_ANCHOR_POINTS } from "./anchorPoints";
+import ContainerTransition from "./behaviors/ContainerTransition";
 import FlyoutPresenter from "./presenters/FlyoutPresenter";
-import getFlyoutPosition from "./getFlyoutPosition";
-import PanelPresenter from "./presenters/PanelPresenter";
+import getCoordinates, { DEFAULT_COORDINATES } from "./getCoordinates";
+import DelayedHoverBehavior from "./behaviors/DelayedHoverBehavior";
 import PanelContainerPresenter from "./presenters/PanelContainerPresenter";
+import PanelPresenter from "./presenters/PanelPresenter";
 
-const TRANSITION_DURATION = 300;
+/** @typedef {import("./getCoordinates").Coordinates} Coordinates */
 
 /**
  * @typedef {Object} PanelRendererPayload
@@ -23,22 +23,36 @@ const TRANSITION_DURATION = 300;
 /**
  * @typedef {Object} State
  * @property {HTMLElement} [actionRef]
- * @property {HTMLDivElement} [containerRef]
  * @property {boolean} open Used to direct the flyout's transition behavior
  * @property {HTMLElement} [panelRef]
+ * @property {SVGSVGElement} [pointerRef]
  * @property {HTMLDivElement} [wrapperRef]
  */
 
-class Flyout extends Component {
+export default class Flyout extends Component {
   static propTypes = {
+    /** Manipulate flyout coordinates before rendering */
+    alterCoordinates: PropTypes.func,
     /** Where the flyout will be anchored relative to target */
-    anchorPoint: PropTypes.oneOf(availableAnchorPoints),
+    anchorPoint: PropTypes.oneOf(AVAILABLE_ANCHOR_POINTS),
     /** Target component to open the flyout. Can be either a node or a render function */
     children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
     /** Content for the flyout. Can be either a node or a render function */
     content: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
-    /** Use to render a custom flyout panel. Can be either a node or a render function */
+    /** Default uncontrolled open state */
+    defaultOpen: PropTypes.bool,
+    /**
+     * When the flyout overflows the viewport, it'll attempt to
+     * use the given anchor points in order to keep the flyout
+     * within the viewport.
+     */
+    fallbackAnchorPoints: PropTypes.arrayOf(
+      PropTypes.oneOf(AVAILABLE_ANCHOR_POINTS)
+    ),
+    /** Renders a custom flyout panel. Can be either a node or a render function */
     panel: PropTypes.func,
+    /** A custom pointer */
+    pointer: PropTypes.node,
     /** Max height of the flyout content, in pixels */
     maxHeight: PropTypes.number,
     /** Function called when the flyout is open, and a click event occurs outside the flyout */
@@ -50,11 +64,22 @@ class Flyout extends Component {
     /** Function called when the flyout panel is scrolled */
     onScroll: PropTypes.func,
     /** When provided, it overrides the flyout's open state */
-    open: PropTypes.bool
+    open: PropTypes.bool,
+    /** Whether flyout should open when the target is hovered over */
+    openOnHover: PropTypes.bool,
+    /**
+     * If openOnHover is true, this prop will determine the delay
+     * from when mouseEnter begins until the flyout visually opens
+     */
+    openOnHoverDelay: PropTypes.number
   };
 
   static defaultProps = {
-    anchorPoint: anchorPoints.RIGHT_TOP,
+    anchorPoint: DEFAULT_COORDINATES.anchorPoint,
+    defaultOpen: false,
+    fallbackAnchorPoints: AVAILABLE_ANCHOR_POINTS,
+    openOnHover: false,
+    openOnHoverDelay: 500,
     /**
      * @param {PanelRendererPayload} payload
      */
@@ -69,11 +94,7 @@ class Flyout extends Component {
 
   /** @type {State} */
   state = {
-    actionRef: undefined,
-    containerRef: undefined,
-    open: false,
-    panelRef: undefined,
-    wrapperRef: undefined
+    open: this.props.defaultOpen
   };
 
   componentDidMount() {
@@ -85,30 +106,46 @@ class Flyout extends Component {
   }
 
   /**
-   * @returns {import("./getFlyoutPosition").FlyoutPosition}
+   * @returns {Coordinates}
    */
-  getPresenterPositionProps() {
-    const { anchorPoint } = this.props;
-    const { actionRef, panelRef } = this.state;
+  getCoordinates() {
+    const { alterCoordinates, anchorPoint, fallbackAnchorPoints } = this.props;
+    const { actionRef, panelRef, pointerRef } = this.state;
 
-    if (!actionRef || !panelRef) {
-      return {
-        anchorPoint,
-        top: 0,
-        left: 0
-      };
+    if (
+      !actionRef ||
+      !panelRef ||
+      !pointerRef ||
+      typeof window === "undefined"
+    ) {
+      return DEFAULT_COORDINATES;
     }
 
     const actionRect = actionRef.getBoundingClientRect();
     const panelRect = panelRef.getBoundingClientRect();
+    const pointerRect = pointerRef.getBoundingClientRect();
     const viewportRect = window.document.documentElement.getBoundingClientRect();
-
-    return getFlyoutPosition({
+    const coordinates = getCoordinates({
       anchorPoint,
       actionRect,
+      fallbackAnchorPoints,
       panelRect,
+      pointerRect,
       viewportRect
     });
+
+    if (alterCoordinates) {
+      const rects = {
+        actionRect,
+        panelRect,
+        pointerRect,
+        viewportRect
+      };
+
+      return alterCoordinates(coordinates, rects);
+    }
+
+    return coordinates;
   }
 
   /**
@@ -133,6 +170,18 @@ class Flyout extends Component {
   isOpen() {
     return this.isOpenControlled() ? this.props.open : this.state.open;
   }
+
+  handleChildMouseEnter = () => {
+    if (this.props.openOnHover) {
+      this.setOpen(true);
+    }
+  };
+
+  handleChildMouseLeave = () => {
+    if (this.props.openOnHover) {
+      this.setOpen(false);
+    }
+  };
 
   handleChildClick = () => {
     if (!this.isOpenControlled()) {
@@ -162,10 +211,10 @@ class Flyout extends Component {
   };
 
   /**
-   * @param {HTMLDivElement} containerRef
+   * @param {SVGSVGElement} pointerRef
    */
-  refContainer = containerRef => {
-    this.setState({ containerRef });
+  refPointer = pointerRef => {
+    this.setState({ pointerRef });
   };
 
   /**
@@ -188,27 +237,6 @@ class Flyout extends Component {
 
   toggleOpen() {
     this.setOpen(!this.state.open);
-  }
-
-  createPresenterProps(transitionStatus) {
-    const { refContainer, refAction, refWrapper } = this;
-    const panel = this.renderPanel();
-    const {
-      anchorPoint,
-      topOffset,
-      leftOffset
-    } = this.getPresenterPositionProps();
-
-    return {
-      anchorPoint,
-      leftOffset,
-      panel,
-      refAction,
-      refContainer,
-      refWrapper,
-      topOffset,
-      transitionStatus
-    };
   }
 
   /**
@@ -238,17 +266,20 @@ class Flyout extends Component {
     return content;
   }
 
-  renderPanel() {
+  renderPanel({ transitionStatus }) {
     const { panel } = this.props;
 
     if (typeof panel === "function") {
-      return panel(this.createPanelPayload());
+      return panel({
+        ...this.createPanelPayload(),
+        transitionStatus
+      });
     }
 
     return panel;
   }
 
-  renderChildren() {
+  renderChildren(hasHover, onMouseEnter, onMouseLeave) {
     const { children } = this.props;
     const { handleChildClick } = this;
 
@@ -257,23 +288,63 @@ class Flyout extends Component {
     }
 
     if (React.Children.count(children) === 1) {
-      return React.cloneElement(children, { onClick: handleChildClick });
+      return React.cloneElement(children, {
+        hasHover,
+        onClick: handleChildClick,
+        onMouseEnter,
+        onMouseLeave
+      });
     }
 
     return children;
   }
 
-  render() {
+  renderPresenter = transitionStatus => {
+    const {
+      handleChildMouseEnter,
+      handleChildMouseLeave,
+      refAction,
+      refPointer,
+      refWrapper
+    } = this;
+    const { openOnHoverDelay, pointer } = this.props;
+    const panel = this.renderPanel({ transitionStatus });
+    const {
+      anchorPoint,
+      containerPosition,
+      pointerPosition
+    } = this.getCoordinates();
+
     return (
-      <Transition in={this.isOpen()} timeout={TRANSITION_DURATION}>
-        {transitionStatus => (
-          <FlyoutPresenter {...this.createPresenterProps(transitionStatus)}>
-            {this.renderChildren()}
+      <DelayedHoverBehavior
+        onMouseEnter={handleChildMouseEnter}
+        onMouseLeave={handleChildMouseLeave}
+        openOnHoverDelay={openOnHoverDelay}
+      >
+        {({ hasHover, onMouseEnter, onMouseLeave }) => (
+          <FlyoutPresenter
+            anchorPoint={anchorPoint}
+            containerPosition={containerPosition}
+            panel={panel}
+            pointer={pointer}
+            pointerPosition={pointerPosition}
+            refAction={refAction}
+            refPointer={refPointer}
+            refWrapper={refWrapper}
+            transitionStatus={transitionStatus}
+          >
+            {this.renderChildren(hasHover, onMouseEnter, onMouseLeave)}
           </FlyoutPresenter>
         )}
-      </Transition>
+      </DelayedHoverBehavior>
+    );
+  };
+
+  render() {
+    return (
+      <ContainerTransition open={this.isOpen()}>
+        {this.renderPresenter}
+      </ContainerTransition>
     );
   }
 }
-
-export default polyfill(Flyout);

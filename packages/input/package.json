@@ -18,7 +18,7 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/themes": "^0.3.0",
+    "@hig/themes-poc": "^1.0.0-alpha",
     "emotion": "^9.2.4",
     "prop-types": "^15.6.1"
   },
@@ -29,10 +29,9 @@
     "@hig/babel-preset": "^0.1.0",
     "@hig/eslint-config": "^0.1.0",
     "@hig/jest-preset": "^0.1.0",
-    "@hig/rich-text": "^0.1.3",
     "@hig/scripts": "^0.1.2",
     "@hig/semantic-release-config": "^0.1.0",
-    "@hig/styles": "^0.2.3"
+    "@hig/styles": "^0.3.0"
   },
   "scripts": {
     "build": "hig-scripts-build",

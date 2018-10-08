@@ -1,5 +1,5 @@
 export default {
-  "ICON.WIDTH": {
+  "icon.width": {
     type: "length",
     value: "24px"
   }

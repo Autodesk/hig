@@ -18,7 +18,7 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/themes": "^0.3.0",
+    "@hig/themes-poc": "^1.0.0-alpha",
     "prop-types": "^15.6.1"
   },
   "peerDependencies": {
@@ -29,7 +29,7 @@
     "@hig/eslint-config": "^0.1.0",
     "@hig/scripts": "^0.1.2",
     "@hig/semantic-release-config": "^0.1.0",
-    "@hig/styles": "^0.2.3"
+    "@hig/styles": "^0.3.0"
   },
   "scripts": {
     "build": "hig-scripts-build",

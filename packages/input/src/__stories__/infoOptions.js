@@ -1,6 +1,7 @@
 import React from "react";
 import RichText from "@hig/rich-text";
 import KnobbedThemeProvider from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
+import "@hig/rich-text/build/index.css";
 
 import DefaultExport from "../index";
 import readme from "../../README.md";

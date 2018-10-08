@@ -1,21 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
+import { anchorPoints, AVAILABLE_ANCHOR_POINTS } from "../anchorPoints";
+import { DEFAULT_COORDINATES } from "../getCoordinates";
 import {
-  EXITED,
-  ENTERING,
-  ENTERED,
-  EXITING
-} from "react-transition-group/Transition";
-
-import { anchorPoints, availableAnchorPoints } from "../anchorPoints";
+  transitionStatuses,
+  AVAILABLE_TRANSITION_STATUSES
+} from "../transitionStatuses";
 import "./FlyoutPresenter.scss";
-
-const availableTransitionStatuses = [EXITED, ENTERING, ENTERED, EXITING];
+import PointerPresenter from "./PointerPresenter";
+import PointerWrapperPresenter from "./PointerWrapperPresenter";
 
 const transitionStateToModifier = {
-  [EXITED]: "hig__flyout-v1--exited",
-  [EXITING]: "hig__flyout-v1--exiting"
+  [transitionStatuses.EXITED]: "hig__flyout-v1--exited",
+  [transitionStatuses.EXITING]: "hig__flyout-v1--exiting",
+  [transitionStatuses.HIDDEN]: "hig__flyout-v1--hidden"
 };
 
 const anchorPointToModifier = {
@@ -33,20 +32,33 @@ const anchorPointToModifier = {
   [anchorPoints.LEFT_BOTTOM]: "hig__flyout-v1--left-bottom"
 };
 
+/**
+ * @param {import("../getCoordinates").Position} position
+ * @returns {import("react").CSSProperties}
+ */
+function positionToStyle({ top, left }) {
+  return {
+    top: `${top}px`,
+    left: `${left}px`
+  };
+}
+
 export default function FlyoutPresenter(props) {
   const {
     anchorPoint,
     children,
-    leftOffset,
+    containerPosition,
     panel,
+    pointer,
+    pointerPosition,
     refAction,
-    refContainer,
+    refPointer,
     refWrapper,
-    topOffset,
     transitionStatus
   } = props;
 
-  const containerStyle = { top: topOffset, left: leftOffset };
+  const containerStyle = positionToStyle(containerPosition);
+  const pointerStyle = positionToStyle(pointerPosition);
   const wrapperClasses = cx([
     "hig__flyout-v1",
     transitionStateToModifier[transitionStatus],
@@ -58,21 +70,10 @@ export default function FlyoutPresenter(props) {
       <div className="hig__flyout-v1__action" ref={refAction}>
         {children}
       </div>
-      <div
-        className="hig__flyout-v1__container"
-        style={containerStyle}
-        ref={refContainer}
-      >
-        <div
-          className="hig__flyout-v1__chevron"
-          role="presentation"
-          aria-hidden="true"
-        />
-        <div
-          className="hig__flyout-v1__chevron-cover"
-          role="presentation"
-          aria-hidden="true"
-        />
+      <div className="hig__flyout-v1__container" style={containerStyle}>
+        <PointerWrapperPresenter innerRef={refPointer} style={pointerStyle}>
+          {pointer}
+        </PointerWrapperPresenter>
         {panel}
       </div>
     </div>
@@ -80,27 +81,38 @@ export default function FlyoutPresenter(props) {
 }
 
 FlyoutPresenter.defaultProps = {
-  anchorPoint: anchorPoints.TOP_RIGHT,
-  transitionStatus: EXITED
+  anchorPoint: DEFAULT_COORDINATES.anchorPoint,
+  containerPosition: DEFAULT_COORDINATES.containerPosition,
+  pointer: <PointerPresenter />,
+  pointerPosition: DEFAULT_COORDINATES.pointerPosition,
+  transitionStatus: transitionStatuses.EXITED
 };
 
 FlyoutPresenter.propTypes = {
   /** Where the flyout will be anchored relative to target */
-  anchorPoint: PropTypes.oneOf(availableAnchorPoints).isRequired,
+  anchorPoint: PropTypes.oneOf(AVAILABLE_ANCHOR_POINTS),
   /** Content for the flyout */
   panel: PropTypes.node,
+  /** Pointer for the flyout */
+  pointer: PropTypes.node,
   /** Top position of the container relative to the action */
-  topOffset: PropTypes.number,
+  containerPosition: PropTypes.shape({
+    top: PropTypes.number,
+    left: PropTypes.number
+  }),
   /** Left position of the container relative to the action */
-  leftOffset: PropTypes.number,
+  pointerPosition: PropTypes.shape({
+    top: PropTypes.number,
+    left: PropTypes.number
+  }),
   /** Reference the action element */
   refAction: PropTypes.func,
-  /** Reference the container element */
-  refContainer: PropTypes.func,
+  /** Reference the pointer element */
+  refPointer: PropTypes.func,
   /** Reference the wrapper element */
   refWrapper: PropTypes.func,
   /** The status of the container transition */
-  transitionStatus: PropTypes.oneOf(availableTransitionStatuses).isRequired,
+  transitionStatus: PropTypes.oneOf(AVAILABLE_TRANSITION_STATUSES),
   /** Target component to open the flyout */
   children: PropTypes.node
 };

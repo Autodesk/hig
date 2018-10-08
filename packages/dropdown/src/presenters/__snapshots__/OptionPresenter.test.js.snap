@@ -2,13 +2,15 @@
 
 exports[`Dropdown/presenters/OptionPresenter renders with all props 1`] = `
 <div
+  aria-selected={true}
   className="hig__dropdown-option hig__dropdown-option--selected hig__dropdown-option--highlighted"
+  id={undefined}
   onClick={[Function]}
-  onHover={[Function]}
+  onKeyDown={[Function]}
   onMouseDown={[Function]}
   onMouseMove={[Function]}
-  onSelect={[Function]}
-  value="my value"
+  role="option"
+  tabIndex="0"
 >
   <span
     className="hig__dropdown-option__label"
@@ -34,7 +36,15 @@ exports[`Dropdown/presenters/OptionPresenter renders with all props 1`] = `
 
 exports[`Dropdown/presenters/OptionPresenter renders without props 1`] = `
 <div
+  aria-selected={undefined}
   className="hig__dropdown-option"
+  id={undefined}
+  onClick={undefined}
+  onKeyDown={undefined}
+  onMouseDown={undefined}
+  onMouseMove={undefined}
+  role="option"
+  tabIndex="0"
 >
   <span
     className="hig__dropdown-option__label"

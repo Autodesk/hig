@@ -1,6 +1,6 @@
 {
   "name": "@hig/utils",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Non-component specific utility functions for HIG components",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -16,6 +16,9 @@
   "files": [
     "build/*"
   ],
+  "dependencies": {
+    "lodash.memoize": "^4.1.2"
+  },
   "devDependencies": {
     "@hig/babel-preset": "^0.1.0",
     "@hig/eslint-config": "^0.1.0",

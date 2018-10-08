@@ -7,29 +7,43 @@ const knobGroupIds = {
 
 const knobLabels = {
   accounts: "Accounts",
-  projects: "Projects",
-  projectTitle: "Project List Label",
   accountTitle: "Account List Label",
-  onProjectClick: "onProjectClick",
-  onAccountClick: "onAccountClick"
+  activeAccountId: "Active Account Id",
+  activeProjectId: "Active Project Id",
+  onChange: "State changed",
+  onClick: "List item clicked",
+  onTargetClick: "Target clicked",
+  projects: "Projects",
+  projectTitle: "Project List Label"
 };
 
 export default function getKnobs(props) {
   const {
     accounts,
-    projects,
-    activeProjectId,
-    activeAccountId,
-    projectTitle,
     accountTitle,
-    onProjectClick,
-    onAccountClick,
+    activeAccountId,
+    activeProjectId,
+    onChange,
+    onClick,
+    onTargetClick,
+    projects,
+    projectTitle,
     ...otherProps
   } = props;
 
   return {
     ...otherProps,
     accounts: object(knobLabels.accounts, accounts, knobGroupIds.basic),
+    activeAccountId: object(
+      knobLabels.activeAccountId,
+      activeAccountId,
+      knobGroupIds.basic
+    ),
+    activeProjectId: object(
+      knobLabels.activeProjectId,
+      activeProjectId,
+      knobGroupIds.basic
+    ),
     projects: object(knobLabels.projects, projects, knobGroupIds.basic),
     projectTitle: text(
       knobLabels.projectTitle,
@@ -41,7 +55,8 @@ export default function getKnobs(props) {
       accountTitle,
       knobGroupIds.basic
     ),
-    onProjectClick: action(knobLabels.onProjectClick),
-    onAccountClick: action(knobLabels.onAccountClick)
+    onChange: action(knobLabels.onChange),
+    onClick: action(knobLabels.onClick),
+    onTargetClick: action(knobLabels.onTargetClick)
   };
 }

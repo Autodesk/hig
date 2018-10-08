@@ -40,7 +40,7 @@ describe("notification-flyout/behaviors/NotificationBehavior", () => {
     beforeEach(() => {
       mountBehavior();
 
-      payload = children.mock.calls[0][0];
+      [[payload]] = children.mock.calls;
     });
 
     it("provides a payload to the `children` render prop", () => {

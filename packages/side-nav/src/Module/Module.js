@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+
+import { AVAILABLE_TARGETS } from "../targets";
 import ModulePresenter from "./presenters/ModulePresenter";
 
 export default class Module extends Component {
@@ -20,24 +22,33 @@ export default class Module extends Component {
     onClickCollapseButton: PropTypes.func,
     /** Called when clicking on the title */
     onClickTitle: PropTypes.func,
+    /** Called when link is focused  */
+    onFocus: PropTypes.func,
     /** Called when hovering over the title */
     onMouseOver: PropTypes.func,
     /** A label for rendering this Module */
     title: PropTypes.string.isRequired,
     /** Anchor target. Applicable only if link is provided */
-    target: PropTypes.oneOf(["_self", "_blank", "_parent", "_top"])
+    target: PropTypes.oneOf(AVAILABLE_TARGETS)
   };
 
   static defaultProps = {
     minimized: false
   };
 
-  constructor(props) {
-    super(props);
+  state = {
+    minimized: this.props.minimized
+  };
 
-    this.state = {
-      minimized: props.minimized
-    };
+  componentDidUpdate() {
+    const { children, link } = this.props;
+
+    if (children && link) {
+      /* eslint-disable-next-line no-console */
+      console.error(
+        "A module shouldn't be both a link and contain sub-modules"
+      );
+    }
   }
 
   /**

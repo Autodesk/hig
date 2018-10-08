@@ -11,35 +11,40 @@ describe("Dropdown", () => {
   };
   const options = Object.keys(i18n).sort();
 
-  const optionSpecificRender = optionProps => {
-    const optionBackgroundColor = props => {
-      if (props.selected) {
-        return "blue";
-      }
-      if (props.highlighted) {
-        return "light-blue";
-      }
-      return "white";
-    };
+  function getOptionBackgroundColor(props) {
+    if (props.selected) {
+      return "blue";
+    }
+    if (props.highlighted) {
+      return "light-blue";
+    }
+    return "white";
+  }
 
+  function renderCustomOption(props) {
     return (
       <div
+        key={props.label}
         style={{
           padding: "2px 4px",
-          backgroundColor: optionBackgroundColor(optionProps)
+          backgroundColor: getOptionBackgroundColor(props)
         }}
       >
         <div
           style={{
-            backgroundColor: optionProps.value,
+            backgroundColor: props.value,
             width: "32px",
             height: "24px"
           }}
         />
-        <p>{optionProps.label}</p>
+        <p>{props.label}</p>
       </div>
     );
-  };
+  }
+
+  function renderCustomOptionWithLabel({ label }) {
+    return <div key={label}>{label.toUpperCase()}</div>;
+  }
 
   const rendererOptions = {
     createNodeMock(element) {
@@ -76,16 +81,16 @@ describe("Dropdown", () => {
       desc: "renders with custom option render function",
       props: {
         options: ["renders", "with", "custom", "option", "render", "function"],
-        renderOption: option => <div>{option.toUpperCase()}</div>
+        renderOption: option => <div key={option}>{option.toUpperCase()}</div>
       }
     },
     {
       desc: "renders with option specific render function",
       props: {
         options: [
-          { label: "Red", value: "#ff0000", render: optionSpecificRender },
-          { label: "Green", value: "#00ff00", render: optionSpecificRender },
-          { label: "Blue", value: "#0000ff", render: optionSpecificRender }
+          { label: "Red", value: "#ff0000", render: renderCustomOption },
+          { label: "Green", value: "#00ff00", render: renderCustomOption },
+          { label: "Blue", value: "#0000ff", render: renderCustomOption }
         ]
       }
     },
@@ -93,11 +98,11 @@ describe("Dropdown", () => {
       desc: "renders with option specific and general option render function",
       props: {
         options: [
-          { label: "Red", value: "#ff0000", render: optionSpecificRender },
+          { label: "Red", value: "#ff0000", render: renderCustomOption },
           { label: "Green", value: "#00ff00" },
           { label: "Blue", value: "#0000ff" }
         ],
-        renderOption: option => <div>{option.label.toUpperCase()}</div>
+        renderOption: renderCustomOptionWithLabel
       }
     },
     {
@@ -105,11 +110,11 @@ describe("Dropdown", () => {
       props: {
         formatOption: option => option.label.toUpperCase(),
         options: [
-          { label: "Red", value: "#ff0000", render: optionSpecificRender },
+          { label: "Red", value: "#ff0000", render: renderCustomOption },
           { label: "Green", value: "#00ff00" },
           { label: "Blue", value: "#0000ff" }
         ],
-        renderOption: option => <div>{option.label.toUpperCase()}</div>
+        renderOption: renderCustomOptionWithLabel
       }
     },
     {

@@ -3,9 +3,17 @@ import PropTypes from "prop-types";
 import cx from "classnames";
 import { sizes as iconSizes } from "@hig/icon";
 import { ThemeContext } from "@hig/themes";
-import ExternalLinkIcon from "../presenters/ExternalLinkIcon";
+import { memoizeCreateButtonEventHandlers } from "@hig/utils";
 
+import { AVAILABLE_TARGETS, targets } from "../targets";
+import ExternalLinkIcon from "../presenters/ExternalLinkIcon";
 import "./submodule.scss";
+
+function getClassName({ active, themeClass }) {
+  return cx(themeClass, "hig__side-nav__submodule", {
+    "hig__side-nav__submodule--active": active
+  });
+}
 
 export default class Submodule extends Component {
   static propTypes = {
@@ -15,41 +23,55 @@ export default class Submodule extends Component {
     link: PropTypes.string,
     /** Called when clicking on the submodule */
     onClick: PropTypes.func,
+    /** Called when link is focused  */
+    onFocus: PropTypes.func,
     /** Called when hovering over the submodule */
     onMouseOver: PropTypes.func,
     /** Anchor target. Applicable only if link is provided */
-    target: PropTypes.oneOf(["_self", "_blank", "_parent", "_top"]),
+    target: PropTypes.oneOf(AVAILABLE_TARGETS),
     /** Text to render */
     title: PropTypes.string
   };
 
-  _renderExternalLinkIcon = () =>
-    this.props.target === "_blank" && (
-      <ExternalLinkIcon size={iconSizes.PX_16} />
-    );
+  createEventHandlers = memoizeCreateButtonEventHandlers();
 
   render() {
-    const { active, title, link, onClick, onMouseOver, target } = this.props;
-
-    const classes = themeClass =>
-      cx(themeClass, "hig__side-nav__submodule", {
-        "hig__side-nav__submodule--active": active
-      });
-
+    const {
+      active,
+      link,
+      onClick,
+      onFocus,
+      onMouseOver,
+      target,
+      title
+    } = this.props;
+    const { handleClick, handleKeyDown } = this.createEventHandlers(onClick, {
+      // Allow default on hyperlinks to trigger navigation
+      preventDefault: !link
+    });
     const Wrapper = link ? "a" : "div";
+    const isExternalLink = link && target === targets.BLANK;
+    const role = link ? undefined : "button";
+    const wrapperTarget = link ? target : undefined;
 
     return (
       <ThemeContext.Consumer>
         {({ themeClass }) => (
           <Wrapper
-            className={classes(themeClass)}
+            className={getClassName({ active, themeClass })}
             href={link}
-            target={target}
-            onClick={onClick}
+            onClick={handleClick}
+            onFocus={onFocus}
+            onKeyDown={handleKeyDown}
             onMouseOver={onMouseOver}
+            role={role}
+            tabIndex="0"
+            target={wrapperTarget}
           >
             {title}
-            {this._renderExternalLinkIcon()}
+            {isExternalLink ? (
+              <ExternalLinkIcon size={iconSizes.PX_16} />
+            ) : null}
           </Wrapper>
         )}
       </ThemeContext.Consumer>

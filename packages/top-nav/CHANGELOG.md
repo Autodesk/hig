@@ -1,3 +1,53 @@
+# [@hig/top-nav-v0.5.0](https://github.com/Autodesk/hig/compare/@hig/top-nav@0.4.0...@hig/top-nav@0.5.0) (2018-09-26)
+
+
+### Features
+
+* **package:** propagate dependency features ([4904930](https://github.com/Autodesk/hig/commit/4904930))
+
+# [@hig/top-nav-v0.4.0](https://github.com/Autodesk/hig/compare/@hig/top-nav@0.3.2...@hig/top-nav@0.4.0) (2018-09-19)
+
+
+### Features
+
+* update `ProfileAction` to use `[@hig](https://github.com/hig)/profile-flyout` ([5385fec](https://github.com/Autodesk/hig/commit/5385fec))
+
+# [@hig/top-nav-v0.3.2](https://github.com/Autodesk/hig/compare/@hig/top-nav@0.3.1...@hig/top-nav@0.3.2) (2018-09-11)
+
+
+### Bug Fixes
+
+* upgrade flyout in dependants ([ea3bedd](https://github.com/Autodesk/hig/commit/ea3bedd))
+
+# [@hig/top-nav-v0.3.1](https://github.com/Autodesk/hig/compare/@hig/top-nav@0.3.0...@hig/top-nav@0.3.1) (2018-09-06)
+
+
+### Bug Fixes
+
+* update dependencies to fix action alignment ([d464388](https://github.com/Autodesk/hig/commit/d464388))
+
+# [@hig/top-nav-v0.3.0](https://github.com/Autodesk/hig/compare/@hig/top-nav@0.2.1...@hig/top-nav@0.3.0) (2018-08-31)
+
+
+### Bug Fixes
+
+* correct profile action avatar alignment ([f92b9c4](https://github.com/Autodesk/hig/commit/f92b9c4))
+* wrap `NotificationAction` in `ActionPresenter` ([ab09b42](https://github.com/Autodesk/hig/commit/ab09b42))
+
+
+### Features
+
+* correct alignment of flyouts ([21b3f0a](https://github.com/Autodesk/hig/commit/21b3f0a))
+
+# [@hig/top-nav-v0.2.1](https://github.com/Autodesk/hig/compare/@hig/top-nav@0.2.0...@hig/top-nav@0.2.1) (2018-08-24)
+
+
+### Bug Fixes
+
+* add missing type prop to button ([a9484ec](https://github.com/Autodesk/hig/commit/a9484ec))
+* correct flyout dependency ([b939f0d](https://github.com/Autodesk/hig/commit/b939f0d))
+* **behavior:** bump [@hig](https://github.com/hig)/utils dependents to v0.2.1 ([48b74d0](https://github.com/Autodesk/hig/commit/48b74d0))
+
 # [@hig/top-nav-v0.2.0](https://github.com/Autodesk/hig/compare/@hig/top-nav@0.1.4...@hig/top-nav@0.2.0) (2018-08-23)
 
 

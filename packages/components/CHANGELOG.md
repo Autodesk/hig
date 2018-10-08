@@ -1,3 +1,48 @@
+# [@hig/components-v0.10.0](https://github.com/Autodesk/hig/compare/@hig/components@0.9.0...@hig/components@0.10.0) (2018-09-26)
+
+
+### Features
+
+* **package:** upgrade dependencies ([d1197dd](https://github.com/Autodesk/hig/commit/d1197dd))
+
+# [@hig/components-v0.9.0](https://github.com/Autodesk/hig/compare/@hig/components@0.8.1...@hig/components@0.9.0) (2018-09-19)
+
+
+### Features
+
+* add `[@hig](https://github.com/hig)/profile-flyout` and `[@hig](https://github.com/hig)/top-nav` ([bc9e205](https://github.com/Autodesk/hig/commit/bc9e205))
+* upgrade avatar to `0.2.0` ([0b6987f](https://github.com/Autodesk/hig/commit/0b6987f))
+
+# [@hig/components-v0.8.1](https://github.com/Autodesk/hig/compare/@hig/components@0.8.0...@hig/components@0.8.1) (2018-09-11)
+
+
+### Bug Fixes
+
+* update packages ([49caaa2](https://github.com/Autodesk/hig/commit/49caaa2))
+
+# [@hig/components-v0.8.0](https://github.com/Autodesk/hig/compare/@hig/components@0.7.0...@hig/components@0.8.0) (2018-09-11)
+
+
+### Features
+
+* **package:** upgrade dependencies ([1ab1cb9](https://github.com/Autodesk/hig/commit/1ab1cb9))
+* upgrade `[@hig](https://github.com/hig)/modal` ([8a49e4e](https://github.com/Autodesk/hig/commit/8a49e4e))
+* upgrade dependencies ([fea933f](https://github.com/Autodesk/hig/commit/fea933f))
+
+# [@hig/components-v0.7.0](https://github.com/Autodesk/hig/compare/@hig/components@0.6.0...@hig/components@0.7.0) (2018-08-31)
+
+
+### Features
+
+* upgrade dependencies for release ([036dcce](https://github.com/Autodesk/hig/commit/036dcce))
+
+# [@hig/components-v0.6.0](https://github.com/Autodesk/hig/compare/@hig/components@0.5.0...@hig/components@0.6.0) (2018-08-24)
+
+
+### Features
+
+* upgrade dependencies ([4cb80cf](https://github.com/Autodesk/hig/commit/4cb80cf))
+
 # [@hig/components-v0.5.0](https://github.com/Autodesk/hig/compare/@hig/components@0.4.0...@hig/components@0.5.0) (2018-08-07)
 
 

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import IconButton, { names } from "@hig/icon-button";
+import "@hig/icon-button/build/index.css";
 
 import "./ModalHeaderPresenter.scss";
 
@@ -15,6 +16,10 @@ export default class ModalHeaderPresenter extends Component {
      * are not utilized
      */
     closeButtonAriaLabel: PropTypes.string,
+    /**
+     * ID for a11y
+     */
+    id: PropTypes.string,
     /**
      * Triggers when one clicks the close button
      */
@@ -31,17 +36,25 @@ export default class ModalHeaderPresenter extends Component {
 
   renderChildren() {
     return (
-      <header className="hig__modal-V1__header">{this.props.children}</header>
+      <header className="hig__modal-V1__header" id={this.props.id}>
+        {this.props.children}
+      </header>
     );
   }
 
   render() {
-    const { children, closeButtonAriaLabel, onCloseClick, title } = this.props;
+    const {
+      children,
+      closeButtonAriaLabel,
+      id,
+      onCloseClick,
+      title
+    } = this.props;
 
     return children ? (
       this.renderChildren()
     ) : (
-      <header className="hig__modal-V1__header">
+      <header className="hig__modal-V1__header" id={id}>
         <IconButton
           aria-label={closeButtonAriaLabel}
           name={names.X_CLOSE_GRAY}

@@ -41,7 +41,7 @@ storiesOf("Basics|Typography", module).add(
 
 [H1, H2, H3, Text, Body, Bold, Caption, Disabled, Sub1, Sub2].forEach(
   Component => {
-    const name = Component.name;
+    const { name } = Component;
 
     storiesOf("Basics|Typography", module).add(
       name,

@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import { css, cx } from "emotion";
 import PropTypes from "prop-types";
-import cx from "classnames";
-import { ThemeContext } from "@hig/themes";
+import React, { Component } from "react";
+import { ThemeContext } from "@hig/themes-poc";
 
-import "./skeleton-item.scss";
+import stylesheet from "./SkeletonItem.stylesheet";
 
 export default class SkeletonItem extends Component {
   static propTypes = {
@@ -16,18 +16,25 @@ export default class SkeletonItem extends Component {
   };
 
   render() {
+    const { height, marginBottom, maxWidth } = this.props;
+
     return (
       <ThemeContext.Consumer>
-        {({ themeClass }) => (
-          <div
-            className={cx("hig__skeleton-item", themeClass)}
-            style={{
-              maxWidth: this.props.maxWidth,
-              marginBottom: this.props.marginBottom,
-              height: this.props.height
-            }}
-          />
-        )}
+        {({ themeData }) => {
+          const styles = stylesheet(
+            {
+              maxWidth,
+              marginBottom,
+              height
+            },
+            themeData
+          );
+          const classNames = cx([
+            "hig__skeleton-itemV1",
+            css(styles.skeletonItem)
+          ]);
+          return <div className={classNames} />;
+        }}
       </ThemeContext.Consumer>
     );
   }

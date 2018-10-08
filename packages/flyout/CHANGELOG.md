@@ -1,3 +1,47 @@
+# [@hig/flyout-v0.6.0](https://github.com/Autodesk/hig/compare/@hig/flyout@0.5.0...@hig/flyout@0.6.0) (2018-09-26)
+
+
+### Bug Fixes
+
+*  max-height calc on notifications-flyout ([4581856](https://github.com/Autodesk/hig/commit/4581856))
+
+
+### Features
+
+* Add prop openOnHover to Flyout.  When enabled, flyout will open when target is hovered over for .5s ([65893f3](https://github.com/Autodesk/hig/commit/65893f3))
+* timeout should be cleared no matter whether on mouse leave event exists ([7b3a300](https://github.com/Autodesk/hig/commit/7b3a300))
+
+# [@hig/flyout-v0.5.0](https://github.com/Autodesk/hig/compare/@hig/flyout@0.4.1...@hig/flyout@0.5.0) (2018-09-11)
+
+
+### Features
+
+* Add onMouseEnter and onMouseLeave events to Button for more control of custom hover events ([a2b2cc1](https://github.com/Autodesk/hig/commit/a2b2cc1))
+* **behavior:** add `defaultOpen` prop to support uncontrolled flyout's that are open by default ([7a4e91c](https://github.com/Autodesk/hig/commit/7a4e91c))
+* **behavior:** add `dislocateContainer` and `offsetContainerHorizontal` helpers ([97afdc2](https://github.com/Autodesk/hig/commit/97afdc2))
+* **presentation:** add support for rendering custom pointers ([d6e6c92](https://github.com/Autodesk/hig/commit/d6e6c92))
+
+# [@hig/flyout-v0.4.1](https://github.com/Autodesk/hig/compare/@hig/flyout@0.4.0...@hig/flyout@0.4.1) (2018-09-06)
+
+
+### Bug Fixes
+
+* flyout action alignment ([b7f242d](https://github.com/Autodesk/hig/commit/b7f242d))
+
+# [@hig/flyout-v0.4.0](https://github.com/Autodesk/hig/compare/@hig/flyout@0.3.0...@hig/flyout@0.4.0) (2018-08-31)
+
+
+### Bug Fixes
+
+* correct default anchor points ([5d44e45](https://github.com/Autodesk/hig/commit/5d44e45))
+* hide flyout container box model when fully exited ([6bbcd59](https://github.com/Autodesk/hig/commit/6bbcd59))
+* remove unused dependency ([ae8058c](https://github.com/Autodesk/hig/commit/ae8058c))
+
+
+### Features
+
+* add props for positioning ([e50a0fd](https://github.com/Autodesk/hig/commit/e50a0fd))
+
 # [@hig/flyout-v0.3.0](https://github.com/Autodesk/hig/compare/@hig/flyout@0.2.0...@hig/flyout@0.3.0) (2018-08-23)
 
 

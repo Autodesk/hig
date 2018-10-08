@@ -16,7 +16,8 @@ describe("flyout/Flyout", () => {
       maxHeight: 150,
       onClickOutside: function onClickOutside() {},
       onScroll: function onScroll() {},
-      open: true
+      open: true,
+      openOnHover: false
     };
     const MyCustomContainer = jest.fn(({ children, onScroll, maxHeight }) => (
       <div
@@ -46,6 +47,12 @@ describe("flyout/Flyout", () => {
       {
         desc: "renders without props",
         props: {}
+      },
+      {
+        desc: "renders open by default",
+        props: {
+          defaultOpen: true
+        }
       },
       {
         desc: "renders with a basic set of props",
@@ -80,6 +87,13 @@ describe("flyout/Flyout", () => {
           content: renderContent,
           panel: renderPanelComplex
         }
+      },
+      {
+        desc: "renders a custom pointer",
+        props: {
+          ...basicProps,
+          pointer: <span>my custom pointer</span>
+        }
       }
     ]);
   });
@@ -88,14 +102,10 @@ describe("flyout/Flyout", () => {
     const handleOpen = jest.fn();
     const handleClose = jest.fn();
 
-    afterEach(() => {
-      jest.resetAllMocks();
-    });
-
-    function getHandler() {
+    function getHandler(props) {
       let handleChildClick;
       const wrapper = mount(
-        <Flyout onOpen={handleOpen} onClose={handleClose}>
+        <Flyout {...props} onOpen={handleOpen} onClose={handleClose}>
           {({ handleClick }) => {
             handleChildClick = handleClick;
           }}
@@ -104,6 +114,11 @@ describe("flyout/Flyout", () => {
 
       return { handleChildClick, wrapper };
     }
+
+    afterEach(() => {
+      handleOpen.mockReset();
+      handleClose.mockReset();
+    });
 
     it("toggles the flyout between open and closed", () => {
       const { handleChildClick, wrapper } = getHandler();
@@ -131,6 +146,32 @@ describe("flyout/Flyout", () => {
       expect(handleClose).not.toHaveBeenCalled();
       handleChildClick();
       expect(handleClose).toHaveBeenCalled();
+    });
+
+    it("calls the `onClose` handler when the flyout open by default", () => {
+      const { handleChildClick } = getHandler({ defaultOpen: true });
+
+      expect(handleClose).not.toHaveBeenCalled();
+      handleChildClick();
+      expect(handleClose).toHaveBeenCalled();
+    });
+  });
+
+  describe("alterCoordinates", () => {
+    const alterCoordinates = jest.fn();
+
+    beforeEach(() => {
+      alterCoordinates.mockImplementation(coordinates => coordinates);
+    });
+
+    afterEach(() => {
+      alterCoordinates.mockReset();
+    });
+
+    it("is called when rendering", () => {
+      mount(<Flyout alterCoordinates={alterCoordinates} />);
+
+      expect(alterCoordinates).toMatchSnapshot();
     });
   });
 });

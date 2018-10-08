@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
 import { ThemeContext } from "@hig/themes";
+import { memoizeCreateButtonEventHandlers } from "@hig/utils";
 
 import "./module.scss";
 
@@ -15,14 +16,13 @@ export default class ModuleCompact extends Component {
     icon: PropTypes.node.isRequired,
     /** Called when clicking on the title */
     onClickTitle: PropTypes.func,
+    /** Called when link is focused  */
+    onFocus: PropTypes.func,
     /** Called when hovering over the icon */
     onMouseOver: PropTypes.func
   };
 
-  static defaultProps = {
-    onClickTitle: () => {},
-    onMouseOver: () => {}
-  };
+  createEventHandlers = memoizeCreateButtonEventHandlers();
 
   render() {
     const {
@@ -30,9 +30,13 @@ export default class ModuleCompact extends Component {
       activeChildren,
       icon,
       onClickTitle,
+      onFocus,
       onMouseOver
     } = this.props;
     const classes = themeClass => cx(themeClass, "hig__side-nav__module");
+    const { handleClick, handleKeyDown } = this.createEventHandlers(
+      onClickTitle
+    );
 
     const linkClasses = themeClass =>
       cx(themeClass, "hig__side-nav__module__link", {
@@ -43,11 +47,16 @@ export default class ModuleCompact extends Component {
     return (
       <ThemeContext.Consumer>
         {({ themeClass }) => (
-          <div className={classes(themeClass)} onMouseOver={onMouseOver}>
+          <div
+            className={classes(themeClass)}
+            onFocus={onFocus}
+            onMouseOver={onMouseOver}
+          >
             <div className="hig__side-nav__module__row">
               <div
                 className={linkClasses(themeClass)}
-                onClick={onClickTitle}
+                onClick={handleClick}
+                onKeyDown={handleKeyDown}
                 role="button"
                 tabIndex={0}
               >

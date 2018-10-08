@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tooltip/presenters/ContentPresenter renders with children 1`] = `
+<div
+  className="hig__tooltip-v1__content"
+>
+  <span>
+    Hello
+  </span>
+</div>
+`;
+
+exports[`tooltip/presenters/ContentPresenter renders without props 1`] = `
+<div
+  className="hig__tooltip-v1__content"
+/>
+`;

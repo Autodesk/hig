@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`flyout/presenters/PointerWrapperPresenter  1`] = `
+<div
+  aria-hidden="true"
+  className="hig__flyout-v1__pointer-wrapper"
+  role="presentation"
+  style={undefined}
+/>
+`;
+
+exports[`flyout/presenters/PointerWrapperPresenter  2`] = `
+<div
+  aria-hidden="true"
+  className="hig__flyout-v1__pointer-wrapper"
+  role="presentation"
+  style={
+    Object {
+      "left": "23px",
+      "top": "1px",
+    }
+  }
+>
+  whoa there
+</div>
+`;

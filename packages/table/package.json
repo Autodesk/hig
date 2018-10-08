@@ -1,6 +1,6 @@
 {
   "name": "@hig/table",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "HIG Table",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -35,7 +35,7 @@
     "@hig/jest-preset": "^0.1.0",
     "@hig/scripts": "^0.1.2",
     "@hig/semantic-release-config": "^0.1.0",
-    "@hig/styles": "^0.2.3",
+    "@hig/styles": "^0.3.0",
     "delay": "^3.0.0"
   },
   "scripts": {
@@ -49,6 +49,7 @@
     "rules": {
       "class-methods-use-this": 1,
       "import/extensions": 1,
+      "jsx-a11y/click-events-have-key-events": 1,
       "jsx-a11y/interactive-supports-focus": 1,
       "jsx-a11y/no-static-element-interactions": 1,
       "max-len": 1,
@@ -57,8 +58,10 @@
       "no-shadow": 1,
       "no-unused-expressions": 1,
       "no-unused-vars": 1,
+      "react/default-props-match-prop-types": 1,
       "react/forbid-prop-types": 1,
       "react/no-unused-prop-types": 1,
+      "react/no-unused-state": 1,
       "react/sort-comp": 1
     }
   },

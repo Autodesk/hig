@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tooltip/Tooltip  1`] = `
+<div
+  className="hig__flyout-v1 hig__flyout-v1--hidden hig__flyout-v1--top-left"
+>
+  <div
+    className="hig__flyout-v1__action"
+  />
+  <div
+    className="hig__flyout-v1__container"
+    style={
+      Object {
+        "left": "0px",
+        "top": "0px",
+      }
+    }
+  >
+    <div
+      aria-hidden="true"
+      className="hig__flyout-v1__pointer-wrapper"
+      role="presentation"
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
+    >
+      <svg
+        height="12"
+        viewBox="0 0 12 12"
+        width="12"
+      >
+        <polygon
+          fill="#393939"
+          points="0,6 6,0 12,6"
+        />
+        <polygon
+          fill="#393939"
+          points="2.5,6 6,2.5 9.5,6"
+        />
+      </svg>
+    </div>
+    <div
+      className="hig__tooltip-v1__panel"
+      onScroll={undefined}
+      style={
+        Object {
+          "maxHeight": undefined,
+        }
+      }
+    >
+      <div
+        className="hig__tooltip-v1__panel__inner"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`tooltip/Tooltip  2`] = `
+<div
+  className="hig__flyout-v1 hig__flyout-v1--top-left"
+>
+  <div
+    className="hig__flyout-v1__action"
+  >
+    <button
+      className="hig--light-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+      onBlur={undefined}
+      onClick={[Function]}
+      onFocus={undefined}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseOver={undefined}
+    >
+      <span
+        className="hig__button__title"
+      >
+        Click Me
+      </span>
+    </button>
+  </div>
+  <div
+    className="hig__flyout-v1__container"
+    style={
+      Object {
+        "left": "0px",
+        "top": "0px",
+      }
+    }
+  >
+    <div
+      aria-hidden="true"
+      className="hig__flyout-v1__pointer-wrapper"
+      role="presentation"
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
+    >
+      <svg
+        height="12"
+        viewBox="0 0 12 12"
+        width="12"
+      >
+        <polygon
+          fill="#393939"
+          points="0,6 6,0 12,6"
+        />
+        <polygon
+          fill="#393939"
+          points="2.5,6 6,2.5 9.5,6"
+        />
+      </svg>
+    </div>
+    <div
+      className="hig__tooltip-v1__panel"
+      onScroll={[Function]}
+      style={
+        Object {
+          "maxHeight": "150px",
+        }
+      }
+    >
+      <div
+        className="hig__tooltip-v1__panel__inner"
+      >
+        Hello World
+      </div>
+    </div>
+  </div>
+</div>
+`;

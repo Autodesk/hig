@@ -14,15 +14,22 @@
   - [Unit testing](#unit-testing)
     - [How it works](#how-it-works)
     - [How to run manually](#how-to-run-manually)
+    - [How to update snapshots](#how-to-update-snapshots)
   - [Visual regression testing](#visual-regression-testing)
     - [How it works](#how-it-works-1)
     - [How to run manually](#how-to-run-manually-1)
 - [Git commits](#git-commits)
 - [Package versioning](#package-versioning)
+  - [New package version](#new-package-version)
+  - [Creating pre-releases](#creating-pre-releases)
 - [Deployment](#deployment)
   - [Storybook](#storybook)
-  - [Component packages](#component-packages)
+  - [Packages](#packages)
+    - [New packages](#new-packages)
+    - [Pre-releases](#pre-releases)
   - [How to deploy](#how-to-deploy)
+- [Documentation](#documentation)
+  - [Updating table of contents](#updating-table-of-contents)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -100,6 +107,12 @@ Unit tests reside within module specifications (`moduleName.test.js`), which are
 yarn test
 ```
 
+#### How to update snapshots
+
+```bash
+yarn test -u
+```
+
 ### Visual regression testing
 
 To ensure that changes do not break the visual presentation of components, we run a suite of visual regression tests via [Gemini][].
@@ -129,6 +142,23 @@ Package versioning is automated via [Semantic Release][] and determined by commi
 [Angular Git Commit Guidelines]: https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines
 [Semantic Release]: https://github.com/semantic-release/semantic-release
 
+### New package version
+
+Using the [example package documentation][package-example] as a reference, create a new package with the version `1.0.0-alpha`.
+
+Per [Semantic Versioning 2.0.0][semver], the `"-alpha"` portion of the version labels the package as pre-release. Packages labeled as pre-release are ignored during deployment.
+
+### Creating pre-releases
+
+Packages that have already been published can have pre-releases as well.
+
+For example, `@hig/button@1.0.0` can have a pre-release package by changing the version to `@hig/button@1.1.0-alpha`.
+Subsequent pre-releases can be made by further changing the package version, e.g. `@hig/button@1.1.0-alpha.2`.
+
+[package-example]: ./docs/package-example
+[npm-publish]: https://docs.npmjs.com/cli/publish
+[semver]: https://semver.org/
+
 ## Deployment
 
 ### Storybook
@@ -138,18 +168,27 @@ Package versioning is automated via [Semantic Release][] and determined by commi
 [Storybook]: http://storybook.hig.autodesk.com/
 [Storybook Staging]: http://storybook-staging.hig.autodesk.com/
 
-### Component packages
+### Packages
 
 Packages are published via [Semantic Release][].
+
+#### New packages
+
+New packages should be labeled as pre-release and are ignored during deployment.
+For the deployment workflow to recognize them, the pre-release version must be changed to a stable version. For example, `1.0.0-alpha` should be changed to `1.0.0`.
+
+#### Pre-releases
+
+Packages labeled as pre-release are ignored during deployment, and must be published manually via the appropriate [CLI tools][npm-publish].
 
 ### How to deploy
 
 1. Create a pull request (PR) to merge `development` into `master`.
-    * Begin the PR title with `Release:` for consistency.
-    * Add the `release` issue label for discovery.
+   * Begin the PR title with `Release:` for consistency.
+   * Add the `release` issue label for discovery.
 1. Wait for the PR to receive approval and all automation to finish.
 1. Merge the PR with a **merge commit**
-    * Merging with a merge commit ensures there's no loss of commit information.
+   * Merging with a merge commit ensures there's no loss of commit information.
 
 _Semantic Release will then:_
 
@@ -159,3 +198,17 @@ _Semantic Release will then:_
 1. Update the `master` branch
 1. Create GitHub releases
 1. Merge all changes into the `development` branch
+
+## Documentation
+
+### Updating table of contents
+
+Every table of contents is generated using [`doctoc`][doctoc].
+
+[doctoc]: https://www.npmjs.com/package/doctoc
+
+To update each document's table of contents run:
+
+```bash
+yarn docs
+```

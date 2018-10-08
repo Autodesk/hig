@@ -12,6 +12,8 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders with all props 1`] = `
       onBlur={undefined}
       onClick={undefined}
       onFocus={undefined}
+      onMouseEnter={undefined}
+      onMouseLeave={undefined}
       onMouseOver={undefined}
     >
       <span
@@ -25,28 +27,33 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders with all props 1`] = `
     className="hig__flyout-v1__container"
     style={
       Object {
-        "left": 42,
-        "top": 42,
+        "left": "42px",
+        "top": "42px",
       }
     }
   >
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__chevron"
+      className="hig__flyout-v1__pointer-wrapper"
       role="presentation"
-    />
-    <div
-      aria-hidden="true"
-      className="hig__flyout-v1__chevron-cover"
-      role="presentation"
-    />
+      style={
+        Object {
+          "left": "42px",
+          "top": "42px",
+        }
+      }
+    >
+      <div>
+        I am a custom pointer
+      </div>
+    </div>
   </div>
 </div>
 `;
 
 exports[`flyout/FlyoutPresenter/FlyoutPresenter renders without props 1`] = `
 <div
-  className="hig__flyout-v1 hig__flyout-v1--exited hig__flyout-v1--top-right"
+  className="hig__flyout-v1 hig__flyout-v1--exited hig__flyout-v1--top-left"
 >
   <div
     className="hig__flyout-v1__action"
@@ -55,21 +62,37 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders without props 1`] = `
     className="hig__flyout-v1__container"
     style={
       Object {
-        "left": undefined,
-        "top": undefined,
+        "left": "0px",
+        "top": "0px",
       }
     }
   >
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__chevron"
+      className="hig__flyout-v1__pointer-wrapper"
       role="presentation"
-    />
-    <div
-      aria-hidden="true"
-      className="hig__flyout-v1__chevron-cover"
-      role="presentation"
-    />
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
+    >
+      <svg
+        height="24"
+        viewBox="0 0 24 24"
+        width="24"
+      >
+        <polygon
+          fill="#d4dbe1"
+          points="0,12 12,0 24,12"
+        />
+        <polygon
+          fill="#fff"
+          points="2.5,12 12,2.5 21.5,12"
+        />
+      </svg>
+    </div>
   </div>
 </div>
 `;

@@ -10,10 +10,3 @@ $panel-background-color: color("hig-white");
 $panel-border-radius: 4px;
 $panel-border-width: 1px;
 $panel-padding: spacing("s");
-
-$chevron-size: 14px;
-$chevron-centering-position: calc(50% - #{$chevron-size / 2});
-$chevron-shadow-color: color("hig-cool-gray-20");
-$chevron-shadow-offset: 2px;
-$chevron-side-position: -(14px / 2 - $panel-border-width);
-$chevron-spacing: 14px;

@@ -1,18 +1,153 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`side-nav/Module snapshot tests renders with mionimal props 1`] = `
+exports[`side-nav/Module snapshot tests renders a expanded menu with active children 1`] = `
 <div
   className="hig--light-theme hig__side-nav__module"
-  onMouseOver={[Function]}
+  onFocus={undefined}
+  onMouseOver={undefined}
 >
   <div
     className="hig__side-nav__module__row"
   >
     <div
-      className="hig--light-theme hig__side-nav__module__link"
+      className="hig--light-theme hig__side-nav__module__link hig__side-nav__module__link--active-children"
       href={undefined}
       onClick={[Function]}
+      onKeyDown={[Function]}
+      role="button"
+      tabIndex="-1"
+      target={undefined}
+    >
+      <div
+        className="hig__side-nav__module__link__icon"
+      >
+        <div
+          data-test="icon"
+        />
+      </div>
+      <div
+        className="hig__side-nav__module__link__title"
+      >
+        Module
+      </div>
+    </div>
+    <div
+      aria-pressed={true}
+      className="hig--light-theme hig__side-nav__module__collapse-button"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      role="button"
+      tabIndex={0}
+    >
+      <div
+        className="hig__icon hig__icon--24-size"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" role=\\"img\\" title=\\"caret-24\\"><path d=\\"M8.71,3.22a.75.75,0,0,0-1.06,0L5,5.87,2.35,3.22a.75.75,0,0,0-1.06,0,.74.74,0,0,0,0,1.06L4.65,7.64a.5.5,0,0,0,.7,0L8.71,4.28A.74.74,0,0,0,8.71,3.22Z\\"/></svg>",
+          }
+        }
+      />
+    </div>
+  </div>
+  <div
+    className="hig__side-nav__module__submodules"
+  >
+    <div
+      data-test="children"
+    />
+  </div>
+</div>
+`;
+
+exports[`side-nav/Module snapshot tests renders a link 1`] = `
+<div
+  className="hig--light-theme hig__side-nav__module"
+  onFocus={undefined}
+  onMouseOver={undefined}
+>
+  <div
+    className="hig__side-nav__module__row"
+  >
+    <a
+      className="hig--light-theme hig__side-nav__module__link"
+      href="http://example.com"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      role={undefined}
+      tabIndex="0"
       target="_self"
+    >
+      <div
+        className="hig__side-nav__module__link__icon"
+      />
+      <div
+        className="hig__side-nav__module__link__title"
+      >
+        Module
+      </div>
+    </a>
+  </div>
+  <div
+    className="hig__side-nav__module__submodules hig__side-nav__module__submodules--no-icon"
+  />
+</div>
+`;
+
+exports[`side-nav/Module snapshot tests renders an active button 1`] = `
+<div
+  className="hig--light-theme hig__side-nav__module"
+  onFocus={undefined}
+  onMouseOver={undefined}
+>
+  <div
+    className="hig__side-nav__module__row"
+  >
+    <div
+      className="hig--light-theme hig__side-nav__module__link hig__side-nav__module__link--active"
+      href={undefined}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      role="button"
+      tabIndex="0"
+      target={undefined}
+    >
+      <div
+        className="hig__side-nav__module__link__icon"
+      >
+        <span
+          data-test="icon"
+        />
+      </div>
+      <div
+        className="hig__side-nav__module__link__title"
+      >
+        Module
+      </div>
+    </div>
+  </div>
+  <div
+    className="hig__side-nav__module__submodules"
+  />
+</div>
+`;
+
+exports[`side-nav/Module snapshot tests renders an external link 1`] = `
+<div
+  className="hig--light-theme hig__side-nav__module"
+  onFocus={undefined}
+  onMouseOver={undefined}
+>
+  <div
+    className="hig__side-nav__module__row"
+  >
+    <a
+      className="hig--light-theme hig__side-nav__module__link"
+      href="http://example.com"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      role={undefined}
+      tabIndex="0"
+      target="_blank"
     >
       <div
         className="hig__side-nav__module__link__icon"
@@ -24,7 +159,84 @@ exports[`side-nav/Module snapshot tests renders with mionimal props 1`] = `
       </div>
       <div
         className="hig__side-nav__module__link__external-link-icon"
+      >
+        <div
+          className="hig__icon hig__icon--24-size"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"9\\" height=\\"8\\" viewBox=\\"0 0 9 8\\" role=\\"img\\" title=\\"external-link-24\\"><polygon points=\\"7 0 2 0 2 1.46 2 2 5.54 2 1 6.54 2.46 8 7 3.46 7 7 7.54 7 9 7 9 2 9 0 7 0\\"/></svg>",
+            }
+          }
+        />
+      </div>
+    </a>
+  </div>
+  <div
+    className="hig__side-nav__module__submodules hig__side-nav__module__submodules--no-icon"
+  />
+</div>
+`;
+
+exports[`side-nav/Module snapshot tests renders with a click handlers 1`] = `
+<div
+  className="hig--light-theme hig__side-nav__module"
+  onFocus={undefined}
+  onMouseOver={undefined}
+>
+  <div
+    className="hig__side-nav__module__row"
+  >
+    <div
+      className="hig--light-theme hig__side-nav__module__link"
+      href={undefined}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      role="button"
+      tabIndex="0"
+      target={undefined}
+    >
+      <div
+        className="hig__side-nav__module__link__icon"
       />
+      <div
+        className="hig__side-nav__module__link__title"
+      >
+        Module
+      </div>
+    </div>
+  </div>
+  <div
+    className="hig__side-nav__module__submodules hig__side-nav__module__submodules--no-icon"
+  />
+</div>
+`;
+
+exports[`side-nav/Module snapshot tests renders with minimal props 1`] = `
+<div
+  className="hig--light-theme hig__side-nav__module"
+  onFocus={undefined}
+  onMouseOver={undefined}
+>
+  <div
+    className="hig__side-nav__module__row"
+  >
+    <div
+      className="hig--light-theme hig__side-nav__module__link"
+      href={undefined}
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      role="button"
+      tabIndex="0"
+      target={undefined}
+    >
+      <div
+        className="hig__side-nav__module__link__icon"
+      />
+      <div
+        className="hig__side-nav__module__link__title"
+      >
+        Module
+      </div>
     </div>
   </div>
   <div

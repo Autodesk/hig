@@ -1,7 +1,9 @@
+import { hasExports } from "@hig/jest-preset/helpers";
+
 import * as index from "./index";
 
 describe("flyout/index", () => {
-  [
+  hasExports(index, [
     {
       name: "default",
       value: expect.any(Function)
@@ -23,12 +25,36 @@ describe("flyout/index", () => {
       value: expect.any(Function)
     },
     {
+      name: "Pointer",
+      value: expect.any(Function)
+    },
+    {
       name: "default.Panel",
       value: expect.any(Function)
+    },
+    {
+      name: "dislocateContainer",
+      value: expect.any(Function)
+    },
+    {
+      name: "offsetContainerHorizontal",
+      value: expect.any(Function)
+    },
+    {
+      name: "offsetContainerVertical",
+      value: expect.any(Function)
+    },
+    {
+      name: "offsetPanelHorizontal",
+      value: expect.any(Function)
+    },
+    {
+      name: "transitionStatuses",
+      value: expect.any(Object)
+    },
+    {
+      name: "AVAILABLE_TRANSITION_STATUSES",
+      value: expect.any(Array)
     }
-  ].forEach(({ name, value }) => {
-    it(`exports ${name}`, () => {
-      expect(index).toHaveProperty(name, value);
-    });
-  });
+  ]);
 });

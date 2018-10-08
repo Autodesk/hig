@@ -1,3 +1,19 @@
+# [@hig/utils-v0.3.0](https://github.com/Autodesk/hig/compare/@hig/utils@0.2.1...@hig/utils@0.3.0) (2018-09-26)
+
+
+### Features
+
+* **a11y:** add `createButtonEventHandlers` ([05b93f4](https://github.com/Autodesk/hig/commit/05b93f4))
+* **performance:** add `memoizeCombineEventHandlers` ([bba60c4](https://github.com/Autodesk/hig/commit/bba60c4))
+
+# [@hig/utils-v0.2.1](https://github.com/Autodesk/hig/compare/@hig/utils@0.2.0...@hig/utils@0.2.1) (2018-08-24)
+
+
+### Bug Fixes
+
+* make `combineEventHandlers` more reliable ([cdece6e](https://github.com/Autodesk/hig/commit/cdece6e))
+* **behavior:** bump [@hig](https://github.com/hig)/utils dependents to v0.2.1 ([48b74d0](https://github.com/Autodesk/hig/commit/48b74d0))
+
 <a name="@hig/utils-v0.2.0"></a>
 # [@hig/utils-v0.2.0](https://github.com/Autodesk/hig/compare/@hig/utils@0.1.0...@hig/utils@0.2.0) (2018-07-26)
 

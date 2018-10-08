@@ -1,6 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Label when an image URL is not provided renders children 1`] = `
+exports[`Label renders with all props 1`] = `
+<label
+  form="a_form"
+  htmlFor="a_field"
+  style={
+    Object {
+      "color": "rgba(60, 60, 60, 0.2)",
+      "fontFamily": "ArtifaktElement, sans-serif",
+      "fontSize": "12px",
+      "fontWeight": 400,
+      "lineHeight": "1.4",
+    }
+  }
+>
+  I am a label
+</label>
+`;
+
+exports[`Label renders without props 1`] = `
 <label
   form={undefined}
   htmlFor={undefined}
@@ -13,7 +31,5 @@ exports[`Label when an image URL is not provided renders children 1`] = `
       "lineHeight": "1.4",
     }
   }
->
-  Jon Snow
-</label>
+/>
 `;

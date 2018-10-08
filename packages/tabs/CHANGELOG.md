@@ -1,3 +1,10 @@
+# [@hig/tabs-v0.1.2](https://github.com/Autodesk/hig/compare/@hig/tabs@0.1.1...@hig/tabs@0.1.2) (2018-10-08)
+
+
+### Bug Fixes
+
+* **behavior:** add missing keyboard interactions ([cfe892c](https://github.com/Autodesk/hig/commit/cfe892c))
+
 <a name="@hig/tabs-v0.1.1"></a>
 # [@hig/tabs-v0.1.1](https://github.com/Autodesk/hig/compare/@hig/tabs@0.1.0...@hig/tabs@0.1.1) (2018-07-19)
 

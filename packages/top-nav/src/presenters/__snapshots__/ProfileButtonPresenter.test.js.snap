@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`top-nav/presenters/ProfileButtonPresenter  1`] = `
+<button
+  className="hig__top-nav__profile-action__button"
+  onClick={undefined}
+  type="button"
+>
+  <span
+    aria-label="Avatar for Wolfgang Pauli"
+    className="hig__avatarV2 hig__avatarV2--size--medium-32 hig__avatarV2__background--indigo"
+    role="img"
+  >
+    <span
+      aria-hidden="true"
+      className="hig__avatarV2__initials"
+    >
+      WP
+    </span>
+  </span>
+</button>
+`;
+
+exports[`top-nav/presenters/ProfileButtonPresenter  2`] = `
+<button
+  className="hig__top-nav__profile-action__button"
+  onClick={undefined}
+  type="button"
+>
+  <span
+    aria-label="Avatar for Hans Hellmann"
+    className="hig__avatarV2 hig__avatarV2--size--medium-32 hig__avatarV2__background--pink"
+    role="img"
+  >
+    <span
+      aria-hidden="true"
+      className="hig__avatarV2__initials"
+    >
+      HH
+    </span>
+  </span>
+</button>
+`;
+
+exports[`top-nav/presenters/ProfileButtonPresenter  3`] = `
+<button
+  className="hig__top-nav__profile-action__button"
+  onClick={[Function]}
+  type="button"
+>
+  <span
+    aria-label="Avatar for Richard Feynman"
+    className="hig__avatarV2 hig__avatarV2--size--medium-32 hig__avatarV2__background--green"
+    role="img"
+  >
+    <span
+      className="hig__avatarV2__image-wrapper"
+    >
+      <img
+        alt="Avatar image of Richard Feynman"
+        className="hig__avatarV2__image"
+        onError={[Function]}
+        src="richard_phillips_feynman.png"
+      />
+    </span>
+    <span
+      aria-hidden="true"
+      className="hig__avatarV2__initials"
+    >
+      RF
+    </span>
+  </span>
+</button>
+`;

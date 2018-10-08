@@ -1,6 +1,6 @@
 {
   "name": "@hig/timestamp",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "HIG Timestamp",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -28,7 +28,7 @@
     "@hig/jest-preset": "^0.1.0",
     "@hig/scripts": "^0.1.2",
     "@hig/semantic-release-config": "^0.1.0",
-    "@hig/styles": "^0.2.3",
+    "@hig/styles": "^0.3.0",
     "mockdate": "^2.0.2"
   },
   "peerDependencies": {

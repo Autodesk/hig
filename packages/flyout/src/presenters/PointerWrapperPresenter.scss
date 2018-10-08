@@ -1,0 +1,22 @@
+.hig__flyout-v1__pointer-wrapper {
+  display: flex;
+  position: absolute;
+
+  .hig__flyout-v1--right-top &,
+  .hig__flyout-v1--right-center &,
+  .hig__flyout-v1--right-bottom & {
+    transform: rotate(90deg);
+  }
+
+  .hig__flyout-v1--bottom-left &,
+  .hig__flyout-v1--bottom-center &,
+  .hig__flyout-v1--bottom-right & {
+    transform: rotate(180deg);
+  }
+
+  .hig__flyout-v1--left-top &,
+  .hig__flyout-v1--left-center &,
+  .hig__flyout-v1--left-bottom & {
+    transform: rotate(-90deg);
+  }
+}

@@ -13,4 +13,6 @@ export const anchorPoints = Object.freeze({
   LEFT_BOTTOM: "left-bottom"
 });
 
-export const availableAnchorPoints = Object.freeze(Object.values(anchorPoints));
+export const AVAILABLE_ANCHOR_POINTS = Object.freeze(
+  Object.values(anchorPoints)
+);

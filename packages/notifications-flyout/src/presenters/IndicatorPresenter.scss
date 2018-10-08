@@ -2,6 +2,7 @@
 @import "~@hig/styles/mixins/typography.scss";
 
 .hig__notifications-flyout__indicator {
+  display: flex;
   position: relative;
 }
 
@@ -22,11 +23,5 @@
 
   &.hig__notifications-flyout__indicator__count--hide {
     display: none;
-  }
-}
-
-.hig__notifications-flyout__indicator .hig__icon {
-  &:hover {
-    fill: color(hig-blue-50);
   }
 }
