@@ -4,220 +4,46 @@ exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter  1`
 
 exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter  2`] = `
 <div
-  className="hig__project-account-switcher"
-  onClick={undefined}
+  className="hig__project-account-switcher__target"
+  onClick={[Function]}
+  onKeyDown={[Function]}
   role="button"
   tabIndex="0"
 >
   <div
-    className="hig__flyout-v1 hig__flyout-v1--hidden hig__flyout-v1--top-left"
+    className="hig__project-account-switcher__target__item hig__project-account-switcher__item"
+  >
+    <span
+      className="hig__project-account-switcher__item__image-wrapper"
+    >
+      <img
+        alt="Foo"
+        className="hig__project-account-switcher__item__image"
+        src=""
+      />
+      <span
+        className="hig__project-account-switcher__item__image-placeholder"
+      >
+        A1/P2
+      </span>
+    </span>
+    <span
+      className="hig__project-account-switcher__item__label"
+    >
+      Foo
+    </span>
+  </div>
+  <div
+    className="hig__project-account-switcher__target__caret"
   >
     <div
-      className="hig__flyout-v1__action"
-    >
-      <div
-        className="hig__project-account-switcher__target"
-        hasHover={false}
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <div
-          className="hig__project-account-switcher__item"
-        >
-          <span
-            className="hig__project-account-switcher__item__image-wrapper"
-          >
-            <img
-              alt="Account 1 / Project 2"
-              className="hig__project-account-switcher__item__image"
-              src=""
-            />
-            <span
-              className="hig__project-account-switcher__item__image-placeholder"
-            >
-              A1/P2
-            </span>
-          </span>
-          <span
-            className="hig__project-account-switcher__item__label"
-          >
-            Account 1 / Project 2
-          </span>
-        </div>
-        <span
-          className="hig__project-account-switcher__target__caret"
-        >
-          <div
-            className="hig__icon hig__icon--24-size"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "<svg width=\\"10\\" height=\\"6\\" viewBox=\\"0 0 10 6\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"caret-24\\"><polyline transform=\\"rotate(45 9.828 3)\\" points=\\"8 2 8 8 2 8\\" stroke=\\"#2E4258\\" stroke-width=\\"1.15\\" fill=\\"none\\" fill-rule=\\"evenodd\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"/></svg>",
-              }
-            }
-          />
-        </span>
-      </div>
-    </div>
-    <div
-      className="hig__flyout-v1__container"
-      style={
+      className="hig__icon hig__icon--24-size"
+      dangerouslySetInnerHTML={
         Object {
-          "left": "0px",
-          "top": "0px",
+          "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" role=\\"img\\" title=\\"caret-24\\"><path d=\\"M8.71,3.22a.75.75,0,0,0-1.06,0L5,5.87,2.35,3.22a.75.75,0,0,0-1.06,0,.74.74,0,0,0,0,1.06L4.65,7.64a.5.5,0,0,0,.7,0L8.71,4.28A.74.74,0,0,0,8.71,3.22Z\\"/></svg>",
         }
       }
-    >
-      <div
-        aria-hidden="true"
-        className="hig__flyout-v1__pointer-wrapper"
-        role="presentation"
-        style={
-          Object {
-            "left": "0px",
-            "top": "0px",
-          }
-        }
-      >
-        <svg
-          height="24"
-          viewBox="0 0 24 24"
-          width="24"
-        >
-          <polygon
-            fill="#d4dbe1"
-            points="0,12 12,0 24,12"
-          />
-          <polygon
-            fill="#fff"
-            points="2.5,12 12,2.5 21.5,12"
-          />
-        </svg>
-      </div>
-      <div
-        className="hig__flyout-v1__panel-container"
-        style={
-          Object {
-            "maxHeight": undefined,
-          }
-        }
-      >
-        <div
-          className="hig__flyout-v1__panel-container__inner"
-        >
-          <div
-            className="hig__project-account-switcher--custom-width-and-padding"
-          >
-            <div
-              className="hig__project-account-switcher__lists"
-            >
-              <ul
-                className="hig__project-account-switcher__list"
-              >
-                <span
-                  className="hig__project-account-switcher__list__title"
-                >
-                  Accounts
-                </span>
-                <li
-                  className="hig__project-account-switcher__item hig__project-account-switcher__item--account hig__project-account-switcher__item--active"
-                  onClick={[Function]}
-                  role="menuitem"
-                  tabIndex="0"
-                >
-                  <span
-                    className="hig__project-account-switcher__item__image-wrapper"
-                  >
-                    <span
-                      className="hig__project-account-switcher__item__image-placeholder"
-                    >
-                      A1
-                    </span>
-                  </span>
-                  <span
-                    className="hig__project-account-switcher__item__label"
-                  >
-                    Account 1
-                  </span>
-                </li>
-                <li
-                  className="hig__project-account-switcher__item hig__project-account-switcher__item--account hig__project-account-switcher__item--active"
-                  onClick={[Function]}
-                  role="menuitem"
-                  tabIndex="0"
-                >
-                  <span
-                    className="hig__project-account-switcher__item__image-wrapper"
-                  >
-                    <span
-                      className="hig__project-account-switcher__item__image-placeholder"
-                    >
-                      A2
-                    </span>
-                  </span>
-                  <span
-                    className="hig__project-account-switcher__item__label"
-                  >
-                    Account 2
-                  </span>
-                </li>
-              </ul>
-              <ul
-                className="hig__project-account-switcher__list"
-              >
-                <span
-                  className="hig__project-account-switcher__list__title"
-                >
-                  Projects
-                </span>
-                <li
-                  className="hig__project-account-switcher__item hig__project-account-switcher__item--project hig__project-account-switcher__item--active"
-                  onClick={[Function]}
-                  role="menuitem"
-                  tabIndex="0"
-                >
-                  <span
-                    className="hig__project-account-switcher__item__image-wrapper"
-                  >
-                    <span
-                      className="hig__project-account-switcher__item__image-placeholder"
-                    >
-                      P1
-                    </span>
-                  </span>
-                  <span
-                    className="hig__project-account-switcher__item__label"
-                  >
-                    Project 1
-                  </span>
-                </li>
-                <li
-                  className="hig__project-account-switcher__item hig__project-account-switcher__item--project hig__project-account-switcher__item--active"
-                  onClick={[Function]}
-                  role="menuitem"
-                  tabIndex="0"
-                >
-                  <span
-                    className="hig__project-account-switcher__item__image-wrapper"
-                  >
-                    <span
-                      className="hig__project-account-switcher__item__image-placeholder"
-                    >
-                      P2
-                    </span>
-                  </span>
-                  <span
-                    className="hig__project-account-switcher__item__label"
-                  >
-                    Project 2
-                  </span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    />
   </div>
 </div>
 `;

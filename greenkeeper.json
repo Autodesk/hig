@@ -15,7 +15,6 @@
         "packages/icon/package.json",
         "packages/icons/package.json",
         "packages/input/package.json",
-        "packages/interface/package.json",
         "packages/jest-preset/package.json",
         "packages/label/package.json",
         "packages/modal/package.json",

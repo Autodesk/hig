@@ -56,7 +56,8 @@ TypeExample.propTypes = {
 };
 
 function Example(props) {
-  const ref = props.themeConfig[props.role].ref;
+  const { ref } = props.themeConfig[props.role];
+
   return (
     <div>
       <TypeExample {...props} />

@@ -9,16 +9,8 @@ import TabPresenter from "./presenters/TabPresenter";
  * @property {boolean} [active]
  * @property {string} [label]
  * @property {Function} [handleClick]
+ * @property {Function} [handleKeyDown]
  */
-
-/**
- * @param {RenderTabPayload} props
- * @returns {JSX.Element}
- */
-// eslint-disable-next-line react/prop-types
-function renderTab({ handleClick, ...otherProps }) {
-  return <TabPresenter onClick={handleClick} {...otherProps} />;
-}
 
 /**
  * @typedef {Object} TabProps
@@ -41,7 +33,19 @@ export default function Tab() {
 }
 
 Tab.defaultProps = {
-  render: renderTab
+  /**
+   * @param {RenderTabPayload} props
+   * @returns {JSX.Element}
+   */
+  render({ handleClick, handleKeyDown, ...otherProps }) {
+    return (
+      <TabPresenter
+        onClick={handleClick}
+        onKeyDown={handleKeyDown}
+        {...otherProps}
+      />
+    );
+  }
 };
 
 Tab.propTypes = {

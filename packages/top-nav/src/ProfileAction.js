@@ -29,7 +29,7 @@ export default class ProfileAction extends Component {
      */
     fallbackAnchorPoints: PropTypes.arrayOf(
       PropTypes.oneOf(AVAILABLE_ANCHOR_POINTS)
-    ).isRequired,
+    ),
     /** Content to render in the profile flyout */
     children: PropTypes.node,
     /** Callback when the flyout is opened */
