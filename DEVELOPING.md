@@ -30,6 +30,8 @@
   - [How to deploy](#how-to-deploy)
 - [Documentation](#documentation)
   - [Updating table of contents](#updating-table-of-contents)
+- [How to fix an old release](#how-to-fix-an-old-release)
+  - [Steps](#steps)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -212,3 +214,68 @@ To update each document's table of contents run:
 ```bash
 yarn docs
 ```
+
+## How to fix an old release
+
+Scenario: a consumer reports a critical bug for `@hig/button@0.1.0`, but the current package version is `@hig/button@1.0.0`. Additionally, upgrading to `@hig/button@1.0.0` isn't an option for the consumer.
+
+We need to patch `@hig/button@0.1.0`, by releasing `@hig/button@0.1.1` with the fix.
+
+### Steps
+
+1. Checkout a new branch based on the tag for the respective version
+
+```bash
+git checkout @hig/button@0.1.0
+git checkout -b fix/button
+```
+
+2. Update the working directory
+
+```bash
+yarn install
+yarn run build
+```
+
+3. Make the necessary changes for the fix
+4. Commit changes following the [Git commit guidelines](#git-commits)
+5. Bump the package version
+
+_`packages/button/package.json`_
+
+```diff
+{
+  "name": "@hig/button",
+- "version": "0.1.0",
++ "version": "0.1.1"
+}
+```
+
+6. Update the `CHANGELOG.md`
+    * Adhere to the existing format
+7. Commit changes
+
+```bash
+git add packages/button/package.json
+git add packages/button/CHANGELOG.md
+git commit -m "chore(release): bump version to `@hig/button@0.1.1`"
+```
+8. Merge development branch and resolve conflicts
+
+```bash
+git merge development --no-ff
+```
+
+9. Follow standard pull request procedure
+    * Wait for CI to successfully complete
+    * Wait for pull request approval
+    * Merge PR with merge commit
+8. Publish package
+
+```bash
+cd ./packages/button
+npm publish
+```
+
+9. Create a Git tag and release entry via GitHub
+    * The tag should point to the commit with the `chore(release)` message
