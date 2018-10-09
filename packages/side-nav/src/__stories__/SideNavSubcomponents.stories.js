@@ -8,6 +8,7 @@ import Icon, { names as iconNames } from "@hig/icon";
 
 import SideNav from "../index";
 import infoOptions from "./infoOptions";
+import { AVAILABLE_TARGETS } from "../targets";
 
 storiesOf("GlobalNav|SideNav.CollapseButton", module).add(
   "default",
@@ -27,10 +28,11 @@ storiesOf("GlobalNav|SideNav.Link", module).add(
     <KnobbedThemeProvider>
       <SideNav.Link
         onClick={action("onClick")}
+        onFocus={action("onFocus")}
         onMouseOver={action("onMouseOver")}
         title={text("Title", "SideNav Link")}
         link={text("Link", "https://www.autodesk.com")}
-        target={select("Link Target", ["_self", "_blank", "_parent", "_top"])}
+        target={select("Link Target", AVAILABLE_TARGETS)}
       />
     </KnobbedThemeProvider>
   ))
@@ -43,10 +45,11 @@ storiesOf("GlobalNav|SideNav.Submodule", module).add(
       <SideNav.Submodule
         active={boolean("Active", true)}
         onClick={action("onClick")}
+        onFocus={action("onFocus")}
         onMouseOver={action("onMouseOver")}
         title={text("Title", "Submodule")}
         link={text("Link", "https://www.autodesk.com")}
-        target={select("Link Target", ["_self", "_blank", "_parent", "_top"])}
+        target={select("Link Target", AVAILABLE_TARGETS)}
       />
     </KnobbedThemeProvider>
   ))
@@ -65,8 +68,9 @@ storiesOf("GlobalNav|SideNav.Module", module)
           minimized={boolean("Minimized", false)}
           onClickCollapseButton={action("onClickCollapseButton")}
           onClickTitle={action("onClickTitle")}
+          onFocus={action("onFocus")}
           onMouseOver={action("onMouseOver")}
-          target={select("Link Target", ["_self", "_blank", "_parent", "_top"])}
+          target={select("Link Target", AVAILABLE_TARGETS)}
           title={text("Title", "Module")}
         />
       </KnobbedThemeProvider>
@@ -83,8 +87,9 @@ storiesOf("GlobalNav|SideNav.Module", module)
           minimized={boolean("Minimized", false)}
           onClickCollapseButton={action("onClickCollapseButton")}
           onClickTitle={action("onClickTitle")}
+          onFocus={action("onFocus")}
           onMouseOver={action("onMouseOver")}
-          target={select("Link Target", ["_self", "_blank", "_parent", "_top"])}
+          target={select("Link Target", AVAILABLE_TARGETS)}
           title={text("Title", "Module")}
         />
       </KnobbedThemeProvider>
@@ -101,8 +106,9 @@ storiesOf("GlobalNav|SideNav.Module", module)
           minimized={boolean("Minimized", false)}
           onClickCollapseButton={action("onClickCollapseButton")}
           onClickTitle={action("onClickTitle")}
+          onFocus={action("onFocus")}
           onMouseOver={action("onMouseOver")}
-          target={select("Link Target", ["_self", "_blank", "_parent", "_top"])}
+          target={select("Link Target", AVAILABLE_TARGETS)}
           title={text("Title", "Module")}
         >
           <SideNav.Submodule title="Submodule 1" />
@@ -121,6 +127,7 @@ storiesOf("GlobalNav|SideNav.ModuleCompact", module).add(
         activeChildren={boolean("Active Children", false)}
         icon={<Icon name={iconNames.INSIGHT} />}
         onClickTitle={action("onClick")}
+        onFocus={action("onFocus")}
         onMouseOver={action("onMouseOver")}
       />
     </KnobbedThemeProvider>

@@ -1,6 +1,6 @@
 {
   "name": "@hig/project-account-switcher",
-  "version": "0.1.1",
+  "version": "0.3.1",
   "description": "HIG Project Account Switcher",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -18,8 +18,8 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/flyout": "^0.5.0",
-    "@hig/icons": "^0.2.0",
+    "@hig/flyout": "^0.6.0",
+    "@hig/icon": "^0.2.1",
     "classnames": "^2.2.5",
     "prop-types": "^15.6.1",
     "react-lifecycles-compat": "^3.0.4"
@@ -33,7 +33,7 @@
     "@hig/jest-preset": "^0.1.0",
     "@hig/scripts": "^0.1.2",
     "@hig/semantic-release-config": "^0.1.0",
-    "@hig/styles": "^0.2.3"
+    "@hig/styles": "^0.3.0"
   },
   "scripts": {
     "build": "hig-scripts-build",

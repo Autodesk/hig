@@ -1,5 +1,5 @@
 import React from "react";
-import renderer from "react-test-renderer";
+import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
 import { mount } from "enzyme";
 
 import Module from "./Module";
@@ -32,22 +32,55 @@ describe("side-nav/Module", () => {
   });
 
   describe("snapshot tests", () => {
-    const cases = [
+    takeSnapshotsOf(Module, [
       {
-        description: "renders with mionimal props",
+        desc: "renders with minimal props",
         props: {
           title: "Module"
         }
+      },
+      {
+        desc: "renders an external link",
+        props: {
+          link: "http://example.com",
+          target: "_blank",
+          title: "Module"
+        }
+      },
+      {
+        desc: "renders a link",
+        props: {
+          link: "http://example.com",
+          title: "Module"
+        }
+      },
+      {
+        desc: "renders a expanded menu with active children",
+        props: {
+          activeChildren: true,
+          children: <div data-test="children" />,
+          icon: <div data-test="icon" />,
+          title: "Module"
+        }
+      },
+      {
+        desc: "renders with a click handlers",
+        props: {
+          onClickCollapseButton: function handleClickCollapseButton() {},
+          onClickTitle: function handleClickTitle() {},
+          title: "Module"
+        }
+      },
+      {
+        desc: "renders an active button",
+        props: {
+          active: true,
+          icon: <span data-test="icon" />,
+          onClickCollapseButton: function handleClickCollapseButton() {},
+          onClickTitle: function handleClickTitle() {},
+          title: "Module"
+        }
       }
-    ];
-
-    cases.forEach(({ description, props: { children, ...otherProps } }) => {
-      it(description, () => {
-        const wrapper = <Module {...otherProps}>{children}</Module>;
-        const tree = renderer.create(wrapper).toJSON();
-
-        expect(tree).toMatchSnapshot();
-      });
-    });
+    ]);
   });
 });

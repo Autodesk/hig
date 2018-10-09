@@ -1,18 +1,14 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { combineEventHandlers } from "@hig/utils";
-import Flyout, {
+import { offsetPanelHorizontal, offsetContainerVertical } from "@hig/flyout";
+import ProfileFlyout, {
   anchorPoints,
-  AVAILABLE_ANCHOR_POINTS,
-  offsetContainerVertical
-} from "@hig/flyout";
-import "@hig/flyout/build/index.css";
+  AVAILABLE_ANCHOR_POINTS
+} from "@hig/profile-flyout";
+import "@hig/profile-flyout/build/index.css";
 
 import { renderActionFlyoutPanel } from "./presenters/ActionFlyoutPanelPresenter";
-import ActionPresenter from "./presenters/ActionPresenter";
 import ProfileActionPresenter from "./presenters/ProfileActionPresenter";
-import ProfileButtonPresenter from "./presenters/ProfileButtonPresenter";
-import SeparatorPresenter from "./presenters/SeparatorPresenter";
 
 /** @typedef {import("@hig/flyout").Coordinates} Coordinates */
 
@@ -33,7 +29,7 @@ export default class ProfileAction extends Component {
      */
     fallbackAnchorPoints: PropTypes.arrayOf(
       PropTypes.oneOf(AVAILABLE_ANCHOR_POINTS)
-    ).isRequired,
+    ),
     /** Content to render in the profile flyout */
     children: PropTypes.node,
     /** Callback when the flyout is opened */
@@ -46,16 +42,12 @@ export default class ProfileAction extends Component {
      * @returns {Coordinates}
      */
     alterCoordinates(coordinates) {
-      return offsetContainerVertical(coordinates, 4);
+      return offsetPanelHorizontal(offsetContainerVertical(coordinates, 10), 6);
     },
     anchorPoint: anchorPoints.TOP_RIGHT,
     fallbackAnchorPoints: []
   };
 
-  /**
-   * @todo Remove the <ProfileActionPresenter />
-   * @todo Remove <SeparatorPresenter /> the component
-   */
   render() {
     const {
       alterCoordinates,
@@ -69,24 +61,17 @@ export default class ProfileAction extends Component {
 
     return (
       <ProfileActionPresenter>
-        <SeparatorPresenter />
-        <ActionPresenter>
-          <Flyout
-            alterCoordinates={alterCoordinates}
-            anchorPoint={anchorPoint}
-            content={children}
-            fallbackAnchorPoints={fallbackAnchorPoints}
-            panel={renderActionFlyoutPanel}
-          >
-            {({ handleClick }) => (
-              <ProfileButtonPresenter
-                avatarImage={avatarImage}
-                avatarName={avatarName}
-                onClick={combineEventHandlers(onClick, handleClick)}
-              />
-            )}
-          </Flyout>
-        </ActionPresenter>
+        <ProfileFlyout
+          alterCoordinates={alterCoordinates}
+          anchorPoint={anchorPoint}
+          avatarImage={avatarImage}
+          avatarName={avatarName}
+          fallbackAnchorPoints={fallbackAnchorPoints}
+          onProfileImageClick={onClick}
+          panel={renderActionFlyoutPanel}
+        >
+          {children}
+        </ProfileFlyout>
       </ProfileActionPresenter>
     );
   }

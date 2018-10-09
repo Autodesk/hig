@@ -4,13 +4,13 @@ function borderStyles({ variant }, themeData) {
   const defaults = {
     borderStyle: "solid",
     borderColor: "transparent",
-    borderWidth: themeData["INPUT.BORDER_WIDTH"]
+    borderWidth: themeData["input.borderWidth"]
   };
 
   return variant === variants.BOX
     ? {
         ...defaults,
-        borderColor: themeData["INPUT.BORDER_COLOR"]
+        borderColor: themeData["input.borderColor"]
       }
     : defaults;
 }
@@ -18,27 +18,27 @@ function borderStyles({ variant }, themeData) {
 function borderBottomStyles({ isDisabled, hasFocus, hasHover }, themeData) {
   const defaults = {
     borderBottomStyle: "solid",
-    borderBottomColor: themeData["INPUT.BORDER_BOTTOM_COLOR"],
-    borderBottomWidth: themeData["INPUT.BORDER_BOTTOM_WIDTH"]
+    borderBottomColor: themeData["input.borderBottomColor"],
+    borderBottomWidth: themeData["input.borderBottomWidth"]
   };
 
   if (isDisabled) {
     return {
       ...defaults,
       borderBottomColor: themeData["INPUT.DISABLED.BORDER_BOTTOM_COLOR"],
-      color: themeData["INPUT.DISABLED.FONT_COLOR"]
+      color: themeData["input.disabled.fontColor"]
     };
   }
   if (hasFocus) {
     return {
       ...defaults,
-      borderBottomColor: themeData["INPUT.FOCUS.BORDER_BOTTOM_COLOR"]
+      borderBottomColor: themeData["input.focus.borderBottomColor"]
     };
   }
   if (hasHover) {
     return {
       ...defaults,
-      borderBottomColor: themeData["INPUT.HOVER.BORDER_BOTTOM_COLOR"]
+      borderBottomColor: themeData["input.hover.borderBottomColor"]
     };
   }
   return defaults;
@@ -47,7 +47,7 @@ function borderBottomStyles({ isDisabled, hasFocus, hasHover }, themeData) {
 function haloStyles({ isDisabled, hasFocus, hasHover }, themeData) {
   const defaults = {
     height: 0,
-    backgroundColor: themeData["INPUT.HALO.COLOR"],
+    backgroundColor: themeData["input.halo.color"],
     transitionProperty: "height, color",
     transitionDuration: "0.3s, 0.3s"
   };
@@ -57,15 +57,15 @@ function haloStyles({ isDisabled, hasFocus, hasHover }, themeData) {
   }
   if (hasFocus) {
     return {
-      height: themeData["INPUT.FOCUS.HALO.WIDTH"],
-      backgroundColor: themeData["INPUT.FOCUS.HALO.COLOR"],
+      height: themeData["input.focus.halo.width"],
+      backgroundColor: themeData["input.focus.halo.color"],
       transitionDuration: "0.1s, 0.1s"
     };
   }
   if (hasHover) {
     return {
       ...defaults,
-      height: themeData["INPUT.HOVER.HALO.WIDTH"],
+      height: themeData["input.hover.halo.width"],
       transitionDuration: "0.1s, 0.1s"
     };
   }

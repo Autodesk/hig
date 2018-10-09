@@ -1,3 +1,30 @@
+# [@hig/project-account-switcher-v0.3.1](https://github.com/Autodesk/hig/compare/@hig/project-account-switcher@0.3.0...@hig/project-account-switcher@0.3.1) (2018-10-08)
+
+
+### Bug Fixes
+
+* update dependencies ([70fb27c](https://github.com/Autodesk/hig/commit/70fb27c))
+
+# [@hig/project-account-switcher-v0.3.0](https://github.com/Autodesk/hig/compare/@hig/project-account-switcher@0.2.0...@hig/project-account-switcher@0.3.0) (2018-10-08)
+
+
+### Bug Fixes
+
+* **behavior:** add missing keyboard interactions ([8428432](https://github.com/Autodesk/hig/commit/8428432))
+* **presenation:** add missing font styles ([4c30846](https://github.com/Autodesk/hig/commit/4c30846))
+
+
+### Features
+
+* **behavior:** fix event handlers and expose flyout functionality ([6cbd151](https://github.com/Autodesk/hig/commit/6cbd151))
+
+# [@hig/project-account-switcher-v0.2.0](https://github.com/Autodesk/hig/compare/@hig/project-account-switcher@0.1.1...@hig/project-account-switcher@0.2.0) (2018-09-26)
+
+
+### Features
+
+* Add prop openOnHover to Flyout.  When enabled, flyout will open when target is hovered over for .5s ([65893f3](https://github.com/Autodesk/hig/commit/65893f3))
+
 # [@hig/project-account-switcher-v0.1.1](https://github.com/Autodesk/hig/compare/@hig/project-account-switcher@0.1.0...@hig/project-account-switcher@0.1.1) (2018-09-11)
 
 

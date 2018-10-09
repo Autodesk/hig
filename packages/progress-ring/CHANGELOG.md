@@ -1,3 +1,10 @@
+# [@hig/progress-ring-v0.1.1](https://github.com/Autodesk/hig/compare/@hig/progress-ring@0.1.0...@hig/progress-ring@0.1.1) (2018-10-08)
+
+
+### Bug Fixes
+
+* console error on progress ring default props ([f37f493](https://github.com/Autodesk/hig/commit/f37f493))
+
 # [@hig/progress-ring-v0.1.0](https://github.com/Autodesk/hig/compare/@hig/progress-ring@0.0.0...@hig/progress-ring@0.1.0) (2018-09-11)
 
 

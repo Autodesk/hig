@@ -1,3 +1,30 @@
+# [@hig/components-v0.11.0](https://github.com/Autodesk/hig/compare/@hig/components@0.10.0...@hig/components@0.11.0) (2018-10-08)
+
+
+### Bug Fixes
+
+* update dependencies ([70fb27c](https://github.com/Autodesk/hig/commit/70fb27c))
+
+
+### Features
+
+* add Project Account Switcher to `[@hig](https://github.com/hig)/components` ([4b5bcd7](https://github.com/Autodesk/hig/commit/4b5bcd7))
+
+# [@hig/components-v0.10.0](https://github.com/Autodesk/hig/compare/@hig/components@0.9.0...@hig/components@0.10.0) (2018-09-26)
+
+
+### Features
+
+* **package:** upgrade dependencies ([d1197dd](https://github.com/Autodesk/hig/commit/d1197dd))
+
+# [@hig/components-v0.9.0](https://github.com/Autodesk/hig/compare/@hig/components@0.8.1...@hig/components@0.9.0) (2018-09-19)
+
+
+### Features
+
+* add `[@hig](https://github.com/hig)/profile-flyout` and `[@hig](https://github.com/hig)/top-nav` ([bc9e205](https://github.com/Autodesk/hig/commit/bc9e205))
+* upgrade avatar to `0.2.0` ([0b6987f](https://github.com/Autodesk/hig/commit/0b6987f))
+
 # [@hig/components-v0.8.1](https://github.com/Autodesk/hig/compare/@hig/components@0.8.0...@hig/components@0.8.1) (2018-09-11)
 
 

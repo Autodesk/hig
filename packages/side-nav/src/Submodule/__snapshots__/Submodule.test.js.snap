@@ -1,11 +1,85 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`side-nav/Submodule snapshot tests renders a link 1`] = `
+<a
+  className="hig--light-theme hig__side-nav__submodule"
+  href="http://example.com"
+  onClick={undefined}
+  onFocus={undefined}
+  onKeyDown={undefined}
+  onMouseOver={undefined}
+  role={undefined}
+  tabIndex="0"
+  target={undefined}
+>
+  Module
+</a>
+`;
+
+exports[`side-nav/Submodule snapshot tests renders an external link 1`] = `
+<a
+  className="hig--light-theme hig__side-nav__submodule"
+  href="http://example.com"
+  onClick={undefined}
+  onFocus={undefined}
+  onKeyDown={undefined}
+  onMouseOver={undefined}
+  role={undefined}
+  tabIndex="0"
+  target="_blank"
+>
+  Module
+  <div
+    className="hig__icon hig__icon--16-size"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<svg width=\\"9\\" height=\\"8\\" viewBox=\\"0 0 9 8\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"external-link-16\\"><g stroke=\\"#2E4258\\" fill=\\"none\\" fill-rule=\\"evenodd\\"><polyline points=\\"7.7074 6.4303 7.7074 0.5003 1.7904 0.5003\\"/><path d=\\"M1.08617072,7.11062928 L7.6864,0.5104\\"/></g></svg>",
+      }
+    }
+  />
+</a>
+`;
+
+exports[`side-nav/Submodule snapshot tests renders with a click handler 1`] = `
+<div
+  className="hig--light-theme hig__side-nav__submodule"
+  href={undefined}
+  onClick={[Function]}
+  onFocus={undefined}
+  onKeyDown={[Function]}
+  onMouseOver={undefined}
+  role="button"
+  tabIndex="0"
+  target={undefined}
+/>
+`;
+
+exports[`side-nav/Submodule snapshot tests renders with minimal props 1`] = `
+<div
+  className="hig--light-theme hig__side-nav__submodule"
+  href={undefined}
+  onClick={undefined}
+  onFocus={undefined}
+  onKeyDown={undefined}
+  onMouseOver={undefined}
+  role="button"
+  tabIndex="0"
+  target={undefined}
+>
+  Module
+</div>
+`;
+
 exports[`side-nav/Submodule snapshot tests renders with no props 1`] = `
 <div
   className="hig--light-theme hig__side-nav__submodule"
   href={undefined}
   onClick={undefined}
+  onFocus={undefined}
+  onKeyDown={undefined}
   onMouseOver={undefined}
+  role="button"
+  tabIndex="0"
   target={undefined}
 />
 `;

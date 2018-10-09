@@ -1,3 +1,18 @@
+# [@hig/notifications-toast-v0.1.3](https://github.com/Autodesk/hig/compare/@hig/notifications-toast@0.1.2...@hig/notifications-toast@0.1.3) (2018-10-08)
+
+
+### Bug Fixes
+
+* update dependencies ([70fb27c](https://github.com/Autodesk/hig/commit/70fb27c))
+
+# [@hig/notifications-toast-v0.1.2](https://github.com/Autodesk/hig/compare/@hig/notifications-toast@0.1.1...@hig/notifications-toast@0.1.2) (2018-10-08)
+
+
+### Bug Fixes
+
+* **presentation:** correct typography font ([6cadf3a](https://github.com/Autodesk/hig/commit/6cadf3a))
+* **presentation:** update hack due to `RichText` changes ([4e13ae4](https://github.com/Autodesk/hig/commit/4e13ae4))
+
 # [@hig/notifications-toast-v0.1.1](https://github.com/Autodesk/hig/compare/@hig/notifications-toast@0.1.0...@hig/notifications-toast@0.1.1) (2018-09-11)
 
 

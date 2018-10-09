@@ -38,11 +38,11 @@ class BannerAnimator extends Component {
   static propTypes = {
     /* eslint-disable react/no-unused-prop-types */
     /** Determines the visibility of the banner */
-    isVisible: PropTypes.bool.isRequired,
+    isVisible: PropTypes.bool,
     /** Determines the type of animation used */
-    hasBounce: PropTypes.bool.isRequired,
+    hasBounce: PropTypes.bool,
     /** Determines the type of animation used */
-    hasPush: PropTypes.bool.isRequired,
+    hasPush: PropTypes.bool,
     /** Determines the direction of the animation */
     position: PropTypes.oneOf(AVAILABLE_POSITIONS),
     /* eslint-enable react/no-unused-prop-types */
@@ -161,11 +161,6 @@ class BannerAnimator extends Component {
     }
   };
 
-  /** @param {HTMLDivElement} wrapper */
-  refWrapper = wrapper => {
-    this.setState({ wrapper });
-  };
-
   /** @param {HTMLDivElement} innerWrapper */
   refInnerWrapper = innerWrapper => {
     this.setState({ innerWrapper });
@@ -174,12 +169,7 @@ class BannerAnimator extends Component {
   render() {
     const { children: renderChildren } = this.props;
     const { status, wrapperStyle, innerWrapperStyle } = this.state;
-    const {
-      handleReady,
-      handleTransitionEnd,
-      refInnerWrapper,
-      refWrapper
-    } = this;
+    const { handleReady, handleTransitionEnd, refInnerWrapper } = this;
     const children =
       status === statuses.COLLAPSED ? null : renderChildren({ handleReady });
     const isBusy =
@@ -191,7 +181,6 @@ class BannerAnimator extends Component {
         aria-expanded={status === statuses.EXPANDED}
         style={wrapperStyle}
         onTransitionEnd={handleTransitionEnd}
-        ref={refWrapper}
       >
         <div style={innerWrapperStyle} ref={refInnerWrapper}>
           {children}

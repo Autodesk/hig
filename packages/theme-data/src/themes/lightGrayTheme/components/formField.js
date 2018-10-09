@@ -1,6 +1,6 @@
 export default {
-  "FORM_FIELD.INSTRUCTIONAL_TEXT.FONT_COLOR": {
-    value: { ref: "BASICS.COLORS.TEXT_AGAINST_LIGHT" },
+  "formField.instructionalText.fontColor": {
+    value: { ref: "basics.colors.textAgainstLight" },
     transform: { alpha: 0.6 }
   }
 };

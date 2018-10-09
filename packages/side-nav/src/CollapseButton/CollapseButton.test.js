@@ -1,32 +1,26 @@
-import React from "react";
-import renderer from "react-test-renderer";
+import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
 
 import CollapseButton from "./CollapseButton";
 
 describe("side-nav/CollapseButton", () => {
   describe("snapshot tests", () => {
-    const cases = [
+    takeSnapshotsOf(CollapseButton, [
       {
-        description: "renders with no props",
+        desc: "renders with no props",
         props: {}
       },
       {
-        description: "renders minimized",
+        desc: "renders minimized",
         props: {
           minimized: true
         }
+      },
+      {
+        desc: "renders with event handlers",
+        props: {
+          onClick: function handleClick() {}
+        }
       }
-    ];
-
-    cases.forEach(({ description, props: { children, ...otherProps } }) => {
-      it(description, () => {
-        const wrapper = (
-          <CollapseButton {...otherProps}>{children}</CollapseButton>
-        );
-        const tree = renderer.create(wrapper).toJSON();
-
-        expect(tree).toMatchSnapshot();
-      });
-    });
+    ]);
   });
 });

@@ -17,12 +17,10 @@ export default class ProjectAccountSwitcherBehavior extends Component {
     activeProjectId: PropTypes.string,
     /** Render prop */
     children: PropTypes.func,
-    /** Initially sets the selected Account, but allows user action to change it */
+    /** Called when a the active account or project changes */
+    onChange: PropTypes.func,
+    /** Called when a user clicks on a list item */
     onClick: PropTypes.func,
-    /** Called when a user clicks on the target element */
-    onTargetClick: PropTypes.func,
-    /** Opens the Flyout */
-    open: PropTypes.bool,
     /** List of Projects */
     projects: PropTypes.arrayOf(
       PropTypes.shape({
@@ -33,14 +31,9 @@ export default class ProjectAccountSwitcherBehavior extends Component {
     )
   };
 
-  static defaultProps = {
-    open: false
-  };
-
   state = {
     activeAccount: this.getAccount(this.props.activeAccountId),
-    activeProject: this.getProject(this.props.activeProjectId),
-    open: this.props.open
+    activeProject: this.getProject(this.props.activeProjectId)
   };
 
   getAccount(accountId) {
@@ -55,40 +48,42 @@ export default class ProjectAccountSwitcherBehavior extends Component {
     return projects.find(({ id }) => id === projectId);
   }
 
-  handleTargetClick = event => {
-    const { onTargetClick } = this.props;
-
-    if (onTargetClick) {
-      onTargetClick(event);
-    }
-
-    this.setState({
-      open: !this.state.open
-    });
-  };
-
   handleAccountClick = (event, id) => {
-    const { onClick } = this.props;
+    const { onChange, onClick } = this.props;
+    const { activeProject } = this.state;
+    const activeAccount = this.getAccount(id);
 
     if (onClick) {
       onClick(event);
     }
 
-    this.setState({
-      activeAccount: this.getAccount(id)
-    });
+    if (onChange) {
+      onChange({
+        account: activeAccount,
+        project: activeProject
+      });
+    }
+
+    this.setState({ activeAccount });
   };
 
   handleProjectClick = (event, id) => {
-    const { onClick } = this.props;
+    const { onChange, onClick } = this.props;
+    const { activeAccount } = this.state;
+    const activeProject = this.getProject(id);
 
     if (onClick) {
       onClick(event);
     }
 
-    this.setState({
-      activeProject: this.getProject(id)
-    });
+    if (onChange) {
+      onChange({
+        account: activeAccount,
+        project: activeProject
+      });
+    }
+
+    this.setState({ activeProject });
   };
 
   render() {
@@ -96,9 +91,7 @@ export default class ProjectAccountSwitcherBehavior extends Component {
       activeAccount: this.state.activeAccount,
       activeProject: this.state.activeProject,
       handleAccountClick: this.handleAccountClick,
-      handleTargetClick: this.handleTargetClick,
-      handleProjectClick: this.handleProjectClick,
-      open: this.state.open
+      handleProjectClick: this.handleProjectClick
     });
   }
 }

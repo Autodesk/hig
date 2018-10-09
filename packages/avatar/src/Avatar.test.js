@@ -1,46 +1,56 @@
 import React from "react";
-import renderer from "react-test-renderer";
+import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
 import { mount } from "enzyme";
 
 import Avatar, { sizes } from "./index";
 
-function snapshotTest(props) {
-  const tree = renderer.create(<Avatar {...props} />).toJSON();
+describe("avatar/Avatar", () => {
+  takeSnapshotsOf(Avatar, [
+    {
+      desc: "renders without props",
+      props: {}
+    },
+    {
+      desc: "renders with a name",
+      props: {
+        name: "Jon Snow"
+      }
+    },
+    {
+      desc: "renders with an image",
+      props: {
+        image: "http://placekitten.com/g/64/64"
+      }
+    },
+    {
+      desc: "renders with all props",
+      props: {
+        name: "Jon Snow",
+        image: "http://placekitten.com/g/64/64",
+        onImageError: function handleImageError() {},
+        size: sizes.LARGE_36
+      }
+    }
+  ]);
 
-  expect(tree).toMatchSnapshot();
-}
-
-const basicProps = {
-  name: "Jon Snow",
-  size: sizes.LARGE_36
-};
-
-const imageProps = {
-  ...basicProps,
-  image: "http://placekitten.com/g/64/64"
-};
-
-describe("Avatar", () => {
   describe("when an image URL is not provided", () => {
-    it("renders initials", () => {
-      snapshotTest(basicProps);
-    });
-
     it("renders initials based on the provided name", () => {
-      const wrapper = mount(<Avatar {...basicProps} />);
+      const wrapper = mount(<Avatar name="Jon Snow" size={sizes.LARGE_36} />);
 
       expect(wrapper.find("Initials")).toIncludeText("JS");
     });
   });
 
   describe("when an image URL is provided", () => {
-    it("renders initials and the image", () => {
-      snapshotTest(imageProps);
-    });
-
     describe("when an error occurs on the image", () => {
       it("doesn't render the image", () => {
-        const wrapper = mount(<Avatar {...imageProps} />);
+        const wrapper = mount(
+          <Avatar
+            name="Jon Snow"
+            image="http://placekitten.com/g/64/64"
+            size={sizes.LARGE_36}
+          />
+        );
 
         expect(wrapper.find("img")).toBePresent();
 

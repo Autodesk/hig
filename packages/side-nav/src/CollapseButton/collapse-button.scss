@@ -17,7 +17,7 @@
 .hig--light-theme {
   &.hig__side-nav__module__collapse-button {
     svg * {
-      stroke: color(hig-cool-gray-50);
+      fill: color(hig-cool-gray-50);
     }
   }
 }
@@ -26,7 +26,7 @@
 .hig--dark-blue-theme {
   &.hig__side-nav__module__collapse-button {
     svg * {
-      stroke: color(hig-white);
+      fill: color(hig-white);
     }
   }
 }

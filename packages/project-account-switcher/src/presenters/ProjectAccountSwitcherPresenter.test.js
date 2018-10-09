@@ -3,6 +3,7 @@ import ProjectAccountSwitcherPresenter from "./ProjectAccountSwitcherPresenter";
 
 describe("project-account-switcher/presenters/ProjectAccountSwitcherPresenter", () => {
   beforeAll(() => {
+    /* eslint-disable-next-line no-console */
     console.warn = jest.fn();
   });
 
@@ -14,16 +15,14 @@ describe("project-account-switcher/presenters/ProjectAccountSwitcherPresenter", 
     {
       description: "renders with all props",
       props: {
-        accountTitle: "Accounts",
         accounts: [
           { id: "1", label: "Account 1" },
           { id: "2", label: "Account 2" }
         ],
         activeAccount: { id: "1", label: "Account 1" },
+        activeLabel: "Foo",
         activeProject: { id: "2", label: "Project 2" },
-        onAccountClick: function onAccountClick() {},
-        onProjectClick: function onProjectClick() {},
-        projectTitle: "Projects",
+        onTargetClick: function handleTargetClick() {},
         projects: [
           { id: "1", label: "Project 1" },
           { id: "2", label: "Project 2" }

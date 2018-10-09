@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <title>sync-16</title>
-  <g id="assets">
-    <g>
-      <path d="M14,0V3.5S13,0,8,0,2,4,2,4L4,5S4,2,8,2s4.5,3,4.5,3H9V7h7V0Z"/>
-      <path d="M8,14c-4,0-4.5-3-4.5-3H7V9H0v7H2V12.5S3,16,8,16s6-4,6-4l-2-1S12,14,8,14Z"/>
-    </g>
-  </g>
-</svg>

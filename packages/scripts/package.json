@@ -11,11 +11,11 @@
     "hig-scripts-lint": "bin/lint.sh",
     "hig-scripts-test": "bin/test.sh",
     "hig-scripts-release": "bin/release.sh",
-    "hig-scripts-is-stable-package": "bin/is-stable-package.js",
-    "hig-scripts-ensure-initial-tag": "bin/ensure-initial-tag.js"
+    "hig-scripts-is-stable-package": "bin/is-stable-package.js"
   },
   "dependencies": {
     "@hig/babel-preset": "^0.1.0",
+    "babel-eslint": "^10.0.1",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",

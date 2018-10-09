@@ -1,6 +1,11 @@
 import { Component } from "react";
 import PropTypes from "prop-types";
 
+/**
+ * @typedef {Object} State
+ * @property {boolean} checked
+ */
+
 export default class CheckboxBehavior extends Component {
   static propTypes = {
     /**
@@ -29,32 +34,17 @@ export default class CheckboxBehavior extends Component {
     defaultChecked: false
   };
 
+  /**
+   * @type {State}
+   */
   state = {
     checked: this.props.defaultChecked
   };
 
   /**
-   * @param {boolean} checked
+   * @returns {boolean}
    */
-  setChecked(checked) {
-    const { onChange } = this.props;
-
-    if (onChange) {
-      onChange(checked);
-    }
-
-    this.setState({ checked });
-  }
-
-  toggleChecked() {
-    this.setChecked(!this.state.checked);
-  }
-
-  isControlled() {
-    return this.props.checked !== undefined;
-  }
-
-  isChecked() {
+  getChecked() {
     if (this.isControlled()) {
       return this.props.checked;
     }
@@ -63,32 +53,33 @@ export default class CheckboxBehavior extends Component {
   }
 
   /**
-   * @param {MouseEvent} event
+   * @param {boolean} checked
    */
-  handleClick = event => {
-    const { onClick } = this.props;
+  setChecked(checked) {
+    const { onChange } = this.props;
 
-    if (onClick) {
-      onClick(event);
-    }
+    if (onChange) onChange(checked);
 
     if (!this.isControlled()) {
-      this.toggleChecked();
+      this.setState({ checked });
     }
-  };
+  }
+
+  isControlled() {
+    return this.props.checked !== undefined;
+  }
 
   /**
    * @param {UIEvent} event
    */
   handleChange = event => {
-    if (!this.isControlled()) {
-      this.setChecked(event.target.checked);
-    }
+    this.setChecked(event.target.checked);
   };
 
   render() {
-    const { handleChange, handleClick } = this;
-    const checked = this.isChecked();
+    const { handleChange } = this;
+    const { onClick: handleClick } = this.props;
+    const checked = this.getChecked();
 
     return this.props.children({
       checked,

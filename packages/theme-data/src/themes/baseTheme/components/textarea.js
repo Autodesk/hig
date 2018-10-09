@@ -1,12 +1,12 @@
 export default {
-  "TEXT_AREA.MIN_HEIGHT": {
+  "textArea.minHeight": {
     type: "length",
     value: "250px"
   },
-  "TEXT_AREA.BORDER_COLOR": {
+  "textArea.borderColor": {
     type: "color",
     value: {
-      ref: "INPUT.BORDER_COLOR"
+      ref: "input.borderColor"
     }
   }
 };

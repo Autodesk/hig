@@ -31,7 +31,16 @@ module.exports = {
     "react/prefer-stateless-function": 0,
     "react/prop-types": 2,
     "react/require-default-props": 0,
-    "react/style-prop-object": 0
+    "react/style-prop-object": 0,
+    /* Allow the use of <label /> without nesting the <input /> */
+    "jsx-a11y/label-has-for": [
+      2,
+      {
+        required: {
+          every: ["id"]
+        }
+      }
+    ]
   },
   overrides: [
     {

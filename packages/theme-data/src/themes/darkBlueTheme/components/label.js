@@ -1,23 +1,23 @@
 export default {
-  "LABEL.FONT_COLOR": {
+  "label.fontColor": {
     value: {
-      ref: "BASICS.COLORS.TEXT_AGAINST_DARK"
+      ref: "basics.colors.textAgainstDark"
     },
     transform: {
       alpha: 0.6
     }
   },
-  "LABEL.HOVER.FONT_COLOR": {
+  "label.hover.fontColor": {
     value: {
-      ref: "BASICS.COLORS.TEXT_AGAINST_DARK"
+      ref: "basics.colors.textAgainstDark"
     },
     transform: {
       alpha: 0.6
     }
   },
-  "LABEL.DISABLED.FONT_COLOR": {
+  "label.disabled.fontColor": {
     value: {
-      ref: "BASICS.COLORS.TEXT_AGAINST_DARK"
+      ref: "basics.colors.textAgainstDark"
     },
     transform: {
       alpha: 0.2

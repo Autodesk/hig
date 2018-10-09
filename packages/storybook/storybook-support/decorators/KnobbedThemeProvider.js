@@ -58,10 +58,10 @@ function Surface({ children }) {
       {({ themeData }) => (
         <div
           style={{
-            backgroundColor: themeData["COLOR_SCHEME.SURFACE_LEVEL_1_COLOR"],
-            padding: themeData["DENSITY.SPACINGS.XL"],
-            margin: `-${themeData["DENSITY.SPACINGS.XL"]}`,
-            borderRadius: themeData["BASICS.BORDER_RADII.M"],
+            backgroundColor: themeData["colorScheme.surfaceLevel1Color"],
+            padding: themeData["density.spacings.XL"],
+            margin: `-${themeData["density.spacings.XL"]}`,
+            borderRadius: themeData["basics.borderRadii.M"],
             transiton: "all 0.3s",
             minHeight: "20vh"
           }}

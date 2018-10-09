@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import { combineEventHandlers } from "@hig/utils";
 import Flyout, { anchorPoints, AVAILABLE_ANCHOR_POINTS } from "@hig/flyout";
 import "@hig/flyout/build/index.css";
 
@@ -11,16 +12,43 @@ import NotificationFlyoutBehavior from "./behaviors/NotificationFlyoutBehavior";
 import Notification from "./Notification";
 import Panel from "./Panel";
 
+/** @typedef {import("./behaviors/parseNotifications").ParsedNotification} ParsedNotification */
+
+/**
+ * @param {Object} payload
+ * @returns {function(ParsedNotification): JSX}
+ */
 function createNotificationRenderer({ hideFlyout, dismissNotification }) {
   /* eslint-disable-next-line react/prop-types */
-  return function renderNotification({ id, key, content, ...otherProps }) {
+  return function renderNotification(notification) {
+    const {
+      content,
+      featured,
+      id,
+      image,
+      key,
+      onDismiss,
+      showDismissButton,
+      timestamp,
+      type,
+      unread
+    } = notification;
+
+    const handleDismiss = combineEventHandlers(onDismiss, () =>
+      dismissNotification(id)
+    );
+
     return (
       <Notification
-        {...otherProps}
+        featured={featured}
         hideFlyout={hideFlyout}
-        id={id}
+        image={image}
         key={key}
-        onDismiss={() => dismissNotification(id)}
+        onDismiss={handleDismiss}
+        showDismissButton={showDismissButton}
+        timestamp={timestamp}
+        type={type}
+        unread={unread}
       >
         {content}
       </Notification>
@@ -35,8 +63,13 @@ function createPanelRenderer({
   loading,
   heading
 }) {
-  /* eslint-disable-next-line react/prop-types */
-  return function renderPanel({ hideFlyout, handleScroll, innerRef }) {
+  return function renderPanel({
+    /* eslint-disable react/prop-types */
+    hideFlyout,
+    handleScroll,
+    innerRef,
+    transitionStatus
+  }) {
     const isEmpty = notifications.length === 0;
 
     return (
@@ -45,6 +78,7 @@ function createPanelRenderer({
         innerRef={innerRef}
         loading={loading}
         onScroll={handleScroll}
+        transitionStatus={transitionStatus}
       >
         {isEmpty ? (
           <EmptyStatePresenter message={emptyMessage} />
@@ -68,6 +102,7 @@ export default function NotificationsFlyout(props) {
     heading,
     indicatorTitle,
     loading,
+    onClick,
     onClickOutside,
     onScroll,
     open,
@@ -105,7 +140,7 @@ export default function NotificationsFlyout(props) {
         >
           {({ handleClick }) => (
             <IndicatorPresenter
-              onClick={handleClick}
+              onClick={combineEventHandlers(onClick, handleClick)}
               count={unreadCount}
               showCount={showUnreadCount}
               title={indicatorTitle}
@@ -153,6 +188,8 @@ NotificationsFlyout.propTypes = {
   notifications: PropTypes.arrayOf(
     PropTypes.oneOfType([PropTypes.node, PropTypes.object])
   ),
+  /** Function called when the flyout is opened */
+  onClick: PropTypes.func,
   /** Function called when the flyout is open, and a click event occurs outside the flyout */
   onClickOutside: PropTypes.func,
   /** Function called when the flyout panel is scrolled */

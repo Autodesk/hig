@@ -6,17 +6,18 @@ exports[`top-nav/presenters/ProfileButtonPresenter  1`] = `
   onClick={undefined}
   type="button"
 >
-  <figure
+  <span
     aria-label="Avatar for Wolfgang Pauli"
-    className="hig__avatarV2 hig__avatarV2--size--medium-32 hig__avatarV2__background--8"
+    className="hig__avatarV2 hig__avatarV2--size--medium-32 hig__avatarV2__background--indigo"
+    role="img"
   >
-    <div
+    <span
       aria-hidden="true"
       className="hig__avatarV2__initials"
     >
       WP
-    </div>
-  </figure>
+    </span>
+  </span>
 </button>
 `;
 
@@ -26,17 +27,18 @@ exports[`top-nav/presenters/ProfileButtonPresenter  2`] = `
   onClick={undefined}
   type="button"
 >
-  <figure
+  <span
     aria-label="Avatar for Hans Hellmann"
-    className="hig__avatarV2 hig__avatarV2--size--medium-32 hig__avatarV2__background--3"
+    className="hig__avatarV2 hig__avatarV2--size--medium-32 hig__avatarV2__background--pink"
+    role="img"
   >
-    <div
+    <span
       aria-hidden="true"
       className="hig__avatarV2__initials"
     >
       HH
-    </div>
-  </figure>
+    </span>
+  </span>
 </button>
 `;
 
@@ -46,11 +48,12 @@ exports[`top-nav/presenters/ProfileButtonPresenter  3`] = `
   onClick={[Function]}
   type="button"
 >
-  <figure
+  <span
     aria-label="Avatar for Richard Feynman"
-    className="hig__avatarV2 hig__avatarV2--size--medium-32 hig__avatarV2__background--6"
+    className="hig__avatarV2 hig__avatarV2--size--medium-32 hig__avatarV2__background--green"
+    role="img"
   >
-    <div
+    <span
       className="hig__avatarV2__image-wrapper"
     >
       <img
@@ -59,13 +62,13 @@ exports[`top-nav/presenters/ProfileButtonPresenter  3`] = `
         onError={[Function]}
         src="richard_phillips_feynman.png"
       />
-    </div>
-    <div
+    </span>
+    <span
       aria-hidden="true"
       className="hig__avatarV2__initials"
     >
       RF
-    </div>
-  </figure>
+    </span>
+  </span>
 </button>
 `;

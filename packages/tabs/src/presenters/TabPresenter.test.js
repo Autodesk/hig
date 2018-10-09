@@ -14,7 +14,8 @@ describe("tabs/TabPresenter", () => {
       props: {
         active: true,
         label: "Hello World",
-        onClick: function handleClick() {}
+        onClick: function handleClick() {},
+        onKeyDown: function handleKeyDown() {}
       }
     }
   ];

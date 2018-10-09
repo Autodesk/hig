@@ -1,6 +1,6 @@
 {
-  "name": "@hig/themes",
-  "version": "0.3.0",
+  "name": "@hig/themes-poc",
+  "version": "1.0.0-alpha",
   "description": "HIG theme definitions and supporting components",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -18,17 +18,16 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/theme-data-poc": "^0.0.8-alpha",
+    "@hig/theme-data-poc": "^0.0.9-alpha",
     "prop-types": "^15.6.1"
   },
   "devDependencies": {
     "@hig/babel-preset": "^0.1.0",
-    "@hig/banner": "^0.1.4",
     "@hig/eslint-config": "^0.1.0",
     "@hig/jest-preset": "^0.1.0",
     "@hig/scripts": "^0.1.2",
     "@hig/semantic-release-config": "^0.1.0",
-    "@hig/styles": "^0.2.3"
+    "@hig/styles": "^0.3.0"
   },
   "peerDependencies": {
     "react": "^15.4.1 || ^16.3.2"

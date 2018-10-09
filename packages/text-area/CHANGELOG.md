@@ -1,3 +1,10 @@
+# [@hig/text-area-v0.1.2](https://github.com/Autodesk/hig/compare/@hig/text-area@0.1.1...@hig/text-area@0.1.2) (2018-10-08)
+
+
+### Bug Fixes
+
+* **presentation:** add missing colors mixin ([895a3b5](https://github.com/Autodesk/hig/commit/895a3b5))
+
 # [@hig/text-area-v0.1.1](https://github.com/Autodesk/hig/compare/@hig/text-area@0.1.0...@hig/text-area@0.1.1) (2018-08-24)
 
 

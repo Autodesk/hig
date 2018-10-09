@@ -15,57 +15,57 @@ function filterMatchByKey(o, keyFragment) {
 export default [
   {
     description: "Basics - Border radii",
-    schema: filterMatchByKey(baseThemeConfig, "BASICS.BORDER_RADII"),
+    schema: filterMatchByKey(baseThemeConfig, "basics.borderRadii"),
     readme: basicsReadme
   },
   {
     description: "Basics - Border widths",
-    schema: filterMatchByKey(baseThemeConfig, "BASICS.BORDER_WIDTHS"),
+    schema: filterMatchByKey(baseThemeConfig, "basics.borderWidths"),
     readme: basicsReadme
   },
   {
     description: "Basics - Colors",
-    schema: filterMatchByKey(baseThemeConfig, "BASICS.COLORS"),
+    schema: filterMatchByKey(baseThemeConfig, "basics.colors"),
     readme: basicsReadme
   },
   {
     description: "Basics - Font families",
-    schema: filterMatchByKey(baseThemeConfig, "BASICS.FONT_FAMILIES"),
+    schema: filterMatchByKey(baseThemeConfig, "basics.fontFamilies"),
     readme: basicsReadme
   },
   {
     description: "Basics - Font sizes",
-    schema: filterMatchByKey(baseThemeConfig, "BASICS.FONT_SIZES"),
+    schema: filterMatchByKey(baseThemeConfig, "basics.fontSizes"),
     readme: basicsReadme
   },
   {
     description: "Basics - Font weights",
-    schema: filterMatchByKey(baseThemeConfig, "BASICS.FONT_WEIGHTS"),
+    schema: filterMatchByKey(baseThemeConfig, "basics.fontWeights"),
     readme: basicsReadme
   },
   {
     description: "Basics - Line heights",
-    schema: filterMatchByKey(baseThemeConfig, "BASICS.LINE_HEIGHTS"),
+    schema: filterMatchByKey(baseThemeConfig, "basics.lineHeights"),
     readme: basicsReadme
   },
   {
     description: "Basics - Shadows",
-    schema: filterMatchByKey(baseThemeConfig, "BASICS.SHADOWS"),
+    schema: filterMatchByKey(baseThemeConfig, "basics.shadows"),
     readme: basicsReadme
   },
   {
     description: "Basics - Spacings",
-    schema: filterMatchByKey(baseThemeConfig, "BASICS.SPACINGS"),
+    schema: filterMatchByKey(baseThemeConfig, "basics.spacings"),
     readme: basicsReadme
   },
   {
     description: "Color scheme",
-    schema: filterMatchByKey(baseThemeConfig, "COLOR_SCHEME"),
+    schema: filterMatchByKey(baseThemeConfig, "colorScheme"),
     readme: colorSchemeReadme
   },
   {
     description: "Density",
-    schema: filterMatchByKey(baseThemeConfig, "DENSITY"),
+    schema: filterMatchByKey(baseThemeConfig, "density"),
     readme: densityReadme
   },
   {
