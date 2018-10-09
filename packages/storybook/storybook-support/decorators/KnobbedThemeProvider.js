@@ -10,7 +10,7 @@ import {
   HIGLightGrayHighDensityTheme,
   HIGDarkBlueHighDensityTheme,
   MatrixTheme
-} from "@hig/themes";
+} from "@hig/themes-poc";
 
 const densityThemes = {
   "high-density": {
