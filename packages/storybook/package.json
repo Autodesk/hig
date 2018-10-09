@@ -48,7 +48,7 @@
     "surge": "^0.20.1"
   },
   "dependencies": {
-    "@hig/themes": "^0.3.0",
+    "@hig/themes-poc": "^1.0.0-alpha",
     "faker": "^4.1.0",
     "prop-types": "^15.6.1"
   },
