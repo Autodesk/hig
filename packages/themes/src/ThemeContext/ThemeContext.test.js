@@ -1,7 +1,7 @@
 import { mount } from "enzyme";
 import React from "react";
 
-import HIGLightTheme from "../themes/HIGLightTheme";
+import HIGLightTheme from "@hig/theme-data-poc/build/json/lightGrayMediumDensityTheme/theme.json";
 
 import ThemeContext from "./index";
 
