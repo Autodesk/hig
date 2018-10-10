@@ -8,12 +8,12 @@ import basics from "../../basics";
 export default function FontSample({ fontWeight, fontSize, fontFamily }) {
   return (
     <ThemeContext.Consumer>
-      {({ themeData }) => {
+      {({ resolvedRoles }) => {
         const style = {
           fontWeight: fontWeight || basics.fontWeights.regular,
           fontSize: fontSize || basics.fontSizes.medium,
           fontFamily: fontFamily || basics.fontFamilies.main,
-          marginBottom: themeData["basics.spacings.extraSmall"]
+          marginBottom: resolvedRoles["basics.spacings.extraSmall"]
         };
         return (
           <div style={style}>

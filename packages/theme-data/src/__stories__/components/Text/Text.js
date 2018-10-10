@@ -49,20 +49,20 @@ function Text({
 }) {
   return (
     <ThemeContext.Consumer>
-      {({ themeData }) => {
+      {({ resolvedRoles }) => {
         const styles = stylesheet(
           {
             fontSize,
             fontWeight,
             color:
               color === DEFAULT_TEXT_COLOR
-                ? themeData["colorScheme.textColor"]
+                ? resolvedRoles["colorScheme.textColor"]
                 : color,
             fontFamily,
             lineHeight,
             layout
           },
-          themeData
+          resolvedRoles
         );
 
         return <span className={css(styles)}>{children}</span>;

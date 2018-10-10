@@ -6,13 +6,13 @@ import { ThemeContext } from "@hig/themes";
 export default function Swatch({ length }) {
   return (
     <ThemeContext.Consumer>
-      {({ themeData }) => (
+      {({ resolvedRoles }) => (
         <div
           style={{
             height: length,
             width: length,
-            backgroundColor: themeData["colorScheme.accentColor500"],
-            marginBottom: themeData["density.spacings.small"]
+            backgroundColor: resolvedRoles["colorScheme.accentColor500"],
+            marginBottom: resolvedRoles["density.spacings.small"]
           }}
         />
       )}

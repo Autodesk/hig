@@ -6,7 +6,7 @@ import Text from "./Text";
 export default function Header({ title }) {
   return (
     <ThemeContext.Consumer>
-      {({ themeData }) => (
+      {({ resolvedRoles }) => (
         <div>
           <Text
             fontSize={Text.FONT_SIZES.XL}
@@ -17,11 +17,11 @@ export default function Header({ title }) {
           >
             {title}
           </Text>
-          <div style={{ height: themeData["density.spacings.medium"] }} />
+          <div style={{ height: resolvedRoles["density.spacings.medium"] }} />
           <div
             style={{
               display: "flex",
-              marginBottom: themeData["density.spacings.medium"]
+              marginBottom: resolvedRoles["density.spacings.medium"]
             }}
           >
             <div style={{ flex: "1 1 0" }}>

@@ -55,13 +55,13 @@ function themeOptions(themeIds) {
 function Surface({ children }) {
   return (
     <ThemeContext.Consumer>
-      {({ themeData }) => (
+      {({ resolvedRoles }) => (
         <div
           style={{
-            backgroundColor: themeData["colorScheme.surfaceLevel10Color"],
-            padding: themeData["density.spacings.extraLarge"],
-            margin: `-${themeData["density.spacings.extraLarge"]}`,
-            borderRadius: themeData["basics.borderRadii.medium"],
+            backgroundColor: resolvedRoles["colorScheme.surfaceLevel10Color"],
+            padding: resolvedRoles["density.spacings.extraLarge"],
+            margin: `-${resolvedRoles["density.spacings.extraLarge"]}`,
+            borderRadius: resolvedRoles["basics.borderRadii.medium"],
             transiton: "all 0.3s",
             minHeight: "20vh"
           }}

@@ -8,15 +8,15 @@ import Text from "./Text";
 function Role(props) {
   return (
     <ThemeContext.Consumer>
-      {({ themeData }) => (
+      {({ resolvedRoles }) => (
         <div
           style={{
             display: "flex",
-            marginBottom: themeData["density.spacings.extraLarge"],
-            borderTop: `${themeData["basics.borderWidths.small"]} solid ${
-              themeData["colorScheme.divider.dimColor"]
+            marginBottom: resolvedRoles["density.spacings.extraLarge"],
+            borderTop: `${resolvedRoles["basics.borderWidths.small"]} solid ${
+              resolvedRoles["colorScheme.divider.dimColor"]
             }`,
-            paddingTop: themeData["density.spacings.medium"]
+            paddingTop: resolvedRoles["density.spacings.medium"]
           }}
         >
           <div style={{ flex: "1 1 0" }}>

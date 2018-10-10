@@ -53,7 +53,7 @@ stories.forEach(({ description, schema, readme }) => {
         ]}
       >
         <ThemeContext.Consumer>
-          {({ themeData, themeId }) => (
+          {({ resolvedRoles, themeId }) => (
             <div>
               <Header title={description} />
               {Object.keys(schema).map(role => (
@@ -61,7 +61,7 @@ stories.forEach(({ description, schema, readme }) => {
                   key={role}
                   role={role}
                   schema={schema[role]}
-                  theme={themeData}
+                  theme={resolvedRoles}
                   themeConfig={themeConfigs[themeId]}
                   basics={basics}
                 />

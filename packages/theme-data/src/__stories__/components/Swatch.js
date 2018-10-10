@@ -11,13 +11,13 @@ export default function Swatch({
 }) {
   return (
     <ThemeContext.Consumer>
-      {({ themeData }) => {
+      {({ resolvedRoles }) => {
         const renderedBackgroundColor =
-          color || themeData["colorScheme.surfaceLevel10Color"];
+          color || resolvedRoles["colorScheme.surfaceLevel10Color"];
         const renderedBorderWidth =
-          borderWidth || themeData["basics.borderWidths.small"];
+          borderWidth || resolvedRoles["basics.borderWidths.small"];
         const renderedBorderRadius =
-          borderRadius || themeData["basics.borderRadii.medium"];
+          borderRadius || resolvedRoles["basics.borderRadii.medium"];
         const renderedBoxShadow = boxShadow || "0 0 0 rgba(0, 0, 0, 0)";
         return (
           <div
@@ -25,13 +25,13 @@ export default function Swatch({
               height: "32px",
               backgroundColor: renderedBackgroundColor,
               borderRadius: renderedBorderRadius,
-              border: `${themeData["basics.borderWidths.small"]} solid ${
-                themeData["colorScheme.surfaceLevel10Color"]
+              border: `${resolvedRoles["basics.borderWidths.small"]} solid ${
+                resolvedRoles["colorScheme.surfaceLevel10Color"]
               }`,
               boxShadow: `0 0 0 ${renderedBorderWidth} ${
-                themeData["colorScheme.surfaceLevel40Color"]
+                resolvedRoles["colorScheme.surfaceLevel40Color"]
               }, ${renderedBoxShadow}`,
-              marginBottom: themeData["density.spacings.small"]
+              marginBottom: resolvedRoles["density.spacings.small"]
             }}
           />
         );
