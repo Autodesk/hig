@@ -33,7 +33,6 @@
     "style-dictionary": "^2.4.0"
   },
   "dependencies": {
-    "style-dictionary": "^2.4.0",
     "tinycolor2": "^1.4.1"
   },
   "eslintConfig": {
