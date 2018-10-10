@@ -1,29 +1,25 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { select } from "@storybook/addon-knobs/react";
-import {
-  ThemeContext,
-  HIGLightTheme,
-  HIGLightGrayTheme,
-  HIGDarkBlueTheme,
-  HIGLightHighDensityTheme,
-  HIGLightGrayHighDensityTheme,
-  HIGDarkBlueHighDensityTheme,
-  MatrixTheme
-} from "@hig/themes-poc";
+import { ThemeContext } from "@hig/themes-poc";
+
+import lightGrayMediumDensityTheme from "@hig/theme-data-poc/build/json/lightGrayMediumDensityTheme/theme.json";
+import darkBlueMediumDensityTheme from "@hig/theme-data-poc/build/json/darkBlueMediumDensityTheme/theme.json";
+import webLightMediumDensityTheme from "@hig/theme-data-poc/build/json/webLightMediumDensityTheme/theme.json";
+import lightGrayHighDensityTheme from "@hig/theme-data-poc/build/json/lightGrayHighDensityTheme/theme.json";
+import darkBlueHighDensityTheme from "@hig/theme-data-poc/build/json/darkBlueHighDensityTheme/theme.json";
+import webLightHighDensityTheme from "@hig/theme-data-poc/build/json/webLightHighDensityTheme/theme.json";
 
 const densityThemes = {
   "high-density": {
-    "hig-light": HIGLightHighDensityTheme,
-    "hig-light-gray": HIGLightGrayHighDensityTheme,
-    "hig-dark-blue": HIGDarkBlueHighDensityTheme,
-    matrix: MatrixTheme
+    "hig-light": webLightHighDensityTheme,
+    "hig-light-gray": lightGrayHighDensityTheme,
+    "hig-dark-blue": darkBlueHighDensityTheme
   },
   "medium-density": {
-    "hig-light": HIGLightTheme,
-    "hig-light-gray": HIGLightGrayTheme,
-    "hig-dark-blue": HIGDarkBlueTheme,
-    matrix: MatrixTheme
+    "hig-light": webLightMediumDensityTheme,
+    "hig-light-gray": lightGrayMediumDensityTheme,
+    "hig-dark-blue": darkBlueMediumDensityTheme
   }
 };
 
@@ -38,16 +34,15 @@ const DEFAULT_DENSITY = "medium-density";
 const COLOR_THEME_IDS = {
   WEB_LIGHT: "hig-light",
   LIGHT_GRAY: "hig-light-gray",
-  DARK_BLUE: "hig-dark-blue",
-  MATRIX: "matrix"
+  DARK_BLUE: "hig-dark-blue"
 };
 
 function themeOptions(themeIds) {
-  return themeIds.reduce((acc, themeId) => {
-    const theme = densityThemes["medium-density"][themeId];
+  return themeIds.reduce((acc, id) => {
+    const theme = densityThemes["medium-density"][id];
     return {
       ...acc,
-      [theme.themeId]: theme.themeName
+      [theme.id]: theme.themeName
     };
   }, {});
 }

@@ -6,8 +6,8 @@ import HIGLightTheme from "@hig/theme-data-poc/build/json/lightGrayMediumDensity
 import ThemeContext from "./index";
 
 const TestTheme = {
-  themeId: "test-theme",
-  themeClass: "hig--test-theme"
+  id: "test-theme",
+  className: "hig--test-theme"
 };
 
 describe("ThemeContext", () => {

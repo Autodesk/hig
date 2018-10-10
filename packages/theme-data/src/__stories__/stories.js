@@ -1,4 +1,4 @@
-import { config as baseThemeConfig } from "../themes/baseTheme";
+import baseTheme from "../themes/baseTheme";
 import basicsReadme from "../basics/README.md";
 import densityReadme from "./DENSITY_README.md";
 import colorSchemeReadme from "./COLOR_SCHEME_README.md";
@@ -15,87 +15,87 @@ function filterMatchByKey(o, keyFragment) {
 export default [
   {
     description: "Basics - Border radii",
-    schema: filterMatchByKey(baseThemeConfig, "basics.borderRadii"),
+    schema: filterMatchByKey(baseTheme.unresolvedRoles, "basics.borderRadii"),
     readme: basicsReadme
   },
   {
     description: "Basics - Border widths",
-    schema: filterMatchByKey(baseThemeConfig, "basics.borderWidths"),
+    schema: filterMatchByKey(baseTheme.unresolvedRoles, "basics.borderWidths"),
     readme: basicsReadme
   },
   {
     description: "Basics - Colors",
-    schema: filterMatchByKey(baseThemeConfig, "basics.colors"),
+    schema: filterMatchByKey(baseTheme.unresolvedRoles, "basics.colors"),
     readme: basicsReadme
   },
   {
     description: "Basics - Font families",
-    schema: filterMatchByKey(baseThemeConfig, "basics.fontFamilies"),
+    schema: filterMatchByKey(baseTheme.unresolvedRoles, "basics.fontFamilies"),
     readme: basicsReadme
   },
   {
     description: "Basics - Font sizes",
-    schema: filterMatchByKey(baseThemeConfig, "basics.fontSizes"),
+    schema: filterMatchByKey(baseTheme.unresolvedRoles, "basics.fontSizes"),
     readme: basicsReadme
   },
   {
     description: "Basics - Font weights",
-    schema: filterMatchByKey(baseThemeConfig, "basics.fontWeights"),
+    schema: filterMatchByKey(baseTheme.unresolvedRoles, "basics.fontWeights"),
     readme: basicsReadme
   },
   {
     description: "Basics - Line heights",
-    schema: filterMatchByKey(baseThemeConfig, "basics.lineHeights"),
+    schema: filterMatchByKey(baseTheme.unresolvedRoles, "basics.lineHeights"),
     readme: basicsReadme
   },
   {
     description: "Basics - Shadows",
-    schema: filterMatchByKey(baseThemeConfig, "basics.shadows"),
+    schema: filterMatchByKey(baseTheme.unresolvedRoles, "basics.shadows"),
     readme: basicsReadme
   },
   {
     description: "Basics - Spacings",
-    schema: filterMatchByKey(baseThemeConfig, "basics.spacings"),
+    schema: filterMatchByKey(baseTheme.unresolvedRoles, "basics.spacings"),
     readme: basicsReadme
   },
   {
     description: "Color scheme",
-    schema: filterMatchByKey(baseThemeConfig, "colorScheme"),
+    schema: filterMatchByKey(baseTheme.unresolvedRoles, "colorScheme"),
     readme: colorSchemeReadme
   },
   {
     description: "Density",
-    schema: filterMatchByKey(baseThemeConfig, "density"),
+    schema: filterMatchByKey(baseTheme.unresolvedRoles, "density"),
     readme: densityReadme
   },
   {
     description: "Component - Checkbox",
-    schema: filterMatchByKey(baseThemeConfig, /^checkbox./),
+    schema: filterMatchByKey(baseTheme.unresolvedRoles, /^checkbox./),
     readme: undefined
   },
   {
     description: "Component - Forms",
-    schema: filterMatchByKey(baseThemeConfig, /^formField./),
+    schema: filterMatchByKey(baseTheme.unresolvedRoles, /^formField./),
     readme: undefined
   },
   {
     description: "Component - Input",
-    schema: filterMatchByKey(baseThemeConfig, /^input./),
+    schema: filterMatchByKey(baseTheme.unresolvedRoles, /^input./),
     readme: undefined
   },
   {
     description: "Component - Label",
-    schema: filterMatchByKey(baseThemeConfig, /^label./),
+    schema: filterMatchByKey(baseTheme.unresolvedRoles, /^label./),
     readme: undefined
   },
   {
     description: "Component - Menu",
-    schema: filterMatchByKey(baseThemeConfig, /^menu./),
+    schema: filterMatchByKey(baseTheme.unresolvedRoles, /^menu./),
     readme: undefined
   },
   {
     description: "Component - Text area",
-    schema: filterMatchByKey(baseThemeConfig, /^textArea./),
+    schema: filterMatchByKey(baseTheme.unresolvedRoles, /^textArea./),
     readme: undefined
   }
 ];

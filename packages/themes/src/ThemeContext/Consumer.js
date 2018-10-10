@@ -26,10 +26,7 @@ export default class Consumer extends Component {
   static contextTypes = themeContextShape;
 
   render() {
-    const theme =
-      this.context.themeId && this.context.themeClass
-        ? this.context
-        : HIGLightTheme;
+    const theme = this.context.resolvedRoles ? this.context : HIGLightTheme;
     const proxy = new Proxy(theme, themeDataProxyHandler);
     const themeArgument = process.env.NODE_ENV !== "production" ? proxy : theme;
 

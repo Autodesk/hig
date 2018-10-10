@@ -13,15 +13,15 @@ import overallReadme from "../../README.md";
 import stories from "./stories";
 import Role from "./components/Role";
 import Header from "./components/Header";
-import { config as lightGrayThemeConfig } from "../themes/lightGrayTheme";
-import { config as darkBlueThemeConfig } from "../themes/darkBlueTheme";
-import { config as webLightThemeConfig } from "../themes/webLightTheme";
+import lightGrayTheme from "../themes/lightGrayTheme";
+import darkBlueTheme from "../themes/darkBlueTheme";
+import webLightTheme from "../themes/webLightTheme";
 import basics from "../basics";
 
 const themeConfigs = {
-  "hig-light": webLightThemeConfig,
-  "hig-light-gray": lightGrayThemeConfig,
-  "hig-dark-blue": darkBlueThemeConfig
+  "hig-light": webLightTheme.unresolvedRoles,
+  "hig-light-gray": lightGrayTheme.unresolvedRoles,
+  "hig-dark-blue": darkBlueTheme.unresolvedRoles
 };
 
 const storybook = storiesOf("Theming|Theme data", module);
@@ -53,7 +53,7 @@ stories.forEach(({ description, schema, readme }) => {
         ]}
       >
         <ThemeContext.Consumer>
-          {({ resolvedRoles, themeId }) => (
+          {({ resolvedRoles, id }) => (
             <div>
               <Header title={description} />
               {Object.keys(schema).map(role => (
@@ -62,7 +62,7 @@ stories.forEach(({ description, schema, readme }) => {
                   role={role}
                   schema={schema[role]}
                   theme={resolvedRoles}
-                  themeConfig={themeConfigs[themeId]}
+                  themeConfig={themeConfigs[id]}
                   basics={basics}
                 />
               ))}

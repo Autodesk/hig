@@ -1,7 +1,6 @@
 import { Component } from "react";
 import PropTypes from "prop-types";
-import metadata from "@hig/theme-data-poc/build/json/lightGrayMediumDensityTheme/resolvedRoles.json";
-import resolvedRoles from "@hig/theme-data-poc/build/json/lightGrayMediumDensityTheme/metadata.json";
+import defaultTheme from "@hig/theme-data-poc/build/json/lightGrayMediumDensityTheme/theme.json";
 
 import themeContextShape from "./shape";
 
@@ -16,7 +15,7 @@ export default class Provider extends Component {
   static childContextTypes = themeContextShape;
 
   static defaultProps = {
-    value: { metadata, resolvedRoles }
+    value: defaultTheme
   };
 
   getChildContext() {
