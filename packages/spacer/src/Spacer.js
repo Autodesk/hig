@@ -23,8 +23,8 @@ export default class Spacer extends Component {
     const { size, spacing } = this.props;
     return (
       <ThemeContext.Consumer>
-        {({ themeData }) => {
-          const styles = stylesheet({ size, spacing }, themeData);
+        {({ resolvedRoles }) => {
+          const styles = stylesheet({ size, spacing }, resolvedRoles);
           return <div className={cx(css(styles.spacer), "hig__spacer-v1")} />;
         }}
       </ThemeContext.Consumer>

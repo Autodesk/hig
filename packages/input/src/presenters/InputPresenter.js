@@ -34,10 +34,10 @@ export default function InputPresenter({
 }) {
   return (
     <ThemeContext.Consumer>
-      {({ themeData }) => {
+      {({ resolvedRoles }) => {
         const styles = stylesheet(
           { isDisabled: disabled, hasFocus, hasHover, variant },
-          themeData
+          resolvedRoles
         );
 
         return (
