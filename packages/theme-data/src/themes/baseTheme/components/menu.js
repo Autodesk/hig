@@ -8,7 +8,7 @@ export default {
   "menu.borderRadius": {
     type: "borderRadius",
     value: {
-      ref: "basics.borderRadii.M"
+      ref: "basics.borderRadii.medium"
     }
   },
   "menu.topFlushBorderTopRadius": {
@@ -50,25 +50,25 @@ export default {
   "menu.item.horizontalPadding": {
     type: "spacing",
     value: {
-      ref: "density.spacings.XS"
+      ref: "density.spacings.extraSmall"
     }
   },
   "menu.item.verticalPadding": {
     type: "spacing",
     value: {
-      ref: "basics.spacings.mediumS"
+      ref: "basics.spacings.mediumSmall"
     }
   },
   "menu.item.minHeight": {
     type: "length",
     value: {
-      ref: "density.spacings.L"
+      ref: "density.spacings.large"
     }
   },
   "menu.item.gutterWidth": {
     type: "spacing",
     value: {
-      ref: "basics.spacings.mediumS"
+      ref: "basics.spacings.mediumSmall"
     }
   }
 };

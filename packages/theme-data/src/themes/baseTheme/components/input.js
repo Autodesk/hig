@@ -5,30 +5,30 @@ export default {
   },
   "input.boxType.horizontalPadding": {
     type: "length",
-    value: { ref: "density.spacings.XS" }
+    value: { ref: "density.spacings.extraSmall" }
   },
   "input.verticalPadding": {
     type: "length",
     value: {
-      ref: "density.spacings.XXS"
+      ref: "density.spacings.extraExtraSmall"
     }
   },
   "input.borderRadius": {
     type: "borderRadius",
     value: {
-      ref: "basics.borderRadii.S"
+      ref: "basics.borderRadii.small"
     }
   },
   "input.borderColor": {
     type: "color",
     value: {
-      ref: "colorScheme.surfaceLevel1_5Color"
+      ref: "colorScheme.surfaceLevel15Color"
     }
   },
   "input.borderWidth": {
     type: "borderWidth",
     value: {
-      ref: "basics.borderWidths.S"
+      ref: "basics.borderWidths.small"
     }
   },
   "input.borderBottomColor": {
@@ -37,7 +37,7 @@ export default {
   "input.borderBottomWidth": {
     type: "borderWidth",
     value: {
-      ref: "basics.borderWidths.S"
+      ref: "basics.borderWidths.small"
     }
   },
   "input.fontColor": {
@@ -61,13 +61,13 @@ export default {
   "input.fontSize": {
     type: "fontSize",
     value: {
-      ref: "density.fontSizes.M"
+      ref: "density.fontSizes.medium"
     }
   },
   "input.lineHeight": {
     type: "lineHeight",
     value: {
-      ref: "basics.lineHeights.M"
+      ref: "basics.lineHeights.medium"
     }
   },
   "input.halo.color": {
@@ -82,7 +82,7 @@ export default {
   "input.gutterWidth": {
     type: "length",
     value: {
-      ref: "density.spacings.XS"
+      ref: "density.spacings.extraSmall"
     }
   },
   "input.placeholder.fontColor": {
@@ -99,7 +99,7 @@ export default {
   "input.hover.halo.width": {
     type: "length",
     value: {
-      ref: "basics.borderWidths.L"
+      ref: "basics.borderWidths.large"
     }
   },
 
@@ -110,7 +110,7 @@ export default {
   "input.focus.halo.width": {
     type: "length",
     value: {
-      ref: "basics.borderWidths.L"
+      ref: "basics.borderWidths.large"
     }
   },
   "input.focus.halo.color": {
@@ -121,7 +121,7 @@ export default {
   "input.active.halo.width": {
     type: "length",
     value: {
-      ref: "basics.borderWidths.L"
+      ref: "basics.borderWidths.large"
     }
   },
   "input.active.halo.color": {
@@ -132,7 +132,7 @@ export default {
   "input.disabled.borderColor": {
     type: "color",
     value: {
-      ref: "colorScheme.surfaceLevel1_5Color"
+      ref: "colorScheme.surfaceLevel15Color"
     }
   },
   "input.disabled.fontColor": {

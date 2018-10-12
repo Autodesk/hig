@@ -1,27 +1,27 @@
 export default {
-  surfaceLevel1Color: {
+  surfaceLevel10Color: {
     value: {
-      ref: "basics.colors.surfaceLightGrayLevel1"
+      ref: "basics.colors.surfaceLightGrayLevel10"
     }
   },
-  surfaceLevel1_5Color: {
+  surfaceLevel15Color: {
     value: {
-      ref: "basics.colors.surfaceLightGrayLevel1_5"
+      ref: "basics.colors.surfaceLightGrayLevel15"
     }
   },
-  surfaceLevel2Color: {
+  surfaceLevel20Color: {
     value: {
-      ref: "basics.colors.surfaceLightGrayLevel2"
+      ref: "basics.colors.surfaceLightGrayLevel20"
     }
   },
-  surfaceLevel3Color: {
+  surfaceLevel30Color: {
     value: {
-      ref: "basics.colors.surfaceLightGrayLevel3"
+      ref: "basics.colors.surfaceLightGrayLevel30"
     }
   },
-  surfaceLevel4Color: {
+  surfaceLevel40Color: {
     value: {
-      ref: "basics.colors.surfaceLightGrayLevel4"
+      ref: "basics.colors.surfaceLightGrayLevel40"
     }
   },
   lowShadowColor: {

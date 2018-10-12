@@ -70,32 +70,32 @@ export default [
   },
   {
     description: "Component - Checkbox",
-    schema: filterMatchByKey(baseThemeConfig, /^CHECKBOX./),
+    schema: filterMatchByKey(baseThemeConfig, /^checkbox./),
     readme: undefined
   },
   {
     description: "Component - Forms",
-    schema: filterMatchByKey(baseThemeConfig, /^FORM_FIELD./),
+    schema: filterMatchByKey(baseThemeConfig, /^formField./),
     readme: undefined
   },
   {
     description: "Component - Input",
-    schema: filterMatchByKey(baseThemeConfig, /^INPUT./),
+    schema: filterMatchByKey(baseThemeConfig, /^input./),
     readme: undefined
   },
   {
     description: "Component - Label",
-    schema: filterMatchByKey(baseThemeConfig, /^LABEL./),
+    schema: filterMatchByKey(baseThemeConfig, /^label./),
     readme: undefined
   },
   {
     description: "Component - Menu",
-    schema: filterMatchByKey(baseThemeConfig, /^MENU./),
+    schema: filterMatchByKey(baseThemeConfig, /^menu./),
     readme: undefined
   },
   {
     description: "Component - Text area",
-    schema: filterMatchByKey(baseThemeConfig, /^TEXT_AREA./),
+    schema: filterMatchByKey(baseThemeConfig, /^textArea./),
     readme: undefined
   }
 ];

@@ -1,11 +1,11 @@
 export const sizes = Object.freeze({
-  XXS: "xxs",
-  XS: "xs",
-  S: "s",
-  M: "m",
-  L: "l",
-  XL: "xl",
-  XXL: "xxl"
+  xxs: "extraExtraSmall",
+  xs: "extraSmall",
+  s: "small",
+  m: "medium",
+  l: "large",
+  xl: "extraLarge",
+  xxl: "extraExtraLarge"
 });
 
-export const AVAILABLE_SIZES = Object.freeze(Object.values(sizes));
+export const AVAILABLE_SIZES = Object.freeze(Object.keys(sizes));

@@ -4,8 +4,8 @@ import Swatch from "./Swatch";
 import Value from "./Value";
 
 export default function ColorExample({ value, basics }) {
-  const colorName = Object.keys(basics.COLORS).find(
-    key => basics.COLORS[key] === value
+  const colorName = Object.keys(basics.colors).find(
+    key => basics.colors[key] === value
   );
   return (
     <div>

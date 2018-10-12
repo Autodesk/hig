@@ -7,11 +7,11 @@ import { ThemeContext } from "@hig/themes";
 import stylesheet from "./stylesheet";
 
 const FONT_SIZES = {
-  S: "density.fontSizes.S",
-  M: "density.fontSizes.M",
-  L: "density.fontSizes.L",
-  XL: "density.fontSizes.XL",
-  XXL: "density.fontSizes.XXL"
+  S: "density.fontSizes.small",
+  M: "density.fontSizes.medium",
+  L: "density.fontSizes.large",
+  XL: "density.fontSizes.extraLarge",
+  XXL: "density.fontSizes.extraExtraLarge"
 };
 
 const FONT_WEIGHTS = {
@@ -26,9 +26,9 @@ const FONT_FAMILIES = {
 };
 
 const LINE_HEIGHTS = {
-  S: "basics.lineHeights.S",
-  M: "basics.lineHeights.M",
-  L: "basics.lineHeights.L"
+  S: "basics.lineHeights.small",
+  M: "basics.lineHeights.medium",
+  L: "basics.lineHeights.large"
 };
 
 const LAYOUTS = {
