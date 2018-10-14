@@ -1,8 +1,11 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
+
 import Icon from "@hig/icon";
+import "@hig/icon/build/index.css";
 import { AVAILABLE_NAMES as AVAILABLE_ICON_NAMES } from "@hig/icons";
+
 import { types, AVAILABLE_TYPES } from "./types";
 import "./icon-button.scss";
 
