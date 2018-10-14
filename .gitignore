@@ -65,3 +65,4 @@ nohup.out
 build/
 storybook-static/
 storybook-gemini-test/
+.temp/
