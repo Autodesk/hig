@@ -1,5 +1,7 @@
+import { sizes } from "./availableSizes";
+
 function getSpacing(spacing, themeData) {
-  return themeData[`density.spacings.${spacing.toUpperCase()}`];
+  return themeData[`density.spacings.${sizes[spacing]}`];
 }
 
 export default function stylesheet(props, themeData) {

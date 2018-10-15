@@ -13,12 +13,11 @@ const knobLabels = {
 };
 
 export default function getKnobs(props) {
-  const { size, spacing, display, ...otherProps } = props;
+  const { size, spacing, ...otherProps } = props;
 
   return {
     ...otherProps,
     size: text(knobLabels.size, size, knobGroupIds.basic),
-    spacing: select(knobLabels.spacing, AVAILABLE_SIZES, "m"),
-    display: text(knobLabels.display, display, knobGroupIds.basic)
+    spacing: select(knobLabels.spacing, AVAILABLE_SIZES, "m")
   };
 }

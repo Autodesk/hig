@@ -10,7 +10,7 @@ import {
   HIGLightGrayHighDensityTheme,
   HIGDarkBlueHighDensityTheme,
   MatrixTheme
-} from "@hig/themes";
+} from "@hig/themes-poc";
 
 const densityThemes = {
   "high-density": {
@@ -58,10 +58,10 @@ function Surface({ children }) {
       {({ themeData }) => (
         <div
           style={{
-            backgroundColor: themeData["colorScheme.surfaceLevel1Color"],
-            padding: themeData["density.spacings.XL"],
-            margin: `-${themeData["density.spacings.XL"]}`,
-            borderRadius: themeData["basics.borderRadii.M"],
+            backgroundColor: themeData["colorScheme.surfaceLevel10Color"],
+            padding: themeData["density.spacings.extraLarge"],
+            margin: `-${themeData["density.spacings.extraLarge"]}`,
+            borderRadius: themeData["basics.borderRadii.medium"],
             transiton: "all 0.3s",
             minHeight: "20vh"
           }}
