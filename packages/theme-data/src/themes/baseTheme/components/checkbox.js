@@ -23,7 +23,7 @@ export default {
   "checkbox.borderRadius": {
     type: "borderRadius",
     value: {
-      ref: "basics.borderRadii.S"
+      ref: "basics.borderRadii.small"
     }
   },
   "checkbox.halo.color": {
@@ -41,7 +41,7 @@ export default {
   "checkbox.labelSpacing": {
     type: "length",
     value: {
-      ref: "density.spacings.S"
+      ref: "density.spacings.small"
     }
   },
 

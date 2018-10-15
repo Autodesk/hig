@@ -1,62 +1,62 @@
 export default {
-  "spacings.XXS": {
+  "spacings.extraExtraSmall": {
     value: {
-      ref: "basics.spacings.highXXS"
+      ref: "basics.spacings.highExtraExtraSmall"
     }
   },
-  "spacings.XS": {
+  "spacings.extraSmall": {
     value: {
-      ref: "basics.spacings.highXS"
+      ref: "basics.spacings.highExtraSmall"
     }
   },
-  "spacings.S": {
+  "spacings.small": {
     value: {
-      ref: "basics.spacings.highS"
+      ref: "basics.spacings.highSmall"
     }
   },
-  "spacings.M": {
+  "spacings.medium": {
     value: {
-      ref: "basics.spacings.highM"
+      ref: "basics.spacings.highMedium"
     }
   },
-  "spacings.L": {
+  "spacings.large": {
     value: {
-      ref: "basics.spacings.highL"
+      ref: "basics.spacings.highLarge"
     }
   },
-  "spacings.XL": {
+  "spacings.extraLarge": {
     value: {
-      ref: "basics.spacings.highXL"
+      ref: "basics.spacings.highExtraLarge"
     }
   },
-  "spacings.XXL": {
+  "spacings.extraExtraLarge": {
     value: {
-      ref: "basics.spacings.highXXL"
+      ref: "basics.spacings.highExtraExtraLarge"
     }
   },
-  "fontSizes.S": {
+  "fontSizes.small": {
     value: {
-      ref: "basics.fontSizes.highS"
+      ref: "basics.fontSizes.highSmall"
     }
   },
-  "fontSizes.M": {
+  "fontSizes.medium": {
     value: {
-      ref: "basics.fontSizes.highM"
+      ref: "basics.fontSizes.highMedium"
     }
   },
-  "fontSizes.L": {
+  "fontSizes.large": {
     value: {
-      ref: "basics.fontSizes.highL"
+      ref: "basics.fontSizes.highLarge"
     }
   },
-  "fontSizes.XL": {
+  "fontSizes.extraLarge": {
     value: {
-      ref: "basics.fontSizes.highXL"
+      ref: "basics.fontSizes.highExtraLarge"
     }
   },
-  "fontSizes.XXL": {
+  "fontSizes.extraExtraLarge": {
     value: {
-      ref: "basics.fontSizes.highXXL"
+      ref: "basics.fontSizes.highExtraExtraLarge"
     }
   }
 };

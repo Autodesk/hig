@@ -12,7 +12,7 @@ export default function Swatch({ length }) {
             height: length,
             width: length,
             backgroundColor: themeData["colorScheme.accentColor500"],
-            marginBottom: themeData["density.spacings.S"]
+            marginBottom: themeData["density.spacings.small"]
           }}
         />
       )}

@@ -15,8 +15,8 @@ import lightGrayTheme from '@hig/theme-data-poc/build/lightGrayTheme.json';
 console.log(lightGrayTheme);
 // {
 //  "basics.borderRadii.none": "0",
-//  "basics.borderRadii.S":  "0"
-//  "basics.borderRadii.M":  "2px"
+//  "basics.borderRadii.small":  "0"
+//  "basics.borderRadii.medium":  "2px"
 // ...
 // }
 ```
@@ -28,8 +28,8 @@ import { lightGrayTheme } from '@hig/theme-data-poc';
 console.log(lightGrayTheme.data);
 // {
 //  "basics.borderRadii.none": "0",
-//  "basics.borderRadii.S":  "0"
-//  "basics.borderRadii.M":  "2px"
+//  "basics.borderRadii.small":  "0"
+//  "basics.borderRadii.medium":  "2px"
 // ...
 // }
 ```
@@ -87,7 +87,7 @@ Data defining a primitive value (e.g. “#0696D7” or “16px”) for each role
 Data defining a primitive value or reference for each role in the theme schema.
 
 ### Reference
-References in a theme configuration may point to a basic value or another role. References may point to roles defined with another reference. For example, `TEXT_AREA.FOCUS.COLOR` may refer to `INPUT.FOCUS.COLOR`, which refers to `ACCENT_COLOR`, which refers to `BASICS.COLORS.AUTODESK_BLUE_600`.
+References in a theme configuration may point to a basic value or another role. References may point to roles defined with another reference. For example, `textArea.focus.color` may refer to `input.focus.color`, which refers to `accentColor`, which refers to `basics.colors.autodeskBlue600`.
 
 ### `Theme generator`
 The theme generator is javascript code that overrides values in a theme, adds new roles and values to a theme, and replaces references with primitive values.
@@ -109,7 +109,7 @@ Theme
                     - Property: value
 ```
 
-In data we model the theme as a flat map of key-value pairs. We represent the hierarchy in the key, but only as much as is needed to disambiguate one key from another. e.g. a role in the theme may have a key such as `TEXT_AREA_DISABLED.TEXT_COLOR`. The key uses component name, state name, and property name but does not describe a category.
+In data we model the theme as a flat map of key-value pairs. We represent the hierarchy in the key, but only as much as is needed to disambiguate one key from another. e.g. a role in the theme may have a key such as `textAreaDisabled.textColor`. The key uses component name, state name, and property name but does not describe a category.
 
 ## Ideas discussed but not advanced at this time
 - Stylesheet factories: Functions that map a theme and state to a stylesheet for a component

@@ -18,7 +18,10 @@
   },
   "scripts": {
     "test": "hig-scripts-test",
-    "build": "hig-scripts-build && babel-node scripts/buildThemes",
+    "build": "yarn run build:core && yarn run build:themes && yarn run build:theme-artifacts",
+    "build:core": "hig-scripts-build",
+    "build:themes": "babel-node scripts/buildThemes",
+    "build:theme-artifacts": "node scripts/buildThemeArtifacts.js",
     "lint": "hig-scripts-lint"
   },
   "devDependencies": {
@@ -26,7 +29,8 @@
     "@hig/eslint-config": "^0.1.0",
     "@hig/jest-preset": "^0.1.0",
     "@hig/scripts": "^0.1.2",
-    "babel-cli": "^6.26.0"
+    "babel-cli": "^6.26.0",
+    "style-dictionary": "^2.4.0"
   },
   "dependencies": {
     "tinycolor2": "^1.4.1"
