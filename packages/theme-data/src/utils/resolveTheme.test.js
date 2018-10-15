@@ -85,7 +85,7 @@ describe("resolveTheme", () => {
         const theme = {
           "basics.spacingsM": { value: "16px" },
           accentColor: {
-            value: { ref: "basics.spacingsM" },
+            value: { ref: "basics.spacingsMedium" },
             transform: { alpha: 0.5 }
           }
         };

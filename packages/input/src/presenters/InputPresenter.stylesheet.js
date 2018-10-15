@@ -47,7 +47,7 @@ export default function stylesheet(props, themeData) {
           ? themeData["input.boxType.horizontalPadding"]
           : themeData["input.horizontalPadding"],
       outline: "none",
-      fontSize: themeData["density.fontSizes.M"],
+      fontSize: themeData["density.fontSizes.medium"],
       fontFamily: themeData["input.fontFamily"],
       fontWeight: themeData["input.fontWeight"],
       lineHeight: themeData["input.lineHeight"],

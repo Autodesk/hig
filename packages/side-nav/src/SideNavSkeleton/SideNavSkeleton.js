@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import SkeletonItem from "@hig/skeleton-item";
 import cx from "classnames";
 import { ThemeContext } from "@hig/themes";
+import SkeletonItem from "@hig/skeleton-item";
+import "@hig/skeleton-item/build/index.css";
 
 import "./side-nav-skeleton.scss";
 

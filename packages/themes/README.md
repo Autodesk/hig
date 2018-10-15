@@ -26,10 +26,10 @@ import { ThemeContext } from '@hig/themes`;
 function MyThemedComponent() {
   <ThemeContext.Consumer>{({ themeData, themeName }) => (
     <div style={{
-      backgroundColor: themeData["colorScheme.surfaceLevel2Color"],
-      borderRadius: themeData["basics.borderRadii.S"],
+      backgroundColor: themeData["colorScheme.surfaceLevel20Color"],
+      borderRadius: themeData["basics.borderRadii.small"],
       color: themeData["colorScheme.textColor"],
-      padding: themeData["density.spacings.M"],
+      padding: themeData["density.spacings.medium"],
     }}>
       The current theme is "{themeName}".
     </div>
