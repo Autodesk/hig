@@ -23,8 +23,12 @@ import { combineEventHandlers } from "@hig/utils";
 export default class MultiDownshift extends React.Component {
   static propTypes = {
     ...Downshift.propTypes,
+    /** Controlled: the currently selected items */
     selectedItems: PropTypes.arrayOf(PropTypes.any),
-    defaultSelectedItems: PropTypes.arrayOf(PropTypes.any)
+    /** Items selected by default */
+    defaultSelectedItems: PropTypes.arrayOf(PropTypes.any),
+    /** Alias of `defaultSelectedItems` for consistency with Downshift */
+    initialSelectedItems: PropTypes.arrayOf(PropTypes.any)
   };
 
   static defaultProps = {
@@ -32,8 +36,17 @@ export default class MultiDownshift extends React.Component {
   };
 
   state = {
-    selectedItems: this.props.defaultSelectedItems
+    selectedItems: this.getDefaultSelectedItem()
   };
+
+  getDefaultSelectedItem() {
+    const {
+      initialSelectedItems,
+      defaultSelectedItems = initialSelectedItems
+    } = this.props;
+
+    return defaultSelectedItems;
+  }
 
   /**
    * @returns {any[]}

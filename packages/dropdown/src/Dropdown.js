@@ -104,8 +104,8 @@ export default class Dropdown extends Component {
     const { id, multiple, formatOption, value, defaultValue } = this.props;
     const valuePropName = multiple ? "selectedItems" : "selectedItem";
     const defaultValuePropName = multiple
-      ? "defaultSelectedItems"
-      : "defaultSelectedItem";
+      ? "initialSelectedItems"
+      : "initialSelectedItem";
 
     return {
       id,
