@@ -1,3 +1,10 @@
+# [@hig/icon-button-v0.2.2](https://github.com/Autodesk/hig/compare/@hig/icon-button@0.2.1...@hig/icon-button@0.2.2) (2018-10-16)
+
+
+### Bug Fixes
+
+* add icon css to icon-button ([89810fc](https://github.com/Autodesk/hig/commit/89810fc))
+
 # [@hig/icon-button-v0.2.1](https://github.com/Autodesk/hig/compare/@hig/icon-button@0.2.0...@hig/icon-button@0.2.1) (2018-10-08)
 
 
