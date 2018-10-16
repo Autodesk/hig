@@ -187,13 +187,13 @@ jobs:
       - run:
           name: Release
           command: yarn run release
-  update-development:
+  post-release:
     <<: *defaults
     steps:
       - checkout
       - run:
-          name: Update development branch
-          command: yarn run update-development
+          name: Post release
+          command: yarn run post-release
 workflows:
   version: 2
   build-test-validate-and-deploy:
@@ -239,7 +239,7 @@ workflows:
           filters:
             branches:
               only: master
-      - update-development:
+      - post-release:
           requires:
             - packages-deploy
           filters:
