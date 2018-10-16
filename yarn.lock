@@ -188,7 +188,7 @@
     universal-user-agent "^2.0.0"
     url-template "^2.0.8"
 
-"@semantic-release/changelog@^2.0.2":
+"@semantic-release/changelog@2.1.2":
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/@semantic-release/changelog/-/changelog-2.1.2.tgz#d232a61e193cad6fcea95600a9351e026c9f979f"
   dependencies:
@@ -212,7 +212,7 @@
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@semantic-release/error/-/error-2.2.0.tgz#ee9d5a09c9969eade1ec864776aeda5c5cddbbf0"
 
-"@semantic-release/git@^5.0.0":
+"@semantic-release/git@5.0.0":
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/@semantic-release/git/-/git-5.0.0.tgz#13703fca8f8c8c03066b0d005ee6a8c0119c3164"
   dependencies:
@@ -226,7 +226,7 @@
     micromatch "^3.1.4"
     p-reduce "^1.0.0"
 
-"@semantic-release/github@^4.1.0", "@semantic-release/github@^4.2.17":
+"@semantic-release/github@4.4.2", "@semantic-release/github@^4.1.0":
   version "4.4.2"
   resolved "https://registry.yarnpkg.com/@semantic-release/github/-/github-4.4.2.tgz#2d3ef6d7884984864f8d22dbf6e1f4f279722046"
   dependencies:
@@ -247,7 +247,7 @@
     parse-github-url "^1.0.1"
     url-join "^4.0.0"
 
-"@semantic-release/npm@^3.2.0":
+"@semantic-release/npm@3.4.1", "@semantic-release/npm@^3.2.0":
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/@semantic-release/npm/-/npm-3.4.1.tgz#59696dbc3e78ae188c6d032ac9086f11af63bf97"
   dependencies:
@@ -10870,9 +10870,9 @@ select@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/select/-/select-1.1.2.tgz#0e7350acdec80b1108528786ec1d4418d11b396d"
 
-semantic-release-monorepo@^6.0.3:
-  version "6.1.1"
-  resolved "https://registry.yarnpkg.com/semantic-release-monorepo/-/semantic-release-monorepo-6.1.1.tgz#c9d802cbd065963a7d01d258936dfaf2989a2a7f"
+semantic-release-monorepo@6.0.3:
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/semantic-release-monorepo/-/semantic-release-monorepo-6.0.3.tgz#4cf66490df4c32bd40ddaa6afa836cf0b2210bb5"
   dependencies:
     debug "^3.1.0"
     execa "^0.8.0"
