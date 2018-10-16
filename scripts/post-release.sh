@@ -1,3 +1,4 @@
 #!/bin/bash
-source ./upgrade-dependents.sh
-source ./update-development.sh
+SCRIPTS_DIR="$(dirname "$0")"
+source "$SCRIPTS_DIR/upgrade-dependents.sh"
+source "$SCRIPTS_DIR/update-development.sh"
