@@ -11,7 +11,7 @@ yarn add @hig/themes
 ## Provide a theme to components
 ```jsx
 import HIGDarkBlueTheme from '@hig/theme-data-poc/build/darkBlueMediumDensity/theme.json';
-import { ThemeContext } from '@hig/theme-context';
+import ThemeContext from '@hig/theme-context';
 
 function MyApp() {
   <ThemeContext.Provider value={HIGDarkBlueTheme}>
@@ -22,7 +22,7 @@ function MyApp() {
 
 ## Consume theme values in a component
 ```jsx
-import { ThemeContext } from '@hig/themes';
+import ThemeContext from '@hig/themes';
 
 function MyThemedComponent() {
   <ThemeContext.Consumer>{({ resolvedRoles, name }) => (
