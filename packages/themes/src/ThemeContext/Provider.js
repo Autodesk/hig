@@ -1,7 +1,8 @@
 import { Component } from "react";
 import PropTypes from "prop-types";
+import defaultTheme from "@hig/theme-data-poc/build/json/lightGrayMediumDensityTheme/theme.json";
+
 import themeContextShape from "./shape";
-import HIGLightTheme from "../themes/HIGLightTheme";
 
 export default class Provider extends Component {
   static propTypes = {
@@ -14,7 +15,7 @@ export default class Provider extends Component {
   static childContextTypes = themeContextShape;
 
   static defaultProps = {
-    value: HIGLightTheme
+    value: defaultTheme
   };
 
   getChildContext() {

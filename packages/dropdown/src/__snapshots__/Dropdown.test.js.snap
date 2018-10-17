@@ -668,7 +668,7 @@ exports[`Dropdown renders with default value 1`] = `
               aria-controls={null}
               aria-labelledby="downshift-7-label"
               autoComplete="off"
-              className="hig__text-field-v1__input hig__text-field-v1__input--no-value"
+              className="hig__text-field-v1__input"
               disabled={undefined}
               id="downshift-7"
               onBlur={[Function]}
@@ -679,7 +679,7 @@ exports[`Dropdown renders with default value 1`] = `
               placeholder={undefined}
               readOnly={true}
               type="button"
-              value=""
+              value="foo"
             />
           </div>
         </div>
@@ -739,8 +739,8 @@ exports[`Dropdown renders with default value 1`] = `
       </span>
     </div>
     <div
-      aria-selected={false}
-      className="hig__dropdown-option"
+      aria-selected={true}
+      className="hig__dropdown-option hig__dropdown-option--selected"
       id="downshift-7-item-2"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -754,6 +754,18 @@ exports[`Dropdown renders with default value 1`] = `
       >
         foo
       </span>
+      <div
+        className="hig__dropdown-option__checkmark"
+      >
+        <div
+          className="hig__icon hig__icon--24-size"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"checkmark-blue-dark-24\\"><polygon fill=\\"#087AAD\\" points=\\"10.1802137 16 6 12.1129 7.29586623 10.8214 10.1569902 13.4647 16.6790525 7 18 8.2681\\" fill-rule=\\"evenodd\\"/></svg>",
+            }
+          }
+        />
+      </div>
     </div>
   </div>
 </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { ThemeContext } from "@hig/themes";
+import { ThemeContext } from "@hig/themes-poc";
 import Example from "./Example";
 import InlineCode from "./InlineCode";
 import Text from "./Text";
@@ -8,15 +8,15 @@ import Text from "./Text";
 function Role(props) {
   return (
     <ThemeContext.Consumer>
-      {({ themeData }) => (
+      {({ resolvedRoles }) => (
         <div
           style={{
             display: "flex",
-            marginBottom: themeData["density.spacings.extraLarge"],
-            borderTop: `${themeData["basics.borderWidths.small"]} solid ${
-              themeData["colorScheme.divider.dimColor"]
+            marginBottom: resolvedRoles["density.spacings.extraLarge"],
+            borderTop: `${resolvedRoles["basics.borderWidths.small"]} solid ${
+              resolvedRoles["colorScheme.textColorDim"]
             }`,
-            paddingTop: themeData["density.spacings.medium"]
+            paddingTop: resolvedRoles["density.spacings.medium"]
           }}
         >
           <div style={{ flex: "1 1 0" }}>

@@ -10,22 +10,9 @@ yarn add @hig/theme-data-poc
 
 #### Access theme data as json
 ```js
-import lightGrayTheme from '@hig/theme-data-poc/build/lightGrayTheme.json';
+import lightGrayMediumDensityTheme from '@hig/theme-data-poc/build/json/lightGrayMediumDensityTheme/resolvedRoles.json';
 
-console.log(lightGrayTheme);
-// {
-//  "basics.borderRadii.none": "0",
-//  "basics.borderRadii.small":  "0"
-//  "basics.borderRadii.medium":  "2px"
-// ...
-// }
-```
-
-#### Access theme data as javascript
-```js
-import { lightGrayTheme } from '@hig/theme-data-poc';
-
-console.log(lightGrayTheme.data);
+console.log(lightGrayMediumDensityTheme);
 // {
 //  "basics.borderRadii.none": "0",
 //  "basics.borderRadii.small":  "0"
@@ -36,12 +23,14 @@ console.log(lightGrayTheme.data);
 
 #### Extend a theme to make a new variation
 ```js
-import { extendTheme, resolveTheme, lightGrayTheme } from '@hig/theme-data-poc';
+import resolvedRoles from '@hig/theme-data-poc/build/json/lightGrayMediumDensityTheme/resolvedRoles.json';
+import unresolvedRoles from '@hig/theme-data-poc/build/json/lightGrayMediumDensityTheme/unresolvedRoles.json';
+import { extendTheme, resolveTheme } from '@hig/theme-data-poc';
 
-const redAccentedThemeConfig = extendTheme(lightGrayTheme.config, {
+const redAccentedUnresolvedTheme = extendTheme(unresolvedRoles, {
     "colorScheme.accentColor500": "#F00",
 });
-const redAccentedTheme = resolveTheme(redAccentedThemeConfig);
+const redAccentedTheme = resolveTheme(redAccentedUnresolvedTheme);
 
 console.log(redAccentedTheme);
 // {
@@ -67,7 +56,7 @@ console.log(redAccentedTheme);
 - Enable product teams to customize theme values in order to meet their needs as they see fit
 - Enable product teams to extend the schema to incorporate new or product-specific components
 
-## Important domain concepts for everyone
+## Important domain concepts
 
 ### [Basics](./src/basics)
 Named values (colors, spacings, typographic specifications, etc.) from which most (all?) other values in a theme are derived
@@ -75,22 +64,14 @@ Named values (colors, spacings, typographic specifications, etc.) from which mos
 ### Role
 A property of a component provided by a theme. E.g. Divider is a component. '1px' is a border width. `DIVIDER.BORDER_WIDTH` is a role mapping a width to the border width property of the divider component.
 
-### Theme schema
-A set of roles and types which define the properties of the design language
-
-### Theme
+### Resolved roles
 Data defining a primitive value (e.g. “#0696D7” or “16px”) for each role in the theme schema.
 
-## Additional concepts for technical folks
-
-### Theme configuration
+### Unresolved roles
 Data defining a primitive value or reference for each role in the theme schema.
 
 ### Reference
 References in a theme configuration may point to a basic value or another role. References may point to roles defined with another reference. For example, `textArea.focus.color` may refer to `input.focus.color`, which refers to `accentColor`, which refers to `basics.colors.autodeskBlue600`.
-
-### `Theme generator`
-The theme generator is javascript code that overrides values in a theme, adds new roles and values to a theme, and replaces references with primitive values.
 
 ## Thoughts on modeling a theme
 We have chosen to model theme data more simply than the domain.

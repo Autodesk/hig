@@ -1,12 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { ThemeContext } from "@hig/themes";
+import { ThemeContext } from "@hig/themes-poc";
 import Text from "./Text";
 
 export default function Header({ title }) {
   return (
     <ThemeContext.Consumer>
-      {({ themeData }) => (
+      {({ resolvedRoles }) => (
         <div>
           <Text
             fontSize={Text.FONT_SIZES.XL}
@@ -17,11 +17,11 @@ export default function Header({ title }) {
           >
             {title}
           </Text>
-          <div style={{ height: themeData["density.spacings.medium"] }} />
+          <div style={{ height: resolvedRoles["density.spacings.medium"] }} />
           <div
             style={{
               display: "flex",
-              marginBottom: themeData["density.spacings.medium"]
+              marginBottom: resolvedRoles["density.spacings.medium"]
             }}
           >
             <div style={{ flex: "1 1 0" }}>
