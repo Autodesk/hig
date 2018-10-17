@@ -6,9 +6,9 @@ import mediumDensityTheme from "./mediumDensityTheme";
 import highDensityTheme from "./highDensityTheme";
 
 import baseTheme from "../themes/baseTheme";
-import "../../support/jest/matchers/toBeAValidTheme";
-import extendTheme from "../utils/extendTheme";
-import resolveTheme from "../utils/resolveTheme";
+import "../support/jest/matchers/toBeAValidTheme";
+import extendTheme from "./utils/extendTheme";
+import resolveTheme from "./utils/resolveTheme";
 
 describe("Theme", () => {
   [

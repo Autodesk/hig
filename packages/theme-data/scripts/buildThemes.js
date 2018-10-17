@@ -18,11 +18,11 @@ import mkdirp from "mkdirp";
 import extendTheme from "../src/utils/extendTheme";
 import resolveRoles from "../src/utils/resolveTheme";
 
-import lightGrayTheme from "../src/themes/lightGrayTheme";
-import webLightTheme from "../src/themes/webLightTheme";
-import darkBlueTheme from "../src/themes/darkBlueTheme";
-import mediumDensityTheme from "../src/themes/mediumDensityTheme";
-import highDensityTheme from "../src/themes/highDensityTheme";
+import lightGrayTheme from "../src/colorSchemes/lightGray";
+import webLightTheme from "../src/colorSchemes/webLight";
+import darkBlueTheme from "../src/colorSchemes/darkBlue";
+import mediumDensityTheme from "../src/densities/mediumDensity";
+import highDensityTheme from "../src/densities/highDensity";
 
 const buildPath = path.join(process.cwd(), "build/json");
 const colorSchemes = [lightGrayTheme, darkBlueTheme, webLightTheme];
