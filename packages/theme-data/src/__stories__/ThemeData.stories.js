@@ -6,7 +6,7 @@ import RichText from "@hig/rich-text";
 import KnobbedThemeProvider, {
   THEMES
 } from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
-import { ThemeContext } from "@hig/themes";
+import { ThemeContext } from "@hig/themes-poc";
 import "@hig/rich-text/build/index.css";
 
 import overallReadme from "../../README.md";

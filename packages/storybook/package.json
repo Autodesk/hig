@@ -49,6 +49,7 @@
   },
   "dependencies": {
     "@hig/themes-poc": "^1.0.0-alpha",
+    "@hig/theme-data-poc": "^0.0.9-alpha",
     "faker": "^4.1.0",
     "prop-types": "^15.6.1"
   },

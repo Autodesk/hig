@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { ThemeContext } from "@hig/themes";
+import { ThemeContext } from "@hig/themes-poc";
 import Example from "./Example";
 import InlineCode from "./InlineCode";
 import Text from "./Text";
@@ -14,7 +14,7 @@ function Role(props) {
             display: "flex",
             marginBottom: resolvedRoles["density.spacings.extraLarge"],
             borderTop: `${resolvedRoles["basics.borderWidths.small"]} solid ${
-              resolvedRoles["colorScheme.divider.dimColor"]
+              resolvedRoles["colorScheme.textColorDim"]
             }`,
             paddingTop: resolvedRoles["density.spacings.medium"]
           }}

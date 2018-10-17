@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { ThemeContext } from "@hig/themes";
+import { ThemeContext } from "@hig/themes-poc";
 import Text from "./Text";
 
 export default function Header({ title }) {

@@ -35,7 +35,6 @@ export default function stylesheet(props, themeData) {
       boxSizing: "border-box",
       border: "none",
       appearance: "none",
-      minHeight: themeData["input.minHeight"],
       paddingTop: themeData["input.verticalPadding"],
       paddingRight:
         props.variant === variants.BOX
