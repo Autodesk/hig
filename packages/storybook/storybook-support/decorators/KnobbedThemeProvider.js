@@ -42,7 +42,7 @@ function themeOptions(themeIds) {
     const theme = densityThemes["medium-density"][id];
     return {
       ...acc,
-      [theme.id]: theme.themeName
+      [theme.id]: theme.name
     };
   }, {});
 }
