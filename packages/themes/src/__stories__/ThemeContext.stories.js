@@ -7,7 +7,7 @@ import ThemeContext from "../ThemeContext";
 const themeContextStories = storiesOf("Theming|ThemeContext", module);
 
 themeContextStories.add(
-  "Provider",
+  "readme",
   withInfo({
     propTables: [ThemeContext.Provider, ThemeContext.Consumer],
     /* eslint-disable-next-line react/no-danger */
