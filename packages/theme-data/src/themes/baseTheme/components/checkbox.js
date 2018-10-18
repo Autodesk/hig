@@ -11,7 +11,7 @@ export default {
       alpha: 0.5
     },
     value: {
-      ref: "basics.colors.charcoal600"
+      ref: "colorScheme.baseColor"
     }
   },
   "checkbox.borderWidth": {
@@ -49,7 +49,7 @@ export default {
   "checkbox.hover.borderColor": {
     type: "color",
     value: {
-      ref: "basics.colors.charcoal600"
+      ref: "colorScheme.baseColor"
     },
     transform: {
       alpha: 0.5
@@ -72,7 +72,7 @@ export default {
   "checkbox.focus.borderColor": {
     type: "color",
     value: {
-      ref: "basics.colors.charcoal600"
+      ref: "colorScheme.baseColor"
     },
     transform: {
       alpha: 0.5
@@ -95,7 +95,7 @@ export default {
   "checkbox.active.borderColor": {
     type: "color",
     value: {
-      ref: "basics.colors.charcoal600"
+      ref: "colorScheme.baseColor"
     },
     transform: {
       alpha: 0.5
@@ -118,7 +118,7 @@ export default {
   "checkbox.checked.borderColor": {
     type: "color",
     value: {
-      ref: "basics.colors.charcoal600"
+      ref: "colorScheme.baseColor"
     }
   },
   "checkbox.checked.iconColor": {
@@ -130,7 +130,7 @@ export default {
   "checkbox.checked.backgroundColor": {
     type: "color",
     value: {
-      ref: "basics.colors.charcoal600"
+      ref: "colorScheme.baseColor"
     }
   },
 
@@ -146,7 +146,7 @@ export default {
   "checkbox.disabled.checked.backgroundColor": {
     type: "color",
     value: {
-      ref: "basics.colors.charcoal600"
+      ref: "colorScheme.baseColor"
     },
     transform: {
       alhpa: 0.5

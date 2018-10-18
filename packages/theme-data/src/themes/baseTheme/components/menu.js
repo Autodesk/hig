@@ -26,7 +26,7 @@ export default {
   "menu.item.hover.backgroundColor": {
     type: "color",
     value: {
-      ref: "basics.colors.charcoal600"
+      ref: "colorScheme.baseColor"
     },
     transform: {
       alpha: 0.1
@@ -41,7 +41,7 @@ export default {
   "menu.item.active.backgroundColor": {
     type: "color",
     value: {
-      ref: "colorScheme.accentColor500"
+      ref: "colorScheme.accentColor"
     },
     transform: {
       alpha: 0.1
