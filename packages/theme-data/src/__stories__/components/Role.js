@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { ThemeContext } from "@hig/themes-poc";
+import { ThemeContext } from "@hig/theme-context";
 import Example from "./Example";
 import InlineCode from "./InlineCode";
 import Text from "./Text";

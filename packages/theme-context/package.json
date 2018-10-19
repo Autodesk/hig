@@ -1,5 +1,5 @@
 {
-  "name": "@hig/themes-poc",
+  "name": "@hig/theme-context",
   "version": "1.0.0-alpha",
   "description": "ThemeContext components to ease adoption of theme data from React components",
   "author": "Autodesk Inc.",
@@ -18,7 +18,7 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/theme-data-poc": "^0.0.9-alpha",
+    "@hig/theme-data": "^1.0.0-alpha",
     "prop-types": "^15.6.1"
   },
   "devDependencies": {
