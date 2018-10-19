@@ -1,14 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { select } from "@storybook/addon-knobs/react";
-import { ThemeContext } from "@hig/themes-poc";
+import { ThemeContext } from "@hig/theme-context";
 
-import lightGrayMediumDensityTheme from "@hig/theme-data-poc/build/json/lightGrayMediumDensityTheme/theme.json";
-import darkBlueMediumDensityTheme from "@hig/theme-data-poc/build/json/darkBlueMediumDensityTheme/theme.json";
-import webLightMediumDensityTheme from "@hig/theme-data-poc/build/json/webLightMediumDensityTheme/theme.json";
-import lightGrayHighDensityTheme from "@hig/theme-data-poc/build/json/lightGrayHighDensityTheme/theme.json";
-import darkBlueHighDensityTheme from "@hig/theme-data-poc/build/json/darkBlueHighDensityTheme/theme.json";
-import webLightHighDensityTheme from "@hig/theme-data-poc/build/json/webLightHighDensityTheme/theme.json";
+import lightGrayMediumDensityTheme from "@hig/theme-data/build/json/lightGrayMediumDensityTheme/theme.json";
+import darkBlueMediumDensityTheme from "@hig/theme-data/build/json/darkBlueMediumDensityTheme/theme.json";
+import webLightMediumDensityTheme from "@hig/theme-data/build/json/webLightMediumDensityTheme/theme.json";
+import lightGrayHighDensityTheme from "@hig/theme-data/build/json/lightGrayHighDensityTheme/theme.json";
+import darkBlueHighDensityTheme from "@hig/theme-data/build/json/darkBlueHighDensityTheme/theme.json";
+import webLightHighDensityTheme from "@hig/theme-data/build/json/webLightHighDensityTheme/theme.json";
 
 const densityThemes = {
   "high-density": {

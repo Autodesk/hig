@@ -10,7 +10,7 @@ yarn add @hig/themes
 
 ## Provide a theme to components
 ```jsx
-import HIGDarkBlueTheme from '@hig/theme-data-poc/build/darkBlueMediumDensity/theme.json';
+import HIGDarkBlueTheme from '@hig/theme-data/build/darkBlueMediumDensity/theme.json';
 import ThemeContext from '@hig/theme-context';
 
 function MyApp() {

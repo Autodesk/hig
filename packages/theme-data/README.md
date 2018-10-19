@@ -5,12 +5,12 @@ HIG theme data is a representation of the HIG visual design language in the form
 
 ## Getting started
 ```bash
-yarn add @hig/theme-data-poc
+yarn add @hig/theme-data
 ```
 
 #### Access theme data as json
 ```js
-import lightGrayMediumDensityTheme from '@hig/theme-data-poc/build/json/lightGrayMediumDensityTheme/resolvedRoles.json';
+import lightGrayMediumDensityTheme from '@hig/theme-data/build/json/lightGrayMediumDensityTheme/resolvedRoles.json';
 
 console.log(lightGrayMediumDensityTheme);
 // {
@@ -23,9 +23,9 @@ console.log(lightGrayMediumDensityTheme);
 
 #### Extend a theme to make a new variation
 ```js
-import resolvedRoles from '@hig/theme-data-poc/build/json/lightGrayMediumDensityTheme/resolvedRoles.json';
-import unresolvedRoles from '@hig/theme-data-poc/build/json/lightGrayMediumDensityTheme/unresolvedRoles.json';
-import { extendTheme, resolveTheme } from '@hig/theme-data-poc';
+import resolvedRoles from '@hig/theme-data/build/json/lightGrayMediumDensityTheme/resolvedRoles.json';
+import unresolvedRoles from '@hig/theme-data/build/json/lightGrayMediumDensityTheme/unresolvedRoles.json';
+import { extendTheme, resolveTheme } from '@hig/theme-data';
 
 const redAccentedUnresolvedTheme = extendTheme(unresolvedRoles, {
     "colorScheme.accentColor500": "#F00",
