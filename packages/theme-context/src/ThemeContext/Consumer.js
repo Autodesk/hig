@@ -1,6 +1,6 @@
 import { Component } from "react";
 import PropTypes from "prop-types";
-import HIGLightTheme from "@hig/theme-data-poc/build/json/lightGrayMediumDensityTheme/theme.json";
+import HIGLightTheme from "@hig/theme-data/build/json/lightGrayMediumDensityTheme/theme.json";
 import themeContextShape from "./shape";
 
 const themeDataProxyHandler = {
