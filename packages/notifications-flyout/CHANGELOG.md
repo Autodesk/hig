@@ -1,3 +1,10 @@
+# [@hig/notifications-flyout-v0.2.4](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@0.2.3...@hig/notifications-flyout@0.2.4) (2018-10-19)
+
+
+### Bug Fixes
+
+* **package:** update `[@hig](https://github.com/hig)/babel-preset` to produce valid syntax for IE11 ([2f4e8d8](https://github.com/Autodesk/hig/commit/2f4e8d8))
+
 # [@hig/notifications-flyout-v0.2.3](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@0.2.2...@hig/notifications-flyout@0.2.3) (2018-10-08)
 
 
