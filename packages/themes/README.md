@@ -10,10 +10,11 @@ yarn add @hig/themes
 
 ## Provide a theme to components
 ```jsx
-import { ThemeContext, HIGLightGrayTheme } from '@hig/themes`;
+import HIGDarkBlueTheme from '@hig/theme-data-poc/build/darkBlueMediumDensity/theme.json';
+import ThemeContext from '@hig/theme-context';
 
 function MyApp() {
-  <ThemeContext.Provider value={HIGLightGrayTheme}>
+  <ThemeContext.Provider value={HIGDarkBlueTheme}>
     <TheRestOfMyApp />
   </ThemeContext.Provider>
 }
@@ -21,17 +22,17 @@ function MyApp() {
 
 ## Consume theme values in a component
 ```jsx
-import { ThemeContext } from '@hig/themes`;
+import ThemeContext from '@hig/themes';
 
 function MyThemedComponent() {
-  <ThemeContext.Consumer>{({ themeData, themeName }) => (
+  <ThemeContext.Consumer>{({ resolvedRoles, name }) => (
     <div style={{
-      backgroundColor: themeData["colorScheme.surfaceLevel20Color"],
-      borderRadius: themeData["basics.borderRadii.small"],
-      color: themeData["colorScheme.textColor"],
-      padding: themeData["density.spacings.medium"],
+      backgroundColor: resolvedRoles["colorScheme.surfaceLevel20Color"],
+      borderRadius: resolvedRoles["basics.borderRadii.small"],
+      color: resolvedRoles["colorScheme.textColor"],
+      padding: resolvedRoles["density.spacings.medium"],
     }}>
-      The current theme is "{themeName}".
+      The current theme is "{name}".
     </div>
   )}</ThemeContext.Consumer>
 }

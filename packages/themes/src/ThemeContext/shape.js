@@ -2,15 +2,17 @@ import PropTypes from "prop-types";
 
 export default {
   /** Uniquely identifies a theme */
-  themeId: PropTypes.string,
+  id: PropTypes.string,
   /** A class added to each themed element */
-  themeClass: PropTypes.string,
+  className: PropTypes.string,
   /** A theme's human-readable name */
-  themeName: PropTypes.string,
+  name: PropTypes.string,
   /** Data describing presentation of the theme */
-  themeData: PropTypes.object,
+  resolvedRoles: PropTypes.object,
   /** Data describing configuration of the theme */
-  themeConfig: PropTypes.object,
+  unresolvedRoles: PropTypes.object,
   /** Data describing density level of the theme */
-  density: PropTypes.string
+  density: PropTypes.string,
+  /** A human-readable label for the theme's density */
+  densityName: PropTypes.string
 };

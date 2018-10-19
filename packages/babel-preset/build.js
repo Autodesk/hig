@@ -1,12 +1,7 @@
 module.exports = function createBuildPreset() {
   return {
     exclude: [
-      "**/node_modules/**",
-      "**/*.css",
-      "**/*.scss",
-      "**/*.html",
-      "**/*.svg",
-      "**/*.json"
+      "**/node_modules/**"
     ],
     presets: [
       [

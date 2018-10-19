@@ -16,10 +16,10 @@ function InputHaloPresenter({
 }) {
   return (
     <ThemeContext.Consumer>
-      {({ themeData }) => {
+      {({ resolvedRoles }) => {
         const styles = stylesheet(
           { isDisabled, hasFocus, hasHover, variant },
-          themeData
+          resolvedRoles
         );
 
         return (

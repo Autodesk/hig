@@ -1,14 +1,11 @@
-import lightGrayTheme, {
-  config as lightGrayThemeConfig
-} from "./lightGrayTheme";
+import lightGrayTheme from "./lightGrayTheme";
 import darkBlueTheme from "./darkBlueTheme";
 import webLightTheme from "./webLightTheme";
 
-import { config as lowDensityThemeConfig } from "./lowDensityTheme";
-import { config as mediumDensityThemeConfig } from "./mediumDensityTheme";
-import { config as highDensityThemeConfig } from "./highDensityTheme";
+import mediumDensityTheme from "./mediumDensityTheme";
+import highDensityTheme from "./highDensityTheme";
 
-import { config as baseThemeConfig } from "../themes/baseTheme";
+import baseTheme from "../themes/baseTheme";
 import "../../support/jest/matchers/toBeAValidTheme";
 import extendTheme from "../utils/extendTheme";
 import resolveTheme from "../utils/resolveTheme";
@@ -21,7 +18,7 @@ describe("Theme", () => {
   ].forEach(({ description, theme }) => {
     describe(description, () => {
       it("implements the theme schema", () => {
-        expect(theme).toBeAValidTheme(baseThemeConfig);
+        expect(theme.resolvedRoles).toBeAValidTheme(baseTheme.unresolvedRoles);
       });
     });
   });
@@ -29,23 +26,22 @@ describe("Theme", () => {
   describe("densities", () => {
     [
       {
-        description: "low density theme",
-        density: lowDensityThemeConfig
-      },
-      {
         description: "medium density theme",
-        density: mediumDensityThemeConfig
+        density: mediumDensityTheme.unresolvedRoles
       },
       {
         description: "high density theme",
-        density: highDensityThemeConfig
+        density: highDensityTheme.unresolvedRoles
       }
     ].forEach(({ description, density }) => {
       describe(description, () => {
         it("implements the theme schema", () => {
-          const densityThemeConfig = extendTheme(lightGrayThemeConfig, density);
-          const densityThemeData = resolveTheme(densityThemeConfig);
-          expect(densityThemeData).toBeAValidTheme(baseThemeConfig);
+          const unresolvedRoles = extendTheme(
+            lightGrayTheme.unresolvedRoles,
+            density
+          );
+          const resolvedRoles = resolveTheme(unresolvedRoles);
+          expect(resolvedRoles).toBeAValidTheme(baseTheme.unresolvedRoles);
         });
       });
     });

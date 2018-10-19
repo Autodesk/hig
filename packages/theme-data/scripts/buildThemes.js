@@ -1,69 +1,71 @@
+/*
+  Build themes
+  ============
+
+  Write themes in JSON format to the `build/json` directory.
+  Each theme goes into a directory named like this: `build/json/colorSchemeDensityTheme`.
+  Each theme directory contains four files: `resolvedRoles.json`,
+  `unresolvedRoles.json`, `metadata.json`, and `theme.json`.
+  `theme.json` contains metadata and resolved roles.
+
+*/
+
 import path from "path";
+import camelcase from "camelcase";
 import fs from "fs";
+import mkdirp from "mkdirp";
 
 import extendTheme from "../src/utils/extendTheme";
-import resolveTheme from "../src/utils/resolveTheme";
-import { config as baseThemeConfig } from "../src/themes/baseTheme";
-import lightGrayTheme, {
-  config as lightGrayThemeConfig
-} from "../src/themes/lightGrayTheme";
-import webLightTheme, {
-  config as webLightThemeConfig
-} from "../src/themes/webLightTheme";
-import darkBlueTheme, {
-  config as darkBlueThemeConfig
-} from "../src/themes/darkBlueTheme";
-import { config as lowDensityThemeConfig } from "../src/themes/lowDensityTheme";
-import { config as highDensityThemeConfig } from "../src/themes/highDensityTheme";
+import resolveRoles from "../src/utils/resolveTheme";
 
-const buildPath = path.join(process.cwd(), "build");
+import lightGrayTheme from "../src/themes/lightGrayTheme";
+import webLightTheme from "../src/themes/webLightTheme";
+import darkBlueTheme from "../src/themes/darkBlueTheme";
+import mediumDensityTheme from "../src/themes/mediumDensityTheme";
+import highDensityTheme from "../src/themes/highDensityTheme";
 
-function writeFile(name, json) {
+const buildPath = path.join(process.cwd(), "build/json");
+const colorSchemes = [lightGrayTheme, darkBlueTheme, webLightTheme];
+const densities = [mediumDensityTheme, highDensityTheme];
+
+function resolveTheme(colorScheme, density) {
+  const unresolvedRoles = extendTheme(
+    colorScheme.unresolvedRoles,
+    density.unresolvedRoles
+  );
+  const resolvedRoles = resolveRoles(unresolvedRoles);
+  const themeName = camelcase([colorScheme.name, density.densityName, "Theme"]);
+  const metadata = { ...colorScheme, ...density };
+  delete metadata.resolvedRoles;
+  delete metadata.unresolvedRoles;
+
+  return {
+    themeName,
+    metadata,
+    resolvedRoles,
+    unresolvedRoles
+  };
+}
+
+function writeFile(dirPath, fileName, data) {
+  mkdirp.sync(dirPath);
   fs.writeFileSync(
-    path.join(buildPath, `${name}.json`),
-    JSON.stringify(json, null, 2)
+    path.join(dirPath, `${fileName}.json`),
+    JSON.stringify(data, null, 2)
   );
 }
 
-const themes = [
-  {
-    name: "lightGray",
-    data: lightGrayTheme,
-    config: lightGrayThemeConfig
-  },
-  {
-    name: "darkBlue",
-    data: darkBlueTheme,
-    config: darkBlueThemeConfig
-  },
-  {
-    name: "webLight",
-    data: webLightTheme,
-    config: webLightThemeConfig
-  }
-];
+function writeTheme({ themeName, resolvedRoles, unresolvedRoles, metadata }) {
+  const themePath = path.join(buildPath, themeName);
 
-const densities = [
-  {
-    name: "LowDensity",
-    config: lowDensityThemeConfig
-  },
-  {
-    name: "HighDensity",
-    config: highDensityThemeConfig
-  }
-];
+  writeFile(themePath, "resolvedRoles", resolvedRoles);
+  writeFile(themePath, "unresolvedRoles", unresolvedRoles);
+  writeFile(themePath, "metadata", metadata);
+  writeFile(themePath, "theme", { ...metadata, resolvedRoles });
+}
 
-writeFile("baseThemeConfig", baseThemeConfig);
-
-themes.forEach(theme => {
-  writeFile(`${theme.name}Theme`, theme.data);
-  writeFile(`${theme.name}ThemeConfig`, theme.config);
-
+colorSchemes.forEach(colorScheme => {
   densities.forEach(density => {
-    const densityThemeConfig = extendTheme(theme.config, density.config);
-    const densityThemeData = resolveTheme(densityThemeConfig);
-    writeFile(`${theme.name}${density.name}Theme`, densityThemeData);
-    writeFile(`${theme.name}${density.name}ThemeConfig`, densityThemeConfig);
+    writeTheme(resolveTheme(colorScheme, density));
   });
 });

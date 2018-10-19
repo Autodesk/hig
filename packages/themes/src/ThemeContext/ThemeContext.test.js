@@ -1,13 +1,14 @@
 import { mount } from "enzyme";
 import React from "react";
 
-import HIGLightTheme from "../themes/HIGLightTheme";
+import HIGLightTheme from "@hig/theme-data-poc/build/json/lightGrayMediumDensityTheme/theme.json";
 
 import ThemeContext from "./index";
 
 const TestTheme = {
-  themeId: "test-theme",
-  themeClass: "hig--test-theme"
+  id: "test-theme",
+  className: "hig--test-theme",
+  resolvedRoles: {}
 };
 
 describe("ThemeContext", () => {

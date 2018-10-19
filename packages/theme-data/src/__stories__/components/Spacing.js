@@ -1,18 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { ThemeContext } from "@hig/themes";
+import { ThemeContext } from "@hig/themes-poc";
 
 export default function Swatch({ length }) {
   return (
     <ThemeContext.Consumer>
-      {({ themeData }) => (
+      {({ resolvedRoles }) => (
         <div
           style={{
             height: length,
             width: length,
-            backgroundColor: themeData["colorScheme.accentColor500"],
-            marginBottom: themeData["density.spacings.small"]
+            backgroundColor: resolvedRoles["colorScheme.accentColor500"],
+            marginBottom: resolvedRoles["density.spacings.small"]
           }}
         />
       )}

@@ -1,5 +1,5 @@
 import extendTheme from "../../utils/extendTheme";
-import { config as lightGrayThemeConfig } from "../lightGrayTheme";
+import lightGrayTheme from "../lightGrayTheme";
 
 const oldBasics = {
   colors: {
@@ -7,7 +7,7 @@ const oldBasics = {
   }
 };
 
-const webLightThemeConfig = extendTheme(lightGrayThemeConfig, {
+const webLightThemeResolvedRoles = extendTheme(lightGrayTheme.unresolvedRoles, {
   "input.hover.borderBottomColor": {
     value: oldBasics.colors["hig-turquoise-50"]
   },
@@ -41,4 +41,4 @@ const webLightThemeConfig = extendTheme(lightGrayThemeConfig, {
   }
 });
 
-export default webLightThemeConfig;
+export default webLightThemeResolvedRoles;

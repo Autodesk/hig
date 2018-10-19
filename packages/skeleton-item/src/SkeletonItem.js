@@ -20,14 +20,14 @@ export default class SkeletonItem extends Component {
 
     return (
       <ThemeContext.Consumer>
-        {({ themeData }) => {
+        {({ resolvedRoles }) => {
           const styles = stylesheet(
             {
               maxWidth,
               marginBottom,
               height
             },
-            themeData
+            resolvedRoles
           );
           const classNames = cx([
             "hig__skeleton-itemV1",

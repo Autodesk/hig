@@ -1,7 +1,7 @@
 import extendTheme from "../../utils/extendTheme";
 import mapKeys from "../../utils/mapKeys";
-import { config as baseThemeConfig } from "../baseTheme";
-import { config as mediumDensityThemeConfig } from "../mediumDensityTheme";
+import baseTheme from "../baseTheme";
+import mediumDensityTheme from "../mediumDensityTheme";
 import system from "./system";
 import formField from "./components/formField";
 import input from "./components/input";
@@ -9,10 +9,10 @@ import label from "./components/label";
 import skeletonItem from "./components/skeletonItem";
 
 const lightGrayConfig = extendTheme(
-  baseThemeConfig,
+  baseTheme.unresolvedRoles,
   Object.assign(
     {},
-    mediumDensityThemeConfig,
+    mediumDensityTheme.unresolvedRoles,
     mapKeys(system.colorScheme, key => `colorScheme.${key}`),
     formField,
     input,

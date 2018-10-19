@@ -1,6 +1,6 @@
 {
   "name": "@hig/spacer",
-  "version": "1.0.0-alpha",
+  "version": "1.0.0",
   "description": "HIG Spacer component",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -22,7 +22,7 @@
     "prop-types": "^15.6.1"
   },
   "devDependencies": {
-    "@hig/babel-preset": "^0.1.0",
+    "@hig/babel-preset": "^0.1.1",
     "@hig/eslint-config": "^0.1.0",
     "@hig/jest-preset": "^0.1.0",
     "@hig/scripts": "^0.1.2",

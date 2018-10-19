@@ -1,7 +1,7 @@
 {
   "name": "@hig/themes-poc",
   "version": "1.0.0-alpha",
-  "description": "HIG theme definitions and supporting components",
+  "description": "ThemeContext components to ease adoption of theme data from React components",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
   "homepage": "https://hig.autodesk.com",
@@ -22,7 +22,7 @@
     "prop-types": "^15.6.1"
   },
   "devDependencies": {
-    "@hig/babel-preset": "^0.1.0",
+    "@hig/babel-preset": "^0.1.1",
     "@hig/eslint-config": "^0.1.0",
     "@hig/jest-preset": "^0.1.0",
     "@hig/scripts": "^0.1.2",

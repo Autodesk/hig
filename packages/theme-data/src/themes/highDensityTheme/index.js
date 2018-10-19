@@ -1,2 +1,7 @@
-export default {};
-export { default as config } from "./config";
+import unresolvedRoles from "./unresolvedRoles";
+import metadata from "./metadata";
+
+export default {
+  ...metadata,
+  unresolvedRoles
+};

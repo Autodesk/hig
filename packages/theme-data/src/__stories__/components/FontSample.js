@@ -1,19 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { ThemeContext } from "@hig/themes";
+import { ThemeContext } from "@hig/themes-poc";
 
 import basics from "../../basics";
 
 export default function FontSample({ fontWeight, fontSize, fontFamily }) {
   return (
     <ThemeContext.Consumer>
-      {({ themeData }) => {
+      {({ resolvedRoles }) => {
         const style = {
           fontWeight: fontWeight || basics.fontWeights.regular,
           fontSize: fontSize || basics.fontSizes.medium,
           fontFamily: fontFamily || basics.fontFamilies.main,
-          marginBottom: themeData["basics.spacings.extraSmall"]
+          marginBottom: resolvedRoles["density.spacings.extraSmall"]
         };
         return (
           <div style={style}>

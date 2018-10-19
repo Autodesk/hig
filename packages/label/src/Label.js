@@ -29,8 +29,8 @@ class Label extends Component {
 
     return (
       <ThemeContext.Consumer>
-        {({ themeData }) => {
-          const styles = stylesheet({ disabled }, themeData);
+        {({ resolvedRoles }) => {
+          const styles = stylesheet({ disabled }, resolvedRoles);
 
           return (
             <label htmlFor={htmlFor} form={form} style={styles.label}>
