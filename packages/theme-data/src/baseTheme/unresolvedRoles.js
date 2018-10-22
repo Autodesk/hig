@@ -4,6 +4,7 @@ import basics from "../basics";
 import system from "./system";
 
 import button from "./components/button";
+import avatar from "./components/avatar";
 import checkbox from "./components/checkbox";
 import formField from "./components/formField";
 import flyout from "./components/flyout";
@@ -29,6 +30,7 @@ const baseThemeConfig = extendTheme(
     mapKeys(system.colorScheme, key => `colorScheme.${key}`),
     mapKeys(system.density, key => `density.${key}`),
     button,
+    avatar,
     checkbox,
     formField,
     flyout,
