@@ -2,6 +2,8 @@ import mapKeys from "../utils/mapKeys";
 import extendTheme from "../utils/extendTheme";
 import basics from "../basics";
 import system from "./system";
+
+import avatar from "./components/avatar";
 import checkbox from "./components/checkbox";
 import formField from "./components/formField";
 import input from "./components/input";
@@ -26,6 +28,7 @@ const baseThemeConfig = extendTheme(
     mapKeys(basics.spacings, key => `basics.spacings.${key}`),
     mapKeys(system.colorScheme, key => `colorScheme.${key}`),
     mapKeys(system.density, key => `density.${key}`),
+    avatar,
     checkbox,
     formField,
     input,
