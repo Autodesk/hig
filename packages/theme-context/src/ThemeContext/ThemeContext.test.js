@@ -6,8 +6,10 @@ import HIGLightTheme from "@hig/theme-data/build/json/lightGrayMediumDensityThem
 import ThemeContext from "./index";
 
 const TestTheme = {
-  id: "test-theme",
-  className: "hig--test-theme",
+  metadata: {
+    id: "test-theme",
+    className: "hig--test-theme"
+  },
   resolvedRoles: {}
 };
 
