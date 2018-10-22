@@ -1,4 +1,4 @@
 export default {
-  density: "high",
+  densityId: "high-density",
   densityName: "High density"
 };

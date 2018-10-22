@@ -1,5 +1,5 @@
 export default {
-  name: "Web light",
-  id: "hig-light",
+  colorSchemeName: "Web light",
+  colorSchemeId: "hig-light",
   className: "hig--light-theme"
 };
