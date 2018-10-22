@@ -10,7 +10,7 @@ import lightGrayHighDensityTheme from "@hig/theme-data/build/json/lightGrayHighD
 import darkBlueHighDensityTheme from "@hig/theme-data/build/json/darkBlueHighDensityTheme/theme.json";
 import webLightHighDensityTheme from "@hig/theme-data/build/json/webLightHighDensityTheme/theme.json";
 
-const densityThemes = {
+const themes = {
   "high-density": {
     "hig-light": webLightHighDensityTheme,
     "hig-light-gray": lightGrayHighDensityTheme,
@@ -28,8 +28,8 @@ const densityOptions = {
   "medium-density": "Medium"
 };
 
-const DEFAULT_THEME_ID = "hig-light";
-const DEFAULT_DENSITY = "medium-density";
+const DEFAULT_THEME_ID = "hig-light-gray";
+const DEFAULT_DENSITY_ID = "medium-density";
 
 const COLOR_THEME_IDS = {
   WEB_LIGHT: "hig-light",
@@ -38,11 +38,12 @@ const COLOR_THEME_IDS = {
 };
 
 function themeOptions(themeIds) {
+  console.log(themeIds);
   return themeIds.reduce((acc, id) => {
-    const theme = densityThemes["medium-density"][id];
+    const theme = themes[DEFAULT_DENSITY_ID][id];
     return {
       ...acc,
-      [theme.id]: theme.name
+      [theme.metadata.colorSchemeId]: theme.metadata.colorSchemeName
     };
   }, {});
 }
@@ -83,10 +84,10 @@ const KnobbedThemeProvider = ({ children, supportedThemes }) => {
   const densityId = select(
     "Density",
     densityOptions,
-    DEFAULT_DENSITY,
+    DEFAULT_DENSITY_ID,
     knobGroup
   );
-  const theme = densityThemes[densityId][themeId];
+  const theme = themes[densityId][themeId];
 
   return (
     <ThemeContext.Provider value={theme}>
@@ -104,7 +105,7 @@ KnobbedThemeProvider.propTypes = {
 
 KnobbedThemeProvider.defaultProps = {
   supportedThemes: [DEFAULT_THEME_ID],
-  supportedDensities: [DEFAULT_DENSITY]
+  supportedDensities: [DEFAULT_DENSITY_ID]
 };
 
 export default KnobbedThemeProvider;

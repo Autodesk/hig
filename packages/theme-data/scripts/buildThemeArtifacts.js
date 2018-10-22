@@ -120,8 +120,3 @@ function start() {
 }
 
 start().catch(handleError);
-
-// Gather themes
-// Format themes
-// Write to temp dir
-// Generate and write artifacts

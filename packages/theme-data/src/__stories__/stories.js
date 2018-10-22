@@ -1,4 +1,4 @@
-import baseTheme from "../themes/baseTheme";
+import baseTheme from "../baseTheme";
 import basicsReadme from "../basics/README.md";
 import densityReadme from "./DENSITY_README.md";
 import colorSchemeReadme from "./COLOR_SCHEME_README.md";
