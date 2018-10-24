@@ -1,6 +1,6 @@
 #!/bin/bash
 # Using the branch name
-# 1. Remove all characters that are not non-alphanumeric, hyphens, periods, or forward slashes
+# 1. Remove all characters that are not alphanumeric, hyphens, periods, or forward slashes
 # 2. Replace forward slashes and periods with hyphens
 # 3. Translate characters to lowercase
 storybookSubDomainSuffix() {
