@@ -32,7 +32,13 @@ export default {
     }
   },
   "input.borderBottomColor": {
-    type: "color"
+    type: "color",
+    value: {
+      ref: "colorScheme.baseColor"
+    },
+    transform: {
+      alpha: 0.5
+    }
   },
   "input.borderBottomWidth": {
     type: "borderWidth",
@@ -71,7 +77,13 @@ export default {
     }
   },
   "input.halo.color": {
-    type: "color"
+    type: "color",
+    value: {
+      ref: "colorScheme.baseColor"
+    },
+    transform: {
+      alpha: 0.15
+    }
   },
   "input.halo.width": {
     type: "length",
@@ -94,7 +106,10 @@ export default {
 
   // Hover
   "input.hover.borderBottomColor": {
-    type: "color"
+    type: "color",
+    value: {
+      ref: "colorScheme.baseColor"
+    }
   },
   "input.hover.halo.width": {
     type: "length",
@@ -105,7 +120,10 @@ export default {
 
   // Focus
   "input.focus.borderBottomColor": {
-    type: "color"
+    type: "color",
+    value: {
+      ref: "colorScheme.accentColor"
+    }
   },
   "input.focus.halo.width": {
     type: "length",
@@ -114,7 +132,13 @@ export default {
     }
   },
   "input.focus.halo.color": {
-    type: "color"
+    type: "color",
+    value: {
+      ref: "colorScheme.accentColor"
+    },
+    transform: {
+      alpha: 0.25
+    }
   },
 
   // Active
@@ -125,7 +149,13 @@ export default {
     }
   },
   "input.active.halo.color": {
-    type: "color"
+    type: "color",
+    value: {
+      ref: "colorScheme.accentColor"
+    },
+    transform: {
+      alpha: 0.25
+    }
   },
 
   // Disabled

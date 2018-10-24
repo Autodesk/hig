@@ -28,14 +28,14 @@ import unresolvedRoles from '@hig/theme-data/build/json/lightGrayMediumDensityTh
 import { extendTheme, resolveTheme } from '@hig/theme-data';
 
 const redAccentedUnresolvedTheme = extendTheme(unresolvedRoles, {
-    "colorScheme.accentColor500": "#F00",
+    "colorScheme.accentColor": "#F00",
 });
 const redAccentedTheme = resolveTheme(redAccentedUnresolvedTheme);
 
 console.log(redAccentedTheme);
 // {
 // ...
-//  "colorScheme.accentColor500": "#F00",
+//  "colorScheme.accentColor": "#F00",
 //  "input.focus.borderBottomColor": "#F00"
 // ...
 // }

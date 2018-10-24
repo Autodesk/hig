@@ -26,7 +26,7 @@ const webLightThemeResolvedRoles = extendTheme(lightGrayTheme.unresolvedRoles, {
   },
   "input.focus.halo.color": {
     value: {
-      ref: "colorScheme.accentColor500"
+      ref: "colorScheme.accentColor"
     }
   },
   "input.active.halo.width": {
@@ -36,7 +36,7 @@ const webLightThemeResolvedRoles = extendTheme(lightGrayTheme.unresolvedRoles, {
   },
   "input.active.halo.color": {
     value: {
-      ref: "colorScheme.accentColor500"
+      ref: "colorScheme.accentColor"
     }
   }
 });
