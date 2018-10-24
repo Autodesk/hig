@@ -1,5 +1,5 @@
 import extendTheme from "../../utils/extendTheme";
-import lightGrayTheme from "../lightGrayTheme";
+import lightGrayTheme from "../lightGray";
 
 const oldBasics = {
   colors: {
