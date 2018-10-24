@@ -1,10 +1,12 @@
+import { COLOR, LENGTH } from "../../consts/types";
+
 export default {
   "textArea.minHeight": {
-    type: "length",
+    type: LENGTH,
     value: "250px"
   },
   "textArea.borderColor": {
-    type: "color",
+    type: COLOR,
     value: {
       ref: "input.borderColor"
     }

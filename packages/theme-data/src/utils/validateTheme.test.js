@@ -1,8 +1,9 @@
 import validateTheme from "./validateTheme";
+import { COLOR, LENGTH } from "../consts/types";
 
 const themeConfig = {
-  FOO_COLOR: { type: "color" },
-  BAR_LENGTH: { type: "length" }
+  FOO_COLOR: { type: COLOR },
+  BAR_LENGTH: { type: LENGTH }
 };
 
 function describeValuesForType({ types, validValues, invalidValues }) {
