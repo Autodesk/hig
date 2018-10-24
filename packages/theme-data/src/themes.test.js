@@ -7,7 +7,7 @@ import "../support/jest/matchers/toBeAValidTheme";
 
 describe("Theme", () => {
   generateAllThemes(colorSchemes, densities).forEach(theme => {
-    describe(theme.name, () => {
+    describe(theme.metadata.name, () => {
       it("implements the theme schema", () => {
         expect(theme.resolvedRoles).toBeAValidTheme(baseTheme.unresolvedRoles);
       });

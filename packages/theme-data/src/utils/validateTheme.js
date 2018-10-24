@@ -39,8 +39,8 @@ function invalidRoles(types, validator, theme, schema) {
       return false;
     }
     const themeValue = theme[role];
-    if (!themeValue) {
-      return false;
+    if (themeValue === undefined) {
+      return true;
     }
     return !validator(themeValue);
   });
@@ -92,6 +92,7 @@ export default function validateTheme(theme, schema) {
       schema
     )
   );
+
   return {
     valid: errors.length <= 0,
     errors: errors.length ? errors : undefined

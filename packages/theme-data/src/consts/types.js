@@ -1,5 +1,5 @@
-const BORDER_RADUS = "borderRadius";
-const BORDER_WIDTHS = "borderWidth";
+const BORDER_RADIUS = "borderRadius";
+const BORDER_WIDTH = "borderWidth";
 const COLOR = "color";
 const FONT_FAMILY = "fontFamily";
 const FONT_SIZE = "fontSize";
@@ -10,8 +10,8 @@ const SHADOW = "shadow";
 const SPACING = "spacing";
 
 export {
-  BORDER_RADUS,
-  BORDER_WIDTHS,
+  BORDER_RADIUS,
+  BORDER_WIDTH,
   COLOR,
   FONT_FAMILY,
   FONT_SIZE,
