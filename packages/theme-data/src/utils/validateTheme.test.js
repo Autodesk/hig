@@ -1,5 +1,13 @@
 import validateTheme from "./validateTheme";
-import { COLOR, LENGTH } from "../consts/types";
+import {
+  COLOR,
+  BORDER_RADIUS,
+  BORDER_WIDTH,
+  FONT_WEIGHT,
+  LENGTH,
+  FONT_SIZE,
+  SPACING
+} from "../consts/types";
 
 const themeConfig = {
   FOO_COLOR: { type: COLOR },
@@ -78,19 +86,19 @@ describe("validateTheme", () => {
   });
 
   describeValuesForType({
-    types: ["color"],
+    types: [COLOR],
     validValues: ["#F00", "#FF0000", "rgba(0, 0, 0, 0.5)", "purple"],
     invalidValues: ["12px", "0"]
   });
 
   describeValuesForType({
-    types: ["borderRadius", "borderWidth", "length", "fontSize", "spacing"],
+    types: [BORDER_RADIUS, BORDER_WIDTH, LENGTH, FONT_SIZE, SPACING],
     validValues: ["0", "16px", "50%", "10em"],
     invalidValues: ["#f00", "rgba(0, 0, 0, 0.5)", "14", "a long way off"]
   });
 
   describeValuesForType({
-    types: ["fontWeight"],
+    types: [FONT_WEIGHT],
     validValues: [400, 500, 700, "400", "500", "700"],
     invalidValues: ["400px", "bold"]
   });

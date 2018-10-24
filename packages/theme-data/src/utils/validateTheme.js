@@ -1,4 +1,13 @@
 import tinycolor from "tinycolor2";
+import {
+  COLOR,
+  BORDER_RADIUS,
+  BORDER_WIDTH,
+  FONT_WEIGHT,
+  LENGTH,
+  FONT_SIZE,
+  SPACING
+} from "../consts/types";
 
 const cssLengthRegexp = new RegExp(
   /^(auto|0)$|^[+-]?[0-9]+.?([0-9]+)?(px|em|ex|%|in|cm|mm|pt|pc)$/
@@ -63,13 +72,13 @@ export default function validateTheme(theme, schema) {
     unknownRoleErrors(extraKeys(schema, theme)),
     missingRoleErrors(extraKeys(theme, schema)),
     typeErrors(
-      invalidRoles(["color"], validateColor, theme, schema),
+      invalidRoles([COLOR], validateColor, theme, schema),
       theme,
       schema
     ),
     typeErrors(
       invalidRoles(
-        ["borderRadius", "borderWidth", "length", "fontSize", "spacing"],
+        [BORDER_RADIUS, BORDER_WIDTH, LENGTH, FONT_SIZE, SPACING],
         validateLength,
         theme,
         schema
@@ -78,7 +87,7 @@ export default function validateTheme(theme, schema) {
       schema
     ),
     typeErrors(
-      invalidRoles(["fontWeight"], validateFontWeight, theme, schema),
+      invalidRoles([FONT_WEIGHT], validateFontWeight, theme, schema),
       theme,
       schema
     )
