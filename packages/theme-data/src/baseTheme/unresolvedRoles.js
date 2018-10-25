@@ -3,18 +3,19 @@ import extendTheme from "../utils/extendTheme";
 import basics from "../basics";
 import system from "./system";
 
-import component from "./components/component";
-import button from "./components/button";
 import avatar from "./components/avatar";
+import button from "./components/button";
 import checkbox from "./components/checkbox";
+import component from "./components/component";
 import formField from "./components/formField";
 import flyout from "./components/flyout";
 import input from "./components/input";
+import label from "./components/label";
+import menu from "./components/menu";
+import progressBar from "./components/progressBar";
 import skeletonItem from "./components/skeletonItem";
 import textarea from "./components/textarea";
 import typography from "./components/typography";
-import label from "./components/label";
-import menu from "./components/menu";
 
 const baseThemeConfig = extendTheme(
   {},
@@ -31,18 +32,19 @@ const baseThemeConfig = extendTheme(
     mapKeys(basics.spacings, key => `basics.spacings.${key}`),
     mapKeys(system.colorScheme, key => `colorScheme.${key}`),
     mapKeys(system.density, key => `density.${key}`),
-    component,
-    button,
     avatar,
+    button,
     checkbox,
+    component,
     formField,
     flyout,
     input,
+    label,
+    menu,
+    progressBar,
     skeletonItem,
     textarea,
-    typography,
-    label,
-    menu
+    typography
   )
 );
 
