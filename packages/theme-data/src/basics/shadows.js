@@ -1,4 +1,6 @@
+import { SHADOW } from "../consts/types";
+
 export default {
-  lowBlur: { value: "4px", type: "shadow" },
-  highBlur: { value: "16px", type: "shadow" }
+  lowBlur: { value: "4px", type: SHADOW },
+  highBlur: { value: "16px", type: SHADOW }
 };

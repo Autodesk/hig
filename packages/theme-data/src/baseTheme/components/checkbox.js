@@ -1,12 +1,14 @@
+import { COLOR, BORDER_WIDTH, BORDER_RADIUS, LENGTH } from "../../consts/types";
+
 export default {
   "checkbox.backgroundColor": {
-    type: "color",
+    type: COLOR,
     value: {
       ref: "colorScheme.component.backgroundColor"
     }
   },
   "checkbox.borderColor": {
-    type: "color",
+    type: COLOR,
     transform: {
       alpha: 0.5
     },
@@ -15,31 +17,31 @@ export default {
     }
   },
   "checkbox.borderWidth": {
-    type: "borderWidth",
+    type: BORDER_WIDTH,
     value: {
       ref: "input.borderBottomWidth"
     }
   },
   "checkbox.borderRadius": {
-    type: "borderRadius",
+    type: BORDER_RADIUS,
     value: {
       ref: "basics.borderRadii.small"
     }
   },
   "checkbox.halo.color": {
-    type: "color",
+    type: COLOR,
     value: {
       ref: "input.halo.color"
     }
   },
   "checkbox.halo.width": {
-    type: "length",
+    type: LENGTH,
     value: {
       ref: "input.halo.width"
     }
   },
   "checkbox.labelSpacing": {
-    type: "length",
+    type: LENGTH,
     value: {
       ref: "density.spacings.small"
     }
@@ -47,7 +49,7 @@ export default {
 
   // Hover
   "checkbox.hover.borderColor": {
-    type: "color",
+    type: COLOR,
     value: {
       ref: "colorScheme.baseColor"
     },
@@ -56,13 +58,13 @@ export default {
     }
   },
   "checkbox.hover.halo.width": {
-    type: "length",
+    type: LENGTH,
     value: {
       ref: "input.hover.halo.width"
     }
   },
   "checkbox.hover.halo.color": {
-    type: "color",
+    type: COLOR,
     value: {
       ref: "input.halo.color"
     }
@@ -70,7 +72,7 @@ export default {
 
   // Focus
   "checkbox.focus.borderColor": {
-    type: "color",
+    type: COLOR,
     value: {
       ref: "colorScheme.baseColor"
     },
@@ -79,13 +81,13 @@ export default {
     }
   },
   "checkbox.focus.halo.color": {
-    type: "color",
+    type: COLOR,
     value: {
       ref: "input.focus.halo.color"
     }
   },
   "checkbox.focus.halo.width": {
-    type: "length",
+    type: LENGTH,
     value: {
       ref: "input.focus.halo.width"
     }
@@ -93,7 +95,7 @@ export default {
 
   // Active
   "checkbox.active.borderColor": {
-    type: "color",
+    type: COLOR,
     value: {
       ref: "colorScheme.baseColor"
     },
@@ -102,13 +104,13 @@ export default {
     }
   },
   "checkbox.active.halo.color": {
-    type: "color",
+    type: COLOR,
     value: {
       ref: "input.active.halo.color"
     }
   },
   "checkbox.active.halo.width": {
-    type: "length",
+    type: LENGTH,
     value: {
       ref: "input.active.halo.width"
     }
@@ -116,19 +118,19 @@ export default {
 
   // Checked
   "checkbox.checked.borderColor": {
-    type: "color",
+    type: COLOR,
     value: {
       ref: "colorScheme.baseColor"
     }
   },
   "checkbox.checked.iconColor": {
-    type: "color",
+    type: COLOR,
     value: {
       ref: "basics.colors.white"
     }
   },
   "checkbox.checked.backgroundColor": {
-    type: "color",
+    type: COLOR,
     value: {
       ref: "colorScheme.baseColor"
     }
@@ -136,7 +138,7 @@ export default {
 
   // Disabled
   "checkbox.disabled.borderColor": {
-    type: "color",
+    type: COLOR,
     value: {
       ref: "input.disabled.borderColor"
     }
@@ -144,7 +146,7 @@ export default {
 
   // Disabled + Checked
   "checkbox.disabled.checked.backgroundColor": {
-    type: "color",
+    type: COLOR,
     value: {
       ref: "colorScheme.baseColor"
     },

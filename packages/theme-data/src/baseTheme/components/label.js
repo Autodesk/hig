@@ -1,27 +1,35 @@
+import {
+  COLOR,
+  FONT_SIZE,
+  FONT_WEIGHT,
+  FONT_FAMILY,
+  LINE_HEIGHT
+} from "../../consts/types";
+
 export default {
   "label.fontSize": {
-    type: "fontSize",
+    type: FONT_SIZE,
     value: {
       ref: "density.fontSizes.small"
     }
   },
   "label.fontWeight": {
-    type: "fontWeight",
+    type: FONT_WEIGHT,
     value: {
       ref: "basics.fontWeights.regular"
     }
   },
   "label.fontFamily": {
-    type: "fontFamily",
+    type: FONT_FAMILY,
     value: {
       ref: "basics.fontFamilies.main"
     }
   },
   "label.fontColor": {
-    type: "color"
+    type: COLOR
   },
   "label.lineHeight": {
-    type: "lineHeight",
+    type: LINE_HEIGHT,
     value: {
       ref: "basics.lineHeights.medium"
     }
@@ -29,11 +37,11 @@ export default {
 
   // Hover
   "label.hover.fontColor": {
-    type: "color"
+    type: COLOR
   },
 
   // Disabled
   "label.disabled.fontColor": {
-    type: "color"
+    type: COLOR
   }
 };

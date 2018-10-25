@@ -1,14 +1,16 @@
+import { FONT_SIZE, SPACING } from "../../consts/types";
+
 export default {
-  "spacings.extraExtraSmall": { type: "spacing" },
-  "spacings.extraSmall": { type: "spacing" },
-  "spacings.small": { type: "spacing" },
-  "spacings.medium": { type: "spacing" },
-  "spacings.large": { type: "spacing" },
-  "spacings.extraLarge": { type: "spacing" },
-  "spacings.extraExtraLarge": { type: "spacing" },
-  "fontSizes.small": { type: "fontSize" },
-  "fontSizes.medium": { type: "fontSize" },
-  "fontSizes.large": { type: "fontSize" },
-  "fontSizes.extraLarge": { type: "fontSize" },
-  "fontSizes.extraExtraLarge": { type: "fontSize" }
+  "spacings.extraExtraSmall": { type: SPACING },
+  "spacings.extraSmall": { type: SPACING },
+  "spacings.small": { type: SPACING },
+  "spacings.medium": { type: SPACING },
+  "spacings.large": { type: SPACING },
+  "spacings.extraLarge": { type: SPACING },
+  "spacings.extraExtraLarge": { type: SPACING },
+  "fontSizes.small": { type: FONT_SIZE },
+  "fontSizes.medium": { type: FONT_SIZE },
+  "fontSizes.large": { type: FONT_SIZE },
+  "fontSizes.extraLarge": { type: FONT_SIZE },
+  "fontSizes.extraExtraLarge": { type: FONT_SIZE }
 };

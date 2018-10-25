@@ -1,30 +1,32 @@
+import { BORDER_RADIUS, COLOR, LENGTH, SPACING } from "../../consts/types";
+
 export default {
   "menu.backgroundColor": {
-    type: "color",
+    type: COLOR,
     value: {
       ref: "colorScheme.component.backgroundColor"
     }
   },
   "menu.borderRadius": {
-    type: "borderRadius",
+    type: BORDER_RADIUS,
     value: {
       ref: "basics.borderRadii.medium"
     }
   },
   "menu.topFlushBorderTopRadius": {
-    type: "borderRadius",
+    type: BORDER_RADIUS,
     value: {
       ref: "basics.borderRadii.none"
     }
   },
   "menu.item.backgroundColor": {
-    type: "color",
+    type: COLOR,
     value: {
       ref: "colorScheme.component.backgroundColor"
     }
   },
   "menu.item.hover.backgroundColor": {
-    type: "color",
+    type: COLOR,
     value: {
       ref: "colorScheme.baseColor"
     },
@@ -33,13 +35,13 @@ export default {
     }
   },
   "menu.item.focus.backgroundColor": {
-    type: "color",
+    type: COLOR,
     value: {
       ref: "menu.item.hover.backgroundColor"
     }
   },
   "menu.item.active.backgroundColor": {
-    type: "color",
+    type: COLOR,
     value: {
       ref: "colorScheme.accentColor"
     },
@@ -48,25 +50,25 @@ export default {
     }
   },
   "menu.item.horizontalPadding": {
-    type: "spacing",
+    type: SPACING,
     value: {
       ref: "density.spacings.extraSmall"
     }
   },
   "menu.item.verticalPadding": {
-    type: "spacing",
+    type: SPACING,
     value: {
       ref: "basics.spacings.mediumSmall"
     }
   },
   "menu.item.minHeight": {
-    type: "length",
+    type: LENGTH,
     value: {
       ref: "density.spacings.large"
     }
   },
   "menu.item.gutterWidth": {
-    type: "spacing",
+    type: SPACING,
     value: {
       ref: "basics.spacings.mediumSmall"
     }
