@@ -19,6 +19,7 @@
   ],
   "dependencies": {
     "@hig/theme-data": "^1.0.0-alpha",
+    "create-react-context": "^0.2.3",
     "prop-types": "^15.6.1"
   },
   "devDependencies": {

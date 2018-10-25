@@ -1,7 +1,9 @@
+import { hasExports } from "@hig/jest-preset/helpers";
+
 import * as index from "./index";
 
 describe("themes/ThemeContext/index", () => {
-  [
+  hasExports(index, [
     {
       name: "default",
       value: expect.objectContaining({
@@ -17,9 +19,5 @@ describe("themes/ThemeContext/index", () => {
       name: "Provider",
       value: expect.any(Function)
     }
-  ].forEach(({ name, value }) => {
-    it(`exports ${name}`, () => {
-      expect(index).toHaveProperty(name, value);
-    });
-  });
+  ]);
 });

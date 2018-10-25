@@ -1,6 +1,5 @@
-import Provider from "./Provider";
+import { Provider } from "./BaseContext";
 import Consumer from "./Consumer";
 
-export { default as Provider } from "./Provider";
-export { default as Consumer } from "./Consumer";
+export { Provider, Consumer };
 export default { Provider, Consumer };
