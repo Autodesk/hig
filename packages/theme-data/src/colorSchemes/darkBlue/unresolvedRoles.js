@@ -8,6 +8,7 @@ import checkbox from "./components/checkbox";
 import formField from "./components/formField";
 import input from "./components/input";
 import label from "./components/label";
+import progressBar from "./components/progressBar";
 import skeletonItem from "./components/skeletonItem";
 
 const darkBlueThemeConfig = extendTheme(
@@ -21,6 +22,7 @@ const darkBlueThemeConfig = extendTheme(
     formField,
     input,
     label,
+    progressBar,
     skeletonItem
   )
 );
