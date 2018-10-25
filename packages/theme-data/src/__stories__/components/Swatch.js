@@ -13,7 +13,7 @@ export default function Swatch({
     <ThemeContext.Consumer>
       {({ resolvedRoles }) => {
         const renderedBackgroundColor =
-          color || resolvedRoles["colorScheme.surfaceLevel10Color"];
+          color || resolvedRoles["colorScheme.surfaceLevel100Color"];
         const renderedBorderWidth =
           borderWidth || resolvedRoles["basics.borderWidths.small"];
         const renderedBorderRadius =
@@ -26,10 +26,10 @@ export default function Swatch({
               backgroundColor: renderedBackgroundColor,
               borderRadius: renderedBorderRadius,
               border: `${resolvedRoles["basics.borderWidths.small"]} solid ${
-                resolvedRoles["colorScheme.surfaceLevel10Color"]
+                resolvedRoles["colorScheme.surfaceLevel100Color"]
               }`,
               boxShadow: `0 0 0 ${renderedBorderWidth} ${
-                resolvedRoles["colorScheme.surfaceLevel40Color"]
+                resolvedRoles["colorScheme.surfaceLevel350Color"]
               }, ${renderedBoxShadow}`,
               marginBottom: resolvedRoles["density.spacings.small"]
             }}
