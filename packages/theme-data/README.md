@@ -8,7 +8,7 @@ HIG theme data is a representation of the HIG visual design language in the form
 yarn add @hig/theme-data
 ```
 
-#### Access theme data as json
+### Access theme data as json
 ```js
 import lightGrayMediumDensityTheme from '@hig/theme-data/build/json/lightGrayMediumDensityTheme/resolvedRoles.json';
 
@@ -39,6 +39,16 @@ console.log(redAccentedTheme);
 //  "input.focus.borderBottomColor": "#F00"
 // ...
 // }
+```
+
+### Access theme data as scss variables
+```scss
+@import "@hig/theme-data/build/scss/_lightGrayMediumDensityTheme.scss";
+
+.my-component {
+    background-color: $colorScheme-surfaceLevel10Color;
+    color: $colorScheme-textColor;
+}
 ```
 
 
