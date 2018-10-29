@@ -34,6 +34,7 @@
   "scripts": {
     "build": "hig-scripts-build",
     "lint": "hig-scripts-lint",
+    "test": "hig-scripts-test",
     "release": "hig-scripts-release"
   },
   "eslintConfig": {

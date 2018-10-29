@@ -1,21 +1,9 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import HIGLightTheme from "@hig/theme-data/build/json/lightGrayMediumDensityTheme/theme.json";
-import themeContextShape from "./shape";
 
-const themeDataProxyHandler = {
-  get: (theme, name) => {
-    const stringName = name.toString();
-    if (name in theme) {
-      if (typeof theme[name] === "object" && theme[name] !== null) {
-        return new Proxy(theme[name], themeDataProxyHandler);
-      }
-      return theme[name];
-    }
-    console.error(`Role ${stringName} does not exist`);
-    return null;
-  }
-};
+import { Consumer as BaseConsumer } from "./BaseContext";
+import createThemeProxy from "./createThemeProxy";
 
 export default class Consumer extends Component {
   static propTypes = {
@@ -23,13 +11,17 @@ export default class Consumer extends Component {
     children: PropTypes.func
   };
 
-  static contextTypes = themeContextShape;
-
   render() {
-    const theme = this.context.resolvedRoles ? this.context : HIGLightTheme;
-    const proxy = new Proxy(theme, themeDataProxyHandler);
-    const themeArgument = process.env.NODE_ENV !== "production" ? proxy : theme;
+    return (
+      <BaseConsumer>
+        {value => {
+          const theme = value.resolvedRoles ? value : HIGLightTheme;
+          const isDebugging = process.env.NODE_ENV !== "production";
+          const result = isDebugging ? createThemeProxy(theme) : theme;
 
-    return this.props.children(themeArgument);
+          return this.props.children(result);
+        }}
+      </BaseConsumer>
+    );
   }
 }
