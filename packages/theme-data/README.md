@@ -66,21 +66,57 @@ console.log(redAccentedTheme);
 - Enable product teams to customize theme values in order to meet their needs as they see fit
 - Enable product teams to extend the schema to incorporate new or product-specific components
 
-## Important domain concepts
+## Structure of a theme
+A theme is comprised of many, many _roles_. Each _roles_ defines the meaning of a value in the deisgn system. Consider the following role—`colorScheme.textColor`. This roles describes the default color of text in the design system. The _value_ for a role may vary from theme to theme. For example, a theme with a light gray color scheme may provide the value `"#3c3c3c"`. A theme with a dark blue color scheme may provide the value `"#f5f5f5"`.
 
-### [Basics](./src/basics)
-Named values (colors, spacings, typographic specifications, etc.) from which most (all?) other values in a theme are derived
+A component can be made themable by styling it using theme data roles rather than hard-coded values.
 
-### Role
-A property of a component provided by a theme. E.g. Divider is a component. '1px' is a border width. `DIVIDER.BORDER_WIDTH` is a role mapping a width to the border width property of the divider component.
+### Types of roles
+Roles fall into 3 broad categories—basic roles, dimension roles, and component roles.
 
-### Resolved roles
-Data defining a primitive value (e.g. “#0696D7” or “16px”) for each role in the theme schema.
+#### Basic roles
+Basics are named values (colors, spacings, typographic specifications, etc.) from which (very nearly) all other values in a theme are derived. Basics **do not change** from theme to theme.
 
-### Unresolved roles
-Data defining a primitive value or reference for each role in the theme schema.
+#### Dimension roles
+Each themes presently has two dimensions—a color scheme, and a density.
 
-### Reference
+##### Color scheme roles
+Color scheme roles define roles related to color that change from theme to theme. They apply to many components.
+
+A few examples of color scheme roles:
+
+- `colorScheme.textColor`: The default color for text throught a theme
+- `coolorScheme.surfaceLevel10Color`: The most prominant background color for containers in the theme
+- `colorScheme.accentColor`: A bold color used to provide emphasis in the theme
+
+##### Density roles
+Density roles
+**** FINISH ME ****
+
+##### Component roles
+A property of a component provided by a theme. E.g. Consider the following role and value:
+
+```json
+{
+    "divider.borderWidth": "1px",
+    // ... other roles
+}
+```
+**** FINISH ME ****
+
+### Resolved and unresolved roles
+**** FINISH ME ****
+
+#### Resolved roles
+A resolved role defines a primitive value (e.g. “#0696D7” or “16px”) in the theme system.
+
+#### Unresolved roles
+An unresolved role defines a primitive value _or_ a reference to another role in the system.
+
+
+
+
+#### Reference
 References in a theme configuration may point to a basic value or another role. References may point to roles defined with another reference. For example, `textArea.focus.color` may refer to `input.focus.color`, which refers to `accentColor`, which refers to `basics.colors.autodeskBlue600`.
 
 ## Thoughts on modeling a theme
@@ -100,7 +136,7 @@ Theme
                     - Property: value
 ```
 
-In data we model the theme as a flat map of key-value pairs. We represent the hierarchy in the key, but only as much as is needed to disambiguate one key from another. e.g. a role in the theme may have a key such as `textAreaDisabled.textColor`. The key uses component name, state name, and property name but does not describe a category.
+In data we model the theme as a flat map of key-value pairs. We represent the hierarchy in the key, but only as much as is needed to disambiguate one key from another. e.g. a role in the theme may have a key such as `textArea.disabled.textColor`. The key uses component name, state name, and property name but does not describe a category.
 
 ## Ideas discussed but not advanced at this time
 - Stylesheet factories: Functions that map a theme and state to a stylesheet for a component
