@@ -32,10 +32,28 @@ describe("resolveTheme", () => {
         "input.focus.color": { value: { ref: "accentColor" } },
         "textarea.focus.color": { value: { ref: "input.focus.color" } }
       };
+
       expect(resolveTheme(theme)).toEqual({
         accentColor: "#F00",
         "input.focus.color": "#F00",
         "textarea.focus.color": "#F00"
+      });
+    });
+
+    it("performs intermediate transforms", () => {
+      const theme = {
+        accentColor: { value: "#F00" },
+        "input.focus.color": {
+          value: { ref: "accentColor" },
+          transform: { alpha: 0.5 }
+        },
+        "textarea.focus.color": { value: { ref: "input.focus.color" } }
+      };
+
+      expect(resolveTheme(theme)).toEqual({
+        accentColor: "#F00",
+        "input.focus.color": "rgba(255, 0, 0, 0.5)",
+        "textarea.focus.color": "rgba(255, 0, 0, 0.5)"
       });
     });
   });
