@@ -21,14 +21,22 @@ function MyComponent() {
 }
 ```
 
-## Basics
-- Typography - typography and rich text
-- Layout - spacer and grid
-- Icons
+## Theme data
+Theme data is a representation of the HIG visual design language in the form of data. We publish the data in JSON and SCSS formats. This data can be used on any platform.
 
-## Components
+- [`@hig/theme-data`](./packages/theme-data/README.md) - HIG design spec as data
+- [`<ThemeContext>`](./packages/theme-context/README.md) - A component to ease consumption of theme data from within React components.
 
-Each HIG pattern is implemented as a set of React components. Each pattern is published to NPM individually under the @hig namespace, to allow you to import only what you'll use.
+## React components
+
+### Basics
+- Typography - See [`<Typography>`](./packages/typography/README.md) and [`<RichText>`](./packages/rich-text/README.md)
+- Layout - See [`<Spacer>`](./packages/spacer/README.md)
+- Icons - See [`<Icon>`](./packages/icon/README.md) to easily render icons in React and the [`@hig/icons`](./packages/icons/README.md) package for svg data
+
+### Components
+
+Each HIG pattern is implemented as a set of React components. Each pattern is published to NPM individually under the @hig namespace.
 
 - [`<Avatar>`](./packages/avatar/README.md) - A visual representation of a customer's identity
 - [`<Banner>`](./packages/banner/README.md) - An alert that requires a user action
@@ -48,6 +56,7 @@ Each HIG pattern is implemented as a set of React components. Each pattern is pu
 - [`<SideNav>`](./packages/side-nav/README.md) - Provides high-level navigation
 - [`<SkeletonItem>`](./packages/skeleton-item/README.md) - A placeholder for loading content
 - [`<Slider>`](./packages/slider/README.md) - A control for selecting a single numeric value from a range
+- [`<Spacer>`](./packages/spacer/README.md) - A square of empty space, meant to add space between other components
 - [`<Table>`](./packages/table/README.md) - Represents tabular data in columns and rows
 - [`<Tabs>`](./packages/tabs/README.md) - Keeps related content in a single container
 - [`<TextArea>`](./packages/text-area/README.md) - A control to provide a large amount of freeform text
