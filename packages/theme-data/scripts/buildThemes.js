@@ -11,41 +11,14 @@
 */
 
 import path from "path";
-import camelcase from "camelcase";
 import fs from "fs";
 import mkdirp from "mkdirp";
 
-import extendTheme from "../src/utils/extendTheme";
-import resolveRoles from "../src/utils/resolveTheme";
-
-import lightGrayTheme from "../src/themes/lightGrayTheme";
-import webLightTheme from "../src/themes/webLightTheme";
-import darkBlueTheme from "../src/themes/darkBlueTheme";
-import mediumDensityTheme from "../src/themes/mediumDensityTheme";
-import highDensityTheme from "../src/themes/highDensityTheme";
+import colorSchemes from "../src/colorSchemes";
+import densities from "../src/densities";
+import generateAllThemes from "../src/utils/generateAllThemes";
 
 const buildPath = path.join(process.cwd(), "build/json");
-const colorSchemes = [lightGrayTheme, darkBlueTheme, webLightTheme];
-const densities = [mediumDensityTheme, highDensityTheme];
-
-function resolveTheme(colorScheme, density) {
-  const unresolvedRoles = extendTheme(
-    colorScheme.unresolvedRoles,
-    density.unresolvedRoles
-  );
-  const resolvedRoles = resolveRoles(unresolvedRoles);
-  const themeName = camelcase([colorScheme.name, density.densityName, "Theme"]);
-  const metadata = { ...colorScheme, ...density };
-  delete metadata.resolvedRoles;
-  delete metadata.unresolvedRoles;
-
-  return {
-    themeName,
-    metadata,
-    resolvedRoles,
-    unresolvedRoles
-  };
-}
 
 function writeFile(dirPath, fileName, data) {
   mkdirp.sync(dirPath);
@@ -55,17 +28,14 @@ function writeFile(dirPath, fileName, data) {
   );
 }
 
-function writeTheme({ themeName, resolvedRoles, unresolvedRoles, metadata }) {
-  const themePath = path.join(buildPath, themeName);
+function writeTheme(theme) {
+  const { metadata, unresolvedRoles, resolvedRoles } = theme;
+  const themePath = path.join(buildPath, metadata.fileName);
 
   writeFile(themePath, "resolvedRoles", resolvedRoles);
   writeFile(themePath, "unresolvedRoles", unresolvedRoles);
   writeFile(themePath, "metadata", metadata);
-  writeFile(themePath, "theme", { ...metadata, resolvedRoles });
+  writeFile(themePath, "theme", { metadata, resolvedRoles });
 }
 
-colorSchemes.forEach(colorScheme => {
-  densities.forEach(density => {
-    writeTheme(resolveTheme(colorScheme, density));
-  });
-});
+generateAllThemes(colorSchemes, densities).forEach(writeTheme);

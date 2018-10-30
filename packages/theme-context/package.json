@@ -1,6 +1,6 @@
 {
   "name": "@hig/theme-context",
-  "version": "1.0.0-alpha",
+  "version": "1.0.0",
   "description": "ThemeContext components to ease adoption of theme data from React components",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -18,7 +18,8 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/theme-data": "^1.0.0-alpha",
+    "@hig/theme-data": "^1.0.0",
+    "create-react-context": "^0.2.3",
     "prop-types": "^15.6.1"
   },
   "devDependencies": {

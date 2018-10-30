@@ -1,22 +1,31 @@
 import validateTheme from "./validateTheme";
+import {
+  COLOR,
+  BORDER_RADIUS,
+  BORDER_WIDTH,
+  FONT_WEIGHT,
+  LENGTH,
+  FONT_SIZE,
+  SPACING
+} from "../consts/types";
 
-const themeConfig = {
-  FOO_COLOR: { type: "color" },
-  BAR_LENGTH: { type: "length" }
+const aBaseTheme = {
+  FOO_COLOR: { type: COLOR },
+  BAR_LENGTH: { type: LENGTH }
 };
 
 function describeValuesForType({ types, validValues, invalidValues }) {
   types.forEach(type => {
     describe(`with a role of type ${type}`, () => {
       const myType = type;
-      const myConfig = {
+      const myBaseTheme = {
         MY_ROLE: { type: myType }
       };
 
       validValues.forEach(value => {
         describe(value, () => {
           it("is valid", () => {
-            const result = validateTheme({ MY_ROLE: value }, myConfig);
+            const result = validateTheme({ MY_ROLE: value }, myBaseTheme);
             expect(result.valid).toEqual(true);
           });
         });
@@ -25,9 +34,9 @@ function describeValuesForType({ types, validValues, invalidValues }) {
       invalidValues.forEach(value => {
         describe(value, () => {
           it("is invalid", () => {
-            const result = validateTheme({ MY_ROLE: value }, myConfig);
-            expect(result.errors).toBeTruthy();
+            const result = validateTheme({ MY_ROLE: value }, myBaseTheme);
             expect(result.valid).toEqual(false);
+            expect(result.errors).toBeTruthy();
             expect(result.errors[0].message).toMatch(/MY_ROLE/);
           });
         });
@@ -44,9 +53,9 @@ describe("validateTheme", () => {
     };
 
     it("returns undefined", () => {
-      const result = validateTheme(happyTheme, themeConfig);
+      const result = validateTheme(happyTheme, aBaseTheme);
+      expect(result.valid).toBeTrue();
       expect(result.errors).toBeFalsy();
-      expect(result.valid).toEqual(true);
     });
   });
 
@@ -56,7 +65,8 @@ describe("validateTheme", () => {
     };
 
     it("returns an error message", () => {
-      const result = validateTheme(missingRoleTheme, themeConfig);
+      const result = validateTheme(missingRoleTheme, aBaseTheme);
+      expect(result.valid).toBeFalse();
       expect(result.errors).toBeTruthy();
       expect(result.errors[0].message).toMatch(/BAR_LENGTH/);
     });
@@ -70,27 +80,34 @@ describe("validateTheme", () => {
     };
 
     it("returns an error message", () => {
-      const result = validateTheme(extraRoleTheme, themeConfig);
+      const result = validateTheme(extraRoleTheme, aBaseTheme);
+      expect(result.valid).toBeFalse();
       expect(result.errors).toBeTruthy();
       expect(result.errors[0].message).toMatch(/BAZ_COLOR/);
     });
   });
 
   describeValuesForType({
-    types: ["color"],
+    types: [COLOR],
     validValues: ["#F00", "#FF0000", "rgba(0, 0, 0, 0.5)", "purple"],
-    invalidValues: ["12px", "0"]
+    invalidValues: ["12px", "0", undefined]
   });
 
   describeValuesForType({
-    types: ["borderRadius", "borderWidth", "length", "fontSize", "spacing"],
+    types: [BORDER_RADIUS, BORDER_WIDTH, LENGTH, FONT_SIZE, SPACING],
     validValues: ["0", "16px", "50%", "10em"],
-    invalidValues: ["#f00", "rgba(0, 0, 0, 0.5)", "14", "a long way off"]
+    invalidValues: [
+      "#f00",
+      "rgba(0, 0, 0, 0.5)",
+      "14",
+      "a long way off",
+      undefined
+    ]
   });
 
   describeValuesForType({
-    types: ["fontWeight"],
+    types: [FONT_WEIGHT],
     validValues: [400, 500, 700, "400", "500", "700"],
-    invalidValues: ["400px", "bold"]
+    invalidValues: ["400px", "bold", undefined]
   });
 });

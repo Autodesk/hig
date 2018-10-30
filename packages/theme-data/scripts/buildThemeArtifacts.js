@@ -6,6 +6,7 @@ const util = require("util");
 const readFile = util.promisify(fs.readFile);
 const writeFile = util.promisify(fs.writeFile);
 
+const THEME_DATA_JSON_DIRECTORY = path.resolve(__dirname, "../build/json");
 const BUILD_DIRECTORY = path.resolve(__dirname, "../build");
 const TEMP_DIRECTORY = path.resolve(__dirname, "../.temp");
 
@@ -21,9 +22,13 @@ function handleError(error) {
 }
 
 function getThemeFiles() {
-  return fs
-    .readdirSync(BUILD_DIRECTORY)
-    .filter(buildFile => buildFile.endsWith("Theme.json"));
+  const themeFiles = fs.readdirSync(THEME_DATA_JSON_DIRECTORY);
+
+  if (themeFiles.length === 0) {
+    throw new Error("Can't build theme artifacts, no theme files found");
+  }
+
+  return themeFiles;
 }
 
 /**
@@ -52,14 +57,16 @@ function formatTheme(theme) {
  * @param {string} themeFile
  * @returns {ParsedTheme}
  */
-async function parseTheme(themeFile) {
-  const themeName = themeFile.replace(".json", "");
-  const themeFilePath = path.resolve(BUILD_DIRECTORY, themeFile);
+async function parseTheme(themeName) {
+  const themeFilePath = path.resolve(
+    THEME_DATA_JSON_DIRECTORY,
+    `${themeName}/resolvedRoles.json`
+  );
   const content = await readFile(themeFilePath, "utf8");
   const theme = JSON.parse(content);
   const themeFormatted = formatTheme(theme);
   const output = JSON.stringify(themeFormatted);
-  const tempFile = path.resolve(TEMP_DIRECTORY, themeFile);
+  const tempFile = path.resolve(TEMP_DIRECTORY, `${themeName}.json`);
 
   return {
     output,
@@ -94,7 +101,6 @@ function createArtifactBuilder(tempFile, themeName) {
  */
 async function buildThemeArtifacts(themeFile) {
   const { output, tempFile, themeName } = await parseTheme(themeFile);
-
   await writeFile(tempFile, output);
 
   // The builder must be initialized after the temp file is written

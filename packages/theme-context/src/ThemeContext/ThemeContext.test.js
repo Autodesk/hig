@@ -6,34 +6,84 @@ import HIGLightTheme from "@hig/theme-data/build/json/lightGrayMediumDensityThem
 import ThemeContext from "./index";
 
 const TestTheme = {
-  id: "test-theme",
-  className: "hig--test-theme",
+  metadata: {
+    id: "test-theme",
+    className: "hig--test-theme"
+  },
   resolvedRoles: {}
 };
 
 describe("ThemeContext", () => {
-  describe("with a provided theme", () => {
-    const renderFunction = jest.fn();
+  const renderFunction = jest.fn();
 
-    beforeEach(() => {
-      renderFunction.mockReset();
-      renderFunction.mockReturnValue(null);
+  beforeEach(() => {
+    renderFunction.mockReset();
+    renderFunction.mockReturnValue(null);
+  });
+
+  /* eslint-disable no-console */
+  describe("when debugging", () => {
+    const consoleError = console.error;
+    const consoleErrorMock = jest.fn();
+
+    beforeAll(() => {
+      console.error = consoleErrorMock;
     });
 
-    it("provides the theme to the consumer", () => {
+    beforeEach(() => {
+      console.error.mockReset();
+    });
+
+    afterAll(() => {
+      console.error = consoleError;
+    });
+
+    it("logs errors for unknown roles", () => {
       mount(
         <ThemeContext.Provider value={TestTheme}>
           <ThemeContext.Consumer>{renderFunction}</ThemeContext.Consumer>
         </ThemeContext.Provider>
       );
 
-      expect(renderFunction).toHaveBeenCalledWith(TestTheme);
+      const [[value]] = renderFunction.mock.calls;
+
+      /* eslint-disable-next-line */
+      value.unknownPropertyName;
+
+      expect(console.error).toHaveBeenCalledWith(
+        "Role unknownPropertyName does not exist"
+      );
+    });
+  });
+  /* eslint-enable no-console */
+
+  describe("in production", () => {
+    const nodeEnv = process.env.NODE_ENV;
+
+    beforeEach(() => {
+      process.env.NODE_ENV = "production";
     });
 
-    it("provides the default theme without a provider", () => {
-      mount(<ThemeContext.Consumer>{renderFunction}</ThemeContext.Consumer>);
+    afterEach(() => {
+      process.env.NODE_ENV = nodeEnv;
+    });
 
-      expect(renderFunction).toHaveBeenCalledWith(HIGLightTheme);
+    describe("with a provided theme", () => {
+      it("provides the theme to the consumer", () => {
+        mount(
+          <ThemeContext.Provider value={TestTheme}>
+            <ThemeContext.Consumer>{renderFunction}</ThemeContext.Consumer>
+          </ThemeContext.Provider>
+        );
+
+        expect(renderFunction).toHaveBeenCalledWith(TestTheme);
+      });
+
+      it("provides the default theme without a provider", () => {
+        mount(<ThemeContext.Consumer>{renderFunction}</ThemeContext.Consumer>);
+
+        expect(renderFunction).toHaveBeenCalledWith(HIGLightTheme);
+      });
     });
   });
 });
