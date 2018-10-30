@@ -33,7 +33,7 @@ export default {
   "input.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.surfaceLevel15Color"
+      ref: "colorScheme.baseColor"
     }
   },
   "input.borderWidth": {
@@ -173,7 +173,7 @@ export default {
   "input.disabled.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.surfaceLevel15Color"
+      ref: "colorScheme.baseColor"
     }
   },
   "input.disabled.fontColor": {

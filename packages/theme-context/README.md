@@ -27,7 +27,7 @@ import ThemeContext from '@hig/themes';
 function MyThemedComponent() {
   <ThemeContext.Consumer>{({ resolvedRoles, name }) => (
     <div style={{
-      backgroundColor: resolvedRoles["colorScheme.surfaceLevel20Color"],
+      backgroundColor: resolvedRoles["colorScheme.surfaceLevel200Color"],
       borderRadius: resolvedRoles["basics.borderRadii.small"],
       color: resolvedRoles["colorScheme.textColor"],
       padding: resolvedRoles["density.spacings.medium"],
