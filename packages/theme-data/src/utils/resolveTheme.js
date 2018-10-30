@@ -20,14 +20,21 @@ function dereferenceValue(theme, role, referencingRole) {
       errorMsg(`You must provide a value for role "${role}"`, referencingRole)
     );
   }
-  const dereferencedValue =
-    valueData.value && valueData.value.ref
-      ? {
-          ...valueData,
-          value: dereferenceValue(theme, valueData.value.ref, role).value
-        }
-      : valueData;
-  return dereferencedValue;
+
+  if (valueData.value && valueData.value.ref) {
+    const dereferencedValue = dereferenceValue(
+      theme,
+      valueData.value.ref,
+      role
+    );
+
+    return {
+      ...dereferencedValue,
+      ...valueData,
+      value: dereferencedValue.value
+    };
+  }
+  return valueData;
 }
 
 function transformAlpha(role, valueData) {
