@@ -1,3 +1,10 @@
+# @hig/theme-context-v1.0.0 (2018-10-30)
+
+
+### Bug Fixes
+
+* **behavior:** refactor context to eliminate `childContextTypes` errors ([fcffd31](https://github.com/Autodesk/hig/commit/fcffd31))
+
 # [@hig/themes-v0.4.0](https://github.com/Autodesk/hig/compare/@hig/themes@0.3.0...@hig/themes@0.4.0) (2018-09-26)
 
 
