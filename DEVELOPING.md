@@ -201,6 +201,22 @@ _Semantic Release will then:_
 1. Create GitHub releases
 1. Merge all changes into the `development` branch
 
+### Configuring Semantic Release to deply a package
+A package must have the following properties defined in its `package.json` file in order to be published by Semantic Release
+
+```json
+  "devDependencies": {
+    "@hig/scripts": "^x.x.x",
+    "@hig/semantic-release-config": "^x.x.x",
+  },
+  "release": {
+    "extends": "@hig/semantic-release-config"
+  },
+  "scripts": {
+    "release": "hig-scripts-release"
+  },
+```
+
 ## Documentation
 
 ### Updating table of contents
