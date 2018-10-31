@@ -8,34 +8,34 @@
     "type": "git",
     "url": "https://github.com/Autodesk/hig.git"
   },
-  "module": "build/index.es.js",
-  "main": "build/index.js",
-  "files": [
-    "build/*"
-  ],
   "publishConfig": {
     "access": "public"
   },
-  "scripts": {
-    "test": "hig-scripts-test",
-    "build": "yarn run build:core && yarn run build:themes && yarn run build:theme-artifacts",
-    "build:core": "hig-scripts-build",
-    "build:themes": "babel-node scripts/buildThemes",
-    "build:theme-artifacts": "node scripts/buildThemeArtifacts.js",
-    "lint": "hig-scripts-lint"
+  "main": "build/index.js",
+  "module": "build/index.es.js",
+  "files": [
+    "build/*"
+  ],
+  "dependencies": {
+    "tinycolor2": "^1.4.1"
   },
   "devDependencies": {
     "@hig/babel-preset": "^0.1.1",
     "@hig/eslint-config": "^0.1.0",
     "@hig/jest-preset": "^0.1.0",
     "@hig/scripts": "^0.1.2",
-    "@hig/typography": "^0.1.3",
     "babel-cli": "^6.26.0",
     "camelcase": "^5.0.0",
     "style-dictionary": "^2.4.0"
   },
-  "dependencies": {
-    "tinycolor2": "^1.4.1"
+  "scripts": {
+    "build": "yarn run build:core && yarn run build:themes && yarn run build:theme-artifacts",
+    "build:core": "hig-scripts-build",
+    "build:themes": "babel-node scripts/buildThemes",
+    "build:theme-artifacts": "node scripts/buildThemeArtifacts.js",
+    "lint": "hig-scripts-lint",
+    "test": "hig-scripts-test",
+    "release": "hig-scripts-release"
   },
   "eslintConfig": {
     "extends": "@hig"
@@ -43,10 +43,10 @@
   "jest": {
     "preset": "@hig/jest-preset"
   },
+  "release": {
+    "extends": "@hig/semantic-release-config"
+  },
   "babel": {
-    "presets": [
-      "@hig/babel-preset"
-    ],
     "env": {
       "test": {
         "presets": [
