@@ -67,13 +67,16 @@ exports[`tooltip/Tooltip  2`] = `
     className="hig__flyout-v1__action"
   >
     <button
-      className="hig--light-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
-      onBlur={undefined}
+      className="hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+      href={undefined}
+      onBlur={[Function]}
       onClick={[Function]}
-      onFocus={undefined}
+      onFocus={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onMouseOver={undefined}
+      tabIndex="0"
+      target={undefined}
     >
       <span
         className="hig__button__title"
