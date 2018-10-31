@@ -1,16 +1,17 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import cx from "classnames";
-import { ThemeContext } from "@hig/themes";
+import { ControlBehavior } from "@hig/behaviors";
 
 import {
   availableSizes,
   availableTargets,
   availableTypes,
-  availableWidths
+  availableWidths,
+  sizes,
+  types,
+  widths
 } from "./constants";
-
-import "./button.scss";
+import ButtonPresenter from "./presenters/ButtonPresenter";
 
 export default class Button extends Component {
   static propTypes = {
@@ -74,9 +75,9 @@ export default class Button extends Component {
 
   static defaultProps = {
     disabled: false,
-    size: "standard",
-    type: "primary",
-    width: "shrink"
+    size: sizes.STANDARD,
+    type: types.PRIMARY,
+    width: widths.SHRINK
   };
 
   render() {
@@ -97,47 +98,41 @@ export default class Button extends Component {
       width
     } = this.props;
 
-    const linkProps = link
-      ? {
-          tabIndex: disabled ? "-1" : "0",
-          href: link,
-          target
-        }
-      : {};
-
-    const Element = link ? "a" : "button";
-
-    const buttonClasses = themeClass =>
-      cx(themeClass, "hig__button-v1", {
-        "hig__button-v1--disabled": disabled,
-        [`hig__button-v1--size-${size}`]: size,
-        [`hig__button-v1--type-${type}`]: type,
-        [`hig__button-v1--width-${width}`]: width
-      });
-
     return (
-      <ThemeContext.Consumer>
-        {({ themeClass }) => (
-          <Element
-            className={buttonClasses(themeClass)}
-            {...linkProps}
-            onBlur={onBlur}
+      <ControlBehavior
+        onBlur={onBlur}
+        onFocus={onFocus}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+      >
+        {({
+          hasFocus,
+          hasHover,
+          onBlur: handleBlur,
+          onFocus: handleFocus,
+          onMouseEnter: handleMouseEnter,
+          onMouseLeave: handleMouseLeave
+        }) => (
+          <ButtonPresenter
+            disabled={disabled}
+            hasFocus={hasFocus}
+            hasHover={hasHover}
+            icon={icon}
+            link={link}
+            onBlur={handleBlur}
             onClick={onClick}
-            onFocus={onFocus}
-            onMouseEnter={onMouseEnter}
-            onMouseLeave={onMouseLeave}
-            onMouseOver={onHover}
-          >
-            {icon && (
-              <div className={cx(themeClass, "hig__button-v1__icon")}>
-                {icon}
-              </div>
-            )}
-
-            <span className={cx("hig__button__title")}>{title}</span>
-          </Element>
+            onFocus={handleFocus}
+            onHover={onHover}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            size={size}
+            target={target}
+            title={title}
+            type={type}
+            width={width}
+          />
         )}
-      </ThemeContext.Consumer>
+      </ControlBehavior>
     );
   }
 }
