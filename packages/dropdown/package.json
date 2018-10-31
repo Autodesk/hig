@@ -20,7 +20,7 @@
   "dependencies": {
     "@hig/icon": "^0.2.1",
     "@hig/multi-downshift": "^0.1.1",
-    "@hig/text-field": "^0.4.5",
+    "@hig/text-field": "^0.5.0",
     "classnames": "^2.2.5",
     "downshift": "^3.1.1",
     "prop-types": "^15.6.1",
