@@ -63,6 +63,8 @@ describe("TextFieldPresenter", () => {
         icon: <span data-hig="icon" />,
         instructions: "instructions",
         label: "label text",
+        maxLength: 2,
+        minLength: 2,
         name: "name text",
         onBlur: function onBlur() {},
         onChange: function onChange() {},

@@ -47,6 +47,14 @@ export default class TextFieldPresenter extends Component {
      */
     label: PropTypes.string,
     /**
+     * Indicates the maximum number of characters the user can enter
+     */
+    maxLength: PropTypes.number,
+    /**
+     * Indicates the minimum number of characters the user can enter
+     */
+    minLength: PropTypes.number,
+    /**
      * Name of the field when submitted with a form
      */
     name: PropTypes.string,
@@ -74,6 +82,10 @@ export default class TextFieldPresenter extends Component {
      * Example of what the user should type into the field
      */
     placeholder: PropTypes.string,
+    /**
+     * Marks input as read-only
+     */
+    readOnly: PropTypes.bool,
     /**
      * Marks input as read-only
      */

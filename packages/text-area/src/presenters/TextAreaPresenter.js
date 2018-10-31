@@ -24,6 +24,14 @@ export default class TextAreaPresenter extends Component {
      */
     label: PropTypes.string,
     /**
+     * Indicates the maximum number of characters the user can enter
+     */
+    maxLength: PropTypes.number,
+    /**
+     * Indicates the minimum number of characters the user can enter
+     */
+    minLength: PropTypes.number,
+    /**
      * Name of the field when submitted with a form
      */
     name: PropTypes.string,
@@ -47,6 +55,10 @@ export default class TextAreaPresenter extends Component {
      * Example of what the user should type into the field
      */
     placeholder: PropTypes.string,
+    /**
+     * Determines whether the user can modify the value of the control
+     */
+    readOnly: PropTypes.bool,
     /**
      * Text describing why the field is required
      */
@@ -82,12 +94,15 @@ export default class TextAreaPresenter extends Component {
       disabled,
       instructions,
       label,
+      maxLength,
+      minLength,
       name,
       onBlur,
       onChange,
       onFocus,
       onInput,
       placeholder,
+      readOnly,
       required,
       type,
       value
@@ -133,15 +148,18 @@ export default class TextAreaPresenter extends Component {
       <div className={wrapperClasses}>
         <textarea
           className={textAreaClasses}
-          id={id}
           defaultValue={defaultValue}
           disabled={disabled}
+          id={id}
+          maxLength={maxLength}
+          minLength={minLength}
           name={name}
           onBlur={onBlur}
           onChange={onChange}
           onFocus={onFocus}
           onInput={onInput}
           placeholder={placeholder}
+          readOnly={readOnly}
           required={required}
           type={type}
           value={value}

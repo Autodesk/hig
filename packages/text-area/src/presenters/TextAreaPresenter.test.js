@@ -1,15 +1,15 @@
-import React from "react";
-import renderer from "react-test-renderer";
 import { generateId } from "@hig/utils";
+import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
+
 import TextAreaPresenter from "./TextAreaPresenter";
 
 describe("TextArea/TextAreaPresenter", () => {
   afterEach(() => {
-    generateId.mockReset();
+    generateId.mockClear();
   });
 
-  [
-    ({
+  takeSnapshotsOf(TextAreaPresenter, [
+    {
       description: "renders without props",
       props: {}
     },
@@ -19,21 +19,15 @@ describe("TextArea/TextAreaPresenter", () => {
         disabled: false,
         instructions: "write stuff in me",
         label: "this is a text area",
+        maxLength: 2,
+        minLength: 2,
         name: "text area",
         placeholder: "this is placeholder text",
+        readOnly: true,
         required: "this information is required",
         type: "a type of checkbox",
         value: "value!"
       }
-    })
-  ].forEach(({ description, props: { children, ...otherProps } }) => {
-    it(description, () => {
-      const presenter = (
-        <TextAreaPresenter {...otherProps}>{children}</TextAreaPresenter>
-      );
-      const tree = renderer.create(presenter).toJSON();
-
-      expect(tree).toMatchSnapshot();
-    });
-  });
+    }
+  ]);
 });

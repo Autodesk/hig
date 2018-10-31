@@ -19,6 +19,14 @@ export default class Input extends Component {
      */
     name: PropTypes.string,
     /**
+     * Indicates the maximum number of characters the user can enter
+     */
+    maxLength: PropTypes.number,
+    /**
+     * Indicates the minimum number of characters the user can enter
+     */
+    minLength: PropTypes.number,
+    /**
      * Called when user moves focus from the field
      */
     onBlur: PropTypes.func,
