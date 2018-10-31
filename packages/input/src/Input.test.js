@@ -1,17 +1,19 @@
 import React from "react";
 import { mount } from "enzyme";
+import {
+  behavesLikeFocusBehavior,
+  behavesLikeHoverBehavior,
+  composesLikeControlBehavior
+} from "@hig/behaviors/test";
 
 import Input from "./Input";
 import InputPresenter from "./presenters/InputPresenter";
 import InputHaloPresenter from "./presenters/InputHaloPresenter";
-import behavesLikeFocusBehavior from "./__test__/behavesLikeFocusBehavior";
-import behavesLikeHoverBehavior from "./__test__/behavesLikeHoverBehavior";
-import behavesLikeInputPropPasser from "./__test__/behavesLikeInputPropPasser";
 
 describe("Input", () => {
   behavesLikeFocusBehavior(<Input />);
   behavesLikeHoverBehavior(<Input />);
-  behavesLikeInputPropPasser({
+  composesLikeControlBehavior({
     Subject: Input,
     Receiver: InputPresenter
   });

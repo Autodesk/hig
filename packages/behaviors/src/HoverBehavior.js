@@ -21,18 +21,22 @@ export default class HoverBehavior extends Component {
   }
 
   handleFocus(event) {
-    this.setState({ hasHover: true });
-
     if (this.props.onMouseEnter) {
       this.props.onMouseEnter(event);
+    }
+
+    if (!event.defaultPrevented) {
+      this.setState({ hasHover: true });
     }
   }
 
   handleBlur(event) {
-    this.setState({ hasHover: false });
-
     if (this.props.onMouseLeave) {
       this.props.onMouseLeave(event);
+    }
+
+    if (!event.defaultPrevented) {
+      this.setState({ hasHover: false });
     }
   }
 

@@ -21,18 +21,22 @@ export default class FocusBehavior extends Component {
   }
 
   handleFocus(event) {
-    this.setState({ hasFocus: true });
-
     if (this.props.onFocus) {
       this.props.onFocus(event);
+    }
+
+    if (!event.defaultPrevented) {
+      this.setState({ hasFocus: true });
     }
   }
 
   handleBlur(event) {
-    this.setState({ hasFocus: false });
-
     if (this.props.onBlur) {
       this.props.onBlur(event);
+    }
+
+    if (!event.defaultPrevented) {
+      this.setState({ hasFocus: false });
     }
   }
 
