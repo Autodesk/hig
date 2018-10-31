@@ -23,7 +23,9 @@ const classNamesBySize = {
 
 const classNamesByType = {
   [types.PRIMARY]: "hig__button-v1--type-primary",
+  [types.SOLID]: "hig__button-v1--type-primary",
   [types.SECONDARY]: "hig__button-v1--type-secondary",
+  [types.OUTLINE]: "hig__button-v1--type-secondary",
   [types.FLAT]: "hig__button-v1--type-flat"
 };
 
