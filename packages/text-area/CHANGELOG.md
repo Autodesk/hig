@@ -1,3 +1,10 @@
+# [@hig/text-area-v0.2.0](https://github.com/Autodesk/hig/compare/@hig/text-area@0.1.2...@hig/text-area@0.2.0) (2018-10-31)
+
+
+### Features
+
+* add `maxLength`, `minLenght`, and `readOnly` props to text inputs ([084ca94](https://github.com/Autodesk/hig/commit/084ca94))
+
 # [@hig/text-area-v0.1.2](https://github.com/Autodesk/hig/compare/@hig/text-area@0.1.1...@hig/text-area@0.1.2) (2018-10-08)
 
 
