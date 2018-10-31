@@ -22,13 +22,15 @@
     "build:core": "hig-scripts-build",
     "build:themes": "babel-node scripts/buildThemes",
     "build:theme-artifacts": "node scripts/buildThemeArtifacts.js",
-    "lint": "hig-scripts-lint"
+    "lint": "hig-scripts-lint",
+    "release": "hig-scripts-release"
   },
   "devDependencies": {
     "@hig/babel-preset": "^0.1.1",
     "@hig/eslint-config": "^0.1.0",
     "@hig/jest-preset": "^0.1.0",
     "@hig/scripts": "^0.1.2",
+    "@hig/semantic-release-config": "^0.1.0",
     "@hig/typography": "^0.1.3",
     "babel-cli": "^6.26.0",
     "camelcase": "^5.0.0",
@@ -42,6 +44,9 @@
   },
   "jest": {
     "preset": "@hig/jest-preset"
+  },
+  "release": {
+    "extends": "@hig/semantic-release-config"
   },
   "babel": {
     "presets": [

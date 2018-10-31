@@ -1,12 +1,12 @@
 import React from "react";
 import renderer from "react-test-renderer";
 import { mount } from "enzyme";
+import { composesLikeControlBehavior } from "@hig/behaviors/test";
 
 import InputPresenter from "./InputPresenter";
-import behavesLikeInputPropPasser from "../__test__/behavesLikeInputPropPasser";
 
 describe("InputPresenter", () => {
-  behavesLikeInputPropPasser({
+  composesLikeControlBehavior({
     Subject: InputPresenter,
     Receiver: "input"
   });

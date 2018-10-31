@@ -1,7 +1,7 @@
 import React from "react";
 import { mount } from "enzyme";
 
-export default function({ Subject, Receiver }) {
+export default function composesLikeControlBehavior({ Subject, Receiver }) {
   describe("passing props", () => {
     [
       { attr: "autoComplete", value: true },

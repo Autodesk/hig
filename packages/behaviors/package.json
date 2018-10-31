@@ -1,7 +1,7 @@
 {
-  "name": "@hig/input",
-  "version": "0.0.1-alpha",
-  "description": "HIG Input",
+  "name": "@hig/behaviors",
+  "version": "1.0.0",
+  "description": "Shared component behaviors",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
   "repository": {
@@ -13,14 +13,10 @@
   },
   "main": "build/index.js",
   "module": "build/index.es.js",
-  "style": "build/index.css",
   "files": [
     "build/*"
   ],
   "dependencies": {
-    "@hig/behaviors": "1.0.0",
-    "@hig/theme-context": "^1.0.0-alpha",
-    "emotion": "^9.2.4",
     "prop-types": "^15.6.1"
   },
   "devDependencies": {

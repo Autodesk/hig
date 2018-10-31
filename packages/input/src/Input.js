@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import InputBehavior from "./behaviors/InputBehavior";
+import { ControlBehavior } from "@hig/behaviors";
+
 import InputPresenter from "./presenters/InputPresenter";
 import InputHaloPresenter from "./presenters/InputHaloPresenter";
 
@@ -21,7 +22,7 @@ Wrapper.propTypes = {
 
 function Input(props) {
   return (
-    <InputBehavior
+    <ControlBehavior
       onFocus={props.onFocus}
       onBlur={props.onBlur}
       onMouseEnter={props.onMouseEnter}
@@ -67,7 +68,7 @@ function Input(props) {
           />
         </Wrapper>
       )}
-    </InputBehavior>
+    </ControlBehavior>
   );
 }
 

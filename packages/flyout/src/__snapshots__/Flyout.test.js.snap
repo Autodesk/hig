@@ -62,13 +62,16 @@ exports[`flyout/Flyout snapshots renders a custom pointer 1`] = `
     className="hig__flyout-v1__action"
   >
     <button
-      className="hig--light-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
-      onBlur={undefined}
+      className="hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+      href={undefined}
+      onBlur={[Function]}
       onClick={[Function]}
-      onFocus={undefined}
+      onFocus={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onMouseOver={undefined}
+      tabIndex="0"
+      target={undefined}
     >
       <span
         className="hig__button__title"
@@ -132,13 +135,16 @@ exports[`flyout/Flyout snapshots renders children from the given render function
     className="hig__flyout-v1__action"
   >
     <button
-      className="hig--light-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
-      onBlur={undefined}
+      className="hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+      href={undefined}
+      onBlur={[Function]}
       onClick={[Function]}
-      onFocus={undefined}
-      onMouseEnter={undefined}
-      onMouseLeave={undefined}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
       onMouseOver={undefined}
+      tabIndex="0"
+      target={undefined}
     >
       <span
         className="hig__button__title"
@@ -213,13 +219,16 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
     className="hig__flyout-v1__action"
   >
     <button
-      className="hig--light-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
-      onBlur={undefined}
+      className="hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+      href={undefined}
+      onBlur={[Function]}
       onClick={[Function]}
-      onFocus={undefined}
+      onFocus={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onMouseOver={undefined}
+      tabIndex="0"
+      target={undefined}
     >
       <span
         className="hig__button__title"
@@ -357,13 +366,16 @@ exports[`flyout/Flyout snapshots renders the panel from a basic render function 
     className="hig__flyout-v1__action"
   >
     <button
-      className="hig--light-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
-      onBlur={undefined}
+      className="hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+      href={undefined}
+      onBlur={[Function]}
       onClick={[Function]}
-      onFocus={undefined}
+      onFocus={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onMouseOver={undefined}
+      tabIndex="0"
+      target={undefined}
     >
       <span
         className="hig__button__title"
@@ -422,13 +434,16 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
     className="hig__flyout-v1__action"
   >
     <button
-      className="hig--light-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
-      onBlur={undefined}
+      className="hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+      href={undefined}
+      onBlur={[Function]}
       onClick={[Function]}
-      onFocus={undefined}
-      onMouseEnter={undefined}
-      onMouseLeave={undefined}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
       onMouseOver={undefined}
+      tabIndex="0"
+      target={undefined}
     >
       <span
         className="hig__button__title"
@@ -508,13 +523,16 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
     className="hig__flyout-v1__action"
   >
     <button
-      className="hig--light-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
-      onBlur={undefined}
+      className="hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+      href={undefined}
+      onBlur={[Function]}
       onClick={[Function]}
-      onFocus={undefined}
+      onFocus={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onMouseOver={undefined}
+      tabIndex="0"
+      target={undefined}
     >
       <span
         className="hig__button__title"

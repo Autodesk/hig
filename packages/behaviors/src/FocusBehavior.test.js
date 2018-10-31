@@ -1,10 +1,10 @@
 import React from "react";
 import { mount } from "enzyme";
 
+import { behavesLikeFocusBehavior } from "@hig/behaviors/test";
 import { lastCallOfMock } from "@hig/jest-preset/helpers";
 
 import FocusBehavior from "./FocusBehavior";
-import behavesLikeFocusBehavior from "../__test__/behavesLikeFocusBehavior";
 
 function renderExample(exampleProps) {
   const renderPropSpy = jest.fn(({ onFocus, onBlur }) => (
