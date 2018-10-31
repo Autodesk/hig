@@ -12,9 +12,13 @@ export const targets = Object.freeze({
 });
 
 export const types = Object.freeze({
+  FLAT: "flat",
+  OUTLINE: "outline",
+  SOLID: "solid",
+  /** @deprecated */
   PRIMARY: "primary",
-  SECONDARY: "secondary",
-  FLAT: "flat"
+  /** @deprecated */
+  SECONDARY: "secondary"
 });
 
 export const widths = Object.freeze({

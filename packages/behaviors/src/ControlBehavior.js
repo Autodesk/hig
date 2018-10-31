@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import FocusBehavior from "./FocusBehavior";
 import HoverBehavior from "./HoverBehavior";
 
-class InputBehavior extends Component {
+class ControlBehavior extends Component {
   static propTypes = {
     children: PropTypes.func.isRequired,
     onFocus: PropTypes.func,
@@ -41,4 +41,4 @@ class InputBehavior extends Component {
   }
 }
 
-export default InputBehavior;
+export default ControlBehavior;
