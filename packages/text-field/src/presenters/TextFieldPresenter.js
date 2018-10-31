@@ -87,10 +87,6 @@ export default class TextFieldPresenter extends Component {
      */
     readOnly: PropTypes.bool,
     /**
-     * Marks input as read-only
-     */
-    readOnly: PropTypes.bool,
-    /**
      * Text describing why the field is required
      */
     required: PropTypes.string,
