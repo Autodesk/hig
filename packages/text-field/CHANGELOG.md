@@ -1,3 +1,10 @@
+# [@hig/text-field-v0.5.0](https://github.com/Autodesk/hig/compare/@hig/text-field@0.4.5...@hig/text-field@0.5.0) (2018-10-31)
+
+
+### Features
+
+* add `maxLength`, `minLenght`, and `readOnly` props to text inputs ([084ca94](https://github.com/Autodesk/hig/commit/084ca94))
+
 # [@hig/text-field-v0.4.5](https://github.com/Autodesk/hig/compare/@hig/text-field@0.4.4...@hig/text-field@0.4.5) (2018-10-08)
 
 
