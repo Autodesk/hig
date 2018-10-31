@@ -3,6 +3,7 @@
 
 .hig__side-nav__module__collapse-button {
   @include vendor-prefix("transform", "rotate(0deg)");
+  height: 100%;
 
   &:hover {
     cursor: pointer;
