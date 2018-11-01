@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import cx from "classnames";
-import { ThemeContext } from "@hig/themes";
+import { css, cx } from "emotion";
+import { ThemeContext } from "@hig/theme-context";
 
-import "./ButtonPresenter.scss";
+import stylesheet from "./stylesheet";
 
 import {
   availableSizes,
@@ -37,8 +37,8 @@ const classNameByWidth = {
 export default class ButtonPresenter extends Component {
   static propTypes = {
     disabled: PropTypes.bool,
-    hasFocus: PropTypes.bool, // eslint-disable-line react/no-unused-prop-types
-    hasHover: PropTypes.bool, // eslint-disable-line react/no-unused-prop-types
+    hasFocus: PropTypes.bool,
+    hasHover: PropTypes.bool,
     icon: PropTypes.node,
     link: PropTypes.string,
     onBlur: PropTypes.func,
@@ -57,6 +57,8 @@ export default class ButtonPresenter extends Component {
   render() {
     const {
       disabled,
+      hasFocus,
+      hasHover,
       icon,
       link,
       onBlur,
@@ -79,9 +81,15 @@ export default class ButtonPresenter extends Component {
 
     return (
       <ThemeContext.Consumer>
-        {({ themeClass }) => {
+        {({ metadata, resolvedRoles }) => {
+          const { className } = metadata;
+          const styles = stylesheet(
+            { disabled, hasFocus, hasHover, size, type, width },
+            resolvedRoles
+          );
           const buttonClassName = cx(
-            themeClass,
+            css(styles.button),
+            className,
             "hig__button-v1",
             classNamesBySize[size],
             classNamesByType[type],
@@ -90,7 +98,11 @@ export default class ButtonPresenter extends Component {
               "hig__button-v1--disabled": disabled
             }
           );
-          const iconClassName = cx(themeClass, "hig__button-v1__icon");
+          const iconClassName = cx(
+            css(styles.icon),
+            className,
+            "hig__button-v1__icon"
+          );
 
           return (
             <Wrapper
