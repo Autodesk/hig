@@ -10594,9 +10594,14 @@ rollup@^0.57.1:
     sourcemap-codec "^1.4.1"
 
 rollup@^0.67.0:
+<<<<<<< HEAD
   version "0.67.4"
   resolved "https://registry.yarnpkg.com/rollup/-/rollup-0.67.4.tgz#8ed6b0993337f84ec8a0387f824fa6c197e833ec"
   integrity sha512-AVuP73mkb4BBMUmksQ3Jw0jTrBTU1i7rLiUYjFxLZGb3xiFmtVEg40oByphkZAsiL0bJC3hRAJUQos/e5EBd+w==
+=======
+  version "0.67.1"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-0.67.1.tgz#4094110c944d3c9e25b5bf196771b51132ec3adb"
+>>>>>>> e4b59c8b... chore: update yarn.lock
   dependencies:
     "@types/estree" "0.0.39"
     "@types/node" "*"
