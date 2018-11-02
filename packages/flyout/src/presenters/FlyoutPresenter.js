@@ -1,13 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
-import cx from "classnames";
+import { css, cx } from "emotion";
 import { anchorPoints, AVAILABLE_ANCHOR_POINTS } from "../anchorPoints";
 import { DEFAULT_COORDINATES } from "../getCoordinates";
 import {
   transitionStatuses,
   AVAILABLE_TRANSITION_STATUSES
 } from "../transitionStatuses";
-import "./FlyoutPresenter.scss";
+// import "./FlyoutPresenter.scss";
+import stylesheet from "./stylesheet";
 import PointerPresenter from "./PointerPresenter";
 import PointerWrapperPresenter from "./PointerWrapperPresenter";
 
@@ -57,9 +58,11 @@ export default function FlyoutPresenter(props) {
     transitionStatus
   } = props;
 
+  const styles = stylesheet({ transitionStatus, anchorPoint });
   const containerStyle = positionToStyle(containerPosition);
   const pointerStyle = positionToStyle(pointerPosition);
   const wrapperClasses = cx([
+    css(styles.flyoutWrapper),
     "hig__flyout-v1",
     transitionStateToModifier[transitionStatus],
     anchorPointToModifier[anchorPoint]
@@ -67,11 +70,11 @@ export default function FlyoutPresenter(props) {
 
   return (
     <div className={wrapperClasses} ref={refWrapper}>
-      <div className="hig__flyout-v1__action" ref={refAction}>
+      <div className={cx([css(styles.flyoutAction), "hig__flyout-v1__action"])} ref={refAction}>
         {children}
       </div>
-      <div className="hig__flyout-v1__container" style={containerStyle}>
-        <PointerWrapperPresenter innerRef={refPointer} style={pointerStyle}>
+      <div className={cx([css(styles.flyoutContainer), "hig__flyout-v1__container"])} style={containerStyle}>
+        <PointerWrapperPresenter innerRef={refPointer} style={pointerStyle} anchorPoint={anchorPoint}>
           {pointer}
         </PointerWrapperPresenter>
         {panel}
