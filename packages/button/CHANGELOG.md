@@ -1,3 +1,10 @@
+# [@hig/button-v0.3.1](https://github.com/Autodesk/hig/compare/@hig/button@0.3.0...@hig/button@0.3.1) (2018-11-02)
+
+
+### Bug Fixes
+
+* Replaced @hig/theme dependency with @hig/theme-context
+
 # [@hig/button-v0.3.0](https://github.com/Autodesk/hig/compare/@hig/button@0.2.0...@hig/button@0.3.0) (2018-10-31)
 
 
