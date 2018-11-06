@@ -1,3 +1,10 @@
+# [@hig/button-v0.3.1](https://github.com/Autodesk/hig/compare/@hig/button@0.3.0...@hig/button@0.3.1) (2018-11-06)
+
+
+### Bug Fixes
+
+* point button back to themes ([b53bf68](https://github.com/Autodesk/hig/commit/b53bf68))
+
 # [@hig/button-v0.3.0](https://github.com/Autodesk/hig/compare/@hig/button@0.2.0...@hig/button@0.3.0) (2018-10-31)
 
 
