@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
-import { ThemeContext } from "@hig/theme-context";
+import { ThemeContext } from "@hig/themes";
 
 import "./ButtonPresenter.scss";
 
