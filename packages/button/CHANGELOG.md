@@ -1,3 +1,22 @@
+# [@hig/button-v0.3.1](https://github.com/Autodesk/hig/compare/@hig/button@0.3.0...@hig/button@0.3.1) (2018-11-06)
+
+
+### Bug Fixes
+
+* point button back to themes ([b53bf68](https://github.com/Autodesk/hig/commit/b53bf68))
+
+# [@hig/button-v0.3.0](https://github.com/Autodesk/hig/compare/@hig/button@0.2.0...@hig/button@0.3.0) (2018-10-31)
+
+
+### Bug Fixes
+
+* add styling support for new variants ([f6b2444](https://github.com/Autodesk/hig/commit/f6b2444))
+
+
+### Features
+
+* add new button variants ([3af33bb](https://github.com/Autodesk/hig/commit/3af33bb))
+
 # [@hig/button-v0.2.0](https://github.com/Autodesk/hig/compare/@hig/button@0.1.4...@hig/button@0.2.0) (2018-09-11)
 
 

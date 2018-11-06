@@ -4,7 +4,7 @@ dotenv.config({ path: ".env" });
 
 const chromeCapabilities = {
   browserName: "chrome",
-  version: "65.0",
+  version: "68.0",
   platform: "macOs 10.12",
   name: "Gemini visual regression tests"
 };
@@ -20,6 +20,9 @@ module.exports = {
       sauce: {
         username: process.env.SAUCE_USERNAME,
         accessKey: process.env.SAUCE_ACCESS_KEY
+      },
+      "html-reporter/gemini": {
+        path: "./gemini-report/"
       }
     }
   },
