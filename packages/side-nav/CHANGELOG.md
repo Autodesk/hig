@@ -1,3 +1,10 @@
+# [@hig/side-nav-v0.2.2](https://github.com/Autodesk/hig/compare/@hig/side-nav@0.2.1...@hig/side-nav@0.2.2) (2018-10-31)
+
+
+### Bug Fixes
+
+* **SideNav:** Fix positioning of caret for collapsed module ([fdd29dc](https://github.com/Autodesk/hig/commit/fdd29dc))
+
 # [@hig/side-nav-v0.2.1](https://github.com/Autodesk/hig/compare/@hig/side-nav@0.2.0...@hig/side-nav@0.2.1) (2018-10-08)
 
 
