@@ -67,7 +67,7 @@ exports[`tooltip/Tooltip  2`] = `
     className="hig__flyout-v1__action"
   >
     <button
-      className="hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+      className="hig--light-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
       href={undefined}
       onBlur={[Function]}
       onClick={[Function]}

@@ -10,9 +10,9 @@
     "*"
   ],
   "scripts": {
-    "gemini": "yarn storybook-test-build && concurrently 'yarn storybook-test-serve' 'gemini test --reporter html --reporter flat' --kill-others --success first",
-    "gemini-update": "yarn storybook-test-build && concurrently 'yarn storybook-test-serve' 'gemini update --reporter html --reporter flat' --kill-others --success first",
-    "gemini-ci": "gemini test --reporter html --reporter flat",
+    "gemini": "yarn storybook-test-build && concurrently 'yarn storybook-test-serve' 'gemini test --reporter flat' --kill-others --success first",
+    "gemini-update": "yarn storybook-test-build && concurrently 'yarn storybook-test-serve' 'gemini update --reporter flat' --kill-others --success first",
+    "gemini-ci": "gemini test --reporter flat",
     "lint": "eslint .storybook utils --color --ext .js",
     "storybook": "start-storybook -p 9001 -c .storybook/development",
     "storybook-build": "build-storybook -c .storybook/development",
@@ -39,8 +39,9 @@
     "babel-runtime": "^6.26.0",
     "concurrently": "^3.5.1",
     "file-loader": "^1.1.11",
-    "gemini": "4.19.3",
+    "gemini": "5.9.1",
     "gemini-sauce": "1.0.1",
+    "html-reporter": "^2.23.0",
     "http-server": "^0.11.1",
     "json-loader": "^0.5.7",
     "raw-loader": "^0.5.1",
