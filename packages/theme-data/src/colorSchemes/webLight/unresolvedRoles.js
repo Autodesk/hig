@@ -3,7 +3,8 @@ import lightGrayTheme from "../lightGray";
 
 const oldBasics = {
   colors: {
-    "hig-turquoise-50": "#0ED3BE"
+    "hig-turquoise-50": "#0ED3BE",
+    "hig-cool-gray-20": "#D4DBE1"
   }
 };
 
@@ -40,7 +41,7 @@ const webLightThemeResolvedRoles = extendTheme(lightGrayTheme.unresolvedRoles, {
     }
   },
   "flyout.borderColor": {
-    value: "#d4dbe1"
+    value: oldBasics.colors["hig-cool-gray-20"]
   }
 });
 
