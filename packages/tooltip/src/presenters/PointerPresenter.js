@@ -5,6 +5,17 @@ import { Pointer } from "@hig/flyout";
 const COLOR = "#393939";
 const SIZE = 12;
 
+function stylesheetOverride() {
+  return {
+    "polygon:first-child": {
+      fill: COLOR
+    },
+    "polygon:last-child": {
+      fill: COLOR
+    }
+  };
+}
+
 export default function PointerPresenter() {
-  return <Pointer size={SIZE} backgroundColor={COLOR} borderColor={COLOR} />;
+  return <Pointer size={SIZE} customStyles={stylesheetOverride} />;
 }
