@@ -1,8 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`flyout/presenters/PanelContainerPresenter renders with all props 1`] = `
+.emotion-1 {
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  box-shadow: 0 0 16px rgba(0,0,0,0.25);
+}
+
+.emotion-0 {
+  position: relative;
+}
+
 <div
-  className="hig__flyout-v1__panel-container"
+  className="emotion-1 hig__flyout-v1__panel-container"
   style={
     Object {
       "maxHeight": "150px",
@@ -10,7 +21,7 @@ exports[`flyout/presenters/PanelContainerPresenter renders with all props 1`] = 
   }
 >
   <div
-    className="hig__flyout-v1__panel-container__inner"
+    className="emotion-0 hig__flyout-v1__panel-container__inner"
   >
     Hello World
   </div>
@@ -18,8 +29,19 @@ exports[`flyout/presenters/PanelContainerPresenter renders with all props 1`] = 
 `;
 
 exports[`flyout/presenters/PanelContainerPresenter renders with only \`innerRef\` 1`] = `
+.emotion-1 {
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  box-shadow: 0 0 16px rgba(0,0,0,0.25);
+}
+
+.emotion-0 {
+  position: relative;
+}
+
 <div
-  className="hig__flyout-v1__panel-container"
+  className="emotion-1 hig__flyout-v1__panel-container"
   style={
     Object {
       "maxHeight": undefined,
@@ -27,7 +49,7 @@ exports[`flyout/presenters/PanelContainerPresenter renders with only \`innerRef\
   }
 >
   <div
-    className="hig__flyout-v1__panel-container__inner"
+    className="emotion-0 hig__flyout-v1__panel-container__inner"
   />
 </div>
 `;

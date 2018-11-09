@@ -1,11 +1,73 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`profile-flyout/ProfileFlyout renders with all props 1`] = `
+.emotion-6 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-1 polygon:first-child {
+  fill: transparent;
+}
+
+.emotion-1 polygon:last-child {
+  fill: #ffffff;
+}
+
+.emotion-4 {
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  box-shadow: 0 0 16px rgba(0,0,0,0.25);
+}
+
+.emotion-3 {
+  position: relative;
+}
+
+.emotion-5 {
+  position: absolute;
+  display: table;
+  width: 100%;
+  z-index: 9999;
+  -webkit-transition-property: opacity,-webkit-transform;
+  -webkit-transition-property: opacity,transform;
+  transition-property: opacity,transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  touch-action: auto;
+  pointer-events: auto;
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
 <div
-  className="hig__flyout-v1 hig__flyout-v1--top-left"
+  className="emotion-6 hig__flyout-v1--top-left"
 >
   <div
-    className="hig__flyout-v1__action"
+    className="emotion-0 hig__flyout-v1__action"
   >
     <button
       className="hig__profile-flyout__button"
@@ -27,7 +89,7 @@ exports[`profile-flyout/ProfileFlyout renders with all props 1`] = `
     </button>
   </div>
   <div
-    className="hig__flyout-v1__container"
+    className="emotion-5 hig__flyout-v1__container"
     style={
       Object {
         "left": "0px",
@@ -37,7 +99,7 @@ exports[`profile-flyout/ProfileFlyout renders with all props 1`] = `
   >
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__pointer-wrapper"
+      className="emotion-2 hig__flyout-v1__pointer-wrapper"
       role="presentation"
       style={
         Object {
@@ -47,22 +109,21 @@ exports[`profile-flyout/ProfileFlyout renders with all props 1`] = `
       }
     >
       <svg
+        className="emotion-1"
         height="24"
         viewBox="0 0 24 24"
         width="24"
       >
         <polygon
-          fill="#d4dbe1"
           points="0,12 12,0 24,12"
         />
         <polygon
-          fill="#fff"
           points="2.5,12 12,2.5 21.5,12"
         />
       </svg>
     </div>
     <div
-      className="hig__flyout-v1__panel-container"
+      className="emotion-4 hig__flyout-v1__panel-container"
       style={
         Object {
           "maxHeight": undefined,
@@ -70,7 +131,7 @@ exports[`profile-flyout/ProfileFlyout renders with all props 1`] = `
       }
     >
       <div
-        className="hig__flyout-v1__panel-container__inner"
+        className="emotion-3 hig__flyout-v1__panel-container__inner"
       />
     </div>
   </div>
@@ -78,11 +139,73 @@ exports[`profile-flyout/ProfileFlyout renders with all props 1`] = `
 `;
 
 exports[`profile-flyout/ProfileFlyout renders with no props 1`] = `
+.emotion-6 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-5 {
+  position: absolute;
+  display: none;
+  width: 100%;
+  z-index: 9999;
+  -webkit-transition-property: opacity,-webkit-transform;
+  -webkit-transition-property: opacity,transform;
+  transition-property: opacity,transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  touch-action: auto;
+  pointer-events: auto;
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-1 polygon:first-child {
+  fill: transparent;
+}
+
+.emotion-1 polygon:last-child {
+  fill: #ffffff;
+}
+
+.emotion-4 {
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  box-shadow: 0 0 16px rgba(0,0,0,0.25);
+}
+
+.emotion-3 {
+  position: relative;
+}
+
 <div
-  className="hig__flyout-v1 hig__flyout-v1--hidden hig__flyout-v1--top-left"
+  className="emotion-6 hig__flyout-v1--hidden hig__flyout-v1--top-left"
 >
   <div
-    className="hig__flyout-v1__action"
+    className="emotion-0 hig__flyout-v1__action"
   >
     <button
       className="hig__profile-flyout__button"
@@ -104,7 +227,7 @@ exports[`profile-flyout/ProfileFlyout renders with no props 1`] = `
     </button>
   </div>
   <div
-    className="hig__flyout-v1__container"
+    className="emotion-5 hig__flyout-v1__container"
     style={
       Object {
         "left": "0px",
@@ -114,7 +237,7 @@ exports[`profile-flyout/ProfileFlyout renders with no props 1`] = `
   >
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__pointer-wrapper"
+      className="emotion-2 hig__flyout-v1__pointer-wrapper"
       role="presentation"
       style={
         Object {
@@ -124,22 +247,21 @@ exports[`profile-flyout/ProfileFlyout renders with no props 1`] = `
       }
     >
       <svg
+        className="emotion-1"
         height="24"
         viewBox="0 0 24 24"
         width="24"
       >
         <polygon
-          fill="#d4dbe1"
           points="0,12 12,0 24,12"
         />
         <polygon
-          fill="#fff"
           points="2.5,12 12,2.5 21.5,12"
         />
       </svg>
     </div>
     <div
-      className="hig__flyout-v1__panel-container"
+      className="emotion-4 hig__flyout-v1__panel-container"
       style={
         Object {
           "maxHeight": undefined,
@@ -147,7 +269,7 @@ exports[`profile-flyout/ProfileFlyout renders with no props 1`] = `
       }
     >
       <div
-        className="hig__flyout-v1__panel-container__inner"
+        className="emotion-3 hig__flyout-v1__panel-container__inner"
       />
     </div>
   </div>

@@ -1,18 +1,40 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`flyout/presenters/PointerWrapperPresenter  1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
 <div
   aria-hidden="true"
-  className="hig__flyout-v1__pointer-wrapper"
+  className="emotion-0 hig__flyout-v1__pointer-wrapper"
   role="presentation"
   style={undefined}
 />
 `;
 
 exports[`flyout/presenters/PointerWrapperPresenter  2`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
 <div
   aria-hidden="true"
-  className="hig__flyout-v1__pointer-wrapper"
+  className="emotion-0 hig__flyout-v1__pointer-wrapper"
   role="presentation"
   style={
     Object {

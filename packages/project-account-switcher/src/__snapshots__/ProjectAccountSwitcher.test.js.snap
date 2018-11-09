@@ -224,10 +224,10 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
 
 exports[`project-account-switcher/ProjectAccountSwitcher integration renders with default account/project 1`] = `
 <div
-  className="hig__flyout-v1 hig__flyout-v1--hidden hig__flyout-v1--top-left"
+  className="emotion-6 hig__flyout-v1--hidden hig__flyout-v1--top-left"
 >
   <div
-    className="hig__flyout-v1__action"
+    className="emotion-0 hig__flyout-v1__action"
   >
     <div
       className="hig__project-account-switcher__target"
@@ -279,7 +279,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
     </div>
   </div>
   <div
-    className="hig__flyout-v1__container"
+    className="emotion-5 hig__flyout-v1__container"
     style={
       Object {
         "left": "0px",
@@ -289,7 +289,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
   >
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__pointer-wrapper"
+      className="emotion-2 hig__flyout-v1__pointer-wrapper"
       role="presentation"
       style={
         Object {
@@ -299,22 +299,21 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
       }
     >
       <svg
+        className="emotion-1"
         height="24"
         viewBox="0 0 24 24"
         width="24"
       >
         <polygon
-          fill="#d4dbe1"
           points="0,12 12,0 24,12"
         />
         <polygon
-          fill="#fff"
           points="2.5,12 12,2.5 21.5,12"
         />
       </svg>
     </div>
     <div
-      className="hig__flyout-v1__panel-container"
+      className="emotion-4 hig__flyout-v1__panel-container"
       style={
         Object {
           "maxHeight": undefined,
@@ -322,7 +321,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
       }
     >
       <div
-        className="hig__flyout-v1__panel-container__inner"
+        className="emotion-3 hig__flyout-v1__panel-container__inner"
       >
         <div
           className="hig__project-account-switcher__panel"
