@@ -19,7 +19,6 @@
   ],
   "dependencies": {
     "@hig/theme-context": "^1.0.0",
-    "classnames": "^2.2.5",
     "emotion": "^9.2.4",
     "prop-types": "^15.6.1",
     "react-transition-group": "^2.3.1"
@@ -32,8 +31,7 @@
     "@hig/eslint-config": "^0.1.0",
     "@hig/jest-preset": "^0.1.0",
     "@hig/scripts": "^0.1.2",
-    "@hig/semantic-release-config": "^0.1.0",
-    "@hig/styles": "^0.3.0"
+    "@hig/semantic-release-config": "^0.1.0"
   },
   "scripts": {
     "build": "hig-scripts-build",

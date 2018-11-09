@@ -7,7 +7,6 @@ import {
   transitionStatuses,
   AVAILABLE_TRANSITION_STATUSES
 } from "../transitionStatuses";
-// import "./FlyoutPresenter.scss";
 import stylesheet from "./stylesheet";
 import PointerPresenter from "./PointerPresenter";
 import PointerWrapperPresenter from "./PointerWrapperPresenter";
@@ -70,11 +69,24 @@ export default function FlyoutPresenter(props) {
 
   return (
     <div className={wrapperClasses} ref={refWrapper}>
-      <div className={cx([css(styles.flyoutAction), "hig__flyout-v1__action"])} ref={refAction}>
+      <div
+        className={cx([css(styles.flyoutAction), "hig__flyout-v1__action"])}
+        ref={refAction}
+      >
         {children}
       </div>
-      <div className={cx([css(styles.flyoutContainer), "hig__flyout-v1__container"])} style={containerStyle}>
-        <PointerWrapperPresenter innerRef={refPointer} style={pointerStyle} anchorPoint={anchorPoint}>
+      <div
+        className={cx([
+          css(styles.flyoutContainer),
+          "hig__flyout-v1__container"
+        ])}
+        style={containerStyle}
+      >
+        <PointerWrapperPresenter
+          innerRef={refPointer}
+          style={pointerStyle}
+          anchorPoint={anchorPoint}
+        >
           {pointer}
         </PointerWrapperPresenter>
         {panel}
