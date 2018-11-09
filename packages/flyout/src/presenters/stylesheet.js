@@ -90,17 +90,7 @@ export default function(props, themeData) {
       transform:
         isExiting || isExited
           ? getAnchorPointTransformTranslate(anchorPoint)
-          : `none`,
-      "svg": { // eslint-disable-line prettier/prettier
-        // Pointer border
-        "polygon:first-child": {
-          fill: borderColor
-        },
-        // Pointer body
-        "polygon:last-child": {
-          fill: backgroundColor
-        }
-      }
+          : `none`
     },
     panelContainer: {
       backgroundColor,
@@ -123,6 +113,16 @@ export default function(props, themeData) {
       display: `flex`,
       position: `absolute`,
       transform: getAnchorPointTransformRotate(anchorPoint)
+    },
+    pointer: { // eslint-disable-line prettier/prettier
+      // Pointer border
+      "polygon:first-child": {
+        fill: borderColor
+      },
+      // Pointer body
+      "polygon:last-child": {
+        fill: backgroundColor
+      }
     }
   };
 }
