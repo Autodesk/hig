@@ -6,7 +6,8 @@ export default {
     value: { ref: "colorScheme.surfaceLevel100Color" }
   },
   "flyout.borderColor": {
-    type: COLOR
+    type: COLOR,
+    value: "transparent"
   },
   "flyout.borderRadius": {
     type: BORDER_RADIUS,
@@ -19,5 +20,9 @@ export default {
   "flyout.shadowColor": {
     type: COLOR,
     value: { ref: "colorScheme.highShadowColor" }
+  },
+  "flyout.nub.hypotenuseLength": {
+    type: LENGTH,
+    value: "16px"
   }
 };
