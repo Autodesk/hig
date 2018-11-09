@@ -5,6 +5,9 @@ export default {
     type: COLOR,
     value: { ref: "colorScheme.surfaceLevel100Color" }
   },
+  "flyout.borderColor": {
+    type: COLOR
+  },
   "flyout.borderRadius": {
     type: BORDER_RADIUS,
     value: { ref: "basics.borderRadii.large" }
