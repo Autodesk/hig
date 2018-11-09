@@ -3,7 +3,7 @@ function getStyle(themeData, role) {
 }
 
 function getAnchorPointTransformTranslate(anchorPoint) {
-  switch(anchorPoint) {
+  switch (anchorPoint) {
     case `top-left`:
     case `top-center`:
     case `top-right`:
@@ -26,7 +26,7 @@ function getAnchorPointTransformTranslate(anchorPoint) {
 }
 
 function getAnchorPointTransformRotate(anchorPoint) {
-  switch(anchorPoint) {
+  switch (anchorPoint) {
     case `right-top`:
     case `right-center`:
     case `right-bottom`:
@@ -49,13 +49,19 @@ export default function(props, themeData) {
   const isExiting = transitionStatus === `exiting`;
   const isExited = transitionStatus === `exited`;
   const isHidden = transitionStatus === `hidden`;
-  const backgroundColor = themeData ? getStyle(themeData, `flyout.backgroundColor`) : `transparent`;
-  const borderRadius = themeData ? getStyle(themeData, `flyout.borderRadius`) : `none`;
+  const backgroundColor = themeData
+    ? getStyle(themeData, `flyout.backgroundColor`)
+    : `transparent`;
+  const borderRadius = themeData
+    ? getStyle(themeData, `flyout.borderRadius`)
+    : `none`;
   const shadowBlur = themeData ? getStyle(themeData, `flyout.shadowBlur`) : 0;
-  const shadowColor = themeData ? getStyle(themeData, `flyout.shadowColor`) : `transparent`;
-  const densitySmall = themeData ? getStyle(themeData, `density.spacings.small`) : 0;
-
-  console.log(themeData);
+  const shadowColor = themeData
+    ? getStyle(themeData, `flyout.shadowColor`)
+    : `transparent`;
+  const densitySmall = themeData
+    ? getStyle(themeData, `density.spacings.small`)
+    : 0;
 
   return {
     flyoutWrapper: {
@@ -78,11 +84,14 @@ export default function(props, themeData) {
       touchAction: isExiting || isExited ? `none` : `auto`,
       pointerEvents: isExiting || isExited ? `none` : `auto`,
       opacity: isExiting || isExited ? 0 : 1,
-      transform: isExiting || isExited ? getAnchorPointTransformTranslate(anchorPoint) : `none`
+      transform:
+        isExiting || isExited
+          ? getAnchorPointTransformTranslate(anchorPoint)
+          : `none`
     },
     panelContainer: {
-      backgroundColor: backgroundColor,
-      borderRadius: borderRadius,
+      backgroundColor,
+      borderRadius,
       boxShadow: `0 0 ${shadowBlur} ${shadowColor}`
     },
     panelContainerInner: {

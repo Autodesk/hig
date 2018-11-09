@@ -1,8 +1,0 @@
-.hig__flyout-v1__panel-container {
-  @import "~@hig/styles/mixins/shadows.scss";
-  @import "../tokens.scss";
-
-  @include shadow("common");
-
-  // border: $panel-border-width solid color(hig-cool-gray-20);
-}

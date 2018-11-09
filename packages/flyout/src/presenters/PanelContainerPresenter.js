@@ -4,7 +4,6 @@ import { css, cx } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
 
 import stylesheet from "./stylesheet";
-// import "./PanelContainerPresenter.scss";
 
 export default function PanelContainerPresenter(props) {
   const { children, innerRef, maxHeight } = props;
@@ -13,15 +12,31 @@ export default function PanelContainerPresenter(props) {
   return (
     <ThemeContext.Consumer>
       {({ resolvedRoles }) => {
-        const styles = stylesheet({ transitionStatus: null, anchorPoint: null }, resolvedRoles);
+        const styles = stylesheet(
+          {
+            transitionStatus: null,
+            anchorPoint: null
+          },
+          resolvedRoles
+        );
 
         return (
           <div
-            className={cx(css(styles.panelContainer), "hig__flyout-v1__panel-container")}
+            className={cx(
+              css(styles.panelContainer),
+              "hig__flyout-v1__panel-container"
+            )}
             ref={innerRef}
             style={{ maxHeight: maxHeightInPixels }}
           >
-            <div className={cx(css(styles.panelContainerInner), "hig__flyout-v1__panel-container__inner")}>{children}</div>
+            <div
+              className={cx(
+                css(styles.panelContainerInner),
+                "hig__flyout-v1__panel-container__inner"
+              )}
+            >
+              {children}
+            </div>
           </div>
         );
       }}
