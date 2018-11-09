@@ -4,6 +4,7 @@ import basics from "../basics";
 import system from "./system";
 import checkbox from "./components/checkbox";
 import formField from "./components/formField";
+import flyout from "./components/flyout";
 import input from "./components/input";
 import skeletonItem from "./components/skeletonItem";
 import textarea from "./components/textarea";
@@ -28,6 +29,7 @@ const baseThemeConfig = extendTheme(
     mapKeys(system.density, key => `density.${key}`),
     checkbox,
     formField,
+    flyout,
     input,
     skeletonItem,
     textarea,
