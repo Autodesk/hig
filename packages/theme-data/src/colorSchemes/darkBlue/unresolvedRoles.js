@@ -6,6 +6,7 @@ import mediumDensityTheme from "../../densities/mediumDensity";
 import formField from "./components/formField";
 import label from "./components/label";
 import skeletonItem from "./components/skeletonItem";
+import flyout from "./components/flyout";
 
 const darkBlueThemeConfig = extendTheme(
   baseTheme.unresolvedRoles,
@@ -15,7 +16,8 @@ const darkBlueThemeConfig = extendTheme(
     mapKeys(system.colorScheme, key => `colorScheme.${key}`),
     formField,
     label,
-    skeletonItem
+    skeletonItem,
+    flyout
   )
 );
 

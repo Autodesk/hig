@@ -38,6 +38,9 @@ const webLightThemeResolvedRoles = extendTheme(lightGrayTheme.unresolvedRoles, {
     value: {
       ref: "colorScheme.accentColor"
     }
+  },
+  "flyout.borderColor": {
+    value: "#d4dbe1"
   }
 });
 
