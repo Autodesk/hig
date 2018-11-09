@@ -52,6 +52,9 @@ export default function(props, themeData) {
   const backgroundColor = themeData
     ? getStyle(themeData, `flyout.backgroundColor`)
     : `transparent`;
+  const borderColor = themeData
+    ? getStyle(themeData, `flyout.borderColor`)
+    : `none`;
   const borderRadius = themeData
     ? getStyle(themeData, `flyout.borderRadius`)
     : `none`;
@@ -87,11 +90,22 @@ export default function(props, themeData) {
       transform:
         isExiting || isExited
           ? getAnchorPointTransformTranslate(anchorPoint)
-          : `none`
+          : `none`,
+      "svg": { // eslint-disable-line prettier/prettier
+        // Pointer border
+        "polygon:first-child": {
+          fill: borderColor
+        },
+        // Pointer body
+        "polygon:last-child": {
+          fill: backgroundColor
+        }
+      }
     },
     panelContainer: {
       backgroundColor,
       borderRadius,
+      border: `1px solid ${borderColor}`,
       boxShadow: `0 0 ${shadowBlur} ${shadowColor}`
     },
     panelContainerInner: {
