@@ -14,8 +14,6 @@ export default function PointerPresenter(props) {
   const width = size;
   const widthMidpoint = width / 2;
 
-  console.log(props);
-
   return (
     <ThemeContext.Consumer>
       {({ resolvedRoles }) => {

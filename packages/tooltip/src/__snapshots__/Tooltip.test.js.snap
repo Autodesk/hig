@@ -1,14 +1,65 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tooltip/Tooltip  1`] = `
+.emotion-4 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-3 {
+  position: absolute;
+  display: none;
+  width: 100%;
+  z-index: 9999;
+  -webkit-transition-property: opacity,-webkit-transform;
+  -webkit-transition-property: opacity,transform;
+  transition-property: opacity,transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  touch-action: auto;
+  pointer-events: auto;
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-1 polygon:first-child {
+  fill: #393939;
+}
+
+.emotion-1 polygon:last-child {
+  fill: #393939;
+}
+
 <div
-  className="hig__flyout-v1 hig__flyout-v1--hidden hig__flyout-v1--top-left"
+  className="emotion-4 hig__flyout-v1--hidden hig__flyout-v1--top-left"
 >
   <div
-    className="hig__flyout-v1__action"
+    className="emotion-0 hig__flyout-v1__action"
   />
   <div
-    className="hig__flyout-v1__container"
+    className="emotion-3 hig__flyout-v1__container"
     style={
       Object {
         "left": "0px",
@@ -18,7 +69,7 @@ exports[`tooltip/Tooltip  1`] = `
   >
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__pointer-wrapper"
+      className="emotion-2 hig__flyout-v1__pointer-wrapper"
       role="presentation"
       style={
         Object {
@@ -28,16 +79,15 @@ exports[`tooltip/Tooltip  1`] = `
       }
     >
       <svg
+        className="emotion-1"
         height="12"
         viewBox="0 0 12 12"
         width="12"
       >
         <polygon
-          fill="#393939"
           points="0,6 6,0 12,6"
         />
         <polygon
-          fill="#393939"
           points="2.5,6 6,2.5 9.5,6"
         />
       </svg>
@@ -60,11 +110,62 @@ exports[`tooltip/Tooltip  1`] = `
 `;
 
 exports[`tooltip/Tooltip  2`] = `
+.emotion-4 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-1 polygon:first-child {
+  fill: #393939;
+}
+
+.emotion-1 polygon:last-child {
+  fill: #393939;
+}
+
+.emotion-3 {
+  position: absolute;
+  display: table;
+  width: 100%;
+  z-index: 9999;
+  -webkit-transition-property: opacity,-webkit-transform;
+  -webkit-transition-property: opacity,transform;
+  transition-property: opacity,transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  touch-action: auto;
+  pointer-events: auto;
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
 <div
-  className="hig__flyout-v1 hig__flyout-v1--top-left"
+  className="emotion-4 hig__flyout-v1--top-left"
 >
   <div
-    className="hig__flyout-v1__action"
+    className="emotion-0 hig__flyout-v1__action"
   >
     <button
       className="hig--light-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
@@ -86,7 +187,7 @@ exports[`tooltip/Tooltip  2`] = `
     </button>
   </div>
   <div
-    className="hig__flyout-v1__container"
+    className="emotion-3 hig__flyout-v1__container"
     style={
       Object {
         "left": "0px",
@@ -96,7 +197,7 @@ exports[`tooltip/Tooltip  2`] = `
   >
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__pointer-wrapper"
+      className="emotion-2 hig__flyout-v1__pointer-wrapper"
       role="presentation"
       style={
         Object {
@@ -106,16 +207,15 @@ exports[`tooltip/Tooltip  2`] = `
       }
     >
       <svg
+        className="emotion-1"
         height="12"
         viewBox="0 0 12 12"
         width="12"
       >
         <polygon
-          fill="#393939"
           points="0,6 6,0 12,6"
         />
         <polygon
-          fill="#393939"
           points="2.5,6 6,2.5 9.5,6"
         />
       </svg>

@@ -1,8 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`flyout/presenters/PanelPresenter renders with all props 1`] = `
+.emotion-0 {
+  min-width: 200px;
+  max-width: 400px;
+  max-height: 360px;
+  padding: 12px;
+  overflow-y: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
 <div
-  className="hig__flyout-v1__panel"
+  className="emotion-0 hig__flyout-v1__panel"
   onScroll={[Function]}
 >
   Hello World
@@ -10,8 +19,17 @@ exports[`flyout/presenters/PanelPresenter renders with all props 1`] = `
 `;
 
 exports[`flyout/presenters/PanelPresenter renders without props 1`] = `
+.emotion-0 {
+  min-width: 200px;
+  max-width: 400px;
+  max-height: 360px;
+  padding: 12px;
+  overflow-y: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
 <div
-  className="hig__flyout-v1__panel"
+  className="emotion-0 hig__flyout-v1__panel"
   onScroll={undefined}
 />
 `;
