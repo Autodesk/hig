@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { combineEventHandlers } from "@hig/utils";
 import Flyout, { AVAILABLE_ANCHOR_POINTS } from "@hig/flyout";
-import "@hig/flyout/build/index.css";
 
 import ProjectAccountSwitcherBehavior from "./behavior/ProjectAccountSwitcherBehavior";
 import ContentPresenter from "./presenters/ContentPresenter";
