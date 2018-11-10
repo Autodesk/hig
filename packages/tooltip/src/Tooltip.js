@@ -4,7 +4,6 @@ import Flyout, {
   dislocateContainer,
   AVAILABLE_ANCHOR_POINTS
 } from "@hig/flyout";
-import "@hig/flyout/build/index.css";
 
 import PanelPresenter from "./presenters/PanelPresenter";
 import PointerPresenter from "./presenters/PointerPresenter";
