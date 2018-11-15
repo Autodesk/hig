@@ -1,5 +1,3 @@
-import { COLOR } from "../../../consts/types";
-
 export default {
   /* solid */
   "button.solid.hover.halo.color": {
@@ -8,7 +6,7 @@ export default {
     },
     transform: {
       alpha: 0.2
-    } 
+    }
   },
   "button.solid.focus.halo.color": {
     value: {

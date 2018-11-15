@@ -34,14 +34,20 @@ function getButtonRulesByType(type, themeData) {
         background: themeData["button.solid.backgroundColor"],
         color: themeData["button.solid.textColor"],
         "&:hover": {
-          boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${themeData["button.solid.hover.halo.color"]}`
+          boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${
+            themeData["button.solid.hover.halo.color"]
+          }`
         },
         "&:focus": {
-          boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${themeData["button.solid.focus.halo.color"]}`,
+          boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${
+            themeData["button.solid.focus.halo.color"]
+          }`,
           outline: `none`
         },
         "&:active": {
-          boxShadow: `0 0 0 ${themeData["button.solid.pressed.haloWidth"]} ${themeData["button.solid.pressed.halo.color"]}`
+          boxShadow: `0 0 0 ${themeData["button.solid.pressed.haloWidth"]} ${
+            themeData["button.solid.pressed.halo.color"]
+          }`
         },
         "&:visited": {
           color: themeData["button.solid.textColor"]
@@ -58,16 +64,22 @@ function getButtonRulesByType(type, themeData) {
         borderColor: themeData["button.outline.borderColor"],
         color: themeData["button.outline.textColor"],
         "&:hover": {
-          boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${themeData["button.outline.hover.halo.color"]}`
+          boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${
+            themeData["button.outline.hover.halo.color"]
+          }`
         },
         "&:focus": {
           borderColor: themeData["button.outline.focus.borderColor"],
-          boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${themeData["button.outline.focus.halo.color"]}`,
+          boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${
+            themeData["button.outline.focus.halo.color"]
+          }`,
           outline: `none`
         },
         "&:active": {
           borderColor: themeData["button.outline.pressed.borderColor"],
-          boxShadow: `0 0 0 ${themeData["button.outline.pressed.haloWidth"]} ${themeData["button.outline.pressed.halo.color"]}`
+          boxShadow: `0 0 0 ${themeData["button.outline.pressed.haloWidth"]} ${
+            themeData["button.outline.pressed.halo.color"]
+          }`
         },
         "&:visited": {
           color: themeData["button.outline.textColor"]
@@ -83,14 +95,20 @@ function getButtonRulesByType(type, themeData) {
         borderColor: themeData["button.flat.borderColor"],
         color: themeData["button.flat.textColor"],
         "&:hover": {
-          boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${themeData["button.flat.hover.halo.color"]}`
+          boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${
+            themeData["button.flat.hover.halo.color"]
+          }`
         },
         "&:focus": {
-          boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${themeData["button.flat.focus.halo.color"]}`,
+          boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${
+            themeData["button.flat.focus.halo.color"]
+          }`,
           outline: `none`
         },
         "&:active": {
-          boxShadow: `0 0 0 ${themeData["button.flat.pressed.haloWidth"]} ${themeData["button.flat.pressed.halo.color"]}`
+          boxShadow: `0 0 0 ${themeData["button.flat.pressed.haloWidth"]} ${
+            themeData["button.flat.pressed.halo.color"]
+          }`
         },
         "&:visited": {
           color: themeData["button.flat.textColor"]
@@ -146,150 +164,6 @@ function getButtonRulesBySize(size, themeData) {
 function getButtonRulesByWidth(width) {
   return width === widths.GROW ? { width: "100%" } : {};
 }
-/*
-function getButtonHoverRulesByType(type, themeData) {
-  switch (type) {
-    case types.SOLID:
-    case types.PRIMARY:
-      return {
-        color: themeData["button.solid.hover.textColor"],
-        backgroundColor: themeData["button.solid.hover.backgroundColor"],
-        borderColor: themeData["button.solid.hover.borderColor"],
-        "svg *": {
-          fill: themeData["button.solid.hover.icon.color"]
-        }
-      };
-    case types.OUTLINE:
-    case types.SECONDARY:
-      return {
-        color: themeData["button.outline.hover.textColor"],
-        backgroundColor: themeData["button.outline.hover.backgroundColor"],
-        borderColor: themeData["button.outline.hover.borderColor"],
-        "svg *": {
-          fill: themeData["button.outline.hover.icon.color"]
-        }
-      };
-    case types.FLAT:
-      return {
-        color: themeData["button.flat.hover.textColor"],
-        backgroundColor: themeData["button.flat.hover.backgroundColor"],
-        borderColor: themeData["button.flat.hover.borderColor"],
-        "svg *": {
-          fill: themeData["button.flat.hover.icon.color"]
-        }
-      };
-    default:
-      return {};
-  }
-}
-
-function getButtonFocusRulesByType(type, themeData) {
-  switch (type) {
-    case types.SOLID:
-    case types.PRIMARY:
-      return {
-        color: themeData["button.solid.focus.textColor"],
-        backgroundColor: themeData["button.solid.focus.backgroundColor"],
-        borderColor: themeData["button.solid.focus.borderColor"],
-        "svg *": {
-          fill: themeData["button.solid.focus.icon.color"]
-        }
-      };
-    case types.OUTLINE:
-    case types.SECONDARY:
-      return {
-        color: themeData["button.outline.focus.textColor"],
-        backgroundColor: themeData["button.outline.focus.backgroundColor"],
-        borderColor: themeData["button.outline.focus.borderColor"],
-        "svg *": {
-          fill: themeData["button.outline.focus.icon.color"]
-        }
-      };
-    case types.FLAT:
-      return {
-        color: themeData["button.flat.focus.textColor"],
-        backgroundColor: themeData["button.flat.focus.backgroundColor"],
-        borderColor: themeData["button.flat.focus.borderColor"],
-        "svg *": {
-          fill: themeData["button.flat.focus.icon.color"]
-        }
-      };
-    default:
-      return {};
-  }
-}
-
-function getButtonPressedRulesByType(type, themeData) {
-  switch (type) {
-    case types.SOLID:
-    case types.PRIMARY:
-      return {
-        color: themeData["button.solid.pressed.textColor"],
-        backgroundColor: themeData["button.solid.pressed.backgroundColor"],
-        borderColor: themeData["button.solid.pressed.borderColor"],
-        "svg *": {
-          fill: themeData["button.solid.pressed.icon.color"]
-        }
-      };
-    case types.OUTLINE:
-    case types.SECONDARY:
-      return {
-        color: themeData["button.outline.pressed.textColor"],
-        backgroundColor: themeData["button.outline.pressed.backgroundColor"],
-        borderColor: themeData["button.outline.pressed.borderColor"],
-        "svg *": {
-          fill: themeData["button.outline.pressed.icon.color"]
-        }
-      };
-    case types.FLAT:
-      return {
-        color: themeData["button.flat.pressed.textColor"],
-        backgroundColor: themeData["button.flat.pressed.backgroundColor"],
-        borderColor: themeData["button.flat.pressed.borderColor"],
-        "svg *": {
-          fill: themeData["button.flat.pressed.icon.color"]
-        }
-      };
-    default:
-      return {};
-  }
-}
-
-function getButtonDisabledRulesByType(type, themeData) {
-  switch (type) {
-    case types.SOLID:
-    case types.PRIMARY:
-      return {
-        color: themeData["button.solid.disabled.textColor"],
-        backgroundColor: themeData["button.solid.disabled.backgroundColor"],
-        borderColor: themeData["button.solid.disabled.borderColor"],
-        "svg *": {
-          fill: themeData["button.solid.disabled.icon.color"]
-        }
-      };
-    case types.OUTLINE:
-    case types.SECONDARY:
-      return {
-        color: themeData["button.outline.disabled.textColor"],
-        backgroundColor: themeData["button.outline.disabled.backgroundColor"],
-        borderColor: themeData["button.outline.disabled.borderColor"],
-        "svg *": {
-          fill: themeData["button.outline.disabled.icon.color"]
-        }
-      };
-    case types.FLAT:
-      return {
-        color: themeData["button.flat.disabled.textColor"],
-        backgroundColor: themeData["button.flat.disabled.backgroundColor"],
-        borderColor: themeData["button.flat.disabled.borderColor"],
-        "svg *": {
-          fill: themeData["button.flat.disabled.icon.color"]
-        }
-      };
-    default:
-      return {};
-  }
-} */
 
 export default function stylesheet(props, themeData) {
   const { disabled, size, type, width } = props;
@@ -297,12 +171,7 @@ export default function stylesheet(props, themeData) {
     button: {
       ...getButtonDefaultButtonRules(themeData),
       ...getButtonRulesByType(type, themeData),
-      //...(hasFocus || pressed ? { outline: "none", boxShadow: "none" } : {}),
       ...getButtonRulesByDisabled(disabled),
-      //...(hasHover ? getButtonHoverRulesByType(type, themeData) : {}),
-      //...(hasFocus ? getButtonFocusRulesByType(type, themeData) : {}),
-      //...(pressed ? getButtonPressedRulesByType(type, themeData) : {}),
-      //...(disabled ? getButtonDisabledRulesByType(type, themeData) : {}),
       ...getButtonRulesBySize(size, themeData),
       ...getButtonRulesByWidth(width)
     },

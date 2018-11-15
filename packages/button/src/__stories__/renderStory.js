@@ -9,10 +9,10 @@ export default function renderStory(props) {
   const { children, theme, ...otherProps } = getKnobs(props);
 
   return (
-  	<KnobbedThemeProvider
+    <KnobbedThemeProvider
       supportedThemes={[THEMES.LIGHT_GRAY, THEMES.DARK_BLUE]}
     >
-  		<DefaultExport {...otherProps}>{children}</DefaultExport>
-  	</KnobbedThemeProvider>
+      <DefaultExport {...otherProps}>{children}</DefaultExport>
+    </KnobbedThemeProvider>
   );
 }

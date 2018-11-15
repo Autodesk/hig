@@ -92,7 +92,10 @@ export default {
     value: "2px"
   },
   "button.halo.color": {
-    type: COLOR
+    type: COLOR,
+    value: {
+      ref: "basics.colors.charcoal600"
+    }
   },
 
   /**
@@ -402,7 +405,6 @@ export default {
     transform: {
       alpha: 0.4
     }
-
   },
   "button.solid.hover.textColor": {
     type: COLOR,

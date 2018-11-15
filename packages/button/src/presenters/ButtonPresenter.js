@@ -78,7 +78,6 @@ export default class ButtonPresenter extends Component {
     return (
       <ThemeContext.Consumer>
         {({ metadata, resolvedRoles }) => {
-          console.log(resolvedRoles);
           const { className } = metadata;
           const styles = stylesheet(
             { disabled, size, type, width },
