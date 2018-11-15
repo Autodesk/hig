@@ -76,7 +76,7 @@ export default class Button extends Component {
   static defaultProps = {
     disabled: false,
     size: sizes.STANDARD,
-    type: types.PRIMARY,
+    type: types.SOLID,
     width: widths.SHRINK
   };
 

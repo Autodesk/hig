@@ -33,6 +33,16 @@ function getButtonRulesByType(type, themeData) {
       return {
         background: themeData["button.solid.backgroundColor"],
         color: themeData["button.solid.textColor"],
+        "&:hover": {
+          boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${themeData["button.solid.hover.halo.color"]}`
+        },
+        "&:focus": {
+          boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${themeData["button.solid.focus.halo.color"]}`,
+          outline: `none`
+        },
+        "&:active": {
+          boxShadow: `0 0 0 ${themeData["button.solid.pressed.haloWidth"]} ${themeData["button.solid.pressed.halo.color"]}`
+        },
         "&:visited": {
           color: themeData["button.solid.textColor"]
         },
@@ -47,6 +57,18 @@ function getButtonRulesByType(type, themeData) {
         background: "none",
         borderColor: themeData["button.outline.borderColor"],
         color: themeData["button.outline.textColor"],
+        "&:hover": {
+          boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${themeData["button.outline.hover.halo.color"]}`
+        },
+        "&:focus": {
+          borderColor: themeData["button.outline.focus.borderColor"],
+          boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${themeData["button.outline.focus.halo.color"]}`,
+          outline: `none`
+        },
+        "&:active": {
+          borderColor: themeData["button.outline.pressed.borderColor"],
+          boxShadow: `0 0 0 ${themeData["button.outline.pressed.haloWidth"]} ${themeData["button.outline.pressed.halo.color"]}`
+        },
         "&:visited": {
           color: themeData["button.outline.textColor"]
         },
@@ -60,6 +82,16 @@ function getButtonRulesByType(type, themeData) {
         background: "none",
         borderColor: themeData["button.flat.borderColor"],
         color: themeData["button.flat.textColor"],
+        "&:hover": {
+          boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${themeData["button.flat.hover.halo.color"]}`
+        },
+        "&:focus": {
+          boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${themeData["button.flat.focus.halo.color"]}`,
+          outline: `none`
+        },
+        "&:active": {
+          boxShadow: `0 0 0 ${themeData["button.flat.pressed.haloWidth"]} ${themeData["button.flat.pressed.halo.color"]}`
+        },
         "&:visited": {
           color: themeData["button.flat.textColor"]
         },
@@ -74,7 +106,7 @@ function getButtonRulesByType(type, themeData) {
 }
 
 function getButtonRulesByDisabled(disabled) {
-  return disabled ? { pointerEvents: "none" } : {};
+  return disabled ? { pointerEvents: "none", opacity: "0.2" } : {};
 }
 
 function getButtonRulesBySize(size, themeData) {
@@ -114,7 +146,7 @@ function getButtonRulesBySize(size, themeData) {
 function getButtonRulesByWidth(width) {
   return width === widths.GROW ? { width: "100%" } : {};
 }
-
+/*
 function getButtonHoverRulesByType(type, themeData) {
   switch (type) {
     case types.SOLID:
@@ -257,28 +289,27 @@ function getButtonDisabledRulesByType(type, themeData) {
     default:
       return {};
   }
-}
+} */
 
 export default function stylesheet(props, themeData) {
-  const { disabled, hasFocus, hasHover, pressed, size, type, width } = props;
-
+  const { disabled, size, type, width } = props;
   return {
     button: {
       ...getButtonDefaultButtonRules(themeData),
       ...getButtonRulesByType(type, themeData),
-      ...(hasFocus || pressed ? { outline: "none", boxShadow: "none" } : {}),
+      //...(hasFocus || pressed ? { outline: "none", boxShadow: "none" } : {}),
       ...getButtonRulesByDisabled(disabled),
-      ...(hasHover ? getButtonHoverRulesByType(type, themeData) : {}),
-      ...(hasFocus ? getButtonFocusRulesByType(type, themeData) : {}),
-      ...(pressed ? getButtonPressedRulesByType(type, themeData) : {}),
-      ...(disabled ? getButtonDisabledRulesByType(type, themeData) : {}),
+      //...(hasHover ? getButtonHoverRulesByType(type, themeData) : {}),
+      //...(hasFocus ? getButtonFocusRulesByType(type, themeData) : {}),
+      //...(pressed ? getButtonPressedRulesByType(type, themeData) : {}),
+      //...(disabled ? getButtonDisabledRulesByType(type, themeData) : {}),
       ...getButtonRulesBySize(size, themeData),
       ...getButtonRulesByWidth(width)
     },
     icon: {
       display: "inline-block",
       position: "relative",
-      top: "-1px",
+      top: "-4px",
       height: "24px",
       verticalAlign: "middle",
       marginRight: "5px",
