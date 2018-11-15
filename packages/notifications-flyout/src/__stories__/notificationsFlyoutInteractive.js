@@ -4,7 +4,6 @@ import { generateId } from "@hig/utils";
 import Button from "@hig/button";
 import TextLink from "@hig/text-link";
 import { Text } from "@hig/typography";
-import "@hig/button/build/index.css";
 import "@hig/text-link/build/index.css";
 import "@hig/typography/build/index.css";
 

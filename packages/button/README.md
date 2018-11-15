@@ -14,7 +14,6 @@ yarn add @hig/button
 
 ```
 import Button from '@hig/button';
-import '@hig/button/build/index.css';
 ```
 
 ## Basic usage
