@@ -55,6 +55,59 @@ exports[`flyout/Flyout alterCoordinates is called when rendering 1`] = `
 `;
 
 exports[`flyout/Flyout snapshots renders a custom pointer 1`] = `
+.emotion-0 {
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #f5f5f5;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 34px;
+  margin: 0px;
+  overflow: hidden;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background: #0696d7;
+  height: 36px;
+  min-width: 68px;
+  padding: 0 16px;
+}
+
+.emotion-0:hover {
+  box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
+}
+
+.emotion-0:focus {
+  box-shadow: 0 0 0 2px rgba(6,150,215,0.4);
+  outline: none;
+}
+
+.emotion-0:active {
+  box-shadow: 0 0 0 4px rgba(6,150,215,0.4);
+}
+
+.emotion-0:visited {
+  color: #f5f5f5;
+}
+
+.emotion-0 svg * {
+  fill: #f5f5f5;
+}
+
 <div
   className="hig__flyout-v1 hig__flyout-v1--top-left"
 >
@@ -62,7 +115,7 @@ exports[`flyout/Flyout snapshots renders a custom pointer 1`] = `
     className="hig__flyout-v1__action"
   >
     <button
-      className="hig--light-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+      className="emotion-0 hig--light-gray-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
       href={undefined}
       onBlur={[Function]}
       onClick={[Function]}
@@ -128,6 +181,59 @@ exports[`flyout/Flyout snapshots renders a custom pointer 1`] = `
 `;
 
 exports[`flyout/Flyout snapshots renders children from the given render function 1`] = `
+.emotion-0 {
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #f5f5f5;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 34px;
+  margin: 0px;
+  overflow: hidden;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background: #0696d7;
+  height: 36px;
+  min-width: 68px;
+  padding: 0 16px;
+}
+
+.emotion-0:hover {
+  box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
+}
+
+.emotion-0:focus {
+  box-shadow: 0 0 0 2px rgba(6,150,215,0.4);
+  outline: none;
+}
+
+.emotion-0:active {
+  box-shadow: 0 0 0 4px rgba(6,150,215,0.4);
+}
+
+.emotion-0:visited {
+  color: #f5f5f5;
+}
+
+.emotion-0 svg * {
+  fill: #f5f5f5;
+}
+
 <div
   className="hig__flyout-v1 hig__flyout-v1--top-left"
 >
@@ -135,7 +241,7 @@ exports[`flyout/Flyout snapshots renders children from the given render function
     className="hig__flyout-v1__action"
   >
     <button
-      className="hig--light-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+      className="emotion-0 hig--light-gray-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
       href={undefined}
       onBlur={[Function]}
       onClick={[Function]}
@@ -212,6 +318,59 @@ exports[`flyout/Flyout snapshots renders children from the given render function
 `;
 
 exports[`flyout/Flyout snapshots renders content from the given render function 1`] = `
+.emotion-0 {
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #f5f5f5;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 34px;
+  margin: 0px;
+  overflow: hidden;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background: #0696d7;
+  height: 36px;
+  min-width: 68px;
+  padding: 0 16px;
+}
+
+.emotion-0:hover {
+  box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
+}
+
+.emotion-0:focus {
+  box-shadow: 0 0 0 2px rgba(6,150,215,0.4);
+  outline: none;
+}
+
+.emotion-0:active {
+  box-shadow: 0 0 0 4px rgba(6,150,215,0.4);
+}
+
+.emotion-0:visited {
+  color: #f5f5f5;
+}
+
+.emotion-0 svg * {
+  fill: #f5f5f5;
+}
+
 <div
   className="hig__flyout-v1 hig__flyout-v1--top-left"
 >
@@ -219,7 +378,7 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
     className="hig__flyout-v1__action"
   >
     <button
-      className="hig--light-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+      className="emotion-0 hig--light-gray-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
       href={undefined}
       onBlur={[Function]}
       onClick={[Function]}
@@ -359,6 +518,59 @@ exports[`flyout/Flyout snapshots renders open by default 1`] = `
 `;
 
 exports[`flyout/Flyout snapshots renders the panel from a basic render function 1`] = `
+.emotion-0 {
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #f5f5f5;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 34px;
+  margin: 0px;
+  overflow: hidden;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background: #0696d7;
+  height: 36px;
+  min-width: 68px;
+  padding: 0 16px;
+}
+
+.emotion-0:hover {
+  box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
+}
+
+.emotion-0:focus {
+  box-shadow: 0 0 0 2px rgba(6,150,215,0.4);
+  outline: none;
+}
+
+.emotion-0:active {
+  box-shadow: 0 0 0 4px rgba(6,150,215,0.4);
+}
+
+.emotion-0:visited {
+  color: #f5f5f5;
+}
+
+.emotion-0 svg * {
+  fill: #f5f5f5;
+}
+
 <div
   className="hig__flyout-v1 hig__flyout-v1--top-left"
 >
@@ -366,7 +578,7 @@ exports[`flyout/Flyout snapshots renders the panel from a basic render function 
     className="hig__flyout-v1__action"
   >
     <button
-      className="hig--light-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+      className="emotion-0 hig--light-gray-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
       href={undefined}
       onBlur={[Function]}
       onClick={[Function]}
@@ -427,6 +639,59 @@ exports[`flyout/Flyout snapshots renders the panel from a basic render function 
 `;
 
 exports[`flyout/Flyout snapshots renders the panel from a complex render function 1`] = `
+.emotion-0 {
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #f5f5f5;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 34px;
+  margin: 0px;
+  overflow: hidden;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background: #0696d7;
+  height: 36px;
+  min-width: 68px;
+  padding: 0 16px;
+}
+
+.emotion-0:hover {
+  box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
+}
+
+.emotion-0:focus {
+  box-shadow: 0 0 0 2px rgba(6,150,215,0.4);
+  outline: none;
+}
+
+.emotion-0:active {
+  box-shadow: 0 0 0 4px rgba(6,150,215,0.4);
+}
+
+.emotion-0:visited {
+  color: #f5f5f5;
+}
+
+.emotion-0 svg * {
+  fill: #f5f5f5;
+}
+
 <div
   className="hig__flyout-v1 hig__flyout-v1--top-left"
 >
@@ -434,7 +699,7 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
     className="hig__flyout-v1__action"
   >
     <button
-      className="hig--light-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+      className="emotion-0 hig--light-gray-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
       href={undefined}
       onBlur={[Function]}
       onClick={[Function]}
@@ -516,6 +781,59 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
 `;
 
 exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
+.emotion-0 {
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #f5f5f5;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 34px;
+  margin: 0px;
+  overflow: hidden;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background: #0696d7;
+  height: 36px;
+  min-width: 68px;
+  padding: 0 16px;
+}
+
+.emotion-0:hover {
+  box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
+}
+
+.emotion-0:focus {
+  box-shadow: 0 0 0 2px rgba(6,150,215,0.4);
+  outline: none;
+}
+
+.emotion-0:active {
+  box-shadow: 0 0 0 4px rgba(6,150,215,0.4);
+}
+
+.emotion-0:visited {
+  color: #f5f5f5;
+}
+
+.emotion-0 svg * {
+  fill: #f5f5f5;
+}
+
 <div
   className="hig__flyout-v1 hig__flyout-v1--top-left"
 >
@@ -523,7 +841,7 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
     className="hig__flyout-v1__action"
   >
     <button
-      className="hig--light-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+      className="emotion-0 hig--light-gray-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
       href={undefined}
       onBlur={[Function]}
       onClick={[Function]}
