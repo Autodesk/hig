@@ -1,0 +1,462 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button  1`] = `
+.emotion-0 {
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #f5f5f5;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 34px;
+  margin: 0px;
+  overflow: hidden;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background: #0696d7;
+  height: 36px;
+  min-width: 68px;
+  padding: 0 16px;
+}
+
+.emotion-0:hover {
+  box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
+}
+
+.emotion-0:focus {
+  box-shadow: 0 0 0 2px rgba(6,150,215,0.4);
+  outline: none;
+}
+
+.emotion-0:active {
+  box-shadow: 0 0 0 4px rgba(6,150,215,0.4);
+}
+
+.emotion-0:visited {
+  color: #f5f5f5;
+}
+
+.emotion-0 svg * {
+  fill: #f5f5f5;
+}
+
+<button
+  className="emotion-0 hig--light-gray-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+  href={undefined}
+  onBlur={[Function]}
+  onClick={undefined}
+  onFocus={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseOver={undefined}
+  tabIndex="0"
+  target={undefined}
+>
+  <span
+    className="hig__button__title"
+  >
+    Settings
+  </span>
+</button>
+`;
+
+exports[`Button  2`] = `
+.emotion-0 {
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #f5f5f5;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 34px;
+  margin: 0px;
+  overflow: hidden;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background: #0696d7;
+  height: 36px;
+  min-width: 68px;
+  padding: 0 16px;
+}
+
+.emotion-0:hover {
+  box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
+}
+
+.emotion-0:focus {
+  box-shadow: 0 0 0 2px rgba(6,150,215,0.4);
+  outline: none;
+}
+
+.emotion-0:active {
+  box-shadow: 0 0 0 4px rgba(6,150,215,0.4);
+}
+
+.emotion-0:visited {
+  color: #f5f5f5;
+}
+
+.emotion-0 svg * {
+  fill: #f5f5f5;
+}
+
+<button
+  className="emotion-0 hig--light-gray-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+  href={undefined}
+  onBlur={[Function]}
+  onClick={undefined}
+  onFocus={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseOver={undefined}
+  tabIndex="0"
+  target={undefined}
+>
+  <span
+    className="hig__button__title"
+  >
+    Settings
+  </span>
+</button>
+`;
+
+exports[`Button  3`] = `
+.emotion-0 {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #808080;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #3c3c3c;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 34px;
+  margin: 0px;
+  overflow: hidden;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background: none;
+  height: 36px;
+  min-width: 68px;
+  padding: 0 16px;
+}
+
+.emotion-0:hover {
+  box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
+}
+
+.emotion-0:focus {
+  border-color: #0696d7;
+  box-shadow: 0 0 0 2px rgba(6,150,215,0.4);
+  outline: none;
+}
+
+.emotion-0:active {
+  border-color: #0696d7;
+  box-shadow: 0 0 0 4px rgba(6,150,215,0.4);
+}
+
+.emotion-0:visited {
+  color: #3c3c3c;
+}
+
+.emotion-0 svg * {
+  fill: #3c3c3c;
+}
+
+<button
+  className="emotion-0 hig--light-gray-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-secondary hig__button-v1--width-shrink"
+  href={undefined}
+  onBlur={[Function]}
+  onClick={undefined}
+  onFocus={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseOver={undefined}
+  tabIndex="0"
+  target={undefined}
+>
+  <span
+    className="hig__button__title"
+  >
+    Settings
+  </span>
+</button>
+`;
+
+exports[`Button  4`] = `
+.emotion-0 {
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255,255,255,0);
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #0571a1;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 34px;
+  margin: 0px;
+  overflow: hidden;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background: none;
+  height: 36px;
+  min-width: 68px;
+  padding: 0 16px;
+}
+
+.emotion-0:hover {
+  box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
+}
+
+.emotion-0:focus {
+  box-shadow: 0 0 0 2px rgba(6,150,215,0.4);
+  outline: none;
+}
+
+.emotion-0:active {
+  box-shadow: 0 0 0 4px rgba(6,150,215,0.4);
+}
+
+.emotion-0:visited {
+  color: #0571a1;
+}
+
+.emotion-0 svg * {
+  fill: #0571a1;
+}
+
+<button
+  className="emotion-0 hig--light-gray-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-flat hig__button-v1--width-shrink"
+  href={undefined}
+  onBlur={[Function]}
+  onClick={undefined}
+  onFocus={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseOver={undefined}
+  tabIndex="0"
+  target={undefined}
+>
+  <span
+    className="hig__button__title"
+  >
+    Settings
+  </span>
+</button>
+`;
+
+exports[`Button  5`] = `
+.emotion-1 {
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #f5f5f5;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 34px;
+  margin: 0px;
+  overflow: hidden;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background: #0696d7;
+  height: 36px;
+  min-width: 68px;
+  padding: 0 16px;
+}
+
+.emotion-1:hover {
+  box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
+}
+
+.emotion-1:focus {
+  box-shadow: 0 0 0 2px rgba(6,150,215,0.4);
+  outline: none;
+}
+
+.emotion-1:active {
+  box-shadow: 0 0 0 4px rgba(6,150,215,0.4);
+}
+
+.emotion-1:visited {
+  color: #f5f5f5;
+}
+
+.emotion-1 svg * {
+  fill: #f5f5f5;
+}
+
+.emotion-0 {
+  display: inline-block;
+  position: relative;
+  top: -4px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 5px;
+  margin-bottom: 1px;
+}
+
+<button
+  className="emotion-1 hig--light-gray-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+  href={undefined}
+  onBlur={[Function]}
+  onClick={undefined}
+  onFocus={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseOver={undefined}
+  tabIndex="0"
+  target={undefined}
+>
+  <span
+    className="emotion-0 hig--light-gray-theme hig__button-v1__icon"
+  >
+    &lt;Icon /&gt;
+  </span>
+  <span
+    className="hig__button__title"
+  >
+    Settings
+  </span>
+</button>
+`;
+
+exports[`Button  6`] = `
+.emotion-0 {
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #f5f5f5;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 34px;
+  margin: 0px;
+  overflow: hidden;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background: #0696d7;
+  height: 36px;
+  min-width: 68px;
+  padding: 0 16px;
+}
+
+.emotion-0:hover {
+  box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
+}
+
+.emotion-0:focus {
+  box-shadow: 0 0 0 2px rgba(6,150,215,0.4);
+  outline: none;
+}
+
+.emotion-0:active {
+  box-shadow: 0 0 0 4px rgba(6,150,215,0.4);
+}
+
+.emotion-0:visited {
+  color: #f5f5f5;
+}
+
+.emotion-0 svg * {
+  fill: #f5f5f5;
+}
+
+<a
+  className="emotion-0 hig--light-gray-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+  href="https://hig.autodesk.com"
+  onBlur={[Function]}
+  onClick={undefined}
+  onFocus={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseOver={undefined}
+  tabIndex="0"
+  target={undefined}
+>
+  <span
+    className="hig__button__title"
+  >
+    Settings
+  </span>
+</a>
+`;
