@@ -60,23 +60,12 @@ exports[`tooltip/Tooltip  1`] = `
   />
   <div
     className="emotion-3 hig__flyout-v1__container"
-    style={
-      Object {
-        "left": "0px",
-        "top": "0px",
-      }
-    }
   >
     <div
       aria-hidden="true"
       className="emotion-2 hig__flyout-v1__pointer-wrapper"
       role="presentation"
-      style={
-        Object {
-          "left": "0px",
-          "top": "0px",
-        }
-      }
+      style={undefined}
     >
       <svg
         className="emotion-1"
@@ -176,23 +165,12 @@ exports[`tooltip/Tooltip  2`] = `
   </div>
   <div
     className="emotion-3 hig__flyout-v1__container"
-    style={
-      Object {
-        "left": "0px",
-        "top": "0px",
-      }
-    }
   >
     <div
       aria-hidden="true"
       className="emotion-2 hig__flyout-v1__pointer-wrapper"
       role="presentation"
-      style={
-        Object {
-          "left": "0px",
-          "top": "0px",
-        }
-      }
+      style={undefined}
     >
       <svg
         className="emotion-1"
