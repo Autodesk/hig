@@ -121,23 +121,12 @@ exports[`flyout/Flyout snapshots renders a custom pointer 1`] = `
   </div>
   <div
     className="emotion-5 hig__flyout-v1__container"
-    style={
-      Object {
-        "left": "0px",
-        "top": "0px",
-      }
-    }
   >
     <div
       aria-hidden="true"
       className="emotion-1 hig__flyout-v1__pointer-wrapper"
       role="presentation"
-      style={
-        Object {
-          "left": "0px",
-          "top": "0px",
-        }
-      }
+      style={undefined}
     >
       <span>
         my custom pointer
@@ -233,23 +222,12 @@ exports[`flyout/Flyout snapshots renders children from the given render function
   </div>
   <div
     className="emotion-6 hig__flyout-v1__container"
-    style={
-      Object {
-        "left": "0px",
-        "top": "0px",
-      }
-    }
   >
     <div
       aria-hidden="true"
       className="emotion-2 hig__flyout-v1__pointer-wrapper"
       role="presentation"
-      style={
-        Object {
-          "left": "0px",
-          "top": "0px",
-        }
-      }
+      style={undefined}
     >
       <svg
         className="emotion-1"
@@ -355,23 +333,12 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
   </div>
   <div
     className="emotion-6 hig__flyout-v1__container"
-    style={
-      Object {
-        "left": "0px",
-        "top": "0px",
-      }
-    }
   >
     <div
       aria-hidden="true"
       className="emotion-2 hig__flyout-v1__pointer-wrapper"
       role="presentation"
-      style={
-        Object {
-          "left": "0px",
-          "top": "0px",
-        }
-      }
+      style={undefined}
     >
       <svg
         className="emotion-1"
@@ -490,23 +457,12 @@ exports[`flyout/Flyout snapshots renders open by default 1`] = `
   />
   <div
     className="emotion-6 hig__flyout-v1__container"
-    style={
-      Object {
-        "left": "0px",
-        "top": "0px",
-      }
-    }
   >
     <div
       aria-hidden="true"
       className="emotion-2 hig__flyout-v1__pointer-wrapper"
       role="presentation"
-      style={
-        Object {
-          "left": "0px",
-          "top": "0px",
-        }
-      }
+      style={undefined}
     >
       <svg
         className="emotion-1"
@@ -610,23 +566,12 @@ exports[`flyout/Flyout snapshots renders the panel from a basic render function 
   </div>
   <div
     className="emotion-3 hig__flyout-v1__container"
-    style={
-      Object {
-        "left": "0px",
-        "top": "0px",
-      }
-    }
   >
     <div
       aria-hidden="true"
       className="emotion-2 hig__flyout-v1__pointer-wrapper"
       role="presentation"
-      style={
-        Object {
-          "left": "0px",
-          "top": "0px",
-        }
-      }
+      style={undefined}
     >
       <svg
         className="emotion-1"
@@ -716,23 +661,12 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
   </div>
   <div
     className="emotion-5 hig__flyout-v1__container"
-    style={
-      Object {
-        "left": "0px",
-        "top": "0px",
-      }
-    }
   >
     <div
       aria-hidden="true"
       className="emotion-2 hig__flyout-v1__pointer-wrapper"
       role="presentation"
-      style={
-        Object {
-          "left": "0px",
-          "top": "0px",
-        }
-      }
+      style={undefined}
     >
       <svg
         className="emotion-1"
@@ -843,23 +777,12 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
   </div>
   <div
     className="emotion-6 hig__flyout-v1__container"
-    style={
-      Object {
-        "left": "0px",
-        "top": "0px",
-      }
-    }
   >
     <div
       aria-hidden="true"
       className="emotion-2 hig__flyout-v1__pointer-wrapper"
       role="presentation"
-      style={
-        Object {
-          "left": "0px",
-          "top": "0px",
-        }
-      }
+      style={undefined}
     >
       <svg
         className="emotion-1"
@@ -978,23 +901,12 @@ exports[`flyout/Flyout snapshots renders without props 1`] = `
   />
   <div
     className="emotion-6 hig__flyout-v1__container"
-    style={
-      Object {
-        "left": "0px",
-        "top": "0px",
-      }
-    }
   >
     <div
       aria-hidden="true"
       className="emotion-2 hig__flyout-v1__pointer-wrapper"
       role="presentation"
-      style={
-        Object {
-          "left": "0px",
-          "top": "0px",
-        }
-      }
+      style={undefined}
     >
       <svg
         className="emotion-1"

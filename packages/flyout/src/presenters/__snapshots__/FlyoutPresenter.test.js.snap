@@ -67,23 +67,12 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders with all props 1`] = `
   </div>
   <div
     className="emotion-2 hig__flyout-v1__container"
-    style={
-      Object {
-        "left": "42px",
-        "top": "42px",
-      }
-    }
   >
     <div
       aria-hidden="true"
       className="emotion-1 hig__flyout-v1__pointer-wrapper"
       role="presentation"
-      style={
-        Object {
-          "left": "42px",
-          "top": "42px",
-        }
-      }
+      style={undefined}
     >
       <div>
         I am a custom pointer
@@ -153,23 +142,12 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders without props 1`] = `
   />
   <div
     className="emotion-3 hig__flyout-v1__container"
-    style={
-      Object {
-        "left": "0px",
-        "top": "0px",
-      }
-    }
   >
     <div
       aria-hidden="true"
       className="emotion-2 hig__flyout-v1__pointer-wrapper"
       role="presentation"
-      style={
-        Object {
-          "left": "0px",
-          "top": "0px",
-        }
-      }
+      style={undefined}
     >
       <svg
         className="emotion-1"

@@ -33,33 +33,18 @@ const anchorPointToModifier = {
   [anchorPoints.LEFT_BOTTOM]: "hig__flyout-v1--left-bottom"
 };
 
-/**
- * @param {import("../getCoordinates").Position} position
- * @returns {import("react").CSSProperties}
- */
-function positionToStyle({ top, left }) {
-  return {
-    top: `${top}px`,
-    left: `${left}px`
-  };
-}
-
 export default function FlyoutPresenter(props) {
   const {
     anchorPoint,
     children,
-    containerPosition,
     panel,
     pointer,
-    pointerPosition,
     refAction,
+    refPanelWrapper,
     refPointer,
     refWrapper,
     transitionStatus
   } = props;
-
-  const containerStyle = positionToStyle(containerPosition);
-  const pointerStyle = positionToStyle(pointerPosition);
 
   return (
     <ThemeContext.Consumer>
@@ -92,11 +77,10 @@ export default function FlyoutPresenter(props) {
                 css(styles.flyoutContainer),
                 "hig__flyout-v1__container"
               ])}
-              style={containerStyle}
+              ref={refPanelWrapper}
             >
               <PointerWrapperPresenter
                 innerRef={refPointer}
-                style={pointerStyle}
                 anchorPoint={anchorPoint}
               >
                 {pointer}
@@ -112,9 +96,7 @@ export default function FlyoutPresenter(props) {
 
 FlyoutPresenter.defaultProps = {
   anchorPoint: DEFAULT_COORDINATES.anchorPoint,
-  containerPosition: DEFAULT_COORDINATES.containerPosition,
   pointer: <PointerPresenter />,
-  pointerPosition: DEFAULT_COORDINATES.pointerPosition,
   transitionStatus: transitionStatuses.EXITED
 };
 
@@ -125,18 +107,10 @@ FlyoutPresenter.propTypes = {
   panel: PropTypes.node,
   /** Pointer for the flyout */
   pointer: PropTypes.node,
-  /** Top position of the container relative to the action */
-  containerPosition: PropTypes.shape({
-    top: PropTypes.number,
-    left: PropTypes.number
-  }),
-  /** Left position of the container relative to the action */
-  pointerPosition: PropTypes.shape({
-    top: PropTypes.number,
-    left: PropTypes.number
-  }),
   /** Reference the action element */
   refAction: PropTypes.func,
+  /** Reference the panel wrapper element */
+  refPanelWrapper: PropTypes.func,
   /** Reference the pointer element */
   refPointer: PropTypes.func,
   /** Reference the wrapper element */
