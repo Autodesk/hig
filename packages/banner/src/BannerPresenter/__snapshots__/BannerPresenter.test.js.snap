@@ -11,14 +11,27 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a fragment as actio
   <figure
     className="hig__banner__icon-background hig--light-theme"
   >
-    <div
-      className="hig__icon hig__icon--24-size"
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" role=\\"img\\" title=\\"info-24\\"><path d=\\"M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,19a9,9,0,1,1,9-9A9,9,0,0,1,12,21Z\\"/><rect x=\\"11\\" y=\\"11\\" width=\\"2\\" height=\\"6\\"/><circle cx=\\"12\\" cy=\\"8\\" r=\\"1.25\\"/></svg>",
-        }
-      }
-    />
+    <svg
+      height="24"
+      viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title>
+        info-24
+      </title>
+      <path
+        d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 19a9 9 0 1 1 9-9 9 9 0 0 1-9 9z"
+      />
+      <path
+        d="M11 11h2v6h-2z"
+      />
+      <circle
+        cx="12"
+        cy="8"
+        r="1.25"
+      />
+    </svg>
   </figure>
   <div
     className="hig__banner__content"
@@ -59,14 +72,14 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a fragment as actio
       <span
         className="hig__icon-button__icon"
       >
-        <div
-          className="hig__icon hig__icon--24-size"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 16 16\\" role=\\"img\\" title=\\"close-notification-24\\"><polygon points=\\"11.4,5.4 10.6,4.6 8,7.3 5.4,4.6 4.6,5.4 7.3,8 4.6,10.6 5.4,11.4 8,8.7 10.6,11.4 11.4,10.6 8.7,8\\"/></svg>",
-            }
-          }
-        />
+        <svg
+          viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M11.4 5.4l-.8-.8L8 7.3 5.4 4.6l-.8.8L7.3 8l-2.7 2.6.8.8L8 8.7l2.6 2.7.8-.8L8.7 8z"
+          />
+        </svg>
       </span>
     </button>
   </div>
@@ -84,14 +97,22 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a label 1`] = `
   <figure
     className="hig__banner__icon-background hig--light-theme"
   >
-    <div
-      className="hig__icon hig__icon--24-size"
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" role=\\"img\\" title=\\"error-24\\"><polygon points=\\"16.74 7.96 16.04 7.26 12 11.29 7.96 7.26 7.26 7.96 11.29 12 7.26 16.04 7.96 16.74 12 12.71 16.04 16.74 16.74 16.04 12.71 12 16.74 7.96\\"/><path d=\\"M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,19a9,9,0,1,1,9-9A9,9,0,0,1,12,21Z\\"/></svg>",
-        }
-      }
-    />
+    <svg
+      height="24"
+      viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title>
+        error-24
+      </title>
+      <path
+        d="M16.74 7.96l-.7-.7L12 11.29 7.96 7.26l-.7.7L11.29 12l-4.03 4.04.7.7L12 12.71l4.04 4.03.7-.7L12.71 12l4.03-4.04z"
+      />
+      <path
+        d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 19a9 9 0 1 1 9-9 9 9 0 0 1-9 9z"
+      />
+    </svg>
   </figure>
   <div
     className="hig__banner__content"
@@ -122,14 +143,14 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a label 1`] = `
       <span
         className="hig__icon-button__icon"
       >
-        <div
-          className="hig__icon hig__icon--24-size"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 16 16\\" role=\\"img\\" title=\\"close-notification-24\\"><polygon points=\\"11.4,5.4 10.6,4.6 8,7.3 5.4,4.6 4.6,5.4 7.3,8 4.6,10.6 5.4,11.4 8,8.7 10.6,11.4 11.4,10.6 8.7,8\\"/></svg>",
-            }
-          }
-        />
+        <svg
+          viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M11.4 5.4l-.8-.8L8 7.3 5.4 4.6l-.8.8L7.3 8l-2.7 2.6.8.8L8 8.7l2.6 2.7.8-.8L8.7 8z"
+          />
+        </svg>
       </span>
     </button>
   </div>
@@ -147,14 +168,27 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a node as actions 1
   <figure
     className="hig__banner__icon-background hig--light-theme"
   >
-    <div
-      className="hig__icon hig__icon--24-size"
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" role=\\"img\\" title=\\"info-24\\"><path d=\\"M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,19a9,9,0,1,1,9-9A9,9,0,0,1,12,21Z\\"/><rect x=\\"11\\" y=\\"11\\" width=\\"2\\" height=\\"6\\"/><circle cx=\\"12\\" cy=\\"8\\" r=\\"1.25\\"/></svg>",
-        }
-      }
-    />
+    <svg
+      height="24"
+      viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title>
+        info-24
+      </title>
+      <path
+        d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 19a9 9 0 1 1 9-9 9 9 0 0 1-9 9z"
+      />
+      <path
+        d="M11 11h2v6h-2z"
+      />
+      <circle
+        cx="12"
+        cy="8"
+        r="1.25"
+      />
+    </svg>
   </figure>
   <div
     className="hig__banner__content"
@@ -192,14 +226,14 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a node as actions 1
       <span
         className="hig__icon-button__icon"
       >
-        <div
-          className="hig__icon hig__icon--24-size"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 16 16\\" role=\\"img\\" title=\\"close-notification-24\\"><polygon points=\\"11.4,5.4 10.6,4.6 8,7.3 5.4,4.6 4.6,5.4 7.3,8 4.6,10.6 5.4,11.4 8,8.7 10.6,11.4 11.4,10.6 8.7,8\\"/></svg>",
-            }
-          }
-        />
+        <svg
+          viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M11.4 5.4l-.8-.8L8 7.3 5.4 4.6l-.8.8L7.3 8l-2.7 2.6.8.8L8 8.7l2.6 2.7.8-.8L8.7 8z"
+          />
+        </svg>
       </span>
     </button>
   </div>
@@ -217,14 +251,27 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a string as actions
   <figure
     className="hig__banner__icon-background hig--light-theme"
   >
-    <div
-      className="hig__icon hig__icon--24-size"
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" role=\\"img\\" title=\\"info-24\\"><path d=\\"M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,19a9,9,0,1,1,9-9A9,9,0,0,1,12,21Z\\"/><rect x=\\"11\\" y=\\"11\\" width=\\"2\\" height=\\"6\\"/><circle cx=\\"12\\" cy=\\"8\\" r=\\"1.25\\"/></svg>",
-        }
-      }
-    />
+    <svg
+      height="24"
+      viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title>
+        info-24
+      </title>
+      <path
+        d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 19a9 9 0 1 1 9-9 9 9 0 0 1-9 9z"
+      />
+      <path
+        d="M11 11h2v6h-2z"
+      />
+      <circle
+        cx="12"
+        cy="8"
+        r="1.25"
+      />
+    </svg>
   </figure>
   <div
     className="hig__banner__content"
@@ -260,14 +307,14 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a string as actions
       <span
         className="hig__icon-button__icon"
       >
-        <div
-          className="hig__icon hig__icon--24-size"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 16 16\\" role=\\"img\\" title=\\"close-notification-24\\"><polygon points=\\"11.4,5.4 10.6,4.6 8,7.3 5.4,4.6 4.6,5.4 7.3,8 4.6,10.6 5.4,11.4 8,8.7 10.6,11.4 11.4,10.6 8.7,8\\"/></svg>",
-            }
-          }
-        />
+        <svg
+          viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M11.4 5.4l-.8-.8L8 7.3 5.4 4.6l-.8.8L7.3 8l-2.7 2.6.8.8L8 8.7l2.6 2.7.8-.8L8.7 8z"
+          />
+        </svg>
       </span>
     </button>
   </div>
@@ -285,14 +332,27 @@ exports[`banner/BannerPresenter/BannerPresenter renders without props 1`] = `
   <figure
     className="hig__banner__icon-background hig--light-theme"
   >
-    <div
-      className="hig__icon hig__icon--24-size"
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" role=\\"img\\" title=\\"info-24\\"><path d=\\"M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,19a9,9,0,1,1,9-9A9,9,0,0,1,12,21Z\\"/><rect x=\\"11\\" y=\\"11\\" width=\\"2\\" height=\\"6\\"/><circle cx=\\"12\\" cy=\\"8\\" r=\\"1.25\\"/></svg>",
-        }
-      }
-    />
+    <svg
+      height="24"
+      viewBox="0 0 24 24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title>
+        info-24
+      </title>
+      <path
+        d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 19a9 9 0 1 1 9-9 9 9 0 0 1-9 9z"
+      />
+      <path
+        d="M11 11h2v6h-2z"
+      />
+      <circle
+        cx="12"
+        cy="8"
+        r="1.25"
+      />
+    </svg>
   </figure>
   <div
     className="hig__banner__content"
@@ -323,14 +383,14 @@ exports[`banner/BannerPresenter/BannerPresenter renders without props 1`] = `
       <span
         className="hig__icon-button__icon"
       >
-        <div
-          className="hig__icon hig__icon--24-size"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" viewBox=\\"0 0 16 16\\" role=\\"img\\" title=\\"close-notification-24\\"><polygon points=\\"11.4,5.4 10.6,4.6 8,7.3 5.4,4.6 4.6,5.4 7.3,8 4.6,10.6 5.4,11.4 8,8.7 10.6,11.4 11.4,10.6 8.7,8\\"/></svg>",
-            }
-          }
-        />
+        <svg
+          viewBox="0 0 16 16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M11.4 5.4l-.8-.8L8 7.3 5.4 4.6l-.8.8L7.3 8l-2.7 2.6.8.8L8 8.7l2.6 2.7.8-.8L8.7 8z"
+          />
+        </svg>
       </span>
     </button>
   </div>

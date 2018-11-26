@@ -1,5 +1,4 @@
 import "@hig/icon-button/build/index.css";
-import "@hig/icon/build/index.css";
 import "@hig/typography/build/index.css";
 
 export { default } from "./Banner";

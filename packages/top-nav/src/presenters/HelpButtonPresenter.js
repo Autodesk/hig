@@ -1,13 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import IconButton, { names, types } from "@hig/icon-button";
+import IconButton, { types } from "@hig/icon-button";
+import { Help24 } from "@hig/icons";
 import "@hig/icon-button/build/index.css";
 
 export default function HelpButtonPresenter({ onClick, title }) {
   return (
     <IconButton
-      name={names.HELP}
+      icon={<Help24 />}
       onClick={onClick}
       title={title}
       type={types.TRANSPARENT}

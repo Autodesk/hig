@@ -18,7 +18,7 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/icon": "^0.2.1",
+    "@hig/icons": "^0.2.1",
     "@hig/multi-downshift": "^0.1.1",
     "@hig/text-field": "^0.5.0",
     "classnames": "^2.2.5",

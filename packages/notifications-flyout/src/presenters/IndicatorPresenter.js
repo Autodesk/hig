@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
-import IconButton, { names, types } from "@hig/icon-button";
+import IconButton, { types } from "@hig/icon-button";
+import { Notification24 } from "@hig/icons";
 import "@hig/icon-button/build/index.css";
 import "@hig/styles/build/fonts.css";
 
@@ -17,7 +18,7 @@ export default function IndicatorPresenter(props) {
     <div className="hig__notifications-flyout__indicator">
       <IconButton
         onClick={onClick}
-        name={names.NOTIFICATION}
+        icon={<Notification24 />}
         title={title}
         type={types.TRANSPARENT}
       />

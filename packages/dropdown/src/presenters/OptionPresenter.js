@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
-import Icon, { names } from "@hig/icon";
+import { CheckmarkBlueDark24 } from "@hig/icons";
 import { createButtonEventHandlers } from "@hig/utils";
 
 import "./OptionPresenter.scss";
@@ -87,7 +87,7 @@ export default class OptionPresenter extends Component {
         <span className="hig__dropdown-option__label">{children}</span>
         {selected && (
           <div className="hig__dropdown-option__checkmark">
-            <Icon name={names.CHECKMARK_BLUE_DARK} />
+            <CheckmarkBlueDark24 />
           </div>
         )}
       </OptionWrapper>

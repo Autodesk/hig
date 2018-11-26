@@ -13,14 +13,6 @@ describe("icon-button/index", () => {
     {
       name: "types",
       value: expect.any(Object)
-    },
-    {
-      name: "AVAILABLE_NAMES",
-      value: expect.any(Array)
-    },
-    {
-      name: "names",
-      value: expect.any(Object)
     }
   ].forEach(({ name, value }) => {
     it(`exports ${name}`, () => {

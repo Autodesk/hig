@@ -19,14 +19,26 @@ exports[`side-nav/Module/presenters/ModuleCompactPresenter snapshot tests render
       <div
         className="hig__side-nav__module__link__icon"
       >
-        <div
-          className="hig__icon hig__icon--24-size"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" role=\\"img\\" title=\\"collaboration-24\\"><g fill=\\"#2e4258\\"><path d=\\"M8,9v6a1,1,0,0,0,1,1h7V9a1,1,0,0,0-1-1H8ZM9,9h6v6H9Z\\"/><path d=\\"M20,3H9A1,1,0,0,0,8,4V7H9V4H20V15H17v1h3a1,1,0,0,0,1-1V4A1,1,0,0,0,20,3Z\\"/><path d=\\"M15,17v3H4V9H7V8H4A1,1,0,0,0,3,9V20a1,1,0,0,0,1,1H15a1,1,0,0,0,1-1V17Z\\"/></g></svg>",
-            }
-          }
-        />
+        <svg
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            authoring-collaboratino-24
+          </title>
+          <g
+            fill="#2e4258"
+          >
+            <path
+              d="M8 9v6a1 1 0 0 0 1 1h7V9a1 1 0 0 0-1-1H8zm1 0h6v6H9z"
+            />
+            <path
+              d="M20 3H9a1 1 0 0 0-1 1v3h1V4h11v11h-3v1h3a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm-5 14v3H4V9h3V8H4a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-3z"
+            />
+          </g>
+        </svg>
       </div>
     </div>
   </div>

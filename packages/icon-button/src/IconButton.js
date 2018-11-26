@@ -2,10 +2,6 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
 
-import Icon from "@hig/icon";
-import "@hig/icon/build/index.css";
-import { AVAILABLE_NAMES as AVAILABLE_ICON_NAMES } from "@hig/icons";
-
 import { types, AVAILABLE_TYPES } from "./types";
 import "./icon-button.scss";
 
@@ -16,17 +12,17 @@ export default class IconButton extends Component {
      */
     disabled: PropTypes.bool,
     /**
-     * Deprecated; use `name` or `svg` instead
+     * Icon or svg to be rendered
      */
-    icon: PropTypes.string,
+    icon: PropTypes.element,
     /**
      * Url button will navigate to when clicked
      */
     link: PropTypes.string,
     /**
-     * Name of the icon to be used
+     * Deprecated; use `icon` instead
      */
-    name: PropTypes.oneOf(AVAILABLE_ICON_NAMES),
+    name: PropTypes.oneOf([]),
     /**
      * Called when user moves focus away from the button
      */
@@ -48,7 +44,7 @@ export default class IconButton extends Component {
      */
     onMouseLeave: PropTypes.func,
     /**
-     * SVG markup used for the icon
+     * Deprecated; use `icon` instead
      */
     svg: PropTypes.string,
     /**
@@ -105,13 +101,7 @@ export default class IconButton extends Component {
 
     return (
       <Element {...props}>
-        <span className="hig__icon-button__icon">
-          <Icon
-            svg={this.props.svg}
-            name={this.props.name}
-            nameOrSVG={this.props.icon}
-          />
-        </span>
+        <span className="hig__icon-button__icon">{this.props.icon}</span>
       </Element>
     );
   }

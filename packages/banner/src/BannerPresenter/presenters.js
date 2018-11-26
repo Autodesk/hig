@@ -3,7 +3,7 @@
 import React from "react";
 import cx from "classnames";
 
-import { names as iconNames } from "@hig/icon";
+import { CloseNotification24 } from "@hig/icons";
 import IconButton, { types as iconButtonTypes } from "@hig/icon-button";
 import { Text } from "@hig/typography";
 import { ThemeContext } from "@hig/themes";
@@ -106,7 +106,7 @@ export function DismissButton({ title, onClick }) {
     <div className={classNames.dismissButton}>
       <IconButton
         type={iconButtonTypes.TRANSPARENT}
-        name={iconNames.CLOSE_NOTIFICATION}
+        icon={<CloseNotification24 />}
         title={title}
         aria-label={title}
         onClick={onClick}

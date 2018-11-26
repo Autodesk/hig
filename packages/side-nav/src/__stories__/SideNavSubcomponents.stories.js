@@ -4,7 +4,7 @@ import { withInfo } from "@storybook/addon-info";
 import { action } from "@storybook/addon-actions";
 import { boolean, select, text } from "@storybook/addon-knobs/react";
 import KnobbedThemeProvider from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
-import Icon, { names as iconNames } from "@hig/icon";
+import { Insight24, ProductsAndServices24, Collaboration24 } from "@hig/icons";
 
 import SideNav from "../index";
 import infoOptions from "./infoOptions";
@@ -63,7 +63,7 @@ storiesOf("GlobalNav|SideNav.Module", module)
         <SideNav.Module
           active={boolean("Active", true)}
           activeChildren={boolean("Active Children", false)}
-          icon={<Icon name={iconNames.INSIGHT} />}
+          icon={<Insight24 />}
           link={text("Link", "https://www.autodesk.com")}
           minimized={boolean("Minimized", false)}
           onClickCollapseButton={action("onClickCollapseButton")}
@@ -125,7 +125,7 @@ storiesOf("GlobalNav|SideNav.ModuleCompact", module).add(
       <SideNav.ModuleCompact
         active={boolean("Active", true)}
         activeChildren={boolean("Active Children", false)}
-        icon={<Icon name={iconNames.INSIGHT} />}
+        icon={<Insight24 />}
         onClickTitle={action("onClick")}
         onFocus={action("onFocus")}
         onMouseOver={action("onMouseOver")}
@@ -143,17 +143,13 @@ storiesOf("GlobalNav|SideNav.Group", module)
     })(() => (
       <KnobbedThemeProvider>
         <SideNav.Group>
-          <SideNav.Module
-            title="Module 1"
-            icon={<Icon name={iconNames.INSIGHT} />}
-            activeChildren
-          >
+          <SideNav.Module title="Module 1" icon={<Insight24 />} activeChildren>
             <SideNav.Submodule title="Submodule 1" />
             <SideNav.Submodule title="Submodule 2" active />
           </SideNav.Module>
           <SideNav.Module
             title="Module 2"
-            icon={<Icon name={iconNames.PRODUCTS_AND_SERVICES} />}
+            icon={<ProductsAndServices24 />}
             minimized
           >
             <SideNav.Submodule title="Submodule 1" />
@@ -161,7 +157,7 @@ storiesOf("GlobalNav|SideNav.Group", module)
           </SideNav.Module>
           <SideNav.Module
             title="Module 3"
-            icon={<Icon name={iconNames.COLLABORATION} />}
+            icon={<Collaboration24 />}
             link="https://www.autodesk.com"
             target="_blank"
           />

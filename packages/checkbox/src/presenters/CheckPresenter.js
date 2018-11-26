@@ -2,7 +2,11 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
-import icons from "@hig/icons";
+import {
+  CheckWhite24,
+  CheckmarkIndeterminate16,
+  CheckDisabled16
+} from "@hig/icons";
 
 import "./CheckPresenter.scss";
 
@@ -42,20 +46,9 @@ export default class CheckPresenter extends Component {
 
     return (
       <span className={iconClasses}>
-        <span
-          className="hig__checkbox__wrapper__check"
-          dangerouslySetInnerHTML={{ __html: icons["check-white-24"] }}
-        />
-        <span
-          className="hig__checkbox__wrapper__check--indeterminate"
-          dangerouslySetInnerHTML={{
-            __html: icons["checkmark-indeterminate-16"]
-          }}
-        />
-        <span
-          className="hig__checkbox__wrapper__check--disabled"
-          dangerouslySetInnerHTML={{ __html: icons["check-disabled-16"] }}
-        />
+        <CheckWhite24 className="hig__checkbox__wrapper__check" />
+        <CheckmarkIndeterminate16 className="hig__checkbox__wrapper__check--indeterminate" />
+        <CheckDisabled16 className="hig__checkbox__wrapper__check--disabled" />
       </span>
     );
   }
