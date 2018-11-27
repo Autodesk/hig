@@ -1,3 +1,10 @@
+# [@hig/theme-context-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/theme-context@1.0.0...@hig/theme-context@1.0.1) (2018-11-27)
+
+
+### Bug Fixes
+
+* Update README usage ([b1db70d](https://github.com/Autodesk/hig/commit/b1db70d))
+
 # @hig/theme-context-v1.0.0 (2018-10-30)
 
 
