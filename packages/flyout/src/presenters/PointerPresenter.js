@@ -65,5 +65,5 @@ PointerPresenter.defaultProps = {
 PointerPresenter.propTypes = {
   borderWidth: PropTypes.number,
   size: PropTypes.number,
-  customStyles: PropTypes.func
+  stylesheet: PropTypes.func
 };
