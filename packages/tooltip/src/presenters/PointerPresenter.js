@@ -7,10 +7,10 @@ const SIZE = 12;
 
 function stylesheetOverride() {
   return {
-    "polygon:first-child": {
+    ".hig__flyout-v1__pointer-border": {
       fill: COLOR
     },
-    "polygon:last-child": {
+    ".hig__flyout-v1__pointer-background": {
       fill: COLOR
     }
   };
