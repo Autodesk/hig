@@ -157,9 +157,39 @@ exports[`flyout/Flyout snapshots renders a custom pointer 1`] = `
 
 exports[`flyout/Flyout snapshots renders children from the given render function 1`] = `
 .emotion-0 {
+<<<<<<< HEAD
   border-width: 1px;
   border-style: solid;
   border-color: transparent;
+=======
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-1 .hig__flyout-v1__pointer-border {
+  fill: transparent;
+}
+
+.emotion-1 .hig__flyout-v1__pointer-background {
+  fill: #ffffff;
+}
+
+.emotion-5 {
+  background-color: #ffffff;
+>>>>>>> 8711dfcb... test(flyout): update enzyme/jest snapshots
   border-radius: 4px;
   box-sizing: border-box;
   color: #ffffff;
@@ -236,9 +266,11 @@ exports[`flyout/Flyout snapshots renders children from the given render function
         width="24"
       >
         <polygon
+          className="hig__flyout-v1__pointer-border"
           points="0,12 12,0 24,12"
         />
         <polygon
+          className="hig__flyout-v1__pointer-background"
           points="2.5,12 12,2.5 21.5,12"
         />
       </svg>
@@ -268,9 +300,39 @@ exports[`flyout/Flyout snapshots renders children from the given render function
 
 exports[`flyout/Flyout snapshots renders content from the given render function 1`] = `
 .emotion-0 {
+<<<<<<< HEAD
   border-width: 1px;
   border-style: solid;
   border-color: transparent;
+=======
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-1 .hig__flyout-v1__pointer-border {
+  fill: transparent;
+}
+
+.emotion-1 .hig__flyout-v1__pointer-background {
+  fill: #ffffff;
+}
+
+.emotion-5 {
+  background-color: #ffffff;
+>>>>>>> 8711dfcb... test(flyout): update enzyme/jest snapshots
   border-radius: 4px;
   box-sizing: border-box;
   color: #ffffff;
@@ -347,9 +409,11 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
         width="24"
       >
         <polygon
+          className="hig__flyout-v1__pointer-border"
           points="0,12 12,0 24,12"
         />
         <polygon
+          className="hig__flyout-v1__pointer-background"
           points="2.5,12 12,2.5 21.5,12"
         />
       </svg>
@@ -401,11 +465,11 @@ exports[`flyout/Flyout snapshots renders open by default 1`] = `
   transform: rotate(0deg);
 }
 
-.emotion-1 polygon:first-child {
+.emotion-1 .hig__flyout-v1__pointer-border {
   fill: transparent;
 }
 
-.emotion-1 polygon:last-child {
+.emotion-1 .hig__flyout-v1__pointer-background {
   fill: #ffffff;
 }
 
@@ -471,9 +535,11 @@ exports[`flyout/Flyout snapshots renders open by default 1`] = `
         width="24"
       >
         <polygon
+          className="hig__flyout-v1__pointer-border"
           points="0,12 12,0 24,12"
         />
         <polygon
+          className="hig__flyout-v1__pointer-background"
           points="2.5,12 12,2.5 21.5,12"
         />
       </svg>
@@ -501,6 +567,7 @@ exports[`flyout/Flyout snapshots renders open by default 1`] = `
 
 exports[`flyout/Flyout snapshots renders the panel from a basic render function 1`] = `
 .emotion-0 {
+<<<<<<< HEAD
   border-width: 1px;
   border-style: solid;
   border-color: transparent;
@@ -535,6 +602,51 @@ exports[`flyout/Flyout snapshots renders the panel from a basic render function 
 
 .emotion-0 svg * {
   fill: #f5f5f5;
+=======
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-1 .hig__flyout-v1__pointer-border {
+  fill: transparent;
+}
+
+.emotion-1 .hig__flyout-v1__pointer-background {
+  fill: #ffffff;
+}
+
+.emotion-3 {
+  position: absolute;
+  display: table;
+  width: 100%;
+  z-index: 9999;
+  -webkit-transition-property: opacity,-webkit-transform;
+  -webkit-transition-property: opacity,transform;
+  transition-property: opacity,transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  touch-action: auto;
+  pointer-events: auto;
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+>>>>>>> 8711dfcb... test(flyout): update enzyme/jest snapshots
 }
 
 <div
@@ -580,9 +692,11 @@ exports[`flyout/Flyout snapshots renders the panel from a basic render function 
         width="24"
       >
         <polygon
+          className="hig__flyout-v1__pointer-border"
           points="0,12 12,0 24,12"
         />
         <polygon
+          className="hig__flyout-v1__pointer-background"
           points="2.5,12 12,2.5 21.5,12"
         />
       </svg>
@@ -596,9 +710,39 @@ exports[`flyout/Flyout snapshots renders the panel from a basic render function 
 
 exports[`flyout/Flyout snapshots renders the panel from a complex render function 1`] = `
 .emotion-0 {
+<<<<<<< HEAD
   border-width: 1px;
   border-style: solid;
   border-color: transparent;
+=======
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-1 .hig__flyout-v1__pointer-border {
+  fill: transparent;
+}
+
+.emotion-1 .hig__flyout-v1__pointer-background {
+  fill: #ffffff;
+}
+
+.emotion-4 {
+  background-color: #ffffff;
+>>>>>>> 8711dfcb... test(flyout): update enzyme/jest snapshots
   border-radius: 4px;
   box-sizing: border-box;
   color: #ffffff;
@@ -675,9 +819,11 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
         width="24"
       >
         <polygon
+          className="hig__flyout-v1__pointer-border"
           points="0,12 12,0 24,12"
         />
         <polygon
+          className="hig__flyout-v1__pointer-background"
           points="2.5,12 12,2.5 21.5,12"
         />
       </svg>
@@ -712,9 +858,39 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
 
 exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
 .emotion-0 {
+<<<<<<< HEAD
   border-width: 1px;
   border-style: solid;
   border-color: transparent;
+=======
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-1 .hig__flyout-v1__pointer-border {
+  fill: transparent;
+}
+
+.emotion-1 .hig__flyout-v1__pointer-background {
+  fill: #ffffff;
+}
+
+.emotion-5 {
+  background-color: #ffffff;
+>>>>>>> 8711dfcb... test(flyout): update enzyme/jest snapshots
   border-radius: 4px;
   box-sizing: border-box;
   color: #ffffff;
@@ -791,9 +967,11 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
         width="24"
       >
         <polygon
+          className="hig__flyout-v1__pointer-border"
           points="0,12 12,0 24,12"
         />
         <polygon
+          className="hig__flyout-v1__pointer-background"
           points="2.5,12 12,2.5 21.5,12"
         />
       </svg>
@@ -865,11 +1043,11 @@ exports[`flyout/Flyout snapshots renders without props 1`] = `
   transform: rotate(0deg);
 }
 
-.emotion-1 polygon:first-child {
+.emotion-1 .hig__flyout-v1__pointer-border {
   fill: transparent;
 }
 
-.emotion-1 polygon:last-child {
+.emotion-1 .hig__flyout-v1__pointer-background {
   fill: #ffffff;
 }
 
@@ -915,9 +1093,11 @@ exports[`flyout/Flyout snapshots renders without props 1`] = `
         width="24"
       >
         <polygon
+          className="hig__flyout-v1__pointer-border"
           points="0,12 12,0 24,12"
         />
         <polygon
+          className="hig__flyout-v1__pointer-background"
           points="2.5,12 12,2.5 21.5,12"
         />
       </svg>
