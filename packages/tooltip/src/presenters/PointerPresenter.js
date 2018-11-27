@@ -17,5 +17,5 @@ function stylesheetOverride() {
 }
 
 export default function PointerPresenter() {
-  return <Pointer size={SIZE} customStyles={stylesheetOverride} />;
+  return <Pointer size={SIZE} stylesheet={stylesheetOverride} />;
 }

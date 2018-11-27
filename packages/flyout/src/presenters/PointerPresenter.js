@@ -9,7 +9,7 @@ function stylesheetOverride() {
 }
 
 export default function PointerPresenter(props) {
-  const { borderWidth, size, customStyles } = props;
+  const { borderWidth, size } = props;
   const height = size / 2;
   const width = size;
   const widthMidpoint = width / 2;
@@ -21,9 +21,9 @@ export default function PointerPresenter(props) {
           { transitionStatus: null, anchorPoint: null },
           resolvedRoles
         );
-        const hasCustomStyles = Object.keys(customStyles()).length > 0;
+        const hasCustomStyles = Object.keys(props.stylesheet()).length > 0;
         const pointerStyles = hasCustomStyles
-          ? { ...styles.pointer, ...customStyles() }
+          ? { ...styles.pointer, ...props.stylesheet() }
           : styles.pointer;
 
         return (
@@ -59,7 +59,7 @@ export default function PointerPresenter(props) {
 PointerPresenter.defaultProps = {
   borderWidth: 2.5,
   size: 24,
-  customStyles: stylesheetOverride
+  stylesheet: stylesheetOverride
 };
 
 PointerPresenter.propTypes = {
