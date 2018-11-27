@@ -1,3 +1,10 @@
+# [@hig/project-account-switcher-v0.3.2](https://github.com/Autodesk/hig/compare/@hig/project-account-switcher@0.3.1...@hig/project-account-switcher@0.3.2) (2018-11-27)
+
+
+### Bug Fixes
+
+* **project-account-switcher:** close on project or account selection ([bbe9503](https://github.com/Autodesk/hig/commit/bbe9503))
+
 # [@hig/project-account-switcher-v0.3.1](https://github.com/Autodesk/hig/compare/@hig/project-account-switcher@0.3.0...@hig/project-account-switcher@0.3.1) (2018-10-08)
 
 
