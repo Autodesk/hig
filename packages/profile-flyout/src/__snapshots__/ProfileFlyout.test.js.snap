@@ -24,11 +24,11 @@ exports[`profile-flyout/ProfileFlyout renders with all props 1`] = `
   transform: rotate(0deg);
 }
 
-.emotion-1 polygon:first-child {
+.emotion-1 .hig__flyout-v1__pointer-border {
   fill: transparent;
 }
 
-.emotion-1 polygon:last-child {
+.emotion-1 .hig__flyout-v1__pointer-background {
   fill: #ffffff;
 }
 
@@ -104,9 +104,11 @@ exports[`profile-flyout/ProfileFlyout renders with all props 1`] = `
         width="24"
       >
         <polygon
+          className="hig__flyout-v1__pointer-border"
           points="0,12 12,0 24,12"
         />
         <polygon
+          className="hig__flyout-v1__pointer-background"
           points="2.5,12 12,2.5 21.5,12"
         />
       </svg>
@@ -171,11 +173,11 @@ exports[`profile-flyout/ProfileFlyout renders with no props 1`] = `
   transform: rotate(0deg);
 }
 
-.emotion-1 polygon:first-child {
+.emotion-1 .hig__flyout-v1__pointer-border {
   fill: transparent;
 }
 
-.emotion-1 polygon:last-child {
+.emotion-1 .hig__flyout-v1__pointer-background {
   fill: #ffffff;
 }
 
@@ -231,9 +233,11 @@ exports[`profile-flyout/ProfileFlyout renders with no props 1`] = `
         width="24"
       >
         <polygon
+          className="hig__flyout-v1__pointer-border"
           points="0,12 12,0 24,12"
         />
         <polygon
+          className="hig__flyout-v1__pointer-background"
           points="2.5,12 12,2.5 21.5,12"
         />
       </svg>

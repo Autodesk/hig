@@ -294,9 +294,11 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
         width="24"
       >
         <polygon
+          className="hig__flyout-v1__pointer-border"
           points="0,12 12,0 24,12"
         />
         <polygon
+          className="hig__flyout-v1__pointer-background"
           points="2.5,12 12,2.5 21.5,12"
         />
       </svg>
