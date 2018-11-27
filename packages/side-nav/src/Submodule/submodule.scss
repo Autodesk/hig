@@ -56,15 +56,10 @@
     }
 
     &:hover,
+    &:focus,
+    &:active,
     &--active,
     &--active:focus {
-      color: color(hig-blue-40);
-      svg * {
-        stroke: color(hig-blue-40);
-      }
-    }
-    &:focus,
-    &:active {
       color: color(hig-blue-30);
       svg * {
         stroke: color(hig-blue-30);
