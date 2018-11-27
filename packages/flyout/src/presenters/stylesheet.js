@@ -116,11 +116,11 @@ export default function(props, themeData) {
     },
     pointer: { // eslint-disable-line prettier/prettier
       // Pointer border
-      "polygon:first-child": {
+      ".hig__flyout-v1__pointer-border": {
         fill: borderColor
       },
       // Pointer body
-      "polygon:last-child": {
+      ".hig__flyout-v1__pointer-background": {
         fill: backgroundColor
       }
     }

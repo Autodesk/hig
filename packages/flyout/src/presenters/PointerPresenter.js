@@ -34,6 +34,7 @@ export default function PointerPresenter(props) {
             width={width.toString()}
           >
             <polygon
+              className="hig__flyout-v1__pointer-border"
               points={[
                 `0,${height}`,
                 `${widthMidpoint},0`,
@@ -41,6 +42,7 @@ export default function PointerPresenter(props) {
               ].join(" ")}
             />
             <polygon
+              className="hig__flyout-v1__pointer-background"
               points={[
                 `${borderWidth},${height}`,
                 `${widthMidpoint},${borderWidth}`,
