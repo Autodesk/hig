@@ -1,3 +1,12 @@
+# [@hig/components-v0.11.1](https://github.com/Autodesk/hig/compare/@hig/components@0.11.0...@hig/components@0.11.1) (2018-11-27)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/button to version 0.3.0 ([4bf4f40](https://github.com/Autodesk/hig/commit/4bf4f40))
+* **package:** update [@hig](https://github.com/hig)/text-area to version 0.2.0 ([6ac295e](https://github.com/Autodesk/hig/commit/6ac295e))
+* **package:** update [@hig](https://github.com/hig)/text-field to version 0.5.0 ([66cd017](https://github.com/Autodesk/hig/commit/66cd017))
+
 # [@hig/components-v0.11.0](https://github.com/Autodesk/hig/compare/@hig/components@0.10.0...@hig/components@0.11.0) (2018-10-08)
 
 

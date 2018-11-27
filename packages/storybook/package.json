@@ -51,7 +51,7 @@
   },
   "dependencies": {
     "@hig/theme-context": "^1.0.0-alpha",
-    "@hig/theme-data": "^1.0.0",
+    "@hig/theme-data": "^1.1.0",
     "faker": "^4.1.0",
     "prop-types": "^15.6.1"
   },
