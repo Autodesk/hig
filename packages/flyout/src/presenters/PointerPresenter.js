@@ -21,20 +21,21 @@ export default function PointerPresenter(props) {
           { transitionStatus: null, anchorPoint: null },
           resolvedRoles
         );
-        const hasCustomStyles = Object.keys(props.stylesheet()).length > 0;
-        const pointerStyles = hasCustomStyles
-          ? { ...styles.pointer, ...props.stylesheet() }
-          : styles.pointer;
+        const hasCustomStyles =
+          Object.keys(props.stylesheet(styles, props, resolvedRoles)).length >
+          0;
+        const stylesheetFunction = hasCustomStyles
+          ? props.stylesheet(styles, props, resolvedRoles)
+          : styles;
 
         return (
           <svg
-            className={css(pointerStyles)}
             height={size.toString()}
             viewBox={`0 0 ${size} ${size}`}
             width={width.toString()}
           >
             <polygon
-              className="hig__flyout-v1__pointer-border"
+              className={css(stylesheetFunction.pointerBorder)}
               points={[
                 `0,${height}`,
                 `${widthMidpoint},0`,
@@ -42,7 +43,7 @@ export default function PointerPresenter(props) {
               ].join(" ")}
             />
             <polygon
-              className="hig__flyout-v1__pointer-background"
+              className={css(stylesheetFunction.pointerBody)}
               points={[
                 `${borderWidth},${height}`,
                 `${widthMidpoint},${borderWidth}`,

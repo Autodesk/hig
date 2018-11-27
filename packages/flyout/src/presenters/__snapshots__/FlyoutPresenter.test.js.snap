@@ -83,7 +83,7 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders with all props 1`] = `
 `;
 
 exports[`flyout/FlyoutPresenter/FlyoutPresenter renders without props 1`] = `
-.emotion-4 {
+.emotion-5 {
   position: relative;
   display: inline-block;
 }
@@ -95,7 +95,7 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders without props 1`] = `
   display: flex;
 }
 
-.emotion-3 {
+.emotion-4 {
   position: absolute;
   display: table;
   width: 100%;
@@ -115,7 +115,7 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders without props 1`] = `
   transform: translateY(-4px);
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -126,41 +126,40 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders without props 1`] = `
   transform: rotate(0deg);
 }
 
-.emotion-1 .hig__flyout-v1__pointer-border {
+.emotion-1 {
   fill: transparent;
 }
 
-.emotion-1 .hig__flyout-v1__pointer-background {
+.emotion-2 {
   fill: #ffffff;
 }
 
 <div
-  className="emotion-4 hig__flyout-v1--exited hig__flyout-v1--top-left"
+  className="emotion-5 hig__flyout-v1--exited hig__flyout-v1--top-left"
 >
   <div
     className="emotion-0 hig__flyout-v1__action"
   />
   <div
-    className="emotion-3 hig__flyout-v1__container"
+    className="emotion-4 hig__flyout-v1__container"
   >
     <div
       aria-hidden="true"
-      className="emotion-2 hig__flyout-v1__pointer-wrapper"
+      className="emotion-3 hig__flyout-v1__pointer-wrapper"
       role="presentation"
       style={undefined}
     >
       <svg
-        className="emotion-1"
         height="24"
         viewBox="0 0 24 24"
         width="24"
       >
         <polygon
-          className="hig__flyout-v1__pointer-border"
+          className="emotion-1"
           points="0,12 12,0 24,12"
         />
         <polygon
-          className="hig__flyout-v1__pointer-background"
+          className="emotion-2"
           points="2.5,12 12,2.5 21.5,12"
         />
       </svg>

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tooltip/Tooltip  1`] = `
-.emotion-4 {
+.emotion-5 {
   position: relative;
   display: inline-block;
 }
@@ -13,7 +13,7 @@ exports[`tooltip/Tooltip  1`] = `
   display: flex;
 }
 
-.emotion-3 {
+.emotion-4 {
   position: absolute;
   display: none;
   width: 100%;
@@ -33,7 +33,7 @@ exports[`tooltip/Tooltip  1`] = `
   transform: none;
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -44,41 +44,36 @@ exports[`tooltip/Tooltip  1`] = `
   transform: rotate(0deg);
 }
 
-.emotion-1 .hig__flyout-v1__pointer-border {
-  fill: #393939;
-}
-
-.emotion-1 .hig__flyout-v1__pointer-background {
+.emotion-1 {
   fill: #393939;
 }
 
 <div
-  className="emotion-4 hig__flyout-v1--hidden hig__flyout-v1--top-left"
+  className="emotion-5 hig__flyout-v1--hidden hig__flyout-v1--top-left"
 >
   <div
     className="emotion-0 hig__flyout-v1__action"
   />
   <div
-    className="emotion-3 hig__flyout-v1__container"
+    className="emotion-4 hig__flyout-v1__container"
   >
     <div
       aria-hidden="true"
-      className="emotion-2 hig__flyout-v1__pointer-wrapper"
+      className="emotion-3 hig__flyout-v1__pointer-wrapper"
       role="presentation"
       style={undefined}
     >
       <svg
-        className="emotion-1"
         height="12"
         viewBox="0 0 12 12"
         width="12"
       >
         <polygon
-          className="hig__flyout-v1__pointer-border"
+          className="emotion-1"
           points="0,6 6,0 12,6"
         />
         <polygon
-          className="hig__flyout-v1__pointer-background"
+          className="emotion-1"
           points="2.5,6 6,2.5 9.5,6"
         />
       </svg>
@@ -139,7 +134,7 @@ exports[`tooltip/Tooltip  2`] = `
 }
 
 <div
-  className="emotion-4 hig__flyout-v1--top-left"
+  className="emotion-5 hig__flyout-v1--top-left"
 >
   <div
     className="emotion-0 hig__flyout-v1__action"
@@ -166,26 +161,25 @@ exports[`tooltip/Tooltip  2`] = `
     </button>
   </div>
   <div
-    className="emotion-3 hig__flyout-v1__container"
+    className="emotion-4 hig__flyout-v1__container"
   >
     <div
       aria-hidden="true"
-      className="emotion-2 hig__flyout-v1__pointer-wrapper"
+      className="emotion-3 hig__flyout-v1__pointer-wrapper"
       role="presentation"
       style={undefined}
     >
       <svg
-        className="emotion-1"
         height="12"
         viewBox="0 0 12 12"
         width="12"
       >
         <polygon
-          className="hig__flyout-v1__pointer-border"
+          className="emotion-1"
           points="0,6 6,0 12,6"
         />
         <polygon
-          className="hig__flyout-v1__pointer-background"
+          className="emotion-1"
           points="2.5,6 6,2.5 9.5,6"
         />
       </svg>

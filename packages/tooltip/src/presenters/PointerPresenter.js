@@ -5,14 +5,12 @@ import { Pointer } from "@hig/flyout";
 const COLOR = "#393939";
 const SIZE = 12;
 
-function stylesheetOverride() {
+/* eslint-disable-next-line no-unused-vars */
+function stylesheetOverride(stylesheet, props, themeData) {
   return {
-    ".hig__flyout-v1__pointer-border": {
-      fill: COLOR
-    },
-    ".hig__flyout-v1__pointer-background": {
-      fill: COLOR
-    }
+    ...stylesheet,
+    pointerBorder: { fill: COLOR },
+    pointerBody: { fill: COLOR }
   };
 }
 

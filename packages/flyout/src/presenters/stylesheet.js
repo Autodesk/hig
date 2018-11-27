@@ -114,15 +114,11 @@ export default function(props, themeData) {
       position: `absolute`,
       transform: getAnchorPointTransformRotate(anchorPoint)
     },
-    pointer: { // eslint-disable-line prettier/prettier
-      // Pointer border
-      ".hig__flyout-v1__pointer-border": {
-        fill: borderColor
-      },
-      // Pointer body
-      ".hig__flyout-v1__pointer-background": {
-        fill: backgroundColor
-      }
+    pointerBorder: {
+      fill: borderColor
+    },
+    pointerBody: {
+      fill: backgroundColor
     }
   };
 }

@@ -1,52 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`flyout/presenters/PointerPresenter  1`] = `
-.emotion-0 .hig__flyout-v1__pointer-border {
+.emotion-0 {
   fill: transparent;
 }
 
-.emotion-0 .hig__flyout-v1__pointer-background {
+.emotion-1 {
   fill: #ffffff;
 }
 
 <svg
-  className="emotion-0"
   height="24"
   viewBox="0 0 24 24"
   width="24"
 >
   <polygon
-    className="hig__flyout-v1__pointer-border"
+    className="emotion-0"
     points="0,12 12,0 24,12"
   />
   <polygon
-    className="hig__flyout-v1__pointer-background"
+    className="emotion-1"
     points="2.5,12 12,2.5 21.5,12"
   />
 </svg>
 `;
 
 exports[`flyout/presenters/PointerPresenter  2`] = `
-.emotion-0 .hig__flyout-v1__pointer-border {
+.emotion-0 {
   fill: transparent;
 }
 
-.emotion-0 .hig__flyout-v1__pointer-background {
+.emotion-1 {
   fill: #ffffff;
 }
 
 <svg
-  className="emotion-0"
   height="100"
   viewBox="0 0 100 100"
   width="100"
 >
   <polygon
-    className="hig__flyout-v1__pointer-border"
+    className="emotion-0"
     points="0,50 50,0 100,50"
   />
   <polygon
-    className="hig__flyout-v1__pointer-background"
+    className="emotion-1"
     points="10,50 50,10 90,50"
   />
 </svg>
