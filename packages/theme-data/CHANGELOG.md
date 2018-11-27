@@ -1,3 +1,11 @@
+# [@hig/theme-data-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@1.0.0...@hig/theme-data@1.1.0) (2018-11-27)
+
+
+### Features
+
+* add base roles for Flyout ([a63a9e9](https://github.com/Autodesk/hig/commit/a63a9e9))
+* add flyout border color for legacy ([3fc09ab](https://github.com/Autodesk/hig/commit/3fc09ab))
+
 # @hig/theme-data-v1.0.0 (2018-10-31)
 
 
