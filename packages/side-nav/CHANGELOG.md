@@ -1,3 +1,10 @@
+# [@hig/side-nav-v0.2.3](https://github.com/Autodesk/hig/compare/@hig/side-nav@0.2.2...@hig/side-nav@0.2.3) (2018-11-27)
+
+
+### Bug Fixes
+
+* **side-nav:** Update dark blue theme active link colors ([f92fa83](https://github.com/Autodesk/hig/commit/f92fa83))
+
 # [@hig/side-nav-v0.2.2](https://github.com/Autodesk/hig/compare/@hig/side-nav@0.2.1...@hig/side-nav@0.2.2) (2018-10-31)
 
 
