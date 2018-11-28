@@ -99,10 +99,9 @@ export default class IconButton extends Component {
 
     const Element = this.props.link ? "a" : "button";
 
-    return (
-      <Element {...props}>
-        <span className="hig__icon-button__icon">{this.props.icon}</span>
-      </Element>
-    );
+    const icon = React.cloneElement(this.props.icon, {
+      className: cx(this.props.icon.props.className, "hig__icon-button__icon")
+    });
+    return <Element {...props}>{icon}</Element>;
   }
 }

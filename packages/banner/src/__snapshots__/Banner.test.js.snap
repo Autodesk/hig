@@ -79,18 +79,15 @@ exports[`banner/Banner snapshot tests renders with no props 1`] = `
           onMouseLeave={undefined}
           title="Dismiss"
         >
-          <span
+          <svg
             className="hig__icon-button__icon"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <svg
-              viewBox="0 0 16 16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M11.4 5.4l-.8-.8L8 7.3 5.4 4.6l-.8.8L7.3 8l-2.7 2.6.8.8L8 8.7l2.6 2.7.8-.8L8.7 8z"
-              />
-            </svg>
-          </span>
+            <path
+              d="M11.4 5.4l-.8-.8L8 7.3 5.4 4.6l-.8.8L7.3 8l-2.7 2.6.8.8L8 8.7l2.6 2.7.8-.8L8.7 8z"
+            />
+          </svg>
         </button>
       </div>
     </div>

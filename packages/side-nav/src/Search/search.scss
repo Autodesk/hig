@@ -10,6 +10,11 @@
 .hig__side-nav__search__icon {
   position: absolute;
   left: 14px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hig__side-nav__search__input-wrapper {

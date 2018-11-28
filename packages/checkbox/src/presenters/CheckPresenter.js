@@ -46,9 +46,15 @@ export default class CheckPresenter extends Component {
 
     return (
       <span className={iconClasses}>
-        <CheckWhite24 className="hig__checkbox__wrapper__check" />
-        <CheckmarkIndeterminate16 className="hig__checkbox__wrapper__check--indeterminate" />
-        <CheckDisabled16 className="hig__checkbox__wrapper__check--disabled" />
+        <span className="hig__checkbox__wrapper__check">
+          <CheckWhite24 />
+        </span>
+        <span className="hig__checkbox__wrapper__check--indeterminate">
+          <CheckmarkIndeterminate16 />
+        </span>
+        <span className="hig__checkbox__wrapper__check--disabled">
+          <CheckDisabled16 />
+        </span>
       </span>
     );
   }

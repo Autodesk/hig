@@ -58,18 +58,27 @@ exports[`TextFieldPresenter renders with all props 1`] = `
             onMouseLeave={undefined}
             title="Clear field"
           >
-            <span
+            <svg
               className="hig__icon-button__icon"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <div
-                className="hig__icon hig__icon--24-size"
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" role=\\"img\\" title=\\"clear-small-24\\"><g fill=\\"#2e4258\\"><path d=\\"M12,22A10,10,0,1,1,22,12,10,10,0,0,1,12,22ZM12,3a9,9,0,1,0,9,9A9,9,0,0,0,12,3Z\\"/><polygon points=\\"15.45 7.47 11.97 10.95 8.51 7.47 7.45 8.53 10.91 12.01 7.45 15.47 8.51 16.53 11.97 13.07 15.42 16.53 16.48 15.47 13.03 12.01 16.51 8.53 15.45 7.47\\"/></g></svg>",
-                  }
-                }
-              />
-            </span>
+              <title>
+                close-24
+              </title>
+              <g
+                fill="#2e4258"
+              >
+                <path
+                  d="M12 22a10 10 0 1 1 10-10 10 10 0 0 1-10 10zm0-19a9 9 0 1 0 9 9 9 9 0 0 0-9-9z"
+                />
+                <path
+                  d="M15.45 7.47l-3.48 3.48-3.46-3.48-1.06 1.06 3.46 3.48-3.46 3.46 1.06 1.06 3.46-3.46 3.45 3.46 1.06-1.06-3.45-3.46 3.48-3.48-1.06-1.06z"
+                />
+              </g>
+            </svg>
           </button>
         </span>
       </div>
