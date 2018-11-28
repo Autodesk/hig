@@ -4,10 +4,6 @@ import { css } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
 import stylesheet from "./stylesheet";
 
-function stylesheetOverride() {
-  return {};
-}
-
 export default function PointerPresenter(props) {
   const { borderWidth, size } = props;
   const height = size / 2;
@@ -21,10 +17,7 @@ export default function PointerPresenter(props) {
           { transitionStatus: null, anchorPoint: null },
           resolvedRoles
         );
-        const hasCustomStyles =
-          Object.keys(props.stylesheet(styles, props, resolvedRoles)).length >
-          0;
-        const stylesheetFunction = hasCustomStyles
+        const cssStyles = props.stylesheet
           ? props.stylesheet(styles, props, resolvedRoles)
           : styles;
 
@@ -35,7 +28,7 @@ export default function PointerPresenter(props) {
             width={width.toString()}
           >
             <polygon
-              className={css(stylesheetFunction.pointerBorder)}
+              className={css(cssStyles.pointerBorder)}
               points={[
                 `0,${height}`,
                 `${widthMidpoint},0`,
@@ -43,7 +36,7 @@ export default function PointerPresenter(props) {
               ].join(" ")}
             />
             <polygon
-              className={css(stylesheetFunction.pointerBody)}
+              className={css(cssStyles.pointerBody)}
               points={[
                 `${borderWidth},${height}`,
                 `${widthMidpoint},${borderWidth}`,
@@ -59,8 +52,7 @@ export default function PointerPresenter(props) {
 
 PointerPresenter.defaultProps = {
   borderWidth: 2.5,
-  size: 24,
-  stylesheet: stylesheetOverride
+  size: 24
 };
 
 PointerPresenter.propTypes = {
