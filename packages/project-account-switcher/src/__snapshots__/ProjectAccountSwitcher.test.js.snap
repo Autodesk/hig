@@ -224,7 +224,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
 
 exports[`project-account-switcher/ProjectAccountSwitcher integration renders with default account/project 1`] = `
 <div
-  className="emotion-6 hig__flyout-v1--hidden hig__flyout-v1--top-left"
+  className="emotion-7 hig__flyout-v1--hidden hig__flyout-v1--top-left"
 >
   <div
     className="emotion-0 hig__flyout-v1__action"
@@ -279,32 +279,31 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
     </div>
   </div>
   <div
-    className="emotion-5 hig__flyout-v1__container"
+    className="emotion-6 hig__flyout-v1__container"
   >
     <div
       aria-hidden="true"
-      className="emotion-2 hig__flyout-v1__pointer-wrapper"
+      className="emotion-3 hig__flyout-v1__pointer-wrapper"
       role="presentation"
       style={undefined}
     >
       <svg
-        className="emotion-1"
         height="24"
         viewBox="0 0 24 24"
         width="24"
       >
         <polygon
-          className="hig__flyout-v1__pointer-border"
+          className="emotion-1"
           points="0,12 12,0 24,12"
         />
         <polygon
-          className="hig__flyout-v1__pointer-background"
+          className="emotion-2"
           points="2.5,12 12,2.5 21.5,12"
         />
       </svg>
     </div>
     <div
-      className="emotion-4 hig__flyout-v1__panel-container"
+      className="emotion-5 hig__flyout-v1__panel-container"
       style={
         Object {
           "maxHeight": undefined,
@@ -312,7 +311,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
       }
     >
       <div
-        className="emotion-3 hig__flyout-v1__panel-container__inner"
+        className="emotion-4 hig__flyout-v1__panel-container__inner"
       >
         <div
           className="hig__project-account-switcher__panel"
