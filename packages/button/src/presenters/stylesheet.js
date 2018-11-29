@@ -33,11 +33,6 @@ function getButtonRulesByType(type, themeData) {
       return {
         background: themeData["button.solid.backgroundColor"],
         color: themeData["button.solid.textColor"],
-        "&:active": {
-          boxShadow: `0 0 0 ${themeData["button.solid.pressed.haloWidth"]} ${
-            themeData["button.solid.pressed.halo.color"]
-          }`
-        },
         "&:visited": {
           color: themeData["button.solid.textColor"]
         },
@@ -52,12 +47,6 @@ function getButtonRulesByType(type, themeData) {
         background: "none",
         borderColor: themeData["button.outline.borderColor"],
         color: themeData["button.outline.textColor"],
-        "&:active": {
-          borderColor: themeData["button.outline.pressed.borderColor"],
-          boxShadow: `0 0 0 ${themeData["button.outline.pressed.haloWidth"]} ${
-            themeData["button.outline.pressed.halo.color"]
-          }`
-        },
         "&:visited": {
           color: themeData["button.outline.textColor"]
         },
@@ -71,11 +60,6 @@ function getButtonRulesByType(type, themeData) {
         background: "none",
         borderColor: themeData["button.flat.borderColor"],
         color: themeData["button.flat.textColor"],
-        "&:active": {
-          boxShadow: `0 0 0 ${themeData["button.flat.pressed.haloWidth"]} ${
-            themeData["button.flat.pressed.halo.color"]
-          }`
-        },
         "&:visited": {
           color: themeData["button.flat.textColor"]
         },
@@ -189,9 +173,37 @@ function getButtonFocusRulesByType(type, themeData) {
   }
 }
 
+function getButtonPressedRulesByType(type, themeData) {
+  switch (type) {
+    case types.SOLID:
+    case types.PRIMARY:
+      return {
+        boxShadow: `0 0 0 ${themeData["button.solid.pressed.haloWidth"]} ${
+          themeData["button.solid.pressed.halo.color"]
+        }`
+      };
+    case types.OUTLINE:
+    case types.SECONDARY:
+      return {
+        borderColor: themeData["button.outline.pressed.borderColor"],
+        boxShadow: `0 0 0 ${themeData["button.outline.pressed.haloWidth"]} ${
+          themeData["button.outline.pressed.halo.color"]
+        }`
+      };
+    case types.FLAT:
+      return {
+        boxShadow: `0 0 0 ${themeData["button.flat.pressed.haloWidth"]} ${
+          themeData["button.flat.pressed.halo.color"]
+        }`
+      };
+    default:
+      return {};
+  }
+}
+
 export default function stylesheet(props, themeData) {
-  const { disabled, hasFocus, hasHover, pressed, size, type, width } = props;
-  console.log(props);
+  const { disabled, hasFocus, hasHover, isPressed, size, type, width } = props;
+
   return {
     button: {
       ...getButtonDefaultButtonRules(themeData),
@@ -199,6 +211,7 @@ export default function stylesheet(props, themeData) {
       ...getButtonRulesByDisabled(disabled),
       ...(hasHover ? getButtonHoverRulesByType(type, themeData) : {}),
       ...(hasFocus ? getButtonFocusRulesByType(type, themeData) : {}),
+      ...(isPressed ? getButtonPressedRulesByType(type, themeData) : {}),
       ...getButtonRulesBySize(size, themeData),
       ...getButtonRulesByWidth(width)
     },

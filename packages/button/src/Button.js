@@ -44,6 +44,10 @@ export default class Button extends Component {
      */
     onHover: PropTypes.func,
     /**
+     * Triggers when the user's mouse is pressed over the button
+     */
+    onMouseDown: PropTypes.func,
+    /**
      * Triggers when the user's mouse is over the button
      */
     onMouseEnter: PropTypes.func,
@@ -51,6 +55,10 @@ export default class Button extends Component {
      * Triggers when the user's mouse is no longer over the button
      */
     onMouseLeave: PropTypes.func,
+    /**
+     * Triggers when the user's mouse is no longer pressed over the button
+     */
+    onMouseUp: PropTypes.func,
     /**
      * Specifies size of button
      */
@@ -89,8 +97,10 @@ export default class Button extends Component {
       onClick,
       onFocus,
       onHover,
+      onMouseDown,
       onMouseEnter,
       onMouseLeave,
+      onMouseUp,
       size,
       target,
       title,
@@ -102,29 +112,37 @@ export default class Button extends Component {
       <ControlBehavior
         onBlur={onBlur}
         onFocus={onFocus}
+        onMouseDown={onMouseDown}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
+        onMouseUp={onMouseUp}
       >
         {({
           hasFocus,
           hasHover,
+          isPressed,
           onBlur: handleBlur,
           onFocus: handleFocus,
+          onMouseDown: handleMouseDown,
           onMouseEnter: handleMouseEnter,
-          onMouseLeave: handleMouseLeave
+          onMouseLeave: handleMouseLeave,
+          onMouseUp: handleMouseUp
         }) => (
           <ButtonPresenter
             disabled={disabled}
             hasFocus={hasFocus}
             hasHover={hasHover}
+            isPressed={isPressed}
             icon={icon}
             link={link}
             onBlur={handleBlur}
             onClick={onClick}
             onFocus={handleFocus}
             onHover={onHover}
+            onMouseDown={handleMouseDown}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
+            onMouseUp={handleMouseUp}
             size={size}
             target={target}
             title={title}

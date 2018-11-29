@@ -39,14 +39,17 @@ export default class ButtonPresenter extends Component {
     disabled: PropTypes.bool,
     hasFocus: PropTypes.bool,
     hasHover: PropTypes.bool,
+    isPressed: PropTypes.bool,
     icon: PropTypes.node,
     link: PropTypes.string,
     onBlur: PropTypes.func,
     onClick: PropTypes.func,
     onFocus: PropTypes.func,
     onHover: PropTypes.func,
+    onMouseDown: PropTypes.func,
     onMouseEnter: PropTypes.func,
     onMouseLeave: PropTypes.func,
+    onMouseUp: PropTypes.func,
     size: PropTypes.oneOf(availableSizes),
     target: PropTypes.oneOf(availableTargets),
     title: PropTypes.string.isRequired,
@@ -59,14 +62,17 @@ export default class ButtonPresenter extends Component {
       disabled,
       hasFocus,
       hasHover,
+      isPressed,
       icon,
       link,
       onBlur,
       onClick,
       onFocus,
       onHover,
+      onMouseDown,
       onMouseEnter,
       onMouseLeave,
+      onMouseUp,
       size,
       target,
       title,
@@ -84,7 +90,7 @@ export default class ButtonPresenter extends Component {
         {({ metadata, resolvedRoles }) => {
           const { className } = metadata;
           const styles = stylesheet(
-            { disabled, hasFocus, hasHover, size, type, width },
+            { disabled, hasFocus, hasHover, isPressed, size, type, width },
             resolvedRoles
           );
           const buttonClassName = cx(
@@ -113,9 +119,11 @@ export default class ButtonPresenter extends Component {
               onBlur={onBlur}
               onClick={onClick}
               onFocus={onFocus}
+              onMouseDown={onMouseDown}
               onMouseEnter={onMouseEnter}
               onMouseLeave={onMouseLeave}
               onMouseOver={onHover}
+              onMouseUp={onMouseUp}
             >
               {icon && <span className={iconClassName}>{icon}</span>}
               <span className="hig__button__title">{title}</span>
