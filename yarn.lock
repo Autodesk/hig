@@ -136,14 +136,6 @@
   version "0.8.2"
   resolved "https://registry.yarnpkg.com/@emotion/utils/-/utils-0.8.2.tgz#576ff7fb1230185b619a75d258cbc98f0867a8dc"
 
-"@hig/button@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@hig/button/-/button-0.2.0.tgz#eab13b5a4c06ea7a34d1189ff119eaa677a4044c"
-  dependencies:
-    "@hig/themes" "^0.3.0"
-    classnames "^2.2.5"
-    prop-types "^15.6.1"
-
 "@hig/dropdown@^0.3.0":
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@hig/dropdown/-/dropdown-0.3.0.tgz#bd764146a2d3b196021ecac323dc7fa5b7500d1e"
@@ -168,15 +160,7 @@
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/@hig/styles/-/styles-0.2.3.tgz#675631d008c1861921d6148ecf15b140c04cc5b4"
 
-"@hig/text-area@^0.1.2":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@hig/text-area/-/text-area-0.1.2.tgz#9a828d96cbbcf2b39ecbad01b95a9ec55f58a68e"
-  dependencies:
-    "@hig/utils" "^0.3.0"
-    classnames "^2.2.5"
-    prop-types "^15.6.1"
-
-"@hig/text-field@^0.4.2", "@hig/text-field@^0.4.5":
+"@hig/text-field@^0.4.2":
   version "0.4.5"
   resolved "https://registry.yarnpkg.com/@hig/text-field/-/text-field-0.4.5.tgz#299648be902619b35088cf6496e6f0aac547511d"
   dependencies:
@@ -10588,9 +10572,9 @@ rollup@^0.57.1:
     signal-exit "^3.0.2"
     sourcemap-codec "^1.4.1"
 
-rollup@^0.66.0:
-  version "0.66.5"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-0.66.5.tgz#49b109d3db4772301d84b8ed9617a4481e9a8042"
+rollup@^0.67.0:
+  version "0.67.3"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-0.67.3.tgz#55475b1b62c43220c3b4bd7edc5846233932f50b"
   dependencies:
     "@types/estree" "0.0.39"
     "@types/node" "*"
