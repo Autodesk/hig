@@ -37,6 +37,8 @@ const classNameByWidth = {
 export default class ButtonPresenter extends Component {
   static propTypes = {
     disabled: PropTypes.bool,
+    hasFocus: PropTypes.bool,
+    hasHover: PropTypes.bool,
     icon: PropTypes.node,
     link: PropTypes.string,
     onBlur: PropTypes.func,
@@ -55,6 +57,8 @@ export default class ButtonPresenter extends Component {
   render() {
     const {
       disabled,
+      hasFocus,
+      hasHover,
       icon,
       link,
       onBlur,
@@ -80,7 +84,7 @@ export default class ButtonPresenter extends Component {
         {({ metadata, resolvedRoles }) => {
           const { className } = metadata;
           const styles = stylesheet(
-            { disabled, size, type, width },
+            { disabled, hasFocus, hasHover, size, type, width },
             resolvedRoles
           );
           const buttonClassName = cx(

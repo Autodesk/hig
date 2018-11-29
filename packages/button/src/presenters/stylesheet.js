@@ -33,17 +33,6 @@ function getButtonRulesByType(type, themeData) {
       return {
         background: themeData["button.solid.backgroundColor"],
         color: themeData["button.solid.textColor"],
-        "&:hover": {
-          boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${
-            themeData["button.solid.hover.halo.color"]
-          }`
-        },
-        "&:focus": {
-          boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${
-            themeData["button.solid.focus.halo.color"]
-          }`,
-          outline: `none`
-        },
         "&:active": {
           boxShadow: `0 0 0 ${themeData["button.solid.pressed.haloWidth"]} ${
             themeData["button.solid.pressed.halo.color"]
@@ -63,18 +52,6 @@ function getButtonRulesByType(type, themeData) {
         background: "none",
         borderColor: themeData["button.outline.borderColor"],
         color: themeData["button.outline.textColor"],
-        "&:hover": {
-          boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${
-            themeData["button.outline.hover.halo.color"]
-          }`
-        },
-        "&:focus": {
-          borderColor: themeData["button.outline.focus.borderColor"],
-          boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${
-            themeData["button.outline.focus.halo.color"]
-          }`,
-          outline: `none`
-        },
         "&:active": {
           borderColor: themeData["button.outline.pressed.borderColor"],
           boxShadow: `0 0 0 ${themeData["button.outline.pressed.haloWidth"]} ${
@@ -94,17 +71,6 @@ function getButtonRulesByType(type, themeData) {
         background: "none",
         borderColor: themeData["button.flat.borderColor"],
         color: themeData["button.flat.textColor"],
-        "&:hover": {
-          boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${
-            themeData["button.flat.hover.halo.color"]
-          }`
-        },
-        "&:focus": {
-          boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${
-            themeData["button.flat.focus.halo.color"]
-          }`,
-          outline: `none`
-        },
         "&:active": {
           boxShadow: `0 0 0 ${themeData["button.flat.pressed.haloWidth"]} ${
             themeData["button.flat.pressed.halo.color"]
@@ -165,13 +131,74 @@ function getButtonRulesByWidth(width) {
   return width === widths.GROW ? { width: "100%" } : {};
 }
 
+function getButtonHoverRulesByType(type, themeData) {
+  switch (type) {
+    case types.SOLID:
+    case types.PRIMARY:
+      return {
+        boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${
+          themeData["button.solid.hover.halo.color"]
+        }`
+      };
+    case types.OUTLINE:
+    case types.SECONDARY:
+      return {
+        boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${
+          themeData["button.outline.hover.halo.color"]
+        }`
+      };
+    case types.FLAT:
+      return {
+        boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${
+          themeData["button.flat.hover.halo.color"]
+        }`
+      };
+    default:
+      return {};
+  }
+}
+
+function getButtonFocusRulesByType(type, themeData) {
+  switch (type) {
+    case types.SOLID:
+    case types.PRIMARY:
+      return {
+        boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${
+          themeData["button.solid.focus.halo.color"]
+        }`,
+        outline: `none`
+      };
+    case types.OUTLINE:
+    case types.SECONDARY:
+      return {
+        borderColor: themeData["button.outline.focus.borderColor"],
+        boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${
+          themeData["button.outline.focus.halo.color"]
+        }`,
+        outline: `none`
+      };
+    case types.FLAT:
+      return {
+        boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${
+          themeData["button.flat.focus.halo.color"]
+        }`,
+        outline: `none`
+      };
+    default:
+      return {};
+  }
+}
+
 export default function stylesheet(props, themeData) {
-  const { disabled, size, type, width } = props;
+  const { disabled, hasFocus, hasHover, pressed, size, type, width } = props;
+  console.log(props);
   return {
     button: {
       ...getButtonDefaultButtonRules(themeData),
       ...getButtonRulesByType(type, themeData),
       ...getButtonRulesByDisabled(disabled),
+      ...(hasHover ? getButtonHoverRulesByType(type, themeData) : {}),
+      ...(hasFocus ? getButtonFocusRulesByType(type, themeData) : {}),
       ...getButtonRulesBySize(size, themeData),
       ...getButtonRulesByWidth(width)
     },
