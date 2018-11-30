@@ -503,10 +503,10 @@ export default {
   "button.solid.disabled.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "button.solid.backgroundColor",
-      transform: {
-        alpha: 0.2
-      }
+      ref: "button.solid.backgroundColor"
+    },
+    transform: {
+      alpha: 0.4
     }
   },
   "button.solid.disabled.borderColor": {
@@ -717,10 +717,10 @@ export default {
   "button.flat.disabled.textColor": {
     type: COLOR,
     value: {
-      ref: "button.flat.textColor",
-      transform: {
-        alpha: 0.2
-      }
+      ref: "button.flat.textColor"
+    },
+    transform: {
+      alpha: 0.4
     }
   },
   "button.flat.disabled.icon.color": {

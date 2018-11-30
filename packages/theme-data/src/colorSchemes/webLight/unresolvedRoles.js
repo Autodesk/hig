@@ -7,6 +7,7 @@ const oldBasics = {
     "hig-turquoise-50": "#0ED3BE",
     "hig-cool-gray-20": "#D4DBE1",
     "hig-cool-gray-30": "#BEC8D2",
+    "hig-blue-20": "#CCEAF9",
     "hig-blue-40": "#66BFE9",
     "hig-blue-60": "#0671A1"
   }
@@ -20,6 +21,12 @@ const webLightThemeResolvedRoles = extendTheme(lightGrayTheme.unresolvedRoles, {
   },
   "button.halo.width": {
     value: 0
+  },
+  "button.flat.disabled.textColor": {
+    value: oldBasics.colors["hig-cool-gray-30"],
+    transform: {
+      alpha: 1
+    }
   },
   "button.flat.textColor": {
     value: {
@@ -56,6 +63,18 @@ const webLightThemeResolvedRoles = extendTheme(lightGrayTheme.unresolvedRoles, {
   "button.outline.borderColor": {
     value: oldBasics.colors["hig-cool-gray-30"]
   },
+  "button.outline.disabled.borderColor": {
+    value: oldBasics.colors["hig-cool-gray-20"],
+    transform: {
+      alpha: 1
+    }
+  },
+  "button.outline.disabled.textColor": {
+    value: oldBasics.colors["hig-cool-gray-30"],
+    transform: {
+      alpha: 1
+    }
+  },
   "button.outline.focus.backgroundColor": {
     value: oldBasics.colors["hig-turquoise-40"]
   },
@@ -80,6 +99,22 @@ const webLightThemeResolvedRoles = extendTheme(lightGrayTheme.unresolvedRoles, {
   },
   "button.outline.hover.borderColor": {
     value: oldBasics.colors["hig-turquoise-50"]
+  },
+  "button.solid.textColor": {
+    value: {
+      ref: "basics.colors.white"
+    }
+  },
+  "button.solid.disabled.backgroundColor": {
+    value: oldBasics.colors["hig-blue-20"],
+    transform: {
+      alpha: 1
+    }
+  },
+  "button.solid.disabled.textColor": {
+    value: {
+      ref: "basics.colors.white"
+    }
   },
   "button.solid.focus.backgroundColor": {
     value: oldBasics.colors["hig-blue-60"]
