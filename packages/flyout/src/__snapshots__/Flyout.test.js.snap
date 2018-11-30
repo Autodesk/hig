@@ -68,7 +68,7 @@ exports[`flyout/Flyout snapshots renders a custom pointer 1`] = `
   font-size: 14px;
   font-weight: 400;
   line-height: 34px;
-  margin: 0px;
+  margin: 0;
   overflow: hidden;
   text-align: center;
   -webkit-text-decoration: none;
@@ -85,19 +85,6 @@ exports[`flyout/Flyout snapshots renders a custom pointer 1`] = `
   height: 36px;
   min-width: 68px;
   padding: 0 16px;
-}
-
-.emotion-0:hover {
-  box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
-}
-
-.emotion-0:focus {
-  box-shadow: 0 0 0 2px rgba(6,150,215,0.4);
-  outline: none;
-}
-
-.emotion-0:active {
-  box-shadow: 0 0 0 4px rgba(6,150,215,0.4);
 }
 
 .emotion-0:visited {
@@ -120,9 +107,11 @@ exports[`flyout/Flyout snapshots renders a custom pointer 1`] = `
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
+      onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onMouseOver={undefined}
+      onMouseUp={[Function]}
       tabIndex="0"
       target={undefined}
     >
@@ -194,7 +183,7 @@ exports[`flyout/Flyout snapshots renders children from the given render function
   font-size: 14px;
   font-weight: 400;
   line-height: 34px;
-  margin: 0px;
+  margin: 0;
   overflow: hidden;
   text-align: center;
   -webkit-text-decoration: none;
@@ -211,19 +200,6 @@ exports[`flyout/Flyout snapshots renders children from the given render function
   height: 36px;
   min-width: 68px;
   padding: 0 16px;
-}
-
-.emotion-0:hover {
-  box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
-}
-
-.emotion-0:focus {
-  box-shadow: 0 0 0 2px rgba(6,150,215,0.4);
-  outline: none;
-}
-
-.emotion-0:active {
-  box-shadow: 0 0 0 4px rgba(6,150,215,0.4);
 }
 
 .emotion-0:visited {
@@ -246,9 +222,11 @@ exports[`flyout/Flyout snapshots renders children from the given render function
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
+      onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onMouseOver={undefined}
+      onMouseUp={[Function]}
       tabIndex="0"
       target={undefined}
     >
@@ -331,7 +309,7 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
   font-size: 14px;
   font-weight: 400;
   line-height: 34px;
-  margin: 0px;
+  margin: 0;
   overflow: hidden;
   text-align: center;
   -webkit-text-decoration: none;
@@ -348,19 +326,6 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
   height: 36px;
   min-width: 68px;
   padding: 0 16px;
-}
-
-.emotion-0:hover {
-  box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
-}
-
-.emotion-0:focus {
-  box-shadow: 0 0 0 2px rgba(6,150,215,0.4);
-  outline: none;
-}
-
-.emotion-0:active {
-  box-shadow: 0 0 0 4px rgba(6,150,215,0.4);
 }
 
 .emotion-0:visited {
@@ -383,9 +348,11 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
+      onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onMouseOver={undefined}
+      onMouseUp={[Function]}
       tabIndex="0"
       target={undefined}
     >
@@ -531,7 +498,7 @@ exports[`flyout/Flyout snapshots renders the panel from a basic render function 
   font-size: 14px;
   font-weight: 400;
   line-height: 34px;
-  margin: 0px;
+  margin: 0;
   overflow: hidden;
   text-align: center;
   -webkit-text-decoration: none;
@@ -548,19 +515,6 @@ exports[`flyout/Flyout snapshots renders the panel from a basic render function 
   height: 36px;
   min-width: 68px;
   padding: 0 16px;
-}
-
-.emotion-0:hover {
-  box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
-}
-
-.emotion-0:focus {
-  box-shadow: 0 0 0 2px rgba(6,150,215,0.4);
-  outline: none;
-}
-
-.emotion-0:active {
-  box-shadow: 0 0 0 4px rgba(6,150,215,0.4);
 }
 
 .emotion-0:visited {
@@ -583,9 +537,11 @@ exports[`flyout/Flyout snapshots renders the panel from a basic render function 
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
+      onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onMouseOver={undefined}
+      onMouseUp={[Function]}
       tabIndex="0"
       target={undefined}
     >
@@ -652,7 +608,7 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
   font-size: 14px;
   font-weight: 400;
   line-height: 34px;
-  margin: 0px;
+  margin: 0;
   overflow: hidden;
   text-align: center;
   -webkit-text-decoration: none;
@@ -669,19 +625,6 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
   height: 36px;
   min-width: 68px;
   padding: 0 16px;
-}
-
-.emotion-0:hover {
-  box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
-}
-
-.emotion-0:focus {
-  box-shadow: 0 0 0 2px rgba(6,150,215,0.4);
-  outline: none;
-}
-
-.emotion-0:active {
-  box-shadow: 0 0 0 4px rgba(6,150,215,0.4);
 }
 
 .emotion-0:visited {
@@ -704,9 +647,11 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
+      onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onMouseOver={undefined}
+      onMouseUp={[Function]}
       tabIndex="0"
       target={undefined}
     >
@@ -794,7 +739,7 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
   font-size: 14px;
   font-weight: 400;
   line-height: 34px;
-  margin: 0px;
+  margin: 0;
   overflow: hidden;
   text-align: center;
   -webkit-text-decoration: none;
@@ -811,19 +756,6 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
   height: 36px;
   min-width: 68px;
   padding: 0 16px;
-}
-
-.emotion-0:hover {
-  box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
-}
-
-.emotion-0:focus {
-  box-shadow: 0 0 0 2px rgba(6,150,215,0.4);
-  outline: none;
-}
-
-.emotion-0:active {
-  box-shadow: 0 0 0 4px rgba(6,150,215,0.4);
 }
 
 .emotion-0:visited {
@@ -846,9 +778,11 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
+      onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onMouseOver={undefined}
+      onMouseUp={[Function]}
       tabIndex="0"
       target={undefined}
     >

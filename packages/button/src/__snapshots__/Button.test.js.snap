@@ -14,7 +14,7 @@ exports[`Button  1`] = `
   font-size: 14px;
   font-weight: 400;
   line-height: 34px;
-  margin: 0px;
+  margin: 0;
   overflow: hidden;
   text-align: center;
   -webkit-text-decoration: none;
@@ -33,19 +33,6 @@ exports[`Button  1`] = `
   padding: 0 16px;
 }
 
-.emotion-0:hover {
-  box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
-}
-
-.emotion-0:focus {
-  box-shadow: 0 0 0 2px rgba(6,150,215,0.4);
-  outline: none;
-}
-
-.emotion-0:active {
-  box-shadow: 0 0 0 4px rgba(6,150,215,0.4);
-}
-
 .emotion-0:visited {
   color: #f5f5f5;
 }
@@ -60,9 +47,11 @@ exports[`Button  1`] = `
   onBlur={[Function]}
   onClick={undefined}
   onFocus={[Function]}
+  onMouseDown={[Function]}
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
   onMouseOver={undefined}
+  onMouseUp={[Function]}
   tabIndex="0"
   target={undefined}
 >
@@ -88,7 +77,7 @@ exports[`Button  2`] = `
   font-size: 14px;
   font-weight: 400;
   line-height: 34px;
-  margin: 0px;
+  margin: 0;
   overflow: hidden;
   text-align: center;
   -webkit-text-decoration: none;
@@ -107,19 +96,6 @@ exports[`Button  2`] = `
   padding: 0 16px;
 }
 
-.emotion-0:hover {
-  box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
-}
-
-.emotion-0:focus {
-  box-shadow: 0 0 0 2px rgba(6,150,215,0.4);
-  outline: none;
-}
-
-.emotion-0:active {
-  box-shadow: 0 0 0 4px rgba(6,150,215,0.4);
-}
-
 .emotion-0:visited {
   color: #f5f5f5;
 }
@@ -134,9 +110,11 @@ exports[`Button  2`] = `
   onBlur={[Function]}
   onClick={undefined}
   onFocus={[Function]}
+  onMouseDown={[Function]}
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
   onMouseOver={undefined}
+  onMouseUp={[Function]}
   tabIndex="0"
   target={undefined}
 >
@@ -162,7 +140,7 @@ exports[`Button  3`] = `
   font-size: 14px;
   font-weight: 400;
   line-height: 34px;
-  margin: 0px;
+  margin: 0;
   overflow: hidden;
   text-align: center;
   -webkit-text-decoration: none;
@@ -181,21 +159,6 @@ exports[`Button  3`] = `
   padding: 0 16px;
 }
 
-.emotion-0:hover {
-  box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
-}
-
-.emotion-0:focus {
-  border-color: #0696d7;
-  box-shadow: 0 0 0 2px rgba(6,150,215,0.4);
-  outline: none;
-}
-
-.emotion-0:active {
-  border-color: #0696d7;
-  box-shadow: 0 0 0 4px rgba(6,150,215,0.4);
-}
-
 .emotion-0:visited {
   color: #3c3c3c;
 }
@@ -210,9 +173,11 @@ exports[`Button  3`] = `
   onBlur={[Function]}
   onClick={undefined}
   onFocus={[Function]}
+  onMouseDown={[Function]}
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
   onMouseOver={undefined}
+  onMouseUp={[Function]}
   tabIndex="0"
   target={undefined}
 >
@@ -238,7 +203,7 @@ exports[`Button  4`] = `
   font-size: 14px;
   font-weight: 400;
   line-height: 34px;
-  margin: 0px;
+  margin: 0;
   overflow: hidden;
   text-align: center;
   -webkit-text-decoration: none;
@@ -257,19 +222,6 @@ exports[`Button  4`] = `
   padding: 0 16px;
 }
 
-.emotion-0:hover {
-  box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
-}
-
-.emotion-0:focus {
-  box-shadow: 0 0 0 2px rgba(6,150,215,0.4);
-  outline: none;
-}
-
-.emotion-0:active {
-  box-shadow: 0 0 0 4px rgba(6,150,215,0.4);
-}
-
 .emotion-0:visited {
   color: #0571a1;
 }
@@ -284,9 +236,11 @@ exports[`Button  4`] = `
   onBlur={[Function]}
   onClick={undefined}
   onFocus={[Function]}
+  onMouseDown={[Function]}
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
   onMouseOver={undefined}
+  onMouseUp={[Function]}
   tabIndex="0"
   target={undefined}
 >
@@ -312,7 +266,7 @@ exports[`Button  5`] = `
   font-size: 14px;
   font-weight: 400;
   line-height: 34px;
-  margin: 0px;
+  margin: 0;
   overflow: hidden;
   text-align: center;
   -webkit-text-decoration: none;
@@ -329,19 +283,6 @@ exports[`Button  5`] = `
   height: 36px;
   min-width: 68px;
   padding: 0 16px;
-}
-
-.emotion-1:hover {
-  box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
-}
-
-.emotion-1:focus {
-  box-shadow: 0 0 0 2px rgba(6,150,215,0.4);
-  outline: none;
-}
-
-.emotion-1:active {
-  box-shadow: 0 0 0 4px rgba(6,150,215,0.4);
 }
 
 .emotion-1:visited {
@@ -368,9 +309,11 @@ exports[`Button  5`] = `
   onBlur={[Function]}
   onClick={undefined}
   onFocus={[Function]}
+  onMouseDown={[Function]}
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
   onMouseOver={undefined}
+  onMouseUp={[Function]}
   tabIndex="0"
   target={undefined}
 >
@@ -401,7 +344,7 @@ exports[`Button  6`] = `
   font-size: 14px;
   font-weight: 400;
   line-height: 34px;
-  margin: 0px;
+  margin: 0;
   overflow: hidden;
   text-align: center;
   -webkit-text-decoration: none;
@@ -420,19 +363,6 @@ exports[`Button  6`] = `
   padding: 0 16px;
 }
 
-.emotion-0:hover {
-  box-shadow: 0 0 0 2px rgba(128,128,128,0.4);
-}
-
-.emotion-0:focus {
-  box-shadow: 0 0 0 2px rgba(6,150,215,0.4);
-  outline: none;
-}
-
-.emotion-0:active {
-  box-shadow: 0 0 0 4px rgba(6,150,215,0.4);
-}
-
 .emotion-0:visited {
   color: #f5f5f5;
 }
@@ -447,9 +377,11 @@ exports[`Button  6`] = `
   onBlur={[Function]}
   onClick={undefined}
   onFocus={[Function]}
+  onMouseDown={[Function]}
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
   onMouseOver={undefined}
+  onMouseUp={[Function]}
   tabIndex="0"
   target={undefined}
 >
