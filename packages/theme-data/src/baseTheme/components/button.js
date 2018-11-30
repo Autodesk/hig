@@ -81,7 +81,15 @@ export default {
       ref: "density.spacings.medium"
     }
   },
-
+  /**
+   * ## Size
+   */
+  "button.large.horizontalPadding": {
+    type: LENGTH,
+    value: {
+      ref: "density.spacings.large"
+    }
+  },
   /**
    * ## States
    *
