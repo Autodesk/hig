@@ -54,7 +54,7 @@ export default {
   "button.fontSize": {
     type: FONT_SIZE,
     value: {
-      ref: "basics.fontSizes.mediumMedium"
+      ref: "density.fontSizes.medium"
     }
   },
   "button.gutter": {
@@ -68,7 +68,7 @@ export default {
   "button.horizontalPadding": {
     type: LENGTH,
     value: {
-      ref: "basics.spacings.mediumMedium"
+      ref: "density.spacings.medium"
     }
   },
   "button.minimumWidth": {
@@ -78,7 +78,7 @@ export default {
   "button.verticalPadding": {
     type: LENGTH,
     value: {
-      ref: "basics.spacings.mediumMedium"
+      ref: "density.spacings.medium"
     }
   },
 

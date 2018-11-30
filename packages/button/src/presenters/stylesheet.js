@@ -86,7 +86,7 @@ function getButtonRulesBySize(size, themeData) {
         height: "28px", // line-height + (borderWidth * 2)
         lineHeight: "26px",
         minWidth: "66px",
-        padding: "0 16px"
+        padding: `0 ${themeData["button.horizontalPadding"]}`
       };
     case sizes.STANDARD:
       return {
@@ -95,7 +95,7 @@ function getButtonRulesBySize(size, themeData) {
         height: "36px", // line-height + (borderWidth * 2)
         lineHeight: "34px",
         minWidth: "68px",
-        padding: "0 16px"
+        padding: `0 ${themeData["button.horizontalPadding"]}`
       };
     case sizes.LARGE:
       return {
