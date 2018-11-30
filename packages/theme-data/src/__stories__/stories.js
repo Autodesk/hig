@@ -74,7 +74,7 @@ export default [
     readme: undefined
   },
   {
-    description: "Component - Forms",
+    description: "Component - Form field",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, /^formField./),
     readme: undefined
   },
@@ -91,6 +91,11 @@ export default [
   {
     description: "Component - Menu",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, /^menu./),
+    readme: undefined
+  },
+  {
+    description: "Component - Skeleton item",
+    schema: filterMatchByKey(baseTheme.unresolvedRoles, /^skeletonItem./),
     readme: undefined
   },
   {
