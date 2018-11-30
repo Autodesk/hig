@@ -29,7 +29,7 @@ export default {
   },
   "formField.icon.width": {
     type: LENGTH,
-    value: { ref: "icon.width" }
+    value: "24px"
   },
   "formField.icon.paddingRight": {
     type: LENGTH,
