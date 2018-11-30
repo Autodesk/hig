@@ -120,6 +120,7 @@ function getButtonHoverRulesByType(type, themeData) {
     case types.SOLID:
     case types.PRIMARY:
       return {
+        background: themeData["button.solid.hover.backgroundColor"],
         boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${
           themeData["button.solid.hover.halo.color"]
         }`
@@ -127,12 +128,14 @@ function getButtonHoverRulesByType(type, themeData) {
     case types.OUTLINE:
     case types.SECONDARY:
       return {
+        borderColor: themeData["button.outline.hover.borderColor"],
         boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${
           themeData["button.outline.hover.halo.color"]
         }`
       };
     case types.FLAT:
       return {
+        borderColor: themeData["button.flat.hover.borderColor"],
         boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${
           themeData["button.flat.hover.halo.color"]
         }`
@@ -147,6 +150,7 @@ function getButtonFocusRulesByType(type, themeData) {
     case types.SOLID:
     case types.PRIMARY:
       return {
+        background: themeData["button.solid.focus.backgroundColor"],
         boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${
           themeData["button.solid.focus.halo.color"]
         }`,
@@ -155,17 +159,22 @@ function getButtonFocusRulesByType(type, themeData) {
     case types.OUTLINE:
     case types.SECONDARY:
       return {
+        background: themeData["button.outline.focus.backgroundColor"],
         borderColor: themeData["button.outline.focus.borderColor"],
         boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${
           themeData["button.outline.focus.halo.color"]
         }`,
+        color: themeData["button.outline.focus.textColor"],
         outline: `none`
       };
     case types.FLAT:
       return {
+        background: themeData["button.flat.focus.backgroundColor"],
+        borderColor: themeData["button.flat.focus.borderColor"],
         boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${
           themeData["button.flat.focus.halo.color"]
         }`,
+        color: themeData["button.flat.focus.textColor"],
         outline: `none`
       };
     default:
