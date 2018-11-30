@@ -1,8 +1,4 @@
-import Input, {
-  variants,
-  availableVariants,
-  availableInputModes
-} from "./index";
+import Input, { variants, availableVariants } from "./index";
 
 describe("index", () => {
   it("exports default", () => {
@@ -15,9 +11,5 @@ describe("index", () => {
 
   it("exports availableVariants", () => {
     expect(availableVariants).toBeDefined();
-  });
-
-  it("exports availableInputModes", () => {
-    expect(availableInputModes).toBeDefined();
   });
 });
