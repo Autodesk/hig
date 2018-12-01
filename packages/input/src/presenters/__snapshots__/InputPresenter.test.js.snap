@@ -26,27 +26,12 @@ exports[`InputPresenter renders by default 1`] = `
 }
 
 <input
-  autoComplete={undefined}
   className="emotion-0"
-  defaultValue={undefined}
   disabled={undefined}
-  id={undefined}
-  inputMode={undefined}
-  maxLength={undefined}
-  minLength={undefined}
-  name={undefined}
   onBlur={undefined}
-  onChange={undefined}
   onFocus={undefined}
-  onInput={undefined}
   onMouseEnter={undefined}
   onMouseLeave={undefined}
-  pattern={undefined}
-  readOnly={undefined}
-  required={undefined}
-  spellCheck={undefined}
-  tabIndex={undefined}
-  value={undefined}
 />
 `;
 
@@ -76,27 +61,13 @@ exports[`InputPresenter renders when disabled 1`] = `
 }
 
 <input
-  autoComplete={undefined}
   className="emotion-0"
-  defaultValue={undefined}
   disabled={undefined}
-  id={undefined}
-  inputMode={undefined}
-  maxLength={undefined}
-  minLength={undefined}
-  name={undefined}
+  isDisabled={true}
   onBlur={undefined}
-  onChange={undefined}
   onFocus={undefined}
-  onInput={undefined}
   onMouseEnter={undefined}
   onMouseLeave={undefined}
-  pattern={undefined}
-  readOnly={undefined}
-  required={undefined}
-  spellCheck={undefined}
-  tabIndex={undefined}
-  value={undefined}
 />
 `;
 
@@ -126,27 +97,12 @@ exports[`InputPresenter renders with focus 1`] = `
 }
 
 <input
-  autoComplete={undefined}
   className="emotion-0"
-  defaultValue={undefined}
   disabled={undefined}
-  id={undefined}
-  inputMode={undefined}
-  maxLength={undefined}
-  minLength={undefined}
-  name={undefined}
   onBlur={undefined}
-  onChange={undefined}
   onFocus={undefined}
-  onInput={undefined}
   onMouseEnter={undefined}
   onMouseLeave={undefined}
-  pattern={undefined}
-  readOnly={undefined}
-  required={undefined}
-  spellCheck={undefined}
-  tabIndex={undefined}
-  value={undefined}
 />
 `;
 
@@ -176,27 +132,12 @@ exports[`InputPresenter renders with hover 1`] = `
 }
 
 <input
-  autoComplete={undefined}
   className="emotion-0"
-  defaultValue={undefined}
   disabled={undefined}
-  id={undefined}
-  inputMode={undefined}
-  maxLength={undefined}
-  minLength={undefined}
-  name={undefined}
   onBlur={undefined}
-  onChange={undefined}
   onFocus={undefined}
-  onInput={undefined}
   onMouseEnter={undefined}
   onMouseLeave={undefined}
-  pattern={undefined}
-  readOnly={undefined}
-  required={undefined}
-  spellCheck={undefined}
-  tabIndex={undefined}
-  value={undefined}
 />
 `;
 
@@ -226,26 +167,12 @@ exports[`InputPresenter renders with id 1`] = `
 }
 
 <input
-  autoComplete={undefined}
   className="emotion-0"
-  defaultValue={undefined}
   disabled={undefined}
   id="my_id"
-  inputMode={undefined}
-  maxLength={undefined}
-  minLength={undefined}
-  name={undefined}
   onBlur={undefined}
-  onChange={undefined}
   onFocus={undefined}
-  onInput={undefined}
   onMouseEnter={undefined}
   onMouseLeave={undefined}
-  pattern={undefined}
-  readOnly={undefined}
-  required={undefined}
-  spellCheck={undefined}
-  tabIndex={undefined}
-  value={undefined}
 />
 `;

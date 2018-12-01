@@ -5,7 +5,7 @@ import { ControlBehavior } from "@hig/behaviors";
 import InputPresenter from "./presenters/InputPresenter";
 import InputHaloPresenter from "./presenters/InputHaloPresenter";
 
-import { variants, availableVariants, availableInputModes } from "./constants";
+import { variants, availableVariants } from "./constants";
 
 function Wrapper(props) {
   if (props.variant === variants.PLAIN) {
@@ -21,12 +21,21 @@ Wrapper.propTypes = {
 };
 
 function Input(props) {
+  const {
+    onFocus: onFocusProp,
+    onBlur: onBlurProp,
+    onMouseEnter: onMouseEnterProp,
+    onMouseLeave: onMouseLeaveProp,
+    disabled: disabledProp,
+    variant,
+    ...otherProps
+  } = props;
   return (
     <ControlBehavior
-      onFocus={props.onFocus}
-      onBlur={props.onBlur}
-      onMouseEnter={props.onMouseEnter}
-      onMouseLeave={props.onMouseLeave}
+      onFocus={onFocusProp}
+      onBlur={onBlurProp}
+      onMouseEnter={onMouseEnterProp}
+      onMouseLeave={onMouseLeaveProp}
     >
       {({
         hasHover,
@@ -37,34 +46,21 @@ function Input(props) {
         onBlur
       }) => (
         <Wrapper
-          isDisabled={props.disabled}
+          isDisabled={disabledProp}
           hasFocus={hasFocus}
           hasHover={hasHover}
-          variant={props.variant}
+          variant={variant}
         >
           <InputPresenter
-            autoComplete={props.autoComplete}
-            defaultValue={props.defaultValue}
-            disabled={props.disabled}
+            disabled={disabledProp}
             hasFocus={hasFocus}
             hasHover={hasHover}
-            id={props.id}
-            inputMode={props.inputMode}
-            maxLength={props.maxLength}
-            minLength={props.minLength}
-            name={props.name}
             onBlur={onBlur}
-            onChange={props.onChange}
             onFocus={onFocus}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
-            pattern={props.pattern}
-            readOnly={props.readOnly}
-            required={props.required}
-            spellCheck={props.spellCheck}
-            tabIndex={props.tabIndex}
-            variant={props.variant}
-            value={props.value}
+            variant={variant}
+            {...otherProps}
           />
         </Wrapper>
       )}
@@ -74,10 +70,6 @@ function Input(props) {
 
 Input.propTypes = {
   /**
-   * Indicates if the input can be automatically completed by the browser
-   */
-  autoComplete: PropTypes.bool,
-  /**
    * The initial value of the control
    */
   defaultValue: PropTypes.string,
@@ -86,33 +78,9 @@ Input.propTypes = {
    */
   disabled: PropTypes.bool,
   /**
-   * HTML ID attribute
-   */
-  id: PropTypes.string,
-  /**
-   * A hint to browsers for which virtual keyboard to display
-   */
-  inputMode: PropTypes.oneOf(availableInputModes),
-  /**
-   * The maximum number of characters that the user can enter
-   */
-  maxLength: PropTypes.string,
-  /**
-   * The minimum number of characters that the user can enter
-   */
-  minLength: PropTypes.string,
-  /**
-   * Submitted with the control's value as part of the form data
-   */
-  name: PropTypes.string,
-  /**
    * Fired when an element has lost focus
    */
   onBlur: PropTypes.func,
-  /**
-   * Fired when the value is changed by the user
-   */
-  onChange: PropTypes.func,
   /**
    * Fired when an element has received focus
    */
@@ -125,26 +93,6 @@ Input.propTypes = {
    * Fired when the pointer of a pointing device is moved out of an element
    */
   onMouseLeave: PropTypes.func,
-  /**
-   * A regular expression that the control's value is checked against
-   */
-  pattern: PropTypes.string,
-  /**
-   * Prevents the user from modifying the value of the input
-   */
-  readOnly: PropTypes.bool,
-  /**
-   * Specifies that the user must fill in a value before submitting a form
-   */
-  required: PropTypes.bool,
-  /**
-   * Indicates that the element needs to have its spelling and grammar checked
-   */
-  spellCheck: PropTypes.bool,
-  /**
-   * The position of the element in the tabbing navigation order for the current document
-   */
-  tabIndex: PropTypes.string,
   /**
    * The value of the control
    */
