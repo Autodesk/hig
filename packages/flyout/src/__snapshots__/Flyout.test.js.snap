@@ -102,7 +102,7 @@ exports[`flyout/Flyout snapshots renders a custom pointer 1`] = `
     className="hig__flyout-v1__action"
   >
     <button
-      className="emotion-0 hig--light-gray-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+      className="emotion-0"
       href={undefined}
       onBlur={[Function]}
       onClick={[Function]}
@@ -217,7 +217,7 @@ exports[`flyout/Flyout snapshots renders children from the given render function
     className="hig__flyout-v1__action"
   >
     <button
-      className="emotion-0 hig--light-gray-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+      className="emotion-0"
       href={undefined}
       onBlur={[Function]}
       onClick={[Function]}
@@ -343,7 +343,7 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
     className="hig__flyout-v1__action"
   >
     <button
-      className="emotion-0 hig--light-gray-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+      className="emotion-0"
       href={undefined}
       onBlur={[Function]}
       onClick={[Function]}
@@ -532,7 +532,7 @@ exports[`flyout/Flyout snapshots renders the panel from a basic render function 
     className="hig__flyout-v1__action"
   >
     <button
-      className="emotion-0 hig--light-gray-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+      className="emotion-0"
       href={undefined}
       onBlur={[Function]}
       onClick={[Function]}
@@ -642,7 +642,7 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
     className="hig__flyout-v1__action"
   >
     <button
-      className="emotion-0 hig--light-gray-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+      className="emotion-0"
       href={undefined}
       onBlur={[Function]}
       onClick={[Function]}
@@ -773,7 +773,7 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
     className="hig__flyout-v1__action"
   >
     <button
-      className="emotion-0 hig--light-gray-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+      className="emotion-0"
       href={undefined}
       onBlur={[Function]}
       onClick={[Function]}

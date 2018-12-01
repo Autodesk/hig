@@ -42,7 +42,7 @@ exports[`Button  1`] = `
 }
 
 <button
-  className="emotion-0 hig--light-gray-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+  className="emotion-0"
   href={undefined}
   onBlur={[Function]}
   onClick={undefined}
@@ -105,7 +105,7 @@ exports[`Button  2`] = `
 }
 
 <button
-  className="emotion-0 hig--light-gray-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+  className="emotion-0"
   href={undefined}
   onBlur={[Function]}
   onClick={undefined}
@@ -168,7 +168,7 @@ exports[`Button  3`] = `
 }
 
 <button
-  className="emotion-0 hig--light-gray-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-secondary hig__button-v1--width-shrink"
+  className="emotion-0"
   href={undefined}
   onBlur={[Function]}
   onClick={undefined}
@@ -231,7 +231,7 @@ exports[`Button  4`] = `
 }
 
 <button
-  className="emotion-0 hig--light-gray-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-flat hig__button-v1--width-shrink"
+  className="emotion-0"
   href={undefined}
   onBlur={[Function]}
   onClick={undefined}
@@ -304,7 +304,7 @@ exports[`Button  5`] = `
 }
 
 <button
-  className="emotion-1 hig--light-gray-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+  className="emotion-1"
   href={undefined}
   onBlur={[Function]}
   onClick={undefined}
@@ -318,7 +318,7 @@ exports[`Button  5`] = `
   target={undefined}
 >
   <span
-    className="emotion-0 hig--light-gray-theme hig__button-v1__icon"
+    className="emotion-0"
   >
     &lt;Icon /&gt;
   </span>
@@ -372,7 +372,7 @@ exports[`Button  6`] = `
 }
 
 <a
-  className="emotion-0 hig--light-gray-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+  className="emotion-0"
   href="https://hig.autodesk.com"
   onBlur={[Function]}
   onClick={undefined}

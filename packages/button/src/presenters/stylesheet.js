@@ -21,8 +21,8 @@ function getButtonDefaultButtonRules(themeData) {
     textOverflow: "ellipsis",
     userSelect: "none",
     whiteSpace: "nowrap",
-    "-moz-osx-font-smoothing": "grayscale",
-    "-webkit-font-smoothing": "antialiased"
+    MozOsxFontSmoothing: "grayscale",
+    WebkitFontSmoothing: "antialiased"
   };
 }
 

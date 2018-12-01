@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { css, cx } from "emotion";
+import { css } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
 
 import stylesheet from "./stylesheet";
@@ -9,30 +9,8 @@ import {
   availableSizes,
   availableTargets,
   availableTypes,
-  availableWidths,
-  sizes,
-  types,
-  widths
+  availableWidths
 } from "../constants";
-
-const classNamesBySize = {
-  [sizes.SMALL]: "hig__button-v1--size-small",
-  [sizes.STANDARD]: "hig__button-v1--size-standard",
-  [sizes.LARGE]: "hig__button-v1--size-large"
-};
-
-const classNamesByType = {
-  [types.PRIMARY]: "hig__button-v1--type-primary",
-  [types.SOLID]: "hig__button-v1--type-primary",
-  [types.SECONDARY]: "hig__button-v1--type-secondary",
-  [types.OUTLINE]: "hig__button-v1--type-secondary",
-  [types.FLAT]: "hig__button-v1--type-flat"
-};
-
-const classNameByWidth = {
-  [widths.SHRINK]: "hig__button-v1--width-shrink",
-  [widths.GROW]: "hig__button-v1--width-grow"
-};
 
 export default class ButtonPresenter extends Component {
   static propTypes = {
@@ -87,32 +65,14 @@ export default class ButtonPresenter extends Component {
 
     return (
       <ThemeContext.Consumer>
-        {({ metadata, resolvedRoles }) => {
-          const { className } = metadata;
+        {({ resolvedRoles }) => {
           const styles = stylesheet(
             { disabled, hasFocus, hasHover, isPressed, size, type, width },
             resolvedRoles
           );
-          const buttonClassName = cx(
-            css(styles.button),
-            className,
-            "hig__button-v1",
-            classNamesBySize[size],
-            classNamesByType[type],
-            classNameByWidth[width],
-            {
-              "hig__button-v1--disabled": disabled
-            }
-          );
-          const iconClassName = cx(
-            css(styles.icon),
-            className,
-            "hig__button-v1__icon"
-          );
-
           return (
             <Wrapper
-              className={buttonClassName}
+              className={css(styles.button)}
               href={href}
               tabIndex={tabIndex}
               target={wrapperTarget}
@@ -125,7 +85,7 @@ export default class ButtonPresenter extends Component {
               onMouseOver={onHover}
               onMouseUp={onMouseUp}
             >
-              {icon && <span className={iconClassName}>{icon}</span>}
+              {icon && <span className={css(styles.icon)}>{icon}</span>}
               <span className="hig__button__title">{title}</span>
             </Wrapper>
           );
