@@ -11,7 +11,7 @@ exports[`flyout/presenters/PanelPresenter renders with all props 1`] = `
 }
 
 <div
-  className="emotion-0 hig__flyout-v1__panel"
+  className="emotion-0"
   onScroll={[Function]}
 >
   Hello World
@@ -29,7 +29,7 @@ exports[`flyout/presenters/PanelPresenter renders without props 1`] = `
 }
 
 <div
-  className="emotion-0 hig__flyout-v1__panel"
+  className="emotion-0"
   onScroll={undefined}
 />
 `;

@@ -64,10 +64,10 @@ exports[`profile-flyout/ProfileFlyout renders with all props 1`] = `
 }
 
 <div
-  className="emotion-7 hig__flyout-v1--top-left"
+  className="emotion-7"
 >
   <div
-    className="emotion-0 hig__flyout-v1__action"
+    className="emotion-0"
   >
     <button
       className="hig__profile-flyout__button"
@@ -89,11 +89,11 @@ exports[`profile-flyout/ProfileFlyout renders with all props 1`] = `
     </button>
   </div>
   <div
-    className="emotion-6 hig__flyout-v1__container"
+    className="emotion-6"
   >
     <div
       aria-hidden="true"
-      className="emotion-3 hig__flyout-v1__pointer-wrapper"
+      className="emotion-3"
       role="presentation"
       style={undefined}
     >
@@ -113,7 +113,7 @@ exports[`profile-flyout/ProfileFlyout renders with all props 1`] = `
       </svg>
     </div>
     <div
-      className="emotion-5 hig__flyout-v1__panel-container"
+      className="emotion-5"
       style={
         Object {
           "maxHeight": undefined,
@@ -121,7 +121,7 @@ exports[`profile-flyout/ProfileFlyout renders with all props 1`] = `
       }
     >
       <div
-        className="emotion-4 hig__flyout-v1__panel-container__inner"
+        className="emotion-4"
       />
     </div>
   </div>
@@ -192,10 +192,10 @@ exports[`profile-flyout/ProfileFlyout renders with no props 1`] = `
 }
 
 <div
-  className="emotion-7 hig__flyout-v1--hidden hig__flyout-v1--top-left"
+  className="emotion-7"
 >
   <div
-    className="emotion-0 hig__flyout-v1__action"
+    className="emotion-0"
   >
     <button
       className="hig__profile-flyout__button"
@@ -217,11 +217,11 @@ exports[`profile-flyout/ProfileFlyout renders with no props 1`] = `
     </button>
   </div>
   <div
-    className="emotion-6 hig__flyout-v1__container"
+    className="emotion-6"
   >
     <div
       aria-hidden="true"
-      className="emotion-3 hig__flyout-v1__pointer-wrapper"
+      className="emotion-3"
       role="presentation"
       style={undefined}
     >
@@ -241,7 +241,7 @@ exports[`profile-flyout/ProfileFlyout renders with no props 1`] = `
       </svg>
     </div>
     <div
-      className="emotion-5 hig__flyout-v1__panel-container"
+      className="emotion-5"
       style={
         Object {
           "maxHeight": undefined,
@@ -249,7 +249,7 @@ exports[`profile-flyout/ProfileFlyout renders with no props 1`] = `
       }
     >
       <div
-        className="emotion-4 hig__flyout-v1__panel-container__inner"
+        className="emotion-4"
       />
     </div>
   </div>

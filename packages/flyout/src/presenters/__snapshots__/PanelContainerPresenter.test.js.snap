@@ -13,7 +13,7 @@ exports[`flyout/presenters/PanelContainerPresenter renders with all props 1`] = 
 }
 
 <div
-  className="emotion-1 hig__flyout-v1__panel-container"
+  className="emotion-1"
   style={
     Object {
       "maxHeight": "150px",
@@ -21,7 +21,7 @@ exports[`flyout/presenters/PanelContainerPresenter renders with all props 1`] = 
   }
 >
   <div
-    className="emotion-0 hig__flyout-v1__panel-container__inner"
+    className="emotion-0"
   >
     Hello World
   </div>
@@ -41,7 +41,7 @@ exports[`flyout/presenters/PanelContainerPresenter renders with only \`innerRef\
 }
 
 <div
-  className="emotion-1 hig__flyout-v1__panel-container"
+  className="emotion-1"
   style={
     Object {
       "maxHeight": undefined,
@@ -49,7 +49,7 @@ exports[`flyout/presenters/PanelContainerPresenter renders with only \`innerRef\
   }
 >
   <div
-    className="emotion-0 hig__flyout-v1__panel-container__inner"
+    className="emotion-0"
   />
 </div>
 `;

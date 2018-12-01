@@ -39,10 +39,10 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders with all props 1`] = `
 }
 
 <div
-  className="emotion-3 hig__flyout-v1--top-center"
+  className="emotion-3"
 >
   <div
-    className="emotion-0 hig__flyout-v1__action"
+    className="emotion-0"
   >
     <button
       className="emotion-0"
@@ -66,11 +66,11 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders with all props 1`] = `
     </button>
   </div>
   <div
-    className="emotion-2 hig__flyout-v1__container"
+    className="emotion-2"
   >
     <div
       aria-hidden="true"
-      className="emotion-1 hig__flyout-v1__pointer-wrapper"
+      className="emotion-1"
       role="presentation"
       style={undefined}
     >
@@ -135,17 +135,17 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders without props 1`] = `
 }
 
 <div
-  className="emotion-5 hig__flyout-v1--exited hig__flyout-v1--top-left"
+  className="emotion-5"
 >
   <div
-    className="emotion-0 hig__flyout-v1__action"
+    className="emotion-0"
   />
   <div
-    className="emotion-4 hig__flyout-v1__container"
+    className="emotion-4"
   >
     <div
       aria-hidden="true"
-      className="emotion-3 hig__flyout-v1__pointer-wrapper"
+      className="emotion-3"
       role="presentation"
       style={undefined}
     >

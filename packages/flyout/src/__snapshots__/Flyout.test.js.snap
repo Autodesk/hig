@@ -93,10 +93,10 @@ exports[`flyout/Flyout snapshots renders a custom pointer 1`] = `
 }
 
 <div
-  className="emotion-6 hig__flyout-v1--top-left"
+  className="emotion-6"
 >
   <div
-    className="emotion-0 hig__flyout-v1__action"
+    className="emotion-0"
   >
     <button
       className="emotion-0"
@@ -120,11 +120,11 @@ exports[`flyout/Flyout snapshots renders a custom pointer 1`] = `
     </button>
   </div>
   <div
-    className="emotion-5 hig__flyout-v1__container"
+    className="emotion-5"
   >
     <div
       aria-hidden="true"
-      className="emotion-1 hig__flyout-v1__pointer-wrapper"
+      className="emotion-1"
       role="presentation"
       style={undefined}
     >
@@ -133,7 +133,7 @@ exports[`flyout/Flyout snapshots renders a custom pointer 1`] = `
       </span>
     </div>
     <div
-      className="emotion-4 hig__flyout-v1__panel-container"
+      className="emotion-4"
       style={
         Object {
           "maxHeight": "150px",
@@ -141,10 +141,10 @@ exports[`flyout/Flyout snapshots renders a custom pointer 1`] = `
       }
     >
       <div
-        className="emotion-3 hig__flyout-v1__panel-container__inner"
+        className="emotion-3"
       >
         <div
-          className="emotion-2 hig__flyout-v1__panel"
+          className="emotion-2"
           onScroll={[Function]}
         >
           Hello World
@@ -194,10 +194,10 @@ exports[`flyout/Flyout snapshots renders children from the given render function
 }
 
 <div
-  className="emotion-8 hig__flyout-v1--top-left"
+  className="emotion-8"
 >
   <div
-    className="emotion-0 hig__flyout-v1__action"
+    className="emotion-0"
   >
     <button
       className="emotion-0"
@@ -221,11 +221,11 @@ exports[`flyout/Flyout snapshots renders children from the given render function
     </button>
   </div>
   <div
-    className="emotion-7 hig__flyout-v1__container"
+    className="emotion-7"
   >
     <div
       aria-hidden="true"
-      className="emotion-3 hig__flyout-v1__pointer-wrapper"
+      className="emotion-3"
       role="presentation"
       style={undefined}
     >
@@ -245,7 +245,7 @@ exports[`flyout/Flyout snapshots renders children from the given render function
       </svg>
     </div>
     <div
-      className="emotion-6 hig__flyout-v1__panel-container"
+      className="emotion-6"
       style={
         Object {
           "maxHeight": "150px",
@@ -253,10 +253,10 @@ exports[`flyout/Flyout snapshots renders children from the given render function
       }
     >
       <div
-        className="emotion-5 hig__flyout-v1__panel-container__inner"
+        className="emotion-5"
       >
         <div
-          className="emotion-4 hig__flyout-v1__panel"
+          className="emotion-4"
           onScroll={[Function]}
         >
           Hello World
@@ -306,10 +306,10 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
 }
 
 <div
-  className="emotion-8 hig__flyout-v1--top-left"
+  className="emotion-8"
 >
   <div
-    className="emotion-0 hig__flyout-v1__action"
+    className="emotion-0"
   >
     <button
       className="emotion-0"
@@ -333,11 +333,11 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
     </button>
   </div>
   <div
-    className="emotion-7 hig__flyout-v1__container"
+    className="emotion-7"
   >
     <div
       aria-hidden="true"
-      className="emotion-3 hig__flyout-v1__pointer-wrapper"
+      className="emotion-3"
       role="presentation"
       style={undefined}
     >
@@ -357,7 +357,7 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
       </svg>
     </div>
     <div
-      className="emotion-6 hig__flyout-v1__panel-container"
+      className="emotion-6"
       style={
         Object {
           "maxHeight": "150px",
@@ -365,10 +365,10 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
       }
     >
       <div
-        className="emotion-5 hig__flyout-v1__panel-container__inner"
+        className="emotion-5"
       >
         <div
-          className="emotion-4 hig__flyout-v1__panel"
+          className="emotion-4"
           onScroll={[Function]}
         >
           Content from render prop
@@ -452,17 +452,17 @@ exports[`flyout/Flyout snapshots renders open by default 1`] = `
 }
 
 <div
-  className="emotion-8 hig__flyout-v1--top-left"
+  className="emotion-8"
 >
   <div
-    className="emotion-0 hig__flyout-v1__action"
+    className="emotion-0"
   />
   <div
-    className="emotion-7 hig__flyout-v1__container"
+    className="emotion-7"
   >
     <div
       aria-hidden="true"
-      className="emotion-3 hig__flyout-v1__pointer-wrapper"
+      className="emotion-3"
       role="presentation"
       style={undefined}
     >
@@ -482,7 +482,7 @@ exports[`flyout/Flyout snapshots renders open by default 1`] = `
       </svg>
     </div>
     <div
-      className="emotion-6 hig__flyout-v1__panel-container"
+      className="emotion-6"
       style={
         Object {
           "maxHeight": undefined,
@@ -490,10 +490,10 @@ exports[`flyout/Flyout snapshots renders open by default 1`] = `
       }
     >
       <div
-        className="emotion-5 hig__flyout-v1__panel-container__inner"
+        className="emotion-5"
       >
         <div
-          className="emotion-4 hig__flyout-v1__panel"
+          className="emotion-4"
           onScroll={undefined}
         />
       </div>
@@ -541,10 +541,10 @@ exports[`flyout/Flyout snapshots renders the panel from a basic render function 
 }
 
 <div
-  className="emotion-5 hig__flyout-v1--top-left"
+  className="emotion-5"
 >
   <div
-    className="emotion-0 hig__flyout-v1__action"
+    className="emotion-0"
   >
     <button
       className="emotion-0"
@@ -568,11 +568,11 @@ exports[`flyout/Flyout snapshots renders the panel from a basic render function 
     </button>
   </div>
   <div
-    className="emotion-4 hig__flyout-v1__container"
+    className="emotion-4"
   >
     <div
       aria-hidden="true"
-      className="emotion-3 hig__flyout-v1__pointer-wrapper"
+      className="emotion-3"
       role="presentation"
       style={undefined}
     >
@@ -637,10 +637,10 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
 }
 
 <div
-  className="emotion-7 hig__flyout-v1--top-left"
+  className="emotion-7"
 >
   <div
-    className="emotion-0 hig__flyout-v1__action"
+    className="emotion-0"
   >
     <button
       className="emotion-0"
@@ -664,11 +664,11 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
     </button>
   </div>
   <div
-    className="emotion-6 hig__flyout-v1__container"
+    className="emotion-6"
   >
     <div
       aria-hidden="true"
-      className="emotion-3 hig__flyout-v1__pointer-wrapper"
+      className="emotion-3"
       role="presentation"
       style={undefined}
     >
@@ -688,7 +688,7 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
       </svg>
     </div>
     <div
-      className="emotion-5 hig__flyout-v1__panel-container"
+      className="emotion-5"
       style={
         Object {
           "maxHeight": undefined,
@@ -696,7 +696,7 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
       }
     >
       <div
-        className="emotion-4 hig__flyout-v1__panel-container__inner"
+        className="emotion-4"
       >
         <div
           data-mock="MyCustomContainer"
@@ -754,10 +754,10 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
 }
 
 <div
-  className="emotion-8 hig__flyout-v1--top-left"
+  className="emotion-8"
 >
   <div
-    className="emotion-0 hig__flyout-v1__action"
+    className="emotion-0"
   >
     <button
       className="emotion-0"
@@ -781,11 +781,11 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
     </button>
   </div>
   <div
-    className="emotion-7 hig__flyout-v1__container"
+    className="emotion-7"
   >
     <div
       aria-hidden="true"
-      className="emotion-3 hig__flyout-v1__pointer-wrapper"
+      className="emotion-3"
       role="presentation"
       style={undefined}
     >
@@ -805,7 +805,7 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
       </svg>
     </div>
     <div
-      className="emotion-6 hig__flyout-v1__panel-container"
+      className="emotion-6"
       style={
         Object {
           "maxHeight": "150px",
@@ -813,10 +813,10 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
       }
     >
       <div
-        className="emotion-5 hig__flyout-v1__panel-container__inner"
+        className="emotion-5"
       >
         <div
-          className="emotion-4 hig__flyout-v1__panel"
+          className="emotion-4"
           onScroll={[Function]}
         >
           Hello World
@@ -900,17 +900,17 @@ exports[`flyout/Flyout snapshots renders without props 1`] = `
 }
 
 <div
-  className="emotion-8 hig__flyout-v1--hidden hig__flyout-v1--top-left"
+  className="emotion-8"
 >
   <div
-    className="emotion-0 hig__flyout-v1__action"
+    className="emotion-0"
   />
   <div
-    className="emotion-7 hig__flyout-v1__container"
+    className="emotion-7"
   >
     <div
       aria-hidden="true"
-      className="emotion-3 hig__flyout-v1__pointer-wrapper"
+      className="emotion-3"
       role="presentation"
       style={undefined}
     >
@@ -930,7 +930,7 @@ exports[`flyout/Flyout snapshots renders without props 1`] = `
       </svg>
     </div>
     <div
-      className="emotion-6 hig__flyout-v1__panel-container"
+      className="emotion-6"
       style={
         Object {
           "maxHeight": undefined,
@@ -938,10 +938,10 @@ exports[`flyout/Flyout snapshots renders without props 1`] = `
       }
     >
       <div
-        className="emotion-5 hig__flyout-v1__panel-container__inner"
+        className="emotion-5"
       >
         <div
-          className="emotion-4 hig__flyout-v1__panel"
+          className="emotion-4"
           onScroll={undefined}
         />
       </div>

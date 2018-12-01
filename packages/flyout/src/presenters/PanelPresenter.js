@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { cx, css } from "emotion";
+import { css } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
 
 import stylesheet from "./stylesheet";
@@ -15,10 +15,7 @@ export default function PanelPresenter({ children, onScroll }) {
         );
 
         return (
-          <div
-            className={cx([css(styles.panel), "hig__flyout-v1__panel"])}
-            onScroll={onScroll}
-          >
+          <div className={css(styles.panel)} onScroll={onScroll}>
             {children}
           </div>
         );

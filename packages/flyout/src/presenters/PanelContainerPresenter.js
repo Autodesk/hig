@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { css, cx } from "emotion";
+import { css } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
 
 import stylesheet from "./stylesheet";
@@ -22,21 +22,11 @@ export default function PanelContainerPresenter(props) {
 
         return (
           <div
-            className={cx(
-              css(styles.panelContainer),
-              "hig__flyout-v1__panel-container"
-            )}
+            className={css(styles.panelContainer)}
             ref={innerRef}
             style={{ maxHeight: maxHeightInPixels }}
           >
-            <div
-              className={cx(
-                css(styles.panelContainerInner),
-                "hig__flyout-v1__panel-container__inner"
-              )}
-            >
-              {children}
-            </div>
+            <div className={css(styles.panelContainerInner)}>{children}</div>
           </div>
         );
       }}

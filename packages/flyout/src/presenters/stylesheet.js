@@ -107,7 +107,7 @@ export default function(props, themeData) {
       maxHeight: `360px`,
       padding: densitySmall,
       overflowY: `auto`,
-      "-ms-overflow-style": `-ms-autohiding-scrollbar`
+      msOverflowStyle: `-ms-autohiding-scrollbar`
     },
     pointerWrapper: {
       display: `flex`,

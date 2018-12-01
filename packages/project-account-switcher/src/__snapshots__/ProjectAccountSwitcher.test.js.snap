@@ -224,10 +224,10 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
 
 exports[`project-account-switcher/ProjectAccountSwitcher integration renders with default account/project 1`] = `
 <div
-  className="emotion-7 hig__flyout-v1--hidden hig__flyout-v1--top-left"
+  className="emotion-7"
 >
   <div
-    className="emotion-0 hig__flyout-v1__action"
+    className="emotion-0"
   >
     <div
       className="hig__project-account-switcher__target"
@@ -279,11 +279,11 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
     </div>
   </div>
   <div
-    className="emotion-6 hig__flyout-v1__container"
+    className="emotion-6"
   >
     <div
       aria-hidden="true"
-      className="emotion-3 hig__flyout-v1__pointer-wrapper"
+      className="emotion-3"
       role="presentation"
       style={undefined}
     >
@@ -303,7 +303,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
       </svg>
     </div>
     <div
-      className="emotion-5 hig__flyout-v1__panel-container"
+      className="emotion-5"
       style={
         Object {
           "maxHeight": undefined,
@@ -311,7 +311,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
       }
     >
       <div
-        className="emotion-4 hig__flyout-v1__panel-container__inner"
+        className="emotion-4"
       >
         <div
           className="hig__project-account-switcher__panel"

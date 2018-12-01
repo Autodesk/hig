@@ -14,7 +14,7 @@ exports[`flyout/presenters/PointerWrapperPresenter  1`] = `
 
 <div
   aria-hidden="true"
-  className="emotion-0 hig__flyout-v1__pointer-wrapper"
+  className="emotion-0"
   role="presentation"
   style={undefined}
 />
@@ -34,7 +34,7 @@ exports[`flyout/presenters/PointerWrapperPresenter  2`] = `
 
 <div
   aria-hidden="true"
-  className="emotion-0 hig__flyout-v1__pointer-wrapper"
+  className="emotion-0"
   role="presentation"
   style={
     Object {

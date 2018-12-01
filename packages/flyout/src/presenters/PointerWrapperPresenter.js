@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { css, cx } from "emotion";
+import { css } from "emotion";
 import stylesheet from "./stylesheet";
 import { AVAILABLE_ANCHOR_POINTS } from "../anchorPoints";
 
@@ -15,10 +15,7 @@ export default function PointerWrapperPresenter({
   return (
     <div
       aria-hidden="true"
-      className={cx([
-        css(styles.pointerWrapper),
-        "hig__flyout-v1__pointer-wrapper"
-      ])}
+      className={css(styles.pointerWrapper)}
       ref={innerRef}
       role="presentation"
       style={style}
