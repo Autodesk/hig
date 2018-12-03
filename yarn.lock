@@ -155,6 +155,15 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
 
+"@hig/icon@^0.2.0":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@hig/icon/-/icon-0.2.1.tgz#a6cc07a66ee824a678de5738640b1c157e544c77"
+  integrity sha512-qaIYUB/lzc5sBnhNjQGT0/Hy5ll8+QfSzv74c12f4gTag74W0VH2zajcrzOBsFLyHGQO8UDV7Oqzm/+AwiGEBw==
+  dependencies:
+    "@hig/icons" "^0.2.1"
+    classnames "^2.2.5"
+    prop-types "^15.6.1"
+
 "@hig/skeleton-item@^0.3.0":
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/@hig/skeleton-item/-/skeleton-item-0.3.1.tgz#9729eb499d40ff61996558a179608862338193b7"
@@ -10570,8 +10579,9 @@ rollup@^0.57.1:
     sourcemap-codec "^1.4.1"
 
 rollup@^0.67.0:
-  version "0.67.3"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-0.67.3.tgz#55475b1b62c43220c3b4bd7edc5846233932f50b"
+  version "0.67.4"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-0.67.4.tgz#8ed6b0993337f84ec8a0387f824fa6c197e833ec"
+  integrity sha512-AVuP73mkb4BBMUmksQ3Jw0jTrBTU1i7rLiUYjFxLZGb3xiFmtVEg40oByphkZAsiL0bJC3hRAJUQos/e5EBd+w==
   dependencies:
     "@types/estree" "0.0.39"
     "@types/node" "*"
