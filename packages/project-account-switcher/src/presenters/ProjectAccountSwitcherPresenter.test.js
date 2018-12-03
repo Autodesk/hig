@@ -19,9 +19,9 @@ describe("project-account-switcher/presenters/ProjectAccountSwitcherPresenter", 
           { id: "1", label: "Account 1" },
           { id: "2", label: "Account 2" }
         ],
-        activeAccount: { id: "1", label: "Account 1" },
+        activeAccountObj: { id: "1", label: "Account 1" },
         activeLabel: "Foo",
-        activeProject: { id: "2", label: "Project 2" },
+        activeProjectObj: { id: "2", label: "Project 2" },
         onTargetClick: function handleTargetClick() {},
         projects: [
           { id: "1", label: "Project 1" },

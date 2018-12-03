@@ -17,7 +17,7 @@ export default class ProjectAccountSwitcherPresenter extends Component {
       })
     ),
     /** Currently selected Account */
-    activeAccount: PropTypes.shape({
+    activeAccountObj: PropTypes.shape({
       id: PropTypes.string,
       image: PropTypes.string,
       label: PropTypes.string
@@ -25,7 +25,7 @@ export default class ProjectAccountSwitcherPresenter extends Component {
     /** Label for selected Accounts and Projects */
     activeLabel: PropTypes.string,
     /** Currently selected Project */
-    activeProject: PropTypes.shape({
+    activeProjectObj: PropTypes.shape({
       id: PropTypes.string,
       image: PropTypes.string,
       label: PropTypes.string
@@ -43,18 +43,18 @@ export default class ProjectAccountSwitcherPresenter extends Component {
   };
 
   // this method constructs the image placeholder for the combination of
-  // the current activeAccount and/or activeProject,
+  // the current activeAccountObj and/or activeProjectObj,
   // in lieu of an image for either
   constructLabelPlaceholder() {
     const placeholders = [];
-    const { activeAccount, activeProject } = this.props;
+    const { activeAccountObj, activeProjectObj } = this.props;
 
-    if (activeAccount) {
-      placeholders.push(activeAccount.label);
+    if (activeAccountObj) {
+      placeholders.push(activeAccountObj.label);
     }
 
-    if (activeProject) {
-      placeholders.push(activeProject.label);
+    if (activeProjectObj) {
+      placeholders.push(activeProjectObj.label);
     }
 
     return placeholders.map(constructPlaceholder).join("/");
@@ -67,9 +67,9 @@ export default class ProjectAccountSwitcherPresenter extends Component {
   }
 
   activeImage() {
-    const { activeAccount = {}, activeProject = {} } = this.props;
-    const { image: activeAccountImage } = activeAccount;
-    const { image: activeProjectImage } = activeProject;
+    const { activeAccountObj = {}, activeProjectObj = {} } = this.props;
+    const { image: activeAccountImage } = activeAccountObj;
+    const { image: activeProjectImage } = activeProjectObj;
 
     return activeAccountImage || activeProjectImage || "";
   }
@@ -77,17 +77,17 @@ export default class ProjectAccountSwitcherPresenter extends Component {
   createTargetHandlers = memoizeCreateButtonEventHandlers();
 
   renderLabel() {
-    const { activeLabel, activeAccount, activeProject } = this.props;
+    const { activeLabel, activeAccountObj, activeProjectObj } = this.props;
 
     if (activeLabel) return activeLabel;
 
     const labels = [];
 
-    if (activeAccount) {
-      labels.push(activeAccount.label);
+    if (activeAccountObj) {
+      labels.push(activeAccountObj.label);
     }
-    if (activeProject) {
-      labels.push(activeProject.label);
+    if (activeProjectObj) {
+      labels.push(activeProjectObj.label);
     }
 
     return labels.join(" / ");

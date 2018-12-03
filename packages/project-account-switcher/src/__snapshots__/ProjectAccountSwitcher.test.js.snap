@@ -1,6 +1,228 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`project-account-switcher/ProjectAccountSwitcher integration renders correctly 1`] = `
+exports[`project-account-switcher/ProjectAccountSwitcher integration renders with controlled active account/project 1`] = `
+<div
+  className="hig__flyout-v1 hig__flyout-v1--hidden hig__flyout-v1--top-left"
+>
+  <div
+    className="hig__flyout-v1__action"
+  >
+    <div
+      className="hig__project-account-switcher__target"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      role="button"
+      tabIndex="0"
+    >
+      <div
+        className="hig__project-account-switcher__target__item hig__project-account-switcher__item"
+      >
+        <span
+          className="hig__project-account-switcher__item__image-wrapper"
+        >
+          <img
+            alt="Account 2 / Project 1"
+            className="hig__project-account-switcher__item__image"
+            src=""
+          />
+          <span
+            className="hig__project-account-switcher__item__image-placeholder"
+          >
+            A2/P1
+          </span>
+        </span>
+        <span
+          className="hig__project-account-switcher__item__label"
+        >
+          Account 2 / Project 1
+        </span>
+      </div>
+      <div
+        className="hig__project-account-switcher__target__caret"
+      >
+        <svg
+          height="10"
+          viewBox="0 0 10 10"
+          width="10"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            caret-down-m
+          </title>
+          <path
+            d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div
+    className="hig__flyout-v1__container"
+    style={
+      Object {
+        "left": "0px",
+        "top": "0px",
+      }
+    }
+  >
+    <div
+      aria-hidden="true"
+      className="hig__flyout-v1__pointer-wrapper"
+      role="presentation"
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
+    >
+      <svg
+        height="24"
+        viewBox="0 0 24 24"
+        width="24"
+      >
+        <polygon
+          fill="#d4dbe1"
+          points="0,12 12,0 24,12"
+        />
+        <polygon
+          fill="#fff"
+          points="2.5,12 12,2.5 21.5,12"
+        />
+      </svg>
+    </div>
+    <div
+      className="hig__flyout-v1__panel-container"
+      style={
+        Object {
+          "maxHeight": undefined,
+        }
+      }
+    >
+      <div
+        className="hig__flyout-v1__panel-container__inner"
+      >
+        <div
+          className="hig__project-account-switcher__panel"
+        >
+          <div
+            className="hig__project-account-switcher__lists"
+          >
+            <ul
+              className="hig__project-account-switcher__list"
+            >
+              <span
+                className="hig__project-account-switcher__list__title"
+              >
+                Accounts
+              </span>
+              <li
+                className="hig__project-account-switcher__item hig__project-account-switcher__item--account hig__project-account-switcher__item--active"
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                role="menuitem"
+                tabIndex="0"
+              >
+                <span
+                  className="hig__project-account-switcher__item__image-wrapper"
+                >
+                  <span
+                    className="hig__project-account-switcher__item__image-placeholder"
+                  >
+                    A1
+                  </span>
+                </span>
+                <span
+                  className="hig__project-account-switcher__item__label"
+                >
+                  Account 1
+                </span>
+              </li>
+              <li
+                className="hig__project-account-switcher__item hig__project-account-switcher__item--account hig__project-account-switcher__item--active"
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                role="menuitem"
+                tabIndex="0"
+              >
+                <span
+                  className="hig__project-account-switcher__item__image-wrapper"
+                >
+                  <span
+                    className="hig__project-account-switcher__item__image-placeholder"
+                  >
+                    A2
+                  </span>
+                </span>
+                <span
+                  className="hig__project-account-switcher__item__label"
+                >
+                  Account 2
+                </span>
+              </li>
+            </ul>
+            <ul
+              className="hig__project-account-switcher__list"
+            >
+              <span
+                className="hig__project-account-switcher__list__title"
+              >
+                Projects
+              </span>
+              <li
+                className="hig__project-account-switcher__item hig__project-account-switcher__item--project hig__project-account-switcher__item--active"
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                role="menuitem"
+                tabIndex="0"
+              >
+                <span
+                  className="hig__project-account-switcher__item__image-wrapper"
+                >
+                  <span
+                    className="hig__project-account-switcher__item__image-placeholder"
+                  >
+                    P1
+                  </span>
+                </span>
+                <span
+                  className="hig__project-account-switcher__item__label"
+                >
+                  Project 1
+                </span>
+              </li>
+              <li
+                className="hig__project-account-switcher__item hig__project-account-switcher__item--project hig__project-account-switcher__item--active"
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                role="menuitem"
+                tabIndex="0"
+              >
+                <span
+                  className="hig__project-account-switcher__item__image-wrapper"
+                >
+                  <span
+                    className="hig__project-account-switcher__item__image-placeholder"
+                  >
+                    P2
+                  </span>
+                </span>
+                <span
+                  className="hig__project-account-switcher__item__label"
+                >
+                  Project 2
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`project-account-switcher/ProjectAccountSwitcher integration renders with default account/project 1`] = `
 <div
   className="hig__flyout-v1 hig__flyout-v1--hidden hig__flyout-v1--top-left"
 >
