@@ -13,9 +13,9 @@ function getButtonDefaultButtonRules(themeData) {
     fontFamily: themeData["button.fontFamily"],
     fontSize: themeData["button.fontSize"],
     fontWeight: themeData["button.fontWeight"],
-    lineHeight: themeData["button.lineHeight"],
     margin: "0",
     overflow: "hidden",
+    padding: `${themeData["button.verticalPadding"]} ${themeData["button.horizontalPadding"]}`,
     textAlign: "center",
     textDecoration: "none",
     textOverflow: "ellipsis",
@@ -102,39 +102,39 @@ function getButtonRulesByDisabled(type, themeData) {
   }
 }
 
-function getButtonRulesBySize(size, themeData) {
+/* function getButtonRulesBySize(size, themeData) {
   switch (size) {
     case sizes.SMALL:
       return {
         fontSize: "12px", // Is this covered by density now?
         fontWeight: themeData["button.fontWeight"],
-        height: "28px", // line-height + (borderWidth * 2)
-        lineHeight: "26px",
+        // height: "28px", // line-height + (borderWidth * 2)
+        // lineHeight: "26px",
         minWidth: "66px",
-        padding: `0 ${themeData["button.horizontalPadding"]}`
+        padding: `${themeData["button.verticalPadding"]} ${themeData["button.horizontalPadding"]}`
       };
     case sizes.STANDARD:
       return {
         fontSize: themeData["button.fontSize"],
         fontWeight: themeData["button.fontWeight"],
-        height: "36px", // line-height + (borderWidth * 2)
-        lineHeight: "34px",
+        // height: "36px", // line-height + (borderWidth * 2)
+        // lineHeight: "34px",
         minWidth: "68px",
-        padding: `0 ${themeData["button.horizontalPadding"]}`
+        padding: `${themeData["button.verticalPadding"]} ${themeData["button.horizontalPadding"]}`
       };
     case sizes.LARGE:
       return {
         fontSize: "16px", // Is this covered by density now?
         fontWeight: themeData["button.fontWeight"],
-        height: "42px", // line-height + (borderWidth * 2)
-        lineHeight: "40px",
+        // height: "42px", // line-height + (borderWidth * 2)
+        // lineHeight: "40px",
         minWidth: "90px",
-        padding: `0 ${themeData["button.large.horizontalPadding"]}`
+        padding: `${themeData["button.verticalPadding"]} ${themeData["button.large.horizontalPadding"]}`
       };
     default:
       return {};
   }
-}
+} */
 
 function getButtonRulesByWidth(width) {
   return width === widths.GROW ? { width: "100%" } : {};
@@ -246,7 +246,7 @@ export default function stylesheet(props, themeData) {
       ...(hasHover ? getButtonHoverRulesByType(type, themeData) : {}),
       ...(hasFocus ? getButtonFocusRulesByType(type, themeData) : {}),
       ...(isPressed ? getButtonPressedRulesByType(type, themeData) : {}),
-      ...getButtonRulesBySize(size, themeData),
+      // ...getButtonRulesBySize(size, themeData),
       ...getButtonRulesByWidth(width)
     },
     icon: {
