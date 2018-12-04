@@ -19,7 +19,7 @@
   ],
   "dependencies": {
     "@hig/avatar": "^0.2.0",
-    "@hig/banner": "^0.1.6",
+    "@hig/banner": "^1.0.0",
     "@hig/button": "^0.3.0",
     "@hig/checkbox": "^0.1.5",
     "@hig/dropdown": "^0.3.0",
