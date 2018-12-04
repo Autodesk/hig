@@ -3,11 +3,9 @@ import PropTypes from "prop-types";
 import { ControlBehavior } from "@hig/behaviors";
 
 import {
-  availableSizes,
   availableTargets,
   availableTypes,
   availableWidths,
-  sizes,
   types,
   widths
 } from "./constants";
@@ -60,10 +58,6 @@ export default class Button extends Component {
      */
     onMouseUp: PropTypes.func,
     /**
-     * Specifies size of button
-     */
-    size: PropTypes.oneOf(availableSizes),
-    /**
      * Specifies where to display the linked URL
      */
     target: PropTypes.oneOf(availableTargets),
@@ -83,7 +77,6 @@ export default class Button extends Component {
 
   static defaultProps = {
     disabled: false,
-    size: sizes.STANDARD,
     type: types.SOLID,
     width: widths.SHRINK
   };
@@ -101,7 +94,6 @@ export default class Button extends Component {
       onMouseEnter,
       onMouseLeave,
       onMouseUp,
-      size,
       target,
       title,
       type,
@@ -143,7 +135,6 @@ export default class Button extends Component {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             onMouseUp={handleMouseUp}
-            size={size}
             target={target}
             title={title}
             type={type}

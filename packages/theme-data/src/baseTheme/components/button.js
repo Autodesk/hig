@@ -82,15 +82,6 @@ export default {
     }
   },
   /**
-   * ## Size
-   */
-  "button.large.horizontalPadding": {
-    type: LENGTH,
-    value: {
-      ref: "density.spacings.large"
-    }
-  },
-  /**
    * ## States
    *
    * ### Default
@@ -335,15 +326,6 @@ export default {
       alpha: 0.2
     }
   },
-  "button.outline.disabled.textColor": {
-    type: COLOR,
-    value: {
-      ref: "button.outline.textColor"
-    },
-    transform: {
-      alpha: 0.2
-    }
-  },
   "button.outline.disabled.icon.color": {
     type: COLOR,
     value: {
@@ -353,7 +335,15 @@ export default {
       alpha: 0.2
     }
   },
-
+  "button.outline.disabled.textColor": {
+    type: COLOR,
+    value: {
+      ref: "button.outline.textColor"
+    },
+    transform: {
+      alpha: 0.2
+    }
+  },
   /**
    * ### Solid
    *
@@ -532,25 +522,24 @@ export default {
       ref: "button.disabled.halo.color"
     }
   },
-  "button.solid.disabled.textColor": {
+  "button.solid.disabled.icon.color": {
     type: COLOR,
     value: {
-      ref: "button.solid.textColor",
+      ref: "basics.colors.textAgainstDark"
     },
     transform: {
       alpha: 0.2
     }
   },
-  "button.solid.disabled.icon.color": {
+  "button.solid.disabled.textColor": {
     type: COLOR,
     value: {
-      ref: "button.solid.icon.color",
-      transform: {
-        alpha: 0.2
-      }
+      ref: "button.solid.textColor"
+    },
+    transform: {
+      alpha: 0.2
     }
   },
-
   /**
    * ### Flat
    *
@@ -734,10 +723,10 @@ export default {
   "button.flat.disabled.icon.color": {
     type: COLOR,
     value: {
-      ref: "button.flat.icon.color",
-      transform: {
-        alpha: 0.2
-      }
+      ref: "basics.colors.autodeskBlue700"
+    },
+    transform: {
+      alpha: 0.4
     }
   }
 };

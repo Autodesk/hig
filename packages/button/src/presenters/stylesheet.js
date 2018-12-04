@@ -1,4 +1,4 @@
-import { types, widths, sizes } from "../constants";
+import { types, widths } from "../constants";
 
 function getButtonDefaultButtonRules(themeData) {
   return {
@@ -15,7 +15,8 @@ function getButtonDefaultButtonRules(themeData) {
     fontWeight: themeData["button.fontWeight"],
     margin: "0",
     overflow: "hidden",
-    padding: `${themeData["button.verticalPadding"]} ${themeData["button.horizontalPadding"]}`,
+    padding: `${themeData["button.verticalPadding"]}
+      ${themeData["button.horizontalPadding"]}`,
     textAlign: "center",
     textDecoration: "none",
     textOverflow: "ellipsis",
@@ -80,7 +81,10 @@ function getButtonRulesByDisabled(type, themeData) {
       return {
         background: themeData["button.solid.disabled.backgroundColor"],
         color: themeData["button.solid.disabled.textColor"],
-        pointerEvents: "none"
+        pointerEvents: "none",
+        "svg *": {
+          fill: themeData["button.solid.disabled.icon.color"]
+        }
       };
     }
     case types.OUTLINE:
@@ -88,53 +92,25 @@ function getButtonRulesByDisabled(type, themeData) {
       return {
         borderColor: themeData["button.outline.disabled.borderColor"],
         color: themeData["button.outline.disabled.textColor"],
-        pointerEvents: "none"
+        pointerEvents: "none",
+        "svg *": {
+          fill: themeData["button.outline.disabled.icon.color"]
+        }
       };
     }
     case types.FLAT: {
       return {
         color: themeData["button.flat.disabled.textColor"],
-        pointerEvents: "none"
+        pointerEvents: "none",
+        "svg *": {
+          fill: themeData["button.flat.disabled.icon.color"]
+        }
       };
     }
     default:
       return {};
   }
 }
-
-/* function getButtonRulesBySize(size, themeData) {
-  switch (size) {
-    case sizes.SMALL:
-      return {
-        fontSize: "12px", // Is this covered by density now?
-        fontWeight: themeData["button.fontWeight"],
-        // height: "28px", // line-height + (borderWidth * 2)
-        // lineHeight: "26px",
-        minWidth: "66px",
-        padding: `${themeData["button.verticalPadding"]} ${themeData["button.horizontalPadding"]}`
-      };
-    case sizes.STANDARD:
-      return {
-        fontSize: themeData["button.fontSize"],
-        fontWeight: themeData["button.fontWeight"],
-        // height: "36px", // line-height + (borderWidth * 2)
-        // lineHeight: "34px",
-        minWidth: "68px",
-        padding: `${themeData["button.verticalPadding"]} ${themeData["button.horizontalPadding"]}`
-      };
-    case sizes.LARGE:
-      return {
-        fontSize: "16px", // Is this covered by density now?
-        fontWeight: themeData["button.fontWeight"],
-        // height: "42px", // line-height + (borderWidth * 2)
-        // lineHeight: "40px",
-        minWidth: "90px",
-        padding: `${themeData["button.verticalPadding"]} ${themeData["button.large.horizontalPadding"]}`
-      };
-    default:
-      return {};
-  }
-} */
 
 function getButtonRulesByWidth(width) {
   return width === widths.GROW ? { width: "100%" } : {};
@@ -190,7 +166,10 @@ function getButtonFocusRulesByType(type, themeData) {
           themeData["button.outline.focus.halo.color"]
         }`,
         color: themeData["button.outline.focus.textColor"],
-        outline: `none`
+        outline: `none`,
+        "svg *": {
+          fill: themeData["button.outline.focus.icon.color"]
+        }
       };
     case types.FLAT:
       return {
@@ -200,7 +179,10 @@ function getButtonFocusRulesByType(type, themeData) {
           themeData["button.flat.focus.halo.color"]
         }`,
         color: themeData["button.flat.focus.textColor"],
-        outline: `none`
+        outline: `none`,
+        "svg *": {
+          fill: themeData["button.flat.focus.icon.color"]
+        }
       };
     default:
       return {};
@@ -236,7 +218,7 @@ function getButtonPressedRulesByType(type, themeData) {
 }
 
 export default function stylesheet(props, themeData) {
-  const { disabled, hasFocus, hasHover, isPressed, size, type, width } = props;
+  const { disabled, hasFocus, hasHover, isPressed, type, width } = props;
 
   return {
     button: {
@@ -246,13 +228,11 @@ export default function stylesheet(props, themeData) {
       ...(hasHover ? getButtonHoverRulesByType(type, themeData) : {}),
       ...(hasFocus ? getButtonFocusRulesByType(type, themeData) : {}),
       ...(isPressed ? getButtonPressedRulesByType(type, themeData) : {}),
-      // ...getButtonRulesBySize(size, themeData),
       ...getButtonRulesByWidth(width)
     },
     icon: {
       display: "inline-block",
       position: "relative",
-      top: "-4px",
       height: "24px",
       verticalAlign: "middle",
       marginRight: "5px",

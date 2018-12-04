@@ -61,15 +61,15 @@ exports[`flyout/Flyout snapshots renders a custom pointer 1`] = `
   border-color: transparent;
   border-radius: 4px;
   box-sizing: border-box;
-  color: #f5f5f5;
+  color: #ffffff;
   cursor: pointer;
   display: inline-block;
   font-family: ArtifaktElement,sans-serif;
   font-size: 14px;
-  font-weight: 400;
-  line-height: 34px;
+  font-weight: 700;
   margin: 0;
   overflow: hidden;
+  padding: 8px 16px;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -82,13 +82,10 @@ exports[`flyout/Flyout snapshots renders a custom pointer 1`] = `
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   background: #0696d7;
-  height: 36px;
-  min-width: 68px;
-  padding: 0 16px;
 }
 
 .emotion-0:visited {
-  color: #f5f5f5;
+  color: #ffffff;
 }
 
 .emotion-0 svg * {
@@ -176,15 +173,15 @@ exports[`flyout/Flyout snapshots renders children from the given render function
   border-color: transparent;
   border-radius: 4px;
   box-sizing: border-box;
-  color: #f5f5f5;
+  color: #ffffff;
   cursor: pointer;
   display: inline-block;
   font-family: ArtifaktElement,sans-serif;
   font-size: 14px;
-  font-weight: 400;
-  line-height: 34px;
+  font-weight: 700;
   margin: 0;
   overflow: hidden;
+  padding: 8px 16px;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -197,13 +194,10 @@ exports[`flyout/Flyout snapshots renders children from the given render function
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   background: #0696d7;
-  height: 36px;
-  min-width: 68px;
-  padding: 0 16px;
 }
 
 .emotion-0:visited {
-  color: #f5f5f5;
+  color: #ffffff;
 }
 
 .emotion-0 svg * {
@@ -302,15 +296,15 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
   border-color: transparent;
   border-radius: 4px;
   box-sizing: border-box;
-  color: #f5f5f5;
+  color: #ffffff;
   cursor: pointer;
   display: inline-block;
   font-family: ArtifaktElement,sans-serif;
   font-size: 14px;
-  font-weight: 400;
-  line-height: 34px;
+  font-weight: 700;
   margin: 0;
   overflow: hidden;
+  padding: 8px 16px;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -323,13 +317,10 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   background: #0696d7;
-  height: 36px;
-  min-width: 68px;
-  padding: 0 16px;
 }
 
 .emotion-0:visited {
-  color: #f5f5f5;
+  color: #ffffff;
 }
 
 .emotion-0 svg * {
@@ -491,15 +482,15 @@ exports[`flyout/Flyout snapshots renders the panel from a basic render function 
   border-color: transparent;
   border-radius: 4px;
   box-sizing: border-box;
-  color: #f5f5f5;
+  color: #ffffff;
   cursor: pointer;
   display: inline-block;
   font-family: ArtifaktElement,sans-serif;
   font-size: 14px;
-  font-weight: 400;
-  line-height: 34px;
+  font-weight: 700;
   margin: 0;
   overflow: hidden;
+  padding: 8px 16px;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -512,13 +503,10 @@ exports[`flyout/Flyout snapshots renders the panel from a basic render function 
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   background: #0696d7;
-  height: 36px;
-  min-width: 68px;
-  padding: 0 16px;
 }
 
 .emotion-0:visited {
-  color: #f5f5f5;
+  color: #ffffff;
 }
 
 .emotion-0 svg * {
@@ -601,15 +589,15 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
   border-color: transparent;
   border-radius: 4px;
   box-sizing: border-box;
-  color: #f5f5f5;
+  color: #ffffff;
   cursor: pointer;
   display: inline-block;
   font-family: ArtifaktElement,sans-serif;
   font-size: 14px;
-  font-weight: 400;
-  line-height: 34px;
+  font-weight: 700;
   margin: 0;
   overflow: hidden;
+  padding: 8px 16px;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -622,13 +610,10 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   background: #0696d7;
-  height: 36px;
-  min-width: 68px;
-  padding: 0 16px;
 }
 
 .emotion-0:visited {
-  color: #f5f5f5;
+  color: #ffffff;
 }
 
 .emotion-0 svg * {
@@ -732,15 +717,15 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
   border-color: transparent;
   border-radius: 4px;
   box-sizing: border-box;
-  color: #f5f5f5;
+  color: #ffffff;
   cursor: pointer;
   display: inline-block;
   font-family: ArtifaktElement,sans-serif;
   font-size: 14px;
-  font-weight: 400;
-  line-height: 34px;
+  font-weight: 700;
   margin: 0;
   overflow: hidden;
+  padding: 8px 16px;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -753,13 +738,10 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   background: #0696d7;
-  height: 36px;
-  min-width: 68px;
-  padding: 0 16px;
 }
 
 .emotion-0:visited {
-  color: #f5f5f5;
+  color: #ffffff;
 }
 
 .emotion-0 svg * {

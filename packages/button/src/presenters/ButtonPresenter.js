@@ -6,7 +6,6 @@ import { ThemeContext } from "@hig/theme-context";
 import stylesheet from "./stylesheet";
 
 import {
-  availableSizes,
   availableTargets,
   availableTypes,
   availableWidths
@@ -28,7 +27,6 @@ export default class ButtonPresenter extends Component {
     onMouseEnter: PropTypes.func,
     onMouseLeave: PropTypes.func,
     onMouseUp: PropTypes.func,
-    size: PropTypes.oneOf(availableSizes),
     target: PropTypes.oneOf(availableTargets),
     title: PropTypes.string.isRequired,
     type: PropTypes.oneOf(availableTypes),
@@ -51,7 +49,6 @@ export default class ButtonPresenter extends Component {
       onMouseEnter,
       onMouseLeave,
       onMouseUp,
-      size,
       target,
       title,
       type,
@@ -67,7 +64,7 @@ export default class ButtonPresenter extends Component {
       <ThemeContext.Consumer>
         {({ resolvedRoles }) => {
           const styles = stylesheet(
-            { disabled, hasFocus, hasHover, isPressed, size, type, width },
+            { disabled, hasFocus, hasHover, isPressed, type, width },
             resolvedRoles
           );
           return (
