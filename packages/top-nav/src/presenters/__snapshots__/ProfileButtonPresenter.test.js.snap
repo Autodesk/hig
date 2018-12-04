@@ -1,6 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`top-nav/presenters/ProfileButtonPresenter  1`] = `
+.emotion-1 {
+  background-color: #faa21b;
+  color: #3c3c3c;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 14px;
+  display: block;
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.emotion-0 {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-family: ArtifaktElement,sans-serif;
+}
+
 <button
   className="hig__top-nav__profile-action__button"
   onClick={undefined}
@@ -8,12 +30,12 @@ exports[`top-nav/presenters/ProfileButtonPresenter  1`] = `
 >
   <span
     aria-label="Avatar for Wolfgang Pauli"
-    className="hig__avatarV2 hig__avatarV2--size--medium-32 hig__avatarV2__background--indigo"
+    className="emotion-1"
     role="img"
   >
     <span
       aria-hidden="true"
-      className="hig__avatarV2__initials"
+      className="emotion-0"
     >
       WP
     </span>
@@ -22,6 +44,28 @@ exports[`top-nav/presenters/ProfileButtonPresenter  1`] = `
 `;
 
 exports[`top-nav/presenters/ProfileButtonPresenter  2`] = `
+.emotion-0 {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-family: ArtifaktElement,sans-serif;
+}
+
+.emotion-1 {
+  background-color: #5d822c;
+  color: #ffffff;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 14px;
+  display: block;
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  text-align: center;
+}
+
 <button
   className="hig__top-nav__profile-action__button"
   onClick={undefined}
@@ -29,12 +73,12 @@ exports[`top-nav/presenters/ProfileButtonPresenter  2`] = `
 >
   <span
     aria-label="Avatar for Hans Hellmann"
-    className="hig__avatarV2 hig__avatarV2--size--medium-32 hig__avatarV2__background--pink"
+    className="emotion-1"
     role="img"
   >
     <span
       aria-hidden="true"
-      className="hig__avatarV2__initials"
+      className="emotion-0"
     >
       HH
     </span>
@@ -43,6 +87,46 @@ exports[`top-nav/presenters/ProfileButtonPresenter  2`] = `
 `;
 
 exports[`top-nav/presenters/ProfileButtonPresenter  3`] = `
+.emotion-2 {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-family: ArtifaktElement,sans-serif;
+}
+
+.emotion-3 {
+  background-color: #5bc9bd;
+  color: #3c3c3c;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 14px;
+  display: block;
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.emotion-1 {
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 2;
+  font-size: 14px;
+  line-height: 32px;
+}
+
+.emotion-0 {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+}
+
 <button
   className="hig__top-nav__profile-action__button"
   onClick={[Function]}
@@ -50,22 +134,22 @@ exports[`top-nav/presenters/ProfileButtonPresenter  3`] = `
 >
   <span
     aria-label="Avatar for Richard Feynman"
-    className="hig__avatarV2 hig__avatarV2--size--medium-32 hig__avatarV2__background--green"
+    className="emotion-3"
     role="img"
   >
     <span
-      className="hig__avatarV2__image-wrapper"
+      className="emotion-1"
     >
       <img
         alt="Avatar image of Richard Feynman"
-        className="hig__avatarV2__image"
+        className="emotion-0"
         onError={[Function]}
         src="richard_phillips_feynman.png"
       />
     </span>
     <span
       aria-hidden="true"
-      className="hig__avatarV2__initials"
+      className="emotion-2"
     >
       RF
     </span>

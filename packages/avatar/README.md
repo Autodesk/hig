@@ -18,7 +18,6 @@ yarn add @hig/avatar
 
 ```js
 import Avatar, { sizes } from '@hig/avatar';
-import '@hig/avatar/build/index.css';
 ```
 
 ## Basic usage
@@ -26,6 +25,6 @@ import '@hig/avatar/build/index.css';
 ```jsx
 <Avatar
   name="David Gonzales"
-  size={sizes.LARGE_36}
+  size={sizes.LARGE_48}
 />
 ```
