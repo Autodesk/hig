@@ -67,5 +67,8 @@ export default {
     value: {
       ref: "basics.colors.white"
     }
+  },
+  iconColor: {
+    value: { ref: "basics.colors.iconLightGrayColor" }
   }
 };

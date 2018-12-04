@@ -12,5 +12,6 @@ export default {
   textColor: { type: COLOR },
   textColorDim: { type: COLOR },
   lowShadowColor: { type: COLOR },
-  highShadowColor: { type: COLOR }
+  highShadowColor: { type: COLOR },
+  iconColor: { type: COLOR }
 };

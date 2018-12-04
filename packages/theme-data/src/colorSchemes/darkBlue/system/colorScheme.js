@@ -67,5 +67,8 @@ export default {
     transform: {
       alpha: 0.6
     }
+  },
+  iconColor: {
+    value: { ref: "basics.colors.iconDarkBlueColor" }
   }
 };
