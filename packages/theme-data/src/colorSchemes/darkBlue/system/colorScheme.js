@@ -1,4 +1,38 @@
 export default {
+  accentColor: {
+    value: {
+      ref: "basics.colors.autodeskBlue500"
+    }
+  },
+  baseColor: {
+    value: {
+      ref: "basics.colors.charcoal600"
+    }
+  },
+  "component.backgroundColor": {
+    value: {
+      ref: "basics.colors.surfaceDarkBlueLevel200"
+    }
+  },
+  highShadowColor: {
+    value: {
+      ref: "basics.colors.surfaceDarkBlueShadow"
+    },
+    transform: {
+      alpha: 0.5
+    }
+  },
+  iconColor: {
+    value: { ref: "basics.colors.iconDarkBlueColor" }
+  },
+  lowShadowColor: {
+    value: {
+      ref: "basics.colors.surfaceDarkBlueShadow"
+    },
+    transform: {
+      alpha: 0.8
+    }
+  },
   surfaceLevel100Color: {
     value: {
       ref: "basics.colors.surfaceDarkBlueLevel100"
@@ -24,37 +58,6 @@ export default {
       ref: "basics.colors.surfaceDarkBlueLevel350"
     }
   },
-  lowShadowColor: {
-    value: {
-      ref: "basics.colors.surfaceDarkBlueShadow"
-    },
-    transform: {
-      alpha: 0.8
-    }
-  },
-  highShadowColor: {
-    value: {
-      ref: "basics.colors.surfaceDarkBlueShadow"
-    },
-    transform: {
-      alpha: 0.5
-    }
-  },
-  baseColor: {
-    value: {
-      ref: "basics.colors.charcoal600"
-    }
-  },
-  accentColor: {
-    value: {
-      ref: "basics.colors.autodeskBlue500"
-    }
-  },
-  "component.backgroundColor": {
-    value: {
-      ref: "basics.colors.surfaceDarkBlueLevel200"
-    }
-  },
   textColor: {
     value: {
       ref: "basics.colors.textAgainstDark"
@@ -67,8 +70,5 @@ export default {
     transform: {
       alpha: 0.6
     }
-  },
-  iconColor: {
-    value: { ref: "basics.colors.iconDarkBlueColor" }
   }
 };

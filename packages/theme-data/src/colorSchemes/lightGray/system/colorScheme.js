@@ -1,4 +1,38 @@
 export default {
+  accentColor: {
+    value: {
+      ref: "basics.colors.autodeskBlue500"
+    }
+  },
+  baseColor: {
+    value: {
+      ref: "basics.colors.charcoal600"
+    }
+  },
+  "component.backgroundColor": {
+    value: {
+      ref: "basics.colors.white"
+    }
+  },
+  highShadowColor: {
+    value: {
+      ref: "basics.colors.surfaceLightGrayShadow"
+    },
+    transform: {
+      alpha: 0.25
+    }
+  },
+  iconColor: {
+    value: { ref: "basics.colors.iconLightGrayColor" }
+  },
+  lowShadowColor: {
+    value: {
+      ref: "basics.colors.surfaceLightGrayShadow"
+    },
+    transform: {
+      alpha: 0.25
+    }
+  },
   surfaceLevel100Color: {
     value: {
       ref: "basics.colors.surfaceLightGrayLevel100"
@@ -24,32 +58,6 @@ export default {
       ref: "basics.colors.surfaceLightGrayLevel350"
     }
   },
-  lowShadowColor: {
-    value: {
-      ref: "basics.colors.surfaceLightGrayShadow"
-    },
-    transform: {
-      alpha: 0.25
-    }
-  },
-  highShadowColor: {
-    value: {
-      ref: "basics.colors.surfaceLightGrayShadow"
-    },
-    transform: {
-      alpha: 0.25
-    }
-  },
-  baseColor: {
-    value: {
-      ref: "basics.colors.charcoal600"
-    }
-  },
-  accentColor: {
-    value: {
-      ref: "basics.colors.autodeskBlue500"
-    }
-  },
   textColor: {
     value: {
       ref: "basics.colors.textAgainstLight"
@@ -62,13 +70,5 @@ export default {
     transform: {
       alpha: 0.6
     }
-  },
-  "component.backgroundColor": {
-    value: {
-      ref: "basics.colors.white"
-    }
-  },
-  iconColor: {
-    value: { ref: "basics.colors.iconLightGrayColor" }
   }
 };
