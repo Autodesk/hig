@@ -32,7 +32,7 @@ Theme data is a representation of the HIG visual design language in the form of 
 ### Basics
 - Typography - See [`<Typography>`](./packages/typography/README.md) and [`<RichText>`](./packages/rich-text/README.md)
 - Layout - See [`<Spacer>`](./packages/spacer/README.md)
-- Icons - See [`<Icon>`](./packages/icon/README.md) to easily render icons in React and the [`@hig/icons`](./packages/icons/README.md) package for svg data
+- Icons - See [`<Icons>`](./packages/icons/README.md) to easily render icons in React and the [`@hig/icons`](./packages/icons/README.md) package for svg data
 
 ### Components
 
@@ -44,7 +44,7 @@ Each HIG pattern is implemented as a set of React components. Each pattern is pu
 - [`<Checkbox>`](./packages/checkbox/README.md) - A control to select from non-exclusive options
 - [`<Dropdown>`](./packages/dropdown/README.md) - A menu to select one or many from a list
 - [`<Flyout>`](./packages/flyout/README.md) - A lightweight popup container
-- [`<Icon>`](./packages/icon/README.md) - Represents a concept in graphical form
+- [`<Icons>`](./packages/icons/README.md) - Represents a concept in graphical form
 - [`<IconButton>`](./packages/icon-button/README.md) - Action buttons that include an icon only
 - [`<Modal>`](./packages/modal/README.md) - An overlay that focuses the customer's attention
 - [`<ProfileFlyout>`](./packages/profile-flyout/README.md) - A flyout containing customer's name, email, and account info

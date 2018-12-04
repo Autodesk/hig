@@ -50,14 +50,19 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
     <span
       className="hig__dropdown__input-caret"
     >
-      <div
-        className="hig__icon hig__icon--24-size"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" role=\\"img\\" title=\\"caret-24\\"><path d=\\"M8.71,3.22a.75.75,0,0,0-1.06,0L5,5.87,2.35,3.22a.75.75,0,0,0-1.06,0,.74.74,0,0,0,0,1.06L4.65,7.64a.5.5,0,0,0,.7,0L8.71,4.28A.74.74,0,0,0,8.71,3.22Z\\"/></svg>",
-          }
-        }
-      />
+      <svg
+        height="10"
+        viewBox="0 0 10 10"
+        width="10"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          caret-down-m
+        </title>
+        <path
+          d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
+        />
+      </svg>
     </span>
   </div>
   <div
@@ -153,14 +158,18 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
       <div
         className="hig__dropdown-option__checkmark"
       >
-        <div
-          className="hig__icon hig__icon--24-size"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "<svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"checkmark-blue-dark-24\\"><polygon fill=\\"#087AAD\\" points=\\"10.1802137 16 6 12.1129 7.29586623 10.8214 10.1569902 13.4647 16.6790525 7 18 8.2681\\" fill-rule=\\"evenodd\\"/></svg>",
-            }
-          }
-        />
+        <svg
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10.18 16L6 12.113l1.296-1.292 2.861 2.644L16.679 7 18 8.268z"
+            fill="#087AAD"
+            fillRule="evenodd"
+          />
+        </svg>
       </div>
     </div>
     <div
@@ -268,14 +277,19 @@ exports[`Dropdown renders with a controlled value 1`] = `
     <span
       className="hig__dropdown__input-caret"
     >
-      <div
-        className="hig__icon hig__icon--24-size"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" role=\\"img\\" title=\\"caret-24\\"><path d=\\"M8.71,3.22a.75.75,0,0,0-1.06,0L5,5.87,2.35,3.22a.75.75,0,0,0-1.06,0,.74.74,0,0,0,0,1.06L4.65,7.64a.5.5,0,0,0,.7,0L8.71,4.28A.74.74,0,0,0,8.71,3.22Z\\"/></svg>",
-          }
-        }
-      />
+      <svg
+        height="10"
+        viewBox="0 0 10 10"
+        width="10"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          caret-down-m
+        </title>
+        <path
+          d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
+        />
+      </svg>
     </span>
   </div>
   <div
@@ -337,14 +351,18 @@ exports[`Dropdown renders with a controlled value 1`] = `
       <div
         className="hig__dropdown-option__checkmark"
       >
-        <div
-          className="hig__icon hig__icon--24-size"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "<svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"checkmark-blue-dark-24\\"><polygon fill=\\"#087AAD\\" points=\\"10.1802137 16 6 12.1129 7.29586623 10.8214 10.1569902 13.4647 16.6790525 7 18 8.2681\\" fill-rule=\\"evenodd\\"/></svg>",
-            }
-          }
-        />
+        <svg
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10.18 16L6 12.113l1.296-1.292 2.861 2.644L16.679 7 18 8.268z"
+            fill="#087AAD"
+            fillRule="evenodd"
+          />
+        </svg>
       </div>
     </div>
   </div>
@@ -410,14 +428,19 @@ exports[`Dropdown renders with a label and an ID 1`] = `
     <span
       className="hig__dropdown__input-caret"
     >
-      <div
-        className="hig__icon hig__icon--24-size"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" role=\\"img\\" title=\\"caret-24\\"><path d=\\"M8.71,3.22a.75.75,0,0,0-1.06,0L5,5.87,2.35,3.22a.75.75,0,0,0-1.06,0,.74.74,0,0,0,0,1.06L4.65,7.64a.5.5,0,0,0,.7,0L8.71,4.28A.74.74,0,0,0,8.71,3.22Z\\"/></svg>",
-          }
-        }
-      />
+      <svg
+        height="10"
+        viewBox="0 0 10 10"
+        width="10"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          caret-down-m
+        </title>
+        <path
+          d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
+        />
+      </svg>
     </span>
   </div>
   <div
@@ -479,14 +502,19 @@ exports[`Dropdown renders with custom option formatting 1`] = `
     <span
       className="hig__dropdown__input-caret"
     >
-      <div
-        className="hig__icon hig__icon--24-size"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" role=\\"img\\" title=\\"caret-24\\"><path d=\\"M8.71,3.22a.75.75,0,0,0-1.06,0L5,5.87,2.35,3.22a.75.75,0,0,0-1.06,0,.74.74,0,0,0,0,1.06L4.65,7.64a.5.5,0,0,0,.7,0L8.71,4.28A.74.74,0,0,0,8.71,3.22Z\\"/></svg>",
-          }
-        }
-      />
+      <svg
+        height="10"
+        viewBox="0 0 10 10"
+        width="10"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          caret-down-m
+        </title>
+        <path
+          d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
+        />
+      </svg>
     </span>
   </div>
   <div
@@ -600,14 +628,19 @@ exports[`Dropdown renders with custom option render function 1`] = `
     <span
       className="hig__dropdown__input-caret"
     >
-      <div
-        className="hig__icon hig__icon--24-size"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" role=\\"img\\" title=\\"caret-24\\"><path d=\\"M8.71,3.22a.75.75,0,0,0-1.06,0L5,5.87,2.35,3.22a.75.75,0,0,0-1.06,0,.74.74,0,0,0,0,1.06L4.65,7.64a.5.5,0,0,0,.7,0L8.71,4.28A.74.74,0,0,0,8.71,3.22Z\\"/></svg>",
-          }
-        }
-      />
+      <svg
+        height="10"
+        viewBox="0 0 10 10"
+        width="10"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          caret-down-m
+        </title>
+        <path
+          d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
+        />
+      </svg>
     </span>
   </div>
   <div
@@ -688,14 +721,19 @@ exports[`Dropdown renders with default value 1`] = `
     <span
       className="hig__dropdown__input-caret"
     >
-      <div
-        className="hig__icon hig__icon--24-size"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" role=\\"img\\" title=\\"caret-24\\"><path d=\\"M8.71,3.22a.75.75,0,0,0-1.06,0L5,5.87,2.35,3.22a.75.75,0,0,0-1.06,0,.74.74,0,0,0,0,1.06L4.65,7.64a.5.5,0,0,0,.7,0L8.71,4.28A.74.74,0,0,0,8.71,3.22Z\\"/></svg>",
-          }
-        }
-      />
+      <svg
+        height="10"
+        viewBox="0 0 10 10"
+        width="10"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          caret-down-m
+        </title>
+        <path
+          d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
+        />
+      </svg>
     </span>
   </div>
   <div
@@ -757,14 +795,18 @@ exports[`Dropdown renders with default value 1`] = `
       <div
         className="hig__dropdown-option__checkmark"
       >
-        <div
-          className="hig__icon hig__icon--24-size"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "<svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"checkmark-blue-dark-24\\"><polygon fill=\\"#087AAD\\" points=\\"10.1802137 16 6 12.1129 7.29586623 10.8214 10.1569902 13.4647 16.6790525 7 18 8.2681\\" fill-rule=\\"evenodd\\"/></svg>",
-            }
-          }
-        />
+        <svg
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10.18 16L6 12.113l1.296-1.292 2.861 2.644L16.679 7 18 8.268z"
+            fill="#087AAD"
+            fillRule="evenodd"
+          />
+        </svg>
       </div>
     </div>
   </div>
@@ -821,14 +863,19 @@ exports[`Dropdown renders with multiple selection 1`] = `
     <span
       className="hig__dropdown__input-caret"
     >
-      <div
-        className="hig__icon hig__icon--24-size"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" role=\\"img\\" title=\\"caret-24\\"><path d=\\"M8.71,3.22a.75.75,0,0,0-1.06,0L5,5.87,2.35,3.22a.75.75,0,0,0-1.06,0,.74.74,0,0,0,0,1.06L4.65,7.64a.5.5,0,0,0,.7,0L8.71,4.28A.74.74,0,0,0,8.71,3.22Z\\"/></svg>",
-          }
-        }
-      />
+      <svg
+        height="10"
+        viewBox="0 0 10 10"
+        width="10"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          caret-down-m
+        </title>
+        <path
+          d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
+        />
+      </svg>
     </span>
   </div>
   <div
@@ -942,14 +989,19 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
     <span
       className="hig__dropdown__input-caret"
     >
-      <div
-        className="hig__icon hig__icon--24-size"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" role=\\"img\\" title=\\"caret-24\\"><path d=\\"M8.71,3.22a.75.75,0,0,0-1.06,0L5,5.87,2.35,3.22a.75.75,0,0,0-1.06,0,.74.74,0,0,0,0,1.06L4.65,7.64a.5.5,0,0,0,.7,0L8.71,4.28A.74.74,0,0,0,8.71,3.22Z\\"/></svg>",
-          }
-        }
-      />
+      <svg
+        height="10"
+        viewBox="0 0 10 10"
+        width="10"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          caret-down-m
+        </title>
+        <path
+          d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
+        />
+      </svg>
     </span>
   </div>
   <div
@@ -977,14 +1029,18 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
       <div
         className="hig__dropdown-option__checkmark"
       >
-        <div
-          className="hig__icon hig__icon--24-size"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "<svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"checkmark-blue-dark-24\\"><polygon fill=\\"#087AAD\\" points=\\"10.1802137 16 6 12.1129 7.29586623 10.8214 10.1569902 13.4647 16.6790525 7 18 8.2681\\" fill-rule=\\"evenodd\\"/></svg>",
-            }
-          }
-        />
+        <svg
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10.18 16L6 12.113l1.296-1.292 2.861 2.644L16.679 7 18 8.268z"
+            fill="#087AAD"
+            fillRule="evenodd"
+          />
+        </svg>
       </div>
     </div>
     <div
@@ -1023,14 +1079,18 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
       <div
         className="hig__dropdown-option__checkmark"
       >
-        <div
-          className="hig__icon hig__icon--24-size"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "<svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"checkmark-blue-dark-24\\"><polygon fill=\\"#087AAD\\" points=\\"10.1802137 16 6 12.1129 7.29586623 10.8214 10.1569902 13.4647 16.6790525 7 18 8.2681\\" fill-rule=\\"evenodd\\"/></svg>",
-            }
-          }
-        />
+        <svg
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10.18 16L6 12.113l1.296-1.292 2.861 2.644L16.679 7 18 8.268z"
+            fill="#087AAD"
+            fillRule="evenodd"
+          />
+        </svg>
       </div>
     </div>
   </div>
@@ -1087,14 +1147,19 @@ exports[`Dropdown renders with option specific and general option render functio
     <span
       className="hig__dropdown__input-caret"
     >
-      <div
-        className="hig__icon hig__icon--24-size"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" role=\\"img\\" title=\\"caret-24\\"><path d=\\"M8.71,3.22a.75.75,0,0,0-1.06,0L5,5.87,2.35,3.22a.75.75,0,0,0-1.06,0,.74.74,0,0,0,0,1.06L4.65,7.64a.5.5,0,0,0,.7,0L8.71,4.28A.74.74,0,0,0,8.71,3.22Z\\"/></svg>",
-          }
-        }
-      />
+      <svg
+        height="10"
+        viewBox="0 0 10 10"
+        width="10"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          caret-down-m
+        </title>
+        <path
+          d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
+        />
+      </svg>
     </span>
   </div>
   <div
@@ -1184,14 +1249,19 @@ exports[`Dropdown renders with option specific render function 1`] = `
     <span
       className="hig__dropdown__input-caret"
     >
-      <div
-        className="hig__icon hig__icon--24-size"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" role=\\"img\\" title=\\"caret-24\\"><path d=\\"M8.71,3.22a.75.75,0,0,0-1.06,0L5,5.87,2.35,3.22a.75.75,0,0,0-1.06,0,.74.74,0,0,0,0,1.06L4.65,7.64a.5.5,0,0,0,.7,0L8.71,4.28A.74.74,0,0,0,8.71,3.22Z\\"/></svg>",
-          }
-        }
-      />
+      <svg
+        height="10"
+        viewBox="0 0 10 10"
+        width="10"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          caret-down-m
+        </title>
+        <path
+          d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
+        />
+      </svg>
     </span>
   </div>
   <div
@@ -1317,14 +1387,19 @@ exports[`Dropdown renders with option specific, general and format rendering 1`]
     <span
       className="hig__dropdown__input-caret"
     >
-      <div
-        className="hig__icon hig__icon--24-size"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" role=\\"img\\" title=\\"caret-24\\"><path d=\\"M8.71,3.22a.75.75,0,0,0-1.06,0L5,5.87,2.35,3.22a.75.75,0,0,0-1.06,0,.74.74,0,0,0,0,1.06L4.65,7.64a.5.5,0,0,0,.7,0L8.71,4.28A.74.74,0,0,0,8.71,3.22Z\\"/></svg>",
-          }
-        }
-      />
+      <svg
+        height="10"
+        viewBox="0 0 10 10"
+        width="10"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          caret-down-m
+        </title>
+        <path
+          d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
+        />
+      </svg>
     </span>
   </div>
   <div
@@ -1414,14 +1489,19 @@ exports[`Dropdown renders without props 1`] = `
     <span
       className="hig__dropdown__input-caret"
     >
-      <div
-        className="hig__icon hig__icon--24-size"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"10\\" height=\\"10\\" viewBox=\\"0 0 10 10\\" role=\\"img\\" title=\\"caret-24\\"><path d=\\"M8.71,3.22a.75.75,0,0,0-1.06,0L5,5.87,2.35,3.22a.75.75,0,0,0-1.06,0,.74.74,0,0,0,0,1.06L4.65,7.64a.5.5,0,0,0,.7,0L8.71,4.28A.74.74,0,0,0,8.71,3.22Z\\"/></svg>",
-          }
-        }
-      />
+      <svg
+        height="10"
+        viewBox="0 0 10 10"
+        width="10"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          caret-down-m
+        </title>
+        <path
+          d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
+        />
+      </svg>
     </span>
   </div>
   <div

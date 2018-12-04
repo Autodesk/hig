@@ -42,7 +42,10 @@
 }
 
 .hig__side-nav__module__link__icon {
-  padding-left: spacing(xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
 }
 
 .hig__side-nav__module__link__title {
@@ -57,6 +60,7 @@
   display: flex;
   align-items: center;
   margin-left: auto;
+  padding: 6px 10px;
 }
 
 .hig__side-nav__module__submodules {

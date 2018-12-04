@@ -111,4 +111,9 @@ describe("Input", () => {
       });
     });
   });
+
+  it("passes arbitrary props to input element", () => {
+    const wrapper = mount(<Input data-my-attr="foo" />);
+    expect(wrapper.find("input")).toHaveProp("data-my-attr", "foo");
+  });
 });

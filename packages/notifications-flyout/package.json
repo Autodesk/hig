@@ -21,6 +21,7 @@
   "dependencies": {
     "@hig/flyout": "^0.6.0",
     "@hig/icon-button": "^0.2.1",
+    "@hig/icons": "^0.2.1",
     "@hig/progress-ring": "^0.1.1",
     "@hig/rich-text": "^0.1.4",
     "@hig/typography": "^0.1.4",

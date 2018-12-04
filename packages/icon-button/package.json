@@ -19,14 +19,13 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/icon": "^0.2.1",
-    "@hig/icons": "^0.2.1",
     "classnames": "^2.2.5",
     "prop-types": "^15.6.1"
   },
   "devDependencies": {
     "@hig/babel-preset": "^0.1.1",
     "@hig/eslint-config": "^0.1.0",
+    "@hig/icons": "^0.2.1",
     "@hig/jest-preset": "^0.1.0",
     "@hig/scripts": "^0.1.2",
     "@hig/semantic-release-config": "^0.1.0",

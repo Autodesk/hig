@@ -22,10 +22,12 @@ import '@hig/icon-button/build/index.css';
 Use the `name` prop to render a provided icon by name.
 
 ```jsx
+import { Assets24 } from "@hig/icons"
+
 function MyComponent() {
   return (
     <IconButton
-      name="assets"
+      icon={<Assets24 />}
       onClick={() => console.log('Clicked it.')}
     />
   );
@@ -40,7 +42,7 @@ import myIcon from 'my-icon.svg';
 function MyComponent() {
   return (
     <IconButton
-      svg={myIcon}
+      icon={myIcon}
       onClick={() => console.log('Clicked it.')}
     />
   );

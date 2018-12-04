@@ -8,7 +8,7 @@ const writeIconSets = require("./writeIconSets");
 
 const BUILD_DIR = path.resolve(__dirname, "../../src/release/");
 const SRC_DIR = path.resolve(__dirname, "../../src/icons");
-const BUNDLE_DIST_PATH = path.join(BUILD_DIR, "hig-icons-bundle.json");
+const BUNDLE_DIST_PATH = path.resolve(__dirname, "../../src/index.js");
 const NAMES_DIST_PATH = path.join(BUILD_DIR, "hig-icon-names.json");
 const SETS_DIST_PATH = path.join(BUILD_DIR, "hig-icon-sets.json");
 

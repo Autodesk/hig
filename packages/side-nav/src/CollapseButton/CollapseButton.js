@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
-import Icon, { names as iconNames, sizes as iconSizes } from "@hig/icon";
+import { Caret24 } from "@hig/icons";
 import { ThemeContext } from "@hig/themes";
 import { memoizeCreateButtonEventHandlers } from "@hig/utils";
 
@@ -45,7 +45,7 @@ export default class CollapseButton extends Component {
             role="button"
             tabIndex={0}
           >
-            <Icon name={iconNames.CARET} size={iconSizes.PX_24} />
+            <Caret24 />
           </div>
         )}
       </ThemeContext.Consumer>

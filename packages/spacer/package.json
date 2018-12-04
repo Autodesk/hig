@@ -19,7 +19,7 @@
   ],
   "dependencies": {
     "@hig/theme-context": "^1.0.0-alpha",
-    "emotion": "^9.2.4",
+    "emotion": "^10.0.0",
     "prop-types": "^15.6.1"
   },
   "devDependencies": {

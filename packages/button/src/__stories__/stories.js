@@ -1,5 +1,5 @@
 import React from "react";
-import Icon, { names as iconNames } from "@hig/icon";
+import { Settings24 } from "@hig/icons";
 
 export default [
   {
@@ -19,7 +19,7 @@ export default [
   {
     description: "with icon",
     getProps: () => ({
-      icon: <Icon name={iconNames.SETTINGS} />,
+      icon: <Settings24 />,
       title: "Settings"
     })
   }

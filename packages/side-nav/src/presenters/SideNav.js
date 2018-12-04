@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
 import { ThemeContext } from "@hig/themes";
-import { names as iconNames } from "@hig/icon";
+import { Back24 } from "@hig/icons";
 import IconButton, { types as iconButtonTypes } from "@hig/icon-button";
 
 import "./side-nav.scss";
@@ -118,7 +118,7 @@ export default class SideNav extends Component {
               <div className="hig__side-nav__minimize">
                 <IconButton
                   type={iconButtonTypes.TRANSPARENT}
-                  name={iconNames.BACK}
+                  icon={<Back24 />}
                   title="Minimize"
                   aria-label="Minimize"
                   onClick={onMinimize}

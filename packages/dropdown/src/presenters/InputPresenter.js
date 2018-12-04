@@ -1,5 +1,5 @@
 import React from "react";
-import Icon from "@hig/icon";
+import { Caret24 } from "@hig/icons";
 import { TextFieldPresenter } from "@hig/text-field";
 import "@hig/icon/build/index.css";
 import "@hig/text-field/build/index.css";
@@ -12,7 +12,7 @@ export default function InputPresenter(props) {
       <TextFieldPresenter {...props} type="button" readOnly />
       <span className="hig__dropdown__input-caret">
         {/* @TODO: there are variations of the TextField with multiple icons at the end of the input. These icon nodes should be passed as props to TextField. */}
-        <Icon name="caret" />
+        <Caret24 />
       </span>
     </div>
   );

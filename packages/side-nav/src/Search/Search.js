@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
 import { ThemeContext } from "@hig/themes";
-import Icon, { names as iconNames } from "@hig/icon";
+import { Search24, ClearSmall24 } from "@hig/icons";
 import { memoizeCreateButtonEventHandlers } from "@hig/utils";
 
 import "./search.scss";
@@ -69,7 +69,7 @@ export default class Search extends Component {
         {({ themeClass }) => (
           <div className={cx(themeClass, "hig__side-nav__search")}>
             <div className={cx(themeClass, "hig__side-nav__search__icon")}>
-              <Icon name={iconNames.SEARCH} />
+              <Search24 />
             </div>
 
             <div
@@ -95,7 +95,7 @@ export default class Search extends Component {
                   role="button"
                   tabIndex={0}
                 >
-                  <Icon name={iconNames.CLEAR_SMALL} />
+                  <ClearSmall24 />
                 </div>
               )}
           </div>

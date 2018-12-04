@@ -20,6 +20,7 @@
   top: calc(#{$menu-top-offset} - 30px);
   right: 7px;
   z-index: -1;
+  padding: 6px 10px;
 
   .hig__dropdown--disabled & {
     opacity: 0.3;
