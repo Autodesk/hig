@@ -1,7 +1,7 @@
 import { mount } from "enzyme";
 import React from "react";
 
-import HIGLightTheme from "@hig/theme-data/build/json/lightGrayMediumDensityTheme/theme.json";
+import WebLightTheme from "@hig/theme-data/build/json/webLightMediumDensityTheme/theme.json";
 
 import ThemeContext from "./index";
 
@@ -82,7 +82,7 @@ describe("ThemeContext", () => {
       it("provides the default theme without a provider", () => {
         mount(<ThemeContext.Consumer>{renderFunction}</ThemeContext.Consumer>);
 
-        expect(renderFunction).toHaveBeenCalledWith(HIGLightTheme);
+        expect(renderFunction).toHaveBeenCalledWith(WebLightTheme);
       });
     });
   });
