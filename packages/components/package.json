@@ -35,7 +35,7 @@
     "@hig/project-account-switcher": "^0.3.2",
     "@hig/radio-button": "^0.1.2",
     "@hig/rich-text": "^0.1.4",
-    "@hig/side-nav": "^0.2.3",
+    "@hig/side-nav": "^1.0.0",
     "@hig/skeleton-item": "^0.3.0",
     "@hig/slider": "^0.1.3",
     "@hig/table": "^0.3.3",
