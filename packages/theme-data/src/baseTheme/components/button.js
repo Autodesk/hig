@@ -24,7 +24,7 @@ export default {
   "button.borderRadius": {
     type: BORDER_RADIUS,
     value: {
-      ref: "basics.borderRadii.large"
+      ref: "basics.borderRadii.medium"
     }
   },
   "button.borderWidth": {
@@ -78,7 +78,7 @@ export default {
   "button.verticalPadding": {
     type: LENGTH,
     value: {
-      ref: "density.spacings.medium"
+      ref: "density.spacings.extraSmall"
     }
   },
   /**
@@ -536,9 +536,9 @@ export default {
     type: COLOR,
     value: {
       ref: "button.solid.textColor",
-      transform: {
-        alpha: 0.2
-      }
+    },
+    transform: {
+      alpha: 0.2
     }
   },
   "button.solid.disabled.icon.color": {

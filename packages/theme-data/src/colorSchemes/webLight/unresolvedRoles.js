@@ -14,6 +14,11 @@ const oldBasics = {
 };
 
 const webLightThemeResolvedRoles = extendTheme(lightGrayTheme.unresolvedRoles, {
+  "button.borderRadius": {
+    value: {
+      ref: "basics.borderRadii.large"
+    }
+  },
   "button.fontWeight": {
     value: {
       ref: "basics.fontWeights.bold"
