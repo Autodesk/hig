@@ -1,0 +1,11 @@
+@import '~@hig/styles/mixins/base.scss';
+
+.hig__icon {
+  position: relative;
+  & svg {
+    @include vendor-prefix(transform, translateX(-50%) translateY(-50%));
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+}

@@ -98,4 +98,8 @@ body .hig__toast__message .hig__rich-text {
   position: absolute;
   top: -9px; /* Aligns first line of message to match the IconButton height */
   right: 0;
+  svg {
+    height: 30px;
+    width: 30px;
+  }
 }

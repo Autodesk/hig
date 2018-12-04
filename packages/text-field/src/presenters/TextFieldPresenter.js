@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
-import IconButton, { names, types } from "@hig/icon-button";
+import IconButton, { types } from "@hig/icon-button";
+import { ClearSmall24 } from "@hig/icons";
 import { generateId } from "@hig/utils";
 import "@hig/icon-button/build/index.css";
 
@@ -229,7 +230,7 @@ export default class TextFieldPresenter extends Component {
                 <span className="hig__text-field-v1__clear">
                   <IconButton
                     type={types.TRANSPARENT}
-                    icon={names.CLEAR_SMALL}
+                    icon={<ClearSmall24 />}
                     title={clearButtonTitle}
                     onClick={onClearButtonClick}
                   />

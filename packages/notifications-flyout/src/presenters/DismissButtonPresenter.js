@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import IconButton, { names, types } from "@hig/icon-button";
+import IconButton, { types } from "@hig/icon-button";
+import { CloseNotification24 } from "@hig/icons";
 import "@hig/icon-button/build/index.css";
 
 import "./DismissButtonPresenter.scss";
@@ -10,7 +11,7 @@ export default function DismissButtonPresenter({ onClick, title }) {
     <div className="hig__notification-v1__dismiss-button">
       <IconButton
         onClick={onClick}
-        name={names.CLOSE_NOTIFICATION}
+        icon={<CloseNotification24 />}
         title={title}
         type={types.TRANSPARENT}
       />

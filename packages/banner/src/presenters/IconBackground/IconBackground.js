@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
 import { ThemeContext } from "@hig/themes";
-import Icon, { names as iconNames, sizes as iconSizes } from "@hig/icon";
+import { Info24, Complete24, Issue24, Error24 } from "@hig/icons";
 
 import "./icon-background.scss";
 import classNames from "../classNames";
@@ -10,10 +10,10 @@ import { types } from "../../types";
 
 /** @type {Object.<string, string>} */
 const iconNamesByType = {
-  [types.PRIMARY]: iconNames.INFO,
-  [types.COMPLETE]: iconNames.COMPLETE,
-  [types.WARNING]: iconNames.ISSUE,
-  [types.URGENT]: iconNames.ERROR
+  [types.PRIMARY]: Info24,
+  [types.COMPLETE]: Complete24,
+  [types.WARNING]: Issue24,
+  [types.URGENT]: Error24
 };
 
 /**
@@ -26,11 +26,12 @@ const iconNamesByType = {
  * @returns {JSX.Element}
  */
 export function IconBackground({ type }) {
+  const Icon = iconNamesByType[type];
   return (
     <ThemeContext.Consumer>
       {({ themeClass }) => (
         <figure className={cx(classNames.iconBackground, themeClass)}>
-          <Icon name={iconNamesByType[type]} size={iconSizes.MEDIUM} />
+          <Icon />
         </figure>
       )}
     </ThemeContext.Consumer>

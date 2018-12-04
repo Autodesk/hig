@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import Icon, { names as iconNames } from "@hig/icon";
+import { Settings24 } from "@hig/icons";
 import Button, {
   availableSizes,
   availableTypes,
@@ -31,5 +31,5 @@ const buttonVariations = props =>
 storiesOf("Button", module)
   .add("all variations", () => <div>{buttonVariations()}</div>)
   .add("all variations with icons", () => (
-    <div>{buttonVariations({ icon: <Icon name={iconNames.SETTINGS} /> })}</div>
+    <div>{buttonVariations({ icon: <Settings24 /> })}</div>
   ));

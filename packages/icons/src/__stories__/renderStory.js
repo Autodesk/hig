@@ -1,8 +1,6 @@
 import React from "react";
-import { sets as iconSets } from "@hig/icons";
 import { Body } from "@hig/typography";
-
-import Icon from "../index";
+import * as Icons from "../index";
 
 function Wrapper({ children }) {
   const styles = {
@@ -10,10 +8,8 @@ function Wrapper({ children }) {
     flexDirection: "row",
     flexWrap: "wrap"
   };
-
   return <div style={styles}>{children}</div>;
 }
-
 function InnerWrapper({ children }) {
   return (
     <div
@@ -30,7 +26,6 @@ function InnerWrapper({ children }) {
     </div>
   );
 }
-
 function Spacer() {
   return (
     <div
@@ -40,25 +35,24 @@ function Spacer() {
     />
   );
 }
-
 function IconStory({ size }) {
-  const set = iconSets.find(isonSet => isonSet.size === size);
-
+  const set = Icons.sets.find(isonSet => isonSet.size === size);
   return (
     <Wrapper>
-      {set.iconNames.map(name => (
-        <InnerWrapper key={name}>
-          <Icon name={name} key={name} size={size} />
-          <Spacer />
-          <Body>{name}</Body>
-        </InnerWrapper>
-      ))}
+      {set.iconNames.map(name => {
+        const Icon = Icons[`${name}${size}`];
+        return (
+          <InnerWrapper key={name}>
+            <Icon key={name} />
+            <Spacer />
+            <Body>{name}</Body>
+          </InnerWrapper>
+        );
+      })}
     </Wrapper>
   );
 }
-
 export default function renderStory(props) {
   const { children, ...otherProps } = props;
-
   return <IconStory {...otherProps}>{children}</IconStory>;
 }

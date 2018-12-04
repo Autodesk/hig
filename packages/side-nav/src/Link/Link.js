@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
-import { sizes as iconSizes } from "@hig/icon";
+import { sizes as iconSizes } from "@hig/icons";
 import { ThemeContext } from "@hig/themes";
 
 import { AVAILABLE_TARGETS } from "../targets";

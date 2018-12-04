@@ -18,8 +18,8 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/icon": "^0.2.1",
     "@hig/icon-button": "^0.2.1",
+    "@hig/icons": "^0.2.1",
     "@hig/rich-text": "^0.1.4",
     "classnames": "^2.2.5",
     "prop-types": "^15.6.1",
