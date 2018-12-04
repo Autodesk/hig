@@ -46,7 +46,7 @@
     "@hig/themes": "^0.3.0",
     "@hig/timestamp": "^0.1.4",
     "@hig/tooltip": "^0.2.0",
-    "@hig/top-nav": "^0.5.1",
+    "@hig/top-nav": "^1.0.0",
     "@hig/typography": "^0.1.4"
   },
   "peerDependencies": {
