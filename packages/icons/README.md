@@ -1,6 +1,18 @@
 # Icons
 
-This package retains the source of the library of HIG icons. Consider using the `@hig/icon` package if you need to render an individual icon.
+This package retains the source of the library of HIG icons.
+You can import individual icons to render on your app.
+```jsx
+import { Assets24 } from "@hig/icons";
+
+const MyComponent = () => (
+    <div className="my-class">
+        <Assets24 />
+    </div>
+);
+
+export default MyComponent
+```
 
 Read more about where and how to use icons on [the website](https://hig.autodesk.com/web/basics/icons).
 

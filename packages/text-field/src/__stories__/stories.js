@@ -1,5 +1,5 @@
 import React from "react";
-import Icon from "@hig/icon";
+import { Location24 } from "@hig/icons";
 
 export default [
   {
@@ -25,7 +25,7 @@ export default [
       label: "Comments",
       placeholder: "Enter your comments here.",
       required: "This field is required.",
-      icon: <Icon name="location" />,
+      icon: <Location24 />,
       showClearButton: true
     })
   }

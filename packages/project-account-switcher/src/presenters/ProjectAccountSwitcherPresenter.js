@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import Icon, { names, sizes } from "@hig/icon";
+import { Caret24 } from "@hig/icons";
 import { memoizeCreateButtonEventHandlers } from "@hig/utils";
 
 import constructPlaceholder from "./constructPlaceholder";
@@ -131,7 +131,7 @@ export default class ProjectAccountSwitcherPresenter extends Component {
           </span>
         </div>
         <div className="hig__project-account-switcher__target__caret">
-          <Icon name={names.CARET} size={sizes.PX_24} />
+          <Caret24 />
         </div>
       </div>
     );

@@ -40,6 +40,11 @@
 .hig__text-field-v1__icon {
   position: absolute;
   left: -28px;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hig__text-field-v1__icon--disabled {

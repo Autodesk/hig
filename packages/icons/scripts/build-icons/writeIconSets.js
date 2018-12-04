@@ -1,5 +1,6 @@
 const fs = require("fs");
 const sets = require("../../src/sets");
+const capitalizeCamelCase = require('./capitalizeCamelCase');
 
 /**
  * @param {Object[]} iconNames
@@ -8,7 +9,7 @@ const sets = require("../../src/sets");
 function createSetMap(svgs) {
   return sets.map(set =>
     Object.assign(set, {
-      iconNames: svgs.filter(svg => svg.size === set.size).map(svg => svg.title)
+      iconNames: svgs.filter(svg => svg.size === set.size).map(svg => capitalizeCamelCase(svg.title))
     })
   );
 }

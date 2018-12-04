@@ -1,4 +1,5 @@
 const fs = require("fs");
+const capitalizeCamelCase = require('./capitalizeCamelCase');
 
 /**
  * @param {string[]} iconNames
@@ -6,7 +7,7 @@ const fs = require("fs");
  */
 function createNameMap(svgs) {
   return svgs.reduce(
-    (acc, svg) => Object.assign(acc, { [svg.nameConstant]: svg.title }),
+    (acc, svg) => Object.assign(acc, { [svg.nameConstant]: capitalizeCamelCase(svg.title) }),
     {}
   );
 }

@@ -29,14 +29,18 @@ exports[`side-nav/Submodule snapshot tests renders an external link 1`] = `
   target="_blank"
 >
   Module
-  <div
-    className="hig__icon hig__icon--16-size"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "<svg width=\\"9\\" height=\\"8\\" viewBox=\\"0 0 9 8\\" xmlns=\\"http://www.w3.org/2000/svg\\" role=\\"img\\" title=\\"external-link-16\\"><g stroke=\\"#2E4258\\" fill=\\"none\\" fill-rule=\\"evenodd\\"><polyline points=\\"7.7074 6.4303 7.7074 0.5003 1.7904 0.5003\\"/><path d=\\"M1.08617072,7.11062928 L7.6864,0.5104\\"/></g></svg>",
-      }
-    }
-  />
+  <svg
+    height="8"
+    viewBox="0 0 9 8"
+    width="9"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M7.707 6.43V.5H1.79m-.704 6.61l6.6-6.6"
+      fill="none"
+      stroke="#2E4258"
+    />
+  </svg>
 </a>
 `;
 

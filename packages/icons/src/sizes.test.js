@@ -1,6 +1,6 @@
 import * as sizesModule from "./sizes";
 
-describe("icon-button/sizes", () => {
+describe("icons/sizes", () => {
   it("has an array of available sizes", () => {
     expect(sizesModule).toHavePropertyOfConstants("AVAILABLE_SIZES");
   });

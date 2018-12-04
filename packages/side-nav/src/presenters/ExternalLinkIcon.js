@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import Icon, { names as iconNames, sizes as iconSizes } from "@hig/icon";
+import { ExternalLink16, ExternalLink24, sizes as iconSizes } from "@hig/icons";
 
 export default class ExternalLinkIcon extends Component {
   static propTypes = {
@@ -13,6 +13,8 @@ export default class ExternalLinkIcon extends Component {
   };
 
   render() {
-    return <Icon name={iconNames.EXTERNAL_LINK} size={this.props.size} />;
+    if (this.props.size === iconSizes.PX_24) return <ExternalLink24 />;
+    if (this.props.size === iconSizes.PX_16) return <ExternalLink16 />;
+    return <ExternalLink24 />;
   }
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import Icon from "@hig/icon";
+import { Location24 } from "@hig/icons";
 
 import TextField from "../index";
 
@@ -16,7 +16,7 @@ storiesOf("TextField", module)
   .add("basic", () => <TextField {...defaultProps} />)
   .add("disabled", () => <TextField {...defaultProps} disabled />)
   .add("with preceding icon", () => (
-    <TextField {...defaultProps} icon={<Icon name="location" />} />
+    <TextField {...defaultProps} icon={<Location24 />} />
   ))
   .add("with error message", () => (
     <TextField

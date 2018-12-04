@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
-import Icon, { sizes as iconSizes } from "@hig/icon";
 import IconButton from "@hig/icon-button";
+import { CloseNotification24 } from "@hig/icons";
 import RichText from "@hig/rich-text";
 import "@hig/icon/build/index.css";
 import "@hig/icon-button/build/index.css";
@@ -50,9 +50,10 @@ export default class NotificationsToast extends Component {
     }
 
     if (showStatusIcon && STATUS_ICONS[status]) {
+      const Icon = STATUS_ICONS[status];
       return (
         <div className="hig__toast__image-container">
-          {<Icon name={STATUS_ICONS[status]} size={iconSizes.PX_24} />}
+          <Icon />
         </div>
       );
     }
@@ -74,7 +75,7 @@ export default class NotificationsToast extends Component {
             <div className="hig__toast__dismiss">
               <IconButton
                 title="Dismiss"
-                icon="close-notification"
+                icon={<CloseNotification24 />}
                 type="transparent"
                 onClick={this.props.onDismiss}
               />

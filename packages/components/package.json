@@ -24,7 +24,6 @@
     "@hig/checkbox": "^0.1.5",
     "@hig/dropdown": "^0.3.0",
     "@hig/flyout": "^0.6.0",
-    "@hig/icon": "^0.2.1",
     "@hig/icon-button": "^0.2.1",
     "@hig/icons": "^0.2.1",
     "@hig/modal": "^0.1.2",
