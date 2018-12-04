@@ -18,9 +18,9 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/icons": "^0.2.1",
-    "@hig/multi-downshift": "^0.1.1",
-    "@hig/text-field": "^0.5.0",
+    "@hig/icons": "*1.0.0",
+    "@hig/multi-downshift": "*0.1.1",
+    "@hig/text-field": "*1.0.0",
     "classnames": "^2.2.5",
     "downshift": "^3.1.1",
     "prop-types": "^15.6.1",
@@ -30,12 +30,12 @@
     "react": "^15.4.1 || ^16.3.2"
   },
   "devDependencies": {
-    "@hig/babel-preset": "^0.1.1",
-    "@hig/eslint-config": "^0.1.0",
-    "@hig/jest-preset": "^0.1.0",
-    "@hig/scripts": "^0.1.2",
-    "@hig/semantic-release-config": "^0.1.0",
-    "@hig/styles": "^0.3.0"
+    "@hig/babel-preset": "*0.1.1",
+    "@hig/eslint-config": "*0.1.0",
+    "@hig/jest-preset": "*0.1.0",
+    "@hig/scripts": "*0.1.2",
+    "@hig/semantic-release-config": "*0.1.0",
+    "@hig/styles": "*0.3.0"
   },
   "scripts": {
     "build": "hig-scripts-build",

@@ -143,9 +143,10 @@
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.2.tgz#63985d3d8b02530e0869962f4da09142ee8e200e"
 
-"@hig/dropdown@^0.3.0":
+"@hig/dropdown@*0.3.0":
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@hig/dropdown/-/dropdown-0.3.0.tgz#bd764146a2d3b196021ecac323dc7fa5b7500d1e"
+  integrity sha512-GxYG+atdguUdhcDyhGBZ7VgkpVIjWKVw2oA2LFdywcHaBJF6sRARnLSqSX/qOrgWqy67u+xOogvvX84l15iy3w==
   dependencies:
     "@hig/icon" "^0.2.0"
     "@hig/multi-downshift" "^0.1.0"
@@ -155,7 +156,17 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
 
-"@hig/icon@^0.2.0":
+"@hig/icon-button@^0.2.1":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@hig/icon-button/-/icon-button-0.2.2.tgz#3a98c563306c73bc719cc40b2a73f4077de25a9f"
+  integrity sha512-G9xjDMq0tgqmBvwkA/Aph0qhEi+0+utaFcAefYLJt3yV7IytJry1iuWTSS4qowYx+x68NmNQ77RepBpPkULdcg==
+  dependencies:
+    "@hig/icon" "^0.2.1"
+    "@hig/icons" "^0.2.1"
+    classnames "^2.2.5"
+    prop-types "^15.6.1"
+
+"@hig/icon@^0.2.0", "@hig/icon@^0.2.1":
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@hig/icon/-/icon-0.2.1.tgz#a6cc07a66ee824a678de5738640b1c157e544c77"
   integrity sha512-qaIYUB/lzc5sBnhNjQGT0/Hy5ll8+QfSzv74c12f4gTag74W0VH2zajcrzOBsFLyHGQO8UDV7Oqzm/+AwiGEBw==
@@ -164,17 +175,24 @@
     classnames "^2.2.5"
     prop-types "^15.6.1"
 
-"@hig/skeleton-item@^0.3.0":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@hig/skeleton-item/-/skeleton-item-0.3.1.tgz#9729eb499d40ff61996558a179608862338193b7"
+"@hig/icons@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@hig/icons/-/icons-0.2.1.tgz#9a29bc9add5e3fe549c6a07e4b57fe8e9b3af813"
+  integrity sha512-6sW3jUeHI9dbmW30p03p0gBIlAdcwmF0eIZEbfFA6mby9UMYVC5GjnxKlyTtlStctGNh/FphLjvjxkOZVdKMzA==
+
+"@hig/skeleton-item@*0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@hig/skeleton-item/-/skeleton-item-0.3.0.tgz#9c151cfe771108cc304b51bedd796c1579076500"
+  integrity sha512-kandGlwCgZ/3aakeeFd9CJS/vWNaRsA+T3Si8z9nIT21t0gDospLlHEj6vq1Ue+ksz896jOpFccXdxKb+/UKDA==
   dependencies:
     "@hig/themes" "^0.3.0"
     classnames "^2.2.5"
     prop-types "^15.6.1"
 
-"@hig/styles@^0.2.3":
+"@hig/styles@*0.2.3":
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/@hig/styles/-/styles-0.2.3.tgz#675631d008c1861921d6148ecf15b140c04cc5b4"
+  integrity sha512-kVN6vG1VCC+5aS2aO3PVfpjAcQ/yHp4tsGxTmePwS2c1gnWhuwYigOLCSOqOvRq6HsglmBvcBFcms9NTLJeGaA==
 
 "@hig/text-field@^0.4.2":
   version "0.4.5"
@@ -192,11 +210,19 @@
   dependencies:
     tinycolor2 "^1.4.1"
 
-"@hig/themes@^0.3.0":
+"@hig/themes@*0.3.0", "@hig/themes@^0.3.0":
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@hig/themes/-/themes-0.3.0.tgz#15b20fd8c9a8e2a3d9146824ffbfbe88d81bfc9f"
   dependencies:
     "@hig/theme-data-poc" "^0.0.8-alpha"
+    prop-types "^15.6.1"
+
+"@hig/typography@*0.1.3":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@hig/typography/-/typography-0.1.3.tgz#5e24d9f5ad41c5b5b495a49051bff7b5f62a0583"
+  integrity sha512-vDqNSZqBQFJXn4MaSsKxYitjXhaks75RC0616OBPX/JSM+phCGyFBgTdKOQJS8D0TORsNAsW+bTNYHvigavrOw==
+  dependencies:
+    classnames "^2.2.5"
     prop-types "^15.6.1"
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
