@@ -10,7 +10,6 @@ import skeletonItem from "./components/skeletonItem";
 import textarea from "./components/textarea";
 import label from "./components/label";
 import menu from "./components/menu";
-import icon from "./components/icon";
 
 const baseThemeConfig = extendTheme(
   {},
@@ -34,8 +33,7 @@ const baseThemeConfig = extendTheme(
     skeletonItem,
     textarea,
     label,
-    menu,
-    icon
+    menu
   )
 );
 
