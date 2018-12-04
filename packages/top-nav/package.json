@@ -21,7 +21,7 @@
     "@hig/flyout": "^0.6.0",
     "@hig/icon-button": "^0.2.1",
     "@hig/icons": "^0.2.1",
-    "@hig/notifications-flyout": "^0.2.3",
+    "@hig/notifications-flyout": "^1.0.0",
     "@hig/profile-flyout": "^0.1.1",
     "@hig/utils": "^0.3.0",
     "classnames": "^2.2.5",
