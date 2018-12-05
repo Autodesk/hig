@@ -13,12 +13,11 @@ yarn add @hig/typography
 ## Import the component and CSS
 
 ```
-import { Text } from '@hig/typography';
-import '@hig/typography/build/index.css';
+import Typography from '@hig/typography';
 ```
 
 ## Basic usage
 
 ```jsx
-<Text>Artifakt Element is the preferred font.</Text>
+<Typography>Artifakt Element is the preferred font.</Typography>
 ```
