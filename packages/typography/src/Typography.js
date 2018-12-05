@@ -6,6 +6,37 @@ import { _VALID_COLORS, _VALID_SIZES, _VALID_TYPES } from "./_constants";
 import "./typography.scss";
 
 export default class Typography extends Component {
+  static propTypes = {
+    /**
+     * Whether to render bold text
+     */
+    bold: PropTypes.bool,
+    /**
+     * Colors the text with one of the supported HIG colors
+     */
+    color: PropTypes.oneOf(_VALID_COLORS),
+    /**
+     * Whether to show text as disabled
+     */
+    disabled: PropTypes.bool,
+    /**
+     * An opacity value to modify the color, between 0.0 and 1.0
+     */
+    opacity: PropTypes.number,
+    /**
+     * Sizes the text with one of the supported modifiers
+     */
+    size: PropTypes.oneOf(_VALID_SIZES),
+    /**
+     * Indicates the initial Typography style
+     */
+    type: PropTypes.oneOf(_VALID_TYPES).isRequired,
+    /**
+     * Text to render styled based on provided type
+     */
+    text: PropTypes.string.isRequired
+  };
+
   render() {
     const classes = cx("hig__typography", {
       [`hig__typography__${this.props.type}`]: this.props.type,
@@ -32,34 +63,3 @@ export default class Typography extends Component {
     );
   }
 }
-
-Typography.propTypes = {
-  /**
-   * Whether to render bold text
-   */
-  bold: PropTypes.bool,
-  /**
-   * Colors the text with one of the supported HIG colors
-   */
-  color: PropTypes.oneOf(_VALID_COLORS),
-  /**
-   * Whether to show text as disabled
-   */
-  disabled: PropTypes.bool,
-  /**
-   * An opacity value to modify the color, between 0.0 and 1.0
-   */
-  opacity: PropTypes.number,
-  /**
-   * Sizes the text with one of the supported modifiers
-   */
-  size: PropTypes.oneOf(_VALID_SIZES),
-  /**
-   * Indicates the initial Typography style
-   */
-  type: PropTypes.oneOf(_VALID_TYPES).isRequired,
-  /**
-   * Text to render styled based on provided type
-   */
-  text: PropTypes.string.isRequired
-};
