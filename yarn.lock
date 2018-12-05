@@ -155,17 +155,7 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
 
-"@hig/icon-button@^0.2.1":
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/@hig/icon-button/-/icon-button-0.2.2.tgz#3a98c563306c73bc719cc40b2a73f4077de25a9f"
-  integrity sha512-G9xjDMq0tgqmBvwkA/Aph0qhEi+0+utaFcAefYLJt3yV7IytJry1iuWTSS4qowYx+x68NmNQ77RepBpPkULdcg==
-  dependencies:
-    "@hig/icon" "^0.2.1"
-    "@hig/icons" "^0.2.1"
-    classnames "^2.2.5"
-    prop-types "^15.6.1"
-
-"@hig/icon@^0.2.0", "@hig/icon@^0.2.1":
+"@hig/icon@^0.2.0":
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@hig/icon/-/icon-0.2.1.tgz#a6cc07a66ee824a678de5738640b1c157e544c77"
   integrity sha512-qaIYUB/lzc5sBnhNjQGT0/Hy5ll8+QfSzv74c12f4gTag74W0VH2zajcrzOBsFLyHGQO8UDV7Oqzm/+AwiGEBw==
@@ -173,11 +163,6 @@
     "@hig/icons" "^0.2.1"
     classnames "^2.2.5"
     prop-types "^15.6.1"
-
-"@hig/icons@^0.2.1":
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/@hig/icons/-/icons-0.2.1.tgz#9a29bc9add5e3fe549c6a07e4b57fe8e9b3af813"
-  integrity sha512-6sW3jUeHI9dbmW30p03p0gBIlAdcwmF0eIZEbfFA6mby9UMYVC5GjnxKlyTtlStctGNh/FphLjvjxkOZVdKMzA==
 
 "@hig/skeleton-item@^0.3.0":
   version "0.3.1"
