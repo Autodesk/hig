@@ -1,3 +1,10 @@
+# [@hig/theme-data-v1.2.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@1.1.0...@hig/theme-data@1.2.0) (2018-12-06)
+
+
+### Features
+
+* **theme-data:** adds theme color data for icons ([f03e2e8](https://github.com/Autodesk/hig/commit/f03e2e8))
+
 # [@hig/theme-data-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@1.0.0...@hig/theme-data@1.1.0) (2018-11-27)
 
 
