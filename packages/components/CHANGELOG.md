@@ -1,3 +1,10 @@
+# [@hig/components-v1.0.2](https://github.com/Autodesk/hig/compare/@hig/components@1.0.1...@hig/components@1.0.2) (2018-12-06)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/dropdown to version 1.0.0 ([48814c1](https://github.com/Autodesk/hig/commit/48814c1))
+
 # [@hig/components-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/components@1.0.0...@hig/components@1.0.1) (2018-12-06)
 
 
