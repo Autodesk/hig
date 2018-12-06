@@ -1,3 +1,10 @@
+# [@hig/side-nav-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/side-nav@1.0.0...@hig/side-nav@1.0.1) (2018-12-06)
+
+
+### Bug Fixes
+
+* combined greenkeeper prs for version updates see pr 1392 ([d0a017a](https://github.com/Autodesk/hig/commit/d0a017a))
+
 # [@hig/side-nav-v1.0.0](https://github.com/Autodesk/hig/compare/@hig/side-nav@0.2.3...@hig/side-nav@1.0.0) (2018-12-04)
 
 
