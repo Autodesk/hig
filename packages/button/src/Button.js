@@ -3,11 +3,9 @@ import PropTypes from "prop-types";
 import { ControlBehavior } from "@hig/behaviors";
 
 import {
-  availableSizes,
   availableTargets,
   availableTypes,
   availableWidths,
-  sizes,
   types,
   widths
 } from "./constants";
@@ -44,6 +42,10 @@ export default class Button extends Component {
      */
     onHover: PropTypes.func,
     /**
+     * Triggers when the user's mouse is pressed over the button
+     */
+    onMouseDown: PropTypes.func,
+    /**
      * Triggers when the user's mouse is over the button
      */
     onMouseEnter: PropTypes.func,
@@ -52,9 +54,9 @@ export default class Button extends Component {
      */
     onMouseLeave: PropTypes.func,
     /**
-     * Specifies size of button
+     * Triggers when the user's mouse is no longer pressed over the button
      */
-    size: PropTypes.oneOf(availableSizes),
+    onMouseUp: PropTypes.func,
     /**
      * Specifies where to display the linked URL
      */
@@ -75,8 +77,7 @@ export default class Button extends Component {
 
   static defaultProps = {
     disabled: false,
-    size: sizes.STANDARD,
-    type: types.PRIMARY,
+    type: types.SOLID,
     width: widths.SHRINK
   };
 
@@ -89,9 +90,10 @@ export default class Button extends Component {
       onClick,
       onFocus,
       onHover,
+      onMouseDown,
       onMouseEnter,
       onMouseLeave,
-      size,
+      onMouseUp,
       target,
       title,
       type,
@@ -102,30 +104,37 @@ export default class Button extends Component {
       <ControlBehavior
         onBlur={onBlur}
         onFocus={onFocus}
+        onMouseDown={onMouseDown}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
+        onMouseUp={onMouseUp}
       >
         {({
           hasFocus,
           hasHover,
+          isPressed,
           onBlur: handleBlur,
           onFocus: handleFocus,
+          onMouseDown: handleMouseDown,
           onMouseEnter: handleMouseEnter,
-          onMouseLeave: handleMouseLeave
+          onMouseLeave: handleMouseLeave,
+          onMouseUp: handleMouseUp
         }) => (
           <ButtonPresenter
             disabled={disabled}
             hasFocus={hasFocus}
             hasHover={hasHover}
+            isPressed={isPressed}
             icon={icon}
             link={link}
             onBlur={handleBlur}
             onClick={onClick}
             onFocus={handleFocus}
             onHover={onHover}
+            onMouseDown={handleMouseDown}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            size={size}
+            onMouseUp={handleMouseUp}
             target={target}
             title={title}
             type={type}

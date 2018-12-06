@@ -2,9 +2,8 @@ import { action } from "@storybook/addon-actions";
 import { boolean, select, text } from "@storybook/addon-knobs/react";
 import { makeSelectOptions } from "@hig/storybook/utils";
 
-import { sizes, targets, types, widths } from "../constants";
+import { targets, types, widths } from "../constants";
 
-const sizeOptions = makeSelectOptions(sizes);
 const targetOptions = makeSelectOptions(targets);
 const typeOptions = makeSelectOptions(types);
 const widthOptions = makeSelectOptions(widths);
@@ -21,9 +20,10 @@ const knobLabels = {
   onClick: "onClick",
   onFocus: "onFocus",
   onHover: "onHover",
+  onMouseDown: "onMouseDown",
   onMouseEnter: "onMouseEnter",
   onMouseLeave: "onMouseLeave",
-  size: "Size",
+  onMouseUp: "onMouseUp",
   target: "Target",
   title: "Title",
   type: "Variant",
@@ -31,16 +31,7 @@ const knobLabels = {
 };
 
 export default function getKnobs(props) {
-  const {
-    disabled,
-    link,
-    size,
-    target,
-    title,
-    type,
-    width,
-    ...otherProps
-  } = props;
+  const { disabled, link, target, title, type, width, ...otherProps } = props;
 
   return {
     ...otherProps,
@@ -50,9 +41,10 @@ export default function getKnobs(props) {
     onClick: action(knobLabels.onClick),
     onFocus: action(knobLabels.onFocus),
     onHover: action(knobLabels.onHover),
+    onMouseDown: action(knobLabels.onMouseDown),
     onMouseEnter: action(knobLabels.onMouseEnter),
     onMouseLeave: action(knobLabels.onMouseLeave),
-    size: select(knobLabels.size, sizeOptions, size, knobGroupIds.basic),
+    onMouseUp: action(knobLabels.onMouseUp),
     target: select(
       knobLabels.target,
       targetOptions,

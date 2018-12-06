@@ -1,6 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`flyout/FlyoutPresenter/FlyoutPresenter renders with all props 1`] = `
+.emotion-0 {
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0;
+  overflow: hidden;
+  padding: 8px 16px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background: #0696d7;
+}
+
+.emotion-0:visited {
+  color: #ffffff;
+}
+
+.emotion-0 svg * {
+  fill: #f5f5f5;
+}
+
 <div
   className="hig__flyout-v1 hig__flyout-v1--top-center"
 >
@@ -8,14 +45,16 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders with all props 1`] = `
     className="hig__flyout-v1__action"
   >
     <button
-      className="hig--light-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+      className="emotion-0"
       href={undefined}
       onBlur={[Function]}
       onClick={undefined}
       onFocus={[Function]}
+      onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onMouseOver={undefined}
+      onMouseUp={[Function]}
       tabIndex="0"
       target={undefined}
     >
