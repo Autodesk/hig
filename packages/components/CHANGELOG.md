@@ -1,3 +1,10 @@
+# [@hig/components-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/components@1.0.0...@hig/components@1.0.1) (2018-12-06)
+
+
+### Bug Fixes
+
+* combined greenkeeper prs for version updates see pr 1392 ([d0a017a](https://github.com/Autodesk/hig/commit/d0a017a))
+
 # [@hig/components-v1.0.0](https://github.com/Autodesk/hig/compare/@hig/components@0.11.1...@hig/components@1.0.0) (2018-12-04)
 
 

@@ -1,3 +1,10 @@
+# [@hig/top-nav-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/top-nav@1.0.0...@hig/top-nav@1.0.1) (2018-12-06)
+
+
+### Bug Fixes
+
+* combined greenkeeper prs for version updates see pr 1392 ([d0a017a](https://github.com/Autodesk/hig/commit/d0a017a))
+
 # [@hig/top-nav-v1.0.0](https://github.com/Autodesk/hig/compare/@hig/top-nav@0.5.1...@hig/top-nav@1.0.0) (2018-12-04)
 
 

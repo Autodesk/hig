@@ -1,3 +1,10 @@
+# [@hig/notifications-flyout-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@1.0.0...@hig/notifications-flyout@1.0.1) (2018-12-06)
+
+
+### Bug Fixes
+
+* combined greenkeeper prs for version updates see pr 1392 ([d0a017a](https://github.com/Autodesk/hig/commit/d0a017a))
+
 # [@hig/notifications-flyout-v1.0.0](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@0.2.4...@hig/notifications-flyout@1.0.0) (2018-12-04)
 
 

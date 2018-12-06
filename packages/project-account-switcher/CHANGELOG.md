@@ -1,3 +1,10 @@
+# [@hig/project-account-switcher-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/project-account-switcher@1.0.0...@hig/project-account-switcher@1.0.1) (2018-12-06)
+
+
+### Bug Fixes
+
+* combined greenkeeper prs for version updates see pr 1392 ([d0a017a](https://github.com/Autodesk/hig/commit/d0a017a))
+
 # [@hig/project-account-switcher-v1.0.0](https://github.com/Autodesk/hig/compare/@hig/project-account-switcher@0.3.2...@hig/project-account-switcher@1.0.0) (2018-12-04)
 
 
