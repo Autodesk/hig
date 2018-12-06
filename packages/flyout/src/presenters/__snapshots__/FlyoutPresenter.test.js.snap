@@ -1,6 +1,49 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`flyout/FlyoutPresenter/FlyoutPresenter renders with all props 1`] = `
+.emotion-4 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-3 {
+  position: absolute;
+  display: table;
+  width: 100%;
+  z-index: 9999;
+  -webkit-transition-property: opacity,-webkit-transform;
+  -webkit-transition-property: opacity,transform;
+  transition-property: opacity,transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  touch-action: auto;
+  pointer-events: auto;
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
 .emotion-0 {
   border-width: 1px;
   border-style: solid;
@@ -39,10 +82,10 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders with all props 1`] = `
 }
 
 <div
-  className="emotion-3"
+  className="emotion-4"
 >
   <div
-    className="emotion-0"
+    className="emotion-1"
   >
     <button
       className="emotion-0"
@@ -66,11 +109,11 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders with all props 1`] = `
     </button>
   </div>
   <div
-    className="emotion-2"
+    className="emotion-3"
   >
     <div
       aria-hidden="true"
-      className="emotion-1"
+      className="emotion-2"
       role="presentation"
       style={undefined}
     >
@@ -127,7 +170,7 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders without props 1`] = `
 }
 
 .emotion-1 {
-  fill: transparent;
+  fill: #D4DBE1;
 }
 
 .emotion-2 {

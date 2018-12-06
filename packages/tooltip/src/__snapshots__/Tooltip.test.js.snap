@@ -96,6 +96,53 @@ exports[`tooltip/Tooltip  1`] = `
 `;
 
 exports[`tooltip/Tooltip  2`] = `
+.emotion-6 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-2 {
+  fill: #393939;
+}
+
+.emotion-5 {
+  position: absolute;
+  display: table;
+  width: 100%;
+  z-index: 9999;
+  -webkit-transition-property: opacity,-webkit-transform;
+  -webkit-transition-property: opacity,transform;
+  transition-property: opacity,transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  touch-action: auto;
+  pointer-events: auto;
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
 .emotion-0 {
   border-width: 1px;
   border-style: solid;
@@ -134,10 +181,10 @@ exports[`tooltip/Tooltip  2`] = `
 }
 
 <div
-  className="emotion-5"
+  className="emotion-6"
 >
   <div
-    className="emotion-0"
+    className="emotion-1"
   >
     <button
       className="emotion-0"
@@ -161,11 +208,11 @@ exports[`tooltip/Tooltip  2`] = `
     </button>
   </div>
   <div
-    className="emotion-4"
+    className="emotion-5"
   >
     <div
       aria-hidden="true"
-      className="emotion-3"
+      className="emotion-4"
       role="presentation"
       style={undefined}
     >
@@ -175,11 +222,11 @@ exports[`tooltip/Tooltip  2`] = `
         width="12"
       >
         <polygon
-          className="emotion-1"
+          className="emotion-2"
           points="0,6 6,0 12,6"
         />
         <polygon
-          className="emotion-1"
+          className="emotion-2"
           points="2.5,6 6,2.5 9.5,6"
         />
       </svg>

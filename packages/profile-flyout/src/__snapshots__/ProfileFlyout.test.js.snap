@@ -25,7 +25,7 @@ exports[`profile-flyout/ProfileFlyout renders with all props 1`] = `
 }
 
 .emotion-1 {
-  fill: transparent;
+  fill: #D4DBE1;
 }
 
 .emotion-2 {
@@ -35,7 +35,7 @@ exports[`profile-flyout/ProfileFlyout renders with all props 1`] = `
 .emotion-5 {
   background-color: #ffffff;
   border-radius: 4px;
-  border: 1px solid transparent;
+  border: 1px solid #D4DBE1;
   box-shadow: 0 0 16px rgba(0,0,0,0.25);
 }
 
@@ -173,7 +173,7 @@ exports[`profile-flyout/ProfileFlyout renders with no props 1`] = `
 }
 
 .emotion-1 {
-  fill: transparent;
+  fill: #D4DBE1;
 }
 
 .emotion-2 {
@@ -183,7 +183,7 @@ exports[`profile-flyout/ProfileFlyout renders with no props 1`] = `
 .emotion-5 {
   background-color: #ffffff;
   border-radius: 4px;
-  border: 1px solid transparent;
+  border: 1px solid #D4DBE1;
   box-shadow: 0 0 16px rgba(0,0,0,0.25);
 }
 

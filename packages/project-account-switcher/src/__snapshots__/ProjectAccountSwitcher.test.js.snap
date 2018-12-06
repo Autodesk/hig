@@ -1,11 +1,73 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`project-account-switcher/ProjectAccountSwitcher integration renders with controlled active account/project 1`] = `
+.emotion-7 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
+  position: absolute;
+  display: none;
+  width: 100%;
+  z-index: 9999;
+  -webkit-transition-property: opacity,-webkit-transform;
+  -webkit-transition-property: opacity,transform;
+  transition-property: opacity,transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  touch-action: auto;
+  pointer-events: auto;
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-1 {
+  fill: #D4DBE1;
+}
+
+.emotion-2 {
+  fill: #ffffff;
+}
+
+.emotion-5 {
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: 1px solid #D4DBE1;
+  box-shadow: 0 0 16px rgba(0,0,0,0.25);
+}
+
+.emotion-4 {
+  position: relative;
+}
+
 <div
-  className="hig__flyout-v1 hig__flyout-v1--hidden hig__flyout-v1--top-left"
+  className="emotion-7"
 >
   <div
-    className="hig__flyout-v1__action"
+    className="emotion-0"
   >
     <div
       className="hig__project-account-switcher__target"
@@ -57,24 +119,13 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
     </div>
   </div>
   <div
-    className="hig__flyout-v1__container"
-    style={
-      Object {
-        "left": "0px",
-        "top": "0px",
-      }
-    }
+    className="emotion-6"
   >
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__pointer-wrapper"
+      className="emotion-3"
       role="presentation"
-      style={
-        Object {
-          "left": "0px",
-          "top": "0px",
-        }
-      }
+      style={undefined}
     >
       <svg
         height="24"
@@ -82,17 +133,17 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
         width="24"
       >
         <polygon
-          fill="#d4dbe1"
+          className="emotion-1"
           points="0,12 12,0 24,12"
         />
         <polygon
-          fill="#fff"
+          className="emotion-2"
           points="2.5,12 12,2.5 21.5,12"
         />
       </svg>
     </div>
     <div
-      className="hig__flyout-v1__panel-container"
+      className="emotion-5"
       style={
         Object {
           "maxHeight": undefined,
@@ -100,7 +151,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
       }
     >
       <div
-        className="hig__flyout-v1__panel-container__inner"
+        className="emotion-4"
       >
         <div
           className="hig__project-account-switcher__panel"
@@ -223,6 +274,68 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
 `;
 
 exports[`project-account-switcher/ProjectAccountSwitcher integration renders with default account/project 1`] = `
+.emotion-7 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
+  position: absolute;
+  display: none;
+  width: 100%;
+  z-index: 9999;
+  -webkit-transition-property: opacity,-webkit-transform;
+  -webkit-transition-property: opacity,transform;
+  transition-property: opacity,transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  touch-action: auto;
+  pointer-events: auto;
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-1 {
+  fill: #D4DBE1;
+}
+
+.emotion-2 {
+  fill: #ffffff;
+}
+
+.emotion-5 {
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: 1px solid #D4DBE1;
+  box-shadow: 0 0 16px rgba(0,0,0,0.25);
+}
+
+.emotion-4 {
+  position: relative;
+}
+
 <div
   className="emotion-7"
 >
