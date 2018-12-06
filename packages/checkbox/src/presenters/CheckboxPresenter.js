@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import cx from "classnames";
-import { generateId } from "@hig/utils";
+import { css } from "emotion";
+import { ThemeContext } from "@hig/theme-context";
 import CheckPresenter from "./CheckPresenter";
-
-import "./CheckboxPresenter.scss";
+import stylesheet from "./stylesheet";
 
 export default class CheckboxPresenter extends Component {
   static propTypes = {
@@ -17,13 +16,21 @@ export default class CheckboxPresenter extends Component {
      */
     disabled: PropTypes.bool,
     /**
+     * Returns whether or not the checkbox is currently focused
+     */
+    hasFocus: PropTypes.bool,
+    /**
+     * Returns whether or not the checkbox is currently hovered
+     */
+    hasHover: PropTypes.bool,
+    /**
      * Sets indeterminate state for checkbox
      */
     indeterminate: PropTypes.bool,
     /**
-     * Text identifying the field
+     * Returns whether or not the checkbox is currently pressed
      */
-    label: PropTypes.string,
+    isPressed: PropTypes.bool,
     /**
      * The name of the checkbox as submitted with a form
      */
@@ -44,6 +51,22 @@ export default class CheckboxPresenter extends Component {
      * Called when user puts focus on the field
      */
     onFocus: PropTypes.func,
+    /**
+     * Triggers when the user's mouse is pressed over the checkbox
+     */
+    onMouseDown: PropTypes.func,
+    /**
+     * Triggers when the user's mouse is over the checkbox
+     */
+    onMouseEnter: PropTypes.func,
+    /**
+     * Triggers when the user's mouse is no longer over the checkbox
+     */
+    onMouseLeave: PropTypes.func,
+    /**
+     * Triggers when the user's mouse is no longer pressed over the checkbox
+     */
+    onMouseUp: PropTypes.func,
     /**
      * Marks the field as required, text shown to explain requirement
      */
@@ -70,61 +93,74 @@ export default class CheckboxPresenter extends Component {
     }
   };
 
-  id = generateId("checkbox");
-
   render() {
     const {
       checked,
       disabled,
+      hasFocus,
+      hasHover,
       indeterminate,
-      label,
+      isPressed,
       name,
       onBlur,
       onChange,
       onClick,
+      onMouseDown,
+      onMouseEnter,
+      onMouseLeave,
+      onMouseUp,
       onFocus,
       required,
       value
     } = this.props;
 
-    const labelClasses = cx(["hig__checkbox__label"]);
-
-    const wrapperClasses = cx([
-      "hig__checkbox",
-      "hig__checkbox--checkbox",
-      {
-        "hig__checkbox--required": required,
-        "hig__checkbox--checked": checked
-      }
-    ]);
-
-    const { id } = this;
-
     return (
-      <div className={wrapperClasses}>
-        <input
-          id={id}
-          checked={checked}
-          className="hig__checkbox__input"
-          disabled={disabled}
-          name={name}
-          onBlur={onBlur}
-          onChange={onChange}
-          onClick={onClick}
-          onFocus={onFocus}
-          ref={this.setIndeterminate}
-          type="checkbox"
-          value={value}
-        />
-        <CheckPresenter
-          checked={checked}
-          disabled={disabled}
-          indeterminate={indeterminate}
-        />
-        <label htmlFor={id} className={labelClasses}>
-          {label}
-        </label>
-      </div>
+      <ThemeContext.Consumer>
+        {({ resolvedRoles }) => {
+          const styles = stylesheet(
+            {
+              checked,
+              disabled,
+              hasFocus,
+              hasHover,
+              indeterminate,
+              isPressed,
+              required
+            },
+            resolvedRoles
+          );
+
+          return (
+            <div className={css(styles.checkboxWrapper)}>
+              <input
+                checked={checked}
+                className={css(styles.checkboxInput)}
+                disabled={disabled}
+                name={name}
+                onBlur={onBlur}
+                onChange={onChange}
+                onClick={onClick}
+                onFocus={onFocus}
+                onMouseDown={onMouseDown}
+                onMouseEnter={onMouseEnter}
+                onMouseLeave={onMouseLeave}
+                onMouseUp={onMouseUp}
+                ref={this.setIndeterminate}
+                type="checkbox"
+                value={value}
+              />
+              <CheckPresenter
+                checked={checked}
+                disabled={disabled}
+                hasFocus={hasFocus}
+                hasHover={hasHover}
+                indeterminate={indeterminate}
+                isPressed={isPressed}
+              />
+            </div>
+          );
+        }}
+      </ThemeContext.Consumer>
     );
   }
 }

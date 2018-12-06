@@ -5,6 +5,10 @@ import { action } from "@storybook/addon-actions";
 import { boolean, text } from "@storybook/addon-knobs/react";
 import { controlledBool } from "@hig/storybook/utils";
 
+import KnobbedThemeProvider, {
+  THEMES
+} from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
+
 import infoOptions from "./infoOptions";
 import Checkbox from "../Checkbox";
 
@@ -12,8 +16,7 @@ const stories = [
   {
     description: "default",
     getProps: () => ({
-      ...Checkbox.defaultProps,
-      label: "Default checkbox"
+      ...Checkbox.defaultProps
     })
   }
 ];
@@ -28,7 +31,6 @@ const knobLabels = {
   defaultChecked: "Initially Checked",
   disabled: "Disabled",
   indeterminate: "Indeterminate",
-  label: "Label",
   name: "Name",
   onBlur: "onBlur",
   onChange: "onChange",
@@ -43,9 +45,9 @@ function getKnobs(props) {
     defaultChecked = false,
     indeterminate = false,
     disabled = false,
-    label = "",
     name = "",
     required = "",
+    theme,
     value = "",
     ...otherProps
   } = props;
@@ -64,7 +66,6 @@ function getKnobs(props) {
       indeterminate,
       knobGroupIds.basic
     ),
-    label: text(knobLabels.label, label, knobGroupIds.basic),
     name: text(knobLabels.name, name, knobGroupIds.form),
     onBlur: action(knobLabels.onBlur),
     onChange: action(knobLabels.onChange),
@@ -79,10 +80,23 @@ const storybook = storiesOf("Forms|Checkbox", module);
 stories.forEach(({ description, getProps }) => {
   storybook.add(
     description,
-    withInfo(infoOptions)(() => {
+    withInfo({
+      infoOptions,
+      propTablesExclude: [KnobbedThemeProvider]
+    })(() => {
       const props = getProps();
       const { children, ...otherProps } = getKnobs(props);
-      return <Checkbox {...otherProps}>{children}</Checkbox>;
+      return (
+        <KnobbedThemeProvider
+          supportedThemes={[
+            THEMES.WEB_LIGHT,
+            THEMES.LIGHT_GRAY,
+            THEMES.DARK_BLUE
+          ]}
+        >
+          <Checkbox {...otherProps}>{children}</Checkbox>
+        </KnobbedThemeProvider>
+      );
     })
   );
 });

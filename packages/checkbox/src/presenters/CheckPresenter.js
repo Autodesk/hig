@@ -1,14 +1,15 @@
-/* eslint-disable react/no-danger */
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import cx from "classnames";
+import { css } from "emotion";
+import { ThemeContext } from "@hig/theme-context";
 import {
-  CheckWhite24,
+  CheckboxChecked16,
   CheckmarkIndeterminate16,
-  CheckDisabled16
+  CheckDisabled16,
+  CheckWhite24
 } from "@hig/icons";
 
-import "./CheckPresenter.scss";
+import stylesheet from "./stylesheet";
 
 export default class CheckPresenter extends Component {
   static propTypes = {
@@ -20,6 +21,18 @@ export default class CheckPresenter extends Component {
      * Prevents user actions on the checkbox
      */
     disabled: PropTypes.bool,
+    /**
+     * Returns whether or not the checkbox is currently focused
+     */
+    hasFocus: PropTypes.bool,
+    /**
+     * Returns whether or not the checkbox is currently hovered
+     */
+    hasHover: PropTypes.bool,
+    /**
+     * Returns whether or not the checkbox is currently pressed
+     */
+    isPressed: PropTypes.bool,
     /**
      * Sets indeterminate state for checkbox
      */
@@ -33,29 +46,47 @@ export default class CheckPresenter extends Component {
   };
 
   render() {
-    const { checked, disabled, indeterminate } = this.props;
-
-    const iconClasses = cx([
-      "hig__checkbox__wrapper",
-      {
-        "hig__checkbox__wrapper--checked": checked,
-        "hig__checkbox__wrapper--indeterminate": indeterminate,
-        "hig__checkbox__wrapper--disabled": disabled
-      }
-    ]);
+    const {
+      checked,
+      disabled,
+      hasFocus,
+      hasHover,
+      indeterminate,
+      isPressed
+    } = this.props;
 
     return (
-      <span className={iconClasses}>
-        <span className="hig__checkbox__wrapper__check">
-          <CheckWhite24 />
-        </span>
-        <span className="hig__checkbox__wrapper__check--indeterminate">
-          <CheckmarkIndeterminate16 />
-        </span>
-        <span className="hig__checkbox__wrapper__check--disabled">
-          <CheckDisabled16 />
-        </span>
-      </span>
+      <ThemeContext.Consumer>
+        {({ resolvedRoles, metadata }) => {
+          const styles = stylesheet(
+            { checked, disabled, hasFocus, hasHover, indeterminate, isPressed },
+            resolvedRoles,
+            metadata.colorSchemeId
+          );
+          const Checkmark =
+            metadata.colorSchemeId === "hig-light" ? (
+              <CheckWhite24 />
+            ) : (
+              <CheckboxChecked16 />
+            );
+          const DisabledCheckmark =
+            metadata.colorSchemeId === "hig-light" ? (
+              <CheckDisabled16 />
+            ) : (
+              <CheckboxChecked16 />
+            );
+          const CheckmarkIcon = disabled ? DisabledCheckmark : Checkmark;
+
+          return (
+            <span className={css(styles.checkboxCheckWrapper)}>
+              <span className={css(styles.checkboxCheck)}>{CheckmarkIcon}</span>
+              <span className={css(styles.checkboxIndeterminate)}>
+                <CheckmarkIndeterminate16 />
+              </span>
+            </span>
+          );
+        }}
+      </ThemeContext.Consumer>
     );
   }
 }
