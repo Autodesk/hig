@@ -1,3 +1,47 @@
+# [@hig/dropdown-v1.0.0](https://github.com/Autodesk/hig/compare/@hig/dropdown@0.3.0...@hig/dropdown@1.0.0) (2018-12-06)
+
+
+### BREAKING
+
+* **icon/icon-button:** Removes [@hig](https://github.com/hig)/icon and refactor [@hig](https://github.com/hig)/icon-button to use [@hig](https://github.com/hig)/icons ([49d78f4](https://github.com/Autodesk/hig/commit/49d78f4))
+
+
+### Bug Fixes
+
+* **behavior:** add missing keyboard interactions ([efb1ad9](https://github.com/Autodesk/hig/commit/efb1ad9))
+* combined greenkeeper prs for version updates see pr 1392 ([d0a017a](https://github.com/Autodesk/hig/commit/d0a017a))
+* Correct variable names for downshift onchange event ([99ee455](https://github.com/Autodesk/hig/commit/99ee455))
+* prevent setting invalid props ([2502b3f](https://github.com/Autodesk/hig/commit/2502b3f))
+* **dropdown:** remove alpha so it can release and use new icons ([1f508ba](https://github.com/Autodesk/hig/commit/1f508ba))
+* **package:** update [@hig](https://github.com/hig)/text-field to version 0.5.0 ([2cc44b3](https://github.com/Autodesk/hig/commit/2cc44b3))
+* **storybook:** Add back Icon stories ([f38f2d4](https://github.com/Autodesk/hig/commit/f38f2d4))
+
+
+### Features
+
+* Add optional text entry to Dropdown ([5c0f334](https://github.com/Autodesk/hig/commit/5c0f334))
+
+
+### BREAKING CHANGES
+
+* **icon/icon-button:** Removes @hig/icon
+* **icon/icon-button:** Use icon prop instead of name or svg in @hig/icon-button to render Icon/svg
+* **icon/icon-button:** No longer export `names` from @hig/icon-button
+
+Usage:
+```
+import { Assets24 } from "@hig/icons"
+
+function MyComponent() {
+  return (
+    <IconButton
+      icon={<Assets24 />}
+      onClick={() => console.log('Clicked it.')}
+    />
+  );
+}
+```
+
 # [@hig/dropdown-v0.3.0](https://github.com/Autodesk/hig/compare/@hig/dropdown@0.2.3...@hig/dropdown@0.3.0) (2018-08-23)
 
 
