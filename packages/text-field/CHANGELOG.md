@@ -1,3 +1,10 @@
+# [@hig/text-field-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/text-field@1.0.0...@hig/text-field@1.0.1) (2018-12-06)
+
+
+### Bug Fixes
+
+* combined greenkeeper prs for version updates see pr 1392 ([d0a017a](https://github.com/Autodesk/hig/commit/d0a017a))
+
 # [@hig/text-field-v1.0.0](https://github.com/Autodesk/hig/compare/@hig/text-field@0.5.0...@hig/text-field@1.0.0) (2018-12-04)
 
 
