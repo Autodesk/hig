@@ -22,13 +22,13 @@ export default class ContentPresenter extends Component {
       })
     ),
     /** Currently selected Account */
-    activeAccount: PropTypes.shape({
+    activeAccountObj: PropTypes.shape({
       id: PropTypes.string,
       image: PropTypes.string,
       label: PropTypes.string
     }),
     /** Currently selected Project */
-    activeProject: PropTypes.shape({
+    activeProjectObj: PropTypes.shape({
       id: PropTypes.string,
       image: PropTypes.string,
       label: PropTypes.string

@@ -26,16 +26,24 @@ export default class ProjectAccountSwitcher extends Component {
         label: PropTypes.string
       })
     ),
-    /** Currently selected Account */
+    /** Currently selected Account - use this instead of defaultAccount for a controlled component */
+    activeAccount: PropTypes.string,
+    /** DEPRECATED use defaultAccount instead - Currently selected Account */
     activeAccountId: PropTypes.string,
     /** Label for selected Accounts and Projects */
     activeLabel: PropTypes.string,
-    /** Currently selected Project */
+    /** Currently selected Project - use this instead of defaultProject for a controlled component */
+    activeProject: PropTypes.string,
+    /** DEPRECATED use defaultProject instead - Currently selected Project */
     activeProjectId: PropTypes.string,
     /** Manipulate flyout coordinates before each render */
     alterCoordinates: PropTypes.func,
     /** Where the flyout will be anchored relative to target */
     anchorPoint: PropTypes.oneOf(AVAILABLE_ANCHOR_POINTS),
+    /** The default selected account */
+    defaultAccount: PropTypes.string,
+    /** The default selected project */
+    defaultProject: PropTypes.string,
     /** Called when a the active account or project changes */
     onChange: PropTypes.func,
     /** Called when a user clicks on a list item */
@@ -60,11 +68,15 @@ export default class ProjectAccountSwitcher extends Component {
     const {
       accounts,
       accountTitle,
+      activeAccount,
       activeAccountId,
       activeLabel,
+      activeProject,
       activeProjectId,
       alterCoordinates,
       anchorPoint,
+      defaultAccount,
+      defaultProject,
       onChange,
       onClick,
       onTargetClick,
@@ -76,15 +88,19 @@ export default class ProjectAccountSwitcher extends Component {
     return (
       <ProjectAccountSwitcherBehavior
         accounts={accounts}
+        activeAccount={activeAccount}
         activeAccountId={activeAccountId}
+        activeProject={activeProject}
         activeProjectId={activeProjectId}
+        defaultAccount={defaultAccount}
+        defaultProject={defaultProject}
         onChange={onChange}
         onClick={onClick}
         projects={projects}
       >
         {({
-          activeAccount,
-          activeProject,
+          activeAccountObj,
+          activeProjectObj,
           handleAccountClick,
           handleProjectClick
         }) => (
@@ -97,8 +113,8 @@ export default class ProjectAccountSwitcher extends Component {
               <ContentPresenter
                 accounts={accounts}
                 accountTitle={accountTitle}
-                activeAccount={activeAccount}
-                activeProject={activeProject}
+                activeAccountObj={activeAccountObj}
+                activeProjectObj={activeProjectObj}
                 onAccountClick={combineEventHandlers(
                   handleAccountClick,
                   hideFlyout
@@ -115,9 +131,9 @@ export default class ProjectAccountSwitcher extends Component {
             {({ handleClick }) => (
               <ProjectAccountSwitcherPresenter
                 accounts={accounts}
-                activeAccount={activeAccount}
+                activeAccountObj={activeAccountObj}
                 activeLabel={activeLabel}
-                activeProject={activeProject}
+                activeProjectObj={activeProjectObj}
                 onTargetClick={combineEventHandlers(onTargetClick, handleClick)}
                 open={open}
                 projects={projects}
