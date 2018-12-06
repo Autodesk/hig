@@ -1,3 +1,10 @@
+# [@hig/project-account-switcher-v1.0.2](https://github.com/Autodesk/hig/compare/@hig/project-account-switcher@1.0.1...@hig/project-account-switcher@1.0.2) (2018-12-06)
+
+
+### Bug Fixes
+
+* **project-account-switcher:** add back controlled behavior ([ceeaadf](https://github.com/Autodesk/hig/commit/ceeaadf))
+
 # [@hig/project-account-switcher-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/project-account-switcher@1.0.0...@hig/project-account-switcher@1.0.1) (2018-12-06)
 
 
