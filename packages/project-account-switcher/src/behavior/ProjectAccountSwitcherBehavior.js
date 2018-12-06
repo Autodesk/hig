@@ -11,12 +11,20 @@ export default class ProjectAccountSwitcherBehavior extends Component {
         label: PropTypes.string
       })
     ),
-    /** Currently selected Account */
+    /** Currently selected Account - use this instead of defaultAccount for a controlled component */
+    activeAccount: PropTypes.string,
+    /** DEPRECATED use defaultAccount instead - Currently selected Account */
     activeAccountId: PropTypes.string,
-    /** Currently selected Project */
+    /** Currently selected Project - use this instead of defaultProject for a controlled component */
+    activeProject: PropTypes.string,
+    /** DEPRECATED use defaultProject instead - Currently selected Project */
     activeProjectId: PropTypes.string,
     /** Render prop */
     children: PropTypes.func,
+    /** The default selected account */
+    defaultAccount: PropTypes.string,
+    /** The default selected project */
+    defaultProject: PropTypes.string,
     /** Called when a the active account or project changes */
     onChange: PropTypes.func,
     /** Called when a user clicks on a list item */
@@ -32,26 +40,34 @@ export default class ProjectAccountSwitcherBehavior extends Component {
   };
 
   state = {
-    activeAccount: this.getAccount(this.props.activeAccountId),
-    activeProject: this.getProject(this.props.activeProjectId)
+    activeAccount: this.getAccount(this.props.activeAccount),
+    activeProject: this.getProject(this.props.activeProject)
   };
 
   getAccount(accountId) {
-    const { accounts = [] } = this.props;
+    const { accounts = [], activeAccount } = this.props;
+
+    if (activeAccount) {
+      return accounts.find(({ id }) => id === activeAccount);
+    }
 
     return accounts.find(({ id }) => id === accountId);
   }
 
   getProject(projectId) {
-    const { projects = [] } = this.props;
+    const { activeProject, projects = [] } = this.props;
+
+    if (activeProject) {
+      return projects.find(({ id }) => id === activeProject);
+    }
 
     return projects.find(({ id }) => id === projectId);
   }
 
   handleAccountClick = (event, id) => {
-    const { onChange, onClick } = this.props;
-    const { activeProject } = this.state;
-    const activeAccount = this.getAccount(id);
+    const { activeAccount, onChange, onClick } = this.props;
+    const { activeProjectObj } = this.state;
+    const activeAccountObj = this.getAccount(id);
 
     if (onClick) {
       onClick(event);
@@ -59,18 +75,20 @@ export default class ProjectAccountSwitcherBehavior extends Component {
 
     if (onChange) {
       onChange({
-        account: activeAccount,
-        project: activeProject
+        account: activeAccountObj,
+        project: activeProjectObj
       });
     }
 
-    this.setState({ activeAccount });
+    if (!activeAccount) {
+      this.setState({ activeAccount: activeAccountObj });
+    }
   };
 
   handleProjectClick = (event, id) => {
-    const { onChange, onClick } = this.props;
-    const { activeAccount } = this.state;
-    const activeProject = this.getProject(id);
+    const { activeProject, onChange, onClick } = this.props;
+    const { activeAccountObj } = this.state;
+    const activeProjectObj = this.getProject(id);
 
     if (onClick) {
       onClick(event);
@@ -78,18 +96,31 @@ export default class ProjectAccountSwitcherBehavior extends Component {
 
     if (onChange) {
       onChange({
-        account: activeAccount,
-        project: activeProject
+        account: activeAccountObj,
+        project: activeProjectObj
       });
     }
 
-    this.setState({ activeProject });
+    if (!activeProject) {
+      this.setState({ activeProject: activeProjectObj });
+    }
   };
 
   render() {
+    const {
+      activeAccountId,
+      activeProjectId,
+      defaultAccount,
+      defaultProject
+    } = this.props;
+    const uncontrolledAccount = defaultAccount || activeAccountId;
+    const uncontrolledProject = defaultProject || activeProjectId;
+
     return this.props.children({
-      activeAccount: this.state.activeAccount,
-      activeProject: this.state.activeProject,
+      activeAccountObj:
+        this.state.activeAccount || this.getAccount(uncontrolledAccount),
+      activeProjectObj:
+        this.state.activeProject || this.getProject(uncontrolledProject),
       handleAccountClick: this.handleAccountClick,
       handleProjectClick: this.handleProjectClick
     });
