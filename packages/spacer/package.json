@@ -1,6 +1,6 @@
 {
   "name": "@hig/spacer",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "HIG Spacer component",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -18,7 +18,7 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/theme-context": "^1.0.0-alpha",
+    "@hig/theme-context": "^1.0.1",
     "emotion": "^10.0.0",
     "prop-types": "^15.6.1"
   },

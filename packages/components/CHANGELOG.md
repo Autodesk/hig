@@ -1,3 +1,38 @@
+# [@hig/components-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/components@1.0.0...@hig/components@1.0.1) (2018-12-06)
+
+
+### Bug Fixes
+
+* combined greenkeeper prs for version updates see pr 1392 ([d0a017a](https://github.com/Autodesk/hig/commit/d0a017a))
+
+# [@hig/components-v1.0.0](https://github.com/Autodesk/hig/compare/@hig/components@0.11.1...@hig/components@1.0.0) (2018-12-04)
+
+
+### BREAKING
+
+* **icon/icon-button:** Removes [@hig](https://github.com/hig)/icon and refactor [@hig](https://github.com/hig)/icon-button to use [@hig](https://github.com/hig)/icons ([49d78f4](https://github.com/Autodesk/hig/commit/49d78f4))
+
+
+### BREAKING CHANGES
+
+* **icon/icon-button:** Removes @hig/icon
+* **icon/icon-button:** Use icon prop instead of name or svg in @hig/icon-button to render Icon/svg
+* **icon/icon-button:** No longer export `names` from @hig/icon-button
+
+Usage:
+```
+import { Assets24 } from "@hig/icons"
+
+function MyComponent() {
+  return (
+    <IconButton
+      icon={<Assets24 />}
+      onClick={() => console.log('Clicked it.')}
+    />
+  );
+}
+```
+
 # [@hig/components-v0.11.1](https://github.com/Autodesk/hig/compare/@hig/components@0.11.0...@hig/components@0.11.1) (2018-11-27)
 
 
