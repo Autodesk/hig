@@ -1,7 +1,6 @@
 import React from "react";
 import { Caret24 } from "@hig/icons";
 import { TextFieldPresenter } from "@hig/text-field";
-import "@hig/icon/build/index.css";
 import "@hig/text-field/build/index.css";
 
 import "./InputPresenter.scss";

@@ -4,7 +4,6 @@ import cx from "classnames";
 import IconButton from "@hig/icon-button";
 import { CloseNotification24 } from "@hig/icons";
 import RichText from "@hig/rich-text";
-import "@hig/icon/build/index.css";
 import "@hig/icon-button/build/index.css";
 import "@hig/rich-text/build/index.css";
 
