@@ -22,7 +22,7 @@
     "@hig/banner": "^1.0.1",
     "@hig/button": "^1.0.0",
     "@hig/checkbox": "^1.0.1",
-    "@hig/dropdown": "^0.3.0",
+    "@hig/dropdown": "^1.0.0",
     "@hig/flyout": "^0.6.0",
     "@hig/icon-button": "^1.0.1",
     "@hig/icons": "^1.0.0",
