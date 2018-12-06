@@ -25,14 +25,14 @@ function MyApp() {
 import ThemeContext from '@hig/themes';
 
 function MyThemedComponent() {
-  <ThemeContext.Consumer>{({ resolvedRoles, name }) => (
+  <ThemeContext.Consumer>{({ resolvedRoles, metadata }) => (
     <div style={{
       backgroundColor: resolvedRoles["colorScheme.surfaceLevel200Color"],
       borderRadius: resolvedRoles["basics.borderRadii.small"],
       color: resolvedRoles["colorScheme.textColor"],
       padding: resolvedRoles["density.spacings.medium"],
     }}>
-      The current theme is "{name}".
+      The current theme is "${metadata.name}".
     </div>
   )}</ThemeContext.Consumer>
 }
