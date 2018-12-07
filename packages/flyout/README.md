@@ -16,7 +16,6 @@ yarn add @hig/flyout
 
 ```js
 import Flyout, { anchorPoints } from "@hig/flyout";
-import "@hig/flyout/build/index.css";
 ```
 
 ## Basic usage

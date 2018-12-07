@@ -1,17 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tooltip/presenters/PointerPresenter renders 1`] = `
+.emotion-0 {
+  fill: #393939;
+}
+
 <svg
   height="12"
   viewBox="0 0 12 12"
   width="12"
 >
   <polygon
-    fill="#393939"
+    className="emotion-0"
     points="0,6 6,0 12,6"
   />
   <polygon
-    fill="#393939"
+    className="emotion-0"
     points="2.5,6 6,2.5 9.5,6"
   />
 </svg>

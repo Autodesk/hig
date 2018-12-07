@@ -11,8 +11,6 @@ describe("flyout/presenters/PointerPresenter", () => {
     {
       description: "renders with all props",
       props: {
-        backgroundColor: "#f00",
-        borderColor: "#00f",
         borderWidth: 10,
         size: 100
       }

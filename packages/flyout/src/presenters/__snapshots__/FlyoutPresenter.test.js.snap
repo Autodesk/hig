@@ -1,6 +1,49 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`flyout/FlyoutPresenter/FlyoutPresenter renders with all props 1`] = `
+.emotion-4 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-3 {
+  position: absolute;
+  display: table;
+  width: 100%;
+  z-index: 9999;
+  -webkit-transition-property: opacity,-webkit-transform;
+  -webkit-transition-property: opacity,transform;
+  transition-property: opacity,transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  touch-action: auto;
+  pointer-events: auto;
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
 .emotion-0 {
   border-width: 1px;
   border-style: solid;
@@ -39,10 +82,10 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders with all props 1`] = `
 }
 
 <div
-  className="hig__flyout-v1 hig__flyout-v1--top-center"
+  className="emotion-4"
 >
   <div
-    className="hig__flyout-v1__action"
+    className="emotion-1"
   >
     <button
       className="emotion-0"
@@ -66,24 +109,13 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders with all props 1`] = `
     </button>
   </div>
   <div
-    className="hig__flyout-v1__container"
-    style={
-      Object {
-        "left": "42px",
-        "top": "42px",
-      }
-    }
+    className="emotion-3"
   >
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__pointer-wrapper"
+      className="emotion-2"
       role="presentation"
-      style={
-        Object {
-          "left": "42px",
-          "top": "42px",
-        }
-      }
+      style={undefined}
     >
       <div>
         I am a custom pointer
@@ -94,31 +126,71 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders with all props 1`] = `
 `;
 
 exports[`flyout/FlyoutPresenter/FlyoutPresenter renders without props 1`] = `
+.emotion-5 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
+  position: absolute;
+  display: table;
+  width: 100%;
+  z-index: 9999;
+  -webkit-transition-property: opacity,-webkit-transform;
+  -webkit-transition-property: opacity,transform;
+  transition-property: opacity,transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  touch-action: none;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transform: translateY(-4px);
+  -ms-transform: translateY(-4px);
+  transform: translateY(-4px);
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-1 {
+  fill: #D4DBE1;
+}
+
+.emotion-2 {
+  fill: #ffffff;
+}
+
 <div
-  className="hig__flyout-v1 hig__flyout-v1--exited hig__flyout-v1--top-left"
+  className="emotion-5"
 >
   <div
-    className="hig__flyout-v1__action"
+    className="emotion-0"
   />
   <div
-    className="hig__flyout-v1__container"
-    style={
-      Object {
-        "left": "0px",
-        "top": "0px",
-      }
-    }
+    className="emotion-4"
   >
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__pointer-wrapper"
+      className="emotion-3"
       role="presentation"
-      style={
-        Object {
-          "left": "0px",
-          "top": "0px",
-        }
-      }
+      style={undefined}
     >
       <svg
         height="24"
@@ -126,11 +198,11 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders without props 1`] = `
         width="24"
       >
         <polygon
-          fill="#d4dbe1"
+          className="emotion-1"
           points="0,12 12,0 24,12"
         />
         <polygon
-          fill="#fff"
+          className="emotion-2"
           points="2.5,12 12,2.5 21.5,12"
         />
       </svg>

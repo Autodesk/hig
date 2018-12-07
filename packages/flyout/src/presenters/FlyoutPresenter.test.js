@@ -17,12 +17,11 @@ describe("flyout/FlyoutPresenter/FlyoutPresenter", () => {
       props: {
         anchorPoint: anchorPoints.TOP_CENTER,
         content: "World",
-        containerPosition: { top: 42, left: 42 },
-        pointerPosition: { top: 42, left: 42 },
         maxHeight: 150,
         refAction: function refAction() {},
         refContainer: function refContainer() {},
         refPanel: function refPanel() {},
+        refPanelWrapper: function refPanelWrapper() {},
         refWrapper: function refWrapper() {},
         onScroll: function onScroll() {},
         transitionStatus: transitionStatuses.ENTERED,

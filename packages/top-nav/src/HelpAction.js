@@ -7,7 +7,6 @@ import Flyout, {
   offsetContainerVertical,
   offsetPanelHorizontal
 } from "@hig/flyout";
-import "@hig/flyout/build/index.css";
 
 import { renderActionFlyoutPanel } from "./presenters/ActionFlyoutPanelPresenter";
 import ActionPresenter from "./presenters/ActionPresenter";
