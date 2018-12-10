@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import Button from '@hig/button';
-import Flyout, { anchorPoints } from "@hig/flyout";
+import Flyout from "@hig/flyout";
 
 import Surface from '../components/Surface';
 import ThemeTitle from '../components/ThemeTitle';
