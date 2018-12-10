@@ -3,16 +3,12 @@
 exports[`side-nav/Module/presenters/ModuleCompactPresenter snapshot tests renders with minimal props 1`] = `
 <div
   className="hig--light-theme hig__side-nav__module"
-  onFocus={undefined}
-  onMouseOver={undefined}
 >
   <div
     className="hig__side-nav__module__row"
   >
     <div
       className="hig--light-theme hig__side-nav__module__link"
-      onClick={undefined}
-      onKeyDown={undefined}
       role="button"
       tabIndex={0}
     >
