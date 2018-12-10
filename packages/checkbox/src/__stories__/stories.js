@@ -16,13 +16,6 @@ export default [
     })
   },
   {
-    description: "required",
-    getProps: () => ({
-      label: "Required",
-      required: "You must check this box"
-    })
-  },
-  {
     description: "disabled",
     getProps: () => ({
       disabled: true,

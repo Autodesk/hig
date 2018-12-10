@@ -60,10 +60,6 @@ export default class Checkbox extends Component {
      */
     onMouseUp: PropTypes.func,
     /**
-     * Marks the field as required, text shown to explain requirement
-     */
-    required: PropTypes.string,
-    /**
      * Value submitted with a form if checked
      */
     value: PropTypes.string
@@ -84,8 +80,8 @@ export default class Checkbox extends Component {
       onMouseEnter,
       onMouseLeave,
       onMouseUp,
-      required,
-      value
+      value,
+      ...otherProps
     } = this.props;
 
     return (
@@ -131,8 +127,8 @@ export default class Checkbox extends Component {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 onMouseUp={handleMouseUp}
-                required={required}
                 value={value}
+                {...otherProps}
               />
             )}
           </CheckboxBehavior>

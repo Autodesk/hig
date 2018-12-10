@@ -68,10 +68,6 @@ export default class CheckboxPresenter extends Component {
      */
     onMouseUp: PropTypes.func,
     /**
-     * Marks the field as required, text shown to explain requirement
-     */
-    required: PropTypes.string,
-    /**
      * Value submitted with a form if checked
      */
     value: PropTypes.string
@@ -110,8 +106,8 @@ export default class CheckboxPresenter extends Component {
       onMouseLeave,
       onMouseUp,
       onFocus,
-      required,
-      value
+      value,
+      ...otherProps
     } = this.props;
 
     return (
@@ -124,8 +120,7 @@ export default class CheckboxPresenter extends Component {
               hasFocus,
               hasHover,
               indeterminate,
-              isPressed,
-              required
+              isPressed
             },
             resolvedRoles
           );
@@ -148,6 +143,7 @@ export default class CheckboxPresenter extends Component {
                 ref={this.setIndeterminate}
                 type="checkbox"
                 value={value}
+                {...otherProps}
               />
               <CheckPresenter
                 checked={checked}

@@ -35,7 +35,6 @@ const knobLabels = {
   onBlur: "onBlur",
   onChange: "onChange",
   onFocus: "onFocus",
-  required: "Required",
   value: "Value"
 };
 
@@ -46,7 +45,6 @@ function getKnobs(props) {
     indeterminate = false,
     disabled = false,
     name = "",
-    required = "",
     theme,
     value = "",
     ...otherProps
@@ -70,7 +68,6 @@ function getKnobs(props) {
     onBlur: action(knobLabels.onBlur),
     onChange: action(knobLabels.onChange),
     onFocus: action(knobLabels.onFocus),
-    required: text(knobLabels.required, required, knobGroupIds.basic),
     value: text(knobLabels.value, value, knobGroupIds.form)
   };
 }

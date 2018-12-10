@@ -127,8 +127,7 @@ export default function stylesheet(props, themeData, theme) {
     hasFocus,
     hasHover,
     indeterminate,
-    isPressed,
-    required
+    isPressed
   } = props;
 
   return {
@@ -137,8 +136,7 @@ export default function stylesheet(props, themeData, theme) {
       display: `flex`,
       flexDirection: `row`,
       alignItems: `center`,
-      padding: `0 10px`,
-      "::after": required ? { content: `"*"` } : {}
+      padding: `0 10px`
     },
     checkboxCheckWrapper: {
       position: `relative`,
