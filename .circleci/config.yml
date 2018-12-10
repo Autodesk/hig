@@ -167,6 +167,24 @@ jobs:
           name: Deploy Storybook
           command: yarn storybook-deploy-ci
           working_directory: packages/storybook
+  acceptance-branch-deploy:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: Create dependency hash
+          command: yarn run create-dependency-hash
+      - restore_cache:
+          key: v2-dependencies-{{ checksum ".dependency-hash" }}
+      - restore_cache:
+          key: v1-package-builds-{{ .Revision }}
+      - run:
+          name: Extract dependencies and builds
+          command: yarn run extract
+      - run:
+          name: Deploy Acceptance App
+          command: yarn deploy-ci
+          working_directory: packages/acceptance
   packages-deploy:
     <<: *defaults
     steps:
@@ -232,6 +250,14 @@ workflows:
           requires:
             - react-test
             - visual-test
+      - acceptance-branch-deploy:
+          filters:
+            branches:
+              ignore:
+                - development
+                - master
+          requires:
+            - package-build
       - packages-deploy:
           requires:
             - react-test
