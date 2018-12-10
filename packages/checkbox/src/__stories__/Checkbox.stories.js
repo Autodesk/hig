@@ -9,17 +9,9 @@ import KnobbedThemeProvider, {
   THEMES
 } from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
 
+import stories from "./stories";
 import infoOptions from "./infoOptions";
 import Checkbox from "../Checkbox";
-
-const stories = [
-  {
-    description: "default",
-    getProps: () => ({
-      ...Checkbox.defaultProps
-    })
-  }
-];
 
 const knobGroupIds = {
   basic: "Basic",
@@ -78,7 +70,7 @@ stories.forEach(({ description, getProps }) => {
   storybook.add(
     description,
     withInfo({
-      infoOptions,
+      ...infoOptions,
       propTablesExclude: [KnobbedThemeProvider]
     })(() => {
       const props = getProps();
