@@ -150,15 +150,6 @@
   dependencies:
     prop-types "^15.6.1"
 
-"@hig/flyout@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@hig/flyout/-/flyout-0.6.0.tgz#9fd8992d40fc639e60e5195b9ae87835af571951"
-  integrity sha512-bwfeeeadHVJ2cQRkVLDlpBP2b1tz4q2fflkzaCE2NF3n4JZOXlex77NWe1yJBmgD7ELJ5SDP6WJBVUL1HySbMQ==
-  dependencies:
-    classnames "^2.2.5"
-    prop-types "^15.6.1"
-    react-transition-group "^2.3.1"
-
 "@hig/skeleton-item@^0.3.0":
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/@hig/skeleton-item/-/skeleton-item-0.3.1.tgz#9729eb499d40ff61996558a179608862338193b7"
@@ -183,16 +174,6 @@
   dependencies:
     "@hig/theme-data-poc" "^0.0.8-alpha"
     prop-types "^15.6.1"
-
-"@hig/tooltip@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@hig/tooltip/-/tooltip-0.2.0.tgz#7e0c9639dc7fd89f60b6fc94f6d538672c4de23e"
-  integrity sha512-lphOY7gChgosl+zNyHVe9VPRakR2K4SY2EvGaYAFkn59/QLrZTpxY6rGOy9oOFAtc9srZnuxJLrEq23zUGxO7g==
-  dependencies:
-    "@hig/flyout" "^0.6.0"
-    classnames "^2.2.5"
-    prop-types "^15.6.1"
-    react-lifecycles-compat "^3.0.4"
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
