@@ -1,3 +1,10 @@
+# [@hig/notifications-toast-v1.0.2](https://github.com/Autodesk/hig/compare/@hig/notifications-toast@1.0.1...@hig/notifications-toast@1.0.2) (2018-12-11)
+
+
+### Bug Fixes
+
+* remove leftover icon css dependencies ([2af5d0b](https://github.com/Autodesk/hig/commit/2af5d0b))
+
 # [@hig/notifications-toast-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/notifications-toast@1.0.0...@hig/notifications-toast@1.0.1) (2018-12-06)
 
 
