@@ -4077,13 +4077,15 @@ dotenv@^5.0.1:
   version "5.0.1"
   resolved "http://registry.npmjs.org/dotenv/-/dotenv-5.0.1.tgz#a5317459bd3d79ab88cff6e44057a6a3fbb1fcef"
 
-downshift@^3.1.1:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/downshift/-/downshift-3.1.1.tgz#91e14d45d6ee3e239023cdfcc06248c7f5a1b2b2"
+downshift@^3.1.6:
+  version "3.1.6"
+  resolved "https://registry.yarnpkg.com/downshift/-/downshift-3.1.6.tgz#3950436220e86825cee8627286a6272efaaf502f"
+  integrity sha512-3Q0E9JK6FYqQ7mXnSsfzVEbpgT160EFb70UST7lrs2EOGF2cd5ZzKegJX0nuFnE/0xE9BGhqCC4Exdq8nCCTqA==
   dependencies:
     "@babel/runtime" "^7.1.2"
     compute-scroll-into-view "^1.0.9"
     prop-types "^15.6.0"
+    react-is "^16.5.2"
 
 du@0.1.0:
   version "0.1.0"
@@ -9701,6 +9703,11 @@ react-inspector@^2.2.2:
   dependencies:
     babel-runtime "^6.26.0"
     is-dom "^1.0.9"
+
+react-is@^16.5.2:
+  version "16.6.3"
+  resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.6.3.tgz#d2d7462fcfcbe6ec0da56ad69047e47e56e7eac0"
+  integrity sha512-u7FDWtthB4rWibG/+mFbVd5FvdI20yde86qKGx4lVUTWmPlSWQ4QxbBIrrs+HnXGbxOUlUzTAP/VDmvCwaP2yA==
 
 react-lifecycles-compat@^3.0.0, react-lifecycles-compat@^3.0.4:
   version "3.0.4"
