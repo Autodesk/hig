@@ -1,3 +1,10 @@
+# [@hig/tooltip-v0.3.0](https://github.com/Autodesk/hig/compare/@hig/tooltip@0.2.0...@hig/tooltip@0.3.0) (2018-12-11)
+
+
+### Features
+
+* add stylesheet override for flyout pointer ([947651f](https://github.com/Autodesk/hig/commit/947651f))
+
 # [@hig/tooltip-v0.2.0](https://github.com/Autodesk/hig/compare/@hig/tooltip@0.1.1...@hig/tooltip@0.2.0) (2018-09-26)
 
 

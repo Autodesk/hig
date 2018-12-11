@@ -143,6 +143,22 @@
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.2.tgz#63985d3d8b02530e0869962f4da09142ee8e200e"
 
+"@hig/behaviors@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@hig/behaviors/-/behaviors-1.0.0.tgz#880eac9d669f1caaebf3f3fe8b502d3497ebb49c"
+  integrity sha512-dqeETxwrkBhQUteNu3ZV22HcDEHqdO8Hp6epDxLxeyA9Z7ti39WzTdfQ3YHjX2eSDo5vIQrQEuZz952nXaTlRA==
+  dependencies:
+    prop-types "^15.6.1"
+
+"@hig/flyout@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@hig/flyout/-/flyout-0.6.0.tgz#9fd8992d40fc639e60e5195b9ae87835af571951"
+  integrity sha512-bwfeeeadHVJ2cQRkVLDlpBP2b1tz4q2fflkzaCE2NF3n4JZOXlex77NWe1yJBmgD7ELJ5SDP6WJBVUL1HySbMQ==
+  dependencies:
+    classnames "^2.2.5"
+    prop-types "^15.6.1"
+    react-transition-group "^2.3.1"
+
 "@hig/skeleton-item@^0.3.0":
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/@hig/skeleton-item/-/skeleton-item-0.3.1.tgz#9729eb499d40ff61996558a179608862338193b7"
@@ -167,6 +183,16 @@
   dependencies:
     "@hig/theme-data-poc" "^0.0.8-alpha"
     prop-types "^15.6.1"
+
+"@hig/tooltip@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@hig/tooltip/-/tooltip-0.2.0.tgz#7e0c9639dc7fd89f60b6fc94f6d538672c4de23e"
+  integrity sha512-lphOY7gChgosl+zNyHVe9VPRakR2K4SY2EvGaYAFkn59/QLrZTpxY6rGOy9oOFAtc9srZnuxJLrEq23zUGxO7g==
+  dependencies:
+    "@hig/flyout" "^0.6.0"
+    classnames "^2.2.5"
+    prop-types "^15.6.1"
+    react-lifecycles-compat "^3.0.4"
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
@@ -4077,13 +4103,15 @@ dotenv@^5.0.1:
   version "5.0.1"
   resolved "http://registry.npmjs.org/dotenv/-/dotenv-5.0.1.tgz#a5317459bd3d79ab88cff6e44057a6a3fbb1fcef"
 
-downshift@^3.1.1:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/downshift/-/downshift-3.1.1.tgz#91e14d45d6ee3e239023cdfcc06248c7f5a1b2b2"
+downshift@^3.1.6:
+  version "3.1.6"
+  resolved "https://registry.yarnpkg.com/downshift/-/downshift-3.1.6.tgz#3950436220e86825cee8627286a6272efaaf502f"
+  integrity sha512-3Q0E9JK6FYqQ7mXnSsfzVEbpgT160EFb70UST7lrs2EOGF2cd5ZzKegJX0nuFnE/0xE9BGhqCC4Exdq8nCCTqA==
   dependencies:
     "@babel/runtime" "^7.1.2"
     compute-scroll-into-view "^1.0.9"
     prop-types "^15.6.0"
+    react-is "^16.5.2"
 
 du@0.1.0:
   version "0.1.0"
@@ -9701,6 +9729,11 @@ react-inspector@^2.2.2:
   dependencies:
     babel-runtime "^6.26.0"
     is-dom "^1.0.9"
+
+react-is@^16.5.2:
+  version "16.6.3"
+  resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.6.3.tgz#d2d7462fcfcbe6ec0da56ad69047e47e56e7eac0"
+  integrity sha512-u7FDWtthB4rWibG/+mFbVd5FvdI20yde86qKGx4lVUTWmPlSWQ4QxbBIrrs+HnXGbxOUlUzTAP/VDmvCwaP2yA==
 
 react-lifecycles-compat@^3.0.0, react-lifecycles-compat@^3.0.4:
   version "3.0.4"

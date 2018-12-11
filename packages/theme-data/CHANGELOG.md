@@ -1,3 +1,17 @@
+# [@hig/theme-data-v1.3.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@1.2.0...@hig/theme-data@1.3.0) (2018-12-11)
+
+
+### Features
+
+* add base button theme data (wip) ([961c29d](https://github.com/Autodesk/hig/commit/961c29d))
+* add dark blue theme data ([a164f8e](https://github.com/Autodesk/hig/commit/a164f8e))
+* **button:** add button theme data styles ([07bd20d](https://github.com/Autodesk/hig/commit/07bd20d))
+* **button:** use density theme-dat ([9f932da](https://github.com/Autodesk/hig/commit/9f932da))
+* **theme-data:** add button disabled theme data ([64deede](https://github.com/Autodesk/hig/commit/64deede))
+* **theme-data:** add button legacy web light theme ([451bd1f](https://github.com/Autodesk/hig/commit/451bd1f))
+* **theme-data:** update button roles ([92c9500](https://github.com/Autodesk/hig/commit/92c9500))
+* add flyout border color for legacy ([3890a9d](https://github.com/Autodesk/hig/commit/3890a9d))
+
 # [@hig/theme-data-v1.2.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@1.1.0...@hig/theme-data@1.2.0) (2018-12-06)
 
 

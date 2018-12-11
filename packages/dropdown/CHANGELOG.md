@@ -1,3 +1,10 @@
+# [@hig/dropdown-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/dropdown@1.0.0...@hig/dropdown@1.0.1) (2018-12-11)
+
+
+### Bug Fixes
+
+* remove leftover icon css dependencies ([2af5d0b](https://github.com/Autodesk/hig/commit/2af5d0b))
+
 # [@hig/dropdown-v1.0.0](https://github.com/Autodesk/hig/compare/@hig/dropdown@0.3.0...@hig/dropdown@1.0.0) (2018-12-06)
 
 

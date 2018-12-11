@@ -1,3 +1,15 @@
+# [@hig/button-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/button@1.0.0...@hig/button@1.1.0) (2018-12-11)
+
+
+### Features
+
+* add dark blue theme data ([a164f8e](https://github.com/Autodesk/hig/commit/a164f8e))
+* add themeable functionality to button (wip) ([5b866e2](https://github.com/Autodesk/hig/commit/5b866e2))
+* **button:** add button theme data styles ([07bd20d](https://github.com/Autodesk/hig/commit/07bd20d))
+* **button:** add legacy web light theme data ([91dc381](https://github.com/Autodesk/hig/commit/91dc381))
+* **button:** use additional button theme data roles ([23c3743](https://github.com/Autodesk/hig/commit/23c3743))
+* **button:** use density theme-dat ([9f932da](https://github.com/Autodesk/hig/commit/9f932da))
+
 # [@hig/button-v1.0.0](https://github.com/Autodesk/hig/compare/@hig/button@0.3.1...@hig/button@1.0.0) (2018-12-04)
 
 
