@@ -1,10 +1,6 @@
 import * as constants from "./constants";
 
 describe("button/constants", () => {
-  it("has an array of available sizes", () => {
-    expect(constants).toHavePropertyOfConstants("availableSizes");
-  });
-
   it("has an array of available targets", () => {
     expect(constants).toHavePropertyOfConstants("availableTargets");
   });
@@ -15,10 +11,6 @@ describe("button/constants", () => {
 
   it("has an array of available widths", () => {
     expect(constants).toHavePropertyOfConstants("availableWidths");
-  });
-
-  it("has constants for sizes", () => {
-    expect(constants).toHavePropertyOfConstants("sizes");
   });
 
   it("has constants for targets", () => {

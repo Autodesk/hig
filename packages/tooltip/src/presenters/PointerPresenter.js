@@ -5,6 +5,15 @@ import { Pointer } from "@hig/flyout";
 const COLOR = "#393939";
 const SIZE = 12;
 
+/* eslint-disable-next-line no-unused-vars */
+function stylesheetOverride(stylesheet, props, themeData) {
+  return {
+    ...stylesheet,
+    pointerBorder: { fill: COLOR },
+    pointerBody: { fill: COLOR }
+  };
+}
+
 export default function PointerPresenter() {
-  return <Pointer size={SIZE} backgroundColor={COLOR} borderColor={COLOR} />;
+  return <Pointer size={SIZE} stylesheet={stylesheetOverride} />;
 }

@@ -1,53 +1,32 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import cx from "classnames";
-import { ThemeContext } from "@hig/themes";
+import { css } from "emotion";
+import { ThemeContext } from "@hig/theme-context";
 
-import "./ButtonPresenter.scss";
+import stylesheet from "./stylesheet";
 
 import {
-  availableSizes,
   availableTargets,
   availableTypes,
-  availableWidths,
-  sizes,
-  types,
-  widths
+  availableWidths
 } from "../constants";
-
-const classNamesBySize = {
-  [sizes.SMALL]: "hig__button-v1--size-small",
-  [sizes.STANDARD]: "hig__button-v1--size-standard",
-  [sizes.LARGE]: "hig__button-v1--size-large"
-};
-
-const classNamesByType = {
-  [types.PRIMARY]: "hig__button-v1--type-primary",
-  [types.SOLID]: "hig__button-v1--type-primary",
-  [types.SECONDARY]: "hig__button-v1--type-secondary",
-  [types.OUTLINE]: "hig__button-v1--type-secondary",
-  [types.FLAT]: "hig__button-v1--type-flat"
-};
-
-const classNameByWidth = {
-  [widths.SHRINK]: "hig__button-v1--width-shrink",
-  [widths.GROW]: "hig__button-v1--width-grow"
-};
 
 export default class ButtonPresenter extends Component {
   static propTypes = {
     disabled: PropTypes.bool,
-    hasFocus: PropTypes.bool, // eslint-disable-line react/no-unused-prop-types
-    hasHover: PropTypes.bool, // eslint-disable-line react/no-unused-prop-types
+    hasFocus: PropTypes.bool,
+    hasHover: PropTypes.bool,
+    isPressed: PropTypes.bool,
     icon: PropTypes.node,
     link: PropTypes.string,
     onBlur: PropTypes.func,
     onClick: PropTypes.func,
     onFocus: PropTypes.func,
     onHover: PropTypes.func,
+    onMouseDown: PropTypes.func,
     onMouseEnter: PropTypes.func,
     onMouseLeave: PropTypes.func,
-    size: PropTypes.oneOf(availableSizes),
+    onMouseUp: PropTypes.func,
     target: PropTypes.oneOf(availableTargets),
     title: PropTypes.string.isRequired,
     type: PropTypes.oneOf(availableTypes),
@@ -57,15 +36,19 @@ export default class ButtonPresenter extends Component {
   render() {
     const {
       disabled,
+      hasFocus,
+      hasHover,
+      isPressed,
       icon,
       link,
       onBlur,
       onClick,
       onFocus,
       onHover,
+      onMouseDown,
       onMouseEnter,
       onMouseLeave,
-      size,
+      onMouseUp,
       target,
       title,
       type,
@@ -79,33 +62,27 @@ export default class ButtonPresenter extends Component {
 
     return (
       <ThemeContext.Consumer>
-        {({ themeClass }) => {
-          const buttonClassName = cx(
-            themeClass,
-            "hig__button-v1",
-            classNamesBySize[size],
-            classNamesByType[type],
-            classNameByWidth[width],
-            {
-              "hig__button-v1--disabled": disabled
-            }
+        {({ resolvedRoles }) => {
+          const styles = stylesheet(
+            { disabled, hasFocus, hasHover, isPressed, type, width },
+            resolvedRoles
           );
-          const iconClassName = cx(themeClass, "hig__button-v1__icon");
-
           return (
             <Wrapper
-              className={buttonClassName}
+              className={css(styles.button)}
               href={href}
               tabIndex={tabIndex}
               target={wrapperTarget}
               onBlur={onBlur}
               onClick={onClick}
               onFocus={onFocus}
+              onMouseDown={onMouseDown}
               onMouseEnter={onMouseEnter}
               onMouseLeave={onMouseLeave}
               onMouseOver={onHover}
+              onMouseUp={onMouseUp}
             >
-              {icon && <span className={iconClassName}>{icon}</span>}
+              {icon && <span className={css(styles.icon)}>{icon}</span>}
               <span className="hig__button__title">{title}</span>
             </Wrapper>
           );

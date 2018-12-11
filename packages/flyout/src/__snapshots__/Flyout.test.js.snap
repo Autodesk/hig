@@ -55,21 +55,123 @@ exports[`flyout/Flyout alterCoordinates is called when rendering 1`] = `
 `;
 
 exports[`flyout/Flyout snapshots renders a custom pointer 1`] = `
+.emotion-7 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-5 {
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: 1px solid #D4DBE1;
+  box-shadow: 0 0 16px rgba(0,0,0,0.25);
+}
+
+.emotion-4 {
+  position: relative;
+}
+
+.emotion-3 {
+  min-width: 200px;
+  max-width: 400px;
+  max-height: 360px;
+  padding: 12px;
+  overflow-y: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.emotion-6 {
+  position: absolute;
+  display: table;
+  width: 100%;
+  z-index: 9999;
+  -webkit-transition-property: opacity,-webkit-transform;
+  -webkit-transition-property: opacity,transform;
+  transition-property: opacity,transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  touch-action: auto;
+  pointer-events: auto;
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-0 {
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0;
+  overflow: hidden;
+  padding: 8px 16px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background: #0696d7;
+}
+
+.emotion-0:visited {
+  color: #ffffff;
+}
+
+.emotion-0 svg * {
+  fill: #f5f5f5;
+}
+
 <div
-  className="hig__flyout-v1 hig__flyout-v1--top-left"
+  className="emotion-7"
 >
   <div
-    className="hig__flyout-v1__action"
+    className="emotion-1"
   >
     <button
-      className="hig--light-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+      className="emotion-0"
       href={undefined}
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
+      onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onMouseOver={undefined}
+      onMouseUp={[Function]}
       tabIndex="0"
       target={undefined}
     >
@@ -81,31 +183,20 @@ exports[`flyout/Flyout snapshots renders a custom pointer 1`] = `
     </button>
   </div>
   <div
-    className="hig__flyout-v1__container"
-    style={
-      Object {
-        "left": "0px",
-        "top": "0px",
-      }
-    }
+    className="emotion-6"
   >
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__pointer-wrapper"
+      className="emotion-2"
       role="presentation"
-      style={
-        Object {
-          "left": "0px",
-          "top": "0px",
-        }
-      }
+      style={undefined}
     >
       <span>
         my custom pointer
       </span>
     </div>
     <div
-      className="hig__flyout-v1__panel-container"
+      className="emotion-5"
       style={
         Object {
           "maxHeight": "150px",
@@ -113,10 +204,10 @@ exports[`flyout/Flyout snapshots renders a custom pointer 1`] = `
       }
     >
       <div
-        className="hig__flyout-v1__panel-container__inner"
+        className="emotion-4"
       >
         <div
-          className="hig__flyout-v1__panel"
+          className="emotion-3"
           onScroll={[Function]}
         >
           Hello World
@@ -128,21 +219,131 @@ exports[`flyout/Flyout snapshots renders a custom pointer 1`] = `
 `;
 
 exports[`flyout/Flyout snapshots renders children from the given render function 1`] = `
+.emotion-9 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-2 {
+  fill: #D4DBE1;
+}
+
+.emotion-3 {
+  fill: #ffffff;
+}
+
+.emotion-7 {
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: 1px solid #D4DBE1;
+  box-shadow: 0 0 16px rgba(0,0,0,0.25);
+}
+
+.emotion-6 {
+  position: relative;
+}
+
+.emotion-5 {
+  min-width: 200px;
+  max-width: 400px;
+  max-height: 360px;
+  padding: 12px;
+  overflow-y: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.emotion-8 {
+  position: absolute;
+  display: table;
+  width: 100%;
+  z-index: 9999;
+  -webkit-transition-property: opacity,-webkit-transform;
+  -webkit-transition-property: opacity,transform;
+  transition-property: opacity,transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  touch-action: auto;
+  pointer-events: auto;
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-0 {
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0;
+  overflow: hidden;
+  padding: 8px 16px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background: #0696d7;
+}
+
+.emotion-0:visited {
+  color: #ffffff;
+}
+
+.emotion-0 svg * {
+  fill: #f5f5f5;
+}
+
 <div
-  className="hig__flyout-v1 hig__flyout-v1--top-left"
+  className="emotion-9"
 >
   <div
-    className="hig__flyout-v1__action"
+    className="emotion-1"
   >
     <button
-      className="hig--light-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+      className="emotion-0"
       href={undefined}
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
+      onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onMouseOver={undefined}
+      onMouseUp={[Function]}
       tabIndex="0"
       target={undefined}
     >
@@ -154,24 +355,13 @@ exports[`flyout/Flyout snapshots renders children from the given render function
     </button>
   </div>
   <div
-    className="hig__flyout-v1__container"
-    style={
-      Object {
-        "left": "0px",
-        "top": "0px",
-      }
-    }
+    className="emotion-8"
   >
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__pointer-wrapper"
+      className="emotion-4"
       role="presentation"
-      style={
-        Object {
-          "left": "0px",
-          "top": "0px",
-        }
-      }
+      style={undefined}
     >
       <svg
         height="24"
@@ -179,17 +369,17 @@ exports[`flyout/Flyout snapshots renders children from the given render function
         width="24"
       >
         <polygon
-          fill="#d4dbe1"
+          className="emotion-2"
           points="0,12 12,0 24,12"
         />
         <polygon
-          fill="#fff"
+          className="emotion-3"
           points="2.5,12 12,2.5 21.5,12"
         />
       </svg>
     </div>
     <div
-      className="hig__flyout-v1__panel-container"
+      className="emotion-7"
       style={
         Object {
           "maxHeight": "150px",
@@ -197,10 +387,10 @@ exports[`flyout/Flyout snapshots renders children from the given render function
       }
     >
       <div
-        className="hig__flyout-v1__panel-container__inner"
+        className="emotion-6"
       >
         <div
-          className="hig__flyout-v1__panel"
+          className="emotion-5"
           onScroll={[Function]}
         >
           Hello World
@@ -212,21 +402,131 @@ exports[`flyout/Flyout snapshots renders children from the given render function
 `;
 
 exports[`flyout/Flyout snapshots renders content from the given render function 1`] = `
+.emotion-9 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-2 {
+  fill: #D4DBE1;
+}
+
+.emotion-3 {
+  fill: #ffffff;
+}
+
+.emotion-7 {
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: 1px solid #D4DBE1;
+  box-shadow: 0 0 16px rgba(0,0,0,0.25);
+}
+
+.emotion-6 {
+  position: relative;
+}
+
+.emotion-5 {
+  min-width: 200px;
+  max-width: 400px;
+  max-height: 360px;
+  padding: 12px;
+  overflow-y: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.emotion-8 {
+  position: absolute;
+  display: table;
+  width: 100%;
+  z-index: 9999;
+  -webkit-transition-property: opacity,-webkit-transform;
+  -webkit-transition-property: opacity,transform;
+  transition-property: opacity,transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  touch-action: auto;
+  pointer-events: auto;
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-0 {
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0;
+  overflow: hidden;
+  padding: 8px 16px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background: #0696d7;
+}
+
+.emotion-0:visited {
+  color: #ffffff;
+}
+
+.emotion-0 svg * {
+  fill: #f5f5f5;
+}
+
 <div
-  className="hig__flyout-v1 hig__flyout-v1--top-left"
+  className="emotion-9"
 >
   <div
-    className="hig__flyout-v1__action"
+    className="emotion-1"
   >
     <button
-      className="hig--light-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+      className="emotion-0"
       href={undefined}
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
+      onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onMouseOver={undefined}
+      onMouseUp={[Function]}
       tabIndex="0"
       target={undefined}
     >
@@ -238,24 +538,13 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
     </button>
   </div>
   <div
-    className="hig__flyout-v1__container"
-    style={
-      Object {
-        "left": "0px",
-        "top": "0px",
-      }
-    }
+    className="emotion-8"
   >
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__pointer-wrapper"
+      className="emotion-4"
       role="presentation"
-      style={
-        Object {
-          "left": "0px",
-          "top": "0px",
-        }
-      }
+      style={undefined}
     >
       <svg
         height="24"
@@ -263,17 +552,17 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
         width="24"
       >
         <polygon
-          fill="#d4dbe1"
+          className="emotion-2"
           points="0,12 12,0 24,12"
         />
         <polygon
-          fill="#fff"
+          className="emotion-3"
           points="2.5,12 12,2.5 21.5,12"
         />
       </svg>
     </div>
     <div
-      className="hig__flyout-v1__panel-container"
+      className="emotion-7"
       style={
         Object {
           "maxHeight": "150px",
@@ -281,10 +570,10 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
       }
     >
       <div
-        className="hig__flyout-v1__panel-container__inner"
+        className="emotion-6"
       >
         <div
-          className="hig__flyout-v1__panel"
+          className="emotion-5"
           onScroll={[Function]}
         >
           Content from render prop
@@ -296,31 +585,91 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
 `;
 
 exports[`flyout/Flyout snapshots renders open by default 1`] = `
+.emotion-8 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-1 {
+  fill: #D4DBE1;
+}
+
+.emotion-2 {
+  fill: #ffffff;
+}
+
+.emotion-6 {
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: 1px solid #D4DBE1;
+  box-shadow: 0 0 16px rgba(0,0,0,0.25);
+}
+
+.emotion-5 {
+  position: relative;
+}
+
+.emotion-4 {
+  min-width: 200px;
+  max-width: 400px;
+  max-height: 360px;
+  padding: 12px;
+  overflow-y: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.emotion-7 {
+  position: absolute;
+  display: table;
+  width: 100%;
+  z-index: 9999;
+  -webkit-transition-property: opacity,-webkit-transform;
+  -webkit-transition-property: opacity,transform;
+  transition-property: opacity,transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  touch-action: auto;
+  pointer-events: auto;
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
 <div
-  className="hig__flyout-v1 hig__flyout-v1--top-left"
+  className="emotion-8"
 >
   <div
-    className="hig__flyout-v1__action"
+    className="emotion-0"
   />
   <div
-    className="hig__flyout-v1__container"
-    style={
-      Object {
-        "left": "0px",
-        "top": "0px",
-      }
-    }
+    className="emotion-7"
   >
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__pointer-wrapper"
+      className="emotion-3"
       role="presentation"
-      style={
-        Object {
-          "left": "0px",
-          "top": "0px",
-        }
-      }
+      style={undefined}
     >
       <svg
         height="24"
@@ -328,17 +677,17 @@ exports[`flyout/Flyout snapshots renders open by default 1`] = `
         width="24"
       >
         <polygon
-          fill="#d4dbe1"
+          className="emotion-1"
           points="0,12 12,0 24,12"
         />
         <polygon
-          fill="#fff"
+          className="emotion-2"
           points="2.5,12 12,2.5 21.5,12"
         />
       </svg>
     </div>
     <div
-      className="hig__flyout-v1__panel-container"
+      className="emotion-6"
       style={
         Object {
           "maxHeight": undefined,
@@ -346,10 +695,10 @@ exports[`flyout/Flyout snapshots renders open by default 1`] = `
       }
     >
       <div
-        className="hig__flyout-v1__panel-container__inner"
+        className="emotion-5"
       >
         <div
-          className="hig__flyout-v1__panel"
+          className="emotion-4"
           onScroll={undefined}
         />
       </div>
@@ -359,21 +708,111 @@ exports[`flyout/Flyout snapshots renders open by default 1`] = `
 `;
 
 exports[`flyout/Flyout snapshots renders the panel from a basic render function 1`] = `
+.emotion-6 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-2 {
+  fill: #D4DBE1;
+}
+
+.emotion-3 {
+  fill: #ffffff;
+}
+
+.emotion-5 {
+  position: absolute;
+  display: table;
+  width: 100%;
+  z-index: 9999;
+  -webkit-transition-property: opacity,-webkit-transform;
+  -webkit-transition-property: opacity,transform;
+  transition-property: opacity,transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  touch-action: auto;
+  pointer-events: auto;
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-0 {
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0;
+  overflow: hidden;
+  padding: 8px 16px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background: #0696d7;
+}
+
+.emotion-0:visited {
+  color: #ffffff;
+}
+
+.emotion-0 svg * {
+  fill: #f5f5f5;
+}
+
 <div
-  className="hig__flyout-v1 hig__flyout-v1--top-left"
+  className="emotion-6"
 >
   <div
-    className="hig__flyout-v1__action"
+    className="emotion-1"
   >
     <button
-      className="hig--light-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+      className="emotion-0"
       href={undefined}
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
+      onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onMouseOver={undefined}
+      onMouseUp={[Function]}
       tabIndex="0"
       target={undefined}
     >
@@ -385,24 +824,13 @@ exports[`flyout/Flyout snapshots renders the panel from a basic render function 
     </button>
   </div>
   <div
-    className="hig__flyout-v1__container"
-    style={
-      Object {
-        "left": "0px",
-        "top": "0px",
-      }
-    }
+    className="emotion-5"
   >
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__pointer-wrapper"
+      className="emotion-4"
       role="presentation"
-      style={
-        Object {
-          "left": "0px",
-          "top": "0px",
-        }
-      }
+      style={undefined}
     >
       <svg
         height="24"
@@ -410,11 +838,11 @@ exports[`flyout/Flyout snapshots renders the panel from a basic render function 
         width="24"
       >
         <polygon
-          fill="#d4dbe1"
+          className="emotion-2"
           points="0,12 12,0 24,12"
         />
         <polygon
-          fill="#fff"
+          className="emotion-3"
           points="2.5,12 12,2.5 21.5,12"
         />
       </svg>
@@ -427,21 +855,122 @@ exports[`flyout/Flyout snapshots renders the panel from a basic render function 
 `;
 
 exports[`flyout/Flyout snapshots renders the panel from a complex render function 1`] = `
+.emotion-8 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-2 {
+  fill: #D4DBE1;
+}
+
+.emotion-3 {
+  fill: #ffffff;
+}
+
+.emotion-6 {
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: 1px solid #D4DBE1;
+  box-shadow: 0 0 16px rgba(0,0,0,0.25);
+}
+
+.emotion-5 {
+  position: relative;
+}
+
+.emotion-7 {
+  position: absolute;
+  display: table;
+  width: 100%;
+  z-index: 9999;
+  -webkit-transition-property: opacity,-webkit-transform;
+  -webkit-transition-property: opacity,transform;
+  transition-property: opacity,transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  touch-action: auto;
+  pointer-events: auto;
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-0 {
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0;
+  overflow: hidden;
+  padding: 8px 16px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background: #0696d7;
+}
+
+.emotion-0:visited {
+  color: #ffffff;
+}
+
+.emotion-0 svg * {
+  fill: #f5f5f5;
+}
+
 <div
-  className="hig__flyout-v1 hig__flyout-v1--top-left"
+  className="emotion-8"
 >
   <div
-    className="hig__flyout-v1__action"
+    className="emotion-1"
   >
     <button
-      className="hig--light-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+      className="emotion-0"
       href={undefined}
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
+      onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onMouseOver={undefined}
+      onMouseUp={[Function]}
       tabIndex="0"
       target={undefined}
     >
@@ -453,24 +982,13 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
     </button>
   </div>
   <div
-    className="hig__flyout-v1__container"
-    style={
-      Object {
-        "left": "0px",
-        "top": "0px",
-      }
-    }
+    className="emotion-7"
   >
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__pointer-wrapper"
+      className="emotion-4"
       role="presentation"
-      style={
-        Object {
-          "left": "0px",
-          "top": "0px",
-        }
-      }
+      style={undefined}
     >
       <svg
         height="24"
@@ -478,17 +996,17 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
         width="24"
       >
         <polygon
-          fill="#d4dbe1"
+          className="emotion-2"
           points="0,12 12,0 24,12"
         />
         <polygon
-          fill="#fff"
+          className="emotion-3"
           points="2.5,12 12,2.5 21.5,12"
         />
       </svg>
     </div>
     <div
-      className="hig__flyout-v1__panel-container"
+      className="emotion-6"
       style={
         Object {
           "maxHeight": undefined,
@@ -496,7 +1014,7 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
       }
     >
       <div
-        className="hig__flyout-v1__panel-container__inner"
+        className="emotion-5"
       >
         <div
           data-mock="MyCustomContainer"
@@ -516,21 +1034,131 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
 `;
 
 exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
+.emotion-9 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-2 {
+  fill: #D4DBE1;
+}
+
+.emotion-3 {
+  fill: #ffffff;
+}
+
+.emotion-7 {
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: 1px solid #D4DBE1;
+  box-shadow: 0 0 16px rgba(0,0,0,0.25);
+}
+
+.emotion-6 {
+  position: relative;
+}
+
+.emotion-5 {
+  min-width: 200px;
+  max-width: 400px;
+  max-height: 360px;
+  padding: 12px;
+  overflow-y: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.emotion-8 {
+  position: absolute;
+  display: table;
+  width: 100%;
+  z-index: 9999;
+  -webkit-transition-property: opacity,-webkit-transform;
+  -webkit-transition-property: opacity,transform;
+  transition-property: opacity,transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  touch-action: auto;
+  pointer-events: auto;
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-0 {
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0;
+  overflow: hidden;
+  padding: 8px 16px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background: #0696d7;
+}
+
+.emotion-0:visited {
+  color: #ffffff;
+}
+
+.emotion-0 svg * {
+  fill: #f5f5f5;
+}
+
 <div
-  className="hig__flyout-v1 hig__flyout-v1--top-left"
+  className="emotion-9"
 >
   <div
-    className="hig__flyout-v1__action"
+    className="emotion-1"
   >
     <button
-      className="hig--light-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+      className="emotion-0"
       href={undefined}
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
+      onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onMouseOver={undefined}
+      onMouseUp={[Function]}
       tabIndex="0"
       target={undefined}
     >
@@ -542,24 +1170,13 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
     </button>
   </div>
   <div
-    className="hig__flyout-v1__container"
-    style={
-      Object {
-        "left": "0px",
-        "top": "0px",
-      }
-    }
+    className="emotion-8"
   >
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__pointer-wrapper"
+      className="emotion-4"
       role="presentation"
-      style={
-        Object {
-          "left": "0px",
-          "top": "0px",
-        }
-      }
+      style={undefined}
     >
       <svg
         height="24"
@@ -567,17 +1184,17 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
         width="24"
       >
         <polygon
-          fill="#d4dbe1"
+          className="emotion-2"
           points="0,12 12,0 24,12"
         />
         <polygon
-          fill="#fff"
+          className="emotion-3"
           points="2.5,12 12,2.5 21.5,12"
         />
       </svg>
     </div>
     <div
-      className="hig__flyout-v1__panel-container"
+      className="emotion-7"
       style={
         Object {
           "maxHeight": "150px",
@@ -585,10 +1202,10 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
       }
     >
       <div
-        className="hig__flyout-v1__panel-container__inner"
+        className="emotion-6"
       >
         <div
-          className="hig__flyout-v1__panel"
+          className="emotion-5"
           onScroll={[Function]}
         >
           Hello World
@@ -600,31 +1217,91 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
 `;
 
 exports[`flyout/Flyout snapshots renders without props 1`] = `
+.emotion-8 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-7 {
+  position: absolute;
+  display: none;
+  width: 100%;
+  z-index: 9999;
+  -webkit-transition-property: opacity,-webkit-transform;
+  -webkit-transition-property: opacity,transform;
+  transition-property: opacity,transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  touch-action: auto;
+  pointer-events: auto;
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-1 {
+  fill: #D4DBE1;
+}
+
+.emotion-2 {
+  fill: #ffffff;
+}
+
+.emotion-6 {
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: 1px solid #D4DBE1;
+  box-shadow: 0 0 16px rgba(0,0,0,0.25);
+}
+
+.emotion-5 {
+  position: relative;
+}
+
+.emotion-4 {
+  min-width: 200px;
+  max-width: 400px;
+  max-height: 360px;
+  padding: 12px;
+  overflow-y: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
 <div
-  className="hig__flyout-v1 hig__flyout-v1--hidden hig__flyout-v1--top-left"
+  className="emotion-8"
 >
   <div
-    className="hig__flyout-v1__action"
+    className="emotion-0"
   />
   <div
-    className="hig__flyout-v1__container"
-    style={
-      Object {
-        "left": "0px",
-        "top": "0px",
-      }
-    }
+    className="emotion-7"
   >
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__pointer-wrapper"
+      className="emotion-3"
       role="presentation"
-      style={
-        Object {
-          "left": "0px",
-          "top": "0px",
-        }
-      }
+      style={undefined}
     >
       <svg
         height="24"
@@ -632,17 +1309,17 @@ exports[`flyout/Flyout snapshots renders without props 1`] = `
         width="24"
       >
         <polygon
-          fill="#d4dbe1"
+          className="emotion-1"
           points="0,12 12,0 24,12"
         />
         <polygon
-          fill="#fff"
+          className="emotion-2"
           points="2.5,12 12,2.5 21.5,12"
         />
       </svg>
     </div>
     <div
-      className="hig__flyout-v1__panel-container"
+      className="emotion-6"
       style={
         Object {
           "maxHeight": undefined,
@@ -650,10 +1327,10 @@ exports[`flyout/Flyout snapshots renders without props 1`] = `
       }
     >
       <div
-        className="hig__flyout-v1__panel-container__inner"
+        className="emotion-5"
       >
         <div
-          className="hig__flyout-v1__panel"
+          className="emotion-4"
           onScroll={undefined}
         />
       </div>

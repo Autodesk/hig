@@ -2,7 +2,6 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { anchorPoints } from "@hig/flyout";
 import Button from "@hig/button";
-import "@hig/button/build/index.css";
 
 import Tooltip from "../Tooltip";
 import TextPresenter from "../presenters/TextPresenter";

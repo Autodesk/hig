@@ -1,31 +1,67 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tooltip/Tooltip  1`] = `
+.emotion-5 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
+  position: absolute;
+  display: none;
+  width: 100%;
+  z-index: 9999;
+  -webkit-transition-property: opacity,-webkit-transform;
+  -webkit-transition-property: opacity,transform;
+  transition-property: opacity,transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  touch-action: auto;
+  pointer-events: auto;
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-1 {
+  fill: #393939;
+}
+
 <div
-  className="hig__flyout-v1 hig__flyout-v1--hidden hig__flyout-v1--top-left"
+  className="emotion-5"
 >
   <div
-    className="hig__flyout-v1__action"
+    className="emotion-0"
   />
   <div
-    className="hig__flyout-v1__container"
-    style={
-      Object {
-        "left": "0px",
-        "top": "0px",
-      }
-    }
+    className="emotion-4"
   >
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__pointer-wrapper"
+      className="emotion-3"
       role="presentation"
-      style={
-        Object {
-          "left": "0px",
-          "top": "0px",
-        }
-      }
+      style={undefined}
     >
       <svg
         height="12"
@@ -33,11 +69,11 @@ exports[`tooltip/Tooltip  1`] = `
         width="12"
       >
         <polygon
-          fill="#393939"
+          className="emotion-1"
           points="0,6 6,0 12,6"
         />
         <polygon
-          fill="#393939"
+          className="emotion-1"
           points="2.5,6 6,2.5 9.5,6"
         />
       </svg>
@@ -60,21 +96,107 @@ exports[`tooltip/Tooltip  1`] = `
 `;
 
 exports[`tooltip/Tooltip  2`] = `
+.emotion-6 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-2 {
+  fill: #393939;
+}
+
+.emotion-5 {
+  position: absolute;
+  display: table;
+  width: 100%;
+  z-index: 9999;
+  -webkit-transition-property: opacity,-webkit-transform;
+  -webkit-transition-property: opacity,transform;
+  transition-property: opacity,transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  touch-action: auto;
+  pointer-events: auto;
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-0 {
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0;
+  overflow: hidden;
+  padding: 8px 16px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background: #0696d7;
+}
+
+.emotion-0:visited {
+  color: #ffffff;
+}
+
+.emotion-0 svg * {
+  fill: #f5f5f5;
+}
+
 <div
-  className="hig__flyout-v1 hig__flyout-v1--top-left"
+  className="emotion-6"
 >
   <div
-    className="hig__flyout-v1__action"
+    className="emotion-1"
   >
     <button
-      className="hig--light-theme hig__button-v1 hig__button-v1--size-standard hig__button-v1--type-primary hig__button-v1--width-shrink"
+      className="emotion-0"
       href={undefined}
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
+      onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onMouseOver={undefined}
+      onMouseUp={[Function]}
       tabIndex="0"
       target={undefined}
     >
@@ -86,24 +208,13 @@ exports[`tooltip/Tooltip  2`] = `
     </button>
   </div>
   <div
-    className="hig__flyout-v1__container"
-    style={
-      Object {
-        "left": "0px",
-        "top": "0px",
-      }
-    }
+    className="emotion-5"
   >
     <div
       aria-hidden="true"
-      className="hig__flyout-v1__pointer-wrapper"
+      className="emotion-4"
       role="presentation"
-      style={
-        Object {
-          "left": "0px",
-          "top": "0px",
-        }
-      }
+      style={undefined}
     >
       <svg
         height="12"
@@ -111,11 +222,11 @@ exports[`tooltip/Tooltip  2`] = `
         width="12"
       >
         <polygon
-          fill="#393939"
+          className="emotion-2"
           points="0,6 6,0 12,6"
         />
         <polygon
-          fill="#393939"
+          className="emotion-2"
           points="2.5,6 6,2.5 9.5,6"
         />
       </svg>

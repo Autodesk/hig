@@ -1,31 +1,19 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { Settings24 } from "@hig/icons";
-import Button, {
-  availableSizes,
-  availableTypes,
-  availableWidths
-} from "../index";
+import Button, { availableTypes, availableWidths } from "../index";
 
 const buttonVariations = props =>
-  availableSizes.map(size =>
-    availableTypes.map(type =>
-      availableWidths.map(width => {
-        const identifier = `${type} ${size} ${width}`;
+  availableTypes.map(type =>
+    availableWidths.map(width => {
+      const identifier = `${type} ${width}`;
 
-        return (
-          <div>
-            <Button
-              title={identifier}
-              size={size}
-              type={type}
-              width={width}
-              {...props}
-            />
-          </div>
-        );
-      })
-    )
+      return (
+        <div>
+          <Button title={identifier} type={type} width={width} {...props} />
+        </div>
+      );
+    })
   );
 
 storiesOf("Button", module)

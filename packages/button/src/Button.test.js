@@ -1,10 +1,38 @@
 import React from "react";
 import { mount } from "enzyme";
+import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
 import Button from "./Button";
 
 describe("Button", () => {
   const subject = (props = {}) => mount(<Button title="Button" {...props} />);
   let wrapper;
+
+  takeSnapshotsOf(Button, [
+    {
+      description: "renders as default button",
+      props: { title: "Settings" }
+    },
+    {
+      description: "renders as button type solid",
+      props: { title: "Settings", type: "solid" }
+    },
+    {
+      description: "renders as button type outline",
+      props: { title: "Settings", type: "outline" }
+    },
+    {
+      description: "renders as button type flat",
+      props: { title: "Settings", type: "flat" }
+    },
+    {
+      description: "renders with an icon",
+      props: { icon: "<Icon />", title: "Settings" }
+    },
+    {
+      description: "renders with a link",
+      props: { link: "https://hig.autodesk.com", title: "Settings" }
+    }
+  ]);
 
   describe("event handlers", () => {
     let eventHandler;

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Flyout, { AVAILABLE_ANCHOR_POINTS } from "@hig/flyout";
 import { combineEventHandlers } from "@hig/utils";
-import "@hig/flyout/build/index.css";
 
 import ProfileButtonPresenter from "./presenters/ProfileButtonPresenter";
 

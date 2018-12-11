@@ -7,10 +7,6 @@ describe("button/index", () => {
       value: expect.any(Function)
     },
     {
-      name: "sizes",
-      value: expect.any(Object)
-    },
-    {
       name: "targets",
       value: expect.any(Object)
     },
@@ -21,10 +17,6 @@ describe("button/index", () => {
     {
       name: "widths",
       value: expect.any(Object)
-    },
-    {
-      name: "availableSizes",
-      value: expect.any(Array)
     },
     {
       name: "availableTargets",
