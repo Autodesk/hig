@@ -36,7 +36,7 @@ storiesOf("Notifications|Toast", module)
         image={
           <Avatar
             name="Jon Snow"
-            size="large-48"
+            size="large"
             image={text("Avatar URL", avatar)}
           />
         }
@@ -93,7 +93,7 @@ storiesOf("Notifications|Toast", module)
             image={
               <Avatar
                 name={text("Name", lang.name)}
-                size="large-48"
+                size="large"
                 image={text("Avatar URL", avatar)}
               />
             }

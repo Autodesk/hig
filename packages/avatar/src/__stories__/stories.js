@@ -6,7 +6,7 @@ export default [
     description: "default",
     getProps: () => ({
       name: "Maria McCaplin",
-      size: sizes.LARGE_36
+      size: sizes.LARGE_48
     })
   },
   {
@@ -14,7 +14,7 @@ export default [
     getProps: () => ({
       name: "Maria McCaplin",
       image: avatarImagePath,
-      size: sizes.LARGE_36
+      size: sizes.LARGE_48
     })
   }
 ];

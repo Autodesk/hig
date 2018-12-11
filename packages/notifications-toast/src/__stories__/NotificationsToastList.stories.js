@@ -19,7 +19,7 @@ const exampleToasts = React.Children.toArray([
     <strong>Object Name</strong> was the second Toast notification to appear.
   </NotificationsToast>,
   <NotificationsToast
-    image={<Avatar name="Arya Stark" size="large-48" image={sampleAvatar} />}
+    image={<Avatar name="Arya Stark" size="large" image={sampleAvatar} />}
     status="error"
   >
     <strong>Object Name</strong> was the third Toast notification to appear.
