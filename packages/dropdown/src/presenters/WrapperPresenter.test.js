@@ -11,11 +11,11 @@ describe("Dropdown/presenters/WrapperPresenter", () => {
   };
   const cases = [
     {
-      desc: "renders without props",
+      description: "renders without props",
       props: {}
     },
     {
-      desc: "renders with all props",
+      description: "renders with all props",
       props: {
         disabled: true,
         children: <p key="p">hi</p>

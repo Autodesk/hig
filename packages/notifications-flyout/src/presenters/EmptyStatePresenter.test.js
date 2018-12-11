@@ -5,11 +5,11 @@ import EmptyStatePresenter from "./EmptyStatePresenter";
 describe("notifications-flyout/presenters/EmptyStatePresenter", () => {
   takeSnapshotsOf(EmptyStatePresenter, [
     {
-      desc: "renders without props",
+      description: "renders without props",
       props: {}
     },
     {
-      desc: "renders with all props",
+      description: "renders with all props",
       props: {
         message: "hello world"
       }

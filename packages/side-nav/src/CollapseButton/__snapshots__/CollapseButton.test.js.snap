@@ -4,8 +4,6 @@ exports[`side-nav/CollapseButton snapshot tests renders minimized 1`] = `
 <div
   aria-pressed={false}
   className="hig--light-theme hig__side-nav__module__collapse-button hig__side-nav__module__collapse-button--collapsed"
-  onClick={undefined}
-  onKeyDown={undefined}
   role="button"
   tabIndex={0}
 >
@@ -54,8 +52,6 @@ exports[`side-nav/CollapseButton snapshot tests renders with no props 1`] = `
 <div
   aria-pressed={true}
   className="hig--light-theme hig__side-nav__module__collapse-button"
-  onClick={undefined}
-  onKeyDown={undefined}
   role="button"
   tabIndex={0}
 >

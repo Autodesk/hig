@@ -45,42 +45,42 @@ describe("flyout/Flyout", () => {
 
     takeSnapshotsOf(Flyout, [
       {
-        desc: "renders without props",
+        description: "renders without props",
         props: {}
       },
       {
-        desc: "renders open by default",
+        description: "renders open by default",
         props: {
           defaultOpen: true
         }
       },
       {
-        desc: "renders with a basic set of props",
+        description: "renders with a basic set of props",
         props: basicProps
       },
       {
-        desc: "renders children from the given render function",
+        description: "renders children from the given render function",
         props: {
           ...basicProps,
           children: renderChildren
         }
       },
       {
-        desc: "renders content from the given render function",
+        description: "renders content from the given render function",
         props: {
           ...basicProps,
           content: renderContent
         }
       },
       {
-        desc: "renders the panel from a basic render function",
+        description: "renders the panel from a basic render function",
         props: {
           ...basicProps,
           panel: renderPanelBasic
         }
       },
       {
-        desc: "renders the panel from a complex render function",
+        description: "renders the panel from a complex render function",
         props: {
           ...basicProps,
           children: renderChildren,
@@ -89,7 +89,7 @@ describe("flyout/Flyout", () => {
         }
       },
       {
-        desc: "renders a custom pointer",
+        description: "renders a custom pointer",
         props: {
           ...basicProps,
           pointer: <span>my custom pointer</span>

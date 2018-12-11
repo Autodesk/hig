@@ -8,7 +8,6 @@ exports[`checkbox/presenters/CheckboxPresenter renders with all props 1`] = `
     checked={true}
     className="hig__checkbox__input"
     disabled={true}
-    id={undefined}
     name="checkbox"
     onBlur={[Function]}
     onChange={[Function]}
@@ -75,7 +74,6 @@ exports[`checkbox/presenters/CheckboxPresenter renders with all props 1`] = `
   </span>
   <label
     className="hig__checkbox__label"
-    htmlFor={undefined}
   >
     HELLO
   </label>
@@ -92,10 +90,6 @@ exports[`checkbox/presenters/CheckboxPresenter renders without props 1`] = `
     disabled={false}
     id="checkbox-1"
     name="checkbox"
-    onBlur={undefined}
-    onChange={undefined}
-    onClick={undefined}
-    onFocus={undefined}
     type="checkbox"
     value="value"
   />

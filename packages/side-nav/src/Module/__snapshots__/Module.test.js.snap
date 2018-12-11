@@ -3,20 +3,16 @@
 exports[`side-nav/Module snapshot tests renders a expanded menu with active children 1`] = `
 <div
   className="hig--light-theme hig__side-nav__module"
-  onFocus={undefined}
-  onMouseOver={undefined}
 >
   <div
     className="hig__side-nav__module__row"
   >
     <div
       className="hig--light-theme hig__side-nav__module__link hig__side-nav__module__link--active-children"
-      href={undefined}
       onClick={[Function]}
       onKeyDown={[Function]}
       role="button"
       tabIndex="-1"
-      target={undefined}
     >
       <div
         className="hig__side-nav__module__link__icon"
@@ -67,8 +63,6 @@ exports[`side-nav/Module snapshot tests renders a expanded menu with active chil
 exports[`side-nav/Module snapshot tests renders a link 1`] = `
 <div
   className="hig--light-theme hig__side-nav__module"
-  onFocus={undefined}
-  onMouseOver={undefined}
 >
   <div
     className="hig__side-nav__module__row"
@@ -78,7 +72,6 @@ exports[`side-nav/Module snapshot tests renders a link 1`] = `
       href="http://example.com"
       onClick={[Function]}
       onKeyDown={[Function]}
-      role={undefined}
       tabIndex="0"
       target="_self"
     >
@@ -101,20 +94,16 @@ exports[`side-nav/Module snapshot tests renders a link 1`] = `
 exports[`side-nav/Module snapshot tests renders an active button 1`] = `
 <div
   className="hig--light-theme hig__side-nav__module"
-  onFocus={undefined}
-  onMouseOver={undefined}
 >
   <div
     className="hig__side-nav__module__row"
   >
     <div
       className="hig--light-theme hig__side-nav__module__link hig__side-nav__module__link--active"
-      href={undefined}
       onClick={[Function]}
       onKeyDown={[Function]}
       role="button"
       tabIndex="0"
-      target={undefined}
     >
       <div
         className="hig__side-nav__module__link__icon"
@@ -139,8 +128,6 @@ exports[`side-nav/Module snapshot tests renders an active button 1`] = `
 exports[`side-nav/Module snapshot tests renders an external link 1`] = `
 <div
   className="hig--light-theme hig__side-nav__module"
-  onFocus={undefined}
-  onMouseOver={undefined}
 >
   <div
     className="hig__side-nav__module__row"
@@ -150,7 +137,6 @@ exports[`side-nav/Module snapshot tests renders an external link 1`] = `
       href="http://example.com"
       onClick={[Function]}
       onKeyDown={[Function]}
-      role={undefined}
       tabIndex="0"
       target="_blank"
     >
@@ -190,20 +176,16 @@ exports[`side-nav/Module snapshot tests renders an external link 1`] = `
 exports[`side-nav/Module snapshot tests renders with a click handlers 1`] = `
 <div
   className="hig--light-theme hig__side-nav__module"
-  onFocus={undefined}
-  onMouseOver={undefined}
 >
   <div
     className="hig__side-nav__module__row"
   >
     <div
       className="hig--light-theme hig__side-nav__module__link"
-      href={undefined}
       onClick={[Function]}
       onKeyDown={[Function]}
       role="button"
       tabIndex="0"
-      target={undefined}
     >
       <div
         className="hig__side-nav__module__link__icon"
@@ -224,20 +206,16 @@ exports[`side-nav/Module snapshot tests renders with a click handlers 1`] = `
 exports[`side-nav/Module snapshot tests renders with minimal props 1`] = `
 <div
   className="hig--light-theme hig__side-nav__module"
-  onFocus={undefined}
-  onMouseOver={undefined}
 >
   <div
     className="hig__side-nav__module__row"
   >
     <div
       className="hig--light-theme hig__side-nav__module__link"
-      href={undefined}
       onClick={[Function]}
       onKeyDown={[Function]}
       role="button"
       tabIndex="0"
-      target={undefined}
     >
       <div
         className="hig__side-nav__module__link__icon"

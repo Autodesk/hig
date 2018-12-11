@@ -34,13 +34,13 @@ describe("side-nav/Module", () => {
   describe("snapshot tests", () => {
     takeSnapshotsOf(Module, [
       {
-        desc: "renders with minimal props",
+        description: "renders with minimal props",
         props: {
           title: "Module"
         }
       },
       {
-        desc: "renders an external link",
+        description: "renders an external link",
         props: {
           link: "http://example.com",
           target: "_blank",
@@ -48,14 +48,14 @@ describe("side-nav/Module", () => {
         }
       },
       {
-        desc: "renders a link",
+        description: "renders a link",
         props: {
           link: "http://example.com",
           title: "Module"
         }
       },
       {
-        desc: "renders a expanded menu with active children",
+        description: "renders a expanded menu with active children",
         props: {
           activeChildren: true,
           children: <div data-test="children" />,
@@ -64,7 +64,7 @@ describe("side-nav/Module", () => {
         }
       },
       {
-        desc: "renders with a click handlers",
+        description: "renders with a click handlers",
         props: {
           onClickCollapseButton: function handleClickCollapseButton() {},
           onClickTitle: function handleClickTitle() {},
@@ -72,7 +72,7 @@ describe("side-nav/Module", () => {
         }
       },
       {
-        desc: "renders an active button",
+        description: "renders an active button",
         props: {
           active: true,
           icon: <span data-test="icon" />,

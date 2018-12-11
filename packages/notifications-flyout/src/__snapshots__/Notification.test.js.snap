@@ -41,11 +41,7 @@ exports[`notifications-flyout/Notification renders correctly with the featured p
       >
         <button
           className="hig__icon-button hig__icon-button--transparent"
-          onBlur={undefined}
           onClick={[Function]}
-          onFocus={undefined}
-          onMouseEnter={undefined}
-          onMouseLeave={undefined}
           title="Dismiss featured notification"
         >
           <svg

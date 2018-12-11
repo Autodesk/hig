@@ -7,23 +7,23 @@ import Avatar, { sizes } from "./index";
 describe("avatar/Avatar", () => {
   takeSnapshotsOf(Avatar, [
     {
-      desc: "renders without props",
+      description: "renders without props",
       props: {}
     },
     {
-      desc: "renders with a name",
+      description: "renders with a name",
       props: {
         name: "Jon Snow"
       }
     },
     {
-      desc: "renders with an image",
+      description: "renders with an image",
       props: {
         image: "http://placekitten.com/g/64/64"
       }
     },
     {
-      desc: "renders with all props",
+      description: "renders with all props",
       props: {
         name: "Jon Snow",
         image: "http://placekitten.com/g/64/64",

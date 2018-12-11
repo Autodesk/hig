@@ -1,17 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`checkbox/presenters/ModalPresenter  1`] = `
+exports[`checkbox/presenters/ModalPresenter renders with all props 1`] = `
 <header
   className="hig__modal-V1__header"
-  id={undefined}
+>
+  <p>
+    Body
+  </p>
+</header>
+`;
+
+exports[`checkbox/presenters/ModalPresenter renders with header children 1`] = `
+<header
+  className="hig__modal-V1__header"
+>
+  <p>
+    Body
+  </p>
+</header>
+`;
+
+exports[`checkbox/presenters/ModalPresenter renders without props 1`] = `
+<header
+  className="hig__modal-V1__header"
 >
   <button
     className="hig__icon-button hig__icon-button--primary"
-    onBlur={undefined}
-    onClick={undefined}
-    onFocus={undefined}
-    onMouseEnter={undefined}
-    onMouseLeave={undefined}
     title="Close"
   >
     <svg
@@ -40,27 +54,5 @@ exports[`checkbox/presenters/ModalPresenter  1`] = `
   <span
     className="hig__modal-V1__header-title"
   />
-</header>
-`;
-
-exports[`checkbox/presenters/ModalPresenter  2`] = `
-<header
-  className="hig__modal-V1__header"
-  id={undefined}
->
-  <p>
-    Body
-  </p>
-</header>
-`;
-
-exports[`checkbox/presenters/ModalPresenter  3`] = `
-<header
-  className="hig__modal-V1__header"
-  id={undefined}
->
-  <p>
-    Body
-  </p>
 </header>
 `;

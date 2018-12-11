@@ -5,11 +5,11 @@ import IndicatorPresenter from "./IndicatorPresenter";
 describe("notifications-flyout/presenters/IndicatorPresenter", () => {
   takeSnapshotsOf(IndicatorPresenter, [
     {
-      desc: "renders without props",
+      description: "renders without props",
       props: {}
     },
     {
-      desc: "renders with all props",
+      description: "renders with all props",
       props: {
         count: 3,
         onClick: () => {},

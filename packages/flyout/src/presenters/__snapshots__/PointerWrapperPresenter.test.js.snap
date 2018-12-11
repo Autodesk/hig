@@ -1,26 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`flyout/presenters/PointerWrapperPresenter  1`] = `
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  -webkit-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  transform: rotate(0deg);
-}
-
-<div
-  aria-hidden="true"
-  className="emotion-0"
-  role="presentation"
-  style={undefined}
-/>
-`;
-
-exports[`flyout/presenters/PointerWrapperPresenter  2`] = `
+exports[`flyout/presenters/PointerWrapperPresenter renders with all props 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -45,4 +25,23 @@ exports[`flyout/presenters/PointerWrapperPresenter  2`] = `
 >
   whoa there
 </div>
+`;
+
+exports[`flyout/presenters/PointerWrapperPresenter renders without props 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+<div
+  aria-hidden="true"
+  className="emotion-0"
+  role="presentation"
+/>
 `;

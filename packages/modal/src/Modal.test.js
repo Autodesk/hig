@@ -8,7 +8,7 @@ describe("modal/Modal", () => {
   describe("integration", () => {
     takeSnapshotsOf(Modal, [
       {
-        desc: "renders correctly",
+        description: "renders correctly",
         props: {
           body: "Hi",
           open: true,

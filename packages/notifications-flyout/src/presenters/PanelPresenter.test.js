@@ -6,13 +6,13 @@ const PanelPresenter = require("./PanelPresenter").default;
 describe("notifications-flyout/presenters/PanelPresenter", () => {
   takeSnapshotsOf(PanelPresenter, [
     {
-      desc: "renders without props",
+      description: "renders without props",
       props: {
         innerRef: () => {}
       }
     },
     {
-      desc: "renders with all props",
+      description: "renders with all props",
       props: {
         children: "foobar",
         heading: "Heading",

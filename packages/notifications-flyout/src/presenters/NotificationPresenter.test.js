@@ -7,11 +7,11 @@ import { types } from "../types";
 describe("notifications-flyout/presenters/NotificationPresenter", () => {
   takeSnapshotsOf(NotificationPresenter, [
     {
-      desc: "renders without props",
+      description: "renders without props",
       props: {}
     },
     {
-      desc: "renders with all props",
+      description: "renders with all props",
       props: {
         children: "foobar",
         dismissButtonTitle: "hello world",

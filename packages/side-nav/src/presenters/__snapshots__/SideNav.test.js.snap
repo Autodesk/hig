@@ -15,7 +15,6 @@ exports[`side-nav/presenters/SideNav snapshot tests renders with headers 1`] = `
       >
         <div
           className="hig__side-nav__super-header-link"
-          href={undefined}
         >
           HIG
         </div>
@@ -25,7 +24,6 @@ exports[`side-nav/presenters/SideNav snapshot tests renders with headers 1`] = `
       >
         <div
           className="hig__side-nav__header-link"
-          href={undefined}
         >
           Storybook
         </div>

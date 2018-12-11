@@ -8,7 +8,7 @@ describe("side-nav/Module/presenters/ModuleCompactPresenter", () => {
   describe("snapshot tests", () => {
     takeSnapshotsOf(ModuleCompactPresenter, [
       {
-        desc: "renders with minimal props",
+        description: "renders with minimal props",
         props: {
           icon: <Collaboration24 />
         }

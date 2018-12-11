@@ -3,11 +3,6 @@
 exports[`IconButton renders correctly 1`] = `
 <button
   className="hig__icon-button hig__icon-button--primary"
-  onBlur={undefined}
-  onClick={undefined}
-  onFocus={undefined}
-  onMouseEnter={undefined}
-  onMouseLeave={undefined}
   title="Settings"
 >
   <svg
@@ -34,11 +29,6 @@ exports[`IconButton renders correctly with a link 1`] = `
 <a
   className="hig__icon-button hig__icon-button--primary"
   href="//example.com"
-  onBlur={undefined}
-  onClick={undefined}
-  onFocus={undefined}
-  onMouseEnter={undefined}
-  onMouseLeave={undefined}
   tabIndex="0"
   title="Settings"
 >

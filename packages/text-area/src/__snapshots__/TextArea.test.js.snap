@@ -6,21 +6,10 @@ exports[`TextArea integration renders correctly 1`] = `
 >
   <textarea
     className="hig__text-area__field hig__text-area__field--no-value"
-    defaultValue={undefined}
-    disabled={undefined}
     id="text-area-1"
-    maxLength={undefined}
-    minLength={undefined}
-    name={undefined}
-    onBlur={undefined}
     onChange={[Function]}
-    onFocus={undefined}
-    onInput={undefined}
     placeholder="Enter your comments here."
-    readOnly={undefined}
     required="This field is required."
-    type={undefined}
-    value={undefined}
   />
   <label
     className="hig__text-area__label hig__text-area__label--visible"

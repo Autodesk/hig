@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`skeleton-item/SkeletonItem snapshot tests  1`] = `
+exports[`skeleton-item/SkeletonItem snapshot tests renders with no props 1`] = `
 .emotion-0 {
   background-color: rgba(0,0,0,0.06);
   border-radius: 2px;
@@ -26,7 +26,7 @@ exports[`skeleton-item/SkeletonItem snapshot tests  1`] = `
 />
 `;
 
-exports[`skeleton-item/SkeletonItem snapshot tests  2`] = `
+exports[`skeleton-item/SkeletonItem snapshot tests renders with props 1`] = `
 .emotion-0 {
   background-color: rgba(0,0,0,0.06);
   border-radius: 2px;

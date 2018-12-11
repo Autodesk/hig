@@ -51,6 +51,22 @@ exports[`flyout/Flyout alterCoordinates is called when rendering 1`] = `
       },
     ],
   ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": Object {
+        "anchorPoint": "top-left",
+        "containerPosition": Object {
+          "left": 0,
+          "top": -5,
+        },
+        "pointerPosition": Object {
+          "left": 0,
+          "top": 1,
+        },
+      },
+    },
+  ],
 }
 `;
 
@@ -163,17 +179,14 @@ exports[`flyout/Flyout snapshots renders a custom pointer 1`] = `
   >
     <button
       className="emotion-0"
-      href={undefined}
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       tabIndex="0"
-      target={undefined}
     >
       <span
         className="hig__button__title"
@@ -189,7 +202,6 @@ exports[`flyout/Flyout snapshots renders a custom pointer 1`] = `
       aria-hidden="true"
       className="emotion-2"
       role="presentation"
-      style={undefined}
     >
       <span>
         my custom pointer
@@ -335,17 +347,14 @@ exports[`flyout/Flyout snapshots renders children from the given render function
   >
     <button
       className="emotion-0"
-      href={undefined}
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       tabIndex="0"
-      target={undefined}
     >
       <span
         className="hig__button__title"
@@ -361,7 +370,6 @@ exports[`flyout/Flyout snapshots renders children from the given render function
       aria-hidden="true"
       className="emotion-4"
       role="presentation"
-      style={undefined}
     >
       <svg
         height="24"
@@ -518,17 +526,14 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
   >
     <button
       className="emotion-0"
-      href={undefined}
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       tabIndex="0"
-      target={undefined}
     >
       <span
         className="hig__button__title"
@@ -544,7 +549,6 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
       aria-hidden="true"
       className="emotion-4"
       role="presentation"
-      style={undefined}
     >
       <svg
         height="24"
@@ -669,7 +673,6 @@ exports[`flyout/Flyout snapshots renders open by default 1`] = `
       aria-hidden="true"
       className="emotion-3"
       role="presentation"
-      style={undefined}
     >
       <svg
         height="24"
@@ -699,7 +702,6 @@ exports[`flyout/Flyout snapshots renders open by default 1`] = `
       >
         <div
           className="emotion-4"
-          onScroll={undefined}
         />
       </div>
     </div>
@@ -804,17 +806,14 @@ exports[`flyout/Flyout snapshots renders the panel from a basic render function 
   >
     <button
       className="emotion-0"
-      href={undefined}
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       tabIndex="0"
-      target={undefined}
     >
       <span
         className="hig__button__title"
@@ -830,7 +829,6 @@ exports[`flyout/Flyout snapshots renders the panel from a basic render function 
       aria-hidden="true"
       className="emotion-4"
       role="presentation"
-      style={undefined}
     >
       <svg
         height="24"
@@ -962,17 +960,14 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
   >
     <button
       className="emotion-0"
-      href={undefined}
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       tabIndex="0"
-      target={undefined}
     >
       <span
         className="hig__button__title"
@@ -988,7 +983,6 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
       aria-hidden="true"
       className="emotion-4"
       role="presentation"
-      style={undefined}
     >
       <svg
         height="24"
@@ -1150,17 +1144,14 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
   >
     <button
       className="emotion-0"
-      href={undefined}
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       tabIndex="0"
-      target={undefined}
     >
       <span
         className="hig__button__title"
@@ -1176,7 +1167,6 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
       aria-hidden="true"
       className="emotion-4"
       role="presentation"
-      style={undefined}
     >
       <svg
         height="24"
@@ -1301,7 +1291,6 @@ exports[`flyout/Flyout snapshots renders without props 1`] = `
       aria-hidden="true"
       className="emotion-3"
       role="presentation"
-      style={undefined}
     >
       <svg
         height="24"
@@ -1331,7 +1320,6 @@ exports[`flyout/Flyout snapshots renders without props 1`] = `
       >
         <div
           className="emotion-4"
-          onScroll={undefined}
         />
       </div>
     </div>

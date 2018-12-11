@@ -1,36 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`project-account-switcher/presenters/PanelPresenter  1`] = `
-.emotion-1 {
-  background-color: #ffffff;
-  border-radius: 4px;
-  border: 1px solid #D4DBE1;
-  box-shadow: 0 0 16px rgba(0,0,0,0.25);
-}
-
-.emotion-0 {
-  position: relative;
-}
-
-<div
-  className="emotion-1"
-  style={
-    Object {
-      "maxHeight": undefined,
-    }
-  }
->
-  <div
-    className="emotion-0"
-  >
-    <div
-      className="hig__project-account-switcher__panel"
-    />
-  </div>
-</div>
-`;
-
-exports[`project-account-switcher/presenters/PanelPresenter  2`] = `
+exports[`project-account-switcher/presenters/PanelPresenter renders with all props 1`] = `
 .emotion-1 {
   background-color: #ffffff;
   border-radius: 4px;
@@ -58,6 +28,36 @@ exports[`project-account-switcher/presenters/PanelPresenter  2`] = `
     >
       hello
     </div>
+  </div>
+</div>
+`;
+
+exports[`project-account-switcher/presenters/PanelPresenter renders with minimal props 1`] = `
+.emotion-1 {
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: 1px solid #D4DBE1;
+  box-shadow: 0 0 16px rgba(0,0,0,0.25);
+}
+
+.emotion-0 {
+  position: relative;
+}
+
+<div
+  className="emotion-1"
+  style={
+    Object {
+      "maxHeight": undefined,
+    }
+  }
+>
+  <div
+    className="emotion-0"
+  >
+    <div
+      className="hig__project-account-switcher__panel"
+    />
   </div>
 </div>
 `;

@@ -93,7 +93,6 @@ exports[`notifications-flyout/presenters/PanelPresenter renders without props 1`
       }
     >
       <div
-        onScroll={undefined}
         role="list"
       />
     </section>

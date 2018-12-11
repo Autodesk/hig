@@ -7,13 +7,13 @@ describe("notifications-flyout/Panel", () => {
 
   takeSnapshotsOf(Panel, [
     {
-      desc: "renders without props",
+      description: "renders without props",
       props: {
         innerRef: handleRef
       }
     },
     {
-      desc: "renders with all props",
+      description: "renders with all props",
       props: {
         children: "foobar",
         heading: "hello",

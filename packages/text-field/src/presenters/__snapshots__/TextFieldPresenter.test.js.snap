@@ -51,11 +51,7 @@ exports[`TextFieldPresenter renders with all props 1`] = `
         >
           <button
             className="hig__icon-button hig__icon-button--transparent"
-            onBlur={undefined}
             onClick={[Function]}
-            onFocus={undefined}
-            onMouseEnter={undefined}
-            onMouseLeave={undefined}
             title="Clear field"
           >
             <svg

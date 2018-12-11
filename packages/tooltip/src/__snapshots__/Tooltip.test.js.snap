@@ -1,101 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`tooltip/Tooltip  1`] = `
-.emotion-5 {
-  position: relative;
-  display: inline-block;
-}
-
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-4 {
-  position: absolute;
-  display: none;
-  width: 100%;
-  z-index: 9999;
-  -webkit-transition-property: opacity,-webkit-transform;
-  -webkit-transition-property: opacity,transform;
-  transition-property: opacity,transform;
-  -webkit-transition-duration: 250ms;
-  transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.77,0,0.265,2);
-  transition-timing-function: cubic-bezier(0.77,0,0.265,2);
-  touch-action: auto;
-  pointer-events: auto;
-  opacity: 1;
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  -webkit-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  transform: rotate(0deg);
-}
-
-.emotion-1 {
-  fill: #393939;
-}
-
-<div
-  className="emotion-5"
->
-  <div
-    className="emotion-0"
-  />
-  <div
-    className="emotion-4"
-  >
-    <div
-      aria-hidden="true"
-      className="emotion-3"
-      role="presentation"
-      style={undefined}
-    >
-      <svg
-        height="12"
-        viewBox="0 0 12 12"
-        width="12"
-      >
-        <polygon
-          className="emotion-1"
-          points="0,6 6,0 12,6"
-        />
-        <polygon
-          className="emotion-1"
-          points="2.5,6 6,2.5 9.5,6"
-        />
-      </svg>
-    </div>
-    <div
-      className="hig__tooltip-v1__panel"
-      onScroll={undefined}
-      style={
-        Object {
-          "maxHeight": undefined,
-        }
-      }
-    >
-      <div
-        className="hig__tooltip-v1__panel__inner"
-      />
-    </div>
-  </div>
-</div>
-`;
-
-exports[`tooltip/Tooltip  2`] = `
+exports[`tooltip/Tooltip renders with props 1`] = `
 .emotion-6 {
   position: relative;
   display: inline-block;
@@ -188,17 +93,14 @@ exports[`tooltip/Tooltip  2`] = `
   >
     <button
       className="emotion-0"
-      href={undefined}
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       tabIndex="0"
-      target={undefined}
     >
       <span
         className="hig__button__title"
@@ -214,7 +116,6 @@ exports[`tooltip/Tooltip  2`] = `
       aria-hidden="true"
       className="emotion-4"
       role="presentation"
-      style={undefined}
     >
       <svg
         height="12"
@@ -245,6 +146,99 @@ exports[`tooltip/Tooltip  2`] = `
       >
         Hello World
       </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`tooltip/Tooltip renders without props 1`] = `
+.emotion-5 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
+  position: absolute;
+  display: none;
+  width: 100%;
+  z-index: 9999;
+  -webkit-transition-property: opacity,-webkit-transform;
+  -webkit-transition-property: opacity,transform;
+  transition-property: opacity,transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  touch-action: auto;
+  pointer-events: auto;
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-1 {
+  fill: #393939;
+}
+
+<div
+  className="emotion-5"
+>
+  <div
+    className="emotion-0"
+  />
+  <div
+    className="emotion-4"
+  >
+    <div
+      aria-hidden="true"
+      className="emotion-3"
+      role="presentation"
+    >
+      <svg
+        height="12"
+        viewBox="0 0 12 12"
+        width="12"
+      >
+        <polygon
+          className="emotion-1"
+          points="0,6 6,0 12,6"
+        />
+        <polygon
+          className="emotion-1"
+          points="2.5,6 6,2.5 9.5,6"
+        />
+      </svg>
+    </div>
+    <div
+      className="hig__tooltip-v1__panel"
+      style={
+        Object {
+          "maxHeight": undefined,
+        }
+      }
+    >
+      <div
+        className="hig__tooltip-v1__panel__inner"
+      />
     </div>
   </div>
 </div>

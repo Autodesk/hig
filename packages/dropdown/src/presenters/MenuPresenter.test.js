@@ -11,13 +11,13 @@ describe("Dropdown/presenters/MenuPresenter", () => {
   };
   const cases = [
     {
-      desc: "renders with only required props",
+      description: "renders with only required props",
       props: {
         innerRef: () => {}
       }
     },
     {
-      desc: "renders with all props",
+      description: "renders with all props",
       props: {
         innerRef: () => {},
         isOpen: true,

@@ -2,9 +2,6 @@
 
 exports[`Slider/presenters/Input renders correctly without a value 1`] = `
 <input
-  aria-valuemax={undefined}
-  aria-valuemin={undefined}
-  aria-valuenow={undefined}
   className="hig__slider__input"
   type="range"
 />

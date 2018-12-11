@@ -117,7 +117,6 @@ exports[`profile-flyout/ProfileFlyout renders with all props 1`] = `
       aria-hidden="true"
       className="emotion-5"
       role="presentation"
-      style={undefined}
     >
       <svg
         height="24"
@@ -267,7 +266,6 @@ exports[`profile-flyout/ProfileFlyout renders with no props 1`] = `
       aria-hidden="true"
       className="emotion-5"
       role="presentation"
-      style={undefined}
     >
       <svg
         height="24"

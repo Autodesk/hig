@@ -49,11 +49,11 @@ describe("TextFieldPresenter", () => {
 
   takeSnapshotsOf(TextFieldPresenter, [
     {
-      desc: "renders without props",
+      description: "renders without props",
       props: {}
     },
     {
-      desc: "renders with all props",
+      description: "renders with all props",
       props: {
         disabled: true,
         errors: "error text",

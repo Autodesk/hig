@@ -27,11 +27,6 @@ exports[`InputPresenter renders by default 1`] = `
 
 <input
   className="emotion-0"
-  disabled={undefined}
-  onBlur={undefined}
-  onFocus={undefined}
-  onMouseEnter={undefined}
-  onMouseLeave={undefined}
 />
 `;
 
@@ -62,12 +57,7 @@ exports[`InputPresenter renders when disabled 1`] = `
 
 <input
   className="emotion-0"
-  disabled={undefined}
   isDisabled={true}
-  onBlur={undefined}
-  onFocus={undefined}
-  onMouseEnter={undefined}
-  onMouseLeave={undefined}
 />
 `;
 
@@ -98,11 +88,6 @@ exports[`InputPresenter renders with focus 1`] = `
 
 <input
   className="emotion-0"
-  disabled={undefined}
-  onBlur={undefined}
-  onFocus={undefined}
-  onMouseEnter={undefined}
-  onMouseLeave={undefined}
 />
 `;
 
@@ -133,11 +118,6 @@ exports[`InputPresenter renders with hover 1`] = `
 
 <input
   className="emotion-0"
-  disabled={undefined}
-  onBlur={undefined}
-  onFocus={undefined}
-  onMouseEnter={undefined}
-  onMouseLeave={undefined}
 />
 `;
 
@@ -168,11 +148,6 @@ exports[`InputPresenter renders with id 1`] = `
 
 <input
   className="emotion-0"
-  disabled={undefined}
   id="my_id"
-  onBlur={undefined}
-  onFocus={undefined}
-  onMouseEnter={undefined}
-  onMouseLeave={undefined}
 />
 `;

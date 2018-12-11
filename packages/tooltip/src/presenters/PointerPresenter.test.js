@@ -5,7 +5,7 @@ import PointerPresenter from "./PointerPresenter";
 describe("tooltip/presenters/PointerPresenter", () => {
   takeSnapshotsOf(PointerPresenter, [
     {
-      desc: "renders",
+      description: "renders",
       props: {}
     }
   ]);

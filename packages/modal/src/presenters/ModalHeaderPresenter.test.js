@@ -26,7 +26,7 @@ describe("checkbox/presenters/ModalHeaderPresenter", () => {
         onCloseClick: function onCloseClick() {}
       }
     }
-  ].forEach(({ desc, props }) => {
-    takeSnapshotsOf(ModalHeaderPresenter, [{ desc, props }]);
+  ].forEach(({ description, props }) => {
+    takeSnapshotsOf(ModalHeaderPresenter, [{ description, props }]);
   });
 });

@@ -7,9 +7,7 @@ exports[`radio-button/presenters/RadioButtonPresenter renders with all props 1`]
   <input
     checked={true}
     className="hig__radio-button__input"
-    defaultChecked={undefined}
     disabled={true}
-    id={undefined}
     name="RadioButton"
     onBlur={[Function]}
     onChange={[Function]}
@@ -30,7 +28,6 @@ exports[`radio-button/presenters/RadioButtonPresenter renders with all props 1`]
   </span>
   <label
     className="hig__radio-button__label"
-    htmlFor={undefined}
   >
     HELLO
   </label>
@@ -42,16 +39,10 @@ exports[`radio-button/presenters/RadioButtonPresenter renders without props 1`] 
   className="hig__radio-button"
 >
   <input
-    checked={undefined}
     className="hig__radio-button__input"
-    defaultChecked={undefined}
     disabled={false}
     id="radio-button-1"
     name="radiobutton"
-    onBlur={undefined}
-    onChange={undefined}
-    onClick={undefined}
-    onFocus={undefined}
     type="radio"
     value="value"
   />

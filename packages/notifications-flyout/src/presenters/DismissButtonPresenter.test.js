@@ -5,11 +5,11 @@ import DismissButtonPresenter from "./DismissButtonPresenter";
 describe("notifications-flyout/presenters/DismissButtonPresenter", () => {
   takeSnapshotsOf(DismissButtonPresenter, [
     {
-      desc: "renders without props",
+      description: "renders without props",
       props: {}
     },
     {
-      desc: "renders with all props",
+      description: "renders with all props",
       props: {
         onClick: () => {},
         title: "HELLO"

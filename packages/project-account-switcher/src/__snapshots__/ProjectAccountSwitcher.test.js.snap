@@ -125,7 +125,6 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
       aria-hidden="true"
       className="emotion-3"
       role="presentation"
-      style={undefined}
     >
       <svg
         height="24"
@@ -398,7 +397,6 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
       aria-hidden="true"
       className="emotion-3"
       role="presentation"
-      style={undefined}
     >
       <svg
         height="24"

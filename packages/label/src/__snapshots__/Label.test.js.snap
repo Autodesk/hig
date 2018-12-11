@@ -20,8 +20,6 @@ exports[`Label renders with all props 1`] = `
 
 exports[`Label renders without props 1`] = `
 <label
-  form={undefined}
-  htmlFor={undefined}
   style={
     Object {
       "color": "rgba(60, 60, 60, 0.6)",

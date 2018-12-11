@@ -6,11 +6,11 @@ import ContentPresenter from "./ContentPresenter";
 describe("tooltip/presenters/ContentPresenter", () => {
   takeSnapshotsOf(ContentPresenter, [
     {
-      desc: "renders without props",
+      description: "renders without props",
       props: {}
     },
     {
-      desc: "renders with children",
+      description: "renders with children",
       props: {
         children: <span>Hello</span>
       }

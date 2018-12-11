@@ -89,17 +89,13 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders with all props 1`] = `
   >
     <button
       className="emotion-0"
-      href={undefined}
       onBlur={[Function]}
-      onClick={undefined}
       onFocus={[Function]}
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       tabIndex="0"
-      target={undefined}
     >
       <span
         className="hig__button__title"
@@ -115,7 +111,6 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders with all props 1`] = `
       aria-hidden="true"
       className="emotion-2"
       role="presentation"
-      style={undefined}
     >
       <div>
         I am a custom pointer
@@ -190,7 +185,6 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders without props 1`] = `
       aria-hidden="true"
       className="emotion-3"
       role="presentation"
-      style={undefined}
     >
       <svg
         height="24"

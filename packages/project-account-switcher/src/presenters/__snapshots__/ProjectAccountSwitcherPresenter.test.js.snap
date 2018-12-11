@@ -1,8 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter  1`] = `null`;
-
-exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter  2`] = `
+exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter renders with all props 1`] = `
 <div
   className="hig__project-account-switcher__target"
   onClick={[Function]}
@@ -52,3 +50,5 @@ exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter  2`
   </div>
 </div>
 `;
+
+exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter renders without props 1`] = `null`;

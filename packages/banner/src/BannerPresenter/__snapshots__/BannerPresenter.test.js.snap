@@ -2,8 +2,6 @@
 
 exports[`banner/BannerPresenter/BannerPresenter renders with a fragment as actions 1`] = `
 <div
-  aria-label={undefined}
-  aria-labelledby={undefined}
   aria-live="polite"
   className="hig__banner hig__banner--primary hig__banner--interactive hig--light-theme"
   role="alert"
@@ -62,11 +60,6 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a fragment as actio
   >
     <button
       className="hig__icon-button hig__icon-button--transparent"
-      onBlur={undefined}
-      onClick={undefined}
-      onFocus={undefined}
-      onMouseEnter={undefined}
-      onMouseLeave={undefined}
       title="Dismiss"
     >
       <svg
@@ -86,7 +79,6 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a fragment as actio
 exports[`banner/BannerPresenter/BannerPresenter renders with a label 1`] = `
 <div
   aria-label="HELLO"
-  aria-labelledby={undefined}
   aria-live="assertive"
   className="hig__banner hig__banner--urgent hig--light-theme"
   role="alert"
@@ -130,11 +122,6 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a label 1`] = `
   >
     <button
       className="hig__icon-button hig__icon-button--transparent"
-      onBlur={undefined}
-      onClick={undefined}
-      onFocus={undefined}
-      onMouseEnter={undefined}
-      onMouseLeave={undefined}
       title="Dismiss"
     >
       <svg
@@ -153,8 +140,6 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a label 1`] = `
 
 exports[`banner/BannerPresenter/BannerPresenter renders with a node as actions 1`] = `
 <div
-  aria-label={undefined}
-  aria-labelledby={undefined}
   aria-live="polite"
   className="hig__banner hig__banner--primary hig__banner--interactive hig--light-theme"
   role="alert"
@@ -210,11 +195,6 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a node as actions 1
   >
     <button
       className="hig__icon-button hig__icon-button--transparent"
-      onBlur={undefined}
-      onClick={undefined}
-      onFocus={undefined}
-      onMouseEnter={undefined}
-      onMouseLeave={undefined}
       title="boom"
     >
       <svg
@@ -233,8 +213,6 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a node as actions 1
 
 exports[`banner/BannerPresenter/BannerPresenter renders with a string as actions 1`] = `
 <div
-  aria-label={undefined}
-  aria-labelledby={undefined}
   aria-live="polite"
   className="hig__banner hig__banner--primary hig__banner--interactive hig--light-theme"
   role="alert"
@@ -288,11 +266,6 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a string as actions
   >
     <button
       className="hig__icon-button hig__icon-button--transparent"
-      onBlur={undefined}
-      onClick={undefined}
-      onFocus={undefined}
-      onMouseEnter={undefined}
-      onMouseLeave={undefined}
       title="Dismiss"
     >
       <svg
@@ -311,8 +284,6 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a string as actions
 
 exports[`banner/BannerPresenter/BannerPresenter renders without props 1`] = `
 <div
-  aria-label={undefined}
-  aria-labelledby={undefined}
   aria-live="polite"
   className="hig__banner hig__banner--primary hig--light-theme"
   role="alert"
@@ -361,11 +332,6 @@ exports[`banner/BannerPresenter/BannerPresenter renders without props 1`] = `
   >
     <button
       className="hig__icon-button hig__icon-button--transparent"
-      onBlur={undefined}
-      onClick={undefined}
-      onFocus={undefined}
-      onMouseEnter={undefined}
-      onMouseLeave={undefined}
       title="Dismiss"
     >
       <svg

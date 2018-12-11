@@ -27,11 +27,7 @@ exports[`notifications-flyout/presenters/NotificationPresenter renders with all 
       >
         <button
           className="hig__icon-button hig__icon-button--transparent"
-          onBlur={undefined}
           onClick={[Function]}
-          onFocus={undefined}
-          onMouseEnter={undefined}
-          onMouseLeave={undefined}
           title="hello world"
         >
           <svg
@@ -68,7 +64,6 @@ exports[`notifications-flyout/presenters/NotificationPresenter renders without p
     >
       <div
         className="hig__rich-text hig__rich-text--small"
-        dangerouslySetInnerHTML={undefined}
       />
     </div>
   </div>

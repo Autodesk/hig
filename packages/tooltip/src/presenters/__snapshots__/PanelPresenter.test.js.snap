@@ -21,7 +21,6 @@ exports[`tooltip/presenters/PanelPresenter renders with all props 1`] = `
 exports[`tooltip/presenters/PanelPresenter renders without props 1`] = `
 <div
   className="hig__tooltip-v1__panel"
-  onScroll={undefined}
   style={
     Object {
       "maxHeight": undefined,

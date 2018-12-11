@@ -4,13 +4,7 @@ exports[`side-nav/Submodule snapshot tests renders a link 1`] = `
 <a
   className="hig--light-theme hig__side-nav__submodule"
   href="http://example.com"
-  onClick={undefined}
-  onFocus={undefined}
-  onKeyDown={undefined}
-  onMouseOver={undefined}
-  role={undefined}
   tabIndex="0"
-  target={undefined}
 >
   Module
 </a>
@@ -20,11 +14,6 @@ exports[`side-nav/Submodule snapshot tests renders an external link 1`] = `
 <a
   className="hig--light-theme hig__side-nav__submodule"
   href="http://example.com"
-  onClick={undefined}
-  onFocus={undefined}
-  onKeyDown={undefined}
-  onMouseOver={undefined}
-  role={undefined}
   tabIndex="0"
   target="_blank"
 >
@@ -47,28 +36,18 @@ exports[`side-nav/Submodule snapshot tests renders an external link 1`] = `
 exports[`side-nav/Submodule snapshot tests renders with a click handler 1`] = `
 <div
   className="hig--light-theme hig__side-nav__submodule"
-  href={undefined}
   onClick={[Function]}
-  onFocus={undefined}
   onKeyDown={[Function]}
-  onMouseOver={undefined}
   role="button"
   tabIndex="0"
-  target={undefined}
 />
 `;
 
 exports[`side-nav/Submodule snapshot tests renders with minimal props 1`] = `
 <div
   className="hig--light-theme hig__side-nav__submodule"
-  href={undefined}
-  onClick={undefined}
-  onFocus={undefined}
-  onKeyDown={undefined}
-  onMouseOver={undefined}
   role="button"
   tabIndex="0"
-  target={undefined}
 >
   Module
 </div>
@@ -77,13 +56,7 @@ exports[`side-nav/Submodule snapshot tests renders with minimal props 1`] = `
 exports[`side-nav/Submodule snapshot tests renders with no props 1`] = `
 <div
   className="hig--light-theme hig__side-nav__submodule"
-  href={undefined}
-  onClick={undefined}
-  onFocus={undefined}
-  onKeyDown={undefined}
-  onMouseOver={undefined}
   role="button"
   tabIndex="0"
-  target={undefined}
 />
 `;

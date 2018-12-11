@@ -6,11 +6,7 @@ exports[`notifications-flyout/presenters/DismissButtonPresenter renders with all
 >
   <button
     className="hig__icon-button hig__icon-button--transparent"
-    onBlur={undefined}
     onClick={[Function]}
-    onFocus={undefined}
-    onMouseEnter={undefined}
-    onMouseLeave={undefined}
     title="HELLO"
   >
     <svg
@@ -32,11 +28,6 @@ exports[`notifications-flyout/presenters/DismissButtonPresenter renders without 
 >
   <button
     className="hig__icon-button hig__icon-button--transparent"
-    onBlur={undefined}
-    onClick={undefined}
-    onFocus={undefined}
-    onMouseEnter={undefined}
-    onMouseLeave={undefined}
     title="Dismiss featured notification"
   >
     <svg

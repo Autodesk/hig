@@ -22,8 +22,6 @@ exports[`tabs/TabPresenter renders without props 1`] = `
 >
   <span
     className="hig__tabs__tab-label"
-    onClick={undefined}
-    onKeyDown={undefined}
     role="button"
     tabIndex="0"
   />

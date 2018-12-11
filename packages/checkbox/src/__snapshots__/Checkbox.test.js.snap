@@ -10,10 +10,7 @@ exports[`checkbox/Checkbox integration renders correctly 1`] = `
     disabled={false}
     id="checkbox-1"
     name="checkbox"
-    onBlur={undefined}
     onChange={[Function]}
-    onClick={undefined}
-    onFocus={undefined}
     type="checkbox"
     value="value"
   />

@@ -1,12 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`project-account-switcher/presenters/ContentPresenter  1`] = `
-<div
-  className="hig__project-account-switcher__lists"
-/>
-`;
-
-exports[`project-account-switcher/presenters/ContentPresenter  2`] = `
+exports[`project-account-switcher/presenters/ContentPresenter renders with all props 1`] = `
 <div
   className="hig__project-account-switcher__lists"
 >
@@ -117,4 +111,10 @@ exports[`project-account-switcher/presenters/ContentPresenter  2`] = `
     </li>
   </ul>
 </div>
+`;
+
+exports[`project-account-switcher/presenters/ContentPresenter renders without props 1`] = `
+<div
+  className="hig__project-account-switcher__lists"
+/>
 `;

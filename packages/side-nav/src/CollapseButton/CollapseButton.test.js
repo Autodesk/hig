@@ -6,17 +6,17 @@ describe("side-nav/CollapseButton", () => {
   describe("snapshot tests", () => {
     takeSnapshotsOf(CollapseButton, [
       {
-        desc: "renders with no props",
+        description: "renders with no props",
         props: {}
       },
       {
-        desc: "renders minimized",
+        description: "renders minimized",
         props: {
           minimized: true
         }
       },
       {
-        desc: "renders with event handlers",
+        description: "renders with event handlers",
         props: {
           onClick: function handleClick() {}
         }

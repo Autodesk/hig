@@ -5,11 +5,11 @@ import TextPresenter from "./TextPresenter";
 describe("tooltip/presenters/TextPresenter", () => {
   takeSnapshotsOf(TextPresenter, [
     {
-      desc: "renders without props",
+      description: "renders without props",
       props: {}
     },
     {
-      desc: "renders with children",
+      description: "renders with children",
       props: {
         children: "hi"
       }

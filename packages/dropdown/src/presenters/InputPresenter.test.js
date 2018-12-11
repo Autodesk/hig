@@ -9,11 +9,11 @@ describe("Dropdown/presenters/InputPresenter", () => {
   };
   const cases = [
     {
-      desc: "renders without props",
+      description: "renders without props",
       props: {}
     },
     {
-      desc: "renders with all props (that dropdown uses)",
+      description: "renders with all props (that dropdown uses)",
       props: {
         type: "button",
         readOnly: true,

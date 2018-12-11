@@ -6,11 +6,7 @@ exports[`notifications-flyout/presenters/IndicatorPresenter renders with all pro
 >
   <button
     className="hig__icon-button hig__icon-button--transparent"
-    onBlur={undefined}
     onClick={[Function]}
-    onFocus={undefined}
-    onMouseEnter={undefined}
-    onMouseLeave={undefined}
     title="hello world"
   >
     <svg
@@ -39,11 +35,6 @@ exports[`notifications-flyout/presenters/IndicatorPresenter renders without prop
 >
   <button
     className="hig__icon-button hig__icon-button--transparent"
-    onBlur={undefined}
-    onClick={undefined}
-    onFocus={undefined}
-    onMouseEnter={undefined}
-    onMouseLeave={undefined}
     title="View notifications"
   >
     <svg

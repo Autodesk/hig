@@ -74,11 +74,7 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
     >
       <button
         className="hig__icon-button hig__icon-button--transparent"
-        onBlur={undefined}
         onClick={[Function]}
-        onFocus={undefined}
-        onMouseEnter={undefined}
-        onMouseLeave={undefined}
         title="View notifications"
       >
         <svg
@@ -107,7 +103,6 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
       aria-hidden="true"
       className="emotion-3"
       role="presentation"
-      style={undefined}
     >
       <svg
         height="24"
@@ -149,7 +144,6 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
           }
         >
           <div
-            onScroll={undefined}
             role="list"
           >
             <div
@@ -169,7 +163,6 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
                 >
                   <div
                     className="hig__rich-text hig__rich-text--small"
-                    dangerouslySetInnerHTML={undefined}
                   />
                 </div>
               </div>
@@ -265,11 +258,7 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
     >
       <button
         className="hig__icon-button hig__icon-button--transparent"
-        onBlur={undefined}
         onClick={[Function]}
-        onFocus={undefined}
-        onMouseEnter={undefined}
-        onMouseLeave={undefined}
         title="View notifications"
       >
         <svg
@@ -298,7 +287,6 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
       aria-hidden="true"
       className="emotion-3"
       role="presentation"
-      style={undefined}
     >
       <svg
         height="24"
@@ -340,7 +328,6 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
           }
         >
           <div
-            onScroll={undefined}
             role="list"
           >
             <div
@@ -360,7 +347,6 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
                 >
                   <div
                     className="hig__rich-text hig__rich-text--small"
-                    dangerouslySetInnerHTML={undefined}
                   />
                 </div>
               </div>
@@ -456,11 +442,7 @@ exports[`notifications-flyout/NotificationsFlyout renders with all props 1`] = `
     >
       <button
         className="hig__icon-button hig__icon-button--transparent"
-        onBlur={undefined}
         onClick={[Function]}
-        onFocus={undefined}
-        onMouseEnter={undefined}
-        onMouseLeave={undefined}
         title="World"
       >
         <svg
@@ -489,7 +471,6 @@ exports[`notifications-flyout/NotificationsFlyout renders with all props 1`] = `
       aria-hidden="true"
       className="emotion-3"
       role="presentation"
-      style={undefined}
     >
       <svg
         height="24"
@@ -551,7 +532,6 @@ exports[`notifications-flyout/NotificationsFlyout renders with all props 1`] = `
                 >
                   <div
                     className="hig__rich-text hig__rich-text--small"
-                    dangerouslySetInnerHTML={undefined}
                   />
                 </div>
               </div>
@@ -573,7 +553,6 @@ exports[`notifications-flyout/NotificationsFlyout renders with all props 1`] = `
                 >
                   <div
                     className="hig__rich-text hig__rich-text--small"
-                    dangerouslySetInnerHTML={undefined}
                   />
                 </div>
               </div>
@@ -669,11 +648,7 @@ exports[`notifications-flyout/NotificationsFlyout renders without props 1`] = `
     >
       <button
         className="hig__icon-button hig__icon-button--transparent"
-        onBlur={undefined}
         onClick={[Function]}
-        onFocus={undefined}
-        onMouseEnter={undefined}
-        onMouseLeave={undefined}
         title="View notifications"
       >
         <svg
@@ -702,7 +677,6 @@ exports[`notifications-flyout/NotificationsFlyout renders without props 1`] = `
       aria-hidden="true"
       className="emotion-3"
       role="presentation"
-      style={undefined}
     >
       <svg
         height="24"
@@ -744,7 +718,6 @@ exports[`notifications-flyout/NotificationsFlyout renders without props 1`] = `
           }
         >
           <div
-            onScroll={undefined}
             role="list"
           >
             <div

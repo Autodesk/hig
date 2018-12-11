@@ -54,38 +54,38 @@ describe("Dropdown", () => {
 
   const cases = [
     {
-      desc: "renders without props",
+      description: "renders without props",
       props: {}
     },
     {
-      desc: "renders with a label and an ID",
+      description: "renders with a label and an ID",
       props: {
         id: "whoaBuddy",
         label: "HIG Themes"
       }
     },
     {
-      desc: "renders with custom option formatting",
+      description: "renders with custom option formatting",
       props: {
         options,
         formatOption: key => i18n[key]
       }
     },
     {
-      desc: "renders non-undefined values as options",
+      description: "renders non-undefined values as options",
       props: {
         options: ["foo", 1, true, false, null, [], {}, new Map()]
       }
     },
     {
-      desc: "renders with custom option render function",
+      description: "renders with custom option render function",
       props: {
         options: ["renders", "with", "custom", "option", "render", "function"],
         renderOption: option => <div key={option}>{option.toUpperCase()}</div>
       }
     },
     {
-      desc: "renders with option specific render function",
+      description: "renders with option specific render function",
       props: {
         options: [
           { label: "Red", value: "#ff0000", render: renderCustomOption },
@@ -95,7 +95,8 @@ describe("Dropdown", () => {
       }
     },
     {
-      desc: "renders with option specific and general option render function",
+      description:
+        "renders with option specific and general option render function",
       props: {
         options: [
           { label: "Red", value: "#ff0000", render: renderCustomOption },
@@ -106,7 +107,7 @@ describe("Dropdown", () => {
       }
     },
     {
-      desc: "renders with option specific, general and format rendering",
+      description: "renders with option specific, general and format rendering",
       props: {
         formatOption: option => option.label.toUpperCase(),
         options: [
@@ -118,28 +119,28 @@ describe("Dropdown", () => {
       }
     },
     {
-      desc: "renders with default value",
+      description: "renders with default value",
       props: {
         options,
         defaultValue: "foo"
       }
     },
     {
-      desc: "renders with multiple selection",
+      description: "renders with multiple selection",
       props: {
         options,
         multiple: true
       }
     },
     {
-      desc: "renders with a controlled value",
+      description: "renders with a controlled value",
       props: {
         options,
         value: "foo"
       }
     },
     {
-      desc: "renders with multiple selection and a controlled value",
+      description: "renders with multiple selection and a controlled value",
       props: {
         options,
         multiple: true,

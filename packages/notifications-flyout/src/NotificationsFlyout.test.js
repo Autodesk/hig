@@ -9,23 +9,23 @@ import NotificationsFlyout from "./NotificationsFlyout";
 describe("notifications-flyout/NotificationsFlyout", () => {
   takeSnapshotsOf(NotificationsFlyout, [
     {
-      desc: "renders without props",
+      description: "renders without props",
       props: {}
     },
     {
-      desc: "renders a notification with the `notifications` prop",
+      description: "renders a notification with the `notifications` prop",
       props: {
         notifications: [{}]
       }
     },
     {
-      desc: "renders a notification with the `children` prop",
+      description: "renders a notification with the `children` prop",
       props: {
         children: <Notification />
       }
     },
     {
-      desc: "renders with all props",
+      description: "renders with all props",
       props: {
         anchorPoint: anchorPoints.RIGHT_BOTTOM,
         alterCoordinates: coordinates => coordinates,

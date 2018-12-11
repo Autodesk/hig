@@ -22,8 +22,6 @@ exports[`banner/Banner snapshot tests renders with no props 1`] = `
     }
   >
     <div
-      aria-label={undefined}
-      aria-labelledby={undefined}
       aria-live="polite"
       className="hig__banner hig__banner--primary hig--light-theme"
       role="alert"
@@ -72,11 +70,6 @@ exports[`banner/Banner snapshot tests renders with no props 1`] = `
       >
         <button
           className="hig__icon-button hig__icon-button--transparent"
-          onBlur={undefined}
-          onClick={undefined}
-          onFocus={undefined}
-          onMouseEnter={undefined}
-          onMouseLeave={undefined}
           title="Dismiss"
         >
           <svg
