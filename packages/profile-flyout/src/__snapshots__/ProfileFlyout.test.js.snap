@@ -81,7 +81,6 @@ exports[`profile-flyout/ProfileFlyout renders with all props 1`] = `
 .emotion-0 {
   width: 32px;
   height: 32px;
-  line-height: 32px;
   font-family: ArtifaktElement,sans-serif;
 }
 
@@ -231,7 +230,6 @@ exports[`profile-flyout/ProfileFlyout renders with no props 1`] = `
 .emotion-0 {
   width: 32px;
   height: 32px;
-  line-height: 32px;
   font-family: ArtifaktElement,sans-serif;
 }
 

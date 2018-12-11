@@ -19,7 +19,6 @@ exports[`profile-flyout/presenters/ProfileButtonPresenter  1`] = `
 .emotion-0 {
   width: 32px;
   height: 32px;
-  line-height: 32px;
   font-family: ArtifaktElement,sans-serif;
 }
 
@@ -47,7 +46,6 @@ exports[`profile-flyout/presenters/ProfileButtonPresenter  2`] = `
 .emotion-2 {
   width: 32px;
   height: 32px;
-  line-height: 32px;
   font-family: ArtifaktElement,sans-serif;
 }
 
@@ -74,14 +72,12 @@ exports[`profile-flyout/presenters/ProfileButtonPresenter  2`] = `
   display: flex;
   z-index: 2;
   font-size: 14px;
-  line-height: 32px;
 }
 
 .emotion-0 {
   border-radius: 50%;
   width: 32px;
   height: 32px;
-  line-height: 32px;
 }
 
 <button

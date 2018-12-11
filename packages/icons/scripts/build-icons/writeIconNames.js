@@ -7,7 +7,7 @@ const capitalizeCamelCase = require('./capitalizeCamelCase');
  */
 function createNameMap(svgs) {
   return svgs.reduce(
-    (acc, svg) => Object.assign(acc, { [svg.nameConstant]: capitalizeCamelCase(svg.title) }),
+    (acc, svg) => Object.assign(acc, { [svg.nameConstant]: capitalizeCamelCase(svg.title)}),
     {}
   );
 }
@@ -18,6 +18,7 @@ function createNameMap(svgs) {
  */
 function writeIconNames(svgs, filePath) {
   const nameMap = createNameMap(svgs);
+  console.log(nameMap);
 
   const bundleData = JSON.stringify(nameMap);
   fs.writeFileSync(filePath, bundleData);

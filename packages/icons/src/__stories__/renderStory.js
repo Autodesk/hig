@@ -35,8 +35,10 @@ function Spacer() {
     />
   );
 }
+
 function IconStory({ size }) {
   const set = Icons.sets.find(isonSet => isonSet.size === size);
+
   return (
     <Wrapper>
       {set.iconNames.map(name => {
@@ -45,13 +47,14 @@ function IconStory({ size }) {
           <InnerWrapper key={name}>
             <Icon key={name} />
             <Spacer />
-            <Body>{name}</Body>
+            <Body>{`${name}${size}`}</Body>
           </InnerWrapper>
         );
       })}
     </Wrapper>
   );
 }
+
 export default function renderStory(props) {
   const { children, ...otherProps } = props;
   return <IconStory {...otherProps}>{children}</IconStory>;
