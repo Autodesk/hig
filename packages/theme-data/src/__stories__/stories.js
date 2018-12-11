@@ -70,7 +70,11 @@ export default [
   },
   {
     description: "Component - Button",
-    schema: filterMatchByKey(baseTheme.unresolvedRoles, /^button./),
+    schema: filterMatchByKey(baseTheme.unresolvedRoles, /^button./)
+  },
+  {
+    description: "Component - Avatar",
+    schema: filterMatchByKey(baseTheme.unresolvedRoles, /^avatar./),
     readme: undefined
   },
   {
