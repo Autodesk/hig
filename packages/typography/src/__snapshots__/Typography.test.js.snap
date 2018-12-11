@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Typography  1`] = `
+<span
+  className="hig__typography css-0"
+  style={Object {}}
+>
+  Default should render nicely.
+</span>
+`;
+
+exports[`Typography  2`] = `
+<span
+  className="hig__typography css-0"
+  style={Object {}}
+>
+  body variant should render nicely with align center and fontWeight bold.
+</span>
+`;
+
+exports[`Typography  3`] = `
+<span
+  className="hig__typography css-0"
+  style={Object {}}
+>
+  body variant should render nicely.
+</span>
+`;
+
+exports[`Typography  4`] = `
+<span
+  className="hig__typography css-0"
+  style={Object {}}
+>
+  caption variant should render nicely.
+</span>
+`;
+
+exports[`Typography  5`] = `
+<span
+  className="hig__typography css-0"
+  style={Object {}}
+>
+  h1 variant should render nicely.
+</span>
+`;
+
+exports[`Typography  6`] = `
+<span
+  className="hig__typography css-0"
+  style={Object {}}
+>
+  h2 variant should render nicely.
+</span>
+`;
+
+exports[`Typography  7`] = `
+<span
+  className="hig__typography css-0"
+  style={Object {}}
+>
+  h3 variant should render nicely.
+</span>
+`;
+
+exports[`Typography  8`] = `
+<span
+  className="hig__typography hig__typography__text css-0"
+  style={Object {}}
+>
+  text type should render nicely.
+</span>
+`;
+
+exports[`Typography  9`] = `
+<span
+  className="hig__typography hig__typography__h1 css-0"
+  style={Object {}}
+>
+  h1 type should render nicely.
+</span>
+`;
+
+exports[`Typography  10`] = `
+<span
+  className="hig__typography hig__typography__text hig__typography--bold css-0"
+  style={Object {}}
+>
+  text type should render nicely with bold.
+</span>
+`;
+
+exports[`Typography  11`] = `
+<span
+  className="hig__typography hig__typography__text hig__typography--disabled css-0"
+  style={Object {}}
+>
+  text type should render nicely with disabled.
+</span>
+`;
+
+exports[`Typography  12`] = `
+<span
+  className="hig__typography hig__typography__text hig__typography--small css-0"
+  style={Object {}}
+>
+  text type should render nicely with size small.
+</span>
+`;
+
+exports[`Typography  13`] = `
+<span
+  className="hig__typography hig__typography__text hig__typography--hig-cool-gray-70 css-0"
+  style={Object {}}
+>
+  text type should render nicely with color hig-cool-gray-70.
+</span>
+`;
+
+exports[`Typography  14`] = `
+<span
+  className="hig__typography hig__typography__text css-0"
+  style={
+    Object {
+      "opacity": 0.3,
+    }
+  }
+>
+  text type should render nicely with opacity 0.3.
+</span>
+`;
