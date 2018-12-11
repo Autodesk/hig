@@ -1,3 +1,12 @@
+# [@hig/flyout-v0.7.0](https://github.com/Autodesk/hig/compare/@hig/flyout@0.6.0...@hig/flyout@0.7.0) (2018-12-11)
+
+
+### Features
+
+* add stylesheet override for flyout pointer ([947651f](https://github.com/Autodesk/hig/commit/947651f))
+* make flyout themeable ([d900626](https://github.com/Autodesk/hig/commit/d900626))
+* use theme date for flyout border color ([acfca0d](https://github.com/Autodesk/hig/commit/acfca0d))
+
 # [@hig/flyout-v0.6.0](https://github.com/Autodesk/hig/compare/@hig/flyout@0.5.0...@hig/flyout@0.6.0) (2018-09-26)
 
 
