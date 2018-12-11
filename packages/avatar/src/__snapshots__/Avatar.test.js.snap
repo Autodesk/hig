@@ -1,14 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`avatar/Avatar renders with a name 1`] = `
+.emotion-0 {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-family: ArtifaktElement,sans-serif;
+}
+
+.emotion-1 {
+  background-color: #5d822c;
+  color: #ffffff;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 14px;
+  display: block;
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  text-align: center;
+}
+
 <span
   aria-label="Avatar for Jon Snow"
-  className="hig__avatarV2 hig__avatarV2--size--medium-32 hig__avatarV2__background--salmon"
+  className="emotion-1"
   role="img"
 >
   <span
     aria-hidden="true"
-    className="hig__avatarV2__initials"
+    className="emotion-0"
   >
     JS
   </span>
@@ -16,24 +38,64 @@ exports[`avatar/Avatar renders with a name 1`] = `
 `;
 
 exports[`avatar/Avatar renders with all props 1`] = `
+.emotion-2 {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-family: ArtifaktElement,sans-serif;
+}
+
+.emotion-3 {
+  background-color: #5d822c;
+  color: #ffffff;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  font-size: 24px;
+  display: block;
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.emotion-1 {
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 2;
+  font-size: 24px;
+  line-height: 48px;
+}
+
+.emotion-0 {
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+}
+
 <span
   aria-label="Avatar for Jon Snow"
-  className="hig__avatarV2 hig__avatarV2--size--large hig__avatarV2__background--salmon"
+  className="emotion-3"
   role="img"
 >
   <span
-    className="hig__avatarV2__image-wrapper"
+    className="emotion-1"
   >
     <img
       alt="Avatar image of Jon Snow"
-      className="hig__avatarV2__image"
+      className="emotion-0"
       onError={[Function]}
       src="http://placekitten.com/g/64/64"
     />
   </span>
   <span
     aria-hidden="true"
-    className="hig__avatarV2__initials"
+    className="emotion-2"
   >
     JS
   </span>
@@ -41,24 +103,64 @@ exports[`avatar/Avatar renders with all props 1`] = `
 `;
 
 exports[`avatar/Avatar renders with an image 1`] = `
+.emotion-3 {
+  background-color: #6ac0e7;
+  color: #3c3c3c;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 14px;
+  display: block;
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.emotion-2 {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-family: ArtifaktElement,sans-serif;
+}
+
+.emotion-1 {
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 2;
+  font-size: 14px;
+  line-height: 32px;
+}
+
+.emotion-0 {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+}
+
 <span
   aria-label="Avatar for Anonymous User"
-  className="hig__avatarV2 hig__avatarV2--size--medium-32 hig__avatarV2__background--turquoise"
+  className="emotion-3"
   role="img"
 >
   <span
-    className="hig__avatarV2__image-wrapper"
+    className="emotion-1"
   >
     <img
       alt="Avatar image of Anonymous User"
-      className="hig__avatarV2__image"
+      className="emotion-0"
       onError={[Function]}
       src="http://placekitten.com/g/64/64"
     />
   </span>
   <span
     aria-hidden="true"
-    className="hig__avatarV2__initials"
+    className="emotion-2"
   >
     AU
   </span>
@@ -66,14 +168,36 @@ exports[`avatar/Avatar renders with an image 1`] = `
 `;
 
 exports[`avatar/Avatar renders without props 1`] = `
+.emotion-1 {
+  background-color: #6ac0e7;
+  color: #3c3c3c;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 14px;
+  display: block;
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.emotion-0 {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-family: ArtifaktElement,sans-serif;
+}
+
 <span
   aria-label="Avatar for Anonymous User"
-  className="hig__avatarV2 hig__avatarV2--size--medium-32 hig__avatarV2__background--turquoise"
+  className="emotion-1"
   role="img"
 >
   <span
     aria-hidden="true"
-    className="hig__avatarV2__initials"
+    className="emotion-0"
   >
     AU
   </span>

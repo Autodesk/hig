@@ -1,19 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`profile-flyout/ProfileFlyout renders with all props 1`] = `
-.emotion-7 {
+.emotion-9 {
   position: relative;
   display: inline-block;
 }
 
-.emotion-0 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-3 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -24,26 +24,26 @@ exports[`profile-flyout/ProfileFlyout renders with all props 1`] = `
   transform: rotate(0deg);
 }
 
-.emotion-1 {
+.emotion-3 {
   fill: #D4DBE1;
 }
 
-.emotion-2 {
+.emotion-4 {
   fill: #ffffff;
 }
 
-.emotion-5 {
+.emotion-7 {
   background-color: #ffffff;
   border-radius: 4px;
   border: 1px solid #D4DBE1;
   box-shadow: 0 0 16px rgba(0,0,0,0.25);
 }
 
-.emotion-4 {
+.emotion-6 {
   position: relative;
 }
 
-.emotion-6 {
+.emotion-8 {
   position: absolute;
   display: table;
   width: 100%;
@@ -63,11 +63,33 @@ exports[`profile-flyout/ProfileFlyout renders with all props 1`] = `
   transform: none;
 }
 
+.emotion-1 {
+  background-color: #6ac0e7;
+  color: #3c3c3c;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 14px;
+  display: block;
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.emotion-0 {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-family: ArtifaktElement,sans-serif;
+}
+
 <div
-  className="emotion-7"
+  className="emotion-9"
 >
   <div
-    className="emotion-0"
+    className="emotion-2"
   >
     <button
       className="hig__profile-flyout__button"
@@ -76,12 +98,12 @@ exports[`profile-flyout/ProfileFlyout renders with all props 1`] = `
     >
       <span
         aria-label="Avatar for Anonymous User"
-        className="hig__avatarV2 hig__avatarV2--size--medium-32 hig__avatarV2__background--turquoise"
+        className="emotion-1"
         role="img"
       >
         <span
           aria-hidden="true"
-          className="hig__avatarV2__initials"
+          className="emotion-0"
         >
           AU
         </span>
@@ -89,11 +111,11 @@ exports[`profile-flyout/ProfileFlyout renders with all props 1`] = `
     </button>
   </div>
   <div
-    className="emotion-6"
+    className="emotion-8"
   >
     <div
       aria-hidden="true"
-      className="emotion-3"
+      className="emotion-5"
       role="presentation"
       style={undefined}
     >
@@ -103,17 +125,17 @@ exports[`profile-flyout/ProfileFlyout renders with all props 1`] = `
         width="24"
       >
         <polygon
-          className="emotion-1"
+          className="emotion-3"
           points="0,12 12,0 24,12"
         />
         <polygon
-          className="emotion-2"
+          className="emotion-4"
           points="2.5,12 12,2.5 21.5,12"
         />
       </svg>
     </div>
     <div
-      className="emotion-5"
+      className="emotion-7"
       style={
         Object {
           "maxHeight": undefined,
@@ -121,7 +143,7 @@ exports[`profile-flyout/ProfileFlyout renders with all props 1`] = `
       }
     >
       <div
-        className="emotion-4"
+        className="emotion-6"
       />
     </div>
   </div>
@@ -129,19 +151,19 @@ exports[`profile-flyout/ProfileFlyout renders with all props 1`] = `
 `;
 
 exports[`profile-flyout/ProfileFlyout renders with no props 1`] = `
-.emotion-7 {
+.emotion-9 {
   position: relative;
   display: inline-block;
 }
 
-.emotion-0 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-6 {
+.emotion-8 {
   position: absolute;
   display: none;
   width: 100%;
@@ -161,7 +183,7 @@ exports[`profile-flyout/ProfileFlyout renders with no props 1`] = `
   transform: none;
 }
 
-.emotion-3 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -172,30 +194,52 @@ exports[`profile-flyout/ProfileFlyout renders with no props 1`] = `
   transform: rotate(0deg);
 }
 
-.emotion-1 {
+.emotion-3 {
   fill: #D4DBE1;
 }
 
-.emotion-2 {
+.emotion-4 {
   fill: #ffffff;
 }
 
-.emotion-5 {
+.emotion-7 {
   background-color: #ffffff;
   border-radius: 4px;
   border: 1px solid #D4DBE1;
   box-shadow: 0 0 16px rgba(0,0,0,0.25);
 }
 
-.emotion-4 {
+.emotion-6 {
   position: relative;
 }
 
+.emotion-1 {
+  background-color: #6ac0e7;
+  color: #3c3c3c;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 14px;
+  display: block;
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.emotion-0 {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-family: ArtifaktElement,sans-serif;
+}
+
 <div
-  className="emotion-7"
+  className="emotion-9"
 >
   <div
-    className="emotion-0"
+    className="emotion-2"
   >
     <button
       className="hig__profile-flyout__button"
@@ -204,12 +248,12 @@ exports[`profile-flyout/ProfileFlyout renders with no props 1`] = `
     >
       <span
         aria-label="Avatar for Anonymous User"
-        className="hig__avatarV2 hig__avatarV2--size--medium-32 hig__avatarV2__background--turquoise"
+        className="emotion-1"
         role="img"
       >
         <span
           aria-hidden="true"
-          className="hig__avatarV2__initials"
+          className="emotion-0"
         >
           AU
         </span>
@@ -217,11 +261,11 @@ exports[`profile-flyout/ProfileFlyout renders with no props 1`] = `
     </button>
   </div>
   <div
-    className="emotion-6"
+    className="emotion-8"
   >
     <div
       aria-hidden="true"
-      className="emotion-3"
+      className="emotion-5"
       role="presentation"
       style={undefined}
     >
@@ -231,17 +275,17 @@ exports[`profile-flyout/ProfileFlyout renders with no props 1`] = `
         width="24"
       >
         <polygon
-          className="emotion-1"
+          className="emotion-3"
           points="0,12 12,0 24,12"
         />
         <polygon
-          className="emotion-2"
+          className="emotion-4"
           points="2.5,12 12,2.5 21.5,12"
         />
       </svg>
     </div>
     <div
-      className="emotion-5"
+      className="emotion-7"
       style={
         Object {
           "maxHeight": undefined,
@@ -249,7 +293,7 @@ exports[`profile-flyout/ProfileFlyout renders with no props 1`] = `
       }
     >
       <div
-        className="emotion-4"
+        className="emotion-6"
       />
     </div>
   </div>
