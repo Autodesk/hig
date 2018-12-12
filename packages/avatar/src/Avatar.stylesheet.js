@@ -37,19 +37,16 @@ export default function stylesheet(props, themeData) {
         position: "absolute",
         display: "flex",
         zIndex: "2",
-        fontSize,
-        lineHeight: diameter
+        fontSize
       },
       image: {
         borderRadius: "50%",
         width: diameter,
-        height: diameter,
-        lineHeight: diameter
+        height: diameter
       },
       initials: {
         width: diameter,
         height: diameter,
-        lineHeight: diameter,
         fontFamily
       }
     }

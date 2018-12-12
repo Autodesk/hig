@@ -68,10 +68,11 @@ function Image({ image, name, size, onError, resolvedRoles }) {
 // eslint-disable-next-line react/prop-types
 function Initials({ size, name, resolvedRoles }) {
   const styles = stylesheet({ size, name }, resolvedRoles);
+  const initials = initialsFromName(name);
 
   return (
     <span className={css(styles.avatar.initials)} aria-hidden="true">
-      {initialsFromName(name)}
+      {size === sizes.SMALL_16 ? initials[0] : initials}
     </span>
   );
 }
@@ -170,7 +171,7 @@ class Avatar extends Component {
                 onError={handleImageError}
               />
             )}
-            <Initials name={name} resolvedRoles={resolvedRoles} />
+            <Initials name={name} size={size} resolvedRoles={resolvedRoles} />
           </span>
         )}
       </ThemeContext.Consumer>
