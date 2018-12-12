@@ -1,6 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`profile-flyout/presenters/ProfileButtonPresenter renders with all props 1`] = `
+.emotion-2 {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-family: ArtifaktElement,sans-serif;
+}
+
+.emotion-3 {
+  background-color: #5bc9bd;
+  color: #3c3c3c;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 14px;
+  display: block;
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.emotion-1 {
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 2;
+  font-size: 14px;
+  line-height: 32px;
+}
+
+.emotion-0 {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+}
+
 <button
   className="hig__profile-flyout__button"
   onClick={[Function]}
@@ -8,22 +48,22 @@ exports[`profile-flyout/presenters/ProfileButtonPresenter renders with all props
 >
   <span
     aria-label="Avatar for Richard Feynman"
-    className="hig__avatarV2 hig__avatarV2--size--medium-32 hig__avatarV2__background--green"
+    className="emotion-3"
     role="img"
   >
     <span
-      className="hig__avatarV2__image-wrapper"
+      className="emotion-1"
     >
       <img
         alt="Avatar image of Richard Feynman"
-        className="hig__avatarV2__image"
+        className="emotion-0"
         onError={[Function]}
         src="richard_phillips_feynman.png"
       />
     </span>
     <span
       aria-hidden="true"
-      className="hig__avatarV2__initials"
+      className="emotion-2"
     >
       RF
     </span>
@@ -32,18 +72,40 @@ exports[`profile-flyout/presenters/ProfileButtonPresenter renders with all props
 `;
 
 exports[`profile-flyout/presenters/ProfileButtonPresenter renders with avatarName 1`] = `
+.emotion-1 {
+  background-color: #faa21b;
+  color: #3c3c3c;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 14px;
+  display: block;
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.emotion-0 {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-family: ArtifaktElement,sans-serif;
+}
+
 <button
   className="hig__profile-flyout__button"
   type="button"
 >
   <span
     aria-label="Avatar for Wolfgang Pauli"
-    className="hig__avatarV2 hig__avatarV2--size--medium-32 hig__avatarV2__background--indigo"
+    className="emotion-1"
     role="img"
   >
     <span
       aria-hidden="true"
-      className="hig__avatarV2__initials"
+      className="emotion-0"
     >
       WP
     </span>
