@@ -1,5 +1,6 @@
 import React from "react";
 import { Body } from "@hig/typography";
+import KnobbedThemeProvider from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
 import * as Icons from "../index";
 
 function Wrapper({ children }) {
@@ -56,6 +57,10 @@ function IconStory({ size }) {
 }
 
 export default function renderStory(props) {
-  const { children, ...otherProps } = props;
-  return <IconStory {...otherProps}>{children}</IconStory>;
+  const { children, theme, ...otherProps } = props;
+  return (
+    <KnobbedThemeProvider>
+      <IconStory {...otherProps}>{children}</IconStory>
+    </KnobbedThemeProvider>
+  );
 }
