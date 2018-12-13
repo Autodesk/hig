@@ -171,6 +171,7 @@
 "@hig/themes@^0.3.0":
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@hig/themes/-/themes-0.3.0.tgz#15b20fd8c9a8e2a3d9146824ffbfbe88d81bfc9f"
+  integrity sha512-D0yU9ATk/7fIglymKAD6D7WBU/IxLrrF77R+cdmzbddZApvjS0zwXGc/3ICOlHO/4NU2peQpbtzETX1A8Kmd1w==
   dependencies:
     "@hig/theme-data-poc" "^0.0.8-alpha"
     prop-types "^15.6.1"

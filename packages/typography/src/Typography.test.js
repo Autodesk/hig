@@ -1,3 +1,5 @@
+import React from "react";
+import { shallow } from "enzyme";
 import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
 import Typography from "./Typography";
 
@@ -11,13 +13,11 @@ describe("Typography", () => {
     };
   }
 
-  function oldProps(type, ...args) {
-    const otherDetails = args.length ? ` with ${args.join(" ")}` : "";
-    return {
-      type,
-      text: `${type} type should render nicely${otherDetails}.`
-    };
-  }
+  it("renders", () => {
+    expect(
+      shallow(<Typography>It should render nicely</Typography>)
+    ).toMatchObject(/It should render nicely/);
+  });
 
   takeSnapshotsOf(Typography, [
     // new API tests
@@ -48,38 +48,6 @@ describe("Typography", () => {
     {
       description: "renders h3 variant Typography",
       props: newProps("h3")
-    },
-
-    // deprecated API tests
-    {
-      description: "renders text",
-      props: oldProps("text")
-    },
-    {
-      description: "renders with a type",
-      props: oldProps("h1")
-    },
-    {
-      description: "renders bold",
-      props: Object.assign(oldProps("text", "bold"), { bold: true })
-    },
-    {
-      description: "renders disabled",
-      props: Object.assign(oldProps("text", "disabled"), { disabled: true })
-    },
-    {
-      description: "renders with a size",
-      props: Object.assign(oldProps("text", "size small"), { size: "small" })
-    },
-    {
-      description: "renders with a color",
-      props: Object.assign(oldProps("text", "color hig-cool-gray-70"), {
-        color: "hig-cool-gray-70"
-      })
-    },
-    {
-      description: "renders with an opacity",
-      props: Object.assign(oldProps("text", "opacity 0.3"), { opacity: 0.3 })
     }
   ]);
 });

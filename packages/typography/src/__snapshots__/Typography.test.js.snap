@@ -1,131 +1,134 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Typography  1`] = `
+.emotion-0 {
+  color: #3c3c3c;
+  display: inline-block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.3;
+  margin: 0;
+  text-align: initial;
+}
+
 <span
-  className="hig__typography css-0"
-  style={Object {}}
+  className="emotion-0"
 >
   Default should render nicely.
 </span>
 `;
 
 exports[`Typography  2`] = `
+.emotion-0 {
+  color: #3c3c3c;
+  display: inline-block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.3;
+  margin: 0;
+  text-align: center;
+}
+
 <span
-  className="hig__typography css-0"
-  style={Object {}}
+  className="emotion-0"
 >
   body variant should render nicely with align center and fontWeight bold.
 </span>
 `;
 
 exports[`Typography  3`] = `
+.emotion-0 {
+  color: #3c3c3c;
+  display: inline-block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.3;
+  margin: 0;
+  text-align: initial;
+}
+
 <span
-  className="hig__typography css-0"
-  style={Object {}}
+  className="emotion-0"
 >
   body variant should render nicely.
 </span>
 `;
 
 exports[`Typography  4`] = `
+.emotion-0 {
+  color: #3c3c3c;
+  display: inline-block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.3;
+  margin: 0;
+  text-align: initial;
+}
+
 <span
-  className="hig__typography css-0"
-  style={Object {}}
+  className="emotion-0"
 >
   caption variant should render nicely.
 </span>
 `;
 
 exports[`Typography  5`] = `
+.emotion-0 {
+  color: #3c3c3c;
+  display: inline-block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  text-align: initial;
+}
+
 <span
-  className="hig__typography css-0"
-  style={Object {}}
+  className="emotion-0"
 >
   h1 variant should render nicely.
 </span>
 `;
 
 exports[`Typography  6`] = `
+.emotion-0 {
+  color: #3c3c3c;
+  display: inline-block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.3;
+  margin: 0;
+  text-align: initial;
+}
+
 <span
-  className="hig__typography css-0"
-  style={Object {}}
+  className="emotion-0"
 >
   h2 variant should render nicely.
 </span>
 `;
 
 exports[`Typography  7`] = `
+.emotion-0 {
+  color: #3c3c3c;
+  display: inline-block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0;
+  text-align: initial;
+}
+
 <span
-  className="hig__typography css-0"
-  style={Object {}}
+  className="emotion-0"
 >
   h3 variant should render nicely.
-</span>
-`;
-
-exports[`Typography  8`] = `
-<span
-  className="hig__typography hig__typography__text css-0"
-  style={Object {}}
->
-  text type should render nicely.
-</span>
-`;
-
-exports[`Typography  9`] = `
-<span
-  className="hig__typography hig__typography__h1 css-0"
-  style={Object {}}
->
-  h1 type should render nicely.
-</span>
-`;
-
-exports[`Typography  10`] = `
-<span
-  className="hig__typography hig__typography__text hig__typography--bold css-0"
-  style={Object {}}
->
-  text type should render nicely with bold.
-</span>
-`;
-
-exports[`Typography  11`] = `
-<span
-  className="hig__typography hig__typography__text hig__typography--disabled css-0"
-  style={Object {}}
->
-  text type should render nicely with disabled.
-</span>
-`;
-
-exports[`Typography  12`] = `
-<span
-  className="hig__typography hig__typography__text hig__typography--small css-0"
-  style={Object {}}
->
-  text type should render nicely with size small.
-</span>
-`;
-
-exports[`Typography  13`] = `
-<span
-  className="hig__typography hig__typography__text hig__typography--hig-cool-gray-70 css-0"
-  style={Object {}}
->
-  text type should render nicely with color hig-cool-gray-70.
-</span>
-`;
-
-exports[`Typography  14`] = `
-<span
-  className="hig__typography hig__typography__text css-0"
-  style={
-    Object {
-      "opacity": 0.3,
-    }
-  }
->
-  text type should render nicely with opacity 0.3.
 </span>
 `;

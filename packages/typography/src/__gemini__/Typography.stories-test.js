@@ -1,36 +1,90 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
+import ThemeContext from "@hig/theme-context";
 
-import Typography from "@hig/typography/src";
-import {
-  _VALID_COLORS,
-  _VALID_SIZES,
-  _VALID_TYPES
-} from "@hig/typography/src/_constants";
+import lightGrayHighTheme from "@hig/theme-data/build/json/lightGrayHighDensityTheme/theme.json";
+import lightGrayMediumTheme from "@hig/theme-data/build/json/lightGrayMediumDensityTheme/theme.json";
+import darkGrayHighTheme from "@hig/theme-data/build/json/darkGrayHighDensityTheme/theme.json";
+import darkGrayMediumTheme from "@hig/theme-data/build/json/darkGrayMediumDensityTheme/theme.json";
+import darkBlueHighTheme from "@hig/theme-data/build/json/darkBlueHighDensityTheme/theme.json";
+import darkBlueMediumTheme from "@hig/theme-data/build/json/darkBlueMediumDensityTheme/theme.json";
+import webLightHighTheme from "@hig/theme-data/build/json/webLightHighDensityTheme/theme.json";
+import webLightMediumTheme from "@hig/theme-data/build/json/webLightMediumDensityTheme/theme.json";
 
-_VALID_TYPES.map(type =>
-  storiesOf("Typography", module).add(`${type}`, () => (
+import Typography, {
+  AVAILABLE_ALIGNMENTS,
+  AVAILABLE_FONT_WEIGHTS,
+  AVAILABLE_VARIANTS
+} from "../index";
+
+const themes = [
+  lightGrayHighTheme,
+  lightGrayMediumTheme,
+  darkGrayHighTheme,
+  darkGrayMediumTheme,
+  darkBlueHighTheme,
+  darkBlueMediumTheme,
+  webLightHighTheme,
+  webLightMediumTheme
+];
+
+function ThemeRepeater({ children }) {
+  return (
+    <div style={{ display: "flex" }}>
+      {themes.map(theme => (
+        <ThemeContext.Provider key={theme.metadata.id} value={theme}>
+          <div>{children}</div>
+        </ThemeContext.Provider>
+      ))}
+    </div>
+  );
+}
+
+function Surface({ children }) {
+  return (
+    <ThemeContext.Consumer>
+      {({ resolvedRoles }) => {
+        const style = {
+          backgroundColor: resolvedRoles["colorScheme.surfaceLevel100Color"],
+          marginBottom: resolvedRoles["density.spacings.large"]
+        };
+
+        return <div style={style}>{children}</div>;
+      }}
+    </ThemeContext.Consumer>
+  );
+}
+
+function TypographyVariantRepeater({ children }) {
+  return (
     <div>
-      {_VALID_COLORS.map(color =>
-        _VALID_SIZES.map(size => {
-          const identifier = `${type} ${size} ${color}`;
-          const testText = `The quick brown fox jumps over the lazy dog. (${identifier})`;
-          const mappedProps = {
-            color,
-            size,
-            type,
-            text: testText
-          };
-
-          return (
+      {AVAILABLE_VARIANTS.map(variant =>
+        AVAILABLE_FONT_WEIGHTS.map(fontWeight =>
+          AVAILABLE_ALIGNMENTS.map(alignment => (
             <div>
-              <Typography {...mappedProps} />
-              <Typography bold {...mappedProps} />
-              <Typography disabled {...mappedProps} />
+              <Typography
+                variant={variant}
+                fontWeight={fontWeight}
+                align={alignment}
+              >
+                {children}
+              </Typography>
             </div>
-          );
-        })
+          ))
+        )
       )}
     </div>
-  ))
+  );
+}
+
+const typographyVariants = (
+  <ThemeRepeater>
+    <Surface>
+      <TypographyVariantRepeater>Render nicely</TypographyVariantRepeater>
+    </Surface>
+  </ThemeRepeater>
 );
+
+storiesOf("Typography", module).add("all variations", () => (
+  <div>{typographyVariants}</div>
+));
