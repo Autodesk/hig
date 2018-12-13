@@ -28,7 +28,7 @@ export default {
   "typography.h1.lineHeight": {
     type: LINE_HEIGHT,
     value: {
-      ref: "bascis.lineHeights.large"
+      ref: "basics.lineHeights.large"
     }
   },
   "typography.h1.color": {
@@ -60,7 +60,7 @@ export default {
   "typography.h2.lineHeight": {
     type: LINE_HEIGHT,
     value: {
-      ref: "bascis.lineHeights.small"
+      ref: "basics.lineHeights.small"
     }
   },
   "typography.h2.color": {
@@ -92,7 +92,7 @@ export default {
   "typography.h3.lineHeight": {
     type: LINE_HEIGHT,
     value: {
-      ref: "bascis.lineHeights.medium"
+      ref: "basics.lineHeights.medium"
     }
   },
   "typography.h3.color": {
@@ -124,7 +124,7 @@ export default {
   "typography.body.lineHeight": {
     type: LINE_HEIGHT,
     value: {
-      ref: "bascis.lineHeights.small"
+      ref: "basics.lineHeights.small"
     }
   },
   "typography.body.color": {
@@ -156,7 +156,7 @@ export default {
   "typography.caption.lineHeight": {
     type: LINE_HEIGHT,
     value: {
-      ref: "bascis.lineHeights.small"
+      ref: "basics.lineHeights.small"
     }
   },
   "typography.caption.color": {
