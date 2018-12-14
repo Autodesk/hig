@@ -13,19 +13,11 @@ class Label extends Component {
     /**
      * Dims label text, signifying the related input or control is disabled
      */
-    disabled: PropTypes.bool,
-    /**
-     * Reference to the HTML ID of the form element that this label represents
-     */
-    htmlFor: PropTypes.string,
-    /**
-     * Reference to the HTML ID of the form that contains this label
-     */
-    form: PropTypes.string
+    disabled: PropTypes.bool
   };
 
   render() {
-    const { children, htmlFor, form, disabled } = this.props;
+    const { children, disabled, ...otherProps } = this.props;
 
     return (
       <ThemeContext.Consumer>
@@ -33,7 +25,8 @@ class Label extends Component {
           const styles = stylesheet({ disabled }, resolvedRoles);
 
           return (
-            <label htmlFor={htmlFor} form={form} style={styles.label}>
+            // eslint-disable-next-line jsx-a11y/label-has-for
+            <label style={styles.label} {...otherProps}>
               {children}
             </label>
           );
