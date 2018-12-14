@@ -5,9 +5,7 @@ import { action } from "@storybook/addon-actions";
 import { boolean, text } from "@storybook/addon-knobs/react";
 import { controlledBool } from "@hig/storybook/utils";
 
-import KnobbedThemeProvider, {
-  THEMES
-} from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
+import KnobbedThemeProvider from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
 
 import stories from "./stories";
 import infoOptions from "./infoOptions";
@@ -76,13 +74,7 @@ stories.forEach(({ description, getProps }) => {
       const props = getProps();
       const { children, ...otherProps } = getKnobs(props);
       return (
-        <KnobbedThemeProvider
-          supportedThemes={[
-            THEMES.WEB_LIGHT,
-            THEMES.LIGHT_GRAY,
-            THEMES.DARK_BLUE
-          ]}
-        >
+        <KnobbedThemeProvider>
           <Checkbox {...otherProps}>{children}</Checkbox>
         </KnobbedThemeProvider>
       );
