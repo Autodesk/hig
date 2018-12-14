@@ -3,18 +3,6 @@
 exports[`checkbox/presenters/CheckboxPresenter renders with all props 1`] = `
 .emotion-4 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0 10px;
 }
 
 .emotion-0 {
@@ -25,6 +13,8 @@ exports[`checkbox/presenters/CheckboxPresenter renders with all props 1`] = `
   top: 0;
   left: 0;
   z-index: 1;
+  padding: 0;
+  margin: 0;
 }
 
 .emotion-2 {
@@ -33,6 +23,7 @@ exports[`checkbox/presenters/CheckboxPresenter renders with all props 1`] = `
 
 .emotion-3 {
   position: relative;
+  display: block;
   color: transparent;
   border: 1px solid #BEC8D2;
   background-color: #ffffff;
@@ -140,18 +131,6 @@ exports[`checkbox/presenters/CheckboxPresenter renders with all props 1`] = `
 exports[`checkbox/presenters/CheckboxPresenter renders without props 1`] = `
 .emotion-4 {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0 10px;
 }
 
 .emotion-0 {
@@ -162,10 +141,13 @@ exports[`checkbox/presenters/CheckboxPresenter renders without props 1`] = `
   top: 0;
   left: 0;
   z-index: 1;
+  padding: 0;
+  margin: 0;
 }
 
 .emotion-3 {
   position: relative;
+  display: block;
   color: transparent;
   border: 1px solid #BEC8D2;
   background-color: #ffffff;
