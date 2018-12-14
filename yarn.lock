@@ -7137,6 +7137,13 @@ json5@^0.5.0, json5@^0.5.1:
   version "0.5.1"
   resolved "http://registry.npmjs.org/json5/-/json5-0.5.1.tgz#1eade7acc012034ad84e2396767ead9fa5495821"
 
+json5@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/json5/-/json5-2.1.0.tgz#e7a0c62c48285c628d20a10b85c89bb807c32850"
+  integrity sha512-8Mh9h6xViijj36g7Dxi+Y4S6hNGV96vcJZr/SrlHh1LR/pEn/8j/+qIBbs44YKl69Lrfctp4QD+AdWLTMqEZAQ==
+  dependencies:
+    minimist "^1.2.0"
+
 jsonfile@^2.1.0:
   version "2.4.0"
   resolved "http://registry.npmjs.org/jsonfile/-/jsonfile-2.4.0.tgz#3736a2b428b87bbda0cc83b53fa3d633a35c2ae8"
@@ -11325,14 +11332,16 @@ structured-source@^3.0.2:
   dependencies:
     boundary "^1.0.1"
 
-style-dictionary@^2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/style-dictionary/-/style-dictionary-2.4.0.tgz#fae92adeeca1839940b61f6cf3e458afecdbb79d"
+style-dictionary@^2.6.2:
+  version "2.6.2"
+  resolved "https://registry.yarnpkg.com/style-dictionary/-/style-dictionary-2.6.2.tgz#7a550869f8f0e59cb559bdaff87f63e7d80b4689"
+  integrity sha512-2uSd/8Y1fVduV1UkvkP8HwmyAV0I7lNN/gAWCd8y3xDlQFRtFgrNl2cWQkMNbS2UCbrymH0oVolQHkwDDj4fYg==
   dependencies:
     chalk "^2.4.1"
     commander "^2.9.0"
     fs-extra "^6.0.1"
     glob "^7.1.1"
+    json5 "^2.1.0"
     lodash "^4.16.4"
     resolve-cwd "^2.0.0"
     tinycolor2 "^1.4.1"
