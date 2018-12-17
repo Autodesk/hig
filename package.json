@@ -34,9 +34,10 @@
     "react-test-renderer": "^15.6.1",
     "registry-url": "^4.0.0"
   },
-  "workspaces": [
-    "packages/*"
-  ],
+  "workspaces": {
+    "packages": ["packages/*"],
+    "nohoist": ["acceptance"]
+  },
   "jest": {
     "preset": "@hig/jest-preset"
   }
