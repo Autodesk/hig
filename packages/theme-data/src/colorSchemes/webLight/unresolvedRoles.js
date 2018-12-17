@@ -87,7 +87,10 @@ const webLightThemeResolvedRoles = extendTheme(lightGrayTheme.unresolvedRoles, {
     }
   },
   "button.outline.borderColor": {
-    value: oldBasics.colors["hig-cool-gray-30"]
+    value: oldBasics.colors["hig-cool-gray-30"],
+    transform: {
+      alpha: 1.0
+    }
   },
   "button.outline.disabled.borderColor": {
     value: oldBasics.colors["hig-cool-gray-20"],
