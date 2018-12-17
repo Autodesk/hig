@@ -32,14 +32,19 @@ export default class Typography extends Component {
   };
 
   render() {
+    const { align, children, fontWeight, variant, ...otherProps } = this.props;
+
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles }) => {
-          const styles = stylesheet(this.props, resolvedRoles);
+          const styles = stylesheet(
+            { align, fontWeight, variant },
+            resolvedRoles
+          );
 
           return (
-            <span className={css(styles.typography)}>
-              {this.props.children}
+            <span className={css(styles.typography)} {...otherProps}>
+              {children}
             </span>
           );
         }}
