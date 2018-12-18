@@ -124,7 +124,7 @@ exports[`Button  3`] = `
 .emotion-0 {
   border-width: 1px;
   border-style: solid;
-  border-color: #BEC8D2;
+  border-color: rgb(190,200,210);
   border-radius: 4px;
   box-sizing: border-box;
   color: #000000;
