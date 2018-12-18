@@ -18,6 +18,14 @@ export default class Typography extends Component {
      */
     align: PropTypes.oneOf(AVAILABLE_ALIGNMENTS),
     /**
+     * Enables specifying the semantic element to be rendered by the component
+     * If this prop is not provided, the semantic element will default to matching the variant (e.g. if the component
+     * variant is h1, the element will be `<h1>`) or if there is no semantic element matching the variant, it
+     * will default to `<p>`. You can provide elementType as a string, like "figcaption", or as a function, like
+     * `({children}) => (<figcaption>{children}</figcaption>)`.
+     */
+    elementType: PropTypes.node,
+    /**
      * Text to render
      */
     children: PropTypes.node,
@@ -31,8 +39,25 @@ export default class Typography extends Component {
     variant: PropTypes.oneOf(AVAILABLE_VARIANTS)
   };
 
+  elementType = () => {
+    const { elementType, variant } = this.props;
+
+    if (elementType) {
+      return elementType;
+    }
+
+    return ["h1", "h2", "h3"].includes(variant) ? variant : "p";
+  };
+
   render() {
-    const { align, children, fontWeight, variant, ...otherProps } = this.props;
+    const {
+      align,
+      children,
+      fontWeight,
+      variant,
+      elementType, // we don't want this included in the otherProps that appear in the DOM
+      ...otherProps
+    } = this.props;
 
     return (
       <ThemeContext.Consumer>
@@ -42,9 +67,7 @@ export default class Typography extends Component {
             resolvedRoles
           );
 
-          const ElementType = ["h1", "h2", "h3"].includes(variant)
-            ? variant
-            : "p";
+          const ElementType = this.elementType();
 
           return (
             <ElementType className={css(styles.typography)} {...otherProps}>
