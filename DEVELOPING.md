@@ -146,9 +146,13 @@ Package versioning is automated via [Semantic Release][] and determined by commi
 
 ### New package version
 
+In general you don't have to worry about maintaining the version number of the package because Semantic Release will automate the process for you. However there may be situations where you are developing a package and don't want its changes to be pushed to other dependent packages (either for local development or via Greenkeeper). In such cases you may want to assign an explicit version and append an `"-alpha"` tag to indicate that the package is still in development.
+
 Using the [example package documentation][package-example] as a reference, create a new package with the version `1.0.0-alpha`.
 
 Per [Semantic Versioning 2.0.0][semver], the `"-alpha"` portion of the version labels the package as pre-release. Packages labeled as pre-release are ignored during deployment.
+
+In concordance with this, you should make any inter-package dependencies explicit in each package's `package.json` file. Combined with Semantic Release and Greenkeeper, this will ensure that any nonbreaking package updates will be cascaded to any dependent packages, and notifications sent for breaking ones.
 
 ### Creating pre-releases
 
@@ -201,7 +205,7 @@ _Semantic Release will then:_
 1. Create GitHub releases
 1. Merge all changes into the `development` branch
 
-### Configuring Semantic Release to deply a package
+### Configuring Semantic Release to deploy a package
 A package must have the following properties defined in its `package.json` file in order to be published by Semantic Release
 
 ```json
