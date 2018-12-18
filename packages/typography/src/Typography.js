@@ -42,10 +42,14 @@ export default class Typography extends Component {
             resolvedRoles
           );
 
+          const ElementType = ["h1", "h2", "h3"].includes(variant)
+            ? variant
+            : "p";
+
           return (
-            <span className={css(styles.typography)} {...otherProps}>
+            <ElementType className={css(styles.typography)} {...otherProps}>
               {children}
-            </span>
+            </ElementType>
           );
         }}
       </ThemeContext.Consumer>
