@@ -2,22 +2,21 @@ const fs = require("fs");
 const capitalizeCamelCase = require('./capitalizeCamelCase');
 
 function stylize(svgName) {
-  return '(props) => {\n' +
-    'return (\n' + 
-      '<ThemeContext.Consumer>\n' +
-        '{({ resolvedRoles }) => {\n' +
-          `const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });\n` +
-          'return (\n' +
-            `<${svgName} {...propsClone} />\n` +
-          ')\n' +
-        '}}\n' +
-      '</ThemeContext.Consumer>\n' +
-    ')\n' +
-  '}\n'
+  return 'props => (\n' +
+    '  <ThemeContext.Consumer>\n' +
+    '    {({ resolvedRoles }) => {\n' +
+    '      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });\n' +
+    '      return (\n' +
+    `        <${svgName} {...propsClone} />\n` +
+    '      );\n' +
+    '    }}\n' +
+    '  </ThemeContext.Consumer>\n' +
+    ')\n'
 }
 
 function writeBundle(svgs, filePath) {
   const imports = [
+    '/* eslint-disable */',
     'import { cx, css } from "emotion";',
     'import React from "react";',
     'import { ThemeContext } from "@hig/theme-context";',
@@ -45,6 +44,7 @@ function writeBundle(svgs, filePath) {
     'export { AVAILABLE_NAMES, names, sets, sizes, AVAILABLE_SIZES };\n\n'
   );
   fs.appendFileSync(filePath, statements);
+  fs.appendFileSync(filePath, '/* eslint-enable */\n');
   // eslint-disable-next-line no-console
   console.log(`Icon bundle created in: ${filePath}`);
 }
