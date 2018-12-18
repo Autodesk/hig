@@ -34,7 +34,7 @@ exports[`Typography  2`] = `
 <p
   className="emotion-0"
 >
-  body variant should render nicely with align center and fontWeight bold.
+  body variant should render nicely with center bold .
 </p>
 `;
 
@@ -131,4 +131,23 @@ exports[`Typography  7`] = `
 >
   h3 variant should render nicely.
 </h3>
+`;
+
+exports[`Typography  8`] = `
+.emotion-0 {
+  color: #3c3c3c;
+  display: inline-block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0;
+  text-align: initial;
+}
+
+<figcaption
+  className="emotion-0"
+>
+  h3 variant should render nicely with   figcaption.
+</figcaption>
 `;
