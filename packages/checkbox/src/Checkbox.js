@@ -71,7 +71,6 @@ export default class Checkbox extends Component {
       defaultChecked,
       disabled,
       indeterminate,
-      name,
       onBlur,
       onChange,
       onClick,
@@ -80,7 +79,6 @@ export default class Checkbox extends Component {
       onMouseEnter,
       onMouseLeave,
       onMouseUp,
-      value,
       ...otherProps
     } = this.props;
 
@@ -118,7 +116,6 @@ export default class Checkbox extends Component {
                 hasHover={hasHover}
                 indeterminate={indeterminate}
                 isPressed={isPressed}
-                name={name}
                 onBlur={handleBlur}
                 onChange={handleChange}
                 onClick={handleClick}
@@ -127,7 +124,6 @@ export default class Checkbox extends Component {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 onMouseUp={handleMouseUp}
-                value={value}
                 {...otherProps}
               />
             )}

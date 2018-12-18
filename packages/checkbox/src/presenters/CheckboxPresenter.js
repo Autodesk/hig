@@ -97,7 +97,6 @@ export default class CheckboxPresenter extends Component {
       hasHover,
       indeterminate,
       isPressed,
-      name,
       onBlur,
       onChange,
       onClick,
@@ -106,7 +105,6 @@ export default class CheckboxPresenter extends Component {
       onMouseLeave,
       onMouseUp,
       onFocus,
-      value,
       ...otherProps
     } = this.props;
 
@@ -131,7 +129,6 @@ export default class CheckboxPresenter extends Component {
                 checked={checked}
                 className={css(styles.checkboxInput)}
                 disabled={disabled}
-                name={name}
                 onBlur={onBlur}
                 onChange={onChange}
                 onClick={onClick}
@@ -142,7 +139,6 @@ export default class CheckboxPresenter extends Component {
                 onMouseUp={onMouseUp}
                 ref={this.setIndeterminate}
                 type="checkbox"
-                value={value}
                 {...otherProps}
               />
               <CheckPresenter
