@@ -6,9 +6,15 @@ import { lastCallOfMock } from "@hig/jest-preset/helpers";
 import PressedBehavior from "./PressedBehavior";
 
 function renderExample(exampleProps) {
-  const renderPropSpy = jest.fn(({ onMouseDown, onMouseUp }) => (
-    <input onMouseDown={onMouseDown} onMouseUp={onMouseUp} />
-  ));
+  const renderPropSpy = jest.fn(
+    ({ onMouseDown, onPressedMouseLeave, onMouseUp }) => (
+      <input
+        onMouseDown={onMouseDown}
+        onMouseLeave={onPressedMouseLeave}
+        onMouseUp={onMouseUp}
+      />
+    )
+  );
   const wrapper = mount(
     <PressedBehavior {...exampleProps}>{renderPropSpy}</PressedBehavior>
   );
@@ -71,6 +77,16 @@ describe("PressedBehavior", () => {
       wrapper.find("input").simulate("mouseup");
 
       expect(onMouseUpSpy.mock.calls.length).toEqual(1);
+    });
+
+    it("passes isPressed=false onMouseLeave", () => {
+      const { renderPropSpy, wrapper } = renderExample();
+      wrapper.find("input").simulate("mousedown");
+      wrapper.find("input").simulate("mouseleave");
+
+      const renderPropArgs = lastCallOfMock(renderPropSpy)[0];
+
+      expect(renderPropArgs.isPressed).toBeFalse();
     });
   });
 });
