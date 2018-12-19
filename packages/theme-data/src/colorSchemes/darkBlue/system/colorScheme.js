@@ -1,7 +1,7 @@
 export default {
   accentColor: {
     value: {
-      ref: "basics.colors.autodeskBlue500"
+      ref: "basics.colors.autodeskBlue400"
     }
   },
   baseColor: {

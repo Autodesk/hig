@@ -79,10 +79,11 @@ Surface.propTypes = {
 };
 
 const KnobbedThemeProvider = ({ children, supportedThemes }) => {
+  const storybookThemes = supportedThemes ? supportedThemes : Object.values(COLOR_THEME_IDS);
   const knobGroup = "Theme";
   const themeId = select(
     "Color scheme",
-    themeOptions(supportedThemes),
+    themeOptions(storybookThemes),
     DEFAULT_THEME_ID,
     knobGroup
   );
@@ -93,7 +94,6 @@ const KnobbedThemeProvider = ({ children, supportedThemes }) => {
     knobGroup
   );
   const theme = themes[densityId][themeId];
-
   return (
     <ThemeContext.Provider value={theme}>
       <Surface>{children}</Surface>
@@ -109,7 +109,6 @@ KnobbedThemeProvider.propTypes = {
 };
 
 KnobbedThemeProvider.defaultProps = {
-  supportedThemes: [DEFAULT_THEME_ID],
   supportedDensities: [DEFAULT_DENSITY_ID]
 };
 
