@@ -93,7 +93,7 @@ export default {
   "button.halo.color": {
     type: COLOR,
     value: {
-      ref: "basics.colors.charcoal600"
+      ref: "colorScheme.baseColor"
     }
   },
 
@@ -107,7 +107,7 @@ export default {
   "button.hover.halo.color": {
     type: COLOR,
     value: {
-      ref: "basics.colors.charcoal600"
+      ref: "colorScheme.baseColor"
     }
   },
 
@@ -121,7 +121,7 @@ export default {
   "button.focus.halo.color": {
     type: COLOR,
     value: {
-      ref: "basics.colors.autodeskBlue500"
+      ref: "colorScheme.accentColor"
     }
   },
 
@@ -135,7 +135,7 @@ export default {
   "button.pressed.halo.color": {
     type: COLOR,
     value: {
-      ref: "basics.colors.autodeskBlue500"
+      ref: "colorScheme.accentColor"
     }
   },
 
@@ -159,7 +159,10 @@ export default {
   "button.outline.borderColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.charcoal600"
+      ref: "colorScheme.baseColor"
+    },
+    transform: {
+      alpha: 0.5
     }
   },
   "button.outline.halo.color": {
@@ -171,13 +174,13 @@ export default {
   "button.outline.textColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.textAgainstLight"
+      ref: "colorScheme.textColor"
     }
   },
   "button.outline.icon.color": {
     type: COLOR,
     value: {
-      ref: "basics.colors.textAgainstLight"
+      ref: "colorScheme.textColor"
     }
   },
 
@@ -199,10 +202,10 @@ export default {
   "button.outline.hover.halo.color": {
     type: COLOR,
     value: {
-      ref: "basics.colors.charcoal600"
+      ref: "colorScheme.baseColor"
     },
     transform: {
-      alpha: 0.4
+      alpha: 0.15
     }
   },
   "button.outline.hover.textColor": {
@@ -230,16 +233,16 @@ export default {
   "button.outline.focus.borderColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.autodeskBlue500"
+      ref: "colorScheme.accentColor"
     }
   },
   "button.outline.focus.halo.color": {
     type: COLOR,
     value: {
-      ref: "basics.colors.autodeskBlue500"
+      ref: "colorScheme.accentColor"
     },
     transform: {
-      alpha: 0.4
+      alpha: 0.5
     }
   },
   "button.outline.focus.textColor": {
@@ -271,16 +274,16 @@ export default {
   "button.outline.pressed.borderColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.autodeskBlue500"
+      ref: "colorScheme.accentColor"
     }
   },
   "button.outline.pressed.halo.color": {
     type: COLOR,
     value: {
-      ref: "basics.colors.autodeskBlue500"
+      ref: "colorScheme.accentColor"
     },
     transform: {
-      alpha: 0.4
+      alpha: 0.5
     }
   },
   "button.outline.pressed.textColor": {
@@ -352,13 +355,13 @@ export default {
   "button.solid.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.autodeskBlue500"
+      ref: "colorScheme.accentColor"
     }
   },
   "button.solid.borderColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.autodeskBlue500"
+      ref: "colorScheme.accentColor"
     }
   },
   "button.solid.halo.color": {
@@ -386,7 +389,7 @@ export default {
   "button.solid.hover.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.autodeskBlue500"
+      ref: "colorScheme.accentColor"
     }
   },
   "button.solid.hover.borderColor": {
@@ -398,10 +401,10 @@ export default {
   "button.solid.hover.halo.color": {
     type: COLOR,
     value: {
-      ref: "basics.colors.charcoal600"
+      ref: "colorScheme.baseColor"
     },
     transform: {
-      alpha: 0.4
+      alpha: 0.15
     }
   },
   "button.solid.hover.textColor": {
@@ -423,7 +426,7 @@ export default {
   "button.solid.focus.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.autodeskBlue500"
+      ref: "colorScheme.accentColor"
     }
   },
   "button.solid.focus.borderColor": {
@@ -435,10 +438,10 @@ export default {
   "button.solid.focus.halo.color": {
     type: COLOR,
     value: {
-      ref: "basics.colors.autodeskBlue500"
+      ref: "colorScheme.accentColor"
     },
     transform: {
-      alpha: 0.4
+      alpha: 0.5
     }
   },
   "button.solid.focus.textColor": {
@@ -476,10 +479,10 @@ export default {
   "button.solid.pressed.halo.color": {
     type: COLOR,
     value: {
-      ref: "basics.colors.autodeskBlue500"
+      ref: "colorScheme.accentColor"
     },
     transform: {
-      alpha: 0.4
+      alpha: 0.5
     }
   },
   "button.solid.pressed.textColor": {
@@ -555,15 +558,11 @@ export default {
   },
   "button.flat.textColor": {
     type: COLOR,
-    value: {
-      ref: "basics.colors.autodeskBlue700"
-    }
+    value: "#006EAF"
   },
   "button.flat.icon.color": {
     type: COLOR,
-    value: {
-      ref: "basics.colors.autodeskBlue700"
-    }
+    value: "#006EAF"
   },
 
   /**
@@ -587,7 +586,7 @@ export default {
       ref: "button.hover.halo.color"
     },
     transform: {
-      alpha: 0.4
+      alpha: 0.15
     }
   },
   "button.flat.hover.textColor": {
@@ -621,10 +620,10 @@ export default {
   "button.flat.focus.halo.color": {
     type: COLOR,
     value: {
-      ref: "basics.colors.autodeskBlue500"
+      ref: "colorScheme.accentColor"
     },
     transform: {
-      alpha: 0.4
+      alpha: 0.5
     }
   },
   "button.flat.focus.textColor": {
@@ -662,10 +661,10 @@ export default {
   "button.flat.pressed.halo.color": {
     type: COLOR,
     value: {
-      ref: "basics.colors.autodeskBlue500"
+      ref: "colorScheme.accentColor"
     },
     transform: {
-      alpha: 0.4
+      alpha: 0.5
     }
   },
   "button.flat.pressed.textColor": {
