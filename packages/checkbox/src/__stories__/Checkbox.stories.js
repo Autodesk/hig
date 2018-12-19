@@ -2,8 +2,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
 import { action } from "@storybook/addon-actions";
-import { boolean, text } from "@storybook/addon-knobs/react";
-import { controlledBool } from "@hig/storybook/utils";
+import { boolean } from "@storybook/addon-knobs/react";
 
 import KnobbedThemeProvider from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
 
@@ -17,48 +16,34 @@ const knobGroupIds = {
 };
 
 const knobLabels = {
-  checked: "Checked",
-  defaultChecked: "Initially Checked",
   disabled: "Disabled",
   indeterminate: "Indeterminate",
-  name: "Name",
   onBlur: "onBlur",
   onChange: "onChange",
   onFocus: "onFocus",
-  value: "Value"
+  onMouseDown: "onMouseDown"
 };
 
 function getKnobs(props) {
   const {
-    checked,
-    defaultChecked = false,
     indeterminate = false,
     disabled = false,
-    name = "",
     theme,
-    value = "",
     ...otherProps
   } = props;
 
   return {
     ...otherProps,
-    checked: controlledBool(knobLabels.checked, checked, knobGroupIds.basic),
-    defaultChecked: boolean(
-      knobLabels.defaultChecked,
-      defaultChecked,
-      knobGroupIds.basic
-    ),
     disabled: boolean(knobLabels.disabled, disabled, knobGroupIds.basic),
     indeterminate: boolean(
       knobLabels.indeterminate,
       indeterminate,
       knobGroupIds.basic
     ),
-    name: text(knobLabels.name, name, knobGroupIds.form),
     onBlur: action(knobLabels.onBlur),
     onChange: action(knobLabels.onChange),
     onFocus: action(knobLabels.onFocus),
-    value: text(knobLabels.value, value, knobGroupIds.form)
+    onMouseDown: action(knobLabels.onMouseDown)
   };
 }
 
