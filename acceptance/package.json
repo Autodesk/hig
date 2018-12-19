@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@hig/avatar": "^0.2.0",
     "@hig/button": "^1.1.0",
     "@hig/checkbox": "^1.0.1",
     "@hig/flyout": "^0.7.0",
