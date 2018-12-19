@@ -313,7 +313,7 @@ export { AVAILABLE_NAMES, names, sets, sizes, AVAILABLE_SIZES };
 export const AddFolder24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <AddFolder24SVG {...propsClone} />
       );
@@ -324,7 +324,7 @@ export const AddFolder24 = props => (
 export const AddMember24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <AddMember24SVG {...propsClone} />
       );
@@ -335,7 +335,7 @@ export const AddMember24 = props => (
 export const Add24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Add24SVG {...propsClone} />
       );
@@ -346,7 +346,7 @@ export const Add24 = props => (
 export const Archive24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Archive24SVG {...propsClone} />
       );
@@ -357,7 +357,7 @@ export const Archive24 = props => (
 export const AreaPost24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <AreaPost24SVG {...propsClone} />
       );
@@ -368,7 +368,7 @@ export const AreaPost24 = props => (
 export const Assets24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Assets24SVG {...propsClone} />
       );
@@ -379,7 +379,7 @@ export const Assets24 = props => (
 export const Attach24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Attach24SVG {...propsClone} />
       );
@@ -390,7 +390,7 @@ export const Attach24 = props => (
 export const Attachment24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Attachment24SVG {...propsClone} />
       );
@@ -401,7 +401,7 @@ export const Attachment24 = props => (
 export const Back24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Back24SVG {...propsClone} />
       );
@@ -412,7 +412,7 @@ export const Back24 = props => (
 export const Billing24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Billing24SVG {...propsClone} />
       );
@@ -423,7 +423,7 @@ export const Billing24 = props => (
 export const Bookmark24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Bookmark24SVG {...propsClone} />
       );
@@ -434,7 +434,7 @@ export const Bookmark24 = props => (
 export const BuildingOps24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <BuildingOps24SVG {...propsClone} />
       );
@@ -445,7 +445,7 @@ export const BuildingOps24 = props => (
 export const Calendar24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Calendar24SVG {...propsClone} />
       );
@@ -456,7 +456,7 @@ export const Calendar24 = props => (
 export const CaretDown24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <CaretDown24SVG {...propsClone} />
       );
@@ -467,7 +467,7 @@ export const CaretDown24 = props => (
 export const CaretLeft24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <CaretLeft24SVG {...propsClone} />
       );
@@ -478,7 +478,7 @@ export const CaretLeft24 = props => (
 export const CaretRight24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <CaretRight24SVG {...propsClone} />
       );
@@ -489,7 +489,7 @@ export const CaretRight24 = props => (
 export const CaretUp24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <CaretUp24SVG {...propsClone} />
       );
@@ -500,7 +500,7 @@ export const CaretUp24 = props => (
 export const Caret24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Caret24SVG {...propsClone} />
       );
@@ -511,7 +511,7 @@ export const Caret24 = props => (
 export const CartEmpty24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <CartEmpty24SVG {...propsClone} />
       );
@@ -522,7 +522,7 @@ export const CartEmpty24 = props => (
 export const CartFull24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <CartFull24SVG {...propsClone} />
       );
@@ -533,7 +533,7 @@ export const CartFull24 = props => (
 export const Chat24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Chat24SVG {...propsClone} />
       );
@@ -544,7 +544,7 @@ export const Chat24 = props => (
 export const CheckWhite24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <CheckWhite24SVG {...propsClone} />
       );
@@ -555,7 +555,7 @@ export const CheckWhite24 = props => (
 export const Checklist24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Checklist24SVG {...propsClone} />
       );
@@ -566,7 +566,7 @@ export const Checklist24 = props => (
 export const CheckmarkBlueDark24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <CheckmarkBlueDark24SVG {...propsClone} />
       );
@@ -577,7 +577,7 @@ export const CheckmarkBlueDark24 = props => (
 export const CheckmarkS24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <CheckmarkS24SVG {...propsClone} />
       );
@@ -588,7 +588,7 @@ export const CheckmarkS24 = props => (
 export const Checkmark24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Checkmark24SVG {...propsClone} />
       );
@@ -599,7 +599,7 @@ export const Checkmark24 = props => (
 export const ClearSmall24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <ClearSmall24SVG {...propsClone} />
       );
@@ -610,7 +610,7 @@ export const ClearSmall24 = props => (
 export const Clock24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Clock24SVG {...propsClone} />
       );
@@ -621,7 +621,7 @@ export const Clock24 = props => (
 export const CloseHamburger24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <CloseHamburger24SVG {...propsClone} />
       );
@@ -632,7 +632,7 @@ export const CloseHamburger24 = props => (
 export const CloseNotification24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <CloseNotification24SVG {...propsClone} />
       );
@@ -643,7 +643,7 @@ export const CloseNotification24 = props => (
 export const CloseXs24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <CloseXs24SVG {...propsClone} />
       );
@@ -654,7 +654,7 @@ export const CloseXs24 = props => (
 export const Close24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Close24SVG {...propsClone} />
       );
@@ -665,7 +665,7 @@ export const Close24 = props => (
 export const ClosedCaptioning24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <ClosedCaptioning24SVG {...propsClone} />
       );
@@ -676,7 +676,7 @@ export const ClosedCaptioning24 = props => (
 export const Cloud24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Cloud24SVG {...propsClone} />
       );
@@ -687,7 +687,7 @@ export const Cloud24 = props => (
 export const Collaboration24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Collaboration24SVG {...propsClone} />
       );
@@ -698,7 +698,7 @@ export const Collaboration24 = props => (
 export const CollapsePanel24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <CollapsePanel24SVG {...propsClone} />
       );
@@ -709,7 +709,7 @@ export const CollapsePanel24 = props => (
 export const Comment24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Comment24SVG {...propsClone} />
       );
@@ -720,7 +720,7 @@ export const Comment24 = props => (
 export const Compare24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Compare24SVG {...propsClone} />
       );
@@ -731,7 +731,7 @@ export const Compare24 = props => (
 export const Complete24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Complete24SVG {...propsClone} />
       );
@@ -742,7 +742,7 @@ export const Complete24 = props => (
 export const Copy24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Copy24SVG {...propsClone} />
       );
@@ -753,7 +753,7 @@ export const Copy24 = props => (
 export const CostControl24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <CostControl24SVG {...propsClone} />
       );
@@ -764,7 +764,7 @@ export const CostControl24 = props => (
 export const CtaArrowRight24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <CtaArrowRight24SVG {...propsClone} />
       );
@@ -775,7 +775,7 @@ export const CtaArrowRight24 = props => (
 export const Dashboard24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Dashboard24SVG {...propsClone} />
       );
@@ -786,7 +786,7 @@ export const Dashboard24 = props => (
 export const DeviceDesktop24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <DeviceDesktop24SVG {...propsClone} />
       );
@@ -797,7 +797,7 @@ export const DeviceDesktop24 = props => (
 export const DeviceMobile24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <DeviceMobile24SVG {...propsClone} />
       );
@@ -808,7 +808,7 @@ export const DeviceMobile24 = props => (
 export const DeviceTablet24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <DeviceTablet24SVG {...propsClone} />
       );
@@ -819,7 +819,7 @@ export const DeviceTablet24 = props => (
 export const Devices24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Devices24SVG {...propsClone} />
       );
@@ -830,7 +830,7 @@ export const Devices24 = props => (
 export const DocumentManagement24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <DocumentManagement24SVG {...propsClone} />
       );
@@ -841,7 +841,7 @@ export const DocumentManagement24 = props => (
 export const Down24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Down24SVG {...propsClone} />
       );
@@ -852,7 +852,7 @@ export const Down24 = props => (
 export const Download24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Download24SVG {...propsClone} />
       );
@@ -863,7 +863,7 @@ export const Download24 = props => (
 export const Edit24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Edit24SVG {...propsClone} />
       );
@@ -874,7 +874,7 @@ export const Edit24 = props => (
 export const Education24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Education24SVG {...propsClone} />
       );
@@ -885,7 +885,7 @@ export const Education24 = props => (
 export const Error24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Error24SVG {...propsClone} />
       );
@@ -896,7 +896,7 @@ export const Error24 = props => (
 export const ExpandPanel24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <ExpandPanel24SVG {...propsClone} />
       );
@@ -907,7 +907,7 @@ export const ExpandPanel24 = props => (
 export const ExportMove24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <ExportMove24SVG {...propsClone} />
       );
@@ -918,7 +918,7 @@ export const ExportMove24 = props => (
 export const Export24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Export24SVG {...propsClone} />
       );
@@ -929,7 +929,7 @@ export const Export24 = props => (
 export const ExternalLink24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <ExternalLink24SVG {...propsClone} />
       );
@@ -940,7 +940,7 @@ export const ExternalLink24 = props => (
 export const External24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <External24SVG {...propsClone} />
       );
@@ -951,7 +951,7 @@ export const External24 = props => (
 export const Favorite24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Favorite24SVG {...propsClone} />
       );
@@ -962,7 +962,7 @@ export const Favorite24 = props => (
 export const Featured24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Featured24SVG {...propsClone} />
       );
@@ -973,7 +973,7 @@ export const Featured24 = props => (
 export const Feedback24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Feedback24SVG {...propsClone} />
       );
@@ -984,7 +984,7 @@ export const Feedback24 = props => (
 export const Field24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Field24SVG {...propsClone} />
       );
@@ -995,7 +995,7 @@ export const Field24 = props => (
 export const FileAssembly24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <FileAssembly24SVG {...propsClone} />
       );
@@ -1006,7 +1006,7 @@ export const FileAssembly24 = props => (
 export const FileDocument24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <FileDocument24SVG {...propsClone} />
       );
@@ -1017,7 +1017,7 @@ export const FileDocument24 = props => (
 export const FileGeneric24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <FileGeneric24SVG {...propsClone} />
       );
@@ -1028,7 +1028,7 @@ export const FileGeneric24 = props => (
 export const FileImage24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <FileImage24SVG {...propsClone} />
       );
@@ -1039,7 +1039,7 @@ export const FileImage24 = props => (
 export const FilePart24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <FilePart24SVG {...propsClone} />
       );
@@ -1050,7 +1050,7 @@ export const FilePart24 = props => (
 export const FilePdf24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <FilePdf24SVG {...propsClone} />
       );
@@ -1061,7 +1061,7 @@ export const FilePdf24 = props => (
 export const FilePresentation24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <FilePresentation24SVG {...propsClone} />
       );
@@ -1072,7 +1072,7 @@ export const FilePresentation24 = props => (
 export const FileSpreadsheet24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <FileSpreadsheet24SVG {...propsClone} />
       );
@@ -1083,7 +1083,7 @@ export const FileSpreadsheet24 = props => (
 export const FileVideo24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <FileVideo24SVG {...propsClone} />
       );
@@ -1094,7 +1094,7 @@ export const FileVideo24 = props => (
 export const FileZip24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <FileZip24SVG {...propsClone} />
       );
@@ -1105,7 +1105,7 @@ export const FileZip24 = props => (
 export const FilterTokens24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <FilterTokens24SVG {...propsClone} />
       );
@@ -1116,7 +1116,7 @@ export const FilterTokens24 = props => (
 export const Filter24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Filter24SVG {...propsClone} />
       );
@@ -1127,7 +1127,7 @@ export const Filter24 = props => (
 export const Flag24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Flag24SVG {...propsClone} />
       );
@@ -1138,7 +1138,7 @@ export const Flag24 = props => (
 export const FolderOpen24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <FolderOpen24SVG {...propsClone} />
       );
@@ -1149,7 +1149,7 @@ export const FolderOpen24 = props => (
 export const Folder24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Folder24SVG {...propsClone} />
       );
@@ -1160,7 +1160,7 @@ export const Folder24 = props => (
 export const Forums24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Forums24SVG {...propsClone} />
       );
@@ -1171,7 +1171,7 @@ export const Forums24 = props => (
 export const Forward24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Forward24SVG {...propsClone} />
       );
@@ -1182,7 +1182,7 @@ export const Forward24 = props => (
 export const Globe24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Globe24SVG {...propsClone} />
       );
@@ -1193,7 +1193,7 @@ export const Globe24 = props => (
 export const Grid24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Grid24SVG {...propsClone} />
       );
@@ -1204,7 +1204,7 @@ export const Grid24 = props => (
 export const HamburgerClose24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <HamburgerClose24SVG {...propsClone} />
       );
@@ -1215,7 +1215,7 @@ export const HamburgerClose24 = props => (
 export const HamburgerDefault24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <HamburgerDefault24SVG {...propsClone} />
       );
@@ -1226,7 +1226,7 @@ export const HamburgerDefault24 = props => (
 export const Hamburger24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Hamburger24SVG {...propsClone} />
       );
@@ -1237,7 +1237,7 @@ export const Hamburger24 = props => (
 export const Help24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Help24SVG {...propsClone} />
       );
@@ -1248,7 +1248,7 @@ export const Help24 = props => (
 export const Hidden24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Hidden24SVG {...propsClone} />
       );
@@ -1259,7 +1259,7 @@ export const Hidden24 = props => (
 export const Hierarchy24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Hierarchy24SVG {...propsClone} />
       );
@@ -1270,7 +1270,7 @@ export const Hierarchy24 = props => (
 export const Home24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Home24SVG {...propsClone} />
       );
@@ -1281,7 +1281,7 @@ export const Home24 = props => (
 export const Info24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Info24SVG {...propsClone} />
       );
@@ -1292,7 +1292,7 @@ export const Info24 = props => (
 export const Insight24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Insight24SVG {...propsClone} />
       );
@@ -1303,7 +1303,7 @@ export const Insight24 = props => (
 export const Issue24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Issue24SVG {...propsClone} />
       );
@@ -1314,7 +1314,7 @@ export const Issue24 = props => (
 export const Item24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Item24SVG {...propsClone} />
       );
@@ -1325,7 +1325,7 @@ export const Item24 = props => (
 export const Layout24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Layout24SVG {...propsClone} />
       );
@@ -1336,7 +1336,7 @@ export const Layout24 = props => (
 export const Link24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Link24SVG {...propsClone} />
       );
@@ -1347,7 +1347,7 @@ export const Link24 = props => (
 export const List24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <List24SVG {...propsClone} />
       );
@@ -1358,7 +1358,7 @@ export const List24 = props => (
 export const Location24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Location24SVG {...propsClone} />
       );
@@ -1369,7 +1369,7 @@ export const Location24 = props => (
 export const Lock24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Lock24SVG {...propsClone} />
       );
@@ -1380,7 +1380,7 @@ export const Lock24 = props => (
 export const Mail24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Mail24SVG {...propsClone} />
       );
@@ -1391,7 +1391,7 @@ export const Mail24 = props => (
 export const ManageAccess24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <ManageAccess24SVG {...propsClone} />
       );
@@ -1402,7 +1402,7 @@ export const ManageAccess24 = props => (
 export const Maximize24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Maximize24SVG {...propsClone} />
       );
@@ -1413,7 +1413,7 @@ export const Maximize24 = props => (
 export const Minimize24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Minimize24SVG {...propsClone} />
       );
@@ -1424,7 +1424,7 @@ export const Minimize24 = props => (
 export const ModelCoordination24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <ModelCoordination24SVG {...propsClone} />
       );
@@ -1435,7 +1435,7 @@ export const ModelCoordination24 = props => (
 export const MoreVertical24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <MoreVertical24SVG {...propsClone} />
       );
@@ -1446,7 +1446,7 @@ export const MoreVertical24 = props => (
 export const More24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <More24SVG {...propsClone} />
       );
@@ -1457,7 +1457,7 @@ export const More24 = props => (
 export const Notification24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Notification24SVG {...propsClone} />
       );
@@ -1468,7 +1468,7 @@ export const Notification24 = props => (
 export const OnlineViewers24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <OnlineViewers24SVG {...propsClone} />
       );
@@ -1479,7 +1479,7 @@ export const OnlineViewers24 = props => (
 export const Paste24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Paste24SVG {...propsClone} />
       );
@@ -1490,7 +1490,7 @@ export const Paste24 = props => (
 export const Pause24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Pause24SVG {...propsClone} />
       );
@@ -1501,7 +1501,7 @@ export const Pause24 = props => (
 export const PermissionGroup24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <PermissionGroup24SVG {...propsClone} />
       );
@@ -1512,7 +1512,7 @@ export const PermissionGroup24 = props => (
 export const PermissionIndividual24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <PermissionIndividual24SVG {...propsClone} />
       );
@@ -1523,7 +1523,7 @@ export const PermissionIndividual24 = props => (
 export const Photos24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Photos24SVG {...propsClone} />
       );
@@ -1534,7 +1534,7 @@ export const Photos24 = props => (
 export const Pin24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Pin24SVG {...propsClone} />
       );
@@ -1545,7 +1545,7 @@ export const Pin24 = props => (
 export const Placeholder24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Placeholder24SVG {...propsClone} />
       );
@@ -1556,7 +1556,7 @@ export const Placeholder24 = props => (
 export const Play24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Play24SVG {...propsClone} />
       );
@@ -1567,7 +1567,7 @@ export const Play24 = props => (
 export const Print24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Print24SVG {...propsClone} />
       );
@@ -1578,7 +1578,7 @@ export const Print24 = props => (
 export const ProductsAndServices24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <ProductsAndServices24SVG {...propsClone} />
       );
@@ -1589,7 +1589,7 @@ export const ProductsAndServices24 = props => (
 export const Profile24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Profile24SVG {...propsClone} />
       );
@@ -1600,7 +1600,7 @@ export const Profile24 = props => (
 export const ProjectManagement24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <ProjectManagement24SVG {...propsClone} />
       );
@@ -1611,7 +1611,7 @@ export const ProjectManagement24 = props => (
 export const Properties24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Properties24SVG {...propsClone} />
       );
@@ -1622,7 +1622,7 @@ export const Properties24 = props => (
 export const Publish24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Publish24SVG {...propsClone} />
       );
@@ -1633,7 +1633,7 @@ export const Publish24 = props => (
 export const Quantities24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Quantities24SVG {...propsClone} />
       );
@@ -1644,7 +1644,7 @@ export const Quantities24 = props => (
 export const Recommend24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Recommend24SVG {...propsClone} />
       );
@@ -1655,7 +1655,7 @@ export const Recommend24 = props => (
 export const Redo24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Redo24SVG {...propsClone} />
       );
@@ -1666,7 +1666,7 @@ export const Redo24 = props => (
 export const Report24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Report24SVG {...propsClone} />
       );
@@ -1677,7 +1677,7 @@ export const Report24 = props => (
 export const Rfi24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Rfi24SVG {...propsClone} />
       );
@@ -1688,7 +1688,7 @@ export const Rfi24 = props => (
 export const Save24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Save24SVG {...propsClone} />
       );
@@ -1699,7 +1699,7 @@ export const Save24 = props => (
 export const Search24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Search24SVG {...propsClone} />
       );
@@ -1710,7 +1710,7 @@ export const Search24 = props => (
 export const Security24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Security24SVG {...propsClone} />
       );
@@ -1721,7 +1721,7 @@ export const Security24 = props => (
 export const Service24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Service24SVG {...propsClone} />
       );
@@ -1732,7 +1732,7 @@ export const Service24 = props => (
 export const Settings24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Settings24SVG {...propsClone} />
       );
@@ -1743,7 +1743,7 @@ export const Settings24 = props => (
 export const Share24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Share24SVG {...propsClone} />
       );
@@ -1754,7 +1754,7 @@ export const Share24 = props => (
 export const SocialBlog224 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <SocialBlog224SVG {...propsClone} />
       );
@@ -1765,7 +1765,7 @@ export const SocialBlog224 = props => (
 export const SocialBlog24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <SocialBlog24SVG {...propsClone} />
       );
@@ -1776,7 +1776,7 @@ export const SocialBlog24 = props => (
 export const SocialFacebook24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <SocialFacebook24SVG {...propsClone} />
       );
@@ -1787,7 +1787,7 @@ export const SocialFacebook24 = props => (
 export const SocialInstagram24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <SocialInstagram24SVG {...propsClone} />
       );
@@ -1798,7 +1798,7 @@ export const SocialInstagram24 = props => (
 export const SocialLinkedin24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <SocialLinkedin24SVG {...propsClone} />
       );
@@ -1809,7 +1809,7 @@ export const SocialLinkedin24 = props => (
 export const SocialTwitter24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <SocialTwitter24SVG {...propsClone} />
       );
@@ -1820,7 +1820,7 @@ export const SocialTwitter24 = props => (
 export const SocialYoutube24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <SocialYoutube24SVG {...propsClone} />
       );
@@ -1831,7 +1831,7 @@ export const SocialYoutube24 = props => (
 export const Subscription24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Subscription24SVG {...propsClone} />
       );
@@ -1842,7 +1842,7 @@ export const Subscription24 = props => (
 export const Support24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Support24SVG {...propsClone} />
       );
@@ -1853,7 +1853,7 @@ export const Support24 = props => (
 export const Sync24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Sync24SVG {...propsClone} />
       );
@@ -1864,7 +1864,7 @@ export const Sync24 = props => (
 export const Tag24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Tag24SVG {...propsClone} />
       );
@@ -1875,7 +1875,7 @@ export const Tag24 = props => (
 export const Trash24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Trash24SVG {...propsClone} />
       );
@@ -1886,7 +1886,7 @@ export const Trash24 = props => (
 export const Unavailable24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Unavailable24SVG {...propsClone} />
       );
@@ -1897,7 +1897,7 @@ export const Unavailable24 = props => (
 export const Undo24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Undo24SVG {...propsClone} />
       );
@@ -1908,7 +1908,7 @@ export const Undo24 = props => (
 export const Unlock24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Unlock24SVG {...propsClone} />
       );
@@ -1919,7 +1919,7 @@ export const Unlock24 = props => (
 export const Up24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Up24SVG {...propsClone} />
       );
@@ -1930,7 +1930,7 @@ export const Up24 = props => (
 export const Upload24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Upload24SVG {...propsClone} />
       );
@@ -1941,7 +1941,7 @@ export const Upload24 = props => (
 export const Visible24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Visible24SVG {...propsClone} />
       );
@@ -1952,7 +1952,7 @@ export const Visible24 = props => (
 export const Volume24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Volume24SVG {...propsClone} />
       );
@@ -1963,7 +1963,7 @@ export const Volume24 = props => (
 export const XCloseGray24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <XCloseGray24SVG {...propsClone} />
       );
@@ -1974,7 +1974,7 @@ export const XCloseGray24 = props => (
 export const ZoomIn24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <ZoomIn24SVG {...propsClone} />
       );
@@ -1985,7 +1985,7 @@ export const ZoomIn24 = props => (
 export const ZoomOut24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <ZoomOut24SVG {...propsClone} />
       );
@@ -1996,7 +1996,7 @@ export const ZoomOut24 = props => (
 export const AddFolder16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <AddFolder16SVG {...propsClone} />
       );
@@ -2007,7 +2007,7 @@ export const AddFolder16 = props => (
 export const AddMember16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <AddMember16SVG {...propsClone} />
       );
@@ -2018,7 +2018,7 @@ export const AddMember16 = props => (
 export const Add16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Add16SVG {...propsClone} />
       );
@@ -2029,7 +2029,7 @@ export const Add16 = props => (
 export const Archive16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Archive16SVG {...propsClone} />
       );
@@ -2040,7 +2040,7 @@ export const Archive16 = props => (
 export const AreaPost16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <AreaPost16SVG {...propsClone} />
       );
@@ -2051,7 +2051,7 @@ export const AreaPost16 = props => (
 export const Assets16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Assets16SVG {...propsClone} />
       );
@@ -2062,7 +2062,7 @@ export const Assets16 = props => (
 export const Attach16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Attach16SVG {...propsClone} />
       );
@@ -2073,7 +2073,7 @@ export const Attach16 = props => (
 export const Attachment16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Attachment16SVG {...propsClone} />
       );
@@ -2084,7 +2084,7 @@ export const Attachment16 = props => (
 export const Back16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Back16SVG {...propsClone} />
       );
@@ -2095,7 +2095,7 @@ export const Back16 = props => (
 export const Billing16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Billing16SVG {...propsClone} />
       );
@@ -2106,7 +2106,7 @@ export const Billing16 = props => (
 export const Bookmark16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Bookmark16SVG {...propsClone} />
       );
@@ -2117,7 +2117,7 @@ export const Bookmark16 = props => (
 export const BuildingOps16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <BuildingOps16SVG {...propsClone} />
       );
@@ -2128,7 +2128,7 @@ export const BuildingOps16 = props => (
 export const Calendar16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Calendar16SVG {...propsClone} />
       );
@@ -2139,7 +2139,7 @@ export const Calendar16 = props => (
 export const CaretDown16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <CaretDown16SVG {...propsClone} />
       );
@@ -2150,7 +2150,7 @@ export const CaretDown16 = props => (
 export const CaretLeft16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <CaretLeft16SVG {...propsClone} />
       );
@@ -2161,7 +2161,7 @@ export const CaretLeft16 = props => (
 export const CaretRight16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <CaretRight16SVG {...propsClone} />
       );
@@ -2172,7 +2172,7 @@ export const CaretRight16 = props => (
 export const CaretUp16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <CaretUp16SVG {...propsClone} />
       );
@@ -2183,7 +2183,7 @@ export const CaretUp16 = props => (
 export const CartEmpty16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <CartEmpty16SVG {...propsClone} />
       );
@@ -2194,7 +2194,7 @@ export const CartEmpty16 = props => (
 export const CartFull16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <CartFull16SVG {...propsClone} />
       );
@@ -2205,7 +2205,7 @@ export const CartFull16 = props => (
 export const Chat16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Chat16SVG {...propsClone} />
       );
@@ -2216,7 +2216,7 @@ export const Chat16 = props => (
 export const CheckDisabled16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <CheckDisabled16SVG {...propsClone} />
       );
@@ -2227,7 +2227,7 @@ export const CheckDisabled16 = props => (
 export const CheckboxChecked16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <CheckboxChecked16SVG {...propsClone} />
       );
@@ -2238,7 +2238,7 @@ export const CheckboxChecked16 = props => (
 export const CheckboxIndeterminate16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <CheckboxIndeterminate16SVG {...propsClone} />
       );
@@ -2249,7 +2249,7 @@ export const CheckboxIndeterminate16 = props => (
 export const Checklist16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Checklist16SVG {...propsClone} />
       );
@@ -2260,7 +2260,7 @@ export const Checklist16 = props => (
 export const CheckmarkIndeterminate16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <CheckmarkIndeterminate16SVG {...propsClone} />
       );
@@ -2271,7 +2271,7 @@ export const CheckmarkIndeterminate16 = props => (
 export const Checkmark16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Checkmark16SVG {...propsClone} />
       );
@@ -2282,7 +2282,7 @@ export const Checkmark16 = props => (
 export const Clock16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Clock16SVG {...propsClone} />
       );
@@ -2293,7 +2293,7 @@ export const Clock16 = props => (
 export const Close16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Close16SVG {...propsClone} />
       );
@@ -2304,7 +2304,7 @@ export const Close16 = props => (
 export const ClosedCaptioning16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <ClosedCaptioning16SVG {...propsClone} />
       );
@@ -2315,7 +2315,7 @@ export const ClosedCaptioning16 = props => (
 export const Cloud16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Cloud16SVG {...propsClone} />
       );
@@ -2326,7 +2326,7 @@ export const Cloud16 = props => (
 export const Collaboration16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Collaboration16SVG {...propsClone} />
       );
@@ -2337,7 +2337,7 @@ export const Collaboration16 = props => (
 export const CollapsePanel16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <CollapsePanel16SVG {...propsClone} />
       );
@@ -2348,7 +2348,7 @@ export const CollapsePanel16 = props => (
 export const Comment16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Comment16SVG {...propsClone} />
       );
@@ -2359,7 +2359,7 @@ export const Comment16 = props => (
 export const Compare16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Compare16SVG {...propsClone} />
       );
@@ -2370,7 +2370,7 @@ export const Compare16 = props => (
 export const Complete16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Complete16SVG {...propsClone} />
       );
@@ -2381,7 +2381,7 @@ export const Complete16 = props => (
 export const Copy16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Copy16SVG {...propsClone} />
       );
@@ -2392,7 +2392,7 @@ export const Copy16 = props => (
 export const CostControl16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <CostControl16SVG {...propsClone} />
       );
@@ -2403,7 +2403,7 @@ export const CostControl16 = props => (
 export const CtaArrowRight16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <CtaArrowRight16SVG {...propsClone} />
       );
@@ -2414,7 +2414,7 @@ export const CtaArrowRight16 = props => (
 export const Dashboard16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Dashboard16SVG {...propsClone} />
       );
@@ -2425,7 +2425,7 @@ export const Dashboard16 = props => (
 export const DeviceDesktop16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <DeviceDesktop16SVG {...propsClone} />
       );
@@ -2436,7 +2436,7 @@ export const DeviceDesktop16 = props => (
 export const DeviceMobile16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <DeviceMobile16SVG {...propsClone} />
       );
@@ -2447,7 +2447,7 @@ export const DeviceMobile16 = props => (
 export const DeviceTablet16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <DeviceTablet16SVG {...propsClone} />
       );
@@ -2458,7 +2458,7 @@ export const DeviceTablet16 = props => (
 export const Devices16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Devices16SVG {...propsClone} />
       );
@@ -2469,7 +2469,7 @@ export const Devices16 = props => (
 export const DocumentManagement16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <DocumentManagement16SVG {...propsClone} />
       );
@@ -2480,7 +2480,7 @@ export const DocumentManagement16 = props => (
 export const Down16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Down16SVG {...propsClone} />
       );
@@ -2491,7 +2491,7 @@ export const Down16 = props => (
 export const Download16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Download16SVG {...propsClone} />
       );
@@ -2502,7 +2502,7 @@ export const Download16 = props => (
 export const DropdownCaretDown16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <DropdownCaretDown16SVG {...propsClone} />
       );
@@ -2513,7 +2513,7 @@ export const DropdownCaretDown16 = props => (
 export const DropdownCaretLeft16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <DropdownCaretLeft16SVG {...propsClone} />
       );
@@ -2524,7 +2524,7 @@ export const DropdownCaretLeft16 = props => (
 export const DropdownCaretRight16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <DropdownCaretRight16SVG {...propsClone} />
       );
@@ -2535,7 +2535,7 @@ export const DropdownCaretRight16 = props => (
 export const DropdownCaretUp16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <DropdownCaretUp16SVG {...propsClone} />
       );
@@ -2546,7 +2546,7 @@ export const DropdownCaretUp16 = props => (
 export const Edit16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Edit16SVG {...propsClone} />
       );
@@ -2557,7 +2557,7 @@ export const Edit16 = props => (
 export const Education16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Education16SVG {...propsClone} />
       );
@@ -2568,7 +2568,7 @@ export const Education16 = props => (
 export const Error16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Error16SVG {...propsClone} />
       );
@@ -2579,7 +2579,7 @@ export const Error16 = props => (
 export const ExpandPanel16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <ExpandPanel16SVG {...propsClone} />
       );
@@ -2590,7 +2590,7 @@ export const ExpandPanel16 = props => (
 export const ExportMove16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <ExportMove16SVG {...propsClone} />
       );
@@ -2601,7 +2601,7 @@ export const ExportMove16 = props => (
 export const Export16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Export16SVG {...propsClone} />
       );
@@ -2612,7 +2612,7 @@ export const Export16 = props => (
 export const ExternalLink16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <ExternalLink16SVG {...propsClone} />
       );
@@ -2623,7 +2623,7 @@ export const ExternalLink16 = props => (
 export const External16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <External16SVG {...propsClone} />
       );
@@ -2634,7 +2634,7 @@ export const External16 = props => (
 export const Favorite16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Favorite16SVG {...propsClone} />
       );
@@ -2645,7 +2645,7 @@ export const Favorite16 = props => (
 export const Featured16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Featured16SVG {...propsClone} />
       );
@@ -2656,7 +2656,7 @@ export const Featured16 = props => (
 export const Feedback16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Feedback16SVG {...propsClone} />
       );
@@ -2667,7 +2667,7 @@ export const Feedback16 = props => (
 export const Field16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Field16SVG {...propsClone} />
       );
@@ -2678,7 +2678,7 @@ export const Field16 = props => (
 export const FileAssembly16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <FileAssembly16SVG {...propsClone} />
       );
@@ -2689,7 +2689,7 @@ export const FileAssembly16 = props => (
 export const FileDocument16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <FileDocument16SVG {...propsClone} />
       );
@@ -2700,7 +2700,7 @@ export const FileDocument16 = props => (
 export const FileGeneric16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <FileGeneric16SVG {...propsClone} />
       );
@@ -2711,7 +2711,7 @@ export const FileGeneric16 = props => (
 export const FileImage16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <FileImage16SVG {...propsClone} />
       );
@@ -2722,7 +2722,7 @@ export const FileImage16 = props => (
 export const FilePart16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <FilePart16SVG {...propsClone} />
       );
@@ -2733,7 +2733,7 @@ export const FilePart16 = props => (
 export const FilePdf16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <FilePdf16SVG {...propsClone} />
       );
@@ -2744,7 +2744,7 @@ export const FilePdf16 = props => (
 export const FilePresentation16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <FilePresentation16SVG {...propsClone} />
       );
@@ -2755,7 +2755,7 @@ export const FilePresentation16 = props => (
 export const FileSpreadsheet16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <FileSpreadsheet16SVG {...propsClone} />
       );
@@ -2766,7 +2766,7 @@ export const FileSpreadsheet16 = props => (
 export const FileVideo16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <FileVideo16SVG {...propsClone} />
       );
@@ -2777,7 +2777,7 @@ export const FileVideo16 = props => (
 export const FileZip16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <FileZip16SVG {...propsClone} />
       );
@@ -2788,7 +2788,7 @@ export const FileZip16 = props => (
 export const FilterTokens16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <FilterTokens16SVG {...propsClone} />
       );
@@ -2799,7 +2799,7 @@ export const FilterTokens16 = props => (
 export const Filter16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Filter16SVG {...propsClone} />
       );
@@ -2810,7 +2810,7 @@ export const Filter16 = props => (
 export const Flag16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Flag16SVG {...propsClone} />
       );
@@ -2821,7 +2821,7 @@ export const Flag16 = props => (
 export const FolderOpen16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <FolderOpen16SVG {...propsClone} />
       );
@@ -2832,7 +2832,7 @@ export const FolderOpen16 = props => (
 export const Folder16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Folder16SVG {...propsClone} />
       );
@@ -2843,7 +2843,7 @@ export const Folder16 = props => (
 export const Forums16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Forums16SVG {...propsClone} />
       );
@@ -2854,7 +2854,7 @@ export const Forums16 = props => (
 export const Forward16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Forward16SVG {...propsClone} />
       );
@@ -2865,7 +2865,7 @@ export const Forward16 = props => (
 export const Globe16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Globe16SVG {...propsClone} />
       );
@@ -2876,7 +2876,7 @@ export const Globe16 = props => (
 export const Grid16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Grid16SVG {...propsClone} />
       );
@@ -2887,7 +2887,7 @@ export const Grid16 = props => (
 export const Help16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Help16SVG {...propsClone} />
       );
@@ -2898,7 +2898,7 @@ export const Help16 = props => (
 export const Hidden16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Hidden16SVG {...propsClone} />
       );
@@ -2909,7 +2909,7 @@ export const Hidden16 = props => (
 export const Hierarchy16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Hierarchy16SVG {...propsClone} />
       );
@@ -2920,7 +2920,7 @@ export const Hierarchy16 = props => (
 export const Home16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Home16SVG {...propsClone} />
       );
@@ -2931,7 +2931,7 @@ export const Home16 = props => (
 export const Info16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Info16SVG {...propsClone} />
       );
@@ -2942,7 +2942,7 @@ export const Info16 = props => (
 export const Insight16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Insight16SVG {...propsClone} />
       );
@@ -2953,7 +2953,7 @@ export const Insight16 = props => (
 export const Issue16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Issue16SVG {...propsClone} />
       );
@@ -2964,7 +2964,7 @@ export const Issue16 = props => (
 export const Item16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Item16SVG {...propsClone} />
       );
@@ -2975,7 +2975,7 @@ export const Item16 = props => (
 export const Layout16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Layout16SVG {...propsClone} />
       );
@@ -2986,7 +2986,7 @@ export const Layout16 = props => (
 export const Link16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Link16SVG {...propsClone} />
       );
@@ -2997,7 +2997,7 @@ export const Link16 = props => (
 export const List16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <List16SVG {...propsClone} />
       );
@@ -3008,7 +3008,7 @@ export const List16 = props => (
 export const Location16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Location16SVG {...propsClone} />
       );
@@ -3019,7 +3019,7 @@ export const Location16 = props => (
 export const Lock16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Lock16SVG {...propsClone} />
       );
@@ -3030,7 +3030,7 @@ export const Lock16 = props => (
 export const Mail16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Mail16SVG {...propsClone} />
       );
@@ -3041,7 +3041,7 @@ export const Mail16 = props => (
 export const ManageAccess16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <ManageAccess16SVG {...propsClone} />
       );
@@ -3052,7 +3052,7 @@ export const ManageAccess16 = props => (
 export const Maximize16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Maximize16SVG {...propsClone} />
       );
@@ -3063,7 +3063,7 @@ export const Maximize16 = props => (
 export const Minimize16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Minimize16SVG {...propsClone} />
       );
@@ -3074,7 +3074,7 @@ export const Minimize16 = props => (
 export const ModelCoordination16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <ModelCoordination16SVG {...propsClone} />
       );
@@ -3085,7 +3085,7 @@ export const ModelCoordination16 = props => (
 export const MoreVertical16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <MoreVertical16SVG {...propsClone} />
       );
@@ -3096,7 +3096,7 @@ export const MoreVertical16 = props => (
 export const More16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <More16SVG {...propsClone} />
       );
@@ -3107,7 +3107,7 @@ export const More16 = props => (
 export const Notification16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Notification16SVG {...propsClone} />
       );
@@ -3118,7 +3118,7 @@ export const Notification16 = props => (
 export const OnlineViewers16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <OnlineViewers16SVG {...propsClone} />
       );
@@ -3129,7 +3129,7 @@ export const OnlineViewers16 = props => (
 export const Paste16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Paste16SVG {...propsClone} />
       );
@@ -3140,7 +3140,7 @@ export const Paste16 = props => (
 export const Pause16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Pause16SVG {...propsClone} />
       );
@@ -3151,7 +3151,7 @@ export const Pause16 = props => (
 export const PermissionGroup16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <PermissionGroup16SVG {...propsClone} />
       );
@@ -3162,7 +3162,7 @@ export const PermissionGroup16 = props => (
 export const PermissionIndividual16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <PermissionIndividual16SVG {...propsClone} />
       );
@@ -3173,7 +3173,7 @@ export const PermissionIndividual16 = props => (
 export const Photos16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Photos16SVG {...propsClone} />
       );
@@ -3184,7 +3184,7 @@ export const Photos16 = props => (
 export const Pin16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Pin16SVG {...propsClone} />
       );
@@ -3195,7 +3195,7 @@ export const Pin16 = props => (
 export const Placeholder16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Placeholder16SVG {...propsClone} />
       );
@@ -3206,7 +3206,7 @@ export const Placeholder16 = props => (
 export const Play16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Play16SVG {...propsClone} />
       );
@@ -3217,7 +3217,7 @@ export const Play16 = props => (
 export const Print16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Print16SVG {...propsClone} />
       );
@@ -3228,7 +3228,7 @@ export const Print16 = props => (
 export const ProductsAndServices16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <ProductsAndServices16SVG {...propsClone} />
       );
@@ -3239,7 +3239,7 @@ export const ProductsAndServices16 = props => (
 export const Profile16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Profile16SVG {...propsClone} />
       );
@@ -3250,7 +3250,7 @@ export const Profile16 = props => (
 export const ProjectManagement16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <ProjectManagement16SVG {...propsClone} />
       );
@@ -3261,7 +3261,7 @@ export const ProjectManagement16 = props => (
 export const Properties16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Properties16SVG {...propsClone} />
       );
@@ -3272,7 +3272,7 @@ export const Properties16 = props => (
 export const Publish16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Publish16SVG {...propsClone} />
       );
@@ -3283,7 +3283,7 @@ export const Publish16 = props => (
 export const Quantities16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Quantities16SVG {...propsClone} />
       );
@@ -3294,7 +3294,7 @@ export const Quantities16 = props => (
 export const Recommend16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Recommend16SVG {...propsClone} />
       );
@@ -3305,7 +3305,7 @@ export const Recommend16 = props => (
 export const Redo16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Redo16SVG {...propsClone} />
       );
@@ -3316,7 +3316,7 @@ export const Redo16 = props => (
 export const Report16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Report16SVG {...propsClone} />
       );
@@ -3327,7 +3327,7 @@ export const Report16 = props => (
 export const Rfi16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Rfi16SVG {...propsClone} />
       );
@@ -3338,7 +3338,7 @@ export const Rfi16 = props => (
 export const Save16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Save16SVG {...propsClone} />
       );
@@ -3349,7 +3349,7 @@ export const Save16 = props => (
 export const Search16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Search16SVG {...propsClone} />
       );
@@ -3360,7 +3360,7 @@ export const Search16 = props => (
 export const Security16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Security16SVG {...propsClone} />
       );
@@ -3371,7 +3371,7 @@ export const Security16 = props => (
 export const Service16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Service16SVG {...propsClone} />
       );
@@ -3382,7 +3382,7 @@ export const Service16 = props => (
 export const Settings16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Settings16SVG {...propsClone} />
       );
@@ -3393,7 +3393,7 @@ export const Settings16 = props => (
 export const Share16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Share16SVG {...propsClone} />
       );
@@ -3404,7 +3404,7 @@ export const Share16 = props => (
 export const SocialFacebook16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <SocialFacebook16SVG {...propsClone} />
       );
@@ -3415,7 +3415,7 @@ export const SocialFacebook16 = props => (
 export const SocialInstagram16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <SocialInstagram16SVG {...propsClone} />
       );
@@ -3426,7 +3426,7 @@ export const SocialInstagram16 = props => (
 export const SocialLinkedin16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <SocialLinkedin16SVG {...propsClone} />
       );
@@ -3437,7 +3437,7 @@ export const SocialLinkedin16 = props => (
 export const SocialTwitter16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <SocialTwitter16SVG {...propsClone} />
       );
@@ -3448,7 +3448,7 @@ export const SocialTwitter16 = props => (
 export const SocialYoutube16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <SocialYoutube16SVG {...propsClone} />
       );
@@ -3459,7 +3459,7 @@ export const SocialYoutube16 = props => (
 export const Subscription16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Subscription16SVG {...propsClone} />
       );
@@ -3470,7 +3470,7 @@ export const Subscription16 = props => (
 export const Support16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Support16SVG {...propsClone} />
       );
@@ -3481,7 +3481,7 @@ export const Support16 = props => (
 export const Sync16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Sync16SVG {...propsClone} />
       );
@@ -3492,7 +3492,7 @@ export const Sync16 = props => (
 export const Tag16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Tag16SVG {...propsClone} />
       );
@@ -3503,7 +3503,7 @@ export const Tag16 = props => (
 export const Trash16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Trash16SVG {...propsClone} />
       );
@@ -3514,7 +3514,7 @@ export const Trash16 = props => (
 export const Unavailable16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Unavailable16SVG {...propsClone} />
       );
@@ -3525,7 +3525,7 @@ export const Unavailable16 = props => (
 export const Undo16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Undo16SVG {...propsClone} />
       );
@@ -3536,7 +3536,7 @@ export const Undo16 = props => (
 export const Unlock16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Unlock16SVG {...propsClone} />
       );
@@ -3547,7 +3547,7 @@ export const Unlock16 = props => (
 export const Up16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Up16SVG {...propsClone} />
       );
@@ -3558,7 +3558,7 @@ export const Up16 = props => (
 export const Upload16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Upload16SVG {...propsClone} />
       );
@@ -3569,7 +3569,7 @@ export const Upload16 = props => (
 export const Visible16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Visible16SVG {...propsClone} />
       );
@@ -3580,7 +3580,7 @@ export const Visible16 = props => (
 export const Volume16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Volume16SVG {...propsClone} />
       );
@@ -3591,7 +3591,7 @@ export const Volume16 = props => (
 export const ZoomIn16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <ZoomIn16SVG {...propsClone} />
       );
@@ -3602,7 +3602,7 @@ export const ZoomIn16 = props => (
 export const ZoomOut16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
-      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });
+      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <ZoomOut16SVG {...propsClone} />
       );
