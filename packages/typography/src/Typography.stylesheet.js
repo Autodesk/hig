@@ -5,7 +5,7 @@ export default function stylesheet(props, themeData) {
   return {
     typography: {
       color: themeData[`typography.${variant}.color`],
-      display: "inline-block",
+      display: "block",
       fontFamily: themeData[`typography.${variant}.fontFamily`],
       fontSize: themeData[`typography.${variant}.fontSize`],
       fontWeight: fontWeight || themeData[`typography.${variant}.fontWeight`],

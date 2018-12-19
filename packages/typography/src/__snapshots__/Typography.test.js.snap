@@ -3,7 +3,7 @@
 exports[`Typography  1`] = `
 .emotion-0 {
   color: #3c3c3c;
-  display: inline-block;
+  display: block;
   font-family: ArtifaktElement,sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -22,7 +22,7 @@ exports[`Typography  1`] = `
 exports[`Typography  2`] = `
 .emotion-0 {
   color: #3c3c3c;
-  display: inline-block;
+  display: block;
   font-family: ArtifaktElement,sans-serif;
   font-size: 14px;
   font-weight: bold;
@@ -41,7 +41,7 @@ exports[`Typography  2`] = `
 exports[`Typography  3`] = `
 .emotion-0 {
   color: #3c3c3c;
-  display: inline-block;
+  display: block;
   font-family: ArtifaktElement,sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -60,7 +60,7 @@ exports[`Typography  3`] = `
 exports[`Typography  4`] = `
 .emotion-0 {
   color: #3c3c3c;
-  display: inline-block;
+  display: block;
   font-family: ArtifaktElement,sans-serif;
   font-size: 12px;
   font-weight: 400;
@@ -79,7 +79,7 @@ exports[`Typography  4`] = `
 exports[`Typography  5`] = `
 .emotion-0 {
   color: #3c3c3c;
-  display: inline-block;
+  display: block;
   font-family: ArtifaktElement,sans-serif;
   font-size: 28px;
   font-weight: 400;
@@ -98,7 +98,7 @@ exports[`Typography  5`] = `
 exports[`Typography  6`] = `
 .emotion-0 {
   color: #3c3c3c;
-  display: inline-block;
+  display: block;
   font-family: ArtifaktElement,sans-serif;
   font-size: 24px;
   font-weight: 400;
@@ -117,7 +117,7 @@ exports[`Typography  6`] = `
 exports[`Typography  7`] = `
 .emotion-0 {
   color: #3c3c3c;
-  display: inline-block;
+  display: block;
   font-family: ArtifaktElement,sans-serif;
   font-size: 20px;
   font-weight: 600;
