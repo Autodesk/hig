@@ -6,6 +6,7 @@ import {
   FONT_WEIGHT,
   LENGTH,
   LINE_HEIGHT,
+  OPACITY,
   COLOR
 } from "../../consts/types";
 
@@ -142,11 +143,10 @@ export default {
   /**
    * ### Disabled
    */
-  "button.disabled.halo.width": {
-    type: LENGTH,
-    value: "0"
+  "button.disabled.opacity": {
+    type: OPACITY,
+    value: "0.5"
   },
-  "button.disabled.halo.color": transparentColor,
 
   /**
    * ## Variants
@@ -242,7 +242,7 @@ export default {
       ref: "colorScheme.accentColor"
     },
     transform: {
-      alpha: 0.5
+      alpha: 0.25
     }
   },
   "button.outline.focus.textColor": {
@@ -299,54 +299,6 @@ export default {
     }
   },
 
-  /**
-   * #### Disabled
-   */
-  "button.outline.disabled.backgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "button.outline.backgroundColor"
-    },
-    transform: {
-      alpha: 0.2
-    }
-  },
-  "button.outline.disabled.borderColor": {
-    type: COLOR,
-    value: {
-      ref: "button.outline.borderColor"
-    },
-    transform: {
-      alpha: 0.2
-    }
-  },
-  "button.outline.disabled.halo.color": {
-    type: COLOR,
-    value: {
-      ref: "button.disabled.halo.color"
-    },
-    transform: {
-      alpha: 0.2
-    }
-  },
-  "button.outline.disabled.icon.color": {
-    type: COLOR,
-    value: {
-      ref: "button.outline.icon.color"
-    },
-    transform: {
-      alpha: 0.2
-    }
-  },
-  "button.outline.disabled.textColor": {
-    type: COLOR,
-    value: {
-      ref: "button.outline.textColor"
-    },
-    transform: {
-      alpha: 0.2
-    }
-  },
   /**
    * ### Solid
    *
@@ -441,7 +393,7 @@ export default {
       ref: "colorScheme.accentColor"
     },
     transform: {
-      alpha: 0.5
+      alpha: 0.25
     }
   },
   "button.solid.focus.textColor": {
@@ -498,51 +450,6 @@ export default {
     }
   },
 
-  /**
-   * #### Disabled
-   */
-  "button.solid.disabled.backgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "button.solid.backgroundColor"
-    },
-    transform: {
-      alpha: 0.4
-    }
-  },
-  "button.solid.disabled.borderColor": {
-    type: COLOR,
-    value: {
-      ref: "button.solid.borderColor",
-      transform: {
-        alpha: 0.2
-      }
-    }
-  },
-  "button.solid.disabled.halo.color": {
-    type: COLOR,
-    value: {
-      ref: "button.disabled.halo.color"
-    }
-  },
-  "button.solid.disabled.icon.color": {
-    type: COLOR,
-    value: {
-      ref: "basics.colors.textAgainstDark"
-    },
-    transform: {
-      alpha: 0.2
-    }
-  },
-  "button.solid.disabled.textColor": {
-    type: COLOR,
-    value: {
-      ref: "button.solid.textColor"
-    },
-    transform: {
-      alpha: 0.2
-    }
-  },
   /**
    * ### Flat
    *
@@ -623,7 +530,7 @@ export default {
       ref: "colorScheme.accentColor"
     },
     transform: {
-      alpha: 0.5
+      alpha: 0.25
     }
   },
   "button.flat.focus.textColor": {
@@ -677,55 +584,6 @@ export default {
     type: COLOR,
     value: {
       ref: "button.flat.icon.color"
-    }
-  },
-
-  /**
-   * #### Disabled
-   */
-  "button.flat.disabled.backgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "button.flat.backgroundColor",
-      transform: {
-        alpha: 0.2
-      }
-    }
-  },
-  "button.flat.disabled.borderColor": {
-    type: COLOR,
-    value: {
-      ref: "button.flat.borderColor",
-      transform: {
-        alpha: 0.2
-      }
-    }
-  },
-  "button.flat.disabled.halo.color": {
-    type: COLOR,
-    value: {
-      ref: "button.disabled.halo.color",
-      transform: {
-        alpha: 0.2
-      }
-    }
-  },
-  "button.flat.disabled.textColor": {
-    type: COLOR,
-    value: {
-      ref: "button.flat.textColor"
-    },
-    transform: {
-      alpha: 0.4
-    }
-  },
-  "button.flat.disabled.icon.color": {
-    type: COLOR,
-    value: {
-      ref: "basics.colors.autodeskBlue700"
-    },
-    transform: {
-      alpha: 0.4
     }
   }
 };

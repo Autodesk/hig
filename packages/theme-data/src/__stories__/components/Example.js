@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+
 import Reference from "./Reference";
 import ColorExample from "./ColorExample";
 import LengthExample from "./LengthExample";
@@ -21,7 +22,8 @@ const SCHEMA_TYPES = {
   FONT_WEIGHT: "fontWeight",
   LINE_HEIGHT: "lineHeight",
   SHADOW: "shadow",
-  SPACING: "spacing"
+  SPACING: "spacing",
+  OPACITY: "opacity"
 };
 
 const examplesBySchemaType = {
@@ -33,6 +35,7 @@ const examplesBySchemaType = {
   [SCHEMA_TYPES.FONT_SIZE]: FontSizeExample,
   [SCHEMA_TYPES.FONT_WEIGHT]: FontWeightExample,
   [SCHEMA_TYPES.LINE_HEIGHT]: LengthExample,
+  [SCHEMA_TYPES.OPACITY]: LengthExample,
   [SCHEMA_TYPES.SHADOW]: ShadowExample,
   [SCHEMA_TYPES.SPACING]: SpacingExample
 };
