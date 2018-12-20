@@ -11,6 +11,7 @@ import flyout from "./components/flyout";
 import input from "./components/input";
 import skeletonItem from "./components/skeletonItem";
 import textarea from "./components/textarea";
+import typography from "./components/typography";
 import label from "./components/label";
 import menu from "./components/menu";
 
@@ -37,6 +38,7 @@ const baseThemeConfig = extendTheme(
     input,
     skeletonItem,
     textarea,
+    typography,
     label,
     menu
   )

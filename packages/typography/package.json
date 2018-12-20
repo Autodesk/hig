@@ -1,6 +1,6 @@
 {
   "name": "@hig/typography",
-  "version": "0.1.4",
+  "version": "0.1.5-alpha",
   "description": "HIG Typography components",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -14,12 +14,12 @@
   },
   "main": "build/index.js",
   "module": "build/index.es.js",
-  "style": "build/index.css",
   "files": [
     "build/*"
   ],
   "dependencies": {
-    "classnames": "^2.2.5",
+    "@hig/theme-context": "^1.0.1",
+    "emotion": "^10.0.0",
     "prop-types": "^15.6.1"
   },
   "devDependencies": {

@@ -6,6 +6,70 @@ import {
 } from "../../consts/types";
 
 export default {
+  // Body
+  "typography.body.fontFamily": {
+    type: FONT_FAMILY,
+    value: {
+      ref: "basics.fontFamilies.main"
+    }
+  },
+  "typography.body.fontWeight": {
+    type: FONT_WEIGHT,
+    value: {
+      ref: "basics.fontWeights.regular"
+    }
+  },
+  "typography.body.fontSize": {
+    type: FONT_SIZE,
+    value: {
+      ref: "density.fontSizes.medium"
+    }
+  },
+  "typography.body.lineHeight": {
+    type: LINE_HEIGHT,
+    value: {
+      ref: "basics.lineHeights.small"
+    }
+  },
+  "typography.body.color": {
+    type: LINE_HEIGHT,
+    value: {
+      ref: "colorScheme.textColor"
+    }
+  },
+
+  // Caption
+  "typography.caption.fontFamily": {
+    type: FONT_FAMILY,
+    value: {
+      ref: "basics.fontFamilies.main"
+    }
+  },
+  "typography.caption.fontWeight": {
+    type: FONT_WEIGHT,
+    value: {
+      ref: "basics.fontWeights.regular"
+    }
+  },
+  "typography.caption.fontSize": {
+    type: FONT_SIZE,
+    value: {
+      ref: "density.fontSizes.small"
+    }
+  },
+  "typography.caption.lineHeight": {
+    type: LINE_HEIGHT,
+    value: {
+      ref: "basics.lineHeights.small"
+    }
+  },
+  "typography.caption.color": {
+    type: LINE_HEIGHT,
+    value: {
+      ref: "colorScheme.textColor"
+    }
+  },
+
   // H1
   "typography.h1.fontFamily": {
     type: FONT_FAMILY,
@@ -96,70 +160,6 @@ export default {
     }
   },
   "typography.h3.color": {
-    type: LINE_HEIGHT,
-    value: {
-      ref: "colorScheme.textColor"
-    }
-  },
-
-  // Body
-  "typography.body.fontFamily": {
-    type: FONT_FAMILY,
-    value: {
-      ref: "basics.fontFamilies.main"
-    }
-  },
-  "typography.body.fontWeight": {
-    type: FONT_WEIGHT,
-    value: {
-      ref: "basics.fontWeights.regular"
-    }
-  },
-  "typography.body.fontSize": {
-    type: FONT_SIZE,
-    value: {
-      ref: "density.fontSizes.medium"
-    }
-  },
-  "typography.body.lineHeight": {
-    type: LINE_HEIGHT,
-    value: {
-      ref: "basics.lineHeights.small"
-    }
-  },
-  "typography.body.color": {
-    type: LINE_HEIGHT,
-    value: {
-      ref: "colorScheme.textColor"
-    }
-  },
-
-  // Caption
-  "typography.caption.fontFamily": {
-    type: FONT_FAMILY,
-    value: {
-      ref: "basics.fontFamilies.main"
-    }
-  },
-  "typography.caption.fontWeight": {
-    type: FONT_WEIGHT,
-    value: {
-      ref: "basics.fontWeights.regular"
-    }
-  },
-  "typography.caption.fontSize": {
-    type: FONT_SIZE,
-    value: {
-      ref: "density.fontSizes.small"
-    }
-  },
-  "typography.caption.lineHeight": {
-    type: LINE_HEIGHT,
-    value: {
-      ref: "basics.lineHeights.small"
-    }
-  },
-  "typography.caption.color": {
     type: LINE_HEIGHT,
     value: {
       ref: "colorScheme.textColor"
