@@ -150,6 +150,11 @@
   dependencies:
     prop-types "^15.6.1"
 
+"@hig/icons@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@hig/icons/-/icons-1.0.0.tgz#b2e023887beae46934a919816a56f4c9f995a9bc"
+  integrity sha512-5cxrts555oxLT+4+iKFe1emb3tajSZAxrcNiXnmYcWi+atkMWWM7e6wGc5+cv45HyM6MCZqEaaS/nEW5avgv3w==
+
 "@hig/skeleton-item@^0.3.0":
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/@hig/skeleton-item/-/skeleton-item-0.3.1.tgz#9729eb499d40ff61996558a179608862338193b7"
