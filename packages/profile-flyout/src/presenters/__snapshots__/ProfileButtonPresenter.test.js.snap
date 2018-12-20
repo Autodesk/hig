@@ -2,7 +2,7 @@
 
 exports[`profile-flyout/presenters/ProfileButtonPresenter  1`] = `
 .emotion-1 {
-  background-color: #5bc9bd;
+  background-color: #faa21b;
   color: #3c3c3c;
   width: 32px;
   height: 32px;
@@ -50,8 +50,8 @@ exports[`profile-flyout/presenters/ProfileButtonPresenter  2`] = `
 }
 
 .emotion-3 {
-  background-color: #7993b0;
-  color: #ffffff;
+  background-color: #5bc9bd;
+  color: #3c3c3c;
   width: 32px;
   height: 32px;
   line-height: 32px;
