@@ -136,7 +136,7 @@ exports[`Typography  7`] = `
 exports[`Typography  8`] = `
 .emotion-0 {
   color: #3c3c3c;
-  display: inline-block;
+  display: block;
   font-family: ArtifaktElement,sans-serif;
   font-size: 20px;
   font-weight: 600;
