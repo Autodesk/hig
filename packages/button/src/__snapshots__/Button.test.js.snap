@@ -13,6 +13,7 @@ exports[`Button  1`] = `
   font-family: ArtifaktElement,sans-serif;
   font-size: 14px;
   font-weight: 700;
+  line-height: 18px;
   margin: 0;
   overflow: hidden;
   padding: 8px 16px;
@@ -74,6 +75,7 @@ exports[`Button  2`] = `
   font-family: ArtifaktElement,sans-serif;
   font-size: 14px;
   font-weight: 700;
+  line-height: 18px;
   margin: 0;
   overflow: hidden;
   padding: 8px 16px;
@@ -135,6 +137,7 @@ exports[`Button  3`] = `
   font-family: ArtifaktElement,sans-serif;
   font-size: 14px;
   font-weight: 700;
+  line-height: 18px;
   margin: 0;
   overflow: hidden;
   padding: 8px 16px;
@@ -196,6 +199,7 @@ exports[`Button  4`] = `
   font-family: ArtifaktElement,sans-serif;
   font-size: 14px;
   font-weight: 700;
+  line-height: 18px;
   margin: 0;
   overflow: hidden;
   padding: 8px 16px;
@@ -257,6 +261,7 @@ exports[`Button  5`] = `
   font-family: ArtifaktElement,sans-serif;
   font-size: 14px;
   font-weight: 700;
+  line-height: 18px;
   margin: 0;
   overflow: hidden;
   padding: 8px 16px;
@@ -287,7 +292,7 @@ exports[`Button  5`] = `
   position: relative;
   height: 24px;
   vertical-align: middle;
-  margin-right: 5px;
+  margin-right: 4px;
   margin-bottom: 1px;
 }
 
@@ -332,6 +337,7 @@ exports[`Button  6`] = `
   font-family: ArtifaktElement,sans-serif;
   font-size: 14px;
   font-weight: 700;
+  line-height: 18px;
   margin: 0;
   overflow: hidden;
   padding: 8px 16px;

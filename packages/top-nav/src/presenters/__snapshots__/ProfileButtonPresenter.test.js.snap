@@ -2,7 +2,7 @@
 
 exports[`top-nav/presenters/ProfileButtonPresenter  1`] = `
 .emotion-1 {
-  background-color: #faa21b;
+  background-color: #5bc9bd;
   color: #3c3c3c;
   width: 32px;
   height: 32px;
@@ -92,8 +92,8 @@ exports[`top-nav/presenters/ProfileButtonPresenter  3`] = `
 }
 
 .emotion-3 {
-  background-color: #5bc9bd;
-  color: #3c3c3c;
+  background-color: #7993b0;
+  color: #ffffff;
   width: 32px;
   height: 32px;
   line-height: 32px;

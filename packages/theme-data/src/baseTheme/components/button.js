@@ -41,10 +41,7 @@ export default {
     }
   },
   "button.lineHeight": {
-    type: LINE_HEIGHT,
-    value: {
-      ref: "basics.lineHeights.medium"
-    }
+    type: LINE_HEIGHT
   },
   "button.fontFamily": {
     type: FONT_FAMILY,

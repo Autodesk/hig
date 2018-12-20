@@ -13,6 +13,7 @@ function getButtonDefaultButtonRules(themeData) {
     fontFamily: themeData["button.fontFamily"],
     fontSize: themeData["button.fontSize"],
     fontWeight: themeData["button.fontWeight"],
+    lineHeight: themeData["button.lineHeight"],
     margin: "0",
     overflow: "hidden",
     padding: `${themeData["button.verticalPadding"]}
@@ -207,7 +208,7 @@ export default function stylesheet(props, themeData) {
       position: "relative",
       height: "24px",
       verticalAlign: "middle",
-      marginRight: "5px",
+      marginRight: themeData["button.gutter"],
       marginBottom: "1px"
     }
   };
