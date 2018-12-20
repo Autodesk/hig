@@ -75,41 +75,10 @@ function getButtonRulesByType(type, themeData) {
 }
 
 function getButtonRulesByDisabled(type, themeData) {
-  switch (type) {
-    case types.SOLID:
-    case types.PRIMARY: {
-      return {
-        background: themeData["button.solid.disabled.backgroundColor"],
-        color: themeData["button.solid.disabled.textColor"],
-        pointerEvents: "none",
-        "svg *": {
-          fill: themeData["button.solid.disabled.icon.color"]
-        }
-      };
-    }
-    case types.OUTLINE:
-    case types.SECONDARY: {
-      return {
-        borderColor: themeData["button.outline.disabled.borderColor"],
-        color: themeData["button.outline.disabled.textColor"],
-        pointerEvents: "none",
-        "svg *": {
-          fill: themeData["button.outline.disabled.icon.color"]
-        }
-      };
-    }
-    case types.FLAT: {
-      return {
-        color: themeData["button.flat.disabled.textColor"],
-        pointerEvents: "none",
-        "svg *": {
-          fill: themeData["button.flat.disabled.icon.color"]
-        }
-      };
-    }
-    default:
-      return {};
-  }
+  return {
+    opacity: themeData["button.disabled.opacity"],
+    cursor: "default"
+  };
 }
 
 function getButtonRulesByWidth(width) {
@@ -224,10 +193,13 @@ export default function stylesheet(props, themeData) {
     button: {
       ...getButtonDefaultButtonRules(themeData),
       ...getButtonRulesByType(type, themeData),
-      ...(disabled ? getButtonRulesByDisabled(type, themeData) : {}),
-      ...(hasHover ? getButtonHoverRulesByType(type, themeData) : {}),
-      ...(hasFocus ? getButtonFocusRulesByType(type, themeData) : {}),
-      ...(isPressed ? getButtonPressedRulesByType(type, themeData) : {}),
+      ...(disabled
+        ? getButtonRulesByDisabled(type, themeData)
+        : {
+            ...(hasHover ? getButtonHoverRulesByType(type, themeData) : {}),
+            ...(hasFocus ? getButtonFocusRulesByType(type, themeData) : {}),
+            ...(isPressed ? getButtonPressedRulesByType(type, themeData) : {})
+          }),
       ...getButtonRulesByWidth(width)
     },
     icon: {

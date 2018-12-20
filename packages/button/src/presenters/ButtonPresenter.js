@@ -81,6 +81,7 @@ export default class ButtonPresenter extends Component {
               onMouseLeave={onMouseLeave}
               onMouseOver={onHover}
               onMouseUp={onMouseUp}
+              disabled={disabled}
             >
               {icon && <span className={css(styles.icon)}>{icon}</span>}
               <span className="hig__button__title">{title}</span>

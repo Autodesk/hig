@@ -40,6 +40,7 @@ exports[`Button  1`] = `
 
 <button
   className="emotion-0"
+  disabled={false}
   href={undefined}
   onBlur={[Function]}
   onClick={undefined}
@@ -100,6 +101,7 @@ exports[`Button  2`] = `
 
 <button
   className="emotion-0"
+  disabled={false}
   href={undefined}
   onBlur={[Function]}
   onClick={undefined}
@@ -160,6 +162,7 @@ exports[`Button  3`] = `
 
 <button
   className="emotion-0"
+  disabled={false}
   href={undefined}
   onBlur={[Function]}
   onClick={undefined}
@@ -220,6 +223,7 @@ exports[`Button  4`] = `
 
 <button
   className="emotion-0"
+  disabled={false}
   href={undefined}
   onBlur={[Function]}
   onClick={undefined}
@@ -289,6 +293,7 @@ exports[`Button  5`] = `
 
 <button
   className="emotion-1"
+  disabled={false}
   href={undefined}
   onBlur={[Function]}
   onClick={undefined}
@@ -354,6 +359,7 @@ exports[`Button  6`] = `
 
 <a
   className="emotion-0"
+  disabled={false}
   href="https://hig.autodesk.com"
   onBlur={[Function]}
   onClick={undefined}
