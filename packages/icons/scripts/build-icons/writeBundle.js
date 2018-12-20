@@ -1,17 +1,41 @@
 const fs = require("fs");
 const capitalizeCamelCase = require('./capitalizeCamelCase');
 
-function stylize(svgName) {
+function stylize(svgName, width, height) {
   return 'props => (\n' +
     '  <ThemeContext.Consumer>\n' +
     '    {({ resolvedRoles }) => {\n' +
-    '      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });\n' +
+    '      let baseProps = {\n' + 
+    '        width: "' + width + 'px",\n' + 
+    '        height: "' + height + 'px"\n' + 
+    '      }\n' +
+    '      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });\n' +
     '      return (\n' +
     `        <${svgName} {...propsClone} />\n` +
     '      );\n' +
     '    }}\n' +
     '  </ThemeContext.Consumer>\n' +
     ')\n'
+}
+
+function findViewBox(text) {
+  return text.match(/viewBox="(\S+?) (\S+?) (\S+?) (\S+?)"/);
+}
+
+function getWidth(matches) {
+  if (!matches) {
+    return null;
+  }
+
+  return matches[3];
+}
+
+function getHeight(matches) {
+  if (!matches) {
+    return null;
+  }
+
+  return matches[4];
 }
 
 function writeBundle(svgs, filePath) {
@@ -31,9 +55,12 @@ function writeBundle(svgs, filePath) {
     if (svg.size === '16') density = 'information-dense';
     if (svg.size === '24') density = 'regular';
     if (!density) throw new Error(`Invalid size: ${svg.size}`);
+    const viewBox = findViewBox(svg.data);
+    const width = getWidth(viewBox);
+    const height = getHeight(viewBox);
 
     const svgName = `${capitalized}${svg.size}SVG`
-    const svgElement = stylize(svgName);
+    const svgElement = stylize(svgName, width, height);
     const importModule = `import ${svgName} from "./icons/${density}/${svg.title}.svg";\n`;
     const exportModule = `export const ${capitalized}${svg.size} = ${svgElement}\n`;
     return importModule + acc + exportModule;
