@@ -132,11 +132,16 @@ export default function stylesheet(props, themeData, theme) {
 
   return {
     checkboxWrapper: {
-      position: `relative`
+      boxSizing: `border-box`,
+      display: `inline-block`,
+      position: `relative`,
+      height: `${themeData["checkbox.height"]}`,
+      width: `${themeData["checkbox.width"]}`
     },
     checkboxCheckWrapper: {
       position: `relative`,
-      display: "block",
+      display: `block`,
+      boxSizing: `border-box`,
       color: `transparent`,
       border: `${themeData["checkbox.borderWidth"]} solid
         ${themeData["checkbox.borderColor"]}`,
