@@ -9,7 +9,9 @@ const oldBasics = {
     "hig-cool-gray-30": "#BEC8D2",
     "hig-blue-20": "#CCEAF9",
     "hig-blue-40": "#66BFE9",
-    "hig-blue-60": "#0671A1"
+    "hig-blue-60": "#0671A1",
+    "hig-slate-40": "#7993B0",
+    "hig-indigo-30": "#D1DDEE"
   }
 };
 
@@ -147,6 +149,57 @@ const webLightThemeResolvedRoles = extendTheme(lightGrayTheme.unresolvedRoles, {
     transform: {
       alpha: 0
     }
+  },
+  "checkbox.borderRadius": {
+    value: "3px"
+  },
+  "checkbox.borderColor": {
+    value: oldBasics.colors["hig-cool-gray-30"]
+  },
+  "checkbox.checked.backgroundColor": {
+    value: oldBasics.colors["hig-slate-40"]
+  },
+  "checkbox.checked.borderColor": {
+    value: oldBasics.colors["hig-slate-40"]
+  },
+  "checkbox.disabled.borderColor": {
+    value: oldBasics.colors["hig-cool-gray-30"],
+    transform: {
+      alpha: 1
+    }
+  },
+  "checkbox.disabled.checked.iconColor": {
+    value: oldBasics.colors["hig-indigo-30"]
+  },
+  "checkbox.focus.checked.backgroundColor": {
+    value: oldBasics.colors["hig-blue-60"]
+  },
+  "checkbox.focus.checked.borderColor": {
+    value: oldBasics.colors["hig-blue-60"]
+  },
+  "checkbox.focus.indeterminate.borderColor": {
+    value: oldBasics.colors["hig-blue-60"]
+  },
+  "checkbox.focus.borderColor": {
+    value: oldBasics.colors["hig-blue-60"],
+    transform: {
+      alpha: 1
+    }
+  },
+  "checkbox.focus.halo.width": {
+    value: 0
+  },
+  "checkbox.hover.halo.width": {
+    value: 0
+  },
+  "checkbox.indeterminate.backgroundColor": {
+    value: oldBasics.colors["hig-slate-40"]
+  },
+  "checkbox.indeterminate.borderColor": {
+    value: oldBasics.colors["hig-slate-40"]
+  },
+  "checkbox.pressed.halo.width": {
+    value: 0
   },
   "input.hover.borderBottomColor": {
     value: oldBasics.colors["hig-turquoise-50"]

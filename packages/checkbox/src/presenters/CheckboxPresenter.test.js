@@ -25,7 +25,6 @@ describe("checkbox/presenters/CheckboxPresenter", () => {
         onClick: function onClick() {},
         onChange: function onChange() {},
         onFocus: function onFocus() {},
-        required: "required helper text",
         value: "value"
       }
     }

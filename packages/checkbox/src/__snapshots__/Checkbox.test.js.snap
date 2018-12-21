@@ -1,27 +1,84 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`checkbox/Checkbox integration renders correctly 1`] = `
+.emotion-4 {
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  height: 16px;
+  width: 16px;
+}
+
+.emotion-0 {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding: 0;
+  margin: 0;
+}
+
+.emotion-3 {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  color: transparent;
+  border: 1px solid #BEC8D2;
+  background-color: #ffffff;
+  text-align: center;
+  font-size: 25px;
+  line-height: 14px;
+  height: 16px;
+  width: 16px;
+  border-radius: 3px;
+  cursor: default;
+}
+
+.emotion-3 svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.emotion-3 svg * {
+  fill: #ffffff;
+}
+
+.emotion-1 {
+  display: none;
+}
+
 <div
-  className="hig__checkbox hig__checkbox--checkbox"
+  className="emotion-4"
 >
   <input
     checked={false}
-    className="hig__checkbox__input"
+    className="emotion-0"
     disabled={false}
-    id="checkbox-1"
+    label="HIG Checkbox"
     name="checkbox"
-    onBlur={undefined}
+    onBlur={[Function]}
     onChange={[Function]}
     onClick={undefined}
-    onFocus={undefined}
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
     type="checkbox"
     value="value"
   />
   <span
-    className="hig__checkbox__wrapper"
+    className="emotion-3"
   >
     <span
-      className="hig__checkbox__wrapper__check"
+      className="emotion-1"
     >
       <svg
         viewBox="0 0 16 16"
@@ -33,7 +90,7 @@ exports[`checkbox/Checkbox integration renders correctly 1`] = `
       </svg>
     </span>
     <span
-      className="hig__checkbox__wrapper__check--indeterminate"
+      className="emotion-1"
     >
       <svg
         height="2"
@@ -51,33 +108,6 @@ exports[`checkbox/Checkbox integration renders correctly 1`] = `
         />
       </svg>
     </span>
-    <span
-      className="hig__checkbox__wrapper__check--disabled"
-    >
-      <svg
-        height="8"
-        viewBox="0 0 10 8"
-        width="10"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <title>
-          Group 4
-        </title>
-        <path
-          d="M3.95 7.588L1 4.743l.915-.946 2.02 1.935L8.537 1l.933.928z"
-          fill="#D1DDEE"
-          fillRule="evenodd"
-          stroke="#D1DDEE"
-          strokeWidth=".5"
-        />
-      </svg>
-    </span>
   </span>
-  <label
-    className="hig__checkbox__label"
-    htmlFor="checkbox-1"
-  >
-    HIG Checkbox
-  </label>
 </div>
 `;

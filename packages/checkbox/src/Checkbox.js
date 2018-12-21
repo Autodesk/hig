@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { ControlBehavior } from "@hig/behaviors";
 
 import CheckboxPresenter from "./presenters/CheckboxPresenter";
 import CheckboxBehavior from "./behaviors/CheckboxBehavior";
@@ -23,10 +24,6 @@ export default class Checkbox extends Component {
      */
     indeterminate: PropTypes.bool,
     /**
-     * Text identifying the field
-     */
-    label: PropTypes.string,
-    /**
      * The name of the checkbox as submitted with a form
      */
     name: PropTypes.string,
@@ -47,9 +44,21 @@ export default class Checkbox extends Component {
      */
     onFocus: PropTypes.func,
     /**
-     * Marks the field as required, text shown to explain requirement
+     * Triggers when the user's mouse is pressed over the checkbox
      */
-    required: PropTypes.string,
+    onMouseDown: PropTypes.func,
+    /**
+     * Triggers when the user's mouse is over the checkbox
+     */
+    onMouseEnter: PropTypes.func,
+    /**
+     * Triggers when the user's mouse is no longer over the checkbox
+     */
+    onMouseLeave: PropTypes.func,
+    /**
+     * Triggers when the user's mouse is no longer pressed over the checkbox
+     */
+    onMouseUp: PropTypes.func,
     /**
      * Value submitted with a form if checked
      */
@@ -62,39 +71,65 @@ export default class Checkbox extends Component {
       defaultChecked,
       disabled,
       indeterminate,
-      label,
-      name,
       onBlur,
       onChange,
       onClick,
       onFocus,
-      required,
-      value
+      onMouseDown,
+      onMouseEnter,
+      onMouseLeave,
+      onMouseUp,
+      ...otherProps
     } = this.props;
 
     return (
-      <CheckboxBehavior
-        checked={controlledChecked}
-        defaultChecked={defaultChecked}
-        onChange={onChange}
-        onClick={onClick}
+      <ControlBehavior
+        onBlur={onBlur}
+        onFocus={onFocus}
+        onMouseDown={onMouseDown}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+        onMouseUp={onMouseUp}
       >
-        {({ checked, handleChange, handleClick }) => (
-          <CheckboxPresenter
-            checked={checked}
-            disabled={disabled}
-            indeterminate={indeterminate}
-            label={label}
-            name={name}
-            onBlur={onBlur}
-            onChange={handleChange}
-            onClick={handleClick}
-            onFocus={onFocus}
-            required={required}
-            value={value}
-          />
+        {({
+          hasFocus,
+          hasHover,
+          isPressed,
+          onBlur: handleBlur,
+          onFocus: handleFocus,
+          onMouseDown: handleMouseDown,
+          onMouseEnter: handleMouseEnter,
+          onMouseLeave: handleMouseLeave,
+          onMouseUp: handleMouseUp
+        }) => (
+          <CheckboxBehavior
+            checked={controlledChecked}
+            defaultChecked={defaultChecked}
+            onChange={onChange}
+            onClick={onClick}
+          >
+            {({ checked, handleChange, handleClick }) => (
+              <CheckboxPresenter
+                checked={checked}
+                disabled={disabled}
+                hasFocus={hasFocus}
+                hasHover={hasHover}
+                indeterminate={indeterminate}
+                isPressed={isPressed}
+                onBlur={handleBlur}
+                onChange={handleChange}
+                onClick={handleClick}
+                onFocus={handleFocus}
+                onMouseDown={handleMouseDown}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                onMouseUp={handleMouseUp}
+                {...otherProps}
+              />
+            )}
+          </CheckboxBehavior>
         )}
-      </CheckboxBehavior>
+      </ControlBehavior>
     );
   }
 }
