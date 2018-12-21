@@ -3,6 +3,7 @@ import extendTheme from "../utils/extendTheme";
 import basics from "../basics";
 import system from "./system";
 
+import component from "./components/component";
 import button from "./components/button";
 import avatar from "./components/avatar";
 import checkbox from "./components/checkbox";
@@ -30,6 +31,7 @@ const baseThemeConfig = extendTheme(
     mapKeys(basics.spacings, key => `basics.spacings.${key}`),
     mapKeys(system.colorScheme, key => `colorScheme.${key}`),
     mapKeys(system.density, key => `density.${key}`),
+    component,
     button,
     avatar,
     checkbox,
