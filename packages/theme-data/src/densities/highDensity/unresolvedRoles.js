@@ -6,7 +6,7 @@ import checkbox from "./components/checkbox";
 const highDensityThemeConfig = Object.assign(
   { ...button },
   checkbox,
-  mapKeys(system.density, key => `density.${key}`) 
+  mapKeys(system.density, key => `density.${key}`)
 );
 
 export default highDensityThemeConfig;

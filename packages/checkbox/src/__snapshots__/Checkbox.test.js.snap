@@ -2,7 +2,11 @@
 
 exports[`checkbox/Checkbox integration renders correctly 1`] = `
 .emotion-4 {
+  box-sizing: border-box;
+  display: inline-block;
   position: relative;
+  height: 16px;
+  width: 16px;
 }
 
 .emotion-0 {
@@ -20,6 +24,7 @@ exports[`checkbox/Checkbox integration renders correctly 1`] = `
 .emotion-3 {
   position: relative;
   display: block;
+  box-sizing: border-box;
   color: transparent;
   border: 1px solid #BEC8D2;
   background-color: #ffffff;
