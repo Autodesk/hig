@@ -56,6 +56,7 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders with all props 1`] = `
   font-family: ArtifaktElement,sans-serif;
   font-size: 14px;
   font-weight: 700;
+  line-height: 18px;
   margin: 0;
   overflow: hidden;
   padding: 8px 16px;
@@ -89,6 +90,7 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders with all props 1`] = `
   >
     <button
       className="emotion-0"
+      disabled={false}
       href={undefined}
       onBlur={[Function]}
       onClick={undefined}

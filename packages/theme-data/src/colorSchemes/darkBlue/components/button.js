@@ -1,5 +1,10 @@
 export default {
   /* solid */
+  "button.solid.backgroundColor": {
+    value: {
+      ref: "basics.colors.autodeskBlue500"
+    }
+  },
   "button.solid.hover.halo.color": {
     value: {
       ref: "basics.colors.white"
