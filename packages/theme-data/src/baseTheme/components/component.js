@@ -5,4 +5,4 @@ export default {
     type: OPACITY,
     value: "0.5"
   }
-}
+};
