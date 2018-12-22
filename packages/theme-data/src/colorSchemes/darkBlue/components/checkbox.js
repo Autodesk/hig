@@ -50,16 +50,6 @@ export default {
     }
   },
 
-  // Disabled
-  "checkbox.disabled.borderColor": {
-    value: {
-      ref: "basics.colors.white"
-    },
-    transform: {
-      alpha: 0.5
-    }
-  },
-
   // Checked
   "checkbox.checked.backgroundColor": {
     value: {
@@ -71,44 +61,6 @@ export default {
   "checkbox.indeterminate.backgroundColor": {
     value: {
       ref: "basics.colors.white"
-    }
-  },
-
-  // Disabled + Chekced
-  "checkbox.disabled.checked.backgroundColor": {
-    value: {
-      ref: "basics.colors.white"
-    },
-    transform: {
-      alpha: 0.5
-    }
-  },
-  "checkbox.disabled.checked.borderColor": {
-    value: {
-      ref: "basics.colors.white"
-    },
-    // need alpha of 0 to match background color
-    transform: {
-      alpha: 0
-    }
-  },
-
-  // Disabled + Indeterminate
-  "checkbox.disabled.indeterminate.backgroundColor": {
-    value: {
-      ref: "basics.colors.white"
-    },
-    transform: {
-      alpha: 0.5
-    }
-  },
-  "checkbox.disabled.indeterminate.borderColor": {
-    value: {
-      ref: "basics.colors.white"
-    },
-    // need alpha of 0 to match background color
-    transform: {
-      alpha: 0
     }
   }
 };

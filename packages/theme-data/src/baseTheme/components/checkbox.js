@@ -162,66 +162,7 @@ export default {
     }
   },
 
-  // Disabled
-  "checkbox.disabled.borderColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.baseColor"
-    },
-    transform: {
-      alpha: 0.5
-    }
-  },
-
-  // Disabled + Checked
-  "checkbox.disabled.checked.backgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.baseColor"
-    },
-    transform: {
-      alpha: 0.5
-    }
-  },
-  "checkbox.disabled.checked.borderColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.baseColor"
-    },
-    // need alpha of 0 to match background color
-    transform: {
-      alpha: 0
-    }
-  },
-
-  // Disabled + Indeterminate
-  "checkbox.disabled.indeterminate.backgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.baseColor"
-    },
-    transform: {
-      alpha: 0.5
-    }
-  },
-  "checkbox.disabled.indeterminate.borderColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.baseColor"
-    },
-    // need alpha of 0 to match background color
-    transform: {
-      alpha: 0
-    }
-  },
-
   // Legacy Web Light Specific
-  "checkbox.disabled.checked.iconColor": {
-    type: COLOR,
-    value: {
-      ref: "basics.colors.white"
-    }
-  },
   "checkbox.focus.checked.backgroundColor": {
     type: COLOR,
     value: {

@@ -24,7 +24,7 @@ function getCheckboxRulesByPressed(themeData) {
 
 function getCheckboxRulesByDisabled(themeData) {
   return {
-    borderColor: `${themeData["checkbox.disabled.borderColor"]}`,
+    opacity: themeData["component.disabled.opacity"],
     boxShadow: `none`,
     pointerEvents: `none`
   };
@@ -33,10 +33,7 @@ function getCheckboxRulesByDisabled(themeData) {
 function getCheckboxRulesByChecked(themeData, disabled) {
   if (disabled) {
     return {
-      backgroundColor: `${
-        themeData["checkbox.disabled.checked.backgroundColor"]
-      }`,
-      borderColor: `${themeData["checkbox.disabled.checked.borderColor"]}`
+      opacity: themeData["component.disabled.opacity"]
     };
   }
 
@@ -48,10 +45,7 @@ function getCheckboxRulesByChecked(themeData, disabled) {
 function getCheckboxRulesByIndeterminate(themeData, disabled) {
   if (disabled) {
     return {
-      backgroundColor: `${
-        themeData["checkbox.disabled.indeterminate.backgroundColor"]
-      }`,
-      borderColor: `${themeData["checkbox.disabled.indeterminate.borderColor"]}`
+      opacity: themeData["component.disabled.opacity"]
     };
   }
 
@@ -106,15 +100,18 @@ function getCheckboxRulesByLegacyTheme(themeData, props) {
     ...(disabled
       ? {
           borderStyle: `dotted`,
-          borderColor: `${themeData["checkbox.disabled.borderColor"]}`
+          opacity: themeData["component.disabled.opacity"]
+        }
+      : {}),
+    ...(disabled && indeterminate
+      ? {
+          opacity: themeData["component.disabled.opacity"]
         }
       : {}),
     ...(disabled && checked && !indeterminate
       ? {
           backgroundColor: `${themeData["checkbox.backgroundColor"]}`,
-          "svg *": {
-            fill: `${themeData["checkbox.disabled.checked.iconColor"]}`
-          }
+          opacity: themeData["component.disabled.opacity"]
         }
       : {})
   };

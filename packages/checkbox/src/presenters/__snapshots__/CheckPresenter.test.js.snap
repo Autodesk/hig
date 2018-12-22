@@ -19,9 +19,10 @@ exports[`checkbox/presenters/CheckPresenter renders with all props 1`] = `
   width: 16px;
   border-radius: 3px;
   cursor: default;
-  border-color: rgb(190,200,210);
+  opacity: 0.5;
   box-shadow: none;
   pointer-events: none;
+  border-color: #7993B0;
   border-style: dotted;
 }
 
@@ -36,10 +37,6 @@ exports[`checkbox/presenters/CheckPresenter renders with all props 1`] = `
 
 .emotion-2 svg * {
   fill: #ffffff;
-}
-
-.emotion-2 svg * {
-  fill: #D1DDEE;
 }
 
 .emotion-0 {

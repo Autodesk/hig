@@ -162,15 +162,6 @@ const webLightThemeResolvedRoles = extendTheme(lightGrayTheme.unresolvedRoles, {
   "checkbox.checked.borderColor": {
     value: oldBasics.colors["hig-slate-40"]
   },
-  "checkbox.disabled.borderColor": {
-    value: oldBasics.colors["hig-cool-gray-30"],
-    transform: {
-      alpha: 1
-    }
-  },
-  "checkbox.disabled.checked.iconColor": {
-    value: oldBasics.colors["hig-indigo-30"]
-  },
   "checkbox.focus.checked.backgroundColor": {
     value: oldBasics.colors["hig-blue-60"]
   },
