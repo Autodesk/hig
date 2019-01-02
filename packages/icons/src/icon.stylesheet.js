@@ -1,10 +1,11 @@
-export default function stylesheet(themeData) {
-  const color = themeData ? themeData["colorScheme.iconColor"] : "#000";
+export default function stylesheet(props, themeData) {
+  const { color } = props;
+  const fillColor = color || themeData["colorScheme.iconColor"];
 
   return {
-    fill: color,
+    fill: fillColor,
     "> *": {
-      fill: color
+      fill: fillColor
     }
   };
 }

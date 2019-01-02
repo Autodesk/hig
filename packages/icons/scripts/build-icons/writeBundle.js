@@ -5,7 +5,7 @@ function stylize(svgName) {
   return 'props => (\n' +
     '  <ThemeContext.Consumer>\n' +
     '    {({ resolvedRoles }) => {\n' +
-    '      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(resolvedRoles)), props.className) });\n' +
+    '      const propsClone = Object.assign({}, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });\n' +
     '      return (\n' +
     `        <${svgName} {...propsClone} />\n` +
     '      );\n' +

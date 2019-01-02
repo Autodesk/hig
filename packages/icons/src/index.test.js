@@ -9,7 +9,9 @@ describe("icons/index", () => {
       takeSnapshotsOf(element, [
         {
           description: "renders with no props",
-          props: {}
+          props: {
+            color: "white"
+          }
         }
       ]);
     });
