@@ -14,13 +14,5 @@ export default {
     transform: {
       alpha: 0.6
     }
-  },
-  "label.disabled.fontColor": {
-    value: {
-      ref: "basics.colors.textAgainstLight"
-    },
-    transform: {
-      alpha: 0.2
-    }
   }
 };
