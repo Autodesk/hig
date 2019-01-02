@@ -4,11 +4,16 @@ import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
 import Typography from "./Typography";
 
 describe("Typography", () => {
-  function newProps(variant, ...args) {
+  function props({ ...args }) {
+    const { align, elementType, fontWeight, variant } = args;
     const variantDetails = variant ? `${variant} variant` : "Default";
-    const otherDetails = args.length ? ` with ${args.join(" ")}` : "";
+    const otherDetails =
+      !!align || !!fontWeight || !!elementType
+        ? ` with ${[align, fontWeight, elementType].join(" ")}`
+        : "";
+
     return {
-      variant,
+      ...args,
       children: `${variantDetails} should render nicely${otherDetails}.`
     };
   }
@@ -21,33 +26,35 @@ describe("Typography", () => {
 
   takeSnapshotsOf(Typography, [
     // new API tests
-    { description: "renders default Typography", props: newProps() },
+    { description: "renders default Typography", props: props() },
     {
       description: "renders Typography with align and fontWeight props",
-      props: Object.assign(
-        newProps("body", "align center and fontWeight bold"),
-        { align: "center", fontWeight: "bold" }
-      )
+      props: props({ align: "center", fontWeight: "bold", variant: "body" })
     },
     {
       description: "renders body variant Typography",
-      props: newProps("body")
+      props: props({ variant: "body" })
     },
     {
       description: "renders caption variant Typography",
-      props: newProps("caption")
+      props: props({ variant: "caption" })
     },
     {
       description: "renders h1 variant Typography",
-      props: newProps("h1")
+      props: props({ variant: "h1" })
     },
     {
       description: "renders h2 variant Typography",
-      props: newProps("h2")
+      props: props({ variant: "h2" })
     },
     {
       description: "renders h3 variant Typography",
-      props: newProps("h3")
+      props: props({ variant: "h3" })
+    },
+    {
+      description:
+        "renders h3 variant Typography with any arbitrary semantic element",
+      props: props({ variant: "h3", elementType: "figcaption" })
     }
   ]);
 });

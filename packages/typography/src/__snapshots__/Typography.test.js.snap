@@ -12,11 +12,11 @@ exports[`Typography  1`] = `
   text-align: initial;
 }
 
-<span
+<p
   className="emotion-0"
 >
   Default should render nicely.
-</span>
+</p>
 `;
 
 exports[`Typography  2`] = `
@@ -31,11 +31,11 @@ exports[`Typography  2`] = `
   text-align: center;
 }
 
-<span
+<p
   className="emotion-0"
 >
-  body variant should render nicely with align center and fontWeight bold.
-</span>
+  body variant should render nicely with center bold .
+</p>
 `;
 
 exports[`Typography  3`] = `
@@ -50,11 +50,11 @@ exports[`Typography  3`] = `
   text-align: initial;
 }
 
-<span
+<p
   className="emotion-0"
 >
   body variant should render nicely.
-</span>
+</p>
 `;
 
 exports[`Typography  4`] = `
@@ -69,11 +69,11 @@ exports[`Typography  4`] = `
   text-align: initial;
 }
 
-<span
+<p
   className="emotion-0"
 >
   caption variant should render nicely.
-</span>
+</p>
 `;
 
 exports[`Typography  5`] = `
@@ -88,11 +88,11 @@ exports[`Typography  5`] = `
   text-align: initial;
 }
 
-<span
+<h1
   className="emotion-0"
 >
   h1 variant should render nicely.
-</span>
+</h1>
 `;
 
 exports[`Typography  6`] = `
@@ -107,11 +107,11 @@ exports[`Typography  6`] = `
   text-align: initial;
 }
 
-<span
+<h2
   className="emotion-0"
 >
   h2 variant should render nicely.
-</span>
+</h2>
 `;
 
 exports[`Typography  7`] = `
@@ -126,9 +126,28 @@ exports[`Typography  7`] = `
   text-align: initial;
 }
 
-<span
+<h3
   className="emotion-0"
 >
   h3 variant should render nicely.
-</span>
+</h3>
+`;
+
+exports[`Typography  8`] = `
+.emotion-0 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0;
+  text-align: initial;
+}
+
+<figcaption
+  className="emotion-0"
+>
+  h3 variant should render nicely with   figcaption.
+</figcaption>
 `;
