@@ -3,14 +3,14 @@ import { variants } from "../constants";
 function inputStyles({ isDisabled, hasFocus, hasHover }, themeData) {
   const defaults = {
     color: themeData["input.fontColor"],
+    height: themeData["input.height"],
     transitionProperty: "color",
     transitionDuration: "0.3s"
   };
 
   if (isDisabled) {
     return {
-      ...defaults,
-      color: themeData["input.disabled.fontColor"]
+      ...defaults
     };
   }
   if (hasFocus) {
@@ -31,7 +31,10 @@ function inputStyles({ isDisabled, hasFocus, hasHover }, themeData) {
 export default function stylesheet(props, themeData) {
   return {
     input: {
-      backgroundColor: "transparent",
+      backgroundColor:
+        props.variant === variants.BOX
+          ? themeData["input.box.backgroundColor"]
+          : "transparent",
       boxSizing: "border-box",
       border: "none",
       appearance: "none",

@@ -4,13 +4,15 @@ function borderStyles({ variant }, themeData) {
   const defaults = {
     borderStyle: "solid",
     borderColor: "transparent",
-    borderWidth: themeData["input.borderWidth"]
+    borderWidth: themeData["input.borderWidth"],
+    borderBottomColor: themeData["input.borderBottomColor"]
   };
 
   return variant === variants.BOX
     ? {
         ...defaults,
-        borderColor: themeData["input.borderColor"]
+        borderColor: themeData["input.borderColor"],
+        borderBottomColor: themeData["input.box.borderBottomColor"]
       }
     : defaults;
 }
@@ -18,15 +20,13 @@ function borderStyles({ variant }, themeData) {
 function borderBottomStyles({ isDisabled, hasFocus, hasHover }, themeData) {
   const defaults = {
     borderBottomStyle: "solid",
-    borderBottomColor: themeData["input.borderBottomColor"],
     borderBottomWidth: themeData["input.borderBottomWidth"]
   };
 
   if (isDisabled) {
     return {
       ...defaults,
-      borderBottomColor: themeData["INPUT.DISABLED.BORDER_BOTTOM_COLOR"],
-      color: themeData["input.disabled.fontColor"]
+      opacity: themeData["input.disabled.opacity"]
     };
   }
   if (hasFocus) {
@@ -82,8 +82,9 @@ export default function(props, themeData) {
     halo: {
       position: "absolute",
       top: "100%",
-      left: 0,
+      left: "-1px",
       right: 0,
+      width: "calc(100% + 2px)",
       ...haloStyles(props, themeData)
     }
   };

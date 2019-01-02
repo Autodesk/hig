@@ -6,7 +6,8 @@ import {
   FONT_WEIGHT,
   FONT_FAMILY,
   LINE_HEIGHT,
-  LENGTH
+  LENGTH,
+  OPACITY
 } from "../../consts/types";
 
 export default {
@@ -16,13 +17,11 @@ export default {
   },
   "input.boxType.horizontalPadding": {
     type: LENGTH,
-    value: { ref: "density.spacings.extraSmall" }
+    value: "8px"
   },
   "input.verticalPadding": {
     type: LENGTH,
-    value: {
-      ref: "density.spacings.extraExtraSmall"
-    }
+    value: "4px"
   },
   "input.borderRadius": {
     type: BORDER_RADIUS,
@@ -34,6 +33,9 @@ export default {
     type: COLOR,
     value: {
       ref: "colorScheme.baseColor"
+    },
+    transform: {
+      alpha: 0.2
     }
   },
   "input.borderWidth": {
@@ -48,7 +50,7 @@ export default {
       ref: "colorScheme.baseColor"
     },
     transform: {
-      alpha: 0.5
+      alpha: 0.35
     }
   },
   "input.borderBottomWidth": {
@@ -80,6 +82,10 @@ export default {
     value: {
       ref: "density.fontSizes.medium"
     }
+  },
+  "input.height": {
+    type: LENGTH,
+    value: "28px"
   },
   "input.lineHeight": {
     type: LINE_HEIGHT,
@@ -170,19 +176,25 @@ export default {
   },
 
   // Disabled
-  "input.disabled.borderColor": {
+  "input.disabled.opacity": {
+    type: OPACITY,
+    value: 0.5
+  },
+
+  // Box
+  "input.box.borderBottomColor": {
     type: COLOR,
     value: {
       ref: "colorScheme.baseColor"
-    }
-  },
-  "input.disabled.fontColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.textColor"
     },
     transform: {
       alpha: 0.2
+    }
+  },
+  "input.box.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.component.backgroundColor"
     }
   }
 };

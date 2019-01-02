@@ -19,6 +19,7 @@ exports[`InputPresenter renders by default 1`] = `
   line-height: 1.4;
   width: 100%;
   color: #3c3c3c;
+  height: 28px;
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
@@ -54,6 +55,7 @@ exports[`InputPresenter renders when disabled 1`] = `
   line-height: 1.4;
   width: 100%;
   color: #3c3c3c;
+  height: 28px;
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
@@ -90,6 +92,7 @@ exports[`InputPresenter renders with focus 1`] = `
   line-height: 1.4;
   width: 100%;
   color: #3c3c3c;
+  height: 28px;
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.1s;
@@ -125,6 +128,7 @@ exports[`InputPresenter renders with hover 1`] = `
   line-height: 1.4;
   width: 100%;
   color: #3c3c3c;
+  height: 28px;
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.1s;
@@ -160,6 +164,7 @@ exports[`InputPresenter renders with id 1`] = `
   line-height: 1.4;
   width: 100%;
   color: #3c3c3c;
+  height: 28px;
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
