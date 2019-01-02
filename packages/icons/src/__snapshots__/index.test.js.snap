@@ -12,6 +12,8 @@ exports[`icons/index  1`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -27,6 +29,8 @@ exports[`icons/index  2`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -42,6 +46,8 @@ exports[`icons/index  3`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -57,6 +63,8 @@ exports[`icons/index  4`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -72,6 +80,8 @@ exports[`icons/index  5`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -87,6 +97,8 @@ exports[`icons/index  6`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -102,6 +114,8 @@ exports[`icons/index  7`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -117,6 +131,8 @@ exports[`icons/index  8`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -132,6 +148,8 @@ exports[`icons/index  9`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -147,6 +165,8 @@ exports[`icons/index  10`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="10px"
+  width="10px"
 />
 `;
 
@@ -162,6 +182,8 @@ exports[`icons/index  11`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="10px"
+  width="10px"
 />
 `;
 
@@ -177,6 +199,8 @@ exports[`icons/index  12`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="10px"
+  width="10px"
 />
 `;
 
@@ -192,6 +216,8 @@ exports[`icons/index  13`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="10px"
+  width="10px"
 />
 `;
 
@@ -207,6 +233,8 @@ exports[`icons/index  14`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -222,6 +250,8 @@ exports[`icons/index  15`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -237,6 +267,8 @@ exports[`icons/index  16`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -252,6 +284,8 @@ exports[`icons/index  17`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -267,6 +301,8 @@ exports[`icons/index  18`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -282,6 +318,8 @@ exports[`icons/index  19`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -297,6 +335,8 @@ exports[`icons/index  20`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="8px"
+  width="9px"
 />
 `;
 
@@ -312,6 +352,8 @@ exports[`icons/index  21`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -327,6 +369,8 @@ exports[`icons/index  22`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -342,6 +386,8 @@ exports[`icons/index  23`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -357,6 +403,8 @@ exports[`icons/index  24`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -372,6 +420,8 @@ exports[`icons/index  25`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -387,6 +437,8 @@ exports[`icons/index  26`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -402,6 +454,8 @@ exports[`icons/index  27`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -417,6 +471,8 @@ exports[`icons/index  28`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -432,6 +488,8 @@ exports[`icons/index  29`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -447,6 +505,8 @@ exports[`icons/index  30`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -462,6 +522,8 @@ exports[`icons/index  31`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -477,6 +539,8 @@ exports[`icons/index  32`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -492,6 +556,8 @@ exports[`icons/index  33`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -507,6 +573,8 @@ exports[`icons/index  34`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -522,6 +590,8 @@ exports[`icons/index  35`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -537,6 +607,8 @@ exports[`icons/index  36`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -552,6 +624,8 @@ exports[`icons/index  37`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -567,6 +641,8 @@ exports[`icons/index  38`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -582,6 +658,8 @@ exports[`icons/index  39`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -597,6 +675,8 @@ exports[`icons/index  40`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -612,6 +692,8 @@ exports[`icons/index  41`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -627,6 +709,8 @@ exports[`icons/index  42`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -642,6 +726,8 @@ exports[`icons/index  43`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -657,6 +743,8 @@ exports[`icons/index  44`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -672,6 +760,8 @@ exports[`icons/index  45`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -687,6 +777,8 @@ exports[`icons/index  46`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -702,6 +794,8 @@ exports[`icons/index  47`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -717,6 +811,8 @@ exports[`icons/index  48`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -732,6 +828,8 @@ exports[`icons/index  49`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -747,6 +845,8 @@ exports[`icons/index  50`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -762,6 +862,8 @@ exports[`icons/index  51`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -777,6 +879,8 @@ exports[`icons/index  52`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -792,6 +896,8 @@ exports[`icons/index  53`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -807,6 +913,8 @@ exports[`icons/index  54`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -822,6 +930,8 @@ exports[`icons/index  55`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -837,6 +947,8 @@ exports[`icons/index  56`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -852,6 +964,8 @@ exports[`icons/index  57`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -867,6 +981,8 @@ exports[`icons/index  58`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -882,6 +998,8 @@ exports[`icons/index  59`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -897,6 +1015,8 @@ exports[`icons/index  60`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -912,6 +1032,8 @@ exports[`icons/index  61`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -927,6 +1049,8 @@ exports[`icons/index  62`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -942,6 +1066,8 @@ exports[`icons/index  63`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -957,6 +1083,8 @@ exports[`icons/index  64`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -972,6 +1100,8 @@ exports[`icons/index  65`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -987,6 +1117,8 @@ exports[`icons/index  66`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -1002,6 +1134,8 @@ exports[`icons/index  67`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -1017,6 +1151,8 @@ exports[`icons/index  68`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -1032,6 +1168,8 @@ exports[`icons/index  69`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -1047,6 +1185,8 @@ exports[`icons/index  70`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -1062,6 +1202,8 @@ exports[`icons/index  71`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -1077,6 +1219,8 @@ exports[`icons/index  72`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -1092,6 +1236,8 @@ exports[`icons/index  73`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -1107,6 +1253,8 @@ exports[`icons/index  74`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -1122,6 +1270,8 @@ exports[`icons/index  75`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -1137,6 +1287,8 @@ exports[`icons/index  76`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -1152,6 +1304,8 @@ exports[`icons/index  77`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -1167,6 +1321,8 @@ exports[`icons/index  78`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -1182,6 +1338,8 @@ exports[`icons/index  79`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -1197,6 +1355,8 @@ exports[`icons/index  80`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -1212,6 +1372,8 @@ exports[`icons/index  81`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -1227,6 +1389,8 @@ exports[`icons/index  82`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -1242,6 +1406,8 @@ exports[`icons/index  83`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -1257,6 +1423,8 @@ exports[`icons/index  84`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -1272,6 +1440,8 @@ exports[`icons/index  85`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -1287,6 +1457,8 @@ exports[`icons/index  86`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -1302,6 +1474,8 @@ exports[`icons/index  87`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -1317,6 +1491,8 @@ exports[`icons/index  88`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -1332,6 +1508,8 @@ exports[`icons/index  89`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -1347,6 +1525,8 @@ exports[`icons/index  90`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -1362,6 +1542,8 @@ exports[`icons/index  91`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -1377,6 +1559,8 @@ exports[`icons/index  92`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -1392,6 +1576,8 @@ exports[`icons/index  93`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -1407,6 +1593,8 @@ exports[`icons/index  94`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -1422,6 +1610,8 @@ exports[`icons/index  95`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -1437,6 +1627,8 @@ exports[`icons/index  96`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -1452,6 +1644,8 @@ exports[`icons/index  97`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -1467,6 +1661,8 @@ exports[`icons/index  98`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -1482,6 +1678,8 @@ exports[`icons/index  99`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -1497,6 +1695,8 @@ exports[`icons/index  100`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -1512,6 +1712,8 @@ exports[`icons/index  101`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -1527,6 +1729,8 @@ exports[`icons/index  102`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -1542,6 +1746,8 @@ exports[`icons/index  103`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -1557,6 +1763,8 @@ exports[`icons/index  104`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -1572,6 +1780,8 @@ exports[`icons/index  105`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -1587,6 +1797,8 @@ exports[`icons/index  106`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -1602,6 +1814,8 @@ exports[`icons/index  107`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -1617,6 +1831,8 @@ exports[`icons/index  108`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -1632,6 +1848,8 @@ exports[`icons/index  109`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -1647,6 +1865,8 @@ exports[`icons/index  110`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -1662,6 +1882,8 @@ exports[`icons/index  111`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -1677,6 +1899,8 @@ exports[`icons/index  112`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -1692,6 +1916,8 @@ exports[`icons/index  113`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -1707,6 +1933,8 @@ exports[`icons/index  114`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -1722,6 +1950,8 @@ exports[`icons/index  115`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -1737,6 +1967,8 @@ exports[`icons/index  116`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -1752,6 +1984,8 @@ exports[`icons/index  117`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -1767,6 +2001,8 @@ exports[`icons/index  118`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -1782,6 +2018,8 @@ exports[`icons/index  119`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -1797,6 +2035,8 @@ exports[`icons/index  120`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -1812,6 +2052,8 @@ exports[`icons/index  121`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -1827,6 +2069,8 @@ exports[`icons/index  122`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -1842,6 +2086,8 @@ exports[`icons/index  123`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -1857,6 +2103,8 @@ exports[`icons/index  124`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -1872,6 +2120,8 @@ exports[`icons/index  125`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -1887,6 +2137,8 @@ exports[`icons/index  126`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -1902,6 +2154,8 @@ exports[`icons/index  127`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -1917,6 +2171,8 @@ exports[`icons/index  128`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -1932,6 +2188,8 @@ exports[`icons/index  129`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -1947,6 +2205,8 @@ exports[`icons/index  130`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -1962,6 +2222,8 @@ exports[`icons/index  131`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -1977,6 +2239,8 @@ exports[`icons/index  132`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -1992,6 +2256,8 @@ exports[`icons/index  133`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -2007,6 +2273,8 @@ exports[`icons/index  134`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -2022,6 +2290,8 @@ exports[`icons/index  135`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -2037,6 +2307,8 @@ exports[`icons/index  136`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -2052,6 +2324,8 @@ exports[`icons/index  137`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -2067,6 +2341,8 @@ exports[`icons/index  138`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -2082,6 +2358,8 @@ exports[`icons/index  139`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -2097,6 +2375,8 @@ exports[`icons/index  140`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -2112,6 +2392,8 @@ exports[`icons/index  141`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -2127,6 +2409,8 @@ exports[`icons/index  142`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -2142,6 +2426,8 @@ exports[`icons/index  143`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -2157,6 +2443,8 @@ exports[`icons/index  144`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -2172,6 +2460,8 @@ exports[`icons/index  145`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -2187,6 +2477,8 @@ exports[`icons/index  146`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -2202,6 +2494,8 @@ exports[`icons/index  147`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -2217,6 +2511,8 @@ exports[`icons/index  148`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -2232,6 +2528,8 @@ exports[`icons/index  149`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -2247,6 +2545,8 @@ exports[`icons/index  150`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -2262,6 +2562,8 @@ exports[`icons/index  151`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -2277,6 +2579,8 @@ exports[`icons/index  152`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -2292,6 +2596,8 @@ exports[`icons/index  153`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -2307,6 +2613,8 @@ exports[`icons/index  154`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -2322,6 +2630,8 @@ exports[`icons/index  155`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -2337,6 +2647,8 @@ exports[`icons/index  156`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -2352,6 +2664,8 @@ exports[`icons/index  157`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -2367,6 +2681,8 @@ exports[`icons/index  158`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -2382,6 +2698,8 @@ exports[`icons/index  159`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -2397,6 +2715,8 @@ exports[`icons/index  160`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -2412,6 +2732,8 @@ exports[`icons/index  161`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="19px"
+  width="19px"
 />
 `;
 
@@ -2427,6 +2749,8 @@ exports[`icons/index  162`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -2442,6 +2766,8 @@ exports[`icons/index  163`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -2457,6 +2783,8 @@ exports[`icons/index  164`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -2472,6 +2800,8 @@ exports[`icons/index  165`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -2487,6 +2817,8 @@ exports[`icons/index  166`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -2502,6 +2834,8 @@ exports[`icons/index  167`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -2517,6 +2851,8 @@ exports[`icons/index  168`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -2532,6 +2868,8 @@ exports[`icons/index  169`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -2547,6 +2885,8 @@ exports[`icons/index  170`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -2562,6 +2902,8 @@ exports[`icons/index  171`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -2577,6 +2919,8 @@ exports[`icons/index  172`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -2592,6 +2936,8 @@ exports[`icons/index  173`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -2607,6 +2953,8 @@ exports[`icons/index  174`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -2622,6 +2970,8 @@ exports[`icons/index  175`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -2637,6 +2987,8 @@ exports[`icons/index  176`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -2652,6 +3004,8 @@ exports[`icons/index  177`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -2667,6 +3021,8 @@ exports[`icons/index  178`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -2682,6 +3038,8 @@ exports[`icons/index  179`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -2697,6 +3055,8 @@ exports[`icons/index  180`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -2712,6 +3072,8 @@ exports[`icons/index  181`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -2727,6 +3089,8 @@ exports[`icons/index  182`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -2742,6 +3106,8 @@ exports[`icons/index  183`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -2757,6 +3123,8 @@ exports[`icons/index  184`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="8px"
+  width="10px"
 />
 `;
 
@@ -2772,6 +3140,8 @@ exports[`icons/index  185`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -2787,6 +3157,8 @@ exports[`icons/index  186`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -2802,6 +3174,8 @@ exports[`icons/index  187`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -2817,6 +3191,8 @@ exports[`icons/index  188`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="2px"
+  width="8px"
 />
 `;
 
@@ -2832,6 +3208,8 @@ exports[`icons/index  189`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -2847,6 +3225,8 @@ exports[`icons/index  190`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -2862,6 +3242,8 @@ exports[`icons/index  191`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -2877,6 +3259,8 @@ exports[`icons/index  192`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -2892,6 +3276,8 @@ exports[`icons/index  193`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -2907,6 +3293,8 @@ exports[`icons/index  194`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -2922,6 +3310,8 @@ exports[`icons/index  195`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -2937,6 +3327,8 @@ exports[`icons/index  196`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -2952,6 +3344,8 @@ exports[`icons/index  197`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -2967,6 +3361,8 @@ exports[`icons/index  198`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -2982,6 +3378,8 @@ exports[`icons/index  199`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -2997,6 +3395,8 @@ exports[`icons/index  200`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -3012,6 +3412,8 @@ exports[`icons/index  201`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -3027,6 +3429,8 @@ exports[`icons/index  202`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -3042,6 +3446,8 @@ exports[`icons/index  203`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -3057,6 +3463,8 @@ exports[`icons/index  204`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -3072,6 +3480,8 @@ exports[`icons/index  205`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -3087,6 +3497,8 @@ exports[`icons/index  206`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3102,6 +3514,8 @@ exports[`icons/index  207`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3117,6 +3531,8 @@ exports[`icons/index  208`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3132,6 +3548,8 @@ exports[`icons/index  209`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3147,6 +3565,8 @@ exports[`icons/index  210`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3162,6 +3582,8 @@ exports[`icons/index  211`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3177,6 +3599,8 @@ exports[`icons/index  212`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3192,6 +3616,8 @@ exports[`icons/index  213`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3207,6 +3633,8 @@ exports[`icons/index  214`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3222,6 +3650,8 @@ exports[`icons/index  215`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3237,6 +3667,8 @@ exports[`icons/index  216`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3252,6 +3684,8 @@ exports[`icons/index  217`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3267,6 +3701,8 @@ exports[`icons/index  218`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3282,6 +3718,8 @@ exports[`icons/index  219`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3297,6 +3735,8 @@ exports[`icons/index  220`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3312,6 +3752,8 @@ exports[`icons/index  221`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3327,6 +3769,8 @@ exports[`icons/index  222`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3342,6 +3786,8 @@ exports[`icons/index  223`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="10px"
+  width="10px"
 />
 `;
 
@@ -3357,6 +3803,8 @@ exports[`icons/index  224`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3372,6 +3820,8 @@ exports[`icons/index  225`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3387,6 +3837,8 @@ exports[`icons/index  226`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3402,6 +3854,8 @@ exports[`icons/index  227`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -3417,6 +3871,8 @@ exports[`icons/index  228`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3432,6 +3888,8 @@ exports[`icons/index  229`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3447,6 +3905,8 @@ exports[`icons/index  230`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -3462,6 +3922,8 @@ exports[`icons/index  231`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3477,6 +3939,8 @@ exports[`icons/index  232`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3492,6 +3956,8 @@ exports[`icons/index  233`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3507,6 +3973,8 @@ exports[`icons/index  234`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -3522,6 +3990,8 @@ exports[`icons/index  235`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -3537,6 +4007,8 @@ exports[`icons/index  236`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -3552,6 +4024,8 @@ exports[`icons/index  237`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3567,6 +4041,8 @@ exports[`icons/index  238`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3582,6 +4058,8 @@ exports[`icons/index  239`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3597,6 +4075,8 @@ exports[`icons/index  240`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3612,6 +4092,8 @@ exports[`icons/index  241`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3627,6 +4109,8 @@ exports[`icons/index  242`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3642,6 +4126,8 @@ exports[`icons/index  243`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3657,6 +4143,8 @@ exports[`icons/index  244`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3672,6 +4160,8 @@ exports[`icons/index  245`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3687,6 +4177,8 @@ exports[`icons/index  246`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3702,6 +4194,8 @@ exports[`icons/index  247`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3717,6 +4211,8 @@ exports[`icons/index  248`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3732,6 +4228,8 @@ exports[`icons/index  249`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3747,6 +4245,8 @@ exports[`icons/index  250`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3762,6 +4262,8 @@ exports[`icons/index  251`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3777,6 +4279,8 @@ exports[`icons/index  252`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3792,6 +4296,8 @@ exports[`icons/index  253`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3807,6 +4313,8 @@ exports[`icons/index  254`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3822,6 +4330,8 @@ exports[`icons/index  255`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3837,6 +4347,8 @@ exports[`icons/index  256`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3852,6 +4364,8 @@ exports[`icons/index  257`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3867,6 +4381,8 @@ exports[`icons/index  258`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3882,6 +4398,8 @@ exports[`icons/index  259`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3897,6 +4415,8 @@ exports[`icons/index  260`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3912,6 +4432,8 @@ exports[`icons/index  261`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3927,6 +4449,8 @@ exports[`icons/index  262`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="8px"
+  width="9px"
 />
 `;
 
@@ -3942,6 +4466,8 @@ exports[`icons/index  263`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3957,6 +4483,8 @@ exports[`icons/index  264`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3972,6 +4500,8 @@ exports[`icons/index  265`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -3987,6 +4517,8 @@ exports[`icons/index  266`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -4002,6 +4534,8 @@ exports[`icons/index  267`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -4017,6 +4551,8 @@ exports[`icons/index  268`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -4032,6 +4568,8 @@ exports[`icons/index  269`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -4047,6 +4585,8 @@ exports[`icons/index  270`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -4062,6 +4602,8 @@ exports[`icons/index  271`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -4077,6 +4619,8 @@ exports[`icons/index  272`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -4092,6 +4636,8 @@ exports[`icons/index  273`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -4107,6 +4653,8 @@ exports[`icons/index  274`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -4122,6 +4670,8 @@ exports[`icons/index  275`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -4137,6 +4687,8 @@ exports[`icons/index  276`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -4152,6 +4704,8 @@ exports[`icons/index  277`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -4167,6 +4721,8 @@ exports[`icons/index  278`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -4182,6 +4738,8 @@ exports[`icons/index  279`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -4197,6 +4755,8 @@ exports[`icons/index  280`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -4212,6 +4772,8 @@ exports[`icons/index  281`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -4227,6 +4789,8 @@ exports[`icons/index  282`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -4242,6 +4806,8 @@ exports[`icons/index  283`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -4257,6 +4823,8 @@ exports[`icons/index  284`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -4272,6 +4840,8 @@ exports[`icons/index  285`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -4287,6 +4857,8 @@ exports[`icons/index  286`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -4302,6 +4874,8 @@ exports[`icons/index  287`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -4317,6 +4891,8 @@ exports[`icons/index  288`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -4332,6 +4908,8 @@ exports[`icons/index  289`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="16px"
+  width="16px"
 />
 `;
 
@@ -4347,6 +4925,8 @@ exports[`icons/index  290`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -4362,6 +4942,8 @@ exports[`icons/index  291`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -4377,6 +4959,8 @@ exports[`icons/index  292`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -4392,6 +4976,8 @@ exports[`icons/index  293`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -4407,6 +4993,8 @@ exports[`icons/index  294`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -4422,6 +5010,8 @@ exports[`icons/index  295`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -4437,6 +5027,8 @@ exports[`icons/index  296`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -4452,6 +5044,8 @@ exports[`icons/index  297`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -4467,6 +5061,8 @@ exports[`icons/index  298`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -4482,6 +5078,8 @@ exports[`icons/index  299`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
 
@@ -4497,5 +5095,7 @@ exports[`icons/index  300`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
+  height="24px"
+  width="24px"
 />
 `;
