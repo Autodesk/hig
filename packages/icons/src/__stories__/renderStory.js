@@ -1,5 +1,5 @@
 import React from "react";
-import { Body } from "@hig/typography";
+import Typography from "@hig/typography";
 import KnobbedThemeProvider from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
 import * as Icons from "../index";
 
@@ -37,7 +37,7 @@ function Spacer() {
   );
 }
 
-function IconStory({ size }) {
+function IconStory({ size, color }) {
   const set = Icons.sets.find(isonSet => isonSet.size === size);
 
   return (
@@ -46,9 +46,9 @@ function IconStory({ size }) {
         const Icon = Icons[`${name}${size}`];
         return (
           <InnerWrapper key={name}>
-            <Icon key={name} />
+            <Icon key={name} color={color} />
             <Spacer />
-            <Body>{`${name}${size}`}</Body>
+            <Typography type="body">{`${name}${size}`}</Typography>
           </InnerWrapper>
         );
       })}
