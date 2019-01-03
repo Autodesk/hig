@@ -3,14 +3,21 @@ import renderer from "react-test-renderer";
 import ButtonPresenter from "./ButtonPresenter";
 
 describe("radio-button/presenters/ButtonPresenter", () => {
+  const resolvedRoles = {
+    "checkbox.borderWidth": "3px"
+  };
+
   [
     {
       description: "renders without props",
-      props: {}
+      props: {
+        resolvedRoles
+      }
     },
     {
       description: "renders with all props",
       props: {
+        resolvedRoles,
         checked: true,
         disabled: true
       }

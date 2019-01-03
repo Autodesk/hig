@@ -1,73 +1,197 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`radio-button/presenters/RadioButtonPresenter renders with all props 1`] = `
+.emotion-3 {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.emotion-2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 {
+  display: inline-block;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+.emotion-0:hover + span.radio-button__wrapper {
+  border-color: rgba(128,128,128,0.5);
+}
+
+.emotion-0:focus + span.radio-button__wrapper {
+  outline: none;
+  border-color: rgb(6,113,161);
+}
+
+.emotion-0:focus:checked + span.radio-button__wrapper {
+  background: none;
+  border-color: rgba(128,128,128,0.5);
+  background-color: #7993B0;
+  box-shadow: inset 0 0 0 2px #ffffff;
+}
+
+.emotion-0:checked + span.radio-button__wrapper {
+  background: none;
+  border-color: #7993B0;
+  background-color: #7993B0;
+  box-shadow: inset 0 0 0 2px #ffffff;
+}
+
+.emotion-1 {
+  opacity: 0.5;
+  position: relative;
+  color: transparent;
+  border: 1px solid #BEC8D2;
+  background-color: transparent;
+  text-align: center;
+  font-size: 25px;
+  line-height: 14px;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+}
+
 <div
-  className="hig__radio-button hig__radio-button--required hig__radio-button--checked"
+  className="emotion-3"
 >
-  <input
-    checked={true}
-    className="hig__radio-button__input"
-    defaultChecked={undefined}
-    disabled={true}
-    id={undefined}
-    name="RadioButton"
-    onBlur={[Function]}
-    onChange={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    type="radio"
-    value="value"
-  />
-  <span
-    className="hig__radio-button__wrapper hig__radio-button__wrapper--checked hig__radio-button__wrapper--disabled"
+  <div
+    className="emotion-2"
   >
-    <span
-      className="hig__radio-button__wrapper__button"
+    <input
+      checked={true}
+      className="emotion-0"
+      defaultChecked={undefined}
+      disabled={true}
+      id={undefined}
+      name="RadioButton"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      type="radio"
+      value="value"
     />
     <span
-      className="hig__radio-button__wrapper__button--disabled"
+      className="radio-button__wrapper emotion-1"
     />
-  </span>
-  <label
-    className="hig__radio-button__label"
-    htmlFor={undefined}
-  >
-    HELLO
-  </label>
+  </div>
 </div>
 `;
 
 exports[`radio-button/presenters/RadioButtonPresenter renders without props 1`] = `
+.emotion-3 {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.emotion-2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 {
+  display: inline-block;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+.emotion-0:hover + span.radio-button__wrapper {
+  border-color: rgba(128,128,128,0.5);
+}
+
+.emotion-0:focus + span.radio-button__wrapper {
+  outline: none;
+  border-color: rgb(6,113,161);
+}
+
+.emotion-0:focus:checked + span.radio-button__wrapper {
+  background: none;
+  border-color: rgba(128,128,128,0.5);
+  background-color: #7993B0;
+  box-shadow: inset 0 0 0 2px #ffffff;
+}
+
+.emotion-0:checked + span.radio-button__wrapper {
+  background: none;
+  border-color: #7993B0;
+  background-color: #7993B0;
+  box-shadow: inset 0 0 0 2px #ffffff;
+}
+
+.emotion-1 {
+  opacity: 1.0;
+  position: relative;
+  color: transparent;
+  border: 1px solid #BEC8D2;
+  background-color: transparent;
+  text-align: center;
+  font-size: 25px;
+  line-height: 14px;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+}
+
 <div
-  className="hig__radio-button"
+  className="emotion-3"
 >
-  <input
-    checked={undefined}
-    className="hig__radio-button__input"
-    defaultChecked={undefined}
-    disabled={false}
-    id="radio-button-1"
-    name="radiobutton"
-    onBlur={undefined}
-    onChange={undefined}
-    onClick={undefined}
-    onFocus={undefined}
-    type="radio"
-    value="value"
-  />
-  <span
-    className="hig__radio-button__wrapper"
+  <div
+    className="emotion-2"
   >
-    <span
-      className="hig__radio-button__wrapper__button"
+    <input
+      checked={undefined}
+      className="emotion-0"
+      defaultChecked={undefined}
+      disabled={false}
+      id={undefined}
+      name="radiobutton"
+      onBlur={undefined}
+      onChange={undefined}
+      onClick={undefined}
+      onFocus={undefined}
+      type="radio"
+      value="value"
     />
     <span
-      className="hig__radio-button__wrapper__button--disabled"
+      className="radio-button__wrapper emotion-1"
     />
-  </span>
-  <label
-    className="hig__radio-button__label"
-    htmlFor="radio-button-1"
-  />
+  </div>
 </div>
 `;

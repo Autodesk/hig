@@ -1,19 +1,19 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import cx from "classnames";
-import { generateId } from "@hig/utils";
+import { css } from "emotion";
+import { ThemeContext } from "@hig/theme-context";
 
 import ButtonPresenter from "./ButtonPresenter";
-import "./RadioButtonPresenter.scss";
+import stylesheet from "./stylesheet";
 
 export default class RadioButtonPresenter extends Component {
   static propTypes = {
     /**
-     * Checks the checkbox
+     * Checks the radio button
      */
     checked: PropTypes.bool,
     /**
-     * Initially checks the checkbox, but allows user action to change it
+     * Initially checks the radio button, but allows user action to change it
      */
     defaultChecked: PropTypes.bool,
     /**
@@ -21,11 +21,7 @@ export default class RadioButtonPresenter extends Component {
      */
     disabled: PropTypes.bool,
     /**
-     * Text identifying the field
-     */
-    label: PropTypes.string,
-    /**
-     * The name of the checkbox as submitted with a form
+     * The name of the radio button as submitted with a form
      */
     name: PropTypes.string,
     /**
@@ -45,10 +41,6 @@ export default class RadioButtonPresenter extends Component {
      */
     onFocus: PropTypes.func,
     /**
-     * Marks the field as required, text shown to explain requirment
-     */
-    required: PropTypes.string,
-    /**
      * Value submitted with a form if checked
      */
     value: PropTypes.string
@@ -60,56 +52,52 @@ export default class RadioButtonPresenter extends Component {
     value: "value"
   };
 
-  id = generateId("radio-button");
-
   render() {
     const {
+      id,
       checked,
       defaultChecked,
       disabled,
-      label,
       name,
       onBlur,
       onChange,
       onClick,
       onFocus,
-      required,
       value
     } = this.props;
 
-    const labelClasses = cx(["hig__radio-button__label"]);
-
-    const wrapperClasses = cx([
-      "hig__radio-button",
-      {
-        "hig__radio-button--required": required,
-        "hig__radio-button--checked": checked
-      }
-    ]);
-
-    const { id } = this;
-
     return (
-      <div className={wrapperClasses}>
-        <input
-          id={id}
-          checked={checked}
-          className="hig__radio-button__input"
-          defaultChecked={defaultChecked}
-          disabled={disabled}
-          name={name}
-          onBlur={onBlur}
-          onChange={onChange}
-          onClick={onClick}
-          onFocus={onFocus}
-          type="radio"
-          value={value}
-        />
-        <ButtonPresenter checked={checked} disabled={disabled} />
-        <label htmlFor={id} className={labelClasses}>
-          {label}
-        </label>
-      </div>
+      <ThemeContext.Consumer>
+        {({ resolvedRoles }) => (
+          <div
+            className={css(stylesheet(this.props, resolvedRoles).radioButton)}
+          >
+            <div
+              className={css(
+                stylesheet(this.props, resolvedRoles).radioButtonContainer
+              )}
+            >
+              <input
+                id={id}
+                checked={checked}
+                defaultChecked={defaultChecked}
+                disabled={disabled}
+                name={name}
+                onBlur={onBlur}
+                onChange={onChange}
+                onClick={onClick}
+                onFocus={onFocus}
+                type="radio"
+                value={value}
+                className={css(
+                  stylesheet(this.props, resolvedRoles).radioButtonInput
+                )}
+              />
+              <ButtonPresenter checked={checked} disabled={disabled} />
+            </div>
+          </div>
+        )}
+      </ThemeContext.Consumer>
     );
   }
 }

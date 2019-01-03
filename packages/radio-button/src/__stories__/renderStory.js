@@ -1,21 +1,37 @@
 import React from "react";
+import { css } from "emotion";
+import Label from "@hig/label";
 import DefaultExport from "../index";
 import getKnobs from "./getKnobs";
 
 export default function renderStory(props) {
   const { children, ...otherProps } = getKnobs(props);
+  const outerStyle = {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: "5px"
+  };
 
   return (
     <form>
-      <DefaultExport {...otherProps}>{children}</DefaultExport>
-      <DefaultExport
-        {...otherProps}
-        defaultChecked={null}
-        label="Secondary"
-        value="Secondary"
-      >
-        {children}
-      </DefaultExport>
+      <div className={css(outerStyle)}>
+        <DefaultExport {...otherProps} id="radio-button-1">
+          {children}
+        </DefaultExport>
+        <Label htmlFor="radio-button-1">Radio Button 1</Label>
+      </div>
+      <div className={css(outerStyle)}>
+        <DefaultExport
+          {...otherProps}
+          checked={true}
+          value="Secondary"
+          id="radio-button-2"
+        >
+          {children}
+        </DefaultExport>
+        <Label htmlFor="radio-button-2">Radio Button 2</Label>
+      </div>
     </form>
   );
 }

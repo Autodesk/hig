@@ -1,27 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`radio-button/presenters/ButtonPresenter renders with all props 1`] = `
+.emotion-0 {
+  opacity: 0.5;
+  position: relative;
+  color: transparent;
+  border: 1px solid #BEC8D2;
+  background-color: transparent;
+  text-align: center;
+  font-size: 25px;
+  line-height: 14px;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+}
+
 <span
-  className="hig__radio-button__wrapper hig__radio-button__wrapper--checked hig__radio-button__wrapper--disabled"
->
-  <span
-    className="hig__radio-button__wrapper__button"
-  />
-  <span
-    className="hig__radio-button__wrapper__button--disabled"
-  />
-</span>
+  className="radio-button__wrapper emotion-0"
+/>
 `;
 
 exports[`radio-button/presenters/ButtonPresenter renders without props 1`] = `
+.emotion-0 {
+  opacity: 1.0;
+  position: relative;
+  color: transparent;
+  border: 1px solid #BEC8D2;
+  background-color: transparent;
+  text-align: center;
+  font-size: 25px;
+  line-height: 14px;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+}
+
 <span
-  className="hig__radio-button__wrapper"
->
-  <span
-    className="hig__radio-button__wrapper__button"
-  />
-  <span
-    className="hig__radio-button__wrapper__button--disabled"
-  />
-</span>
+  className="radio-button__wrapper emotion-0"
+/>
 `;
