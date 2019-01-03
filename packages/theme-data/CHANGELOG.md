@@ -1,3 +1,25 @@
+# [@hig/theme-data-v1.4.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@1.3.0...@hig/theme-data@1.4.0) (2019-01-03)
+
+
+### Bug Fixes
+
+* "bascis" typo in Typography theme data ([06359cd](https://github.com/Autodesk/hig/commit/06359cd))
+* design tweaks for button theme data ([0653ade](https://github.com/Autodesk/hig/commit/0653ade))
+* update theme-data roles for input ([059236b](https://github.com/Autodesk/hig/commit/059236b))
+* uses correct font weight and pressed halo color ([0a58054](https://github.com/Autodesk/hig/commit/0a58054))
+
+
+### Features
+
+* add base roles for Avatar ([6826b63](https://github.com/Autodesk/hig/commit/6826b63))
+* add dark gray theme data ([0ba17ba](https://github.com/Autodesk/hig/commit/0ba17ba))
+* Add theme data for avatars ([270ad9d](https://github.com/Autodesk/hig/commit/270ad9d))
+* gives buttons intended height ([9358562](https://github.com/Autodesk/hig/commit/9358562))
+* uses correct bold font weight ([debc42e](https://github.com/Autodesk/hig/commit/debc42e))
+* **checkbox:** update disabled checkboxes to use opacity ([f35b916](https://github.com/Autodesk/hig/commit/f35b916))
+* **label:** disabled styling should use opacity instead of colors ([556b4c3](https://github.com/Autodesk/hig/commit/556b4c3))
+* **theme-data:** add checkbox theme-data ([95fe6b7](https://github.com/Autodesk/hig/commit/95fe6b7))
+
 # [@hig/theme-data-v1.3.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@1.2.0...@hig/theme-data@1.3.0) (2018-12-11)
 
 
