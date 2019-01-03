@@ -38,10 +38,5 @@ export default {
   // Hover
   "label.hover.fontColor": {
     type: COLOR
-  },
-
-  // Disabled
-  "label.disabled.fontColor": {
-    type: COLOR
   }
 };

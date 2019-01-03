@@ -16,11 +16,10 @@ yarn add @hig/checkbox
 
 ```js
 import Checkbox from '@hig/checkbox';
-import '@hig/checkbox/build/index.css';
 ```
 
 ## Basic usage
 
 ```jsx
-<Checkbox label="Yes or No?" />
+<Checkbox />
 ```

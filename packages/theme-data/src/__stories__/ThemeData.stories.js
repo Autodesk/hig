@@ -3,9 +3,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
 import RichText from "@hig/rich-text";
-import KnobbedThemeProvider, {
-  THEMES
-} from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
+import KnobbedThemeProvider from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
 import { ThemeContext } from "@hig/theme-context";
 import "@hig/rich-text/build/index.css";
 
@@ -45,13 +43,7 @@ stories.forEach(({ description, schema, readme }) => {
         <RichText dangerouslySetInnerHTML={{ __html: readme }} />
       ) : null
     })(() => (
-      <KnobbedThemeProvider
-        supportedThemes={[
-          THEMES.LIGHT_GRAY,
-          THEMES.WEB_LIGHT,
-          THEMES.DARK_BLUE
-        ]}
-      >
+      <KnobbedThemeProvider>
         <ThemeContext.Consumer>
           {({ resolvedRoles, metadata }) => (
             <div>

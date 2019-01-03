@@ -31,8 +31,9 @@ class ControlBehavior extends Component {
               <PressedBehavior
                 onMouseDown={this.props.onMouseDown}
                 onMouseUp={this.props.onMouseUp}
+                onMouseLeave={onMouseLeave}
               >
-                {({ isPressed, onMouseDown, onMouseUp }) =>
+                {({ isPressed, onMouseDown, onMouseUp, onPressedMouseLeave }) =>
                   this.props.children({
                     hasHover,
                     hasFocus,
@@ -41,7 +42,7 @@ class ControlBehavior extends Component {
                     onBlur,
                     onMouseDown,
                     onMouseEnter,
-                    onMouseLeave,
+                    onMouseLeave: onPressedMouseLeave,
                     onMouseUp
                   })
                 }

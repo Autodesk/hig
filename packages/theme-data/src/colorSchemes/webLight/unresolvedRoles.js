@@ -9,11 +9,16 @@ const oldBasics = {
     "hig-cool-gray-30": "#BEC8D2",
     "hig-blue-20": "#CCEAF9",
     "hig-blue-40": "#66BFE9",
-    "hig-blue-60": "#0671A1"
+    "hig-blue-60": "#0671A1",
+    "hig-slate-40": "#7993B0",
+    "hig-indigo-30": "#D1DDEE"
   }
 };
 
 const webLightThemeResolvedRoles = extendTheme(lightGrayTheme.unresolvedRoles, {
+  "basics.fontWeights.bold": {
+    value: "700"
+  },
   "button.borderRadius": {
     value: {
       ref: "basics.borderRadii.large"
@@ -26,18 +31,6 @@ const webLightThemeResolvedRoles = extendTheme(lightGrayTheme.unresolvedRoles, {
   },
   "button.halo.width": {
     value: 0
-  },
-  "button.flat.disabled.icon.color": {
-    value: oldBasics.colors["hig-cool-gray-30"],
-    transform: {
-      alpha: 1
-    }
-  },
-  "button.flat.disabled.textColor": {
-    value: oldBasics.colors["hig-cool-gray-30"],
-    transform: {
-      alpha: 1
-    }
   },
   "button.flat.icon.color": {
     value: {
@@ -87,18 +80,9 @@ const webLightThemeResolvedRoles = extendTheme(lightGrayTheme.unresolvedRoles, {
     }
   },
   "button.outline.borderColor": {
-    value: oldBasics.colors["hig-cool-gray-30"]
-  },
-  "button.outline.disabled.borderColor": {
-    value: oldBasics.colors["hig-cool-gray-20"],
-    transform: {
-      alpha: 1
-    }
-  },
-  "button.outline.disabled.textColor": {
     value: oldBasics.colors["hig-cool-gray-30"],
     transform: {
-      alpha: 1
+      alpha: 1.0
     }
   },
   "button.outline.focus.backgroundColor": {
@@ -136,17 +120,6 @@ const webLightThemeResolvedRoles = extendTheme(lightGrayTheme.unresolvedRoles, {
       ref: "basics.colors.white"
     }
   },
-  "button.solid.disabled.backgroundColor": {
-    value: oldBasics.colors["hig-blue-20"],
-    transform: {
-      alpha: 1
-    }
-  },
-  "button.solid.disabled.textColor": {
-    value: {
-      ref: "basics.colors.white"
-    }
-  },
   "button.solid.focus.backgroundColor": {
     value: oldBasics.colors["hig-blue-60"]
   },
@@ -176,6 +149,48 @@ const webLightThemeResolvedRoles = extendTheme(lightGrayTheme.unresolvedRoles, {
     transform: {
       alpha: 0
     }
+  },
+  "checkbox.borderRadius": {
+    value: "3px"
+  },
+  "checkbox.borderColor": {
+    value: oldBasics.colors["hig-cool-gray-30"]
+  },
+  "checkbox.checked.backgroundColor": {
+    value: oldBasics.colors["hig-slate-40"]
+  },
+  "checkbox.checked.borderColor": {
+    value: oldBasics.colors["hig-slate-40"]
+  },
+  "checkbox.focus.checked.backgroundColor": {
+    value: oldBasics.colors["hig-blue-60"]
+  },
+  "checkbox.focus.checked.borderColor": {
+    value: oldBasics.colors["hig-blue-60"]
+  },
+  "checkbox.focus.indeterminate.borderColor": {
+    value: oldBasics.colors["hig-blue-60"]
+  },
+  "checkbox.focus.borderColor": {
+    value: oldBasics.colors["hig-blue-60"],
+    transform: {
+      alpha: 1
+    }
+  },
+  "checkbox.focus.halo.width": {
+    value: 0
+  },
+  "checkbox.hover.halo.width": {
+    value: 0
+  },
+  "checkbox.indeterminate.backgroundColor": {
+    value: oldBasics.colors["hig-slate-40"]
+  },
+  "checkbox.indeterminate.borderColor": {
+    value: oldBasics.colors["hig-slate-40"]
+  },
+  "checkbox.pressed.halo.width": {
+    value: 0
   },
   "input.hover.borderBottomColor": {
     value: oldBasics.colors["hig-turquoise-50"]

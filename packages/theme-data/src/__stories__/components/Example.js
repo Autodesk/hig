@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
+
 import Reference from "./Reference";
 import ColorExample from "./ColorExample";
-import LengthExample from "./LengthExample";
+import GeneralExample from "./GeneralExample";
 import FontWeightExample from "./FontWeightExample";
 import FontSizeExample from "./FontSizeExample";
 import FontFamilyExample from "./FontFamilyExample";
@@ -21,18 +22,20 @@ const SCHEMA_TYPES = {
   FONT_WEIGHT: "fontWeight",
   LINE_HEIGHT: "lineHeight",
   SHADOW: "shadow",
-  SPACING: "spacing"
+  SPACING: "spacing",
+  OPACITY: "opacity"
 };
 
 const examplesBySchemaType = {
   [SCHEMA_TYPES.COLOR]: ColorExample,
-  [SCHEMA_TYPES.LENGTH]: LengthExample,
+  [SCHEMA_TYPES.LENGTH]: GeneralExample,
   [SCHEMA_TYPES.BORDER_RADIUS]: BorderRadiusExample,
   [SCHEMA_TYPES.BORDER_WIDTH]: BorderWidthExample,
   [SCHEMA_TYPES.FONT_FAMILY]: FontFamilyExample,
   [SCHEMA_TYPES.FONT_SIZE]: FontSizeExample,
   [SCHEMA_TYPES.FONT_WEIGHT]: FontWeightExample,
-  [SCHEMA_TYPES.LINE_HEIGHT]: LengthExample,
+  [SCHEMA_TYPES.LINE_HEIGHT]: GeneralExample,
+  [SCHEMA_TYPES.OPACITY]: GeneralExample,
   [SCHEMA_TYPES.SHADOW]: ShadowExample,
   [SCHEMA_TYPES.SPACING]: SpacingExample
 };

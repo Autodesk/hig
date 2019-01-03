@@ -1,5 +1,6 @@
 import React from "react";
 import { Body } from "@hig/typography";
+import KnobbedThemeProvider from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
 import * as Icons from "../index";
 
 function Wrapper({ children }) {
@@ -35,8 +36,10 @@ function Spacer() {
     />
   );
 }
+
 function IconStory({ size }) {
   const set = Icons.sets.find(isonSet => isonSet.size === size);
+
   return (
     <Wrapper>
       {set.iconNames.map(name => {
@@ -45,14 +48,19 @@ function IconStory({ size }) {
           <InnerWrapper key={name}>
             <Icon key={name} />
             <Spacer />
-            <Body>{name}</Body>
+            <Body>{`${name}${size}`}</Body>
           </InnerWrapper>
         );
       })}
     </Wrapper>
   );
 }
+
 export default function renderStory(props) {
-  const { children, ...otherProps } = props;
-  return <IconStory {...otherProps}>{children}</IconStory>;
+  const { children, theme, ...otherProps } = props;
+  return (
+    <KnobbedThemeProvider>
+      <IconStory {...otherProps}>{children}</IconStory>
+    </KnobbedThemeProvider>
+  );
 }

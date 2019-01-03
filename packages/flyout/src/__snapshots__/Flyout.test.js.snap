@@ -130,6 +130,7 @@ exports[`flyout/Flyout snapshots renders a custom pointer 1`] = `
   font-family: ArtifaktElement,sans-serif;
   font-size: 14px;
   font-weight: 700;
+  line-height: 18px;
   margin: 0;
   overflow: hidden;
   padding: 8px 16px;
@@ -163,6 +164,7 @@ exports[`flyout/Flyout snapshots renders a custom pointer 1`] = `
   >
     <button
       className="emotion-0"
+      disabled={false}
       href={undefined}
       onBlur={[Function]}
       onClick={[Function]}
@@ -302,6 +304,7 @@ exports[`flyout/Flyout snapshots renders children from the given render function
   font-family: ArtifaktElement,sans-serif;
   font-size: 14px;
   font-weight: 700;
+  line-height: 18px;
   margin: 0;
   overflow: hidden;
   padding: 8px 16px;
@@ -335,6 +338,7 @@ exports[`flyout/Flyout snapshots renders children from the given render function
   >
     <button
       className="emotion-0"
+      disabled={false}
       href={undefined}
       onBlur={[Function]}
       onClick={[Function]}
@@ -485,6 +489,7 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
   font-family: ArtifaktElement,sans-serif;
   font-size: 14px;
   font-weight: 700;
+  line-height: 18px;
   margin: 0;
   overflow: hidden;
   padding: 8px 16px;
@@ -518,6 +523,7 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
   >
     <button
       className="emotion-0"
+      disabled={false}
       href={undefined}
       onBlur={[Function]}
       onClick={[Function]}
@@ -771,6 +777,7 @@ exports[`flyout/Flyout snapshots renders the panel from a basic render function 
   font-family: ArtifaktElement,sans-serif;
   font-size: 14px;
   font-weight: 700;
+  line-height: 18px;
   margin: 0;
   overflow: hidden;
   padding: 8px 16px;
@@ -804,6 +811,7 @@ exports[`flyout/Flyout snapshots renders the panel from a basic render function 
   >
     <button
       className="emotion-0"
+      disabled={false}
       href={undefined}
       onBlur={[Function]}
       onClick={[Function]}
@@ -929,6 +937,7 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
   font-family: ArtifaktElement,sans-serif;
   font-size: 14px;
   font-weight: 700;
+  line-height: 18px;
   margin: 0;
   overflow: hidden;
   padding: 8px 16px;
@@ -962,6 +971,7 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
   >
     <button
       className="emotion-0"
+      disabled={false}
       href={undefined}
       onBlur={[Function]}
       onClick={[Function]}
@@ -1117,6 +1127,7 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
   font-family: ArtifaktElement,sans-serif;
   font-size: 14px;
   font-weight: 700;
+  line-height: 18px;
   margin: 0;
   overflow: hidden;
   padding: 8px 16px;
@@ -1150,6 +1161,7 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
   >
     <button
       className="emotion-0"
+      disabled={false}
       href={undefined}
       onBlur={[Function]}
       onClick={[Function]}

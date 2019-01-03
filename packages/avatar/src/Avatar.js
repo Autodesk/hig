@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import cx from "classnames";
+import { css } from "emotion";
 import { polyfill } from "react-lifecycles-compat";
-
+import { ThemeContext } from "@hig/theme-context";
 import { sizes, AVAILABLE_SIZES } from "./sizes";
-import "./Avatar.scss";
+import stylesheet from "./Avatar.stylesheet";
 
 /**
  * @param {number} value
@@ -24,7 +24,7 @@ function convertRanges(value, range1, range2) {
  * @returns {string}
  */
 function backgroundIdFromName(name) {
-  return convertRanges(name.charCodeAt(0) - 65, [0, 26], [1, 9]);
+  return convertRanges(name.charCodeAt(0) - 65, [0, 26], [1, 8]);
 }
 
 /**
@@ -44,13 +44,14 @@ function initialsFromName(name) {
  * @returns {JSX.Element}
  */
 // eslint-disable-next-line react/prop-types
-function Image({ image, name, onError }) {
+function Image({ image, name, size, onError, resolvedRoles }) {
   const alt = `Avatar image of ${name}`;
+  const styles = stylesheet({ size }, resolvedRoles);
 
   return (
-    <span className="hig__avatarV2__image-wrapper">
+    <span className={css(styles.avatar.imageWrapper)}>
       <img
-        className="hig__avatarV2__image"
+        className={css(styles.avatar.image)}
         src={image}
         alt={alt}
         onError={onError}
@@ -65,34 +66,16 @@ function Image({ image, name, onError }) {
  * @returns {JSX.Element}
  */
 // eslint-disable-next-line react/prop-types
-function Initials({ name }) {
+function Initials({ size, name, resolvedRoles }) {
+  const styles = stylesheet({ size, name }, resolvedRoles);
+  const initials = initialsFromName(name);
+
   return (
-    <span className="hig__avatarV2__initials" aria-hidden="true">
-      {initialsFromName(name)}
+    <span className={css(styles.avatar.initials)} aria-hidden="true">
+      {size === sizes.SMALL_16 ? initials[0] : initials}
     </span>
   );
 }
-
-const modifiersBySize = {
-  [sizes.SMALL_16]: "hig__avatarV2--size--small",
-  [sizes.MEDIUM_24]: "hig__avatarV2--size--medium",
-  [sizes.MEDIUM_32]: "hig__avatarV2--size--medium-32",
-  [sizes.LARGE_36]: "hig__avatarV2--size--large",
-  [sizes.LARGE_48]: "hig__avatarV2--size--large-48",
-  [sizes.XLARGE_64]: "hig__avatarV2--size--extralarge"
-};
-
-const modifiersByBackgroundId = {
-  "1": "hig__avatarV2__background--turquoise",
-  "2": "hig__avatarV2__background--purple",
-  "3": "hig__avatarV2__background--pink",
-  "4": "hig__avatarV2__background--salmon",
-  "5": "hig__avatarV2__background--blue",
-  "6": "hig__avatarV2__background--green",
-  "7": "hig__avatarV2__background--turquoise",
-  "8": "hig__avatarV2__background--indigo",
-  "9": "hig__avatarV2__background--gold"
-};
 
 /**
  * @typedef {Object} AvatarProps
@@ -169,19 +152,29 @@ class Avatar extends Component {
     const backgroundId = backgroundIdFromName(name);
     const label = `Avatar for ${name}`;
     const showImage = imageUrl && !hasImageError;
-    const classes = cx(
-      "hig__avatarV2",
-      modifiersBySize[size],
-      modifiersByBackgroundId[backgroundId]
-    );
+    const styles = roles => stylesheet({ size, backgroundId }, roles);
 
     return (
-      <span aria-label={label} className={classes} role="img">
-        {!showImage ? null : (
-          <Image image={imageUrl} name={name} onError={handleImageError} />
+      <ThemeContext.Consumer>
+        {({ resolvedRoles }) => (
+          <span
+            aria-label={label}
+            className={css(styles(resolvedRoles).avatar.container)}
+            role="img"
+          >
+            {!showImage ? null : (
+              <Image
+                resolvedRoles={resolvedRoles}
+                size={size}
+                image={imageUrl}
+                name={name}
+                onError={handleImageError}
+              />
+            )}
+            <Initials name={name} size={size} resolvedRoles={resolvedRoles} />
+          </span>
         )}
-        <Initials name={name} />
-      </span>
+      </ThemeContext.Consumer>
     );
   }
 }

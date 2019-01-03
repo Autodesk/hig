@@ -5,6 +5,7 @@ export default class PressedBehavior extends Component {
   static propTypes = {
     children: PropTypes.func.isRequired,
     onMouseDown: PropTypes.func,
+    onMouseLeave: PropTypes.func,
     onMouseUp: PropTypes.func
   };
 
@@ -14,6 +15,7 @@ export default class PressedBehavior extends Component {
     // Binding in the constructor because performance
     this.handleMouseDown = this.handleMouseDown.bind(this);
     this.handleMouseUp = this.handleMouseUp.bind(this);
+    this.handleMouseLeave = this.handleMouseLeave.bind(this);
 
     this.state = {
       isPressed: false
@@ -27,6 +29,16 @@ export default class PressedBehavior extends Component {
 
     if (!event.defaultPrevented) {
       this.setState({ isPressed: true });
+    }
+  }
+
+  handleMouseLeave(event) {
+    if (this.props.onMouseLeave) {
+      this.props.onMouseLeave(event);
+    }
+
+    if (!event.defaultPrevented) {
+      this.setState({ isPressed: false });
     }
   }
 
@@ -44,7 +56,8 @@ export default class PressedBehavior extends Component {
     return this.props.children({
       isPressed: this.state.isPressed,
       onMouseDown: this.handleMouseDown,
-      onMouseUp: this.handleMouseUp
+      onMouseUp: this.handleMouseUp,
+      onPressedMouseLeave: this.handleMouseLeave
     });
   }
 }

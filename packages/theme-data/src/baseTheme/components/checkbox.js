@@ -9,42 +9,44 @@ export default {
   },
   "checkbox.borderColor": {
     type: COLOR,
-    transform: {
-      alpha: 0.5
-    },
     value: {
       ref: "colorScheme.baseColor"
     }
   },
   "checkbox.borderWidth": {
     type: BORDER_WIDTH,
-    value: {
-      ref: "input.borderBottomWidth"
-    }
+    value: "1px"
   },
   "checkbox.borderRadius": {
     type: BORDER_RADIUS,
-    value: {
-      ref: "basics.borderRadii.small"
-    }
+    value: 0
   },
   "checkbox.halo.color": {
     type: COLOR,
     value: {
-      ref: "input.halo.color"
+      ref: "colorScheme.baseColor"
+    },
+    transform: {
+      alpha: 0.4
     }
   },
   "checkbox.halo.width": {
     type: LENGTH,
+    value: "2px"
+  },
+  "checkbox.height": {
+    type: LENGTH,
+    value: "16px"
+  },
+  "checkbox.iconColor": {
+    type: COLOR,
     value: {
-      ref: "input.halo.width"
+      ref: "basics.colors.white"
     }
   },
-  "checkbox.labelSpacing": {
+  "checkbox.width": {
     type: LENGTH,
-    value: {
-      ref: "density.spacings.small"
-    }
+    value: "16px"
   },
 
   // Hover
@@ -60,13 +62,13 @@ export default {
   "checkbox.hover.halo.width": {
     type: LENGTH,
     value: {
-      ref: "input.hover.halo.width"
+      ref: "checkbox.halo.width"
     }
   },
   "checkbox.hover.halo.color": {
     type: COLOR,
     value: {
-      ref: "input.halo.color"
+      ref: "checkbox.halo.color"
     }
   },
 
@@ -83,18 +85,21 @@ export default {
   "checkbox.focus.halo.color": {
     type: COLOR,
     value: {
-      ref: "input.focus.halo.color"
+      ref: "colorScheme.accentColor"
+    },
+    transform: {
+      alpha: 0.4
     }
   },
   "checkbox.focus.halo.width": {
     type: LENGTH,
     value: {
-      ref: "input.focus.halo.width"
+      ref: "checkbox.halo.width"
     }
   },
 
-  // Active
-  "checkbox.active.borderColor": {
+  // Pressed
+  "checkbox.pressed.borderColor": {
     type: COLOR,
     value: {
       ref: "colorScheme.baseColor"
@@ -103,17 +108,18 @@ export default {
       alpha: 0.5
     }
   },
-  "checkbox.active.halo.color": {
+  "checkbox.pressed.halo.color": {
     type: COLOR,
     value: {
-      ref: "input.active.halo.color"
+      ref: "colorScheme.accentColor"
+    },
+    transform: {
+      alpha: 0.4
     }
   },
-  "checkbox.active.halo.width": {
+  "checkbox.pressed.halo.width": {
     type: LENGTH,
-    value: {
-      ref: "input.active.halo.width"
-    }
+    value: "4px"
   },
 
   // Checked
@@ -136,22 +142,49 @@ export default {
     }
   },
 
-  // Disabled
-  "checkbox.disabled.borderColor": {
+  // Indeterminate
+  "checkbox.indeterminate.borderColor": {
     type: COLOR,
     value: {
-      ref: "input.disabled.borderColor"
+      ref: "colorScheme.baseColor"
+    }
+  },
+  "checkbox.indeterminate.iconColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.white"
+    }
+  },
+  "checkbox.indeterminate.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.baseColor"
     }
   },
 
-  // Disabled + Checked
-  "checkbox.disabled.checked.backgroundColor": {
+  // Legacy Web Light Specific
+  "checkbox.focus.checked.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "checkbox.backgroundColor"
+    }
+  },
+  "checkbox.focus.checked.borderColor": {
     type: COLOR,
     value: {
       ref: "colorScheme.baseColor"
     },
     transform: {
-      alhpa: 0.5
+      alpha: 0.5
+    }
+  },
+  "checkbox.focus.indeterminate.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.baseColor"
+    },
+    transform: {
+      alpha: 0.5
     }
   }
 };

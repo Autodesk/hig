@@ -8,6 +8,7 @@ const LENGTH = "length";
 const LINE_HEIGHT = "lineHeight";
 const SHADOW = "shadow";
 const SPACING = "spacing";
+const OPACITY = "opacity";
 
 export {
   BORDER_RADIUS,
@@ -18,6 +19,7 @@ export {
   FONT_WEIGHT,
   LENGTH,
   LINE_HEIGHT,
+  OPACITY,
   SHADOW,
   SPACING
 };
