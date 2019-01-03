@@ -1,3 +1,10 @@
+# [@hig/behaviors-v1.1.1](https://github.com/Autodesk/hig/compare/@hig/behaviors@1.1.0...@hig/behaviors@1.1.1) (2019-01-03)
+
+
+### Bug Fixes
+
+* isPressed state should be off on blur ([e754fd4](https://github.com/Autodesk/hig/commit/e754fd4))
+
 # [@hig/behaviors-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/behaviors@1.0.0...@hig/behaviors@1.1.0) (2018-12-11)
 
 
