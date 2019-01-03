@@ -1,3 +1,24 @@
+# [@hig/avatar-v1.0.0](https://github.com/Autodesk/hig/compare/@hig/avatar@0.2.0...@hig/avatar@1.0.0) (2019-01-03)
+
+
+### Bug Fixes
+
+* **avatar:** add theme knobs in avatar storybook, use only one letter for avatar when size is small, fix js warnings ([4057b51](https://github.com/Autodesk/hig/commit/4057b51))
+
+
+### Features
+
+* **avatar:** themable avatar ([0fbd821](https://github.com/Autodesk/hig/commit/0fbd821))
+
+
+### BREAKING CHANGES
+
+* **avatar:** The sizes.LARGE_36 size is no longer supported. You can
+substitute with sizes.MEDIUM_32 or sizes.LARGE_48. The "large-48" size
+is no longer supported. You can substitute it with "large" for 48 pixels
+wide or "medium-32" for 32 pixels wide. The previous "large" size is now
+48 pixels wide rather than 36 pixels wide.
+
 # [@hig/avatar-v0.2.0](https://github.com/Autodesk/hig/compare/@hig/avatar@0.1.3...@hig/avatar@0.2.0) (2018-09-19)
 
 
