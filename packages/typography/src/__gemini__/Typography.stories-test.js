@@ -61,15 +61,13 @@ function TypographyVariantRepeater({ children }) {
       {AVAILABLE_VARIANTS.map(variant =>
         AVAILABLE_FONT_WEIGHTS.map(fontWeight =>
           AVAILABLE_ALIGNMENTS.map(alignment => (
-            <div>
-              <Typography
-                variant={variant}
-                fontWeight={fontWeight}
-                align={alignment}
-              >
-                {children}
-              </Typography>
-            </div>
+            <Typography
+              variant={variant}
+              fontWeight={fontWeight}
+              align={alignment}
+            >
+              {children}
+            </Typography>
           ))
         )
       )}

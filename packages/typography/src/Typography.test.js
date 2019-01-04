@@ -7,10 +7,12 @@ describe("Typography", () => {
   function props({ ...args }) {
     const { align, elementType, fontWeight, variant } = args;
     const variantDetails = variant ? `${variant} variant` : "Default";
-    const otherDetails =
-      !!align || !!fontWeight || !!elementType
-        ? ` with ${[align, fontWeight, elementType].join(" ")}`
-        : "";
+    const definedArgs = [align, fontWeight, elementType].filter(
+      arg => arg !== undefined
+    );
+    const otherDetails = definedArgs.length
+      ? ` with ${definedArgs.join(" ")}`
+      : "";
 
     return {
       ...args,
