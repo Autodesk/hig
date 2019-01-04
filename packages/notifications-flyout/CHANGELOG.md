@@ -1,3 +1,10 @@
+# [@hig/notifications-flyout-v1.0.2](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@1.0.1...@hig/notifications-flyout@1.0.2) (2019-01-04)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/flyout to version 0.7.0 ([5b7d98a](https://github.com/Autodesk/hig/commit/5b7d98a))
+
 # [@hig/notifications-flyout-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@1.0.0...@hig/notifications-flyout@1.0.1) (2018-12-06)
 
 

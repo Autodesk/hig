@@ -1,3 +1,26 @@
+# [@hig/checkbox-v2.0.0](https://github.com/Autodesk/hig/compare/@hig/checkbox@1.0.1...@hig/checkbox@2.0.0) (2019-01-04)
+
+
+### BREAKING
+
+* **checkbox:** remove required prop ([1493474](https://github.com/Autodesk/hig/commit/1493474))
+
+
+### Bug Fixes
+
+* clean up layout of checkbox ([a334220](https://github.com/Autodesk/hig/commit/a334220))
+
+
+### Features
+
+* **checkbox:** make checkbox themeable ([4030320](https://github.com/Autodesk/hig/commit/4030320))
+* **checkbox:** update disabled checkboxes to use opacity ([f35b916](https://github.com/Autodesk/hig/commit/f35b916))
+
+
+### BREAKING CHANGES
+
+* **checkbox:** label and required props are no longer used, previous css classnames have been removed as well
+
 # [@hig/checkbox-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/checkbox@1.0.0...@hig/checkbox@1.0.1) (2018-12-06)
 
 

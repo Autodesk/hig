@@ -1,3 +1,11 @@
+# [@hig/button-v1.2.0](https://github.com/Autodesk/hig/compare/@hig/button@1.1.0...@hig/button@1.2.0) (2019-01-04)
+
+
+### Features
+
+* gives buttons intended height ([9358562](https://github.com/Autodesk/hig/commit/9358562))
+* passes disabled prop through to button el ([d03c4a3](https://github.com/Autodesk/hig/commit/d03c4a3))
+
 # [@hig/button-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/button@1.0.0...@hig/button@1.1.0) (2018-12-11)
 
 

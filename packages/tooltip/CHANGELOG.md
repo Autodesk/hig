@@ -1,3 +1,16 @@
+# [@hig/tooltip-v0.4.0](https://github.com/Autodesk/hig/compare/@hig/tooltip@0.3.0...@hig/tooltip@0.4.0) (2019-01-04)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/flyout to version 0.7.0 ([d6f3436](https://github.com/Autodesk/hig/commit/d6f3436))
+* declare typography dependency in tooltip ([bd2affb](https://github.com/Autodesk/hig/commit/bd2affb))
+
+
+### Features
+
+* gives buttons intended height ([9358562](https://github.com/Autodesk/hig/commit/9358562))
+
 # [@hig/tooltip-v0.3.0](https://github.com/Autodesk/hig/compare/@hig/tooltip@0.2.0...@hig/tooltip@0.3.0) (2018-12-11)
 
 

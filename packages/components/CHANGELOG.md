@@ -1,3 +1,11 @@
+# [@hig/components-v1.0.3](https://github.com/Autodesk/hig/compare/@hig/components@1.0.2...@hig/components@1.0.3) (2019-01-04)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/flyout to version 0.7.0 ([068ba99](https://github.com/Autodesk/hig/commit/068ba99))
+* **package:** update [@hig](https://github.com/hig)/tooltip to version 0.3.0 ([1ea1cf3](https://github.com/Autodesk/hig/commit/1ea1cf3))
+
 # [@hig/components-v1.0.2](https://github.com/Autodesk/hig/compare/@hig/components@1.0.1...@hig/components@1.0.2) (2018-12-06)
 
 

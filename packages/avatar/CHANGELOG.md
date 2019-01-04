@@ -1,3 +1,10 @@
+# [@hig/avatar-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/avatar@1.0.0...@hig/avatar@1.0.1) (2019-01-04)
+
+
+### Bug Fixes
+
+* resolve versioning issue, Avatar 0.2.0->1.0.0 ([535d892](https://github.com/Autodesk/hig/commit/535d892))
+
 # [@hig/avatar-v1.0.0](https://github.com/Autodesk/hig/compare/@hig/avatar@0.2.0...@hig/avatar@1.0.0) (2019-01-03)
 
 

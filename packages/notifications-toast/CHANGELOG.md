@@ -1,3 +1,10 @@
+# [@hig/notifications-toast-v1.0.3](https://github.com/Autodesk/hig/compare/@hig/notifications-toast@1.0.2...@hig/notifications-toast@1.0.3) (2019-01-04)
+
+
+### Bug Fixes
+
+* **avatar:** add theme knobs in avatar storybook, use only one letter for avatar when size is small, fix js warnings ([4057b51](https://github.com/Autodesk/hig/commit/4057b51))
+
 # [@hig/notifications-toast-v1.0.2](https://github.com/Autodesk/hig/compare/@hig/notifications-toast@1.0.1...@hig/notifications-toast@1.0.2) (2018-12-11)
 
 
