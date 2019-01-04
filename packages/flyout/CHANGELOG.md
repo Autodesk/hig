@@ -1,3 +1,10 @@
+# [@hig/flyout-v0.8.0](https://github.com/Autodesk/hig/compare/@hig/flyout@0.7.0...@hig/flyout@0.8.0) (2019-01-04)
+
+
+### Features
+
+* gives buttons intended height ([9358562](https://github.com/Autodesk/hig/commit/9358562))
+
 # [@hig/flyout-v0.7.0](https://github.com/Autodesk/hig/compare/@hig/flyout@0.6.0...@hig/flyout@0.7.0) (2018-12-11)
 
 
