@@ -1,3 +1,10 @@
+# [@hig/input-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/input@1.0.0...@hig/input@1.0.1) (2019-01-04)
+
+
+### Bug Fixes
+
+* apply updated theme-data roles for input ([ef361c4](https://github.com/Autodesk/hig/commit/ef361c4))
+
 # @hig/input-v1.0.0 (2018-12-11)
 
 
