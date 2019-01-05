@@ -1030,7 +1030,7 @@
   dependencies:
     tinycolor2 "^1.4.1"
 
-"@hig/theme-data@^1.3.0":
+"@hig/theme-data@^1.4.0":
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@hig/theme-data/-/theme-data-1.4.0.tgz#24e7b0e52abe5be1c23f1bb501c4177c2d6aaf68"
   integrity sha512-VQk35vBTb0pl8ouiE2Us3d2z5jx4qyeaPY2utQzbEhIVOxNYldoWq4Z9fJ4bYhCeUJJokGS8NZLTy+6Hw7EIVQ==
