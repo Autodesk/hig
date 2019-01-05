@@ -1,5 +1,5 @@
 import React from "react";
-import Input from "@hig/Input";
+import Input from "@hig/input";
 import Label from "@hig/label";
 import Spacer from "@hig/spacer";
 
