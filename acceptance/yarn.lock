@@ -961,15 +961,6 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
 
-"@hig/flyout@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@hig/flyout/-/flyout-0.6.0.tgz#9fd8992d40fc639e60e5195b9ae87835af571951"
-  integrity sha512-bwfeeeadHVJ2cQRkVLDlpBP2b1tz4q2fflkzaCE2NF3n4JZOXlex77NWe1yJBmgD7ELJ5SDP6WJBVUL1HySbMQ==
-  dependencies:
-    classnames "^2.2.5"
-    prop-types "^15.6.1"
-    react-transition-group "^2.3.1"
-
 "@hig/flyout@^0.7.0":
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/@hig/flyout/-/flyout-0.7.0.tgz#692d2d55007c366116027352e47f9fef70b10664"
@@ -980,45 +971,20 @@
     prop-types "^15.6.1"
     react-transition-group "^2.3.1"
 
-"@hig/icon@^0.2.1":
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/@hig/icon/-/icon-0.2.1.tgz#a6cc07a66ee824a678de5738640b1c157e544c77"
-  integrity sha512-qaIYUB/lzc5sBnhNjQGT0/Hy5ll8+QfSzv74c12f4gTag74W0VH2zajcrzOBsFLyHGQO8UDV7Oqzm/+AwiGEBw==
-  dependencies:
-    "@hig/icons" "^0.2.1"
-    classnames "^2.2.5"
-    prop-types "^15.6.1"
-
-"@hig/icons@^0.2.1":
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/@hig/icons/-/icons-0.2.1.tgz#9a29bc9add5e3fe549c6a07e4b57fe8e9b3af813"
-  integrity sha512-6sW3jUeHI9dbmW30p03p0gBIlAdcwmF0eIZEbfFA6mby9UMYVC5GjnxKlyTtlStctGNh/FphLjvjxkOZVdKMzA==
-
 "@hig/icons@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@hig/icons/-/icons-1.0.0.tgz#b2e023887beae46934a919816a56f4c9f995a9bc"
   integrity sha512-5cxrts555oxLT+4+iKFe1emb3tajSZAxrcNiXnmYcWi+atkMWWM7e6wGc5+cv45HyM6MCZqEaaS/nEW5avgv3w==
 
-"@hig/input@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@hig/input/-/input-1.0.0.tgz#411e4e366f7f34c6abd8b7c1f8dae6590cacfd77"
-  integrity sha512-nPioP9birOR63wt2tktN2M8FJziHhU8Jc7qfmTYcKNuhwkmye1HwJirwRqZW67thN+3eoS3OPtj0LSeeiXX8Gw==
+"@hig/input@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@hig/input/-/input-1.0.1.tgz#bb5f985833254f143a536e049f47e40edc76c7e0"
+  integrity sha512-mzKqKnsD1NxjpEqPO+5mp0A4vQo5r/P99Xg3lEgcu4wIoBzIWX+HCVw5qvm+58PrgkaU2dUohYjfEYb/qJE5oQ==
   dependencies:
     "@hig/behaviors" "1.0.0"
     "@hig/theme-context" "^1.0.1"
     emotion "^10.0.0"
     prop-types "^15.6.1"
-
-"@hig/project-account-switcher@^0.3.1":
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/@hig/project-account-switcher/-/project-account-switcher-0.3.2.tgz#1464621bffd05d299b969cf4f3ed8a2168fa22b1"
-  integrity sha512-7mzc7iMPbEJ94aJsCQbgAT7oW66mcVHT3gm2RGDF1PrWQpiUA6gcamk71FM5VWXvpcrIt/DGqZLr9xUCoshqMQ==
-  dependencies:
-    "@hig/flyout" "^0.6.0"
-    "@hig/icon" "^0.2.1"
-    classnames "^2.2.5"
-    prop-types "^15.6.1"
-    react-lifecycles-compat "^3.0.4"
 
 "@hig/spacer@^1.0.3":
   version "1.0.3"
