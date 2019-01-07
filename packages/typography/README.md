@@ -7,13 +7,14 @@ Read more about when and how to use the Typography components [on the HIG websit
 ## Getting started
 
 ```
-yarn add @hig/typography
+yarn add @hig/typography @hig/fonts
 ```
 
 ## Import the component and CSS
 
 ```
 import Typography from '@hig/typography';
+import "@hig/fonts/build/ArtifaktElement.css";
 ```
 
 ## Basic usage
