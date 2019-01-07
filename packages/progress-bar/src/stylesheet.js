@@ -35,7 +35,7 @@ function getProgressBarFillIndeterminateRules(themeData) {
  * @param {Number} percent, an integer or float
  * @returns {Integer}
  */
-function renderedBarWidth(percent) {
+export const renderedBarWidth = percent => {
   const percentageWidth = parseInt(percent, 10);
   if (!percentageWidth) {
     return null;
@@ -45,7 +45,7 @@ function renderedBarWidth(percent) {
     return 101;
   }
   return percentageWidth;
-}
+};
 
 export default function stylesheet(props, themeData) {
   const { percentComplete } = props;
