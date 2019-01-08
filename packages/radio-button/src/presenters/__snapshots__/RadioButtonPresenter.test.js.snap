@@ -78,16 +78,16 @@ exports[`radio-button/presenters/RadioButtonPresenter renders with all props 1`]
     className="emotion-2"
   >
     <input
-      checked={true}
       className="emotion-0"
       defaultChecked={undefined}
       disabled={true}
-      id={undefined}
+      label="HELLO"
       name="RadioButton"
       onBlur={[Function]}
       onChange={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
+      required="required helper text"
       type="radio"
       value="value"
     />
@@ -176,16 +176,10 @@ exports[`radio-button/presenters/RadioButtonPresenter renders without props 1`] 
     className="emotion-2"
   >
     <input
-      checked={undefined}
       className="emotion-0"
       defaultChecked={undefined}
       disabled={false}
-      id={undefined}
       name="radiobutton"
-      onBlur={undefined}
-      onChange={undefined}
-      onClick={undefined}
-      onFocus={undefined}
       type="radio"
       value="value"
     />

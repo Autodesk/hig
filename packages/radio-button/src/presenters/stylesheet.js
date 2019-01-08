@@ -1,8 +1,8 @@
 export default function stylesheet(props, themeData) {
-  const { disabled } = props;
-
+  const { isPressed, disabled } = props;
   const opacity = disabled ? themeData["component.disabled.opacity"] : "1.0";
-
+  const borderWidth = isPressed ? themeData["checkbox.pressed.halo.width"] : themeData["checkbox.borderWidth"];
+  console.log("color", themeData["checkbox.borderWidth"]);
   return {
     // this maps to .radio-button
     radioButton: {
@@ -22,7 +22,8 @@ export default function stylesheet(props, themeData) {
       opacity,
       position: "relative",
       color: "transparent",
-      border: `${themeData["checkbox.borderWidth"]} solid ${
+      border: `solid ${borderWidth} transparent`,
+      boxShadow: `inset 0 0 0 ${themeData["checkbox.borderWidth"]} ${
         themeData["checkbox.borderColor"]
       }`,
       backgroundColor: "transparent",
@@ -49,33 +50,23 @@ export default function stylesheet(props, themeData) {
 
       // hover
       "&:hover + span.radio-button__wrapper": {
-        borderColor: themeData["checkbox.hover.borderColor"]
+        border: `solid ${borderWidth} ${themeData["checkbox.hover.halo.color"]}`,
       },
 
       // focus
       "&:focus + span.radio-button__wrapper": {
-        outline: "none",
-        borderColor: themeData["checkbox.focus.borderColor"]
+        border: `solid ${borderWidth} ${themeData["checkbox.focus.halo.color"]}`,
       },
 
-      // checked + focus
-      "&:focus:checked + span.radio-button__wrapper": {
-        background: "none",
-        borderColor: themeData["checkbox.pressed.borderColor"],
-        backgroundColor: themeData["checkbox.checked.backgroundColor"],
-        boxShadow: `inset 0 0 0 ${themeData["checkbox.halo.width"]} ${
-          themeData["checkbox.backgroundColor"]
-        }`
-      },
+      // // checked + focus
+      // "&:focus:checked + span.radio-button__wrapper": {
+      //   border: `solid ${themeData["checkbox.halo.width"]} ${themeData["checkbox.pressed.halo.color"]}`,
+      //   boxShadow: `inset 0 0 0 ${themeData["checkbox.pressed.halo.width"]} ${themeData["checkbox.borderColor"]}`,
+      // },
 
       // checked
       "&:checked + span.radio-button__wrapper": {
-        background: "none",
-        borderColor: themeData["checkbox.checked.borderColor"],
-        backgroundColor: themeData["checkbox.checked.backgroundColor"],
-        boxShadow: `inset 0 0 0 ${themeData["checkbox.halo.width"]} ${
-          themeData["checkbox.backgroundColor"]
-        }`
+        boxShadow: `inset 0 0 0 ${themeData["checkbox.pressed.halo.width"]} ${themeData["checkbox.borderColor"]}`,
       }
     }
   };

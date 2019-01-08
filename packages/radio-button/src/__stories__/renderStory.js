@@ -16,7 +16,7 @@ export default function renderStory(props) {
   return (
     <form>
       <div className={css(outerStyle)}>
-        <DefaultExport {...otherProps} id="radio-button-1">
+        <DefaultExport {...otherProps} name="radio-button" id="radio-button-1">
           {children}
         </DefaultExport>
         <Label htmlFor="radio-button-1">Radio Button 1</Label>
@@ -24,9 +24,10 @@ export default function renderStory(props) {
       <div className={css(outerStyle)}>
         <DefaultExport
           {...otherProps}
-          checked={true}
+          checked
           value="Secondary"
           id="radio-button-2"
+          name="radio-button"
         >
           {children}
         </DefaultExport>

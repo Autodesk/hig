@@ -9,6 +9,10 @@ import stylesheet from "./stylesheet";
 export default class RadioButtonPresenter extends Component {
   static propTypes = {
     /**
+     * HTML id of the element
+     */
+    id: PropTypes.string,
+    /**
      * Checks the radio button
      */
     checked: PropTypes.bool,
@@ -54,49 +58,39 @@ export default class RadioButtonPresenter extends Component {
 
   render() {
     const {
-      id,
       checked,
       defaultChecked,
       disabled,
-      name,
-      onBlur,
-      onChange,
-      onClick,
-      onFocus,
-      value
+      hasFocus,
+      hasHover,
+      isPressed,
+      ...otherProps
     } = this.props;
 
     return (
       <ThemeContext.Consumer>
-        {({ resolvedRoles }) => (
-          <div
-            className={css(stylesheet(this.props, resolvedRoles).radioButton)}
-          >
+        {({ resolvedRoles }) => {
+          const styles = stylesheet({isPressed, hasFocus, hasHover, checked, disabled, ...this.props}, resolvedRoles);
+
+          return (
             <div
-              className={css(
-                stylesheet(this.props, resolvedRoles).radioButtonContainer
-              )}
+              className={css(styles.radioButton)}
             >
-              <input
-                id={id}
-                checked={checked}
-                defaultChecked={defaultChecked}
-                disabled={disabled}
-                name={name}
-                onBlur={onBlur}
-                onChange={onChange}
-                onClick={onClick}
-                onFocus={onFocus}
-                type="radio"
-                value={value}
-                className={css(
-                  stylesheet(this.props, resolvedRoles).radioButtonInput
-                )}
-              />
-              <ButtonPresenter checked={checked} disabled={disabled} />
+              <div
+                className={css(styles.radioButtonContainer)}
+              >
+                <input
+                  defaultChecked={defaultChecked}
+                  disabled={disabled}
+                  type="radio"
+                  className={css(styles.radioButtonInput)}
+                  {...otherProps}
+                />
+                <ButtonPresenter disabled={disabled} />
+              </div>
             </div>
-          </div>
-        )}
+          );
+        }}
       </ThemeContext.Consumer>
     );
   }
