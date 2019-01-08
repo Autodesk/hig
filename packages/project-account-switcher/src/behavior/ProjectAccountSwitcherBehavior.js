@@ -66,7 +66,7 @@ export default class ProjectAccountSwitcherBehavior extends Component {
 
   handleAccountClick = (event, id) => {
     const { activeAccount, onChange, onClick } = this.props;
-    const { activeProjectObj } = this.state;
+    const activeProjectObj = this.state.activeProject;
     const activeAccountObj = this.getAccount(id);
 
     if (onClick) {
@@ -87,7 +87,7 @@ export default class ProjectAccountSwitcherBehavior extends Component {
 
   handleProjectClick = (event, id) => {
     const { activeProject, onChange, onClick } = this.props;
-    const { activeAccountObj } = this.state;
+    const activeAccountObj = this.state.activeAccount;
     const activeProjectObj = this.getProject(id);
 
     if (onClick) {
