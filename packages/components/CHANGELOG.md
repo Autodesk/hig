@@ -1,3 +1,15 @@
+# [@hig/components-v1.0.4](https://github.com/Autodesk/hig/compare/@hig/components@1.0.3...@hig/components@1.0.4) (2019-01-08)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/avatar to version 1.0.1 ([4f3382e](https://github.com/Autodesk/hig/commit/4f3382e))
+* **package:** update [@hig](https://github.com/hig)/checkbox to version 2.0.0 ([de28e94](https://github.com/Autodesk/hig/commit/de28e94))
+* **package:** update [@hig](https://github.com/hig)/flyout to version 0.8.0 ([37ab319](https://github.com/Autodesk/hig/commit/37ab319))
+* **package:** update [@hig](https://github.com/hig)/profile-flyout to version 1.0.0 ([6dbd9ab](https://github.com/Autodesk/hig/commit/6dbd9ab))
+* **package:** update [@hig](https://github.com/hig)/tooltip to version 0.4.0 ([ec82b71](https://github.com/Autodesk/hig/commit/ec82b71))
+* **package:** update [@hig](https://github.com/hig)/top-nav to version 2.0.0 ([08a2d1a](https://github.com/Autodesk/hig/commit/08a2d1a))
+
 # [@hig/components-v1.0.3](https://github.com/Autodesk/hig/compare/@hig/components@1.0.2...@hig/components@1.0.3) (2019-01-04)
 
 
