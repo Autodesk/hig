@@ -23,9 +23,9 @@ function getProgressBarFillIndeterminateRules(themeData) {
       right: `2px`,
       width: `200px`,
       height: `4px`,
-      backgroundImage: `linear-gradient(135deg, ${
-        themeData["progressBar.backgroundColor"]
-      }, ${themeData["progressBar.highlightColor"]} 100%)`,
+      backgroundImage: `linear-gradient(135deg, transparent, ${
+        themeData["progressBar.highlightColor"]
+      } 100%)`,
       backgroundSize: `200px 4px`
     }
   };
