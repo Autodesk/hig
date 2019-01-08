@@ -1,3 +1,10 @@
+# [@hig/tooltip-v0.4.1](https://github.com/Autodesk/hig/compare/@hig/tooltip@0.4.0...@hig/tooltip@0.4.1) (2019-01-08)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/flyout to version 0.8.0 ([37ab319](https://github.com/Autodesk/hig/commit/37ab319))
+
 # [@hig/tooltip-v0.4.0](https://github.com/Autodesk/hig/compare/@hig/tooltip@0.3.0...@hig/tooltip@0.4.0) (2019-01-04)
 
 

@@ -1,3 +1,11 @@
+# [@hig/top-nav-v2.0.1](https://github.com/Autodesk/hig/compare/@hig/top-nav@2.0.0...@hig/top-nav@2.0.1) (2019-01-08)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/flyout to version 0.8.0 ([37ab319](https://github.com/Autodesk/hig/commit/37ab319))
+* **package:** update [@hig](https://github.com/hig)/profile-flyout to version 1.0.0 ([6dbd9ab](https://github.com/Autodesk/hig/commit/6dbd9ab))
+
 # [@hig/top-nav-v2.0.0](https://github.com/Autodesk/hig/compare/@hig/top-nav@1.0.1...@hig/top-nav@2.0.0) (2019-01-04)
 
 

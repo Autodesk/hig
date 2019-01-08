@@ -1,3 +1,10 @@
+# [@hig/input-v1.0.2](https://github.com/Autodesk/hig/compare/@hig/input@1.0.1...@hig/input@1.0.2) (2019-01-08)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/behaviors to version 1.1.1 ([b535a9c](https://github.com/Autodesk/hig/commit/b535a9c))
+
 # [@hig/input-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/input@1.0.0...@hig/input@1.0.1) (2019-01-04)
 
 
