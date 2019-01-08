@@ -8,6 +8,7 @@ export const AVAILABLE_FONT_WEIGHTS = Object.freeze([
   300,
   400,
   500,
+  600,
   700,
   "bold", // same as 700
   "normal" // same as 400
