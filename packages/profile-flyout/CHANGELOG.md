@@ -1,3 +1,11 @@
+# [@hig/profile-flyout-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/profile-flyout@1.0.0...@hig/profile-flyout@1.0.1) (2019-01-08)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/avatar to version 1.0.1 ([4f3382e](https://github.com/Autodesk/hig/commit/4f3382e))
+* **package:** update [@hig](https://github.com/hig)/flyout to version 0.8.0 ([37ab319](https://github.com/Autodesk/hig/commit/37ab319))
+
 # [@hig/profile-flyout-v1.0.0](https://github.com/Autodesk/hig/compare/@hig/profile-flyout@0.1.1...@hig/profile-flyout@1.0.0) (2019-01-04)
 
 
