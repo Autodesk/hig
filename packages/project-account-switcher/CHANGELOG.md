@@ -1,3 +1,11 @@
+# [@hig/project-account-switcher-v1.0.4](https://github.com/Autodesk/hig/compare/@hig/project-account-switcher@1.0.3...@hig/project-account-switcher@1.0.4) (2019-01-08)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/flyout to version 0.8.0 ([37ab319](https://github.com/Autodesk/hig/commit/37ab319))
+* use proper state name for pas ([759c3d0](https://github.com/Autodesk/hig/commit/759c3d0))
+
 # [@hig/project-account-switcher-v1.0.3](https://github.com/Autodesk/hig/compare/@hig/project-account-switcher@1.0.2...@hig/project-account-switcher@1.0.3) (2019-01-04)
 
 
