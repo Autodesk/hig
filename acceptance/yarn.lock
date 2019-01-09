@@ -926,6 +926,15 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.2.tgz#63985d3d8b02530e0869962f4da09142ee8e200e"
   integrity sha512-n/VQ4mbfr81aqkx/XmVicOLjviMuy02eenSdJY33SVA7S2J42EU0P1H0mOogfYedb3wXA0d/LVtBrgTSm04WEA==
 
+"@hig/avatar@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@hig/avatar/-/avatar-0.2.0.tgz#6a85fe5f71572b7bfe924e9e18cab84812ce5d5c"
+  integrity sha512-bbLDEMqwF3zBhKzkbxVcu3oRP94bES9KIE3xAxBjkupxbzOkEaLjdlkLBL8Vj6RAUXi154Y1GvKi28sO43n3DQ==
+  dependencies:
+    classnames "^2.2.5"
+    prop-types "^15.6.1"
+    react-lifecycles-compat "^3.0.4"
+
 "@hig/behaviors@1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@hig/behaviors/-/behaviors-1.0.0.tgz#880eac9d669f1caaebf3f3fe8b502d3497ebb49c"
@@ -1021,7 +1030,7 @@
   dependencies:
     tinycolor2 "^1.4.1"
 
-"@hig/theme-data@^1.3.0":
+"@hig/theme-data@^1.4.0":
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@hig/theme-data/-/theme-data-1.4.0.tgz#24e7b0e52abe5be1c23f1bb501c4177c2d6aaf68"
   integrity sha512-VQk35vBTb0pl8ouiE2Us3d2z5jx4qyeaPY2utQzbEhIVOxNYldoWq4Z9fJ4bYhCeUJJokGS8NZLTy+6Hw7EIVQ==

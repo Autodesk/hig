@@ -65,7 +65,7 @@ function ThemeRepeater({ children, column }) {
                             <div style={styles.levelsWrapper}>
                               {levels.map(level => (
                                 <Surface key={level} level={level} style={styles.level}>
-                                  {children({ id: `${colorSchemeTheme.metadata.colorSchemeId}-${theme.metadata.densityId}-${level}` })}
+                                  {children({ theme, id: `${colorSchemeTheme.metadata.colorSchemeId}-${theme.metadata.densityId}-${level}` })}
                                 </Surface>
                               ))}
                             </div>

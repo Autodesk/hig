@@ -6,6 +6,8 @@ import { ThemeContext } from "@hig/theme-context";
 import { sizes, AVAILABLE_SIZES } from "./sizes";
 import stylesheet from "./Avatar.stylesheet";
 
+const COLOR_VARIANT_COUNT = 7;
+
 /**
  * @param {number} value
  * @param {number[]} range1
@@ -24,7 +26,11 @@ function convertRanges(value, range1, range2) {
  * @returns {string}
  */
 function backgroundIdFromName(name) {
-  return convertRanges(name.charCodeAt(0) - 65, [0, 26], [1, 8]);
+  return convertRanges(
+    name.charCodeAt(0) - 65,
+    [0, 26],
+    [1, COLOR_VARIANT_COUNT]
+  );
 }
 
 /**
