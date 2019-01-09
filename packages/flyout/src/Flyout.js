@@ -109,7 +109,7 @@ export default class Flyout extends Component {
       panelWrapperRef.style.left = `${containerPosition.left}px`;
       pointerRef.style.top = `${pointerPosition.top}px`;
       pointerRef.style.left = `${pointerPosition.left}px`;
-    }, 0);
+    }, 100);
   }
 
   componentWillUnmount() {
@@ -297,7 +297,7 @@ export default class Flyout extends Component {
     return panel;
   }
 
-  renderChildren(hasHover, onMouseEnter, onMouseLeave) {
+  renderChildren(onMouseEnter, onMouseLeave) {
     const { children } = this.props;
     const { handleChildClick } = this;
 
@@ -307,7 +307,6 @@ export default class Flyout extends Component {
 
     if (React.Children.count(children) === 1) {
       return React.cloneElement(children, {
-        hasHover,
         onClick: handleChildClick,
         onMouseEnter,
         onMouseLeave
@@ -336,7 +335,7 @@ export default class Flyout extends Component {
         onMouseLeave={handleChildMouseLeave}
         openOnHoverDelay={openOnHoverDelay}
       >
-        {({ hasHover, onMouseEnter, onMouseLeave }) => (
+        {({ onMouseEnter, onMouseLeave }) => (
           <FlyoutPresenter
             anchorPoint={anchorPoint}
             panel={panel}
@@ -347,7 +346,7 @@ export default class Flyout extends Component {
             refWrapper={refWrapper}
             transitionStatus={transitionStatus}
           >
-            {this.renderChildren(hasHover, onMouseEnter, onMouseLeave)}
+            {this.renderChildren(onMouseEnter, onMouseLeave)}
           </FlyoutPresenter>
         )}
       </DelayedHoverBehavior>
