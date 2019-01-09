@@ -18,7 +18,7 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/avatar": "^1.0.1",
+    "@hig/avatar": "^1.0.2",
     "@hig/banner": "^1.0.1",
     "@hig/button": "^1.2.0",
     "@hig/checkbox": "^2.0.0",
