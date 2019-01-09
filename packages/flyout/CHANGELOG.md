@@ -1,3 +1,10 @@
+# [@hig/flyout-v0.8.1](https://github.com/Autodesk/hig/compare/@hig/flyout@0.8.0...@hig/flyout@0.8.1) (2019-01-09)
+
+
+### Bug Fixes
+
+* flyout throwing console errors ([6cba99d](https://github.com/Autodesk/hig/commit/6cba99d))
+
 # [@hig/flyout-v0.8.0](https://github.com/Autodesk/hig/compare/@hig/flyout@0.7.0...@hig/flyout@0.8.0) (2019-01-04)
 
 
