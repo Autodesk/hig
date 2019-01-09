@@ -1,3 +1,10 @@
+# [@hig/avatar-v1.0.2](https://github.com/Autodesk/hig/compare/@hig/avatar@1.0.1...@hig/avatar@1.0.2) (2019-01-09)
+
+
+### Bug Fixes
+
+* Shows a bg color for names starting w/ Z ([9745ec3](https://github.com/Autodesk/hig/commit/9745ec3))
+
 # [@hig/avatar-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/avatar@1.0.0...@hig/avatar@1.0.1) (2019-01-04)
 
 
