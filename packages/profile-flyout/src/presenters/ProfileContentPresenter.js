@@ -1,23 +1,30 @@
 import React from "react";
 import PropTypes from "prop-types";
-
-import "./ProfileContentPresenter.scss";
+import { css } from "emotion";
+import ThemeContext from "@hig/theme-context";
+import stylesheet from "./stylesheet";
 
 export default function ProfileContentPresenter(props) {
   const { profileName, profileEmail, children } = props;
 
   return (
-    <div className="hig__profile-flyout__content">
-      {profileName ? (
-        <div className="hig__profile-flyout__content__name">{profileName}</div>
-      ) : null}
-      {profileEmail ? (
-        <div className="hig__profile-flyout__content__email">
-          {profileEmail}
-        </div>
-      ) : null}
-      {children}
-    </div>
+    <ThemeContext.Consumer>
+      {({ resolvedRoles, metadata }) => {
+        const styles = stylesheet(resolvedRoles, metadata.colorSchemeId);
+
+        return (
+          <div className={css(styles.profileContent)}>
+            {profileName ? (
+              <span className={css(styles.profileName)}>{profileName}</span>
+            ) : null}
+            {profileEmail ? (
+              <span className={css(styles.profileEmail)}>{profileEmail}</span>
+            ) : null}
+            {children}
+          </div>
+        );
+      }}
+    </ThemeContext.Consumer>
   );
 }
 
