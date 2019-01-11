@@ -12,11 +12,10 @@ Read more about when and how to use the Progress Bar component [on the website](
 yarn add @hig/progress-bar
 ```
 
-### Import the component and CSS
+### Import the component
 
 ```js
 import ProgressBar from '@hig/progress-bar';
-import '@hig/progress-bar/build/index.css';
 ```
 
 ## Basic usage

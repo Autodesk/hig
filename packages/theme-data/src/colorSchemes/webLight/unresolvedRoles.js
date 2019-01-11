@@ -5,6 +5,7 @@ const oldBasics = {
   colors: {
     "hig-turquoise-40": "#5CE1D3",
     "hig-turquoise-50": "#0ED3BE",
+    "hig-cool-gray-10": "#ECF0F3",
     "hig-cool-gray-20": "#D4DBE1",
     "hig-cool-gray-30": "#BEC8D2",
     "hig-blue-20": "#CCEAF9",
@@ -225,6 +226,15 @@ const webLightThemeResolvedRoles = extendTheme(lightGrayTheme.unresolvedRoles, {
   },
   "flyout.borderColor": {
     value: oldBasics.colors["hig-cool-gray-20"]
+  },
+  "progressBar.backgroundColor": {
+    value: oldBasics.colors["hig-cool-gray-10"],
+    transform: {
+      alpha: "1.0"
+    }
+  },
+  "progressBar.highlightColor": {
+    value: oldBasics.colors["hig-turquoise-50"]
   }
 });
 
