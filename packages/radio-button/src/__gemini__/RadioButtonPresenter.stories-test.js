@@ -3,9 +3,6 @@ import { storiesOf } from "@storybook/react";
 import RadioButtonPresenter from "../presenters/RadioButtonPresenter";
 
 storiesOf("RadioButtonPresenter", module)
-  .add("default", () => <RadioButtonPresenter label="Default checkbox" />)
-  .add("checked", () => <RadioButtonPresenter checked label="Checked" />)
-  .add("required", () => (
-    <RadioButtonPresenter label="Required" required="You must check this box" />
-  ))
-  .add("disabled", () => <RadioButtonPresenter label="Disabled" disabled />);
+  .add("default", () => <RadioButtonPresenter />)
+  .add("checked", () => <RadioButtonPresenter defaultChecked />)
+  .add("disabled", () => <RadioButtonPresenter disabled />);

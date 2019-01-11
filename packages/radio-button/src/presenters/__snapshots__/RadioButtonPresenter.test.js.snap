@@ -34,14 +34,14 @@ exports[`radio-button/presenters/RadioButtonPresenter renders with all props 1`]
   z-index: 1;
 }
 
-.emotion-0:checked + span.radio-button__wrapper {
-  box-shadow: inset 0 0 0 4px #7993B0;
-  border: solid 1px #7993B0;
+.emotion-0:checked + span {
+  background-color: #7993B0;
+  box-shadow: inset 0 0 0 3px #ffffff;
 }
 
-.emotion-0:checked:focus + span.radio-button__wrapper {
-  box-shadow: inset 0 0 0 4px #7993B0,0 0 0 2px rgba(6,150,215,0.4);
-  border: solid 1px #7993B0;
+.emotion-0:checked:focus + span {
+  background-color: #0671A1;
+  box-shadow: inset 0 0 0 3px #ffffff;
 }
 
 .emotion-1 {
@@ -79,7 +79,7 @@ exports[`radio-button/presenters/RadioButtonPresenter renders with all props 1`]
       value="value"
     />
     <span
-      className="radio-button__wrapper emotion-1"
+      className="emotion-1"
     />
   </div>
 </div>
@@ -119,14 +119,14 @@ exports[`radio-button/presenters/RadioButtonPresenter renders without props 1`] 
   z-index: 1;
 }
 
-.emotion-0:checked + span.radio-button__wrapper {
-  box-shadow: inset 0 0 0 4px #7993B0;
-  border: solid 1px #7993B0;
+.emotion-0:checked + span {
+  background-color: #7993B0;
+  box-shadow: inset 0 0 0 3px #ffffff;
 }
 
-.emotion-0:checked:focus + span.radio-button__wrapper {
-  box-shadow: inset 0 0 0 4px #7993B0,0 0 0 2px rgba(6,150,215,0.4);
-  border: solid 1px #7993B0;
+.emotion-0:checked:focus + span {
+  background-color: #0671A1;
+  box-shadow: inset 0 0 0 3px #ffffff;
 }
 
 .emotion-1 {
@@ -158,7 +158,7 @@ exports[`radio-button/presenters/RadioButtonPresenter renders without props 1`] 
       value="value"
     />
     <span
-      className="radio-button__wrapper emotion-1"
+      className="emotion-1"
     />
   </div>
 </div>

@@ -16,7 +16,7 @@ exports[`radio-button/presenters/ButtonPresenter renders with all props 1`] = `
 }
 
 <span
-  className="radio-button__wrapper emotion-0"
+  className="emotion-0"
 />
 `;
 
@@ -36,6 +36,6 @@ exports[`radio-button/presenters/ButtonPresenter renders without props 1`] = `
 }
 
 <span
-  className="radio-button__wrapper emotion-0"
+  className="emotion-0"
 />
 `;
