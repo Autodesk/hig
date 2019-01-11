@@ -1,4 +1,14 @@
-export default function stylesheet(props, themeData) {
+function legacyStylesheet(props, themeData) {
+  return {
+
+  };
+}
+
+export default function stylesheet(props, themeData, theme) {
+  if (theme === "hig-light") {
+    return legacyStylesheet(props, themeData);
+  }
+
   const { isPressed, hasFocus, hasHover, disabled } = props;
   const opacity = disabled ? themeData["component.disabled.opacity"] : "1.0";
   let wrapperBoxShadowStyle = null;

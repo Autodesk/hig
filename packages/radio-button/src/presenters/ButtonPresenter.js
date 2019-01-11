@@ -10,8 +10,8 @@ export default class ButtonPresenter extends Component {
   render() {
     return (
       <ThemeContext.Consumer>
-        {({ resolvedRoles }) => {
-          const styles = stylesheet(this.props, resolvedRoles);
+        {({ resolvedRoles, metadata }) => {
+          const styles = stylesheet(this.props, resolvedRoles, metadata.colorSchemeId);
           return (
             <span
               className={cx(
