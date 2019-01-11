@@ -47,7 +47,19 @@ export default class RadioButtonPresenter extends Component {
     /**
      * Value submitted with a form if checked
      */
-    value: PropTypes.string
+    value: PropTypes.string,
+    /**
+     * Returns whether or not the button is currently focused
+     */
+    hasFocus: PropTypes.bool,
+    /**
+     * Returns whether or not the button is currently hovered
+     */
+    hasHover: PropTypes.bool,
+    /**
+     * Returns whether or not the button is currently pressed
+     */
+    isPressed: PropTypes.bool
   };
 
   static defaultProps = {
@@ -70,15 +82,14 @@ export default class RadioButtonPresenter extends Component {
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles }) => {
-          const styles = stylesheet({isPressed, hasFocus, hasHover, checked, disabled, ...this.props}, resolvedRoles);
+          const styles = stylesheet(
+            { isPressed, hasFocus, hasHover, checked, disabled, ...this.props },
+            resolvedRoles
+          );
 
           return (
-            <div
-              className={css(styles.radioButton)}
-            >
-              <div
-                className={css(styles.radioButtonContainer)}
-              >
+            <div className={css(styles.radioButton)}>
+              <div className={css(styles.radioButtonContainer)}>
                 <input
                   defaultChecked={defaultChecked}
                   disabled={disabled}
@@ -86,7 +97,12 @@ export default class RadioButtonPresenter extends Component {
                   className={css(styles.radioButtonInput)}
                   {...otherProps}
                 />
-                <ButtonPresenter disabled={disabled} />
+                <ButtonPresenter
+                  hasFocus={hasFocus}
+                  hasHover={hasHover}
+                  isPressed={isPressed}
+                  disabled={disabled}
+                />
               </div>
             </div>
           );

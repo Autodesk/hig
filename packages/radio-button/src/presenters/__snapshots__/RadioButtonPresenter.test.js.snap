@@ -34,34 +34,21 @@ exports[`radio-button/presenters/RadioButtonPresenter renders with all props 1`]
   z-index: 1;
 }
 
-.emotion-0:hover + span.radio-button__wrapper {
-  border-color: rgba(128,128,128,0.5);
-}
-
-.emotion-0:focus + span.radio-button__wrapper {
-  outline: none;
-  border-color: rgb(6,113,161);
-}
-
-.emotion-0:focus:checked + span.radio-button__wrapper {
-  background: none;
-  border-color: rgba(128,128,128,0.5);
-  background-color: #7993B0;
-  box-shadow: inset 0 0 0 2px #ffffff;
-}
-
 .emotion-0:checked + span.radio-button__wrapper {
-  background: none;
-  border-color: #7993B0;
-  background-color: #7993B0;
-  box-shadow: inset 0 0 0 2px #ffffff;
+  box-shadow: inset 0 0 0 4px #7993B0;
+  border: solid 1px #7993B0;
+}
+
+.emotion-0:checked:focus + span.radio-button__wrapper {
+  box-shadow: inset 0 0 0 4px #7993B0,0 0 0 2px rgba(6,150,215,0.4);
+  border: solid 1px #7993B0;
 }
 
 .emotion-1 {
   opacity: 0.5;
   position: relative;
   color: transparent;
-  border: 1px solid #BEC8D2;
+  border: solid 1px #BEC8D2;
   background-color: transparent;
   text-align: center;
   font-size: 25px;
@@ -132,34 +119,21 @@ exports[`radio-button/presenters/RadioButtonPresenter renders without props 1`] 
   z-index: 1;
 }
 
-.emotion-0:hover + span.radio-button__wrapper {
-  border-color: rgba(128,128,128,0.5);
-}
-
-.emotion-0:focus + span.radio-button__wrapper {
-  outline: none;
-  border-color: rgb(6,113,161);
-}
-
-.emotion-0:focus:checked + span.radio-button__wrapper {
-  background: none;
-  border-color: rgba(128,128,128,0.5);
-  background-color: #7993B0;
-  box-shadow: inset 0 0 0 2px #ffffff;
-}
-
 .emotion-0:checked + span.radio-button__wrapper {
-  background: none;
-  border-color: #7993B0;
-  background-color: #7993B0;
-  box-shadow: inset 0 0 0 2px #ffffff;
+  box-shadow: inset 0 0 0 4px #7993B0;
+  border: solid 1px #7993B0;
+}
+
+.emotion-0:checked:focus + span.radio-button__wrapper {
+  box-shadow: inset 0 0 0 4px #7993B0,0 0 0 2px rgba(6,150,215,0.4);
+  border: solid 1px #7993B0;
 }
 
 .emotion-1 {
   opacity: 1.0;
   position: relative;
   color: transparent;
-  border: 1px solid #BEC8D2;
+  border: solid 1px #BEC8D2;
   background-color: transparent;
   text-align: center;
   font-size: 25px;

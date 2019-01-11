@@ -10,14 +10,17 @@ export default class ButtonPresenter extends Component {
   render() {
     return (
       <ThemeContext.Consumer>
-        {({ resolvedRoles }) => (
-          <span
-            className={cx(
-              "radio-button__wrapper",
-              css(stylesheet(this.props, resolvedRoles).radioButtonWrapper)
-            )}
-          />
-        )}
+        {({ resolvedRoles }) => {
+          const styles = stylesheet(this.props, resolvedRoles);
+          return (
+            <span
+              className={cx(
+                "radio-button__wrapper",
+                css(styles.radioButtonWrapper)
+              )}
+            />
+          );
+        }}
       </ThemeContext.Consumer>
     );
   }

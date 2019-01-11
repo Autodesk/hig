@@ -1,10 +1,33 @@
 export default function stylesheet(props, themeData) {
-  const { isPressed, disabled } = props;
+  const { isPressed, hasFocus, hasHover, disabled } = props;
   const opacity = disabled ? themeData["component.disabled.opacity"] : "1.0";
-  const borderWidth = isPressed ? themeData["checkbox.pressed.halo.width"] : themeData["checkbox.borderWidth"];
-  console.log("color", themeData["checkbox.borderWidth"]);
+  let wrapperBoxShadowStyle = null;
+  let borderStyle = `solid ${themeData["checkbox.borderWidth"]} ${
+    themeData["checkbox.borderColor"]
+  }`;
+
+  if (disabled) {
+    // do nothing
+  } else if (isPressed) {
+    wrapperBoxShadowStyle = `inset 0 0 0 ${
+      themeData["checkbox.pressed.halo.width"]
+    } ${themeData["checkbox.checked.backgroundColor"]}, 0 0 0 ${
+      themeData["checkbox.pressed.halo.width"]
+    } ${themeData["checkbox.focus.halo.color"]}`;
+    borderStyle = `solid ${themeData["checkbox.borderWidth"]} ${
+      themeData["checkbox.checked.backgroundColor"]
+    }`;
+  } else if (hasFocus) {
+    wrapperBoxShadowStyle = `0 0 0 ${themeData["checkbox.focus.halo.width"]} ${
+      themeData["checkbox.focus.halo.color"]
+    }`;
+  } else if (hasHover) {
+    wrapperBoxShadowStyle = `0 0 0 ${themeData["checkbox.hover.halo.width"]} ${
+      themeData["checkbox.hover.halo.color"]
+    }`;
+  }
+
   return {
-    // this maps to .radio-button
     radioButton: {
       display: "inline-block",
       padding: "0 10px"
@@ -17,22 +40,19 @@ export default function stylesheet(props, themeData) {
       alignItems: "center"
     },
 
-    // this maps to .radio-button__wrapper
     radioButtonWrapper: {
       opacity,
       position: "relative",
       color: "transparent",
-      border: `solid ${borderWidth} transparent`,
-      boxShadow: `inset 0 0 0 ${themeData["checkbox.borderWidth"]} ${
-        themeData["checkbox.borderColor"]
-      }`,
+      border: borderStyle,
       backgroundColor: "transparent",
       textAlign: "center",
       fontSize: "25px",
       lineHeight: "14px",
       height: themeData["checkbox.height"],
       width: themeData["checkbox.width"],
-      borderRadius: "50%"
+      borderRadius: "50%",
+      boxShadow: wrapperBoxShadowStyle
     },
 
     // this maps to .radio-button__input
@@ -48,25 +68,26 @@ export default function stylesheet(props, themeData) {
       padding: "0",
       zIndex: "1",
 
-      // hover
-      "&:hover + span.radio-button__wrapper": {
-        border: `solid ${borderWidth} ${themeData["checkbox.hover.halo.color"]}`,
-      },
-
-      // focus
-      "&:focus + span.radio-button__wrapper": {
-        border: `solid ${borderWidth} ${themeData["checkbox.focus.halo.color"]}`,
-      },
-
-      // // checked + focus
-      // "&:focus:checked + span.radio-button__wrapper": {
-      //   border: `solid ${themeData["checkbox.halo.width"]} ${themeData["checkbox.pressed.halo.color"]}`,
-      //   boxShadow: `inset 0 0 0 ${themeData["checkbox.pressed.halo.width"]} ${themeData["checkbox.borderColor"]}`,
-      // },
-
-      // checked
+      // todo: remove once checked behavior has been
+      // integrated into react
       "&:checked + span.radio-button__wrapper": {
-        boxShadow: `inset 0 0 0 ${themeData["checkbox.pressed.halo.width"]} ${themeData["checkbox.borderColor"]}`,
+        boxShadow: `inset 0 0 0 ${themeData["checkbox.pressed.halo.width"]} ${
+          themeData["checkbox.checked.backgroundColor"]
+        }`,
+        border: `solid ${themeData["checkbox.borderWidth"]} ${
+          themeData["checkbox.checked.backgroundColor"]
+        }`
+      },
+
+      "&:checked:focus + span.radio-button__wrapper": {
+        boxShadow: `inset 0 0 0 ${themeData["checkbox.pressed.halo.width"]} ${
+          themeData["checkbox.checked.backgroundColor"]
+        }, 0 0 0 ${themeData["checkbox.focus.halo.width"]} ${
+          themeData["checkbox.focus.halo.color"]
+        }`,
+        border: `solid ${themeData["checkbox.borderWidth"]} ${
+          themeData["checkbox.checked.backgroundColor"]
+        }`
       }
     }
   };
