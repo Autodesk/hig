@@ -10,6 +10,7 @@ import input from "./components/input";
 import label from "./components/label";
 import progressBar from "./components/progressBar";
 import skeletonItem from "./components/skeletonItem";
+import slider from "./components/slider";
 
 const darkBlueThemeConfig = extendTheme(
   baseTheme.unresolvedRoles,
@@ -23,7 +24,8 @@ const darkBlueThemeConfig = extendTheme(
     input,
     label,
     progressBar,
-    skeletonItem
+    skeletonItem,
+    slider
   )
 );
 
