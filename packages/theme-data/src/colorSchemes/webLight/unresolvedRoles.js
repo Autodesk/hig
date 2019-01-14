@@ -5,6 +5,7 @@ import checkbox from "./components/checkbox";
 import flyout from "./components/flyout";
 import input from "./components/input";
 import progressBar from "./components/progressBar";
+import tooltip from "./components/tooltip";
 
 const webLightThemeConfig = extendTheme(
   lightGrayTheme.unresolvedRoles,
@@ -19,7 +20,8 @@ const webLightThemeConfig = extendTheme(
     checkbox,
     flyout,
     input,
-    progressBar
+    progressBar,
+    tooltip
   )
 );
 

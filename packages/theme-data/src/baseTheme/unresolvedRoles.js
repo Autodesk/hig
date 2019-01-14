@@ -16,6 +16,7 @@ import progressBar from "./components/progressBar";
 import skeletonItem from "./components/skeletonItem";
 import slider from "./components/slider";
 import textarea from "./components/textarea";
+import tooltip from "./components/tooltip";
 import typography from "./components/typography";
 
 const baseThemeConfig = extendTheme(
@@ -46,6 +47,7 @@ const baseThemeConfig = extendTheme(
     skeletonItem,
     slider,
     textarea,
+    tooltip,
     typography
   )
 );
