@@ -4,16 +4,13 @@ export default {
   "progressRing.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.black"
-    },
-    transform: {
-      alpha: "0.05"
+      ref: "colorScheme.surfaceLevel100Color"
     }
   },
   "progressRing.highlightColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.autodeskBlue400"
+      ref: "colorScheme.accentColor"
     }
   }
 };
