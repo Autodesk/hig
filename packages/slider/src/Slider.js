@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import cx from "classnames";
-import { generateId } from "@hig/utils";
+import { css } from "emotion";
 
 import Input from "./presenters/Input";
-import "./slider.scss";
+import stylesheet from "./Slider.stylesheet";
 
 /**
  * @typedef {string|number} Value
@@ -29,14 +28,6 @@ export default class Slider extends Component {
      * HTML ID attribute
      */
     id: PropTypes.string,
-    /**
-     * Instructional text for the field
-     */
-    instructions: PropTypes.string,
-    /**
-     * Text describing what the field represents
-     */
-    label: PropTypes.string,
     /**
      * Minimum value of the slider
      */
@@ -66,10 +57,6 @@ export default class Slider extends Component {
      */
     onInput: PropTypes.func,
     /**
-     * Text describing why the field is required
-     */
-    required: PropTypes.string,
-    /**
      * The granularity of each step on the slider
      */
     step: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
@@ -81,7 +68,6 @@ export default class Slider extends Component {
 
   static defaultProps = {
     defaultValue: "",
-    id: generateId("slider"),
     min: "0",
     max: "100",
     step: "1"
@@ -131,61 +117,17 @@ export default class Slider extends Component {
 
   render() {
     const {
-      id,
-      name,
-      label,
-      instructions,
-      required,
-      disabled,
-      min,
-      max,
-      step,
-      onBlur,
-      onFocus,
-      onInput
+      defaultValue, // exclude from otherProps
+      onChange, // exclude from otherProps
+      ...otherProps
     } = this.props;
+
     const value = this.getValue();
+    const styles = stylesheet();
 
     return (
-      <div
-        className={cx("hig__slider", {
-          "hig__slider--disabled": disabled,
-          "hig__slider--required": required
-        })}
-      >
-        <div
-          className="hig__slider__wrapper"
-          data-range-min={min}
-          data-range-max={max}
-        >
-          <span className="hig__slider__current-value">{value}</span>
-
-          <Input
-            id={id}
-            onChange={this.handleChange}
-            disabled={disabled}
-            name={name}
-            min={min}
-            max={max}
-            step={step}
-            value={value}
-            onBlur={onBlur}
-            onFocus={onFocus}
-            onInput={onInput}
-          />
-
-          {label && (
-            <label htmlFor={id} className="hig__slider__label">
-              {label}
-            </label>
-          )}
-        </div>
-
-        {instructions && (
-          <p className="hig__slider__instructions">{instructions}</p>
-        )}
-
-        {required && <p className="hig__slider__required-notice">{required}</p>}
+      <div className={css(styles.slider)}>
+        <Input onChange={this.handleChange} value={value} {...otherProps} />
       </div>
     );
   }

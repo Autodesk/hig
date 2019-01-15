@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-
-import "./input.scss";
+import { css } from "emotion";
+import stylesheet from "./Input.stylesheet";
 
 export default class Input extends Component {
   static propTypes = {
@@ -53,10 +53,11 @@ export default class Input extends Component {
 
   render() {
     const { min, max, value } = this.props;
+    const styles = stylesheet();
 
     return (
       <input
-        className="hig__slider__input"
+        className={css(styles.input)}
         type="range"
         aria-valuemin={min}
         aria-valuemax={max}

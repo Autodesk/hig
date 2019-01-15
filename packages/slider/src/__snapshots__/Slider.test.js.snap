@@ -1,6 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Slider/presenters/Input renders correctly without a value 1`] = `
+exports[`slider/Slider renders 1`] = `
+.emotion-1 {
+  position: relative;
+  margin-bottom: 20px;
+  width: 300px;
+}
+
 .emotion-0 {
   -webkit-appearance: none;
   width: 100%;
@@ -164,11 +170,20 @@ exports[`Slider/presenters/Input renders correctly without a value 1`] = `
   display: none;
 }
 
-<input
-  aria-valuemax={undefined}
-  aria-valuemin={undefined}
-  aria-valuenow={undefined}
-  className="emotion-0"
-  type="range"
-/>
+<div
+  className="emotion-1"
+>
+  <input
+    aria-valuemax="100"
+    aria-valuemin="0"
+    aria-valuenow=""
+    className="emotion-0"
+    max="100"
+    min="0"
+    onChange={[Function]}
+    step="1"
+    type="range"
+    value=""
+  />
+</div>
 `;

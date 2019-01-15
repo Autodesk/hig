@@ -1,36 +1,14 @@
 import React from "react";
+import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
 import { mount } from "enzyme";
 import Slider from "./index";
 import Input from "./presenters/Input";
 
 describe("slider/Slider", () => {
-  it("renders a label when provided", () => {
-    const label = "Age";
-    const wrapper = mount(<Slider label={label} />);
-    expect(wrapper.text()).toEqual(expect.stringMatching(label));
-  });
-
-  it("renders instructions when provided", () => {
-    const instructions = "Select a number between 1 and 100.";
-    const wrapper = mount(<Slider instructions={instructions} />);
-    expect(wrapper.text()).toEqual(expect.stringMatching(instructions));
-  });
-
-  it("renders a required notice when provided", () => {
-    const requiredMsg = "You must provide your age.";
-    const wrapper = mount(<Slider required={requiredMsg} />);
-    expect(wrapper.text()).toEqual(expect.stringMatching(requiredMsg));
-  });
+  takeSnapshotsOf(Slider, [{ desc: "renders", props: {} }]);
 
   describe("props", () => {
     describe("id", () => {
-      it("generates an ID when one is not provided", () => {
-        const wrapper = mount(<Slider />);
-        expect(wrapper.find(Input).prop("id")).toEqual(
-          expect.stringMatching("slider-")
-        );
-      });
-
       it("passes the ID prop to the underlying input", () => {
         const wrapper = mount(<Slider id="important-field" />);
         expect(wrapper.find(Input).prop("id")).toEqual("important-field");
