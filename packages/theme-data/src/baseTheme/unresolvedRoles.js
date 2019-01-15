@@ -7,13 +7,14 @@ import avatar from "./components/avatar";
 import button from "./components/button";
 import checkbox from "./components/checkbox";
 import component from "./components/component";
-import formField from "./components/formField";
 import flyout from "./components/flyout";
+import formField from "./components/formField";
 import input from "./components/input";
 import label from "./components/label";
 import menu from "./components/menu";
 import progressBar from "./components/progressBar";
 import skeletonItem from "./components/skeletonItem";
+import slider from "./components/slider";
 import textarea from "./components/textarea";
 import typography from "./components/typography";
 
@@ -36,13 +37,14 @@ const baseThemeConfig = extendTheme(
     button,
     checkbox,
     component,
-    formField,
     flyout,
+    formField,
     input,
     label,
     menu,
     progressBar,
     skeletonItem,
+    slider,
     textarea,
     typography
   )
