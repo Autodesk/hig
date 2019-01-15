@@ -186,12 +186,23 @@ exports[`flyout/Flyout snapshots renders a custom pointer 1`] = `
   </div>
   <div
     className="emotion-6"
+    style={
+      Object {
+        "left": "0px",
+        "top": "0px",
+      }
+    }
   >
     <div
       aria-hidden="true"
       className="emotion-2"
       role="presentation"
-      style={undefined}
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
     >
       <span>
         my custom pointer
@@ -360,12 +371,23 @@ exports[`flyout/Flyout snapshots renders children from the given render function
   </div>
   <div
     className="emotion-8"
+    style={
+      Object {
+        "left": "0px",
+        "top": "0px",
+      }
+    }
   >
     <div
       aria-hidden="true"
       className="emotion-4"
       role="presentation"
-      style={undefined}
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
     >
       <svg
         height="24"
@@ -545,12 +567,23 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
   </div>
   <div
     className="emotion-8"
+    style={
+      Object {
+        "left": "0px",
+        "top": "0px",
+      }
+    }
   >
     <div
       aria-hidden="true"
       className="emotion-4"
       role="presentation"
-      style={undefined}
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
     >
       <svg
         height="24"
@@ -670,12 +703,23 @@ exports[`flyout/Flyout snapshots renders open by default 1`] = `
   />
   <div
     className="emotion-7"
+    style={
+      Object {
+        "left": "0px",
+        "top": "0px",
+      }
+    }
   >
     <div
       aria-hidden="true"
       className="emotion-3"
       role="presentation"
-      style={undefined}
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
     >
       <svg
         height="24"
@@ -833,12 +877,23 @@ exports[`flyout/Flyout snapshots renders the panel from a basic render function 
   </div>
   <div
     className="emotion-5"
+    style={
+      Object {
+        "left": "0px",
+        "top": "0px",
+      }
+    }
   >
     <div
       aria-hidden="true"
       className="emotion-4"
       role="presentation"
-      style={undefined}
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
     >
       <svg
         height="24"
@@ -993,12 +1048,23 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
   </div>
   <div
     className="emotion-7"
+    style={
+      Object {
+        "left": "0px",
+        "top": "0px",
+      }
+    }
   >
     <div
       aria-hidden="true"
       className="emotion-4"
       role="presentation"
-      style={undefined}
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
     >
       <svg
         height="24"
@@ -1183,12 +1249,23 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
   </div>
   <div
     className="emotion-8"
+    style={
+      Object {
+        "left": "0px",
+        "top": "0px",
+      }
+    }
   >
     <div
       aria-hidden="true"
       className="emotion-4"
       role="presentation"
-      style={undefined}
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
     >
       <svg
         height="24"
@@ -1308,12 +1385,23 @@ exports[`flyout/Flyout snapshots renders without props 1`] = `
   />
   <div
     className="emotion-7"
+    style={
+      Object {
+        "left": "0px",
+        "top": "0px",
+      }
+    }
   >
     <div
       aria-hidden="true"
       className="emotion-3"
       role="presentation"
-      style={undefined}
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
     >
       <svg
         height="24"
