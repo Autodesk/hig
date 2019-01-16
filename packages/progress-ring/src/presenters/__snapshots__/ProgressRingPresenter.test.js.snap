@@ -1,11 +1,56 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`progress-ring/presenters/ProgressRingPresenter renders with all props 1`] = `
+.emotion-18 {
+  font-family: ArtifaktElement;
+  line-height: 1.6;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 {
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  fill: rgba(0,0,0,0.05);
+}
+
+.emotion-1 {
+  opacity: 0;
+}
+
+.emotion-1:nth-of-type(even) {
+  fill: #0696d7;
+}
+
+.emotion-1:nth-of-type(odd) {
+  fill: rgba(6,150,215,0.6);
+}
+
+.emotion-17 {
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  fill: #ffffff;
+}
+
 <div
   aria-valuemax="100"
   aria-valuemin="0"
   aria-valuenow={33}
-  className="hig__progress-ring"
+  className="emotion-18"
   role="progressbar"
 >
   <svg
@@ -17,109 +62,109 @@ exports[`progress-ring/presenters/ProgressRingPresenter renders with all props 1
     xmlnsXlink="http://www.w3.org/1999/xlink"
   >
     <polygon
-      className="hig__progress-ring__background"
+      className="hig__progress-ring__background emotion-0"
       fill={undefined}
       fillRule={undefined}
       points="22.49 5.51 14 2 5.51 5.51 2 14 5.51 22.49 14 26 22.49 22.49 26 14"
     />
     <polygon
-      className="hig__progress-ring__segment"
+      className="hig__progress-ring__segment emotion-1"
       fill="#0ED3BE"
       fillRule="nonzero"
       points="5.52 5.52 14 6.33 14 2"
     />
     <polygon
-      className="hig__progress-ring__segment"
+      className="hig__progress-ring__segment emotion-1"
       fill="#0ED3BE"
       fillRule="nonzero"
       points="5.52 5.52 8.58 8.58 14 6.33"
     />
     <polygon
-      className="hig__progress-ring__segment"
+      className="hig__progress-ring__segment emotion-1"
       fill="#0ED3BE"
       fillRule="nonzero"
       points="2 14 8.58 8.58 5.52 5.52"
     />
     <polygon
-      className="hig__progress-ring__segment"
+      className="hig__progress-ring__segment emotion-1"
       fill="#0ED3BE"
       fillRule="nonzero"
       points="2 14 6.33 14 8.58 8.58"
     />
     <polygon
-      className="hig__progress-ring__segment"
+      className="hig__progress-ring__segment emotion-1"
       fill="#0ED3BE"
       fillRule="nonzero"
       points="5.52 22.48 6.33 14 2 14"
     />
     <polygon
-      className="hig__progress-ring__segment"
+      className="hig__progress-ring__segment emotion-1"
       fill="#0ED3BE"
       fillRule="nonzero"
       points="5.52 22.48 8.58 19.42 6.33 14"
     />
     <polygon
-      className="hig__progress-ring__segment"
+      className="hig__progress-ring__segment emotion-1"
       fill="#0ED3BE"
       fillRule="nonzero"
       points="14 26 8.58 19.42 5.52 22.48"
     />
     <polygon
-      className="hig__progress-ring__segment"
+      className="hig__progress-ring__segment emotion-1"
       fill="#0ED3BE"
       fillRule="nonzero"
       points="14 26 14 21.67 8.58 19.42"
     />
     <polygon
-      className="hig__progress-ring__segment"
+      className="hig__progress-ring__segment emotion-1"
       fill="#0ED3BE"
       fillRule="nonzero"
       points="22.48 22.48 14 21.67 14 26"
     />
     <polygon
-      className="hig__progress-ring__segment"
+      className="hig__progress-ring__segment emotion-1"
       fill="#0ED3BE"
       fillRule="nonzero"
       points="22.48 22.48 19.42 19.42 14 21.67"
     />
     <polygon
-      className="hig__progress-ring__segment"
+      className="hig__progress-ring__segment emotion-1"
       fill="#0ED3BE"
       fillRule="nonzero"
       points="26 14 19.42 19.42 22.48 22.48"
     />
     <polygon
-      className="hig__progress-ring__segment"
+      className="hig__progress-ring__segment emotion-1"
       fill="#0ED3BE"
       fillRule="nonzero"
       points="26 14 21.67 14 19.42 19.42"
     />
     <polygon
-      className="hig__progress-ring__segment"
+      className="hig__progress-ring__segment emotion-1"
       fill="#0ED3BE"
       fillRule="nonzero"
       points="22.48 5.52 21.67 14 26 14"
     />
     <polygon
-      className="hig__progress-ring__segment"
+      className="hig__progress-ring__segment emotion-1"
       fill="#0ED3BE"
       fillRule="nonzero"
       points="22.48 5.52 19.42 8.58 21.67 14"
     />
     <polygon
-      className="hig__progress-ring__segment"
+      className="hig__progress-ring__segment emotion-1"
       fill="#0ED3BE"
       fillRule="nonzero"
       points="14 2 19.42 8.58 22.48 5.52"
     />
     <polygon
-      className="hig__progress-ring__segment"
+      className="hig__progress-ring__segment emotion-1"
       fill="#0ED3BE"
       fillRule="nonzero"
       points="14 2 14 6.33 19.42 8.58"
     />
     <polygon
-      className="hig__progress-ring__mask"
+      className="hig__progress-ring__mask emotion-17"
       fill="#FFFFFF"
       fillRule="nonzero"
       points="19.42 19.42 14 21.67 8.58 19.42 6.33 14 8.58 8.58 14 6.33 19.42 8.58 21.67 14"
@@ -129,11 +174,56 @@ exports[`progress-ring/presenters/ProgressRingPresenter renders with all props 1
 `;
 
 exports[`progress-ring/presenters/ProgressRingPresenter renders without props 1`] = `
+.emotion-22 {
+  font-family: ArtifaktElement;
+  line-height: 1.6;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 {
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  fill: rgba(0,0,0,0.05);
+}
+
+.emotion-1 {
+  opacity: 0;
+}
+
+.emotion-1:nth-of-type(even) {
+  fill: #0696d7;
+}
+
+.emotion-1:nth-of-type(odd) {
+  fill: rgba(6,150,215,0.6);
+}
+
+.emotion-21 {
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  fill: #ffffff;
+}
+
 <div
   aria-valuemax="100"
   aria-valuemin="0"
   aria-valuenow={undefined}
-  className="hig__progress-ring"
+  className="emotion-22"
   role="progressbar"
 >
   <svg
@@ -145,133 +235,133 @@ exports[`progress-ring/presenters/ProgressRingPresenter renders without props 1`
     xmlnsXlink="http://www.w3.org/1999/xlink"
   >
     <polygon
-      className="hig__progress-ring__background"
+      className="hig__progress-ring__background emotion-0"
       fill={undefined}
       fillRule={undefined}
       points="54.81 10.11 36 4 17.19 10.11 5.57 26.11 5.57 45.89 17.19 61.89 36 68 54.81 61.89 66.43 45.89 66.43 26.11"
     />
     <polygon
-      className="hig__progress-ring__segment"
+      className="hig__progress-ring__segment emotion-1"
       fill="#0ED3BE"
       fillRule="nonzero"
       points="36 10.31 36 4 17.19 10.11"
     />
     <polygon
-      className="hig__progress-ring__segment"
+      className="hig__progress-ring__segment emotion-1"
       fill="#0CA899"
       fillRule="nonzero"
       points="36 10.31 17.19 10.11 20.9 15.215"
     />
     <polygon
-      className="hig__progress-ring__segment"
+      className="hig__progress-ring__segment emotion-1"
       fill="#0ED3BE"
       fillRule="nonzero"
       points="20.9 15.215 17.19 10.11 5.565 26.11"
     />
     <polygon
-      className="hig__progress-ring__segment"
+      className="hig__progress-ring__segment emotion-1"
       fill="#0CA899"
       fillRule="nonzero"
       points="20.9 15.215 5.565 26.11 11.565 28.06"
     />
     <polygon
-      className="hig__progress-ring__segment"
+      className="hig__progress-ring__segment emotion-1"
       fill="#0ED3BE"
       fillRule="nonzero"
       points="11.565 28.06 5.565 26.11 5.565 45.89"
     />
     <polygon
-      className="hig__progress-ring__segment"
+      className="hig__progress-ring__segment emotion-1"
       fill="#0CA899"
       fillRule="nonzero"
       points="11.565 28.06 5.565 45.89 11.565 43.94"
     />
     <polygon
-      className="hig__progress-ring__segment"
+      className="hig__progress-ring__segment emotion-1"
       fill="#0ED3BE"
       fillRule="nonzero"
       points="11.565 43.94 5.565 45.89 17.19 61.89"
     />
     <polygon
-      className="hig__progress-ring__segment"
+      className="hig__progress-ring__segment emotion-1"
       fill="#0CA899"
       fillRule="nonzero"
       points="11.565 43.94 17.19 61.89 20.9 56.785"
     />
     <polygon
-      className="hig__progress-ring__segment"
+      className="hig__progress-ring__segment emotion-1"
       fill="#0ED3BE"
       fillRule="nonzero"
       points="20.9 56.785 17.19 61.89 36 68"
     />
     <polygon
-      className="hig__progress-ring__segment"
+      className="hig__progress-ring__segment emotion-1"
       fill="#0CA899"
       fillRule="nonzero"
       points="20.9 56.785 36 68 36 61.69"
     />
     <polygon
-      className="hig__progress-ring__segment"
+      className="hig__progress-ring__segment emotion-1"
       fill="#0ED3BE"
       fillRule="nonzero"
       points="36 61.69 36 68 54.81 61.89"
     />
     <polygon
-      className="hig__progress-ring__segment"
+      className="hig__progress-ring__segment emotion-1"
       fill="#0CA899"
       fillRule="nonzero"
       points="36 61.69 54.81 61.89 51.1 56.785"
     />
     <polygon
-      className="hig__progress-ring__segment"
+      className="hig__progress-ring__segment emotion-1"
       fill="#0ED3BE"
       fillRule="nonzero"
       points="51.1 56.785 54.81 61.89 66.435 45.89"
     />
     <polygon
-      className="hig__progress-ring__segment"
+      className="hig__progress-ring__segment emotion-1"
       fill="#0CA899"
       fillRule="nonzero"
       points="51.1 56.785 66.435 45.89 60.435 43.94"
     />
     <polygon
-      className="hig__progress-ring__segment"
+      className="hig__progress-ring__segment emotion-1"
       fill="#0ED3BE"
       fillRule="nonzero"
       points="60.435 43.94 66.435 45.89 66.435 26.11"
     />
     <polygon
-      className="hig__progress-ring__segment"
+      className="hig__progress-ring__segment emotion-1"
       fill="#0CA899"
       fillRule="nonzero"
       points="60.435 43.94 66.435 26.11 60.435 28.06"
     />
     <polygon
-      className="hig__progress-ring__segment"
+      className="hig__progress-ring__segment emotion-1"
       fill="#0ED3BE"
       fillRule="nonzero"
       points="60.435 28.06 66.435 26.11 54.81 10.11"
     />
     <polygon
-      className="hig__progress-ring__segment"
+      className="hig__progress-ring__segment emotion-1"
       fill="#0CA899"
       fillRule="nonzero"
       points="60.435 28.06 54.81 10.11 51.1 15.215"
     />
     <polygon
-      className="hig__progress-ring__segment"
+      className="hig__progress-ring__segment emotion-1"
       fill="#0ED3BE"
       fillRule="nonzero"
       points="51.1 15.215 54.81 10.11 36 4"
     />
     <polygon
-      className="hig__progress-ring__segment"
+      className="hig__progress-ring__segment emotion-1"
       fill="#0CA899"
       fillRule="nonzero"
       points="51.1 15.215 36 4 36 10.31"
     />
     <polygon
-      className="hig__progress-ring__mask"
+      className="hig__progress-ring__mask emotion-21"
       fill="#FFFFFF"
       fillRule="nonzero"
       points="60.43 43.94 51.1 56.78 36 61.69 20.9 56.78 11.57 43.94 11.57 28.06 20.9 15.22 36 10.31 51.1 15.22 60.43 28.07"

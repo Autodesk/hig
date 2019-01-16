@@ -43,7 +43,6 @@ const COLOR_THEME_IDS = {
 };
 
 function themeOptions(themeIds) {
-  console.log(themeIds);
   return themeIds.reduce((acc, id) => {
     const theme = themes[DEFAULT_DENSITY_ID][id];
     return {
@@ -94,6 +93,7 @@ const KnobbedThemeProvider = ({ children, supportedThemes }) => {
     knobGroup
   );
   const theme = themes[densityId][themeId];
+  console.log("provider", theme.metadata.colorSchemeId);
   return (
     <ThemeContext.Provider value={theme}>
       <Surface>{children}</Surface>

@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { css } from "emotion";
 
 import SVGPresenter from "./SVGPresenter";
 
@@ -7,8 +8,7 @@ import Small from "./smallSVG";
 import Medium from "./mediumSVG";
 import ExtraSmall from "./xsmallSVG";
 import availableSizes from "../availableSizes";
-
-import "./ProgressRingPresenter.scss";
+import stylesheet from "./stylesheet";
 
 const sizes = {
   xs: {
@@ -34,13 +34,13 @@ const sizes = {
 };
 
 export default function ProgressRingPresenter(props) {
-  const { innerRef, percentComplete, size } = props;
+  const { innerRef, percentComplete, size, cssTransitionState } = props;
   const SVG = sizes[size].svg;
   const originalSize = sizes[size].svg === Medium ? 72 : sizes[size].size;
 
   return (
     <div
-      className="hig__progress-ring"
+      className={css(stylesheet(props, {}).ring)}
       role="progressbar"
       aria-valuemin="0"
       aria-valuemax="100"
@@ -52,6 +52,7 @@ export default function ProgressRingPresenter(props) {
         width={sizes[size].size}
         original={originalSize}
         svgData={SVG}
+        cssTransitionState={cssTransitionState}
       />
     </div>
   );
@@ -62,5 +63,6 @@ ProgressRingPresenter.defaultProps = { size: "m" };
 ProgressRingPresenter.propTypes = {
   innerRef: PropTypes.func,
   percentComplete: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  size: PropTypes.oneOf(availableSizes)
+  size: PropTypes.oneOf(availableSizes),
+  cssTransitionState: PropTypes.string
 };
