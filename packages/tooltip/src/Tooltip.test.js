@@ -1,4 +1,4 @@
-import { anchorPoints } from "@hig/flyout/src";
+import { anchorPoints } from "@hig/flyout";
 import Button from "@hig/button";
 import React from "react";
 import { takeSnapshotsOf } from "@hig/jest-preset/helpers";

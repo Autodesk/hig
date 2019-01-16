@@ -101,17 +101,6 @@ export default class Flyout extends Component {
     window.document.body.addEventListener("click", this.handleBodyClick);
   }
 
-  componentDidUpdate() {
-    setTimeout(() => {
-      const { containerPosition, pointerPosition } = this.getCoordinates();
-      const { panelWrapperRef, pointerRef } = this.state;
-      panelWrapperRef.style.top = `${containerPosition.top}px`;
-      panelWrapperRef.style.left = `${containerPosition.left}px`;
-      pointerRef.style.top = `${pointerPosition.top}px`;
-      pointerRef.style.left = `${pointerPosition.left}px`;
-    }, 100);
-  }
-
   componentWillUnmount() {
     window.document.body.removeEventListener("click", this.handleBodyClick);
   }
@@ -236,13 +225,6 @@ export default class Flyout extends Component {
   };
 
   /**
-   * @param {HTMLElement} panelWrapperRef
-   */
-  refPanelWrapper = panelWrapperRef => {
-    this.setState({ panelWrapperRef });
-  };
-
-  /**
    * @param {HTMLDivElement} wrapperRef
    */
   refWrapper = wrapperRef => {
@@ -322,12 +304,15 @@ export default class Flyout extends Component {
       handleChildMouseLeave,
       refAction,
       refPointer,
-      refWrapper,
-      refPanelWrapper
+      refWrapper
     } = this;
     const { openOnHoverDelay, pointer } = this.props;
     const panel = this.renderPanel({ transitionStatus });
-    const { anchorPoint } = this.getCoordinates();
+    const {
+      anchorPoint,
+      containerPosition,
+      pointerPosition
+    } = this.getCoordinates();
 
     return (
       <DelayedHoverBehavior
@@ -338,10 +323,11 @@ export default class Flyout extends Component {
         {({ onMouseEnter, onMouseLeave }) => (
           <FlyoutPresenter
             anchorPoint={anchorPoint}
+            containerPosition={containerPosition}
             panel={panel}
             pointer={pointer}
+            pointerPosition={pointerPosition}
             refAction={refAction}
-            refPanelWrapper={refPanelWrapper}
             refPointer={refPointer}
             refWrapper={refWrapper}
             transitionStatus={transitionStatus}
