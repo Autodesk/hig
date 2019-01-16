@@ -1,19 +1,23 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import cx from "classnames";
-import { generateId } from "@hig/utils";
+import { css } from "emotion";
+import { ThemeContext } from "@hig/theme-context";
 
 import ButtonPresenter from "./ButtonPresenter";
-import "./RadioButtonPresenter.scss";
+import stylesheet from "./stylesheet";
 
 export default class RadioButtonPresenter extends Component {
   static propTypes = {
     /**
-     * Checks the checkbox
+     * HTML id of the element
+     */
+    id: PropTypes.string,
+    /**
+     * Checks the radio button
      */
     checked: PropTypes.bool,
     /**
-     * Initially checks the checkbox, but allows user action to change it
+     * Initially checks the radio button, but allows user action to change it
      */
     defaultChecked: PropTypes.bool,
     /**
@@ -21,11 +25,7 @@ export default class RadioButtonPresenter extends Component {
      */
     disabled: PropTypes.bool,
     /**
-     * Text identifying the field
-     */
-    label: PropTypes.string,
-    /**
-     * The name of the checkbox as submitted with a form
+     * The name of the radio button as submitted with a form
      */
     name: PropTypes.string,
     /**
@@ -45,13 +45,21 @@ export default class RadioButtonPresenter extends Component {
      */
     onFocus: PropTypes.func,
     /**
-     * Marks the field as required, text shown to explain requirment
-     */
-    required: PropTypes.string,
-    /**
      * Value submitted with a form if checked
      */
-    value: PropTypes.string
+    value: PropTypes.string,
+    /**
+     * Returns whether or not the button is currently focused
+     */
+    hasFocus: PropTypes.bool,
+    /**
+     * Returns whether or not the button is currently hovered
+     */
+    hasHover: PropTypes.bool,
+    /**
+     * Returns whether or not the button is currently pressed
+     */
+    isPressed: PropTypes.bool
   };
 
   static defaultProps = {
@@ -60,56 +68,47 @@ export default class RadioButtonPresenter extends Component {
     value: "value"
   };
 
-  id = generateId("radio-button");
-
   render() {
     const {
       checked,
       defaultChecked,
       disabled,
-      label,
-      name,
-      onBlur,
-      onChange,
-      onClick,
-      onFocus,
-      required,
-      value
+      hasFocus,
+      hasHover,
+      isPressed,
+      ...otherProps
     } = this.props;
 
-    const labelClasses = cx(["hig__radio-button__label"]);
-
-    const wrapperClasses = cx([
-      "hig__radio-button",
-      {
-        "hig__radio-button--required": required,
-        "hig__radio-button--checked": checked
-      }
-    ]);
-
-    const { id } = this;
-
     return (
-      <div className={wrapperClasses}>
-        <input
-          id={id}
-          checked={checked}
-          className="hig__radio-button__input"
-          defaultChecked={defaultChecked}
-          disabled={disabled}
-          name={name}
-          onBlur={onBlur}
-          onChange={onChange}
-          onClick={onClick}
-          onFocus={onFocus}
-          type="radio"
-          value={value}
-        />
-        <ButtonPresenter checked={checked} disabled={disabled} />
-        <label htmlFor={id} className={labelClasses}>
-          {label}
-        </label>
-      </div>
+      <ThemeContext.Consumer>
+        {({ resolvedRoles, metadata }) => {
+          const styles = stylesheet(
+            { isPressed, hasFocus, hasHover, checked, disabled, ...this.props },
+            resolvedRoles,
+            metadata.colorSchemeId
+          );
+
+          return (
+            <div className={css(styles.radioButton)}>
+              <div className={css(styles.radioButtonContainer)}>
+                <input
+                  defaultChecked={defaultChecked}
+                  disabled={disabled}
+                  type="radio"
+                  className={css(styles.radioButtonInput)}
+                  {...otherProps}
+                />
+                <ButtonPresenter
+                  hasFocus={hasFocus}
+                  hasHover={hasHover}
+                  isPressed={isPressed}
+                  disabled={disabled}
+                />
+              </div>
+            </div>
+          );
+        }}
+      </ThemeContext.Consumer>
     );
   }
 }

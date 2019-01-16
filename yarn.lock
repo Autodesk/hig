@@ -143,6 +143,15 @@
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.2.tgz#63985d3d8b02530e0869962f4da09142ee8e200e"
 
+"@hig/avatar@^0.1.0":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@hig/avatar/-/avatar-0.1.3.tgz#ae677a50374b14c02ca829e03ee05b085cf3f453"
+  integrity sha512-ahM3xHvLQIL10KcYU3TJ7nxvcxH5DeO2LppZS4xi8bMuJFuG9JTcmiGj/C708vC9LK2cOaTHQliSAWOvcsigbg==
+  dependencies:
+    classnames "^2.2.5"
+    prop-types "^15.6.1"
+    react-lifecycles-compat "^3.0.2"
+
 "@hig/flyout@^0.8.0", "@hig/flyout@^0.8.1":
   version "0.8.1"
   resolved "https://registry.yarnpkg.com/@hig/flyout/-/flyout-0.8.1.tgz#501f3fe1179634c5bd74009dde2ace7b502e2259"
@@ -153,10 +162,44 @@
     prop-types "^15.6.1"
     react-transition-group "^2.3.1"
 
+"@hig/icon-button@^0.1.0":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@hig/icon-button/-/icon-button-0.1.3.tgz#d77690d86c11c1718f4ef82e4942754a3f32614e"
+  integrity sha512-bV11b2yh0Q8sMBf8hIZ706wEF0sDoy8zO8bGnQNEmiE/rCGX4iW1u337+F8q2b3yLDANccgq/DoBsG7GIA2d5A==
+  dependencies:
+    "@hig/icon" "^0.1.3"
+    classnames "^2.2.5"
+    prop-types "^15.6.1"
+
+"@hig/icon@^0.1.0", "@hig/icon@^0.1.3":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@hig/icon/-/icon-0.1.3.tgz#544dc3f4b3cec52d1782bac8620a91e6de42f7a1"
+  integrity sha512-+hhDF5G9CtTVgznEF47490rLGxo69OGgEbV8FOWUtcMJm3OPMpbqo/O0grCkJ3OLhDLLXQoQZ2jvq9DG9oQTmA==
+  dependencies:
+    "@hig/icons" "^0.1.0"
+    classnames "^2.2.5"
+    prop-types "^15.6.1"
+
+"@hig/icons@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@hig/icons/-/icons-0.1.0.tgz#f33de7287675a2b3e9b88658a2221f8e552f81b3"
+  integrity sha1-8z3nKHZ1orPpuIZYoiIfjlUvgbM=
+
 "@hig/icons@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@hig/icons/-/icons-1.0.0.tgz#b2e023887beae46934a919816a56f4c9f995a9bc"
   integrity sha512-5cxrts555oxLT+4+iKFe1emb3tajSZAxrcNiXnmYcWi+atkMWWM7e6wGc5+cv45HyM6MCZqEaaS/nEW5avgv3w==
+
+"@hig/radio-button@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@hig/radio-button/-/radio-button-0.1.2.tgz#cfc91398b8a5452e00f7c0b801ba860f467dfe5f"
+  integrity sha512-QXtGyTEe+3ZYmiQoVIrTuPYhrXMf8ezNcVQEpEpKmNsk04D8+W0sR+KWlyrzx91dZEzITFp7MO8flD0T6onYow==
+  dependencies:
+    "@hig/utils" "^0.2.1"
+    classnames "^2.2.5"
+    hig-react "0.29.0"
+    prop-types "^15.6.1"
+    react-lifecycles-compat "^3.0.4"
 
 "@hig/skeleton-item@^0.3.0":
   version "0.3.1"
@@ -184,13 +227,18 @@
     "@hig/theme-data-poc" "^0.0.8-alpha"
     prop-types "^15.6.1"
 
-"@hig/typography@^0.1.3", "@hig/typography@^0.1.4":
+"@hig/typography@^0.1.0", "@hig/typography@^0.1.3", "@hig/typography@^0.1.4":
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/@hig/typography/-/typography-0.1.4.tgz#5609094a480d803482d3ddc3cf237d77d96027a3"
   integrity sha512-wfHWgNMaDEYJns1oT+0nRYCgBMmanRhuIBOnmLAbjTY+JGwoWJeR7Nw3b8acQM2PzOjNMIU9PDCJy7sWuViP9A==
   dependencies:
     classnames "^2.2.5"
     prop-types "^15.6.1"
+
+"@hig/utils@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@hig/utils/-/utils-0.2.1.tgz#5a8403776a2a05d781d17cace92deb7ea4e80c4b"
+  integrity sha512-4wxoWJYjaRtGsyo+J0d8o8x8+7u12XFcoOfOtlCOzGxCoDIglZOno0mwDXGdnpnnRj7yofOOuQ0aKmwnCIf8VQ==
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
@@ -5839,6 +5887,33 @@ he@^1.1.1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/he/-/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
 
+hig-interface@^0.1.19:
+  version "0.1.19"
+  resolved "https://registry.yarnpkg.com/hig-interface/-/hig-interface-0.1.19.tgz#c171f6327b89aa8a18ddd77a70aac04c65981395"
+  integrity sha512-24Hvg/ocacxVBX9aOPWT2nkmkz2inujvEQjeDGja6KEdmBOwvosmrstpVvq6Z9W8UecPh6ILzN88PWrXqzjURQ==
+
+hig-react@0.29.0:
+  version "0.29.0"
+  resolved "https://registry.yarnpkg.com/hig-react/-/hig-react-0.29.0.tgz#f40760f142163aa240af663333d499e4444f3e9c"
+  integrity sha512-cSULxWZOowauICmuPJ/kG6bMDktinRGUo8WC1fNvrUhlw4i5xD5vijrifhI0N+JIwsCuImDbPWGVnaUkghOt3Q==
+  dependencies:
+    "@hig/avatar" "^0.1.0"
+    "@hig/icon" "^0.1.0"
+    "@hig/icon-button" "^0.1.0"
+    "@hig/icons" "^0.1.0"
+    "@hig/timestamp" "^0.1.0"
+    "@hig/typography" "^0.1.0"
+    hig-vanilla "^0.1.27"
+    react-flip-move "^3.0.1"
+    react-transition-group "^2.3.0"
+
+hig-vanilla@^0.1.27:
+  version "0.1.27"
+  resolved "https://registry.yarnpkg.com/hig-vanilla/-/hig-vanilla-0.1.27.tgz#2c467f753e54d2099e46d9aaad19d4990ef84925"
+  integrity sha512-8uPOSALlMw15JBLEGLn+l5dXMlOuz5vPBYPtyAIGX1yuZhRirWYcIFjk7ccgkS38aNjWfwzAkrP+fRBNbnqz8A==
+  dependencies:
+    hig-interface "^0.1.19"
+
 hmac-drbg@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/hmac-drbg/-/hmac-drbg-1.0.1.tgz#d2745701025a6c775a6c545793ed502fc0c649a1"
@@ -9740,7 +9815,7 @@ react-is@^16.5.2:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.6.3.tgz#d2d7462fcfcbe6ec0da56ad69047e47e56e7eac0"
   integrity sha512-u7FDWtthB4rWibG/+mFbVd5FvdI20yde86qKGx4lVUTWmPlSWQ4QxbBIrrs+HnXGbxOUlUzTAP/VDmvCwaP2yA==
 
-react-lifecycles-compat@^3.0.0, react-lifecycles-compat@^3.0.4:
+react-lifecycles-compat@^3.0.0, react-lifecycles-compat@^3.0.2, react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
 

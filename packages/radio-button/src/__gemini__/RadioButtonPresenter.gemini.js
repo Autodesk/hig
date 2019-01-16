@@ -20,15 +20,6 @@ gemini.suite("RadioButtonPresenter", () => {
       });
   });
 
-  gemini.suite("required", suite => {
-    suite
-      .setUrl(
-        "iframe.html?selectedKind=RadioButtonPresenter&selectedStory=required"
-      )
-      .setCaptureElements(".storybook-component")
-      .capture("required - unfocused");
-  });
-
   gemini.suite("disabled", suite => {
     suite
       .setUrl(
