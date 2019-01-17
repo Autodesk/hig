@@ -60,8 +60,6 @@ export default {
   red800: { value: "#6f1111", type: COLOR },
   red900: { value: "#630f0f", type: COLOR },
 
-  sliderDarkBlueThumbColor: { value: "#e9eaeb", type: COLOR },
-
   turquoise100: { value: "#d6f2ef", type: COLOR },
   turquoise200: { value: "#ade4de", type: COLOR },
   turquoise300: { value: "#84d7ce", type: COLOR },
