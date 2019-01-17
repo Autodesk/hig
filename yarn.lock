@@ -185,6 +185,11 @@
   resolved "https://registry.yarnpkg.com/@hig/icons/-/icons-0.1.0.tgz#f33de7287675a2b3e9b88658a2221f8e552f81b3"
   integrity sha1-8z3nKHZ1orPpuIZYoiIfjlUvgbM=
 
+"@hig/icons@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@hig/icons/-/icons-1.0.0.tgz#b2e023887beae46934a919816a56f4c9f995a9bc"
+  integrity sha512-5cxrts555oxLT+4+iKFe1emb3tajSZAxrcNiXnmYcWi+atkMWWM7e6wGc5+cv45HyM6MCZqEaaS/nEW5avgv3w==
+
 "@hig/progress-bar@^0.1.0":
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/@hig/progress-bar/-/progress-bar-0.1.0.tgz#fd1159ee3f5dc03c8662ea7bda54fd512ccc8bac"
