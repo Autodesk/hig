@@ -111,12 +111,23 @@ exports[`profile-flyout/ProfileFlyout renders with all props 1`] = `
   </div>
   <div
     className="emotion-8"
+    style={
+      Object {
+        "left": "0px",
+        "top": "0px",
+      }
+    }
   >
     <div
       aria-hidden="true"
       className="emotion-5"
       role="presentation"
-      style={undefined}
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
     >
       <svg
         height="24"
@@ -260,12 +271,23 @@ exports[`profile-flyout/ProfileFlyout renders with no props 1`] = `
   </div>
   <div
     className="emotion-8"
+    style={
+      Object {
+        "left": "0px",
+        "top": "0px",
+      }
+    }
   >
     <div
       aria-hidden="true"
       className="emotion-5"
       role="presentation"
-      style={undefined}
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
     >
       <svg
         height="24"

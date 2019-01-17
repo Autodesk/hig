@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`checkbox/presenters/CheckboxPresenter renders with all props 1`] = `
-.emotion-4 {
+.emotion-6 {
   box-sizing: border-box;
   display: inline-block;
   position: relative;
@@ -21,11 +21,19 @@ exports[`checkbox/presenters/CheckboxPresenter renders with all props 1`] = `
   margin: 0;
 }
 
-.emotion-2 {
+.emotion-4 {
   display: none;
 }
 
-.emotion-3 {
+.emotion-1 {
+  fill: #808080;
+}
+
+.emotion-1 > * {
+  fill: #808080;
+}
+
+.emotion-5 {
   position: relative;
   display: block;
   box-sizing: border-box;
@@ -46,7 +54,7 @@ exports[`checkbox/presenters/CheckboxPresenter renders with all props 1`] = `
   border-style: dotted;
 }
 
-.emotion-3 svg {
+.emotion-5 svg {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -55,16 +63,16 @@ exports[`checkbox/presenters/CheckboxPresenter renders with all props 1`] = `
   transform: translateX(-50%) translateY(-50%);
 }
 
-.emotion-3 svg * {
+.emotion-5 svg * {
   fill: #ffffff;
 }
 
-.emotion-1 {
+.emotion-2 {
   display: block;
 }
 
 <div
-  className="emotion-4"
+  className="emotion-6"
 >
   <input
     checked={true}
@@ -84,15 +92,16 @@ exports[`checkbox/presenters/CheckboxPresenter renders with all props 1`] = `
     value="value"
   />
   <span
-    className="emotion-3"
+    className="emotion-5"
   >
     <span
-      className="emotion-1"
+      className="emotion-2"
     >
       <svg
-        height="8"
+        className="emotion-1"
+        height="8px"
         viewBox="0 0 10 8"
-        width="10"
+        width="10px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <title>
@@ -108,12 +117,13 @@ exports[`checkbox/presenters/CheckboxPresenter renders with all props 1`] = `
       </svg>
     </span>
     <span
-      className="emotion-2"
+      className="emotion-4"
     >
       <svg
-        height="2"
+        className="emotion-1"
+        height="2px"
         viewBox="0 0 8 2"
-        width="8"
+        width="8px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <title>
@@ -131,7 +141,7 @@ exports[`checkbox/presenters/CheckboxPresenter renders with all props 1`] = `
 `;
 
 exports[`checkbox/presenters/CheckboxPresenter renders without props 1`] = `
-.emotion-4 {
+.emotion-6 {
   box-sizing: border-box;
   display: inline-block;
   position: relative;
@@ -151,7 +161,7 @@ exports[`checkbox/presenters/CheckboxPresenter renders without props 1`] = `
   margin: 0;
 }
 
-.emotion-3 {
+.emotion-5 {
   position: relative;
   display: block;
   box-sizing: border-box;
@@ -167,7 +177,7 @@ exports[`checkbox/presenters/CheckboxPresenter renders without props 1`] = `
   cursor: default;
 }
 
-.emotion-3 svg {
+.emotion-5 svg {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -176,16 +186,24 @@ exports[`checkbox/presenters/CheckboxPresenter renders without props 1`] = `
   transform: translateX(-50%) translateY(-50%);
 }
 
-.emotion-3 svg * {
+.emotion-5 svg * {
   fill: #ffffff;
 }
 
-.emotion-1 {
+.emotion-2 {
   display: none;
 }
 
+.emotion-1 {
+  fill: #808080;
+}
+
+.emotion-1 > * {
+  fill: #808080;
+}
+
 <div
-  className="emotion-4"
+  className="emotion-6"
 >
   <input
     checked={false}
@@ -204,13 +222,16 @@ exports[`checkbox/presenters/CheckboxPresenter renders without props 1`] = `
     value="value"
   />
   <span
-    className="emotion-3"
+    className="emotion-5"
   >
     <span
-      className="emotion-1"
+      className="emotion-2"
     >
       <svg
+        className="emotion-1"
+        height="16px"
         viewBox="0 0 16 16"
+        width="16px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -219,12 +240,13 @@ exports[`checkbox/presenters/CheckboxPresenter renders without props 1`] = `
       </svg>
     </span>
     <span
-      className="emotion-1"
+      className="emotion-2"
     >
       <svg
-        height="2"
+        className="emotion-1"
+        height="2px"
         viewBox="0 0 8 2"
-        width="8"
+        width="8px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <title>
