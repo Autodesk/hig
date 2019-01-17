@@ -1,15 +1,40 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tooltip/presenters/TextPresenter renders with children 1`] = `
+.emotion-1 {
+  white-space: nowrap;
+}
+
+.emotion-2 {
+  min-height: 32px;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.emotion-0 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0;
+  text-align: initial;
+}
+
 <div
-  className="hig__tooltip-v1__content"
+  className="emotion-2"
 >
   <span
-    className="hig__tooltip-v1__text-content"
+    className="emotion-1"
   >
     <span
-      className="hig__typography hig__typography__text hig__typography--hig-white"
-      style={Object {}}
+      className="emotion-0"
+      style={
+        Object {
+          "color": "#ffffff",
+        }
+      }
     >
       hi
     </span>
@@ -18,15 +43,40 @@ exports[`tooltip/presenters/TextPresenter renders with children 1`] = `
 `;
 
 exports[`tooltip/presenters/TextPresenter renders without props 1`] = `
+.emotion-1 {
+  white-space: nowrap;
+}
+
+.emotion-2 {
+  min-height: 32px;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.emotion-0 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0;
+  text-align: initial;
+}
+
 <div
-  className="hig__tooltip-v1__content"
+  className="emotion-2"
 >
   <span
-    className="hig__tooltip-v1__text-content"
+    className="emotion-1"
   >
     <span
-      className="hig__typography hig__typography__text hig__typography--hig-white"
-      style={Object {}}
+      className="emotion-0"
+      style={
+        Object {
+          "color": "#ffffff",
+        }
+      }
     >
       
     </span>

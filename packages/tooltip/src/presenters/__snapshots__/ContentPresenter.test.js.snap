@@ -1,8 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tooltip/presenters/ContentPresenter renders with children 1`] = `
+.emotion-0 {
+  min-height: 32px;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
 <div
-  className="hig__tooltip-v1__content"
+  className="emotion-0"
 >
   <span>
     Hello
@@ -11,7 +17,13 @@ exports[`tooltip/presenters/ContentPresenter renders with children 1`] = `
 `;
 
 exports[`tooltip/presenters/ContentPresenter renders without props 1`] = `
+.emotion-0 {
+  min-height: 32px;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
 <div
-  className="hig__tooltip-v1__content"
+  className="emotion-0"
 />
 `;
