@@ -18,7 +18,7 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/flyout": "^0.8.0",
+    "@hig/flyout": "^1.0.0",
     "@hig/icons": "^1.0.0",
     "classnames": "^2.2.5",
     "prop-types": "^15.6.1",
