@@ -1,3 +1,21 @@
+# [@hig/icons-v2.0.0](https://github.com/Autodesk/hig/compare/@hig/icons@1.0.0...@hig/icons@2.0.0) (2019-01-17)
+
+
+### chore
+
+* **icons:** release icons 2.0.0 ([b61b2cb](https://github.com/Autodesk/hig/commit/b61b2cb))
+
+
+### Features
+
+* **icons:** make icons themable ([56abadd](https://github.com/Autodesk/hig/commit/56abadd))
+* support color attribute on avatar ([c7121d1](https://github.com/Autodesk/hig/commit/c7121d1))
+
+
+### BREAKING CHANGES
+
+* **icons:** update package version to release icons 2.0.0
+
 # [@hig/icons-v1.0.0](https://github.com/Autodesk/hig/compare/@hig/icons@0.2.1...@hig/icons@1.0.0) (2018-12-04)
 
 
