@@ -102,12 +102,23 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
   </div>
   <div
     className="emotion-6"
+    style={
+      Object {
+        "left": "0px",
+        "top": "0px",
+      }
+    }
   >
     <div
       aria-hidden="true"
       className="emotion-3"
       role="presentation"
-      style={undefined}
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
     >
       <svg
         height="24"
@@ -293,12 +304,23 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
   </div>
   <div
     className="emotion-6"
+    style={
+      Object {
+        "left": "0px",
+        "top": "0px",
+      }
+    }
   >
     <div
       aria-hidden="true"
       className="emotion-3"
       role="presentation"
-      style={undefined}
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
     >
       <svg
         height="24"
@@ -484,12 +506,23 @@ exports[`notifications-flyout/NotificationsFlyout renders with all props 1`] = `
   </div>
   <div
     className="emotion-6"
+    style={
+      Object {
+        "left": "0px",
+        "top": "0px",
+      }
+    }
   >
     <div
       aria-hidden="true"
       className="emotion-3"
       role="presentation"
-      style={undefined}
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
     >
       <svg
         height="24"
@@ -697,12 +730,23 @@ exports[`notifications-flyout/NotificationsFlyout renders without props 1`] = `
   </div>
   <div
     className="emotion-6"
+    style={
+      Object {
+        "left": "0px",
+        "top": "0px",
+      }
+    }
   >
     <div
       aria-hidden="true"
       className="emotion-3"
       role="presentation"
-      style={undefined}
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
     >
       <svg
         height="24"

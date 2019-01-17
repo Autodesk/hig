@@ -120,12 +120,23 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
   </div>
   <div
     className="emotion-6"
+    style={
+      Object {
+        "left": "0px",
+        "top": "0px",
+      }
+    }
   >
     <div
       aria-hidden="true"
       className="emotion-3"
       role="presentation"
-      style={undefined}
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
     >
       <svg
         height="24"
@@ -393,12 +404,23 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
   </div>
   <div
     className="emotion-6"
+    style={
+      Object {
+        "left": "0px",
+        "top": "0px",
+      }
+    }
   >
     <div
       aria-hidden="true"
       className="emotion-3"
       role="presentation"
-      style={undefined}
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
     >
       <svg
         height="24"
