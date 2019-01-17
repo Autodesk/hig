@@ -20,7 +20,7 @@
   "dependencies": {
     "@hig/flyout": "^1.0.0",
     "@hig/icon-button": "^1.0.1",
-    "@hig/icons": "^1.0.0",
+    "@hig/icons": "^2.0.0",
     "@hig/notifications-flyout": "^1.0.3",
     "@hig/profile-flyout": "^1.0.1",
     "@hig/utils": "^0.3.0",
