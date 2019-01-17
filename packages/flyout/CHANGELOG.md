@@ -1,3 +1,15 @@
+# [@hig/flyout-v1.0.0](https://github.com/Autodesk/hig/compare/@hig/flyout@0.8.1...@hig/flyout@1.0.0) (2019-01-17)
+
+
+### Bug Fixes
+
+* remove padding based on density spacing ([335dc63](https://github.com/Autodesk/hig/commit/335dc63))
+
+
+### BREAKING CHANGES
+
+* The padding of the flyout container is 12px across all densities
+
 # [@hig/flyout-v0.8.1](https://github.com/Autodesk/hig/compare/@hig/flyout@0.8.0...@hig/flyout@0.8.1) (2019-01-09)
 
 
