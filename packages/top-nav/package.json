@@ -18,7 +18,7 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/flyout": "^0.8.0",
+    "@hig/flyout": "^1.0.0",
     "@hig/icon-button": "^1.0.1",
     "@hig/icons": "^1.0.0",
     "@hig/notifications-flyout": "^1.0.3",
