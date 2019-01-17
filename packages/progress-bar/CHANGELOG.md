@@ -1,3 +1,20 @@
+# [@hig/progress-bar-v1.0.0](https://github.com/Autodesk/hig/compare/@hig/progress-bar@0.1.0...@hig/progress-bar@1.0.0) (2019-01-17)
+
+
+### BREAKING
+
+* make progress bar themeable ([1c144cd](https://github.com/Autodesk/hig/commit/1c144cd))
+
+
+### Bug Fixes
+
+* blend end of gradient into background ([f953e13](https://github.com/Autodesk/hig/commit/f953e13))
+
+
+### BREAKING CHANGES
+
+* With the addition of theme-data, all css classes in the elements have been removed.
+
 # [@hig/progress-bar-v0.1.0](https://github.com/Autodesk/hig/compare/@hig/progress-bar@0.0.0...@hig/progress-bar@0.1.0) (2018-09-11)
 
 
