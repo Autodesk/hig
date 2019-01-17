@@ -62,9 +62,6 @@ export default function(props, themeData) {
   const shadowColor = themeData
     ? getStyle(themeData, `flyout.shadowColor`)
     : `transparent`;
-  const densitySmall = themeData
-    ? getStyle(themeData, `density.spacings.small`)
-    : 0;
 
   return {
     flyoutWrapper: {
@@ -105,7 +102,7 @@ export default function(props, themeData) {
       minWidth: `200px`,
       maxWidth: `400px`,
       maxHeight: `360px`,
-      padding: densitySmall,
+      padding: `12px`,
       overflowY: `auto`,
       msOverflowStyle: `-ms-autohiding-scrollbar`
     },

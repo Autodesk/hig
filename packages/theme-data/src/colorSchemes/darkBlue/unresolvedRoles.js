@@ -8,7 +8,10 @@ import checkbox from "./components/checkbox";
 import formField from "./components/formField";
 import input from "./components/input";
 import label from "./components/label";
+import progressBar from "./components/progressBar";
 import skeletonItem from "./components/skeletonItem";
+import slider from "./components/slider";
+import tooltip from "./components/tooltip";
 
 const darkBlueThemeConfig = extendTheme(
   baseTheme.unresolvedRoles,
@@ -21,7 +24,10 @@ const darkBlueThemeConfig = extendTheme(
     formField,
     input,
     label,
-    skeletonItem
+    progressBar,
+    skeletonItem,
+    slider,
+    tooltip
   )
 );
 

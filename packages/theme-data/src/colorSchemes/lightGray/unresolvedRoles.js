@@ -7,7 +7,7 @@ import formField from "./components/formField";
 import label from "./components/label";
 import skeletonItem from "./components/skeletonItem";
 
-const lightGrayConfig = extendTheme(
+const lightGrayThemeConfig = extendTheme(
   baseTheme.unresolvedRoles,
   Object.assign(
     {},
@@ -19,4 +19,4 @@ const lightGrayConfig = extendTheme(
   )
 );
 
-export default lightGrayConfig;
+export default lightGrayThemeConfig;

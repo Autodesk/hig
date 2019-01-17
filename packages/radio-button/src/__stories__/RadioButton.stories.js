@@ -1,5 +1,7 @@
+import React from "react";
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
+import KnobbedThemeProvider from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
 
 import infoOptions from "./infoOptions";
 import renderStory from "./renderStory";
@@ -10,9 +12,13 @@ const storybook = storiesOf("Forms|RadioButton", module);
 stories.forEach(({ description, getProps }) => {
   storybook.add(
     description,
-    withInfo(infoOptions)(() => {
+    withInfo({
+      ...infoOptions,
+      propTablesExclude: [KnobbedThemeProvider]
+    })(() => {
       const props = getProps();
-      return renderStory(props);
+
+      return <KnobbedThemeProvider>{renderStory(props)}</KnobbedThemeProvider>;
     })
   );
 });

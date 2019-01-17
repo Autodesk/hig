@@ -18,9 +18,10 @@ import colorSchemes from "../src/colorSchemes";
 import densities from "../src/densities";
 import generateAllThemes from "../src/utils/generateAllThemes";
 
-const buildPath = path.join(process.cwd(), "build/json");
+const buildJSONPath = path.join(process.cwd(), "build/json");
+const buildESMPath = path.join(process.cwd(), "build/esm");
 
-function writeFile(dirPath, fileName, data) {
+function writeJSONFile(dirPath, fileName, data) {
   mkdirp.sync(dirPath);
   fs.writeFileSync(
     path.join(dirPath, `${fileName}.json`),
@@ -28,14 +29,38 @@ function writeFile(dirPath, fileName, data) {
   );
 }
 
+function writeESMFile(dirPath, fileName, data) {
+  mkdirp.sync(dirPath);
+
+  const exportNames = Object.keys(data).join(", ");
+  const fileData = `const themeData = ${JSON.stringify(data, null, 2)};
+const { ${exportNames} } = themeData;
+export { ${exportNames} };
+export default themeData;
+`;
+
+  fs.writeFileSync(path.join(dirPath, `${fileName}.js`), fileData);
+}
+
 function writeTheme(theme) {
   const { metadata, unresolvedRoles, resolvedRoles } = theme;
-  const themePath = path.join(buildPath, metadata.fileName);
+  const themeJSONPath = path.join(buildJSONPath, metadata.fileName);
 
-  writeFile(themePath, "resolvedRoles", resolvedRoles);
-  writeFile(themePath, "unresolvedRoles", unresolvedRoles);
-  writeFile(themePath, "metadata", metadata);
-  writeFile(themePath, "theme", { metadata, resolvedRoles });
+  writeJSONFile(themeJSONPath, "resolvedRoles", resolvedRoles);
+  writeJSONFile(themeJSONPath, "unresolvedRoles", unresolvedRoles);
+  writeJSONFile(themeJSONPath, "metadata", metadata);
+  writeJSONFile(themeJSONPath, "theme", { metadata, resolvedRoles });
+
+  writeESMFile(buildESMPath, metadata.fileName, {
+    metadata,
+    resolvedRoles
+  });
+
+  writeESMFile(path.join(buildESMPath, "unresolved"), metadata.fileName, {
+    metadata,
+    resolvedRoles,
+    unresolvedRoles
+  });
 }
 
 generateAllThemes(colorSchemes, densities).forEach(writeTheme);

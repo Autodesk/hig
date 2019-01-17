@@ -18,7 +18,6 @@
   ],
   "dependencies": {
     "@hig/utils": "^0.3.0",
-    "downshift": "^3.1.7",
     "prop-types": "^15.6.1"
   },
   "devDependencies": {
@@ -28,6 +27,7 @@
     "@hig/semantic-release-config": "^0.1.0"
   },
   "peerDependencies": {
+    "downshift": "^3.1.7",
     "react": "^15.4.1 || ^16.3.2"
   },
   "scripts": {

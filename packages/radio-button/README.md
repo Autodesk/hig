@@ -16,11 +16,10 @@ yarn add @hig/radio-button
 
 ```js
 import RadioButton from '@hig/radio-button';
-import '@hig/radio-button/build/index.css';
 ```
 
 ## Basic usage
 
 ```jsx
-<RadioButton label="Yes or No?" />
+<RadioButton name="radio-button-group" value="Yes" />
 ```

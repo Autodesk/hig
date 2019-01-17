@@ -23,7 +23,7 @@
     "@hig/button": "^1.2.0",
     "@hig/checkbox": "^2.0.0",
     "@hig/dropdown": "^1.0.1",
-    "@hig/flyout": "^0.8.0",
+    "@hig/flyout": "^0.8.1",
     "@hig/icon-button": "^1.0.1",
     "@hig/icons": "^1.0.0",
     "@hig/modal": "^1.0.1",
@@ -49,7 +49,7 @@
     "@hig/timestamp": "^0.1.4",
     "@hig/tooltip": "^0.4.1",
     "@hig/top-nav": "^2.0.1",
-    "@hig/typography": "^0.1.4"
+    "@hig/typography": "^1.0.0"
   },
   "peerDependencies": {
     "react": "^15.4.1 || ^16.3.2"
