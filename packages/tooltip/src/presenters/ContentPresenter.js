@@ -1,10 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { css } from "emotion";
 
-import "./ContentPresenter.scss";
+import stylesheet from "./stylesheet";
 
 export default function ContentPresenter({ children }) {
-  return <div className="hig__tooltip-v1__content">{children}</div>;
+  const styles = stylesheet();
+
+  return <div className={css(styles.content)}>{children}</div>;
 }
 
 ContentPresenter.propTypes = {
