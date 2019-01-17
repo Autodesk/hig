@@ -1,3 +1,21 @@
+# [@hig/radio-button-v1.0.0](https://github.com/Autodesk/hig/compare/@hig/radio-button@0.1.2...@hig/radio-button@1.0.0) (2019-01-17)
+
+
+### Bug Fixes
+
+* **radio-button:** support web light theme ([6355840](https://github.com/Autodesk/hig/commit/6355840))
+
+
+### Features
+
+* **radio-button:** Themable radio button ([fcc1b0e](https://github.com/Autodesk/hig/commit/fcc1b0e))
+
+
+### BREAKING CHANGES
+
+* **radio-button:** Radio button has a new API.
+Radio button no longer includes a label. Use the @hig/label component instead.
+
 # [@hig/radio-button-v0.1.2](https://github.com/Autodesk/hig/compare/@hig/radio-button@0.1.1...@hig/radio-button@0.1.2) (2018-08-24)
 
 
