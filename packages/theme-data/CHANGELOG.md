@@ -1,3 +1,13 @@
+# [@hig/theme-data-v1.5.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@1.4.0...@hig/theme-data@1.5.0) (2019-01-17)
+
+
+### Features
+
+* add theme data roles for progress bar ([e514e25](https://github.com/Autodesk/hig/commit/e514e25))
+* add theme data roles for slider ([cce248b](https://github.com/Autodesk/hig/commit/cce248b))
+* Add tooltip roles to base theme ([da0c38a](https://github.com/Autodesk/hig/commit/da0c38a))
+* make theme data available as ES6 modules ([9f0d889](https://github.com/Autodesk/hig/commit/9f0d889)), closes [#ff0000](https://github.com/Autodesk/hig/issues/ff0000)
+
 # [@hig/theme-data-v1.4.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@1.3.0...@hig/theme-data@1.4.0) (2019-01-03)
 
 

@@ -1,3 +1,29 @@
+# [@hig/theme-context-v2.0.0](https://github.com/Autodesk/hig/compare/@hig/theme-context@1.0.1...@hig/theme-context@2.0.0) (2019-01-17)
+
+
+### Bug Fixes
+
+* change default theme LightGray -> WebLight ([7d50a68](https://github.com/Autodesk/hig/commit/7d50a68))
+
+
+### BREAKING CHANGES
+
+* If you would like to continue using the HIG Light Gray theme now that
+it's no longer the default, you will need to specify that theme when you
+initialize the `ThemeContext.Provider`. For instance
+
+```
+import HIGLightTheme from "@hig/theme-data/build/json/lightGrayMediumDensityTheme/theme.json";
+
+// ...
+
+<ThemeContext.Provider value={HIGLightTheme}>
+  <ThemeContext.Consumer>
+    // ...
+  </ThemeContext.Consumer>
+</ThemeContext.Provider>
+```
+
 # [@hig/theme-context-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/theme-context@1.0.0...@hig/theme-context@1.0.1) (2018-11-27)
 
 

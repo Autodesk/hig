@@ -1,3 +1,10 @@
+# [@hig/components-v1.0.5](https://github.com/Autodesk/hig/compare/@hig/components@1.0.4...@hig/components@1.0.5) (2019-01-17)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/typography to version 1.0.0 ([37e169d](https://github.com/Autodesk/hig/commit/37e169d))
+
 # [@hig/components-v1.0.4](https://github.com/Autodesk/hig/compare/@hig/components@1.0.3...@hig/components@1.0.4) (2019-01-08)
 
 
