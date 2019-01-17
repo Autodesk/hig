@@ -43,7 +43,7 @@
     "@hig/text-area": "^0.2.0",
     "@hig/text-field": "^1.0.1",
     "@hig/text-link": "^0.2.0",
-    "@hig/theme-context": "^1.0.1",
+    "@hig/theme-context": "^2.0.0",
     "@hig/theme-data": "^1.5.0",
     "@hig/themes": "^0.3.0",
     "@hig/timestamp": "^0.1.4",
