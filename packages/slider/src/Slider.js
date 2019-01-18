@@ -67,7 +67,6 @@ export default class Slider extends Component {
   };
 
   static defaultProps = {
-    defaultValue: "",
     min: "0",
     max: "100",
     step: "1"
@@ -77,7 +76,7 @@ export default class Slider extends Component {
    * @type {State}
    */
   state = {
-    value: this.props.defaultValue
+    value: this.props.defaultValue || (this.props.max - this.props.min) / 2
   };
 
   /**
@@ -85,7 +84,7 @@ export default class Slider extends Component {
    */
   getValue() {
     if (this.isControlled()) {
-      return this.props.value;
+      return this.props.value || 0;
     }
 
     return this.state.value;

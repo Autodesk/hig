@@ -1,11 +1,12 @@
 gemini.suite("Slider", () => {
-  gemini.suite("basic", suite => {
+  gemini.suite("default", suite => {
     suite
-      .setUrl("iframe.html?selectedKind=Slider&selectedStory=basic")
+      .setUrl("iframe.html?selectedKind=Slider&selectedStory=default")
       .setCaptureElements(".storybook-component")
-      .capture("unfocused without input")
-      .capture("focused without input", actions => {
-        actions.focus("input");
+      .capture("default")
+      .capture("hovering over first instance", (actions, find) => {
+        const rangeInput = find("input[type='range']");
+        actions.mouseDown(rangeInput).mouseMove(rangeInput);
       });
   });
 

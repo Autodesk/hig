@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
+import ThemeContext from "@hig/theme-context";
 import stylesheet from "./Input.stylesheet";
 
 export default class Input extends Component {
@@ -53,17 +54,26 @@ export default class Input extends Component {
 
   render() {
     const { min, max, value } = this.props;
-    const styles = stylesheet();
 
     return (
-      <input
-        className={css(styles.input)}
-        type="range"
-        aria-valuemin={min}
-        aria-valuemax={max}
-        aria-valuenow={value}
-        {...this.props}
-      />
+      <ThemeContext.Consumer>
+        {({ resolvedRoles }) => {
+          const rangeRange = max - min;
+          const valueRatio = (value - min) / rangeRange;
+          const styles = stylesheet(resolvedRoles, valueRatio);
+
+          return (
+            <input
+              className={css(styles.input)}
+              type="range"
+              aria-valuemin={min}
+              aria-valuemax={max}
+              aria-valuenow={value}
+              {...this.props}
+            />
+          );
+        }}
+      </ThemeContext.Consumer>
     );
   }
 }
