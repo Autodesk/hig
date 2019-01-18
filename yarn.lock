@@ -160,15 +160,6 @@
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/@hig/styles/-/styles-0.2.3.tgz#675631d008c1861921d6148ecf15b140c04cc5b4"
 
-"@hig/theme-context@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@hig/theme-context/-/theme-context-1.0.1.tgz#338aa727352b0d0debfd369cfec6d46a6ecf8c65"
-  integrity sha512-wU0l7kuRj/8W5CRTaGOcI2QwUTf6934ouNw1pESjx2xGFoAnsU2kePA4rQvrW0bSdkeKSZ5Jcpt+k9jN8i0Ezg==
-  dependencies:
-    "@hig/theme-data" "^1.1.0"
-    create-react-context "^0.2.3"
-    prop-types "^15.6.1"
-
 "@hig/theme-data-poc@^0.0.8-alpha":
   version "0.0.8-alpha"
   resolved "https://registry.yarnpkg.com/@hig/theme-data-poc/-/theme-data-poc-0.0.8-alpha.tgz#a690b7c8f9b4d7c4b6ff6a56eec0d2795be9b8e7"
