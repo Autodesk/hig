@@ -42,7 +42,7 @@ jobs:
           name: Create dependency hash
           command: yarn run create-dependency-hash
       - restore_cache:
-          key: v2-dependencies-{{ checksum ".dependency-hash" }}
+          key: v3-dependencies-{{ .Revision }}-{{ checksum ".dependency-hash" }}
       - run:
           name: Extract dependencies
           command: yarn run extract:dependencies
@@ -53,7 +53,7 @@ jobs:
           name: Archive dependencies
           command: yarn run archive:dependencies
       - save_cache:
-          key: v2-dependencies-{{ checksum ".dependency-hash" }}
+          key: v3-dependencies-{{ .Revision }}-{{ checksum ".dependency-hash" }}
           paths:
             - .archives/dependencies.tgz
   package-build:
@@ -64,7 +64,7 @@ jobs:
           name: Create dependency hash
           command: yarn run create-dependency-hash
       - restore_cache:
-          key: v2-dependencies-{{ checksum ".dependency-hash" }}
+          key: v3-dependencies-{{ .Revision }}-{{ checksum ".dependency-hash" }}
       - run:
           name: Extract dependencies
           command: yarn run extract:dependencies
@@ -86,7 +86,7 @@ jobs:
           name: Create dependency hash
           command: yarn run create-dependency-hash
       - restore_cache:
-          key: v2-dependencies-{{ checksum ".dependency-hash" }}
+          key: v3-dependencies-{{ .Revision }}-{{ checksum ".dependency-hash" }}
       - restore_cache:
           key: v1-package-builds-{{ .Revision }}
       - run:
@@ -108,7 +108,7 @@ jobs:
           name: Create dependency hash
           command: yarn run create-dependency-hash
       - restore_cache:
-          key: v2-dependencies-{{ checksum ".dependency-hash" }}
+          key: v3-dependencies-{{ .Revision }}-{{ checksum ".dependency-hash" }}
       - restore_cache:
           key: v1-package-builds-{{ .Revision }}
       - run:
@@ -137,7 +137,7 @@ jobs:
           name: Create dependency hash
           command: yarn run create-dependency-hash
       - restore_cache:
-          key: v2-dependencies-{{ checksum ".dependency-hash" }}
+          key: v3-dependencies-{{ .Revision }}-{{ checksum ".dependency-hash" }}
       - restore_cache:
           key: v1-package-builds-{{ .Revision }}
       - run:
@@ -157,7 +157,7 @@ jobs:
           name: Create dependency hash
           command: yarn run create-dependency-hash
       - restore_cache:
-          key: v2-dependencies-{{ checksum ".dependency-hash" }}
+          key: v3-dependencies-{{ .Revision }}-{{ checksum ".dependency-hash" }}
       - restore_cache:
           key: v1-package-builds-{{ .Revision }}
       - run:
@@ -175,7 +175,7 @@ jobs:
           name: Create dependency hash
           command: yarn run create-dependency-hash
       - restore_cache:
-          key: v2-dependencies-{{ checksum ".dependency-hash" }}
+          key: v3-dependencies-{{ .Revision }}-{{ checksum ".dependency-hash" }}
       - restore_cache:
           key: v1-package-builds-{{ .Revision }}
       - run:
