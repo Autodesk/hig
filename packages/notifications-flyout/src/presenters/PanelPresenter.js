@@ -10,7 +10,6 @@ import {
   ENTERED,
   EXITING
 } from "react-transition-group/Transition";
-// import "@hig/progress-ring/build/index.css";
 
 import "./PanelPresenter.scss";
 
