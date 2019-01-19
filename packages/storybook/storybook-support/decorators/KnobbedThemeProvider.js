@@ -93,7 +93,6 @@ const KnobbedThemeProvider = ({ children, supportedThemes }) => {
     knobGroup
   );
   const theme = themes[densityId][themeId];
-  console.log("provider", theme.metadata.colorSchemeId);
   return (
     <ThemeContext.Provider value={theme}>
       <Surface>{children}</Surface>
