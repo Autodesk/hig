@@ -27,7 +27,7 @@ export default {
       ref: "colorScheme.baseColor"
     },
     transform: {
-      alpha: 0.4
+      alpha: 0.15
     }
   },
   "checkbox.halo.width": {
@@ -88,7 +88,7 @@ export default {
       ref: "colorScheme.accentColor"
     },
     transform: {
-      alpha: 0.4
+      alpha: 0.25
     }
   },
   "checkbox.focus.halo.width": {
@@ -114,7 +114,7 @@ export default {
       ref: "colorScheme.accentColor"
     },
     transform: {
-      alpha: 0.4
+      alpha: 0.25
     }
   },
   "checkbox.pressed.halo.width": {
