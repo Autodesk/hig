@@ -4,10 +4,10 @@ export default {
   "progressRing.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.baseColor"
+      ref: "basics.colors.black"
     },
     transform: {
-      alpha: 0.1
+      alpha: "0.05"
     }
   },
   "progressRing.highlightColor1": {
@@ -24,5 +24,5 @@ export default {
     transform: {
       alpha: "0.60"
     }
-  },  
+  }
 };
