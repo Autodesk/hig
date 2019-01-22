@@ -12,8 +12,7 @@ describe("progress-ring/presenters/ProgressRingPresenter", () => {
       description: "renders with all props",
       props: {
         percentComplete: 33,
-        size: "s",
-        innerRef: () => {}
+        size: "s"
       }
     }
   ].forEach(({ description, props: { ...otherProps } }) => {
