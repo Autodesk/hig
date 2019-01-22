@@ -6,8 +6,11 @@ export default {
   "hig-cool-gray-30": "#BEC8D2",
   "hig-blue-20": "#CCEAF9",
   "hig-blue-40": "#66BFE9",
+  "hig-blue-50": "#0696D7",
   "hig-blue-60": "#0671A1",
+  "hig-blue-70": "#024B6C",
   "hig-gray-60": "#393939",
+  "hig-gray-70": "#000000",
   "hig-slate-40": "#7993B0",
   "hig-indigo-30": "#D1DDEE"
 };

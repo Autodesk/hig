@@ -6,6 +6,7 @@ import flyout from "./components/flyout";
 import input from "./components/input";
 import label from "./components/label";
 import progressBar from "./components/progressBar";
+import textLink from "./components/textLink";
 import tooltip from "./components/tooltip";
 
 const webLightThemeConfig = extendTheme(
@@ -23,6 +24,7 @@ const webLightThemeConfig = extendTheme(
     input,
     label,
     progressBar,
+    textLink,
     tooltip
   )
 );
