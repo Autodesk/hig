@@ -26,7 +26,13 @@ export default {
     }
   },
   "label.fontColor": {
-    type: COLOR
+    type: COLOR,
+    value: {
+      ref: "basics.colors.charcoal900"
+    },
+    transform: {
+      alpha: 0.9
+    }
   },
   "label.lineHeight": {
     type: LINE_HEIGHT,
@@ -37,6 +43,12 @@ export default {
 
   // Hover
   "label.hover.fontColor": {
-    type: COLOR
+    type: COLOR,
+    value: {
+      ref: "basics.colors.charcoal900"
+    },
+    transform: {
+      alpha: 0.9
+    }
   }
 };

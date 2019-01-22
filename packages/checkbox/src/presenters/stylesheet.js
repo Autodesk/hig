@@ -30,25 +30,13 @@ function getCheckboxRulesByDisabled(themeData) {
   };
 }
 
-function getCheckboxRulesByChecked(themeData, disabled) {
-  if (disabled) {
-    return {
-      opacity: themeData["component.disabled.opacity"]
-    };
-  }
-
+function getCheckboxRulesByChecked(themeData) {
   return {
     backgroundColor: `${themeData["checkbox.checked.backgroundColor"]}`
   };
 }
 
-function getCheckboxRulesByIndeterminate(themeData, disabled) {
-  if (disabled) {
-    return {
-      opacity: themeData["component.disabled.opacity"]
-    };
-  }
-
+function getCheckboxRulesByIndeterminate(themeData) {
   return {
     backgroundColor: `${themeData["checkbox.indeterminate.backgroundColor"]}`
   };
@@ -161,13 +149,11 @@ export default function stylesheet(props, themeData, theme) {
         }
       },
       ...(hasHover ? getCheckboxRulesByHover(themeData) : {}),
-      ...(hasFocus ? getCheckboxRulesByFocus(themeData, checked) : {}),
+      ...(hasFocus ? getCheckboxRulesByFocus(themeData) : {}),
       ...(isPressed ? getCheckboxRulesByPressed(themeData) : {}),
       ...(disabled ? getCheckboxRulesByDisabled(themeData) : {}),
-      ...(checked ? getCheckboxRulesByChecked(themeData, disabled) : {}),
-      ...(indeterminate
-        ? getCheckboxRulesByIndeterminate(themeData, disabled)
-        : {}),
+      ...(checked ? getCheckboxRulesByChecked(themeData) : {}),
+      ...(indeterminate ? getCheckboxRulesByIndeterminate(themeData) : {}),
       ...(theme === `hig-light`
         ? getCheckboxRulesByLegacyTheme(themeData, props)
         : {})

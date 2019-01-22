@@ -2,6 +2,9 @@ export default {
   "checkbox.borderColor": {
     value: {
       ref: "basics.colors.white"
+    },
+    transform: {
+      alpha: 0.5
     }
   },
   "checkbox.iconColor": {
@@ -16,12 +19,15 @@ export default {
       ref: "basics.colors.white"
     },
     transform: {
-      alpha: 1
+      alpha: 0.5
     }
   },
   "checkbox.focus.halo.color": {
     value: {
       ref: "basics.colors.autodeskBlue400"
+    },
+    transform: {
+      alpha: 0.35
     }
   },
 
@@ -39,7 +45,7 @@ export default {
       ref: "basics.colors.white"
     },
     transform: {
-      alpha: 0.4
+      alpha: 0.15
     }
   },
 
@@ -47,6 +53,9 @@ export default {
   "checkbox.pressed.halo.color": {
     value: {
       ref: "basics.colors.autodeskBlue400"
+    },
+    transform: {
+      alpha: 0.35
     }
   },
 
