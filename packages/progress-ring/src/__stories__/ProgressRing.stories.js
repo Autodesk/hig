@@ -27,7 +27,10 @@ storybook.add(
 );
 storybook.add(
   "indeterminate",
-  withInfo(infoOptions)(() => (
+  withInfo({
+    ...infoOptions,
+    propTablesExclude: [KnobbedThemeProvider]
+  })(() => (
     <KnobbedThemeProvider>
       <ProgressRing size={select("size", availableSizes, "m")} />
     </KnobbedThemeProvider>
