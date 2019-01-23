@@ -1,22 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Avatar, { sizes } from "@hig/avatar";
-import "@hig/avatar/build/index.css";
+import { css } from "emotion";
+import stylesheet from "./stylesheet";
 
-import "./ProfileButtonPresenter.scss";
-
-/**
- * @todo Remove the wrapping <div /> and move <SeparatorPresenter /> outside the component
- */
 export default function ProfileButtonPresenter({
   avatarImage,
   avatarName,
   onClick
 }) {
+  const styles = stylesheet();
+
   return (
     <button
       type="button"
-      className="hig__profile-flyout__button"
+      className={css(styles.flyoutButton)}
       onClick={onClick}
     >
       <Avatar name={avatarName} image={avatarImage} size={sizes.MEDIUM_32} />

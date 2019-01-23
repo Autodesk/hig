@@ -12,11 +12,10 @@ Read more about when and how to use the Profile Flyout component [on the website
 yarn add @hig/profile-flyout
 ```
 
-### Import the component and CSS
+### Import the component
 
 ```js
 import ProfileFlyout from '@hig/profile-flyout';
-import '@hig/profile-flyout/build/index.css';
 ```
 
 ## Basic usage
