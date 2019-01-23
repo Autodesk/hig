@@ -42,5 +42,18 @@ export default {
     transform: {
       alpha: 1
     }
+  },
+  "input.placeholder.fontColor": {
+    value: {
+      ref: "basics.colors.surfaceLightGrayLevel200"
+    },
+    transform: {
+      alpha: 0.4
+    }
+  },
+  "input.highlightColor": {
+    value: {
+      ref: "basics.colors.autodeskBlue400"
+    }
   }
 };
