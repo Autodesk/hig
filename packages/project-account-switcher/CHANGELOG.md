@@ -1,3 +1,11 @@
+# [@hig/project-account-switcher-v1.0.5](https://github.com/Autodesk/hig/compare/@hig/project-account-switcher@1.0.4...@hig/project-account-switcher@1.0.5) (2019-01-23)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/flyout to version 1.0.0 ([363ccd5](https://github.com/Autodesk/hig/commit/363ccd5))
+* **package:** update [@hig](https://github.com/hig)/icons to version 2.0.0 ([9c4ecb4](https://github.com/Autodesk/hig/commit/9c4ecb4))
+
 # [@hig/project-account-switcher-v1.0.4](https://github.com/Autodesk/hig/compare/@hig/project-account-switcher@1.0.3...@hig/project-account-switcher@1.0.4) (2019-01-08)
 
 
