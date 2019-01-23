@@ -1,3 +1,10 @@
+# [@hig/banner-v1.0.2](https://github.com/Autodesk/hig/compare/@hig/banner@1.0.1...@hig/banner@1.0.2) (2019-01-23)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/icons to version 2.0.0 ([8bd33c8](https://github.com/Autodesk/hig/commit/8bd33c8))
+
 # [@hig/banner-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/banner@1.0.0...@hig/banner@1.0.1) (2018-12-06)
 
 
