@@ -11,8 +11,8 @@ import label from "./components/label";
 import progressBar from "./components/progressBar";
 import skeletonItem from "./components/skeletonItem";
 import slider from "./components/slider";
-import tooltip from "./components/tooltip";
 import textLink from "./components/textLink";
+import tooltip from "./components/tooltip";
 
 const darkBlueThemeConfig = extendTheme(
   baseTheme.unresolvedRoles,
@@ -28,8 +28,8 @@ const darkBlueThemeConfig = extendTheme(
     progressBar,
     skeletonItem,
     slider,
-    tooltip,
-    textLink
+    textLink,
+    tooltip
   )
 );
 

@@ -3,11 +3,15 @@ import { COLOR, LENGTH } from "../../consts/types";
 export default {
   "textLink.textColor": {
     type: COLOR,
-    value: "#006EAF"
+    value: {
+      ref: "basics.colors.textLinkAgainstLight"
+    }
   },
   "textLink.hover.underline.color": {
     type: COLOR,
-    value: "#006EAF"
+    value: {
+      ref: "basics.colors.textLinkAgainstLight"
+    }
   },
   "textLink.focus.halo.color": {
     type: COLOR,
