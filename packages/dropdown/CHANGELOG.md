@@ -1,3 +1,10 @@
+# [@hig/dropdown-v1.0.2](https://github.com/Autodesk/hig/compare/@hig/dropdown@1.0.1...@hig/dropdown@1.0.2) (2019-01-23)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/icons to version 2.0.0 ([1ff94ab](https://github.com/Autodesk/hig/commit/1ff94ab))
+
 # [@hig/dropdown-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/dropdown@1.0.0...@hig/dropdown@1.0.1) (2018-12-11)
 
 
