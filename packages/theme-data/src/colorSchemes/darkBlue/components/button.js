@@ -5,6 +5,11 @@ export default {
       ref: "basics.colors.autodeskBlue500"
     }
   },
+  "button.solid.hover.backgroundColor": {
+    value: {
+      ref: "button.solid.backgroundColor"
+    }
+  },
   "button.solid.hover.halo.color": {
     value: {
       ref: "basics.colors.white"
@@ -13,9 +18,17 @@ export default {
       alpha: 0.15
     }
   },
+  "button.solid.focus.backgroundColor": {
+    value: {
+      ref: "button.solid.backgroundColor"
+    }
+  },
   "button.solid.focus.halo.color": {
     value: {
       ref: "colorScheme.accentColor"
+    },
+    transform: {
+      alpha: 0.35
     }
   },
   "button.solid.pressed.halo.color": {
