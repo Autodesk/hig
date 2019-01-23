@@ -1,6 +1,6 @@
 {
   "name": "@hig/radio-button",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "HIG Radio Button",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -19,7 +19,7 @@
   "dependencies": {
     "@hig/behaviors": "^1.1.1",
     "@hig/theme-context": "^2.0.0",
-    "@hig/theme-data": "^1.5.0",
+    "@hig/theme-data": "^1.6.0",
     "emotion": "^10.0.0",
     "prop-types": "^15.6.1",
     "react-lifecycles-compat": "^3.0.4"
@@ -31,7 +31,7 @@
     "@hig/babel-preset": "^0.1.1",
     "@hig/eslint-config": "^0.1.0",
     "@hig/jest-preset": "^0.1.0",
-    "@hig/label": "^1.0.0",
+    "@hig/label": "^1.0.1",
     "@hig/scripts": "^0.1.2",
     "@hig/semantic-release-config": "^0.1.0",
     "@hig/styles": "^0.3.0"
