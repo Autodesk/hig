@@ -19,7 +19,7 @@
   ],
   "dependencies": {
     "@hig/flyout": "^1.0.0",
-    "@hig/typography": "^0.1.4",
+    "@hig/typography": "^1.0.1",
     "classnames": "^2.2.5",
     "prop-types": "^15.6.1",
     "react-lifecycles-compat": "^3.0.4"
