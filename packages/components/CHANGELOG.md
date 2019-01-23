@@ -1,3 +1,14 @@
+# [@hig/components-v1.0.6](https://github.com/Autodesk/hig/compare/@hig/components@1.0.5...@hig/components@1.0.6) (2019-01-23)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/flyout to version 1.0.0 ([8245aee](https://github.com/Autodesk/hig/commit/8245aee))
+* **package:** update [@hig](https://github.com/hig)/icons to version 2.0.0 ([40506a0](https://github.com/Autodesk/hig/commit/40506a0))
+* **package:** update [@hig](https://github.com/hig)/progress-bar to version 1.0.0 ([d7401f1](https://github.com/Autodesk/hig/commit/d7401f1))
+* **package:** update [@hig](https://github.com/hig)/radio-button to version 1.0.0 ([242f9ea](https://github.com/Autodesk/hig/commit/242f9ea))
+* **package:** update [@hig](https://github.com/hig)/theme-context to version 2.0.0 ([5cf2213](https://github.com/Autodesk/hig/commit/5cf2213))
+
 # [@hig/components-v1.0.5](https://github.com/Autodesk/hig/compare/@hig/components@1.0.4...@hig/components@1.0.5) (2019-01-17)
 
 

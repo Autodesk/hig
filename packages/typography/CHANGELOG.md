@@ -1,3 +1,10 @@
+# [@hig/typography-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/typography@1.0.0...@hig/typography@1.0.1) (2019-01-23)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/theme-context to version 2.0.0 ([3057713](https://github.com/Autodesk/hig/commit/3057713))
+
 # [@hig/typography-v1.0.0](https://github.com/Autodesk/hig/compare/@hig/typography@0.1.4...@hig/typography@1.0.0) (2019-01-09)
 
 

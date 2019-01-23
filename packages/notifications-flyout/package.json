@@ -1,6 +1,6 @@
 {
   "name": "@hig/notifications-flyout",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "HIG NotificationsFlyout",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -19,7 +19,7 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/flyout": "^1.0.0",
+    "@hig/flyout": "^1.0.1",
     "@hig/icon-button": "^1.0.1",
     "@hig/icons": "^1.0.0",
     "@hig/progress-ring": "^0.1.1",

@@ -1,3 +1,12 @@
+# [@hig/checkbox-v2.0.1](https://github.com/Autodesk/hig/compare/@hig/checkbox@2.0.0...@hig/checkbox@2.0.1) (2019-01-23)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/icons to version 2.0.0 ([b780281](https://github.com/Autodesk/hig/commit/b780281))
+* **package:** update [@hig](https://github.com/hig)/theme-context to version 2.0.0 ([b4fc94b](https://github.com/Autodesk/hig/commit/b4fc94b))
+* remove unnecessary disabled logic from checked state ([cd43223](https://github.com/Autodesk/hig/commit/cd43223))
+
 # [@hig/checkbox-v2.0.0](https://github.com/Autodesk/hig/compare/@hig/checkbox@1.0.1...@hig/checkbox@2.0.0) (2019-01-04)
 
 

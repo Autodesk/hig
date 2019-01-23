@@ -1,3 +1,10 @@
+# [@hig/icons-v2.0.1](https://github.com/Autodesk/hig/compare/@hig/icons@2.0.0...@hig/icons@2.0.1) (2019-01-23)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/theme-context to version 2.0.0 ([7975948](https://github.com/Autodesk/hig/commit/7975948))
+
 # [@hig/icons-v2.0.0](https://github.com/Autodesk/hig/compare/@hig/icons@1.0.0...@hig/icons@2.0.0) (2019-01-17)
 
 

@@ -1,3 +1,10 @@
+# [@hig/avatar-v1.0.3](https://github.com/Autodesk/hig/compare/@hig/avatar@1.0.2...@hig/avatar@1.0.3) (2019-01-23)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/theme-context to version 2.0.0 ([c3dbc64](https://github.com/Autodesk/hig/commit/c3dbc64))
+
 # [@hig/avatar-v1.0.2](https://github.com/Autodesk/hig/compare/@hig/avatar@1.0.1...@hig/avatar@1.0.2) (2019-01-09)
 
 

@@ -1,3 +1,10 @@
+# [@hig/label-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/label@1.0.0...@hig/label@1.0.1) (2019-01-23)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/theme-context to version 2.0.0 ([5bf10aa](https://github.com/Autodesk/hig/commit/5bf10aa))
+
 # @hig/label-v1.0.0 (2019-01-09)
 
 

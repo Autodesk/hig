@@ -1,3 +1,11 @@
+# [@hig/top-nav-v2.0.2](https://github.com/Autodesk/hig/compare/@hig/top-nav@2.0.1...@hig/top-nav@2.0.2) (2019-01-23)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/flyout to version 1.0.0 ([e433224](https://github.com/Autodesk/hig/commit/e433224))
+* **package:** update [@hig](https://github.com/hig)/icons to version 2.0.0 ([34bea35](https://github.com/Autodesk/hig/commit/34bea35))
+
 # [@hig/top-nav-v2.0.1](https://github.com/Autodesk/hig/compare/@hig/top-nav@2.0.0...@hig/top-nav@2.0.1) (2019-01-08)
 
 

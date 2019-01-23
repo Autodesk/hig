@@ -1,3 +1,17 @@
+# [@hig/theme-data-v1.6.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@1.5.0...@hig/theme-data@1.6.0) (2019-01-23)
+
+
+### Bug Fixes
+
+* update checkbox theme-data ([cdb5908](https://github.com/Autodesk/hig/commit/cdb5908))
+* update label theme-data ([bb77a0c](https://github.com/Autodesk/hig/commit/bb77a0c))
+
+
+### Features
+
+* Add roles for progress ring to base theme ([0d82548](https://github.com/Autodesk/hig/commit/0d82548))
+* implement theme data for progress ring ([5d77d55](https://github.com/Autodesk/hig/commit/5d77d55))
+
 # [@hig/theme-data-v1.5.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@1.4.0...@hig/theme-data@1.5.0) (2019-01-17)
 
 
