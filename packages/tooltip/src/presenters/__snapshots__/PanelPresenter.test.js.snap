@@ -1,8 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tooltip/presenters/PanelPresenter renders with all props 1`] = `
+.emotion-1 {
+  border: 1px solid #393939;
+  background-color: #393939;
+  border-radius: 4px;
+}
+
+.emotion-0 {
+  position: relative;
+}
+
 <div
-  className="hig__tooltip-v1__panel"
+  className="emotion-1"
   onScroll={[Function]}
   style={
     Object {
@@ -11,7 +21,7 @@ exports[`tooltip/presenters/PanelPresenter renders with all props 1`] = `
   }
 >
   <div
-    className="hig__tooltip-v1__panel__inner"
+    className="emotion-0"
   >
     Hello
   </div>
@@ -19,8 +29,18 @@ exports[`tooltip/presenters/PanelPresenter renders with all props 1`] = `
 `;
 
 exports[`tooltip/presenters/PanelPresenter renders without props 1`] = `
+.emotion-1 {
+  border: 1px solid #393939;
+  background-color: #393939;
+  border-radius: 4px;
+}
+
+.emotion-0 {
+  position: relative;
+}
+
 <div
-  className="hig__tooltip-v1__panel"
+  className="emotion-1"
   onScroll={undefined}
   style={
     Object {
@@ -29,7 +49,7 @@ exports[`tooltip/presenters/PanelPresenter renders without props 1`] = `
   }
 >
   <div
-    className="hig__tooltip-v1__panel__inner"
+    className="emotion-0"
   />
 </div>
 `;

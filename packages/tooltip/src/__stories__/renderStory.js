@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from "react";
+import KnobbedThemeProvider from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
 import Tooltip from "../index";
 import getKnobs from "./getKnobs";
 
@@ -22,8 +23,10 @@ export default function renderStory(props) {
   const { children, ...otherProps } = getKnobs(props);
 
   return (
-    <Wrapper>
-      <Tooltip {...otherProps}>{children}</Tooltip>
-    </Wrapper>
+    <KnobbedThemeProvider>
+      <Wrapper>
+        <Tooltip {...otherProps}>{children}</Tooltip>
+      </Wrapper>
+    </KnobbedThemeProvider>
   );
 }
