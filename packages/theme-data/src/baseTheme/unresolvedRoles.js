@@ -13,6 +13,7 @@ import input from "./components/input";
 import label from "./components/label";
 import menu from "./components/menu";
 import progressBar from "./components/progressBar";
+import progressRing from "./components/progressRing";
 import skeletonItem from "./components/skeletonItem";
 import slider from "./components/slider";
 import textarea from "./components/textarea";
@@ -44,6 +45,7 @@ const baseThemeConfig = extendTheme(
     label,
     menu,
     progressBar,
+    progressRing,
     skeletonItem,
     slider,
     textarea,

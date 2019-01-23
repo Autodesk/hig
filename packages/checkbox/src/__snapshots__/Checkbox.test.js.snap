@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`checkbox/Checkbox integration renders correctly 1`] = `
-.emotion-4 {
+.emotion-6 {
   box-sizing: border-box;
   display: inline-block;
   position: relative;
@@ -21,7 +21,7 @@ exports[`checkbox/Checkbox integration renders correctly 1`] = `
   margin: 0;
 }
 
-.emotion-3 {
+.emotion-5 {
   position: relative;
   display: block;
   box-sizing: border-box;
@@ -37,7 +37,7 @@ exports[`checkbox/Checkbox integration renders correctly 1`] = `
   cursor: default;
 }
 
-.emotion-3 svg {
+.emotion-5 svg {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -46,16 +46,24 @@ exports[`checkbox/Checkbox integration renders correctly 1`] = `
   transform: translateX(-50%) translateY(-50%);
 }
 
-.emotion-3 svg * {
+.emotion-5 svg * {
   fill: #ffffff;
 }
 
-.emotion-1 {
+.emotion-2 {
   display: none;
 }
 
+.emotion-1 {
+  fill: #808080;
+}
+
+.emotion-1 > * {
+  fill: #808080;
+}
+
 <div
-  className="emotion-4"
+  className="emotion-6"
 >
   <input
     checked={false}
@@ -75,13 +83,16 @@ exports[`checkbox/Checkbox integration renders correctly 1`] = `
     value="value"
   />
   <span
-    className="emotion-3"
+    className="emotion-5"
   >
     <span
-      className="emotion-1"
+      className="emotion-2"
     >
       <svg
+        className="emotion-1"
+        height="16px"
         viewBox="0 0 16 16"
+        width="16px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -90,12 +101,13 @@ exports[`checkbox/Checkbox integration renders correctly 1`] = `
       </svg>
     </span>
     <span
-      className="emotion-1"
+      className="emotion-2"
     >
       <svg
-        height="2"
+        className="emotion-1"
+        height="2px"
         viewBox="0 0 8 2"
-        width="8"
+        width="8px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <title>

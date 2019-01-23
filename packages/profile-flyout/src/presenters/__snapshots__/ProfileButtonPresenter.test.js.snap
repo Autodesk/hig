@@ -1,6 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`profile-flyout/presenters/ProfileButtonPresenter  1`] = `
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  background: none;
+  cursor: pointer;
+}
+
 .emotion-1 {
   background-color: #5bc9bd;
   color: #3c3c3c;
@@ -23,7 +49,7 @@ exports[`profile-flyout/presenters/ProfileButtonPresenter  1`] = `
 }
 
 <button
-  className="hig__profile-flyout__button"
+  className="emotion-2"
   onClick={undefined}
   type="button"
 >
@@ -43,6 +69,32 @@ exports[`profile-flyout/presenters/ProfileButtonPresenter  1`] = `
 `;
 
 exports[`profile-flyout/presenters/ProfileButtonPresenter  2`] = `
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  background: none;
+  cursor: pointer;
+}
+
 .emotion-2 {
   width: 32px;
   height: 32px;
@@ -81,7 +133,7 @@ exports[`profile-flyout/presenters/ProfileButtonPresenter  2`] = `
 }
 
 <button
-  className="hig__profile-flyout__button"
+  className="emotion-4"
   onClick={[Function]}
   type="button"
 >

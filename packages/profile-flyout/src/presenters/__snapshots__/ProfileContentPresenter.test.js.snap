@@ -1,49 +1,119 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`profile-flyout/presenters/ProfileContentPresenter  1`] = `
+.emotion-0 {
+  font-family: ArtifaktElement;
+  line-height: 1.6;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
 <div
-  className="hig__profile-flyout__content"
+  className="emotion-0"
 />
 `;
 
 exports[`profile-flyout/presenters/ProfileContentPresenter  2`] = `
+.emotion-1 {
+  font-family: ArtifaktElement;
+  line-height: 1.6;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.emotion-0 {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 24px;
+  color: #222934;
+}
+
 <div
-  className="hig__profile-flyout__content"
+  className="emotion-1"
 >
-  <div
-    className="hig__profile-flyout__content__name"
+  <span
+    className="emotion-0"
   >
     Pete Parker
-  </div>
+  </span>
 </div>
 `;
 
 exports[`profile-flyout/presenters/ProfileContentPresenter  3`] = `
+.emotion-1 {
+  font-family: ArtifaktElement;
+  line-height: 1.6;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.emotion-0 {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  line-height: 16px;
+  color: #666;
+}
+
 <div
-  className="hig__profile-flyout__content"
+  className="emotion-1"
 >
-  <div
-    className="hig__profile-flyout__content__email"
+  <span
+    className="emotion-0"
   >
     spyder-man@autodesk.com
-  </div>
+  </span>
 </div>
 `;
 
 exports[`profile-flyout/presenters/ProfileContentPresenter  4`] = `
+.emotion-2 {
+  font-family: ArtifaktElement;
+  line-height: 1.6;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.emotion-0 {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 24px;
+  color: #222934;
+}
+
+.emotion-1 {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  line-height: 16px;
+  color: #666;
+}
+
 <div
-  className="hig__profile-flyout__content"
+  className="emotion-2"
 >
-  <div
-    className="hig__profile-flyout__content__name"
+  <span
+    className="emotion-0"
   >
     Pete Parker
-  </div>
-  <div
-    className="hig__profile-flyout__content__email"
+  </span>
+  <span
+    className="emotion-1"
   >
     spyder-man@autodesk.com
-  </div>
+  </span>
   <span />
 </div>
 `;

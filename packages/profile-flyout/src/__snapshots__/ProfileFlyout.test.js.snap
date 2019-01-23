@@ -1,9 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`profile-flyout/ProfileFlyout renders with all props 1`] = `
-.emotion-9 {
+.emotion-10 {
   position: relative;
   display: inline-block;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .emotion-2 {
@@ -11,9 +18,28 @@ exports[`profile-flyout/ProfileFlyout renders with all props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  background: none;
+  cursor: pointer;
 }
 
-.emotion-5 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -24,26 +50,26 @@ exports[`profile-flyout/ProfileFlyout renders with all props 1`] = `
   transform: rotate(0deg);
 }
 
-.emotion-3 {
+.emotion-4 {
   fill: #D4DBE1;
 }
 
-.emotion-4 {
+.emotion-5 {
   fill: #ffffff;
 }
 
-.emotion-7 {
+.emotion-8 {
   background-color: #ffffff;
   border-radius: 4px;
   border: 1px solid #D4DBE1;
   box-shadow: 0 0 16px rgba(0,0,0,0.25);
 }
 
-.emotion-6 {
+.emotion-7 {
   position: relative;
 }
 
-.emotion-8 {
+.emotion-9 {
   position: absolute;
   display: table;
   width: 100%;
@@ -85,13 +111,13 @@ exports[`profile-flyout/ProfileFlyout renders with all props 1`] = `
 }
 
 <div
-  className="emotion-9"
+  className="emotion-10"
 >
   <div
-    className="emotion-2"
+    className="emotion-3"
   >
     <button
-      className="hig__profile-flyout__button"
+      className="emotion-2"
       onClick={[Function]}
       type="button"
     >
@@ -110,13 +136,24 @@ exports[`profile-flyout/ProfileFlyout renders with all props 1`] = `
     </button>
   </div>
   <div
-    className="emotion-8"
+    className="emotion-9"
+    style={
+      Object {
+        "left": "0px",
+        "top": "0px",
+      }
+    }
   >
     <div
       aria-hidden="true"
-      className="emotion-5"
+      className="emotion-6"
       role="presentation"
-      style={undefined}
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
     >
       <svg
         height="24"
@@ -124,17 +161,17 @@ exports[`profile-flyout/ProfileFlyout renders with all props 1`] = `
         width="24"
       >
         <polygon
-          className="emotion-3"
+          className="emotion-4"
           points="0,12 12,0 24,12"
         />
         <polygon
-          className="emotion-4"
+          className="emotion-5"
           points="2.5,12 12,2.5 21.5,12"
         />
       </svg>
     </div>
     <div
-      className="emotion-7"
+      className="emotion-8"
       style={
         Object {
           "maxHeight": undefined,
@@ -142,7 +179,7 @@ exports[`profile-flyout/ProfileFlyout renders with all props 1`] = `
       }
     >
       <div
-        className="emotion-6"
+        className="emotion-7"
       />
     </div>
   </div>
@@ -150,19 +187,19 @@ exports[`profile-flyout/ProfileFlyout renders with all props 1`] = `
 `;
 
 exports[`profile-flyout/ProfileFlyout renders with no props 1`] = `
-.emotion-9 {
+.emotion-10 {
   position: relative;
   display: inline-block;
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-8 {
+.emotion-9 {
   position: absolute;
   display: none;
   width: 100%;
@@ -182,7 +219,33 @@ exports[`profile-flyout/ProfileFlyout renders with no props 1`] = `
   transform: none;
 }
 
-.emotion-5 {
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -193,22 +256,22 @@ exports[`profile-flyout/ProfileFlyout renders with no props 1`] = `
   transform: rotate(0deg);
 }
 
-.emotion-3 {
+.emotion-4 {
   fill: #D4DBE1;
 }
 
-.emotion-4 {
+.emotion-5 {
   fill: #ffffff;
 }
 
-.emotion-7 {
+.emotion-8 {
   background-color: #ffffff;
   border-radius: 4px;
   border: 1px solid #D4DBE1;
   box-shadow: 0 0 16px rgba(0,0,0,0.25);
 }
 
-.emotion-6 {
+.emotion-7 {
   position: relative;
 }
 
@@ -234,13 +297,13 @@ exports[`profile-flyout/ProfileFlyout renders with no props 1`] = `
 }
 
 <div
-  className="emotion-9"
+  className="emotion-10"
 >
   <div
-    className="emotion-2"
+    className="emotion-3"
   >
     <button
-      className="hig__profile-flyout__button"
+      className="emotion-2"
       onClick={[Function]}
       type="button"
     >
@@ -259,13 +322,24 @@ exports[`profile-flyout/ProfileFlyout renders with no props 1`] = `
     </button>
   </div>
   <div
-    className="emotion-8"
+    className="emotion-9"
+    style={
+      Object {
+        "left": "0px",
+        "top": "0px",
+      }
+    }
   >
     <div
       aria-hidden="true"
-      className="emotion-5"
+      className="emotion-6"
       role="presentation"
-      style={undefined}
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
     >
       <svg
         height="24"
@@ -273,17 +347,17 @@ exports[`profile-flyout/ProfileFlyout renders with no props 1`] = `
         width="24"
       >
         <polygon
-          className="emotion-3"
+          className="emotion-4"
           points="0,12 12,0 24,12"
         />
         <polygon
-          className="emotion-4"
+          className="emotion-5"
           points="2.5,12 12,2.5 21.5,12"
         />
       </svg>
     </div>
     <div
-      className="emotion-7"
+      className="emotion-8"
       style={
         Object {
           "maxHeight": undefined,
@@ -291,7 +365,7 @@ exports[`profile-flyout/ProfileFlyout renders with no props 1`] = `
       }
     >
       <div
-        className="emotion-6"
+        className="emotion-7"
       />
     </div>
   </div>

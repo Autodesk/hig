@@ -1,6 +1,6 @@
 {
   "name": "@hig/profile-flyout",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "HIG Profile Flyout",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -13,15 +13,15 @@
   },
   "main": "build/index.js",
   "module": "build/index.es.js",
-  "style": "build/index.css",
   "files": [
     "build/*"
   ],
   "dependencies": {
-    "@hig/avatar": "^1.0.1",
-    "@hig/flyout": "^0.8.0",
+    "@hig/avatar": "^1.0.2",
+    "@hig/flyout": "^1.0.0",
+    "@hig/theme-context": "^2.0.0",
     "@hig/utils": "^0.3.0",
-    "classnames": "^2.2.5",
+    "emotion": "^10.0.0",
     "prop-types": "^15.6.1"
   },
   "peerDependencies": {
@@ -32,8 +32,7 @@
     "@hig/eslint-config": "^0.1.0",
     "@hig/jest-preset": "^0.1.0",
     "@hig/scripts": "^0.1.2",
-    "@hig/semantic-release-config": "^0.1.0",
-    "@hig/styles": "^0.3.0"
+    "@hig/semantic-release-config": "^0.1.0"
   },
   "scripts": {
     "build": "hig-scripts-build",
