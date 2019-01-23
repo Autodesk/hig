@@ -1,3 +1,10 @@
+# [@hig/input-v1.0.3](https://github.com/Autodesk/hig/compare/@hig/input@1.0.2...@hig/input@1.0.3) (2019-01-23)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/theme-context to version 2.0.0 ([2377dec](https://github.com/Autodesk/hig/commit/2377dec))
+
 # [@hig/input-v1.0.2](https://github.com/Autodesk/hig/compare/@hig/input@1.0.1...@hig/input@1.0.2) (2019-01-08)
 
 
