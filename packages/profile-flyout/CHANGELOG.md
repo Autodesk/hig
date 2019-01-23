@@ -1,3 +1,22 @@
+# [@hig/profile-flyout-v2.0.0](https://github.com/Autodesk/hig/compare/@hig/profile-flyout@1.0.1...@hig/profile-flyout@2.0.0) (2019-01-23)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/flyout to version 1.0.0 ([12326f0](https://github.com/Autodesk/hig/commit/12326f0))
+
+
+### Features
+
+* make profile themeable ([4bf3975](https://github.com/Autodesk/hig/commit/4bf3975))
+
+
+### BREAKING CHANGES
+
+* CSS classnames have been removed
+Stylesheet does not need to be imported
+@hig/typography is used for the Profile Name and Profile Email
+
 # [@hig/profile-flyout-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/profile-flyout@1.0.0...@hig/profile-flyout@1.0.1) (2019-01-08)
 
 
