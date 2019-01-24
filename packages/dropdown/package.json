@@ -22,7 +22,7 @@
     "@hig/multi-downshift": "^0.1.1",
     "@hig/text-field": "^1.0.2",
     "classnames": "^2.2.5",
-    "downshift": "^3.1.7",
+    "downshift": "^3.1.13",
     "prop-types": "^15.6.1",
     "react-lifecycles-compat": "^3.0.4"
   },
