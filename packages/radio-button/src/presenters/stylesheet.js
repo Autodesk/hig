@@ -24,11 +24,6 @@ function legacyStylesheet(props, themeData) {
   }
 
   return {
-    radioButton: {
-      display: "inline-block",
-      padding: "0 10px"
-    },
-
     radioButtonContainer: {
       position: "relative",
       display: "flex",
@@ -70,13 +65,6 @@ function legacyStylesheet(props, themeData) {
         boxShadow: `inset 0 0 0 ${themeData["checkbox.borderRadius"]} ${
           themeData["checkbox.backgroundColor"]
         }`
-      },
-
-      "&:checked:focus + span": {
-        backgroundColor: themeData["checkbox.focus.checked.backgroundColor"],
-        boxShadow: `inset 0 0 0 ${themeData["checkbox.borderRadius"]} ${
-          themeData["checkbox.backgroundColor"]
-        }`
       }
     }
   };
@@ -89,38 +77,35 @@ export default function stylesheet(props, themeData, theme) {
 
   const { isPressed, hasFocus, hasHover, disabled } = props;
   const opacity = disabled ? themeData["component.disabled.opacity"] : "1.0";
-  let wrapperBoxShadowStyle = `inset 0 0 0 ${
+  // because we don't have access to the checked status in react, we need to
+  // write css rules to handle both cases
+  const checkedInnerShadow = `inset 0 0 0 ${
+    themeData["checkbox.pressed.halo.width"]
+  } ${themeData["checkbox.checked.backgroundColor"]}`;
+  const uncheckedInnerShadow = `inset 0 0 0 ${
     themeData["checkbox.borderWidth"]
-  } ${themeData["checkbox.borderColor"]}`;
+  } 
+    ${themeData["checkbox.borderColor"]}
+  `;
+  let outerShadow = "0 0 0 0px transparent";
 
   if (disabled) {
     // do nothing
   } else if (isPressed) {
-    wrapperBoxShadowStyle = `inset 0 0 0 ${themeData["checkbox.borderWidth"]} ${
-      themeData["checkbox.checked.backgroundColor"]
-    }, 0 0 0 ${themeData["checkbox.pressed.halo.width"]} ${
+    outerShadow = `0 0 0 ${themeData["checkbox.pressed.halo.width"]} ${
       themeData["checkbox.focus.halo.color"]
     }`;
   } else if (hasFocus) {
-    wrapperBoxShadowStyle = `inset 0 0 0 ${themeData["checkbox.borderWidth"]} ${
-      themeData["checkbox.borderColor"]
-    }, 0 0 0 ${themeData["checkbox.focus.halo.width"]} ${
+    outerShadow = `0 0 0 ${themeData["checkbox.focus.halo.width"]} ${
       themeData["checkbox.focus.halo.color"]
     }`;
   } else if (hasHover) {
-    wrapperBoxShadowStyle = `inset 0 0 0 ${themeData["checkbox.borderWidth"]} ${
-      themeData["checkbox.borderColor"]
-    }, 0 0 0 ${themeData["checkbox.hover.halo.width"]} ${
+    outerShadow = `0 0 0 ${themeData["checkbox.hover.halo.width"]} ${
       themeData["checkbox.hover.halo.color"]
     }`;
   }
 
-  return {
-    radioButton: {
-      display: "inline-block",
-      padding: "0 10px"
-    },
-
+  const styles = {
     radioButtonContainer: {
       position: "relative",
       display: "flex",
@@ -140,7 +125,7 @@ export default function stylesheet(props, themeData, theme) {
       height: themeData["checkbox.height"],
       width: themeData["checkbox.width"],
       borderRadius: "50%",
-      boxShadow: wrapperBoxShadowStyle
+      boxShadow: `${uncheckedInnerShadow},${outerShadow}`
     },
 
     // this maps to .radio-button__input
@@ -156,21 +141,11 @@ export default function stylesheet(props, themeData, theme) {
       padding: "0",
       zIndex: "1",
 
-      // todo: remove once checked behavior has been
-      // integrated into react
       "&:checked + span": {
-        boxShadow: `inset 0 0 0 ${themeData["checkbox.pressed.halo.width"]} ${
-          themeData["checkbox.checked.backgroundColor"]
-        }`
-      },
-
-      "&:checked:focus + span": {
-        boxShadow: `inset 0 0 0 ${themeData["checkbox.pressed.halo.width"]} ${
-          themeData["checkbox.checked.backgroundColor"]
-        }, 0 0 0 ${themeData["checkbox.focus.halo.width"]} ${
-          themeData["checkbox.focus.halo.color"]
-        }`
+        boxShadow: `${checkedInnerShadow},${outerShadow}`
       }
     }
   };
+
+  return styles;
 }
