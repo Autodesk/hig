@@ -18,6 +18,7 @@ import skeletonItem from "./components/skeletonItem";
 import slider from "./components/slider";
 import textarea from "./components/textarea";
 import tooltip from "./components/tooltip";
+import textLink from "./components/textLink";
 import typography from "./components/typography";
 
 const baseThemeConfig = extendTheme(
@@ -50,6 +51,7 @@ const baseThemeConfig = extendTheme(
     slider,
     textarea,
     tooltip,
+    textLink,
     typography
   )
 );

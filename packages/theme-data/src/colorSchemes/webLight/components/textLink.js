@@ -1,0 +1,13 @@
+import oldColors from "./_oldColors";
+
+export default {
+  "textLink.textColor": {
+    value: oldColors["hig-blue-50"]
+  },
+  "textLink.hover.underline.color": {
+    value: "transparent"
+  },
+  "textLink.focus.halo.width": {
+    value: "0"
+  }
+};

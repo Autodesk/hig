@@ -11,6 +11,7 @@ import label from "./components/label";
 import progressBar from "./components/progressBar";
 import skeletonItem from "./components/skeletonItem";
 import slider from "./components/slider";
+import textLink from "./components/textLink";
 import tooltip from "./components/tooltip";
 
 const darkBlueThemeConfig = extendTheme(
@@ -27,6 +28,7 @@ const darkBlueThemeConfig = extendTheme(
     progressBar,
     skeletonItem,
     slider,
+    textLink,
     tooltip
   )
 );
