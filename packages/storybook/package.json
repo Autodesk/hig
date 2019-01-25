@@ -12,7 +12,7 @@
   "scripts": {
     "gemini": "yarn storybook-test-build && concurrently 'yarn storybook-test-serve' 'gemini test --reporter flat' --kill-others --success first",
     "gemini-update": "yarn storybook-test-build && concurrently 'yarn storybook-test-serve' 'gemini update --reporter flat' --kill-others --success first",
-    "gemini-ci": "yarn run wait-port -t 60000 http://:9876/iframe.html && gemini test --reporter flat",
+    "gemini-ci": "gemini test --reporter flat",
     "lint": "eslint .storybook utils --color --ext .js",
     "storybook": "start-storybook -p 9001 -c .storybook/development",
     "storybook-build": "build-storybook -c .storybook/development",
@@ -53,8 +53,7 @@
     "@hig/theme-context": "^2.0.0",
     "@hig/theme-data": "^2.0.0",
     "faker": "^4.1.0",
-    "prop-types": "^15.6.1",
-    "wait-port": "^0.2.2"
+    "prop-types": "^15.6.1"
   },
   "eslintConfig": {
     "extends": "@hig"

@@ -12276,15 +12276,6 @@ w3c-hr-time@^1.0.1:
   dependencies:
     browser-process-hrtime "^0.1.2"
 
-wait-port@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/wait-port/-/wait-port-0.2.2.tgz#d51a491e484a17bf75a947e711a2f012b4e6f2e3"
-  integrity sha1-1RpJHkhKF791qUfnEaLwErTm8uM=
-  dependencies:
-    chalk "^1.1.3"
-    commander "^2.9.0"
-    debug "^2.6.6"
-
 walker@~1.0.5:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/walker/-/walker-1.0.7.tgz#2f7f9b8fd10d677262b18a884e28d19618e028fb"
