@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
 import ThemeContext from "@hig/theme-context";
-import stylesheet from "./Input.stylesheet";
+import stylesheet from "./SliderPresenter.stylesheet";
 
-export default class Input extends Component {
+export default class SliderPresenter extends Component {
   static propTypes = {
     disabled: PropTypes.bool,
     hasFocus: PropTypes.bool,

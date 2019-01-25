@@ -1,14 +1,14 @@
 import React from "react";
 import { mount } from "enzyme";
 import renderer from "react-test-renderer";
-import Input from "./Input";
+import SliderPresenter from "./SliderPresenter";
 
-const subject = (props = {}) => mount(<Input {...props} />);
+const subject = (props = {}) => mount(<SliderPresenter {...props} />);
 
-describe("Slider/presenters/Input", () => {
+describe("Slider/presenters/SliderPresenter", () => {
   let wrapper;
   it("renders correctly without a value", () => {
-    const tree = renderer.create(<Input />).toJSON();
+    const tree = renderer.create(<SliderPresenter />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 

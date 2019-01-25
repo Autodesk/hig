@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { css } from "emotion";
 import { ControlBehavior } from "@hig/behaviors";
 
-import Input from "./presenters/Input";
+import SliderPresenter from "./presenters/SliderPresenter";
 import stylesheet from "./Slider.stylesheet";
 
 /**
@@ -169,7 +169,7 @@ export default class Slider extends Component {
           onMouseUp: handleMouseUp
         }) => (
           <div className={css(styles.slider)}>
-            <Input
+            <SliderPresenter
               hasFocus={hasFocus}
               hasHover={hasHover}
               isPressed={isPressed}

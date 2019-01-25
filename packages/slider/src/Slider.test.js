@@ -2,7 +2,6 @@ import React from "react";
 import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
 import { mount } from "enzyme";
 import Slider from "./index";
-import Input from "./presenters/Input";
 
 describe("slider/Slider", () => {
   takeSnapshotsOf(Slider, [{ desc: "renders", props: {} }]);
