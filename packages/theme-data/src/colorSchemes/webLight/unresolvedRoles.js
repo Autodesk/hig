@@ -6,6 +6,7 @@ import flyout from "./components/flyout";
 import input from "./components/input";
 import label from "./components/label";
 import progressBar from "./components/progressBar";
+import progressRing from "./components/progressRing";
 import textLink from "./components/textLink";
 import tooltip from "./components/tooltip";
 
@@ -24,6 +25,7 @@ const webLightThemeConfig = extendTheme(
     input,
     label,
     progressBar,
+    progressRing,
     textLink,
     tooltip
   )

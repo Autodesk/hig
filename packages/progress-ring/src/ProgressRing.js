@@ -34,11 +34,12 @@ export default class ProgressRing extends Component {
 
     return (
       <ProgressRingBehavior {...behaviorProps}>
-        {({ innerRef }) => (
+        {({ innerRef, cssTransitionState }) => (
           <ProgressRingPresenter
             innerRef={innerRef}
             percentComplete={percentComplete}
             size={size}
+            cssTransitionState={cssTransitionState}
           />
         )}
       </ProgressRingBehavior>
