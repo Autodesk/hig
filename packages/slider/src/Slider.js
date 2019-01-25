@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
+import { ControlBehavior } from "@hig/behaviors";
 
 import Input from "./presenters/Input";
 import stylesheet from "./Slider.stylesheet";
@@ -29,13 +30,13 @@ export default class Slider extends Component {
      */
     id: PropTypes.string,
     /**
-     * Minimum value of the slider
-     */
-    min: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    /**
      * Maximum value of the slider
      */
     max: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    /**
+     * Minimum value of the slider
+     */
+    min: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     /**
      * Name of the field when submitted with a form
      */
@@ -57,6 +58,22 @@ export default class Slider extends Component {
      */
     onInput: PropTypes.func,
     /**
+     * Called when user presses their mouse over the field
+     */
+    onMouseDown: PropTypes.func,
+    /**
+     * Called when user moves their mouse over the field
+     */
+    onMouseEnter: PropTypes.func,
+    /**
+     * Called when user moves their mouse out of the field
+     */
+    onMouseLeave: PropTypes.func,
+    /**
+     * Called when user releases their mouse press over the field
+     */
+    onMouseUp: PropTypes.func,
+    /**
      * The granularity of each step on the slider
      */
     step: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
@@ -67,8 +84,9 @@ export default class Slider extends Component {
   };
 
   static defaultProps = {
-    min: "0",
+    disabled: false,
     max: "100",
+    min: "0",
     step: "1"
   };
 
@@ -117,17 +135,57 @@ export default class Slider extends Component {
   render() {
     const {
       defaultValue, // exclude from otherProps
+      onBlur,
       onChange, // exclude from otherProps
+      onFocus,
+      onMouseDown,
+      onMouseEnter,
+      onMouseLeave,
+      onMouseUp,
       ...otherProps
     } = this.props;
 
-    const value = this.getValue();
+    const currentValue = this.getValue();
     const styles = stylesheet();
 
     return (
-      <div className={css(styles.slider)}>
-        <Input onChange={this.handleChange} value={value} {...otherProps} />
-      </div>
+      <ControlBehavior
+        onBlur={onBlur}
+        onFocus={onFocus}
+        onMouseDown={onMouseDown}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+        onMouseUp={onMouseUp}
+      >
+        {({
+          hasFocus,
+          hasHover,
+          isPressed,
+          onBlur: handleBlur,
+          onFocus: handleFocus,
+          onMouseDown: handleMouseDown,
+          onMouseEnter: handleMouseEnter,
+          onMouseLeave: handleMouseLeave,
+          onMouseUp: handleMouseUp
+        }) => (
+          <div className={css(styles.slider)}>
+            <Input
+              hasFocus={hasFocus}
+              hasHover={hasHover}
+              isPressed={isPressed}
+              onBlur={handleBlur}
+              onChange={this.handleChange}
+              onFocus={handleFocus}
+              onMouseDown={handleMouseDown}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              onMouseUp={handleMouseUp}
+              value={currentValue}
+              {...otherProps}
+            />
+          </div>
+        )}
+      </ControlBehavior>
     );
   }
 }

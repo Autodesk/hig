@@ -17,7 +17,7 @@ const trackProgressPseudoElements = {
   mozilla: "::-moz-range-progress"
 };
 
-function stylesheet(themeData, trackValueRatio) {
+function stylesheet(trackValueRatio, themeData) {
   function browserSpecificPseudoElementRules(
     browserPseudoElements,
     rules,

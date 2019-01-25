@@ -199,9 +199,232 @@ exports[`slider/Slider renders 1`] = `
     aria-valuemin="0"
     aria-valuenow={50}
     className="emotion-0"
+    disabled={false}
     max="100"
     min="0"
+    onBlur={[Function]}
     onChange={[Function]}
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    step="1"
+    type="range"
+    value={50}
+  />
+</div>
+`;
+
+exports[`slider/Slider renders disabled 1`] = `
+.emotion-1 {
+  position: relative;
+  margin-bottom: 20px;
+  width: 300px;
+}
+
+.emotion-0 {
+  -webkit-appearance: none;
+  width: 100%;
+  background-color: transparent;
+  box-sizing: content-box;
+  height: 20px;
+  margin: 0;
+  position: relative;
+  outline: none;
+}
+
+.emotion-0::-ms-tooltip {
+  display: none;
+}
+
+.emotion-0::-ms-tooltip {
+  display: none;
+}
+
+.emotion-0::-moz-focus-outer {
+  border: 0;
+}
+
+.emotion-0::-ms-thumb {
+  box-sizing: content-box;
+  height: 16px;
+  width: 16px;
+  background-color: #D4DBE1;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #ffffff;
+  cursor: pointer;
+  position: relative;
+  top: 50%;
+  -webkit-appearance: none;
+}
+
+.emotion-0::-ms-thumb:hover {
+  background-color: #0ED3BE;
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.15);
+}
+
+.emotion-0::-ms-thumb:focus {
+  outline: none;
+  background-color: #0696D7;
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.25);
+}
+
+.emotion-0::-ms-thumb:active {
+  background-color: #0671A1;
+  box-shadow: 0 0 0 4px rgba(255,255,255,0.25);
+}
+
+.emotion-0::-ms-thumb[disabled] {
+  opacity: 0.3;
+}
+
+.emotion-0::-moz-range-thumb {
+  box-sizing: content-box;
+  height: 16px;
+  width: 16px;
+  background-color: #D4DBE1;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #ffffff;
+  cursor: pointer;
+  position: relative;
+  top: 50%;
+  -webkit-appearance: none;
+}
+
+.emotion-0::-moz-range-thumb:hover {
+  background-color: #0ED3BE;
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.15);
+}
+
+.emotion-0::-moz-range-thumb:focus {
+  outline: none;
+  background-color: #0696D7;
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.25);
+}
+
+.emotion-0::-moz-range-thumb:active {
+  background-color: #0671A1;
+  box-shadow: 0 0 0 4px rgba(255,255,255,0.25);
+}
+
+.emotion-0::-moz-range-thumb[disabled] {
+  opacity: 0.3;
+}
+
+.emotion-0::-webkit-slider-thumb {
+  box-sizing: content-box;
+  height: 16px;
+  width: 16px;
+  background-color: #D4DBE1;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #ffffff;
+  cursor: pointer;
+  position: relative;
+  top: 50%;
+  -webkit-appearance: none;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.emotion-0::-webkit-slider-thumb:hover {
+  background-color: #0ED3BE;
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.15);
+}
+
+.emotion-0::-webkit-slider-thumb:focus {
+  outline: none;
+  background-color: #0696D7;
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.25);
+}
+
+.emotion-0::-webkit-slider-thumb:active {
+  background-color: #0671A1;
+  box-shadow: 0 0 0 4px rgba(255,255,255,0.25);
+}
+
+.emotion-0::-webkit-slider-thumb[disabled] {
+  opacity: 0.3;
+}
+
+.emotion-0::-ms-track {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background-color: rgba(212,219,225,0.5);
+  cursor: pointer;
+  color: transparent;
+  outline: none;
+}
+
+.emotion-0::-ms-track[disabled] {
+  opacity: 0.3;
+}
+
+.emotion-0::-moz-range-track {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background-color: rgba(212,219,225,0.5);
+  cursor: pointer;
+  color: transparent;
+  outline: none;
+}
+
+.emotion-0::-moz-range-track[disabled] {
+  opacity: 0.3;
+}
+
+.emotion-0::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background-color: rgba(212,219,225,0.5);
+  cursor: pointer;
+  color: transparent;
+  outline: none;
+  background-image: linear-gradient(#D4DBE1,#D4DBE1);
+  background-position: 0;
+  background-size: calc((0.5 * 16px)  + (0.5 * (100% - 16px))) 100%;
+  background-repeat: no-repeat;
+}
+
+.emotion-0::-webkit-slider-runnable-track[disabled] {
+  opacity: 0.3;
+}
+
+.emotion-0::-ms-fill-lower {
+  border: none;
+  background-color: #D4DBE1;
+}
+
+.emotion-0::-moz-range-progress {
+  border: none;
+  background-color: #D4DBE1;
+}
+
+<div
+  className="emotion-1"
+>
+  <input
+    aria-valuemax="100"
+    aria-valuemin="0"
+    aria-valuenow={50}
+    className="emotion-0"
+    disabled={true}
+    max="100"
+    min="0"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
     step="1"
     type="range"
     value={50}

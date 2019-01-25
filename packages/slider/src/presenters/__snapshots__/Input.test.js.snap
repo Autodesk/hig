@@ -190,6 +190,10 @@ exports[`Slider/presenters/Input renders correctly without a value 1`] = `
   aria-valuemin={undefined}
   aria-valuenow={undefined}
   className="emotion-0"
+  disabled={undefined}
+  max={undefined}
+  min={undefined}
   type="range"
+  value={undefined}
 />
 `;
