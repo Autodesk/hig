@@ -15,6 +15,8 @@ module.exports = {
   screenshotsDir: "./gemini/screens",
   compositeImage: true,
   sessionsPerBrowser: 3,
+  httpTimeout: 9000,
+  retry: 3,
   system: {
     plugins: {
       sauce: {
