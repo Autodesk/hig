@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Slider/presenters/Input renders correctly without a value 1`] = `
+exports[`Slider/presenters/SliderPresenter renders 1`] = `
 .emotion-0 {
   -webkit-appearance: none;
   width: 100%;
