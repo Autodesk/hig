@@ -5,7 +5,7 @@ Object {
   "anchorPoint": "top-center",
   "containerPosition": Object {
     "left": -25,
-    "top": 157,
+    "top": 162,
   },
   "pointerPosition": Object {
     "left": 94,
@@ -19,7 +19,7 @@ Object {
   "anchorPoint": "top-left",
   "containerPosition": Object {
     "left": 0,
-    "top": 157,
+    "top": 162,
   },
   "pointerPosition": Object {
     "left": 69,
@@ -33,7 +33,7 @@ Object {
   "anchorPoint": "top-center",
   "containerPosition": Object {
     "left": -25,
-    "top": 157,
+    "top": 162,
   },
   "pointerPosition": Object {
     "left": 94,

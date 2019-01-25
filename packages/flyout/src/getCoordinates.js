@@ -22,7 +22,7 @@ import { anchorPoints } from "./anchorPoints";
  * @property {Position} pointerPosition
  */
 
-const ACTION_OVERLAP = 5;
+const ACTION_OVERLAP = 0;
 const POINTER_OVERLAP = 1;
 const {
   TOP_LEFT,
