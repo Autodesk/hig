@@ -4,7 +4,6 @@ import { css } from "emotion";
 import { ControlBehavior } from "@hig/behaviors";
 
 import SliderPresenter from "./presenters/SliderPresenter";
-import stylesheet from "./Slider.stylesheet";
 
 /**
  * @typedef {string|number} Value
@@ -142,11 +141,11 @@ export default class Slider extends Component {
       onMouseEnter,
       onMouseLeave,
       onMouseUp,
+      value, // exclude from otherProps
       ...otherProps
     } = this.props;
 
     const currentValue = this.getValue();
-    const styles = stylesheet();
 
     return (
       <ControlBehavior
@@ -168,7 +167,7 @@ export default class Slider extends Component {
           onMouseLeave: handleMouseLeave,
           onMouseUp: handleMouseUp
         }) => (
-          <div className={css(styles.slider)}>
+          <div className={css({ display: "block" })}>
             <SliderPresenter
               hasFocus={hasFocus}
               hasHover={hasHover}

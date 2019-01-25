@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
 import ThemeContext from "@hig/theme-context";
-import stylesheet from "./SliderPresenter.stylesheet";
+import stylesheet from "./stylesheet";
 
 export default class SliderPresenter extends Component {
   static propTypes = {
@@ -44,11 +44,15 @@ export default class SliderPresenter extends Component {
           const rangeRange = max - min;
           const valueRatio = (value - min) / rangeRange;
 
-          const styles = stylesheet(valueRatio, resolvedRoles);
+          const styles = stylesheet(
+            { disabled, hasFocus, hasHover, isPressed },
+            valueRatio,
+            resolvedRoles
+          );
 
           return (
             <input
-              className={css(styles.input)}
+              className={css(styles.slider)}
               disabled={disabled}
               type="range"
               aria-valuemin={min}

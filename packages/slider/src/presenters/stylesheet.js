@@ -1,23 +1,26 @@
-const thumbPseudoElements = {
-  microsoft: "::-ms-thumb",
-  mozilla: "::-moz-range-thumb",
-  webkit: "::-webkit-slider-thumb"
-};
+function stylesheet(props, trackValueRatio, themeData) {
+  const { disabled, ...activeStates } = props;
+  const { hasFocus, hasHover, isPressed } = activeStates;
 
-const trackPseudoElements = {
-  microsoft: "::-ms-track",
-  mozilla: "::-moz-range-track",
-  webkit: "::-webkit-slider-runnable-track"
-};
+  const thumbPseudoElements = {
+    microsoft: "::-ms-thumb",
+    mozilla: "::-moz-range-thumb",
+    webkit: "::-webkit-slider-thumb"
+  };
 
-const trackProgressPseudoElements = {
-  // WebKit does not have a pseudo element to target this styling, so we achieve it with fancy styling on track
-  // ::-webkit-slider-runnable-track
-  microsoft: "::-ms-fill-lower",
-  mozilla: "::-moz-range-progress"
-};
+  const trackPseudoElements = {
+    microsoft: "::-ms-track",
+    mozilla: "::-moz-range-track",
+    webkit: "::-webkit-slider-runnable-track"
+  };
 
-function stylesheet(trackValueRatio, themeData) {
+  const trackProgressPseudoElements = {
+    // WebKit does not have a pseudo element to target this styling, so we achieve it with fancy styling on track
+    // ::-webkit-slider-runnable-track
+    microsoft: "::-ms-fill-lower",
+    mozilla: "::-moz-range-progress"
+  };
+
   function browserSpecificPseudoElementRules(
     browserPseudoElements,
     rules,
@@ -32,11 +35,10 @@ function stylesheet(trackValueRatio, themeData) {
       const pseudoElement = browserPseudoElement[1];
 
       if (singleBrowserInclusions && singleBrowserInclusions[browser]) {
-        pseudoElementRules = Object.assign(
-          {},
-          rules,
-          singleBrowserInclusions[browser]
-        );
+        pseudoElementRules = {
+          ...rules,
+          ...singleBrowserInclusions[browser]
+        };
       }
 
       styles[`&${pseudoElement}`] = pseudoElementRules;
@@ -64,11 +66,38 @@ function stylesheet(trackValueRatio, themeData) {
     }
   };
 
+  const thumbDisabledRules = disabled
+    ? {
+        opacity: themeData["component.disabled.opacity"]
+      }
+    : {};
+
+  const thumbStateRules = () => {
+    const isInActiveState = Object.values(activeStates).every(
+      stateValue => !stateValue
+    );
+
+    if (disabled || isInActiveState) {
+      return {};
+    }
+
+    let stateKey;
+    if (hasHover) stateKey = "hover";
+    if (hasFocus) stateKey = "focused";
+    if (isPressed) stateKey = "pressed";
+
+    return {
+      backgroundColor: themeData[`slider.${stateKey}.thumb.color`],
+      boxShadow: `0 0 0 ${themeData[`slider.${stateKey}.halo.width`]} ${
+        themeData[`slider.${stateKey}.halo.color`]
+      }`
+    };
+  };
+
   const thumbRules = browserSpecificPseudoElementRules(
     thumbPseudoElements,
-    Object.assign(
-      {},
-      {
+    {
+      ...{
         boxSizing: "content-box",
         height: themeData["slider.thumb.width"],
         width: themeData["slider.thumb.width"],
@@ -78,44 +107,28 @@ function stylesheet(trackValueRatio, themeData) {
         boxShadow: `0 0 0 ${themeData["slider.halo.width"]} ${
           themeData["slider.halo.color"]
         }`,
-        cursor: "pointer",
         position: "relative",
         top: "50%",
-        WebkitAppearance: "none" /* Hides platform-native styling */,
+        WebkitAppearance: "none" /* Hides platform-native styling */
+      },
 
-        "&:hover": {
-          backgroundColor: themeData["slider.hover.thumb.color"],
-          boxShadow: `0 0 0 ${themeData["slider.hover.halo.width"]} ${
-            themeData["slider.hover.halo.color"]
-          }`
-        },
-
-        "&:focus": {
-          outline: "none",
-          backgroundColor: themeData["slider.focused.thumb.color"],
-          boxShadow: `0 0 0 ${themeData["slider.focused.halo.width"]} ${
-            themeData["slider.focused.halo.color"]
-          }`
-        },
-
-        "&:active": {
-          backgroundColor: themeData["slider.pressed.thumb.color"],
-          boxShadow: `0 0 0 ${themeData["slider.pressed.halo.width"]} ${
-            themeData["slider.pressed.halo.color"]
-          }`
-        },
-
-        "&[disabled]": {
-          opacity: themeData["slider.disabled.opacity"]
-        }
-      }
-    ),
+      ...thumbStateRules()
+    },
     {
+      mozilla: {
+        ...thumbDisabledRules
+      },
       webkit: {
         transform: "translateY(-50%)"
       }
     }
   );
+
+  const trackDisabledRules = disabled
+    ? {
+        opacity: themeData["component.disabled.opacity"]
+      }
+    : {};
 
   const trackValueWidth = `calc((0.5 * ${themeData["slider.thumb.width"]}) 
   + (${trackValueRatio} * (100% - ${themeData["slider.thumb.width"]})))`;
@@ -127,17 +140,14 @@ function stylesheet(trackValueRatio, themeData) {
       height: themeData["slider.track.width"],
       border: "none",
       backgroundColor: themeData["slider.track.color"],
-      cursor: "pointer",
       color: "transparent",
       outline: "none",
 
-      "&[disabled]": {
-        opacity: themeData["slider.disabled.opacity"]
-      }
+      ...trackDisabledRules
     },
     {
-      // WebKit does not have a built in way to target the progress or lower fill of a slider track.
-      // This accomplishes the same effect.
+      // WebKit does not have a built-in way to target the progress/lower fill of a slider track.
+      // This produces the same visual effect.
       webkit: {
         backgroundColor: themeData["slider.track.color"],
         backgroundImage: `linear-gradient(${themeData["slider.value.color"]}, ${
@@ -155,18 +165,22 @@ function stylesheet(trackValueRatio, themeData) {
     {
       border: "none",
       backgroundColor: themeData["slider.value.color"]
+    },
+    {
+      mozilla: {
+        ...trackDisabledRules
+      }
     }
   );
 
-  const input = Object.assign(
-    {},
-    baseRules,
-    thumbRules,
-    trackRules,
-    trackProgressRules
-  );
-
-  return { input };
+  return {
+    slider: {
+      ...baseRules,
+      ...thumbRules,
+      ...trackRules,
+      ...trackProgressRules
+    }
+  };
 }
 
 export default stylesheet;

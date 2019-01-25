@@ -4,9 +4,8 @@ gemini.suite("Slider", () => {
       .setUrl("iframe.html?selectedKind=Slider&selectedStory=default")
       .setCaptureElements(".storybook-component")
       .capture("default")
-      .capture("hovering over first instance", (actions, find) => {
-        const rangeInput = find("input[type='range']");
-        actions.mouseDown(rangeInput).mouseMove(rangeInput);
+      .capture("pressing the first Slider", actions => {
+        actions.mouseDown("input[type='range']");
       });
   });
 
