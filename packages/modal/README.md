@@ -25,7 +25,6 @@ import '@hig/modal/build/index.css';
 <Modal
   title="Are you sure?"
   open
-  buttons={[{ title: "Cancel", type: "secondary" }, { title: "Ok" }]}
   body="This is the text body of my modal"
   style="alternate"
 >
