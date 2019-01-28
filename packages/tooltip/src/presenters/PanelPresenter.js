@@ -1,21 +1,31 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { css } from "emotion";
+import { ThemeContext } from "@hig/theme-context";
 
-import "./PanelPresenter.scss";
+import stylesheet from "./stylesheet";
 
 export default function PanelPresenter(props) {
   const { children, innerRef, maxHeight, onScroll } = props;
   const maxHeightInPixels = maxHeight ? `${maxHeight}px` : undefined;
 
   return (
-    <div
-      className="hig__tooltip-v1__panel"
-      onScroll={onScroll}
-      ref={innerRef}
-      style={{ maxHeight: maxHeightInPixels }}
-    >
-      <div className="hig__tooltip-v1__panel__inner">{children}</div>
-    </div>
+    <ThemeContext.Consumer>
+      {({ resolvedRoles }) => {
+        const styles = stylesheet(resolvedRoles);
+
+        return (
+          <div
+            className={css(styles.panel)}
+            onScroll={onScroll}
+            ref={innerRef}
+            style={{ maxHeight: maxHeightInPixels }}
+          >
+            <div className={css(styles.panelInner)}>{children}</div>
+          </div>
+        );
+      }}
+    </ThemeContext.Consumer>
   );
 }
 

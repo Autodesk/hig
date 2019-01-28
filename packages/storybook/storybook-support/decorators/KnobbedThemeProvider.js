@@ -43,7 +43,6 @@ const COLOR_THEME_IDS = {
 };
 
 function themeOptions(themeIds) {
-  console.log(themeIds);
   return themeIds.reduce((acc, id) => {
     const theme = themes[DEFAULT_DENSITY_ID][id];
     return {

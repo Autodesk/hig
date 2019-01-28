@@ -139,20 +139,18 @@ export default class ProgressRingIndeterminateBehavior extends Component {
         in
         timeout={{ enter: 650, exit: 466 }}
         appear
-        classNames={{
-          appearActive: "hig__progress-ring--entering",
-          enterDone: "hig__progress-ring--entered",
-          exitActive: "hig__progress-ring--exiting",
-          exitDone: "hig__progress-ring--exited"
-        }}
+        classNames="hig__progress-ring--"
         onEntering={this.handleEntering}
         onEntered={this.handleEntered}
         onExiting={this.handleExiting}
         onExited={this.handleExited}
       >
-        {this.props.children({
-          innerRef
-        })}
+        {status =>
+          this.props.children({
+            innerRef,
+            cssTransitionState: status
+          })
+        }
       </CSSTransition>
     );
   }

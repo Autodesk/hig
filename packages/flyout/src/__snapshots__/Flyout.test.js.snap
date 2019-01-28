@@ -8,7 +8,7 @@ exports[`flyout/Flyout alterCoordinates is called when rendering 1`] = `
         "anchorPoint": "top-left",
         "containerPosition": Object {
           "left": 0,
-          "top": -5,
+          "top": 0,
         },
         "pointerPosition": Object {
           "left": 0,

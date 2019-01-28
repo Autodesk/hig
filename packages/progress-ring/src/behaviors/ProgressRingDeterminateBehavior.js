@@ -176,7 +176,7 @@ export default class ProgressRingDeterminateBehavior extends Component {
 
   opacityForSegment(index, value) {
     const fadeStartValue = index * this.FADE_DELAY_FACTOR;
-    return (value - fadeStartValue) / this.FADE_DELAY_FACTOR;
+    return Math.max(0, (value - fadeStartValue) / this.FADE_DELAY_FACTOR);
   }
 
   render() {
@@ -187,23 +187,19 @@ export default class ProgressRingDeterminateBehavior extends Component {
         in={this.state.transitionEnter}
         timeout={{ enter: 650, exit: 466 }}
         appear
-        classNames={{
-          appear: "hig__progress-ring--entering",
-          appearActive: "hig__progress-ring--entering",
-          enter: "hig__progress-ring--entering",
-          enterDone: "hig__progress-ring--entered",
-          exitActive: "hig__progress-ring--exiting",
-          exitDone: "hig__progress-ring--exited"
-        }}
+        classNames="hig__progress-ring--"
         onEntering={this.handleEntering}
         onEntered={this.handleEntered}
         onExiting={this.handleExiting}
         onExited={this.handleExited}
       >
-        {this.props.children({
-          innerRef,
-          percentComplete
-        })}
+        {status =>
+          this.props.children({
+            innerRef,
+            percentComplete,
+            cssTransitionState: status
+          })
+        }
       </CSSTransition>
     );
   }

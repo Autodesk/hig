@@ -18,7 +18,7 @@ Tooltip.defaultProps = {
    * @returns {import("@hig/flyout").Coordinates}
    */
   alterCoordinates(coordinates) {
-    return dislocateContainer(coordinates, 10);
+    return dislocateContainer(coordinates, 5);
   },
   /**
    * @param {import("@hig/flyout").PanelRendererPayload} payload

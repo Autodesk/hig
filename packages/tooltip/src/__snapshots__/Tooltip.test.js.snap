@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tooltip/Tooltip  1`] = `
-.emotion-5 {
+.emotion-7 {
   position: relative;
   display: inline-block;
 }
@@ -13,7 +13,7 @@ exports[`tooltip/Tooltip  1`] = `
   display: flex;
 }
 
-.emotion-4 {
+.emotion-6 {
   position: absolute;
   display: none;
   width: 100%;
@@ -48,14 +48,24 @@ exports[`tooltip/Tooltip  1`] = `
   fill: #393939;
 }
 
+.emotion-5 {
+  border: 1px solid #393939;
+  background-color: #393939;
+  border-radius: 4px;
+}
+
+.emotion-4 {
+  position: relative;
+}
+
 <div
-  className="emotion-5"
+  className="emotion-7"
 >
   <div
     className="emotion-0"
   />
   <div
-    className="emotion-4"
+    className="emotion-6"
     style={
       Object {
         "left": "0px",
@@ -90,7 +100,7 @@ exports[`tooltip/Tooltip  1`] = `
       </svg>
     </div>
     <div
-      className="hig__tooltip-v1__panel"
+      className="emotion-5"
       onScroll={undefined}
       style={
         Object {
@@ -99,7 +109,7 @@ exports[`tooltip/Tooltip  1`] = `
       }
     >
       <div
-        className="hig__tooltip-v1__panel__inner"
+        className="emotion-4"
       />
     </div>
   </div>
@@ -107,7 +117,7 @@ exports[`tooltip/Tooltip  1`] = `
 `;
 
 exports[`tooltip/Tooltip  2`] = `
-.emotion-6 {
+.emotion-8 {
   position: relative;
   display: inline-block;
 }
@@ -134,7 +144,17 @@ exports[`tooltip/Tooltip  2`] = `
   fill: #393939;
 }
 
+.emotion-6 {
+  border: 1px solid #393939;
+  background-color: #393939;
+  border-radius: 4px;
+}
+
 .emotion-5 {
+  position: relative;
+}
+
+.emotion-7 {
   position: absolute;
   display: table;
   width: 100%;
@@ -193,7 +213,7 @@ exports[`tooltip/Tooltip  2`] = `
 }
 
 <div
-  className="emotion-6"
+  className="emotion-8"
 >
   <div
     className="emotion-1"
@@ -221,7 +241,7 @@ exports[`tooltip/Tooltip  2`] = `
     </button>
   </div>
   <div
-    className="emotion-5"
+    className="emotion-7"
     style={
       Object {
         "left": "0px",
@@ -256,7 +276,7 @@ exports[`tooltip/Tooltip  2`] = `
       </svg>
     </div>
     <div
-      className="hig__tooltip-v1__panel"
+      className="emotion-6"
       onScroll={[Function]}
       style={
         Object {
@@ -265,7 +285,7 @@ exports[`tooltip/Tooltip  2`] = `
       }
     >
       <div
-        className="hig__tooltip-v1__panel__inner"
+        className="emotion-5"
       >
         Hello World
       </div>

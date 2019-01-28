@@ -12,15 +12,14 @@ Read more about when and how to use the Progress Ring component [on the website]
 yarn add @hig/progress-ring
 ```
 
-### Import the component and CSS
+### Import the component
 
 ```js
 import ProgressRing from '@hig/progress-ring';
-import '@hig/progress-ring/build/index.css';
 ```
 
 ## Basic usage
 
 ```jsx
-<ProgressRing />
+<ProgressRing percentComplete="33" size="m" />
 ```

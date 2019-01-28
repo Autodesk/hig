@@ -980,6 +980,16 @@
     prop-types "^15.6.1"
     react-transition-group "^2.3.1"
 
+"@hig/flyout@^0.8.0":
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/@hig/flyout/-/flyout-0.8.1.tgz#501f3fe1179634c5bd74009dde2ace7b502e2259"
+  integrity sha512-RKOmhrXRdKiYUH1dc/rqagX3VWyyG3yke8xEjt79hUc0ptUidaM4Y/uBQINUbtRbikeupB9mJsw26s7YRtHg2Q==
+  dependencies:
+    "@hig/theme-context" "^1.0.1"
+    emotion "^10.0.0"
+    prop-types "^15.6.1"
+    react-transition-group "^2.3.1"
+
 "@hig/fonts@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@hig/fonts/-/fonts-1.0.0.tgz#ad21470ecaf4b76c7d1c46b427179394d737ae8e"
@@ -1036,6 +1046,17 @@
   integrity sha512-VQk35vBTb0pl8ouiE2Us3d2z5jx4qyeaPY2utQzbEhIVOxNYldoWq4Z9fJ4bYhCeUJJokGS8NZLTy+6Hw7EIVQ==
   dependencies:
     tinycolor2 "^1.4.1"
+
+"@hig/tooltip@^0.4.1":
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/@hig/tooltip/-/tooltip-0.4.1.tgz#b58b64b64b00916d90236dd48413d3cb70b2e348"
+  integrity sha512-toFFmD+LjyD75//dSm6p2MVYcrU58VX21KzDadWDCnVxJk8zN502DJm+Fgqgdr8xB3ulABvGHEggA0JQCZOOig==
+  dependencies:
+    "@hig/flyout" "^0.8.0"
+    "@hig/typography" "^0.1.4"
+    classnames "^2.2.5"
+    prop-types "^15.6.1"
+    react-lifecycles-compat "^3.0.4"
 
 "@hig/typography@^0.1.4":
   version "0.1.4"

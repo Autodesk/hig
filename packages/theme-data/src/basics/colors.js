@@ -152,5 +152,8 @@ export default {
   // Alert colors
   error: { value: "#ec4a41", type: COLOR },
   success: { value: "#87b340", type: COLOR },
-  warning: { value: "#faa21b", type: COLOR }
+  warning: { value: "#faa21b", type: COLOR },
+
+  textLinkAgainstLight: { value: "#006EAF", type: COLOR },
+  textLinkAgainstDark: { value: "#6DD2FF", type: COLOR }
 };

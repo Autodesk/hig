@@ -16,7 +16,6 @@ yarn add @hig/tooltip
 
 ```js
 import Tooltip from '@hig/tooltip';
-import '@hig/tooltip/build/index.css';
 ```
 
 ## Basic usage
