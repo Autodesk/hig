@@ -4,14 +4,22 @@ export default {
       ref: "basics.colors.textLinkAgainstDark"
     }
   },
+  "textLink.hover.textColor": {
+    value: {
+      ref: "basics.colors.textLinkAgainstDark"
+    }
+  },
+  "textLink.focus.textColor": {
+    value: {
+      ref: "basics.colors.textLinkAgainstDark"
+    }
+  },
   "textLink.hover.underline.color": {
     value: {
       ref: "basics.colors.textLinkAgainstDark"
     }
   },
   "textLink.focus.halo.color": {
-    value: {
-      ref: "basics.colors.autodeskBlue400"
-    }
+    value: "#407385"
   }
 };
