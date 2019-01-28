@@ -18,8 +18,8 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/themes": "^0.3.0",
-    "classnames": "^2.2.5",
+    "@hig/theme-context": "^2.0.0",
+    "@hig/theme-data": "^1.6.0",
     "prop-types": "^15.6.1",
     "react-lifecycles-compat": "^3.0.4"
   },

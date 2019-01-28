@@ -16,8 +16,7 @@ const knobLabels = {
   children: "Children",
   link: "Link",
   onClick: "onClick",
-  target: "Target",
-  type: "Variant"
+  target: "Target"
 };
 
 export default function getKnobs(props) {
@@ -33,7 +32,6 @@ export default function getKnobs(props) {
       targetOptions,
       target,
       knobGroupIds.basic
-    ),
-    type: select(knobLabels.type, typeOptions, type, knobGroupIds.basic)
+    )
   };
 }
