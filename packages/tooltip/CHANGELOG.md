@@ -1,3 +1,16 @@
+# [@hig/tooltip-v1.0.0](https://github.com/Autodesk/hig/compare/@hig/tooltip@0.4.2...@hig/tooltip@1.0.0) (2019-01-28)
+
+
+### Features
+
+* upgrade to themeable Typography ([0bacfb8](https://github.com/Autodesk/hig/commit/0bacfb8))
+
+
+### BREAKING CHANGES
+
+* tooltip is now styled through theme-data, all css classnames have been removed
+it also now uses the themeable version of typography
+
 # [@hig/tooltip-v0.4.2](https://github.com/Autodesk/hig/compare/@hig/tooltip@0.4.1...@hig/tooltip@0.4.2) (2019-01-23)
 
 
