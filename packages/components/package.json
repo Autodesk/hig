@@ -47,7 +47,7 @@
     "@hig/theme-data": "^2.0.0",
     "@hig/themes": "^0.3.0",
     "@hig/timestamp": "^0.1.4",
-    "@hig/tooltip": "^0.4.2",
+    "@hig/tooltip": "^1.0.0",
     "@hig/top-nav": "^2.0.2",
     "@hig/typography": "^1.0.1"
   },
