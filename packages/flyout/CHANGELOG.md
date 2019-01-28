@@ -1,3 +1,10 @@
+# [@hig/flyout-v1.0.2](https://github.com/Autodesk/hig/compare/@hig/flyout@1.0.1...@hig/flyout@1.0.2) (2019-01-28)
+
+
+### Bug Fixes
+
+* flyout position design tweak ([3875d8e](https://github.com/Autodesk/hig/commit/3875d8e))
+
 # [@hig/flyout-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/flyout@1.0.0...@hig/flyout@1.0.1) (2019-01-23)
 
 
