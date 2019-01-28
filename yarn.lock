@@ -206,6 +206,13 @@
   dependencies:
     tinycolor2 "^1.4.1"
 
+"@hig/theme-data@^1.1.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@hig/theme-data/-/theme-data-1.6.0.tgz#f167677636d95b8776acb0ccf4b72031a17305c5"
+  integrity sha512-5iJisDZnKSfSKcxkyrw52Bod5uEh2q3XfrBU/AcIT0BEL+YlS2+2yuUUvBFl5J5AkIWQHpdqFPe/6rWVvhARvQ==
+  dependencies:
+    tinycolor2 "^1.4.1"
+
 "@hig/themes@^0.3.0":
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@hig/themes/-/themes-0.3.0.tgz#15b20fd8c9a8e2a3d9146824ffbfbe88d81bfc9f"
