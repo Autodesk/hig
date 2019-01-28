@@ -1,3 +1,24 @@
+# [@hig/theme-data-v2.0.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@1.6.0...@hig/theme-data@2.0.0) (2019-01-28)
+
+
+### Bug Fixes
+
+* button theme data design updates ([d47e7c4](https://github.com/Autodesk/hig/commit/d47e7c4))
+
+
+### Features
+
+* add theem data for text link ([a514520](https://github.com/Autodesk/hig/commit/a514520))
+* **progress-ring:** implement themable progress ring ([cf7ebe4](https://github.com/Autodesk/hig/commit/cf7ebe4))
+* **theme-data:** implement roles for text link ([4d1a585](https://github.com/Autodesk/hig/commit/4d1a585))
+* **theme-data:** new theme data for progress ring ([8d41326](https://github.com/Autodesk/hig/commit/8d41326))
+
+
+### BREAKING CHANGES
+
+* **progress-ring:** This implements the new themable API for progress ring.
+Some CSS class names were dropped but otherwise usage remains the same.
+
 # [@hig/theme-data-v1.6.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@1.5.0...@hig/theme-data@1.6.0) (2019-01-23)
 
 
