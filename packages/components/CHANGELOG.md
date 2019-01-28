@@ -1,3 +1,10 @@
+# [@hig/components-v1.0.7](https://github.com/Autodesk/hig/compare/@hig/components@1.0.6...@hig/components@1.0.7) (2019-01-28)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/profile-flyout to version 2.0.0 ([361bcef](https://github.com/Autodesk/hig/commit/361bcef))
+
 # [@hig/components-v1.0.6](https://github.com/Autodesk/hig/compare/@hig/components@1.0.5...@hig/components@1.0.6) (2019-01-23)
 
 
