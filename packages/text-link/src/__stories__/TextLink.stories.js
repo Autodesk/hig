@@ -17,11 +17,7 @@ stories.forEach(({ description, getProps }) => {
       propTablesExclude: [KnobbedThemeProvider]
     })(() => {
       const props = getProps();
-      return (
-        <KnobbedThemeProvider>
-          {renderStory(props)}
-        </KnobbedThemeProvider>
-      );
+      return <KnobbedThemeProvider>{renderStory(props)}</KnobbedThemeProvider>;
     })
   );
 });

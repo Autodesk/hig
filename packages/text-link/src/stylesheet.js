@@ -10,8 +10,6 @@ export default function stylesheet(props, themeData) {
     // from typography-base
     fontFamily: themeData["typography.body.fontFamily"],
     margin: 0,
-    "-webkit-font-smoothing": "antialiased",
-    "-moz-osx-font-smoothing": "grayscale",
 
     // from default-link
     textDecoration: "none",
@@ -20,19 +18,21 @@ export default function stylesheet(props, themeData) {
     color: themeData["textLink.textColor"],
     outline: "none",
 
-    ...(hasHover ? 
-      {
-        textDecoration: "underline",
-        textDecorationColor: themeData["textLink.hover.underline.color"]
-      } :
-      {}
-    ),
+    ...(hasHover
+      ? {
+          color: themeData["textLink.hover.textColor"],
+          textDecoration: "underline",
+          textDecorationColor: themeData["textLink.hover.underline.color"]
+        }
+      : {}),
 
-    ...(hasFocus ?
-      {
-        outline: `solid ${themeData["textLink.focus.halo.width"]} ${themeData["textLink.focus.halo.color"]}`
-      } :
-      {}
-    ),
+    ...(hasFocus
+      ? {
+          color: themeData["textLink.focus.textColor"],
+          outline: `solid ${themeData["textLink.focus.halo.width"]} ${
+            themeData["textLink.focus.halo.color"]
+          }`
+        }
+      : {})
   };
 }
