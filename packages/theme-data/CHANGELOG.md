@@ -1,3 +1,15 @@
+# [@hig/theme-data-v2.0.1](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.0.0...@hig/theme-data@2.0.1) (2019-01-29)
+
+
+### Bug Fixes
+
+* **theme-data:** fix styles for input ([b68daa9](https://github.com/Autodesk/hig/commit/b68daa9))
+
+
+### Performance Improvements
+
+* optimize `mapValues`, `extendTheme` ([e87361d](https://github.com/Autodesk/hig/commit/e87361d)), closes [#1591](https://github.com/Autodesk/hig/issues/1591)
+
 # [@hig/theme-data-v2.0.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@1.6.0...@hig/theme-data@2.0.0) (2019-01-28)
 
 

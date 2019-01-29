@@ -1,3 +1,11 @@
+# [@hig/components-v1.0.8](https://github.com/Autodesk/hig/compare/@hig/components@1.0.7...@hig/components@1.0.8) (2019-01-29)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/progress-ring to version 1.0.0 ([dfa1763](https://github.com/Autodesk/hig/commit/dfa1763))
+* **package:** update [@hig](https://github.com/hig)/tooltip to version 1.0.0 ([b87a5a9](https://github.com/Autodesk/hig/commit/b87a5a9))
+
 # [@hig/components-v1.0.7](https://github.com/Autodesk/hig/compare/@hig/components@1.0.6...@hig/components@1.0.7) (2019-01-28)
 
 
