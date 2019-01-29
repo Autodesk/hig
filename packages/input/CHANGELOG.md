@@ -1,3 +1,10 @@
+# [@hig/input-v1.0.4](https://github.com/Autodesk/hig/compare/@hig/input@1.0.3...@hig/input@1.0.4) (2019-01-29)
+
+
+### Bug Fixes
+
+* **input:** fix styles for input ([ccdc7e5](https://github.com/Autodesk/hig/commit/ccdc7e5))
+
 # [@hig/input-v1.0.3](https://github.com/Autodesk/hig/compare/@hig/input@1.0.2...@hig/input@1.0.3) (2019-01-23)
 
 
