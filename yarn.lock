@@ -206,7 +206,7 @@
   dependencies:
     tinycolor2 "^1.4.1"
 
-"@hig/theme-data@^1.1.0":
+"@hig/theme-data@^1.1.0", "@hig/theme-data@^1.6.0":
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/@hig/theme-data/-/theme-data-1.6.0.tgz#f167677636d95b8776acb0ccf4b72031a17305c5"
   integrity sha512-5iJisDZnKSfSKcxkyrw52Bod5uEh2q3XfrBU/AcIT0BEL+YlS2+2yuUUvBFl5J5AkIWQHpdqFPe/6rWVvhARvQ==
