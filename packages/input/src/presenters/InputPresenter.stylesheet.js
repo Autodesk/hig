@@ -54,6 +54,15 @@ export default function stylesheet(props, themeData) {
       fontWeight: themeData["input.fontWeight"],
       lineHeight: themeData["input.lineHeight"],
       width: "100%",
+      "&::placeholder": {
+        color: themeData["input.placeholder.fontColor"]
+      },
+      "&::-ms-input-placeholder": {
+        color: themeData["input.placeholder.fontColor"]
+      },
+      "::selection": {
+        backgroundColor: themeData["input.highlightColor"]
+      },
       ...inputStyles(props, themeData)
     }
   };

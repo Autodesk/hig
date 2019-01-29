@@ -26,6 +26,30 @@ exports[`InputPresenter renders by default 1`] = `
   transition-duration: 0.3s;
 }
 
+.emotion-0::-webkit-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::-moz-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::-ms-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::selection {
+  background-color: #0696d7;
+}
+
 <input
   className="emotion-0"
   disabled={undefined}
@@ -60,6 +84,30 @@ exports[`InputPresenter renders when disabled 1`] = `
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::-moz-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::-ms-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::selection {
+  background-color: #0696d7;
 }
 
 <input
@@ -99,6 +147,30 @@ exports[`InputPresenter renders with focus 1`] = `
   transition-duration: 0.1s;
 }
 
+.emotion-0::-webkit-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::-moz-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::-ms-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::selection {
+  background-color: #0696d7;
+}
+
 <input
   className="emotion-0"
   disabled={undefined}
@@ -135,6 +207,30 @@ exports[`InputPresenter renders with hover 1`] = `
   transition-duration: 0.1s;
 }
 
+.emotion-0::-webkit-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::-moz-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::-ms-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::selection {
+  background-color: #0696d7;
+}
+
 <input
   className="emotion-0"
   disabled={undefined}
@@ -169,6 +265,30 @@ exports[`InputPresenter renders with id 1`] = `
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::-moz-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::-ms-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::selection {
+  background-color: #0696d7;
 }
 
 <input
