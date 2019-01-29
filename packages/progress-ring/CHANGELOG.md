@@ -1,3 +1,16 @@
+# [@hig/progress-ring-v1.0.0](https://github.com/Autodesk/hig/compare/@hig/progress-ring@0.1.1...@hig/progress-ring@1.0.0) (2019-01-28)
+
+
+### Features
+
+* **progress-ring:** implement themable progress ring ([cf7ebe4](https://github.com/Autodesk/hig/commit/cf7ebe4))
+
+
+### BREAKING CHANGES
+
+* **progress-ring:** This implements the new themable API for progress ring.
+Some CSS class names were dropped but otherwise usage remains the same.
+
 # [@hig/progress-ring-v0.1.1](https://github.com/Autodesk/hig/compare/@hig/progress-ring@0.1.0...@hig/progress-ring@0.1.1) (2018-10-08)
 
 
