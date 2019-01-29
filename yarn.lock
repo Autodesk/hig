@@ -191,6 +191,16 @@
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/@hig/styles/-/styles-0.2.3.tgz#675631d008c1861921d6148ecf15b140c04cc5b4"
 
+"@hig/text-link@^0.1.0":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@hig/text-link/-/text-link-0.1.3.tgz#e98d522f26477d0bad64172246626af72ef37d87"
+  integrity sha512-BQfBdurEP8pLH/T/tdpiIjkvco+aY35wWMsm3Eh81G6yuteH7g1RdVi/DFchIz2eYLT2vCZeB4qi99KoXn5XMA==
+  dependencies:
+    "@hig/themes" "^0.1.3"
+    classnames "^2.2.5"
+    prop-types "^15.6.1"
+    react-lifecycles-compat "^3.0.2"
+
 "@hig/theme-context@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@hig/theme-context/-/theme-context-1.0.1.tgz#338aa727352b0d0debfd369cfec6d46a6ecf8c65"
@@ -212,6 +222,13 @@
   integrity sha512-5iJisDZnKSfSKcxkyrw52Bod5uEh2q3XfrBU/AcIT0BEL+YlS2+2yuUUvBFl5J5AkIWQHpdqFPe/6rWVvhARvQ==
   dependencies:
     tinycolor2 "^1.4.1"
+
+"@hig/themes@^0.1.3":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@hig/themes/-/themes-0.1.3.tgz#5c47989387be930904fa13dc9499172ea4b7ca32"
+  integrity sha512-rJ6UrCcy1FXWKaEo0ptr/IdRvOYWOLolPhFJj9dou7BZmV+VHRoZ0pBEA8FkTLpaNfYXvXsuUe+gwonM7/tpdg==
+  dependencies:
+    prop-types "^15.6.1"
 
 "@hig/themes@^0.3.0":
   version "0.3.0"
@@ -9777,7 +9794,7 @@ react-is@^16.5.2:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.6.3.tgz#d2d7462fcfcbe6ec0da56ad69047e47e56e7eac0"
   integrity sha512-u7FDWtthB4rWibG/+mFbVd5FvdI20yde86qKGx4lVUTWmPlSWQ4QxbBIrrs+HnXGbxOUlUzTAP/VDmvCwaP2yA==
 
-react-lifecycles-compat@^3.0.0, react-lifecycles-compat@^3.0.4:
+react-lifecycles-compat@^3.0.0, react-lifecycles-compat@^3.0.2, react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
 
