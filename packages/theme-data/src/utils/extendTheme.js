@@ -6,7 +6,7 @@
  * Add additional roles to a theme
  */
 export default function extendTheme(theme, extension) {
-  // NOTE: We do *not* use Object spread in `reduce`, since it copies the entire
+  // NOTE: We do *not* use Object spread in `reduce`, because it copies the entire
   // object in every iteration and becomes a performance bottleneck. Instead, we
   // copy `theme` once at the beginning and then apply changes to that same
   // object instance `acc` using property assignment and `Object.assign`.
