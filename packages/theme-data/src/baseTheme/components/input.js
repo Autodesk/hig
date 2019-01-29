@@ -17,7 +17,7 @@ export default {
   },
   "input.boxType.horizontalPadding": {
     type: LENGTH,
-    value: "8px"
+    value: "12px"
   },
   "input.verticalPadding": {
     type: LENGTH,
@@ -119,6 +119,10 @@ export default {
     value: {
       ref: "colorScheme.textColorDim"
     }
+  },
+  "input.highlightColor": {
+    type: COLOR,
+    value: "default"
   },
 
   // Hover
