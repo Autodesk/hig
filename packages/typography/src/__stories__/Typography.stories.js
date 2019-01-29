@@ -2,7 +2,6 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { select } from "@storybook/addon-knobs/react";
 import { withInfo } from "@storybook/addon-info";
-
 import KnobbedThemeProvider from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
 
 import {
@@ -22,16 +21,18 @@ function renderStory(component) {
 
 storybook.add(
   "base component",
-  withInfo(infoOptions)(() => {
-    const component = (
-      <Typography
-        variant={select("Variant", AVAILABLE_VARIANTS, "body")}
-        align={select("Text align", AVAILABLE_ALIGNMENTS, "left")}
-        fontWeight={select("Font weight", AVAILABLE_FONT_WEIGHTS, "normal")}
-      >
-        This should render nicely.
-      </Typography>
-    );
-    return renderStory(component);
-  })
+  withInfo({ ...infoOptions, propTablesExclude: [KnobbedThemeProvider] })(
+    () => {
+      const component = (
+        <Typography
+          variant={select("Variant", AVAILABLE_VARIANTS, "body")}
+          align={select("Text align", AVAILABLE_ALIGNMENTS, "left")}
+          fontWeight={select("Font weight", AVAILABLE_FONT_WEIGHTS, "normal")}
+        >
+          This should render nicely.
+        </Typography>
+      );
+      return renderStory(component);
+    }
+  )
 );
