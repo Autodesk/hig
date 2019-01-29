@@ -24,7 +24,7 @@
     "@hig/rich-text": "^0.1.4",
     "@hig/scripts": "^0.1.2",
     "@hig/semantic-release-config": "^0.1.0",
-    "@hig/typography": "^0.1.4",
+    "@hig/typography": "^1.0.1",
     "svgo": "^1.0.5"
   },
   "peerDependencies": {
