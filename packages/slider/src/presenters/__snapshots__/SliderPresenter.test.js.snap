@@ -70,7 +70,7 @@ exports[`Slider/presenters/SliderPresenter renders 1`] = `
   width: 100%;
   height: 2px;
   border: none;
-  background-color: rgba(212,219,225,0.5);
+  background-color: rgba(212,219,225,0.2);
   color: transparent;
   outline: none;
 }
@@ -79,7 +79,7 @@ exports[`Slider/presenters/SliderPresenter renders 1`] = `
   width: 100%;
   height: 2px;
   border: none;
-  background-color: rgba(212,219,225,0.5);
+  background-color: rgba(212,219,225,0.2);
   color: transparent;
   outline: none;
 }
@@ -88,7 +88,7 @@ exports[`Slider/presenters/SliderPresenter renders 1`] = `
   width: 100%;
   height: 2px;
   border: none;
-  background-color: rgba(212,219,225,0.5);
+  background-color: rgba(212,219,225,0.2);
   color: transparent;
   outline: none;
   background-image: linear-gradient(#D4DBE1,#D4DBE1);
@@ -191,7 +191,7 @@ exports[`Slider/presenters/SliderPresenter renders disabled 1`] = `
   width: 100%;
   height: 2px;
   border: none;
-  background-color: rgba(212,219,225,0.5);
+  background-color: rgba(212,219,225,0.2);
   color: transparent;
   outline: none;
   opacity: 0.5;
@@ -201,7 +201,7 @@ exports[`Slider/presenters/SliderPresenter renders disabled 1`] = `
   width: 100%;
   height: 2px;
   border: none;
-  background-color: rgba(212,219,225,0.5);
+  background-color: rgba(212,219,225,0.2);
   color: transparent;
   outline: none;
   opacity: 0.5;
@@ -211,7 +211,7 @@ exports[`Slider/presenters/SliderPresenter renders disabled 1`] = `
   width: 100%;
   height: 2px;
   border: none;
-  background-color: rgba(212,219,225,0.5);
+  background-color: rgba(212,219,225,0.2);
   color: transparent;
   outline: none;
   opacity: 0.5;
@@ -315,7 +315,7 @@ exports[`Slider/presenters/SliderPresenter renders focused 1`] = `
   width: 100%;
   height: 2px;
   border: none;
-  background-color: rgba(212,219,225,0.5);
+  background-color: rgba(212,219,225,0.2);
   color: transparent;
   outline: none;
 }
@@ -324,7 +324,7 @@ exports[`Slider/presenters/SliderPresenter renders focused 1`] = `
   width: 100%;
   height: 2px;
   border: none;
-  background-color: rgba(212,219,225,0.5);
+  background-color: rgba(212,219,225,0.2);
   color: transparent;
   outline: none;
 }
@@ -333,7 +333,7 @@ exports[`Slider/presenters/SliderPresenter renders focused 1`] = `
   width: 100%;
   height: 2px;
   border: none;
-  background-color: rgba(212,219,225,0.5);
+  background-color: rgba(212,219,225,0.2);
   color: transparent;
   outline: none;
   background-image: linear-gradient(#D4DBE1,#D4DBE1);
@@ -435,7 +435,7 @@ exports[`Slider/presenters/SliderPresenter renders hovered 1`] = `
   width: 100%;
   height: 2px;
   border: none;
-  background-color: rgba(212,219,225,0.5);
+  background-color: rgba(212,219,225,0.2);
   color: transparent;
   outline: none;
 }
@@ -444,7 +444,7 @@ exports[`Slider/presenters/SliderPresenter renders hovered 1`] = `
   width: 100%;
   height: 2px;
   border: none;
-  background-color: rgba(212,219,225,0.5);
+  background-color: rgba(212,219,225,0.2);
   color: transparent;
   outline: none;
 }
@@ -453,7 +453,7 @@ exports[`Slider/presenters/SliderPresenter renders hovered 1`] = `
   width: 100%;
   height: 2px;
   border: none;
-  background-color: rgba(212,219,225,0.5);
+  background-color: rgba(212,219,225,0.2);
   color: transparent;
   outline: none;
   background-image: linear-gradient(#D4DBE1,#D4DBE1);
@@ -555,7 +555,7 @@ exports[`Slider/presenters/SliderPresenter renders pressed 1`] = `
   width: 100%;
   height: 2px;
   border: none;
-  background-color: rgba(212,219,225,0.5);
+  background-color: rgba(212,219,225,0.2);
   color: transparent;
   outline: none;
 }
@@ -564,7 +564,7 @@ exports[`Slider/presenters/SliderPresenter renders pressed 1`] = `
   width: 100%;
   height: 2px;
   border: none;
-  background-color: rgba(212,219,225,0.5);
+  background-color: rgba(212,219,225,0.2);
   color: transparent;
   outline: none;
 }
@@ -573,7 +573,7 @@ exports[`Slider/presenters/SliderPresenter renders pressed 1`] = `
   width: 100%;
   height: 2px;
   border: none;
-  background-color: rgba(212,219,225,0.5);
+  background-color: rgba(212,219,225,0.2);
   color: transparent;
   outline: none;
   background-image: linear-gradient(#D4DBE1,#D4DBE1);

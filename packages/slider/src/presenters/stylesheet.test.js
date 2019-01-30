@@ -90,7 +90,7 @@ describe("stylesheet", () => {
   });
 
   describe("when hasFocus and hasHover", () => {
-    it("sets the halo around the thumb to theme's focused halo width", () => {
+    it("sets the halo around the thumb to theme's hover halo width", () => {
       const props = {
         hasFocus: true,
         hasHover: true
@@ -100,8 +100,8 @@ describe("stylesheet", () => {
       const styles = stylesheet(props, trackValueRatio, themeData);
 
       expect(styles.slider["&::-webkit-slider-thumb"].boxShadow).toMatch(
-        `0 0 0 ${themeData["slider.focused.halo.width"]} ${
-          themeData["slider.focused.halo.color"]
+        `0 0 0 ${themeData["slider.hover.halo.width"]} ${
+          themeData["slider.hover.halo.color"]
         }`
       );
     });

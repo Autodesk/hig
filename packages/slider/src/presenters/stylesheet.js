@@ -82,8 +82,9 @@ function stylesheet(props, trackValueRatio, themeData) {
     }
 
     let stateKey;
-    if (hasHover) stateKey = "hover";
+
     if (hasFocus) stateKey = "focused";
+    if (hasHover) stateKey = "hover";
     if (isPressed) stateKey = "pressed";
 
     return {
