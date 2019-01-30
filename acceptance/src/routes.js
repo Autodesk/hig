@@ -8,6 +8,7 @@ import ProgressBarPage from "./pages/ProgressBarPage";
 import TypographyPage from "./pages/TypographyPage";
 import RadioButtonPage from "./pages/RadioButtonPage";
 import TooltipPage from "./pages/TooltipPage";
+import SliderPage from "./pages/SliderPage";
 
 export default [
   { path: "/avatar/", component: AvatarPage, label: "Avatar" },
@@ -19,5 +20,6 @@ export default [
   { path: "/progress-bar/", component: ProgressBarPage, label: "ProgressBar" },
   { path: "/typogrpahy/", component: TypographyPage, label: "Typography" },
   { path: "/radio-button/", component: RadioButtonPage, label: "Radio Button" },
-  { path: "/tooltip/", component: TooltipPage, label: "Tooltip" }
+  { path: "/tooltip/", component: TooltipPage, label: "Tooltip" },
+  { path: "/slider/", component: SliderPage, label: "Slider" }
 ];
