@@ -22,7 +22,7 @@ module.exports = storybookBaseConfig => {
           loader: "babel-loader"
         },
         {
-          loader: "react-svg-loader"
+          loader: "@svgr/webpack"
         }
       ]
     },
