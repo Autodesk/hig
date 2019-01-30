@@ -20,7 +20,7 @@ export default {
   "slider.track.color": {
     type: COLOR,
     value: { ref: "colorScheme.baseColor" },
-    transform: { alpha: 0.5 }
+    transform: { alpha: 0.2 }
   },
   "slider.track.width": {
     type: LENGTH,
