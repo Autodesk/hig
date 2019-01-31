@@ -4,6 +4,19 @@
 
 HIG is Autodesk's unified design system, so we can build better products faster.
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+
+- [Getting started](#getting-started)
+- [Theme data and theming components](#theme-data-and-theming-components)
+- [React components](#react-components)
+  - [Basics](#basics)
+  - [Components](#components)
+- [Contributing](#contributing)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Getting started
 
 Add a component to your app:
@@ -20,8 +33,15 @@ function MyComponent() {
 }
 ```
 
-## Theme data
-Theme data is a representation of the HIG visual design language in the form of data. We publish the data in JSON and SCSS formats. This data can be used on any platform.
+## Theme data and theming components
+Theme data is a representation of the HIG visual design language in the form of data. With [`@hig/theme-data`](./packages/theme-data/README.md), we publish the data in ECMAScript module, JSON, and SCSS formats. This data includes 8 themes that can be used on any platform. There are four color schemes including...
+
+* Light gray
+* Dark gray
+* Dark blue
+* Web light (default) - though it is the default color scheme, it is on the road to being deprecated
+
+...with two densities–high and low–for each scheme. See how to [provide a theme to components](./packages/theme-context#provide-a-theme-to-components). 
 
 - [`@hig/theme-data`](./packages/theme-data/README.md) - HIG design spec as data
 - [`<ThemeContext>`](./packages/theme-context/README.md) - A component to ease consumption of theme data from within React components.
