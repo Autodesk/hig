@@ -1,5 +1,5 @@
 export default {
-  // TODO these color overrides would not be necessary if darkBlue's baseColor were basics.colors.darkBlue200
+  // These color overrides would not be necessary if darkBlue's baseColor were basics.colors.darkBlue200
 
   "slider.thumb.backgroundColor": {
     value: { ref: "basics.colors.darkBlue200" }
