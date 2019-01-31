@@ -3,6 +3,7 @@ import React from "react";
 
 import WebLightTheme from "@hig/theme-data/build/json/webLightMediumDensityTheme/theme.json";
 
+import * as createThemeProxy from "./createThemeProxy";
 import ThemeContext from "./index";
 
 const TestTheme = {
@@ -21,41 +22,21 @@ describe("ThemeContext", () => {
     renderFunction.mockReturnValue(null);
   });
 
-  /* eslint-disable no-console */
   describe("when debugging", () => {
-    const consoleError = console.error;
-    const consoleErrorMock = jest.fn();
+    it("passes what createThemeProxy returns to render function", () => {
+      jest
+        .spyOn(createThemeProxy, "default")
+        .mockImplementation(() => "themeProxy");
 
-    beforeAll(() => {
-      console.error = consoleErrorMock;
-    });
-
-    beforeEach(() => {
-      console.error.mockReset();
-    });
-
-    afterAll(() => {
-      console.error = consoleError;
-    });
-
-    it("logs errors for unknown roles", () => {
       mount(
         <ThemeContext.Provider value={TestTheme}>
           <ThemeContext.Consumer>{renderFunction}</ThemeContext.Consumer>
         </ThemeContext.Provider>
       );
 
-      const [[value]] = renderFunction.mock.calls;
-
-      /* eslint-disable-next-line */
-      value.unknownPropertyName;
-
-      expect(console.error).toHaveBeenCalledWith(
-        "Role unknownPropertyName does not exist"
-      );
+      expect(renderFunction).toHaveBeenCalledWith("themeProxy");
     });
   });
-  /* eslint-enable no-console */
 
   describe("in production", () => {
     const nodeEnv = process.env.NODE_ENV;
