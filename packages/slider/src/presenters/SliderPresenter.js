@@ -10,18 +10,8 @@ export default class SliderPresenter extends Component {
     hasFocus: PropTypes.bool,
     hasHover: PropTypes.bool,
     isPressed: PropTypes.bool,
-    id: PropTypes.string,
     max: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     min: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    name: PropTypes.string,
-    onBlur: PropTypes.func,
-    onChange: PropTypes.func,
-    onFocus: PropTypes.func,
-    onInput: PropTypes.func,
-    onMouseDown: PropTypes.func,
-    onMouseEnter: PropTypes.func,
-    onMouseLeave: PropTypes.func,
-    onMouseUp: PropTypes.func,
     step: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
   };
