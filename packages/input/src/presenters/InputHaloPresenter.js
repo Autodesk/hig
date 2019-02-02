@@ -7,25 +7,36 @@ import { ThemeContext } from "@hig/theme-context";
 import stylesheet from "./InputHaloPresenter.stylesheet";
 import { availableVariants } from "../constants";
 
-function InputHaloPresenter({
-  children,
-  hasFocus,
-  hasHover,
-  isDisabled,
-  variant
-}) {
+function InputHaloPresenter(props) {
+  const {
+    children,
+    hasFocus,
+    hasHover,
+    isDisabled,
+    stylesheet: customStylesheet,
+    variant
+  } = props;
+
   return (
     <ThemeContext.Consumer>
-      {({ resolvedRoles }) => {
+      {({ resolvedRoles, metadata }) => {
         const styles = stylesheet(
           { isDisabled, hasFocus, hasHover, variant },
           resolvedRoles
         );
+        const cssStyles = customStylesheet
+          ? customStylesheet(
+              styles,
+              props,
+              resolvedRoles,
+              metadata.colorSchemeId
+            )
+          : styles;
 
         return (
-          <div className={css(styles.wrapper)}>
+          <div className={css(cssStyles.wrapper)}>
             {children}
-            <div className={css(styles.halo)} />
+            <div className={css(cssStyles.halo)} />
           </div>
         );
       }}
@@ -38,6 +49,7 @@ InputHaloPresenter.propTypes = {
   hasFocus: PropTypes.bool,
   hasHover: PropTypes.bool,
   isDisabled: PropTypes.bool,
+  stylesheet: PropTypes.func,
   variant: PropTypes.oneOf(availableVariants)
 };
 

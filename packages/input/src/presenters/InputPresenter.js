@@ -5,30 +5,43 @@ import { css } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
 
 import stylesheet from "./InputPresenter.stylesheet";
-import { availableVariants } from "../constants";
+import { availableTagNames, availableVariants, tagNames } from "../constants";
 
-export default function InputPresenter({
-  disabled,
-  hasFocus,
-  hasHover,
-  onBlur,
-  onFocus,
-  onMouseEnter,
-  onMouseLeave,
-  variant,
-  ...otherProps
-}) {
+export default function InputPresenter(props) {
+  const {
+    disabled,
+    hasFocus,
+    hasHover,
+    onBlur,
+    onFocus,
+    onMouseEnter,
+    onMouseLeave,
+    tagName,
+    stylesheet: customStylesheet,
+    variant,
+    ...otherProps
+  } = props;
   return (
     <ThemeContext.Consumer>
-      {({ resolvedRoles }) => {
+      {({ resolvedRoles, metadata }) => {
         const styles = stylesheet(
           { isDisabled: disabled, hasFocus, hasHover, variant },
           resolvedRoles
         );
+        const cssStyles = customStylesheet
+          ? customStylesheet(
+              styles,
+              props,
+              resolvedRoles,
+              metadata.colorSchemeId
+            )
+          : styles;
+        const tagNameKey = tagName.toUpperCase();
+        const Element = tagNames[tagNameKey];
 
         return (
-          <input
-            className={css(styles.input)}
+          <Element
+            className={css(cssStyles.input)}
             disabled={disabled}
             onBlur={onBlur}
             onFocus={onFocus}
@@ -50,5 +63,11 @@ InputPresenter.propTypes = {
   onFocus: PropTypes.func,
   onMouseEnter: PropTypes.func,
   onMouseLeave: PropTypes.func,
+  stylesheet: PropTypes.func,
+  tagName: PropTypes.oneOf(availableTagNames),
   variant: PropTypes.oneOf(availableVariants)
+};
+
+InputPresenter.defaultProps = {
+  tagName: tagNames.INPUT
 };
