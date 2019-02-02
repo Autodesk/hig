@@ -15,11 +15,6 @@ const webLightThemeConfig = extendTheme(
   lightGrayTheme.unresolvedRoles,
   Object.assign(
     {},
-    {
-      "basics.fontWeights.bold": {
-        value: "700"
-      }
-    },
     button,
     checkbox,
     flyout,
