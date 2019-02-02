@@ -65,13 +65,12 @@ export default class RadioButtonPresenter extends Component {
   static defaultProps = {
     disabled: false,
     name: "radiobutton",
-    value: "value"
+    value: "value",
+    defaultChecked: false
   };
 
   render() {
     const {
-      checked,
-      defaultChecked,
       disabled,
       hasFocus,
       hasHover,
@@ -83,28 +82,25 @@ export default class RadioButtonPresenter extends Component {
       <ThemeContext.Consumer>
         {({ resolvedRoles, metadata }) => {
           const styles = stylesheet(
-            { isPressed, hasFocus, hasHover, checked, disabled, ...this.props },
+            { isPressed, hasFocus, hasHover, disabled, ...this.props },
             resolvedRoles,
             metadata.colorSchemeId
           );
 
           return (
-            <div className={css(styles.radioButton)}>
-              <div className={css(styles.radioButtonContainer)}>
-                <input
-                  defaultChecked={defaultChecked}
-                  disabled={disabled}
-                  type="radio"
-                  className={css(styles.radioButtonInput)}
-                  {...otherProps}
-                />
-                <ButtonPresenter
-                  hasFocus={hasFocus}
-                  hasHover={hasHover}
-                  isPressed={isPressed}
-                  disabled={disabled}
-                />
-              </div>
+            <div className={css(styles.radioButtonContainer)}>
+              <input
+                disabled={disabled}
+                type="radio"
+                className={css(styles.radioButtonInput)}
+                {...otherProps}
+              />
+              <ButtonPresenter
+                hasFocus={hasFocus}
+                hasHover={hasHover}
+                isPressed={isPressed}
+                disabled={disabled}
+              />
             </div>
           );
         }}
