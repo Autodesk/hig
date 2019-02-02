@@ -1,14 +1,7 @@
 gemini.suite("TextLink", () => {
-  gemini.suite("Primary", suite => {
+  gemini.suite("Default", suite => {
     suite
-      .setUrl("iframe.html?selectedKind=TextLink&selectedStory=primary")
-      .setCaptureElements(".storybook-component")
-      .capture("default");
-  });
-
-  gemini.suite("Secondary", suite => {
-    suite
-      .setUrl("iframe.html?selectedKind=TextLink&selectedStory=secondary")
+      .setUrl("iframe.html?selectedKind=TextLink&selectedStory=default")
       .setCaptureElements(".storybook-component")
       .capture("default");
   });

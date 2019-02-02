@@ -24,18 +24,6 @@ describe("TextLink", () => {
     expect(clickHandler).toHaveBeenCalled();
   });
 
-  describe("type", () => {
-    it("adds a class designating type", () => {
-      expect(
-        mount(
-          <TextLink type="primary" link="https://www.autodesk.com/">
-            Link
-          </TextLink>
-        ).find(".hig__text-link")
-      ).toHaveClassName("hig__text-link--primary");
-    });
-  });
-
   describe("target", () => {
     it("adds a target attribute", () => {
       expect(

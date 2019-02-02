@@ -5,10 +5,11 @@ import CheckboxPage from "./pages/CheckboxPage";
 import IconsPage from "./pages/IconsPage";
 import InputPage from "./pages/InputPage";
 import ProgressBarPage from "./pages/ProgressBarPage";
-import TypographyPage from "./pages/TypographyPage";
 import RadioButtonPage from "./pages/RadioButtonPage";
-import TooltipPage from "./pages/TooltipPage";
 import SliderPage from "./pages/SliderPage";
+import TextLinkPage from "./pages/TextLinkPage";
+import TooltipPage from "./pages/TooltipPage";
+import TypographyPage from "./pages/TypographyPage";
 
 export default [
   { path: "/avatar/", component: AvatarPage, label: "Avatar" },
@@ -18,8 +19,9 @@ export default [
   { path: "/icons/", component: IconsPage, label: "Icons" },
   { path: "/input/", component: InputPage, label: "Input" },
   { path: "/progress-bar/", component: ProgressBarPage, label: "ProgressBar" },
-  { path: "/typogrpahy/", component: TypographyPage, label: "Typography" },
   { path: "/radio-button/", component: RadioButtonPage, label: "Radio Button" },
+  { path: "/slider/", component: SliderPage, label: "Slider" },
+  { path: "/text-link/", component: TextLinkPage, label: "Text Link" },
   { path: "/tooltip/", component: TooltipPage, label: "Tooltip" },
-  { path: "/slider/", component: SliderPage, label: "Slider" }
+  { path: "/typogrpahy/", component: TypographyPage, label: "Typography" }
 ];

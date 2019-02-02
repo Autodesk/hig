@@ -14,7 +14,7 @@ yarn add @hig/text-link
 
 ```
 import TextLink from '@hig/text-link';
-import '@hig/text-link/build/index.css';
+import "@hig/fonts/build/ArtifaktElement.css";
 ```
 
 ## Basic usage
