@@ -10,7 +10,7 @@ export default {
   "label.fontSize": {
     type: FONT_SIZE,
     value: {
-      ref: "density.fontSizes.small"
+      ref: "density.fontSizes.medium"
     }
   },
   "label.fontWeight": {
