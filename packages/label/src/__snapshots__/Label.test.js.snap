@@ -6,7 +6,7 @@ exports[`Label renders with all props 1`] = `
     Object {
       "color": "rgba(60, 60, 60, 0.6)",
       "fontFamily": "ArtifaktElement, sans-serif",
-      "fontSize": "12px",
+      "fontSize": "14px",
       "fontWeight": 400,
       "lineHeight": "1.4",
       "opacity": "0.5",
@@ -23,7 +23,7 @@ exports[`Label renders without props 1`] = `
     Object {
       "color": "rgba(60, 60, 60, 0.6)",
       "fontFamily": "ArtifaktElement, sans-serif",
-      "fontSize": "12px",
+      "fontSize": "14px",
       "fontWeight": 400,
       "lineHeight": "1.4",
       "opacity": "1.0",
