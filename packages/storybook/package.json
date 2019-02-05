@@ -50,7 +50,7 @@
     "surge": "^0.20.1"
   },
   "dependencies": {
-    "@hig/theme-context": "^2.0.0",
+    "@hig/theme-context": "^2.1.0",
     "@hig/theme-data": "^2.1.0",
     "@hig/typography": "^1.0.1",
     "faker": "^4.1.0",
