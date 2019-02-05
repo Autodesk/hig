@@ -1,3 +1,10 @@
+# [@hig/radio-button-v1.0.2](https://github.com/Autodesk/hig/compare/@hig/radio-button@1.0.1...@hig/radio-button@1.0.2) (2019-02-05)
+
+
+### Bug Fixes
+
+* **radio-button:** design fixes ([d95c7ed](https://github.com/Autodesk/hig/commit/d95c7ed))
+
 # [@hig/radio-button-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/radio-button@1.0.0...@hig/radio-button@1.0.1) (2019-01-23)
 
 
