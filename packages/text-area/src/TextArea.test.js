@@ -6,7 +6,7 @@ import TextArea from "./TextArea";
 describe("TextArea", () => {
   describe("integration", () => {
     it("renders correctly", () => {
-      const tree = renderer.create(<TextArea label="HIG Text Area" />).toJSON();
+      const tree = renderer.create(<TextArea />).toJSON();
 
       expect(tree).toMatchSnapshot();
     });
