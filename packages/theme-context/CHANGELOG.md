@@ -1,3 +1,10 @@
+# [@hig/theme-context-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/theme-context@2.0.0...@hig/theme-context@2.1.0) (2019-02-05)
+
+
+### Features
+
+* console warn about use of deprecated roles ([5b85653](https://github.com/Autodesk/hig/commit/5b85653))
+
 # [@hig/theme-context-v2.0.0](https://github.com/Autodesk/hig/compare/@hig/theme-context@1.0.1...@hig/theme-context@2.0.0) (2019-01-17)
 
 
