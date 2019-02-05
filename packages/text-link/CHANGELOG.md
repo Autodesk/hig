@@ -1,3 +1,19 @@
+# [@hig/text-link-v1.0.0](https://github.com/Autodesk/hig/compare/@hig/text-link@0.2.0...@hig/text-link@1.0.0) (2019-02-05)
+
+
+### Features
+
+* **text-link:** implement themability ([88ba434](https://github.com/Autodesk/hig/commit/88ba434))
+* **text-link:** plug in behaviors ([bb91662](https://github.com/Autodesk/hig/commit/bb91662))
+
+
+### BREAKING CHANGES
+
+* **text-link:** this implements themable text links.
+
+* CSS class names have been removed
+* Type `type` property is no longer available.
+
 # [@hig/text-link-v0.2.0](https://github.com/Autodesk/hig/compare/@hig/text-link@0.1.3...@hig/text-link@0.2.0) (2018-08-16)
 
 
