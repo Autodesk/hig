@@ -1006,6 +1006,18 @@
     "@hig/theme-context" "^2.0.0"
     prop-types "^15.6.1"
 
+"@hig/radio-button@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@hig/radio-button/-/radio-button-1.0.2.tgz#3dae698f4d894df730ae170ae0c5e812add2bd44"
+  integrity sha512-fmU7iLsMwPFqhVpu1HOIOa89XI1nKk3BCizF9WdHZgSmolW7dC9V6tK6wyy8okJ0UQn1InW08iJH8KIOQBV26g==
+  dependencies:
+    "@hig/behaviors" "^1.1.1"
+    "@hig/theme-context" "^2.1.0"
+    "@hig/theme-data" "^2.1.0"
+    emotion "^10.0.0"
+    prop-types "^15.6.1"
+    react-lifecycles-compat "^3.0.4"
+
 "@hig/rich-text@^0.1.4":
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/@hig/rich-text/-/rich-text-0.1.4.tgz#f30d0c4ab7322dc02593493b34dfb64921a435c9"
@@ -1047,6 +1059,16 @@
     "@hig/utils" "^0.3.0"
     classnames "^2.2.5"
     prop-types "^15.6.1"
+
+"@hig/text-link@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@hig/text-link/-/text-link-1.0.0.tgz#1f020f9deaa0924dabaabe6c8a802178d41344ef"
+  integrity sha512-Ukj1EPZ5b8Oly6w8HlK8KDm6Cy7BjhTFc6uEc7t5LJt+NeXOhcWxMs7VvoAo+eeNcpt84OPAIfGJke1vI2cToA==
+  dependencies:
+    "@hig/behaviors" "^1.1.1"
+    "@hig/theme-context" "^2.1.0"
+    prop-types "^15.6.1"
+    react-lifecycles-compat "^3.0.4"
 
 "@hig/theme-context@^2.0.0":
   version "2.0.0"
