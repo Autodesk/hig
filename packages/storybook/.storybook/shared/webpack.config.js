@@ -11,10 +11,6 @@ module.exports = storybookBaseConfig => {
       use: ["style-loader", "css-loader", "sass-loader"]
     },
     {
-      test: /\.json$/,
-      use: ["json-loader"]
-    },
-    {
       test: /\.svg$/,
       issuer: /\.js$/,
       use: [
