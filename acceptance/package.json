@@ -9,6 +9,7 @@
     "@hig/flyout": "^0.7.0",
     "@hig/fonts": "^1.0.0",
     "@hig/input": "^1.0.1",
+    "@hig/rich-text": "^0.1.4",
     "@hig/slider": "^0.1.3",
     "@hig/spacer": "^1.0.3",
     "@hig/styles": "^0.3.0",
