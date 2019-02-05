@@ -1,3 +1,18 @@
+# [@hig/theme-data-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.0.1...@hig/theme-data@2.1.0) (2019-02-05)
+
+
+### Bug Fixes
+
+* increase font size for label, matching body ([bf7264a](https://github.com/Autodesk/hig/commit/bf7264a))
+* tweak Slider theme data ([7d4c44d](https://github.com/Autodesk/hig/commit/7d4c44d))
+
+
+### Features
+
+* **theme-data:** update theme data for text links ([3bf763e](https://github.com/Autodesk/hig/commit/3bf763e))
+* surface deprecated roles in theme metadata ([a4bbc9b](https://github.com/Autodesk/hig/commit/a4bbc9b))
+* theme data improvements for slider ([9c747af](https://github.com/Autodesk/hig/commit/9c747af))
+
 # [@hig/theme-data-v2.0.1](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.0.0...@hig/theme-data@2.0.1) (2019-01-29)
 
 
