@@ -8,6 +8,7 @@ import ProgressBarPage from "./pages/ProgressBarPage";
 import RadioButtonPage from "./pages/RadioButtonPage";
 import RichTextPage from "./pages/RichTextPage";
 import SliderPage from "./pages/SliderPage";
+import TextAreaPage from "./pages/TextAreaPage";
 import TextLinkPage from "./pages/TextLinkPage";
 import TooltipPage from "./pages/TooltipPage";
 import TypographyPage from "./pages/TypographyPage";
@@ -23,6 +24,7 @@ export default [
   { path: "/radio-button/", component: RadioButtonPage, label: "Radio Button" },
   { path: "/rich-text/", component: RichTextPage, label: "Rich Text" },
   { path: "/slider/", component: SliderPage, label: "Slider" },
+  { path: "/text-area/", component: TextAreaPage, label: "Text Area" },
   { path: "/text-link/", component: TextLinkPage, label: "Text Link" },
   { path: "/tooltip/", component: TooltipPage, label: "Tooltip" },
   { path: "/typography/", component: TypographyPage, label: "Typography" }
