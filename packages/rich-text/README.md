@@ -7,14 +7,14 @@ Read more about when and how to use the Typography components [on the HIG websit
 ## Getting started
 
 ```
-yarn add @hig/typography
+yarn add @hig/rich-text
 ```
 
-## Import the component and CSS
+## Import the component and font CSS
 
 ```
 import RichText from '@hig/rich-text';
-import '@hig/rich-text/build/index.css';
+import "@hig/fonts/build/ArtifaktElement.css";
 ```
 
 ## Basic usage
@@ -22,6 +22,6 @@ import '@hig/rich-text/build/index.css';
 ```jsx
 <RichText>
   <h1>Make Your Rich Text Richer</h1>
-  <p>All you need to do is wrap it in a <pre><RichText></pre> component.</p>
+  <p>All you need to do is wrap it in a <code>{`<RichText />`}</code> component.</p>
 </RichText>
 ```
