@@ -7,9 +7,9 @@ import ThemeRepeater from '../components/ThemeRepeater';
 
 const states = [
   { label: "interactive", props: {} },
-  { label: "defaultChecked", props: { defaultChecked: true } },
+  { label: "checked", props: { checked: true } },
   { label: "disabled", props: { disabled: true } },
-  { label: "defaultChecked + disabled", props: { defaultChecked: true, disabled: true } },
+  { label: "checked + disabled", props: { checked: true, disabled: true } },
 ];
 
 function RadioButtonPage() {

@@ -23,6 +23,25 @@ function buildId(colorScheme, density) {
   );
 }
 
+function buildDeprecatedRoles(colorScheme, density) {
+  const colorSchemeDensityRoles = Object.entries({
+    ...colorScheme.unresolvedRoles,
+    ...density.unresolvedRoles
+  });
+
+  const reducer = (deprecatedRoles, [roleName, roleValue]) => {
+    if (roleValue.metadata && roleValue.metadata.deprecated) {
+      return Object.assign({}, deprecatedRoles, {
+        [roleName]: roleValue.metadata.deprecated
+      });
+    }
+
+    return deprecatedRoles;
+  };
+
+  return colorSchemeDensityRoles.reduce(reducer, {});
+}
+
 function buildTheme(colorScheme, density) {
   const unresolvedRoles = extendTheme(
     colorScheme.unresolvedRoles,
@@ -36,7 +55,8 @@ function buildTheme(colorScheme, density) {
       ...metadata,
       name: buildName(colorScheme, density),
       fileName: buildFileName(colorScheme, density),
-      id: buildId(colorScheme, density)
+      id: buildId(colorScheme, density),
+      __deprecated__: buildDeprecatedRoles(colorScheme, density)
     },
     unresolvedRoles,
     resolvedRoles

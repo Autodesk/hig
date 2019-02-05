@@ -2,13 +2,53 @@
 
 HIG theme data is a representation of the HIG visual design language in the form of data.
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+
+- [Getting started](#getting-started)
+  - [Access theme data as ECMAScript module](#access-theme-data-as-ecmascript-module)
+  - [Access theme data as JSON](#access-theme-data-as-json)
+  - [Access theme data as SCSS variables](#access-theme-data-as-scss-variables)
+- [Available themes](#available-themes)
+- [Structure of a theme](#structure-of-a-theme)
+  - [Types of roles](#types-of-roles)
+    - [Basic roles](#basic-roles)
+    - [Dimension roles](#dimension-roles)
+      - [Color scheme roles](#color-scheme-roles)
+      - [Density roles](#density-roles)
+      - [Component roles](#component-roles)
+  - [Resolved and unresolved roles](#resolved-and-unresolved-roles)
+    - [Unresolved roles](#unresolved-roles)
+    - [Resolved roles](#resolved-roles)
+- [Extend a theme to make a new variation](#extend-a-theme-to-make-a-new-variation)
+- [Vision](#vision)
+- [Goals](#goals)
+- [Strategy](#strategy)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 
 ## Getting started
 ```bash
 yarn add @hig/theme-data
 ```
 
-### Access theme data as json
+### Access theme data as ECMAScript module
+```js
+import lightGrayMediumDensityTheme from '@hig/theme-data/build/esm/lightGrayMediumDensityTheme';
+
+console.log(lightGrayMediumDensityTheme);
+// {
+//  "basics.borderRadii.none": "0",
+//  "basics.borderRadii.small":  "0"
+//  "basics.borderRadii.medium":  "2px"
+// ...
+// }
+```
+
+
+### Access theme data as JSON
 ```js
 import lightGrayMediumDensityTheme from '@hig/theme-data/build/json/lightGrayMediumDensityTheme/resolvedRoles.json';
 
@@ -21,27 +61,7 @@ console.log(lightGrayMediumDensityTheme);
 // }
 ```
 
-#### Extend a theme to make a new variation
-```js
-import resolvedRoles from '@hig/theme-data/build/json/lightGrayMediumDensityTheme/resolvedRoles.json';
-import unresolvedRoles from '@hig/theme-data/build/json/lightGrayMediumDensityTheme/unresolvedRoles.json';
-import { extendTheme, resolveTheme } from '@hig/theme-data';
-
-const redAccentedUnresolvedTheme = extendTheme(unresolvedRoles, {
-    "colorScheme.accentColor": "#F00",
-});
-const redAccentedTheme = resolveTheme(redAccentedUnresolvedTheme);
-
-console.log(redAccentedTheme);
-// {
-// ...
-//  "colorScheme.accentColor": "#F00",
-//  "input.focus.borderBottomColor": "#F00"
-// ...
-// }
-```
-
-### Access theme data as scss variables
+### Access theme data as SCSS variables
 ```scss
 @import "@hig/theme-data/build/scss/_lightGrayMediumDensityTheme.scss";
 
@@ -50,6 +70,15 @@ console.log(redAccentedTheme);
     color: $colorScheme-textColor;
 }
 ```
+
+## Available themes
+
+There are eight themes made up of four color schemes a two densities each. These themes are importable in three formats from respective folders in the build folder: [ESM](./build/esm), [JSON](./build/json), and [SCSS](./build/scss) 
+
+* Light gray, medium and high density 
+* Dark gray, medium and high density 
+* Dark blue, medium and high density
+* Web light, medium (default) and high density - though web light is the default color scheme, it is on the road to being deprecated 
 
 ## Structure of a theme
 A theme is comprised of many, many _roles_. Each _roles_ defines the meaning of a value in the design system. Consider the following role—`colorScheme.textColor`. This roles describes the default color of text in the design system. The _value_ for a role may vary from theme to theme. For example, a theme with a light gray color scheme may provide the value `"#3c3c3c"`. A theme with a dark blue color scheme may provide the value `"#f5f5f5"`.
@@ -120,7 +149,24 @@ Here are the two previous roles after being resolved:
   colorScheme.accentColor: "#0696d7", // Value has been resolved to equal basics.colors.autodeskBlue500
 ```
 
+## Extend a theme to make a new variation
+```js
+import unresolvedRoles from '@hig/theme-data/build/esm/unresolved/lightGrayMediumDensityTheme';
+import { extendTheme, resolveTheme } from '@hig/theme-data';
 
+const redAccentedUnresolvedTheme = extendTheme(unresolvedRoles, {
+    "colorScheme.accentColor": "#F00",
+});
+const redAccentedTheme = resolveTheme(redAccentedUnresolvedTheme);
+
+console.log(redAccentedTheme);
+// {
+// ...
+//  "colorScheme.accentColor": "#F00",
+//  "input.focus.borderBottomColor": "#F00"
+// ...
+// }
+```
 
 ## Vision
 - Autodesk products evolve toward a greater level of visual coherence

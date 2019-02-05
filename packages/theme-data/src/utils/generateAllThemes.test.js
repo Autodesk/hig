@@ -8,7 +8,7 @@ const colorSchemes = [
       className: "my-red-scheme"
     },
     unresolvedRoles: {
-      "basics.colors.red": { value: "#ff0000" },
+      "basics.colors.red": { value: "#ff0000", metadata: { deprecated: true } },
       "colorScheme.accentColor": { value: { ref: "basics.colors.red" } }
     }
   },
@@ -33,7 +33,12 @@ const densities = [
     },
     unresolvedRoles: {
       "density.textSize": {
-        value: "10px"
+        value: "10px",
+        metadata: {
+          deprecated: {
+            equivalent: "density.base.textSize"
+          }
+        }
       }
     }
   },
@@ -62,9 +67,9 @@ describe("generateAllThemes", () => {
   });
 
   describe("a theme", () => {
-    let theme;
+    let redHighDensityTheme;
     beforeAll(() => {
-      [theme] = result;
+      [redHighDensityTheme] = result;
     });
 
     describe("metadata", () => {
@@ -76,25 +81,33 @@ describe("generateAllThemes", () => {
         ["colorSchemeId", "hig-red-scheme"],
         ["densityName", "High density"],
         ["densityId", "high-density"],
-        ["className", "my-red-scheme"]
+        ["className", "my-red-scheme"],
+        [
+          "__deprecated__",
+          {
+            "basics.colors.red": true,
+            "density.textSize": { equivalent: "density.base.textSize" }
+          }
+        ]
       ].forEach(([property, value]) => {
         it(`includes ${property}`, () => {
-          expect(theme.metadata).toHaveProperty(property, value);
+          expect(redHighDensityTheme.metadata).toHaveProperty(property, value);
         });
       });
     });
 
     it("has unresolvedRoles", () => {
-      expect(theme.unresolvedRoles).toBeDefined();
-      expect(theme.unresolvedRoles["colorScheme.accentColor"]).toHaveProperty(
-        "value",
-        { ref: "basics.colors.red" }
-      );
+      expect(redHighDensityTheme.unresolvedRoles).toBeDefined();
+      expect(
+        redHighDensityTheme.unresolvedRoles["colorScheme.accentColor"]
+      ).toHaveProperty("value", { ref: "basics.colors.red" });
     });
 
     it("has resolvedRoles", () => {
-      expect(theme.resolvedRoles).toBeDefined();
-      expect(theme.resolvedRoles["colorScheme.accentColor"]).toEqual("#ff0000");
+      expect(redHighDensityTheme.resolvedRoles).toBeDefined();
+      expect(
+        redHighDensityTheme.resolvedRoles["colorScheme.accentColor"]
+      ).toEqual("#ff0000");
     });
   });
 });

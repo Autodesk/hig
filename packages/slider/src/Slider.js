@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import cx from "classnames";
-import { generateId } from "@hig/utils";
+import { css } from "emotion";
+import { ControlBehavior } from "@hig/behaviors";
 
-import Input from "./presenters/Input";
-import "./slider.scss";
+import SliderPresenter from "./presenters/SliderPresenter";
 
 /**
  * @typedef {string|number} Value
@@ -30,21 +29,13 @@ export default class Slider extends Component {
      */
     id: PropTypes.string,
     /**
-     * Instructional text for the field
+     * Maximum value of the slider
      */
-    instructions: PropTypes.string,
-    /**
-     * Text describing what the field represents
-     */
-    label: PropTypes.string,
+    max: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     /**
      * Minimum value of the slider
      */
     min: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    /**
-     * Maximum value of the slider
-     */
-    max: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     /**
      * Name of the field when submitted with a form
      */
@@ -66,9 +57,21 @@ export default class Slider extends Component {
      */
     onInput: PropTypes.func,
     /**
-     * Text describing why the field is required
+     * Called when user presses their mouse over the field
      */
-    required: PropTypes.string,
+    onMouseDown: PropTypes.func,
+    /**
+     * Called when user moves their mouse over the field
+     */
+    onMouseEnter: PropTypes.func,
+    /**
+     * Called when user moves their mouse out of the field
+     */
+    onMouseLeave: PropTypes.func,
+    /**
+     * Called when user releases their mouse press over the field
+     */
+    onMouseUp: PropTypes.func,
     /**
      * The granularity of each step on the slider
      */
@@ -80,10 +83,9 @@ export default class Slider extends Component {
   };
 
   static defaultProps = {
-    defaultValue: "",
-    id: generateId("slider"),
-    min: "0",
+    disabled: false,
     max: "100",
+    min: "0",
     step: "1"
   };
 
@@ -91,7 +93,7 @@ export default class Slider extends Component {
    * @type {State}
    */
   state = {
-    value: this.props.defaultValue
+    value: this.props.defaultValue || (this.props.max - this.props.min) / 2
   };
 
   /**
@@ -99,7 +101,7 @@ export default class Slider extends Component {
    */
   getValue() {
     if (this.isControlled()) {
-      return this.props.value;
+      return this.props.value || 0;
     }
 
     return this.state.value;
@@ -131,62 +133,58 @@ export default class Slider extends Component {
 
   render() {
     const {
-      id,
-      name,
-      label,
-      instructions,
-      required,
-      disabled,
-      min,
-      max,
-      step,
+      defaultValue, // exclude from otherProps
       onBlur,
+      onChange, // exclude from otherProps
       onFocus,
-      onInput
+      onMouseDown,
+      onMouseEnter,
+      onMouseLeave,
+      onMouseUp,
+      value, // exclude from otherProps
+      ...otherProps
     } = this.props;
-    const value = this.getValue();
+
+    const currentValue = this.getValue();
 
     return (
-      <div
-        className={cx("hig__slider", {
-          "hig__slider--disabled": disabled,
-          "hig__slider--required": required
-        })}
+      <ControlBehavior
+        onBlur={onBlur}
+        onFocus={onFocus}
+        onMouseDown={onMouseDown}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+        onMouseUp={onMouseUp}
       >
-        <div
-          className="hig__slider__wrapper"
-          data-range-min={min}
-          data-range-max={max}
-        >
-          <span className="hig__slider__current-value">{value}</span>
-
-          <Input
-            id={id}
-            onChange={this.handleChange}
-            disabled={disabled}
-            name={name}
-            min={min}
-            max={max}
-            step={step}
-            value={value}
-            onBlur={onBlur}
-            onFocus={onFocus}
-            onInput={onInput}
-          />
-
-          {label && (
-            <label htmlFor={id} className="hig__slider__label">
-              {label}
-            </label>
-          )}
-        </div>
-
-        {instructions && (
-          <p className="hig__slider__instructions">{instructions}</p>
+        {({
+          hasFocus,
+          hasHover,
+          isPressed,
+          onBlur: handleBlur,
+          onFocus: handleFocus,
+          onMouseDown: handleMouseDown,
+          onMouseEnter: handleMouseEnter,
+          onMouseLeave: handleMouseLeave,
+          onMouseUp: handleMouseUp
+        }) => (
+          <div className={css({ display: "block" })}>
+            <SliderPresenter
+              hasFocus={hasFocus}
+              hasHover={hasHover}
+              isPressed={isPressed}
+              onBlur={handleBlur}
+              onChange={this.handleChange}
+              onFocus={handleFocus}
+              onMouseDown={handleMouseDown}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              onMouseUp={handleMouseUp}
+              value={currentValue}
+              {...otherProps}
+            />
+          </div>
         )}
-
-        {required && <p className="hig__slider__required-notice">{required}</p>}
-      </div>
+      </ControlBehavior>
     );
   }
 }

@@ -1,0 +1,606 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Slider/presenters/SliderPresenter renders 1`] = `
+.emotion-0 {
+  -webkit-appearance: none;
+  width: 100%;
+  background-color: transparent;
+  box-sizing: content-box;
+  height: 20px;
+  margin: 0;
+  position: relative;
+  outline: none;
+}
+
+.emotion-0::-ms-tooltip {
+  display: none;
+}
+
+.emotion-0::-ms-tooltip {
+  display: none;
+}
+
+.emotion-0::-moz-focus-outer {
+  border: 0;
+}
+
+.emotion-0::-ms-thumb {
+  box-sizing: content-box;
+  height: 16px;
+  width: 16px;
+  background-color: #D4DBE1;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #ffffff;
+  position: relative;
+  top: 50%;
+  -webkit-appearance: none;
+}
+
+.emotion-0::-moz-range-thumb {
+  box-sizing: content-box;
+  height: 16px;
+  width: 16px;
+  background-color: #D4DBE1;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #ffffff;
+  position: relative;
+  top: 50%;
+  -webkit-appearance: none;
+}
+
+.emotion-0::-webkit-slider-thumb {
+  box-sizing: content-box;
+  height: 16px;
+  width: 16px;
+  background-color: #D4DBE1;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #ffffff;
+  position: relative;
+  top: 50%;
+  -webkit-appearance: none;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.emotion-0::-ms-track {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background-color: rgba(212,219,225,0.2);
+  color: transparent;
+  outline: none;
+}
+
+.emotion-0::-moz-range-track {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background-color: rgba(212,219,225,0.2);
+  color: transparent;
+  outline: none;
+}
+
+.emotion-0::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background-color: rgba(212,219,225,0.2);
+  color: transparent;
+  outline: none;
+  background-image: linear-gradient(#D4DBE1,#D4DBE1);
+  background-position: 0;
+  background-size: calc((0.5 * 16px)  + (NaN * (100% - 16px))) 100%;
+  background-repeat: no-repeat;
+}
+
+.emotion-0::-ms-fill-lower {
+  border: none;
+  background-color: #D4DBE1;
+}
+
+.emotion-0::-moz-range-progress {
+  border: none;
+  background-color: #D4DBE1;
+}
+
+<input
+  aria-valuemax={undefined}
+  aria-valuemin={undefined}
+  aria-valuenow={undefined}
+  className="emotion-0"
+  disabled={undefined}
+  max={undefined}
+  min={undefined}
+  type="range"
+  value={undefined}
+/>
+`;
+
+exports[`Slider/presenters/SliderPresenter renders disabled 1`] = `
+.emotion-0 {
+  -webkit-appearance: none;
+  width: 100%;
+  background-color: transparent;
+  box-sizing: content-box;
+  height: 20px;
+  margin: 0;
+  position: relative;
+  outline: none;
+}
+
+.emotion-0::-ms-tooltip {
+  display: none;
+}
+
+.emotion-0::-ms-tooltip {
+  display: none;
+}
+
+.emotion-0::-moz-focus-outer {
+  border: 0;
+}
+
+.emotion-0::-ms-thumb {
+  box-sizing: content-box;
+  height: 16px;
+  width: 16px;
+  background-color: #D4DBE1;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #ffffff;
+  position: relative;
+  top: 50%;
+  -webkit-appearance: none;
+}
+
+.emotion-0::-moz-range-thumb {
+  box-sizing: content-box;
+  height: 16px;
+  width: 16px;
+  background-color: #D4DBE1;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #ffffff;
+  position: relative;
+  top: 50%;
+  -webkit-appearance: none;
+  opacity: 0.5;
+}
+
+.emotion-0::-webkit-slider-thumb {
+  box-sizing: content-box;
+  height: 16px;
+  width: 16px;
+  background-color: #D4DBE1;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #ffffff;
+  position: relative;
+  top: 50%;
+  -webkit-appearance: none;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.emotion-0::-ms-track {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background-color: rgba(212,219,225,0.2);
+  color: transparent;
+  outline: none;
+  opacity: 0.5;
+}
+
+.emotion-0::-moz-range-track {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background-color: rgba(212,219,225,0.2);
+  color: transparent;
+  outline: none;
+  opacity: 0.5;
+}
+
+.emotion-0::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background-color: rgba(212,219,225,0.2);
+  color: transparent;
+  outline: none;
+  opacity: 0.5;
+  background-image: linear-gradient(#D4DBE1,#D4DBE1);
+  background-position: 0;
+  background-size: calc((0.5 * 16px)  + (NaN * (100% - 16px))) 100%;
+  background-repeat: no-repeat;
+}
+
+.emotion-0::-ms-fill-lower {
+  border: none;
+  background-color: #D4DBE1;
+}
+
+.emotion-0::-moz-range-progress {
+  border: none;
+  background-color: #D4DBE1;
+  opacity: 0.5;
+}
+
+<input
+  aria-valuemax={undefined}
+  aria-valuemin={undefined}
+  aria-valuenow={undefined}
+  className="emotion-0"
+  disabled={true}
+  max={undefined}
+  min={undefined}
+  type="range"
+  value={undefined}
+/>
+`;
+
+exports[`Slider/presenters/SliderPresenter renders focused 1`] = `
+.emotion-0 {
+  -webkit-appearance: none;
+  width: 100%;
+  background-color: transparent;
+  box-sizing: content-box;
+  height: 20px;
+  margin: 0;
+  position: relative;
+  outline: none;
+}
+
+.emotion-0::-ms-tooltip {
+  display: none;
+}
+
+.emotion-0::-ms-tooltip {
+  display: none;
+}
+
+.emotion-0::-moz-focus-outer {
+  border: 0;
+}
+
+.emotion-0::-ms-thumb {
+  box-sizing: content-box;
+  height: 16px;
+  width: 16px;
+  background-color: #0696D7;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgb(255,255,255);
+  position: relative;
+  top: 50%;
+  -webkit-appearance: none;
+}
+
+.emotion-0::-moz-range-thumb {
+  box-sizing: content-box;
+  height: 16px;
+  width: 16px;
+  background-color: #0696D7;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgb(255,255,255);
+  position: relative;
+  top: 50%;
+  -webkit-appearance: none;
+}
+
+.emotion-0::-webkit-slider-thumb {
+  box-sizing: content-box;
+  height: 16px;
+  width: 16px;
+  background-color: #0696D7;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgb(255,255,255);
+  position: relative;
+  top: 50%;
+  -webkit-appearance: none;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.emotion-0::-ms-track {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background-color: rgba(212,219,225,0.2);
+  color: transparent;
+  outline: none;
+}
+
+.emotion-0::-moz-range-track {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background-color: rgba(212,219,225,0.2);
+  color: transparent;
+  outline: none;
+}
+
+.emotion-0::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background-color: rgba(212,219,225,0.2);
+  color: transparent;
+  outline: none;
+  background-image: linear-gradient(#D4DBE1,#D4DBE1);
+  background-position: 0;
+  background-size: calc((0.5 * 16px)  + (NaN * (100% - 16px))) 100%;
+  background-repeat: no-repeat;
+}
+
+.emotion-0::-ms-fill-lower {
+  border: none;
+  background-color: #D4DBE1;
+}
+
+.emotion-0::-moz-range-progress {
+  border: none;
+  background-color: #D4DBE1;
+}
+
+<input
+  aria-valuemax={undefined}
+  aria-valuemin={undefined}
+  aria-valuenow={undefined}
+  className="emotion-0"
+  disabled={undefined}
+  max={undefined}
+  min={undefined}
+  type="range"
+  value={undefined}
+/>
+`;
+
+exports[`Slider/presenters/SliderPresenter renders hovered 1`] = `
+.emotion-0 {
+  -webkit-appearance: none;
+  width: 100%;
+  background-color: transparent;
+  box-sizing: content-box;
+  height: 20px;
+  margin: 0;
+  position: relative;
+  outline: none;
+}
+
+.emotion-0::-ms-tooltip {
+  display: none;
+}
+
+.emotion-0::-ms-tooltip {
+  display: none;
+}
+
+.emotion-0::-moz-focus-outer {
+  border: 0;
+}
+
+.emotion-0::-ms-thumb {
+  box-sizing: content-box;
+  height: 16px;
+  width: 16px;
+  background-color: #0ED3BE;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgb(255,255,255);
+  position: relative;
+  top: 50%;
+  -webkit-appearance: none;
+}
+
+.emotion-0::-moz-range-thumb {
+  box-sizing: content-box;
+  height: 16px;
+  width: 16px;
+  background-color: #0ED3BE;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgb(255,255,255);
+  position: relative;
+  top: 50%;
+  -webkit-appearance: none;
+}
+
+.emotion-0::-webkit-slider-thumb {
+  box-sizing: content-box;
+  height: 16px;
+  width: 16px;
+  background-color: #0ED3BE;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgb(255,255,255);
+  position: relative;
+  top: 50%;
+  -webkit-appearance: none;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.emotion-0::-ms-track {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background-color: rgba(212,219,225,0.2);
+  color: transparent;
+  outline: none;
+}
+
+.emotion-0::-moz-range-track {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background-color: rgba(212,219,225,0.2);
+  color: transparent;
+  outline: none;
+}
+
+.emotion-0::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background-color: rgba(212,219,225,0.2);
+  color: transparent;
+  outline: none;
+  background-image: linear-gradient(#D4DBE1,#D4DBE1);
+  background-position: 0;
+  background-size: calc((0.5 * 16px)  + (NaN * (100% - 16px))) 100%;
+  background-repeat: no-repeat;
+}
+
+.emotion-0::-ms-fill-lower {
+  border: none;
+  background-color: #D4DBE1;
+}
+
+.emotion-0::-moz-range-progress {
+  border: none;
+  background-color: #D4DBE1;
+}
+
+<input
+  aria-valuemax={undefined}
+  aria-valuemin={undefined}
+  aria-valuenow={undefined}
+  className="emotion-0"
+  disabled={undefined}
+  max={undefined}
+  min={undefined}
+  type="range"
+  value={undefined}
+/>
+`;
+
+exports[`Slider/presenters/SliderPresenter renders pressed 1`] = `
+.emotion-0 {
+  -webkit-appearance: none;
+  width: 100%;
+  background-color: transparent;
+  box-sizing: content-box;
+  height: 20px;
+  margin: 0;
+  position: relative;
+  outline: none;
+}
+
+.emotion-0::-ms-tooltip {
+  display: none;
+}
+
+.emotion-0::-ms-tooltip {
+  display: none;
+}
+
+.emotion-0::-moz-focus-outer {
+  border: 0;
+}
+
+.emotion-0::-ms-thumb {
+  box-sizing: content-box;
+  height: 16px;
+  width: 16px;
+  background-color: #0671A1;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgb(255,255,255);
+  position: relative;
+  top: 50%;
+  -webkit-appearance: none;
+}
+
+.emotion-0::-moz-range-thumb {
+  box-sizing: content-box;
+  height: 16px;
+  width: 16px;
+  background-color: #0671A1;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgb(255,255,255);
+  position: relative;
+  top: 50%;
+  -webkit-appearance: none;
+}
+
+.emotion-0::-webkit-slider-thumb {
+  box-sizing: content-box;
+  height: 16px;
+  width: 16px;
+  background-color: #0671A1;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgb(255,255,255);
+  position: relative;
+  top: 50%;
+  -webkit-appearance: none;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.emotion-0::-ms-track {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background-color: rgba(212,219,225,0.2);
+  color: transparent;
+  outline: none;
+}
+
+.emotion-0::-moz-range-track {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background-color: rgba(212,219,225,0.2);
+  color: transparent;
+  outline: none;
+}
+
+.emotion-0::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background-color: rgba(212,219,225,0.2);
+  color: transparent;
+  outline: none;
+  background-image: linear-gradient(#D4DBE1,#D4DBE1);
+  background-position: 0;
+  background-size: calc((0.5 * 16px)  + (NaN * (100% - 16px))) 100%;
+  background-repeat: no-repeat;
+}
+
+.emotion-0::-ms-fill-lower {
+  border: none;
+  background-color: #D4DBE1;
+}
+
+.emotion-0::-moz-range-progress {
+  border: none;
+  background-color: #D4DBE1;
+}
+
+<input
+  aria-valuemax={undefined}
+  aria-valuemin={undefined}
+  aria-valuenow={undefined}
+  className="emotion-0"
+  disabled={undefined}
+  max={undefined}
+  min={undefined}
+  type="range"
+  value={undefined}
+/>
+`;

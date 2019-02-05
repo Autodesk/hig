@@ -7,6 +7,18 @@ export default {
       ref: "basics.colors.textLinkAgainstLight"
     }
   },
+  "textLink.hover.textColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.textLinkAgainstLight"
+    }
+  },
+  "textLink.focus.textColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.textLinkAgainstLight"
+    }
+  },
   "textLink.hover.underline.color": {
     type: COLOR,
     value: {
@@ -15,9 +27,7 @@ export default {
   },
   "textLink.focus.halo.color": {
     type: COLOR,
-    value: {
-      ref: "basics.colors.autodeskBlue500"
-    }
+    value: "#BAE6F6"
   },
   "textLink.focus.halo.width": {
     type: LENGTH,
