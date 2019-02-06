@@ -40,7 +40,8 @@ const inputOptions = {
     postcss({
       extract: true,
       output: cssOutputFile,
-      plugins: [postcssFunctions, postcssImport]
+      plugins: [postcssFunctions, postcssImport],
+      sourceMap: true
     }),
     json(),
     babel({
@@ -54,7 +55,7 @@ const inputOptions = {
 const esModulesOutputOptions = {
   name: "HIG",
   file: esOutputFile,
-  format: "es"
+  format: "esm"
 };
 
 const cjsOutputOptions = {

@@ -1,4 +1,4 @@
-const anchorPoints = Object.freeze({
+export const anchorPoints = Object.freeze({
   TOP_LEFT: "top-left",
   TOP_CENTER: "top-center",
   TOP_RIGHT: "top-right",
@@ -13,8 +13,6 @@ const anchorPoints = Object.freeze({
   LEFT_BOTTOM: "left-bottom"
 });
 
-const AVAILABLE_ANCHOR_POINTS = Object.freeze(
+export const AVAILABLE_ANCHOR_POINTS = Object.freeze(
   Object.values(anchorPoints)
 );
-
-export { anchorPoints, AVAILABLE_ANCHOR_POINTS };
