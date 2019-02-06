@@ -13,10 +13,5 @@ export default {
     value: {
       ref: "basics.colors.white"
     }
-  },
-  "tooltip.fontWeight": {
-    value: {
-      ref: "basics.fontWeights.regular"
-    }
   }
 };
