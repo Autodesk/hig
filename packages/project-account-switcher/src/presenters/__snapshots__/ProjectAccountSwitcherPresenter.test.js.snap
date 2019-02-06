@@ -3,43 +3,130 @@
 exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter  1`] = `null`;
 
 exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter  2`] = `
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.emotion-4 {
+  margin: 0;
+  padding-left: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 34px;
+  line-height: 34px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+.emotion-2 {
+  display: inline-block;
+  position: relative;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  overflow: hidden;
+  height: 32px;
+  width: 32px;
+  border-radius: 2px;
+  border: 1px solid #bec8d2;
+  color: #485366;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.emotion-0 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+  cursor: pointer;
+  color: transparent;
+}
+
+.emotion-0[src=''] {
+  display: none;
+}
+
+.emotion-6 {
+  margin: 0 12px;
+}
+
+.emotion-1 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0;
+  text-align: initial;
+}
+
+.emotion-5 {
+  fill: #808080;
+}
+
+.emotion-5 > * {
+  fill: #808080;
+}
+
 <div
-  className="hig__project-account-switcher__target"
+  className="emotion-7"
   onClick={[Function]}
   onKeyDown={[Function]}
   role="button"
   tabIndex="0"
 >
   <div
-    className="hig__project-account-switcher__target__item hig__project-account-switcher__item"
+    className="emotion-4"
   >
     <span
-      className="hig__project-account-switcher__item__image-wrapper"
+      className="emotion-2"
     >
       <img
         alt="Foo"
-        className="hig__project-account-switcher__item__image"
+        className="emotion-0"
         src=""
       />
       <span
-        className="hig__project-account-switcher__item__image-placeholder"
+        className="emotion-1"
+        style={
+          Object {
+            "lineHeight": "32px",
+            "textAlign": "center",
+          }
+        }
       >
         A1/P2
       </span>
     </span>
-    <span
-      className="hig__project-account-switcher__item__label"
+    <p
+      className="emotion-1"
     >
       Foo
-    </span>
+    </p>
   </div>
   <div
-    className="hig__project-account-switcher__target__caret"
+    className="emotion-6"
   >
     <svg
-      height="10"
+      className="emotion-5"
+      height="10px"
       viewBox="0 0 10 10"
-      width="10"
+      width="10px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <title>
