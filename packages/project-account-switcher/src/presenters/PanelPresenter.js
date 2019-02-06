@@ -1,14 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { css } from "emotion";
 
 import { Panel } from "@hig/flyout";
 
-import "./PanelPresenter.scss";
+import stylesheet from "./stylesheet";
 
 export default function PanelPresenter({ innerRef, children }) {
+  const styles = stylesheet();
+
   return (
     <Panel innerRef={innerRef}>
-      <div className="hig__project-account-switcher__panel">{children}</div>
+      <div className={css(styles.panel)}>{children}</div>
     </Panel>
   );
 }

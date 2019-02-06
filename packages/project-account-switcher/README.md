@@ -10,9 +10,8 @@ The Project and Account Switcher is part of the Global Nav and allows customers 
 yarn add @hig/project-account-switcher
 ```
 
-### Import the component and CSS
+### Import the component
 
 ```js
 import ProjectAccountSwitcher from '@hig/project-account-switcher';
-import '@hig/project-account-switcher/build/index.css';
 ```
