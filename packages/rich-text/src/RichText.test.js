@@ -1,21 +1,24 @@
 import React from "react";
-import { shallow } from "enzyme";
-import RichText, { sizes } from "./index";
+import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
+import RichText from "./RichText";
 
 describe("RichText", () => {
-  describe("sizes", () => {
-    it("adds the appropriate size class", () => {
-      const withoutSize = shallow(<RichText>Rich content</RichText>);
-      expect(withoutSize.find(".hig__rich-text")).not.toHaveClassName(
-        "hig__rich-text--small"
-      );
-
-      const withSize = shallow(
-        <RichText size={sizes.SMALL}>Rich content</RichText>
-      );
-      expect(withSize.find(".hig__rich-text")).toHaveClassName(
-        "hig__rich-text--small"
-      );
-    });
-  });
+  takeSnapshotsOf(RichText, [{ desc: "renders", props: {} }]);
+  takeSnapshotsOf(RichText, [
+    {
+      desc: "renders with children",
+      props: { children: <h1>Happy little clouds</h1> }
+    }
+  ]);
+  takeSnapshotsOf(RichText, [
+    {
+      desc: "renders with dangerouslySetInnerHTML",
+      props: {
+        dangerouslySetInnerHTML: {
+          __html:
+            "<p>Nice little fluffy clouds laying around in the sky being lazy.</p>"
+        }
+      }
+    }
+  ]);
 });

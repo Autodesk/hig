@@ -17,5 +17,5 @@ import Spacer from '@hig/spacer';
 ## Basic usage
 
 ```jsx
-<Spacer spacing="xxl"/>
+<Spacer spacing="xl"/>
 ```

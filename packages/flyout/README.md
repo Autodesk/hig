@@ -12,7 +12,7 @@ Read more about when and how to use the Flyout component [on the website](https:
 yarn add @hig/flyout
 ```
 
-### Import the component and CSS
+### Import the component
 
 ```js
 import Flyout, { anchorPoints } from "@hig/flyout";

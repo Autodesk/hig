@@ -12,7 +12,7 @@ Read more about when and how to use the Tooltip component [on the internal wiki]
 yarn add @hig/tooltip
 ```
 
-### Import the component and CSS
+### Import the component
 
 ```js
 import Tooltip from '@hig/tooltip';

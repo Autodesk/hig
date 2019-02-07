@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import cx from "classnames";
-import { availableSizes } from "./sizes";
-import "./rich-text.scss";
+import { css } from "emotion";
+import ThemeContext from "@hig/theme-context";
 
-const COMPONENT_CLASS = "hig__rich-text";
+import stylesheet from "./stylesheet";
+
 export default class RichText extends Component {
   static propTypes = {
     /**
@@ -12,28 +12,28 @@ export default class RichText extends Component {
      */
     children: PropTypes.node,
     /**
-     * HTML string to be rendered and styled with HIG typography ruless
+     * HTML string to be rendered and styled with HIG typography rules
      */
     dangerouslySetInnerHTML: PropTypes.shape({
       __html: PropTypes.string
-    }),
-    /**
-     * String which specifies which size of RichText will be used
-     */
-    size: PropTypes.oneOf(availableSizes)
+    })
   };
 
   render() {
-    const richTextClasses = cx(`${COMPONENT_CLASS}`, {
-      [`hig__rich-text--${this.props.size}`]: this.props.size
-    });
-    return this.props.children ? (
-      <div className={richTextClasses}>{this.props.children}</div>
-    ) : (
-      <div
-        className={richTextClasses}
-        dangerouslySetInnerHTML={this.props.dangerouslySetInnerHTML} // eslint-disable-line react/no-danger
-      />
+    return (
+      <ThemeContext.Consumer>
+        {({ resolvedRoles }) => {
+          const styles = stylesheet(resolvedRoles);
+          return this.props.children ? (
+            <div className={css(styles.richText)}>{this.props.children}</div>
+          ) : (
+            <div
+              className={css(styles.richText)}
+              dangerouslySetInnerHTML={this.props.dangerouslySetInnerHTML} // eslint-disable-line react/no-danger
+            />
+          );
+        }}
+      </ThemeContext.Consumer>
     );
   }
 }

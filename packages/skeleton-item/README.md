@@ -8,11 +8,10 @@ The Skeleton Item component renders a rectangular loading indicator, meant to se
 yarn add @hig/skeleton-item
 ```
 
-## Import the component and CSS
+## Import the component
 
 ```
 import SkeletonItem from '@hig/skeleton-item';
-import '@hig/skeleton-item/build/index.css';
 ```
 
 ## Basic usage
