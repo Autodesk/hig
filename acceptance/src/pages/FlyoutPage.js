@@ -2,8 +2,7 @@ import React, { Component } from "react";
 
 import Button from "@hig/button";
 import Flyout from "@hig/flyout";
-
-import Surface from "../components/Surface";
+import Surface from "@hig/surface";
 import ThemeRepeater from "../components/ThemeRepeater";
 import Text from "../components/Text";
 

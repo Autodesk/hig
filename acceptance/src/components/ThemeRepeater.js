@@ -1,7 +1,6 @@
 import React from "react";
 import ThemeContext from "@hig/theme-context";
-
-import Surface from "./Surface";
+import Surface, { AVAILABLE_LEVELS } from "@hig/surface";
 import Text from "./Text";
 
 import lightGrayMediumTheme from "@hig/theme-data/build/json/lightGrayMediumDensityTheme/theme.json";
@@ -47,8 +46,6 @@ function stylesheet({ row }) {
   };
 }
 
-const levels = ["100", "200", "250", "300", "350"];
-
 function ThemeRepeater({ children, column }) {
   const styles = stylesheet({ column });
   return (
@@ -76,11 +73,13 @@ function ThemeRepeater({ children, column }) {
                         <ThemeContext.Provider value={theme}>
                           <div>
                             <div style={styles.levelsWrapper}>
-                              {levels.map(level => (
+                              {AVAILABLE_LEVELS.map(level => (
                                 <Surface
                                   key={level}
                                   level={level}
                                   style={styles.level}
+                                  horizontalPadding="large"
+                                  verticalPadding="large"
                                 >
                                   {children({
                                     theme,
