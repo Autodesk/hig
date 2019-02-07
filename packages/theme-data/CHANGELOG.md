@@ -1,3 +1,10 @@
+# [@hig/theme-data-v2.1.1](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.1.0...@hig/theme-data@2.1.1) (2019-02-07)
+
+
+### Bug Fixes
+
+* clarify that 700 is default bold font weight ([26ce3a5](https://github.com/Autodesk/hig/commit/26ce3a5))
+
 # [@hig/theme-data-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.0.1...@hig/theme-data@2.1.0) (2019-02-05)
 
 
