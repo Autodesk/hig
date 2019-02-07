@@ -1,3 +1,11 @@
+# [@hig/components-v1.0.9](https://github.com/Autodesk/hig/compare/@hig/components@1.0.8...@hig/components@1.0.9) (2019-02-07)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/slider to version 1.0.0 ([cff9c18](https://github.com/Autodesk/hig/commit/cff9c18))
+* **package:** update [@hig](https://github.com/hig)/text-link to version 1.0.0 ([7b0db95](https://github.com/Autodesk/hig/commit/7b0db95))
+
 # [@hig/components-v1.0.8](https://github.com/Autodesk/hig/compare/@hig/components@1.0.7...@hig/components@1.0.8) (2019-01-29)
 
 
