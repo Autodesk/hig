@@ -1,3 +1,17 @@
+# [@hig/project-account-switcher-v2.0.0](https://github.com/Autodesk/hig/compare/@hig/project-account-switcher@1.0.5...@hig/project-account-switcher@2.0.0) (2019-02-07)
+
+
+### Features
+
+* make pas themeable ([6acb55e](https://github.com/Autodesk/hig/commit/6acb55e))
+
+
+### BREAKING CHANGES
+
+* * All css classnames have been removed
+* Image placeholder backgrounds made transparent for themeability
+* TextLink and Typography components have been incorporated
+
 # [@hig/project-account-switcher-v1.0.5](https://github.com/Autodesk/hig/compare/@hig/project-account-switcher@1.0.4...@hig/project-account-switcher@1.0.5) (2019-01-23)
 
 
