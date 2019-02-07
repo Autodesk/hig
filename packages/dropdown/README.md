@@ -12,19 +12,16 @@ Read more about when and how to use the Dropdown component [on the website](http
 yarn add @hig/dropdown
 ```
 
-### Import the component and CSS
+### Import the component
 
 ```js
 import Dropdown from "@hig/dropdown";
-import "@hig/dropdown/build/index.css";
 ```
 
 ## Basic usage
 
 ```jsx
 <Dropdown
-  label="Uncontrolled Dropdown"
-  instructions="instructions for regular Uncontrolled dropdown"
   placeholder="placeholder for regular Uncontrolled dropdown"
   options={["Foo", "Bar"]}
 />

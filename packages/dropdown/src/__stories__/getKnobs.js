@@ -8,8 +8,6 @@ const knobGroupIds = {
 };
 
 const knobLabels = {
-  label: "Label",
-  instructions: "Instructions",
   placeholder: "Placeholder",
   disabled: "Disabled",
   required: "Required",
@@ -24,8 +22,6 @@ const knobLabels = {
 
 export default function getKnobs(props) {
   const {
-    label = "",
-    instructions = "",
     placeholder = "",
     disabled = false,
     required = "",
@@ -43,12 +39,6 @@ export default function getKnobs(props) {
   return {
     ...otherProps,
     value: controlledObject(knobLabels.value, value, knobGroupIds.advanced),
-    label: text(knobLabels.label, label, knobGroupIds.basic),
-    instructions: text(
-      knobLabels.instructions,
-      instructions,
-      knobGroupIds.basic
-    ),
     placeholder: text(knobLabels.placeholder, placeholder, knobGroupIds.basic),
     disabled: boolean(knobLabels.disabled, disabled, knobGroupIds.basic),
     required: text(knobLabels.required, required, knobGroupIds.basic),

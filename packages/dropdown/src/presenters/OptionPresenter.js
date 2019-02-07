@@ -1,43 +1,44 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import cx from "classnames";
+import { css } from "emotion";
+import { ThemeContext } from "@hig/theme-context";
 import { CheckmarkBlueDark24 } from "@hig/icons";
 import { createButtonEventHandlers } from "@hig/utils";
-
-import "./OptionPresenter.scss";
+import stylesheet from "./OptionPresenter.stylesheet";
 
 function OptionWrapper(props) {
   const {
     children,
-    highlighted,
     id,
     onClick,
     onMouseDown,
     onMouseMove,
-    selected
+    selected,
+    highlighted
   } = props;
-
-  const classes = cx("hig__dropdown-option", {
-    "hig__dropdown-option--selected": selected,
-    "hig__dropdown-option--highlighted": highlighted
-  });
 
   const { handleClick, handleKeyDown } = createButtonEventHandlers(onClick);
 
   return (
-    <div
-      aria-selected={selected}
-      className={classes}
-      id={id}
-      onClick={handleClick}
-      onKeyDown={handleKeyDown}
-      onMouseDown={onMouseDown}
-      onMouseMove={onMouseMove}
-      role="option"
-      tabIndex="0"
-    >
-      {children}
-    </div>
+    <ThemeContext.Consumer>
+      {({ resolvedRoles }) => (
+        <div
+          aria-selected={selected}
+          className={css(
+            stylesheet({ selected, highlighted, ...props }, resolvedRoles)
+          )}
+          id={id}
+          onClick={handleClick}
+          onKeyDown={handleKeyDown}
+          onMouseDown={onMouseDown}
+          onMouseMove={onMouseMove}
+          role="option"
+          tabIndex="0"
+        >
+          {children}
+        </div>
+      )}
+    </ThemeContext.Consumer>
   );
 }
 
@@ -87,7 +88,7 @@ export default class OptionPresenter extends Component {
         <span className="hig__dropdown-option__label">{children}</span>
         {selected && (
           <div className="hig__dropdown-option__checkmark">
-            <CheckmarkBlueDark24 />
+            <CheckmarkBlueDark24 color="#087AAD" />
           </div>
         )}
       </OptionWrapper>

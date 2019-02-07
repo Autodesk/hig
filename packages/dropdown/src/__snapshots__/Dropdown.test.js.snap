@@ -1,6 +1,171 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Dropdown renders non-undefined values as options 1`] = `
+.emotion-4 {
+  display: relative;
+}
+
+.emotion-2 {
+  position: relative;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 1px;
+  border-bottom-color: rgba(128,128,128,0.35);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+.emotion-1 {
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  right: 0;
+  width: calc(100% + 2px);
+  height: 0;
+  background-color: rgba(14,211,190,0.15);
+  -webkit-transition-property: height,color;
+  transition-property: height,color;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+}
+
+.emotion-0 {
+  background-color: transparent;
+  box-sizing: border-box;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-top: 4px;
+  padding-right: 0;
+  padding-bottom: 4px;
+  padding-left: 0;
+  outline: none;
+  font-size: 14px;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 600;
+  line-height: 1.4;
+  width: 100%;
+  color: #3c3c3c;
+  height: 28px;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::-moz-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::-ms-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::selection {
+  background-color: #0696d7;
+}
+
+.emotion-3 {
+  fill: #808080;
+}
+
+.emotion-3 > * {
+  fill: #808080;
+}
+
+.emotion-14 {
+  display: none;
+  position: absolute;
+  min-width: 240px;
+  max-height: 360px;
+  top: calc(32px + 4px);
+  overflow: auto;
+  z-index: 9996;
+  border: 1px solid #ffffff;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+
+.emotion-5 {
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  min-height: 36px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 8px;
+  cursor: pointer;
+  color: #3c3c3c;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.428571429;
+  background-color: transparent;
+}
+
+.emotion-10 {
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  min-height: 36px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 8px;
+  cursor: pointer;
+  color: #3c3c3c;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.428571429;
+  background-color: rgb(230,244,251);
+}
+
+.emotion-9 {
+  fill: #087AAD;
+}
+
+.emotion-9 > * {
+  fill: #087AAD;
+}
+
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
@@ -10,70 +175,69 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
   role="combobox"
 >
   <div
-    className="hig__dropdown__input-wrapper"
+    className="emotion-4"
   >
     <div
-      className="hig__text-field-v1 hig__text-field-v1--button"
+      className="emotion-2"
     >
+      <input
+        aria-activedescendant={null}
+        aria-autocomplete="list"
+        aria-controls={null}
+        aria-labelledby="downshift-2-label"
+        autoComplete="off"
+        className="emotion-0"
+        disabled={undefined}
+        id="downshift-2"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        placeholder={undefined}
+        readOnly={true}
+        required={undefined}
+        value=""
+      />
       <div
-        className="hig__text-field-v1__content"
-      >
-        <div
-          className="hig__text-field-v1__input-wrapper"
-        >
-          <div
-            className="hig__text-field-v1__input-row"
-          >
-            <input
-              aria-activedescendant={null}
-              aria-autocomplete="list"
-              aria-controls={null}
-              aria-labelledby="downshift-2-label"
-              autoComplete="off"
-              className="hig__text-field-v1__input hig__text-field-v1__input--no-value"
-              disabled={undefined}
-              id="downshift-2"
-              onBlur={[Function]}
-              onChange={[Function]}
-              onClick={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              placeholder={undefined}
-              readOnly={true}
-              type="button"
-              value=""
-            />
-          </div>
-        </div>
-      </div>
+        className="emotion-1"
+      />
     </div>
-    <span
-      className="hig__dropdown__input-caret"
+    <svg
+      className="emotion-3"
+      height="10px"
+      style={
+        Object {
+          "opacity": 1,
+          "padding": "0 10px",
+          "position": "absolute",
+          "right": "7px",
+          "top": "calc(32px / 2 - 4px)",
+        }
+      }
+      viewBox="0 0 10 10"
+      width="10px"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      <svg
-        height="10"
-        viewBox="0 0 10 10"
-        width="10"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <title>
-          caret-down-m
-        </title>
-        <path
-          d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
-        />
-      </svg>
-    </span>
+      <title>
+        caret-down-m
+      </title>
+      <path
+        d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
+      />
+    </svg>
   </div>
   <div
     aria-labelledby="downshift-2-label"
-    className="hig__dropdown-v1__menu"
+    className="emotion-14"
     id="downshift-2-menu"
     role="listbox"
   >
     <div
       aria-selected={false}
-      className="hig__dropdown-option"
+      className="emotion-5"
       id="downshift-2-item-0"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -90,7 +254,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="hig__dropdown-option"
+      className="emotion-5"
       id="downshift-2-item-1"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -107,7 +271,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="hig__dropdown-option"
+      className="emotion-5"
       id="downshift-2-item-2"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -124,7 +288,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="hig__dropdown-option"
+      className="emotion-5"
       id="downshift-2-item-3"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -141,7 +305,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
     </div>
     <div
       aria-selected={true}
-      className="hig__dropdown-option hig__dropdown-option--selected"
+      className="emotion-10"
       id="downshift-2-item-4"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -159,9 +323,11 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
         className="hig__dropdown-option__checkmark"
       >
         <svg
-          height="24"
+          className="emotion-9"
+          color="#087AAD"
+          height="24px"
           viewBox="0 0 24 24"
-          width="24"
+          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -174,7 +340,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="hig__dropdown-option"
+      className="emotion-5"
       id="downshift-2-item-5"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -191,7 +357,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="hig__dropdown-option"
+      className="emotion-5"
       id="downshift-2-item-6"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -208,7 +374,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="hig__dropdown-option"
+      className="emotion-5"
       id="downshift-2-item-7"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -228,6 +394,171 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
 `;
 
 exports[`Dropdown renders with a controlled value 1`] = `
+.emotion-4 {
+  display: relative;
+}
+
+.emotion-2 {
+  position: relative;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 1px;
+  border-bottom-color: rgba(128,128,128,0.35);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+.emotion-1 {
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  right: 0;
+  width: calc(100% + 2px);
+  height: 0;
+  background-color: rgba(14,211,190,0.15);
+  -webkit-transition-property: height,color;
+  transition-property: height,color;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+}
+
+.emotion-0 {
+  background-color: transparent;
+  box-sizing: border-box;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-top: 4px;
+  padding-right: 0;
+  padding-bottom: 4px;
+  padding-left: 0;
+  outline: none;
+  font-size: 14px;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 600;
+  line-height: 1.4;
+  width: 100%;
+  color: #3c3c3c;
+  height: 28px;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::-moz-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::-ms-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::selection {
+  background-color: #0696d7;
+}
+
+.emotion-3 {
+  fill: #808080;
+}
+
+.emotion-3 > * {
+  fill: #808080;
+}
+
+.emotion-9 {
+  display: none;
+  position: absolute;
+  min-width: 240px;
+  max-height: 360px;
+  top: calc(32px + 4px);
+  overflow: auto;
+  z-index: 9996;
+  border: 1px solid #ffffff;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+
+.emotion-5 {
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  min-height: 36px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 8px;
+  cursor: pointer;
+  color: #3c3c3c;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.428571429;
+  background-color: transparent;
+}
+
+.emotion-8 {
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  min-height: 36px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 8px;
+  cursor: pointer;
+  color: #3c3c3c;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.428571429;
+  background-color: rgb(230,244,251);
+}
+
+.emotion-7 {
+  fill: #087AAD;
+}
+
+.emotion-7 > * {
+  fill: #087AAD;
+}
+
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
@@ -237,70 +568,69 @@ exports[`Dropdown renders with a controlled value 1`] = `
   role="combobox"
 >
   <div
-    className="hig__dropdown__input-wrapper"
+    className="emotion-4"
   >
     <div
-      className="hig__text-field-v1 hig__text-field-v1--button"
+      className="emotion-2"
     >
+      <input
+        aria-activedescendant={null}
+        aria-autocomplete="list"
+        aria-controls={null}
+        aria-labelledby="downshift-9-label"
+        autoComplete="off"
+        className="emotion-0"
+        disabled={undefined}
+        id="downshift-9"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        placeholder={undefined}
+        readOnly={true}
+        required={undefined}
+        value="foo"
+      />
       <div
-        className="hig__text-field-v1__content"
-      >
-        <div
-          className="hig__text-field-v1__input-wrapper"
-        >
-          <div
-            className="hig__text-field-v1__input-row"
-          >
-            <input
-              aria-activedescendant={null}
-              aria-autocomplete="list"
-              aria-controls={null}
-              aria-labelledby="downshift-9-label"
-              autoComplete="off"
-              className="hig__text-field-v1__input"
-              disabled={undefined}
-              id="downshift-9"
-              onBlur={[Function]}
-              onChange={[Function]}
-              onClick={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              placeholder={undefined}
-              readOnly={true}
-              type="button"
-              value="foo"
-            />
-          </div>
-        </div>
-      </div>
+        className="emotion-1"
+      />
     </div>
-    <span
-      className="hig__dropdown__input-caret"
+    <svg
+      className="emotion-3"
+      height="10px"
+      style={
+        Object {
+          "opacity": 1,
+          "padding": "0 10px",
+          "position": "absolute",
+          "right": "7px",
+          "top": "calc(32px / 2 - 4px)",
+        }
+      }
+      viewBox="0 0 10 10"
+      width="10px"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      <svg
-        height="10"
-        viewBox="0 0 10 10"
-        width="10"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <title>
-          caret-down-m
-        </title>
-        <path
-          d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
-        />
-      </svg>
-    </span>
+      <title>
+        caret-down-m
+      </title>
+      <path
+        d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
+      />
+    </svg>
   </div>
   <div
     aria-labelledby="downshift-9-label"
-    className="hig__dropdown-v1__menu"
+    className="emotion-9"
     id="downshift-9-menu"
     role="listbox"
   >
     <div
       aria-selected={false}
-      className="hig__dropdown-option"
+      className="emotion-5"
       id="downshift-9-item-0"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -317,7 +647,7 @@ exports[`Dropdown renders with a controlled value 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="hig__dropdown-option"
+      className="emotion-5"
       id="downshift-9-item-1"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -334,7 +664,7 @@ exports[`Dropdown renders with a controlled value 1`] = `
     </div>
     <div
       aria-selected={true}
-      className="hig__dropdown-option hig__dropdown-option--selected"
+      className="emotion-8"
       id="downshift-9-item-2"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -352,9 +682,11 @@ exports[`Dropdown renders with a controlled value 1`] = `
         className="hig__dropdown-option__checkmark"
       >
         <svg
-          height="24"
+          className="emotion-7"
+          color="#087AAD"
+          height="24px"
           viewBox="0 0 24 24"
-          width="24"
+          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -370,6 +702,109 @@ exports[`Dropdown renders with a controlled value 1`] = `
 `;
 
 exports[`Dropdown renders with a label and an ID 1`] = `
+.emotion-4 {
+  display: relative;
+}
+
+.emotion-2 {
+  position: relative;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 1px;
+  border-bottom-color: rgba(128,128,128,0.35);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+.emotion-1 {
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  right: 0;
+  width: calc(100% + 2px);
+  height: 0;
+  background-color: rgba(14,211,190,0.15);
+  -webkit-transition-property: height,color;
+  transition-property: height,color;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+}
+
+.emotion-0 {
+  background-color: transparent;
+  box-sizing: border-box;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-top: 4px;
+  padding-right: 0;
+  padding-bottom: 4px;
+  padding-left: 0;
+  outline: none;
+  font-size: 14px;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 600;
+  line-height: 1.4;
+  width: 100%;
+  color: #3c3c3c;
+  height: 28px;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::-moz-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::-ms-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::selection {
+  background-color: #0696d7;
+}
+
+.emotion-3 {
+  fill: #808080;
+}
+
+.emotion-3 > * {
+  fill: #808080;
+}
+
+.emotion-5 {
+  display: none;
+  position: absolute;
+  min-width: 240px;
+  max-height: 360px;
+  top: calc(32px + 4px);
+  overflow: auto;
+  z-index: 9996;
+  border: 1px solid #ffffff;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
@@ -379,73 +814,63 @@ exports[`Dropdown renders with a label and an ID 1`] = `
   role="combobox"
 >
   <div
-    className="hig__dropdown__input-wrapper"
+    className="emotion-4"
   >
     <div
-      className="hig__text-field-v1 hig__text-field-v1--button"
+      className="emotion-2"
     >
+      <input
+        aria-activedescendant={null}
+        aria-autocomplete="list"
+        aria-controls={null}
+        aria-labelledby="whoaBuddy-label"
+        autoComplete="off"
+        className="emotion-0"
+        disabled={undefined}
+        id="whoaBuddy"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        placeholder={undefined}
+        readOnly={true}
+        required={undefined}
+        value=""
+      />
       <div
-        className="hig__text-field-v1__content"
-      >
-        <div
-          className="hig__text-field-v1__input-wrapper"
-        >
-          <span
-            className="hig__text-field-v1__label-spacer"
-          />
-          <label
-            className="hig__text-field-v1__label"
-            htmlFor="whoaBuddy"
-          >
-            HIG Themes
-          </label>
-          <div
-            className="hig__text-field-v1__input-row"
-          >
-            <input
-              aria-activedescendant={null}
-              aria-autocomplete="list"
-              aria-controls={null}
-              aria-labelledby="whoaBuddy-label"
-              autoComplete="off"
-              className="hig__text-field-v1__input hig__text-field-v1__input--no-value"
-              disabled={undefined}
-              id="whoaBuddy"
-              onBlur={[Function]}
-              onChange={[Function]}
-              onClick={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              placeholder={undefined}
-              readOnly={true}
-              type="button"
-              value=""
-            />
-          </div>
-        </div>
-      </div>
+        className="emotion-1"
+      />
     </div>
-    <span
-      className="hig__dropdown__input-caret"
+    <svg
+      className="emotion-3"
+      height="10px"
+      style={
+        Object {
+          "opacity": 1,
+          "padding": "0 10px",
+          "position": "absolute",
+          "right": "7px",
+          "top": "calc(32px / 2 - 4px)",
+        }
+      }
+      viewBox="0 0 10 10"
+      width="10px"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      <svg
-        height="10"
-        viewBox="0 0 10 10"
-        width="10"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <title>
-          caret-down-m
-        </title>
-        <path
-          d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
-        />
-      </svg>
-    </span>
+      <title>
+        caret-down-m
+      </title>
+      <path
+        d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
+      />
+    </svg>
   </div>
   <div
     aria-labelledby="whoaBuddy-label"
-    className="hig__dropdown-v1__menu"
+    className="emotion-5"
     id="whoaBuddy-menu"
     role="listbox"
   />
@@ -453,6 +878,136 @@ exports[`Dropdown renders with a label and an ID 1`] = `
 `;
 
 exports[`Dropdown renders with custom option formatting 1`] = `
+.emotion-4 {
+  display: relative;
+}
+
+.emotion-2 {
+  position: relative;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 1px;
+  border-bottom-color: rgba(128,128,128,0.35);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+.emotion-1 {
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  right: 0;
+  width: calc(100% + 2px);
+  height: 0;
+  background-color: rgba(14,211,190,0.15);
+  -webkit-transition-property: height,color;
+  transition-property: height,color;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+}
+
+.emotion-0 {
+  background-color: transparent;
+  box-sizing: border-box;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-top: 4px;
+  padding-right: 0;
+  padding-bottom: 4px;
+  padding-left: 0;
+  outline: none;
+  font-size: 14px;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 600;
+  line-height: 1.4;
+  width: 100%;
+  color: #3c3c3c;
+  height: 28px;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::-moz-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::-ms-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::selection {
+  background-color: #0696d7;
+}
+
+.emotion-3 {
+  fill: #808080;
+}
+
+.emotion-3 > * {
+  fill: #808080;
+}
+
+.emotion-8 {
+  display: none;
+  position: absolute;
+  min-width: 240px;
+  max-height: 360px;
+  top: calc(32px + 4px);
+  overflow: auto;
+  z-index: 9996;
+  border: 1px solid #ffffff;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+
+.emotion-5 {
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  min-height: 36px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 8px;
+  cursor: pointer;
+  color: #3c3c3c;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.428571429;
+  background-color: transparent;
+}
+
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
@@ -462,70 +1017,69 @@ exports[`Dropdown renders with custom option formatting 1`] = `
   role="combobox"
 >
   <div
-    className="hig__dropdown__input-wrapper"
+    className="emotion-4"
   >
     <div
-      className="hig__text-field-v1 hig__text-field-v1--button"
+      className="emotion-2"
     >
+      <input
+        aria-activedescendant={null}
+        aria-autocomplete="list"
+        aria-controls={null}
+        aria-labelledby="downshift-1-label"
+        autoComplete="off"
+        className="emotion-0"
+        disabled={undefined}
+        id="downshift-1"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        placeholder={undefined}
+        readOnly={true}
+        required={undefined}
+        value=""
+      />
       <div
-        className="hig__text-field-v1__content"
-      >
-        <div
-          className="hig__text-field-v1__input-wrapper"
-        >
-          <div
-            className="hig__text-field-v1__input-row"
-          >
-            <input
-              aria-activedescendant={null}
-              aria-autocomplete="list"
-              aria-controls={null}
-              aria-labelledby="downshift-1-label"
-              autoComplete="off"
-              className="hig__text-field-v1__input hig__text-field-v1__input--no-value"
-              disabled={undefined}
-              id="downshift-1"
-              onBlur={[Function]}
-              onChange={[Function]}
-              onClick={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              placeholder={undefined}
-              readOnly={true}
-              type="button"
-              value=""
-            />
-          </div>
-        </div>
-      </div>
+        className="emotion-1"
+      />
     </div>
-    <span
-      className="hig__dropdown__input-caret"
+    <svg
+      className="emotion-3"
+      height="10px"
+      style={
+        Object {
+          "opacity": 1,
+          "padding": "0 10px",
+          "position": "absolute",
+          "right": "7px",
+          "top": "calc(32px / 2 - 4px)",
+        }
+      }
+      viewBox="0 0 10 10"
+      width="10px"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      <svg
-        height="10"
-        viewBox="0 0 10 10"
-        width="10"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <title>
-          caret-down-m
-        </title>
-        <path
-          d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
-        />
-      </svg>
-    </span>
+      <title>
+        caret-down-m
+      </title>
+      <path
+        d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
+      />
+    </svg>
   </div>
   <div
     aria-labelledby="downshift-1-label"
-    className="hig__dropdown-v1__menu"
+    className="emotion-8"
     id="downshift-1-menu"
     role="listbox"
   >
     <div
       aria-selected={false}
-      className="hig__dropdown-option"
+      className="emotion-5"
       id="downshift-1-item-0"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -542,7 +1096,7 @@ exports[`Dropdown renders with custom option formatting 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="hig__dropdown-option"
+      className="emotion-5"
       id="downshift-1-item-1"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -559,7 +1113,7 @@ exports[`Dropdown renders with custom option formatting 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="hig__dropdown-option"
+      className="emotion-5"
       id="downshift-1-item-2"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -579,6 +1133,109 @@ exports[`Dropdown renders with custom option formatting 1`] = `
 `;
 
 exports[`Dropdown renders with custom option render function 1`] = `
+.emotion-4 {
+  display: relative;
+}
+
+.emotion-2 {
+  position: relative;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 1px;
+  border-bottom-color: rgba(128,128,128,0.35);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+.emotion-1 {
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  right: 0;
+  width: calc(100% + 2px);
+  height: 0;
+  background-color: rgba(14,211,190,0.15);
+  -webkit-transition-property: height,color;
+  transition-property: height,color;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+}
+
+.emotion-0 {
+  background-color: transparent;
+  box-sizing: border-box;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-top: 4px;
+  padding-right: 0;
+  padding-bottom: 4px;
+  padding-left: 0;
+  outline: none;
+  font-size: 14px;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 600;
+  line-height: 1.4;
+  width: 100%;
+  color: #3c3c3c;
+  height: 28px;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::-moz-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::-ms-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::selection {
+  background-color: #0696d7;
+}
+
+.emotion-3 {
+  fill: #808080;
+}
+
+.emotion-3 > * {
+  fill: #808080;
+}
+
+.emotion-5 {
+  display: none;
+  position: absolute;
+  min-width: 240px;
+  max-height: 360px;
+  top: calc(32px + 4px);
+  overflow: auto;
+  z-index: 9996;
+  border: 1px solid #ffffff;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
@@ -588,64 +1245,63 @@ exports[`Dropdown renders with custom option render function 1`] = `
   role="combobox"
 >
   <div
-    className="hig__dropdown__input-wrapper"
+    className="emotion-4"
   >
     <div
-      className="hig__text-field-v1 hig__text-field-v1--button"
+      className="emotion-2"
     >
+      <input
+        aria-activedescendant={null}
+        aria-autocomplete="list"
+        aria-controls={null}
+        aria-labelledby="downshift-3-label"
+        autoComplete="off"
+        className="emotion-0"
+        disabled={undefined}
+        id="downshift-3"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        placeholder={undefined}
+        readOnly={true}
+        required={undefined}
+        value=""
+      />
       <div
-        className="hig__text-field-v1__content"
-      >
-        <div
-          className="hig__text-field-v1__input-wrapper"
-        >
-          <div
-            className="hig__text-field-v1__input-row"
-          >
-            <input
-              aria-activedescendant={null}
-              aria-autocomplete="list"
-              aria-controls={null}
-              aria-labelledby="downshift-3-label"
-              autoComplete="off"
-              className="hig__text-field-v1__input hig__text-field-v1__input--no-value"
-              disabled={undefined}
-              id="downshift-3"
-              onBlur={[Function]}
-              onChange={[Function]}
-              onClick={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              placeholder={undefined}
-              readOnly={true}
-              type="button"
-              value=""
-            />
-          </div>
-        </div>
-      </div>
+        className="emotion-1"
+      />
     </div>
-    <span
-      className="hig__dropdown__input-caret"
+    <svg
+      className="emotion-3"
+      height="10px"
+      style={
+        Object {
+          "opacity": 1,
+          "padding": "0 10px",
+          "position": "absolute",
+          "right": "7px",
+          "top": "calc(32px / 2 - 4px)",
+        }
+      }
+      viewBox="0 0 10 10"
+      width="10px"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      <svg
-        height="10"
-        viewBox="0 0 10 10"
-        width="10"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <title>
-          caret-down-m
-        </title>
-        <path
-          d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
-        />
-      </svg>
-    </span>
+      <title>
+        caret-down-m
+      </title>
+      <path
+        d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
+      />
+    </svg>
   </div>
   <div
     aria-labelledby="downshift-3-label"
-    className="hig__dropdown-v1__menu"
+    className="emotion-5"
     id="downshift-3-menu"
     role="listbox"
   >
@@ -672,6 +1328,171 @@ exports[`Dropdown renders with custom option render function 1`] = `
 `;
 
 exports[`Dropdown renders with default value 1`] = `
+.emotion-4 {
+  display: relative;
+}
+
+.emotion-2 {
+  position: relative;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 1px;
+  border-bottom-color: rgba(128,128,128,0.35);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+.emotion-1 {
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  right: 0;
+  width: calc(100% + 2px);
+  height: 0;
+  background-color: rgba(14,211,190,0.15);
+  -webkit-transition-property: height,color;
+  transition-property: height,color;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+}
+
+.emotion-0 {
+  background-color: transparent;
+  box-sizing: border-box;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-top: 4px;
+  padding-right: 0;
+  padding-bottom: 4px;
+  padding-left: 0;
+  outline: none;
+  font-size: 14px;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 600;
+  line-height: 1.4;
+  width: 100%;
+  color: #3c3c3c;
+  height: 28px;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::-moz-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::-ms-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::selection {
+  background-color: #0696d7;
+}
+
+.emotion-3 {
+  fill: #808080;
+}
+
+.emotion-3 > * {
+  fill: #808080;
+}
+
+.emotion-9 {
+  display: none;
+  position: absolute;
+  min-width: 240px;
+  max-height: 360px;
+  top: calc(32px + 4px);
+  overflow: auto;
+  z-index: 9996;
+  border: 1px solid #ffffff;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+
+.emotion-5 {
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  min-height: 36px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 8px;
+  cursor: pointer;
+  color: #3c3c3c;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.428571429;
+  background-color: transparent;
+}
+
+.emotion-8 {
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  min-height: 36px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 8px;
+  cursor: pointer;
+  color: #3c3c3c;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.428571429;
+  background-color: rgb(230,244,251);
+}
+
+.emotion-7 {
+  fill: #087AAD;
+}
+
+.emotion-7 > * {
+  fill: #087AAD;
+}
+
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
@@ -681,70 +1502,69 @@ exports[`Dropdown renders with default value 1`] = `
   role="combobox"
 >
   <div
-    className="hig__dropdown__input-wrapper"
+    className="emotion-4"
   >
     <div
-      className="hig__text-field-v1 hig__text-field-v1--button"
+      className="emotion-2"
     >
+      <input
+        aria-activedescendant={null}
+        aria-autocomplete="list"
+        aria-controls={null}
+        aria-labelledby="downshift-7-label"
+        autoComplete="off"
+        className="emotion-0"
+        disabled={undefined}
+        id="downshift-7"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        placeholder={undefined}
+        readOnly={true}
+        required={undefined}
+        value="foo"
+      />
       <div
-        className="hig__text-field-v1__content"
-      >
-        <div
-          className="hig__text-field-v1__input-wrapper"
-        >
-          <div
-            className="hig__text-field-v1__input-row"
-          >
-            <input
-              aria-activedescendant={null}
-              aria-autocomplete="list"
-              aria-controls={null}
-              aria-labelledby="downshift-7-label"
-              autoComplete="off"
-              className="hig__text-field-v1__input"
-              disabled={undefined}
-              id="downshift-7"
-              onBlur={[Function]}
-              onChange={[Function]}
-              onClick={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              placeholder={undefined}
-              readOnly={true}
-              type="button"
-              value="foo"
-            />
-          </div>
-        </div>
-      </div>
+        className="emotion-1"
+      />
     </div>
-    <span
-      className="hig__dropdown__input-caret"
+    <svg
+      className="emotion-3"
+      height="10px"
+      style={
+        Object {
+          "opacity": 1,
+          "padding": "0 10px",
+          "position": "absolute",
+          "right": "7px",
+          "top": "calc(32px / 2 - 4px)",
+        }
+      }
+      viewBox="0 0 10 10"
+      width="10px"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      <svg
-        height="10"
-        viewBox="0 0 10 10"
-        width="10"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <title>
-          caret-down-m
-        </title>
-        <path
-          d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
-        />
-      </svg>
-    </span>
+      <title>
+        caret-down-m
+      </title>
+      <path
+        d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
+      />
+    </svg>
   </div>
   <div
     aria-labelledby="downshift-7-label"
-    className="hig__dropdown-v1__menu"
+    className="emotion-9"
     id="downshift-7-menu"
     role="listbox"
   >
     <div
       aria-selected={false}
-      className="hig__dropdown-option"
+      className="emotion-5"
       id="downshift-7-item-0"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -761,7 +1581,7 @@ exports[`Dropdown renders with default value 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="hig__dropdown-option"
+      className="emotion-5"
       id="downshift-7-item-1"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -778,7 +1598,7 @@ exports[`Dropdown renders with default value 1`] = `
     </div>
     <div
       aria-selected={true}
-      className="hig__dropdown-option hig__dropdown-option--selected"
+      className="emotion-8"
       id="downshift-7-item-2"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -796,9 +1616,11 @@ exports[`Dropdown renders with default value 1`] = `
         className="hig__dropdown-option__checkmark"
       >
         <svg
-          height="24"
+          className="emotion-7"
+          color="#087AAD"
+          height="24px"
           viewBox="0 0 24 24"
-          width="24"
+          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -814,6 +1636,136 @@ exports[`Dropdown renders with default value 1`] = `
 `;
 
 exports[`Dropdown renders with multiple selection 1`] = `
+.emotion-4 {
+  display: relative;
+}
+
+.emotion-2 {
+  position: relative;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 1px;
+  border-bottom-color: rgba(128,128,128,0.35);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+.emotion-1 {
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  right: 0;
+  width: calc(100% + 2px);
+  height: 0;
+  background-color: rgba(14,211,190,0.15);
+  -webkit-transition-property: height,color;
+  transition-property: height,color;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+}
+
+.emotion-0 {
+  background-color: transparent;
+  box-sizing: border-box;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-top: 4px;
+  padding-right: 0;
+  padding-bottom: 4px;
+  padding-left: 0;
+  outline: none;
+  font-size: 14px;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 600;
+  line-height: 1.4;
+  width: 100%;
+  color: #3c3c3c;
+  height: 28px;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::-moz-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::-ms-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::selection {
+  background-color: #0696d7;
+}
+
+.emotion-3 {
+  fill: #808080;
+}
+
+.emotion-3 > * {
+  fill: #808080;
+}
+
+.emotion-8 {
+  display: none;
+  position: absolute;
+  min-width: 240px;
+  max-height: 360px;
+  top: calc(32px + 4px);
+  overflow: auto;
+  z-index: 9996;
+  border: 1px solid #ffffff;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+
+.emotion-5 {
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  min-height: 36px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 8px;
+  cursor: pointer;
+  color: #3c3c3c;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.428571429;
+  background-color: transparent;
+}
+
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
@@ -823,70 +1775,69 @@ exports[`Dropdown renders with multiple selection 1`] = `
   role="combobox"
 >
   <div
-    className="hig__dropdown__input-wrapper"
+    className="emotion-4"
   >
     <div
-      className="hig__text-field-v1 hig__text-field-v1--button"
+      className="emotion-2"
     >
+      <input
+        aria-activedescendant={null}
+        aria-autocomplete="list"
+        aria-controls={null}
+        aria-labelledby="downshift-8-label"
+        autoComplete="off"
+        className="emotion-0"
+        disabled={undefined}
+        id="downshift-8"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        placeholder={undefined}
+        readOnly={true}
+        required={undefined}
+        value=""
+      />
       <div
-        className="hig__text-field-v1__content"
-      >
-        <div
-          className="hig__text-field-v1__input-wrapper"
-        >
-          <div
-            className="hig__text-field-v1__input-row"
-          >
-            <input
-              aria-activedescendant={null}
-              aria-autocomplete="list"
-              aria-controls={null}
-              aria-labelledby="downshift-8-label"
-              autoComplete="off"
-              className="hig__text-field-v1__input hig__text-field-v1__input--no-value"
-              disabled={undefined}
-              id="downshift-8"
-              onBlur={[Function]}
-              onChange={[Function]}
-              onClick={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              placeholder={undefined}
-              readOnly={true}
-              type="button"
-              value=""
-            />
-          </div>
-        </div>
-      </div>
+        className="emotion-1"
+      />
     </div>
-    <span
-      className="hig__dropdown__input-caret"
+    <svg
+      className="emotion-3"
+      height="10px"
+      style={
+        Object {
+          "opacity": 1,
+          "padding": "0 10px",
+          "position": "absolute",
+          "right": "7px",
+          "top": "calc(32px / 2 - 4px)",
+        }
+      }
+      viewBox="0 0 10 10"
+      width="10px"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      <svg
-        height="10"
-        viewBox="0 0 10 10"
-        width="10"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <title>
-          caret-down-m
-        </title>
-        <path
-          d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
-        />
-      </svg>
-    </span>
+      <title>
+        caret-down-m
+      </title>
+      <path
+        d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
+      />
+    </svg>
   </div>
   <div
     aria-labelledby="downshift-8-label"
-    className="hig__dropdown-v1__menu"
+    className="emotion-8"
     id="downshift-8-menu"
     role="listbox"
   >
     <div
       aria-selected={false}
-      className="hig__dropdown-option"
+      className="emotion-5"
       id="downshift-8-item-0"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -903,7 +1854,7 @@ exports[`Dropdown renders with multiple selection 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="hig__dropdown-option"
+      className="emotion-5"
       id="downshift-8-item-1"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -920,7 +1871,7 @@ exports[`Dropdown renders with multiple selection 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="hig__dropdown-option"
+      className="emotion-5"
       id="downshift-8-item-2"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -940,6 +1891,171 @@ exports[`Dropdown renders with multiple selection 1`] = `
 `;
 
 exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
+.emotion-4 {
+  display: relative;
+}
+
+.emotion-2 {
+  position: relative;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 1px;
+  border-bottom-color: rgba(128,128,128,0.35);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+.emotion-1 {
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  right: 0;
+  width: calc(100% + 2px);
+  height: 0;
+  background-color: rgba(14,211,190,0.15);
+  -webkit-transition-property: height,color;
+  transition-property: height,color;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+}
+
+.emotion-0 {
+  background-color: transparent;
+  box-sizing: border-box;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-top: 4px;
+  padding-right: 0;
+  padding-bottom: 4px;
+  padding-left: 0;
+  outline: none;
+  font-size: 14px;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 600;
+  line-height: 1.4;
+  width: 100%;
+  color: #3c3c3c;
+  height: 28px;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::-moz-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::-ms-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::selection {
+  background-color: #0696d7;
+}
+
+.emotion-3 {
+  fill: #808080;
+}
+
+.emotion-3 > * {
+  fill: #808080;
+}
+
+.emotion-10 {
+  display: none;
+  position: absolute;
+  min-width: 240px;
+  max-height: 360px;
+  top: calc(32px + 4px);
+  overflow: auto;
+  z-index: 9996;
+  border: 1px solid #ffffff;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+
+.emotion-7 {
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  min-height: 36px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 8px;
+  cursor: pointer;
+  color: #3c3c3c;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.428571429;
+  background-color: transparent;
+}
+
+.emotion-6 {
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  min-height: 36px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 8px;
+  cursor: pointer;
+  color: #3c3c3c;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.428571429;
+  background-color: rgb(230,244,251);
+}
+
+.emotion-5 {
+  fill: #087AAD;
+}
+
+.emotion-5 > * {
+  fill: #087AAD;
+}
+
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
@@ -949,70 +2065,69 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
   role="combobox"
 >
   <div
-    className="hig__dropdown__input-wrapper"
+    className="emotion-4"
   >
     <div
-      className="hig__text-field-v1 hig__text-field-v1--button"
+      className="emotion-2"
     >
+      <input
+        aria-activedescendant={null}
+        aria-autocomplete="list"
+        aria-controls={null}
+        aria-labelledby="downshift-10-label"
+        autoComplete="off"
+        className="emotion-0"
+        disabled={undefined}
+        id="downshift-10"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        placeholder={undefined}
+        readOnly={true}
+        required={undefined}
+        value="foo, bar"
+      />
       <div
-        className="hig__text-field-v1__content"
-      >
-        <div
-          className="hig__text-field-v1__input-wrapper"
-        >
-          <div
-            className="hig__text-field-v1__input-row"
-          >
-            <input
-              aria-activedescendant={null}
-              aria-autocomplete="list"
-              aria-controls={null}
-              aria-labelledby="downshift-10-label"
-              autoComplete="off"
-              className="hig__text-field-v1__input"
-              disabled={undefined}
-              id="downshift-10"
-              onBlur={[Function]}
-              onChange={[Function]}
-              onClick={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              placeholder={undefined}
-              readOnly={true}
-              type="button"
-              value="foo, bar"
-            />
-          </div>
-        </div>
-      </div>
+        className="emotion-1"
+      />
     </div>
-    <span
-      className="hig__dropdown__input-caret"
+    <svg
+      className="emotion-3"
+      height="10px"
+      style={
+        Object {
+          "opacity": 1,
+          "padding": "0 10px",
+          "position": "absolute",
+          "right": "7px",
+          "top": "calc(32px / 2 - 4px)",
+        }
+      }
+      viewBox="0 0 10 10"
+      width="10px"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      <svg
-        height="10"
-        viewBox="0 0 10 10"
-        width="10"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <title>
-          caret-down-m
-        </title>
-        <path
-          d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
-        />
-      </svg>
-    </span>
+      <title>
+        caret-down-m
+      </title>
+      <path
+        d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
+      />
+    </svg>
   </div>
   <div
     aria-labelledby="downshift-10-label"
-    className="hig__dropdown-v1__menu"
+    className="emotion-10"
     id="downshift-10-menu"
     role="listbox"
   >
     <div
       aria-selected={true}
-      className="hig__dropdown-option hig__dropdown-option--selected"
+      className="emotion-6"
       id="downshift-10-item-0"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -1030,9 +2145,11 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
         className="hig__dropdown-option__checkmark"
       >
         <svg
-          height="24"
+          className="emotion-5"
+          color="#087AAD"
+          height="24px"
           viewBox="0 0 24 24"
-          width="24"
+          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -1045,7 +2162,7 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="hig__dropdown-option"
+      className="emotion-7"
       id="downshift-10-item-1"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -1062,7 +2179,7 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
     </div>
     <div
       aria-selected={true}
-      className="hig__dropdown-option hig__dropdown-option--selected"
+      className="emotion-6"
       id="downshift-10-item-2"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -1080,9 +2197,11 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
         className="hig__dropdown-option__checkmark"
       >
         <svg
-          height="24"
+          className="emotion-5"
+          color="#087AAD"
+          height="24px"
           viewBox="0 0 24 24"
-          width="24"
+          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -1098,6 +2217,109 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
 `;
 
 exports[`Dropdown renders with option specific and general option render function 1`] = `
+.emotion-4 {
+  display: relative;
+}
+
+.emotion-2 {
+  position: relative;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 1px;
+  border-bottom-color: rgba(128,128,128,0.35);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+.emotion-1 {
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  right: 0;
+  width: calc(100% + 2px);
+  height: 0;
+  background-color: rgba(14,211,190,0.15);
+  -webkit-transition-property: height,color;
+  transition-property: height,color;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+}
+
+.emotion-0 {
+  background-color: transparent;
+  box-sizing: border-box;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-top: 4px;
+  padding-right: 0;
+  padding-bottom: 4px;
+  padding-left: 0;
+  outline: none;
+  font-size: 14px;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 600;
+  line-height: 1.4;
+  width: 100%;
+  color: #3c3c3c;
+  height: 28px;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::-moz-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::-ms-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::selection {
+  background-color: #0696d7;
+}
+
+.emotion-3 {
+  fill: #808080;
+}
+
+.emotion-3 > * {
+  fill: #808080;
+}
+
+.emotion-5 {
+  display: none;
+  position: absolute;
+  min-width: 240px;
+  max-height: 360px;
+  top: calc(32px + 4px);
+  overflow: auto;
+  z-index: 9996;
+  border: 1px solid #ffffff;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
@@ -1107,64 +2329,63 @@ exports[`Dropdown renders with option specific and general option render functio
   role="combobox"
 >
   <div
-    className="hig__dropdown__input-wrapper"
+    className="emotion-4"
   >
     <div
-      className="hig__text-field-v1 hig__text-field-v1--button"
+      className="emotion-2"
     >
+      <input
+        aria-activedescendant={null}
+        aria-autocomplete="list"
+        aria-controls={null}
+        aria-labelledby="downshift-5-label"
+        autoComplete="off"
+        className="emotion-0"
+        disabled={undefined}
+        id="downshift-5"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        placeholder={undefined}
+        readOnly={true}
+        required={undefined}
+        value=""
+      />
       <div
-        className="hig__text-field-v1__content"
-      >
-        <div
-          className="hig__text-field-v1__input-wrapper"
-        >
-          <div
-            className="hig__text-field-v1__input-row"
-          >
-            <input
-              aria-activedescendant={null}
-              aria-autocomplete="list"
-              aria-controls={null}
-              aria-labelledby="downshift-5-label"
-              autoComplete="off"
-              className="hig__text-field-v1__input hig__text-field-v1__input--no-value"
-              disabled={undefined}
-              id="downshift-5"
-              onBlur={[Function]}
-              onChange={[Function]}
-              onClick={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              placeholder={undefined}
-              readOnly={true}
-              type="button"
-              value=""
-            />
-          </div>
-        </div>
-      </div>
+        className="emotion-1"
+      />
     </div>
-    <span
-      className="hig__dropdown__input-caret"
+    <svg
+      className="emotion-3"
+      height="10px"
+      style={
+        Object {
+          "opacity": 1,
+          "padding": "0 10px",
+          "position": "absolute",
+          "right": "7px",
+          "top": "calc(32px / 2 - 4px)",
+        }
+      }
+      viewBox="0 0 10 10"
+      width="10px"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      <svg
-        height="10"
-        viewBox="0 0 10 10"
-        width="10"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <title>
-          caret-down-m
-        </title>
-        <path
-          d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
-        />
-      </svg>
-    </span>
+      <title>
+        caret-down-m
+      </title>
+      <path
+        d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
+      />
+    </svg>
   </div>
   <div
     aria-labelledby="downshift-5-label"
-    className="hig__dropdown-v1__menu"
+    className="emotion-5"
     id="downshift-5-menu"
     role="listbox"
   >
@@ -1200,6 +2421,109 @@ exports[`Dropdown renders with option specific and general option render functio
 `;
 
 exports[`Dropdown renders with option specific render function 1`] = `
+.emotion-4 {
+  display: relative;
+}
+
+.emotion-2 {
+  position: relative;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 1px;
+  border-bottom-color: rgba(128,128,128,0.35);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+.emotion-1 {
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  right: 0;
+  width: calc(100% + 2px);
+  height: 0;
+  background-color: rgba(14,211,190,0.15);
+  -webkit-transition-property: height,color;
+  transition-property: height,color;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+}
+
+.emotion-0 {
+  background-color: transparent;
+  box-sizing: border-box;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-top: 4px;
+  padding-right: 0;
+  padding-bottom: 4px;
+  padding-left: 0;
+  outline: none;
+  font-size: 14px;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 600;
+  line-height: 1.4;
+  width: 100%;
+  color: #3c3c3c;
+  height: 28px;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::-moz-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::-ms-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::selection {
+  background-color: #0696d7;
+}
+
+.emotion-3 {
+  fill: #808080;
+}
+
+.emotion-3 > * {
+  fill: #808080;
+}
+
+.emotion-5 {
+  display: none;
+  position: absolute;
+  min-width: 240px;
+  max-height: 360px;
+  top: calc(32px + 4px);
+  overflow: auto;
+  z-index: 9996;
+  border: 1px solid #ffffff;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
@@ -1209,64 +2533,63 @@ exports[`Dropdown renders with option specific render function 1`] = `
   role="combobox"
 >
   <div
-    className="hig__dropdown__input-wrapper"
+    className="emotion-4"
   >
     <div
-      className="hig__text-field-v1 hig__text-field-v1--button"
+      className="emotion-2"
     >
+      <input
+        aria-activedescendant={null}
+        aria-autocomplete="list"
+        aria-controls={null}
+        aria-labelledby="downshift-4-label"
+        autoComplete="off"
+        className="emotion-0"
+        disabled={undefined}
+        id="downshift-4"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        placeholder={undefined}
+        readOnly={true}
+        required={undefined}
+        value=""
+      />
       <div
-        className="hig__text-field-v1__content"
-      >
-        <div
-          className="hig__text-field-v1__input-wrapper"
-        >
-          <div
-            className="hig__text-field-v1__input-row"
-          >
-            <input
-              aria-activedescendant={null}
-              aria-autocomplete="list"
-              aria-controls={null}
-              aria-labelledby="downshift-4-label"
-              autoComplete="off"
-              className="hig__text-field-v1__input hig__text-field-v1__input--no-value"
-              disabled={undefined}
-              id="downshift-4"
-              onBlur={[Function]}
-              onChange={[Function]}
-              onClick={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              placeholder={undefined}
-              readOnly={true}
-              type="button"
-              value=""
-            />
-          </div>
-        </div>
-      </div>
+        className="emotion-1"
+      />
     </div>
-    <span
-      className="hig__dropdown__input-caret"
+    <svg
+      className="emotion-3"
+      height="10px"
+      style={
+        Object {
+          "opacity": 1,
+          "padding": "0 10px",
+          "position": "absolute",
+          "right": "7px",
+          "top": "calc(32px / 2 - 4px)",
+        }
+      }
+      viewBox="0 0 10 10"
+      width="10px"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      <svg
-        height="10"
-        viewBox="0 0 10 10"
-        width="10"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <title>
-          caret-down-m
-        </title>
-        <path
-          d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
-        />
-      </svg>
-    </span>
+      <title>
+        caret-down-m
+      </title>
+      <path
+        d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
+      />
+    </svg>
   </div>
   <div
     aria-labelledby="downshift-4-label"
-    className="hig__dropdown-v1__menu"
+    className="emotion-5"
     id="downshift-4-menu"
     role="listbox"
   >
@@ -1338,6 +2661,109 @@ exports[`Dropdown renders with option specific render function 1`] = `
 `;
 
 exports[`Dropdown renders with option specific, general and format rendering 1`] = `
+.emotion-4 {
+  display: relative;
+}
+
+.emotion-2 {
+  position: relative;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 1px;
+  border-bottom-color: rgba(128,128,128,0.35);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+.emotion-1 {
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  right: 0;
+  width: calc(100% + 2px);
+  height: 0;
+  background-color: rgba(14,211,190,0.15);
+  -webkit-transition-property: height,color;
+  transition-property: height,color;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+}
+
+.emotion-0 {
+  background-color: transparent;
+  box-sizing: border-box;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-top: 4px;
+  padding-right: 0;
+  padding-bottom: 4px;
+  padding-left: 0;
+  outline: none;
+  font-size: 14px;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 600;
+  line-height: 1.4;
+  width: 100%;
+  color: #3c3c3c;
+  height: 28px;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::-moz-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::-ms-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::selection {
+  background-color: #0696d7;
+}
+
+.emotion-3 {
+  fill: #808080;
+}
+
+.emotion-3 > * {
+  fill: #808080;
+}
+
+.emotion-5 {
+  display: none;
+  position: absolute;
+  min-width: 240px;
+  max-height: 360px;
+  top: calc(32px + 4px);
+  overflow: auto;
+  z-index: 9996;
+  border: 1px solid #ffffff;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
@@ -1347,64 +2773,63 @@ exports[`Dropdown renders with option specific, general and format rendering 1`]
   role="combobox"
 >
   <div
-    className="hig__dropdown__input-wrapper"
+    className="emotion-4"
   >
     <div
-      className="hig__text-field-v1 hig__text-field-v1--button"
+      className="emotion-2"
     >
+      <input
+        aria-activedescendant={null}
+        aria-autocomplete="list"
+        aria-controls={null}
+        aria-labelledby="downshift-6-label"
+        autoComplete="off"
+        className="emotion-0"
+        disabled={undefined}
+        id="downshift-6"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        placeholder={undefined}
+        readOnly={true}
+        required={undefined}
+        value=""
+      />
       <div
-        className="hig__text-field-v1__content"
-      >
-        <div
-          className="hig__text-field-v1__input-wrapper"
-        >
-          <div
-            className="hig__text-field-v1__input-row"
-          >
-            <input
-              aria-activedescendant={null}
-              aria-autocomplete="list"
-              aria-controls={null}
-              aria-labelledby="downshift-6-label"
-              autoComplete="off"
-              className="hig__text-field-v1__input hig__text-field-v1__input--no-value"
-              disabled={undefined}
-              id="downshift-6"
-              onBlur={[Function]}
-              onChange={[Function]}
-              onClick={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              placeholder={undefined}
-              readOnly={true}
-              type="button"
-              value=""
-            />
-          </div>
-        </div>
-      </div>
+        className="emotion-1"
+      />
     </div>
-    <span
-      className="hig__dropdown__input-caret"
+    <svg
+      className="emotion-3"
+      height="10px"
+      style={
+        Object {
+          "opacity": 1,
+          "padding": "0 10px",
+          "position": "absolute",
+          "right": "7px",
+          "top": "calc(32px / 2 - 4px)",
+        }
+      }
+      viewBox="0 0 10 10"
+      width="10px"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      <svg
-        height="10"
-        viewBox="0 0 10 10"
-        width="10"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <title>
-          caret-down-m
-        </title>
-        <path
-          d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
-        />
-      </svg>
-    </span>
+      <title>
+        caret-down-m
+      </title>
+      <path
+        d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
+      />
+    </svg>
   </div>
   <div
     aria-labelledby="downshift-6-label"
-    className="hig__dropdown-v1__menu"
+    className="emotion-5"
     id="downshift-6-menu"
     role="listbox"
   >
@@ -1440,6 +2865,109 @@ exports[`Dropdown renders with option specific, general and format rendering 1`]
 `;
 
 exports[`Dropdown renders without props 1`] = `
+.emotion-4 {
+  display: relative;
+}
+
+.emotion-2 {
+  position: relative;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 1px;
+  border-bottom-color: rgba(128,128,128,0.35);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+.emotion-1 {
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  right: 0;
+  width: calc(100% + 2px);
+  height: 0;
+  background-color: rgba(14,211,190,0.15);
+  -webkit-transition-property: height,color;
+  transition-property: height,color;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+}
+
+.emotion-0 {
+  background-color: transparent;
+  box-sizing: border-box;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-top: 4px;
+  padding-right: 0;
+  padding-bottom: 4px;
+  padding-left: 0;
+  outline: none;
+  font-size: 14px;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 600;
+  line-height: 1.4;
+  width: 100%;
+  color: #3c3c3c;
+  height: 28px;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::-moz-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::-ms-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::selection {
+  background-color: #0696d7;
+}
+
+.emotion-3 {
+  fill: #808080;
+}
+
+.emotion-3 > * {
+  fill: #808080;
+}
+
+.emotion-5 {
+  display: none;
+  position: absolute;
+  min-width: 240px;
+  max-height: 360px;
+  top: calc(32px + 4px);
+  overflow: auto;
+  z-index: 9996;
+  border: 1px solid #ffffff;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
@@ -1449,64 +2977,63 @@ exports[`Dropdown renders without props 1`] = `
   role="combobox"
 >
   <div
-    className="hig__dropdown__input-wrapper"
+    className="emotion-4"
   >
     <div
-      className="hig__text-field-v1 hig__text-field-v1--button"
+      className="emotion-2"
     >
+      <input
+        aria-activedescendant={null}
+        aria-autocomplete="list"
+        aria-controls={null}
+        aria-labelledby="downshift-0-label"
+        autoComplete="off"
+        className="emotion-0"
+        disabled={undefined}
+        id="downshift-0"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        placeholder={undefined}
+        readOnly={true}
+        required={undefined}
+        value=""
+      />
       <div
-        className="hig__text-field-v1__content"
-      >
-        <div
-          className="hig__text-field-v1__input-wrapper"
-        >
-          <div
-            className="hig__text-field-v1__input-row"
-          >
-            <input
-              aria-activedescendant={null}
-              aria-autocomplete="list"
-              aria-controls={null}
-              aria-labelledby="downshift-0-label"
-              autoComplete="off"
-              className="hig__text-field-v1__input hig__text-field-v1__input--no-value"
-              disabled={undefined}
-              id="downshift-0"
-              onBlur={[Function]}
-              onChange={[Function]}
-              onClick={[Function]}
-              onFocus={[Function]}
-              onKeyDown={[Function]}
-              placeholder={undefined}
-              readOnly={true}
-              type="button"
-              value=""
-            />
-          </div>
-        </div>
-      </div>
+        className="emotion-1"
+      />
     </div>
-    <span
-      className="hig__dropdown__input-caret"
+    <svg
+      className="emotion-3"
+      height="10px"
+      style={
+        Object {
+          "opacity": 1,
+          "padding": "0 10px",
+          "position": "absolute",
+          "right": "7px",
+          "top": "calc(32px / 2 - 4px)",
+        }
+      }
+      viewBox="0 0 10 10"
+      width="10px"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      <svg
-        height="10"
-        viewBox="0 0 10 10"
-        width="10"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <title>
-          caret-down-m
-        </title>
-        <path
-          d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
-        />
-      </svg>
-    </span>
+      <title>
+        caret-down-m
+      </title>
+      <path
+        d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
+      />
+    </svg>
   </div>
   <div
     aria-labelledby="downshift-0-label"
-    className="hig__dropdown-v1__menu"
+    className="emotion-5"
     id="downshift-0-menu"
     role="listbox"
   />
