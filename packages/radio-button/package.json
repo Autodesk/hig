@@ -19,7 +19,7 @@
   "dependencies": {
     "@hig/behaviors": "^1.1.1",
     "@hig/theme-context": "^2.1.0",
-    "@hig/theme-data": "^2.1.0",
+    "@hig/theme-data": "^2.1.1",
     "emotion": "^10.0.0",
     "prop-types": "^15.6.1",
     "react-lifecycles-compat": "^3.0.4"
